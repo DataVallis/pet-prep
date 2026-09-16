@@ -1,0 +1,19 @@
+{
+  "name": "petprep",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PetPrep MVP — AI pet simulation app for teaching children responsibility",
+  "scripts": {
+    "generate-api-types": "node scripts/generate-api-types.mjs",
+    "dev:backend": "cd backend && php artisan serve",
+    "dev:reverb": "cd backend && php artisan reverb:start",
+    "dev:queue": "cd backend && php artisan queue:work",
+    "dev:mobile": "cd mobile && npx expo start",
+    "test:backend": "cd backend && php artisan test",
+    "migrate:backend": "cd backend && php artisan migrate:fresh --seed",
+    "openapi:export": "cd backend && php artisan openapi:export"
+  },
+  "devDependencies": {
+    "openapi-typescript": "^7.4.0"
+  }
+}
