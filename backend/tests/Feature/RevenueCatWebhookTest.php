@@ -131,7 +131,7 @@ describe('POST /api/webhooks/revenuecat', function () {
 
         postJson('/api/webhooks/revenuecat', $payload)
             ->assertStatus(422)
-            ->assertJson(['message' => 'Missing app_user_id.']);
+            ->assertJsonValidationErrors(['event.app_user_id']);
     });
 
     it('returns 404 when user is not found', function () {

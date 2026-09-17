@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Enums\BreedType;
 use App\Events\PetUpdated;
+use App\Http\Requests\RevenueCatWebhookRequest;
 use App\Models\Pet;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
 class RevenueCatWebhookController extends Controller
@@ -16,12 +16,13 @@ class RevenueCatWebhookController extends Controller
      * POST /api/webhooks/revenuecat
      * Handle RevenueCat webhook events for successful purchases.
      *
-     * Validates the payload using the RevenueCat webhook secret,
+     * Validates the payload using the RevenueCatWebhookRequest Form Request,
+     * verifies the Authorization header against the configured secret,
      * updates users.revenuecat_id, unlocks the premium breed
      * (Border Collie) in the pets table, and broadcasts the
      * update via Laravel Reverb.
      */
-    public function handle(Request $request): JsonResponse
+    public function handle(RevenueCatWebhookRequest $request): JsonResponse
     {
         // Verify the Authorization header against the configured secret
         $webhookSecret = config('services.revenuecat.secret_key');
