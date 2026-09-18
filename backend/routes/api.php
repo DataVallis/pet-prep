@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FalAiWebhookController;
 use App\Http\Controllers\PairingController;
 use App\Http\Controllers\ParentDashboardController;
@@ -8,9 +9,22 @@ use App\Http\Controllers\RevenueCatWebhookController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+/*
+|--------------------------------------------------------------------------
+| Authentication Endpoints (public — no Sanctum token required)
+|--------------------------------------------------------------------------
+*/
+Route::post('login', [AuthController::class, 'login']);
+
+/*
+|--------------------------------------------------------------------------
+| Authenticated Endpoints
+|--------------------------------------------------------------------------
+*/
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('user', [AuthController::class, 'user']);
+    Route::post('logout', [AuthController::class, 'logout']);
+});
 
 /*
 |--------------------------------------------------------------------------

@@ -106,7 +106,7 @@ class UserResource extends Resource
                 Tables\Columns\TextColumn::make('parent.name')
                     ->label('Parent')
                     ->placeholder('—')
-                    ->visible(fn (User $record): bool => $record->role === UserRole::Child)
+                    ->visible(fn (?User $record): bool => $record?->role === UserRole::Child)
                     ->sortable(),
 
                 Tables\Columns\TextColumn::make('pairing_pin')

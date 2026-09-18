@@ -18,30 +18,28 @@
 - **Password:** `Password123!`
 - Created by `SuperadminSeeder`. Has access to the Filament admin panel at `/admin`.
 
-### Test Parent Account (create via tinker)
-```bash
-php artisan tinker --execute="
-\$parent = \App\Models\User::factory()->parent()->create([
-    'name' => 'Test Parent',
-    'email' => 'parent@test.com',
-    'password' => bcrypt('password'),
-]);
-echo 'Parent created: ' . \$parent->email . PHP_EOL;
-"
-```
+### Test Parent Account (auto-seeded)
+- **Email:** `parent@test.com`
+- **Password:** `password`
+- Created by `TestUsersSeeder`. Has a child + pet pre-configured.
 
-### Test Child Account (create via tinker)
+### Test Child Account (auto-seeded)
+- **Email:** `child@test.com`
+- **Password:** `password`
+- Linked to the test parent. Has a pet (Mutt breed).
+
+### How to Get a Pairing PIN
 ```bash
-php artisan tinker --execute="
-\$parent = \App\Models\User::where('email', 'parent@test.com')->first();
-\$child = \App\Models\User::factory()->child()->create([
-    'name' => 'Test Child',
-    'email' => 'child@test.com',
-    'password' => bcrypt('password'),
-    'parent_id' => \$parent->id,
-]);
-echo 'Child created: ' . \$child->email . PHP_EOL;
-"
+# 1. Login as parent to get an API token
+curl -s -X POST http://localhost:8000/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"parent@test.com","password":"password","device_name":"mobile"}'
+# → returns {"token":"1|abc123...", "user":{...}}
+
+# 2. Generate a 6-digit PIN (valid for 15 minutes)
+curl -s -X POST http://localhost:8000/api/parent/generate-pin \
+  -H "Authorization: Bearer <YOUR_TOKEN>"
+# → returns {"pin":"858249","expires_at":"...","expires_in_minutes":15}
 ```
 
 ## Database Access
@@ -168,23 +166,28 @@ curl -X POST http://localhost:8000/api/webhooks/revenuecat \
   }'
 ```
 
-## Parent Test Account
+## Test Accounts (auto-seeded by `TestUsersSeeder`)
 
-Create a parent + child + pet for testing via tinker:
+Run `php artisan migrate:fresh --seed` (or `npm run sail:migrate`) to create:
 
-```bash
-php artisan tinker --execute="
-\$parent = \App\Models\User::factory()->parent()->create(['email' => 'parent@test.com', 'password' => bcrypt('password')]);
-\$child = \App\Models\User::factory()->child()->create(['parent_id' => \$parent->id, 'email' => 'child@test.com', 'password' => bcrypt('password')]);
-\App\Models\Pet::factory()->create(['user_id' => \$child->id]);
-echo 'Parent: parent@test.com / Child: child@test.com (password: password)' . PHP_EOL;
-"
-```
+| Account | Email | Password | Role |
+|---------|-------|----------|------|
+| Superadmin | `admin@petprep.io` | `Password123!` | Admin panel access |
+| Test Parent | `parent@test.com` | `password` | Parent profile |
+| Test Child | `child@test.com` | `password` | Child profile (linked to parent) |
+
+The test child has a pre-configured pet (Mutt breed). Use the parent login to generate pairing PINs.
 
 ## API Endpoints
 
 ### Authentication (Sanctum)
 All authenticated endpoints require `Authorization: Bearer {token}` header.
+
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| `POST` | `/api/login` | None | Login with email + password, returns Sanctum token |
+| `GET` | `/api/user` | Bearer token | Get authenticated user's profile |
+| `POST` | `/api/logout` | Bearer token | Revoke current token (logout) |
 
 ### Pairing
 | Method | Endpoint | Auth | Description |
