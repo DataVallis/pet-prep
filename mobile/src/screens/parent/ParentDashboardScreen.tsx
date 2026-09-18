@@ -72,33 +72,33 @@ function TrafficLightBanner({ pet }: { pet: Pet | null }) {
 
   const config = {
     green: {
-      bg: 'bg-emerald-100 border-emerald-500',
+      bg: 'bg-emerald-950/40 border-emerald-500/40',
       Icon: CheckCircle,
-      iconColor: '#059669',
-      text: 'Simulation Healthy',
+      iconColor: '#10B981',
+      text: 'Vse poteka brezhibno',
     },
     amber: {
-      bg: 'bg-amber-100 border-amber-500',
+      bg: 'bg-amber-950/40 border-amber-500/40',
       Icon: AlertTriangle,
-      iconColor: '#D97706',
-      text: 'Routines missed today',
+      iconColor: '#F59E0B',
+      text: 'Zamujeni več kot 2 nalogi',
     },
     red: {
-      bg: 'bg-rose-100 border-rose-500',
+      bg: 'bg-rose-950/50 border-rose-600/50',
       Icon: AlertCircle,
-      iconColor: '#E11D48',
-      text: 'Critical Neglect',
+      iconColor: '#EF4444',
+      text: 'Kritično stanje – žival trpi',
     },
   } as const;
 
   const { bg, Icon, iconColor, text } = config[level];
 
   return (
-    <View className={`flex-row items-center gap-3 rounded-3xl border p-6 shadow-sm ${bg}`}>
+    <View className={`flex-row items-center gap-3 rounded-2xl border p-5 shadow-md ${bg}`}>
       <Icon color={iconColor} size={40} />
       <View className="flex-1">
-        <Text className="text-xl font-bold text-slate-900">{text}</Text>
-        <Text className="mt-1 text-sm text-slate-600">
+        <Text className="text-xl font-bold text-slate-100">{text}</Text>
+        <Text className="mt-1 text-sm text-slate-400">
           Escalation level: {pet?.escalation_level ?? 0}
         </Text>
       </View>
@@ -119,12 +119,12 @@ function MetricCard({ icon, name, level, statusText }: MetricCardProps) {
   const fillColor = interpolateColor(clamped);
 
   return (
-    <View className="bg-white rounded-2xl p-4 shadow-sm shadow-slate-200/50">
+    <View className="bg-slate-900 rounded-2xl p-4 border border-slate-800">
       <View className="flex-row items-center gap-2">
         {icon}
-        <Text className="text-sm font-semibold text-slate-900">{name}</Text>
+        <Text className="text-sm font-semibold text-slate-100">{name}</Text>
       </View>
-      <View className="mt-3 h-2.5 w-full overflow-hidden rounded-full bg-slate-100">
+      <View className="mt-3 h-2.5 w-full overflow-hidden rounded-full bg-slate-800">
         <View
           className="h-full rounded-full"
           style={{ width: `${clamped}%`, backgroundColor: fillColor }}
@@ -141,15 +141,15 @@ function MetricCard({ icon, name, level, statusText }: MetricCardProps) {
 function ActivityTimeline({ activities }: { activities: ActivityEntry[] }) {
   if (activities.length === 0) {
     return (
-      <View className="bg-white rounded-2xl p-4 shadow-sm shadow-slate-200/50">
+      <View className="bg-slate-900 rounded-2xl p-4 border border-slate-800">
         <Text className="text-sm text-slate-500">No recent activity yet.</Text>
       </View>
     );
   }
 
   return (
-    <View className="bg-white rounded-2xl p-4 shadow-sm shadow-slate-200/50">
-      <Text className="mb-3 text-base font-bold text-slate-900">Recent Activity</Text>
+    <View className="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+      <Text className="mb-3 text-base font-bold text-slate-100">Recent Activity</Text>
       <View className="flex-col gap-3">
         {activities.map((entry) => {
           const isPositive = POSITIVE_ACTIVITIES.includes(entry.type);
@@ -164,7 +164,7 @@ function ActivityTimeline({ activities }: { activities: ActivityEntry[] }) {
                 <BadgeIcon color="#ffffff" size={16} />
               </View>
               <View className="flex-1">
-                <Text className="text-sm font-medium text-slate-900">
+                <Text className="text-sm font-medium text-slate-100">
                   {ACTIVITY_DESCRIPTIONS[entry.type]}
                 </Text>
                 <Text className="text-xs text-slate-500">
@@ -187,12 +187,12 @@ function WeeklyChart({ data }: { data: DayData[] }) {
   );
 
   return (
-    <View className="bg-white rounded-2xl p-4 shadow-sm shadow-slate-200/50">
-      <Text className="mb-3 text-base font-bold text-slate-900">This Week</Text>
+    <View className="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+      <Text className="mb-3 text-base font-bold text-slate-100">This Week</Text>
       <View className="flex-row items-end justify-between gap-2">
         {data.map((d) => (
           <View key={d.day} className="flex-1 items-center gap-1">
-            <View className="h-28 w-full flex-col-reverse items-center justify-start overflow-hidden rounded-lg bg-slate-100">
+            <View className="h-28 w-full flex-col-reverse items-center justify-start overflow-hidden rounded-lg bg-slate-800">
               {/* Completed (green) segment */}
               <View
                 className="w-full bg-emerald-500"
@@ -204,18 +204,18 @@ function WeeklyChart({ data }: { data: DayData[] }) {
                 style={{ height: `${(d.missed / maxCount) * 100}%` }}
               />
             </View>
-            <Text className="text-xs text-slate-600">{d.day}</Text>
+            <Text className="text-xs text-slate-500">{d.day}</Text>
           </View>
         ))}
       </View>
       <View className="mt-3 flex-row items-center gap-4">
         <View className="flex-row items-center gap-1">
           <View className="h-3 w-3 rounded bg-emerald-500" />
-          <Text className="text-xs text-slate-600">Completed</Text>
+          <Text className="text-xs text-slate-400">Completed</Text>
         </View>
         <View className="flex-row items-center gap-1">
           <View className="h-3 w-3 rounded bg-rose-500" />
-          <Text className="text-xs text-slate-600">Missed</Text>
+          <Text className="text-xs text-slate-400">Missed</Text>
         </View>
       </View>
     </View>
@@ -254,7 +254,7 @@ function BottomNavBar({ activeTab, onSelect }: NavBarProps) {
   ];
 
   return (
-    <View className="flex-row border-t border-slate-200 bg-white">
+    <View className="flex-row border-t border-slate-800 bg-slate-900">
       {tabs.map(({ id, label, Icon }) => {
         const isActive = activeTab === id;
         return (
@@ -264,11 +264,11 @@ function BottomNavBar({ activeTab, onSelect }: NavBarProps) {
             className={`flex-1 items-center py-3 ${isActive ? 'border-t-2 border-indigo-500' : ''}`}
           >
             <Icon
-              color={isActive ? '#6366f1' : '#94a3b8'}
+              color={isActive ? '#818cf8' : '#64748b'}
               size={24}
             />
             <Text
-              className={`mt-1 text-xs font-medium ${isActive ? 'text-indigo-600' : 'text-slate-400'}`}
+              className={`mt-1 text-xs font-medium ${isActive ? 'text-indigo-400' : 'text-slate-500'}`}
             >
               {label}
             </Text>
@@ -289,7 +289,7 @@ export default function ParentDashboardScreen() {
 
   if (activeTab === 'controls') {
     return (
-      <View className="flex-1 bg-slate-50">
+      <View className="flex-1 bg-slate-950">
         <ControlsScreen onBack={() => setActiveTab('dashboard')} />
         <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} />
       </View>
@@ -298,7 +298,7 @@ export default function ParentDashboardScreen() {
 
   if (activeTab === 'breeds') {
     return (
-      <View className="flex-1 bg-slate-50">
+      <View className="flex-1 bg-slate-950">
         <BreedPaywallScreen onBack={() => setActiveTab('dashboard')} />
         <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} />
       </View>
@@ -306,11 +306,11 @@ export default function ParentDashboardScreen() {
   }
 
   return (
-    <View className="flex-1 bg-slate-50">
+    <View className="flex-1 bg-slate-950">
       <ScrollView className="flex-1" contentContainerClassName="gap-4 p-4 pb-6">
         {/* Header */}
         <View className="flex-row items-center justify-between">
-          <Text className="text-2xl font-bold text-slate-900">Parent Dashboard</Text>
+          <Text className="text-2xl font-bold tracking-tight text-slate-100">Parent Dashboard</Text>
           <Text className="text-sm text-slate-500">
             {pet?.breed_type === 'border_collie' ? 'Border Collie' : 'Mutt'}
           </Text>

@@ -97,13 +97,13 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
   const collie = BREED_STATS.border_collie;
 
   return (
-    <View className="flex-1 bg-slate-50">
+    <View className="flex-1 bg-slate-950">
       {/* Header */}
-      <View className="flex-row items-center gap-3 bg-white px-4 py-4 border-b border-slate-200">
+      <View className="flex-row items-center gap-3 bg-slate-900 px-4 py-4 border-b border-slate-800">
         <Pressable onPress={onBack} hitSlop={8}>
-          <ChevronLeft color="#6366f1" size={28} />
+          <ChevronLeft color="#818cf8" size={28} />
         </Pressable>
-        <Text className="text-xl font-bold text-slate-900">Breed Selection</Text>
+        <Text className="text-xl font-bold text-slate-100">Breed Selection</Text>
       </View>
 
       <ScrollView className="flex-1" contentContainerClassName="p-4 pb-6">
@@ -114,70 +114,70 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
         {/* Breed cards side by side */}
         <View className="flex-row gap-3">
           {/* Mutt (Free) */}
-          <View className="flex-1 border border-gray-300 rounded-2xl p-6 bg-white">
-            <Text className="text-lg font-bold text-slate-900">Mutt</Text>
-            <View className="mt-2 self-start rounded-full bg-gray-200 px-3 py-1">
-              <Text className="text-xs font-bold text-gray-700">FREE</Text>
+          <View className="flex-1 border border-slate-700 rounded-2xl p-6 bg-slate-900">
+            <Text className="text-lg font-bold text-slate-100">Mutt</Text>
+            <View className="mt-2 self-start rounded-full bg-slate-800 px-3 py-1">
+              <Text className="text-xs font-bold text-slate-400">FREE</Text>
             </View>
 
             <View className="mt-4 gap-2">
               <View className="flex-row items-center gap-2">
                 <Footprints color="#64748b" size={18} />
-                <Text className="text-sm text-slate-700">
+                <Text className="text-sm text-slate-400">
                   {mutt.dailySteps.toLocaleString('en-US')} steps/day
                 </Text>
               </View>
-              <Text className="text-sm text-slate-700">Decay: {mutt.decayRate}</Text>
+              <Text className="text-sm text-slate-400">Decay: {mutt.decayRate}</Text>
             </View>
 
             <View className="mt-5 items-center">
               {pet?.breed_type === 'mutt' ? (
                 <View className="flex-row items-center gap-1">
-                  <Check color="#059669" size={18} />
-                  <Text className="text-sm font-semibold text-emerald-600">
+                  <Check color="#10B981" size={18} />
+                  <Text className="text-sm font-semibold text-emerald-400">
                     Current Breed
                   </Text>
                 </View>
               ) : (
-                <Text className="text-sm text-slate-400">Starter breed</Text>
+                <Text className="text-sm text-slate-600">Starter breed</Text>
               )}
             </View>
           </View>
 
           {/* Border Collie (Premium) */}
-          <View className="flex-1 border-2 border-indigo-500 rounded-2xl p-6 bg-white">
+          <View className="flex-1 border-2 border-indigo-500 rounded-2xl p-6 bg-slate-900">
             <View className="flex-row items-center justify-between">
-              <Text className="text-lg font-bold text-slate-900">Border Collie</Text>
-              <Crown color="#6366f1" size={20} />
+              <Text className="text-lg font-bold text-slate-100">Border Collie</Text>
+              <Crown color="#818cf8" size={20} />
             </View>
-            <View className="mt-2 self-start rounded-full bg-indigo-100 px-3 py-1">
-              <Text className="text-xs font-bold text-indigo-700">
+            <View className="mt-2 self-start rounded-full bg-indigo-500/20 px-3 py-1">
+              <Text className="text-xs font-bold text-indigo-400">
                 RECOMMENDED · PREMIUM
               </Text>
             </View>
 
             <View className="mt-4 gap-2">
               <View className="flex-row items-center gap-2">
-                <Footprints color="#6366f1" size={18} />
-                <Text className="text-sm text-slate-700">
+                <Footprints color="#818cf8" size={18} />
+                <Text className="text-sm text-slate-300">
                   {collie.dailySteps.toLocaleString('en-US')} steps/day
                 </Text>
               </View>
-              <Text className="text-sm text-slate-700">Decay: {collie.decayRate}</Text>
+              <Text className="text-sm text-slate-300">Decay: {collie.decayRate}</Text>
             </View>
 
-            <Text className="mt-3 text-2xl font-bold text-slate-900">
+            <Text className="mt-3 text-2xl font-bold text-slate-100">
               {PREMIUM_PRICE}
             </Text>
 
             {isUnlocked ? (
               <View className="mt-4 flex-row items-center justify-center gap-1">
-                <Check color="#059669" size={18} />
-                <Text className="text-sm font-semibold text-emerald-600">Unlocked</Text>
+                <Check color="#10B981" size={18} />
+                <Text className="text-sm font-semibold text-emerald-400">Unlocked</Text>
               </View>
             ) : (
               <Pressable
-                className="mt-4 items-center rounded-xl bg-indigo-600 py-3.5 active:scale-98 disabled:opacity-50"
+                className="mt-4 items-center rounded-xl bg-indigo-600 py-3.5 active:scale-95 disabled:opacity-50"
                 onPress={handlePurchase}
                 disabled={isPurchasing}
               >
@@ -201,11 +201,11 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
           disabled={isRestoring}
         >
           {isRestoring ? (
-            <ActivityIndicator color="#6366f1" size={18} />
+            <ActivityIndicator color="#818cf8" size={18} />
           ) : (
-            <RotateCcw color="#6366f1" size={18} />
+            <RotateCcw color="#818cf8" size={18} />
           )}
-          <Text className="text-sm font-medium text-indigo-600">
+          <Text className="text-sm font-medium text-indigo-400">
             Restore Purchases
           </Text>
         </Pressable>

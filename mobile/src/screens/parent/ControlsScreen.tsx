@@ -134,20 +134,20 @@ export default function ControlsScreen({ onBack }: ControlsScreenProps) {
   };
 
   return (
-    <View className="flex-1 bg-slate-50">
+    <View className="flex-1 bg-slate-950">
       {/* Header */}
-      <View className="flex-row items-center gap-3 bg-white px-4 py-4 border-b border-slate-200">
+      <View className="flex-row items-center gap-3 bg-slate-900 px-4 py-4 border-b border-slate-800">
         <Pressable onPress={onBack} hitSlop={8}>
-          <ChevronLeft color="#6366f1" size={28} />
+          <ChevronLeft color="#818cf8" size={28} />
         </Pressable>
-        <Text className="text-xl font-bold text-slate-900">Controls</Text>
+        <Text className="text-xl font-bold text-slate-100">Controls</Text>
       </View>
 
       <ScrollView className="flex-1" contentContainerClassName="gap-4 p-4 pb-6">
         {/* Quiet Hours Manager */}
-        <View className="bg-white rounded-2xl p-5">
+        <View className="bg-slate-900 rounded-2xl p-5 border border-slate-800">
           <View className="flex-row items-center justify-between">
-            <Text className="text-lg font-bold text-slate-900">Quiet Hours</Text>
+            <Text className="text-lg font-bold text-slate-100">Quiet Hours</Text>
             <View className="flex-row items-center gap-2">
               <Text className="text-sm text-slate-500">Active</Text>
               <Switch
@@ -159,17 +159,18 @@ export default function ControlsScreen({ onBack }: ControlsScreenProps) {
           </View>
 
           {/* School Hours */}
-          <Text className="mt-4 text-sm font-semibold text-slate-700">
+          <Text className="mt-4 text-sm font-semibold text-slate-300">
             School Hours
           </Text>
           <View className="mt-2 flex-row gap-3">
             <View className="flex-1">
               <Text className="mb-1 text-xs text-slate-500">Start</Text>
               <TextInput
-                className="h-12 rounded-xl border border-slate-300 bg-slate-50 px-3 text-base text-slate-900"
+                className="h-12 rounded-xl border border-slate-700 bg-slate-800 px-3 text-base text-slate-100"
                 value={quietHours.school_start ?? ''}
                 onChangeText={(v) => updateField('school_start', v)}
                 placeholder="08:00"
+                placeholderTextColor="#64748b"
                 keyboardType="numbers-and-punctuation"
                 maxLength={5}
               />
@@ -177,10 +178,11 @@ export default function ControlsScreen({ onBack }: ControlsScreenProps) {
             <View className="flex-1">
               <Text className="mb-1 text-xs text-slate-500">End</Text>
               <TextInput
-                className="h-12 rounded-xl border border-slate-300 bg-slate-50 px-3 text-base text-slate-900"
+                className="h-12 rounded-xl border border-slate-700 bg-slate-800 px-3 text-base text-slate-100"
                 value={quietHours.school_end ?? ''}
                 onChangeText={(v) => updateField('school_end', v)}
                 placeholder="13:00"
+                placeholderTextColor="#64748b"
                 keyboardType="numbers-and-punctuation"
                 maxLength={5}
               />
@@ -188,15 +190,16 @@ export default function ControlsScreen({ onBack }: ControlsScreenProps) {
           </View>
 
           {/* Bedtime */}
-          <Text className="mt-4 text-sm font-semibold text-slate-700">Bedtime</Text>
+          <Text className="mt-4 text-sm font-semibold text-slate-300">Bedtime</Text>
           <View className="mt-2 flex-row gap-3">
             <View className="flex-1">
               <Text className="mb-1 text-xs text-slate-500">Start</Text>
               <TextInput
-                className="h-12 rounded-xl border border-slate-300 bg-slate-50 px-3 text-base text-slate-900"
+                className="h-12 rounded-xl border border-slate-700 bg-slate-800 px-3 text-base text-slate-100"
                 value={quietHours.bedtime_start ?? ''}
                 onChangeText={(v) => updateField('bedtime_start', v)}
                 placeholder="21:00"
+                placeholderTextColor="#64748b"
                 keyboardType="numbers-and-punctuation"
                 maxLength={5}
               />
@@ -204,10 +207,11 @@ export default function ControlsScreen({ onBack }: ControlsScreenProps) {
             <View className="flex-1">
               <Text className="mb-1 text-xs text-slate-500">End</Text>
               <TextInput
-                className="h-12 rounded-xl border border-slate-300 bg-slate-50 px-3 text-base text-slate-900"
+                className="h-12 rounded-xl border border-slate-700 bg-slate-800 px-3 text-base text-slate-100"
                 value={quietHours.bedtime_end ?? ''}
                 onChangeText={(v) => updateField('bedtime_end', v)}
                 placeholder="07:00"
+                placeholderTextColor="#64748b"
                 keyboardType="numbers-and-punctuation"
                 maxLength={5}
               />
@@ -230,8 +234,8 @@ export default function ControlsScreen({ onBack }: ControlsScreenProps) {
         </View>
 
         {/* Emergency Hard Stop */}
-        <View className="bg-white rounded-2xl p-5">
-          <Text className="text-lg font-bold text-slate-900">Emergency Controls</Text>
+        <View className="bg-slate-900 rounded-2xl p-5 border border-slate-800">
+          <Text className="text-lg font-bold text-slate-100">Emergency Controls</Text>
           <Text className="mt-1 text-sm text-slate-500">
             Immediately lock the child's device to prevent all interaction.
           </Text>
