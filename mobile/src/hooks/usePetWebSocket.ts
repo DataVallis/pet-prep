@@ -12,13 +12,15 @@ import { useAppStore } from '@/store/appStore';
 import { ENV } from '@/config/env';
 import type { PetUpdatedBroadcast } from '@/types';
 
-// Pusher needs to be available globally for Laravel Echo
-declare global {
-  // eslint-disable-next-line no-var
-  var Pusher: typeof Pusher;
-}
+// Safely resolve Pusher constructor across CJS and ESM interop
+const PusherConstructor: any =
+  typeof Pusher === 'function'
+    ? Pusher
+    : (Pusher as any)?.default ?? Pusher;
 
-global.Pusher = Pusher;
+if (typeof globalThis !== 'undefined') {
+  (globalThis as any).Pusher = PusherConstructor;
+}
 
 const POLLING_INTERVAL_MS = 10_000; // 10 seconds fallback polling
 
@@ -35,10 +37,8 @@ export function usePetWebSocket(petId: number | null): void {
     setWsStatus('reconnecting');
     pollingRef.current = setInterval(async () => {
       // Fallback: poll the API for pet status
-      // In production, this would call GET /api/pet/{id}
-      // For now, just attempt to reconnect the WebSocket
       try {
-        if (echoRef.current) {
+        if (echoRef.current?.connector?.pusher?.connection) {
           await echoRef.current.connector.pusher.connection.checkAvailability();
         }
       } catch {
@@ -59,44 +59,59 @@ export function usePetWebSocket(petId: number | null): void {
 
     setWsStatus('connecting');
 
-    const echo = new Echo({
-      broadcaster: 'pusher',
-      key: ENV.REVERB_APP_KEY,
-      wsHost: ENV.REVERB_HOST,
-      wsPort: ENV.REVERB_PORT,
-      forceTLS: false,
-      enabledTransports: ['ws'],
-      disabledTransports: ['wss'],
-    });
+    const isHttps = ENV.REVERB_SCHEME === 'https';
 
-    echoRef.current = echo;
+    try {
+      const echo = new Echo({
+        broadcaster: 'reverb',
+        client: new PusherConstructor(ENV.REVERB_APP_KEY, {
+          wsHost: ENV.REVERB_HOST,
+          wsPort: isHttps ? 443 : ENV.REVERB_PORT,
+          wssPort: isHttps ? 443 : ENV.REVERB_PORT,
+          forceTLS: isHttps,
+          enabledTransports: ['ws', 'wss'],
+          disableStats: true,
+        }),
+      });
 
-    const channel = echo.channel(`pet.updated.${petId}`);
+      echoRef.current = echo;
 
-    channel.listen('pet.updated', (event: PetUpdatedBroadcast) => {
-      updatePetFromBroadcast(event);
-    });
+      const channel = echo.channel(`pet.updated.${petId}`);
 
-    // Connection state handlers
-    echo.connector.pusher.connection.bind('connected', () => {
-      setWsStatus('connected');
-      stopPolling();
-    });
+      channel.listen('pet.updated', (event: PetUpdatedBroadcast) => {
+        updatePetFromBroadcast(event);
+      });
 
-    echo.connector.pusher.connection.bind('disconnected', () => {
-      setWsStatus('disconnected');
+      // Connection state handlers
+      echo.connector.pusher.connection.bind('connected', () => {
+        setWsStatus('connected');
+        stopPolling();
+      });
+
+      echo.connector.pusher.connection.bind('disconnected', () => {
+        setWsStatus('disconnected');
+        startPolling();
+      });
+
+      echo.connector.pusher.connection.bind('failed', () => {
+        setWsStatus('disconnected');
+        startPolling();
+      });
+    } catch (err) {
+      console.warn('Echo initialization error:', err);
       startPolling();
-    });
-
-    echo.connector.pusher.connection.bind('failed', () => {
-      setWsStatus('disconnected');
-      startPolling();
-    });
+    }
 
     return () => {
-      channel.stopListening('pet.updated');
-      echo.disconnect();
-      echoRef.current = null;
+      try {
+        if (echoRef.current) {
+          echoRef.current.channel(`pet.updated.${petId}`).stopListening('pet.updated');
+          echoRef.current.disconnect();
+          echoRef.current = null;
+        }
+      } catch {
+        // cleanup safety
+      }
       stopPolling();
       setWsStatus('disconnected');
     };

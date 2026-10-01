@@ -91,7 +91,11 @@ export class ApiError extends Error {
 export const api = {
   /** POST /api/login — Login with email + password, returns Sanctum token. */
   login: (email: string, password: string, deviceName: string = 'mobile-app') =>
-    apiRequest<{ token: string; user: { id: number; name: string; email: string; role: string } }>('/api/login', {
+    apiRequest<{
+      token: string;
+      user: { id: number; name: string; email: string; role: 'parent' | 'child' };
+      pet: Pet | null;
+    }>('/api/login', {
       method: 'POST',
       body: { email, password, device_name: deviceName },
     }),
@@ -110,7 +114,13 @@ export const api = {
 
   /** GET /api/user — Get the authenticated user. */
   getUser: () =>
-    apiRequest<{ data: { id: number; name: string; email: string; role: string } }>('/api/user'),
+    apiRequest<{
+      id: number;
+      name: string;
+      email: string;
+      role: 'parent' | 'child';
+      pet: Pet | null;
+    }>('/api/user'),
 
   /** GET /api/parent/quiet-hours — Get quiet hours config. */
   getQuietHours: () =>

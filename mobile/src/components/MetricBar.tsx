@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 
 import { interpolateColor } from '@/utils/metrics';
 
@@ -23,20 +23,72 @@ export default function MetricBar({ level, label, icon, color }: MetricBarProps)
   const fillColor = color ?? interpolateColor(clamped);
 
   return (
-    <View className="w-12 flex-col items-center gap-1.5">
-      <View className="h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/10">
+    <View style={styles.container}>
+      <View style={styles.iconBadge}>
         {icon}
       </View>
 
-      <View className="h-30 w-3 overflow-hidden rounded-full bg-white/8">
+      <View style={styles.barTrack}>
         <View
-          className="w-full rounded-full"
-          style={{ height: `${clamped}%`, backgroundColor: fillColor }}
+          style={[
+            styles.barFill,
+            { height: `${clamped}%`, backgroundColor: fillColor },
+          ]}
         />
       </View>
 
-      <Text className="font-mono text-xs font-semibold text-white">{clamped}%</Text>
-      {label ? <Text className="font-mono text-[10px] uppercase tracking-wider text-white/40">{label}</Text> : null}
+      <Text style={styles.percentText}>{clamped}%</Text>
+      {label ? <Text style={styles.labelText}>{label}</Text> : null}
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    width: 48,
+    alignItems: 'center',
+    gap: 6,
+  },
+  iconBadge: {
+    width: 34,
+    height: 34,
+    borderRadius: 17,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.2)',
+    backgroundColor: 'rgba(255, 255, 255, 0.12)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+  },
+  barTrack: {
+    height: 100,
+    width: 12,
+    borderRadius: 6,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.15)',
+    overflow: 'hidden',
+    justifyContent: 'flex-end',
+  },
+  barFill: {
+    width: '100%',
+    borderRadius: 6,
+  },
+  percentText: {
+    fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#ffffff',
+  },
+  labelText: {
+    fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
+    fontSize: 10,
+    fontWeight: '600',
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    color: 'rgba(255, 255, 255, 0.5)',
+  },
+});

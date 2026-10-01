@@ -6,6 +6,13 @@
 import { create } from 'zustand';
 import type { Pet, PetUpdatedBroadcast } from '@/types';
 
+export interface AppUser {
+  id: number;
+  name: string;
+  email: string;
+  role: 'parent' | 'child';
+}
+
 export type PairingStatus = 'unpaired' | 'pairing' | 'paired' | 'error';
 
 export type WebSocketStatus = 'disconnected' | 'connecting' | 'connected' | 'reconnecting';
@@ -15,9 +22,11 @@ export type LockState = 'none' | 'hard_stop' | 'illness' | 'game_over';
 interface AppStore {
   // Auth & pairing
   authToken: string | null;
+  user: AppUser | null;
   pairingStatus: PairingStatus;
   pairingError: string | null;
   setAuthToken: (token: string | null) => void;
+  setUser: (user: AppUser | null) => void;
   setPairingStatus: (status: PairingStatus, error?: string | null) => void;
 
   // Pet data
@@ -46,9 +55,11 @@ interface AppStore {
 export const useAppStore = create<AppStore>((set) => ({
   // Auth & pairing
   authToken: null,
+  user: null,
   pairingStatus: 'unpaired',
   pairingError: null,
   setAuthToken: (token) => set({ authToken: token }),
+  setUser: (user) => set({ user }),
   setPairingStatus: (status, error = null) =>
     set({ pairingStatus: status, pairingError: error }),
 
@@ -101,6 +112,7 @@ export const useAppStore = create<AppStore>((set) => ({
   reset: () =>
     set({
       authToken: null,
+      user: null,
       pairingStatus: 'unpaired',
       pairingError: null,
       pet: null,

@@ -1,10 +1,11 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 import { useAppStore, type LockState } from '@/store/appStore';
 import PairingScreen from '@/screens/PairingScreen';
 import LockedScreen from '@/screens/LockedScreen';
 import ChildHudScreen from '@/screens/ChildHudScreen';
+import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
 
 const LOCKED_STATES: LockState[] = ['game_over', 'hard_stop', 'illness'];
 
@@ -31,9 +32,9 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   render(): ReactNode {
     if (this.state.hasError) {
       return (
-        <View className="flex-1 items-center justify-center bg-slate-900 p-6">
-          <Text className="text-lg font-bold text-red-500">Something went wrong</Text>
-          <Text className="mt-2 text-sm text-slate-400">{this.state.error?.message}</Text>
+        <View style={styles.errorContainer}>
+          <Text style={styles.errorTitle}>Nekaj je šlo narobe</Text>
+          <Text style={styles.errorMessage}>{this.state.error?.message}</Text>
         </View>
       );
     }
@@ -43,18 +44,52 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
 export default function AppNavigator() {
   const authToken = useAppStore((s) => s.authToken);
+  const user = useAppStore((s) => s.user);
   const pet = useAppStore((s) => s.pet);
   const lockState = useAppStore((s) => s.lockState);
 
   const isLocked = LOCKED_STATES.includes(lockState);
-  const isPaired = authToken !== null && pet !== null;
+  const isAuthenticated = authToken !== null && user !== null;
 
   return (
     <ErrorBoundary>
-      <View className="flex-1">
-        {isPaired ? <ChildHudScreen /> : <PairingScreen />}
-        {isLocked && <LockedScreen />}
+      <View style={styles.root}>
+        {!isAuthenticated ? (
+          <PairingScreen />
+        ) : user.role === 'parent' ? (
+          <ParentDashboardScreen />
+        ) : (
+          <>
+            {pet !== null ? <ChildHudScreen /> : <PairingScreen initialStep="pin" />}
+            {isLocked && <LockedScreen />}
+          </>
+        )}
       </View>
     </ErrorBoundary>
   );
 }
+
+const styles = StyleSheet.create({
+  root: {
+    flex: 1,
+    backgroundColor: '#020617',
+  },
+  errorContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#0f172a',
+    padding: 24,
+  },
+  errorTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#ef4444',
+  },
+  errorMessage: {
+    marginTop: 8,
+    fontSize: 14,
+    color: '#94a3b8',
+    textAlign: 'center',
+  },
+});
