@@ -1,3 +1,4 @@
+# --- Laravel / root (from origin) ---
 /.phpunit.cache
 /node_modules
 /public/build
@@ -21,3 +22,42 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+
+# --- Added by Claude orchestrator ---
+# Dependencies
+node_modules/
+/backend/vendor/
+
+# Environment & secrets
+.env.*
+!.env.example
+*.pem
+*.p8
+*.p12
+*.key
+*.jks
+*.mobileprovision
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Build / caches
+.expo/
+dist/
+coverage/
+*.log
+
+# Agent scratch files
+.augment_tmp_*
+.claude/settings.local.json
+
+# Monorepo merge backup (delete when verified)
+/.backup-mobile-submodule-*/
+
+# EAS / signing credentials
+mobile/credentials.json
+mobile/credentials/
