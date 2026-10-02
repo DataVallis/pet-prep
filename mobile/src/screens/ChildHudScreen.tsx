@@ -144,13 +144,13 @@ export default function ChildHudScreen() {
           player={player}
           contentFit="cover"
           nativeControls={false}
-          style={StyleSheet.absoluteFillObject}
+          style={StyleSheet.absoluteFill}
         />
       ) : pet?.pet_dna?.reference_image_url ? (
         <Image
           source={{ uri: pet.pet_dna.reference_image_url }}
           resizeMode="cover"
-          style={StyleSheet.absoluteFillObject}
+          style={StyleSheet.absoluteFill}
         />
       ) : (
         <View style={styles.fallbackViewport}>
@@ -293,11 +293,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#020617',
   },
   mediaOverlay: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     backgroundColor: 'rgba(0, 0, 0, 0.25)',
   },
   fallbackViewport: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#020617',
@@ -380,7 +380,7 @@ const styles = StyleSheet.create({
     zIndex: 20,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'between',
+    justifyContent: 'space-between',
     backgroundColor: 'rgba(15, 23, 42, 0.85)',
     borderWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.15)',

@@ -25,7 +25,7 @@ if (typeof globalThis !== 'undefined') {
 const POLLING_INTERVAL_MS = 10_000; // 10 seconds fallback polling
 
 export function usePetWebSocket(petId: number | null): void {
-  const echoRef = useRef<Echo<'pusher'> | null>(null);
+  const echoRef = useRef<Echo<'reverb'> | null>(null);
   const pollingRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const setWsStatus = useAppStore((s) => s.setWsStatus);
@@ -35,15 +35,12 @@ export function usePetWebSocket(petId: number | null): void {
     if (pollingRef.current) return;
 
     setWsStatus('reconnecting');
-    pollingRef.current = setInterval(async () => {
-      // Fallback: poll the API for pet status
-      try {
-        if (echoRef.current?.connector?.pusher?.connection) {
-          await echoRef.current.connector.pusher.connection.checkAvailability();
-        }
-      } catch {
-        // Keep polling until reconnected
-      }
+    pollingRef.current = setInterval(() => {
+      // TODO: fallback poll of the pet status API is not implemented yet.
+      // The previous body called `connection.checkAvailability()`, which does not
+      // exist on pusher-js' ConnectionManager (it always threw and was swallowed),
+      // so this tick was already a no-op. pusher-js reconnects on its own; the
+      // 'connected' handler below calls stopPolling().
     }, POLLING_INTERVAL_MS);
   }, [setWsStatus]);
 
