@@ -85,8 +85,11 @@ psql -d petprep -c "SELECT * FROM activities_log ORDER BY created_at DESC LIMIT 
 ### fal.ai (AI Media Generation)
 | Variable | Description |
 |----------|-------------|
-| `FAL_AI_API_KEY` | fal.ai API key for Kling 3.0 + Flux. Empty = disabled (graceful fallback) |
-| `FAL_AI_WEBHOOK_SECRET` | Secret for validating incoming fal.ai webhook callbacks |
+| `FAL_AI_API_KEY` | fal.ai API key (Flux reference image + Kling video). Empty = media generation disabled |
+| `FAL_AI_JWKS_URL` | Optional. fal.ai public keys for webhook signature checks (default `https://rest.fal.ai/.well-known/jwks.json`) |
+| `FAL_AI_MEDIA_HOSTS` | Optional. Comma-separated hosts allowed for generated media (default `fal.media`, incl. subdomains) |
+
+There is **no webhook secret**: fal.ai signs webhooks with ED25519 and we verify the signature (`App\Services\FalWebhookVerifier`).
 
 ### RevenueCat (IAP — Phase 4)
 | Variable | Description |
@@ -96,40 +99,14 @@ psql -d petprep -c "SELECT * FROM activities_log ORDER BY created_at DESC LIMIT 
 
 ## Webhook Testing (fal.ai)
 
-### Testing the Webhook Endpoint Locally
-
-The fal.ai webhook endpoint is at `POST /api/webhooks/fal-ai?pet_id={petId}`.
+`POST /api/webhooks/fal-ai` only accepts webhooks **signed by fal.ai** for a `request_id` we created
+(`pet_media_jobs` table). Unsigned curl calls are rejected with 401 by design.
+To test, use the Pest suite (`tests/Feature/FalAiTest.php` signs requests with a test key pair), or trigger
+a real generation with a valid `FAL_AI_API_KEY` and a public `APP_URL` (e.g. via a tunnel such as `cloudflared`):
 
 ```bash
-# Simulate a completed video rendering webhook
-curl -X POST http://localhost:8000/api/webhooks/fal-ai?pet_id=1 \
-  -H "Content-Type: application/json" \
-  -d '{
-    "request_id": "req_test_12345",
-    "status": "COMPLETED",
-    "video": {
-      "url": "https://cdn.fal.ai/generated/test_video.mp4"
-    }
-  }'
-
-# Simulate an in-progress webhook (should not update pet)
-curl -X POST http://localhost:8000/api/webhooks/fal-ai?pet_id=1 \
-  -H "Content-Type: application/json" \
-  -d '{
-    "request_id": "req_test_67890",
-    "status": "IN_PROGRESS"
-  }'
-
-# Test with webhook secret (if configured)
-curl -X POST "http://localhost:8000/api/webhooks/fal-ai?pet_id=1&secret=your_webhook_secret" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "request_id": "req_test_12345",
-    "status": "COMPLETED",
-    "video": {
-      "url": "https://cdn.fal.ai/generated/test_video.mp4"
-    }
-  }'
+./vendor/bin/sail artisan tinker
+>>> app(App\Services\FalAiService::class)->generatePetVideoState(App\Models\Pet::first(), App\Enums\PetStateEnum::Idle);
 ```
 
 ## Webhook Testing (RevenueCat)

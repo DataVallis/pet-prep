@@ -4,11 +4,12 @@ namespace App\Services;
 
 use App\Enums\BreedType;
 use App\Enums\UserRole;
-use App\Models\BreedConfig;
+use App\Exceptions\PairingException;
+use App\Jobs\GeneratePetReferenceImage;
 use App\Models\Pet;
 use App\Models\User;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
 class PairingService
 {
@@ -25,7 +26,7 @@ class PairingService
      * Generate a unique 6-digit pairing PIN for a parent user.
      * Sets an expiration timestamp (15 minutes from now).
      *
-     * @return array{pin: string, expires_at: \Illuminate\Support\Carbon}
+     * @return array{pin: string, expires_at: Carbon}
      */
     public function generatePin(User $parent): array
     {
@@ -62,7 +63,7 @@ class PairingService
      *
      * @return array{parent: User, pet: Pet}
      *
-     * @throws \App\Exceptions\PairingException
+     * @throws PairingException
      */
     public function pairChild(string $pin, User $child): array
     {
@@ -73,16 +74,16 @@ class PairingService
                 ->first();
 
             if (! $parent) {
-                throw new \App\Exceptions\PairingException('Invalid or expired pairing PIN.');
+                throw new PairingException('Invalid or expired pairing PIN.');
             }
 
             if (! $parent->isParent()) {
-                throw new \App\Exceptions\PairingException('The PIN does not belong to a parent profile.');
+                throw new PairingException('The PIN does not belong to a parent profile.');
             }
 
             // Ensure the child is not already paired
             if ($child->parent_id !== null) {
-                throw new \App\Exceptions\PairingException('This child profile is already paired to a parent.');
+                throw new PairingException('This child profile is already paired to a parent.');
             }
 
             // Link child to parent
@@ -91,25 +92,28 @@ class PairingService
                 'role' => UserRole::Child->value,
             ]);
 
-            // Generate the pet's unique visual identity (Pet DNA) via fal.ai.
-            // This creates a fixed seed, prompt anchor, visual traits, and
-            // a canonical reference image used for all future video generation.
-            // In dev/testing where fal.ai is disabled, pet_dna will have
-            // seed + prompt_anchor but no reference_image_url.
+            // Pet DNA (seed, prompt anchor, visual traits) is generated offline.
+            // The reference image is produced asynchronously by a queued job
+            // dispatched after this transaction commits — never call fal.ai here.
             $breed = BreedType::Mutt; // Free tier default
             $petDna = $this->falAiService->generateInitialPetDna($breed);
+            $mediaEnabled = $this->falAiService->isEnabled();
 
-            // Initialize the child's pet session with Pet DNA
             $pet = Pet::create([
                 'user_id' => $child->id,
                 'breed_type' => $breed->value,
                 'pet_dna' => $petDna,
+                'media_status' => $mediaEnabled ? 'pending' : 'disabled',
                 'hunger_level' => 100,
                 'energy_level' => 100,
                 'hygiene_level' => 100,
                 'born_at' => now(),
                 'is_active' => true,
             ]);
+
+            if ($mediaEnabled) {
+                GeneratePetReferenceImage::dispatch($pet->id)->afterCommit();
+            }
 
             // Consume the PIN so it cannot be reused
             $parent->update([

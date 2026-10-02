@@ -49,6 +49,10 @@ PetPrep/                         git: DataVallis/pet-prep
 
 **breed_configs** — `breed_slug (mutt | border-collie), daily_steps_required (4000 | 10000), hunger_decay_rate (8 | 12), premium_unlock`. Thirst rate is hard-coded in `PetDecayService` (10 | 15). Note the slug uses a hyphen and the enum uses an underscore — `BreedType::slug()` maps them.
 
+**pet_media_jobs** — `id, pet_id → pets, request_id (unique, fal.ai), kind (video), pet_state, status (pending|completed|failed), result_url, error, completed_at`. Webhooks are accepted only for rows here.
+
+`pets.media_status` — `disabled | pending | ready | failed` (reference image lifecycle).
+
 **quiet_hours** — one row per parent: `school_start/end, bedtime_start/end (time), is_active`.
 
 Laravel default tables: `password_reset_tokens, sessions, cache, jobs, failed_jobs, personal_access_tokens`.
@@ -65,8 +69,8 @@ Laravel default tables: `password_reset_tokens, sessions, cache, jobs, failed_jo
 | GET | `/api/parent/activities` | sanctum | ParentDashboardController@activities | paginated |
 | POST | `/api/parent/hard-stop` | sanctum | ParentDashboardController@toggleHardStop | **toggle**, returns `is_hard_stopped` |
 | GET/PUT | `/api/parent/quiet-hours` | sanctum | QuietHoursController | |
-| POST | `/api/child/pair` | sanctum, throttle:pairing | PairingController@pairChild | creates Mutt pet + calls fal.ai synchronously inside the DB transaction |
-| POST | `/api/webhooks/fal-ai` | secret (optional!) | FalAiWebhookController | |
+| POST | `/api/child/pair` | sanctum, throttle:pairing | PairingController@pairChild | creates Mutt pet (offline Pet DNA, `media_status`); queues `GeneratePetReferenceImage` after commit when fal.ai is enabled |
+| POST | `/api/webhooks/fal-ai` | ED25519 signature (fail closed) | FalAiWebhookController | matches `request_id` → `pet_media_jobs`; idempotent; only `*.fal.media` URLs |
 | POST | `/api/webhooks/revenuecat` | Bearer secret (optional!) | RevenueCatWebhookController | |
 
 **Missing (see ROADMAP M1-07):** every child action endpoint (pet state, feed, water, clean, steps, contract), registration, social login, reset.
@@ -93,7 +97,7 @@ Docs: Scramble at `/docs/api` (local env only), export via `php artisan openapi:
 
 | Service | Where | State |
 |---|---|---|
-| fal.ai (Flux schnell image, Kling v1.6 pro i2v) | `FalAiService` | Disabled without `FAL_AI_API_KEY`; video generation is never triggered; webhook format/signature wrong |
+| fal.ai (Flux schnell image via `fal.run`, Kling v1.6 pro i2v via `queue.fal.run`) | `FalAiService`, `FalWebhookVerifier`, `GeneratePetReferenceImage` job | Disabled without `FAL_AI_API_KEY`. Reference image generated in a queued job after pairing; video jobs recorded in `pet_media_jobs`; webhooks signature-verified. Video generation is not yet triggered by state changes (M4-03) |
 | RevenueCat | webhook only | SDK not installed in the app; paywall is simulated with `setTimeout` |
 | Push (Expo/APNs/FCM) | – | Not implemented |
 | HealthKit / Health Connect | – | Not implemented; uses `expo-sensors` Pedometer (iOS only for history) |
@@ -108,7 +112,7 @@ Default API is production (`https://api.petprep.si`, Reverb wss :443) unless `EX
 
 ## 8. Configuration
 
-Backend `.env` keys in use: `DB_*` (pgsql), `BROADCAST_CONNECTION`, `REVERB_APP_ID/KEY/SECRET/HOST/PORT/SCHEME`, `QUEUE_CONNECTION`, `FAL_AI_API_KEY`, `FAL_AI_WEBHOOK_SECRET`, `REVENUECAT_SECRET_KEY`, `REVENUECAT_PUBLIC_KEY`, `REVENUECAT_BORDER_COLLIE_PRODUCT_ID`.
+Backend `.env` keys in use: `DB_*` (pgsql), `BROADCAST_CONNECTION`, `REVERB_APP_ID/KEY/SECRET/HOST/PORT/SCHEME`, `QUEUE_CONNECTION`, `FAL_AI_API_KEY`, `FAL_AI_JWKS_URL`, `FAL_AI_MEDIA_HOSTS`, `REVENUECAT_SECRET_KEY`, `REVENUECAT_PUBLIC_KEY`, `REVENUECAT_BORDER_COLLIE_PRODUCT_ID`.
 Mobile: `EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_REVERB_APP_KEY`, `EXPO_PUBLIC_REVERB_HOST`, `EXPO_PUBLIC_REVERB_PORT`, `EXPO_PUBLIC_REVERB_SCHEME`.
 
 ## 9. Production

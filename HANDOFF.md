@@ -5,18 +5,18 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-02 afternoon (Claude, orchestrator)
+- **Last updated:** 2026-10-02 afternoon (Claude, orchestrator — cloud session; PR #2 CI, PR #1 fal webhooks)
 - **Realistic MVP completion:** ~45 % (see `docs/engineering/AUDIT-2026-10-02.md` + addendum)
 - **Current milestone:** M0 — repo hygiene → then M1 — core game loop end-to-end
 - **Production:** `https://api.petprep.si` is live (Docker Compose + Caddy on Hetzner CX23). Deploy: auto on push to `main` **until PR #2 is merged**; afterwards manual only (Actions → CI & Deploy → Run workflow).
 
 | Milestone | Status |
 |---|---|
-| M0 Repo hygiene | 4 / 12 (gitignore, monorepo merge, untracked node_modules/.idea) |
+| M0 Repo hygiene | 7 / 14 (+ yarn only, CI on Postgres + manual deploy, mobile test infra — PR #2) |
 | M1 Core loop end-to-end | 0 / 18 (role-based routing partially done on mobile) |
 | M2 Parent + auth | 0 / 9 |
 | M3 Notifications, sensors, payments | 0 / 11 |
-| M4 AI media | 0 / 7 |
+| M4 AI media | 2 / 7 (M4-01 queued reference image, M4-04 signed webhooks — PR open) |
 | M5 Production + beta | 2 / 8 (server + domain/TLS live; deploy pipeline and backups partial) |
 
 ## 2. Decisions (2026-10-02)
@@ -33,8 +33,8 @@
 2. **No child action endpoints**; Feed/Water only +20 % locally; walk/clean local only. (M1-07, M1-14)
 3. **Parent dashboard timeline/chart still mock data.** (M2-05)
 4. **Hard stop doesn't lock the child**; decay continues during hard stop. (M1-02, M1-16)
-5. **Public broadcast channel**; **webhooks fail open**. (M1-08, M3-08, M4-04)
-6. **CI tests run on sqlite** → Postgres-only migrations fail; **deploy has no manual approval**. (M0-08)
+5. **Public broadcast channel**; RevenueCat webhook fails open (fal.ai fixed in PR #1). (M1-08, M3-08)
+6. ~~CI on sqlite / invalid workflow / auto-deploy~~ → fixed in PR #2 (M0-08). Note: the old workflow was **invalid** (secrets in `environment.url`), so no GitHub Actions run ever executed — production was deployed manually.
 7. **Quick-login buttons with test passwords** in the app, which defaults to the production API. (M0-10)
 8. **EAS signing passwords** were committed in the old `pet-prep-mobile` history (purged from the monorepo, still in the old GitHub repo). (M0-12)
 9. PHP 8.3 in prod/CI vs 8.5 in local Sail. (M0-11)
@@ -44,20 +44,30 @@
 ## 4. Environment & configuration
 
 - Local: Laravel Sail; `backend/.env` and `mobile/.env` exist (gitignored). `mobile/credentials.json` local only (gitignored).
-- Pending keys: `FAL_AI_API_KEY`, `FAL_AI_WEBHOOK_SECRET` (David adding), RevenueCat, push, Sentry.
+- `FAL_AI_API_KEY` set locally (not on server yet). There is **no** fal webhook secret any more (ED25519 signature). Pending: RevenueCat, push, Sentry.
+- Production queue worker must run for reference images (`queue` container exists).
 - Production docs: `docs/PRODUCTION_DEPLOYMENT.md`, `docs/PRODUCTION_ENV.md`; findings: `docs/engineering/DEPLOYMENT.md`.
-- SSH from this Mac to the server: not yet set up — add this Mac's public key from the computer that has access (DEPLOYMENT.md).
+- SSH key of David's second Mac added to the server.
 - Local backup of the old submodule checkout: `.backup-mobile-submodule-2026-10-02/` (gitignored) — delete once the monorepo is pushed and verified.
 
 ## 5. Next steps (priority queue)
 
-1. **David:** `bash setup/install-claude-config.sh && rm -rf setup` (updated agents/commands), then review and `git push` (⚠️ triggers deploy — CI test job will likely fail on sqlite, which blocks the deploy; see M0-08).
-2. **David:** archive `DataVallis/pet-prep-mobile` on GitHub (make sure it is private); rotate EAS signing passwords (M0-12); add this Mac's SSH key to the server.
-3. **David:** confirm the free/paid split (BUSINESS_MODEL §7) and B7 (non-consumable vs subscription).
-4. **M0-08, M0-10** (CI on Postgres + manual approval; hide test logins) — before any further push to `main`.
+1. **David:** rotate EAS signing passwords (M0-12).
+2. **David:** confirm the free/paid split (BUSINESS_MODEL §7) and B7 (non-consumable vs subscription).
+3. **David:** merge PR #2 (CI) → merge PR #1 (fal webhooks) → Actions → CI & Deploy → Run workflow on `main` → add `FAL_AI_API_KEY` to `/opt/petprep/.env`. Visually check the child HUD (M0-14).
+4. **M0-10** hide test logins in the app.
 5. **M1-01 → M1-10** backend core loop (`/feature M1-01`), then **M1-11 → M1-18** mobile.
 
 ## 6. Session log
+
+### 2026-10-02 (afternoon, cloud) — M4-04 + M4-01: signed fal.ai webhooks, async reference image
+- GitHub access to `DataVallis/pet-prep` granted; work happens in the cloud on branches, PRs for David to merge (merge to `main` = deploy).
+- `FalWebhookVerifier` (ED25519 via JWKS `https://rest.fal.ai/.well-known/jwks.json`, 24 h cache, refresh rate-limited to 1/min, ±300 s), verified in `FalAiWebhookRequest::authorize()` before validation; 401 fail-closed.
+- New `pet_media_jobs` table: webhooks only for request IDs we created; idempotent; `pets.media_status` (+ backfill); media URLs restricted to `*.fal.media` over HTTPS (rejects `\`, `@`, userinfo, ports).
+- `GeneratePetReferenceImage` queued job (afterCommit, 3 tries, timeout 75 s < retry_after 90 s); pairing no longer calls fal.ai. Fixed image call (`fal.run` instead of `queue.fal.run`).
+- Removed `FAL_AI_WEBHOOK_SECRET` everywhere. `media_status` added to broadcast, pairing response and mobile types.
+- Tests: 113 passed (303 assertions) on PostgreSQL 16 locally; independent AI review → 3 majors fixed before PR.
+- Started `docs/journey/BUILD_LOG.md` (content raw material).
 
 ### 2026-10-02 (afternoon, cloud) — M0-08 CI on PostgreSQL + M0-13 mobile test infra
 - Workflow "CI & Deploy": `backend-tests` (Pest on `postgres:18` service), `mobile-checks` (yarn, tsc, Jest) on every PR/push; `deploy` only on manual dispatch from `main` after both pass.

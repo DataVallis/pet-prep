@@ -6,7 +6,6 @@ use App\Http\Controllers\PairingController;
 use App\Http\Controllers\ParentDashboardController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,7 +27,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
 /*
 |--------------------------------------------------------------------------
-| Webhook Endpoints (unauthenticated — validated via webhook secret)
+| Webhook Endpoints (no user auth — fal.ai: ED25519 signature; RevenueCat: bearer secret)
 |--------------------------------------------------------------------------
 */
 Route::post('webhooks/fal-ai', [FalAiWebhookController::class, 'handle'])

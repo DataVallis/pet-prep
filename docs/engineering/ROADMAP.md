@@ -84,10 +84,10 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 
 ## M4 — AI mediji (3–4 dni)
 
-- [ ] M4-01 `GeneratePetDnaJob` (queue) namesto sinhronega klica v transakciji; pet ima `media_status`
+- [x] M4-01 `GeneratePetReferenceImage` job (queue, afterCommit, 3 poskusi z zamikom) namesto sinhronega klica v transakciji; `pets.media_status`; popravljen klic slike (`fal.run` namesto `queue.fal.run`)
 - [ ] M4-02 Model: referenčna slika (NanoBanana Pro / Flux pro na fal.ai) + Kling (aktualna verzija) image-to-video
 - [ ] M4-03 Predgeneriranje 6 stanj (`idle, sleeping, low_energy, hungry, sick, playing`) ob rojstvu → `pet_media` tabela; aplikacija preklaplja lokalno brez novega generiranja
-- [ ] M4-04 fal webhook: preverjanje ED25519 podpisa (`X-Fal-Webhook-Signature` + JWKS), format `{status: OK|ERROR, payload}`
+- [x] M4-04 fal webhook: ED25519 podpis (JWKS cache 24 h, ±5 min), format `{status: OK|ERROR, payload}`, `pet_media_jobs` (ujemanje request_id, idempotenca), dovoljeni samo `*.fal.media` URL-ji, `FAL_AI_WEBHOOK_SECRET` odstranjen
 - [ ] M4-05 Prenos medijev na lasten storage (Hetzner Object Storage / S3) + CDN
 - [ ] M4-06 Fallback: kuratiran nabor statičnih videov na pasmo (če fal odpove ali za demo)
 - [ ] M4-07 Kalkulacija stroška na psa + dnevni limit porabe

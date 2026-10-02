@@ -2,11 +2,21 @@
 
 use App\Enums\BreedType;
 use App\Enums\PetStateEnum;
+use App\Events\PetUpdated;
+use App\Jobs\GeneratePetReferenceImage;
 use App\Models\Pet;
+use App\Models\PetMediaJob;
 use App\Models\User;
 use App\Services\FalAiService;
+use App\Services\FalWebhookVerifier;
+use App\Services\PairingService;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Queue;
 
-use function Pest\Laravel\{postJson};
+use function Pest\Laravel\call;
+use function Pest\Laravel\postJson;
 
 /*
 |--------------------------------------------------------------------------
@@ -100,91 +110,418 @@ describe('PetStateEnum', function () {
     });
 });
 
-describe('POST /api/webhooks/fal-ai', function () {
-    it('updates pet video URL on completed webhook', function () {
-        $user = User::factory()->child()->create();
-        $pet = Pet::factory()->withPetDna()->create([
-            'user_id' => $user->id,
-            'current_video_url' => null,
-        ]);
+/*
+|--------------------------------------------------------------------------
+| Webhook signing helpers
+|--------------------------------------------------------------------------
+| A real ED25519 key pair stands in for fal.ai: its public key is served
+| from a faked JWKS endpoint and every test webhook is signed with it.
+*/
 
-        $payload = [
-            'request_id' => 'req_12345',
-            'status' => 'COMPLETED',
-            'video' => [
-                'url' => 'https://cdn.fal.ai/generated/video_12345.mp4',
-            ],
-        ];
+function falTestKeyPair(): string
+{
+    static $keyPair = null;
 
-        $response = postJson('/api/webhooks/fal-ai?pet_id=' . $pet->id, $payload);
+    return $keyPair ??= sodium_crypto_sign_keypair();
+}
 
-        $response->assertStatus(200)
-            ->assertJson([
-                'message' => 'Video URL updated successfully.',
-                'pet_id' => $pet->id,
-                'current_video_url' => 'https://cdn.fal.ai/generated/video_12345.mp4',
-            ]);
+function fakeFalJwks(?string $keyPair = null): void
+{
+    $public = sodium_crypto_sign_publickey($keyPair ?? falTestKeyPair());
+    $x = rtrim(strtr(base64_encode($public), '+/', '-_'), '=');
 
-        // Pet should have the updated video URL
-        expect($pet->fresh()->current_video_url)
-            ->toBe('https://cdn.fal.ai/generated/video_12345.mp4');
+    Http::fake([
+        'rest.fal.ai/.well-known/jwks.json' => Http::response(['keys' => [['kty' => 'OKP', 'crv' => 'Ed25519', 'x' => $x]]]),
+    ]);
+}
+
+/**
+ * Send a webhook signed like fal.ai does.
+ *
+ * @param  array<string, mixed>  $body
+ * @param  array<string, string>  $headerOverrides
+ */
+function sendFalWebhook(array $body, array $headerOverrides = [], ?string $keyPair = null, ?int $timestamp = null)
+{
+    $raw = json_encode($body);
+    $requestId = (string) ($body['request_id'] ?? '');
+    $userId = 'user-123';
+    $timestamp = (string) ($timestamp ?? now()->timestamp);
+
+    $message = implode("\n", [$requestId, $userId, $timestamp, hash('sha256', $raw)]);
+    $signature = bin2hex(sodium_crypto_sign_detached($message, sodium_crypto_sign_secretkey($keyPair ?? falTestKeyPair())));
+
+    $headers = array_merge([
+        'X-Fal-Webhook-Request-Id' => $requestId,
+        'X-Fal-Webhook-User-Id' => $userId,
+        'X-Fal-Webhook-Timestamp' => $timestamp,
+        'X-Fal-Webhook-Signature' => $signature,
+    ], $headerOverrides);
+
+    $server = ['CONTENT_TYPE' => 'application/json', 'HTTP_ACCEPT' => 'application/json'];
+    foreach ($headers as $name => $value) {
+        $server['HTTP_'.strtoupper(str_replace('-', '_', $name))] = $value;
+    }
+
+    return call('POST', '/api/webhooks/fal-ai', [], [], [], $server, $raw);
+}
+
+function pendingVideoJob(array $petAttributes = [], string $requestId = 'req-video-1'): PetMediaJob
+{
+    $user = User::factory()->child()->create();
+    $pet = Pet::factory()->withPetDna()->create(array_merge(['user_id' => $user->id], $petAttributes));
+
+    return PetMediaJob::create([
+        'pet_id' => $pet->id,
+        'request_id' => $requestId,
+        'kind' => PetMediaJob::KIND_VIDEO,
+        'pet_state' => 'idle',
+        'status' => PetMediaJob::STATUS_PENDING,
+    ]);
+}
+
+beforeEach(function () {
+    Cache::forget(FalWebhookVerifier::CACHE_KEY);
+});
+
+describe('POST /api/webhooks/fal-ai (signed)', function () {
+    it('accepts a correctly signed OK webhook and sets the pet video', function () {
+        fakeFalJwks();
+        $job = pendingVideoJob();
+
+        sendFalWebhook([
+            'request_id' => 'req-video-1',
+            'gateway_request_id' => 'req-video-1',
+            'status' => 'OK',
+            'payload' => ['video' => ['url' => 'https://v3.fal.media/files/dog/idle.mp4']],
+        ])->assertOk()->assertJson(['pet_id' => $job->pet_id]);
+
+        expect($job->pet->fresh()->current_video_url)->toBe('https://v3.fal.media/files/dog/idle.mp4');
+        expect($job->fresh()->status)->toBe(PetMediaJob::STATUS_COMPLETED);
     });
 
-    it('handles webhook with alternative payload format', function () {
-        $user = User::factory()->child()->create();
-        $pet = Pet::factory()->withPetDna()->create(['user_id' => $user->id]);
+    it('rejects unsigned webhooks (fail closed)', function () {
+        fakeFalJwks();
+        $job = pendingVideoJob();
 
-        $payload = [
-            'request_id' => 'req_67890',
-            'status' => 'COMPLETED',
-            'output' => [
-                'video_url' => 'https://cdn.fal.ai/generated/video_67890.mp4',
-            ],
-        ];
+        postJson('/api/webhooks/fal-ai', [
+            'request_id' => 'req-video-1',
+            'status' => 'OK',
+            'payload' => ['video' => ['url' => 'https://v3.fal.media/files/x.mp4']],
+        ])->assertStatus(401);
 
-        $response = postJson('/api/webhooks/fal-ai?pet_id=' . $pet->id, $payload);
-
-        $response->assertStatus(200);
-        expect($pet->fresh()->current_video_url)
-            ->toBe('https://cdn.fal.ai/generated/video_67890.mp4');
+        expect($job->pet->fresh()->current_video_url)->toBeNull();
     });
 
-    it('acknowledges webhook with non-completed status without updating pet', function () {
-        $user = User::factory()->child()->create();
-        $pet = Pet::factory()->withPetDna()->create([
-            'user_id' => $user->id,
-            'current_video_url' => 'https://existing-video.mp4',
-        ]);
+    it('rejects webhooks signed with a different key', function () {
+        fakeFalJwks();
+        $job = pendingVideoJob();
 
-        $payload = [
-            'request_id' => 'req_pending',
-            'status' => 'IN_PROGRESS',
-        ];
+        sendFalWebhook([
+            'request_id' => 'req-video-1',
+            'status' => 'OK',
+            'payload' => ['video' => ['url' => 'https://v3.fal.media/files/x.mp4']],
+        ], keyPair: sodium_crypto_sign_keypair())->assertStatus(401);
 
-        $response = postJson('/api/webhooks/fal-ai?pet_id=' . $pet->id, $payload);
-
-        $response->assertStatus(200)
-            ->assertJson(['message' => 'Webhook acknowledged (no action needed).']);
-
-        // Pet video URL should remain unchanged
-        expect($pet->fresh()->current_video_url)->toBe('https://existing-video.mp4');
+        expect($job->fresh()->status)->toBe(PetMediaJob::STATUS_PENDING);
     });
 
-    it('rejects webhook for non-existent pet_id with validation error', function () {
-        $payload = [
-            'request_id' => 'req_99999',
-            'status' => 'COMPLETED',
-            'video' => ['url' => 'https://cdn.fal.ai/video.mp4'],
-        ];
+    it('rejects a tampered body', function () {
+        fakeFalJwks();
+        pendingVideoJob();
 
-        postJson('/api/webhooks/fal-ai?pet_id=99999', $payload)
+        $body = ['request_id' => 'req-video-1', 'status' => 'OK', 'payload' => ['video' => ['url' => 'https://v3.fal.media/files/a.mp4']]];
+        $raw = json_encode($body);
+        $timestamp = (string) now()->timestamp;
+        $message = implode("\n", ['req-video-1', 'user-123', $timestamp, hash('sha256', $raw)]);
+        $signature = bin2hex(sodium_crypto_sign_detached($message, sodium_crypto_sign_secretkey(falTestKeyPair())));
+
+        $tampered = json_encode(array_replace_recursive($body, ['payload' => ['video' => ['url' => 'https://v3.fal.media/files/evil.mp4']]]));
+
+        call('POST', '/api/webhooks/fal-ai', [], [], [], [
+            'CONTENT_TYPE' => 'application/json',
+            'HTTP_ACCEPT' => 'application/json',
+            'HTTP_X_FAL_WEBHOOK_REQUEST_ID' => 'req-video-1',
+            'HTTP_X_FAL_WEBHOOK_USER_ID' => 'user-123',
+            'HTTP_X_FAL_WEBHOOK_TIMESTAMP' => $timestamp,
+            'HTTP_X_FAL_WEBHOOK_SIGNATURE' => $signature,
+        ], $tampered)->assertStatus(401);
+    });
+
+    it('rejects stale timestamps (replay protection)', function () {
+        fakeFalJwks();
+        pendingVideoJob();
+
+        sendFalWebhook([
+            'request_id' => 'req-video-1',
+            'status' => 'OK',
+            'payload' => ['video' => ['url' => 'https://v3.fal.media/files/x.mp4']],
+        ], timestamp: now()->subMinutes(10)->timestamp)->assertStatus(401);
+    });
+
+    it('rejects when the signed request id differs from the body', function () {
+        fakeFalJwks();
+        pendingVideoJob();
+        pendingVideoJob(requestId: 'req-video-2');
+
+        sendFalWebhook([
+            'request_id' => 'req-video-2',
+            'status' => 'OK',
+            'payload' => ['video' => ['url' => 'https://v3.fal.media/files/x.mp4']],
+        ], ['X-Fal-Webhook-Request-Id' => 'req-video-1'])->assertStatus(401);
+    });
+
+    it('fails closed when the JWKS cannot be fetched', function () {
+        Http::fake(['rest.fal.ai/*' => Http::response('down', 503)]);
+        pendingVideoJob();
+
+        sendFalWebhook([
+            'request_id' => 'req-video-1',
+            'status' => 'OK',
+            'payload' => ['video' => ['url' => 'https://v3.fal.media/files/x.mp4']],
+        ])->assertStatus(401);
+    });
+
+    it('returns 404 for a request id we never created', function () {
+        fakeFalJwks();
+
+        sendFalWebhook([
+            'request_id' => 'req-unknown',
+            'status' => 'OK',
+            'payload' => ['video' => ['url' => 'https://v3.fal.media/files/x.mp4']],
+        ])->assertStatus(404);
+    });
+
+    it('records ERROR results without touching the pet', function () {
+        fakeFalJwks();
+        $job = pendingVideoJob(['current_video_url' => 'https://v3.fal.media/files/old.mp4']);
+
+        sendFalWebhook([
+            'request_id' => 'req-video-1',
+            'status' => 'ERROR',
+            'error' => 'Invalid status code: 422',
+            'payload' => ['detail' => 'bad input'],
+        ])->assertOk();
+
+        expect($job->fresh()->status)->toBe(PetMediaJob::STATUS_FAILED);
+        expect($job->fresh()->error)->toBe('Invalid status code: 422');
+        expect($job->pet->fresh()->current_video_url)->toBe('https://v3.fal.media/files/old.mp4');
+    });
+
+    it('refuses video URLs outside fal.ai media hosts', function () {
+        fakeFalJwks();
+        $job = pendingVideoJob();
+
+        sendFalWebhook([
+            'request_id' => 'req-video-1',
+            'status' => 'OK',
+            'payload' => ['video' => ['url' => 'https://evil.example.com/v.mp4']],
+        ])->assertOk();
+
+        expect($job->fresh()->status)->toBe(PetMediaJob::STATUS_FAILED);
+        expect($job->pet->fresh()->current_video_url)->toBeNull();
+    });
+
+    it('is idempotent for repeated deliveries', function () {
+        fakeFalJwks();
+        $job = pendingVideoJob();
+        $body = ['request_id' => 'req-video-1', 'status' => 'OK', 'payload' => ['video' => ['url' => 'https://v3.fal.media/files/first.mp4']]];
+
+        sendFalWebhook($body)->assertOk();
+        $body['payload']['video']['url'] = 'https://v3.fal.media/files/second.mp4';
+        sendFalWebhook($body)->assertOk()->assertJson(['message' => 'Already processed.']);
+
+        expect($job->pet->fresh()->current_video_url)->toBe('https://v3.fal.media/files/first.mp4');
+    });
+
+    it('answers unsigned malformed requests with a bare 401 (no schema leak)', function () {
+        fakeFalJwks();
+
+        postJson('/api/webhooks/fal-ai', ['status' => 'COMPLETED'])
+            ->assertStatus(401)
+            ->assertJsonMissingPath('errors');
+    });
+
+    it('validates the payload shape of signed requests', function () {
+        fakeFalJwks();
+
+        sendFalWebhook(['request_id' => 'req-x', 'status' => 'COMPLETED'])
             ->assertStatus(422)
-            ->assertJsonValidationErrors(['pet_id']);
+            ->assertJsonValidationErrors(['status']);
     });
 
-    it('validates required webhook fields', function () {
-        postJson('/api/webhooks/fal-ai', [])
-            ->assertStatus(422)
-            ->assertJsonValidationErrors(['request_id', 'status']);
+    it('rejects timestamps too far in the future', function () {
+        fakeFalJwks();
+        pendingVideoJob();
+
+        sendFalWebhook([
+            'request_id' => 'req-video-1',
+            'status' => 'OK',
+            'payload' => ['video' => ['url' => 'https://v3.fal.media/files/x.mp4']],
+        ], timestamp: now()->addMinutes(10)->timestamp)->assertStatus(401);
+    });
+
+    it('caches the JWKS across webhooks', function () {
+        fakeFalJwks();
+        pendingVideoJob();
+        pendingVideoJob(requestId: 'req-video-2');
+
+        foreach (['req-video-1', 'req-video-2'] as $id) {
+            sendFalWebhook(['request_id' => $id, 'status' => 'OK', 'payload' => ['video' => ['url' => "https://v3.fal.media/files/{$id}.mp4"]]])->assertOk();
+        }
+
+        Http::assertSentCount(1);
+    });
+
+    it('picks up rotated keys with a single refresh', function () {
+        $oldKeys = sodium_crypto_sign_keypair();
+        $newKeys = sodium_crypto_sign_keypair();
+        Cache::put(FalWebhookVerifier::CACHE_KEY, [base64_encode(sodium_crypto_sign_publickey($oldKeys))], 3600);
+        fakeFalJwks($newKeys);
+        $job = pendingVideoJob();
+
+        sendFalWebhook([
+            'request_id' => 'req-video-1',
+            'status' => 'OK',
+            'payload' => ['video' => ['url' => 'https://v3.fal.media/files/rotated.mp4']],
+        ], keyPair: $newKeys)->assertOk();
+
+        expect($job->pet->fresh()->current_video_url)->toBe('https://v3.fal.media/files/rotated.mp4');
+        Http::assertSentCount(1);
+    });
+
+    it('does not let bad signatures force repeated JWKS fetches', function () {
+        fakeFalJwks();
+        pendingVideoJob();
+        $body = ['request_id' => 'req-video-1', 'status' => 'OK', 'payload' => ['video' => ['url' => 'https://v3.fal.media/files/x.mp4']]];
+
+        foreach (range(1, 5) as $i) {
+            sendFalWebhook($body, keyPair: sodium_crypto_sign_keypair())->assertStatus(401);
+        }
+
+        Http::assertSentCount(1);
+    });
+
+    it('broadcasts exactly one PetUpdated event for a completed video', function () {
+        fakeFalJwks();
+        Event::fake([PetUpdated::class]);
+        pendingVideoJob();
+
+        sendFalWebhook([
+            'request_id' => 'req-video-1',
+            'status' => 'OK',
+            'payload' => ['video' => ['url' => 'https://v3.fal.media/files/x.mp4']],
+        ])->assertOk();
+
+        Event::assertDispatchedTimes(PetUpdated::class, 1);
+    });
+});
+
+describe('Media URL allowlist', function () {
+    it('accepts https URLs on fal.media and its subdomains', function (string $url) {
+        expect(app(FalAiService::class)->isAllowedMediaUrl($url))->toBeTrue();
+    })->with([
+        'https://fal.media/files/a.mp4',
+        'https://v3.fal.media/files/a.mp4',
+        'HTTPS://V3.FAL.MEDIA/files/a.mp4',
+    ]);
+
+    it('rejects URLs that could resolve elsewhere', function (string $url) {
+        expect(app(FalAiService::class)->isAllowedMediaUrl($url))->toBeFalse();
+    })->with([
+        'http://v3.fal.media/files/a.mp4',
+        'https://evil.com\@v3.fal.media/x.mp4',
+        'https://evil.com@v3.fal.media/x.mp4',
+        'https://user:pass@v3.fal.media/x.mp4',
+        'https://v3.fal.media:8443/x.mp4',
+        'https://fal.media.evil.com/x.mp4',
+        'https://evilfal.media/x.mp4',
+        'javascript:alert(1)',
+        'https://v3.fal.media/a b.mp4',
+        '',
+    ]);
+});
+
+describe('Asynchronous media generation', function () {
+    it('does not call fal.ai during pairing and queues the reference image job', function () {
+        config(['services.fal_ai.key' => 'test-key']);
+        Queue::fake();
+        Http::fake();
+        seedBreedConfigs();
+
+        $parent = createParentUser();
+        $child = createChildUser();
+        $pin = app(PairingService::class)->generatePin($parent)['pin'];
+
+        $this->actingAs($child)->postJson('/api/child/pair', ['pin' => $pin])->assertCreated();
+
+        $pet = $child->activePet();
+        expect($pet->media_status)->toBe('pending');
+        Http::assertNothingSent();
+        Queue::assertPushed(GeneratePetReferenceImage::class, fn ($job) => $job->petId === $pet->id);
+    });
+
+    it('marks media as disabled and queues nothing when fal.ai is not configured', function () {
+        config(['services.fal_ai.key' => null]);
+        Queue::fake();
+        seedBreedConfigs();
+
+        $parent = createParentUser();
+        $child = createChildUser();
+        $pin = app(PairingService::class)->generatePin($parent)['pin'];
+
+        $this->actingAs($child)->postJson('/api/child/pair', ['pin' => $pin])->assertCreated();
+
+        expect($child->activePet()->media_status)->toBe('disabled');
+        Queue::assertNothingPushed();
+    });
+
+    it('stores the reference image when the job succeeds', function () {
+        config(['services.fal_ai.key' => 'test-key']);
+        Http::fake([
+            'fal.run/fal-ai/flux/schnell' => Http::response(['images' => [['url' => 'https://v3.fal.media/files/ref.jpg']]]),
+        ]);
+        $user = User::factory()->child()->create();
+        $pet = Pet::factory()->withPetDna()->create(['user_id' => $user->id, 'media_status' => 'pending']);
+
+        (new GeneratePetReferenceImage($pet->id))->handle(app(FalAiService::class));
+
+        $pet->refresh();
+        expect($pet->media_status)->toBe('ready');
+        expect($pet->pet_dna['reference_image_url'])->toBe('https://v3.fal.media/files/ref.jpg');
+        Http::assertSent(fn ($request) => $request->url() === 'https://fal.run/fal-ai/flux/schnell'
+            && $request->header('Authorization')[0] === 'Key test-key');
+    });
+
+    it('throws so the queue retries when image generation fails, and marks failed at the end', function () {
+        config(['services.fal_ai.key' => 'test-key']);
+        Http::fake(['fal.run/*' => Http::response(['detail' => 'error'], 500)]);
+        $user = User::factory()->child()->create();
+        $pet = Pet::factory()->withPetDna()->create(['user_id' => $user->id, 'media_status' => 'pending']);
+        $job = new GeneratePetReferenceImage($pet->id);
+
+        expect(fn () => $job->handle(app(FalAiService::class)))->toThrow(RuntimeException::class);
+
+        $job->failed(new RuntimeException('gave up'));
+        expect($pet->fresh()->media_status)->toBe('failed');
+    });
+
+    it('records a pending media job when submitting a video and points fal at our webhook', function () {
+        config(['services.fal_ai.key' => 'test-key', 'app.url' => 'https://api.petprep.si']);
+        Http::fake([
+            'queue.fal.run/*' => Http::response(['request_id' => 'req-abc', 'status' => 'IN_QUEUE']),
+        ]);
+        $user = User::factory()->child()->create();
+        $pet = Pet::factory()->withPetDna(['reference_image_url' => 'https://v3.fal.media/files/ref.jpg'])->create(['user_id' => $user->id]);
+
+        $requestId = app(FalAiService::class)->generatePetVideoState($pet, PetStateEnum::Hungry);
+
+        expect($requestId)->toBe('req-abc');
+        expect(PetMediaJob::where('request_id', 'req-abc')->first())
+            ->pet_id->toBe($pet->id)
+            ->pet_state->toBe('hungry')
+            ->status->toBe(PetMediaJob::STATUS_PENDING);
+
+        Http::assertSent(fn ($request) => str_contains($request->url(), 'fal_webhook='.urlencode('https://api.petprep.si/api/webhooks/fal-ai')));
     });
 });

@@ -69,7 +69,8 @@ This document describes all environment variables used by the PetPrep production
 | Variable | Required | Secret | Purpose | Example / Format |
 | :--- | :--- | :--- | :--- | :--- |
 | `FAL_AI_API_KEY` | Optional | **Yes** | fal.ai API key for Kling 3.0 / Flux | `fal_key_...` |
-| `FAL_AI_WEBHOOK_SECRET` | Optional | **Yes** | Webhook verification secret | `webhook_secret_...` |
+| `FAL_AI_JWKS_URL` | Optional | No | fal.ai public keys for ED25519 webhook verification (no shared secret needed) | `https://rest.fal.ai/.well-known/jwks.json` |
+| `FAL_AI_MEDIA_HOSTS` | Optional | No | Allowed hosts for generated media | `fal.media` |
 | `REVENUECAT_SECRET_KEY` | Optional | **Yes** | RevenueCat secret API key for IAP | `sk_...` |
 | `REVENUECAT_PUBLIC_KEY` | Optional | No | RevenueCat public SDK key | `test_...` or `appl_...` |
 | `MAIL_MAILER` | Optional | No | Mail driver (`log`, `smtp`, `resend`, `ses`) | `log` |

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Enums\BreedType;
 use App\Exceptions\PairingException;
 use App\Http\Requests\GeneratePinRequest;
 use App\Http\Requests\PairChildRequest;
@@ -74,6 +73,7 @@ class PairingController extends Controller
                         'reference_image_url' => $pet->pet_dna['reference_image_url'] ?? null,
                     ],
                     'current_video_url' => $pet->current_video_url,
+                    'media_status' => $pet->media_status,
                 ],
             ], 201);
         } catch (PairingException $e) {

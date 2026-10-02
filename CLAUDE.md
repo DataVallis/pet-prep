@@ -46,6 +46,7 @@ Dev accounts come from `TestUsersSeeder` (`parent@test.com` / `child@test.com`, 
 3. `sail test`, `pint --test`, `npx tsc --noEmit`, `npm test` all green.
 4. API changed → regenerate types (`npm run generate-api-types`) and update `ARCHITECTURE.md` §3.
 5. Tick the task in `ROADMAP.md`, add a dated entry to `HANDOFF.md` (what changed, new debt, next step).
+6. Notable progress → entry in `docs/journey/BUILD_LOG.md` (Slovenian; raw material for social, investor, partner and parent content).
 
 ## Git
 - Branch from `main`: `feat/M1-07-child-actions`, `fix/M1-01-decay-rounding`, `chore/…`, `docs/…`.
