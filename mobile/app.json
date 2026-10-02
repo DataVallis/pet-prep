@@ -14,8 +14,10 @@
         "NSAppTransportSecurity": {
           "NSAllowsArbitraryLoads": true,
           "NSAllowsLocalNetworking": true
-        }
-      }
+        },
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "com.datavallis.petprep"
     },
     "android": {
       "adaptiveIcon": {
@@ -28,7 +30,8 @@
       "permissions": [
         "android.permission.ACTIVITY_RECOGNITION"
       ],
-      "usesCleartextTraffic": true
+      "usesCleartextTraffic": true,
+      "package": "com.datavallis.petprep"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -40,6 +43,12 @@
           "faceIDPermission": "Allow PetPrep to access your Face ID for secure authentication."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "04c069be-7cf1-43df-98b9-58fd692a7be6"
+      }
+    },
+    "owner": "petprep"
   }
 }
