@@ -96,7 +96,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: http://${{ secrets.PRODUCTION_HOST || '138.199.172.97' }}
+      url: https://api.petprep.si
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
