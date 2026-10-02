@@ -28,6 +28,14 @@ class AuthController extends Controller
         $deviceName = $request->input('device_name', 'mobile-app');
         $token = $user->createToken($deviceName)->plainTextToken;
 
+        $activePet = null;
+        if ($user->isChild()) {
+            $activePet = $user->activePet();
+        } elseif ($user->isParent()) {
+            $child = $user->children()->first();
+            $activePet = $child?->activePet();
+        }
+
         return response()->json([
             'token' => $token,
             'user' => [
@@ -36,6 +44,7 @@ class AuthController extends Controller
                 'email' => $user->email,
                 'role' => $user->role->value,
             ],
+            'pet' => $activePet,
         ], 200);
     }
 
@@ -48,11 +57,20 @@ class AuthController extends Controller
     {
         $user = $request->user();
 
+        $activePet = null;
+        if ($user->isChild()) {
+            $activePet = $user->activePet();
+        } elseif ($user->isParent()) {
+            $child = $user->children()->first();
+            $activePet = $child?->activePet();
+        }
+
         return response()->json([
             'id' => $user->id,
             'name' => $user->name,
             'email' => $user->email,
             'role' => $user->role->value,
+            'pet' => $activePet,
         ], 200);
     }
 

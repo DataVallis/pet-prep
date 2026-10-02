@@ -1,0 +1,78 @@
+# PetPrep Caddy Production Configuration
+# Reverse proxy for Laravel API + Reverb WebSockets with automated TLS / HTTPS
+
+{
+    # Global options
+    admin off
+}
+
+# Production HTTPS domain
+api.petprep.si, petprep.si {
+    log {
+        output stdout
+        format json
+    }
+
+    # Proxy WebSocket connections to Laravel Reverb
+    @websockets {
+        header Connection *Upgrade*
+        header Upgrade websocket
+    }
+    handle @websockets {
+        reverse_proxy reverb:8080 {
+            header_up Host {host}
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    # Proxy Reverb App paths & event publishing endpoints
+    handle /app/* {
+        reverse_proxy reverb:8080 {
+            header_up Host {host}
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    handle /apps/* {
+        reverse_proxy reverb:8080 {
+            header_up Host {host}
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    # Proxy all API, web, and healthcheck requests to Laravel app
+    handle {
+        reverse_proxy app:80 {
+            header_up Host {host}
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+}
+
+# Fallback direct IP access over HTTP
+http://138.199.172.97 {
+    @websockets {
+        header Connection *Upgrade*
+        header Upgrade websocket
+    }
+    handle @websockets {
+        reverse_proxy reverb:8080
+    }
+    handle /app/* {
+        reverse_proxy reverb:8080
+    }
+    handle /apps/* {
+        reverse_proxy reverb:8080
+    }
+    handle {
+        reverse_proxy app:80
+    }
+}

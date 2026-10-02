@@ -1,0 +1,81 @@
+name: Deploy Production
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: production
+  cancel-in-progress: false
+
+jobs:
+  test:
+    name: Run Backend Test Suite
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP & Extensions
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, xml, ctype, iconv, intl, pdo, pdo_pgsql, pgsql, redis, bcmath, gd, zip
+          coverage: none
+
+      - name: Install PHP Dependencies
+        run: |
+          cd backend
+          composer install --prefer-dist --no-progress --no-interaction
+
+      - name: Run Pest / PHPUnit Tests
+        run: |
+          cd backend
+          cp .env.example .env
+          php artisan key:generate
+          php artisan test --parallel
+
+  deploy:
+    name: Deploy to Hetzner Production
+    needs: test
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: http://${{ secrets.PRODUCTION_HOST || '138.199.172.97' }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH Key & Deploy
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.PRODUCTION_HOST || '138.199.172.97' }}
+          SSH_USER: ${{ secrets.PRODUCTION_USER || 'deploy' }}
+          COMMIT_SHA: ${{ github.sha }}
+        run: |
+          if [ -z "$SSH_PRIVATE_KEY" ]; then
+            echo "ERROR: PRODUCTION_SSH_PRIVATE_KEY secret is not set in GitHub repository settings."
+            exit 1
+          fi
+
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+
+          # Add remote host key to known_hosts safely
+          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
+
+          echo "1. Syncing exact commit files to production server..."
+          rsync -avz --delete \
+            --exclude '.git' \
+            --exclude '.idea' \
+            --exclude 'backend/storage' \
+            --exclude 'backend/vendor' \
+            --exclude 'mobile/node_modules' \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new" \
+            ./ "${SSH_USER}@${SSH_HOST}:/opt/petprep/repo/"
+
+          echo "2. Triggering production deployment script for commit: $COMMIT_SHA..."
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new "${SSH_USER}@${SSH_HOST}" \
+            "/opt/petprep/repo/scripts/deploy-production.sh $COMMIT_SHA"

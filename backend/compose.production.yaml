@@ -1,0 +1,172 @@
+# PetPrep Production Docker Compose Configuration
+# Minimal single-server production stack: Caddy, Laravel App, Reverb, Queue, Scheduler, PostgreSQL 18, Redis
+
+services:
+  caddy:
+    image: caddy:2.8-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    env_file:
+      - /opt/petprep/.env
+    volumes:
+      - ../deployment/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - petprep-network
+    depends_on:
+      - app
+      - reverb
+
+  app:
+    build:
+      context: ./docker/8.3
+      dockerfile: Dockerfile
+      args:
+        WWWGROUP: '1000'
+    image: petprep-backend:production
+    restart: unless-stopped
+    env_file:
+      - /opt/petprep/.env
+    environment:
+      WWWUSER: '1000'
+      LARAVEL_SAIL: 1
+      APP_ENV: production
+      APP_DEBUG: 'false'
+      SUPERVISOR_PHP_COMMAND: "/usr/bin/php -d variables_order=EGPCS /var/www/html/artisan serve --host=0.0.0.0 --port=80"
+      SUPERVISOR_PHP_USER: "sail"
+    volumes:
+      - .:/var/www/html
+      - /opt/petprep/.env:/var/www/html/.env:ro
+      - app_storage:/var/www/html/storage
+      - app_bootstrap_cache:/var/www/html/bootstrap/cache
+    networks:
+      - petprep-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  reverb:
+    image: petprep-backend:production
+    restart: unless-stopped
+    command: ["php", "-d", "variables_order=EGPCS", "/var/www/html/artisan", "reverb:start", "--host=0.0.0.0", "--port=8080"]
+    env_file:
+      - /opt/petprep/.env
+    environment:
+      WWWUSER: '1000'
+      LARAVEL_SAIL: 1
+      APP_ENV: production
+      APP_DEBUG: 'false'
+    volumes:
+      - .:/var/www/html
+      - /opt/petprep/.env:/var/www/html/.env:ro
+      - app_storage:/var/www/html/storage
+      - app_bootstrap_cache:/var/www/html/bootstrap/cache
+    networks:
+      - petprep-network
+    depends_on:
+      app:
+        condition: service_started
+      redis:
+        condition: service_healthy
+
+  queue:
+    image: petprep-backend:production
+    restart: unless-stopped
+    command: ["php", "-d", "variables_order=EGPCS", "/var/www/html/artisan", "queue:work", "redis", "--tries=3", "--timeout=90", "--sleep=3"]
+    env_file:
+      - /opt/petprep/.env
+    environment:
+      WWWUSER: '1000'
+      LARAVEL_SAIL: 1
+      APP_ENV: production
+      APP_DEBUG: 'false'
+    volumes:
+      - .:/var/www/html
+      - /opt/petprep/.env:/var/www/html/.env:ro
+      - app_storage:/var/www/html/storage
+      - app_bootstrap_cache:/var/www/html/bootstrap/cache
+    networks:
+      - petprep-network
+    depends_on:
+      app:
+        condition: service_started
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  scheduler:
+    image: petprep-backend:production
+    restart: unless-stopped
+    command: ["php", "-d", "variables_order=EGPCS", "/var/www/html/artisan", "schedule:work"]
+    env_file:
+      - /opt/petprep/.env
+    environment:
+      WWWUSER: '1000'
+      LARAVEL_SAIL: 1
+      APP_ENV: production
+      APP_DEBUG: 'false'
+    volumes:
+      - .:/var/www/html
+      - /opt/petprep/.env:/var/www/html/.env:ro
+      - app_storage:/var/www/html/storage
+      - app_bootstrap_cache:/var/www/html/bootstrap/cache
+    networks:
+      - petprep-network
+    depends_on:
+      app:
+        condition: service_started
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  postgres:
+    image: 'postgres:18-alpine'
+    restart: unless-stopped
+    env_file:
+      - /opt/petprep/.env
+    environment:
+      POSTGRES_DB: '${DB_DATABASE:-petprep_production}'
+      POSTGRES_USER: '${DB_USERNAME:-petprep_user}'
+      POSTGRES_PASSWORD: '${DB_PASSWORD}'
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    networks:
+      - petprep-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME:-petprep_user} -d ${DB_DATABASE:-petprep_production}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: 'redis:alpine'
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    networks:
+      - petprep-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+networks:
+  petprep-network:
+    driver: bridge
+
+volumes:
+  caddy_data:
+  caddy_config:
+  postgres_data:
+  redis_data:
+  app_storage:
+  app_bootstrap_cache:

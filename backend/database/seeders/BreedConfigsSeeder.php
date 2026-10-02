@@ -15,23 +15,27 @@ class BreedConfigsSeeder extends Seeder
     {
         $now = now();
 
-        DB::table('breed_configs')->insert([
+        foreach ([
             [
                 'breed_slug' => BreedType::Mutt->slug(),
                 'daily_steps_required' => 4000,
                 'hunger_decay_rate' => 8.0,
                 'premium_unlock' => false,
-                'created_at' => $now,
-                'updated_at' => $now,
             ],
             [
                 'breed_slug' => BreedType::BorderCollie->slug(),
                 'daily_steps_required' => 10000,
                 'hunger_decay_rate' => 12.0,
                 'premium_unlock' => true,
-                'created_at' => $now,
-                'updated_at' => $now,
             ],
-        ]);
+        ] as $config) {
+            DB::table('breed_configs')->updateOrInsert(
+                ['breed_slug' => $config['breed_slug']],
+                array_merge($config, [
+                    'created_at' => $now,
+                    'updated_at' => $now,
+                ])
+            );
+        }
     }
 }
