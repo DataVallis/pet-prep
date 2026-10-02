@@ -14,13 +14,15 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [x] M0-02 ~~`.gitmodules`~~ — ni več potrebno (M0-04)
 - [x] M0-03 `node_modules/`, `.idea/`, `.DS_Store`, `.augment_tmp_*` niso več v gitu
 - [x] M0-04 `pet-prep-mobile` združen v `pet-prep/mobile` (zgodovina ohranjena, `credentials.json` odstranjen iz zgodovine). Ročno: arhivirati repo `DataVallis/pet-prep-mobile` na GitHubu
-- [ ] M0-05 En paketni manager: **yarn 1** (root `package.json` že deklarira `packageManager: yarn`); odstraniti `package-lock.json` v root in `mobile/`, posodobiti skripte in CLAUDE.md
+- [x] M0-05 En paketni manager: **yarn 1** (root `package.json` že deklarira `packageManager: yarn`); odstraniti `package-lock.json` v root in `mobile/`, posodobiti skripte in CLAUDE.md
 - [ ] M0-06 `backend/.env.example` z vsemi dejanskimi spremenljivkami; `mobile/.env.example` (`EXPO_PUBLIC_*`)
 - [ ] M0-07 `pestphp/*` → `require-dev`; nadgradnja Laravel na aktualno verzijo (+ Filament, Sanctum, Reverb)
-- [ ] M0-08 CI popravek: obstoječi `deploy-production.yml` testira na sqlite (`.env.example`) → dodaj `postgres:18` service; dodaj mobile job (tsc, Jest); **deploy samo z ročno odobritvijo** (GitHub Environment reviewers) — glej DEPLOYMENT.md D1–D2
+- [x] M0-08 CI popravek: obstoječi `deploy-production.yml` testira na sqlite (`.env.example`) → dodaj `postgres:18` service; dodaj mobile job (tsc, Jest); **deploy samo z ročno odobritvijo** (GitHub Environment reviewers) — glej DEPLOYMENT.md D1–D2
 - [ ] M0-09 Izbrisati podvojeni `mobile/src/components/WalkTrackerOverlay.tsx`, odstraniti `expo-av`
 - [ ] M0-10 **Varnost:** gumbe za hitro prijavo s testnimi gesli v `PairingScreen` skriti za `__DEV__`; preveriti, da v produkcijski bazi ni `parent@test.com` / `child@test.com` / `admin@petprep.io` s privzetim geslom
 - [ ] M0-11 Poenotiti verzijo PHP (dev Sail 8.5, prod + CI 8.3) — predlog 8.4 povsod
+- [x] M0-13 Mobilni Jest + tsc delujeta po sveži namestitvi (`@react-native/jest-preset` 0.86.3, `@types/jest` 29, TS 6 `types`) — 72/72 testov, 0 tsc napak
+- [ ] M0-14 Vizualno preveriti otroški HUD po popravku `absoluteFill` / `space-between` (Expo Go)
 - [ ] M0-12 Rotirati gesla EAS podpisnih ključev (bila so v git zgodovini `pet-prep-mobile`); `credentials.json` samo lokalno / EAS remote credentials
 
 ## M1 — Jedro igre end-to-end (1,5–2 tedna)

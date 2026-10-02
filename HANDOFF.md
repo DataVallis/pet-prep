@@ -8,7 +8,7 @@
 - **Last updated:** 2026-10-02 afternoon (Claude, orchestrator)
 - **Realistic MVP completion:** ~45 % (see `docs/engineering/AUDIT-2026-10-02.md` + addendum)
 - **Current milestone:** M0 — repo hygiene → then M1 — core game loop end-to-end
-- **Production:** `https://api.petprep.si` is live (Docker Compose + Caddy on Hetzner CX23). ⚠️ A push to `main` auto-deploys.
+- **Production:** `https://api.petprep.si` is live (Docker Compose + Caddy on Hetzner CX23). Deploy: auto on push to `main` **until PR #2 is merged**; afterwards manual only (Actions → CI & Deploy → Run workflow).
 
 | Milestone | Status |
 |---|---|
@@ -58,6 +58,12 @@
 5. **M1-01 → M1-10** backend core loop (`/feature M1-01`), then **M1-11 → M1-18** mobile.
 
 ## 6. Session log
+
+### 2026-10-02 (afternoon, cloud) — M0-08 CI on PostgreSQL + M0-13 mobile test infra
+- Workflow "CI & Deploy": `backend-tests` (Pest on `postgres:18` service), `mobile-checks` (yarn, tsc, Jest) on every PR/push; `deploy` only on manual dispatch from `main` after both pass.
+- Mobile (mobile-engineer agent): pinned `@react-native/jest-preset` 0.86.3 + `@types/jest` 29, TS 6 `types`, css module decl; fixed real type errors (`absoluteFill`, `space-between`, Echo/Pedometer types). Jest 72/72, tsc 0 errors from a clean install. **Needs a visual check of the child HUD** (M0-14).
+- Removed `package-lock.json` (root + mobile); yarn 1 only (M0-05).
+- Merge order: **PR #2 (CI) first, then PR #1 (fal webhooks)** — PR #1 will then be tested by CI before anything deploys.
 
 ### 2026-10-02 (afternoon) — Pull conflict, monorepo merge, decisions
 - Resolved the pull: stashed local `.idea` changes (`git stash list` → "local .idea changes before pull 2026-10-02"), moved the untracked `.gitignore` aside, fast-forwarded `main` to `origin/main` (498874f — production deployment setup from the other computer), merged both `.gitignore` files.

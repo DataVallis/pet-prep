@@ -29,4 +29,5 @@ Env: `EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_REVERB_APP_KEY|HOST|PORT|SCHEME` (see `
 - `expo-sensors` Pedometer cannot read step history on Android → Health Connect needed (M3-05).
 - HealthKit, RevenueCat and push require a **dev build**, not Expo Go.
 - `src/components/WalkTrackerOverlay.tsx` is a stale duplicate of `src/modules/walk/WalkTrackerOverlay.tsx`.
-- Jest: NativeWind babel preset is disabled in tests; a manual `react-native/setup-env` shim was placed in `node_modules` and disappears on reinstall — fix properly via `jest.setup.ts` / moduleNameMapper if tests break.
+- Jest: NativeWind babel preset is disabled in tests. Keep `@react-native/jest-preset` pinned to the installed RN minor (0.86.x) — 0.87 mocks `react-native/setup-env`, which RN 0.86 lacks. TypeScript 6 needs explicit `"types": ["jest"]` in tsconfig.
+- `usePetWebSocket` polling fallback is a no-op (TODO) — should refetch pet state via TanStack Query.

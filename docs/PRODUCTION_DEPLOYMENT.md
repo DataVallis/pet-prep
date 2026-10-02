@@ -112,7 +112,7 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
 
 ## 4. Automated CI/CD (GitHub Actions)
 
-When code is pushed to the `main` branch, the workflow `.github/workflows/deploy-production.yml` automatically executes:
+Every pull request and push to `main` runs the test jobs of `.github/workflows/deploy-production.yml` (backend Pest on PostgreSQL, mobile tsc + Jest). **Deployment runs only when the workflow is started manually** (Actions → CI & Deploy → Run workflow, branch `main`):
 
 1. **Test Job:** Runs Pest & PHPUnit test suites on PHP 8.3 with all required extensions.
 2. **Deploy Job:**
