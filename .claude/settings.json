@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(npm run sail:*)",
+      "Bash(npm run test:*)",
+      "Bash(npm run generate-api-types)",
+      "Bash(./vendor/bin/sail artisan:*)",
+      "Bash(./vendor/bin/sail test:*)",
+      "Bash(./vendor/bin/sail pint:*)",
+      "Bash(./vendor/bin/sail composer:*)",
+      "Bash(./vendor/bin/sail up:*)",
+      "Bash(./vendor/bin/sail ps)",
+      "Bash(npx tsc --noEmit:*)",
+      "Bash(npm test:*)",
+      "Bash(npx expo install:*)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(git checkout -b:*)",
+      "Bash(git switch:*)"
+    ],
+    "deny": [
+      "Read(./backend/.env)",
+      "Read(./backend/.env.*.local)",
+      "Read(./mobile/.env)",
+      "Read(./mobile/.env.local)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(rm -rf /:*)",
+      "Bash(./vendor/bin/sail artisan db:wipe:*)"
+    ]
+  }
+}
