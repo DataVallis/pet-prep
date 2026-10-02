@@ -8,6 +8,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-02 — Varovalka pred produkcijo: vsaka sprememba je najprej stestirana
+
+**Kaj se je zgodilo**
+- Avtomatsko testiranje na GitHubu (CI) zdaj ob vsakem predlogu spremembe požene **123 testov zaledja** na pravi bazi PostgreSQL in **72 testov mobilne aplikacije** ter preverjanje tipov.
+- Odkritje: prejšnja nastavitev avtomatskega deploya **ni nikoli zares tekla**. Datoteka je imela napako, zato je GitHub vsak zagon zavrnil, ne da bi kaj izvedel. Testi bi sicer tekli na napačni bazi (sqlite) in ne bi mogli uspeti.
+- Produkcija se zdaj posodobi **samo ročno, z enim klikom**, in šele, ko so vsi testi zeleni. Merge kode ne gre več sam v živo.
+- Mobilni testi so po sveži namestitvi spet delovali (72/72), poprej niso tekli niti enkrat. Mimogrede je bila odkrita napaka v postavitvi otroškega zaslona (video psa se ni raztegnil čez cel zaslon).
+
+**Zakaj je pomembno**
+Aplikacijo uporabljajo otroci. Nobena sprememba ne sme v živo, ne da bi jo preverili stroji in nato potrdil človek.
+
+**Kako to povedati**
+- 💼 Inženirska disciplina: CI na produkcijski bazi, ročna potrditev deploya, neodvisni AI pregled kode. Ena oseba + AI ekipa z varovalkami večje ekipe.
+- 🛠 LinkedIn: *"Moj deploy pipeline je bil 'zelen' tedne, v resnici pa ni nikoli tekel. Ena vrstica YAML-a: `secrets` v `environment.url`."* + nasvet: uporabite `actionlint`.
+- 👩 (posredno) *"Vsaka posodobitev je najprej stestirana in ročno potrjena."*
+
+---
+
 ## 2026-10-02 — Varnost AI psa: noben tuj video ne pride na otrokov zaslon
 
 **Kaj se je zgodilo**
