@@ -14,7 +14,7 @@
 |---|---|
 | M0 Repo hygiene | 7 / 14 (+ yarn only, CI on Postgres + manual deploy, mobile test infra — PR #2) |
 | M1 Core loop end-to-end | 2 / 18 (M1-01, M1-02 on branch `fix/M1-01-decay-engine`; role-based routing partially done on mobile) |
-| M2 Parent + auth | 0 / 9 |
+| M2 Parent + auth | 0 / 9 (M2-02 partial: parent "Dodaj otroka" PIN screen on `feat/M1-12-session-restore-parent-pin`) |
 | M3 Notifications, sensors, payments | 0 / 11 |
 | M4 AI media | 2 / 7 (M4-01 queued reference image, M4-04 signed webhooks — PR open) |
 | M5 Production + beta | 2 / 8 (server + domain/TLS live; deploy pipeline and backups partial) |
@@ -57,8 +57,8 @@
 
 1. **David:** merge PR #4 (M0-10) → PR #5 (M1-01/02 decay) → Actions → Run workflow; merge `fix/M1-01b-display-thresholds`.
 2. **David:** rotate EAS signing passwords (M0-12); confirm free/paid split (BUSINESS_MODEL §7, B7).
-3. **David:** merge `feat/M1-03-family-timezone`; review `feat/M1-04-energy-hygiene-breeds` (M1-04/05/06 + illness recovery + daily walk rule) → PR.
-4. **M1-07** child action API (feed/water/clean/steps/contract) + **M2-02** parent "add child / PIN" screen.
+3. **Claude:** merge M1-04/05/06 + illness recovery + daily walk (PR from `feat/M1-04-energy-hygiene-breeds`). Then **M1-19** sourced breed data import (David: no invented breed numbers).
+4. **M1-07** child action API (feed/water/clean/steps/contract) + **M2-02** rest: PIN-only child login + backend 1 parent → 1 child check.
 5. **M1-08** private channels + single broadcast per change.
 
 ## 6. Session log
@@ -82,6 +82,22 @@
 - No API/route change → no OpenAPI regen. Docs: PRODUCT_SPEC §5/§7, DECISIONS (6 decisions, 4 open questions), ARCHITECTURE §1/§2/§4/§5, DIAGRAMS (game loop, new child-actions sequence, ER), ROADMAP ticks, BUILD_LOG, PARENTS/KIDS.
 - **New debt / open:** (1) illness loop (see §3 1a) — blocks a real beta; (2) energy 0 % every night drives escalation phase 2/3 + `sick` video + red light until the first walk; (3) seeder overwrites Filament edits on every deploy; (4) one `walked_pet` row per sync inflates the weekly "completed" count (M2-05); (5) admin edits of `daily_step_count` in Filament don't recompute energy; (6) the `PetUpdated` event name for actions is the activity type (`walked_pet`, `cleaned_poop`) — mobile must handle it (M1-07/M1-08); (7) hunger/thirst `*_zero_since` still stamped at tick time after a gap.
 - Next: David answers the open questions → M1-07 child API on top of `PetActivityService` (+ feed/water using `feed_windows` / `water_*`).
+### 2026-10-03 (cloud, mobile-engineer) — M1-12 session restore + M2-02 parent PIN screen (branch `feat/M1-12-session-restore-parent-pin`, pushed, no PR)
+- **Session restore (M1-12):** `src/modules/session/restoreSession.ts` (SecureStore token → `GET /api/user`; no token → login; 401 → token deleted → login; network/5xx → token kept, "Ni povezave" splash with "Poskusi znova" / "Odjava"), `useSessionBootstrap` (runs it on mount, registers the client's 401 handler), new `SplashScreen`, `appStore.bootStatus` + `signIn()` (one action for login and restore: user, pet, pairing status, lock state from `is_game_over` / `illness_until`).
+- **One logout:** `modules/session/logout.ts` (`POST /api/logout` best effort → delete token → `queryClient.clear()` → `reset()`), used by parent dashboard, child HUD, offline splash and the child PIN step's "Nazaj" (it used to show the login form while still signed in). Any 401 on an authenticated request now logs out locally.
+- **Client:** `UserResponse` / `LoginResponse` / `ParentDashboardResponse` types (`api.getUser` was already flat on main — no `{data}` wrapper to fix; the generated `/user` schema still lacks `pet`); JSON parsed safely (no crash on empty/HTML error bodies); `ApiError.retryAfterSeconds` from `Retry-After`; new `api.getParentDashboard`; shared `src/api/queryClient.ts` (no retries on 4xx).
+- **Parent "Dodaj otroka" (M2-02 partial, existing `POST /api/parent/generate-pin`):** `AddChildCard` on the dashboard when `GET /api/parent/dashboard` says "No child profile paired yet." (dashboard now has loading + retryable error states) and in Controls; `AddChildScreen` (light theme): PIN `734 912`, live countdown (`useCountdown`, wall-clock based), "Nova koda", expiry state, error texts for 429 (keeps the still-valid PIN, button disabled for `Retry-After` s) / 403 / 401 / offline / 5xx, dashboard polled every 5 s while the PIN is valid → "Otrok je povezan!" + session pet refreshed from `/api/user`. Strings in one const per screen (`ADD_CHILD_STRINGS`, `DASHBOARD_STRINGS`, `SPLASH_STRINGS`, `ADD_CHILD_CARD_STRINGS`) for M1-18.
+- **Tests:** Jest 138 passed / 14 suites (was 74 / 7); `npx tsc --noEmit` clean; full suite run 3× with no flakes or act warnings. New: `restoreSession` (6), `AppNavigator.sessionRestore` (9: splash, no token, parent, child + pet, child game over → lock, child without pet → PIN, 401, offline + retry, offline logout), `client` (5), `pin` helpers (18), `useCountdown` (4, fake timers), `AddChildScreen` (8: PIN shown, countdown 15:00 → 14:59 → expired, Nova koda, 429 cooldown, offline retry, 403/500, pairing detected), `ParentDashboardScreen.addChild` (7), store `signIn` / `lockStateFromPet` (7).
+- **Review fixes (same branch, after independent review APPROVED):**
+  - PIN screen polling stops once the child has paired.
+  - TanStack `focusManager` is bound to `AppState`, so polling pauses in the background.
+  - Bootstrap has a run id, so a stale or double restore is ignored (also after unmount).
+  - `logout()` aborts the server revoke after 5 s (`AbortController`, `api.logout(signal)`).
+  - The global 401 logout fires only if the rejected token is still the stored token.
+  - `Retry-After <= 0` → no countdown ("Poskusite znova.").
+  - Jest 159 passed / 17 suites (+21 regression tests); a mutation check (reverting fixes 1, 3, 5) fails 6 of them.
+- **Needs a device check (Expo Go is enough, no native modules added):** cold start with a saved token (splash → right screen), airplane-mode start (offline splash, retry), parent without a child (card, PIN screen, countdown while backgrounded), pairing a second phone with the PIN and seeing "Otrok je povezan!", logout on both roles.
+- **New debt:** (1) backend allows a parent to pair a second child (no 1 : 1 check in `PairingService::pairChild`); the app only hides the button. (2) Parent dashboard / Controls are still dark (ADR-007 says light) — only the new PIN screen/card are light; restyle with M2-05. (3) Dashboard metrics still come from the session pet, not the dashboard query (M2-05). (4) Generated `schema.ts` `/user` lacks `pet` — fix the Scramble annotation, then drop the hand-written `UserResponse` (M1-17). (5) `PairingScreen` contract flow still builds a `Pet` by hand from the pairing response. (6) `src/test-utils/` must keep `gcTime: Infinity` (finite gcTime hangs Jest). (7) Parent token in a PIN screen poll: 12 req/min on `throttle:api` (60/min) — fine, but stops only on expiry/leave.
 
 ### 2026-10-03 (cloud, backend-engineer) — M1-03 family timezone (branch `feat/M1-03-family-timezone`)
 - Migration `2026_10_03_130000_add_timezone_to_users_table`: `users.timezone` string(64), NOT NULL, default `Europe/Ljubljana`. Family timezone = parent's (`User::familyTimezone()`, `Pet::familyTimezone()`; a child ignores its own column). Storage stays UTC.

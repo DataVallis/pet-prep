@@ -47,6 +47,25 @@ Sprehod je tisto, kar starši pri pravem psu najbolj podcenjujejo — in edino, 
 - 🧒 *"Tvoj kuža enkrat na dan naredi nered — nikoli, ko si v šoli ali spiš. Pobriši ga!"*
 - 🛠 LinkedIn: *"Naključno, a ponovljivo: časi nereda so izžrebani z RNG, zasejanim s ključem aplikacije, psom in datumom — testi so deterministični, otrok pa časov ne more uganiti."*
 - 💼 Vsa pravila igre so nastavljiva brez nove verzije aplikacije — hitro prilagajanje po prvih testnih družinah.
+## 2026-10-03 — Aplikacija si zapomni prijavo, starš dobi zaslon "Dodaj otroka"
+
+**Kaj se je zgodilo**
+- **Ostaneš prijavljen:** ko aplikacijo zapreš in znova odpreš, te pričaka kratek zaslon "Nalagam …" in nato takoj pravi zaslon — otrok svojega kužka, starš nadzorno ploščo. Prej se je bilo treba ob vsakem zagonu znova prijaviti.
+- **Brez signala ni odjave:** če telefon ob zagonu nima interneta, aplikacija pokaže "Ni povezave" in gumb "Poskusi znova" — seja ostane. Odjavi te samo, če strežnik prijavo res zavrne.
+- **"Dodaj otroka":** starš, ki še nima povezanega otroka, na nadzorni plošči vidi izrazito kartico. Tap → velika koda, npr. **734 912**, z odštevanjem 15 minut, gumb "Nova koda" in kratka navodila. Ko otrok kodo vtipka na svojem telefonu, starševski zaslon v nekaj sekundah sam pokaže **"Otrok je povezan!"**.
+- Če starš prehitro zahteva nove kode (več kot 5 na minuto), aplikacija pove, koliko sekund naj počaka, in prejšnja koda ostane veljavna.
+- Odjava zdaj povsod deluje enako (starš, otrok): prekliče prijavo na strežniku, izbriše shranjeni ključ in počisti podatke v telefonu.
+- **Številke:** 64 novih avtomatskih testov, skupaj 138 zelenih (prej 74).
+- Še odprto (*načrt*): otrok se pred vnosom kode še vedno prijavi z e-pošto; prijava samo s PIN-om pride z M2-02.
+
+**Zakaj je pomembno**
+Družina, ki se mora vsak dan znova prijavljati, aplikacijo opusti v prvem tednu — 12-tedenski izziv pa stoji na vsakodnevni rutini. Zaslon "Dodaj otroka" je prvi korak, ki ga starš sploh naredi: brez njega se izziv ne more začeti.
+
+**Kako to povedati**
+- 👩 *"Tapnete 'Dodaj otroka', otroku poveste 6 številk in v minuti je kuža na njegovem telefonu."*
+- 🧒 *"Ko naslednjič odpreš aplikacijo, te kuža že čaka."*
+- 🛠 LinkedIn: *"Obnova seje v Expo: SecureStore → /api/user → ista pot kot ob prijavi. 401 pomeni odjavo, izpad omrežja pa NE — otroka ne odjaviš zato, ker je v tunelu."*
+- 💼 Onboarding starš → otrok je zdaj en zaslon in ena koda — ključna točka v lijaku od prenosa do začetka izziva.
 
 ## 2026-10-03 — Kuža zdaj živi po slovenski uri
 

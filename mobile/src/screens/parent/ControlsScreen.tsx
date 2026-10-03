@@ -18,11 +18,14 @@ import {
 import { ChevronLeft, ShieldAlert } from 'lucide-react-native';
 
 import { api } from '@/api/client';
+import AddChildCard from '@/components/AddChildCard';
 import type { QuietHours } from '@/types';
 
 interface ControlsScreenProps {
   /** Navigate back to the dashboard. */
   onBack: () => void;
+  /** Open "Dodaj otroka". Passed only while no child is paired (MVP: 1 parent → 1 child). */
+  onAddChild?: () => void;
 }
 
 const EMPTY_QUIET_HOURS: QuietHours = {
@@ -39,7 +42,7 @@ function isValidTime(value: string): boolean {
   return /^([01]\d|2[0-3]):[0-5]\d$/.test(value);
 }
 
-export default function ControlsScreen({ onBack }: ControlsScreenProps) {
+export default function ControlsScreen({ onBack, onAddChild }: ControlsScreenProps) {
   const [quietHours, setQuietHours] = useState<QuietHours>(EMPTY_QUIET_HOURS);
   const [isSaving, setIsSaving] = useState(false);
   const [hardStopActive, setHardStopActive] = useState(false);
@@ -144,6 +147,8 @@ export default function ControlsScreen({ onBack }: ControlsScreenProps) {
       </View>
 
       <ScrollView className="flex-1" contentContainerClassName="gap-4 p-4 pb-6">
+        {onAddChild && <AddChildCard onPress={onAddChild} compact />}
+
         {/* Quiet Hours Manager */}
         <View className="bg-slate-900 rounded-2xl p-5 border border-slate-800">
           <View className="flex-row items-center justify-between">

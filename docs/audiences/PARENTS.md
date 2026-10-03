@@ -10,7 +10,7 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 - Za vse, ki želite **objektiven dokaz** pripravljenosti, preden zapravite več kot 1.000 € in sprejmete 10-letno obvezo.
 
 ## Kako poteka
-1. **Vi** si naložite aplikacijo, ustvarite profil otroka in dobite **6-mestno kodo PIN** (velja 15 minut). *(načrt: zaslon "Dodaj otroka")*
+1. **Vi** si naložite aplikacijo in na nadzorni plošči tapnete **"Dodaj otroka"**. Dobite **6-mestno kodo PIN** (npr. 734 912) z odštevanjem — velja 15 minut; če poteče, tapnete "Nova koda". Ko otrok kodo vnese, aplikacija sama potrdi "Otrok je povezan!". *(načrt: vnos imena in starosti otroka)*
 2. **Otrok** na svojem telefonu vtipka PIN. Otrok **ne potrebuje e-pošte** in ne daje osebnih podatkov. *(načrt: danes testni otroški račun še uporablja e-pošto)*
 3. Otrok s prstom podpiše **Pogodbo o odgovornosti** in pes se "rodi".
 4. **12 tednov** (1 teden = 1 mesec pasjega življenja) otrok skrbi za psa. Na koncu: **Certifikat odgovornosti**. *(načrt)*

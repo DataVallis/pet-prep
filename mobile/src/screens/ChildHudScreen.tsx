@@ -21,7 +21,7 @@ import { useVideoPlayer, VideoView } from 'expo-video';
 
 import { useAppStore, type WebSocketStatus } from '@/store/appStore';
 import { usePetWebSocket } from '@/hooks/usePetWebSocket';
-import { clearAuthToken } from '@/api/client';
+import { logout } from '@/modules/session/logout';
 import ActionButton from '@/components/ActionButton';
 import CleaningOverlay from '@/components/CleaningOverlay';
 import LockedScreen from '@/screens/LockedScreen';
@@ -62,7 +62,6 @@ function WsStatusDot({ status }: { status: WebSocketStatus }) {
 export default function ChildHudScreen() {
   const pet = useAppStore((s) => s.pet);
   const setPet = useAppStore((s) => s.setPet);
-  const resetStore = useAppStore((s) => s.reset);
   const wsStatus = useAppStore((s) => s.wsStatus);
   const lockState = useAppStore((s) => s.lockState);
   const isWalkModalVisible = useAppStore((s) => s.isWalkModalVisible);
@@ -131,9 +130,8 @@ export default function ChildHudScreen() {
   const handleWalk = () => setWalkModalVisible(true);
   const handleClean = () => setCleaningOverlayVisible(true);
 
-  const handleLogout = async () => {
-    await clearAuthToken();
-    resetStore();
+  const handleLogout = () => {
+    void logout();
   };
 
   return (

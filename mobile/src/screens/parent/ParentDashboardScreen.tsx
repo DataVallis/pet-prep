@@ -7,7 +7,7 @@
  */
 
 import { useState, type ReactNode } from 'react';
-import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import {
   AlertCircle,
   AlertTriangle,
@@ -25,14 +25,28 @@ import {
 
 import { useAppStore } from '@/store/appStore';
 import { usePetWebSocket } from '@/hooks/usePetWebSocket';
-import { clearAuthToken } from '@/api/client';
+import { isNoChildPaired, useParentDashboard } from '@/hooks/queries/useParentDashboard';
+import { logout } from '@/modules/session/logout';
 import { interpolateColor } from '@/utils/metrics';
 import type { ActivityType, Pet } from '@/types';
+import AddChildCard from '@/components/AddChildCard';
 import ControlsScreen from '@/screens/parent/ControlsScreen';
 import BreedPaywallScreen from '@/screens/parent/BreedPaywallScreen';
+import AddChildScreen from '@/screens/parent/AddChildScreen';
+
+/** Strings added with M1-12 / M2-02 (older strings are still inline — extract with M1-18). */
+export const DASHBOARD_STRINGS = {
+  noChildSubtitle: 'Še ni povezanega otroka',
+  loading: 'Nalagam pregled …',
+  loadError: 'Pregleda ni bilo mogoče osvežiti. Prikazani so zadnji znani podatki.',
+  retry: 'Poskusi znova',
+  noActivePet: 'Otrok je povezan, a nima aktivnega kužka.',
+  logout: 'Odjava',
+} as const;
 
 type TrafficLight = 'green' | 'amber' | 'red';
 type Tab = 'dashboard' | 'controls' | 'breeds';
+type Overlay = 'none' | 'addChild';
 
 interface ActivityEntry {
   id: number;
@@ -274,20 +288,40 @@ function BottomNavBar({ activeTab, onSelect }: NavBarProps) {
 // ── Main Screen ────────────────────────────────────────────────
 export default function ParentDashboardScreen() {
   const pet = useAppStore((s) => s.pet);
-  const resetStore = useAppStore((s) => s.reset);
   const [activeTab, setActiveTab] = useState<Tab>('dashboard');
+  const [overlay, setOverlay] = useState<Overlay>('none');
+  const dashboard = useParentDashboard();
+  const noChild = isNoChildPaired(dashboard.data);
 
   usePetWebSocket(pet?.id ?? null);
 
-  const handleLogout = async () => {
-    await clearAuthToken();
-    resetStore();
+  const handleLogout = () => {
+    void logout();
   };
+
+  const openAddChild = () => setOverlay('addChild');
+
+  if (overlay === 'addChild') {
+    return (
+      <View style={styles.root}>
+        <AddChildScreen
+          onBack={() => {
+            setOverlay('none');
+            setActiveTab('dashboard');
+            void dashboard.refetch();
+          }}
+        />
+      </View>
+    );
+  }
 
   if (activeTab === 'controls') {
     return (
       <View style={styles.root}>
-        <ControlsScreen onBack={() => setActiveTab('dashboard')} />
+        <ControlsScreen
+          onBack={() => setActiveTab('dashboard')}
+          onAddChild={noChild ? openAddChild : undefined}
+        />
         <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} />
       </View>
     );
@@ -309,13 +343,17 @@ export default function ParentDashboardScreen() {
         <View>
           <Text style={styles.headerTitle}>Nadzorna plošča za starše</Text>
           <Text style={styles.headerSubtitle}>
-            Ljubljenček: {pet?.breed_type === 'border_collie' ? 'Border Collie' : 'Mutt kuža'}
+            {noChild
+              ? DASHBOARD_STRINGS.noChildSubtitle
+              : `Ljubljenček: ${pet?.breed_type === 'border_collie' ? 'Border Collie' : 'Mutt kuža'}`}
           </Text>
         </View>
 
         <Pressable
           style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
           onPress={handleLogout}
+          accessibilityRole="button"
+          accessibilityLabel={DASHBOARD_STRINGS.logout}
         >
           <LogOut color="#94a3b8" size={18} />
         </Pressable>
@@ -326,50 +364,74 @@ export default function ParentDashboardScreen() {
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
       >
-        {/* Traffic Light Status Banner */}
-        <TrafficLightBanner pet={pet} />
+        {dashboard.isError && (
+          <View style={styles.inlineError} testID="dashboard-error">
+            <Text style={styles.inlineErrorText}>{DASHBOARD_STRINGS.loadError}</Text>
+            <Pressable onPress={() => void dashboard.refetch()} hitSlop={8}>
+              <Text style={styles.inlineErrorRetry}>{DASHBOARD_STRINGS.retry}</Text>
+            </Pressable>
+          </View>
+        )}
 
-        {/* 2×2 Real-Time Metric Grid */}
-        <View style={styles.metricGrid}>
-          <View style={styles.gridCol}>
-            <MetricCard
-              icon={<Beef color="#6366f1" size={18} />}
-              name="Hrana"
-              level={pet?.hunger_level ?? 80}
-              statusText="Nahranjen"
-            />
+        {dashboard.isPending && !pet ? (
+          <View style={styles.loadingBox} testID="dashboard-loading">
+            <ActivityIndicator color="#818cf8" />
+            <Text style={styles.legendText}>{DASHBOARD_STRINGS.loading}</Text>
           </View>
-          <View style={styles.gridCol}>
-            <MetricCard
-              icon={<Droplet color="#6366f1" size={18} />}
-              name="Voda"
-              level={pet?.thirst_level ?? 75}
-              statusText="Sveža voda"
-            />
+        ) : noChild ? (
+          <AddChildCard onPress={openAddChild} />
+        ) : !pet && dashboard.data?.pet === null ? (
+          <View style={styles.sectionCard}>
+            <Text style={styles.legendText}>{DASHBOARD_STRINGS.noActivePet}</Text>
           </View>
-          <View style={styles.gridCol}>
-            <MetricCard
-              icon={<Footprints color="#6366f1" size={18} />}
-              name="Gibanje"
-              level={pet?.energy_level ?? 90}
-              statusText={`${pet?.daily_step_count ?? 4200} korakov`}
-            />
-          </View>
-          <View style={styles.gridCol}>
-            <MetricCard
-              icon={<Sparkles color="#6366f1" size={18} />}
-              name="Čistoča"
-              level={pet?.hygiene_level ?? 85}
-              statusText="Čisto"
-            />
-          </View>
-        </View>
+        ) : (
+          <>
+            {/* Traffic Light Status Banner */}
+            <TrafficLightBanner pet={pet} />
 
-        {/* Activity Timeline */}
-        <ActivityTimeline activities={MOCK_ACTIVITIES} />
+            {/* 2×2 Real-Time Metric Grid */}
+            <View style={styles.metricGrid}>
+              <View style={styles.gridCol}>
+                <MetricCard
+                  icon={<Beef color="#6366f1" size={18} />}
+                  name="Hrana"
+                  level={pet?.hunger_level ?? 80}
+                  statusText="Nahranjen"
+                />
+              </View>
+              <View style={styles.gridCol}>
+                <MetricCard
+                  icon={<Droplet color="#6366f1" size={18} />}
+                  name="Voda"
+                  level={pet?.thirst_level ?? 75}
+                  statusText="Sveža voda"
+                />
+              </View>
+              <View style={styles.gridCol}>
+                <MetricCard
+                  icon={<Footprints color="#6366f1" size={18} />}
+                  name="Gibanje"
+                  level={pet?.energy_level ?? 90}
+                  statusText={`${pet?.daily_step_count ?? 4200} korakov`}
+                />
+              </View>
+              <View style={styles.gridCol}>
+                <MetricCard
+                  icon={<Sparkles color="#6366f1" size={18} />}
+                  name="Čistoča"
+                  level={pet?.hygiene_level ?? 85}
+                  statusText="Čisto"
+                />
+              </View>
+            </View>
 
-        {/* Weekly Performance Chart */}
-        <WeeklyChart data={MOCK_WEEKLY} />
+            {/* Activity Timeline */}
+            <ActivityTimeline activities={MOCK_ACTIVITIES} />
+
+            {/* Weekly Performance Chart */}
+            <WeeklyChart data={MOCK_WEEKLY} />
+          </>
+        )}
       </ScrollView>
 
       <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} />
@@ -605,5 +667,30 @@ const styles = StyleSheet.create({
   },
   pressed: {
     opacity: 0.7,
+  },
+  loadingBox: {
+    alignItems: 'center',
+    gap: 10,
+    paddingVertical: 40,
+  },
+  inlineError: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    padding: 12,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: 'rgba(244, 63, 94, 0.35)',
+    backgroundColor: 'rgba(244, 63, 94, 0.12)',
+  },
+  inlineErrorText: {
+    flex: 1,
+    fontSize: 13,
+    color: '#fda4af',
+  },
+  inlineErrorRetry: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#ffffff',
   },
 });

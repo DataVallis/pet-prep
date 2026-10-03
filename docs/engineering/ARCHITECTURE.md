@@ -67,9 +67,9 @@ Laravel default tables: `password_reset_tokens, sessions, cache, jobs, failed_jo
 | Method | Path | Auth | Controller | Notes |
 |---|---|---|---|---|
 | POST | `/api/login` | – | AuthController@login | email + password → `{token, user, pet}` (pet = own or child's active pet, raw model) |
-| GET | `/api/user` | sanctum | AuthController@user | flat `{id,name,email,role,pet}` |
+| GET | `/api/user` | sanctum | AuthController@user | flat `{id,name,email,role,pet}` — used by the app for session restore on launch (M1-12). ⚠️ The generated OpenAPI type still describes the bare `User` model without `pet`; mobile declares `UserResponse` in `client.ts` |
 | POST | `/api/logout` | sanctum | AuthController@logout | |
-| POST | `/api/parent/generate-pin` | sanctum, throttle:pairing (5/min) | PairingController@generatePin | |
+| POST | `/api/parent/generate-pin` | sanctum, throttle:pairing (5/min) | PairingController@generatePin | `{pin, expires_at, expires_in_minutes: 15}`; each call replaces the previous PIN; 429 carries `Retry-After`. Used by the parent "Dodaj otroka" screen |
 | GET | `/api/parent/dashboard` | sanctum | ParentDashboardController@dashboard | `timezone` (family IANA tz) + pet + traffic light + quiet hours + 20 activities + 7-day chart (`weekly_performance[].date` = family-local day; `completed` counts a walk at most once per day — one `walked_pet` row when the goal is reached) |
 | GET | `/api/parent/activities` | sanctum | ParentDashboardController@activities | paginated |
 | POST | `/api/parent/hard-stop` | sanctum | ParentDashboardController@toggleHardStop | **toggle**, returns `is_hard_stopped` |
@@ -128,10 +128,12 @@ Docs: Scramble at `/docs/api` (local env only), export via `php artisan openapi:
 
 ## 7. Mobile app runtime flow (today)
 
-`index.ts → App (QueryClientProvider, SafeArea) → AppNavigator`
+`index.ts → App (QueryClientProvider with the shared `src/api/queryClient.ts`, SafeArea) → AppNavigator`
+→ **launch (M1-12):** `useSessionBootstrap` → `SplashScreen` ("Nalagam …") while `restoreSession()` reads the SecureStore token and calls `GET /api/user`. 200 → `appStore.signIn({token,user,pet})` (the same action a login uses: user, pet, `pairingStatus`, `lockState` from the pet's `is_game_over` / `illness_until`); 401 → token deleted → login; network error / 5xx → "Ni povezave" splash, token kept, "Poskusi znova" / "Odjava". Diagram: DIAGRAMS §2b.
 → not logged in → `PairingScreen` (email/password login, dev quick-login buttons, PIN → contract "Tap to Sign" → `POST /api/child/pair`)
-→ `user.role === 'parent'` → `ParentDashboardScreen` (tabs: dashboard [timeline/chart still mock], controls, breeds paywall [simulated])
+→ `user.role === 'parent'` → `ParentDashboardScreen` (tabs: dashboard [timeline/chart still mock], controls, breeds paywall [simulated]). The dashboard now queries `GET /api/parent/dashboard` (TanStack, `['parent','dashboard']`) for loading / error / "no child" states; metrics still come from the session pet + Reverb. When the response is `"No child profile paired yet."` the dashboard shows the **"Dodaj otroka"** card (also in Controls) → `AddChildScreen`: `POST /api/parent/generate-pin`, PIN shown as `734 912` with a live 15-min countdown, "Nova koda", 429 cooldown from `Retry-After`, dashboard polled every 5 s while the PIN is valid → "Otrok je povezan!" + `GET /api/user` to load the pet.
 → child → `ChildHudScreen` (video/image/fallback background, 4 MetricBars, Feed/Water = local +20 % only, Walk → local overlay, Clean → local overlay) + `LockedScreen` overlay when `lockState !== 'none'`.
+→ **logout** (both roles, the offline splash and the child PIN step's "Nazaj"): `modules/session/logout.ts` → `POST /api/logout` (best effort) → delete token → `queryClient.clear()` → `appStore.reset()`. Any later 401 on an authenticated request triggers the same local logout (`setUnauthorizedHandler` in `client.ts`).
 Default API is production (`https://api.petprep.si`, Reverb wss :443) unless `EXPO_PUBLIC_*` env vars are set.
 
 ## 8. Configuration
