@@ -19,7 +19,7 @@ function quietHours(array $attributes = []): QuietHours
 }
 
 it('is quiet during school hours and bedtime, including across midnight', function (string $time, bool $expected) {
-    expect(quietHours()->isQuietNow(Carbon::parse("2026-10-02 {$time}")))->toBe($expected);
+    expect(quietHours()->isQuietNow(Carbon::parse("2026-10-02 {$time}", 'Europe/Ljubljana')))->toBe($expected);
 })->with([
     'before school' => ['07:59', false],
     'school starts' => ['08:00', true],
@@ -32,9 +32,9 @@ it('is quiet during school hours and bedtime, including across midnight', functi
 ]);
 
 it('is never quiet when disabled', function () {
-    expect(quietHours(['is_active' => false])->isQuietNow(Carbon::parse('2026-10-02 10:00')))->toBeFalse();
+    expect(quietHours(['is_active' => false])->isQuietNow(Carbon::parse('2026-10-02 10:00', 'Europe/Ljubljana')))->toBeFalse();
 });
 
 it('ignores windows with a missing bound', function () {
-    expect(quietHours(['school_end' => null])->isQuietNow(Carbon::parse('2026-10-02 10:00')))->toBeFalse();
+    expect(quietHours(['school_end' => null])->isQuietNow(Carbon::parse('2026-10-02 10:00', 'Europe/Ljubljana')))->toBeFalse();
 });

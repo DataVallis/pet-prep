@@ -4,10 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UpdateQuietHoursRequest;
 use App\Models\QuietHours;
+use App\Services\FamilySettingsService;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\DB;
 
 class QuietHoursController extends Controller
 {
+    public function __construct(private readonly FamilySettingsService $settings) {}
+
     /**
      * Get the quiet hours configuration for the authenticated parent.
      *
@@ -32,6 +36,7 @@ class QuietHoursController extends Controller
 
         return response()->json([
             'quiet_hours' => $this->formatQuietHours($quietHours),
+            'timezone' => $parent->familyTimezone(),
         ], 200);
     }
 
@@ -48,20 +53,27 @@ class QuietHoursController extends Controller
             return response()->json(['message' => 'Only parent profiles can manage quiet hours.'], 403);
         }
 
-        $quietHours = QuietHours::updateOrCreate(
-            ['parent_id' => $parent->id],
-            $request->only([
-                'school_start',
-                'school_end',
-                'bedtime_start',
-                'bedtime_end',
-                'is_active',
-            ])
-        );
+        $quietHours = DB::transaction(function () use ($request, $parent): QuietHours {
+            if ($request->has('timezone')) {
+                $this->settings->updateTimezone($parent, $request->validated('timezone'));
+            }
+
+            return QuietHours::updateOrCreate(
+                ['parent_id' => $parent->id],
+                $request->only([
+                    'school_start',
+                    'school_end',
+                    'bedtime_start',
+                    'bedtime_end',
+                    'is_active',
+                ])
+            );
+        });
 
         return response()->json([
             'message' => 'Quiet hours updated successfully.',
             'quiet_hours' => $this->formatQuietHours($quietHours),
+            'timezone' => $parent->familyTimezone(),
         ], 200);
     }
 

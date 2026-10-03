@@ -36,9 +36,12 @@ function decayPet(array $attributes = [], ?User $child = null): Pet
     return Pet::factory()->create(array_merge(['user_id' => $child->id], $attributes));
 }
 
-function decayChildWithQuietHours(array $quietHours): User
+function decayChildWithQuietHours(array $quietHours, string $timezone = 'UTC'): User
 {
-    $parent = User::factory()->parent()->create();
+    // Windows in these decay tests are written in UTC so the arithmetic reads
+    // directly off DECAY_SIM_START; family-timezone behaviour (M1-03) is
+    // covered in FamilyTimezoneTest.
+    $parent = User::factory()->parent()->create(['timezone' => $timezone]);
     QuietHours::create(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
 
     return User::factory()->child()->create(['parent_id' => $parent->id]);

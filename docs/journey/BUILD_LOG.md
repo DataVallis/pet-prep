@@ -8,6 +8,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-03 — Kuža zdaj živi po slovenski uri
+
+**Kaj se je zgodilo**
+- Vsaka družina ima svoj časovni pas (privzeto Europe/Ljubljana). Tihe ure (šola, spanje), polnoč, ko se koraki postavijo na nič, in dnevi v starševskem tedenskem pregledu se zdaj računajo po lokalni uri družine. Prej je vse teklo po UTC, zato so bile tihe ure v Sloveniji zamaknjene za 1–2 uri.
+- Pravilno deluje tudi ob premiku ure: v noči na 25. 10. 2026 trajajo tihe ure 22:00–06:00 9 realnih ur, v noči na 28. 3. 2027 pa 7 ur — tako kot jih doživi družina.
+- Starš lahko časovni pas spremeni v nastavitvah (nov API), npr. ko je družina na počitnicah v tujini.
+- **Številke:** 29 novih avtomatskih testov, skupaj 183 zelenih.
+
+**Zakaj je pomembno**
+Če kuža "zaspi" ob 20:00 namesto ob 22:00 ali se koraki ponastavijo ob 2. uri zjutraj, otrok in starš izgubita zaupanje v igro. Pravila morajo slediti uri na steni v kuhinji, ne strežniku.
+
+**Kako to povedati**
+- 👩 *"Ko nastavite spanje od 22:00 do 6:00, kuža spi točno takrat — tudi ko se ura premakne."*
+- 🛠 LinkedIn: *"Shranjuj v UTC, računaj v lokalnem času. Ob jesenskem premiku ure 02:30 obstaja dvakrat, spomladi pa sploh ne — oboje imamo pokrito s testi."*
+- 💼 Pripravljeno za širitev zunaj Slovenije: časovni pas je nastavitev družine, ne strežnika.
+
 ## 2026-10-03 — Pes je bil skoraj 2× prehitro lačen: nov "motor" igre
 
 **Kaj se je zgodilo**

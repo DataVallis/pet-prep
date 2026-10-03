@@ -355,7 +355,20 @@ class Pet extends Model
     public function quietHours(): ?QuietHours
     {
         $parent = $this->user?->parent;
+        $quietHours = $parent?->quietHours;
 
-        return $parent?->quietHours;
+        // QuietHours evaluates its windows in the parent's timezone; hand it
+        // the parent we already loaded.
+        $quietHours?->setRelation('parent', $parent);
+
+        return $quietHours;
+    }
+
+    /**
+     * The family timezone (the child owner's parent's), see User::familyTimezone().
+     */
+    public function familyTimezone(): string
+    {
+        return $this->user?->familyTimezone() ?? User::DEFAULT_TIMEZONE;
     }
 }

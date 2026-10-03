@@ -223,8 +223,8 @@ class PetDecayService
         // Hygiene: gradual decay outside quiet hours only (random drops are M1-05).
         $newHygiene = $this->decayMetric((float) $pet->hygiene_level, self::HYGIENE_DECAY_PER_HOUR * $normalHours);
 
-        // Reset step counts at midnight
-        $this->resetStepCountIfMidnight($pet);
+        // Reset step counts at the family's local midnight
+        $this->resetStepCountIfMidnight($pet, $now);
 
         // Check for virtual age / certificate eligibility
         $certificateEligible = $this->checkCertificateEligibility($pet);
@@ -354,17 +354,22 @@ class PetDecayService
     }
 
     /**
-     * Reset the daily step count if it's past midnight (a new day).
+     * Reset the daily step count once the family's local date has changed
+     * since the last reset (local midnight, M1-03; stored in UTC).
      */
-    private function resetStepCountIfMidnight(Pet $pet): void
+    private function resetStepCountIfMidnight(Pet $pet, CarbonInterface $now): void
     {
-        if (! $pet->last_step_reset_at || ! $pet->last_step_reset_at->isToday()) {
+        $timezone = $pet->familyTimezone();
+        $today = Carbon::instance($now)->setTimezone($timezone)->toDateString();
+        $lastReset = $pet->last_step_reset_at?->copy()->setTimezone($timezone)->toDateString();
+
+        if ($lastReset !== $today) {
             Pet::where('id', $pet->id)->update([
                 'daily_step_count' => 0,
-                'last_step_reset_at' => now(),
+                'last_step_reset_at' => $now,
             ]);
             $pet->daily_step_count = 0;
-            $pet->last_step_reset_at = now();
+            $pet->last_step_reset_at = $now;
             $pet->syncOriginalAttributes(['daily_step_count', 'last_step_reset_at']);
         }
     }
