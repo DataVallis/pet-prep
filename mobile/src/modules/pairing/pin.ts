@@ -1,0 +1,48 @@
+/**
+ * Pure helpers for the parent "Dodaj otroka" PIN screen (M2-02, partial).
+ */
+
+import { ApiError } from '@/api/client';
+
+/** "734912" → "734 912" (easier to read aloud to a child). Non-6-digit input is returned trimmed. */
+export function formatPin(pin: string): string {
+  const digits = pin.trim();
+  return /^\d{6}$/.test(digits) ? `${digits.slice(0, 3)} ${digits.slice(3)}` : digits;
+}
+
+/** Whole seconds left until `expiresAt` (ISO 8601), never negative; 0 for an unparsable date. */
+export function secondsUntil(expiresAt: string, now: number = Date.now()): number {
+  const target = Date.parse(expiresAt);
+  if (Number.isNaN(target)) return 0;
+  return Math.max(0, Math.ceil((target - now) / 1000));
+}
+
+/** 900 → "15:00", 59 → "0:59". */
+export function formatCountdown(totalSeconds: number): string {
+  const safe = Math.max(0, Math.floor(totalSeconds));
+  const minutes = Math.floor(safe / 60);
+  const seconds = safe % 60;
+  return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+}
+
+export type PinErrorKind = 'rate_limited' | 'forbidden' | 'unauthorized' | 'offline' | 'server';
+
+export interface PinError {
+  kind: PinErrorKind;
+  /** Seconds to wait before "Nova koda" works again (rate_limited only). */
+  retryAfterSeconds: number | null;
+}
+
+/** Map a generate-pin failure to something the screen can explain. */
+export function classifyPinError(error: unknown): PinError {
+  if (error instanceof ApiError) {
+    if (error.status === 429) {
+      return { kind: 'rate_limited', retryAfterSeconds: error.retryAfterSeconds ?? 60 };
+    }
+    if (error.status === 403) return { kind: 'forbidden', retryAfterSeconds: null };
+    if (error.status === 401) return { kind: 'unauthorized', retryAfterSeconds: null };
+    return { kind: 'server', retryAfterSeconds: null };
+  }
+  // fetch() rejects with a TypeError when there is no connection.
+  return { kind: 'offline', retryAfterSeconds: null };
+}

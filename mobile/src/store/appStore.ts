@@ -19,6 +19,27 @@ export type WebSocketStatus = 'disconnected' | 'connecting' | 'connected' | 'rec
 
 export type LockState = 'none' | 'hard_stop' | 'illness' | 'game_over';
 
+/**
+ * App launch state (M1-12): `restoring` while the saved token is checked,
+ * `offline` when the check could not reach the server (token kept, retry offered),
+ * `ready` once routing can happen (signed in or showing login).
+ */
+export type BootStatus = 'restoring' | 'offline' | 'ready';
+
+export interface SignInPayload {
+  token: string;
+  user: AppUser;
+  pet: Pet | null;
+}
+
+/** Lock state that can be derived from a pet snapshot (hard stop isn't on the pet yet — M1-16). */
+export function lockStateFromPet(pet: Pet | null, now: number = Date.now()): LockState {
+  if (!pet) return 'none';
+  if (pet.is_game_over) return 'game_over';
+  if (pet.illness_until && Date.parse(pet.illness_until) > now) return 'illness';
+  return 'none';
+}
+
 interface AppStore {
   // Auth & pairing
   authToken: string | null;
@@ -28,6 +49,12 @@ interface AppStore {
   setAuthToken: (token: string | null) => void;
   setUser: (user: AppUser | null) => void;
   setPairingStatus: (status: PairingStatus, error?: string | null) => void;
+  /** Apply a successful login or session restore in one update (routing by role follows). */
+  signIn: (payload: SignInPayload) => void;
+
+  // App launch
+  bootStatus: BootStatus;
+  setBootStatus: (status: BootStatus) => void;
 
   // Pet data
   pet: Pet | null;
@@ -62,6 +89,20 @@ export const useAppStore = create<AppStore>((set) => ({
   setUser: (user) => set({ user }),
   setPairingStatus: (status, error = null) =>
     set({ pairingStatus: status, pairingError: error }),
+  signIn: ({ token, user, pet }) =>
+    set({
+      authToken: token,
+      user: { id: user.id, name: user.name, email: user.email, role: user.role },
+      pet,
+      pairingStatus: pet ? 'paired' : 'unpaired',
+      pairingError: null,
+      lockState: lockStateFromPet(pet),
+      bootStatus: 'ready',
+    }),
+
+  // App launch
+  bootStatus: 'restoring',
+  setBootStatus: (bootStatus) => set({ bootStatus }),
 
   // Pet data
   pet: null,
@@ -108,9 +149,10 @@ export const useAppStore = create<AppStore>((set) => ({
   isCleaningOverlayVisible: false,
   setCleaningOverlayVisible: (isCleaningOverlayVisible) => set({ isCleaningOverlayVisible }),
 
-  // Logout / reset
+  // Logout / reset — leaves the app on the login screen (bootStatus 'ready').
   reset: () =>
     set({
+      bootStatus: 'ready',
       authToken: null,
       user: null,
       pairingStatus: 'unpaired',

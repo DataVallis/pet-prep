@@ -14,6 +14,7 @@ import {
 import { ChevronRight, LogIn, PawPrint, Pencil, ScrollText, ShieldCheck, Sparkles, User, Users } from 'lucide-react-native';
 
 import { api, saveAuthToken } from '@/api/client';
+import { logout } from '@/modules/session/logout';
 import { useAppStore } from '@/store/appStore';
 import type { PairingResponse, Pet } from '@/types';
 
@@ -51,8 +52,8 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
   const [showContract, setShowContract] = useState(false);
   const [signedAt, setSignedAt] = useState<number | null>(null);
 
-  const setAuthToken = useAppStore((s) => s.setAuthToken);
-  const setUser = useAppStore((s) => s.setUser);
+  const signIn = useAppStore((s) => s.signIn);
+  const isSignedIn = useAppStore((s) => s.authToken !== null);
   const setPet = useAppStore((s) => s.setPet);
   const setPairingStatus = useAppStore((s) => s.setPairingStatus);
 
@@ -69,13 +70,10 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
     try {
       const response = await api.login(targetEmail, targetPassword);
       await saveAuthToken(response.token);
-      setAuthToken(response.token);
-      setUser(response.user);
+      // Same store update as the launch-time session restore (M1-12); AppNavigator routes by role.
+      signIn({ token: response.token, user: response.user, pet: response.pet });
 
-      if (response.pet) {
-        setPet(response.pet);
-        setPairingStatus('paired');
-      } else if (response.user.role === 'child') {
+      if (!response.pet && response.user.role === 'child') {
         setStep('pin');
       }
     } catch (err) {
@@ -329,9 +327,14 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
               <Pressable
                 style={styles.backButton}
                 onPress={() => {
-                  setStep('login');
                   setPinDigits(Array(PIN_LENGTH).fill(''));
                   setError(null);
+                  if (isSignedIn) {
+                    // A signed-in child without a pet: going "back" means signing out.
+                    void logout();
+                  } else {
+                    setStep('login');
+                  }
                 }}
               >
                 <Text style={styles.backButtonText}>← Nazaj na prijavo</Text>

@@ -2,7 +2,7 @@
  * Tests for the Zustand app store.
  */
 
-import { useAppStore } from '@/store/appStore';
+import { lockStateFromPet, useAppStore } from '@/store/appStore';
 import type { Pet, PetUpdatedBroadcast } from '@/types';
 
 // Helper to create a mock pet
@@ -181,5 +181,73 @@ describe('useAppStore', () => {
       expect(state.lockState).toBe('none');
       expect(state.pairingStatus).toBe('unpaired');
     });
+  });
+});
+
+describe('session (M1-12)', () => {
+  beforeEach(() => {
+    useAppStore.setState(useAppStore.getInitialState(), true);
+  });
+
+  it('starts in the restoring boot state', () => {
+    expect(useAppStore.getState().bootStatus).toBe('restoring');
+  });
+
+  it('signIn sets token, user, pet, pairing status and finishes booting in one update', () => {
+    const pet = createMockPet();
+    useAppStore.getState().signIn({
+      token: 'tok',
+      user: { id: 2, name: 'Otrok', email: 'c@x.si', role: 'child' },
+      pet,
+    });
+    const s = useAppStore.getState();
+    expect(s.authToken).toBe('tok');
+    expect(s.user).toEqual({ id: 2, name: 'Otrok', email: 'c@x.si', role: 'child' });
+    expect(s.pet).toEqual(pet);
+    expect(s.pairingStatus).toBe('paired');
+    expect(s.lockState).toBe('none');
+    expect(s.bootStatus).toBe('ready');
+  });
+
+  it('signIn without a pet leaves the pairing status unpaired', () => {
+    useAppStore.getState().signIn({
+      token: 'tok',
+      user: { id: 1, name: 'Starš', email: 'p@x.si', role: 'parent' },
+      pet: null,
+    });
+    expect(useAppStore.getState().pairingStatus).toBe('unpaired');
+  });
+
+  it('reset after a session lands on the login screen, not the splash', () => {
+    useAppStore.getState().signIn({
+      token: 'tok',
+      user: { id: 1, name: 'Starš', email: 'p@x.si', role: 'parent' },
+      pet: null,
+    });
+    useAppStore.getState().reset();
+    const s = useAppStore.getState();
+    expect(s.authToken).toBeNull();
+    expect(s.user).toBeNull();
+    expect(s.bootStatus).toBe('ready');
+  });
+});
+
+describe('lockStateFromPet', () => {
+  const now = Date.parse('2026-10-03T10:00:00Z');
+
+  it('none without a pet or for a healthy pet', () => {
+    expect(lockStateFromPet(null, now)).toBe('none');
+    expect(lockStateFromPet(createMockPet(), now)).toBe('none');
+  });
+
+  it('game over wins over illness', () => {
+    expect(
+      lockStateFromPet(createMockPet({ is_game_over: true, illness_until: '2026-10-03T20:00:00Z' }), now),
+    ).toBe('game_over');
+  });
+
+  it('illness only while illness_until is in the future', () => {
+    expect(lockStateFromPet(createMockPet({ illness_until: '2026-10-03T20:00:00Z' }), now)).toBe('illness');
+    expect(lockStateFromPet(createMockPet({ illness_until: '2026-10-03T09:00:00Z' }), now)).toBe('none');
   });
 });

@@ -2,6 +2,9 @@ import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { useAppStore, type LockState } from '@/store/appStore';
+import { logout } from '@/modules/session/logout';
+import { useSessionBootstrap } from '@/modules/session/useSessionBootstrap';
+import SplashScreen from '@/screens/SplashScreen';
 import PairingScreen from '@/screens/PairingScreen';
 import LockedScreen from '@/screens/LockedScreen';
 import ChildHudScreen from '@/screens/ChildHudScreen';
@@ -47,6 +50,20 @@ export default function AppNavigator() {
   const user = useAppStore((s) => s.user);
   const pet = useAppStore((s) => s.pet);
   const lockState = useAppStore((s) => s.lockState);
+  const bootStatus = useAppStore((s) => s.bootStatus);
+  const { retry } = useSessionBootstrap();
+
+  if (bootStatus !== 'ready') {
+    return (
+      <SplashScreen
+        mode={bootStatus}
+        onRetry={retry}
+        onLogout={() => {
+          void logout();
+        }}
+      />
+    );
+  }
 
   const isLocked = LOCKED_STATES.includes(lockState);
   const isAuthenticated = authToken !== null && user !== null;
