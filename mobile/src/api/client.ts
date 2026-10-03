@@ -5,12 +5,45 @@
 
 import * as SecureStore from 'expo-secure-store';
 import { ENV } from '@/config/env';
+import type { components, operations } from '@/api/schema';
 import type {
   PairingResponse,
   GeneratePinResponse,
   Pet,
   QuietHours,
 } from '@/types';
+
+/**
+ * Authenticated user as returned (flat, no `data` wrapper) by `GET /api/user`
+ * and inside `POST /api/login`. The generated schema still describes the bare
+ * `User` model without `pet` (Scramble can't infer the hand-built array), so
+ * the shape is declared here; `role` comes from the schema enum.
+ */
+export interface SessionUser {
+  id: number;
+  name: string;
+  email: string;
+  role: components['schemas']['UserRole'];
+}
+
+/** `GET /api/user` response. */
+export interface UserResponse extends SessionUser {
+  pet: Pet | null;
+}
+
+/** `POST /api/login` response. */
+export interface LoginResponse {
+  token: string;
+  user: SessionUser;
+  pet: Pet | null;
+}
+
+/** `GET /api/parent/dashboard` 200 response (union: paired / no pet / no child). */
+export type ParentDashboardResponse =
+  operations['parentDashboard.dashboard']['responses'][200]['content']['application/json'];
+
+/** Exact backend message when the parent has no child profile yet. */
+export const NO_CHILD_PAIRED_MESSAGE = 'No child profile paired yet.';
 
 const TOKEN_KEY = 'petprep_auth_token';
 
@@ -35,12 +68,50 @@ export async function hasAuthToken(): Promise<boolean> {
   return token !== null;
 }
 
+type UnauthorizedHandler = () => void;
+let unauthorizedHandler: UnauthorizedHandler | null = null;
+
+/**
+ * Register what happens when an authenticated request comes back 401
+ * (token revoked or expired). The session module uses it to log out locally.
+ * Pass null to unregister.
+ */
+export function setUnauthorizedHandler(handler: UnauthorizedHandler | null): void {
+  unauthorizedHandler = handler;
+}
+
+/** Parse a JSON body without throwing on empty / non-JSON responses (e.g. proxy errors). */
+async function readJson(response: Response): Promise<unknown> {
+  try {
+    return await response.json();
+  } catch {
+    return null;
+  }
+}
+
+function messageFrom(data: unknown): string | null {
+  if (typeof data === 'object' && data !== null && 'message' in data) {
+    const { message } = data as { message: unknown };
+    if (typeof message === 'string' && message.length > 0) return message;
+  }
+  return null;
+}
+
+/** `Retry-After` header (seconds) — sent by Laravel's throttle middleware with 429. */
+function retryAfterFrom(response: Response): number | null {
+  const raw = response.headers?.get?.('Retry-After');
+  if (!raw) return null;
+  const seconds = Number(raw);
+  return Number.isFinite(seconds) && seconds >= 0 ? Math.ceil(seconds) : null;
+}
+
 /** Type-safe wrapper around fetch with auth header and JSON handling. */
 async function apiRequest<T>(
   path: string,
   options: {
     method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
     body?: Record<string, unknown>;
+    signal?: AbortSignal;
   } = {},
 ): Promise<T> {
   const token = await getAuthToken();
@@ -57,15 +128,23 @@ async function apiRequest<T>(
     method: options.method ?? 'GET',
     headers,
     body: options.body ? JSON.stringify(options.body) : undefined,
+    signal: options.signal,
   });
 
-  const data = await response.json();
+  const data = await readJson(response);
 
   if (!response.ok) {
+    if (response.status === 401 && token && unauthorizedHandler) {
+      // Only if the rejected token is still the session's token: a late 401 for an
+      // old token (e.g. after logout + a new login) must not log the new user out.
+      const current = await getAuthToken().catch(() => null);
+      if (current === token) unauthorizedHandler();
+    }
     throw new ApiError(
-      data.message ?? 'An error occurred',
+      messageFrom(data) ?? 'An error occurred',
       response.status,
       data,
+      retryAfterFrom(response),
     );
   }
 
@@ -78,6 +157,8 @@ export class ApiError extends Error {
     message: string,
     public readonly status: number,
     public readonly data?: unknown,
+    /** Seconds until a throttled request may be retried (429 only). */
+    public readonly retryAfterSeconds: number | null = null,
   ) {
     super(message);
     this.name = 'ApiError';
@@ -91,18 +172,14 @@ export class ApiError extends Error {
 export const api = {
   /** POST /api/login — Login with email + password, returns Sanctum token. */
   login: (email: string, password: string, deviceName: string = 'mobile-app') =>
-    apiRequest<{
-      token: string;
-      user: { id: number; name: string; email: string; role: 'parent' | 'child' };
-      pet: Pet | null;
-    }>('/api/login', {
+    apiRequest<LoginResponse>('/api/login', {
       method: 'POST',
       body: { email, password, device_name: deviceName },
     }),
 
-  /** POST /api/logout — Revoke the current token. */
-  logout: () =>
-    apiRequest<{ message: string }>('/api/logout', { method: 'POST' }),
+  /** POST /api/logout — Revoke the current token. Pass a signal to abort (offline logout). */
+  logout: (signal?: AbortSignal) =>
+    apiRequest<{ message: string }>('/api/logout', { method: 'POST', signal }),
 
   /** POST /api/parent/generate-pin — Generate a 6-digit pairing PIN. */
   generatePin: () =>
@@ -112,15 +189,11 @@ export const api = {
   pairChild: (pin: string) =>
     apiRequest<PairingResponse>('/api/child/pair', { method: 'POST', body: { pin } }),
 
-  /** GET /api/user — Get the authenticated user. */
-  getUser: () =>
-    apiRequest<{
-      id: number;
-      name: string;
-      email: string;
-      role: 'parent' | 'child';
-      pet: Pet | null;
-    }>('/api/user'),
+  /** GET /api/user — the authenticated user (flat object) with the active pet. */
+  getUser: () => apiRequest<UserResponse>('/api/user'),
+
+  /** GET /api/parent/dashboard — pet metrics, traffic light, quiet hours, activities. */
+  getParentDashboard: () => apiRequest<ParentDashboardResponse>('/api/parent/dashboard'),
 
   /** GET /api/parent/quiet-hours — Get quiet hours config. */
   getQuietHours: () =>

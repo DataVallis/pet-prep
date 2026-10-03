@@ -11,6 +11,8 @@ Si želiš pravega psa? Najprej pokaži, da zmoreš! V PetPrep dobiš svojega ku
 3. S prstom se **podpišeš** pod obljubo, da boš skrbel zanj.
 4. Tvoj kuža se rodi! 🎉
 
+Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova prijavljati.
+
 ## Kaj kuža potrebuje
 - 🍖 **Hrano** — zjutraj in zvečer.
 - 💧 **Vodo** — trikrat na dan.
