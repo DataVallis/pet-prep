@@ -48,6 +48,12 @@
 - **Hard stop / bolezen:** metrike so zamrznjene.
 - **Anti-cheat koraki:** zavrnemo prirastke > 200 korakov / min.
 - **(D)** Spec omenja tudi "5.000 korakov" (MVP.docx) — veljavno je 4.000 / 10.000 iz MAIN dokumenta.
+- Vse številke iz tabele (hitrosti, cilji korakov, število dogodkov, okna hranjenja 06:00–10:00 in 17:00–21:00, voda 3× / dan z razmikom ≥ 3 h) so v tabeli `breed_configs` in jih admin spreminja v Filamentu — ne v kodi (M1-06).
+
+**Pojasnila implementacije (M1-04, M1-05 — 3. 10. 2026):**
+- **Gibanje:** telefon pošilja *skupno* število današnjih korakov; šteje največja prejeta vrednost (ponovljen ali manjši sync ne spremeni ničesar). Energija se s časom ne zmanjšuje — samo ob lokalni polnoči pade na 0 % (koraki → 0). Sync korakov energije nikoli ne zniža, zato ima novorojen pes 100 % do prve polnoči.
+- **Anti-cheat:** dovoljeno je največ 200 korakov na minuto od zadnjega sprejetega synca (oz. od lokalne polnoči za prvi sync dneva). Presežek se zavrne, ne celoten sync: če telefon po 5 minutah javi +2.000 korakov, sprejmemo 1.000; preostanek se lahko sprejme ob naslednjem syncu, ko mine dovolj časa. Sync s časom v prihodnosti štejemo, kot da je prišel zdaj; sync z včerajšnjim datumom se ignorira. Med hard stopom, boleznijo in game overjem se koraki ne sprejmejo.
+- **Higiena:** postopnega padanja ni več (začasno pravilo 1,5 %/h je odstranjeno). Za vsak lokalni dan vnaprej izžrebamo čase "kakca" (mešanček 1×, Border Collie 2×) — samo izven tihih ur, vsak v svojem enakem delu netihega dne (pri 2× en v prvi in en v drugi polovici), zato sta praviloma razmaknjena čez dan. Ko čas mine, higiena pade na 0 %; čiščenje vrne 100 %. Dogodek, ki pade v hard stop, bolezen ali pred rojstvo psa, se ne zgodi (ne nadoknadi se). Če strežnik zamudi, se zamujeni dogodki uveljavijo enkrat, ura zanemarjanja pa teče od dejanskega časa dogodka.
 
 ## 6. Eskalacija (za vsako metriko)
 
@@ -62,6 +68,9 @@ Pragovi se primerjajo s prikazano (zaokroženo) vrednostjo.
 ## 7. Kazni
 
 - **Bolezen:** higiena **ali** gibanje 0 % > 6 h (izven tihih ur) → zaslon sivo, video težkega dihanja, **12 h timeout** ("na opazovanju pri veterinarju"), otrok ne more ničesar.
+  - *Pojasnilo (M1-04, 3. 10. 2026):* 6 ur se šteje **samo izven tihih ur** (med tihimi urami števec stoji), čas hard stopa in bolezni pa se ne šteje. Primer — tihe ure spanje 22:00–06:00 in šola 8:00–13:00, otrok ne hodi: energija pade na 0 % ob polnoči; šteje se 06:00–08:00 (2 h) in 13:00–17:00 (4 h) → **pes zboli ob 17:00**, če otrok do takrat ne sinhronizira korakov (400 korakov ob 15:30 = 10 % → zdrav). Brez tihih ur bi zbolel že ob 06:00.
+  - **(D)** Kaj sledi po 12 h bolezni, specifikacija ne pove. Zdaj števec po bolezni nadaljuje tam, kjer je ostal (že ≥ 6 h), zato pes izven tihih ur takoj spet zboli, otrok pa med boleznijo ne more ničesar (tudi korakov ne). Glej odprta vprašanja v `DECISIONS.md`.
+  - **(D)** Ker energija vsako noč pade na 0 %, faza 1–3 eskalacije (≤ 30 %, ≤ 10 %, 0 % > 1 h) velja tudi za gibanje: brez sprememb pravil bi starš vsako noč ob 01:00 dobil alarm faze 3 in rdeč semafor do prvega sprehoda. Glej `DECISIONS.md`.
 - **Game over / "Virtual Shelter Intervention":** katerakoli metrika 0 % **24 h** → pes odvzet, otrokov zaslon zaklenjen. Staršu se ponudi:
   - **Breed Downgrade reset** (brezplačno, z odobritvijo starša) — lažja pasma;
   - **Second Chance reset** (19,99 €) — po MVP.

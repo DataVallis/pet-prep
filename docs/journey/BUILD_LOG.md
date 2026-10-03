@@ -8,6 +8,26 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-03 — Kuža zdaj hodi s tabo in včasih naredi nered
+
+**Kaj se je zgodilo**
+- **Gibanje:** energija psa je zdaj natanko toliko, kolikor je otrok danes prehodil: mešanček potrebuje 4.000 korakov (1.000 korakov = 25 %), Border Collie 10.000. Ob polnoči (po uri družine) se dan začne znova pri 0 %. Strežniški del je pripravljen; povezava z aplikacijo (sprejem korakov s telefona) pride v naslednjem koraku (M1-07).
+- **Pošteno štetje:** največ 200 korakov na minuto. Če telefon po 5 minutah javi 2.000 novih korakov, jih upoštevamo 1.000, ostalo šele, ko je realno mogoče. Ponovljeno pošiljanje istih korakov ne šteje dvakrat.
+- **Higiena:** kuža zdaj naključno naredi nered — mešanček 1× na dan, Border Collie 2× na dan, **nikoli med šolo ali spanjem**. Takrat higiena pade na 0 %, čiščenje jo vrne na 100 %. Prej je higiena (začasno) počasi padala 1,5 % na uro.
+- **Pravila v nastavitvah, ne v kodi:** vse številke igre (hitrost lakote in žeje, cilj korakov, kolikokrat na dan naredi nered, okna hranjenja 6–10 in 17–21, voda 3× na dan z razmikom 3 ure) so v tabeli pasem in jih lahko spremenimo v administraciji brez nove verzije aplikacije.
+- **Pravičnejša bolezen:** 6 ur do bolezni se zdaj šteje samo izven tihih ur. Primer: spanje 22–6, šola 8–13, otrok ne gre na sprehod → pes zboli ob 17:00 (ne že ob 6:00 zjutraj). 400 korakov ob 15:30 je dovolj, da ostane zdrav.
+- **Številke:** 64 novih avtomatskih testov, skupaj 259 zelenih (4.806 preverjanj). 24-urna simulacija z vklopljenimi naključnimi dogodki še vedno da natančne čase iz specifikacije (mešanček lačen po 12 h 30 min, žejen po 10 h; BC po 8 h 20 min in 6 h 40 min).
+- **Odkrito med delom (čaka na Davida):** ker energija vsako noč pade na 0 %, bi brez dodatnega pravila starš vsako noč ob 1:00 dobil alarm, pes pa bi po 12 urah "pri veterinarju" takoj spet zbolel. Predlogi so v dnevniku odločitev.
+
+**Zakaj je pomembno**
+Sprehod je tisto, kar starši pri pravem psu najbolj podcenjujejo — in edino, česar otrok ne more "odklikati". Nered ob naključnem času pa uči, da pes ne čaka na urnik.
+
+**Kako to povedati**
+- 👩 *"Energija kužka so dejanski koraki vašega otroka. Več kot 200 korakov na minuto ne štejemo, zato bližnjic ni."*
+- 🧒 *"Tvoj kuža enkrat na dan naredi nered — nikoli, ko si v šoli ali spiš. Pobriši ga!"*
+- 🛠 LinkedIn: *"Naključno, a ponovljivo: časi nereda so izžrebani z RNG, zasejanim s ključem aplikacije, psom in datumom — testi so deterministični, otrok pa časov ne more uganiti."*
+- 💼 Vsa pravila igre so nastavljiva brez nove verzije aplikacije — hitro prilagajanje po prvih testnih družinah.
+
 ## 2026-10-03 — Kuža zdaj živi po slovenski uri
 
 **Kaj se je zgodilo**

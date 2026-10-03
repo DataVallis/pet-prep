@@ -14,8 +14,8 @@ Si želiš pravega psa? Najprej pokaži, da zmoreš! V PetPrep dobiš svojega ku
 ## Kaj kuža potrebuje
 - 🍖 **Hrano** — zjutraj in zvečer.
 - 💧 **Vodo** — trikrat na dan.
-- 👣 **Sprehod** — pojdi ven in hodi s telefonom v žepu. Vsak tvoj korak šteje! *(kmalu)*
-- 🧹 **Čiščenje** — ko kuža naredi nered, ga pobriši s prstom.
+- 👣 **Sprehod** — pojdi ven in hodi s telefonom v žepu. Vsak tvoj korak šteje! Vsak dan ob polnoči kuža spet potrebuje nov sprehod. *(kmalu)*
+- 🧹 **Čiščenje** — kuža enkrat ali dvakrat na dan naredi nered (nikoli, ko si v šoli ali spiš). Pobriši ga s prstom!
 
 Na desni strani zaslona vidiš štiri stolpce. **Zelena** = kuža je vesel. **Rumena** = pazi. **Rdeča** = kuža te zelo potrebuje!
 

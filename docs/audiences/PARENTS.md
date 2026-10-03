@@ -20,10 +20,12 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 |---|---|---|
 | Hrana | zjutraj in zvečer | pes je lačen po ~12,5 urah |
 | Voda | 3× na dan | pes je žejen po ~10 urah |
-| Sprehod | 4.000 korakov na dan (pravi koraki s telefona) *(načrt: povezava z Apple Zdravje / Health Connect)* | pes je brez energije |
-| Čiščenje | ko pes "naredi nered" | higiena pade |
+| Sprehod | 4.000 korakov na dan (pravi koraki s telefona) — energija = prehojeni koraki / cilj, vsako polnoč (po vašem času) se začne znova pri 0 % *(načrt: povezava z Apple Zdravje / Health Connect)* | pes je brez energije |
+| Čiščenje | ko pes "naredi nered" — naključno **1× na dan** (Border Collie 2×), **nikoli med tihimi urami** | higiena pade na 0 % |
 
-Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur) in potrebuje 10.000 korakov.
+Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), potrebuje 10.000 korakov in naredi nered 2× na dan.
+
+**Pošteno štetje korakov:** upoštevamo največ 200 korakov na minuto; če telefon javi več, preostanek štejemo šele, ko je to realno mogoče. Tako hitro tresenje telefona ne prinese več kot hoja.
 
 ## Kaj vidite vi
 - **Semafor:** zelena (vse v redu), rumena (zamujene rutine), rdeča (pes trpi).
@@ -36,7 +38,7 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur) in potrebuje 10.000
 - **Opozorila:** ko otrok pozablja, najprej opomni otroka; če pes ostane brez hrane več kot uro, dobite alarm vi. *(načrt: push obvestila)*
 
 ## Posledice zanemarjanja (namenoma realne)
-- **Bolezen:** če pes predolgo ostane brez gibanja ali čistoče, zboli in je 12 ur "pri veterinarju" — otrok ga ne more upravljati.
+- **Bolezen:** če gibanje ali higiena ostane na 0 % **6 ur** — štejejo se samo ure **izven tihih ur** — pes zboli in je 12 ur "pri veterinarju"; otrok ga takrat ne more upravljati. Primer: spanje 22–6, šola 8–13, otrok ne gre na sprehod → pes zboli ob 17:00. *(V obravnavi: kaj se zgodi po vrnitvi od veterinarja.)*
 - **Odvzem psa:** če katera koli potreba ostane neizpolnjena 24 ur, psa "odpelje zavetišče". Vi lahko začnete znova — tudi z manj zahtevno pasmo. *(načrt: ponovni začetek iz aplikacije)*
 
 Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava žival.

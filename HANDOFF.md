@@ -27,11 +27,12 @@
 - **Languages:** English (default) + Slovenian, more later (M1-18).
 - **Package manager:** yarn 1 (root `package.json` declares it) — cleanup in M0-05.
 - **Thresholds follow the displayed value** (David, 2026-10-03): warning/escalation thresholds, pet state and zero tracking (`*_zero_since` → phase 3, illness, game over) compare the rounded half-up value the child sees (`Pet::displayMetric`): 30.4 shows 30 → phase 1; 0.4 shows 0 → counts as zero. PRODUCT_SPEC §6.
-- **Interim hygiene 1.5 %/h kept until M1-05** (David, 2026-10-03).
+- **Interim hygiene 1.5 %/h kept until M1-05** (David, 2026-10-03) — removed on `feat/M1-04-energy-hygiene-breeds` (random hygiene events replace it).
 
 ## 3. Known bugs & debt (top items — full list in AUDIT + DEPLOYMENT.md)
 
-1. ~~**Decay math wrong** — hunger/thirst ≈1.8× too fast, hygiene frozen~~ → fixed on `fix/M1-01-decay-engine` (M1-01). Energy still never changes. (M1-04)
+1. ~~**Decay math wrong** — hunger/thirst ≈1.8× too fast, hygiene frozen~~ → fixed (M1-01). ~~Energy never changes~~ → steps-based energy + random hygiene events on `feat/M1-04-energy-hygiene-breeds` (M1-04/05/06).
+1a. **Illness loop + nightly energy escalation (needs David):** after a 12 h illness the neglect clock is already ≥ 6 h → the pet falls ill again as soon as it's outside quiet hours, and the child can't act while ill → permanently ill. Energy at 0 % from midnight also gives phase 2 at 00:00 and a phase-3 parent alarm at 01:00 every night. Open questions in `docs/product/DECISIONS.md`.
 2. **No child action endpoints**; Feed/Water only +20 % locally; walk/clean local only. (M1-07, M1-14)
 3. **Parent dashboard timeline/chart still mock data.** (M2-05)
 4. **Hard stop doesn't lock the child** (M1-16); decay during hard stop/illness fixed on `fix/M1-01-decay-engine` (M1-02).
@@ -61,6 +62,16 @@
 5. **M1-08** private channels + single broadcast per change.
 
 ## 6. Session log
+
+### 2026-10-03 (cloud, backend-engineer) — M1-04 + M1-05 + M1-06 (branch `feat/M1-04-energy-hygiene-breeds`, pushed, no PR)
+- **M1-06:** migration `2026_10_03_140000_add_tunables_to_breed_configs_table` — `thirst_decay_rate` (10 | 15), `poops_per_day` (1 | 2), `feed_windows` jsonb (default 06–10, 17–21), `water_times_per_day` (3), `water_min_gap_minutes` (180); mutt defaults, BC backfill, CHECK constraints. `BreedConfigsSeeder` upserts all of them (keeps `created_at`); `seedBreedConfigs()` in tests now runs the real seeder. Thirst hard-code removed from `PetDecayService`. Filament `BreedConfigResource` lists/edits every field (feed windows as a start/end repeater, HH:MM validation); fixed the wrong hunger helper text ("0.08").
+- **M1-04:** `PetActivityService::recordSteps(Pet, int $stepsToday, Carbon $recordedAt)` → `ActionResult` (accepted / capped / rejected / unchanged / stale / locked). Row lock, max-of-day idempotency, anti-cheat cap 200 steps/min since `pets.last_step_sync_at` or local midnight, future time clamped, earlier-day syncs ignored, refused while frozen / game over, one `walked_pet` row (value = accepted steps), one `PetUpdated('walked_pet')` after commit. Energy = max(current, min(100, steps / goal × 100)). `Pet::resetDailyStepsIfNewDay()` zeroes steps **and energy** at local midnight (tick + sync); `last_step_reset_at` is set at creation (birth-day grace). **Illness clock now counts only non-quiet time** (`QuietHours::splitSecondsBetween`), as the spec and backend/CLAUDE.md say.
+- **M1-05:** table `pet_hygiene_events` + `pets.hygiene_scheduled_through`; `HygieneEventService` (schedule `poops_per_day` per family-local day outside quiet hours, one per equal share, seeded `Xoshiro256**`; apply pending events in (`last_decay_at`, now], skip freeze / pre-birth / newly-quiet ones; `hygiene_zero_since` = event time). `PetActivityService::clean()` settles due events, hygiene → 100, `cleaned_poop` row. 1.5 %/h interim decay removed.
+- Also: `ParentDashboardController` activity lists order by `created_at, id` (pre-existing flaky test: three rows in the same second).
+- Tests: **259 passed (4,806 assertions)** on PostgreSQL 16, ~120 s; repeated with 4 different `APP_KEY`s (RNG salt) — all green. New: `BreedConfigTest` (16), `EnergyStepsTest` (27), `HygieneEventTest` (21). 24 h minute simulations with events on: mutt hunger/thirst 0 % at 750/600 min, BC 500/400; energy 0 % at minute 900 (local midnight). Illness example verified: bedtime 22–06 + school 8–13, no steps → ill at 17:00 local (06:00 without quiet hours); 400 steps at 15:30 → stays healthy. Pint on changed files only.
+- No API/route change → no OpenAPI regen. Docs: PRODUCT_SPEC §5/§7, DECISIONS (6 decisions, 4 open questions), ARCHITECTURE §1/§2/§4/§5, DIAGRAMS (game loop, new child-actions sequence, ER), ROADMAP ticks, BUILD_LOG, PARENTS/KIDS.
+- **New debt / open:** (1) illness loop (see §3 1a) — blocks a real beta; (2) energy 0 % every night drives escalation phase 2/3 + `sick` video + red light until the first walk; (3) seeder overwrites Filament edits on every deploy; (4) one `walked_pet` row per sync inflates the weekly "completed" count (M2-05); (5) admin edits of `daily_step_count` in Filament don't recompute energy; (6) the `PetUpdated` event name for actions is the activity type (`walked_pet`, `cleaned_poop`) — mobile must handle it (M1-07/M1-08); (7) hunger/thirst `*_zero_since` still stamped at tick time after a gap.
+- Next: David answers the open questions → M1-07 child API on top of `PetActivityService` (+ feed/water using `feed_windows` / `water_*`).
 
 ### 2026-10-03 (cloud, backend-engineer) — M1-03 family timezone (branch `feat/M1-03-family-timezone`)
 - Migration `2026_10_03_130000_add_timezone_to_users_table`: `users.timezone` string(64), NOT NULL, default `Europe/Ljubljana`. Family timezone = parent's (`User::familyTimezone()`, `Pet::familyTimezone()`; a child ignores its own column). Storage stays UTC.
