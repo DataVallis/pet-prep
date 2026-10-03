@@ -56,6 +56,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M1-16 `lockState` iz `is_hard_stopped` / `is_ill` / `is_game_over`; hard stop API usklajen
 - [ ] M1-17 Generirani tipi iz OpenAPI (`schema.ts`) se uporabljajo v `client.ts` namesto ročnih
 - [ ] M1-18 i18n s `expo-localization` + `i18next`: **EN privzeto + SL**; tudi strežniška sporočila (push, napake) prek Laravel lang datotek
+- [ ] M1-19 **Uvoz podatkov o pasmah iz virov** (David, 2026-10-03): zbrati zanesljive vire (FCI/AKC standardi, veterinarska literatura o gibanju, prehrani, vodi), AI izlušči vrednosti → tabela z virom na vsako številko → David potrdi → uvoz v `breed_configs` (+ stolpec/tabela za vire). Do takrat so številke iz izvirne specifikacije označene kot *nepreverjene*. Sejalnik je insert-only.
 
 ## M2 — Starš, avtentikacija, dashboard (1 teden)
 

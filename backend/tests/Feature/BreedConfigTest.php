@@ -57,17 +57,19 @@ describe('BreedConfigsSeeder', function () {
         ])->toBe([10000, 12.0, 15.0, 2, [['06:00', '10:00'], ['17:00', '21:00']], 3, 180, true]);
     });
 
-    it('is idempotent: running it again updates in place and keeps created_at', function () {
+    it('is insert-only: never overwrites an existing breed, only adds missing ones', function () {
         seedBreedConfigs();
         $createdAt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail()->getRawOriginal('created_at');
         BreedConfig::where('breed_slug', 'mutt')->update(['thirst_decay_rate' => 99]);
+        BreedConfig::where('breed_slug', 'border-collie')->delete();
 
         Carbon::setTestNow('2026-10-06 07:00:00');
         (new BreedConfigsSeeder)->run();
 
         expect(BreedConfig::count())->toBe(2);
         $mutt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail();
-        expect($mutt->thirst_decay_rate)->toBe(10.0);
+        expect($mutt->thirst_decay_rate)->toBe(99.0);
+        expect(BreedConfig::where('breed_slug', 'border-collie')->firstOrFail()->thirst_decay_rate)->toBe(15.0);
         expect($mutt->getRawOriginal('created_at'))->toBe($createdAt);
     });
 

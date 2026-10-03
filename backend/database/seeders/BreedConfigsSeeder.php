@@ -8,9 +8,11 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Canonical breed tunables (PRODUCT_SPEC §5). Idempotent: production deploys
- * run it every time (scripts/deploy-production.sh), so it upserts by slug and
- * keeps the original created_at.
+ * Starting breed tunables (PRODUCT_SPEC §5). Production deploys run it every
+ * time (scripts/deploy-production.sh), so it is INSERT-ONLY: a breed that
+ * already exists is never touched — values edited in Filament always win
+ * (DECISIONS 2026-10-03). The numbers come from the original product spec and
+ * are pending verification against sourced breed data (ROADMAP M1-19).
  */
 class BreedConfigsSeeder extends Seeder
 {
@@ -54,11 +56,9 @@ class BreedConfigsSeeder extends Seeder
 
         foreach (self::configs() as $config) {
             $config['feed_windows'] = json_encode($config['feed_windows']);
-            $exists = DB::table('breed_configs')->where('breed_slug', $config['breed_slug'])->exists();
 
-            DB::table('breed_configs')->updateOrInsert(
-                ['breed_slug' => $config['breed_slug']],
-                array_merge($config, ['updated_at' => $now], $exists ? [] : ['created_at' => $now])
+            DB::table('breed_configs')->insertOrIgnore(
+                array_merge($config, ['created_at' => $now, 'updated_at' => $now])
             );
         }
     }
