@@ -32,9 +32,9 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [x] M1-01 Decay rewrite: stolpec `last_decay_at`, metrike `decimal(5,2)` (API zaokroži), decay neodvisen od `updated_at`; unit testi s `Carbon::setTestNow` čez 24 h simulacijo za obe pasmi (lakota 0 % po 12,5 h / 8,3 h) — *izvedeno z `double precision` namesto `decimal(5,2)` (2 decimalki bi izgubili ~2,5 % na minutni tick); veja `fix/M1-01-decay-engine`*
 - [x] M1-02 Decay se ne izvaja med `is_hard_stopped` in med boleznijo (zamrznjeno) — *tudi neaktiven / game over; ura `last_decay_at` teče naprej, brez "catch-up" po odmrznitvi; hard stop in bolezen zamrzneta tudi ure zanemarjanja (`*_zero_since`, `frozen_at`) in eskalacijo*
 - [x] M1-03 `users.timezone` (IANA, privzeto `Europe/Ljubljana`); tihe ure, polnoč in časovna okna v lokalnem času družine — *časovni pas družine = starševski; `PUT /api/parent/settings`, neobvezen `timezone` v `PUT /api/parent/quiet-hours`, `timezone` v dashboardu; pravilno čez premik ure (DST); okna hranjenja še ne obstajajo (M1-07) — veja `feat/M1-03-family-timezone`*
-- [ ] M1-04 Energija = `min(100, daily_steps / breed.daily_steps_required * 100)`; reset ob lokalni polnoči
-- [ ] M1-05 Higiena: naključni dogodek "kakec" 1× (mutt) / 2× (BC) dnevno izven tihih ur → higiena 0 %; vnaprej razporejeni časi (`next_poop_at`)
-- [ ] M1-06 `breed_configs` razširiti: `thirst_decay_rate`, `poops_per_day`, `feed_windows`, `water_times_per_day` (odstrani hardcode iz servisa)
+- [x] M1-04 Energija = `min(100, daily_steps / breed.daily_steps_required * 100)`; reset ob lokalni polnoči — *`PetActivityService::recordSteps()` (idempotentno = max dnevnega števila, anti-cheat ≤ 200 korakov/min od zadnjega sprejetega synca ali lokalne polnoči — presežek se zavrne, ostanek lahko sprejme kasnejši sync; sync s preteklega dne se ignorira; zaklenjen med hard stop / bolezen / game over); sync energije nikoli ne zniža (rojstni dan: 100 % do prve polnoči); števec bolezni zdaj šteje samo čas izven tihih ur; HTTP endpoint je M1-07 — veja `feat/M1-04-energy-hygiene-breeds`. Po Davidovi odločitvi 3. 10.: **energija = dnevni sprehod** (brez urnih ur zanemarjanja; ob polnoči `pet_daily_walks`, brez sprehoda → bolezen ob koncu tihih ur) in **ozdravitev = nov začetek** (higiena 100 %, ure znova) — `DailyWalkService`, `Pet::recoverFromIllnessIfDue`*
+- [x] M1-05 Higiena: naključni dogodek "kakec" 1× (mutt) / 2× (BC) dnevno izven tihih ur → higiena 0 %; vnaprej razporejeni časi (`next_poop_at`) — *tabela `pet_hygiene_events` (namesto `next_poop_at`), en naključen čas v vsakem enakem deležu netihega dne, determinističen RNG (app key + pes + datum); dogodki med zamrznitvijo / pred rojstvom se preskočijo; catch-up po izpadu enkrat; `PetActivityService::clean()` → 100 %; začasno padanje 1,5 %/h odstranjeno*
+- [x] M1-06 `breed_configs` razširiti: `thirst_decay_rate`, `poops_per_day`, `feed_windows`, `water_times_per_day` (odstrani hardcode iz servisa) — *+ `water_min_gap_minutes`; CHECK omejitve, backfill v migraciji, idempotenten seeder, Filament urejanje (tudi okna hranjenja); okna in voda se uveljavijo v M1-07*
 - [ ] M1-07 Otroški API (nov `ChildPetController` + `PetActionService`):
   - `GET  /api/child/pet` — polno stanje (vključno z `is_hard_stopped`, okni akcij, `next_feed_window`)
   - `POST /api/child/pet/feed` — samo v oknu (privzeto 06–10 in 17–21), 422 izven
@@ -56,6 +56,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M1-16 `lockState` iz `is_hard_stopped` / `is_ill` / `is_game_over`; hard stop API usklajen
 - [ ] M1-17 Generirani tipi iz OpenAPI (`schema.ts`) se uporabljajo v `client.ts` namesto ročnih
 - [ ] M1-18 i18n s `expo-localization` + `i18next`: **EN privzeto + SL**; tudi strežniška sporočila (push, napake) prek Laravel lang datotek
+- [ ] M1-19 **Uvoz podatkov o pasmah iz virov** (David, 2026-10-03): zbrati zanesljive vire (FCI/AKC standardi, veterinarska literatura o gibanju, prehrani, vodi), AI izlušči vrednosti → tabela z virom na vsako številko → David potrdi → uvoz v `breed_configs` (+ stolpec/tabela za vire). Do takrat so številke iz izvirne specifikacije označene kot *nepreverjene*. Sejalnik je insert-only.
 
 ## M2 — Starš, avtentikacija, dashboard (1 teden)
 
@@ -65,7 +66,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
   - [ ] Odprto: otrok se še vedno najprej prijavi z e-pošto; PIN-only prijava (backend izda token za otroški profil), ime/starost otroka, odstranitev e-poštne prijave za otroka; backend ne preprečuje drugega otroka (MVP 1 : 1 je zdaj samo v aplikaciji)
 - [ ] M2-03 Sanctum abilities (`parent:*`, `child:*`) + Policies namesto ročnih `isParent()` preverjanj
 - [ ] M2-04 Izbira pasme pred "rojstvom" (starš) → nato pairing; RevenueCat odklep pred izbiro, ne sredi igre
-- [ ] M2-05 Parent dashboard na pravih podatkih (`/api/parent/dashboard`, `/activities`), live prek Reverb
+- [ ] M2-05 Parent dashboard na pravih podatkih (`/api/parent/dashboard`, `/activities`), live prek Reverb — *sprehodi po dnevih so v `pet_daily_walks` (koraki, cilj, dosežen, bolezen)*
 - [ ] M2-06 Semafor po spec: zelena / rumena (> 2 zamujeni rutini danes) / rdeča; definirati "zamujena rutina" na strežniku
 - [ ] M2-07 Reset po game over / bolezni (starš) + "Breed Downgrade" (brezplačno)
 - [ ] M2-08 Brisanje računa (Apple obvezno), izvoz podatkov (GDPR)

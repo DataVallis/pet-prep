@@ -16,4 +16,26 @@ class EditBreedConfig extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+
+    /**
+     * @param  array<string, mixed>  $data
+     * @return array<string, mixed>
+     */
+    protected function mutateFormDataBeforeFill(array $data): array
+    {
+        $data['feed_windows'] = BreedConfigResource::feedWindowsToForm($data['feed_windows'] ?? []);
+
+        return $data;
+    }
+
+    /**
+     * @param  array<string, mixed>  $data
+     * @return array<string, mixed>
+     */
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        $data['feed_windows'] = BreedConfigResource::feedWindowsFromForm($data['feed_windows'] ?? []);
+
+        return $data;
+    }
 }

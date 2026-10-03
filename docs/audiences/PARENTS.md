@@ -20,10 +20,12 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 |---|---|---|
 | Hrana | zjutraj in zvečer | pes je lačen po ~12,5 urah |
 | Voda | 3× na dan | pes je žejen po ~10 urah |
-| Sprehod | 4.000 korakov na dan (pravi koraki s telefona) *(načrt: povezava z Apple Zdravje / Health Connect)* | pes je brez energije |
-| Čiščenje | ko pes "naredi nered" | higiena pade |
+| Sprehod (vsak dan) | 4.000 korakov na dan (pravi koraki s telefona) — energija = današnji koraki / cilj, vsako polnoč (po vašem času) se začne znova pri 0 % (= "danes še ni sprehoda", ne zanemarjanje) *(načrt: povezava z Apple Zdravje / Health Connect)* | pes je utrujen; dan brez enega samega koraka → naslednje jutro zboli |
+| Čiščenje | ko pes "naredi nered" — naključno **1× na dan** (Border Collie 2×), **nikoli med tihimi urami** | higiena pade na 0 % |
 
-Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur) in potrebuje 10.000 korakov.
+Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), potrebuje 10.000 korakov in naredi nered 2× na dan.
+
+**Pošteno štetje korakov:** upoštevamo največ 200 korakov na minuto; če telefon javi več, preostanek štejemo šele, ko je to realno mogoče. Tako hitro tresenje telefona ne prinese več kot hoja.
 
 ## Kaj vidite vi
 - **Semafor:** zelena (vse v redu), rumena (zamujene rutine), rdeča (pes trpi).
@@ -33,11 +35,15 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur) in potrebuje 10.000
 ## Vi imate nadzor
 - **Tihe ure** (npr. šola 8:00–13:00, spanje 22:00–6:00): pes takrat skoraj ne postaja lačen in ne pošilja obvestil. Veljajo po **vašem lokalnem času**, tudi ob prestopu na poletni/zimski čas.
 - **Hard stop:** z enim gumbom začasno ustavite igro (npr. za pogovor z otrokom). Med ustavitvijo **se nič ne poslabša** — pes ne zboli in ne "odide", tudi če je bil prej lačen.
-- **Opozorila:** ko otrok pozablja, najprej opomni otroka; če pes ostane brez hrane več kot uro, dobite alarm vi. *(načrt: push obvestila)*
+- **Opozorila:** ko otrok pozablja, najprej opomni otroka; če pes ostane brez hrane, vode ali čistoče več kot uro, dobite alarm vi. Za sprehod alarma ni — dan se oceni ob polnoči. *(načrt: push obvestila)*
 
 ## Posledice zanemarjanja (namenoma realne)
-- **Bolezen:** če pes predolgo ostane brez gibanja ali čistoče, zboli in je 12 ur "pri veterinarju" — otrok ga ne more upravljati.
-- **Odvzem psa:** če katera koli potreba ostane neizpolnjena 24 ur, psa "odpelje zavetišče". Vi lahko začnete znova — tudi z manj zahtevno pasmo. *(načrt: ponovni začetek iz aplikacije)*
+- **Bolezen:** pes zboli in je 12 ur "pri veterinarju" (otrok ga takrat ne more upravljati), če:
+  - ostane **umazan 6 ur** — štejejo se samo ure **izven tihih ur** (primer: nered ob 9:00, spanje 22–6, nihče ne počisti → bolan ob 15:00), ali
+  - otrok **cel dan ni šel na sprehod** (niti en korak) — pes zboli naslednje jutro ob koncu tihih ur (npr. ob 6:00). Če je otrok hodil, a ni dosegel cilja, to vidite kot "cilj ni dosežen", bolezni pa ni.
+- **Vrnitev od veterinarja:** pes se vrne **čist**, vse ure zanemarjanja začnejo teči znova. Lakota in žeja ostaneta, kakršni sta bili — otrok mora takoj poskrbeti zanj.
+- **Nočni mir:** nizka energija ponoči ne sproži nobenega opozorila — ne otroku ne vam.
+- **Odvzem psa:** če hrana, voda ali čistoča ostane neizpolnjena 24 ur, psa "odpelje zavetišče". Vi lahko začnete znova — tudi z manj zahtevno pasmo. *(načrt: ponovni začetek iz aplikacije)*
 
 Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava žival.
 

@@ -8,6 +8,45 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-03 — Od veterinarja čist, sprehod vsak dan
+
+**Kaj se je zgodilo** (odločitvi Davida, isti dan)
+- **Ozdravitev = nov začetek:** ko 12 ur "pri veterinarju" mine, se kuža vrne **čist (higiena 100 %)** in vse ure zanemarjanja začnejo teči znova. Lakota in žeja ostaneta — otrok mora takoj poskrbeti zanj. S tem je odpravljena "neskončna zanka bolezni", odkrita zjutraj: prej je pes po vrnitvi takoj spet zbolel.
+- **Energija = dnevni sprehod:** 0 % po polnoči pomeni "danes še ni sprehoda", ne zanemarjanje. Ponoči zato ni več alarma staršu ob 1:00 in ne "bolnega" psa do prvega sprehoda. Ob polnoči (po uri družine) zapišemo včerajšnji sprehod: koraki, cilj, dosežen ali ne — podlaga za starševski pregled. Dan **brez enega samega koraka** → kuža zboli naslednje jutro ob koncu tihih ur (npr. ob 6:00). Nekaj korakov pod ciljem → samo zapis "cilj ni dosežen".
+- **Varovalke:** rojstni dan psa, dan med hard stopom ali boleznijo in zamuda strežnika čez več polnoči nikoli ne povzročijo bolezni.
+- **Pošteno štetje na grafu:** sprehod se v tedenskem grafu šteje enkrat na dan (ko je cilj dosežen), ne ob vsakem pošiljanju korakov.
+- **Številke:** 22 novih testov (simulacije po 5 minut čez 1–2 dni, družina v Ljubljani, spanje 22–6), skupaj 278 zelenih (4.901 preverjanj).
+
+**Zakaj je pomembno**
+Igra mora biti stroga, a nikoli brezizhodna: kazen (bolezen) se konča in otrok dobi novo priložnost. Sprehod pa je kot pri pravem psu — vsak dan, ne vsako uro.
+
+**Kako to povedati**
+- 🧒 *"Ko se kuža vrne od veterinarja, je čist kot nov. Hitro mu daj hrano in vodo — in ne pozabi: sprehod vsak dan!"*
+- 👩 *"Ponoči vas aplikacija ne bo budila zaradi sprehoda. Ob polnoči vidite, ali je otrok danes šel ven — in koliko korakov je naredil."*
+- 💼 Pravila so zasnovana kot vzgojni cikel: opozorilo → posledica → nov začetek. Brez "game over" spirale, ki bi otroka odvrnila.
+- 🛠 *"Dnevno pravilo teče v istem minutnem ticku z zaklepom vrstice, idempotentno (en zapis na psa in dan), začetek bolezni pa izračunamo iz tihih ur družine, tudi ob prestopu ure."*
+
+---
+
+## 2026-10-03 — Kuža zdaj hodi s tabo in včasih naredi nered
+
+**Kaj se je zgodilo**
+- **Gibanje:** energija psa je zdaj natanko toliko, kolikor je otrok danes prehodil: mešanček potrebuje 4.000 korakov (1.000 korakov = 25 %), Border Collie 10.000. Ob polnoči (po uri družine) se dan začne znova pri 0 %. Strežniški del je pripravljen; povezava z aplikacijo (sprejem korakov s telefona) pride v naslednjem koraku (M1-07).
+- **Pošteno štetje:** največ 200 korakov na minuto. Če telefon po 5 minutah javi 2.000 novih korakov, jih upoštevamo 1.000, ostalo šele, ko je realno mogoče. Ponovljeno pošiljanje istih korakov ne šteje dvakrat.
+- **Higiena:** kuža zdaj naključno naredi nered — mešanček 1× na dan, Border Collie 2× na dan, **nikoli med šolo ali spanjem**. Takrat higiena pade na 0 %, čiščenje jo vrne na 100 %. Prej je higiena (začasno) počasi padala 1,5 % na uro.
+- **Pravila v nastavitvah, ne v kodi:** vse številke igre (hitrost lakote in žeje, cilj korakov, kolikokrat na dan naredi nered, okna hranjenja 6–10 in 17–21, voda 3× na dan z razmikom 3 ure) so v tabeli pasem in jih lahko spremenimo v administraciji brez nove verzije aplikacije.
+- **Pravičnejša bolezen:** 6 ur do bolezni se zdaj šteje samo izven tihih ur. Primer: spanje 22–6, šola 8–13, otrok ne gre na sprehod → pes zboli ob 17:00 (ne že ob 6:00 zjutraj). 400 korakov ob 15:30 je dovolj, da ostane zdrav.
+- **Številke:** 64 novih avtomatskih testov, skupaj 259 zelenih (4.806 preverjanj). 24-urna simulacija z vklopljenimi naključnimi dogodki še vedno da natančne čase iz specifikacije (mešanček lačen po 12 h 30 min, žejen po 10 h; BC po 8 h 20 min in 6 h 40 min).
+- **Odkrito med delom (čaka na Davida):** ker energija vsako noč pade na 0 %, bi brez dodatnega pravila starš vsako noč ob 1:00 dobil alarm, pes pa bi po 12 urah "pri veterinarju" takoj spet zbolel. Predlogi so v dnevniku odločitev.
+
+**Zakaj je pomembno**
+Sprehod je tisto, kar starši pri pravem psu najbolj podcenjujejo — in edino, česar otrok ne more "odklikati". Nered ob naključnem času pa uči, da pes ne čaka na urnik.
+
+**Kako to povedati**
+- 👩 *"Energija kužka so dejanski koraki vašega otroka. Več kot 200 korakov na minuto ne štejemo, zato bližnjic ni."*
+- 🧒 *"Tvoj kuža enkrat na dan naredi nered — nikoli, ko si v šoli ali spiš. Pobriši ga!"*
+- 🛠 LinkedIn: *"Naključno, a ponovljivo: časi nereda so izžrebani z RNG, zasejanim s ključem aplikacije, psom in datumom — testi so deterministični, otrok pa časov ne more uganiti."*
+- 💼 Vsa pravila igre so nastavljiva brez nove verzije aplikacije — hitro prilagajanje po prvih testnih družinah.
 ## 2026-10-03 — Aplikacija si zapomni prijavo, starš dobi zaslon "Dodaj otroka"
 
 **Kaj se je zgodilo**

@@ -159,6 +159,60 @@ class QuietHours extends Model
     }
 
     /**
+     * Split [from, to) into consecutive segments that are entirely quiet or
+     * entirely normal, walking from boundary to boundary (≤ 4 per day plus
+     * DST transitions). A null or inactive schedule yields one normal segment.
+     *
+     * @return list<array{0: Carbon, 1: Carbon, 2: bool}> [start, end, isQuiet]
+     */
+    public static function segmentsBetween(?self $quietHours, CarbonInterface $from, CarbonInterface $to): array
+    {
+        $cursor = Carbon::instance($from);
+        $end = Carbon::instance($to);
+
+        if ($cursor->greaterThanOrEqualTo($end)) {
+            return [];
+        }
+
+        if (! $quietHours || ! $quietHours->is_active) {
+            return [[$cursor, $end, false]];
+        }
+
+        $segments = [];
+        while ($cursor->lessThan($end)) {
+            $next = $quietHours->nextBoundaryAfter($cursor);
+            $next = ($next === null || $next->greaterThan($end)) ? $end->copy() : Carbon::instance($next);
+
+            $segments[] = [$cursor, $next, $quietHours->isQuietNow($cursor)];
+            $cursor = $next;
+        }
+
+        return $segments;
+    }
+
+    /**
+     * Seconds of [from, to) outside and inside quiet hours.
+     *
+     * @return array{normal: float, quiet: float}
+     */
+    public static function splitSecondsBetween(?self $quietHours, CarbonInterface $from, CarbonInterface $to): array
+    {
+        $normal = 0.0;
+        $quiet = 0.0;
+
+        foreach (self::segmentsBetween($quietHours, $from, $to) as [$start, $end, $isQuiet]) {
+            $seconds = (float) $start->diffInSeconds($end, false);
+            if ($isQuiet) {
+                $quiet += $seconds;
+            } else {
+                $normal += $seconds;
+            }
+        }
+
+        return ['normal' => $normal, 'quiet' => $quiet];
+    }
+
+    /**
      * Check if a time string (H:i) falls within a range, handling overnight wrap.
      *
      * @param  string|null  $start  Start time (H:i) or null

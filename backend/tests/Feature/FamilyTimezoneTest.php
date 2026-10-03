@@ -54,7 +54,7 @@ function tzTick(Pet $pet, string $utc): Pet
 
 /**
  * Decay a mutt from $fromUtc to $toUtc in one catch-up tick and return the
- * pet. Hunger: 8 %/h normal, 0.8 %/h quiet. Hygiene: 1.5 %/h normal only.
+ * pet. Hunger: 8 %/h normal, 0.8 %/h quiet (hygiene has no gradual decay since M1-05).
  */
 function tzCatchUp(array $quietHours, string $fromUtc, string $toUtc): Pet
 {
@@ -152,7 +152,8 @@ describe('Decay catch-up across DST changes', function () {
         $pet = tzCatchUp(TZ_BEDTIME, '2026-10-24 18:00', '2026-10-25 08:00');
 
         expect($pet->hunger_level)->toEqualWithDelta(100 - 8 * (5 + 9 * 0.1), 1e-6);  // 52.8
-        expect($pet->hygiene_level)->toEqualWithDelta(100 - 1.5 * 5, 1e-6);          // 92.5
+        expect(QuietHours::splitSecondsBetween($pet->quietHours(), Carbon::parse('2026-10-24 18:00', 'UTC'), now()))
+            ->toBe(['normal' => 5 * 3600.0, 'quiet' => 9 * 3600.0]);
     });
 
     it('counts 7 quiet hours for 22:00–06:00 on the night clocks go forward (2027-03-28)', function () {
@@ -160,7 +161,8 @@ describe('Decay catch-up across DST changes', function () {
         $pet = tzCatchUp(TZ_BEDTIME, '2027-03-27 18:00', '2027-03-28 08:00');
 
         expect($pet->hunger_level)->toEqualWithDelta(100 - 8 * (7 + 7 * 0.1), 1e-6);  // 38.4
-        expect($pet->hygiene_level)->toEqualWithDelta(100 - 1.5 * 7, 1e-6);          // 89.5
+        expect(QuietHours::splitSecondsBetween($pet->quietHours(), Carbon::parse('2027-03-27 18:00', 'UTC'), now()))
+            ->toBe(['normal' => 7 * 3600.0, 'quiet' => 7 * 3600.0]);
     });
 
     it('handles a window inside the repeated hour (02:30–05:00 on 2026-10-25)', function () {
@@ -169,7 +171,8 @@ describe('Decay catch-up across DST changes', function () {
         $window = ['school_start' => '02:30', 'school_end' => '05:00'];
         $pet = tzCatchUp($window, '2026-10-24 22:00', '2026-10-25 06:00');
 
-        expect($pet->hygiene_level)->toEqualWithDelta(100 - 1.5 * 5, 1e-6);
+        expect(QuietHours::splitSecondsBetween($pet->quietHours(), Carbon::parse('2026-10-24 22:00', 'UTC'), now()))
+            ->toBe(['normal' => 5 * 3600.0, 'quiet' => 3 * 3600.0]);
         expect($pet->hunger_level)->toEqualWithDelta(100 - 8 * (5 + 3 * 0.1), 1e-6);
     });
 
@@ -183,7 +186,8 @@ describe('Decay catch-up across DST changes', function () {
 
         $single = tzCatchUp(TZ_BEDTIME, '2026-10-24 18:00', '2026-10-25 08:00');
 
-        foreach (['hunger_level', 'thirst_level', 'hygiene_level'] as $metric) {
+        // Hygiene events are random per pet (HygieneEventTest covers catch-up).
+        foreach (['hunger_level', 'thirst_level', 'energy_level'] as $metric) {
             expect($perMinute->fresh()->{$metric})->toEqualWithDelta($single->{$metric}, 1e-6);
         }
     });

@@ -6,6 +6,9 @@ use App\Enums\ActivityType;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\Pet;
+use App\Models\PetDailyWalk;
+use App\Models\QuietHours;
+use Carbon\CarbonInterface;
 use Illuminate\Support\Facades\Log;
 
 /**
@@ -21,11 +24,18 @@ use Illuminate\Support\Facades\Log;
  *   "Your child has neglected their pet!"
  *
  * Severe Neglect:
- *   Illness State: hygiene or energy at 0% for >6 hours (outside quiet hours)
- *     → Pet state = SICK, 12-hour action lockout
+ *   Illness State: hygiene at 0% for >=6 hours counted outside quiet hours,
+ *     or no walk at all yesterday (daily walk rule: DailyWalkService plans
+ *     the start at the end of the night's quiet hours)
+ *     → Pet state = SICK, 12-hour action lockout; afterwards a fresh start
+ *       (Pet::recoverFromIllnessIfDue: hygiene 100 %, clocks restart)
  *
- *   Game Over / Virtual Shelter Protocol: any metric at 0% for 24 continuous hours
- *     → Lock pet session, is_active = false, notify parent via WebSocket
+ *   Game Over / Virtual Shelter Protocol: hunger, thirst or hygiene at 0% for
+ *     24 continuous hours → Lock pet session, is_active = false, notify parent
+ *
+ * Energy (daily walk, David 2026-10-03) has no hourly neglect clock: no
+ * phase 3, no 6 h illness and no game over from energy. Low energy gives
+ * phase 1 / 2 only outside quiet hours.
  */
 class EscalationService
 {
@@ -94,8 +104,8 @@ class EscalationService
             return false;
         }
 
-        // A freeze that ended without a model event (illness expiry) shifts
-        // *_zero_since forward by the frozen duration before we evaluate.
+        // An illness that ended without a model event: fresh start
+        // (recovery); a stale frozen_at: shift *_zero_since.
         $pet->thawIfDue();
 
         // Check for game over first (highest priority)
@@ -109,7 +119,9 @@ class EscalationService
         }
 
         // Check 3-tier escalation matrix
-        return $this->checkEscalationMatrix($pet);
+        $isQuiet = $pet->quietHours()?->isQuietNow() ?? false;
+
+        return $this->checkEscalationMatrix($pet, $isQuiet);
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -121,11 +133,12 @@ class EscalationService
      *
      * @return bool True if an escalation was triggered or changed.
      */
-    private function checkEscalationMatrix(Pet $pet): bool
+    private function checkEscalationMatrix(Pet $pet, bool $isQuiet): bool
     {
         // Thresholds compare the value the child sees (rounded half up,
         // Pet::displayMetric): 30.4 shows 30 % → phase 1 (decision 2026-10-03).
-        $lowestMetric = $this->lowestDisplayedMetric($pet);
+        // Energy counts only outside quiet hours (daily walk rule).
+        $lowestMetric = $this->lowestDisplayedMetric($pet, includeEnergy: ! $isQuiet);
         $currentLevel = $pet->escalation_level;
 
         // Phase 3: 0% for >1 hour — Parent WebSocket alarm
@@ -193,7 +206,7 @@ class EscalationService
 
         Log::info('EscalationService: Phase 1 soft warning triggered', [
             'pet_id' => $pet->id,
-            'lowest_metric' => $this->lowestDisplayedMetric($pet),
+            'lowest_metric' => $this->lowestDisplayedMetric($pet, includeEnergy: true),
         ]);
     }
 
@@ -245,7 +258,9 @@ class EscalationService
 
     /**
      * Check if the pet should enter illness state.
-     * Condition: hygiene or energy at 0% for >6 hours outside quiet hours.
+     * Conditions: a walk illness that came due (no walk at all yesterday,
+     * planned by DailyWalkService), or hygiene at 0 % for ≥ 6 hours counted
+     * outside quiet hours.
      *
      * @return bool True if illness state was triggered.
      */
@@ -254,6 +269,35 @@ class EscalationService
         // Already ill — no re-trigger
         if ($pet->isIll()) {
             return false;
+        }
+
+        // Daily walk rule: the illness starts at the planned instant (end of
+        // the night's quiet hours), also when this tick runs a bit late.
+        $walkIllnessAt = $pet->walk_illness_due_at;
+        if ($walkIllnessAt !== null && $walkIllnessAt->lessThanOrEqualTo(now())) {
+            // So late that the whole 12 h would already be over (scheduler
+            // down): skip it instead of an illness that ends instantly and
+            // would trigger the recovery side effects.
+            if ($walkIllnessAt->copy()->addHours(self::ILLNESS_LOCKOUT_HOURS)->lessThanOrEqualTo(now())) {
+                $pet->forceFill(['walk_illness_due_at' => null])->saveQuietly();
+
+                PetDailyWalk::where('pet_id', $pet->id)
+                    ->where('illness_due_at', $walkIllnessAt)
+                    ->update(['illness_skipped_at' => now()]);
+
+                Log::warning('EscalationService: walk illness skipped — evaluated after its 12 h had passed', [
+                    'pet_id' => $pet->id,
+                    'illness_due_at' => $walkIllnessAt->toIso8601String(),
+                ]);
+            } else {
+                $this->triggerIllnessState($pet, $walkIllnessAt, 'missed_walk');
+
+                PetDailyWalk::where('pet_id', $pet->id)
+                    ->where('illness_due_at', $walkIllnessAt)
+                    ->update(['illness_started_at' => $walkIllnessAt]);
+
+                return true;
+            }
         }
 
         $quietHours = $pet->quietHours();
@@ -266,18 +310,16 @@ class EscalationService
 
         $illnessTriggered = false;
 
-        // Check hygiene at 0% for >6 hours
-        if ($pet->hygiene_zero_since && $pet->hygiene_zero_since->diffInHours(now()) >= self::ILLNESS_HOURS) {
-            $illnessTriggered = true;
-        }
-
-        // Check energy at 0% for >6 hours
-        if ($pet->energy_zero_since && $pet->energy_zero_since->diffInHours(now()) >= self::ILLNESS_HOURS) {
+        // Hygiene at 0 % for ≥ 6 h counted outside quiet hours only — the
+        // illness clock pauses during school / bedtime (PRODUCT_SPEC §7).
+        // Example: mess at 07:30, quiet 22–06 and 8–13 → 07:30–08 + 13–18:30.
+        $zeroSince = $pet->hygiene_zero_since;
+        if ($zeroSince && $this->neglectSecondsOutsideQuietHours($quietHours, $zeroSince) >= self::ILLNESS_HOURS * 3600) {
             $illnessTriggered = true;
         }
 
         if ($illnessTriggered) {
-            $this->triggerIllnessState($pet);
+            $this->triggerIllnessState($pet, now(), 'hygiene');
 
             return true;
         }
@@ -286,16 +328,20 @@ class EscalationService
     }
 
     /**
-     * Put the pet into illness/vet state with a 12-hour action lockout.
+     * Put the pet into illness/vet state with a 12-hour action lockout
+     * starting at $start (now, or the planned start of a walk illness).
      */
-    private function triggerIllnessState(Pet $pet): void
+    private function triggerIllnessState(Pet $pet, CarbonInterface $start, string $reason): void
     {
-        $illnessUntil = now()->addHours(self::ILLNESS_LOCKOUT_HOURS);
+        $start = $start->copy()->startOfSecond();
+        $illnessUntil = $start->copy()->addHours(self::ILLNESS_LOCKOUT_HOURS);
 
-        $pet->update([
+        $pet->forceFill([
             'illness_until' => $illnessUntil,
+            'walk_illness_due_at' => null,
             'pet_state' => 'sick',
-        ]);
+            'frozen_at' => $start,
+        ])->save();
 
         ActivityLog::create([
             'pet_id' => $pet->id,
@@ -309,6 +355,7 @@ class EscalationService
         Log::warning('EscalationService: Pet entered illness state', [
             'pet_id' => $pet->id,
             'illness_until' => $illnessUntil->toIso8601String(),
+            'reason' => $reason,
         ]);
     }
 
@@ -330,15 +377,8 @@ class EscalationService
 
         $gameOverTriggered = false;
 
-        // Check each metric for 24 continuous hours at 0%
-        $zeroMetrics = [
-            $pet->hunger_zero_since,
-            $pet->thirst_zero_since,
-            $pet->energy_zero_since,
-            $pet->hygiene_zero_since,
-        ];
-
-        foreach ($zeroMetrics as $zeroSince) {
+        // Hunger, thirst or hygiene 24 continuous hours at 0 % (not energy)
+        foreach ($this->neglectClocks($pet) as $zeroSince) {
             if ($zeroSince && $zeroSince->diffInHours(now()) >= self::GAME_OVER_HOURS) {
                 $gameOverTriggered = true;
                 break;
@@ -364,6 +404,7 @@ class EscalationService
             'is_active' => false,
             'pet_state' => 'sick',
             'escalation_level' => 3,
+            'walk_illness_due_at' => null,
         ]);
 
         ActivityLog::create([
@@ -386,11 +427,42 @@ class EscalationService
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * Lowest metric as displayed to the child (integer 0–100).
+     * Seconds since $zeroSince that fall outside quiet hours (family-local
+     * clock). Frozen time is already excluded: thawing shifts *_zero_since
+     * forward by the frozen duration (Pet::applyThaw); illness recovery restarts them.
      */
-    private function lowestDisplayedMetric(Pet $pet): int
+    private function neglectSecondsOutsideQuietHours(?QuietHours $quietHours, CarbonInterface $zeroSince): float
     {
-        return min($pet->displayMetrics());
+        return QuietHours::splitSecondsBetween($quietHours, $zeroSince, now())['normal'];
+    }
+
+    /**
+     * Lowest metric as displayed to the child (integer 0–100). Energy only
+     * outside quiet hours (daily walk rule).
+     */
+    private function lowestDisplayedMetric(Pet $pet, bool $includeEnergy): int
+    {
+        $metrics = $pet->displayMetrics();
+        if (! $includeEnergy) {
+            unset($metrics['energy_level']);
+        }
+
+        return min($metrics);
+    }
+
+    /**
+     * The neglect clocks that drive phase 3, illness and game over. Energy is
+     * not one of them (daily walk rule, David 2026-10-03).
+     *
+     * @return list<CarbonInterface|null>
+     */
+    private function neglectClocks(Pet $pet): array
+    {
+        return [
+            $pet->hunger_zero_since,
+            $pet->thirst_zero_since,
+            $pet->hygiene_zero_since,
+        ];
     }
 
     /**
@@ -399,14 +471,7 @@ class EscalationService
      */
     private function hasMetricAtZeroForHours(Pet $pet, float $hours): bool
     {
-        $zeroMetrics = [
-            $pet->hunger_zero_since,
-            $pet->thirst_zero_since,
-            $pet->energy_zero_since,
-            $pet->hygiene_zero_since,
-        ];
-
-        foreach ($zeroMetrics as $zeroSince) {
+        foreach ($this->neglectClocks($pet) as $zeroSince) {
             if ($zeroSince && $zeroSince->diffInHours(now()) >= $hours) {
                 return true;
             }

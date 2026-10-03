@@ -20,6 +20,38 @@ class BreedConfigResource extends Resource
 
     protected static ?string $navigationGroup = 'Configuration';
 
+    /**
+     * 24-hour HH:MM.
+     */
+    public const TIME_REGEX = '/^([01]\d|2[0-3]):[0-5]\d$/';
+
+    /**
+     * breed_configs.feed_windows stores [["06:00","10:00"], …]; the repeater
+     * edits [{start, end}, …].
+     *
+     * @param  list<array{0: string, 1: string}>|null  $windows
+     * @return list<array{start: string, end: string}>
+     */
+    public static function feedWindowsToForm(?array $windows): array
+    {
+        return array_values(array_map(
+            fn (array $window): array => ['start' => (string) ($window[0] ?? ''), 'end' => (string) ($window[1] ?? '')],
+            $windows ?? [],
+        ));
+    }
+
+    /**
+     * @param  array<array-key, array{start?: string, end?: string}>|null  $items
+     * @return list<array{0: string, 1: string}>
+     */
+    public static function feedWindowsFromForm(?array $items): array
+    {
+        return array_values(array_map(
+            fn (array $item): array => [(string) ($item['start'] ?? ''), (string) ($item['end'] ?? '')],
+            $items ?? [],
+        ));
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -40,8 +72,53 @@ class BreedConfigResource extends Resource
                 Forms\Components\TextInput::make('hunger_decay_rate')
                     ->required()
                     ->numeric()
+                    ->minValue(0)
                     ->step(0.01)
-                    ->helperText('Hunger decay per hour as a decimal (e.g., 0.08 for -8%/hr).'),
+                    ->helperText('Hunger decay in percentage points per hour outside quiet hours (e.g. 8 for −8 %/h; 10 % of it during quiet hours).'),
+
+                Forms\Components\TextInput::make('thirst_decay_rate')
+                    ->required()
+                    ->numeric()
+                    ->minValue(0)
+                    ->step(0.01)
+                    ->helperText('Thirst decay in percentage points per hour outside quiet hours (e.g. 10 for −10 %/h).'),
+
+                Forms\Components\TextInput::make('poops_per_day')
+                    ->label('Hygiene events per day')
+                    ->required()
+                    ->integer()
+                    ->minValue(0)
+                    ->maxValue(10)
+                    ->helperText('Random "mess" events per family-local day, outside quiet hours; each drops hygiene to 0 %. Applies from the next unscheduled day.'),
+
+                Forms\Components\Repeater::make('feed_windows')
+                    ->label('Feeding windows (family-local time)')
+                    ->schema([
+                        Forms\Components\TextInput::make('start')
+                            ->required()
+                            ->regex(self::TIME_REGEX)
+                            ->placeholder('06:00'),
+                        Forms\Components\TextInput::make('end')
+                            ->required()
+                            ->regex(self::TIME_REGEX)
+                            ->different('start')
+                            ->placeholder('10:00'),
+                    ])
+                    ->columns(2)
+                    ->defaultItems(0)
+                    ->helperText('Feeding is allowed only inside these [start, end) windows, HH:MM (child API, M1-07).'),
+
+                Forms\Components\TextInput::make('water_times_per_day')
+                    ->required()
+                    ->integer()
+                    ->minValue(0)
+                    ->helperText('Maximum water refills per family-local day (M1-07).'),
+
+                Forms\Components\TextInput::make('water_min_gap_minutes')
+                    ->required()
+                    ->integer()
+                    ->minValue(0)
+                    ->helperText('Minimum minutes between two water refills (M1-07).'),
 
                 Forms\Components\Toggle::make('premium_unlock')
                     ->helperText('Whether this breed requires a premium/paid unlock.'),
@@ -73,6 +150,28 @@ class BreedConfigResource extends Resource
                 Tables\Columns\TextColumn::make('hunger_decay_rate')
                     ->numeric()
                     ->sortable(),
+
+                Tables\Columns\TextColumn::make('thirst_decay_rate')
+                    ->numeric()
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('poops_per_day')
+                    ->label('Hygiene events / day')
+                    ->numeric(),
+
+                Tables\Columns\TextColumn::make('feed_windows')
+                    ->label('Feeding windows')
+                    ->state(fn (BreedConfig $record): string => collect($record->feed_windows ?? [])
+                        ->map(fn (array $window): string => ($window[0] ?? '?').'–'.($window[1] ?? '?'))
+                        ->join(', ')),
+
+                Tables\Columns\TextColumn::make('water_times_per_day')
+                    ->label('Water / day')
+                    ->numeric(),
+
+                Tables\Columns\TextColumn::make('water_min_gap_minutes')
+                    ->label('Water gap (min)')
+                    ->numeric(),
 
                 Tables\Columns\IconColumn::make('premium_unlock')
                     ->boolean(),

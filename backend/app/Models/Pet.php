@@ -26,6 +26,8 @@ class Pet extends Model
         // Start the decay clock at creation so the first tick decays from birth.
         static::creating(function (Pet $pet): void {
             $pet->last_decay_at ??= now();
+            // Birth day = first step day; energy resets at the next local midnight (M1-04).
+            $pet->last_step_reset_at ??= now();
 
             if ($pet->isFrozen()) {
                 $pet->frozen_at ??= now();
@@ -35,18 +37,22 @@ class Pet extends Model
         // Freeze bookkeeping (M1-02). Hard stop and illness freeze both the
         // metrics and the neglect clocks (*_zero_since):
         //  - entering a freeze stamps `frozen_at`;
-        //  - lifting a hard stop thaws immediately (illness end is detected
-        //    by the next tick via thawIfDue()), shifting *_zero_since forward
-        //    by the frozen duration and restarting the decay clock.
+        //  - lifting a hard stop thaws immediately, shifting *_zero_since
+        //    forward by the frozen duration and restarting the decay clock;
+        //  - the end of an illness is a fresh start (recoverFromIllnessIfDue,
+        //    David 2026-10-03): hygiene 100 %, neglect clocks restart.
         // Re-activating a pet (or undoing game over) restarts the decay clock.
         // These hooks work even when no scheduler tick ran during the freeze.
         static::updating(function (Pet $pet): void {
             $now = now();
 
+            // An illness that ended before this write: fresh start first.
+            $pet->recoverFromIllnessIfDue($now);
+
             if ($pet->isFrozen()) {
                 $pet->frozen_at ??= $now;
             } elseif ($pet->frozen_at !== null) {
-                $pet->applyThaw($pet->thawTime($now));
+                $pet->applyThaw($now);
             }
 
             $reactivated = ($pet->isDirty('is_active') && $pet->is_active)
@@ -55,6 +61,13 @@ class Pet extends Model
 
             if ($reactivated && ! $pet->isDirty('last_decay_at')) {
                 $pet->last_decay_at = $now;
+            }
+
+            // A pet that comes back (re-activated, game over undone) never
+            // inherits a walk illness planned before.
+            if (($pet->isDirty('is_active') && $pet->is_active)
+                || ($pet->isDirty('is_game_over') && ! $pet->is_game_over)) {
+                $pet->walk_illness_due_at = null;
             }
         });
     }
@@ -76,11 +89,13 @@ class Pet extends Model
         'hygiene_level',
         'daily_step_count',
         'last_step_reset_at',
+        'last_step_sync_at',
         'last_decay_at',
         'born_at',
         'is_active',
         'pet_state',
         'illness_until',
+        'walk_illness_due_at',
         'escalation_level',
         'hunger_zero_since',
         'thirst_zero_since',
@@ -104,7 +119,9 @@ class Pet extends Model
             'pet_dna' => 'array',
             'born_at' => 'datetime',
             'illness_until' => 'datetime',
+            'walk_illness_due_at' => 'datetime',
             'last_step_reset_at' => 'datetime',
+            'last_step_sync_at' => 'datetime',
             'last_decay_at' => 'datetime',
             'frozen_at' => 'datetime',
             'hunger_level' => 'float',
@@ -201,6 +218,22 @@ class Pet extends Model
     }
 
     /**
+     * Scheduled random hygiene events (M1-05).
+     */
+    public function hygieneEvents(): HasMany
+    {
+        return $this->hasMany(PetHygieneEvent::class);
+    }
+
+    /**
+     * Closed days of the daily walk rule (one row per family-local day).
+     */
+    public function dailyWalks(): HasMany
+    {
+        return $this->hasMany(PetDailyWalk::class);
+    }
+
+    /**
      * Asynchronous fal.ai generation requests for this pet.
      */
     public function mediaJobs(): HasMany
@@ -265,29 +298,57 @@ class Pet extends Model
     }
 
     /**
+     * Child actions (steps, clean, later feed / water) are refused while the
+     * pet is frozen (hard stop, illness), inactive or game over.
+     */
+    public function isActionLocked(): bool
+    {
+        return ! $this->is_active || $this->is_game_over || $this->isFrozen();
+    }
+
+    /**
+     * The family-local calendar date (Y-m-d) of an instant.
+     */
+    public function localDate(CarbonInterface $at): string
+    {
+        return $at->copy()->setTimezone($this->familyTimezone())->toDateString();
+    }
+
+    /**
+     * Start of a new family-local day (M1-03, M1-04): once the local date has
+     * changed since `last_step_reset_at`, the step count and with it the
+     * energy go back to 0 ("reset na 0 % ob polnoči", PRODUCT_SPEC §5) and
+     * the anti-cheat reference is cleared. Attributes only — the caller holds
+     * the row lock and saves. Returns true if a reset happened.
+     *
+     * A pet that never had a reset (birth day) only gets the day stamped: it
+     * keeps the energy it was born with until its first local midnight
+     * (decision 2026-10-03, DECISIONS.md).
+     */
+    public function resetDailyStepsIfNewDay(CarbonInterface $now): bool
+    {
+        if ($this->last_step_reset_at === null) {
+            $this->last_step_reset_at = $now;
+
+            return false;
+        }
+
+        if ($this->localDate($this->last_step_reset_at) === $this->localDate($now)) {
+            return false;
+        }
+
+        $this->daily_step_count = 0;
+        $this->energy_level = 0.0;
+        $this->last_step_reset_at = $now;
+        $this->last_step_sync_at = null;
+
+        return true;
+    }
+
+    /**
      * Columns tracking how long each metric has been at 0 %.
      */
     public const ZERO_SINCE_COLUMNS = ['hunger_zero_since', 'thirst_zero_since', 'energy_zero_since', 'hygiene_zero_since'];
-
-    /**
-     * When the current freeze ended: now for a hard stop being lifted;
-     * illness_until for an illness that expired between ticks.
-     */
-    public function thawTime(CarbonInterface $now): CarbonInterface
-    {
-        if ($this->getOriginal('is_hard_stopped')) {
-            return $now;
-        }
-
-        if ($this->illness_until !== null
-            && $this->frozen_at !== null
-            && $this->illness_until->greaterThan($this->frozen_at)
-            && $this->illness_until->lessThanOrEqualTo($now)) {
-            return $this->illness_until;
-        }
-
-        return $now;
-    }
 
     /**
      * End a freeze at $at (attributes only, caller saves): shift every
@@ -318,17 +379,66 @@ class Pet extends Model
     }
 
     /**
-     * Thaw a pet whose freeze ended without a model event (illness expiry).
-     * Writes quietly. Returns true if a thaw was applied.
+     * Apply what a freeze that ended without a model event left behind:
+     * illness recovery (illness_until passed) and a stale `frozen_at`.
+     * Writes quietly. Returns true if anything changed.
      */
     public function thawIfDue(?CarbonInterface $now = null): bool
     {
-        if ($this->frozen_at === null || $this->isFrozen()) {
+        $now ??= now();
+        $changed = $this->recoverFromIllnessIfDue($now);
+
+        if ($this->frozen_at !== null && ! $this->isFrozen()) {
+            $this->applyThaw($now);
+            $changed = true;
+        }
+
+        if ($changed) {
+            $this->saveQuietly();
+        }
+
+        return $changed;
+    }
+
+    /**
+     * Illness recovery = fresh start (David, 2026-10-03, PRODUCT_SPEC §7).
+     * Once `illness_until` has passed, at that moment:
+     *  - hygiene → 100 % (the vet cleaned the dog), hygiene clock cleared;
+     *  - every other running neglect clock (*_zero_since: phase-3 alarm,
+     *    illness, game over) restarts at the recovery moment;
+     *  - escalation level back to 0 (new reminders for the new start);
+     *  - hunger / thirst keep their values (the child can act again), energy
+     *    stays step-based;
+     *  - the decay clock resumes at the recovery moment.
+     * A hard stop that is still on keeps the pet frozen from that moment.
+     * Attributes only; the caller saves. Returns true if recovery applied.
+     */
+    public function recoverFromIllnessIfDue(CarbonInterface $now): bool
+    {
+        if ($this->illness_until === null || $this->illness_until->greaterThan($now)) {
             return false;
         }
 
-        $this->applyThaw($this->thawTime($now ?? now()));
-        $this->saveQuietly();
+        $at = $this->illness_until->copy();
+
+        $this->hygiene_level = 100.0;
+        $this->hygiene_zero_since = null;
+        foreach (self::ZERO_SINCE_COLUMNS as $column) {
+            if ($this->getAttribute($column) !== null) {
+                $this->setAttribute($column, $at);
+            }
+        }
+        $this->escalation_level = 0;
+        $this->illness_until = null;
+
+        if ($this->last_decay_at === null || $this->last_decay_at->lessThan($at)) {
+            $this->last_decay_at = $at;
+        }
+
+        // Hard-stopped through the recovery (stored value; a hard stop being
+        // switched on in this very write freezes from now via the hook): the
+        // freeze continues from the recovery moment. Otherwise not frozen.
+        $this->frozen_at = $this->getOriginal('is_hard_stopped') ? $at : null;
 
         return true;
     }
