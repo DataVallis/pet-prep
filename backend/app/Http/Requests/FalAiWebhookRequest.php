@@ -2,30 +2,38 @@
 
 namespace App\Http\Requests;
 
+use App\Services\FalWebhookVerifier;
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class FalAiWebhookRequest extends FormRequest
 {
     /**
-     * Webhook endpoints are called by fal.ai servers, not by authenticated users.
-     * Authorization is handled via webhook secret validation in the controller.
+     * Called by fal.ai servers, not by users. Authenticity is the ED25519 signature,
+     * checked here so that it runs BEFORE validation: unauthenticated callers get a
+     * bare 401 and learn nothing about the payload schema.
      */
-    public function authorize(): bool
+    public function authorize(FalWebhookVerifier $verifier): bool
     {
-        return true;
+        return $verifier->verify($this);
+    }
+
+    protected function failedAuthorization(): void
+    {
+        throw new HttpResponseException(response()->json(['message' => 'Unauthorized'], 401));
     }
 
     /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * @return array<string, ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
         return [
-            'request_id' => ['required', 'string'],
-            'status' => ['required', 'string'],
-            'pet_id' => ['nullable', 'integer', 'exists:pets,id'],
+            'request_id' => ['required', 'string', 'max:255'],
+            'status' => ['required', 'string', 'in:OK,ERROR'],
+            'payload' => ['nullable', 'array'],
+            'error' => ['nullable', 'string', 'max:5000'],
         ];
     }
 }

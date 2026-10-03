@@ -23,6 +23,7 @@ class Pet extends Model
         'breed_type',
         'pet_dna',
         'current_video_url',
+        'media_status',
         'hunger_level',
         'thirst_level',
         'energy_level',
@@ -86,6 +87,14 @@ class Pet extends Model
     public function activities(): HasMany
     {
         return $this->hasMany(ActivityLog::class);
+    }
+
+    /**
+     * Asynchronous fal.ai generation requests for this pet.
+     */
+    public function mediaJobs(): HasMany
+    {
+        return $this->hasMany(PetMediaJob::class);
     }
 
     // ──────────────────────────────────────────────────────────────

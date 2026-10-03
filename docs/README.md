@@ -9,6 +9,7 @@
 | `engineering/ROADMAP.md` | Milestoni M0–M5 s taski (ID-ji za veje in commite) | SL |
 | `engineering/DEPLOYMENT.md` | Hetzner runbook | EN |
 | `decisions/` | ADR-ji od 012 naprej (001–011 so v root `README.md`) | EN |
+| `journey/BUILD_LOG.md` | **Dnevnik razvoja** — surovina za objave, investitorje, partnerje, starše in otroke | SL |
 | `source/` | Izvorni docx dokumenti pretvorjeni v Markdown (zgodovinski) | SL |
 
 Stanje projekta iz dneva v dan: root `HANDOFF.md`. Navodila za AI agente: root `CLAUDE.md`.

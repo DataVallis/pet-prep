@@ -70,6 +70,7 @@ class PetUpdated implements ShouldBroadcast
             'is_hard_stopped' => $this->pet->is_hard_stopped,
             'virtual_age_months' => $this->pet->virtualAgeInMonths(),
             'current_video_url' => $this->pet->current_video_url,
+            'media_status' => $this->pet->media_status,
             'reference_image_url' => $this->pet->pet_dna['reference_image_url'] ?? null,
             'event_type' => $this->eventType,
             'updated_at' => $this->pet->updated_at?->toIso8601String(),

@@ -34,5 +34,5 @@ For deployments as `deploy@`, copy `~/.ssh/petprep_deploy_key` securely (e.g. Ai
 | D4 | `deploy-production.sh` ignores `git checkout` failures (`|| true`) and rsync `--delete` overwrites the server tree — fine for rsync deploys, but the script's git branch is dead code. | Low |
 | D5 | Backups stay on the same disk (`/opt/petprep/backups`) → copy off-site (Hetzner Storage Box / S3) and test a restore. | Medium |
 | D6 | Mobile app has quick-login buttons with seeded test credentials and defaults to the production API → hide behind `__DEV__`, ensure `TestUsersSeeder` never runs in prod. | High |
-| D7 | Webhook secrets (`FAL_AI_WEBHOOK_SECRET`, `REVENUECAT_SECRET_KEY`) must be set in `/opt/petprep/.env` before those integrations are enabled — handlers are fail-open today. | High |
+| D7 | `REVENUECAT_SECRET_KEY` must be set in `/opt/petprep/.env` before RevenueCat is enabled — that handler is still fail-open (M3-08). fal.ai webhooks are now signature-verified and fail closed (M4-04); no fal secret exists. | High |
 | D8 | Caddyfile also serves plain HTTP on the raw IP (`http://138.199.172.97`) incl. API/admin → restrict or redirect once the domain is stable. | Medium |

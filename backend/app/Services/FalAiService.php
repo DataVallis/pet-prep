@@ -5,32 +5,29 @@ namespace App\Services;
 use App\Enums\BreedType;
 use App\Enums\PetStateEnum;
 use App\Models\Pet;
-use Illuminate\Http\Client\Response;
+use App\Models\PetMediaJob;
+use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
 /**
- * FalAiService — Encapsulates all interactions with the fal.ai REST API.
+ * FalAiService — all interactions with the fal.ai REST API.
  *
- * fal.ai is our primary AI model orchestrator, handling:
- * - Kling 3.0 for video generation (state-dependent video loops)
- * - Flux / NanoBanana for image generation (canonical reference images)
+ * - Reference image (Pet DNA anchor): synchronous call to https://fal.run/{model},
+ *   only ever executed from a queued job (never inside an HTTP request / DB transaction).
+ * - State videos (Kling image-to-video): submitted to the queue API
+ *   https://queue.fal.run/{model}?fal_webhook=... ; the result arrives on our
+ *   signed webhook and is matched via the pet_media_jobs table.
  *
- * Every pet generated in PetPrep must be 100% visually consistent across
- * every image and video state. This is achieved via the "Pet DNA" architecture:
- * a fixed seed + prompt anchor + reference image URL that are passed to every
- * fal.ai generation request.
+ * Every pet stays visually consistent through its "Pet DNA": a fixed seed,
+ * a prompt anchor, visual traits and the canonical reference image URL.
  */
 class FalAiService
 {
-    /**
-     * The fal.ai API base URL.
-     */
-    private const FAL_AI_BASE_URL = 'https://queue.fal.run';
+    private const SYNC_BASE_URL = 'https://fal.run';
 
-    /**
-     * The fal.ai model endpoints.
-     */
+    private const QUEUE_BASE_URL = 'https://queue.fal.run';
+
     private const MODEL_IMAGE = 'fal-ai/flux/schnell';
 
     private const MODEL_VIDEO = 'fal-ai/kling-v1.6/pro/image-to-video';
@@ -44,71 +41,45 @@ class FalAiService
     }
 
     // ──────────────────────────────────────────────────────────────
-    //  Pet DNA Generation
+    //  Pet DNA
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * Generate the initial Pet DNA payload for a new pet.
+     * Build the Pet DNA payload for a new pet. Pure and offline: no network call.
+     * The reference image is generated later by GeneratePetReferenceImageJob.
      *
-     * This creates:
-     * - A unique fixed seed for reproducible generation
-     * - A prompt anchor describing the pet's exact visual features
-     * - Visual traits (color, markings, eye color, fur texture)
-     * - A canonical reference image URL (generated via Flux)
-     *
-     * @return array{
-     *     seed: int,
-     *     visual_traits: array<string, string>,
-     *     prompt_anchor: string,
-     *     reference_image_url: string|null
-     * }
+     * @return array{seed: int, visual_traits: array<string, string>, prompt_anchor: string, reference_image_url: null}
      */
     public function generateInitialPetDna(BreedType $breed): array
     {
-        // Generate a unique deterministic seed
         $seed = random_int(1, 4294967295);
-
-        // Build the breed-specific prompt anchor
-        $promptAnchor = $this->buildPromptAnchor($breed);
-        $visualTraits = $this->buildVisualTraits($breed, $seed);
-
-        // Generate the canonical reference image via fal.ai
-        $referenceImageUrl = $this->generateReferenceImage($promptAnchor, $seed);
 
         return [
             'seed' => $seed,
-            'visual_traits' => $visualTraits,
-            'prompt_anchor' => $promptAnchor,
-            'reference_image_url' => $referenceImageUrl,
+            'visual_traits' => $this->buildVisualTraits($breed, $seed),
+            'prompt_anchor' => $this->buildPromptAnchor($breed),
+            'reference_image_url' => null,
         ];
     }
 
-    /**
-     * Build a breed-specific prompt anchor describing the pet's exact appearance.
-     * This is the base prompt used for ALL subsequent image/video generations
-     * to maintain 100% visual consistency.
-     */
     private function buildPromptAnchor(BreedType $breed): string
     {
         return match ($breed) {
             BreedType::Mutt => 'A friendly medium-sized mutt dog with a mix of golden brown and white fur, '
-                . 'short smooth coat, amber eyes, floppy ears, white blaze on chest, '
-                . 'photorealistic, studio quality, natural lighting',
+                .'short smooth coat, amber eyes, floppy ears, white blaze on chest, '
+                .'photorealistic, studio quality, natural lighting',
 
             BreedType::BorderCollie => 'A beautiful Border Collie dog with classic black and white markings, '
-                . 'medium-length double coat, bright intelligent brown eyes, erect expressive ears, '
-                . 'white blaze on face, photorealistic, studio quality, natural lighting',
+                .'medium-length double coat, bright intelligent brown eyes, erect expressive ears, '
+                .'white blaze on face, photorealistic, studio quality, natural lighting',
         };
     }
 
     /**
-     * Generate visual traits based on breed and seed.
-     *
      * @return array<string, string>
      */
     private function buildVisualTraits(BreedType $breed, int $seed): array
     {
-        // Use the seed to deterministically select trait variations
         $variantIndex = $seed % 3;
 
         return match ($breed) {
@@ -144,210 +115,210 @@ class FalAiService
     }
 
     // ──────────────────────────────────────────────────────────────
-    //  Image Generation (Flux)
+    //  Reference image (synchronous — call only from a queued job)
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * Generate the canonical reference image for a pet using Flux.
-     * This image becomes the Image-to-Video anchor for all Kling 3.0 video generation.
+     * Generate the canonical reference image for a pet.
      *
-     * @return string|null The public URL of the generated image, or null if disabled/failed.
+     * @return string|null Public URL of the image, or null if disabled/failed.
      */
     public function generateReferenceImage(string $promptAnchor, int $seed): ?string
     {
         if (! $this->isEnabled()) {
-            Log::info('FalAiService: Skipping reference image generation (disabled in this environment).');
-
             return null;
         }
 
         try {
-            $response = $this->http()
-                ->post($this->modelUrl(self::MODEL_IMAGE), [
-                    'prompt' => $promptAnchor,
-                    'seed' => $seed,
-                    'image_size' => [
-                        'width' => 1024,
-                        'height' => 1024,
-                    ],
-                    'num_inference_steps' => 4,
-                    'format' => 'jpeg',
-                ]);
-
-            if ($response->successful()) {
-                return $response->json('images.0.url');
-            }
-
-            Log::error('FalAiService: Reference image generation failed', [
-                'status' => $response->status(),
-                'body' => $response->body(),
+            $response = $this->http()->timeout(60)->post($this->syncUrl(self::MODEL_IMAGE), [
+                'prompt' => $promptAnchor,
+                'seed' => $seed,
+                'image_size' => ['width' => 1024, 'height' => 1024],
+                'num_inference_steps' => 4,
+                'num_images' => 1,
+                'enable_safety_checker' => true,
             ]);
-
-            return null;
-        } catch (\Exception $e) {
-            Log::error('FalAiService: Reference image generation exception', [
-                'error' => $e->getMessage(),
-            ]);
+        } catch (\Throwable $e) {
+            Log::error('FalAiService: reference image request failed', ['error' => $e->getMessage()]);
 
             return null;
         }
+
+        if (! $response->successful()) {
+            Log::error('FalAiService: reference image generation failed', ['status' => $response->status()]);
+
+            return null;
+        }
+
+        $url = $response->json('images.0.url');
+
+        if (! is_string($url) || ! $this->isAllowedMediaUrl($url)) {
+            Log::error('FalAiService: reference image response had no usable URL');
+
+            return null;
+        }
+
+        return $url;
     }
 
     // ──────────────────────────────────────────────────────────────
-    //  Video Generation (Kling 3.0)
+    //  State videos (asynchronous via queue API + signed webhook)
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * Trigger a Kling 3.0 Image-to-Video generation job on fal.ai.
+     * Submit a Kling image-to-video job for the given pet state.
+     * The request is recorded in pet_media_jobs; the result arrives on the webhook.
      *
-     * Uses the pet's reference_image_url as the visual anchor and pet_dna.seed
-     * to maintain exact pet appearance consistency across all video states.
-     *
-     * The generation runs asynchronously. When the video is ready, fal.ai will
-     * call our webhook (POST /api/webhooks/fal-ai) with the result.
-     *
-     * @return string|null The fal.ai request ID for tracking, or null if disabled/failed.
+     * @return string|null The fal.ai request ID, or null if disabled/failed.
      */
     public function generatePetVideoState(Pet $pet, PetStateEnum $state): ?string
     {
         if (! $this->isEnabled()) {
-            Log::info('FalAiService: Skipping video generation (disabled in this environment).', [
-                'pet_id' => $pet->id,
-                'state' => $state->value,
-            ]);
-
             return null;
         }
 
         $referenceImageUrl = $pet->pet_dna['reference_image_url'] ?? null;
 
         if (! $referenceImageUrl) {
-            Log::warning('FalAiService: Cannot generate video — no reference image URL in pet_dna', [
-                'pet_id' => $pet->id,
-            ]);
+            Log::warning('FalAiService: cannot generate video without a reference image', ['pet_id' => $pet->id]);
 
             return null;
         }
 
-        $prompt = $this->buildVideoPrompt($pet, $state);
-
         try {
             $response = $this->http()
-                ->withQueryParameters([
-                    'fal_webhook' => $this->webhookUrl($pet->id),
-                ])
-                ->post($this->modelUrl(self::MODEL_VIDEO), [
+                ->withQueryParameters(['fal_webhook' => $this->webhookUrl()])
+                ->post($this->queueUrl(self::MODEL_VIDEO), [
                     'image_url' => $referenceImageUrl,
-                    'prompt' => $prompt,
-                    'seed' => $pet->pet_dna['seed'] ?? random_int(1, 4294967295),
+                    'prompt' => $this->buildVideoPrompt($pet, $state),
                     'duration' => '5',
                     'aspect_ratio' => '9:16',
                     'cfg_scale' => 0.7,
                 ]);
+        } catch (\Throwable $e) {
+            Log::error('FalAiService: video request failed', ['pet_id' => $pet->id, 'error' => $e->getMessage()]);
 
-            if ($response->successful()) {
-                return $response->json('request_id');
-            }
+            return null;
+        }
 
-            Log::error('FalAiService: Video generation request failed', [
+        $requestId = $response->successful() ? $response->json('request_id') : null;
+
+        if (! is_string($requestId) || $requestId === '') {
+            Log::error('FalAiService: video generation was not accepted', [
                 'pet_id' => $pet->id,
                 'state' => $state->value,
                 'status' => $response->status(),
-                'body' => $response->body(),
-            ]);
-
-            return null;
-        } catch (\Exception $e) {
-            Log::error('FalAiService: Video generation exception', [
-                'pet_id' => $pet->id,
-                'state' => $state->value,
-                'error' => $e->getMessage(),
             ]);
 
             return null;
         }
+
+        PetMediaJob::create([
+            'pet_id' => $pet->id,
+            'request_id' => $requestId,
+            'kind' => PetMediaJob::KIND_VIDEO,
+            'pet_state' => $state->value,
+            'status' => PetMediaJob::STATUS_PENDING,
+        ]);
+
+        return $requestId;
     }
 
-    /**
-     * Build the full video generation prompt by combining the pet's
-     * prompt_anchor with the state-specific prompt modifier.
-     */
     private function buildVideoPrompt(Pet $pet, PetStateEnum $state): string
     {
         $promptAnchor = $pet->pet_dna['prompt_anchor'] ?? '';
 
-        return $promptAnchor . '. ' . $state->promptModifier() . '. '
-            . 'Maintain exact visual consistency with the reference image. '
-            . 'Cinematic quality, smooth motion, 5 second loop.';
+        return $promptAnchor.'. '.$state->promptModifier().'. '
+            .'Maintain exact visual consistency with the reference image. '
+            .'Cinematic quality, smooth motion, 5 second loop.';
     }
 
     // ──────────────────────────────────────────────────────────────
-    //  Webhook Payload Processing
+    //  Webhook payload
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * Process an incoming fal.ai webhook payload.
+     * Interpret a (signature-verified) fal.ai webhook body.
      *
-     * Extracts the video URL from the completed webhook and returns it
-     * for the controller to update the pet and broadcast.
+     * Format: {request_id, gateway_request_id, status: "OK"|"ERROR", payload, error?}
      *
-     * @param  array<string, mixed>  $payload
-     * @return array{video_url: string|null, request_id: string|null}
+     * @param  array<string, mixed>  $body
+     * @return array{ok: bool, video_url: string|null, error: string|null}
      */
-    public function processWebhookPayload(array $payload): array
+    public function parseWebhookResult(array $body): array
     {
-        $requestId = $payload['request_id'] ?? null;
-        $status = $payload['status'] ?? null;
+        if (($body['status'] ?? null) !== 'OK') {
+            $error = $body['error'] ?? 'fal.ai reported an error';
 
-        // fal.ai webhook sends status 'COMPLETED' when the job is done
-        if ($status !== 'COMPLETED') {
-            Log::info('FalAiService: Webhook received with non-completed status', [
-                'request_id' => $requestId,
-                'status' => $status,
-            ]);
-
-            return ['video_url' => null, 'request_id' => $requestId];
+            return ['ok' => false, 'video_url' => null, 'error' => is_string($error) ? $error : 'fal.ai reported an error'];
         }
 
-        // Extract the video URL from the payload
-        $videoUrl = $payload['video']['url']
-            ?? $payload['output']['video_url']
-            ?? $payload['data']['video']['url']
-            ?? null;
+        $payload = is_array($body['payload'] ?? null) ? $body['payload'] : [];
+        $videoUrl = $payload['video']['url'] ?? null;
 
-        return ['video_url' => $videoUrl, 'request_id' => $requestId];
+        if (! is_string($videoUrl) || ! $this->isAllowedMediaUrl($videoUrl)) {
+            return ['ok' => false, 'video_url' => null, 'error' => 'Missing or untrusted video URL in payload'];
+        }
+
+        return ['ok' => true, 'video_url' => $videoUrl, 'error' => null];
+    }
+
+    /**
+     * Only accept HTTPS media served from fal.ai-owned hosts. Defence in depth:
+     * a URL shown full-screen to a child must never point somewhere arbitrary.
+     */
+    public function isAllowedMediaUrl(string $url): bool
+    {
+        // Characters that parse differently in PHP vs. WHATWG URL parsers (React Native,
+        // browsers) — e.g. "https://evil.com\\@v3.fal.media" — are rejected outright.
+        if ($url === '' || strlen($url) > 2048 || preg_match('/[\\\\@\s]/', $url) === 1) {
+            return false;
+        }
+
+        $parts = parse_url($url);
+
+        if ($parts === false
+            || strtolower($parts['scheme'] ?? '') !== 'https'
+            || empty($parts['host'])
+            || isset($parts['user']) || isset($parts['pass']) || isset($parts['port'])) {
+            return false;
+        }
+
+        $host = strtolower($parts['host']);
+
+        foreach ((array) config('services.fal_ai.media_hosts', ['fal.media']) as $allowed) {
+            $allowed = strtolower((string) $allowed);
+            if ($host === $allowed || str_ends_with($host, '.'.$allowed)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     // ──────────────────────────────────────────────────────────────
-    //  HTTP & Config Helpers
+    //  HTTP & config helpers
     // ──────────────────────────────────────────────────────────────
 
-    /**
-     * Get an authenticated HTTP client instance for fal.ai API calls.
-     */
-    private function http(): \Illuminate\Http\Client\PendingRequest
+    private function http(): PendingRequest
     {
         return Http::withHeaders([
-            'Authorization' => 'Key ' . config('services.fal_ai.key'),
-            'Content-Type' => 'application/json',
-        ])->timeout(120);
+            'Authorization' => 'Key '.config('services.fal_ai.key'),
+        ])->acceptJson()->asJson()->timeout(120);
     }
 
-    /**
-     * Build the full URL for a fal.ai model endpoint.
-     */
-    private function modelUrl(string $model): string
+    private function syncUrl(string $model): string
     {
-        return self::FAL_AI_BASE_URL . '/' . $model;
+        return self::SYNC_BASE_URL.'/'.$model;
     }
 
-    /**
-     * Build the webhook URL that fal.ai should call when a job completes.
-     */
-    private function webhookUrl(int $petId): string
+    private function queueUrl(string $model): string
     {
-        $baseUrl = rtrim(config('app.url'), '/');
+        return self::QUEUE_BASE_URL.'/'.$model;
+    }
 
-        return $baseUrl . '/api/webhooks/fal-ai?pet_id=' . $petId;
+    public function webhookUrl(): string
+    {
+        return rtrim((string) config('app.url'), '/').'/api/webhooks/fal-ai';
     }
 }
