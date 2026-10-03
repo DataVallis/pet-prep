@@ -229,11 +229,19 @@ class PetDecayService
         // Check for virtual age / certificate eligibility
         $certificateEligible = $this->checkCertificateEligibility($pet);
 
-        // Track when metrics first hit 0% (precise value)
-        $zeroUpdates = $this->trackZeroMetrics($pet, $newHunger, $newThirst, $newEnergy, $newHygiene);
+        // Thresholds follow what the child sees (decision 2026-10-03): the
+        // rounded display value drives zero tracking and the pet state, while
+        // the precise value keeps decaying underneath.
+        $shownHunger = Pet::displayValue($newHunger);
+        $shownThirst = Pet::displayValue($newThirst);
+        $shownEnergy = Pet::displayValue($newEnergy);
+        $shownHygiene = Pet::displayValue($newHygiene);
 
-        // Determine the appropriate pet state based on precise metrics
-        $newPetState = $this->determinePetState($newHunger, $newThirst, $newEnergy, $newHygiene, $isQuiet);
+        // Track when metrics first show 0 %
+        $zeroUpdates = $this->trackZeroMetrics($pet, $shownHunger, $shownThirst, $shownEnergy, $shownHygiene);
+
+        // Determine the appropriate pet state from the displayed metrics
+        $newPetState = $this->determinePetState($shownHunger, $shownThirst, $shownEnergy, $shownHygiene, $isQuiet);
 
         $newMetrics = [
             'hunger_level' => $newHunger,
@@ -387,11 +395,11 @@ class PetDecayService
     /**
      * Track when each metric first hits 0% — used by the EscalationService
      * for neglect calculations (illness >6hrs, game over >24hrs).
-     * Uses the precise value: zero means <= 0.
+     * Takes displayed values: zero means "shows 0 %" (precise < 0.5).
      *
      * @return array<string, mixed> Updates to apply to the pet.
      */
-    private function trackZeroMetrics(Pet $pet, float $hunger, float $thirst, float $energy, float $hygiene): array
+    private function trackZeroMetrics(Pet $pet, int $hunger, int $thirst, int $energy, int $hygiene): array
     {
         $updates = [];
 
@@ -414,9 +422,9 @@ class PetDecayService
     }
 
     /**
-     * Determine the appropriate PetStateEnum based on current (precise) metrics.
+     * Determine the appropriate PetStateEnum from the displayed (rounded) metrics.
      */
-    private function determinePetState(float $hunger, float $thirst, float $energy, float $hygiene, bool $isQuiet): PetStateEnum
+    private function determinePetState(int $hunger, int $thirst, int $energy, int $hygiene, bool $isQuiet): PetStateEnum
     {
         // Sick takes priority
         if ($hygiene <= 0 || $energy <= 0) {

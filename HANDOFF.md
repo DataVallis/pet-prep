@@ -26,6 +26,8 @@
 - **Monorepo:** `pet-prep-mobile` merged into `pet-prep/mobile` — done.
 - **Languages:** English (default) + Slovenian, more later (M1-18).
 - **Package manager:** yarn 1 (root `package.json` declares it) — cleanup in M0-05.
+- **Thresholds follow the displayed value** (David, 2026-10-03): warning/escalation thresholds, pet state and zero tracking (`*_zero_since` → phase 3, illness, game over) compare the rounded half-up value the child sees (`Pet::displayMetric`): 30.4 shows 30 → phase 1; 0.4 shows 0 → counts as zero. PRODUCT_SPEC §6.
+- **Interim hygiene 1.5 %/h kept until M1-05** (David, 2026-10-03).
 
 ## 3. Known bugs & debt (top items — full list in AUDIT + DEPLOYMENT.md)
 
@@ -52,13 +54,18 @@
 
 ## 5. Next steps (priority queue)
 
-1. **David:** merge PR #4 (M0-10) → PR #5 (M1-01/02 decay) → Actions → Run workflow; answer the two decay questions (thresholds on displayed value? keep interim hygiene decay until M1-05?).
+1. **David:** merge PR #4 (M0-10) → PR #5 (M1-01/02 decay) → Actions → Run workflow; merge `fix/M1-01b-display-thresholds`.
 2. **David:** rotate EAS signing passwords (M0-12); confirm free/paid split (BUSINESS_MODEL §7, B7).
 3. **M1-03** family timezone (quiet hours/midnight in Europe/Ljubljana), **M1-04** energy from steps, **M1-05** hygiene events, **M1-06** breed config columns.
 4. **M1-07** child action API (feed/water/clean/steps/contract) + **M2-02** parent "add child / PIN" screen.
 5. **M1-08** private channels + single broadcast per change.
 
 ## 6. Session log
+
+### 2026-10-03 (cloud, backend-engineer) — M1-01 follow-up: thresholds on the displayed value (branch `fix/M1-01b-display-thresholds`)
+- `EscalationService` compares the lowest **displayed** metric with 30 / 10; `PetDecayService` derives `pet_state` and `*_zero_since` from `Pet::displayValue()` (zero = shows 0 %, i.e. precise < 0.5). Precise values still decay underneath; nothing rounded is written back.
+- Effect: neglect clocks start up to a few minutes earlier than before (when the value drops below 0.5, e.g. ~3.75 min for mutt hunger).
+- Tests: 166 passed (591 assertions) on PostgreSQL 16. New: 30.4 → phase 1, 30.5 → none, 10.4 → phase 2, 10.5 → phase 1, reset only once 31 % shows; 0.49 → zero tracking starts, 0.5 → not, 0.6 clears it; 0.4 hygiene → phase 3 after 1 h and illness after exactly 6 h; 0.3 hunger for 24 h → game over; pet state hungry at 30.45, sick at hygiene 0.45.
 
 ### 2026-10-03 (cloud, backend-engineer) — M1-01 + M1-02: decay engine rewrite (branch `fix/M1-01-decay-engine`, no PR yet)
 - New migration `2026_10_03_120000_add_last_decay_at_and_fractional_metrics_to_pets_table`: `pets.last_decay_at` (backfill `now()`), the four metric columns → `double precision` (0–100 CHECKs kept). Chose double over `decimal(5,2)`: 2 decimals would still drop ~0.003 % per minute-tick (mutt hunger 0.1333 → 0.13, ~2.5 % slower).
@@ -77,10 +84,6 @@
 - **Catch-up:** quiet/normal split jumps between window boundaries (≤ 4 segments/day) instead of per minute.
 - Tests: 154 passed (568 assertions), ~76 s. New: row-lock tests (stale model, write during `processAllActivePets`), neglect-freeze tests (30 h hard stop with and without ticks, illness, no escalation while frozen), exact-zero snap, multi-window catch-up, `FilamentPetResourceTest` (2).
 - Note: when `processPetDecay()` is called inside an existing transaction (e.g. tests with `RefreshDatabase`) it locks within that transaction instead of opening a savepoint — nested savepoints made the 24 h simulations quadratic in Laravel's test transaction manager (222 s suite).
-- **Open questions for David:**
-  1. Warning thresholds use the precise value while the child sees the rounded one (30.4 shows "30 %" but no phase-1 reminder; 10.3 shows "10 %" but no critical alert). Proposal: evaluate thresholds on the displayed value (≤ 30 / ≤ 10 / = 0 as shown). Zero tracking could stay precise.
-  2. The interim hygiene decay of 1.5 %/h isn't in the spec (spec: random drop to 0 % 1×/2× per day, M1-05). Keep it until M1-05, or switch it off now?
-
 ### 2026-10-03 — M0-10 dev-only demo logins; M0-14 HUD checked
 - Quick-login buttons and the `child@test.com` placeholder now render only in development builds (`__DEV__`); Jest test added (74/74). Lucide icon mock made generic.
 - Found in prod: test accounts `parent@test.com` / `child@test.com` (password `password`) exist and the test pet had hit game over (decay bug); David revived it via tinker. → M0-15 before public beta.

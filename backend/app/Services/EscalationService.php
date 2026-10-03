@@ -123,7 +123,9 @@ class EscalationService
      */
     private function checkEscalationMatrix(Pet $pet): bool
     {
-        $lowestMetric = min($pet->hunger_level, $pet->thirst_level, $pet->energy_level, $pet->hygiene_level);
+        // Thresholds compare the value the child sees (rounded half up,
+        // Pet::displayMetric): 30.4 shows 30 % → phase 1 (decision 2026-10-03).
+        $lowestMetric = $this->lowestDisplayedMetric($pet);
         $currentLevel = $pet->escalation_level;
 
         // Phase 3: 0% for >1 hour — Parent WebSocket alarm
@@ -191,7 +193,7 @@ class EscalationService
 
         Log::info('EscalationService: Phase 1 soft warning triggered', [
             'pet_id' => $pet->id,
-            'lowest_metric' => min($pet->hunger_level, $pet->thirst_level, $pet->energy_level, $pet->hygiene_level),
+            'lowest_metric' => $this->lowestDisplayedMetric($pet),
         ]);
     }
 
@@ -384,7 +386,16 @@ class EscalationService
     // ──────────────────────────────────────────────────────────────
 
     /**
+     * Lowest metric as displayed to the child (integer 0–100).
+     */
+    private function lowestDisplayedMetric(Pet $pet): int
+    {
+        return min($pet->displayMetrics());
+    }
+
+    /**
      * Check if any metric has been at 0% for at least the given number of hours.
+     * *_zero_since is stamped when a metric first *shows* 0 % (PetDecayService).
      */
     private function hasMetricAtZeroForHours(Pet $pet, float $hours): bool
     {

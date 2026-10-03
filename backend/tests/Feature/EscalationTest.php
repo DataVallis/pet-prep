@@ -1,12 +1,13 @@
 <?php
 
-use App\Enums\ActivityType;
 use App\Models\ActivityLog;
 use App\Models\Pet;
 use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\EscalationService;
 use App\Services\PetDecayService;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -309,5 +310,131 @@ describe('EscalationService - processAllActivePets', function () {
         expect($result['processed'])->toBe(3);
         // All 3 pets have hunger at 25% (≤30%) → Phase 1 escalation
         expect($result['escalated'])->toBe(3);
+    });
+});
+
+/*
+| Thresholds follow the displayed (rounded half-up) value — decision
+| 2026-10-03: what the child sees is what counts.
+*/
+function thresholdPet(float $hunger, int $escalationLevel = 0): Pet
+{
+    return Pet::factory()->create([
+        'user_id' => User::factory()->child()->create()->id,
+        'hunger_level' => $hunger,
+        'thirst_level' => 100,
+        'energy_level' => 100,
+        'hygiene_level' => 100,
+        'escalation_level' => $escalationLevel,
+    ]);
+}
+
+describe('EscalationService - thresholds use the displayed value', function () {
+    it('fires phase 1 at 30.4 (shows 30 %)', function () {
+        $pet = thresholdPet(30.4);
+
+        app(EscalationService::class)->processPetEscalation($pet);
+
+        expect($pet->fresh()->escalation_level)->toBe(1);
+        expect(ActivityLog::where('pet_id', $pet->id)->where('value', 30)->exists())->toBeTrue();
+    });
+
+    it('does not fire phase 1 at 30.5 (shows 31 %)', function () {
+        $pet = thresholdPet(30.5);
+
+        app(EscalationService::class)->processPetEscalation($pet);
+
+        expect($pet->fresh()->escalation_level)->toBe(0);
+        expect(ActivityLog::where('pet_id', $pet->id)->exists())->toBeFalse();
+    });
+
+    it('fires phase 2 at 10.4 (shows 10 %)', function () {
+        $pet = thresholdPet(10.4);
+
+        app(EscalationService::class)->processPetEscalation($pet);
+
+        expect($pet->fresh()->escalation_level)->toBe(2);
+    });
+
+    it('stays at phase 1 for 10.5 (shows 11 %)', function () {
+        $pet = thresholdPet(10.5);
+
+        app(EscalationService::class)->processPetEscalation($pet);
+
+        expect($pet->fresh()->escalation_level)->toBe(1);
+    });
+
+    it('does not reset the level while the value still shows 30 %', function () {
+        $pet = thresholdPet(30.3, escalationLevel: 1);
+
+        app(EscalationService::class)->processPetEscalation($pet);
+
+        expect($pet->fresh()->escalation_level)->toBe(1);
+    });
+
+    it('resets the level once the value shows 31 %', function () {
+        $pet = thresholdPet(30.5, escalationLevel: 1);
+
+        app(EscalationService::class)->processPetEscalation($pet);
+
+        expect($pet->fresh()->escalation_level)->toBe(0);
+    });
+});
+
+describe('Neglect counts from the displayed 0 % (decay + escalation)', function () {
+    beforeEach(function () {
+        Carbon::setTestNow('2026-10-05 07:00:00');
+        seedBreedConfigs();
+    });
+
+    it('starts the neglect clocks at 0.4 hygiene: phase 3 after 1 h, illness after 6 h', function () {
+        $pet = Pet::factory()->create([
+            'user_id' => User::factory()->child()->create()->id,
+            'hunger_level' => 100,
+            'thirst_level' => 100,
+            'energy_level' => 100,
+            'hygiene_level' => 0.4,
+        ]);
+        // Hunger out of the way; hygiene 0.4 would only reach a precise 0
+        // after 16 min, so illness at exactly +6 h proves the clock started
+        // at the displayed 0 %.
+        DB::table('breed_configs')->update(['hunger_decay_rate' => 0]);
+
+        $decay = app(PetDecayService::class);
+        $escalation = app(EscalationService::class);
+        $tick = function () use ($pet, $decay, $escalation): Pet {
+            $fresh = Pet::findOrFail($pet->id);
+            $decay->processPetDecay($fresh);
+            $escalation->processPetEscalation($fresh->refresh());
+
+            return $fresh->refresh();
+        };
+
+        $start = now()->copy();
+        Pet::whereKey($pet->id)->update(['last_decay_at' => $start->copy()->subSecond()]);
+        $first = $tick();
+        expect($first->hygiene_level)->toBeGreaterThan(0.0);
+        expect($first->hygiene_zero_since?->equalTo($start))->toBeTrue();
+
+        Carbon::setTestNow($start->copy()->addHour());
+        expect($tick()->escalation_level)->toBe(3);
+
+        Carbon::setTestNow($start->copy()->addHours(6));
+        expect($tick()->isIll())->toBeTrue();
+    });
+
+    it('ends the game after 24 h at a displayed 0 % hunger', function () {
+        $pet = Pet::factory()->create([
+            'user_id' => User::factory()->child()->create()->id,
+            'hunger_level' => 0.3,
+            'thirst_level' => 100,
+            'energy_level' => 100,
+            'hygiene_level' => 100,
+            'hunger_zero_since' => now()->subHours(24),
+        ]);
+
+        app(EscalationService::class)->processPetEscalation($pet);
+
+        expect($pet->fresh()->is_game_over)->toBeTrue();
     });
 });
