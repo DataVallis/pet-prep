@@ -160,7 +160,7 @@ describe('EscalationService - illness state', function () {
         expect($pet->illness_until->isFuture())->toBeTrue();
     });
 
-    it('triggers illness when energy is at 0% for >6 hours', function () {
+    it('does not trigger illness, phase 3 or game over from energy at 0 % (daily walk rule)', function () {
         $user = User::factory()->child()->create();
         $pet = Pet::factory()->create([
             'user_id' => $user->id,
@@ -168,7 +168,7 @@ describe('EscalationService - illness state', function () {
             'thirst_level' => 100,
             'energy_level' => 0,
             'hygiene_level' => 100,
-            'energy_zero_since' => now()->subHours(7),
+            'energy_zero_since' => now()->subHours(30),
             'illness_until' => null,
         ]);
 
@@ -176,7 +176,9 @@ describe('EscalationService - illness state', function () {
         $service->processPetEscalation($pet);
 
         $pet->refresh();
-        expect($pet->illness_until)->not->toBeNull();
+        expect($pet->illness_until)->toBeNull();
+        expect($pet->is_game_over)->toBeFalse();
+        expect($pet->escalation_level)->toBe(2); // ≤ 10 % reminder outside quiet hours only
     });
 
     it('does not trigger illness if metric has been at 0% for less than 6 hours', function () {

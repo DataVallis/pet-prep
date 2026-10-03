@@ -26,11 +26,15 @@ use Illuminate\Support\Facades\Log;
  *   Border Collie: Hunger -12%/hr, Thirst -15%/hr
  *   Hygiene:       no gradual decay — random events drop it to 0
  *                  (poops_per_day, HygieneEventService, M1-05)
- *   Energy:        not time-decayed — steps / daily_steps_required, back to
- *                  0 at the family's local midnight (PetActivityService, M1-04)
+ *   Energy:        not time-decayed — today's walk: steps /
+ *                  daily_steps_required, back to 0 at the family's local
+ *                  midnight (PetActivityService, M1-04). No hourly neglect
+ *                  clock; the daily walk rule closes each day at midnight
+ *                  (DailyWalkService, David 2026-10-03).
  *
  * Frozen (M1-02): while hard-stopped, ill, inactive or game over, metrics
  * don't change and the decay clock is advanced so nothing is caught up later.
+ * When an illness ends the pet gets a fresh start (Pet::recoverFromIllnessIfDue).
  *
  * Time Asymmetry: 1 real week = 1 virtual month.
  *   Total MVP: 12 real weeks = 12 virtual months (1 virtual year).
@@ -50,7 +54,10 @@ class PetDecayService
      */
     private const SNAP_EPSILON = 1e-6;
 
-    public function __construct(private HygieneEventService $hygieneEvents) {}
+    public function __construct(
+        private HygieneEventService $hygieneEvents,
+        private DailyWalkService $dailyWalks,
+    ) {}
 
     /**
      * Process metric decay for all pets the scheduler should tick.
@@ -167,29 +174,41 @@ class PetDecayService
             return false;
         }
 
+        // An illness that ended since the last tick: fresh start at
+        // illness_until (hygiene 100 %, neglect clocks restart) — also while
+        // a hard stop keeps the pet frozen.
+        $recovered = $pet->recoverFromIllnessIfDue($now);
+
         // Frozen states (M1-02): no decay, but keep the clock current so
         // there is no catch-up burst after unfreezing. Hard stop / illness
         // also stamp frozen_at so the neglect clocks can be shifted on thaw.
         if ($this->isFrozen($pet)) {
             if ($pet->isFrozen()) {
                 $pet->frozen_at ??= $now;
+
+                // The day still ends at midnight (walk recorded, steps → 0),
+                // but a day closed while frozen never makes the dog ill, and
+                // a walk illness that comes due while frozen is dropped.
+                $this->dailyWalks->closeDayIfNeeded($pet, $now, allowIllness: false);
+                if ($pet->walk_illness_due_at !== null && $pet->walk_illness_due_at->lessThanOrEqualTo($now)) {
+                    $pet->walk_illness_due_at = null;
+                }
             }
             $this->advanceClock($pet, $now);
 
-            return false;
+            return $recovered;
         }
 
-        // An illness that expired between ticks: shift neglect clocks and
-        // restart the decay clock at illness_until.
+        // A hard stop lifted without a model event: shift the neglect clocks.
         $pet->thawIfDue($now);
 
         $from = $pet->last_decay_at;
-        // Fallback for an illness without frozen_at: decay only from its end.
-        if ($pet->illness_until !== null && $pet->illness_until->greaterThan($from)) {
-            $from = $pet->illness_until;
-        }
         if ($from->greaterThanOrEqualTo($now)) {
-            return false;
+            if ($recovered) {
+                $pet->saveQuietly();
+            }
+
+            return $recovered;
         }
 
         $breedConfig = $pet->breedConfig();
@@ -218,7 +237,8 @@ class PetDecayService
 
         // Energy is not time-decayed (M1-04): it follows the step count, which
         // goes back to 0 at the family's local midnight (energy → 0 with it).
-        $pet->resetDailyStepsIfNewDay($now);
+        // The midnight also closes the day for the daily walk rule.
+        $this->dailyWalks->closeDayIfNeeded($pet, $now, allowIllness: true);
         $newEnergy = (float) $pet->energy_level;
 
         // Hygiene (M1-05): no gradual decay; scheduled random events that
@@ -243,8 +263,8 @@ class PetDecayService
         $shownEnergy = Pet::displayValue($newEnergy);
         $shownHygiene = Pet::displayValue($newHygiene);
 
-        // Track when metrics first show 0 %
-        $zeroUpdates = $this->trackZeroMetrics($pet, $shownHunger, $shownThirst, $shownEnergy, $shownHygiene);
+        // Track when metrics first show 0 % (not energy: daily walk rule)
+        $zeroUpdates = $this->trackZeroMetrics($pet, $shownHunger, $shownThirst, $shownHygiene);
 
         // Determine the appropriate pet state from the displayed metrics
         $newPetState = $this->determinePetState($shownHunger, $shownThirst, $shownEnergy, $shownHygiene, $isQuiet);
@@ -256,7 +276,8 @@ class PetDecayService
             'hygiene_level' => $newHygiene,
         ];
 
-        $displayChanged = $certificateEligible !== $pet->certificate_eligible
+        $displayChanged = $recovered
+            || $certificateEligible !== $pet->certificate_eligible
             || $newPetState !== $pet->pet_state;
         foreach ($newMetrics as $metric => $value) {
             if (Pet::displayValue($value) !== $shownBefore[$metric]) {
@@ -330,19 +351,25 @@ class PetDecayService
 
     /**
      * Track when each metric first hits 0% — used by the EscalationService
-     * for neglect calculations (illness >6hrs, game over >24hrs).
-     * Takes displayed values: zero means "shows 0 %" (precise < 0.5).
+     * for neglect calculations (phase 3 > 1 h, hygiene illness ≥ 6 h, game
+     * over 24 h). Takes displayed values: zero means "shows 0 %" (precise < 0.5).
+     *
+     * Energy has no neglect clock (daily walk rule, David 2026-10-03): 0 %
+     * after midnight means "not walked yet"; `energy_zero_since` stays null.
      *
      * @return array<string, mixed> Updates to apply to the pet.
      */
-    private function trackZeroMetrics(Pet $pet, int $hunger, int $thirst, int $energy, int $hygiene): array
+    private function trackZeroMetrics(Pet $pet, int $hunger, int $thirst, int $hygiene): array
     {
         $updates = [];
+
+        if ($pet->energy_zero_since !== null) {
+            $updates['energy_zero_since'] = null;
+        }
 
         $metrics = [
             'hunger_zero_since' => $hunger,
             'thirst_zero_since' => $thirst,
-            'energy_zero_since' => $energy,
             'hygiene_zero_since' => $hygiene,
         ];
 
@@ -362,8 +389,9 @@ class PetDecayService
      */
     private function determinePetState(int $hunger, int $thirst, int $energy, int $hygiene, bool $isQuiet): PetStateEnum
     {
-        // Sick takes priority
-        if ($hygiene <= 0 || $energy <= 0) {
+        // Sick takes priority. Energy 0 % is "not walked yet today", not
+        // sickness (daily walk rule) — it shows as low energy below.
+        if ($hygiene <= 0) {
             return PetStateEnum::Sick;
         }
 

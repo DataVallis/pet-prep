@@ -527,7 +527,7 @@ describe('Neglect clocks are frozen too (M1-02)', function () {
         expect($pet->fresh()->is_game_over)->toBeTrue();
     });
 
-    it('freezes neglect during illness and resumes it from illness_until', function () {
+    it('freezes neglect during illness and restarts it at recovery (fresh start)', function () {
         seedBreedConfigs();
         $pet = decayPet(['breed_type' => 'mutt', 'hunger_level' => 0, 'hunger_zero_since' => now()->subHours(20)]);
         $pet->update(['illness_until' => now()->addHours(12), 'pet_state' => 'sick']);
@@ -538,15 +538,19 @@ describe('Neglect clocks are frozen too (M1-02)', function () {
         }
         expect($pet->fresh()->is_game_over)->toBeFalse();
 
-        // First tick after the lockout is 30 min late; neglect resumes at illness_until.
-        foreach (range(12 * 60 + 30, 15 * 60 + 30, 30) as $minute) {
-            gameLoopTickAt($base, $minute);
-        }
-        gameLoopTickAt($base, 15 * 60 + 59);
-        expect($pet->fresh()->is_game_over)->toBeFalse();
+        // First tick after the lockout is 30 min late; the hunger clock
+        // restarts at illness_until (David 2026-10-03): 24 h from there.
+        gameLoopTickAt($base, 12 * 60 + 30);
+        expect($pet->fresh()->hunger_zero_since->equalTo($base->copy()->addHours(12)))->toBeTrue();
         expect($pet->fresh()->frozen_at)->toBeNull();
 
-        gameLoopTickAt($base, 16 * 60);                           // illness_until + 4 h
+        foreach (range(13 * 60, 35 * 60 + 30, 30) as $minute) {
+            gameLoopTickAt($base, $minute);
+        }
+        gameLoopTickAt($base, 35 * 60 + 59);
+        expect($pet->fresh()->is_game_over)->toBeFalse();
+
+        gameLoopTickAt($base, 36 * 60);                           // illness_until + 24 h
         expect($pet->fresh()->is_game_over)->toBeTrue();
     });
 

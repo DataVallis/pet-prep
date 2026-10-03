@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\ActivityType;
+use App\Enums\PetStateEnum;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\Pet;
@@ -136,25 +137,17 @@ describe('Energy formula', function () {
         expect($pet->fresh()->energy_level)->toEqualWithDelta(50.0, 1e-9);
     });
 
-    it('clears the energy neglect clock as soon as energy shows above 0 %', function () {
-        $pet = stepsPet(pet: ['energy_zero_since' => now()->subHours(3)]);
-
-        steps($pet, 20); // 0.5 % → shows 1 %
-
-        expect($pet->fresh()->energy_zero_since)->toBeNull();
-    });
-
-    it('keeps the neglect clock while energy still shows 0 %', function () {
+    it('has no energy neglect clock: a sync clears a legacy energy_zero_since', function () {
         $pet = stepsPet(pet: ['energy_zero_since' => now()->subHours(3)]);
 
         steps($pet, 10); // 0.25 % → shows 0 %
 
-        expect($pet->fresh()->energy_zero_since)->not->toBeNull();
+        expect($pet->fresh()->energy_zero_since)->toBeNull();
     });
 });
 
 describe('Local midnight reset (Europe/Ljubljana)', function () {
-    it('drops steps and energy to 0 at 00:00 CEST (22:00 UTC) and starts the neglect clock', function () {
+    it('drops steps and energy to 0 at 00:00 CEST (22:00 UTC) without a neglect clock', function () {
         $pet = stepsPet(pet: ['last_step_reset_at' => now()]);
         steps($pet, 4000);
         expect($pet->fresh()->energy_level)->toBe(100.0);
@@ -173,7 +166,7 @@ describe('Local midnight reset (Europe/Ljubljana)', function () {
         $after = $tick('2026-10-05 22:00:00');
         expect($after->daily_step_count)->toBe(0);
         expect($after->energy_level)->toBe(0.0);
-        expect($after->energy_zero_since?->format('Y-m-d H:i'))->toBe('2026-10-05 22:00');
+        expect($after->energy_zero_since)->toBeNull();
         expect($after->last_step_sync_at)->toBeNull();
 
         // No second reset at UTC midnight.
@@ -235,17 +228,20 @@ describe('Idempotency and anti-cheat', function () {
         expect(steps($pet, 800)->status)->toBe(ActionResult::UNCHANGED);
 
         expect($pet->fresh()->daily_step_count)->toBe(1000);
-        expect(walkedRows($pet))->toHaveCount(1);
         Event::assertDispatchedTimes(PetUpdated::class, 1);
     });
 
-    it('logs one walked_pet activity per accepted increment with the accepted steps', function () {
-        $pet = stepsPet();
+    it('logs one walked_pet activity per day, when a sync first reaches the goal', function () {
+        $pet = stepsPet(); // mutt, goal 4,000
 
         steps($pet, 1000, '2026-10-05 09:00:00');
-        steps($pet, 1500, '2026-10-05 09:30:00');
+        steps($pet, 3000, '2026-10-05 09:30:00');
+        expect(walkedRows($pet))->toHaveCount(0);
 
-        expect(walkedRows($pet)->pluck('value')->all())->toBe([1000, 500]);
+        steps($pet, 4200, '2026-10-05 09:50:00');
+        steps($pet, 5000, '2026-10-05 09:58:00');
+
+        expect(walkedRows($pet)->pluck('value')->all())->toBe([4200]);
     });
 
     it('broadcasts one PetUpdated(walked_pet) per accepted sync, none from the activity observer', function () {
@@ -270,7 +266,6 @@ describe('Idempotency and anti-cheat', function () {
         expect($capped->acceptedSteps)->toBe(1000);
         expect($capped->dailyStepCount)->toBe(2000);
         expect($pet->fresh()->last_step_sync_at->format('H:i'))->toBe('10:00');
-        expect(walkedRows($pet)->last()->value)->toBe(1000);
     });
 
     it('rejects an increment when no time passed since the last accepted sync', function () {
@@ -281,7 +276,6 @@ describe('Idempotency and anti-cheat', function () {
 
         expect($rejected->status)->toBe(ActionResult::REJECTED);
         expect($pet->fresh()->daily_step_count)->toBe(1000);
-        expect(walkedRows($pet))->toHaveCount(1);
     });
 
     it('accepts the refused remainder later once enough time has passed', function () {
@@ -363,45 +357,25 @@ describe('Locked pets', function () {
     ]);
 });
 
-describe('Energy neglect and illness (PRODUCT_SPEC §7)', function () {
-    it('makes a pet ill at 17:00 local with bedtime 22–06 and school 8–13 and no steps', function () {
-        // Energy hits 0 at local midnight (22:00 UTC). Outside quiet hours:
-        // 06–08 (2 h) + 13–17 (4 h) = 6 h → ill at 17:00 CEST = 15:00 UTC.
+describe('Energy is not an hourly neglect metric (daily walk rule, David 2026-10-03)', function () {
+    it('never makes a pet ill, alarms the parent or ends the game from energy 0 % during the day', function () {
         Carbon::setTestNow('2026-10-05 18:00:00');
         $pet = stepsPet(quietHours: [
             'bedtime_start' => '22:00', 'bedtime_end' => '06:00',
             'school_start' => '08:00', 'school_end' => '13:00',
-        ], pet: ['energy_level' => 100, 'last_step_reset_at' => now()]);
+        ], pet: ['energy_level' => 100, 'last_step_reset_at' => now(), 'daily_step_count' => 4000]);
 
-        $illAt = runLoop($pet, '2026-10-05 18:00:00', '2026-10-06 18:00:00');
-
-        expect($illAt)->toBe('2026-10-06 15:00');
-        expect($pet->fresh()->energy_zero_since->format('Y-m-d H:i'))->toBe('2026-10-05 22:00');
-    });
-
-    it('makes a pet ill at 06:00 local without quiet hours', function () {
-        Carbon::setTestNow('2026-10-05 18:00:00');
-        $pet = stepsPet(pet: ['energy_level' => 100, 'last_step_reset_at' => now()]);
-
-        expect(runLoop($pet, '2026-10-05 18:00:00', '2026-10-06 18:00:00'))->toBe('2026-10-06 04:00');
-    });
-
-    it('keeps a pet healthy when the child walks before the 6 h are used up', function () {
-        Carbon::setTestNow('2026-10-05 18:00:00');
-        $pet = stepsPet(quietHours: [
-            'bedtime_start' => '22:00', 'bedtime_end' => '06:00',
-            'school_start' => '08:00', 'school_end' => '13:00',
-        ], pet: ['energy_level' => 100, 'last_step_reset_at' => now()]);
-
-        // 15:30 local (13:30 UTC): the child syncs 400 steps after school.
-        $illAt = runLoop($pet, '2026-10-05 18:00:00', '2026-10-06 21:55:00', function (Carbon $at) use ($pet) {
-            if ($at->format('H:i') === '13:30') {
-                steps($pet, 400);
-            }
+        // Walked yesterday; today fed and watered but no steps until 21:55 local.
+        $illAt = runLoop($pet, '2026-10-05 18:00:00', '2026-10-06 19:55:00', function () use ($pet) {
+            Pet::whereKey($pet->id)->update(['hunger_level' => 100, 'thirst_level' => 100]);
         });
 
+        $fresh = $pet->fresh();
         expect($illAt)->toBeNull();
-        expect($pet->fresh()->displayMetric('energy_level'))->toBe(10);
-        expect($pet->fresh()->energy_zero_since)->toBeNull();
+        expect($fresh->energy_level)->toBe(0.0);
+        expect($fresh->energy_zero_since)->toBeNull();
+        expect($fresh->escalation_level)->toBe(2);      // reminder only
+        expect($fresh->is_game_over)->toBeFalse();
+        expect($fresh->pet_state)->toBe(PetStateEnum::LowEnergy);
     });
 });

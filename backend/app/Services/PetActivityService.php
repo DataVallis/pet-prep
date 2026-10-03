@@ -32,7 +32,10 @@ class PetActivityService
      */
     public const MAX_STEPS_PER_MINUTE = 200;
 
-    public function __construct(private HygieneEventService $hygieneEvents) {}
+    public function __construct(
+        private HygieneEventService $hygieneEvents,
+        private DailyWalkService $dailyWalks,
+    ) {}
 
     /**
      * Sync today's step count from the device (HealthKit / Health Connect).
@@ -45,6 +48,9 @@ class PetActivityService
      * - Energy = min(100, steps / breed daily_steps_required × 100); a sync
      *   never lowers it (birth-day grace, DECISIONS 2026-10-03).
      * - A sync for a local day that is already over is ignored (stale).
+     * - Activity log: one `walked_pet` row per day, when the sync first
+     *   reaches the daily goal (value = steps), not one per sync — so the
+     *   dashboard counts a walk once (daily walk rule).
      */
     public function recordSteps(Pet $pet, int $stepsToday, CarbonInterface $recordedAt): ActionResult
     {
@@ -65,8 +71,9 @@ class PetActivityService
                 $at = $now->copy();
             }
 
-            // Midnight may have passed since the last tick.
-            $locked->resetDailyStepsIfNewDay($now);
+            // Midnight may have passed since the last tick: close the day
+            // (daily walk rule) exactly as the tick would.
+            $this->dailyWalks->closeDayIfNeeded($locked, $now, allowIllness: true);
 
             $today = $locked->localDate($now);
             if ($locked->localDate($at) !== $today) {
@@ -110,13 +117,14 @@ class PetActivityService
                 'daily_step_count' => $newCount,
                 'energy_level' => $energy,
                 'last_step_sync_at' => $at,
+                'energy_zero_since' => null,
             ]);
-            if (Pet::displayValue($energy) > 0) {
-                $locked->energy_zero_since = null;
-            }
             $locked->saveQuietly();
 
-            $this->logActivity($locked, ActivityType::WalkedPet, $accepted);
+            $goal = (int) $breedConfig->daily_steps_required;
+            if ($goal > 0 && $current < $goal && $newCount >= $goal) {
+                $this->logActivity($locked, ActivityType::WalkedPet, $newCount);
+            }
 
             return $this->result($accepted < $increment ? ActionResult::CAPPED : ActionResult::ACCEPTED, $locked, $accepted);
         });
@@ -164,17 +172,25 @@ class PetActivityService
     {
         $work = function () use ($pet, $action): array {
             $locked = Pet::whereKey($pet->id)->lockForUpdate()->firstOrFail();
+            // An illness that ended before the next tick: fresh start first,
+            // so the action sees the recovered pet.
+            $recovered = $locked->recoverFromIllnessIfDue(now()->startOfSecond());
 
-            return [$locked, $action($locked)];
+            $result = $action($locked);
+            if ($recovered && $locked->isDirty()) {
+                $locked->saveQuietly();
+            }
+
+            return [$locked, $result, $recovered];
         };
 
-        /** @var array{0: Pet, 1: ActionResult} $outcome */
+        /** @var array{0: Pet, 1: ActionResult, 2: bool} $outcome */
         $outcome = DB::transactionLevel() > 0 ? $work() : DB::transaction($work);
-        [$locked, $result] = $outcome;
+        [$locked, $result, $recovered] = $outcome;
 
         $pet->setRawAttributes($locked->getAttributes(), true);
 
-        if ($result->changed()) {
+        if ($result->changed() || $recovered) {
             DB::afterCommit(fn () => broadcast(new PetUpdated($locked, $activity->value)));
         }
 
@@ -182,7 +198,8 @@ class PetActivityService
     }
 
     /**
-     * Persist bookkeeping (e.g. a midnight reset) without counting as an action.
+     * Persist bookkeeping (e.g. a midnight reset, illness recovery) without
+     * counting as an action.
      */
     private function unchanged(string $status, Pet $locked): ActionResult
     {
