@@ -26,6 +26,8 @@ class Pet extends Model
         // Start the decay clock at creation so the first tick decays from birth.
         static::creating(function (Pet $pet): void {
             $pet->last_decay_at ??= now();
+            // Birth day = first step day; energy resets at the next local midnight (M1-04).
+            $pet->last_step_reset_at ??= now();
 
             if ($pet->isFrozen()) {
                 $pet->frozen_at ??= now();
@@ -76,6 +78,7 @@ class Pet extends Model
         'hygiene_level',
         'daily_step_count',
         'last_step_reset_at',
+        'last_step_sync_at',
         'last_decay_at',
         'born_at',
         'is_active',
@@ -105,6 +108,7 @@ class Pet extends Model
             'born_at' => 'datetime',
             'illness_until' => 'datetime',
             'last_step_reset_at' => 'datetime',
+            'last_step_sync_at' => 'datetime',
             'last_decay_at' => 'datetime',
             'frozen_at' => 'datetime',
             'hunger_level' => 'float',
@@ -201,6 +205,14 @@ class Pet extends Model
     }
 
     /**
+     * Scheduled random hygiene events (M1-05).
+     */
+    public function hygieneEvents(): HasMany
+    {
+        return $this->hasMany(PetHygieneEvent::class);
+    }
+
+    /**
      * Asynchronous fal.ai generation requests for this pet.
      */
     public function mediaJobs(): HasMany
@@ -262,6 +274,54 @@ class Pet extends Model
     public function isFrozen(): bool
     {
         return (bool) $this->is_hard_stopped || $this->isIll();
+    }
+
+    /**
+     * Child actions (steps, clean, later feed / water) are refused while the
+     * pet is frozen (hard stop, illness), inactive or game over.
+     */
+    public function isActionLocked(): bool
+    {
+        return ! $this->is_active || $this->is_game_over || $this->isFrozen();
+    }
+
+    /**
+     * The family-local calendar date (Y-m-d) of an instant.
+     */
+    public function localDate(CarbonInterface $at): string
+    {
+        return $at->copy()->setTimezone($this->familyTimezone())->toDateString();
+    }
+
+    /**
+     * Start of a new family-local day (M1-03, M1-04): once the local date has
+     * changed since `last_step_reset_at`, the step count and with it the
+     * energy go back to 0 ("reset na 0 % ob polnoči", PRODUCT_SPEC §5) and
+     * the anti-cheat reference is cleared. Attributes only — the caller holds
+     * the row lock and saves. Returns true if a reset happened.
+     *
+     * A pet that never had a reset (birth day) only gets the day stamped: it
+     * keeps the energy it was born with until its first local midnight
+     * (decision 2026-10-03, DECISIONS.md).
+     */
+    public function resetDailyStepsIfNewDay(CarbonInterface $now): bool
+    {
+        if ($this->last_step_reset_at === null) {
+            $this->last_step_reset_at = $now;
+
+            return false;
+        }
+
+        if ($this->localDate($this->last_step_reset_at) === $this->localDate($now)) {
+            return false;
+        }
+
+        $this->daily_step_count = 0;
+        $this->energy_level = 0.0;
+        $this->last_step_reset_at = $now;
+        $this->last_step_sync_at = null;
+
+        return true;
     }
 
     /**

@@ -395,6 +395,7 @@ describe('Neglect counts from the displayed 0 % (decay + escalation)', function 
             'energy_level' => 100,
             'hygiene_level' => 0.4,
         ]);
+        disableHygieneEvents($pet);
         // Hunger out of the way; hygiene 0.4 would only reach a precise 0
         // after 16 min, so illness at exactly +6 h proves the clock started
         // at the displayed 0 %.

@@ -6,6 +6,8 @@ use App\Enums\ActivityType;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\Pet;
+use App\Models\QuietHours;
+use Carbon\CarbonInterface;
 use Illuminate\Support\Facades\Log;
 
 /**
@@ -21,7 +23,7 @@ use Illuminate\Support\Facades\Log;
  *   "Your child has neglected their pet!"
  *
  * Severe Neglect:
- *   Illness State: hygiene or energy at 0% for >6 hours (outside quiet hours)
+ *   Illness State: hygiene or energy at 0% for >=6 hours counted outside quiet hours
  *     → Pet state = SICK, 12-hour action lockout
  *
  *   Game Over / Virtual Shelter Protocol: any metric at 0% for 24 continuous hours
@@ -266,14 +268,14 @@ class EscalationService
 
         $illnessTriggered = false;
 
-        // Check hygiene at 0% for >6 hours
-        if ($pet->hygiene_zero_since && $pet->hygiene_zero_since->diffInHours(now()) >= self::ILLNESS_HOURS) {
-            $illnessTriggered = true;
-        }
-
-        // Check energy at 0% for >6 hours
-        if ($pet->energy_zero_since && $pet->energy_zero_since->diffInHours(now()) >= self::ILLNESS_HOURS) {
-            $illnessTriggered = true;
+        // Hygiene or energy at 0 % for ≥ 6 h counted outside quiet hours
+        // only — the illness clock pauses during school / bedtime (PRODUCT_SPEC
+        // §7). Example: energy back to 0 at local midnight, quiet 22–06 and
+        // 8–13 → the 6 h are 06–08 + 13–17, ill at 17:00 without steps.
+        foreach ([$pet->hygiene_zero_since, $pet->energy_zero_since] as $zeroSince) {
+            if ($zeroSince && $this->neglectSecondsOutsideQuietHours($quietHours, $zeroSince) >= self::ILLNESS_HOURS * 3600) {
+                $illnessTriggered = true;
+            }
         }
 
         if ($illnessTriggered) {
@@ -384,6 +386,16 @@ class EscalationService
     // ──────────────────────────────────────────────────────────────
     //  Helpers
     // ──────────────────────────────────────────────────────────────
+
+    /**
+     * Seconds since $zeroSince that fall outside quiet hours (family-local
+     * clock). Frozen time is already excluded: thawing shifts *_zero_since
+     * forward by the frozen duration (Pet::applyThaw).
+     */
+    private function neglectSecondsOutsideQuietHours(?QuietHours $quietHours, CarbonInterface $zeroSince): float
+    {
+        return QuietHours::splitSecondsBetween($quietHours, $zeroSince, now())['normal'];
+    }
 
     /**
      * Lowest metric as displayed to the child (integer 0–100).

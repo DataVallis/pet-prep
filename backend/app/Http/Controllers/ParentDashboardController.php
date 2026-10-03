@@ -61,6 +61,7 @@ class ParentDashboardController extends Controller
         // Get recent activities (last 20)
         $recentActivities = $pet->activities()
             ->orderBy('created_at', 'desc')
+            ->orderBy('id', 'desc')
             ->limit(20)
             ->get()
             ->map(fn (ActivityLog $log) => [
@@ -136,6 +137,7 @@ class ParentDashboardController extends Controller
         $perPage = (int) $request->query('per_page', 20);
         $paginated = $pet->activities()
             ->orderBy('created_at', 'desc')
+            ->orderBy('id', 'desc')
             ->paginate($perPage);
 
         return response()->json([

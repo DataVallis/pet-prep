@@ -7,7 +7,6 @@ use App\Events\PetUpdated;
 use App\Models\Pet;
 use App\Models\QuietHours;
 use Carbon\CarbonInterface;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
@@ -22,11 +21,13 @@ use Illuminate\Support\Facades\Log;
  * stored as floats so fractional per-minute decay is never lost to rounding;
  * API and broadcast payloads round for display (Pet::displayMetric()).
  *
- * Decay Rates (per hour, non-quiet):
+ * Rates come from breed_configs (M1-06), per hour outside quiet hours:
  *   Mutt:          Hunger -8%/hr,  Thirst -10%/hr
  *   Border Collie: Hunger -12%/hr, Thirst -15%/hr
- *   Hygiene:       -1.5%/hr gradual (interim; random drops are M1-05)
- *   Energy:        not decayed here (steps-based, M1-04)
+ *   Hygiene:       no gradual decay — random events drop it to 0
+ *                  (poops_per_day, HygieneEventService, M1-05)
+ *   Energy:        not time-decayed — steps / daily_steps_required, back to
+ *                  0 at the family's local midnight (PetActivityService, M1-04)
  *
  * Frozen (M1-02): while hard-stopped, ill, inactive or game over, metrics
  * don't change and the decay clock is advanced so nothing is caught up later.
@@ -43,17 +44,13 @@ class PetDecayService
     public const QUIET_HOURS_DECAY_MULTIPLIER = 0.10;
 
     /**
-     * Gradual hygiene decay per hour, outside quiet hours only.
-     * Interim rule until random hygiene events land (M1-05).
-     */
-    public const HYGIENE_DECAY_PER_HOUR = 1.5;
-
-    /**
      * Values within this distance of an integer are snapped to it, so float
      * accumulation (e.g. 2.27e-10 left after 750 mutt-hunger minutes) doesn't
      * delay reaching exactly 0 by a tick.
      */
     private const SNAP_EPSILON = 1e-6;
+
+    public function __construct(private HygieneEventService $hygieneEvents) {}
 
     /**
      * Process metric decay for all pets the scheduler should tick.
@@ -207,24 +204,33 @@ class PetDecayService
 
         $quietHours = $pet->quietHours();
         $isQuiet = $quietHours?->isQuietNow($now) ?? false;
+        // What the child saw before this tick (the steps below modify $pet).
+        $shownBefore = $pet->displayMetrics();
 
-        // Split the elapsed interval into normal and quiet hours.
-        ['normal' => $normalHours, 'quiet' => $quietHoursElapsed] = $this->splitElapsedHours($quietHours, $from, $now);
+        // Split the elapsed interval into normal and quiet time.
+        ['normal' => $normalSeconds, 'quiet' => $quietSeconds] = QuietHours::splitSecondsBetween($quietHours, $from, $now);
 
         // Hunger / thirst: full rate outside quiet hours, 10 % inside.
-        $weightedHours = $normalHours + $quietHoursElapsed * self::QUIET_HOURS_DECAY_MULTIPLIER;
+        $weightedHours = ($normalSeconds + $quietSeconds * self::QUIET_HOURS_DECAY_MULTIPLIER) / 3600;
 
-        $hungerDecayPerHour = (float) $breedConfig->hunger_decay_rate;
-        $thirstDecayPerHour = $this->getThirstDecayRate($pet->breed_type->value);
+        $newHunger = $this->decayMetric((float) $pet->hunger_level, $breedConfig->hunger_decay_rate * $weightedHours);
+        $newThirst = $this->decayMetric((float) $pet->thirst_level, $breedConfig->thirst_decay_rate * $weightedHours);
 
-        $newHunger = $this->decayMetric((float) $pet->hunger_level, $hungerDecayPerHour * $weightedHours);
-        $newThirst = $this->decayMetric((float) $pet->thirst_level, $thirstDecayPerHour * $weightedHours);
-        $newEnergy = (float) $pet->energy_level; // Energy comes from steps (M1-04), not decayed here
-        // Hygiene: gradual decay outside quiet hours only (random drops are M1-05).
-        $newHygiene = $this->decayMetric((float) $pet->hygiene_level, self::HYGIENE_DECAY_PER_HOUR * $normalHours);
+        // Energy is not time-decayed (M1-04): it follows the step count, which
+        // goes back to 0 at the family's local midnight (energy → 0 with it).
+        $pet->resetDailyStepsIfNewDay($now);
+        $newEnergy = (float) $pet->energy_level;
 
-        // Reset step counts at the family's local midnight
-        $this->resetStepCountIfMidnight($pet, $now);
+        // Hygiene (M1-05): no gradual decay; scheduled random events that
+        // fall into this interval drop it to 0. The neglect clock starts at
+        // the event time, also when the tick runs late.
+        $this->hygieneEvents->ensureScheduled($pet, $from, $now, $quietHours, $breedConfig);
+        $messAt = $this->hygieneEvents->applyDue($pet, $from, $now, $quietHours);
+        $newHygiene = (float) $pet->hygiene_level;
+        if ($messAt !== null) {
+            $newHygiene = 0.0;
+            $pet->hygiene_zero_since ??= $messAt;
+        }
 
         // Check for virtual age / certificate eligibility
         $certificateEligible = $this->checkCertificateEligibility($pet);
@@ -253,7 +259,7 @@ class PetDecayService
         $displayChanged = $certificateEligible !== $pet->certificate_eligible
             || $newPetState !== $pet->pet_state;
         foreach ($newMetrics as $metric => $value) {
-            if (Pet::displayValue($value) !== $pet->displayMetric($metric)) {
+            if (Pet::displayValue($value) !== $shownBefore[$metric]) {
                 $displayChanged = true;
             }
         }
@@ -297,81 +303,6 @@ class PetDecayService
         $nearest = round($value);
 
         return abs($value - $nearest) < self::SNAP_EPSILON ? $nearest : $value;
-    }
-
-    /**
-     * Split [from, to) into hours outside and inside quiet hours.
-     *
-     * Quiet status can only change at a school/bedtime start or end, so the
-     * interval is walked from boundary to boundary (at most 4 segments per
-     * day). Catch-up after missed ticks is therefore exact even across
-     * quiet-hours boundaries, and cheap for long gaps.
-     *
-     * @return array{normal: float, quiet: float}
-     */
-    private function splitElapsedHours(?QuietHours $quietHours, CarbonInterface $from, CarbonInterface $to): array
-    {
-        $totalSeconds = max(0.0, (float) $from->diffInSeconds($to, false));
-
-        if (! $quietHours || ! $quietHours->is_active) {
-            return ['normal' => $totalSeconds / 3600, 'quiet' => 0.0];
-        }
-
-        $normalSeconds = 0.0;
-        $quietSeconds = 0.0;
-        $cursor = Carbon::instance($from);
-        $end = Carbon::instance($to);
-
-        while ($cursor->lessThan($end)) {
-            $next = $quietHours->nextBoundaryAfter($cursor);
-            $next = ($next === null || $next->greaterThan($end)) ? $end->copy() : Carbon::instance($next);
-
-            $seconds = (float) $cursor->diffInSeconds($next, false);
-            if ($quietHours->isQuietNow($cursor)) {
-                $quietSeconds += $seconds;
-            } else {
-                $normalSeconds += $seconds;
-            }
-
-            $cursor = $next;
-        }
-
-        return ['normal' => $normalSeconds / 3600, 'quiet' => $quietSeconds / 3600];
-    }
-
-    /**
-     * Get the thirst decay rate per hour for a breed.
-     * Mutt: -10%/hr, Border Collie: -15%/hr
-     * (Moves to breed_configs in M1-06.)
-     */
-    private function getThirstDecayRate(string $breedType): float
-    {
-        return match ($breedType) {
-            'mutt' => 10.0,
-            'border_collie' => 15.0,
-            default => 10.0,
-        };
-    }
-
-    /**
-     * Reset the daily step count once the family's local date has changed
-     * since the last reset (local midnight, M1-03; stored in UTC).
-     */
-    private function resetStepCountIfMidnight(Pet $pet, CarbonInterface $now): void
-    {
-        $timezone = $pet->familyTimezone();
-        $today = Carbon::instance($now)->setTimezone($timezone)->toDateString();
-        $lastReset = $pet->last_step_reset_at?->copy()->setTimezone($timezone)->toDateString();
-
-        if ($lastReset !== $today) {
-            Pet::where('id', $pet->id)->update([
-                'daily_step_count' => 0,
-                'last_step_reset_at' => $now,
-            ]);
-            $pet->daily_step_count = 0;
-            $pet->last_step_reset_at = $now;
-            $pet->syncOriginalAttributes(['daily_step_count', 'last_step_reset_at']);
-        }
     }
 
     /**
