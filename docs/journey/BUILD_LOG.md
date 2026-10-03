@@ -8,6 +8,26 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-03 — Od veterinarja čist, sprehod vsak dan
+
+**Kaj se je zgodilo** (odločitvi Davida, isti dan)
+- **Ozdravitev = nov začetek:** ko 12 ur "pri veterinarju" mine, se kuža vrne **čist (higiena 100 %)** in vse ure zanemarjanja začnejo teči znova. Lakota in žeja ostaneta — otrok mora takoj poskrbeti zanj. S tem je odpravljena "neskončna zanka bolezni", odkrita zjutraj: prej je pes po vrnitvi takoj spet zbolel.
+- **Energija = dnevni sprehod:** 0 % po polnoči pomeni "danes še ni sprehoda", ne zanemarjanje. Ponoči zato ni več alarma staršu ob 1:00 in ne "bolnega" psa do prvega sprehoda. Ob polnoči (po uri družine) zapišemo včerajšnji sprehod: koraki, cilj, dosežen ali ne — podlaga za starševski pregled. Dan **brez enega samega koraka** → kuža zboli naslednje jutro ob koncu tihih ur (npr. ob 6:00). Nekaj korakov pod ciljem → samo zapis "cilj ni dosežen".
+- **Varovalke:** rojstni dan psa, dan med hard stopom ali boleznijo in zamuda strežnika čez več polnoči nikoli ne povzročijo bolezni.
+- **Pošteno štetje na grafu:** sprehod se v tedenskem grafu šteje enkrat na dan (ko je cilj dosežen), ne ob vsakem pošiljanju korakov.
+- **Številke:** 22 novih testov (simulacije po 5 minut čez 1–2 dni, družina v Ljubljani, spanje 22–6), skupaj 278 zelenih (4.901 preverjanj).
+
+**Zakaj je pomembno**
+Igra mora biti stroga, a nikoli brezizhodna: kazen (bolezen) se konča in otrok dobi novo priložnost. Sprehod pa je kot pri pravem psu — vsak dan, ne vsako uro.
+
+**Kako to povedati**
+- 🧒 *"Ko se kuža vrne od veterinarja, je čist kot nov. Hitro mu daj hrano in vodo — in ne pozabi: sprehod vsak dan!"*
+- 👩 *"Ponoči vas aplikacija ne bo budila zaradi sprehoda. Ob polnoči vidite, ali je otrok danes šel ven — in koliko korakov je naredil."*
+- 💼 Pravila so zasnovana kot vzgojni cikel: opozorilo → posledica → nov začetek. Brez "game over" spirale, ki bi otroka odvrnila.
+- 🛠 *"Dnevno pravilo teče v istem minutnem ticku z zaklepom vrstice, idempotentno (en zapis na psa in dan), začetek bolezni pa izračunamo iz tihih ur družine, tudi ob prestopu ure."*
+
+---
+
 ## 2026-10-03 — Kuža zdaj hodi s tabo in včasih naredi nered
 
 **Kaj se je zgodilo**

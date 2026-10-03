@@ -5,7 +5,7 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-02 afternoon (Claude, orchestrator — cloud session; PR #2 CI, PR #1 fal webhooks)
+- **Last updated:** 2026-10-03 (Claude, backend-engineer — illness recovery + daily walk rule on `feat/M1-04-energy-hygiene-breeds`)
 - **Realistic MVP completion:** ~45 % (see `docs/engineering/AUDIT-2026-10-02.md` + addendum)
 - **Current milestone:** M0 — repo hygiene → then M1 — core game loop end-to-end
 - **Production:** `https://api.petprep.si` is live (Docker Compose + Caddy on Hetzner CX23). Deploy is manual only (Actions → CI & Deploy → Run workflow on `main`). Last deploy 2026-10-03 (PR #1 + #2: signed fal.ai webhooks, CI) — first ever deploy via Actions.
@@ -32,7 +32,7 @@
 ## 3. Known bugs & debt (top items — full list in AUDIT + DEPLOYMENT.md)
 
 1. ~~**Decay math wrong** — hunger/thirst ≈1.8× too fast, hygiene frozen~~ → fixed (M1-01). ~~Energy never changes~~ → steps-based energy + random hygiene events on `feat/M1-04-energy-hygiene-breeds` (M1-04/05/06).
-1a. **Illness loop + nightly energy escalation (needs David):** after a 12 h illness the neglect clock is already ≥ 6 h → the pet falls ill again as soon as it's outside quiet hours, and the child can't act while ill → permanently ill. Energy at 0 % from midnight also gives phase 2 at 00:00 and a phase-3 parent alarm at 01:00 every night. Open questions in `docs/product/DECISIONS.md`.
+1a. ~~Illness loop + nightly energy escalation~~ → David decided 2026-10-03: illness recovery = fresh start; energy = daily walk (on `feat/M1-04-energy-hygiene-breeds`).
 2. **No child action endpoints**; Feed/Water only +20 % locally; walk/clean local only. (M1-07, M1-14)
 3. **Parent dashboard timeline/chart still mock data.** (M2-05)
 4. **Hard stop doesn't lock the child** (M1-16); decay during hard stop/illness fixed on `fix/M1-01-decay-engine` (M1-02).
@@ -57,11 +57,21 @@
 
 1. **David:** merge PR #4 (M0-10) → PR #5 (M1-01/02 decay) → Actions → Run workflow; merge `fix/M1-01b-display-thresholds`.
 2. **David:** rotate EAS signing passwords (M0-12); confirm free/paid split (BUSINESS_MODEL §7, B7).
-3. **David:** merge `feat/M1-03-family-timezone`. Next: **M1-04** energy from steps, **M1-05** hygiene events, **M1-06** breed config columns.
+3. **David:** merge `feat/M1-03-family-timezone`; review `feat/M1-04-energy-hygiene-breeds` (M1-04/05/06 + illness recovery + daily walk rule) → PR.
 4. **M1-07** child action API (feed/water/clean/steps/contract) + **M2-02** parent "add child / PIN" screen.
 5. **M1-08** private channels + single broadcast per change.
 
 ## 6. Session log
+
+### 2026-10-03 (cloud, backend-engineer) — David's rule changes: illness recovery + daily walk (branch `feat/M1-04-energy-hygiene-breeds`, pushed, no PR)
+- **Illness recovery = fresh start:** `Pet::recoverFromIllnessIfDue()` — at `illness_until`: hygiene 100 %, `hygiene_zero_since` null, other running `*_zero_since` → `illness_until`, `escalation_level` 0, `illness_until` → null, decay clock resumes there; hunger/thirst unchanged. Called first by the decay tick (also while hard-stopped → `frozen_at` = recovery moment), `thawIfDue()` (escalation), `PetActivityService::withLockedPet()` (saved + broadcast even if the action is refused/unchanged) and the `updating` hook. `thawTime()` removed (hard-stop thaw only).
+- **Energy = daily walk:** no `energy_zero_since` any more (tick nulls it, migration clears it); escalation neglect clocks = hunger/thirst/hygiene; energy counts for phase 1/2 only outside quiet hours; `pet_state` no longer `sick` for energy 0 (→ `low_energy` / `sleeping`). New `DailyWalkService::closeDayIfNeeded()` (tick + step sync, under the row lock): one `pet_daily_walks` row per closed local day (`firstOrCreate`, unique `(pet_id, local_date)`), then the step reset; finished day = yesterday, not birth day, not frozen, energy **showed** 0 % → `pets.walk_illness_due_at` = end of the quiet stretch containing midnight. `EscalationService::checkIllness()` starts the illness at that instant (`illness_until` = due + 12 h, `frozen_at` = due, walk row `illness_started_at`). Frozen tick: day still closes (no illness), a due walk illness is dropped.
+- **Dashboard count fix:** `recordSteps()` logs `walked_pet` only when a sync first reaches the goal (value = steps), so `weekly_performance.completed` counts a walk once per day.
+- Migration `2026_10_03_150000_create_pet_daily_walks_table` (+ `pets.walk_illness_due_at`). No route/payload shape change → no OpenAPI regen.
+- Tests: **278 passed (4,901 assertions)** on PostgreSQL 16, ~143 s. New `DailyWalkAndRecoveryTest` (22): fresh start values, no re-illness after recovery (5-min loop over 37 h), ill again exactly 6 h after a new mess post-recovery (13:00 local), game over 24 h after recovery, hard stop through recovery, recovery inside a step sync; walk row + idempotency, BC goal, below goal = no illness, no walk (0 and 10 steps) → ill at 06:00 local, bedtime+school stretch → 13:00, no quiet hours → midnight, close in a sync before the tick, birth day, hard stop at midnight, hard stop at due time, ill at midnight, multi-day outage, energy escalation only outside quiet hours, dashboard counts one walk. Updated: EnergyStepsTest (no energy clock, goal logging, no energy illness), EscalationTest (energy never ill/phase 3/game over), PetDecayTest (game over 24 h after recovery). Pint on touched files.
+- Docs: PRODUCT_SPEC §5/§6/§7, DECISIONS (2 lines, 4 open questions closed), ARCHITECTURE §2/§3/§4, DIAGRAMS (tick, state diagram Ill→OK "hygiene 100 %, clocks reset", new daily-walk flow, ER), ROADMAP, BUILD_LOG, KIDS, PARENTS, backend/CLAUDE.md.
+- **Resolved ambiguities (implementation choices, report to David):** "energy 0 %" = displayed 0 % (< 0.5 % of goal, consistent with the thresholds decision); escalation level resets to 0 on recovery; a day closed during hard stop / illness or after > 1 missed midnight never causes walk illness; a walk illness that comes due during a hard stop is dropped; illness starts at the planned instant even if the tick is late.
+- **New debt:** (1) recovery has no `activities_log` row ("back from the vet") — would need a new `ActivityType` + CHECK migration (M2-05). (2) `pet_daily_walks` not yet in any API (M2-05). (3) Escalation still reads pets without a row lock (pre-existing). (4) Walk illness uses `ignored_warning` value −1 like hygiene illness — the reason is only in the log / walk row.
 
 ### 2026-10-03 (cloud, backend-engineer) — M1-04 + M1-05 + M1-06 (branch `feat/M1-04-energy-hygiene-breeds`, pushed, no PR)
 - **M1-06:** migration `2026_10_03_140000_add_tunables_to_breed_configs_table` — `thirst_decay_rate` (10 | 15), `poops_per_day` (1 | 2), `feed_windows` jsonb (default 06–10, 17–21), `water_times_per_day` (3), `water_min_gap_minutes` (180); mutt defaults, BC backfill, CHECK constraints. `BreedConfigsSeeder` upserts all of them (keeps `created_at`); `seedBreedConfigs()` in tests now runs the real seeder. Thirst hard-code removed from `PetDecayService`. Filament `BreedConfigResource` lists/edits every field (feed windows as a start/end repeater, HH:MM validation); fixed the wrong hunger helper text ("0.08").

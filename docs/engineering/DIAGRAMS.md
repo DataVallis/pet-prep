@@ -72,19 +72,22 @@ sequenceDiagram
 flowchart TD
   T([Scheduler tick]) --> IDS[Load active pet IDs]
   IDS --> L{{For each pet: transaction + row lock}}
-  L --> F{Frozen?<br/>hard stop · ill · game over}
-  F -- yes --> FC["Advance last_decay_at<br/>(no catch-up, neglect clocks paused)"]
+  L --> RC{"Illness over?<br/>(illness_until ≤ now)"}
+  RC -- yes --> REC["Fresh start at illness_until:<br/>hygiene 100 %, neglect clocks restart,<br/>escalation 0"]
+  RC -- no --> F
+  REC --> F{Frozen?<br/>hard stop · ill · game over}
+  F -- yes --> FC["Advance last_decay_at<br/>(no catch-up, neglect clocks paused)<br/>midnight: close day, no walk illness"]
   F -- no --> SEG["Split elapsed time since last_decay_at<br/>into normal / quiet segments<br/>(family timezone, DST-aware)"]
   SEG --> D["Decay from breed_configs:<br/>hunger 8|12 %/h · thirst 10|15 %/h<br/>quiet hours ×0.10"]
   D --> MN{"New family-local day?"}
-  MN -- yes --> RS["Steps → 0, energy → 0 %<br/>(no time decay otherwise)"]
+  MN -- yes --> RS["Close yesterday: pet_daily_walks row<br/>energy showed 0 % → walk_illness_due_at<br/>= end of the night's quiet hours<br/>Steps → 0, energy → 0 %"]
   MN -- no --> HS
   RS --> HS["Schedule today's hygiene events<br/>(poops_per_day, outside quiet hours)"]
   HS --> HA{"Pending event in<br/>(last_decay_at, now]?"}
   HA -- yes --> H0["Hygiene → 0 %<br/>zero_since = event time"]
   HA -- "no / skipped" --> Z
-  H0 --> Z["Zero tracking & pet_state<br/>on displayed (rounded) values"]
-  Z --> W{Displayed value changed?}
+  H0 --> Z
+  Z["Zero tracking (hunger · thirst · hygiene — not energy)<br/>& pet_state on displayed (rounded) values"] --> W{Displayed value changed?}
   W -- yes --> B[Save + PetUpdated broadcast after commit]
   W -- no --> QS[Save quietly]
   B --> E
@@ -97,19 +100,37 @@ flowchart TD
 ```mermaid
 stateDiagram-v2
   [*] --> OK
-  OK --> Phase1: displayed metric ≤ 30 %
+  OK --> Phase1: displayed metric ≤ 30 %<br/>(energy only outside quiet hours)
   Phase1 --> Phase2: ≤ 10 %
-  Phase2 --> Phase3: any metric 0 % for > 1 h<br/>(parent alarm)
+  Phase2 --> Phase3: hunger / thirst / hygiene 0 % for > 1 h<br/>(parent alarm — never from energy)
   Phase1 --> OK: all ≥ 31 %
   Phase2 --> OK: all ≥ 31 %
-  Phase3 --> Ill: hygiene or energy 0 % ≥ 6 h<br/>(counted outside quiet hours only)
-  Ill --> OK: after 12 h lockout
-  Phase3 --> GameOver: any metric 0 % ≥ 24 h
+  Phase3 --> Ill: hygiene 0 % ≥ 6 h<br/>(counted outside quiet hours only)
+  OK --> Ill: no walk yesterday (energy showed 0 % at midnight)<br/>→ ill from the end of the night's quiet hours
+  Ill --> OK: after 12 h lockout<br/>hygiene 100 %, clocks reset (fresh start)
+  Phase3 --> GameOver: hunger / thirst / hygiene 0 % ≥ 24 h
   GameOver --> [*]: parent reset (M2-07)
-  note right of Ill: frozen — no decay, no hygiene events,<br/>neglect clocks paused, actions refused.<br/>(D) on thaw the clock still shows ≥ 6 h<br/>→ ill again (DECISIONS.md)
+  note right of Ill: frozen — no decay, no hygiene events,<br/>neglect clocks paused, actions refused.<br/>Recovery: hygiene 100 %, every running<br/>neglect clock restarts at recovery,<br/>hunger / thirst unchanged (David 2026-10-03)
   state HardStop
   OK --> HardStop: parent hard stop
   HardStop --> OK: parent lifts (clocks resume)
+```
+
+### Daily walk rule (energy, David 2026-10-03)
+
+```mermaid
+flowchart LR
+  M([Family-local midnight<br/>tick or first step sync]) --> R["pet_daily_walks row<br/>steps · goal · achieved"]
+  R --> Q{"Yesterday's energy<br/>showed 0 %?"}
+  Q -- "no, goal reached" --> OKD[Walk done]
+  Q -- "no, below goal" --> MISS[Missed goal — recorded only]
+  Q -- yes --> X{"Birth day · frozen at midnight ·<br/>more than one midnight passed?"}
+  X -- yes --> NONE[No illness]
+  X -- no --> DUE["walk_illness_due_at =<br/>end of the night's quiet hours<br/>(e.g. 06:00)"]
+  DUE --> FZ{"Frozen when due?"}
+  FZ -- yes --> DROP[Dropped]
+  FZ -- no --> ILL["Illness 12 h<br/>(same mechanism as hygiene)"]
+  R --> RST["Steps → 0, energy → 0 %<br/>(= today's walk not done yet, not neglect)"]
 ```
 
 ## 5. Child actions: steps and cleaning (service layer built, endpoints M1-07)
@@ -129,9 +150,9 @@ sequenceDiagram
   alt hard stop / ill / game over
     S-->>API: LOCKED (→ 423)
   else
-    S->>S: midnight reset if new local day
+    S->>S: new local day → close yesterday (walk row,<br/>maybe walk illness), steps → 0
     S->>S: increment = steps_today − stored (≤ 0 → UNCHANGED)<br/>cap at 200/min since last sync or local midnight
-    S->>DB: steps, energy = min(100, steps/goal), walked_pet row
+    S->>DB: steps, energy = min(100, steps/goal)<br/>walked_pet row only when the goal is first reached
     S-->>API: ACCEPTED / CAPPED / REJECTED / STALE
   end
   S-->>App: PetUpdated "walked_pet" after commit (Reverb)
@@ -148,6 +169,7 @@ erDiagram
   PETS ||--o{ ACTIVITIES_LOG : logs
   PETS ||--o{ PET_MEDIA_JOBS : "fal.ai requests"
   PETS ||--o{ PET_HYGIENE_EVENTS : "random messes"
+  PETS ||--o{ PET_DAILY_WALKS : "closed days"
   BREED_CONFIGS ||--o{ PETS : "tunables by breed_slug"
   USERS {
     bigint id
@@ -169,6 +191,7 @@ erDiagram
     timestamp last_decay_at
     timestamp frozen_at
     date hygiene_scheduled_through
+    timestamp walk_illness_due_at
     string media_status
     jsonb pet_dna
     bool is_hard_stopped
@@ -189,6 +212,15 @@ erDiagram
     timestamp scheduled_at
     string status "pending applied skipped"
     timestamp cleaned_at
+  }
+  PET_DAILY_WALKS {
+    date local_date
+    int steps
+    int goal
+    bool achieved
+    bool birth_day
+    timestamp illness_due_at
+    timestamp illness_started_at
   }
   PET_MEDIA_JOBS {
     string request_id

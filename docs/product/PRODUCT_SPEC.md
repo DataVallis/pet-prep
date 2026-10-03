@@ -41,7 +41,7 @@
 |---|---|---|---|
 | Lakota | −8 %/h (0 % v 12,5 h) | −12 %/h (0 % v 8,3 h) | gumb Hrani — **samo v oknih** zjutraj in zvečer (2× / dan) → 100 % |
 | Žeja | −10 %/h | −15 %/h | gumb Voda — 3× / dan → 100 % |
-| Gibanje (energija) | cilj **4.000** korakov / dan | cilj **10.000** korakov / dan | koraki iz HealthKit / Health Connect; energija = koraki / cilj; **reset na 0 % ob polnoči** |
+| Gibanje (energija) = **dnevni sprehod** | cilj **4.000** korakov / dan | cilj **10.000** korakov / dan | koraki iz HealthKit / Health Connect; energija = današnji koraki / cilj; **reset na 0 % ob lokalni polnoči** (0 % = "danes še ni bilo sprehoda", ne zanemarjanje) |
 | Higiena | naključno **1× / dan** pade na 0 % | naključno **2× / dan** pade na 0 % | mini-igra čiščenja (drgnjenje madežev) → 100 % |
 
 - **Tihe ure** (starš nastavi, npr. šola 8:00–13:00, spanje 22:00–6:00): upadanje se upočasni za 90 %, obvestila se ne pošiljajo, higienski dogodki se ne zgodijo.
@@ -51,6 +51,7 @@
 - Vse številke iz tabele (hitrosti, cilji korakov, število dogodkov, okna hranjenja 06:00–10:00 in 17:00–21:00, voda 3× / dan z razmikom ≥ 3 h) so v tabeli `breed_configs` in jih admin spreminja v Filamentu — ne v kodi (M1-06).
 
 **Pojasnila implementacije (M1-04, M1-05 — 3. 10. 2026):**
+- **Gibanje = dnevni sprehod (David, 3. 10. 2026):** energija ni urna metrika zanemarjanja. Za energijo ni ure "0 % > 1 h" (alarm faze 3), ne 6-urne bolezni ne 24-urnega game overja. Opomnika faze 1 / 2 zaradi nizke energije sta le izven tihih ur. Pravilo dneva — glej §7 "Dnevni sprehod".
 - **Gibanje:** telefon pošilja *skupno* število današnjih korakov; šteje največja prejeta vrednost (ponovljen ali manjši sync ne spremeni ničesar). Energija se s časom ne zmanjšuje — samo ob lokalni polnoči pade na 0 % (koraki → 0). Sync korakov energije nikoli ne zniža, zato ima novorojen pes 100 % do prve polnoči.
 - **Anti-cheat:** dovoljeno je največ 200 korakov na minuto od zadnjega sprejetega synca (oz. od lokalne polnoči za prvi sync dneva). Presežek se zavrne, ne celoten sync: če telefon po 5 minutah javi +2.000 korakov, sprejmemo 1.000; preostanek se lahko sprejme ob naslednjem syncu, ko mine dovolj časa. Sync s časom v prihodnosti štejemo, kot da je prišel zdaj; sync z včerajšnjim datumom se ignorira. Med hard stopom, boleznijo in game overjem se koraki ne sprejmejo.
 - **Higiena:** postopnega padanja ni več (začasno pravilo 1,5 %/h je odstranjeno). Za vsak lokalni dan vnaprej izžrebamo čase "kakca" (mešanček 1×, Border Collie 2×) — samo izven tihih ur, vsak v svojem enakem delu netihega dne (pri 2× en v prvi in en v drugi polovici), zato sta praviloma razmaknjena čez dan. Ko čas mine, higiena pade na 0 %; čiščenje vrne 100 %. Dogodek, ki pade v hard stop, bolezen ali pred rojstvo psa, se ne zgodi (ne nadoknadi se). Če strežnik zamudi, se zamujeni dogodki uveljavijo enkrat, ura zanemarjanja pa teče od dejanskega časa dogodka.
@@ -64,13 +65,18 @@
 | 3 — Intervencija | metrika 0 % > 1 h | alarm na telefonu starša (Reverb + push): "Tvoj otrok danes ni poskrbel za psa." |
 
 Pragovi se primerjajo s prikazano (zaokroženo) vrednostjo.
+Za **gibanje (energijo)** veljata samo fazi 1 in 2, in to le izven tihih ur; faza 3, bolezen po 6 h in game over se za energijo ne štejejo (dnevni sprehod, §7). Stanje psa "bolan" (`sick`) pomeni samo umazanega ali dejansko bolnega psa — pri 0 % energije je pes "utrujen" (`low_energy`).
 
 ## 7. Kazni
 
-- **Bolezen:** higiena **ali** gibanje 0 % > 6 h (izven tihih ur) → zaslon sivo, video težkega dihanja, **12 h timeout** ("na opazovanju pri veterinarju"), otrok ne more ničesar.
-  - *Pojasnilo (M1-04, 3. 10. 2026):* 6 ur se šteje **samo izven tihih ur** (med tihimi urami števec stoji), čas hard stopa in bolezni pa se ne šteje. Primer — tihe ure spanje 22:00–06:00 in šola 8:00–13:00, otrok ne hodi: energija pade na 0 % ob polnoči; šteje se 06:00–08:00 (2 h) in 13:00–17:00 (4 h) → **pes zboli ob 17:00**, če otrok do takrat ne sinhronizira korakov (400 korakov ob 15:30 = 10 % → zdrav). Brez tihih ur bi zbolel že ob 06:00.
-  - **(D)** Kaj sledi po 12 h bolezni, specifikacija ne pove. Zdaj števec po bolezni nadaljuje tam, kjer je ostal (že ≥ 6 h), zato pes izven tihih ur takoj spet zboli, otrok pa med boleznijo ne more ničesar (tudi korakov ne). Glej odprta vprašanja v `DECISIONS.md`.
-  - **(D)** Ker energija vsako noč pade na 0 %, faza 1–3 eskalacije (≤ 30 %, ≤ 10 %, 0 % > 1 h) velja tudi za gibanje: brez sprememb pravil bi starš vsako noč ob 01:00 dobil alarm faze 3 in rdeč semafor do prvega sprehoda. Glej `DECISIONS.md`.
+- **Bolezen:** higiena 0 % > 6 h (izven tihih ur) **ali** včeraj ni bilo sprehoda (glej "Dnevni sprehod") → zaslon sivo, video težkega dihanja, **12 h timeout** ("na opazovanju pri veterinarju"), otrok ne more ničesar.
+  - *Pojasnilo (M1-04, 3. 10. 2026):* 6 ur higiene se šteje **samo izven tihih ur** (med tihimi urami števec stoji), čas hard stopa in bolezni pa se ne šteje. Primer — tihe ure spanje 22:00–06:00, kakec ob 09:00, nihče ne počisti → pes zboli ob 15:00.
+  - **Ozdravitev = nov začetek (David, 3. 10. 2026):** ko 12 h bolezni mine, se kuža vrne od veterinarja **čist — higiena 100 %**, in **vse ure zanemarjanja začnejo teči znova od trenutka ozdravitve** (alarm faze 3 po 1 h, bolezen po 6 h, game over po 24 h). Lakota in žeja ostaneta, kakršni sta bili (otrok ju zdaj spet lahko napolni); energija ostane vezana na korake; opomniki (faze) začnejo znova od 0. Če je med boleznijo vklopljen hard stop, je kuža ob koncu bolezni ozdravljen, ure pa stojijo, dokler starš hard stopa ne izklopi. Tako pes po ozdravitvi ne zboli takoj spet (prejšnja "neskončna zanka bolezni"); če ga otrok spet zanemari, zboli po običajnih 6 h izven tihih ur.
+- **Dnevni sprehod (David, 3. 10. 2026):** ob lokalni polnoči družine se dan zaključi enkrat na psa: zapišemo včerajšnje korake, cilj pasme in ali je bil cilj dosežen (za starševski pregled).
+  - Če je včerajšnja energija ob polnoči kazala **0 %** (sploh ni bilo sprehoda; tudi npr. 10 korakov pri mešančku se prikaže kot 0 %), kuža **zboli ob koncu tihih ur te noči** (npr. ob 06:00 pri spanju 22:00–06:00; če spanju takoj sledi šola, ob koncu šole; brez tihih ur že ob polnoči) — 12 h, kot zgoraj.
+  - Nekaj korakov, a manj od cilja → samo zapis "cilj ni dosežen", brez bolezni.
+  - Rojstni dan psa nikoli ne povzroči bolezni. Dan, ki se zaključi med hard stopom ali boleznijo, ne povzroči bolezni; če je starš ob predvidenem začetku bolezni vklopil hard stop, bolezen odpade. Če je strežnik zamudil več kot eno polnoč, bolezni ne sprožimo.
+  - Koraki po polnoči že štejejo za novi dan in včerajšnjega ne rešijo.
 - **Game over / "Virtual Shelter Intervention":** katerakoli metrika 0 % **24 h** → pes odvzet, otrokov zaslon zaklenjen. Staršu se ponudi:
   - **Breed Downgrade reset** (brezplačno, z odobritvijo starša) — lažja pasma;
   - **Second Chance reset** (19,99 €) — po MVP.
