@@ -6,7 +6,6 @@ use App\Enums\ActivityType;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\Pet;
-use App\Models\QuietHours;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -77,10 +76,10 @@ class ParentDashboardController extends Controller
             'pet' => [
                 'id' => $pet->id,
                 'breed_type' => $pet->breed_type->value,
-                'hunger_level' => $pet->hunger_level,
-                'thirst_level' => $pet->thirst_level,
-                'energy_level' => $pet->energy_level,
-                'hygiene_level' => $pet->hygiene_level,
+                'hunger_level' => $pet->displayMetric('hunger_level'),
+                'thirst_level' => $pet->displayMetric('thirst_level'),
+                'energy_level' => $pet->displayMetric('energy_level'),
+                'hygiene_level' => $pet->displayMetric('hygiene_level'),
                 'pet_state' => $pet->pet_state->value,
                 'is_active' => $pet->is_active,
                 'is_ill' => $pet->isIll(),

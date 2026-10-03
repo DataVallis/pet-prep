@@ -61,9 +61,9 @@ class PairingController extends Controller
                 'pet' => [
                     'id' => $pet->id,
                     'breed_type' => $pet->breed_type->value,
-                    'hunger_level' => $pet->hunger_level,
-                    'energy_level' => $pet->energy_level,
-                    'hygiene_level' => $pet->hygiene_level,
+                    'hunger_level' => $pet->displayMetric('hunger_level'),
+                    'energy_level' => $pet->displayMetric('energy_level'),
+                    'hygiene_level' => $pet->displayMetric('hygiene_level'),
                     'born_at' => $pet->born_at->toIso8601String(),
                     'is_active' => $pet->is_active,
                     'pet_dna' => [

@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
 
 class QuietHours extends Model
 {
@@ -53,7 +55,7 @@ class QuietHours extends Model
      * Determine if the current time falls within any quiet period.
      * Handles overnight wrap (e.g., 22:00–06:00).
      *
-     * @param  \Illuminate\Support\Carbon|null  $now  The time to check (defaults to now).
+     * @param  Carbon|null  $now  The time to check (defaults to now).
      */
     public function isQuietNow($now = null): bool
     {
@@ -75,6 +77,34 @@ class QuietHours extends Model
         }
 
         return false;
+    }
+
+    /**
+     * The first moment strictly after $time at which isQuietNow() can change
+     * value: the next school/bedtime start or end (minute precision, same
+     * clock as isQuietNow). Null when no window is configured.
+     */
+    public function nextBoundaryAfter(CarbonInterface $time): ?CarbonInterface
+    {
+        $next = null;
+
+        foreach ([$this->school_start, $this->school_end, $this->bedtime_start, $this->bedtime_end] as $boundary) {
+            if (! $boundary) {
+                continue;
+            }
+
+            [$hour, $minute] = array_map('intval', explode(':', substr($boundary, 0, 5)));
+            $candidate = $time->copy()->setTime($hour, $minute);
+            if ($candidate->lessThanOrEqualTo($time)) {
+                $candidate = $candidate->addDay();
+            }
+
+            if ($next === null || $candidate->lessThan($next)) {
+                $next = $candidate;
+            }
+        }
+
+        return $next;
     }
 
     /**

@@ -33,13 +33,16 @@ class EscalationService
      * Escalation level thresholds (percentage of metric).
      */
     public const SOFT_WARNING_THRESHOLD = 30;
+
     public const CRITICAL_ALERT_THRESHOLD = 10;
+
     public const PARENT_INTERVENTION_HOURS = 1;
 
     /**
      * Neglect thresholds (hours at 0%).
      */
     public const ILLNESS_HOURS = 6;
+
     public const GAME_OVER_HOURS = 24;
 
     /**
@@ -83,6 +86,17 @@ class EscalationService
         if (! $pet->is_active || $pet->is_game_over) {
             return false;
         }
+
+        // M1-02: hard stop and illness freeze the neglect clocks — no new
+        // escalation, illness or game over while frozen. (Illness still ends
+        // by itself when illness_until passes.)
+        if ($pet->isFrozen()) {
+            return false;
+        }
+
+        // A freeze that ended without a model event (illness expiry) shifts
+        // *_zero_since forward by the frozen duration before we evaluate.
+        $pet->thawIfDue();
 
         // Check for game over first (highest priority)
         if ($this->checkGameOver($pet)) {
