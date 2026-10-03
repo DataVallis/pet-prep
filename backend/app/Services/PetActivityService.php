@@ -175,23 +175,32 @@ class PetActivityService
             // An illness that ended before the next tick: fresh start first,
             // so the action sees the recovered pet.
             $recovered = $locked->recoverFromIllnessIfDue(now()->startOfSecond());
+            $dayBefore = $locked->last_step_reset_at?->toIso8601String();
 
             $result = $action($locked);
             if ($recovered && $locked->isDirty()) {
                 $locked->saveQuietly();
             }
 
-            return [$locked, $result, $recovered];
+            // The action closed the previous local day (steps / energy → 0,
+            // maybe a walk illness planned) even if it changed nothing else.
+            $dayClosed = $dayBefore !== $locked->last_step_reset_at?->toIso8601String();
+
+            return [$locked, $result, $recovered || $dayClosed];
         };
 
         /** @var array{0: Pet, 1: ActionResult, 2: bool} $outcome */
         $outcome = DB::transactionLevel() > 0 ? $work() : DB::transaction($work);
-        [$locked, $result, $recovered] = $outcome;
+        [$locked, $result, $bookkeeping] = $outcome;
 
         $pet->setRawAttributes($locked->getAttributes(), true);
 
-        if ($result->changed() || $recovered) {
+        // One broadcast after commit: the action's own event, or a plain
+        // metric_changed for a recovery / midnight reset the action applied.
+        if ($result->changed()) {
             DB::afterCommit(fn () => broadcast(new PetUpdated($locked, $activity->value)));
+        } elseif ($bookkeeping) {
+            DB::afterCommit(fn () => broadcast(new PetUpdated($locked, 'metric_changed')));
         }
 
         return $result;

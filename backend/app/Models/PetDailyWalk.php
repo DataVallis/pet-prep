@@ -18,6 +18,7 @@ use Illuminate\Support\Carbon;
  * @property bool $birth_day The pet was born that day (never causes illness).
  * @property Carbon|null $illness_due_at Planned illness start (no walk at all).
  * @property Carbon|null $illness_started_at When that illness actually started.
+ * @property Carbon|null $illness_skipped_at When the planned illness was dropped (frozen / far too late).
  */
 class PetDailyWalk extends Model
 {
@@ -33,6 +34,7 @@ class PetDailyWalk extends Model
         'birth_day',
         'illness_due_at',
         'illness_started_at',
+        'illness_skipped_at',
     ];
 
     /**
@@ -48,6 +50,7 @@ class PetDailyWalk extends Model
             'birth_day' => 'boolean',
             'illness_due_at' => 'datetime',
             'illness_started_at' => 'datetime',
+            'illness_skipped_at' => 'datetime',
         ];
     }
 

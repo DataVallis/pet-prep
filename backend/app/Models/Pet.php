@@ -62,6 +62,13 @@ class Pet extends Model
             if ($reactivated && ! $pet->isDirty('last_decay_at')) {
                 $pet->last_decay_at = $now;
             }
+
+            // A pet that comes back (re-activated, game over undone) never
+            // inherits a walk illness planned before.
+            if (($pet->isDirty('is_active') && $pet->is_active)
+                || ($pet->isDirty('is_game_over') && ! $pet->is_game_over)) {
+                $pet->walk_illness_due_at = null;
+            }
         });
     }
 

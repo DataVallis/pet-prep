@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\PetStateEnum;
 use App\Events\PetUpdated;
 use App\Models\Pet;
+use App\Models\PetDailyWalk;
 use App\Models\QuietHours;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Facades\DB;
@@ -191,6 +192,9 @@ class PetDecayService
                 // a walk illness that comes due while frozen is dropped.
                 $this->dailyWalks->closeDayIfNeeded($pet, $now, allowIllness: false);
                 if ($pet->walk_illness_due_at !== null && $pet->walk_illness_due_at->lessThanOrEqualTo($now)) {
+                    PetDailyWalk::where('pet_id', $pet->id)
+                        ->where('illness_due_at', $pet->walk_illness_due_at)
+                        ->update(['illness_skipped_at' => $now]);
                     $pet->walk_illness_due_at = null;
                 }
             }

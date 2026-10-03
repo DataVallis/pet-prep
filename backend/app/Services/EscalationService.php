@@ -275,13 +275,29 @@ class EscalationService
         // the night's quiet hours), also when this tick runs a bit late.
         $walkIllnessAt = $pet->walk_illness_due_at;
         if ($walkIllnessAt !== null && $walkIllnessAt->lessThanOrEqualTo(now())) {
-            $this->triggerIllnessState($pet, $walkIllnessAt, 'missed_walk');
+            // So late that the whole 12 h would already be over (scheduler
+            // down): skip it instead of an illness that ends instantly and
+            // would trigger the recovery side effects.
+            if ($walkIllnessAt->copy()->addHours(self::ILLNESS_LOCKOUT_HOURS)->lessThanOrEqualTo(now())) {
+                $pet->forceFill(['walk_illness_due_at' => null])->saveQuietly();
 
-            PetDailyWalk::where('pet_id', $pet->id)
-                ->where('illness_due_at', $walkIllnessAt)
-                ->update(['illness_started_at' => $walkIllnessAt]);
+                PetDailyWalk::where('pet_id', $pet->id)
+                    ->where('illness_due_at', $walkIllnessAt)
+                    ->update(['illness_skipped_at' => now()]);
 
-            return true;
+                Log::warning('EscalationService: walk illness skipped — evaluated after its 12 h had passed', [
+                    'pet_id' => $pet->id,
+                    'illness_due_at' => $walkIllnessAt->toIso8601String(),
+                ]);
+            } else {
+                $this->triggerIllnessState($pet, $walkIllnessAt, 'missed_walk');
+
+                PetDailyWalk::where('pet_id', $pet->id)
+                    ->where('illness_due_at', $walkIllnessAt)
+                    ->update(['illness_started_at' => $walkIllnessAt]);
+
+                return true;
+            }
         }
 
         $quietHours = $pet->quietHours();
@@ -388,6 +404,7 @@ class EscalationService
             'is_active' => false,
             'pet_state' => 'sick',
             'escalation_level' => 3,
+            'walk_illness_due_at' => null,
         ]);
 
         ActivityLog::create([

@@ -457,3 +457,103 @@ describe('Parent dashboard counts a walk once per day', function () {
         expect($today['completed'])->toBe(1);
     });
 });
+
+// ──────────────────────────────────────────────────────────────────────
+//  Review follow-ups (PR #10)
+// ──────────────────────────────────────────────────────────────────────
+
+describe('Daily walk: review follow-ups', function () {
+    it('skips a walk illness whose 12 h are already over when the scheduler comes back (down 06:00 → 19:00 local)', function () {
+        $pet = dwPet(pet: ['hunger_level' => 0, 'hunger_zero_since' => Carbon::parse('2026-10-06 03:00:00')]);
+
+        dwTick($pet, '2026-10-05 22:00:00');                       // midnight: no walk → due 04:00 UTC
+        dwTick($pet, '2026-10-06 03:55:00');
+        expect($pet->fresh()->walk_illness_due_at->equalTo(Carbon::parse('2026-10-06 04:00:00')))->toBeTrue();
+
+        $back = dwTick($pet, '2026-10-06 17:00:00');                // 19:00 local, due + 12 h = 16:00 UTC
+
+        expect($back->illness_until)->toBeNull();
+        expect($back->walk_illness_due_at)->toBeNull();
+        expect($back->hunger_zero_since->equalTo(Carbon::parse('2026-10-06 03:00:00')))->toBeTrue(); // no fresh start
+        $walk = PetDailyWalk::where('pet_id', $pet->id)->sole();
+        expect($walk->illness_started_at)->toBeNull();
+        expect($walk->illness_skipped_at->equalTo(Carbon::parse('2026-10-06 17:00:00')))->toBeTrue();
+        expect(ActivityLog::where('pet_id', $pet->id)->where('value', -1)->count())->toBe(0);
+    });
+
+    it('keeps the planned start when the tick is late but inside the 12 h', function () {
+        $pet = dwPet();
+        dwTick($pet, '2026-10-05 22:00:00');
+
+        $late = dwTick($pet, '2026-10-06 10:00:00'); // 6 h late
+
+        expect($late->illness_until->equalTo(Carbon::parse('2026-10-06 16:00:00')))->toBeTrue();
+        expect(PetDailyWalk::where('pet_id', $pet->id)->sole()->illness_skipped_at)->toBeNull();
+    });
+
+    it('records a walk illness dropped during a hard stop as skipped', function () {
+        $pet = dwPet();
+        dwTick($pet, '2026-10-05 22:00:00');
+        Pet::findOrFail($pet->id)->update(['is_hard_stopped' => true]);
+
+        dwTick($pet, '2026-10-06 04:05:00');
+
+        expect(PetDailyWalk::where('pet_id', $pet->id)->sole()->illness_skipped_at)->not->toBeNull();
+    });
+
+    it('clears a planned walk illness on game over and on reactivation', function () {
+        $pet = dwPet(pet: [
+            'hunger_level' => 0,
+            'hunger_zero_since' => now()->subHours(25),
+            'walk_illness_due_at' => now()->addHours(3),
+        ]);
+
+        app(EscalationService::class)->processPetEscalation($pet);
+        expect($pet->fresh()->is_game_over)->toBeTrue();
+        expect($pet->fresh()->walk_illness_due_at)->toBeNull();
+
+        Pet::whereKey($pet->id)->update(['walk_illness_due_at' => now()->addHours(3)]);
+        Pet::findOrFail($pet->id)->update(['is_game_over' => false, 'is_active' => true]);
+        expect($pet->fresh()->walk_illness_due_at)->toBeNull();
+    });
+
+    it('broadcasts once when a step sync closed the day but the sync itself was stale', function () {
+        $pet = dwPet();
+        dwSteps($pet, 4000);
+
+        Event::fake([PetUpdated::class]);
+        Carbon::setTestNow('2026-10-05 22:30:00'); // 00:30 local, no tick since the morning
+        $result = app(PetActivityService::class)->recordSteps(Pet::findOrFail($pet->id), 4100, Carbon::parse('2026-10-05 21:50:00'));
+
+        expect($result->status)->toBe(ActionResult::STALE);
+        expect($pet->fresh()->energy_level)->toBe(0.0);
+        expect(PetDailyWalk::where('pet_id', $pet->id)->sole()->achieved)->toBeTrue();
+        Event::assertDispatchedTimes(PetUpdated::class, 1);
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'metric_changed');
+    });
+
+    it('does not broadcast an unchanged sync that closed no day', function () {
+        $pet = dwPet();
+        dwSteps($pet, 1000);
+
+        Event::fake([PetUpdated::class]);
+        expect(dwSteps($pet, 1000)->status)->toBe(ActionResult::UNCHANGED);
+        Event::assertNotDispatched(PetUpdated::class);
+    });
+});
+
+describe('Energy backfill migration', function () {
+    it('sets energy from today\'s steps for existing pets and keeps birth-day grace', function () {
+        $old = dwPet(pet: ['daily_step_count' => 1000, 'energy_level' => 100]);
+        $collie = dwPet(pet: ['daily_step_count' => 5000, 'energy_level' => 0], breed: 'border_collie');
+        $over = dwPet(pet: ['daily_step_count' => 9000, 'energy_level' => 10]);
+        $newborn = dwPet(pet: ['born_at' => now(), 'daily_step_count' => 0, 'energy_level' => 100]);
+
+        (require database_path('migrations/2026_10_03_160100_backfill_pet_energy_from_steps.php'))->up();
+
+        expect($old->fresh()->energy_level)->toEqualWithDelta(25.0, 1e-9);
+        expect($collie->fresh()->energy_level)->toEqualWithDelta(50.0, 1e-9);
+        expect($over->fresh()->energy_level)->toBe(100.0);
+        expect($newborn->fresh()->energy_level)->toBe(100.0);
+    });
+});
