@@ -2,7 +2,9 @@
 
 **Source of truth for production:** `docs/PRODUCTION_DEPLOYMENT.md` (architecture, server layout, CI/CD, backups, rollback) and `docs/PRODUCTION_ENV.md` (env variables). This file only summarises and tracks review findings.
 
-## Current state (2026-10-02)
+## Current state (2026-10-03)
+
+- **2026-10-03:** first successful deploy through GitHub Actions (manual "Run workflow" on `main`). Repository secret `PRODUCTION_SSH_PRIVATE_KEY` = dedicated ED25519 key `github-actions-deploy@petprep`, public half in `/home/deploy/.ssh/authorized_keys` (private copy removed from the server). `FAL_AI_API_KEY` set in `/opt/petprep/.env`; verified `fal OK`, migration `pet_media_jobs` ran, all containers recreated.
 
 - **Live:** `https://api.petprep.si` (health `/up` responds 200).
 - **Server:** Hetzner CX23, Ubuntu 26.04, `138.199.172.97`. Admin `root@`, deploy user `deploy@` (key `~/.ssh/petprep_deploy_key`).
