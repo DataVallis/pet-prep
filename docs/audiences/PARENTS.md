@@ -11,7 +11,7 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 
 ## Kako poteka
 1. **Vi** si naložite aplikacijo, ustvarite profil otroka in dobite **6-mestno kodo PIN** (velja 15 minut). *(načrt: zaslon "Dodaj otroka")*
-2. **Otrok** na svojem telefonu vtipka PIN. Otrok **ne potrebuje e-pošte** in ne daje osebnih podatkov.
+2. **Otrok** na svojem telefonu vtipka PIN. Otrok **ne potrebuje e-pošte** in ne daje osebnih podatkov. *(načrt: danes testni otroški račun še uporablja e-pošto)*
 3. Otrok s prstom podpiše **Pogodbo o odgovornosti** in pes se "rodi".
 4. **12 tednov** (1 teden = 1 mesec pasjega življenja) otrok skrbi za psa. Na koncu: **Certifikat odgovornosti**. *(načrt)*
 
@@ -42,7 +42,7 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur) in potrebuje 10.000
 Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava žival.
 
 ## Varnost in zasebnost otroka
-- Otrok se prijavi samo s PIN-om — **brez e-pošte in brez gesla**.
+- Otrok se prijavi samo s PIN-om — **brez e-pošte in brez gesla**. *(odločeno; v razvoju — M2-02)*
 - AI videi psa so **kriptografsko preverjeni**: na zaslon pride samo vsebina, ki jo je ustvaril PetPrep (prek fal.ai), z zaupanja vrednih naslovov.
 - Brez oglasov. Brez klepeta s tujci.
 - Strežniki v EU (Hetzner). *(načrt: politika zasebnosti, privolitev staršev, izbris računa)*
