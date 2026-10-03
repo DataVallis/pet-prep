@@ -52,11 +52,11 @@
 
 ## 5. Next steps (priority queue)
 
-1. **David:** rotate EAS signing passwords (M0-12).
-2. **David:** confirm the free/paid split (BUSINESS_MODEL §7) and B7 (non-consumable vs subscription).
-3. **David:** visually check the child HUD (M0-14).
-4. **M0-10** hide test logins in the app.
-5. **M1-01 → M1-10** backend core loop (`/feature M1-01`), then **M1-11 → M1-18** mobile.
+1. **David:** merge PR #4 (M0-10) → PR #5 (M1-01/02 decay) → Actions → Run workflow; answer the two decay questions (thresholds on displayed value? keep interim hygiene decay until M1-05?).
+2. **David:** rotate EAS signing passwords (M0-12); confirm free/paid split (BUSINESS_MODEL §7, B7).
+3. **M1-03** family timezone (quiet hours/midnight in Europe/Ljubljana), **M1-04** energy from steps, **M1-05** hygiene events, **M1-06** breed config columns.
+4. **M1-07** child action API (feed/water/clean/steps/contract) + **M2-02** parent "add child / PIN" screen.
+5. **M1-08** private channels + single broadcast per change.
 
 ## 6. Session log
 
