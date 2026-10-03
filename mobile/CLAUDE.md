@@ -24,7 +24,8 @@ Env: `EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_REVERB_APP_KEY|HOST|PORT|SCHEME` (see `
 ## Current reality (2026-10-02) — read before coding
 - `AppNavigator` routes by `user.role` (parent → `ParentDashboardScreen`, child → HUD); `/api/login` and `/api/user` now also return `pet`. `ParentAppNavigator` is obsolete.
 - Feed/Water only add +20 % locally (not persisted, no backend endpoint); walk sync and cleaning are local only; parent dashboard timeline/chart still use `MOCK_*` data; paywall is simulated.
-- `PairingScreen` has quick-login buttons with seeded test credentials — must be `__DEV__`-only (M0-10).
+- `PairingScreen` quick-login buttons (seeded test credentials) render only when `__DEV__` (M0-10). The lucide mock in `__mocks__/` returns a View for any icon name.
+- No parent UI to generate a pairing PIN yet (`api.generatePin` is unused) — planned with M2-02.
 - Session isn't restored on launch; hard stop never sets `lockState`.
 - `expo-sensors` Pedometer cannot read step history on Android → Health Connect needed (M3-05).
 - HealthKit, RevenueCat and push require a **dev build**, not Expo Go.

@@ -60,6 +60,11 @@
 
 ## 6. Session log
 
+### 2026-10-03 — M0-10 dev-only demo logins; M0-14 HUD checked
+- Quick-login buttons and the `child@test.com` placeholder now render only in development builds (`__DEV__`); Jest test added (74/74). Lucide icon mock made generic.
+- Found in prod: test accounts `parent@test.com` / `child@test.com` (password `password`) exist and the test pet had hit game over (decay bug); David revived it via tinker. → M0-15 before public beta.
+- Gap found: parent app has no "add child / show PIN" UI (`api.generatePin` unused).
+
 ### 2026-10-03 — First deploy through GitHub Actions
 - PR #1 and #2 merged. Deploy job needed the `PRODUCTION_SSH_PRIVATE_KEY` repo secret (never set before — the old workflow never ran); David created a dedicated deploy key and the manual run succeeded.
 - Verified on the server: all app containers recreated, `fal OK` (FAL_AI_API_KEY loaded), migration `2026_10_02_120000_create_pet_media_jobs_table` ran.

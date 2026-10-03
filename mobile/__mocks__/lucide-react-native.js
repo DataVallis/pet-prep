@@ -1,6 +1,7 @@
 /**
- * Manual mock for lucide-react-native in test environment.
- * Renders all icons as simple View components.
+ * Manual mock for lucide-react-native in the test environment.
+ * Every named icon (present or future) renders as a plain View, so screens
+ * don't break tests when they start using a new icon.
  */
 
 const React = require('react');
@@ -8,18 +9,13 @@ const { View } = require('react-native');
 
 const MockIcon = (props) => React.createElement(View, props);
 
-// Common icon names used throughout the PetPrep app
-const icons = [
-  'Beef', 'Droplet', 'Footprints', 'Sparkles', 'PawPrint', 'Lock',
-  'Pencil', 'ScrollText', 'X', 'Check', 'Play', 'Square', 'Wifi',
-  'WifiOff', 'AlertTriangle', 'Heart', 'Activity', 'Clock', 'Moon',
-  'Sun', 'Zap', 'Shield', 'ShieldAlert', 'RefreshCw', 'Trash2',
-  'AlertCircle', 'CheckCircle', 'LayoutDashboard', 'ChevronLeft',
-  'Crown', 'RotateCcw', 'Settings',
-];
-
-const moduleExports = {};
-icons.forEach((name) => { moduleExports[name] = MockIcon; });
-moduleExports.default = MockIcon;
-
-module.exports = moduleExports;
+module.exports = new Proxy(
+  { __esModule: true, default: MockIcon },
+  {
+    get(target, prop) {
+      if (prop in target) return target[prop];
+      if (typeof prop === 'string' && /^[A-Z]/.test(prop)) return MockIcon;
+      return undefined;
+    },
+  },
+);
