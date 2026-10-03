@@ -13,9 +13,11 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 **Kaj se je zgodilo**
 - Srce igre (izračun, kako hitro pes postaja lačen, žejen in umazan) je na novo napisano.
 - Stara koda je majhne padce (npr. 0,53 %) zaokrožila navzgor na cel 1 % in čas merila od zadnje kakršnekoli spremembe psa. Posledica: mešanček je bil po 6 urah lačen do 10 % namesto 52 %, higiena pa sploh ni padala.
-- Med "hard stopom" starša in med boleznijo psa so metrike zdaj zamrznjene; ko se igra nadaljuje, pes ne "nadoknadi" zamujenega časa naenkrat.
+- Med "hard stopom" starša in med boleznijo psa so metrike zdaj zamrznjene (tudi ure zanemarjanja); ko se igra nadaljuje, pes ne "nadoknadi" zamujenega časa naenkrat.
 - Starš na nadzorni plošči ne dobi več obvestila vsako minuto, ampak samo, ko se številka na zaslonu res spremeni (pri mešančku ~213× na dan namesto 1.440×).
-- **Številke (24-urna simulacija minuto za minuto, avtomatski test):** mešanček je lačen (0 %) po 12 h 31 min (spec 12,5 h), žejen po 10 h; border collie lačen po 8 h 20 min, žejen po 6 h 40 min — natanko po specifikaciji. Enak rezultat, če strežnik zamudi 3 ure. 143 avtomatskih testov zelenih (prej 123).
+- **Številke (24-urna simulacija minuto za minuto, avtomatski test):** mešanček je lačen (0 %) natanko po 12 h 30 min (spec 12,5 h), žejen po 10 h; border collie lačen po 8 h 20 min, žejen po 6 h 40 min — natanko po specifikaciji. Enak rezultat, če strežnik zamudi 3 ure. 154 avtomatskih testov zelenih (prej 123).
+- Med hard stopom in boleznijo se ustavi tudi štetje zanemarjanja: če starš ustavi igro za 30 ur, pes ne konča v "zavetišču". Preostali čas se ohrani (pes, ki je bil lačen 20 h, ima po nadaljevanju še 4 h).
+- Neodvisni AI pregled je pred oddajo našel 2 večji napaki (prepisovanje sočasnih sprememb, game over med hard stopom) in 3 manjše — vse odpravljene.
 
 **Zakaj je pomembno**
 Če pes zahteva hrano 2× pogosteje, kot bi jo pravi pes, otrok dobi opozorila že dopoldne in igra ne meri več pripravljenosti, ampak potrpežljivost. Ritem mora biti realističen, sicer certifikat odgovornosti ne pomeni ničesar.

@@ -3,10 +3,12 @@
 namespace App\Services;
 
 use App\Enums\PetStateEnum;
+use App\Events\PetUpdated;
 use App\Models\Pet;
 use App\Models\QuietHours;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 /**
@@ -47,8 +49,19 @@ class PetDecayService
     public const HYGIENE_DECAY_PER_HOUR = 1.5;
 
     /**
+     * Values within this distance of an integer are snapped to it, so float
+     * accumulation (e.g. 2.27e-10 left after 750 mutt-hunger minutes) doesn't
+     * delay reaching exactly 0 by a tick.
+     */
+    private const SNAP_EPSILON = 1e-6;
+
+    /**
      * Process metric decay for all pets the scheduler should tick.
      * Called every minute by the scheduler.
+     *
+     * Only IDs are loaded up front; every pet is re-read under a row lock
+     * when its turn comes, so a write made in the meantime (child action,
+     * admin edit) is never overwritten by a stale copy.
      *
      * Inactive / game-over pets are not loaded; Pet's `updating` hook restarts
      * their decay clock if they are ever re-activated.
@@ -57,17 +70,22 @@ class PetDecayService
      */
     public function processAllActivePets(): array
     {
-        $pets = Pet::where('is_active', true)
+        $petIds = Pet::where('is_active', true)
             ->where('is_game_over', false)
-            ->get();
+            ->orderBy('id')
+            ->pluck('id');
 
         $processed = 0;
         $updated = 0;
 
-        foreach ($pets as $pet) {
-            $wasUpdated = $this->processPetDecay($pet);
+        foreach ($petIds as $petId) {
+            $result = $this->processPetDecayById($petId);
+            if ($result === null) {
+                continue; // deleted in the meantime
+            }
+
             $processed++;
-            if ($wasUpdated) {
+            if ($result) {
                 $updated++;
             }
         }
@@ -78,17 +96,68 @@ class PetDecayService
     /**
      * Process metric decay for a single pet (one scheduler tick).
      *
-     * Elapsed time is measured only from `last_decay_at` — never `updated_at`,
-     * so unrelated writes (child actions, webhooks, escalation) don't eat
-     * decay. Missed ticks are caught up in full.
-     *
-     * A PetUpdated broadcast (via PetObserver) happens only when a displayed
-     * (rounded) metric, the pet state or certificate eligibility changes.
-     * All other writes are quiet.
+     * The given model is only used for its ID: the row is re-read with
+     * `SELECT … FOR UPDATE` inside a transaction and the result is copied back
+     * into $pet. Any other code that changes metrics must take the same lock
+     * (see backend/CLAUDE.md).
      *
      * @return bool True if a displayed value changed (and was broadcast).
      */
     public function processPetDecay(Pet $pet): bool
+    {
+        $result = $this->processPetDecayById($pet->id, $pet);
+
+        return $result ?? false;
+    }
+
+    /**
+     * @return bool|null Null if the pet no longer exists.
+     */
+    private function processPetDecayById(int $petId, ?Pet $target = null): ?bool
+    {
+        $work = function () use ($petId): array {
+            $locked = Pet::whereKey($petId)->lockForUpdate()->first();
+            if (! $locked) {
+                return [null, false];
+            }
+
+            return [$locked, $this->decayLockedPet($locked)];
+        };
+
+        // The scheduler calls this outside any transaction → own transaction.
+        // If a caller already opened one, the row lock lives in that
+        // transaction until it commits; a nested savepoint would add nothing.
+        [$locked, $changed] = DB::transactionLevel() > 0 ? $work() : DB::transaction($work);
+
+        if (! $locked) {
+            return null;
+        }
+
+        if ($target) {
+            $target->setRawAttributes($locked->getAttributes(), true);
+        }
+
+        // Broadcast after commit (no external I/O inside a transaction) and
+        // only when something the parent sees changed: one per pet per tick.
+        if ($changed && $locked->is_active) {
+            DB::afterCommit(fn () => broadcast(new PetUpdated($locked, 'metric_changed')));
+        }
+
+        return $changed;
+    }
+
+    /**
+     * Apply one tick to a freshly locked pet row. All writes are quiet; the
+     * caller broadcasts after commit.
+     *
+     * Elapsed time is measured only from `last_decay_at` — never `updated_at`,
+     * so unrelated writes (child actions, webhooks, escalation) don't eat
+     * decay. Missed ticks are caught up in full.
+     *
+     * @return bool True if a displayed (rounded) metric, the pet state or
+     *              certificate eligibility changed.
+     */
+    private function decayLockedPet(Pet $pet): bool
     {
         // Whole seconds: the timestamp column stores no fractions, so the
         // value we compute elapsed time to must equal the value we persist.
@@ -102,15 +171,23 @@ class PetDecayService
         }
 
         // Frozen states (M1-02): no decay, but keep the clock current so
-        // there is no catch-up burst after unfreezing.
+        // there is no catch-up burst after unfreezing. Hard stop / illness
+        // also stamp frozen_at so the neglect clocks can be shifted on thaw.
         if ($this->isFrozen($pet)) {
+            if ($pet->isFrozen()) {
+                $pet->frozen_at ??= $now;
+            }
             $this->advanceClock($pet, $now);
 
             return false;
         }
 
+        // An illness that expired between ticks: shift neglect clocks and
+        // restart the decay clock at illness_until.
+        $pet->thawIfDue($now);
+
         $from = $pet->last_decay_at;
-        // An illness lockout that ended between ticks: decay only from its end.
+        // Fallback for an illness without frozen_at: decay only from its end.
         if ($pet->illness_until !== null && $pet->illness_until->greaterThan($from)) {
             $from = $pet->illness_until;
         }
@@ -176,31 +253,22 @@ class PetDecayService
         $updates = array_merge($zeroUpdates, $newMetrics, [
             'pet_state' => $newPetState->value,
             'last_decay_at' => $now,
+            'certificate_eligible' => $certificateEligible,
         ]);
 
-        if ($certificateEligible !== $pet->certificate_eligible) {
-            $updates['certificate_eligible'] = $certificateEligible;
-        }
-
-        if ($displayChanged) {
-            // PetObserver broadcasts exactly one PetUpdated for this write.
-            $pet->update($updates);
-        } else {
-            $pet->updateQuietly($updates);
-        }
+        $pet->forceFill($updates)->saveQuietly();
 
         return $displayChanged;
     }
 
     /**
-     * Metrics are frozen while hard-stopped, ill, inactive or game over.
+     * Decay is frozen while hard-stopped, ill, inactive or game over.
      */
     private function isFrozen(Pet $pet): bool
     {
         return ! $pet->is_active
             || $pet->is_game_over
-            || $pet->is_hard_stopped
-            || $pet->isIll();
+            || $pet->isFrozen();
     }
 
     /**
@@ -212,19 +280,24 @@ class PetDecayService
     }
 
     /**
-     * Subtract decay and clamp to 0–100 (precise, no rounding).
+     * Subtract decay and clamp to 0–100 (precise, no rounding except
+     * snapping float noise onto integers).
      */
     private function decayMetric(float $current, float $decay): float
     {
-        return max(0.0, min(100.0, $current - $decay));
+        $value = max(0.0, min(100.0, $current - $decay));
+        $nearest = round($value);
+
+        return abs($value - $nearest) < self::SNAP_EPSILON ? $nearest : $value;
     }
 
     /**
      * Split [from, to) into hours outside and inside quiet hours.
      *
-     * Quiet hours have minute granularity (H:i), so the interval is walked in
-     * segments aligned to minute boundaries. This keeps catch-up after missed
-     * scheduler ticks exact even when the gap crosses a quiet-hours boundary.
+     * Quiet status can only change at a school/bedtime start or end, so the
+     * interval is walked from boundary to boundary (at most 4 segments per
+     * day). Catch-up after missed ticks is therefore exact even across
+     * quiet-hours boundaries, and cheap for long gaps.
      *
      * @return array{normal: float, quiet: float}
      */
@@ -242,10 +315,8 @@ class PetDecayService
         $end = Carbon::instance($to);
 
         while ($cursor->lessThan($end)) {
-            $next = $cursor->copy()->startOfMinute()->addMinute();
-            if ($next->greaterThan($end)) {
-                $next = $end->copy();
-            }
+            $next = $quietHours->nextBoundaryAfter($cursor);
+            $next = ($next === null || $next->greaterThan($end)) ? $end->copy() : Carbon::instance($next);
 
             $seconds = (float) $cursor->diffInSeconds($next, false);
             if ($quietHours->isQuietNow($cursor)) {

@@ -30,7 +30,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 
 **Backend**
 - [x] M1-01 Decay rewrite: stolpec `last_decay_at`, metrike `decimal(5,2)` (API zaokroži), decay neodvisen od `updated_at`; unit testi s `Carbon::setTestNow` čez 24 h simulacijo za obe pasmi (lakota 0 % po 12,5 h / 8,3 h) — *izvedeno z `double precision` namesto `decimal(5,2)` (2 decimalki bi izgubili ~2,5 % na minutni tick); veja `fix/M1-01-decay-engine`*
-- [x] M1-02 Decay se ne izvaja med `is_hard_stopped` in med boleznijo (zamrznjeno) — *tudi neaktiven / game over; ura `last_decay_at` teče naprej, brez "catch-up" po odmrznitvi*
+- [x] M1-02 Decay se ne izvaja med `is_hard_stopped` in med boleznijo (zamrznjeno) — *tudi neaktiven / game over; ura `last_decay_at` teče naprej, brez "catch-up" po odmrznitvi; hard stop in bolezen zamrzneta tudi ure zanemarjanja (`*_zero_since`, `frozen_at`) in eskalacijo*
 - [ ] M1-03 `users.timezone` (IANA, privzeto `Europe/Ljubljana`); tihe ure, polnoč in časovna okna v lokalnem času družine
 - [ ] M1-04 Energija = `min(100, daily_steps / breed.daily_steps_required * 100)`; reset ob lokalni polnoči
 - [ ] M1-05 Higiena: naključni dogodek "kakec" 1× (mutt) / 2× (BC) dnevno izven tihih ur → higiena 0 %; vnaprej razporejeni časi (`next_poop_at`)

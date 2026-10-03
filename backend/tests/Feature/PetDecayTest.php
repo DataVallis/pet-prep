@@ -5,6 +5,7 @@ use App\Events\PetUpdated;
 use App\Models\Pet;
 use App\Models\QuietHours;
 use App\Models\User;
+use App\Services\EscalationService;
 use App\Services\PetDecayService;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -102,11 +103,9 @@ describe('PetDecayService - 24 h simulation against the spec', function () {
 
         $result = simulateDecay($pet, range(1, 24 * 60));
 
-        // Hunger 0 % after 12.5 h (750 min)
-        expect($result['zero']['hunger_level'])->toBeGreaterThanOrEqual(12 * 60 + 20)
-            ->toBeLessThanOrEqual(12 * 60 + 40);
-        // Thirst 0 % after 10 h (600 min)
-        expect($result['zero']['thirst_level'])->toBeGreaterThanOrEqual(595)->toBeLessThanOrEqual(605);
+        // Hunger 0 % after exactly 12.5 h (750 min), thirst after exactly 10 h
+        expect($result['zero']['hunger_level'])->toBe(750);
+        expect($result['zero']['thirst_level'])->toBe(600);
         // After 6 h: hunger 52, thirst 40, hygiene 91 (±1)
         expect($result['display'][360]['hunger_level'])->toBeGreaterThanOrEqual(51)->toBeLessThanOrEqual(53);
         expect($result['display'][360]['thirst_level'])->toBeGreaterThanOrEqual(39)->toBeLessThanOrEqual(41);
@@ -122,11 +121,9 @@ describe('PetDecayService - 24 h simulation against the spec', function () {
 
         $result = simulateDecay($pet, range(1, 24 * 60));
 
-        // Hunger 0 % after 8 h 20 min (500 min)
-        expect($result['zero']['hunger_level'])->toBeGreaterThanOrEqual(8 * 60 + 10)
-            ->toBeLessThanOrEqual(8 * 60 + 30);
-        // Thirst 0 % after 6 h 40 min (400 min)
-        expect($result['zero']['thirst_level'])->toBeGreaterThanOrEqual(395)->toBeLessThanOrEqual(405);
+        // Hunger 0 % after exactly 8 h 20 min (500 min), thirst after 6 h 40 min (400 min)
+        expect($result['zero']['hunger_level'])->toBe(500);
+        expect($result['zero']['thirst_level'])->toBe(400);
         expect($result['display'][360]['hunger_level'])->toBeGreaterThanOrEqual(27)->toBeLessThanOrEqual(29);
         expect($result['display'][360]['hygiene_level'])->toBeGreaterThanOrEqual(90)->toBeLessThanOrEqual(92);
     });
@@ -141,11 +138,8 @@ describe('PetDecayService - 24 h simulation against the spec', function () {
         foreach ([60, 180, 360, 600, 1440] as $minute) {
             expect($everyFive['display'][$minute])->toBe($everyMinute['display'][$minute]);
         }
-        foreach (Pet::METRICS as $metric) {
-            if ($everyMinute['zero'][$metric] !== null) {
-                expect(abs($everyFive['zero'][$metric] - $everyMinute['zero'][$metric]))->toBeLessThanOrEqual(5);
-            }
-        }
+        // All spec zero times are multiples of 5 min, so they match exactly.
+        expect($everyFive['zero'])->toBe($everyMinute['zero']);
     })->with(['mutt', 'border_collie']);
 
     it('catches up when the scheduler skips 3 hours', function () {
@@ -247,6 +241,55 @@ describe('PetDecayService - decay clock', function () {
 
         expect($types)->toBe(['double precision']);
     })->skip(fn () => DB::getDriverName() !== 'pgsql', 'PostgreSQL only');
+
+    it('snaps float noise so metrics reach exactly 0', function () {
+        seedBreedConfigs();
+        $pet = decayPet(['breed_type' => 'mutt']);
+
+        simulateDecay($pet, range(1, 750));
+
+        expect($pet->fresh()->hunger_level)->toBe(0.0);
+        expect($pet->fresh()->hunger_zero_since)->not->toBeNull();
+    });
+});
+
+describe('PetDecayService - concurrent writes (row lock)', function () {
+    it('re-reads the row instead of trusting a stale model', function () {
+        seedBreedConfigs();
+        $pet = rewindDecayClock(decayPet(['breed_type' => 'mutt', 'hunger_level' => 50]), 60);
+        $stale = Pet::findOrFail($pet->id);
+
+        // A child feed (or admin edit) lands after the tick loaded the pet.
+        Pet::whereKey($pet->id)->update(['hunger_level' => 100]);
+
+        app(PetDecayService::class)->processPetDecay($stale);
+
+        expect($pet->fresh()->hunger_level)->toEqualWithDelta(92.0, 0.001);
+        // The caller's model is synced with what was written.
+        expect($stale->hunger_level)->toEqualWithDelta(92.0, 0.001);
+    });
+
+    it('keeps a write made after processAllActivePets() selected the pets', function () {
+        seedBreedConfigs();
+        $first = rewindDecayClock(decayPet(['breed_type' => 'mutt', 'hunger_level' => 50]), 60);
+        $second = rewindDecayClock(decayPet(['breed_type' => 'mutt', 'hunger_level' => 50]), 60);
+
+        // While the first pet is being processed, the second gets fed.
+        $fed = false;
+        Pet::retrieved(function (Pet $retrieved) use ($first, $second, &$fed) {
+            if (! $fed && $retrieved->id === $first->id) {
+                $fed = true;
+                Pet::whereKey($second->id)->update(['hunger_level' => 100]);
+            }
+        });
+
+        $result = app(PetDecayService::class)->processAllActivePets();
+
+        expect($fed)->toBeTrue();
+        expect($result['processed'])->toBe(2);
+        expect($first->fresh()->hunger_level)->toEqualWithDelta(42.0, 0.001);
+        expect($second->fresh()->hunger_level)->toEqualWithDelta(92.0, 0.001);
+    });
 });
 
 describe('PetDecayService - quiet hours', function () {
@@ -289,6 +332,35 @@ describe('PetDecayService - quiet hours', function () {
         expect($pet->thirst_level)->toEqualWithDelta(100 - 10 * (3 + 5 * 0.1), 0.001);  // 65
         expect($pet->hygiene_level)->toEqualWithDelta(100 - 1.5 * 3, 0.001);           // 95.5
         expect($pet->displayMetric('hygiene_level'))->toBe(96); // half up
+    });
+
+    it('gives the same precise values for one catch-up tick as for minute ticks across several windows', function () {
+        seedBreedConfigs();
+        // School 08:00–13:00 + overnight bedtime 22:00–06:00; 07:00 → 03:00 next day.
+        $windows = ['school_start' => '08:00', 'school_end' => '13:00', 'bedtime_start' => '22:00', 'bedtime_end' => '06:00'];
+        $perMinute = decayPet(['breed_type' => 'mutt'], decayChildWithQuietHours($windows));
+        simulateDecay($perMinute, range(1, 20 * 60));
+
+        Carbon::setTestNow(DECAY_SIM_START);
+        $single = decayPet(['breed_type' => 'mutt'], decayChildWithQuietHours($windows));
+        simulateDecay($single, [20 * 60]);
+
+        // Normal: 07–08 + 13–22 = 10 h; quiet 10 h.
+        foreach (['hunger_level' => 100 - 8 * 11, 'thirst_level' => 100 - 10 * 11, 'hygiene_level' => 100 - 1.5 * 10] as $metric => $expected) {
+            expect($single->fresh()->{$metric})->toEqualWithDelta(max(0, $expected), 1e-6);
+            expect($perMinute->fresh()->{$metric})->toEqualWithDelta($single->fresh()->{$metric}, 1e-6);
+        }
+    });
+
+    it('splits a multi-day gap by window boundaries', function () {
+        seedBreedConfigs();
+        $windows = ['school_start' => '08:00', 'school_end' => '13:00', 'bedtime_start' => '22:00', 'bedtime_end' => '06:00'];
+        $pet = decayPet(['breed_type' => 'mutt'], decayChildWithQuietHours($windows));
+
+        simulateDecay($pet, [48 * 60]);
+
+        // 07:00 day 1 → 07:00 day 3: normal 1 + 9 + 2 + 9 + 1 = 22 h.
+        expect($pet->fresh()->hygiene_level)->toEqualWithDelta(100 - 1.5 * 22, 1e-6);
     });
 });
 
@@ -357,6 +429,98 @@ describe('PetDecayService - frozen states (M1-02)', function () {
 
         expect($result)->toBeFalse();
         expect($pet->fresh()->hunger_level)->toBe(50.0);
+    });
+});
+
+/**
+ * One full scheduler tick (decay + escalation) at now + $minutes.
+ */
+function gameLoopTickAt(Carbon $base, int $minutes): void
+{
+    Carbon::setTestNow($base->copy()->addMinutes($minutes));
+    app(PetDecayService::class)->processAllActivePets();
+    app(EscalationService::class)->processAllActivePets();
+}
+
+describe('Neglect clocks are frozen too (M1-02)', function () {
+    it('does not end the game during a 30 h hard stop and keeps the remaining neglect time', function () {
+        seedBreedConfigs();
+        $pet = decayPet(['breed_type' => 'mutt', 'hunger_level' => 0, 'hunger_zero_since' => now()->subHours(20)]);
+        $pet->update(['is_hard_stopped' => true]);
+        $base = now()->copy();
+
+        foreach (range(30, 30 * 60, 30) as $minute) {
+            gameLoopTickAt($base, $minute);
+        }
+
+        expect($pet->fresh()->is_game_over)->toBeFalse();
+
+        $pet->refresh()->update(['is_hard_stopped' => false]);   // lifted at +30 h
+        $lifted = now()->copy();
+        expect($pet->fresh()->hunger_zero_since->equalTo($lifted->copy()->subHours(20)))->toBeTrue();
+        expect($pet->fresh()->frozen_at)->toBeNull();
+
+        foreach (range(30, 3 * 60 + 30, 30) as $minute) {
+            gameLoopTickAt($lifted, $minute);
+        }
+        gameLoopTickAt($lifted, 3 * 60 + 59);
+        expect($pet->fresh()->is_game_over)->toBeFalse();
+
+        gameLoopTickAt($lifted, 4 * 60);                          // 20 h + 4 h = 24 h at zero
+        expect($pet->fresh()->is_game_over)->toBeTrue();
+    });
+
+    it('preserves neglect time even when no tick ran during the hard stop', function () {
+        seedBreedConfigs();
+        $pet = decayPet(['breed_type' => 'mutt', 'hunger_level' => 0, 'hunger_zero_since' => now()->subHours(20)]);
+        $pet->update(['is_hard_stopped' => true]);
+
+        Carbon::setTestNow(now()->addHours(30));
+        $pet->refresh()->update(['is_hard_stopped' => false]);
+        $lifted = now()->copy();
+
+        gameLoopTickAt($lifted, 1);
+        expect($pet->fresh()->is_game_over)->toBeFalse();
+        expect($pet->fresh()->hunger_level)->toBe(0.0);
+
+        gameLoopTickAt($lifted, 4 * 60);
+        expect($pet->fresh()->is_game_over)->toBeTrue();
+    });
+
+    it('freezes neglect during illness and resumes it from illness_until', function () {
+        seedBreedConfigs();
+        $pet = decayPet(['breed_type' => 'mutt', 'hunger_level' => 0, 'hunger_zero_since' => now()->subHours(20)]);
+        $pet->update(['illness_until' => now()->addHours(12), 'pet_state' => 'sick']);
+        $base = now()->copy();
+
+        foreach (range(30, 12 * 60 - 30, 30) as $minute) {
+            gameLoopTickAt($base, $minute);
+        }
+        expect($pet->fresh()->is_game_over)->toBeFalse();
+
+        // First tick after the lockout is 30 min late; neglect resumes at illness_until.
+        foreach (range(12 * 60 + 30, 15 * 60 + 30, 30) as $minute) {
+            gameLoopTickAt($base, $minute);
+        }
+        gameLoopTickAt($base, 15 * 60 + 59);
+        expect($pet->fresh()->is_game_over)->toBeFalse();
+        expect($pet->fresh()->frozen_at)->toBeNull();
+
+        gameLoopTickAt($base, 16 * 60);                           // illness_until + 4 h
+        expect($pet->fresh()->is_game_over)->toBeTrue();
+    });
+
+    it('does not escalate a hard-stopped or ill pet', function () {
+        $stopped = decayPet(['hunger_level' => 5, 'is_hard_stopped' => true]);
+        $ill = decayPet(['hunger_level' => 5, 'illness_until' => now()->addHours(3), 'pet_state' => 'sick']);
+
+        $service = app(EscalationService::class);
+
+        expect($service->processPetEscalation($stopped))->toBeFalse();
+        expect($service->processPetEscalation($ill))->toBeFalse();
+        expect($stopped->fresh()->escalation_level)->toBe(0);
+        expect($ill->fresh()->escalation_level)->toBe(0);
+        expect($stopped->fresh()->frozen_at)->not->toBeNull();
     });
 });
 

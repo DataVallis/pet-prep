@@ -4,13 +4,19 @@ namespace App\Observers;
 
 use App\Events\PetUpdated;
 use App\Models\Pet;
+use Illuminate\Contracts\Events\ShouldHandleEventsAfterCommit;
 
-class PetObserver
+/**
+ * Runs after the surrounding DB transaction commits (if any), so writes made
+ * under a row lock never broadcast from inside the transaction.
+ */
+class PetObserver implements ShouldHandleEventsAfterCommit
 {
     /**
      * Handle the Pet "updated" event.
      * Broadcast a real-time PetUpdated event to the parent dashboard
      * whenever any pet metric changes (hunger, energy, hygiene, etc.).
+     * The decay tick writes quietly and broadcasts itself (once per tick).
      */
     public function updated(Pet $pet): void
     {

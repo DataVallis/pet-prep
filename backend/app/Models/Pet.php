@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\BreedType;
 use App\Enums\PetStateEnum;
+use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -25,19 +26,35 @@ class Pet extends Model
         // Start the decay clock at creation so the first tick decays from birth.
         static::creating(function (Pet $pet): void {
             $pet->last_decay_at ??= now();
+
+            if ($pet->isFrozen()) {
+                $pet->frozen_at ??= now();
+            }
         });
 
-        // Leaving a frozen state (hard stop lifted, session re-activated,
-        // game over undone) restarts the decay clock, so the frozen period is
-        // never applied as a catch-up burst (M1-02). Ticks also advance the
-        // clock while frozen; this covers pets the scheduler doesn't load.
+        // Freeze bookkeeping (M1-02). Hard stop and illness freeze both the
+        // metrics and the neglect clocks (*_zero_since):
+        //  - entering a freeze stamps `frozen_at`;
+        //  - lifting a hard stop thaws immediately (illness end is detected
+        //    by the next tick via thawIfDue()), shifting *_zero_since forward
+        //    by the frozen duration and restarting the decay clock.
+        // Re-activating a pet (or undoing game over) restarts the decay clock.
+        // These hooks work even when no scheduler tick ran during the freeze.
         static::updating(function (Pet $pet): void {
-            $unfrozen = ($pet->isDirty('is_hard_stopped') && ! $pet->is_hard_stopped)
-                || ($pet->isDirty('is_active') && $pet->is_active)
-                || ($pet->isDirty('is_game_over') && ! $pet->is_game_over);
+            $now = now();
 
-            if ($unfrozen && ! $pet->isDirty('last_decay_at')) {
-                $pet->last_decay_at = now();
+            if ($pet->isFrozen()) {
+                $pet->frozen_at ??= $now;
+            } elseif ($pet->frozen_at !== null) {
+                $pet->applyThaw($pet->thawTime($now));
+            }
+
+            $reactivated = ($pet->isDirty('is_active') && $pet->is_active)
+                || ($pet->isDirty('is_game_over') && ! $pet->is_game_over)
+                || ($pet->isDirty('is_hard_stopped') && ! $pet->is_hard_stopped);
+
+            if ($reactivated && ! $pet->isDirty('last_decay_at')) {
+                $pet->last_decay_at = $now;
             }
         });
     }
@@ -89,6 +106,7 @@ class Pet extends Model
             'illness_until' => 'datetime',
             'last_step_reset_at' => 'datetime',
             'last_decay_at' => 'datetime',
+            'frozen_at' => 'datetime',
             'hunger_level' => 'float',
             'thirst_level' => 'float',
             'energy_level' => 'float',
@@ -235,6 +253,84 @@ class Pet extends Model
     public function isIll(): bool
     {
         return $this->illness_until !== null && $this->illness_until->isFuture();
+    }
+
+    /**
+     * Hard stop or illness: metrics AND neglect clocks (*_zero_since) are
+     * frozen, and no escalation runs (PRODUCT_SPEC §5, M1-02).
+     */
+    public function isFrozen(): bool
+    {
+        return (bool) $this->is_hard_stopped || $this->isIll();
+    }
+
+    /**
+     * Columns tracking how long each metric has been at 0 %.
+     */
+    public const ZERO_SINCE_COLUMNS = ['hunger_zero_since', 'thirst_zero_since', 'energy_zero_since', 'hygiene_zero_since'];
+
+    /**
+     * When the current freeze ended: now for a hard stop being lifted;
+     * illness_until for an illness that expired between ticks.
+     */
+    public function thawTime(CarbonInterface $now): CarbonInterface
+    {
+        if ($this->getOriginal('is_hard_stopped')) {
+            return $now;
+        }
+
+        if ($this->illness_until !== null
+            && $this->frozen_at !== null
+            && $this->illness_until->greaterThan($this->frozen_at)
+            && $this->illness_until->lessThanOrEqualTo($now)) {
+            return $this->illness_until;
+        }
+
+        return $now;
+    }
+
+    /**
+     * End a freeze at $at (attributes only, caller saves): shift every
+     * non-null *_zero_since forward by the frozen duration so neglect time
+     * spent frozen doesn't count, and restart the decay clock at $at.
+     */
+    public function applyThaw(CarbonInterface $at): void
+    {
+        if ($this->frozen_at === null) {
+            return;
+        }
+
+        $frozenSeconds = max(0, (int) $this->frozen_at->diffInSeconds($at, false));
+
+        foreach (self::ZERO_SINCE_COLUMNS as $column) {
+            $zeroSince = $this->getAttribute($column);
+            if ($zeroSince !== null) {
+                $shifted = $zeroSince->copy()->addSeconds($frozenSeconds);
+                $this->setAttribute($column, $shifted->greaterThan($at) ? $at : $shifted);
+            }
+        }
+
+        if ($this->last_decay_at === null || $this->last_decay_at->lessThan($at)) {
+            $this->last_decay_at = $at;
+        }
+
+        $this->frozen_at = null;
+    }
+
+    /**
+     * Thaw a pet whose freeze ended without a model event (illness expiry).
+     * Writes quietly. Returns true if a thaw was applied.
+     */
+    public function thawIfDue(?CarbonInterface $now = null): bool
+    {
+        if ($this->frozen_at === null || $this->isFrozen()) {
+            return false;
+        }
+
+        $this->applyThaw($this->thawTime($now ?? now()));
+        $this->saveQuietly();
+
+        return true;
     }
 
     /**

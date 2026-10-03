@@ -16,6 +16,41 @@ class PetResource extends Resource
 {
     protected static ?string $model = Pet::class;
 
+    /**
+     * Metric field: shows the displayed integer and is only saved when the
+     * admin actually changed that integer, so saving other fields never
+     * overwrites the precise stored value with a rounded one.
+     */
+    public static function metricInput(string $metric, string $label): Forms\Components\TextInput
+    {
+        return Forms\Components\TextInput::make($metric)
+            ->label($label)
+            ->numeric()
+            ->formatStateUsing(fn ($state): ?int => $state === null ? null : Pet::displayValue($state))
+            ->dehydrated(fn (?Pet $record, $state): bool => $record === null
+                || $state === null
+                || (float) $state !== (float) $record->displayMetric($metric))
+            ->minValue(0)
+            ->maxValue(100)
+            ->required();
+    }
+
+    /**
+     * Metric column: displayed integer, colour thresholds on the displayed value.
+     */
+    public static function metricColumn(string $metric, string $label): Tables\Columns\TextColumn
+    {
+        return Tables\Columns\TextColumn::make($metric)
+            ->label($label)
+            ->formatStateUsing(fn ($state): int => Pet::displayValue($state))
+            ->color(fn (Pet $record): string => match (true) {
+                $record->displayMetric($metric) <= 25 => 'danger',
+                $record->displayMetric($metric) <= 50 => 'warning',
+                default => 'success',
+            })
+            ->sortable();
+    }
+
     protected static ?string $navigationIcon = 'heroicon-o-heart';
 
     protected static ?string $navigationLabel = 'Pets';
@@ -47,34 +82,10 @@ class PetResource extends Resource
 
                 Forms\Components\Section::make('Vital Levels')
                     ->schema([
-                        Forms\Components\TextInput::make('hunger_level')
-                            ->label('Hunger')
-                            ->numeric()
-                            ->formatStateUsing(fn ($state): ?int => $state === null ? null : Pet::displayValue($state))
-                            ->minValue(0)
-                            ->maxValue(100)
-                            ->required(),
-                        Forms\Components\TextInput::make('thirst_level')
-                            ->label('Thirst')
-                            ->numeric()
-                            ->formatStateUsing(fn ($state): ?int => $state === null ? null : Pet::displayValue($state))
-                            ->minValue(0)
-                            ->maxValue(100)
-                            ->required(),
-                        Forms\Components\TextInput::make('energy_level')
-                            ->label('Energy')
-                            ->numeric()
-                            ->formatStateUsing(fn ($state): ?int => $state === null ? null : Pet::displayValue($state))
-                            ->minValue(0)
-                            ->maxValue(100)
-                            ->required(),
-                        Forms\Components\TextInput::make('hygiene_level')
-                            ->label('Hygiene')
-                            ->numeric()
-                            ->formatStateUsing(fn ($state): ?int => $state === null ? null : Pet::displayValue($state))
-                            ->minValue(0)
-                            ->maxValue(100)
-                            ->required(),
+                        self::metricInput('hunger_level', 'Hunger'),
+                        self::metricInput('thirst_level', 'Thirst'),
+                        self::metricInput('energy_level', 'Energy'),
+                        self::metricInput('hygiene_level', 'Hygiene'),
                     ])
                     ->columns(4),
 
@@ -140,42 +151,10 @@ class PetResource extends Resource
                         'success' => PetStateEnum::Playing->value,
                     ])
                     ->sortable(),
-                Tables\Columns\TextColumn::make('hunger_level')
-                    ->label('Hunger')
-                    ->formatStateUsing(fn ($state): int => Pet::displayValue($state))
-                    ->color(fn (Pet $record): string => match (true) {
-                        $record->hunger_level <= 25 => 'danger',
-                        $record->hunger_level <= 50 => 'warning',
-                        default => 'success',
-                    })
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('thirst_level')
-                    ->label('Thirst')
-                    ->formatStateUsing(fn ($state): int => Pet::displayValue($state))
-                    ->color(fn (Pet $record): string => match (true) {
-                        $record->thirst_level <= 25 => 'danger',
-                        $record->thirst_level <= 50 => 'warning',
-                        default => 'success',
-                    })
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('energy_level')
-                    ->label('Energy')
-                    ->formatStateUsing(fn ($state): int => Pet::displayValue($state))
-                    ->color(fn (Pet $record): string => match (true) {
-                        $record->energy_level <= 25 => 'danger',
-                        $record->energy_level <= 50 => 'warning',
-                        default => 'success',
-                    })
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('hygiene_level')
-                    ->label('Hygiene')
-                    ->formatStateUsing(fn ($state): int => Pet::displayValue($state))
-                    ->color(fn (Pet $record): string => match (true) {
-                        $record->hygiene_level <= 25 => 'danger',
-                        $record->hygiene_level <= 50 => 'warning',
-                        default => 'success',
-                    })
-                    ->sortable(),
+                self::metricColumn('hunger_level', 'Hunger'),
+                self::metricColumn('thirst_level', 'Thirst'),
+                self::metricColumn('energy_level', 'Energy'),
+                self::metricColumn('hygiene_level', 'Hygiene'),
                 Tables\Columns\IconColumn::make('is_active')
                     ->label('Active')
                     ->boolean()
