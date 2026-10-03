@@ -61,3 +61,6 @@ coverage/
 # EAS / signing credentials
 mobile/credentials.json
 mobile/credentials/
+
+# Claude Code agent worktrees
+.claude/worktrees/

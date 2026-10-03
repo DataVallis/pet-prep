@@ -2,11 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { Check, Cloud, Footprints, Play, X } from 'lucide-react-native';
 import { Pedometer } from 'expo-sensors';
-import type { Subscription } from 'expo-modules-core';
 
 import { useAppStore } from '@/store/appStore';
 import type { BreedType } from '@/types';
 import { formatStepCount } from '@/utils/metrics';
+
+type StepSubscription = ReturnType<typeof Pedometer.watchStepCount>;
 
 /** Daily step goals per breed — mirrors backend breed_configs seed data. */
 const BREED_DAILY_STEPS: Record<BreedType, number> = {
@@ -24,7 +25,7 @@ export default function WalkTrackerOverlay() {
   const [isTracking, setIsTracking] = useState(false);
   const [sessionSteps, setSessionSteps] = useState(0);
   const [synced, setSynced] = useState(false);
-  const subscriptionRef = useRef<Subscription | null>(null);
+  const subscriptionRef = useRef<StepSubscription | null>(null);
   const lastCountRef = useRef(0);
   const lastTimeRef = useRef(0);
 

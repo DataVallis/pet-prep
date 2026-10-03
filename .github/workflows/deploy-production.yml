@@ -1,18 +1,41 @@
-name: Deploy Production
+name: CI & Deploy
 
 on:
   push:
     branches:
       - main
+  pull_request:
+  workflow_dispatch:
 
 concurrency:
-  group: production
-  cancel-in-progress: false
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  test:
-    name: Run Backend Test Suite
+  backend-tests:
+    name: Backend tests (Pest on PostgreSQL)
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_DB: testing
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DB_CONNECTION: pgsql
+      DB_HOST: 127.0.0.1
+      DB_PORT: 5432
+      DB_DATABASE: testing
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -21,28 +44,59 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
-          extensions: mbstring, xml, ctype, iconv, intl, pdo, pdo_pgsql, pgsql, redis, bcmath, gd, zip
+          extensions: mbstring, xml, ctype, iconv, intl, pdo, pdo_pgsql, pgsql, redis, bcmath, gd, zip, sodium
           coverage: none
 
       - name: Install PHP Dependencies
+        working-directory: backend
         run: |
-          cd backend
-          composer install --prefer-dist --no-progress --no-interaction
-
-      - name: Run Pest / PHPUnit Tests
-        run: |
-          cd backend
           cp .env.example .env
+          composer install --prefer-dist --no-progress --no-interaction
           php artisan key:generate
-          php artisan test --parallel
+
+      - name: Run Pest
+        working-directory: backend
+        run: php artisan test
+
+  mobile-checks:
+    name: Mobile (tsc + Jest)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: yarn
+          cache-dependency-path: mobile/yarn.lock
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --non-interactive
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Jest
+        run: yarn test --ci
 
   deploy:
     name: Deploy to Hetzner Production
-    needs: test
+    needs: [backend-tests, mobile-checks]
+    # Deploys only on a manual "Run workflow" from main (GitHub → Actions → CI & Deploy).
+    # A merge to main no longer goes live automatically — see docs/engineering/DEPLOYMENT.md D2.
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    concurrency:
+      group: production
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: http://${{ secrets.PRODUCTION_HOST || '138.199.172.97' }}
+      url: https://api.petprep.si
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4

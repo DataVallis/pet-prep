@@ -46,13 +46,14 @@ Dev accounts come from `TestUsersSeeder` (`parent@test.com` / `child@test.com`, 
 3. `sail test`, `pint --test`, `npx tsc --noEmit`, `npm test` all green.
 4. API changed → regenerate types (`npm run generate-api-types`) and update `ARCHITECTURE.md` §3.
 5. Tick the task in `ROADMAP.md`, add a dated entry to `HANDOFF.md` (what changed, new debt, next step).
+6. Notable progress → entry in `docs/journey/BUILD_LOG.md` (Slovenian; raw material for social, investor, partner and parent content).
 
 ## Git
 - Branch from `main`: `feat/M1-07-child-actions`, `fix/M1-01-decay-rounding`, `chore/…`, `docs/…`.
 - Conventional Commits (`feat(backend): add child feed endpoint [M1-07]`). One task per PR.
 - Never commit `.env`, keys, `node_modules/`, `vendor/`, IDE files. Never force-push `main`.
 - Commit/push only when David asks or the task explicitly includes it.
-- ⚠️ **A push to `main` deploys to production** (`api.petprep.si`) via GitHub Actions. Work on branches; merge to `main` only when David says so.
+- CI runs on every PR and push to `main` (backend Pest on PostgreSQL, mobile tsc + Jest). **Production deploy is manual** (Actions → CI & Deploy → Run workflow on `main`) — only David triggers it. Merge to `main` only when David says so.
 
 ## Engineering rules
 **Backend:** thin controllers → Service classes; FormRequest for every input; Policies/Sanctum abilities for authz (not ad-hoc `isParent()`); multi-row writes in `DB::transaction`; **no external HTTP inside transactions** — dispatch a queued Job; webhooks fail **closed** when the secret is missing; broadcasts on `PrivateChannel`; all wall-clock rules (quiet hours, midnight, feed windows) evaluated in the family's timezone; store UTC.

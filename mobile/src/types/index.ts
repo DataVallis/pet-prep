@@ -9,6 +9,9 @@ export type PetState = 'idle' | 'sleeping' | 'low_energy' | 'hungry' | 'sick' | 
 
 export type UserRole = 'parent' | 'child';
 
+/** Lifecycle of the pet's AI reference image (backend `pets.media_status`). */
+export type MediaStatus = 'disabled' | 'pending' | 'ready' | 'failed';
+
 export type ActivityType =
   | 'fed_pet'
   | 'watered_pet'
@@ -66,6 +69,7 @@ export interface PetUpdatedBroadcast {
   is_game_over: boolean;
   virtual_age_months: number;
   current_video_url: string | null;
+  media_status?: MediaStatus;
   reference_image_url: string | null;
   event_type: string | null;
   updated_at: string | null;
@@ -86,6 +90,7 @@ export interface PairingResponse {
     is_active: boolean;
     pet_dna: PetDna | null;
     current_video_url: string | null;
+    media_status?: MediaStatus;
   };
 }
 

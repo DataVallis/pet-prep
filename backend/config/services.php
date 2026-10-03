@@ -46,7 +46,11 @@ return [
     */
     'fal_ai' => [
         'key' => env('FAL_AI_API_KEY'),
-        'webhook_secret' => env('FAL_AI_WEBHOOK_SECRET'),
+        // Webhooks are verified with fal.ai's ED25519 signature (no shared secret).
+        'jwks_url' => env('FAL_AI_JWKS_URL', 'https://rest.fal.ai/.well-known/jwks.json'),
+        'webhook_tolerance_seconds' => (int) env('FAL_AI_WEBHOOK_TOLERANCE', 300),
+        // Media URLs we are willing to show to a child (host or any subdomain).
+        'media_hosts' => array_filter(explode(',', (string) env('FAL_AI_MEDIA_HOSTS', 'fal.media'))),
     ],
 
     /*

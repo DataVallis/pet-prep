@@ -45,13 +45,13 @@ jest.mock('pusher-js', () => jest.fn());
 
 // Mock nativewind to avoid CSS interop runtime issues in tests
 jest.mock('nativewind', () => ({
-  styled: (Component) => Component,
+  styled: <T,>(Component: T): T => Component,
   useColorScheme: () => ({ colorScheme: 'light', setColorScheme: jest.fn(), toggleColorScheme: jest.fn() }),
 }));
 
 // Mock react-native-css-interop to prevent runtime className processing
 jest.mock('react-native-css-interop', () => ({
-  styled: (Component) => Component,
+  styled: <T,>(Component: T): T => Component,
   useColorScheme: () => ({ colorScheme: 'light', setColorScheme: jest.fn(), toggleColorScheme: jest.fn() }),
   colorScheme: 'light',
 }));
