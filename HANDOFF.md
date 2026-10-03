@@ -41,7 +41,7 @@
 8. **EAS signing passwords** were committed in the old `pet-prep-mobile` history (purged from the monorepo, still in the old GitHub repo). (M0-12)
 9. PHP 8.3 in prod/CI vs 8.5 in local Sail. (M0-11)
 10. No push, HealthKit/Health Connect, RevenueCat SDK, registration/social login. (M2, M3)
-11. Everything in UTC — quiet hours off by 1–2 h for Slovenia. (M1-03)
+11. ~~Everything in UTC — quiet hours off by 1–2 h for Slovenia~~ → fixed on `feat/M1-03-family-timezone` (M1-03).
 
 ## 4. Environment & configuration
 
@@ -56,11 +56,19 @@
 
 1. **David:** merge PR #4 (M0-10) → PR #5 (M1-01/02 decay) → Actions → Run workflow; merge `fix/M1-01b-display-thresholds`.
 2. **David:** rotate EAS signing passwords (M0-12); confirm free/paid split (BUSINESS_MODEL §7, B7).
-3. **M1-03** family timezone (quiet hours/midnight in Europe/Ljubljana), **M1-04** energy from steps, **M1-05** hygiene events, **M1-06** breed config columns.
+3. **David:** merge `feat/M1-03-family-timezone`. Next: **M1-04** energy from steps, **M1-05** hygiene events, **M1-06** breed config columns.
 4. **M1-07** child action API (feed/water/clean/steps/contract) + **M2-02** parent "add child / PIN" screen.
 5. **M1-08** private channels + single broadcast per change.
 
 ## 6. Session log
+
+### 2026-10-03 (cloud, backend-engineer) — M1-03 family timezone (branch `feat/M1-03-family-timezone`)
+- Migration `2026_10_03_130000_add_timezone_to_users_table`: `users.timezone` string(64), NOT NULL, default `Europe/Ljubljana`. Family timezone = parent's (`User::familyTimezone()`, `Pet::familyTimezone()`; a child ignores its own column). Storage stays UTC.
+- `QuietHours::isQuietNow()` reads the family-local clock; `nextBoundaryAfter()` enumerates instants whose local reading equals a window edge (both instances in the repeated fall-back hour, none in the spring gap) plus DST transitions, so decay catch-up is exact across 2026-10-25 / 2027-03-28.
+- `PetDecayService::resetStepCountIfMidnight()` resets at local midnight (22:00 UTC in summer). Parent dashboard `weekly_performance` is bucketed by local day with UTC query bounds and the response carries `timezone`.
+- API: new `PUT /api/parent/settings {timezone}` (`UpdateParentSettingsRequest`, `timezone:all` rule, `UserPolicy@updateFamilySettings` → 403 for children; `FamilySettingsService`); `PUT /api/parent/quiet-hours` accepts optional `timezone` (same transaction as the windows) and returns `timezone`. ARCHITECTURE §2/§3 updated. **Mobile types not regenerated** (no running backend here) — run `npm run generate-api-types`.
+- Tests: 183 passed (666 assertions) on PostgreSQL 16. New `FamilyTimezoneTest` (29): quiet at 21:30 UTC / not at 19:30 UTC in summer, winter shift, 9 h quiet on the fall-back night and 7 h on the spring-forward night, window inside the gap and inside the repeated hour, one catch-up tick = 840 minute ticks across the fall-back night, step reset at local midnight (summer + winter, no second reset at UTC midnight), weekly buckets by local day, settings validation (unknown, wrong case, offset, abbreviation, empty, non-string) and authz (child 403, guest 401), quiet-hours timezone save / keep / reject. Existing decay quiet-hours tests now pin the family to UTC; `QuietHoursTest` parses times in Europe/Ljubljana.
+- New debt: (1) changing the timezone re-reads the whole pending decay interval in the new zone (at most one tick) — negligible. (2) Filament has no timezone field. (3) `backend/CLAUDE.md` still says "family timezone doesn't exist yet" — update the Known traps line. (4) No Sanctum abilities yet; authz is a policy on the role.
 
 ### 2026-10-03 (cloud, backend-engineer) — M1-01 follow-up: thresholds on the displayed value (branch `fix/M1-01b-display-thresholds`)
 - `EscalationService` compares the lowest **displayed** metric with 30 / 10; `PetDecayService` derives `pet_state` and `*_zero_since` from `Pet::displayValue()` (zero = shows 0 %, i.e. precise < 0.5). Precise values still decay underneath; nothing rounded is written back.

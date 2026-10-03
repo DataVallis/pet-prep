@@ -3,9 +3,9 @@
 namespace App\Models;
 
 use App\Enums\UserRole;
+use Database\Factories\UserFactory;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -16,8 +16,13 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable implements FilamentUser
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
+    /** @use HasFactory<UserFactory> */
     use HasApiTokens, HasFactory, Notifiable;
+
+    /**
+     * Family timezone when none is set (M1-03). Matches the column default.
+     */
+    public const DEFAULT_TIMEZONE = 'Europe/Ljubljana';
 
     /**
      * The attributes that are mass assignable.
@@ -29,6 +34,7 @@ class User extends Authenticatable implements FilamentUser
         'email',
         'password',
         'role',
+        'timezone',
         'is_superadmin',
         'parent_id',
         'pairing_pin',
@@ -111,6 +117,20 @@ class User extends Authenticatable implements FilamentUser
     // ──────────────────────────────────────────────────────────────
     //  Helpers
     // ──────────────────────────────────────────────────────────────
+
+    /**
+     * The family's IANA timezone: the parent's own, or — for a child — its
+     * parent's. Every wall-clock rule (quiet hours, local midnight, dashboard
+     * days) is evaluated in it; timestamps are stored in UTC.
+     */
+    public function familyTimezone(): string
+    {
+        if ($this->isChild() && $this->parent_id !== null) {
+            return $this->parent?->timezone ?? self::DEFAULT_TIMEZONE;
+        }
+
+        return $this->timezone ?? self::DEFAULT_TIMEZONE;
+    }
 
     /**
      * Determine if the user is a parent.

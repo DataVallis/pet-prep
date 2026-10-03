@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateQuietHoursRequest extends FormRequest
@@ -17,7 +18,7 @@ class UpdateQuietHoursRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * @return array<string, ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
@@ -27,6 +28,8 @@ class UpdateQuietHoursRequest extends FormRequest
             'bedtime_start' => ['nullable', 'string', 'date_format:H:i'],
             'bedtime_end' => ['nullable', 'string', 'date_format:H:i'],
             'is_active' => ['boolean'],
+            // Optional family timezone (IANA), saved on the parent (M1-03).
+            'timezone' => ['sometimes', 'string', 'timezone:all'],
         ];
     }
 
@@ -42,6 +45,7 @@ class UpdateQuietHoursRequest extends FormRequest
             'school_end.date_format' => 'School end must be in HH:MM format (e.g., 13:00).',
             'bedtime_start.date_format' => 'Bedtime start must be in HH:MM format (e.g., 22:00).',
             'bedtime_end.date_format' => 'Bedtime end must be in HH:MM format (e.g., 06:00).',
+            'timezone.timezone' => 'Timezone must be a valid IANA name (e.g., Europe/Ljubljana).',
         ];
     }
 }

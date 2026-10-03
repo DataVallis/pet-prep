@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FalAiWebhookController;
 use App\Http\Controllers\PairingController;
 use App\Http\Controllers\ParentDashboardController;
+use App\Http\Controllers\ParentSettingsController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
 use Illuminate\Support\Facades\Route;
@@ -58,6 +59,9 @@ Route::middleware(['auth:sanctum', 'throttle:api'])
         // Quiet Hours management
         Route::get('quiet-hours', [QuietHoursController::class, 'show']);
         Route::put('quiet-hours', [QuietHoursController::class, 'update']);
+
+        // Family settings (timezone, M1-03)
+        Route::put('settings', [ParentSettingsController::class, 'update']);
     });
 
 /*

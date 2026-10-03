@@ -29,6 +29,7 @@ class ParentDashboardController extends Controller
         if (! $child) {
             return response()->json([
                 'message' => 'No child profile paired yet.',
+                'timezone' => $parent->familyTimezone(),
                 'pet' => null,
                 'traffic_light' => 'green',
                 'quiet_hours' => null,
@@ -45,6 +46,7 @@ class ParentDashboardController extends Controller
             if (! $pet) {
                 return response()->json([
                     'message' => 'No active pet session found.',
+                    'timezone' => $parent->familyTimezone(),
                     'pet' => null,
                     'traffic_light' => 'green',
                     'quiet_hours' => $parent->quietHours,
@@ -69,10 +71,11 @@ class ParentDashboardController extends Controller
                 'is_positive' => $log->activity_type !== ActivityType::IgnoredWarning,
             ]);
 
-        // Get weekly performance data (last 7 days)
-        $weeklyPerformance = $this->getWeeklyPerformance($pet);
+        // Get weekly performance data (last 7 local days)
+        $weeklyPerformance = $this->getWeeklyPerformance($pet, $parent->familyTimezone());
 
         return response()->json([
+            'timezone' => $parent->familyTimezone(),
             'pet' => [
                 'id' => $pet->id,
                 'breed_type' => $pet->breed_type->value,
@@ -216,12 +219,13 @@ class ParentDashboardController extends Controller
     }
 
     /**
-     * Get weekly performance data — daily routine completion counts
-     * for the last 7 days.
+     * Get weekly performance data — daily routine completion counts for the
+     * last 7 days, bucketed by the family's local calendar day (M1-03).
+     * `date` is the local date; DST days are 23 / 25 hours long.
      *
      * @return array<int, array{date: string, completed: int, missed: int}>
      */
-    private function getWeeklyPerformance(Pet $pet): array
+    private function getWeeklyPerformance(Pet $pet, string $timezone): array
     {
         $performance = [];
         $positiveActivities = [
@@ -231,22 +235,28 @@ class ParentDashboardController extends Controller
             ActivityType::CleanedPoop->value,
         ];
 
+        $today = now()->setTimezone($timezone)->startOfDay();
+
         for ($i = 6; $i >= 0; $i--) {
-            $date = now()->subDays($i)->startOfDay();
-            $nextDate = (clone $date)->endOfDay();
+            $localDay = $today->copy()->subDays($i);
+            // created_at is stored in UTC: query with UTC bounds [start, next start).
+            $start = $localDay->copy()->utc();
+            $end = $localDay->copy()->addDay()->utc();
 
             $completed = ActivityLog::where('pet_id', $pet->id)
                 ->whereIn('activity_type', $positiveActivities)
-                ->whereBetween('created_at', [$date, $nextDate])
+                ->where('created_at', '>=', $start)
+                ->where('created_at', '<', $end)
                 ->count();
 
             $missed = ActivityLog::where('pet_id', $pet->id)
                 ->where('activity_type', ActivityType::IgnoredWarning->value)
-                ->whereBetween('created_at', [$date, $nextDate])
+                ->where('created_at', '>=', $start)
+                ->where('created_at', '<', $end)
                 ->count();
 
             $performance[] = [
-                'date' => $date->toDateString(),
+                'date' => $localDay->toDateString(),
                 'completed' => $completed,
                 'missed' => $missed,
             ];
