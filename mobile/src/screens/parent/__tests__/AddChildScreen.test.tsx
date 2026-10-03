@@ -140,6 +140,21 @@ describe('AddChildScreen', () => {
     expect(screen.queryByTestId('pin-error')).toBeNull();
   });
 
+  it('429 with Retry-After 0 shows a wait-free message and keeps "Nova koda" enabled', async () => {
+    generatePin.mockResolvedValueOnce(pinResponse('734912'));
+    renderWithQuery(<AddChildScreen onBack={jest.fn()} />);
+    await screen.findByText('734 912');
+
+    generatePin.mockRejectedValueOnce(new ApiError('Too Many Attempts.', 429, null, 0));
+    fireEvent.press(screen.getByText(S.newCode));
+    await flush();
+
+    expect(screen.getByTestId('pin-error')).toHaveTextContent(S.rateLimitedNoWait);
+    generatePin.mockResolvedValueOnce(pinResponse('111222'));
+    fireEvent.press(screen.getByText(S.newCode));
+    expect(await screen.findByText('111 222')).toBeTruthy();
+  });
+
   it('shows the offline message and a retry when the first PIN fails', async () => {
     generatePin.mockRejectedValueOnce(new TypeError('Network request failed'));
     renderWithQuery(<AddChildScreen onBack={jest.fn()} />);
@@ -185,5 +200,58 @@ describe('AddChildScreen', () => {
 
     fireEvent.press(screen.getByText(S.toDashboard));
     expect(onBack).toHaveBeenCalled();
+  });
+
+  it('stops polling the dashboard once the child has paired', async () => {
+    generatePin.mockResolvedValueOnce(pinResponse('734912'));
+    getUser.mockResolvedValue({ id: 1, name: 'Starš', email: 'p@x.si', role: 'parent', pet: makePet() });
+    renderWithQuery(<AddChildScreen onBack={jest.fn()} />);
+    await screen.findByText('734 912');
+
+    getParentDashboard.mockResolvedValue({ ...NO_CHILD, message: undefined, pet: { id: 7 } });
+    await act(async () => {
+      await jest.advanceTimersByTimeAsync(5_000);
+    });
+    expect(await screen.findByTestId('add-child-paired')).toBeTruthy();
+    const callsAtPairing = getParentDashboard.mock.calls.length;
+
+    await act(async () => {
+      await jest.advanceTimersByTimeAsync(60_000);
+    });
+    expect(getParentDashboard.mock.calls.length).toBe(callsAtPairing);
+  });
+
+  it('stops polling once the PIN has expired', async () => {
+    generatePin.mockResolvedValueOnce(pinResponse('734912', 1));
+    renderWithQuery(<AddChildScreen onBack={jest.fn()} />);
+    await screen.findByText('734 912');
+
+    await act(async () => {
+      await jest.advanceTimersByTimeAsync(61_000);
+    });
+    expect(screen.getByText(S.expired)).toBeTruthy();
+    const callsAtExpiry = getParentDashboard.mock.calls.length;
+
+    await act(async () => {
+      await jest.advanceTimersByTimeAsync(60_000);
+    });
+    expect(getParentDashboard.mock.calls.length).toBe(callsAtExpiry);
+  });
+
+  it('stops polling when the screen is left (unmount)', async () => {
+    generatePin.mockResolvedValueOnce(pinResponse('734912'));
+    const { unmount } = renderWithQuery(<AddChildScreen onBack={jest.fn()} />);
+    await screen.findByText('734 912');
+    await act(async () => {
+      await jest.advanceTimersByTimeAsync(10_000);
+    });
+    const callsBeforeUnmount = getParentDashboard.mock.calls.length;
+    expect(callsBeforeUnmount).toBeGreaterThan(1); // it was polling
+
+    unmount();
+    await act(async () => {
+      await jest.advanceTimersByTimeAsync(60_000);
+    });
+    expect(getParentDashboard.mock.calls.length).toBe(callsBeforeUnmount);
   });
 });

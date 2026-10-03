@@ -54,11 +54,49 @@ describe('api client', () => {
   it('calls the unauthorized handler on a 401 for an authenticated request', async () => {
     const handler = jest.fn();
     setUnauthorizedHandler(handler);
-    getItem.mockResolvedValueOnce('revoked');
+    getItem.mockResolvedValueOnce('revoked').mockResolvedValueOnce('revoked');
     mockFetch(401, { message: 'Unauthenticated.' });
 
     await expect(api.getUser()).rejects.toBeInstanceOf(ApiError);
     expect(handler).toHaveBeenCalledTimes(1);
+  });
+
+  it('ignores a late 401 for a token that is no longer the stored one (re-login in between)', async () => {
+    const handler = jest.fn();
+    setUnauthorizedHandler(handler);
+    getItem.mockResolvedValueOnce('old-token').mockResolvedValueOnce('new-token');
+    mockFetch(401, { message: 'Unauthenticated.' });
+
+    await expect(api.getUser()).rejects.toBeInstanceOf(ApiError);
+    expect(handler).not.toHaveBeenCalled();
+  });
+
+  it('ignores a 401 after the token was already cleared (logout in between)', async () => {
+    const handler = jest.fn();
+    setUnauthorizedHandler(handler);
+    getItem.mockResolvedValueOnce('old-token').mockResolvedValueOnce(null);
+    mockFetch(401, { message: 'Unauthenticated.' });
+
+    await expect(api.getUser()).rejects.toBeInstanceOf(ApiError);
+    expect(handler).not.toHaveBeenCalled();
+  });
+
+  it('passes an abort signal through to fetch (logout timeout)', async () => {
+    getItem.mockResolvedValueOnce('tok');
+    const fetchMock = mockFetch(200, { message: 'Logged out' });
+    const controller = new AbortController();
+
+    await api.logout(controller.signal);
+    const [, init] = fetchMock.mock.calls[0] as [string, RequestInit];
+    expect(init.signal).toBe(controller.signal);
+  });
+
+  it('keeps Retry-After: 0 as 0 (pin.ts decides what to show)', async () => {
+    getItem.mockResolvedValueOnce('tok');
+    mockFetch(429, { message: 'Too Many Attempts.' }, { 'Retry-After': '0' });
+
+    const error = (await api.generatePin().catch((e: unknown) => e)) as ApiError;
+    expect(error.retryAfterSeconds).toBe(0);
   });
 
   it('does not call the unauthorized handler when no token was sent (e.g. wrong password)', async () => {

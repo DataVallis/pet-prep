@@ -68,6 +68,13 @@ describe('classifyPinError', () => {
     });
   });
 
+  it.each([0, -3])('treats Retry-After %i as "no wait" (null)', (header) => {
+    expect(classifyPinError(new ApiError('Too Many Attempts.', 429, null, header))).toEqual({
+      kind: 'rate_limited',
+      retryAfterSeconds: null,
+    });
+  });
+
   it('maps 403 / 401 / 500', () => {
     expect(classifyPinError(new ApiError('x', 403)).kind).toBe('forbidden');
     expect(classifyPinError(new ApiError('x', 401)).kind).toBe('unauthorized');

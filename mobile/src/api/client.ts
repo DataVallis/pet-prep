@@ -111,6 +111,7 @@ async function apiRequest<T>(
   options: {
     method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
     body?: Record<string, unknown>;
+    signal?: AbortSignal;
   } = {},
 ): Promise<T> {
   const token = await getAuthToken();
@@ -127,13 +128,17 @@ async function apiRequest<T>(
     method: options.method ?? 'GET',
     headers,
     body: options.body ? JSON.stringify(options.body) : undefined,
+    signal: options.signal,
   });
 
   const data = await readJson(response);
 
   if (!response.ok) {
     if (response.status === 401 && token && unauthorizedHandler) {
-      unauthorizedHandler();
+      // Only if the rejected token is still the session's token: a late 401 for an
+      // old token (e.g. after logout + a new login) must not log the new user out.
+      const current = await getAuthToken().catch(() => null);
+      if (current === token) unauthorizedHandler();
     }
     throw new ApiError(
       messageFrom(data) ?? 'An error occurred',
@@ -172,9 +177,9 @@ export const api = {
       body: { email, password, device_name: deviceName },
     }),
 
-  /** POST /api/logout — Revoke the current token. */
-  logout: () =>
-    apiRequest<{ message: string }>('/api/logout', { method: 'POST' }),
+  /** POST /api/logout — Revoke the current token. Pass a signal to abort (offline logout). */
+  logout: (signal?: AbortSignal) =>
+    apiRequest<{ message: string }>('/api/logout', { method: 'POST', signal }),
 
   /** POST /api/parent/generate-pin — Generate a 6-digit pairing PIN. */
   generatePin: () =>

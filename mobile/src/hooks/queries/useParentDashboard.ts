@@ -2,15 +2,18 @@
  * TanStack Query hook for `GET /api/parent/dashboard`.
  */
 
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, type Query } from '@tanstack/react-query';
 
 import { api, NO_CHILD_PAIRED_MESSAGE, type ParentDashboardResponse } from '@/api/client';
 
 export const parentDashboardKey = ['parent', 'dashboard'] as const;
 
 interface Options {
-  /** Poll interval in ms (used while a pairing PIN is shown); false = no polling. */
-  refetchInterval?: number | false;
+  /**
+   * Poll interval in ms (used while a pairing PIN is shown); false = no polling.
+   * A function gets the latest data, so polling can stop as soon as a pet appears.
+   */
+  refetchInterval?: number | false | ((data: ParentDashboardResponse | undefined) => number | false);
   enabled?: boolean;
 }
 
@@ -18,7 +21,10 @@ export function useParentDashboard({ refetchInterval = false, enabled = true }: 
   return useQuery<ParentDashboardResponse>({
     queryKey: parentDashboardKey,
     queryFn: api.getParentDashboard,
-    refetchInterval,
+    refetchInterval:
+      typeof refetchInterval === 'function'
+        ? (query: Query<ParentDashboardResponse>) => refetchInterval(query.state.data)
+        : refetchInterval,
     enabled,
   });
 }

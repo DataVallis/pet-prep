@@ -29,15 +29,23 @@ export type PinErrorKind = 'rate_limited' | 'forbidden' | 'unauthorized' | 'offl
 
 export interface PinError {
   kind: PinErrorKind;
-  /** Seconds to wait before "Nova koda" works again (rate_limited only). */
+  /**
+   * Seconds to wait before "Nova koda" works again (rate_limited only).
+   * null when Retry-After is 0 or negative (no wait to show).
+   */
   retryAfterSeconds: number | null;
 }
+
+/** Fallback wait when a 429 has no Retry-After header (the limiter window is 1 min). */
+export const DEFAULT_RETRY_AFTER_SECONDS = 60;
 
 /** Map a generate-pin failure to something the screen can explain. */
 export function classifyPinError(error: unknown): PinError {
   if (error instanceof ApiError) {
     if (error.status === 429) {
-      return { kind: 'rate_limited', retryAfterSeconds: error.retryAfterSeconds ?? 60 };
+      const header = error.retryAfterSeconds;
+      if (header === null) return { kind: 'rate_limited', retryAfterSeconds: DEFAULT_RETRY_AFTER_SECONDS };
+      return { kind: 'rate_limited', retryAfterSeconds: header > 0 ? header : null };
     }
     if (error.status === 403) return { kind: 'forbidden', retryAfterSeconds: null };
     if (error.status === 401) return { kind: 'unauthorized', retryAfterSeconds: null };

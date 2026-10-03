@@ -3,9 +3,26 @@
  * response of the previous user (`queryClient.clear()`).
  */
 
-import { QueryClient } from '@tanstack/react-query';
+import { AppState, type AppStateStatus } from 'react-native';
+import { QueryClient, focusManager } from '@tanstack/react-query';
 
 import { ApiError } from '@/api/client';
+
+/**
+ * React Native has no window focus events: tell TanStack the app is "focused"
+ * only while it is in the foreground, so refetchInterval polling (e.g. the
+ * pairing PIN screen) pauses in the background and refetches on return.
+ */
+export function bindFocusManagerToAppState(): void {
+  focusManager.setEventListener((handleFocus) => {
+    const subscription = AppState.addEventListener('change', (state: AppStateStatus) => {
+      handleFocus(state === 'active');
+    });
+    return () => subscription.remove();
+  });
+}
+
+bindFocusManagerToAppState();
 
 /** Don't retry what retrying can't fix: auth, permission, validation, throttling. */
 export function shouldRetry(failureCount: number, error: unknown): boolean {

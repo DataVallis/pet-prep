@@ -7,6 +7,9 @@ import { api, clearAuthToken } from '@/api/client';
 import { queryClient } from '@/api/queryClient';
 import { useAppStore } from '@/store/appStore';
 
+/** The server revoke is best effort: give up after this long so "Odjava" never hangs offline. */
+export const REVOKE_TIMEOUT_MS = 5_000;
+
 interface LogoutOptions {
   /** Call `POST /api/logout` first. False when the server already rejected the token (401). */
   revoke?: boolean;
@@ -14,10 +17,14 @@ interface LogoutOptions {
 
 export async function logout({ revoke = true }: LogoutOptions = {}): Promise<void> {
   if (revoke) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), REVOKE_TIMEOUT_MS);
     try {
-      await api.logout();
+      await api.logout(controller.signal);
     } catch {
-      // Offline or token already invalid — local logout must still happen.
+      // Offline, aborted, or token already invalid — local logout must still happen.
+    } finally {
+      clearTimeout(timer);
     }
   }
   try {

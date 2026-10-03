@@ -45,6 +45,7 @@ export const ADD_CHILD_STRINGS = {
     offline: 'Ni povezave s strežnikom. Preverite internet in poskusite znova.',
     server: 'Kode trenutno ni bilo mogoče ustvariti. Poskusite znova.',
   } satisfies Record<PinErrorKind, string | ((seconds: number) => string)>,
+  rateLimitedNoWait: 'Preveč novih kod v kratkem času. Poskusite znova.',
   retry: 'Poskusi znova',
 } as const;
 
@@ -67,8 +68,9 @@ export default function AddChildScreen({ onBack }: AddChildScreenProps) {
   const cooldown = useCountdown(cooldownUntil);
   const isExpired = pin !== null && remaining <= 0;
 
+  // Poll only while a valid PIN is shown and the child hasn't paired yet.
   const dashboard = useParentDashboard({
-    refetchInterval: pin !== null && !isExpired ? PAIRING_POLL_MS : false,
+    refetchInterval: (data) => (pin !== null && !isExpired && !hasPairedPet(data) ? PAIRING_POLL_MS : false),
   });
   const isPaired = hasPairedPet(dashboard.data);
 
@@ -108,8 +110,9 @@ export default function AddChildScreen({ onBack }: AddChildScreenProps) {
   const errorText = (() => {
     if (!pinError) return null;
     if (pinError.kind === 'rate_limited') {
+      if (pinError.retryAfterSeconds === null) return S.rateLimitedNoWait;
       if (cooldownUntil !== null && !isCoolingDown) return null; // wait is over — "Nova koda" works again
-      return S.errors.rate_limited(isCoolingDown ? cooldown : pinError.retryAfterSeconds ?? 60);
+      return S.errors.rate_limited(isCoolingDown ? cooldown : pinError.retryAfterSeconds);
     }
     return S.errors[pinError.kind];
   })();
