@@ -52,8 +52,17 @@ Dev accounts come from `TestUsersSeeder` (`parent@test.com` / `child@test.com`, 
 - Branch from `main`: `feat/M1-07-child-actions`, `fix/M1-01-decay-rounding`, `chore/…`, `docs/…`.
 - Conventional Commits (`feat(backend): add child feed endpoint [M1-07]`). One task per PR.
 - Never commit `.env`, keys, `node_modules/`, `vendor/`, IDE files. Never force-push `main`.
-- Commit/push only when David asks or the task explicitly includes it.
-- CI runs on every PR and push to `main` (backend Pest on PostgreSQL, mobile tsc + Jest). **Production deploy is manual** (Actions → CI & Deploy → Run workflow on `main`) — only David triggers it. Merge to `main` only when David says so.
+- **Pre-production autonomy (David, 2026-10-03):** Claude opens a PR per task, waits for green CI (+ independent `qa-reviewer` review for non-trivial code), then **merges it to `main` itself**. A merge to `main` **deploys automatically** to `api.petprep.si` after tests pass. This stays until David says otherwise — then restore manual deploys (see DEPLOYMENT.md D2).
+- Never merge red CI, never force-push `main`, never merge with unresolved review blockers. Delete nothing in production data without David.
+
+## Living documentation (mandatory — "za nazaj se ne bomo spomnili")
+Documentation is written **while** building, not afterwards. From it we will later produce technical docs, guides for parents and kids, investor and partner material, 2-pagers, decks and diagrams. Every PR updates, in the same PR:
+1. `docs/engineering/ARCHITECTURE.md` + `docs/engineering/DIAGRAMS.md` (Mermaid) when structure, data, API, events or flows change.
+2. `docs/product/DECISIONS.md` — one dated line per decision (who decided, what, why, link to PR). Product rules also go to `PRODUCT_SPEC.md`.
+3. `docs/audiences/*` when anything a parent, child, investor or partner would notice changes (features, safety, privacy, pricing, numbers). Facts only; unbuilt things marked *načrt*/*planned*.
+4. `docs/journey/BUILD_LOG.md` — dated story entry for every notable change (what · why it matters · how to tell it per audience), with real numbers.
+5. `HANDOFF.md` + `ROADMAP.md` as before.
+Keep the claude.ai Project copies (`petprep/*.md`) in sync after merges. No child personal data in any doc.
 
 ## Engineering rules
 **Backend:** thin controllers → Service classes; FormRequest for every input; Policies/Sanctum abilities for authz (not ad-hoc `isParent()`); multi-row writes in `DB::transaction`; **no external HTTP inside transactions** — dispatch a queued Job; webhooks fail **closed** when the secret is missing; broadcasts on `PrivateChannel`; all wall-clock rules (quiet hours, midnight, feed windows) evaluated in the family's timezone; store UTC.
