@@ -6,13 +6,11 @@ use App\Enums\BreedType;
 use App\Enums\PetStateEnum;
 use App\Filament\Resources\PetResource\Pages;
 use App\Models\Pet;
-use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
 
 class PetResource extends Resource
 {
@@ -52,24 +50,28 @@ class PetResource extends Resource
                         Forms\Components\TextInput::make('hunger_level')
                             ->label('Hunger')
                             ->numeric()
+                            ->formatStateUsing(fn ($state): ?int => $state === null ? null : Pet::displayValue($state))
                             ->minValue(0)
                             ->maxValue(100)
                             ->required(),
                         Forms\Components\TextInput::make('thirst_level')
                             ->label('Thirst')
                             ->numeric()
+                            ->formatStateUsing(fn ($state): ?int => $state === null ? null : Pet::displayValue($state))
                             ->minValue(0)
                             ->maxValue(100)
                             ->required(),
                         Forms\Components\TextInput::make('energy_level')
                             ->label('Energy')
                             ->numeric()
+                            ->formatStateUsing(fn ($state): ?int => $state === null ? null : Pet::displayValue($state))
                             ->minValue(0)
                             ->maxValue(100)
                             ->required(),
                         Forms\Components\TextInput::make('hygiene_level')
                             ->label('Hygiene')
                             ->numeric()
+                            ->formatStateUsing(fn ($state): ?int => $state === null ? null : Pet::displayValue($state))
                             ->minValue(0)
                             ->maxValue(100)
                             ->required(),
@@ -140,7 +142,7 @@ class PetResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('hunger_level')
                     ->label('Hunger')
-                    ->numeric()
+                    ->formatStateUsing(fn ($state): int => Pet::displayValue($state))
                     ->color(fn (Pet $record): string => match (true) {
                         $record->hunger_level <= 25 => 'danger',
                         $record->hunger_level <= 50 => 'warning',
@@ -149,7 +151,7 @@ class PetResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('thirst_level')
                     ->label('Thirst')
-                    ->numeric()
+                    ->formatStateUsing(fn ($state): int => Pet::displayValue($state))
                     ->color(fn (Pet $record): string => match (true) {
                         $record->thirst_level <= 25 => 'danger',
                         $record->thirst_level <= 50 => 'warning',
@@ -158,7 +160,7 @@ class PetResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('energy_level')
                     ->label('Energy')
-                    ->numeric()
+                    ->formatStateUsing(fn ($state): int => Pet::displayValue($state))
                     ->color(fn (Pet $record): string => match (true) {
                         $record->energy_level <= 25 => 'danger',
                         $record->energy_level <= 50 => 'warning',
@@ -167,7 +169,7 @@ class PetResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('hygiene_level')
                     ->label('Hygiene')
-                    ->numeric()
+                    ->formatStateUsing(fn ($state): int => Pet::displayValue($state))
                     ->color(fn (Pet $record): string => match (true) {
                         $record->hygiene_level <= 25 => 'danger',
                         $record->hygiene_level <= 50 => 'warning',

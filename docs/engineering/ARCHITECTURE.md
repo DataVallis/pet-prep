@@ -43,7 +43,7 @@ PetPrep/                         git: DataVallis/pet-prep
 
 **users** — `id, name, email, password, role (parent|child, CHECK), is_superadmin, parent_id → users (cascade), pairing_pin(6), pin_expires_at, revenuecat_id (unique), timestamps`. Indexes: `parent_id`, `pairing_pin`.
 
-**pets** — `id, user_id → users (child), breed_type (mutt|border_collie, CHECK), pet_dna JSONB (GIN), current_video_url, hunger_level, thirst_level, energy_level, hygiene_level (int 0–100, CHECK), daily_step_count, last_step_reset_at, born_at, is_active, pet_state (CHECK: idle|sleeping|low_energy|hungry|sick|playing), illness_until, escalation_level (0–3), {hunger,thirst,energy,hygiene}_zero_since, is_game_over, is_hard_stopped, certificate_eligible, timestamps`. Index `(user_id, is_active)`.
+**pets** — `id, user_id → users (child), breed_type (mutt|border_collie, CHECK), pet_dna JSONB (GIN), current_video_url, hunger_level, thirst_level, energy_level, hygiene_level (double precision 0–100, CHECK; Eloquent cast `float`; every API/broadcast/Filament output rounds half up to int via `Pet::displayMetric()` / `Pet::attributesToArray()`), daily_step_count, last_step_reset_at, last_decay_at (decay clock, nullable; set on create, backfilled to migration time), born_at, is_active, pet_state (CHECK: idle|sleeping|low_energy|hungry|sick|playing), illness_until, escalation_level (0–3), {hunger,thirst,energy,hygiene}_zero_since, is_game_over, is_hard_stopped, certificate_eligible, timestamps`. Index `(user_id, is_active)`.
 
 **activities_log** — `id, pet_id → pets, activity_type (fed_pet|watered_pet|walked_pet|cleaned_poop|ignored_warning, CHECK), value int nullable, created_at`. Index `(pet_id, created_at)`. `value` conventions for `ignored_warning`: 30 = phase 1, 10 = phase 2, 0 = phase 3, −1 = illness, −2 = game over.
 
@@ -81,8 +81,14 @@ Docs: Scramble at `/docs/api` (local env only), export via `php artisan openapi:
 
 `routes/console.php` schedules `pets:process-decay` every minute (`withoutOverlapping`, `runInBackground`) → `PetDecayService::processAllActivePets()` then `EscalationService::processAllActivePets()`.
 
-**PetDecayService** (per active, non-game-over, non-ill pet): elapsed minutes = `now − updated_at`; hunger/thirst decay by breed rate (×0.10 during quiet hours); hygiene −1.5 %/h outside quiet hours; energy untouched; resets `daily_step_count` once per (UTC) day; tracks `*_zero_since`; derives `pet_state`; sets `certificate_eligible` at 12 weeks.
-⚠️ Known defects: integer rounding + `updated_at` coupling (≈1.8× hunger/thirst speed, hygiene frozen), no energy decay, runs during hard stop, UTC everywhere. See AUDIT §2.1–2.2.
+**PetDecayService** (M1-01/M1-02, scheduler loads active, non-game-over pets): decay is a pure function of (precise stored metrics, elapsed time `last_decay_at → now`, breed config, quiet hours). `updated_at` is never used, so other writes don't eat decay; missed ticks are caught up in full (no cap).
+- First tick with `last_decay_at = null` only starts the clock.
+- **Frozen** while `is_hard_stopped`, ill (`illness_until` in the future), inactive or game over: metrics untouched, `last_decay_at` advanced to now (quiet write). `Pet`'s `updating` hook also resets the clock when a pet is un-frozen (hard stop lifted, re-activated), and an illness that ended between ticks decays only from `illness_until`.
+- The elapsed interval is split per minute into normal vs quiet time (`QuietHours::isQuietNow($t)`): hunger/thirst = breed rate × (normal h + 0.10 × quiet h) — hunger from `breed_configs.hunger_decay_rate` (8 | 12), thirst hard-coded 10 | 15 (M1-06); hygiene −1.5 %/h in normal hours only (interim until M1-05); energy untouched (M1-04).
+- Values are clamped to 0–100 and stored unrounded. `*_zero_since` and `pet_state` use the precise value (zero = `<= 0`; e.g. 0.4 displays as 0 but isn't zero yet). Resets `daily_step_count` once per (UTC) day; sets `certificate_eligible` at 12 weeks.
+- **Broadcast:** the tick writes with `update()` (→ one `PetUpdated` via `PetObserver`) only if a rounded metric, `pet_state` or `certificate_eligible` changed; otherwise `updateQuietly()`. A mutt broadcasts ~213× per 24 h instead of every minute.
+- Verified by 24 h minute-by-minute simulations (`tests/Feature/PetDecayTest.php`): mutt hunger 0 % at 12 h 31 min, thirst 10 h; BC hunger 8 h 20 min, thirst 6 h 40 min; hygiene 91 after 6 h. Same with 5-min ticks or a 3 h scheduler gap.
+⚠️ Remaining: no energy (M1-04), no random hygiene events (M1-05), UTC everywhere (M1-03), `*_zero_since` set at tick time (not the exact crossing time) after a catch-up gap.
 
 **EscalationService**: game over (any metric 0 % ≥ 24 h → `is_active=false`, `is_game_over=true`) › illness (hygiene or energy 0 % ≥ 6 h outside quiet hours → `illness_until = now+12h`, state `sick`) › matrix (lowest metric ≤ 30 → level 1, ≤ 10 → level 2, any metric 0 % ≥ 1 h → level 3 + broadcast `parent_intervention_alarm`). Each escalation writes an `ignored_warning` activity. Push jobs are commented out (none exist).
 

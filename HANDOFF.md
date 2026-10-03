@@ -13,7 +13,7 @@
 | Milestone | Status |
 |---|---|
 | M0 Repo hygiene | 7 / 14 (+ yarn only, CI on Postgres + manual deploy, mobile test infra — PR #2) |
-| M1 Core loop end-to-end | 0 / 18 (role-based routing partially done on mobile) |
+| M1 Core loop end-to-end | 2 / 18 (M1-01, M1-02 on branch `fix/M1-01-decay-engine`; role-based routing partially done on mobile) |
 | M2 Parent + auth | 0 / 9 |
 | M3 Notifications, sensors, payments | 0 / 11 |
 | M4 AI media | 2 / 7 (M4-01 queued reference image, M4-04 signed webhooks — PR open) |
@@ -29,10 +29,10 @@
 
 ## 3. Known bugs & debt (top items — full list in AUDIT + DEPLOYMENT.md)
 
-1. **Decay math wrong** — hunger/thirst ≈1.8× too fast, hygiene frozen, energy never changes. (M1-01, M1-04)
+1. ~~**Decay math wrong** — hunger/thirst ≈1.8× too fast, hygiene frozen~~ → fixed on `fix/M1-01-decay-engine` (M1-01). Energy still never changes. (M1-04)
 2. **No child action endpoints**; Feed/Water only +20 % locally; walk/clean local only. (M1-07, M1-14)
 3. **Parent dashboard timeline/chart still mock data.** (M2-05)
-4. **Hard stop doesn't lock the child**; decay continues during hard stop. (M1-02, M1-16)
+4. **Hard stop doesn't lock the child** (M1-16); decay during hard stop/illness fixed on `fix/M1-01-decay-engine` (M1-02).
 5. **Public broadcast channel**; RevenueCat webhook fails open (fal.ai fixed in PR #1). (M1-08, M3-08)
 6. ~~CI on sqlite / invalid workflow / auto-deploy~~ → fixed in PR #2 (M0-08). Note: the old workflow was **invalid** (secrets in `environment.url`), so no GitHub Actions run ever executed — production was deployed manually.
 7. **Quick-login buttons with test passwords** in the app, which defaults to the production API. (M0-10)
@@ -59,6 +59,15 @@
 5. **M1-01 → M1-10** backend core loop (`/feature M1-01`), then **M1-11 → M1-18** mobile.
 
 ## 6. Session log
+
+### 2026-10-03 (cloud, backend-engineer) — M1-01 + M1-02: decay engine rewrite (branch `fix/M1-01-decay-engine`, no PR yet)
+- New migration `2026_10_03_120000_add_last_decay_at_and_fractional_metrics_to_pets_table`: `pets.last_decay_at` (backfill `now()`), the four metric columns → `double precision` (0–100 CHECKs kept). Chose double over `decimal(5,2)`: 2 decimals would still drop ~0.003 % per minute-tick (mutt hunger 0.1333 → 0.13, ~2.5 % slower).
+- `PetDecayService` rewritten: elapsed time only from `last_decay_at` (whole seconds), per-minute split of normal vs quiet time (catch-up across quiet boundaries is exact), frozen while hard-stopped / ill / inactive / game over with the clock advanced, no catch-up after unfreezing (`Pet::updating` hook resets the clock; illness decays only from `illness_until`). Thresholds, `pet_state` and `*_zero_since` use precise values (zero = `<= 0`).
+- Broadcast only when a displayed (rounded) metric, state or certificate flag changes; otherwise `updateQuietly()` → max one `PetUpdated` per pet per tick from decay.
+- API contract unchanged: `Pet::displayMetric()` (round half up) in `PetUpdated::broadcastWith`, parent dashboard, pairing response; `Pet::attributesToArray()` rounds for `/api/login` + `/api/user` (serialized model); Filament table/form show ints. No OpenAPI regen needed (types still int).
+- Simulation (24 h, 1-min ticks): mutt hunger 0 % at 12 h 31 min, thirst 10 h 00, 6 h → hunger 52 / thirst 40 / hygiene 91; BC hunger 8 h 20, thirst 6 h 40, 6 h → hunger 28 / hygiene 91. Identical with 5-min ticks and with a 3 h scheduler gap.
+- Tests: 143 passed (541 assertions) on PostgreSQL 16 (was 123); `PetDecayTest` rewritten (old tests relied on `updated_at`). Pint run on changed files only.
+- New debt: (1) escalation still double-broadcasts (Phase 3 / illness / game over: observer + explicit `broadcast`) and decay + escalation can each broadcast in the same minute — M1-08. (2) `*_zero_since` is stamped at tick time, so after a long scheduler gap the illness/game-over clocks start late. (3) Saving a pet in Filament writes the rounded value back. (4) **Question for David:** `*_zero_since` keeps counting during hard stop → a parent hard stop of ≥ 24 h with a metric at 0 ends in game over. Should hard stop also pause the neglect clocks?
 
 ### 2026-10-03 — M0-10 dev-only demo logins; M0-14 HUD checked
 - Quick-login buttons and the `child@test.com` placeholder now render only in development builds (`__DEV__`); Jest test added (74/74). Lucide icon mock made generic.

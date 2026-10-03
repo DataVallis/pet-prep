@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-03 — Pes je bil skoraj 2× prehitro lačen: nov "motor" igre
+
+**Kaj se je zgodilo**
+- Srce igre (izračun, kako hitro pes postaja lačen, žejen in umazan) je na novo napisano.
+- Stara koda je majhne padce (npr. 0,53 %) zaokrožila navzgor na cel 1 % in čas merila od zadnje kakršnekoli spremembe psa. Posledica: mešanček je bil po 6 urah lačen do 10 % namesto 52 %, higiena pa sploh ni padala.
+- Med "hard stopom" starša in med boleznijo psa so metrike zdaj zamrznjene; ko se igra nadaljuje, pes ne "nadoknadi" zamujenega časa naenkrat.
+- Starš na nadzorni plošči ne dobi več obvestila vsako minuto, ampak samo, ko se številka na zaslonu res spremeni (pri mešančku ~213× na dan namesto 1.440×).
+- **Številke (24-urna simulacija minuto za minuto, avtomatski test):** mešanček je lačen (0 %) po 12 h 31 min (spec 12,5 h), žejen po 10 h; border collie lačen po 8 h 20 min, žejen po 6 h 40 min — natanko po specifikaciji. Enak rezultat, če strežnik zamudi 3 ure. 143 avtomatskih testov zelenih (prej 123).
+
+**Zakaj je pomembno**
+Če pes zahteva hrano 2× pogosteje, kot bi jo pravi pes, otrok dobi opozorila že dopoldne in igra ne meri več pripravljenosti, ampak potrpežljivost. Ritem mora biti realističen, sicer certifikat odgovornosti ne pomeni ničesar.
+
+**Kako to povedati**
+- 👩 *"Virtualni kuža je lačen tako pogosto kot pravi pes, ne pogosteje. Ko ga začasno ustavite, počaka na vas."*
+- 🛠 LinkedIn: *"Napaka zaokroževanja: 0,53 → 1 vsako minuto. Moj virtualni pes je bil 1,8× prehitro lačen. Rešitev: ločena ura za razpad (`last_decay_at`), metrike v plavajoči vejici, zaokroževanje šele ob prikazu."*
+- 💼 Igralna mehanika je preverjena s simulacijo celega dne za obe pasmi — številke iz specifikacije so zdaj avtomatski test.
+
 ## 2026-10-03 — Prvi pravi avtomatizirani deploy
 
 **Kaj se je zgodilo**
