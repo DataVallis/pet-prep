@@ -9,6 +9,9 @@
 | `engineering/ROADMAP.md` | Milestoni M0–M5 s taski (ID-ji za veje in commite) | SL |
 | `engineering/DEPLOYMENT.md` | Hetzner runbook | EN |
 | `decisions/` | ADR-ji od 012 naprej (001–011 so v root `README.md`) | EN |
+| `product/DECISIONS.md` | **Dnevnik odločitev** (kdo, kaj, zakaj) + odprta vprašanja | SL |
+| `engineering/DIAGRAMS.md` | Diagrami (Mermaid): sistem, pairing, game loop, eskalacija, podatki, pipeline | EN |
+| `audiences/` | Viri za starše, otroke, investitorje, partnerje (→ vodiči, 2-pagerji, decki) | SL/EN |
 | `journey/BUILD_LOG.md` | **Dnevnik razvoja** — surovina za objave, investitorje, partnerje, starše in otroke | SL |
 | `source/` | Izvorni docx dokumenti pretvorjeni v Markdown (zgodovinski) | SL |
 

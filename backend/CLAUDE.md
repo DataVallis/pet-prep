@@ -20,7 +20,7 @@ Run everything through Sail: `./vendor/bin/sail artisan …`, `./vendor/bin/sail
 
 ## Game-loop invariants (see PRODUCT_SPEC §4–7)
 - Decay is a pure function of (previous state, elapsed time since `last_decay_at`, breed config, quiet-hours schedule). It never depends on `updated_at` (M1-01).
-- Metrics are 0–100, stored as `double precision` (float cast). Don't lose fractional decay to rounding; round only for output via `Pet::displayMetric()` / `Pet::displayValue()` (half up). Never write a rounded value back.
+- Metrics are 0–100, stored as `double precision` (float cast). Don't lose fractional decay to rounding; round only for output via `Pet::displayMetric()` / `Pet::displayValue()` (half up). Never write a rounded value back. **Thresholds (escalation, pet state, zero tracking) compare the displayed value** — David, 2026-10-03.
 - **Row lock for metric writes:** the decay tick re-reads each pet with `Pet::whereKey($id)->lockForUpdate()` inside `DB::transaction` and computes from that fresh row. Any other code that changes metrics or freeze state (child actions M1-07, admin edits — see `EditPet::handleRecordUpdate`, webhooks) must do the same: open a transaction, `lockForUpdate()` the pet, compute from the locked row, write, and broadcast after commit (`DB::afterCommit`, or rely on `PetObserver`, which runs after commit). Never write metrics from a model loaded earlier.
 - Frozen while `is_hard_stopped`, ill, inactive or game over. Hard stop and illness also freeze the neglect clocks (`*_zero_since`) and block escalation: `frozen_at` marks the freeze start, and on thaw (`Pet::applyThaw()`, via the `updating` hook or `thawIfDue()` on the next tick) every `*_zero_since` is shifted forward by the frozen duration.
 - Quiet hours: ×0.10 decay, no hygiene events, no pushes, illness clock paused.
@@ -38,5 +38,5 @@ Run everything through Sail: `./vendor/bin/sail artisan …`, `./vendor/bin/sail
 - `BreedType` enum uses `border_collie`; `breed_configs.breed_slug` uses `border-collie`. Use `BreedType::slug()`.
 - `User::activePet()` is a method returning a model, not a relation (can't eager-load).
 - `PetUpdated` currently uses `$connection = 'sync'` and a public channel — both scheduled for change (M1-08/09).
-- `APP_TIMEZONE=UTC`; family timezone doesn't exist yet (M1-03).
+- Storage is UTC; wall-clock rules (quiet hours, midnight, dashboard days, future feed windows) use `User::familyTimezone()` / `Pet::familyTimezone()` (parent's `users.timezone`, default Europe/Ljubljana) — M1-03.
 - Webhook controllers skip verification when the secret env var is empty — never deploy that way.

@@ -31,7 +31,7 @@ For deployments as `deploy@`, copy `~/.ssh/petprep_deploy_key` securely (e.g. Ai
 | # | Finding | Risk |
 |---|---|---|
 | D1 | ✅ *Fixed 2026-10-02 (M0-08): Pest runs on a `postgres:18` service; mobile tsc + Jest job added.* CI test job copies `backend/.env.example` (sqlite) — migrations use PostgreSQL-only SQL (CHECK constraints, GIN index) → tests fail in CI, so auto-deploy is blocked or was bypassed. Add a `postgres:18` service + pgsql env to the workflow. | High |
-| D2 | ✅ *Fixed 2026-10-02 (M0-08): deploy runs only via manual "Run workflow" on `main` (Actions → CI & Deploy); pushes/PRs only run tests.* Auto-deploy on every push to `main` with no manual approval → any merge goes live. Add required reviewers on the `production` environment or deploy on tags. | High |
+| D2 | ✅ *2026-10-02: manual deploys introduced. 2026-10-03 (David): pre-production phase → merges to `main` deploy automatically after tests; restore manual-only before real users.* Auto-deploy on every push to `main` with no manual approval → any merge goes live. Add required reviewers on the `production` environment or deploy on tags. | High |
 | D3 | Production runs **PHP 8.3** (`docker/8.3`, CI 8.3) while local Sail uses 8.5. Pick one (8.4/8.5) for dev, CI and prod. | Medium |
 | D4 | `deploy-production.sh` ignores `git checkout` failures (`|| true`) and rsync `--delete` overwrites the server tree — fine for rsync deploys, but the script's git branch is dead code. | Low |
 | D5 | Backups stay on the same disk (`/opt/petprep/backups`) → copy off-site (Hetzner Storage Box / S3) and test a restore. | Medium |

@@ -87,9 +87,10 @@ jobs:
   deploy:
     name: Deploy to Hetzner Production
     needs: [backend-tests, mobile-checks]
-    # Deploys only on a manual "Run workflow" from main (GitHub → Actions → CI & Deploy).
-    # A merge to main no longer goes live automatically — see docs/engineering/DEPLOYMENT.md D2.
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    # Pre-production phase (David, 2026-10-03): every push/merge to main deploys automatically
+    # after both test jobs pass; "Run workflow" on main also deploys. To require manual deploys
+    # again, restrict this to workflow_dispatch — see docs/engineering/DEPLOYMENT.md D2.
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     concurrency:
       group: production
       cancel-in-progress: false
