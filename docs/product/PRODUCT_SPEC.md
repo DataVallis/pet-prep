@@ -57,6 +57,8 @@
 | 2 — Kritično | metrika ≤ 10 % | push z močno vibracijo in cviljenjem: "Če ga ne nahraniš v 30 minutah, bo zbolel." |
 | 3 — Intervencija | metrika 0 % > 1 h | alarm na telefonu starša (Reverb + push): "Tvoj otrok danes ni poskrbel za psa." |
 
+Pragovi se primerjajo s prikazano (zaokroženo) vrednostjo.
+
 ## 7. Kazni
 
 - **Bolezen:** higiena **ali** gibanje 0 % > 6 h (izven tihih ur) → zaslon sivo, video težkega dihanja, **12 h timeout** ("na opazovanju pri veterinarju"), otrok ne more ničesar.

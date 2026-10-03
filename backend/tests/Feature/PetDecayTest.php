@@ -594,7 +594,7 @@ describe('PetDecayService - pet state determination', function () {
         expect($pet->fresh()->pet_state)->toBe(PetStateEnum::Playing);
     });
 
-    it('uses the precise value for thresholds (30.4 displays 30 but is not <= 30)', function () {
+    it('uses the displayed value for state thresholds (30.4 shows 30 → hungry)', function () {
         seedBreedConfigs();
         $pet = decayPet(['hunger_level' => 30.45, 'pet_state' => 'idle']);
         Pet::whereKey($pet->id)->update(['last_decay_at' => now()->subSeconds(10)]);
@@ -602,8 +602,34 @@ describe('PetDecayService - pet state determination', function () {
         app(PetDecayService::class)->processPetDecay($pet->refresh());
 
         $pet->refresh();
+        expect($pet->hunger_level)->toBeGreaterThan(30.0);
         expect($pet->displayMetric('hunger_level'))->toBe(30);
+        expect($pet->pet_state)->toBe(PetStateEnum::Hungry);
+    });
+
+    it('does not treat 30.5 (shows 31) as hungry', function () {
+        seedBreedConfigs();
+        $pet = decayPet(['hunger_level' => 30.6, 'pet_state' => 'idle']);
+        // 10 s of mutt decay = 0.0222 → 30.578, displays 31.
+        Pet::whereKey($pet->id)->update(['last_decay_at' => now()->subSeconds(10)]);
+
+        app(PetDecayService::class)->processPetDecay($pet->refresh());
+
+        $pet->refresh();
+        expect($pet->displayMetric('hunger_level'))->toBe(31);
         expect($pet->pet_state)->toBe(PetStateEnum::Idle);
+    });
+
+    it('marks the pet sick when hygiene shows 0 % (0.4)', function () {
+        seedBreedConfigs();
+        $pet = decayPet(['hygiene_level' => 0.45, 'pet_state' => 'idle']);
+        Pet::whereKey($pet->id)->update(['last_decay_at' => now()->subSeconds(1)]);
+
+        app(PetDecayService::class)->processPetDecay($pet->refresh());
+
+        $pet->refresh();
+        expect($pet->hygiene_level)->toBeGreaterThan(0.0);
+        expect($pet->pet_state)->toBe(PetStateEnum::Sick);
     });
 });
 
@@ -619,17 +645,47 @@ describe('PetDecayService - zero metric tracking', function () {
         expect($pet->hunger_zero_since)->not->toBeNull();
     });
 
-    it('does not mark a metric as zero while the precise value is above 0', function () {
+    it('starts zero tracking when the metric shows 0 % (0.49)', function () {
         seedBreedConfigs();
-        // 0.4 displays as 0 but is not zero yet.
-        $pet = decayPet(['hunger_level' => 0.4]);
-        Pet::whereKey($pet->id)->update(['last_decay_at' => now()->subSeconds(30)]);
+        $pet = decayPet(['hunger_level' => 0.49]);
+        // 1 s of mutt decay = 0.0022 → 0.4878: still above 0 precisely.
+        Pet::whereKey($pet->id)->update(['last_decay_at' => now()->subSecond()]);
 
         app(PetDecayService::class)->processPetDecay($pet->refresh());
 
         $pet->refresh();
+        expect($pet->hunger_level)->toBeGreaterThan(0.0);
         expect($pet->displayMetric('hunger_level'))->toBe(0);
+        expect($pet->hunger_zero_since?->equalTo(now()->startOfSecond()))->toBeTrue();
+    });
+
+    it('does not start zero tracking at exactly 0.5 (shows 1 %)', function () {
+        seedBreedConfigs();
+        $pet = decayPet(['hunger_level' => 0.5]);
+        Pet::whereKey($pet->id)->update(['last_decay_at' => now()->subSecond()]);
+        // Hold hunger exactly at 0.5 by pausing the hunger rate for this tick.
+        DB::table('breed_configs')->where('breed_slug', 'mutt')->update(['hunger_decay_rate' => 0]);
+
+        app(PetDecayService::class)->processPetDecay($pet->refresh());
+
+        $pet->refresh();
+        expect($pet->hunger_level)->toBe(0.5);
+        expect($pet->displayMetric('hunger_level'))->toBe(1);
         expect($pet->hunger_zero_since)->toBeNull();
+    });
+
+    it('clears zero tracking once the metric shows 1 % again', function () {
+        seedBreedConfigs();
+        $pet = decayPet([
+            'hunger_level' => 0.6,
+            'hunger_zero_since' => now()->subHour(),
+        ]);
+        Pet::whereKey($pet->id)->update(['last_decay_at' => now()->subSecond()]);
+        DB::table('breed_configs')->where('breed_slug', 'mutt')->update(['hunger_decay_rate' => 0]);
+
+        app(PetDecayService::class)->processPetDecay($pet->refresh());
+
+        expect($pet->fresh()->hunger_zero_since)->toBeNull();
     });
 
     it('clears zero-since tracking when metric recovers above 0', function () {
