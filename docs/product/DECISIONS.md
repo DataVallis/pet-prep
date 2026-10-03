@@ -5,6 +5,9 @@
 
 | Datum | Kdo | Odločitev | Zakaj | Kje |
 |---|---|---|---|---|
+| 2026-10-03 | Claude | **"Dodaj otroka" samo, dokler otrok ni povezan** (nadzorna plošča + Nadzor); ko je, gumba ni. | PRODUCT_SPEC §2/§3: MVP 1 starš → 1 otrok; backend tega pri povezovanju še ne preverja. | `feat/M1-12-session-restore-parent-pin` |
+| 2026-10-03 | Claude | **Ob zagonu brez povezave seja ostane** (zaslon "Ni povezave" + "Poskusi znova"); token se izbriše samo, če ga strežnik zavrne (401). | Otrok ne sme biti odjavljen samo zato, ker je telefon brez signala. | `feat/M1-12-session-restore-parent-pin` |
+| 2026-10-03 | Claude | **Ob 429 na "Nova koda" ostane prejšnja koda vidna** in gumb je onemogočen za `Retry-After` sekund. | Strežnik kodo zamenja samo ob uspehu — stara še velja. | `feat/M1-12-session-restore-parent-pin` |
 | 2026-10-03 | David | **Pred-produkcijska faza:** Claude sam merga zelene PR-je in merge na `main` samodejno deploya na `api.petprep.si`. Ko gremo k pravim uporabnikom → spet ročni deploy. | Hitrost razvoja; produkcija še nima pravih družin. | CLAUDE.md, DEPLOYMENT.md D2 |
 | 2026-10-03 | David | **Dokumentacija se piše sproti** za vse publike (tehnična, starši, otroci, investitorji, partnerji), z diagrami; iz nje bodo 2-pagerji, decki, vodiči. | "Za nazaj se ne bomo spomnili vsega." | CLAUDE.md §Living documentation |
 | 2026-10-03 | David | **Pragovi opozoril sledijo prikazani (zaokroženi) vrednosti** — kar otrok vidi kot 30 %, sproži opomnik. | Otrok in starš morata videti isto, kar sproži pravilo. | PRODUCT_SPEC §6, PR (M1-01b) |

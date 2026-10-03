@@ -52,10 +52,14 @@ sequenceDiagram
   participant DB as PostgreSQL
   participant Q as Queue
   participant FAL as fal.ai
-  Parent->>API: POST /api/parent/generate-pin
-  API->>DB: store 6-digit PIN (15 min)
-  API-->>Parent: PIN
-  Note over Parent,Child: parent tells the child the PIN<br/>(no parent "add child" screen yet — M2-02)
+  Note over Parent: "Dodaj otroka" card (dashboard, or Controls)<br/>shown only while no child is paired
+  Parent->>API: POST /api/parent/generate-pin (5/min)
+  API->>DB: store 6-digit PIN (15 min, replaces the previous one)
+  API-->>Parent: PIN → shown as "734 912" + live countdown + "Nova koda"
+  Note over Parent,Child: parent tells the child the PIN<br/>(child still signs in with e-mail first — PIN-only login is M2-02)
+  loop every 5 s while the PIN is valid
+    Parent->>API: GET /api/parent/dashboard
+  end
   Child->>API: POST /api/child/pair {pin}
   API->>DB: transaction: lock parent, link child, create pet (Pet DNA), consume PIN
   API-->>Child: 201 pet (media_status=pending|disabled)
@@ -64,6 +68,28 @@ sequenceDiagram
   FAL-->>Q: image URL (*.fal.media)
   Q->>DB: pet_dna.reference_image_url, media_status=ready
   Q-->>Child: PetUpdated "reference_image_ready" (Reverb)
+  Parent->>API: GET /api/parent/dashboard → pet ≠ null
+  Note over Parent: "Otrok je povezan!" → GET /api/user refreshes the session pet
+```
+
+## 2b. Mobile app launch — session restore (M1-12)
+
+```mermaid
+flowchart TD
+  L[App start] --> S["Splash 'Nalagam …'<br/>bootStatus = restoring"]
+  S --> T{Token in SecureStore?}
+  T -- no --> LOGIN[PairingScreen — login]
+  T -- yes --> U[GET /api/user]
+  U -- 200 --> R{role}
+  R -- parent --> PD[ParentDashboardScreen]
+  R -- "child + pet" --> HUD["ChildHudScreen<br/>(+ LockedScreen if game over / ill)"]
+  R -- "child, no pet" --> PIN[PairingScreen — PIN step]
+  U -- 401 --> CLR[delete token] --> LOGIN
+  U -- "network / 5xx" --> OFF["Splash 'Ni povezave'<br/>token kept"]
+  OFF -- "Poskusi znova" --> U
+  OFF -- Odjava --> OUT
+  PD & HUD & PIN -- "Odjava / any later 401" --> OUT["logout(): POST /api/logout (best effort)<br/>→ delete token → clear query cache → reset store"]
+  OUT --> LOGIN
 ```
 
 ## 3. Game loop tick (every minute)

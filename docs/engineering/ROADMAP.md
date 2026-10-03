@@ -49,7 +49,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 
 **Mobile**
 - [ ] M1-11 Navigacija: Expo Router ali React Navigation; root `RootNavigator` z role-based vejama (parent / child)
-- [ ] M1-12 Session bootstrap: ob zagonu prebere token iz SecureStore → `GET /api/user` → `GET /api/child/pet`
+- [x] M1-12 Session bootstrap: ob zagonu prebere token iz SecureStore → `GET /api/user` (vrne tudi `pet`) → usmeri po vlogi kot po prijavi; splash, 401 → odjava, brez povezave → "Poskusi znova"; enotna odjava (`logout()`) *(2026-10-03, veja `feat/M1-12-session-restore-parent-pin`; `GET /api/child/pet` ostane za M1-07/M1-15)*
 - [ ] M1-13 TanStack Query hooki (`usePet`, `useFeed`, …) z optimistic update; Zustand samo za UI / ws stanje
 - [ ] M1-14 Feed / Water / Clean / Walk vezani na API; okna akcij iz API-ja (disabled + "naslednje okno ob 17:00")
 - [ ] M1-15 Echo: private channel z `authorizer` (Bearer token), wss v produkciji, pravi polling fallback (`GET /api/child/pet` vsakih 10 s)
@@ -60,7 +60,9 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 ## M2 — Starš, avtentikacija, dashboard (1 teden)
 
 - [ ] M2-01 Registracija / prijava staršev: Sign in with Apple + Google (Socialite / token verify) + email fallback
-- [ ] M2-02 Otroški profil brez emaila (**odločeno**): starš ustvari otroka (ime, starost), PIN pairing izda Sanctum token z abilities `child:*`; odstraniti email/geslo prijavo za otroka
+- [~] M2-02 Otroški profil brez emaila (**odločeno**): starš ustvari otroka (ime, starost), PIN pairing izda Sanctum token z abilities `child:*`; odstraniti email/geslo prijavo za otroka
+  - [x] Starševski zaslon "Dodaj otroka" (obstoječi `POST /api/parent/generate-pin`): PIN `734 912`, odštevanje 15 min, "Nova koda", 429 ohladitev, samodejna potrditev, ko se otrok poveže *(2026-10-03, ista veja)*
+  - [ ] Odprto: otrok se še vedno najprej prijavi z e-pošto; PIN-only prijava (backend izda token za otroški profil), ime/starost otroka, odstranitev e-poštne prijave za otroka; backend ne preprečuje drugega otroka (MVP 1 : 1 je zdaj samo v aplikaciji)
 - [ ] M2-03 Sanctum abilities (`parent:*`, `child:*`) + Policies namesto ročnih `isParent()` preverjanj
 - [ ] M2-04 Izbira pasme pred "rojstvom" (starš) → nato pairing; RevenueCat odklep pred izbiro, ne sredi igre
 - [ ] M2-05 Parent dashboard na pravih podatkih (`/api/parent/dashboard`, `/activities`), live prek Reverb
