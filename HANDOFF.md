@@ -8,7 +8,7 @@
 - **Last updated:** 2026-10-02 afternoon (Claude, orchestrator — cloud session; PR #2 CI, PR #1 fal webhooks)
 - **Realistic MVP completion:** ~45 % (see `docs/engineering/AUDIT-2026-10-02.md` + addendum)
 - **Current milestone:** M0 — repo hygiene → then M1 — core game loop end-to-end
-- **Production:** `https://api.petprep.si` is live (Docker Compose + Caddy on Hetzner CX23). Deploy: auto on push to `main` **until PR #2 is merged**; afterwards manual only (Actions → CI & Deploy → Run workflow).
+- **Production:** `https://api.petprep.si` is live (Docker Compose + Caddy on Hetzner CX23). Deploy is manual only (Actions → CI & Deploy → Run workflow on `main`). Last deploy 2026-10-03 (PR #1 + #2: signed fal.ai webhooks, CI) — first ever deploy via Actions.
 
 | Milestone | Status |
 |---|---|
@@ -54,11 +54,15 @@
 
 1. **David:** rotate EAS signing passwords (M0-12).
 2. **David:** confirm the free/paid split (BUSINESS_MODEL §7) and B7 (non-consumable vs subscription).
-3. **David:** merge PR #2 (CI) → merge PR #1 (fal webhooks) → Actions → CI & Deploy → Run workflow on `main` → add `FAL_AI_API_KEY` to `/opt/petprep/.env`. Visually check the child HUD (M0-14).
+3. **David:** visually check the child HUD (M0-14).
 4. **M0-10** hide test logins in the app.
 5. **M1-01 → M1-10** backend core loop (`/feature M1-01`), then **M1-11 → M1-18** mobile.
 
 ## 6. Session log
+
+### 2026-10-03 — First deploy through GitHub Actions
+- PR #1 and #2 merged. Deploy job needed the `PRODUCTION_SSH_PRIVATE_KEY` repo secret (never set before — the old workflow never ran); David created a dedicated deploy key and the manual run succeeded.
+- Verified on the server: all app containers recreated, `fal OK` (FAL_AI_API_KEY loaded), migration `2026_10_02_120000_create_pet_media_jobs_table` ran.
 
 ### 2026-10-02 (afternoon, cloud) — M4-04 + M4-01: signed fal.ai webhooks, async reference image
 - GitHub access to `DataVallis/pet-prep` granted; work happens in the cloud on branches, PRs for David to merge (merge to `main` = deploy).

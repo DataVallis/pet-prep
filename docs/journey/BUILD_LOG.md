@@ -8,6 +8,18 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-03 — Prvi pravi avtomatizirani deploy
+
+**Kaj se je zgodilo**
+- Prvič v zgodovini projekta je nova verzija šla v produkcijo prek GitHub Actions: testi (123 + 72) → backup baze → migracije → nova verzija na `api.petprep.si`, vse z enim klikom.
+- V živo so zdaj kriptografsko preverjeni AI videi in generiranje slike psa v ozadju.
+
+**Kako to povedati**
+- 💼 Od kode do produkcije v ~5 minutah, z avtomatskimi testi in ročno potrditvijo ustanovitelja.
+- 🛠 Del zgodbe "pipeline, ki ni nikoli tekel": manjkajoči deploy ključ, dedikiran SSH ključ samo za CI, prvi zeleni deploy.
+
+---
+
 ## 2026-10-02 — Varovalka pred produkcijo: vsaka sprememba je najprej stestirana
 
 **Kaj se je zgodilo**
