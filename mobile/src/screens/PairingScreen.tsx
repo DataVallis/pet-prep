@@ -17,6 +17,11 @@ import { api, saveAuthToken } from '@/api/client';
 import { useAppStore } from '@/store/appStore';
 import type { PairingResponse, Pet } from '@/types';
 
+/** Seeded demo accounts are offered only in development builds (Expo Go / dev client). */
+export function showDevLogins(): boolean {
+  return __DEV__ === true;
+}
+
 const PIN_LENGTH = 6;
 
 const CONTRACT_TEXT = `Zavezujem se, da bom vsak dan odgovorno skrbel za svojega virtualnega ljubljenčka:
@@ -82,6 +87,7 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
 
   // Quick 1-tap demo logins for seamless local testing
   const handleQuickLogin = (role: 'child' | 'parent') => {
+    if (!showDevLogins()) return;
     if (role === 'child') {
       setEmail('child@test.com');
       setPassword('password');
@@ -185,7 +191,10 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
           {/* ── Step 1: Login Form ── */}
           {step === 'login' && (
             <View style={styles.formCard}>
-              {/* Quick 1-Tap Demo Buttons */}
+              {/* Quick 1-tap demo logins — development builds only (M0-10).
+                  __DEV__ is false in EAS preview/production builds, so seeded test
+                  credentials never ship to real families. */}
+              {showDevLogins() && (
               <View style={styles.quickAccessSection}>
                 <Text style={styles.quickAccessTitle}>HITRO TESTIRANJE (1 KLIK):</Text>
                 <View style={styles.quickButtonsRow}>
@@ -208,6 +217,7 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
                   </Pressable>
                 </View>
               </View>
+              )}
 
               <View style={styles.dividerContainer}>
                 <View style={styles.dividerLine} />
@@ -218,7 +228,7 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
               <View style={styles.inputsContainer}>
                 <TextInput
                   style={styles.input}
-                  placeholder="E-pošta (npr. child@test.com)"
+                  placeholder="E-pošta"
                   placeholderTextColor="#64748b"
                   keyboardType="email-address"
                   autoCapitalize="none"
