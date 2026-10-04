@@ -5,9 +5,35 @@
 
 import { ApiError, type ParentDashboardResponse } from '@/api/client';
 import { reasonOf } from '@/modules/pairing/pin';
+import {
+  emptyToday,
+  readCareScore,
+  readDayRows,
+  readProgress,
+  readTimeline,
+  readToday,
+  readTrafficLight,
+  type CareScore,
+  type ChallengeProgress,
+  type DayRow,
+  type TimelineEntry,
+  type TodayRoutines,
+  type TrafficLight,
+} from '@/modules/family/scoring';
 
-/** One pet of the family — typed by the generated schema. */
-export type FamilyPet = NonNullable<ParentDashboardResponse['family']>['pets'][number];
+/** One pet of the family as the generated schema types it (raw API). */
+export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'][number];
+
+/**
+ * One pet of the family after normalisation: the schema's loose `timeline` and
+ * union-typed `traffic_light` replaced by real types (M2-05).
+ */
+export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today'> & {
+  traffic_light: TrafficLight;
+  care_score: CareScore;
+  today: TodayRoutines;
+  timeline: TimelineEntry[];
+};
 
 export interface FamilyChildStats {
   days: number;
@@ -35,6 +61,16 @@ export interface FamilyChild {
   pet_id: number | null;
   contract_signed: boolean;
   stats: FamilyChildStats;
+  /** M2-06: today's light for this child (shared pet: every missed routine they shared). */
+  traffic_light: TrafficLight;
+  /** M2-06: fair-share Care Score (null score = no routine expected yet). */
+  care_score: CareScore;
+  /** M2-06: today's routines this child shares. */
+  today: TodayRoutines;
+  /** M2-06: oldest → newest, 7 family-local days. */
+  last_7_days: DayRow[];
+  /** 12-week challenge since the child's contract; null before it. */
+  progress: ChallengeProgress | null;
 }
 
 export interface FamilyParent {
@@ -57,6 +93,38 @@ function isFamilyChild(value: unknown): value is FamilyChild {
   return typeof c.id === 'number' && typeof c.name === 'string' && typeof c.devices === 'number';
 }
 
+function isFamilyParent(value: unknown): value is FamilyParent {
+  if (typeof value !== 'object' || value === null) return false;
+  const p = value as Record<string, unknown>;
+  return typeof p.id === 'number' && typeof p.name === 'string';
+}
+
+/** Scoring fields with safe defaults (an older backend without M2-06 sends none). */
+function normalizeChild(raw: FamilyChild): FamilyChild {
+  const c = raw as unknown as Record<string, unknown>;
+  return {
+    ...raw,
+    traffic_light: readTrafficLight(c.traffic_light),
+    care_score: readCareScore(c.care_score),
+    today: c.today === undefined ? emptyToday() : readToday(c.today),
+    last_7_days: readDayRows(c.last_7_days),
+    progress: readProgress(c.progress),
+  };
+}
+
+export function normalizePet(raw: FamilyPetRaw): FamilyPet {
+  const p = raw as unknown as Record<string, unknown>;
+  return {
+    ...raw,
+    metrics: raw.metrics ?? { hunger: 0, thirst: 0, energy: 0, hygiene: 0 },
+    caretakers: Array.isArray(raw.caretakers) ? raw.caretakers : [],
+    traffic_light: readTrafficLight(p.traffic_light),
+    care_score: readCareScore(p.care_score),
+    today: readToday(p.today),
+    timeline: readTimeline(p.timeline),
+  };
+}
+
 /** The dashboard's `family` (null when the parent has none yet). Malformed children are dropped. */
 export function familyFromDashboard(data: ParentDashboardResponse | undefined): FamilyOverview | null {
   const family = data?.family;
@@ -66,11 +134,42 @@ export function familyFromDashboard(data: ParentDashboardResponse | undefined): 
   return {
     id: family.id,
     timezone: family.timezone,
-    parents: Array.isArray(rawParents) ? (rawParents as FamilyParent[]) : [],
-    children: Array.isArray(rawChildren) ? rawChildren.filter(isFamilyChild) : [],
-    pets: Array.isArray(family.pets) ? family.pets : [],
+    parents: Array.isArray(rawParents) ? rawParents.filter(isFamilyParent).map((p) => ({ ...p, is_me: p.is_me === true })) : [],
+    children: Array.isArray(rawChildren) ? rawChildren.filter(isFamilyChild).map(normalizeChild) : [],
+    pets: Array.isArray(family.pets) ? family.pets.map(normalizePet) : [],
   };
 }
+
+/** The pet a child currently cares for (null: no pet yet / pet not in the family block). */
+export function petOfChild(child: FamilyChild, family: FamilyOverview): FamilyPet | null {
+  return child.pet_id === null ? null : (family.pets.find((p) => p.id === child.pet_id) ?? null);
+}
+
+/** Nickname of a family child by id (timeline items from `/activities` carry only the id). */
+export function nicknameOf(childId: number | null, family: FamilyOverview | null): string | null {
+  if (childId === null || !family) return null;
+  return family.children.find((c) => c.id === childId)?.name ?? null;
+}
+
+/** What the parent should know about a pet's state, most important first (null = playing normally). */
+export type PetStatus = 'game_over' | 'awaiting_contract' | 'inactive' | 'hard_stopped' | 'ill';
+
+export function petStatus(pet: FamilyPet): PetStatus | null {
+  if (pet.is_game_over) return 'game_over';
+  if (pet.awaiting_contract) return 'awaiting_contract';
+  if (!pet.is_active) return 'inactive';
+  if (pet.is_hard_stopped) return 'hard_stopped';
+  if (pet.is_ill) return 'ill';
+  return null;
+}
+
+export const PET_STATUS_LABELS: Record<PetStatus, string> = {
+  game_over: 'Igra končana — kuža je bil odvzet',
+  awaiting_contract: 'Kuža čaka na podpis pogodbe',
+  inactive: 'Kuža ni aktiven',
+  hard_stopped: 'Igra je ustavljena (hard stop)',
+  ill: 'Kuža je pri veterinarju',
+};
 
 /** Pets a new child may join: alive and active (the backend refuses others with `pet_not_joinable`). */
 export function joinablePets(family: FamilyOverview | null): FamilyPet[] {
@@ -87,7 +186,7 @@ export function breedLabel(breed: string): string {
 }
 
 /** Nicknames of the children caring for a pet ("Maja, Luka"). */
-export function caretakerNames(pet: FamilyPet, family: FamilyOverview): string {
+export function caretakerNames(pet: Pick<FamilyPet, 'caretakers'>, family: FamilyOverview): string {
   return pet.caretakers
     .map((c) => family.children.find((child) => child.id === c.child_id)?.name)
     .filter((name): name is string => typeof name === 'string')

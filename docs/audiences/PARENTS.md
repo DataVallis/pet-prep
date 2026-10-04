@@ -17,10 +17,10 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 3. Otrok s prstom podpiše **Pogodbo o odgovornosti** in pes se "rodi". Podpis se shrani enkrat na psa (s časom podpisa) in se ne pošilja nikomur drugemu; v časovnici ga vidite kot "pogodba podpisana". Dokler otrok ne podpiše, pes čaka: nič ne upada, ni opomnikov ne kazni; na seznamu otrok vidite oznako "čaka na podpis pogodbe". Šteti začne šele ob podpisu, zato otrok ne izgubi ničesar, če podpis odloži; če aplikacijo zapre pred podpisom, ga ob naslednjem odprtju počaka pogodba. Podpis je risba s prstom (črta), shranjena kot vektorska pot — brez fotografije ali drugih podatkov.
 4. **12 tednov** (1 teden = 1 mesec pasjega življenja) otrok skrbi za psa. Na koncu: **Certifikat odgovornosti**. *(načrt)*
 
-## Cela družina *(strežnik pripravljen 4. 10. 2026; v aplikaciji: seznam otrok, več otrok, skupni pes — povabilo drugega starša in statistika po otroku kmalu)*
-- **Oba starša** *(v aplikaciji kmalu)*: mama ustvari kodo za povabilo (8 znakov, velja 24 ur, samo enkrat), oče jo vnese v svoj račun — od takrat oba vidita vse otroke in vse pse v družini, oba lahko nastavljata tihe ure in pritisneta hard stop. Družin, v katerih so že otroci ali psi, ne združujemo.
+## Cela družina *(v aplikaciji od 4. 10. 2026: seznam otrok, več otrok, skupni pes, povabilo drugega starša in pregled po otroku)*
+- **Oba starša** *(v aplikaciji od 4. 10. 2026: Nadzor → "Povabi drugega starša" → koda se deli prek telefona; drugi starš jo vnese v Nadzor → "Imate kodo družine?")*: mama ustvari kodo za povabilo (8 znakov, velja 24 ur, samo enkrat), oče jo vnese v svoj račun — od takrat oba vidita vse otroke in vse pse v družini, oba lahko nastavljata tihe ure in pritisneta hard stop. Družin, v katerih so že otroci ali psi, ne združujemo.
 - **Več otrok:** vsak otrok ima lahko **svojega psa**, ali pa **več otrok skupaj skrbi za enega psa**. Pri ustvarjanju PIN-a izberete "nov pes" ali "pridruži se psu …". Otrok skrbi za največ enega psa hkrati.
-- **Pošteno pri skupnem psu:** vsako dejanje (hrana, voda, čiščenje, koraki) se zapiše pod otroka, ki ga je naredil. Na nadzorni plošči boste za vsakega otroka posebej videli, kaj je naredil v zadnjih 7 dneh *(strežnik pripravljen, prikaz v aplikaciji kmalu)*; seznam otrok že kaže vzdevek, psa in število prijavljenih naprav. Ocena (Care Score) in semafor sta za vsakega otroka posebej po načelu **"pošten delež"** (glej "Kako nastane ocena") *(strežnik pripravljen 4. 10. 2026, prikaz v aplikaciji kmalu)*; certifikat po otroku *(načrt)*.
+- **Pošteno pri skupnem psu:** vsako dejanje (hrana, voda, čiščenje, koraki) se zapiše pod otroka, ki ga je naredil. Na nadzorni plošči boste za vsakega otroka posebej videli, kaj je naredil v zadnjih 7 dneh *(v aplikaciji od 4. 10. 2026)*; seznam otrok že kaže vzdevek, psa in število prijavljenih naprav. Ocena (Care Score) in semafor sta za vsakega otroka posebej po načelu **"pošten delež"** (glej "Kako nastane ocena") *(v aplikaciji od 4. 10. 2026)*; certifikat po otroku *(načrt)*.
 - Otrok, ki se pridruži obstoječemu psu, **podpiše svojo pogodbo**, preden lahko skrbi zanj; pes se zaradi tega ne rodi znova.
 - **Skupni sprehod:** pri skupnem psu se koraki vseh otrok seštejejo za dnevni sprehod — lahko gresta skupaj ali vsak posebej.
 - Pes se hrani enkrat na okno ne glede na to, kdo ga nahrani — pes ne je dvakrat, ker ga hranita dva.
@@ -42,11 +42,11 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), potrebuje 10.000 k
   - 🔴 **rdeča** — pes je danes zbolel, več kot uro je brez hrane, vode ali čistoče (alarm), ali pa ga je "odpeljalo zavetišče";
   - 🟡 **rumena** — danes so bile zamujene **več kot 2 rutini**;
   - 🟢 **zelena** — vse v redu.
-  Pri skupnem psu se vsaka zamujena rutina pokaže pri vseh otrocih, ki skrbijo zanj (nihče se ne skrije za bratom ali sestro). *(strežnik pripravljen 4. 10. 2026, v aplikaciji kmalu)*
-- **Care Score** (0–100) za vsakega otroka in **napredek izziva** ("teden 3 od 12"). *(strežnik pripravljen, v aplikaciji kmalu)*
-- **Današnje rutine:** koliko jih je bilo, koliko opravljenih, katere so bile zamujene in kdaj (npr. "čiščenje, rok 14:30"). *(strežnik pripravljen, v aplikaciji kmalu)*
+  Pri skupnem psu se vsaka zamujena rutina pokaže pri vseh otrocih, ki skrbijo zanj (nihče se ne skrije za bratom ali sestro). Ob semaforju aplikacija z besedami pove, zakaj je rumen ali rdeč (npr. "Danes so zamujene že 3 rutine.", "Kuža je danes zbolel in je pri veterinarju."). *(v aplikaciji od 4. 10. 2026)*
+- **Care Score** (0–100) za vsakega otroka ("31 od 36 rutin", bolezni z odbitkom) in **napredek izziva** ("Teden 3 od 12"). Dokler otrok nima še nobene rutine, piše "Še ni dovolj podatkov". *(v aplikaciji od 4. 10. 2026)*
+- **Današnje rutine:** koliko jih je bilo, koliko opravljenih, katere so bile zamujene in kdaj (npr. "Čiščenje · rok 14:30", "Hrana · okno 07:00–09:00"). *(v aplikaciji od 4. 10. 2026)*
 - **Žive vrednosti** lakote, žeje, gibanja in higiene — posodobijo se v trenutku, ko otrok nekaj naredi.
-- **Časovnico** (zadnjih 20 dejanj z vzdevkom otroka, ki jih je naredil), **zadnjih 7 dni** in **poročilo za 7, 30 ali 84 dni**. *(strežnik pripravljen; v aplikaciji še prikaz z demo podatki)*
+- **Časovnico** (zadnjih 20 dejanj z vzdevkom otroka, ki jih je naredil), **zadnjih 7 dni** in **poročilo za 7, 30 ali 84 dni** (tapnite "Podrobnosti" pri otroku: ocena obdobja, hrana / voda / čiščenje / sprehod, vsak dan s koraki in ciljem, zamujene rutine, bolezni, časovnica z "Naloži več"). *(v aplikaciji od 4. 10. 2026 — demo podatkov ni več)*
 
 ## Kako nastane ocena (Care Score)
 Vsak dan ima kuža **rutine** — po vašem lokalnem času:
@@ -64,7 +64,7 @@ Vsak dan ima kuža **rutine** — po vašem lokalnem času:
 
 ## Vi imate nadzor
 - **Tihe ure** (npr. šola 8:00–13:00, spanje 22:00–6:00): pes takrat skoraj ne postaja lačen in ne pošilja obvestil. Veljajo po **vašem lokalnem času**, tudi ob prestopu na poletni/zimski čas.
-- **Hard stop:** z enim gumbom začasno ustavite igro (npr. za pogovor z otrokom). Med ustavitvijo **se nič ne poslabša** — pes ne zboli in ne "odide", tudi če je bil prej lačen. Otrokov zaslon se v živo zaklene ("Starš je ustavil igro") in se odklene, ko ustavitev izklopite.
+- **Hard stop:** z enim gumbom začasno ustavite igro (npr. za pogovor z otrokom) — pri več psih za vsakega psa posebej (Nadzor → "Ustavi igro"), vedno s potrditvijo v aplikaciji. Med ustavitvijo **se nič ne poslabša** — pes ne zboli in ne "odide", tudi če je bil prej lačen. Otrokov zaslon se v živo zaklene ("Starš je ustavil igro") in se odklene, ko ustavitev izklopite.
 - **Opozorila:** ko otrok pozablja, najprej opomni otroka; če pes ostane brez hrane, vode ali čistoče več kot uro, dobite alarm vi. Za sprehod alarma ni — dan se oceni ob polnoči. *(načrt: push obvestila)*
 
 ## Posledice zanemarjanja (namenoma realne)

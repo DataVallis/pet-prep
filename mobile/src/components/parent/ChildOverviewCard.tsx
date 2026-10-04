@@ -1,0 +1,336 @@
+/**
+ * One child on the parent's family overview (M2-05, PRODUCT_SPEC §9 / §11): traffic
+ * light with friendly reasons, Care Score ("x od y rutin", illnesses), 12-week
+ * progress, today's routines (missed ones with type and family-local time), the
+ * last 7 days as simple bars, and the pet's mini status. All numbers come from the
+ * server — nothing is scored on the phone.
+ */
+
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { ChevronRight, KeyRound } from 'lucide-react-native';
+
+import {
+  Card,
+  MetricRow,
+  PARENT_COLORS as C,
+  RoutineIcon,
+  TrafficLightBadge,
+} from '@/components/parent/ParentUi';
+import {
+  PET_STATUS_LABELS,
+  breedLabel,
+  petStatus,
+  type FamilyChild,
+  type FamilyPet,
+} from '@/modules/family/family';
+import {
+  ROUTINE_LABELS,
+  illnessesText,
+  missedWhenText,
+  progressShare,
+  progressText,
+  reasonText,
+  routinesOfText,
+  weekdayShort,
+  type DayRow,
+} from '@/modules/family/scoring';
+
+export const CHILD_CARD_STRINGS = {
+  scoreTitle: 'Care Score',
+  noScore: 'Še ni dovolj podatkov',
+  noScoreHint: 'Ocena se pokaže, ko pride prva rutina na vrsto.',
+  illnessPenalty: (n: number) => `${illnessesText(n)} (−${n * 10} točk)`,
+  today: 'Danes',
+  todayDone: (n: number) => `Opravljeno ${n}`,
+  todayOwn: (name: string, n: number) => `${name}: ${n}`,
+  todayPending: (n: number) => `Še odprto ${n}`,
+  todayMissed: (n: number) => `Zamujeno ${n}`,
+  todayNothing: 'Danes še ni bilo nobene rutine.',
+  week: 'Zadnjih 7 dni',
+  legendDone: 'opravljeno',
+  legendMissed: 'zamujeno',
+  pet: 'Kuža',
+  metrics: { hunger: 'Hrana', thirst: 'Voda', energy: 'Gibanje', hygiene: 'Čistoča' },
+  noPet: 'Še brez psa. Ustvarite kodo — otrok jo vtipka in dobi kužka.',
+  createPin: 'Ustvari kodo',
+  awaitingContract: (name: string) => `Kuža čaka, da ${name} podpiše pogodbo o odgovornosti.`,
+  details: 'Podrobnosti',
+} as const;
+
+const S = CHILD_CARD_STRINGS;
+
+interface ChildOverviewCardProps {
+  child: FamilyChild;
+  pet: FamilyPet | null;
+  timezone: string;
+  onOpen: (child: FamilyChild) => void;
+  onChildPin: (child: FamilyChild) => void;
+}
+
+function WeekBars({ days }: { days: DayRow[] }) {
+  const max = Math.max(1, ...days.map((d) => d.done + d.missed));
+  return (
+    <View style={styles.weekRow} accessibilityLabel={S.week}>
+      {days.map((d) => (
+        <View key={d.date} style={styles.weekCol} testID={`week-day-${d.date}`}>
+          <View style={styles.weekTrack}>
+            <View style={[styles.weekMissed, { height: `${(d.missed / max) * 100}%` }]} />
+            <View style={[styles.weekDone, { height: `${(d.done / max) * 100}%` }]} />
+          </View>
+          <Text style={styles.weekLabel}>{weekdayShort(d.date)}</Text>
+        </View>
+      ))}
+    </View>
+  );
+}
+
+export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChildPin }: ChildOverviewCardProps) {
+  const id = child.id;
+  const status = pet ? petStatus(pet) : null;
+  const waitsForContract = pet !== null && (pet.awaiting_contract || !child.contract_signed);
+  const score = child.care_score;
+  const today = child.today;
+  const progress = progressText(child.progress);
+
+  return (
+    <Card testID={`child-card-${id}`}>
+      <View style={styles.header}>
+        <View style={styles.avatar}>
+          <Text style={styles.avatarText}>{child.name.slice(0, 1).toUpperCase()}</Text>
+        </View>
+        <View style={styles.flex}>
+          <Text style={styles.name}>{child.name}</Text>
+          {pet && <Text style={styles.muted}>{breedLabel(pet.breed_type)}</Text>}
+        </View>
+        <TrafficLightBadge color={child.traffic_light.color} testID={`child-light-${id}-${child.traffic_light.color}`} />
+      </View>
+
+      {child.traffic_light.reasons.length > 0 && (
+        <View style={styles.reasons}>
+          {child.traffic_light.reasons.map((r) => (
+            <Text key={r} style={styles.reason} testID={`child-reason-${id}-${r}`}>
+              • {reasonText(r, today.missed_count)}
+            </Text>
+          ))}
+        </View>
+      )}
+
+      {pet === null ? (
+        <View style={styles.block}>
+          <Text style={styles.muted} testID={`child-no-pet-${id}`}>
+            {S.noPet}
+          </Text>
+          <Pressable
+            style={({ pressed }) => [styles.secondaryButton, pressed && styles.pressed]}
+            onPress={() => onChildPin(child)}
+            accessibilityRole="button"
+            testID={`child-card-pin-${id}`}
+          >
+            <KeyRound color={C.accent} size={15} />
+            <Text style={styles.secondaryText}>{S.createPin}</Text>
+          </Pressable>
+        </View>
+      ) : waitsForContract && !pet.is_game_over ? (
+        <Text style={styles.muted} testID={`child-awaiting-${id}`}>
+          {S.awaitingContract(child.name)}
+        </Text>
+      ) : (
+        <>
+          {/* Care Score */}
+          <View style={styles.scoreRow}>
+            <View style={styles.flex}>
+              <Text style={styles.label}>{S.scoreTitle}</Text>
+              {score.score === null ? (
+                <>
+                  <Text style={styles.noScore} testID={`child-score-${id}`}>
+                    {S.noScore}
+                  </Text>
+                  <Text style={styles.muted}>{S.noScoreHint}</Text>
+                </>
+              ) : (
+                <>
+                  <Text style={styles.score} testID={`child-score-${id}`}>
+                    {score.score}
+                  </Text>
+                  <Text style={styles.muted} testID={`child-score-routines-${id}`}>
+                    {routinesOfText(score.done, score.expected)}
+                  </Text>
+                </>
+              )}
+              {score.illnesses > 0 && (
+                <Text style={styles.penalty} testID={`child-illnesses-${id}`}>
+                  {S.illnessPenalty(score.illnesses)}
+                </Text>
+              )}
+            </View>
+            {progress && (
+              <View style={styles.progressCol}>
+                <Text style={styles.progressText} testID={`child-progress-${id}`}>
+                  {progress}
+                </Text>
+                <View style={styles.progressTrack}>
+                  <View style={[styles.progressFill, { width: `${progressShare(child.progress) * 100}%` }]} />
+                </View>
+              </View>
+            )}
+          </View>
+
+          {/* Today */}
+          <View style={styles.block}>
+            <Text style={styles.label}>{S.today}</Text>
+            {today.expected === 0 ? (
+              <Text style={styles.muted}>{S.todayNothing}</Text>
+            ) : (
+              <View style={styles.chips} testID={`child-today-${id}`}>
+                <Text style={[styles.chip, styles.chipDone]}>
+                  {S.todayDone(today.done)}
+                  {today.done_by_child !== null && today.done_by_child !== today.done
+                    ? ` (${S.todayOwn(child.name, today.done_by_child)})`
+                    : ''}
+                </Text>
+                {today.pending > 0 && <Text style={styles.chip}>{S.todayPending(today.pending)}</Text>}
+                {today.missed_count > 0 && (
+                  <Text style={[styles.chip, styles.chipMissed]}>{S.todayMissed(today.missed_count)}</Text>
+                )}
+              </View>
+            )}
+            {today.missed.map((m, i) => (
+              <View key={`${m.type}-${m.due_at}-${i}`} style={styles.missedRow} testID={`child-missed-${id}-${i}`}>
+                <RoutineIcon type={m.type} color={C.redText} />
+                <Text style={styles.missedLabel}>{ROUTINE_LABELS[m.type]}</Text>
+                <Text style={styles.muted}>{missedWhenText(m, timezone, today.date)}</Text>
+              </View>
+            ))}
+          </View>
+
+          {child.last_7_days.length > 0 && (
+            <View style={styles.block}>
+              <View style={styles.legendRow}>
+                <Text style={styles.label}>{S.week}</Text>
+                <View style={styles.legend}>
+                  <View style={[styles.legendDot, { backgroundColor: C.green }]} />
+                  <Text style={styles.legendText}>{S.legendDone}</Text>
+                  <View style={[styles.legendDot, { backgroundColor: C.red }]} />
+                  <Text style={styles.legendText}>{S.legendMissed}</Text>
+                </View>
+              </View>
+              <WeekBars days={child.last_7_days} />
+            </View>
+          )}
+        </>
+      )}
+
+      {pet !== null && (
+        <View style={styles.block} testID={`child-pet-${id}`}>
+          <Text style={styles.label}>{S.pet}</Text>
+          {status && (
+            <Text style={[styles.status, status === 'game_over' && styles.statusRed]} testID={`child-pet-status-${id}`}>
+              {PET_STATUS_LABELS[status]}
+            </Text>
+          )}
+          <MetricRow label={S.metrics.hunger} value={pet.metrics.hunger} />
+          <MetricRow label={S.metrics.thirst} value={pet.metrics.thirst} />
+          <MetricRow label={S.metrics.energy} value={pet.metrics.energy} />
+          <MetricRow label={S.metrics.hygiene} value={pet.metrics.hygiene} testID={`child-pet-hygiene-${id}`} />
+        </View>
+      )}
+
+      <Pressable
+        style={({ pressed }) => [styles.detailsButton, pressed && styles.pressed]}
+        onPress={() => onOpen(child)}
+        accessibilityRole="button"
+        accessibilityLabel={`${S.details}: ${child.name}`}
+        testID={`child-details-${id}`}
+      >
+        <Text style={styles.detailsText}>{S.details}</Text>
+        <ChevronRight color={C.accent} size={16} />
+      </Pressable>
+    </Card>
+  );
+}
+
+const styles = StyleSheet.create({
+  flex: { flex: 1 },
+  header: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  avatar: {
+    width: 42,
+    height: 42,
+    borderRadius: 21,
+    backgroundColor: C.accentSoft,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  avatarText: { fontSize: 18, fontWeight: '800', color: C.accent },
+  name: { fontSize: 17, fontWeight: '800', color: C.text },
+  muted: { fontSize: 13, color: C.muted, lineHeight: 18 },
+  reasons: { gap: 2 },
+  reason: { fontSize: 13, color: C.text, lineHeight: 18 },
+  block: { gap: 8, paddingTop: 12, borderTopWidth: 1, borderTopColor: C.divider },
+  label: { fontSize: 12, fontWeight: '700', color: C.muted, textTransform: 'uppercase', letterSpacing: 0.4 },
+  scoreRow: { flexDirection: 'row', gap: 16, alignItems: 'flex-start' },
+  score: { fontSize: 44, fontWeight: '800', color: C.text, fontVariant: ['tabular-nums'], lineHeight: 50 },
+  noScore: { fontSize: 17, fontWeight: '700', color: C.text, marginTop: 4 },
+  penalty: { fontSize: 12, color: C.redText, marginTop: 2 },
+  progressCol: { width: 120, gap: 6, paddingTop: 18 },
+  progressText: { fontSize: 13, fontWeight: '700', color: C.text, textAlign: 'right' },
+  progressTrack: { height: 6, borderRadius: 3, backgroundColor: C.track, overflow: 'hidden' },
+  progressFill: { height: '100%', backgroundColor: C.accent, borderRadius: 3 },
+  chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+  chip: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: C.text,
+    backgroundColor: C.divider,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 999,
+    overflow: 'hidden',
+  },
+  chipDone: { backgroundColor: C.greenSoft, color: C.greenText },
+  chipMissed: { backgroundColor: C.redSoft, color: C.redText },
+  missedRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  missedLabel: { fontSize: 14, fontWeight: '600', color: C.text, width: 70 },
+  legendRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  legend: { flexDirection: 'row', alignItems: 'center', gap: 4 },
+  legendDot: { width: 8, height: 8, borderRadius: 4, marginLeft: 6 },
+  legendText: { fontSize: 11, color: C.muted },
+  weekRow: { flexDirection: 'row', gap: 6, height: 74 },
+  weekCol: { flex: 1, alignItems: 'center', gap: 4 },
+  weekTrack: {
+    flex: 1,
+    width: '70%',
+    borderRadius: 6,
+    backgroundColor: C.divider,
+    overflow: 'hidden',
+    justifyContent: 'flex-end',
+  },
+  weekDone: { width: '100%', backgroundColor: C.green },
+  weekMissed: { width: '100%', backgroundColor: C.red },
+  weekLabel: { fontSize: 10, fontWeight: '600', color: C.muted },
+  status: { fontSize: 13, fontWeight: '600', color: C.yellowText },
+  statusRed: { color: C.redText },
+  secondaryButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    alignSelf: 'flex-start',
+    minHeight: 40,
+    paddingHorizontal: 12,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: C.border,
+    backgroundColor: C.bg,
+  },
+  secondaryText: { fontSize: 13, fontWeight: '700', color: C.accent },
+  detailsButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 4,
+    minHeight: 42,
+    borderRadius: 12,
+    backgroundColor: C.accentSoft,
+  },
+  detailsText: { fontSize: 14, fontWeight: '700', color: C.accent },
+  pressed: { opacity: 0.8 },
+});

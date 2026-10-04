@@ -146,6 +146,39 @@ export type ChildPinResponse = Extract<
 export type RevokeChildTokensResponse =
   operations['childProfile.revokeTokens']['responses'][200]['content']['application/json'];
 
+/** `POST /api/parent/hard-stop` 200 body (toggle for one pet of the family). */
+export type HardStopResponse =
+  operations['parentDashboard.toggleHardStop']['responses'][200]['content']['application/json'];
+
+/** `POST /api/parent/invite-parent` 201 body: single-use 8-char code, valid 24 h. */
+export type InviteParentResponse =
+  operations['family.invite']['responses'][201]['content']['application/json'];
+
+/**
+ * `POST /api/parent/join-family` 200 body. Hand-typed: Scramble types `parents` as a
+ * string and unions the body with `string`. Errors: 422 `invalid_code` / `code_expired`
+ * / `code_used`, 409 `already_member` / `family_not_empty`, 429 `too_many_attempts`.
+ */
+export interface JoinFamilyResponse {
+  message: string;
+  family: {
+    id: number;
+    timezone: string;
+    parents: { id: number; name: string }[];
+    children_count: number;
+    pets_count: number;
+  };
+}
+
+/**
+ * `GET /api/parent/activities?pet_id=&page=` 200 body. Items are read through
+ * `readTimeline` (the schema types ids as strings); `meta` drives pagination.
+ */
+export interface PetActivitiesResponse {
+  data: unknown[];
+  meta: { current_page: number; last_page: number; total: number };
+}
+
 /** Response from POST /api/broadcasting/auth (Pusher protocol signature). */
 export interface BroadcastAuthResponse {
   auth: string;
@@ -386,12 +419,35 @@ export const api = {
       body: data as unknown as Record<string, unknown>,
     }),
 
-  /** POST /api/parent/hard-stop — Toggle the emergency hard stop on the child's device. */
-  toggleHardStop: (active: boolean) =>
-    apiRequest<{ message: string; hard_stop_active: boolean }>('/api/parent/hard-stop', {
+  /**
+   * POST /api/parent/hard-stop — **toggles** the hard stop of one pet of the family
+   * (`pet_id`; every caretaker child is locked). → `{pet_id, is_hard_stopped}`.
+   */
+  toggleHardStop: (petId: number) =>
+    apiRequest<HardStopResponse>('/api/parent/hard-stop', {
       method: 'POST',
-      body: { active },
+      body: { pet_id: petId },
     }),
+
+  /**
+   * GET /api/parent/children/{child}/report?days=7|30|84 (M2-05) — the child's report.
+   * Returned untyped (`schema.ts` says `unknown[]`); read it with `readChildReport`.
+   */
+  getChildReport: (childId: number, days: 7 | 30 | 84) =>
+    apiRequest<unknown>(`/api/parent/children/${childId}/report?days=${days}`),
+
+  /** GET /api/parent/activities — one page of a family pet's activities, newest first. */
+  getPetActivities: (petId: number, page: number, perPage: number = 20) =>
+    apiRequest<PetActivitiesResponse>(
+      `/api/parent/activities?pet_id=${petId}&per_page=${perPage}&page=${page}`,
+    ),
+
+  /** POST /api/parent/invite-parent — code for a second parent (revokes this parent's previous code). */
+  inviteParent: () => apiRequest<InviteParentResponse>('/api/parent/invite-parent', { method: 'POST' }),
+
+  /** POST /api/parent/join-family — join another parent's family with their code. */
+  joinFamily: (code: string) =>
+    apiRequest<JoinFamilyResponse>('/api/parent/join-family', { method: 'POST', body: { code } }),
 
   /** POST /api/webhooks/fal-ai — (Internal) fal.ai webhook endpoint. */
   falAiWebhook: (petId: number, payload: Record<string, unknown>) =>

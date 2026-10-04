@@ -1,114 +1,62 @@
 /**
- * Tests for parent dashboard traffic light logic and utility functions.
+ * Parent app guards (M2-05): no demo data left in the app source, and the shared
+ * metric colour helpers. The traffic light itself is the server's (M2-06) — its
+ * rendering is covered in ParentDashboardScreen.overview.test.tsx.
  */
+import { getMetricColor, interpolateColor } from '@/utils/metrics';
 
-import {
-  getMetricColor,
-  interpolateColor,
-  isActionDisabled,
-} from '@/utils/metrics';
+// The app has no Node typings (React Native); type the few Node APIs used here.
+declare const __dirname: string;
+interface DirEntry {
+  name: string;
+  isDirectory: () => boolean;
+}
+const fs = jest.requireActual<{
+  readdirSync: (dir: string, options: { withFileTypes: true }) => DirEntry[];
+  readFileSync: (file: string, encoding: 'utf8') => string;
+}>('fs');
+const path = jest.requireActual<{
+  resolve: (...parts: string[]) => string;
+  join: (...parts: string[]) => string;
+  relative: (from: string, to: string) => string;
+}>('path');
 
-/**
- * Traffic light status mapping based on escalation level.
- * This mirrors the backend ParentDashboardController::calculateTrafficLight.
- */
-function getTrafficLight(escalationLevel: number, isGameOver: boolean, isIll: boolean): 'green' | 'amber' | 'red' {
-  if (isGameOver || escalationLevel >= 3 || isIll) {
-    return 'red';
-  }
-  if (escalationLevel >= 1) {
-    return 'amber';
-  }
-  return 'green';
+const SRC = path.resolve(__dirname, '../../..');
+
+function sourceFiles(dir: string): string[] {
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      return entry.name === '__tests__' || entry.name === 'test-utils' ? [] : sourceFiles(full);
+    }
+    return /\.(ts|tsx)$/.test(entry.name) ? [full] : [];
+  });
 }
 
-describe('Parent Dashboard - Traffic Light Logic', () => {
-  it('returns green when escalation level is 0 and pet is healthy', () => {
-    expect(getTrafficLight(0, false, false)).toBe('green');
+describe('Parent dashboard — no demo data (M2-05)', () => {
+  it('no MOCK_* constants or imports anywhere in the app source', () => {
+    const files = sourceFiles(SRC);
+    expect(files.length).toBeGreaterThan(20);
+    const offenders = files.filter((f) => /\bMOCK_[A-Z_]+/.test(fs.readFileSync(f, 'utf8')));
+    expect(offenders.map((f) => path.relative(SRC, f))).toEqual([]);
   });
 
-  it('returns amber when escalation level is 1', () => {
-    expect(getTrafficLight(1, false, false)).toBe('amber');
-  });
-
-  it('returns amber when escalation level is 2', () => {
-    expect(getTrafficLight(2, false, false)).toBe('amber');
-  });
-
-  it('returns red when escalation level is 3', () => {
-    expect(getTrafficLight(3, false, false)).toBe('red');
-  });
-
-  it('returns red when pet is in game over', () => {
-    expect(getTrafficLight(0, true, false)).toBe('red');
-    expect(getTrafficLight(1, true, false)).toBe('red');
-  });
-
-  it('returns red when pet is ill', () => {
-    expect(getTrafficLight(0, false, true)).toBe('red');
-  });
-
-  it('red takes priority over amber', () => {
-    expect(getTrafficLight(2, true, false)).toBe('red');
-    expect(getTrafficLight(2, false, true)).toBe('red');
+  it('the dashboard no longer reads the session pet from the store', () => {
+    const screen = fs.readFileSync(path.join(SRC, 'screens/parent/ParentDashboardScreen.tsx'), 'utf8');
+    expect(screen).not.toMatch(/useAppStore\(\(s\) => s\.pet\)/);
   });
 });
 
-describe('Parent Dashboard - Metric Display', () => {
-  it('green for healthy metrics', () => {
+describe('Metric colours', () => {
+  it('green / amber / red thresholds', () => {
     expect(getMetricColor(80)).toBe('#10B981');
-    expect(getMetricColor(100)).toBe('#10B981');
-  });
-
-  it('amber for moderate metrics', () => {
     expect(getMetricColor(50)).toBe('#F59E0B');
-    expect(getMetricColor(40)).toBe('#F59E0B');
-  });
-
-  it('red for critical metrics', () => {
     expect(getMetricColor(15)).toBe('#EF4444');
-    expect(getMetricColor(5)).toBe('#EF4444');
-    expect(getMetricColor(0)).toBe('#EF4444');
   });
 
-  it('interpolates colors smoothly', () => {
-    const high = interpolateColor(100);
-    const mid = interpolateColor(50);
-    const low = interpolateColor(0);
-    // At exact boundaries, colors match the reference values
-    expect(high.toLowerCase()).toBe('#10b981');
-    expect(mid.toLowerCase()).toBe('#f59e0b');
-    expect(low.toLowerCase()).toBe('#ef4444');
-  });
-});
-
-describe('Parent Dashboard - Activity Classification', () => {
-  const positiveActivities = ['fed_pet', 'watered_pet', 'walked_pet', 'cleaned_poop'];
-  const negativeActivities = ['ignored_warning'];
-
-  it('classifies feeding as positive', () => {
-    expect(positiveActivities).toContain('fed_pet');
-  });
-
-  it('classifies watering as positive', () => {
-    expect(positiveActivities).toContain('watered_pet');
-  });
-
-  it('classifies walking as positive', () => {
-    expect(positiveActivities).toContain('walked_pet');
-  });
-
-  it('classifies cleaning as positive', () => {
-    expect(positiveActivities).toContain('cleaned_poop');
-  });
-
-  it('classifies ignored_warning as negative', () => {
-    expect(negativeActivities).toContain('ignored_warning');
-  });
-
-  it('does not classify positive activities as negative', () => {
-    positiveActivities.forEach((activity) => {
-      expect(negativeActivities).not.toContain(activity);
-    });
+  it('interpolates between the reference colours', () => {
+    expect(interpolateColor(100).toLowerCase()).toBe('#10b981');
+    expect(interpolateColor(50).toLowerCase()).toBe('#f59e0b');
+    expect(interpolateColor(0).toLowerCase()).toBe('#ef4444');
   });
 });
