@@ -100,13 +100,18 @@ describe('AppNavigator session restore', () => {
     expect(useAppStore.getState().lockState).toBe('game_over');
   });
 
-  it('legacy child token without a pet → PIN entry (with "Odjava" as the way back)', async () => {
+  it('legacy child token without a pet → signed out (server revoke) and back to the start screen', async () => {
     getItem.mockResolvedValueOnce('child-token');
     getUser.mockResolvedValueOnce({ id: 2, name: 'Otrok', email: 'c@x.si', role: 'child', pet: null });
+    apiLogout.mockResolvedValueOnce({ message: 'ok' });
     renderWithQuery(<AppNavigator />);
 
-    expect(await screen.findByText(CHILD_PIN_STRINGS.title)).toBeTruthy();
-    expect(screen.getByLabelText(CHILD_PIN_STRINGS.logout)).toBeTruthy();
+    expect(await screen.findByText(START_STRINGS.subtitle)).toBeTruthy();
+    await waitFor(() => expect(useAppStore.getState().authToken).toBeNull());
+    expect(apiLogout).toHaveBeenCalledTimes(1);
+    expect(deleteItem).toHaveBeenCalledWith('petprep_auth_token');
+    expect(useAppStore.getState().user).toBeNull();
+    expect(screen.queryByText(CHILD_PIN_STRINGS.title)).toBeNull();
   });
 
   it('PIN-only child token (no e-mail) restores with GET /api/user → HUD (M2-02)', async () => {

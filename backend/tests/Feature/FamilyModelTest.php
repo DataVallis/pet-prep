@@ -864,7 +864,7 @@ describe('deploy window and input hardening', function () {
 
         actingAsRole($kid);
         postJson('/api/child/pair', ['pin' => $pin])
-            ->assertStatus(422)->assertJsonPath('message', 'This child profile is already paired to a parent.');
+            ->assertStatus(422)->assertJsonPath('message', 'This code cannot be used. Ask your parent for a new code.');
         expect(Pet::where('user_id', $kid->id)->exists())->toBeFalse();
     });
 

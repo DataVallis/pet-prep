@@ -27,7 +27,6 @@ export const CHILD_PIN_STRINGS = {
   server: 'Nekaj je šlo narobe. Poskusi znova čez trenutek.',
   retry: 'Poskusi znova',
   back: 'Nazaj',
-  logout: 'Odjava',
   deleteDigit: 'Pobriši številko',
   digitsEntered: (count: number) => `Vpisanih ${count} od ${PIN_LENGTH} številk`,
 } as const;
@@ -37,11 +36,9 @@ const KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', '9'] as const;
 
 interface ChildPinLoginScreenProps {
   onBack: () => void;
-  /** "Odjava" instead of "Nazaj" — a signed-in (legacy) child without a pet. */
-  backIsLogout?: boolean;
 }
 
-export default function ChildPinLoginScreen({ onBack, backIsLogout = false }: ChildPinLoginScreenProps) {
+export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps) {
   const [digits, setDigits] = useState('');
   const [error, setError] = useState<PinLoginError | null>(null);
   const [lockedUntil, setLockedUntil] = useState<string | null>(null);
@@ -124,11 +121,11 @@ export default function ChildPinLoginScreen({ onBack, backIsLogout = false }: Ch
           hitSlop={10}
           style={styles.backRow}
           accessibilityRole="button"
-          accessibilityLabel={backIsLogout ? S.logout : S.back}
+          accessibilityLabel={S.back}
           disabled={isBusy}
         >
           <ChevronLeft color="#94a3b8" size={22} />
-          <Text style={styles.backText}>{backIsLogout ? S.logout : S.back}</Text>
+          <Text style={styles.backText}>{S.back}</Text>
         </Pressable>
 
         <View style={styles.header}>

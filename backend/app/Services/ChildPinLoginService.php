@@ -13,6 +13,7 @@ use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\PetCaretaker;
 use App\Models\User;
+use App\Support\ClientIp;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -127,7 +128,8 @@ class ChildPinLoginService
      */
     public function login(string $pin, string $deviceName, string $ip): array
     {
-        $ipKey = 'child-pin-login:failures:ip:'.$ip;
+        // IPv6 is keyed on its /64 (a client usually owns the whole prefix).
+        $ipKey = 'child-pin-login:failures:ip:'.ClientIp::rateLimitKey($ip);
         $this->assertNotLockedOut($ipKey);
 
         $hash = self::hashPin($pin);
@@ -185,7 +187,7 @@ class ChildPinLoginService
 
                 $locked->forceFill(['consumed_at' => now()])->save();
 
-                $token = $child->createToken($deviceName, TokenAbility::abilitiesFor($child))->plainTextToken;
+                $token = $child->createToken(ChildProfileService::deviceLabel($deviceName), TokenAbility::abilitiesFor($child))->plainTextToken;
                 $this->profiles->pruneDevices($child);
 
                 return [

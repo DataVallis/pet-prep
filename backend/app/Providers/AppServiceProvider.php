@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Support\ClientIp;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
@@ -67,7 +68,8 @@ class AppServiceProvider extends ServiceProvider
         // attempts are limited separately (per IP + global) in
         // ChildPinLoginService.
         RateLimiter::for('pin-login', function (Request $request) {
-            return Limit::perMinute(self::PIN_LOGIN_PER_MINUTE)->by('pin-login:'.$request->ip());
+            // IPv6 keyed on its /64 prefix (ClientIp).
+            return Limit::perMinute(self::PIN_LOGIN_PER_MINUTE)->by('pin-login:'.ClientIp::rateLimitKey($request->ip()));
         });
 
         // Second-parent invite codes (M2-01): a parent needs one or two;

@@ -34,7 +34,26 @@ class ChildProfileService
      */
     public const MAX_DEVICES = 3;
 
+    /**
+     * Token name for a child device when the client's name isn't safe.
+     */
+    public const DEFAULT_DEVICE_LABEL = 'child-device';
+
     public function __construct(private readonly FamilyService $families) {}
+
+    /**
+     * The token name stored for a child's device (Claude 2026-10-04, PR #16
+     * review). A device name can carry the child's real name ("Maja Novak's
+     * iPhone"); only a short model-like label is kept, anything else becomes
+     * DEFAULT_DEVICE_LABEL. The app sends the model only ("iPhone",
+     * "Samsung SM-A515F").
+     */
+    public static function deviceLabel(?string $deviceName): string
+    {
+        $name = trim((string) $deviceName);
+
+        return preg_match('/^[A-Za-z0-9 ._()-]{1,40}$/', $name) === 1 ? $name : self::DEFAULT_DEVICE_LABEL;
+    }
 
     /**
      * @throws FamilyException too_many_children (422), not_a_parent (403)
@@ -111,6 +130,11 @@ class ChildProfileService
     public function revokeDevices(User $child): array
     {
         return DB::transaction(function () use ($child): array {
+            // Same child row lock as pin-login (parent → child → …): a PIN
+            // login running concurrently either finishes first (its new token
+            // is deleted here) or waits and then sees its PIN revoked.
+            User::whereKey($child->id)->lockForUpdate()->first();
+
             $tokens = $child->tokens()->delete();
             $pins = ChildLoginPin::open()
                 ->where('child_user_id', $child->id)

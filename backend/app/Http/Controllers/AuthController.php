@@ -6,6 +6,7 @@ use App\Enums\TokenAbility;
 use App\Http\Requests\LoginRequest;
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\ChildProfileService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -36,7 +37,11 @@ class AuthController extends Controller
             ], 401);
         }
 
-        $deviceName = $request->input('device_name', 'mobile-app');
+        $deviceName = (string) $request->input('device_name', 'mobile-app');
+        if ($user->isChild()) {
+            // Never store a child's raw device name (may contain their name).
+            $deviceName = ChildProfileService::deviceLabel($deviceName);
+        }
         $token = $user->createToken($deviceName, TokenAbility::abilitiesFor($user))->plainTextToken;
 
         $activePet = $this->sessionPet($user);

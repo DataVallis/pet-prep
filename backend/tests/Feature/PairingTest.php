@@ -145,7 +145,7 @@ describe('POST /api/child/pair', function () {
 
         postJson('/api/child/pair', ['pin' => '123456'])
             ->assertStatus(422)
-            ->assertJsonPath('message', 'Invalid or expired pairing PIN.');
+            ->assertJsonPath('message', 'This code cannot be used. Ask your parent for a new code.');
 
         // Child should NOT be paired
         expect($child->fresh()->parent_id)->toBeNull();
@@ -171,7 +171,7 @@ describe('POST /api/child/pair', function () {
 
         postJson('/api/child/pair', ['pin' => $result['pin']])
             ->assertStatus(422)
-            ->assertJsonPath('message', 'This child profile is already paired to a parent.');
+            ->assertJsonPath('message', 'This code cannot be used. Ask your parent for a new code.');
     });
 
     it('validates the PIN format', function () {

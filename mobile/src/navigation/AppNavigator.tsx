@@ -1,4 +1,4 @@
-import { Component, type ErrorInfo, type ReactNode } from 'react';
+import { Component, useEffect, type ErrorInfo, type ReactNode } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { isAwaitingContract, useAppStore, type LockState } from '@/store/appStore';
@@ -6,7 +6,6 @@ import { logout } from '@/modules/session/logout';
 import { useSessionBootstrap } from '@/modules/session/useSessionBootstrap';
 import SplashScreen from '@/screens/SplashScreen';
 import StartScreen from '@/screens/StartScreen';
-import ChildPinLoginScreen from '@/screens/ChildPinLoginScreen';
 import ContractScreen from '@/screens/ContractScreen';
 import LockedScreen from '@/screens/LockedScreen';
 import ChildHudScreen from '@/screens/ChildHudScreen';
@@ -47,6 +46,14 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 }
 
+/** Logs the legacy child session out once, showing the start screen meanwhile. */
+function SignOutChildWithoutPet() {
+  useEffect(() => {
+    void logout();
+  }, []);
+  return <StartScreen />;
+}
+
 export default function AppNavigator() {
   const authToken = useAppStore((s) => s.authToken);
   const user = useAppStore((s) => s.user);
@@ -81,13 +88,11 @@ export default function AppNavigator() {
         ) : (
           <>
             {pet === null ? (
-              // Legacy e-mail child without a pet: the parent's PIN pairs it (pin-login).
-              <ChildPinLoginScreen
-                backIsLogout
-                onBack={() => {
-                  void logout();
-                }}
-              />
+              // A child session without a pet can only be a legacy e-mail child account
+              // (pin-login always returns a pet). Its token must not linger: sign it out
+              // (server revoke) and show the start screen — the child then signs in with
+              // the PIN their parent generates, which pairs the profile (M2-02).
+              <SignOutChildWithoutPet />
             ) : isAwaitingContract(pet) ? (
               // The pet waits for this child's contract (M1-07b / M2-01) — also after a restart.
               <ContractScreen />

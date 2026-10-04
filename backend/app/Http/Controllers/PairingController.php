@@ -12,9 +12,12 @@ use App\Models\User;
 use App\Services\ChildPinLoginService;
 use App\Services\PairingService;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Log;
 
 class PairingController extends Controller
 {
+    public const PAIR_REFUSED_MESSAGE = 'This code cannot be used. Ask your parent for a new code.';
+
     public function __construct(
         private readonly PairingService $pairingService,
         private readonly ChildPinLoginService $childLogins,
@@ -106,8 +109,14 @@ class PairingController extends Controller
                 'pet' => new PairedPetResource($pet, $child),
             ], 201);
         } catch (PairingException $e) {
+            // One answer for every refusal (wrong / expired PIN, already
+            // paired child, parent-side problems) — no oracle for PIN
+            // guessing (PR #16 review). The reason is only logged.
+            Log::info('Legacy child pairing refused', ['child_id' => $child->id, 'reason' => $e->getMessage()]);
+
             return response()->json([
-                'message' => $e->getMessage(),
+                'message' => self::PAIR_REFUSED_MESSAGE,
+                'reason' => 'pairing_refused',
             ], 422);
         }
     }

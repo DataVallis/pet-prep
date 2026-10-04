@@ -3,7 +3,8 @@
  * the same `SignInPayload` a parent login or a session restore produces.
  */
 
-import { ApiError, api, saveAuthToken, type PairedPet, type PinLoginErrorBody, type PinLoginResponse } from '@/api/client';
+import { ApiError, api, getAuthToken, saveAuthToken, type PairedPet, type PinLoginErrorBody, type PinLoginResponse } from '@/api/client';
+import { logout } from '@/modules/session/logout';
 import type { SignInPayload } from '@/store/appStore';
 import type { BreedType, Pet } from '@/types';
 
@@ -95,9 +96,18 @@ export async function sessionFromPinLogin(response: PinLoginResponse): Promise<S
   };
 }
 
-/** PIN → token saved in SecureStore (same key as every login) → session payload. */
+/**
+ * PIN → token saved in SecureStore (same key as every login) → session payload.
+ * A token already stored on this device (an older session) is revoked on the
+ * server and cleared first — only after the PIN worked, so a wrong PIN never
+ * costs the old session. It never lingers as a second live token.
+ */
 export async function performPinLogin(pin: string, device: string): Promise<SignInPayload> {
   const response = await api.pinLogin(pin, device);
+  const previous = await getAuthToken().catch(() => null);
+  if (previous !== null && previous !== response.token) {
+    await logout();
+  }
   await saveAuthToken(response.token);
   return sessionFromPinLogin(response);
 }
