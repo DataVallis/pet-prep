@@ -39,6 +39,17 @@ if [ ! -f "$ENV_FILE" ]; then
     exit 1
 fi
 
+# 3a. Preflight: realtime needs Redis queue + Reverb broadcaster (M1-09). Reads only
+# these non-secret keys; never prints other values.
+for pair in "QUEUE_CONNECTION=redis" "BROADCAST_CONNECTION=reverb"; do
+    key="${pair%%=*}"; want="${pair#*=}"
+    have=$(grep -E "^${key}=" "$ENV_FILE" | tail -n1 | cut -d= -f2- | tr -d '"'"'"' \r' || true)
+    if [ "$have" != "$want" ]; then
+        echo "ERROR: ${key} must be '${want}' in ${ENV_FILE} (found '${have:-<unset>}')." >&2
+        exit 1
+    fi
+done
+
 rm -f "${REPO_DIR}/backend/.env"
 cp "$ENV_FILE" "${REPO_DIR}/backend/.env"
 chmod 600 "${REPO_DIR}/backend/.env"
