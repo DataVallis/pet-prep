@@ -46,7 +46,7 @@ flowchart LR
   C -. "steps (M3-04/05)" .- HK
 ```
 
-## 2. Pairing (parent ↔ child)
+## 2. Pairing (parent ↔ child) — legacy e-mail child flow (deprecated since M2-02; new profiles: §2c)
 
 ```mermaid
 sequenceDiagram
@@ -61,7 +61,7 @@ sequenceDiagram
   Parent->>API: POST /api/parent/generate-pin (5/min)
   API->>DB: store 6-digit PIN (15 min, replaces the previous one)
   API-->>Parent: PIN → shown as "734 912" + live countdown + "Nova koda"
-  Note over Parent,Child: parent tells the child the PIN<br/>(child still signs in with e-mail first — PIN-only login is M2-02)
+  Note over Parent,Child: parent tells the child the PIN<br/>(this child already signed in with e-mail — deprecated; PIN-only login: §2c)
   loop every 5 s while the PIN is valid
     Parent->>API: GET /api/parent/dashboard
   end
@@ -141,6 +141,44 @@ flowchart TD
   PD & HUD & PIN & CON -- "Odjava / any later 401" --> OUT["logout(): POST /api/logout (best effort)<br/>→ delete token → clear query cache → reset store"]
   OUT --> LOGIN
 ```
+
+## 2c. PIN-only child login (M2-02 / M2-03)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Parent
+  actor Child as Child (own device, no account)
+  participant API as Laravel API
+  participant DB as PostgreSQL
+  Parent->>API: POST /api/parent/children {display_name, birth_year?}<br/>(token ability parent)
+  API->>DB: users row: role child, nickname, birth_year,<br/>email NULL, password NULL; family_user (child)
+  API-->>Parent: 201 {child {id, …}}
+  Parent->>API: POST /api/parent/generate-pin {child_id, pet_id?}
+  API->>DB: lock parent → child → family; mode = new_pet | join_pet | relogin;<br/>revoke the child's open PIN; insert child_login_pins<br/>(HMAC-SHA256 of the PIN, 15 min)
+  API-->>Parent: {pin "734 912", expires_at, mode}
+  Note over Parent,Child: parent tells the child the PIN
+  Child->>API: POST /api/child/pin-login {pin, device_name}<br/>(unauthenticated, 10/min per IP)
+  alt locked out (≥ 10 failures from this IP or ≥ 100 overall in 15 min)
+    API-->>Child: 429 too_many_attempts + Retry-After
+  else no open, unexpired PIN with this HMAC
+    API->>API: count failure (per IP + global)
+    API-->>Child: 422 invalid_pin (same body for wrong / expired / used)
+  else match
+    API->>DB: transaction: lock parent → child → family → PIN row, re-check
+    alt child never paired
+      API->>DB: new_pet: create UNBORN pet + caretaker<br/>join_pet: caretaker of the shared pet (requires_contract)
+    else child already a caretaker
+      Note over API,DB: relogin: nothing re-paired
+    end
+    API->>DB: PIN consumed_at; token abilities ["child"];<br/>keep the newest 3 tokens of this child
+    API-->>Child: 200 {token, user {id, name, role}, mode, pet, awaiting_contract}
+  end
+  Child->>API: POST /api/child/contract (Bearer, ability child) → birth (M1-07b)
+  Parent->>API: DELETE /api/parent/children/{id}/tokens<br/>(lost phone: all devices signed out, open PIN revoked)
+```
+
+Token abilities (M2-03): `/api/parent/*` → `ability:parent`, `/api/child/*` → `ability:child`, then the policies (role + family). Tokens issued before M2-02 carry `*` and pass the ability check; the policies still keep the roles apart.
 
 ## 3. Game loop tick (every minute)
 
@@ -300,10 +338,20 @@ erDiagram
   PETS ||--o{ PET_HYGIENE_EVENTS : "random messes"
   PETS ||--o{ PET_DAILY_WALKS : "closed days"
   PETS ||--o{ PET_CONTRACTS : "one per caretaker"
+  USERS ||--o{ CHILD_LOGIN_PINS : "one-time PIN for a child (M2-02)"
+  FAMILIES ||--o{ CHILD_LOGIN_PINS : "issued in"
   BREED_CONFIGS ||--o{ PETS : "tunables by breed_slug"
   FAMILIES {
     bigint id
     string timezone "family tz, every wall-clock rule"
+  }
+  CHILD_LOGIN_PINS {
+    bigint child_user_id
+    bigint pet_id "join target, nullable"
+    string pin_hash "HMAC, open ones unique"
+    timestamp expires_at "15 min"
+    timestamp consumed_at
+    timestamp revoked_at
   }
   FAMILY_USER {
     bigint family_id
@@ -335,6 +383,10 @@ erDiagram
   }
   USERS {
     bigint id
+    string name "child: nickname"
+    string email "nullable (PIN-only child)"
+    string password "nullable (PIN-only child)"
+    smallint birth_year "optional, child"
     string role "parent or child"
     bigint parent_id "deprecated"
     string timezone "parent: mirror of family"

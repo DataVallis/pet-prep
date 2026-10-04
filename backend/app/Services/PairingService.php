@@ -152,20 +152,7 @@ class PairingService
             ])->saveQuietly();
             $this->families->addMember($family, $child, FamilyRole::Child);
 
-            $joinPetId = $parent->pairing_pet_id;
-
-            if ($joinPetId !== null) {
-                $pet = Pet::whereKey($joinPetId)->lockForUpdate()->first();
-                if ($pet === null || $pet->family_id !== $family->id || ! $pet->is_active || $pet->is_game_over) {
-                    throw new PairingException('This pet can no longer get another caretaker.');
-                }
-
-                $this->addCaretakerOrFail($pet, $child);
-                $joined = true;
-            } else {
-                $pet = $this->createPet($family->id, $child);
-                $joined = false;
-            }
+            ['pet' => $pet, 'joined_existing' => $joined] = $this->attachChildToPet($family, $child, $parent->pairing_pet_id);
 
             // Consume the PIN so it cannot be reused
             $parent->update([
@@ -180,6 +167,35 @@ class PairingService
                 'joined_existing' => $joined,
             ];
         });
+    }
+
+    /**
+     * Give a freshly paired child their pet: join the shared pet `$joinPetId`
+     * (becomes a caretaker, must sign their own contract) or create the
+     * child's own unborn pet. Shared by the legacy PIN pairing (pairChild)
+     * and the PIN-only child login (ChildPinLoginService, M2-02).
+     *
+     * Must run inside the caller's transaction, after the parent → child →
+     * family row locks; the child must already be a member of $family.
+     *
+     * @return array{pet: Pet, joined_existing: bool}
+     *
+     * @throws PairingException
+     */
+    public function attachChildToPet(Family $family, User $child, ?int $joinPetId): array
+    {
+        if ($joinPetId !== null) {
+            $pet = Pet::whereKey($joinPetId)->lockForUpdate()->first();
+            if ($pet === null || $pet->family_id !== $family->id || ! $pet->is_active || $pet->is_game_over) {
+                throw new PairingException('This pet can no longer get another caretaker.');
+            }
+
+            $this->addCaretakerOrFail($pet, $child);
+
+            return ['pet' => $pet, 'joined_existing' => true];
+        }
+
+        return ['pet' => $this->createPet($family->id, $child), 'joined_existing' => false];
     }
 
     private function createPet(int $familyId, User $child): Pet

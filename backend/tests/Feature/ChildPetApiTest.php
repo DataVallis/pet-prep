@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
-use Laravel\Sanctum\Sanctum;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,7 +50,7 @@ function cpChild(string $nowUtc = '2026-10-04 06:00:00', array $pet = [], string
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
     $created = disableHygieneEvents(Pet::factory()->create(array_merge(['user_id' => $child->id], $pet)));
 
-    Sanctum::actingAs($child);
+    actingAsRole($child);
 
     return [$child, $created];
 }
@@ -95,7 +94,7 @@ describe('auth', function () {
     it('returns 403 for a parent', function (string $method, string $uri, array $body) {
         [, $pet] = cpChild();
         $parent = $pet->user->parent;
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
 
         $this->json($method, $uri, $body)->assertStatus(403);
         expect(ActivityLog::where('pet_id', $pet->id)->count())->toBe(0);
@@ -103,7 +102,7 @@ describe('auth', function () {
 
     it('returns 404 no_pet for a child that is not paired yet', function (string $method, string $uri, array $body) {
         Carbon::setTestNow(Carbon::parse('2026-10-04 06:00:00', 'UTC'));
-        Sanctum::actingAs(User::factory()->child()->create());
+        actingAsRole(User::factory()->child()->create());
 
         $this->json($method, $uri, $body)->assertStatus(404)->assertJsonPath('reason', 'no_pet');
     })->with('child endpoints');

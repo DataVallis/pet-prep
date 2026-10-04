@@ -10,6 +10,11 @@ use Illuminate\Support\ServiceProvider;
 class AppServiceProvider extends ServiceProvider
 {
     /**
+     * POST /api/child/pin-login requests per IP per minute (M2-02).
+     */
+    public const PIN_LOGIN_PER_MINUTE = 10;
+
+    /**
      * Register any application services.
      */
     public function register(): void
@@ -54,6 +59,15 @@ class AppServiceProvider extends ServiceProvider
             }
 
             return Limit::perMinute(5)->by($request->user()?->id ?: $request->ip());
+        });
+
+        // PIN-only child login (M2-02): unauthenticated, 6-digit space →
+        // hard per-IP limit. Active in testing too (the suite strips the
+        // throttle middleware; the limit test re-enables it). Failed
+        // attempts are limited separately (per IP + global) in
+        // ChildPinLoginService.
+        RateLimiter::for('pin-login', function (Request $request) {
+            return Limit::perMinute(self::PIN_LOGIN_PER_MINUTE)->by('pin-login:'.$request->ip());
         });
 
         // Second-parent invite codes (M2-01): a parent needs one or two;

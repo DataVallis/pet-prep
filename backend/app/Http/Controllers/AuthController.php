@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\TokenAbility;
 use App\Http\Requests\LoginRequest;
 use App\Models\Pet;
 use App\Models\User;
@@ -12,27 +13,37 @@ use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
     /**
-     * Authenticate a user and issue a Sanctum API token.
+     * Authenticate a user with e-mail + password and issue a Sanctum API
+     * token. The token carries one ability (M2-03): `parent` or `child`.
+     *
+     * Children: only legacy child accounts that still have an e-mail and a
+     * password can sign in here (**deprecated**, dev/test accounts until they
+     * are migrated). PIN-only child profiles (M2-02) have neither and use
+     * `POST /api/child/pin-login`; this endpoint answers them like any wrong
+     * credentials (401).
      *
      * POST /api/login
      */
     public function login(LoginRequest $request): JsonResponse
     {
         $user = User::where('email', $request->input('email'))->first();
+        $hash = $user?->getAuthPassword();
 
-        if (! $user || ! Hash::check($request->input('password'), $user->password)) {
+        if ($user === null || ! is_string($hash) || $hash === ''
+            || ! Hash::check($request->input('password'), $hash)) {
             return response()->json([
                 'message' => 'Invalid credentials.',
             ], 401);
         }
 
         $deviceName = $request->input('device_name', 'mobile-app');
-        $token = $user->createToken($deviceName)->plainTextToken;
+        $token = $user->createToken($deviceName, TokenAbility::abilitiesFor($user))->plainTextToken;
 
         $activePet = $this->sessionPet($user);
 
         return response()->json([
             'token' => $token,
+            'abilities' => TokenAbility::abilitiesFor($user),
             'user' => [
                 'id' => $user->id,
                 'name' => $user->name,

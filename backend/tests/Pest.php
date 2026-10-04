@@ -52,6 +52,19 @@ beforeEach(function () {
     $this->withoutMiddleware([ThrottleRequests::class]);
 });
 
+/**
+ * Authenticate as $user through Sanctum with the token ability of their role
+ * (`parent` / `child`, M2-03) — what a real login issues. Replaces
+ * Sanctum::actingAs($user), whose mock token throws on an unexpected
+ * ability instead of answering 403.
+ */
+function actingAsRole(User $user): User
+{
+    test()->actingAs($user, 'sanctum');
+
+    return $user;
+}
+
 // Helper to seed breed configs in tests — the real (production) seeder, so
 // tests always run against the canonical tunables (M1-06).
 function seedBreedConfigs(): void

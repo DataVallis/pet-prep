@@ -5,7 +5,7 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-04 (Claude, backend-engineer — M2-01 family model phase 1 on `feat/M2-01-family-model`)
+- **Last updated:** 2026-10-04 (Claude, backend-engineer — M2-02 PIN-only child login + M2-03 token abilities, backend, on `feat/M2-02-pin-only-child`)
 - **Realistic MVP completion:** ~45 % (see `docs/engineering/AUDIT-2026-10-02.md` + addendum)
 - **Current milestone:** M0 — repo hygiene → then M1 — core game loop end-to-end
 - **Production:** `https://api.petprep.si` is live (Docker Compose + Caddy on Hetzner CX23). **A merge to `main` deploys automatically** after green CI (pre-production autonomy, David 2026-10-03; CLAUDE.md → Git). The deploy script runs migrations in maintenance mode since M2-01 (PR #14).
@@ -14,7 +14,7 @@
 |---|---|
 | M0 Repo hygiene | 7 / 14 (+ yarn only, CI on Postgres + manual deploy, mobile test infra — PR #2) |
 | M1 Core loop end-to-end | 2 / 18 (M1-01, M1-02 on branch `fix/M1-01-decay-engine`; role-based routing partially done on mobile) |
-| M2 Parent + auth | 0 / 10 (M2-01 family model: backend phase 1 on `feat/M2-01-family-model`; M2-02 partial: parent "Dodaj otroka" PIN screen) |
+| M2 Parent + auth | 0 / 10 (M2-01 family model: backend phase 1 merged (PR #14); M2-02 backend + M2-03 abilities on `feat/M2-02-pin-only-child` — mobile screens next on the same branch) |
 | M3 Notifications, sensors, payments | 0 / 11 |
 | M4 AI media | 2 / 7 (M4-01 queued reference image, M4-04 signed webhooks — PR open) |
 | M5 Production + beta | 2 / 8 (server + domain/TLS live; deploy pipeline and backups partial) |
@@ -22,7 +22,7 @@
 ## 2. Decisions (2026-10-02)
 
 - **Business model:** 12-week PetPrep Challenge **49.99 €** with a **7-day free trial**; **Mutt stays free forever**. Proposed free/paid split in `docs/business/BUSINESS_MODEL.md` §7 (awaiting David's confirmation of the split).
-- **Child login:** PIN only, no child email (M2-02).
+- **Child login:** PIN only, no child email (M2-02) — backend built 2026-10-04 (`feat/M2-02-pin-only-child`).
 - **Monorepo:** `pet-prep-mobile` merged into `pet-prep/mobile` — done.
 - **Languages:** English (default) + Slovenian, more later (M1-18).
 - **Package manager:** yarn 1 (root `package.json` declares it) — cleanup in M0-05.
@@ -62,6 +62,18 @@
 5. **M1-08** private channels + single broadcast per change.
 
 ## 6. Session log
+
+### 2026-10-04 (cloud, backend-engineer) — M2-02 PIN-only child login + M2-03 token abilities (branch `feat/M2-02-pin-only-child`, pushed, no PR yet)
+- **Endpoints:** `POST /api/parent/children {display_name ≤ 30, birth_year?}` → child profile with **no e-mail / password** (201; 10 per family). `POST /api/parent/generate-pin {child_id, pet_id?}` → one-time PIN for that child, `mode` `new_pet` \| `join_pet` \| `relogin` (404 `child_not_found`, 422 `pet_not_joinable` \| `already_paired`); without `child_id` the old flow + `Deprecation: true`. **`POST /api/child/pin-login {pin, device_name}`** (public) → `{token, abilities: ["child"], user {id, name, role}, mode, joined_existing, family_id, pet, awaiting_contract}`; pairs exactly like `/child/pair` (shared `PairingService::attachChildToPet`) or only signs in a new device. `DELETE /api/parent/children/{child}/tokens` → all devices signed out + open PIN revoked. Dashboard `family.children[]` gained `birth_year`, `login: pin|email`, `devices`.
+- **Security choices:** PIN stored only as HMAC-SHA256 (APP_KEY) in `child_login_pins`, partial unique index on open hashes, `hash_equals`; single use, 15 min, new PIN revokes the child's open one; wrong / expired / used / replaced → identical 422 `invalid_pin`; 10 failures per IP and 100 global per 15 min → 429 `too_many_attempts` + `Retry-After` (successes never reset — a parent can't launder attempts with their own PINs); route `throttle:pin-login` 10/min/IP (live in tests too); a matched PIN that can't do its job any more → 422 `pin_not_usable` + revoked; locks parent → child → family → PIN row; max 3 tokens per child (oldest deleted). **Trusted proxies** (private ranges, `TRUSTED_PROXIES`) — before this every request's IP was Caddy's (DEPLOYMENT D11).
+- **Abilities (M2-03):** login / pin-login issue `["parent"]` / `["child"]`; `ability:parent` on `/api/parent/*`, `ability:child` on `/api/child/*`; legacy `["*"]` tokens pass (tested), policies remain the second layer. `/api/login` refuses a child without password (401, same message). Tests: `TestCase::be()` gives `actingAs($u, 'sanctum')` a role-ability token; `Sanctum::actingAs` replaced by `actingAsRole()` in 3 files (its mock throws on an unexpected ability).
+- **Schema:** `2026_10_04_150000_add_pin_only_child_profiles` — `users.email` / `password` nullable (unique email kept; NULLs distinct), `users.birth_year` (CHECK), `child_login_pins`. Additive; `down()` refuses while PIN-only users exist. The M2-01 backfill tests roll this migration back first.
+- **Other:** `PairedPetResource` (pair + pin-login pet payload, adds `is_game_over`); Filament user form: e-mail optional for children, birth year; `UserFactory::pinOnlyChild()`; `TestUsersSeeder` adds PIN-only child "Maja" (no pet). Docs: ARCHITECTURE §2/§3/§8, DIAGRAMS §2c + ER, DECISIONS (4 rows + 1 open question), PRODUCT_SPEC §3, ROADMAP (M2-02 backend, M2-03 partial), DEPLOYMENT D11, BUILD_LOG, PARENTS, KIDS, backend/CLAUDE.md (Auth + testing).
+- **Tests:** backend **559 passed (≈6,430 assertions)** on PostgreSQL (`testing_m202`; 506 before + 53 `ChildPinLoginTest`); `schema.ts` regenerated (artisan serve :8264); mobile `tsc --noEmit` clean, Jest 201/201. Pint on touched files.
+- **Choices pending David (DECISIONS):** 3 devices per child; 10 children per family; PIN for a paired child = new device only (no pet change); global brake 100 failures / 15 min (pauses PIN login for everyone during an attack); when to convert legacy e-mail child accounts.
+- **New debt:** (1) `child_login_pins` rows are never pruned (add `model:prune` / scheduled delete of rows > 30 days). (2) Global lockout is a DoS lever (an attacker can pause child sign-in for 15 min with 100 requests) — revisit with device attestation / CAPTCHA-free alternatives at scale. (3) `isParent()` / `isChild()` checks inside services remain (M2-03 rest). (4) Legacy `*` tokens never expire (`sanctum.expiration` null) — revoke after the new app ships. (5) Scramble doesn't type the 422 `invalid_pin` / 429 bodies of pin-login (only validation) — mobile should hand-type `{message, reason, retry_after?}`. (6) The global `beforeEach` in `tests/Pest.php` does not strip throttling (limiters are `none` in testing instead) — misleading comment there. (7) No child-profile rename / delete endpoint yet (M2-08 account deletion). (8) `PairingService::generatePin` (legacy) still checks `isParent()` ad hoc.
+- **Prod migration risks:** additive, one transaction; `ALTER COLUMN … DROP NOT NULL` on `users` is metadata-only in PostgreSQL (brief ACCESS EXCLUSIVE lock, users table tiny). Nobody is logged out (old tokens `*`). Request IPs change from Caddy's to the real client (DEPLOYMENT D11) — affects guest-keyed rate limits only. Rollback (`migrate:rollback --step=1`) refuses once a PIN-only child exists; then restore from backup or delete those profiles first. Old app builds keep working: the parent's existing "Dodaj otroka" screen still uses `generate-pin` without `child_id` (now with a `Deprecation` header).
+- **Next:** mobile-engineer on this branch — parent "Dodaj otroka" (nickname, birth year) → `generate-pin {child_id}`, "Odjavi naprave"; child PIN entry → `pin-login` (no e-mail login); then PR + `qa-reviewer`.
 
 ### 2026-10-04 (cloud, devops) — deploy script: maintenance before code switch, revert on pre-migration failure (PR #14, review MAJOR + MINOR)
 - **Problem:** all PHP containers bind-mount `repo/backend`, and CI rsynced straight into `repo/` → the running app switched to the new code minutes before `artisan down`/`migrate` (new code on the old schema); a failed migrate brought it up on new code + old schema; one failed `artisan up` left maintenance on forever.

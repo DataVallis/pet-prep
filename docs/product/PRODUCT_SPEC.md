@@ -30,6 +30,10 @@
    - Med hard stopom (ali če je seja neaktivna) tudi podpis ni mogoč — starševski premor ima prednost.
    - Psi, ustvarjeni pred to spremembo, veljajo za rojene (brez zaklepa, tudi brez podpisane pogodbe).
 3. **Otrok nima lastnega emaila; PIN je njegova prijava** (token vezan na otroški profil, ki ga ustvari starš). *Odločeno 2. 10. 2026.*
+   - **Otroški profil (izvedeno 4. 10. 2026, M2-02):** starš vpiše samo **vzdevek** (do 30 znakov, priimek ni potreben) in po želji **letnico rojstva**. Brez e-pošte, gesla, priimka ali datuma rojstva.
+   - **PIN za otroka:** starš izbere otroka (in po želji psa, h kateremu se pridruži) → 6-mestni PIN, 15 minut, enkraten; nov PIN za istega otroka razveljavi prejšnjega. Prvi PIN otroka poveže (nov nerojen pes ali skupni pes), vsak naslednji samo **prijavi novo napravo** istega otroka (isti pes). *(Claude, čaka Davida)*
+   - Otrok je lahko prijavljen na **največ 3 napravah**; starš ga lahko odjavi z vseh naprav. *(Claude, čaka Davida)*
+   - Napačna/potekla/porabljena koda: otrok vidi samo "Koda ni veljavna, prosi starša za novo". Po preveč napačnih poskusih počaka 15 minut.
 4. **Družina** (David, 4. 10. 2026; ADR-012): več staršev (npr. mama in oče) in več otrok. Vsak otrok ima svojega psa **ali** več otrok skupaj skrbi za enega psa (skupno skrbništvo). Vsi starši vidijo vse otroke in pse v družini. Pri skupnem psu se vsako dejanje zapiše pod otroka, ki ga je naredil — **vsak otrok ima svojo oceno, semafor in certifikat**. Cena: 12-tedenski izziv se plača **na psa** (skupni pes = ena cena); mešanček ostane brezplačen.
    - **Pridružitev drugega starša:** starš ustvari kodo za povabilo (8 znakov, velja 24 ur, enkratna); drugi starš jo vnese v svoj račun in postane starš iste družine. Račun, ki že ima otroke ali pse, se ne more pridružiti (družin ne združujemo). *(David, 4. 10. 2026)*
    - **Otrok k obstoječemu psu:** starš pri ustvarjanju PIN-a izbere "nov pes" ali "pridruži se psu X". Otrok, ki se pridruži, podpiše **svojo** pogodbo, preden lahko skrbi za psa; pes se ne rodi znova (rodi se ob prvi pogodbi). *(David, 4. 10. 2026)*

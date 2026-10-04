@@ -13,6 +13,8 @@ Si želiš pravega psa? Najprej pokaži, da zmoreš! V PetPrep dobiš svojega ku
 
 Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova prijavljati.
 
+**Ne rabiš e-pošte ne gesla** — samo kodo od staršev. *(kmalu)* Če dobiš nov telefon ali tablico, te starši prijavijo z novo kodo in tvoj kuža te počaka tam. Če koda ne deluje, prosi starše za novo — vsaka velja samo 15 minut in samo enkrat.
+
 **Imaš brata ali sestro?** *(kmalu)* Lahko ima vsak svojega kužka, ali pa skupaj skrbita za enega. Če se pridružiš kužku, ki že živi, se tudi ti podpišeš pod obljubo — šele potem mu lahko daješ hrano in vodo. Vse, kar narediš ti, se šteje tebi. Koraki se seštejejo: na sprehod lahko greste skupaj!
 
 ## Kaj kuža potrebuje

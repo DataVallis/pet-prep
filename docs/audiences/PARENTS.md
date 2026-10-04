@@ -10,8 +10,10 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 - Za vse, ki želite **objektiven dokaz** pripravljenosti, preden zapravite več kot 1.000 € in sprejmete 10-letno obvezo.
 
 ## Kako poteka
-1. **Vi** si naložite aplikacijo in na nadzorni plošči tapnete **"Dodaj otroka"**. Dobite **6-mestno kodo PIN** (npr. 734 912) z odštevanjem — velja 15 minut; če poteče, tapnete "Nova koda". Ko otrok kodo vnese, aplikacija sama potrdi "Otrok je povezan!". *(načrt: vnos imena in starosti otroka)*
-2. **Otrok** na svojem telefonu vtipka PIN. Otrok **ne potrebuje e-pošte** in ne daje osebnih podatkov. *(načrt: danes testni otroški račun še uporablja e-pošto)*
+1. **Vi** si naložite aplikacijo in na nadzorni plošči tapnete **"Dodaj otroka"**. Dobite **6-mestno kodo PIN** (npr. 734 912) z odštevanjem — velja 15 minut; če poteče, tapnete "Nova koda". Ko otrok kodo vnese, aplikacija sama potrdi "Otrok je povezan!". Za vsakega otroka najprej vpišete samo **vzdevek** (npr. "Maja", do 30 znakov — priimek ni potreben) in po želji **letnico rojstva**; nič drugega o otroku ne vprašamo. Nato dobite PIN prav za tega otroka. *(strežnik pripravljen 4. 10. 2026; zaslon v aplikaciji kmalu)*
+2. **Otrok** na svojem telefonu vtipka PIN. Otrok **ne potrebuje e-pošte ne gesla** in ne daje osebnih podatkov. *(strežnik pripravljen 4. 10. 2026; zaslon v aplikaciji kmalu — do takrat testni otroški račun še uporablja e-pošto)*
+   - **Nov telefon ali tablica?** Ustvarite novo kodo za istega otroka — prijavi se na novi napravi, kuža ostane isti. Otrok je lahko prijavljen na največ 3 napravah. Če se telefon izgubi, otroka **odjavite z vseh naprav** z enim dotikom. *(kmalu v aplikaciji)*
+   - Koda velja 15 minut in samo enkrat; nova koda za istega otroka razveljavi prejšnjo. Po preveč napačnih poskusih mora počakati 15 minut.
 3. Otrok s prstom podpiše **Pogodbo o odgovornosti** in pes se "rodi". Podpis se shrani enkrat na psa (s časom podpisa) in se ne pošilja nikomur drugemu; v časovnici ga vidite kot "pogodba podpisana". Dokler otrok ne podpiše, pes čaka: nič ne upada, ni opomnikov ne kazni, oznaka "čaka na pogodbo" na nadzorni plošči je *načrt*. Šteti začne šele ob podpisu, zato otrok ne izgubi ničesar, če podpis odloži; če aplikacijo zapre pred podpisom, ga ob naslednjem odprtju počaka pogodba. Podpis je risba s prstom (črta), shranjena kot vektorska pot — brez fotografije ali drugih podatkov.
 4. **12 tednov** (1 teden = 1 mesec pasjega življenja) otrok skrbi za psa. Na koncu: **Certifikat odgovornosti**. *(načrt)*
 
@@ -56,7 +58,8 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), potrebuje 10.000 k
 Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava žival.
 
 ## Varnost in zasebnost otroka
-- Otrok se prijavi samo s PIN-om — **brez e-pošte in brez gesla**. *(odločeno; v razvoju — M2-02)*
+- Otrok se prijavi samo s PIN-om — **brez e-pošte in brez gesla**. O otroku hranimo le vzdevek in (če ga vpišete) letnico rojstva. *(strežnik pripravljen 4. 10. 2026; zasloni v aplikaciji kmalu)*
+- Koda PIN se na strežniku ne shrani v berljivi obliki (samo kot zgoščena vrednost), velja 15 minut in samo enkrat. Strežnik ugibanje kod omeji (po preveč napačnih poskusih 15 minut premora), napačna, potekla in že uporabljena koda pa dobijo enak odgovor — tako ni mogoče ugotoviti, kateri otroci ali kode obstajajo.
 - AI videi psa so **kriptografsko preverjeni**: na zaslon pride samo vsebina, ki jo je ustvaril PetPrep (prek fal.ai), z zaupanja vrednih naslovov.
 - **Posodobitve v živo vidijo samo otroci, ki skrbijo za tega psa, in starši vaše družine.** Kanal je zaseben: strežnik ob vsaki povezavi preveri, kdo sprašuje — brat ali sestra z drugim psom ali kdorkoli iz druge družine se ne more priklopiti. Sporočila nosijo samo stanje psa, brez imena ali e-pošte otroka.
 - Brez oglasov. Brez klepeta s tujci.
