@@ -115,6 +115,8 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M4-05 Prenos medijev na lasten storage (Hetzner Object Storage / S3) + CDN
 - [ ] M4-06 Fallback: kuratiran nabor statičnih videov na pasmo (če fal odpove ali za demo)
 - [ ] M4-07 Kalkulacija stroška na psa + dnevni limit porabe
+- [ ] M4-08 **Unikaten videz psa** (David, 4. 10. 2026): Pet DNA vzorči lastnosti znotraj standarda pasme (barva in vzorec dlake, oznake, velikost, oblika ušes, oči) iz preverjenih opisov pasem (M1-19) + seed; prompt = pasma + opis + DNA; vsi kasnejši mediji iz referenčne slike (image-to-video / image-to-image), da je pes vedno isti in drugačen od drugih psov iste pasme.
+- [ ] M4-09 **Žetoni za AI medije** (David, 4. 10. 2026): starš kupi paket žetonov (IAP prek RevenueCat, consumable), otrok porabi žeton za dodatno sliko / video; `token_ledger` (dvostavno knjiženje, idempotentno, vračilo žetona ob neuspehu generiranja), cenik v žetonih na model, dnevne omejitve, starševsko soglasje pred nakupom; zasnova cen glede na strošek modela (M4-07).
 
 ## M5 — Produkcija in zaprta beta (1 teden)
 
