@@ -27,7 +27,7 @@ Ne prodajamo "igrice", ampak **orodje za oceno zrelosti in zavarovalno polico pr
 - **IAP consumables:** veterinar 1,99–2,99 € ("v resnici bi stalo 150 €"), priboljški 0,99 € / 10×.
 - **IAP non-consumables:** igrače 1,49 € (počasnejši upad gibanja), odklep pasem.
 - **B2B affiliate:** ob certifikatu QR kupon partnerja (Mr. Pet, Zootic) — npr. 20 % na starter kit; PetPrep dobi CPA provizijo.
-- **Faza 2:** AI asistent 3,99 €/mes, affiliate trgovina, zavarovanja (lead gen), booking provizije.
+- **Faza 2:** AI asistent 3,99 €/mes, affiliate trgovina, zavarovanja (lead gen), **veterinarji (AI prvi stik → preusmeritev na partnerskega veterinarja: lead-i, telemedicina, provizija ali članarina ambulante)**, booking provizije. Podrobno: `docs/product/PHASE2_SPEC.md`.
 
 ## 4. Lijak (funnel)
 
