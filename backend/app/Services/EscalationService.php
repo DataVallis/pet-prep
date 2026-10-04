@@ -9,6 +9,7 @@ use App\Models\Pet;
 use App\Models\PetDailyWalk;
 use App\Models\QuietHours;
 use Carbon\CarbonInterface;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 /**
@@ -68,15 +69,22 @@ class EscalationService
      */
     public function processAllActivePets(): array
     {
-        $pets = Pet::where('is_active', true)
+        // IDs only: every pet is re-read under its row lock when its turn
+        // comes, so a child action or hard stop made in the meantime is seen.
+        $petIds = Pet::where('is_active', true)
             ->where('is_game_over', false)
-            ->get();
+            ->orderBy('id')
+            ->pluck('id');
 
         $processed = 0;
         $escalated = 0;
 
-        foreach ($pets as $pet) {
-            $wasEscalated = $this->processPetEscalation($pet);
+        foreach ($petIds as $petId) {
+            $wasEscalated = $this->processPetEscalationById($petId);
+            if ($wasEscalated === null) {
+                continue; // deleted in the meantime
+            }
+
             $processed++;
             if ($wasEscalated) {
                 $escalated++;
@@ -89,9 +97,53 @@ class EscalationService
     /**
      * Process escalation checks for a single pet.
      *
+     * Same row-lock rule as the decay tick (backend/CLAUDE.md): the given
+     * model is only used for its ID — the row is re-read with
+     * `SELECT … FOR UPDATE` in a per-pet transaction and every decision is
+     * made from that fresh row, so a concurrent clean() / feed / hard stop is
+     * never overwritten or ignored. The result is copied back into $pet.
+     * Broadcasts and observers run after commit.
+     *
      * @return bool True if an escalation action was taken.
      */
     public function processPetEscalation(Pet $pet): bool
+    {
+        return $this->processPetEscalationById($pet->id, $pet) ?? false;
+    }
+
+    /**
+     * @return bool|null Null if the pet no longer exists.
+     */
+    private function processPetEscalationById(int $petId, ?Pet $target = null): ?bool
+    {
+        $work = function () use ($petId): array {
+            $locked = Pet::whereKey($petId)->lockForUpdate()->first();
+            if (! $locked) {
+                return [null, false];
+            }
+
+            return [$locked, $this->escalateLockedPet($locked)];
+        };
+
+        // Own transaction from the scheduler; inside a caller's transaction
+        // the lock lives until that one commits (see PetDecayService).
+        [$locked, $escalated] = DB::transactionLevel() > 0 ? $work() : DB::transaction($work);
+
+        if (! $locked) {
+            return null;
+        }
+
+        if ($target) {
+            $target->setRawAttributes($locked->getAttributes(), true);
+        }
+
+        return $escalated;
+    }
+
+    /**
+     * Escalation for a pet whose row the caller holds locked.
+     */
+    private function escalateLockedPet(Pet $pet): bool
     {
         if (! $pet->is_active || $pet->is_game_over) {
             return false;
@@ -245,7 +297,7 @@ class EscalationService
         ]);
 
         // Broadcast parent alarm via Reverb
-        broadcast(new PetUpdated($pet, 'parent_intervention_alarm'));
+        DB::afterCommit(fn () => broadcast(new PetUpdated($pet, 'parent_intervention_alarm')));
 
         Log::warning('EscalationService: Phase 3 parent intervention alarm triggered', [
             'pet_id' => $pet->id,
@@ -350,7 +402,7 @@ class EscalationService
         ]);
 
         // Broadcast illness state to parent and child
-        broadcast(new PetUpdated($pet->fresh(), 'illness_triggered'));
+        DB::afterCommit(fn () => broadcast(new PetUpdated($pet, 'illness_triggered')));
 
         Log::warning('EscalationService: Pet entered illness state', [
             'pet_id' => $pet->id,
@@ -414,7 +466,7 @@ class EscalationService
         ]);
 
         // Broadcast game over to parent and child via Reverb
-        broadcast(new PetUpdated($pet->fresh(), 'game_over_virtual_shelter'));
+        DB::afterCommit(fn () => broadcast(new PetUpdated($pet, 'game_over_virtual_shelter')));
 
         Log::critical('EscalationService: VIRTUAL SHELTER PROTOCOL triggered — Game Over', [
             'pet_id' => $pet->id,

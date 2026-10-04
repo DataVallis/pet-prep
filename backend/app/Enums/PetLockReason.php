@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Enums;
+
+/**
+ * Why the child cannot act on the pet right now (HTTP 423, M1-07). Ordered
+ * by priority: when several apply, the first one is reported.
+ */
+enum PetLockReason: string
+{
+    /** Virtual Shelter Intervention: the pet was taken away (PRODUCT_SPEC §7). */
+    case GameOver = 'game_over';
+
+    /** The pet session is not active (e.g. ended by an admin). */
+    case Inactive = 'inactive';
+
+    /** The parent paused the simulation ("Pogovori se s starši"). */
+    case HardStopped = 'hard_stopped';
+
+    /** 12 h at the vet after neglect (PRODUCT_SPEC §7). */
+    case Ill = 'ill';
+}

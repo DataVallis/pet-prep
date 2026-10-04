@@ -5,7 +5,7 @@
 
 import * as SecureStore from 'expo-secure-store';
 import { ENV } from '@/config/env';
-import type { components, operations } from '@/api/schema';
+import type { operations } from '@/api/schema';
 import type {
   PairingResponse,
   GeneratePinResponse,
@@ -15,15 +15,16 @@ import type {
 
 /**
  * Authenticated user as returned (flat, no `data` wrapper) by `GET /api/user`
- * and inside `POST /api/login`. The generated schema still describes the bare
- * `User` model without `pet` (Scramble can't infer the hand-built array), so
- * the shape is declared here; `role` comes from the schema enum.
+ * and inside `POST /api/login`. Declared here because the generated schema
+ * types `role` as a plain string (backend enum `UserRole`: parent | child).
  */
+export type UserRole = 'parent' | 'child';
+
 export interface SessionUser {
   id: number;
   name: string;
   email: string;
-  role: components['schemas']['UserRole'];
+  role: UserRole;
 }
 
 /** `GET /api/user` response. */

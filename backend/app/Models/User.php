@@ -107,6 +107,19 @@ class User extends Authenticatable implements FilamentUser
     }
 
     /**
+     * The pet the child API works on (M1-07): the active pet, otherwise the
+     * most recent one (a game-over pet is inactive but must still be shown
+     * with its lock). Null when the child has never been paired.
+     */
+    public function currentPet(): ?Pet
+    {
+        return $this->pet()
+            ->orderByDesc('is_active')
+            ->orderByDesc('id')
+            ->first();
+    }
+
+    /**
      * The quiet hours configuration defined by this parent.
      */
     public function quietHours(): HasOne

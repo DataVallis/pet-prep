@@ -152,6 +152,39 @@ class PetDecayService
     }
 
     /**
+     * Bring a pet the caller has already locked up to date (one tick, no
+     * broadcast). Child actions (M1-07 feed / water) call this inside their
+     * transaction before setting a metric to 100 %, so decay owed since the
+     * last tick is applied to the old value — not to the new 100 % — and due
+     * hygiene events / the midnight are seen. The caller broadcasts once.
+     *
+     * @return bool True if a displayed value / state changed.
+     */
+    public function catchUpLocked(Pet $locked): bool
+    {
+        return $this->decayLockedPet($locked);
+    }
+
+    /**
+     * The pet state for the pet's current displayed metrics at $now (same
+     * rules as the tick). Used by child actions so the video changes with
+     * the action, not a minute later.
+     */
+    public function derivePetState(Pet $pet, CarbonInterface $now): PetStateEnum
+    {
+        $isQuiet = $pet->quietHours()?->isQuietNow($now) ?? false;
+        $shown = $pet->displayMetrics();
+
+        return $this->determinePetState(
+            $shown['hunger_level'],
+            $shown['thirst_level'],
+            $shown['energy_level'],
+            $shown['hygiene_level'],
+            $isQuiet,
+        );
+    }
+
+    /**
      * Apply one tick to a freshly locked pet row. All writes are quiet; the
      * caller broadcasts after commit.
      *

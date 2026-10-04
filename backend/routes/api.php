@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChildContractController;
+use App\Http\Controllers\ChildPetController;
 use App\Http\Controllers\FalAiWebhookController;
 use App\Http\Controllers\PairingController;
 use App\Http\Controllers\ParentDashboardController;
@@ -75,4 +77,16 @@ Route::middleware(['auth:sanctum', 'throttle:api'])
         // Pair child to parent via PIN (throttled more aggressively for anti-abuse)
         Route::post('pair', [PairingController::class, 'pairChild'])
             ->middleware('throttle:pairing');
+
+        // Child API (M1-07): state + care actions. Children only (PetPolicy);
+        // 423 while hard-stopped / ill / game over, 422 outside game rules.
+        Route::get('pet', [ChildPetController::class, 'show']);
+
+        Route::middleware('throttle:child-actions')->group(function () {
+            Route::post('pet/feed', [ChildPetController::class, 'feed']);
+            Route::post('pet/water', [ChildPetController::class, 'water']);
+            Route::post('pet/clean', [ChildPetController::class, 'clean']);
+            Route::post('pet/steps', [ChildPetController::class, 'steps']);
+            Route::post('contract', [ChildContractController::class, 'store']);
+        });
     });

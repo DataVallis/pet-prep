@@ -2,10 +2,14 @@
 
 namespace App\Services\Results;
 
+use App\Enums\CareRefusal;
+use App\Enums\PetLockReason;
+use Carbon\CarbonInterface;
+
 /**
  * Outcome of a child action handled by PetActivityService. The HTTP layer
- * (M1-07) maps it to a status code: Locked → 423, the rest → 200 with the
- * pet state.
+ * (ChildPetController, M1-07) maps it to a status code:
+ * Locked → 423, Refused → 422 (409 for a duplicate contract), the rest → 200.
  */
 final readonly class ActionResult
 {
@@ -24,8 +28,11 @@ final readonly class ActionResult
     /** Steps: reported for a family-local day that is already over. */
     public const STALE = 'stale';
 
-    /** Pet hard-stopped, ill, inactive or game over — nothing was changed. */
+    /** Pet hard-stopped, ill, inactive or game over — nothing was changed. See $lockReason. */
     public const LOCKED = 'locked';
+
+    /** A game rule forbids the action right now (feed window, water limit …). See $refusal. */
+    public const REFUSED = 'refused';
 
     public function __construct(
         public string $status,
@@ -33,6 +40,9 @@ final readonly class ActionResult
         public int $dailyStepCount = 0,
         public int $energyLevel = 0,
         public int $hygieneLevel = 0,
+        public ?PetLockReason $lockReason = null,
+        public ?CareRefusal $refusal = null,
+        public ?CarbonInterface $nextAllowedAt = null,
     ) {}
 
     public function changed(): bool
