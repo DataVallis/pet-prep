@@ -9,7 +9,7 @@ Si želiš pravega psa? Najprej pokaži, da zmoreš! V PetPrep dobiš svojega ku
 1. Starši ti povejo **kodo s 6 številkami**.
 2. Vtipkaš jo v aplikacijo.
 3. S prstom se **podpišeš** pod obljubo, da boš skrbel zanj.
-4. Tvoj kuža se rodi! 🎉
+4. Tvoj kuža se rodi! 🎉 Dokler se ne podpišeš, kuža še čaka — nič se mu ne zgodi.
 
 Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova prijavljati.
 

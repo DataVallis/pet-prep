@@ -58,12 +58,12 @@
 1. **David:** merge PR #4 (M0-10) → PR #5 (M1-01/02 decay) → Actions → Run workflow; merge `fix/M1-01b-display-thresholds`.
 2. **David:** rotate EAS signing passwords (M0-12); confirm free/paid split (BUSINESS_MODEL §7, B7).
 3. **Claude:** merge M1-04/05/06 + illness recovery + daily walk (PR from `feat/M1-04-energy-hygiene-breeds`). Then **M1-19** sourced breed data import (David: no invented breed numbers).
-4. ~~M1-07 child action API~~ (PR #11, merged) + **M1-07b contract before birth** (`fix/M1-07b-contract-before-birth`, needs PR + review) → **M1-13/M1-14** wire the remaining child actions (contract signing is already wired on the M1-07b branch); **M2-02** rest: PIN-only child login + backend 1 parent → 1 child check.
+4. ~~M1-07 child action API~~ (PR #11, merged) + **M1-07b contract before birth** (PR #13, review APPROVED) → **M1-13/M1-14** wire the remaining child actions (contract signing already wired in M1-07b). Before release: minimum app version check (old builds can't sign); Filament born_at picker + awaiting-contract filter; unborn variant in TestUsersSeeder; **M2-02** rest: PIN-only child login + backend 1 parent → 1 child check.
 5. **M1-08** private channels + single broadcast per change.
 
 ## 6. Session log
 
-### 2026-10-04 (cloud, backend-engineer) — M1-07b contract before birth (branch `fix/M1-07b-contract-before-birth`, pushed, no PR)
+### 2026-10-04 (cloud, backend-engineer) — M1-07b contract before birth (PR #13, review APPROVED)
 - **David approved all four M1-07 choices (2026-10-04):** feed/water refused while hygiene shows 0 %; water gap in real minutes across midnight, daily limit resets at local midnight; one contract per pet (re-sign 409); **contract before birth** — implemented here. DECISIONS: the four moved out of open questions (who = David).
 - **Unborn = `pets.born_at` null.** Migration `2026_10_04_130000_make_pets_born_at_nullable` drops NOT NULL and the `now()` default (defensive backfill of NULL → `created_at`; down() births unborn pets at `created_at`). **Grandfathering:** every existing pet already has `born_at`, so production pets stay born and unlocked without a contract — no data rewrite.
 - `PairingService` creates the pet unborn (`born_at` null, metrics 100 incl. thirst; reference-image job still queued at pairing). `Pet::creating` leaves `last_decay_at` / `last_step_reset_at` null for unborn pets.
