@@ -41,7 +41,7 @@ M1 core game end-to-end → M2 parent onboarding & real dashboard → M3 notific
 ## Phase 2 — post-adoption *(planned, spec 2026-10-04: `docs/product/PHASE2_SPEC.md`)*
 Goal: extend LTV from the 3-month challenge to the dog's 10–15-year life. One tap "We got a real dog" turns the simulator into a real-time AI assistant that already knows the family's routine.
 - Features: smart-collar integration (e.g. Tractive) or white-label PetPrep collar; activity anomaly alerts; AI vet triage from photos (guidance only, always routes to a real vet); growth & nutrition tracking.
-- Revenue: AI coach subscription (~€3.99/month), affiliate shop (pet stores), pet-insurance lead generation by breed risk, vet / dog-school booking fees.
+- Revenue: AI coach subscription (~€3.99/month), affiliate shop (pet stores), pet-insurance lead generation by breed risk, vet partner network (AI first contact → hand-off to a partner vet by call/chat: qualified leads, tele-consult fees or clinic membership), dog-school booking fees.
 - Tech: LLM + retrieval over verified veterinary sources (pgvector in our existing PostgreSQL).
 - Gate: measure how many challenge families actually adopt a dog before building.
 
