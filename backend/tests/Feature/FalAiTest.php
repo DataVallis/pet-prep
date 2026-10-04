@@ -110,61 +110,7 @@ describe('PetStateEnum', function () {
     });
 });
 
-/*
-|--------------------------------------------------------------------------
-| Webhook signing helpers
-|--------------------------------------------------------------------------
-| A real ED25519 key pair stands in for fal.ai: its public key is served
-| from a faked JWKS endpoint and every test webhook is signed with it.
-*/
-
-function falTestKeyPair(): string
-{
-    static $keyPair = null;
-
-    return $keyPair ??= sodium_crypto_sign_keypair();
-}
-
-function fakeFalJwks(?string $keyPair = null): void
-{
-    $public = sodium_crypto_sign_publickey($keyPair ?? falTestKeyPair());
-    $x = rtrim(strtr(base64_encode($public), '+/', '-_'), '=');
-
-    Http::fake([
-        'rest.fal.ai/.well-known/jwks.json' => Http::response(['keys' => [['kty' => 'OKP', 'crv' => 'Ed25519', 'x' => $x]]]),
-    ]);
-}
-
-/**
- * Send a webhook signed like fal.ai does.
- *
- * @param  array<string, mixed>  $body
- * @param  array<string, string>  $headerOverrides
- */
-function sendFalWebhook(array $body, array $headerOverrides = [], ?string $keyPair = null, ?int $timestamp = null)
-{
-    $raw = json_encode($body);
-    $requestId = (string) ($body['request_id'] ?? '');
-    $userId = 'user-123';
-    $timestamp = (string) ($timestamp ?? now()->timestamp);
-
-    $message = implode("\n", [$requestId, $userId, $timestamp, hash('sha256', $raw)]);
-    $signature = bin2hex(sodium_crypto_sign_detached($message, sodium_crypto_sign_secretkey($keyPair ?? falTestKeyPair())));
-
-    $headers = array_merge([
-        'X-Fal-Webhook-Request-Id' => $requestId,
-        'X-Fal-Webhook-User-Id' => $userId,
-        'X-Fal-Webhook-Timestamp' => $timestamp,
-        'X-Fal-Webhook-Signature' => $signature,
-    ], $headerOverrides);
-
-    $server = ['CONTENT_TYPE' => 'application/json', 'HTTP_ACCEPT' => 'application/json'];
-    foreach ($headers as $name => $value) {
-        $server['HTTP_'.strtoupper(str_replace('-', '_', $name))] = $value;
-    }
-
-    return call('POST', '/api/webhooks/fal-ai', [], [], [], $server, $raw);
-}
+// Webhook signing helpers (falTestKeyPair, fakeFalJwks, sendFalWebhook) live in tests/Pest.php.
 
 function pendingVideoJob(array $petAttributes = [], string $requestId = 'req-video-1'): PetMediaJob
 {

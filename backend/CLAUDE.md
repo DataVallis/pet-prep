@@ -51,6 +51,13 @@ Run everything through Sail: `./vendor/bin/sail artisan …`, `./vendor/bin/sail
 - Never store a child's raw device name: `ChildProfileService::deviceLabel()` for every child token. Auth errors that could confirm a PIN or account state return one uniform body (`invalid_pin`, `pairing_refused`).
 - `/api/login` for children and `/api/child/pair` are **deprecated** (legacy e-mail child accounts only).
 
+## AI media (M4-02 / M4-07 / M4-08)
+- **All fal.ai HTTP goes through `App\Services\Media\FalGateway`** (`run()` sync images, `submit()` queue + signed webhook, `poll()` free status read). Never call `Http` against fal elsewhere: the gateway checks the profile, reserves the estimated cost (`AiSpendGuard::reserve`, fail closed on the daily / monthly cap) and settles `ai_spend_ledger` (committed / void). Call it from a queued job, never inside a DB transaction.
+- Models are **named profiles** in `config/media.php` (endpoint, params, `pricing` unit + USD, `source`). Add a model = add a profile with a verified fal endpoint id and price (or `enabled => false`); never hard-code an endpoint. Production picks profiles by env (`AI_REFERENCE_IMAGE_PROFILE`, `AI_STATE_VIDEO_PROFILE`).
+- Failure reasons are `AiCallFailure` (CHECK constraints on ledger / lab / `pets.media_error`); only `http_error` / `invalid_response` are retryable. Budget and `fal_balance` failures leave the pet playable without media.
+- Pet DNA v2 = `PetDnaService` (deterministic, unique per family + breed, built after the pet insert inside the pairing transaction). Prompts come from breed + traits only (`PetAppearancePrompt`) — never a name or other personal data. Never rewrite an existing pet's DNA. Breed appearance options (`config/breed_appearance.php`) are an unverified draft until M1-19.
+- The AI Lab (`/admin/ai-lab`) is superadmin only and touches no child data. Tests: `Http::preventStrayRequests()` + `Http::fake()`; helpers `fakeFalJwks()` / `sendFalWebhook()` are in `tests/Pest.php`.
+
 ## Testing
 - Parallel agents/worktrees: run Pest on your own PostgreSQL database (e.g. `createdb testing_<branch>`), never the shared `testing` DB — other sessions migrate it concurrently.
 - Pest feature tests in `tests/Feature`, unit tests in `tests/Unit` (create the folder when needed).

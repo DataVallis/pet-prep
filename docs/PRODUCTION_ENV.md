@@ -71,6 +71,15 @@ This document describes all environment variables used by the PetPrep production
 | `FAL_AI_API_KEY` | Optional | **Yes** | fal.ai API key for Kling 3.0 / Flux | `fal_key_...` |
 | `FAL_AI_JWKS_URL` | Optional | No | fal.ai public keys for ED25519 webhook verification (no shared secret needed) | `https://rest.fal.ai/.well-known/jwks.json` |
 | `FAL_AI_MEDIA_HOSTS` | Optional | No | Allowed hosts for generated media | `fal.media` |
+| `AI_DAILY_BUDGET_USD` | Optional | No | Cap on **estimated** fal.ai spend per day (M4-07); calls over it are refused (fail closed), pets work without media. `0` = no AI calls | `5` |
+| `AI_MONTHLY_BUDGET_USD` | Optional | No | Cap on estimated fal.ai spend per month | `50` |
+| `AI_BUDGET_TIMEZONE` | Optional | No | Day / month boundary for the caps (operations clock) | `UTC` |
+| `AI_REFERENCE_IMAGE_PROFILE` | Optional | No | Image profile from `config/media.php` for new pets' reference image | `flux_schnell` |
+| `AI_STATE_VIDEO_PROFILE` | Optional | No | Video profile for pet state videos (not wired yet, M4-03) | `kling_v16_legacy` |
+| `AI_PET_DNA_VERSION` | Optional | No | DNA for new pets: `2` unique traits (M4-08), `1` pre-M4 anchors | `2` |
+| `AI_LAB_ENABLED` | Optional | No | Show the Filament AI Lab (superadmin only) | `true` |
+| `AI_LAB_MAX_RUN_USD` | Optional | No | Max estimated cost of one AI Lab run | `3` |
+| `FAL_MODEL_*` | Optional | No | Override a profile's fal endpoint id (`FAL_MODEL_FLUX_SCHNELL`, `FAL_MODEL_FLUX2_PRO`, `FAL_MODEL_NANO_BANANA_PRO`, `FAL_MODEL_SEEDREAM`, `FAL_MODEL_KLING_LEGACY`, `FAL_MODEL_KLING_V3_PRO`, `FAL_MODEL_KLING_V26_PRO`, `FAL_MODEL_VEO31_FAST`, `FAL_MODEL_VEO31_LITE`) — only `owner/model/...` ids are accepted | `fal-ai/flux-2-pro` |
 | `REVENUECAT_SECRET_KEY` | Optional | **Yes** | RevenueCat secret API key for IAP | `sk_...` |
 | `REVENUECAT_PUBLIC_KEY` | Optional | No | RevenueCat public SDK key | `test_...` or `appl_...` |
 | `MAIL_MAILER` | Optional | No | Mail driver (`log`, `smtp`, `resend`, `ses`) | `log` |

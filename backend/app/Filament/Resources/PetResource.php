@@ -184,6 +184,17 @@ class PetResource extends Resource
                     ->label('Born At')
                     ->dateTime()
                     ->sortable(),
+                Tables\Columns\TextColumn::make('media_status')
+                    ->label('Media')
+                    ->badge()
+                    ->description(fn (Pet $record): ?string => $record->media_error)
+                    ->color(fn (string $state): string => match ($state) {
+                        'ready' => 'success',
+                        'failed' => 'danger',
+                        'pending' => 'warning',
+                        default => 'gray',
+                    })
+                    ->toggleable(),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('breed_type')

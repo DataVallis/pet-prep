@@ -135,6 +135,9 @@ Za **gibanje (energijo)** veljata samo fazi 1 in 2, in to le izven tihih ur; faz
 - **Pet DNA:** seed + prompt anchor + vizualne lastnosti + referenčna slika → vsak pes je vizualno konsistenten.
 - Referenčna slika: NanoBanana Pro (ali enakovreden model na fal.ai); videi: Kling (image-to-video, 9:16, ~5 s zanka).
 - Priporočilo: ob rojstvu predgenerirati vseh 6 stanj (nadzorovan strošek), aplikacija preklaplja lokalno.
+- **Unikaten videz (DNA v2, 4. 10. 2026):** vsak nov pes dobi naključno, a ponovljivo kombinacijo lastnosti znotraj možnosti pasme (velikost, postava, dolžina in barva dlake, vzorec, oznake, ušesa, oči, rep). V isti družini dva psa iste pasme nimata enake kombinacije. Prompt = pasma + opis lastnosti + slog fotografije (fotorealistično, cel pes, dnevna svetloba, preprosto domače ozadje, brez ljudi, otrok, besedila). Nikoli imena ali drugih osebnih podatkov. Psi, rojeni prej, obdržijo svoj videz. *Možnosti videza po pasmah so osnutek in čakajo preverjene vire (M1-19).*
+- **Strošek in izpad:** vsak klic AI ima ocenjen strošek; dnevna in mesečna meja porabe (privzeto 5 $ / 50 $). Če je meja dosežena ali je račun pri fal.ai prazen, slika/video ni ustvarjen, **igra pa teče normalno** (pes brez slike). Osnovni mediji ob rojstvu so brezplačni za družino; več prek žetonov (M4-09, *načrt*).
+- **Izbira modelov:** David izbere produkcijska modela v AI Labu (admin); do takrat ostaja dosedanji model za sliko (FLUX.1 schnell).
 
 ## 11. Ocenjevanje in certifikat
 

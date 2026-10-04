@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Events\PetUpdated;
 use App\Http\Requests\FalAiWebhookRequest;
+use App\Models\MediaLabResult;
 use App\Models\PetMediaJob;
 use App\Services\FalAiService;
+use App\Services\Media\MediaLabService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -14,6 +16,7 @@ class FalAiWebhookController extends Controller
 {
     public function __construct(
         private readonly FalAiService $falAiService,
+        private readonly MediaLabService $lab,
     ) {}
 
     /**
@@ -21,7 +24,8 @@ class FalAiWebhookController extends Controller
      *
      * 1. The ED25519 signature is verified in FalAiWebhookRequest::authorize() — fail closed.
      * 2. Match the request_id to a job we created (pet_media_jobs); the pet comes
-     *    from that job, never from client-supplied parameters.
+     *    from that job, never from client-supplied parameters. Otherwise an AI Lab
+     *    video (media_lab_results, admin only — M4-02) with that request_id.
      * 3. Idempotent: a job is finalised once; repeats are acknowledged.
      * 4. On success, set the pet's current video and broadcast once.
      *
@@ -45,6 +49,19 @@ class FalAiWebhookController extends Controller
             $job = PetMediaJob::where('request_id', $requestId)->lockForUpdate()->first();
 
             if (! $job) {
+                // AI Lab video (admin only, M4-02): same signed webhook, own table.
+                $labResult = MediaLabResult::where('request_id', $requestId)->lockForUpdate()->first();
+
+                if ($labResult) {
+                    if ($labResult->isFinished()) {
+                        return response()->json(['message' => 'Already processed.'], 200);
+                    }
+
+                    $this->lab->completeVideo($labResult, $result['video_url'], $result['error']);
+
+                    return response()->json(['message' => 'Lab result recorded.'], 200);
+                }
+
                 // Can happen if fal.ai answers before our submit call stored the row;
                 // answer non-2xx so a retrying sender can deliver again later.
                 Log::warning('FalAiWebhookController: unknown request_id', ['request_id' => $requestId]);

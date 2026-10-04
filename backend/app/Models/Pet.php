@@ -131,6 +131,7 @@ class Pet extends Model
         'pet_dna',
         'current_video_url',
         'media_status',
+        'media_error',
         'hunger_level',
         'thirst_level',
         'energy_level',
@@ -155,13 +156,15 @@ class Pet extends Model
     ];
 
     /**
-     * Routine-ledger bookkeeping (M2-06) never leaves the server.
+     * Routine-ledger bookkeeping (M2-06) and the AI media error reason
+     * (M4-07, admin only) never leave the server.
      *
      * @var list<string>
      */
     protected $hidden = [
         'routines_closed_through',
         'routines_next_close_at',
+        'media_error',
     ];
 
     /**
