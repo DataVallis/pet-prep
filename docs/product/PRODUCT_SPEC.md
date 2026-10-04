@@ -20,7 +20,7 @@
 
 **Vključeno:** dvojni profil starš–otrok, PIN pairing, samo pes (mešanček brezplačno + Border Collie premium), 4 metrike, koraki iz zdravstvenih API-jev, push obvestila in eskalacija, starševska nadzorna plošča s semaforjem, tihe ure, hard stop, bolezen in game over, AI video psa, IAP prek RevenueCat.
 
-**Izključeno (ne gradimo v MVP):** AR, GPS sledenje in zemljevidi, vremenski API, LLM / vision veterinar, B2B QR kuponi, več otrok ali več živali na starša, mačke, naročnina Pro skrbnik.
+**Izključeno (ne gradimo v MVP):** AR, GPS sledenje in zemljevidi, vremenski API, LLM / vision veterinar, B2B QR kuponi, mačke, naročnina Pro skrbnik.
 
 ## 3. Profili in onboarding
 
@@ -30,7 +30,12 @@
    - Med hard stopom (ali če je seja neaktivna) tudi podpis ni mogoč — starševski premor ima prednost.
    - Psi, ustvarjeni pred to spremembo, veljajo za rojene (brez zaklepa, tudi brez podpisane pogodbe).
 3. **Otrok nima lastnega emaila; PIN je njegova prijava** (token vezan na otroški profil, ki ga ustvari starš). *Odločeno 2. 10. 2026.*
-4. MVP: 1 starš → 1 otrok → 1 pes.
+4. **Družina** (David, 4. 10. 2026; ADR-012): več staršev (npr. mama in oče) in več otrok. Vsak otrok ima svojega psa **ali** več otrok skupaj skrbi za enega psa (skupno skrbništvo). Vsi starši vidijo vse otroke in pse v družini. Pri skupnem psu se vsako dejanje zapiše pod otroka, ki ga je naredil — **vsak otrok ima svojo oceno, semafor in certifikat**. Cena: 12-tedenski izziv se plača **na psa** (skupni pes = ena cena); mešanček ostane brezplačen.
+   - **Pridružitev drugega starša:** starš ustvari kodo za povabilo (8 znakov, velja 24 ur, enkratna); drugi starš jo vnese v svoj račun in postane starš iste družine. Račun, ki že ima otroke ali pse, se ne more pridružiti (družin ne združujemo). *(David, 4. 10. 2026)*
+   - **Otrok k obstoječemu psu:** starš pri ustvarjanju PIN-a izbere "nov pes" ali "pridruži se psu X". Otrok, ki se pridruži, podpiše **svojo** pogodbo, preden lahko skrbi za psa; pes se ne rodi znova (rodi se ob prvi pogodbi). *(David, 4. 10. 2026)*
+   - Otrok skrbi za **največ enega aktivnega psa** hkrati. *(David, 4. 10. 2026)*
+   - Dnevni sprehod skupnega psa je dosežen s **seštevkom korakov vseh otrok**, ki skrbijo zanj, vsak otrok vidi svoje korake. *(David, 4. 10. 2026)* Hranjenje in voda sta pravili psa (enkrat na okno ne glede na to, kdo nahrani). *(Claude, čaka Davida)*
+   - Formula ocene / semaforja / certifikata posameznega otroka še ni določena (odprto vprašanje v DECISIONS).
 
 ## 4. Čas in življenjski cikel
 

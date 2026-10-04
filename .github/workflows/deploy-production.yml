@@ -84,9 +84,23 @@ jobs:
       - name: Jest
         run: yarn test --ci
 
+  deploy-script-tests:
+    name: Deploy script (shellcheck + harness)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Shellcheck
+        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh
+
+      # Stubbed docker/git/curl in a temp dir; needs only bash, git and rsync.
+      - name: Harness
+        run: bash scripts/tests/deploy-production.test.sh
+
   deploy:
     name: Deploy to Hetzner Production
-    needs: [backend-tests, mobile-checks]
+    needs: [backend-tests, mobile-checks, deploy-script-tests]
     # Pre-production phase (David, 2026-10-03): every push/merge to main deploys automatically
     # after both test jobs pass; "Run workflow" on main also deploys. To require manual deploys
     # again, restrict this to workflow_dispatch — see docs/engineering/DEPLOYMENT.md D2.
@@ -121,16 +135,22 @@ jobs:
           # Add remote host key to known_hosts safely
           ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
 
-          echo "1. Syncing exact commit files to production server..."
-          rsync -avz --delete \
+          # Upload to a staging dir, NOT into /opt/petprep/repo: the containers bind-mount
+          # repo/, so writing there would switch the running app to the new code before
+          # maintenance mode and migrations. deploy-production.sh syncs incoming/ → repo/
+          # inside the maintenance window and reverts on a pre-migration failure.
+          echo "1. Uploading exact commit files to the staging dir on the production server..."
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new "${SSH_USER}@${SSH_HOST}" \
+            "mkdir -p /opt/petprep/incoming"
+          rsync -az --delete \
             --exclude '.git' \
             --exclude '.idea' \
             --exclude 'backend/storage' \
             --exclude 'backend/vendor' \
             --exclude 'mobile/node_modules' \
             -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new" \
-            ./ "${SSH_USER}@${SSH_HOST}:/opt/petprep/repo/"
+            ./ "${SSH_USER}@${SSH_HOST}:/opt/petprep/incoming/"
 
           echo "2. Triggering production deployment script for commit: $COMMIT_SHA..."
           ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new "${SSH_USER}@${SSH_HOST}" \
-            "/opt/petprep/repo/scripts/deploy-production.sh $COMMIT_SHA"
+            "/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming $COMMIT_SHA"

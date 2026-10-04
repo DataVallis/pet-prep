@@ -259,11 +259,13 @@ class EscalationService
 
         PetUpdated::afterCommit($pet, 'soft_warning');
 
-        // Dispatch push notification via queue (implementation for Phase 2+ push service)
+        // Push to every caretaker child of the pet once push exists (M3);
+        // recipients: FamilyService::caretakerRecipients (M2-01).
         // SendSoftWarningNotification::dispatch($pet);
 
         Log::info('EscalationService: Phase 1 soft warning triggered', [
             'pet_id' => $pet->id,
+            'child_recipient_ids' => $this->families()->caretakerRecipients($pet)->pluck('id')->all(),
             'lowest_metric' => $this->lowestDisplayedMetric($pet, includeEnergy: true),
         ]);
     }
@@ -283,11 +285,12 @@ class EscalationService
 
         PetUpdated::afterCommit($pet, 'critical_alert');
 
-        // Dispatch critical push notification via queue
+        // Critical push to every caretaker child (M3), see Phase 1.
         // SendCriticalAlertNotification::dispatch($pet);
 
         Log::info('EscalationService: Phase 2 critical alert triggered', [
             'pet_id' => $pet->id,
+            'child_recipient_ids' => $this->families()->caretakerRecipients($pet)->pluck('id')->all(),
         ]);
     }
 
@@ -307,8 +310,11 @@ class EscalationService
         // Broadcast parent alarm via Reverb
         PetUpdated::afterCommit($pet, 'parent_intervention_alarm');
 
+        // Every parent of the family is alarmed (M2-01): the realtime channel
+        // already reaches them; push / e-mail (M3) use the same recipients.
         Log::warning('EscalationService: Phase 3 parent intervention alarm triggered', [
             'pet_id' => $pet->id,
+            'parent_recipient_ids' => $this->families()->parentRecipients($pet)->pluck('id')->all(),
         ]);
     }
 
@@ -414,6 +420,7 @@ class EscalationService
 
         Log::warning('EscalationService: Pet entered illness state', [
             'pet_id' => $pet->id,
+            'parent_recipient_ids' => $this->families()->parentRecipients($pet)->pluck('id')->all(),
             'illness_until' => $illnessUntil->toIso8601String(),
             'reason' => $reason,
         ]);
@@ -478,13 +485,22 @@ class EscalationService
 
         Log::critical('EscalationService: VIRTUAL SHELTER PROTOCOL triggered — Game Over', [
             'pet_id' => $pet->id,
-            'user_id' => $pet->user_id,
+            'parent_recipient_ids' => $this->families()->parentRecipients($pet)->pluck('id')->all(),
         ]);
     }
 
     // ──────────────────────────────────────────────────────────────
     //  Helpers
     // ──────────────────────────────────────────────────────────────
+
+    /**
+     * Notification recipients (all parents / all caretakers) are resolved
+     * in one place: FamilyService (M2-01).
+     */
+    private function families(): FamilyService
+    {
+        return app(FamilyService::class);
+    }
 
     /**
      * Seconds since $zeroSince that fall outside quiet hours (family-local

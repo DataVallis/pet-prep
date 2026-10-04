@@ -26,6 +26,7 @@ class ActivityLog extends Model
      */
     protected $fillable = [
         'pet_id',
+        'actor_user_id',
         'activity_type',
         'value',
     ];
@@ -52,5 +53,13 @@ class ActivityLog extends Model
     public function pet(): BelongsTo
     {
         return $this->belongsTo(Pet::class);
+    }
+
+    /**
+     * The child who did it (M2-01); null for system rows (escalation).
+     */
+    public function actor(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'actor_user_id');
     }
 }

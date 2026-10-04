@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use App\Enums\PetLockReason;
 use App\Models\Pet;
+use App\Models\User;
 use App\Services\CareScheduleService;
 use Carbon\CarbonInterface;
 use Illuminate\Http\Request;
@@ -17,6 +18,12 @@ use Illuminate\Http\Resources\Json\JsonResource;
  *
  * `can_feed` / `can_water` combine every server rule (lock, mess, window /
  * limit), so the app can disable the button and show `next_*` times.
+ *
+ * Family model (M2-01): the state is for the requesting child. `lock`,
+ * `pet.awaiting_contract` and `contract` are that child's (a child who
+ * joined a shared pet sees contract_required until they sign, while the pet
+ * itself is born); `steps.steps_today` is the pet's combined count (energy),
+ * `steps.my_steps_today` the child's own.
  *
  * @property Pet $resource
  */
@@ -36,22 +43,28 @@ class ChildPetStateResource extends JsonResource
         $config = $pet->breedConfig();
         $schedule = app(CareScheduleService::class);
 
-        $lockReason = $pet->actionLockReason();
+        $actor = $request->user();
+        $actor = $actor instanceof User && $actor->isChild() ? $actor : null;
+
+        $lockReason = $pet->actionLockReasonFor($actor);
         $locked = $lockReason !== null;
         $needsCleaning = $pet->displayMetric('hygiene_level') <= 0;
         $iso = fn (?CarbonInterface $at): ?string => $at?->copy()->setTimezone($tz)->toIso8601String();
 
         $feeding = $config ? $schedule->feeding($pet, $config, $now) : null;
         $water = $config ? $schedule->water($pet, $config, $now) : null;
-        $contract = $pet->contract;
+        $contract = $actor !== null ? $pet->contractOf($actor) : $pet->contract;
 
         return [
             'pet' => [
                 'id' => $pet->id,
                 'breed_type' => $pet->breed_type->value,
-                // null until the contract is signed (unborn, M1-07b).
+                // null until the first contract is signed (unborn, M1-07b).
                 'born_at' => $pet->born_at?->copy()->setTimezone($tz)->toIso8601String(),
-                'awaiting_contract' => $pet->isUnborn(),
+                // This child must sign before acting (pet unborn, or this
+                // child joined a shared pet and hasn't signed yet — M2-01).
+                'awaiting_contract' => $lockReason === PetLockReason::ContractRequired,
+                'caretakers_count' => $pet->caretakerRows()->count(),
                 'virtual_age_months' => $pet->virtualAgeInMonths(),
                 'hunger_level' => $pet->displayMetric('hunger_level'),
                 'thirst_level' => $pet->displayMetric('thirst_level'),
@@ -107,6 +120,9 @@ class ChildPetStateResource extends JsonResource
             ],
             'steps' => [
                 'steps_today' => (int) $pet->daily_step_count,
+                'my_steps_today' => $actor !== null
+                    ? $pet->stepsTodayOf($actor, $now)
+                    : (int) $pet->daily_step_count,
                 'goal' => (int) ($config->daily_steps_required ?? 0),
                 'energy_level' => $pet->displayMetric('energy_level'),
             ],

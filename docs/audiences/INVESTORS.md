@@ -12,12 +12,13 @@ PetPrep is a 12-week AI dog simulator that gives parents **objective proof** whe
 
 ## Solution
 - Dual app: **child** cares for a photoreal AI dog (feed, water, clean, real-world walking via phone steps); **parent** sees a live dashboard and a traffic-light readiness signal.
+- **Built for real families** (backend 2026-10-04, app screens *planned*): several parents and several children per family; each child gets their own dog or siblings share one, and every action is attributed to the child who did it — the basis for a fair per-child score and certificate.
 - Realistic consequences: escalation, illness, "virtual shelter" on neglect; quiet hours for school and sleep.
 - After 12 weeks: Certificate of Responsibility *(planned)*.
 
 ## Business model (decided 2026-10-02)
 - **Free forever:** basic mutt.
-- **12-week PetPrep Challenge: €49.99**, 7-day free trial.
+- **12-week PetPrep Challenge: €49.99 per dog**, 7-day free trial. A dog shared by siblings is one price; a second dog in the family is a second challenge (David, 2026-10-04). Both parents get access.
 - Back-end offers *(planned)*: Second Chance reset €19.99; affiliate/partner coupons at certification (pet stores); post-adoption AI assistant subscription (Phase 2).
 - Unit economics from planning docs *(assumptions, not yet measured)*: lead CPA €1.50, 10 % lead→sale, CAC €15, AOV €52.99. Missing in that model: app-store fees, VAT, AI media cost — to be added.
 

@@ -2,12 +2,14 @@
 
 namespace App\Policies;
 
+use App\Models\Family;
 use App\Models\Pet;
 use App\Models\User;
 
 /**
- * Child API authorization (M1-07). Auto-discovered for App\Models\Pet.
- * Tokens carry no Sanctum abilities yet, so the role decides.
+ * Pet authorization (M1-07, family model M2-01 / ADR-012). Auto-discovered
+ * for App\Models\Pet. Tokens carry no Sanctum abilities yet, so role and
+ * family membership decide — never users.parent_id / pets.user_id.
  */
 class PetPolicy
 {
@@ -20,25 +22,34 @@ class PetPolicy
     }
 
     /**
-     * A child acts only on its own pet.
+     * Care actions: a child who is a caretaker of this pet. Parents never
+     * act on a pet.
      */
     public function act(User $user, Pet $pet): bool
     {
-        return $user->isChild() && $pet->user_id === $user->id;
+        return $user->isChild() && $pet->hasCaretaker($user);
     }
 
     /**
-     * Real-time channel `private-pet.{id}` (M1-08): the child who owns the
-     * pet and that child's parent — nobody else.
+     * Real-time channel `private-pet.{id}` (M1-08): every caretaker child of
+     * the pet and every parent of the pet's family — nobody else.
      */
     public function listen(User $user, Pet $pet): bool
     {
-        if ($pet->user_id === $user->id) {
-            return true;
+        if ($user->isChild()) {
+            return $pet->hasCaretaker($user);
         }
 
-        $parentId = $pet->user?->parent_id;
+        return $this->manage($user, $pet);
+    }
 
-        return $parentId !== null && $parentId === $user->id;
+    /**
+     * Parent controls (dashboard detail, hard stop, join PIN): any parent of
+     * the pet's family.
+     */
+    public function manage(User $user, Pet $pet): bool
+    {
+        return $user->isParent()
+            && (Family::find($pet->family_id)?->hasParent($user) ?? false);
     }
 }

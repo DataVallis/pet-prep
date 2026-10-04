@@ -3,13 +3,16 @@
 namespace App\Models;
 
 use App\Enums\UserRole;
+use App\Services\FamilyService;
 use Database\Factories\UserFactory;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasOneThrough;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -23,6 +26,44 @@ class User extends Authenticatable implements FilamentUser
      * Family timezone when none is set (M1-03). Matches the column default.
      */
     public const DEFAULT_TIMEZONE = 'Europe/Ljubljana';
+
+    /**
+     * Family sync for the deprecated columns (M2-01, ADR-012). Until the
+     * mobile app stops relying on users.parent_id / users.timezone /
+     * pets.user_id, code that writes only the old columns (seeders, admin,
+     * old tests) still lands in the family model:
+     *  - a new parent gets a family; a child linked via parent_id joins the
+     *    parent's family;
+     *  - a parent's users.timezone change is copied to the family.
+     * New code writes the family directly (FamilyService).
+     */
+    protected static function booted(): void
+    {
+        static::created(function (User $user): void {
+            if ($user->isParent() || ($user->isChild() && $user->parent_id !== null)) {
+                app(FamilyService::class)->ensureFamilyFor($user);
+            }
+        });
+
+        static::updated(function (User $user): void {
+            if ($user->isChild() && $user->parent_id !== null && $user->wasChanged('parent_id')) {
+                app(FamilyService::class)->ensureFamilyFor($user);
+            }
+
+            if ($user->isParent() && $user->wasChanged('timezone') && $user->timezone) {
+                $familyId = FamilyMember::where('user_id', $user->id)->value('family_id');
+                if ($familyId !== null) {
+                    Family::whereKey($familyId)->update(['timezone' => $user->timezone]);
+                    if ($user->relationLoaded('family') && $user->family !== null) {
+                        $user->family->setRawAttributes(
+                            array_merge($user->family->getAttributes(), ['timezone' => $user->timezone]),
+                            true,
+                        );
+                    }
+                }
+            }
+        });
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -39,6 +80,7 @@ class User extends Authenticatable implements FilamentUser
         'parent_id',
         'pairing_pin',
         'pin_expires_at',
+        'pairing_pet_id',
         'revenuecat_id',
     ];
 
@@ -75,6 +117,33 @@ class User extends Authenticatable implements FilamentUser
     // ──────────────────────────────────────────────────────────────
 
     /**
+     * The family this user belongs to (M2-01; at most one).
+     */
+    public function family(): HasOneThrough
+    {
+        return $this->hasOneThrough(Family::class, FamilyMember::class, 'user_id', 'id', 'id', 'family_id');
+    }
+
+    public function familyMembership(): HasOne
+    {
+        return $this->hasOne(FamilyMember::class);
+    }
+
+    /**
+     * Pets this child cares for (pet_caretakers, M2-01). A shared pet has
+     * several caretakers; a child has at most one active pet.
+     */
+    public function caredPets(): BelongsToMany
+    {
+        return $this->belongsToMany(Pet::class, 'pet_caretakers')
+            ->withPivot(['requires_contract', 'pet_is_active'])
+            ->withTimestamps();
+    }
+
+    /**
+     * @deprecated M2-01 — use family(). The parent who paired this child
+     * (users.parent_id), kept in sync for old app builds.
+     *
      * The parent of this child user (null for parent profiles).
      */
     public function parent(): BelongsTo
@@ -83,7 +152,8 @@ class User extends Authenticatable implements FilamentUser
     }
 
     /**
-     * The children paired to this parent.
+     * @deprecated M2-01 — use family()->children(). Children whose
+     * users.parent_id points to this parent (not the second parent's).
      */
     public function children(): HasMany
     {
@@ -91,7 +161,8 @@ class User extends Authenticatable implements FilamentUser
     }
 
     /**
-     * The pet belonging to this user (child).
+     * @deprecated M2-01 — use caredPets(). Pets whose primary caretaker
+     * (pets.user_id) is this child.
      */
     public function pet(): HasMany
     {
@@ -101,9 +172,9 @@ class User extends Authenticatable implements FilamentUser
     /**
      * The active pet for this child user.
      */
-    public function activePet()
+    public function activePet(): ?Pet
     {
-        return $this->pet()->where('is_active', true)->first();
+        return $this->caredPets()->where('pets.is_active', true)->orderByDesc('pets.id')->first();
     }
 
     /**
@@ -113,9 +184,9 @@ class User extends Authenticatable implements FilamentUser
      */
     public function currentPet(): ?Pet
     {
-        return $this->pet()
-            ->orderByDesc('is_active')
-            ->orderByDesc('id')
+        return $this->caredPets()
+            ->orderByDesc('pets.is_active')
+            ->orderByDesc('pets.id')
             ->first();
     }
 
@@ -132,12 +203,17 @@ class User extends Authenticatable implements FilamentUser
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * The family's IANA timezone: the parent's own, or — for a child — its
-     * parent's. Every wall-clock rule (quiet hours, local midnight, dashboard
-     * days) is evaluated in it; timestamps are stored in UTC.
+     * The family's IANA timezone (families.timezone, M2-01; before that the
+     * parent's users.timezone). Every wall-clock rule (quiet hours, local
+     * midnight, dashboard days) is evaluated in it; timestamps are stored in
+     * UTC. Falls back to the legacy columns for a user without a family.
      */
     public function familyTimezone(): string
     {
+        if ($this->family?->timezone) {
+            return $this->family->timezone;
+        }
+
         if ($this->isChild() && $this->parent_id !== null) {
             return $this->parent?->timezone ?? self::DEFAULT_TIMEZONE;
         }

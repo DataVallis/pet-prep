@@ -49,8 +49,14 @@ class UserResource extends Resource
                     ->label('Superadmin')
                     ->default(false),
 
+                Forms\Components\Placeholder::make('family')
+                    ->label('Family')
+                    ->content(fn (?User $record): string => $record?->family
+                        ? "#{$record->family->id} ({$record->family->timezone})"
+                        : '—'),
+
                 Forms\Components\Select::make('parent_id')
-                    ->label('Parent')
+                    ->label('Parent (deprecated, M2-01)')
                     ->relationship('parent', 'name', fn ($query) => $query->where('role', UserRole::Parent->value))
                     ->searchable()
                     ->preload()
@@ -102,6 +108,11 @@ class UserResource extends Resource
                 Tables\Columns\IconColumn::make('is_superadmin')
                     ->label('Superadmin')
                     ->boolean(),
+
+                // Family model (M2-01).
+                Tables\Columns\TextColumn::make('family.id')
+                    ->label('Family')
+                    ->placeholder('—'),
 
                 Tables\Columns\TextColumn::make('parent.name')
                     ->label('Parent')

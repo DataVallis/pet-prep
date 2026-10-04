@@ -15,6 +15,14 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 3. Otrok s prstom podpiše **Pogodbo o odgovornosti** in pes se "rodi". Podpis se shrani enkrat na psa (s časom podpisa) in se ne pošilja nikomur drugemu; v časovnici ga vidite kot "pogodba podpisana". Dokler otrok ne podpiše, pes čaka: nič ne upada, ni opomnikov ne kazni, oznaka "čaka na pogodbo" na nadzorni plošči je *načrt*. Šteti začne šele ob podpisu, zato otrok ne izgubi ničesar, če podpis odloži; če aplikacijo zapre pred podpisom, ga ob naslednjem odprtju počaka pogodba. Podpis je risba s prstom (črta), shranjena kot vektorska pot — brez fotografije ali drugih podatkov.
 4. **12 tednov** (1 teden = 1 mesec pasjega življenja) otrok skrbi za psa. Na koncu: **Certifikat odgovornosti**. *(načrt)*
 
+## Cela družina *(strežnik pripravljen 4. 10. 2026; zasloni v aplikaciji kmalu)*
+- **Oba starša:** mama ustvari kodo za povabilo (8 znakov, velja 24 ur, samo enkrat), oče jo vnese v svoj račun — od takrat oba vidita vse otroke in vse pse v družini, oba lahko nastavljata tihe ure in pritisneta hard stop. Družin, v katerih so že otroci ali psi, ne združujemo.
+- **Več otrok:** vsak otrok ima lahko **svojega psa**, ali pa **več otrok skupaj skrbi za enega psa**. Pri ustvarjanju PIN-a izberete "nov pes" ali "pridruži se psu …". Otrok skrbi za največ enega psa hkrati.
+- **Pošteno pri skupnem psu:** vsako dejanje (hrana, voda, čiščenje, koraki) se zapiše pod otroka, ki ga je naredil. Na nadzorni plošči vidite za vsakega otroka posebej, kaj je naredil v zadnjih 7 dneh. Ocena, semafor in certifikat bodo za vsakega otroka posebej *(načrt — formula še ni določena)*.
+- Otrok, ki se pridruži obstoječemu psu, **podpiše svojo pogodbo**, preden lahko skrbi zanj; pes se zaradi tega ne rodi znova.
+- **Skupni sprehod:** pri skupnem psu se koraki vseh otrok seštejejo za dnevni sprehod — lahko gresta skupaj ali vsak posebej.
+- Pes se hrani enkrat na okno ne glede na to, kdo ga nahrani — pes ne je dvakrat, ker ga hranita dva.
+
 ## Kaj mora otrok početi (mešanček)
 | Skrb | Kako pogosto | Kaj se zgodi, če pozabi |
 |---|---|---|
@@ -50,13 +58,13 @@ Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava �
 ## Varnost in zasebnost otroka
 - Otrok se prijavi samo s PIN-om — **brez e-pošte in brez gesla**. *(odločeno; v razvoju — M2-02)*
 - AI videi psa so **kriptografsko preverjeni**: na zaslon pride samo vsebina, ki jo je ustvaril PetPrep (prek fal.ai), z zaupanja vrednih naslovov.
-- **Posodobitve v živo vidita samo vaš otrok in vi.** Kanal je zaseben: strežnik ob vsaki povezavi preveri, ali sprašuje otrok, ki ima psa, ali njegov starš — nihče drug se ne more priklopiti. Sporočila nosijo samo stanje psa, brez imena ali e-pošte otroka.
+- **Posodobitve v živo vidijo samo otroci, ki skrbijo za tega psa, in starši vaše družine.** Kanal je zaseben: strežnik ob vsaki povezavi preveri, kdo sprašuje — brat ali sestra z drugim psom ali kdorkoli iz druge družine se ne more priklopiti. Sporočila nosijo samo stanje psa, brez imena ali e-pošte otroka.
 - Brez oglasov. Brez klepeta s tujci.
 - Strežniki v EU (Hetzner). *(načrt: politika zasebnosti, privolitev staršev, izbris računa)*
 
 ## Cena
 - **Mešanček: brezplačen za vedno.**
-- **12-tedenski PetPrep izziv: 49,99 €**, prvih **7 dni brezplačno**. Vključuje zahtevno pasmo, personaliziranega AI psa, certifikat in bonuse. *(načrt: nakup v aplikaciji)*
+- **12-tedenski PetPrep izziv: 49,99 € na psa**, prvih **7 dni brezplačno**. Skupni pes več otrok = **ena cena**; drugi pes v družini = nov izziv. Dostop imata oba starša. Vključuje zahtevno pasmo, personaliziranega AI psa, certifikat in bonuse. *(načrt: nakup v aplikaciji)*
 
 ## Pogosta vprašanja *(dopolnjujemo)*
 - **Kaj, če otrok nima telefona?** *(odgovor v pripravi)*

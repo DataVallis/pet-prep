@@ -29,8 +29,9 @@ use Illuminate\Support\Facades\Gate;
 trait HandlesChildPet
 {
     /**
-     * The authenticated child's pet (active, else the latest one, e.g. after
-     * game over). 404 `no_pet` when the child has not been paired yet.
+     * The authenticated child's pet: the pet they care for (pet_caretakers,
+     * M2-01) — active, else the latest one, e.g. after game over. 404
+     * `no_pet` when the child has not been paired yet.
      */
     protected function childPet(Request $request): Pet
     {

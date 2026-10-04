@@ -8,6 +8,32 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-04 — Mama, oče, brat in sestra: PetPrep postane družinski
+
+**Kaj se je zgodilo** (Davidova odločitev in prva faza na strežniku, isti dan)
+- **Družina namesto para starš–otrok.** V eni družini je lahko več staršev (mama in oče) in več otrok. Vsi starši vidijo vse otroke in vse pse.
+- **Svoj pes ali skupni pes.** Vsak otrok ima lahko svojega psa, ali pa brat in sestra skupaj skrbita za enega. Starš pri ustvarjanju PIN-a izbere "nov pes" ali "pridruži se psu …".
+- **Pošteno do vsakega otroka.** Vsako dejanje (hrana, voda, čiščenje, koraki) se zapiše pod otroka, ki ga je naredil. Starš že dobi statistiko po otroku za zadnjih 7 dni; ocena, semafor in certifikat po otroku sledijo (*načrt* — formula čaka Davida).
+- **Drugi starš se pridruži s kodo** (8 znakov, velja 24 ur, samo enkrat; po 5 napačnih poskusih 15 minut premora).
+- **Otrok, ki se pridruži obstoječemu psu, podpiše svojo pogodbo** — pes se ne rodi znova; dokler ne podpiše, lahko skrbi samo drugi otrok.
+- **Skupni sprehod:** koraki vseh otrok, ki skrbijo za psa, se seštejejo; vsak vidi svoj prispevek.
+- **Cena na psa:** 49,99 € za 12-tedenski izziv na psa, skupni pes = ena cena, mešanček ostane brezplačen (plačila še niso zgrajena; pes je že "enota plačila" v bazi).
+- **Obstoječi podatki so preneseni samodejno:** vsak starš dobi družino, njegovi otroci in psi gredo vanjo, pretekla dejanja se pripišejo otroku. Trenutna aplikacija deluje naprej brez posodobitve.
+- **Številke:** 34 novih avtomatskih testov (prenos podatkov, dva starša z enako nadzorno ploščo, povabila — potek, ponovna uporaba, preveč poskusov —, skupni pes, ločena pogodba, seštevanje korakov, kdo sme poslušati kanal v živo), skupaj **498 zelenih** na strežniku; aplikacija 201 zelenih.
+- Zasloni za družino v aplikaciji: *kmalu* (M2-01a).
+- **David je potrdil vse štiri izbire** (en aktiven pes na otroka, seštevanje korakov, lastna pogodba vsakega otroka, pridružitev drugega starša samo s praznim računom). Po neodvisnem pregledu dodana varovala: brisanje družine nikoli ne izbriše psa ali otroka (baza to prepove), sočasno povezovanje in pridružitev se zaklepata v istem vrstnem redu, deploy med migracijo vklopi način vzdrževanja. Skupaj **506 zelenih testov** na strežniku.
+
+**Zakaj je pomembno**
+Doma o psu ne odloča en starš z enim otrokom. Ko se dva otroka pulita za kužka, PetPrep zdaj pokaže, kdo je res skrbel — priden ne nosi lenega. In oba starša vidita isto, brez posredovanja.
+
+**Kako to povedati**
+- 👩 *"Povabite partnerja s kodo in oba v živo vidita, kako gre otrokom. Pri skupnem psu točno veste, kdo ga je nahranil in kdo je šel na sprehod."*
+- 🧒 *"Lahko imaš svojega kužka ali ga deliš z bratom ali sestro — vse, kar narediš ti, se šteje tebi. Na sprehod lahko greste skupaj!"*
+- 💼 *"Cena je na psa, ne na otroka: družina z dvema otrokoma in dvema psoma je dva izziva; skupni pes ena cena. Model podatkov je že pripravljen za plačilo na psa."*
+- 🛠 *"Družine, skrbniki psov in avtor vsakega dejanja; 'en aktiven pes na otroka' zagotavlja baza (delni unikatni indeks na kopiji `is_active`, ki jo vzdržujeta sprožilca). Stari stolpci ostanejo sinhronizirani, da stare verzije aplikacije delujejo."*
+
+---
+
 ## 2026-10-04 — Najprej podpis, potem rojstvo
 
 **Kaj se je zgodilo** (Davidova odločitev, isti dan)

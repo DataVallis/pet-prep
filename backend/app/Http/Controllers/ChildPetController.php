@@ -40,7 +40,7 @@ class ChildPetController extends Controller
     {
         $pet = $this->childPet($request);
 
-        return $this->actionResponse($this->activities->feed($pet), $pet, $request);
+        return $this->actionResponse($this->activities->feed($pet, $request->user()), $pet, $request);
     }
 
     /**
@@ -52,7 +52,7 @@ class ChildPetController extends Controller
     {
         $pet = $this->childPet($request);
 
-        return $this->actionResponse($this->activities->water($pet), $pet, $request);
+        return $this->actionResponse($this->activities->water($pet, $request->user()), $pet, $request);
     }
 
     /**
@@ -64,7 +64,7 @@ class ChildPetController extends Controller
     {
         $pet = $this->childPet($request);
 
-        return $this->actionResponse($this->activities->clean($pet), $pet, $request);
+        return $this->actionResponse($this->activities->clean($pet, $request->user()), $pet, $request);
     }
 
     /**
@@ -76,7 +76,7 @@ class ChildPetController extends Controller
     public function steps(SyncStepsRequest $request): JsonResponse
     {
         $pet = $this->childPet($request);
-        $result = $this->activities->recordSteps($pet, (int) $request->validated('steps_today'), $request->recordedAt());
+        $result = $this->activities->recordSteps($pet, (int) $request->validated('steps_today'), $request->recordedAt(), $request->user());
 
         return $this->actionResponse($result, $pet, $request, [
             'accepted_steps' => $result->acceptedSteps,

@@ -38,6 +38,7 @@ export function makeChildState(
       breed_type: 'mutt',
       born_at: '2026-10-04T09:00:00+00:00',
       awaiting_contract: false,
+      caretakers_count: 1,
       virtual_age_months: 0,
       hunger_level: 100,
       thirst_level: 100,
@@ -77,7 +78,7 @@ export function makeChildState(
       can_water: 'false',
       next_allowed_at: '',
     },
-    steps: { steps_today: 0, goal: 5000, energy_level: 100 },
+    steps: { steps_today: 0, my_steps_today: 0, goal: 5000, energy_level: 100 },
     contract: { signed: true, signed_at: '2026-10-04T09:00:00+00:00' },
   };
 }

@@ -4,16 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UpdateQuietHoursRequest;
 use App\Models\QuietHours;
+use App\Services\FamilyService;
 use App\Services\FamilySettingsService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
 
 class QuietHoursController extends Controller
 {
-    public function __construct(private readonly FamilySettingsService $settings) {}
+    public function __construct(
+        private readonly FamilySettingsService $settings,
+        private readonly FamilyService $families,
+    ) {}
 
     /**
-     * Get the quiet hours configuration for the authenticated parent.
+     * Get the family's quiet hours (one configuration per family; any
+     * parent of the family reads and edits it — M2-01).
      *
      * GET /api/parent/quiet-hours
      */
@@ -25,7 +30,9 @@ class QuietHoursController extends Controller
             return response()->json(['message' => 'Only parent profiles can manage quiet hours.'], 403);
         }
 
-        $quietHours = $parent->quietHours;
+        // GET never writes (no family created on read).
+        $family = $this->families->familyOf($parent);
+        $quietHours = $family !== null ? QuietHours::where('family_id', $family->id)->first() : null;
 
         if (! $quietHours) {
             return response()->json([
@@ -58,16 +65,31 @@ class QuietHoursController extends Controller
                 $this->settings->updateTimezone($parent, $request->validated('timezone'));
             }
 
-            return QuietHours::updateOrCreate(
-                ['parent_id' => $parent->id],
-                $request->only([
-                    'school_start',
-                    'school_end',
-                    'bedtime_start',
-                    'bedtime_end',
-                    'is_active',
-                ])
-            );
+            $family = $this->families->ensureFamilyFor($parent);
+            $values = $request->only([
+                'school_start',
+                'school_end',
+                'bedtime_start',
+                'bedtime_end',
+                'is_active',
+            ]);
+
+            $existing = QuietHours::where('family_id', $family->id)->lockForUpdate()->first()
+                // A row this parent created without a family (old code during
+                // the deploy window) is adopted, not duplicated (parent_id is
+                // unique — a second insert would be a 500).
+                ?? QuietHours::where('parent_id', $parent->id)->whereNull('family_id')->lockForUpdate()->first();
+            if ($existing !== null) {
+                $existing->update(array_merge($values, ['family_id' => $family->id]));
+
+                return $existing;
+            }
+
+            // parent_id = the parent who created the family's configuration.
+            return QuietHours::create(array_merge($values, [
+                'family_id' => $family->id,
+                'parent_id' => $parent->id,
+            ]));
         });
 
         return response()->json([

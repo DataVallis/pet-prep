@@ -10,6 +10,7 @@ use App\Models\ActivityLog;
 use App\Models\BreedConfig;
 use App\Models\Pet;
 use App\Models\PetContract;
+use App\Models\PetDailyStep;
 use App\Models\User;
 use App\Services\Results\ActionResult;
 use Carbon\CarbonInterface;
@@ -28,6 +29,13 @@ use RuntimeException;
  * `lockForUpdate()` re-read, compute from the locked row, quiet write, one
  * `activities_log` row for an applied action, one `PetUpdated` broadcast
  * after commit (the activity-log observer is bypassed to avoid a duplicate).
+ *
+ * Family model (M2-01): every action takes the acting child. The activity
+ * row records it (`actor_user_id`), the lock is evaluated for that child
+ * (a caretaker without their own contract → 423 contract_required), and
+ * steps are counted per child (`pet_daily_steps`); the pet's daily count is
+ * the sum over its caretakers. Without an actor (system / old callers) the
+ * primary caretaker (pets.user_id) is assumed.
  */
 class PetActivityService
 {
@@ -58,19 +66,26 @@ class PetActivityService
      * - Activity log: one `walked_pet` row per day, when the sync first
      *   reaches the daily goal (value = steps), not one per sync — so the
      *   dashboard counts a walk once (daily walk rule).
+     * - Shared pet (M2-01): `$stepsToday` is the acting child's own count;
+     *   idempotency and the anti-cheat cap apply per child; the pet's count
+     *   (energy, daily walk goal) is the sum of all caretakers' steps that
+     *   day. Steps the pet already has that no child row explains (data from
+     *   before M2-01) belong to the primary caretaker.
      */
-    public function recordSteps(Pet $pet, int $stepsToday, CarbonInterface $recordedAt): ActionResult
+    public function recordSteps(Pet $pet, int $stepsToday, CarbonInterface $recordedAt, ?User $actor = null): ActionResult
     {
         if ($stepsToday < 0) {
             throw new InvalidArgumentException('stepsToday must be >= 0.');
         }
 
-        return $this->withLockedPet($pet, ActivityType::WalkedPet, function (Pet $locked) use ($stepsToday, $recordedAt): ActionResult {
+        return $this->withLockedPet($pet, ActivityType::WalkedPet, function (Pet $locked) use ($stepsToday, $recordedAt, $actor): ActionResult {
             $now = now()->startOfSecond();
 
-            if ($locked->isActionLocked()) {
-                return $this->locked($locked);
+            if ($reason = $locked->actionLockReasonFor($actor)) {
+                return $this->locked($locked, $reason);
             }
+
+            $actorId = $actor?->id ?? $locked->user_id;
 
             // Device clocks can run ahead; never accept time from the future.
             $at = Carbon::instance($recordedAt)->utc()->startOfSecond();
@@ -87,15 +102,17 @@ class PetActivityService
                 return $this->unchanged(ActionResult::STALE, $locked);
             }
 
-            $current = (int) $locked->daily_step_count;
+            $row = $this->childStepRow($locked, $actorId, $today);
+            $petCount = (int) $locked->daily_step_count;
+            $current = (int) $row->steps;
             $increment = $stepsToday - $current;
             if ($increment <= 0) {
                 return $this->unchanged(ActionResult::UNCHANGED, $locked);
             }
 
             $dayStart = Carbon::parse($today, $locked->familyTimezone())->startOfDay()->utc();
-            $reference = $locked->last_step_sync_at !== null && $locked->last_step_sync_at->greaterThan($dayStart)
-                ? $locked->last_step_sync_at
+            $reference = $row->last_sync_at !== null && $row->last_sync_at->greaterThan($dayStart)
+                ? $row->last_sync_at
                 : $dayStart;
             $seconds = max(0, (int) $reference->diffInSeconds($at, false));
             $allowed = intdiv($seconds * self::MAX_STEPS_PER_MINUTE, 60);
@@ -104,6 +121,7 @@ class PetActivityService
             if ($accepted < $increment) {
                 Log::warning('PetActivityService: step increment above anti-cheat limit', [
                     'pet_id' => $locked->id,
+                    'actor_user_id' => $actorId,
                     'reported_increment' => $increment,
                     'accepted' => $accepted,
                     'seconds_since_reference' => $seconds,
@@ -116,7 +134,9 @@ class PetActivityService
 
             $breedConfig = $this->breedConfigOf($locked);
 
-            $newCount = $current + $accepted;
+            $row->forceFill(['steps' => $current + $accepted, 'last_sync_at' => $at])->save();
+
+            $newCount = $petCount + $accepted;
             $energy = max((float) $locked->energy_level, $breedConfig->energyForSteps($newCount));
 
             $locked->forceFill([
@@ -128,8 +148,8 @@ class PetActivityService
             $locked->saveQuietly();
 
             $goal = (int) $breedConfig->daily_steps_required;
-            if ($goal > 0 && $current < $goal && $newCount >= $goal) {
-                $this->logActivity($locked, ActivityType::WalkedPet, $newCount);
+            if ($goal > 0 && $petCount < $goal && $newCount >= $goal) {
+                $this->logActivity($locked, ActivityType::WalkedPet, $newCount, $actorId);
             }
 
             return $this->result($accepted < $increment ? ActionResult::CAPPED : ActionResult::ACCEPTED, $locked, $accepted);
@@ -142,13 +162,13 @@ class PetActivityService
      * applied by a tick are settled here, so the pet doesn't get dirty again
      * a minute after cleaning.
      */
-    public function clean(Pet $pet): ActionResult
+    public function clean(Pet $pet, ?User $actor = null): ActionResult
     {
-        return $this->withLockedPet($pet, ActivityType::CleanedPoop, function (Pet $locked): ActionResult {
+        return $this->withLockedPet($pet, ActivityType::CleanedPoop, function (Pet $locked) use ($actor): ActionResult {
             $now = now()->startOfSecond();
 
-            if ($locked->isActionLocked()) {
-                return $this->locked($locked);
+            if ($reason = $locked->actionLockReasonFor($actor)) {
+                return $this->locked($locked, $reason);
             }
 
             $handled = $this->hygieneEvents->settleForCleaning($locked, $now, $locked->quietHours());
@@ -164,7 +184,7 @@ class PetActivityService
             $locked->pet_state = $this->decay->derivePetState($locked, $now);
             $locked->saveQuietly();
 
-            $this->logActivity($locked, ActivityType::CleanedPoop, null);
+            $this->logActivity($locked, ActivityType::CleanedPoop, null, $actor?->id ?? $locked->user_id);
 
             return $this->result(ActionResult::ACCEPTED, $locked);
         });
@@ -176,13 +196,13 @@ class PetActivityService
      * mess isn't cleaned (hygiene shows 0 %, PRODUCT_SPEC §8).
      * Activity value = hunger shown before feeding.
      */
-    public function feed(Pet $pet): ActionResult
+    public function feed(Pet $pet, ?User $actor = null): ActionResult
     {
-        return $this->withLockedPet($pet, ActivityType::FedPet, function (Pet $locked): ActionResult {
+        return $this->withLockedPet($pet, ActivityType::FedPet, function (Pet $locked) use ($actor): ActionResult {
             $now = now()->startOfSecond();
 
-            if ($locked->isActionLocked()) {
-                return $this->locked($locked);
+            if ($reason = $locked->actionLockReasonFor($actor)) {
+                return $this->locked($locked, $reason);
             }
 
             // Decay owed since the last tick applies to the old value.
@@ -208,7 +228,7 @@ class PetActivityService
             $locked->pet_state = $this->decay->derivePetState($locked, $now);
             $locked->saveQuietly();
 
-            $this->logActivity($locked, ActivityType::FedPet, $before);
+            $this->logActivity($locked, ActivityType::FedPet, $before, $actor?->id ?? $locked->user_id);
 
             return $this->result(ActionResult::ACCEPTED, $locked);
         });
@@ -220,13 +240,13 @@ class PetActivityService
      * thirst → 100 %. Refused while the mess isn't cleaned.
      * Activity value = thirst shown before the refill.
      */
-    public function water(Pet $pet): ActionResult
+    public function water(Pet $pet, ?User $actor = null): ActionResult
     {
-        return $this->withLockedPet($pet, ActivityType::WateredPet, function (Pet $locked): ActionResult {
+        return $this->withLockedPet($pet, ActivityType::WateredPet, function (Pet $locked) use ($actor): ActionResult {
             $now = now()->startOfSecond();
 
-            if ($locked->isActionLocked()) {
-                return $this->locked($locked);
+            if ($reason = $locked->actionLockReasonFor($actor)) {
+                return $this->locked($locked, $reason);
             }
 
             $this->decay->catchUpLocked($locked);
@@ -251,7 +271,7 @@ class PetActivityService
             $locked->pet_state = $this->decay->derivePetState($locked, $now);
             $locked->saveQuietly();
 
-            $this->logActivity($locked, ActivityType::WateredPet, $before);
+            $this->logActivity($locked, ActivityType::WateredPet, $before, $actor?->id ?? $locked->user_id);
 
             return $this->result(ActionResult::ACCEPTED, $locked);
         });
@@ -270,16 +290,21 @@ class PetActivityService
      * hard stop / inactive pet is still 423. A pet born before M1-07b
      * (grandfathered) can sign later; that only stores the contract.
      * One `PetUpdated('signed_contract')` after commit.
+     *
+     * Shared pet (M2-01): one contract per (pet, child). The pet is born at
+     * the FIRST contract; a child who joins later signs their own (no
+     * rebirth) and is locked with contract_required until then. The same
+     * child signing twice → 409.
      */
     public function signContract(Pet $pet, User $child, string $format, string $signature): ActionResult
     {
         return $this->withLockedPet($pet, ActivityType::SignedContract, function (Pet $locked) use ($child, $format, $signature): ActionResult {
-            $lockReason = $locked->actionLockReason();
+            $lockReason = $locked->actionLockReasonFor($child);
             if ($lockReason !== null && $lockReason !== PetLockReason::ContractRequired) {
-                return $this->locked($locked);
+                return $this->locked($locked, $lockReason);
             }
 
-            if (PetContract::where('pet_id', $locked->id)->exists()) {
+            if (PetContract::where('pet_id', $locked->id)->where('user_id', $child->id)->exists()) {
                 return $this->refused($locked, CareRefusal::ContractAlreadySigned);
             }
 
@@ -299,7 +324,7 @@ class PetActivityService
                 $locked->saveQuietly();
             }
 
-            $this->logActivity($locked, ActivityType::SignedContract, null);
+            $this->logActivity($locked, ActivityType::SignedContract, null, $child->id);
 
             return $this->result(ActionResult::ACCEPTED, $locked);
         });
@@ -370,9 +395,33 @@ class PetActivityService
      * Hard stop / illness / inactive / game over / contract required:
      * nothing is changed (a due recovery was already applied by withLockedPet).
      */
-    private function locked(Pet $locked): ActionResult
+    private function locked(Pet $locked, PetLockReason $reason): ActionResult
     {
-        return $this->result(ActionResult::LOCKED, $locked, lockReason: $locked->actionLockReason());
+        return $this->result(ActionResult::LOCKED, $locked, lockReason: $reason);
+    }
+
+    /**
+     * Today's step row of one child on this pet (caller holds the pet lock).
+     * Steps the pet already counts that no child row explains (recorded
+     * before per-child steps existed) are given to the primary caretaker.
+     */
+    private function childStepRow(Pet $locked, ?int $actorId, string $today): PetDailyStep
+    {
+        $rows = PetDailyStep::where('pet_id', $locked->id)->where('local_date', $today)->get();
+        $untracked = (int) $locked->daily_step_count - (int) $rows->sum('steps');
+
+        if ($untracked > 0 && $locked->user_id !== null) {
+            $primary = $rows->firstWhere('user_id', $locked->user_id)
+                ?? new PetDailyStep(['pet_id' => $locked->id, 'user_id' => $locked->user_id, 'local_date' => $today, 'steps' => 0]);
+            $primary->forceFill([
+                'steps' => (int) $primary->steps + $untracked,
+                'last_sync_at' => $primary->last_sync_at ?? $locked->last_step_sync_at,
+            ])->save();
+            $rows = $rows->reject(fn (PetDailyStep $r) => (int) $r->user_id === (int) $locked->user_id)->push($primary);
+        }
+
+        return $rows->firstWhere('user_id', $actorId)
+            ?? new PetDailyStep(['pet_id' => $locked->id, 'user_id' => $actorId, 'local_date' => $today, 'steps' => 0]);
     }
 
     /**
@@ -433,10 +482,11 @@ class PetActivityService
      * One activities_log row per applied action. Created without model events:
      * the action broadcasts once itself after commit.
      */
-    private function logActivity(Pet $pet, ActivityType $type, ?int $value): void
+    private function logActivity(Pet $pet, ActivityType $type, ?int $value, ?int $actorId): void
     {
         ActivityLog::withoutEvents(fn () => ActivityLog::create([
             'pet_id' => $pet->id,
+            'actor_user_id' => $actorId,
             'activity_type' => $type->value,
             'value' => $value,
         ]));
