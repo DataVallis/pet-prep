@@ -2,10 +2,6 @@
 
 namespace App\Providers;
 
-use App\Models\ActivityLog;
-use App\Models\Pet;
-use App\Observers\ActivityLogObserver;
-use App\Observers\PetObserver;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
@@ -26,9 +22,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Register model observers for real-time broadcasting
-        Pet::observe(PetObserver::class);
-        ActivityLog::observe(ActivityLogObserver::class);
+        // No broadcasting model observers (M1-08): every PetUpdated is
+        // emitted explicitly by the service that made the change, via
+        // PetUpdated::afterCommit() — exactly one per state change.
 
         // Configure rate limiters (per Phase 7 engineering standards)
         // In testing, rate limits are set to unlimited to avoid

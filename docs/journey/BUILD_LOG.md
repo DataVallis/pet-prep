@@ -8,6 +8,27 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-04 — Kužo v živo vidita samo otrok in njegov starš
+
+**Kaj se je zgodilo**
+- **Zasebni kanal v živo:** posodobitve psa (lakota, žeja, energija, higiena, opozorila) gredo zdaj po **zasebnem kanalu**. Strežnik ob vsaki prijavi na kanal preveri prijavni žeton aplikacije in pusti zraven **samo otroka, ki ima tega psa, in njegovega starša**. Drug otrok, drug starš ali neprijavljen obiskovalec dobi zavrnitev (preverjeno z avtomatskimi testi).
+- **Prej** je bil kanal javen: kdor bi poznal javni ključ iz aplikacije in številko psa, bi lahko poslušal njegovo stanje (najresnejša najdba revizije 2. 10., P0). Luknja je zaprta.
+- **Brez osebnih podatkov v sporočilu:** vsebina dogodka nosi samo stanje psa — nobenega imena, e-pošte ali številke uporabnika otroka.
+- **En dogodek na spremembo:** ko se psu kaj zgodi, gre na telefon točno eno sporočilo (prej ob opozorilu tudi do tri). Manj baterije in prometa, jasnejša časovnica.
+- **Igralna zanka ne more obstati zaradi sporočil:** pošiljanje teče v ozadju po posebni vrsti. Če strežnik za sporočila (Reverb) za hip odpove, se kuža še vedno pravilno postara vsako minuto; telefon dobi stanje ob naslednjem dogodku ali pri osvežitvi.
+- **Številke:** 30 novih avtomatskih testov (prijava na kanal × 10 primerov, en dogodek na vsak korak eskalacije, oddaja šele po zapisu v bazo, zanka preživi izpad), skupaj 437 zelenih; v aplikaciji 11 novih testov (170 skupaj).
+
+**Zakaj je pomembno**
+Pri aplikaciji za otroke je zasebnost osnova, ne dodatek. Stanje psa razkrije ritem otrokovega dne (kdaj je doma, kdaj nahrani psa) — to sme videti samo družina.
+
+**Kako to povedati**
+- 👩 *"Kar se dogaja s kužo, vidite samo vi in vaš otrok. Nihče drug se ne more 'priklopiti' na vaš kanal — strežnik vsakič preveri, kdo sprašuje."*
+- 💼 Popravljena kritična varnostna najdba revizije pred prvimi družinami; v sporočilih ni osebnih podatkov otroka (dobra osnova za GDPR / zaščito otrok).
+- 🤝 Šole in veterinarji: podatki o otroku ne zapustijo družine.
+- 🛠 *"Laravel Reverb: `PrivateChannel('pet.{id}')`, `/api/broadcasting/auth` z Sanctum bearer žetonom, avtorizacija v policyju. `ShouldBroadcast` na vrsti `broadcasts` z ločenim workerjem, ena točka oddaje `afterCommit`, payload je posnetek brez PII. Opazovalci modelov odstranjeni — en dogodek na spremembo stanja."*
+
+---
+
 ## 2026-10-04 — Gumbi dobijo pravila: hrana ob pravem času, voda s premislekom
 
 **Kaj se je zgodilo**

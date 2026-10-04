@@ -32,7 +32,6 @@ function createMockPet(overrides: Partial<Pet> = {}): Pet {
 function createMockBroadcast(overrides: Partial<PetUpdatedBroadcast> = {}): PetUpdatedBroadcast {
   return {
     pet_id: 1,
-    user_id: 1,
     breed_type: 'mutt',
     hunger_level: 50,
     thirst_level: 50,
@@ -42,12 +41,15 @@ function createMockBroadcast(overrides: Partial<PetUpdatedBroadcast> = {}): PetU
     pet_state: 'idle',
     escalation_level: 0,
     is_ill: false,
+    illness_until: null,
     is_game_over: false,
+    is_hard_stopped: false,
     virtual_age_months: 0,
     current_video_url: null,
     reference_image_url: null,
     event_type: 'metric_changed',
     updated_at: new Date().toISOString(),
+    emitted_at: new Date().toISOString(),
     ...overrides,
   };
 }

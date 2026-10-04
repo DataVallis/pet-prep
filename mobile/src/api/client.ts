@@ -43,6 +43,12 @@ export interface LoginResponse {
 export type ParentDashboardResponse =
   operations['parentDashboard.dashboard']['responses'][200]['content']['application/json'];
 
+/** Response from POST /api/broadcasting/auth (Pusher protocol signature). */
+export interface BroadcastAuthResponse {
+  auth: string;
+  channel_data?: string;
+}
+
 /** Exact backend message when the parent has no child profile yet. */
 export const NO_CHILD_PAIRED_MESSAGE = 'No child profile paired yet.';
 
@@ -189,6 +195,17 @@ export const api = {
   /** POST /api/child/pair — Pair a child to a parent via PIN. */
   pairChild: (pin: string) =>
     apiRequest<PairingResponse>('/api/child/pair', { method: 'POST', body: { pin } }),
+
+  /**
+   * POST /api/broadcasting/auth — sign a private channel subscription for
+   * Reverb (M1-08). Called by the pusher-js authorizer (`modules/realtime`).
+   * 403 = not this user's pet.
+   */
+  authorizeChannel: (socketId: string, channelName: string) =>
+    apiRequest<BroadcastAuthResponse>('/api/broadcasting/auth', {
+      method: 'POST',
+      body: { socket_id: socketId, channel_name: channelName },
+    }),
 
   /** GET /api/user — the authenticated user (flat object) with the active pet. */
   getUser: () => apiRequest<UserResponse>('/api/user'),

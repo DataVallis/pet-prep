@@ -187,7 +187,7 @@ class ParentDashboardController extends Controller
 
         // Broadcast the update to parent and child via Reverb
         $eventType = $pet->is_hard_stopped ? 'hard_stop_activated' : 'hard_stop_deactivated';
-        broadcast(new PetUpdated($pet->fresh(), $eventType));
+        PetUpdated::afterCommit($pet->fresh(), $eventType);
 
         return response()->json([
             'message' => $pet->is_hard_stopped

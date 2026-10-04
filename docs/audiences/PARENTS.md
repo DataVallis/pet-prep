@@ -50,6 +50,7 @@ Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava �
 ## Varnost in zasebnost otroka
 - Otrok se prijavi samo s PIN-om — **brez e-pošte in brez gesla**. *(odločeno; v razvoju — M2-02)*
 - AI videi psa so **kriptografsko preverjeni**: na zaslon pride samo vsebina, ki jo je ustvaril PetPrep (prek fal.ai), z zaupanja vrednih naslovov.
+- **Posodobitve v živo vidita samo vaš otrok in vi.** Kanal je zaseben: strežnik ob vsaki povezavi preveri, ali sprašuje otrok, ki ima psa, ali njegov starš — nihče drug se ne more priklopiti. Sporočila nosijo samo stanje psa, brez imena ali e-pošte otroka.
 - Brez oglasov. Brez klepeta s tujci.
 - Strežniki v EU (Hetzner). *(načrt: politika zasebnosti, privolitev staršev, izbris računa)*
 

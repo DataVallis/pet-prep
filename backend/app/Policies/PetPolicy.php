@@ -26,4 +26,19 @@ class PetPolicy
     {
         return $user->isChild() && $pet->user_id === $user->id;
     }
+
+    /**
+     * Real-time channel `private-pet.{id}` (M1-08): the child who owns the
+     * pet and that child's parent — nobody else.
+     */
+    public function listen(User $user, Pet $pet): bool
+    {
+        if ($pet->user_id === $user->id) {
+            return true;
+        }
+
+        $parentId = $pet->user?->parent_id;
+
+        return $parentId !== null && $parentId === $user->id;
+    }
 }
