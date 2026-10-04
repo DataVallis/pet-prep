@@ -39,7 +39,7 @@
    - **Otrok k obstoječemu psu:** starš pri ustvarjanju PIN-a izbere "nov pes" ali "pridruži se psu X". Otrok, ki se pridruži, podpiše **svojo** pogodbo, preden lahko skrbi za psa; pes se ne rodi znova (rodi se ob prvi pogodbi). *(David, 4. 10. 2026)*
    - Otrok skrbi za **največ enega aktivnega psa** hkrati. *(David, 4. 10. 2026)*
    - Dnevni sprehod skupnega psa je dosežen s **seštevkom korakov vseh otrok**, ki skrbijo zanj, vsak otrok vidi svoje korake. *(David, 4. 10. 2026)* Hranjenje in voda sta pravili psa (enkrat na okno ne glede na to, kdo nahrani). *(Claude, čaka Davida)*
-   - Formula ocene / semaforja / certifikata posameznega otroka še ni določena (odprto vprašanje v DECISIONS).
+   - Ocena in semafor posameznega otroka: §9 in §11 (David, 4. 10. 2026 — "pošten delež"). Formula certifikata še ni določena.
 
 ## 4. Čas in življenjski cikel
 
@@ -120,6 +120,16 @@ Za **gibanje (energijo)** veljata samo fazi 1 in 2, in to le izven tihih ur; faz
 - 4 žive metrike (Reverb), časovnica aktivnosti ("✓ 07:15 Pes nahranjen", "✗ 14:00 Zamujeno čiščenje"), tedenski stolpčni graf.
 - Nastavitve: tihe ure, hard stop (rdeč gumb s potrditvijo), izbira in nakup pasme.
 
+**Semafor po pravilih (David, 4. 10. 2026; strežnik M2-06):** velja za **vsakega otroka in vsakega psa** posebej, za **današnji dan po času družine**.
+- **Rdeča**, če velja karkoli od: pes je odvzet (game over); je aktiven alarm faze 3 (metrika kaže 0 % več kot 1 uro); pes je **danes** zbolel.
+- Sicer **rumena**, če so bile danes zamujene **več kot 2 rutini** (rutine: §11) — šteje rutina današnjega dne ali rutina, katere **rok je potekel danes** (nered ob 21:50 z rokom 07:50 šteje v naslednji dan); rok točno ob polnoči pripada prejšnjemu dnevu. *(Claude, čaka Davida)*
+- Sicer **zelena**.
+- Pri skupnem psu (*Claudova razlaga, čaka Davida*): vsaka zamujena rutina šteje **vsem otrokom, ki so takrat skrbeli za psa** — brat ali sestra se ne more skriti za drugega. Rdeči razlogi psa veljajo za vse njegove skrbnike.
+- Pes, ki čaka na pogodbo, in otrok brez psa sta zelena.
+- Bolezen, ki se je začela včeraj, danes ne obarva rdeče (pravilo "danes zbolel"); pes je seveda še vedno prikazan kot bolan.
+
+**Kaj starš vidi po otroku (strežnik M2-05, 4. 10. 2026; zasloni v aplikaciji *načrt*):** semafor z razlogi, Care Score (§11), današnje rutine (pričakovane, opravljene, zamujene s tipom in uro, še odprte), zadnjih 7 dni (rutine, koraki tega otroka, cilj sprehoda, dosežen), napredek 12-tedenskega izziva ("teden N od 12", dnevi od podpisa pogodbe). Po psu: semafor, metrike, Care Score psa, današnje rutine, zadnjih 20 dejanj z vzdevkom otroka, ki jih je naredil. Podrobno poročilo otroka za 7, 30 ali 84 dni.
+
 ## 10. AI mediji
 
 - **Pet DNA:** seed + prompt anchor + vizualne lastnosti + referenčna slika → vsak pes je vizualno konsistenten.
@@ -130,7 +140,43 @@ Za **gibanje (energijo)** veljata samo fazi 1 in 2, in to le izven tihih ur; faz
 
 - **7. dan:** "Puppy Promoter" značka staršu (prvi dokaz vrednosti, točka aktivacije garancije).
 - **12. teden:** Certifikat odgovornosti s "Care Score" (delež pravočasno opravljenih rutin), brez game overa.
-- **(D)** Formula za Care Score — predlog: (opravljene rutine / pričakovane rutine) × 100, minus 10 točk za vsako bolezen.
+
+### 11.1 Rutine (David, 4. 10. 2026; strežnik M2-06)
+Rutina je ena obveznost, ki jo otrok pravočasno opravi ali zamudi. Vse po **lokalnem času družine**; iz podatkov, ki jih že imamo (od otroka ne zahtevamo ničesar novega).
+
+| Rutina | Koliko | Opravljena | Zamujena |
+|---|---|---|---|
+| **Hrana** | eno okno hranjenja pasme = ena rutina (mešanček 2 na dan) | hranjenje znotraj okna | okno se konča brez hranjenja |
+| **Voda** | `water_times_per_day` (3) na lokalni dan | vsako dolivanje tega dne (po vrsti, do pričakovanega števila) | vsako manjkajoče dolivanje ob koncu dneva |
+| **Čiščenje** | vsak "kakec" (higienski dogodek) = ena rutina | počiščeno v **2 urah, šteto samo izven tihih ur** | ni počiščeno v tem času |
+| **Sprehod** | dnevni cilj korakov | koraki dneva ≥ cilj | dan se konča pod ciljem |
+
+Rutina se **ne pričakuje** (ne šteje ne kot opravljena ne kot zamujena):
+- pred rojstvom psa (nerojen pes nima rutin); na **rojstni dan** samo rutine po rojstvu (okno hranjenja, ki se je začelo pred rojstvom, ne šteje; sprehoda na rojstni dan ni — energija 100 %);
+- **okno hranjenja v celoti znotraj tihih ur** (npr. šola 6–10) — *Claudova razlaga*; okno, ki je le deloma v tihih urah (zjutraj 6–10 ob šoli 8–13), se pričakuje, ker ostaneta 2 prosti uri;
+- med **hard stopom, boleznijo (veterinar) ali po game overju** — rutina, katere čas se s takim obdobjem prekriva, se ne pričakuje, **razen če jo je otrok vseeno opravil** (takrat šteje kot opravljena). Voda se namesto tega preračuna: 3 × (prosti netihi čas dneva, ko je bil pes v igri) / (ves netihi čas dneva), zaokroženo (npr. rojen ob 18:00 pri tihih urah 22–6 in šoli 8–13 → 4 od 11 ur → 1 voda; hard stop 3 ure → 8 od 11 ur → 2 vodi);
+- sprehod za pretekli dan, za katerega strežnik nima nobenega zapisa korakov (izpad strežnika — v dvomu v korist otroka).
+- **Sprehod (celodnevna rutina)** se zaradi hard stopa / veterinarja / game overja ne pričakuje le, če je pes vsaj **50 % netihega časa dneva** izven igre; kratek ali nočni hard stop sprehoda ne opraviči. *(Claude, čaka Davida)*
+- "Kakec", ki bi padel v hard stop, bolezen ali po game overju, se ne zgodi in ni rutina.
+
+Ob prestopu ure: dan ima 23 ali 25 ur, okna sledijo stenski uri (06:00 je poleti 04:00 UTC, pozimi 05:00 UTC).
+Zaključeni dnevi se zapišejo (strežnik) in se pozneje ne preračunajo: sprememba tihih ur ali oken hranjenja ne spremeni preteklih ocen. Današnji dan se računa sproti; rutina z rokom v prihodnosti je "odprta" in se v oceno še ne šteje. Ledger se začne 4. 10. 2026 (prej vsi podatki niso bili na strežniku).
+
+### 11.2 Care Score (0–100) (David, 4. 10. 2026)
+**Care Score = (opravljene rutine / pričakovane rutine) × 100 − 10 za vsako bolezen**, omejeno na 0–100, zaokroženo na celo število. Brez pričakovanih rutin ocene še ni (prazno).
+
+**Po otroku — "pošten delež" (skupni pes; David, 4. 10. 2026):**
+- vsaka rutina psa šteje **1 / n** vsakemu od **n otrok, ki so takrat skrbeli za psa** (od podpisa svoje pogodbe; pri starih psih brez pogodbe od rojstva);
+- **opravljene** = rutine, ki jih je opravil **ta otrok** (zapisano pod njegovim imenom);
+- ocena otroka = min(100, opravljene / pošteni delež × 100) − 10 za vsako bolezen psa, odkar otrok skrbi zanj; omejeno 0–100;
+- **sprehod** (*Claudova razlaga "poštenega deleža", čaka Davida*): šteje otroku kot opravljen, če je pes dosegel cilj **in** je ta otrok prehodil vsaj **cilj / n** korakov (npr. 2 otroka, cilj 4.000 → vsak vsaj 2.000);
+- otrok sam s psom: enaka formula z n = 1 (= formula psa).
+- Primer: dva otroka, eden opravi vse → 100 in 0. Otrok, ki se pridruži kasneje, deli samo rutine, ki se začnejo po njegovi pogodbi.
+
+- **Bolezni** se odštevajo od prvega dne ocenjevanja (4. 10. 2026) naprej, pri otroku od začetka njegovega skrbništva. *(Claude, čaka Davida)*
+- **Dan pridružitve:** otrok, ki se pridruži sredi dneva, ta dan ne deli vode in sprehoda (rutini se začneta ob polnoči), deli pa okna hranjenja in nered po podpisu.
+
+**Napredek izziva:** teden N od 12 (dnevi od podpisa pogodbe otroka / 7 + 1), izziv končan po 84 dneh.
 
 ## 12. Faza 2 (po MVP) — Real-World AI asistent
 

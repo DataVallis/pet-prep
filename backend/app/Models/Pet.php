@@ -6,6 +6,7 @@ use App\Enums\BreedType;
 use App\Enums\PetLockReason;
 use App\Enums\PetStateEnum;
 use App\Services\FamilyService;
+use App\Services\PetStatusPeriodService;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -70,6 +71,14 @@ class Pet extends Model
                     'requires_contract' => $pet->isUnborn(),
                 ]);
             }
+
+            app(PetStatusPeriodService::class)->recordCreated($pet);
+        });
+
+        // History of hard stops, illnesses and inactive periods for the
+        // routine ledger (M2-06). Runs inside the writer's transaction.
+        static::updated(function (Pet $pet): void {
+            app(PetStatusPeriodService::class)->recordUpdated($pet);
         });
 
         // Freeze bookkeeping (M1-02). Hard stop and illness freeze both the
@@ -143,6 +152,16 @@ class Pet extends Model
         'is_game_over',
         'is_hard_stopped',
         'certificate_eligible',
+    ];
+
+    /**
+     * Routine-ledger bookkeeping (M2-06) never leaves the server.
+     *
+     * @var list<string>
+     */
+    protected $hidden = [
+        'routines_closed_through',
+        'routines_next_close_at',
     ];
 
     /**
@@ -353,6 +372,22 @@ class Pet extends Model
     public function dailyWalks(): HasMany
     {
         return $this->hasMany(PetDailyWalk::class);
+    }
+
+    /**
+     * Hard stops, illnesses and inactive periods (M2-06 routine ledger).
+     */
+    public function statusPeriods(): HasMany
+    {
+        return $this->hasMany(PetStatusPeriod::class);
+    }
+
+    /**
+     * Materialised routines of closed days (M2-06).
+     */
+    public function dailyRoutines(): HasMany
+    {
+        return $this->hasMany(PetDailyRoutine::class);
     }
 
     /**

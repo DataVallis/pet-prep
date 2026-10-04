@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Services\EscalationService;
 use App\Services\PetDecayService;
+use App\Services\RoutineLedgerService;
 use Illuminate\Console\Command;
 
 class ProcessPetDecayCommand extends Command
@@ -16,12 +17,12 @@ class ProcessPetDecayCommand extends Command
     /**
      * The console command description.
      */
-    protected $description = 'Process minutely metric decay and escalation checks for all active pets';
+    protected $description = 'Process minutely metric decay, escalation checks and the routine ledger for all pets';
 
     /**
      * Execute the console command.
      */
-    public function handle(PetDecayService $decayService, EscalationService $escalationService): int
+    public function handle(PetDecayService $decayService, EscalationService $escalationService, RoutineLedgerService $ledger): int
     {
         $this->info('Processing pet metric decay...');
 
@@ -32,6 +33,11 @@ class ProcessPetDecayCommand extends Command
 
         $escalationResult = $escalationService->processAllActivePets();
         $this->info("Escalation: processed {$escalationResult['processed']} pets, escalated {$escalationResult['escalated']}.");
+
+        // Routine ledger (M2-06): materialise finished family-local days.
+        // After decay + escalation, so the night's walk row exists.
+        $ledgerResult = $ledger->closeDueDays();
+        $this->info("Routines: checked {$ledgerResult['pets']} pets, closed {$ledgerResult['days']} days.");
 
         return self::SUCCESS;
     }

@@ -132,6 +132,31 @@ class CareScheduleService
     }
 
     /**
+     * The feed-window instances that START on the family-local date $date,
+     * sorted by start (routine ledger, M2-06: one feed routine per window).
+     * Same rules as feeding(): [start, end), an end ≤ start runs over
+     * midnight, a time in the spring-forward gap resolves after the jump,
+     * a broken config falls back to the default windows.
+     *
+     * @return list<array{0: CarbonImmutable, 1: CarbonImmutable}>
+     */
+    public function feedWindowsStartingOn(BreedConfig $config, string $date, string $tz): array
+    {
+        $instances = [];
+        foreach ($this->configuredWindows($config) as [$start, $end]) {
+            $endDate = $end > $start
+                ? $date
+                : CarbonImmutable::parse($date, 'UTC')->addDay()->toDateString();
+
+            $instances[] = [$this->localTime($date, $start, $tz), $this->localTime($endDate, $end, $tz)];
+        }
+
+        usort($instances, fn (array $a, array $b): int => $a[0] <=> $b[0]);
+
+        return $instances;
+    }
+
+    /**
      * The breed's windows; an empty or broken config falls back to the spec
      * default (06–10, 17–21) instead of making feeding impossible.
      *

@@ -71,7 +71,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
     - [x] Seznam otrok na pregledu in v Nadzoru (vzdevek, pes, število naprav, "Nova koda za prijavo", "Odjavi vse naprave"), "Dodaj otroka" vedno, "Pridruži se psu …" pri novem otroku, pogodba za otroka, ki se pridruži skupnemu psu *(2026-10-04, `feat/M2-02-pin-only-child`)*
     - [ ] Preostanek: več psov na pregledu (metrike po psu), statistika po otroku, "Povabi drugega starša" / vnos kode družine
   - [ ] M2-01b Odstrani zastarele `users.parent_id`, `pets.user_id`, ogledalo `users.timezone` in mostne model hooke, ko jih aplikacija ne bere več
-  - [ ] M2-01c **(D)** Formula ocene / semaforja po otroku (skupni pes)
+  - [x] M2-01c Formula ocene / semaforja po otroku (skupni pes) — David 4. 10.: "pošten delež" (PRODUCT_SPEC §11.2); zgrajeno z M2-06 *(2026-10-04, `feat/M2-05-dashboard-scoring`)*
   - [ ] M2-01d Certifikat po otroku (12 tednov) iz dejanj otroka
   - [ ] Odprto **(D)**: nov pes po game overu za istega otroka, skrbnik zapusti skupnega psa, starš zapusti družino, združevanje družin
 - [~] M2-02 Otroški profil brez emaila (**odločeno**): starš ustvari otroka (ime, starost), PIN pairing izda Sanctum token z abilities `child:*`; odstraniti email/geslo prijavo za otroka
@@ -83,8 +83,10 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
   - [x] Žetoni z ability `parent` / `child` (prijava z e-pošto in PIN prijava), `ability:parent` na `/api/parent/*`, `ability:child` na `/api/child/*`; stari žetoni `*` delujejo naprej; politike ostanejo druga plast *(2026-10-04, `feat/M2-02-pin-only-child`)*
   - [ ] Preostanek: `isParent()` / `isChild()` znotraj servisov (`PairingService`, `FamilyInviteService`, …) zamenjati s politikami; razmisliti o preklicu starih `*` žetonov po izdaji nove aplikacije
 - [ ] M2-04 Izbira pasme pred "rojstvom" (starš) → nato pairing; RevenueCat odklep pred izbiro, ne sredi igre
-- [ ] M2-05 Parent dashboard na pravih podatkih (`/api/parent/dashboard`, `/activities`), live prek Reverb — *sprehodi po dnevih so v `pet_daily_walks` (koraki, cilj, dosežen, bolezen)*
-- [ ] M2-06 Semafor po spec: zelena / rumena (> 2 zamujeni rutini danes) / rdeča; definirati "zamujena rutina" na strežniku
+- [~] M2-05 Parent dashboard na pravih podatkih (`/api/parent/dashboard`, `/activities`), live prek Reverb — *sprehodi po dnevih so v `pet_daily_walks` (koraki, cilj, dosežen, bolezen)*
+  - [x] Backend *(2026-10-04, `feat/M2-05-dashboard-scoring`)*: `family.children[]` → semafor z razlogi, Care Score, današnje rutine (zamujene s tipom in uro), zadnjih 7 dni, napredek 12 tednov; `family.pets[]` → semafor, metrike, Care Score, današnje rutine, časovnica (20 dejanj z vzdevkom otroka); `GET /api/parent/children/{child}/report?days=7|30|84`; stalno število poizvedb (41 za 2 psa, ne glede na 7 ali 84 dni zgodovine)
+  - [ ] Mobilni zasloni (mobile-engineer): semafor in Care Score po otroku, časovnica in tedenski graf iz `last_7_days` namesto demo podatkov, poročilo otroka, svetla tema (ADR-007); osvežitev ob dogodku Reverb
+- [x] M2-06 Semafor po spec: zelena / rumena (> 2 zamujeni rutini danes) / rdeča; definirati "zamujena rutina" na strežniku — David 4. 10. (PRODUCT_SPEC §9 / §11): rutine hrana / voda / čiščenje / sprehod, Care Score, pošten delež; `RoutineLedgerService` + `pet_daily_routines` (zaključeni dnevi) + `pet_status_periods`, `CareScoreService` *(2026-10-04, `feat/M2-05-dashboard-scoring`)*
 - [ ] M2-07 Reset po game over / bolezni (starš) + "Breed Downgrade" (brezplačno)
 - [ ] M2-08 Brisanje računa (Apple obvezno), izvoz podatkov (GDPR)
 - [ ] M2-09 Rate-limit testi, Policies testi
