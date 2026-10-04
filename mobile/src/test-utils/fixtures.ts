@@ -189,8 +189,22 @@ export function makeFamilyPet(overrides: Partial<FamilyPet> = {}): FamilyPet {
     is_game_over: false,
     is_hard_stopped: false,
     is_ill: false,
-    traffic_light: 'green',
+    escalation_level: 0,
     caretakers: [],
+    // M2-05 / M2-06: spec traffic light, metrics, Care Score, today, timeline.
+    metrics: { hunger: 100, thirst: 100, energy: 100, hygiene: 100 },
+    timeline: [],
+    traffic_light: { color: 'green', reasons: [] },
+    care_score: { score: null, done: 0, expected: 0, illnesses: 0, since: '2026-10-01T08:00:00+00:00' },
+    today: {
+      date: '2026-10-04',
+      expected: 0,
+      done: 0,
+      done_by_child: null,
+      pending: 0,
+      missed_count: 0,
+      missed: [],
+    },
     ...overrides,
   };
 }

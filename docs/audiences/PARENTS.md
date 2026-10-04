@@ -20,7 +20,7 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 ## Cela družina *(strežnik pripravljen 4. 10. 2026; v aplikaciji: seznam otrok, več otrok, skupni pes — povabilo drugega starša in statistika po otroku kmalu)*
 - **Oba starša** *(v aplikaciji kmalu)*: mama ustvari kodo za povabilo (8 znakov, velja 24 ur, samo enkrat), oče jo vnese v svoj račun — od takrat oba vidita vse otroke in vse pse v družini, oba lahko nastavljata tihe ure in pritisneta hard stop. Družin, v katerih so že otroci ali psi, ne združujemo.
 - **Več otrok:** vsak otrok ima lahko **svojega psa**, ali pa **več otrok skupaj skrbi za enega psa**. Pri ustvarjanju PIN-a izberete "nov pes" ali "pridruži se psu …". Otrok skrbi za največ enega psa hkrati.
-- **Pošteno pri skupnem psu:** vsako dejanje (hrana, voda, čiščenje, koraki) se zapiše pod otroka, ki ga je naredil. Na nadzorni plošči boste za vsakega otroka posebej videli, kaj je naredil v zadnjih 7 dneh *(strežnik pripravljen, prikaz v aplikaciji kmalu)*; seznam otrok že kaže vzdevek, psa in število prijavljenih naprav. Ocena, semafor in certifikat bodo za vsakega otroka posebej *(načrt — formula še ni določena)*.
+- **Pošteno pri skupnem psu:** vsako dejanje (hrana, voda, čiščenje, koraki) se zapiše pod otroka, ki ga je naredil. Na nadzorni plošči boste za vsakega otroka posebej videli, kaj je naredil v zadnjih 7 dneh *(strežnik pripravljen, prikaz v aplikaciji kmalu)*; seznam otrok že kaže vzdevek, psa in število prijavljenih naprav. Ocena (Care Score) in semafor sta za vsakega otroka posebej po načelu **"pošten delež"** (glej "Kako nastane ocena") *(strežnik pripravljen 4. 10. 2026, prikaz v aplikaciji kmalu)*; certifikat po otroku *(načrt)*.
 - Otrok, ki se pridruži obstoječemu psu, **podpiše svojo pogodbo**, preden lahko skrbi zanj; pes se zaradi tega ne rodi znova.
 - **Skupni sprehod:** pri skupnem psu se koraki vseh otrok seštejejo za dnevni sprehod — lahko gresta skupaj ali vsak posebej.
 - Pes se hrani enkrat na okno ne glede na to, kdo ga nahrani — pes ne je dvakrat, ker ga hranita dva.
@@ -38,9 +38,29 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), potrebuje 10.000 k
 **Pošteno štetje korakov:** upoštevamo največ 200 korakov na minuto; če telefon javi več, preostanek štejemo šele, ko je to realno mogoče. Tako hitro tresenje telefona ne prinese več kot hoja.
 
 ## Kaj vidite vi
-- **Semafor:** zelena (vse v redu), rumena (zamujene rutine), rdeča (pes trpi).
+- **Semafor** za vsakega otroka in vsakega psa, za današnji dan po vašem času:
+  - 🔴 **rdeča** — pes je danes zbolel, več kot uro je brez hrane, vode ali čistoče (alarm), ali pa ga je "odpeljalo zavetišče";
+  - 🟡 **rumena** — danes so bile zamujene **več kot 2 rutini**;
+  - 🟢 **zelena** — vse v redu.
+  Pri skupnem psu se vsaka zamujena rutina pokaže pri vseh otrocih, ki skrbijo zanj (nihče se ne skrije za bratom ali sestro). *(strežnik pripravljen 4. 10. 2026, v aplikaciji kmalu)*
+- **Care Score** (0–100) za vsakega otroka in **napredek izziva** ("teden 3 od 12"). *(strežnik pripravljen, v aplikaciji kmalu)*
+- **Današnje rutine:** koliko jih je bilo, koliko opravljenih, katere so bile zamujene in kdaj (npr. "čiščenje, rok 14:30"). *(strežnik pripravljen, v aplikaciji kmalu)*
 - **Žive vrednosti** lakote, žeje, gibanja in higiene — posodobijo se v trenutku, ko otrok nekaj naredi.
-- **Časovnico** in **tedenski graf** opravljenih in zamujenih nalog. *(načrt: trenutno prikaz z demo podatki)*
+- **Časovnico** (zadnjih 20 dejanj z vzdevkom otroka, ki jih je naredil), **zadnjih 7 dni** in **poročilo za 7, 30 ali 84 dni**. *(strežnik pripravljen; v aplikaciji še prikaz z demo podatki)*
+
+## Kako nastane ocena (Care Score)
+Vsak dan ima kuža **rutine** — po vašem lokalnem času:
+| Rutina | Koliko na dan (mešanček) | Opravljena, če … |
+|---|---|---|
+| Hrana | 2 (okno zjutraj 6–10 in zvečer 17–21) | otrok nahrani v oknu |
+| Voda | 3 | otrok tisti dan dolije vodo (vsako manjkajoče dolivanje ob polnoči šteje kot zamujeno) |
+| Čiščenje | ob vsakem neredu (1× na dan) | otrok počisti v **2 urah — šola in spanje (tihe ure) se ne štejeta** (nered ob 7:30, šola 8–13 → rok 14:30) |
+| Sprehod | 1 (4.000 korakov) | dan se konča z doseženim ciljem |
+
+**Care Score = opravljene rutine / pričakovane rutine × 100, minus 10 točk za vsako bolezen** (najmanj 0, največ 100).
+- **Ne šteje se proti otroku:** čas, ko ste vi pritisnili **hard stop**, ko je kuža **pri veterinarju**, po odvzemu psa, pred podpisom pogodbe; na dan rojstva samo rutine po rojstvu (sprehoda ta dan ni); okno hranjenja, ki je v celoti v tihih urah. Če je otrok rutino vseeno opravil, šteje kot opravljena.
+- **Skupni pes — pošten delež:** dva otroka si delita vsako rutino na pol, šteje pa samo to, kar je otrok naredil sam. Če eden naredi vse, ima 100, drugi 0. Sprehod šteje otroku, če je kuža dosegel cilj in je ta otrok prehodil vsaj svoj del (pri dveh otrocih polovico). Otrok, ki se pridruži kasneje, se ocenjuje od podpisa svoje pogodbe.
+- Pretekli dnevi se zapišejo in se ne spreminjajo — če spremenite tihe ure, se pretekle ocene ne popravijo.
 
 ## Vi imate nadzor
 - **Tihe ure** (npr. šola 8:00–13:00, spanje 22:00–6:00): pes takrat skoraj ne postaja lačen in ne pošilja obvestil. Veljajo po **vašem lokalnem času**, tudi ob prestopu na poletni/zimski čas.

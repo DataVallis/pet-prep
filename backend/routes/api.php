@@ -5,6 +5,7 @@ use App\Http\Controllers\ChildAuthController;
 use App\Http\Controllers\ChildContractController;
 use App\Http\Controllers\ChildPetController;
 use App\Http\Controllers\ChildProfileController;
+use App\Http\Controllers\ChildReportController;
 use App\Http\Controllers\FalAiWebhookController;
 use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\PairingController;
@@ -60,6 +61,8 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         Route::post('children', [ChildProfileController::class, 'store'])
             ->middleware('throttle:pairing');
         Route::delete('children/{child}/tokens', [ChildProfileController::class, 'revokeTokens']);
+        // Care Score / routine report of one child (M2-05 / M2-06).
+        Route::get('children/{child}/report', [ChildReportController::class, 'show']);
 
         // Generate a 6-digit one-time child PIN (throttled more aggressively).
         // child_id (M2-02) = PIN login for that child profile; without it the

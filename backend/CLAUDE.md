@@ -15,7 +15,7 @@ Run everything through Sail: `./vendor/bin/sail artisan …`, `./vendor/bin/sail
 | Authorization | `app/Policies/*` + Sanctum token abilities (`parent`, `child` — `App\Enums\TokenAbility`) |
 | Response shape | `app/Http/Resources/*Resource.php` (introduce; controllers currently build arrays inline) |
 | Enums | `app/Enums/*` — mirror any new value in a DB CHECK constraint migration |
-| Tunable game numbers | `breed_configs` table (+ seeder), never constants in services |
+| Tunable game numbers | `breed_configs` table (+ seeder), never constants in services (scoring rules that are not per breed — 2 h cleaning deadline, −10 per illness, yellow after > 2 missed — are constants on `RoutineLedgerService` / `CareScoreService`, documented in PRODUCT_SPEC §11) |
 | Scheduled work | `routes/console.php` |
 
 ## Game-loop invariants (see PRODUCT_SPEC §4–7)
@@ -32,6 +32,7 @@ Run everything through Sail: `./vendor/bin/sail artisan …`, `./vendor/bin/sail
 - `EscalationService` follows the row-lock rule too (IDs → `lockForUpdate()` per pet, one `PetUpdated::afterCommit` per escalation step).
 - Every state change the parent should see → exactly one `PetUpdated::afterCommit($pet, $eventType)` (single emission point; a plain `save()` broadcasts nothing). Queued on the `broadcasts` queue, `PrivateChannel('pet.{id}')` (every caretaker child + every parent of the pet's family, `PetPolicy::listen`), auth `POST /api/broadcasting/auth` (Sanctum). Payload = pet-state snapshot, no child PII. Broadcasting errors are logged, never thrown. The decay tick writes quietly and broadcasts itself only when a displayed value/state changed.
 - Every child action and every escalation writes one `activities_log` row. Exception: step syncs log one `walked_pet` row per day, when the goal is first reached (the dashboard counts rows).
+- **Scoring (M2-06, PRODUCT_SPEC §9/§11):** routines, Care Score and the traffic light come only from `RoutineLedgerService` (derives feed / water / clean / walk routines from `activities_log`, `pet_hygiene_events`, `pet_daily_walks` / `pet_daily_steps`, `pet_status_periods`, breed config + quiet hours) and `CareScoreService` — never count activity rows for a score elsewhere. Closed days live in `pet_daily_routines` (written once by `closeDueDays()` at the end of `pets:process-decay`, insert-or-ignore + pointer; never update or recompute them); today is computed live by the same code. Anything that changes `is_hard_stopped`, `is_active` or `illness_until` must go through a non-quiet `save()` / `update()` so the `Pet` hooks record a `pet_status_periods` row (or write the period yourself) — otherwise routines in that time are wrongly "missed". New child actions must keep `actor_user_id` (fair share per child). Tests: `RoutineScoringTest` helpers (`rsFamily`, `rsAct`, `rsMess`, `rsPeriod`).
 
 ## Family model (M2-01, ADR-012)
 - Ownership = `families` / `family_user` (one family per user, role parent|child) / `pet_caretakers` (child ↔ pet). **Never** authorize or scope by `users.parent_id` or `pets.user_id` — they are deprecated mirrors (primary caretaker / PIN issuer) kept for old app builds; removal is M2-01b.

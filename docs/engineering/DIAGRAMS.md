@@ -388,6 +388,9 @@ erDiagram
   PETS ||--o{ PET_HYGIENE_EVENTS : "random messes"
   PETS ||--o{ PET_DAILY_WALKS : "closed days"
   PETS ||--o{ PET_CONTRACTS : "one per caretaker"
+  PETS ||--o{ PET_STATUS_PERIODS : "hard stop / illness / inactive (M2-06)"
+  PETS ||--o{ PET_DAILY_ROUTINES : "closed days' routines (M2-06)"
+  USERS ||--o{ PET_DAILY_ROUTINES : "actor (child)"
   USERS ||--o{ CHILD_LOGIN_PINS : "one-time PIN for a child (M2-02)"
   FAMILIES ||--o{ CHILD_LOGIN_PINS : "issued in"
   BREED_CONFIGS ||--o{ PETS : "tunables by breed_slug"
@@ -550,4 +553,67 @@ sequenceDiagram
   W->>Redis: pop
   W->>Rev: trigger pet.updated on private-pet.{id}<br/>(Reverb down → retry ×3, then failed job)
   Rev-->>App: .pet.updated {pet_id, metrics, flags, event_type, emitted_at}
+```
+
+## 9. Routines, Care Score and traffic light (M2-05 / M2-06)
+
+Routines are derived from data the game already writes; finished days are frozen in `pet_daily_routines`, today is computed live with the same code (PRODUCT_SPEC §9 / §11, ARCHITECTURE §4).
+
+```mermaid
+flowchart LR
+  subgraph Sources["Existing data (no new client calls)"]
+    A["activities_log<br/>fed / watered / cleaned / walked<br/>+ actor_user_id"]
+    H["pet_hygiene_events<br/>applied, cleaned_at"]
+    W["pet_daily_walks / pet_daily_steps<br/>steps per day (per child)"]
+    S["pet_status_periods<br/>hard stop · illness · inactive"]
+    C["breed_configs + quiet_hours<br/>feed windows, water ×/day,<br/>family tz"]
+  end
+
+  subgraph Ledger["RoutineLedgerService (family-local day, DST-safe)"]
+    R["feed = each window · water = N/day pro rata<br/>clean = each mess, 2 h outside quiet hours<br/>walk = daily goal (not on birth day)"]
+    X{"done?"}
+    E{"overlaps hard stop /<br/>vet / game over?"}
+    P{"deadline ahead?"}
+  end
+
+  A & H & W & S & C --> R --> X
+  X -- yes --> DONE["done (actor)"]
+  X -- no --> E
+  E -- yes --> EXC["not expected"]
+  E -- no --> P
+  P -- yes --> PEND["pending (not scored yet)"]
+  P -- no --> MISS["missed"]
+
+  DONE & MISS --> T["tick: closeDueDays()<br/>final days → pet_daily_routines<br/>(insert-or-ignore, pointer)"]
+  DONE & MISS & PEND --> L["live: today"]
+
+  T & L --> CS["CareScoreService"]
+  CS --> PS["Pet: done / expected × 100 − 10 × illnesses"]
+  CS --> KS["Child (fair share): min(100, own done / Σ 1/n × 100)<br/>− 10 × illnesses since start"]
+  CS --> TL["Traffic light today:<br/>red = game over · phase 3 · ill today<br/>yellow = > 2 missed · else green"]
+  PS & KS & TL --> API["GET /api/parent/dashboard (family.children[] / pets[])<br/>GET /api/parent/children/{id}/report (7, 30 or 84 days)"]
+```
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant Tick as pets:process-decay (every minute)
+  participant Dec as PetDecayService
+  participant Esc as EscalationService
+  participant Led as RoutineLedgerService
+  participant DB as PostgreSQL
+
+  Tick->>Dec: decay + hygiene events + midnight close (walk row)
+  Tick->>Esc: phases, illness, game over<br/>(Pet hooks write pet_status_periods)
+  Tick->>Led: closeDueDays()
+  Led->>DB: pets WHERE routines_next_close_at ≤ now (or never closed)
+  loop each due pet
+    Led->>DB: batch-load activities, events, walks, steps, periods, quiet hours
+    Led->>Led: compute days after routines_closed_through … yesterday
+    alt a day still has a pending routine (e.g. 21:30 mess due 07:30)
+      Led->>DB: rows of the final days + pointer, next = that deadline
+    else all final
+      Led->>DB: rows (insert-or-ignore) + pointer, next = next local midnight
+    end
+  end
 ```

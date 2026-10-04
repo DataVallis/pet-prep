@@ -32,9 +32,11 @@ class ParentDashboardController extends Controller
 
     /**
      * GET /api/parent/dashboard
-     * Family (parents, children with per-child 7-day stats, pets with
-     * caretakers) + legacy single-pet state, traffic light, quiet hours,
-     * recent activities.
+     * Family (parents; children with 7-day stats, traffic light, Care
+     * Score, today's routines, last 7 days and 12-week progress; pets with
+     * caretakers, traffic light, metrics, Care Score, today and timeline —
+     * M2-05 / M2-06) + legacy single-pet state, legacy traffic light
+     * (escalation based, deprecated), quiet hours, recent activities.
      */
     public function dashboard(Request $request): JsonResponse
     {

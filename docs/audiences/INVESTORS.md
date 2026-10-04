@@ -14,7 +14,8 @@ PetPrep is a 12-week AI dog simulator that gives parents **objective proof** whe
 - Dual app: **child** cares for a photoreal AI dog (feed, water, clean, real-world walking via phone steps); **parent** sees a live dashboard and a traffic-light readiness signal.
 - **Built for real families** (backend 2026-10-04, app screens *planned*): several parents and several children per family; each child gets their own dog or siblings share one, and every action is attributed to the child who did it — the basis for a fair per-child score and certificate.
 - Realistic consequences: escalation, illness, "virtual shelter" on neglect; quiet hours for school and sleep.
-- After 12 weeks: Certificate of Responsibility *(planned)*.
+- **Objective score — the "Care Score"** (rules decided by the founder 2026-10-04; computed by the backend, app screens *planned*): every day has measurable routines (each feeding window, 3 water refills, every mess cleaned within 2 hours not counting school and sleep, the daily step goal). Care Score = routines done on time ÷ routines expected × 100, −10 per illness, 0–100. Time the parent paused the game or the dog was "at the vet" never counts against the child. With siblings, every routine is split fairly (½ each for two children) and only a child's own actions count — one child doing everything scores 100, the other 0. A daily **traffic light** (red / yellow / green) per child and per dog tells the parent at a glance where to step in. Closed days are frozen, so the history behind a certificate can't be rewritten.
+- After 12 weeks: Certificate of Responsibility with the child's Care Score *(planned)*.
 
 ## Business model (decided 2026-10-02)
 - **Free forever:** basic mutt.
@@ -29,7 +30,8 @@ Lead magnet "Pet Promise Reality Check" (free web tool → signed PDF contract) 
 - Laravel API + PostgreSQL + real-time WebSockets (Reverb) on EU hosting (Hetzner); Expo/React Native app (iOS + Android from one codebase).
 - Game engine verified by automated whole-day simulations (e.g. mutt hungry after exactly 12 h 30 min, per spec).
 - AI dog identity ("Pet DNA") with fal.ai image/video; webhooks cryptographically verified (child-safety by design).
-- CI on every change (183 backend + 74 mobile tests as of 2026-10-03), independent AI code review, one-click deploys.
+- CI on every change (183 backend + 74 mobile tests as of 2026-10-03; **621 backend + 425 mobile as of 2026-10-04**), independent AI code review, one-click deploys.
+- Scoring engine tested on edge cases that real families hit: daylight-saving days (25-hour day), school and sleep hours, a dog born mid-evening, parent pause, vet time, siblings joining later; the parent dashboard costs the same database work for 7 or 84 days of history.
 - Built by one founder + an AI engineering team with documented process (see BUILD_LOG).
 
 ## Traction
