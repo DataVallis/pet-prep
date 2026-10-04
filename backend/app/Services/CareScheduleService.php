@@ -11,6 +11,7 @@ use App\Services\Results\WaterStatus;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use DateTimeInterface;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 
 /**
@@ -139,23 +140,43 @@ class CareScheduleService
     private function configuredWindows(BreedConfig $config): array
     {
         $valid = [];
+        $invalid = 0;
         foreach ((array) $config->feed_windows as $window) {
-            $start = $window[0] ?? null;
-            $end = $window[1] ?? null;
+            $start = is_array($window) ? ($window[0] ?? null) : null;
+            $end = is_array($window) ? ($window[1] ?? null) : null;
             if (is_string($start) && is_string($end) && $this->isTime($start) && $this->isTime($end) && $start !== $end) {
                 $valid[] = [$start, $end];
+            } else {
+                $invalid++;
             }
         }
 
         if ($valid === []) {
-            Log::warning('CareScheduleService: breed has no valid feed windows, using the default', [
-                'breed_slug' => $config->breed_slug,
-            ]);
+            $this->warnOncePerDay($config, 'CareScheduleService: breed has no valid feed windows, using the default');
 
             return BreedConfig::DEFAULT_FEED_WINDOWS;
         }
 
+        if ($invalid > 0) {
+            $this->warnOncePerDay($config, 'CareScheduleService: breed has invalid feed windows, ignoring them', ['ignored' => $invalid]);
+        }
+
         return $valid;
+    }
+
+    /**
+     * This runs on every GET /api/child/pet and every feed: log a broken
+     * config at most once per breed per UTC day instead of flooding the log.
+     *
+     * @param  array<string, mixed>  $context
+     */
+    private function warnOncePerDay(BreedConfig $config, string $message, array $context = []): void
+    {
+        $key = 'care-schedule:invalid-feed-windows:'.$config->breed_slug.':'.now()->utc()->toDateString();
+
+        if (Cache::add($key, true, now()->utc()->endOfDay())) {
+            Log::warning($message, array_merge(['breed_slug' => $config->breed_slug], $context));
+        }
     }
 
     /**

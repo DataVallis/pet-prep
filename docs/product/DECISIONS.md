@@ -45,6 +45,7 @@
 |---|---|---|
 | 2026-10-04 | Ali naj hrana in voda res ne gresta, dokler kuža ni počiščen (spec §8 to piše za zaslon)? | Da (tako je zdaj zgrajeno); koraki in čiščenje vedno. |
 | 2026-10-04 | Razmik med vodo čez polnoč: šteje (zdaj) ali se ob polnoči ponastavi? | Šteje — preprosto in pošteno. |
+| 2026-10-04 | **Vrstni red pogodba ↔ rojstvo psa.** Spec §3: "PIN → pogodba → pes se rodi". Danes se pes ustvari že ob vnosu PIN-a (`born_at`, upadanje teče), akcije delujejo tudi brez podpisa, pogodba je ločen klic. Možnosti: **(a)** pes se ustvari ob PIN-u, a `born_at` / prvi `last_decay_at` (in dnevi za certifikat) začnejo teči šele ob podpisu — do takrat je zamrznjen; **(b)** vse akcije vrnejo 423 `contract_required`, dokler pogodba ni podpisana (upadanje bi brez (a) teklo naprej). | **(a) + (b) skupaj:** do podpisa je pes zamrznjen (brez upadanja, brez eskalacije, `born_at` = trenutek podpisa) in akcije vrnejo 423 `contract_required`; tako velja spec in otrok ne izgubi ur, če podpis odloži. Prekine ustvarjanje psa pri parjenju le minimalno (nova koda zaklepa + začetek ure ob podpisu). |
 | 2026-10-04 | Ali sme otrok pogodbo podpisati znova (npr. po novem psu po game overju)? Zdaj: ena na psa — nov pes = nova pogodba. | Ena na psa. |
 | 2026-10-03 | Tihe ure ob prestopu ure: 22:00–06:00 traja 9 h (oktober) oz. 7 h (marec) — po stenski uri. OK? | Da, po stenski uri (kot jo doživi družina). |
 | 2026-10-02 | Razmejitev brezplačno / plačljivo (BUSINESS_MODEL §7) in B7: enkratni nakup vs. naročnina. | Enkratni nakup 49,99 € + strežniški 7-dnevni preizkus. |

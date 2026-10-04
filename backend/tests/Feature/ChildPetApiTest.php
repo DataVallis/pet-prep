@@ -11,6 +11,7 @@ use App\Services\PetActivityService;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 use Laravel\Sanctum\Sanctum;
 
@@ -358,6 +359,43 @@ describe('POST /api/child/pet/feed', function () {
         $this->postJson('/api/child/pet/feed')->assertOk();
     });
 
+    it('falls back to the default windows and logs a broken config once per breed per day', function () {
+        BreedConfig::where('breed_slug', 'mutt')->update(['feed_windows' => json_encode([['25:00', '10:00']])]);
+        Log::spy();
+        cpChild(); // 08:00 local
+
+        $this->getJson('/api/child/pet')->assertOk()
+            ->assertJsonPath('feeding.windows', [['start' => '06:00', 'end' => '10:00'], ['start' => '17:00', 'end' => '21:00']]);
+        $this->postJson('/api/child/pet/feed')->assertOk();
+        $this->getJson('/api/child/pet')->assertOk();
+
+        Log::shouldHaveReceived('warning')
+            ->with('CareScheduleService: breed has no valid feed windows, using the default', ['breed_slug' => 'mutt'])
+            ->once();
+
+        cpAt('2026-10-05 06:00:00'); // next UTC day → one more warning
+        $this->getJson('/api/child/pet')->assertOk();
+        $this->getJson('/api/child/pet')->assertOk();
+
+        Log::shouldHaveReceived('warning')
+            ->with('CareScheduleService: breed has no valid feed windows, using the default', ['breed_slug' => 'mutt'])
+            ->twice();
+    });
+
+    it('ignores single invalid windows and logs that once per day', function () {
+        BreedConfig::where('breed_slug', 'mutt')->update(['feed_windows' => json_encode([['06:00', '10:00'], ['nonsense', '21:00']])]);
+        Log::spy();
+        cpChild();
+
+        $this->getJson('/api/child/pet')->assertOk()
+            ->assertJsonPath('feeding.windows', [['start' => '06:00', 'end' => '10:00']]);
+        $this->getJson('/api/child/pet')->assertOk();
+
+        Log::shouldHaveReceived('warning')
+            ->with('CareScheduleService: breed has invalid feed windows, ignoring them', ['breed_slug' => 'mutt', 'ignored' => 1])
+            ->once();
+    });
+
     it('reads windows from breed_configs, including one over midnight', function () {
         BreedConfig::where('breed_slug', 'mutt')->update(['feed_windows' => json_encode([['22:00', '02:00']])]);
         cpChild('2026-10-04 23:00:00'); // 01:00 local on 2026-10-05
@@ -603,6 +641,42 @@ describe('POST /api/child/pet/steps', function () {
         'missing source' => [['steps_today' => 10, 'recorded_at' => '2026-10-04T08:00:00+02:00'], 'source'],
         'bad date' => [['steps_today' => 10, 'source' => 'healthkit', 'recorded_at' => 'yesterday-ish'], 'recorded_at'],
         'missing date' => [['steps_today' => 10, 'source' => 'healthkit'], 'recorded_at'],
+    ]);
+
+    it('rejects recorded_at that is not ISO 8601 with an offset', function (string $recordedAt) {
+        cpChild();
+
+        $this->postJson('/api/child/pet/steps', ['steps_today' => 10, 'source' => 'healthkit', 'recorded_at' => $recordedAt])
+            ->assertStatus(422)
+            ->assertJsonValidationErrors('recorded_at');
+    })->with([
+        'now' => ['now'],
+        'yesterday' => ['yesterday'],
+        'no offset' => ['2026-10-04T08:00:00'],
+        'no offset, milliseconds' => ['2026-10-04T08:00:00.123'],
+        'date only' => ['2026-10-04'],
+        'space instead of T' => ['2026-10-04 08:00:00+02:00'],
+        'offset without colon' => ['2026-10-04T08:00:00+0200'],
+        'no seconds' => ['2026-10-04T08:00+02:00'],
+        'unix timestamp' => ['1791100800'],
+        'impossible date' => ['2026-02-30T08:00:00+02:00'],
+        'trailing text' => ['2026-10-04T08:00:00+02:00 tomorrow'],
+    ]);
+
+    it('accepts ISO 8601 with an offset, Z and fractional seconds', function (string $recordedAt) {
+        // 08:00 local = 06:00 UTC; the pet lived through a midnight.
+        cpChild('2026-10-04 06:00:00', ['last_step_reset_at' => '2026-10-03 22:00:00']);
+
+        $this->postJson('/api/child/pet/steps', ['steps_today' => 10, 'source' => 'healthkit', 'recorded_at' => $recordedAt])
+            ->assertOk()
+            ->assertJsonPath('status', 'accepted')
+            ->assertJsonPath('steps_today', 10);
+    })->with([
+        'offset' => ['2026-10-04T08:00:00+02:00'],
+        'Z' => ['2026-10-04T06:00:00Z'],
+        'milliseconds Z' => ['2026-10-04T06:00:00.123Z'],
+        'microseconds offset' => ['2026-10-04T07:59:59.123456+02:00'],
+        'negative offset' => ['2026-10-04T02:00:00-04:00'],
     ]);
 });
 

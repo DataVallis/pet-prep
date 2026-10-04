@@ -19,6 +19,9 @@ class SyncStepsRequest extends FormRequest
     /** Upper bound for one family-local day (well above any real walk). */
     public const MAX_STEPS_PER_DAY = 100000;
 
+    /** YYYY-MM-DDTHH:MM:SS, optional .fraction (1–6 digits), then Z or ±HH:MM. */
+    public const RECORDED_AT_REGEX = '/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,6})?(Z|[+-]\d{2}:\d{2})$/';
+
     public function authorize(): bool
     {
         return $this->user()?->can('useChildApi', Pet::class) ?? false;
@@ -32,8 +35,11 @@ class SyncStepsRequest extends FormRequest
         return [
             'steps_today' => ['required', 'integer', 'min:0', 'max:'.self::MAX_STEPS_PER_DAY],
             'source' => ['required', 'string', 'in:'.implode(',', self::SOURCES)],
-            // ISO 8601 with offset, e.g. 2026-10-04T15:30:00+02:00.
-            'recorded_at' => ['required', 'string', 'date'],
+            // Strict ISO 8601 with an explicit offset: the server must not guess
+            // the device's zone. Accepts 2026-10-04T15:30:00+02:00, …Z and
+            // fractional seconds (…15:30:00.123Z); rejects "now", "yesterday",
+            // date-only and offset-less strings.
+            'recorded_at' => ['required', 'string', 'regex:'.self::RECORDED_AT_REGEX, 'date'],
         ];
     }
 

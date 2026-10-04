@@ -206,6 +206,47 @@ describe('Filament BreedConfigResource', function () {
         expect($mutt->fresh()->feed_windows)->toBe(BreedConfig::DEFAULT_FEED_WINDOWS);
     });
 
+    it('requires at least one feeding window', function () {
+        $mutt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail();
+
+        Livewire::test(EditBreedConfig::class, ['record' => $mutt->getRouteKey()])
+            ->set('data.feed_windows', [])
+            ->call('save')
+            ->assertHasFormErrors(['feed_windows']);
+
+        expect($mutt->fresh()->feed_windows)->toBe(BreedConfig::DEFAULT_FEED_WINDOWS);
+    });
+
+    it('rejects overlapping feeding windows, also over midnight', function (array $windows) {
+        $mutt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail();
+
+        Livewire::test(EditBreedConfig::class, ['record' => $mutt->getRouteKey()])
+            ->set('data.feed_windows', $windows)
+            ->call('save')
+            ->assertHasFormErrors(['feed_windows']);
+
+        expect($mutt->fresh()->feed_windows)->toBe(BreedConfig::DEFAULT_FEED_WINDOWS);
+    })->with([
+        'plain overlap' => [['a' => ['start' => '06:00', 'end' => '10:00'], 'b' => ['start' => '09:00', 'end' => '12:00']]],
+        'contained' => [['a' => ['start' => '06:00', 'end' => '21:00'], 'b' => ['start' => '17:00', 'end' => '18:00']]],
+        'overnight overlaps morning' => [['a' => ['start' => '22:00', 'end' => '07:00'], 'b' => ['start' => '06:00', 'end' => '10:00']]],
+    ]);
+
+    it('accepts touching and overnight windows that do not overlap', function () {
+        $mutt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail();
+
+        Livewire::test(EditBreedConfig::class, ['record' => $mutt->getRouteKey()])
+            ->set('data.feed_windows', [
+                'a' => ['start' => '06:00', 'end' => '10:00'],
+                'b' => ['start' => '10:00', 'end' => '12:00'],
+                'c' => ['start' => '22:00', 'end' => '02:00'],
+            ])
+            ->call('save')
+            ->assertHasNoFormErrors();
+
+        expect($mutt->fresh()->feed_windows)->toBe([['06:00', '10:00'], ['10:00', '12:00'], ['22:00', '02:00']]);
+    });
+
     it('creates a breed with all tunables', function () {
         Livewire::test(CreateBreedConfig::class)
             ->fillForm([
