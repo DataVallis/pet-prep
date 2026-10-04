@@ -40,7 +40,7 @@ PetPrep/                         git: DataVallis/pet-prep
 │       └── utils/metrics.ts     colours, step formatting, virtual age, action disabling
 ├── scripts/                     generate-api-types.mjs, deploy/backup/restore-production*.sh
 ├── deployment/Caddyfile         TLS + reverse proxy (app, Reverb /app/*)
-├── .github/workflows/           deploy-production.yml (test → rsync → deploy on push to main)
+├── .github/workflows/           deploy-production.yml (test → rsync to /opt/petprep/incoming → deploy script on push to main)
 ├── docs/                        product, business, engineering docs (this folder)
 ├── HANDOFF.md                   current state log — update after every task
 └── CLAUDE.md                    agent operating manual
@@ -208,7 +208,7 @@ Mobile: `EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_REVERB_APP_KEY`, `EXPO_PUBLIC_REVERB
 
 ## 9. Production
 
-Deploy (`scripts/deploy-production.sh`, since M2-01): env preflight → build → postgres/redis → **`artisan down`** (maintenance file on the shared `app_storage` volume: HTTP 503, scheduler and queue workers pause) → migrate / seed / caches → restart containers → `queue:restart` → **`artisan up`** → health check. An EXIT trap runs `artisan up` if any step fails.
+Deploy (`scripts/deploy-production.sh`, since M2-01): env preflight (before any git/docker call) → record previous release (`repo/.deployed-sha`, tree snapshot in `/opt/petprep/releases/previous`) → **`artisan down`** on the old code (maintenance file on the shared `app_storage` volume: HTTP 503, scheduler and queue workers pause) → DB backup → **code switch** (CI uploads to `/opt/petprep/incoming`, the script rsyncs it into the bind-mounted `repo/`; manual: `git checkout`) → build → postgres/redis → migrate / seed / caches → recreate containers → `queue:restart` → **`artisan up`** (3 attempts) → health check. EXIT trap: failure **before** migrations succeeded → code reverted to the previous release, workers restarted, `artisan up`; failure **after** → code kept (new schema), caches cleared if needed, containers restarted, `artisan up`, loud error. Harness: `scripts/tests/deploy-production.test.sh` (CI job `deploy-script-tests`).
 
 See `docs/PRODUCTION_DEPLOYMENT.md`. Single Hetzner host, Docker Compose: Caddy → app (PHP 8.3) / reverb; queue (`default`: fal.ai); queue-broadcasts (`broadcasts`: PetUpdated → Reverb, M1-09); scheduler (`schedule:work`); postgres 18; redis. Live at `https://api.petprep.si`.
 

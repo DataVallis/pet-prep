@@ -96,7 +96,10 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
 ```text
 /opt/petprep/
 ├── .env                  # Production secrets (mode 600, deploy:deploy)
-├── repo/                 # Application codebase
+├── incoming/             # CI upload of the commit being deployed (staging, not mounted)
+├── releases/previous/    # Copy of repo/ before the last code switch (automatic revert)
+├── repo/                 # Live codebase, bind-mounted into every PHP container
+│   ├── .deployed-sha     # Commit currently deployed (written by deploy-production.sh)
 │   ├── backend/
 │   │   ├── compose.production.yaml
 │   │   └── ...
@@ -113,15 +116,16 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
 
 ## 4. Automated CI/CD (GitHub Actions)
 
-Every pull request and push to `main` runs the test jobs of `.github/workflows/deploy-production.yml` (backend Pest on PostgreSQL, mobile tsc + Jest). **Deployment runs only when the workflow is started manually** (Actions → CI & Deploy → Run workflow, branch `main`):
+Every pull request and push to `main` runs the test jobs of `.github/workflows/deploy-production.yml` (backend Pest on PostgreSQL, mobile tsc + Jest). **Pre-production phase (David, 2026-10-03): every push/merge to `main` deploys automatically** once all test jobs pass (also "Run workflow" on `main`); restore manual-only deploys before real users (DEPLOYMENT.md D2):
 
 1. **Test Job:** Runs Pest & PHPUnit test suites on PHP 8.3 with all required extensions.
 2. **Deploy Job:**
    - Targets the `production` GitHub Environment.
    - Prevents concurrent deployments via `concurrency: production`.
-   - Uses `rsync` over SSH to sync the exact commit tree to `/opt/petprep/repo`.
-   - Executes `/opt/petprep/scripts/deploy-production.sh <COMMIT_SHA>` on the server.
-   - Verifies health check (`/up`) returns HTTP 200.
+   - Needs `backend-tests`, `mobile-checks` and `deploy-script-tests` (shellcheck + `scripts/tests/deploy-production.test.sh`, stubbed docker/git/curl).
+   - Uses `rsync` over SSH to upload the exact commit tree to the staging dir `/opt/petprep/incoming` — **never directly into `repo/`**, because every PHP container bind-mounts `repo/backend` and would run the new code immediately.
+   - Executes `/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming <COMMIT_SHA>` on the server, which: checks the env (before any git/docker call) → records the previous release → `artisan down` on the old code → DB backup → syncs `incoming/` into `repo/` → build → migrate → caches → recreates containers → `queue:restart` → `artisan up` (3 attempts) → verifies `/up` returns HTTP 200.
+   - On failure **before** migrations succeeded the script reverts `repo/` to the previous release (from `releases/previous`) and leaves maintenance; on failure **after** migrations it keeps the new code (schema is new), restarts containers, leaves maintenance and fails loudly. Details: comment block in the script, DEPLOYMENT.md D10.
 
 ### Required GitHub Secrets in Repository Settings
 
@@ -143,9 +147,17 @@ To perform a manual deployment directly on the server:
 # Connect as deploy user
 ssh -i ~/.ssh/petprep_deploy_key deploy@138.199.172.97
 
-# Execute deployment script
-/opt/petprep/scripts/deploy-production.sh [COMMIT_SHA]
+# Re-deploy the tree that is already in repo/ (no code switch, no automatic revert)
+/opt/petprep/scripts/deploy-production.sh
+
+# Deploy the last CI upload again (same flow as CI, with automatic revert)
+/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming <COMMIT_SHA>
 ```
+
+If `repo/` is a git checkout, `deploy-production.sh <COMMIT_SHA>` checks the commit out inside the maintenance window instead (aborts if the commit is unknown) and reverts with `git checkout -f <previous HEAD>` on a pre-migration failure.
+
+If a deploy ends with "PRODUCTION IS STILL IN MAINTENANCE MODE", bring it up manually:
+`docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan up`.
 
 ---
 
@@ -169,12 +181,7 @@ ls -lh /opt/petprep/backups/
 ## 7. Rollback Procedure
 
 ### Code Rollback
-To rollback application code to a previous known-good commit:
-
-```bash
-ssh -i ~/.ssh/petprep_deploy_key deploy@138.199.172.97
-/opt/petprep/scripts/deploy-production.sh <PREVIOUS_COMMIT_SHA>
-```
+A failed deploy reverts the code by itself when the failure happens before migrations succeed. For a deliberate rollback to an older commit, re-run the workflow for that commit (GitHub → Actions → CI & Deploy → re-run the job of the known-good `main` commit), which uploads it to `incoming/` and deploys it with the normal flow. Only roll code back past a migration if that migration is backward compatible — otherwise restore the database too (below). `cat /opt/petprep/repo/.deployed-sha` shows what is live.
 
 ### Database Restore (Disaster Recovery)
 If a destructive migration occurred and database rollback is needed:

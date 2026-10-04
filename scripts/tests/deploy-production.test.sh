@@ -1,0 +1,282 @@
+#!/usr/bin/env bash
+# Harness for scripts/deploy-production.sh — no server, no Docker, no secrets.
+#
+# Every case builds a throw-away PETPREP_ROOT in a temp dir (repo/ = release "v1",
+# incoming/ = release "v2") and puts PATH shims in front of the real tools:
+#   docker  logs each call (+ which release is on disk at that moment) and fails on
+#           demand: FAIL_MATCH (ERE over the args), UP_FAILS (number of failing
+#           `artisan up` invocations, exec and run --rm count separately),
+#           DOWN_FAILS (same for `artisan down`).
+#   git     logs the call, then runs the real git (git-mode cases use a real temp repo).
+#   curl    prints CURL_STATUS (default 200).
+#   sleep   no-op.
+# rsync is the real one (required).
+#
+# Run: bash scripts/tests/deploy-production.test.sh
+set -Eeuo pipefail
+
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT="${HERE}/../deploy-production.sh"
+REAL_GIT="$(command -v git)"
+command -v rsync >/dev/null || { echo "rsync is required" >&2; exit 2; }
+
+TMP="$(mktemp -d)"
+trap 'rm -rf "$TMP"' EXIT
+SECRET="sentinel-secret-value-$$"
+
+PASS=0; FAIL=0; CASE=""
+ok()   { PASS=$((PASS + 1)); echo "    ok   - $1"; }
+bad()  { FAIL=$((FAIL + 1)); echo "    FAIL - $1"; }
+check() { local desc=$1; shift; if "$@"; then ok "$desc"; else bad "$desc"; fi; }
+
+# ---- shims -------------------------------------------------------------------------
+SHIMS="${TMP}/shims"; mkdir -p "$SHIMS"
+cat > "${SHIMS}/docker" <<'EOF'
+#!/usr/bin/env bash
+args="$*"
+code=$(cat "${PETPREP_ROOT}/repo/backend/app.txt" 2>/dev/null || echo "?")
+echo "docker ${args} [code=${code}]" >> "$CALL_LOG"
+bump() { local f="${PETPREP_ROOT}/.$1"; local n; n=$(cat "$f" 2>/dev/null || echo 0); n=$((n + 1)); echo "$n" > "$f"; echo "$n"; }
+if [[ "$args" == *"artisan up"* ]]; then
+    n=$(bump up_calls); [ "$n" -le "${UP_FAILS:-0}" ] && exit 1
+fi
+if [[ "$args" == *"artisan down"* ]]; then
+    n=$(bump down_calls); [ "$n" -le "${DOWN_FAILS:-0}" ] && exit 1
+fi
+if [ -n "${FAIL_MATCH:-}" ] && [[ "$args" =~ $FAIL_MATCH ]]; then exit 1; fi
+case "$args" in
+    *"ps -q --status running postgres"*) echo "c0ffee" ;;
+    *"exec -T app curl"*) printf '%s' "${CURL_STATUS:-200}" ;;
+esac
+exit 0
+EOF
+cat > "${SHIMS}/git" <<EOF
+#!/usr/bin/env bash
+echo "git \$* [code=\$(cat "\${PETPREP_ROOT}/repo/backend/app.txt" 2>/dev/null || echo ?)]" >> "\$CALL_LOG"
+exec "${REAL_GIT}" "\$@"
+EOF
+cat > "${SHIMS}/curl" <<'EOF'
+#!/usr/bin/env bash
+echo "curl $*" >> "$CALL_LOG"
+printf '%s' "${CURL_STATUS:-200}"
+EOF
+printf '#!/usr/bin/env bash\nexit 0\n' > "${SHIMS}/sleep"
+chmod +x "${SHIMS}"/*
+
+# ---- fixtures ----------------------------------------------------------------------
+write_tree() { # dir release
+    mkdir -p "$1/backend" "$1/scripts"
+    echo "services: {}" > "$1/backend/compose.production.yaml"
+    echo "$2" > "$1/backend/app.txt"
+    echo "only-in-$2" > "$1/backend/only-$2.txt"
+    printf '#!/usr/bin/env bash\necho "backup (%s)"\n' "$2" > "$1/scripts/backup-production-db.sh"
+}
+
+new_root() { # mode: dir | git
+    ROOT="${TMP}/${CASE}"; rm -rf "$ROOT"; mkdir -p "$ROOT/scripts"
+    cat > "$ROOT/.env" <<EOF
+APP_KEY=${SECRET}
+DB_PASSWORD=${SECRET}
+QUEUE_CONNECTION=redis
+BROADCAST_CONNECTION="reverb"
+EOF
+    printf '#!/usr/bin/env bash\necho "backup ran"\n' > "$ROOT/scripts/backup-production-db.sh"
+    chmod +x "$ROOT/scripts/backup-production-db.sh"
+    if [ "$1" = "git" ]; then
+        local r="$ROOT/repo"
+        write_tree "$r" v1
+        printf 'backend/.env\nbackend/vendor/\n.deployed-sha\n' > "$r/.gitignore"
+        "$REAL_GIT" -C "$r" init -q -b main
+        "$REAL_GIT" -C "$r" -c user.email=t@t -c user.name=t add -A
+        "$REAL_GIT" -C "$r" -c user.email=t@t -c user.name=t commit -qm v1
+        V1_SHA=$("$REAL_GIT" -C "$r" rev-parse HEAD)
+        rm "$r/backend/only-v1.txt"; write_tree "$r" v2
+        "$REAL_GIT" -C "$r" -c user.email=t@t -c user.name=t add -A
+        "$REAL_GIT" -C "$r" -c user.email=t@t -c user.name=t commit -qm v2
+        V2_SHA=$("$REAL_GIT" -C "$r" rev-parse HEAD)
+        "$REAL_GIT" -C "$r" checkout -q "$V1_SHA"
+    else
+        write_tree "$ROOT/repo" v1
+        echo "sha-v1" > "$ROOT/repo/.deployed-sha"
+        write_tree "$ROOT/incoming" v2
+    fi
+    mkdir -p "$ROOT/repo/backend/vendor"; echo keep > "$ROOT/repo/backend/vendor/autoload.php"
+    CALL_LOG="$ROOT/calls.log"; : > "$CALL_LOG"
+}
+
+# run_deploy [env assignments...] -- [script args...]
+run_deploy() {
+    local envs=()
+    while [ $# -gt 0 ] && [ "$1" != "--" ]; do envs+=("$1"); shift; done
+    shift
+    set +e
+    env PETPREP_ROOT="$ROOT" CALL_LOG="$CALL_LOG" PATH="${SHIMS}:${PATH}" DEPLOY_RETRY_SLEEP=0 \
+        ${envs[@]+"${envs[@]}"} bash "$SCRIPT" "$@" > "$ROOT/out.log" 2>&1
+    RC=$?
+    set -e
+}
+
+code_on_disk() { cat "$ROOT/repo/backend/app.txt"; }
+called()       { grep -qE -- "$1" "$CALL_LOG"; }
+not_called()   { ! grep -qE -- "$1" "$CALL_LOG"; }
+line_of()      { grep -nE -- "$1" "$CALL_LOG" | head -n1 | cut -d: -f1; }
+last_line_of() { grep -nE -- "$1" "$CALL_LOG" | tail -n1 | cut -d: -f1; }
+before()       { local a b; a=$(line_of "$1"); b=$(line_of "$2"); [ -n "$a" ] && [ -n "$b" ] && [ "$a" -lt "$b" ]; }
+after_last()   { local a b; a=$(last_line_of "$1"); b=$(line_of "$2"); [ -n "$a" ] && [ -n "$b" ] && [ "$a" -gt "$b" ]; }
+out_has()      { grep -qF -- "$1" "$ROOT/out.log"; }
+not_out()      { ! grep -qF -- "$1" "$ROOT/out.log"; }
+no_secret()    { ! grep -qF -- "$SECRET" "$ROOT/out.log"; }
+rc_is()        { [ "$RC" -eq "$1" ]; }
+rc_nonzero()   { [ "$RC" -ne 0 ]; }
+sha_is()       { [ "$(cat "$ROOT/repo/.deployed-sha")" = "$1" ]; }
+vendor_kept()  { [ -f "$ROOT/repo/backend/vendor/autoload.php" ]; }
+eq()           { [ "$1" = "$2" ]; }
+dump()         { echo "    --- calls"; sed 's/^/      /' "$CALL_LOG"; echo "    --- output"; sed 's/^/      /' "$ROOT/out.log"; }
+
+start() { CASE=$1; echo "case: $2"; }
+finish() { if [ "$FAIL" -gt "${FAIL_BEFORE:-0}" ]; then dump; fi; FAIL_BEFORE=$FAIL; }
+
+# ---- cases -------------------------------------------------------------------------
+start success "success (--from)"
+new_root dir; run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "artisan down runs on the OLD code" called 'exec -T app php artisan down --retry=15 \[code=v1\]'
+check "maintenance entered before the build" before 'artisan down' 'build app'
+check "migrate runs on the NEW code" called 'artisan migrate --force \[code=v2\]'
+check "up -d of app services before artisan up" before 'up -d --remove-orphans app reverb' 'artisan up'
+check "queue:restart before artisan up" before 'queue:restart' 'artisan up'
+check "new code on disk" eq "$(code_on_disk)" v2
+check "stale file of v1 removed" test ! -e "$ROOT/repo/backend/only-v1.txt"
+check ".deployed-sha = sha-v2" sha_is sha-v2
+check "vendor/ preserved" vendor_kept
+check "backend/.env installed (600)" test "$(stat -c %a "$ROOT/repo/backend/.env")" = 600
+check "previous release snapshot = v1" test "$(cat "$ROOT/releases/previous/backend/app.txt")" = v1
+check "no env secret in output" no_secret
+finish
+
+start preflight "preflight fail (QUEUE_CONNECTION=sync) → no docker/git call"
+new_root dir; sed -i 's/^QUEUE_CONNECTION=.*/QUEUE_CONNECTION=sync/' "$ROOT/.env"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "no docker/git/curl call at all" test ! -s "$CALL_LOG"
+check "explains the key" out_has "QUEUE_CONNECTION must be 'redis'"
+check "code untouched" eq "$(code_on_disk)" v1
+check "no env secret in output" no_secret
+finish
+
+start preflight_rq "preflight fail (REDIS_QUEUE=fal) → no docker/git call"
+new_root dir; echo "REDIS_QUEUE=fal" >> "$ROOT/.env"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "no docker/git/curl call at all" test ! -s "$CALL_LOG"
+check "no env secret in output" no_secret
+finish
+
+start build_fail "build fails → code reverted to PREV, app up"
+new_root dir; run_deploy FAIL_MATCH='build app' -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "old code back on disk" eq "$(code_on_disk)" v1
+check "v2-only file removed again" test ! -e "$ROOT/repo/backend/only-v2.txt"
+check ".deployed-sha back to sha-v1" sha_is sha-v1
+check "migrate never ran" not_called 'migrate'
+check "workers restarted on the old code" called 'restart reverb queue queue-broadcasts scheduler \[code=v1\]'
+check "artisan up after revert (old code)" called 'artisan up \[code=v1\]'
+check "vendor/ preserved" vendor_kept
+check "no env secret in output" no_secret
+finish
+
+start migrate_fail "migrate fails → code reverted, app up"
+new_root dir; run_deploy FAIL_MATCH='migrate --force' -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "migrate attempted on v2" called 'migrate --force \[code=v2\]'
+check "old code back on disk" eq "$(code_on_disk)" v1
+check "caches not rebuilt (old caches still valid)" not_called 'config:cache'
+check "artisan up after revert (old code)" called 'artisan up \[code=v1\]'
+check "says it reverted" out_has "Code reverted to sha-v1"
+finish
+
+start post_migrate "failure after migrate (config:cache) → NOT reverted, up, exit != 0"
+new_root dir; run_deploy FAIL_MATCH='config:cache' -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "new code stays on disk" eq "$(code_on_disk)" v2
+check ".deployed-sha = sha-v2" sha_is sha-v2
+check "stale caches cleared" called 'artisan config:clear'
+check "containers started on new code" called 'up -d --remove-orphans app reverb queue queue-broadcasts scheduler caddy \[code=v2\]'
+check "artisan up (new code)" called 'artisan up \[code=v2\]'
+check "loud not-reverted message" out_has "code is NOT reverted"
+finish
+
+start health_fail "health check fails → NOT reverted, exit != 0"
+new_root dir; run_deploy CURL_STATUS=502 -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "new code stays on disk" eq "$(code_on_disk)" v2
+check "app left maintenance" called 'artisan up \[code=v2\]'
+check "reports status" out_has "Health check failed with status 502"
+finish
+
+start up_once "artisan up fails once, then succeeds"
+new_root dir; run_deploy UP_FAILS=2 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "attempt 1 warned" out_has "artisan up failed (attempt 1/3)"
+check "attempt 2 started" out_has "attempt 2/3"
+check "no loud maintenance error" not_out "STILL IN MAINTENANCE"
+finish
+
+start up_always "artisan up always fails → loud error, exit != 0"
+new_root dir; run_deploy UP_FAILS=999 -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "loud maintenance error" out_has "PRODUCTION IS STILL IN MAINTENANCE MODE"
+check "manual command printed" out_has "exec -T app php artisan up"
+check "exactly 6 up invocations (3 attempts x exec+run, no re-try in trap)" test "$(grep -c 'artisan up' "$CALL_LOG")" -eq 6
+check "new code kept (schema migrated)" eq "$(code_on_disk)" v2
+finish
+
+start first_deploy "artisan down impossible (fresh server) → warn, continue"
+new_root dir; run_deploy DOWN_FAILS=2 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "warning printed" out_has "could not enter maintenance mode"
+check "no artisan up (never went down)" not_called 'artisan up'
+finish
+
+start backup_fail "backup fails while postgres runs → abort before code switch"
+new_root dir; printf '#!/usr/bin/env bash\nexit 3\n' > "$ROOT/scripts/backup-production-db.sh"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "code never switched" eq "$(code_on_disk)" v1
+check "no build" not_called 'build app'
+check "artisan up" called 'artisan up \[code=v1\]'
+finish
+
+start git_success "git mode: success"
+new_root git; run_deploy -- "$V2_SHA"
+check "exit 0" rc_is 0
+check "down before checkout" before 'artisan down' "checkout -f ${V2_SHA}"
+check "new code on disk" eq "$(code_on_disk)" v2
+check ".deployed-sha = v2 sha" sha_is "$V2_SHA"
+finish
+
+start git_build_fail "git mode: build fails → checkout PREV_SHA, app up"
+new_root git; run_deploy FAIL_MATCH='build app' -- "$V2_SHA"
+check "exit != 0" rc_nonzero
+check "HEAD back at PREV_SHA" eq "$("$REAL_GIT" -C "$ROOT/repo" rev-parse HEAD)" "$V1_SHA"
+check "old code on disk" eq "$(code_on_disk)" v1
+check "artisan up (old code)" called 'artisan up \[code=v1\]'
+finish
+
+start git_unknown "git mode: unknown SHA → fails before maintenance"
+new_root git; run_deploy -- deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
+check "exit != 0" rc_nonzero
+check "no docker call" not_called '^docker'
+finish
+
+start idempotent "re-running the same deploy is a no-op success"
+new_root dir; run_deploy -- --from "$ROOT/incoming" sha-v2
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "second run exit 0" rc_is 0
+check "previous release recorded as sha-v2" out_has "Previous release: sha-v2"
+check "code v2" eq "$(code_on_disk)" v2
+finish
+
+echo
+echo "passed: ${PASS}, failed: ${FAIL}"
+[ "$FAIL" -eq 0 ]
