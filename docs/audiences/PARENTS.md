@@ -1,6 +1,6 @@
 # PetPrep za starše
 
-> **Stanje na dan 3. 10. 2026:** aplikacija je v razvoju (zaprta testna faza še ni začela). Spodaj je opisano, kako PetPrep deluje po specifikaciji; kar še ni zgrajeno, je označeno *načrt*.
+> **Stanje na dan 4. 10. 2026:** aplikacija je v razvoju (zaprta testna faza še ni začela). Spodaj je opisano, kako PetPrep deluje po specifikaciji; kar še ni zgrajeno, je označeno *načrt*.
 
 ## V enem stavku
 Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu menja vodo, čisti za njim in z njim **zares hodi**. Vi pa v živo vidite, ali to res počne.
@@ -12,16 +12,16 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 ## Kako poteka
 1. **Vi** si naložite aplikacijo in na nadzorni plošči tapnete **"Dodaj otroka"**. Dobite **6-mestno kodo PIN** (npr. 734 912) z odštevanjem — velja 15 minut; če poteče, tapnete "Nova koda". Ko otrok kodo vnese, aplikacija sama potrdi "Otrok je povezan!". *(načrt: vnos imena in starosti otroka)*
 2. **Otrok** na svojem telefonu vtipka PIN. Otrok **ne potrebuje e-pošte** in ne daje osebnih podatkov. *(načrt: danes testni otroški račun še uporablja e-pošto)*
-3. Otrok s prstom podpiše **Pogodbo o odgovornosti** in pes se "rodi".
+3. Otrok s prstom podpiše **Pogodbo o odgovornosti** in pes se "rodi". Podpis se shrani enkrat na psa (s časom podpisa) in se ne pošilja nikomur drugemu; v časovnici ga vidite kot "pogodba podpisana". *(kmalu v aplikaciji)*
 4. **12 tednov** (1 teden = 1 mesec pasjega življenja) otrok skrbi za psa. Na koncu: **Certifikat odgovornosti**. *(načrt)*
 
 ## Kaj mora otrok početi (mešanček)
 | Skrb | Kako pogosto | Kaj se zgodi, če pozabi |
 |---|---|---|
-| Hrana | zjutraj in zvečer | pes je lačen po ~12,5 urah |
-| Voda | 3× na dan | pes je žejen po ~10 urah |
+| Hrana | zjutraj (6–10) in zvečer (17–21) po vašem času, **enkrat v vsakem oknu** — hranjenje "na zalogo" ni mogoče *(kmalu v aplikaciji; strežnik je pripravljen)* | pes je lačen po ~12,5 urah |
+| Voda | 3× na dan, vsaj 3 ure narazen *(kmalu v aplikaciji)* | pes je žejen po ~10 urah |
 | Sprehod (vsak dan) | 4.000 korakov na dan (pravi koraki s telefona) — energija = današnji koraki / cilj, vsako polnoč (po vašem času) se začne znova pri 0 % (= "danes še ni sprehoda", ne zanemarjanje) *(načrt: povezava z Apple Zdravje / Health Connect)* | pes je utrujen; dan brez enega samega koraka → naslednje jutro zboli |
-| Čiščenje | ko pes "naredi nered" — naključno **1× na dan** (Border Collie 2×), **nikoli med tihimi urami** | higiena pade na 0 % |
+| Čiščenje | ko pes "naredi nered" — naključno **1× na dan** (Border Collie 2×), **nikoli med tihimi urami**; dokler ni počiščeno, hrane in vode ni | higiena pade na 0 % |
 
 Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), potrebuje 10.000 korakov in naredi nered 2× na dan.
 

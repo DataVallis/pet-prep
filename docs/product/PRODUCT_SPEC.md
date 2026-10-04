@@ -50,6 +50,13 @@
 - **(D)** Spec omenja tudi "5.000 korakov" (MVP.docx) — veljavno je 4.000 / 10.000 iz MAIN dokumenta.
 - Vse številke iz tabele (hitrosti, cilji korakov, število dogodkov, okna hranjenja 06:00–10:00 in 17:00–21:00, voda 3× / dan z razmikom ≥ 3 h) so v tabeli `breed_configs` in jih admin spreminja v Filamentu — ne v kodi (M1-06).
 
+**Pojasnila implementacije (M1-07 — 4. 10. 2026, otroški API):**
+- **Hrana:** samo znotraj okna pasme po lokalnem času družine; okno vključuje začetek in ne konca (06:00 da, 10:00 ne). **Eno hranjenje na okno** (2 okni = 2× / dan). Izven okna ali drugič v istem oknu strežnik zavrne in pove začetek naslednjega okna. Ob prestopu ure okna sledijo stenski uri (06:00 je poleti 04:00 UTC, pozimi 05:00 UTC).
+- **Voda:** največ `water_times_per_day` (3) na lokalni dan, med dvema najmanj `water_min_gap_minutes` (180) **realnih** minut, tudi čez polnoč. Ko je dnevna meja dosežena, je naslednja voda ob lokalni polnoči (oz. kasneje, če razmik še ni potekel). *(Claudova izbira, čaka Davida — DECISIONS 4. 10.)*
+- **Najprej čiščenje:** dokler higiena kaže 0 %, hrana in voda nista mogoči (§8); koraki in čiščenje vedno. *(Claudova izbira po §8, čaka Davida.)*
+- **Zaklep:** med hard stopom, boleznijo ali po game overju strežnik zavrne vsako otroško akcijo (tudi pogodbo) z razlogom; če velja več razlogov hkrati, se pokaže prvi od: game over › neaktiven › hard stop › bolezen.
+- **Pogodba:** podpis enkrat na psa (ponoven podpis se zavrne, prvi ostane); čas podpisa je čas strežnika.
+
 **Pojasnila implementacije (M1-04, M1-05 — 3. 10. 2026):**
 - **Gibanje = dnevni sprehod (David, 3. 10. 2026):** energija ni urna metrika zanemarjanja. Za energijo ni ure "0 % > 1 h" (alarm faze 3), ne 6-urne bolezni ne 24-urnega game overja. Opomnika faze 1 / 2 zaradi nizke energije sta le izven tihih ur. Pravilo dneva — glej §7 "Dnevni sprehod".
 - **Gibanje:** telefon pošilja *skupno* število današnjih korakov; šteje največja prejeta vrednost (ponovljen ali manjši sync ne spremeni ničesar). Energija se s časom ne zmanjšuje — samo ob lokalni polnoči pade na 0 % (koraki → 0). Sync korakov energije nikoli ne zniža, zato ima novorojen pes 100 % do prve polnoči.

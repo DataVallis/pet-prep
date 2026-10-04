@@ -159,18 +159,59 @@ flowchart LR
   R --> RST["Steps → 0, energy → 0 %<br/>(= today's walk not done yet, not neglect)"]
 ```
 
-## 5. Child actions: steps and cleaning (service layer built, endpoints M1-07)
+## 5. Child actions (M1-07: `/api/child/pet/*`, `/api/child/contract`)
+
+### 5a. Feed / water / clean / contract
 
 ```mermaid
 sequenceDiagram
   autonumber
   actor Child
   participant App as Child app
-  participant API as Child API (M1-07, planned)
+  participant API as ChildPetController
+  participant S as PetActivityService
+  participant C as CareScheduleService
+  participant DB as PostgreSQL
+  Child->>App: taps Feed (or Water / Clean / signs contract)
+  App->>API: POST /api/child/pet/feed (Bearer, child token)
+  API->>API: ChildPetRequest → PetPolicy (child only, else 403)<br/>currentPet() (none → 404 no_pet)
+  API->>S: feed(pet)
+  S->>DB: BEGIN · SELECT pet FOR UPDATE
+  S->>S: illness over? → fresh start (recoverFromIllnessIfDue)
+  alt game over / inactive / hard stop / ill
+    S-->>API: LOCKED + reason → 423 {reason, locked_until, state}
+  else
+    S->>S: catch up decay since last tick (PetDecayService::catchUpLocked)
+    alt hygiene shows 0 %
+      S-->>API: REFUSED needs_cleaning → 422
+    else
+      S->>C: feeding(pet, breed, now) — windows in family tz,<br/>last fed_pet row in activities_log
+      alt outside window / already fed in this window
+        S-->>API: REFUSED + next window start → 422 {reason, next_allowed_at}
+      else
+        S->>DB: hunger 100 %, hunger_zero_since null, pet_state<br/>fed_pet row (value = hunger before)
+        S-->>API: ACCEPTED → 200 {status, state}
+      end
+    end
+  end
+  S->>DB: COMMIT
+  S-->>App: one PetUpdated after commit ("fed_pet",<br/>or "metric_changed" if only the catch-up changed what shows)
+  Note over S,C: Water: same flow, CareScheduleService::water —<br/>water_times_per_day per local day, ≥ water_min_gap_minutes real minutes<br/>since the last refill (also across midnight) → thirst 100 %, watered_pet row
+  Note over S,DB: Clean: settles due hygiene events, hygiene 100 %, cleaned_poop row (no window).<br/>Contract: once per pet → pet_contracts row + signed_contract row → 201; again → 409
+```
+
+### 5b. Step sync
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Child
+  participant App as Child app
+  participant API as ChildPetController
   participant S as PetActivityService
   participant DB as PostgreSQL
   Child->>App: walks with the phone
-  App-->>API: POST steps {steps_today, recorded_at} (planned)
+  App->>API: POST /api/child/pet/steps {steps_today, source, recorded_at}
   API->>S: recordSteps(pet, steps_today, recorded_at)
   S->>DB: BEGIN · SELECT pet FOR UPDATE
   alt hard stop / ill / game over
@@ -181,8 +222,8 @@ sequenceDiagram
     S->>DB: steps, energy = min(100, steps/goal)<br/>walked_pet row only when the goal is first reached
     S-->>API: ACCEPTED / CAPPED / REJECTED / STALE
   end
+  API-->>App: 200 {status, accepted_steps, steps_today, energy_level, state} (423 when locked)
   S-->>App: PetUpdated "walked_pet" after commit (Reverb)
-  Note over Child,DB: Cleaning: clean(pet) settles due hygiene events,<br/>hygiene → 100 %, cleaned_poop row, PetUpdated "cleaned_poop"
 ```
 
 ## 6. Data model (core)
@@ -196,6 +237,7 @@ erDiagram
   PETS ||--o{ PET_MEDIA_JOBS : "fal.ai requests"
   PETS ||--o{ PET_HYGIENE_EVENTS : "random messes"
   PETS ||--o{ PET_DAILY_WALKS : "closed days"
+  PETS ||--o| PET_CONTRACTS : "signed once"
   BREED_CONFIGS ||--o{ PETS : "tunables by breed_slug"
   USERS {
     bigint id
@@ -247,6 +289,13 @@ erDiagram
     bool birth_day
     timestamp illness_due_at
     timestamp illness_started_at
+  }
+  PET_CONTRACTS {
+    bigint pet_id "unique"
+    bigint user_id "the child"
+    string signature_format "svg_path or png"
+    text signature
+    timestamp signed_at "server time"
   }
   PET_MEDIA_JOBS {
     string request_id

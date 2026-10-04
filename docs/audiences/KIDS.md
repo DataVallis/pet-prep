@@ -14,10 +14,10 @@ Si želiš pravega psa? Najprej pokaži, da zmoreš! V PetPrep dobiš svojega ku
 Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova prijavljati.
 
 ## Kaj kuža potrebuje
-- 🍖 **Hrano** — zjutraj in zvečer.
-- 💧 **Vodo** — trikrat na dan.
+- 🍖 **Hrano** — zjutraj (med 6. in 10. uro) in zvečer (med 17. in 21. uro), enkrat vsakič. Ob drugih urah kuža ni lačen — aplikacija ti pove, kdaj bo spet čas. *(kmalu)*
+- 💧 **Vodo** — trikrat na dan, vsaj 3 ure narazen. *(kmalu)*
 - 👣 **Sprehod** — **vsak dan** pojdi ven in hodi s telefonom v žepu. Vsak tvoj korak šteje! Ob polnoči se začne nov dan in kuža spet čaka na sprehod. Če en dan sploh ne greš z njim ven, naslednje jutro zboli. *(kmalu)*
-- 🧹 **Čiščenje** — kuža enkrat ali dvakrat na dan naredi nered (nikoli, ko si v šoli ali spiš). Pobriši ga s prstom!
+- 🧹 **Čiščenje** — kuža enkrat ali dvakrat na dan naredi nered (nikoli, ko si v šoli ali spiš). Pobriši ga s prstom! Dokler ni čisto, mu ne moreš dati hrane ne vode.
 
 Na desni strani zaslona vidiš štiri stolpce. **Zelena** = kuža je vesel. **Rumena** = pazi. **Rdeča** = kuža te zelo potrebuje!
 
