@@ -4,7 +4,35 @@
 
 import type { ChildPetState } from '@/api/client';
 import type { FamilyChild, FamilyPet } from '@/modules/family/family';
-import type { Pet } from '@/types';
+import type { Pet, PetUpdatedBroadcast } from '@/types';
+
+/** `pet.updated` payload for pet 7 (UTC instants, like the backend's broadcast). */
+export function makeBroadcast(overrides: Partial<PetUpdatedBroadcast> = {}): PetUpdatedBroadcast {
+  return {
+    pet_id: 7,
+    breed_type: 'mutt',
+    hunger_level: 55,
+    thirst_level: 45,
+    energy_level: 30,
+    hygiene_level: 80,
+    is_active: true,
+    pet_state: 'idle',
+    escalation_level: 0,
+    is_ill: false,
+    illness_until: null,
+    is_game_over: false,
+    is_hard_stopped: false,
+    awaiting_contract: false,
+    born_at: '2026-10-04T09:00:00+00:00',
+    virtual_age_months: 0,
+    current_video_url: null,
+    reference_image_url: null,
+    event_type: 'metric_changed',
+    updated_at: '2026-10-04T10:00:05+00:00',
+    emitted_at: '2026-10-04T10:00:05.250+00:00',
+    ...overrides,
+  };
+}
 
 export function makePet(overrides: Partial<Pet> = {}): Pet {
   return {
@@ -82,6 +110,57 @@ export function makeChildState(
     steps: { steps_today: 0, my_steps_today: 0, goal: 5000, energy_level: 100 },
     contract: { signed: true, signed_at: '2026-10-04T09:00:00+00:00' },
   };
+}
+
+type RawState = ChildPetState;
+
+export interface LiveStateOverrides {
+  pet?: Partial<RawState['pet']>;
+  lock?: Partial<RawState['lock']>;
+  feeding?: Partial<Record<keyof RawState['feeding'], unknown>>;
+  water?: Partial<Record<keyof RawState['water'], unknown>>;
+  steps?: Partial<RawState['steps']>;
+  timezone?: string;
+  server_time?: string;
+}
+
+/**
+ * A realistic `GET /api/child/pet` body as the backend sends it (booleans and numbers,
+ * not the loose strings `schema.ts` declares): Ljubljana family, 2026-10-04 12:00
+ * local, mutt windows 06–10 / 17–21, fed this morning, water 1 of 3 used.
+ */
+export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
+  const base = makeChildState({ hunger_level: 60, thirst_level: 50, energy_level: 30, hygiene_level: 80, ...o.pet });
+  const raw = {
+    ...base,
+    lock: { ...base.lock, ...o.lock },
+    timezone: o.timezone ?? 'Europe/Ljubljana',
+    server_time: o.server_time ?? '2026-10-04T12:00:00+02:00',
+    feeding: {
+      windows: [
+        { start: '06:00', end: '10:00' },
+        { start: '17:00', end: '21:00' },
+      ],
+      current_window: null,
+      fed_in_current_window: false,
+      can_feed: false,
+      next_feed_window: { start: '2026-10-04T17:00:00+02:00', end: '2026-10-04T21:00:00+02:00' },
+      last_fed_at: '2026-10-04T07:10:00+02:00',
+      ...o.feeding,
+    },
+    water: {
+      times_per_day: 3,
+      min_gap_minutes: 180,
+      used_today: 1,
+      remaining_today: 2,
+      last_watered_at: '2026-10-04T08:00:00+02:00',
+      can_water: true,
+      next_allowed_at: null,
+      ...o.water,
+    },
+    steps: { steps_today: 1250, my_steps_today: 1250, goal: 4000, energy_level: 30, ...o.steps },
+  };
+  return raw as unknown as ChildPetState;
 }
 
 /** A child of `family.children` in `GET /api/parent/dashboard` (M2-01 / M2-02). */

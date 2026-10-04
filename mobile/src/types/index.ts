@@ -56,10 +56,11 @@ export interface Pet {
   illness_until: string | null;
   escalation_level: number;
   is_game_over: boolean;
+  /** Parent's pause (raw model column; M1-16 derives the lock from it on restore). */
+  is_hard_stopped?: boolean;
   certificate_eligible: boolean;
 }
 
-/** Pet data as received from WebSocket broadcast (pet.updated channel). */
 /**
  * `pet.updated` on `private-pet.{id}` (backend PetUpdated::payloadFor,
  * ARCHITECTURE §4). Pet state only — no child PII, no user id (M1-08).

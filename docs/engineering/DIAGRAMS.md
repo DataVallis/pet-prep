@@ -328,6 +328,44 @@ sequenceDiagram
   S-->>App: PetUpdated "walked_pet" after commit (Reverb)
 ```
 
+### 5c. Child app: action ↔ cache ↔ Reverb (M1-13 / M1-14 / M1-15 / M1-16)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Child
+  participant HUD as ChildHudScreen
+  participant Q as TanStack cache ['child','pet']
+  participant API as Laravel API
+  participant Rev as Reverb (private-pet.{id})
+  participant Store as appStore (lock / contract)
+
+  HUD->>API: GET /api/child/pet (useChildPet)
+  API-->>Q: state → normalizeChildState (server_time)
+  Note over HUD,Rev: wsStatus ≠ connected (not subscribed yet / dropped / 403)<br/>→ refetch every 10 s; connected → no polling
+  Child->>HUD: taps Hrani (enabled only if feeding.can_feed)
+  HUD->>Q: cancel in-flight GET · optimistic hunger 100 %
+  HUD->>API: POST /api/child/pet/feed
+  alt 200 accepted / unchanged
+    API-->>Q: replace with response.state · toast "Njam! Kuža je sit."
+  else 422 refused (outside_feed_window, water_too_soon, needs_cleaning …)
+    API-->>Q: replace with error.state (rollback) · toast "Kuža bo lačen spet ob 17:00."<br/>(next_allowed_at in state.timezone)
+  else 423 locked (hard_stopped / ill / game_over / inactive / contract_required)
+    API-->>Q: replace with error.state
+  else offline / 5xx / 429 (no state)
+    HUD->>Q: restore previous view · toast "Ni povezave …"
+  end
+  Rev-->>HUD: .pet.updated {…, emitted_at}
+  HUD->>Q: applyBroadcast — drop if emitted_at < last emitted / snapshot;<br/>else metrics + lock flags; non-tick or lock change → refetch GET
+  Q-->>Store: lockStateFromView → setLockState(hard_stop | illness | game_over | inactive, until, tz)<br/>awaiting_contract → setAwaitingContract(true)
+  Store-->>HUD: AppNavigator: LockedScreen over the HUD (unlocks live) · ContractScreen instead of the HUD
+  Note over HUD,Q: timer at the earliest of next window start, current window end,<br/>water next_allowed_at, next family midnight → refetch GET (also while live)
+  loop on mount (permission granted), on foreground, every 5 min, on walk overlay close
+    HUD->>API: POST /api/child/pet/steps {steps_today, source: pedometer, recorded_at ±HH:MM}<br/>(iOS: CoreMotion since the FAMILY midnight · Android: live counter per child, family day) — only if > my_steps_today of that family day
+    API-->>Q: replace with response.state (any status; 423 too)
+  end
+```
+
 ## 6. Data model (core)
 
 Family model (M2-01, ADR-012): `families` own pets and quiet hours; `family_user` puts parents and children in a family; `pet_caretakers` links children to pets (shared pet = several rows). `users.parent_id` and `pets.user_id` are deprecated mirrors.

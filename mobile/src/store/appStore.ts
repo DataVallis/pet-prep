@@ -1,6 +1,8 @@
 /**
- * Global application state using Zustand.
- * Manages: pairing status, WebSocket connection state, current pet data.
+ * Global application state using Zustand — session and UI only.
+ * Manages: session (token, user, the session pet used for routing), WebSocket status,
+ * lock overlay, overlay visibility. The child's live pet state (metrics, windows,
+ * steps) is server state in TanStack Query (`useChildPet`, M1-13), not here.
  */
 
 import { create } from 'zustand';
@@ -18,7 +20,15 @@ export type PairingStatus = 'unpaired' | 'pairing' | 'paired' | 'error';
 
 export type WebSocketStatus = 'disconnected' | 'connecting' | 'connected' | 'reconnecting';
 
-export type LockState = 'none' | 'hard_stop' | 'illness' | 'game_over';
+export type LockState = 'none' | 'hard_stop' | 'illness' | 'game_over' | 'inactive';
+
+/** Details for the lock overlay (e.g. "do 18:30" at the vet). */
+export interface LockDetails {
+  /** End of the lock (illness), ISO; null when open-ended. */
+  until: string | null;
+  /** Family IANA timezone for showing `until`. */
+  timezone: string | null;
+}
 
 /**
  * App launch state (M1-12): `restoring` while the saved token is checked,
@@ -45,11 +55,26 @@ export function petWithContractFlag(pet: Pet | null, awaitingContract?: boolean 
   return { ...pet, awaiting_contract: awaitingContract };
 }
 
-/** Lock state that can be derived from a pet snapshot (hard stop isn't on the pet yet — M1-16). */
+/**
+ * Lock state from a raw pet snapshot (login / session restore, M1-16), in the server's
+ * priority: game over › inactive › hard stop › illness. The HUD replaces it with the
+ * per-child lock from `GET /api/child/pet` as soon as that arrives.
+ */
 export function lockStateFromPet(pet: Pet | null, now: number = Date.now()): LockState {
   if (!pet) return 'none';
   if (pet.is_game_over) return 'game_over';
+  if (pet.is_active === false) return 'inactive';
+  if (pet.is_hard_stopped === true) return 'hard_stop';
   if (pet.illness_until && Date.parse(pet.illness_until) > now) return 'illness';
+  return 'none';
+}
+
+/** Same priority for a `PetUpdated` broadcast (parent session pet). */
+export function lockStateFromBroadcast(broadcast: PetUpdatedBroadcast): LockState {
+  if (broadcast.is_game_over) return 'game_over';
+  if (!broadcast.is_active) return 'inactive';
+  if (broadcast.is_hard_stopped) return 'hard_stop';
+  if (broadcast.is_ill) return 'illness';
   return 'none';
 }
 
@@ -83,6 +108,15 @@ interface AppStore {
   // Pet data
   pet: Pet | null;
   setPet: (pet: Pet | null) => void;
+  /**
+   * Route the child to the contract step (true) — the server's per-child state says
+   * this child must sign (`awaiting_contract` / 423 `contract_required`).
+   */
+  setAwaitingContract: (awaiting: boolean) => void;
+  /**
+   * Parent dashboard only: map a broadcast onto the session pet. The child HUD writes
+   * broadcasts into the TanStack cache instead (`applyBroadcastToCache`).
+   */
   updatePetFromBroadcast: (broadcast: PetUpdatedBroadcast) => void;
 
   // WebSocket
@@ -91,7 +125,8 @@ interface AppStore {
 
   // Lock state (hard stop, illness, game over)
   lockState: LockState;
-  setLockState: (state: LockState) => void;
+  lockDetails: LockDetails;
+  setLockState: (state: LockState, details?: LockDetails) => void;
 
   // UI state
   isWalkModalVisible: boolean;
@@ -122,6 +157,7 @@ export const useAppStore = create<AppStore>((set) => ({
       pairingStatus: sessionPet ? 'paired' : 'unpaired',
       pairingError: null,
       lockState: lockStateFromPet(sessionPet),
+      lockDetails: { until: sessionPet?.illness_until ?? null, timezone: null },
       bootStatus: 'ready',
     });
   },
@@ -133,6 +169,11 @@ export const useAppStore = create<AppStore>((set) => ({
   // Pet data
   pet: null,
   setPet: (pet) => set({ pet }),
+  setAwaitingContract: (awaiting) =>
+    set((state) => {
+      if (!state.pet || state.pet.awaiting_contract === awaiting) return {};
+      return { pet: { ...state.pet, awaiting_contract: awaiting } };
+    }),
   updatePetFromBroadcast: (broadcast) =>
     set((state) => {
       if (!state.pet) return {};
@@ -148,19 +189,17 @@ export const useAppStore = create<AppStore>((set) => ({
         escalation_level: broadcast.escalation_level,
         current_video_url: broadcast.current_video_url ?? state.pet.current_video_url,
         is_game_over: broadcast.is_game_over,
+        is_hard_stopped: broadcast.is_hard_stopped,
+        illness_until: broadcast.illness_until,
         awaiting_contract: broadcast.awaiting_contract ?? state.pet.awaiting_contract,
         born_at: broadcast.born_at !== undefined ? broadcast.born_at : state.pet.born_at,
       };
 
-      // Determine lock state from broadcast
-      let lockState: LockState = 'none';
-      if (broadcast.is_game_over) {
-        lockState = 'game_over';
-      } else if (broadcast.is_ill) {
-        lockState = 'illness';
-      }
-
-      return { pet: updatedPet, lockState };
+      return {
+        pet: updatedPet,
+        lockState: lockStateFromBroadcast(broadcast),
+        lockDetails: { until: broadcast.illness_until, timezone: state.lockDetails.timezone },
+      };
     }),
 
   // WebSocket
@@ -169,7 +208,15 @@ export const useAppStore = create<AppStore>((set) => ({
 
   // Lock state
   lockState: 'none',
-  setLockState: (lockState) => set({ lockState }),
+  lockDetails: { until: null, timezone: null },
+  setLockState: (lockState, details = { until: null, timezone: null }) =>
+    set((state) =>
+      state.lockState === lockState &&
+      state.lockDetails.until === details.until &&
+      state.lockDetails.timezone === details.timezone
+        ? {}
+        : { lockState, lockDetails: details },
+    ),
 
   // UI state
   isWalkModalVisible: false,
@@ -188,6 +235,7 @@ export const useAppStore = create<AppStore>((set) => ({
       pet: null,
       wsStatus: 'disconnected',
       lockState: 'none',
+      lockDetails: { until: null, timezone: null },
       isWalkModalVisible: false,
       isCleaningOverlayVisible: false,
     }),

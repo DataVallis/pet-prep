@@ -51,12 +51,14 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 **Mobile**
 - [ ] M1-11 Navigacija: Expo Router ali React Navigation; root `RootNavigator` z role-based vejama (parent / child)
 - [x] M1-12 Session bootstrap: ob zagonu prebere token iz SecureStore → `GET /api/user` (vrne tudi `pet`) → usmeri po vlogi kot po prijavi; splash, 401 → odjava, brez povezave → "Poskusi znova"; enotna odjava (`logout()`) *(2026-10-03, veja `feat/M1-12-session-restore-parent-pin`; `GET /api/child/pet` ostane za M1-07/M1-15)*
-- [ ] M1-13 TanStack Query hooki (`usePet`, `useFeed`, …) z optimistic update; Zustand samo za UI / ws stanje
-- [ ] M1-14 Feed / Water / Clean / Walk vezani na API; okna akcij iz API-ja (disabled + "naslednje okno ob 17:00")
-- [~] M1-15 Echo: private channel z `authorizer` (Bearer token), wss v produkciji, pravi polling fallback (`GET /api/child/pet` vsakih 10 s)
+- [x] M1-13 TanStack Query hooki (`usePet`, `useFeed`, …) z optimistic update; Zustand samo za UI / ws stanje *(2026-10-04, veja `feat/M1-14-child-actions-ui`: `useChildPet` (`GET /api/child/pet`, normaliziran pogled), `useFeed` / `useWater` / `useClean` (optimistično 100 %, nato vedno `state` iz odgovora, povrnitev brez odgovora), `useSyncSteps`; dogodki v živo v isti predpomnilnik, starejši po `emitted_at` zavrženi; v Zustandu ostanejo seja, ws, zaklep in prekrivni zasloni)*
+- [x] M1-14 Feed / Water / Clean / Walk vezani na API; okna akcij iz API-ja (disabled + "naslednje okno ob 17:00") *(2026-10-04, ista veja: gumbi iz `can_feed` / `can_water` z namigom po času družine, prijazna sporočila za vse razloge 422/423, čiščenje → `POST clean`, koraki: iOS iz CoreMotion od polnoči, Android števec v živo, sync ob odprtju / vrnitvi / 5 min; lokalni +20 % odstranjen)*
+- [x] M1-15 Echo: private channel z `authorizer` (Bearer token), wss v produkciji, pravi polling fallback (`GET /api/child/pet` vsakih 10 s)
   - [x] `echo.private('pet.{id}')`, authorizer `api.authorizeChannel` (Bearer), wss + forceTLS pri https, dogodek `.pet.updated` *(2026-10-04, `feat/M1-08-private-channels`)*
-  - [ ] Odprto: polling fallback še ne kliče `GET /api/child/pet` (TanStack refetch)
-- [ ] M1-16 `lockState` iz `is_hard_stopped` / `is_ill` / `is_game_over`; hard stop API usklajen
+  - [x] Polling fallback: `useChildPet` `refetchInterval` 10 s, dokler `wsStatus` ni `connected` (= naročnina na kanal uspela) *(2026-10-04, `feat/M1-14-child-actions-ui`; starševski dashboard še brez fallbacka)*
+- [~] M1-16 `lockState` iz `is_hard_stopped` / `is_ill` / `is_game_over`; hard stop API usklajen
+  - [x] Aplikacija: zaklep iz strežniškega stanja (obnova seje z `is_hard_stopped` / `is_active`, v živo iz dogodka, odklep ob preklicu), zaslon z razlogom in uro veterinarja po času družine *(2026-10-04, `feat/M1-14-child-actions-ui`)*
+  - [ ] Odprto (backend): hard stop preklop brez zaklepa vrstice / transakcije
 - [ ] M1-17 Generirani tipi iz OpenAPI (`schema.ts`) se uporabljajo v `client.ts` namesto ročnih
 - [ ] M1-18 i18n s `expo-localization` + `i18next`: **EN privzeto + SL**; tudi strežniška sporočila (push, napake) prek Laravel lang datotek
 - [ ] M1-19 **Uvoz podatkov o pasmah iz virov** (David, 2026-10-03): zbrati zanesljive vire (FCI/AKC standardi, veterinarska literatura o gibanju, prehrani, vodi), AI izlušči vrednosti → tabela z virom na vsako številko → David potrdi → uvoz v `breed_configs` (+ stolpec/tabela za vire). Do takrat so številke iz izvirne specifikacije označene kot *nepreverjene*. Sejalnik je insert-only.

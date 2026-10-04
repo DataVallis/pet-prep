@@ -1,5 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
+/**
+ * Child HUD (PRODUCT_SPEC §8) — full-bleed pet viewport, glass status bar, metric bars
+ * and the action dock. Since M1-13/M1-14 everything it shows comes from the server:
+ * `useChildPet()` (`GET /api/child/pet`, live via Reverb, 10 s polling without it);
+ * Feed / Water / Clean call the API (optimistic, then the server's state); the walk
+ * syncs today's steps. Buttons are disabled with a hint from `state.feeding` /
+ * `state.water`; locks come from the server's per-child lock (M1-16).
+ */
+
+import { useCallback, useEffect, useRef, useState } from 'react';
 import {
+  ActivityIndicator,
   Animated,
   Image,
   Platform,
@@ -16,18 +26,68 @@ import {
   LogOut,
   PawPrint,
   Sparkles,
+  WifiOff,
 } from 'lucide-react-native';
 import { useVideoPlayer, VideoView } from 'expo-video';
+import { useQueryClient } from '@tanstack/react-query';
 
 import { useAppStore, type WebSocketStatus } from '@/store/appStore';
 import { usePetWebSocket } from '@/hooks/usePetWebSocket';
+import { applyBroadcastToCache, childPetKey, useChildPet } from '@/hooks/queries/useChildPet';
+import { useClean, useFeed, useWater } from '@/hooks/queries/useChildActions';
+import {
+  classifyActionError,
+  failureMessage,
+  feedHint,
+  HUD_HINTS,
+  successMessage,
+  waterHint,
+} from '@/modules/childPet/actionMessages';
+import { lockStateFromView, type CareAction, type ChildPetView } from '@/modules/childPet/childPetView';
+import { formatSteps } from '@/modules/steps/stepCounter';
+import { useStepSync } from '@/modules/steps/useStepSync';
 import { logout } from '@/modules/session/logout';
 import ActionButton from '@/components/ActionButton';
 import CleaningOverlay from '@/components/CleaningOverlay';
-import LockedScreen from '@/screens/LockedScreen';
 import MetricBar from '@/components/MetricBar';
 import WalkTrackerOverlay from '@/modules/walk/WalkTrackerOverlay';
-import { formatVirtualAge, isActionDisabled } from '@/utils/metrics';
+import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
+
+/** User-visible strings of the HUD (i18n with M1-18). */
+export const HUD_STRINGS = {
+  feed: 'Hrani',
+  water: 'Voda',
+  walk: 'Sprehod',
+  clean: 'Očisti',
+  metrics: { hunger: 'Hrana', thirst: 'Voda', energy: 'Energija', hygiene: 'Čistoča' },
+  ws: { live: 'V ŽIVO', connecting: 'POVEZUJEM', offline: 'BREZ POVEZAVE' },
+  loading: 'Nalagam kužka …',
+  loadFailed: 'Kužka ni bilo mogoče naložiti.',
+  retry: 'Poskusi znova',
+  logout: 'Odjava',
+  stale: 'Ni povezave — prikazujem zadnje stanje.',
+  breeds: { mutt: 'Mešanček', border_collie: 'Border collie' } satisfies Record<BreedType, string>,
+  moods: {
+    idle: 'Srečen in igriv',
+    playing: 'Igriv',
+    hungry: 'Lačen kužek',
+    sleeping: 'Počiva',
+    low_energy: 'Utrujen',
+    sick: 'Bolan',
+  } satisfies Record<PetState, string>,
+} as const;
+
+/** "STAROST: 2 MESECA" — Slovenian dual / plural (PRODUCT_SPEC §4). */
+export function formatAgeMonths(months: number): string {
+  const n = Math.max(0, Math.floor(months));
+  const mod = n % 100;
+  const word = mod === 1 ? 'MESEC' : mod === 2 ? 'MESECA' : mod === 3 || mod === 4 ? 'MESECI' : 'MESECEV';
+  return `STAROST: ${n} ${word}`;
+}
+
+const TOAST_MS = 3_000;
+
+type Toast = { tone: 'ok' | 'info'; message: string };
 
 /** Pulsing connection-status dot for the top status bar. */
 function WsStatusDot({ status }: { status: WebSocketStatus }) {
@@ -35,7 +95,7 @@ function WsStatusDot({ status }: { status: WebSocketStatus }) {
     return (
       <View style={styles.wsRow}>
         <View style={[styles.wsDot, styles.wsConnected]} />
-        <Text style={styles.wsText}>V ŽIVO</Text>
+        <Text style={styles.wsText}>{HUD_STRINGS.ws.live}</Text>
       </View>
     );
   }
@@ -43,126 +103,187 @@ function WsStatusDot({ status }: { status: WebSocketStatus }) {
     return (
       <View style={styles.wsRow}>
         <View style={[styles.wsDot, styles.wsConnecting]} />
-        <Text style={styles.wsText}>POVEZAVA...</Text>
+        <Text style={styles.wsText}>{HUD_STRINGS.ws.connecting}</Text>
       </View>
     );
   }
   return (
     <View style={styles.wsRow}>
       <View style={[styles.wsDot, styles.wsDisconnected]} />
-      <Text style={styles.wsText}>OFFLINE</Text>
+      <Text style={styles.wsText}>{HUD_STRINGS.ws.offline}</Text>
     </View>
   );
 }
 
-/**
- * Main child video HUD — full-bleed pet viewport with glassmorphism
- * status bar, right-edge metric sliders, and a floating action dock.
- */
+/** Server lock → session lock overlay; per-child `awaiting_contract` → contract step. */
+function useSessionSync(view: ChildPetView | undefined): void {
+  const setLockState = useAppStore((s) => s.setLockState);
+  const setAwaitingContract = useAppStore((s) => s.setAwaitingContract);
+  useEffect(() => {
+    if (!view) return;
+    setLockState(lockStateFromView(view), {
+      until: view.lock.until ?? view.pet.illness_until,
+      timezone: view.timezone,
+    });
+    // AppNavigator swaps the HUD for ContractScreen (M1-07b / M2-01).
+    if (view.pet.awaiting_contract) setAwaitingContract(true);
+  }, [view, setLockState, setAwaitingContract]);
+}
+
 export default function ChildHudScreen() {
-  const pet = useAppStore((s) => s.pet);
-  const setPet = useAppStore((s) => s.setPet);
+  const sessionPet = useAppStore((s) => s.pet);
   const wsStatus = useAppStore((s) => s.wsStatus);
-  const lockState = useAppStore((s) => s.lockState);
   const isWalkModalVisible = useAppStore((s) => s.isWalkModalVisible);
   const isCleaningOverlayVisible = useAppStore((s) => s.isCleaningOverlayVisible);
   const setWalkModalVisible = useAppStore((s) => s.setWalkModalVisible);
   const setCleaningOverlayVisible = useAppStore((s) => s.setCleaningOverlayVisible);
 
-  const [feedbackMessage, setFeedbackMessage] = useState<string | null>(null);
+  const queryClient = useQueryClient();
+  const petQuery = useChildPet();
+  const view = petQuery.data;
+  useSessionSync(view);
+
+  const onBroadcast = useCallback(
+    (event: PetUpdatedBroadcast) => {
+      applyBroadcastToCache(queryClient, event);
+    },
+    [queryClient],
+  );
+  usePetWebSocket(view?.pet.id ?? sessionPet?.id ?? null, onBroadcast);
+
+  const feed = useFeed();
+  const water = useWater();
+  const clean = useClean();
+  const stepSync = useStepSync({
+    enabled: view !== undefined && !view.lock.is_locked,
+    myStepsToday: view?.steps.my_steps_today ?? 0,
+    serverTime: view?.server_time ?? null,
+    timezone: view?.timezone ?? null,
+  });
+
+  const [toast, setToast] = useState<Toast | null>(null);
+  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const showToast = useCallback((next: Toast) => {
+    if (toastTimer.current) clearTimeout(toastTimer.current);
+    setToast(next);
+    toastTimer.current = setTimeout(() => setToast(null), TOAST_MS);
+  }, []);
+  useEffect(
+    () => () => {
+      if (toastTimer.current) clearTimeout(toastTimer.current);
+    },
+    [],
+  );
 
   // Breathing animation for avatar fallback
   const bounceAnim = useRef(new Animated.Value(0)).current;
-
   useEffect(() => {
-    Animated.loop(
+    const loop = Animated.loop(
       Animated.sequence([
-        Animated.timing(bounceAnim, {
-          toValue: -8,
-          duration: 1500,
-          useNativeDriver: true,
-        }),
-        Animated.timing(bounceAnim, {
-          toValue: 0,
-          duration: 1500,
-          useNativeDriver: true,
-        }),
+        Animated.timing(bounceAnim, { toValue: -8, duration: 1500, useNativeDriver: true }),
+        Animated.timing(bounceAnim, { toValue: 0, duration: 1500, useNativeDriver: true }),
       ]),
-    ).start();
+    );
+    loop.start();
+    return () => loop.stop();
   }, [bounceAnim]);
 
-  usePetWebSocket(pet?.id ?? null);
-
-  const player = useVideoPlayer(pet?.current_video_url ?? null, (p) => {
+  const videoUrl = view?.pet.current_video_url ?? sessionPet?.current_video_url ?? null;
+  const imageUrl = view?.pet.reference_image_url ?? sessionPet?.pet_dna?.reference_image_url ?? null;
+  const player = useVideoPlayer(videoUrl, (p) => {
     p.loop = true;
     p.muted = true;
     p.play();
   });
 
-  const isLocked = lockState !== 'none';
-  const petState = pet?.pet_state ?? 'idle';
-  const noPet = pet === null;
-
-  const feedDisabled = noPet || isActionDisabled('feed', petState, isLocked);
-  const waterDisabled = noPet || isActionDisabled('water', petState, isLocked);
-  const walkDisabled = noPet || isActionDisabled('walk', petState, isLocked);
-  const cleanDisabled = noPet || isActionDisabled('clean', petState, isLocked);
-
-  const showFeedback = (msg: string) => {
-    setFeedbackMessage(msg);
-    setTimeout(() => setFeedbackMessage(null), 2000);
+  const mutations = { feed, water, clean } as const;
+  const runAction = (action: CareAction) => {
+    mutations[action].mutate(undefined, {
+      onSuccess: (response) => {
+        showToast({ tone: 'ok', message: successMessage(action, response.status) });
+      },
+      onError: (error) => {
+        const message = failureMessage(
+          classifyActionError(error),
+          queryClient.getQueryData<ChildPetView>(childPetKey) ?? null,
+        );
+        if (message) showToast({ tone: 'info', message });
+      },
+    });
   };
 
-  const handleFeed = () => {
-    if (!pet || feedDisabled) return;
-    const newHunger = Math.min(100, (pet.hunger_level ?? 0) + 20);
-    setPet({ ...pet, hunger_level: newHunger });
-    showFeedback('🍖 +20% Hrana!');
-  };
-
-  const handleWater = () => {
-    if (!pet || waterDisabled) return;
-    const newThirst = Math.min(100, (pet.thirst_level ?? 0) + 20);
-    setPet({ ...pet, thirst_level: newThirst });
-    showFeedback('💧 +20% Voda!');
-  };
-
-  const handleWalk = () => setWalkModalVisible(true);
-  const handleClean = () => setCleaningOverlayVisible(true);
+  const handleCleaned = useCallback(() => {
+    setCleaningOverlayVisible(false);
+    clean.mutate(undefined, {
+      onSuccess: (response) => showToast({ tone: 'ok', message: successMessage('clean', response.status) }),
+      onError: (error) => {
+        const message = failureMessage(
+          classifyActionError(error),
+          queryClient.getQueryData<ChildPetView>(childPetKey) ?? null,
+        );
+        if (message) showToast({ tone: 'info', message });
+      },
+    });
+  }, [clean, queryClient, setCleaningOverlayVisible, showToast]);
 
   const handleLogout = () => {
     void logout();
   };
 
+  // ── Loading / error without any state yet ────────────────────
+  if (!view) {
+    return (
+      <View style={[styles.container, styles.centered]}>
+        {petQuery.isError ? (
+          <View style={styles.centeredBox} testID="hud-load-error">
+            <WifiOff color="#94a3b8" size={32} />
+            <Text style={styles.centeredText}>{HUD_STRINGS.loadFailed}</Text>
+            <Pressable
+              accessibilityRole="button"
+              style={({ pressed }) => [styles.retryButton, pressed && styles.pressed]}
+              onPress={() => {
+                void petQuery.refetch();
+              }}
+            >
+              <Text style={styles.retryText}>{HUD_STRINGS.retry}</Text>
+            </Pressable>
+            <Pressable accessibilityRole="button" onPress={handleLogout} style={styles.linkButton}>
+              <Text style={styles.linkText}>{HUD_STRINGS.logout}</Text>
+            </Pressable>
+          </View>
+        ) : (
+          <View style={styles.centeredBox} testID="hud-loading">
+            <ActivityIndicator color="#a5b4fc" />
+            <Text style={styles.centeredText}>{HUD_STRINGS.loading}</Text>
+          </View>
+        )}
+      </View>
+    );
+  }
+
+  const { pet } = view;
+  const locked = view.lock.is_locked;
+  const feedDisabled = !view.feeding.can_feed;
+  const waterDisabled = !view.water.can_water;
+  const walkDisabled = locked;
+  const alreadyClean = pet.hygiene_level >= 100 && !pet.needs_cleaning;
+  const cleanDisabled = locked || alreadyClean;
+  const showCleaning = !locked && (pet.needs_cleaning || isCleaningOverlayVisible);
+  const stale = petQuery.isError;
+
   return (
     <View style={styles.container}>
       {/* Full-bleed background viewport */}
-      {pet?.current_video_url ? (
-        <VideoView
-          player={player}
-          contentFit="cover"
-          nativeControls={false}
-          style={StyleSheet.absoluteFill}
-        />
-      ) : pet?.pet_dna?.reference_image_url ? (
-        <Image
-          source={{ uri: pet.pet_dna.reference_image_url }}
-          resizeMode="cover"
-          style={StyleSheet.absoluteFill}
-        />
+      {videoUrl ? (
+        <VideoView player={player} contentFit="cover" nativeControls={false} style={StyleSheet.absoluteFill} />
+      ) : imageUrl ? (
+        <Image source={{ uri: imageUrl }} resizeMode="cover" style={StyleSheet.absoluteFill} />
       ) : (
         <View style={styles.fallbackViewport}>
-          {/* Ambient gradient glows */}
           <View style={[styles.glowOrb, styles.glowIndigo]} />
           <View style={[styles.glowOrb, styles.glowEmerald]} />
 
-          {/* Animated Pet Representation */}
-          <Animated.View
-            style={[
-              styles.petAvatarWrapper,
-              { transform: [{ translateY: bounceAnim }] },
-            ]}
-          >
+          <Animated.View style={[styles.petAvatarWrapper, { transform: [{ translateY: bounceAnim }] }]}>
             <View style={styles.petAvatarCircle}>
               <Text style={styles.petEmoji}>🐕</Text>
               <View style={styles.petHeartBadge}>
@@ -172,24 +293,14 @@ export default function ChildHudScreen() {
 
             <View style={styles.petStatusPill}>
               <Sparkles color="#818cf8" size={14} />
-              <Text style={styles.petStatusPillText}>
-                {pet?.pet_state === 'hungry'
-                  ? 'Lačen kužek'
-                  : pet?.pet_state === 'sleeping'
-                  ? 'Počiva'
-                  : pet?.pet_state === 'sick'
-                  ? 'Bolran'
-                  : 'Srečen in igriv'}
-              </Text>
+              <Text style={styles.petStatusPillText}>{HUD_STRINGS.moods[pet.pet_state]}</Text>
             </View>
           </Animated.View>
         </View>
       )}
 
       {/* Dark overlay for readability when video/image is present */}
-      {(pet?.current_video_url || pet?.pet_dna?.reference_image_url) && (
-        <View style={styles.mediaOverlay} />
-      )}
+      {(videoUrl || imageUrl) && <View style={styles.mediaOverlay} />}
 
       {/* Glassmorphism top status bar */}
       <View style={styles.topBar}>
@@ -198,18 +309,16 @@ export default function ChildHudScreen() {
             <PawPrint color="#a5b4fc" size={20} />
           </View>
           <View>
-            <Text style={styles.petBreedName}>
-              {pet?.breed_type?.replace('_', ' ') ?? 'Mutt kuža'}
-            </Text>
-            <Text style={styles.petAgeText}>
-              {formatVirtualAge(pet?.born_at ?? null)}
-            </Text>
+            <Text style={styles.petBreedName}>{HUD_STRINGS.breeds[pet.breed_type]}</Text>
+            <Text style={styles.petAgeText}>{formatAgeMonths(pet.virtual_age_months)}</Text>
           </View>
         </View>
 
         <View style={styles.topBarRight}>
           <WsStatusDot status={wsStatus} />
           <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={HUD_STRINGS.logout}
             style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
             onPress={handleLogout}
           >
@@ -218,69 +327,85 @@ export default function ChildHudScreen() {
         </View>
       </View>
 
-      {/* Feedback Toast Notification */}
-      {feedbackMessage && (
-        <View style={styles.feedbackToast}>
-          <Text style={styles.feedbackText}>{feedbackMessage}</Text>
+      {stale && (
+        <View style={styles.staleBanner} testID="hud-stale">
+          <WifiOff color="#fbbf24" size={14} />
+          <Text style={styles.staleText}>{HUD_STRINGS.stale}</Text>
+        </View>
+      )}
+
+      {/* Feedback toast */}
+      {toast && (
+        <View style={[styles.feedbackToast, toast.tone === 'info' && styles.feedbackToastInfo]} testID="hud-toast">
+          <Text style={styles.feedbackText}>{toast.message}</Text>
         </View>
       )}
 
       {/* Right-edge vertical progress sliders */}
       <View style={styles.metricsColumn}>
-        <MetricBar
-          level={pet?.hunger_level ?? 0}
-          label="Hrana"
-          icon={<Beef color="#ffffff" size={16} />}
-        />
-        <MetricBar
-          level={pet?.thirst_level ?? 0}
-          label="Voda"
-          icon={<Droplet color="#ffffff" size={16} />}
-        />
-        <MetricBar
-          level={pet?.energy_level ?? 0}
-          label="Energija"
-          icon={<Footprints color="#ffffff" size={16} />}
-        />
-        <MetricBar
-          level={pet?.hygiene_level ?? 0}
-          label="Čistoča"
-          icon={<Sparkles color="#ffffff" size={16} />}
-        />
+        <MetricBar level={pet.hunger_level} label={HUD_STRINGS.metrics.hunger} icon={<Beef color="#ffffff" size={16} />} />
+        <MetricBar level={pet.thirst_level} label={HUD_STRINGS.metrics.thirst} icon={<Droplet color="#ffffff" size={16} />} />
+        <MetricBar level={pet.energy_level} label={HUD_STRINGS.metrics.energy} icon={<Footprints color="#ffffff" size={16} />} />
+        <MetricBar level={pet.hygiene_level} label={HUD_STRINGS.metrics.hygiene} icon={<Sparkles color="#ffffff" size={16} />} />
       </View>
 
       {/* Bottom floating control dock */}
       <View style={styles.bottomDock}>
         <ActionButton
+          testID="action-feed"
           icon={<Beef color="#ffffff" size={24} />}
-          label="Hrani"
-          onPress={handleFeed}
+          label={HUD_STRINGS.feed}
+          onPress={() => runAction('feed')}
           disabled={feedDisabled}
+          busy={feed.isPending}
+          hint={feedHint(view)}
         />
         <ActionButton
+          testID="action-water"
           icon={<Droplet color="#ffffff" size={24} />}
-          label="Voda"
-          onPress={handleWater}
+          label={HUD_STRINGS.water}
+          onPress={() => runAction('water')}
           disabled={waterDisabled}
+          busy={water.isPending}
+          hint={waterHint(view)}
         />
         <ActionButton
+          testID="action-walk"
           icon={<Footprints color="#ffffff" size={24} />}
-          label="Sprehod"
-          onPress={handleWalk}
+          label={HUD_STRINGS.walk}
+          onPress={() => setWalkModalVisible(true)}
           disabled={walkDisabled}
+          hint={`${formatSteps(view.steps.steps_today)}/${formatSteps(view.steps.goal)}`}
         />
         <ActionButton
+          testID="action-clean"
           icon={<Sparkles color="#ffffff" size={24} />}
-          label="Očisti"
-          onPress={handleClean}
+          label={HUD_STRINGS.clean}
+          onPress={() => setCleaningOverlayVisible(true)}
           disabled={cleanDisabled}
+          busy={clean.isPending}
+          hint={alreadyClean ? HUD_HINTS.clean : null}
         />
       </View>
 
-      {/* Conditional overlays */}
-      {isWalkModalVisible && <WalkTrackerOverlay />}
-      {(isCleaningOverlayVisible || pet?.hygiene_level === 0) && <CleaningOverlay />}
-      {lockState !== 'none' && <LockedScreen />}
+      {/* Conditional overlays (the lock overlay is rendered by AppNavigator above this screen) */}
+      {isWalkModalVisible && !locked && (
+        <WalkTrackerOverlay
+          view={view}
+          stepSync={stepSync}
+          onClose={() => {
+            setWalkModalVisible(false);
+            // Back from a walk: send the new steps now, not in up to 5 minutes.
+            void stepSync.syncNow();
+          }}
+        />
+      )}
+      {showCleaning && (
+        <CleaningOverlay
+          onCleaned={handleCleaned}
+          onClose={pet.needs_cleaning ? undefined : () => setCleaningOverlayVisible(false)}
+        />
+      )}
     </View>
   );
 }
@@ -462,7 +587,8 @@ const styles = StyleSheet.create({
   },
   feedbackToast: {
     position: 'absolute',
-    top: 130,
+    top: 150,
+    maxWidth: '82%',
     alignSelf: 'center',
     zIndex: 30,
     backgroundColor: '#4f46e5',
@@ -475,6 +601,7 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
   },
   feedbackText: {
+    textAlign: 'center',
     color: '#ffffff',
     fontWeight: '700',
     fontSize: 14,
@@ -508,5 +635,64 @@ const styles = StyleSheet.create({
   },
   pressed: {
     opacity: 0.7,
+  },
+  centered: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  centeredBox: {
+    alignItems: 'center',
+    gap: 14,
+    paddingHorizontal: 32,
+  },
+  centeredText: {
+    color: '#cbd5e1',
+    fontSize: 15,
+    fontWeight: '600',
+    textAlign: 'center',
+  },
+  retryButton: {
+    marginTop: 4,
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 16,
+    backgroundColor: '#4f46e5',
+  },
+  retryText: {
+    color: '#ffffff',
+    fontWeight: '700',
+    fontSize: 15,
+  },
+  linkButton: {
+    padding: 8,
+  },
+  linkText: {
+    color: '#94a3b8',
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  staleBanner: {
+    position: 'absolute',
+    top: Platform.OS === 'ios' ? 124 : 104,
+    alignSelf: 'center',
+    zIndex: 25,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 12,
+    backgroundColor: 'rgba(15, 23, 42, 0.9)',
+    borderWidth: 1,
+    borderColor: 'rgba(251, 191, 36, 0.35)',
+  },
+  staleText: {
+    color: '#fbbf24',
+    fontSize: 11,
+    fontWeight: '600',
+  },
+  feedbackToastInfo: {
+    backgroundColor: '#b45309',
+    shadowColor: '#b45309',
   },
 });

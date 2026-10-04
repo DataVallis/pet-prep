@@ -11,6 +11,7 @@
       "infoPlist": {
         "NSHealthShareUsageDescription": "PetPrep reads your step count to track your pet's daily walking goals.",
         "NSHealthUpdateUsageDescription": "PetPrep updates your step count to sync pet walking activity.",
+        "NSMotionUsageDescription": "PetPrep counts your steps so your virtual dog gets its daily walk.",
         "NSAppTransportSecurity": {
           "NSAllowsArbitraryLoads": true,
           "NSAllowsLocalNetworking": true

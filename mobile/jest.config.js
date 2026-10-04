@@ -1,3 +1,7 @@
+// Device clock on UTC in every test run (workers inherit it): results don't depend on
+// the developer's zone, and family-zone code is tested against a different device zone.
+process.env.TZ = 'UTC';
+
 module.exports = {
   preset: 'jest-expo',
   transformIgnorePatterns: [

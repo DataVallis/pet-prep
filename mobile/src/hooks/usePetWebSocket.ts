@@ -3,12 +3,18 @@
  *
  * Subscribes to the PRIVATE channel `private-pet.{petId}` (M1-08). pusher-js
  * gets its subscription signature from `POST /api/broadcasting/auth` with the
- * Sanctum Bearer token (`modules/realtime/echoConfig`). Only the child who
- * owns the pet and that child's parent are authorized.
- * Implements auto-reconnect and a fallback polling slot when the socket drops.
+ * Sanctum Bearer token (`modules/realtime/echoConfig`).
+ *
+ * The hook only delivers events and reports `wsStatus`; `connected` means the
+ * channel subscription succeeded. Anything else makes `useChildPet` poll
+ * `GET /api/child/pet` every 10 s (M1-15 fallback) until the socket is back
+ * (pusher-js reconnects on its own).
+ *
+ * Events older than the last delivered one (`emitted_at`) are dropped here, so
+ * no consumer sees a stale snapshot after a newer one.
  */
 
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef } from 'react';
 import Echo from 'laravel-echo';
 import Pusher from 'pusher-js';
 import type { Options as PusherOptions } from 'pusher-js';
@@ -27,38 +33,39 @@ const PusherClient: PusherConstructor =
     ? (pusherInterop as PusherConstructor)
     : (pusherInterop as { default: PusherConstructor }).default;
 
-const POLLING_INTERVAL_MS = 10_000; // 10 seconds fallback polling
+export type BroadcastHandler = (event: PetUpdatedBroadcast) => void;
 
-export function usePetWebSocket(petId: number | null): void {
+/**
+ * Pass events through only if not older than the last one passed (by `emitted_at`).
+ * Exported for tests.
+ */
+export function createBroadcastGate(): (event: PetUpdatedBroadcast) => boolean {
+  let lastMs = 0;
+  return (event) => {
+    const ms = Date.parse(event.emitted_at);
+    if (Number.isNaN(ms) || ms < lastMs) return false;
+    lastMs = ms;
+    return true;
+  };
+}
+
+/**
+ * @param onBroadcast where events go — the child HUD writes them into the TanStack
+ *   cache; default (parent dashboard) maps them onto the session pet in the store.
+ */
+export function usePetWebSocket(petId: number | null, onBroadcast?: BroadcastHandler): void {
   const echoRef = useRef<Echo<'reverb'> | null>(null);
-  const pollingRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const handlerRef = useRef<BroadcastHandler | undefined>(onBroadcast);
+  handlerRef.current = onBroadcast;
 
   const setWsStatus = useAppStore((s) => s.setWsStatus);
-  const updatePetFromBroadcast = useAppStore((s) => s.updatePetFromBroadcast);
-
-  const startPolling = useCallback(() => {
-    if (pollingRef.current) return;
-
-    setWsStatus('reconnecting');
-    pollingRef.current = setInterval(() => {
-      // TODO(M1-15): refetch pet state via TanStack Query (`GET /api/child/pet`)
-      // while the socket is down. pusher-js reconnects on its own; the
-      // 'connected' handler below calls stopPolling().
-    }, POLLING_INTERVAL_MS);
-  }, [setWsStatus]);
-
-  const stopPolling = useCallback(() => {
-    if (pollingRef.current) {
-      clearInterval(pollingRef.current);
-      pollingRef.current = null;
-    }
-  }, []);
 
   useEffect(() => {
     if (!petId) return;
 
     setWsStatus('connecting');
     const channelName = petChannelName(petId);
+    const passes = createBroadcastGate();
 
     try {
       const echo = new Echo<'reverb'>({
@@ -72,31 +79,28 @@ export function usePetWebSocket(petId: number | null): void {
 
       // Leading dot: the backend uses a custom name (PetUpdated::broadcastAs).
       channel.listen(PET_UPDATED_EVENT, (event: PetUpdatedBroadcast) => {
-        updatePetFromBroadcast(event);
+        if (!passes(event)) return;
+        const handler = handlerRef.current;
+        if (handler) handler(event);
+        else useAppStore.getState().updatePetFromBroadcast(event);
       });
 
-      // 403 (not this user's pet) / auth error → rely on polling.
-      channel.error(() => {
-        startPolling();
-      });
-
-      // Connection state handlers
-      echo.connector.pusher.connection.bind('connected', () => {
+      // Live only once the private channel is authorized (also after a reconnect).
+      channel.subscribed(() => {
         setWsStatus('connected');
-        stopPolling();
       });
 
-      echo.connector.pusher.connection.bind('disconnected', () => {
-        setWsStatus('disconnected');
-        startPolling();
+      // 403 (not this user's pet) / auth error → polling keeps the state fresh.
+      channel.error(() => {
+        setWsStatus('reconnecting');
       });
 
-      echo.connector.pusher.connection.bind('failed', () => {
-        setWsStatus('disconnected');
-        startPolling();
-      });
+      const connection = echo.connector.pusher.connection;
+      connection.bind('disconnected', () => setWsStatus('disconnected'));
+      connection.bind('unavailable', () => setWsStatus('reconnecting'));
+      connection.bind('failed', () => setWsStatus('disconnected'));
     } catch {
-      startPolling();
+      setWsStatus('disconnected');
     }
 
     return () => {
@@ -109,8 +113,7 @@ export function usePetWebSocket(petId: number | null): void {
       } catch {
         // cleanup safety
       }
-      stopPolling();
       setWsStatus('disconnected');
     };
-  }, [petId, setWsStatus, updatePetFromBroadcast, startPolling, stopPolling]);
+  }, [petId, setWsStatus]);
 }
