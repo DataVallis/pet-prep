@@ -15,7 +15,9 @@ Otrok 12 tednov skrbi za AI psa (hrana, voda, čiščenje, pravi sprehodi). Star
 ## Kaj pridobi partner *(načrt)*
 - **Trgovine:** ob certifikatu družina prejme kupon (npr. popust na "starter kit za mladička"); provizija po unovčenju (CPA). Do vas pride kupec, ki je *dokazano pripravljen*.
 - **Zavetišča:** orodje, ki ga lahko priporočite družinam pred posvojitvijo; manj impulzivnih posvojitev in vračil.
-- **Veterinarji / pasje šole:** priporočila v aplikaciji ob prehodu na pravega psa (Faza 2).
+- **Veterinarji / pasje šole:** priporočila in booking v aplikaciji ob prehodu na pravega psa (Faza 2, *načrt*).
+- **Zavarovalnice za male živali:** ponudbe glede na pasmo ob registraciji pravega psa (Faza 2, *načrt*).
+- **Proizvajalci ovratnic / IoT (npr. Tractive):** integracija podatkov o gibanju (Faza 2, *načrt*). Podrobno: `docs/product/PHASE2_SPEC.md`.
 
 ## Zakaj nam lahko zaupate
 - Otroci se prijavijo brez e-pošte; minimalni podatki; strežniki v EU.

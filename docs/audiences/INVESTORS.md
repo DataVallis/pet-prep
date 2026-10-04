@@ -38,6 +38,13 @@ Lead magnet "Pet Promise Reality Check" (free web tool → signed PDF contract) 
 ## Roadmap (high level)
 M1 core game end-to-end → M2 parent onboarding & real dashboard → M3 notifications, step tracking, in-app purchase → M4 AI dog videos per state → M5 production hardening & closed beta. Phase 2: real-world AI pet assistant.
 
+## Phase 2 — post-adoption *(planned, spec 2026-10-04: `docs/product/PHASE2_SPEC.md`)*
+Goal: extend LTV from the 3-month challenge to the dog's 10–15-year life. One tap "We got a real dog" turns the simulator into a real-time AI assistant that already knows the family's routine.
+- Features: smart-collar integration (e.g. Tractive) or white-label PetPrep collar; activity anomaly alerts; AI vet triage from photos (guidance only, always routes to a real vet); growth & nutrition tracking.
+- Revenue: AI coach subscription (~€3.99/month), affiliate shop (pet stores), pet-insurance lead generation by breed risk, vet / dog-school booking fees.
+- Tech: LLM + retrieval over verified veterinary sources (pgvector in our existing PostgreSQL).
+- Gate: measure how many challenge families actually adopt a dog before building.
+
 ## Risks & mitigations
 | Risk | Mitigation |
 |---|---|
