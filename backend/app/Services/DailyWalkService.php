@@ -47,6 +47,12 @@ class DailyWalkService
      */
     public function closeDayIfNeeded(Pet $pet, CarbonInterface $now, bool $allowIllness): bool
     {
+        // Unborn (contract not signed, M1-07b): no days to close yet; birth
+        // stamps last_step_reset_at (birth-day grace).
+        if ($pet->isUnborn()) {
+            return false;
+        }
+
         // Pet without a reset stamp: today is its first step day (birth-day grace).
         if ($pet->last_step_reset_at === null) {
             $pet->last_step_reset_at = $now;
@@ -63,7 +69,7 @@ class DailyWalkService
         $timezone = $pet->familyTimezone();
         $steps = (int) $pet->daily_step_count;
         $goal = (int) ($pet->breedConfig()?->daily_steps_required ?? 0);
-        $birthDay = $closedDate === $pet->localDate($pet->born_at ?? $pet->created_at ?? $pet->last_step_reset_at);
+        $birthDay = $closedDate === $pet->localDate($pet->born_at);
         $yesterday = Carbon::parse($today, $timezone)->subDay()->toDateString();
         $noWalk = $pet->displayMetric('energy_level') === 0;
 

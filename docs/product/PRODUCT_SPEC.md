@@ -26,6 +26,9 @@
 
 1. **Starš** se registrira (Apple / Google, email kot rezerva) → ustvari otroški profil → izbere pasmo (premium = plačilo) → generira **6-mestni PIN (velja 15 min)**.
 2. **Otrok** na svoji napravi vnese PIN → odpre se **Pogodba o odgovornosti** → podpis s prstom → pes se "rodi".
+   - **Pogodba pred rojstvom (David, 4. 10. 2026):** po vnosu PIN-a pes že obstaja (izgled, referenčna slika se lahko ustvari takoj), a je **še nerojen**: nič ne upada, ni kakcev, dan se ne zaključuje (sprehod), ni opomnikov, bolezni ne odvzema. Otrok lahko naredi samo eno stvar — podpiše pogodbo; vse druge akcije strežnik zavrne z razlogom "najprej podpiši pogodbo" (`contract_required`). **Trenutek podpisa (čas strežnika) je rojstvo:** vse metrike 100 %, starost, ura upadanja, urnik higiene in "rojstni dan" (energija 100 % do prve polnoči, brez bolezni zaradi sprehoda) začnejo teči takrat. Če otrok podpis odloži, ne izgubi nič. Starš do podpisa vidi psa kot "čaka na pogodbo".
+   - Med hard stopom (ali če je seja neaktivna) tudi podpis ni mogoč — starševski premor ima prednost.
+   - Psi, ustvarjeni pred to spremembo, veljajo za rojene (brez zaklepa, tudi brez podpisane pogodbe).
 3. **Otrok nima lastnega emaila; PIN je njegova prijava** (token vezan na otroški profil, ki ga ustvari starš). *Odločeno 2. 10. 2026.*
 4. MVP: 1 starš → 1 otrok → 1 pes.
 
@@ -46,16 +49,17 @@
 
 - **Tihe ure** (starš nastavi, npr. šola 8:00–13:00, spanje 22:00–6:00): upadanje se upočasni za 90 %, obvestila se ne pošiljajo, higienski dogodki se ne zgodijo.
 - **Hard stop / bolezen:** metrike so zamrznjene.
+- **Pred podpisom pogodbe** (nerojen pes, §3) se nič ne zgodi: brez upadanja, higienskih dogodkov, zaključka dneva in eskalacije.
 - **Anti-cheat koraki:** zavrnemo prirastke > 200 korakov / min.
 - **(D)** Spec omenja tudi "5.000 korakov" (MVP.docx) — veljavno je 4.000 / 10.000 iz MAIN dokumenta.
 - Vse številke iz tabele (hitrosti, cilji korakov, število dogodkov, okna hranjenja 06:00–10:00 in 17:00–21:00, voda 3× / dan z razmikom ≥ 3 h) so v tabeli `breed_configs` in jih admin spreminja v Filamentu — ne v kodi (M1-06).
 
 **Pojasnila implementacije (M1-07 — 4. 10. 2026, otroški API):**
 - **Hrana:** samo znotraj okna pasme po lokalnem času družine; okno vključuje začetek in ne konca (06:00 da, 10:00 ne). **Eno hranjenje na okno** (2 okni = 2× / dan). Izven okna ali drugič v istem oknu strežnik zavrne in pove začetek naslednjega okna. Ob prestopu ure okna sledijo stenski uri (06:00 je poleti 04:00 UTC, pozimi 05:00 UTC).
-- **Voda:** največ `water_times_per_day` (3) na lokalni dan, med dvema najmanj `water_min_gap_minutes` (180) **realnih** minut, tudi čez polnoč. Ko je dnevna meja dosežena, je naslednja voda ob lokalni polnoči (oz. kasneje, če razmik še ni potekel). *(Claudova izbira, čaka Davida — DECISIONS 4. 10.)*
-- **Najprej čiščenje:** dokler higiena kaže 0 %, hrana in voda nista mogoči (§8); koraki in čiščenje vedno. *(Claudova izbira po §8, čaka Davida.)*
-- **Zaklep:** med hard stopom, boleznijo ali po game overju strežnik zavrne vsako otroško akcijo (tudi pogodbo) z razlogom; če velja več razlogov hkrati, se pokaže prvi od: game over › neaktiven › hard stop › bolezen.
-- **Pogodba:** podpis enkrat na psa (ponoven podpis se zavrne, prvi ostane); čas podpisa je čas strežnika.
+- **Voda:** največ `water_times_per_day` (3) na lokalni dan (meja se ponastavi ob lokalni polnoči), med dvema najmanj `water_min_gap_minutes` (180) **realnih** minut, tudi čez polnoč. Ko je dnevna meja dosežena, je naslednja voda ob lokalni polnoči (oz. kasneje, če razmik še ni potekel). *(Potrdil David, 4. 10. 2026.)*
+- **Najprej čiščenje:** dokler higiena kaže 0 %, hrana in voda nista mogoči (§8); koraki in čiščenje vedno. *(Potrdil David, 4. 10. 2026.)*
+- **Zaklep:** med hard stopom, boleznijo, po game overju in pred podpisom pogodbe (nerojen pes, §3) strežnik zavrne vsako otroško akcijo z razlogom; pogodbo je mogoče podpisati samo, ko je edini razlog "najprej pogodba". Če velja več razlogov hkrati, se pokaže prvi od: game over › neaktiven › hard stop › pogodba › bolezen.
+- **Pogodba:** podpis enkrat na psa (ponoven podpis se zavrne, prvi ostane; nov pes po game overju = nova pogodba); čas podpisa je čas strežnika in hkrati trenutek rojstva psa (§3). *(Potrdil David, 4. 10. 2026.)*
 
 **Pojasnila implementacije (M1-04, M1-05 — 3. 10. 2026):**
 - **Gibanje = dnevni sprehod (David, 3. 10. 2026):** energija ni urna metrika zanemarjanja. Za energijo ni ure "0 % > 1 h" (alarm faze 3), ne 6-urne bolezni ne 24-urnega game overja. Opomnika faze 1 / 2 zaradi nizke energije sta le izven tihih ur. Pravilo dneva — glej §7 "Dnevni sprehod".
@@ -98,6 +102,7 @@ Za **gibanje (energijo)** veljata samo fazi 1 in 2, in to le izven tihih ur; faz
 - **Sprehod:** overlay s števcem "1.250 / 4.000 korakov", sync ob vrnitvi.
 - **Čiščenje:** ko higiena pade na 0 %, umazanija prekrije zaslon; dokler je otrok ne zdrgne, druge akcije niso mogoče.
 - **Zaklenjen zaslon:** hard stop / bolezen / game over z različnimi sporočili.
+- **Pred rojstvom:** dokler pogodba ni podpisana, aplikacija pokaže pogodbo (ne HUD-a); strežnik vse druge akcije zavrne z razlogom `contract_required`. Po podpisu se pes rodi s 100 % in HUD se odklene.
 
 ## 9. Starševska aplikacija (UI)
 

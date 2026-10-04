@@ -33,6 +33,9 @@ use Illuminate\Support\Facades\Log;
  *                  clock; the daily walk rule closes each day at midnight
  *                  (DailyWalkService, David 2026-10-03).
  *
+ * Unborn (M1-07b): until the child signs the contract (`born_at` null) the
+ * pet is skipped entirely — no decay, hygiene events or day close.
+ *
  * Frozen (M1-02): while hard-stopped, ill, inactive or game over, metrics
  * don't change and the decay clock is advanced so nothing is caught up later.
  * When an illness ends the pet gets a fresh start (Pet::recoverFromIllnessIfDue).
@@ -69,13 +72,15 @@ class PetDecayService
      * admin edit) is never overwritten by a stale copy.
      *
      * Inactive / game-over pets are not loaded; Pet's `updating` hook restarts
-     * their decay clock if they are ever re-activated.
+     * their decay clock if they are ever re-activated. Unborn pets (waiting
+     * for the contract, M1-07b) are not loaded either; birth starts the clock.
      *
      * @return array{processed: int, updated: int}
      */
     public function processAllActivePets(): array
     {
-        $petIds = Pet::where('is_active', true)
+        $petIds = Pet::born()
+            ->where('is_active', true)
             ->where('is_game_over', false)
             ->orderBy('id')
             ->pluck('id');
@@ -200,6 +205,12 @@ class PetDecayService
         // Whole seconds: the timestamp column stores no fractions, so the
         // value we compute elapsed time to must equal the value we persist.
         $now = now()->startOfSecond();
+
+        // Unborn (contract not signed yet, M1-07b): nothing runs, nothing is
+        // written — signing the contract starts every clock.
+        if ($pet->isUnborn()) {
+            return false;
+        }
 
         // First tick for a pet without a decay clock: just start the clock.
         if ($pet->last_decay_at === null) {

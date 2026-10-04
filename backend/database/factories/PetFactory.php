@@ -3,10 +3,11 @@
 namespace Database\Factories;
 
 use App\Enums\BreedType;
+use App\Models\Pet;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Pet>
+ * @extends Factory<Pet>
  */
 class PetFactory extends Factory
 {
@@ -40,6 +41,19 @@ class PetFactory extends Factory
             'is_hard_stopped' => false,
             'certificate_eligible' => false,
         ];
+    }
+
+    /**
+     * A pet created at pairing that waits for the contract (M1-07b):
+     * born_at null, no clocks yet.
+     */
+    public function unborn(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'born_at' => null,
+            'last_decay_at' => null,
+            'last_step_reset_at' => null,
+        ]);
     }
 
     /**

@@ -1,7 +1,7 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import { useAppStore, type LockState } from '@/store/appStore';
+import { isAwaitingContract, useAppStore, type LockState } from '@/store/appStore';
 import { logout } from '@/modules/session/logout';
 import { useSessionBootstrap } from '@/modules/session/useSessionBootstrap';
 import SplashScreen from '@/screens/SplashScreen';
@@ -77,7 +77,14 @@ export default function AppNavigator() {
           <ParentDashboardScreen />
         ) : (
           <>
-            {pet !== null ? <ChildHudScreen /> : <PairingScreen initialStep="pin" />}
+            {pet === null ? (
+              <PairingScreen initialStep="pin" />
+            ) : isAwaitingContract(pet) ? (
+              // Paired but unborn until the contract is signed (M1-07b) — also after a restart.
+              <PairingScreen initialStep="contract" />
+            ) : (
+              <ChildHudScreen />
+            )}
             {isLocked && <LockedScreen />}
           </>
         )}

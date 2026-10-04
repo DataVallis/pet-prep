@@ -196,7 +196,7 @@ describe('PetUpdated event shape', function () {
         expect(array_keys($payload))->toEqualCanonicalizing([
             'pet_id', 'breed_type', 'hunger_level', 'thirst_level', 'energy_level', 'hygiene_level',
             'is_active', 'pet_state', 'escalation_level', 'is_ill', 'illness_until', 'is_game_over',
-            'is_hard_stopped', 'virtual_age_months', 'current_video_url', 'media_status',
+            'is_hard_stopped', 'virtual_age_months', 'born_at', 'awaiting_contract', 'current_video_url', 'media_status',
             'reference_image_url', 'event_type', 'updated_at', 'emitted_at',
         ]);
         expect($payload['hunger_level'])->toBe(34);

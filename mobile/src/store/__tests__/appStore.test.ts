@@ -2,7 +2,7 @@
  * Tests for the Zustand app store.
  */
 
-import { lockStateFromPet, useAppStore } from '@/store/appStore';
+import { isAwaitingContract, lockStateFromPet, useAppStore } from '@/store/appStore';
 import type { Pet, PetUpdatedBroadcast } from '@/types';
 
 // Helper to create a mock pet
@@ -251,5 +251,32 @@ describe('lockStateFromPet', () => {
   it('illness only while illness_until is in the future', () => {
     expect(lockStateFromPet(createMockPet({ illness_until: '2026-10-03T20:00:00Z' }), now)).toBe('illness');
     expect(lockStateFromPet(createMockPet({ illness_until: '2026-10-03T09:00:00Z' }), now)).toBe('none');
+  });
+});
+
+describe('isAwaitingContract (M1-07b)', () => {
+  it('is false without a pet', () => {
+    expect(isAwaitingContract(null)).toBe(false);
+  });
+
+  it('uses born_at when awaiting_contract is absent (raw pet from /api/user)', () => {
+    expect(isAwaitingContract({ ...createMockPet(), born_at: null })).toBe(true);
+    expect(isAwaitingContract({ ...createMockPet(), born_at: '2026-10-01T08:00:00Z' })).toBe(false);
+  });
+
+  it('awaiting_contract wins when present (child state, broadcast)', () => {
+    expect(isAwaitingContract({ ...createMockPet(), born_at: null, awaiting_contract: false })).toBe(false);
+    expect(isAwaitingContract({ ...createMockPet(), born_at: '2026-10-01T08:00:00Z', awaiting_contract: true })).toBe(true);
+  });
+});
+
+describe('signed_contract broadcast (M1-07b)', () => {
+  it('awaiting_contract false from a broadcast ends the contract step', () => {
+    useAppStore.setState(useAppStore.getInitialState(), true);
+    useAppStore.getState().setPet(createMockPet({ born_at: null }));
+    useAppStore.getState().updatePetFromBroadcast(
+      createMockBroadcast({ awaiting_contract: false, event_type: 'signed_contract' }),
+    );
+    expect(isAwaitingContract(useAppStore.getState().pet)).toBe(false);
   });
 });

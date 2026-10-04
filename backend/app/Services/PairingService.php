@@ -59,7 +59,8 @@ class PairingService
     /**
      * Pair a child user to a parent using a 6-digit PIN.
      * Runs inside an atomic DB transaction: sets parent_id on the child
-     * and initializes the child's pet session (Mutt by default).
+     * and creates the child's unborn pet (Mutt by default); the contract
+     * births it.
      *
      * @return array{parent: User, pet: Pet}
      *
@@ -99,15 +100,21 @@ class PairingService
             $petDna = $this->falAiService->generateInitialPetDna($breed);
             $mediaEnabled = $this->falAiService->isEnabled();
 
+            // Contract before birth (David 2026-10-04, PRODUCT_SPEC §3,
+            // M1-07b): the pet exists from now on (DNA, reference image) but
+            // is unborn — born_at stays null, the game loop ignores it and
+            // child actions return 423 contract_required until the child
+            // signs (POST /api/child/contract births it).
             $pet = Pet::create([
                 'user_id' => $child->id,
                 'breed_type' => $breed->value,
                 'pet_dna' => $petDna,
                 'media_status' => $mediaEnabled ? 'pending' : 'disabled',
                 'hunger_level' => 100,
+                'thirst_level' => 100,
                 'energy_level' => 100,
                 'hygiene_level' => 100,
-                'born_at' => now(),
+                'born_at' => null,
                 'is_active' => true,
             ]);
 

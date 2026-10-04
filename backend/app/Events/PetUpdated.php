@@ -150,6 +150,9 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'is_game_over' => (bool) $pet->is_game_over,
             'is_hard_stopped' => (bool) $pet->is_hard_stopped,
             'virtual_age_months' => $pet->virtualAgeInMonths(),
+            // Contract before birth (M1-07b): null / true until the child signs.
+            'born_at' => $pet->born_at?->toIso8601String(),
+            'awaiting_contract' => $pet->isUnborn(),
             'current_video_url' => $pet->current_video_url,
             'media_status' => $pet->media_status,
             'reference_image_url' => $pet->pet_dna['reference_image_url'] ?? null,

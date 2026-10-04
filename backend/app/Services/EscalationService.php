@@ -71,7 +71,9 @@ class EscalationService
     {
         // IDs only: every pet is re-read under its row lock when its turn
         // comes, so a child action or hard stop made in the meantime is seen.
-        $petIds = Pet::where('is_active', true)
+        // Unborn pets (contract not signed, M1-07b) have nothing to escalate.
+        $petIds = Pet::born()
+            ->where('is_active', true)
             ->where('is_game_over', false)
             ->orderBy('id')
             ->pluck('id');
@@ -146,7 +148,7 @@ class EscalationService
      */
     private function escalateLockedPet(Pet $pet): bool
     {
-        if (! $pet->is_active || $pet->is_game_over) {
+        if (! $pet->is_active || $pet->is_game_over || $pet->isUnborn()) {
             return false;
         }
 

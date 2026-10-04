@@ -66,15 +66,21 @@ sequenceDiagram
     Parent->>API: GET /api/parent/dashboard
   end
   Child->>API: POST /api/child/pair {pin}
-  API->>DB: transaction: lock parent, link child, create pet (Pet DNA), consume PIN
-  API-->>Child: 201 pet (media_status=pending|disabled)
+  API->>DB: transaction: lock parent, link child,<br/>create UNBORN pet (Pet DNA, born_at null), consume PIN
+  API-->>Child: 201 pet (born_at null, awaiting_contract, media_status=pending|disabled)
   API->>Q: GeneratePetReferenceImage (after commit)
   Q->>FAL: fal.run Flux (seed + prompt anchor)
   FAL-->>Q: image URL (*.fal.media)
   Q->>DB: pet_dna.reference_image_url, media_status=ready
   Q-->>Child: PetUpdated "reference_image_ready" (Reverb)
-  Parent->>API: GET /api/parent/dashboard → pet ≠ null
+  Parent->>API: GET /api/parent/dashboard → pet ≠ null, awaiting_contract
   Note over Parent: "Otrok je povezan!" → GET /api/user refreshes the session pet
+  Note over Child,DB: unborn: no decay, hygiene events, day close or escalation;<br/>every child action except the contract → 423 contract_required
+  Child->>API: POST /api/child/contract {signature} (Pogodba o odgovornosti)
+  API->>DB: transaction: SELECT pet FOR UPDATE, pet_contracts row,<br/>birth: born_at = last_decay_at = last_step_reset_at = now,<br/>metrics 100 %, signed_contract row
+  API-->>Child: 201 {status: accepted, state (unlocked)}
+  API-->>Parent: PetUpdated "signed_contract" after commit (awaiting_contract false)
+  Note over Child,DB: the dog is born — game loop runs from the signing moment (M1-07b)
 ```
 
 ## 2b. Mobile app launch — session restore (M1-12)
@@ -87,13 +93,16 @@ flowchart TD
   T -- yes --> U[GET /api/user]
   U -- 200 --> R{role}
   R -- parent --> PD[ParentDashboardScreen]
-  R -- "child + pet" --> HUD["ChildHudScreen<br/>(+ LockedScreen if game over / ill)"]
+  R -- "child + born pet" --> HUD["ChildHudScreen<br/>(+ LockedScreen if game over / ill)"]
+  R -- "child + unborn pet<br/>(born_at null)" --> CON["PairingScreen — contract step<br/>(M1-07b)"]
+  CON -- "POST /api/child/contract 201 / 409<br/>→ setPet(state.pet)" --> HUD
   R -- "child, no pet" --> PIN[PairingScreen — PIN step]
+  PIN -- "POST /api/child/pair" --> CON
   U -- 401 --> CLR[delete token] --> LOGIN
   U -- "network / 5xx" --> OFF["Splash 'Ni povezave'<br/>token kept"]
   OFF -- "Poskusi znova" --> U
   OFF -- Odjava --> OUT
-  PD & HUD & PIN -- "Odjava / any later 401" --> OUT["logout(): POST /api/logout (best effort)<br/>→ delete token → clear query cache → reset store"]
+  PD & HUD & PIN & CON -- "Odjava / any later 401" --> OUT["logout(): POST /api/logout (best effort)<br/>→ delete token → clear query cache → reset store"]
   OUT --> LOGIN
 ```
 
@@ -101,7 +110,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-  T([Scheduler tick]) --> IDS[Load active pet IDs]
+  T([Scheduler tick]) --> IDS["Load IDs of active, born pets<br/>(unborn = born_at null are skipped, M1-07b)"]
   IDS --> L{{For each pet: transaction + row lock}}
   L --> RC{"Illness over?<br/>(illness_until ≤ now)"}
   RC -- yes --> REC["Fresh start at illness_until:<br/>hygiene 100 %, neglect clocks restart,<br/>escalation 0"]
@@ -130,7 +139,9 @@ flowchart TD
 
 ```mermaid
 stateDiagram-v2
-  [*] --> OK
+  [*] --> Unborn: pairing (PIN)
+  Unborn --> OK: contract signed = birth<br/>(born_at = now, metrics 100 %)
+  note left of Unborn: waiting for the contract —<br/>no decay, no hygiene events,<br/>no day close, no escalation;<br/>actions 423 contract_required
   OK --> Phase1: displayed metric ≤ 30 %<br/>(energy only outside quiet hours)
   Phase1 --> Phase2: ≤ 10 %
   Phase2 --> Phase3: hunger / thirst / hygiene 0 % for > 1 h<br/>(parent alarm — never from energy)
@@ -183,7 +194,7 @@ sequenceDiagram
   API->>S: feed(pet)
   S->>DB: BEGIN · SELECT pet FOR UPDATE
   S->>S: illness over? → fresh start (recoverFromIllnessIfDue)
-  alt game over / inactive / hard stop / ill
+  alt game over / inactive / hard stop / contract required (unborn) / ill
     S-->>API: LOCKED + reason → 423 {reason, locked_until, state}
   else
     S->>S: catch up decay since last tick (PetDecayService::catchUpLocked)
@@ -202,7 +213,7 @@ sequenceDiagram
   S->>DB: COMMIT
   S-->>App: one PetUpdated after commit ("fed_pet",<br/>or "metric_changed" if only the catch-up changed what shows)
   Note over S,C: Water: same flow, CareScheduleService::water —<br/>water_times_per_day per local day, ≥ water_min_gap_minutes real minutes<br/>since the last refill (also across midnight) → thirst 100 %, watered_pet row
-  Note over S,DB: Clean: settles due hygiene events, hygiene 100 %, cleaned_poop row (no window).<br/>Contract: once per pet → pet_contracts row + signed_contract row → 201; again → 409
+  Note over S,DB: Clean: settles due hygiene events, hygiene 100 %, cleaned_poop row (no window).<br/>Contract: allowed while contract_required; once per pet → pet_contracts row + signed_contract row → 201<br/>(unborn pet: birth in the same transaction, M1-07b); again → 409
 ```
 
 ### 5b. Step sync
@@ -265,6 +276,7 @@ erDiagram
     timestamp frozen_at
     date hygiene_scheduled_through
     timestamp walk_illness_due_at
+    timestamp born_at "null = unborn (M1-07b)"
     string media_status
     jsonb pet_dna
     bool is_hard_stopped

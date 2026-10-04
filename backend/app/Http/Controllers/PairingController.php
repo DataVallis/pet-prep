@@ -41,7 +41,8 @@ class PairingController extends Controller
 
     /**
      * Pair a child to a parent using a 6-digit PIN.
-     * Initializes the child's pet session atomically.
+     * Creates the child's pet atomically — unborn (`born_at` null,
+     * `awaiting_contract` true) until POST /api/child/contract.
      *
      * POST /api/child/pair
      */
@@ -62,9 +63,12 @@ class PairingController extends Controller
                     'id' => $pet->id,
                     'breed_type' => $pet->breed_type->value,
                     'hunger_level' => $pet->displayMetric('hunger_level'),
+                    'thirst_level' => $pet->displayMetric('thirst_level'),
                     'energy_level' => $pet->displayMetric('energy_level'),
                     'hygiene_level' => $pet->displayMetric('hygiene_level'),
-                    'born_at' => $pet->born_at->toIso8601String(),
+                    // null until the contract is signed (M1-07b).
+                    'born_at' => $pet->born_at?->toIso8601String(),
+                    'awaiting_contract' => $pet->isUnborn(),
                     'is_active' => $pet->is_active,
                     'pet_dna' => [
                         'seed' => $pet->pet_dna['seed'] ?? null,

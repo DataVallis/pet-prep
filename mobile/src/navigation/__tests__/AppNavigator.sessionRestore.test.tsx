@@ -7,11 +7,12 @@ import * as SecureStore from 'expo-secure-store';
 import { ApiError, api } from '@/api/client';
 import AppNavigator from '@/navigation/AppNavigator';
 import { useAppStore } from '@/store/appStore';
-import { makePet } from '@/test-utils/fixtures';
+import { makeChildState, makePet } from '@/test-utils/fixtures';
+import { CONTRACT_STRINGS } from '@/screens/PairingScreen';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
-  return { ...actual, api: { ...actual.api, getUser: jest.fn(), logout: jest.fn() } };
+  return { ...actual, api: { ...actual.api, getUser: jest.fn(), logout: jest.fn(), signContract: jest.fn() } };
 });
 
 // Role screens are covered elsewhere; here we only care which one is routed to.
@@ -32,6 +33,7 @@ const getItem = SecureStore.getItemAsync as jest.Mock;
 const deleteItem = SecureStore.deleteItemAsync as jest.Mock;
 const getUser = api.getUser as jest.Mock;
 const apiLogout = api.logout as jest.Mock;
+const signContract = api.signContract as jest.Mock;
 
 describe('AppNavigator session restore', () => {
   beforeEach(() => {
@@ -99,6 +101,35 @@ describe('AppNavigator session restore', () => {
     render(<AppNavigator />);
 
     expect(await screen.findByText('Vnos 6-mestne kode za seznanitev (PIN)')).toBeTruthy();
+  });
+
+  it('child with an unborn pet (paired, contract not signed) → contract step, not the HUD (M1-07b)', async () => {
+    getItem.mockResolvedValueOnce('child-token');
+    // /api/user returns the raw pet: born_at null, no awaiting_contract key.
+    getUser.mockResolvedValueOnce({ id: 2, name: 'Otrok', email: 'c@x.si', role: 'child', pet: makePet({ born_at: null }) });
+    render(<AppNavigator />);
+
+    expect(await screen.findByText(CONTRACT_STRINGS.padHint)).toBeTruthy();
+    expect(screen.queryByText('CHILD_HUD')).toBeNull();
+    expect(useAppStore.getState().lockState).toBe('none');
+  });
+
+  it('restored unborn pet → signing the contract opens the HUD with the server pet (M1-07b)', async () => {
+    getItem.mockResolvedValueOnce('child-token');
+    getUser.mockResolvedValueOnce({ id: 2, name: 'Otrok', email: 'c@x.si', role: 'child', pet: makePet({ born_at: null }) });
+    signContract.mockResolvedValueOnce({ status: 'accepted', state: makeChildState() });
+    render(<AppNavigator />);
+
+    const pad = await screen.findByTestId('signature-pad');
+    fireEvent(pad, 'responderGrant', { nativeEvent: { locationX: 5, locationY: 5 } });
+    fireEvent(pad, 'responderMove', { nativeEvent: { locationX: 60, locationY: 30 } });
+    fireEvent.press(screen.getByText(CONTRACT_STRINGS.accept));
+
+    expect(await screen.findByText('CHILD_HUD')).toBeTruthy();
+    expect(signContract).toHaveBeenCalledWith({ signature_format: 'svg_path', signature: 'M5 5 L60 30' });
+    const { pet } = useAppStore.getState();
+    expect(pet?.born_at).toBe('2026-10-04T09:00:00+00:00');
+    expect(pet?.awaiting_contract).toBe(false);
   });
 
   it('401 → token deleted, login shown', async () => {

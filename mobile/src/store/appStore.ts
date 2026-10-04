@@ -40,6 +40,16 @@ export function lockStateFromPet(pet: Pet | null, now: number = Date.now()): Loc
   return 'none';
 }
 
+/**
+ * The pet is paired but unborn until the child signs the contract (M1-07b): the app
+ * must show the contract step, not the HUD. `awaiting_contract` wins when present
+ * (child state, broadcasts); the raw pet from login / `/api/user` only has `born_at`.
+ */
+export function isAwaitingContract(pet: Pet | null): boolean {
+  if (!pet) return false;
+  return pet.awaiting_contract ?? pet.born_at === null;
+}
+
 interface AppStore {
   // Auth & pairing
   authToken: string | null;
@@ -122,6 +132,8 @@ export const useAppStore = create<AppStore>((set) => ({
         escalation_level: broadcast.escalation_level,
         current_video_url: broadcast.current_video_url ?? state.pet.current_video_url,
         is_game_over: broadcast.is_game_over,
+        awaiting_contract: broadcast.awaiting_contract ?? state.pet.awaiting_contract,
+        born_at: broadcast.born_at !== undefined ? broadcast.born_at : state.pet.born_at,
       };
 
       // Determine lock state from broadcast
