@@ -49,6 +49,13 @@ for pair in "QUEUE_CONNECTION=redis" "BROADCAST_CONNECTION=reverb"; do
         exit 1
     fi
 done
+# Jobs go to REDIS_QUEUE (default "default"); the `queue` worker listens only to
+# `default`, so any other value would strand fal.ai jobs.
+rq=$(grep -E "^REDIS_QUEUE=" "$ENV_FILE" | tail -n1 | cut -d= -f2- | tr -d '"'"'"' \r' || true)
+if [ -n "$rq" ] && [ "$rq" != "default" ]; then
+    echo "ERROR: REDIS_QUEUE must be unset or 'default' in ${ENV_FILE} (found '${rq}')." >&2
+    exit 1
+fi
 
 rm -f "${REPO_DIR}/backend/.env"
 cp "$ENV_FILE" "${REPO_DIR}/backend/.env"

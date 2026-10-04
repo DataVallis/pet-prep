@@ -43,13 +43,13 @@ export interface LoginResponse {
 export type ParentDashboardResponse =
   operations['parentDashboard.dashboard']['responses'][200]['content']['application/json'];
 
-/** Exact backend message when the parent has no child profile yet. */
 /** Response from POST /api/broadcasting/auth (Pusher protocol signature). */
 export interface BroadcastAuthResponse {
   auth: string;
   channel_data?: string;
 }
 
+/** Exact backend message when the parent has no child profile yet. */
 export const NO_CHILD_PAIRED_MESSAGE = 'No child profile paired yet.';
 
 const TOKEN_KEY = 'petprep_auth_token';

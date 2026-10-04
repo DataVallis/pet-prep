@@ -16,7 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
     // POST /api/broadcasting/auth (no session / CSRF). Only private channels.
     ->withBroadcasting(
         __DIR__.'/../routes/channels.php',
-        ['prefix' => 'api', 'middleware' => ['api', 'auth:sanctum']],
+        ['prefix' => 'api', 'middleware' => ['api', 'auth:sanctum', 'throttle:api']],
     )
     ->withMiddleware(function (Middleware $middleware) {
         // API guests get a JSON 401 (see withExceptions), not a redirect to a
