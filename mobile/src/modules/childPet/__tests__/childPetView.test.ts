@@ -4,7 +4,8 @@ import {
   lockFromFlags,
   lockStateFromView,
   mergePolledState,
-  nextRefreshAt,
+  BOUNDARY_RETRY_MS,
+  nextRefreshDelay,
   normalizeChildState,
   optimisticView,
   revertOptimistic,
@@ -55,14 +56,14 @@ describe('applyBroadcast (out-of-order debt)', () => {
   });
 
   it('drops an event older than the last applied one', () => {
-    const newer = applyBroadcast(base, makeBroadcast({ hunger_level: 41, emitted_at: '2026-10-04T10:01:00.000Z' }));
+    const newer = applyBroadcast(base, makeBroadcast({ hunger_level: 41, emitted_at: '2026-10-04T10:01:00.000+00:00' }));
     expect(newer).not.toBeNull();
-    const older = applyBroadcast(newer!.view, makeBroadcast({ hunger_level: 90, emitted_at: '2026-10-04T10:00:30.000Z' }));
+    const older = applyBroadcast(newer!.view, makeBroadcast({ hunger_level: 90, emitted_at: '2026-10-04T10:00:30.000+00:00' }));
     expect(older).toBeNull();
   });
 
   it('drops an event older than the HTTP snapshot, and events of another pet', () => {
-    expect(applyBroadcast(base, makeBroadcast({ emitted_at: '2026-10-04T09:59:59.900Z' }))).toBeNull();
+    expect(applyBroadcast(base, makeBroadcast({ emitted_at: '2026-10-04T09:59:59.900+00:00' }))).toBeNull();
     expect(applyBroadcast(base, makeBroadcast({ pet_id: 8 }))).toBeNull();
     expect(applyBroadcast(base, makeBroadcast({ emitted_at: 'garbage' }))).toBeNull();
   });
@@ -106,16 +107,16 @@ describe('applyBroadcast (out-of-order debt)', () => {
         lock: { is_locked: true, reason: 'ill', until: '2026-10-04T18:30:00+02:00' },
       }),
     );
-    const result = applyBroadcast(ill, makeBroadcast({ is_ill: true, illness_until: '2026-10-04T16:30:00Z' }));
+    const result = applyBroadcast(ill, makeBroadcast({ is_ill: true, illness_until: '2026-10-04T16:30:00+00:00' }));
     expect(result?.view.lock.until).toBe('2026-10-04T18:30:00+02:00');
   });
 
   it('illness carries the vet end time', () => {
     const result = applyBroadcast(
       base,
-      makeBroadcast({ is_ill: true, illness_until: '2026-10-04T16:30:00Z', event_type: 'illness_triggered' }),
+      makeBroadcast({ is_ill: true, illness_until: '2026-10-04T16:30:00+00:00', event_type: 'illness_triggered' }),
     );
-    expect(result?.view.lock).toEqual({ is_locked: true, reason: 'ill', until: '2026-10-04T16:30:00Z' });
+    expect(result?.view.lock).toEqual({ is_locked: true, reason: 'ill', until: '2026-10-04T16:30:00+00:00' });
     expect(lockStateFromView(result!.view)).toBe('illness');
   });
 });
@@ -124,7 +125,7 @@ describe('mergePolledState', () => {
   it('a poll from an earlier second than the newest broadcast is ignored', () => {
     const shown = applyBroadcast(
       normalizeChildState(makeLiveChildState()),
-      makeBroadcast({ hunger_level: 41, emitted_at: '2026-10-04T10:00:07.400Z' }),
+      makeBroadcast({ hunger_level: 41, emitted_at: '2026-10-04T10:00:07.400+00:00' }),
     )!.view;
     const stalePoll = normalizeChildState(makeLiveChildState({ server_time: '2026-10-04T12:00:06+02:00' }));
     expect(mergePolledState(shown, stalePoll)).toBe(shown);
@@ -133,7 +134,7 @@ describe('mergePolledState', () => {
   it('a poll from the same or a later second wins and keeps the broadcast clock', () => {
     const shown = applyBroadcast(
       normalizeChildState(makeLiveChildState()),
-      makeBroadcast({ emitted_at: '2026-10-04T10:00:07.400Z' }),
+      makeBroadcast({ emitted_at: '2026-10-04T10:00:07.400+00:00' }),
     )!.view;
     const poll = normalizeChildState(makeLiveChildState({ server_time: '2026-10-04T12:00:07+02:00', pet: { hunger_level: 39 } }));
     const merged = mergePolledState(shown, poll);
@@ -192,42 +193,74 @@ describe('lockFromFlags priority (game over › inactive › hard stop › contr
   });
 });
 
-describe('nextRefreshAt (M3: time-based staleness)', () => {
+describe('nextRefreshDelay (M3 time-based staleness, N2 clock skew)', () => {
+  const MIN = 60_000;
+  /** State received when the device clock showed `deviceMs` (default: same as the server). */
+  const viewAt = (raw: ChildPetState, deviceMs = Date.parse(raw.server_time)) => normalizeChildState(raw, 0, deviceMs);
   const now = Date.parse('2026-10-04T10:00:00Z'); // 12:00 Ljubljana
 
   it('earliest of next feed window, water gap end, current window end, family midnight', () => {
-    const view = normalizeChildState(
-      makeLiveChildState({ water: { can_water: false, next_allowed_at: '2026-10-04T15:30:00+02:00' } }),
-    );
-    expect(nextRefreshAt(view, now)).toBe(Date.parse('2026-10-04T13:30:00Z')); // water 15:30 local
+    const view = viewAt(makeLiveChildState({ water: { can_water: false, next_allowed_at: '2026-10-04T15:30:00+02:00' } }));
+    expect(view.clockSkewMs).toBe(0);
+    expect(nextRefreshDelay(view, now)).toBe(210 * MIN); // water 15:30 local
 
-    const open = normalizeChildState(
+    const open = viewAt(
       makeLiveChildState({
+        server_time: '2026-10-04T09:00:00+02:00',
         feeding: {
+          can_feed: true,
           current_window: { start: '2026-10-04T06:00:00+02:00', end: '2026-10-04T10:00:00+02:00' },
           next_feed_window: { start: '2026-10-04T17:00:00+02:00', end: '2026-10-04T21:00:00+02:00' },
         },
       }),
     );
-    expect(nextRefreshAt(open, Date.parse('2026-10-04T07:00:00Z'))).toBe(Date.parse('2026-10-04T08:00:00Z'));
+    expect(nextRefreshDelay(open, Date.parse('2026-10-04T07:00:00Z'))).toBe(60 * MIN); // window end 10:00
   });
 
   it('falls back to the next FAMILY midnight (device runs on UTC)', () => {
-    const view = normalizeChildState(makeLiveChildState({ feeding: { next_feed_window: null } }));
-    expect(nextRefreshAt(view, Date.parse('2026-10-04T19:30:00Z'))).toBe(Date.parse('2026-10-04T22:00:00Z'));
-    const ny = normalizeChildState(
+    const view = viewAt(makeLiveChildState({ server_time: '2026-10-04T21:30:00+02:00', feeding: { next_feed_window: null } }));
+    expect(nextRefreshDelay(view, Date.parse('2026-10-04T19:30:00Z'))).toBe(150 * MIN); // 21:30 → 00:00
+    const ny = viewAt(
       makeLiveChildState({
         timezone: 'America/New_York',
         server_time: '2026-10-04T15:30:00-04:00',
         feeding: { next_feed_window: null },
       }),
     );
-    expect(nextRefreshAt(ny, Date.parse('2026-10-04T19:30:00Z'))).toBe(Date.parse('2026-10-05T04:00:00Z'));
+    expect(nextRefreshDelay(ny, Date.parse('2026-10-04T19:30:00Z'))).toBe(510 * MIN); // to 04:00Z
   });
 
-  it('ignores past instants', () => {
-    const view = normalizeChildState(makeLiveChildState({ water: { next_allowed_at: '2026-10-04T08:00:00+02:00' } }));
-    expect(nextRefreshAt(view, now)).toBe(Date.parse('2026-10-04T15:00:00Z')); // 17:00 window
+  it('N2: a device clock 2 min fast still refreshes at the server’s boundary', () => {
+    const deviceAhead = now + 2 * MIN;
+    const view = viewAt(
+      makeLiveChildState({ water: { can_water: false, next_allowed_at: '2026-10-04T12:30:00+02:00' } }),
+      deviceAhead,
+    );
+    expect(view.clockSkewMs).toBe(-2 * MIN);
+    // 30 min of server time remain, although the device clock already shows 12:32 − 2 = 28 min to go.
+    expect(nextRefreshDelay(view, deviceAhead)).toBe(30 * MIN);
+    // Half an hour of device time later the boundary is reached in server time too.
+    expect(nextRefreshDelay(view, deviceAhead + 30 * MIN)).toBe(BOUNDARY_RETRY_MS);
+  });
+
+  it('N2: retries every 30 s while a passed boundary still blocks the action', () => {
+    const stuck = viewAt(
+      makeLiveChildState({ water: { can_water: false, next_allowed_at: '2026-10-04T11:59:50+02:00' } }),
+    );
+    expect(nextRefreshDelay(stuck, now)).toBe(BOUNDARY_RETRY_MS);
+    const feedStuck = viewAt(
+      makeLiveChildState({ feeding: { can_feed: false, next_feed_window: { start: '2026-10-04T11:59:00+02:00', end: '2026-10-04T16:00:00+02:00' } } }),
+    );
+    expect(nextRefreshDelay(feedStuck, now)).toBe(BOUNDARY_RETRY_MS);
+  });
+
+  it('no retry when the action is allowed or blocked for another reason (lock / mess)', () => {
+    const allowed = viewAt(makeLiveChildState({ water: { can_water: true, next_allowed_at: '2026-10-04T11:00:00+02:00' } }));
+    expect(nextRefreshDelay(allowed, now)).toBe(5 * 60 * MIN); // 17:00 window
+    const messy = viewAt(
+      makeLiveChildState({ pet: { needs_cleaning: true, hygiene_level: 0 }, water: { can_water: false, next_allowed_at: '2026-10-04T11:00:00+02:00' } }),
+    );
+    expect(nextRefreshDelay(messy, now)).toBe(5 * 60 * MIN);
   });
 });
 
@@ -246,7 +279,7 @@ describe('revertOptimistic (M4)', () => {
   it('keeps the metric when a newer broadcast already brought the server value; never re-enables a locked action', () => {
     const afterBroadcast = applyBroadcast(
       optimisticView(previous, 'feed'),
-      makeBroadcast({ hunger_level: 58, is_hard_stopped: true, emitted_at: '2026-10-04T10:00:30.000Z' }),
+      makeBroadcast({ hunger_level: 58, is_hard_stopped: true, emitted_at: '2026-10-04T10:00:30.000+00:00' }),
     )!.view;
     const reverted = revertOptimistic(afterBroadcast, previous, 'feed');
     expect(reverted.pet.hunger_level).toBe(58);

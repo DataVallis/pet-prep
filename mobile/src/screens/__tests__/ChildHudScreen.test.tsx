@@ -270,7 +270,7 @@ describe('ChildHudScreen', () => {
     );
     act(() => {
       mockSocket.handler?.(
-        makeBroadcast({ is_hard_stopped: true, event_type: 'hard_stop_activated', emitted_at: '2026-10-04T10:00:30.000Z' }),
+        makeBroadcast({ is_hard_stopped: true, event_type: 'hard_stop_activated', emitted_at: '2026-10-04T10:00:30.000+00:00' }),
       );
     });
     expect(await screen.findByTestId('locked-screen')).toBeTruthy();
@@ -280,7 +280,7 @@ describe('ChildHudScreen', () => {
     getChildPet.mockResolvedValue(makeLiveChildState({ server_time: '2026-10-04T12:05:00+02:00' }));
     act(() => {
       mockSocket.handler?.(
-        makeBroadcast({ is_hard_stopped: false, event_type: 'hard_stop_deactivated', emitted_at: '2026-10-04T10:04:00.000Z' }),
+        makeBroadcast({ is_hard_stopped: false, event_type: 'hard_stop_deactivated', emitted_at: '2026-10-04T10:04:00.000+00:00' }),
       );
     });
     await waitFor(() => expect(screen.queryByTestId('locked-screen')).toBeNull());

@@ -14,29 +14,65 @@ export interface LocalParts {
 
 const ISO_WALL_CLOCK = /^(\d{4}-\d{2}-\d{2})T(\d{2}):(\d{2})/;
 
-function viaIntl(ms: number, timeZone: string): LocalParts | null {
+/**
+ * One `Intl.DateTimeFormat` per zone (N4): building one is far more expensive than
+ * formatting, and the HUD formats on every render. `null` = the device can't do the zone.
+ */
+const formatterCache = new Map<string, Intl.DateTimeFormat | null>();
+
+function zoneFormatter(timeZone: string): Intl.DateTimeFormat | null {
+  if (formatterCache.has(timeZone)) return formatterCache.get(timeZone) ?? null;
+  let formatter: Intl.DateTimeFormat | null;
   try {
-    const parts = new Intl.DateTimeFormat('en-GB', {
+    formatter = new Intl.DateTimeFormat('en-GB', {
       timeZone,
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
       hour: '2-digit',
       minute: '2-digit',
+      second: '2-digit',
       hourCycle: 'h23',
-    }).formatToParts(new Date(ms));
-    const get = (type: Intl.DateTimeFormatPartTypes): string | undefined =>
-      parts.find((p) => p.type === type)?.value;
-    const year = get('year');
-    const month = get('month');
-    const day = get('day');
-    const hour = get('hour');
-    const minute = get('minute');
-    if (!year || !month || !day || !hour || !minute) return null;
-    return { date: `${year}-${month}-${day}`, time: `${hour === '24' ? '00' : hour}:${minute}` };
+    });
+  } catch {
+    formatter = null;
+  }
+  formatterCache.set(timeZone, formatter);
+  return formatter;
+}
+
+interface ZoneParts {
+  year: string;
+  month: string;
+  day: string;
+  hour: string;
+  minute: string;
+  second: string;
+}
+
+function zoneParts(ms: number, timeZone: string): ZoneParts | null {
+  const formatter = zoneFormatter(timeZone);
+  if (!formatter) return null;
+  try {
+    const parts = formatter.formatToParts(new Date(ms));
+    const get = (type: Intl.DateTimeFormatPartTypes): string => parts.find((p) => p.type === type)?.value ?? '';
+    const result = {
+      year: get('year'),
+      month: get('month'),
+      day: get('day'),
+      hour: get('hour') === '24' ? '00' : get('hour'),
+      minute: get('minute'),
+      second: get('second'),
+    };
+    return Object.values(result).every((v) => v.length > 0) ? result : null;
   } catch {
     return null;
   }
+}
+
+function viaIntl(ms: number, timeZone: string): LocalParts | null {
+  const p = zoneParts(ms, timeZone);
+  return p ? { date: `${p.year}-${p.month}-${p.day}`, time: `${p.hour}:${p.minute}` } : null;
 }
 
 /**
@@ -75,13 +111,18 @@ export function whenText(iso: string | null, nowIso: string | null, timeZone: st
 }
 
 /**
- * "18:30" for a lock end. A server instant carries the family offset already
- * (`state.lock.until`), so its own wall clock is used; a UTC instant (`Z`, e.g. a
- * broadcast's `illness_until`) goes through Intl in `timeZone`.
+ * "18:30" for a lock end in the family zone (N1). The string's own clock time is used
+ * only when its offset IS the family offset at that instant (`state.lock.until`), or
+ * when the device can't resolve the zone; a UTC value (`illness_until` from a broadcast,
+ * `+00:00` / `Z`) for a family elsewhere goes through Intl.
  */
 export function lockClock(iso: string | null, timeZone: string | null): string | null {
   if (!iso) return null;
-  if (/[+-]\d{2}:\d{2}$/.test(iso)) {
+  const ms = Date.parse(iso);
+  if (Number.isNaN(ms)) return null;
+  const written = isoOffsetMinutes(iso);
+  const family = timeZone ? zoneOffsetMinutes(ms, timeZone) : null;
+  if (written !== null && (family === null || family === written)) {
     const match = ISO_WALL_CLOCK.exec(iso);
     if (match) return `${match[2]}:${match[3]}`;
   }
@@ -100,25 +141,11 @@ export function isoOffsetMinutes(iso: string | null): number | null {
 
 /** Offset (minutes east of UTC) of `timeZone` at instant `ms`, via Intl; null if unsupported. */
 export function zoneOffsetMinutes(ms: number, timeZone: string): number | null {
-  try {
-    const parts = new Intl.DateTimeFormat('en-GB', {
-      timeZone,
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hourCycle: 'h23',
-    }).formatToParts(new Date(ms));
-    const n = (type: Intl.DateTimeFormatPartTypes): number => Number(parts.find((p) => p.type === type)?.value);
-    const hour = n('hour') === 24 ? 0 : n('hour');
-    const asUtc = Date.UTC(n('year'), n('month') - 1, n('day'), hour, n('minute'), n('second'));
-    if (Number.isNaN(asUtc)) return null;
-    return Math.round((asUtc - Math.floor(ms / 1000) * 1000) / 60_000);
-  } catch {
-    return null;
-  }
+  const p = zoneParts(ms, timeZone);
+  if (!p) return null;
+  const asUtc = Date.UTC(Number(p.year), Number(p.month) - 1, Number(p.day), Number(p.hour), Number(p.minute), Number(p.second));
+  if (Number.isNaN(asUtc)) return null;
+  return Math.round((asUtc - Math.floor(ms / 1000) * 1000) / 60_000);
 }
 
 /**

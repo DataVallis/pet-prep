@@ -269,6 +269,37 @@ describe('useStepSync', () => {
     expect(JSON.parse(store.data[KEY])).toEqual({ date: '2026-10-04', steps: 1600 });
   });
 
+  it('N3: after logout deleted the key, the HUD unmount does not write it back', async () => {
+    const { pedometer, emit } = makePedometer();
+    const store = memoryStore({ [KEY]: JSON.stringify({ date: '2026-10-04', steps: 1500 }) });
+    const { unmount } = setup({ platform: 'android', pedometer, storage: store }, { mine: 1500 });
+    await flush();
+    await flush();
+    act(() => emit(80));
+    (store.setItemAsync as jest.Mock).mockClear();
+
+    // logout(): delete the child's key, then reset the session; the HUD unmounts afterwards.
+    delete store.data[KEY];
+    act(() => useAppStore.getState().reset());
+    unmount();
+    await flush();
+
+    expect(store.setItemAsync).not.toHaveBeenCalled();
+    expect(store.data[KEY]).toBeUndefined();
+  });
+
+  it('N3 control: a signed-in unmount (leaving the HUD) still saves the total', async () => {
+    const { pedometer, emit } = makePedometer();
+    const store = memoryStore({ [KEY]: JSON.stringify({ date: '2026-10-04', steps: 1500 }) });
+    const { unmount } = setup({ platform: 'android', pedometer, storage: store }, { mine: 1580 });
+    await flush();
+    await flush();
+    act(() => emit(80));
+    unmount();
+    await flush();
+    expect(JSON.parse(store.data[KEY])).toEqual({ date: '2026-10-04', steps: 1660 }); // server 1580 + 80 live
+  });
+
   it('m2: a new counter loads only after the previous counter’s persist finished', async () => {
     const { pedometer, emit } = makePedometer();
     const store = memoryStore({ [KEY]: JSON.stringify({ date: '2026-10-04', steps: 1000 }) });

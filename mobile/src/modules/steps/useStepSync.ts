@@ -91,6 +91,16 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
   const counterRef = useRef<LiveStepCounter | null>(null);
   /** The last `persist()` of a previous counter — the next `load()` waits for it (m2). */
   const persistChainRef = useRef<Promise<void>>(Promise.resolve());
+
+  /**
+   * Save a child's counter only while that child is still signed in (N3): `logout()`
+   * deletes the key before the HUD unmounts, and the unmount must not write it back.
+   */
+  const persistIfSignedIn = useCallback((counter: LiveStepCounter, owner: number) => {
+    if (useAppStore.getState().user?.id !== owner) return;
+    persistChainRef.current = counter.persist();
+  }, []);
+  const counterOwnerRef = useRef<number | null>(null);
   const inFlightRef = useRef(false);
 
   // 1. Availability + current permission (no prompt).
@@ -146,13 +156,14 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
       if (steps === null || steps <= serverStepsOn(today)) return;
       await mutateAsync({ stepsToday: steps, recordedAt: isoWithOffset(at) });
       const counter = counterRef.current;
-      if (counter) persistChainRef.current = counter.persist();
+      const owner = counterOwnerRef.current;
+      if (counter && owner !== null) persistIfSignedIn(counter, owner);
     } catch {
       // Quiet: offline / 423 / 5xx — the next trigger tries again.
     } finally {
       inFlightRef.current = false;
     }
-  }, [enabled, permission, readToday, serverStepsOn, mutateAsync]);
+  }, [enabled, permission, readToday, serverStepsOn, mutateAsync, persistIfSignedIn]);
 
   const syncRef = useRef(syncNow);
   syncRef.current = syncNow;
@@ -164,6 +175,7 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
     const dayKey = (date: Date) => calendarRef.current.dateOf(date.getTime());
     const counter = new LiveStepCounter(storage, liveStepsKey(userId), dayKey, now());
     counterRef.current = counter;
+    counterOwnerRef.current = userId;
     const toDelta = createDeltaTracker();
     let subscription: { remove: () => void } | null = null;
     let cancelled = false;
@@ -180,10 +192,13 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
     return () => {
       cancelled = true;
       subscription?.remove();
-      persistChainRef.current = counter.persist();
-      if (counterRef.current === counter) counterRef.current = null;
+      persistIfSignedIn(counter, userId);
+      if (counterRef.current === counter) {
+        counterRef.current = null;
+        counterOwnerRef.current = null;
+      }
     };
-  }, [enabled, permission, userId]);
+  }, [enabled, permission, userId, persistIfSignedIn]);
 
   // 3. Triggers: now, on foreground, every 5 minutes.
   useEffect(() => {
@@ -197,14 +212,15 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
         void syncRef.current();
       } else {
         const counter = counterRef.current;
-        if (counter) persistChainRef.current = counter.persist();
+        const owner = counterOwnerRef.current;
+        if (counter && owner !== null) persistIfSignedIn(counter, owner);
       }
     });
     return () => {
       clearInterval(interval);
       subscription.remove();
     };
-  }, [enabled, permission]);
+  }, [enabled, permission, persistIfSignedIn]);
 
   const requestPermission = useCallback(async () => {
     try {

@@ -28,8 +28,8 @@ export function makeBroadcast(overrides: Partial<PetUpdatedBroadcast> = {}): Pet
     current_video_url: null,
     reference_image_url: null,
     event_type: 'metric_changed',
-    updated_at: '2026-10-04T10:00:05Z',
-    emitted_at: '2026-10-04T10:00:05.250Z',
+    updated_at: '2026-10-04T10:00:05+00:00',
+    emitted_at: '2026-10-04T10:00:05.250+00:00',
     ...overrides,
   };
 }

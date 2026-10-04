@@ -203,8 +203,8 @@ describe('applyBroadcastToCache', () => {
     const { client } = setup();
     writeChildState(client, makeLiveChildState());
 
-    expect(applyBroadcastToCache(client, makeBroadcast({ hunger_level: 20, emitted_at: '2026-10-04T10:02:00.000Z' }))).toBe(true);
-    expect(applyBroadcastToCache(client, makeBroadcast({ hunger_level: 90, emitted_at: '2026-10-04T10:01:00.000Z' }))).toBe(false);
+    expect(applyBroadcastToCache(client, makeBroadcast({ hunger_level: 20, emitted_at: '2026-10-04T10:02:00.000+00:00' }))).toBe(true);
+    expect(applyBroadcastToCache(client, makeBroadcast({ hunger_level: 90, emitted_at: '2026-10-04T10:01:00.000+00:00' }))).toBe(false);
     expect(client.getQueryData<ChildPetView>(childPetKey)?.pet.hunger_level).toBe(20);
   });
 
@@ -213,10 +213,10 @@ describe('applyBroadcastToCache', () => {
     writeChildState(client, makeLiveChildState());
     const invalidate = jest.spyOn(client, 'invalidateQueries');
 
-    applyBroadcastToCache(client, makeBroadcast({ emitted_at: '2026-10-04T10:00:06.000Z' }));
+    applyBroadcastToCache(client, makeBroadcast({ emitted_at: '2026-10-04T10:00:06.000+00:00' }));
     expect(invalidate).not.toHaveBeenCalled();
 
-    applyBroadcastToCache(client, makeBroadcast({ emitted_at: '2026-10-04T10:00:07.000Z', event_type: 'fed_pet', hunger_level: 100 }));
+    applyBroadcastToCache(client, makeBroadcast({ emitted_at: '2026-10-04T10:00:07.000+00:00', event_type: 'fed_pet', hunger_level: 100 }));
     expect(invalidate).toHaveBeenCalledWith({ queryKey: childPetKey });
   });
 
@@ -230,9 +230,9 @@ describe('applyBroadcastToCache', () => {
   it('an action response keeps the broadcast clock so older events stay dropped', () => {
     const { client } = setup();
     writeChildState(client, makeLiveChildState());
-    applyBroadcastToCache(client, makeBroadcast({ emitted_at: '2026-10-04T10:00:09.000Z' }));
+    applyBroadcastToCache(client, makeBroadcast({ emitted_at: '2026-10-04T10:00:09.000+00:00' }));
     writeChildState(client, makeLiveChildState({ pet: { hunger_level: 100 }, server_time: '2026-10-04T12:00:09+02:00' }));
-    expect(applyBroadcastToCache(client, makeBroadcast({ hunger_level: 10, emitted_at: '2026-10-04T10:00:08.000Z' }))).toBe(false);
+    expect(applyBroadcastToCache(client, makeBroadcast({ hunger_level: 10, emitted_at: '2026-10-04T10:00:08.000+00:00' }))).toBe(false);
     expect(client.getQueryData<ChildPetView>(childPetKey)?.pet.hunger_level).toBe(100);
   });
 });

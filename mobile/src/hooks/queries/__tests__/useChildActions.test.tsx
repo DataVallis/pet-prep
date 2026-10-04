@@ -168,7 +168,7 @@ describe('care action mutations', () => {
     await waitFor(() => expect(cached()?.pet.hunger_level).toBe(100));
     // A tick broadcast arrives during the request: server truth for hunger (58) and thirst (30).
     act(() => {
-      applyBroadcastToCache(client, makeBroadcast({ hunger_level: 58, thirst_level: 30, emitted_at: '2026-10-04T10:00:20.000Z' }));
+      applyBroadcastToCache(client, makeBroadcast({ hunger_level: 58, thirst_level: 30, emitted_at: '2026-10-04T10:00:20.000+00:00' }));
     });
 
     await act(async () => call.reject(new TypeError('Network request failed')));

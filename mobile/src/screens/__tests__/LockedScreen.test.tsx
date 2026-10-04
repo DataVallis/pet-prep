@@ -14,7 +14,7 @@ describe('LockedScreen (M1-16)', () => {
   });
 
   it('illness: vet end time in the family timezone (UTC broadcast instant)', () => {
-    useAppStore.getState().setLockState('illness', { until: '2026-10-04T16:30:00Z', timezone: 'Europe/Ljubljana' });
+    useAppStore.getState().setLockState('illness', { until: '2026-10-04T16:30:00+00:00', timezone: 'Europe/Ljubljana' });
     render(<LockedScreen />);
     expect(screen.getByText('Kuža je pri veterinarju do 18:30. Potrebuje počitek.')).toBeTruthy();
   });

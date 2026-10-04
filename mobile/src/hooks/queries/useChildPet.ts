@@ -12,7 +12,7 @@ import { api, type ChildPetState } from '@/api/client';
 import {
   applyBroadcast,
   mergePolledState,
-  nextRefreshAt,
+  nextRefreshDelay,
   normalizeChildState,
   type ChildPetView,
 } from '@/modules/childPet/childPetView';
@@ -51,14 +51,13 @@ export function useChildPet() {
   const view = query.data;
   useEffect(() => {
     if (!view) return;
-    const now = Date.now();
-    const at = nextRefreshAt(view, now);
-    if (at === null) return;
+    const delay = nextRefreshDelay(view, Date.now());
+    if (delay === null) return;
     const timer = setTimeout(
       () => {
         void client.invalidateQueries({ queryKey: childPetKey });
       },
-      Math.min(Math.max(0, at - now) + BOUNDARY_MARGIN_MS, MAX_TIMER_MS),
+      Math.min(delay + BOUNDARY_MARGIN_MS, MAX_TIMER_MS),
     );
     return () => clearTimeout(timer);
   }, [view, client]);

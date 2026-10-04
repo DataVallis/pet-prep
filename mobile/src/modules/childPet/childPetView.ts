@@ -79,6 +79,11 @@ export interface ChildPetView {
   snapshotAtMs: number;
   /** ms of the newest applied broadcast `emitted_at`; 0 if none. */
   lastEmittedMs: number;
+  /**
+   * Server clock − device clock when this HTTP snapshot arrived (ms, ±1 s because
+   * `server_time` has whole seconds). Time-based refreshes compare in server time.
+   */
+  clockSkewMs: number;
 }
 
 const BREEDS: readonly BreedType[] = ['mutt', 'border_collie'];
@@ -124,8 +129,11 @@ function msOf(iso: string | null): number {
   return Number.isNaN(ms) ? 0 : ms;
 }
 
-/** Normalise the server's child state (GET or action `state`). */
-export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0): ChildPetView {
+/**
+ * Normalise the server's child state (GET or action `state`). `receivedAtMs` = device
+ * clock when it arrived (for the clock skew).
+ */
+export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, receivedAtMs = Date.now()): ChildPetView {
   const p = raw.pet;
   const windows = Array.isArray(raw.feeding.windows)
     ? raw.feeding.windows.map(windowOrNull).filter((w): w is TimeWindow => w !== null)
@@ -188,6 +196,7 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0): Chil
     contract: { signed: bool(raw.contract.signed), signed_at: isoOrNull(raw.contract.signed_at) },
     snapshotAtMs: msOf(raw.server_time),
     lastEmittedMs,
+    clockSkewMs: msOf(raw.server_time) > 0 ? msOf(raw.server_time) - receivedAtMs : 0,
   };
 }
 
@@ -353,21 +362,37 @@ export function revertOptimistic(current: ChildPetView, previous: ChildPetView, 
   }
 }
 
+/** Retry interval while a boundary has passed but the server still says "not yet" (N2). */
+export const BOUNDARY_RETRY_MS = 30_000;
+
 /**
- * When the cached state goes stale by the clock alone (M3): a feed window opens or
- * closes, the water gap ends, or the family midnight resets steps / water. Returns the
- * earliest such instant after `nowMs`, or null.
+ * How long until the cached state goes stale by the clock alone (M3): a feed window
+ * opens or closes, the water gap ends, or the family midnight resets steps / water.
+ * Boundaries are server instants, so they are compared in SERVER time (device clock +
+ * `clockSkewMs`, N2) — a fast or slow phone clock doesn't shift the refresh. When a
+ * boundary is already past but the state still blocks the action (a refetch raced the
+ * boundary, or the clocks disagree by more than the margin), retry every 30 s.
+ * Returns ms from now, or null.
  */
-export function nextRefreshAt(view: ChildPetView, nowMs: number): number | null {
-  const candidates = [
-    view.feeding.next_feed_window?.start ?? null,
-    view.feeding.current_window?.end ?? null,
-    view.water.next_allowed_at,
-  ]
-    .map((iso) => (iso ? Date.parse(iso) : Number.NaN))
-    .filter((ms) => Number.isFinite(ms) && ms > nowMs);
-  candidates.push(familyCalendar(view.timezone, view.server_time).nextMidnight(nowMs));
-  return candidates.length > 0 ? Math.min(...candidates) : null;
+export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): number | null {
+  const serverNow = deviceNowMs + view.clockSkewMs;
+  const blocked = view.lock.is_locked || view.pet.needs_cleaning;
+  const at = (iso: string | null | undefined): number => (iso ? Date.parse(iso) : Number.NaN);
+
+  const nextWindow = at(view.feeding.next_feed_window?.start);
+  const windowEnd = at(view.feeding.current_window?.end);
+  const water = at(view.water.next_allowed_at);
+  const future = [nextWindow, windowEnd, water].filter((ms) => Number.isFinite(ms) && ms > serverNow);
+  future.push(familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
+  let delay = Math.min(...future) - serverNow;
+
+  const stale =
+    (Number.isFinite(nextWindow) && nextWindow <= serverNow && !view.feeding.can_feed && !blocked) ||
+    (Number.isFinite(windowEnd) && windowEnd <= serverNow) ||
+    (Number.isFinite(water) && water <= serverNow && !view.water.can_water && !blocked);
+  if (stale) delay = Math.min(delay, BOUNDARY_RETRY_MS);
+
+  return Number.isFinite(delay) ? Math.max(0, delay) : null;
 }
 
 /** Session lock overlay state (M1-16) from the server's per-child lock. */

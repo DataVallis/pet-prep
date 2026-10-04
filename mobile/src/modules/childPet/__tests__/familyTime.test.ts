@@ -41,11 +41,28 @@ describe('familyCalendar (device on UTC)', () => {
   });
 });
 
-describe('lockClock (m3)', () => {
-  it('uses the wall clock of a family-offset instant, Intl for UTC', () => {
-    expect(lockClock('2026-10-04T18:30:00+02:00', 'America/New_York')).toBe('18:30');
+describe('lockClock (m3 / N1)', () => {
+  it('a family-offset instant (state.lock.until) uses its own clock time', () => {
+    expect(lockClock('2026-10-04T18:30:00+02:00', 'Europe/Ljubljana')).toBe('18:30');
+    expect(lockClock('2026-10-04T12:30:00-04:00', 'America/New_York')).toBe('12:30');
+  });
+
+  it('the backend’s UTC format (+00:00, Carbon toIso8601String) is converted to the family zone', () => {
+    expect(lockClock('2026-10-04T16:30:00+00:00', 'Europe/Ljubljana')).toBe('18:30');
+    expect(lockClock('2026-10-04T16:30:00+00:00', 'America/New_York')).toBe('12:30');
     expect(lockClock('2026-10-04T16:30:00Z', 'Europe/Ljubljana')).toBe('18:30');
+  });
+
+  it('an offset that is not the family’s goes through Intl; a UTC family keeps +00:00 as is', () => {
+    expect(lockClock('2026-10-04T18:30:00+02:00', 'America/New_York')).toBe('12:30');
+    expect(lockClock('2026-10-04T16:30:00+00:00', 'Europe/London')).toBe('17:30'); // BST in October
+    expect(lockClock('2026-11-04T16:30:00+00:00', 'Europe/London')).toBe('16:30'); // GMT = +00:00
+  });
+
+  it('unknown zone → the string’s own clock; missing / broken → null', () => {
+    expect(lockClock('2026-10-04T16:30:00+00:00', 'Not/AZone')).toBe('16:30');
     expect(lockClock(null, 'Europe/Ljubljana')).toBeNull();
+    expect(lockClock('later', 'Europe/Ljubljana')).toBeNull();
   });
 });
 

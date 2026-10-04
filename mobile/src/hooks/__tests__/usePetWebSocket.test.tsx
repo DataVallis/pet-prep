@@ -60,9 +60,9 @@ function installFakeEcho() {
 describe('createBroadcastGate', () => {
   it('passes newer or equal events and drops older ones', () => {
     const passes = createBroadcastGate();
-    expect(passes(makeBroadcast({ emitted_at: '2026-10-04T10:00:05.000Z' }))).toBe(true);
-    expect(passes(makeBroadcast({ emitted_at: '2026-10-04T10:00:04.999Z' }))).toBe(false);
-    expect(passes(makeBroadcast({ emitted_at: '2026-10-04T10:00:05.000Z' }))).toBe(true);
+    expect(passes(makeBroadcast({ emitted_at: '2026-10-04T10:00:05.000+00:00' }))).toBe(true);
+    expect(passes(makeBroadcast({ emitted_at: '2026-10-04T10:00:04.999+00:00' }))).toBe(false);
+    expect(passes(makeBroadcast({ emitted_at: '2026-10-04T10:00:05.000+00:00' }))).toBe(true);
     expect(passes(makeBroadcast({ emitted_at: 'nope' }))).toBe(false);
   });
 });
@@ -97,9 +97,9 @@ describe('usePetWebSocket', () => {
     const listen = channel.listeners['.pet.updated'];
 
     act(() => {
-      listen(makeBroadcast({ hunger_level: 40, emitted_at: '2026-10-04T10:00:10.000Z' }));
-      listen(makeBroadcast({ hunger_level: 90, emitted_at: '2026-10-04T10:00:09.000Z' }));
-      listen(makeBroadcast({ hunger_level: 35, emitted_at: '2026-10-04T10:00:11.000Z' }));
+      listen(makeBroadcast({ hunger_level: 40, emitted_at: '2026-10-04T10:00:10.000+00:00' }));
+      listen(makeBroadcast({ hunger_level: 90, emitted_at: '2026-10-04T10:00:09.000+00:00' }));
+      listen(makeBroadcast({ hunger_level: 35, emitted_at: '2026-10-04T10:00:11.000+00:00' }));
     });
     expect(handler.mock.calls.map(([e]) => e.hunger_level)).toEqual([40, 35]);
   });
