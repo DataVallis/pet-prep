@@ -48,6 +48,7 @@ const getChildPet = api.getChildPet as jest.Mock;
 const feedPet = api.feedPet as jest.Mock;
 const waterPet = api.waterPet as jest.Mock;
 const cleanPet = api.cleanPet as jest.Mock;
+const syncSteps = api.syncSteps as jest.Mock;
 
 function signInChild() {
   useAppStore.getState().signIn({
@@ -309,6 +310,27 @@ describe('ChildHudScreen', () => {
     expect(screen.getByTestId('walk-overlay')).toBeTruthy();
     expect(screen.getByText('1.250 / 4.000 korakov')).toBeTruthy();
     expect(screen.getByText('Energija 30 %')).toBeTruthy();
+  });
+
+  it('m4: closing the walk overlay sends the new steps right away', async () => {
+    const { Pedometer } = jest.requireMock<typeof import('expo-sensors')>('expo-sensors');
+    await renderHud();
+    await waitFor(() => expect(Pedometer.getStepCountAsync).toHaveBeenCalledTimes(1)); // mount sync: 0 steps → nothing sent
+    (Pedometer.getStepCountAsync as jest.Mock).mockResolvedValueOnce({ steps: 1900 });
+    syncSteps.mockResolvedValueOnce({
+      status: 'accepted',
+      accepted_steps: 650,
+      steps_today: 1900,
+      energy_level: 48,
+      state: makeLiveChildState({ steps: { steps_today: 1900, my_steps_today: 1900, energy_level: 48 } }),
+    });
+
+    fireEvent.press(screen.getByTestId('action-walk'));
+    fireEvent.press(screen.getByLabelText('Zapri'));
+
+    await waitFor(() => expect(syncSteps).toHaveBeenCalledWith(expect.objectContaining({ steps_today: 1900 })));
+    expect(screen.queryByTestId('walk-overlay')).toBeNull();
+    expect(await screen.findByText('1.900/4.000')).toBeTruthy();
   });
 });
 

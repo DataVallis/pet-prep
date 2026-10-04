@@ -9,6 +9,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { api } from '@/api/client';
 import {
   applyBroadcastToCache,
+  BOUNDARY_MARGIN_MS,
   CHILD_PET_POLL_MS,
   childPetKey,
   useChildPet,
@@ -98,6 +99,66 @@ describe('useChildPet', () => {
       act(() => useAppStore.getState().setWsStatus('connected'));
       await act(async () => {
         await jest.advanceTimersByTimeAsync(CHILD_PET_POLL_MS * 3);
+      });
+      expect(getChildPet).toHaveBeenCalledTimes(2);
+    });
+  });
+
+  describe('time-based refresh (M3, fake timers)', () => {
+    beforeEach(() => {
+      jest.useFakeTimers();
+      jest.setSystemTime(new Date('2026-10-04T10:00:00Z')); // 12:00 Ljubljana
+    });
+    afterEach(() => jest.useRealTimers());
+
+    it('refetches once when the water gap ends (earliest boundary), even with a live socket', async () => {
+      useAppStore.getState().setWsStatus('connected');
+      getChildPet.mockResolvedValue(
+        makeLiveChildState({ water: { can_water: false, next_allowed_at: '2026-10-04T12:30:00+02:00' } }),
+      );
+      const { wrapper } = setup();
+      renderHook(() => useChildPet(), { wrapper });
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(getChildPet).toHaveBeenCalledTimes(1);
+
+      getChildPet.mockResolvedValue(makeLiveChildState({ server_time: '2026-10-04T12:30:01+02:00' })); // next: 17:00 window
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(30 * 60_000 - 1_000);
+      });
+      expect(getChildPet).toHaveBeenCalledTimes(1);
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(2_000 + BOUNDARY_MARGIN_MS);
+      });
+      expect(getChildPet).toHaveBeenCalledTimes(2);
+
+      // Rescheduled for the 17:00 window, not repeated before it.
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(60 * 60_000);
+      });
+      expect(getChildPet).toHaveBeenCalledTimes(2);
+    });
+
+    it('the family midnight refetches too; unmount cancels the timer', async () => {
+      jest.setSystemTime(new Date('2026-10-04T21:59:00Z')); // 23:59 family
+      useAppStore.getState().setWsStatus('connected');
+      getChildPet.mockResolvedValue(
+        makeLiveChildState({ server_time: '2026-10-04T23:59:00+02:00', feeding: { next_feed_window: null } }),
+      );
+      const { wrapper } = setup();
+      const { unmount } = renderHook(() => useChildPet(), { wrapper });
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(60_000 + BOUNDARY_MARGIN_MS);
+      });
+      expect(getChildPet).toHaveBeenCalledTimes(2);
+
+      unmount();
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(48 * 3_600_000);
       });
       expect(getChildPet).toHaveBeenCalledTimes(2);
     });

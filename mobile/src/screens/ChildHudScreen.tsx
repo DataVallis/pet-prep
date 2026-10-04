@@ -157,6 +157,8 @@ export default function ChildHudScreen() {
   const stepSync = useStepSync({
     enabled: view !== undefined && !view.lock.is_locked,
     myStepsToday: view?.steps.my_steps_today ?? 0,
+    serverTime: view?.server_time ?? null,
+    timezone: view?.timezone ?? null,
   });
 
   const [toast, setToast] = useState<Toast | null>(null);
@@ -388,7 +390,15 @@ export default function ChildHudScreen() {
 
       {/* Conditional overlays (the lock overlay is rendered by AppNavigator above this screen) */}
       {isWalkModalVisible && !locked && (
-        <WalkTrackerOverlay view={view} stepSync={stepSync} onClose={() => setWalkModalVisible(false)} />
+        <WalkTrackerOverlay
+          view={view}
+          stepSync={stepSync}
+          onClose={() => {
+            setWalkModalVisible(false);
+            // Back from a walk: send the new steps now, not in up to 5 minutes.
+            void stepSync.syncNow();
+          }}
+        />
       )}
       {showCleaning && (
         <CleaningOverlay

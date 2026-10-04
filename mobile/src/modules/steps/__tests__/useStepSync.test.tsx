@@ -1,6 +1,7 @@
 /**
  * M1-14 step sync: today's steps → POST /api/child/pet/steps (ISO with offset), on
  * start, on foreground and every 5 minutes; Android from the live counter.
+ * "Today" = the FAMILY-local day (PR #18 review M1 / B1): the device here runs on UTC.
  */
 import type { ReactNode } from 'react';
 import { AppState, type AppStateStatus } from 'react-native';
@@ -10,9 +11,10 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { api } from '@/api/client';
 import { childPetKey, writeChildState } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
-import { LIVE_STEPS_KEY, type KeyValueStore } from '@/modules/steps/stepCounter';
+import { liveStepsKey, type KeyValueStore } from '@/modules/steps/stepCounter';
 import { STEP_SYNC_INTERVAL_MS, useStepSync, type StepSyncDeps } from '@/modules/steps/useStepSync';
-import { makeLiveChildState } from '@/test-utils/fixtures';
+import { useAppStore } from '@/store/appStore';
+import { makeLiveChildState, makePet } from '@/test-utils/fixtures';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -21,13 +23,14 @@ jest.mock('@/api/client', () => {
 
 const syncSteps = api.syncSteps as jest.Mock;
 const SERVER_ISO = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})$/;
+const KEY = liveStepsKey(2);
 
 type AppStateListener = (state: AppStateStatus) => void;
 let appStateListeners: AppStateListener[] = [];
 
 function makePedometer(overrides: Partial<StepSyncDeps['pedometer']> = {}) {
   let watchCallback: ((r: { steps: number }) => void) | null = null;
-  const pedometer: StepSyncDeps['pedometer'] = {
+  const pedometer = {
     isAvailableAsync: jest.fn(async () => true),
     getPermissionsAsync: jest.fn(async () => ({ status: 'granted', granted: true, canAskAgain: true, expires: 'never' })),
     requestPermissionsAsync: jest.fn(async () => ({ status: 'granted', granted: true, canAskAgain: true, expires: 'never' })),
@@ -52,7 +55,21 @@ function memoryStore(initial: Record<string, string> = {}): KeyValueStore & { da
   };
 }
 
-function setup(deps: Partial<StepSyncDeps>, myStepsToday = 1250, enabled = true) {
+interface Props {
+  mine: number;
+  enabled: boolean;
+  serverTime: string;
+  timezone: string;
+}
+
+function setup(deps: Partial<StepSyncDeps>, initial: Partial<Props> = {}) {
+  const props: Props = {
+    mine: 1250,
+    enabled: true,
+    serverTime: '2026-10-04T12:00:00+02:00',
+    timezone: 'Europe/Ljubljana',
+    ...initial,
+  };
   const client = new QueryClient({
     defaultOptions: { queries: { retry: false, gcTime: Infinity }, mutations: { retry: false, gcTime: Infinity } },
   });
@@ -61,10 +78,11 @@ function setup(deps: Partial<StepSyncDeps>, myStepsToday = 1250, enabled = true)
     <QueryClientProvider client={client}>{children}</QueryClientProvider>
   );
   const hook = renderHook(
-    (props: { mine: number; enabled: boolean }) => useStepSync({ enabled: props.enabled, myStepsToday: props.mine, deps }),
-    { wrapper, initialProps: { mine: myStepsToday, enabled } },
+    (p: Props) =>
+      useStepSync({ enabled: p.enabled, myStepsToday: p.mine, serverTime: p.serverTime, timezone: p.timezone, deps }),
+    { wrapper, initialProps: props },
   );
-  return { client, ...hook };
+  return { client, props, ...hook };
 }
 
 const flush = () =>
@@ -72,11 +90,22 @@ const flush = () =>
     await jest.advanceTimersByTimeAsync(0);
   });
 
+function fireAppState(state: AppStateStatus) {
+  appStateListeners.forEach((l) => l(state));
+}
+
 describe('useStepSync', () => {
   beforeEach(() => {
     jest.useFakeTimers();
     jest.setSystemTime(new Date('2026-10-04T10:00:00Z'));
     jest.clearAllMocks();
+    useAppStore.setState(useAppStore.getInitialState(), true);
+    useAppStore.getState().signIn({
+      token: 't',
+      user: { id: 2, name: 'Maja', email: null, role: 'child' },
+      pet: makePet(),
+      awaitingContract: false,
+    });
     appStateListeners = [];
     jest.spyOn(AppState, 'addEventListener').mockImplementation((_type, listener) => {
       appStateListeners.push(listener as AppStateListener);
@@ -96,15 +125,18 @@ describe('useStepSync', () => {
     jest.restoreAllMocks();
   });
 
-  it('iOS: reads steps since local midnight and sends them with an ISO offset', async () => {
+  it('the device clock really is UTC here', () => {
+    expect(new Date('2026-10-04T10:00:00Z').getTimezoneOffset()).toBe(0);
+  });
+
+  it('iOS, family Ljubljana: steps since the FAMILY midnight (22:00Z the day before), ISO offset payload', async () => {
     const { pedometer } = makePedometer();
     const { client } = setup({ platform: 'ios', pedometer });
     await flush();
     await flush();
 
     const [start, end] = (pedometer.getStepCountAsync as jest.Mock).mock.calls[0] as [Date, Date];
-    expect(start.getHours()).toBe(0);
-    expect(start.getMinutes()).toBe(0);
+    expect(start.toISOString()).toBe('2026-10-03T22:00:00.000Z');
     expect(end.getTime()).toBe(Date.parse('2026-10-04T10:00:00Z'));
 
     expect(syncSteps).toHaveBeenCalledTimes(1);
@@ -116,34 +148,44 @@ describe('useStepSync', () => {
     expect(client.getQueryData<ChildPetView>(childPetKey)?.steps.steps_today).toBe(2400);
   });
 
+  it('iOS, family New York: at 02:00Z the family day is still 3 Oct → from 04:00Z on 3 Oct', async () => {
+    jest.setSystemTime(new Date('2026-10-04T02:00:00Z'));
+    const { pedometer } = makePedometer();
+    setup(
+      { platform: 'ios', pedometer },
+      { timezone: 'America/New_York', serverTime: '2026-10-03T21:59:00-04:00', mine: 0 },
+    );
+    await flush();
+    await flush();
+    const [start] = (pedometer.getStepCountAsync as jest.Mock).mock.calls[0] as [Date, Date];
+    expect(start.toISOString()).toBe('2026-10-03T04:00:00.000Z');
+  });
+
   it('syncs again on foreground and every 5 minutes, only when there are new steps', async () => {
     const { pedometer } = makePedometer();
     const step = pedometer.getStepCountAsync as jest.Mock;
-    const { rerender } = setup({ platform: 'ios', pedometer });
+    const { rerender, props } = setup({ platform: 'ios', pedometer });
     await flush();
     await flush();
     expect(syncSteps).toHaveBeenCalledTimes(1);
-    rerender({ mine: 2400, enabled: true }); // the server now has 2400
+    rerender({ ...props, mine: 2400 }); // the server now has 2400
 
-    // Same count → nothing sent.
     await act(async () => {
       await jest.advanceTimersByTimeAsync(STEP_SYNC_INTERVAL_MS);
     });
     expect(step).toHaveBeenCalledTimes(2);
     expect(syncSteps).toHaveBeenCalledTimes(1);
 
-    // Back from the background with more steps → sent.
     step.mockResolvedValueOnce({ steps: 3100 });
     await act(async () => {
-      appStateListeners.forEach((l) => l('active'));
+      fireAppState('active');
       await jest.advanceTimersByTimeAsync(0);
     });
     await flush();
     expect(syncSteps).toHaveBeenCalledTimes(2);
     expect(syncSteps.mock.calls[1][0].steps_today).toBe(3100);
-    rerender({ mine: 3100, enabled: true });
+    rerender({ ...props, mine: 3100 });
 
-    // Next 5-minute tick with more steps.
     step.mockResolvedValueOnce({ steps: 3500 });
     await act(async () => {
       await jest.advanceTimersByTimeAsync(STEP_SYNC_INTERVAL_MS);
@@ -151,6 +193,112 @@ describe('useStepSync', () => {
     await flush();
     expect(syncSteps).toHaveBeenCalledTimes(3);
     expect(syncSteps.mock.calls[2][0].steps_today).toBe(3500);
+  });
+
+  it('B1 iOS: after the family midnight a cached count from yesterday never blocks today’s steps', async () => {
+    // Cached state from 23:50 family time with 5000 steps yesterday.
+    const { pedometer } = makePedometer({ getStepCountAsync: jest.fn(async () => ({ steps: 5000 })) } as Partial<
+      StepSyncDeps['pedometer']
+    >);
+    jest.setSystemTime(new Date('2026-10-04T21:50:00Z'));
+    setup({ platform: 'ios', pedometer }, { serverTime: '2026-10-04T23:50:00+02:00', mine: 5000 });
+    await flush();
+    await flush();
+    expect(syncSteps).not.toHaveBeenCalled(); // same day, nothing new
+
+    // Midnight passes in the background; 300 steps after it.
+    jest.setSystemTime(new Date('2026-10-04T22:30:00Z')); // 00:30 on 5 Oct in Ljubljana
+    (pedometer.getStepCountAsync as jest.Mock).mockResolvedValueOnce({ steps: 300 });
+    await act(async () => {
+      fireAppState('background');
+      fireAppState('active');
+      await jest.advanceTimersByTimeAsync(0);
+    });
+    await flush();
+    const [start] = (pedometer.getStepCountAsync as jest.Mock).mock.calls[1] as [Date, Date];
+    expect(start.toISOString()).toBe('2026-10-04T22:00:00.000Z');
+    expect(syncSteps).toHaveBeenCalledTimes(1);
+    expect(syncSteps.mock.calls[0][0].steps_today).toBe(300);
+  });
+
+  it('B1 Android: midnight while backgrounded → foreground → no yesterday steps credited', async () => {
+    jest.setSystemTime(new Date('2026-10-04T21:50:00Z')); // 23:50 family
+    const { pedometer, emit } = makePedometer();
+    const store = memoryStore({ [KEY]: JSON.stringify({ date: '2026-10-04', steps: 3000 }) });
+    setup(
+      { platform: 'android', pedometer, storage: store },
+      { serverTime: '2026-10-04T23:50:00+02:00', mine: 3000 },
+    );
+    await flush();
+    await flush();
+    expect(syncSteps).not.toHaveBeenCalled();
+
+    act(() => fireAppState('background'));
+    jest.setSystemTime(new Date('2026-10-04T22:30:00Z')); // 00:30 on 5 Oct, state still yesterday's
+    act(() => emit(120)); // walking after midnight, delivered on return
+    await act(async () => {
+      fireAppState('active');
+      await jest.advanceTimersByTimeAsync(0);
+    });
+    await flush();
+
+    expect(syncSteps).toHaveBeenCalledTimes(1);
+    expect(syncSteps.mock.calls[0][0].steps_today).toBe(120);
+    expect(Date.parse(syncSteps.mock.calls[0][0].recorded_at)).toBe(Date.parse('2026-10-04T22:30:00Z'));
+    expect(JSON.parse(store.data[KEY])).toEqual({ date: '2026-10-05', steps: 120 });
+  });
+
+  it('Android: live counter (saved total + sensor deltas) under the child’s own key, never history', async () => {
+    const { pedometer, emit } = makePedometer();
+    const store = memoryStore({ [KEY]: JSON.stringify({ date: '2026-10-04', steps: 1500 }) });
+    const { result } = setup({ platform: 'android', pedometer, storage: store });
+    await flush();
+    await flush();
+    expect(pedometer.getStepCountAsync).not.toHaveBeenCalled();
+    expect(store.getItemAsync).toHaveBeenCalledWith('petprep_live_steps_today_2');
+
+    act(() => {
+      emit(40);
+      emit(100);
+    });
+    await act(async () => {
+      await result.current.syncNow();
+    });
+    expect(syncSteps).toHaveBeenLastCalledWith(expect.objectContaining({ steps_today: 1600, source: 'pedometer' }));
+    await flush();
+    expect(JSON.parse(store.data[KEY])).toEqual({ date: '2026-10-04', steps: 1600 });
+  });
+
+  it('m2: a new counter loads only after the previous counter’s persist finished', async () => {
+    const { pedometer, emit } = makePedometer();
+    const store = memoryStore({ [KEY]: JSON.stringify({ date: '2026-10-04', steps: 1000 }) });
+    let releasePersist: () => void = () => undefined;
+    (store.setItemAsync as jest.Mock).mockImplementationOnce(
+      (key: string, value: string) =>
+        new Promise<void>((resolve) => {
+          releasePersist = () => {
+            store.data[key] = value;
+            resolve();
+          };
+        }),
+    );
+    const { rerender, props } = setup({ platform: 'android', pedometer, storage: store }, { mine: 1000 });
+    await flush();
+    await flush();
+    act(() => emit(50)); // 1050 in memory
+
+    rerender({ ...props, enabled: false }); // cleanup → slow persist(1050)
+    rerender({ ...props, enabled: true }); // new counter must wait for it
+    await flush();
+    expect(store.getItemAsync).toHaveBeenCalledTimes(1);
+
+    await act(async () => {
+      releasePersist();
+      await jest.advanceTimersByTimeAsync(0);
+    });
+    await flush();
+    expect(store.getItemAsync).toHaveBeenCalledTimes(2);
+    expect(syncSteps).toHaveBeenLastCalledWith(expect.objectContaining({ steps_today: 1050 }));
   });
 
   it('no permission yet → nothing is read until the child allows it', async () => {
@@ -181,7 +329,7 @@ describe('useStepSync', () => {
 
   it('disabled (locked pet) → no reads, no syncs', async () => {
     const { pedometer } = makePedometer();
-    setup({ platform: 'ios', pedometer }, 0, false);
+    setup({ platform: 'ios', pedometer }, { mine: 0, enabled: false });
     await act(async () => {
       await jest.advanceTimersByTimeAsync(STEP_SYNC_INTERVAL_MS * 2);
     });
@@ -201,27 +349,5 @@ describe('useStepSync', () => {
     });
     await flush();
     expect(syncSteps).toHaveBeenCalledTimes(2);
-  });
-
-  it('Android: live counter since midnight (saved total + sensor deltas), never history', async () => {
-    const { pedometer, emit } = makePedometer();
-    const store = memoryStore({ [LIVE_STEPS_KEY]: JSON.stringify({ date: '2026-10-04', steps: 1500 }) });
-    const { result } = setup({ platform: 'android', pedometer, storage: store }, 1250);
-    await flush();
-    await flush();
-    expect(pedometer.getStepCountAsync).not.toHaveBeenCalled();
-    expect(pedometer.watchStepCount).toHaveBeenCalledTimes(1);
-
-    act(() => {
-      emit(40);
-      emit(100);
-    });
-    await act(async () => {
-      await result.current.syncNow();
-    });
-    expect(syncSteps).toHaveBeenLastCalledWith(
-      expect.objectContaining({ steps_today: 1600, source: 'pedometer' }),
-    );
-    expect(JSON.parse(store.data[LIVE_STEPS_KEY])).toEqual({ date: '2026-10-04', steps: 1600 });
   });
 });

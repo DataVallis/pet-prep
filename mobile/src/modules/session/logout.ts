@@ -3,7 +3,10 @@
  * effort), delete it from SecureStore, drop cached queries, reset the store.
  */
 
+import * as SecureStore from 'expo-secure-store';
+
 import { api, clearAuthToken } from '@/api/client';
+import { clearLiveSteps } from '@/modules/steps/stepCounter';
 import { queryClient } from '@/api/queryClient';
 import { useAppStore } from '@/store/appStore';
 
@@ -16,6 +19,7 @@ interface LogoutOptions {
 }
 
 export async function logout({ revoke = true }: LogoutOptions = {}): Promise<void> {
+  const userId = useAppStore.getState().user?.id ?? null;
   if (revoke) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), REVOKE_TIMEOUT_MS);
@@ -32,6 +36,8 @@ export async function logout({ revoke = true }: LogoutOptions = {}): Promise<voi
   } catch {
     // Nothing more we can do; the in-memory session is cleared below regardless.
   }
+  // Android live step total of this child: the next child on this phone starts at 0.
+  await clearLiveSteps(userId, SecureStore);
   queryClient.clear();
   useAppStore.getState().reset();
 }

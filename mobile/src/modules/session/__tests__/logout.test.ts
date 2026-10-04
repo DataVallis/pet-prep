@@ -66,4 +66,15 @@ describe('logout', () => {
     expect(apiLogout).not.toHaveBeenCalled();
     expect(deleteItem).toHaveBeenCalled();
   });
+
+  it('clears this child’s Android live step total (shared phone: next child starts at 0)', async () => {
+    useAppStore.getState().signIn({
+      token: 'child',
+      user: { id: 2, name: 'Maja', email: null, role: 'child' },
+      pet: null,
+    });
+    await logout({ revoke: false });
+    expect(deleteItem).toHaveBeenCalledWith('petprep_live_steps_today_2');
+    expect(useAppStore.getState().user).toBeNull();
+  });
 });

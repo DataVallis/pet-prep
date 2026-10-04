@@ -15,6 +15,7 @@
 import type { ChildPetState } from '@/api/client';
 import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
 import type { LockState } from '@/store/appStore';
+import { familyCalendar } from '@/modules/childPet/familyTime';
 
 export type LockReason = 'game_over' | 'inactive' | 'hard_stopped' | 'contract_required' | 'ill';
 
@@ -190,15 +191,28 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0): Chil
   };
 }
 
-/** Server lock priority (game over › inactive › hard stop › contract › illness) from pet flags. */
-export function lockFromFlags(pet: ChildPetView['pet']): ChildPetView['lock'] {
+/**
+ * Server lock priority (game over › inactive › hard stop › contract › illness) from pet
+ * flags. A still-running illness keeps the server's `until` (family offset) over the
+ * broadcast's UTC `illness_until`.
+ */
+export function lockFromFlags(pet: ChildPetView['pet'], previous?: ChildPetView['lock']): ChildPetView['lock'] {
   let reason: LockReason | null = null;
   if (pet.is_game_over) reason = 'game_over';
   else if (!pet.is_active) reason = 'inactive';
   else if (pet.is_hard_stopped) reason = 'hard_stopped';
   else if (pet.awaiting_contract) reason = 'contract_required';
   else if (pet.is_ill) reason = 'ill';
-  return { is_locked: reason !== null, reason, until: reason === 'ill' ? pet.illness_until : null };
+  let until: string | null = null;
+  if (reason === 'ill') {
+    const sameEnd =
+      previous?.reason === 'ill' &&
+      previous.until !== null &&
+      pet.illness_until !== null &&
+      Date.parse(previous.until) === Date.parse(pet.illness_until);
+    until = sameEnd ? previous.until : pet.illness_until;
+  }
+  return { is_locked: reason !== null, reason, until };
 }
 
 /**
@@ -210,7 +224,10 @@ export function lockFromFlags(pet: ChildPetView['pet']): ChildPetView['lock'] {
  * carry the clock forward and always pass.
  */
 export function mergePolledState(previous: ChildPetView | undefined, next: ChildPetView): ChildPetView {
-  if (!previous || next.lastEmittedMs >= previous.lastEmittedMs) return next;
+  if (!previous) return next;
+  // An HTTP snapshot older than the one shown (slow poll overtaken by a newer answer).
+  if (next.snapshotAtMs < previous.snapshotAtMs) return previous;
+  if (next.lastEmittedMs >= previous.lastEmittedMs) return next;
   const lastEmittedSecond = Math.floor(previous.lastEmittedMs / 1000) * 1000;
   if (next.snapshotAtMs < lastEmittedSecond) return previous;
   return { ...next, lastEmittedMs: previous.lastEmittedMs };
@@ -260,7 +277,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     current_video_url: b.current_video_url ?? view.pet.current_video_url,
     reference_image_url: b.reference_image_url ?? view.pet.reference_image_url,
   };
-  const lock = lockFromFlags(pet);
+  const lock = lockFromFlags(pet, view.lock);
   const blocked = lock.is_locked || pet.needs_cleaning;
 
   const next: ChildPetView = {
@@ -276,6 +293,8 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
   const refetch =
     lock.reason !== view.lock.reason ||
     pet.needs_cleaning !== view.pet.needs_cleaning ||
+    // Energy only drops at the family midnight: a new step day → steps / windows / water reset.
+    b.energy_level < view.pet.energy_level ||
     (b.event_type !== null && b.event_type !== 'metric_changed');
 
   return { view: next, refetch };
@@ -297,6 +316,58 @@ export function optimisticView(view: ChildPetView, action: CareAction): ChildPet
     case 'clean':
       return { ...view, pet: { ...view.pet, hygiene_level: 100, needs_cleaning: false } };
   }
+}
+
+/**
+ * Undo an optimistic action that failed without a server answer (offline / 5xx / 429),
+ * on top of what the cache shows NOW — a broadcast may have landed meanwhile. Only the
+ * action's metric and flags are restored; the metric is kept when a newer broadcast
+ * already brought the server's value. The caller refetches afterwards.
+ */
+export function revertOptimistic(current: ChildPetView, previous: ChildPetView, action: CareAction): ChildPetView {
+  const broadcastSince = current.lastEmittedMs > previous.lastEmittedMs;
+  switch (action) {
+    case 'feed':
+      return {
+        ...current,
+        pet: { ...current.pet, hunger_level: broadcastSince ? current.pet.hunger_level : previous.pet.hunger_level },
+        feeding: {
+          ...current.feeding,
+          can_feed: previous.feeding.can_feed && !current.lock.is_locked && !current.pet.needs_cleaning,
+          fed_in_current_window: previous.feeding.fed_in_current_window,
+        },
+      };
+    case 'water':
+      return {
+        ...current,
+        pet: { ...current.pet, thirst_level: broadcastSince ? current.pet.thirst_level : previous.pet.thirst_level },
+        water: {
+          ...current.water,
+          can_water: previous.water.can_water && !current.lock.is_locked && !current.pet.needs_cleaning,
+        },
+      };
+    case 'clean': {
+      const hygiene = broadcastSince ? current.pet.hygiene_level : previous.pet.hygiene_level;
+      return { ...current, pet: { ...current.pet, hygiene_level: hygiene, needs_cleaning: hygiene <= 0 } };
+    }
+  }
+}
+
+/**
+ * When the cached state goes stale by the clock alone (M3): a feed window opens or
+ * closes, the water gap ends, or the family midnight resets steps / water. Returns the
+ * earliest such instant after `nowMs`, or null.
+ */
+export function nextRefreshAt(view: ChildPetView, nowMs: number): number | null {
+  const candidates = [
+    view.feeding.next_feed_window?.start ?? null,
+    view.feeding.current_window?.end ?? null,
+    view.water.next_allowed_at,
+  ]
+    .map((iso) => (iso ? Date.parse(iso) : Number.NaN))
+    .filter((ms) => Number.isFinite(ms) && ms > nowMs);
+  candidates.push(familyCalendar(view.timezone, view.server_time).nextMidnight(nowMs));
+  return candidates.length > 0 ? Math.min(...candidates) : null;
 }
 
 /** Session lock overlay state (M1-16) from the server's per-child lock. */

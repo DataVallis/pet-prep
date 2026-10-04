@@ -6,7 +6,10 @@
  *  - Android: expo-sensors has no history (`getStepCountAsync` is iOS-only; Health
  *    Connect = M3-05). `watchStepCount` reports steps since the subscription started
  *    while the app is open; `LiveStepCounter` adds those deltas to a per-day total kept
- *    in SecureStore (no AsyncStorage in the project), reset at local midnight.
+ *    in SecureStore per child (no AsyncStorage in the project), reset at midnight.
+ *
+ * "Today" is the FAMILY-local day (PRODUCT_SPEC §4; the server closes the step day at
+ * the family midnight), not the device's — callers pass a family day key.
  *
  * The server keeps the maximum of the day and applies anti-cheat (≤ 200 steps / min),
  * so the app only reports totals — never deltas.
@@ -50,7 +53,28 @@ export interface KeyValueStore {
   setItemAsync(key: string, value: string): Promise<void>;
 }
 
-export const LIVE_STEPS_KEY = 'petprep_live_steps_today';
+/** Day key of an instant (family-local `YYYY-MM-DD`). */
+export type DayKey = (date: Date) => string;
+
+const LIVE_STEPS_PREFIX = 'petprep_live_steps_today';
+
+/** SecureStore key of a child's live total — per user, so a shared phone never mixes children. */
+export function liveStepsKey(userId: number): string {
+  return `${LIVE_STEPS_PREFIX}_${userId}`;
+}
+
+/** Delete a child's saved total (logout). Best effort. */
+export async function clearLiveSteps(
+  userId: number | null,
+  store: { deleteItemAsync(key: string): Promise<void> },
+): Promise<void> {
+  if (userId === null) return;
+  try {
+    await store.deleteItemAsync(liveStepsKey(userId));
+  } catch {
+    // Nothing to do: a stale total of another day is ignored on load anyway.
+  }
+}
 
 interface StoredDay {
   date: string;
@@ -79,10 +103,17 @@ export class LiveStepCounter {
 
   constructor(
     private readonly store: KeyValueStore,
+    private readonly key: string,
+    private readonly dayKey: DayKey = localDateKey,
     now: Date = new Date(),
-    private readonly key: string = LIVE_STEPS_KEY,
   ) {
-    this.day = { date: localDateKey(now), steps: 0 };
+    this.day = { date: dayKey(now), steps: 0 };
+  }
+
+  /** The day the counter currently counts for. */
+  currentDay(now: Date = new Date()): string {
+    this.rollOver(now);
+    return this.day.date;
   }
 
   /** Read the saved total (ignored when it's from another day). */
@@ -93,7 +124,7 @@ export class LiveStepCounter {
     } catch {
       stored = null;
     }
-    const today = localDateKey(now);
+    const today = this.dayKey(now);
     this.day = stored && stored.date === today ? stored : { date: today, steps: Math.max(0, this.valueOn(today)) };
     return this.day.steps;
   }
@@ -103,7 +134,7 @@ export class LiveStepCounter {
   }
 
   private rollOver(now: Date): void {
-    const today = localDateKey(now);
+    const today = this.dayKey(now);
     if (this.day.date !== today) this.day = { date: today, steps: 0 };
   }
 
@@ -120,10 +151,16 @@ export class LiveStepCounter {
     return this.day.steps;
   }
 
-  /** Never report less than the server already has for this child today (e.g. storage was wiped). */
-  raiseTo(steps: number, now: Date = new Date()): number {
+  /**
+   * Never report less than the server already has for this child today (e.g. storage was
+   * wiped) — but only a server value of the SAME family day: after midnight the cached
+   * state still holds yesterday's count, which must not be credited to today.
+   */
+  raiseTo(steps: number, serverDay: string, now: Date = new Date()): number {
     this.rollOver(now);
-    if (Number.isFinite(steps) && steps > this.day.steps) this.day.steps = Math.floor(steps);
+    if (serverDay === this.day.date && Number.isFinite(steps) && steps > this.day.steps) {
+      this.day.steps = Math.floor(steps);
+    }
     return this.day.steps;
   }
 

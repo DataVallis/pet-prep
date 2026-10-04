@@ -8,9 +8,10 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { ApiError, api } from '@/api/client';
 import { useClean, useFeed, useSyncSteps, useWater } from '@/hooks/queries/useChildActions';
-import { childPetKey, writeChildState } from '@/hooks/queries/useChildPet';
+import { applyBroadcastToCache, childPetKey, writeChildState } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
-import { makeLiveChildState } from '@/test-utils/fixtures';
+import { useAppStore } from '@/store/appStore';
+import { makeBroadcast, makeLiveChildState, makePet } from '@/test-utils/fixtures';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -38,6 +39,15 @@ function setup() {
   return { client, wrapper, cached };
 }
 
+function signInChild(id = 2) {
+  useAppStore.getState().signIn({
+    token: `t${id}`,
+    user: { id, name: 'Maja', email: null, role: 'child' },
+    pet: makePet(),
+    awaitingContract: false,
+  });
+}
+
 function deferred<T>() {
   let resolve: (value: T) => void = () => undefined;
   let reject: (error: unknown) => void = () => undefined;
@@ -49,7 +59,11 @@ function deferred<T>() {
 }
 
 describe('care action mutations', () => {
-  beforeEach(() => jest.clearAllMocks());
+  beforeEach(() => {
+    jest.clearAllMocks();
+    useAppStore.setState(useAppStore.getInitialState(), true);
+    signInChild();
+  });
 
   it('feed: optimistic hunger 100 while in flight, then the server state', async () => {
     const call = deferred<unknown>();
@@ -143,6 +157,56 @@ describe('care action mutations', () => {
     expect(cached()?.water.can_water).toBe(true);
   });
 
+  it('M4: failure without state keeps a broadcast that landed meanwhile, restores flags, refetches', async () => {
+    const call = deferred<unknown>();
+    feedPet.mockReturnValueOnce(call.promise);
+    const { client, wrapper, cached } = setup();
+    const invalidate = jest.spyOn(client, 'invalidateQueries');
+    const { result } = renderHook(() => useFeed(), { wrapper });
+
+    act(() => result.current.mutate());
+    await waitFor(() => expect(cached()?.pet.hunger_level).toBe(100));
+    // A tick broadcast arrives during the request: server truth for hunger (58) and thirst (30).
+    act(() => {
+      applyBroadcastToCache(client, makeBroadcast({ hunger_level: 58, thirst_level: 30, emitted_at: '2026-10-04T10:00:20.000Z' }));
+    });
+
+    await act(async () => call.reject(new TypeError('Network request failed')));
+    await waitFor(() => expect(result.current.isError).toBe(true));
+    expect(cached()?.pet.thirst_level).toBe(30); // broadcast kept
+    expect(cached()?.pet.hunger_level).toBe(58); // newer than the optimistic value → kept
+    expect(cached()?.feeding.can_feed).toBe(true); // flag restored
+    expect(cached()?.feeding.fed_in_current_window).toBe(false);
+    expect(invalidate).toHaveBeenCalledWith({ queryKey: childPetKey });
+  });
+
+  it('M4: without a broadcast in between the metric itself is restored from before the tap', async () => {
+    waterPet.mockRejectedValueOnce(new ApiError('Server Error', 503, null));
+    const { client, wrapper, cached } = setup();
+    const { result } = renderHook(() => useWater(), { wrapper });
+    act(() => result.current.mutate());
+    await waitFor(() => expect(result.current.isError).toBe(true));
+    expect(cached()?.pet.thirst_level).toBe(50);
+    expect(cached()?.water.can_water).toBe(true);
+    expect(client.getQueryState(childPetKey)?.isInvalidated).toBe(true);
+  });
+
+  it('m5: an answer that arrives after the session changed is not written', async () => {
+    const call = deferred<unknown>();
+    feedPet.mockReturnValueOnce(call.promise);
+    const { wrapper, cached } = setup();
+    const { result } = renderHook(() => useFeed(), { wrapper });
+    act(() => result.current.mutate());
+    await waitFor(() => expect(cached()?.pet.hunger_level).toBe(100));
+
+    act(() => signInChild(3)); // another child signs in on this phone
+    await act(async () =>
+      call.resolve({ status: 'accepted', state: makeLiveChildState({ pet: { thirst_level: 11 } }) }),
+    );
+    await waitFor(() => expect(result.current.isSuccess).toBe(true));
+    expect(cached()?.pet.thirst_level).toBe(50);
+  });
+
   it('clean: success with status unchanged still replaces the cache', async () => {
     cleanPet.mockResolvedValueOnce({ status: 'unchanged', state: makeLiveChildState({ pet: { hygiene_level: 100 } }) });
     const { wrapper, cached } = setup();
@@ -156,7 +220,11 @@ describe('care action mutations', () => {
 });
 
 describe('useSyncSteps', () => {
-  beforeEach(() => jest.clearAllMocks());
+  beforeEach(() => {
+    jest.clearAllMocks();
+    useAppStore.setState(useAppStore.getInitialState(), true);
+    signInChild();
+  });
 
   it.each(['accepted', 'capped', 'rejected', 'unchanged', 'stale'] as const)(
     '%s → state from the response replaces the cache',
@@ -181,6 +249,20 @@ describe('useSyncSteps', () => {
       expect(cached()?.steps.steps_today).toBe(2000);
     },
   );
+
+  it('m5: a step answer after logout is not written', async () => {
+    const call = deferred<unknown>();
+    syncSteps.mockReturnValueOnce(call.promise);
+    const { wrapper, cached } = setup();
+    const { result } = renderHook(() => useSyncSteps(), { wrapper });
+    act(() => result.current.mutate({ stepsToday: 9000, recordedAt: '2026-10-04T12:05:00+02:00' }));
+    act(() => useAppStore.getState().reset());
+    await act(async () =>
+      call.resolve({ status: 'accepted', accepted_steps: 9000, steps_today: 9000, energy_level: 100, state: makeLiveChildState({ steps: { steps_today: 9000 } }) }),
+    );
+    await waitFor(() => expect(result.current.isSuccess).toBe(true));
+    expect(cached()?.steps.steps_today).toBe(1250);
+  });
 
   it('423 while locked → locked state cached, no throw outside the mutation', async () => {
     const lockedState = makeLiveChildState({ pet: { is_hard_stopped: true }, lock: { is_locked: true, reason: 'hard_stopped' } });

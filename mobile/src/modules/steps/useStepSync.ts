@@ -1,23 +1,30 @@
 /**
  * `useStepSync` — keeps the server's step count for today current while the HUD is open
  * (M1-14): once permission is granted, on every return to the foreground and every
- * 5 minutes. Only a total higher than what the server has for this child is sent.
+ * 5 minutes. Only a total higher than what the server has for this child TODAY is sent.
  * The permission prompt is never shown on its own — the walk overlay asks for it.
+ *
+ * "Today" is the family-local day (`state.timezone`): the server closes the step day at
+ * the family midnight, so a device in another zone must count from that midnight too.
+ * A cached server count from an earlier family day (midnight passed while the app was in
+ * the background) is never credited to today.
  */
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AppState, Platform, type AppStateStatus } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
 import { Pedometer } from 'expo-sensors';
 
 import { useSyncSteps } from '@/hooks/queries/useChildActions';
+import { familyCalendar } from '@/modules/childPet/familyTime';
 import {
   createDeltaTracker,
   isoWithOffset,
   LiveStepCounter,
-  startOfLocalDay,
+  liveStepsKey,
   type KeyValueStore,
 } from '@/modules/steps/stepCounter';
+import { useAppStore } from '@/store/appStore';
 
 export const STEP_SYNC_INTERVAL_MS = 5 * 60_000;
 
@@ -44,8 +51,12 @@ const defaultDeps: StepSyncDeps = {
 interface Options {
   /** False while there is no pet state yet or the pet is locked. */
   enabled: boolean;
-  /** This child's steps today according to the server (`state.steps.my_steps_today`). */
+  /** This child's steps according to the server (`state.steps.my_steps_today`). */
   myStepsToday: number;
+  /** `state.server_time` — the family day `myStepsToday` belongs to. */
+  serverTime: string | null;
+  /** `state.timezone` — the family's IANA zone. */
+  timezone: string | null;
   deps?: Partial<StepSyncDeps>;
 }
 
@@ -63,15 +74,23 @@ function permissionFrom(response: { status: string; granted: boolean }): StepPer
   return response.status === 'denied' ? 'denied' : 'undetermined';
 }
 
-export function useStepSync({ enabled, myStepsToday, deps: depsOverride }: Options): StepSync {
+export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps: depsOverride }: Options): StepSync {
   const depsRef = useRef<StepSyncDeps>({ ...defaultDeps, ...depsOverride });
+  const userId = useAppStore((s) => s.user?.id ?? null);
   const [permission, setPermission] = useState<StepPermission>('checking');
-  const mutation = useSyncSteps();
-  const { mutateAsync, isPending } = mutation;
+  const { mutateAsync, isPending } = useSyncSteps();
 
-  const serverStepsRef = useRef(myStepsToday);
-  serverStepsRef.current = myStepsToday;
+  const calendar = useMemo(() => familyCalendar(timezone, serverTime), [timezone, serverTime]);
+  const calendarRef = useRef(calendar);
+  calendarRef.current = calendar;
+
+  // The server's count and the family day it belongs to.
+  const serverRef = useRef({ steps: myStepsToday, day: serverTime ? calendar.dateOf(Date.parse(serverTime)) : null });
+  serverRef.current = { steps: myStepsToday, day: serverTime ? calendar.dateOf(Date.parse(serverTime)) : null };
+
   const counterRef = useRef<LiveStepCounter | null>(null);
+  /** The last `persist()` of a previous counter — the next `load()` waits for it (m2). */
+  const persistChainRef = useRef<Promise<void>>(Promise.resolve());
   const inFlightRef = useRef(false);
 
   // 1. Availability + current permission (no prompt).
@@ -96,16 +115,24 @@ export function useStepSync({ enabled, myStepsToday, deps: depsOverride }: Optio
     };
   }, [enabled]);
 
-  const readToday = useCallback(async (): Promise<number | null> => {
-    const { platform, pedometer, now } = depsRef.current;
-    const at = now();
+  /** The server's count if it is for the family day of `at`, else 0 (new day). */
+  const serverStepsOn = useCallback((day: string): number => {
+    const server = serverRef.current;
+    return server.day === day ? server.steps : 0;
+  }, []);
+
+  const readToday = useCallback(async (at: Date): Promise<number | null> => {
+    const { platform, pedometer } = depsRef.current;
+    const cal = calendarRef.current;
     if (platform === 'ios') {
-      const result = await pedometer.getStepCountAsync(startOfLocalDay(at), at);
+      const start = new Date(cal.startOfDay(at.getTime()));
+      const result = await pedometer.getStepCountAsync(start, at);
       return Math.max(0, Math.floor(result.steps));
     }
     const counter = counterRef.current;
     if (!counter) return null;
-    counter.raiseTo(serverStepsRef.current, at);
+    const server = serverRef.current;
+    if (server.day !== null) counter.raiseTo(server.steps, server.day, at);
     return counter.value(at);
   }, []);
 
@@ -113,44 +140,52 @@ export function useStepSync({ enabled, myStepsToday, deps: depsOverride }: Optio
     if (!enabled || permission !== 'granted' || inFlightRef.current) return;
     inFlightRef.current = true;
     try {
-      const steps = await readToday();
-      if (steps === null || steps <= serverStepsRef.current) return;
-      const recordedAt = isoWithOffset(depsRef.current.now());
-      await mutateAsync({ stepsToday: steps, recordedAt });
-      await counterRef.current?.persist();
+      const at = depsRef.current.now();
+      const steps = await readToday(at);
+      const today = calendarRef.current.dateOf(at.getTime());
+      if (steps === null || steps <= serverStepsOn(today)) return;
+      await mutateAsync({ stepsToday: steps, recordedAt: isoWithOffset(at) });
+      const counter = counterRef.current;
+      if (counter) persistChainRef.current = counter.persist();
     } catch {
       // Quiet: offline / 423 / 5xx — the next trigger tries again.
     } finally {
       inFlightRef.current = false;
     }
-  }, [enabled, permission, readToday, mutateAsync]);
+  }, [enabled, permission, readToday, serverStepsOn, mutateAsync]);
 
-  // 2. Android: live counter while the app is open.
+  const syncRef = useRef(syncNow);
+  syncRef.current = syncNow;
+
+  // 2. Android: live counter while the app is open, per child, family day.
   useEffect(() => {
     const { platform, pedometer, storage, now } = depsRef.current;
-    if (!enabled || permission !== 'granted' || platform !== 'android') return;
-    const counter = new LiveStepCounter(storage, now());
+    if (!enabled || permission !== 'granted' || platform !== 'android' || userId === null) return;
+    const dayKey = (date: Date) => calendarRef.current.dateOf(date.getTime());
+    const counter = new LiveStepCounter(storage, liveStepsKey(userId), dayKey, now());
     counterRef.current = counter;
     const toDelta = createDeltaTracker();
     let subscription: { remove: () => void } | null = null;
     let cancelled = false;
-    void counter.load(now()).then(() => {
-      if (cancelled) return;
-      subscription = pedometer.watchStepCount((result) => {
-        counter.add(toDelta(result.steps), depsRef.current.now());
+    void persistChainRef.current
+      .then(() => counter.load(depsRef.current.now()))
+      .then(() => {
+        if (cancelled) return;
+        subscription = pedometer.watchStepCount((result) => {
+          counter.add(toDelta(result.steps), depsRef.current.now());
+        });
+        // The saved total may be ahead of the server (e.g. persisted right before a pause).
+        void syncRef.current();
       });
-    });
     return () => {
       cancelled = true;
       subscription?.remove();
-      void counter.persist();
-      counterRef.current = null;
+      persistChainRef.current = counter.persist();
+      if (counterRef.current === counter) counterRef.current = null;
     };
-  }, [enabled, permission]);
+  }, [enabled, permission, userId]);
 
   // 3. Triggers: now, on foreground, every 5 minutes.
-  const syncRef = useRef(syncNow);
-  syncRef.current = syncNow;
   useEffect(() => {
     if (!enabled || permission !== 'granted') return;
     void syncRef.current();
@@ -158,8 +193,12 @@ export function useStepSync({ enabled, myStepsToday, deps: depsOverride }: Optio
       void syncRef.current();
     }, STEP_SYNC_INTERVAL_MS);
     const subscription = AppState.addEventListener('change', (state: AppStateStatus) => {
-      if (state === 'active') void syncRef.current();
-      else void counterRef.current?.persist();
+      if (state === 'active') {
+        void syncRef.current();
+      } else {
+        const counter = counterRef.current;
+        if (counter) persistChainRef.current = counter.persist();
+      }
     });
     return () => {
       clearInterval(interval);

@@ -1,7 +1,7 @@
 import { Text, View } from 'react-native';
 import { Lock } from 'lucide-react-native';
 
-import { familyClock } from '@/modules/childPet/familyTime';
+import { lockClock } from '@/modules/childPet/familyTime';
 import { useAppStore, type LockDetails, type LockState } from '@/store/appStore';
 
 /** User-visible strings (i18n with M1-18). PRODUCT_SPEC §7 / §8. */
@@ -28,7 +28,8 @@ export const LOCKED_STRINGS = {
 export function lockedCopy(lockState: LockState, details: LockDetails): { title: string; body: string } {
   switch (lockState) {
     case 'illness': {
-      const until = familyClock(details.until, details.timezone);
+      // Server `lock.until` carries the family offset → its own wall clock; UTC → Intl.
+      const until = lockClock(details.until, details.timezone);
       return {
         title: LOCKED_STRINGS.illness.title,
         body: until ? LOCKED_STRINGS.illness.body(until) : LOCKED_STRINGS.illness.bodyNoTime,
