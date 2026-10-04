@@ -63,10 +63,16 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 
 ## M2 — Starš, avtentikacija, dashboard (1 teden)
 
-- [ ] M2-01 Registracija / prijava staršev: Sign in with Apple + Google (Socialite / token verify) + email fallback
+- [~] M2-01 **Družinski model** (David, 2026-10-04; ADR-012): več staršev, več otrok, vsak otrok svoj pes ali skupni pes, dejanja pripisana otroku, pes = enota plačila
+  - [x] Faza 1 backend *(2026-10-04, `feat/M2-01-family-model`)*: tabele `families`, `family_user`, `pet_caretakers` (največ 1 aktiven pes na otroka — indeks v bazi), `pet_daily_steps`, `family_invites`, `pets.family_id`, `activities_log.actor_user_id`, pogodba na (pes, otrok); migracija obstoječih podatkov; politike po družini (kanal: vsi skrbniki + vsi starši); `POST /api/parent/generate-pin {pet_id?}`, `POST /api/parent/invite-parent`, `POST /api/parent/join-family`; dashboard `family` z ocenami po otroku (7 dni); stara polja ostanejo za obstoječe verzije aplikacije
+  - [ ] M2-01a Mobilni družinski UI: dashboard z več otroki / psi, "Povabi drugega starša", "PIN za obstoječega psa", statistika po otroku, pogodba za otroka, ki se pridruži skupnemu psu *(mobile-engineer)*
+  - [ ] M2-01b Odstrani zastarele `users.parent_id`, `pets.user_id`, ogledalo `users.timezone` in mostne model hooke, ko jih aplikacija ne bere več
+  - [ ] M2-01c **(D)** Formula ocene / semaforja po otroku (skupni pes)
+  - [ ] M2-01d Certifikat po otroku (12 tednov) iz dejanj otroka
+  - [ ] Odprto **(D)**: nov pes po game overu za istega otroka, skrbnik zapusti skupnega psa, starš zapusti družino, združevanje družin
 - [~] M2-02 Otroški profil brez emaila (**odločeno**): starš ustvari otroka (ime, starost), PIN pairing izda Sanctum token z abilities `child:*`; odstraniti email/geslo prijavo za otroka
   - [x] Starševski zaslon "Dodaj otroka" (obstoječi `POST /api/parent/generate-pin`): PIN `734 912`, odštevanje 15 min, "Nova koda", 429 ohladitev, samodejna potrditev, ko se otrok poveže *(2026-10-03, ista veja)*
-  - [ ] Odprto: otrok se še vedno najprej prijavi z e-pošto; PIN-only prijava (backend izda token za otroški profil), ime/starost otroka, odstranitev e-poštne prijave za otroka; backend ne preprečuje drugega otroka (MVP 1 : 1 je zdaj samo v aplikaciji)
+  - [ ] Odprto: otrok se še vedno najprej prijavi z e-pošto; PIN-only prijava (backend izda token za otroški profil), ime/starost otroka, odstranitev e-poštne prijave za otroka. (Več otrok na družino je od M2-01 dovoljeno po zasnovi; aplikacija še skrije gumb po prvem otroku — M2-01a.)
 - [ ] M2-03 Sanctum abilities (`parent:*`, `child:*`) + Policies namesto ročnih `isParent()` preverjanj
 - [ ] M2-04 Izbira pasme pred "rojstvom" (starš) → nato pairing; RevenueCat odklep pred izbiro, ne sredi igre
 - [ ] M2-05 Parent dashboard na pravih podatkih (`/api/parent/dashboard`, `/activities`), live prek Reverb — *sprehodi po dnevih so v `pet_daily_walks` (koraki, cilj, dosežen, bolezen)*
@@ -74,6 +80,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M2-07 Reset po game over / bolezni (starš) + "Breed Downgrade" (brezplačno)
 - [ ] M2-08 Brisanje računa (Apple obvezno), izvoz podatkov (GDPR)
 - [ ] M2-09 Rate-limit testi, Policies testi
+- [ ] M2-10 Registracija / prijava staršev: Sign in with Apple + Google (Socialite / token verify) + email fallback *(prej M2-01; številka prepuščena družinskemu modelu 2026-10-04)*
 
 ## M3 — Obvestila, senzorji, plačila (1,5 tedna)
 

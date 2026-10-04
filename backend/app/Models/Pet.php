@@ -5,11 +5,13 @@ namespace App\Models;
 use App\Enums\BreedType;
 use App\Enums\PetLockReason;
 use App\Enums\PetStateEnum;
+use App\Services\FamilyService;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
@@ -30,6 +32,16 @@ class Pet extends Model
         // An unborn pet (born_at null, waiting for the contract — M1-07b)
         // gets its clocks at birth instead (PetActivityService::signContract).
         static::creating(function (Pet $pet): void {
+            // Family model (M2-01): a pet always belongs to a family. Code
+            // that only sets the deprecated pets.user_id (seeders, admin,
+            // old tests) gets the owner child's family.
+            if ($pet->family_id === null) {
+                $owner = $pet->user_id !== null ? User::find($pet->user_id) : null;
+                $pet->family_id = $owner !== null
+                    ? app(FamilyService::class)->ensureFamilyFor($owner)->id
+                    : Family::create([])->id;
+            }
+
             if ($pet->isUnborn()) {
                 return;
             }
@@ -40,6 +52,19 @@ class Pet extends Model
 
             if ($pet->isFrozen()) {
                 $pet->frozen_at ??= now();
+            }
+        });
+
+        // The primary caretaker (deprecated pets.user_id) is always a
+        // caretaker row too (M2-01). A pet born at creation (legacy /
+        // factories) needs no contract, like the grandfathered pets.
+        static::created(function (Pet $pet): void {
+            if ($pet->user_id !== null && ! PetCaretaker::where('pet_id', $pet->id)->where('user_id', $pet->user_id)->exists()) {
+                PetCaretaker::create([
+                    'pet_id' => $pet->id,
+                    'user_id' => $pet->user_id,
+                    'requires_contract' => $pet->isUnborn(),
+                ]);
             }
         });
 
@@ -88,6 +113,7 @@ class Pet extends Model
      */
     protected $fillable = [
         'user_id',
+        'family_id',
         'breed_type',
         'pet_dna',
         'current_video_url',
@@ -211,11 +237,94 @@ class Pet extends Model
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * The child user who owns this pet.
+     * @deprecated M2-01 — use caretakers(). The primary caretaker (the child
+     * the pet was created for), kept for old app builds.
      */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * The family this pet belongs to (M2-01). The pet is the billing unit
+     * (one 12-week challenge per pet, shared or not).
+     */
+    public function family(): BelongsTo
+    {
+        return $this->belongsTo(Family::class);
+    }
+
+    /**
+     * Children who care for this pet (one, or several for a shared pet).
+     */
+    public function caretakers(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'pet_caretakers')
+            ->withPivot(['requires_contract'])
+            ->withTimestamps()
+            ->orderBy('pet_caretakers.id');
+    }
+
+    public function caretakerRows(): HasMany
+    {
+        return $this->hasMany(PetCaretaker::class)->orderBy('id');
+    }
+
+    /**
+     * Contracts, one per caretaker child (M2-01).
+     */
+    public function contracts(): HasMany
+    {
+        return $this->hasMany(PetContract::class);
+    }
+
+    public function hasCaretaker(User $user): bool
+    {
+        return PetCaretaker::where('pet_id', $this->id)->where('user_id', $user->id)->exists();
+    }
+
+    /**
+     * True when $child is a caretaker who still has to sign their own
+     * contract before acting (M2-01: the pet is born at the first contract;
+     * a child who joins a born pet signs too). Grandfathered caretaker rows
+     * (requires_contract false) never need one.
+     */
+    public function caretakerNeedsContract(User $child): bool
+    {
+        $requires = PetCaretaker::where('pet_id', $this->id)
+            ->where('user_id', $child->id)
+            ->value('requires_contract');
+
+        return (bool) $requires
+            && ! PetContract::where('pet_id', $this->id)->where('user_id', $child->id)->exists();
+    }
+
+    /**
+     * One child's own steps today on this pet (pet_daily_steps). Steps the
+     * pet counts that no child row explains (from before M2-01) belong to
+     * the primary caretaker.
+     */
+    public function stepsTodayOf(User $child, ?CarbonInterface $now = null): int
+    {
+        $rows = PetDailyStep::where('pet_id', $this->id)
+            ->where('local_date', $this->localDate($now ?? now()))
+            ->pluck('steps', 'user_id');
+
+        $own = (int) ($rows[$child->id] ?? 0);
+
+        if ((int) $this->user_id === (int) $child->id) {
+            $own += max(0, (int) $this->daily_step_count - (int) $rows->sum());
+        }
+
+        return $own;
+    }
+
+    /**
+     * The contract $child signed for this pet, if any.
+     */
+    public function contractOf(User $child): ?PetContract
+    {
+        return PetContract::where('pet_id', $this->id)->where('user_id', $child->id)->first();
     }
 
     /**
@@ -243,11 +352,12 @@ class Pet extends Model
     }
 
     /**
-     * The responsibility contract the child signed for this pet (M1-07).
+     * The first responsibility contract signed for this pet (the one that
+     * birthed it, M1-07b). Per-child contracts: contracts() / contractOf().
      */
     public function contract(): HasOne
     {
-        return $this->hasOne(PetContract::class);
+        return $this->hasOne(PetContract::class)->oldestOfMany('signed_at');
     }
 
     /**
@@ -392,6 +502,29 @@ class Pet extends Model
             ! $this->is_active => PetLockReason::Inactive,
             (bool) $this->is_hard_stopped => PetLockReason::HardStopped,
             $this->isUnborn() => PetLockReason::ContractRequired,
+            $this->isIll() => PetLockReason::Ill,
+            default => null,
+        };
+    }
+
+    /**
+     * Lock reason for one child (M2-01). Like actionLockReason(), plus
+     * `contract_required` when this caretaker has not signed their own
+     * contract yet — on a shared pet the other children keep playing.
+     * Same priority: game over › inactive › hard stop › contract › illness.
+     * Without an actor this is the pet-level reason.
+     */
+    public function actionLockReasonFor(?User $actor): ?PetLockReason
+    {
+        if ($actor === null) {
+            return $this->actionLockReason();
+        }
+
+        return match (true) {
+            (bool) $this->is_game_over => PetLockReason::GameOver,
+            ! $this->is_active => PetLockReason::Inactive,
+            (bool) $this->is_hard_stopped => PetLockReason::HardStopped,
+            $this->isUnborn() || $this->caretakerNeedsContract($actor) => PetLockReason::ContractRequired,
             $this->isIll() => PetLockReason::Ill,
             default => null,
         };
@@ -551,25 +684,29 @@ class Pet extends Model
     }
 
     /**
-     * Get the quiet hours configuration for this pet's parent.
+     * The family's quiet hours (M2-01: one configuration per family, any
+     * parent edits it).
      */
     public function quietHours(): ?QuietHours
     {
-        $parent = $this->user?->parent;
-        $quietHours = $parent?->quietHours;
+        $quietHours = QuietHours::where('family_id', $this->family_id)->first();
 
-        // QuietHours evaluates its windows in the parent's timezone; hand it
-        // the parent we already loaded.
-        $quietHours?->setRelation('parent', $parent);
+        // QuietHours evaluates its windows in the family timezone; hand it
+        // the family we already have.
+        if ($quietHours !== null && $this->family !== null) {
+            $quietHours->setRelation('family', $this->family);
+        }
 
         return $quietHours;
     }
 
     /**
-     * The family timezone (the child owner's parent's), see User::familyTimezone().
+     * The family timezone (families.timezone, M2-01), see User::familyTimezone().
      */
     public function familyTimezone(): string
     {
-        return $this->user?->familyTimezone() ?? User::DEFAULT_TIMEZONE;
+        return $this->family?->timezone
+            ?? $this->user?->familyTimezone()
+            ?? User::DEFAULT_TIMEZONE;
     }
 }

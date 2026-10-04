@@ -55,5 +55,16 @@ class AppServiceProvider extends ServiceProvider
 
             return Limit::perMinute(5)->by($request->user()?->id ?: $request->ip());
         });
+
+        // Second-parent invite codes (M2-01): a parent needs one or two;
+        // 10 per hour per account stops code farming. Wrong codes on
+        // join-family are limited separately in FamilyInviteService.
+        RateLimiter::for('family-invites', function (Request $request) {
+            if (app()->environment('testing')) {
+                return Limit::none();
+            }
+
+            return Limit::perHour(10)->by($request->user()?->id ?: $request->ip());
+        });
     }
 }

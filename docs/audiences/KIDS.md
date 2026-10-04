@@ -13,6 +13,8 @@ Si želiš pravega psa? Najprej pokaži, da zmoreš! V PetPrep dobiš svojega ku
 
 Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova prijavljati.
 
+**Imaš brata ali sestro?** *(kmalu)* Lahko ima vsak svojega kužka, ali pa skupaj skrbita za enega. Če se pridružiš kužku, ki že živi, se tudi ti podpišeš pod obljubo — šele potem mu lahko daješ hrano in vodo. Vse, kar narediš ti, se šteje tebi. Koraki se seštejejo: na sprehod lahko greste skupaj!
+
 ## Kaj kuža potrebuje
 - 🍖 **Hrano** — zjutraj (med 6. in 10. uro) in zvečer (med 17. in 21. uro), enkrat vsakič. Ob drugih urah kuža ni lačen — aplikacija ti pove, kdaj bo spet čas. *(kmalu)*
 - 💧 **Vodo** — trikrat na dan, vsaj 3 ure narazen. *(kmalu)*

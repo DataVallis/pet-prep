@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChildContractController;
 use App\Http\Controllers\ChildPetController;
 use App\Http\Controllers\FalAiWebhookController;
+use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\PairingController;
 use App\Http\Controllers\ParentDashboardController;
 use App\Http\Controllers\ParentSettingsController;
@@ -47,8 +48,15 @@ Route::post('webhooks/revenuecat', [RevenueCatWebhookController::class, 'handle'
 Route::middleware(['auth:sanctum', 'throttle:api'])
     ->prefix('parent')
     ->group(function () {
-        // Generate a 6-digit pairing PIN (throttled more aggressively)
+        // Generate a 6-digit child pairing PIN (throttled more aggressively).
+        // Optional pet_id = the child joins that pet (shared pet, M2-01).
         Route::post('generate-pin', [PairingController::class, 'generatePin'])
+            ->middleware('throttle:pairing');
+
+        // Second parent (M2-01): invite code → join the family.
+        Route::post('invite-parent', [FamilyController::class, 'invite'])
+            ->middleware('throttle:family-invites');
+        Route::post('join-family', [FamilyController::class, 'join'])
             ->middleware('throttle:pairing');
 
         // Dashboard & metrics

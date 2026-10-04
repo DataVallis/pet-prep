@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Enums\UserRole;
 use App\Http\Requests\LoginRequest;
+use App\Models\Pet;
+use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -17,7 +18,7 @@ class AuthController extends Controller
      */
     public function login(LoginRequest $request): JsonResponse
     {
-        $user = \App\Models\User::where('email', $request->input('email'))->first();
+        $user = User::where('email', $request->input('email'))->first();
 
         if (! $user || ! Hash::check($request->input('password'), $user->password)) {
             return response()->json([
@@ -28,13 +29,7 @@ class AuthController extends Controller
         $deviceName = $request->input('device_name', 'mobile-app');
         $token = $user->createToken($deviceName)->plainTextToken;
 
-        $activePet = null;
-        if ($user->isChild()) {
-            $activePet = $user->activePet();
-        } elseif ($user->isParent()) {
-            $child = $user->children()->first();
-            $activePet = $child?->activePet();
-        }
+        $activePet = $this->sessionPet($user);
 
         return response()->json([
             'token' => $token,
@@ -57,13 +52,7 @@ class AuthController extends Controller
     {
         $user = $request->user();
 
-        $activePet = null;
-        if ($user->isChild()) {
-            $activePet = $user->activePet();
-        } elseif ($user->isParent()) {
-            $child = $user->children()->first();
-            $activePet = $child?->activePet();
-        }
+        $activePet = $this->sessionPet($user);
 
         return response()->json([
             'id' => $user->id,
@@ -72,6 +61,24 @@ class AuthController extends Controller
             'role' => $user->role->value,
             'pet' => $activePet,
         ], 200);
+    }
+
+    /**
+     * The pet shown with the session (M2-01): a child's active caretaker
+     * pet; for a parent the family's oldest active pet (legacy single-pet
+     * field — the family is in GET /api/parent/dashboard).
+     */
+    private function sessionPet(User $user): ?Pet
+    {
+        if ($user->isChild()) {
+            return $user->activePet();
+        }
+
+        $familyId = $user->family?->id;
+
+        return $familyId === null
+            ? null
+            : Pet::where('family_id', $familyId)->where('is_active', true)->orderBy('id')->first();
     }
 
     /**

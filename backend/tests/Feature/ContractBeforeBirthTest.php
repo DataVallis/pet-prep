@@ -522,7 +522,7 @@ describe('grandfathered pets', function () {
         // Before M1-07b: born_at NOT NULL DEFAULT now() — an old pairing row.
         $migration->down();
         $oldId = DB::table('pets')->insertGetId([
-            'user_id' => $child->id, 'breed_type' => 'mutt', 'is_active' => true,
+            'user_id' => $child->id, 'family_id' => $child->family->id, 'breed_type' => 'mutt', 'is_active' => true,
             'created_at' => '2026-09-20 10:00:00', 'updated_at' => '2026-09-20 10:00:00',
         ]);
         $oldBornAt = DB::table('pets')->where('id', $oldId)->value('born_at');
@@ -536,7 +536,7 @@ describe('grandfathered pets', function () {
             ->and($old->actionLockReason())->toBeNull();
 
         // New rows: nullable, no default (unborn unless born_at is given).
-        $newId = DB::table('pets')->insertGetId(['user_id' => $child->id, 'breed_type' => 'mutt', 'is_active' => true]);
+        $newId = DB::table('pets')->insertGetId(['user_id' => $child->id, 'family_id' => $child->family->id, 'breed_type' => 'mutt', 'is_active' => true]);
         expect(DB::table('pets')->where('id', $newId)->value('born_at'))->toBeNull();
 
         // Rolling back births unborn pets at their creation.

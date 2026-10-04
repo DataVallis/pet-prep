@@ -83,6 +83,42 @@ sequenceDiagram
   Note over Child,DB: the dog is born — game loop runs from the signing moment (M1-07b)
 ```
 
+## 2a. Family: second parent and shared pet (M2-01, ADR-012)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Mum as Parent A
+  actor Dad as Parent B (new account)
+  actor Kid2 as Child 2
+  participant API as Laravel API
+  participant DB as PostgreSQL
+  Mum->>API: POST /api/parent/invite-parent (10/h)
+  API->>DB: family_invites: 8-char code, 24 h, single use<br/>(A's previous unused code expires)
+  API-->>Mum: 201 {code, expires_at}
+  Note over Mum,Dad: code shared outside the app
+  Dad->>API: POST /api/parent/join-family {code}
+  alt wrong / expired / used code
+    API-->>Dad: 422 invalid_code | code_expired | code_used<br/>(5 wrong in 15 min → 429)
+  else B already has children or pets
+    API-->>Dad: 409 family_not_empty (no merge)
+  else ok
+    API->>DB: transaction: lock invite, move B into A's family,<br/>delete B's empty family, used_at = now
+    API-->>Dad: 200 {family {id, parents, children_count, pets_count}}
+  end
+  Dad->>API: POST /api/parent/generate-pin {pet_id: Rex}
+  API->>DB: PIN on B (15 min), pairing_pet_id = Rex<br/>(Rex must be an active pet of this family, else 422 pet_not_joinable)
+  Kid2->>API: POST /api/child/pair {pin}
+  API->>DB: transaction: child → family (parent_id mirror = B),<br/>pet_caretakers (Rex, child 2, requires_contract)<br/>partial unique: child has no other active pet
+  API-->>Kid2: 201 {joined_existing: true, pet: Rex (born_at unchanged), awaiting_contract: true}
+  Kid2->>API: POST /api/child/pet/feed
+  API-->>Kid2: 423 contract_required (only for child 2 — child 1 keeps playing)
+  Kid2->>API: POST /api/child/contract {signature}
+  API->>DB: pet_contracts (Rex, child 2) — no rebirth
+  API-->>Kid2: 201 state (unlocked)
+  Note over Mum,Kid2: every action stores actor_user_id;<br/>steps per child in pet_daily_steps, the pet's walk = sum;<br/>channel private-pet.{Rex}: both children + both parents
+```
+
 ## 2b. Mobile app launch — session restore (M1-12)
 
 ```mermaid
@@ -244,26 +280,71 @@ sequenceDiagram
 
 ## 6. Data model (core)
 
+Family model (M2-01, ADR-012): `families` own pets and quiet hours; `family_user` puts parents and children in a family; `pet_caretakers` links children to pets (shared pet = several rows). `users.parent_id` and `pets.user_id` are deprecated mirrors.
+
 ```mermaid
 erDiagram
-  USERS ||--o{ USERS : "parent_id (children)"
-  USERS ||--o{ PETS : owns
-  USERS ||--o| QUIET_HOURS : "parent sets"
+  FAMILIES ||--|{ FAMILY_USER : "members"
+  USERS ||--o| FAMILY_USER : "one family"
+  FAMILIES ||--o{ PETS : "billing unit = pet"
+  FAMILIES ||--o| QUIET_HOURS : "one per family"
+  FAMILIES ||--o{ FAMILY_INVITES : "second parent"
+  PETS ||--|{ PET_CARETAKERS : "1..n children"
+  USERS ||--o{ PET_CARETAKERS : "child, max 1 active pet"
+  PETS ||--o{ PET_DAILY_STEPS : "steps per child per day"
+  USERS ||--o{ ACTIVITIES_LOG : "actor (child)"
+  USERS ||--o{ USERS : "parent_id (deprecated)"
+  USERS ||--o{ PETS : "user_id (deprecated, primary caretaker)"
   PETS ||--o{ ACTIVITIES_LOG : logs
   PETS ||--o{ PET_MEDIA_JOBS : "fal.ai requests"
   PETS ||--o{ PET_HYGIENE_EVENTS : "random messes"
   PETS ||--o{ PET_DAILY_WALKS : "closed days"
-  PETS ||--o| PET_CONTRACTS : "signed once"
+  PETS ||--o{ PET_CONTRACTS : "one per caretaker"
   BREED_CONFIGS ||--o{ PETS : "tunables by breed_slug"
+  FAMILIES {
+    bigint id
+    string timezone "family tz, every wall-clock rule"
+  }
+  FAMILY_USER {
+    bigint family_id
+    bigint user_id "unique"
+    string role "parent or child"
+  }
+  FAMILY_INVITES {
+    string code "8 chars, unique"
+    timestamp expires_at "24 h"
+    timestamp used_at "single use"
+  }
+  PET_CARETAKERS {
+    bigint pet_id
+    bigint user_id "child"
+    bool pet_is_active "trigger copy, partial unique"
+    bool requires_contract
+  }
+  PET_DAILY_STEPS {
+    bigint pet_id
+    bigint user_id
+    date local_date
+    int steps
+    timestamp last_sync_at
+  }
+  ACTIVITIES_LOG {
+    bigint pet_id
+    bigint actor_user_id "null = system"
+    string activity_type
+  }
   USERS {
     bigint id
     string role "parent or child"
-    bigint parent_id
-    string timezone
+    bigint parent_id "deprecated"
+    string timezone "parent: mirror of family"
     string pairing_pin
+    bigint pairing_pet_id "join PIN target"
   }
   PETS {
     bigint id
+    bigint family_id
+    bigint user_id "deprecated"
     string breed_type
     double hunger_level
     double thirst_level
@@ -308,7 +389,7 @@ erDiagram
     timestamp illness_started_at
   }
   PET_CONTRACTS {
-    bigint pet_id "unique"
+    bigint pet_id "unique with user_id"
     bigint user_id "the child"
     string signature_format "svg_path or png"
     text signature

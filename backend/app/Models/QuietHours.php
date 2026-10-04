@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Services\FamilyService;
 use Carbon\CarbonInterface;
 use DateTimeImmutable;
 use DateTimeZone;
@@ -18,6 +19,7 @@ class QuietHours extends Model
      */
     protected $fillable = [
         'parent_id',
+        'family_id',
         'school_start',
         'school_end',
         'bedtime_start',
@@ -42,7 +44,28 @@ class QuietHours extends Model
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * The parent who owns this quiet hours configuration.
+     * Quiet hours belong to the family (M2-01); parent_id is the parent who
+     * created them. Code that sets only parent_id gets that parent's family.
+     */
+    protected static function booted(): void
+    {
+        static::creating(function (QuietHours $quietHours): void {
+            if ($quietHours->family_id === null && $quietHours->parent_id !== null) {
+                $parent = User::find($quietHours->parent_id);
+                if ($parent !== null) {
+                    $quietHours->family_id = app(FamilyService::class)->ensureFamilyFor($parent)->id;
+                }
+            }
+        });
+    }
+
+    public function family(): BelongsTo
+    {
+        return $this->belongsTo(Family::class);
+    }
+
+    /**
+     * The parent who created this quiet hours configuration.
      */
     public function parent(): BelongsTo
     {
@@ -54,11 +77,11 @@ class QuietHours extends Model
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * The timezone the windows are defined in: the family (parent's) timezone.
+     * The timezone the windows are defined in: the family timezone.
      */
     public function timezone(): string
     {
-        return $this->parent?->timezone ?? User::DEFAULT_TIMEZONE;
+        return $this->family?->timezone ?? $this->parent?->timezone ?? User::DEFAULT_TIMEZONE;
     }
 
     /**

@@ -23,16 +23,17 @@ Broadcast::channel('App.Models.User.{id}', function (User $user, $id) {
 | pet.{petId} (wire name `private-pet.{petId}`) — PetUpdated for the child
 | HUD and the parent dashboard.
 |
-| Allowed: the child who owns the pet, and that child's parent
-| (users.parent_id) — PetPolicy::listen. Nobody else: not another child,
-| not another parent, not a guest (the auth route requires a token).
+| Allowed (family model, M2-01): every caretaker child of the pet and every
+| parent of the pet's family — PetPolicy::listen. Nobody else: not a child
+| of the same family who cares for another pet, not a parent of another
+| family, not a guest (the auth route requires a token).
 */
 Broadcast::channel('pet.{petId}', function (User $user, $petId): bool {
     if (! ctype_digit((string) $petId)) {
         return false;
     }
 
-    $pet = Pet::with('user:id,parent_id')->find((int) $petId);
+    $pet = Pet::find((int) $petId);
 
     return $pet !== null && $user->can('listen', $pet);
 });

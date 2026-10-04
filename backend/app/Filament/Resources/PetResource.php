@@ -63,8 +63,13 @@ class PetResource extends Resource
             ->schema([
                 Forms\Components\Section::make('Ownership')
                     ->schema([
+                        Forms\Components\Placeholder::make('family_caretakers')
+                            ->label('Family / caretakers')
+                            ->content(fn (?Pet $record): string => $record === null
+                                ? 'Set by the owner\'s family'
+                                : "#{$record->family_id} — ".($record->caretakers()->pluck('name')->implode(', ') ?: '—')),
                         Forms\Components\Select::make('user_id')
-                            ->label('Owner')
+                            ->label('Owner (primary caretaker)')
                             ->relationship('user', 'name')
                             ->searchable()
                             ->preload()
@@ -135,6 +140,14 @@ class PetResource extends Resource
                     ->label('Owner')
                     ->searchable()
                     ->sortable(),
+                // Family model (M2-01): family + every caretaker child.
+                Tables\Columns\TextColumn::make('family_id')
+                    ->label('Family')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('caretakers.name')
+                    ->label('Caretakers')
+                    ->badge()
+                    ->placeholder('—'),
                 Tables\Columns\TextColumn::make('breed_type')
                     ->label('Breed')
                     ->badge()
