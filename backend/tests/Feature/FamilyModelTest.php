@@ -22,7 +22,6 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Schema;
-use Laravel\Sanctum\Sanctum;
 
 use function Pest\Laravel\getJson;
 use function Pest\Laravel\post;
@@ -83,11 +82,11 @@ function fmSecondParent(User $parent): User
  */
 function fmJoinPet(User $parent, Pet $pet, bool $sign = true): User
 {
-    Sanctum::actingAs($parent);
+    actingAsRole($parent);
     $pin = postJson('/api/parent/generate-pin', ['pet_id' => $pet->id])->assertOk()->json('pin');
 
     $child = User::factory()->child()->create(['parent_id' => null]);
-    Sanctum::actingAs($child);
+    actingAsRole($child);
     postJson('/api/child/pair', ['pin' => $pin])->assertCreated();
 
     if ($sign) {
@@ -112,7 +111,7 @@ function fmReverbAuth(): void
 
 function fmChannel(User $user, Pet $pet): int
 {
-    Sanctum::actingAs($user);
+    actingAsRole($user);
 
     return post('/api/broadcasting/auth', [
         'socket_id' => '1234.5678',
@@ -161,6 +160,8 @@ describe('migration backfill', function () {
     it('turns existing parents, children, pets, quiet hours and activities into families', function () {
         $contracts = require database_path('migrations/2026_10_04_140100_make_pet_contracts_unique_per_caretaker.php');
         $family = require database_path('migrations/2026_10_04_140000_create_family_model.php');
+        // M2-02 depends on families: roll it back first.
+        (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->down();
         $contracts->down();
         $family->down();
 
@@ -184,6 +185,7 @@ describe('migration backfill', function () {
 
         $family->up();
         $contracts->up();
+        (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->up();
 
         $familyOf = fn (int $id) => DB::table('family_user')->where('user_id', $id)->value('family_id');
         $f1 = $familyOf($parent);
@@ -218,6 +220,8 @@ describe('migration backfill', function () {
     it('refuses to run (writing nothing) when a child already has two active pets', function () {
         $contracts = require database_path('migrations/2026_10_04_140100_make_pet_contracts_unique_per_caretaker.php');
         $family = require database_path('migrations/2026_10_04_140000_create_family_model.php');
+        // M2-02 depends on families: roll it back first.
+        (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->down();
         $contracts->down();
         $family->down();
 
@@ -236,6 +240,8 @@ describe('migration backfill', function () {
         $contracts = require database_path('migrations/2026_10_04_140100_make_pet_contracts_unique_per_caretaker.php');
         $family = require database_path('migrations/2026_10_04_140000_create_family_model.php');
 
+        // M2-02 depends on families: roll it back first.
+        (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->down();
         $contracts->down();
         $family->down();
         expect(Schema::hasTable('families'))->toBeFalse()
@@ -243,6 +249,7 @@ describe('migration backfill', function () {
 
         $family->up();
         $contracts->up();
+        (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->up();
         expect(DB::table('pets')->where('id', $pet->id)->value('family_id'))
             ->toBe(DB::table('family_user')->where('user_id', $parent->id)->value('family_id'));
     });
@@ -256,7 +263,7 @@ describe('POST /api/parent/invite-parent + join-family', function () {
     it('lets a second parent join and see the same dashboard', function () {
         [$parent, $child, $pet] = fmFamily();
 
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         $invite = postJson('/api/parent/invite-parent')->assertCreated();
         $code = $invite->json('code');
         expect($code)->toMatch('/^[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{8}$/')
@@ -265,7 +272,7 @@ describe('POST /api/parent/invite-parent + join-family', function () {
 
         $second = User::factory()->parent()->create();
         $oldFamilyId = $second->family->id;
-        Sanctum::actingAs($second);
+        actingAsRole($second);
         postJson('/api/parent/join-family', ['code' => strtolower(" {$code} ")])
             ->assertOk()
             ->assertJsonPath('family.id', $parent->family->id)
@@ -274,7 +281,7 @@ describe('POST /api/parent/invite-parent + join-family', function () {
         expect(Family::find($oldFamilyId))->toBeNull(); // empty family removed
 
         $mine = getJson('/api/parent/dashboard')->assertOk();
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         $theirs = getJson('/api/parent/dashboard')->assertOk();
 
         foreach (['pet.id', 'child.id', 'family.id', 'family.pets', 'family.children', 'traffic_light'] as $path) {
@@ -291,10 +298,10 @@ describe('POST /api/parent/invite-parent + join-family', function () {
         [$parent] = fmFamily();
         $code = app(FamilyInviteService::class)->createInvite($parent)['code'];
 
-        Sanctum::actingAs(User::factory()->parent()->create());
+        actingAsRole(User::factory()->parent()->create());
         postJson('/api/parent/join-family', ['code' => $code])->assertOk();
 
-        Sanctum::actingAs(User::factory()->parent()->create());
+        actingAsRole(User::factory()->parent()->create());
         postJson('/api/parent/join-family', ['code' => $code])
             ->assertStatus(422)->assertJsonPath('reason', 'code_used');
         postJson('/api/parent/join-family', ['code' => 'ZZZZZZZZ'])
@@ -311,7 +318,7 @@ describe('POST /api/parent/invite-parent + join-family', function () {
         $code = app(FamilyInviteService::class)->createInvite($parent)['code'];
         $this->travel(24 * 3600 - 1)->seconds();
 
-        Sanctum::actingAs(User::factory()->parent()->create());
+        actingAsRole(User::factory()->parent()->create());
         postJson('/api/parent/join-family', ['code' => $code])->assertOk();
     });
 
@@ -320,7 +327,7 @@ describe('POST /api/parent/invite-parent + join-family', function () {
         $first = app(FamilyInviteService::class)->createInvite($parent)['code'];
         $second = app(FamilyInviteService::class)->createInvite($parent)['code'];
 
-        Sanctum::actingAs(User::factory()->parent()->create());
+        actingAsRole(User::factory()->parent()->create());
         postJson('/api/parent/join-family', ['code' => $first])
             ->assertStatus(422)->assertJsonPath('reason', 'code_expired');
         postJson('/api/parent/join-family', ['code' => $second])->assertOk();
@@ -329,7 +336,7 @@ describe('POST /api/parent/invite-parent + join-family', function () {
     it('locks out after 5 wrong codes for 15 minutes, even for a valid code', function () {
         [$parent] = fmFamily();
         $code = app(FamilyInviteService::class)->createInvite($parent)['code'];
-        Sanctum::actingAs(User::factory()->parent()->create());
+        actingAsRole(User::factory()->parent()->create());
 
         foreach (range(1, 5) as $i) {
             postJson('/api/parent/join-family', ['code' => "WRONG{$i}AA"])->assertStatus(422);
@@ -353,7 +360,7 @@ describe('POST /api/parent/invite-parent + join-family', function () {
         [$other] = fmFamily();
         $code = app(FamilyInviteService::class)->createInvite($parent)['code'];
 
-        Sanctum::actingAs($other);
+        actingAsRole($other);
         postJson('/api/parent/join-family', ['code' => $code])
             ->assertStatus(409)->assertJsonPath('reason', 'family_not_empty');
 
@@ -364,7 +371,7 @@ describe('POST /api/parent/invite-parent + join-family', function () {
         [$parent] = fmFamily();
         $code = app(FamilyInviteService::class)->createInvite($parent)['code'];
 
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         postJson('/api/parent/join-family', ['code' => $code])
             ->assertStatus(409)->assertJsonPath('reason', 'already_member');
     });
@@ -373,13 +380,13 @@ describe('POST /api/parent/invite-parent + join-family', function () {
         [$parent, $child] = fmFamily();
         $code = app(FamilyInviteService::class)->createInvite($parent)['code'];
 
-        Sanctum::actingAs($child);
+        actingAsRole($child);
         postJson('/api/parent/invite-parent')->assertForbidden();
         postJson('/api/parent/join-family', ['code' => $code])->assertForbidden();
     });
 
     it('validates the code field', function () {
-        Sanctum::actingAs(User::factory()->parent()->create());
+        actingAsRole(User::factory()->parent()->create());
         postJson('/api/parent/join-family', [])->assertStatus(422)->assertJsonValidationErrors('code');
         postJson('/api/parent/join-family', ['code' => 'ab$%cd!!'])->assertStatus(422)->assertJsonValidationErrors('code');
     });
@@ -392,11 +399,11 @@ describe('POST /api/parent/invite-parent + join-family', function () {
 describe('POST /api/parent/generate-pin with pet_id', function () {
     it('creates a new pet when pet_id is omitted (second child, own pet)', function () {
         [$parent, , $pet] = fmFamily();
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         $pin = postJson('/api/parent/generate-pin')->assertOk()->assertJsonPath('pet_id', null)->json('pin');
 
         $child2 = User::factory()->child()->create(['parent_id' => null]);
-        Sanctum::actingAs($child2);
+        actingAsRole($child2);
         $response = postJson('/api/child/pair', ['pin' => $pin])->assertCreated()
             ->assertJsonPath('joined_existing', false)
             ->assertJsonPath('pet.awaiting_contract', true)
@@ -414,12 +421,12 @@ describe('POST /api/parent/generate-pin with pet_id', function () {
         [$parent, $child1, $pet] = fmFamily();
         $bornAt = $pet->born_at->toIso8601String();
 
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         $pin = postJson('/api/parent/generate-pin', ['pet_id' => $pet->id])->assertOk()
             ->assertJsonPath('pet_id', $pet->id)->json('pin');
 
         $child2 = User::factory()->child()->create(['parent_id' => null]);
-        Sanctum::actingAs($child2);
+        actingAsRole($child2);
         postJson('/api/child/pair', ['pin' => $pin])->assertCreated()
             ->assertJsonPath('joined_existing', true)
             ->assertJsonPath('pet.id', $pet->id)
@@ -448,7 +455,7 @@ describe('POST /api/parent/generate-pin with pet_id', function () {
     it('refuses a pet of another family, a game-over pet and a pet that is gone by pairing time', function () {
         [$parent, , $pet] = fmFamily();
         [, , $foreign] = fmFamily();
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
 
         postJson('/api/parent/generate-pin', ['pet_id' => $foreign->id])
             ->assertStatus(422)->assertJsonPath('reason', 'pet_not_joinable');
@@ -460,12 +467,12 @@ describe('POST /api/parent/generate-pin with pet_id', function () {
         $pet->update(['is_game_over' => true, 'is_active' => false]);
 
         $child2 = User::factory()->child()->create(['parent_id' => null]);
-        Sanctum::actingAs($child2);
+        actingAsRole($child2);
         postJson('/api/child/pair', ['pin' => $pin])->assertStatus(422);
         expect($child2->fresh()->parent_id)->toBeNull()
             ->and(FamilyMember::where('user_id', $child2->id)->exists())->toBeFalse();
 
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         postJson('/api/parent/generate-pin', ['pet_id' => $pet->id])
             ->assertStatus(422)->assertJsonPath('reason', 'pet_not_joinable');
     });
@@ -480,9 +487,9 @@ describe('shared pet', function () {
         [$parent, $child1, $pet] = fmFamily();
         $child2 = fmJoinPet($parent, $pet);
 
-        Sanctum::actingAs($child1);
+        actingAsRole($child1);
         postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('status', 'accepted');
-        Sanctum::actingAs($child2);
+        actingAsRole($child2);
         postJson('/api/child/pet/water')->assertOk()->assertJsonPath('status', 'accepted');
         // One feed per window for the dog, whoever does it.
         postJson('/api/child/pet/feed')->assertStatus(422)->assertJsonPath('reason', 'already_fed_this_window');
@@ -498,7 +505,7 @@ describe('shared pet', function () {
         $bornAt = $pet->born_at->toIso8601String();
         $child2 = fmJoinPet($parent, $pet, sign: false);
 
-        Sanctum::actingAs($child2);
+        actingAsRole($child2);
         getJson('/api/child/pet')->assertOk()
             ->assertJsonPath('lock.reason', 'contract_required')
             ->assertJsonPath('pet.awaiting_contract', true)
@@ -506,12 +513,12 @@ describe('shared pet', function () {
         postJson('/api/child/pet/water')->assertStatus(423)->assertJsonPath('reason', 'contract_required');
 
         // The other child keeps playing.
-        Sanctum::actingAs($child1);
+        actingAsRole($child1);
         getJson('/api/child/pet')->assertJsonPath('lock.reason', null)->assertJsonPath('pet.awaiting_contract', false);
         postJson('/api/child/pet/water')->assertOk();
 
         $this->travel(5)->minutes();
-        Sanctum::actingAs($child2);
+        actingAsRole($child2);
         postJson('/api/child/contract', FM_SVG)->assertCreated()
             ->assertJsonPath('state.contract.signed', true)
             ->assertJsonPath('state.lock.reason', null);
@@ -528,22 +535,22 @@ describe('shared pet', function () {
         seedBreedConfigs();
         fmAt('2026-10-04 06:00:00');
         $parent = User::factory()->parent()->create();
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         $pin = postJson('/api/parent/generate-pin')->json('pin');
         $child1 = User::factory()->child()->create(['parent_id' => null]);
-        Sanctum::actingAs($child1);
+        actingAsRole($child1);
         $petId = postJson('/api/child/pair', ['pin' => $pin])->assertCreated()->json('pet.id');
         $pet = Pet::findOrFail($petId);
 
         $child2 = fmJoinPet($parent, $pet, sign: false);
 
         $this->travel(10)->minutes();
-        Sanctum::actingAs($child2);
+        actingAsRole($child2);
         postJson('/api/child/contract', FM_SVG)->assertCreated();
         $bornAt = $pet->fresh()->born_at;
         expect($bornAt->equalTo(now()->startOfSecond()))->toBeTrue();
 
-        Sanctum::actingAs($child1);
+        actingAsRole($child1);
         postJson('/api/child/pet/feed')->assertStatus(423)->assertJsonPath('reason', 'contract_required');
 
         $this->travel(10)->minutes();
@@ -558,12 +565,12 @@ describe('shared pet', function () {
         $child2 = fmJoinPet($parent, $pet);
         $at = '2026-10-04T10:00:00+02:00';
 
-        Sanctum::actingAs($child1);
+        actingAsRole($child1);
         postJson('/api/child/pet/steps', ['steps_today' => 1500, 'source' => 'healthkit', 'recorded_at' => $at])->assertOk()
             ->assertJsonPath('steps_today', 1500)
             ->assertJsonPath('state.steps.my_steps_today', 1500);
 
-        Sanctum::actingAs($child2);
+        actingAsRole($child2);
         postJson('/api/child/pet/steps', ['steps_today' => 2000, 'source' => 'healthkit', 'recorded_at' => $at])->assertOk()
             ->assertJsonPath('accepted_steps', 2000)
             ->assertJsonPath('steps_today', 3500)
@@ -576,7 +583,7 @@ describe('shared pet', function () {
         // Child 1's next sync (5 min later) completes the 4,000 goal → walk
         // attributed to child 1.
         $this->travel(5)->minutes();
-        Sanctum::actingAs($child1);
+        actingAsRole($child1);
         postJson('/api/child/pet/steps', ['steps_today' => 2100, 'source' => 'healthkit', 'recorded_at' => '2026-10-04T10:05:00+02:00'])->assertOk()
             ->assertJsonPath('steps_today', 4100)
             ->assertJsonPath('energy_level', 100);
@@ -593,9 +600,9 @@ describe('shared pet', function () {
         $at = '2026-10-04T00:10:00+02:00';
 
         // 10 minutes since local midnight → at most 2,000 steps per child.
-        Sanctum::actingAs($child1);
+        actingAsRole($child1);
         postJson('/api/child/pet/steps', ['steps_today' => 2000, 'source' => 'healthkit', 'recorded_at' => $at])->assertJsonPath('status', 'accepted');
-        Sanctum::actingAs($child2);
+        actingAsRole($child2);
         postJson('/api/child/pet/steps', ['steps_today' => 3000, 'source' => 'healthkit', 'recorded_at' => $at])
             ->assertJsonPath('status', 'capped')
             ->assertJsonPath('accepted_steps', 2000)
@@ -608,9 +615,9 @@ describe('shared pet', function () {
         $child2 = fmJoinPet($parent, $pet);
         $at = '2026-10-04T10:00:00+02:00';
 
-        Sanctum::actingAs($child2);
+        actingAsRole($child2);
         postJson('/api/child/pet/steps', ['steps_today' => 500, 'source' => 'healthkit', 'recorded_at' => $at])->assertJsonPath('steps_today', 1500);
-        Sanctum::actingAs($child1);
+        actingAsRole($child1);
         postJson('/api/child/pet/steps', ['steps_today' => 1200, 'source' => 'healthkit', 'recorded_at' => $at])
             ->assertJsonPath('accepted_steps', 200)
             ->assertJsonPath('steps_today', 1700);
@@ -621,15 +628,15 @@ describe('shared pet', function () {
         $child2 = fmJoinPet($parent, $pet);
         $at = '2026-10-04T09:00:00+02:00';
 
-        Sanctum::actingAs($child1);
+        actingAsRole($child1);
         postJson('/api/child/pet/feed')->assertOk();
         postJson('/api/child/pet/steps', ['steps_today' => 800, 'source' => 'healthkit', 'recorded_at' => $at])->assertOk();
-        Sanctum::actingAs($child2);
+        actingAsRole($child2);
         postJson('/api/child/pet/water')->assertOk();
         postJson('/api/child/pet/clean')->assertOk(); // unchanged (already clean) → no row
         postJson('/api/child/pet/steps', ['steps_today' => 3300, 'source' => 'healthkit', 'recorded_at' => $at])->assertOk(); // 800 + 3300 ≥ 4000
 
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         $dash = getJson('/api/parent/dashboard')->assertOk();
         $kids = collect($dash->json('family.children'))->keyBy('id');
 
@@ -656,10 +663,10 @@ describe('authorization in a family', function () {
         $child2 = fmJoinPet($parent, $pet);
 
         // A sibling with their own pet, and another family.
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         $pin = postJson('/api/parent/generate-pin')->json('pin');
         $sibling = User::factory()->child()->create(['parent_id' => null]);
-        Sanctum::actingAs($sibling);
+        actingAsRole($sibling);
         $siblingPet = Pet::findOrFail(postJson('/api/child/pair', ['pin' => $pin])->json('pet.id'));
         [$otherParent, $otherChild] = fmFamily();
 
@@ -679,7 +686,7 @@ describe('authorization in a family', function () {
         $second = fmSecondParent($parent);
         [, , $foreign] = fmFamily();
 
-        Sanctum::actingAs($second);
+        actingAsRole($second);
         postJson('/api/parent/hard-stop', ['pet_id' => $pet->id])->assertOk()
             ->assertJsonPath('pet_id', $pet->id)
             ->assertJsonPath('is_hard_stopped', true);
@@ -694,10 +701,10 @@ describe('authorization in a family', function () {
         [$parent, , $pet] = fmFamily();
         $second = fmSecondParent($parent);
 
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         putJson('/api/parent/quiet-hours', ['bedtime_start' => '21:00', 'bedtime_end' => '07:00', 'is_active' => true])->assertOk();
 
-        Sanctum::actingAs($second);
+        actingAsRole($second);
         getJson('/api/parent/quiet-hours')->assertOk()->assertJsonPath('quiet_hours.bedtime_start', '21:00');
         putJson('/api/parent/quiet-hours', ['bedtime_start' => '20:30', 'bedtime_end' => '07:00', 'is_active' => true])->assertOk();
         putJson('/api/parent/settings', ['timezone' => 'Europe/London'])->assertOk();
@@ -748,7 +755,7 @@ describe('invariants', function () {
         expect(fn () => app(FamilyService::class)->addCaretaker($pet, $parent))
             ->toThrow(FamilyException::class, 'Only a child');
 
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         postJson('/api/child/pet/feed')->assertForbidden();
     });
 
@@ -804,7 +811,7 @@ describe('family deletion never takes child data with it', function () {
             }
         });
 
-        Sanctum::actingAs($joiner);
+        actingAsRole($joiner);
         postJson('/api/parent/join-family', ['code' => $code])
             ->assertStatus(409)->assertJsonPath('reason', 'family_not_empty');
 
@@ -818,7 +825,7 @@ describe('family deletion never takes child data with it', function () {
         [$parentA] = fmFamily();
         $b = User::factory()->parent()->create();
         $c = fmSecondParent($b); // C joins B's (empty) family
-        Sanctum::actingAs($b);
+        actingAsRole($b);
         putJson('/api/parent/quiet-hours', ['bedtime_start' => '21:00', 'bedtime_end' => '07:00', 'is_active' => true])->assertOk();
         $oldFamilyId = $b->fresh()->family->id;
 
@@ -837,7 +844,7 @@ describe('deploy window and input hardening', function () {
         $row = QuietHours::create(['parent_id' => $parent->id, 'bedtime_start' => '22:00', 'bedtime_end' => '06:00', 'is_active' => true]);
         DB::table('quiet_hours')->where('id', $row->id)->update(['family_id' => null]); // written by old code
 
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         putJson('/api/parent/quiet-hours', ['bedtime_start' => '21:30', 'bedtime_end' => '06:30', 'is_active' => true])
             ->assertOk()->assertJsonPath('quiet_hours.bedtime_start', '21:30');
 
@@ -855,15 +862,15 @@ describe('deploy window and input hardening', function () {
         DB::table('users')->where('id', $kid->id)->update(['parent_id' => $other->id]);
         expect($kid->parent_id)->toBeNull();
 
-        Sanctum::actingAs($kid);
+        actingAsRole($kid);
         postJson('/api/child/pair', ['pin' => $pin])
-            ->assertStatus(422)->assertJsonPath('message', 'This child profile is already paired to a parent.');
+            ->assertStatus(422)->assertJsonPath('message', 'This code cannot be used. Ask your parent for a new code.');
         expect(Pet::where('user_id', $kid->id)->exists())->toBeFalse();
     });
 
     it('answers 422 for a non-scalar pet_id', function () {
         [$parent] = fmFamily();
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
 
         getJson('/api/parent/activities?pet_id[]=1')->assertStatus(422)->assertJsonValidationErrors('pet_id');
         postJson('/api/parent/hard-stop', ['pet_id' => [1]])->assertStatus(422)->assertJsonValidationErrors('pet_id');
@@ -877,7 +884,7 @@ describe('deploy window and input hardening', function () {
         Family::whereKey($familyId)->delete();
         $families = Family::count();
 
-        Sanctum::actingAs($parent->fresh());
+        actingAsRole($parent->fresh());
         getJson('/api/parent/dashboard')->assertOk()
             ->assertJsonPath('pet', null)->assertJsonPath('family', null);
         getJson('/api/parent/quiet-hours')->assertOk()->assertJsonPath('quiet_hours', null);

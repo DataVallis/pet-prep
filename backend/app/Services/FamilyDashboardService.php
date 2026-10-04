@@ -11,6 +11,8 @@ use App\Models\PetContract;
 use App\Models\PetDailyStep;
 use App\Models\User;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
+use Laravel\Sanctum\PersonalAccessToken;
 
 /**
  * Parent dashboard data for a whole family (M2-01, ADR-012).
@@ -69,7 +71,14 @@ class FamilyDashboardService
         $pets = Pet::where('family_id', $family->id)->orderBy('id')->get();
         $caretakers = PetCaretaker::whereIn('pet_id', $pets->pluck('id'))->orderBy('id')->get();
         $contracts = PetContract::whereIn('pet_id', $pets->pluck('id'))->get(['pet_id', 'user_id']);
-        $children = $family->children()->get(['users.id', 'users.name']);
+        $children = $family->children()->get(['users.id', 'users.name', 'users.birth_year', DB::raw('(users.password IS NULL) AS pin_only')]);
+        // Signed-in devices per child (M2-02) = Sanctum tokens.
+        $devices = PersonalAccessToken::query()
+            ->where('tokenable_type', User::class)
+            ->whereIn('tokenable_id', $children->pluck('id'))
+            ->selectRaw('tokenable_id, count(*) as n')
+            ->groupBy('tokenable_id')
+            ->pluck('n', 'tokenable_id');
         $parents = $family->parents()->get(['users.id', 'users.name']);
 
         $from = now()->setTimezone($tz)->startOfDay()->subDays(self::STATS_DAYS - 1);
@@ -101,7 +110,7 @@ class FamilyDashboardService
                 'name' => $p->name,
                 'is_me' => $p->id === $viewer->id,
             ])->values()->all(),
-            'children' => $children->map(function (User $child) use ($caretakers, $pets, $actionCounts, $steps, $contracts) {
+            'children' => $children->map(function (User $child) use ($caretakers, $pets, $actionCounts, $steps, $contracts, $devices) {
                 $petIds = $caretakers->where('user_id', $child->id)->pluck('pet_id');
                 $current = $pets->whereIn('id', $petIds)->sortByDesc(fn (Pet $p) => [(int) $p->is_active, $p->id])->first();
                 $counts = $this->countsByType($actionCounts->get($child->id, collect()));
@@ -110,6 +119,11 @@ class FamilyDashboardService
                 return [
                     'id' => $child->id,
                     'name' => $child->name,
+                    'birth_year' => $child->birth_year,
+                    // M2-02: `pin` = profile without e-mail / password;
+                    // `email` = legacy child account (deprecated).
+                    'login' => $child->getAttribute('pin_only') ? 'pin' : 'email',
+                    'devices' => (int) ($devices[$child->id] ?? 0),
                     'pet_id' => $current?->id,
                     'contract_signed' => $current !== null
                         && $contracts->where('pet_id', $current->id)->where('user_id', $child->id)->isNotEmpty(),

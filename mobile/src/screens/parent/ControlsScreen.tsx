@@ -19,13 +19,19 @@ import { ChevronLeft, ShieldAlert } from 'lucide-react-native';
 
 import { api } from '@/api/client';
 import AddChildCard from '@/components/AddChildCard';
+import FamilyChildrenCard from '@/components/FamilyChildrenCard';
+import type { FamilyChild, FamilyOverview } from '@/modules/family/family';
 import type { QuietHours } from '@/types';
 
 interface ControlsScreenProps {
   /** Navigate back to the dashboard. */
   onBack: () => void;
-  /** Open "Dodaj otroka". Passed only while no child is paired (MVP: 1 parent → 1 child). */
-  onAddChild?: () => void;
+  /** The dashboard's family section (null while loading / no family yet). */
+  family: FamilyOverview | null;
+  /** Open "Dodaj otroka" — always offered (several children per family, M2-02). */
+  onAddChild: () => void;
+  /** PIN for an existing child (pet choice or re-login on a new device). */
+  onChildPin: (child: FamilyChild) => void;
 }
 
 const EMPTY_QUIET_HOURS: QuietHours = {
@@ -42,7 +48,7 @@ function isValidTime(value: string): boolean {
   return /^([01]\d|2[0-3]):[0-5]\d$/.test(value);
 }
 
-export default function ControlsScreen({ onBack, onAddChild }: ControlsScreenProps) {
+export default function ControlsScreen({ onBack, family, onAddChild, onChildPin }: ControlsScreenProps) {
   const [quietHours, setQuietHours] = useState<QuietHours>(EMPTY_QUIET_HOURS);
   const [isSaving, setIsSaving] = useState(false);
   const [hardStopActive, setHardStopActive] = useState(false);
@@ -147,7 +153,11 @@ export default function ControlsScreen({ onBack, onAddChild }: ControlsScreenPro
       </View>
 
       <ScrollView className="flex-1" contentContainerClassName="gap-4 p-4 pb-6">
-        {onAddChild && <AddChildCard onPress={onAddChild} compact />}
+        {family && family.children.length > 0 ? (
+          <FamilyChildrenCard family={family} onAddChild={onAddChild} onChildPin={onChildPin} />
+        ) : (
+          <AddChildCard onPress={onAddChild} compact />
+        )}
 
         {/* Quiet Hours Manager */}
         <View className="bg-slate-900 rounded-2xl p-5 border border-slate-800">

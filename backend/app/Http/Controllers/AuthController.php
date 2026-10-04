@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\TokenAbility;
 use App\Http\Requests\LoginRequest;
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\ChildProfileService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -12,39 +14,60 @@ use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
     /**
-     * Authenticate a user and issue a Sanctum API token.
+     * Authenticate a user with e-mail + password and issue a Sanctum API
+     * token. The token carries one ability (M2-03): `parent` or `child`.
+     *
+     * Children: only legacy child accounts that still have an e-mail and a
+     * password can sign in here (**deprecated**, dev/test accounts until they
+     * are migrated). PIN-only child profiles (M2-02) have neither and use
+     * `POST /api/child/pin-login`; this endpoint answers them like any wrong
+     * credentials (401).
      *
      * POST /api/login
      */
     public function login(LoginRequest $request): JsonResponse
     {
         $user = User::where('email', $request->input('email'))->first();
+        $hash = $user?->getAuthPassword();
 
-        if (! $user || ! Hash::check($request->input('password'), $user->password)) {
+        if ($user === null || ! is_string($hash) || $hash === ''
+            || ! Hash::check($request->input('password'), $hash)) {
             return response()->json([
                 'message' => 'Invalid credentials.',
             ], 401);
         }
 
-        $deviceName = $request->input('device_name', 'mobile-app');
-        $token = $user->createToken($deviceName)->plainTextToken;
+        $deviceName = (string) $request->input('device_name', 'mobile-app');
+        if ($user->isChild()) {
+            // Never store a child's raw device name (may contain their name).
+            $deviceName = ChildProfileService::deviceLabel($deviceName);
+        }
+        $token = $user->createToken($deviceName, TokenAbility::abilitiesFor($user))->plainTextToken;
 
         $activePet = $this->sessionPet($user);
+        $awaiting = $this->awaitingContract($user, $activePet);
 
         return response()->json([
             'token' => $token,
+            'abilities' => TokenAbility::abilitiesFor($user),
             'user' => [
                 'id' => $user->id,
                 'name' => $user->name,
                 'email' => $user->email,
                 'role' => $user->role->value,
             ],
-            'pet' => $activePet,
+            'pet' => $this->petPayload($activePet, $awaiting),
+            // Per child (M2-02): this child must sign before acting. null for a parent.
+            'awaiting_contract' => $awaiting,
         ], 200);
     }
 
     /**
-     * Get the authenticated user's profile.
+     * Get the authenticated user's profile (session restore on app launch).
+     *
+     * `awaiting_contract` (also inside `pet`) is evaluated for the signed-in
+     * child: the pet is unborn, or the child joined a shared pet and hasn't
+     * signed their own contract yet. null for a parent.
      *
      * GET /api/user
      */
@@ -53,13 +76,15 @@ class AuthController extends Controller
         $user = $request->user();
 
         $activePet = $this->sessionPet($user);
+        $awaiting = $this->awaitingContract($user, $activePet);
 
         return response()->json([
             'id' => $user->id,
             'name' => $user->name,
             'email' => $user->email,
             'role' => $user->role->value,
-            'pet' => $activePet,
+            'pet' => $this->petPayload($activePet, $awaiting),
+            'awaiting_contract' => $awaiting,
         ], 200);
     }
 
@@ -79,6 +104,36 @@ class AuthController extends Controller
         return $familyId === null
             ? null
             : Pet::where('family_id', $familyId)->where('is_active', true)->orderBy('id')->first();
+    }
+
+    /**
+     * Child: must this child sign a contract before acting? True when the
+     * pet is unborn or the child's own caretaker row still requires a
+     * contract they haven't signed (shared pet joined after its birth).
+     * Parent: null (parents never sign).
+     */
+    private function awaitingContract(User $user, ?Pet $pet): ?bool
+    {
+        if (! $user->isChild()) {
+            return null;
+        }
+
+        return $pet !== null && ($pet->isUnborn() || $pet->caretakerNeedsContract($user));
+    }
+
+    /**
+     * The raw pet model (legacy shape, unchanged — kept as a model so the
+     * OpenAPI `Pet` schema stays) plus `awaiting_contract` when it is known
+     * per child. The attribute lives only on this response instance, which
+     * is never saved.
+     */
+    private function petPayload(?Pet $pet, ?bool $awaiting): ?Pet
+    {
+        if ($pet !== null && $awaiting !== null) {
+            $pet->setAttribute('awaiting_contract', $awaiting);
+        }
+
+        return $pet;
     }
 
     /**

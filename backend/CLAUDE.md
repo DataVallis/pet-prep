@@ -12,7 +12,7 @@ Run everything through Sail: `./vendor/bin/sail artisan …`, `./vendor/bin/sail
 | HTTP input validation | `app/Http/Requests/*Request.php` |
 | Business rules | `app/Services/*Service.php` (inject via constructor) |
 | Async / external calls (fal.ai, push, RevenueCat sync) | `app/Jobs/*` implementing `ShouldQueue` |
-| Authorization | `app/Policies/*` + Sanctum abilities (`parent:*`, `child:*`) |
+| Authorization | `app/Policies/*` + Sanctum token abilities (`parent`, `child` — `App\Enums\TokenAbility`) |
 | Response shape | `app/Http/Resources/*Resource.php` (introduce; controllers currently build arrays inline) |
 | Enums | `app/Enums/*` — mirror any new value in a DB CHECK constraint migration |
 | Tunable game numbers | `breed_configs` table (+ seeder), never constants in services |
@@ -42,10 +42,20 @@ Run everything through Sail: `./vendor/bin/sail artisan …`, `./vendor/bin/sail
 - Deletes never cascade from `families` into child data (`pets` / `family_user` / `quiet_hours` FKs are RESTRICT). Lock order for family writes: parent user row → child user row → family row (`PairingService::pairChild`, `FamilyInviteService::joinFamily`) — keep it in any new code that moves people or creates pets. Notification recipients: `FamilyService::parentRecipients()` / `caretakerRecipients()` only.
 - Raw `DB::table('pets')->insert()` needs `family_id` (NOT NULL).
 
+## Auth (M2-02 / M2-03)
+- **Token abilities:** every token gets exactly one ability from `TokenAbility::abilitiesFor($user)` (`parent` | `child`) — `/api/login` and `/api/child/pin-login`. Route groups: `/api/parent/*` → `ability:parent`, `/api/child/*` → `ability:child` (Sanctum `CheckForAnyAbility`, alias in `bootstrap/app.php`). Legacy tokens have `["*"]` and pass; **policies stay the second layer** (role + family) — never drop them because a route has an ability. New parent/child routes go inside the matching group; shared routes (`/api/user`, `/api/logout`, broadcasting auth) accept any token.
+- **Child profiles have no e-mail / password** (`users.email` / `password` nullable): create them only through `ChildProfileService::createChild()` (nickname ≤ 30, optional `birth_year`; nothing else about a minor). Never add personal fields to a child without David. Code that reads `email` / `password` must handle null.
+- **Child sign-in = one-time PIN for that profile** (`ChildPinLoginService`): only `HMAC-SHA256(pin, APP_KEY)` is stored (`child_login_pins`), lookup by hash + `hash_equals`; one open PIN per child; wrong / expired / used / replaced → the identical 422 `invalid_pin` (keep it identical — no enumeration); failed attempts limited per IP and globally (successes never reset the counters). Mode (`new_pet` / `join_pet` / `relogin`) is decided under the locks parent → child → family → PIN row; pairing goes through `PairingService::attachChildToPet()` (shared with the deprecated `/api/child/pair`). Max 3 tokens per child (`ChildProfileService::pruneDevices`).
+- Per-IP limits rely on trusted proxies (`config/trustedproxy.php` → `App\Http\Middleware\TrustProxies`, env `TRUSTED_PROXIES`): `$request->ip()` is the client behind Caddy. Key per-IP limits with `ClientIp::rateLimitKey()` (IPv6 → /64).
+- Never store a child's raw device name: `ChildProfileService::deviceLabel()` for every child token. Auth errors that could confirm a PIN or account state return one uniform body (`invalid_pin`, `pairing_refused`).
+- `/api/login` for children and `/api/child/pair` are **deprecated** (legacy e-mail child accounts only).
+
 ## Testing
 - Parallel agents/worktrees: run Pest on your own PostgreSQL database (e.g. `createdb testing_<branch>`), never the shared `testing` DB — other sessions migrate it concurrently.
 - Pest feature tests in `tests/Feature`, unit tests in `tests/Unit` (create the folder when needed).
 - `RefreshDatabase`; call `seedBreedConfigs()` (helper in `tests/Pest.php`) when a test needs breed data.
+- Auth in tests: `actingAs($user, 'sanctum')` / `actingAsRole($user)` attach an in-memory token with the user's role ability (`tests/TestCase.php`); `$this->actingAsWithAbilities($user, ['*'])` for legacy tokens. Don't use `Sanctum::actingAs()` (its mock throws on an unexpected ability instead of 403). For real bearer tokens call `app('auth')->forgetGuards()` before each request that switches user (the guard caches the user across requests in one test).
+- The global `beforeEach` in `tests/Pest.php` does **not** strip `ThrottleRequests` (observed M2-02); limiters return `Limit::none()` in testing instead — except `pin-login`, which is live (tests that log in more than 10× from one IP call `$this->withoutMiddleware([ThrottleRequests::class])`).
 - Time: `$this->travel(...)` / `Carbon::setTestNow()`. For decay, simulate a full day minute-by-minute and assert against spec numbers.
 - External HTTP: `Http::fake()`; broadcasts: `Event::fake([PetUpdated::class])`, assert on `$e->petId` / `$e->eventType`.
 - `phpunit.xml` uses `BROADCAST_CONNECTION=log`, DB `testing` on the Sail pgsql service.

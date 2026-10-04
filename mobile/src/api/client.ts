@@ -6,12 +6,7 @@
 import * as SecureStore from 'expo-secure-store';
 import { ENV } from '@/config/env';
 import type { components, operations } from '@/api/schema';
-import type {
-  PairingResponse,
-  GeneratePinResponse,
-  Pet,
-  QuietHours,
-} from '@/types';
+import type { Pet, QuietHours } from '@/types';
 
 /**
  * Authenticated user as returned (flat, no `data` wrapper) by `GET /api/user`
@@ -23,13 +18,20 @@ export type UserRole = 'parent' | 'child';
 export interface SessionUser {
   id: number;
   name: string;
-  email: string;
+  /** null for a PIN-only child profile (M2-02). */
+  email: string | null;
   role: UserRole;
 }
 
 /** `GET /api/user` response. */
 export interface UserResponse extends SessionUser {
   pet: Pet | null;
+  /**
+   * Child: this child must sign the contract before acting — pet unborn, or the
+   * child joined a shared, already born pet and hasn't signed yet (M2-02). Also
+   * mirrored in `pet.awaiting_contract`. null for a parent.
+   */
+  awaiting_contract?: boolean | null;
 }
 
 /** `POST /api/login` response. */
@@ -37,6 +39,8 @@ export interface LoginResponse {
   token: string;
   user: SessionUser;
   pet: Pet | null;
+  /** Same per-child flag as `UserResponse.awaiting_contract`. */
+  awaiting_contract?: boolean | null;
 }
 
 /** `GET /api/parent/dashboard` 200 response (union: paired / no pet / no child). */
@@ -61,6 +65,61 @@ export interface SignContractResponse {
   status: 'accepted';
   state: ChildPetState;
 }
+
+/** Pet payload of `POST /api/child/pin-login` (`PairedPetResource`). */
+export type PairedPet = components['schemas']['PairedPetResource'];
+
+/** What a child PIN does (M2-02): first pairing, join a shared pet, or only sign in a new device. */
+export type PinLoginMode = 'new_pet' | 'join_pet' | 'relogin';
+
+/**
+ * `POST /api/child/pin-login` 200 body. Declared here because the generated schema
+ * types `joined_existing` / `family_id` as strings and unions the body with `string`.
+ */
+export interface PinLoginResponse {
+  token: string;
+  abilities: string[];
+  /** Nickname only — a PIN-only child has no e-mail. */
+  user: { id: number; name: string; role: UserRole };
+  mode: PinLoginMode;
+  joined_existing: boolean;
+  family_id: number;
+  pet: PairedPet;
+  /** This child must sign the contract before acting (unborn pet or joined a shared pet). */
+  awaiting_contract: boolean;
+}
+
+/**
+ * Error body of `POST /api/child/pin-login` (422 / 429). Hand-typed: Scramble only
+ * documents the validation shape (HANDOFF debt 5).
+ */
+export interface PinLoginErrorBody {
+  message: string;
+  reason?: 'invalid_pin' | 'pin_not_usable' | 'too_many_attempts';
+  retry_after?: number;
+}
+
+/** `POST /api/parent/children` body / 201 response (M2-02). */
+export type CreateChildRequest = components['schemas']['CreateChildRequest'];
+export type CreateChildResponse =
+  operations['childProfile.store']['responses'][201]['content']['application/json'];
+
+/** `POST /api/parent/generate-pin` body — always with `child_id` (the legacy call is deprecated). */
+export interface GenerateChildPinRequest {
+  child_id: number;
+  /** Join this shared pet of the family; omit for a new pet (or a re-login). */
+  pet_id?: number | null;
+}
+
+/** `POST /api/parent/generate-pin` 200 body for a request with `child_id`. */
+export type ChildPinResponse = Extract<
+  operations['pairing.generatePin']['responses'][200]['content']['application/json'],
+  { child_id: number }
+>;
+
+/** `DELETE /api/parent/children/{child}/tokens` 200 body. */
+export type RevokeChildTokensResponse =
+  operations['childProfile.revokeTokens']['responses'][200]['content']['application/json'];
 
 /** Response from POST /api/broadcasting/auth (Pusher protocol signature). */
 export interface BroadcastAuthResponse {
@@ -138,9 +197,11 @@ async function apiRequest<T>(
     method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
     body?: Record<string, unknown>;
     signal?: AbortSignal;
+    /** Send no Bearer token (public endpoints such as the child PIN login). */
+    anonymous?: boolean;
   } = {},
 ): Promise<T> {
-  const token = await getAuthToken();
+  const token = options.anonymous ? null : await getAuthToken();
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     Accept: 'application/json',
@@ -207,13 +268,37 @@ export const api = {
   logout: (signal?: AbortSignal) =>
     apiRequest<{ message: string }>('/api/logout', { method: 'POST', signal }),
 
-  /** POST /api/parent/generate-pin — Generate a 6-digit pairing PIN. */
-  generatePin: () =>
-    apiRequest<GeneratePinResponse>('/api/parent/generate-pin', { method: 'POST' }),
+  /**
+   * POST /api/child/pin-login (M2-02, public) — the child's only way in: PIN from the
+   * parent → child token. 422 `invalid_pin` / `pin_not_usable`, 429 with Retry-After.
+   */
+  pinLogin: (pin: string, deviceName: string) =>
+    apiRequest<PinLoginResponse>('/api/child/pin-login', {
+      method: 'POST',
+      body: { pin, device_name: deviceName },
+      anonymous: true,
+    }),
 
-  /** POST /api/child/pair — Pair a child to a parent via PIN. */
-  pairChild: (pin: string) =>
-    apiRequest<PairingResponse>('/api/child/pair', { method: 'POST', body: { pin } }),
+  /** POST /api/parent/children (M2-02) — child profile: nickname + optional birth year, no e-mail. */
+  createChild: (body: CreateChildRequest) =>
+    apiRequest<CreateChildResponse>('/api/parent/children', {
+      method: 'POST',
+      body: { display_name: body.display_name, birth_year: body.birth_year ?? null },
+    }),
+
+  /**
+   * POST /api/parent/generate-pin — one-time 6-digit PIN for a child profile (15 min).
+   * `mode` new_pet | join_pet (with `pet_id`) | relogin (already paired child, new device).
+   */
+  generatePin: (body: GenerateChildPinRequest) =>
+    apiRequest<ChildPinResponse>('/api/parent/generate-pin', {
+      method: 'POST',
+      body: body.pet_id != null ? { child_id: body.child_id, pet_id: body.pet_id } : { child_id: body.child_id },
+    }),
+
+  /** DELETE /api/parent/children/{child}/tokens — sign the child out on every device. */
+  revokeChildTokens: (childId: number) =>
+    apiRequest<RevokeChildTokensResponse>(`/api/parent/children/${childId}/tokens`, { method: 'DELETE' }),
 
   /**
    * POST /api/broadcasting/auth — sign a private channel subscription for

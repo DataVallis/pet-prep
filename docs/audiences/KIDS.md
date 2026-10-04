@@ -7,13 +7,15 @@ Si želiš pravega psa? Najprej pokaži, da zmoreš! V PetPrep dobiš svojega ku
 
 ## Kako začneš
 1. Starši ti povejo **kodo s 6 številkami**.
-2. Vtipkaš jo v aplikacijo.
+2. V aplikaciji tapneš **»Sem otrok«** in kodo vtipkaš na velike tipke.
 3. S prstom se **podpišeš** pod obljubo, da boš skrbel zanj.
 4. Tvoj kuža se rodi! 🎉 Dokler se ne podpišeš, kuža še čaka — nič se mu ne zgodi.
 
 Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova prijavljati.
 
-**Imaš brata ali sestro?** *(kmalu)* Lahko ima vsak svojega kužka, ali pa skupaj skrbita za enega. Če se pridružiš kužku, ki že živi, se tudi ti podpišeš pod obljubo — šele potem mu lahko daješ hrano in vodo. Vse, kar narediš ti, se šteje tebi. Koraki se seštejejo: na sprehod lahko greste skupaj!
+**Ne rabiš e-pošte ne gesla** — samo kodo od staršev. Če dobiš nov telefon ali tablico, te starši prijavijo z novo kodo in tvoj kuža te počaka tam. Če koda ne deluje, prosi starše za novo — vsaka velja samo 15 minut in samo enkrat. Če poskusiš preveč napačnih kod, aplikacija pokaže, koliko časa moraš počakati.
+
+**Imaš brata ali sestro?** Lahko ima vsak svojega kužka, ali pa skupaj skrbita za enega. Če se pridružiš kužku, ki že živi, se tudi ti podpišeš pod obljubo — šele potem mu lahko daješ hrano in vodo. Vse, kar narediš ti, se šteje tebi. Koraki se seštejejo: na sprehod lahko greste skupaj!
 
 ## Kaj kuža potrebuje
 - 🍖 **Hrano** — zjutraj (med 6. in 10. uro) in zvečer (med 17. in 21. uro), enkrat vsakič. Ob drugih urah kuža ni lačen — aplikacija ti pove, kdaj bo spet čas. *(kmalu)*

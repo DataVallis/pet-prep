@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Schema;
-use Laravel\Sanctum\Sanctum;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,7 +71,7 @@ function cbUnborn(string $nowUtc = '2026-10-04 06:00:00', array $pet = [], array
     }
     $created = Pet::factory()->unborn()->create(array_merge(['user_id' => $child->id], $pet));
 
-    Sanctum::actingAs($child);
+    actingAsRole($child);
 
     return [$child, $created];
 }
@@ -104,7 +103,7 @@ describe('pairing', function () {
         $parent = User::factory()->parent()->create();
         $child = User::factory()->child()->create(['parent_id' => null]);
         $pin = app(PairingService::class)->generatePin($parent)['pin'];
-        Sanctum::actingAs($child);
+        actingAsRole($child);
 
         $this->postJson('/api/child/pair', ['pin' => $pin])
             ->assertStatus(201)
@@ -487,7 +486,7 @@ describe('grandfathered pets', function () {
         $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
         $child = User::factory()->child()->create(['parent_id' => $parent->id]);
         $pet = disableHygieneEvents(Pet::factory()->create(['user_id' => $child->id, 'born_at' => now()->subDays(3)]));
-        Sanctum::actingAs($child);
+        actingAsRole($child);
 
         $this->getJson('/api/child/pet')
             ->assertJsonPath('lock.is_locked', false)
@@ -505,7 +504,7 @@ describe('grandfathered pets', function () {
         $child = User::factory()->child()->create(['parent_id' => User::factory()->parent()->create()->id]);
         $bornAt = Carbon::parse('2026-10-01 08:00:00', 'UTC');
         $pet = disableHygieneEvents(Pet::factory()->create(['user_id' => $child->id, 'born_at' => $bornAt, 'hunger_level' => 40.5]));
-        Sanctum::actingAs($child);
+        actingAsRole($child);
 
         $this->postJson('/api/child/contract', CB_SVG)->assertStatus(201);
 
@@ -556,7 +555,7 @@ describe('parent dashboard', function () {
         [$child, $pet] = cbUnborn('2026-10-04 06:00:00');
         $parent = $child->parent;
 
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         $this->getJson('/api/parent/dashboard')
             ->assertOk()
             ->assertJsonPath('pet.id', $pet->id)
@@ -566,11 +565,11 @@ describe('parent dashboard', function () {
             ->assertJsonPath('pet.hunger_level', 100)
             ->assertJsonPath('traffic_light', 'green');
 
-        Sanctum::actingAs($child);
+        actingAsRole($child);
         cbAt('2026-10-04 07:30:00');
         $this->postJson('/api/child/contract', CB_SVG)->assertStatus(201);
 
-        Sanctum::actingAs($parent);
+        actingAsRole($parent);
         $this->getJson('/api/parent/dashboard')
             ->assertJsonPath('pet.awaiting_contract', false)
             ->assertJsonPath('pet.born_at', '2026-10-04T07:30:00+00:00')

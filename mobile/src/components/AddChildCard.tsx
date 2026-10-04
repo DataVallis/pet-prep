@@ -1,6 +1,7 @@
 /**
- * Prominent parent call-to-action shown while no child is paired (M2-02, partial).
- * Light parent theme (ADR-007).
+ * Prominent parent call-to-action while the family has no child yet (M2-02); the
+ * compact variant stands in Controls. With children, `FamilyChildrenCard` carries
+ * its own "Dodaj otroka". Light parent theme (ADR-007).
  */
 
 import { Pressable, StyleSheet, Text, View } from 'react-native';
@@ -9,8 +10,8 @@ import { ChevronRight, UserPlus } from 'lucide-react-native';
 /** User-visible strings (extract to i18n with M1-18). */
 export const ADD_CHILD_CARD_STRINGS = {
   title: 'Dodaj otroka',
-  body: 'Ustvarite 6-mestno kodo. Otrok jo vtipka na svojem telefonu in njegov kuža se rodi.',
-  cta: 'Ustvari kodo',
+  body: 'Vpišite vzdevek otroka in dobite 6-mestno kodo. Otrok jo vtipka na svojem telefonu — brez e-pošte in gesla.',
+  cta: 'Začni',
 } as const;
 
 interface AddChildCardProps {

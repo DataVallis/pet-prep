@@ -6,6 +6,7 @@ use App\Enums\BreedType;
 use App\Enums\UserRole;
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\ChildProfileService;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -36,6 +37,13 @@ class TestUsersSeeder extends Seeder
                 'parent_id' => $parent->id,
             ],
         );
+
+        // M2-02: a PIN-only child profile (no e-mail / password, no pet yet).
+        // Sign in: parent → POST /api/parent/generate-pin {child_id} →
+        // child device → POST /api/child/pin-login {pin, device_name}.
+        if (! User::where('parent_id', $parent->id)->whereNull('email')->where('name', 'Maja')->exists()) {
+            app(ChildProfileService::class)->createChild($parent, 'Maja', null);
+        }
 
         // Create a pet for the child (if none exists)
         if ($child->pet()->count() === 0) {

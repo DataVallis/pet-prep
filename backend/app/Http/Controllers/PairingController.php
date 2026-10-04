@@ -6,28 +6,59 @@ use App\Exceptions\FamilyException;
 use App\Exceptions\PairingException;
 use App\Http\Requests\GeneratePinRequest;
 use App\Http\Requests\PairChildRequest;
+use App\Http\Resources\PairedPetResource;
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\ChildPinLoginService;
 use App\Services\PairingService;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Log;
 
 class PairingController extends Controller
 {
+    public const PAIR_REFUSED_MESSAGE = 'This code cannot be used. Ask your parent for a new code.';
+
     public function __construct(
         private readonly PairingService $pairingService,
+        private readonly ChildPinLoginService $childLogins,
     ) {}
 
     /**
-     * Generate a 6-digit child pairing PIN for the authenticated parent.
-     * Body (optional, M2-01): `pet_id` of an existing pet of the family → the
-     * child will share that pet; omitted → the PIN creates a new pet.
-     * 422 `pet_not_joinable` when the pet is not an active pet of this family.
+     * Generate a 6-digit, one-time child PIN (15 minutes).
+     *
+     * With `child_id` (M2-02, preferred): the PIN is for that child profile
+     * of the family and is used on the child's device with
+     * `POST /api/child/pin-login` (no e-mail, no password). `mode` says what
+     * it will do: `new_pet` (first pairing), `join_pet` (with `pet_id`: the
+     * child joins that shared pet), `relogin` (already paired child, new
+     * device). A new PIN for the child replaces their previous one.
+     * 404 `child_not_found`, 422 `pet_not_joinable` | `already_paired`.
+     *
+     * Without `child_id` (**deprecated**, `Deprecation: true` header): the
+     * PIN is for a child already signed in with e-mail, used with
+     * `POST /api/child/pair`; optional `pet_id` = join that pet.
      *
      * POST /api/parent/generate-pin
      */
     public function generatePin(GeneratePinRequest $request): JsonResponse
     {
+        $childId = $request->childId();
+
         try {
+            if ($childId !== null) {
+                $result = $this->childLogins->generatePin($request->user(), $childId, $request->joinPetId());
+
+                return response()->json([
+                    'pin' => $result['pin'],
+                    'expires_at' => $result['expires_at']->toIso8601String(),
+                    'expires_in_minutes' => ChildPinLoginService::PIN_EXPIRY_MINUTES,
+                    'child_id' => $result['child_id'],
+                    // null = new pet (or re-login); otherwise the pet to join.
+                    'pet_id' => $result['pet_id'],
+                    'mode' => $result['mode'],
+                ], 200);
+            }
+
             $result = $this->pairingService->generatePin($request->user(), $request->joinPetId());
         } catch (FamilyException $e) {
             return response()->json([
@@ -40,9 +71,11 @@ class PairingController extends Controller
             'pin' => $result['pin'],
             'expires_at' => $result['expires_at']->toIso8601String(),
             'expires_in_minutes' => PairingService::PIN_EXPIRY_MINUTES,
+            'child_id' => null,
             // null = new pet; otherwise the pet the child will join.
             'pet_id' => $result['pet_id'],
-        ], 200);
+            'mode' => $result['pet_id'] === null ? ChildPinLoginService::MODE_NEW_PET : ChildPinLoginService::MODE_JOIN_PET,
+        ], 200, ['Deprecation' => 'true']);
     }
 
     /**
@@ -51,6 +84,9 @@ class PairingController extends Controller
      * (M2-01): the child becomes a caretaker of the existing pet
      * (`joined_existing` true); the pet is not re-born, but this child must
      * sign their own contract (`awaiting_contract` true for them).
+     *
+     * **Deprecated (M2-02):** only for children with an e-mail account; new
+     * child profiles sign in with `POST /api/child/pin-login`.
      *
      * POST /api/child/pair
      */
@@ -70,32 +106,17 @@ class PairingController extends Controller
                 'parent_id' => $result['parent']->id,
                 'family_id' => $pet->family_id,
                 'joined_existing' => $result['joined_existing'],
-                'pet' => [
-                    'id' => $pet->id,
-                    'breed_type' => $pet->breed_type->value,
-                    'hunger_level' => $pet->displayMetric('hunger_level'),
-                    'thirst_level' => $pet->displayMetric('thirst_level'),
-                    'energy_level' => $pet->displayMetric('energy_level'),
-                    'hygiene_level' => $pet->displayMetric('hygiene_level'),
-                    // null until the first contract is signed (M1-07b).
-                    'born_at' => $pet->born_at?->toIso8601String(),
-                    // This child must sign before acting (always true right
-                    // after pairing: new pet unborn, or joined a shared pet).
-                    'awaiting_contract' => $pet->isUnborn() || $pet->caretakerNeedsContract($child),
-                    'is_active' => $pet->is_active,
-                    'pet_dna' => [
-                        'seed' => $pet->pet_dna['seed'] ?? null,
-                        'prompt_anchor' => $pet->pet_dna['prompt_anchor'] ?? null,
-                        'visual_traits' => $pet->pet_dna['visual_traits'] ?? null,
-                        'reference_image_url' => $pet->pet_dna['reference_image_url'] ?? null,
-                    ],
-                    'current_video_url' => $pet->current_video_url,
-                    'media_status' => $pet->media_status,
-                ],
+                'pet' => new PairedPetResource($pet, $child),
             ], 201);
         } catch (PairingException $e) {
+            // One answer for every refusal (wrong / expired PIN, already
+            // paired child, parent-side problems) — no oracle for PIN
+            // guessing (PR #16 review). The reason is only logged.
+            Log::info('Legacy child pairing refused', ['child_id' => $child->id, 'reason' => $e->getMessage()]);
+
             return response()->json([
-                'message' => $e->getMessage(),
+                'message' => self::PAIR_REFUSED_MESSAGE,
+                'reason' => 'pairing_refused',
             ], 422);
         }
     }

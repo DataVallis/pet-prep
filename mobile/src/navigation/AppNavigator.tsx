@@ -1,11 +1,12 @@
-import { Component, type ErrorInfo, type ReactNode } from 'react';
+import { Component, useEffect, type ErrorInfo, type ReactNode } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { isAwaitingContract, useAppStore, type LockState } from '@/store/appStore';
 import { logout } from '@/modules/session/logout';
 import { useSessionBootstrap } from '@/modules/session/useSessionBootstrap';
 import SplashScreen from '@/screens/SplashScreen';
-import PairingScreen from '@/screens/PairingScreen';
+import StartScreen from '@/screens/StartScreen';
+import ContractScreen from '@/screens/ContractScreen';
 import LockedScreen from '@/screens/LockedScreen';
 import ChildHudScreen from '@/screens/ChildHudScreen';
 import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
@@ -45,6 +46,14 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 }
 
+/** Logs the legacy child session out once, showing the start screen meanwhile. */
+function SignOutChildWithoutPet() {
+  useEffect(() => {
+    void logout();
+  }, []);
+  return <StartScreen />;
+}
+
 export default function AppNavigator() {
   const authToken = useAppStore((s) => s.authToken);
   const user = useAppStore((s) => s.user);
@@ -72,16 +81,21 @@ export default function AppNavigator() {
     <ErrorBoundary>
       <View style={styles.root}>
         {!isAuthenticated ? (
-          <PairingScreen />
+          // "Sem starš" (e-mail) or "Sem otrok" (PIN only, M2-02).
+          <StartScreen />
         ) : user.role === 'parent' ? (
           <ParentDashboardScreen />
         ) : (
           <>
             {pet === null ? (
-              <PairingScreen initialStep="pin" />
+              // A child session without a pet can only be a legacy e-mail child account
+              // (pin-login always returns a pet). Its token must not linger: sign it out
+              // (server revoke) and show the start screen — the child then signs in with
+              // the PIN their parent generates, which pairs the profile (M2-02).
+              <SignOutChildWithoutPet />
             ) : isAwaitingContract(pet) ? (
-              // Paired but unborn until the contract is signed (M1-07b) — also after a restart.
-              <PairingScreen initialStep="contract" />
+              // The pet waits for this child's contract (M1-07b / M2-01) — also after a restart.
+              <ContractScreen />
             ) : (
               <ChildHudScreen />
             )}

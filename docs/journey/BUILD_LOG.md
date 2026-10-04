@@ -8,6 +8,32 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-04 — Aplikacija: "Sem otrok" in velika tipkovnica za kodo
+
+**Kaj se je zgodilo:** isti dan kot strežnik je prijava s kodo prišla tudi v aplikacijo. Ob prvem odprtju sta zdaj dve jasni poti: **"Sem otrok"** (koda od staršev na veliki tipkovnici — šesta številka kodo pošlje, brez e-pošte in gesla) in **"Sem starš"** (e-pošta). Starš na nadzorni plošči tapne "Dodaj otroka", vpiše samo vzdevek (letnica rojstva je neobvezna; aplikacija izrecno pove "Ne potrebujemo e-pošte ali priimka"), izbere "Nov pes" ali "Pridruži se psu …" in dobi kodo prav za tega otroka. Na novem seznamu otrok vidi, za katerega psa skrbi vsak otrok in na koliko napravah je prijavljen, ter ima dva gumba: "Nova koda za prijavo" (nov telefon, isti kuža) in "Odjavi vse naprave" (izgubljen telefon, s potrditvijo). Napačna koda otroku pove samo "Ta koda ne deluje. Prosi starša za novo kodo.", po preveč poskusih pa tipkovnica pokaže odštevanje. Za ime naprave aplikacija pošlje samo model telefona, nikoli imena, ki ga je telefonu dal uporabnik (pogosto vsebuje otrokovo ime). Avtomatski testi aplikacije: z 201 na **268 zelenih**. **Zakaj je pomembno:** otroška prijava z e-pošto je iz aplikacije odstranjena — o otroku aplikacija ne vpraša ničesar razen vzdevka. **Kako povedati:** 👩 *"Vpišete vzdevek, otrok vtipka kodo — dve minuti in kuža čaka na podpis."* · 🧒 *"Tapni 'Sem otrok' in vtipkaj kodo od staršev na velike gumbe."* · 💼 *"Celoten tok brez otrokove e-pošte je zdaj v izdelku, ne le na strežniku."* · 🛠 *"PIN prijava kot TanStack mutacija, anonimna zahteva brez Bearer žetona, `awaiting_contract` po otroku iz odgovora prijave, 67 novih Jest testov."* (Preizkus na pravih napravah še čaka.)
+
+## 2026-10-04 — Otrok brez e-pošte: prijava samo s kodo staršev
+
+**Kaj se je zgodilo** (izvedba Davidove odločitve z 2. 10.; strežnik — zasloni v aplikaciji *kmalu*)
+- **Otroški profil brez e-pošte in gesla.** Starš vpiše samo **vzdevek** (do 30 znakov, priimek ni potreben) in po želji **letnico rojstva**. To je vse, kar o otroku hranimo.
+- **Koda za točno tega otroka.** Starš izbere otroka (in po želji psa, h kateremu se pridruži) in dobi 6-mestno kodo, ki velja 15 minut in samo enkrat. Otrok jo vtipka na svoji napravi — brez računa.
+- **Nov telefon? Nova koda.** Ista koda za že povezanega otroka ga samo prijavi na novi napravi; kuža ostane isti. Največ 3 naprave na otroka; starš lahko otroka z enim klikom odjavi z vseh naprav (izgubljen telefon).
+- **Varnost kode:** na strežniku je shranjena samo zgoščena vrednost kode (ne koda sama); napačna, potekla in že uporabljena koda dobijo **enak odgovor**, zato ni mogoče ugibati, kateri otroci ali kode obstajajo; 10 napačnih poskusov z istega naslova ali 100 skupaj v 15 minutah → premor.
+- **Ločene vloge na ravni žetona:** prijava starša dobi "starševski" ključ, otroka "otroški" — otroški telefon ne more odpreti starševskih nastavitev, tudi če bi kdo poskusil. Obstoječi uporabniki ostanejo prijavljeni.
+- **Številke:** 53 novih avtomatskih testov (ustvarjanje profila, koda za nov/skupni pes/novo napravo, vsak način neuspeha, zaklepanje, 3 naprave, odjava, ločitev družin, pogodba in kanal v živo z otroškim žetonom), skupaj **559 zelenih** na strežniku; aplikacija 201 zelenih.
+
+**Zakaj je pomembno**
+Otroci 7–12 let nimajo e-pošte in je ne bi smeli dajati aplikacijam. Evropska zakonodaja (GDPR čl. 8) in Applova kategorija "Kids" zahtevata, da o otroku zberemo čim manj. PetPrep zdaj o otroku ve samo vzdevek — in morda letnico rojstva.
+
+**Kako to povedati**
+- 👩 *"Vaš otrok ne potrebuje e-pošte ne gesla. Vpišete vzdevek, dobite kodo, otrok jo vtipka — to je vse. Izgubljen telefon? En dotik in otrok je odjavljen povsod."*
+- 🧒 *"Ne rabiš e-pošte! Starši ti povejo kodo s 6 številkami in tvoj kuža te čaka."*
+- 💼 *"Zasebnost po zasnovi: o mladoletnem uporabniku hranimo vzdevek in neobvezno letnico — nič drugega. To je pogoj za App Store Kids in zaupanje staršev."*
+- 🤝 *(šole)* *"Otroci ne potrebujejo nobenega računa; starš upravlja vse."*
+- 🛠 *"PIN-only prijava: HMAC kode namesto kode same, enoten odgovor za napačno/potečeno/porabljeno kodo, omejitev po IP in globalno, Sanctum abilities `parent`/`child` na skupinah poti, stari `*` žetoni delujejo naprej."*
+
+---
+
 ## 2026-10-04 — Mama, oče, brat in sestra: PetPrep postane družinski
 
 **Kaj se je zgodilo** (Davidova odločitev in prva faza na strežniku, isti dan)

@@ -33,11 +33,20 @@ class UserResource extends Resource
                     ->required()
                     ->maxLength(255),
 
+                // M2-02: PIN-only child profiles have no e-mail.
                 Forms\Components\TextInput::make('email')
                     ->email()
-                    ->required()
+                    ->requiredUnless('role', UserRole::Child->value)
+                    ->dehydrateStateUsing(fn (?string $state): ?string => filled($state) ? $state : null)
                     ->unique(User::class, 'email', ignoreRecord: true)
                     ->maxLength(255),
+
+                Forms\Components\TextInput::make('birth_year')
+                    ->label('Birth year (child, optional)')
+                    ->numeric()
+                    ->minValue(1900)
+                    ->maxValue(2100)
+                    ->visible(fn (?User $record) => $record?->role === UserRole::Child),
 
                 Forms\Components\Select::make('role')
                     ->options(UserRole::class)

@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChildAuthController;
 use App\Http\Controllers\ChildContractController;
 use App\Http\Controllers\ChildPetController;
+use App\Http\Controllers\ChildProfileController;
 use App\Http\Controllers\FalAiWebhookController;
 use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\PairingController;
@@ -18,6 +20,12 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 Route::post('login', [AuthController::class, 'login']);
+
+// M2-02: a child signs in with the one-time PIN their parent generated for
+// their profile (no e-mail / password). Hard per-IP throttle on the route +
+// failed-attempt lockouts (per IP and global) in ChildPinLoginService.
+Route::post('child/pin-login', [ChildAuthController::class, 'pinLogin'])
+    ->middleware('throttle:pin-login');
 
 /*
 |--------------------------------------------------------------------------
@@ -42,13 +50,20 @@ Route::post('webhooks/revenuecat', [RevenueCatWebhookController::class, 'handle'
 
 /*
 |--------------------------------------------------------------------------
-| Parent Endpoints
+| Parent Endpoints — token ability `parent` (M2-03; legacy '*' tokens pass)
 |--------------------------------------------------------------------------
 */
-Route::middleware(['auth:sanctum', 'throttle:api'])
+Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
     ->prefix('parent')
     ->group(function () {
-        // Generate a 6-digit child pairing PIN (throttled more aggressively).
+        // Child profiles without e-mail (M2-02): create, sign out devices.
+        Route::post('children', [ChildProfileController::class, 'store'])
+            ->middleware('throttle:pairing');
+        Route::delete('children/{child}/tokens', [ChildProfileController::class, 'revokeTokens']);
+
+        // Generate a 6-digit one-time child PIN (throttled more aggressively).
+        // child_id (M2-02) = PIN login for that child profile; without it the
+        // deprecated flow (child signed in with e-mail → POST /api/child/pair).
         // Optional pet_id = the child joins that pet (shared pet, M2-01).
         Route::post('generate-pin', [PairingController::class, 'generatePin'])
             ->middleware('throttle:pairing');
@@ -76,13 +91,14 @@ Route::middleware(['auth:sanctum', 'throttle:api'])
 
 /*
 |--------------------------------------------------------------------------
-| Child Endpoints
+| Child Endpoints — token ability `child` (M2-03; legacy '*' tokens pass)
 |--------------------------------------------------------------------------
 */
-Route::middleware(['auth:sanctum', 'throttle:api'])
+Route::middleware(['auth:sanctum', 'ability:child', 'throttle:api'])
     ->prefix('child')
     ->group(function () {
-        // Pair child to parent via PIN (throttled more aggressively for anti-abuse)
+        // Deprecated (M2-02): pair a child signed in with e-mail via PIN.
+        // New child profiles use POST /api/child/pin-login instead.
         Route::post('pair', [PairingController::class, 'pairChild'])
             ->middleware('throttle:pairing');
 

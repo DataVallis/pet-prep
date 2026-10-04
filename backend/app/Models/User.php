@@ -109,6 +109,7 @@ class User extends Authenticatable implements FilamentUser
             'role' => UserRole::class,
             'is_superadmin' => 'boolean',
             'pin_expires_at' => 'datetime',
+            'birth_year' => 'integer',
         ];
     }
 
