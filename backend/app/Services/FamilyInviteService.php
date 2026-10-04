@@ -99,6 +99,13 @@ class FamilyInviteService
 
         try {
             $family = DB::transaction(function () use ($parent, $code): Family {
+                // Lock order shared with PairingService::pairChild: the parent
+                // user row first (a child pairing with this parent's PIN takes
+                // the same lock), then the family row. So no pet or child can
+                // land in the old family between the emptiness check and the
+                // delete below.
+                User::whereKey($parent->id)->lockForUpdate()->first();
+
                 $invite = FamilyInvite::where('code', $code)->lockForUpdate()->first();
 
                 if ($invite === null) {
@@ -119,27 +126,43 @@ class FamilyInviteService
                 }
 
                 if ($current !== null) {
-                    $hasChildren = FamilyMember::where('family_id', $current->id)
-                        ->where('role', FamilyRole::Child->value)->exists();
-                    $hasPets = Pet::where('family_id', $current->id)->exists();
-                    if ($hasChildren || $hasPets) {
-                        throw new FamilyException('family_not_empty', 'Your account already has children or pets; families cannot be merged.', 409);
+                    Family::whereKey($current->id)->lockForUpdate()->first();
+
+                    // Checked after the locks: children / pets of the old
+                    // family block the move (no merging).
+                    if ($this->hasChildrenOrPets($current)) {
+                        throw $this->notEmpty();
                     }
 
                     FamilyMember::where('user_id', $parent->id)->delete();
-                    // The empty family (its quiet hours, open invites) goes
-                    // away when nobody is left in it.
-                    if (! FamilyMember::where('family_id', $current->id)->exists()) {
+                    $remainingParent = FamilyMember::where('family_id', $current->id)
+                        ->where('role', FamilyRole::Parent->value)
+                        ->orderBy('id')
+                        ->value('user_id');
+
+                    if ($remainingParent !== null) {
+                        // The old family lives on: its quiet hours now belong
+                        // to a remaining parent (parent_id is unique).
+                        QuietHours::where('family_id', $current->id)
+                            ->where('parent_id', $parent->id)
+                            ->update(['parent_id' => $remainingParent]);
+                    } else {
+                        // Never delete a family that has any child data: the
+                        // last guard before the delete (pets.family_id and
+                        // family_user.family_id are RESTRICT as well). Throwing
+                        // rolls the whole move back.
+                        if ($this->hasChildrenOrPets($current) || FamilyMember::where('family_id', $current->id)->exists()) {
+                            throw $this->notEmpty();
+                        }
+
                         QuietHours::where('family_id', $current->id)->delete();
-                        $current->delete();
+                        $current->delete(); // open invite codes go with it
                     }
                 }
 
-                // A parent's own quiet-hours row (parent_id unique) from the
-                // old family must not shadow the new family's.
-                QuietHours::where('parent_id', $parent->id)
-                    ->where(fn ($q) => $q->whereNull('family_id')->orWhere('family_id', '!=', $target->id))
-                    ->delete();
+                // A legacy quiet-hours row of this parent without a family
+                // must not block the parent_id unique key later.
+                QuietHours::where('parent_id', $parent->id)->whereNull('family_id')->delete();
 
                 $this->families->addMember($target, $parent, FamilyRole::Parent);
                 // Deprecated mirror: the parent's users.timezone = family timezone.
@@ -161,6 +184,17 @@ class FamilyInviteService
         $parent->unsetRelation('family');
 
         return $family;
+    }
+
+    private function hasChildrenOrPets(Family $family): bool
+    {
+        return FamilyMember::where('family_id', $family->id)->where('role', FamilyRole::Child->value)->exists()
+            || Pet::where('family_id', $family->id)->exists();
+    }
+
+    private function notEmpty(): FamilyException
+    {
+        return new FamilyException('family_not_empty', 'Your account already has children or pets; families cannot be merged.', 409);
     }
 
     private function randomCode(): string

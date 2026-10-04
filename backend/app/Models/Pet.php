@@ -58,8 +58,12 @@ class Pet extends Model
         // The primary caretaker (deprecated pets.user_id) is always a
         // caretaker row too (M2-01). A pet born at creation (legacy /
         // factories) needs no contract, like the grandfathered pets.
+        // Only a child owner becomes a caretaker ("only children are
+        // caretakers"); an admin assigning a parent as owner gets none.
         static::created(function (Pet $pet): void {
-            if ($pet->user_id !== null && ! PetCaretaker::where('pet_id', $pet->id)->where('user_id', $pet->user_id)->exists()) {
+            if ($pet->user_id !== null
+                && User::whereKey($pet->user_id)->where('role', 'child')->exists()
+                && ! PetCaretaker::where('pet_id', $pet->id)->where('user_id', $pet->user_id)->exists()) {
                 PetCaretaker::create([
                     'pet_id' => $pet->id,
                     'user_id' => $pet->user_id,

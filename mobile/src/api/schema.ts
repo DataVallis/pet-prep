@@ -1787,6 +1787,16 @@ export interface operations {
                                 }[];
                             }[];
                         };
+                    } | {
+                        /** @constant */
+                        message: "No child profile paired yet.";
+                        timezone: string;
+                        pet: null;
+                        /** @constant */
+                        traffic_light: "green";
+                        quiet_hours: null;
+                        recent_activities: string[];
+                        family: null;
                     };
                 };
             };
@@ -1807,7 +1817,8 @@ export interface operations {
     "parentDashboard.activities": {
         parameters: {
             query?: {
-                pet_id?: string;
+                pet_id?: number | null;
+                per_page?: number;
             };
             header?: never;
             path?: never;
@@ -1870,6 +1881,7 @@ export interface operations {
                     };
                 };
             };
+            422: components["responses"]["ValidationException"];
         };
     };
     "parentDashboard.toggleHardStop": {

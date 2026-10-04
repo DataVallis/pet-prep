@@ -44,7 +44,22 @@ class ParentDashboardController extends Controller
             return response()->json(['message' => 'Only parent profiles can access the dashboard.'], 403);
         }
 
-        $family = $this->families->ensureFamilyFor($parent);
+        // GET never writes: a parent without a family (legacy data) gets the
+        // empty state instead of a new family.
+        $family = $this->families->familyOf($parent);
+
+        if ($family === null) {
+            return response()->json([
+                'message' => 'No child profile paired yet.',
+                'timezone' => $parent->familyTimezone(),
+                'pet' => null,
+                'traffic_light' => 'green',
+                'quiet_hours' => null,
+                'recent_activities' => [],
+                'family' => null,
+            ], 200);
+        }
+
         $familyData = $this->dashboard->family($family, $parent);
         $quietHours = QuietHours::where('family_id', $family->id)->first();
         $pet = $this->dashboard->legacyPet($family);
@@ -118,15 +133,29 @@ class ParentDashboardController extends Controller
             return response()->json(['message' => 'Only parent profiles can access activities.'], 403);
         }
 
-        $family = $this->families->ensureFamilyFor($parent);
-        $pet = $this->dashboard->targetPet($family, $request->query('pet_id'));
+        $request->validate([
+            'pet_id' => ['sometimes', 'nullable', 'integer', 'min:1'],
+            'per_page' => ['sometimes', 'integer', 'min:1', 'max:100'],
+        ]);
 
-        if ($pet === null || ($request->query('pet_id') === null && ! $pet->is_active)) {
-            if ($request->query('pet_id') !== null && $pet === null) {
+        $empty = ['data' => [], 'meta' => ['current_page' => 1, 'last_page' => 1, 'total' => 0]];
+        $petId = $request->query('pet_id');
+        $family = $this->families->familyOf($parent); // GET: lookup only
+
+        if ($family === null) {
+            return $petId !== null
+                ? response()->json(['message' => 'Pet not found in your family.'], 404)
+                : response()->json($empty, 200);
+        }
+
+        $pet = $this->dashboard->targetPet($family, $petId);
+
+        if ($pet === null || ($petId === null && ! $pet->is_active)) {
+            if ($petId !== null && $pet === null) {
                 return response()->json(['message' => 'Pet not found in your family.'], 404);
             }
 
-            return response()->json(['data' => [], 'meta' => ['current_page' => 1, 'last_page' => 1, 'total' => 0]], 200);
+            return response()->json($empty, 200);
         }
 
         $perPage = (int) $request->query('per_page', 20);
@@ -160,9 +189,9 @@ class ParentDashboardController extends Controller
 
         $request->validate(['pet_id' => ['sometimes', 'nullable', 'integer', 'min:1']]);
 
-        $family = $this->families->ensureFamilyFor($parent);
+        $family = $this->families->familyOf($parent);
 
-        if (! $this->hasChildren($family)) {
+        if ($family === null || ! $this->hasChildren($family)) {
             return response()->json(['message' => 'No child profile paired.'], 404);
         }
 

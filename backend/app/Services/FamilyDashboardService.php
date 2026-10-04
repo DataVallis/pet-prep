@@ -52,7 +52,8 @@ class FamilyDashboardService
             return $this->legacyPet($family);
         }
 
-        if (! ctype_digit((string) $petId)) {
+        // Callers validate (422); arrays or objects never reach ctype_digit.
+        if (! is_scalar($petId) || ! ctype_digit((string) $petId)) {
             return null;
         }
 

@@ -21,6 +21,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - **Obstoječi podatki so preneseni samodejno:** vsak starš dobi družino, njegovi otroci in psi gredo vanjo, pretekla dejanja se pripišejo otroku. Trenutna aplikacija deluje naprej brez posodobitve.
 - **Številke:** 34 novih avtomatskih testov (prenos podatkov, dva starša z enako nadzorno ploščo, povabila — potek, ponovna uporaba, preveč poskusov —, skupni pes, ločena pogodba, seštevanje korakov, kdo sme poslušati kanal v živo), skupaj **498 zelenih** na strežniku; aplikacija 201 zelenih.
 - Zasloni za družino v aplikaciji: *kmalu* (M2-01a).
+- **David je potrdil vse štiri izbire** (en aktiven pes na otroka, seštevanje korakov, lastna pogodba vsakega otroka, pridružitev drugega starša samo s praznim računom). Po neodvisnem pregledu dodana varovala: brisanje družine nikoli ne izbriše psa ali otroka (baza to prepove), sočasno povezovanje in pridružitev se zaklepata v istem vrstnem redu, deploy med migracijo vklopi način vzdrževanja. Skupaj **506 zelenih testov** na strežniku.
 
 **Zakaj je pomembno**
 Doma o psu ne odloča en starš z enim otrokom. Ko se dva otroka pulita za kužka, PetPrep zdaj pokaže, kdo je res skrbel — priden ne nosi lenega. In oba starša vidita isto, brez posredovanja.

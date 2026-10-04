@@ -1,6 +1,6 @@
 # ADR-012: Family model — several parents, several children, shared pets
 
-- **Status:** Accepted (product rules: David, 2026-10-04). Implementation choices marked *Claude, pending David* below.
+- **Status:** Accepted. Product rules: David, 2026-10-04. The four implementation choices (one active pet per child, own contract per joining child, summed steps, join only from an empty account) were **confirmed by David on 2026-10-04** after PR #14.
 - **Date:** 2026-10-04
 - **Deciders:** David, Claude
 - **Roadmap:** M2-01 (phase 1, backend). Follow-ups M2-01a…d.
@@ -62,7 +62,7 @@ erDiagram
 | A pet belongs to exactly one family | `pets.family_id` NOT NULL + FK |
 | A pet has ≥ 1 caretaker | `PairingService` (creates the caretaker row in the same transaction), `Pet::created` hook for legacy writes |
 | Only children are caretakers; parents never act | `FamilyService::addCaretaker` (role check), `PetPolicy::act` (child + caretaker) |
-| **A child cares for at most ONE active pet at a time** — *Claude's MVP choice, pending David* | `FamilyService::addCaretaker` + partial unique index `pet_caretakers_one_active_pet_per_child (user_id) WHERE pet_is_active`; `pet_is_active` is a trigger-maintained copy of `pets.is_active` (works for `saveQuietly()` and bulk updates too) |
+| **A child cares for at most ONE active pet at a time** (David, 2026-10-04) | `FamilyService::addCaretaker` + partial unique index `pet_caretakers_one_active_pet_per_child (user_id) WHERE pet_is_active`; `pet_is_active` is a trigger-maintained copy of `pets.is_active` (works for `saveQuietly()` and bulk updates too) |
 | A child pairs once (unchanged rule) | `PairingService::pairChild` refuses a child that already has a parent / family |
 | Caretakers are members of the pet's family | `FamilyService::addCaretaker` |
 
@@ -72,18 +72,26 @@ Why one active pet per child: the child app shows one dog (HUD, steps from one p
 
 1. **Child, new pet** — unchanged: `POST /api/parent/generate-pin` (no body) → 6-digit PIN, 15 min → `POST /api/child/pair` creates the child's unborn pet in the parent's family; the child signs → birth (M1-07b).
 2. **Child, existing pet (shared)** — `POST /api/parent/generate-pin {pet_id}`: the pet must be an active, non-game-over pet of the parent's family (else 422 `pet_not_joinable`; another family's pet is indistinguishable from a missing one). The child pairs → becomes a caretaker; **the pet is not re-born**. Any parent of the family can issue either PIN.
-3. **Second parent** — `POST /api/parent/invite-parent` → 8-character code (unambiguous alphabet), 24 h, single use, a new code revokes the same parent's previous one; route throttle 10/h. `POST /api/parent/join-family {code}`: allowed only for a parent whose own family has **no children and no pets** (a fresh account) — otherwise 409 `family_not_empty`. *Merging two families with pets is out of scope (Claude, pending David).* 5 wrong codes per account in 15 min → 429. The joiner's empty family is deleted.
+3. **Second parent** — `POST /api/parent/invite-parent` → 8-character code (unambiguous alphabet), 24 h, single use, a new code revokes the same parent's previous one; route throttle 10/h. `POST /api/parent/join-family {code}`: allowed only for a parent whose own family has **no children and no pets** (a fresh account) — otherwise 409 `family_not_empty`. *No merging of families (David, 2026-10-04).* 5 wrong codes per account in 15 min → 429. The joiner's old family is deleted only if nobody and nothing is left in it (re-checked under locks, see "Deletes and locking"); if another parent stays, the family stays and its quiet hours pass to that parent.
 4. **PIN-only child login (M2-02)** stays a separate task: today a child still signs in with an account and then enters the PIN.
 
-### Contracts on a shared pet — *Claude's choice, pending David*
+### Contracts on a shared pet (David, 2026-10-04)
 
 The pet is **born at the first contract**. Every additional caretaker must sign **their own** contract before they can act: until then that child (only that child) gets 423 `contract_required`; the other caretakers keep playing. Re-signing by the same child → 409. Lock evaluation is per child: `Pet::actionLockReasonFor($child)` (priority unchanged: game over › inactive › hard stop › contract required › illness). Caretaker rows backfilled from pets born before contracts existed have `requires_contract = false` (grandfathered, as in M1-07b).
 
 ### Per-child attribution and scoring
 
 - Every applied child action writes `activities_log.actor_user_id`. Feed windows and water limits stay **per pet** (the dog is fed once per window, whoever feeds it).
-- **Steps — *Claude's choice, pending David*:** steps come from the acting child's phone; each child's cumulative count is stored in `pet_daily_steps` (idempotency and anti-cheat per child). **The shared pet's daily walk goal is met by the combined steps of all caretakers that day** (`pets.daily_step_count` = sum). The `walked_pet` row goes to the child whose sync crossed the goal. `pet_daily_walks` (closed days) stays per pet.
+- **Steps (David, 2026-10-04):** steps come from the acting child's phone; each child's cumulative count is stored in `pet_daily_steps` (idempotency and anti-cheat per child). **The shared pet's daily walk goal is met by the combined steps of all caretakers that day** (`pets.daily_step_count` = sum). The `walked_pet` row goes to the child whose sync crossed the goal. `pet_daily_walks` (closed days) stays per pet.
 - **Where scores are computed:** on read, from `activities_log.actor_user_id` + `pet_daily_steps` (`FamilyDashboardService`): per child, last 7 family-local days — fed, watered, cleaned, walk goals, total actions, steps, active step days. **The per-child score / traffic light / certificate formula is not specified** (question for David); the pet-level traffic light (escalation-based) stays as is. Per-child certificate = follow-up M2-01d.
+
+### Deletes and locking (review of PR #14)
+
+- **No cascade from a family into child data:** `pets.family_id`, `family_user.family_id` and `quiet_hours.family_id` are `ON DELETE RESTRICT`; only `family_invites` cascade with their family. A family with any pet, member or settings row cannot be deleted by accident.
+- **Lock order** shared by `PairingService::pairChild` and `FamilyInviteService::joinFamily`: parent user row → (child user row) → family row. `pairChild` locks the PIN's parent, then the child (a second concurrent pairing of the same child sees `parent_id` and gets 422, not a unique-key 500), then the family it creates the pet in. `joinFamily` locks the joining parent, the invite, then the parent's current family, re-checks "no children, no pets" after the locks, and deletes the old family only if no member and no pet is left (last guard; otherwise 409 and the whole move rolls back).
+- `pet_caretakers_copy_pet_is_active` reads the pet `FOR SHARE`, so an `is_active` change waits for a caretaker insert.
+- GET endpoints never create a family (lookup only; a parent without a family gets the empty dashboard state, `quiet_hours: null`, no activities).
+- **Deploy window:** `scripts/deploy-production.sh` puts the app into maintenance mode (`artisan down`, shared storage volume — HTTP 503, scheduler and queue workers pause) from before `migrate` until the new containers run, with an EXIT trap that brings it back up on failure. `PUT /api/parent/quiet-hours` also adopts a row the parent created without `family_id` (written by old code) instead of failing on the `parent_id` unique key.
 
 ### Authorization and realtime
 
@@ -118,7 +126,7 @@ All parents of the family receive parent-level events (phase-3 alarm, illness, g
 5. `quiet_hours.family_id` = the parent's family.
 6. `activities_log.actor_user_id` = `pets.user_id` for child-action rows (`fed_pet`, `watered_pet`, `walked_pet`, `cleaned_poop`, `signed_contract`); escalation rows stay null.
 7. `pets.family_id` → NOT NULL.
-No existing column is rewritten. `pet_daily_steps` is not backfilled: today's steps already on a pet are attributed to the primary caretaker on the next sync. `down()` drops everything again. `2026_10_04_140100` swaps the contract unique index; its `down()` refuses (deletes nothing) if a pet already has more than one contract.
+No existing column is rewritten. `pet_daily_steps` is not backfilled: today's steps already on a pet are attributed to the primary caretaker on the next sync. **Pets owned by a parent account** (legacy admin artefacts; the child API never worked for them) go into that parent's family **without a caretaker row** — "only children are caretakers" holds for all data; the migration logs their ids for a manual fix. `down()` drops everything again — **rollback loses data created after the deploy:** second-parent memberships, shared-pet caretaker rows (only `pets.user_id` = primary caretaker survives), per-child steps, `actor_user_id` attribution, invites and the family timezone (parents' `users.timezone` mirrors remain). `2026_10_04_140100` swaps the contract unique index; its `down()` refuses (deletes nothing) if a pet already has more than one contract.
 
 ## Consequences
 

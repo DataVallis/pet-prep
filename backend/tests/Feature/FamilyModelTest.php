@@ -14,7 +14,9 @@ use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\FamilyInviteService;
 use App\Services\FamilyService;
+use App\Services\PairingService;
 use Illuminate\Broadcasting\BroadcastManager;
+use Illuminate\Database\QueryException;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -175,6 +177,7 @@ describe('migration backfill', function () {
 
         $born = DB::table('pets')->insertGetId(['user_id' => $child, 'breed_type' => 'mutt', 'is_active' => true, 'born_at' => now()]);
         $unborn = DB::table('pets')->insertGetId(['user_id' => $orphan, 'breed_type' => 'mutt', 'is_active' => true, 'born_at' => null]);
+        $parentOwned = DB::table('pets')->insertGetId(['user_id' => $lonelyParent, 'breed_type' => 'mutt', 'is_active' => true, 'born_at' => now()]);
         DB::table('quiet_hours')->insert(['parent_id' => $parent, 'is_active' => true]);
         $fed = DB::table('activities_log')->insertGetId(['pet_id' => $born, 'activity_type' => 'fed_pet', 'value' => 50, 'created_at' => now()]);
         $warn = DB::table('activities_log')->insertGetId(['pet_id' => $born, 'activity_type' => 'ignored_warning', 'value' => 30, 'created_at' => now()]);
@@ -199,7 +202,11 @@ describe('migration backfill', function () {
             ->and(DB::table('pet_caretakers')->where('pet_id', $born)->value('pet_is_active'))->toBeTrue()
             ->and(DB::table('quiet_hours')->where('parent_id', $parent)->value('family_id'))->toBe($f1)
             ->and(DB::table('activities_log')->where('id', $fed)->value('actor_user_id'))->toBe($child)
-            ->and(DB::table('activities_log')->where('id', $warn)->value('actor_user_id'))->toBeNull();
+            ->and(DB::table('activities_log')->where('id', $warn)->value('actor_user_id'))->toBeNull()
+            // Parent-owned legacy pet: the parent's family, no caretaker (only children care).
+            ->and(DB::table('pets')->where('id', $parentOwned)->value('family_id'))->toBe($familyOf($lonelyParent))
+            ->and(DB::table('pet_caretakers')->where('pet_id', $parentOwned)->exists())->toBeFalse()
+            ->and(DB::table('pet_caretakers')->where('user_id', $lonelyParent)->exists())->toBeFalse();
 
         // The model reads the same picture: the child acts on the backfilled pet.
         $pet = Pet::findOrFail($born);
@@ -753,5 +760,139 @@ describe('invariants', function () {
         $families = app(FamilyService::class);
         expect($families->parentRecipients($pet)->pluck('id')->all())->toBe([$parent->id, $second->id])
             ->and($families->caretakerRecipients($pet)->pluck('id')->sort()->values()->all())->toBe([$child1->id, $child2->id]);
+    });
+});
+
+// ──────────────────────────────────────────────────────────────
+//  Review fixes (PR #14): deletes, races, deploy window, input
+// ──────────────────────────────────────────────────────────────
+
+describe('family deletion never takes child data with it', function () {
+    it('restricts deleting a family that still has pets or members', function () {
+        [, , $pet] = fmFamily();
+        $familyId = $pet->family_id;
+
+        expect(fn () => DB::transaction(fn () => DB::table('families')->where('id', $familyId)->delete()))
+            ->toThrow(QueryException::class);
+
+        // Members alone block it too.
+        $lonely = User::factory()->parent()->create();
+        $lonelyFamily = $lonely->family->id;
+        expect(fn () => DB::transaction(fn () => DB::table('families')->where('id', $lonelyFamily)->delete()))
+            ->toThrow(QueryException::class);
+
+        expect(Pet::find($pet->id))->not->toBeNull()
+            ->and(FamilyMember::where('family_id', $familyId)->count())->toBe(2);
+    });
+
+    it('rolls the join back when a pet lands in the old family between the check and the delete', function () {
+        [$parent] = fmFamily();
+        $joiner = User::factory()->parent()->create();
+        $oldFamilyId = $joiner->family->id;
+        $code = app(FamilyInviteService::class)->createInvite($parent)['code'];
+        $kid = User::factory()->child()->create(['parent_id' => null]);
+
+        // Simulate a pairing that commits right after the membership row is
+        // removed (what the user-row + family-row locks prevent in reality).
+        $injected = false;
+        DB::listen(function ($query) use (&$injected, $kid, $oldFamilyId) {
+            if (! $injected && str_starts_with($query->sql, 'delete from "family_user"')) {
+                $injected = true;
+                DB::table('pets')->insert([
+                    'user_id' => $kid->id, 'family_id' => $oldFamilyId, 'breed_type' => 'mutt', 'is_active' => true,
+                ]);
+            }
+        });
+
+        Sanctum::actingAs($joiner);
+        postJson('/api/parent/join-family', ['code' => $code])
+            ->assertStatus(409)->assertJsonPath('reason', 'family_not_empty');
+
+        expect($injected)->toBeTrue()
+            ->and(Family::find($oldFamilyId))->not->toBeNull()
+            ->and(FamilyMember::where('user_id', $joiner->id)->value('family_id'))->toBe($oldFamilyId)
+            ->and(FamilyInvite::where('code', $code)->value('used_at'))->toBeNull();
+    });
+
+    it('keeps the old family and hands its quiet hours to the remaining parent', function () {
+        [$parentA] = fmFamily();
+        $b = User::factory()->parent()->create();
+        $c = fmSecondParent($b); // C joins B's (empty) family
+        Sanctum::actingAs($b);
+        putJson('/api/parent/quiet-hours', ['bedtime_start' => '21:00', 'bedtime_end' => '07:00', 'is_active' => true])->assertOk();
+        $oldFamilyId = $b->fresh()->family->id;
+
+        $code = app(FamilyInviteService::class)->createInvite($parentA)['code'];
+        postJson('/api/parent/join-family', ['code' => $code])->assertOk();
+
+        expect(Family::find($oldFamilyId))->not->toBeNull()
+            ->and(QuietHours::where('family_id', $oldFamilyId)->value('parent_id'))->toBe($c->id)
+            ->and($b->fresh()->family->id)->toBe($parentA->family->id);
+    });
+});
+
+describe('deploy window and input hardening', function () {
+    it('adopts a quiet-hours row the parent created without a family instead of failing', function () {
+        [$parent] = fmFamily();
+        $row = QuietHours::create(['parent_id' => $parent->id, 'bedtime_start' => '22:00', 'bedtime_end' => '06:00', 'is_active' => true]);
+        DB::table('quiet_hours')->where('id', $row->id)->update(['family_id' => null]); // written by old code
+
+        Sanctum::actingAs($parent);
+        putJson('/api/parent/quiet-hours', ['bedtime_start' => '21:30', 'bedtime_end' => '06:30', 'is_active' => true])
+            ->assertOk()->assertJsonPath('quiet_hours.bedtime_start', '21:30');
+
+        expect(QuietHours::count())->toBe(1)
+            ->and(QuietHours::first()->family_id)->toBe($parent->family->id);
+    });
+
+    it('refuses a second pairing of a child whose model is stale (422, not a 500)', function () {
+        [$parent] = fmFamily();
+        [$other] = fmFamily();
+        $kid = User::factory()->child()->create(['parent_id' => null]);
+        $pin = app(PairingService::class)->generatePin($parent)['pin'];
+
+        // Another request paired the child meanwhile; this model still says unpaired.
+        DB::table('users')->where('id', $kid->id)->update(['parent_id' => $other->id]);
+        expect($kid->parent_id)->toBeNull();
+
+        Sanctum::actingAs($kid);
+        postJson('/api/child/pair', ['pin' => $pin])
+            ->assertStatus(422)->assertJsonPath('message', 'This child profile is already paired to a parent.');
+        expect(Pet::where('user_id', $kid->id)->exists())->toBeFalse();
+    });
+
+    it('answers 422 for a non-scalar pet_id', function () {
+        [$parent] = fmFamily();
+        Sanctum::actingAs($parent);
+
+        getJson('/api/parent/activities?pet_id[]=1')->assertStatus(422)->assertJsonValidationErrors('pet_id');
+        postJson('/api/parent/hard-stop', ['pet_id' => [1]])->assertStatus(422)->assertJsonValidationErrors('pet_id');
+        postJson('/api/parent/generate-pin', ['pet_id' => ['x' => 1]])->assertStatus(422)->assertJsonValidationErrors('pet_id');
+    });
+
+    it('never creates a family on GET', function () {
+        $parent = User::factory()->parent()->create();
+        $familyId = $parent->family->id;
+        FamilyMember::where('user_id', $parent->id)->delete();
+        Family::whereKey($familyId)->delete();
+        $families = Family::count();
+
+        Sanctum::actingAs($parent->fresh());
+        getJson('/api/parent/dashboard')->assertOk()
+            ->assertJsonPath('pet', null)->assertJsonPath('family', null);
+        getJson('/api/parent/quiet-hours')->assertOk()->assertJsonPath('quiet_hours', null);
+        getJson('/api/parent/activities')->assertOk()->assertJsonPath('meta.total', 0);
+        getJson('/api/parent/activities?pet_id=5')->assertNotFound();
+
+        expect(Family::count())->toBe($families)
+            ->and(FamilyMember::where('user_id', $parent->id)->exists())->toBeFalse();
+    });
+
+    it('never makes a parent owner a caretaker (legacy write path)', function () {
+        $parent = User::factory()->parent()->create();
+        $pet = Pet::factory()->create(['user_id' => $parent->id]);
+
+        expect($pet->family_id)->toBe($parent->family->id)
+            ->and(PetCaretaker::where('pet_id', $pet->id)->exists())->toBeFalse();
     });
 });

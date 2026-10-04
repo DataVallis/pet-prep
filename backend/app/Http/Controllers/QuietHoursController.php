@@ -30,8 +30,9 @@ class QuietHoursController extends Controller
             return response()->json(['message' => 'Only parent profiles can manage quiet hours.'], 403);
         }
 
-        $family = $this->families->ensureFamilyFor($parent);
-        $quietHours = QuietHours::where('family_id', $family->id)->first();
+        // GET never writes (no family created on read).
+        $family = $this->families->familyOf($parent);
+        $quietHours = $family !== null ? QuietHours::where('family_id', $family->id)->first() : null;
 
         if (! $quietHours) {
             return response()->json([
@@ -73,9 +74,13 @@ class QuietHoursController extends Controller
                 'is_active',
             ]);
 
-            $existing = QuietHours::where('family_id', $family->id)->lockForUpdate()->first();
+            $existing = QuietHours::where('family_id', $family->id)->lockForUpdate()->first()
+                // A row this parent created without a family (old code during
+                // the deploy window) is adopted, not duplicated (parent_id is
+                // unique — a second insert would be a 500).
+                ?? QuietHours::where('parent_id', $parent->id)->whereNull('family_id')->lockForUpdate()->first();
             if ($existing !== null) {
-                $existing->update($values);
+                $existing->update(array_merge($values, ['family_id' => $family->id]));
 
                 return $existing;
             }

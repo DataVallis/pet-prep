@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Schema;
 
 /**
@@ -32,6 +33,16 @@ use Illuminate\Support\Facades\Schema;
  *
  * Fails without writing anything if a child already has two active pets
  * (the new invariant) — fix the data first, see ADR-012 "Migration".
+ *
+ * Deletes never cascade from a family into child data: pets.family_id,
+ * family_user.family_id and quiet_hours.family_id are RESTRICT (a family
+ * with members, pets or settings cannot be deleted by accident); only open
+ * invite codes go with their family.
+ *
+ * Legacy pets owned by a PARENT account (admin artefacts — the child API
+ * never worked for them) go into that parent's family WITHOUT a caretaker
+ * row ("only children are caretakers" holds for all data); their ids are
+ * printed by the migration so they can be fixed by hand.
  */
 return new class extends Migration
 {
@@ -59,7 +70,7 @@ return new class extends Migration
 
         Schema::create('family_user', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('family_id')->constrained('families')->cascadeOnDelete();
+            $table->foreignId('family_id')->constrained('families')->restrictOnDelete();
             // One family per user (MVP).
             $table->foreignId('user_id')->unique()->constrained('users')->cascadeOnDelete();
             $table->string('role', 16);
@@ -81,11 +92,11 @@ return new class extends Migration
         });
 
         Schema::table('pets', function (Blueprint $table) {
-            $table->foreignId('family_id')->nullable()->after('user_id')->constrained('families')->cascadeOnDelete();
+            $table->foreignId('family_id')->nullable()->after('user_id')->constrained('families')->restrictOnDelete();
         });
 
         Schema::table('quiet_hours', function (Blueprint $table) {
-            $table->foreignId('family_id')->nullable()->unique()->after('parent_id')->constrained('families')->cascadeOnDelete();
+            $table->foreignId('family_id')->nullable()->unique()->after('parent_id')->constrained('families')->restrictOnDelete();
         });
 
         Schema::table('users', function (Blueprint $table) {
@@ -117,7 +128,8 @@ return new class extends Migration
         DB::unprepared(<<<'SQL'
             CREATE OR REPLACE FUNCTION pet_caretakers_copy_pet_is_active() RETURNS trigger AS $$
             BEGIN
-                SELECT is_active INTO NEW.pet_is_active FROM pets WHERE id = NEW.pet_id;
+                -- FOR SHARE: a concurrent is_active change waits for this insert.
+                SELECT is_active INTO NEW.pet_is_active FROM pets WHERE id = NEW.pet_id FOR SHARE;
                 RETURN NEW;
             END
             $$ LANGUAGE plpgsql;
@@ -202,8 +214,9 @@ return new class extends Migration
                 $addMember($familyOf[$child->id], (int) $child->id, 'child');
             });
 
+        $parentOwned = [];
         DB::table('pets')->orderBy('id')->select(['id', 'user_id', 'born_at'])
-            ->each(function (object $pet) use (&$familyOf, $newFamily, $addMember, $now): void {
+            ->each(function (object $pet) use (&$familyOf, &$parentOwned, $newFamily, $addMember, $now): void {
                 $ownerId = (int) $pet->user_id;
                 if (! isset($familyOf[$ownerId])) {
                     // Owner is neither a parent-linked child nor handled above
@@ -214,6 +227,13 @@ return new class extends Migration
                 }
 
                 DB::table('pets')->where('id', $pet->id)->update(['family_id' => $familyOf[$ownerId]]);
+
+                if (DB::table('users')->where('id', $ownerId)->value('role') !== 'child') {
+                    $parentOwned[] = $pet->id; // no caretaker: only children care for pets
+
+                    return;
+                }
+
                 DB::table('pet_caretakers')->insert([
                     'pet_id' => $pet->id,
                     'user_id' => $ownerId,
@@ -222,6 +242,15 @@ return new class extends Migration
                     'updated_at' => $now,
                 ]);
             });
+
+        if ($parentOwned !== []) {
+            $message = 'Family model migration: pets owned by a parent account got a family but no caretaker (fix by hand): pet ids '
+                .implode(', ', $parentOwned);
+            Log::warning($message);
+            if (app()->runningInConsole() && ! app()->runningUnitTests()) {
+                fwrite(STDERR, $message.PHP_EOL);
+            }
+        }
 
         DB::table('quiet_hours')->orderBy('id')->select(['id', 'parent_id'])
             ->each(function (object $row) use (&$familyOf): void {

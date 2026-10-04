@@ -8,6 +8,7 @@ use App\Enums\UserRole;
 use App\Exceptions\FamilyException;
 use App\Exceptions\PairingException;
 use App\Jobs\GeneratePetReferenceImage;
+use App\Models\Family;
 use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\User;
@@ -125,11 +126,22 @@ class PairingService
                 throw new PairingException('A parent profile cannot be paired as a child.');
             }
 
+            // Lock order (shared with FamilyInviteService::joinFamily):
+            // parent user row (above) → child user row → family row.
+            // Re-reading the child under the lock makes two concurrent
+            // pairings of the same child end in one 201 and one 422 (not a
+            // unique-key 500), and a parent moving to another family can't
+            // delete the family this pet is being created in.
+            $lockedChild = User::whereKey($child->id)->lockForUpdate()->first();
+
             $family = $this->families->ensureFamilyFor($parent);
+            Family::whereKey($family->id)->lockForUpdate()->first();
 
             // Unchanged rule: a child profile pairs once. (A second pet for
             // the same child, e.g. after game over, is a follow-up — ADR-012.)
-            if ($child->parent_id !== null || FamilyMember::where('user_id', $child->id)->exists()) {
+            if ($lockedChild === null
+                || $lockedChild->parent_id !== null
+                || FamilyMember::where('user_id', $child->id)->exists()) {
                 throw new PairingException('This child profile is already paired to a parent.');
             }
 

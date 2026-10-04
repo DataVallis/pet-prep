@@ -87,6 +87,30 @@ docker compose -f "$COMPOSE_FILE" up -d postgres redis
 echo "Waiting for PostgreSQL and Redis to be healthy..."
 docker compose -f "$COMPOSE_FILE" exec -T postgres pg_isready -q || sleep 5
 
+# 6a. Maintenance mode for the migration window (M2-01 review): old containers
+# keep serving until step 9, so a request between "migrate" and the restart
+# would hit the new schema with old code (e.g. a pairing creating a pet
+# without family_id). `artisan down` writes storage/framework/down on the
+# shared app_storage volume, so every app / queue / scheduler container sees
+# it: HTTP → 503 (the app retries), the scheduler skips the decay tick, queue
+# workers pause. The trap brings the app back up if any later step fails.
+MAINTENANCE_ON=0
+maintenance_up() {
+    if [ "$MAINTENANCE_ON" = "1" ]; then
+        echo "Leaving maintenance mode..."
+        docker compose -f "$COMPOSE_FILE" run --rm app php artisan up || true
+        MAINTENANCE_ON=0
+    fi
+}
+trap maintenance_up EXIT
+
+echo "Entering maintenance mode..."
+if docker compose -f "$COMPOSE_FILE" run --rm app php artisan down --retry=15; then
+    MAINTENANCE_ON=1
+else
+    echo "Warning: could not enter maintenance mode (first deploy?) — continuing." >&2
+fi
+
 # 7. Run Database Migrations
 echo "Running database migrations (--force)..."
 docker compose -f "$COMPOSE_FILE" run --rm app php artisan migrate --force
@@ -107,6 +131,9 @@ docker compose -f "$COMPOSE_FILE" up -d --remove-orphans app reverb queue queue-
 # 10. Restart Queue Workers to load new code (signal is shared via cache: restarts queue + queue-broadcasts)
 echo "Restarting queue workers..."
 docker compose -f "$COMPOSE_FILE" exec -T queue php artisan queue:restart || true
+
+# 10a. New code is running: leave maintenance mode before the health check.
+maintenance_up
 
 # 11. Health Check Verification
 echo "Verifying service health..."
