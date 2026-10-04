@@ -6,10 +6,21 @@ use App\Enums\TokenAbility;
 use App\Models\User;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Support\Facades\DB;
 use Laravel\Sanctum\PersonalAccessToken;
 
 abstract class TestCase extends BaseTestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        // RefreshDatabase wraps every test in a transaction. FalGateway refuses to
+        // call fal.ai inside a transaction (PR #22 review) — treat this one as the
+        // ambient level so only transactions opened by the code under test count.
+        config(['media.ambient_transaction_level' => DB::transactionLevel()]);
+    }
+
     /**
      * `actingAs($user, 'sanctum')` (M2-03): the user gets an in-memory
      * Sanctum token with the ability of their role (`parent` / `child`), as

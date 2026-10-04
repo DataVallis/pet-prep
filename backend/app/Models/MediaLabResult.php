@@ -20,6 +20,9 @@ class MediaLabResult extends Model
 
     public const STATUS_FAILED = 'failed';
 
+    /** The submit reached fal but the answer was lost (timeout / reset): no request_id to track, cost kept. */
+    public const STATUS_UNKNOWN = 'unknown';
+
     /**
      * @var list<string>
      */
@@ -71,6 +74,6 @@ class MediaLabResult extends Model
 
     public function isFinished(): bool
     {
-        return in_array($this->status, [self::STATUS_COMPLETED, self::STATUS_FAILED], true);
+        return in_array($this->status, [self::STATUS_COMPLETED, self::STATUS_FAILED, self::STATUS_UNKNOWN], true);
     }
 }

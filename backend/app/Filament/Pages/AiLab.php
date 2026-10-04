@@ -187,6 +187,11 @@ class AiLab extends Page implements HasForms
     public function checkPending(int $runId, MediaLabService $lab): void
     {
         $this->admin();
+
+        if (! static::canAccess()) {
+            throw new AuthorizationException;
+        }
+
         $run = MediaLabRun::findOrFail($runId);
         $count = $lab->pollPending($run);
 

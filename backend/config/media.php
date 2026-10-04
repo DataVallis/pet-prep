@@ -23,6 +23,11 @@
 | Production defaults stay on the pre-M4 models until David picks new ones
 | (AI_REFERENCE_IMAGE_PROFILE / AI_STATE_VIDEO_PROFILE).
 |
+| NOTE: the price belongs to the PROFILE, not to the endpoint. Overriding an
+| endpoint with FAL_MODEL_* does not change `pricing` — if you point a profile
+| at a different model, update its price here too (or add a new profile).
+| Negative prices are rejected.
+|
 */
 
 return [
@@ -38,6 +43,8 @@ return [
     'pet_dna_version' => (int) env('AI_PET_DNA_VERSION', 2),
 
     'budget' => [
+        // Production caps (reference images, state videos). The AI Lab does NOT count
+        // here — it has its own budget below, so lab runs can never starve new pets.
         // Estimated USD; a call that would exceed either cap is refused (fail closed).
         'daily_usd' => (float) env('AI_DAILY_BUDGET_USD', 5),
         'monthly_usd' => (float) env('AI_MONTHLY_BUDGET_USD', 50),
@@ -48,8 +55,11 @@ return [
     'lab' => [
         'enabled' => (bool) env('AI_LAB_ENABLED', true),
         'max_samples' => 4,
-        // Hard ceiling for one lab run, on top of the daily / monthly caps.
+        // Hard ceiling for one lab run, on top of the lab caps.
         'max_run_usd' => (float) env('AI_LAB_MAX_RUN_USD', 3),
+        // Separate lab budget (estimated USD), counted only over purpose = lab.
+        'daily_usd' => (float) env('AI_LAB_DAILY_USD', 3),
+        'monthly_usd' => (float) env('AI_LAB_MONTHLY_USD', 30),
     ],
 
     'profiles' => [

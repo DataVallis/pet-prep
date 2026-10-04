@@ -51,7 +51,7 @@ class SubmitMediaLabVideo implements ShouldQueue
                 labResultId: $result->id,
             );
         } catch (AiCallException $e) {
-            $this->markFailed($result, $e->reason, $e->getMessage());
+            $this->markFailed($result, $e->reason, $e->getMessage(), $e->chargedUsd, $e->outcomeUnknown);
 
             return;
         } catch (Throwable $e) {
@@ -68,12 +68,16 @@ class SubmitMediaLabVideo implements ShouldQueue
         ]);
     }
 
-    private function markFailed(MediaLabResult $result, AiCallFailure $reason, string $message): void
+    /**
+     * $chargedUsd > 0: the request reached fal and the cost was kept (timeout after send).
+     */
+    private function markFailed(MediaLabResult $result, AiCallFailure $reason, string $message, float $chargedUsd = 0.0, bool $outcomeUnknown = false): void
     {
         $result->update([
-            'status' => MediaLabResult::STATUS_FAILED,
+            'status' => $outcomeUnknown ? MediaLabResult::STATUS_UNKNOWN : MediaLabResult::STATUS_FAILED,
             'error_reason' => $reason->value,
             'error' => mb_substr($message, 0, 2000),
+            'estimated_cost_usd' => $chargedUsd,
             'completed_at' => now(),
         ]);
     }

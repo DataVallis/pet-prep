@@ -39,17 +39,22 @@ class AiSpendOverview extends StatsOverviewWidget
         $balanceAt = FalGateway::balanceExhaustedAt();
         $mediaErrors = Pet::query()->whereNotNull('media_error')->where('media_status', 'failed')->count();
 
+        $labToday = $guard->spentTodayUsd(true);
+        $labMonth = $guard->spentThisMonthUsd(true);
+
         return [
-            Stat::make('AI spend today (est.)', sprintf('$%.2f / $%.2f', $today, $daily))
-                ->description('Daily cap AI_DAILY_BUDGET_USD ('.$guard->timezone().')')
-                ->color($today >= $daily ? 'danger' : ($today >= 0.8 * $daily ? 'warning' : 'success')),
-            Stat::make('AI spend this month (est.)', sprintf('$%.2f / $%.2f', $month, $monthly))
-                ->description(sprintf('Lab $%.2f · reference images $%.2f · videos $%.2f',
-                    $guard->spentThisMonthUsdFor(AiSpendPurpose::Lab),
+            Stat::make('Pets AI spend today (est.)', sprintf('$%.2f / $%.2f', $today, $daily))
+                ->description(sprintf('This month $%.2f / $%.2f · images $%.2f · videos $%.2f (%s)',
+                    $month,
+                    $monthly,
                     $guard->spentThisMonthUsdFor(AiSpendPurpose::ReferenceImage),
                     $guard->spentThisMonthUsdFor(AiSpendPurpose::StateVideo),
+                    $guard->timezone(),
                 ))
-                ->color($month >= $monthly ? 'danger' : ($month >= 0.8 * $monthly ? 'warning' : 'success')),
+                ->color(($today >= $daily || $month >= $monthly) ? 'danger' : (($today >= 0.8 * $daily || $month >= 0.8 * $monthly) ? 'warning' : 'success')),
+            Stat::make('AI Lab spend today (est.)', sprintf('$%.2f / $%.2f', $labToday, $guard->labDailyCapUsd()))
+                ->description(sprintf('This month $%.2f / $%.2f — separate from the pets budget', $labMonth, $guard->labMonthlyCapUsd()))
+                ->color(($labToday >= $guard->labDailyCapUsd() || $labMonth >= $guard->labMonthlyCapUsd()) ? 'danger' : 'success'),
             Stat::make('fal.ai balance', $balanceAt ? 'EXHAUSTED' : 'OK')
                 ->description($balanceAt
                     ? 'Since '.$balanceAt.' — top up at fal.ai/dashboard/billing'

@@ -55,6 +55,10 @@ final class ModelProfile
             throw new InvalidArgumentException("Media profile {$kind}.{$key}: pricing needs unit image|megapixel|second and usd.");
         }
 
+        if ((float) $pricing['usd'] < 0 || (isset($pricing['usd_additional']) && (! is_numeric($pricing['usd_additional']) || (float) $pricing['usd_additional'] < 0))) {
+            throw new InvalidArgumentException("Media profile {$kind}.{$key}: prices must not be negative.");
+        }
+
         if ($kind === self::KIND_VIDEO && $unit !== 'second') {
             throw new InvalidArgumentException("Media profile {$kind}.{$key}: video pricing must be per second.");
         }

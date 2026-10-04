@@ -33,3 +33,19 @@ Schedule::command('pins:prune')
     ->withoutOverlapping()
     ->name('prune-child-login-pins')
     ->description('Delete expired / used child login PINs older than 7 days');
+
+// Daily (M4, PR #22 review): re-queue reference images blocked by the AI budget
+// or an exhausted fal balance. 00:23 UTC — just after the budget day rolls over
+// (AI_BUDGET_TIMEZONE defaults to UTC).
+Schedule::command('media:retry-references')
+    ->dailyAt('00:23')
+    ->withoutOverlapping()
+    ->name('retry-reference-images')
+    ->description('Re-queue reference images blocked by the AI budget / fal balance');
+
+// Hourly: fail AI Lab results stuck in `running` for over an hour.
+Schedule::command('media:sweep-lab')
+    ->hourlyAt(41)
+    ->withoutOverlapping()
+    ->name('sweep-media-lab')
+    ->description('Fail AI Lab results running for more than an hour');

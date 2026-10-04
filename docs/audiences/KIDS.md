@@ -17,6 +17,8 @@ Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova p
 
 **Imaš brata ali sestro?** Lahko ima vsak svojega kužka, ali pa skupaj skrbita za enega. Če se pridružiš kužku, ki že živi, se tudi ti podpišeš pod obljubo — šele potem mu lahko daješ hrano in vodo. Vse, kar narediš ti, se šteje tebi. Koraki se seštejejo: na sprehod lahko greste skupaj!
 
+**Tvoj kuža je edini na svetu, ki je točno tak!** 🐾 Ko se rodi, dobi svojo barvo, lise, ušesa in oči — noben drug kuža ni enak njemu. *(slika v aplikaciji: kmalu)*
+
 ## Kaj kuža potrebuje
 - 🍖 **Hrano** — zjutraj (med 6. in 10. uro) in zvečer (med 17. in 21. uro), enkrat vsakič. Ob drugih urah kuža ni lačen — gumb je zasenčen in pod njim piše, kdaj bo spet čas (npr. "ob 17:00").
 - 💧 **Vodo** — trikrat na dan, vsaj 3 ure narazen. Pod gumbom vidiš, kdaj lahko spet natočiš.

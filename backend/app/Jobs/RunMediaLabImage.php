@@ -48,7 +48,7 @@ class RunMediaLabImage implements ShouldQueue
             $profile = $profiles->image($result->profile);
             $call = $gateway->run($profile, (array) $result->params, AiSpendPurpose::Lab, labResultId: $result->id, timeoutSeconds: 75);
         } catch (AiCallException $e) {
-            $this->markFailed($result, $e->reason, $e->getMessage());
+            $this->markFailed($result, $e->reason, $e->getMessage(), $e->chargedUsd);
 
             return;
         } catch (Throwable $e) {
@@ -81,12 +81,16 @@ class RunMediaLabImage implements ShouldQueue
         ]);
     }
 
-    private function markFailed(MediaLabResult $result, AiCallFailure $reason, string $message): void
+    /**
+     * $chargedUsd > 0: the request reached fal and the cost was kept (timeout after send).
+     */
+    private function markFailed(MediaLabResult $result, AiCallFailure $reason, string $message, float $chargedUsd = 0.0): void
     {
         $result->update([
             'status' => MediaLabResult::STATUS_FAILED,
             'error_reason' => $reason->value,
             'error' => mb_substr($message, 0, 2000),
+            'estimated_cost_usd' => $chargedUsd,
             'completed_at' => now(),
         ]);
     }

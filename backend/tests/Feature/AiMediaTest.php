@@ -5,6 +5,8 @@ use App\Enums\AiSpendPurpose;
 use App\Enums\BreedType;
 use App\Enums\PetStateEnum;
 use App\Filament\Pages\AiLab;
+use App\Filament\Resources\PetResource\Pages\EditPet;
+use App\Filament\Resources\PetResource\Pages\ListPets;
 use App\Filament\Widgets\AiSpendOverview;
 use App\Jobs\GeneratePetReferenceImage;
 use App\Jobs\PollMediaLabResult;
@@ -27,9 +29,12 @@ use App\Services\Media\PetAppearancePrompt;
 use App\Services\Media\PetDnaService;
 use App\Services\PairingService;
 use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
@@ -54,6 +59,8 @@ beforeEach(function () {
         'media.budget.monthly_usd' => 50.0,
         'media.budget.timezone' => 'UTC',
         'media.lab.max_run_usd' => 3.0,
+        'media.lab.daily_usd' => 3.0,
+        'media.lab.monthly_usd' => 30.0,
     ]);
 });
 
@@ -62,10 +69,10 @@ function aiSuperadmin(): User
     return User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
 }
 
-function aiSpend(float $usd, string $status = AiSpendLedger::STATUS_COMMITTED, ?Carbon $at = null): AiSpendLedger
+function aiSpend(float $usd, string $status = AiSpendLedger::STATUS_COMMITTED, ?Carbon $at = null, string $purpose = 'reference_image'): AiSpendLedger
 {
     $row = AiSpendLedger::create([
-        'purpose' => 'lab',
+        'purpose' => $purpose,
         'profile' => 'flux2_pro',
         'endpoint' => 'fal-ai/flux-2-pro',
         'unit' => 'image',
@@ -353,8 +360,77 @@ describe('spend caps and ledger', function () {
         Carbon::setTestNow('2026-10-20 12:00:00');
         aiSpend(49.999, at: Carbon::parse('2026-10-03 10:00:00'));
 
-        expect(fn () => app(AiSpendGuard::class)->reserve(app(MediaProfiles::class)->image('flux_schnell'), AiSpendPurpose::Lab))
+        expect(fn () => app(AiSpendGuard::class)->reserve(app(MediaProfiles::class)->image('flux_schnell'), AiSpendPurpose::ReferenceImage))
             ->toThrow(fn (AiCallException $e) => expect($e->reason)->toBe(AiCallFailure::BudgetMonthly));
+    });
+
+    it('keeps the lab budget separate: lab spend never blocks reference images and vice versa', function () {
+        $guard = app(AiSpendGuard::class);
+        aiSpend(2.99, purpose: 'lab');
+
+        expect($guard->refusalFor(0.006, AiSpendPurpose::ReferenceImage))->toBeNull()
+            ->and($guard->refusalFor(0.03, AiSpendPurpose::Lab))->toBe(AiCallFailure::BudgetLab);
+
+        aiSpend(4.999);
+        expect($guard->refusalFor(0.006, AiSpendPurpose::ReferenceImage))->toBe(AiCallFailure::BudgetDaily)
+            ->and($guard->spentTodayUsd(true))->toEqualWithDelta(2.99, 1e-9)
+            ->and($guard->spentTodayUsd())->toEqualWithDelta(4.999, 1e-9);
+
+        config(['media.lab.daily_usd' => 100, 'media.lab.monthly_usd' => 5]);
+        expect($guard->refusalFor(2.1, AiSpendPurpose::Lab))->toBe(AiCallFailure::BudgetLab); // lab monthly cap
+    });
+
+    it('commits the cost when the request was sent but timed out (fal may still bill it)', function () {
+        Http::fake(['fal.run/*' => fn () => throw new ConnectionException('cURL error 28: Operation timed out after 60001 milliseconds with 0 bytes received')]);
+        $pet = Pet::factory()->withPetDna()->create(['user_id' => createChildUser()->id, 'media_status' => 'pending']);
+
+        expect(fn () => (new GeneratePetReferenceImage($pet->id))->handle(app(FalAiService::class)))->toThrow(RuntimeException::class); // queue retries
+
+        expect(AiSpendLedger::sole())->status->toBe('committed')->error_reason->toBe('http_error')
+            ->and(app(AiSpendGuard::class)->spentTodayUsd())->toEqualWithDelta(0.006, 1e-9);
+    });
+
+    it('voids the reservation when the request never reached fal (DNS / connect failure)', function (string $error) {
+        Http::fake(['fal.run/*' => fn () => throw new ConnectionException($error)]);
+
+        expect(fn () => app(FalGateway::class)->run(app(MediaProfiles::class)->image('flux_schnell'), ['prompt' => 'x'], AiSpendPurpose::ReferenceImage))
+            ->toThrow(fn (AiCallException $e) => expect($e->chargedUsd)->toBe(0.0)->and($e->outcomeUnknown)->toBeFalse());
+
+        expect(AiSpendLedger::sole())->status->toBe('void')->error_reason->toBe('http_error');
+    })->with([
+        'dns' => 'cURL error 6: Could not resolve host: fal.run',
+        'connect' => 'cURL error 7: Failed to connect to fal.run port 443',
+        'connect timeout' => 'cURL error 28: Connection timed out after 10001 milliseconds',
+        'tls' => 'cURL error 35: OpenSSL SSL_connect: SSL_ERROR_SYSCALL',
+    ]);
+
+    it('commits on a reset after sending', function () {
+        Http::fake(['fal.run/*' => fn () => throw new ConnectionException('cURL error 56: Recv failure: Connection reset by peer')]);
+
+        expect(fn () => app(FalGateway::class)->run(app(MediaProfiles::class)->image('flux_schnell'), ['prompt' => 'x'], AiSpendPurpose::ReferenceImage))
+            ->toThrow(fn (AiCallException $e) => expect($e->outcomeUnknown)->toBeTrue()->and($e->chargedUsd)->toEqualWithDelta(0.006, 1e-9));
+
+        expect(AiSpendLedger::sole()->status)->toBe('committed');
+    });
+
+    it('refuses to call fal inside a database transaction', function () {
+        Http::fake();
+
+        expect(fn () => DB::transaction(fn () => app(FalGateway::class)->run(app(MediaProfiles::class)->image('flux_schnell'), ['prompt' => 'x'], AiSpendPurpose::ReferenceImage)))
+            ->toThrow(LogicException::class);
+        expect(fn () => DB::transaction(fn () => app(FalGateway::class)->submit(app(MediaProfiles::class)->video('kling_v3_pro'), ['prompt' => 'x'], AiSpendPurpose::Lab, 'https://api.petprep.si/api/webhooks/fal-ai')))
+            ->toThrow(LogicException::class);
+
+        Http::assertNothingSent();
+        expect(AiSpendLedger::count())->toBe(0);
+    });
+
+    it('rejects negative prices', function () {
+        config(['media.profiles.image.flux2_pro.pricing.usd' => -0.03]);
+        expect(fn () => app(MediaProfiles::class)->image('flux2_pro'))->toThrow(InvalidArgumentException::class);
+
+        config(['media.profiles.image.flux2_pro.pricing.usd' => 0.03, 'media.profiles.image.flux2_pro.pricing.usd_additional' => -1]);
+        expect(fn () => app(MediaProfiles::class)->image('flux2_pro'))->toThrow(InvalidArgumentException::class);
     });
 
     it('counts reserved and committed rows, not void ones, and resets the daily cap at the budget midnight', function () {
@@ -366,8 +442,8 @@ describe('spend caps and ledger', function () {
         aiSpend(10, AiSpendLedger::STATUS_VOID);
 
         expect($guard->spentTodayUsd())->toEqualWithDelta(0.9, 1e-9)
-            ->and($guard->refusalFor(0.15))->toBe(AiCallFailure::BudgetDaily)
-            ->and($guard->refusalFor(0.1))->toBeNull();
+            ->and($guard->refusalFor(0.15, AiSpendPurpose::ReferenceImage))->toBe(AiCallFailure::BudgetDaily)
+            ->and($guard->refusalFor(0.1, AiSpendPurpose::ReferenceImage))->toBeNull();
 
         Carbon::setTestNow('2026-10-21 00:00:01');
         expect($guard->spentTodayUsd())->toEqualWithDelta(0.0, 1e-9)
@@ -377,7 +453,7 @@ describe('spend caps and ledger', function () {
     it('fails closed with a zero cap', function () {
         config(['media.budget.daily_usd' => 0]);
 
-        expect(app(AiSpendGuard::class)->refusalFor(0.001))->toBe(AiCallFailure::BudgetDaily);
+        expect(app(AiSpendGuard::class)->refusalFor(0.001, AiSpendPurpose::StateVideo))->toBe(AiCallFailure::BudgetDaily);
     });
 
     it('voids the reservation when fal fails and lets the queue retry', function () {
@@ -491,12 +567,12 @@ describe('AI lab', function () {
         Queue::fake();
         Http::fake();
         $run = app(MediaLabService::class)->startImageRun(aiSuperadmin(), 'mutt', [], 1, ['nano_banana_pro']);
-        aiSpend(4.95);
+        aiSpend(2.95, purpose: 'lab');
 
         (new RunMediaLabImage($run->results->first()->id))->handle(app(FalGateway::class), app(MediaProfiles::class), app(FalAiService::class));
 
         Http::assertNothingSent();
-        expect($run->results()->first())->status->toBe('failed')->error_reason->toBe('budget_daily');
+        expect($run->results()->first())->status->toBe('failed')->error_reason->toBe('budget_lab');
     });
 
     it('refuses a run over the per-run limit or the remaining budget, creating nothing', function () {
@@ -508,9 +584,9 @@ describe('AI lab', function () {
             ->toThrow(fn (AiCallException $e) => expect($e->reason)->toBe(AiCallFailure::BudgetRun));
 
         config(['media.lab.max_run_usd' => 3.0]);
-        aiSpend(4.9);
+        aiSpend(2.9, purpose: 'lab');
         expect(fn () => $lab->startImageRun(aiSuperadmin(), 'mutt', [], 1, ['nano_banana_pro']))
-            ->toThrow(fn (AiCallException $e) => expect($e->reason)->toBe(AiCallFailure::BudgetDaily));
+            ->toThrow(fn (AiCallException $e) => expect($e->reason)->toBe(AiCallFailure::BudgetLab));
 
         expect(MediaLabRun::count())->toBe(0);
         Queue::assertNothingPushed();
@@ -620,6 +696,134 @@ describe('AI lab', function () {
 
 /* ─────────────────────────── Filament ─────────────────────────── */
 
+describe('PR #22 review follow-ups', function () {
+    it('marks a lab video unknown and keeps its cost when the submit timed out after sending', function () {
+        Queue::fake();
+        Http::fake(['queue.fal.run/*' => fn () => throw new ConnectionException('cURL error 28: Operation timed out after 60000 milliseconds with 0 bytes received')]);
+        $run = app(MediaLabService::class)->startVideoRun(aiSuperadmin(), aiCompletedLabImage()->id, ['veo31_lite'], PetStateEnum::Idle);
+        $video = $run->results->first();
+
+        (new SubmitMediaLabVideo($video->id))->handle(app(FalGateway::class), app(MediaProfiles::class), app(FalAiService::class));
+
+        expect($video->fresh())
+            ->status->toBe('unknown')
+            ->error_reason->toBe('http_error')
+            ->request_id->toBeNull()
+            ->estimated_cost_usd->toEqualWithDelta(0.12, 1e-9);
+        expect(AiSpendLedger::sole())->status->toBe('committed')->error_reason->toBe('http_error')
+            ->and(app(AiSpendGuard::class)->spentTodayUsd(true))->toEqualWithDelta(0.12, 1e-9);
+        expect(app(MediaLabService::class)->pollPending($run))->toBe(0); // nothing to track without a request id
+    });
+
+    it('keeps the cost of a lab image whose answer was lost', function () {
+        Queue::fake();
+        Http::fake(['fal.run/*' => fn () => throw new ConnectionException('cURL error 28: Operation timed out after 75000 milliseconds with 0 bytes received')]);
+        $run = app(MediaLabService::class)->startImageRun(aiSuperadmin(), 'mutt', [], 1, ['flux2_pro']);
+        $result = $run->results->first();
+
+        (new RunMediaLabImage($result->id))->handle(app(FalGateway::class), app(MediaProfiles::class), app(FalAiService::class));
+
+        expect($result->fresh())->status->toBe('failed')->error_reason->toBe('http_error')->estimated_cost_usd->toEqualWithDelta(0.03, 1e-9);
+    });
+
+    it('sweeps lab results stuck running for over an hour and leaves the ledger alone', function () {
+        $image = aiCompletedLabImage();
+        $runId = $image->media_lab_run_id;
+        $old = MediaLabResult::create(['media_lab_run_id' => $runId, 'kind' => 'video', 'profile' => 'veo31_lite', 'endpoint' => 'e/x', 'prompt' => 'p', 'request_id' => 'old', 'status' => 'running', 'started_at' => now()->subMinutes(61), 'estimated_cost_usd' => 0.12]);
+        $fresh = MediaLabResult::create(['media_lab_run_id' => $runId, 'kind' => 'video', 'profile' => 'veo31_lite', 'endpoint' => 'e/x', 'prompt' => 'p', 'request_id' => 'new', 'status' => 'running', 'started_at' => now()->subMinutes(30)]);
+        $ledger = aiSpend(0.12, purpose: 'lab');
+
+        $this->artisan('media:sweep-lab')->assertSuccessful();
+
+        expect($old->fresh())->status->toBe('failed')->error_reason->toBe('timed_out')->estimated_cost_usd->toEqualWithDelta(0.12, 1e-9)
+            ->and($fresh->fresh()->status)->toBe('running')
+            ->and($ledger->fresh()->status)->toBe('committed');
+    });
+
+    it('re-queues budget / balance blocked reference images daily, as far as the budget allows', function () {
+        Queue::fake();
+        $child = fn () => createChildUser();
+        $blockedDaily = Pet::factory()->withPetDna()->create(['user_id' => $child()->id, 'media_status' => 'failed', 'media_error' => 'budget_daily']);
+        $blockedBalance = Pet::factory()->withPetDna()->create(['user_id' => $child()->id, 'media_status' => 'failed', 'media_error' => 'fal_balance']);
+        $httpFailed = Pet::factory()->withPetDna()->create(['user_id' => $child()->id, 'media_status' => 'failed', 'media_error' => 'http_error']);
+        $inactive = Pet::factory()->withPetDna()->create(['user_id' => $child()->id, 'media_status' => 'failed', 'media_error' => 'budget_monthly', 'is_active' => false]);
+
+        // Balance still flagged → nothing.
+        Cache::put(FalGateway::BALANCE_FLAG_KEY, now()->toIso8601String());
+        $this->artisan('media:retry-references')->assertSuccessful();
+        Queue::assertNothingPushed();
+        Cache::forget(FalGateway::BALANCE_FLAG_KEY);
+
+        // Budget room for exactly one more image (0.006) → only the first pet.
+        aiSpend(4.99);
+        $this->artisan('media:retry-references')->assertSuccessful();
+        Queue::assertPushed(GeneratePetReferenceImage::class, 1);
+        expect($blockedDaily->fresh())->media_status->toBe('pending')->media_error->toBeNull()
+            ->and($blockedBalance->fresh()->media_status)->toBe('failed');
+
+        // Next day: the rest of the eligible pets.
+        $this->travel(1)->days();
+        $this->artisan('media:retry-references')->assertSuccessful();
+        expect($blockedBalance->fresh()->media_status)->toBe('pending')
+            ->and($httpFailed->fresh()->media_status)->toBe('failed')   // not an automatic retry reason
+            ->and($inactive->fresh()->media_status)->toBe('failed');
+        Queue::assertPushed(GeneratePetReferenceImage::class, 2);
+    });
+
+    it('is scheduled: daily reference retry and hourly lab sweep', function () {
+        $events = collect(app(Schedule::class)->events())->map(fn ($e) => $e->command.' '.$e->expression);
+
+        expect($events->first(fn ($e) => str_contains($e, 'media:retry-references')))->toContain('23 0 * * *')
+            ->and($events->first(fn ($e) => str_contains($e, 'media:sweep-lab')))->toContain('41 * * * *');
+    });
+
+    it('offers a Filament action to retry a failed reference image', function () {
+        Queue::fake();
+        $this->actingAs(aiSuperadmin());
+        $pet = Pet::factory()->withPetDna()->create(['user_id' => createChildUser()->id, 'media_status' => 'failed', 'media_error' => 'http_error']);
+        $ready = Pet::factory()->withPetDna(['reference_image_url' => 'https://v3.fal.media/x.jpg'])->create(['user_id' => createChildUser()->id, 'media_status' => 'ready']);
+
+        Livewire::test(ListPets::class)
+            ->assertTableActionVisible('retryMedia', $pet)
+            ->assertTableActionHidden('retryMedia', $ready)
+            ->callTableAction('retryMedia', $pet);
+
+        expect($pet->fresh())->media_status->toBe('pending')->media_error->toBeNull();
+        Queue::assertPushed(GeneratePetReferenceImage::class, fn ($job) => $job->petId === $pet->id);
+    });
+
+    it('shows pet DNA read-only and never overwrites it on save', function () {
+        $this->actingAs(aiSuperadmin());
+        $pet = Pet::factory()->create(['user_id' => createChildUser()->id]);
+        $dna = app(PetDnaService::class)->forNewPet($pet, 5);
+        $pet->forceFill(['pet_dna' => $dna])->saveQuietly();
+
+        Livewire::test(EditPet::class, ['record' => $pet->getRouteKey()])
+            ->assertSee('trait_fingerprint')
+            ->fillForm(['escalation_level' => 1])
+            ->call('save')
+            ->assertHasNoFormErrors();
+
+        expect($pet->fresh()->pet_dna)->toEqual($dna);
+    });
+
+    it('rejects an unknown breed without a ValueError', function () {
+        expect(fn () => app(MediaLabService::class)->startImageRun(aiSuperadmin(), 'poodle', [], 1, ['flux2_pro']))
+            ->toThrow(InvalidArgumentException::class);
+    });
+
+    it('does not poll when the lab is disabled', function () {
+        Queue::fake();
+        $this->actingAs(aiSuperadmin());
+        $component = Livewire::test(AiLab::class);
+        config(['media.lab.enabled' => false]);
+
+        expect(fn () => $component->instance()->checkPending(aiCompletedLabImage()->media_lab_run_id, app(MediaLabService::class)))
+            ->toThrow(AuthorizationException::class);
+        Queue::assertNothingPushed();
+    });
+});
+
 describe('Filament AI Lab', function () {
     it('is reachable only for superadmins', function () {
         $this->actingAs(aiSuperadmin())->get('/admin/ai-lab')->assertOk()->assertSee('AI Lab');
@@ -678,7 +882,7 @@ describe('Filament AI Lab', function () {
     it('shows a budget refusal instead of starting the run', function () {
         Queue::fake();
         $this->actingAs(aiSuperadmin());
-        aiSpend(5);
+        aiSpend(3, purpose: 'lab');
 
         Livewire::test(AiLab::class)
             ->set('imageData.profiles', ['nano_banana_pro'])
@@ -691,11 +895,14 @@ describe('Filament AI Lab', function () {
     it('shows spend today / month and the fal balance alert in the widget', function () {
         $this->actingAs(aiSuperadmin());
         aiSpend(1.25);
+        aiSpend(0.5, purpose: 'lab');
         Cache::put(FalGateway::BALANCE_FLAG_KEY, '2026-10-04T10:00:00+00:00');
 
         Livewire::test(AiSpendOverview::class)
             ->assertSee('$1.25 / $5.00')
             ->assertSee('$1.25 / $50.00')
+            ->assertSee('$0.50 / $3.00')
+            ->assertSee('$0.50 / $30.00')
             ->assertSee('EXHAUSTED');
     });
 });

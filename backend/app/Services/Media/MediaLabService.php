@@ -3,6 +3,7 @@
 namespace App\Services\Media;
 
 use App\Enums\AiCallFailure;
+use App\Enums\AiSpendPurpose;
 use App\Enums\BreedType;
 use App\Enums\PetStateEnum;
 use App\Jobs\PollMediaLabResult;
@@ -67,7 +68,10 @@ class MediaLabService
     public function startImageRun(User $admin, string $breedKey, array $fixedTraits, int $samples, array $profileKeys): MediaLabRun
     {
         $this->assertAdmin($admin);
-        BreedType::from($breedKey);
+
+        if (BreedType::tryFrom($breedKey) === null) {
+            throw new InvalidArgumentException("Unknown breed {$breedKey}.");
+        }
 
         if ($samples < 1 || $samples > (int) config('media.lab.max_samples', 4)) {
             throw new InvalidArgumentException('Samples must be between 1 and '.config('media.lab.max_samples', 4).'.');
@@ -203,6 +207,25 @@ class MediaLabService
     }
 
     /**
+     * Fail lab results stuck in `running` for longer than $minutes (lost webhook,
+     * crashed worker). Their ledger rows stay as they are — fal may have billed.
+     */
+    public function sweepStuck(int $minutes = 60): int
+    {
+        return MediaLabResult::query()
+            ->where('status', MediaLabResult::STATUS_RUNNING)
+            ->where(fn ($q) => $q->where('started_at', '<', now()->subMinutes($minutes))
+                ->orWhere(fn ($q) => $q->whereNull('started_at')->where('created_at', '<', now()->subMinutes($minutes))))
+            ->update([
+                'status' => MediaLabResult::STATUS_FAILED,
+                'error_reason' => AiCallFailure::TimedOut->value,
+                'error' => "No result within {$minutes} minutes.",
+                'completed_at' => now(),
+                'updated_at' => now(),
+            ]);
+    }
+
+    /**
      * Finish a running lab video from a verified webhook or a poll. Idempotent.
      * Must run inside the caller's transaction with the row locked.
      */
@@ -277,20 +300,13 @@ class MediaLabService
             throw new AiCallException(AiCallFailure::BudgetRun, sprintf('This run would cost ~$%.2f; the lab limit per run is $%.2f.', $estimate, $maxRun));
         }
 
-        $refusal = $this->guard->refusalFor($estimate);
+        // The lab has its own budget (AI_LAB_DAILY_USD / AI_LAB_MONTHLY_USD): it can never starve new pets.
+        $refusal = $this->guard->refusalFor($estimate, AiSpendPurpose::Lab);
 
         if ($refusal !== null) {
             Log::info('MediaLabService: run refused by budget', ['reason' => $refusal->value, 'estimate' => $estimate]);
 
-            throw new AiCallException($refusal, sprintf(
-                '%s (today $%.2f / $%.2f, month $%.2f / $%.2f, run ~$%.2f).',
-                $refusal->label(),
-                $this->guard->spentTodayUsd(),
-                $this->guard->dailyCapUsd(),
-                $this->guard->spentThisMonthUsd(),
-                $this->guard->monthlyCapUsd(),
-                $estimate,
-            ));
+            throw new AiCallException($refusal, $this->guard->describe($refusal, $estimate, 'this run'));
         }
     }
 

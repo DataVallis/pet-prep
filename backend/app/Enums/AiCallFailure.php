@@ -18,6 +18,12 @@ enum AiCallFailure: string
     /** One AI Lab run would cost more than AI_LAB_MAX_RUN_USD. */
     case BudgetRun = 'budget_run';
 
+    /** The separate AI Lab budget (AI_LAB_DAILY_USD / AI_LAB_MONTHLY_USD) would be exceeded. */
+    case BudgetLab = 'budget_lab';
+
+    /** A lab result stayed `running` for over an hour (sweep, M4 review). */
+    case TimedOut = 'timed_out';
+
     /** fal.ai refused the call because the account balance is exhausted (HTTP 402 / 403 "Exhausted balance"). */
     case FalBalance = 'fal_balance';
 
@@ -48,6 +54,8 @@ enum AiCallFailure: string
             self::BudgetDaily => 'Daily AI budget reached',
             self::BudgetMonthly => 'Monthly AI budget reached',
             self::BudgetRun => 'Run exceeds the per-run lab limit',
+            self::BudgetLab => 'AI Lab budget reached',
+            self::TimedOut => 'No result from fal.ai within an hour',
             self::FalBalance => 'fal.ai balance exhausted — top up at fal.ai/dashboard/billing',
             self::HttpError => 'fal.ai request failed',
             self::InvalidResponse => 'fal.ai response had no usable media',

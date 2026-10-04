@@ -8,8 +8,10 @@ use App\Models\AiSpendLedger;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use LogicException;
 use Throwable;
 
 /**
@@ -20,8 +22,12 @@ use Throwable;
  * (HTTP 402, or 401/403 mentioning balance / locked) becomes
  * AiCallFailure::FalBalance, logged once per hour and flagged for Filament.
  *
- * Call only from queued jobs, never inside a DB transaction (the ledger
- * reservation commits before the HTTP request starts).
+ * Call only from queued jobs, never inside a DB transaction (enforced: LogicException;
+ * the ledger reservation commits before the HTTP request starts).
+ *
+ * Settlement (PR #22 review): void only when nothing reached fal (connect / DNS /
+ * TLS failure before sending) or fal explicitly refused (4xx / 5xx answer);
+ * a timeout or reset after sending keeps the cost (committed + http_error).
  */
 class FalGateway
 {
@@ -58,10 +64,7 @@ class FalGateway
         try {
             $response = $this->http()->timeout($timeoutSeconds)->post(self::SYNC_BASE_URL.'/'.$profile->endpoint, $input);
         } catch (Throwable $e) {
-            $this->guard->void($entry, AiCallFailure::HttpError);
-            Log::error('FalGateway: request failed', ['profile' => $profile->key, 'error' => $e->getMessage()]);
-
-            throw new AiCallException(AiCallFailure::HttpError, 'fal.ai request failed: '.$e->getMessage());
+            throw $this->transportFailure($e, $entry, $profile);
         }
 
         $latencyMs = (int) round((hrtime(true) - $started) / 1_000_000);
@@ -93,10 +96,7 @@ class FalGateway
                 ->withQueryParameters(['fal_webhook' => $webhookUrl])
                 ->post(self::QUEUE_BASE_URL.'/'.$profile->endpoint, $input);
         } catch (Throwable $e) {
-            $this->guard->void($entry, AiCallFailure::HttpError);
-            Log::error('FalGateway: queue submit failed', ['profile' => $profile->key, 'error' => $e->getMessage()]);
-
-            throw new AiCallException(AiCallFailure::HttpError, 'fal.ai request failed: '.$e->getMessage());
+            throw $this->transportFailure($e, $entry, $profile);
         }
 
         $this->throwIfFailed($response, $profile, $entry);
@@ -104,9 +104,10 @@ class FalGateway
         $requestId = $response->json('request_id');
 
         if (! is_string($requestId) || $requestId === '') {
-            $this->guard->void($entry, AiCallFailure::InvalidResponse);
+            // fal accepted (2xx) — it may run and bill the job even though we cannot track it.
+            $this->guard->commit($entry, null, AiCallFailure::InvalidResponse);
 
-            throw new AiCallException(AiCallFailure::InvalidResponse, 'fal.ai queue answer had no request_id.');
+            throw new AiCallException(AiCallFailure::InvalidResponse, 'fal.ai queue answer had no request_id.', (float) $entry->cost_usd, true);
         }
 
         $this->guard->commit($entry, $requestId);
@@ -160,6 +161,51 @@ class FalGateway
     }
 
     /**
+     * cURL errors that happen before a single byte of the request reached fal:
+     * proxy / DNS resolution, TCP connect, TLS handshake / certificate.
+     */
+    private const NOT_SENT_CURL_ERRORS = [5, 6, 7, 35, 51, 58, 60];
+
+    /**
+     * True only when we are sure fal never received the request. A timeout or a
+     * reset after sending (cURL 28 "Operation timed out", 52, 56, …) may still
+     * be run and billed by fal, so the cost must keep counting.
+     */
+    public static function failedBeforeSend(Throwable $e): bool
+    {
+        $message = $e->getMessage();
+
+        if (preg_match('/cURL error (\d+)/', $message, $m) === 1) {
+            $code = (int) $m[1];
+
+            if (in_array($code, self::NOT_SENT_CURL_ERRORS, true)) {
+                return true;
+            }
+
+            // 28 is both "Resolving / Connection timed out" (not sent) and "Operation timed out" (sent).
+            return $code === 28 && preg_match('/(Resolving|Connection) timed out/i', $message) === 1;
+        }
+
+        return preg_match('/Could not resolve host|Failed to connect|Connection refused/i', $message) === 1;
+    }
+
+    private function transportFailure(Throwable $e, AiSpendLedger $entry, ModelProfile $profile): AiCallException
+    {
+        if (self::failedBeforeSend($e)) {
+            $this->guard->void($entry, AiCallFailure::HttpError);
+            Log::error('FalGateway: request did not reach fal.ai', ['profile' => $profile->key, 'error' => $e->getMessage()]);
+
+            return new AiCallException(AiCallFailure::HttpError, 'fal.ai not reachable: '.$e->getMessage());
+        }
+
+        // Sent, answer lost: fal may still run (and bill) it — keep the cost.
+        $this->guard->commit($entry, null, AiCallFailure::HttpError);
+        Log::error('FalGateway: request sent but no answer (timeout / reset) — cost kept', ['profile' => $profile->key, 'error' => $e->getMessage()]);
+
+        return new AiCallException(AiCallFailure::HttpError, 'fal.ai did not answer: '.$e->getMessage(), (float) $entry->cost_usd, true);
+    }
+
+    /**
      * fal answers an exhausted balance with 402, or 401/403 and a message such as
      * "User is locked. Reason: Exhausted balance."
      */
@@ -187,6 +233,12 @@ class FalGateway
 
     private function assertCallable(ModelProfile $profile): void
     {
+        // Rule: no external HTTP inside a DB transaction (PR #22 review). Tests run inside
+        // RefreshDatabase's transaction, which TestCase records as the ambient level.
+        if (DB::transactionLevel() > (int) config('media.ambient_transaction_level', 0)) {
+            throw new LogicException('FalGateway must not be called inside a database transaction — dispatch a queued job after commit.');
+        }
+
         if (! $this->isEnabled() || ! $profile->enabled) {
             throw new AiCallException(AiCallFailure::Disabled);
         }

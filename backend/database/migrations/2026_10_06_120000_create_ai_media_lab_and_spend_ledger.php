@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Schema;
  */
 return new class extends Migration
 {
-    private const FAILURES = "'budget_daily', 'budget_monthly', 'budget_run', 'fal_balance', 'http_error', 'invalid_response', 'disabled', 'generation_failed'";
+    private const FAILURES = "'budget_daily', 'budget_monthly', 'budget_run', 'budget_lab', 'timed_out', 'fal_balance', 'http_error', 'invalid_response', 'disabled', 'generation_failed'";
 
     public function up(): void
     {
@@ -89,7 +89,7 @@ return new class extends Migration
 
         DB::statement("ALTER TABLE media_lab_runs ADD CONSTRAINT media_lab_runs_kind_check CHECK (kind IN ('image', 'video'))");
         DB::statement("ALTER TABLE media_lab_results ADD CONSTRAINT media_lab_results_kind_check CHECK (kind IN ('image', 'video'))");
-        DB::statement("ALTER TABLE media_lab_results ADD CONSTRAINT media_lab_results_status_check CHECK (status IN ('queued', 'running', 'completed', 'failed'))");
+        DB::statement("ALTER TABLE media_lab_results ADD CONSTRAINT media_lab_results_status_check CHECK (status IN ('queued', 'running', 'completed', 'failed', 'unknown'))");
         DB::statement('ALTER TABLE media_lab_results ADD CONSTRAINT media_lab_results_error_reason_check CHECK (error_reason IS NULL OR error_reason IN ('.self::FAILURES.'))');
         DB::statement("ALTER TABLE ai_spend_ledger ADD CONSTRAINT ai_spend_ledger_purpose_check CHECK (purpose IN ('lab', 'reference_image', 'state_video'))");
         DB::statement("ALTER TABLE ai_spend_ledger ADD CONSTRAINT ai_spend_ledger_status_check CHECK (status IN ('reserved', 'committed', 'void'))");

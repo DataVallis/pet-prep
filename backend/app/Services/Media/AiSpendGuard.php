@@ -6,17 +6,24 @@ use App\Enums\AiCallFailure;
 use App\Enums\AiSpendPurpose;
 use App\Models\AiSpendLedger;
 use Carbon\CarbonImmutable;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Daily / monthly caps on ESTIMATED fal.ai spend (M4-07).
+ * Caps on ESTIMATED fal.ai spend (M4-07).
+ *
+ * Two separate budgets (PR #22 review):
+ *  - production (reference_image, state_video): AI_DAILY_BUDGET_USD / AI_MONTHLY_BUDGET_USD,
+ *    counted only over production rows;
+ *  - AI Lab (lab): AI_LAB_DAILY_USD / AI_LAB_MONTHLY_USD, counted only over lab rows,
+ *    so lab runs can never starve new pets' reference images.
  *
  * reserve() runs BEFORE every fal call in its own short transaction (never
  * around the HTTP call): it serialises concurrent callers with a PostgreSQL
- * advisory lock, sums today's and this month's reserved + committed rows and
+ * advisory lock, sums the matching budget's reserved + committed rows and
  * either inserts a `reserved` row or refuses (fail closed). The caller settles
- * the row: commit() when fal accepted / produced, void() when fal refused or
- * the request failed before fal could charge.
+ * the row: commit() when the request reached fal (even if the answer was lost —
+ * fal may still charge), void() only when fal never got it or refused it.
  */
 class AiSpendGuard
 {
@@ -32,19 +39,30 @@ class AiSpendGuard
         return max(0.0, (float) config('media.budget.monthly_usd', 50));
     }
 
+    public function labDailyCapUsd(): float
+    {
+        return max(0.0, (float) config('media.lab.daily_usd', 3));
+    }
+
+    public function labMonthlyCapUsd(): float
+    {
+        return max(0.0, (float) config('media.lab.monthly_usd', 30));
+    }
+
     public function timezone(): string
     {
         return (string) config('media.budget.timezone', 'UTC');
     }
 
-    public function spentTodayUsd(): float
+    /** Production spend today (lab excluded), or lab spend today with $lab = true. */
+    public function spentTodayUsd(bool $lab = false): float
     {
-        return $this->spentSince($this->now()->startOfDay());
+        return $this->spentSince($this->now()->startOfDay(), $lab);
     }
 
-    public function spentThisMonthUsd(): float
+    public function spentThisMonthUsd(bool $lab = false): float
     {
-        return $this->spentSince($this->now()->startOfMonth());
+        return $this->spentSince($this->now()->startOfMonth(), $lab);
     }
 
     public function spentThisMonthUsdFor(AiSpendPurpose $purpose): float
@@ -56,10 +74,18 @@ class AiSpendGuard
     }
 
     /**
-     * Could an estimated amount still be spent now? (UI pre-check; reserve() is the real gate.)
+     * Could an estimated amount still be spent now for this purpose?
+     * (UI pre-check / retry sweep; reserve() is the real gate.)
      */
-    public function refusalFor(float $costUsd): ?AiCallFailure
+    public function refusalFor(float $costUsd, AiSpendPurpose $purpose): ?AiCallFailure
     {
+        if ($purpose === AiSpendPurpose::Lab) {
+            return ($this->spentTodayUsd(true) + $costUsd > $this->labDailyCapUsd() + 1e-9
+                || $this->spentThisMonthUsd(true) + $costUsd > $this->labMonthlyCapUsd() + 1e-9)
+                ? AiCallFailure::BudgetLab
+                : null;
+        }
+
         if ($this->spentTodayUsd() + $costUsd > $this->dailyCapUsd() + 1e-9) {
             return AiCallFailure::BudgetDaily;
         }
@@ -83,19 +109,10 @@ class AiSpendGuard
                 DB::select('SELECT pg_advisory_xact_lock(?)', [self::ADVISORY_LOCK_KEY]);
             }
 
-            $refusal = $this->refusalFor($cost);
+            $refusal = $this->refusalFor($cost, $purpose);
 
             if ($refusal !== null) {
-                throw new AiCallException($refusal, sprintf(
-                    '%s: today $%.2f of $%.2f, this month $%.2f of $%.2f, call ~$%.4f (%s).',
-                    $refusal->label(),
-                    $this->spentTodayUsd(),
-                    $this->dailyCapUsd(),
-                    $this->spentThisMonthUsd(),
-                    $this->monthlyCapUsd(),
-                    $cost,
-                    $profile->key,
-                ));
+                throw new AiCallException($refusal, $this->describe($refusal, $cost, $profile->key));
             }
 
             return AiSpendLedger::create([
@@ -112,19 +129,58 @@ class AiSpendGuard
         });
     }
 
-    public function commit(AiSpendLedger $entry, ?string $requestId = null): void
+    /**
+     * The request reached fal: the cost counts. $reason records a call that
+     * reached fal but whose answer we lost (timeout / reset → http_error).
+     */
+    public function commit(AiSpendLedger $entry, ?string $requestId = null, ?AiCallFailure $reason = null): void
     {
-        $entry->update(['status' => AiSpendLedger::STATUS_COMMITTED, 'request_id' => $requestId ?? $entry->request_id]);
+        $entry->update([
+            'status' => AiSpendLedger::STATUS_COMMITTED,
+            'request_id' => $requestId ?? $entry->request_id,
+            'error_reason' => $reason?->value,
+        ]);
     }
 
+    /** fal never got the request (connect / DNS failure) or explicitly refused it: the cost does not count. */
     public function void(AiSpendLedger $entry, AiCallFailure $reason): void
     {
         $entry->update(['status' => AiSpendLedger::STATUS_VOID, 'error_reason' => $reason->value]);
     }
 
-    private function spentSince(CarbonImmutable $localStart): float
+    public function describe(AiCallFailure $refusal, float $cost, string $what): string
+    {
+        if ($refusal === AiCallFailure::BudgetLab) {
+            return sprintf(
+                '%s: lab today $%.2f of $%.2f, this month $%.2f of $%.2f, needs ~$%.4f (%s).',
+                $refusal->label(),
+                $this->spentTodayUsd(true),
+                $this->labDailyCapUsd(),
+                $this->spentThisMonthUsd(true),
+                $this->labMonthlyCapUsd(),
+                $cost,
+                $what,
+            );
+        }
+
+        return sprintf(
+            '%s: today $%.2f of $%.2f, this month $%.2f of $%.2f, needs ~$%.4f (%s).',
+            $refusal->label(),
+            $this->spentTodayUsd(),
+            $this->dailyCapUsd(),
+            $this->spentThisMonthUsd(),
+            $this->monthlyCapUsd(),
+            $cost,
+            $what,
+        );
+    }
+
+    private function spentSince(CarbonImmutable $localStart, bool $lab): float
     {
         return round((float) AiSpendLedger::query()->counted()
+            ->when($lab,
+                fn (Builder $q) => $q->where('purpose', AiSpendPurpose::Lab->value),
+                fn (Builder $q) => $q->where('purpose', '!=', AiSpendPurpose::Lab->value))
             ->where('created_at', '>=', $localStart->utc())
             ->sum('cost_usd'), 4);
     }

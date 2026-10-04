@@ -15,7 +15,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - **Opis za AI = pasma + lastnosti + slog fotografije** (fotorealistično, dnevna svetloba, cel pes, preprosto domače ozadje, brez ljudi in besedila). Brez imen otrok ali katerihkoli osebnih podatkov.
 - **AI laboratorij** (samo za administratorja): izbereš pasmo, 1–4 pse in več modelov hkrati — isti pes se izriše z vsakim modelom, slike so ena ob drugi s ceno in časom. Iz izbrane slike lahko narediš video stanja (spi, se igra, je lačen …) z več video modeli.
 - **Modeli in cene (fal.ai, 4. 10. 2026):** slika od **0,006 $** (FLUX.1 schnell, sedanji) do **0,15 $** (Nano Banana Pro); kratek video (4–5 s) brez zvoka od **0,12 $** (Veo 3.1 Lite, 4 s) do **0,56 $** (Kling 3 Pro). Celoten paket ob rojstvu (slika + 6 videov) bi stal približno **0,73 $ do 3,51 $** na psa, odvisno od izbire (ocena po ceniku).
-- **Varovalka stroškov:** vsak klic AI se najprej zapiše z ocenjeno ceno; ko bi presegel dnevno (5 $) ali mesečno (50 $) mejo, se ne izvede. Če je račun pri fal.ai prazen, sistem to prepozna in opozori v administraciji. Igra v obeh primerih teče naprej — kuža je le brez nove slike.
+- **Varovalka stroškov:** vsak klic AI se najprej zapiše z ocenjeno ceno; ko bi presegel dnevno (5 $) ali mesečno (50 $) mejo, se ne izvede. Če je račun pri fal.ai prazen, sistem to prepozna in opozori v administraciji. Igra v obeh primerih teče naprej — kuža je le brez nove slike. Laboratorij ima svoj, ločen proračun (3 $ na dan), zato preizkušanje modelov nikoli ne vzame denarja za slike novih psov; slike, ustavljene zaradi meje, sistem naslednji dan poskusi znova.
 - **Številke:** 47 novih avtomatskih testov, skupaj **684 zelenih** na strežniku.
 
 **Zakaj je pomembno**

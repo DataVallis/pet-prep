@@ -51,9 +51,9 @@
                                         </a>
                                     @endif
                                     <a href="{{ $result->result_url }}" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">open</a>
-                                @elseif ($result->status === 'failed')
+                                @elseif (in_array($result->status, ['failed', 'unknown'], true))
                                     <div class="rounded bg-danger-50 p-2 text-danger-700 dark:bg-danger-950 dark:text-danger-300">
-                                        Failed: {{ $result->error_reason }}<br>{{ \Illuminate\Support\Str::limit((string) $result->error, 200) }}
+                                        {{ $result->status === 'unknown' ? 'Unknown (sent, no answer — cost kept)' : 'Failed' }}: {{ $result->error_reason }}<br>{{ \Illuminate\Support\Str::limit((string) $result->error, 200) }}
                                     </div>
                                 @else
                                     <div class="rounded bg-gray-50 p-2 dark:bg-gray-900">{{ $result->status }}…</div>
