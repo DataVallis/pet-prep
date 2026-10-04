@@ -119,4 +119,4 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - IAP ekonomija: veterinar, priboljški, igrače
 - B2B affiliate (Mr. Pet) — QR kuponi
 - Faza 2: Real-World AI asistent (LLM + RAG, pgvector), IoT ovratnice
-- Mačka, več otrok na starša
+- Mačka

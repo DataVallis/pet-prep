@@ -70,7 +70,7 @@ Keep the claude.ai Project copies (`petprep/*.md`) in sync after merges. No chil
 **Both:** the child is a minor — collect the minimum data, no analytics SDK without David's OK, no third-party calls carrying child PII.
 
 ## Scope guard (MVP)
-Do NOT build: AR, GPS maps, weather API, LLM/vision vet, B2B QR coupons, multiple children/pets, cats. Post-MVP ideas go to the backlog in `ROADMAP.md`.
+Do NOT build: AR, GPS maps, weather API, LLM/vision vet, B2B QR coupons, cats. (Multiple parents/children/pets per family is IN scope since 2026-10-04 — see ADR-008.) Post-MVP ideas go to the backlog in `ROADMAP.md`.
 
 ## Orchestration
 Delegate by area: `backend-engineer`, `mobile-engineer`, `qa-reviewer` (independent review before merge), `devops` (Hetzner / Docker / CI), `growth-marketer` (copy, funnels, decks — Slovenian/English). Slash commands: `/handoff`, `/verify`, `/feature <ID>`, `/deploy`.

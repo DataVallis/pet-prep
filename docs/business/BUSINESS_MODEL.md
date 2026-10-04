@@ -8,7 +8,7 @@ Ne prodajamo "igrice", ampak **orodje za oceno zrelosti in zavarovalno polico pr
 
 ## 2. Ponudba (Grand Slam Offer)
 
-**Cena: 49,99 €** — 12-tedenski PetPrep izziv (dostop za starša in otroka)
+**Cena: 49,99 € na psa** — 12-tedenski PetPrep izziv; dostop za vse starše in vse otroke, ki skrbijo za tega psa (skupni pes = ena cena). Drugi pes v družini = nov izziv. Mešanček brezplačen (David, 4. 10. 2026).
 
 | Element | Opis |
 |---|---|
