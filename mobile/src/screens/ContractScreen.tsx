@@ -9,9 +9,11 @@
 import { useState } from 'react';
 import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Eraser, RotateCcw, ScrollText } from 'lucide-react-native';
+import { useQueryClient } from '@tanstack/react-query';
 
 import type { ChildPetState } from '@/api/client';
 import SignaturePad from '@/components/SignaturePad';
+import { writeChildState } from '@/hooks/queries/useChildPet';
 import { petFromChildState } from '@/modules/contract/petFromChildState';
 import { hasSignature } from '@/modules/contract/signaturePath';
 import { submitSignature } from '@/modules/contract/signContract';
@@ -73,9 +75,12 @@ export default function ContractScreen() {
   const setPet = useAppStore((s) => s.setPet);
   const setPairingStatus = useAppStore((s) => s.setPairingStatus);
   const setLockState = useAppStore((s) => s.setLockState);
+  const queryClient = useQueryClient();
 
   /** Put the server's pet (born now / unlocked for this child) into the session; AppNavigator then shows the HUD. */
   const completeContract = (state: ChildPetState) => {
+    // The HUD starts from this state instead of an extra GET (M1-13).
+    writeChildState(queryClient, state);
     const pet = petFromChildState(state, {
       userId: sessionUser?.id ?? sessionPet?.user_id ?? 0,
       petDna: sessionPet?.pet_dna ?? null,

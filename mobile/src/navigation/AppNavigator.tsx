@@ -11,7 +11,7 @@ import LockedScreen from '@/screens/LockedScreen';
 import ChildHudScreen from '@/screens/ChildHudScreen';
 import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
 
-const LOCKED_STATES: LockState[] = ['game_over', 'hard_stop', 'illness'];
+const LOCKED_STATES: LockState[] = ['game_over', 'hard_stop', 'illness', 'inactive'];
 
 interface ErrorBoundaryProps {
   children: ReactNode;

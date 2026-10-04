@@ -1,9 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
-import { useAppStore } from '@/store/appStore';
-
 const TOTAL_SPOTS = 5;
+
+/** User-visible strings (i18n with M1-18). */
+export const CLEANING_STRINGS = {
+  title: 'Pospravi za kužkom!',
+  progress: (done: number, total: number) => `${done} / ${total} madežev`,
+  hint: 'Tapni madeže, da jih zdrgneš.',
+  close: 'Kasneje',
+  spot: 'Madež',
+} as const;
 
 interface DirtSpot {
   id: number;
@@ -16,14 +23,23 @@ interface DirtSpot {
   cleaned: boolean;
 }
 
+export interface CleaningOverlayProps {
+  /** Every spot is gone → the HUD sends `POST /api/child/pet/clean`. */
+  onCleaned: () => void;
+  /**
+   * Close without cleaning (only offered when the child opened it; a real mess
+   * — hygiene 0 % — keeps the overlay until it's cleaned, PRODUCT_SPEC §8).
+   */
+  onClose?: () => void;
+}
+
 /**
- * Interactive cleaning mini-game overlay.
- * The child taps each dirt spot to remove it; once all spots are
- * cleaned the overlay dismisses itself via the app store.
+ * Cleaning mini-game overlay: the child taps each dirt spot; when all are gone
+ * `onCleaned` fires once.
  */
-export default function CleaningOverlay() {
-  const setCleaningOverlayVisible = useAppStore((s) => s.setCleaningOverlayVisible);
+export default function CleaningOverlay({ onCleaned, onClose }: CleaningOverlayProps) {
   const [spots, setSpots] = useState<DirtSpot[]>([]);
+  const reportedRef = useRef(false);
 
   // Generate randomly positioned dirt spots on mount.
   useEffect(() => {
@@ -31,7 +47,7 @@ export default function CleaningOverlay() {
       id: i,
       x: 10 + Math.random() * 80, // 10%–90%
       y: 18 + Math.random() * 62, // 18%–80%
-      size: 40 + Math.random() * 28, // 40–68px
+      size: 44 + Math.random() * 28, // 44–72px
       cleaned: false,
     }));
     setSpots(generated);
@@ -39,28 +55,28 @@ export default function CleaningOverlay() {
 
   const cleanedCount = spots.filter((s) => s.cleaned).length;
 
-  // Dismiss once every spot has been cleaned.
   useEffect(() => {
-    if (spots.length > 0 && cleanedCount === TOTAL_SPOTS) {
-      setCleaningOverlayVisible(false);
+    if (spots.length > 0 && cleanedCount === TOTAL_SPOTS && !reportedRef.current) {
+      reportedRef.current = true;
+      onCleaned();
     }
-  }, [cleanedCount, spots.length, setCleaningOverlayVisible]);
+  }, [cleanedCount, spots.length, onCleaned]);
 
   const handleCleanSpot = (id: number) => {
     setSpots((prev) => prev.map((s) => (s.id === id ? { ...s, cleaned: true } : s)));
   };
 
   return (
-    <View className="absolute inset-0 z-20 bg-amber-950/70">
+    <View className="absolute inset-0 z-20 bg-amber-950/70" testID="cleaning-overlay">
       <View className="items-center pt-16">
         <View className="flex-col items-center gap-2 rounded-2xl border border-white/10 bg-slate-900/40 px-6 py-4 backdrop-blur-md">
-          <Text className="text-2xl font-bold text-white">Clean Your Pet!</Text>
+          <Text className="text-2xl font-bold text-white">{CLEANING_STRINGS.title}</Text>
           <Text className="font-mono text-sm text-amber-300">
-            {cleanedCount} / {TOTAL_SPOTS} spots cleaned
+            {CLEANING_STRINGS.progress(cleanedCount, TOTAL_SPOTS)}
           </Text>
         </View>
         {cleanedCount === 0 && (
-          <Text className="mt-3 text-sm text-amber-400/80">Tap the dirt spots to clean them</Text>
+          <Text className="mt-3 text-sm text-amber-400/80">{CLEANING_STRINGS.hint}</Text>
         )}
       </View>
 
@@ -76,11 +92,26 @@ export default function CleaningOverlay() {
         spot.cleaned ? null : (
           <Pressable
             key={spot.id}
+            testID={`dirt-spot-${spot.id}`}
+            accessibilityRole="button"
+            accessibilityLabel={CLEANING_STRINGS.spot}
             onPress={() => handleCleanSpot(spot.id)}
             className="absolute items-center justify-center rounded-full bg-amber-700/80 border border-amber-600/40 active:scale-75"
             style={{ left: `${spot.x}%`, top: `${spot.y}%`, width: spot.size, height: spot.size }}
           />
         ),
+      )}
+
+      {onClose && (
+        <View className="absolute bottom-16 w-full items-center">
+          <Pressable
+            onPress={onClose}
+            accessibilityRole="button"
+            className="rounded-xl bg-white/15 px-6 py-3 active:scale-95"
+          >
+            <Text className="text-sm font-semibold text-white">{CLEANING_STRINGS.close}</Text>
+          </Pressable>
+        </View>
       )}
     </View>
   );

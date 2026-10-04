@@ -28,9 +28,9 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 ## Kaj mora otrok početi (mešanček)
 | Skrb | Kako pogosto | Kaj se zgodi, če pozabi |
 |---|---|---|
-| Hrana | zjutraj (6–10) in zvečer (17–21) po vašem času, **enkrat v vsakem oknu** — hranjenje "na zalogo" ni mogoče *(kmalu v aplikaciji; strežnik je pripravljen)* | pes je lačen po ~12,5 urah |
-| Voda | 3× na dan, vsaj 3 ure narazen *(kmalu v aplikaciji)* | pes je žejen po ~10 urah |
-| Sprehod (vsak dan) | 4.000 korakov na dan (pravi koraki s telefona) — energija = današnji koraki / cilj, vsako polnoč (po vašem času) se začne znova pri 0 % (= "danes še ni sprehoda", ne zanemarjanje) *(načrt: povezava z Apple Zdravje / Health Connect)* | pes je utrujen; dan brez enega samega koraka → naslednje jutro zboli |
+| Hrana | zjutraj (6–10) in zvečer (17–21) po vašem času, **enkrat v vsakem oknu** — hranjenje "na zalogo" ni mogoče; izven okna je gumb zasenčen in otroku pove, kdaj bo spet čas | pes je lačen po ~12,5 urah |
+| Voda | 3× na dan, vsaj 3 ure narazen (aplikacija pokaže, kdaj spet) | pes je žejen po ~10 urah |
+| Sprehod (vsak dan) | 4.000 korakov na dan (pravi koraki s telefona) — energija = današnji koraki / cilj, vsako polnoč (po vašem času) se začne znova pri 0 % (= "danes še ni sprehoda", ne zanemarjanje). Koraki s senzorja telefona: iPhone pošlje vse današnje korake, Android šteje, ko je aplikacija odprta; pošiljanje ob odprtju in vsakih 5 minut *(načrt: Apple Zdravje / Health Connect za korake tudi pri zaprti aplikaciji na Androidu)* | pes je utrujen; dan brez enega samega koraka → naslednje jutro zboli |
 | Čiščenje | ko pes "naredi nered" — naključno **1× na dan** (Border Collie 2×), **nikoli med tihimi urami**; dokler ni počiščeno, hrane in vode ni | higiena pade na 0 % |
 
 Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), potrebuje 10.000 korakov in naredi nered 2× na dan.
@@ -44,7 +44,7 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), potrebuje 10.000 k
 
 ## Vi imate nadzor
 - **Tihe ure** (npr. šola 8:00–13:00, spanje 22:00–6:00): pes takrat skoraj ne postaja lačen in ne pošilja obvestil. Veljajo po **vašem lokalnem času**, tudi ob prestopu na poletni/zimski čas.
-- **Hard stop:** z enim gumbom začasno ustavite igro (npr. za pogovor z otrokom). Med ustavitvijo **se nič ne poslabša** — pes ne zboli in ne "odide", tudi če je bil prej lačen.
+- **Hard stop:** z enim gumbom začasno ustavite igro (npr. za pogovor z otrokom). Med ustavitvijo **se nič ne poslabša** — pes ne zboli in ne "odide", tudi če je bil prej lačen. Otrokov zaslon se v živo zaklene ("Starš je ustavil igro") in se odklene, ko ustavitev izklopite.
 - **Opozorila:** ko otrok pozablja, najprej opomni otroka; če pes ostane brez hrane, vode ali čistoče več kot uro, dobite alarm vi. Za sprehod alarma ni — dan se oceni ob polnoči. *(načrt: push obvestila)*
 
 ## Posledice zanemarjanja (namenoma realne)
@@ -71,5 +71,5 @@ Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava �
 
 ## Pogosta vprašanja *(dopolnjujemo)*
 - **Kaj, če otrok nima telefona?** *(odgovor v pripravi)*
-- **Ali aplikacija meri lokacijo?** Ne. Šteje samo korake iz zdravstvene aplikacije telefona *(načrt)*; GPS se ne uporablja.
+- **Ali aplikacija meri lokacijo?** Ne. Šteje samo korake s senzorja gibanja v telefonu (za to vpraša za dovoljenje, ko otrok odpre "Sprehod"); GPS se ne uporablja.
 - **Koliko časa na dan vzame?** Nekaj minut za hrano, vodo in čiščenje + sprehod, ki ga bi pravi pes tudi potreboval.

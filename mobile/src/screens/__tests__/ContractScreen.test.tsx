@@ -2,12 +2,16 @@
  * M1-07b: the child's signature goes to POST /api/child/contract and the server's
  * (now born / unlocked) pet lands in the session store.
  */
-import { act, fireEvent, render, screen, waitFor } from '@testing-library/react-native';
+import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
+import type { QueryClient } from '@tanstack/react-query';
 
 import { ApiError, api } from '@/api/client';
 import ContractScreen, { CONTRACT_STRINGS } from '@/screens/ContractScreen';
 import { isAwaitingContract, useAppStore } from '@/store/appStore';
 import { makeChildState, makePet } from '@/test-utils/fixtures';
+import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { childPetKey } from '@/hooks/queries/useChildPet';
+import type { ChildPetView } from '@/modules/childPet/childPetView';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -20,8 +24,9 @@ jest.mock('@/api/client', () => {
 const signContract = api.signContract as jest.Mock;
 
 /** Signed-in child whose pet waits for the contract (state right after the PIN login). */
+let queryClient: QueryClient;
 async function openContract() {
-  render(<ContractScreen />);
+  queryClient = renderWithQuery(<ContractScreen />).client;
   await screen.findByText(CONTRACT_STRINGS.padHint);
 }
 
@@ -72,6 +77,10 @@ describe('ContractScreen (M1-07b)', () => {
     expect(pet?.user_id).toBe(2);
     expect(isAwaitingContract(pet)).toBe(false);
     expect(pairingStatus).toBe('paired');
+    // M1-13: the HUD starts from the server's state (no extra GET).
+    const cached = queryClient.getQueryData<ChildPetView>(childPetKey);
+    expect(cached?.pet.awaiting_contract).toBe(false);
+    expect(cached?.pet.id).toBe(7);
   });
 
   it('409 already signed → continues with the state from the body', async () => {

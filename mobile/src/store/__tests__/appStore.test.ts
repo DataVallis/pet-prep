@@ -2,7 +2,7 @@
  * Tests for the Zustand app store.
  */
 
-import { isAwaitingContract, lockStateFromPet, useAppStore } from '@/store/appStore';
+import { isAwaitingContract, lockStateFromBroadcast, lockStateFromPet, useAppStore } from '@/store/appStore';
 import type { Pet, PetUpdatedBroadcast } from '@/types';
 
 // Helper to create a mock pet
@@ -251,6 +251,51 @@ describe('lockStateFromPet', () => {
   it('illness only while illness_until is in the future', () => {
     expect(lockStateFromPet(createMockPet({ illness_until: '2026-10-03T20:00:00Z' }), now)).toBe('illness');
     expect(lockStateFromPet(createMockPet({ illness_until: '2026-10-03T09:00:00Z' }), now)).toBe('none');
+  });
+});
+
+describe('M1-16 lock derivation', () => {
+  const now = Date.parse('2026-10-03T10:00:00Z');
+
+  it('restore: hard stop and inactive come from the raw pet, in the server priority', () => {
+    expect(lockStateFromPet(createMockPet({ is_hard_stopped: true }), now)).toBe('hard_stop');
+    expect(lockStateFromPet(createMockPet({ is_hard_stopped: true, illness_until: '2026-10-03T20:00:00Z' }), now)).toBe(
+      'hard_stop',
+    );
+    expect(lockStateFromPet(createMockPet({ is_active: false, is_hard_stopped: true }), now)).toBe('inactive');
+    expect(lockStateFromPet(createMockPet({ is_game_over: true, is_active: false }), now)).toBe('game_over');
+  });
+
+  it('parent session pet: a hard-stop broadcast locks, lifting it unlocks', () => {
+    useAppStore.setState(useAppStore.getInitialState(), true);
+    useAppStore.getState().setPet(createMockPet());
+    useAppStore.getState().updatePetFromBroadcast(createMockBroadcast({ is_hard_stopped: true }));
+    expect(lockStateFromBroadcast(createMockBroadcast({ is_hard_stopped: true }))).toBe('hard_stop');
+    expect(useAppStore.getState().lockState).toBe('hard_stop');
+    expect(useAppStore.getState().pet?.is_hard_stopped).toBe(true);
+
+    useAppStore.getState().updatePetFromBroadcast(createMockBroadcast({ is_hard_stopped: false }));
+    expect(useAppStore.getState().lockState).toBe('none');
+  });
+
+  it('setLockState keeps details for the overlay; reset clears them', () => {
+    useAppStore.setState(useAppStore.getInitialState(), true);
+    useAppStore.getState().setLockState('illness', { until: '2026-10-04T18:30:00+02:00', timezone: 'Europe/Ljubljana' });
+    expect(useAppStore.getState().lockDetails.until).toBe('2026-10-04T18:30:00+02:00');
+    useAppStore.getState().reset();
+    expect(useAppStore.getState().lockDetails).toEqual({ until: null, timezone: null });
+    expect(useAppStore.getState().lockState).toBe('none');
+  });
+
+  it('setAwaitingContract routes to / away from the contract step', () => {
+    useAppStore.setState(useAppStore.getInitialState(), true);
+    useAppStore.getState().setAwaitingContract(true); // no pet → no-op
+    expect(useAppStore.getState().pet).toBeNull();
+    useAppStore.getState().setPet(createMockPet());
+    useAppStore.getState().setAwaitingContract(true);
+    expect(isAwaitingContract(useAppStore.getState().pet)).toBe(true);
+    useAppStore.getState().setAwaitingContract(false);
+    expect(isAwaitingContract(useAppStore.getState().pet)).toBe(false);
   });
 });
 

@@ -10,21 +10,32 @@ export interface ActionButtonProps {
   onPress: () => void;
   /** When true, renders the disabled style and blocks presses. */
   disabled?: boolean;
+  /** Small line under the label explaining a disabled button ("ob 17:00"). */
+  hint?: string | null;
+  /** Shows a spinner-like dimmed state while the request runs. */
+  busy?: boolean;
+  testID?: string;
 }
 
 /**
  * Circular glassmorphism action button used in the bottom control dock.
  */
-export default function ActionButton({ icon, label, onPress, disabled }: ActionButtonProps) {
+export default function ActionButton({ icon, label, onPress, disabled, hint, busy, testID }: ActionButtonProps) {
+  const blocked = disabled === true || busy === true;
   return (
     <View style={styles.container}>
       <Pressable
+        testID={testID}
         onPress={onPress}
-        disabled={disabled}
+        disabled={blocked}
+        accessibilityRole="button"
+        accessibilityLabel={hint ? `${label}, ${hint}` : label}
+        accessibilityState={{ disabled: blocked, busy: busy === true }}
         style={({ pressed }) => [
           styles.button,
           disabled ? styles.buttonDisabled : styles.buttonActive,
-          pressed && !disabled && styles.buttonPressed,
+          busy && styles.buttonBusy,
+          pressed && !blocked && styles.buttonPressed,
         ]}
       >
         {icon}
@@ -38,6 +49,11 @@ export default function ActionButton({ icon, label, onPress, disabled }: ActionB
       >
         {label}
       </Text>
+      {hint ? (
+        <Text style={styles.hint} numberOfLines={1}>
+          {hint}
+        </Text>
+      ) : null}
     </View>
   );
 }
@@ -70,6 +86,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(30, 41, 59, 0.45)',
     opacity: 0.5,
   },
+  buttonBusy: {
+    opacity: 0.7,
+  },
   buttonPressed: {
     transform: [{ scale: 0.9 }],
     backgroundColor: 'rgba(255, 255, 255, 0.28)',
@@ -86,5 +105,13 @@ const styles = StyleSheet.create({
   },
   labelDisabled: {
     color: 'rgba(255, 255, 255, 0.3)',
+  },
+  hint: {
+    marginTop: -4,
+    maxWidth: 76,
+    fontSize: 10,
+    fontWeight: '600',
+    color: '#fbbf24',
+    textAlign: 'center',
   },
 });

@@ -54,6 +54,31 @@ export type ParentDashboardResponse =
 export type ChildPetState =
   operations['childPet.show']['responses'][200]['content']['application/json'];
 
+/**
+ * `POST /api/child/pet/{feed,water,clean}` 200 body (M1-07). Hand-declared: Scramble
+ * types these responses as `unknown[] | string` (HANDOFF M1-07 debt 2). Refusals
+ * (422 / 423) throw `ApiError` whose `data` also carries `state`.
+ */
+export interface ChildActionResponse {
+  status: 'accepted' | 'unchanged';
+  state: ChildPetState;
+}
+
+/** `POST /api/child/pet/steps` body (M1-04 / M1-07). */
+export type SyncStepsRequest = components['schemas']['SyncStepsRequest'];
+
+/** What the server did with a step sync — every one of them is a 200. */
+export type StepSyncStatus = 'accepted' | 'capped' | 'rejected' | 'unchanged' | 'stale';
+
+/** `POST /api/child/pet/steps` 200 body. */
+export interface SyncStepsResponse {
+  status: StepSyncStatus;
+  accepted_steps: number;
+  steps_today: number;
+  energy_level: number;
+  state: ChildPetState;
+}
+
 /** `POST /api/child/contract` body (M1-07b): SVG path data or base64 PNG. */
 export type SignContractRequest = components['schemas']['SignContractRequest'];
 
@@ -316,6 +341,25 @@ export const api = {
 
   /** GET /api/child/pet — the child's full pet state (read-only, also while locked / unborn). */
   getChildPet: () => apiRequest<ChildPetState>('/api/child/pet'),
+
+  /**
+   * POST /api/child/pet/feed — hunger → 100 % inside a feed window, once per window.
+   * 422 `outside_feed_window` / `already_fed_this_window` / `needs_cleaning`, 423 locked.
+   */
+  feedPet: () => apiRequest<ChildActionResponse>('/api/child/pet/feed', { method: 'POST' }),
+
+  /** POST /api/child/pet/water — thirst → 100 %. 422 `water_daily_limit` / `water_too_soon` / `needs_cleaning`, 423 locked. */
+  waterPet: () => apiRequest<ChildActionResponse>('/api/child/pet/water', { method: 'POST' }),
+
+  /** POST /api/child/pet/clean — hygiene → 100 % (`unchanged` when already clean), 423 locked. */
+  cleanPet: () => apiRequest<ChildActionResponse>('/api/child/pet/clean', { method: 'POST' }),
+
+  /** POST /api/child/pet/steps — today's cumulative steps of this device (max wins on the server). */
+  syncSteps: (body: SyncStepsRequest) =>
+    apiRequest<SyncStepsResponse>('/api/child/pet/steps', {
+      method: 'POST',
+      body: { steps_today: body.steps_today, source: body.source, recorded_at: body.recorded_at },
+    }),
 
   /**
    * POST /api/child/contract — sign the responsibility contract (M1-07b). For an unborn

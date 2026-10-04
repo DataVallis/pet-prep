@@ -29,6 +29,9 @@ jest.mock('expo-video', () => ({
 jest.mock('expo-sensors', () => ({
   Pedometer: {
     isAvailableAsync: jest.fn(() => Promise.resolve(true)),
+    getPermissionsAsync: jest.fn(() =>
+      Promise.resolve({ status: 'granted', granted: true, canAskAgain: true, expires: 'never' }),
+    ),
     requestPermissionsAsync: jest.fn(() =>
       Promise.resolve({ status: 'granted', granted: true, canAskAgain: true, expires: 'never' }),
     ),
