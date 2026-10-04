@@ -48,7 +48,9 @@ use Throwable;
  * Not expected at all: before birth (an unborn pet has none), before
  * FIRST_LEDGER_DATE, and — unless it was done anyway — any routine whose
  * window overlaps a hard stop, an illness or an inactive / game-over period
- * (pet_status_periods). Everything is evaluated on the family-local clock
+ * (pet_status_periods) — for the whole-day walk only when those periods
+ * cover ≥ 50 % of the day's non-quiet time (WHOLE_DAY_EXCUSE_SHARE).
+ * Everything is evaluated on the family-local clock
  * (DST: a day has 23 / 25 h, windows follow the wall clock) and stored UTC.
  *
  * Storage: once every routine of a day is resolved (no deadline ahead, no
@@ -74,6 +76,19 @@ class RoutineLedgerService
 
     /** At most this many days are closed per pet and tick (backfill in slices). */
     public const MAX_DAYS_PER_CLOSE = 120;
+
+    /** At most this many pets are visited per tick; the rest come next tick. */
+    public const MAX_PETS_PER_TICK = 500;
+
+    /** After a failure the pet is retried this much later (no log flood). */
+    public const RETRY_AFTER_FAILURE_MINUTES = 30;
+
+    /**
+     * A whole-day routine (the walk) is excused only when hard stop / vet /
+     * game over cover at least this share of the day's non-quiet time
+     * (Claude, pending David): a nightly or short pause must not excuse it.
+     */
+    public const WHOLE_DAY_EXCUSE_SHARE = 0.5;
 
     private const ACTIVITY_TYPES = [
         ActivityType::FedPet,
@@ -189,16 +204,20 @@ class RoutineLedgerService
      *
      * @return array{pets: int, days: int}
      */
-    public function closeDueDays(?CarbonInterface $now = null): array
+    public function closeDueDays(?CarbonInterface $now = null, int $limit = self::MAX_PETS_PER_TICK): array
     {
         $now = CarbonImmutable::instance($now ?? now())->utc();
 
+        // Never-closed pets first, then the longest overdue; at most $limit
+        // per tick so a mass backfill can't stall the game loop.
         $ids = Pet::born()
             ->where(function ($q) use ($now) {
                 $q->where(fn ($q) => $q->whereNull('routines_next_close_at')->whereNull('routines_closed_through'))
                     ->orWhere('routines_next_close_at', '<=', $now);
             })
+            ->orderByRaw('routines_next_close_at ASC NULLS FIRST')
             ->orderBy('id')
+            ->limit(max(1, $limit))
             ->pluck('id');
 
         $days = 0;
@@ -206,8 +225,13 @@ class RoutineLedgerService
             try {
                 $days += $this->closePet((int) $id, $now);
             } catch (Throwable $e) {
+                // Logged once per attempt; the pet is retried 30 min later
+                // instead of failing (and logging) every minute.
                 Log::error('RoutineLedgerService: closing days failed', ['pet_id' => $id, 'error' => $e->getMessage()]);
                 report($e);
+                DB::table('pets')->where('id', $id)->update([
+                    'routines_next_close_at' => $now->addMinutes(self::RETRY_AFTER_FAILURE_MINUTES),
+                ]);
             }
         }
 
@@ -267,24 +291,30 @@ class RoutineLedgerService
             $next = null;
         }
 
-        DB::transaction(function () use ($pet, $rows, $previous, $closedThrough, $next): void {
+        $written = DB::transaction(function () use ($pet, $rows, $previous, $closedThrough, $next): bool {
+            // Row lock: a concurrent close or a re-activation (which resets
+            // routines_next_close_at) is serialised with this write.
+            $current = DB::table('pets')->where('id', $pet->id)->lockForUpdate()
+                ->first(['routines_closed_through', 'routines_next_close_at']);
+            $currentPointer = $current?->routines_closed_through !== null ? substr((string) $current->routines_closed_through, 0, 10) : null;
+            if ($current === null || $currentPointer !== $previous
+                || (string) $current->routines_next_close_at !== (string) $pet->getRawOriginal('routines_next_close_at')) {
+                return false; // someone else moved it: retry next tick
+            }
+
             foreach (array_chunk($rows, 500) as $chunk) {
                 DB::table('pet_daily_routines')->insertOrIgnore($chunk);
             }
 
-            // Optimistic: only if no other run moved the pointer meanwhile.
-            DB::table('pets')
-                ->where('id', $pet->id)
-                ->where(fn ($q) => $previous === null
-                    ? $q->whereNull('routines_closed_through')
-                    : $q->where('routines_closed_through', $previous))
-                ->update([
-                    'routines_closed_through' => $closedThrough,
-                    'routines_next_close_at' => $next,
-                ]);
+            DB::table('pets')->where('id', $pet->id)->update([
+                'routines_closed_through' => $closedThrough,
+                'routines_next_close_at' => $next,
+            ]);
+
+            return true;
         });
 
-        return $closedThrough === $previous ? 0 : count($this->dates(
+        return ! $written || $closedThrough === $previous ? 0 : count($this->dates(
             $previous === null ? $start : CarbonImmutable::parse($previous, 'UTC')->addDay()->toDateString(),
             $closedThrough,
         ));
@@ -379,7 +409,13 @@ class RoutineLedgerService
                 continue;
             }
             if ($event['status'] === HygieneEventStatus::Pending->value) {
-                $hygienePending = true;
+                // A pending event inside a hard stop / vet / inactive period
+                // can only ever be skipped (a game-over pet is never ticked
+                // again, so it would stay pending forever): not a routine and
+                // no reason to keep the day open.
+                if (! $this->overlaps($event['at'], $event['at']->addSecond(), $blocks)) {
+                    $hygienePending = true;
+                }
 
                 continue;
             }
@@ -406,7 +442,18 @@ class RoutineLedgerService
                 $done = $walk['steps'] >= $walk['goal']
                     ? ($this->walkActivity($in['activities'], $dayStartUtc, $dayEndUtc) ?? ['at' => $dayEndUtc, 'actor' => null])
                     : null;
-                $routine = $this->resolve($pet, $date, RoutineType::Walk, 0, $dayStartUtc, $dayEndUtc, $done, $blocks, $now, $walk['steps'], $walk['goal']);
+                // Whole-day routine: excused only if the freeze covered at
+                // least half of the day's non-quiet time.
+                $dayPlayable = 0.0;
+                foreach ($this->subtract($dayStartUtc, $dayEndUtc, $blocks) as [$a, $b]) {
+                    $split = QuietHours::splitSecondsBetween($quiet, $a, $b);
+                    $dayPlayable += $useNormal ? $split['normal'] : $split['normal'] + $split['quiet'];
+                }
+                $blockedShare = $denominator > 0 ? 1 - $dayPlayable / $denominator : 1.0;
+                $routine = $this->resolve(
+                    $pet, $date, RoutineType::Walk, 0, $dayStartUtc, $dayEndUtc, $done, $blocks, $now,
+                    $walk['steps'], $walk['goal'], excused: $blockedShare >= self::WHOLE_DAY_EXCUSE_SHARE - 1e-9,
+                );
                 if ($routine !== null) {
                     $routines[] = $routine;
                 }
@@ -439,11 +486,11 @@ class RoutineLedgerService
     private function resolve(
         Pet $pet, string $date, RoutineType $type, int $slot,
         CarbonImmutable $opens, CarbonImmutable $due, ?array $done, array $blocks, CarbonImmutable $now,
-        ?int $steps = null, ?int $goal = null,
+        ?int $steps = null, ?int $goal = null, ?bool $excused = null,
     ): ?Routine {
         if ($done !== null) {
             $status = RoutineStatus::Done;
-        } elseif ($this->overlaps($opens, $due, $blocks)) {
+        } elseif ($excused ?? $this->overlaps($opens, $due, $blocks)) {
             return null; // hard stop / vet / game over: not expected
         } elseif ($now->lessThan($due)) {
             $status = RoutineStatus::Pending;

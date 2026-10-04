@@ -31,10 +31,11 @@ use Illuminate\Support\Collection;
  *        caretaker = the pet formula. Pending routines (deadline ahead) are
  *        not scored yet.
  * Light: RED = game over, phase-3 alarm active (a metric shown 0 % > 1 h)
- *        or the pet fell ill today; else YELLOW = more than 2 routines of
- *        today missed (per child: every missed routine they shared — a
- *        sibling can't hide behind the other); else GREEN. Today = the
- *        family-local day.
+ *        or the pet fell ill today; else YELLOW = more than 2 routines
+ *        missed today — of today's date or with a deadline today (per
+ *        child: every missed routine they shared — a sibling can't hide
+ *        behind the other); else GREEN. Today = the family-local day.
+ *        Illnesses count from the first ledger day (and the child's start).
  */
 class CareScoreService
 {
@@ -89,10 +90,17 @@ class CareScoreService
             }
         }
 
+        // Illnesses count only from the first ledger day on (routines before
+        // it aren't scored either); per child additionally from their start.
+        $ledgerStart = [];
+        foreach ($pets as $pet) {
+            $ledgerStart[$pet->id] = CarbonImmutable::parse($this->ledger->ledgerStartDate($pet), $timezone)->startOfDay()->utc();
+        }
         $illnesses = PetStatusPeriod::whereIn('pet_id', $ids)
             ->where('kind', PetStatusPeriodKind::Illness->value)
             ->orderBy('started_at')
             ->get(['pet_id', 'started_at', 'ended_at'])
+            ->filter(fn ($r) => CarbonImmutable::instance($r->started_at)->greaterThanOrEqualTo($ledgerStart[$r->pet_id]))
             ->groupBy('pet_id');
 
         $steps = [];
@@ -104,6 +112,10 @@ class CareScoreService
             'now' => $now,
             'timezone' => $timezone,
             'today' => $today,
+            // Today's family-local bounds (UTC): a routine whose deadline
+            // falls in (start, end] counts for today's light.
+            'today_start' => CarbonImmutable::parse($today, $timezone)->startOfDay()->utc(),
+            'today_end' => CarbonImmutable::parse($today, $timezone)->addDay()->startOfDay()->utc(),
             'pets' => $pets->keyBy('id'),
             'routines' => $routines,
             'starts' => $starts,
@@ -155,7 +167,7 @@ class CareScoreService
             return ['color' => 'red', 'reasons' => $reasons];
         }
 
-        $missed = count(array_filter($this->routinesOn($board, $pet, $board['today']), fn (Routine $r) => $r->isMissed()));
+        $missed = count(array_filter($this->todayRoutines($board, $pet), fn (Routine $r) => $r->isMissed()));
 
         return $missed > self::YELLOW_AFTER_MISSED
             ? ['color' => 'yellow', 'reasons' => ['missed_routines']]
@@ -261,7 +273,7 @@ class CareScoreService
 
         // Every missed routine the child shared counts against them.
         $missed = 0;
-        foreach ($this->routinesOn($board, $pet, $board['today']) as $r) {
+        foreach ($this->todayRoutines($board, $pet) as $r) {
             if ($r->isMissed() && $this->sharers($board, $pet, $r, $childId) > 0) {
                 $missed++;
             }
@@ -286,7 +298,8 @@ class CareScoreService
         $byChild = 0;
         $pending = 0;
         $missed = [];
-        foreach ($this->routinesOn($board, $pet, $date) as $r) {
+        $routines = $date === $board['today'] ? $this->todayRoutines($board, $pet) : $this->routinesOn($board, $pet, $date);
+        foreach ($routines as $r) {
             $n = $childId !== null ? $this->sharers($board, $pet, $r, $childId) : 1;
             if ($n === 0) {
                 continue;
@@ -421,6 +434,24 @@ class CareScoreService
     public function routinesOn(array $board, Pet $pet, string $date): array
     {
         return array_values(array_filter($board['routines'][$pet->id] ?? [], fn (Routine $r) => $r->localDate === $date));
+    }
+
+    /**
+     * Routines that make up "today" for the light and the today block: those
+     * of today's family-local date, plus routines missed with a deadline
+     * inside today (e.g. a 21:50 mess due 07:50 this morning). A deadline at
+     * exactly midnight (yesterday's water / walk) belongs to yesterday.
+     *
+     * @param  array<string, mixed>  $board
+     * @return list<Routine>
+     */
+    public function todayRoutines(array $board, Pet $pet): array
+    {
+        return array_values(array_filter(
+            $board['routines'][$pet->id] ?? [],
+            fn (Routine $r) => $r->localDate === $board['today']
+                || ($r->isMissed() && $r->dueAt->greaterThan($board['today_start']) && $r->dueAt->lessThanOrEqualTo($board['today_end'])),
+        ));
     }
 
     /**

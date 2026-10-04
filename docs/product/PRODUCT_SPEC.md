@@ -122,7 +122,7 @@ Za **gibanje (energijo)** veljata samo fazi 1 in 2, in to le izven tihih ur; faz
 
 **Semafor po pravilih (David, 4. 10. 2026; strežnik M2-06):** velja za **vsakega otroka in vsakega psa** posebej, za **današnji dan po času družine**.
 - **Rdeča**, če velja karkoli od: pes je odvzet (game over); je aktiven alarm faze 3 (metrika kaže 0 % več kot 1 uro); pes je **danes** zbolel.
-- Sicer **rumena**, če so bile danes zamujene **več kot 2 rutini** (rutine: §11).
+- Sicer **rumena**, če so bile danes zamujene **več kot 2 rutini** (rutine: §11) — šteje rutina današnjega dne ali rutina, katere **rok je potekel danes** (nered ob 21:50 z rokom 07:50 šteje v naslednji dan); rok točno ob polnoči pripada prejšnjemu dnevu. *(Claude, čaka Davida)*
 - Sicer **zelena**.
 - Pri skupnem psu (*Claudova razlaga, čaka Davida*): vsaka zamujena rutina šteje **vsem otrokom, ki so takrat skrbeli za psa** — brat ali sestra se ne more skriti za drugega. Rdeči razlogi psa veljajo za vse njegove skrbnike.
 - Pes, ki čaka na pogodbo, in otrok brez psa sta zelena.
@@ -156,6 +156,8 @@ Rutina se **ne pričakuje** (ne šteje ne kot opravljena ne kot zamujena):
 - **okno hranjenja v celoti znotraj tihih ur** (npr. šola 6–10) — *Claudova razlaga*; okno, ki je le deloma v tihih urah (zjutraj 6–10 ob šoli 8–13), se pričakuje, ker ostaneta 2 prosti uri;
 - med **hard stopom, boleznijo (veterinar) ali po game overju** — rutina, katere čas se s takim obdobjem prekriva, se ne pričakuje, **razen če jo je otrok vseeno opravil** (takrat šteje kot opravljena). Voda se namesto tega preračuna: 3 × (prosti netihi čas dneva, ko je bil pes v igri) / (ves netihi čas dneva), zaokroženo (npr. rojen ob 18:00 pri tihih urah 22–6 in šoli 8–13 → 4 od 11 ur → 1 voda; hard stop 3 ure → 8 od 11 ur → 2 vodi);
 - sprehod za pretekli dan, za katerega strežnik nima nobenega zapisa korakov (izpad strežnika — v dvomu v korist otroka).
+- **Sprehod (celodnevna rutina)** se zaradi hard stopa / veterinarja / game overja ne pričakuje le, če je pes vsaj **50 % netihega časa dneva** izven igre; kratek ali nočni hard stop sprehoda ne opraviči. *(Claude, čaka Davida)*
+- "Kakec", ki bi padel v hard stop, bolezen ali po game overju, se ne zgodi in ni rutina.
 
 Ob prestopu ure: dan ima 23 ali 25 ur, okna sledijo stenski uri (06:00 je poleti 04:00 UTC, pozimi 05:00 UTC).
 Zaključeni dnevi se zapišejo (strežnik) in se pozneje ne preračunajo: sprememba tihih ur ali oken hranjenja ne spremeni preteklih ocen. Današnji dan se računa sproti; rutina z rokom v prihodnosti je "odprta" in se v oceno še ne šteje. Ledger se začne 4. 10. 2026 (prej vsi podatki niso bili na strežniku).
@@ -170,6 +172,9 @@ Zaključeni dnevi se zapišejo (strežnik) in se pozneje ne preračunajo: spreme
 - **sprehod** (*Claudova razlaga "poštenega deleža", čaka Davida*): šteje otroku kot opravljen, če je pes dosegel cilj **in** je ta otrok prehodil vsaj **cilj / n** korakov (npr. 2 otroka, cilj 4.000 → vsak vsaj 2.000);
 - otrok sam s psom: enaka formula z n = 1 (= formula psa).
 - Primer: dva otroka, eden opravi vse → 100 in 0. Otrok, ki se pridruži kasneje, deli samo rutine, ki se začnejo po njegovi pogodbi.
+
+- **Bolezni** se odštevajo od prvega dne ocenjevanja (4. 10. 2026) naprej, pri otroku od začetka njegovega skrbništva. *(Claude, čaka Davida)*
+- **Dan pridružitve:** otrok, ki se pridruži sredi dneva, ta dan ne deli vode in sprehoda (rutini se začneta ob polnoči), deli pa okna hranjenja in nered po podpisu.
 
 **Napredek izziva:** teden N od 12 (dnevi od podpisa pogodbe otroka / 7 + 1), izziv končan po 84 dneh.
 

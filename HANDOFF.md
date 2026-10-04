@@ -64,6 +64,13 @@
 
 ## 6. Session log
 
+### 2026-10-04 (cloud, backend-engineer) — PR #19 review fixes (CHANGES REQUESTED → fixed, same branch)
+- **MAJOR 1:** a pending hygiene event inside a hard stop / vet / inactive period is ignored by the ledger (it can only be skipped; a game-over pet is never ticked again) → game-over days close and the pet goes dormant (`routines_next_close_at` null).
+- **MAJOR 2:** illnesses count only from `FIRST_LEDGER_DATE` (pet) and from the child's start (child).
+- **MAJOR 3:** the walk is excused only when hard stop / vet / game over cover ≥ 50 % of the day's non-quiet time (`WHOLE_DAY_EXCUSE_SHARE`; DECISIONS "Claude, čaka Davida"); water stays pro rata.
+- **Minors:** pointer write under `lockForUpdate` + compares `routines_next_close_at` too; 30-min backoff after a failure; ≤ 500 pets per tick (`closeDueDays(limit:)`, overdue first); yellow / today block count missed routines whose deadline falls today (`CareScoreService::todayRoutines`); join-day water/walk documented (DECISIONS, PRODUCT_SPEC, ARCHITECTURE); rollback data loss → DEPLOYMENT D12.
+- **Tests:** `RoutineScoringTest` 38 → **47** (game over + pending event → dormant; Sept illnesses ignored; over-achiever 100 − 10 = 90; 1-min hard stop / overnight hard stop → walk expected; 12 h vet → excused; mess due 07:50 makes today yellow; per-tick budget; failure backoff); the old hard-stop test now expects the walk (3 of 11 h blocked).
+
 ### 2026-10-04 (cloud, backend-engineer) — M2-06 routines / Care Score / traffic light + M2-05 dashboard backend (`feat/M2-05-dashboard-scoring`)
 - **David's rules (DECISIONS, PRODUCT_SPEC §9 / §11):** routines = each feed window, `water_times_per_day` refills per family day, each hygiene event (clean within 2 h outside quiet hours), the daily step goal; expected only while born, active, not hard-stopped, not at the vet, not game over; birth day only after birth. Care Score = done / expected × 100 − 10 per illness (0–100). Shared pet = "fair share" (1/n per routine for the n caretakers caring when it opened; own done; −10 per illness during their caretaking). Traffic light per child and pet, today: red = game over / phase 3 / ill today; yellow = > 2 missed today; green.
 - **Claude's interpretations (pending David, DECISIONS):** walk credit for a sibling = goal met AND own steps ≥ goal/n; a missed routine of a shared pet makes **every** caretaker yellow; a feed window entirely in quiet hours is not expected; a routine overlapping a hard stop / vet / game over is not expected unless done, water pro-rated by in-play non-quiet time; child shares routines that open after their contract; past day without step data → no walk routine; "ill today" = illness started today; ledger starts 2026-10-04; pending routines not scored.

@@ -317,9 +317,11 @@ describe('routine ledger — birth day, hard stop, vet, game over', function () 
         rsAt('2026-10-14 08:00:00');
         $day = rsDay($pet, '2026-10-13');
 
-        expect(array_map(fn ($r) => $r->type->value, $day))->toBe(['water', 'water', 'feed'])
-            // morning feed still expected (and missed); evening feed + walk excused
-            ->and($day[2]->opensAt->toDateTimeString())->toBe('2026-10-13 04:00:00');
+        // morning feed still expected (and missed); evening feed excused; the
+        // walk stays expected (3 of 11 non-quiet hours blocked < 50 %)
+        expect(array_map(fn ($r) => $r->type->value, $day))->toBe(['walk', 'water', 'water', 'feed'])
+            ->and($day[0]->status)->toBe(RoutineStatus::Missed)
+            ->and($day[3]->opensAt->toDateTimeString())->toBe('2026-10-13 04:00:00');
     });
 
     it('a routine done during a hard stop still counts as done', function () {
@@ -364,6 +366,128 @@ describe('routine ledger — birth day, hard stop, vet, game over', function () 
         rsAt('2026-10-15 08:00:00');
         expect(rsDay($pet, '2026-10-14'))->toBe([])
             ->and(rsDay($pet, '2026-10-13', RoutineType::Feed))->toHaveCount(1); // morning window only
+    });
+});
+
+describe('review fixes (PR #19)', function () {
+    it('a game-over pet with a pending hygiene event still closes its days and goes dormant', function () {
+        [, , $pet] = rsFamily();
+        rsAt('2026-10-13 08:00:00'); // 10:00 local
+        $pet->fresh()->update(['is_game_over' => true, 'is_active' => false]);
+        PetHygieneEvent::create([
+            'pet_id' => $pet->id, 'local_date' => '2026-10-13',
+            'scheduled_at' => Carbon::parse('2026-10-13 13:00:00', 'UTC'), // 15:00 local, never ticked
+            'status' => HygieneEventStatus::Pending,
+        ]);
+
+        rsAt('2026-10-15 08:00:00');
+        app(RoutineLedgerService::class)->closeDueDays();
+        $fresh = $pet->fresh();
+
+        expect($fresh->routines_closed_through)->toBe('2026-10-14')
+            ->and($fresh->getRawOriginal('routines_next_close_at'))->toBeNull()
+            ->and(rsDay($pet, '2026-10-13', RoutineType::Clean))->toBe([]);
+
+        rsAt('2026-10-16 08:00:00');
+        expect(app(RoutineLedgerService::class)->closeDueDays())->toBe(['pets' => 0, 'days' => 0]);
+    });
+
+    it('ignores illnesses before the first ledger day and before the child started', function () {
+        [$parent, $maja, $pet] = rsFamily('2026-09-20 08:00:00');
+        rsPeriod($pet, 'illness', '2026-09-25 10:00:00', '2026-09-25 22:00:00');
+        rsPeriod($pet, 'illness', '2026-09-30 10:00:00', '2026-09-30 22:00:00');
+        rsPeriod($pet, 'illness', '2026-10-13 00:30:00', '2026-10-13 00:30:01'); // 02:30 local, quiet
+        $luka = rsSibling($parent, $pet, '2026-10-13 12:00:00');
+        rsPerfectDay($pet, '2026-10-13', $maja);
+
+        rsAt('2026-10-13 22:30:00');
+        $board = rsBoard($pet);
+        $scores = app(CareScoreService::class);
+        $pet = $pet->fresh();
+
+        expect($scores->petSummary($board, $pet)['care_score']['illnesses'])->toBe(1)
+            ->and($scores->childScore($board, $maja->id, $pet)['illnesses'])->toBe(1)
+            ->and($scores->childScore($board, $luka->id, $pet)['illnesses'])->toBe(0);
+    });
+
+    it('an over-achiever is capped at 100 before the −10 per illness', function () {
+        [$parent, $maja, $pet] = rsFamily();
+        rsSibling($parent, $pet, '2026-10-11 22:30:00');
+        rsPerfectDay($pet, '2026-10-12', $maja);
+        rsPerfectDay($pet, '2026-10-13', $maja);
+        rsPeriod($pet, 'illness', '2026-10-13 20:30:00', '2026-10-14 08:30:00');
+
+        rsAt('2026-10-13 22:30:00');
+        // done 10 of a fair share of 5 → 200 % → 100 → −10
+        expect(app(CareScoreService::class)->childScore(rsBoard($pet), $maja->id, $pet->fresh()))
+            ->toMatchArray(['done' => 10, 'expected' => 5.0, 'illnesses' => 1, 'score' => 90]);
+    });
+
+    it('walk: a 1-minute hard stop does not excuse it', function () {
+        [, , $pet] = rsFamily();
+        rsWalk($pet, '2026-10-13', 500);
+        rsPeriod($pet, 'hard_stop', '2026-10-13 12:00:00', '2026-10-13 12:01:00');
+
+        rsAt('2026-10-14 08:00:00');
+        expect(rsDay($pet, '2026-10-13', RoutineType::Walk)[0]->status)->toBe(RoutineStatus::Missed);
+    });
+
+    it('walk: an overnight hard stop until 09:00 does not excuse either day', function () {
+        [, , $pet] = rsFamily();
+        rsWalk($pet, '2026-10-13', 500);
+        rsWalk($pet, '2026-10-14', 500);
+        rsPeriod($pet, 'hard_stop', '2026-10-13 20:00:00', '2026-10-14 07:00:00'); // 22:00 → 09:00 local
+
+        rsAt('2026-10-15 08:00:00');
+        expect(rsDay($pet, '2026-10-13', RoutineType::Walk)[0]->status)->toBe(RoutineStatus::Missed)
+            ->and(rsDay($pet, '2026-10-14', RoutineType::Walk)[0]->status)->toBe(RoutineStatus::Missed);
+    });
+
+    it('walk: 12 h at the vet covering most of the non-quiet day excuses it', function () {
+        [, , $pet] = rsFamily();
+        rsWalk($pet, '2026-10-13', 500);
+        rsPeriod($pet, 'illness', '2026-10-13 06:00:00', '2026-10-13 18:00:00'); // 08–20 local: 7 of 11 h
+
+        rsAt('2026-10-14 08:00:00');
+        expect(rsDay($pet, '2026-10-13', RoutineType::Walk))->toBe([]);
+    });
+
+    it('yellow counts a mess missed this morning even though it happened yesterday evening', function () {
+        [, $child, $pet] = rsFamily();
+        rsMess($pet, '2026-10-13 19:50:00'); // 21:50 local → due 07:50 next morning
+        rsAt('2026-10-14 19:30:00'); // 21:30 local: both feeds of today missed too
+        $board = rsBoard($pet);
+        $scores = app(CareScoreService::class);
+        $pet = $pet->fresh();
+
+        expect(rsDay($pet, '2026-10-13', RoutineType::Clean)[0]->dueAt->toDateTimeString())->toBe('2026-10-14 05:50:00')
+            ->and($scores->petLight($board, $pet))->toBe(['color' => 'yellow', 'reasons' => ['missed_routines']])
+            ->and($scores->childLight($board, $child->id, $pet)['color'])->toBe('yellow')
+            ->and($scores->dayBlock($board, $pet, $child->id, '2026-10-14')['missed_count'])->toBe(3);
+    });
+
+    it('closes at most N pets per tick; the rest come next tick', function () {
+        [, , $a] = rsFamily();
+        [, , $b] = rsFamily();
+        rsAt('2026-10-14 08:00:00');
+        $ledger = app(RoutineLedgerService::class);
+
+        expect($ledger->closeDueDays(limit: 1)['pets'])->toBe(1)
+            ->and($ledger->closeDueDays(limit: 1)['pets'])->toBe(1)
+            ->and($ledger->closeDueDays(limit: 1)['pets'])->toBe(0)
+            ->and($a->fresh()->routines_closed_through)->toBe('2026-10-13')
+            ->and($b->fresh()->routines_closed_through)->toBe('2026-10-13');
+    });
+
+    it('backs off 30 minutes after a failure instead of retrying every minute', function () {
+        [, , $pet] = rsFamily();
+        DB::table('families')->where('id', $pet->family_id)->update(['timezone' => 'Not/AZone']);
+        rsAt('2026-10-14 08:00:00');
+
+        app(RoutineLedgerService::class)->closeDueDays();
+
+        expect(Carbon::parse($pet->fresh()->getRawOriginal('routines_next_close_at'))->toDateTimeString())->toBe('2026-10-14 08:30:00')
+            ->and(app(RoutineLedgerService::class)->closeDueDays()['pets'])->toBe(0);
     });
 });
 
