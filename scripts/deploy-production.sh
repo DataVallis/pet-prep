@@ -39,6 +39,24 @@ if [ ! -f "$ENV_FILE" ]; then
     exit 1
 fi
 
+# 3a. Preflight: realtime needs Redis queue + Reverb broadcaster (M1-09). Reads only
+# these non-secret keys; never prints other values.
+for pair in "QUEUE_CONNECTION=redis" "BROADCAST_CONNECTION=reverb"; do
+    key="${pair%%=*}"; want="${pair#*=}"
+    have=$(grep -E "^${key}=" "$ENV_FILE" | tail -n1 | cut -d= -f2- | tr -d '"'"'"' \r' || true)
+    if [ "$have" != "$want" ]; then
+        echo "ERROR: ${key} must be '${want}' in ${ENV_FILE} (found '${have:-<unset>}')." >&2
+        exit 1
+    fi
+done
+# Jobs go to REDIS_QUEUE (default "default"); the `queue` worker listens only to
+# `default`, so any other value would strand fal.ai jobs.
+rq=$(grep -E "^REDIS_QUEUE=" "$ENV_FILE" | tail -n1 | cut -d= -f2- | tr -d '"'"'"' \r' || true)
+if [ -n "$rq" ] && [ "$rq" != "default" ]; then
+    echo "ERROR: REDIS_QUEUE must be unset or 'default' in ${ENV_FILE} (found '${rq}')." >&2
+    exit 1
+fi
+
 rm -f "${REPO_DIR}/backend/.env"
 cp "$ENV_FILE" "${REPO_DIR}/backend/.env"
 chmod 600 "${REPO_DIR}/backend/.env"
@@ -84,9 +102,9 @@ docker compose -f "$COMPOSE_FILE" run --rm app php artisan view:cache
 
 # 9. Start/Recreate All Application Containers
 echo "Starting all application services..."
-docker compose -f "$COMPOSE_FILE" up -d --remove-orphans app reverb queue scheduler caddy
+docker compose -f "$COMPOSE_FILE" up -d --remove-orphans app reverb queue queue-broadcasts scheduler caddy
 
-# 10. Restart Queue Workers to load new code
+# 10. Restart Queue Workers to load new code (signal is shared via cache: restarts queue + queue-broadcasts)
 echo "Restarting queue workers..."
 docker compose -f "$COMPOSE_FILE" exec -T queue php artisan queue:restart || true
 

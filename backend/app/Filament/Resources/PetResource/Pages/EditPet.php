@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\PetResource\Pages;
 
+use App\Events\PetUpdated;
 use App\Filament\Resources\PetResource;
 use App\Models\Pet;
 use Filament\Actions;
@@ -23,6 +24,7 @@ class EditPet extends EditRecord
     /**
      * Metric-changing writes take the same row lock as the decay tick
      * (backend/CLAUDE.md), so an admin save and a tick can't overwrite each other.
+     * One PetUpdated after commit.
      */
     protected function handleRecordUpdate(Model $record, array $data): Model
     {
@@ -30,6 +32,9 @@ class EditPet extends EditRecord
             $locked = Pet::whereKey($record->getKey())->lockForUpdate()->firstOrFail();
             $locked->update($data);
             $record->setRawAttributes($locked->getAttributes(), true);
+
+            // The apps see admin corrections live (M1-08: one explicit event).
+            PetUpdated::afterCommit($locked, 'admin_updated');
 
             return $record;
         });

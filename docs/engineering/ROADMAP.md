@@ -44,8 +44,8 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
   - `POST /api/child/pet/steps` — `{steps_today, source, recorded_at}`; anti-cheat (Δ ≤ 200 / min od zadnjega synca), idempotentno (vzame max)
   - `POST /api/child/contract` — shrani podpis (SVG path / PNG) + čas
   - vse akcije: 423 Locked, ko je `is_hard_stopped` / `isIll()` / `is_game_over`
-- [ ] M1-08 `PetUpdated` → `PrivateChannel('pet.{id}')`, `/broadcasting/auth` prek Sanctum; odstrani podvojene broadcaste (observer + ročni klici)
-- [ ] M1-09 Broadcast prek queue (ne `sync`) — izpad Reverba ne sme ustaviti cron zanke
+- [x] M1-08 `PetUpdated` → `PrivateChannel('pet.{id}')`, `/broadcasting/auth` prek Sanctum; odstrani podvojene broadcaste (observer + ročni klici) *(2026-10-04, veja `feat/M1-08-private-channels`: `POST /api/broadcasting/auth`, `PetPolicy::listen`, brez opazovalcev, `PetUpdated::afterCommit`, payload brez PII)*
+- [x] M1-09 Broadcast prek queue (ne `sync`) — izpad Reverba ne sme ustaviti cron zanke *(2026-10-04, ista veja: vrsta `broadcasts`, delavec `queue-broadcasts` v produkciji, napake se zabeležijo)*
 - [ ] M1-10 Pest feature testi za vse zgornje + test "24-urni dan" (integracijski)
 
 **Mobile**
@@ -53,7 +53,9 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [x] M1-12 Session bootstrap: ob zagonu prebere token iz SecureStore → `GET /api/user` (vrne tudi `pet`) → usmeri po vlogi kot po prijavi; splash, 401 → odjava, brez povezave → "Poskusi znova"; enotna odjava (`logout()`) *(2026-10-03, veja `feat/M1-12-session-restore-parent-pin`; `GET /api/child/pet` ostane za M1-07/M1-15)*
 - [ ] M1-13 TanStack Query hooki (`usePet`, `useFeed`, …) z optimistic update; Zustand samo za UI / ws stanje
 - [ ] M1-14 Feed / Water / Clean / Walk vezani na API; okna akcij iz API-ja (disabled + "naslednje okno ob 17:00")
-- [ ] M1-15 Echo: private channel z `authorizer` (Bearer token), wss v produkciji, pravi polling fallback (`GET /api/child/pet` vsakih 10 s)
+- [~] M1-15 Echo: private channel z `authorizer` (Bearer token), wss v produkciji, pravi polling fallback (`GET /api/child/pet` vsakih 10 s)
+  - [x] `echo.private('pet.{id}')`, authorizer `api.authorizeChannel` (Bearer), wss + forceTLS pri https, dogodek `.pet.updated` *(2026-10-04, `feat/M1-08-private-channels`)*
+  - [ ] Odprto: polling fallback še ne kliče `GET /api/child/pet` (TanStack refetch)
 - [ ] M1-16 `lockState` iz `is_hard_stopped` / `is_ill` / `is_game_over`; hard stop API usklajen
 - [ ] M1-17 Generirani tipi iz OpenAPI (`schema.ts`) se uporabljajo v `client.ts` namesto ročnih
 - [ ] M1-18 i18n s `expo-localization` + `i18next`: **EN privzeto + SL**; tudi strežniška sporočila (push, napake) prek Laravel lang datotek

@@ -1,4 +1,4 @@
-# PetPrep — Architecture (as built, updated 2026-10-04 — M1-07 child API, M1-07b contract before birth)
+# PetPrep — Architecture (as built, updated 2026-10-04 — M1-07 child API, M1-07b contract before birth, M1-08/09 private queued broadcasts)
 
 This describes what the code **actually does today**, not the target. Target behaviour lives in
 `docs/product/PRODUCT_SPEC.md`; the gap is tracked in `docs/engineering/ROADMAP.md`.
@@ -12,7 +12,7 @@ PetPrep/                         git: DataVallis/pet-prep
 │   ├── app/Console/Commands/    pets:process-decay, openapi:export
 │   ├── app/Enums/               UserRole, BreedType, ActivityType, PetStateEnum, HygieneEventStatus,
 │   │                            PetLockReason, CareRefusal (child API reason codes)
-│   ├── app/Events/PetUpdated    the only broadcast event
+│   ├── app/Events/PetUpdated    the only broadcast event (private `pet.{id}`, queued on `broadcasts`; emit via PetUpdated::afterCommit)
 │   ├── app/Filament/Resources/  User, Pet, BreedConfig, ActivityLog
 │   ├── app/Http/Controllers/    Auth, Pairing, ParentDashboard, ParentSettings, QuietHours, ChildPet, ChildContract,
 │   │                            FalAiWebhook, RevenueCatWebhook; Concerns/HandlesChildPet (ActionResult → HTTP)
@@ -21,7 +21,6 @@ PetPrep/                         git: DataVallis/pet-prep
 │   ├── app/Policies/            UserPolicy (family settings), PetPolicy (child API)
 │   ├── app/Models/              User, Pet, ActivityLog, BreedConfig, QuietHours, PetHygieneEvent, PetDailyWalk,
 │   │                            PetContract, PetMediaJob
-│   ├── app/Observers/           PetObserver, ActivityLogObserver (both broadcast PetUpdated, after commit)
 │   ├── app/Services/            PairingService, PetDecayService, EscalationService, HygieneEventService, DailyWalkService,
 │   │                            PetActivityService (steps, clean, feed, water, contract), CareScheduleService
 │   │                            (feed windows, water limits), FamilySettingsService, FalAiService
@@ -93,6 +92,7 @@ Laravel default tables: `password_reset_tokens, sessions, cache, jobs, failed_jo
 | POST | `/api/child/contract` | same | ChildContractController@store | body `{signature_format: svg_path\|png, signature}` → 201 `{status: accepted, state}`; for an unborn pet this is the **birth** (M1-07b: `born_at` = signed_at = server time, metrics 100 %, clocks start); the only action allowed while `contract_required`; 423 while hard-stopped / inactive; second signature → 409 `contract_already_signed` (first stays) |
 | POST | `/api/webhooks/fal-ai` | ED25519 signature (fail closed) | FalAiWebhookController | matches `request_id` → `pet_media_jobs`; idempotent; only `*.fal.media` URLs |
 | POST | `/api/webhooks/revenuecat` | Bearer secret (optional!) | RevenueCatWebhookController | |
+| POST (GET) | `/api/broadcasting/auth` | sanctum (Bearer) | Laravel `BroadcastController@authenticate` (registered in `bootstrap/app.php` → `withBroadcasting`, prefix `api`, middleware `api` + `auth:sanctum`) | Reverb/Pusher channel auth (M1-08). Body (form or JSON) `{socket_id, channel_name}` → 200 `{auth: "<key>:<hmac>"}`; 403 if `PetPolicy@listen` denies; guest → JSON 401. Only `private-pet.{id}` exists. Not under `/broadcasting/auth` (no session route). The generated OpenAPI entry is a placeholder (vendor controller) — mobile types it as `BroadcastAuthResponse` in `client.ts` |
 
 **Child API contract (M1-07).** Every child endpoint: guest → 401, parent → 403 (`PetPolicy`), child without a pet → 404 `{reason: "no_pet"}`. Action responses always carry `state` (the same object as `GET /api/child/pet`), so the app can update its cache without a second call:
 - 200 `{status, …, state}` — `accepted` (applied, one `PetUpdated` with the activity type as `event_type`) or `unchanged` / `capped` / `rejected` / `stale` (steps);
@@ -102,6 +102,8 @@ Laravel default tables: `password_reset_tokens, sessions, cache, jobs, failed_jo
 
 `state` (`ChildPetStateResource`, all instants ISO 8601 with the family offset, e.g. `2026-10-04T17:00:00+02:00`):
 `pet {id, breed_type, born_at (null while unborn), awaiting_contract, virtual_age_months, hunger_level, thirst_level, energy_level, hygiene_level (displayed ints), pet_state, escalation_level, needs_cleaning, is_active, is_hard_stopped, is_ill, illness_until, is_game_over, certificate_eligible, current_video_url, media_status, reference_image_url}` · `lock {is_locked, reason, until}` · `timezone` · `server_time` · `feeding {windows [{start, end} "HH:MM"], current_window {start, end}|null, fed_in_current_window, can_feed, next_feed_window {start, end}|null (the current window while unused, else the next), last_fed_at}` · `water {times_per_day, min_gap_minutes, used_today, remaining_today, last_watered_at, can_water, next_allowed_at}` · `steps {steps_today, goal, energy_level}` · `contract {signed, signed_at}`. `can_feed` / `can_water` combine lock, mess and the window / water rules.
+
+Guests on any `/api/*` route get a JSON 401 even without `Accept: application/json` (`bootstrap/app.php`: `redirectGuestsTo` + `shouldRenderJsonWhen`, M1-08) — before, such a request crashed on the missing `login` route.
 
 **Still missing:** registration, social login, password reset; `GET /api/child/pet` is not yet used by the app (M1-13/M1-14).
 
@@ -139,15 +141,27 @@ Docs: Scramble at `/docs/api` (local env only), export via `php artisan openapi:
 - `recordSteps(Pet, int $stepsToday, Carbon $recordedAt)`: cumulative count for the family-local day, the max wins (`UNCHANGED` for repeats / lower counts). Anti-cheat: increment capped at 200 steps per minute between max(`last_step_sync_at`, local midnight) and `recordedAt` (future → now) — `CAPPED` keeps the plausible part, `REJECTED` if none; a sync dated on an earlier local day is `STALE`. Closes the previous day first (`DailyWalkService`, same as the tick). Energy = max(current, min(100, steps / `daily_steps_required` × 100)). Logs one `walked_pet` row per day, when the count first reaches the goal (value = steps). If the action itself changed nothing but closed the previous day or applied a recovery, it still broadcasts one `PetUpdated('metric_changed')` after commit.
 - `clean(Pet)`: settles hygiene events already due but not yet ticked (`HygieneEventService::settleForCleaning`), stamps `cleaned_at`, hygiene → 100, `hygiene_zero_since` → null, logs `cleaned_poop`. `UNCHANGED` when already clean.
 
-**EscalationService**: same row-lock rule as the decay tick (M1-07 review fix): the scheduler selects IDs only and each pet is re-read with `lockForUpdate()` in its own transaction; every decision uses that fresh row, so a clean / feed / hard stop committed after the scheduler's query is respected (before, a stale model could start an illness or a game over the child had just prevented). `processPetEscalation(Pet)` uses the model only for its ID and copies the result back. Its broadcasts run `DB::afterCommit`; `ActivityLogObserver` and `PetObserver` handle events after commit. Skips hard-stopped and ill pets entirely (M1-02 — no new escalation, illness or game over while frozen; `thawIfDue()` runs first: recovery of an expired illness, stale `frozen_at`). Neglect clocks = hunger, thirst, hygiene (**not energy**). Then: game over (hunger / thirst / hygiene 0 % ≥ 24 h → `is_active=false`, `is_game_over=true`) › illness — (a) `walk_illness_due_at` ≤ now → illness from `walk_illness_due_at` (`illness_until` = due + 12 h, `frozen_at` = due, walk row `illness_started_at`); if due + 12 h ≤ now (scheduler down) it is skipped instead (walk row `illness_skipped_at`, no recovery side effects); game over and reactivation clear a pending `walk_illness_due_at`, or (b) hygiene 0 % for ≥ 6 h **counted outside quiet hours only** (`QuietHours::splitSecondsBetween(zero_since, now)['normal']`) → `illness_until = now+12h`; state `sick`, `frozen_at` = start › matrix (lowest displayed metric ≤ 30 → level 1, ≤ 10 → level 2 — energy counts only **outside quiet hours**; hunger / thirst / hygiene 0 % ≥ 1 h → level 3 + broadcast `parent_intervention_alarm`). Each escalation writes an `ignored_warning` activity. Push jobs are commented out (none exist).
+**EscalationService**: same row-lock rule as the decay tick (M1-07 review fix): the scheduler selects IDs only and each pet is re-read with `lockForUpdate()` in its own transaction; every decision uses that fresh row, so a clean / feed / hard stop committed after the scheduler's query is respected (before, a stale model could start an illness or a game over the child had just prevented). `processPetEscalation(Pet)` uses the model only for its ID and copies the result back. Each step taken emits exactly one `PetUpdated` after commit (M1-08): `soft_warning` (level 1), `critical_alert` (level 2), `parent_intervention_alarm` (level 3), `illness_triggered`, `game_over_virtual_shelter`, `escalation_reset` (metrics recovered → level 0). A tick takes at most one step per pet; no step → no event. Skips hard-stopped and ill pets entirely (M1-02 — no new escalation, illness or game over while frozen; `thawIfDue()` runs first: recovery of an expired illness, stale `frozen_at`). Neglect clocks = hunger, thirst, hygiene (**not energy**). Then: game over (hunger / thirst / hygiene 0 % ≥ 24 h → `is_active=false`, `is_game_over=true`) › illness — (a) `walk_illness_due_at` ≤ now → illness from `walk_illness_due_at` (`illness_until` = due + 12 h, `frozen_at` = due, walk row `illness_started_at`); if due + 12 h ≤ now (scheduler down) it is skipped instead (walk row `illness_skipped_at`, no recovery side effects); game over and reactivation clear a pending `walk_illness_due_at`, or (b) hygiene 0 % for ≥ 6 h **counted outside quiet hours only** (`QuietHours::splitSecondsBetween(zero_since, now)['normal']`) → `illness_until = now+12h`; state `sick`, `frozen_at` = start › matrix (lowest displayed metric ≤ 30 → level 1, ≤ 10 → level 2 — energy counts only **outside quiet hours**; hunger / thirst / hygiene 0 % ≥ 1 h → level 3). Each escalation writes an `ignored_warning` activity. Push jobs are commented out (none exist).
 
 ## 5. Real-time
 
-- Reverb (`BROADCAST_CONNECTION=reverb`), event `PetUpdated` (`broadcastAs: pet.updated`) on **public** `Channel("pet.updated.{id}")`; `ShouldBroadcast` with `$connection = 'sync'`.
-- Fired by: `PetObserver::updated` (every non-quiet pet save while active; runs after the DB transaction commits), the decay tick (once per tick, only on displayed changes, after commit), `PetActivityService` actions — the child API (once per applied action, after commit, event type = activity type: `fed_pet`, `watered_pet`, `walked_pet`, `cleaned_poop`, `signed_contract`; its activity rows bypass the observer), `ActivityLogObserver::created` (after commit since M1-07), and explicitly in escalation (after commit since M1-07), webhooks and hard stop → duplicates remain outside the decay tick (M1-08).
-- Payload (`PetUpdated::broadcastWith`) carries displayed metrics, state flags, `virtual_age_months` and `awaiting_contract` (M1-07b; the birth arrives as `event_type: signed_contract` with `awaiting_contract: false`).
-- `channels.php` defines auth for `pet.updated.{petId}` but it is never used because the channel is public. Fix in M1-08.
-- Mobile: `usePetWebSocket` (laravel-echo + pusher-js, `ws` only), maps payload into Zustand; fallback "polling" only pings the socket.
+**Channel (M1-08).** Reverb (`BROADCAST_CONNECTION=reverb`), one event `PetUpdated` (`broadcastAs: pet.updated` — Echo listens to `.pet.updated`) on **`PrivateChannel('pet.{id}')`**, wire name `private-pet.{id}`. No public channels exist.
+- **Who may subscribe** (`routes/channels.php` → `PetPolicy@listen`): the child who owns the pet (`pets.user_id`) and that child's parent (`users.parent_id`). Another child, another parent, a guest, a missing or malformed id → denied. The old `pet.updated.{id}` channel is gone.
+- **Auth endpoint:** `POST /api/broadcasting/auth` with `Authorization: Bearer <sanctum token>`, body `socket_id`, `channel_name` (§3). pusher-js calls it on every subscribe through the app's `channelAuthorization.customHandler`.
+
+**Payload** (`PetUpdated::payloadFor`, snapshot taken when the change commits — pet state only, **no child name, email or user id**):
+`pet_id, breed_type, hunger_level, thirst_level, energy_level, hygiene_level` (displayed ints) `, is_active, pet_state, escalation_level, is_ill, illness_until (ISO|null), is_game_over, is_hard_stopped, virtual_age_months, born_at (ISO|null), awaiting_contract (M1-07b: true until the contract is signed; the birth arrives as `event_type: signed_contract` with `awaiting_contract: false`), current_video_url, media_status, reference_image_url, event_type, updated_at, emitted_at` (ISO, ms — newer wins on the client).
+`event_type` values: `metric_changed` (tick, decay catch-up / midnight / recovery side effects), child actions `fed_pet` · `watered_pet` · `walked_pet` · `cleaned_poop` · `signed_contract`, escalation `soft_warning` · `critical_alert` · `parent_intervention_alarm` · `illness_triggered` · `game_over_virtual_shelter` · `escalation_reset`, parent `hard_stop_activated` · `hard_stop_deactivated`, admin `admin_updated` (Filament edit), media `reference_image_ready` · `reference_image_failed` · `video_ready`, purchase `breed_unlocked`.
+
+**Exactly one event per state change.** The single emission point is `PetUpdated::afterCommit($pet, $eventType)`, called by the service that made the change (decay tick, `PetActivityService`, `EscalationService`, hard stop, Filament `EditPet`, fal.ai webhook / job, RevenueCat webhook). There are **no model observers** (`PetObserver` / `ActivityLogObserver` removed): a plain `Pet::save()` or `ActivityLog::create()` broadcasts nothing. Why: the services know which change is meaningful and its type; observers fired on every save, duplicated explicit calls (escalation sent up to 3 events per step) and couldn't name the change. A decay tick that also crosses an escalation threshold sends two events (two state changes: `metric_changed`, then e.g. `soft_warning`).
+
+**Queued, after commit, never fatal (M1-09).**
+- `afterCommit` defers to `DB::afterCommit` (and the event also implements `ShouldDispatchAfterCommit`): a rolled-back transaction broadcasts nothing; the snapshot shows committed state.
+- `PetUpdated` is `ShouldBroadcast` (not `ShouldBroadcastNow`) with `broadcastQueue = 'broadcasts'`; tries 3, backoff 2 s, timeout 15 s. The tick / request only pushes a `BroadcastEvent` job; the worker talks to Reverb. The job holds no model (snapshot payload), so a deleted pet can't fail it.
+- `afterCommit` catches any exception from queueing/broadcasting (logs `PetUpdated: broadcast could not be queued` + `report()`), so a queue or Reverb outage never stops `pets:process-decay` for the remaining pets and never turns a committed child action into a 500.
+- Production: dedicated worker `queue-broadcasts` (`queue:work redis --queue=broadcasts`) next to `queue` (`--queue=default`, fal.ai) in `compose.production.yaml` — a slow fal.ai job never delays a broadcast and a Reverb outage never blocks fal.ai. Locally (`QUEUE_CONNECTION=sync`/`database`) run `npm run sail:queue` or the job runs inline.
+
+**Mobile** (`usePetWebSocket` + `src/modules/realtime/echoConfig.ts`): laravel-echo `reverb` with a pusher-js client — `wss` on `EXPO_PUBLIC_REVERB_PORT` (443) with `forceTLS` when the scheme is `https`, `ws` only for local http; `echo.private('pet.{id}')`; authorizer = `api.authorizeChannel()` (Bearer token read fresh each subscribe, 401 → session logout handler). Payload mapped into Zustand (`updatePetFromBroadcast`). Fallback polling slot (10 s) starts on disconnect / subscription error but its body is still a TODO (M1-15: refetch `GET /api/child/pet`).
 
 ## 6. External services
 
@@ -172,12 +186,12 @@ Default API is production (`https://api.petprep.si`, Reverb wss :443) unless `EX
 
 ## 8. Configuration
 
-Backend `.env` keys in use: `DB_*` (pgsql), `BROADCAST_CONNECTION`, `REVERB_APP_ID/KEY/SECRET/HOST/PORT/SCHEME`, `QUEUE_CONNECTION`, `FAL_AI_API_KEY`, `FAL_AI_JWKS_URL`, `FAL_AI_MEDIA_HOSTS`, `REVENUECAT_SECRET_KEY`, `REVENUECAT_PUBLIC_KEY`, `REVENUECAT_BORDER_COLLIE_PRODUCT_ID`.
+Backend `.env` keys in use: `DB_*` (pgsql), `BROADCAST_CONNECTION` (`reverb`), `REVERB_APP_ID/KEY/SECRET/HOST/PORT/SCHEME`, `QUEUE_CONNECTION` (`redis` in production — broadcasts are queued on `broadcasts`), `FAL_AI_API_KEY`, `FAL_AI_JWKS_URL`, `FAL_AI_MEDIA_HOSTS`, `REVENUECAT_SECRET_KEY`, `REVENUECAT_PUBLIC_KEY`, `REVENUECAT_BORDER_COLLIE_PRODUCT_ID`.
 Mobile: `EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_REVERB_APP_KEY`, `EXPO_PUBLIC_REVERB_HOST`, `EXPO_PUBLIC_REVERB_PORT`, `EXPO_PUBLIC_REVERB_SCHEME`.
 
 ## 9. Production
 
-See `docs/PRODUCTION_DEPLOYMENT.md`. Single Hetzner host, Docker Compose: Caddy → app (PHP 8.3) / reverb; queue; scheduler (`schedule:work`); postgres 18; redis. Live at `https://api.petprep.si`.
+See `docs/PRODUCTION_DEPLOYMENT.md`. Single Hetzner host, Docker Compose: Caddy → app (PHP 8.3) / reverb; queue (`default`: fal.ai); queue-broadcasts (`broadcasts`: PetUpdated → Reverb, M1-09); scheduler (`schedule:work`); postgres 18; redis. Live at `https://api.petprep.si`.
 
 ## 10. Architecture decisions
 

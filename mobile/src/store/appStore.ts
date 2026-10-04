@@ -133,6 +133,7 @@ export const useAppStore = create<AppStore>((set) => ({
         current_video_url: broadcast.current_video_url ?? state.pet.current_video_url,
         is_game_over: broadcast.is_game_over,
         awaiting_contract: broadcast.awaiting_contract ?? state.pet.awaiting_contract,
+        born_at: broadcast.born_at !== undefined ? broadcast.born_at : state.pet.born_at,
       };
 
       // Determine lock state from broadcast

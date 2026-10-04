@@ -1,26 +1,31 @@
 /**
  * usePetWebSocket — Laravel Echo + Reverb WebSocket hook.
  *
- * Listens on the `pet.updated.{petId}` channel for real-time pet updates.
- * Implements auto-reconnect and fallback polling when WebSocket drops.
+ * Subscribes to the PRIVATE channel `private-pet.{petId}` (M1-08). pusher-js
+ * gets its subscription signature from `POST /api/broadcasting/auth` with the
+ * Sanctum Bearer token (`modules/realtime/echoConfig`). Only the child who
+ * owns the pet and that child's parent are authorized.
+ * Implements auto-reconnect and a fallback polling slot when the socket drops.
  */
 
 import { useEffect, useRef, useCallback } from 'react';
 import Echo from 'laravel-echo';
 import Pusher from 'pusher-js';
+import type { Options as PusherOptions } from 'pusher-js';
 import { useAppStore } from '@/store/appStore';
 import { ENV } from '@/config/env';
+import { api } from '@/api/client';
+import { buildPusherOptions, petChannelName, PET_UPDATED_EVENT } from '@/modules/realtime/echoConfig';
 import type { PetUpdatedBroadcast } from '@/types';
 
-// Safely resolve Pusher constructor across CJS and ESM interop
-const PusherConstructor: any =
-  typeof Pusher === 'function'
-    ? Pusher
-    : (Pusher as any)?.default ?? Pusher;
+type PusherConstructor = new (appKey: string, options: PusherOptions) => Pusher;
 
-if (typeof globalThis !== 'undefined') {
-  (globalThis as any).Pusher = PusherConstructor;
-}
+// Safely resolve the Pusher constructor across CJS and ESM interop.
+const pusherInterop: unknown = Pusher;
+const PusherClient: PusherConstructor =
+  typeof pusherInterop === 'function'
+    ? (pusherInterop as PusherConstructor)
+    : (pusherInterop as { default: PusherConstructor }).default;
 
 const POLLING_INTERVAL_MS = 10_000; // 10 seconds fallback polling
 
@@ -36,10 +41,8 @@ export function usePetWebSocket(petId: number | null): void {
 
     setWsStatus('reconnecting');
     pollingRef.current = setInterval(() => {
-      // TODO: fallback poll of the pet status API is not implemented yet.
-      // The previous body called `connection.checkAvailability()`, which does not
-      // exist on pusher-js' ConnectionManager (it always threw and was swallowed),
-      // so this tick was already a no-op. pusher-js reconnects on its own; the
+      // TODO(M1-15): refetch pet state via TanStack Query (`GET /api/child/pet`)
+      // while the socket is down. pusher-js reconnects on its own; the
       // 'connected' handler below calls stopPolling().
     }, POLLING_INTERVAL_MS);
   }, [setWsStatus]);
@@ -55,28 +58,26 @@ export function usePetWebSocket(petId: number | null): void {
     if (!petId) return;
 
     setWsStatus('connecting');
-
-    const isHttps = ENV.REVERB_SCHEME === 'https';
+    const channelName = petChannelName(petId);
 
     try {
-      const echo = new Echo({
+      const echo = new Echo<'reverb'>({
         broadcaster: 'reverb',
-        client: new PusherConstructor(ENV.REVERB_APP_KEY, {
-          wsHost: ENV.REVERB_HOST,
-          wsPort: isHttps ? 443 : ENV.REVERB_PORT,
-          wssPort: isHttps ? 443 : ENV.REVERB_PORT,
-          forceTLS: isHttps,
-          enabledTransports: ['ws', 'wss'],
-          disableStats: true,
-        }),
+        client: new PusherClient(ENV.REVERB_APP_KEY, buildPusherOptions(ENV, api.authorizeChannel)),
       });
 
       echoRef.current = echo;
 
-      const channel = echo.channel(`pet.updated.${petId}`);
+      const channel = echo.private(channelName);
 
-      channel.listen('pet.updated', (event: PetUpdatedBroadcast) => {
+      // Leading dot: the backend uses a custom name (PetUpdated::broadcastAs).
+      channel.listen(PET_UPDATED_EVENT, (event: PetUpdatedBroadcast) => {
         updatePetFromBroadcast(event);
+      });
+
+      // 403 (not this user's pet) / auth error → rely on polling.
+      channel.error(() => {
+        startPolling();
       });
 
       // Connection state handlers
@@ -94,15 +95,14 @@ export function usePetWebSocket(petId: number | null): void {
         setWsStatus('disconnected');
         startPolling();
       });
-    } catch (err) {
-      console.warn('Echo initialization error:', err);
+    } catch {
       startPolling();
     }
 
     return () => {
       try {
         if (echoRef.current) {
-          echoRef.current.channel(`pet.updated.${petId}`).stopListening('pet.updated');
+          echoRef.current.leave(channelName);
           echoRef.current.disconnect();
           echoRef.current = null;
         }

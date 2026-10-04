@@ -16,7 +16,8 @@ flowchart LR
     CAD[Caddy TLS]
     APP["Laravel API<br/>+ Filament admin"]
     REV[Reverb WebSockets]
-    Q[Queue worker]
+    Q["Queue worker<br/>(default: fal.ai)"]
+    QB["Broadcast worker<br/>(queue: broadcasts)"]
     S["Scheduler<br/>pets:process-decay every minute"]
     PG[(PostgreSQL 18)]
     R[(Redis)]
@@ -26,14 +27,18 @@ flowchart LR
   HK["HealthKit / Health Connect"]
   P -- HTTPS --> CAD
   C -- HTTPS --> CAD
-  P -. wss .- CAD
-  C -. wss .- CAD
+  P -- "wss · private-pet.{id}" --- CAD
+  C -- "wss · private-pet.{id}" --- CAD
   CAD --> APP
   CAD --> REV
   APP --> PG
   APP --> R
   Q --> PG
   S --> PG
+  S -- "PetUpdated job (after commit)" --> R
+  APP -- "PetUpdated job (after commit)" --> R
+  R --> QB
+  QB -- "Pusher HTTP API" --> REV
   Q -- "reference image (job)" --> FAL
   APP -- "video job" --> FAL
   FAL -- "signed webhook (ED25519)" --> APP
@@ -123,7 +128,7 @@ flowchart TD
   HA -- "no / skipped" --> Z
   H0 --> Z
   Z["Zero tracking (hunger · thirst · hygiene — not energy)<br/>& pet_state on displayed (rounded) values"] --> W{Displayed value changed?}
-  W -- yes --> B[Save + PetUpdated broadcast after commit]
+  W -- yes --> B["Save + PetUpdated::afterCommit<br/>(job on 'broadcasts' queue, never throws)"]
   W -- no --> QS[Save quietly]
   B --> E
   QS --> E
@@ -328,4 +333,38 @@ flowchart LR
   REV --> M[Merge to main]
   M --> DEP["Deploy job<br/>rsync → backup DB → migrate → restart"]
   DEP --> PROD[(api.petprep.si)]
+```
+
+## 8. Real-time delivery (M1-08 private channel, M1-09 queue)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant App as Child / parent app<br/>(pusher-js + Echo)
+  participant Caddy as Caddy (TLS)
+  participant API as Laravel API
+  participant Rev as Reverb
+  participant Svc as Service<br/>(tick · child action · escalation · hard stop)
+  participant Redis as Redis queue "broadcasts"
+  participant W as queue-broadcasts worker
+
+  App->>Caddy: wss connect /app/{key}
+  Caddy->>Rev: upgrade
+  Rev-->>App: socket_id
+  App->>API: POST /api/broadcasting/auth<br/>Bearer token · socket_id · channel_name=private-pet.{id}
+  API->>API: auth:sanctum → PetPolicy::listen<br/>(owner child or that child's parent)
+  alt allowed
+    API-->>App: 200 {auth: "key:hmac"}
+    App->>Rev: subscribe private-pet.{id} + auth
+  else other child / other parent / guest
+    API-->>App: 403 / 401 (app falls back to polling)
+  end
+
+  Svc->>Svc: DB transaction + row lock, write
+  Svc->>Svc: PetUpdated::afterCommit(pet, event_type)
+  Note over Svc: commit → snapshot payload (no PII)<br/>rollback → nothing sent
+  Svc->>Redis: push BroadcastEvent (failure logged, tick continues)
+  W->>Redis: pop
+  W->>Rev: trigger pet.updated on private-pet.{id}<br/>(Reverb down → retry ×3, then failed job)
+  Rev-->>App: .pet.updated {pet_id, metrics, flags, event_type, emitted_at}
 ```

@@ -104,7 +104,8 @@ class EscalationService
      * `SELECT … FOR UPDATE` in a per-pet transaction and every decision is
      * made from that fresh row, so a concurrent clean() / feed / hard stop is
      * never overwritten or ignored. The result is copied back into $pet.
-     * Broadcasts and observers run after commit.
+     * Each escalation step taken emits exactly one PetUpdated after commit
+     * (M1-08); a tick takes at most one step per pet.
      *
      * @return bool True if an escalation action was taken.
      */
@@ -231,6 +232,7 @@ class EscalationService
         // No escalation needed — reset level if metrics recovered
         if ($currentLevel > 0) {
             $pet->update(['escalation_level' => 0]);
+            PetUpdated::afterCommit($pet, 'escalation_reset');
             Log::info('EscalationService: Escalation level reset — metrics recovered', [
                 'pet_id' => $pet->id,
             ]);
@@ -255,6 +257,8 @@ class EscalationService
             'value' => 30,
         ]);
 
+        PetUpdated::afterCommit($pet, 'soft_warning');
+
         // Dispatch push notification via queue (implementation for Phase 2+ push service)
         // SendSoftWarningNotification::dispatch($pet);
 
@@ -276,6 +280,8 @@ class EscalationService
             'activity_type' => ActivityType::IgnoredWarning->value,
             'value' => 10,
         ]);
+
+        PetUpdated::afterCommit($pet, 'critical_alert');
 
         // Dispatch critical push notification via queue
         // SendCriticalAlertNotification::dispatch($pet);
@@ -299,7 +305,7 @@ class EscalationService
         ]);
 
         // Broadcast parent alarm via Reverb
-        DB::afterCommit(fn () => broadcast(new PetUpdated($pet, 'parent_intervention_alarm')));
+        PetUpdated::afterCommit($pet, 'parent_intervention_alarm');
 
         Log::warning('EscalationService: Phase 3 parent intervention alarm triggered', [
             'pet_id' => $pet->id,
@@ -404,7 +410,7 @@ class EscalationService
         ]);
 
         // Broadcast illness state to parent and child
-        DB::afterCommit(fn () => broadcast(new PetUpdated($pet, 'illness_triggered')));
+        PetUpdated::afterCommit($pet, 'illness_triggered');
 
         Log::warning('EscalationService: Pet entered illness state', [
             'pet_id' => $pet->id,
@@ -468,7 +474,7 @@ class EscalationService
         ]);
 
         // Broadcast game over to parent and child via Reverb
-        DB::afterCommit(fn () => broadcast(new PetUpdated($pet, 'game_over_virtual_shelter')));
+        PetUpdated::afterCommit($pet, 'game_over_virtual_shelter');
 
         Log::critical('EscalationService: VIRTUAL SHELTER PROTOCOL triggered — Game Over', [
             'pet_id' => $pet->id,

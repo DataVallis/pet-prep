@@ -150,7 +150,7 @@ class PetDecayService
         // Broadcast after commit (no external I/O inside a transaction) and
         // only when something the parent sees changed: one per pet per tick.
         if ($changed && $locked->is_active) {
-            DB::afterCommit(fn () => broadcast(new PetUpdated($locked, 'metric_changed')));
+            PetUpdated::afterCommit($locked, 'metric_changed');
         }
 
         return $changed;

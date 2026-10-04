@@ -240,7 +240,7 @@ describe('POST /api/child/pet/feed', function () {
         expect($rows)->toHaveCount(1)->and($rows[0]->value)->toBe(40);
 
         Event::assertDispatchedTimes(PetUpdated::class, 1);
-        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'fed_pet' && $e->pet->id === $pet->id);
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'fed_pet' && $e->petId === $pet->id);
     });
 
     it('refuses outside the windows with the next window (422)', function () {

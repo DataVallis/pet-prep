@@ -150,7 +150,7 @@ describe('Illness recovery (fresh start)', function () {
         expect($after->frozen_at)->toBeNull();
         expect($after->last_decay_at->equalTo(Carbon::parse('2026-10-05 22:05:00')))->toBeTrue();
         expect($after->pet_state)->not->toBe(PetStateEnum::Sick);
-        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->pet->id === $pet->id);
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id);
     });
 
     it('does not fall ill again right after recovering (the old infinite illness loop)', function () {

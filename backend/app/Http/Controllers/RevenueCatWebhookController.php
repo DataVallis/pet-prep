@@ -28,7 +28,7 @@ class RevenueCatWebhookController extends Controller
         $webhookSecret = config('services.revenuecat.secret_key');
         if (filled($webhookSecret)) {
             $providedAuth = $request->header('Authorization');
-            $expectedAuth = 'Bearer ' . $webhookSecret;
+            $expectedAuth = 'Bearer '.$webhookSecret;
 
             if (! hash_equals($expectedAuth, (string) $providedAuth)) {
                 Log::warning('RevenueCatWebhook: Invalid Authorization header');
@@ -88,7 +88,7 @@ class RevenueCatWebhookController extends Controller
                 ]);
 
                 // Broadcast the breed change to parent and child
-                broadcast(new PetUpdated($pet->fresh(), 'breed_unlocked'));
+                PetUpdated::afterCommit($pet->fresh(), 'breed_unlocked');
 
                 Log::info('RevenueCatWebhook: Border Collie unlocked', [
                     'user_id' => $user->id,

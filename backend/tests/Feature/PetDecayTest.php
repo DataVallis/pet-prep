@@ -806,7 +806,7 @@ describe('Pet metric display contract', function () {
     it('broadcasts integer metrics in PetUpdated', function () {
         $pet = decayPet(['hunger_level' => 33.6]);
 
-        $payload = (new PetUpdated($pet, 'metric_changed'))->broadcastWith();
+        $payload = PetUpdated::fromPet($pet, 'metric_changed')->broadcastWith();
 
         expect($payload['hunger_level'])->toBe(34);
         expect($payload['hygiene_level'])->toBe(100);

@@ -345,9 +345,9 @@ class PetActivityService
         // metric_changed for a recovery / midnight reset / decay catch-up
         // the action applied.
         if ($result->changed()) {
-            DB::afterCommit(fn () => broadcast(new PetUpdated($locked, $activity->value)));
+            PetUpdated::afterCommit($locked, $activity->value);
         } elseif ($bookkeeping) {
-            DB::afterCommit(fn () => broadcast(new PetUpdated($locked, 'metric_changed')));
+            PetUpdated::afterCommit($locked, 'metric_changed');
         }
 
         return $result;

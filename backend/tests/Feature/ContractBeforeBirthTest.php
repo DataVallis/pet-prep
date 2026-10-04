@@ -15,6 +15,7 @@ use App\Services\EscalationService;
 use App\Services\PairingService;
 use App\Services\PetActivityService;
 use App\Services\PetDecayService;
+use Illuminate\Broadcasting\BroadcastEvent;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
@@ -298,8 +299,43 @@ describe('birth', function () {
         expect(ActivityLog::where('pet_id', $pet->id)->pluck('activity_type')->map->value->all())->toBe([ActivityType::SignedContract->value]);
         Event::assertDispatchedTimes(PetUpdated::class, 1);
         Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'signed_contract'
-            && $e->pet->id === $pet->id
-            && $e->broadcastWith()['awaiting_contract'] === false);
+            && $e->petId === $pet->id
+            && $e->broadcastWith()['awaiting_contract'] === false
+            && $e->broadcastWith()['born_at'] === $signedAt->toIso8601String());
+    });
+
+    it('queues exactly one PetUpdated on the broadcasts queue for the birth, awaiting_contract false', function () {
+        [, $pet] = cbUnborn('2026-10-04 06:00:00');
+        Queue::fake();
+
+        $this->postJson('/api/child/contract', CB_SVG)->assertStatus(201);
+
+        Queue::assertPushed(BroadcastEvent::class, 1);
+        Queue::assertPushedOn(PetUpdated::QUEUE, BroadcastEvent::class, function (BroadcastEvent $job) use ($pet) {
+            $event = unserialize(serialize($job))->event; // snapshot survives the queue
+
+            return $event instanceof PetUpdated
+                && $event->petId === $pet->id
+                && $event->eventType === 'signed_contract'
+                && $event->payload['awaiting_contract'] === false
+                && $event->payload['born_at'] === '2026-10-04T06:00:00+00:00'
+                && $event->payload['hunger_level'] === 100;
+        });
+    });
+
+    it('queues nothing from the tick or escalation while the pet is unborn', function () {
+        [, $pet] = cbUnborn('2026-10-04 06:00:00', [
+            'hunger_level' => 5, 'hygiene_level' => 0,
+            'hygiene_zero_since' => Carbon::parse('2026-10-03 00:00:00', 'UTC'),
+        ]);
+        Queue::fake();
+
+        cbAt('2026-10-04 12:00:00');
+        cbLoop();
+        app(PetDecayService::class)->processPetDecay(Pet::findOrFail($pet->id));
+        app(EscalationService::class)->processPetEscalation(Pet::findOrFail($pet->id));
+
+        Queue::assertNothingPushed();
     });
 
     it('broadcasts the birth only after the outer transaction commits', function () {
