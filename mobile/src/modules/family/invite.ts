@@ -49,19 +49,33 @@ export type JoinErrorKind =
   | 'already_member'
   | 'family_not_empty'
   | 'too_many_attempts'
+  | 'rate_limited'
+  | 'not_a_parent'
   | 'invalid_format'
   | 'offline'
   | 'server';
 
+const JOIN_REASONS: readonly JoinErrorKind[] = [
+  'invalid_code',
+  'code_expired',
+  'code_used',
+  'already_member',
+  'family_not_empty',
+  'too_many_attempts',
+  'not_a_parent',
+];
+
+/**
+ * The server's `reason` wins; without one: 429 = the route throttle (generic "too
+ * many requests"), 422 = validation (format), anything else (unknown 409, 5xx) = generic.
+ */
 export function classifyJoinError(error: unknown): JoinErrorKind {
   if (!(error instanceof ApiError)) return 'offline';
   const reason = reasonOf(error);
-  if (error.status === 429) return 'too_many_attempts';
-  if (error.status === 409) return reason === 'already_member' ? 'already_member' : 'family_not_empty';
-  if (error.status === 422) {
-    if (reason === 'invalid_code' || reason === 'code_expired' || reason === 'code_used') return reason;
-    return 'invalid_format';
-  }
+  const known = JOIN_REASONS.find((r) => r === reason);
+  if (known) return known;
+  if (error.status === 429) return 'rate_limited';
+  if (error.status === 422) return 'invalid_format';
   return 'server';
 }
 

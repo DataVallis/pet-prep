@@ -1,7 +1,10 @@
 /**
- * M2-05 / M2-01a: "Nadzor" — hard stop per pet with in-app confirmation (payload
- * carries pet_id), quiet hours, second-parent invite + share, joining a family.
+ * M2-05 / M2-01a: "Nadzor" — hard stop per pet with in-app confirmation (sets the
+ * confirmed intent: {pet_id, active}; PR #20 review M1), quiet hours, second-parent
+ * invite + share, joining a family.
  */
+import type { ReactElement } from 'react';
+import { QueryClientProvider } from '@tanstack/react-query';
 import { act, fireEvent, screen } from '@testing-library/react-native';
 import { Alert, Share } from 'react-native';
 
@@ -11,6 +14,7 @@ import { JOIN_FAMILY_STRINGS } from '@/components/parent/JoinFamilyCard';
 import { FAMILY_PARENTS_STRINGS } from '@/components/parent/FamilyParentsCard';
 import { PET_CONTROLS_STRINGS } from '@/components/parent/PetControlsCard';
 import { QUIET_HOURS_STRINGS } from '@/components/parent/QuietHoursCard';
+import { useParentDashboard } from '@/hooks/queries/useParentDashboard';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import ControlsScreen from '@/screens/parent/ControlsScreen';
 import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
@@ -22,7 +26,7 @@ jest.mock('@/api/client', () => {
     ...actual,
     api: {
       ...actual.api,
-      toggleHardStop: jest.fn(),
+      setHardStop: jest.fn(),
       getQuietHours: jest.fn(),
       updateQuietHours: jest.fn(),
       inviteParent: jest.fn(),
@@ -33,7 +37,8 @@ jest.mock('@/api/client', () => {
   };
 });
 
-const toggleHardStop = api.toggleHardStop as jest.Mock;
+const setHardStop = api.setHardStop as jest.Mock;
+const getParentDashboard = api.getParentDashboard as jest.Mock;
 const inviteParent = api.inviteParent as jest.Mock;
 const joinFamily = api.joinFamily as jest.Mock;
 const updateQuietHours = api.updateQuietHours as jest.Mock;
@@ -44,15 +49,30 @@ async function flush() {
   });
 }
 
-const FAMILY = familyFromDashboard(
-  makeScoredDashboard(
+function dashboardData(pet7Stopped = false) {
+  return makeScoredDashboard(
     [makeScoredChild(), makeScoredChild({ id: 5, name: 'Maja', pet_id: 8 })],
     [
-      makeFamilyPet({ id: 7, caretakers: [{ child_id: 2, contract_signed: true }] }),
+      makeFamilyPet({ id: 7, caretakers: [{ child_id: 2, contract_signed: true }], is_hard_stopped: pet7Stopped }),
       makeFamilyPet({ id: 8, caretakers: [{ child_id: 5, contract_signed: true }], is_hard_stopped: true }),
     ],
-  ) as never,
-) as FamilyOverview;
+  );
+}
+
+const FAMILY = familyFromDashboard(dashboardData() as never) as FamilyOverview;
+
+/** Controls fed by the real dashboard query (refetches change what the card sees). */
+function LiveControls() {
+  const dashboard = useParentDashboard({ refetchInterval: false });
+  return (
+    <ControlsScreen onBack={jest.fn()} family={familyFromDashboard(dashboard.data)} onAddChild={jest.fn()} onChildPin={jest.fn()} />
+  );
+}
+
+/** rerender keeping the test's QueryClient. */
+function rerenderWith(view: ReturnType<typeof renderWithQuery>, ui: ReactElement) {
+  view.rerender(<QueryClientProvider client={view.client}>{ui}</QueryClientProvider>);
+}
 
 const EMPTY: FamilyOverview = { ...FAMILY, children: [], pets: [] };
 
@@ -66,55 +86,134 @@ describe('ControlsScreen — hard stop per pet', () => {
     (api.getQuietHours as jest.Mock).mockResolvedValue({ quiet_hours: null });
   });
 
-  it('shows caretakers and asks in-app before stopping; the request names the pet', async () => {
+  it('asks in-app first; the request SETS the confirmed state for that pet', async () => {
     const alertSpy = jest.spyOn(Alert, 'alert');
-    toggleHardStop.mockResolvedValueOnce({ message: 'x', pet_id: 7, is_hard_stopped: true });
+    setHardStop.mockResolvedValueOnce({ message: 'x', pet_id: 7, is_hard_stopped: true, changed: true });
     renderControls();
     await flush();
 
     expect(screen.getByTestId('pet-caretakers-7')).toHaveTextContent('Skrbi: Luka');
     expect(screen.getByTestId('pet-caretakers-8')).toHaveTextContent('Skrbi: Maja');
+    expect(screen.getByLabelText(PET_CONTROLS_STRINGS.a11y(PET_CONTROLS_STRINGS.stop, 'Mešanček', 'Luka'))).toBeTruthy();
     fireEvent.press(screen.getByTestId('hard-stop-7'));
     expect(screen.getByText(PET_CONTROLS_STRINGS.confirmStop('Luka'))).toBeTruthy();
-    expect(toggleHardStop).not.toHaveBeenCalled();
+    expect(setHardStop).not.toHaveBeenCalled();
     expect(alertSpy).not.toHaveBeenCalled();
 
     fireEvent.press(screen.getByTestId('hard-stop-confirm-button-7'));
     await flush();
-    expect(toggleHardStop).toHaveBeenCalledTimes(1);
-    expect(toggleHardStop).toHaveBeenCalledWith(7);
+    expect(setHardStop).toHaveBeenCalledTimes(1);
+    expect(setHardStop).toHaveBeenCalledWith(7, true);
     expect(screen.getByTestId('hard-stop-result-7')).toHaveTextContent(PET_CONTROLS_STRINGS.stopped);
     expect(screen.queryByTestId('hard-stop-confirm-7')).toBeNull();
     alertSpy.mockRestore();
   });
 
-  it('a stopped pet offers "Nadaljuj igro"; cancel sends nothing; offline keeps the confirmation', async () => {
+  it('a stopped pet resumes with active=false; cancel sends nothing', async () => {
+    setHardStop.mockResolvedValueOnce({ message: 'x', pet_id: 8, is_hard_stopped: false, changed: true });
     renderControls();
     await flush();
     expect(screen.getByTestId('pet-status-8')).toHaveTextContent(/hard stop/);
     fireEvent.press(screen.getByTestId('hard-stop-8'));
     expect(screen.getByText(PET_CONTROLS_STRINGS.confirmResume)).toBeTruthy();
     fireEvent.press(screen.getByText(PET_CONTROLS_STRINGS.cancel));
-    expect(toggleHardStop).not.toHaveBeenCalled();
+    expect(setHardStop).not.toHaveBeenCalled();
 
-    toggleHardStop.mockRejectedValueOnce(new TypeError('Network request failed'));
     fireEvent.press(screen.getByTestId('hard-stop-8'));
     fireEvent.press(screen.getByTestId('hard-stop-confirm-button-8'));
     await flush();
-    expect(toggleHardStop).toHaveBeenCalledWith(8);
-    expect(screen.getByTestId('hard-stop-result-8')).toHaveTextContent(PET_CONTROLS_STRINGS.errors.offline);
-    expect(screen.getByTestId('hard-stop-confirm-8')).toBeTruthy();
+    expect(setHardStop).toHaveBeenCalledWith(8, false);
+    expect(screen.getByTestId('hard-stop-result-8')).toHaveTextContent(PET_CONTROLS_STRINGS.resumed);
   });
 
-  it('a game-over pet has no hard stop button', async () => {
+  it('state flips to the intent while confirming (other parent / broadcast) → closes, sends nothing', async () => {
+    const view = renderControls();
+    await flush();
+    fireEvent.press(screen.getByTestId('hard-stop-7'));
+    expect(screen.getByTestId('hard-stop-confirm-7')).toBeTruthy();
+
+    const stopped = familyFromDashboard(dashboardData(true) as never) as FamilyOverview;
+    rerenderWith(view, <ControlsScreen onBack={jest.fn()} family={stopped} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
+    await flush();
+
+    expect(screen.queryByTestId('hard-stop-confirm-7')).toBeNull();
+    expect(screen.getByTestId('hard-stop-result-7')).toHaveTextContent(PET_CONTROLS_STRINGS.alreadyStopped);
+    expect(setHardStop).not.toHaveBeenCalled();
+  });
+
+  it('double tap on confirm sends exactly one request', async () => {
+    let resolve: (v: unknown) => void = () => undefined;
+    setHardStop.mockReturnValueOnce(new Promise((r) => (resolve = r)));
+    renderControls();
+    await flush();
+    fireEvent.press(screen.getByTestId('hard-stop-7'));
+    const confirm = screen.getByTestId('hard-stop-confirm-button-7');
+    fireEvent.press(confirm);
+    fireEvent.press(confirm);
+    fireEvent.press(confirm);
+    await flush();
+    expect(setHardStop).toHaveBeenCalledTimes(1);
+    await act(async () => resolve({ message: 'x', pet_id: 7, is_hard_stopped: true, changed: true }));
+    await flush();
+    expect(setHardStop).toHaveBeenCalledTimes(1);
+  });
+
+  it('lost response: refetches first; if the stop landed, the confirmation closes without a resend', async () => {
+    getParentDashboard.mockResolvedValueOnce(dashboardData(false)).mockResolvedValue(dashboardData(true));
+    setHardStop.mockRejectedValueOnce(new TypeError('Network request failed'));
+    renderWithQuery(<LiveControls />);
+    await flush();
+
+    fireEvent.press(screen.getByTestId('hard-stop-7'));
+    fireEvent.press(screen.getByTestId('hard-stop-confirm-button-7'));
+    await flush();
+    await flush();
+
+    expect(setHardStop).toHaveBeenCalledTimes(1);
+    expect(getParentDashboard.mock.calls.length).toBeGreaterThanOrEqual(2);
+    expect(screen.queryByTestId('hard-stop-confirm-7')).toBeNull();
+    expect(screen.getByTestId('hard-stop-result-7')).toHaveTextContent(PET_CONTROLS_STRINGS.alreadyStopped);
+    expect(screen.getByTestId('pet-status-7')).toHaveTextContent(/hard stop/);
+  });
+
+  it('lost response that did not land: the retry sends the same intent again (idempotent)', async () => {
+    getParentDashboard.mockResolvedValue(dashboardData(false));
+    setHardStop
+      .mockRejectedValueOnce(new TypeError('Network request failed'))
+      .mockResolvedValueOnce({ message: 'x', pet_id: 7, is_hard_stopped: true, changed: true });
+    renderWithQuery(<LiveControls />);
+    await flush();
+
+    fireEvent.press(screen.getByTestId('hard-stop-7'));
+    fireEvent.press(screen.getByTestId('hard-stop-confirm-button-7'));
+    await flush();
+    await flush();
+    expect(screen.getByTestId('hard-stop-result-7')).toHaveTextContent(PET_CONTROLS_STRINGS.errors.offline);
+    expect(screen.getByTestId('hard-stop-confirm-7')).toBeTruthy();
+
+    fireEvent.press(screen.getByTestId('hard-stop-confirm-button-7'));
+    await flush();
+    expect(setHardStop.mock.calls).toEqual([
+      [7, true],
+      [7, true],
+    ]);
+    expect(screen.getByTestId('hard-stop-result-7')).toHaveTextContent(PET_CONTROLS_STRINGS.stopped);
+  });
+
+  it('game-over and inactive pets have no hard stop button', async () => {
     const family: FamilyOverview = {
       ...FAMILY,
-      pets: [{ ...FAMILY.pets[0], is_game_over: true, is_active: false }],
+      pets: [
+        { ...FAMILY.pets[0], is_game_over: true, is_active: false },
+        { ...FAMILY.pets[1], is_active: false, is_hard_stopped: false },
+      ],
     };
     renderControls(family);
     await flush();
     expect(screen.queryByTestId('hard-stop-7')).toBeNull();
+    expect(screen.queryByTestId('hard-stop-8')).toBeNull();
     expect(screen.getByTestId('pet-status-7')).toHaveTextContent(/Igra končana/);
+    expect(screen.getByTestId('pet-status-8')).toHaveTextContent(/ni aktiven/);
   });
 });
 
@@ -197,6 +296,39 @@ describe('ControlsScreen — family (invite / join)', () => {
     expect(screen.queryByTestId('join-family')).toBeNull();
   });
 
+  it('a successful join is announced by the parent screen (notice survives the card)', async () => {
+    joinFamily.mockResolvedValueOnce({
+      message: 'You joined the family.',
+      family: { id: 9, timezone: 'Europe/Ljubljana', parents: [{ id: 3, name: 'Ana' }, { id: 1, name: 'Starš' }], children_count: 1, pets_count: 1 },
+    });
+    const onNotice = jest.fn();
+    const view = renderWithQuery(
+      <ControlsScreen onBack={jest.fn()} family={EMPTY} onAddChild={jest.fn()} onChildPin={jest.fn()} onNotice={onNotice} />,
+    );
+    await flush();
+    fireEvent.changeText(screen.getByTestId('join-code-input'), 'K7QM2XPA');
+    fireEvent.press(screen.getByTestId('join-submit'));
+    await flush();
+    expect(onNotice).toHaveBeenCalledWith(JOIN_FAMILY_STRINGS.joined(2));
+
+    // The family is no longer empty → join card gone, the lifted notice stays.
+    rerenderWith(
+      view,
+      <ControlsScreen
+        onBack={jest.fn()}
+        family={FAMILY}
+        onAddChild={jest.fn()}
+        onChildPin={jest.fn()}
+        notice={JOIN_FAMILY_STRINGS.joined(2)}
+        onNotice={onNotice}
+      />,
+    );
+    expect(screen.queryByTestId('join-family')).toBeNull();
+    expect(screen.getByTestId('parent-notice')).toHaveTextContent(new RegExp(JOIN_FAMILY_STRINGS.joined(2).replace(/[()]/g, '\\$&')));
+    fireEvent.press(screen.getByLabelText('Zapri'));
+    expect(onNotice).toHaveBeenLastCalledWith(null);
+  });
+
   it('joins with a normalised code', async () => {
     joinFamily.mockResolvedValueOnce({
       message: 'You joined the family.',
@@ -218,6 +350,9 @@ describe('ControlsScreen — family (invite / join)', () => {
     [new ApiError('x', 422, { reason: 'code_expired' }), JOIN_FAMILY_STRINGS.errors.code_expired],
     [new ApiError('x', 422, { reason: 'code_used' }), JOIN_FAMILY_STRINGS.errors.code_used],
     [new ApiError('x', 429, { reason: 'too_many_attempts' }), JOIN_FAMILY_STRINGS.errors.too_many_attempts],
+    [new ApiError('Too Many Attempts.', 429, { message: 'Too Many Attempts.' }, 60), JOIN_FAMILY_STRINGS.errors.rate_limited],
+    [new ApiError('x', 403, { reason: 'not_a_parent' }), JOIN_FAMILY_STRINGS.errors.not_a_parent],
+    [new ApiError('x', 409, { reason: 'something_new' }), JOIN_FAMILY_STRINGS.errors.server],
     [new TypeError('Network request failed'), JOIN_FAMILY_STRINGS.errors.offline],
   ])('join error %#', async (error, text) => {
     joinFamily.mockRejectedValueOnce(error);

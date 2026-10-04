@@ -98,6 +98,18 @@ export function MetricRow({ label, value, testID }: { label: string; value: numb
   );
 }
 
+/** Green confirmation banner (e.g. "Pridružili ste se družini") with a close action. */
+export function NoticeBanner({ text, onClose, closeLabel }: { text: string; onClose: () => void; closeLabel: string }) {
+  return (
+    <View style={styles.notice} testID="parent-notice" accessibilityLiveRegion="polite">
+      <Text style={styles.noticeText}>{text}</Text>
+      <Pressable onPress={onClose} hitSlop={8} accessibilityRole="button" accessibilityLabel={closeLabel}>
+        <Text style={styles.errorRetry}>{closeLabel}</Text>
+      </Pressable>
+    </View>
+  );
+}
+
 /** Inline error / offline banner with a retry action. */
 export function ErrorBanner({
   text,
@@ -213,6 +225,17 @@ const styles = StyleSheet.create({
     backgroundColor: C.redSoft,
   },
   errorText: { flex: 1, fontSize: 13, color: C.redText },
+  notice: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    padding: 12,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: '#a7f3d0',
+    backgroundColor: C.greenSoft,
+  },
+  noticeText: { flex: 1, fontSize: 13, color: C.greenText },
   errorRetry: { fontSize: 13, fontWeight: '700', color: C.accent },
   loading: { alignItems: 'center', gap: 10, paddingVertical: 40 },
   muted: { fontSize: 13, color: C.muted },

@@ -500,9 +500,11 @@ export interface paths {
         get?: never;
         put?: never;
         /**
-         * POST /api/parent/hard-stop {pet_id?}
-         *     Toggles hard stop on one active pet of the family (default: the legacy
-         *     pet) and broadcasts PetUpdated. Any parent of the family may do it
+         * POST /api/parent/hard-stop {pet_id?, active?}
+         *     Sets (`active` given — idempotent, M2-05 review) or toggles (no
+         *     `active` — deprecated, old app builds) the hard stop of one active pet
+         *     of the family (default: the legacy pet). Any parent of the family may
+         *     do it. Response `changed: false` = already in that state, no broadcast
          */
         post: operations["parentDashboard.toggleHardStop"];
         delete?: never;
@@ -625,6 +627,17 @@ export interface components {
              *     the family = the child will share it (shared custody).
              */
             pet_id?: number | null;
+        };
+        /**
+         * HardStopRequest
+         * @description POST /api/parent/hard-stop {pet_id?, active?} (M2-05 review).
+         *     `active` (bool) = the state the parent wants (idempotent set); without it
+         *     the endpoint keeps the deprecated toggle for old app builds.
+         *     Authorization (parent of the pet's family) happens in the controller.
+         */
+        HardStopRequest: {
+            pet_id?: number | null;
+            active?: boolean | null;
         };
         /** JoinFamilyRequest */
         JoinFamilyRequest: {
@@ -2344,9 +2357,7 @@ export interface operations {
         };
         requestBody?: {
             content: {
-                "application/json": {
-                    pet_id?: number | null;
-                };
+                "application/json": components["schemas"]["HardStopRequest"];
             };
         };
         responses: {
@@ -2360,6 +2371,8 @@ export interface operations {
                         message: "Hard stop activated. Child app locked." | "Hard stop deactivated. Child app unlocked.";
                         pet_id: number;
                         is_hard_stopped: boolean;
+                        /** @description false = the pet already was in the requested state (nothing written, no broadcast). */
+                        changed: boolean;
                     };
                 };
             };

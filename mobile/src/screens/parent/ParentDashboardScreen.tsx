@@ -9,7 +9,7 @@
  * pet, quiet hours, parents + invite / join. "Pasme": simulated paywall (M3).
  */
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { LayoutDashboard, LogOut, PawPrint, Settings } from 'lucide-react-native';
 
@@ -21,7 +21,7 @@ import AddChildCard from '@/components/AddChildCard';
 import ChildOverviewCard from '@/components/parent/ChildOverviewCard';
 import JoinFamilyCard from '@/components/parent/JoinFamilyCard';
 import ParentLiveChannels from '@/components/ParentLiveChannels';
-import { ErrorBanner, LoadingBlock, PARENT_COLORS as C } from '@/components/parent/ParentUi';
+import { ErrorBanner, LoadingBlock, NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import ControlsScreen from '@/screens/parent/ControlsScreen';
 import BreedPaywallScreen from '@/screens/parent/BreedPaywallScreen';
 import AddChildScreen from '@/screens/parent/AddChildScreen';
@@ -41,6 +41,7 @@ export const DASHBOARD_STRINGS = {
   firstLoadError: 'Pregleda ni bilo mogoče naložiti.',
   retry: 'Poskusi znova',
   logout: 'Odjava',
+  closeNotice: 'Zapri',
   tabs: { dashboard: 'Pregled', controls: 'Nadzor', breeds: 'Pasme' },
 } as const;
 
@@ -79,16 +80,25 @@ function BottomNavBar({ activeTab, onSelect }: { activeTab: Tab; onSelect: (tab:
 export default function ParentDashboardScreen() {
   const [activeTab, setActiveTab] = useState<Tab>('dashboard');
   const [overlay, setOverlay] = useState<Overlay>({ kind: 'none' });
+  const [notice, setNotice] = useState<string | null>(null);
   const dashboard = useParentDashboard();
   const noChild = isNoChildPaired(dashboard.data);
   const family = familyFromDashboard(dashboard.data);
   const children = family?.children ?? [];
-  const livePetIds = (family?.pets ?? []).filter((p) => !p.is_game_over).map((p) => p.id);
+  const livePetIds = (family?.pets ?? []).filter((p) => p.is_active && !p.is_game_over).map((p) => p.id);
 
   const openAddChild = () => setOverlay({ kind: 'addChild' });
   const openChildPin = (child: FamilyChild) => setOverlay({ kind: 'addChild', child });
   const openChild = (child: FamilyChild) => setOverlay({ kind: 'child', childId: child.id });
   const closeOverlay = () => setOverlay({ kind: 'none' });
+
+  // The child shown in the detail left the family list (removed / other parent's change)
+  // → back to the overview instead of a stale or empty screen.
+  const detailMissing =
+    overlay.kind === 'child' && dashboard.data !== undefined && !children.some((c) => c.id === overlay.childId);
+  useEffect(() => {
+    if (detailMissing) setOverlay({ kind: 'none' });
+  }, [detailMissing]);
 
   // One stable position for the live subscriptions, whatever tab / overlay is shown.
   return (
@@ -124,6 +134,8 @@ export default function ParentDashboardScreen() {
             family={family}
             onAddChild={openAddChild}
             onChildPin={openChildPin}
+            notice={notice}
+            onNotice={setNotice}
           />
           <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} />
         </>
@@ -165,6 +177,7 @@ export default function ParentDashboardScreen() {
         </View>
 
         <ScrollView style={styles.flex} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+          {notice && <NoticeBanner text={notice} closeLabel={DASHBOARD_STRINGS.closeNotice} onClose={() => setNotice(null)} />}
           {dashboard.isError && (
             <ErrorBanner
               text={
@@ -186,7 +199,7 @@ export default function ParentDashboardScreen() {
           ) : !dashboard.data ? null : children.length === 0 ? (
             <>
               <AddChildCard onPress={openAddChild} />
-              {(noChild || family === null || family.pets.length === 0) && <JoinFamilyCard />}
+              {(noChild || family === null || family.pets.length === 0) && <JoinFamilyCard onJoined={setNotice} />}
             </>
           ) : (
             children.map((child) => (

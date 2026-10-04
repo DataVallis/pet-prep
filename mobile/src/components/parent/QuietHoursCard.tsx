@@ -71,6 +71,9 @@ export default function QuietHoursCard() {
   const [times, setTimes] = useState<Times>(DEFAULT_TIMES);
   const [message, setMessage] = useState<{ text: string; isError: boolean } | null>(null);
 
+  // Seed the form from the server whenever the stored hours change (first load, after
+  // a save, another parent's edit). Nothing polls this query, so a parent's unsaved
+  // typing is only replaced by a deliberate refetch (e.g. after joining a family).
   useEffect(() => {
     if (query.data) {
       const { school_start, school_end, bedtime_start, bedtime_end, is_active } = query.data;

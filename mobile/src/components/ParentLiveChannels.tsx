@@ -1,32 +1,20 @@
 /**
- * Invisible: one private Reverb subscription per pet of the family (M2-05). Events
- * patch / refetch the cached dashboard (`applyParentBroadcast`), never the session
- * store. While a channel isn't subscribed `wsStatus` makes the dashboard poll.
+ * Invisible: the parent's live connection (M2-05) — one Echo with one private
+ * Reverb channel per family pet (`usePetChannels`, status per pet). Events patch /
+ * refetch the cached dashboard (`createParentBroadcastHandler`, decay ticks
+ * throttled), never the session store. Unless every channel is subscribed,
+ * `wsStatus` makes the dashboard poll every 30 s.
  */
 
-import { useCallback } from 'react';
+import { useMemo } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 
-import { usePetWebSocket } from '@/hooks/usePetWebSocket';
-import { applyParentBroadcast } from '@/modules/family/live';
-import type { PetUpdatedBroadcast } from '@/types';
-
-function PetChannel({ petId }: { petId: number }) {
-  const queryClient = useQueryClient();
-  const onBroadcast = useCallback(
-    (event: PetUpdatedBroadcast) => applyParentBroadcast(queryClient, event),
-    [queryClient],
-  );
-  usePetWebSocket(petId, onBroadcast);
-  return null;
-}
+import { usePetChannels } from '@/hooks/usePetChannels';
+import { createParentBroadcastHandler } from '@/modules/family/live';
 
 export default function ParentLiveChannels({ petIds }: { petIds: number[] }) {
-  return (
-    <>
-      {petIds.map((id) => (
-        <PetChannel key={id} petId={id} />
-      ))}
-    </>
-  );
+  const queryClient = useQueryClient();
+  const onBroadcast = useMemo(() => createParentBroadcastHandler(queryClient), [queryClient]);
+  usePetChannels(petIds, onBroadcast);
+  return null;
 }

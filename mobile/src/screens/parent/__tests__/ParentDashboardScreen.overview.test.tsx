@@ -7,7 +7,7 @@ import { act, fireEvent, screen } from '@testing-library/react-native';
 
 import { api } from '@/api/client';
 import { CHILD_CARD_STRINGS } from '@/components/parent/ChildOverviewCard';
-import { usePetWebSocket } from '@/hooks/usePetWebSocket';
+import { usePetChannels } from '@/hooks/usePetChannels';
 import ParentDashboardScreen, { DASHBOARD_STRINGS } from '@/screens/parent/ParentDashboardScreen';
 import { useAppStore } from '@/store/appStore';
 import {
@@ -34,11 +34,13 @@ jest.mock('@/api/client', () => {
     },
   };
 });
-jest.mock('@/hooks/usePetWebSocket', () => ({ usePetWebSocket: jest.fn() }));
+jest.mock('@/hooks/usePetChannels', () => ({ usePetChannels: jest.fn() }));
 jest.mock('@/modules/session/logout', () => ({ logout: jest.fn(() => Promise.resolve()) }));
 
 const getParentDashboard = api.getParentDashboard as jest.Mock;
-const wsHook = usePetWebSocket as jest.Mock;
+const channelsHook = usePetChannels as jest.Mock;
+/** Pet ids of the latest `usePetChannels(petIds, handler)` call. */
+const subscribedIds = (): number[] => (channelsHook.mock.calls.at(-1)?.[0] as number[] | undefined) ?? [];
 
 async function flush() {
   await act(async () => {
@@ -110,7 +112,7 @@ describe('ParentDashboardScreen — family overview (M2-05)', () => {
   it('red child: game over + fell ill today, illnesses in the score', async () => {
     const child = makeScoredChild({
       traffic_light: { color: 'red', reasons: ['game_over', 'fell_ill_today'] },
-      care_score: { score: 40, done: 10, expected: 20, illnesses: 1, since: null },
+      care_score: { score: 40, done: 10, expected: 20, routines: 20, illnesses: 1, since: null },
     });
     getParentDashboard.mockResolvedValue(
       makeScoredDashboard([child], [{ ...PET7, is_game_over: true, is_active: false }]),
@@ -124,7 +126,7 @@ describe('ParentDashboardScreen — family overview (M2-05)', () => {
     expect(screen.getByTestId('child-illnesses-2')).toHaveTextContent(/1 bolezen \(−10 točk\)/);
     expect(screen.getByTestId('child-pet-status-2')).toHaveTextContent(/Igra končana/);
     // A game-over pet needs no live channel.
-    expect(wsHook.mock.calls.every((c) => c[0] !== 7)).toBe(true);
+    expect(subscribedIds()).not.toContain(7);
   });
 
   it('red child: phase 3 alarm reason', async () => {
@@ -136,7 +138,7 @@ describe('ParentDashboardScreen — family overview (M2-05)', () => {
   });
 
   it('null score: "Še ni dovolj podatkov"', async () => {
-    const child = makeScoredChild({ care_score: { score: null, done: 0, expected: 0, illnesses: 0, since: null } });
+    const child = makeScoredChild({ care_score: { score: null, done: 0, expected: 0, routines: null, illnesses: 0, since: null } });
     getParentDashboard.mockResolvedValue(makeScoredDashboard([child], [PET7]));
     renderWithQuery(<ParentDashboardScreen />);
     await flush();
@@ -169,35 +171,45 @@ describe('ParentDashboardScreen — family overview (M2-05)', () => {
     expect(screen.getByTestId('join-family')).toBeTruthy();
   });
 
-  it('live: one channel per pet, a broadcast patches that pet at once', async () => {
+  it('live: one channel per pet (one connection), a broadcast patches that pet at once', async () => {
     const LUKA = makeScoredChild();
     const MAJA = makeScoredChild({ id: 5, name: 'Maja', pet_id: 8 });
-    getParentDashboard.mockResolvedValue(
-      makeScoredDashboard([LUKA, MAJA], [PET7, makeFamilyPet({ id: 8, caretakers: [{ child_id: 5, contract_signed: true }] })]),
-    );
+    const pet8 = makeFamilyPet({ id: 8, caretakers: [{ child_id: 5, contract_signed: true }] });
+    getParentDashboard
+      .mockResolvedValueOnce(makeScoredDashboard([LUKA, MAJA], [PET7, pet8]))
+      // What the server says after the tick (the throttled refetch agrees with the event).
+      .mockResolvedValue(makeScoredDashboard([LUKA, MAJA], [PET7, { ...pet8, metrics: { ...pet8.metrics, hygiene: 0 } }]));
     renderWithQuery(<ParentDashboardScreen />);
     await flush();
 
-    const subscribed = new Set(wsHook.mock.calls.map((c) => c[0]));
-    expect(subscribed).toEqual(new Set([7, 8]));
-    const handler = wsHook.mock.calls.filter((c) => c[0] === 8).at(-1)?.[1] as (e: PetUpdatedBroadcast) => void;
+    expect([...subscribedIds()].sort()).toEqual([7, 8]);
+    const handler = channelsHook.mock.calls.at(-1)?.[1] as (e: PetUpdatedBroadcast) => void;
     expect(typeof handler).toBe('function');
 
     await act(async () => {
-      handler(makeBroadcast({ pet_id: 8, hygiene_level: 0, event_type: 'metric_changed' }));
+      handler(makeBroadcast({ pet_id: 8, hygiene_level: 0, event_type: 'metric_changed', emitted_at: '2026-10-04T10:00:00.000+00:00' }));
     });
     await flush();
     expect(screen.getByTestId('child-pet-hygiene-5')).toHaveTextContent('Čistoča0 %');
     expect(screen.getByTestId('child-pet-hygiene-2')).toHaveTextContent('Čistoča100 %');
-    // A tick doesn't refetch; the parent store is not touched.
-    expect(getParentDashboard).toHaveBeenCalledTimes(1);
+    // The first tick refetches once (throttled), the parent store is not touched.
+    expect(getParentDashboard).toHaveBeenCalledTimes(2);
     expect(useAppStore.getState().pet).toBeNull();
 
+    // A second tick within a minute: patched at once, no request.
+    await act(async () => {
+      handler(makeBroadcast({ pet_id: 8, hygiene_level: 50, event_type: 'metric_changed' }));
+    });
+    await flush();
+    expect(screen.getByTestId('child-pet-hygiene-5')).toHaveTextContent('Čistoča50 %');
+    expect(getParentDashboard).toHaveBeenCalledTimes(2);
+
+    // A real action always refetches.
     await act(async () => {
       handler(makeBroadcast({ pet_id: 8, event_type: 'cleaned_poop' }));
     });
     await flush();
-    expect(getParentDashboard).toHaveBeenCalledTimes(2);
+    expect(getParentDashboard).toHaveBeenCalledTimes(3);
   });
 
   it('opens the child detail and comes back', async () => {
@@ -212,6 +224,33 @@ describe('ParentDashboardScreen — family overview (M2-05)', () => {
     expect(api.getChildReport).toHaveBeenCalledWith(2, 7);
     fireEvent.press(screen.getByTestId('detail-back'));
     expect(screen.getByTestId('child-card-2')).toBeTruthy();
+  });
+
+  it('returns to the overview when the child shown in detail leaves the family', async () => {
+    (api.getChildReport as jest.Mock).mockReturnValue(new Promise(() => undefined));
+    (api.getPetActivities as jest.Mock).mockReturnValue(new Promise(() => undefined));
+    const MAJA = makeScoredChild({ id: 5, name: 'Maja', pet_id: null });
+    getParentDashboard.mockResolvedValueOnce(makeScoredDashboard([makeScoredChild(), MAJA], [PET7]));
+    const { client } = renderWithQuery(<ParentDashboardScreen />);
+    await flush();
+    fireEvent.press(screen.getByTestId('child-details-5'));
+    expect(screen.getByTestId('detail-back')).toBeTruthy();
+
+    getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [PET7]));
+    await act(async () => {
+      await client.refetchQueries({ queryKey: ['parent', 'dashboard'] });
+    });
+    await flush();
+    expect(screen.queryByTestId('detail-back')).toBeNull();
+    expect(screen.getByTestId('child-card-2')).toBeTruthy();
+  });
+
+  it('shared pet: "x od y" uses the shared routines and shows the fair share', async () => {
+    const child = makeScoredChild({ care_score: { score: 100, done: 10, expected: 6, routines: 12, illnesses: 0, since: null } });
+    getParentDashboard.mockResolvedValue(makeScoredDashboard([child], [PET7]));
+    renderWithQuery(<ParentDashboardScreen />);
+    await flush();
+    expect(screen.getByTestId('child-score-routines-2')).toHaveTextContent('10 od 12 rutin · pošten delež 6');
   });
 
   it('keeps the last data with an offline banner when a refetch fails', async () => {
@@ -238,7 +277,7 @@ describe('ParentDashboardScreen — polling fallback', () => {
     jest.useRealTimers();
   });
 
-  it('polls every 30 s while the socket is down and stops once it is connected', async () => {
+  it('polls every 30 s while not every channel is live; while live only a slow 3-min refresh', async () => {
     getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [PET7]));
     renderWithQuery(<ParentDashboardScreen />);
     await act(async () => {
@@ -257,14 +296,18 @@ describe('ParentDashboardScreen — polling fallback', () => {
 
     act(() => useAppStore.getState().setWsStatus('connected'));
     await act(async () => {
-      await jest.advanceTimersByTimeAsync(90_000);
+      await jest.advanceTimersByTimeAsync(170_000);
     });
     expect(getParentDashboard).toHaveBeenCalledTimes(2);
+    await act(async () => {
+      await jest.advanceTimersByTimeAsync(11_000);
+    });
+    expect(getParentDashboard).toHaveBeenCalledTimes(3);
 
     act(() => useAppStore.getState().setWsStatus('reconnecting'));
     await act(async () => {
       await jest.advanceTimersByTimeAsync(30_500);
     });
-    expect(getParentDashboard).toHaveBeenCalledTimes(3);
+    expect(getParentDashboard).toHaveBeenCalledTimes(4);
   });
 });

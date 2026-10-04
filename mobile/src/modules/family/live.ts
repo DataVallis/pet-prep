@@ -2,8 +2,10 @@
  * Live parent dashboard (M2-05): Reverb `pet.updated` events for any pet of the
  * family patch the cached `GET /api/parent/dashboard` at once (metrics, flags), and
  * every event other than a plain decay tick also refetches it — routines, Care Score,
- * traffic light and timeline are server computations the event can't carry.
- * Without a live socket the dashboard polls instead (`PARENT_POLL_MS`).
+ * traffic light and timeline are server computations the event can't carry. A decay
+ * tick refetches at most once a minute (a tick can close a window → "missed").
+ * Without every pet channel live the dashboard polls every 30 s; while live it still
+ * refreshes every 3 min (feed windows / deadlines pass without any event).
  */
 
 import type { QueryClient } from '@tanstack/react-query';
@@ -12,16 +14,22 @@ import type { ParentDashboardResponse } from '@/api/client';
 import type { WebSocketStatus } from '@/store/appStore';
 import type { PetUpdatedBroadcast } from '@/types';
 
-/** Poll interval while the socket is not subscribed (spec: polling fallback 30 s). */
+/** Poll interval while not every pet channel is subscribed (polling fallback). */
 export const PARENT_POLL_MS = 30_000;
+
+/** Background refresh while live: deadlines pass without events (review M3). */
+export const PARENT_LIVE_REFRESH_MS = 180_000;
+
+/** At most one refetch per this interval for plain decay ticks (`metric_changed`). */
+export const TICK_REFETCH_THROTTLE_MS = 60_000;
 
 export const parentDashboardKey = ['parent', 'dashboard'] as const;
 export const parentActivitiesKey = (petId: number) => ['parent', 'activities', petId] as const;
 export const childReportKey = (childId: number, days: number) => ['parent', 'childReport', childId, days] as const;
 
-/** 30 s polling unless the private channel is subscribed. */
-export function livePollInterval(wsStatus: WebSocketStatus): number | false {
-  return wsStatus === 'connected' ? false : PARENT_POLL_MS;
+/** 30 s polling unless every pet channel is subscribed; then a slow 3-min refresh. */
+export function livePollInterval(wsStatus: WebSocketStatus): number {
+  return wsStatus === 'connected' ? PARENT_LIVE_REFRESH_MS : PARENT_POLL_MS;
 }
 
 /** Copy the broadcast's pet snapshot onto that pet of the cached dashboard (immutable). */
@@ -78,4 +86,28 @@ export function applyParentBroadcast(queryClient: QueryClient, event: PetUpdated
   void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
   void queryClient.invalidateQueries({ queryKey: parentActivitiesKey(event.pet_id) });
   void queryClient.invalidateQueries({ queryKey: ['parent', 'childReport'] });
+}
+
+/**
+ * A handler with the tick throttle: every event is patched (and non-tick events
+ * refetch as in `applyParentBroadcast`); decay ticks refetch the dashboard at most
+ * once per `TICK_REFETCH_THROTTLE_MS` — a pet ticks ~200× a day.
+ */
+export function createParentBroadcastHandler(
+  queryClient: QueryClient,
+  now: () => number = Date.now,
+): (event: PetUpdatedBroadcast) => void {
+  let lastTickRefetch = Number.NEGATIVE_INFINITY;
+  return (event) => {
+    applyParentBroadcast(queryClient, event);
+    if (needsRefetch(event)) {
+      lastTickRefetch = now(); // a full refetch just happened anyway
+      return;
+    }
+    const t = now();
+    if (t - lastTickRefetch >= TICK_REFETCH_THROTTLE_MS) {
+      lastTickRefetch = t;
+      void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
+    }
+  };
 }

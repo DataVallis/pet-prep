@@ -59,21 +59,29 @@ export function usePetActivities(petId: number | null) {
   });
 }
 
+export interface HardStopVariables {
+  petId: number;
+  /** The state the parent confirmed (true = stop). */
+  active: boolean;
+}
+
 /**
- * Toggle the hard stop of one pet (the endpoint is a toggle — the screen confirms
- * first). The answer's flag goes straight into the cached dashboard, then it refetches.
+ * Set the hard stop of one pet to the confirmed intent (idempotent on the server).
+ * The answer's flag goes straight into the cached dashboard; the dashboard is
+ * refetched whatever happened (onSettled) — after a lost response it shows whether
+ * the stop was applied before the parent retries.
  */
-export function useToggleHardStop() {
+export function useSetHardStop() {
   const queryClient = useQueryClient();
-  return useMutation<HardStopResponse, unknown, number>({
-    mutationFn: (petId) => api.toggleHardStop(petId),
+  return useMutation<HardStopResponse, unknown, HardStopVariables>({
+    mutationFn: ({ petId, active }) => api.setHardStop(petId, active),
     retry: false,
     onSuccess: (res) => {
       queryClient.setQueryData<ParentDashboardResponse>(parentDashboardKey, (old) =>
         setDashboardHardStop(old, res.pet_id, res.is_hard_stopped),
       );
-      void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
     },
+    onSettled: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),
   });
 }
 

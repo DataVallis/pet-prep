@@ -30,6 +30,8 @@ export interface CareScore {
   done: number;
   /** Child: fair share (Σ 1/n, 2 decimals); pet: routines expected. */
   expected: number;
+  /** Child only: the shared routines, undivided (null on pet scores / older payloads). */
+  routines: number | null;
   illnesses: number;
   since: string | null;
 }
@@ -171,6 +173,7 @@ export function readCareScore(value: unknown): CareScore {
     score: numOrNull(o.score),
     done: num(o.done),
     expected: num(o.expected),
+    routines: numOrNull(o.routines),
     illnesses: num(o.illnesses),
     since: strOrNull(o.since),
   };
@@ -324,6 +327,19 @@ export function formatAmount(value: number): string {
 export function routinesOfText(done: number, expected: number): string {
   const noun = expected === 1 ? 'rutine' : 'rutin';
   return `${formatAmount(done)} od ${formatAmount(expected)} ${noun}`;
+}
+
+/**
+ * "x od y rutin" for a score (PR #20 review): the denominator is the routines the
+ * child shared (undivided) when known, else `expected`, and the count never exceeds
+ * it — a child who did more than their fair share must not read "10 od 5". On a
+ * shared pet the fair share is added: "10 od 12 rutin · pošten delež 6".
+ */
+export function scoreRoutinesText(score: Pick<CareScore, 'done' | 'expected' | 'routines'>): string {
+  const total = score.routines !== null && score.routines > 0 ? score.routines : score.expected;
+  const base = routinesOfText(Math.min(score.done, total), total);
+  const shared = score.routines !== null && score.routines > 0 && Math.abs(score.routines - score.expected) >= 0.01;
+  return shared ? `${base} · pošten delež ${formatAmount(score.expected)}` : base;
 }
 
 /** "1 bolezen", "2 bolezni", "5 bolezni". */

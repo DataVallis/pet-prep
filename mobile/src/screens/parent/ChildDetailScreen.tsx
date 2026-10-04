@@ -35,7 +35,7 @@ import {
   progressText,
   readTimeline,
   reasonText,
-  routinesOfText,
+  scoreRoutinesText,
   type ReportDays,
 } from '@/modules/family/scoring';
 import { localParts } from '@/modules/childPet/familyTime';
@@ -185,7 +185,7 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
             <Card testID={`report-${data.days}`}>
               {data.traffic_light.reasons.map((r) => (
                 <Text key={r} style={styles.body}>
-                  • {reasonText(r)}
+                  • {reasonText(r, child.today.missed_count)}
                 </Text>
               ))}
               <Text style={styles.label}>{S.periodScore}</Text>
@@ -199,7 +199,7 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
                 </Text>
               )}
               <Text style={styles.muted}>
-                {routinesOfText(data.period_score.done, data.period_score.expected)}
+                {scoreRoutinesText(data.period_score)}
                 {data.period_score.illnesses > 0 ? ` · ${illnessesText(data.period_score.illnesses)}` : ''}
               </Text>
               <Text style={styles.muted}>{S.totalScore(data.care_score.score)}</Text>

@@ -17,6 +17,7 @@ import {
   readTrafficLight,
   reasonText,
   routinesOfText,
+  scoreRoutinesText,
 } from '@/modules/family/scoring';
 import { makeMissed } from '@/test-utils/fixtures';
 
@@ -96,6 +97,17 @@ describe('texts', () => {
     expect(routinesOfText(8, 9.5)).toBe('8 od 9,5 rutin');
     expect(routinesOfText(1, 1)).toBe('1 od 1 rutine');
     expect(routinesOfText(31, 36)).toBe('31 od 36 rutin');
+  });
+
+  it('score routines: shared routines as the denominator, never "10 od 5" (PR #20 review)', () => {
+    // Alone: routines = expected.
+    expect(scoreRoutinesText({ done: 31, expected: 36, routines: 36 })).toBe('31 od 36 rutin');
+    // Shared pet: did 10 of 12 shared routines, fair share 6 (score capped at 100).
+    expect(scoreRoutinesText({ done: 10, expected: 6, routines: 12 })).toBe('10 od 12 rutin · pošten delež 6');
+    expect(scoreRoutinesText({ done: 4, expected: 9.5, routines: 19 })).toBe('4 od 19 rutin · pošten delež 9,5');
+    // Pet score / older payload without `routines`: capped at expected.
+    expect(scoreRoutinesText({ done: 10, expected: 5, routines: null })).toBe('5 od 5 rutin');
+    expect(scoreRoutinesText({ done: 0, expected: 0, routines: 0 })).toBe('0 od 0 rutin');
   });
 
   it('illnesses and reasons in friendly Slovenian', () => {

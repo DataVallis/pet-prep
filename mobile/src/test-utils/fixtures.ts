@@ -176,7 +176,7 @@ export function makeFamilyChild(overrides: Partial<FamilyChild> = {}): FamilyChi
     stats: { days: 7, fed: 0, watered: 0, cleaned: 0, walk_goals: 0, actions_total: 0, steps: 0, active_step_days: 0 },
     // M2-06 defaults: a child without a pet (green, no score, no progress).
     traffic_light: { color: 'green', reasons: [] },
-    care_score: { score: null, done: 0, expected: 0, illnesses: 0, since: null },
+    care_score: { score: null, done: 0, expected: 0, routines: null, illnesses: 0, since: null },
     today: { date: '2026-10-04', expected: 0, done: 0, done_by_child: 0, pending: 0, missed_count: 0, missed: [] },
     last_7_days: [],
     progress: null,
@@ -220,7 +220,7 @@ export function makeScoredChild(overrides: Partial<FamilyChild> = {}): FamilyChi
     devices: 1,
     contract_signed: true,
     traffic_light: { color: 'green', reasons: [] },
-    care_score: { score: 86, done: 31, expected: 36, illnesses: 0, since: '2026-09-21T16:00:00+02:00' },
+    care_score: { score: 86, done: 31, expected: 36, routines: 36, illnesses: 0, since: '2026-09-21T16:00:00+02:00' },
     today: { date: '2026-10-04', expected: 4, done: 3, done_by_child: 3, pending: 1, missed_count: 0, missed: [] },
     last_7_days: makeLast7Days(),
     progress: { started_at: '2026-09-21T16:00:00+02:00', days_elapsed: 13, week: 2, weeks_total: 12, completed: false },

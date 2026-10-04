@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Enums\ActivityType;
-use App\Events\PetUpdated;
+use App\Http\Requests\HardStopRequest;
 use App\Models\ActivityLog;
 use App\Models\Family;
 use App\Models\Pet;
@@ -11,6 +11,7 @@ use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\FamilyDashboardService;
 use App\Services\FamilyService;
+use App\Services\HardStopService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -28,6 +29,7 @@ class ParentDashboardController extends Controller
     public function __construct(
         private readonly FamilyService $families,
         private readonly FamilyDashboardService $dashboard,
+        private readonly HardStopService $hardStops,
     ) {}
 
     /**
@@ -177,19 +179,19 @@ class ParentDashboardController extends Controller
     }
 
     /**
-     * POST /api/parent/hard-stop {pet_id?}
-     * Toggles hard stop on one active pet of the family (default: the legacy
-     * pet) and broadcasts PetUpdated. Any parent of the family may do it.
+     * POST /api/parent/hard-stop {pet_id?, active?}
+     * Sets (`active` given — idempotent, M2-05 review) or toggles (no
+     * `active` — deprecated, old app builds) the hard stop of one active pet
+     * of the family (default: the legacy pet). Any parent of the family may
+     * do it. Response `changed: false` = already in that state, no broadcast.
      */
-    public function toggleHardStop(Request $request): JsonResponse
+    public function toggleHardStop(HardStopRequest $request): JsonResponse
     {
         $parent = $request->user();
 
         if (! $parent->can('manageFamily', User::class)) {
             return response()->json(['message' => 'Only parent profiles can trigger hard stop.'], 403);
         }
-
-        $request->validate(['pet_id' => ['sometimes', 'nullable', 'integer', 'min:1']]);
 
         $family = $this->families->familyOf($parent);
 
@@ -203,21 +205,25 @@ class ParentDashboardController extends Controller
             return response()->json(['message' => 'No active pet session found.'], 404);
         }
 
-        // Toggle hard stop
-        $pet->update([
-            'is_hard_stopped' => ! $pet->is_hard_stopped,
-        ]);
+        // Row lock + status period + one broadcast after commit (HardStopService).
+        $result = $this->hardStops->set($pet->id, $request->desiredState());
 
-        // Broadcast the update to every caretaker and parent via Reverb
-        $eventType = $pet->is_hard_stopped ? 'hard_stop_activated' : 'hard_stop_deactivated';
-        PetUpdated::afterCommit($pet->fresh(), $eventType);
+        if ($result === null) {
+            return response()->json(['message' => 'No active pet session found.'], 404);
+        }
+
+        $stopped = (bool) $result['pet']->is_hard_stopped;
+        $petId = (int) $result['pet']->id;
+        $changed = (bool) $result['changed'];
 
         return response()->json([
-            'message' => $pet->is_hard_stopped
+            'message' => $stopped
                 ? 'Hard stop activated. Child app locked.'
                 : 'Hard stop deactivated. Child app unlocked.',
-            'pet_id' => $pet->id,
-            'is_hard_stopped' => $pet->fresh()->is_hard_stopped,
+            'pet_id' => $petId,
+            'is_hard_stopped' => $stopped,
+            // false = the pet already was in the requested state (nothing written, no broadcast).
+            'changed' => $changed,
         ], 200);
     }
 

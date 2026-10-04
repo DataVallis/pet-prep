@@ -1,16 +1,24 @@
 /**
  * Controls of one family pet (M2-05 / M2-01a): who cares for it, its state, and the
- * hard stop (PRODUCT_SPEC §9: red button with confirmation). The endpoint toggles,
- * so the screen always confirms in-app first and sends the pet's id — with several
- * pets, the parent stops exactly this one (every caretaker child is locked).
+ * hard stop (PRODUCT_SPEC §9: red button with confirmation).
+ *
+ * Safety (PR #20 review M1): opening the confirmation records the parent's INTENT
+ * (stop / resume) and the request SETS that state (`{pet_id, active}`, idempotent on
+ * the server) — never a blind toggle. If the pet already reaches the intended state
+ * while the confirmation is open (another parent, a broadcast, a refetch), the box
+ * closes and nothing is sent. A ref guards against a double tap. After a network
+ * error (lost response?) the dashboard is refetched before the parent can retry, so
+ * a stop that did land is shown instead of being sent again.
  */
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 import { PauseCircle, PlayCircle } from 'lucide-react-native';
+import { useQueryClient } from '@tanstack/react-query';
 
 import { ApiError } from '@/api/client';
-import { useToggleHardStop } from '@/hooks/queries/useParentQueries';
+import { useSetHardStop } from '@/hooks/queries/useParentQueries';
+import { parentDashboardKey } from '@/modules/family/live';
 import { Card, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import {
   PET_STATUS_LABELS,
@@ -27,6 +35,7 @@ export const PET_CONTROLS_STRINGS = {
   playing: 'Igra teče',
   stop: 'Ustavi igro (hard stop)',
   resume: 'Nadaljuj igro',
+  a11y: (action: string, pet: string, names: string) => `${action}: ${pet}${names ? ` (${names})` : ''}`,
   confirmStop: (names: string) =>
     `Ustaviti igro${names ? ` za ${names}` : ''}? Kuža se zamrzne in otrok ne more ničesar narediti, dokler igre ne nadaljujete.`,
   confirmResume: 'Nadaljevati igro? Kuža se odmrzne in otrok lahko spet skrbi zanj.',
@@ -34,9 +43,12 @@ export const PET_CONTROLS_STRINGS = {
   cancel: 'Prekliči',
   stopped: 'Igra je ustavljena.',
   resumed: 'Igra spet teče.',
+  alreadyStopped: 'Igra je že ustavljena.',
+  alreadyRunning: 'Igra že teče.',
+  checking: 'Preverjam stanje …',
   errors: {
-    offline: 'Ni povezave s strežnikom. Poskusite znova.',
-    not_found: 'Tega psa ni več v vaši družini.',
+    offline: 'Ni povezave s strežnikom. Stanje smo osvežili — poskusite znova.',
+    not_found: 'Tega psa ni več med aktivnimi psi družine.',
     server: 'Ukaz ni uspel. Poskusite znova.',
   },
 } as const;
@@ -49,28 +61,72 @@ function errorText(error: unknown): string {
 }
 
 export default function PetControlsCard({ pet, family }: { pet: FamilyPet; family: FamilyOverview }) {
-  const toggle = useToggleHardStop();
-  const [confirming, setConfirming] = useState(false);
+  const queryClient = useQueryClient();
+  const setHardStop = useSetHardStop();
+  /** null = no confirmation open; true / false = the state the parent wants. */
+  const [intent, setIntent] = useState<boolean | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
   const [result, setResult] = useState<{ text: string; isError: boolean } | null>(null);
+  const inFlight = useRef(false);
   const names = caretakerNames(pet, family);
   const status = petStatus(pet);
   const stopped = pet.is_hard_stopped;
+  const petName = breedLabel(pet.breed_type);
+  const canControl = pet.is_active && !pet.is_game_over;
+
+  // The pet reached the intended state by other means → nothing left to send.
+  useEffect(() => {
+    if (intent === null || inFlight.current) return;
+    if (stopped === intent) {
+      setIntent(null);
+      setResult({ text: intent ? S.alreadyStopped : S.alreadyRunning, isError: false });
+    }
+  }, [intent, stopped]);
+
+  const open = () => {
+    setResult(null);
+    setIntent(!stopped);
+  };
 
   const send = () => {
+    if (intent === null || inFlight.current || refreshing) return;
+    if (stopped === intent) {
+      setIntent(null);
+      setResult({ text: intent ? S.alreadyStopped : S.alreadyRunning, isError: false });
+      return;
+    }
+    inFlight.current = true;
     setResult(null);
-    toggle.mutate(pet.id, {
-      onSuccess: (res) => {
-        setConfirming(false);
-        setResult({ text: res.is_hard_stopped ? S.stopped : S.resumed, isError: false });
+    setHardStop.mutate(
+      { petId: pet.id, active: intent },
+      {
+        onSuccess: (res) => {
+          setIntent(null);
+          setResult({ text: res.is_hard_stopped ? S.stopped : S.resumed, isError: false });
+        },
+        onError: (err) => {
+          setResult({ text: errorText(err), isError: true });
+          if (!(err instanceof ApiError)) {
+            // The request may have landed (lost response): show the real state before a retry.
+            setRefreshing(true);
+            void queryClient
+              .refetchQueries({ queryKey: parentDashboardKey })
+              .finally(() => setRefreshing(false));
+          }
+        },
+        onSettled: () => {
+          inFlight.current = false;
+        },
       },
-      onError: (err) => setResult({ text: errorText(err), isError: true }),
-    });
+    );
   };
+
+  const busy = setHardStop.isPending || refreshing;
 
   return (
     <Card testID={`pet-controls-${pet.id}`}>
       <View>
-        <Text style={styles.title}>{breedLabel(pet.breed_type)}</Text>
+        <Text style={styles.title}>{petName}</Text>
         <Text style={styles.muted} testID={`pet-caretakers-${pet.id}`}>
           {names ? S.caretakers(names) : S.noCaretakers}
         </Text>
@@ -79,27 +135,36 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
         </Text>
       </View>
 
-      {!pet.is_game_over &&
-        (confirming ? (
-          <View style={[styles.confirmBox, !stopped && styles.confirmDanger]} testID={`hard-stop-confirm-${pet.id}`}>
-            <Text style={styles.confirmText}>{stopped ? S.confirmResume : S.confirmStop(names)}</Text>
+      {canControl &&
+        (intent !== null ? (
+          <View style={[styles.confirmBox, intent && styles.confirmDanger]} testID={`hard-stop-confirm-${pet.id}`}>
+            <Text style={styles.confirmText}>{intent ? S.confirmStop(names) : S.confirmResume}</Text>
+            {refreshing && <Text style={styles.muted}>{S.checking}</Text>}
             <View style={styles.row}>
               <Pressable
                 style={({ pressed }) => [styles.button, styles.flex, pressed && styles.pressed]}
-                onPress={() => setConfirming(false)}
-                disabled={toggle.isPending}
+                onPress={() => setIntent(null)}
+                disabled={setHardStop.isPending}
                 accessibilityRole="button"
               >
                 <Text style={styles.buttonText}>{S.cancel}</Text>
               </Pressable>
               <Pressable
-                style={({ pressed }) => [styles.button, styles.flex, stopped ? styles.primary : styles.danger, pressed && styles.pressed]}
+                style={({ pressed }) => [
+                  styles.button,
+                  styles.flex,
+                  intent ? styles.danger : styles.primary,
+                  busy && styles.disabled,
+                  pressed && styles.pressed,
+                ]}
                 onPress={send}
-                disabled={toggle.isPending}
+                disabled={busy}
                 accessibilityRole="button"
+                accessibilityState={{ disabled: busy, busy }}
+                accessibilityLabel={S.a11y(S.confirm, petName, names)}
                 testID={`hard-stop-confirm-button-${pet.id}`}
               >
-                {toggle.isPending ? (
+                {setHardStop.isPending ? (
                   <ActivityIndicator color="#ffffff" />
                 ) : (
                   <Text style={[styles.buttonText, styles.whiteText]}>{S.confirm}</Text>
@@ -110,11 +175,9 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
         ) : (
           <Pressable
             style={({ pressed }) => [styles.button, stopped ? styles.outline : styles.danger, pressed && styles.pressed]}
-            onPress={() => {
-              setResult(null);
-              setConfirming(true);
-            }}
+            onPress={open}
             accessibilityRole="button"
+            accessibilityLabel={S.a11y(stopped ? S.resume : S.stop, petName, names)}
             testID={`hard-stop-${pet.id}`}
           >
             {stopped ? <PlayCircle color={C.accent} size={18} /> : <PauseCircle color="#ffffff" size={18} />}
@@ -153,6 +216,7 @@ const styles = StyleSheet.create({
   outline: { backgroundColor: C.accentSoft, borderColor: '#c7d2fe' },
   danger: { backgroundColor: '#e11d48', borderColor: '#e11d48' },
   primary: { backgroundColor: C.accent, borderColor: C.accent },
+  disabled: { opacity: 0.5 },
   buttonText: { fontSize: 14, fontWeight: '700', color: C.accent },
   whiteText: { color: '#ffffff' },
   confirmBox: {

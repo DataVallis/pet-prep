@@ -26,6 +26,8 @@ export const JOIN_FAMILY_STRINGS = {
     already_member: 'V tej družini že ste.',
     family_not_empty: 'Vaša družina že ima otroke ali pse, zato se ne morete pridružiti drugi družini.',
     too_many_attempts: 'Preveč napačnih kod. Poskusite znova čez 15 minut.',
+    rate_limited: 'Preveč poskusov v kratkem času. Počakajte minuto in poskusite znova.',
+    not_a_parent: 'Družini se lahko pridruži samo starševski račun.',
     invalid_format: 'Koda ima 8 črk in številk (npr. ABCD EFGH).',
     offline: 'Ni povezave s strežnikom. Poskusite znova.',
     server: 'Pridružitev ni uspela. Poskusite znova.',
@@ -34,7 +36,15 @@ export const JOIN_FAMILY_STRINGS = {
 
 const S = JOIN_FAMILY_STRINGS;
 
-export default function JoinFamilyCard() {
+interface JoinFamilyCardProps {
+  /**
+   * Called with the success text. After joining, the family is no longer empty and
+   * this card disappears with the refetch — the parent screen shows the notice.
+   */
+  onJoined?: (message: string) => void;
+}
+
+export default function JoinFamilyCard({ onJoined }: JoinFamilyCardProps) {
   const join = useJoinFamily();
   const [input, setInput] = useState('');
   const [message, setMessage] = useState<{ text: string; isError: boolean } | null>(null);
@@ -50,7 +60,9 @@ export default function JoinFamilyCard() {
       onSuccess: (res) => {
         setInput('');
         const parents = Array.isArray(res.family?.parents) ? res.family.parents.length : 2;
-        setMessage({ text: S.joined(parents), isError: false });
+        const text = S.joined(parents);
+        setMessage({ text, isError: false });
+        onJoined?.(text);
       },
       onError: (err) => setMessage({ text: S.errors[classifyJoinError(err)], isError: true }),
     });

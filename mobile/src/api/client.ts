@@ -420,13 +420,15 @@ export const api = {
     }),
 
   /**
-   * POST /api/parent/hard-stop — **toggles** the hard stop of one pet of the family
-   * (`pet_id`; every caretaker child is locked). → `{pet_id, is_hard_stopped}`.
+   * POST /api/parent/hard-stop {pet_id, active} — SETS the hard stop of one family pet
+   * to `active` (idempotent: a repeat or a lost-response retry changes nothing,
+   * `changed: false`). Without `active` the server still toggles (deprecated; never
+   * used by the app). → `{pet_id, is_hard_stopped, changed}`.
    */
-  toggleHardStop: (petId: number) =>
+  setHardStop: (petId: number, active: boolean) =>
     apiRequest<HardStopResponse>('/api/parent/hard-stop', {
       method: 'POST',
-      body: { pet_id: petId },
+      body: { pet_id: petId, active },
     }),
 
   /**

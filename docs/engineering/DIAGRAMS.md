@@ -634,12 +634,15 @@ sequenceDiagram
   Q->>API: GET /api/parent/dashboard
   API-->>Q: family.children[] {traffic_light, care_score, today, last_7_days, progress}<br/>family.pets[] {metrics, flags, timeline}
   Q-->>UI: one ChildOverviewCard per child
-  UI->>Rev: ParentLiveChannels: subscribe each pet (not game over)
-  alt channel subscribed (wsStatus = connected)
-    Rev-->>Q: .pet.updated metric_changed → patch that pet's metrics / flags
+  UI->>Rev: ParentLiveChannels: ONE connection, a private channel per active pet (status per pet)
+  alt every pet channel subscribed (wsStatus = connected)
+    Rev-->>Q: .pet.updated metric_changed → patch metrics / flags (refetch ≤ 1× per 60 s)
     Rev-->>Q: .pet.updated fed_pet, hard_stop_*, illness_triggered … → patch + invalidate dashboard, activities, reports
     Q->>API: GET /api/parent/dashboard (refetch)
-  else socket down / reconnecting
+    loop every 3 min while live (deadlines pass without events)
+      Q->>API: GET /api/parent/dashboard
+    end
+  else any pet channel down / reconnecting
     loop every 30 s (paused in background)
       Q->>API: GET /api/parent/dashboard
     end
@@ -647,7 +650,7 @@ sequenceDiagram
   UI->>API: "Podrobnosti" → GET /api/parent/children/{id}/report?days=7|30|84
   UI->>API: timeline → GET /api/parent/activities?pet_id=&page=1,2,… ("Naloži več")
   UI->>UI: Nadzor → hard stop: in-app confirmation
-  UI->>API: POST /api/parent/hard-stop {pet_id}
+  UI->>API: POST /api/parent/hard-stop {pet_id, active: confirmed intent} (idempotent set)
   API-->>Q: {pet_id, is_hard_stopped} → cache, then refetch
   UI->>API: POST /api/parent/invite-parent → code → system share sheet
   UI->>API: POST /api/parent/join-family {code} (only while own family is empty)

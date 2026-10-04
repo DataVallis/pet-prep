@@ -30,7 +30,7 @@ import {
   progressShare,
   progressText,
   reasonText,
-  routinesOfText,
+  scoreRoutinesText,
   weekdayShort,
   type DayRow,
 } from '@/modules/family/scoring';
@@ -153,7 +153,7 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
                     {score.score}
                   </Text>
                   <Text style={styles.muted} testID={`child-score-routines-${id}`}>
-                    {routinesOfText(score.done, score.expected)}
+                    {scoreRoutinesText(score)}
                   </Text>
                 </>
               )}

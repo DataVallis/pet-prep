@@ -30,7 +30,7 @@ jest.mock('@/api/client', () => {
     },
   };
 });
-jest.mock('@/hooks/usePetWebSocket', () => ({ usePetWebSocket: jest.fn() }));
+jest.mock('@/hooks/usePetChannels', () => ({ usePetChannels: jest.fn() }));
 jest.mock('@/modules/session/logout', () => ({
   logout: jest.fn(() => Promise.resolve()),
   refreshSessionPet: jest.fn(() => Promise.resolve()),

@@ -14,13 +14,14 @@ import FamilyParentsCard from '@/components/parent/FamilyParentsCard';
 import JoinFamilyCard from '@/components/parent/JoinFamilyCard';
 import PetControlsCard from '@/components/parent/PetControlsCard';
 import QuietHoursCard from '@/components/parent/QuietHoursCard';
-import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
+import { NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import type { FamilyChild, FamilyOverview } from '@/modules/family/family';
 
 export const CONTROLS_STRINGS = {
   title: 'Nadzor in družina',
   back: 'Nazaj na pregled',
   pets: 'Psi',
+  closeNotice: 'Zapri',
 } as const;
 
 interface ControlsScreenProps {
@@ -32,9 +33,12 @@ interface ControlsScreenProps {
   onAddChild: () => void;
   /** PIN for an existing child (pet choice or re-login on a new device). */
   onChildPin: (child: FamilyChild) => void;
+  /** Confirmation owned by the parent screen (survives the join card disappearing). */
+  notice?: string | null;
+  onNotice?: (text: string | null) => void;
 }
 
-export default function ControlsScreen({ onBack, family, onAddChild, onChildPin }: ControlsScreenProps) {
+export default function ControlsScreen({ onBack, family, onAddChild, onChildPin, notice = null, onNotice }: ControlsScreenProps) {
   const isEmpty = !family || (family.children.length === 0 && family.pets.length === 0);
 
   return (
@@ -47,6 +51,7 @@ export default function ControlsScreen({ onBack, family, onAddChild, onChildPin 
       </View>
 
       <ScrollView style={styles.flex} contentContainerStyle={styles.content}>
+        {notice && <NoticeBanner text={notice} closeLabel={CONTROLS_STRINGS.closeNotice} onClose={() => onNotice?.(null)} />}
         {family && family.children.length > 0 ? (
           <FamilyChildrenCard family={family} onAddChild={onAddChild} onChildPin={onChildPin} />
         ) : (
@@ -65,7 +70,7 @@ export default function ControlsScreen({ onBack, family, onAddChild, onChildPin 
         <QuietHoursCard />
 
         {family && <FamilyParentsCard family={family} />}
-        {isEmpty && <JoinFamilyCard />}
+        {isEmpty && <JoinFamilyCard onJoined={(text) => onNotice?.(text)} />}
       </ScrollView>
     </View>
   );
