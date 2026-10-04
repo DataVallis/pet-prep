@@ -19,7 +19,9 @@ use Illuminate\Support\Facades\Gate;
  *  - 200 accepted / unchanged / capped / rejected / stale
  *  - 422 refused by a game rule (reason + next_allowed_at)
  *  - 409 contract already signed
- *  - 423 locked (reason: game_over | inactive | hard_stopped | ill)
+ *  - 423 locked (reason: game_over | inactive | hard_stopped |
+ *    contract_required | ill; contract_required = sign the contract first,
+ *    only POST /api/child/contract is allowed — M1-07b)
  *
  * Every body carries `state` (ChildPetStateResource) so the app can update
  * its cache without a second request.

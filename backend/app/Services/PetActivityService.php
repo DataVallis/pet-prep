@@ -262,11 +262,20 @@ class PetActivityService
      * once per pet, server time as signed_at. A second signature is refused
      * (CareRefusal::ContractAlreadySigned → 409); the first one stays.
      * The caller validated the signature (SignContractRequest).
+     *
+     * Contract before birth (David 2026-10-04, M1-07b): for an unborn pet
+     * the signature is the birth — in the same transaction, under the same
+     * row lock, `born_at` = signed_at, metrics 100 %, every clock starts now
+     * (Pet::giveBirth). The only lock it passes is `contract_required`; a
+     * hard stop / inactive pet is still 423. A pet born before M1-07b
+     * (grandfathered) can sign later; that only stores the contract.
+     * One `PetUpdated('signed_contract')` after commit.
      */
     public function signContract(Pet $pet, User $child, string $format, string $signature): ActionResult
     {
         return $this->withLockedPet($pet, ActivityType::SignedContract, function (Pet $locked) use ($child, $format, $signature): ActionResult {
-            if ($locked->isActionLocked()) {
+            $lockReason = $locked->actionLockReason();
+            if ($lockReason !== null && $lockReason !== PetLockReason::ContractRequired) {
                 return $this->locked($locked);
             }
 
@@ -274,13 +283,21 @@ class PetActivityService
                 return $this->refused($locked, CareRefusal::ContractAlreadySigned);
             }
 
+            $now = now()->startOfSecond();
+
             PetContract::create([
                 'pet_id' => $locked->id,
                 'user_id' => $child->id,
                 'signature_format' => $format,
                 'signature' => $signature,
-                'signed_at' => now()->startOfSecond(),
+                'signed_at' => $now,
             ]);
+
+            if ($locked->isUnborn()) {
+                $locked->giveBirth($now);
+                $locked->pet_state = $this->decay->derivePetState($locked, $now);
+                $locked->saveQuietly();
+            }
 
             $this->logActivity($locked, ActivityType::SignedContract, null);
 
@@ -350,8 +367,8 @@ class PetActivityService
     }
 
     /**
-     * Hard stop / illness / inactive / game over: nothing is changed (a due
-     * recovery was already applied by withLockedPet).
+     * Hard stop / illness / inactive / game over / contract required:
+     * nothing is changed (a due recovery was already applied by withLockedPet).
      */
     private function locked(Pet $locked): ActionResult
     {

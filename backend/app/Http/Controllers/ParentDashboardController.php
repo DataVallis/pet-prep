@@ -80,6 +80,11 @@ class ParentDashboardController extends Controller
             'pet' => [
                 'id' => $pet->id,
                 'breed_type' => $pet->breed_type->value,
+                // Contract before birth (M1-07b): until the child signs,
+                // born_at is null and awaiting_contract true (metrics 100,
+                // nothing decays, no alerts).
+                'born_at' => $pet->born_at?->toIso8601String(),
+                'awaiting_contract' => $pet->isUnborn(),
                 'hunger_level' => $pet->displayMetric('hunger_level'),
                 'thirst_level' => $pet->displayMetric('thirst_level'),
                 'energy_level' => $pet->displayMetric('energy_level'),

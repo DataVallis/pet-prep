@@ -30,6 +30,9 @@ use Random\Randomizer;
  * last_decay_at — before the pet existed, or during a freeze (hard stop,
  * illness; frozen ticks and thaw advance the decay clock past them) — and
  * events that fall into quiet hours changed after scheduling are skipped.
+ * An unborn pet (contract not signed, M1-07b) gets no schedule at all; the
+ * birth day is scheduled by the first tick after birth, and its events
+ * before the birth moment are skipped like any pre-birth event.
  * After a scheduler gap every missed event is applied exactly once (each row
  * flips from pending once).
  *
@@ -54,6 +57,11 @@ class HygieneEventService
      */
     public function ensureScheduled(Pet $pet, CarbonInterface $from, CarbonInterface $now, ?QuietHours $quietHours, BreedConfig $breedConfig): void
     {
+        // Unborn (contract not signed, M1-07b): no schedule before birth.
+        if ($pet->isUnborn()) {
+            return;
+        }
+
         $timezone = $pet->familyTimezone();
         $today = Carbon::parse($pet->localDate($now), $timezone);
         $day = Carbon::parse($pet->localDate($from), $timezone);
@@ -160,6 +168,10 @@ class HygieneEventService
      */
     public function applyDue(Pet $pet, CarbonInterface $from, CarbonInterface $now, ?QuietHours $quietHours): ?Carbon
     {
+        if ($pet->isUnborn()) {
+            return null;
+        }
+
         $first = null;
 
         foreach ($this->duePending($pet, $now) as $event) {

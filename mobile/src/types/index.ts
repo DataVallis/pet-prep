@@ -44,7 +44,8 @@ export interface Pet {
   energy_level: number;
   hygiene_level: number;
   daily_step_count: number;
-  born_at: string;
+  /** null until the child signs the contract (unborn pet, M1-07b). */
+  born_at: string | null;
   is_active: boolean;
   pet_state: PetState;
   illness_until: string | null;
@@ -86,7 +87,10 @@ export interface PairingResponse {
     thirst_level: number;
     energy_level: number;
     hygiene_level: number;
-    born_at: string;
+    /** null: the pet is unborn until POST /api/child/contract (M1-07b). */
+    born_at: string | null;
+    /** true until the contract is signed — every other child action → 423 contract_required. */
+    awaiting_contract: boolean;
     is_active: boolean;
     pet_dna: PetDna | null;
     current_video_url: string | null;

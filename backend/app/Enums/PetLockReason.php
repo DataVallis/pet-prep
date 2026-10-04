@@ -17,6 +17,13 @@ enum PetLockReason: string
     /** The parent paused the simulation ("Pogovori se s starši"). */
     case HardStopped = 'hard_stopped';
 
+    /**
+     * The pet is not born yet: the child must sign the responsibility
+     * contract first (PRODUCT_SPEC §3, M1-07b). Only POST /api/child/contract
+     * is allowed; signing births the pet.
+     */
+    case ContractRequired = 'contract_required';
+
     /** 12 h at the vet after neglect (PRODUCT_SPEC §7). */
     case Ill = 'ill';
 }

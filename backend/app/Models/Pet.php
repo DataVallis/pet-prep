@@ -6,6 +6,7 @@ use App\Enums\BreedType;
 use App\Enums\PetLockReason;
 use App\Enums\PetStateEnum;
 use Carbon\CarbonInterface;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -26,7 +27,13 @@ class Pet extends Model
     protected static function booted(): void
     {
         // Start the decay clock at creation so the first tick decays from birth.
+        // An unborn pet (born_at null, waiting for the contract — M1-07b)
+        // gets its clocks at birth instead (PetActivityService::signContract).
         static::creating(function (Pet $pet): void {
+            if ($pet->isUnborn()) {
+                return;
+            }
+
             $pet->last_decay_at ??= now();
             // Birth day = first step day; energy resets at the next local midnight (M1-04).
             $pet->last_step_reset_at ??= now();
@@ -308,8 +315,64 @@ class Pet extends Model
     }
 
     /**
-     * Child actions (steps, clean, later feed / water) are refused while the
-     * pet is frozen (hard stop, illness), inactive or game over.
+     * Contract before birth (David 2026-10-04, PRODUCT_SPEC §3, M1-07b): a
+     * pet created at pairing has no `born_at` until the child signs the
+     * contract. Until then the game loop ignores it (no decay, hygiene
+     * events, daily-walk close, escalation) and child actions are locked
+     * with `contract_required`. Pets created before M1-07b keep their
+     * born_at (grandfathered as born, even without a contract row).
+     */
+    public function isUnborn(): bool
+    {
+        return $this->born_at === null;
+    }
+
+    /**
+     * Query scope: pets the game loop ticks (born). Unborn pets are skipped
+     * by the decay tick and escalation without being loaded.
+     *
+     * @param  Builder<Pet>  $query
+     * @return Builder<Pet>
+     */
+    public function scopeBorn($query)
+    {
+        return $query->whereNotNull('born_at');
+    }
+
+    /**
+     * Birth at the moment the contract is signed (attributes only; the
+     * caller holds the row lock and saves). Metrics start at 100 %, every
+     * clock starts now: decay (`last_decay_at`), the birth-day step grace
+     * (`last_step_reset_at`), the hygiene schedule (from today, events
+     * before birth never apply) and virtual age / certificate (`born_at`).
+     */
+    public function giveBirth(CarbonInterface $at): void
+    {
+        $this->forceFill([
+            'born_at' => $at,
+            'last_decay_at' => $at,
+            'last_step_reset_at' => $at,
+            'last_step_sync_at' => null,
+            'daily_step_count' => 0,
+            'hunger_level' => 100.0,
+            'thirst_level' => 100.0,
+            'energy_level' => 100.0,
+            'hygiene_level' => 100.0,
+            'hunger_zero_since' => null,
+            'thirst_zero_since' => null,
+            'energy_zero_since' => null,
+            'hygiene_zero_since' => null,
+            'escalation_level' => 0,
+            'illness_until' => null,
+            'walk_illness_due_at' => null,
+            'hygiene_scheduled_through' => null,
+            'frozen_at' => null,
+        ]);
+    }
+
+    /**
+     * Child actions (steps, clean, feed / water) are refused while the pet
+     * is unborn, frozen (hard stop, illness), inactive or game over.
      */
     public function isActionLocked(): bool
     {
@@ -318,8 +381,9 @@ class Pet extends Model
 
     /**
      * Why child actions are refused right now (HTTP 423, M1-07), or null.
-     * Priority when several apply: game over › inactive › hard stop › illness
-     * (the parent's pause wins over the vet screen).
+     * Priority when several apply: game over › inactive › hard stop ›
+     * contract required › illness (the parent's pause wins over the contract
+     * screen and the vet screen; an unborn pet can't be ill or game over).
      */
     public function actionLockReason(): ?PetLockReason
     {
@@ -327,6 +391,7 @@ class Pet extends Model
             (bool) $this->is_game_over => PetLockReason::GameOver,
             ! $this->is_active => PetLockReason::Inactive,
             (bool) $this->is_hard_stopped => PetLockReason::HardStopped,
+            $this->isUnborn() => PetLockReason::ContractRequired,
             $this->isIll() => PetLockReason::Ill,
             default => null,
         };

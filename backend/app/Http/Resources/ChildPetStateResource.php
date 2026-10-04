@@ -49,7 +49,9 @@ class ChildPetStateResource extends JsonResource
             'pet' => [
                 'id' => $pet->id,
                 'breed_type' => $pet->breed_type->value,
-                'born_at' => $iso($pet->born_at),
+                // null until the contract is signed (unborn, M1-07b).
+                'born_at' => $pet->born_at?->copy()->setTimezone($tz)->toIso8601String(),
+                'awaiting_contract' => $pet->isUnborn(),
                 'virtual_age_months' => $pet->virtualAgeInMonths(),
                 'hunger_level' => $pet->displayMetric('hunger_level'),
                 'thirst_level' => $pet->displayMetric('thirst_level'),
@@ -70,7 +72,7 @@ class ChildPetStateResource extends JsonResource
             ],
             'lock' => [
                 'is_locked' => $locked,
-                // game_over | inactive | hard_stopped | ill | null
+                // game_over | inactive | hard_stopped | contract_required | ill | null
                 'reason' => $lockReason?->value,
                 // End of the vet visit; null for locks without an end time.
                 'until' => $lockReason === PetLockReason::Ill ? $iso($pet->illness_until) : null,

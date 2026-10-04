@@ -8,6 +8,26 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-04 — Najprej podpis, potem rojstvo
+
+**Kaj se je zgodilo** (Davidova odločitev, isti dan)
+- **Pes se rodi šele, ko otrok podpiše pogodbo.** Po vnosu PIN-a kuža že obstaja (izgled, slika), a čaka. Dokler pogodba ni podpisana, nič ne upada, ni kakcev, opomnikov ne kazni; vse akcije razen podpisa strežnik zavrne z razlogom "najprej podpiši pogodbo".
+- **Trenutek podpisa = rojstni trenutek:** vse metrike 100 %, starost, ure in "rojstni dan" (energija polna do prve polnoči) začnejo teči takrat. Če otrok podpis odloži za dva dni, ne izgubi nič.
+- Starš na nadzorni plošči vidi, da pes "čaka na pogodbo" (podatek je v API-ju, prikaz *kmalu*).
+- Psi, ki so obstajali že prej, ostanejo rojeni in delujejo kot doslej.
+- David je potrdil še tri pravila: najprej čiščenje, potem hrana in voda; voda 3× na dan z razmikom tudi čez polnoč; ena pogodba na psa.
+- **Številke:** 25 novih avtomatskih testov (simulacija 26 ur "nerojenega" psa, rojstvo, upadanje po rojstvu), skupaj 432 zelenih.
+
+**Zakaj je pomembno**
+Pogodba ni več formalnost pred igro, ampak vrata v igro: brez obljube ni psa. Tako začne vsak otrok enako — s polnim, zdravim kužkom v trenutku, ko se zaveže.
+
+**Kako to povedati**
+- 🧒 *"Ko se podpišeš, se tvoj kuža rodi — od takrat naprej skrbiš zanj."*
+- 👩 *"Simulacija začne šteti šele, ko otrok podpiše obljubo. Prej se nič ne more pokvariti."*
+- 🛠 *"Nerojen pes = `born_at` null: tick in eskalacija ga filtrirata v SQL, podpis pod zaklepom vrstice ga 'rodi' v isti transakciji; obstoječi psi ostanejo rojeni brez migracije podatkov."*
+
+---
+
 ## 2026-10-04 — Gumbi dobijo pravila: hrana ob pravem času, voda s premislekom
 
 **Kaj se je zgodilo**
