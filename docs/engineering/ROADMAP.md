@@ -131,5 +131,5 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - Second Chance reset (19,99 € consumable)
 - IAP ekonomija: veterinar, priboljški, igrače
 - B2B affiliate (Mr. Pet) — QR kuponi
-- Faza 2: Real-World AI asistent (LLM + RAG, pgvector), IoT ovratnice
+- Faza 2: Real-World AI asistent (LLM + RAG, pgvector), IoT ovratnice — spec `docs/product/PHASE2_SPEC.md`; predpogoj: metrika "% družin, ki po izzivu kupijo psa"
 - Mačka
