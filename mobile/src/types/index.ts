@@ -54,9 +54,12 @@ export interface Pet {
 }
 
 /** Pet data as received from WebSocket broadcast (pet.updated channel). */
+/**
+ * `pet.updated` on `private-pet.{id}` (backend PetUpdated::payloadFor,
+ * ARCHITECTURE §4). Pet state only — no child PII, no user id (M1-08).
+ */
 export interface PetUpdatedBroadcast {
   pet_id: number;
-  user_id: number;
   breed_type: BreedType;
   hunger_level: number;
   thirst_level: number;
@@ -66,13 +69,17 @@ export interface PetUpdatedBroadcast {
   pet_state: PetState;
   escalation_level: number;
   is_ill: boolean;
+  illness_until: string | null;
   is_game_over: boolean;
+  is_hard_stopped: boolean;
   virtual_age_months: number;
   current_video_url: string | null;
   media_status?: MediaStatus;
   reference_image_url: string | null;
   event_type: string | null;
   updated_at: string | null;
+  /** When the server emitted this snapshot (ms precision); newer wins. */
+  emitted_at: string;
 }
 
 /** Response from POST /api/child/pair. */

@@ -69,11 +69,12 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
 
 3. **Laravel Reverb (`reverb:8080`):**
    - High-throughput WebSocket server listening internally on port 8080.
-   - Broadcasts real-time events (`pet.updated.{petId}`) to mobile app and parent dashboard.
+   - Broadcasts `pet.updated` on the private channel `private-pet.{petId}` to the child app and the parent dashboard. Channel auth: `POST /api/broadcasting/auth` (Sanctum bearer token, served by `app`).
 
-4. **Queue Worker (`queue`):**
-   - Runs `php artisan queue:work redis --tries=3 --timeout=90`.
-   - Automatically restarted after each deployment.
+4. **Queue Workers (`queue`, `queue-broadcasts`):**
+   - `queue`: `php artisan queue:work redis --queue=default --tries=3 --timeout=90` (fal.ai reference images).
+   - `queue-broadcasts`: `php artisan queue:work redis --queue=broadcasts --tries=3 --backoff=2 --timeout=15` — delivers queued `PetUpdated` events to Reverb, so a Reverb outage never blocks the scheduler (M1-09).
+   - Both restarted after each deployment (`queue:restart`).
 
 5. **Scheduler (`scheduler`):**
    - Runs `php artisan schedule:work`.

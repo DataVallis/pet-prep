@@ -84,9 +84,9 @@ docker compose -f "$COMPOSE_FILE" run --rm app php artisan view:cache
 
 # 9. Start/Recreate All Application Containers
 echo "Starting all application services..."
-docker compose -f "$COMPOSE_FILE" up -d --remove-orphans app reverb queue scheduler caddy
+docker compose -f "$COMPOSE_FILE" up -d --remove-orphans app reverb queue queue-broadcasts scheduler caddy
 
-# 10. Restart Queue Workers to load new code
+# 10. Restart Queue Workers to load new code (signal is shared via cache: restarts queue + queue-broadcasts)
 echo "Restarting queue workers..."
 docker compose -f "$COMPOSE_FILE" exec -T queue php artisan queue:restart || true
 

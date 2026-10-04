@@ -79,10 +79,10 @@ class FalAiWebhookController extends Controller
             ]);
 
             $pet = $job->pet;
-            // Quiet update + one explicit broadcast (avoids the observer's duplicate event).
+            // One broadcast after commit (M1-08: no observers broadcast).
             $pet->updateQuietly(['current_video_url' => $result['video_url']]);
 
-            DB::afterCommit(fn () => broadcast(new PetUpdated($pet->fresh(), 'video_ready')));
+            PetUpdated::afterCommit($pet->fresh(), 'video_ready');
 
             return response()->json([
                 'message' => 'Video URL updated successfully.',

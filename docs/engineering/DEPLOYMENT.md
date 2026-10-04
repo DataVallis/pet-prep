@@ -8,7 +8,7 @@
 
 - **Live:** `https://api.petprep.si` (health `/up` responds 200).
 - **Server:** Hetzner CX23, Ubuntu 26.04, `138.199.172.97`. Admin `root@`, deploy user `deploy@` (key `~/.ssh/petprep_deploy_key`).
-- **Stack:** single-host Docker Compose (`backend/compose.production.yaml`): Caddy (TLS, proxies Reverb `/app/*`) → `app` (Laravel, PHP 8.3) · `reverb` · `queue` · `scheduler` (`schedule:work`) · `postgres:18` · `redis`.
+- **Stack:** single-host Docker Compose (`backend/compose.production.yaml`): Caddy (TLS, proxies Reverb `/app/*`) → `app` (Laravel, PHP 8.3) · `reverb` · `queue` (`--queue=default`, fal.ai) · `queue-broadcasts` (`--queue=broadcasts`, PetUpdated → Reverb, M1-09) · `scheduler` (`schedule:work`) · `postgres:18` · `redis`.
 - **Paths:** `/opt/petprep/{.env, repo/, backups/, scripts/}`.
 - **Pipeline:** `.github/workflows/deploy-production.yml` ("CI & Deploy") — every PR and push to `main` runs backend tests (PostgreSQL) and mobile checks; **deploy to production only when started manually** (GitHub → Actions → CI & Deploy → Run workflow on `main`), after both test jobs pass. Pre-deploy DB backup, 7-day retention.
 
@@ -38,3 +38,4 @@ For deployments as `deploy@`, copy `~/.ssh/petprep_deploy_key` securely (e.g. Ai
 | D6 | Mobile app has quick-login buttons with seeded test credentials and defaults to the production API → hide behind `__DEV__`, ensure `TestUsersSeeder` never runs in prod. | High |
 | D7 | `REVENUECAT_SECRET_KEY` must be set in `/opt/petprep/.env` before RevenueCat is enabled — that handler is still fail-open (M3-08). fal.ai webhooks are now signature-verified and fail closed (M4-04); no fal secret exists. | High |
 | D8 | Caddyfile also serves plain HTTP on the raw IP (`http://138.199.172.97`) incl. API/admin → restrict or redirect once the domain is stable. | Medium |
+| D9 | **M1-08/09 (2026-10-04), required on deploy:** (a) `/opt/petprep/.env` must have `BROADCAST_CONNECTION=reverb` and `QUEUE_CONNECTION=redis` (a `sync` queue would deliver inline again; `log`/`null` broadcasts nothing) plus `REVERB_APP_ID`, `REVERB_APP_KEY`, `REVERB_APP_SECRET`, `REVERB_HOST`, `REVERB_PORT`, `REVERB_SCHEME` — no new keys. (b) New service `queue-broadcasts` must be running: `deploy-production.sh` now starts it (`up -d … queue queue-broadcasts …`); without it broadcasts pile up in Redis. (c) Channel auth is `POST https://api.petprep.si/api/broadcasting/auth` (Caddy already routes `/api/*` to `app`; no Caddyfile change). (d) Apps on the old public channel `pet.updated.{id}` stop receiving updates — ship the mobile build from the same branch. Optional: point the server-side broadcaster at `reverb:8080` over the Docker network instead of the public hostname (saves a TLS round trip through Caddy). | High |

@@ -78,7 +78,7 @@ class GeneratePetReferenceImage implements ShouldBeUnique, ShouldQueue
             'media_status' => 'ready',
         ]);
 
-        broadcast(new PetUpdated($pet->fresh(), 'reference_image_ready'));
+        PetUpdated::afterCommit($pet->fresh(), 'reference_image_ready');
     }
 
     public function failed(?Throwable $exception): void
@@ -87,7 +87,7 @@ class GeneratePetReferenceImage implements ShouldBeUnique, ShouldQueue
 
         if ($pet) {
             $pet->updateQuietly(['media_status' => 'failed']);
-            broadcast(new PetUpdated($pet->fresh(), 'reference_image_failed'));
+            PetUpdated::afterCommit($pet->fresh(), 'reference_image_failed');
         }
 
         Log::error('GeneratePetReferenceImage: giving up', [

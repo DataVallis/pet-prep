@@ -9,39 +9,30 @@ use Illuminate\Support\Facades\Broadcast;
 | Broadcast Channels
 |--------------------------------------------------------------------------
 |
-| Here you may register all of the event broadcasting channels that your
-| application supports. The given channel authorization callbacks are
-| used to check if an authenticated user can listen to the channel.
+| Authorized by POST /api/broadcasting/auth (Sanctum bearer token, see
+| bootstrap/app.php). Only private channels exist; every event is a
+| PrivateChannel (M1-08).
 |
 */
 
-Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
+Broadcast::channel('App.Models.User.{id}', function (User $user, $id) {
     return (int) $user->id === (int) $id;
 });
 
 /*
-| pet.updated.{petId} — Real-time pet metric updates for the parent dashboard.
+| pet.{petId} (wire name `private-pet.{petId}`) — PetUpdated for the child
+| HUD and the parent dashboard.
 |
-| Only the parent who owns the child (via the pet's user -> parent_id)
-| or the child who owns the pet may listen to this channel.
+| Allowed: the child who owns the pet, and that child's parent
+| (users.parent_id) — PetPolicy::listen. Nobody else: not another child,
+| not another parent, not a guest (the auth route requires a token).
 */
-Broadcast::channel('pet.updated.{petId}', function (User $user, int $petId) {
-    $pet = Pet::find($petId);
-
-    if (! $pet) {
+Broadcast::channel('pet.{petId}', function (User $user, $petId): bool {
+    if (! ctype_digit((string) $petId)) {
         return false;
     }
 
-    // The child who owns the pet can listen
-    if ($pet->user_id === $user->id) {
-        return ['id' => $user->id, 'role' => $user->role->value];
-    }
+    $pet = Pet::with('user:id,parent_id')->find((int) $petId);
 
-    // The parent of the child who owns the pet can listen
-    $petOwner = $pet->user;
-    if ($petOwner && $petOwner->parent_id === $user->id) {
-        return ['id' => $user->id, 'role' => $user->role->value];
-    }
-
-    return false;
+    return $pet !== null && $user->can('listen', $pet);
 });

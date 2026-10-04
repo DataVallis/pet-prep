@@ -252,7 +252,7 @@ describe('Idempotency and anti-cheat', function () {
 
         Event::assertDispatchedTimes(PetUpdated::class, 1);
         Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'walked_pet'
-            && $e->pet->id === $pet->id);
+            && $e->petId === $pet->id);
     });
 
     it('caps an increment above 200 steps per minute since the last sync', function () {
