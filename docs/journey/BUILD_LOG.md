@@ -17,6 +17,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - Psi, ki so obstajali že prej, ostanejo rojeni in delujejo kot doslej.
 - David je potrdil še tri pravila: najprej čiščenje, potem hrana in voda; voda 3× na dan z razmikom tudi čez polnoč; ena pogodba na psa.
 - **Številke:** 25 novih avtomatskih testov (simulacija 26 ur "nerojenega" psa, rojstvo, upadanje po rojstvu), skupaj 432 zelenih.
+- **Aplikacija:** otrok se zdaj res podpiše s prstom (črta na zaslonu), podpis gre na strežnik in pes se rodi šele, ko ga strežnik sprejme; če aplikacijo zapre pred podpisom, ga ob naslednjem zagonu počaka pogodba (31 novih testov v aplikaciji, skupaj 190).
 
 **Zakaj je pomembno**
 Pogodba ni več formalnost pred igro, ampak vrata v igro: brez obljube ni psa. Tako začne vsak otrok enako — s polnim, zdravim kužkom v trenutku, ko se zaveže.

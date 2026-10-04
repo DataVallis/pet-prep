@@ -11,12 +11,16 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import { ChevronRight, LogIn, PawPrint, Pencil, ScrollText, ShieldCheck, Sparkles, User, Users } from 'lucide-react-native';
+import { ChevronRight, Eraser, LogIn, PawPrint, RotateCcw, ScrollText, ShieldCheck, User } from 'lucide-react-native';
 
-import { api, saveAuthToken } from '@/api/client';
+import { api, saveAuthToken, type ChildPetState } from '@/api/client';
+import SignaturePad from '@/components/SignaturePad';
+import { petFromChildState } from '@/modules/contract/petFromChildState';
+import { hasSignature } from '@/modules/contract/signaturePath';
+import { submitSignature } from '@/modules/contract/signContract';
 import { logout } from '@/modules/session/logout';
-import { useAppStore } from '@/store/appStore';
-import type { PairingResponse, Pet } from '@/types';
+import { isAwaitingContract, lockStateFromPet, useAppStore } from '@/store/appStore';
+import type { PairingResponse } from '@/types';
 
 /** Seeded demo accounts are offered only in development builds (Expo Go / dev client). */
 export function showDevLogins(): boolean {
@@ -35,7 +39,42 @@ const CONTRACT_TEXT = `Zavezujem se, da bom vsak dan odgovorno skrbel za svojega
 
 Ali sprejemaš to odgovornost?`;
 
-type Step = 'login' | 'pin';
+/** User-visible strings of the contract step (i18n with M1-18). */
+export const CONTRACT_STRINGS = {
+  title: 'Pogodba o odgovornosti',
+  padHint: 'Podpiši se s prstom v okvir spodaj',
+  padLabel: 'Polje za podpis',
+  clear: 'Pobriši',
+  accept: 'Sprejmem odgovornost',
+  retry: 'Poskusi znova',
+  logout: 'Odjava',
+  invalid: 'Podpis ni veljaven, poskusi znova',
+  network: 'Povezava s strežnikom ni uspela. Preveri internet in poskusi znova.',
+  failed: 'Podpis ni uspel. Poskusi znova kasneje.',
+  locked: {
+    hard_stopped: 'Starš je igro začasno ustavil. Pogodbo lahko podpišeš, ko jo spet vklopi.',
+    inactive: 'Ljubljenček trenutno ni aktiven. Prosi starša, da preveri nastavitve.',
+    game_over: 'Igra je končana, pogodbe ni več mogoče podpisati.',
+    ill: 'Ljubljenček je pri veterinarju. Poskusi znova kasneje.',
+    default: 'Podpis trenutno ni mogoč. Poskusi znova kasneje.',
+  },
+} as const;
+
+type LockedReasonKey = keyof typeof CONTRACT_STRINGS.locked;
+
+function lockedMessage(reason: string | null): string {
+  const key: LockedReasonKey =
+    reason !== null && reason in CONTRACT_STRINGS.locked ? (reason as LockedReasonKey) : 'default';
+  return CONTRACT_STRINGS.locked[key];
+}
+
+type Step = 'login' | 'pin' | 'contract';
+
+interface ContractError {
+  message: string;
+  /** Offline / 5xx: show the "Poskusi znova" button (re-sends the same signature). */
+  retryable: boolean;
+}
 
 interface PairingScreenProps {
   initialStep?: Step;
@@ -49,13 +88,17 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [pairingResponse, setPairingResponse] = useState<PairingResponse | null>(null);
-  const [showContract, setShowContract] = useState(false);
-  const [signedAt, setSignedAt] = useState<number | null>(null);
+  const [signature, setSignature] = useState('');
+  const [isSigning, setIsSigning] = useState(false);
+  const [contractError, setContractError] = useState<ContractError | null>(null);
 
   const signIn = useAppStore((s) => s.signIn);
   const isSignedIn = useAppStore((s) => s.authToken !== null);
+  const sessionUser = useAppStore((s) => s.user);
+  const sessionPet = useAppStore((s) => s.pet);
   const setPet = useAppStore((s) => s.setPet);
   const setPairingStatus = useAppStore((s) => s.setPairingStatus);
+  const setLockState = useAppStore((s) => s.setLockState);
 
   const pinRefs = useRef<(TextInput | null)[]>([]);
 
@@ -73,8 +116,10 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
       // Same store update as the launch-time session restore (M1-12); AppNavigator routes by role.
       signIn({ token: response.token, user: response.user, pet: response.pet });
 
-      if (!response.pet && response.user.role === 'child') {
-        setStep('pin');
+      if (response.user.role === 'child') {
+        if (!response.pet) setStep('pin');
+        // Paired earlier but never signed (M1-07b): the pet is still unborn.
+        else if (isAwaitingContract(response.pet)) setStep('contract');
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Prijava ni uspela. Preverite podatke.');
@@ -123,7 +168,8 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
     try {
       const response = await api.pairChild(pin);
       setPairingResponse(response);
-      setShowContract(true);
+      // The pet is unborn on the server until the contract is signed (M1-07b).
+      setStep('contract');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Seznanitev ni uspela. Preverite PIN.');
     } finally {
@@ -131,32 +177,47 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
     }
   };
 
-  // ── Step 3: Accept Contract ────────────────────────────────────
-  const handleAcceptContract = async () => {
-    if (!pairingResponse) return;
-    const p = pairingResponse.pet;
-    const pet: Pet = {
-      id: p.id,
-      user_id: 0,
-      breed_type: p.breed_type,
-      pet_dna: p.pet_dna,
-      current_video_url: p.current_video_url,
-      hunger_level: p.hunger_level,
-      thirst_level: p.thirst_level,
-      energy_level: p.energy_level,
-      hygiene_level: p.hygiene_level,
-      daily_step_count: 0,
-      born_at: p.born_at,
-      is_active: p.is_active,
-      pet_state: 'idle',
-      illness_until: null,
-      escalation_level: 0,
-      is_game_over: false,
-      certificate_eligible: false,
-    };
+  // ── Step 3: Sign the contract (POST /api/child/contract, M1-07b) ──
+  /** Put the server's pet (born now) into the session; AppNavigator then shows the HUD. */
+  const completeContract = (state: ChildPetState) => {
+    const pet = petFromChildState(state, {
+      userId: sessionUser?.id ?? sessionPet?.user_id ?? 0,
+      petDna: sessionPet?.pet_dna ?? pairingResponse?.pet.pet_dna ?? null,
+    });
     setPet(pet);
     setPairingStatus('paired');
+    setLockState(lockStateFromPet(pet));
   };
+
+  const handleAcceptContract = async () => {
+    if (!hasSignature(signature) || isSigning) return;
+    setIsSigning(true);
+    setContractError(null);
+    const outcome = await submitSignature(signature);
+    setIsSigning(false);
+
+    switch (outcome.kind) {
+      case 'signed':
+      case 'already_signed':
+        completeContract(outcome.state);
+        return;
+      case 'invalid':
+        setSignature('');
+        setContractError({ message: CONTRACT_STRINGS.invalid, retryable: false });
+        return;
+      case 'locked':
+        setContractError({ message: lockedMessage(outcome.reason), retryable: false });
+        return;
+      case 'retryable':
+        setContractError({ message: CONTRACT_STRINGS.network, retryable: true });
+        return;
+      case 'failed':
+        setContractError({ message: CONTRACT_STRINGS.failed, retryable: false });
+        return;
+    }
+  };
+
+  const signatureReady = hasSignature(signature);
 
   const pinComplete = pinDigits.join('').length === PIN_LENGTH;
 
@@ -182,7 +243,11 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
             </View>
             <Text style={styles.title}>PetPrep</Text>
             <Text style={styles.subtitle}>
-              {step === 'login' ? 'Prijava v račun' : 'Vnos 6-mestne kode za seznanitev (PIN)'}
+              {step === 'login'
+                ? 'Prijava v račun'
+                : step === 'pin'
+                  ? 'Vnos 6-mestne kode za seznanitev (PIN)'
+                  : CONTRACT_STRINGS.title}
             </Text>
           </View>
 
@@ -344,44 +409,90 @@ export default function PairingScreen({ initialStep = 'login' }: PairingScreenPr
         </ScrollView>
       </KeyboardAvoidingView>
 
-      {/* Responsibility Contract Modal */}
-      <Modal visible={showContract} animationType="slide" transparent>
+      {/* Responsibility Contract Modal — the pet is born when the server accepts the signature */}
+      <Modal visible={step === 'contract'} animationType="slide" transparent>
         <View style={styles.modalBackdrop}>
           <View style={styles.contractModal}>
             <View style={styles.contractHeader}>
               <View style={styles.contractIconBadge}>
                 <ScrollText color="#818cf8" size={22} />
               </View>
-              <Text style={styles.contractTitle}>Pogodba o odgovornosti</Text>
+              <Text style={styles.contractTitle}>{CONTRACT_STRINGS.title}</Text>
             </View>
 
             <ScrollView style={styles.contractScroll}>
               <Text style={styles.contractBody}>{CONTRACT_TEXT}</Text>
             </ScrollView>
 
+            <Text style={styles.padHint}>{CONTRACT_STRINGS.padHint}</Text>
+            <SignaturePad
+              value={signature}
+              onChange={(path) => {
+                setSignature(path);
+                if (contractError && !contractError.retryable) setContractError(null);
+              }}
+              disabled={isSigning}
+              accessibilityLabel={CONTRACT_STRINGS.padLabel}
+            />
             <Pressable
-              style={({ pressed }) => [styles.signButton, pressed && styles.pressed]}
-              onPress={() => setSignedAt(Date.now())}
+              style={styles.clearButton}
+              onPress={() => setSignature('')}
+              disabled={isSigning || signature.length === 0}
             >
-              <Pencil color="#a5b4fc" size={18} />
-              <Text style={styles.signButtonText}>
-                {signedAt
-                  ? `Podpisano · ${new Date(signedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
-                  : 'Klikni za digitalni podpis'}
-              </Text>
+              <Eraser color="#94a3b8" size={14} />
+              <Text style={styles.clearButtonText}>{CONTRACT_STRINGS.clear}</Text>
             </Pressable>
 
-            <Pressable
-              style={({ pressed }) => [
-                styles.primaryButton,
-                !signedAt && styles.buttonDisabled,
-                pressed && styles.pressed,
-              ]}
-              onPress={handleAcceptContract}
-              disabled={!signedAt}
-            >
-              <Text style={styles.primaryButtonText}>Sprejmem odgovornost</Text>
-            </Pressable>
+            {contractError && (
+              <View style={styles.errorBox} testID="contract-error">
+                <Text style={styles.errorText}>{contractError.message}</Text>
+              </View>
+            )}
+
+            {contractError?.retryable ? (
+              <Pressable
+                style={({ pressed }) => [styles.primaryButton, isSigning && styles.buttonDisabled, pressed && styles.pressed]}
+                onPress={handleAcceptContract}
+                disabled={isSigning}
+              >
+                {isSigning ? (
+                  <ActivityIndicator color="#ffffff" testID="contract-loading" />
+                ) : (
+                  <>
+                    <RotateCcw color="#ffffff" size={18} />
+                    <Text style={styles.primaryButtonText}>{CONTRACT_STRINGS.retry}</Text>
+                  </>
+                )}
+              </Pressable>
+            ) : (
+              <Pressable
+                style={({ pressed }) => [
+                  styles.primaryButton,
+                  (!signatureReady || isSigning) && styles.buttonDisabled,
+                  pressed && styles.pressed,
+                ]}
+                onPress={handleAcceptContract}
+                disabled={!signatureReady || isSigning}
+              >
+                {isSigning ? (
+                  <ActivityIndicator color="#ffffff" testID="contract-loading" />
+                ) : (
+                  <Text style={styles.primaryButtonText}>{CONTRACT_STRINGS.accept}</Text>
+                )}
+              </Pressable>
+            )}
+
+            {isSignedIn && (
+              <Pressable
+                style={styles.backButton}
+                onPress={() => {
+                  void logout();
+                }}
+                disabled={isSigning}
+              >
+                <Text style={styles.backButtonText}>{CONTRACT_STRINGS.logout}</Text>
+              </Pressable>
+            )}
           </View>
         </View>
       </Modal>
@@ -661,20 +772,21 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     color: '#cbd5e1',
   },
-  signButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
-    paddingVertical: 12,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+  padHint: {
+    fontSize: 13,
+    color: '#94a3b8',
+    marginBottom: 8,
   },
-  signButtonText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#ffffff',
+  clearButton: {
+    flexDirection: 'row',
+    alignSelf: 'flex-end',
+    alignItems: 'center',
+    gap: 4,
+    paddingVertical: 6,
+    paddingHorizontal: 4,
+  },
+  clearButtonText: {
+    fontSize: 12,
+    color: '#94a3b8',
   },
 });

@@ -5,7 +5,7 @@
 
 import * as SecureStore from 'expo-secure-store';
 import { ENV } from '@/config/env';
-import type { operations } from '@/api/schema';
+import type { components, operations } from '@/api/schema';
 import type {
   PairingResponse,
   GeneratePinResponse,
@@ -42,6 +42,25 @@ export interface LoginResponse {
 /** `GET /api/parent/dashboard` 200 response (union: paired / no pet / no child). */
 export type ParentDashboardResponse =
   operations['parentDashboard.dashboard']['responses'][200]['content']['application/json'];
+
+/**
+ * Child pet state (`ChildPetStateResource`): the body of `GET /api/child/pet` and the
+ * `state` key of every child action response (M1-07).
+ */
+export type ChildPetState =
+  operations['childPet.show']['responses'][200]['content']['application/json'];
+
+/** `POST /api/child/contract` body (M1-07b): SVG path data or base64 PNG. */
+export type SignContractRequest = components['schemas']['SignContractRequest'];
+
+/**
+ * `POST /api/child/contract` 201 body. Declared here because the generated schema
+ * types the success response as `string` (Scramble can't infer `actionResponse`).
+ */
+export interface SignContractResponse {
+  status: 'accepted';
+  state: ChildPetState;
+}
 
 /** Exact backend message when the parent has no child profile yet. */
 export const NO_CHILD_PAIRED_MESSAGE = 'No child profile paired yet.';
@@ -192,6 +211,20 @@ export const api = {
 
   /** GET /api/user — the authenticated user (flat object) with the active pet. */
   getUser: () => apiRequest<UserResponse>('/api/user'),
+
+  /** GET /api/child/pet — the child's full pet state (read-only, also while locked / unborn). */
+  getChildPet: () => apiRequest<ChildPetState>('/api/child/pet'),
+
+  /**
+   * POST /api/child/contract — sign the responsibility contract (M1-07b). For an unborn
+   * pet this is its birth. 201 → state; 409 `contract_already_signed`, 423 locked and
+   * 422 validation all throw `ApiError` (409 / 423 bodies still carry `state`).
+   */
+  signContract: (body: SignContractRequest) =>
+    apiRequest<SignContractResponse>('/api/child/contract', {
+      method: 'POST',
+      body: { signature_format: body.signature_format, signature: body.signature },
+    }),
 
   /** GET /api/parent/dashboard — pet metrics, traffic light, quiet hours, activities. */
   getParentDashboard: () => apiRequest<ParentDashboardResponse>('/api/parent/dashboard'),

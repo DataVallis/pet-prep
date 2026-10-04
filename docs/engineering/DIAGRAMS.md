@@ -88,13 +88,16 @@ flowchart TD
   T -- yes --> U[GET /api/user]
   U -- 200 --> R{role}
   R -- parent --> PD[ParentDashboardScreen]
-  R -- "child + pet" --> HUD["ChildHudScreen<br/>(+ LockedScreen if game over / ill)"]
+  R -- "child + born pet" --> HUD["ChildHudScreen<br/>(+ LockedScreen if game over / ill)"]
+  R -- "child + unborn pet<br/>(born_at null)" --> CON["PairingScreen — contract step<br/>(M1-07b)"]
+  CON -- "POST /api/child/contract 201 / 409<br/>→ setPet(state.pet)" --> HUD
   R -- "child, no pet" --> PIN[PairingScreen — PIN step]
+  PIN -- "POST /api/child/pair" --> CON
   U -- 401 --> CLR[delete token] --> LOGIN
   U -- "network / 5xx" --> OFF["Splash 'Ni povezave'<br/>token kept"]
   OFF -- "Poskusi znova" --> U
   OFF -- Odjava --> OUT
-  PD & HUD & PIN -- "Odjava / any later 401" --> OUT["logout(): POST /api/logout (best effort)<br/>→ delete token → clear query cache → reset store"]
+  PD & HUD & PIN & CON -- "Odjava / any later 401" --> OUT["logout(): POST /api/logout (best effort)<br/>→ delete token → clear query cache → reset store"]
   OUT --> LOGIN
 ```
 
