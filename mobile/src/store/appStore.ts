@@ -9,7 +9,8 @@ import type { Pet, PetUpdatedBroadcast } from '@/types';
 export interface AppUser {
   id: number;
   name: string;
-  email: string;
+  /** null for a PIN-only child profile (M2-02). */
+  email: string | null;
   role: 'parent' | 'child';
 }
 

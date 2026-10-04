@@ -8,6 +8,10 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-04 — Aplikacija: "Sem otrok" in velika tipkovnica za kodo
+
+**Kaj se je zgodilo:** isti dan kot strežnik je prijava s kodo prišla tudi v aplikacijo. Ob prvem odprtju sta zdaj dve jasni poti: **"Sem otrok"** (koda od staršev na veliki tipkovnici — šesta številka kodo pošlje, brez e-pošte in gesla) in **"Sem starš"** (e-pošta). Starš na nadzorni plošči tapne "Dodaj otroka", vpiše samo vzdevek (letnica rojstva je neobvezna; aplikacija izrecno pove "Ne potrebujemo e-pošte ali priimka"), izbere "Nov pes" ali "Pridruži se psu …" in dobi kodo prav za tega otroka. Na novem seznamu otrok vidi, za katerega psa skrbi vsak otrok in na koliko napravah je prijavljen, ter ima dva gumba: "Nova koda za prijavo" (nov telefon, isti kuža) in "Odjavi vse naprave" (izgubljen telefon, s potrditvijo). Napačna koda otroku pove samo "Ta koda ne deluje. Prosi starša za novo kodo.", po preveč poskusih pa tipkovnica pokaže odštevanje. Za ime naprave aplikacija pošlje samo model telefona, nikoli imena, ki ga je telefonu dal uporabnik (pogosto vsebuje otrokovo ime). Avtomatski testi aplikacije: z 201 na **268 zelenih**. **Zakaj je pomembno:** otroška prijava z e-pošto je iz aplikacije odstranjena — o otroku aplikacija ne vpraša ničesar razen vzdevka. **Kako povedati:** 👩 *"Vpišete vzdevek, otrok vtipka kodo — dve minuti in kuža čaka na podpis."* · 🧒 *"Tapni 'Sem otrok' in vtipkaj kodo od staršev na velike gumbe."* · 💼 *"Celoten tok brez otrokove e-pošte je zdaj v izdelku, ne le na strežniku."* · 🛠 *"PIN prijava kot TanStack mutacija, anonimna zahteva brez Bearer žetona, `awaiting_contract` po otroku iz odgovora prijave, 67 novih Jest testov."* (Preizkus na pravih napravah še čaka.)
+
 ## 2026-10-04 — Otrok brez e-pošte: prijava samo s kodo staršev
 
 **Kaj se je zgodilo** (izvedba Davidove odločitve z 2. 10.; strežnik — zasloni v aplikaciji *kmalu*)

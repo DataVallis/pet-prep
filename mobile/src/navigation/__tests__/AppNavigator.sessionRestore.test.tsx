@@ -1,14 +1,17 @@
 /**
  * M1-12: launch-time session restore routes exactly like a fresh login.
  */
-import { fireEvent, render, screen, waitFor } from '@testing-library/react-native';
+import { fireEvent, screen, waitFor } from '@testing-library/react-native';
 import * as SecureStore from 'expo-secure-store';
 
 import { ApiError, api } from '@/api/client';
 import AppNavigator from '@/navigation/AppNavigator';
 import { useAppStore } from '@/store/appStore';
 import { makeChildState, makePet } from '@/test-utils/fixtures';
-import { CONTRACT_STRINGS } from '@/screens/PairingScreen';
+import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
+import { CHILD_PIN_STRINGS } from '@/screens/ChildPinLoginScreen';
+import { START_STRINGS } from '@/screens/StartScreen';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -43,22 +46,24 @@ describe('AppNavigator session restore', () => {
 
   it('shows the splash while restoring', async () => {
     getItem.mockReturnValueOnce(new Promise(() => undefined)); // never resolves
-    render(<AppNavigator />);
+    renderWithQuery(<AppNavigator />);
     expect(screen.getByTestId('splash-restoring')).toBeTruthy();
   });
 
-  it('no token → login screen', async () => {
+  it('no token → start screen with the parent and child paths', async () => {
     getItem.mockResolvedValueOnce(null);
-    render(<AppNavigator />);
+    renderWithQuery(<AppNavigator />);
 
-    expect(await screen.findByText('Prijava v račun')).toBeTruthy();
+    expect(await screen.findByText(START_STRINGS.subtitle)).toBeTruthy();
+    expect(screen.getByText(START_STRINGS.parent)).toBeTruthy();
+    expect(screen.getByText(START_STRINGS.child)).toBeTruthy();
     expect(getUser).not.toHaveBeenCalled();
   });
 
   it('valid parent token → parent dashboard', async () => {
     getItem.mockResolvedValueOnce('parent-token');
     getUser.mockResolvedValueOnce({ id: 1, name: 'Starš', email: 'p@x.si', role: 'parent', pet: null });
-    render(<AppNavigator />);
+    renderWithQuery(<AppNavigator />);
 
     expect(await screen.findByText('PARENT_DASHBOARD')).toBeTruthy();
     const state = useAppStore.getState();
@@ -71,7 +76,7 @@ describe('AppNavigator session restore', () => {
     const pet = makePet();
     getItem.mockResolvedValueOnce('child-token');
     getUser.mockResolvedValueOnce({ id: 2, name: 'Otrok', email: 'c@x.si', role: 'child', pet });
-    render(<AppNavigator />);
+    renderWithQuery(<AppNavigator />);
 
     expect(await screen.findByText('CHILD_HUD')).toBeTruthy();
     expect(screen.queryByText('LOCKED')).toBeNull();
@@ -89,25 +94,45 @@ describe('AppNavigator session restore', () => {
       role: 'child',
       pet: makePet({ is_game_over: true, is_active: false }),
     });
-    render(<AppNavigator />);
+    renderWithQuery(<AppNavigator />);
 
     expect(await screen.findByText('LOCKED')).toBeTruthy();
     expect(useAppStore.getState().lockState).toBe('game_over');
   });
 
-  it('valid child token without a pet → PIN entry', async () => {
+  it('legacy child token without a pet → PIN entry (with "Odjava" as the way back)', async () => {
     getItem.mockResolvedValueOnce('child-token');
     getUser.mockResolvedValueOnce({ id: 2, name: 'Otrok', email: 'c@x.si', role: 'child', pet: null });
-    render(<AppNavigator />);
+    renderWithQuery(<AppNavigator />);
 
-    expect(await screen.findByText('Vnos 6-mestne kode za seznanitev (PIN)')).toBeTruthy();
+    expect(await screen.findByText(CHILD_PIN_STRINGS.title)).toBeTruthy();
+    expect(screen.getByLabelText(CHILD_PIN_STRINGS.logout)).toBeTruthy();
+  });
+
+  it('PIN-only child token (no e-mail) restores with GET /api/user → HUD (M2-02)', async () => {
+    const pet = makePet();
+    getItem.mockResolvedValueOnce('pin-child-token');
+    getUser.mockResolvedValueOnce({ id: 9, name: 'Maja', email: null, role: 'child', pet });
+    renderWithQuery(<AppNavigator />);
+
+    expect(await screen.findByText('CHILD_HUD')).toBeTruthy();
+    expect(useAppStore.getState().user).toEqual({ id: 9, name: 'Maja', email: null, role: 'child' });
+  });
+
+  it('revoked child token (parent signed all devices out) → 401 → back to the start screen', async () => {
+    getItem.mockResolvedValueOnce('revoked-child-token');
+    getUser.mockRejectedValueOnce(new ApiError('Unauthenticated.', 401));
+    renderWithQuery(<AppNavigator />);
+
+    expect(await screen.findByText(START_STRINGS.subtitle)).toBeTruthy();
+    expect(deleteItem).toHaveBeenCalledWith('petprep_auth_token');
   });
 
   it('child with an unborn pet (paired, contract not signed) → contract step, not the HUD (M1-07b)', async () => {
     getItem.mockResolvedValueOnce('child-token');
     // /api/user returns the raw pet: born_at null, no awaiting_contract key.
     getUser.mockResolvedValueOnce({ id: 2, name: 'Otrok', email: 'c@x.si', role: 'child', pet: makePet({ born_at: null }) });
-    render(<AppNavigator />);
+    renderWithQuery(<AppNavigator />);
 
     expect(await screen.findByText(CONTRACT_STRINGS.padHint)).toBeTruthy();
     expect(screen.queryByText('CHILD_HUD')).toBeNull();
@@ -118,7 +143,7 @@ describe('AppNavigator session restore', () => {
     getItem.mockResolvedValueOnce('child-token');
     getUser.mockResolvedValueOnce({ id: 2, name: 'Otrok', email: 'c@x.si', role: 'child', pet: makePet({ born_at: null }) });
     signContract.mockResolvedValueOnce({ status: 'accepted', state: makeChildState() });
-    render(<AppNavigator />);
+    renderWithQuery(<AppNavigator />);
 
     const pad = await screen.findByTestId('signature-pad');
     fireEvent(pad, 'responderGrant', { nativeEvent: { locationX: 5, locationY: 5 } });
@@ -135,9 +160,9 @@ describe('AppNavigator session restore', () => {
   it('401 → token deleted, login shown', async () => {
     getItem.mockResolvedValueOnce('revoked-token');
     getUser.mockRejectedValueOnce(new ApiError('Unauthenticated.', 401));
-    render(<AppNavigator />);
+    renderWithQuery(<AppNavigator />);
 
-    expect(await screen.findByText('Prijava v račun')).toBeTruthy();
+    expect(await screen.findByText(START_STRINGS.subtitle)).toBeTruthy();
     expect(deleteItem).toHaveBeenCalledWith('petprep_auth_token');
     expect(useAppStore.getState().authToken).toBeNull();
   });
@@ -147,7 +172,7 @@ describe('AppNavigator session restore', () => {
     getUser
       .mockRejectedValueOnce(new TypeError('Network request failed'))
       .mockResolvedValueOnce({ id: 1, name: 'Starš', email: 'p@x.si', role: 'parent', pet: null });
-    render(<AppNavigator />);
+    renderWithQuery(<AppNavigator />);
 
     expect(await screen.findByTestId('splash-offline')).toBeTruthy();
     expect(deleteItem).not.toHaveBeenCalled();
@@ -160,10 +185,10 @@ describe('AppNavigator session restore', () => {
     getItem.mockResolvedValue('parent-token');
     getUser.mockRejectedValueOnce(new TypeError('Network request failed'));
     apiLogout.mockRejectedValueOnce(new TypeError('Network request failed'));
-    render(<AppNavigator />);
+    renderWithQuery(<AppNavigator />);
 
     fireEvent.press(await screen.findByText('Odjava'));
-    await waitFor(() => expect(screen.getByText('Prijava v račun')).toBeTruthy());
+    await waitFor(() => expect(screen.getByText(START_STRINGS.subtitle)).toBeTruthy());
     expect(apiLogout).toHaveBeenCalled();
     expect(deleteItem).toHaveBeenCalledWith('petprep_auth_token');
   });

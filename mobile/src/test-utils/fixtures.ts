@@ -3,6 +3,7 @@
  */
 
 import type { ChildPetState } from '@/api/client';
+import type { FamilyChild, FamilyPet } from '@/modules/family/family';
 import type { Pet } from '@/types';
 
 export function makePet(overrides: Partial<Pet> = {}): Pet {
@@ -80,5 +81,50 @@ export function makeChildState(
     },
     steps: { steps_today: 0, my_steps_today: 0, goal: 5000, energy_level: 100 },
     contract: { signed: true, signed_at: '2026-10-04T09:00:00+00:00' },
+  };
+}
+
+/** A child of `family.children` in `GET /api/parent/dashboard` (M2-01 / M2-02). */
+export function makeFamilyChild(overrides: Partial<FamilyChild> = {}): FamilyChild {
+  return {
+    id: 5,
+    name: 'Maja',
+    birth_year: 2016,
+    login: 'pin',
+    devices: 0,
+    pet_id: null,
+    contract_signed: false,
+    stats: { days: 7, fed: 0, watered: 0, cleaned: 0, walk_goals: 0, actions_total: 0, steps: 0, active_step_days: 0 },
+    ...overrides,
+  };
+}
+
+/** A pet of `family.pets`. */
+export function makeFamilyPet(overrides: Partial<FamilyPet> = {}): FamilyPet {
+  return {
+    id: 7,
+    breed_type: 'mutt',
+    born_at: '2026-10-01T08:00:00+00:00',
+    awaiting_contract: false,
+    is_active: true,
+    is_game_over: false,
+    is_hard_stopped: false,
+    is_ill: false,
+    traffic_light: 'green',
+    caretakers: [],
+    ...overrides,
+  };
+}
+
+/** `GET /api/parent/dashboard` for a family without an active legacy pet. */
+export function makeFamilyDashboard(children: FamilyChild[], pets: FamilyPet[] = []) {
+  return {
+    message: children.length > 0 ? 'No active pet session found.' : 'No child profile paired yet.',
+    timezone: 'Europe/Ljubljana',
+    pet: null,
+    traffic_light: 'green',
+    quiet_hours: null,
+    recent_activities: [],
+    family: { id: 1, timezone: 'Europe/Ljubljana', parents: [{ id: 1, name: 'Starš', is_me: true }], children, pets },
   };
 }

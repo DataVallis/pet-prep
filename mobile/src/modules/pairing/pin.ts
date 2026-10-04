@@ -1,5 +1,5 @@
 /**
- * Pure helpers for the parent "Dodaj otroka" PIN screen (M2-02, partial).
+ * Pure helpers for the parent "Dodaj otroka" PIN screen (M2-02).
  */
 
 import { ApiError } from '@/api/client';
@@ -25,7 +25,25 @@ export function formatCountdown(totalSeconds: number): string {
   return `${minutes}:${seconds.toString().padStart(2, '0')}`;
 }
 
-export type PinErrorKind = 'rate_limited' | 'forbidden' | 'unauthorized' | 'offline' | 'server';
+export type PinErrorKind =
+  | 'rate_limited'
+  | 'forbidden'
+  | 'unauthorized'
+  | 'child_not_found'
+  | 'pet_not_joinable'
+  | 'already_paired'
+  | 'offline'
+  | 'server';
+
+/** The machine `reason` of an API error body (`{message, reason}`), if any. */
+export function reasonOf(error: ApiError): string | null {
+  const data = error.data;
+  if (typeof data === 'object' && data !== null && 'reason' in data) {
+    const { reason } = data as { reason: unknown };
+    if (typeof reason === 'string') return reason;
+  }
+  return null;
+}
 
 export interface PinError {
   kind: PinErrorKind;
@@ -49,6 +67,11 @@ export function classifyPinError(error: unknown): PinError {
     }
     if (error.status === 403) return { kind: 'forbidden', retryAfterSeconds: null };
     if (error.status === 401) return { kind: 'unauthorized', retryAfterSeconds: null };
+    if (error.status === 404) return { kind: 'child_not_found', retryAfterSeconds: null };
+    const reason = reasonOf(error);
+    if (error.status === 422 && (reason === 'pet_not_joinable' || reason === 'already_paired')) {
+      return { kind: reason, retryAfterSeconds: null };
+    }
     return { kind: 'server', retryAfterSeconds: null };
   }
   // fetch() rejects with a TypeError when there is no connection.

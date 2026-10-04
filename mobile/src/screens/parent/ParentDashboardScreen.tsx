@@ -26,10 +26,12 @@ import {
 import { useAppStore } from '@/store/appStore';
 import { usePetWebSocket } from '@/hooks/usePetWebSocket';
 import { isNoChildPaired, useParentDashboard } from '@/hooks/queries/useParentDashboard';
+import { familyFromDashboard, type FamilyChild } from '@/modules/family/family';
 import { logout } from '@/modules/session/logout';
 import { interpolateColor } from '@/utils/metrics';
 import type { ActivityType, Pet } from '@/types';
 import AddChildCard from '@/components/AddChildCard';
+import FamilyChildrenCard from '@/components/FamilyChildrenCard';
 import ControlsScreen from '@/screens/parent/ControlsScreen';
 import BreedPaywallScreen from '@/screens/parent/BreedPaywallScreen';
 import AddChildScreen from '@/screens/parent/AddChildScreen';
@@ -46,7 +48,8 @@ export const DASHBOARD_STRINGS = {
 
 type TrafficLight = 'green' | 'amber' | 'red';
 type Tab = 'dashboard' | 'controls' | 'breeds';
-type Overlay = 'none' | 'addChild';
+/** `child` set = PIN for an existing child (pet choice or re-login); unset = new child. */
+type Overlay = { kind: 'none' } | { kind: 'addChild'; child?: FamilyChild };
 
 interface ActivityEntry {
   id: number;
@@ -289,9 +292,11 @@ function BottomNavBar({ activeTab, onSelect }: NavBarProps) {
 export default function ParentDashboardScreen() {
   const pet = useAppStore((s) => s.pet);
   const [activeTab, setActiveTab] = useState<Tab>('dashboard');
-  const [overlay, setOverlay] = useState<Overlay>('none');
+  const [overlay, setOverlay] = useState<Overlay>({ kind: 'none' });
   const dashboard = useParentDashboard();
   const noChild = isNoChildPaired(dashboard.data);
+  const family = familyFromDashboard(dashboard.data);
+  const hasChildren = family !== null && family.children.length > 0;
 
   usePetWebSocket(pet?.id ?? null);
 
@@ -299,15 +304,16 @@ export default function ParentDashboardScreen() {
     void logout();
   };
 
-  const openAddChild = () => setOverlay('addChild');
+  const openAddChild = () => setOverlay({ kind: 'addChild' });
+  const openChildPin = (child: FamilyChild) => setOverlay({ kind: 'addChild', child });
 
-  if (overlay === 'addChild') {
+  if (overlay.kind === 'addChild') {
     return (
       <View style={styles.root}>
         <AddChildScreen
+          child={overlay.child}
           onBack={() => {
-            setOverlay('none');
-            setActiveTab('dashboard');
+            setOverlay({ kind: 'none' });
             void dashboard.refetch();
           }}
         />
@@ -320,7 +326,9 @@ export default function ParentDashboardScreen() {
       <View style={styles.root}>
         <ControlsScreen
           onBack={() => setActiveTab('dashboard')}
-          onAddChild={noChild ? openAddChild : undefined}
+          family={family}
+          onAddChild={openAddChild}
+          onChildPin={openChildPin}
         />
         <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} />
       </View>
@@ -378,14 +386,23 @@ export default function ParentDashboardScreen() {
             <ActivityIndicator color="#818cf8" />
             <Text style={styles.legendText}>{DASHBOARD_STRINGS.loading}</Text>
           </View>
-        ) : noChild ? (
+        ) : noChild && !hasChildren ? (
           <AddChildCard onPress={openAddChild} />
         ) : !pet && dashboard.data?.pet === null ? (
-          <View style={styles.sectionCard}>
-            <Text style={styles.legendText}>{DASHBOARD_STRINGS.noActivePet}</Text>
-          </View>
+          <>
+            {family && hasChildren && (
+              <FamilyChildrenCard family={family} onAddChild={openAddChild} onChildPin={openChildPin} />
+            )}
+            <View style={styles.sectionCard}>
+              <Text style={styles.legendText}>{DASHBOARD_STRINGS.noActivePet}</Text>
+            </View>
+          </>
         ) : (
           <>
+            {family && hasChildren && (
+              <FamilyChildrenCard family={family} onAddChild={openAddChild} onChildPin={openChildPin} />
+            )}
+
             {/* Traffic Light Status Banner */}
             <TrafficLightBanner pet={pet} />
 

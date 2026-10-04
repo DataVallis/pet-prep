@@ -35,7 +35,7 @@ describe('api client', () => {
     getItem.mockResolvedValueOnce('tok');
     mockFetch(429, { message: 'Too Many Attempts.' }, { 'Retry-After': '37' });
 
-    const error = await api.generatePin().catch((e: unknown) => e);
+    const error = await api.generatePin({ child_id: 3 }).catch((e: unknown) => e);
     expect(error).toBeInstanceOf(ApiError);
     expect((error as ApiError).status).toBe(429);
     expect((error as ApiError).retryAfterSeconds).toBe(37);
@@ -95,7 +95,7 @@ describe('api client', () => {
     getItem.mockResolvedValueOnce('tok');
     mockFetch(429, { message: 'Too Many Attempts.' }, { 'Retry-After': '0' });
 
-    const error = (await api.generatePin().catch((e: unknown) => e)) as ApiError;
+    const error = (await api.generatePin({ child_id: 3 }).catch((e: unknown) => e)) as ApiError;
     expect(error.retryAfterSeconds).toBe(0);
   });
 
@@ -107,5 +107,64 @@ describe('api client', () => {
 
     await expect(api.login('a@b.si', 'x')).rejects.toBeInstanceOf(ApiError);
     expect(handler).not.toHaveBeenCalled();
+  });
+
+  describe('M2-02 endpoints', () => {
+    type Init = RequestInit & { headers: Record<string, string> };
+
+    it('pin-login is anonymous: no Bearer even when a token is stored, body {pin, device_name}', async () => {
+      getItem.mockResolvedValue('stale-token');
+      const fetchMock = mockFetch(200, { token: 't' });
+
+      await api.pinLogin('734912', 'iPhone');
+      const [url, init] = fetchMock.mock.calls[0] as [string, Init];
+      expect(url).toMatch(/\/api\/child\/pin-login$/);
+      expect(init.method).toBe('POST');
+      expect(init.headers.Authorization).toBeUndefined();
+      expect(JSON.parse(String(init.body))).toEqual({ pin: '734912', device_name: 'iPhone' });
+      getItem.mockReset();
+    });
+
+    it('a 422 on pin-login never triggers the unauthorized handler', async () => {
+      const handler = jest.fn();
+      setUnauthorizedHandler(handler);
+      mockFetch(422, { message: 'This code is not valid.', reason: 'invalid_pin' });
+
+      const error = (await api.pinLogin('000000', 'Telefon').catch((e: unknown) => e)) as ApiError;
+      expect(error.status).toBe(422);
+      expect(error.data).toEqual({ message: 'This code is not valid.', reason: 'invalid_pin' });
+      expect(handler).not.toHaveBeenCalled();
+    });
+
+    it('createChild posts the nickname and birth year (null when omitted)', async () => {
+      getItem.mockResolvedValueOnce('tok');
+      const fetchMock = mockFetch(201, { child: { id: 5 } });
+
+      await api.createChild({ display_name: 'Maja' });
+      const [url, init] = fetchMock.mock.calls[0] as [string, Init];
+      expect(url).toMatch(/\/api\/parent\/children$/);
+      expect(JSON.parse(String(init.body))).toEqual({ display_name: 'Maja', birth_year: null });
+    });
+
+    it('generatePin sends child_id, and pet_id only when joining a pet', async () => {
+      getItem.mockResolvedValue('tok');
+      const fetchMock = mockFetch(200, { pin: '123456' });
+
+      await api.generatePin({ child_id: 5 });
+      await api.generatePin({ child_id: 5, pet_id: 9 });
+      const bodies = fetchMock.mock.calls.map(([, init]) => JSON.parse(String((init as Init).body)));
+      expect(bodies).toEqual([{ child_id: 5 }, { child_id: 5, pet_id: 9 }]);
+      getItem.mockReset();
+    });
+
+    it('revokeChildTokens deletes /api/parent/children/{id}/tokens', async () => {
+      getItem.mockResolvedValueOnce('tok');
+      const fetchMock = mockFetch(200, { revoked_tokens: 2, revoked_pins: 0 });
+
+      await expect(api.revokeChildTokens(5)).resolves.toEqual({ revoked_tokens: 2, revoked_pins: 0 });
+      const [url, init] = fetchMock.mock.calls[0] as [string, Init];
+      expect(url).toMatch(/\/api\/parent\/children\/5\/tokens$/);
+      expect(init.method).toBe('DELETE');
+    });
   });
 });

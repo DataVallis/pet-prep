@@ -119,28 +119,40 @@ sequenceDiagram
   Note over Mum,Kid2: every action stores actor_user_id;<br/>steps per child in pet_daily_steps, the pet's walk = sum;<br/>channel private-pet.{Rex}: both children + both parents
 ```
 
-## 2b. Mobile app launch — session restore (M1-12)
+## 2b. Mobile app launch — session restore (M1-12) and start screen (M2-02)
 
 ```mermaid
 flowchart TD
   L[App start] --> S["Splash 'Nalagam …'<br/>bootStatus = restoring"]
   S --> T{Token in SecureStore?}
-  T -- no --> LOGIN[PairingScreen — login]
+  T -- no --> START["StartScreen<br/>'Sem otrok' / 'Sem starš'"]
+  START -- "Sem starš" --> PL["ParentLoginScreen<br/>POST /api/login"]
+  PL -- "role parent" --> PD
+  PL -- "role child (legacy e-mail)" --> REF["logout() + 'To je otroški račun …'"] --> START
+  START -- "Sem otrok" --> KP["ChildPinLoginScreen<br/>keypad, 6th digit submits"]
+  KP -- "POST /api/child/pin-login<br/>(no Bearer)" --> PLR{answer}
+  PLR -- "422 (any reason)" --> KPE["'Ta koda ne deluje …'<br/>digits cleared"] --> KP
+  PLR -- 429 --> KPL["keypad locked<br/>countdown Retry-After"] --> KP
+  PLR -- "offline / 5xx" --> KPR["'Poskusi znova'<br/>same PIN"] --> KP
+  PLR -- 200 --> SAVE["save token → GET /api/user (full pet)<br/>awaiting_contract from pin-login → signIn()"]
+  SAVE -- "awaiting_contract" --> CON
+  SAVE -- "relogin, signed" --> HUD
   T -- yes --> U[GET /api/user]
   U -- 200 --> R{role}
   R -- parent --> PD[ParentDashboardScreen]
   R -- "child + born pet" --> HUD["ChildHudScreen<br/>(+ LockedScreen if game over / ill)"]
-  R -- "child + unborn pet<br/>(born_at null)" --> CON["PairingScreen — contract step<br/>(M1-07b)"]
+  R -- "child + unborn pet<br/>(born_at null)" --> CON["ContractScreen<br/>(M1-07b)"]
   CON -- "POST /api/child/contract 201 / 409<br/>→ setPet(state.pet)" --> HUD
-  R -- "child, no pet" --> PIN[PairingScreen — PIN step]
-  PIN -- "POST /api/child/pair" --> CON
-  U -- 401 --> CLR[delete token] --> LOGIN
+  R -- "legacy child, no pet" --> KP
+  U -- 401 --> CLR[delete token] --> START
   U -- "network / 5xx" --> OFF["Splash 'Ni povezave'<br/>token kept"]
   OFF -- "Poskusi znova" --> U
   OFF -- Odjava --> OUT
-  PD & HUD & PIN & CON -- "Odjava / any later 401" --> OUT["logout(): POST /api/logout (best effort)<br/>→ delete token → clear query cache → reset store"]
-  OUT --> LOGIN
+  PD & HUD & CON -- "Odjava / any later 401<br/>(e.g. parent: 'Odjavi vse naprave')" --> OUT["logout(): POST /api/logout (best effort)<br/>→ delete token → clear query cache → reset store"]
+  OUT --> START
 ```
+
+Parent side of §2c in the app: `FamilyChildrenCard` / "Dodaj otroka" → `AddChildScreen`: nickname + optional birth year → `POST /api/parent/children` → "Nov pes" / "Pridruži se psu …" → `POST /api/parent/generate-pin {child_id, pet_id?}` → PIN + countdown; dashboard polled every 5 s until the child has a pet or one more device → "Otrok je povezan!".
 
 ## 2c. PIN-only child login (M2-02 / M2-03)
 

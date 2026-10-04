@@ -19,7 +19,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M0-07 `pestphp/*` → `require-dev`; nadgradnja Laravel na aktualno verzijo (+ Filament, Sanctum, Reverb)
 - [x] M0-08 CI popravek: obstoječi `deploy-production.yml` testira na sqlite (`.env.example`) → dodaj `postgres:18` service; dodaj mobile job (tsc, Jest); **deploy samo z ročno odobritvijo** (GitHub Environment reviewers) — glej DEPLOYMENT.md D1–D2
 - [ ] M0-09 Izbrisati podvojeni `mobile/src/components/WalkTrackerOverlay.tsx`, odstraniti `expo-av`
-- [x] M0-10 Gumbi za hitro prijavo s testnimi gesli so vidni samo v development buildih (`__DEV__`); EAS preview/production jih ne prikažeta (test v `PairingScreen.devLogins.test.tsx`)
+- [x] M0-10 Gumbi za hitro prijavo s testnimi gesli so vidni samo v development buildih (`__DEV__`); EAS preview/production jih ne prikažeta (test v `ParentLoginScreen.devLogins.test.tsx`, prej `PairingScreen.devLogins.test.tsx`)
 - [ ] M0-15 **Pred javno beto:** v produkcijski bazi obstajata `parent@test.com` / `child@test.com` z geslom `password` (potrjeno 2026-10-03) — zamenjati gesla ali izbrisati, preveriti `admin@petprep.io`
 - [ ] M0-11 Poenotiti verzijo PHP (dev Sail 8.5, prod + CI 8.3) — predlog 8.4 povsod
 - [x] M0-13 Mobilni Jest + tsc delujeta po sveži namestitvi (`@react-native/jest-preset` 0.86.3, `@types/jest` 29, TS 6 `types`) — 72/72 testov, 0 tsc napak
@@ -65,7 +65,9 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 
 - [~] M2-01 **Družinski model** (David, 2026-10-04; ADR-012): več staršev, več otrok, vsak otrok svoj pes ali skupni pes, dejanja pripisana otroku, pes = enota plačila
   - [x] Faza 1 backend *(2026-10-04, `feat/M2-01-family-model`)*: tabele `families`, `family_user`, `pet_caretakers` (največ 1 aktiven pes na otroka — indeks v bazi), `pet_daily_steps`, `family_invites`, `pets.family_id`, `activities_log.actor_user_id`, pogodba na (pes, otrok); migracija obstoječih podatkov; politike po družini (kanal: vsi skrbniki + vsi starši); `POST /api/parent/generate-pin {pet_id?}`, `POST /api/parent/invite-parent`, `POST /api/parent/join-family`; dashboard `family` z ocenami po otroku (7 dni); stara polja ostanejo za obstoječe verzije aplikacije
-  - [ ] M2-01a Mobilni družinski UI: dashboard z več otroki / psi, "Povabi drugega starša", "PIN za obstoječega psa", statistika po otroku, pogodba za otroka, ki se pridruži skupnemu psu *(mobile-engineer)*
+  - [~] M2-01a Mobilni družinski UI: dashboard z več otroki / psi, "Povabi drugega starša", "PIN za obstoječega psa", statistika po otroku, pogodba za otroka, ki se pridruži skupnemu psu *(mobile-engineer)*
+    - [x] Seznam otrok na pregledu in v Nadzoru (vzdevek, pes, število naprav, "Nova koda za prijavo", "Odjavi vse naprave"), "Dodaj otroka" vedno, "Pridruži se psu …" pri novem otroku, pogodba za otroka, ki se pridruži skupnemu psu *(2026-10-04, `feat/M2-02-pin-only-child`)*
+    - [ ] Preostanek: več psov na pregledu (metrike po psu), statistika po otroku, "Povabi drugega starša" / vnos kode družine
   - [ ] M2-01b Odstrani zastarele `users.parent_id`, `pets.user_id`, ogledalo `users.timezone` in mostne model hooke, ko jih aplikacija ne bere več
   - [ ] M2-01c **(D)** Formula ocene / semaforja po otroku (skupni pes)
   - [ ] M2-01d Certifikat po otroku (12 tednov) iz dejanj otroka
@@ -73,7 +75,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [~] M2-02 Otroški profil brez emaila (**odločeno**): starš ustvari otroka (ime, starost), PIN pairing izda Sanctum token z abilities `child:*`; odstraniti email/geslo prijavo za otroka
   - [x] Starševski zaslon "Dodaj otroka" (obstoječi `POST /api/parent/generate-pin`): PIN `734 912`, odštevanje 15 min, "Nova koda", 429 ohladitev, samodejna potrditev, ko se otrok poveže *(2026-10-03, ista veja)*
   - [x] Backend *(2026-10-04, `feat/M2-02-pin-only-child`)*: `POST /api/parent/children` (vzdevek + neobvezna letnica, brez e-pošte/gesla), `POST /api/parent/generate-pin {child_id, pet_id?}` (načini `new_pet` / `join_pet` / `relogin`), javni `POST /api/child/pin-login` (HMAC PIN, enkraten, 15 min, enak odgovor za napačen/potekel/porabljen, 10 napak/IP + 100 skupaj na 15 min, 10 zahtevkov/min/IP), največ 3 naprave na otroka, `DELETE /api/parent/children/{child}/tokens`; `users.email` / `password` nullable, `users.birth_year`, tabela `child_login_pins`; e-poštna prijava otroka in `POST /api/child/pair` zastarela (delujeta za stare račune); zaupanje Caddyju za IP odjemalca
-  - [ ] Mobilni zasloni: starš "Dodaj otroka" (vzdevek, letnica) → PIN za izbranega otroka, "Odjavi naprave"; otrok: vnos PIN-a brez prijave z e-pošto *(mobile-engineer, ista veja)*
+  - [x] Mobilni zasloni *(2026-10-04, ista veja)*: začetni zaslon "Sem otrok" / "Sem starš"; otrok: velika tipkovnica za 6-mestni PIN → `pin-login` → pogodba ali HUD (napačna koda, 429 odštevanje, brez povezave); starš: "Dodaj otroka" (vzdevek, neobvezna letnica) → "Nov pes" / "Pridruži se psu …" → PIN za tega otroka; "Nova koda za prijavo", "Odjavi vse naprave"; e-poštna prijava otroka odstranjena iz aplikacije
   - [ ] Pretvorba starih otroških računov z e-pošto v PIN profile in odstranitev e-poštne prijave za otroke (ko je nova aplikacija v trgovinah) — **(D)**
 - [~] M2-03 Sanctum abilities + Policies namesto ročnih `isParent()` preverjanj
   - [x] Žetoni z ability `parent` / `child` (prijava z e-pošto in PIN prijava), `ability:parent` na `/api/parent/*`, `ability:child` na `/api/child/*`; stari žetoni `*` delujejo naprej; politike ostanejo druga plast *(2026-10-04, `feat/M2-02-pin-only-child`)*

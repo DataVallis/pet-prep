@@ -5,7 +5,9 @@ import { isAwaitingContract, useAppStore, type LockState } from '@/store/appStor
 import { logout } from '@/modules/session/logout';
 import { useSessionBootstrap } from '@/modules/session/useSessionBootstrap';
 import SplashScreen from '@/screens/SplashScreen';
-import PairingScreen from '@/screens/PairingScreen';
+import StartScreen from '@/screens/StartScreen';
+import ChildPinLoginScreen from '@/screens/ChildPinLoginScreen';
+import ContractScreen from '@/screens/ContractScreen';
 import LockedScreen from '@/screens/LockedScreen';
 import ChildHudScreen from '@/screens/ChildHudScreen';
 import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
@@ -72,16 +74,23 @@ export default function AppNavigator() {
     <ErrorBoundary>
       <View style={styles.root}>
         {!isAuthenticated ? (
-          <PairingScreen />
+          // "Sem starš" (e-mail) or "Sem otrok" (PIN only, M2-02).
+          <StartScreen />
         ) : user.role === 'parent' ? (
           <ParentDashboardScreen />
         ) : (
           <>
             {pet === null ? (
-              <PairingScreen initialStep="pin" />
+              // Legacy e-mail child without a pet: the parent's PIN pairs it (pin-login).
+              <ChildPinLoginScreen
+                backIsLogout
+                onBack={() => {
+                  void logout();
+                }}
+              />
             ) : isAwaitingContract(pet) ? (
-              // Paired but unborn until the contract is signed (M1-07b) — also after a restart.
-              <PairingScreen initialStep="contract" />
+              // The pet waits for this child's contract (M1-07b / M2-01) — also after a restart.
+              <ContractScreen />
             ) : (
               <ChildHudScreen />
             )}

@@ -92,35 +92,6 @@ export interface PetUpdatedBroadcast {
   emitted_at: string;
 }
 
-/** Response from POST /api/child/pair. */
-export interface PairingResponse {
-  message: string;
-  parent_id: number;
-  pet: {
-    id: number;
-    breed_type: BreedType;
-    hunger_level: number;
-    thirst_level: number;
-    energy_level: number;
-    hygiene_level: number;
-    /** null: the pet is unborn until POST /api/child/contract (M1-07b). */
-    born_at: string | null;
-    /** true until the contract is signed — every other child action → 423 contract_required. */
-    awaiting_contract: boolean;
-    is_active: boolean;
-    pet_dna: PetDna | null;
-    current_video_url: string | null;
-    media_status?: MediaStatus;
-  };
-}
-
-/** Response from POST /api/parent/generate-pin. */
-export interface GeneratePinResponse {
-  pin: string;
-  expires_at: string;
-  expires_in_minutes: number;
-}
-
 /** Quiet hours configuration. */
 export interface QuietHours {
   id: number;
