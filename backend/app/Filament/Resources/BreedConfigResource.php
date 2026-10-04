@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\BreedConfigResource\Pages;
 use App\Models\BreedConfig;
+use Closure;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -50,6 +51,38 @@ class BreedConfigResource extends Resource
             fn (array $item): array => [(string) ($item['start'] ?? ''), (string) ($item['end'] ?? '')],
             $items ?? [],
         ));
+    }
+
+    /**
+     * True if two [start, end) windows share a minute. A window whose end is
+     * not after its start runs over midnight. Malformed entries are ignored
+     * here (the per-field regex reports them).
+     *
+     * @param  list<array{0: string, 1: string}>  $windows
+     */
+    public static function feedWindowsOverlap(array $windows): bool
+    {
+        $segments = [];
+        foreach ($windows as [$start, $end]) {
+            if (! preg_match(self::TIME_REGEX, $start) || ! preg_match(self::TIME_REGEX, $end) || $start === $end) {
+                continue;
+            }
+
+            $s = (int) substr($start, 0, 2) * 60 + (int) substr($start, 3, 2);
+            $e = (int) substr($end, 0, 2) * 60 + (int) substr($end, 3, 2);
+            $parts = $e > $s ? [[$s, $e]] : [[$s, 1440], [0, $e]];
+
+            foreach ($parts as [$a, $b]) {
+                foreach ($segments as [$c, $d]) {
+                    if ($a < $d && $c < $b) {
+                        return true;
+                    }
+                }
+            }
+            array_push($segments, ...$parts);
+        }
+
+        return false;
     }
 
     public static function form(Form $form): Form
@@ -106,7 +139,15 @@ class BreedConfigResource extends Resource
                     ])
                     ->columns(2)
                     ->defaultItems(0)
-                    ->helperText('Feeding is allowed only inside these [start, end) windows, HH:MM (child API, M1-07).'),
+                    ->minItems(1)
+                    ->rules([
+                        fn (): Closure => function (string $attribute, mixed $value, Closure $fail): void {
+                            if (is_array($value) && self::feedWindowsOverlap(self::feedWindowsFromForm($value))) {
+                                $fail('Feeding windows must not overlap.');
+                            }
+                        },
+                    ])
+                    ->helperText('At least one window. Feeding is allowed only inside these [start, end) windows, HH:MM; an end before the start runs over midnight; windows must not overlap (child API, M1-07).'),
 
                 Forms\Components\TextInput::make('water_times_per_day')
                     ->required()

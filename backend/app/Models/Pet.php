@@ -3,12 +3,14 @@
 namespace App\Models;
 
 use App\Enums\BreedType;
+use App\Enums\PetLockReason;
 use App\Enums\PetStateEnum;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Pet extends Model
 {
@@ -234,6 +236,14 @@ class Pet extends Model
     }
 
     /**
+     * The responsibility contract the child signed for this pet (M1-07).
+     */
+    public function contract(): HasOne
+    {
+        return $this->hasOne(PetContract::class);
+    }
+
+    /**
      * Asynchronous fal.ai generation requests for this pet.
      */
     public function mediaJobs(): HasMany
@@ -303,7 +313,23 @@ class Pet extends Model
      */
     public function isActionLocked(): bool
     {
-        return ! $this->is_active || $this->is_game_over || $this->isFrozen();
+        return $this->actionLockReason() !== null;
+    }
+
+    /**
+     * Why child actions are refused right now (HTTP 423, M1-07), or null.
+     * Priority when several apply: game over › inactive › hard stop › illness
+     * (the parent's pause wins over the vet screen).
+     */
+    public function actionLockReason(): ?PetLockReason
+    {
+        return match (true) {
+            (bool) $this->is_game_over => PetLockReason::GameOver,
+            ! $this->is_active => PetLockReason::Inactive,
+            (bool) $this->is_hard_stopped => PetLockReason::HardStopped,
+            $this->isIll() => PetLockReason::Ill,
+            default => null,
+        };
     }
 
     /**

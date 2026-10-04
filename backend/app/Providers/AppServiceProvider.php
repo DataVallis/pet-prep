@@ -41,6 +41,17 @@ class AppServiceProvider extends ServiceProvider
             return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
         });
 
+        // Child care actions (M1-07): a child taps a few buttons a day and the
+        // phone syncs steps every few minutes; 30/min per user is generous
+        // and still stops a scripted loop.
+        RateLimiter::for('child-actions', function (Request $request) {
+            if (app()->environment('testing')) {
+                return Limit::none();
+            }
+
+            return Limit::perMinute(30)->by($request->user()?->id ?: $request->ip());
+        });
+
         RateLimiter::for('pairing', function (Request $request) {
             if (app()->environment('testing')) {
                 return Limit::none();

@@ -9,4 +9,5 @@ enum ActivityType: string
     case WalkedPet = 'walked_pet';
     case CleanedPoop = 'cleaned_poop';
     case IgnoredWarning = 'ignored_warning';
+    case SignedContract = 'signed_contract';
 }

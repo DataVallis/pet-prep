@@ -8,6 +8,29 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-04 — Gumbi dobijo pravila: hrana ob pravem času, voda s premislekom
+
+**Kaj se je zgodilo**
+- **Otroški API je zgrajen** (strežnik): stanje psa, hranjenje, voda, čiščenje, pošiljanje korakov in podpis pogodbe. Aplikacija se nanj poveže v naslednjem koraku (M1-14) — *kmalu*.
+- **Hrana samo ob pravem času:** zjutraj med 6. in 10. uro in zvečer med 17. in 21. uro (po uri družine), **enkrat v vsakem oknu**. Če otrok tapne ob 12:00, strežnik pove "naslednje okno ob 17:00". Pravilo drži tudi ob prestopu ure (25. 10. 2026 in 28. 3. 2027 — preverjeno s testi).
+- **Voda 3× na dan, vsaj 3 ure narazen** — tudi čez polnoč (voda ob 23:30 → naslednja ob 2:30).
+- **Najprej počisti:** dokler je kuža umazan, hrane in vode ni — kot na zaslonu, tako tudi na strežniku (čaka Davidovo potrditev).
+- **Zaklenjeno, ko mora biti:** med starševskim premorom, boleznijo ali po odvzemu psa strežnik vsako akcijo zavrne in pove razlog (aplikacija pokaže pravi zaslon).
+- **Pogodba o odgovornosti** se zdaj shrani (podpis s prstom, enkrat na psa, čas podpisa) — brez pošiljanja tretjim, v časovnici staršev se pokaže kot "pogodba podpisana".
+- **Varnost podatkov igre:** vsaka akcija in vsako opozorilo delata z zaklenjeno vrstico psa — otrok, ki je ravnokar počistil, ne more dobiti bolezni zaradi "zastarelega branja" (popravek iz pregleda kode).
+- **Številke:** 99 novih avtomatskih testov, skupaj 384 zelenih (5.417 preverjanj); 6 novih poti v API-ju.
+
+**Zakaj je pomembno**
+To je trenutek, ko igra dobi svoja prava pravila: pravi pes ne je, kadar se otroku zljubi, in ne pije vse vode naenkrat. Rutina (zjutraj, zvečer, čez dan) je bistvo tega, kar starš želi preveriti.
+
+**Kako to povedati**
+- 🧒 *"Kuža je lačen zjutraj in zvečer — takrat ga nahrani. Če je umazan, ga najprej počisti!"*
+- 👩 *"Aplikacija ne dovoli 'hranjenja na zalogo'. Vidite, ali otrok res poskrbi zjutraj pred šolo in zvečer."*
+- 💼 Pravila so v nastavitvah pasme (okna hranjenja, število voda, razmik), ne v kodi — vsako pasmo lahko uglasimo brez nove verzije aplikacije.
+- 🛠 *"Vsaka otroška akcija: FormRequest → policy → servis z `SELECT … FOR UPDATE` → en zapis v dnevnik → en WebSocket dogodek po commitu. Okna v časovnem pasu družine, testirano čez oba prestopa ure."*
+
+---
+
 ## 2026-10-03 — Od veterinarja čist, sprehod vsak dan
 
 **Kaj se je zgodilo** (odločitvi Davida, isti dan)
