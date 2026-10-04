@@ -2,35 +2,35 @@
 
 namespace App\Services;
 
+use App\Enums\AiSpendPurpose;
 use App\Enums\BreedType;
 use App\Enums\PetStateEnum;
 use App\Models\Pet;
 use App\Models\PetMediaJob;
-use Illuminate\Http\Client\PendingRequest;
-use Illuminate\Support\Facades\Http;
+use App\Services\Media\AiCallException;
+use App\Services\Media\FalGateway;
+use App\Services\Media\MediaProfiles;
 use Illuminate\Support\Facades\Log;
 
 /**
- * FalAiService — all interactions with the fal.ai REST API.
+ * FalAiService — pet media on fal.ai.
  *
- * - Reference image (Pet DNA anchor): synchronous call to https://fal.run/{model},
- *   only ever executed from a queued job (never inside an HTTP request / DB transaction).
- * - State videos (Kling image-to-video): submitted to the queue API
- *   https://queue.fal.run/{model}?fal_webhook=... ; the result arrives on our
- *   signed webhook and is matched via the pet_media_jobs table.
+ * - Reference image (Pet DNA anchor): synchronous call (profile
+ *   media.reference_image_profile), only ever executed from a queued job
+ *   (never inside an HTTP request / DB transaction).
+ * - State videos (image-to-video, profile media.state_video_profile): submitted
+ *   to the queue API with our signed webhook; matched via pet_media_jobs.
  *
- * Every pet stays visually consistent through its "Pet DNA": a fixed seed,
- * a prompt anchor, visual traits and the canonical reference image URL.
+ * All HTTP goes through Media\FalGateway (spend caps + ledger, M4-07).
+ * Pet DNA v2 (unique traits) lives in Media\PetDnaService; generateInitialPetDna()
+ * below is the pre-M4 v1 builder (AI_PET_DNA_VERSION=1).
  */
 class FalAiService
 {
-    private const SYNC_BASE_URL = 'https://fal.run';
-
-    private const QUEUE_BASE_URL = 'https://queue.fal.run';
-
-    private const MODEL_IMAGE = 'fal-ai/flux/schnell';
-
-    private const MODEL_VIDEO = 'fal-ai/kling-v1.6/pro/image-to-video';
+    public function __construct(
+        private readonly FalGateway $gateway,
+        private readonly MediaProfiles $profiles,
+    ) {}
 
     /**
      * Check if fal.ai integration is enabled (API key configured).
@@ -119,41 +119,44 @@ class FalAiService
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * Generate the canonical reference image for a pet.
+     * Generate the canonical reference image for a pet with the configured
+     * profile (config media.reference_image_profile, default flux_schnell —
+     * the pre-M4 request body). Every call passes the spend cap first and is
+     * recorded in ai_spend_ledger (M4-07).
      *
-     * @return string|null Public URL of the image, or null if disabled/failed.
+     * @return string|null Public URL of the image, or null if disabled or a retryable failure.
+     *
+     * @throws AiCallException for failures a retry cannot fix (budget cap, fal balance, profile disabled)
      */
-    public function generateReferenceImage(string $promptAnchor, int $seed): ?string
+    public function generateReferenceImage(string $promptAnchor, int $seed, ?int $petId = null, ?string $negativePrompt = null): ?string
     {
         if (! $this->isEnabled()) {
             return null;
         }
 
+        $profile = $this->profiles->referenceImage();
+
         try {
-            $response = $this->http()->timeout(60)->post($this->syncUrl(self::MODEL_IMAGE), [
-                'prompt' => $promptAnchor,
-                'seed' => $seed,
-                'image_size' => ['width' => 1024, 'height' => 1024],
-                'num_inference_steps' => 4,
-                'num_images' => 1,
-                'enable_safety_checker' => true,
-            ]);
-        } catch (\Throwable $e) {
-            Log::error('FalAiService: reference image request failed', ['error' => $e->getMessage()]);
+            $result = $this->gateway->run(
+                $profile,
+                $profile->imageInput($promptAnchor, $seed, $negativePrompt),
+                AiSpendPurpose::ReferenceImage,
+                petId: $petId,
+            );
+        } catch (AiCallException $e) {
+            if ($e->retryable()) {
+                Log::error('FalAiService: reference image generation failed', ['pet_id' => $petId, 'reason' => $e->reason->value]);
 
-            return null;
+                return null;
+            }
+
+            throw $e;
         }
 
-        if (! $response->successful()) {
-            Log::error('FalAiService: reference image generation failed', ['status' => $response->status()]);
-
-            return null;
-        }
-
-        $url = $response->json('images.0.url');
+        $url = $result['body']['images'][0]['url'] ?? null;
 
         if (! is_string($url) || ! $this->isAllowedMediaUrl($url)) {
-            Log::error('FalAiService: reference image response had no usable URL');
+            Log::error('FalAiService: reference image response had no usable URL', ['pet_id' => $petId]);
 
             return null;
         }
@@ -185,33 +188,27 @@ class FalAiService
             return null;
         }
 
+        $profile = $this->profiles->stateVideo();
+
         try {
-            $response = $this->http()
-                ->withQueryParameters(['fal_webhook' => $this->webhookUrl()])
-                ->post($this->queueUrl(self::MODEL_VIDEO), [
-                    'image_url' => $referenceImageUrl,
-                    'prompt' => $this->buildVideoPrompt($pet, $state),
-                    'duration' => '5',
-                    'aspect_ratio' => '9:16',
-                    'cfg_scale' => 0.7,
-                ]);
-        } catch (\Throwable $e) {
-            Log::error('FalAiService: video request failed', ['pet_id' => $pet->id, 'error' => $e->getMessage()]);
-
-            return null;
-        }
-
-        $requestId = $response->successful() ? $response->json('request_id') : null;
-
-        if (! is_string($requestId) || $requestId === '') {
+            $submitted = $this->gateway->submit(
+                $profile,
+                $profile->videoInput($referenceImageUrl, $this->buildVideoPrompt($pet, $state), $pet->pet_dna['negative_prompt'] ?? null),
+                AiSpendPurpose::StateVideo,
+                $this->webhookUrl(),
+                petId: $pet->id,
+            );
+        } catch (AiCallException $e) {
             Log::error('FalAiService: video generation was not accepted', [
                 'pet_id' => $pet->id,
                 'state' => $state->value,
-                'status' => $response->status(),
+                'reason' => $e->reason->value,
             ]);
 
             return null;
         }
+
+        $requestId = $submitted['request_id'];
 
         PetMediaJob::create([
             'pet_id' => $pet->id,
@@ -297,25 +294,8 @@ class FalAiService
     }
 
     // ──────────────────────────────────────────────────────────────
-    //  HTTP & config helpers
+    //  Config helpers
     // ──────────────────────────────────────────────────────────────
-
-    private function http(): PendingRequest
-    {
-        return Http::withHeaders([
-            'Authorization' => 'Key '.config('services.fal_ai.key'),
-        ])->acceptJson()->asJson()->timeout(120);
-    }
-
-    private function syncUrl(string $model): string
-    {
-        return self::SYNC_BASE_URL.'/'.$model;
-    }
-
-    private function queueUrl(string $model): string
-    {
-        return self::QUEUE_BASE_URL.'/'.$model;
-    }
 
     public function webhookUrl(): string
     {

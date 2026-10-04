@@ -30,6 +30,8 @@ Lead magnet "Pet Promise Reality Check" (free web tool → signed PDF contract) 
 - Laravel API + PostgreSQL + real-time WebSockets (Reverb) on EU hosting (Hetzner); Expo/React Native app (iOS + Android from one codebase).
 - Game engine verified by automated whole-day simulations (e.g. mutt hungry after exactly 12 h 30 min, per spec).
 - AI dog identity ("Pet DNA") with fal.ai image/video; webhooks cryptographically verified (child-safety by design).
+- **Every dog looks unique** (2026-10-04, backend): appearance traits are drawn within the breed's range (>300,000 combinations for the mutt), reproducible per dog, never duplicated within a family; the image prompt contains no child data. *(Breed trait lists are a draft pending sourced breed standards.)*
+- **AI cost is measured and capped before launch** (2026-10-04): every AI call is costed and booked in a ledger; daily / monthly spend caps fail closed (the game keeps working without new media); an internal AI Lab compares models side by side on cost and quality. **Estimated** media cost per dog at birth (1 image + 6 short state videos, list prices 2026-10-04): **≈ $0.73 – $3.51** depending on the models chosen (*estimate*, models not yet picked). Extra media via token packs (*planned*, M4-09).
 - CI on every change (183 backend + 74 mobile tests as of 2026-10-03; **621 backend + 425 mobile as of 2026-10-04**), independent AI code review, one-click deploys.
 - Scoring engine tested on edge cases that real families hit: daylight-saving days (25-hour day), school and sleep hours, a dog born mid-evening, parent pause, vet time, siblings joining later; the parent dashboard costs the same database work for 7 or 84 days of history.
 - Built by one founder + an AI engineering team with documented process (see BUILD_LOG).
@@ -52,7 +54,7 @@ Goal: extend LTV from the 3-month challenge to the dog's 10–15-year life. One 
 |---|---|
 | Kids drop off in days | That *is* the signal parents pay for; 7-day early win (badge) for the parent. |
 | App-store rules for kids apps | No ads, minimal data, PIN login without email, parent-controlled purchases. |
-| AI media cost | Pre-generate a fixed set of 6 videos per dog; free tier uses a static set. |
+| AI media cost | Pre-generate a fixed set of 6 videos per dog; free tier uses a static set; per-call cost ledger with daily / monthly caps (built 2026-10-04); estimated ≈ $0.73–3.51 per dog at birth (*estimate*). |
 | Simulation ≠ reality | Conditional guarantee; certificate tied to 12 weeks of objective data. |
 
 ## Team

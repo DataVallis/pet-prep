@@ -2,9 +2,11 @@
 
 namespace App\Jobs;
 
+use App\Enums\AiCallFailure;
 use App\Events\PetUpdated;
 use App\Models\Pet;
 use App\Services\FalAiService;
+use App\Services\Media\AiCallException;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -65,7 +67,22 @@ class GeneratePetReferenceImage implements ShouldBeUnique, ShouldQueue
             return;
         }
 
-        $url = $fal->generateReferenceImage((string) ($dna['prompt_anchor'] ?? ''), (int) ($dna['seed'] ?? 0));
+        try {
+            $url = $fal->generateReferenceImage(
+                (string) ($dna['prompt_anchor'] ?? ''),
+                (int) ($dna['seed'] ?? 0),
+                $pet->id,
+                isset($dna['negative_prompt']) ? (string) $dna['negative_prompt'] : null,
+            );
+        } catch (AiCallException $e) {
+            // Budget cap / fal balance / disabled profile: a retry cannot help. The pet
+            // keeps working without media (M4-07, fail closed); the reason shows in Filament.
+            $pet->updateQuietly(['media_status' => 'failed', 'media_error' => $e->reason->value]);
+            PetUpdated::afterCommit($pet->fresh(), 'reference_image_failed');
+            Log::warning('GeneratePetReferenceImage: not generated', ['pet_id' => $pet->id, 'reason' => $e->reason->value]);
+
+            return;
+        }
 
         if ($url === null) {
             // Let the queue retry with backoff; failed() marks the pet when retries run out.
@@ -76,6 +93,7 @@ class GeneratePetReferenceImage implements ShouldBeUnique, ShouldQueue
         $pet->updateQuietly([
             'pet_dna' => $dna,
             'media_status' => 'ready',
+            'media_error' => null,
         ]);
 
         PetUpdated::afterCommit($pet->fresh(), 'reference_image_ready');
@@ -86,7 +104,7 @@ class GeneratePetReferenceImage implements ShouldBeUnique, ShouldQueue
         $pet = Pet::find($this->petId);
 
         if ($pet) {
-            $pet->updateQuietly(['media_status' => 'failed']);
+            $pet->updateQuietly(['media_status' => 'failed', 'media_error' => AiCallFailure::HttpError->value]);
             PetUpdated::afterCommit($pet->fresh(), 'reference_image_failed');
         }
 

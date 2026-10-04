@@ -655,3 +655,41 @@ sequenceDiagram
   UI->>API: POST /api/parent/invite-parent → code → system share sheet
   UI->>API: POST /api/parent/join-family {code} (only while own family is empty)
 ```
+
+## 10. AI media pipeline — profiles, spend caps, DNA v2, AI Lab (M4-02 / M4-07 / M4-08)
+
+```mermaid
+flowchart TD
+  subgraph Birth["Pairing (one DB transaction, family row locked)"]
+    P[PairingService::createPet] --> D{AI_PET_DNA_VERSION}
+    D -- 2 --> V2["PetDnaService::forNewPet<br/>seed = crc32(pet id + salt)<br/>traits from config/breed_appearance.php<br/>unique trait combo per family + breed"]
+    D -- 1 --> V1[FalAiService::generateInitialPetDna]
+    V2 --> PR["prompt = breed + traits + photo style<br/>(no names, no personal data)"]
+    PR --> J[[GeneratePetReferenceImage<br/>dispatched after commit]]
+    V1 --> J
+  end
+
+  subgraph Lab["Filament /admin/ai-lab (superadmin)"]
+    L1["Image run: breed, fixed traits,<br/>1-4 samples x image profiles"] --> LE{"estimate within AI_LAB_MAX_RUN_USD<br/>and remaining budget?"}
+    L2["Video run: lab image x video profiles x state"] --> LE
+    LE -- no --> LR[notification: not started]
+    LE -- yes --> LJ[["RunMediaLabImage / SubmitMediaLabVideo<br/>one job per call"]]
+  end
+
+  J --> G
+  LJ --> G
+  G["FalGateway (only fal HTTP client)<br/>LogicException inside a DB transaction<br/>profile from config/media.php"] --> R{"AiSpendGuard::reserve<br/>advisory lock, own short transaction<br/>pets budget or separate lab budget<br/>today + month (reserved + committed)"}
+  R -- over cap --> X1["AiCallException budget_daily / budget_monthly<br/>no HTTP; pet: media_status failed + media_error"]
+  R -- "ok: ledger row reserved" --> H["HTTP outside any transaction<br/>sync: fal.run/endpoint (images)<br/>queue: queue.fal.run/endpoint + fal_webhook (videos)"]
+  H -- 2xx --> C[ledger committed]
+  H -- "402 / 403 exhausted balance" --> B["ledger void, fal_balance<br/>Log::critical once per hour<br/>Filament flag 24 h"]
+  H -- "4xx/5xx answer or not sent (DNS / connect / TLS)" --> E["ledger void, http_error<br/>reference image: queue retry"]
+  H -- "timeout / reset after sending" --> T["ledger committed + http_error (cost kept)<br/>lab video: status unknown"]
+  X1 -.-> RT["daily media:retry-references<br/>(budget / balance cases) + Filament Retry image"]
+  S2 -.-> SW["hourly media:sweep-lab: running > 1 h → timed_out"]
+  C --> S1["image url (*.fal.media) → pet_dna.reference_image_url / lab result"]
+  C --> S2["request_id → pet_media_jobs / media_lab_results"]
+  S2 -.-> W["POST /api/webhooks/fal-ai (ED25519, fail closed)<br/>pet_media_jobs → pet video + PetUpdated<br/>else media_lab_results → lab gallery"]
+  S2 -.-> PL["AI Lab 'Check pending' → PollMediaLabResult<br/>(free status read, queue.fal.run only)"]
+  C --> WG["Filament AiSpendOverview: today / month vs caps, fal balance"]
+```

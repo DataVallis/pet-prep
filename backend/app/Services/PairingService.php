@@ -12,6 +12,7 @@ use App\Models\Family;
 use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\Media\PetDnaService;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -29,6 +30,7 @@ class PairingService
     public function __construct(
         private readonly FalAiService $falAiService,
         private readonly FamilyService $families,
+        private readonly PetDnaService $petDna,
     ) {}
 
     /**
@@ -200,11 +202,15 @@ class PairingService
 
     private function createPet(int $familyId, User $child): Pet
     {
-        // Pet DNA (seed, prompt anchor, visual traits) is generated offline.
-        // The reference image is produced asynchronously by a queued job
-        // dispatched after this transaction commits — never call fal.ai here.
+        // Pet DNA is generated offline. The reference image is produced
+        // asynchronously by a queued job dispatched after this transaction
+        // commits — never call fal.ai here.
+        // DNA v2 (M4-08): unique traits seeded from the pet id + a random salt,
+        // so it is assigned right after the insert; the caller holds the
+        // family row lock, which makes the per-family uniqueness check safe.
         $breed = BreedType::Mutt; // Free tier default
-        $petDna = $this->falAiService->generateInitialPetDna($breed);
+        $dnaVersion = (int) config('media.pet_dna_version', PetDnaService::VERSION);
+        $petDna = $dnaVersion === PetDnaService::VERSION ? null : $this->falAiService->generateInitialPetDna($breed);
         $mediaEnabled = $this->falAiService->isEnabled();
 
         // Contract before birth (David 2026-10-04, PRODUCT_SPEC §3,
@@ -225,6 +231,10 @@ class PairingService
             'born_at' => null,
             'is_active' => true,
         ]);
+
+        if ($petDna === null) {
+            $pet->forceFill(['pet_dna' => $this->petDna->forNewPet($pet)])->saveQuietly();
+        }
 
         // Pet::created already added the caretaker row; this is a no-op
         // that keeps the invariant explicit.

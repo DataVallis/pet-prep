@@ -6,11 +6,14 @@ use App\Enums\BreedType;
 use App\Enums\PetStateEnum;
 use App\Filament\Resources\PetResource\Pages;
 use App\Models\Pet;
+use App\Services\Media\ReferenceImageRetryService;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Support\HtmlString;
 
 class PetResource extends Resource
 {
@@ -117,9 +120,19 @@ class PetResource extends Resource
 
                 Forms\Components\Section::make('Pet DNA & Media')
                     ->schema([
-                        Forms\Components\KeyValue::make('pet_dna')
-                            ->label('Pet DNA')
+                        // Read-only (PR #22 review): DNA v2 is nested JSON (traits, prompt…) that a
+                        // KeyValue field would flatten / overwrite on save. Never edited here.
+                        Forms\Components\Placeholder::make('pet_dna_view')
+                            ->label('Pet DNA (read-only)')
+                            ->content(fn (?Pet $record): HtmlString => new HtmlString(
+                                '<pre style="white-space:pre-wrap;font-size:12px;max-height:24rem;overflow:auto">'
+                                .e((string) json_encode($record?->pet_dna, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE))
+                                .'</pre>'
+                            ))
                             ->columnSpanFull(),
+                        Forms\Components\Placeholder::make('media_error_view')
+                            ->label('Media error')
+                            ->content(fn (?Pet $record): string => $record?->media_error ?? '—'),
                         Forms\Components\TextInput::make('current_video_url')
                             ->label('Current Video URL')
                             ->url()
@@ -184,6 +197,17 @@ class PetResource extends Resource
                     ->label('Born At')
                     ->dateTime()
                     ->sortable(),
+                Tables\Columns\TextColumn::make('media_status')
+                    ->label('Media')
+                    ->badge()
+                    ->description(fn (Pet $record): ?string => $record->media_error)
+                    ->color(fn (string $state): string => match ($state) {
+                        'ready' => 'success',
+                        'failed' => 'danger',
+                        'pending' => 'warning',
+                        default => 'gray',
+                    })
+                    ->toggleable(),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('breed_type')
@@ -199,6 +223,21 @@ class PetResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                // PR #22 review: re-queue a reference image that failed (budget, fal balance, errors).
+                Tables\Actions\Action::make('retryMedia')
+                    ->label('Retry image')
+                    ->icon('heroicon-o-arrow-path')
+                    ->requiresConfirmation()
+                    ->modalDescription('Queues the reference image again. It still passes the AI budget check.')
+                    ->visible(fn (Pet $record): bool => app(ReferenceImageRetryService::class)->canRetry($record))
+                    ->action(function (Pet $record): void {
+                        $queued = app(ReferenceImageRetryService::class)->retry($record);
+
+                        Notification::make()
+                            ->title($queued ? 'Reference image queued' : 'Cannot retry this pet')
+                            ->status($queued ? 'success' : 'warning')
+                            ->send();
+                    }),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

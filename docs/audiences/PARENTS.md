@@ -37,6 +37,9 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), potrebuje 10.000 k
 
 **Pošteno štetje korakov:** upoštevamo največ 200 korakov na minuto; če telefon javi več, preostanek štejemo šele, ko je to realno mogoče. Tako hitro tresenje telefona ne prinese več kot hoja.
 
+## Vsak kuža je unikaten *(od 4. 10. 2026 na strežniku; slike v aplikaciji: načrt)*
+Kot v resnici: dva psa iste pasme nista enaka. Ob rojstvu vsak kuža dobi svojo kombinacijo lastnosti (velikost, postava, barva in dolžina dlake, lise, ušesa, oči, rep) znotraj tega, kar je pri pasmi mogoče, in jo obdrži za vedno. V isti družini dva psa iste pasme nikoli nista enaka. *(Seznami možnosti po pasmah so še osnutek; zamenjali jih bomo s podatki iz uradnih standardov pasem.)*
+
 ## Kaj vidite vi
 - **Semafor** za vsakega otroka in vsakega psa, za današnji dan po vašem času:
   - 🔴 **rdeča** — pes je danes zbolel, več kot uro je brez hrane, vode ali čistoče (alarm), ali pa ga je "odpeljalo zavetišče";
@@ -82,6 +85,8 @@ Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava �
 - Koda PIN se na strežniku ne shrani v berljivi obliki (samo kot zgoščena vrednost), velja 15 minut in samo enkrat. Strežnik ugibanje kod omeji (po preveč napačnih poskusih 15 minut premora), napačna, potekla in že uporabljena koda pa dobijo enak odgovor — tako ni mogoče ugotoviti, kateri otroci ali kode obstajajo.
 - AI videi psa so **kriptografsko preverjeni**: na zaslon pride samo vsebina, ki jo je ustvaril PetPrep (prek fal.ai), z zaupanja vrednih naslovov.
 - **Posodobitve v živo vidijo samo otroci, ki skrbijo za tega psa, in starši vaše družine.** Kanal je zaseben: strežnik ob vsaki povezavi preveri, kdo sprašuje — brat ali sestra z drugim psom ali kdorkoli iz druge družine se ne more priklopiti. Sporočila nosijo samo stanje psa, brez imena ali e-pošte otroka.
+- **Videz psa ustvari umetna inteligenca brez podatkov o otroku** *(od 4. 10. 2026, strežnik)*: opis za sliko vsebuje samo pasmo in lastnosti psa (barva, dlaka, ušesa …) — nikoli imena, vzdevka ali česarkoli o vaši družini.
+- **Igra deluje tudi brez slike.** Če ustvarjanje slike ne uspe ali je dosežena dnevna meja stroškov, kuža normalno živi naprej (le brez nove slike); sistem sliko poskusi ustvariti znova naslednji dan.
 - Brez oglasov. Brez klepeta s tujci.
 - Strežniki v EU (Hetzner). *(načrt: politika zasebnosti, privolitev staršev, izbris računa)*
 

@@ -22,12 +22,12 @@ export type ActivityType =
 /** Pet DNA visual identity payload stored in pet_dna JSONB column. */
 export interface PetDna {
   seed: number;
-  visual_traits: {
-    color_scheme: string;
-    eye_color: string;
-    fur_texture: string;
-    markings: string;
-  };
+  /**
+   * Trait name → value. v1 pets: color_scheme / eye_color / fur_texture / markings;
+   * DNA v2 (M4-08): size, build, coat_length, coat_color, coat_pattern, markings,
+   * ear_carriage, eye_color, tail — keys vary by version and breed.
+   */
+  visual_traits: Record<string, string>;
   prompt_anchor: string;
   reference_image_url: string | null;
 }
