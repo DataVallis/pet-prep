@@ -31,6 +31,18 @@ export interface SignInPayload {
   token: string;
   user: AppUser;
   pet: Pet | null;
+  /**
+   * Per-child contract flag from the server (`/api/user`, `/api/login`, pin-login).
+   * When a boolean it wins over anything on the pet: a child who joined a shared,
+   * already born pet must still sign (the pet's `born_at` says "born").
+   */
+  awaitingContract?: boolean | null;
+}
+
+/** The session pet with the server's per-child contract flag applied (if any). */
+export function petWithContractFlag(pet: Pet | null, awaitingContract?: boolean | null): Pet | null {
+  if (!pet || typeof awaitingContract !== 'boolean') return pet;
+  return { ...pet, awaiting_contract: awaitingContract };
 }
 
 /** Lock state that can be derived from a pet snapshot (hard stop isn't on the pet yet — M1-16). */
@@ -42,9 +54,10 @@ export function lockStateFromPet(pet: Pet | null, now: number = Date.now()): Loc
 }
 
 /**
- * The pet is paired but unborn until the child signs the contract (M1-07b): the app
- * must show the contract step, not the HUD. `awaiting_contract` wins when present
- * (child state, broadcasts); the raw pet from login / `/api/user` only has `born_at`.
+ * The child must sign the contract before the HUD (M1-07b / M2-02). The per-child
+ * `awaiting_contract` wins when present — `signIn` copies the session flag from
+ * `/api/user` / `/api/login` / pin-login onto the pet, child state and broadcasts set
+ * it too; only a pet without the flag falls back to `born_at === null`.
  */
 export function isAwaitingContract(pet: Pet | null): boolean {
   if (!pet) return false;
@@ -100,16 +113,18 @@ export const useAppStore = create<AppStore>((set) => ({
   setUser: (user) => set({ user }),
   setPairingStatus: (status, error = null) =>
     set({ pairingStatus: status, pairingError: error }),
-  signIn: ({ token, user, pet }) =>
+  signIn: ({ token, user, pet, awaitingContract }) => {
+    const sessionPet = petWithContractFlag(pet, awaitingContract);
     set({
       authToken: token,
       user: { id: user.id, name: user.name, email: user.email, role: user.role },
-      pet,
-      pairingStatus: pet ? 'paired' : 'unpaired',
+      pet: sessionPet,
+      pairingStatus: sessionPet ? 'paired' : 'unpaired',
       pairingError: null,
-      lockState: lockStateFromPet(pet),
+      lockState: lockStateFromPet(sessionPet),
       bootStatus: 'ready',
-    }),
+    });
+  },
 
   // App launch
   bootStatus: 'restoring',

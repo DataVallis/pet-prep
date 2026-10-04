@@ -40,6 +40,7 @@ class AuthController extends Controller
         $token = $user->createToken($deviceName, TokenAbility::abilitiesFor($user))->plainTextToken;
 
         $activePet = $this->sessionPet($user);
+        $awaiting = $this->awaitingContract($user, $activePet);
 
         return response()->json([
             'token' => $token,
@@ -50,12 +51,18 @@ class AuthController extends Controller
                 'email' => $user->email,
                 'role' => $user->role->value,
             ],
-            'pet' => $activePet,
+            'pet' => $this->petPayload($activePet, $awaiting),
+            // Per child (M2-02): this child must sign before acting. null for a parent.
+            'awaiting_contract' => $awaiting,
         ], 200);
     }
 
     /**
-     * Get the authenticated user's profile.
+     * Get the authenticated user's profile (session restore on app launch).
+     *
+     * `awaiting_contract` (also inside `pet`) is evaluated for the signed-in
+     * child: the pet is unborn, or the child joined a shared pet and hasn't
+     * signed their own contract yet. null for a parent.
      *
      * GET /api/user
      */
@@ -64,13 +71,15 @@ class AuthController extends Controller
         $user = $request->user();
 
         $activePet = $this->sessionPet($user);
+        $awaiting = $this->awaitingContract($user, $activePet);
 
         return response()->json([
             'id' => $user->id,
             'name' => $user->name,
             'email' => $user->email,
             'role' => $user->role->value,
-            'pet' => $activePet,
+            'pet' => $this->petPayload($activePet, $awaiting),
+            'awaiting_contract' => $awaiting,
         ], 200);
     }
 
@@ -90,6 +99,36 @@ class AuthController extends Controller
         return $familyId === null
             ? null
             : Pet::where('family_id', $familyId)->where('is_active', true)->orderBy('id')->first();
+    }
+
+    /**
+     * Child: must this child sign a contract before acting? True when the
+     * pet is unborn or the child's own caretaker row still requires a
+     * contract they haven't signed (shared pet joined after its birth).
+     * Parent: null (parents never sign).
+     */
+    private function awaitingContract(User $user, ?Pet $pet): ?bool
+    {
+        if (! $user->isChild()) {
+            return null;
+        }
+
+        return $pet !== null && ($pet->isUnborn() || $pet->caretakerNeedsContract($user));
+    }
+
+    /**
+     * The raw pet model (legacy shape, unchanged — kept as a model so the
+     * OpenAPI `Pet` schema stays) plus `awaiting_contract` when it is known
+     * per child. The attribute lives only on this response instance, which
+     * is never saved.
+     */
+    private function petPayload(?Pet $pet, ?bool $awaiting): ?Pet
+    {
+        if ($pet !== null && $awaiting !== null) {
+            $pet->setAttribute('awaiting_contract', $awaiting);
+        }
+
+        return $pet;
     }
 
     /**

@@ -139,6 +139,30 @@ describe('AppNavigator session restore', () => {
     expect(useAppStore.getState().lockState).toBe('none');
   });
 
+  it('child who joined a born shared pet and has not signed → contract step after a restart (M2-02)', async () => {
+    getItem.mockResolvedValueOnce('child-token');
+    // The pet itself is born; only the per-child flag says this child must sign.
+    const pet = makePet({ born_at: '2026-10-01T08:00:00Z' });
+    getUser.mockResolvedValueOnce({ id: 3, name: 'Bor', email: null, role: 'child', pet, awaiting_contract: true });
+    renderWithQuery(<AppNavigator />);
+
+    expect(await screen.findByText(CONTRACT_STRINGS.padHint)).toBeTruthy();
+    expect(screen.queryByText('CHILD_HUD')).toBeNull();
+    const state = useAppStore.getState();
+    expect(state.pet?.awaiting_contract).toBe(true);
+    expect(state.user).toEqual({ id: 3, name: 'Bor', email: null, role: 'child' });
+  });
+
+  it('per-child flag false wins over the pet: a signed child goes to the HUD (M2-02)', async () => {
+    getItem.mockResolvedValueOnce('child-token');
+    const pet = { ...makePet({ born_at: '2026-10-01T08:00:00Z' }), awaiting_contract: true };
+    getUser.mockResolvedValueOnce({ id: 2, name: 'Ana', email: null, role: 'child', pet, awaiting_contract: false });
+    renderWithQuery(<AppNavigator />);
+
+    expect(await screen.findByText('CHILD_HUD')).toBeTruthy();
+    expect(useAppStore.getState().pet?.awaiting_contract).toBe(false);
+  });
+
   it('restored unborn pet → signing the contract opens the HUD with the server pet (M1-07b)', async () => {
     getItem.mockResolvedValueOnce('child-token');
     getUser.mockResolvedValueOnce({ id: 2, name: 'Otrok', email: 'c@x.si', role: 'child', pet: makePet({ born_at: null }) });

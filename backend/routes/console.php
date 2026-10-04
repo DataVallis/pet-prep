@@ -25,3 +25,11 @@ Schedule::command('pets:process-decay')
     ->runInBackground()
     ->name('pet-decay-loop')
     ->description('Minutely metric decay and escalation for active pets');
+
+// Daily (M2-02): delete child login PINs that expired more than 7 days ago.
+// 03:17 UTC — off the hour, outside the families' evening rush.
+Schedule::command('pins:prune')
+    ->dailyAt('03:17')
+    ->withoutOverlapping()
+    ->name('prune-child-login-pins')
+    ->description('Delete expired / used child login PINs older than 7 days');

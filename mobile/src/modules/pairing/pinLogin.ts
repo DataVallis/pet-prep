@@ -91,6 +91,7 @@ export async function sessionFromPinLogin(response: PinLoginResponse): Promise<S
     token: response.token,
     user: { id: response.user.id, name: response.user.name, email: null, role: 'child' },
     pet: { ...pet, awaiting_contract: response.awaiting_contract },
+    awaitingContract: response.awaiting_contract,
   };
 }
 

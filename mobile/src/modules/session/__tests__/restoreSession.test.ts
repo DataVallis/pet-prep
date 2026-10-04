@@ -40,6 +40,19 @@ describe('restoreSession', () => {
     });
   });
 
+  it('passes the per-child awaiting_contract on as awaitingContract, never on the user (M2-02)', async () => {
+    const pet = makePet();
+    getItem.mockResolvedValueOnce('tok-9');
+    getUser.mockResolvedValueOnce({ id: 3, name: 'Bor', email: null, role: 'child', pet, awaiting_contract: true });
+
+    const result = await restoreSession();
+    expect(result).toEqual({
+      status: 'authenticated',
+      session: { token: 'tok-9', user: { id: 3, name: 'Bor', email: null, role: 'child' }, pet, awaitingContract: true },
+    });
+    if (result.status === 'authenticated') expect(result.session.user).not.toHaveProperty('awaiting_contract');
+  });
+
   it('clears the token on 401', async () => {
     getItem.mockResolvedValueOnce('revoked');
     getUser.mockRejectedValueOnce(new ApiError('Unauthenticated.', 401));

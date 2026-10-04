@@ -26,6 +26,12 @@ export interface SessionUser {
 /** `GET /api/user` response. */
 export interface UserResponse extends SessionUser {
   pet: Pet | null;
+  /**
+   * Child: this child must sign the contract before acting — pet unborn, or the
+   * child joined a shared, already born pet and hasn't signed yet (M2-02). Also
+   * mirrored in `pet.awaiting_contract`. null for a parent.
+   */
+  awaiting_contract?: boolean | null;
 }
 
 /** `POST /api/login` response. */
@@ -33,6 +39,8 @@ export interface LoginResponse {
   token: string;
   user: SessionUser;
   pet: Pet | null;
+  /** Same per-child flag as `UserResponse.awaiting_contract`. */
+  awaiting_contract?: boolean | null;
 }
 
 /** `GET /api/parent/dashboard` 200 response (union: paired / no pet / no child). */

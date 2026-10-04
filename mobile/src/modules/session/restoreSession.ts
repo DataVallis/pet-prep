@@ -26,8 +26,9 @@ export async function restoreSession(): Promise<RestoreResult> {
   if (!token) return { status: 'anonymous' };
 
   try {
-    const { pet, ...user } = await api.getUser();
-    return { status: 'authenticated', session: { token, user, pet } };
+    // `awaiting_contract` is per child (M2-02): it must not end up on the user.
+    const { pet, awaiting_contract: awaitingContract, ...user } = await api.getUser();
+    return { status: 'authenticated', session: { token, user, pet, awaitingContract } };
   } catch (error) {
     if (error instanceof ApiError && error.status === 401) {
       await clearAuthToken();

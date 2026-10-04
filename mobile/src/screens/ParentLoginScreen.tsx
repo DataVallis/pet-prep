@@ -73,7 +73,12 @@ export default function ParentLoginScreen({ onBack }: ParentLoginScreenProps) {
         return;
       }
       // Same store update as the launch-time session restore (M1-12); AppNavigator routes by role.
-      signIn({ token: response.token, user: response.user, pet: response.pet });
+      signIn({
+        token: response.token,
+        user: response.user,
+        pet: response.pet,
+        awaitingContract: response.awaiting_contract,
+      });
     } catch (err) {
       if (err instanceof ApiError) {
         setError(err.status === 401 || err.status === 422 ? S.wrongCredentials : S.failed);

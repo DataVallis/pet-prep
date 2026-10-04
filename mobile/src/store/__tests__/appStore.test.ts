@@ -270,6 +270,30 @@ describe('isAwaitingContract (M1-07b)', () => {
   });
 });
 
+describe('signIn with the per-child contract flag (M2-02)', () => {
+  beforeEach(() => useAppStore.setState(useAppStore.getInitialState(), true));
+  const child = { id: 3, name: 'Bor', email: null, role: 'child' as const };
+
+  it('a joined, unsigned child on a born pet must sign', () => {
+    const pet = createMockPet({ born_at: '2026-10-01T08:00:00Z' });
+    useAppStore.getState().signIn({ token: 't', user: child, pet, awaitingContract: true });
+    expect(isAwaitingContract(useAppStore.getState().pet)).toBe(true);
+  });
+
+  it('false wins over a stale pet flag; null / absent leaves the pet untouched', () => {
+    const pet = { ...createMockPet({ born_at: '2026-10-01T08:00:00Z' }), awaiting_contract: true };
+    useAppStore.getState().signIn({ token: 't', user: child, pet, awaitingContract: false });
+    expect(isAwaitingContract(useAppStore.getState().pet)).toBe(false);
+
+    useAppStore.getState().signIn({ token: 't', user: child, pet: createMockPet({ born_at: null }), awaitingContract: null });
+    expect(isAwaitingContract(useAppStore.getState().pet)).toBe(true);
+
+    useAppStore.getState().signIn({ token: 't', user: child, pet: null, awaitingContract: true });
+    expect(useAppStore.getState().pet).toBeNull();
+    expect(useAppStore.getState().pairingStatus).toBe('unpaired');
+  });
+});
+
 describe('signed_contract broadcast (M1-07b)', () => {
   it('awaiting_contract false from a broadcast ends the contract step', () => {
     useAppStore.setState(useAppStore.getInitialState(), true);
