@@ -1,15 +1,18 @@
 <?php
 
 use App\Enums\ActivityType;
-use App\Enums\BreedType;
-use App\Enums\UserRole;
+use App\Enums\PetStatusPeriodKind;
+use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\Pet;
-use App\Models\QuietHours;
+use App\Models\PetStatusPeriod;
 use App\Models\User;
-use App\Services\PairingService;
+use Illuminate\Support\Facades\Event;
 
-use function Pest\Laravel\{actingAs, assertDatabaseHas, getJson, postJson};
+use function Pest\Laravel\actingAs;
+use function Pest\Laravel\assertDatabaseHas;
+use function Pest\Laravel\getJson;
+use function Pest\Laravel\postJson;
 
 /*
 |--------------------------------------------------------------------------
@@ -263,5 +266,92 @@ describe('POST /api/parent/hard-stop', function () {
 
     it('requires authentication', function () {
         postJson('/api/parent/hard-stop')->assertUnauthorized();
+    });
+
+    // M2-05 review M1: idempotent set with `active`, under the row lock.
+    it('sets the requested state with active — a repeat changes nothing and broadcasts nothing', function () {
+        [$parent, , $pet] = createParentWithChildAndPet();
+        Event::fake([PetUpdated::class]);
+        actingAs($parent, 'sanctum');
+
+        postJson('/api/parent/hard-stop', ['pet_id' => $pet->id, 'active' => true])->assertOk()
+            ->assertJson(['pet_id' => $pet->id, 'is_hard_stopped' => true, 'changed' => true]);
+        // A lost response retried, or a second parent with the same intent: still stopped.
+        postJson('/api/parent/hard-stop', ['pet_id' => $pet->id, 'active' => true])->assertOk()
+            ->assertJson(['is_hard_stopped' => true, 'changed' => false]);
+
+        expect($pet->fresh()->is_hard_stopped)->toBeTrue();
+        Event::assertDispatchedTimes(PetUpdated::class, 1);
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'hard_stop_activated');
+        expect(PetStatusPeriod::where('pet_id', $pet->id)->where('kind', PetStatusPeriodKind::HardStop->value)->count())->toBe(1);
+    });
+
+    it('active: false resumes once and closes the status period', function () {
+        [$parent, , $pet] = createParentWithChildAndPet();
+        actingAs($parent, 'sanctum');
+        postJson('/api/parent/hard-stop', ['pet_id' => $pet->id, 'active' => true])->assertOk();
+        $this->travel(10)->minutes();
+
+        Event::fake([PetUpdated::class]);
+        postJson('/api/parent/hard-stop', ['pet_id' => $pet->id, 'active' => false])->assertOk()
+            ->assertJson(['is_hard_stopped' => false, 'changed' => true]);
+        postJson('/api/parent/hard-stop', ['pet_id' => $pet->id, 'active' => false])->assertOk()
+            ->assertJson(['is_hard_stopped' => false, 'changed' => false]);
+
+        Event::assertDispatchedTimes(PetUpdated::class, 1);
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'hard_stop_deactivated');
+        $period = PetStatusPeriod::where('pet_id', $pet->id)->where('kind', PetStatusPeriodKind::HardStop->value)->sole();
+        expect($period->ended_at)->not->toBeNull();
+    });
+
+    it('active false on a running pet is a no-op (no write, no event)', function () {
+        [$parent, , $pet] = createParentWithChildAndPet();
+        Event::fake([PetUpdated::class]);
+        actingAs($parent, 'sanctum');
+
+        postJson('/api/parent/hard-stop', ['pet_id' => $pet->id, 'active' => false])->assertOk()
+            ->assertJson(['is_hard_stopped' => false, 'changed' => false]);
+        Event::assertNotDispatched(PetUpdated::class);
+        expect(PetStatusPeriod::where('pet_id', $pet->id)->count())->toBe(0);
+    });
+
+    it('without active the legacy toggle still works and reports changed', function () {
+        [$parent, , $pet] = createParentWithChildAndPet();
+        actingAs($parent, 'sanctum');
+
+        postJson('/api/parent/hard-stop', ['pet_id' => $pet->id])->assertOk()->assertJson(['is_hard_stopped' => true, 'changed' => true]);
+        postJson('/api/parent/hard-stop', ['pet_id' => $pet->id, 'active' => null])->assertOk()->assertJson(['is_hard_stopped' => false, 'changed' => true]);
+    });
+
+    it('validates active as a boolean', function () {
+        [$parent, , $pet] = createParentWithChildAndPet();
+        actingAs($parent, 'sanctum');
+
+        postJson('/api/parent/hard-stop', ['pet_id' => $pet->id, 'active' => 'yes please'])
+            ->assertStatus(422)->assertJsonValidationErrors('active');
+        expect($pet->fresh()->is_hard_stopped)->toBeFalse();
+    });
+
+    it('refuses an inactive pet with 404', function () {
+        [$parent, , $pet] = createParentWithChildAndPet();
+        $pet->update(['is_active' => false]);
+        actingAs($parent, 'sanctum');
+
+        postJson('/api/parent/hard-stop', ['pet_id' => $pet->id, 'active' => true])->assertNotFound();
+        expect($pet->fresh()->is_hard_stopped)->toBeFalse();
+    });
+
+    it('a stop lifted after a while thaws the neglect clocks (row-locked path keeps the hooks)', function () {
+        [$parent, , $pet] = createParentWithChildAndPet();
+        $pet->update(['hunger_zero_since' => now()->subMinutes(30), 'hunger_level' => 0]);
+        actingAs($parent, 'sanctum');
+
+        postJson('/api/parent/hard-stop', ['pet_id' => $pet->id, 'active' => true])->assertOk();
+        $before = $pet->fresh()->hunger_zero_since;
+        $this->travel(2)->hours();
+        postJson('/api/parent/hard-stop', ['pet_id' => $pet->id, 'active' => false])->assertOk();
+
+        // Shifted forward by the 2 h freeze.
+        expect($before->diffInMinutes($pet->fresh()->hunger_zero_since))->toBeGreaterThanOrEqual(119.0);
     });
 });

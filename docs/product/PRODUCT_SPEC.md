@@ -128,7 +128,7 @@ Za **gibanje (energijo)** veljata samo fazi 1 in 2, in to le izven tihih ur; faz
 - Pes, ki čaka na pogodbo, in otrok brez psa sta zelena.
 - Bolezen, ki se je začela včeraj, danes ne obarva rdeče (pravilo "danes zbolel"); pes je seveda še vedno prikazan kot bolan.
 
-**Kaj starš vidi po otroku (strežnik M2-05, 4. 10. 2026; zasloni v aplikaciji *načrt*):** semafor z razlogi, Care Score (§11), današnje rutine (pričakovane, opravljene, zamujene s tipom in uro, še odprte), zadnjih 7 dni (rutine, koraki tega otroka, cilj sprehoda, dosežen), napredek 12-tedenskega izziva ("teden N od 12", dnevi od podpisa pogodbe). Po psu: semafor, metrike, Care Score psa, današnje rutine, zadnjih 20 dejanj z vzdevkom otroka, ki jih je naredil. Podrobno poročilo otroka za 7, 30 ali 84 dni.
+**Kaj starš vidi po otroku (strežnik + zasloni v aplikaciji M2-05, 4. 10. 2026):** semafor z razlogi, Care Score (§11), današnje rutine (pričakovane, opravljene, zamujene s tipom in uro, še odprte), zadnjih 7 dni (rutine, koraki tega otroka, cilj sprehoda, dosežen), napredek 12-tedenskega izziva ("teden N od 12", dnevi od podpisa pogodbe). Po psu: semafor, metrike, Care Score psa, današnje rutine, zadnjih 20 dejanj z vzdevkom otroka, ki jih je naredil. Podrobno poročilo otroka za 7, 30 ali 84 dni.
 
 ## 10. AI mediji
 

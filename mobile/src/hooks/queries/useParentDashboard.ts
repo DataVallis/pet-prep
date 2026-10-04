@@ -1,30 +1,41 @@
 /**
  * TanStack Query hook for `GET /api/parent/dashboard`.
+ *
+ * Default (M2-05): live — Reverb events patch / refetch the cache
+ * (`useParentLiveUpdates`), and while no pet channel is subscribed the query polls
+ * every 30 s. Screens that need a tighter loop (the PIN screen waiting for the child)
+ * pass their own `refetchInterval`.
  */
 
 import { useQuery, type Query } from '@tanstack/react-query';
 
 import { api, NO_CHILD_PAIRED_MESSAGE, type ParentDashboardResponse } from '@/api/client';
+import { livePollInterval, parentDashboardKey } from '@/modules/family/live';
+import { useAppStore } from '@/store/appStore';
 
-export const parentDashboardKey = ['parent', 'dashboard'] as const;
+export { parentDashboardKey };
 
 interface Options {
   /**
-   * Poll interval in ms (used while a pairing PIN is shown); false = no polling.
-   * A function gets the latest data, so polling can stop as soon as a pet appears.
+   * Poll interval in ms; false = no polling; 'live' (default) = 30 s while the socket
+   * is not connected. A function gets the latest data, so polling can stop as soon as
+   * a pet appears.
    */
-  refetchInterval?: number | false | ((data: ParentDashboardResponse | undefined) => number | false);
+  refetchInterval?: 'live' | number | false | ((data: ParentDashboardResponse | undefined) => number | false);
   enabled?: boolean;
 }
 
-export function useParentDashboard({ refetchInterval = false, enabled = true }: Options = {}) {
+export function useParentDashboard({ refetchInterval = 'live', enabled = true }: Options = {}) {
+  const wsStatus = useAppStore((s) => s.wsStatus);
   return useQuery<ParentDashboardResponse>({
     queryKey: parentDashboardKey,
     queryFn: api.getParentDashboard,
     refetchInterval:
-      typeof refetchInterval === 'function'
-        ? (query: Query<ParentDashboardResponse>) => refetchInterval(query.state.data)
-        : refetchInterval,
+      refetchInterval === 'live'
+        ? livePollInterval(wsStatus)
+        : typeof refetchInterval === 'function'
+          ? (query: Query<ParentDashboardResponse>) => refetchInterval(query.state.data)
+          : refetchInterval,
     enabled,
   });
 }

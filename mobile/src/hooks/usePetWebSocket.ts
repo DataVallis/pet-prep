@@ -35,6 +35,14 @@ const PusherClient: PusherConstructor =
 
 export type BroadcastHandler = (event: PetUpdatedBroadcast) => void;
 
+/** One Echo (= one websocket) for the app's Reverb, authorizing private channels with the Bearer token. */
+export function createEcho(): Echo<'reverb'> {
+  return new Echo<'reverb'>({
+    broadcaster: 'reverb',
+    client: new PusherClient(ENV.REVERB_APP_KEY, buildPusherOptions(ENV, api.authorizeChannel)),
+  });
+}
+
 /**
  * Pass events through only if not older than the last one passed (by `emitted_at`).
  * Exported for tests.
@@ -68,10 +76,7 @@ export function usePetWebSocket(petId: number | null, onBroadcast?: BroadcastHan
     const passes = createBroadcastGate();
 
     try {
-      const echo = new Echo<'reverb'>({
-        broadcaster: 'reverb',
-        client: new PusherClient(ENV.REVERB_APP_KEY, buildPusherOptions(ENV, api.authorizeChannel)),
-      });
+      const echo = createEcho();
 
       echoRef.current = echo;
 

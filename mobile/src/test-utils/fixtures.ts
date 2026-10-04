@@ -3,7 +3,7 @@
  */
 
 import type { ChildPetState } from '@/api/client';
-import type { FamilyChild, FamilyPet } from '@/modules/family/family';
+import type { FamilyChild, FamilyPetRaw } from '@/modules/family/family';
 import type { Pet, PetUpdatedBroadcast } from '@/types';
 
 /** `pet.updated` payload for pet 7 (UTC instants, like the backend's broadcast). */
@@ -174,12 +174,81 @@ export function makeFamilyChild(overrides: Partial<FamilyChild> = {}): FamilyChi
     pet_id: null,
     contract_signed: false,
     stats: { days: 7, fed: 0, watered: 0, cleaned: 0, walk_goals: 0, actions_total: 0, steps: 0, active_step_days: 0 },
+    // M2-06 defaults: a child without a pet (green, no score, no progress).
+    traffic_light: { color: 'green', reasons: [] },
+    care_score: { score: null, done: 0, expected: 0, routines: null, illnesses: 0, since: null },
+    today: { date: '2026-10-04', expected: 0, done: 0, done_by_child: 0, pending: 0, missed_count: 0, missed: [] },
+    last_7_days: [],
+    progress: null,
     ...overrides,
   };
 }
 
+/** A `last_7_days` / report `daily` row. */
+export function makeDayRow(date: string, overrides: Partial<FamilyChild['last_7_days'][number]> = {}) {
+  return {
+    date,
+    expected: 6,
+    fair_expected: 6,
+    done: 5,
+    done_by_child: 5,
+    missed: 1,
+    pending: 0,
+    walk_steps: 4200,
+    walk_goal: 4000,
+    walk_done: true,
+    ...overrides,
+  };
+}
+
+/** The 7 days 2026-09-28 … 2026-10-04 (Ljubljana family "today" = 2026-10-04). */
+export function makeLast7Days(): FamilyChild['last_7_days'] {
+  return ['2026-09-28', '2026-09-29', '2026-09-30', '2026-10-01', '2026-10-02', '2026-10-03', '2026-10-04'].map((d) =>
+    makeDayRow(d),
+  );
+}
+
+/**
+ * A child caring for pet 7 with real M2-06 data, exactly as the backend serialises it
+ * (`CareScoreService::childSummary`): ISO instants with the family offset (+02:00).
+ */
+export function makeScoredChild(overrides: Partial<FamilyChild> = {}): FamilyChild {
+  return makeFamilyChild({
+    id: 2,
+    name: 'Luka',
+    pet_id: 7,
+    devices: 1,
+    contract_signed: true,
+    traffic_light: { color: 'green', reasons: [] },
+    care_score: { score: 86, done: 31, expected: 36, routines: 36, illnesses: 0, since: '2026-09-21T16:00:00+02:00' },
+    today: { date: '2026-10-04', expected: 4, done: 3, done_by_child: 3, pending: 1, missed_count: 0, missed: [] },
+    last_7_days: makeLast7Days(),
+    progress: { started_at: '2026-09-21T16:00:00+02:00', days_elapsed: 13, week: 2, weeks_total: 12, completed: false },
+    ...overrides,
+  });
+}
+
+/** A missed routine as in `today.missed[]` (family offset). */
+export function makeMissed(type: 'feed' | 'water' | 'clean' | 'walk', opensAt: string, dueAt: string, date = '2026-10-04') {
+  return { type, date, opens_at: opensAt, due_at: dueAt };
+}
+
+/** `GET /api/parent/dashboard` for a family with children and pets (M2-05 shape). */
+export function makeScoredDashboard(children: FamilyChild[], pets: FamilyPetRaw[]) {
+  return {
+    timezone: 'Europe/Ljubljana',
+    pet: { id: pets[0]?.id ?? 7, breed_type: 'mutt', escalation_level: 0 },
+    child: children[0] ? { id: children[0].id, name: children[0].name } : null,
+    traffic_light: 'green',
+    quiet_hours: null,
+    recent_activities: [],
+    weekly_performance: [],
+    family: { id: 1, timezone: 'Europe/Ljubljana', parents: [{ id: 1, name: 'Starš', is_me: true }], children, pets },
+  };
+}
+
 /** A pet of `family.pets`. */
-export function makeFamilyPet(overrides: Partial<FamilyPet> = {}): FamilyPet {
+export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetRaw {
   return {
     id: 7,
     breed_type: 'mutt',
@@ -210,7 +279,7 @@ export function makeFamilyPet(overrides: Partial<FamilyPet> = {}): FamilyPet {
 }
 
 /** `GET /api/parent/dashboard` for a family without an active legacy pet. */
-export function makeFamilyDashboard(children: FamilyChild[], pets: FamilyPet[] = []) {
+export function makeFamilyDashboard(children: FamilyChild[], pets: FamilyPetRaw[] = []) {
   return {
     message: children.length > 0 ? 'No active pet session found.' : 'No child profile paired yet.',
     timezone: 'Europe/Ljubljana',
