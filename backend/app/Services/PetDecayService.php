@@ -422,10 +422,6 @@ class PetDecayService
     }
 
     /**
-     * Subtract decay and clamp to 0–100 (precise, no rounding except
-     * snapping float noise onto integers).
-     */
-    /**
      * Decay hours between two instants: full rate outside quiet hours, 10 % inside.
      */
     private function weightedHours(?QuietHours $quietHours, CarbonInterface $from, CarbonInterface $to): float
@@ -435,6 +431,10 @@ class PetDecayService
         return ($normal + $quiet * self::QUIET_HOURS_DECAY_MULTIPLIER) / 3600;
     }
 
+    /**
+     * Subtract decay and clamp to 0–100 (precise, no rounding except
+     * snapping float noise onto integers).
+     */
     private function decayMetric(float $current, float $decay): float
     {
         $value = max(0.0, min(100.0, $current - $decay));
