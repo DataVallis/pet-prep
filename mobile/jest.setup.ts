@@ -34,23 +34,3 @@ jest.mock('expo-sensors', () => ({
 // Mock laravel-echo and pusher-js
 jest.mock('laravel-echo', () => jest.fn());
 jest.mock('pusher-js', () => jest.fn());
-
-// Mock nativewind to avoid CSS interop runtime issues in tests
-jest.mock('nativewind', () => ({
-  styled: <T,>(Component: T): T => Component,
-  useColorScheme: () => ({ colorScheme: 'light', setColorScheme: jest.fn(), toggleColorScheme: jest.fn() }),
-}));
-
-// Mock react-native-css-interop to prevent runtime className processing
-jest.mock('react-native-css-interop', () => ({
-  styled: <T,>(Component: T): T => Component,
-  useColorScheme: () => ({ colorScheme: 'light', setColorScheme: jest.fn(), toggleColorScheme: jest.fn() }),
-  colorScheme: 'light',
-}));
-
-// Silence console warnings in tests
-const originalWarn = console.warn;
-console.warn = (...args) => {
-  if (typeof args[0] === 'string' && args[0].includes('NativeWind')) return;
-  originalWarn.call(console, ...args);
-};

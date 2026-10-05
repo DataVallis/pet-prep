@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react-native';
+import { StyleSheet, type TextStyle, type ViewStyle } from 'react-native';
 
 import LockedScreen, { LOCKED_STRINGS, isTranslucentLock, lockedCopy } from '@/screens/LockedScreen';
 import { useAppStore } from '@/store/appStore';
@@ -26,6 +27,27 @@ describe('LockedScreen (M1-16)', () => {
     render(<LockedScreen />);
     expect(bg()).toEqual(['#000000']);
     expect(screen.getByTestId('locked-card')).toBeTruthy();
+  });
+
+  it('2026-10-05: is a full-screen overlay styled by StyleSheet (no NativeWind)', () => {
+    useAppStore.getState().setLockState('game_over');
+    render(<LockedScreen />);
+
+    const root = StyleSheet.flatten(screen.getByTestId('locked-screen').props.style) as ViewStyle;
+    expect(root).toMatchObject({ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 50 });
+    expect(StyleSheet.flatten(screen.getByTestId('locked-glow').props.style)).toMatchObject({ width: 256, borderRadius: 128 });
+    const title = StyleSheet.flatten(screen.getByText(LOCKED_STRINGS.game_over.title).props.style) as TextStyle;
+    expect(title).toMatchObject({ color: '#ffffff', fontSize: 24, textAlign: 'center' });
+  });
+
+  it('translucent locks: glass card, lighter body text, no red glow', () => {
+    useAppStore.getState().setLockState('hard_stop');
+    render(<LockedScreen />);
+
+    expect(StyleSheet.flatten(screen.getByTestId('locked-card-glass').props.style)).toMatchObject({ borderRadius: 28 });
+    expect(screen.queryByTestId('locked-glow')).toBeNull();
+    const body = StyleSheet.flatten(screen.getByText(LOCKED_STRINGS.hard_stop.body).props.style) as TextStyle;
+    expect(body.color).toBe('#cbd5e1');
   });
 
   it('hard stop: "Starš je ustavil igro" with the spec text', () => {

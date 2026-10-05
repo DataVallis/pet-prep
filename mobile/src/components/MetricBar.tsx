@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 
+import type { MetricSizing } from '@/modules/hud/hudLayout';
 import { interpolateColor } from '@/utils/metrics';
 
 export interface MetricBarProps {
@@ -12,23 +13,29 @@ export interface MetricBarProps {
   icon: ReactNode;
   /** Optional override fill color; defaults to interpolateColor(level). */
   color?: string;
+  /** Size from `computeHudLayout` (the HUD fits four bars to the screen); default = 100 pt track. */
+  sizing?: Pick<MetricSizing, 'badge' | 'innerGap' | 'trackHeight' | 'showLabel'>;
+  testID?: string;
 }
+
+const DEFAULT_SIZING = { badge: 34, innerGap: 6, trackHeight: 100, showLabel: true } as const;
 
 /**
  * Vertical progress bar used on the right edge of the Child HUD.
  * Fill color interpolates green → amber → red based on level.
  */
-export default function MetricBar({ level, label, icon, color }: MetricBarProps) {
+export default function MetricBar({ level, label, icon, color, sizing = DEFAULT_SIZING, testID }: MetricBarProps) {
   const clamped = Math.max(0, Math.min(100, level));
   const fillColor = color ?? interpolateColor(clamped);
+  const badge = { width: sizing.badge, height: sizing.badge, borderRadius: sizing.badge / 2 };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.iconBadge}>
+    <View style={[styles.container, { gap: sizing.innerGap }]} testID={testID} accessible accessibilityLabel={`${label} ${clamped}%`}>
+      <View style={[styles.iconBadge, badge]}>
         {icon}
       </View>
 
-      <View style={styles.barTrack}>
+      <View style={[styles.barTrack, { height: sizing.trackHeight }]} testID={testID ? `${testID}-track` : undefined}>
         <View
           style={[
             styles.barFill,
@@ -37,22 +44,25 @@ export default function MetricBar({ level, label, icon, color }: MetricBarProps)
         />
       </View>
 
-      <Text style={styles.percentText}>{clamped}%</Text>
-      {label ? <Text style={styles.labelText}>{label}</Text> : null}
+      <Text style={styles.percentText} numberOfLines={1} maxFontSizeMultiplier={1}>{clamped}%</Text>
+      {label && sizing.showLabel ? (
+        // One line always ("ENERGIJA" used to wrap to "ENERGIJ / A"): narrow mono font,
+        // no letter-spacing, fixed font scale (the HUD height math relies on the line
+        // heights; VoiceOver reads the accessibilityLabel above) and shrink-to-fit.
+        <Text style={styles.labelText} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.7} maxFontSizeMultiplier={1}>
+          {label}
+        </Text>
+      ) : null}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    width: 48,
+    width: 58,
     alignItems: 'center',
-    gap: 6,
   },
   iconBadge: {
-    width: 34,
-    height: 34,
-    borderRadius: 17,
     borderWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.2)',
     backgroundColor: 'rgba(255, 255, 255, 0.12)',
@@ -64,7 +74,6 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
   },
   barTrack: {
-    height: 100,
     width: 12,
     borderRadius: 6,
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
@@ -80,15 +89,18 @@ const styles = StyleSheet.create({
   percentText: {
     fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
     fontSize: 12,
+    lineHeight: 16,
     fontWeight: '700',
     color: '#ffffff',
   },
   labelText: {
     fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
-    fontSize: 10,
+    fontSize: 9,
+    lineHeight: 12,
     fontWeight: '600',
     textTransform: 'uppercase',
-    letterSpacing: 0.5,
-    color: 'rgba(255, 255, 255, 0.5)',
+    letterSpacing: 0,
+    color: 'rgba(255, 255, 255, 0.6)',
+    maxWidth: 58,
   },
 });

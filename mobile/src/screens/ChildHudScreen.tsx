@@ -9,7 +9,7 @@
  * the lock screen / walk tracker and in the background.
  */
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import {
   ActivityIndicator,
   Animated,
@@ -17,8 +17,11 @@ import {
   Pressable,
   StyleSheet,
   Text,
+  useWindowDimensions,
   View,
+  type LayoutChangeEvent,
 } from 'react-native';
+import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import {
   Beef,
   Droplet,
@@ -26,6 +29,7 @@ import {
   Heart,
   LogOut,
   PawPrint,
+  RefreshCw,
   Sparkles,
   WifiOff,
 } from 'lucide-react-native';
@@ -44,6 +48,8 @@ import {
   waterHint,
 } from '@/modules/childPet/actionMessages';
 import { lockStateFromView, type CareAction, type ChildPetView } from '@/modules/childPet/childPetView';
+import { computeHudLayout, type HudLayout } from '@/modules/hud/hudLayout';
+import { WS_BADGE_STRINGS, wsBadge } from '@/modules/hud/wsBadge';
 import { formatSteps } from '@/modules/steps/stepCounter';
 import { useStepSync } from '@/modules/steps/useStepSync';
 import { logout } from '@/modules/session/logout';
@@ -61,7 +67,7 @@ export const HUD_STRINGS = {
   walk: 'Sprehod',
   clean: 'Očisti',
   metrics: { hunger: 'Hrana', thirst: 'Voda', energy: 'Energija', hygiene: 'Čistoča' },
-  ws: { live: 'V ŽIVO', connecting: 'POVEZUJEM', offline: 'BREZ POVEZAVE' },
+  ws: WS_BADGE_STRINGS,
   loading: 'Nalagam kužka …',
   loadFailed: 'Kužka ni bilo mogoče naložiti.',
   retry: 'Poskusi znova',
@@ -90,30 +96,63 @@ const TOAST_MS = 3_000;
 
 type Toast = { tone: 'ok' | 'info'; message: string };
 
-/** Pulsing connection-status dot for the top status bar. */
+/**
+ * Realtime status in the top bar: green "V ŽIVO", amber "POVEZUJEM", otherwise only a
+ * small grey refresh icon — the HUD keeps updating by polling (`modules/hud/wsBadge`).
+ */
 function WsStatusDot({ status }: { status: WebSocketStatus }) {
-  if (status === 'connected') {
+  const badge = wsBadge(status);
+  if (badge.tone === 'polling') {
     return (
-      <View style={styles.wsRow}>
-        <View style={[styles.wsDot, styles.wsConnected]} />
-        <Text style={styles.wsText}>{HUD_STRINGS.ws.live}</Text>
-      </View>
-    );
-  }
-  if (status === 'reconnecting' || status === 'connecting') {
-    return (
-      <View style={styles.wsRow}>
-        <View style={[styles.wsDot, styles.wsConnecting]} />
-        <Text style={styles.wsText}>{HUD_STRINGS.ws.connecting}</Text>
+      <View style={styles.wsRow} testID="hud-ws-polling" accessible accessibilityLabel={badge.accessibilityLabel}>
+        <RefreshCw color="#64748b" size={11} />
       </View>
     );
   }
   return (
-    <View style={styles.wsRow}>
-      <View style={[styles.wsDot, styles.wsDisconnected]} />
-      <Text style={styles.wsText}>{HUD_STRINGS.ws.offline}</Text>
+    <View style={styles.wsRow} testID={`hud-ws-${badge.tone}`} accessible accessibilityLabel={badge.accessibilityLabel}>
+      <View style={[styles.wsDot, badge.tone === 'live' ? styles.wsConnected : styles.wsConnecting]} />
+      <Text style={styles.wsText}>{badge.label}</Text>
     </View>
   );
+}
+
+const ZERO_INSETS = { top: 0, bottom: 0 } as const;
+
+/**
+ * Screen geometry for the header, metric column and dock (`modules/hud/hudLayout`):
+ * window height + safe-area insets, refined with the measured header / dock heights.
+ * Reads the insets context directly so the screen also renders without a provider (tests).
+ */
+function useHudLayout(): {
+  layout: HudLayout;
+  onHeaderLayout: (e: LayoutChangeEvent) => void;
+  onDockLayout: (e: LayoutChangeEvent) => void;
+} {
+  const { height } = useWindowDimensions();
+  const insets = useContext(SafeAreaInsetsContext) ?? ZERO_INSETS;
+  const [headerHeight, setHeaderHeight] = useState<number | undefined>(undefined);
+  const [dockHeight, setDockHeight] = useState<number | undefined>(undefined);
+
+  const layout = useMemo(
+    () =>
+      computeHudLayout({
+        screenHeight: height,
+        insets: { top: insets.top, bottom: insets.bottom },
+        headerHeight,
+        dockHeight,
+      }),
+    [height, insets.top, insets.bottom, headerHeight, dockHeight],
+  );
+  const onHeaderLayout = useCallback((e: LayoutChangeEvent) => {
+    const h = Math.round(e.nativeEvent.layout.height);
+    if (h > 0) setHeaderHeight(h);
+  }, []);
+  const onDockLayout = useCallback((e: LayoutChangeEvent) => {
+    const h = Math.round(e.nativeEvent.layout.height);
+    if (h > 0) setDockHeight(h);
+  }, []);
+  return { layout, onHeaderLayout, onDockLayout };
 }
 
 /** Server lock → session lock overlay; per-child `awaiting_contract` → contract step. */
@@ -140,6 +179,7 @@ export default function ChildHudScreen() {
   const setCleaningOverlayVisible = useAppStore((s) => s.setCleaningOverlayVisible);
 
   const queryClient = useQueryClient();
+  const { layout, onHeaderLayout, onDockLayout } = useHudLayout();
   const petQuery = useChildPet();
   const view = petQuery.data;
   useSessionSync(view);
@@ -308,7 +348,7 @@ export default function ChildHudScreen() {
       />
 
       {/* Glassmorphism top status bar */}
-      <View style={styles.topBar}>
+      <View style={[styles.topBar, { top: layout.headerTop }]} onLayout={onHeaderLayout} testID="hud-header">
         <View style={styles.petInfoLeft}>
           <View style={styles.petIconBox}>
             <PawPrint color="#a5b4fc" size={20} />
@@ -333,7 +373,7 @@ export default function ChildHudScreen() {
       </View>
 
       {stale && (
-        <View style={styles.staleBanner} testID="hud-stale">
+        <View style={[styles.staleBanner, { top: layout.bannerTop }]} testID="hud-stale">
           <WifiOff color="#fbbf24" size={14} />
           <Text style={styles.staleText}>{HUD_STRINGS.stale}</Text>
         </View>
@@ -341,21 +381,48 @@ export default function ChildHudScreen() {
 
       {/* Feedback toast */}
       {toast && (
-        <View style={[styles.feedbackToast, toast.tone === 'info' && styles.feedbackToastInfo]} testID="hud-toast">
+        <View
+          style={[styles.feedbackToast, { top: layout.bannerTop + 40 }, toast.tone === 'info' && styles.feedbackToastInfo]}
+          testID="hud-toast"
+        >
           <Text style={styles.feedbackText}>{toast.message}</Text>
         </View>
       )}
 
-      {/* Right-edge vertical progress sliders */}
-      <View style={styles.metricsColumn}>
-        <MetricBar level={pet.hunger_level} label={HUD_STRINGS.metrics.hunger} icon={<Beef color="#ffffff" size={16} />} />
-        <MetricBar level={pet.thirst_level} label={HUD_STRINGS.metrics.thirst} icon={<Droplet color="#ffffff" size={16} />} />
-        <MetricBar level={pet.energy_level} label={HUD_STRINGS.metrics.energy} icon={<Footprints color="#ffffff" size={16} />} />
-        <MetricBar level={pet.hygiene_level} label={HUD_STRINGS.metrics.hygiene} icon={<Sparkles color="#ffffff" size={16} />} />
+      {/* Right-edge vertical progress sliders — sized to fit between header and dock */}
+      <View style={[styles.metricsColumn, { top: layout.metricsTop, gap: layout.metric.gap }]} testID="hud-metrics">
+        <MetricBar
+          testID="metric-hunger"
+          level={pet.hunger_level}
+          label={HUD_STRINGS.metrics.hunger}
+          sizing={layout.metric}
+          icon={<Beef color="#ffffff" size={layout.metric.iconSize} />}
+        />
+        <MetricBar
+          testID="metric-thirst"
+          level={pet.thirst_level}
+          label={HUD_STRINGS.metrics.thirst}
+          sizing={layout.metric}
+          icon={<Droplet color="#ffffff" size={layout.metric.iconSize} />}
+        />
+        <MetricBar
+          testID="metric-energy"
+          level={pet.energy_level}
+          label={HUD_STRINGS.metrics.energy}
+          sizing={layout.metric}
+          icon={<Footprints color="#ffffff" size={layout.metric.iconSize} />}
+        />
+        <MetricBar
+          testID="metric-hygiene"
+          level={pet.hygiene_level}
+          label={HUD_STRINGS.metrics.hygiene}
+          sizing={layout.metric}
+          icon={<Sparkles color="#ffffff" size={layout.metric.iconSize} />}
+        />
       </View>
 
       {/* Bottom floating control dock */}
-      <View style={styles.bottomDock}>
+      <View style={[styles.bottomDock, { bottom: layout.dockBottom }]} onLayout={onDockLayout} testID="hud-dock">
         <ActionButton
           testID="action-feed"
           icon={<Beef color="#ffffff" size={24} />}
@@ -498,7 +565,6 @@ const styles = StyleSheet.create({
   },
   topBar: {
     position: 'absolute',
-    top: Platform.OS === 'ios' ? 56 : 36,
     left: 16,
     right: 16,
     zIndex: 20,
@@ -552,6 +618,7 @@ const styles = StyleSheet.create({
   wsRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    minHeight: 20,
     gap: 5,
     paddingHorizontal: 8,
     paddingVertical: 4,
@@ -569,9 +636,6 @@ const styles = StyleSheet.create({
   wsConnecting: {
     backgroundColor: '#f59e0b',
   },
-  wsDisconnected: {
-    backgroundColor: '#ef4444',
-  },
   wsText: {
     fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
     fontSize: 9,
@@ -588,7 +652,6 @@ const styles = StyleSheet.create({
   },
   feedbackToast: {
     position: 'absolute',
-    top: 150,
     maxWidth: '82%',
     alignSelf: 'center',
     zIndex: 30,
@@ -609,14 +672,11 @@ const styles = StyleSheet.create({
   },
   metricsColumn: {
     position: 'absolute',
-    right: 16,
-    top: 130,
+    right: 12,
     zIndex: 20,
-    gap: 12,
   },
   bottomDock: {
     position: 'absolute',
-    bottom: Platform.OS === 'ios' ? 36 : 24,
     left: 20,
     right: 20,
     zIndex: 20,
@@ -674,7 +734,6 @@ const styles = StyleSheet.create({
   },
   staleBanner: {
     position: 'absolute',
-    top: Platform.OS === 'ios' ? 124 : 104,
     alignSelf: 'center',
     zIndex: 25,
     flexDirection: 'row',

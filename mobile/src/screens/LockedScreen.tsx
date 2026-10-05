@@ -67,25 +67,22 @@ export default function LockedScreen() {
 
   return (
     <View
-      className="absolute inset-0 z-50 items-center justify-center px-6"
       style={[styles.root, translucent ? styles.translucent : styles.opaque]}
       testID="locked-screen"
       accessibilityViewIsModal
     >
       {/* Red ambient glow (opaque locks only) */}
-      {!translucent && <View className="absolute h-64 w-64 rounded-full bg-rose-600/15" />}
+      {!translucent && <View style={styles.glow} testID="locked-glow" />}
 
-      <View className="items-center" style={translucent ? styles.card : undefined} testID={translucent ? 'locked-card-glass' : 'locked-card'}>
-        <View className="h-24 w-24 items-center justify-center rounded-full border border-rose-500/30 bg-rose-500/10">
+      <View
+        style={[styles.content, translucent && styles.card]}
+        testID={translucent ? 'locked-card-glass' : 'locked-card'}
+      >
+        <View style={styles.iconCircle}>
           <Lock color="#ef4444" size={48} strokeWidth={2} />
         </View>
-        <Text className="mt-8 text-center text-2xl font-bold tracking-tight text-white">{title}</Text>
-        <Text
-          className="mt-3 max-w-[280px] text-center text-base leading-7 text-slate-400"
-          style={translucent ? styles.bodyOnGlass : undefined}
-        >
-          {body}
-        </Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={[styles.body, translucent && styles.bodyOnGlass]}>{body}</Text>
       </View>
     </View>
   );
@@ -96,6 +93,14 @@ const styles = StyleSheet.create({
   opaque: { backgroundColor: '#000000' },
   /** Grey veil: the dog video stays visible (and playing) underneath. */
   translucent: { backgroundColor: 'rgba(71, 85, 105, 0.55)' },
+  glow: {
+    position: 'absolute',
+    width: 256,
+    height: 256,
+    borderRadius: 128,
+    backgroundColor: 'rgba(225, 29, 72, 0.15)',
+  },
+  content: { alignItems: 'center' },
   card: {
     alignItems: 'center',
     paddingHorizontal: 24,
@@ -104,6 +109,33 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(15, 23, 42, 0.82)',
     borderWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.12)',
+  },
+  iconCircle: {
+    width: 96,
+    height: 96,
+    borderRadius: 48,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(244, 63, 94, 0.3)',
+    backgroundColor: 'rgba(244, 63, 94, 0.1)',
+  },
+  title: {
+    marginTop: 32,
+    textAlign: 'center',
+    fontSize: 24,
+    lineHeight: 32,
+    fontWeight: '700',
+    letterSpacing: -0.6,
+    color: '#ffffff',
+  },
+  body: {
+    marginTop: 12,
+    maxWidth: 280,
+    textAlign: 'center',
+    fontSize: 16,
+    lineHeight: 28,
+    color: '#94a3b8',
   },
   bodyOnGlass: { color: '#cbd5e1' },
 });

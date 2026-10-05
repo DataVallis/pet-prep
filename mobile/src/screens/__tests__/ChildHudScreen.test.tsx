@@ -4,10 +4,13 @@
  * (hard stop) and the contract route.
  */
 import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
+import { Dimensions, StyleSheet, type ViewStyle } from 'react-native';
+import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 
 import { ApiError, api } from '@/api/client';
 import { childPetKey } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
+import { computeHudLayout } from '@/modules/hud/hudLayout';
 import AppNavigator from '@/navigation/AppNavigator';
 import ChildHudScreen, { formatAgeMonths, HUD_STRINGS } from '@/screens/ChildHudScreen';
 import { LOCKED_STRINGS } from '@/screens/LockedScreen';
@@ -332,6 +335,60 @@ describe('ChildHudScreen', () => {
     await waitFor(() => expect(syncSteps).toHaveBeenCalledWith(expect.objectContaining({ steps_today: 1900 })));
     expect(screen.queryByTestId('walk-overlay')).toBeNull();
     expect(await screen.findByText('1.900/4.000')).toBeTruthy();
+  });
+
+  describe('2026-10-05 TestFlight fixes', () => {
+    const styleOf = (testID: string): ViewStyle => StyleSheet.flatten(screen.getByTestId(testID).props.style) as ViewStyle;
+    const METRICS = ['metric-hunger', 'metric-thirst', 'metric-energy', 'metric-hygiene'] as const;
+
+    it('realtime badge: green "V ŽIVO" when live, a calm grey icon (no "BREZ POVEZAVE") while polling', async () => {
+      await renderHud();
+      expect(screen.getByTestId('hud-ws-live')).toBeTruthy();
+      expect(screen.getByText(HUD_STRINGS.ws.live)).toBeTruthy();
+
+      act(() => useAppStore.getState().setWsStatus('disconnected'));
+      expect(screen.getByTestId('hud-ws-polling')).toBeTruthy();
+      expect(screen.getByLabelText(HUD_STRINGS.ws.polling)).toBeTruthy();
+      expect(screen.queryByText('BREZ POVEZAVE')).toBeNull();
+
+      act(() => useAppStore.getState().setWsStatus('connecting'));
+      expect(screen.getByText(HUD_STRINGS.ws.connecting)).toBeTruthy();
+    });
+
+    it('renders all four metric bars with the computed track height', async () => {
+      await renderHud();
+      const expected = computeHudLayout({ screenHeight: Dimensions.get('window').height, insets: { top: 0, bottom: 0 } });
+
+      for (const id of METRICS) {
+        expect(styleOf(`${id}-track`).height).toBe(expected.metric.trackHeight);
+      }
+      expect(styleOf('hud-metrics').top).toBe(expected.metricsTop);
+      expect(screen.getByLabelText('Čistoča 80%')).toBeTruthy();
+    });
+
+    // Jest's window is 1334 pt tall (bars capped at 100 pt) → a very tall measured dock forces a refit.
+    it('places header and dock inside the safe area and refits the bars to the measured dock', async () => {
+      getChildPet.mockResolvedValue(makeLiveChildState());
+      renderWithQuery(
+        <SafeAreaInsetsContext.Provider value={{ top: 59, bottom: 34, left: 0, right: 0 }}>
+          <ChildHudScreen />
+        </SafeAreaInsetsContext.Provider>,
+      );
+      await screen.findByTestId('action-feed');
+
+      expect(styleOf('hud-header').top).toBe(67);
+      expect(styleOf('hud-dock').bottom).toBe(38);
+      const before = styleOf('metric-hygiene-track').height as number;
+
+      fireEvent(screen.getByTestId('hud-dock'), 'layout', { nativeEvent: { layout: { x: 0, y: 0, width: 350, height: 500 } } });
+      const after = styleOf('metric-hygiene-track').height as number;
+      expect(after).toBeLessThan(before);
+
+      const height = Dimensions.get('window').height;
+      const layout = computeHudLayout({ screenHeight: height, insets: { top: 59, bottom: 34 }, dockHeight: 500 });
+      expect(after).toBe(layout.metric.trackHeight);
+      expect(layout.metricsTop + layout.metricsHeight).toBeLessThanOrEqual(height - 38 - 500);
+    });
   });
 });
 
