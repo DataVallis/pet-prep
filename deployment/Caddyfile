@@ -1,29 +1,81 @@
 # PetPrep Caddy Production Configuration
-# Reverse proxy for Laravel API + Reverb WebSockets with automated TLS / HTTPS
+# TLS, Reverb WebSockets, Laravel over FastCGI (PHP-FPM, M4-05b), static files and
+# pet media served by Caddy itself.
+#
+# Image: petprep-web (backend/docker/production/Dockerfile, target `web`) =
+# caddy:2.8-alpine + the app's public/ at /var/www/html/public — the same path as
+# in the FPM container, so php_fastcgi's SCRIPT_FILENAME matches there.
+# The app_storage volume is mounted read-only at /srv/storage (pet media).
 
 {
     # Global options
     admin off
 }
 
-# Production HTTPS domain
-api.petprep.si, petprep.si {
-    log {
-        output stdout
-        # Signed media URLs (GET /api/media/{id}?expires&v&signature, M4-05) are
-        # short-lived capabilities: never write their signature / expiry to the logs.
-        format filter {
-            wrap json
-            fields {
-                request>uri query {
-                    delete signature
-                    delete expires
-                    delete v
-                }
-            }
-        }
+# Laravel over FastCGI + static files + pet media (imported by both sites below).
+(laravel) {
+    # Never serve or route dotfiles (/.env, /.htaccess, /css/.x, /.git/…) — 404
+    # before any file_server or PHP. Must be the FIRST handle block: `respond`
+    # alone would sort after `handle` and never run. /.well-known/ stays
+    # reachable (ACME, app links).
+    @dotfiles {
+        path */.*
+        not path /.well-known/*
+    }
+    handle @dotfiles {
+        respond 404
     }
 
+    # Filament / app assets straight from disk. Filament URLs carry ?v=<version>,
+    # Vite (/build) file names carry a content hash.
+    @static_immutable path /build/*
+    handle @static_immutable {
+        root * /var/www/html/public
+        encode zstd gzip
+        header Cache-Control "public, max-age=31536000, immutable"
+        file_server
+    }
+    @static path /css/* /js/* /fonts/* /images/* /favicon.ico /robots.txt
+    handle @static {
+        root * /var/www/html/public
+        encode zstd gzip
+        header Cache-Control "public, max-age=2592000"
+        file_server
+    }
+
+    handle {
+        root * /var/www/html/public
+        # Compresses text responses only (Caddy's default type list) — never media.
+        encode zstd gzip
+
+        # The internal header must never reach a client (deletes are deferred to
+        # the moment the response is written).
+        header -X-Accel-Redirect
+
+        php_fastcgi app:9000 {
+            # Pet media (GET /api/media/{id}, PET_MEDIA_SERVE_VIA=caddy): Laravel
+            # checks the signature + authz and answers with an empty body and
+            # `X-Accel-Redirect: /{pet_id}/{file}` (validated server side, built
+            # from the DB path only). Caddy then serves that file from the
+            # read-only media root. The upstream response is discarded — only the
+            # listed headers are copied. file_server confines the path to `root`
+            # and handles Range / If-None-Match / HEAD.
+            @pet_media header X-Accel-Redirect /*
+            handle_response @pet_media {
+                root * /srv/storage/app/pet-media
+                rewrite * {rp.header.X-Accel-Redirect}
+                copy_response_headers {
+                    include Content-Type Cache-Control Content-Disposition
+                }
+                header X-Content-Type-Options nosniff
+                file_server
+            }
+        }
+        file_server
+    }
+}
+
+(reverb) {
     # Proxy WebSocket connections to Laravel Reverb
     @websockets {
         header Connection *Upgrade*
@@ -47,7 +99,6 @@ api.petprep.si, petprep.si {
             header_up X-Forwarded-Proto {scheme}
         }
     }
-
     handle /apps/* {
         reverse_proxy reverb:8080 {
             header_up Host {host}
@@ -56,34 +107,32 @@ api.petprep.si, petprep.si {
             header_up X-Forwarded-Proto {scheme}
         }
     }
-
-    # Proxy all API, web, and healthcheck requests to Laravel app
-    handle {
-        reverse_proxy app:80 {
-            header_up Host {host}
-            header_up X-Real-IP {remote_host}
-            header_up X-Forwarded-For {remote_host}
-            header_up X-Forwarded-Proto {scheme}
-        }
-    }
 }
 
-# Fallback direct IP access over HTTP
+# Production HTTPS domain
+api.petprep.si, petprep.si {
+    log {
+        output stdout
+        # Signed media URLs (GET /api/media/{id}?expires&v&signature, M4-05) are
+        # short-lived capabilities: never write their signature / expiry to the logs.
+        format filter {
+            wrap json
+            fields {
+                request>uri query {
+                    delete signature
+                    delete expires
+                    delete v
+                }
+            }
+        }
+    }
+
+    import reverb
+    import laravel
+}
+
+# Fallback direct IP access over HTTP (DEPLOYMENT.md D8)
 http://138.199.172.97 {
-    @websockets {
-        header Connection *Upgrade*
-        header Upgrade websocket
-    }
-    handle @websockets {
-        reverse_proxy reverb:8080
-    }
-    handle /app/* {
-        reverse_proxy reverb:8080
-    }
-    handle /apps/* {
-        reverse_proxy reverb:8080
-    }
-    handle {
-        reverse_proxy app:80
-    }
+    import reverb
+    import laravel
 }

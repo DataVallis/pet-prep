@@ -71,6 +71,13 @@ return [
         // state poll does not change the URI and restart the player; a URL is
         // valid for between TTL and 1.5 × TTL.
         'url_ttl_minutes' => max(10, (int) env('PET_MEDIA_URL_TTL_MINUTES', 60)),
+        // Who sends the bytes of GET /api/media/{media} (M4-05b). `php` streams the
+        // file from PHP (local dev, tests). `caddy`: PHP still checks signature +
+        // authz, then answers with an empty body and an internal X-Accel-Redirect
+        // header; Caddy intercepts it and serves the file from its read-only mount
+        // of the storage volume (production default, set in compose.production.yaml).
+        // Only applies to a local disk — any other driver always streams via PHP.
+        'serve_via' => env('PET_MEDIA_SERVE_VIA', 'php') === 'caddy' ? 'caddy' : 'php',
         // fal fetches our stored reference image as the video start frame.
         'fal_fetch_ttl_minutes' => 360,
     ],

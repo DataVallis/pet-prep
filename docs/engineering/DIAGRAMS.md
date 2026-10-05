@@ -13,8 +13,8 @@ flowchart LR
     C["Child app<br/>(Expo, video HUD)"]
   end
   subgraph Hetzner["Hetzner CX23 · api.petprep.si"]
-    CAD[Caddy TLS]
-    APP["Laravel API<br/>+ Filament admin"]
+    CAD["Caddy (petprep-web)<br/>TLS · static public/ · pet media files"]
+    APP["Laravel API + Filament admin<br/>PHP-FPM 8.3 + OPcache (petprep-app, M4-05b)"]
     REV[Reverb WebSockets]
     Q["Queue worker<br/>(default: fal.ai, media downloads)"]
     VOL[("app_storage volume<br/>storage/app/pet-media")]
@@ -30,7 +30,9 @@ flowchart LR
   C -- HTTPS --> CAD
   P -- "wss · private-pet.{id}" --- CAD
   C -- "wss · private-pet.{id}" --- CAD
-  CAD --> APP
+  CAD -- "php_fastcgi app:9000" --> APP
+  APP -. "X-Accel-Redirect (signature + authz OK)" .-> CAD
+  CAD -- "file_server, read-only mount" --> VOL
   CAD --> REV
   APP --> PG
   APP --> R
@@ -43,11 +45,13 @@ flowchart LR
   Q -- "reference image + state video jobs" --> FAL
   FAL -- "signed webhook (ED25519)" --> APP
   Q -- "download result (M4-05)" --> VOL
-  APP -- "signed GET /api/media/{id}" --> VOL
+  APP -- "exists() check" --> VOL
   FAL -- "fetch start frame (signed URL)" --> CAD
   RC -. "webhook (M3-08)" .-> APP
   C -. "steps (M3-04/05)" .- HK
 ```
+
+Runtime (M4-05b): every PHP container (app = php-fpm, reverb, queue, queue-broadcasts, scheduler) runs the same image `petprep-app` (code + `composer install --no-dev` baked in, uid 1000, caches built per container on start); Caddy runs `petprep-web` (caddy:2.8-alpine + `public/`). Video bytes never pass through PHP: Laravel only checks the signed URL and answers with an internal `X-Accel-Redirect` header, Caddy serves the file (Range, ETag) from `app_storage` mounted read-only.
 
 ## 2. Pairing (parent ↔ child) — legacy e-mail child flow (deprecated since M2-02; new profiles: §2c)
 
@@ -551,9 +555,35 @@ flowchart LR
   PR --> CI1["Backend tests<br/>Pest on PostgreSQL"]
   PR --> CI2["Mobile checks<br/>tsc + Jest"]
   CI1 & CI2 --> REV["Independent AI review<br/>(qa-reviewer)"]
+  PR --> CI3["Deploy script<br/>shellcheck + harness"]
+  PR --> CI4["Production image (M4-05b)<br/>hadolint · build app + web · caddy validate · smoke"]
   REV --> M[Merge to main]
-  M --> DEP["Deploy job<br/>rsync → backup DB → migrate → restart"]
+  CI3 & CI4 --> M
+  M --> DEP["Deploy job<br/>rsync → incoming/ → deploy-production.sh"]
   DEP --> PROD[(api.petprep.si)]
+```
+
+### 7a. deploy-production.sh (M2-01 / PR #24 / M4-05b)
+
+```mermaid
+flowchart TD
+  A["1 env preflight<br/>(no git / docker before)"] --> B["2 record previous release<br/>.deployed-sha + releases/previous"]
+  B --> C["3 buildx preflight · build petprep-app:next + petprep-web:next<br/>from the NEW tree (incoming/ or git archive)"]
+  C --> D["smoke: run --rm app php artisan optimize<br/>(new image, production env)"]
+  D --> ST["storage: chown -R 1000:1000 as root (new image)<br/>verify writable as uid 1000"]
+  C -- fails --> X0["exit ≠ 0 · nothing changed<br/>old release keeps serving"]
+  D -- fails --> X0
+  ST -- fails --> X0
+  ST --> E["4 artisan down (old code, exec --user 1000)"] --> F["5 pg_dump backup"] --> G["6 code switch repo/<br/>promote :production→:previous, :next→:production"]
+  G --> H{"Caddyfile changed?"}
+  H -- yes --> HV["caddy validate (new image)"]
+  H -- no --> I
+  HV --> I["7 postgres/redis · migrate --force"]
+  I --> J["8 up -d app reverb queue queue-broadcasts scheduler caddy<br/>(entrypoint: per-container caches)<br/>+ force-recreate caddy if Caddyfile changed"]
+  J --> K["re-chown storage (warn-only) · wait: php-fpm-ping"] --> L["queue:restart"] --> M2["9 artisan up (3×)"] --> N["health /up through Caddy (5×)<br/>--resolve api.petprep.si:443 → IP site fallback"]
+  N --> O["image prune (dangling) · builder prune (> 7 days, keep 5 GB)"]
+  G & HV & I -- "fails (pre-migration)" --> R1["revert code + images (:previous→:production)<br/>restart workers · artisan up"]
+  J & K & N -- "fails (post-migration)" --> R2["keep new release (schema is new)<br/>up -d · restart workers · artisan up · loud error"]
 ```
 
 ## 8. Real-time delivery (M1-08 private channel, M1-09 queue)
@@ -765,8 +795,9 @@ sequenceDiagram
     Q->>DB: slot ready
     Q-->>App: PetUpdated video_ready (media.videos, current_video_url)
   end
-  App->>API: GET /api/media/{id}?expires&v&signature (Range)
-  API-->>App: 200 / 206 from disk (403 expired / tampered / other family token)
+  App->>API: GET /api/media/{id}?expires&v&signature (Range) — via Caddy → PHP-FPM
+  API-->>App: 403 expired / tampered / other family token · 404 no stored file
+  Note over API,Disk: production (PET_MEDIA_SERVE_VIA=caddy, M4-05b): PHP answers 200 + empty body +<br/>X-Accel-Redirect: /{pet}/{file} (path checked against a strict pattern);<br/>Caddy handle_response serves the file from /srv/storage/app/pet-media (read-only):<br/>200 / 206 / 304, Content-Type + Cache-Control private copied, nosniff — the header never reaches the app.<br/>Local dev / tests (php): BinaryFileResponse straight from PHP.
 ```
 
 ```mermaid

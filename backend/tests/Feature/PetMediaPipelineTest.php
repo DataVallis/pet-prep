@@ -4,6 +4,7 @@ use App\Enums\PetStateEnum;
 use App\Events\PetUpdated;
 use App\Filament\Resources\PetResource\Pages\EditPet;
 use App\Filament\Resources\PetResource\RelationManagers\MediaRelationManager;
+use App\Http\Controllers\PetMediaController;
 use App\Jobs\GeneratePetReferenceImage;
 use App\Jobs\StorePetMedia;
 use App\Jobs\SubmitPetStateVideo;
@@ -35,6 +36,7 @@ use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Livewire;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /*
 |--------------------------------------------------------------------------
@@ -530,8 +532,10 @@ describe('GET /api/media/{media}', function () {
         $video = pmStored($pet, 'video', 'idle');
         $url = pmPath(app(PetMediaService::class)->signedUrl($video));
 
-        $this->get($url)->assertOk()->assertHeader('Content-Type', 'video/mp4')->assertHeader('Accept-Ranges', 'bytes')
-            ->assertHeader('X-Content-Type-Options', 'nosniff');
+        $response = $this->get($url)->assertOk()->assertHeader('Content-Type', 'video/mp4')->assertHeader('Accept-Ranges', 'bytes')
+            ->assertHeader('X-Content-Type-Options', 'nosniff')
+            ->assertHeaderMissing('X-Accel-Redirect'); // default serve_via = php
+        expect($response->headers->get('Cache-Control'))->toContain('private')->not->toContain('public');
 
         $this->actingAs($child, 'sanctum')->get($url)->assertOk();
         app('auth')->forgetGuards();
@@ -571,6 +575,82 @@ describe('GET /api/media/{media}', function () {
         $slot = PetMedia::create(['pet_id' => $pet->id, 'kind' => 'video', 'state' => 'idle', 'status' => 'running']);
 
         $this->get(pmPath(app(PetMediaService::class)->signedUrl($slot)))->assertNotFound();
+    });
+
+    describe('serve_via = caddy (M4-05b, production)', function () {
+        beforeEach(fn () => config(['media.storage.serve_via' => 'caddy']));
+
+        it('checks the signature, then hands the file to Caddy: X-Accel-Redirect + empty body + media headers', function () {
+            [$parent, , $pet] = pmFamilyPet();
+            $video = pmStored($pet, 'video', 'idle');
+            $url = pmPath(app(PetMediaService::class)->signedUrl($video));
+
+            $response = $this->get($url, ['Range' => 'bytes=0-7'])->assertOk()
+                ->assertHeader('X-Accel-Redirect', "/{$pet->id}/idle-g1.mp4")
+                ->assertHeader('Content-Type', 'video/mp4')
+                ->assertHeader('X-Content-Type-Options', 'nosniff')
+                ->assertHeader('Content-Disposition', 'inline');
+
+            expect($response->getContent())->toBe('')
+                ->and($response->headers->get('Cache-Control'))->toContain('private')->not->toContain('public');
+
+            $this->actingAs($parent, 'sanctum')->get($url)->assertOk()->assertHeader('X-Accel-Redirect', "/{$pet->id}/idle-g1.mp4");
+        });
+
+        it('still refuses a bad signature, an unsigned URL and another family — without the internal header', function () {
+            [, , $pet] = pmFamilyPet();
+            $video = pmStored($pet, 'video', 'idle');
+            $url = pmPath(app(PetMediaService::class)->signedUrl($video));
+            [$otherParent, $otherChild] = pmFamilyPet();
+
+            $this->get(str_replace('signature=', 'signature=0', $url))->assertForbidden()->assertHeaderMissing('X-Accel-Redirect');
+            $this->get("/api/media/{$video->id}")->assertForbidden()->assertHeaderMissing('X-Accel-Redirect');
+            $this->actingAs($otherChild, 'sanctum')->get($url)->assertForbidden()->assertHeaderMissing('X-Accel-Redirect');
+            app('auth')->forgetGuards();
+            $this->actingAs($otherParent, 'sanctum')->get($url)->assertForbidden()->assertHeaderMissing('X-Accel-Redirect');
+        });
+
+        it('returns 404 without the header while the slot has no stored file', function () {
+            [, , $pet] = pmFamilyPet();
+            $slot = PetMedia::create(['pet_id' => $pet->id, 'kind' => 'video', 'state' => 'idle', 'status' => 'running']);
+
+            $this->get(pmPath(app(PetMediaService::class)->signedUrl($slot)))->assertNotFound()->assertHeaderMissing('X-Accel-Redirect');
+        });
+
+        it('never puts an unexpected path into the header — streams via PHP instead', function () {
+            [, , $pet] = pmFamilyPet();
+            $video = pmStored($pet, 'video', 'idle');
+            Storage::disk('pet_media')->put("{$pet->id}/odd name.mp4", pmMp4());
+            $video->update(['storage_path' => "{$pet->id}/odd name.mp4"]);
+
+            $response = $this->get(pmPath(app(PetMediaService::class)->signedUrl($video->fresh())))->assertOk()
+                ->assertHeaderMissing('X-Accel-Redirect');
+            expect($response->baseResponse)->toBeInstanceOf(BinaryFileResponse::class);
+        });
+
+        it('only applies to a local disk', function () {
+            [, , $pet] = pmFamilyPet();
+            $video = pmStored($pet, 'video', 'idle');
+            config(['filesystems.disks.pet_media.driver' => 's3']); // the fake disk instance is already resolved
+
+            $this->get(pmPath(app(PetMediaService::class)->signedUrl($video)))->assertOk()->assertHeaderMissing('X-Accel-Redirect');
+        });
+
+        it('only applies to the disk root Caddy mounts (storage/app/pet-media)', function () {
+            [, , $pet] = pmFamilyPet();
+            $video = pmStored($pet, 'video', 'idle');
+            config(['filesystems.disks.pet_media.root' => storage_path('app/elsewhere')]);
+
+            $this->get(pmPath(app(PetMediaService::class)->signedUrl($video)))->assertOk()->assertHeaderMissing('X-Accel-Redirect');
+        });
+
+        it('accepts every path the pipeline writes', function (string $path) {
+            expect(preg_match(PetMediaController::SAFE_RELATIVE_PATH, $path))->toBe(1);
+        })->with(['12/reference-g1.jpg', '12/idle-g2.mp4', '7/low_energy-g10.webp', '3/playing-g1.png']);
+
+        it('rejects anything else', function (string $path) {
+            expect(preg_match(PetMediaController::SAFE_RELATIVE_PATH, $path))->toBe(0);
+        })->with(['../.env', '12/../../.env', '/etc/passwd', '12/a/b.mp4', "12/x.mp4\n", '12/x y.mp4', '12/.hidden', 'abc/x.mp4', '12/x.mp4?y=1']);
     });
 
     it('keeps the same URL for half the TTL and a validity between 60 and 90 minutes', function () {

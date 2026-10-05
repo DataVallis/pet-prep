@@ -24,17 +24,19 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
                                 INTERNET
                                    |
                                    v
-                           +---------------+
-                           |     CADDY     |
-                           |   80 / 443    |
-                           | HTTPS / TLS   |
-                           +-------+-------+
-                                   |
-                       +-----------+-----------+
-                       |                       |
+                           +---------------------------+
+                           |     CADDY (petprep-web)   |
+                           |  80 / 443 · HTTPS / TLS   |
+                           |  public/ static files     |
+                           |  pet media (read-only     |
+                           |  app_storage, X-Accel)    |
+                           +-------------+-------------+
+                                         |
+                       +-----------------+-----+
+                       | php_fastcgi           |
                        v                       v
                Laravel HTTP API          Laravel Reverb
-                   (app:80)             WebSocket (8080)
+          (app:9000, PHP-FPM + OPcache)  WebSocket (8080)
                        |                       |
                        +-----------+-----------+
                                    |
@@ -56,16 +58,23 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
 
 ### Component Details
 
-1. **Caddy (`caddy:2.8-alpine`):**
+1. **Caddy (`petprep-web:production` = `caddy:2.8-alpine` + the app's `public/`, M4-05b):**
    - Public entrypoint (80 / 443).
    - Automated Let's Encrypt TLS certificate provisioning and renewals.
    - Proxies WebSocket upgrades and `/app/*`, `/apps/*` requests to `reverb:8080`.
-   - Proxies all HTTP API, Admin, and health requests to `app:80`.
+   - Serves `public/` itself (Filament css/js `Cache-Control: public, max-age=2592000`, `/build/*` 1 year immutable, zstd/gzip for text).
+   - Everything else → `php_fastcgi app:9000` (PHP-FPM).
+   - **Pet media:** `GET /api/media/{id}` is checked by Laravel (signature + authz); Laravel answers with an internal `X-Accel-Redirect` header and Caddy serves the file from `app_storage` mounted **read-only** at `/srv/storage` (Range / ETag / 304). The header never reaches a client. `PET_MEDIA_SERVE_VIA=php` switches back to streaming from PHP.
+   - `deployment/Caddyfile` is a single-file bind mount (see §4 for how a changed file is rolled out).
 
-2. **Laravel Application (`petprep-backend:production`):**
-   - Laravel 11 running on PHP 8.3 CLI with Supervisor.
-   - Production optimized (`APP_ENV=production`, `APP_DEBUG=false`).
-   - Configuration, routes, and views compiled to disk.
+2. **Laravel Application (`petprep-app:production`, `backend/docker/production/Dockerfile`, M4-05b):**
+   - Laravel 11 on **PHP-FPM 8.3** (official `php:8.3-fpm-bookworm` + pdo_pgsql, pgsql, redis, intl, zip, bcmath, gd, exif, pcntl, opcache), listening on 9000 inside the Docker network only.
+   - Code + `vendor/` (`composer install --no-dev --optimize-autoloader`) are **baked into the image**; nothing is bind-mounted except `/opt/petprep/.env` (read-only) and the `app_storage` volume (`storage/`).
+   - Runs as the non-root user `petprep` (uid 1000 — same owner as the files in `app_storage`).
+   - OPcache on, never re-checks files (`validate_timestamps=0`; every deploy recreates the containers). FPM `pm=dynamic`, max 12 children, `request_terminate_timeout=65s`.
+   - Production optimized (`APP_ENV=production`, `APP_DEBUG=false`). On every start the entrypoint builds the caches inside the container: `php artisan optimize` (config, events, routes, views, Filament components, Blade icons).
+   - Health: `php-fpm-ping` (compose healthcheck, deploy waits for it).
+   - The same image runs `reverb`, `queue`, `queue-broadcasts` and `scheduler` with a CLI command (their entrypoint caches config + events).
 
 3. **Laravel Reverb (`reverb:8080`):**
    - High-throughput WebSocket server listening internally on port 8080.
@@ -96,9 +105,12 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
 ```text
 /opt/petprep/
 ├── .env                  # Production secrets (mode 600, deploy:deploy)
-├── incoming/             # CI upload of the commit being deployed (staging, not mounted)
+├── incoming/             # CI upload of the commit being deployed (staging, not mounted; build context of the new images)
 ├── releases/previous/    # Copy of repo/ before the last code switch (automatic revert)
-├── repo/                 # Live codebase, bind-mounted into every PHP container
+├── releases/build-src/   # git-mode deploys only: `git archive` of the commit = build context
+├── repo/                 # Compose file, Caddyfile (bind-mounted into caddy), ops scripts. Since M4-05b the PHP
+│                         # containers run the code baked into petprep-app (backend/vendor here is only for a
+│                         # rollback to the Sail runtime, which bind-mounts repo/backend)
 │   ├── .deployed-sha     # Commit currently deployed (written by deploy-production.sh)
 │   ├── backend/
 │   │   ├── compose.production.yaml
@@ -112,6 +124,15 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
     └── deploy-production.sh
 ```
 
+Docker images on the server (M4-05b):
+
+| Image | Meaning |
+|---|---|
+| `petprep-app:production` / `petprep-web:production` | what compose runs (current release) |
+| `petprep-app:previous` / `petprep-web:previous` | the release before (automatic revert of a failed deploy; manual rollback) |
+| `petprep-app:next` / `petprep-web:next` | built by the last deploy (same image ID as `:production` after a successful deploy) |
+| `petprep-backend:production` | the old Sail runtime image (rollback to the pre-M4-05b compose file) — remove after a stable week |
+
 ---
 
 ## 4. Automated CI/CD (GitHub Actions)
@@ -122,10 +143,11 @@ Every pull request and push to `main` runs the test jobs of `.github/workflows/d
 2. **Deploy Job:**
    - Targets the `production` GitHub Environment.
    - Prevents concurrent deployments via `concurrency: production`.
-   - Needs `backend-tests`, `mobile-checks` and `deploy-script-tests` (shellcheck + `scripts/tests/deploy-production.test.sh`, stubbed docker/git/curl).
+   - Needs `backend-tests`, `mobile-checks`, `deploy-script-tests` (shellcheck + `scripts/tests/deploy-production.test.sh`, stubbed docker/git/curl) and `production-image` (M4-05b: hadolint, builds the `app` and `web` targets with buildx — GHA layer cache, no push —, `caddy validate` of the real Caddyfile inside the web image, smoke test: uid 1000, `php-fpm -t`, extensions, no dev packages / `.env` / tests in the image, entrypoint `optimize`).
    - Uses `rsync` over SSH to upload the exact commit tree to the staging dir `/opt/petprep/incoming` — **never directly into `repo/`**, because every PHP container bind-mounts `repo/backend` and would run the new code immediately.
-   - Executes `/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming <COMMIT_SHA>` on the server, which: checks the env (before any git/docker call) → records the previous release → `artisan down` on the old code → DB backup → syncs `incoming/` into `repo/` → validates a changed Caddyfile (caddy is recreated after the migrations, because its single-file bind mount never sees a replaced file) → build → migrate → caches → recreates containers → `queue:restart` → `artisan up` (3 attempts) → verifies `/up` returns HTTP 200.
-   - On failure **before** migrations succeeded the script reverts `repo/` to the previous release (from `releases/previous`) and leaves maintenance; on failure **after** migrations it keeps the new code (schema is new), restarts containers, leaves maintenance and fails loudly. Details: comment block in the script, DEPLOYMENT.md D10.
+   - Executes `/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming <COMMIT_SHA>` on the server, which: checks the env (before any git/docker call) → records the previous release → checks `docker buildx` → **builds `petprep-app:next` + `petprep-web:next` from `incoming/` and smoke-tests them (`php artisan optimize` with the production env) while the old release keeps serving** → chowns the `app_storage` volume to uid 1000 and verifies it is writable as uid 1000 (abort otherwise — the FPM image is non-root) → `artisan down` on the old code (as uid 1000) → DB backup → syncs `incoming/` into `repo/` → promotes the images (`:production` → `:previous`, `:next` → `:production`) → validates a changed Caddyfile with the new caddy image (caddy is recreated after the migrations, because its single-file bind mount never sees a replaced file) → migrate → recreates all containers on the new images → waits for PHP-FPM (`php-fpm-ping`) → `queue:restart` → `artisan up` (3 attempts) → verifies `/up` through Caddy (`--resolve api.petprep.si:443:127.0.0.1`, fallback the IP site; 5 attempts) → prunes dangling images and build cache older than 7 days beyond 5 GB.
+   - The first build on the server compiles the PHP extensions (~5–10 min, *estimate*); later builds reuse the cached layers (code change ≈ 1 min, composer.lock change ≈ 2–3 min). All of it happens **before** maintenance mode.
+   - A failing build or smoke test changes nothing (exit ≠ 0, no maintenance). On failure **before** migrations succeeded the script reverts `repo/` to the previous release (from `releases/previous`) **and the images** (`:previous` → `:production`) and leaves maintenance; on failure **after** migrations it keeps the new release (schema is new), restarts containers, leaves maintenance and fails loudly. Details: comment block in the script, DEPLOYMENT.md D10 / D14.
 
 ### Required GitHub Secrets in Repository Settings
 
@@ -183,6 +205,26 @@ ls -lh /opt/petprep/backups/
 ### Code Rollback
 A failed deploy reverts the code by itself when the failure happens before migrations succeed. For a deliberate rollback to an older commit, re-run the workflow for that commit (GitHub → Actions → CI & Deploy → re-run the job of the known-good `main` commit), which uploads it to `incoming/` and deploys it with the normal flow. Only roll code back past a migration if that migration is backward compatible — otherwise restore the database too (below). `cat /opt/petprep/repo/.deployed-sha` shows what is live.
 
+### Rollback of the runtime (M4-05b: PHP-FPM image → Sail image)
+
+The first deploy of the production image is the risky one. What happens and what to do:
+
+1. **Build or smoke test fails** (Dockerfile, composer, config): nothing changed — the Sail runtime keeps serving. Fix and redeploy.
+2. **Failure before the migrations finished** (code switch, invalid Caddyfile, migrate): the script reverts `repo/` (old compose file = Sail image, bind-mounted code) by itself and restarts the workers. On the first runtime deploy there is no `petprep-app:previous` — not needed, the old compose file does not use it.
+3. **Deploy finished but the app misbehaves** (e.g. Filament page broken under FPM, 502s, workers crash) — M4-05b has **no migrations**, so the code can go back without a DB restore:
+   - **Only pet media broken** (videos don't play, 404 from Caddy): set `PET_MEDIA_SERVE_VIA=php` in `/opt/petprep/.env`, then `cd /opt/petprep/repo/backend && cp /opt/petprep/.env .env && docker compose -f compose.production.yaml up -d app` (PHP streams the files again, as before M4-05b).
+   - **Back to the Sail runtime** (old compose file, old Caddyfile, `petprep-backend:production` image, `vendor/` still in `repo/backend`): re-run the deploy of the last commit **before** the M4-05b merge — GitHub → Actions → CI & Deploy → that run → *Re-run all jobs* (it uploads that commit to `incoming/` and its own, older deploy script does a normal deploy: builds the Sail image (cached), syncs the old tree, recreates the containers and Caddy with the old Caddyfile).
+   - **Without GitHub** (on the server, as `deploy`), right after the failed deploy, while `releases/previous` still holds the pre-M4-05b tree:
+     ```bash
+     cp -a /opt/petprep/releases/previous /opt/petprep/releases/rollback-sail   # the script overwrites releases/previous
+     /opt/petprep/releases/rollback-sail/scripts/deploy-production.sh \
+       --from /opt/petprep/releases/rollback-sail "$(cat /opt/petprep/releases/rollback-sail/.deployed-sha 2>/dev/null || echo rollback)"
+     ```
+     (`releases/previous` has no `.deployed-sha`; the argument is only a label.) Then `curl -fsS https://api.petprep.si/up` and `docker compose -f /opt/petprep/repo/backend/compose.production.yaml ps`.
+4. **A later release on the new runtime misbehaves:** `petprep-app:previous` / `petprep-web:previous` hold the release before; redeploy that commit through GitHub Actions (the build is a cache hit), or — no migrations in between — `docker tag petprep-app:previous petprep-app:production && docker tag petprep-web:previous petprep-web:production`, sync the previous tree into `repo/` and `docker compose -f /opt/petprep/repo/backend/compose.production.yaml up -d`.
+
+Remove `petprep-backend:production` and the unused `app_bootstrap_cache` volume only after a stable week on the new runtime (DEPLOYMENT.md D14).
+
 ### Database Restore (Disaster Recovery)
 If a destructive migration occurred and database rollback is needed:
 
@@ -216,6 +258,14 @@ docker compose -f /opt/petprep/repo/backend/compose.production.yaml logs -f post
 df -h
 free -h
 docker stats --no-stream
+
+# PHP-FPM health + pool status (M4-05b; exec runs as the image user petprep)
+docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php-fpm-ping && echo fpm-ok
+docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app sh -c \
+  'env -i SCRIPT_NAME=/fpm-status SCRIPT_FILENAME=/fpm-status REQUEST_METHOD=GET cgi-fcgi -bind -connect 127.0.0.1:9000'
+
+# Release images (current, previous, last build, old Sail image)
+docker image ls 'petprep-*'
 ```
 
 ---

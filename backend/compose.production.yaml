@@ -1,9 +1,44 @@
 # PetPrep Production Docker Compose Configuration
-# Minimal single-server production stack: Caddy, Laravel App, Reverb, Queue (default + broadcasts), Scheduler, PostgreSQL 18, Redis
+# Single-server stack: Caddy (TLS, static files, pet media), Laravel on PHP-FPM,
+# Reverb, Queue (default + broadcasts), Scheduler, PostgreSQL 18, Redis.
+#
+# Runtime (M4-05b, DEPLOYMENT.md D14): one production image built from
+# docker/production/Dockerfile — target `app` (php-fpm, code + vendor baked in, no
+# bind mount of the code) for app / reverb / queue / queue-broadcasts / scheduler,
+# target `web` (Caddy + public/) for caddy. deploy-production.sh builds both as
+# `:next` BEFORE maintenance mode and promotes them to `:production` after the
+# code switch (`:previous` keeps the last release for the automatic revert).
+# The old Sail image `petprep-backend:production` is left untouched for a rollback.
+#
+# Variables interpolated here come from backend/.env (copy of /opt/petprep/.env
+# written by the deploy script) or the shell: PETPREP_IMAGE_TAG (default
+# production), PET_MEDIA_SERVE_VIA (default caddy), DB_*.
+
+x-php: &php
+  image: petprep-app:${PETPREP_IMAGE_TAG:-production}
+  restart: unless-stopped
+  env_file:
+    - /opt/petprep/.env
+  environment:
+    APP_ENV: production
+    APP_DEBUG: 'false'
+    # Caddy sends the bytes of GET /api/media/{id} (X-Accel-Redirect); `php` = stream from PHP.
+    PET_MEDIA_SERVE_VIA: ${PET_MEDIA_SERVE_VIA:-caddy}
+  volumes:
+    - /opt/petprep/.env:/var/www/html/.env:ro
+    # storage/ only (logs, maintenance flag, pet media). Every PHP container runs
+    # as uid 1000 — same owner as the files written in the Sail era.
+    - app_storage:/var/www/html/storage
+  networks:
+    - petprep-network
 
 services:
   caddy:
-    image: caddy:2.8-alpine
+    build:
+      context: .
+      dockerfile: docker/production/Dockerfile
+      target: web
+    image: petprep-web:${PETPREP_IMAGE_TAG:-production}
     restart: unless-stopped
     ports:
       - "80:80"
@@ -14,6 +49,8 @@ services:
       - ../deployment/Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
       - caddy_config:/config
+      # Pet media for X-Accel-Redirect (read-only; root = /srv/storage/app/pet-media).
+      - app_storage:/srv/storage:ro
     networks:
       - petprep-network
     depends_on:
@@ -21,29 +58,18 @@ services:
       - reverb
 
   app:
+    <<: *php
     build:
-      context: ./docker/8.3
-      dockerfile: Dockerfile
-      args:
-        WWWGROUP: '1000'
-    image: petprep-backend:production
-    restart: unless-stopped
-    env_file:
-      - /opt/petprep/.env
-    environment:
-      WWWUSER: '1000'
-      LARAVEL_SAIL: 1
-      APP_ENV: production
-      APP_DEBUG: 'false'
-      SUPERVISOR_PHP_COMMAND: "/usr/bin/php -d variables_order=EGPCS /var/www/html/artisan serve --host=0.0.0.0 --port=80"
-      SUPERVISOR_PHP_USER: "sail"
-    volumes:
-      - .:/var/www/html
-      - /opt/petprep/.env:/var/www/html/.env:ro
-      - app_storage:/var/www/html/storage
-      - app_bootstrap_cache:/var/www/html/bootstrap/cache
-    networks:
-      - petprep-network
+      context: .
+      dockerfile: docker/production/Dockerfile
+      target: app
+    # Default CMD php-fpm (listens on 9000; Caddy → php_fastcgi app:9000).
+    healthcheck:
+      test: ["CMD", "php-fpm-ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
     depends_on:
       postgres:
         condition: service_healthy
@@ -51,23 +77,10 @@ services:
         condition: service_healthy
 
   reverb:
-    image: petprep-backend:production
-    restart: unless-stopped
-    command: ["php", "-d", "variables_order=EGPCS", "/var/www/html/artisan", "reverb:start", "--host=0.0.0.0", "--port=8080"]
-    env_file:
-      - /opt/petprep/.env
-    environment:
-      WWWUSER: '1000'
-      LARAVEL_SAIL: 1
-      APP_ENV: production
-      APP_DEBUG: 'false'
-    volumes:
-      - .:/var/www/html
-      - /opt/petprep/.env:/var/www/html/.env:ro
-      - app_storage:/var/www/html/storage
-      - app_bootstrap_cache:/var/www/html/bootstrap/cache
-    networks:
-      - petprep-network
+    <<: *php
+    command: ["php", "artisan", "reverb:start", "--host=0.0.0.0", "--port=8080"]
+    # Lets reverb close the open WebSocket connections cleanly on a deploy.
+    stop_grace_period: 30s
     depends_on:
       app:
         condition: service_started
@@ -75,23 +88,11 @@ services:
         condition: service_healthy
 
   queue:
-    image: petprep-backend:production
-    restart: unless-stopped
-    command: ["php", "-d", "variables_order=EGPCS", "/var/www/html/artisan", "queue:work", "redis", "--queue=default", "--tries=3", "--timeout=90", "--sleep=3"]
-    env_file:
-      - /opt/petprep/.env
-    environment:
-      WWWUSER: '1000'
-      LARAVEL_SAIL: 1
-      APP_ENV: production
-      APP_DEBUG: 'false'
-    volumes:
-      - .:/var/www/html
-      - /opt/petprep/.env:/var/www/html/.env:ro
-      - app_storage:/var/www/html/storage
-      - app_bootstrap_cache:/var/www/html/bootstrap/cache
-    networks:
-      - petprep-network
+    <<: *php
+    command: ["php", "artisan", "queue:work", "redis", "--queue=default", "--tries=3", "--timeout=90", "--sleep=3"]
+    # > --timeout=90: a running fal.ai / media download job finishes on SIGTERM
+    # instead of being killed after Docker's default 10 s.
+    stop_grace_period: 100s
     depends_on:
       app:
         condition: service_started
@@ -104,23 +105,9 @@ services:
   # slow fal.ai job never delays a broadcast and a Reverb outage never blocks
   # fal.ai jobs. The scheduler tick only pushes jobs onto the `broadcasts` queue.
   queue-broadcasts:
-    image: petprep-backend:production
-    restart: unless-stopped
-    command: ["php", "-d", "variables_order=EGPCS", "/var/www/html/artisan", "queue:work", "redis", "--queue=broadcasts", "--tries=3", "--backoff=2", "--timeout=15", "--sleep=1"]
-    env_file:
-      - /opt/petprep/.env
-    environment:
-      WWWUSER: '1000'
-      LARAVEL_SAIL: 1
-      APP_ENV: production
-      APP_DEBUG: 'false'
-    volumes:
-      - .:/var/www/html
-      - /opt/petprep/.env:/var/www/html/.env:ro
-      - app_storage:/var/www/html/storage
-      - app_bootstrap_cache:/var/www/html/bootstrap/cache
-    networks:
-      - petprep-network
+    <<: *php
+    command: ["php", "artisan", "queue:work", "redis", "--queue=broadcasts", "--tries=3", "--backoff=2", "--timeout=15", "--sleep=1"]
+    stop_grace_period: 20s
     depends_on:
       app:
         condition: service_started
@@ -128,23 +115,10 @@ services:
         condition: service_healthy
 
   scheduler:
-    image: petprep-backend:production
-    restart: unless-stopped
-    command: ["php", "-d", "variables_order=EGPCS", "/var/www/html/artisan", "schedule:work"]
-    env_file:
-      - /opt/petprep/.env
-    environment:
-      WWWUSER: '1000'
-      LARAVEL_SAIL: 1
-      APP_ENV: production
-      APP_DEBUG: 'false'
-    volumes:
-      - .:/var/www/html
-      - /opt/petprep/.env:/var/www/html/.env:ro
-      - app_storage:/var/www/html/storage
-      - app_bootstrap_cache:/var/www/html/bootstrap/cache
-    networks:
-      - petprep-network
+    <<: *php
+    command: ["php", "artisan", "schedule:work"]
+    # A tick (decay, media:sweep) runs inside schedule:work's process tree.
+    stop_grace_period: 60s
     depends_on:
       app:
         condition: service_started
@@ -196,4 +170,7 @@ volumes:
   postgres_data:
   redis_data:
   app_storage:
+  # Unused since M4-05b (caches live inside each container). Kept declared so a
+  # rollback to the Sail runtime (previous compose file) finds its caches; remove
+  # after the rollback window (DEPLOYMENT.md D14).
   app_bootstrap_cache:

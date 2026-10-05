@@ -98,9 +98,71 @@ jobs:
       - name: Harness
         run: bash scripts/tests/deploy-production.test.sh
 
+  # M4-05b: the server builds the same Dockerfile on every deploy (before maintenance
+  # mode). Building it here first catches Dockerfile / composer / Caddyfile breakage
+  # in the PR. Nothing is pushed; layers are cached in the GitHub Actions cache.
+  production-image:
+    name: Production image (build + smoke test, no push)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Lint Dockerfile
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: backend/docker/production/Dockerfile
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build app image (php-fpm + code + vendor)
+        uses: docker/build-push-action@v6
+        with:
+          context: backend
+          file: backend/docker/production/Dockerfile
+          target: app
+          push: false
+          load: true
+          tags: petprep-app:ci
+          cache-from: type=gha,scope=petprep-production
+          cache-to: type=gha,mode=max,scope=petprep-production
+
+      - name: Build web image (Caddy + public/)
+        uses: docker/build-push-action@v6
+        with:
+          context: backend
+          file: backend/docker/production/Dockerfile
+          target: web
+          push: false
+          load: true
+          tags: petprep-web:ci
+          cache-from: type=gha,scope=petprep-production
+
+      - name: Validate the Caddyfile with the production Caddy image
+        run: |
+          docker run --rm -v "$PWD/deployment/Caddyfile:/etc/caddy/Caddyfile:ro" petprep-web:ci \
+            caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile
+
+      - name: Smoke test the app image
+        run: |
+          set -eux
+          test "$(docker run --rm petprep-app:ci id -u)" = 1000
+          docker run --rm --entrypoint php-fpm petprep-app:ci -t
+          # Every extension the app needs (OPcache is listed as "Zend OPcache").
+          docker run --rm --entrypoint php petprep-app:ci -m > php-modules.txt
+          for ext in sodium pcntl gd exif pdo_pgsql redis intl zip bcmath "Zend OPcache"; do
+            grep -qx "$ext" php-modules.txt || { echo "missing PHP extension: $ext"; exit 1; }
+          done
+          # No dev packages, no secrets, no tests in the image.
+          docker run --rm --entrypoint sh petprep-app:ci -c '! test -e vendor/fakerphp && ! test -e .env && ! test -e tests'
+          # The entrypoint builds every cache (config, events, routes, views, Filament).
+          docker run --rm -e APP_KEY="base64:$(openssl rand -base64 32)" -e CACHE_STORE=array \
+            -e SESSION_DRIVER=array -e PETPREP_OPTIMIZE=full petprep-app:ci php artisan route:list --path=api/media
+
   deploy:
     name: Deploy to Hetzner Production
-    needs: [backend-tests, mobile-checks, deploy-script-tests]
+    needs: [backend-tests, mobile-checks, deploy-script-tests, production-image]
     # Pre-production phase (David, 2026-10-03): every push/merge to main deploys automatically
     # after both test jobs pass; "Run workflow" on main also deploys. To require manual deploys
     # again, restrict this to workflow_dispatch — see docs/engineering/DEPLOYMENT.md D2.

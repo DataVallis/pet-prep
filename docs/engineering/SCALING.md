@@ -6,19 +6,21 @@
 - En strežnik Hetzner CX23 (Nemčija): Caddy, Laravel, Reverb, queue, scheduler, PostgreSQL 18, Redis — vse v Docker Compose.
 - AI mediji na lokalnem disku (`app_storage`), ocena ~7–49 MB na psa → disk zadošča za ~1.000–2.000 psov.
 - Minutni tick (razpad, eskalacija, zapiranje dni) teče za vse pse; varnostna kopija = `pg_dump` na istem strežniku.
-- V delu (pred beto): produkcijski PHP runtime (OPcache, FPM/FrankenPHP) + Caddy streže datoteke in videe neposredno (M4-05b).
+- ✅ *Narejeno v kodi 2026-10-05 (M4-05b, veja `feat/M4-05b-prod-runtime`, deploy ob združitvi):* produkcijski PHP runtime — **PHP-FPM 8.3 + OPcache** v lastni sliki (koda + `vendor` brez razvojnih paketov), Caddy sam streže statične datoteke (Filament) in **videe / slike psov** (X-Accel-Redirect, PHP samo preveri podpis in pravice). Lokalno izmerjeno: med 4 hkratnimi prenosi 10 MB videa je `GET /up` trajal 4,4 s na starem `php artisan serve` in 0,01–0,02 s na Caddy + FPM. Odprto: omejitev hkratnih povezav na IP (vtičnik za Caddy ali Cloudflare, §1).
 
 ## 1. Mediji in promet
 | Sprožilec | Ukrep |
 |---|---|
-| Disk > 60 % ali > 1.000 psov | **Hetzner Object Storage** (S3, ~5 €/mes za 1 TB) za `pet_media`; podpisani URL-ji iz shrambe namesto prek API-ja. |
+| ✅ Pred zaprto beto (M4-05b) | **Caddy streže medije neposredno** z lokalnega diska (X-Accel-Redirect, Range / ETag), statične datoteke z dolgim predpomnjenjem — prenos videa ne zasede PHP. *Narejeno v kodi 2026-10-05.* |
+| Disk > 60 % ali > 1.000 psov | **Hetzner Object Storage** (S3, ~5 €/mes za 1 TB) za `pet_media`; podpisani URL-ji iz shrambe namesto prek API-ja (`PetMediaController` že zna preklopiti na PHP za ne-lokalni disk; za S3 se doda preusmeritev na podpisan URL). |
 | Uporabniki izven srednje Evrope ali > 5.000 družin | **CDN** pred shrambo (Bunny CDN ali Cloudflare), dolgi cache headerji (datoteke se ne spreminjajo), podpisani CDN URL-ji. |
-| Napadi / sumljiv promet | Cloudflare (DDoS, WAF) pred `api.petprep.si`; rate limit na robu. |
+| Napadi / sumljiv promet | Cloudflare (DDoS, WAF) pred `api.petprep.si`; rate limit na robu. Tudi **omejitev hkratnih povezav na IP** za medije (zdaj je le `throttle:media` 240/min v Laravelu). |
 
 ## 2. Aplikacijski strežniki
 | Sprožilec | Ukrep |
 |---|---|
-| CPU > 70 % v konicah ali p95 API > 300 ms | Večji strežnik (CX33/CX43) — najcenejši prvi korak. |
+| ✅ Pred beto (M4-05b) | **PHP-FPM + OPcache** namesto `php artisan serve` (razvojni strežnik, 4 delavci, brez OPcache): `pm=dynamic`, do 12 delavcev, predpomnilniki Laravela ob zagonu vsakega kontejnerja. *Narejeno v kodi 2026-10-05.* |
+| CPU > 70 % v konicah ali p95 API > 300 ms | Večji strežnik (CX33/CX43) — najcenejši prvi korak; nato `pm.max_children` v `docker/production/php-fpm.conf` dvigniti skupaj z RAM-om. |
 | > 3.000 hkratnih družin | Ločiti vloge: 2+ aplikacijska strežnika za Hetzner Load Balancerjem; seje/tokeni so že brezstanjski (Sanctum), cache/queue v Redis. |
 | Reverb > ~2.000 hkratnih povezav | Reverb na svoj strežnik, horizontalno skaliranje prek Redis pub/sub (`REVERB_SCALING_ENABLED`). |
 | Vrsta (queue) zamuja > 1 min | Več workerjev; ločeni workerji za `broadcasts`, `default`, AI medije; Laravel Horizon za nadzor. |
@@ -64,3 +66,4 @@
 | Datum | Kaj | PR |
 |---|---|---|
 | 2026-10-05 | Dokument ustvarjen; v delu produkcijski PHP runtime + Caddy za medije (M4-05b). | — |
+| 2026-10-05 | M4-05b v kodi: PHP-FPM + OPcache (lastna produkcijska slika), Caddy streže statične datoteke in medije (X-Accel-Redirect); §0, §1, §2 posodobljeni. Odprto: omejitev povezav na IP. | `feat/M4-05b-prod-runtime` |
