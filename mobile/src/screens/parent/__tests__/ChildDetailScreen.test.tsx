@@ -7,7 +7,8 @@ import { act, fireEvent, screen } from '@testing-library/react-native';
 import { api } from '@/api/client';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import ChildDetailScreen, { CHILD_DETAIL_STRINGS, formatSteps } from '@/screens/parent/ChildDetailScreen';
-import { makeDayRow, makeFamilyPet, makeMissed, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
+import { makeDayRow, makeFamilyPet, makeMedia, makeMissed, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
+import { liveVideoPlayers, mockVideoPlayers, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -163,6 +164,26 @@ describe('ChildDetailScreen', () => {
     expect(screen.getByTestId('report-no-pet')).toBeTruthy();
     expect(screen.queryByTestId('timeline')).toBeNull();
     expect(getPetActivities).not.toHaveBeenCalled();
+  });
+
+  it('pet media: the idle video on top (one player, released when the screen closes)', async () => {
+    resetMockVideoPlayers();
+    const IDLE = 'https://api.petprep.si/api/media/2?expires=1&v=idle&signature=a';
+    const family = familyFromDashboard(
+      makeScoredDashboard([LUKA], [
+        makeFamilyPet({
+          id: 7,
+          caretakers: [{ child_id: 2, contract_signed: true }],
+          media: makeMedia({ status: 'ready', videos: { idle: IDLE, sleeping: 'https://x/s?v=s' }, states: ['idle', 'sleeping'] }),
+        }),
+      ]) as never,
+    ) as FamilyOverview;
+    const { unmount } = renderWithQuery(<ChildDetailScreen child={LUKA} family={family} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('detail-pet-media')).toBeTruthy();
+    expect(mockVideoPlayers.map((p) => p.source)).toEqual([IDLE]);
+    unmount();
+    expect(liveVideoPlayers()).toHaveLength(0);
   });
 
   it('formatSteps', () => {

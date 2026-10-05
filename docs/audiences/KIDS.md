@@ -17,7 +17,7 @@ Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova p
 
 **Imaš brata ali sestro?** Lahko ima vsak svojega kužka, ali pa skupaj skrbita za enega. Če se pridružiš kužku, ki že živi, se tudi ti podpišeš pod obljubo — šele potem mu lahko daješ hrano in vodo. Vse, kar narediš ti, se šteje tebi. Koraki se seštejejo: na sprehod lahko greste skupaj!
 
-**Tvoj kuža je edini na svetu, ki je točno tak!** 🐾 Ko se rodi, dobi svojo barvo, lise, ušesa in oči — noben drug kuža ni enak njemu. Dobi tudi svojo fotografijo in kratke videe: videl ga boš, kako mirno sedi in kako spi. *(v aplikaciji: kmalu)*
+**Tvoj kuža je edini na svetu, ki je točno tak!** 🐾 Ko se rodi, dobi svojo barvo, lise, ušesa in oči — noben drug kuža ni enak njemu. Dobi tudi svojo fotografijo in kratke videe: na glavnem zaslonu ga vidiš živega — mirno sedi, ponoči in med tihimi urami pa spi. Če ima tvoj kuža več videov (posebna pasma), ga vidiš tudi lačnega, utrujenega, bolnega ali igrivega. Ko se razpoloženje spremeni, se video mehko zamenja. Dokler se video še pripravlja, vidiš njegovo sliko in napis "Kuža se pripravlja…". *(v aplikaciji od 5. 10. 2026 — še ni v trgovini)*
 
 ## Kaj kuža potrebuje
 - 🍖 **Hrano** — zjutraj (med 6. in 10. uro) in zvečer (med 17. in 21. uro), enkrat vsakič. Ob drugih urah kuža ni lačen — gumb je zasenčen in pod njim piše, kdaj bo spet čas (npr. "ob 17:00").

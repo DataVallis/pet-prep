@@ -4,14 +4,15 @@
  * `useChildPet()` (`GET /api/child/pet`, live via Reverb, 10 s polling without it);
  * Feed / Water / Clean call the API (optimistic, then the server's state); the walk
  * syncs today's steps. Buttons are disabled with a hint from `state.feeding` /
- * `state.water`; locks come from the server's per-child lock (M1-16).
+ * `state.water`; locks come from the server's per-child lock (M1-16). The dog itself is
+ * `PetMediaView` (M4-03): the AI state video of `pet_state`, crossfaded, paused under
+ * the lock screen / walk tracker and in the background.
  */
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   ActivityIndicator,
   Animated,
-  Image,
   Platform,
   Pressable,
   StyleSheet,
@@ -28,7 +29,6 @@ import {
   Sparkles,
   WifiOff,
 } from 'lucide-react-native';
-import { useVideoPlayer, VideoView } from 'expo-video';
 import { useQueryClient } from '@tanstack/react-query';
 
 import { useAppStore, type WebSocketStatus } from '@/store/appStore';
@@ -50,6 +50,7 @@ import { logout } from '@/modules/session/logout';
 import ActionButton from '@/components/ActionButton';
 import CleaningOverlay from '@/components/CleaningOverlay';
 import MetricBar from '@/components/MetricBar';
+import PetMediaView from '@/components/PetMediaView';
 import WalkTrackerOverlay from '@/modules/walk/WalkTrackerOverlay';
 import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
 
@@ -188,13 +189,10 @@ export default function ChildHudScreen() {
     return () => loop.stop();
   }, [bounceAnim]);
 
-  const videoUrl = view?.pet.current_video_url ?? sessionPet?.current_video_url ?? null;
-  const imageUrl = view?.pet.reference_image_url ?? sessionPet?.pet_dna?.reference_image_url ?? null;
-  const player = useVideoPlayer(videoUrl, (p) => {
-    p.loop = true;
-    p.muted = true;
-    p.play();
-  });
+  // A signed media URL failed (likely expired): fetch a freshly signed state once.
+  const onMediaExpired = useCallback(() => {
+    void queryClient.invalidateQueries({ queryKey: childPetKey });
+  }, [queryClient]);
 
   const mutations = { feed, water, clean } as const;
   const runAction = (action: CareAction) => {
@@ -273,34 +271,38 @@ export default function ChildHudScreen() {
 
   return (
     <View style={styles.container}>
-      {/* Full-bleed background viewport */}
-      {videoUrl ? (
-        <VideoView player={player} contentFit="cover" nativeControls={false} style={StyleSheet.absoluteFill} />
-      ) : imageUrl ? (
-        <Image source={{ uri: imageUrl }} resizeMode="cover" style={StyleSheet.absoluteFill} />
-      ) : (
-        <View style={styles.fallbackViewport}>
-          <View style={[styles.glowOrb, styles.glowIndigo]} />
-          <View style={[styles.glowOrb, styles.glowEmerald]} />
+      {/* Full-bleed AI dog (M4-03): state video → idle video → reference image → placeholder */}
+      <PetMediaView
+        media={pet.media}
+        petState={pet.pet_state}
+        lockReason={view.lock.reason}
+        breed={pet.breed_type}
+        // Paused under the lock screen and the walk tracker (and in the background).
+        active={!locked && !isWalkModalVisible}
+        onMediaExpired={onMediaExpired}
+        variant="hud"
+        testID="hud-pet-media"
+        placeholder={
+          <View style={styles.fallbackViewport}>
+            <View style={[styles.glowOrb, styles.glowIndigo]} />
+            <View style={[styles.glowOrb, styles.glowEmerald]} />
 
-          <Animated.View style={[styles.petAvatarWrapper, { transform: [{ translateY: bounceAnim }] }]}>
-            <View style={styles.petAvatarCircle}>
-              <Text style={styles.petEmoji}>🐕</Text>
-              <View style={styles.petHeartBadge}>
-                <Heart color="#ef4444" fill="#ef4444" size={16} />
+            <Animated.View style={[styles.petAvatarWrapper, { transform: [{ translateY: bounceAnim }] }]}>
+              <View style={styles.petAvatarCircle}>
+                <Text style={styles.petEmoji}>🐕</Text>
+                <View style={styles.petHeartBadge}>
+                  <Heart color="#ef4444" fill="#ef4444" size={16} />
+                </View>
               </View>
-            </View>
 
-            <View style={styles.petStatusPill}>
-              <Sparkles color="#818cf8" size={14} />
-              <Text style={styles.petStatusPillText}>{HUD_STRINGS.moods[pet.pet_state]}</Text>
-            </View>
-          </Animated.View>
-        </View>
-      )}
-
-      {/* Dark overlay for readability when video/image is present */}
-      {(videoUrl || imageUrl) && <View style={styles.mediaOverlay} />}
+              <View style={styles.petStatusPill}>
+                <Sparkles color="#818cf8" size={14} />
+                <Text style={styles.petStatusPillText}>{HUD_STRINGS.moods[pet.pet_state]}</Text>
+              </View>
+            </Animated.View>
+          </View>
+        }
+      />
 
       {/* Glassmorphism top status bar */}
       <View style={styles.topBar}>
@@ -414,10 +416,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#020617',
-  },
-  mediaOverlay: {
-    ...StyleSheet.absoluteFill,
-    backgroundColor: 'rgba(0, 0, 0, 0.25)',
   },
   fallbackViewport: {
     ...StyleSheet.absoluteFill,

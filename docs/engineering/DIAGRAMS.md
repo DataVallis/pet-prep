@@ -810,3 +810,37 @@ flowchart LR
   F --> L["lost webhook / job / worker"] --> SW["hourly media:sweep:<br/>2 h → timed_out · re-queue download · reclaim after 10 min"]
   GF & TK & EF & DF & SW -.-> AD["media:backfill / Filament Generate missing / Regenerate"]
 ```
+
+## 10b. App playback of pet media (M4-03 app side, 2026-10-05)
+
+```mermaid
+flowchart TD
+  P["media from GET /api/child/pet · pet.updated · dashboard"] --> N["normalizePetMedia"]
+  N --> W{"videoStateFor(pet_state, lock)"}
+  W -- "game_over / inactive / contract" --> IMG
+  W -- "ill → sick · hard stop → sleeping · else pet_state" --> V1{"videos[state]?"}
+  V1 -- yes --> PLAY["video layer (key = path + v)"]
+  V1 -- no --> V2{"videos.idle?"} -- yes --> PLAY
+  V2 -- no --> V3{"no videos map and current_video_url?"} -- yes --> PLAY
+  V3 -- no --> IMG{"reference image?"} -- yes --> I["image (useStableUrl)"]
+  IMG -- no --> PH["placeholder (HUD avatar / paw + breed)"]
+  PLAY --> R{"first frame?"} -- yes --> X["300 ms crossfade, old player released"]
+  PLAY --> E{"player error"} -- first --> RF["image + refetch state once → re-signed URL → retry"]
+  E -- second --> I
+```
+
+```mermaid
+sequenceDiagram
+  participant S as Server (poll / broadcast)
+  participant V as PetMediaView
+  participant A as layer A (idle, playing)
+  participant B as layer B (hungry)
+  S->>V: same idle file, new signature
+  Note over V,A: mediaKey unchanged → nothing happens (no restart)
+  S->>V: pet_state hungry
+  V->>B: mount hidden, useVideoPlayer(url)
+  B-->>V: onFirstFrameRender (or readyToPlay + 1 s)
+  V->>B: fade in 300 ms
+  V->>A: unmount → player released
+  Note over V: AppState background / lock screen / walk → pause · foreground → play
+```

@@ -8,6 +8,25 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-05 — Kuža v aplikaciji oživi: AI videi na glavnem zaslonu
+
+**Kaj se je zgodilo:** Videi, ki jih umetna inteligenca naredi za vsakega psa ob rojstvu, so zdaj **na otrokovem glavnem zaslonu**. Namesto risbe otrok vidi svojega, edinstvenega kužka v 5-sekundnem videu brez zvoka, ki se neprekinjeno ponavlja — in video ustreza stanju igre:
+- miruje, ponoči in med tihimi urami **spi**, ko starš ustavi igro, kuža spi; pes plačljive pasme (vseh 6 videov) je tudi lačen ob prazni skledi, utrujen, igriv in pri veterinarju **bolan**; po game overu ostane samo slika;
+- ko se stanje spremeni, star video teče, dokler novi ni pripravljen, nato se **mehko zamenjata** (0,3 s) — brez črnega zaslona;
+- če pes video za neko stanje nima (brezplačni mešanček ima 2 videa), se pokaže video "miruje", nato slika, nato risba — otrok **nikoli ne vidi napake**; dokler se kuža šele ustvarja, piše "Kuža se pripravlja…";
+- **varčno:** video se ustavi, ko aplikacija ni odprta, pod zaklepom in med sprehodom, ne prižiga zaslona, naenkrat teče en sam predvajalnik; povezava na video se na 30 min osveži, a predvajanje se zaradi tega ne začne znova; če povezava poteče, aplikacija enkrat pridobi novo;
+- **starši** vidijo sliko kužka na kartici otroka in njegov video "miruje" v podrobnostih.
+- **Številke:** 57 novih testov, skupaj **583 zelenih** testov v mobilni aplikaciji (dvakrat zapored), TypeScript brez napak. *Načrt:* preizkus na pravih telefonih (iPhone, Android) pred zaprto beto.
+
+**Zakaj je pomembno**
+To je trenutek, ko PetPrep postane "moj pes": otrok vidi živega psa, ki je samo njegov, in takoj opazi, kdaj je lačen ali zaspan — brez branja številk.
+
+**Kako to povedati**
+- 🧒 *"Tvoj kuža je živ! Mirno sedi, ponoči pa spi."*
+- 👩 *"Otrok vidi, kako se kuža počuti — brez zvoka, brez praznjenja baterije, video se ustavi, ko aplikacija ni odprta."*
+- 💼 *"Edinstven AI pes v videu za vsako stanje igre — en sam predvajalnik, brez dodatnega generiranja na napravi."*
+- 🛠 *"expo-video (SDK 57) s plastmi: nova plast ostane skrita do onFirstFrameRender, nato crossfade; predvajalnik je vezan na identiteto datoteke (pot + hash), ne na podpisan URL, zato bucketed signed URLs ne zaženejo predvajanja znova."*
+
 ## 2026-10-05 — Administracija hitrejša, videi ne zavirajo več aplikacije (produkcijski strežnik PHP)
 
 **Kaj se je zgodilo:** Produkcija je do zdaj tekla na **razvojnem** strežniku PHP (`php artisan serve`, 4 delavci, brez predpomnilnika prevedene kode). Zato je bila administracija (Filament) počasna, vsak prenos videa psa pa je za ves čas prenosa zasedel enega od štirih delavcev. Pripravljen je pravi produkcijski način (velja ob naslednjem deployu, ko se veja združi):

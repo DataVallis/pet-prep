@@ -13,7 +13,8 @@ import ChildHudScreen, { formatAgeMonths, HUD_STRINGS } from '@/screens/ChildHud
 import { LOCKED_STRINGS } from '@/screens/LockedScreen';
 import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
 import { isAwaitingContract, useAppStore } from '@/store/appStore';
-import { makeBroadcast, makeLiveChildState, makePet } from '@/test-utils/fixtures';
+import { makeBroadcast, makeLiveChildState, makeMedia, makePet } from '@/test-utils/fixtures';
+import { liveVideoPlayers, mockVideoPlayers, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import type { PetUpdatedBroadcast } from '@/types';
 
@@ -342,4 +343,58 @@ describe('formatAgeMonths', () => {
     expect(formatAgeMonths(3)).toBe('STAROST: 3 MESECI');
     expect(formatAgeMonths(11)).toBe('STAROST: 11 MESECEV');
   });
+
 });
+
+describe('ChildHudScreen — AI dog media (M4-03)', () => {
+    const IDLE = 'https://api.petprep.si/api/media/2?expires=1&v=idle&signature=a';
+    const HUNGRY = 'https://api.petprep.si/api/media/4?expires=1&v=hungry&signature=a';
+    const IMG = 'https://api.petprep.si/api/media/1?expires=1&v=img&signature=a';
+    const ready = makeMedia({
+      status: 'ready',
+      reference_image_url: IMG,
+      videos: { idle: IDLE, hungry: HUNGRY },
+      states: ['idle', 'hungry'],
+    });
+
+    beforeEach(() => {
+      jest.clearAllMocks();
+      mockSocket.handler = null;
+      useAppStore.setState(useAppStore.getInitialState(), true);
+      signInChild();
+      resetMockVideoPlayers();
+    });
+
+    it('plays the video of the server pet_state as the main dog visual', async () => {
+      await renderHud(makeLiveChildState({ pet: { pet_state: 'hungry', media: ready } }));
+      expect(screen.getByTestId('hud-pet-media')).toBeTruthy();
+      expect(mockVideoPlayers.map((p) => p.source)).toEqual([HUNGRY]);
+      expect(liveVideoPlayers()[0].playing).toBe(true);
+    });
+
+    it('no media yet: the animated avatar placeholder with the mood, pending hint', async () => {
+      await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: makeMedia({ status: 'pending' }) } }));
+      expect(mockVideoPlayers).toHaveLength(0);
+      expect(screen.getByText(HUD_STRINGS.moods.idle)).toBeTruthy();
+      expect(screen.getByTestId('hud-pet-media-pending')).toBeTruthy();
+    });
+
+    it('a broadcast with a new pet_state crossfades to that video', async () => {
+      await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: ready } }));
+      expect(mockVideoPlayers.map((p) => p.source)).toEqual([IDLE]);
+      await act(async () => {
+        mockSocket.handler?.(makeBroadcast({ pet_state: 'hungry', hunger_level: 20, media: ready }));
+      });
+      // TanStack notifies observers on a 0 ms timer.
+      await waitFor(() => expect(mockVideoPlayers.map((p) => p.source)).toEqual([IDLE, HUNGRY]));
+    });
+
+    it('an expired URL refetches the child state once', async () => {
+      await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: ready } }));
+      const calls = getChildPet.mock.calls.length;
+      await act(async () => {
+        mockVideoPlayers[0].emit('statusChange', { status: 'error' });
+      });
+      await waitFor(() => expect(getChildPet.mock.calls.length).toBe(calls + 1));
+    });
+  });
