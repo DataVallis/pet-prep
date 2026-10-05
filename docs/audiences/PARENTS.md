@@ -40,6 +40,8 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), potrebuje 10.000 k
 ## Vsak kuža je unikaten *(od 4. 10. 2026 na strežniku; slike v aplikaciji: načrt)*
 Kot v resnici: dva psa iste pasme nista enaka. Ob rojstvu vsak kuža dobi svojo kombinacijo lastnosti (velikost, postava, barva in dolžina dlake, lise, ušesa, oči, rep) znotraj tega, kar je pri pasmi mogoče, in jo obdrži za vedno. V isti družini dva psa iste pasme nikoli nista enaka. *(Seznami možnosti po pasmah so še osnutek; zamenjali jih bomo s podatki iz uradnih standardov pasem.)*
 
+**Fotografija in kratki videi kužka** *(od 5. 10. 2026 na strežniku; predvajanje v aplikaciji: načrt)*: ob paritvi umetna inteligenca naredi fotorealistično sliko vašega kužka, ko otrok podpiše pogodbo (rojstvo), pa iz nje še kratke 5-sekundne videe brez zvoka, v katerih je vedno isti pes. Brezplačni mešanček dobi 2 videa (miruje, spi), plačljiva pasma (izziv) vseh 6 — tudi lačen, utrujen, bolan in igriv. *(Razdelitev je predlog in še ni potrjena.)* Ustvarjanje traja nekaj minut; medtem igra normalno teče.
+
 ## Kaj vidite vi
 - **Semafor** za vsakega otroka in vsakega psa, za današnji dan po vašem času:
   - 🔴 **rdeča** — pes je danes zbolel, več kot uro je brez hrane, vode ali čistoče (alarm), ali pa ga je "odpeljalo zavetišče";
@@ -84,9 +86,10 @@ Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava �
 - Otrok se prijavi samo s PIN-om — **brez e-pošte in brez gesla**. O otroku hranimo le vzdevek in (če ga vpišete) letnico rojstva. Za ime naprave aplikacija pošlje samo model telefona (npr. »iPhone«), nikoli imena, ki ga je telefonu dal uporabnik.
 - Koda PIN se na strežniku ne shrani v berljivi obliki (samo kot zgoščena vrednost), velja 15 minut in samo enkrat. Strežnik ugibanje kod omeji (po preveč napačnih poskusih 15 minut premora), napačna, potekla in že uporabljena koda pa dobijo enak odgovor — tako ni mogoče ugotoviti, kateri otroci ali kode obstajajo.
 - AI videi psa so **kriptografsko preverjeni**: na zaslon pride samo vsebina, ki jo je ustvaril PetPrep (prek fal.ai), z zaupanja vrednih naslovov.
+- **Slike in videi kužka so shranjeni pri nas** *(od 5. 10. 2026, strežnik)*: preden jih otrok vidi, jih strežnik prenese z AI storitve (preveri velikost in vrsto datoteke) in shrani v EU. Aplikacija dobi samo naše povezave, ki veljajo največ 90 minut in jih strežnik izda le otrokom, ki skrbijo za psa, in staršem vaše družine — nikoli povezav na zunanjo storitev.
 - **Posodobitve v živo vidijo samo otroci, ki skrbijo za tega psa, in starši vaše družine.** Kanal je zaseben: strežnik ob vsaki povezavi preveri, kdo sprašuje — brat ali sestra z drugim psom ali kdorkoli iz druge družine se ne more priklopiti. Sporočila nosijo samo stanje psa, brez imena ali e-pošte otroka.
 - **Videz psa ustvari umetna inteligenca brez podatkov o otroku** *(od 4. 10. 2026, strežnik)*: opis za sliko vsebuje samo pasmo in lastnosti psa (barva, dlaka, ušesa …) — nikoli imena, vzdevka ali česarkoli o vaši družini.
-- **Igra deluje tudi brez slike.** Če ustvarjanje slike ne uspe ali je dosežena dnevna meja stroškov, kuža normalno živi naprej (le brez nove slike); sistem sliko poskusi ustvariti znova naslednji dan.
+- **Igra deluje tudi brez slike ali videa.** Če ustvarjanje ne uspe ali je dosežena dnevna meja stroškov, kuža normalno živi naprej (le brez nove slike / videa); sistem poskusi znova naslednji dan.
 - Brez oglasov. Brez klepeta s tujci.
 - Strežniki v EU (Hetzner). *(načrt: politika zasebnosti, privolitev staršev, izbris računa)*
 

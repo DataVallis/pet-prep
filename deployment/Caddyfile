@@ -10,7 +10,18 @@
 api.petprep.si, petprep.si {
     log {
         output stdout
-        format json
+        # Signed media URLs (GET /api/media/{id}?expires&v&signature, M4-05) are
+        # short-lived capabilities: never write their signature / expiry to the logs.
+        format filter {
+            wrap json
+            fields {
+                request>uri query {
+                    delete signature
+                    delete expires
+                    delete v
+                }
+            }
+        }
     }
 
     # Proxy WebSocket connections to Laravel Reverb

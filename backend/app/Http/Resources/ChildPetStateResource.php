@@ -6,6 +6,8 @@ use App\Enums\PetLockReason;
 use App\Models\Pet;
 use App\Models\User;
 use App\Services\CareScheduleService;
+use App\Services\Media\PetMediaPayload;
+use App\Services\Media\PetMediaService;
 use Carbon\CarbonInterface;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -24,6 +26,10 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * joined a shared pet sees contract_required until they sign, while the pet
  * itself is born); `steps.steps_today` is the pet's combined count (energy),
  * `steps.my_steps_today` the child's own.
+ *
+ * `pet.media` (M4-05): status + signed URLs of the stored reference image and
+ * state videos ({@see PetMediaService::mediaFor()}); `current_video_url` is
+ * the video for `pet_state`, falling back to idle.
  *
  * @property Pet $resource
  */
@@ -54,6 +60,7 @@ class ChildPetStateResource extends JsonResource
         $feeding = $config ? $schedule->feeding($pet, $config, $now) : null;
         $water = $config ? $schedule->water($pet, $config, $now) : null;
         $contract = $actor !== null ? $pet->contractOf($actor) : $pet->contract;
+        $media = PetMediaPayload::for($pet);
 
         return [
             'pet' => [
@@ -79,9 +86,12 @@ class ChildPetStateResource extends JsonResource
                 'illness_until' => $pet->isIll() ? $iso($pet->illness_until) : null,
                 'is_game_over' => (bool) $pet->is_game_over,
                 'certificate_eligible' => (bool) $pet->certificate_eligible,
-                'current_video_url' => $pet->current_video_url,
+                // Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs.
+                'current_video_url' => $media->currentVideoUrl,
                 'media_status' => $pet->media_status,
-                'reference_image_url' => $pet->pet_dna['reference_image_url'] ?? null,
+                'reference_image_url' => $media->referenceImageUrl,
+                // AI media (M4-03 / M4-05): signed, expiring URLs (re-issued with every state).
+                'media' => $media->toArray(),
             ],
             'lock' => [
                 'is_locked' => $locked,

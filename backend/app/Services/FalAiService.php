@@ -2,14 +2,15 @@
 
 namespace App\Services;
 
+use App\Enums\AiCallFailure;
 use App\Enums\AiSpendPurpose;
 use App\Enums\BreedType;
 use App\Enums\PetStateEnum;
 use App\Models\Pet;
-use App\Models\PetMediaJob;
 use App\Services\Media\AiCallException;
 use App\Services\Media\FalGateway;
 use App\Services\Media\MediaProfiles;
+use App\Services\Media\PetAppearancePrompt;
 use Illuminate\Support\Facades\Log;
 
 /**
@@ -19,7 +20,8 @@ use Illuminate\Support\Facades\Log;
  *   media.reference_image_profile), only ever executed from a queued job
  *   (never inside an HTTP request / DB transaction).
  * - State videos (image-to-video, profile media.state_video_profile): submitted
- *   to the queue API with our signed webhook; matched via pet_media_jobs.
+ *   to the queue API with our signed webhook; matched via pet_media.request_id
+ *   (M4-03). The pipeline itself lives in Media\PetMediaService.
  *
  * All HTTP goes through Media\FalGateway (spend caps + ledger, M4-07).
  * Pet DNA v2 (unique traits) lives in Media\PetDnaService; generateInitialPetDna()
@@ -30,6 +32,7 @@ class FalAiService
     public function __construct(
         private readonly FalGateway $gateway,
         private readonly MediaProfiles $profiles,
+        private readonly PetAppearancePrompt $prompts,
     ) {}
 
     /**
@@ -120,15 +123,15 @@ class FalAiService
 
     /**
      * Generate the canonical reference image for a pet with the configured
-     * profile (config media.reference_image_profile, default flux_schnell —
-     * the pre-M4 request body). Every call passes the spend cap first and is
-     * recorded in ai_spend_ledger (M4-07).
+     * profile (config media.reference_image_profile — Nano Banana Pro since
+     * 2026-10-05). Every call passes the spend cap first and is recorded in
+     * ai_spend_ledger (M4-07), linked to the pet_media slot.
      *
-     * @return string|null Public URL of the image, or null if disabled or a retryable failure.
+     * @return array{url: string, profile: string}|null fal.media URL of the image, or null on a retryable failure
      *
      * @throws AiCallException for failures a retry cannot fix (budget cap, fal balance, profile disabled)
      */
-    public function generateReferenceImage(string $promptAnchor, int $seed, ?int $petId = null, ?string $negativePrompt = null): ?string
+    public function generateReferenceImage(string $prompt, int $seed, ?int $petId = null, ?string $negativePrompt = null, ?int $petMediaId = null): ?array
     {
         if (! $this->isEnabled()) {
             return null;
@@ -139,9 +142,10 @@ class FalAiService
         try {
             $result = $this->gateway->run(
                 $profile,
-                $profile->imageInput($promptAnchor, $seed, $negativePrompt),
+                $profile->imageInput($prompt, $seed, $negativePrompt),
                 AiSpendPurpose::ReferenceImage,
                 petId: $petId,
+                petMediaId: $petMediaId,
             );
         } catch (AiCallException $e) {
             if ($e->retryable()) {
@@ -161,7 +165,7 @@ class FalAiService
             return null;
         }
 
-        return $url;
+        return ['url' => $url, 'profile' => $profile->key];
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -169,65 +173,37 @@ class FalAiService
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * Submit a Kling image-to-video job for the given pet state.
-     * The request is recorded in pet_media_jobs; the result arrives on the webhook.
+     * Submit an image-to-video job (profile media.state_video_profile — Kling
+     * 3.0 Pro, 5 s, no audio) for one pet_media video slot. The result
+     * arrives on the signed webhook and is matched by request_id. Call only
+     * from a queued job (SubmitPetStateVideo), never inside a transaction.
      *
-     * @return string|null The fal.ai request ID, or null if disabled/failed.
+     * @return array{request_id: string, profile: string, duration_seconds: int}
+     *
+     * @throws AiCallException
      */
-    public function generatePetVideoState(Pet $pet, PetStateEnum $state): ?string
+    public function submitStateVideo(Pet $pet, PetStateEnum $state, string $startImageUrl, ?int $petMediaId = null): array
     {
-        if (! $this->isEnabled()) {
-            return null;
-        }
-
-        $referenceImageUrl = $pet->pet_dna['reference_image_url'] ?? null;
-
-        if (! $referenceImageUrl) {
-            Log::warning('FalAiService: cannot generate video without a reference image', ['pet_id' => $pet->id]);
-
-            return null;
-        }
-
         $profile = $this->profiles->stateVideo();
+        $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
+        $breedKey = (string) ($dna['breed'] ?? $pet->breed_type->value);
+        // DNA v2 traits describe the dog; v1 pets rely on the start image alone.
+        $traits = (int) ($dna['version'] ?? 1) >= 2 && is_array($dna['traits'] ?? null) ? $dna['traits'] : [];
 
-        try {
-            $submitted = $this->gateway->submit(
-                $profile,
-                $profile->videoInput($referenceImageUrl, $this->buildVideoPrompt($pet, $state), $pet->pet_dna['negative_prompt'] ?? null),
-                AiSpendPurpose::StateVideo,
-                $this->webhookUrl(),
-                petId: $pet->id,
-            );
-        } catch (AiCallException $e) {
-            Log::error('FalAiService: video generation was not accepted', [
-                'pet_id' => $pet->id,
-                'state' => $state->value,
-                'reason' => $e->reason->value,
-            ]);
+        $submitted = $this->gateway->submit(
+            $profile,
+            $profile->videoInput($startImageUrl, $this->prompts->videoPrompt($breedKey, $state, $traits), $this->prompts->videoNegativePrompt()),
+            AiSpendPurpose::StateVideo,
+            $this->webhookUrl(),
+            petId: $pet->id,
+            petMediaId: $petMediaId,
+        );
 
-            return null;
-        }
-
-        $requestId = $submitted['request_id'];
-
-        PetMediaJob::create([
-            'pet_id' => $pet->id,
-            'request_id' => $requestId,
-            'kind' => PetMediaJob::KIND_VIDEO,
-            'pet_state' => $state->value,
-            'status' => PetMediaJob::STATUS_PENDING,
-        ]);
-
-        return $requestId;
-    }
-
-    private function buildVideoPrompt(Pet $pet, PetStateEnum $state): string
-    {
-        $promptAnchor = $pet->pet_dna['prompt_anchor'] ?? '';
-
-        return $promptAnchor.'. '.$state->promptModifier().'. '
-            .'Maintain exact visual consistency with the reference image. '
-            .'Cinematic quality, smooth motion, 5 second loop.';
+        return [
+            'request_id' => $submitted['request_id'],
+            'profile' => $profile->key,
+            'duration_seconds' => $profile->durationSeconds,
+        ];
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -240,24 +216,24 @@ class FalAiService
      * Format: {request_id, gateway_request_id, status: "OK"|"ERROR", payload, error?}
      *
      * @param  array<string, mixed>  $body
-     * @return array{ok: bool, video_url: string|null, error: string|null}
+     * @return array{ok: bool, video_url: string|null, error: string|null, reason: AiCallFailure|null}
      */
     public function parseWebhookResult(array $body): array
     {
         if (($body['status'] ?? null) !== 'OK') {
             $error = $body['error'] ?? 'fal.ai reported an error';
 
-            return ['ok' => false, 'video_url' => null, 'error' => is_string($error) ? $error : 'fal.ai reported an error'];
+            return ['ok' => false, 'video_url' => null, 'error' => is_string($error) ? $error : 'fal.ai reported an error', 'reason' => AiCallFailure::GenerationFailed];
         }
 
         $payload = is_array($body['payload'] ?? null) ? $body['payload'] : [];
         $videoUrl = $payload['video']['url'] ?? null;
 
         if (! is_string($videoUrl) || ! $this->isAllowedMediaUrl($videoUrl)) {
-            return ['ok' => false, 'video_url' => null, 'error' => 'Missing or untrusted video URL in payload'];
+            return ['ok' => false, 'video_url' => null, 'error' => 'Missing or untrusted video URL in payload', 'reason' => AiCallFailure::InvalidResponse];
         }
 
-        return ['ok' => true, 'video_url' => $videoUrl, 'error' => null];
+        return ['ok' => true, 'video_url' => $videoUrl, 'error' => null, 'reason' => null];
     }
 
     /**

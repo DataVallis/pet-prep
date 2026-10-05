@@ -54,10 +54,10 @@ class FalGateway
      *
      * @throws AiCallException
      */
-    public function run(ModelProfile $profile, array $input, AiSpendPurpose $purpose, ?int $petId = null, ?int $labResultId = null, int $timeoutSeconds = 60): array
+    public function run(ModelProfile $profile, array $input, AiSpendPurpose $purpose, ?int $petId = null, ?int $labResultId = null, int $timeoutSeconds = 60, ?int $petMediaId = null): array
     {
         $this->assertCallable($profile);
-        $entry = $this->guard->reserve($profile, $purpose, $petId, $labResultId);
+        $entry = $this->guard->reserve($profile, $purpose, $petId, $labResultId, $petMediaId);
 
         $started = hrtime(true);
 
@@ -86,10 +86,10 @@ class FalGateway
      *
      * @throws AiCallException
      */
-    public function submit(ModelProfile $profile, array $input, AiSpendPurpose $purpose, string $webhookUrl, ?int $petId = null, ?int $labResultId = null): array
+    public function submit(ModelProfile $profile, array $input, AiSpendPurpose $purpose, string $webhookUrl, ?int $petId = null, ?int $labResultId = null, ?int $petMediaId = null): array
     {
         $this->assertCallable($profile);
-        $entry = $this->guard->reserve($profile, $purpose, $petId, $labResultId);
+        $entry = $this->guard->reserve($profile, $purpose, $petId, $labResultId, $petMediaId);
 
         try {
             $response = $this->http()

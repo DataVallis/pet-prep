@@ -20,13 +20,28 @@ class PetAppearancePrompt
     public const NEGATIVE = 'cartoon, illustration, drawing, 3d render, anime, painting, deformed anatomy, extra legs, '
         .'extra tail, missing legs, blurry, low quality, text, letters, watermark, logo, people, person, child, hands';
 
-    public const VIDEO_STYLE = 'Keep the dog\'s exact appearance, coat colours and markings from the image. '
-        .'Static camera, natural light, realistic natural motion, seamless loop. No people, no text.';
+    /** State videos (M4-03): the same dog, subtle realistic motion, nothing else changes. */
+    public const VIDEO_STYLE = 'Keep the dog\'s exact appearance, size, coat colours and markings from the image; the same single dog throughout. '
+        .'Static locked-off camera, no zoom, no pan, no cuts, same room and natural light. '
+        .'Subtle, slow, realistic dog motion that could loop seamlessly. No people, no hands, no other animals, no text.';
+
+    public const VIDEO_NEGATIVE = self::NEGATIVE.', camera movement, camera shake, zoom, pan, scene cut, morphing, '
+        .'second dog, other animals, changing fur colour, changing markings, fast motion';
 
     /**
      * @param  array<string, string>  $traits
      */
     public function imagePrompt(string $breedKey, array $traits): string
+    {
+        return 'A photorealistic photograph of a single '.$this->describe($breedKey, $traits).'. '.self::STYLE;
+    }
+
+    /**
+     * "medium sturdy mixed-breed dog with a short coat in … and …" — breed + traits only.
+     *
+     * @param  array<string, string>  $traits
+     */
+    public function describe(string $breedKey, array $traits): string
     {
         $breed = (array) config("breed_appearance.{$breedKey}", []);
         $displayName = (string) ($breed['display_name'] ?? str_replace('_', ' ', $breedKey).' dog');
@@ -84,7 +99,7 @@ class PetAppearancePrompt
             default => ' with '.implode(', ', array_slice($parts, 0, -1)).' and '.end($parts),
         };
 
-        return 'A photorealistic photograph of a single '.$subject.$description.'. '.self::STYLE;
+        return $subject.$description;
     }
 
     public function negativePrompt(): string
@@ -92,10 +107,23 @@ class PetAppearancePrompt
         return self::NEGATIVE;
     }
 
-    public function videoPrompt(string $breedKey, PetStateEnum $state): string
+    public function videoNegativePrompt(): string
     {
-        $displayName = (string) config("breed_appearance.{$breedKey}.display_name", 'dog');
+        return self::VIDEO_NEGATIVE;
+    }
 
-        return 'The same '.$displayName.' as in the image, '.$state->promptModifier().'. '.self::VIDEO_STYLE;
+    /**
+     * State video prompt from the pet's DNA (breed + traits) and the state —
+     * the start image fixes the look, the text repeats it so the model keeps it.
+     *
+     * @param  array<string, string>  $traits  DNA v2 traits; empty for v1 pets / unknown
+     */
+    public function videoPrompt(string $breedKey, PetStateEnum $state, array $traits = []): string
+    {
+        $subject = $traits !== []
+            ? $this->describe($breedKey, $traits)
+            : (string) config("breed_appearance.{$breedKey}.display_name", 'dog');
+
+        return 'The same '.$subject.' as in the image, '.$state->promptModifier().'. '.self::VIDEO_STYLE;
     }
 }

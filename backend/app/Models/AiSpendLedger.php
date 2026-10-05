@@ -36,6 +36,7 @@ class AiSpendLedger extends Model
         'error_reason',
         'request_id',
         'pet_id',
+        'pet_media_id',
         'media_lab_result_id',
     ];
 

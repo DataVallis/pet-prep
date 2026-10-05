@@ -5,15 +5,18 @@ namespace App\Services\Media;
 use App\Enums\AiCallFailure;
 use App\Enums\AiSpendPurpose;
 use App\Jobs\GeneratePetReferenceImage;
+use App\Jobs\SubmitPetStateVideo;
 use App\Models\Pet;
+use App\Models\PetMedia;
 use App\Services\FalAiService;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Log;
 
 /**
- * Re-queues reference images that were blocked by the production budget or an
- * exhausted fal balance (PR #22 review): daily via `media:retry-references`
- * and per pet from the Filament PetResource action.
+ * Re-queues AI media blocked by the production budget or an exhausted fal
+ * balance (PR #22 review; videos since M4-03): daily via `media:retry` and
+ * per pet from the Filament PetResource action. Reference images first —
+ * videos need a stored image.
  */
 class ReferenceImageRetryService
 {
@@ -31,6 +34,14 @@ class ReferenceImageRetryService
     ) {}
 
     /**
+     * @return list<string>
+     */
+    private static function reasons(): array
+    {
+        return array_map(fn (AiCallFailure $r) => $r->value, self::AUTO_RETRY_REASONS);
+    }
+
+    /**
      * @return Builder<Pet>
      */
     public function autoRetryCandidates(): Builder
@@ -38,7 +49,26 @@ class ReferenceImageRetryService
         return Pet::query()
             ->where('is_active', true)
             ->where('media_status', 'failed')
-            ->whereIn('media_error', array_map(fn (AiCallFailure $r) => $r->value, self::AUTO_RETRY_REASONS))
+            ->whereIn('media_error', self::reasons())
+            ->orderBy('id');
+    }
+
+    /**
+     * Video slots blocked by budget / balance whose pet is active and whose image is stored.
+     *
+     * @return Builder<PetMedia>
+     */
+    public function videoRetryCandidates(): Builder
+    {
+        return PetMedia::query()
+            ->videos()
+            ->where('status', PetMedia::STATUS_FAILED)
+            ->whereIn('error_reason', self::reasons())
+            ->whereHas('pet', fn (Builder $q) => $q->where('is_active', true))
+            ->whereExists(fn ($q) => $q->selectRaw('1')->from('pet_media as img')
+                ->whereColumn('img.pet_id', 'pet_media.pet_id')
+                ->where('img.kind', PetMedia::KIND_IMAGE)
+                ->whereNotNull('img.storage_path'))
             ->orderBy('id');
     }
 
@@ -48,29 +78,54 @@ class ReferenceImageRetryService
      */
     public function retryDue(int $limit = 100): int
     {
+        return $this->retryDueWithVideos($limit)['images'];
+    }
+
+    /**
+     * Images first, then videos, within today's production budget.
+     *
+     * @return array{images: int, videos: int}
+     */
+    public function retryDueWithVideos(int $limit = 100): array
+    {
         if (! $this->fal->isEnabled() || FalGateway::balanceExhaustedAt() !== null) {
-            return 0;
+            return ['images' => 0, 'videos' => 0];
         }
 
-        $cost = $this->profiles->referenceImage()->estimatedCostUsd();
-        $queued = 0;
+        $imageCost = $this->profiles->referenceImage()->estimatedCostUsd();
+        $videoCost = $this->profiles->stateVideo()->estimatedCostUsd();
+        $planned = 0.0;
+        $images = 0;
+        $videos = 0;
 
         foreach ($this->autoRetryCandidates()->limit($limit)->get() as $pet) {
             // Leave room for everything queued in this sweep (reserve() is still the real gate).
-            if ($this->guard->refusalFor($cost * ($queued + 1), AiSpendPurpose::ReferenceImage) !== null) {
+            if ($this->guard->refusalFor($planned + $imageCost, AiSpendPurpose::ReferenceImage) !== null) {
                 break;
             }
 
             if ($this->retry($pet)) {
-                $queued++;
+                $planned += $imageCost;
+                $images++;
             }
         }
 
-        if ($queued > 0) {
-            Log::info('ReferenceImageRetryService: re-queued reference images', ['count' => $queued]);
+        foreach ($this->videoRetryCandidates()->limit(max(0, $limit - $images))->get() as $slot) {
+            if ($this->guard->refusalFor($planned + $videoCost, AiSpendPurpose::StateVideo) !== null) {
+                break;
+            }
+
+            $slot->update(['status' => PetMedia::STATUS_PENDING, 'request_id' => null, 'error_reason' => null, 'error' => null]);
+            SubmitPetStateVideo::dispatch($slot->id);
+            $planned += $videoCost;
+            $videos++;
         }
 
-        return $queued;
+        if ($images + $videos > 0) {
+            Log::info('ReferenceImageRetryService: re-queued AI media', ['images' => $images, 'videos' => $videos]);
+        }
+
+        return ['images' => $images, 'videos' => $videos];
     }
 
     /**
@@ -83,6 +138,8 @@ class ReferenceImageRetryService
         }
 
         $pet->updateQuietly(['media_status' => 'pending', 'media_error' => null]);
+        PetMedia::query()->where('pet_id', $pet->id)->images()->where('status', PetMedia::STATUS_FAILED)
+            ->update(['status' => PetMedia::STATUS_PENDING, 'error_reason' => null, 'error' => null]);
         GeneratePetReferenceImage::dispatch($pet->id)->afterCommit();
 
         return true;
@@ -93,6 +150,6 @@ class ReferenceImageRetryService
         return $this->fal->isEnabled()
             && $pet->is_active
             && $pet->media_status === 'failed'
-            && empty($pet->pet_dna['reference_image_url'] ?? null);
+            && ! PetMedia::query()->where('pet_id', $pet->id)->images()->whereNotNull('storage_path')->exists();
     }
 }

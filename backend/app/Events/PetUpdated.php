@@ -3,6 +3,7 @@
 namespace App\Events;
 
 use App\Models\Pet;
+use App\Services\Media\PetMediaPayload;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
@@ -135,6 +136,8 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
      */
     public static function payloadFor(Pet $pet, ?string $eventType = null): array
     {
+        $media = PetMediaPayload::for($pet);
+
         return [
             'pet_id' => $pet->id,
             'breed_type' => $pet->breed_type->value,
@@ -153,9 +156,12 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             // Contract before birth (M1-07b): null / true until the child signs.
             'born_at' => $pet->born_at?->toIso8601String(),
             'awaiting_contract' => $pet->isUnborn(),
-            'current_video_url' => $pet->current_video_url,
+            // AI media (M4-05): signed URLs (≤ 90 min) to our copies — the channel is
+            // private to the pet's caretakers and family parents; legacy fields mirror it.
+            'current_video_url' => $media->currentVideoUrl,
             'media_status' => $pet->media_status,
-            'reference_image_url' => $pet->pet_dna['reference_image_url'] ?? null,
+            'reference_image_url' => $media->referenceImageUrl,
+            'media' => $media->toArray(),
             'event_type' => $eventType,
             'updated_at' => $pet->updated_at?->toIso8601String(),
             'emitted_at' => now()->toRfc3339String(true),

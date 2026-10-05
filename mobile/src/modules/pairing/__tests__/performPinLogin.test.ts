@@ -6,7 +6,7 @@ import * as SecureStore from 'expo-secure-store';
 import { ApiError, api, type PinLoginResponse } from '@/api/client';
 import { performPinLogin } from '@/modules/pairing/pinLogin';
 import { useAppStore } from '@/store/appStore';
-import { makePet } from '@/test-utils/fixtures';
+import { makeMedia, makePet } from '@/test-utils/fixtures';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -41,6 +41,7 @@ const response: PinLoginResponse = {
     pet_dna: { seed: null, prompt_anchor: null, visual_traits: null, reference_image_url: null },
     current_video_url: null,
     media_status: 'disabled',
+    media: makeMedia(),
   },
   awaiting_contract: false,
 };

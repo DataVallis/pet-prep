@@ -20,8 +20,9 @@
 |                started megapixel (fal rounds up)
 |   second     — `usd` per second of generated video
 |
-| Production defaults stay on the pre-M4 models until David picks new ones
-| (AI_REFERENCE_IMAGE_PROFILE / AI_STATE_VIDEO_PROFILE).
+| Production models (David, 2026-10-05): reference image = Nano Banana Pro,
+| state videos = Kling 3.0 Pro (5 s, no audio). Switchable per env
+| (AI_REFERENCE_IMAGE_PROFILE / AI_STATE_VIDEO_PROFILE) without a deploy.
 |
 | NOTE: the price belongs to the PROFILE, not to the endpoint. Overriding an
 | endpoint with FAL_MODEL_* does not change `pricing` — if you point a profile
@@ -32,11 +33,47 @@
 
 return [
 
-    // Profile used for a new pet's reference image (GeneratePetReferenceImage).
-    'reference_image_profile' => env('AI_REFERENCE_IMAGE_PROFILE', 'flux_schnell'),
+    // Profile used for a new pet's reference image (GeneratePetReferenceImage). David 2026-10-05.
+    'reference_image_profile' => env('AI_REFERENCE_IMAGE_PROFILE', 'nano_banana_pro'),
 
-    // Profile used for pet state videos (FalAiService::generatePetVideoState — not wired yet, M4-03).
-    'state_video_profile' => env('AI_STATE_VIDEO_PROFILE', 'kling_v16_legacy'),
+    // Profile used for the pet state videos (SubmitPetStateVideo, M4-03). David 2026-10-05.
+    'state_video_profile' => env('AI_STATE_VIDEO_PROFILE', 'kling_v3_pro'),
+
+    /*
+    | Which state videos a pet gets at birth (M4-03) — MediaEntitlementService.
+    | Claude's proposal 2026-10-05, waiting for David: the free mutt gets the
+    | reference image + `basic`; a breed with breed_configs.premium_unlock
+    | (Border Collie / the paid challenge) gets `full`. Payments (M3) and AI
+    | tokens (M4-09) plug into MediaEntitlementService later.
+    | Values: PetStateEnum. `idle` must be in every set (fallback video).
+    */
+    'video_states' => [
+        'basic' => ['idle', 'sleeping'],
+        'full' => ['idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing'],
+    ],
+
+    /*
+    | Our copy of every generated file (M4-05). fal.media URLs are never given
+    | to the apps: a queued job downloads the result to a private disk and the
+    | apps get signed, expiring URLs to GET /api/media/{media}.
+    */
+    'storage' => [
+        // Private local disk (config/filesystems.php → storage/app/pet-media, Docker volume app_storage).
+        'disk' => env('PET_MEDIA_DISK', 'pet_media'),
+        'max_image_bytes' => (int) env('PET_MEDIA_MAX_IMAGE_MB', 25) * 1024 * 1024,
+        'max_video_bytes' => (int) env('PET_MEDIA_MAX_VIDEO_MB', 60) * 1024 * 1024,
+        // Must stay below the queue's retry_after (90 s) — StorePetMedia::$timeout is 85.
+        'download_timeout_seconds' => min(80, (int) env('PET_MEDIA_DOWNLOAD_TIMEOUT', 60)),
+        'image_mimes' => ['image/jpeg', 'image/png', 'image/webp'],
+        // QuickTime (`ftypqt`) is accepted and stored as video/mp4 (PR #24 review m4).
+        'video_mimes' => ['video/mp4', 'video/quicktime'],
+        // Signed URL lifetime. URLs are bucketed (same URL for half the TTL) so a
+        // state poll does not change the URI and restart the player; a URL is
+        // valid for between TTL and 1.5 × TTL.
+        'url_ttl_minutes' => max(10, (int) env('PET_MEDIA_URL_TTL_MINUTES', 60)),
+        // fal fetches our stored reference image as the video start frame.
+        'fal_fetch_ttl_minutes' => 360,
+    ],
 
     // Pet DNA version for NEW pets: 2 = unique trait sampling (M4-08), 1 = pre-M4 fixed anchors.
     // Existing pets keep the DNA they were born with.
@@ -66,9 +103,9 @@ return [
 
         'image' => [
 
-            // Pre-M4 default (FalAiService::MODEL_IMAGE). Request body unchanged.
+            // Pre-M4 default (FalAiService::MODEL_IMAGE), kept for the lab and as a cheap fallback.
             'flux_schnell' => [
-                'label' => 'FLUX.1 [schnell] (current default, fast/cheap)',
+                'label' => 'FLUX.1 [schnell] (fast/cheap)',
                 'endpoint' => env('FAL_MODEL_FLUX_SCHNELL', 'fal-ai/flux/schnell'),
                 'enabled' => true,
                 'verified' => true,
@@ -106,6 +143,10 @@ return [
                 ],
             ],
 
+            // Production default since 2026-10-05 (David). Schema checked on
+            // https://fal.ai/models/fal-ai/nano-banana-pro/api (2026-10-05): prompt, num_images,
+            // seed, aspect_ratio, output_format, safety_tolerance, resolution (1K|2K|4K);
+            // no negative_prompt (the DNA prompt states "no people, no text, …" itself).
             'nano_banana_pro' => [
                 'label' => 'Nano Banana Pro (Google Gemini image)',
                 'endpoint' => env('FAL_MODEL_NANO_BANANA_PRO', 'fal-ai/nano-banana-pro'),
@@ -147,28 +188,11 @@ return [
 
         'video' => [
 
-            // Pre-M4 constant FalAiService::MODEL_VIDEO, kept byte-for-byte so the default does not
-            // change. WARNING (2026-10-04): the id is malformed (fal's id is
-            // fal-ai/kling-video/v1.6/pro/image-to-video) and fal marks Kling 1.6 as deprecated.
-            // generatePetVideoState() is not called anywhere yet; pick a new profile before M4-03.
-            'kling_v16_legacy' => [
-                'label' => 'Kling 1.6 Pro (legacy id — deprecated on fal)',
-                'endpoint' => env('FAL_MODEL_KLING_LEGACY', 'fal-ai/kling-v1.6/pro/image-to-video'),
-                'enabled' => true,
-                'lab' => false,
-                'verified' => false,
-                'source' => 'https://fal.ai/models/fal-ai/kling-video/v1.6/pro/image-to-video (2026-10-04: "deprecated", was $0.095/s)',
-                'pricing' => ['unit' => 'second', 'usd' => 0.095],
-                'duration_seconds' => 5,
-                'image_param' => 'image_url',
-                'supports_negative_prompt' => false,
-                'params' => [
-                    'duration' => '5',
-                    'aspect_ratio' => '9:16',
-                    'cfg_scale' => 0.7,
-                ],
-            ],
-
+            // Production default since 2026-10-05 (David). Schema checked on
+            // https://fal.ai/models/fal-ai/kling-video/v3/pro/image-to-video/api (2026-10-05):
+            // start_image_url, prompt, duration (3–15), generate_audio, negative_prompt, cfg_scale.
+            // There is NO resolution / aspect_ratio input: the clip follows the start image
+            // (9:16 from Nano Banana Pro) at Kling Pro's native resolution — "720p" cannot be requested.
             'kling_v3_pro' => [
                 'label' => 'Kling 3.0 Pro image-to-video (audio off)',
                 'endpoint' => env('FAL_MODEL_KLING_V3_PRO', 'fal-ai/kling-video/v3/pro/image-to-video'),
