@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 
-import type { MetricSizing } from '@/modules/hud/hudLayout';
+import { METRIC_BAR_WIDTH, type MetricSizing } from '@/modules/hud/hudLayout';
 import { interpolateColor } from '@/utils/metrics';
 
 export interface MetricBarProps {
@@ -61,7 +61,7 @@ export default function MetricBar({ level, label, icon, color, sizing = DEFAULT_
 
 const styles = StyleSheet.create({
   container: {
-    width: 58,
+    width: METRIC_BAR_WIDTH,
     alignItems: 'center',
   },
   iconBadge: {
@@ -103,6 +103,6 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     letterSpacing: 0,
     color: 'rgba(255, 255, 255, 0.6)',
-    maxWidth: 58,
+    maxWidth: METRIC_BAR_WIDTH,
   },
 });

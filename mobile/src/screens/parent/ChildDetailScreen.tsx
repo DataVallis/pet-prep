@@ -7,7 +7,7 @@
  * with the nicknames of the children who acted. Light parent theme (ADR-007).
  */
 
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Check, ChevronLeft, X } from 'lucide-react-native';
@@ -29,6 +29,7 @@ import { parentDashboardKey } from '@/modules/family/live';
 import { normalizePetMedia, toBreedType } from '@/modules/petMedia/petMedia';
 import PetMediaView from '@/components/PetMediaView';
 import PetAlbum from '@/components/PetAlbum';
+import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
 import {
   REPORT_PERIODS,
   ROUTINE_LABELS,
@@ -152,7 +153,12 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
   const pet = petOfChild(child, family);
   const queryClient = useQueryClient();
   const [albumOpen, setAlbumOpen] = useState(false);
-  const media = pet !== null ? normalizePetMedia(pet.media) : null;
+  // Memoised: a new object per render would make the album's expiry timer / items churn.
+  const hasPet = pet !== null;
+  const petMediaRaw = pet?.media;
+  const media = useMemo(() => (hasPet ? normalizePetMedia(petMediaRaw) : null), [hasPet, petMediaRaw]);
+  const albumAvailable = media !== null && hasAlbum(media);
+  const showAlbum = albumOpen && albumAvailable;
   // A signed media URL failed (likely expired): refresh the dashboard once for new URLs.
   const onMediaExpired = useCallback(() => {
     void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
@@ -160,166 +166,180 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
 
   return (
     <View style={styles.root}>
-      <View style={styles.header}>
-        <Pressable onPress={onBack} hitSlop={10} accessibilityRole="button" accessibilityLabel={S.back} testID="detail-back">
-          <ChevronLeft color={C.accent} size={26} />
-        </Pressable>
-        <Text style={styles.headerTitle}>{child.name}</Text>
-        <TrafficLightBadge color={(data?.traffic_light ?? child.traffic_light).color} />
-      </View>
-
-      {/* Read-only "Moj kuža" album (same viewer as the child), over the whole screen. */}
-      {albumOpen && media !== null && (
-        <PetAlbum media={media} onClose={() => setAlbumOpen(false)} onMediaExpired={onMediaExpired} testID="detail-album" />
-      )}
-
-      <ScrollView style={styles.flex} contentContainerStyle={styles.content}>
-        {pet !== null && media !== null && (
-          <PetMediaView
-            media={media}
-            // One player at a time: paused while the album is open.
-            active={!albumOpen}
-            petState="idle"
-            // A locked pet (vet, hard stop, game over, inactive) is shown as a still image.
-            videoEnabled={pet.is_active && !pet.is_ill && !pet.is_hard_stopped && !pet.is_game_over}
-            breed={toBreedType(pet.breed_type)}
-            onMediaExpired={onMediaExpired}
-            variant="card"
-            style={styles.petMedia}
-            testID="detail-pet-media"
-          />
-        )}
-        {media !== null && (media.referenceImageUrl !== null || Object.keys(media.videos).length > 0) && (
-          <Pressable
-            onPress={() => setAlbumOpen(true)}
-            accessibilityRole="button"
-            testID="detail-album-open"
-            style={({ pressed }) => [styles.moreButton, pressed && styles.pressed]}
-          >
-            <Text style={styles.moreText}>{S.album}</Text>
+      {/* Android: TalkBack must not reach the screen under the album (iOS: accessibilityViewIsModal). */}
+      <View
+        style={styles.flex}
+        testID="detail-content"
+        importantForAccessibility={showAlbum ? 'no-hide-descendants' : 'auto'}
+        accessibilityElementsHidden={showAlbum}
+      >
+        <View style={styles.header}>
+          <Pressable onPress={onBack} hitSlop={10} accessibilityRole="button" accessibilityLabel={S.back} testID="detail-back">
+            <ChevronLeft color={C.accent} size={26} />
           </Pressable>
-        )}
+          <Text style={styles.headerTitle}>{child.name}</Text>
+          <TrafficLightBadge color={(data?.traffic_light ?? child.traffic_light).color} />
+        </View>
 
-        <Segmented
-          options={REPORT_PERIODS.map((p) => ({ value: p, label: S.periods[p] }))}
-          value={days}
-          onChange={setDays}
-          label={(p) => S.periodA11y(S.periods[p])}
-          testIDPrefix="period"
-        />
+        <ScrollView style={styles.flex} contentContainerStyle={styles.content}>
+          {pet !== null && media !== null && (
+            <PetMediaView
+              media={media}
+              // One player at a time: paused while the album is open.
+              active={!showAlbum}
+              petState="idle"
+              // A locked pet (vet, hard stop, game over, inactive) is shown as a still image.
+              videoEnabled={pet.is_active && !pet.is_ill && !pet.is_hard_stopped && !pet.is_game_over}
+              breed={toBreedType(pet.breed_type)}
+              onMediaExpired={onMediaExpired}
+              variant="card"
+              style={styles.petMedia}
+              testID="detail-pet-media"
+            />
+          )}
+          {albumAvailable && (
+            <Pressable
+              onPress={() => setAlbumOpen(true)}
+              accessibilityRole="button"
+              testID="detail-album-open"
+              style={({ pressed }) => [styles.moreButton, pressed && styles.pressed]}
+            >
+              <Text style={styles.moreText}>{S.album}</Text>
+            </Pressable>
+          )}
 
-        {report.isError && (
-          <ErrorBanner
-            text={data ? S.offline : S.loadError}
-            retryLabel={S.retry}
-            onRetry={() => void report.refetch()}
-            offline={offline}
-            testID="report-error"
+          <Segmented
+            options={REPORT_PERIODS.map((p) => ({ value: p, label: S.periods[p] }))}
+            value={days}
+            onChange={setDays}
+            label={(p) => S.periodA11y(S.periods[p])}
+            testIDPrefix="period"
           />
-        )}
 
-        {!data ? (
-          report.isPending ? <LoadingBlock text={S.loading} testID="report-loading" /> : null
-        ) : data.pet_id === null ? (
-          <Card>
-            <Text style={styles.muted} testID="report-no-pet">
-              {S.noPet}
-            </Text>
-          </Card>
-        ) : (
-          <>
-            <Card testID={`report-${data.days}`}>
-              {data.traffic_light.reasons.map((r) => (
-                <Text key={r} style={styles.body}>
-                  • {reasonText(r, child.today.missed_count)}
-                </Text>
-              ))}
-              <Text style={styles.label}>{S.periodScore}</Text>
-              {data.period_score.score === null ? (
-                <Text style={styles.noScore} testID="report-period-score">
-                  {S.noScore}
-                </Text>
-              ) : (
-                <Text style={styles.score} testID="report-period-score">
-                  {data.period_score.score}
-                </Text>
-              )}
-              <Text style={styles.muted}>
-                {scoreRoutinesText(data.period_score)}
-                {data.period_score.illnesses > 0 ? ` · ${illnessesText(data.period_score.illnesses)}` : ''}
+          {report.isError && (
+            <ErrorBanner
+              text={data ? S.offline : S.loadError}
+              retryLabel={S.retry}
+              onRetry={() => void report.refetch()}
+              offline={offline}
+              testID="report-error"
+            />
+          )}
+
+          {!data ? (
+            report.isPending ? <LoadingBlock text={S.loading} testID="report-loading" /> : null
+          ) : data.pet_id === null ? (
+            <Card>
+              <Text style={styles.muted} testID="report-no-pet">
+                {S.noPet}
               </Text>
-              <Text style={styles.muted}>{S.totalScore(data.care_score.score)}</Text>
-              {progressText(data.progress) && <Text style={styles.strong}>{progressText(data.progress)}</Text>}
-              {report.isPlaceholderData && <ActivityIndicator color={C.accent} />}
             </Card>
-
-            <Card>
-              <SectionTitle>{S.byType}</SectionTitle>
-              {ROUTINE_TYPES.map((type) => {
-                const t = data.by_type[type];
-                return (
-                  <View key={type} style={styles.typeRow} testID={`report-type-${type}`}>
-                    <RoutineIcon type={type} />
-                    <Text style={styles.typeLabel}>{ROUTINE_LABELS[type]}</Text>
-                    <Text style={styles.strong}>{S.typeLine(t.done_by_child, t.expected)}</Text>
-                    <Text style={[styles.muted, styles.flex, styles.right]}>
-                      {[t.missed > 0 ? S.typeMissed(t.missed) : null, t.pending > 0 ? S.typePending(t.pending) : null]
-                        .filter((x): x is string => x !== null)
-                        .join(' · ')}
-                    </Text>
-                  </View>
-                );
-              })}
-            </Card>
-
-            <Card>
-              <SectionTitle>{S.daily}</SectionTitle>
-              {[...data.daily].reverse().map((d) => (
-                <View key={d.date} style={styles.dayRow} testID={`report-day-${d.date}`}>
-                  <Text style={styles.dayLabel}>{dayLabel(d.date)}</Text>
-                  <Text style={[styles.strong, styles.dayCount]}>
-                    {d.expected === 0 ? S.noRoutines : `${d.done}/${d.expected}`}
-                  </Text>
-                  <Text style={[styles.muted, styles.flex, styles.right]}>
-                    {S.walk(formatSteps(d.walk_steps), d.walk_goal === null ? null : formatSteps(d.walk_goal))}
-                  </Text>
-                  {d.walk_done === true && <Check color={C.green} size={14} />}
-                </View>
-              ))}
-            </Card>
-
-            <Card>
-              <SectionTitle>{S.missed}</SectionTitle>
-              {data.missed.length === 0 ? (
-                <Text style={styles.muted}>{S.noMissed}</Text>
-              ) : (
-                data.missed.map((m, i) => (
-                  <View key={`${m.type}-${m.due_at}-${i}`} style={styles.typeRow} testID={`report-missed-${i}`}>
-                    <RoutineIcon type={m.type} color={C.redText} />
-                    <Text style={styles.typeLabel}>{ROUTINE_LABELS[m.type]}</Text>
-                    <Text style={styles.muted}>
-                      {dayLabel(m.date)} · {missedWhenText(m, tz)}
-                    </Text>
-                  </View>
-                ))
-              )}
-            </Card>
-
-            {data.illnesses.length > 0 && (
-              <Card testID="report-illnesses">
-                <SectionTitle>{S.illnesses}</SectionTitle>
-                {data.illnesses.map((p) => (
-                  <Text key={p.started_at} style={styles.body}>
-                    {S.illnessRow(instantText(p.started_at, tz), p.ended_at ? instantText(p.ended_at, tz) : null)}
+          ) : (
+            <>
+              <Card testID={`report-${data.days}`}>
+                {data.traffic_light.reasons.map((r) => (
+                  <Text key={r} style={styles.body}>
+                    • {reasonText(r, child.today.missed_count)}
                   </Text>
                 ))}
+                <Text style={styles.label}>{S.periodScore}</Text>
+                {data.period_score.score === null ? (
+                  <Text style={styles.noScore} testID="report-period-score">
+                    {S.noScore}
+                  </Text>
+                ) : (
+                  <Text style={styles.score} testID="report-period-score">
+                    {data.period_score.score}
+                  </Text>
+                )}
+                <Text style={styles.muted}>
+                  {scoreRoutinesText(data.period_score)}
+                  {data.period_score.illnesses > 0 ? ` · ${illnessesText(data.period_score.illnesses)}` : ''}
+                </Text>
+                <Text style={styles.muted}>{S.totalScore(data.care_score.score)}</Text>
+                {progressText(data.progress) && <Text style={styles.strong}>{progressText(data.progress)}</Text>}
+                {report.isPlaceholderData && <ActivityIndicator color={C.accent} />}
               </Card>
-            )}
-          </>
-        )}
 
-        {petId !== null && <Timeline petId={petId} family={family} />}
-      </ScrollView>
+              <Card>
+                <SectionTitle>{S.byType}</SectionTitle>
+                {ROUTINE_TYPES.map((type) => {
+                  const t = data.by_type[type];
+                  return (
+                    <View key={type} style={styles.typeRow} testID={`report-type-${type}`}>
+                      <RoutineIcon type={type} />
+                      <Text style={styles.typeLabel}>{ROUTINE_LABELS[type]}</Text>
+                      <Text style={styles.strong}>{S.typeLine(t.done_by_child, t.expected)}</Text>
+                      <Text style={[styles.muted, styles.flex, styles.right]}>
+                        {[t.missed > 0 ? S.typeMissed(t.missed) : null, t.pending > 0 ? S.typePending(t.pending) : null]
+                          .filter((x): x is string => x !== null)
+                          .join(' · ')}
+                      </Text>
+                    </View>
+                  );
+                })}
+              </Card>
+
+              <Card>
+                <SectionTitle>{S.daily}</SectionTitle>
+                {[...data.daily].reverse().map((d) => (
+                  <View key={d.date} style={styles.dayRow} testID={`report-day-${d.date}`}>
+                    <Text style={styles.dayLabel}>{dayLabel(d.date)}</Text>
+                    <Text style={[styles.strong, styles.dayCount]}>
+                      {d.expected === 0 ? S.noRoutines : `${d.done}/${d.expected}`}
+                    </Text>
+                    <Text style={[styles.muted, styles.flex, styles.right]}>
+                      {S.walk(formatSteps(d.walk_steps), d.walk_goal === null ? null : formatSteps(d.walk_goal))}
+                    </Text>
+                    {d.walk_done === true && <Check color={C.green} size={14} />}
+                  </View>
+                ))}
+              </Card>
+
+              <Card>
+                <SectionTitle>{S.missed}</SectionTitle>
+                {data.missed.length === 0 ? (
+                  <Text style={styles.muted}>{S.noMissed}</Text>
+                ) : (
+                  data.missed.map((m, i) => (
+                    <View key={`${m.type}-${m.due_at}-${i}`} style={styles.typeRow} testID={`report-missed-${i}`}>
+                      <RoutineIcon type={m.type} color={C.redText} />
+                      <Text style={styles.typeLabel}>{ROUTINE_LABELS[m.type]}</Text>
+                      <Text style={styles.muted}>
+                        {dayLabel(m.date)} · {missedWhenText(m, tz)}
+                      </Text>
+                    </View>
+                  ))
+                )}
+              </Card>
+
+              {data.illnesses.length > 0 && (
+                <Card testID="report-illnesses">
+                  <SectionTitle>{S.illnesses}</SectionTitle>
+                  {data.illnesses.map((p) => (
+                    <Text key={p.started_at} style={styles.body}>
+                      {S.illnessRow(instantText(p.started_at, tz), p.ended_at ? instantText(p.ended_at, tz) : null)}
+                    </Text>
+                  ))}
+                </Card>
+              )}
+            </>
+          )}
+
+          {petId !== null && <Timeline petId={petId} family={family} />}
+        </ScrollView>
+      </View>
+
+      {/* Read-only album (same viewer as the child), over the whole screen; Android back closes it. */}
+      {showAlbum && media !== null && (
+        <PetAlbum
+          media={media}
+          title={ALBUM_STRINGS.parentTitle}
+          onClose={() => setAlbumOpen(false)}
+          onMediaExpired={onMediaExpired}
+          testID="detail-album"
+        />
+      )}
     </View>
   );
 }

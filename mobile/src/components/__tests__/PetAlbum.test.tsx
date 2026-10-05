@@ -3,13 +3,17 @@
  * expired-URL refetch path.
  */
 import { act, fireEvent, render, screen } from '@testing-library/react-native';
+import { BackHandler } from 'react-native';
 
 import PetAlbum from '@/components/PetAlbum';
-import { ALBUM_STRINGS } from '@/modules/petMedia/album';
+import { ALBUM_REFRESH_COOLDOWN_MS, ALBUM_STRINGS } from '@/modules/petMedia/album';
 import { normalizePetMedia, type PetMediaInfo } from '@/modules/petMedia/petMedia';
 import { makeMedia } from '@/test-utils/fixtures';
 import { liveVideoPlayers, resetMockVideoPlayers, sourceUri } from '@/test-utils/videoPlayers';
 
+type BackPressHandler = Parameters<typeof BackHandler.addEventListener>[1];
+/** Simulates the Android hardware back button on a captured handler. */
+const pressBack = (h: BackPressHandler | null | undefined) => h?.({} as Parameters<BackPressHandler>[0]);
 const url = (id: number, v: string, sig = 'a') => `https://api.petprep.si/api/media/${id}?expires=1&v=${v}&signature=${sig}`;
 const IMG = url(1, 'img');
 const IDLE = url(2, 'idle');
@@ -166,5 +170,90 @@ describe('PetAlbum viewer', () => {
     fireEvent.press(screen.getByTestId('album-item-sleeping'));
     rerender(<PetAlbum media={mediaWith({ videos: { idle: IDLE } })} onClose={onClose} onMediaExpired={onMediaExpired} />);
     expect(screen.getByTestId('album-grid')).toBeTruthy();
+  });
+});
+
+describe('PetAlbum — PR #31 review', () => {
+  afterEach(() => {
+    jest.useRealTimers();
+    jest.restoreAllMocks();
+  });
+
+  function failCurrent() {
+    act(() => liveVideoPlayers()[0].emit('statusChange', { status: 'error' }));
+  }
+
+  function reopen(id: string) {
+    fireEvent.press(screen.getByTestId('album-back'));
+    fireEvent.press(screen.getByTestId(`album-item-${id}`));
+  }
+
+  it('allows another refresh for the same item after the 5-min cooldown', () => {
+    jest.useFakeTimers({ now: Date.parse('2026-10-05T10:00:00Z') });
+    const { onMediaExpired } = renderAlbum();
+    fireEvent.press(screen.getByTestId('album-item-idle'));
+    failCurrent();
+    expect(onMediaExpired).toHaveBeenCalledTimes(1);
+
+    reopen('idle');
+    failCurrent();
+    expect(onMediaExpired).toHaveBeenCalledTimes(1); // within the cooldown
+
+    act(() => jest.advanceTimersByTime(ALBUM_REFRESH_COOLDOWN_MS));
+    reopen('idle');
+    failCurrent();
+    expect(onMediaExpired).toHaveBeenCalledTimes(2);
+  });
+
+  it('"Poskusi znova" remounts the item with the newest URL', () => {
+    const { rerender, onMediaExpired, onClose } = renderAlbum();
+    fireEvent.press(screen.getByTestId('album-item-idle'));
+    failCurrent();
+    expect(screen.getByTestId('album-video-unavailable')).toBeTruthy();
+
+    // Fresh URLs arrived meanwhile but were the same signature bucket → still failed; retry anyway.
+    rerender(<PetAlbum media={mediaWith()} onClose={onClose} onMediaExpired={onMediaExpired} />);
+    fireEvent.press(screen.getByTestId('album-video-unavailable-retry'));
+    expect(screen.getByTestId('album-video')).toBeTruthy();
+    expect(sourceUri(liveVideoPlayers()[0])).toBe(IDLE);
+  });
+
+  it('refreshes 1 min before media.expiresAt while open', () => {
+    jest.useFakeTimers({ now: Date.parse('2026-10-05T10:00:00Z') });
+    const { onMediaExpired } = renderAlbum(mediaWith({ expires_at: '2026-10-05T10:05:00Z' }));
+    act(() => jest.advanceTimersByTime(4 * 60_000 - 1));
+    expect(onMediaExpired).not.toHaveBeenCalled();
+    act(() => jest.advanceTimersByTime(1));
+    expect(onMediaExpired).toHaveBeenCalledTimes(1);
+  });
+
+  it('Android back: viewer → grid, grid → close', () => {
+    let handler: BackPressHandler | null = null;
+    jest.spyOn(BackHandler, 'addEventListener').mockImplementation((_event, h) => {
+      handler = h;
+      return { remove: jest.fn() };
+    });
+    const { onClose } = renderAlbum();
+    fireEvent.press(screen.getByTestId('album-item-idle'));
+
+    let consumed: boolean | null | undefined = false;
+    act(() => {
+      consumed = pressBack(handler);
+    });
+    expect(consumed).toBe(true);
+    expect(screen.getByTestId('album-grid')).toBeTruthy();
+    expect(onClose).not.toHaveBeenCalled();
+
+    act(() => {
+      pressBack(handler);
+    });
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('custom title (parent) and a11y hints on the tiles', () => {
+    render(<PetAlbum media={mediaWith()} onClose={jest.fn()} title={ALBUM_STRINGS.parentTitle} />);
+    expect(screen.getByText('Posnetki kužka')).toBeTruthy();
+    expect(screen.getByTestId('album-item-idle').props.accessibilityHint).toBe('video');
+    expect(screen.getByTestId('album-item-photo').props.accessibilityHint).toBe('fotografija');
   });
 });

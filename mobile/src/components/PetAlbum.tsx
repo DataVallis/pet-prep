@@ -9,8 +9,11 @@
  *   the playable items (wrapping); back returns to the grid, X closes the album.
  * - Expired signed URLs: `useStableUrl` keeps the first URL while the server re-signs
  *   it; a load error switches to the newest URL or, when that is the one that failed,
- *   asks the caller once per media for fresh URLs (`onMediaExpired` → refetch) and
- *   shows "Posnetka trenutno ni mogoče predvajati." until they arrive.
+ *   asks the caller for fresh URLs (`onMediaExpired` → refetch; once per media, again
+ *   after a 5-min cooldown) and shows "Posnetka trenutno ni mogoče predvajati." with
+ *   "Poskusi znova" (remounts the item). While open, the album also refetches 1 min
+ *   before `media.expiresAt`, so URLs are usually fresh before they fail.
+ * - Android hardware back: viewer → grid, grid → close (both callers).
  * - The caller pauses its own player (HUD / parent card) while the album is open.
  *
  * Shared by the child HUD and (read-only, same component) the parent's child detail.
@@ -18,6 +21,7 @@
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import {
+  BackHandler,
   Image,
   PanResponder,
   Pressable,
@@ -36,6 +40,8 @@ import {
   ALBUM_STRINGS,
   buildAlbumItems,
   isPlayable,
+  mayRefresh,
+  refreshDelay,
   stepIndex,
   swipeDirection,
   type AlbumItem,
@@ -49,46 +55,88 @@ export interface PetAlbumProps {
   onClose: () => void;
   /** A signed URL failed (likely expired) — refetch the state for fresh URLs. */
   onMediaExpired?: () => void;
+  /** Header title of the grid (child: "Moj kuža", parent: "Posnetki kužka"). */
+  title?: string;
   testID?: string;
 }
 
 const ZERO_INSETS = { top: 0, bottom: 0 } as const;
 
-/** Asks for fresh URLs at most once per media while the album is open (no refetch loop). */
+/** Asks for fresh URLs once per media, again only after the cooldown (no refetch loop). */
 function useExpiryReporter(onMediaExpired: (() => void) | undefined): (url: string) => void {
-  const reported = useRef(new Set<string>());
+  const reported = useRef(new Map<string, number>());
   const callback = useRef(onMediaExpired);
   callback.current = onMediaExpired;
   return useCallback((url: string) => {
     const key = mediaKey(url);
-    if (reported.current.has(key)) return;
-    reported.current.add(key);
+    const now = Date.now();
+    if (!mayRefresh(reported.current.get(key), now)) return;
+    reported.current.set(key, now);
     callback.current?.();
   }, []);
 }
 
-function Unavailable({ testID }: { testID: string }) {
+/** Refetch shortly before the signed URLs expire while the album is open. */
+function useRefreshBeforeExpiry(expiresAt: string | null, onMediaExpired: (() => void) | undefined): void {
+  const callback = useRef(onMediaExpired);
+  callback.current = onMediaExpired;
+  useEffect(() => {
+    const delay = refreshDelay(expiresAt, Date.now());
+    if (delay === null) return;
+    const timer = setTimeout(() => callback.current?.(), delay);
+    return () => clearTimeout(timer);
+  }, [expiresAt]);
+}
+
+function Unavailable({ testID, onRetry }: { testID: string; onRetry?: () => void }) {
   return (
     <View style={styles.unavailable} testID={testID}>
       <Clock color="#94a3b8" size={28} />
       <Text style={styles.unavailableText}>{ALBUM_STRINGS.unavailable}</Text>
+      {onRetry && (
+        <Pressable onPress={onRetry} accessibilityRole="button" testID={`${testID}-retry`} style={({ pressed }) => [styles.retryButton, pressed && styles.pressed]}>
+          <Text style={styles.retryText}>{ALBUM_STRINGS.retry}</Text>
+        </Pressable>
+      )}
     </View>
   );
 }
 
 /** The photo with re-signed URL handling (grid tile or viewer). */
-function AlbumImage({ url, onExpired, testID, fit }: { url: string; onExpired: (url: string) => void; testID: string; fit: 'cover' | 'contain' }) {
+function AlbumImage({
+  url,
+  onExpired,
+  testID,
+  fit,
+  onRetry,
+}: {
+  url: string;
+  onExpired: (url: string) => void;
+  testID: string;
+  fit: 'cover' | 'contain';
+  onRetry?: () => void;
+}) {
   const image = useStableUrl(url);
   const onError = () => {
     image.onError();
     onExpired(url);
   };
-  if (image.uri === null) return <Unavailable testID={`${testID}-unavailable`} />;
+  if (image.uri === null) return <Unavailable testID={`${testID}-unavailable`} onRetry={onRetry} />;
   return <Image source={{ uri: image.uri }} resizeMode={fit} onError={onError} style={StyleSheet.absoluteFill} testID={testID} />;
 }
 
 /** The one video player of the album. Keyed by media by the caller → a new item = a new player. */
-function AlbumVideo({ url, muted, onExpired }: { url: string; muted: boolean; onExpired: (url: string) => void }) {
+function AlbumVideo({
+  url,
+  muted,
+  onExpired,
+  onRetry,
+}: {
+  url: string;
+  muted: boolean;
+  onExpired: (url: string) => void;
+  onRetry: () => void;
+}) {
   const appActive = useAppActive();
   const stable = useStableUrl(url);
   const source = useMemo(() => (stable.uri ? { uri: stable.uri, useCaching: true } : null), [stable.uri]);
@@ -120,7 +168,7 @@ function AlbumVideo({ url, muted, onExpired }: { url: string; muted: boolean; on
     return () => sub.remove();
   }, [player, source, onStableError, onExpired]);
 
-  if (source === null) return <Unavailable testID="album-video-unavailable" />;
+  if (source === null) return <Unavailable testID="album-video-unavailable" onRetry={onRetry} />;
   return (
     <VideoView
       player={player}
@@ -149,6 +197,7 @@ function Tile({ item, onPress, onExpired }: { item: AlbumItem; onPress: () => vo
       onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={item.label}
+      accessibilityHint={item.kind === 'video' ? ALBUM_STRINGS.videoHint : ALBUM_STRINGS.photoHint}
       testID={testID}
       style={({ pressed }) => [styles.tile, pressed && styles.pressed]}
     >
@@ -167,13 +216,17 @@ function Tile({ item, onPress, onExpired }: { item: AlbumItem; onPress: () => vo
   );
 }
 
-export default function PetAlbum({ media, onClose, onMediaExpired, testID = 'pet-album' }: PetAlbumProps) {
+export default function PetAlbum({ media, onClose, onMediaExpired, title = ALBUM_STRINGS.title, testID = 'pet-album' }: PetAlbumProps) {
   const insets = useContext(SafeAreaInsetsContext) ?? ZERO_INSETS;
   const items = useMemo(() => buildAlbumItems(media), [media]);
   const playable = useMemo(() => items.filter(isPlayable), [items]);
   const [selectedId, setSelectedId] = useState<PlayableAlbumItem['id'] | null>(null);
   const [muted, setMuted] = useState(true);
   const reportExpired = useExpiryReporter(onMediaExpired);
+  useRefreshBeforeExpiry(media.expiresAt, onMediaExpired);
+  // "Poskusi znova" remounts the open item (fresh useStableUrl → newest URL).
+  const [attempt, setAttempt] = useState(0);
+  const retry = useCallback(() => setAttempt((n) => n + 1), []);
 
   // An item that vanished (media changed under the viewer) → back to the grid.
   const index = selectedId === null ? -1 : playable.findIndex((i) => i.id === selectedId);
@@ -188,6 +241,20 @@ export default function PetAlbum({ media, onClose, onMediaExpired, testID = 'pet
   );
   const stepRef = useRef(step);
   stepRef.current = step;
+
+  // Android hardware back: viewer → grid, grid → close.
+  const backRef = useRef<() => void>(() => undefined);
+  backRef.current = () => {
+    if (selected) setSelectedId(null);
+    else onClose();
+  };
+  useEffect(() => {
+    const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+      backRef.current();
+      return true;
+    });
+    return () => sub.remove();
+  }, []);
 
   const pan = useMemo(
     () =>
@@ -213,7 +280,7 @@ export default function PetAlbum({ media, onClose, onMediaExpired, testID = 'pet
           <View style={styles.iconButtonSpacer} />
         )}
         <Text style={styles.title} numberOfLines={1}>
-          {selected ? selected.label : ALBUM_STRINGS.title}
+          {selected ? selected.label : title}
         </Text>
         <Pressable onPress={onClose} hitSlop={10} accessibilityRole="button" accessibilityLabel={ALBUM_STRINGS.close} testID="album-close" style={styles.iconButton}>
           <X color="#ffffff" size={22} />
@@ -224,9 +291,16 @@ export default function PetAlbum({ media, onClose, onMediaExpired, testID = 'pet
         <View style={styles.viewer} testID="album-viewer" {...pan.panHandlers}>
           <View style={styles.stage}>
             {selected.kind === 'photo' ? (
-              <AlbumImage key={selected.key} url={selected.url} onExpired={reportExpired} testID="album-photo" fit="contain" />
+              <AlbumImage
+                key={`${selected.key}#${attempt}`}
+                url={selected.url}
+                onExpired={reportExpired}
+                onRetry={retry}
+                testID="album-photo"
+                fit="contain"
+              />
             ) : (
-              <AlbumVideo key={selected.key} url={selected.url} muted={muted} onExpired={reportExpired} />
+              <AlbumVideo key={`${selected.key}#${attempt}`} url={selected.url} muted={muted} onExpired={reportExpired} onRetry={retry} />
             )}
           </View>
 
@@ -394,6 +468,16 @@ const styles = StyleSheet.create({
   },
   unavailable: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'center', gap: 10, padding: 24 },
   unavailableText: { fontSize: 14, fontWeight: '600', color: '#cbd5e1', textAlign: 'center' },
+  retryButton: {
+    marginTop: 4,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 16,
+    backgroundColor: 'rgba(255, 255, 255, 0.16)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.25)',
+  },
+  retryText: { fontSize: 14, fontWeight: '700', color: '#ffffff' },
   emptyBox: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32 },
   emptyText: { fontSize: 15, fontWeight: '600', color: '#cbd5e1', textAlign: 'center', lineHeight: 22 },
   pressed: { opacity: 0.8, transform: [{ scale: 0.97 }] },

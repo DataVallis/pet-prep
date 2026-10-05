@@ -49,14 +49,14 @@ import {
   waterHint,
 } from '@/modules/childPet/actionMessages';
 import { lockStateFromView, type CareAction, type ChildPetView } from '@/modules/childPet/childPetView';
-import { computeHudLayout, METRICS_RESERVED_RIGHT, type HudLayout } from '@/modules/hud/hudLayout';
+import { computeHudLayout, METRICS_RESERVED_RIGHT, METRICS_RIGHT, type HudLayout } from '@/modules/hud/hudLayout';
 import { WS_BADGE_STRINGS, wsBadge } from '@/modules/hud/wsBadge';
 import { formatSteps } from '@/modules/steps/stepCounter';
 import { useStepSync } from '@/modules/steps/useStepSync';
 import { logout } from '@/modules/session/logout';
 import ActionButton from '@/components/ActionButton';
 import PetAlbum from '@/components/PetAlbum';
-import { ALBUM_STRINGS } from '@/modules/petMedia/album';
+import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
 import CleaningOverlay from '@/components/CleaningOverlay';
 import MetricBar from '@/components/MetricBar';
 import PetMediaView from '@/components/PetMediaView';
@@ -200,6 +200,13 @@ export default function ChildHudScreen() {
   const feed = useFeed();
   const water = useWater();
   const clean = useClean();
+  // The album never survives a lock (it would reopen when the lock lifts) or the HUD.
+  const lockedNow = view?.lock.is_locked ?? false;
+  useEffect(() => {
+    if (lockedNow) setAlbumVisible(false);
+  }, [lockedNow, setAlbumVisible]);
+  useEffect(() => () => setAlbumVisible(false), [setAlbumVisible]);
+
   const stepSync = useStepSync({
     enabled: view !== undefined && !view.lock.is_locked,
     myStepsToday: view?.steps.my_steps_today ?? 0,
@@ -314,191 +321,200 @@ export default function ChildHudScreen() {
   const cleanDisabled = locked || alreadyClean;
   const showCleaning = !locked && (pet.needs_cleaning || isCleaningOverlayVisible);
   const stale = petQuery.isError;
-  const showAlbum = isAlbumVisible && !locked;
+  const albumAvailable = hasAlbum(pet.media);
+  const showAlbum = isAlbumVisible && !locked && albumAvailable;
+  // Android: TalkBack must not reach the HUD under the album (iOS: accessibilityViewIsModal).
+  const hiddenUnderAlbum = showAlbum
+    ? ({ importantForAccessibility: 'no-hide-descendants', accessibilityElementsHidden: true } as const)
+    : ({ importantForAccessibility: 'auto', accessibilityElementsHidden: false } as const);
 
   return (
     <View style={styles.container}>
-      {/* Full-bleed AI dog (M4-03): state video → idle video → reference image → placeholder */}
-      <PetMediaView
-        media={pet.media}
-        petState={pet.pet_state}
-        lockReason={view.lock.reason}
-        breed={pet.breed_type}
-        // Vet visit / hard stop: the sick / sleeping video keeps playing under the
-        // translucent grey lock (PRODUCT_SPEC §7). Paused under the opaque game-over /
-        // inactive screen, the walk tracker, the album (one player at a time) and in the background.
-        active={!opaqueLock && !isWalkModalVisible && !showAlbum}
-        onMediaExpired={onMediaExpired}
-        variant="hud"
-        testID="hud-pet-media"
-        placeholder={
-          <View style={styles.fallbackViewport}>
-            <View style={[styles.glowOrb, styles.glowIndigo]} />
-            <View style={[styles.glowOrb, styles.glowEmerald]} />
+      <View style={StyleSheet.absoluteFill} testID="hud-content" {...hiddenUnderAlbum}>
+        {/* Full-bleed AI dog (M4-03): state video → idle video → reference image → placeholder */}
+        <PetMediaView
+          media={pet.media}
+          petState={pet.pet_state}
+          lockReason={view.lock.reason}
+          breed={pet.breed_type}
+          // Vet visit / hard stop: the sick / sleeping video keeps playing under the
+          // translucent grey lock (PRODUCT_SPEC §7). Paused under the opaque game-over /
+          // inactive screen, the walk tracker, the album (one player at a time) and in the background.
+          active={!opaqueLock && !isWalkModalVisible && !showAlbum}
+          onMediaExpired={onMediaExpired}
+          variant="hud"
+          testID="hud-pet-media"
+          placeholder={
+            <View style={styles.fallbackViewport}>
+              <View style={[styles.glowOrb, styles.glowIndigo]} />
+              <View style={[styles.glowOrb, styles.glowEmerald]} />
 
-            <Animated.View style={[styles.petAvatarWrapper, { transform: [{ translateY: bounceAnim }] }]}>
-              <View style={styles.petAvatarCircle}>
-                <Text style={styles.petEmoji}>🐕</Text>
-                <View style={styles.petHeartBadge}>
-                  <Heart color="#ef4444" fill="#ef4444" size={16} />
+              <Animated.View style={[styles.petAvatarWrapper, { transform: [{ translateY: bounceAnim }] }]}>
+                <View style={styles.petAvatarCircle}>
+                  <Text style={styles.petEmoji}>🐕</Text>
+                  <View style={styles.petHeartBadge}>
+                    <Heart color="#ef4444" fill="#ef4444" size={16} />
+                  </View>
                 </View>
-              </View>
 
-              <View style={styles.petStatusPill}>
-                <Sparkles color="#818cf8" size={14} />
-                <Text style={styles.petStatusPillText}>{HUD_STRINGS.moods[pet.pet_state]}</Text>
-              </View>
-            </Animated.View>
-          </View>
-        }
-      />
+                <View style={styles.petStatusPill}>
+                  <Sparkles color="#818cf8" size={14} />
+                  <Text style={styles.petStatusPillText}>{HUD_STRINGS.moods[pet.pet_state]}</Text>
+                </View>
+              </Animated.View>
+            </View>
+          }
+        />
 
-      {/* Glassmorphism top status bar */}
-      <View style={[styles.topBar, { top: layout.headerTop }]} onLayout={onHeaderLayout} testID="hud-header">
-        <View style={styles.petInfoLeft}>
-          <View style={styles.petIconBox}>
-            <PawPrint color="#a5b4fc" size={20} />
+        {/* Glassmorphism top status bar */}
+        <View style={[styles.topBar, { top: layout.headerTop }]} onLayout={onHeaderLayout} testID="hud-header">
+          <View style={styles.petInfoLeft}>
+            <View style={styles.petIconBox}>
+              <PawPrint color="#a5b4fc" size={20} />
+            </View>
+            <View>
+              <Text style={styles.petBreedName}>{HUD_STRINGS.breeds[pet.breed_type]}</Text>
+              <Text style={styles.petAgeText}>{formatAgeMonths(pet.virtual_age_months)}</Text>
+            </View>
           </View>
-          <View>
-            <Text style={styles.petBreedName}>{HUD_STRINGS.breeds[pet.breed_type]}</Text>
-            <Text style={styles.petAgeText}>{formatAgeMonths(pet.virtual_age_months)}</Text>
+
+          <View style={styles.topBarRight}>
+            <WsStatusDot status={wsStatus} />
+            {albumAvailable && (
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={ALBUM_STRINGS.open}
+                testID="hud-album-open"
+                style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
+                onPress={() => setAlbumVisible(true)}
+              >
+                <Images color="#a5b4fc" size={16} />
+              </Pressable>
+            )}
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={HUD_STRINGS.logout}
+              style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
+              onPress={handleLogout}
+            >
+              <LogOut color="#94a3b8" size={16} />
+            </Pressable>
           </View>
         </View>
 
-        <View style={styles.topBarRight}>
-          <WsStatusDot status={wsStatus} />
-          <Pressable
-            accessibilityRole="button"
-            accessibilityLabel={ALBUM_STRINGS.open}
-            testID="hud-album-open"
-            style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
-            onPress={() => setAlbumVisible(true)}
-          >
-            <Images color="#a5b4fc" size={16} />
-          </Pressable>
-          <Pressable
-            accessibilityRole="button"
-            accessibilityLabel={HUD_STRINGS.logout}
-            style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
-            onPress={handleLogout}
-          >
-            <LogOut color="#94a3b8" size={16} />
-          </Pressable>
+        {stale && (
+          // Left of the metric column (PR #30 review): never covers the bars.
+          <View pointerEvents="none" style={[styles.bannerSlot, { top: layout.bannerTop }]} testID="hud-stale-slot">
+            <View style={styles.staleBanner} testID="hud-stale">
+              <WifiOff color="#fbbf24" size={14} />
+              <Text style={styles.staleText}>{HUD_STRINGS.stale}</Text>
+            </View>
+          </View>
+        )}
+
+        {/* Feedback toast */}
+        {toast && (
+          <View pointerEvents="none" style={[styles.bannerSlot, styles.toastSlot, { top: layout.bannerTop + 40 }]} testID="hud-toast-slot">
+            <View style={[styles.feedbackToast, toast.tone === 'info' && styles.feedbackToastInfo]} testID="hud-toast">
+              <Text style={styles.feedbackText}>{toast.message}</Text>
+            </View>
+          </View>
+        )}
+
+        {/* Right-edge vertical progress sliders — sized to fit between header and dock */}
+        {layout.metric.variant !== 'hidden' && (
+          <View style={[styles.metricsColumn, { top: layout.metricsTop, gap: layout.metric.gap }]} testID="hud-metrics">
+            <MetricBar
+              testID="metric-hunger"
+              level={pet.hunger_level}
+              label={HUD_STRINGS.metrics.hunger}
+              sizing={layout.metric}
+              icon={<Beef color="#ffffff" size={layout.metric.iconSize} />}
+            />
+            <MetricBar
+              testID="metric-thirst"
+              level={pet.thirst_level}
+              label={HUD_STRINGS.metrics.thirst}
+              sizing={layout.metric}
+              icon={<Droplet color="#ffffff" size={layout.metric.iconSize} />}
+            />
+            <MetricBar
+              testID="metric-energy"
+              level={pet.energy_level}
+              label={HUD_STRINGS.metrics.energy}
+              sizing={layout.metric}
+              icon={<Footprints color="#ffffff" size={layout.metric.iconSize} />}
+            />
+            <MetricBar
+              testID="metric-hygiene"
+              level={pet.hygiene_level}
+              label={HUD_STRINGS.metrics.hygiene}
+              sizing={layout.metric}
+              icon={<Sparkles color="#ffffff" size={layout.metric.iconSize} />}
+            />
+          </View>
+        )}
+
+        {/* Bottom floating control dock */}
+        <View style={[styles.bottomDock, { bottom: layout.dockBottom }]} onLayout={onDockLayout} testID="hud-dock">
+          <ActionButton
+            testID="action-feed"
+            icon={<Beef color="#ffffff" size={24} />}
+            label={HUD_STRINGS.feed}
+            onPress={() => runAction('feed')}
+            disabled={feedDisabled}
+            busy={feed.isPending}
+            hint={feedHint(view)}
+          />
+          <ActionButton
+            testID="action-water"
+            icon={<Droplet color="#ffffff" size={24} />}
+            label={HUD_STRINGS.water}
+            onPress={() => runAction('water')}
+            disabled={waterDisabled}
+            busy={water.isPending}
+            hint={waterHint(view)}
+          />
+          <ActionButton
+            testID="action-walk"
+            icon={<Footprints color="#ffffff" size={24} />}
+            label={HUD_STRINGS.walk}
+            onPress={() => setWalkModalVisible(true)}
+            disabled={walkDisabled}
+            hint={`${formatSteps(view.steps.steps_today)}/${formatSteps(view.steps.goal)}`}
+          />
+          <ActionButton
+            testID="action-clean"
+            icon={<Sparkles color="#ffffff" size={24} />}
+            label={HUD_STRINGS.clean}
+            onPress={() => setCleaningOverlayVisible(true)}
+            disabled={cleanDisabled}
+            busy={clean.isPending}
+            hint={alreadyClean ? HUD_HINTS.clean : null}
+          />
         </View>
+
+        {/* Conditional overlays (the lock overlay is rendered by AppNavigator above this screen) */}
+        {isWalkModalVisible && !locked && (
+          <WalkTrackerOverlay
+            view={view}
+            stepSync={stepSync}
+            onClose={() => {
+              setWalkModalVisible(false);
+              // Back from a walk: send the new steps now, not in up to 5 minutes.
+              void stepSync.syncNow();
+            }}
+          />
+        )}
+        {showCleaning && (
+          <CleaningOverlay
+            onCleaned={handleCleaned}
+            onClose={pet.needs_cleaning ? undefined : () => setCleaningOverlayVisible(false)}
+          />
+        )}
       </View>
-
-      {stale && (
-        // Left of the metric column (PR #30 review): never covers the bars.
-        <View pointerEvents="none" style={[styles.bannerSlot, { top: layout.bannerTop }]} testID="hud-stale-slot">
-          <View style={styles.staleBanner} testID="hud-stale">
-            <WifiOff color="#fbbf24" size={14} />
-            <Text style={styles.staleText}>{HUD_STRINGS.stale}</Text>
-          </View>
-        </View>
-      )}
-
-      {/* Feedback toast */}
-      {toast && (
-        <View pointerEvents="none" style={[styles.bannerSlot, styles.toastSlot, { top: layout.bannerTop + 40 }]} testID="hud-toast-slot">
-          <View style={[styles.feedbackToast, toast.tone === 'info' && styles.feedbackToastInfo]} testID="hud-toast">
-            <Text style={styles.feedbackText}>{toast.message}</Text>
-          </View>
-        </View>
-      )}
-
-      {/* Right-edge vertical progress sliders — sized to fit between header and dock */}
-      {layout.metric.variant !== 'hidden' && (
-        <View style={[styles.metricsColumn, { top: layout.metricsTop, gap: layout.metric.gap }]} testID="hud-metrics">
-          <MetricBar
-            testID="metric-hunger"
-            level={pet.hunger_level}
-            label={HUD_STRINGS.metrics.hunger}
-            sizing={layout.metric}
-            icon={<Beef color="#ffffff" size={layout.metric.iconSize} />}
-          />
-          <MetricBar
-            testID="metric-thirst"
-            level={pet.thirst_level}
-            label={HUD_STRINGS.metrics.thirst}
-            sizing={layout.metric}
-            icon={<Droplet color="#ffffff" size={layout.metric.iconSize} />}
-          />
-          <MetricBar
-            testID="metric-energy"
-            level={pet.energy_level}
-            label={HUD_STRINGS.metrics.energy}
-            sizing={layout.metric}
-            icon={<Footprints color="#ffffff" size={layout.metric.iconSize} />}
-          />
-          <MetricBar
-            testID="metric-hygiene"
-            level={pet.hygiene_level}
-            label={HUD_STRINGS.metrics.hygiene}
-            sizing={layout.metric}
-            icon={<Sparkles color="#ffffff" size={layout.metric.iconSize} />}
-          />
-        </View>
-      )}
-
-      {/* Bottom floating control dock */}
-      <View style={[styles.bottomDock, { bottom: layout.dockBottom }]} onLayout={onDockLayout} testID="hud-dock">
-        <ActionButton
-          testID="action-feed"
-          icon={<Beef color="#ffffff" size={24} />}
-          label={HUD_STRINGS.feed}
-          onPress={() => runAction('feed')}
-          disabled={feedDisabled}
-          busy={feed.isPending}
-          hint={feedHint(view)}
-        />
-        <ActionButton
-          testID="action-water"
-          icon={<Droplet color="#ffffff" size={24} />}
-          label={HUD_STRINGS.water}
-          onPress={() => runAction('water')}
-          disabled={waterDisabled}
-          busy={water.isPending}
-          hint={waterHint(view)}
-        />
-        <ActionButton
-          testID="action-walk"
-          icon={<Footprints color="#ffffff" size={24} />}
-          label={HUD_STRINGS.walk}
-          onPress={() => setWalkModalVisible(true)}
-          disabled={walkDisabled}
-          hint={`${formatSteps(view.steps.steps_today)}/${formatSteps(view.steps.goal)}`}
-        />
-        <ActionButton
-          testID="action-clean"
-          icon={<Sparkles color="#ffffff" size={24} />}
-          label={HUD_STRINGS.clean}
-          onPress={() => setCleaningOverlayVisible(true)}
-          disabled={cleanDisabled}
-          busy={clean.isPending}
-          hint={alreadyClean ? HUD_HINTS.clean : null}
-        />
-      </View>
-
-      {/* Conditional overlays (the lock overlay is rendered by AppNavigator above this screen) */}
-      {isWalkModalVisible && !locked && (
-        <WalkTrackerOverlay
-          view={view}
-          stepSync={stepSync}
-          onClose={() => {
-            setWalkModalVisible(false);
-            // Back from a walk: send the new steps now, not in up to 5 minutes.
-            void stepSync.syncNow();
-          }}
-        />
-      )}
       {showAlbum && (
         <PetAlbum media={pet.media} onClose={() => setAlbumVisible(false)} onMediaExpired={onMediaExpired} testID="hud-album" />
-      )}
-      {showCleaning && (
-        <CleaningOverlay
-          onCleaned={handleCleaned}
-          onClose={pet.needs_cleaning ? undefined : () => setCleaningOverlayVisible(false)}
-        />
       )}
     </View>
   );
@@ -702,7 +718,7 @@ const styles = StyleSheet.create({
   },
   metricsColumn: {
     position: 'absolute',
-    right: 12,
+    right: METRICS_RIGHT,
     zIndex: 20,
   },
   bottomDock: {

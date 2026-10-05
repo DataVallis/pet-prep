@@ -9,6 +9,9 @@
  * - not entitled → hidden (no teasing of paid content in the child app).
  * Older payloads without `states` fall back to the stored `videos` (or the server's
  * single `current_video_url`, shown as "Miruje").
+ * Nothing stored at all and generation `disabled` / `failed` → an empty album (and no
+ * HUD button): greyed tiles would promise videos that are not coming. While `pending` /
+ * `partial` the greyed tiles stay ("Še ni posnetka" — they are on their way).
  */
 
 import { mediaKey, PET_STATES, type PetMediaInfo } from '@/modules/petMedia/petMedia';
@@ -17,6 +20,11 @@ import type { PetState } from '@/types';
 /** User-visible strings (i18n with M1-18). */
 export const ALBUM_STRINGS = {
   title: 'Moj kuža',
+  /** Parent's child detail (read-only viewer). */
+  parentTitle: 'Posnetki kužka',
+  videoHint: 'video',
+  photoHint: 'fotografija',
+  retry: 'Poskusi znova',
   open: 'Odpri album',
   close: 'Zapri album',
   back: 'Nazaj na album',
@@ -90,7 +98,37 @@ export function buildAlbumItems(media: PetMediaInfo): AlbumItem[] {
       key: mediaKey(media.currentVideoUrl),
     });
   }
+
+  const nothingComing = media.status === 'disabled' || media.status === 'failed';
+  if (nothingComing && !items.some(isPlayable)) return [];
   return items;
+}
+
+/** The HUD shows the album button only when the album has something to show. */
+export function hasAlbum(media: PetMediaInfo): boolean {
+  return buildAlbumItems(media).length > 0;
+}
+
+/**
+ * Album refresh policy (PR #31 review): one refetch per media key, again after
+ * {@link ALBUM_REFRESH_COOLDOWN_MS} (a re-signed URL that failed may have been a
+ * network hiccup); and a proactive refetch {@link ALBUM_REFRESH_LEAD_MS} before the
+ * signed URLs expire (`media.expiresAt`) while the album is open.
+ */
+export const ALBUM_REFRESH_COOLDOWN_MS = 5 * 60_000;
+export const ALBUM_REFRESH_LEAD_MS = 60_000;
+
+/** ms until the proactive refetch (0 = now), or null without a known expiry. */
+export function refreshDelay(expiresAt: string | null, nowMs: number): number | null {
+  if (expiresAt === null) return null;
+  const at = Date.parse(expiresAt);
+  if (Number.isNaN(at)) return null;
+  return Math.max(0, at - ALBUM_REFRESH_LEAD_MS - nowMs);
+}
+
+/** Whether a failed media may trigger a refetch now (never before, or after the cooldown). */
+export function mayRefresh(lastMs: number | undefined, nowMs: number): boolean {
+  return lastMs === undefined || nowMs - lastMs >= ALBUM_REFRESH_COOLDOWN_MS;
 }
 
 /** Index in the playable list after a swipe / arrow, wrapping around; null when empty. */

@@ -72,8 +72,12 @@ export const SPACING = 10;
 export const PERCENT_LINE = 16;
 export const LABEL_LINE = 12;
 export const MAX_TRACK = 100;
-/** Width the metric column reserves on the right (right 12 + bar 58 + 12): banners / toasts stay left of it. */
-export const METRICS_RESERVED_RIGHT = 82;
+/** Width of one MetricBar (fits "ENERGIJA" in 9 pt mono on one line). */
+export const METRIC_BAR_WIDTH = 58;
+/** Distance of the metric column from the right screen edge. */
+export const METRICS_RIGHT = 12;
+/** Width the metric column reserves on the right (+12 pt air): banners / toasts stay left of it. */
+export const METRICS_RESERVED_RIGHT = METRICS_RIGHT + METRIC_BAR_WIDTH + 12;
 
 type Variant = Omit<MetricSizing, 'trackHeight'> & { minTrack: number };
 

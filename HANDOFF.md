@@ -5,7 +5,7 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-05 (Claude, mobile-engineer — **"Moj kuža" album** (child sees every photo / state video; parent read-only link) + PR #30 review minors; branch `feat/mobile-pet-album`, pushed, no PR)
+- **Last updated:** 2026-10-05 (Claude, mobile-engineer — **"Moj kuža" album** (child sees every photo / state video; parent read-only link) + PR #30 review minors + **PR #31 review minors**; branch `feat/mobile-pet-album`, **PR #31** (review APPROVED with minors → fixed))
 - Before: 2026-10-05 (Claude, mobile-engineer — **TestFlight fixes**: unstyled walk overlay (NativeWind removed, StyleSheet only), HUD metric bars behind the dock, permanent red "BREZ POVEZAVE" (two pusher-js bugs); branch `fix/mobile-unstyled-overlays`, pushed, no PR)
 - Before: 2026-10-05 (Claude, backend-engineer — **PR #29 review fixes** (CHANGES REQUESTED → fixed): caretaker history / tombstones, retries + lock order, orphans, legacy pets, mobile m5/m6, throttles; branch `feat/M2-08-account-deletion`, **PR #29**)
 - Before: 2026-10-05 (Claude, backend-engineer — **M2-08 account deletion + data export** (backend + mobile); branch `feat/M2-08-account-deletion`, **PR #29**)
@@ -77,7 +77,16 @@
 
 ## 6. Session log
 
-### 2026-10-05 (cloud, mobile-engineer) — "Moj kuža" album + PR #30 review minors (`feat/mobile-pet-album`)
+### 2026-10-05 (cloud, mobile-engineer) — PR #31 review minors (APPROVED with minors → fixed, same branch)
+- **(1) Album vs. locks:** the HUD clears `isAlbumVisible` when a lock starts and on unmount → lifting a hard stop does not reopen the album (test through AppNavigator: open → hard stop broadcast → locked → release → album closed, button back).
+- **(2) Nothing to show:** `buildAlbumItems` returns `[]` when nothing is stored (no photo, no video) and `media.status` is `disabled` / `failed`; the HUD album button (and the parent link) is hidden then (`hasAlbum`). `pending` / `partial` keep the greyed tiles. Tests use the realistic backend payload (`states` present, nothing stored).
+- **(3) Refresh:** an item may trigger another refetch after `ALBUM_REFRESH_COOLDOWN_MS` (5 min); while open, the album refetches 1 min before `media.expiresAt`; the "unavailable" message has **"Poskusi znova"** (remounts the item with the newest URL). Fake-timer tests for cooldown and the proactive refresh.
+- **(4) Android:** HUD content (`hud-content`) and the parent detail content get `importantForAccessibility="no-hide-descendants"` + `accessibilityElementsHidden` while the album is open; `PetAlbum` handles the hardware back button (viewer → grid → close) for both callers.
+- **Nits:** `METRIC_BAR_WIDTH` / `METRICS_RIGHT` exported from `hudLayout` (MetricBar + HUD use them; `METRICS_RESERVED_RIGHT` derived; the toast test reads the rendered width); `normalizePetMedia` memoised in `ChildDetailScreen`; parent album title "Posnetki kužka"; tile `accessibilityHint` "video" / "fotografija"; DIAGRAMS §10c HUD → album → viewer.
+- **Commands:** `npx tsc --noEmit` clean; `yarn test` **735 passed / 62 suites**, twice.
+- **Debt found:** the HUD media tests in `ChildHudScreen.test.tsx` fail when run in isolation with `-t` (e.g. the existing "plays the video of the server pet_state…" — the player is not `playing` yet); green in the full file. Pre-existing order dependency, not investigated.
+
+### 2026-10-05 (cloud, mobile-engineer) — "Moj kuža" album + PR #30 review minors (`feat/mobile-pet-album`, PR #31)
 David: as a child he only saw one looping video on the HUD and wants to see all of the dog's media.
 - **Album (child):** header button (Images icon, a11y "Odpri album") → `appStore.isAlbumVisible` → `components/PetAlbum.tsx`, a full-screen dark sheet. Model `modules/petMedia/album.ts#buildAlbumItems`: reference photo first, then one tile per **entitled** state (`media.states`) in the fixed order Miruje / Spi / Utrujen / Lačen / Bolan / Se igra; entitled but not stored → greyed "Še ni posnetka" (not tappable); **not entitled → hidden** (no teasing); older payloads → stored `videos` or the single `current_video_url`. Grid tiles have no video thumbnails, so there's no player in the grid. Tap → viewer: photo (`contain`) or one looping video (expo-video `{uri, useCaching: true}`, muted, sound toggle, paused in background), arrows + horizontal swipe (wrapping, playable items only), back → grid, X → HUD. **One player at a time:** the HUD `PetMediaView` is `active={false}` while the album is open; switching items releases the previous player. The album is not rendered while the pet is locked (the lock screen covers the HUD anyway).
 - **Expired URLs:** `useStableUrl` keeps the first URL across re-signs (no restart); a load error switches to the newest URL of the same file, or shows "Posnetka trenutno ni mogoče predvajati." and calls `onMediaExpired` **once per media key per album session** (HUD → refetch `['child','pet']`; no refetch loop if the fresh URL fails too).

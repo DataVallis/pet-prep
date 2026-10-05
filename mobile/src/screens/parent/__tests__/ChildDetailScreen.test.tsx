@@ -3,6 +3,7 @@
  * nicknames of the children who acted.
  */
 import { act, fireEvent, screen } from '@testing-library/react-native';
+import { BackHandler } from 'react-native';
 
 import { api } from '@/api/client';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
@@ -19,6 +20,9 @@ jest.mock('@/api/client', () => {
   };
 });
 
+type BackPressHandler = Parameters<typeof BackHandler.addEventListener>[1];
+/** Simulates the Android hardware back button on a captured handler. */
+const pressBack = (h: BackPressHandler | null | undefined) => h?.({} as Parameters<BackPressHandler>[0]);
 const getChildReport = api.getChildReport as jest.Mock;
 const getPetActivities = api.getPetActivities as jest.Mock;
 
@@ -228,6 +232,10 @@ describe('ChildDetailScreen', () => {
 
     fireEvent.press(screen.getByText(CHILD_DETAIL_STRINGS.album));
     expect(screen.getByTestId('detail-album')).toBeTruthy();
+    expect(screen.getByText('Posnetki kužka')).toBeTruthy();
+    expect(screen.getByTestId('detail-content', { includeHiddenElements: true }).props.importantForAccessibility).toBe(
+      'no-hide-descendants',
+    );
     expect(card.playing).toBe(false);
     fireEvent.press(screen.getByTestId('album-item-sleeping'));
     expect(liveVideoPlayers().filter((p) => p.playing)).toHaveLength(1);
@@ -235,6 +243,32 @@ describe('ChildDetailScreen', () => {
     fireEvent.press(screen.getByTestId('album-close'));
     expect(screen.queryByTestId('detail-album')).toBeNull();
     expect(card.playing).toBe(true);
+  });
+
+  it('Android back closes the parent album', async () => {
+    resetMockVideoPlayers();
+    const handlers: BackPressHandler[] = [];
+    const spy = jest.spyOn(BackHandler, 'addEventListener').mockImplementation((_event, h) => {
+      handlers.push(h);
+      return { remove: jest.fn() };
+    });
+    const family = familyFromDashboard(
+      makeScoredDashboard([LUKA], [
+        makeFamilyPet({
+          id: 7,
+          caretakers: [{ child_id: 2, contract_signed: true }],
+          media: makeMedia({ status: 'ready', reference_image_url: 'https://api.petprep.si/api/media/1?v=img', states: ['idle'] }),
+        }),
+      ]) as never,
+    ) as FamilyOverview;
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={family} onBack={jest.fn()} />);
+    await flush();
+    fireEvent.press(screen.getByTestId('detail-album-open'));
+    act(() => {
+      pressBack(handlers[handlers.length - 1]);
+    });
+    expect(screen.queryByTestId('detail-album')).toBeNull();
+    spy.mockRestore();
   });
 
   it('no album link while the pet has no media', async () => {

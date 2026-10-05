@@ -897,3 +897,30 @@ sequenceDiagram
   V->>A: (still mounted) back to opacity 1
   Note over V: AppState background / opaque lock (game over, inactive) / walk → pause · foreground → play
 ```
+
+## 10c. "Moj kuža" album: HUD → album → viewer (2026-10-05, PR #31)
+
+```mermaid
+flowchart TD
+  M["pet.media (child state / parent dashboard)"] --> B["buildAlbumItems"]
+  B --> E{"anything stored, or status pending / partial?"}
+  E -- "no (disabled / failed)" --> NB["no album button · empty album"]
+  E -- yes --> T["photo + one tile per entitled state (media.states)"]
+  T --> T1["stored → playable tile"]
+  T --> T2["entitled, not stored → grey 'Še ni posnetka'"]
+  T --> T3["not entitled → hidden"]
+  HUD["Child HUD header: album button"] -->|"isAlbumVisible"| G["PetAlbum grid (no players)"]
+  PD["Parent child detail: 'Vsi posnetki kužka' (read-only)"] --> G
+  HUD -. "HUD video paused · HUD hidden from a11y" .-> G
+  G -->|"tap playable tile"| VW["viewer: photo or ONE looping video (muted + sound toggle, cache)"]
+  VW -->|"arrows / swipe (wrap)"| VW
+  VW -->|"back / Android back"| G
+  G -->|"X / Android back"| C["close → HUD video resumes"]
+  L["lock starts / HUD unmounts"] -->|"isAlbumVisible = false (no reopen on unlock)"| C
+  VW --> ER{"load error"}
+  ER -->|"useStableUrl: newer URL of same file"| VW
+  ER -->|"else"| UN["'Posnetka trenutno ni mogoče predvajati.' + 'Poskusi znova'"]
+  UN -->|"refetch once per media, again after 5 min"| RF["onMediaExpired → refetch state"]
+  X["1 min before media.expiresAt (album open)"] --> RF
+  RF -->|"re-signed URLs"| VW
+```
