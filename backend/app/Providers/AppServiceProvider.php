@@ -24,6 +24,16 @@ class AppServiceProvider extends ServiceProvider
     public const REGISTER_PER_HOUR = 20;
 
     /**
+     * Account / child-profile deletions per user per 15 minutes (M2-08).
+     */
+    public const ACCOUNT_DELETE_PER_15_MIN = 5;
+
+    /**
+     * Data exports per user per hour (M2-08).
+     */
+    public const ACCOUNT_EXPORT_PER_HOUR = 3;
+
+    /**
      * Minimum password length for parent accounts (M2-10a).
      */
     public const PASSWORD_MIN_LENGTH = 10;
@@ -115,6 +125,21 @@ class AppServiceProvider extends ServiceProvider
         // Second-parent invite codes (M2-01): a parent needs one or two;
         // 10 per hour per account stops code farming. Wrong codes on
         // join-family are limited separately in FamilyInviteService.
+        // Account deletion / child-profile deletion (M2-08): a wrong password
+        // is a guess at the parent's password → 5 per 15 min per user, shared
+        // by both routes. Live in testing (like register).
+        RateLimiter::for('account-delete', function (Request $request) {
+            return Limit::perMinutes(15, self::ACCOUNT_DELETE_PER_15_MIN)
+                ->by('account-delete:'.($request->user()?->id ?: ClientIp::rateLimitKey($request->ip())));
+        });
+
+        // Data export (M2-08): builds the whole family synchronously → 3 per
+        // hour per user. Live in testing.
+        RateLimiter::for('account-export', function (Request $request) {
+            return Limit::perHour(self::ACCOUNT_EXPORT_PER_HOUR)
+                ->by('account-export:'.($request->user()?->id ?: ClientIp::rateLimitKey($request->ip())));
+        });
+
         RateLimiter::for('family-invites', function (Request $request) {
             if (app()->environment('testing')) {
                 return Limit::none();

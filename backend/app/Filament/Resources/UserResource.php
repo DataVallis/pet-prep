@@ -3,11 +3,17 @@
 namespace App\Filament\Resources;
 
 use App\Enums\UserRole;
+use App\Exceptions\AccountDeletionException;
 use App\Filament\Resources\UserResource\Pages;
+use App\Models\Family;
+use App\Models\FamilyMember;
 use App\Models\User;
+use App\Services\AccountDeletionService;
+use App\Services\FamilyService;
 use Closure;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -159,12 +165,81 @@ class UserResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\Action::make('deleteFamily')
+                    ->label('Delete family')
+                    ->icon('heroicon-o-trash')
+                    ->color('danger')
+                    ->visible(fn (User $record): bool => self::deletableFamilyOf($record) !== null)
+                    ->requiresConfirmation()
+                    ->modalHeading('Delete the whole family?')
+                    ->modalDescription(fn (User $record): string => self::deleteFamilyDescription($record))
+                    ->modalSubmitActionLabel('Delete family permanently')
+                    ->action(fn (User $record) => self::runDeleteFamily($record)),
             ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
-            ]);
+            // No plain (bulk) user delete (M2-08): deleting a user row directly
+            // cascades through the deprecated parent_id / pets.user_id mirrors
+            // and leaves media files behind. Families go through "Delete family".
+            ->bulkActions([]);
+    }
+
+    /**
+     * The user's family if a superadmin may delete it here (M2-08): it exists
+     * and has no superadmin member.
+     */
+    public static function deletableFamilyOf(User $user): ?Family
+    {
+        $family = app(FamilyService::class)->familyOf($user);
+        if ($family === null) {
+            return null;
+        }
+
+        $hasSuperadmin = User::whereIn('id', FamilyMember::where('family_id', $family->id)->select('user_id'))
+            ->where('is_superadmin', true)
+            ->exists();
+
+        return $hasSuperadmin ? null : $family;
+    }
+
+    public static function deleteFamilyDescription(User $user): string
+    {
+        $family = self::deletableFamilyOf($user);
+        if ($family === null) {
+            return 'This user has no family that can be deleted here.';
+        }
+
+        $parents = $family->parents()->count();
+        $children = $family->children()->count();
+        $pets = $family->pets()->count();
+
+        return "Family #{$family->id}: {$parents} parent(s), {$children} child profile(s) and {$pets} pet(s) "
+            .'with every contract, log, device and AI image / video will be deleted immediately. This cannot be undone.';
+    }
+
+    /**
+     * Same service as the in-app deletion (AccountDeletionService::deleteFamily).
+     */
+    public static function runDeleteFamily(User $user): void
+    {
+        $family = self::deletableFamilyOf($user);
+        if ($family === null) {
+            Notification::make()->title('Nothing deleted')->body('No deletable family.')->warning()->send();
+
+            return;
+        }
+
+        try {
+            $result = app(AccountDeletionService::class)->deleteFamily($family);
+        } catch (AccountDeletionException $e) {
+            Notification::make()->title('Not deleted')->body($e->getMessage())->danger()->send();
+
+            return;
+        }
+
+        Notification::make()
+            ->title('Family deleted')
+            ->body("{$result['parents']} parent(s), {$result['children']} child profile(s), {$result['pets']} pet(s).")
+            ->success()
+            ->send();
     }
 
     public static function getRelations(): array

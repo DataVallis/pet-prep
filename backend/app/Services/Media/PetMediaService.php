@@ -436,6 +436,12 @@ class PetMediaService
                 $this->disk()->delete($path);
             }
 
+            // The pet was deleted while we downloaded (M2-08): its directory may
+            // already be gone or hold only this file — leave nothing behind.
+            if (! Pet::whereKey($slot->pet_id)->exists()) {
+                $this->deleteFilesOf($slot->pet_id);
+            }
+
             return true;
         }
 
