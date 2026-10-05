@@ -44,5 +44,8 @@
 ## 6. Predpogoj: podatki iz virov (M1-19, razširjeno)
 Za vsako pasmo in fazo zbrati z viri: velikost/teža po starosti (rastne krivulje), število obrokov, dnevno gibanje, spanje, starost čistoče (navajanje), obdobje menjave zob, učljivost (rang + vir), tipične vedenjske težave. Viri: FCI/AKC standardi, veterinarska literatura (WSAVA smernice prehrane, rastne krivulje), Coren, kinološke zveze. Vsaka številka v bazi ima `source`.
 
-## 7. Odprta vprašanja za Davida
-Glej pogovor 5. 10. 2026 — odgovori se zapišejo v `DECISIONS.md`.
+## 7. Odločitve (David, 5. 10. 2026)
+- **Šolanje:** kratka dnevna vaja (mini-igra nekaj minut: ukaz → pravi trenutek za nagrado); napredek po ukazu 0–100 %, hitrost po učljivosti pasme; brez vaje napredek počasi upada.
+- **Izbira ob začetku:** vse štiri starosti takoj (mladiček, mlad pes, odrasel, starejši) in oba izvora (kupljen, posvojen).
+- **Cena:** vse izbire (starost, izvor) za vse — mešanček brezplačen v vseh kombinacijah; plačljive so pasme in 12-tedenski izziv s certifikatom.
+- **Podatki:** najprej raziskava z viri (tabela z virom za vsako številko) → David pregleda in potrdi → uvoz → šele nato gradnja M5.
