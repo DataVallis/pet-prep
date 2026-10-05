@@ -1,0 +1,37 @@
+# Build context of docker/production/Dockerfile (context = backend/). Keeps
+# secrets, local state and dev-only files out of the production image.
+# (Sail's dev image builds from docker/8.x/ as its own context — unaffected.)
+
+# Secrets: never in an image (deploy-production.sh writes backend/.env on the server)
+.env
+.env.*
+auth.json
+
+# Installed / generated inside the image
+vendor
+node_modules
+public/hot
+public/storage
+public/build
+bootstrap/cache/*.php
+bootstrap/cache/views
+
+# Runtime state: the app_storage volume in production
+storage
+
+# Dev / test only
+tests
+.phpunit.cache
+.phpunit.result.cache
+phpunit.xml
+docker/8.*
+docker/mariadb
+docker/mysql
+docker/pgsql
+compose.yaml
+compose.production.yaml
+*.log
+.git
+.idea
+.vscode
+.DS_Store

@@ -6,13 +6,19 @@
 #   deploy-production.sh <COMMIT_SHA>                                # manual, git checkout in repo/
 #   deploy-production.sh                                             # manual, re-deploy tree in place
 #
-# WHY THE ORDER MATTERS
-#   Every PHP container (app, reverb, queue, queue-broadcasts, scheduler) bind-mounts
-#   the code (`backend/:/var/www/html`). Changing the files in /opt/petprep/repo
-#   therefore switches the RUNNING containers to the new code immediately — long
-#   before migrations run. So the code is switched only while the app is already in
-#   maintenance mode, and CI uploads the new tree to a staging directory
-#   (/opt/petprep/incoming) instead of rsyncing straight into repo/.
+# RUNTIME (M4-05b, DEPLOYMENT.md D14)
+#   The PHP containers (app = php-fpm, reverb, queue, queue-broadcasts, scheduler)
+#   run the production image `petprep-app` (backend/docker/production/Dockerfile):
+#   code + vendor (composer install --no-dev) are BAKED INTO THE IMAGE, nothing is
+#   bind-mounted except /opt/petprep/.env and the app_storage volume. Caddy runs
+#   `petprep-web` (caddy + public/). An image therefore is a release:
+#     petprep-{app,web}:next        built by this deploy (before maintenance mode)
+#     petprep-{app,web}:production  what compose runs (promoted from :next)
+#     petprep-{app,web}:previous    the release before (automatic revert)
+#   The old Sail image `petprep-backend:production` is never touched (rollback to
+#   the pre-M4-05b compose file keeps working, PRODUCTION_DEPLOYMENT.md §7).
+#   repo/ still matters: it holds the compose file, the Caddyfile (bind-mounted
+#   into caddy) and the ops scripts, so it is switched only inside maintenance.
 #
 # STEPS
 #   1. Env preflight (QUEUE_CONNECTION=redis, BROADCAST_CONNECTION=reverb, REDIS_QUEUE
@@ -20,19 +26,26 @@
 #   2. Record the previous release: PREV_SHA (repo/.deployed-sha, or git HEAD in git
 #      mode) and, for --from deploys, a copy of the current tree in
 #      /opt/petprep/releases/previous.
-#   3. `artisan down --retry=15` on the OLD code (exec in the running app container,
+#   3. Build the new images as :next from the NEW tree (--from dir, `git archive` of
+#      the commit, or repo/ in place) and smoke-test them: `php artisan optimize`
+#      (config / events / routes / views / Filament) in a one-off container with
+#      the production env. Still BEFORE maintenance mode: a failing build or smoke
+#      test aborts the deploy while the old release keeps serving (nothing changed).
+#   4. `artisan down --retry=15` on the OLD code (exec in the running app container,
 #      fallback `run --rm`; if both fail — first deploy on a fresh server — warn and
 #      continue). The down file lives on the shared app_storage volume, so HTTP → 503,
 #      the scheduler skips its ticks and queue workers pause.
-#   4. Pre-migration DB backup (aborts the deploy if Postgres runs but the backup
+#   5. Pre-migration DB backup (aborts the deploy if Postgres runs but the backup
 #      fails; DEPLOY_ALLOW_NO_BACKUP=1 overrides).
-#   5. Switch the code (rsync from the --from dir, or `git checkout -f SHA`). If the
-#      Caddyfile differs from what the RUNNING caddy container sees (see CADDY below),
-#      validate the new one right away (still pre-migration → a bad Caddyfile reverts
-#      the code and the old Caddy keeps serving). Then build,
-#      start postgres/redis, migrate, seed breed configs, config/route/view caches,
-#      recreate app containers, queue:restart, `artisan up` (3 attempts, exec then
-#      run --rm fallback), health check.
+#   6. Switch the code (rsync from the --from dir, or `git checkout -f SHA`), promote
+#      the images (:production → :previous, :next → :production). If the Caddyfile
+#      differs from what the RUNNING caddy container sees (see CADDY below), validate
+#      the new one with the new caddy image right away (still pre-migration → a bad
+#      Caddyfile reverts code + images and the old Caddy keeps serving). Then start
+#      postgres/redis, migrate, seed breed configs, recreate the app containers (each
+#      builds its own caches on start, docker/production/entrypoint.sh), wait until
+#      PHP-FPM answers, queue:restart, `artisan up` (3 attempts, exec then run --rm
+#      fallback), end-to-end health check through Caddy (`/up`, 5 attempts).
 #
 # CADDY
 #   caddy bind-mounts the single file deployment/Caddyfile. A sync/checkout replaces a
@@ -44,32 +57,36 @@
 #   caddy validate`, same env_file), and recreates caddy (`up -d --force-recreate
 #   --no-deps caddy`) together with the other containers after the migrations.
 #   Comparing with the running container (not with releases/previous) also catches
-#   a container that was already stale before this deploy.
+#   a container that was already stale before this deploy. (A new petprep-web image
+#   recreates caddy on `up -d` anyway.)
 #
 # FAILURE HANDLING (EXIT trap)
-#   * Failure BEFORE migrations succeeded (backup, code switch, build, DB start,
+#   * Failure while building / smoke-testing (step 3): nothing was changed — no
+#     maintenance, no code switch, :production untouched. Exit ≠ 0.
+#   * Failure BEFORE migrations succeeded (backup, code switch, Caddyfile, DB start,
 #     migrate): the schema is still the old one, so the code is reverted to the
 #     previous release (rsync back from releases/previous, or `git checkout -f
-#     PREV_SHA`), caches are rebuilt for the old code if they had been rebuilt,
-#     long-running containers are restarted (so no new class stays in memory), then
-#     `artisan up`. Old code + old schema = consistent. Caveat: Laravel runs each
+#     PREV_SHA`), the images are put back (:previous → :production; on the first
+#     M4-05b deploy there is no :previous and the old compose file runs the Sail
+#     image anyway), containers are recreated if they had been, workers restarted,
+#     then `artisan up`. Old code + old schema = consistent. Caveat: Laravel runs each
 #     migration in its own transaction, so a failure in migration N leaves 1..N-1
 #     applied; reverting assumes those are additive/backward compatible (project
 #     rule). If not, restore the pre-deploy backup (PRODUCTION_DEPLOYMENT.md §7).
 #     If the revert itself fails, the app is LEFT in maintenance (new code on the old
 #     schema is the dangerous case).
-#   * Failure AFTER migrations succeeded (seed, caches, container start, queue
+#   * Failure AFTER migrations succeeded (container start, PHP-FPM not healthy, queue
 #     restart, health check): the schema is new and the old code may not work on it,
-#     so the code is NOT reverted. Stale caches are cleared if the cache step did not
-#     finish, containers are (re)started on the new code, the app leaves maintenance
-#     (new code + new schema = consistent) and a loud error is printed.
+#     so the code is NOT reverted. Containers are (re)started on the new release, the
+#     app leaves maintenance (new code + new schema = consistent) and a loud error is
+#     printed.
 #   * `artisan up` failing 3x leaves the app in maintenance (scheduler + queues
 #     paused): loud error with the manual command.
 #   The original non-zero exit code is always preserved.
 #
-# Idempotent: re-running with the same SHA re-applies the same tree, migrations are
-# no-ops, `artisan down/up` tolerate being repeated. No env values except the three
-# preflight keys are printed.
+# Idempotent: re-running with the same SHA re-applies the same tree (the image build
+# is a cache hit), migrations are no-ops, `artisan down/up` tolerate being repeated.
+# No env values except the three preflight keys are printed.
 #
 # Test harness (stubbed docker/git/curl, no server): scripts/tests/deploy-production.test.sh
 # Paths can be relocated for tests with PETPREP_ROOT (default /opt/petprep).
@@ -81,14 +98,20 @@ REPO_DIR="${PETPREP_ROOT}/repo"
 ENV_FILE="${PETPREP_ROOT}/.env"
 SCRIPTS_DIR="${PETPREP_ROOT}/scripts"
 PREV_TREE="${PETPREP_ROOT}/releases/previous"
+BUILD_SRC="${PETPREP_ROOT}/releases/build-src"
 COMPOSE_FILE="${REPO_DIR}/backend/compose.production.yaml"
 SHA_FILE="${REPO_DIR}/.deployed-sha"
 CADDYFILE="${REPO_DIR}/deployment/Caddyfile"
 CADDY_RUNNING_COPY="${PETPREP_ROOT}/releases/Caddyfile.running"
 RETRY_SLEEP="${DEPLOY_RETRY_SLEEP:-3}"
+APP_WAIT_TRIES="${DEPLOY_APP_WAIT_TRIES:-40}"
+HEALTH_HOST="${DEPLOY_HEALTH_HOST:-api.petprep.si}"
+HEALTH_IP_HOST="${DEPLOY_HEALTH_IP_HOST:-138.199.172.97}"
 APP_SERVICES=(app reverb queue queue-broadcasts scheduler caddy)
 WORKER_SERVICES=(reverb queue queue-broadcasts scheduler)
-# Paths a code sync never touches (also protected from --delete).
+IMAGES=(petprep-app petprep-web)
+# Paths a code sync never touches (also protected from --delete). backend/vendor
+# stays on disk only for a rollback to the Sail runtime (it bind-mounts the code).
 RSYNC_EXCLUDES=(
     --exclude=/.git --exclude=/.idea --exclude=/.deployed-sha
     --exclude=/backend/.env --exclude=/backend/storage --exclude=/backend/vendor
@@ -127,17 +150,26 @@ dc() { docker compose -f "$COMPOSE_FILE" "$@"; }
 SWITCH_MODE="none"      # dir | git | none
 PREV_SHA=""
 DEPLOYED_SHA=""
+BUILD_DIR=""            # tree the :next images are built from
 MAINTENANCE_ON=0        # 1 while the app is known to be in maintenance mode
 LEAVE_FAILED=0          # artisan up already failed 3x (the trap doesn't retry again)
 CODE_SWITCHED=0         # 1 as soon as repo/ may differ from the previous release
+IMAGES_PROMOTED=0       # 1 once :next was tagged :production
+PREV_IMAGES=()          # images whose old :production was saved as :previous
 MIGRATED=0              # 1 after `migrate --force` succeeded
-CACHES_DONE=0           # 1 after config/route/view caches were rebuilt
 CONTAINERS_RECREATED=0  # 1 once `up -d` of the app services was attempted
 CADDY_CHANGED=0         # 1 if the new Caddyfile differs from the running container's
 FAILED_AT=""
 
 trap 'FAILED_AT="line ${LINENO}: ${BASH_COMMAND}"' ERR
 trap 'on_exit $?' EXIT
+
+# Compose against the NEW tree with the :next tag (build + smoke test). Same
+# project name ("backend", the compose file's directory) → same network/volumes.
+dcn() {
+    PETPREP_IMAGE_TAG=next docker compose -f "${BUILD_DIR}/backend/compose.production.yaml" \
+        --env-file "$ENV_FILE" "$@"
+}
 
 # artisan <args…>: run in the running app container, else in a one-off container.
 artisan() {
@@ -175,10 +207,58 @@ leave_maintenance() {
     return 1
 }
 
-build_caches() {
-    dc run --rm app php artisan config:cache
-    dc run --rm app php artisan route:cache
-    dc run --rm app php artisan view:cache
+# :production → :previous (if it exists), :next → :production.
+promote_images() {
+    local img
+    PREV_IMAGES=()
+    for img in "${IMAGES[@]}"; do
+        if docker image inspect "${img}:production" > /dev/null 2>&1; then
+            docker tag "${img}:production" "${img}:previous"
+            PREV_IMAGES+=("$img")
+        else
+            warn "no ${img}:production yet (first deploy of the M4-05b runtime) — nothing to keep as :previous."
+        fi
+    done
+    IMAGES_PROMOTED=1
+    for img in "${IMAGES[@]}"; do
+        docker tag "${img}:next" "${img}:production"
+    done
+}
+
+# Undo promote_images (pre-migration revert).
+restore_images() {
+    local img rc=0
+    [ "$IMAGES_PROMOTED" = "1" ] || return 0
+    for img in ${PREV_IMAGES[@]+"${PREV_IMAGES[@]}"}; do
+        docker tag "${img}:previous" "${img}:production" || rc=1
+    done
+    return "$rc"
+}
+
+# PHP-FPM answers its ping (caches built by the entrypoint, pool up).
+wait_for_app() {
+    local i
+    for i in $(seq 1 "$APP_WAIT_TRIES"); do
+        if dc exec -T app php-fpm-ping; then
+            log "PHP-FPM is up (check ${i})."
+            return 0
+        fi
+        sleep 3
+    done
+    echo "ERROR: PHP-FPM in the app container did not become healthy (docker compose -f ${COMPOSE_FILE} logs app)." >&2
+    return 1
+}
+
+# End-to-end through Caddy: real TLS name first, then the plain-HTTP IP site.
+health_status() {
+    local s
+    s=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 \
+        --resolve "${HEALTH_HOST}:443:127.0.0.1" "https://${HEALTH_HOST}/up" || true)
+    if [ "$s" != "200" ]; then
+        s=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 \
+            -H "Host: ${HEALTH_IP_HOST}" "http://127.0.0.1/up" || true)
+    fi
+    echo "${s:-000}"
 }
 
 # --checksum: compare content, not size+mtime (same-size edits in the same second
@@ -195,43 +275,39 @@ revert_code() {
 }
 
 on_exit() {
-    local rc=$1 c
+    local rc=$1
     trap - EXIT ERR
     if [ "$rc" -eq 0 ]; then return 0; fi
     set +e  # the cleanup must run to the end
     loud "DEPLOY FAILED (exit ${rc}) at ${FAILED_AT:-unknown step}"
 
     if [ "$MIGRATED" = "0" ]; then
-        # Schema is still the old one → put the old code back.
-        if [ "$CODE_SWITCHED" = "1" ]; then
-            log "Failure before migrations completed: reverting code to ${PREV_SHA:-previous release} (${SWITCH_MODE})..."
+        # Schema is still the old one → put the old release back (code + images).
+        if [ "$CODE_SWITCHED" = "1" ] || [ "$IMAGES_PROMOTED" = "1" ]; then
+            log "Failure before migrations completed: reverting to ${PREV_SHA:-previous release} (${SWITCH_MODE})..."
             if ! revert_code; then
                 loud "ERROR: CODE REVERT FAILED — repo/ may hold the NEW code on the OLD schema." \
                      "The app stays in maintenance mode. Fix manually (PRODUCTION_DEPLOYMENT.md §7), then artisan up."
                 exit "$rc"
             fi
-            if [ "$CACHES_DONE" = "1" ]; then
-                log "Rebuilding caches for the old code..."
-                build_caches || warn "cache rebuild for the old code failed."
+            if ! restore_images; then
+                loud "ERROR: COULD NOT RESTORE THE PREVIOUS IMAGES (petprep-app/web:previous → :production)." \
+                     "The app stays in maintenance mode. Fix manually (PRODUCTION_DEPLOYMENT.md §7), then artisan up."
+                exit "$rc"
             fi
             if [ "$CONTAINERS_RECREATED" = "1" ]; then
                 dc up -d --remove-orphans "${APP_SERVICES[@]}" || warn "could not restart app services."
             fi
-            # Long-running workers may have lazily loaded new classes while the new
-            # tree was on disk: restart them on the old code.
+            # Containers of the Sail runtime bind-mount the code and may have loaded
+            # new classes while the new tree was on disk: restart them on the old code.
             dc restart "${WORKER_SERVICES[@]}" || warn "could not restart workers."
             log "Code reverted to ${PREV_SHA:-previous release}."
         fi
     else
-        # Schema is new → the old code may break on it; keep the new code (consistent).
+        # Schema is new → the old code may break on it; keep the new release (consistent).
         loud "Failure AFTER migrations succeeded: code is NOT reverted (schema is new)." \
-             "Production runs ${DEPLOYED_SHA:-the new code} on the new schema. Investigate and redeploy."
-        if [ "$CACHES_DONE" = "0" ]; then
-            # Caches built by the old code would otherwise be served with the new code.
-            for c in config:clear route:clear view:clear event:clear; do
-                dc run --rm app php artisan "$c" || warn "artisan ${c} failed."
-            done
-        fi
+             "Production runs ${DEPLOYED_SHA:-the new code} on the new schema. Investigate and redeploy" \
+             "(rollback steps: PRODUCTION_DEPLOYMENT.md §7)."
         dc up -d --remove-orphans "${APP_SERVICES[@]}" || warn "could not start app services."
         dc restart "${WORKER_SERVICES[@]}" || warn "could not restart workers."
     fi
@@ -271,7 +347,9 @@ fi
 # AI models (M4, David 2026-10-05): the defaults are nano_banana_pro / kling_v3_pro.
 # An old .env copied from .env.example may still pin flux_schnell / kling_v16_legacy
 # (removed — the app falls back to the default and logs an error). Warn, don't block.
-for pair in "AI_REFERENCE_IMAGE_PROFILE=nano_banana_pro" "AI_STATE_VIDEO_PROFILE=kling_v3_pro"; do
+# M4-05b: Caddy serves the pet media files; `php` (emergency fallback) streams them
+# through PHP-FPM again — fine for a day, not for the beta.
+for pair in "AI_REFERENCE_IMAGE_PROFILE=nano_banana_pro" "AI_STATE_VIDEO_PROFILE=kling_v3_pro" "PET_MEDIA_SERVE_VIA=caddy"; do
     key="${pair%%=*}"; want="${pair#*=}"
     have=$(env_value "$key")
     if [ -n "$have" ] && [ "$have" != "$want" ]; then
@@ -288,6 +366,7 @@ if [ -n "$SOURCE_DIR" ]; then
     [ -f "${SOURCE_DIR}/backend/compose.production.yaml" ] \
         || { echo "ERROR: ${SOURCE_DIR} does not look like a PetPrep tree." >&2; exit 1; }
     SWITCH_MODE="dir"
+    BUILD_DIR="$SOURCE_DIR"
     log "Snapshotting current release (${PREV_SHA:-unknown}) to ${PREV_TREE}..."
     mkdir -p "$PREV_TREE"
     sync_tree "$REPO_DIR" "$PREV_TREE"
@@ -297,10 +376,27 @@ elif [ -n "$COMMIT_SHA" ] && [ -d "${REPO_DIR}/.git" ]; then
     git -C "$REPO_DIR" fetch origin --tags --prune || warn "git fetch failed — using local objects."
     git -C "$REPO_DIR" cat-file -e "${COMMIT_SHA}^{commit}" \
         || { echo "ERROR: commit ${COMMIT_SHA} not found in ${REPO_DIR}." >&2; exit 1; }
+    # Build context = the commit itself (repo/ is checked out only inside maintenance).
+    rm -rf "$BUILD_SRC"; mkdir -p "$BUILD_SRC"
+    git -C "$REPO_DIR" archive --format=tar "$COMMIT_SHA" | tar -x -C "$BUILD_SRC"
+    BUILD_DIR="$BUILD_SRC"
 else
     warn "no --from dir and no git checkout: re-deploying the tree in place (automatic code revert unavailable)."
+    BUILD_DIR="$REPO_DIR"
 fi
 log "Previous release: ${PREV_SHA:-unknown}"
+
+# ---- 3. Build + smoke-test the new images (old release keeps serving) -------------
+log "Building production images petprep-app:next / petprep-web:next from ${BUILD_DIR}..."
+if ! dcn build app caddy; then
+    echo "ERROR: image build failed — nothing was changed, the current release keeps serving." >&2
+    exit 1
+fi
+log "Smoke test: php artisan optimize in a one-off container of the new image..."
+if ! dcn run --rm --no-deps -T app php artisan optimize; then
+    echo "ERROR: the new image cannot build its caches with the production env — nothing was changed." >&2
+    exit 1
+fi
 
 # Caddyfile as the running caddy container sees it (empty → caddy not running).
 mkdir -p "$(dirname "$CADDY_RUNNING_COPY")"
@@ -309,10 +405,10 @@ if ! dc exec -T caddy cat /etc/caddy/Caddyfile > "$CADDY_RUNNING_COPY" 2>/dev/nu
     warn "could not read the running Caddyfile (caddy not running?) — treating it as changed."
 fi
 
-# ---- 3. Maintenance mode BEFORE touching the code --------------------------------
+# ---- 4. Maintenance mode BEFORE touching the code --------------------------------
 enter_maintenance
 
-# ---- 4. Pre-migration database backup --------------------------------------------
+# ---- 5. Pre-migration database backup --------------------------------------------
 if [ -x "${SCRIPTS_DIR}/backup-production-db.sh" ] \
     && [ -n "$(dc ps -q --status running postgres 2>/dev/null || true)" ]; then
     log "Creating pre-deployment database backup..."
@@ -328,7 +424,7 @@ else
     warn "backup skipped (postgres not running or backup script missing — first deploy?)."
 fi
 
-# ---- 5. Switch the code ------------------------------------------------------------
+# ---- 6. Switch the code + images ---------------------------------------------------
 CODE_SWITCHED=1   # set before the attempt: a partial switch must be reverted too
 case "$SWITCH_MODE" in
     dir)
@@ -354,10 +450,13 @@ cp "$ENV_FILE" "${REPO_DIR}/backend/.env"
 chmod 600 "${REPO_DIR}/backend/.env"
 log "Installed production .env into ${REPO_DIR}/backend/.env"
 
+log "Promoting images: :next -> :production (old :production kept as :previous)..."
+promote_images
+
 # Caddyfile changed? Validate before anything irreversible (pre-migration failure →
-# code reverted, the running caddy container is untouched).
+# code + images reverted, the running caddy container is untouched).
 if [ -f "$CADDY_RUNNING_COPY" ] && cmp -s "$CADDY_RUNNING_COPY" "$CADDYFILE"; then
-    log "Caddyfile unchanged — caddy is not recreated."
+    log "Caddyfile unchanged — caddy is not force-recreated."
 else
     CADDY_CHANGED=1
     log "Caddyfile changed — validating the new one..."
@@ -377,10 +476,7 @@ for s in backup-production-db.sh restore-production-db.sh deploy-production.sh; 
     fi
 done
 
-# ---- 6. Build, database, migrations ----------------------------------------------
-log "Building production Docker image..."
-dc build app
-
+# ---- 7. Database, migrations -------------------------------------------------------
 log "Ensuring database and cache services are running..."
 dc up -d postgres redis
 for i in $(seq 1 30); do
@@ -397,12 +493,8 @@ MIGRATED=1
 dc run --rm app php artisan db:seed --class='Database\Seeders\BreedConfigsSeeder' --force \
     || warn "BreedConfigsSeeder failed."
 
-# ---- 7. Caches, containers, workers ----------------------------------------------
-log "Optimizing Laravel config, routes and views..."
-build_caches
-CACHES_DONE=1
-
-log "Starting all application services..."
+# ---- 8. Containers (caches are built per container on start), workers -------------
+log "Starting all application services on the new images..."
 CONTAINERS_RECREATED=1
 dc up -d --remove-orphans "${APP_SERVICES[@]}"
 if [ "$CADDY_CHANGED" = "1" ]; then
@@ -411,26 +503,33 @@ if [ "$CADDY_CHANGED" = "1" ]; then
     dc up -d --force-recreate --no-deps caddy
 fi
 
+log "Waiting for PHP-FPM (entrypoint builds the caches first)..."
+wait_for_app
+
 # Signal shared via cache: restarts queue + queue-broadcasts on the new code.
 log "Restarting queue workers..."
 dc exec -T queue php artisan queue:restart || warn "queue:restart failed."
 
-# ---- 8. Leave maintenance, health check ------------------------------------------
+# ---- 9. Leave maintenance, health check ------------------------------------------
 leave_maintenance || exit 1
 
-log "Verifying service health..."
-sleep 4
+log "Verifying service health (through Caddy)..."
 dc ps
-
-HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 http://127.0.0.1/up || echo "000")
-if [ "$HTTP_STATUS" != "200" ]; then
-    HTTP_STATUS=$(dc exec -T app curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1/up || echo "000")
-fi
+HTTP_STATUS="000"
+for attempt in 1 2 3 4 5; do
+    HTTP_STATUS=$(health_status)
+    [ "$HTTP_STATUS" = "200" ] && break
+    warn "health check attempt ${attempt}/5: HTTP ${HTTP_STATUS}"
+    sleep "$RETRY_SLEEP"
+done
 log "Health check /up HTTP status: ${HTTP_STATUS}"
 if [ "$HTTP_STATUS" != "200" ]; then
     echo "ERROR: Health check failed with status ${HTTP_STATUS}" >&2
     exit 1
 fi
+
+# Untagged images of older releases (keeps :production, :previous and the Sail image).
+docker image prune -f > /dev/null || warn "docker image prune failed."
 
 echo "=================================================="
 echo " DEPLOYMENT SUCCESSFUL!"

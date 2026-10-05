@@ -81,6 +81,7 @@ This document describes all environment variables used by the PetPrep production
 | `PET_MEDIA_MAX_VIDEO_MB` | Optional | No | Largest video downloaded from fal | `60` |
 | `PET_MEDIA_DOWNLOAD_TIMEOUT` | Optional | No | Seconds per download (capped at 80 — below the queue's `retry_after` 90) | `60` |
 | `PET_MEDIA_URL_TTL_MINUTES` | Optional | No | Lifetime of the signed media URLs in API responses (min 10); URLs stay identical for half of it and are valid between TTL and 1.5 × TTL | `60` |
+| `PET_MEDIA_SERVE_VIA` | Optional | No | Who sends the bytes of `GET /api/media/{id}` (M4-05b): `caddy` = PHP checks signature + authz, Caddy serves the file (`X-Accel-Redirect`, read-only `app_storage`); `php` = stream from PHP (the app default for local dev / tests). **Production default `caddy` comes from `compose.production.yaml`** — leave the line out of `/opt/petprep/.env`; set `php` only as an emergency fallback (PRODUCTION_DEPLOYMENT.md §7), then `docker compose … up -d app` | `caddy` |
 | `AI_PET_DNA_VERSION` | Optional | No | DNA for new pets: `2` unique traits (M4-08), `1` pre-M4 anchors | `2` |
 | `AI_LAB_ENABLED` | Optional | No | Show the Filament AI Lab (superadmin only) | `true` |
 | `AI_LAB_MAX_RUN_USD` | Optional | No | Max estimated cost of one AI Lab run | `3` |
@@ -90,3 +91,21 @@ This document describes all environment variables used by the PetPrep production
 | `REVENUECAT_SECRET_KEY` | Optional | **Yes** | RevenueCat secret API key for IAP | `sk_...` |
 | `REVENUECAT_PUBLIC_KEY` | Optional | No | RevenueCat public SDK key | `test_...` or `appl_...` |
 | `MAIL_MAILER` | Optional | No | Mail driver (`log`, `smtp`, `resend`, `ses`) | `log` |
+
+---
+
+## 6. Runtime / deploy knobs (M4-05b — not secrets, normally NOT in `/opt/petprep/.env`)
+
+Set by the image, `compose.production.yaml` or `deploy-production.sh`; listed so nobody adds them to the `.env` by accident.
+
+| Variable | Where | Purpose | Default |
+| :--- | :--- | :--- | :--- |
+| `PETPREP_IMAGE_TAG` | compose interpolation | Image tag of `petprep-app` / `petprep-web`. The deploy script sets `next` only for the build + smoke test of the new release. **Never put it in `/opt/petprep/.env`** (compose would read it for every command) | `production` |
+| `PETPREP_OPTIMIZE` | container env | What `docker/production/entrypoint.sh` caches on start: `full` (`php artisan optimize`), `config` (config + events), `none`. Auto: `full` for php-fpm, `config` for everything else | auto |
+| `VIEW_COMPILED_PATH` | image (`Dockerfile`) | Compiled Blade views inside the container (`bootstrap/cache/views`), not on the shared volume | `/var/www/html/bootstrap/cache/views` |
+| `APP_ENV` / `APP_DEBUG` | compose `environment` | Forced to `production` / `false` for every PHP container, whatever the `.env` says | `production` / `false` |
+| `DEPLOY_HEALTH_HOST` | deploy script env | Name checked with `curl --resolve <host>:443:127.0.0.1 https://<host>/up` | `api.petprep.si` |
+| `DEPLOY_HEALTH_IP_HOST` | deploy script env | Fallback health check: `Host:` header for `http://127.0.0.1/up` (the IP site, D8) | `138.199.172.97` |
+| `DEPLOY_APP_WAIT_TRIES` | deploy script env | `php-fpm-ping` attempts (3 s apart) after `up -d` | `40` |
+| `DEPLOY_RETRY_SLEEP` | deploy script env | Seconds between `artisan up` / health check attempts | `3` |
+| `DEPLOY_ALLOW_NO_BACKUP` | deploy script env | `1` = continue when the pre-deploy backup fails (emergency only) | `0` |

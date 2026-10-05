@@ -8,6 +8,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-05 — Administracija hitrejša, videi ne zavirajo več aplikacije (produkcijski strežnik PHP)
+
+**Kaj se je zgodilo:** Produkcija je do zdaj tekla na **razvojnem** strežniku PHP (`php artisan serve`, 4 delavci, brez predpomnilnika prevedene kode). Zato je bila administracija (Filament) počasna, vsak prenos videa psa pa je za ves čas prenosa zasedel enega od štirih delavcev. Pripravljen je pravi produkcijski način (velja ob naslednjem deployu, ko se veja združi):
+- **PHP-FPM + OPcache** v lastni produkcijski sliki: koda in knjižnice so v sliki, prevedena koda ostane v pomnilniku, do 12 delavcev. Predpomnilniki Laravela (nastavitve, poti, pogledi, Filament) se zgradijo ob vsakem zagonu.
+- **Caddy sam streže** statične datoteke administracije (z dolgim predpomnjenjem) in **videe ter slike psov**: PHP samo preveri, ali je povezava podpisana in ali jo sme gledati ta uporabnik, datoteko pa pošlje Caddy (tudi po delih za iPhone).
+- **Varnejši deploy:** nova slika se zgradi in preizkusi, **preden** gre aplikacija v vzdrževalni način — če gradnja ne uspe, uporabniki ničesar ne opazijo. Ob napaki pred migracijami se samodejno vrne prejšnja različica (koda in slika).
+- Odpravljen star dolg: knjižnice (`vendor`) se zdaj res namestijo ob vsakem deployu (prej je bila na strežniku ročno nameščena kopija).
+- **Številke (lokalni preizkus):** med 4 hkratnimi prenosi 10 MB videa je odziv API-ja trajal **4,4 s** na starem strežniku in **0,01–0,02 s** na novem. Strežnik: **814 zelenih testov**, test deploya **153 preverjanj**, 30 preverjanj celotne poti Caddy → PHP-FPM.
+- *Načrt:* omejitev hkratnih povezav na napravo; Object Storage + CDN, ko bo uporabnikov več (SCALING.md).
+
+**Zakaj je pomembno**
+Pred zaprto beto mora strežnik zdržati, da več otrok hkrati gleda svojega psa, ne da bi se aplikacija za starše ustavila. In administracija mora biti dovolj hitra za vsakodnevno delo.
+
+**Kako to povedati**
+- 👩 *"Video vašega kužka se naloži takoj, aplikacija pa ostane odzivna, tudi ko si ga ogleduje več otrok hkrati."*
+- 💼 *"Infrastruktura za beto: produkcijski PHP runtime in strežba medijev brez dodatnih stroškov (brez CDN), z jasno potjo do Object Storage + CDN ob rasti."*
+- 🛠 *"Laravel na PHP-FPM + OPcache (validate_timestamps=0) v multi-stage Docker sliki, Caddy php_fastcgi + handle_response na X-Accel-Redirect za podpisane videe, gradnja in smoke test slike pred maintenance mode, samodejni rollback slike."*
+
 ## 2026-10-05 — Starši se lahko sami registrirajo
 
 **Kaj se je zgodilo:** Do zdaj je račun za starša lahko ustvaril samo razvijalec. Zdaj ga starš ustvari sam v aplikaciji: **"Sem starš" → "Nimate računa? Registracija"** → ime, e-pošta, geslo (dvakrat, s prikazom/skritjem) in kljukica **"Strinjam se s pogoji uporabe in politiko zasebnosti"**. Takoj zatem je prijavljen in vidi prazno nadzorno ploščo z gumbom **"Dodaj otroka"**.
