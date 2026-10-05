@@ -178,6 +178,55 @@ export type ChildPinResponse = Extract<
 export type RevokeChildTokensResponse =
   operations['childProfile.revokeTokens']['responses'][200]['content']['application/json'];
 
+/**
+ * Body of both irreversible deletions (M2-08): the parent's current password and an
+ * explicit `confirm: true`. The app additionally makes the parent type "IZBRIŠI".
+ */
+export type ConfirmDeletionRequest = components['schemas']['ConfirmDeletionRequest'];
+
+/**
+ * `POST /api/parent/account/delete` 200 body (M2-08). Hand-typed: Scramble infers the
+ * spread array loosely. `scope: family` = the last parent took the whole family with
+ * them; `parent` = only this account, the family stays with the other parent.
+ */
+export interface DeleteAccountResponse {
+  status: 'deleted';
+  scope: 'family' | 'parent';
+  family_deleted: boolean;
+  parents_deleted: number;
+  children_deleted: number;
+  pets_deleted: number;
+}
+
+/** `DELETE /api/parent/children/{child}` 200 body (M2-08). */
+export interface DeleteChildResponse {
+  status: 'deleted';
+  child_id: number;
+  /** Pets only this child cared for (deleted with all their data). */
+  pets_deleted: number;
+  /** Shared pets that stay with the other caretakers. */
+  pets_kept: number;
+}
+
+/** Machine-readable `reason` of a refused deletion / export (M2-08). */
+export type AccountDeletionReason =
+  | 'invalid_password'
+  | 'superadmin_protected'
+  | 'child_not_found'
+  | 'export_too_large';
+
+/**
+ * `GET /api/parent/account/export` 200 body (M2-08, GDPR art. 15 / 20) — the family's
+ * data as one JSON document. The app never reads into it; it only hands it to the share
+ * sheet, so only the envelope is typed.
+ */
+export interface FamilyExport {
+  format: 'petprep.family-export';
+  version: number;
+  generated_at: string;
+  [key: string]: unknown;
+}
+
 /** `POST /api/parent/hard-stop` 200 body (toggle for one pet of the family). */
 export type HardStopResponse =
   operations['parentDashboard.toggleHardStop']['responses'][200]['content']['application/json'];
@@ -400,6 +449,31 @@ export const api = {
   /** DELETE /api/parent/children/{child}/tokens — sign the child out on every device. */
   revokeChildTokens: (childId: number) =>
     apiRequest<RevokeChildTokensResponse>(`/api/parent/children/${childId}/tokens`, { method: 'DELETE' }),
+
+  /**
+   * DELETE /api/parent/children/{child} (M2-08) — delete a child profile, irreversibly.
+   * A pet only this child cared for goes with it; a shared pet stays. 404
+   * `child_not_found`, 422 `invalid_password`, 429 (5 per 15 min).
+   */
+  deleteChild: (childId: number, password: string) =>
+    apiRequest<DeleteChildResponse>(`/api/parent/children/${childId}`, {
+      method: 'DELETE',
+      body: { password, confirm: true },
+    }),
+
+  /**
+   * POST /api/parent/account/delete (M2-08) — delete the parent's own account; the last
+   * parent deletes the whole family. Every token is revoked → the app must log out
+   * locally afterwards. 422 `invalid_password`, 403 `superadmin_protected`, 429.
+   */
+  deleteAccount: (password: string) =>
+    apiRequest<DeleteAccountResponse>('/api/parent/account/delete', {
+      method: 'POST',
+      body: { password, confirm: true },
+    }),
+
+  /** GET /api/parent/account/export (M2-08) — the family's data as JSON. 413 too large, 429 (3/h). */
+  exportFamilyData: () => apiRequest<FamilyExport>('/api/parent/account/export'),
 
   /**
    * POST /api/broadcasting/auth — sign a private channel subscription for

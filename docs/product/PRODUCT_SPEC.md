@@ -41,6 +41,7 @@
    - Otrok skrbi za **največ enega aktivnega psa** hkrati. *(David, 4. 10. 2026)*
    - Dnevni sprehod skupnega psa je dosežen s **seštevkom korakov vseh otrok**, ki skrbijo zanj, vsak otrok vidi svoje korake. *(David, 4. 10. 2026)* Hranjenje in voda sta pravili psa (enkrat na okno ne glede na to, kdo nahrani). *(Claude, čaka Davida)*
    - Ocena in semafor posameznega otroka: §9 in §11 (David, 4. 10. 2026 — "pošten delež"). Formula certifikata še ni določena.
+5. **Izbris in izvoz podatkov (izvedeno 5. 10. 2026, M2-08; Claude, čaka Davida):** starš v »Nadzor → Račun« izbriše svoj račun ali v seznamu otrok posamezen otroški profil — **takoj in nepovratno**, z geslom in vpisom »IZBRIŠI«. **Zadnji starš izbriše celotno družino** (otroke, pse, slike in videe, pogodbe s podpisi, dnevnik, ocene, naprave); če ostane drug starš, se izbriše samo račun tega starša. Ob izbrisu otroka se izbriše pes, za katerega je skrbel sam; **skupni pes ostane** drugim otrokom, otrokova pretekla dejanja pa ostanejo brez imena; **pretekla ocena (Care Score) preostalih otrok se ne spremeni** (izbrisani otrok še vedno šteje v pošten delež rutin, ki so se odprle, ko je skrbel), rutine po izbrisu pa nosijo preostali otroci. »Izvozi moje podatke« da vse podatke družine v datoteki JSON (vključno s podpisi pogodb in povezavami do slik / videov, ki veljajo ~1 uro; brez gesel in kod), največ 3-krat na uro.
 
 ## 4. Čas in življenjski cikel
 

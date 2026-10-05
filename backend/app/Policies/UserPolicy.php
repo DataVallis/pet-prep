@@ -28,6 +28,23 @@ class UserPolicy
     }
 
     /**
+     * Delete one's own parent account (M2-08). A superadmin is refused in
+     * AccountDeletionService with the explicit reason `superadmin_protected`.
+     */
+    public function deleteAccount(User $user): bool
+    {
+        return $user->isParent();
+    }
+
+    /**
+     * Export the family's data (M2-08, GDPR art. 15 / 20): parents only.
+     */
+    public function exportFamilyData(User $user): bool
+    {
+        return $user->isParent();
+    }
+
+    /**
      * A child profile's devices / PINs (M2-02): any parent of the child's
      * family — never by users.parent_id.
      */

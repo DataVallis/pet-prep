@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\AccountDeletionException;
 use App\Exceptions\FamilyException;
+use App\Http\Requests\ConfirmDeletionRequest;
 use App\Http\Requests\CreateChildRequest;
 use App\Models\User;
+use App\Services\AccountDeletionService;
 use App\Services\ChildProfileService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -72,5 +75,44 @@ class ChildProfileController extends Controller
             'revoked_tokens' => $revoked['tokens'],
             'revoked_pins' => $revoked['pins'],
         ], 200);
+    }
+
+    /**
+     * Delete a child profile — immediately and irreversibly (M2-08). Body
+     * `{password (the parent's), confirm: true}`. The child's devices, PINs,
+     * contract (signature) and step history go. A pet only this child cared
+     * for is deleted with all its data and AI media; a pet shared with
+     * another child stays — the deleted child's past actions keep counting
+     * for the pet, without a name.
+     *
+     * 200 `{status: deleted, child_id, pets_deleted, pets_kept}`; 404
+     * `child_not_found` (another family / missing / not a child); 422
+     * `invalid_password`; 429 `too_many_attempts` + `Retry-After` after 5 wrong
+     * passwords in 15 min (only failed attempts count; separate from the
+     * account deletion).
+     *
+     * DELETE /api/parent/children/{child}
+     */
+    public function destroy(ConfirmDeletionRequest $request, AccountDeletionService $deletion, string $child): JsonResponse
+    {
+        /** @var User $parent */
+        $parent = $request->user();
+        if (! $parent->can('manageFamily', User::class)) {
+            abort(403);
+        }
+
+        $profile = $this->profiles->childOfParentFamily($parent, $child);
+        if ($profile === null || ! $parent->can('manageChild', $profile)) {
+            return response()->json(['message' => 'No such child in your family.', 'reason' => 'child_not_found'], 404);
+        }
+
+        try {
+            $deletion->confirmPassword($parent, $request->password(), AccountDeletionService::SCOPE_CHILD);
+            $result = $deletion->deleteChildProfile($parent, $profile);
+        } catch (AccountDeletionException $e) {
+            return $e->toResponse();
+        }
+
+        return response()->json(['status' => 'deleted'] + $result, 200);
     }
 }

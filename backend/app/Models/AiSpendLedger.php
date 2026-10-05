@@ -62,6 +62,28 @@ class AiSpendLedger extends Model
         return $query->whereIn('status', [self::STATUS_RESERVED, self::STATUS_COMMITTED]);
     }
 
+    /**
+     * Keep the spend of pets that are about to be deleted, without the pet
+     * (M2-08: accounting outlives the family). Must run BEFORE the pet delete:
+     * left to the two `ON DELETE SET NULL` FKs (pet_id → pets, pet_media_id →
+     * pet_media) a row linked to both fails in one DELETE — PostgreSQL re-checks
+     * pet_media_id while setting pet_id null, after the slot is already gone.
+     *
+     * @param  array<int, int>  $petIds
+     */
+    public static function detachPets(array $petIds): int
+    {
+        if ($petIds === []) {
+            return 0;
+        }
+
+        return self::query()
+            ->where(fn (Builder $q) => $q
+                ->whereIn('pet_id', $petIds)
+                ->orWhereIn('pet_media_id', PetMedia::whereIn('pet_id', $petIds)->select('id')))
+            ->update(['pet_id' => null, 'pet_media_id' => null]);
+    }
+
     public function pet(): BelongsTo
     {
         return $this->belongsTo(Pet::class);

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChildAuthController;
 use App\Http\Controllers\ChildContractController;
@@ -79,6 +80,16 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         Route::post('children', [ChildProfileController::class, 'store'])
             ->middleware('throttle:pairing');
         Route::delete('children/{child}/tokens', [ChildProfileController::class, 'revokeTokens']);
+        // M2-08: delete a child profile (password + confirm), irreversible.
+        // Wrong passwords are limited in AccountDeletionService (5 / 15 min per
+        // user and scope; only failures count).
+        Route::delete('children/{child}', [ChildProfileController::class, 'destroy']);
+
+        // M2-08: the parent's own account — delete (last parent → whole
+        // family) and GDPR data export (JSON download).
+        Route::post('account/delete', [AccountController::class, 'destroy']);
+        Route::get('account/export', [AccountController::class, 'export'])
+            ->middleware('throttle:account-export');
         // Care Score / routine report of one child (M2-05 / M2-06).
         Route::get('children/{child}/report', [ChildReportController::class, 'show']);
 

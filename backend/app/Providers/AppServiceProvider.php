@@ -24,6 +24,11 @@ class AppServiceProvider extends ServiceProvider
     public const REGISTER_PER_HOUR = 20;
 
     /**
+     * Data exports per user per hour (M2-08).
+     */
+    public const ACCOUNT_EXPORT_PER_HOUR = 3;
+
+    /**
      * Minimum password length for parent accounts (M2-10a).
      */
     public const PASSWORD_MIN_LENGTH = 10;
@@ -115,6 +120,13 @@ class AppServiceProvider extends ServiceProvider
         // Second-parent invite codes (M2-01): a parent needs one or two;
         // 10 per hour per account stops code farming. Wrong codes on
         // join-family are limited separately in FamilyInviteService.
+        // Data export (M2-08): builds the whole family synchronously → 3 per
+        // hour per user. Live in testing.
+        RateLimiter::for('account-export', function (Request $request) {
+            return Limit::perHour(self::ACCOUNT_EXPORT_PER_HOUR)
+                ->by('account-export:'.($request->user()?->id ?: ClientIp::rateLimitKey($request->ip())));
+        });
+
         RateLimiter::for('family-invites', function (Request $request) {
             if (app()->environment('testing')) {
                 return Limit::none();

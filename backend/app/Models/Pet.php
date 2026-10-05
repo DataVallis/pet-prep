@@ -5,8 +5,8 @@ namespace App\Models;
 use App\Enums\BreedType;
 use App\Enums\PetLockReason;
 use App\Enums\PetStateEnum;
+use App\Jobs\DeletePetMediaFiles;
 use App\Services\FamilyService;
-use App\Services\Media\PetMediaService;
 use App\Services\PetStatusPeriodService;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
@@ -16,7 +16,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Support\Facades\DB;
 
 class Pet extends Model
 {
@@ -31,9 +30,17 @@ class Pet extends Model
 
     protected static function booted(): void
     {
+        // Spend rows outlive the pet (M2-08; see AiSpendLedger::detachPets — the
+        // FK cascade alone fails for a row linked to both the pet and its slot).
+        static::deleting(function (Pet $pet): void {
+            AiSpendLedger::detachPets([$pet->id]);
+        });
+
         // AI media files (M4-05) go with the pet; the pet_media rows cascade in the DB.
+        // Queued after commit (M2-08) — the same job AccountDeletionService uses
+        // for its bulk deletes, which fire no model events.
         static::deleted(function (Pet $pet): void {
-            DB::afterCommit(fn () => app(PetMediaService::class)->deleteFilesOf($pet->id));
+            DeletePetMediaFiles::dispatch([$pet->id])->afterCommit();
         });
 
         // Start the decay clock at creation so the first tick decays from birth.
@@ -294,13 +301,17 @@ class Pet extends Model
     {
         return $this->belongsToMany(User::class, 'pet_caretakers')
             ->withPivot(['requires_contract'])
+            ->wherePivotNull('ended_at')
             ->withTimestamps()
             ->orderBy('pet_caretakers.id');
     }
 
+    /**
+     * Active caretaker rows (M2-08: a deleted child's tombstone is history only).
+     */
     public function caretakerRows(): HasMany
     {
-        return $this->hasMany(PetCaretaker::class)->orderBy('id');
+        return $this->hasMany(PetCaretaker::class)->active()->orderBy('id');
     }
 
     /**

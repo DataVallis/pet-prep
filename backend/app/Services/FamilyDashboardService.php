@@ -171,7 +171,9 @@ class FamilyDashboardService
                 'is_hard_stopped' => (bool) $pet->is_hard_stopped,
                 'is_ill' => $pet->isIll(),
                 'escalation_level' => (int) $pet->escalation_level,
-                'caretakers' => $caretakers->where('pet_id', $pet->id)->map(fn (PetCaretaker $c) => [
+                // Active caretakers only; a deleted child's tombstone (M2-08)
+                // stays in the board for the fair share but is not listed.
+                'caretakers' => $caretakers->where('pet_id', $pet->id)->filter(fn (PetCaretaker $c) => ! $c->isTombstone())->map(fn (PetCaretaker $c) => [
                     'child_id' => $c->user_id,
                     'contract_signed' => $contracts->where('pet_id', $pet->id)->where('user_id', $c->user_id)->isNotEmpty(),
                 ])->values()->all(),

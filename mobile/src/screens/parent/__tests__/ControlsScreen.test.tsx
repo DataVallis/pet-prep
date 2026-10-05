@@ -37,6 +37,10 @@ jest.mock('@/api/client', () => {
   };
 });
 
+// Every test renders the whole Nadzor screen (now incl. the "Račun" card); the
+// default 5 s was flaky under a loaded full run (PR #29 nit).
+jest.setTimeout(20_000);
+
 const setHardStop = api.setHardStop as jest.Mock;
 const getParentDashboard = api.getParentDashboard as jest.Mock;
 const inviteParent = api.inviteParent as jest.Mock;
