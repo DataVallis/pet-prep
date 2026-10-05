@@ -5,7 +5,8 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-05 (Claude, backend-engineer — **PR #35 review fixes** (M3-02 push: walk reminder, held illness / game over, unregister in body, Nadzor "Obvestila" …); branch `feat/M3-02-push`, **PR #35**)
+- **Last updated:** 2026-10-05 (Claude, backend-engineer — **PR #35 re-review fixes** (energy off the phase ladder, recovered reminders, stuck rows, DST tests); branch `feat/M3-02-push`, **PR #35**)
+- Before: 2026-10-05 (Claude, backend-engineer — **PR #35 review fixes** (M3-02 push: walk reminder, held illness / game over, unregister in body, Nadzor "Obvestila" …); branch `feat/M3-02-push`, **PR #35**)
 - Before: 2026-10-05 (Claude, backend-engineer — **M3-02 push notifications** (Expo, backend + mobile); branch `feat/M3-02-push`, pushed, no PR)
 - Before: 2026-10-05 (Claude, mobile-engineer — **"Moj kuža" album** (child sees every photo / state video; parent read-only link) + PR #30 review minors + **PR #31 review minors**; branch `feat/mobile-pet-album`, **PR #31** (review APPROVED with minors → fixed))
 - Before: 2026-10-05 (Claude, mobile-engineer — **TestFlight fixes**: unstyled walk overlay (NativeWind removed, StyleSheet only), HUD metric bars behind the dock, permanent red "BREZ POVEZAVE" (two pusher-js bugs); branch `fix/mobile-unstyled-overlays`, pushed, no PR)
@@ -79,6 +80,16 @@
 6. **M4 (2026-10-05, `feat/M4-state-videos`):** independent qa-reviewer review → PR → merge. **On deploy:** delete `AI_REFERENCE_IMAGE_PROFILE` / `AI_STATE_VIDEO_PROFILE` from `/opt/petprep/.env` if they pin the old models (DEPLOYMENT D13), queue worker running, `APP_URL` public; then `php artisan media:backfill --dry-run` and, if the cost is OK, `media:backfill`. **David:** confirm the entitlement sets (mutt idle + sleeping, premium breed all 6) and the "videos at birth" decision (DECISIONS). **Mobile:** play `media.current_video_url` with expo-video (loop, muted), fall back to `media.reference_image_url`, refetch before `media.expires_at`. Then M1-19 sourced breed appearance.
 
 ## 6. Session log
+
+### 2026-10-05 (cloud, backend-engineer) — PR #35 re-review fixes (CHANGES REQUESTED → fixed, same branch)
+- **M1 energy off the ladder (Claude, čaka Davida):** `EscalationService` matrix uses hunger / thirst / hygiene only (`lowestDisplayedMetric` / `lowestMetricKey` without energy); after the matrix, energy showing ≤ 30 % outside quiet hours calls `NotificationService::walkReminder($pet)` — no level, no activity row, no broadcast; one walk decision per family-local day (any `walk_reminder` row of the day counts, so no per-minute rows); timing rules unchanged. `pet_state` / `low_energy` unchanged. Side effect: the deprecated top-level dashboard `traffic_light` is no longer amber for energy alone. Tests updated: `EscalationTest`, `DailyWalkAndRecoveryTest`, `EnergyStepsTest` now expect `escalation_level` 0 for energy-only lows. PRODUCT_SPEC §5/§6, DECISIONS, ARCHITECTURE §4, DIAGRAMS §4/§11.
+- **m1:** `push:dispatch-scheduled` re-queues `queued` rows with `attempts = 0` untouched for `NotificationService::STUCK_MINUTES` = 20 (> the job's 15-min unique lock, otherwise the re-dispatch is swallowed — found by the test); a failed `dispatch` puts a claimed row back to `scheduled` (due now).
+- **m2:** `deliver()` drops a phase 1 / 2 reminder whose metric now shows above its threshold (`recovered`: > 30 % / > 10 %).
+- **m3:** DST tests for 2026-10-25 Europe/Ljubljana: walk reminder 06:30 CET → 08:00 CET (07:00 UTC) → school → 15:00 CET (14:00 UTC); game over at 23:00 CEST held over the 9-hour night to 06:00 CET (05:00 UTC).
+- **m4:** `ChildHudScreen.test.tsx` mocks `pushPrompt`, `jest.setTimeout(20_000)`. **Nit:** unused energy texts removed from `PushCopy`.
+- **Tests:** `PushNotificationTest` 49 → **59** (energy + hunger 10 % critical + parent phase 3; no walk row while quiet / energy > 30 %; recovered ×3 + exactly 10 % still sent; stuck re-queue; dispatch failure rollback; DST ×2).
+- **Commands:** Pest full suite on `testing_m302` **920 passed**; Pint on touched files passed; deploy harness 189 / 0; `npx tsc --noEmit` clean; `yarn test` **788 passed / 68 suites**, twice.
+- **Note for the orchestrator:** `backend/CLAUDE.md` (not edited, per instructions) still says "Quiet hours: … no energy escalation" and lists energy phase rules — it should say energy is off the phase ladder (walk reminder only).
 
 ### 2026-10-05 (cloud, backend-engineer) — PR #35 review fixes (CHANGES REQUESTED → fixed, same branch)
 `origin/main` merged first (PR #34 dog-data docs, no conflicts).

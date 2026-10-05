@@ -11,13 +11,12 @@ use App\Models\PushNotification;
  * - Title is always "PetPrep"; texts never contain a child's or pet's name
  *   (Expo / APNs / FCM are third parties, and lock screens are public).
  * - Phase 1 / 2 hunger texts are the spec wording; the other metrics follow
- *   the same pattern. Energy is the daily walk: phase 1 / 2 from energy become
- *   one `walk_reminder` per day (PR #35) — no "zbolel v 30 minutah"
- *   (a walk can't be missed in 30 min, DECISIONS 2026-10-03). The SOFT /
- *   CRITICAL energy texts stay for safety but are not used by escalation.
+ *   the same pattern. Energy is the daily walk, not on the phase ladder: one
+ *   `walk_reminder` per day (PR #35) — no "zbolel v 30 minutah"
+ *   (a walk can't be missed in 30 min, DECISIONS 2026-10-03).
  * - Phase 3 = the spec sentence for the parent plus what is missing.
  *
- * Metric keys: hunger | thirst | hygiene | energy; illness uses
+ * Metric keys: hunger | thirst | hygiene (walk reminder: energy); illness uses
  * hygiene | walk (its reason); game over has none.
  */
 final class PushCopy
@@ -28,14 +27,12 @@ final class PushCopy
         'hunger' => 'Tvoj kuža te milo gleda in kaže na posodo s hrano.',
         'thirst' => 'Tvoj kuža te milo gleda in kaže na prazno posodo za vodo.',
         'hygiene' => 'Tvoj kuža te milo gleda in kaže na nered, ki ga je treba počistiti.',
-        'energy' => 'Tvoj kuža te milo gleda in kaže na povodec. Gremo na sprehod?',
     ];
 
     private const CRITICAL = [
         'hunger' => 'Če ga ne nahraniš v 30 minutah, bo zbolel.',
         'thirst' => 'Če mu ne daš vode v 30 minutah, bo zbolel.',
         'hygiene' => 'Kuža je naredil nered! Počisti ga čim prej, sicer bo zbolel.',
-        'energy' => 'Kuža je ves utrujen, ker danes še ni bil na sprehodu. Pojdita ven še danes!',
     ];
 
     /** Energy = the daily walk: one friendly reminder per day, no illness threat. */

@@ -17,9 +17,11 @@ use App\Services\NotificationService;
 use App\Services\Push\ExpoPushClient;
 use App\Services\Push\ExpoPushException;
 use App\Services\Push\PushCopy;
+use Illuminate\Contracts\Bus\Dispatcher as BusDispatcher;
 use Illuminate\Http\Client\Factory as HttpFactory;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -117,6 +119,10 @@ function pnResetHttp(): void
 
 function pnQueued(Pet $pet, PushType $type = PushType::SoftWarning, string $metric = 'hunger'): PushNotification
 {
+    // A phase 1 / 2 reminder is only delivered while its metric is still low (m2).
+    if (in_array($type, [PushType::SoftWarning, PushType::CriticalAlert], true) && $metric !== 'energy') {
+        Pet::whereKey($pet->id)->update([$metric.'_level' => 5]);
+    }
     Queue::fake([SendPushNotification::class]);
     $row = app(NotificationService::class)->escalation($pet, $type, $metric);
     Queue::assertPushed(SendPushNotification::class, fn ($job) => $job->pushNotificationId === $row->id);
@@ -339,7 +345,7 @@ describe('Escalation pushes — recipients and copy', function () {
 
         pnEscalate($pet);
 
-        expect($pet->refresh()->escalation_level)->toBe(2) // the game still escalates
+        expect($pet->refresh()->escalation_level)->toBe(0) // energy is not on the phase ladder
             ->and($sent)->toHaveCount(1)
             ->and($sent[0])->toMatchArray([
                 'priority' => 'default',
@@ -757,11 +763,12 @@ describe('PR #35 — the daily walk reminder (energy)', function () {
             ->and($sent)->toHaveCount(1)
             ->and($sent[0])->toMatchArray(['priority' => 'default', 'channelId' => 'default', 'data' => ['type' => 'walk_reminder', 'pet_id' => $pet->id]]);
 
-        // Later the same day (reset + low again): no second walk reminder.
+        // Later the same day, every tick: no second walk reminder, not even a row.
         pnAt('2026-10-14 17:00:00'); // 19:00 local
-        Pet::whereKey($pet->id)->update(['escalation_level' => 0, 'energy_level' => 0]);
         pnEscalate($pet->refresh());
-        expect(PushNotification::latest('id')->first())->status->toBe('suppressed')->suppressed_reason->toBe('duplicate')
+        pnAt('2026-10-14 17:01:00');
+        pnEscalate($pet->refresh());
+        expect(PushNotification::count())->toBe(1)
             ->and($sent)->toHaveCount(1);
 
         // Next family day, after school + 2 h: news again.
@@ -913,5 +920,172 @@ describe('PR #35 — delivery re-checks the pet; Expo project split', function (
             ->and($requests[2])->toBe([$b->expo_push_token])
             ->and($row->refresh()->status)->toBe('sent')
             ->and(PushTicket::where('push_notification_id', $row->id)->where('status', 'ok')->count())->toBe(3);
+    });
+});
+
+describe('PR #35 re-review — energy is off the phase ladder', function () {
+    it('walk reminder for energy 0 %, then hunger 10 % still gets its critical push, then the parent alarm', function () {
+        pnAt('2026-10-14 13:00:00'); // 15:00 local, no quiet hours
+        [$parent, $child, $pet] = pnFamily(['energy_level' => 0]);
+        pnDevice($child);
+        $parentDevice = pnDevice($parent);
+        $sent = pnFakeExpo();
+
+        pnEscalate($pet);
+        expect($pet->refresh()->escalation_level)->toBe(0)
+            ->and(collect($sent->getArrayCopy())->pluck('data.type')->all())->toBe(['walk_reminder']);
+
+        // Hunger falls to 10 % while the walk is still missing → phase 2 for hunger.
+        pnAt('2026-10-14 13:05:00');
+        Pet::whereKey($pet->id)->update(['hunger_level' => 10]);
+        pnEscalate($pet->refresh());
+
+        expect($pet->refresh()->escalation_level)->toBe(2)
+            ->and($sent)->toHaveCount(2)
+            ->and($sent[1])->toMatchArray([
+                'body' => 'Če ga ne nahraniš v 30 minutah, bo zbolel.',
+                'priority' => 'high',
+                'channelId' => 'alarm',
+                'data' => ['type' => 'critical_alert', 'pet_id' => $pet->id],
+            ]);
+
+        // Hunger 0 % for over an hour → every parent gets the alarm.
+        pnAt('2026-10-14 15:10:00');
+        Pet::whereKey($pet->id)->update(['hunger_level' => 0, 'hunger_zero_since' => now()->subMinutes(70)]);
+        pnEscalate($pet->refresh());
+
+        expect($pet->refresh()->escalation_level)->toBe(3)
+            ->and($sent)->toHaveCount(3)
+            ->and($sent[2]['to'])->toBe($parentDevice->expo_push_token)
+            ->and($sent[2]['data']['type'])->toBe('parent_intervention_alarm')
+            ->and(PushNotification::where('type', 'walk_reminder')->count())->toBe(1);
+    });
+
+    it('asks for no walk reminder while quiet, and none when energy is above 30 %', function () {
+        pnAt('2026-10-14 21:00:00'); // 23:00 local
+        [$parent, $child, $pet] = pnFamily(['energy_level' => 0]);
+        pnQuiet($parent);
+        pnDevice($child);
+        pnFakeExpo();
+
+        pnEscalate($pet);
+        expect(PushNotification::count())->toBe(0);
+
+        pnAt('2026-10-14 15:00:00');
+        Pet::whereKey($pet->id)->update(['energy_level' => 31]);
+        pnEscalate($pet->refresh());
+        expect(PushNotification::count())->toBe(0);
+    });
+});
+
+describe('PR #35 re-review — recovered reminders and stuck rows', function () {
+    it('drops a phase 1 / 2 reminder whose metric recovered above its threshold before sending', function (PushType $type, int $now) {
+        [, $child, $pet] = pnFamily();
+        pnDevice($child);
+        $row = pnQueued($pet, $type, 'thirst');
+        Pet::whereKey($pet->id)->update(['thirst_level' => $now]);
+        pnFakeExpo();
+
+        pnRun($row);
+
+        expect($row->refresh())->status->toBe('suppressed')->suppressed_reason->toBe('recovered');
+        Http::assertNothingSent();
+    })->with([
+        'phase 1, refilled' => [PushType::SoftWarning, 100],
+        'phase 1, 31 %' => [PushType::SoftWarning, 31],
+        'phase 2, back to 20 %' => [PushType::CriticalAlert, 20],
+    ]);
+
+    it('still sends a phase 2 reminder at exactly 10 %', function () {
+        [, $child, $pet] = pnFamily();
+        pnDevice($child);
+        $row = pnQueued($pet, PushType::CriticalAlert, 'hunger');
+        Pet::whereKey($pet->id)->update(['hunger_level' => 10]);
+        $sent = pnFakeExpo();
+
+        pnRun($row);
+
+        expect($row->refresh()->status)->toBe('sent')->and($sent)->toHaveCount(1);
+    });
+
+    it('re-queues a row stuck in queued without any attempt for 20 min, leaves fresh ones alone', function () {
+        [, $child, $pet] = pnFamily();
+        pnDevice($child);
+        $stuck = pnQueued($pet);
+        $fresh = pnQueued($pet, PushType::CriticalAlert);
+        // The lost job's unique lock (15 min) has expired by then.
+        $this->travel(NotificationService::STUCK_MINUTES + 1)->minutes();
+        PushNotification::whereKey($fresh->id)->update(['updated_at' => now()->subMinutes(5)]);
+        Queue::fake([SendPushNotification::class]);
+
+        $this->artisan('push:dispatch-scheduled')->assertSuccessful();
+
+        Queue::assertPushed(SendPushNotification::class, 1);
+        Queue::assertPushed(SendPushNotification::class, fn ($job) => $job->pushNotificationId === $stuck->id);
+        expect($stuck->refresh()->updated_at->equalTo(now()))->toBeTrue();
+    });
+
+    it('puts a row back to scheduled when queueing the job fails', function () {
+        [, , $pet] = pnFamily();
+        $row = PushNotification::create([
+            'idempotency_key' => (string) Str::uuid(), 'pet_id' => $pet->id, 'type' => 'illness_triggered',
+            'recipients' => [], 'status' => 'scheduled', 'send_after' => now()->subMinute(),
+        ]);
+        Bus::swap(Mockery::mock(BusDispatcher::class, function ($mock) {
+            $mock->shouldReceive('dispatch')->andThrow(new RuntimeException('redis down'));
+        }));
+
+        $this->artisan('push:dispatch-scheduled')->assertSuccessful();
+
+        expect($row->refresh()->status)->toBe('scheduled')
+            ->and($row->send_after->lessThanOrEqualTo(now()))->toBeTrue();
+    });
+});
+
+describe('PR #35 re-review — DST (Europe/Ljubljana, 2026-10-25: 03:00 CEST → 02:00 CET)', function () {
+    it('walk reminder after the night of the clock change: bedtime ends 06:00 CET → 08:00 CET = 07:00 UTC', function () {
+        pnAt('2026-10-25 05:30:00'); // 06:30 CET (UTC+1)
+        [$parent, $child, $pet] = pnFamily(['energy_level' => 0]);
+        pnQuiet($parent);
+        pnDevice($child);
+        $sent = pnFakeExpo();
+
+        pnEscalate($pet);
+
+        $row = PushNotification::sole();
+        expect($row->status)->toBe('scheduled')
+            ->and($row->send_after->toIso8601String())->toBe('2026-10-25T07:00:00+00:00');
+
+        // 08:00 CET: school → held until 15:00 CET = 14:00 UTC.
+        pnAt('2026-10-25 07:00:00');
+        $this->artisan('push:dispatch-scheduled')->assertSuccessful();
+        expect($row->refresh()->send_after->toIso8601String())->toBe('2026-10-25T14:00:00+00:00');
+
+        pnAt('2026-10-25 14:00:00');
+        $this->artisan('push:dispatch-scheduled')->assertSuccessful();
+        expect($row->refresh()->status)->toBe('sent')->and($sent)->toHaveCount(1);
+    });
+
+    it('holds a game over from 23:00 CEST over the 9-hour night to 06:00 CET = 05:00 UTC', function () {
+        pnAt('2026-10-24 21:00:00'); // 23:00 CEST (UTC+2)
+        [$parent, $child, $pet] = pnFamily(['hunger_level' => 0, 'hunger_zero_since' => now()->subHours(25), 'escalation_level' => 3]);
+        pnQuiet($parent);
+        pnDevice($parent);
+        pnDevice($child);
+        $sent = pnFakeExpo();
+
+        pnEscalate($pet);
+
+        $row = PushNotification::sole();
+        expect($row->status)->toBe('scheduled')
+            ->and($row->send_after->toIso8601String())->toBe('2026-10-25T05:00:00+00:00');
+
+        pnAt('2026-10-25 04:59:00'); // 05:59 CET — still bedtime
+        $this->artisan('push:dispatch-scheduled')->assertSuccessful();
+        expect($sent)->toHaveCount(0);
+
+        pnAt('2026-10-25 05:00:00');
+        $this->artisan('push:dispatch-scheduled')->assertSuccessful();
+        expect($row->refresh()->status)->toBe('sent')->and($sent)->toHaveCount(2);
     });
 });

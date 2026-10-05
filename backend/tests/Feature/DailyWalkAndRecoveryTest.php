@@ -414,7 +414,7 @@ describe('Daily walk: day closed at the family-local midnight', function () {
 });
 
 describe('Daily walk: energy escalation only outside quiet hours', function () {
-    it('gives no reminder for energy 0 % at night and phase 2 from 06:00 local', function () {
+    it('shows low energy from 06:00 local without touching the phase ladder (walk reminder is separate)', function () {
         Carbon::setTestNow('2026-10-05 21:30:00'); // 23:30 local, walked today
         $pet = dwPet(pet: ['daily_step_count' => 4000, 'energy_level' => 100]);
 
@@ -428,7 +428,7 @@ describe('Daily walk: energy escalation only outside quiet hours', function () {
 
         dwFeed($pet);
         $morning = dwTick($pet, '2026-10-06 04:00:00'); // 06:00 local
-        expect($morning->escalation_level)->toBe(2);
+        expect($morning->escalation_level)->toBe(0); // PR #35 re-review: energy is not on the ladder
         expect($morning->pet_state)->toBe(PetStateEnum::LowEnergy);
         expect($morning->isIll())->toBeFalse();
     });

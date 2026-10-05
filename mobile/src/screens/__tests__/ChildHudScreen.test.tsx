@@ -48,6 +48,11 @@ jest.mock('@/hooks/usePetWebSocket', () => ({
 
 // The session is set up by the test (signInChild), not restored from SecureStore.
 jest.mock('@/modules/session/useSessionBootstrap', () => ({ useSessionBootstrap: () => ({ retry: jest.fn() }) }));
+// M3-02 / PR #35: the HUD asks about notifications on its first view — no real Alert here.
+jest.mock('@/modules/push/pushPrompt', () => ({ maybeAskForPush: jest.fn(() => Promise.resolve('skipped')) }));
+
+// Heavy file (video players, timers): generous per-test budget on slow CI.
+jest.setTimeout(20_000);
 
 const getChildPet = api.getChildPet as jest.Mock;
 const feedPet = api.feedPet as jest.Mock;

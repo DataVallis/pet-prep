@@ -19,6 +19,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
+use Throwable;
 
 /**
  * Escalation push notifications (M3-02, PRODUCT_SPEC §6/§7; PR #35 review).
@@ -29,15 +30,16 @@ use Illuminate\Support\Str;
  * queues SendPushNotification after commit. No HTTP here.
  *
  * Timing (family-local clock, `timing()`):
- *  - phase 1 / 2 caused by energy become ONE `walk_reminder` per local day
- *    (normal priority, default channel), not before 2 h after the day's last
- *    quiet stretch ended — held (`scheduled`) until then;
+ *  - the daily `walk_reminder` (walkReminder(), energy is not on the phase
+ *    ladder): ONE per local day (normal priority, default channel), not
+ *    before 2 h after the day's last quiet stretch ended — held until then;
  *  - quiet hours: illness / game over are held until the quiet stretch ends,
  *    every other push is dropped.
  * `push:dispatch-scheduled` (every minute) queues held rows when due.
  *
  * deliver() runs in the job: re-checks the pet (hard stop / inactive / game
- * over / ill → dropped, except illness / game over news; walk done → dropped)
+ * over / ill → dropped, except illness / game over news; walk done or a
+ * phase 1 / 2 metric back above its threshold → dropped)
  * and the timing, builds one message per enabled device of the recipients,
  * sends in chunks of ≤ 100 (split per Expo project on
  * PUSH_TOO_MANY_EXPERIENCE_IDS), stores one ticket per device (idempotent per
@@ -56,6 +58,13 @@ class NotificationService
     /** Held rows queued per `push:dispatch-scheduled` run. */
     public const DISPATCH_BATCH = 500;
 
+    /**
+     * A `queued` row without any attempt for this long lost its job. Longer
+     * than SendPushNotification::$uniqueFor (15 min), so the lost job's
+     * unique lock has expired and the re-dispatch isn't swallowed.
+     */
+    public const STUCK_MINUTES = 20;
+
     public function __construct(
         private readonly FamilyService $families,
         private readonly PushDeviceService $devices,
@@ -69,11 +78,6 @@ class NotificationService
     {
         if (! config('push.enabled')) {
             return null;
-        }
-
-        // Energy is the daily walk: never an alarm, one reminder per day.
-        if ($metric === 'energy' && in_array($type, [PushType::SoftWarning, PushType::CriticalAlert], true)) {
-            $type = PushType::WalkReminder;
         }
 
         $now = now();
@@ -134,30 +138,100 @@ class NotificationService
     }
 
     /**
-     * `push:dispatch-scheduled`: queue held rows whose time has come. The
-     * job re-checks everything (quiet hours, pet state, walk).
+     * The daily walk reminder (PR #35 re-review): called by EscalationService
+     * for a pet whose energy shows ≤ 30 % outside quiet hours — energy is not
+     * on the phase ladder. At most ONE decision per family-local day (any
+     * row of today counts, so a dropped or device-less reminder isn't retried
+     * every minute); timing rules in timing().
+     */
+    public function walkReminder(Pet $pet): ?PushNotification
+    {
+        if (! config('push.enabled')) {
+            return null;
+        }
+
+        $dayStart = now()->setTimezone($pet->familyTimezone())->startOfDay()->utc();
+        $decidedToday = PushNotification::where('pet_id', $pet->id)
+            ->where('type', PushType::WalkReminder->value)
+            ->where('created_at', '>=', $dayStart)
+            ->exists();
+
+        return $decidedToday ? null : $this->escalation($pet, PushType::WalkReminder, 'energy');
+    }
+
+    /**
+     * `push:dispatch-scheduled`: queue held rows whose time has come, and
+     * re-queue rows stuck in `queued` that no job ever picked up (no attempt
+     * for STUCK_MINUTES — lost job, queue flushed). The job re-checks
+     * everything (quiet hours, pet state, walk, recovery).
      */
     public function dispatchScheduled(): int
     {
-        $ids = PushNotification::where('status', PushNotification::STATUS_SCHEDULED)
+        $queued = 0;
+
+        $due = PushNotification::where('status', PushNotification::STATUS_SCHEDULED)
             ->where('send_after', '<=', now())
             ->orderBy('send_after')
             ->limit(self::DISPATCH_BATCH)
             ->pluck('id');
 
-        $queued = 0;
-        foreach ($ids as $id) {
+        foreach ($due as $id) {
             // Claim: a parallel run can't queue the same row twice.
             $claimed = PushNotification::whereKey($id)
                 ->where('status', PushNotification::STATUS_SCHEDULED)
                 ->update(['status' => PushNotification::STATUS_QUEUED]);
-            if ($claimed === 1) {
-                $this->dispatch((int) $id, afterCommit: false);
+            if ($claimed === 1 && $this->dispatchOrRollBack((int) $id)) {
                 $queued++;
             }
         }
 
+        $stuck = PushNotification::where('status', PushNotification::STATUS_QUEUED)
+            ->where('attempts', 0)
+            ->where('updated_at', '<=', now()->subMinutes(self::STUCK_MINUTES))
+            ->orderBy('id')
+            ->limit(self::DISPATCH_BATCH)
+            ->pluck('id');
+
+        foreach ($stuck as $id) {
+            // Touch (claim for the next STUCK_MINUTES) before queueing again.
+            $claimed = PushNotification::whereKey($id)
+                ->where('status', PushNotification::STATUS_QUEUED)
+                ->where('attempts', 0)
+                ->update(['updated_at' => now()]);
+            if ($claimed === 1) {
+                Log::warning('Push: re-queued a notification no job picked up', ['push_notification_id' => $id]);
+                if ($this->dispatchOrRollBack((int) $id)) {
+                    $queued++;
+                }
+            }
+        }
+
         return $queued;
+    }
+
+    /**
+     * Queue the send job; if queueing itself fails (Redis down), put the row
+     * back to `scheduled` (due now) so the next run tries again.
+     */
+    private function dispatchOrRollBack(int $id): bool
+    {
+        try {
+            $this->dispatch($id, afterCommit: false);
+
+            return true;
+        } catch (Throwable $e) {
+            PushNotification::whereKey($id)
+                ->where('status', PushNotification::STATUS_QUEUED)
+                ->where('attempts', 0)
+                ->update(['status' => PushNotification::STATUS_SCHEDULED, 'send_after' => now()]);
+            Log::error('Push: could not queue the send job — back to scheduled', [
+                'push_notification_id' => $id,
+                'error' => $e->getMessage(),
+            ]);
+            report($e);
+
+            return false;
+        }
     }
 
     /**
@@ -184,6 +258,12 @@ class NotificationService
         }
         if ($type === PushType::WalkReminder && $pet->displayMetric('energy_level') > EscalationService::SOFT_WARNING_THRESHOLD) {
             $this->markSuppressed($notification, 'walk_done');
+
+            return;
+        }
+        // The child already fed / watered / cleaned (PR #35 re-review, m2).
+        if ($this->reminderRecovered($notification, $pet)) {
+            $this->markSuppressed($notification, 'recovered');
 
             return;
         }
@@ -366,6 +446,25 @@ class NotificationService
         }
 
         return ['send', null, null];
+    }
+
+    /**
+     * Phase 1 / 2 reminder whose metric now shows above its phase threshold
+     * (phase 1: > 30 %, phase 2: > 10 %).
+     */
+    private function reminderRecovered(PushNotification $notification, Pet $pet): bool
+    {
+        $threshold = match ($notification->type) {
+            PushType::SoftWarning => EscalationService::SOFT_WARNING_THRESHOLD,
+            PushType::CriticalAlert => EscalationService::CRITICAL_ALERT_THRESHOLD,
+            default => null,
+        };
+        $metric = $notification->metric;
+        if ($threshold === null || ! in_array($metric, ['hunger', 'thirst', 'hygiene'], true)) {
+            return false;
+        }
+
+        return $pet->displayMetric($metric.'_level') > $threshold;
     }
 
     private function petLocked(Pet $pet): bool

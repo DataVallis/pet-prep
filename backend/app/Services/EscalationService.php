@@ -42,8 +42,11 @@ use Illuminate\Support\Facades\Log;
  *     24 continuous hours → Lock pet session, is_active = false, notify parent
  *
  * Energy (daily walk, David 2026-10-03) has no hourly neglect clock: no
- * phase 3, no 6 h illness and no game over from energy. Low energy gives
- * phase 1 / 2 only outside quiet hours.
+ * phase 3, no 6 h illness and no game over from energy. Since the PR #35
+ * re-review energy is not on the phase ladder at all: energy ≤ 30 % outside
+ * quiet hours only asks NotificationService::walkReminder() (at most one
+ * walk reminder per family-local day, its own timing rules);
+ * escalation_level follows hunger / thirst / hygiene only.
  */
 class EscalationService
 {
@@ -180,10 +183,18 @@ class EscalationService
             return true;
         }
 
-        // Check 3-tier escalation matrix
+        // Check 3-tier escalation matrix (hunger / thirst / hygiene only)
         $isQuiet = $pet->quietHours()?->isQuietNow() ?? false;
+        $escalated = $this->checkEscalationMatrix($pet);
 
-        return $this->checkEscalationMatrix($pet, $isQuiet);
+        // Energy = the daily walk, outside the ladder (PR #35 re-review): a
+        // separate, at most daily walk reminder; no level, no log row, no
+        // broadcast (the HUD shows low_energy from the metric itself).
+        if (! $isQuiet && $pet->displayMetric('energy_level') <= self::SOFT_WARNING_THRESHOLD) {
+            $this->notifications()->walkReminder($pet);
+        }
+
+        return $escalated;
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -195,12 +206,13 @@ class EscalationService
      *
      * @return bool True if an escalation was triggered or changed.
      */
-    private function checkEscalationMatrix(Pet $pet, bool $isQuiet): bool
+    private function checkEscalationMatrix(Pet $pet): bool
     {
         // Thresholds compare the value the child sees (rounded half up,
         // Pet::displayMetric): 30.4 shows 30 % → phase 1 (decision 2026-10-03).
-        // Energy counts only outside quiet hours (daily walk rule).
-        $lowestMetric = $this->lowestDisplayedMetric($pet, includeEnergy: ! $isQuiet);
+        // Energy is not on this ladder (daily walk → separate walk reminder,
+        // PR #35 re-review), so a low walk never blocks a hunger alarm.
+        $lowestMetric = $this->lowestDisplayedMetric($pet);
         $currentLevel = $pet->escalation_level;
 
         // Phase 3: 0% for >1 hour — Parent WebSocket alarm
@@ -218,7 +230,7 @@ class EscalationService
         // Phase 2: Critical Alert at 10%
         if ($lowestMetric <= self::CRITICAL_ALERT_THRESHOLD) {
             if ($currentLevel < 2) {
-                $this->triggerPhase2CriticalAlert($pet, $this->lowestMetricKey($pet, includeEnergy: ! $isQuiet));
+                $this->triggerPhase2CriticalAlert($pet, $this->lowestMetricKey($pet));
 
                 return true;
             }
@@ -229,7 +241,7 @@ class EscalationService
         // Phase 1: Soft Warning at 30%
         if ($lowestMetric <= self::SOFT_WARNING_THRESHOLD) {
             if ($currentLevel < 1) {
-                $this->triggerPhase1SoftWarning($pet, $this->lowestMetricKey($pet, includeEnergy: ! $isQuiet));
+                $this->triggerPhase1SoftWarning($pet, $this->lowestMetricKey($pet));
 
                 return true;
             }
@@ -273,7 +285,7 @@ class EscalationService
         Log::info('EscalationService: Phase 1 soft warning triggered', [
             'pet_id' => $pet->id,
             'child_recipient_ids' => $this->families()->caretakerRecipients($pet)->pluck('id')->all(),
-            'lowest_metric' => $this->lowestDisplayedMetric($pet, includeEnergy: true),
+            'lowest_metric' => $this->lowestDisplayedMetric($pet),
         ]);
     }
 
@@ -528,15 +540,13 @@ class EscalationService
     }
 
     /**
-     * Lowest metric as displayed to the child (integer 0–100). Energy only
-     * outside quiet hours (daily walk rule).
+     * Lowest of hunger / thirst / hygiene as displayed to the child (0–100).
+     * Energy is never part of the ladder (daily walk rule, PR #35 re-review).
      */
-    private function lowestDisplayedMetric(Pet $pet, bool $includeEnergy): int
+    private function lowestDisplayedMetric(Pet $pet): int
     {
         $metrics = $pet->displayMetrics();
-        if (! $includeEnergy) {
-            unset($metrics['energy_level']);
-        }
+        unset($metrics['energy_level']);
 
         return min($metrics);
     }
@@ -573,10 +583,10 @@ class EscalationService
     }
 
     /**
-     * Push copy key of the lowest displayed metric (ties: hunger, thirst,
-     * hygiene, energy). Energy only outside quiet hours, like the threshold.
+     * Push copy key of the lowest displayed ladder metric (ties: hunger,
+     * thirst, hygiene).
      */
-    private function lowestMetricKey(Pet $pet, bool $includeEnergy): string
+    private function lowestMetricKey(Pet $pet): string
     {
         $shown = $pet->displayMetrics();
         $candidates = [
@@ -584,9 +594,6 @@ class EscalationService
             'thirst' => $shown['thirst_level'],
             'hygiene' => $shown['hygiene_level'],
         ];
-        if ($includeEnergy) {
-            $candidates['energy'] = $shown['energy_level'];
-        }
 
         return (string) array_search(min($candidates), $candidates, true);
     }

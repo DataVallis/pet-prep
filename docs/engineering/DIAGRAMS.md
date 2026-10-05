@@ -315,7 +315,7 @@ stateDiagram-v2
   [*] --> Unborn: pairing (PIN)
   Unborn --> OK: contract signed = birth<br/>(born_at = now, metrics 100 %)
   note left of Unborn: waiting for the contract —<br/>no decay, no hygiene events,<br/>no day close, no escalation;<br/>actions 423 contract_required
-  OK --> Phase1: displayed metric ≤ 30 %<br/>(energy only outside quiet hours)
+  OK --> Phase1: displayed hunger / thirst / hygiene ≤ 30 %<br/>(energy is off the ladder: separate daily walk reminder)
   Phase1 --> Phase2: ≤ 10 %
   Phase2 --> Phase3: hunger / thirst / hygiene 0 % for > 1 h<br/>(parent alarm — never from energy)
   Phase1 --> OK: all ≥ 31 %
@@ -945,7 +945,7 @@ sequenceDiagram
   E->>E: level up → activities_log + PetUpdated::afterCommit
   E->>N: escalation(pet, type, metric)
   N->>F: phase 1/2 → caretakerRecipients · phase 3 → parentRecipients · illness / game over → both
-  Note over N: energy phase 1/2 → walk_reminder (normal, 1 per local day)
+  Note over N: energy ≤ 30 % (outside quiet hours) → walkReminder(): separate, 1 per local day, not a phase
   alt PUSH_ENABLED=false
     N-->>E: nothing (no row)
   else same pet+type within 30 min (walk: same day) · nobody to reach · quiet hours (phase 1/2/3)

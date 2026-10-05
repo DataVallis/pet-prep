@@ -374,7 +374,7 @@ describe('Energy is not an hourly neglect metric (daily walk rule, David 2026-10
         expect($illAt)->toBeNull();
         expect($fresh->energy_level)->toBe(0.0);
         expect($fresh->energy_zero_since)->toBeNull();
-        expect($fresh->escalation_level)->toBe(2);      // reminder only
+        expect($fresh->escalation_level)->toBe(0);      // energy is off the phase ladder (walk reminder only, PR #35)
         expect($fresh->is_game_over)->toBeFalse();
         expect($fresh->pet_state)->toBe(PetStateEnum::LowEnergy);
     });
