@@ -25,7 +25,7 @@ import {
   setDashboardHardStop,
 } from '@/modules/family/live';
 import { familyFromDashboard } from '@/modules/family/family';
-import { makeBroadcast, makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
+import { makeBroadcast, makeFamilyPet, makeMedia, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
 
 describe('invite helpers', () => {
   it('normalises what the parent typed (no inner spaces reach the backend)', () => {
@@ -87,6 +87,14 @@ describe('live dashboard', () => {
     expect(familyFromDashboard(data)?.pets.find((p) => p.id === 8)?.is_hard_stopped).toBe(false);
     expect(patchDashboardPet(data, makeBroadcast({ pet_id: 99 }))).toBe(data);
     expect(patchDashboardPet(undefined, event)).toBeUndefined();
+  });
+
+  it('carries the freshly signed media of the broadcast (M4-05); keeps it when absent', () => {
+    const media = makeMedia({ status: 'partial', reference_image_url: 'https://api.petprep.si/api/media/1?v=a&signature=s' });
+    const next = patchDashboardPet(data, makeBroadcast({ pet_id: 7, event_type: 'reference_image_ready', media }));
+    expect(familyFromDashboard(next)?.pets.find((p) => p.id === 7)?.media).toEqual(media);
+    const kept = patchDashboardPet(data, makeBroadcast({ pet_id: 7 }));
+    expect(familyFromDashboard(kept)?.pets.find((p) => p.id === 7)?.media).toEqual(makeMedia());
   });
 
   it('sets the hard-stop flag from the toggle answer', () => {

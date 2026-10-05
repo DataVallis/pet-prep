@@ -57,6 +57,8 @@ export function patchDashboardPet(
     escalation_level: event.escalation_level,
     awaiting_contract: event.awaiting_contract ?? pet.awaiting_contract,
     born_at: event.born_at !== undefined ? event.born_at : pet.born_at,
+    // Freshly signed media (M4-05) — e.g. the reference image appears on `reference_image_ready`.
+    media: event.media ?? pet.media,
   };
   const nextPets = pets.slice();
   nextPets[index] = patched;

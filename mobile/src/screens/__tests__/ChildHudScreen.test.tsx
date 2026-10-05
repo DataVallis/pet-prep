@@ -13,7 +13,8 @@ import ChildHudScreen, { formatAgeMonths, HUD_STRINGS } from '@/screens/ChildHud
 import { LOCKED_STRINGS } from '@/screens/LockedScreen';
 import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
 import { isAwaitingContract, useAppStore } from '@/store/appStore';
-import { makeBroadcast, makeLiveChildState, makePet } from '@/test-utils/fixtures';
+import { makeBroadcast, makeLiveChildState, makeMedia, makePet } from '@/test-utils/fixtures';
+import { liveVideoPlayers, mockVideoPlayers, playerUris, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import type { PetUpdatedBroadcast } from '@/types';
 
@@ -342,4 +343,89 @@ describe('formatAgeMonths', () => {
     expect(formatAgeMonths(3)).toBe('STAROST: 3 MESECI');
     expect(formatAgeMonths(11)).toBe('STAROST: 11 MESECEV');
   });
+
 });
+
+describe('ChildHudScreen — AI dog media (M4-03)', () => {
+    const IDLE = 'https://api.petprep.si/api/media/2?expires=1&v=idle&signature=a';
+    const HUNGRY = 'https://api.petprep.si/api/media/4?expires=1&v=hungry&signature=a';
+    const IMG = 'https://api.petprep.si/api/media/1?expires=1&v=img&signature=a';
+    const ready = makeMedia({
+      status: 'ready',
+      reference_image_url: IMG,
+      videos: { idle: IDLE, hungry: HUNGRY },
+      states: ['idle', 'hungry'],
+    });
+
+    beforeEach(() => {
+      jest.clearAllMocks();
+      mockSocket.handler = null;
+      useAppStore.setState(useAppStore.getInitialState(), true);
+      signInChild();
+      resetMockVideoPlayers();
+    });
+
+    it('plays the video of the server pet_state as the main dog visual', async () => {
+      await renderHud(makeLiveChildState({ pet: { pet_state: 'hungry', media: ready } }));
+      expect(screen.getByTestId('hud-pet-media')).toBeTruthy();
+      expect(playerUris()).toEqual([HUNGRY]);
+      expect(liveVideoPlayers()[0].playing).toBe(true);
+    });
+
+    it('no media yet: the animated avatar placeholder with the mood, pending hint', async () => {
+      await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: makeMedia({ status: 'pending' }) } }));
+      expect(mockVideoPlayers).toHaveLength(0);
+      expect(screen.getByText(HUD_STRINGS.moods.idle)).toBeTruthy();
+      expect(screen.getByTestId('hud-pet-media-pending')).toBeTruthy();
+    });
+
+    it('a broadcast with a new pet_state crossfades to that video', async () => {
+      await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: ready } }));
+      expect(playerUris()).toEqual([IDLE]);
+      await act(async () => {
+        mockSocket.handler?.(makeBroadcast({ pet_state: 'hungry', hunger_level: 20, media: ready }));
+      });
+      // TanStack notifies observers on a 0 ms timer.
+      await waitFor(() => expect(playerUris()).toEqual([IDLE, HUNGRY]));
+    });
+
+    it('M3: at the vet the sick video keeps playing under a translucent grey lock', async () => {
+      const sick = makeMedia({ status: 'ready', reference_image_url: IMG, videos: { idle: IDLE, sick: HUNGRY }, states: ['idle', 'sick'] });
+      getChildPet.mockResolvedValue(
+        makeLiveChildState({
+          pet: { pet_state: 'sick', is_ill: true, illness_until: '2026-10-04T16:30:00+00:00', media: sick },
+          lock: { is_locked: true, reason: 'ill', until: '2026-10-04T18:30:00+02:00' },
+        }),
+      );
+      renderWithQuery(<AppNavigator />);
+      expect(await screen.findByTestId('locked-card-glass')).toBeTruthy();
+      expect(screen.getByText(LOCKED_STRINGS.illness.title)).toBeTruthy();
+      expect(screen.getByText(LOCKED_STRINGS.illness.body('18:30'))).toBeTruthy();
+      const flat = [screen.getByTestId('locked-screen').props.style].flat(3) as Array<{ backgroundColor?: string } | undefined>;
+      expect(flat.some((st) => st?.backgroundColor === 'rgba(71, 85, 105, 0.55)')).toBe(true);
+      await waitFor(() => expect(playerUris()).toEqual([HUNGRY]));
+      expect(liveVideoPlayers()[0].playing).toBe(true);
+    });
+
+    it('M3: game over → opaque lock screen, no video', async () => {
+      getChildPet.mockResolvedValue(
+        makeLiveChildState({
+          pet: { is_game_over: true, media: ready },
+          lock: { is_locked: true, reason: 'game_over', until: null },
+        }),
+      );
+      renderWithQuery(<AppNavigator />);
+      expect(await screen.findByTestId('locked-card')).toBeTruthy();
+      await waitFor(() => expect(screen.getByTestId('hud-pet-media-image', { includeHiddenElements: true })).toBeTruthy());
+      expect(liveVideoPlayers()).toHaveLength(0);
+    });
+
+    it('an expired URL refetches the child state once', async () => {
+      await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: ready } }));
+      const calls = getChildPet.mock.calls.length;
+      await act(async () => {
+        mockVideoPlayers[0].emit('statusChange', { status: 'error' });
+      });
+      await waitFor(() => expect(getChildPet.mock.calls.length).toBe(calls + 1));
+    });
+  });
