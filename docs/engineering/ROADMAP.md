@@ -145,6 +145,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - Second Chance reset (19,99 € consumable)
 - IAP ekonomija: veterinar, priboljški, igrače
 - B2B affiliate (Mr. Pet) — QR kuponi
+- **M5 Realistična simulacija** (David, 5. 10. 2026; spec `docs/product/REALISM_SPEC.md`): izbira izvora in starosti, rast in mediji po fazah, vedenje (nered, uničevanje), šolanje z učljivostjo po pasmi — predpogoj M1-19 (podatki iz virov)
 - Skaliranje in nove države: glej `docs/engineering/SCALING.md` (sprožilci + ukrepi)
 - Faza 2: Real-World AI asistent (LLM + RAG, pgvector), IoT ovratnice — spec `docs/product/PHASE2_SPEC.md`; predpogoj: metrika "% družin, ki po izzivu kupijo psa"
 - Mačka
