@@ -27,7 +27,11 @@ export interface HudLayoutInput {
 
 /** Size of one MetricBar; `trackHeight` is the coloured bar itself. */
 export interface MetricSizing {
-  variant: 'regular' | 'compact' | 'tiny';
+  /**
+   * `micro` = badge + bar only (no texts) when even `tiny` doesn't fit;
+   * `hidden` = no column at all (e.g. landscape) — never drawn behind the dock.
+   */
+  variant: 'regular' | 'compact' | 'tiny' | 'micro' | 'hidden';
   /** Round icon badge diameter. */
   badge: number;
   iconSize: number;
@@ -37,6 +41,8 @@ export interface MetricSizing {
   gap: number;
   trackHeight: number;
   showLabel: boolean;
+  /** The "100%" line under the bar. */
+  showPercent: boolean;
 }
 
 export interface HudLayout {
@@ -66,23 +72,43 @@ export const SPACING = 10;
 export const PERCENT_LINE = 16;
 export const LABEL_LINE = 12;
 export const MAX_TRACK = 100;
+/** Width of one MetricBar (fits "ENERGIJA" in 9 pt mono on one line). */
+export const METRIC_BAR_WIDTH = 58;
+/** Distance of the metric column from the right screen edge. */
+export const METRICS_RIGHT = 12;
+/** Width the metric column reserves on the right (+12 pt air): banners / toasts stay left of it. */
+export const METRICS_RESERVED_RIGHT = METRICS_RIGHT + METRIC_BAR_WIDTH + 12;
 
 type Variant = Omit<MetricSizing, 'trackHeight'> & { minTrack: number };
 
 /** Tried in order; the first whose track reaches `minTrack` wins. */
 const VARIANTS: readonly Variant[] = [
-  { variant: 'regular', badge: 34, iconSize: 16, innerGap: 6, gap: 12, showLabel: true, minTrack: 40 },
-  { variant: 'compact', badge: 26, iconSize: 13, innerGap: 3, gap: 8, showLabel: true, minTrack: 20 },
-  { variant: 'tiny', badge: 24, iconSize: 12, innerGap: 3, gap: 6, showLabel: false, minTrack: 8 },
+  { variant: 'regular', badge: 34, iconSize: 16, innerGap: 6, gap: 12, showLabel: true, showPercent: true, minTrack: 40 },
+  { variant: 'compact', badge: 26, iconSize: 13, innerGap: 3, gap: 8, showLabel: true, showPercent: true, minTrack: 20 },
+  { variant: 'tiny', badge: 24, iconSize: 12, innerGap: 3, gap: 6, showLabel: false, showPercent: true, minTrack: 8 },
+  { variant: 'micro', badge: 18, iconSize: 10, innerGap: 2, gap: 4, showLabel: false, showPercent: false, minTrack: 4 },
 ];
 
+const HIDDEN: MetricSizing = {
+  variant: 'hidden',
+  badge: 0,
+  iconSize: 0,
+  innerGap: 0,
+  gap: 0,
+  trackHeight: 0,
+  showLabel: false,
+  showPercent: false,
+};
+
 /** Height of one MetricBar without its track. */
-export function metricChrome(s: Pick<MetricSizing, 'badge' | 'innerGap' | 'showLabel'>): number {
-  return s.badge + s.innerGap + s.innerGap + PERCENT_LINE + (s.showLabel ? s.innerGap + LABEL_LINE : 0);
+export function metricChrome(s: Pick<MetricSizing, 'badge' | 'innerGap' | 'showLabel'> & { showPercent?: boolean }): number {
+  const percent = s.showPercent === false ? 0 : s.innerGap + PERCENT_LINE;
+  return s.badge + s.innerGap + percent + (s.showLabel ? s.innerGap + LABEL_LINE : 0);
 }
 
-/** Height of the whole column of {@link METRIC_COUNT} bars. */
+/** Height of the whole column of {@link METRIC_COUNT} bars (0 when hidden). */
 export function metricsColumnHeight(s: MetricSizing): number {
+  if (s.variant === 'hidden') return 0;
   return METRIC_COUNT * (metricChrome(s) + s.trackHeight) + (METRIC_COUNT - 1) * s.gap;
 }
 
@@ -94,19 +120,23 @@ function toSizing(v: Variant, trackHeight: number): MetricSizing {
     innerGap: v.innerGap,
     gap: v.gap,
     showLabel: v.showLabel,
+    showPercent: v.showPercent,
     trackHeight,
   };
 }
 
-/** Largest bar sizing that fits `available` points (falls back to the tiny variant). */
+/**
+ * Largest bar sizing that fits `available` points. Invariant (tested for every height):
+ * `metricsColumnHeight(fitMetrics(a)) <= a` — when not even the text-less `micro` bars
+ * fit, the column is hidden instead of running behind the dock.
+ */
 export function fitMetrics(available: number): MetricSizing {
   for (const v of VARIANTS) {
     const perBar = (available - (METRIC_COUNT - 1) * v.gap) / METRIC_COUNT;
     const track = Math.floor(perBar - metricChrome(v));
     if (track >= v.minTrack) return toSizing(v, Math.min(MAX_TRACK, track));
   }
-  const tiny = VARIANTS[VARIANTS.length - 1];
-  return toSizing(tiny, tiny.minTrack);
+  return HIDDEN;
 }
 
 export function computeHudLayout({

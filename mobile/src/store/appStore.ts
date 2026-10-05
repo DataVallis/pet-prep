@@ -133,6 +133,9 @@ interface AppStore {
   setWalkModalVisible: (visible: boolean) => void;
   isCleaningOverlayVisible: boolean;
   setCleaningOverlayVisible: (visible: boolean) => void;
+  /** "Moj kuža" album over the HUD (the HUD video pauses while it is open). */
+  isAlbumVisible: boolean;
+  setAlbumVisible: (visible: boolean) => void;
 
   // Logout / reset
   reset: () => void;
@@ -223,6 +226,8 @@ export const useAppStore = create<AppStore>((set) => ({
   setWalkModalVisible: (isWalkModalVisible) => set({ isWalkModalVisible }),
   isCleaningOverlayVisible: false,
   setCleaningOverlayVisible: (isCleaningOverlayVisible) => set({ isCleaningOverlayVisible }),
+  isAlbumVisible: false,
+  setAlbumVisible: (isAlbumVisible) => set({ isAlbumVisible }),
 
   // Logout / reset — leaves the app on the login screen (bootStatus 'ready').
   reset: () =>
@@ -238,5 +243,6 @@ export const useAppStore = create<AppStore>((set) => ({
       lockDetails: { until: null, timezone: null },
       isWalkModalVisible: false,
       isCleaningOverlayVisible: false,
+      isAlbumVisible: false,
     }),
 }));

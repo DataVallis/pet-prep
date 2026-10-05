@@ -13,7 +13,7 @@ describe('ActionButton', () => {
       <ActionButton icon={<Beef />} label="Feed" onPress={jest.fn()} />,
     );
 
-    // NativeWind's uppercase class won't apply in test env, so text is as-is
+    // `textTransform: 'uppercase'` is a style, so the rendered text keeps its case.
     expect(getByText('Feed')).toBeTruthy();
   });
 

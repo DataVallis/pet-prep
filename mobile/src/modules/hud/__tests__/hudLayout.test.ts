@@ -96,11 +96,21 @@ describe('computeHudLayout', () => {
     expect(l.bannerTop).toBe(l.headerTop + 64 + 6);
   });
 
-  it('never reports negative space (landscape / split screen)', () => {
+  it('never reports negative space and hides the column when nothing fits (landscape / split screen)', () => {
     const l = computeHudLayout({ screenHeight: 200, insets: { top: 0, bottom: 0 } });
     expect(l.metricsAvailable).toBe(0);
-    expect(l.metric.variant).toBe('tiny');
-    expect(l.metric.showLabel).toBe(false);
+    expect(l.metric.variant).toBe('hidden');
+    expect(l.metricsHeight).toBe(0);
+  });
+
+  it('PR #30 review: the column never runs behind the dock for ANY screen height / measured dock', () => {
+    for (let height = 150; height <= 1000; height += 1) {
+      for (const dockHeight of [DOCK_HEIGHT_ESTIMATE, 180, 260]) {
+        const l = computeHudLayout({ screenHeight: height, insets: { top: 20, bottom: 0 }, dockHeight });
+        const dockTopY = height - l.dockBottom - dockHeight;
+        if (l.metricsHeight > 0) expect(l.metricsTop + l.metricsHeight).toBeLessThanOrEqual(dockTopY - SPACING);
+      }
+    }
   });
 });
 
@@ -116,15 +126,19 @@ describe('fitMetrics', () => {
     expect(fitMetrics(515).variant).toBe('compact');
   });
 
-  it.each([200, 280, 350, 420, 516, 600, 800])('the column never exceeds %i pt of available space', (available) => {
-    const sizing = fitMetrics(available);
-    if (sizing.variant !== 'tiny' || available >= metricsColumnHeight(sizing)) {
-      expect(metricsColumnHeight(sizing)).toBeLessThanOrEqual(available);
+  it('the column never exceeds the available space (every height 0–800 pt)', () => {
+    for (let available = 0; available <= 800; available += 1) {
+      expect(metricsColumnHeight(fitMetrics(available))).toBeLessThanOrEqual(available);
     }
   });
 
-  it('drops the labels only in the tiny fallback', () => {
-    expect(fitMetrics(200).showLabel).toBe(false);
-    expect(fitMetrics(380).showLabel).toBe(true);
+  it('shrinks step by step: labels go first, then the percentages, then the whole column', () => {
+    // tiny: chrome 24 + 3 + 3 + 16 = 46, track ≥ 8 → 4 × 54 + 3 × 6 = 234 pt.
+    expect(fitMetrics(380)).toMatchObject({ variant: 'compact', showLabel: true, showPercent: true });
+    expect(fitMetrics(234)).toMatchObject({ variant: 'tiny', showLabel: false, showPercent: true });
+    // micro: chrome 18 + 2 = 20, track ≥ 4 → 4 × 24 + 3 × 4 = 108 pt.
+    expect(fitMetrics(233)).toMatchObject({ variant: 'micro', showLabel: false, showPercent: false });
+    expect(fitMetrics(108)).toMatchObject({ variant: 'micro', trackHeight: 4 });
+    expect(fitMetrics(107)).toMatchObject({ variant: 'hidden', trackHeight: 0 });
   });
 });

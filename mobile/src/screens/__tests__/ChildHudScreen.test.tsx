@@ -10,9 +10,10 @@ import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { ApiError, api } from '@/api/client';
 import { childPetKey } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
-import { computeHudLayout } from '@/modules/hud/hudLayout';
+import { computeHudLayout, METRIC_BAR_WIDTH, METRICS_RESERVED_RIGHT, METRICS_RIGHT } from '@/modules/hud/hudLayout';
 import AppNavigator from '@/navigation/AppNavigator';
 import ChildHudScreen, { formatAgeMonths, HUD_STRINGS } from '@/screens/ChildHudScreen';
+import { ALBUM_STRINGS } from '@/modules/petMedia/album';
 import { LOCKED_STRINGS } from '@/screens/LockedScreen';
 import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
 import { isAwaitingContract, useAppStore } from '@/store/appStore';
@@ -337,6 +338,19 @@ describe('ChildHudScreen', () => {
     expect(await screen.findByText('1.900/4.000')).toBeTruthy();
   });
 
+  it('PR #30 review: the toast sits left of the metric column, never over the bars', async () => {
+    waterPet.mockRejectedValueOnce(new TypeError('Network request failed'));
+    await renderHud();
+    fireEvent.press(screen.getByTestId('action-water'));
+    await screen.findByTestId('hud-toast');
+    const slot = StyleSheet.flatten(screen.getByTestId('hud-toast-slot').props.style) as ViewStyle;
+    expect(slot).toMatchObject({ position: 'absolute', left: 16, right: METRICS_RESERVED_RIGHT, alignItems: 'center' });
+    // The slot ends left of the measured column: right edge + bar width.
+    expect(StyleSheet.flatten(screen.getByTestId('metric-hunger').props.style).width).toBe(METRIC_BAR_WIDTH);
+    expect(StyleSheet.flatten(screen.getByTestId('hud-metrics').props.style).right).toBe(METRICS_RIGHT);
+    expect(METRICS_RESERVED_RIGHT).toBeGreaterThan(METRICS_RIGHT + METRIC_BAR_WIDTH);
+  });
+
   describe('2026-10-05 TestFlight fixes', () => {
     const styleOf = (testID: string): ViewStyle => StyleSheet.flatten(screen.getByTestId(testID).props.style) as ViewStyle;
     const METRICS = ['metric-hunger', 'metric-thirst', 'metric-energy', 'metric-hygiene'] as const;
@@ -484,5 +498,133 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
         mockVideoPlayers[0].emit('statusChange', { status: 'error' });
       });
       await waitFor(() => expect(getChildPet.mock.calls.length).toBe(calls + 1));
+    });
+
+    describe('"Moj kuža" album', () => {
+      const SLEEP = 'https://api.petprep.si/api/media/3?expires=1&v=sleep&signature=a';
+      const album = makeMedia({
+        status: 'partial',
+        reference_image_url: IMG,
+        videos: { idle: IDLE, sleeping: SLEEP },
+        states: ['idle', 'sleeping', 'hungry'],
+      });
+
+      it('opens from the header, lists the entitled media and pauses the HUD video', async () => {
+        await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: album } }));
+        const hudPlayer = liveVideoPlayers()[0];
+        expect(hudPlayer.playing).toBe(true);
+
+        fireEvent.press(screen.getByLabelText(ALBUM_STRINGS.open));
+        expect(screen.getByTestId('hud-album')).toBeTruthy();
+        expect(useAppStore.getState().isAlbumVisible).toBe(true);
+        expect(hudPlayer.playing).toBe(false);
+        expect(screen.getByTestId('album-item-photo')).toBeTruthy();
+        expect(screen.getByTestId('album-item-sleeping')).toBeTruthy();
+        expect(screen.getByTestId('album-item-hungry')).toBeTruthy(); // greyed "Še ni posnetka"
+        expect(screen.queryByTestId('album-item-playing')).toBeNull();
+      });
+
+      it('plays the selected video with one active player; closing resumes the HUD dog', async () => {
+        await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: album } }));
+        const hudPlayer = liveVideoPlayers()[0];
+
+        fireEvent.press(screen.getByTestId('hud-album-open'));
+        fireEvent.press(screen.getByTestId('album-item-sleeping'));
+        const playing = liveVideoPlayers().filter((p) => p.playing);
+        expect(playing).toHaveLength(1);
+        expect(playing[0].source).toEqual({ uri: SLEEP, useCaching: true });
+
+        fireEvent.press(screen.getByTestId('album-close'));
+        expect(screen.queryByTestId('hud-album')).toBeNull();
+        expect(hudPlayer.playing).toBe(true);
+        expect(liveVideoPlayers()).toEqual([hudPlayer]);
+      });
+
+      it('an expired album video refetches the child state', async () => {
+        await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: album } }));
+        fireEvent.press(screen.getByTestId('hud-album-open'));
+        fireEvent.press(screen.getByTestId('album-item-sleeping'));
+        const calls = getChildPet.mock.calls.length;
+        const albumPlayer = liveVideoPlayers().find((p) => p.playing);
+        await act(async () => {
+          albumPlayer?.emit('statusChange', { status: 'error' });
+        });
+        await waitFor(() => expect(getChildPet.mock.calls.length).toBe(calls + 1));
+      });
+
+      it('is not shown while the pet is locked', async () => {
+        useAppStore.getState().setAlbumVisible(true);
+        await renderHud(
+          makeLiveChildState({
+            pet: { is_hard_stopped: true, media: album },
+            lock: { is_locked: true, reason: 'hard_stopped', until: null },
+          }),
+        );
+        expect(screen.queryByTestId('hud-album')).toBeNull();
+      });
+
+      it('PR #31: a lock closes the album for good — lifting it does not reopen it', async () => {
+        getChildPet.mockResolvedValue(makeLiveChildState({ pet: { media: album } }));
+        renderWithQuery(<AppNavigator />);
+        await screen.findByTestId('action-feed');
+        fireEvent.press(screen.getByTestId('hud-album-open'));
+        expect(screen.getByTestId('hud-album')).toBeTruthy();
+
+        getChildPet.mockResolvedValue(
+          makeLiveChildState({
+            pet: { is_hard_stopped: true, media: album },
+            lock: { is_locked: true, reason: 'hard_stopped' },
+            server_time: '2026-10-04T12:01:00+02:00',
+          }),
+        );
+        act(() => {
+          mockSocket.handler?.(
+            makeBroadcast({ is_hard_stopped: true, event_type: 'hard_stop_activated', emitted_at: '2026-10-04T10:00:30.000+00:00' }),
+          );
+        });
+        expect(await screen.findByTestId('locked-screen')).toBeTruthy();
+        expect(useAppStore.getState().isAlbumVisible).toBe(false);
+
+        getChildPet.mockResolvedValue(makeLiveChildState({ pet: { media: album }, server_time: '2026-10-04T12:05:00+02:00' }));
+        act(() => {
+          mockSocket.handler?.(
+            makeBroadcast({ is_hard_stopped: false, event_type: 'hard_stop_deactivated', emitted_at: '2026-10-04T10:04:00.000+00:00' }),
+          );
+        });
+        await waitFor(() => expect(screen.queryByTestId('locked-screen')).toBeNull());
+        expect(screen.queryByTestId('hud-album')).toBeNull();
+        expect(screen.getByTestId('hud-album-open')).toBeTruthy();
+      });
+
+      it('PR #31: no album button while nothing is stored and generation is disabled / failed', async () => {
+        for (const status of ['disabled', 'failed'] as const) {
+          // Realistic backend payload: `states` present, nothing stored.
+          const media = makeMedia({ status, states: ['idle', 'sleeping'] });
+          const { unmount } = await renderHud(makeLiveChildState({ pet: { media } }));
+          expect(screen.queryByTestId('hud-album-open')).toBeNull();
+          unmount();
+        }
+        // Still generating → the album shows the greyed tiles.
+        await renderHud(makeLiveChildState({ pet: { media: makeMedia({ status: 'pending', states: ['idle', 'sleeping'] }) } }));
+        fireEvent.press(screen.getByTestId('hud-album-open'));
+        expect(screen.getAllByText(ALBUM_STRINGS.missing)).toHaveLength(2);
+      });
+
+      it('PR #31: leaving the HUD clears the album flag', async () => {
+        const { unmount } = await renderHud(makeLiveChildState({ pet: { media: album } }));
+        fireEvent.press(screen.getByTestId('hud-album-open'));
+        expect(useAppStore.getState().isAlbumVisible).toBe(true);
+        unmount();
+        expect(useAppStore.getState().isAlbumVisible).toBe(false);
+      });
+
+      it('PR #31: the HUD is hidden from TalkBack / VoiceOver while the album is open', async () => {
+        await renderHud(makeLiveChildState({ pet: { media: album } }));
+        expect(screen.getByTestId('hud-content').props.importantForAccessibility).toBe('auto');
+        fireEvent.press(screen.getByTestId('hud-album-open'));
+        const content = screen.getByTestId('hud-content', { includeHiddenElements: true });
+        expect(content.props.importantForAccessibility).toBe('no-hide-descendants');
+        expect(content.props.accessibilityElementsHidden).toBe(true);
+      });
     });
   });

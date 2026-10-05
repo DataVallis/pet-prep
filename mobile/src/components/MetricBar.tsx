@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 
-import type { MetricSizing } from '@/modules/hud/hudLayout';
+import { METRIC_BAR_WIDTH, type MetricSizing } from '@/modules/hud/hudLayout';
 import { interpolateColor } from '@/utils/metrics';
 
 export interface MetricBarProps {
@@ -14,7 +14,7 @@ export interface MetricBarProps {
   /** Optional override fill color; defaults to interpolateColor(level). */
   color?: string;
   /** Size from `computeHudLayout` (the HUD fits four bars to the screen); default = 100 pt track. */
-  sizing?: Pick<MetricSizing, 'badge' | 'innerGap' | 'trackHeight' | 'showLabel'>;
+  sizing?: Pick<MetricSizing, 'badge' | 'innerGap' | 'trackHeight' | 'showLabel'> & { showPercent?: boolean };
   testID?: string;
 }
 
@@ -44,7 +44,9 @@ export default function MetricBar({ level, label, icon, color, sizing = DEFAULT_
         />
       </View>
 
-      <Text style={styles.percentText} numberOfLines={1} maxFontSizeMultiplier={1}>{clamped}%</Text>
+      {sizing.showPercent !== false && (
+        <Text style={styles.percentText} numberOfLines={1} maxFontSizeMultiplier={1}>{clamped}%</Text>
+      )}
       {label && sizing.showLabel ? (
         // One line always ("ENERGIJA" used to wrap to "ENERGIJ / A"): narrow mono font,
         // no letter-spacing, fixed font scale (the HUD height math relies on the line
@@ -59,7 +61,7 @@ export default function MetricBar({ level, label, icon, color, sizing = DEFAULT_
 
 const styles = StyleSheet.create({
   container: {
-    width: 58,
+    width: METRIC_BAR_WIDTH,
     alignItems: 'center',
   },
   iconBadge: {
@@ -101,6 +103,6 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     letterSpacing: 0,
     color: 'rgba(255, 255, 255, 0.6)',
-    maxWidth: 58,
+    maxWidth: METRIC_BAR_WIDTH,
   },
 });

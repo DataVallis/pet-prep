@@ -8,6 +8,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-05 — Album »Moj kuža«: otrok vidi vse posnetke svojega psa
+
+**Kaj se je zgodilo:** David je kot otrok na glavnem zaslonu videl le en video v zanki — želel je videti vse. Zdaj ima otrok v glavi zaslona gumb za **album »Moj kuža«**: fotografija psa in ploščica za vsak njegov video (*Miruje, Spi, Utrujen, Lačen, Bolan, Se igra* — toliko, kolikor jih ima ta pes). Tap odpre posnetek čez cel zaslon (v zanki, brez zvoka, z gumbom za zvok); s puščicami ali potegom gre na naslednjega. Posnetki, ki se še pripravljajo, so sivi »Še ni posnetka«; posnetkov, ki jih pes nima (npr. dodatna stanja plačljive pasme), album ne kaže — nič otroka ne vabi k nakupu. Hkrati teče le en video (glavni zaslon se ustavi), zato album ne prazni baterije in ne porablja dvojnih podatkov. Isti album lahko odpre tudi starš iz podrobnosti otroka.
+- **Številke:** testi v aplikaciji skupaj **721 zelenih**; merilniki na zaslonu preverjeni za vsako višino zaslona od 150 do 1000 točk — nikoli več pod gumbi.
+
+**Kako to povedati**
+- 🧒 *"Poglej, kaj vse zna tvoj kuža! Odpri album in ga glej, kako spi, se igra ali je lačen."*
+- 👩 *"Otrok vidi vse posnetke svojega kužka — brez oglasov in brez vabljenja k nakupom v otroškem delu."*
+
 ## 2026-10-05 — Popravki s prvega TestFlighta: sprehod, merilniki, povezava v živo
 
 **Kaj se je zgodilo:** David je na iPhonu (TestFlight) našel tri napake; vse tri so popravljene na veji `fix/mobile-unstyled-overlays`:
