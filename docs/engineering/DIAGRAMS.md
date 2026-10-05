@@ -1059,7 +1059,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-  R["BreedStageParamsSeeder::rows()<br/>decision = 'potrdil David 2026-10-05'"] --> T{"tuple has any<br/>breed_stage_param_changes row?"}
+  R["28 TARGETS frozen in the migration<br/>(= seeder rows with decision 'potrdil David 2026-10-05')"] --> T{"tuple has any<br/>breed_stage_param_changes row?"}
   T -- "yes (admin edit / re-key / delete)" --> SK1["skip — Filament wins"]
   T -- no --> X{"row exists?"}
   X -- "no (fresh DB)" --> SK2["skip — seeder inserts the confirmed row"]

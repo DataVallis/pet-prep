@@ -11,8 +11,10 @@ use App\Services\RoutineLedgerService;
 use Database\Seeders\BreedStageParamsSeeder;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Schema;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\getJson;
@@ -287,6 +289,41 @@ describe('data migration for the rows PR #37 seeded', function () {
             ->and(collect($profile['today']['feed_windows'])->map(fn ($w) => $w['start'].'-'.$w['end'])->all())
             ->toBe(['07:00-09:00', '11:00-13:00', '15:00-17:00', '19:00-21:00']);
         postJson('/api/child/pet/feed')->assertOk(); // 08:30 local
+    });
+});
+
+describe('frozen migration data and rollback', function () {
+    it('freezes exactly the seeder\'s 28 confirmed rows (tuple + columns) as of today', function () {
+        $migration = require database_path('migrations/'.DSD_MIGRATION);
+        $fromSeeder = array_map(function (array $row): array {
+            $columns = BreedStageParamsSeeder::columns($row);
+            $columns['value'] = $row['value'];
+
+            return [$row['breed_slug'], $row['stage'], $row['age_from_months'], $row['key'], $columns];
+        }, dsdConfirmedRows());
+
+        expect($migration::TARGETS)->toHaveCount(28)
+            ->and($migration::TARGETS)->toBe($fromSeeder)
+            ->and($migration->withinTransaction)->toBeFalse();
+    });
+
+    it('keeps the actor column and its audit rows on rollback, and a re-run changes nothing', function () {
+        dsdRevertToPr37();
+        dsdMigrate();
+        $snapshot = DB::table('breed_stage_params')->orderBy('id')->get()->map(fn ($r) => (array) $r)->all();
+        $audits = DB::table('breed_stage_param_changes')->orderBy('id')->get()->map(fn ($r) => (array) $r)->all();
+        expect(collect($audits)->pluck('actor')->unique()->all())->toBe(['system: David decision 2026-10-05']);
+
+        // The decision migration is the newest one: --step=1 rolls back only it.
+        expect(Artisan::call('migrate:rollback', ['--step' => 1]))->toBe(0);
+        expect(DB::table('migrations')->where('migration', str_replace('.php', '', DSD_MIGRATION))->exists())->toBeFalse()
+            ->and(Schema::hasColumn('breed_stage_param_changes', 'actor'))->toBeTrue()
+            ->and(DB::table('breed_stage_param_changes')->orderBy('id')->get()->map(fn ($r) => (array) $r)->all())->toBe($audits);
+
+        expect(Artisan::call('migrate'))->toBe(0);
+        expect(DB::table('migrations')->where('migration', str_replace('.php', '', DSD_MIGRATION))->exists())->toBeTrue()
+            ->and(DB::table('breed_stage_params')->orderBy('id')->get()->map(fn ($r) => (array) $r)->all())->toBe($snapshot)
+            ->and(DB::table('breed_stage_param_changes')->orderBy('id')->get()->map(fn ($r) => (array) $r)->all())->toBe($audits);
     });
 });
 
