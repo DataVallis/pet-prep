@@ -4,6 +4,7 @@ use App\Models\Pet;
 use App\Models\User;
 use App\Services\HygieneEventService;
 use Database\Seeders\BreedConfigsSeeder;
+use Database\Seeders\BreedStageParamsSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Facades\Http;
@@ -67,8 +68,28 @@ function actingAsRole(User $user): User
 }
 
 // Helper to seed breed configs in tests — the real (production) seeder, so
-// tests always run against the canonical tunables (M1-06).
+// tests always run against the canonical tunables (M1-06). Only the
+// breed_configs rows: without life-stage data (M5-R01) a pet keeps the
+// pre-M5 rules (breed feed windows, daily_steps_required), which the older
+// game-loop tests are written against. Life-stage tests call
+// seedLifeStageData() (or seedBreedConfigs() + seedStageParams()).
 function seedBreedConfigs(): void
+{
+    (new BreedConfigsSeeder)->seedConfigs();
+}
+
+/**
+ * The sourced life-stage rows (M5-R01, BreedStageParamsSeeder) for the seeded breeds.
+ */
+function seedStageParams(): void
+{
+    (new BreedStageParamsSeeder)->run();
+}
+
+/**
+ * Everything the production deploy seeds: breed configs + life-stage data.
+ */
+function seedLifeStageData(): void
 {
     (new BreedConfigsSeeder)->run();
 }

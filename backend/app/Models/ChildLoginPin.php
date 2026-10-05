@@ -21,6 +21,7 @@ use Illuminate\Support\Carbon;
  * @property Carbon $expires_at
  * @property Carbon|null $consumed_at
  * @property Carbon|null $revoked_at
+ * @property array{breed?: string, origin?: string, age_stage?: string}|null $pet_options New pet's profile (M5-R01)
  */
 class ChildLoginPin extends Model
 {
@@ -36,6 +37,7 @@ class ChildLoginPin extends Model
         'expires_at',
         'consumed_at',
         'revoked_at',
+        'pet_options',
     ];
 
     /**
@@ -52,6 +54,7 @@ class ChildLoginPin extends Model
             'expires_at' => 'datetime',
             'consumed_at' => 'datetime',
             'revoked_at' => 'datetime',
+            'pet_options' => 'array',
         ];
     }
 

@@ -23,7 +23,7 @@ class RetryReferenceImagesCommand extends Command
     {
         $queued = $retries->retryDueWithVideos(max(1, (int) $this->option('limit')));
 
-        $this->info("Re-queued {$queued['images']} reference image(s) and {$queued['videos']} state video(s).");
+        $this->info("Re-queued {$queued['images']} reference image(s), {$queued['stages']} life-stage image(s) and {$queued['videos']} state video(s).");
 
         return self::SUCCESS;
     }

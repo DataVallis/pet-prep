@@ -142,6 +142,27 @@ final class ModelProfile
     }
 
     /**
+     * Input for an image EDIT model (M5-R01 stage growth): prompt + source
+     * image URL(s) under the profile's image param (`image_urls` list for
+     * Nano Banana Pro Edit) + seed + profile params.
+     *
+     * @return array<string, mixed>
+     */
+    public function editInput(string $prompt, string $imageUrl, ?int $seed = null): array
+    {
+        $input = [
+            'prompt' => $prompt,
+            $this->imageParam => str_ends_with($this->imageParam, 's') ? [$imageUrl] : $imageUrl,
+        ];
+
+        if ($this->supportsSeed && $seed !== null) {
+            $input['seed'] = $seed;
+        }
+
+        return $input + $this->params;
+    }
+
+    /**
      * Input for an image-to-video model.
      *
      * @return array<string, mixed>

@@ -1,6 +1,6 @@
 # PetPrep — Realistična simulacija psa (izvor, starost, rast, vedenje, šolanje)
 
-> **Status:** osnutek — David, 5. 10. 2026 ("čim bolj realna simulacija"). Odprta vprašanja na koncu. Ko so odločitve sprejete, se pravila prenesejo v `PRODUCT_SPEC.md`, naloge v `ROADMAP.md` (epik **M5**).
+> **Status:** odločitve sprejete (§7); strežniški del faz in profila izveden (M5-R01, §8) — David, 5. 10. 2026 ("čim bolj realna simulacija"). Ko so odločitve sprejete, se pravila prenesejo v `PRODUCT_SPEC.md`, naloge v `ROADMAP.md` (epik **M5**).
 > **Temeljno pravilo:** vse številke o pasmah, starosti, rasti, prehrani, vedenju in učljivosti pridejo **iz preverljivih virov** (M1-19) — nič si ne izmišljujemo. V igri so označene z virom.
 
 ## 1. Kaj starš izbere ob ustvarjanju psa (pred PIN-om otroka)
@@ -49,3 +49,16 @@ Za vsako pasmo in fazo zbrati z viri: velikost/teža po starosti (rastne krivulj
 - **Izbira ob začetku:** vse štiri starosti takoj (mladiček, mlad pes, odrasel, starejši) in oba izvora (kupljen, posvojen).
 - **Cena:** vse izbire (starost, izvor) za vse — mešanček brezplačen v vseh kombinacijah; plačljive so pasme in 12-tedenski izziv s certifikatom.
 - **Podatki:** najprej raziskava z viri (tabela z virom za vsako številko) → David pregleda in potrdi → uvoz → šele nato gradnja M5.
+
+## 8. Stanje izvedbe (posodobljeno 5. 10. 2026)
+| Del | Stanje | Kje |
+|---|---|---|
+| §1 Izbira ob ustvarjanju (pasma, izvor, starost) | ✅ **strežnik** (M5-R01) — `POST /api/parent/generate-pin {breed, origin, age_stage}`; mešanček brezplačen v vseh kombinacijah; aplikacija še ne (M5-R04) | PRODUCT_SPEC §3 |
+| §2 Starost in faze | ✅ strežnik — starost = ob prihodu + tedni; faze iz virov (mladiček do 9 mes., mlad do 3 let, starejši 9 / 9,8 let); pravila faze od lokalne polnoči po tedenskem rojstnem dnevu | PRODUCT_SPEC §4, `breed_stage_params` |
+| §2 Slika raste s psom | ✅ strežnik — ob prehodu faze nova referenčna slika istega psa (image-to-image, Nano Banana Pro Edit) + videi; stare slike v zgodovini (album pozneje) | PRODUCT_SPEC §10 |
+| §3 Več obrokov (mladiček 4 → 3 → 2) | ✅ strežnik — okna po fazi (ure = predlog), obrok v tihih urah opravi starš | PRODUCT_SPEC §5 |
+| §3 Potrebe po gibanju po fazi | ✅ strežnik — cilj korakov = minute × 100 | PRODUCT_SPEC §5 |
+| §3 Več spanja | 🟡 podatki shranjeni (S28), uporaba v videih / vedenju še ne | `breed_stage_params.sleep_hours` |
+| §3 Nered, uničevanje, plašnost | ⏳ M5-R02 | ROADMAP |
+| §4 Šolanje | ⏳ M5-R03 (učljivost Coren shranjena) | ROADMAP |
+| §6 Podatki iz virov | ✅ uvoženo (insert-only), NEPODPRTO označeno (`verified = false`) in vidno v Filamentu | `docs/research/dog-data/`, DECISIONS 5. 10. |

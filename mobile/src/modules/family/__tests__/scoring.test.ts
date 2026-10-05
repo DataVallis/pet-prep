@@ -153,6 +153,7 @@ describe('texts', () => {
     expect(activityText({ activity_type: 'fed_pet', actor_nickname: 'Maja' })).toBe('Maja nahranil(a) kužka');
     expect(activityText({ activity_type: 'watered_pet', actor_nickname: null })).toBe('Nalil(a) vodo');
     expect(activityText({ activity_type: 'ignored_warning', actor_nickname: null })).toBe('Opozorilo ni bilo upoštevano');
+    expect(activityText({ activity_type: 'parent_fed_pet', actor_nickname: null })).toBe('Obrok med tihimi urami (nahrani starš)');
     expect(activityWhenText('2026-10-04T05:15:00Z', TZ, '2026-10-04')).toBe('07:15');
     expect(activityWhenText('2026-10-03T18:00:00+02:00', TZ, '2026-10-04')).toBe('včeraj 18:00');
     expect(activityWhenText('2026-10-01T18:00:00+02:00', TZ, '2026-10-04')).toBe('1. 10. 18:00');

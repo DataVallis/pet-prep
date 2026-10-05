@@ -31,16 +31,17 @@ use Throwable;
  * each was done or missed. Derived from existing data — nothing new is asked
  * of the child:
  *
- *  - feed: one routine per breed feed window starting that day; done = a
- *    `fed_pet` row inside [start, end); missed when the window ended unfed.
- *    A window that lies entirely in quiet hours is not expected.
+ *  - feed: one routine per feed window starting that day (the windows of the
+ *    pet's life stage that day, M5-R01); done = a `fed_pet` row inside
+ *    [start, end); missed when the window ended unfed. A window that lies
+ *    entirely in quiet hours is done by the parent: not expected.
  *  - water: `water_times_per_day` refills per day, pro rata to the part of
  *    the day's non-quiet time the pet was in play (birth day, hard stop,
  *    vet, game over), rounded half up; done = `watered_pet` rows that day
  *    (in order, up to the expected number); the rest is missed at day end.
  *  - clean: one routine per hygiene event that happened (`applied`); done =
  *    cleaned within 2 hours counted outside quiet hours.
- *  - walk: the daily step goal; done = the day's steps reached the goal
+ *  - walk: the daily step goal (of that day's life stage); done = the day's steps reached the goal
  *    (`pet_daily_walks.achieved`, live for today); missed at day end. Not
  *    expected on the birth day (energy grace) or for a past day without any
  *    step data (scheduler outage).
@@ -97,7 +98,10 @@ class RoutineLedgerService
         ActivityType::WalkedPet,
     ];
 
-    public function __construct(private readonly CareScheduleService $schedule) {}
+    public function __construct(
+        private readonly CareScheduleService $schedule,
+        private readonly LifeStageService $lifeStages,
+    ) {}
 
     // ──────────────────────────────────────────────────────────────
     //  Reading
@@ -354,15 +358,19 @@ class RoutineLedgerService
 
         $routines = [];
 
-        // Feed: one routine per window that starts today.
-        foreach ($this->schedule->feedWindowsStartingOn($config, $date, $tz) as $slot => [$start, $end]) {
+        // Feed: one routine per window that starts today (the windows of the
+        // pet's life stage that day, M5-R01).
+        foreach ($this->schedule->feedWindowsStartingOn($pet, $config, $date) as $slot => [$start, $end]) {
             $start = $start->utc();
             $end = $end->utc();
             if ($start->lessThan($born)) {
                 continue;
             }
             if (QuietHours::splitSecondsBetween($quiet, $start, $end)['normal'] <= 0) {
-                continue; // window entirely in quiet hours: not expected
+                // Window entirely in quiet hours: done by the parent (the
+                // tick feeds the dog, parent_fed_pet) — never expected from
+                // the child, never counts for or against them (M5-R01).
+                continue;
             }
             $fed = $this->firstActivity($in['activities'], ActivityType::FedPet, $start, $end);
             $routines[] = $this->resolve($pet, $date, RoutineType::Feed, $slot, $start, $end, $fed, $blocks, $now);
@@ -523,7 +531,9 @@ class RoutineLedgerService
      */
     private function walkFor(Pet $pet, array $in, string $date, bool $isToday): ?array
     {
-        $goal = (int) ($in['config']?->daily_steps_required ?? 0);
+        // The step goal of that day's life stage (M5-R01); a closed walk row
+        // keeps the goal it was closed with.
+        $goal = $in['config'] !== null ? $this->lifeStages->rulesOn($pet, $date, $in['config'])->stepGoal : 0;
 
         if (isset($in['walks'][$date])) {
             return ['steps' => $in['walks'][$date]['steps'], 'goal' => $in['walks'][$date]['goal']];

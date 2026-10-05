@@ -3,10 +3,13 @@
 namespace App\Models;
 
 use App\Enums\BreedType;
+use App\Enums\LifeStage;
 use App\Enums\PetLockReason;
+use App\Enums\PetOrigin;
 use App\Enums\PetStateEnum;
 use App\Jobs\DeletePetMediaFiles;
 use App\Services\FamilyService;
+use App\Services\LifeStageService;
 use App\Services\PetStatusPeriodService;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
@@ -167,6 +170,11 @@ class Pet extends Model
         'is_game_over',
         'is_hard_stopped',
         'certificate_eligible',
+        // M5-R01 pet profile: parent's choice at creation; life_stage is the
+        // stage of today's rules (LifeStageService::syncStage, decay tick).
+        'origin',
+        'arrival_age_months',
+        'life_stage',
     ];
 
     /**
@@ -211,6 +219,9 @@ class Pet extends Model
             'is_game_over' => 'boolean',
             'is_hard_stopped' => 'boolean',
             'certificate_eligible' => 'boolean',
+            'origin' => PetOrigin::class,
+            'arrival_age_months' => 'integer',
+            'life_stage' => LifeStage::class,
         ];
     }
 
@@ -433,7 +444,31 @@ class Pet extends Model
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * Calculate the virtual age in months.
+     * Legacy profile (M5-R01 grandfathering, orchestrator 2026-10-05,
+     * pending David): a pet created before M5-R01 or without a profile
+     * choice has no `arrival_age_months`. It keeps exactly the pre-M5 rules
+     * (breed feed windows + daily_steps_required, no parent-covered meals,
+     * no life stage, no stage images) until its challenge ends.
+     */
+    public function isLegacyProfile(): bool
+    {
+        return $this->arrival_age_months === null;
+    }
+
+    /**
+     * The dog's age in months (M5-R01): age at arrival (parent's choice) +
+     * one month per week since birth (LifeStageService::ageMonthsAt). Null
+     * for a legacy-profile pet (no age at arrival).
+     */
+    public function ageMonths(?CarbonInterface $at = null): ?int
+    {
+        return app(LifeStageService::class)->ageMonthsAt($this, $at ?? now());
+    }
+
+    /**
+     * Months (= real weeks) since birth — the 12-week challenge clock
+     * (certificate, `virtual_age_months` in the API). Since M5-R01 this is
+     * not the dog's age any more: see ageMonths().
      * 1 real week = 1 virtual month.
      */
     public function virtualAgeInMonths(): int

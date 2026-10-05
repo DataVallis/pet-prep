@@ -2,8 +2,12 @@
 
 namespace App\Services;
 
+use App\Enums\ActivityType;
+use App\Enums\LifeStage;
 use App\Enums\PetStateEnum;
 use App\Events\PetUpdated;
+use App\Jobs\RegeneratePetStageMedia;
+use App\Models\ActivityLog;
 use App\Models\Pet;
 use App\Models\PetDailyWalk;
 use App\Models\QuietHours;
@@ -40,6 +44,14 @@ use Illuminate\Support\Facades\Log;
  * don't change and the decay clock is advanced so nothing is caught up later.
  * When an illness ends the pet gets a fresh start (Pet::recoverFromIllnessIfDue).
  *
+ * Life stage (M5-R01): every tick writes today's stage (LifeStageService::
+ * syncStage — rules switch at the family-local midnight after the weekly
+ * birthday). A change between two known stages queues one
+ * RegeneratePetStageMedia after commit (the row lock makes it once).
+ * Meals whose window lies entirely in quiet hours are done by the parent:
+ * at the window start the tick sets hunger to 100 % and writes one
+ * `parent_fed_pet` row (CareScheduleService::dueParentMeals).
+ *
  * Time Asymmetry: 1 real week = 1 virtual month.
  *   Total MVP: 12 real weeks = 12 virtual months (1 virtual year).
  *   At 12 weeks with satisfactory performance → Responsibility Certificate.
@@ -61,6 +73,8 @@ class PetDecayService
     public function __construct(
         private HygieneEventService $hygieneEvents,
         private DailyWalkService $dailyWalks,
+        private LifeStageService $lifeStages,
+        private CareScheduleService $schedule,
     ) {}
 
     /**
@@ -212,11 +226,19 @@ class PetDecayService
             return false;
         }
 
+        // Life stage of today (M5-R01): written with this tick's save; a
+        // change between two stages queues the new stage images once.
+        $transition = $this->lifeStages->syncStage($pet, $now);
+        if ($transition !== null) {
+            $this->queueStageMedia($pet, $transition);
+        }
+        $staged = $transition !== null;
+
         // First tick for a pet without a decay clock: just start the clock.
         if ($pet->last_decay_at === null) {
             $this->advanceClock($pet, $now);
 
-            return false;
+            return $staged;
         }
 
         // An illness that ended since the last tick: fresh start at
@@ -244,7 +266,7 @@ class PetDecayService
             }
             $this->advanceClock($pet, $now);
 
-            return $recovered;
+            return $recovered || $staged;
         }
 
         // A hard stop lifted without a model event: shift the neglect clocks.
@@ -252,11 +274,11 @@ class PetDecayService
 
         $from = $pet->last_decay_at;
         if ($from->greaterThanOrEqualTo($now)) {
-            if ($recovered) {
+            if ($recovered || $pet->isDirty('life_stage')) {
                 $pet->saveQuietly();
             }
 
-            return $recovered;
+            return $recovered || $staged;
         }
 
         $breedConfig = $pet->breedConfig();
@@ -280,8 +302,30 @@ class PetDecayService
         // Hunger / thirst: full rate outside quiet hours, 10 % inside.
         $weightedHours = ($normalSeconds + $quietSeconds * self::QUIET_HOURS_DECAY_MULTIPLIER) / 3600;
 
-        $newHunger = $this->decayMetric((float) $pet->hunger_level, $breedConfig->hunger_decay_rate * $weightedHours);
         $newThirst = $this->decayMetric((float) $pet->thirst_level, $breedConfig->thirst_decay_rate * $weightedHours);
+
+        // Meals in quiet hours are done by the parent (M5-R01, David
+        // 2026-10-05): fed at the window start, one parent_fed_pet row each.
+        // Hunger decays piecewise — up to each meal, 100 % at the meal, then
+        // on to $now — so a late tick (scheduler outage) gives the same value
+        // as ticks in real time. Without a meal this is the single interval.
+        $hunger = (float) $pet->hunger_level;
+        $cursor = $from;
+        foreach ($this->schedule->dueParentMeals($pet, $breedConfig, $from, $now, $quietHours) as [$mealAt]) {
+            $hunger = $this->decayMetric($hunger, $breedConfig->hunger_decay_rate * $this->weightedHours($quietHours, $cursor, $mealAt));
+            ActivityLog::withoutEvents(fn () => (new ActivityLog)->forceFill([
+                'pet_id' => $pet->id,
+                'actor_user_id' => null,
+                'activity_type' => ActivityType::ParentFedPet,
+                'value' => Pet::displayValue($hunger),
+                'created_at' => $mealAt->utc(),
+            ])->save());
+            $hunger = 100.0;
+            $cursor = $mealAt;
+        }
+        $newHunger = $cursor === $from
+            ? $this->decayMetric($hunger, $breedConfig->hunger_decay_rate * $weightedHours)
+            : $this->decayMetric($hunger, $breedConfig->hunger_decay_rate * $this->weightedHours($quietHours, $cursor, $now));
 
         // Energy is not time-decayed (M1-04): it follows the step count, which
         // goes back to 0 at the family's local midnight (energy → 0 with it).
@@ -325,6 +369,7 @@ class PetDecayService
         ];
 
         $displayChanged = $recovered
+            || $staged
             || $certificateEligible !== $pet->certificate_eligible
             || $newPetState !== $pet->pet_state;
         foreach ($newMetrics as $metric => $value) {
@@ -345,6 +390,20 @@ class PetDecayService
     }
 
     /**
+     * New reference image (+ state videos) for the new life stage, queued
+     * after the tick's commit (M5-R01).
+     *
+     * @param  array{from: LifeStage, to: LifeStage}  $transition
+     */
+    private function queueStageMedia(Pet $pet, array $transition): void
+    {
+        $petId = $pet->id;
+        Log::info('PetDecayService: life stage changed', ['pet_id' => $petId, 'from' => $transition['from']->value, 'to' => $transition['to']->value]);
+
+        DB::afterCommit(fn () => RegeneratePetStageMedia::dispatch($petId));
+    }
+
+    /**
      * Decay is frozen while hard-stopped, ill, inactive or game over.
      */
     private function isFrozen(Pet $pet): bool
@@ -360,6 +419,16 @@ class PetDecayService
     private function advanceClock(Pet $pet, CarbonInterface $now): void
     {
         $pet->forceFill(['last_decay_at' => $now])->saveQuietly();
+    }
+
+    /**
+     * Decay hours between two instants: full rate outside quiet hours, 10 % inside.
+     */
+    private function weightedHours(?QuietHours $quietHours, CarbonInterface $from, CarbonInterface $to): float
+    {
+        ['normal' => $normal, 'quiet' => $quiet] = QuietHours::splitSecondsBetween($quietHours, $from, $to);
+
+        return ($normal + $quiet * self::QUIET_HOURS_DECAY_MULTIPLIER) / 3600;
     }
 
     /**

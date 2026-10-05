@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Log;
 /**
  * Daily walk rule (David, 2026-10-03, PRODUCT_SPEC §5/§7).
  *
- * Energy is today's walk: steps of the family-local day / breed
- * daily_steps_required. 0 % after the midnight reset means "not walked yet",
+ * Energy is today's walk: steps of the family-local day / the day's step
+ * goal (life stage, M5-R01: exercise minutes × 100 steps). 0 % after the midnight reset means "not walked yet",
  * not neglect, so energy has no hourly neglect clock. Instead, once per pet
  * at the family-local midnight the finished day is closed:
  *
@@ -40,6 +40,8 @@ class DailyWalkService
      * (bedtime directly followed by a school window, DST transitions …).
      */
     private const MAX_QUIET_HOPS = 8;
+
+    public function __construct(private readonly LifeStageService $lifeStages) {}
 
     /**
      * Close the finished local day if `$now` is on a later local date than
@@ -68,7 +70,9 @@ class DailyWalkService
 
         $timezone = $pet->familyTimezone();
         $steps = (int) $pet->daily_step_count;
-        $goal = (int) ($pet->breedConfig()?->daily_steps_required ?? 0);
+        // Goal of the closed day's life stage (M5-R01; pre-M5 breed goal without stage data).
+        $config = $pet->breedConfig();
+        $goal = $config !== null ? $this->lifeStages->rulesOn($pet, $closedDate, $config)->stepGoal : 0;
         $birthDay = $closedDate === $pet->localDate($pet->born_at);
         $yesterday = Carbon::parse($today, $timezone)->subDay()->toDateString();
         $noWalk = $pet->displayMetric('energy_level') === 0;

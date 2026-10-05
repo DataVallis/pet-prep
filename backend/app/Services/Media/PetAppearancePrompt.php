@@ -2,7 +2,10 @@
 
 namespace App\Services\Media;
 
+use App\Enums\LifeStage;
+use App\Enums\PetOrigin;
 use App\Enums\PetStateEnum;
+use App\Models\Pet;
 
 /**
  * Turns a breed + sampled traits into the image / video prompts (M4-08).
@@ -20,6 +23,13 @@ class PetAppearancePrompt
     public const NEGATIVE = 'cartoon, illustration, drawing, 3d render, anime, painting, deformed anatomy, extra legs, '
         .'extra tail, missing legs, blurry, low quality, text, letters, watermark, logo, people, person, child, hands';
 
+    /** Adopted dogs (M5-R01): neutral — no "sad shelter dog" clichés (David 2026-10-05). */
+    public const ADOPTED_AVOID = 'Not sad, not scared, not thin, not injured, no cage, no kennel bars, no shelter background.';
+
+    /** Stage growth edit (M5-R01): the same individual dog, only its age changes. */
+    public const EDIT_KEEP = 'Keep it clearly the same individual dog: identical coat colours, coat pattern and markings, '
+        .'identical eye colour and ear carriage, same breed type. Change only what ageing changes.';
+
     /** State videos (M4-03): the same dog, subtle realistic motion, nothing else changes. */
     public const VIDEO_STYLE = 'Keep the dog\'s exact appearance, size, coat colours and markings from the image; the same single dog throughout. '
         .'Static locked-off camera, no zoom, no pan, no cuts, same room and natural light. '
@@ -34,6 +44,91 @@ class PetAppearancePrompt
     public function imagePrompt(string $breedKey, array $traits): string
     {
         return 'A photorealistic photograph of a single '.$this->describe($breedKey, $traits).'. '.self::STYLE;
+    }
+
+    /**
+     * Reference image prompt for a pet at its current life stage and origin
+     * (M5-R01): the DNA description (breed + traits — never a name or other
+     * personal data) + stage cue + origin cue + photo style. DNA v1 pets
+     * (no traits) use the breed name + the cues. The stored DNA prompt is
+     * never rewritten.
+     */
+    public function imagePromptForPet(Pet $pet, ?LifeStage $stage = null): string
+    {
+        [$breedKey, $traits] = $this->dnaOf($pet);
+        $stage ??= $pet->life_stage;
+        $subject = $traits !== [] ? $this->describe($breedKey, $traits) : $this->displayName($breedKey);
+
+        return trim(implode(' ', array_filter([
+            'A photorealistic photograph of a single '.$subject.'.',
+            $stage !== null ? 'The dog is '.$stage->promptCue().'.' : null,
+            $this->originSentence($this->originOf($pet)),
+            self::STYLE,
+        ])));
+    }
+
+    /**
+     * DNA v1 pets (fixed prompt anchor, M4): the stored prompt + the stage /
+     * origin cues (M5-R01). Without a stage and for a bought dog the stored
+     * prompt is returned unchanged.
+     */
+    public function legacyPromptForPet(Pet $pet): string
+    {
+        $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
+        $base = (string) ($dna['prompt'] ?? $dna['prompt_anchor'] ?? '');
+        $stage = $pet->life_stage;
+        $cues = array_filter([
+            $stage !== null ? 'The dog is '.$stage->promptCue().'.' : null,
+            $this->originSentence($this->originOf($pet)),
+        ]);
+
+        return $cues === [] ? $base : rtrim($base, '. ').'. '.implode(' ', $cues);
+    }
+
+    /**
+     * Image-to-image prompt for the stage growth (M5-R01): the dog of the
+     * reference image, now at the new stage, identity kept.
+     */
+    public function stageEditPrompt(Pet $pet, LifeStage $stage): string
+    {
+        [$breedKey, $traits] = $this->dnaOf($pet);
+        $subject = $traits !== [] ? $this->describe($breedKey, $traits) : $this->displayName($breedKey);
+
+        return trim(implode(' ', array_filter([
+            'The same dog as in the reference image ('.$subject.'), shown at a later age: now '.$stage->promptCue().'.',
+            self::EDIT_KEEP,
+            $this->originOf($pet) === PetOrigin::Adopted ? self::ADOPTED_AVOID : null,
+            self::STYLE,
+        ])));
+    }
+
+    /**
+     * @return array{0: string, 1: array<string, string>} breed key, DNA v2 traits (empty for v1)
+     */
+    private function dnaOf(Pet $pet): array
+    {
+        $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
+        $breedKey = (string) ($dna['breed'] ?? $pet->breed_type->value);
+        $traits = (int) ($dna['version'] ?? 1) >= 2 && is_array($dna['traits'] ?? null) ? $dna['traits'] : [];
+
+        return [$breedKey, $traits];
+    }
+
+    private function originOf(Pet $pet): ?PetOrigin
+    {
+        return $pet->origin instanceof PetOrigin ? $pet->origin : PetOrigin::tryFrom((string) $pet->origin);
+    }
+
+    private function originSentence(?PetOrigin $origin): ?string
+    {
+        $cue = $origin?->promptCue();
+
+        return $cue === null ? null : $cue.'. '.self::ADOPTED_AVOID;
+    }
+
+    private function displayName(string $breedKey): string
+    {
+        return (string) config("breed_appearance.{$breedKey}.display_name", str_replace('_', ' ', $breedKey).' dog');
     }
 
     /**

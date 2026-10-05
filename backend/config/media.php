@@ -39,6 +39,11 @@ return [
     // Profile used for the pet state videos (SubmitPetStateVideo, M4-03). David 2026-10-05.
     'state_video_profile' => env('AI_STATE_VIDEO_PROFILE', 'kling_v3_pro'),
 
+    // M5-R01: at a life-stage change the reference image is EDITED from the previous one
+    // (image-to-image, same dog grows up). A disabled / unknown profile falls back to
+    // text-to-image with the same seed + DNA prompt + stage cue.
+    'stage_edit_profile' => env('AI_STAGE_EDIT_PROFILE', 'nano_banana_pro_edit'),
+
     /*
     | Which state videos a pet gets at birth (M4-03) — MediaEntitlementService.
     | Claude's proposal 2026-10-05, waiting for David: the free mutt gets the
@@ -163,6 +168,33 @@ return [
                 'pricing' => ['unit' => 'image', 'usd' => 0.15],
                 'width' => 576,
                 'height' => 1024,
+                'supports_negative_prompt' => false,
+                'supports_seed' => true,
+                'params' => [
+                    'num_images' => 1,
+                    'aspect_ratio' => '9:16',
+                    'resolution' => '1K',
+                    'output_format' => 'jpeg',
+                    'safety_tolerance' => '2',
+                ],
+            ],
+
+            // M5-R01 stage transitions (image-to-image). Endpoint, schema and price checked on
+            // https://fal.ai/models/fal-ai/nano-banana-pro/edit/api (2026-10-05): prompt (required),
+            // image_urls (list, required), num_images, seed, aspect_ratio (auto|…|9:16),
+            // resolution (1K|2K|4K), output_format, safety_tolerance; output images[].url.
+            // $0.15 per image (4K double). Not in the AI Lab (needs an input image).
+            'nano_banana_pro_edit' => [
+                'label' => 'Nano Banana Pro Edit (image-to-image, stage growth)',
+                'endpoint' => env('FAL_MODEL_NANO_BANANA_PRO_EDIT', 'fal-ai/nano-banana-pro/edit'),
+                'enabled' => true,
+                'verified' => true,
+                'lab' => false,
+                'source' => 'https://fal.ai/models/fal-ai/nano-banana-pro/edit (2026-10-05: $0.15 per image, 4K double)',
+                'pricing' => ['unit' => 'image', 'usd' => 0.15],
+                'width' => 576,
+                'height' => 1024,
+                'image_param' => 'image_urls',
                 'supports_negative_prompt' => false,
                 'supports_seed' => true,
                 'params' => [

@@ -5,6 +5,7 @@ namespace App\Http\Resources;
 use App\Models\Pet;
 use App\Models\User;
 use App\Services\Media\PetMediaPayload;
+use App\Services\PetProfilePayload;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -44,6 +45,8 @@ class PairedPetResource extends JsonResource
             'awaiting_contract' => (bool) ($pet->isUnborn() || $pet->caretakerNeedsContract($this->child)),
             'is_active' => (bool) $pet->is_active,
             'is_game_over' => (bool) $pet->is_game_over,
+            // M5-R01: origin, age, life stage and today's rules.
+            'profile' => PetProfilePayload::for($pet)->toArray(),
             'pet_dna' => [
                 'seed' => $pet->pet_dna['seed'] ?? null,
                 'prompt_anchor' => $pet->pet_dna['prompt_anchor'] ?? null,

@@ -100,7 +100,14 @@ class BreedConfigResource extends Resource
                     ->required()
                     ->integer()
                     ->minValue(0)
-                    ->helperText('Number of steps the child must walk each day.'),
+                    ->helperText('Pre-M5 daily step goal — used only for a breed WITHOUT life-stage data. With data the goal is exercise minutes × steps per minute of the dog\'s life stage (Life-stage data).'),
+
+                Forms\Components\TextInput::make('daily_steps_cap')
+                    ->label('Daily step goal cap')
+                    ->integer()
+                    ->minValue(1)
+                    ->nullable()
+                    ->helperText('Optional upper limit for the life-stage step goal (M5-R01). Empty = no cap (David 2026-10-05).'),
 
                 Forms\Components\TextInput::make('hunger_decay_rate')
                     ->required()
@@ -187,6 +194,11 @@ class BreedConfigResource extends Resource
                 Tables\Columns\TextColumn::make('daily_steps_required')
                     ->numeric()
                     ->sortable(),
+
+                Tables\Columns\TextColumn::make('daily_steps_cap')
+                    ->label('Step cap')
+                    ->numeric()
+                    ->placeholder('—'),
 
                 Tables\Columns\TextColumn::make('hunger_decay_rate')
                     ->numeric()

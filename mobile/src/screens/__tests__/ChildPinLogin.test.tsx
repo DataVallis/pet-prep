@@ -12,7 +12,7 @@ import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
 import { PARENT_LOGIN_STRINGS } from '@/screens/ParentLoginScreen';
 import { START_STRINGS } from '@/screens/StartScreen';
 import { useAppStore } from '@/store/appStore';
-import { makeMedia, makePet } from '@/test-utils/fixtures';
+import { makeMedia, makePetProfile, makePet } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -59,6 +59,7 @@ function pinLoginResponse(overrides: Partial<PinLoginResponse> = {}): PinLoginRe
       current_video_url: null,
       media_status: 'disabled',
       media: makeMedia(),
+      profile: makePetProfile(),
     },
     awaiting_contract: true,
     ...overrides,

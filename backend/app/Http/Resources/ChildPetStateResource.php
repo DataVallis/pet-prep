@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Services\CareScheduleService;
 use App\Services\Media\PetMediaPayload;
 use App\Services\Media\PetMediaService;
+use App\Services\PetProfilePayload;
 use Carbon\CarbonInterface;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -26,6 +27,10 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * joined a shared pet sees contract_required until they sign, while the pet
  * itself is born); `steps.steps_today` is the pet's combined count (energy),
  * `steps.my_steps_today` the child's own.
+ *
+ * `pet.profile` (M5-R01): origin, age, life stage and today's stage rules
+ * (meals and which the parent covers in quiet hours, step goal) —
+ * {@see PetProfilePayload}. `steps.goal` is today's stage goal.
  *
  * `pet.media` (M4-05): status + signed URLs of the stored reference image and
  * state videos ({@see PetMediaService::mediaFor()}); `current_video_url` is
@@ -61,6 +66,7 @@ class ChildPetStateResource extends JsonResource
         $water = $config ? $schedule->water($pet, $config, $now) : null;
         $contract = $actor !== null ? $pet->contractOf($actor) : $pet->contract;
         $media = PetMediaPayload::for($pet);
+        $profile = PetProfilePayload::for($pet, $now);
 
         return [
             'pet' => [
@@ -72,7 +78,16 @@ class ChildPetStateResource extends JsonResource
                 // child joined a shared pet and hasn't signed yet — M2-01).
                 'awaiting_contract' => $lockReason === PetLockReason::ContractRequired,
                 'caretakers_count' => $pet->caretakerRows()->count(),
+                // Months (= real weeks) since birth: the 12-week challenge clock.
                 'virtual_age_months' => $pet->virtualAgeInMonths(),
+                // M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
+                // null for a legacy pet (pre-M5 rules, `profile.legacy`).
+                'age_months' => $profile->ageMonths,
+                /** @var 'bought'|'adopted'|null */
+                'origin' => $profile->origin,
+                /** @var 'puppy'|'young'|'adult'|'senior'|null */
+                'life_stage' => $profile->lifeStage,
+                'profile' => $profile->toArray(),
                 'hunger_level' => $pet->displayMetric('hunger_level'),
                 'thirst_level' => $pet->displayMetric('thirst_level'),
                 'energy_level' => $pet->displayMetric('energy_level'),
@@ -133,7 +148,8 @@ class ChildPetStateResource extends JsonResource
                 'my_steps_today' => $actor !== null
                     ? $pet->stepsTodayOf($actor, $now)
                     : (int) $pet->daily_step_count,
-                'goal' => (int) ($config->daily_steps_required ?? 0),
+                // Today's step goal of the dog's life stage (M5-R01).
+                'goal' => $profile->stepGoal,
                 'energy_level' => $pet->displayMetric('energy_level'),
             ],
             'contract' => [

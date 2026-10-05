@@ -168,6 +168,54 @@ class FalAiService
         return ['url' => $url, 'profile' => $profile->key];
     }
 
+    /**
+     * Life-stage growth (M5-R01): the next reference image as an EDIT of the
+     * previous one (image-to-image, profile media.stage_edit_profile — Nano
+     * Banana Pro Edit), so the dog keeps its identity. Same budget / ledger
+     * as a reference image. Returns null when the profile is disabled (the
+     * caller falls back to text-to-image) or on a retryable failure.
+     *
+     * @return array{url: string, profile: string}|null
+     *
+     * @throws AiCallException budget / balance / non-retryable failures
+     */
+    public function editReferenceImage(string $prompt, string $sourceImageUrl, int $seed, ?int $petId = null, ?int $petMediaId = null): ?array
+    {
+        $profile = $this->profiles->stageEdit();
+
+        if (! $this->isEnabled() || $profile === null) {
+            return null;
+        }
+
+        try {
+            $result = $this->gateway->run(
+                $profile,
+                $profile->editInput($prompt, $sourceImageUrl, $seed),
+                AiSpendPurpose::ReferenceImage,
+                petId: $petId,
+                petMediaId: $petMediaId,
+            );
+        } catch (AiCallException $e) {
+            if ($e->retryable()) {
+                Log::error('FalAiService: stage image edit failed', ['pet_id' => $petId, 'reason' => $e->reason->value]);
+
+                return null;
+            }
+
+            throw $e;
+        }
+
+        $url = $result['body']['images'][0]['url'] ?? null;
+
+        if (! is_string($url) || ! $this->isAllowedMediaUrl($url)) {
+            Log::error('FalAiService: stage image edit response had no usable URL', ['pet_id' => $petId]);
+
+            return null;
+        }
+
+        return ['url' => $url, 'profile' => $profile->key];
+    }
+
     // ──────────────────────────────────────────────────────────────
     //  State videos (asynchronous via queue API + signed webhook)
     // ──────────────────────────────────────────────────────────────

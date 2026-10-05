@@ -48,9 +48,23 @@ class BreedConfigsSeeder extends Seeder
     }
 
     /**
-     * Run the database seeds.
+     * Run the database seeds: breed tunables, then the sourced life-stage
+     * data (M5-R01, BreedStageParamsSeeder — also insert-only). The deploy
+     * runs only this seeder, so both arrive with every deploy.
      */
     public function run(): void
+    {
+        $this->seedConfigs();
+        (new BreedStageParamsSeeder)->run();
+    }
+
+    /**
+     * Only the breed_configs rows (insert-only). Tests that are not about
+     * life stages use this (tests/Pest.php seedBreedConfigs()): without
+     * stage data a pet keeps the pre-M5 rules (breed feed windows,
+     * daily_steps_required).
+     */
+    public function seedConfigs(): void
     {
         $now = now();
 

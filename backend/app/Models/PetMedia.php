@@ -79,6 +79,8 @@ class PetMedia extends Model
         'error_reason',
         'error',
         'completed_at',
+        // M5-R01: life stage the current generation depicts (image).
+        'life_stage',
     ];
 
     /**
