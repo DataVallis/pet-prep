@@ -4,15 +4,61 @@ namespace App\Http\Controllers;
 
 use App\Enums\TokenAbility;
 use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterParentRequest;
 use App\Models\Pet;
 use App\Models\User;
 use App\Services\ChildProfileService;
+use App\Services\ParentRegistrationService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
+    /**
+     * Parent self-registration with e-mail + password (M2-10a). Creates the
+     * parent and their own family (timezone from the device, default
+     * Europe/Ljubljana) and signs them in: same body as `POST /api/login`
+     * (token with the `parent` ability, `pet` null), status 201.
+     *
+     * - `email` is trimmed and stored lower case; 422 when the address is
+     *   already used (case-insensitive) — an accepted trade-off for parents.
+     * - `password`: ≥ 10 characters, upper + lower case and a digit,
+     *   `password_confirmation` must match.
+     * - `accept_terms` must be true (terms of use + privacy policy);
+     *   stored as `terms_accepted_at`.
+     * - No e-mail verification yet (M2-10b). Throttled: 5 / min and
+     *   20 / hour per IP (429 with `Retry-After`).
+     *
+     * POST /api/register
+     */
+    public function register(RegisterParentRequest $request, ParentRegistrationService $registrations): JsonResponse
+    {
+        $result = $registrations->register(
+            $request->displayName(),
+            $request->emailAddress(),
+            $request->plainPassword(),
+            $request->familyTimezone(),
+            $request->deviceName(),
+        );
+
+        $user = $result['user'];
+
+        return response()->json([
+            'token' => $result['token'],
+            'abilities' => TokenAbility::abilitiesFor($user),
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+                'role' => $user->role->value,
+            ],
+            // A new family has no pet yet; the parent adds a child next.
+            'pet' => null,
+            'awaiting_contract' => null,
+        ], 201);
+    }
+
     /**
      * Authenticate a user with e-mail + password and issue a Sanctum API
      * token. The token carries one ability (M2-03): `parent` or `child`.
@@ -27,7 +73,8 @@ class AuthController extends Controller
      */
     public function login(LoginRequest $request): JsonResponse
     {
-        $user = User::where('email', $request->input('email'))->first();
+        // Case-insensitive (M2-10a stores lower case; legacy rows may not be).
+        $user = User::findByEmail((string) $request->input('email'));
         $hash = $user?->getAuthPassword();
 
         if ($user === null || ! is_string($hash) || $hash === ''

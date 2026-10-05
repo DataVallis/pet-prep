@@ -43,6 +43,22 @@ export interface LoginResponse {
   awaiting_contract?: boolean | null;
 }
 
+/** `POST /api/register` body (M2-10a): parent self-registration. */
+export type RegisterParentRequest = components['schemas']['RegisterParentRequest'];
+
+/**
+ * `POST /api/register` 201 body — same shape as `LoginResponse` (parent token, `pet`
+ * null). Errors: 422 `{ message, errors: { field: string[] } }` (e-mail taken, password
+ * policy, terms), 429 with `Retry-After`.
+ */
+export type RegisterResponse = LoginResponse;
+
+/** Laravel validation error body (422). */
+export interface ValidationErrorBody {
+  message: string;
+  errors?: Record<string, string[]>;
+}
+
 /** `GET /api/parent/dashboard` 200 response (union: paired / no pet / no child). */
 export type ParentDashboardResponse =
   operations['parentDashboard.dashboard']['responses'][200]['content']['application/json'];
@@ -320,6 +336,17 @@ export const api = {
     apiRequest<LoginResponse>('/api/login', {
       method: 'POST',
       body: { email, password, device_name: deviceName },
+    }),
+
+  /**
+   * POST /api/register (M2-10a, public) — parent sign-up with e-mail + password; creates
+   * the parent's family (timezone from the device) and returns a parent token.
+   */
+  register: (body: RegisterParentRequest) =>
+    apiRequest<RegisterResponse>('/api/register', {
+      method: 'POST',
+      body: { ...body },
+      anonymous: true,
     }),
 
   /** POST /api/logout — Revoke the current token. Pass a signal to abort (offline logout). */

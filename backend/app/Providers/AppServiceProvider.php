@@ -7,6 +7,7 @@ use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Validation\Rules\Password;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,18 @@ class AppServiceProvider extends ServiceProvider
      * POST /api/child/pin-login requests per IP per minute (M2-02).
      */
     public const PIN_LOGIN_PER_MINUTE = 10;
+
+    /**
+     * POST /api/register requests per IP (M2-10a).
+     */
+    public const REGISTER_PER_MINUTE = 5;
+
+    public const REGISTER_PER_HOUR = 20;
+
+    /**
+     * Minimum password length for parent accounts (M2-10a).
+     */
+    public const PASSWORD_MIN_LENGTH = 10;
 
     /**
      * Register any application services.
@@ -31,6 +44,11 @@ class AppServiceProvider extends ServiceProvider
         // No broadcasting model observers (M1-08): every PetUpdated is
         // emitted explicitly by the service that made the change, via
         // PetUpdated::afterCommit() — exactly one per state change.
+
+        // Parent passwords (M2-10a): ≥ 10 characters, upper + lower case and
+        // a digit. Deliberately no ->uncompromised(): it calls the external
+        // HIBP API (no external HTTP during sign-up — DECISIONS 2026-10-05).
+        Password::defaults(fn () => Password::min(self::PASSWORD_MIN_LENGTH)->mixedCase()->numbers());
 
         // Configure rate limiters (per Phase 7 engineering standards)
         // In testing, rate limits are set to unlimited to avoid
@@ -80,6 +98,18 @@ class AppServiceProvider extends ServiceProvider
         RateLimiter::for('pin-login', function (Request $request) {
             // IPv6 keyed on its /64 prefix (ClientIp).
             return Limit::perMinute(self::PIN_LOGIN_PER_MINUTE)->by('pin-login:'.ClientIp::rateLimitKey($request->ip()));
+        });
+
+        // Parent self-registration (M2-10a): unauthenticated, creates rows →
+        // 5 per minute and 20 per hour per IP (IPv6 /64). Live in testing too
+        // (like pin-login); tests that register more often vary the IP.
+        RateLimiter::for('register', function (Request $request) {
+            $key = 'register:'.ClientIp::rateLimitKey($request->ip());
+
+            return [
+                Limit::perMinute(self::REGISTER_PER_MINUTE)->by($key.':minute'),
+                Limit::perHour(self::REGISTER_PER_HOUR)->by($key.':hour'),
+            ];
         });
 
         // Second-parent invite codes (M2-01): a parent needs one or two;

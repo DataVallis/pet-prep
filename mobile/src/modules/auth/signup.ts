@@ -1,0 +1,217 @@
+/**
+ * Parent self-registration (M2-10a): form validation, device timezone, request
+ * body and server-error mapping. Pure functions — the screen only wires them up.
+ *
+ * Rules mirror `RegisterParentRequest` on the backend: name 1–60 characters,
+ * valid e-mail, password ≥ 10 with upper + lower case and a digit, repeat equal,
+ * terms accepted. The server stays the authority (it re-validates everything).
+ */
+
+import {
+  ApiError,
+  api,
+  saveAuthToken,
+  type RegisterParentRequest,
+  type RegisterResponse,
+  type ValidationErrorBody,
+} from '@/api/client';
+import type { SignInPayload } from '@/store/appStore';
+
+/** All user-visible strings of the sign-up flow (extract to i18n with M1-18). */
+export const SIGNUP_STRINGS = {
+  title: 'Registracija za starše',
+  subtitle: 'Ustvarite račun, nato dodajte otroka.',
+  back: 'Nazaj',
+  name: 'Ime (kako vas kliče družina)',
+  email: 'E-pošta',
+  password: 'Geslo',
+  passwordRepeat: 'Ponovite geslo',
+  passwordHint: 'Vsaj 10 znakov, velike in male črke ter številka.',
+  show: 'Pokaži geslo',
+  hide: 'Skrij geslo',
+  termsPrefix: 'Strinjam se s ',
+  termsLink: 'pogoji uporabe',
+  termsMiddle: ' in ',
+  privacyLink: 'politiko zasebnosti',
+  termsSuffix: '.',
+  submit: 'Ustvari račun',
+  haveAccount: 'Že imate račun? Prijava',
+  errors: {
+    nameRequired: 'Vpišite ime.',
+    nameTooLong: 'Ime je lahko dolgo največ 60 znakov.',
+    emailInvalid: 'Vpišite veljaven e-poštni naslov.',
+    emailTaken: 'Ta e-poštni naslov je že registriran. Prijavite se ali uporabite drugega.',
+    passwordWeak: 'Geslo mora imeti vsaj 10 znakov, velike in male črke ter številko.',
+    passwordMismatch: 'Gesli se ne ujemata.',
+    termsRequired: 'Za registracijo se morate strinjati s pogoji uporabe in politiko zasebnosti.',
+    timezoneInvalid: 'Časovnega pasu naprave ni bilo mogoče prebrati. Poskusite znova.',
+    tooManyAttempts: 'Preveč poskusov registracije. Poskusite znova čez nekaj minut.',
+    tooManyAttemptsMinutes: (minutes: number) =>
+      `Preveč poskusov registracije. Poskusite znova čez ${minutes} min.`,
+    offline: 'Ni povezave s strežnikom. Preverite internet in poskusite znova.',
+    failed: 'Registracija ni uspela. Poskusite znova.',
+  },
+} as const;
+
+/**
+ * Legal texts. TODO(M2-10a): placeholders — the real terms of use and privacy policy
+ * must be written (growth-marketer + lawyer) and published before the beta.
+ */
+export const TERMS_URL = 'https://petprep.si/pogoji';
+export const PRIVACY_URL = 'https://petprep.si/zasebnost';
+
+export const NAME_MAX_LENGTH = 60;
+export const PASSWORD_MIN_LENGTH = 10;
+
+export interface SignupForm {
+  name: string;
+  email: string;
+  password: string;
+  passwordRepeat: string;
+  acceptTerms: boolean;
+}
+
+export type SignupField = 'name' | 'email' | 'password' | 'passwordRepeat' | 'acceptTerms';
+
+/** Field → message (only fields with a problem are present). */
+export type SignupErrors = Partial<Record<SignupField, string>>;
+
+const E = SIGNUP_STRINGS.errors;
+
+/** Same idea as the backend: trim and collapse inner whitespace. */
+export function normalizeName(name: string): string {
+  return name.trim().replace(/\s+/g, ' ');
+}
+
+export function normalizeEmail(email: string): string {
+  return email.trim().toLowerCase();
+}
+
+/** Pragmatic check (one @, a dot in the domain, no spaces) — the server validates RFC. */
+export function isValidEmail(email: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+export function isStrongPassword(password: string): boolean {
+  return (
+    password.length >= PASSWORD_MIN_LENGTH &&
+    /\p{Lu}/u.test(password) &&
+    /\p{Ll}/u.test(password) &&
+    /\p{N}/u.test(password)
+  );
+}
+
+/** Client-side validation; an empty object means the form may be sent. */
+export function validateSignup(form: SignupForm): SignupErrors {
+  const errors: SignupErrors = {};
+  const name = normalizeName(form.name);
+  if (name.length === 0) errors.name = E.nameRequired;
+  else if ([...name].length > NAME_MAX_LENGTH) errors.name = E.nameTooLong;
+
+  if (!isValidEmail(normalizeEmail(form.email))) errors.email = E.emailInvalid;
+
+  if (!isStrongPassword(form.password)) errors.password = E.passwordWeak;
+  else if (form.password !== form.passwordRepeat) errors.passwordRepeat = E.passwordMismatch;
+
+  if (!form.acceptTerms) errors.acceptTerms = E.termsRequired;
+  return errors;
+}
+
+/** The device's IANA timezone (e.g. "Europe/Ljubljana"); undefined → server default. */
+export function deviceTimezone(): string | undefined {
+  try {
+    const zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    return typeof zone === 'string' && zone.length > 0 ? zone : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+/** `POST /api/register` body from a validated form. */
+export function signupBody(
+  form: SignupForm,
+  deviceName: string,
+  /** Usually `deviceTimezone()`; undefined → the server uses Europe/Ljubljana. */
+  timezone: string | undefined,
+): RegisterParentRequest {
+  const body: RegisterParentRequest = {
+    name: normalizeName(form.name),
+    email: normalizeEmail(form.email),
+    password: form.password,
+    password_confirmation: form.passwordRepeat,
+    accept_terms: true,
+    device_name: deviceName,
+  };
+  if (timezone !== undefined) body.timezone = timezone;
+  return body;
+}
+
+export interface SignupFailure {
+  /** Per-field messages to show under the inputs. */
+  fields: SignupErrors;
+  /** Message for the form as a whole (429, offline, unknown 422 field, server error). */
+  general: string | null;
+}
+
+function validationErrors(data: unknown): Record<string, string[]> {
+  if (typeof data !== 'object' || data === null || !('errors' in data)) return {};
+  const { errors } = data as ValidationErrorBody;
+  if (typeof errors !== 'object' || errors === null) return {};
+  return errors;
+}
+
+/** Maps a failed `api.register` call to what the form shows (always Slovenian). */
+export function mapSignupError(err: unknown): SignupFailure {
+  if (!(err instanceof ApiError)) return { fields: {}, general: E.offline };
+
+  if (err.status === 429) {
+    const seconds = err.retryAfterSeconds;
+    return {
+      fields: {},
+      general: seconds !== null && seconds > 0 ? E.tooManyAttemptsMinutes(Math.ceil(seconds / 60)) : E.tooManyAttempts,
+    };
+  }
+
+  if (err.status === 422) {
+    const server = validationErrors(err.data);
+    const fields: SignupErrors = {};
+    // Server messages are English (Laravel); show our Slovenian text per field.
+    if (server.name) {
+      fields.name = server.name.some((m) => /greater than|must not/i.test(m)) ? E.nameTooLong : E.nameRequired;
+    }
+    if (server.email) {
+      fields.email = server.email.some((m) => /taken/i.test(m)) ? E.emailTaken : E.emailInvalid;
+    }
+    if (server.password) {
+      const mismatchOnly = server.password.every((m) => /confirmation/i.test(m));
+      if (mismatchOnly) fields.passwordRepeat = E.passwordMismatch;
+      else fields.password = E.passwordWeak;
+    }
+    if (server.accept_terms) fields.acceptTerms = E.termsRequired;
+    const general = server.timezone
+      ? E.timezoneInvalid
+      : Object.keys(fields).length === 0
+        ? E.failed
+        : null;
+    return { fields, general };
+  }
+
+  return { fields: {}, general: E.failed };
+}
+
+/**
+ * Send the sign-up and store the token exactly like a login. Returns the payload for
+ * `appStore.signIn()` — AppNavigator then routes the parent to the dashboard, whose
+ * empty state offers "Dodaj otroka". Throws what `api.register` throws (map it with
+ * `mapSignupError`).
+ */
+export async function performSignup(body: RegisterParentRequest): Promise<SignInPayload> {
+  const response: RegisterResponse = await api.register(body);
+  await saveAuthToken(response.token);
+  return {
+    token: response.token,
+    user: response.user,
+    pet: response.pet,
+    awaitingContract: response.awaiting_contract,
+  };
+}

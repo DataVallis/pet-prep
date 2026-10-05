@@ -105,6 +105,7 @@ class User extends Authenticatable implements FilamentUser
     {
         return [
             'email_verified_at' => 'datetime',
+            'terms_accepted_at' => 'datetime',
             'password' => 'hashed',
             'role' => UserRole::class,
             'is_superadmin' => 'boolean',
@@ -202,6 +203,41 @@ class User extends Authenticatable implements FilamentUser
     // ──────────────────────────────────────────────────────────────
     //  Helpers
     // ──────────────────────────────────────────────────────────────
+
+    /**
+     * Canonical form of an e-mail address (M2-10a): trimmed, lower case.
+     * New accounts store it; lookups compare against lower(email) so legacy
+     * mixed-case rows still match.
+     */
+    public static function normalizeEmail(string $email): string
+    {
+        return mb_strtolower(trim($email));
+    }
+
+    /**
+     * The account with this e-mail address, case-insensitive. An exact
+     * match wins should legacy data hold two case variants.
+     */
+    public static function findByEmail(string $email): ?self
+    {
+        $normalized = self::normalizeEmail($email);
+        if ($normalized === '') {
+            return null;
+        }
+
+        return self::query()
+            ->whereRaw('lower(email) = ?', [$normalized])
+            ->orderByRaw('CASE WHEN email = ? THEN 0 ELSE 1 END', [$normalized])
+            ->orderBy('id')
+            ->first();
+    }
+
+    public static function emailTaken(string $email): bool
+    {
+        $normalized = self::normalizeEmail($email);
+
+        return $normalized !== '' && self::query()->whereRaw('lower(email) = ?', [$normalized])->exists();
+    }
 
     /**
      * The family's IANA timezone (families.timezone, M2-01; before that the

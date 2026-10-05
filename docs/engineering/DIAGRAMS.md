@@ -197,6 +197,34 @@ sequenceDiagram
 
 Token abilities (M2-03): `/api/parent/*` → `ability:parent`, `/api/child/*` → `ability:child`, then the policies (role + family). Tokens issued before M2-02 carry `*` and pass the ability check; the policies still keep the roles apart.
 
+## 2d. Parent self-registration (M2-10a, 2026-10-05)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Parent
+  participant App as Mobile app
+  participant API as Laravel API
+  participant DB as PostgreSQL
+  Parent->>App: StartScreen "Sem starš" → ParentLoginScreen<br/>"Nimate računa? Registracija" → ParentSignupScreen
+  Parent->>App: name, e-mail, password + repeat, ☑ terms + privacy
+  App->>App: validateSignup (same rules as the backend)<br/>timezone = Intl resolvedOptions().timeZone
+  App->>API: POST /api/register {name, email, password, password_confirmation,<br/>timezone, accept_terms: true, device_name}<br/>(no Bearer; throttle 5/min + 20/h per IP)
+  alt throttled
+    API-->>App: 429 + Retry-After → "poskusite znova čez N min"
+  else invalid / e-mail taken (lower(email), case-insensitive)
+    API-->>App: 422 {errors: {field: [...]}} → Slovenian message per field
+  else ok
+    API->>DB: transaction: users (role parent, email lower case,<br/>password hash, timezone, terms_accepted_at)<br/>→ families (timezone) + family_user (parent)<br/>→ personal_access_tokens (abilities ["parent"])
+    API-->>App: 201 {token, abilities, user, pet: null, awaiting_contract: null}
+    App->>App: SecureStore token → appStore.signIn()
+    App->>API: GET /api/parent/dashboard (ability parent)
+    API-->>App: empty family → "Dodaj otroka" (§2c)
+  end
+```
+
+Not yet (M2-10b): e-mail verification and password reset need a mail provider; `email_verified_at` stays null. Apple / Google sign-in is M2-10c.
+
 ## 3. Game loop tick (every minute)
 
 ```mermaid

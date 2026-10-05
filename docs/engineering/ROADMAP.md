@@ -91,6 +91,10 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M2-08 Brisanje računa (Apple obvezno), izvoz podatkov (GDPR)
 - [ ] M2-09 Rate-limit testi, Policies testi
 - [ ] M2-10 Registracija / prijava staršev: Sign in with Apple + Google (Socialite / token verify) + email fallback *(prej M2-01; številka prepuščena družinskemu modelu 2026-10-04)*
+  - [x] M2-10a Registracija z e-pošto + geslom *(2026-10-05, `feat/M2-10-parent-signup`)*: `POST /api/register` (ime ≤ 60, e-pošta z malimi črkami, geslo ≥ 10 z velikimi/malimi črkami in številko, časovni pas naprave, obvezno strinjanje s pogoji → `terms_accepted_at`) → starš + lastna družina + token `parent` v eni transakciji; zavora 5/min + 20/h na IP; prijava neobčutljiva na velike/male črke. Aplikacija: "Sem starš" → "Nimate računa? Registracija" → `ParentSignupScreen` → prazna nadzorna plošča ("Dodaj otroka")
+  - [ ] M2-10b Potrditev e-pošte + ponastavitev gesla (potreben ponudnik e-pošte, npr. Postmark / SES; queued mail, podpisane povezave) — *načrt*
+  - [ ] M2-10c Sign in with Apple + Google (Apple obvezen, če je v aplikaciji Google) — *načrt*
+  - [ ] Pravna besedila `petprep.si/pogoji` in `/zasebnost` (growth-marketer + pravnik) — **pred beto**
 
 ## M3 — Obvestila, senzorji, plačila (1,5 tedna)
 

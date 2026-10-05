@@ -8,6 +8,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-05 — Starši se lahko sami registrirajo
+
+**Kaj se je zgodilo:** Do zdaj je račun za starša lahko ustvaril samo razvijalec. Zdaj ga starš ustvari sam v aplikaciji: **"Sem starš" → "Nimate računa? Registracija"** → ime, e-pošta, geslo (dvakrat, s prikazom/skritjem) in kljukica **"Strinjam se s pogoji uporabe in politiko zasebnosti"**. Takoj zatem je prijavljen in vidi prazno nadzorno ploščo z gumbom **"Dodaj otroka"**.
+- Ob registraciji nastane **družina v časovnem pasu telefona** — po njem tečejo tihe ure, polnoč in okna hranjenja.
+- Geslo: **vsaj 10 znakov, velike in male črke ter številka**; hranimo ga samo zgoščenega. Čas strinjanja s pogoji se shrani.
+- Zaščita pred zlorabo: največ **5 registracij na minuto in 20 na uro** z enega naslova IP; e-pošta se primerja ne glede na velike/male črke.
+- Registracija ustvari **samo starševski račun** — otroški račun (žeton "otrok") na ta način ni mogoč; otrok se še vedno prijavi samo s PIN-om.
+- **Številke:** 19 novih testov na strežniku (skupaj **777 zelenih**), 26 novih v aplikaciji (skupaj **520 zelenih**).
+- *Načrt:* potrditev e-pošte in pozabljeno geslo (M2-10b), prijava z Apple / Google (M2-10c). **Pogoji uporabe in politika zasebnosti morata biti napisana pred beto** (povezavi sta zdaj le mesti).
+
+**Zakaj je pomembno**
+Brez tega ni bete: vsaka družina mora sama priti do računa. To je prvi korak lijaka "naloži → registriraj → dodaj otroka → pes se rodi".
+
+**Kako to povedati**
+- 👩 *"Račun ustvarite v pol minute: ime, e-pošta, geslo. O otroku ne vprašamo ničesar razen vzdevka — in to šele, ko ga dodate."*
+- 💼 *"Samopostrežna registracija staršev je v aplikaciji — prvi korak aktivacijskega lijaka; Apple/Google prijava sledi."*
+- 🛠 *"Laravel FormRequest + servis v eni transakciji (uporabnik + družina + Sanctum žeton z eno sposobnostjo), Password::defaults brez zunanjih klicev, per-IP throttle (IPv6 /64), e-pošta lower-case, Expo zaslon z validacijo, ki zrcali strežnik."*
+
 ## 2026-10-05 — Kuža ob rojstvu dobi fotografijo in svoje videe (shranjene pri nas)
 
 **Kaj se je zgodilo:** David je v AI laboratoriju izbral modela: **Nano Banana Pro** za fotografijo psa in **Kling 3.0 Pro** za videe. Strežnik zdaj ob rojstvu sam naredi celoten paket (v aplikaciji se predvajanje doda v naslednjem koraku):
