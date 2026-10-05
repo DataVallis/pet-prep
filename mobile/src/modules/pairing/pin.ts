@@ -32,6 +32,10 @@ export type PinErrorKind =
   | 'child_not_found'
   | 'pet_not_joinable'
   | 'already_paired'
+  /** M5-R04: a premium breed was picked for a new pet (purchase-only). */
+  | 'breed_locked'
+  /** M5-R04: the server rejected the profile choice (422 validation without a reason). */
+  | 'invalid_profile'
   | 'offline'
   | 'server';
 
@@ -43,6 +47,15 @@ export function reasonOf(error: ApiError): string | null {
     if (typeof reason === 'string') return reason;
   }
   return null;
+}
+
+const PROFILE_FIELDS = ['breed', 'origin', 'age_stage'] as const;
+
+/** A Laravel validation body (`{message, errors: {field: [...]}}`) about a picker field. */
+function hasProfileValidationErrors(data: unknown): boolean {
+  if (typeof data !== 'object' || data === null || !('errors' in data)) return false;
+  const errors = (data as { errors: unknown }).errors;
+  return typeof errors === 'object' && errors !== null && PROFILE_FIELDS.some((field) => field in errors);
 }
 
 export interface PinError {
@@ -69,8 +82,11 @@ export function classifyPinError(error: unknown): PinError {
     if (error.status === 401) return { kind: 'unauthorized', retryAfterSeconds: null };
     if (error.status === 404) return { kind: 'child_not_found', retryAfterSeconds: null };
     const reason = reasonOf(error);
-    if (error.status === 422 && (reason === 'pet_not_joinable' || reason === 'already_paired')) {
+    if (error.status === 422 && (reason === 'pet_not_joinable' || reason === 'already_paired' || reason === 'breed_locked')) {
       return { kind: reason, retryAfterSeconds: null };
+    }
+    if (error.status === 422 && hasProfileValidationErrors(error.data)) {
+      return { kind: 'invalid_profile', retryAfterSeconds: null };
     }
     return { kind: 'server', retryAfterSeconds: null };
   }

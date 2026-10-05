@@ -17,7 +17,7 @@ import { ALBUM_STRINGS } from '@/modules/petMedia/album';
 import { LOCKED_STRINGS } from '@/screens/LockedScreen';
 import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
 import { isAwaitingContract, useAppStore } from '@/store/appStore';
-import { makeBroadcast, makeLiveChildState, makeMedia, makePet } from '@/test-utils/fixtures';
+import { makeBroadcast, makeLegacyPetProfile, makeLiveChildState, makeMedia, makePet } from '@/test-utils/fixtures';
 import { liveVideoPlayers, mockVideoPlayers, playerUris, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import type { PetUpdatedBroadcast } from '@/types';
@@ -98,7 +98,18 @@ describe('ChildHudScreen', () => {
     await act(async () => resolve(makeLiveChildState()));
     expect(await screen.findByText('60%')).toBeTruthy(); // hunger from the server
     expect(screen.getByText('Mešanček')).toBeTruthy();
-    expect(screen.getByText(formatAgeMonths(0))).toBeTruthy();
+    // M5-R04: a profiled pet shows stage · age, origin and the next stage instead of the old age.
+    expect(screen.getByTestId('hud-stage')).toHaveTextContent('Mladiček · 2 meseca');
+    expect(screen.getByTestId('hud-profile-sub')).toHaveTextContent('Kupljen pri vzreditelju · 24. 11. 2026 postane mlad pes');
+    expect(screen.queryByText(formatAgeMonths(0))).toBeNull();
+  });
+
+  it('legacy pet (profile.legacy, null fields): the old age line, nothing new, no crash', async () => {
+    getChildPet.mockResolvedValueOnce(makeLiveChildState({ pet: { profile: makeLegacyPetProfile(), age_months: null, origin: null, life_stage: null } }));
+    renderWithQuery(<ChildHudScreen />);
+    expect(await screen.findByText(formatAgeMonths(0))).toBeTruthy();
+    expect(screen.queryByTestId('hud-stage')).toBeNull();
+    expect(screen.queryByTestId('hud-profile-sub')).toBeNull();
   });
 
   it('load error without any state → retry + logout', async () => {

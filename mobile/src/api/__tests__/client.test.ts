@@ -170,6 +170,21 @@ describe('api client', () => {
       getItem.mockReset();
     });
 
+    it('generatePin sends the full picker set for a new pet, never with pet_id (M5-R04)', async () => {
+      getItem.mockResolvedValue('tok');
+      const fetchMock = mockFetch(200, { pin: '123456' });
+      const profile = { breed: 'mutt', origin: 'adopted', age_stage: 'senior' } as const;
+
+      await api.generatePin({ child_id: 5, pet_id: null, profile });
+      await api.generatePin({ child_id: 5, pet_id: 9, profile });
+      const bodies = fetchMock.mock.calls.map(([, init]) => JSON.parse(String((init as Init).body)));
+      expect(bodies).toEqual([
+        { child_id: 5, breed: 'mutt', origin: 'adopted', age_stage: 'senior' },
+        { child_id: 5, pet_id: 9 },
+      ]);
+      getItem.mockReset();
+    });
+
     it('revokeChildTokens deletes /api/parent/children/{id}/tokens', async () => {
       getItem.mockResolvedValueOnce('tok');
       const fetchMock = mockFetch(200, { revoked_tokens: 2, revoked_pins: 0 });

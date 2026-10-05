@@ -161,7 +161,7 @@ flowchart TD
   OUT --> START
 ```
 
-Parent side of §2c in the app: `FamilyChildrenCard` / "Dodaj otroka" → `AddChildScreen`: nickname + optional birth year → `POST /api/parent/children` → "Nov pes" / "Pridruži se psu …" → `POST /api/parent/generate-pin {child_id, pet_id?}` → PIN + countdown; dashboard polled every 5 s until the child has a pet or one more device → "Otrok je povezan!".
+Parent side of §2c in the app: `FamilyChildrenCard` / "Dodaj otroka" → `AddChildScreen`: nickname + optional birth year → `POST /api/parent/children` → "Nov pes" → **"Izberi kužka"** (`DogPickerStep`, M5-R04: breed — premium shown locked —, origin, age at arrival) / "Pridruži se psu …" (no picker) → `POST /api/parent/generate-pin {child_id, pet_id? | breed, origin, age_stage}` (profile all or nothing; 422 `breed_locked` → back to the picker) → PIN + countdown; dashboard polled every 5 s until the child has a pet or one more device → "Otrok je povezan!".
 
 ## 2c. PIN-only child login (M2-02 / M2-03)
 

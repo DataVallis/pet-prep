@@ -17,6 +17,7 @@ import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
 import type { LockState } from '@/store/appStore';
 import { familyCalendar } from '@/modules/childPet/familyTime';
 import { normalizePetMedia, type PetMediaInfo } from '@/modules/petMedia/petMedia';
+import { readPetProfile, type PetProfileInfo } from '@/modules/petProfile/petProfile';
 
 export type LockReason = 'game_over' | 'inactive' | 'hard_stopped' | 'contract_required' | 'ill';
 
@@ -51,6 +52,8 @@ export interface ChildPetView {
     reference_image_url: string | null;
     /** AI media (M4-03 / M4-05): state videos + reference image, signed URLs. */
     media: PetMediaInfo;
+    /** M5-R01 profile (stage, age, origin, next stage); null for a legacy pet. */
+    profile: PetProfileInfo | null;
   };
   lock: { is_locked: boolean; reason: LockReason | null; until: string | null };
   /** IANA zone of the family (all wall-clock rules). */
@@ -170,6 +173,7 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
         reference_image_url: p.reference_image_url,
         media_status: p.media_status,
       }),
+      profile: readPetProfile(p.profile),
     },
     lock: {
       is_locked: bool(raw.lock.is_locked),

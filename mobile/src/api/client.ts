@@ -168,11 +168,38 @@ export type CreateChildRequest = components['schemas']['CreateChildRequest'];
 export type CreateChildResponse =
   operations['childProfile.store']['responses'][201]['content']['application/json'];
 
+/** Breed / origin / age at arrival of a new pet (M5-R01 contract, M5-R04 picker). */
+export type PetBreed = components['schemas']['BreedType'];
+export type PetOrigin = components['schemas']['PetOrigin'];
+export type LifeStage = components['schemas']['LifeStage'];
+
+/**
+ * The parent's "Izberi kužka" choice for a new pet. The server contract is
+ * **all or nothing**: either the full set is sent or none of it (legacy pet).
+ */
+export interface NewPetProfile {
+  breed: PetBreed;
+  origin: PetOrigin;
+  age_stage: LifeStage;
+}
+
 /** `POST /api/parent/generate-pin` body — always with `child_id` (the legacy call is deprecated). */
 export interface GenerateChildPinRequest {
   child_id: number;
   /** Join this shared pet of the family; omit for a new pet (or a re-login). */
   pet_id?: number | null;
+  /** New pet only (no `pet_id`): the full picker choice; ignored when joining a pet. */
+  profile?: NewPetProfile | null;
+}
+
+/** The JSON body of a generate-pin request: profile fields only for a new pet, always all three. */
+export function generatePinBody(body: GenerateChildPinRequest): Record<string, number | string> {
+  if (body.pet_id != null) return { child_id: body.child_id, pet_id: body.pet_id };
+  if (body.profile) {
+    const { breed, origin, age_stage } = body.profile;
+    return { child_id: body.child_id, breed, origin, age_stage };
+  }
+  return { child_id: body.child_id };
 }
 
 /** `POST /api/parent/generate-pin` 200 body for a request with `child_id`. */
@@ -471,11 +498,13 @@ export const api = {
   /**
    * POST /api/parent/generate-pin — one-time 6-digit PIN for a child profile (15 min).
    * `mode` new_pet | join_pet (with `pet_id`) | relogin (already paired child, new device).
+   * A new pet carries the full `{breed, origin, age_stage}` (M5-R04); 422 `breed_locked`
+   * for a premium breed.
    */
   generatePin: (body: GenerateChildPinRequest) =>
     apiRequest<ChildPinResponse>('/api/parent/generate-pin', {
       method: 'POST',
-      body: body.pet_id != null ? { child_id: body.child_id, pet_id: body.pet_id } : { child_id: body.child_id },
+      body: generatePinBody(body),
     }),
 
   /** DELETE /api/parent/children/{child}/tokens — sign the child out on every device. */
