@@ -11,6 +11,7 @@ use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\PairingController;
 use App\Http\Controllers\ParentDashboardController;
 use App\Http\Controllers\ParentSettingsController;
+use App\Http\Controllers\PetMediaController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
 use Illuminate\Support\Facades\Route;
@@ -48,6 +49,18 @@ Route::post('webhooks/fal-ai', [FalAiWebhookController::class, 'handle'])
 
 Route::post('webhooks/revenuecat', [RevenueCatWebhookController::class, 'handle'])
     ->middleware('throttle:api');
+
+/*
+|--------------------------------------------------------------------------
+| Pet media (M4-05) — signed, expiring URLs from the pet state; no bearer needed
+|--------------------------------------------------------------------------
+| Players (expo-video / expo-image) fetch these without headers. The signature
+| is relative (survives the reverse proxy); a request with a Sanctum token is
+| additionally checked against PetPolicy::listen in the controller.
+*/
+Route::get('media/{media}', [PetMediaController::class, 'show'])
+    ->middleware(['signed:relative', 'throttle:media'])
+    ->name('media.show');
 
 /*
 |--------------------------------------------------------------------------

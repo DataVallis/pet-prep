@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\Media\PetMediaPayload;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -27,6 +28,7 @@ class PairedPetResource extends JsonResource
     public function toArray(Request $request): array
     {
         $pet = $this->resource;
+        $media = PetMediaPayload::for($pet);
 
         return [
             'id' => $pet->id,
@@ -46,10 +48,12 @@ class PairedPetResource extends JsonResource
                 'seed' => $pet->pet_dna['seed'] ?? null,
                 'prompt_anchor' => $pet->pet_dna['prompt_anchor'] ?? null,
                 'visual_traits' => $pet->pet_dna['visual_traits'] ?? null,
-                'reference_image_url' => $pet->pet_dna['reference_image_url'] ?? null,
+                // Our signed URL (M4-05), never the fal URL.
+                'reference_image_url' => $media->referenceImageUrl,
             ],
-            'current_video_url' => $pet->current_video_url,
+            'current_video_url' => $media->currentVideoUrl,
             'media_status' => $pet->media_status,
+            'media' => $media->toArray(),
         ];
     }
 }

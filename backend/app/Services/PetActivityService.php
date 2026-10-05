@@ -12,6 +12,7 @@ use App\Models\Pet;
 use App\Models\PetContract;
 use App\Models\PetDailyStep;
 use App\Models\User;
+use App\Services\Media\PetMediaService;
 use App\Services\Results\ActionResult;
 use Carbon\CarbonInterface;
 use Closure;
@@ -322,6 +323,23 @@ class PetActivityService
                 $locked->giveBirth($now);
                 $locked->pet_state = $this->decay->derivePetState($locked, $now);
                 $locked->saveQuietly();
+
+                // State videos start at birth (M4-03, 2026-10-05): queued after the commit,
+                // once the reference image is stored (else StorePetMedia queues them later).
+                $petId = $locked->id;
+                DB::afterCommit(function () use ($petId): void {
+                    try {
+                        $born = Pet::find($petId);
+
+                        if ($born !== null) {
+                            app(PetMediaService::class)->queueStateVideos($born);
+                        }
+                    } catch (\Throwable $e) {
+                        // The contract is signed either way; media:backfill can catch up.
+                        Log::error('signContract: state videos not queued', ['pet_id' => $petId, 'error' => $e->getMessage()]);
+                        report($e);
+                    }
+                });
             }
 
             $this->logActivity($locked, ActivityType::SignedContract, null, $child->id);

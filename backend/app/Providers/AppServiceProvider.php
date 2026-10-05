@@ -46,6 +46,16 @@ class AppServiceProvider extends ServiceProvider
         // Child care actions (M1-07): a child taps a few buttons a day and the
         // phone syncs steps every few minutes; 30/min per user is generous
         // and still stops a scripted loop.
+        // Signed pet media (M4-05): players issue several range requests per
+        // video; generous per-IP limit, still bounded.
+        RateLimiter::for('media', function (Request $request) {
+            if (app()->environment('testing')) {
+                return Limit::none();
+            }
+
+            return Limit::perMinute(240)->by('media:'.ClientIp::rateLimitKey($request->ip()));
+        });
+
         RateLimiter::for('child-actions', function (Request $request) {
             if (app()->environment('testing')) {
                 return Limit::none();

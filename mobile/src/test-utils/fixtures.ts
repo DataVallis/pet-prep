@@ -4,7 +4,20 @@
 
 import type { ChildPetState } from '@/api/client';
 import type { FamilyChild, FamilyPetRaw } from '@/modules/family/family';
-import type { Pet, PetUpdatedBroadcast } from '@/types';
+import type { Pet, PetMedia, PetUpdatedBroadcast } from '@/types';
+
+/** `media` of a pet (M4-05): nothing stored yet. */
+export function makeMedia(overrides: Partial<PetMedia> = {}): PetMedia {
+  return {
+    status: 'disabled',
+    reference_image_url: null,
+    videos: {},
+    current_video_url: null,
+    states: ['idle', 'sleeping'],
+    expires_at: null,
+    ...overrides,
+  };
+}
 
 /** `pet.updated` payload for pet 7 (UTC instants, like the backend's broadcast). */
 export function makeBroadcast(overrides: Partial<PetUpdatedBroadcast> = {}): PetUpdatedBroadcast {
@@ -85,6 +98,7 @@ export function makeChildState(
       current_video_url: null,
       media_status: 'disabled',
       reference_image_url: null,
+      media: makeMedia(),
       ...petOverrides,
     },
     lock: { is_locked: false, reason: null, until: null },
@@ -263,6 +277,7 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     // M2-05 / M2-06: spec traffic light, metrics, Care Score, today, timeline.
     metrics: { hunger: 100, thirst: 100, energy: 100, hygiene: 100 },
     timeline: [],
+    media: makeMedia(),
     traffic_light: { color: 'green', reasons: [] },
     care_score: { score: null, done: 0, expected: 0, illnesses: 0, since: '2026-10-01T08:00:00+00:00' },
     today: {

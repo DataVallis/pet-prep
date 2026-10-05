@@ -26,10 +26,25 @@
 #      the scheduler skips its ticks and queue workers pause.
 #   4. Pre-migration DB backup (aborts the deploy if Postgres runs but the backup
 #      fails; DEPLOY_ALLOW_NO_BACKUP=1 overrides).
-#   5. Switch the code (rsync from the --from dir, or `git checkout -f SHA`), build,
+#   5. Switch the code (rsync from the --from dir, or `git checkout -f SHA`). If the
+#      Caddyfile differs from what the RUNNING caddy container sees (see CADDY below),
+#      validate the new one right away (still pre-migration → a bad Caddyfile reverts
+#      the code and the old Caddy keeps serving). Then build,
 #      start postgres/redis, migrate, seed breed configs, config/route/view caches,
 #      recreate app containers, queue:restart, `artisan up` (3 attempts, exec then
 #      run --rm fallback), health check.
+#
+# CADDY
+#   caddy bind-mounts the single file deployment/Caddyfile. A sync/checkout replaces a
+#   changed file with a new inode, so the running container keeps reading the OLD
+#   file and `caddy reload` would not see the change either. The script therefore
+#   snapshots the Caddyfile as the running container sees it (`exec caddy cat`; caddy
+#   not running → treated as changed), compares it with the new file after the code
+#   switch, validates a changed file in a one-off container (`run --rm --no-deps caddy
+#   caddy validate`, same env_file), and recreates caddy (`up -d --force-recreate
+#   --no-deps caddy`) together with the other containers after the migrations.
+#   Comparing with the running container (not with releases/previous) also catches
+#   a container that was already stale before this deploy.
 #
 # FAILURE HANDLING (EXIT trap)
 #   * Failure BEFORE migrations succeeded (backup, code switch, build, DB start,
@@ -68,6 +83,8 @@ SCRIPTS_DIR="${PETPREP_ROOT}/scripts"
 PREV_TREE="${PETPREP_ROOT}/releases/previous"
 COMPOSE_FILE="${REPO_DIR}/backend/compose.production.yaml"
 SHA_FILE="${REPO_DIR}/.deployed-sha"
+CADDYFILE="${REPO_DIR}/deployment/Caddyfile"
+CADDY_RUNNING_COPY="${PETPREP_ROOT}/releases/Caddyfile.running"
 RETRY_SLEEP="${DEPLOY_RETRY_SLEEP:-3}"
 APP_SERVICES=(app reverb queue queue-broadcasts scheduler caddy)
 WORKER_SERVICES=(reverb queue queue-broadcasts scheduler)
@@ -116,6 +133,7 @@ CODE_SWITCHED=0         # 1 as soon as repo/ may differ from the previous releas
 MIGRATED=0              # 1 after `migrate --force` succeeded
 CACHES_DONE=0           # 1 after config/route/view caches were rebuilt
 CONTAINERS_RECREATED=0  # 1 once `up -d` of the app services was attempted
+CADDY_CHANGED=0         # 1 if the new Caddyfile differs from the running container's
 FAILED_AT=""
 
 trap 'FAILED_AT="line ${LINENO}: ${BASH_COMMAND}"' ERR
@@ -250,6 +268,16 @@ if [ -n "$rq" ] && [ "$rq" != "default" ]; then
     echo "ERROR: REDIS_QUEUE must be unset or 'default' in ${ENV_FILE} (found '${rq}')." >&2
     exit 1
 fi
+# AI models (M4, David 2026-10-05): the defaults are nano_banana_pro / kling_v3_pro.
+# An old .env copied from .env.example may still pin flux_schnell / kling_v16_legacy
+# (removed — the app falls back to the default and logs an error). Warn, don't block.
+for pair in "AI_REFERENCE_IMAGE_PROFILE=nano_banana_pro" "AI_STATE_VIDEO_PROFILE=kling_v3_pro"; do
+    key="${pair%%=*}"; want="${pair#*=}"
+    have=$(env_value "$key")
+    if [ -n "$have" ] && [ "$have" != "$want" ]; then
+        echo "WARNING: ${key}='${have}' in ${ENV_FILE} overrides the production default '${want}' — remove the line unless intended." >&2
+    fi
+done
 log "Env preflight OK."
 
 # ---- 2. Record the previous release ----------------------------------------------
@@ -273,6 +301,13 @@ else
     warn "no --from dir and no git checkout: re-deploying the tree in place (automatic code revert unavailable)."
 fi
 log "Previous release: ${PREV_SHA:-unknown}"
+
+# Caddyfile as the running caddy container sees it (empty → caddy not running).
+mkdir -p "$(dirname "$CADDY_RUNNING_COPY")"
+if ! dc exec -T caddy cat /etc/caddy/Caddyfile > "$CADDY_RUNNING_COPY" 2>/dev/null; then
+    rm -f "$CADDY_RUNNING_COPY"
+    warn "could not read the running Caddyfile (caddy not running?) — treating it as changed."
+fi
 
 # ---- 3. Maintenance mode BEFORE touching the code --------------------------------
 enter_maintenance
@@ -319,6 +354,19 @@ cp "$ENV_FILE" "${REPO_DIR}/backend/.env"
 chmod 600 "${REPO_DIR}/backend/.env"
 log "Installed production .env into ${REPO_DIR}/backend/.env"
 
+# Caddyfile changed? Validate before anything irreversible (pre-migration failure →
+# code reverted, the running caddy container is untouched).
+if [ -f "$CADDY_RUNNING_COPY" ] && cmp -s "$CADDY_RUNNING_COPY" "$CADDYFILE"; then
+    log "Caddyfile unchanged — caddy is not recreated."
+else
+    CADDY_CHANGED=1
+    log "Caddyfile changed — validating the new one..."
+    if ! dc run --rm --no-deps -T caddy caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile; then
+        echo "ERROR: new deployment/Caddyfile is invalid — aborting (old Caddy keeps running)." >&2
+        exit 1
+    fi
+fi
+
 # Install ops scripts (copy + rename: never overwrite a running script in place).
 mkdir -p "$SCRIPTS_DIR"
 for s in backup-production-db.sh restore-production-db.sh deploy-production.sh; do
@@ -357,6 +405,11 @@ CACHES_DONE=1
 log "Starting all application services..."
 CONTAINERS_RECREATED=1
 dc up -d --remove-orphans "${APP_SERVICES[@]}"
+if [ "$CADDY_CHANGED" = "1" ]; then
+    # Single-file bind mount: only a new container sees the new Caddyfile.
+    log "Recreating caddy for the new Caddyfile..."
+    dc up -d --force-recreate --no-deps caddy
+fi
 
 # Signal shared via cache: restarts queue + queue-broadcasts on the new code.
 log "Restarting queue workers..."

@@ -12,6 +12,7 @@ use App\Models\User;
 use App\Services\FamilyDashboardService;
 use App\Services\FamilyService;
 use App\Services\HardStopService;
+use App\Services\Media\PetMediaService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -30,6 +31,7 @@ class ParentDashboardController extends Controller
         private readonly FamilyService $families,
         private readonly FamilyDashboardService $dashboard,
         private readonly HardStopService $hardStops,
+        private readonly PetMediaService $media,
     ) {}
 
     /**
@@ -83,6 +85,7 @@ class ParentDashboardController extends Controller
         }
 
         $child = $pet->caretakers()->first();
+        $media = $this->media->mediaFor($pet);
 
         return response()->json([
             'timezone' => $family->timezone,
@@ -105,7 +108,11 @@ class ParentDashboardController extends Controller
                 'is_hard_stopped' => $pet->is_hard_stopped,
                 'escalation_level' => $pet->escalation_level,
                 'virtual_age_months' => $pet->virtualAgeInMonths(),
-                'current_video_url' => $pet->current_video_url,
+                // AI media (M4-05): signed URLs to our stored copies.
+                'current_video_url' => $media->currentVideoUrl,
+                'reference_image_url' => $media->referenceImageUrl,
+                'media_status' => $pet->media_status,
+                'media' => $media->toArray(),
             ],
             'child' => $child ? [
                 'id' => $child->id,

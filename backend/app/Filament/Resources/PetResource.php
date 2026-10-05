@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Enums\BreedType;
 use App\Enums\PetStateEnum;
 use App\Filament\Resources\PetResource\Pages;
+use App\Filament\Resources\PetResource\RelationManagers;
 use App\Models\Pet;
 use App\Services\Media\ReferenceImageRetryService;
 use Filament\Forms;
@@ -133,11 +134,7 @@ class PetResource extends Resource
                         Forms\Components\Placeholder::make('media_error_view')
                             ->label('Media error')
                             ->content(fn (?Pet $record): string => $record?->media_error ?? '—'),
-                        Forms\Components\TextInput::make('current_video_url')
-                            ->label('Current Video URL')
-                            ->url()
-                            ->maxLength(2048)
-                            ->columnSpanFull(),
+                        // Media files, status, cost and regeneration: "AI media" panel below (M4-05).
                     ]),
             ]);
     }
@@ -249,7 +246,7 @@ class PetResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\MediaRelationManager::class,
         ];
     }
 

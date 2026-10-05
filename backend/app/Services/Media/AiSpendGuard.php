@@ -100,11 +100,11 @@ class AiSpendGuard
     /**
      * @throws AiCallException when a cap would be exceeded
      */
-    public function reserve(ModelProfile $profile, AiSpendPurpose $purpose, ?int $petId = null, ?int $labResultId = null): AiSpendLedger
+    public function reserve(ModelProfile $profile, AiSpendPurpose $purpose, ?int $petId = null, ?int $labResultId = null, ?int $petMediaId = null): AiSpendLedger
     {
         $cost = $profile->estimatedCostUsd();
 
-        return DB::transaction(function () use ($profile, $purpose, $petId, $labResultId, $cost) {
+        return DB::transaction(function () use ($profile, $purpose, $petId, $labResultId, $petMediaId, $cost) {
             if (DB::getDriverName() === 'pgsql') {
                 DB::select('SELECT pg_advisory_xact_lock(?)', [self::ADVISORY_LOCK_KEY]);
             }
@@ -124,6 +124,7 @@ class AiSpendGuard
                 'cost_usd' => $cost,
                 'status' => AiSpendLedger::STATUS_RESERVED,
                 'pet_id' => $petId,
+                'pet_media_id' => $petMediaId,
                 'media_lab_result_id' => $labResultId,
             ]);
         });
