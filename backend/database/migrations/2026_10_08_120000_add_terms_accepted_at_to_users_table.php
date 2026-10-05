@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Schema;
  * Null for accounts created before M2-10a (seeded / admin-created parents)
  * and for child profiles (children never accept terms themselves).
  *
+ * `terms_version` (PR #25) = which version of the legal texts was accepted
+ * (config/legal.php; texts still pending). Stored only, returned nowhere.
+ *
  * Additive, no existing row is rewritten.
  */
 return new class extends Migration
@@ -18,13 +21,14 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->timestamp('terms_accepted_at')->nullable()->after('email_verified_at');
+            $table->string('terms_version', 32)->nullable()->after('terms_accepted_at');
         });
     }
 
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('terms_accepted_at');
+            $table->dropColumn(['terms_accepted_at', 'terms_version']);
         });
     }
 };

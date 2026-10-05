@@ -11,6 +11,8 @@ import {
   ApiError,
   api,
   saveAuthToken,
+  type RegisterErrorBody,
+  type RegisterErrorCode,
   type RegisterParentRequest,
   type RegisterResponse,
   type ValidationErrorBody,
@@ -39,6 +41,7 @@ export const SIGNUP_STRINGS = {
   errors: {
     nameRequired: 'Vpišite ime.',
     nameTooLong: 'Ime je lahko dolgo največ 60 znakov.',
+    nameInvalid: 'Vpišite ime (največ 60 znakov).',
     emailInvalid: 'Vpišite veljaven e-poštni naslov.',
     emailTaken: 'Ta e-poštni naslov je že registriran. Prijavite se ali uporabite drugega.',
     passwordWeak: 'Geslo mora imeti vsaj 10 znakov, velike in male črke ter številko.',
@@ -87,7 +90,12 @@ export function normalizeEmail(email: string): string {
   return email.trim().toLowerCase();
 }
 
-/** Pragmatic check (one @, a dot in the domain, no spaces) — the server validates RFC. */
+/**
+ * Pragmatic check (one @, a dot in the domain, no spaces). Deliberately STRICTER than
+ * the server (`email:rfc` also accepts `ana@localhost`): a parent's real address always
+ * has a domain with a dot, and a typo is caught before the request. The server stays
+ * the authority for everything this check lets through.
+ */
 export function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -160,6 +168,29 @@ function validationErrors(data: unknown): Record<string, string[]> {
   return errors;
 }
 
+function errorCodes(data: unknown): Partial<Record<string, RegisterErrorCode>> {
+  if (typeof data !== 'object' || data === null || !('codes' in data)) return {};
+  const { codes } = data as RegisterErrorBody;
+  if (typeof codes !== 'object' || codes === null) return {};
+  return codes;
+}
+
+/** Server code → form field + Slovenian message (timezone is handled as a general error). */
+const CODE_TO_FIELD: Partial<Record<RegisterErrorCode, { field: SignupField; message: string }>> = {
+  name_invalid: { field: 'name', message: E.nameInvalid },
+  email_invalid: { field: 'email', message: E.emailInvalid },
+  email_taken: { field: 'email', message: E.emailTaken },
+  password_weak: { field: 'password', message: E.passwordWeak },
+  password_mismatch: { field: 'passwordRepeat', message: E.passwordMismatch },
+  terms_required: { field: 'acceptTerms', message: E.termsRequired },
+};
+
+/** Did the server reject (only or also) the timezone? */
+export function isTimezoneRejection(err: unknown): boolean {
+  if (!(err instanceof ApiError) || err.status !== 422) return false;
+  return errorCodes(err.data).timezone !== undefined || validationErrors(err.data).timezone !== undefined;
+}
+
 /** Maps a failed `api.register` call to what the form shows (always Slovenian). */
 export function mapSignupError(err: unknown): SignupFailure {
   if (!(err instanceof ApiError)) return { fields: {}, general: E.offline };
@@ -174,25 +205,32 @@ export function mapSignupError(err: unknown): SignupFailure {
 
   if (err.status === 422) {
     const server = validationErrors(err.data);
+    const codes = errorCodes(err.data);
     const fields: SignupErrors = {};
-    // Server messages are English (Laravel); show our Slovenian text per field.
-    if (server.name) {
+
+    // 1) Machine-readable codes (PR #25) — preferred.
+    for (const code of Object.values(codes)) {
+      if (code === undefined) continue;
+      const mapped = CODE_TO_FIELD[code];
+      if (mapped) fields[mapped.field] = mapped.message;
+    }
+
+    // 2) Fallback for fields without a code: Laravel's English messages.
+    if (server.name && codes.name === undefined) {
       fields.name = server.name.some((m) => /greater than|must not/i.test(m)) ? E.nameTooLong : E.nameRequired;
     }
-    if (server.email) {
+    if (server.email && codes.email === undefined) {
       fields.email = server.email.some((m) => /taken/i.test(m)) ? E.emailTaken : E.emailInvalid;
     }
-    if (server.password) {
+    if (server.password && codes.password === undefined) {
       const mismatchOnly = server.password.every((m) => /confirmation/i.test(m));
       if (mismatchOnly) fields.passwordRepeat = E.passwordMismatch;
       else fields.password = E.passwordWeak;
     }
-    if (server.accept_terms) fields.acceptTerms = E.termsRequired;
-    const general = server.timezone
-      ? E.timezoneInvalid
-      : Object.keys(fields).length === 0
-        ? E.failed
-        : null;
+    if (server.accept_terms && codes.accept_terms === undefined) fields.acceptTerms = E.termsRequired;
+
+    const timezoneFailed = codes.timezone !== undefined || server.timezone !== undefined;
+    const general = timezoneFailed ? E.timezoneInvalid : Object.keys(fields).length === 0 ? E.failed : null;
     return { fields, general };
   }
 
@@ -206,7 +244,17 @@ export function mapSignupError(err: unknown): SignupFailure {
  * `mapSignupError`).
  */
 export async function performSignup(body: RegisterParentRequest): Promise<SignInPayload> {
-  const response: RegisterResponse = await api.register(body);
+  let response: RegisterResponse;
+  try {
+    response = await api.register(body);
+  } catch (err) {
+    // The server maps device aliases itself; if it still refuses the device's zone,
+    // retry ONCE without it (the family gets Europe/Ljubljana, changeable in settings).
+    if (body.timezone === undefined || !isTimezoneRejection(err)) throw err;
+    const withoutTimezone: RegisterParentRequest = { ...body };
+    delete withoutTimezone.timezone;
+    response = await api.register(withoutTimezone);
+  }
   await saveAuthToken(response.token);
   return {
     token: response.token,

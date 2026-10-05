@@ -104,6 +104,27 @@ describe('mapSignupError', () => {
     });
   });
 
+  it('prefers the server codes over the English messages', () => {
+    const err = new ApiError('x', 422, {
+      message: 'x',
+      errors: { email: ['Something new and unexpected.'], password: ['The password field confirmation does not match.'], name: ['x'] },
+      codes: { email: 'email_taken', password: 'password_weak', name: 'name_invalid' },
+    });
+    expect(mapSignupError(err)).toEqual({
+      fields: { email: E.emailTaken, password: E.passwordWeak, name: E.nameInvalid },
+      general: null,
+    });
+    expect(
+      mapSignupError(new ApiError('x', 422, { message: 'x', errors: { password: ['x'] }, codes: { password: 'password_mismatch' } })).fields,
+    ).toEqual({ passwordRepeat: E.passwordMismatch });
+    expect(
+      mapSignupError(new ApiError('x', 422, { message: 'x', errors: { accept_terms: ['x'] }, codes: { accept_terms: 'terms_required' } })).fields,
+    ).toEqual({ acceptTerms: E.termsRequired });
+    expect(
+      mapSignupError(new ApiError('x', 422, { message: 'x', errors: { timezone: ['x'] }, codes: { timezone: 'timezone_invalid' } })).general,
+    ).toBe(E.timezoneInvalid);
+  });
+
   it('timezone or unknown 422 → a general message', () => {
     expect(mapSignupError(v422({ timezone: ['bad'] })).general).toBe(E.timezoneInvalid);
     expect(mapSignupError(new ApiError('x', 422, null)).general).toBe(E.failed);

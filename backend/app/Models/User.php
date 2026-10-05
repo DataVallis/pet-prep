@@ -232,11 +232,18 @@ class User extends Authenticatable implements FilamentUser
             ->first();
     }
 
-    public static function emailTaken(string $email): bool
+    /**
+     * Is the address used by another account (case-insensitive; uses the
+     * lower(email) index)? $exceptId = the account being edited.
+     */
+    public static function emailTaken(string $email, ?int $exceptId = null): bool
     {
         $normalized = self::normalizeEmail($email);
 
-        return $normalized !== '' && self::query()->whereRaw('lower(email) = ?', [$normalized])->exists();
+        return $normalized !== '' && self::query()
+            ->whereRaw('lower(email) = ?', [$normalized])
+            ->when($exceptId !== null, fn ($q) => $q->whereKeyNot($exceptId))
+            ->exists();
     }
 
     /**

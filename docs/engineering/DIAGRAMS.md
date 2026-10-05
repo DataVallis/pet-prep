@@ -213,9 +213,10 @@ sequenceDiagram
   alt throttled
     API-->>App: 429 + Retry-After → "poskusite znova čez N min"
   else invalid / e-mail taken (lower(email), case-insensitive)
-    API-->>App: 422 {errors: {field: [...]}} → Slovenian message per field
+    API-->>App: 422 {errors, codes: {field: code}} → Slovenian message per code
+    Note over App,API: timezone_invalid → the app retries ONCE without timezone<br/>(aliases like Etc/UTC, Asia/Calcutta are already canonicalised by the server;<br/>unknown valid zones → Europe/Ljubljana)
   else ok
-    API->>DB: transaction: users (role parent, email lower case,<br/>password hash, timezone, terms_accepted_at)<br/>→ families (timezone) + family_user (parent)<br/>→ personal_access_tokens (abilities ["parent"])
+    API->>DB: transaction: users (role parent, email lower case,<br/>password hash, timezone, terms_accepted_at, terms_version)<br/>lost race on users_email_(lower_)unique → 422 email_taken<br/>→ families (timezone) + family_user (parent)<br/>→ personal_access_tokens (abilities ["parent"])
     API-->>App: 201 {token, abilities, user, pet: null, awaiting_contract: null}
     App->>App: SecureStore token → appStore.signIn()
     App->>API: GET /api/parent/dashboard (ability parent)

@@ -2,11 +2,22 @@
 
 namespace App\Http\Requests;
 
+use App\Http\Requests\Concerns\NormalizesTimezoneInput;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateQuietHoursRequest extends FormRequest
 {
+    use NormalizesTimezoneInput;
+
+    /**
+     * Device aliases (Etc/UTC, Asia/Calcutta, …) → canonical IANA name (PR #25).
+     */
+    protected function prepareForValidation(): void
+    {
+        $this->normalizeTimezoneInput();
+    }
+
     /**
      * Determine if the user is authorized to make this request.
      */

@@ -282,7 +282,6 @@ describe('PUT /api/parent/settings', function () {
         expect($parent->fresh()->timezone)->toBe(TZ_LJUBLJANA);
     })->with([
         'unknown' => 'Mars/Olympus',
-        'wrong case' => 'europe/ljubljana',
         'offset' => '+02:00',
         'abbreviation' => 'CEST',
         'empty' => '',

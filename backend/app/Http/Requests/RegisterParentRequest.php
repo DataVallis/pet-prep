@@ -2,9 +2,13 @@
 
 namespace App\Http\Requests;
 
+use App\Http\Requests\Concerns\NormalizesTimezoneInput;
 use App\Models\Family;
 use App\Models\User;
+use Illuminate\Contracts\Validation\Validator as ValidatorContract;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Validation\Validator;
 
@@ -19,7 +23,31 @@ use Illuminate\Validation\Validator;
  */
 class RegisterParentRequest extends FormRequest
 {
+    use NormalizesTimezoneInput;
+
     public const MAX_NAME_LENGTH = 60;
+
+    /**
+     * Machine-readable reason per field in the 422 body (`codes`), so the
+     * app can show its own text without parsing English messages.
+     */
+    public const CODE_NAME_INVALID = 'name_invalid';
+
+    public const CODE_EMAIL_INVALID = 'email_invalid';
+
+    public const CODE_EMAIL_TAKEN = 'email_taken';
+
+    public const CODE_PASSWORD_WEAK = 'password_weak';
+
+    public const CODE_PASSWORD_MISMATCH = 'password_mismatch';
+
+    public const CODE_TERMS_REQUIRED = 'terms_required';
+
+    public const CODE_TIMEZONE_INVALID = 'timezone_invalid';
+
+    public const CODE_DEVICE_NAME_INVALID = 'device_name_invalid';
+
+    private bool $emailTaken = false;
 
     public function authorize(): bool
     {
@@ -45,11 +73,13 @@ class RegisterParentRequest extends FormRequest
         $timezone = $this->input('timezone');
         if ($timezone === null || (is_string($timezone) && trim($timezone) === '')) {
             $merge['timezone'] = Family::DEFAULT_TIMEZONE;
-        } elseif (is_string($timezone)) {
-            $merge['timezone'] = trim($timezone);
         }
 
         $this->merge($merge);
+
+        // Device aliases (Etc/UTC, Asia/Calcutta, Europe/Kiev …) → canonical
+        // name; unknown but valid → default (logged) instead of a 422.
+        $this->normalizeTimezoneInput('timezone', fallbackToDefault: true);
     }
 
     /**
@@ -85,10 +115,52 @@ class RegisterParentRequest extends FormRequest
                     return;
                 }
                 if (User::emailTaken((string) $this->input('email'))) {
+                    $this->emailTaken = true;
                     $validator->errors()->add('email', __('validation.unique', ['attribute' => 'email']));
                 }
             },
         ];
+    }
+
+    /**
+     * 422 = Laravel's validation body + `codes` {field: code}.
+     */
+    protected function failedValidation(ValidatorContract $validator): void
+    {
+        $failed = $validator->failed();
+        $codes = [];
+
+        foreach ($validator->errors()->keys() as $field) {
+            $rules = array_keys($failed[$field] ?? []);
+            $codes[$field] = match ($field) {
+                'name' => self::CODE_NAME_INVALID,
+                'email' => $this->emailTaken ? self::CODE_EMAIL_TAKEN : self::CODE_EMAIL_INVALID,
+                'password' => $rules === ['Confirmed'] ? self::CODE_PASSWORD_MISMATCH : self::CODE_PASSWORD_WEAK,
+                'accept_terms' => self::CODE_TERMS_REQUIRED,
+                'timezone' => self::CODE_TIMEZONE_INVALID,
+                'device_name' => self::CODE_DEVICE_NAME_INVALID,
+                default => 'invalid',
+            };
+        }
+
+        throw new HttpResponseException(self::errorResponse($validator->errors()->toArray(), $codes));
+    }
+
+    /**
+     * The 422 body of POST /api/register (also used for a lost sign-up race).
+     *
+     * @param  array<string, array<int, string>>  $errors
+     * @param  array<string, string>  $codes
+     */
+    public static function errorResponse(array $errors, array $codes): JsonResponse
+    {
+        $first = collect($errors)->flatten()->first();
+
+        return response()->json([
+            'message' => is_string($first) ? $first : 'The given data was invalid.',
+            'errors' => $errors,
+            'codes' => $codes,
+        ], 422);
     }
 
     /**

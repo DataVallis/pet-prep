@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Enums\TokenAbility;
+use App\Exceptions\EmailTakenException;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterParentRequest;
 use App\Models\Pet;
@@ -23,6 +24,12 @@ class AuthController extends Controller
      *
      * - `email` is trimmed and stored lower case; 422 when the address is
      *   already used (case-insensitive) — an accepted trade-off for parents.
+     * - `timezone`: device aliases (Etc/UTC, Asia/Calcutta, Europe/Kiev …)
+     *   are mapped to the canonical IANA name; an unknown but valid zone
+     *   becomes Europe/Ljubljana (logged); only a non-timezone is a 422.
+     * - Every 422 carries `codes` {field: code}: `name_invalid`,
+     *   `email_invalid`, `email_taken`, `password_weak`, `password_mismatch`,
+     *   `terms_required`, `timezone_invalid`, `device_name_invalid`.
      * - `password`: ≥ 10 characters, upper + lower case and a digit,
      *   `password_confirmation` must match.
      * - `accept_terms` must be true (terms of use + privacy policy);
@@ -34,13 +41,21 @@ class AuthController extends Controller
      */
     public function register(RegisterParentRequest $request, ParentRegistrationService $registrations): JsonResponse
     {
-        $result = $registrations->register(
-            $request->displayName(),
-            $request->emailAddress(),
-            $request->plainPassword(),
-            $request->familyTimezone(),
-            $request->deviceName(),
-        );
+        try {
+            $result = $registrations->register(
+                $request->displayName(),
+                $request->emailAddress(),
+                $request->plainPassword(),
+                $request->familyTimezone(),
+                $request->deviceName(),
+            );
+        } catch (EmailTakenException $e) {
+            // Concurrent sign-up with the same address won the race.
+            return RegisterParentRequest::errorResponse(
+                ['email' => [__('validation.unique', ['attribute' => 'email'])]],
+                ['email' => RegisterParentRequest::CODE_EMAIL_TAKEN],
+            );
+        }
 
         $user = $result['user'];
 

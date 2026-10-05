@@ -59,6 +59,22 @@ export interface ValidationErrorBody {
   errors?: Record<string, string[]>;
 }
 
+/** Machine-readable reason per field in a `POST /api/register` 422 (`codes`). */
+export type RegisterErrorCode =
+  | 'name_invalid'
+  | 'email_invalid'
+  | 'email_taken'
+  | 'password_weak'
+  | 'password_mismatch'
+  | 'terms_required'
+  | 'timezone_invalid'
+  | 'device_name_invalid';
+
+/** `POST /api/register` 422 body: validation errors + `codes` {field: code}. */
+export interface RegisterErrorBody extends ValidationErrorBody {
+  codes?: Partial<Record<string, RegisterErrorCode>>;
+}
+
 /** `GET /api/parent/dashboard` 200 response (union: paired / no pet / no child). */
 export type ParentDashboardResponse =
   operations['parentDashboard.dashboard']['responses'][200]['content']['application/json'];
