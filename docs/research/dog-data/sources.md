@@ -1,0 +1,71 @@
+# Sources — dog data for realism (M1-19 / M5)
+
+All sources accessed **2026-10-05** by Claude (research branch `research/M1-19-dog-data`).
+
+**How quotes were captured:** pages were read through a web-fetch tool that returns the
+requested passages; quotes in `data.json` are the passages it returned. Before any value is
+imported into `breed_configs`, a human should open the URL and spot-check the quote (in
+particular for the PDFs, S1, S12, S13, S24, S30).
+
+"Tier" = how much weight the source deserves:
+**A** breed standard / peer-reviewed paper / veterinary association guideline ·
+**B** veterinary hospital, university or national welfare charity advice page ·
+**C** secondary summary (encyclopedia, press release, article about a paper) — use only together with A/B.
+
+| ID | Tier | Publisher | Title | URL | Notes |
+|---|---|---|---|---|---|
+| S1 | A | FCI (Fédération Cynologique Internationale) | FCI-Standard N° 297 — Border Collie (valid standard 24.06.1987, EN version) | https://www.fci.be/Nomenclature/Standards/297g01-en.pdf | Official standard; no weight given. |
+| S2 | A | FCI | Breeds nomenclature — Border Collie (297) | https://www.fci.be/EN/nomenclature/BORDER-COLLIE-297.html | Group 1, Section 1; publication 28/10/2009 (EN). |
+| S3 | A (secondary host) | AKC standard, hosted by the Border Collie Society of America | AKC Standard for the Border Collie (approved April 21, 2015) | https://www.bordercolliesociety.com/breed-info | The akc.org PDF was not reachable from this environment; the text is the AKC standard reproduced by the AKC parent club. Verify against akc.org before import. |
+| S4 | B | American Kennel Club (akc.org) — M. Erickson, 2026-08-18 | Is a Border Collie Right for You? | https://www.akc.org/expert-advice/dog-breeds/border-collie-right-for-you/ | Weight 30–55 lb, height 18–22 in, energy, herding. |
+| S5 | B | The Royal Kennel Club (UK) | Breeds A–Z: Border Collie | https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/border-collie | Size medium, exercise > 2 h/day, lifespan > 12 years. |
+| S6 | A | The Royal Kennel Club (UK) | Breed standard: Border Collie (last updated 1 Jan 2025) | https://www.royalkennelclub.com/breed-standards/pastoral/border-collie | Same wording as FCI for eyes/ears/colour. |
+| S7 | B | PDSA (UK veterinary charity) | Border Collie breed information | https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie | Weight 25–30 kg (conflicts with AKC), ≥2 h exercise, boredom chewing. |
+| S8 | A | PLOS ONE | Salt C. et al. (2017) Growth standard charts for monitoring bodyweight in dogs of different sizes. doi:10.1371/journal.pone.0182064 | https://pmc.ncbi.nlm.nih.gov/articles/PMC5584974/ | Size bands, 12 wk–2 y curves; raw data (CC-BY) at https://datacat.liverpool.ac.uk/377/ — no centile tables published. |
+| S9 | A | Revista MVZ Córdoba 19(1):4015–4022 | Posada S., Gómez L., Rosero R. (2014) Application of the logistic model to describe the growth curve in dogs of different breeds | https://www.redalyc.org/pdf/693/69330065011.pdf | Logistic parameters per breed; small sample (21 dogs). |
+| S10 | B | PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20 | When Do Dogs Stop Growing? | https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing | Growth end by size class. |
+| S11 | A | AAHA | 2019 AAHA Canine Life Stage Guidelines — Canine life stage definitions | https://www.aaha.org/resources/life-stage-canine-2019/canine-life-stage-definitions/ | |
+| S12 | A | J Am Anim Hosp Assoc 2019;55:267–290 | Creevy K. E. et al. 2019 AAHA Canine Life Stage Guidelines (PDF) | https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/canine-life-stage-2019/2019-aaha-canine-life-stage-guidelines-final.pdf | |
+| S13 | A | J Am Anim Hosp Assoc 2023;59:1–21 | Dhaliwal R. et al. 2023 AAHA Senior Care Guidelines for Dogs and Cats (PDF) | https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2023-aaha-senior-care-guidelines-for-dogs-and-cats/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf | |
+| S14 | B | Dogs Trust (UK) | Caring for an older dog | https://www.dogstrust.org.uk/dog-advice/life-with-your-dog/at-home/looking-after-an-older-dog | Senior > 7 y, smaller meals 2–3×/day, frequent short walks. |
+| S15 | B (summary of A) | Dogs Trust (UK) | Longevity of UK dog breeds — research (summary of McMillan et al. 2024, Sci Rep, doi:10.1038/s41598-023-50458-w) | https://www.dogstrust.org.uk/about-us/research-expertise/longevity-dog-breeds | Border Collie 13.1 y, crossbreeds 12.0 y. |
+| S16 | A | Scientific Reports (PMC) | Author Correction: Longevity of companion dog breeds: those at risk from early death | https://pmc.ncbi.nlm.nih.gov/articles/PMC11021557 | Confirms Border Collie x̃ = 13.1 y in Fig. 3. |
+| S17 | C (summary of A) | Faunalytics | Summary of O'Neill D. G. et al. (2013) Longevity and mortality of owned dogs in England. Vet J 198(3):638–643 | https://faunalytics.org/longevity-and-mortality-of-owned-dogs-in-england/ | Crossbreds lived 1.2 y longer (opposite of S15). |
+| S18 | B | ASPCA | General Dog Care | https://www.aspca.org/pet-care/dog-care/general-dog-care | Meals per day by age. |
+| S19 | B | VCA Animal Hospitals (2025-02-21) | Feeding Times and Frequency for Your Dog | https://vcahospitals.com/pets-first/know-your-pet/feeding-times-and-frequency-for-your-dog | |
+| S20 | B | RSPCA Australia Knowledgebase (updated 2024-08-21) | What should I feed my puppy? | https://kb.rspca.org.au/knowledge-base/what-should-i-feed-my-puppy/ | |
+| S21 | B | The Royal Kennel Club (UK) | Puppy feeding tips | https://www.royalkennelclub.com/health-and-dog-care/health-dog-care/health/health-and-care/a-z-of-health-and-care-issues/puppy-feeding-tips | |
+| S22 | B | Pet Nutrition at OVC, University of Guelph (2023-07-03, upd. 2025-08-13; G. Carter, reviewed by H. Godfrey, A. Verbrugghe) | Beat the heat: your guide to pet hydration | https://ovcpetnutrition.uoguelph.ca/2023/07/03/beat-the-heat-your-guide-to-pet-hydration | 60–80 ml/kg/day. |
+| S23 | B | FirstVet (2019-04-04) | How much does a dog normally drink in a day? | https://firstvet.com/uk/questions/539/how-much-does-a-dog-normally-drink-in-a-day | 20–70 ml/kg normal, >100 ml/kg abnormal. |
+| S24 | B | Purdue University Canine Welfare Science (content: Pet Leadership Council 2019, bedogsmart.com) | Dog Fitness and Exercise (PDF) | https://caninewelfare.centers.purdue.edu/wp-content/uploads/2022/12/Dog-Fitness-and-Exercise.pdf | Source of the "5 min per month of age, twice a day" rule. |
+| S25 | B | Veterinary Ireland Journal | Guidelines for exercising pups: separating myths from science | https://www.veterinaryirelandjournal.com/small-animal/392-guidelines-for-exercising-pups-separating-myths-from-science | Calls the 5-minute rule a misconception. |
+| S26 | A | Am J Vet Res 73(6):838–846 (via FAO AGRIS record) | Krontveit R. I. et al. (2012) Housing- and exercise-related risk factors associated with the development of hip dysplasia … doi:10.2460/ajvr.73.6.838 | https://agris.fao.org/search/en/records/65df97c07c7033e84bee55e1 | Large/giant breeds only. |
+| S27 | C | ScienceDaily (2012-03-26), Norwegian School of Veterinary Science press | Puppies' exercise and hip dysplasia | https://www.sciencedaily.com/releases/2012/03/120326112842.htm | Press summary of S26. |
+| S28 | B | The Royal Kennel Club (UK) | Why does my puppy sleep so much? | https://www.royalkennelclub.com/health-and-dog-care/health-dog-care/health/health-and-care/a-z-of-health-and-care-issues/why-does-my-puppy-sleep-so-much | Sleep hours by age (puppies). |
+| S29 | A | Animals (MDPI) 2020 | Kinsman R. et al. Sleep Duration and Behaviours: A Descriptive Analysis of a Cohort of Dogs up to 12 Months of Age (Dogs Trust "Generation Pup") | https://pmc.ncbi.nlm.nih.gov/articles/PMC7401528 | Owner-reported; lower than S28. |
+| S30 | B | Ryan Veterinary Hospital, University of Pennsylvania (Penn Vet) | Tips on housetraining your dog (PDF) | https://www.vet.upenn.edu/wp-content/uploads/2024/12/tips-on-housetraining-your-dog-pdf.pdf | "1 hour per month of age". |
+| S31 | B | WebMD Pets — medically reviewed by Amy Flowers, DVM, 2024-02-10 | House Training Your Puppy | https://www.webmd.com/pets/dogs/house-training-your-puppy | 4–6 months to full house-training. |
+| S32 | B | American Kennel Club (updated 2026-02-17) | Timeline of Puppy Teething | https://www.akc.org/expert-advice/health/timeline-of-puppy-teething/ | |
+| S33 | B | ASPCA | Destructive Chewing | https://aspca.org/pet-care/dog-care/common-dog-behavior-issues/destructive-chewing | |
+| S34 | B (author of A) | Psychology Today — Stanley Coren, 2009-07-15 | Canine Intelligence — Breed Does Matter | https://www.psychologytoday.com/us/blog/canine-corner/200907/canine-intelligence-breed-does-matter | By the author of *The Intelligence of Dogs* (1994). |
+| S35 | C | Wikipedia | The Intelligence of Dogs | https://en.wikipedia.org/wiki/The_Intelligence_of_Dogs | Only for tier definitions (repetitions / % obey) — verify in the book before showing to users. |
+| S36 | B | American Kennel Club — P. Lunchick, RVT, KPA-CTP (updated 2026-01-09) | Teach Your Puppy These 5 Basic Commands | https://www.akc.org/expert-advice/training/teach-your-puppy-these-5-basic-commands/ | |
+| S37 | B | PetMD — S. Loos, DVM; reviewed by M. Price, DVM (2025-02-27) | Puppy Training Guide: How and When To Start | https://www.petmd.com/dog/general-health/when-start-training-puppy | |
+| S38 | B | Longmont Humane Society (2024-05-13) | It Doesn't Happen Overnight – The 3-3-3 Rule for Dog Adoptions | https://www.longmonthumane.org/it-doesnt-happen-overnight-the-3-3-3-rule-for-dog-adoptions/ | Local shelter; no origin given. |
+| S39 | A | Animal Welfare 34:e9 (2025) | Moyer B. J., Zulch H., Ventura B. A., Burman O. A qualitative exploration of owner experiences following dog adoption. doi:10.1017/awf.2025.4 | https://www.cambridge.org/core/product/identifier/S0962728625000041/type/journal_article | n = 27. |
+| S40 | A | PLOS ONE (2023) | Bohland K. R. et al. Shelter dog behavior after adoption: Using the C-BARQ to track dog behavior changes through the first six months after adoption. doi:10.1371/journal.pone.0289356 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10431636 | n = 99, Ohio. |
+| S41 | A | Animals (Basel) 2017 | Hemy M., Rand J., Morton J., Paterson M. Characteristics and Outcomes of Dogs Admitted into Queensland RSPCA Shelters | https://pmc.ncbi.nlm.nih.gov/articles/PMC5615298 | n = 11,967 (2014), Australia. |
+| S42 | A | Science (2022) | Morrill K. et al. Ancestry-inclusive dog genomics challenges popular breed stereotypes. doi:10.1126/science.abk0639 | https://pmc.ncbi.nlm.nih.gov/articles/PMC9675396 | |
+| S43 | C | Newcastle University press office (2020-05-13) | Young dogs might be more similar to human teenagers than we think (on Asher & Harvey, *Biology Letters* 2020) | https://www.ncl.ac.uk/press/articles/latest/2020/05/conversationteendogs/ | Read the original paper before relying on it. |
+| S44 | B | Purdue University Canine Welfare Science | Socialization & Early Exposure | https://caninewelfare.centers.purdue.edu/behavior/socialization/ | Sensitive period ~3–14 weeks. |
+| S45 | A | British Journal of Sports Medicine (2018) | Tudor-Locke C. et al. How fast is fast enough? Walking cadence (steps/min) as a practical estimate of intensity in adults. doi:10.1136/bjsports-2017-097628 | https://pmc.ncbi.nlm.nih.gov/articles/PMC6029645 | **Human** cadence; adults only. |
+| S46 | A (negative finding) | Colorado State University thesis (2011) | Weber D. I. S. Objectively measured free-living physical activity in pet dogs | https://mountainscholar.org/handle/10217/48144 | Uses accelerometer counts, **no dog steps/day** — shows steps are not a standard dog measure. |
+
+## Looked for but not found / not usable
+- **AKC breed page** `akc.org/dog-breeds/border-collie/` (colour list, "trainability" bar) — not reachable from this environment. Colour list therefore not sourced.
+- **WSAVA Global Nutrition Guidelines** — no meals-per-day figure found in the searched material.
+- **Hawthorne et al. 2004, J Nutr 134:2027S** (puppy growth curves, 12 breeds) — only the abstract was reachable; no numbers extracted.
+- **Salt et al. 2017 centile tables** — not published as tables; only raw data (146 MB) which could not be downloaded here (proxy 403).
+- **Origin of the "3-3-3 rule"** — no source names an author or date; no national organisation (ASPCA, RSPCA, Dogs Trust) page stating it was found.
+- **Steps per day for dogs** — no veterinary source.
+- **Mixed-breed appearance distribution** (colour/ear/coat frequencies in shelters) — no source found.

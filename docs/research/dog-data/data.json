@@ -1,0 +1,1265 @@
+{
+  "meta": {
+    "task": "M1-19 / M5 — sourced dog data for realism",
+    "compiled": "2026-10-05",
+    "compiled_by": "Claude (research agent)",
+    "status": "DRAFT — awaiting David's review. Nothing here is imported into breed_configs yet.",
+    "sources": "docs/research/dog-data/sources.md",
+    "conventions": {
+      "value_object": "{value, unit, source_id, quote, confidence, notes}",
+      "confidence": "high = breed standard / peer-reviewed / vet association and consistent across sources; medium = single reputable source or sources disagree a little; low = secondary source, strong disagreement, or derived/proposal",
+      "unsourced": "Anything with source_id null is marked 'UNSOURCED — proposal' and must not be shown to parents/children as fact.",
+      "quotes": "Quotes are as returned by the web-fetch tool on 2026-10-05; spot-check against the URL before import.",
+      "game_time": "1 real week = 1 month of dog age (REALISM_SPEC §2)."
+    }
+  },
+  "general_by_size": {
+    "size_classes": {
+      "salt_2017_bands_kg": {
+        "value": {
+          "I": "<6.5",
+          "II": "6.5–<9",
+          "III": "9–<15",
+          "IV": "15–<30",
+          "V": "30–<40",
+          "VI": ">40 (no curve)"
+        },
+        "unit": "kg adult bodyweight",
+        "source_id": "S8",
+        "quote": "Category I: <6.5 kg … Category IV: 15 to <30 kg; Category V: 30 to <40 kg",
+        "confidence": "high",
+        "notes": "Category IV breeds: Australian Shepherd, Chow Chow, Basset Hound, Siberian Husky, English Bulldog, Pit Bull type, Boxer. Border Collie not listed."
+      },
+      "petmd_classes_lb": {
+        "value": {
+          "toy": "5–12",
+          "small": "12–24",
+          "medium": "24–59",
+          "large": "59–99",
+          "giant": ">100"
+        },
+        "unit": "lb adult weight",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "24–59 lb ≈ 10.9–26.8 kg."
+      }
+    },
+    "life_stages": {
+      "puppy": {
+        "value": "birth → ~6–9 months",
+        "unit": "age",
+        "source_id": "S11",
+        "quote": "From birth to cessation of rapid growth (~6–9 months, varying with breed and size)",
+        "confidence": "high",
+        "notes": ""
+      },
+      "young_adult": {
+        "value": "~6–9 months → 3–4 years",
+        "unit": "age",
+        "source_id": "S11",
+        "quote": "From cessation of rapid growth to completion of physical and social maturation, which occurs in most dogs by 3 to 4 years of age",
+        "confidence": "high",
+        "notes": "AAHA has no separate 'adolescent' stage; it is inside 'young adult'."
+      },
+      "adolescence": {
+        "value": "begins 6–9 months; puberty ~8 months",
+        "unit": "age",
+        "source_id": "S43",
+        "quote": "dog adolescence (which typically begins between six to nine months of age) … during puberty (at around eight months of age)",
+        "confidence": "medium",
+        "notes": "Press summary of Asher & Harvey, Biology Letters 2020 (guide-dog puppies, n=285). End of adolescence not stated."
+      },
+      "mature_adult": {
+        "value": "3–4 years → start of last 25% of lifespan",
+        "unit": "age",
+        "source_id": "S11",
+        "quote": "From completion of physical and social maturation until the last 25% of estimated lifespan (breed and size dependent)",
+        "confidence": "high",
+        "notes": ""
+      },
+      "senior": {
+        "value": "last 25% of estimated lifespan",
+        "unit": "fraction of lifespan",
+        "source_id": "S11",
+        "quote": "From the last 25% of estimated lifespan through end-of-life.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "senior_rule_of_thumb": {
+        "value": "> 7 years senior; > 12 years geriatric",
+        "unit": "years",
+        "source_id": "S14",
+        "quote": "Dogs over the age of seven can be considered 'senior' … dogs aged over 12 can be considered 'geriatric.'",
+        "confidence": "medium",
+        "notes": "UK charity rule of thumb, not size-specific; conflicts with AAHA 25% rule for long-lived dogs."
+      }
+    },
+    "growth": {
+      "adult_weight_reached_by_size": {
+        "value": {
+          "very_small": "8–12 months",
+          "larger": "up to 24 months"
+        },
+        "unit": "age",
+        "source_id": "S8",
+        "quote": "very small dogs reaching maturity at between 8 and 12 months of age and larger breeds requiring up to 24 months to reach adult body weight",
+        "confidence": "high",
+        "notes": ""
+      },
+      "growth_end_by_size_class": {
+        "value": {
+          "toy": "8–12",
+          "small": "9–12",
+          "medium": "12–15",
+          "large": "15–18",
+          "giant": "18–24"
+        },
+        "unit": "months",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Growth stops when growth plates seal (S10); no plate-closure ages given."
+      },
+      "adult_weight_reached_medium_breeds": {
+        "value": 12.52,
+        "unit": "months (±0.61)",
+        "source_id": "S9",
+        "quote": "Medium breeds: 9.46±1.63 (small), 12.52±0.61 (medium), 14.37±1.79 (large) months",
+        "confidence": "medium",
+        "notes": "21 dogs, 10 purebreds, Colombia."
+      },
+      "growth_plate_closure": {
+        "value": null,
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. No veterinary source with plate-closure ages per size was found; use 'growth_end_by_size_class' instead."
+      },
+      "logistic_model": {
+        "description": "Logistic curve y = a / (1 + exp(-(x - x0)/b)), x in weeks. Shape parameters = arithmetic mean of the four 'medium' breeds in S9 (Fox Terrier, Teckel, Basset Hound, Beagle); a = adult weight of the target dog.",
+        "x0_weeks": 18.26,
+        "b_weeks": 8.52,
+        "check": "Implied time to 99 percent adult weight = x0 + b*ln(99) = 57.4 weeks, consistent with S9 T99 of 52-58 weeks for the medium breeds.",
+        "source_id": "S9",
+        "quote": "Fox Terrier a=10,191.60 g, 1/b=11.72 %, x0=16.12 wk, T99=54 wk; Teckel 8,537.00 / 13.83 / 17.86 / 53; Basset Hound 18,873.20 / 12.30 / 18.55 / 52; Beagle 13,677.10 / 9.12 / 20.52 / 58",
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. Neither Border Collie nor mixed breeds were in S9 (21 dogs). Applying the medium-breed shape to them is an assumption. Interpretation of 1/b as % per week is ours; it is consistent with the reported T99. Model is not valid near birth."
+      },
+      "percent_of_adult_weight_by_month": {
+        "value": {
+          "2": 24.5,
+          "3": 35.1,
+          "4": 47.4,
+          "5": 60.1,
+          "6": 71.5,
+          "7": 80.7,
+          "8": 87.4,
+          "9": 92.1,
+          "10": 95.1,
+          "12": 98.2,
+          "14": 99.3
+        },
+        "unit": "% of adult weight",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. Computed from logistic_model (S9 medium-breed shape).",
+        "derived_from": [
+          "S9"
+        ]
+      }
+    },
+    "feeding_meals_per_day": {
+      "8_12_weeks": {
+        "value": 4,
+        "unit": "meals/day",
+        "source_id": "S18",
+        "quote": "Puppies eight to 12 weeks old need four meals a day.",
+        "confidence": "high",
+        "notes": "RKC (S21): 'From two to three months – four meals a day'. RSPCA AU (S20): 'at least 4 times per day to begin with'."
+      },
+      "3_6_months": {
+        "value": 3,
+        "unit": "meals/day",
+        "source_id": "S18",
+        "quote": "Feed puppies three to six months old three meals a day.",
+        "confidence": "medium",
+        "notes": "RKC (S21): 'From four to six months – two to three meals a day'."
+      },
+      "6_12_months": {
+        "value": 2,
+        "unit": "meals/day",
+        "source_id": "S18",
+        "quote": "Feed puppies six months to one year two meals a day.",
+        "confidence": "high",
+        "notes": "RKC (S21): 'Over six months – two meals a day (depending on the breed)'."
+      },
+      "adult": {
+        "value": 2,
+        "unit": "meals/day",
+        "source_id": "S19",
+        "quote": "The most common recommendation is to feed your dog at least two meals per day.",
+        "confidence": "medium",
+        "notes": "Sources disagree: ASPCA (S18) 'one meal a day is usually enough' after the first birthday; RSPCA AU (S20) 'adult dogs should be fed at least twice per day to help avoid bloat'. 2 chosen as majority."
+      },
+      "senior": {
+        "value": "2–3",
+        "unit": "meals/day (smaller meals)",
+        "source_id": "S14",
+        "quote": "feeding your dog smaller meals two or three times a day",
+        "confidence": "medium",
+        "notes": "AAHA (S13): 'Maintenance energy requirements (MER) generally decrease over a dog's lifetime.'"
+      },
+      "hunger_physiology": {
+        "value": "8–10",
+        "unit": "hours after a meal until hunger signals",
+        "source_id": "S19",
+        "quote": "After 8 to 10 hours, an empty stomach begins to send signals to the brain that stimulate a hunger response.",
+        "confidence": "medium",
+        "notes": "Useful for hunger decay calibration of adults."
+      }
+    },
+    "water": {
+      "daily_requirement": {
+        "value": "60–80",
+        "unit": "ml/kg/day",
+        "source_id": "S22",
+        "quote": "Generally, dogs require 60-80 ml of water per kg of body weight",
+        "confidence": "medium",
+        "notes": "FirstVet (S23): normal 'between 20-70ml/kg body weight per day'; abnormal 'more than 100ml/kg'. Sources differ; general only, not by age or breed."
+      },
+      "excessive_threshold": {
+        "value": 100,
+        "unit": "ml/kg/day",
+        "source_id": "S23",
+        "quote": "more than 100ml/kg body weight per day",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "availability": {
+        "value": "always available",
+        "unit": "—",
+        "source_id": "S18",
+        "quote": "Clean, fresh water should be available at all times",
+        "confidence": "high",
+        "notes": "RSPCA AU (S20): 'Fresh drinking water must be available at all times'. No source gives a number of refills per day."
+      },
+      "refills_per_day": {
+        "value": 3,
+        "unit": "refills/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. Game abstraction only (current breed_configs value). Real advice is 'water always available'; no source supports a refill count."
+      }
+    },
+    "exercise": {
+      "puppy_rule_of_thumb": {
+        "value": "5 min × age in months, twice a day, until full-grown",
+        "unit": "minutes",
+        "source_id": "S24",
+        "quote": "five minutes of exercise per month of age, twice a day, until the puppy is full-grown",
+        "confidence": "low",
+        "notes": "CONTESTED: Veterinary Ireland Journal (S25) lists it among 'misconceptions like five minutes of exercise per month of life'. No study behind the number was found."
+      },
+      "puppy_evidence": {
+        "value": "off-lead exercise on soft ground ≤ 3 months protective; stairs ≤ 3 months risk",
+        "unit": "—",
+        "source_id": "S26",
+        "quote": "puppies ≤ 3 months old should not be allowed access to stairs, but should be allowed outdoor exercise on soft ground",
+        "confidence": "high",
+        "notes": "Only Newfoundland, Labrador, Leonberger, Irish Wolfhound (large/giant)."
+      },
+      "adult_general": {
+        "value": "30–120",
+        "unit": "minutes/day",
+        "source_id": "S24",
+        "quote": "all adult dogs should receive between 30 minutes and two hours of physical activity and mental stimulation daily",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "senior": {
+        "value": "frequent short walks instead of one long one",
+        "unit": "—",
+        "source_id": "S14",
+        "quote": "try to go for frequent short walks instead of one long one",
+        "confidence": "medium",
+        "notes": "No minutes given."
+      },
+      "steps_conversion": {
+        "value": 100,
+        "unit": "human steps per minute of walking",
+        "source_id": "S45",
+        "quote": "≥100 steps/min is a consistent heuristic … associated with absolutely defined moderate intensity (3 metabolic equivalents (METs))",
+        "confidence": "low",
+        "notes": "ASSUMPTION for the game: child's steps = walk minutes × 100. S45 covers ADULTS only ('cadence-based research in children and adolescents is currently less developed'). No veterinary source gives a step goal for dogs (see S46)."
+      }
+    },
+    "sleep": {
+      "2_4_weeks": {
+        "value": "18–20",
+        "unit": "hours/day",
+        "source_id": "S28",
+        "quote": "18-20 hours' sleep each day",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "4_12_weeks": {
+        "value": "15–20",
+        "unit": "hours/day",
+        "source_id": "S28",
+        "quote": "15-20 hours of sleep each day",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "3_6_months": {
+        "value": "14–16",
+        "unit": "hours/day",
+        "source_id": "S28",
+        "quote": "14-16 hours of sleep per day",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "over_6_months": {
+        "value": "12–14",
+        "unit": "hours/day",
+        "source_id": "S28",
+        "quote": "around 12-14 hours each day",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "measured_16_weeks": {
+        "value": 11.2,
+        "unit": "hours/24h (mean, SD 2.9)",
+        "source_id": "S29",
+        "quote": "mean total hours of sleep in this subpopulation was reported as 11.2 h (SD = 2.9)",
+        "confidence": "medium",
+        "notes": "Owner-reported cohort (Dogs Trust Generation Pup). Lower than RKC figures — conflict; RKC may include dozing/resting."
+      },
+      "measured_12_months": {
+        "value": 10.8,
+        "unit": "hours/24h (mean, SD 2.7)",
+        "source_id": "S29",
+        "quote": "Total 24-hour sleep: 10.8 hours (SD = 2.7); night 7.3 h",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "senior": {
+        "value": "sleep more; daytime sleep + night restlessness is a sign of cognitive dysfunction",
+        "unit": "—",
+        "source_id": "S14",
+        "quote": "can become less energetic and tend to sleep more",
+        "confidence": "medium",
+        "notes": "AAHA (S13): 'daytime sleeping and nighttime restlessness' are the most common clinical signs of cognitive dysfunction (DISHAA). No hours given."
+      }
+    },
+    "house_training": {
+      "hold_bladder": {
+        "value": "1 hour per month of age (±1 h)",
+        "unit": "hours",
+        "source_id": "S30",
+        "quote": "one hour for each month of age, give or take an hour",
+        "confidence": "medium",
+        "notes": "WebMD/DVM-reviewed (S31): '1 hour for every month of age until they're about a year old'."
+      },
+      "adult_hold": {
+        "value": "8+ hours; opportunity ~every 4 h",
+        "unit": "hours",
+        "source_id": "S30",
+        "quote": "can reasonably be expected to hold their urine for 8 hours or longer … about every four hours when possible",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "when_to_go_out": {
+        "value": "after eating, naps, strenuous play, change of activity",
+        "unit": "—",
+        "source_id": "S30",
+        "quote": "puppies may need to eliminate after eating, naps, strenuous play, or whenever there is a change of activity",
+        "confidence": "high",
+        "notes": ""
+      },
+      "consistent_from": {
+        "value": "12–16 weeks",
+        "unit": "age",
+        "source_id": "S31",
+        "quote": "they may not become consistent until they're between 12 and 16 weeks old",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "fully_trained": {
+        "value": "4–6 months (up to 12)",
+        "unit": "months",
+        "source_id": "S31",
+        "quote": "It typically takes 4-6 months for a puppy to be fully house trained, but some puppies may take up to a year.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "accidents": {
+        "value": "common up to ~1 year",
+        "unit": "—",
+        "source_id": "S31",
+        "quote": "Accidents are common with puppies up to a year old.",
+        "confidence": "medium",
+        "notes": "No accident frequency (per day) found in any source."
+      },
+      "daytime_trips_puppy": {
+        "value": "every ~2 hours",
+        "unit": "hours",
+        "source_id": "S31",
+        "quote": "you can expect to take puppies out every 2 hours or so during the day",
+        "confidence": "medium",
+        "notes": ""
+      }
+    },
+    "teething_chewing": {
+      "baby_teeth_in": {
+        "value": "5–6 weeks (~28 teeth)",
+        "unit": "age",
+        "source_id": "S32",
+        "quote": "By now all of your puppy's baby teeth should have come in. Dogs usually have about 28 baby teeth total",
+        "confidence": "high",
+        "notes": ""
+      },
+      "baby_teeth_shed": {
+        "value": "12–16 weeks",
+        "unit": "age",
+        "source_id": "S32",
+        "quote": "your puppy's baby teeth start to shed (Weeks 12-16)",
+        "confidence": "high",
+        "notes": ""
+      },
+      "adult_teeth_in": {
+        "value": "~6 months (42 teeth)",
+        "unit": "age",
+        "source_id": "S32",
+        "quote": "By the time, your puppy is about six months old or so, all of their puppy teeth should have fallen out, and their adult teeth should have grown in.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "intense_chewing_ends": {
+        "value": "~6 months",
+        "unit": "age",
+        "source_id": "S33",
+        "quote": "This intensified chewing phase usually ends by six months of age.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "destructive_chewing_causes": {
+        "value": [
+          "separation anxiety",
+          "boredom / lack of stimulation",
+          "hunger (restricted diet)",
+          "stress / frustration",
+          "normal development"
+        ],
+        "unit": "list",
+        "source_id": "S33",
+        "quote": "Bored dogs tend look for ways to entertain themselves, and chewing is one option.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "exercise_vs_boredom": {
+        "value": "daily exercise and mental stimulation reduce boredom-driven behaviour",
+        "unit": "—",
+        "source_id": "S12",
+        "quote": "Daily exercise and mental stimulation may diminish tendency to seek novelty from boredom",
+        "confidence": "high",
+        "notes": ""
+      }
+    },
+    "training": {
+      "start_age": {
+        "value": "~8 weeks (on arrival home)",
+        "unit": "age",
+        "source_id": "S36",
+        "quote": "Puppies can begin very simple training starting as soon as they come home, usually around 8 weeks old.",
+        "confidence": "high",
+        "notes": "PetMD (S37) same."
+      },
+      "session_length_puppy": {
+        "value": "5–10",
+        "unit": "minutes",
+        "source_id": "S36",
+        "quote": "Always keep training sessions brief — just five to 10 minutes",
+        "confidence": "medium",
+        "notes": "PetMD (S37): 'about five minutes each … no more than 15 minutes per day'."
+      },
+      "daily_total_puppy": {
+        "value": 15,
+        "unit": "minutes/day max",
+        "source_id": "S37",
+        "quote": "try to average a total of no more than 15 minutes per day",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "first_commands": {
+        "value": [
+          "come (recall)",
+          "loose-leash walking",
+          "sit",
+          "down",
+          "stay"
+        ],
+        "unit": "list",
+        "source_id": "S36",
+        "quote": "Teach Your Dog to Come When Called, Loose-Leash Walking, Sit, Down, Stay",
+        "confidence": "high",
+        "notes": "PetMD (S37) suggests 'watch' (eye contact) first."
+      },
+      "socialization_window": {
+        "value": "~3–14 weeks",
+        "unit": "age",
+        "source_id": "S44",
+        "quote": "socialization must happen during the sensitive period (~3 to 14 weeks of age)",
+        "confidence": "high",
+        "notes": ""
+      },
+      "adolescent_obedience_dip": {
+        "value": "~8 months",
+        "unit": "age",
+        "source_id": "S43",
+        "quote": "a reduction in obedience, during puberty (at around eight months of age)",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "adult_session_length": {
+        "value": null,
+        "unit": "minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. No source found for adult session length."
+      },
+      "coren_tiers": {
+        "value": {
+          "brightest": "<5 repetitions, obeys first command ≥95%",
+          "excellent": "5–15 / 85%",
+          "above_average": "15–25 / 70%",
+          "average": "25–40 / 50%",
+          "fair": "40–80 / 30%",
+          "lowest": "80–100+ / ≤25%"
+        },
+        "unit": "repetitions to learn a new command / % obeys first command",
+        "source_id": "S35",
+        "quote": "Brightest Dogs Understanding of new commands: fewer than 5 repetitions.; Obey first command: 95% of the time or better.",
+        "confidence": "low",
+        "notes": "Secondary source (Wikipedia). Survey of obedience judges, not an experiment; verify in the book before use."
+      }
+    },
+    "lifespan": {
+      "all_dogs_median_uk": {
+        "value": 12.5,
+        "unit": "years",
+        "source_id": "S15",
+        "quote": "On average, companion dogs live for 12.5 years.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "medium_breeds_median_uk": {
+        "value": 12.5,
+        "unit": "years",
+        "source_id": "S15",
+        "quote": "medium-sized breeds were found to live longer, with lifespans of 12.5 years",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "size_effect": {
+        "value": "heavier → shorter life",
+        "unit": "—",
+        "source_id": "S17",
+        "quote": "increasing bodyweight was negatively correlated with longevity",
+        "confidence": "high",
+        "notes": ""
+      }
+    }
+  },
+  "border_collie": {
+    "identity": {
+      "value": "FCI No. 297, Group 1 Section 1, Great Britain",
+      "unit": "—",
+      "source_id": "S2",
+      "quote": "Standard Number: 297; Group 1 - Shepherd and Cattle Dogs; Country of Origin: Great Britain",
+      "confidence": "high",
+      "notes": ""
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S5",
+      "quote": "Size: Medium",
+      "confidence": "high",
+      "notes": ""
+    },
+    "height": {
+      "fci_ideal": {
+        "value": {
+          "male": 53,
+          "female": "slightly less"
+        },
+        "unit": "cm at withers",
+        "source_id": "S1",
+        "quote": "Ideal height at withers: Males: 53 cm (21 ins), Females: slightly less.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "akc_range": {
+        "value": {
+          "male": [
+            48.3,
+            55.9
+          ],
+          "female": [
+            45.7,
+            53.3
+          ]
+        },
+        "unit": "cm (converted from 19–22 in / 18–21 in)",
+        "source_id": "S3",
+        "quote": "The height at the withers varies from 19 to 22 inches for males, 18 to 21 inches for females.",
+        "confidence": "high",
+        "notes": ""
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": [
+          13.6,
+          24.9
+        ],
+        "unit": "kg (converted from 30–55 lb)",
+        "source_id": "S4",
+        "quote": "weigh between 30 and 55 pounds",
+        "confidence": "medium",
+        "notes": "Neither FCI nor AKC standard gives weight."
+      },
+      "pdsa": {
+        "value": [
+          25,
+          30
+        ],
+        "unit": "kg",
+        "source_id": "S7",
+        "quote": "Weight: 25-30kg",
+        "confidence": "low",
+        "notes": "Conflicts with AKC; heavier than Salt category IV typical. Prefer AKC."
+      },
+      "salt_category": {
+        "value": "IV (15–<30 kg) — by AKC weight it spans III/IV",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": "Category IV: 15 to <30 kg",
+        "confidence": "medium",
+        "notes": "Border Collie itself was not in the Salt dataset; category assignment by weight is ours."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value, not breed-specific."
+      },
+      "weight_by_month_kg": {
+        "value": {
+          "2": [
+            3.3,
+            6.1
+          ],
+          "3": [
+            4.8,
+            8.8
+          ],
+          "4": [
+            6.5,
+            11.8
+          ],
+          "5": [
+            8.2,
+            15.0
+          ],
+          "6": [
+            9.7,
+            17.8
+          ],
+          "7": [
+            11.0,
+            20.1
+          ],
+          "8": [
+            11.9,
+            21.8
+          ],
+          "9": [
+            12.5,
+            22.9
+          ],
+          "10": [
+            12.9,
+            23.7
+          ],
+          "12": [
+            13.4,
+            24.4
+          ],
+          "14": [
+            13.5,
+            24.7
+          ]
+        },
+        "unit": "kg [min,max] for adult 13.6–24.9 kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. = AKC adult range × logistic % (general_by_size.growth.logistic_model).",
+        "derived_from": [
+          "S4",
+          "S9"
+        ]
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.1,
+        "unit": "years",
+        "source_id": "S15",
+        "quote": "Border Collie (13.1 years)",
+        "confidence": "high",
+        "notes": "S16 confirms x̃ = 13.1."
+      },
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S5",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "senior_from": {
+        "value": 9.8,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25% of lifespan (S11) × median 13.1 y (S15) → 0.75 × 13.1 = 9.8 y. Dogs Trust rule of thumb says > 7 y (S14).",
+        "derived_from": [
+          "S11",
+          "S15"
+        ]
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S5",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "PDSA (S7): 'a minimum of two hours exercise every day'."
+      },
+      "energy": {
+        "value": "very high energy",
+        "unit": "—",
+        "source_id": "S4",
+        "quote": "a very high energy breed",
+        "confidence": "high",
+        "notes": ""
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "tenacious, hard-working, great tractability; keen, alert, responsive, intelligent; neither nervous nor aggressive",
+        "unit": "—",
+        "source_id": "S1",
+        "quote": "Tenacious, hard-working, of great tractability. Keen, alert, responsive and intelligent. Neither nervous nor aggressive.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "boredom_chewing": {
+        "value": "chews when bored or under-exercised",
+        "unit": "—",
+        "source_id": "S7",
+        "quote": "If left alone or not given enough exercise, your Collie will certainly let you know they're unhappy by chewing anything in paw's reach!",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "herding_children": {
+        "value": "may try to herd children",
+        "unit": "—",
+        "source_id": "S4",
+        "quote": "natural herding instincts may lead them to herd children during play",
+        "confidence": "high",
+        "notes": "PDSA (S7) same."
+      },
+      "mental_stimulation": {
+        "value": "needs mental stimulation",
+        "unit": "—",
+        "source_id": "S4",
+        "quote": "always need to have something to do, so making sure they have mental stimulation is very important",
+        "confidence": "high",
+        "notes": ""
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 1,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S34",
+        "quote": "190 of the 199 judges ranked the Border Collie in the top 10",
+        "confidence": "high",
+        "notes": "Rank 1 of 130+ breeds (S35). Coren: measures 'working and obedience intelligence' only."
+      },
+      "coren_tier": {
+        "value": "brightest: <5 repetitions, obeys first command ≥95%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Brightest Dogs … fewer than 5 repetitions … 95% of the time or better",
+        "confidence": "low",
+        "notes": "Tier definitions from Wikipedia; verify in book."
+      },
+      "genetic_biddability": {
+        "value": "Border Collie ancestry associated with higher biddability",
+        "unit": "—",
+        "source_id": "S42",
+        "quote": "border collie ancestry correlates with increased biddability",
+        "confidence": "high",
+        "notes": "But breed explains ~9% of individual behaviour variation (S42) — individual dogs vary."
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "well proportioned, smooth outline, sufficient substance for endurance",
+        "unit": "—",
+        "source_id": "S1",
+        "quote": "Well proportioned, smooth outline showing quality, gracefulness and perfect balance, combined with sufficient substance to give impression of endurance.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "coat_varieties": {
+        "value": [
+          "moderately long",
+          "smooth"
+        ],
+        "unit": "list",
+        "source_id": "S1",
+        "quote": "Two varieties: Moderately long or Smooth. In both, topcoat dense and medium textured, undercoat soft and dense",
+        "confidence": "high",
+        "notes": "AKC (S3) also two varieties, double coat."
+      },
+      "colour_rule": {
+        "value": "any colour; white must never predominate (FCI/UK); AKC: all colours/combinations equal",
+        "unit": "—",
+        "source_id": "S1",
+        "quote": "Variety of colours permissible. White should never predominate.",
+        "confidence": "high",
+        "notes": "AKC (S3): 'appears in all colors or combination of colors and/or markings. All colors are to be judged equally'. No standard lists specific colours or their frequencies."
+      },
+      "colour_list_and_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. Specific colour names (black & white, tricolour, red, blue, merles, sable) and their frequencies are NOT in FCI/AKC/UK standards. The AKC breed page colour list could not be accessed. Draft weights in breed_appearance.php are unsourced."
+      },
+      "ears": {
+        "value": [
+          "erect",
+          "semi-erect",
+          "one erect + one semi-erect (AKC)"
+        ],
+        "unit": "list",
+        "source_id": "S1",
+        "quote": "Carried erect or semi-erect and sensitive in use.",
+        "confidence": "high",
+        "notes": "AKC (S3): 'one or both carried erect and/or semi-erect' → supports mixed carriage."
+      },
+      "eyes": {
+        "value": "brown; in merles one or both, or part of one or both, may be blue",
+        "unit": "—",
+        "source_id": "S1",
+        "quote": "Brown in colour except in merles where one or both or part of one or both may be blue.",
+        "confidence": "high",
+        "notes": "RKC (S6) identical. AKC (S3): 'Any eye color is acceptable, but blue eyes in dogs other than merle are not preferred.' Amber is not named by any standard."
+      },
+      "tail": {
+        "value": "moderately long, low set, upward swirl towards end",
+        "unit": "—",
+        "source_id": "S1",
+        "quote": "Moderately long, the bone reaching at least to hock, set on low, well-furnished and with an upward swirl towards the end.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "face_markings": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. No standard describes blaze / face markings. Draft 'markings' list is unsourced."
+      }
+    }
+  },
+  "medium_mixed_breed": {
+    "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
+    "assumed_adult_weight": {
+      "value": [
+        15,
+        30
+      ],
+      "unit": "kg",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal. Proposal: use Salt category IV (S8) as the 'medium' band. Alternative: PetMD medium 10.9–26.8 kg (S10). David to choose."
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size class."
+      },
+      "weight_by_month_kg": {
+        "value": {
+          "2": [
+            3.7,
+            7.4
+          ],
+          "3": [
+            5.3,
+            10.5
+          ],
+          "4": [
+            7.1,
+            14.2
+          ],
+          "5": [
+            9.0,
+            18.0
+          ],
+          "6": [
+            10.7,
+            21.4
+          ],
+          "7": [
+            12.1,
+            24.2
+          ],
+          "8": [
+            13.1,
+            26.2
+          ],
+          "9": [
+            13.8,
+            27.6
+          ],
+          "10": [
+            14.3,
+            28.5
+          ],
+          "12": [
+            14.7,
+            29.5
+          ],
+          "14": [
+            14.9,
+            29.8
+          ]
+        },
+        "unit": "kg [min,max] for adult 15–30 kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. = assumed adult band × logistic %.",
+        "derived_from": [
+          "S8",
+          "S9"
+        ]
+      }
+    },
+    "lifespan": {
+      "median_uk_crossbreeds": {
+        "value": 12.0,
+        "unit": "years",
+        "source_id": "S15",
+        "quote": "This was slightly shorter for crossbred dogs at 12.0 years.",
+        "confidence": "medium",
+        "notes": "CONFLICT: O'Neill 2013 (S17) found crossbreds lived 1.2 years LONGER than purebreds."
+      },
+      "senior_from": {
+        "value": 9.0,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: 0.75 × 12.0 y (S11, S15). Dogs Trust rule of thumb > 7 y (S14).",
+        "derived_from": [
+          "S11",
+          "S15"
+        ]
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "30–120",
+        "unit": "minutes/day",
+        "source_id": "S24",
+        "quote": "all adult dogs should receive between 30 minutes and two hours",
+        "confidence": "medium",
+        "notes": "General adult range; no mixed-breed-specific source."
+      },
+      "adult_game_target": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. Midpoint-ish choice inside the 30–120 range; not a sourced value."
+      }
+    },
+    "trainability": {
+      "coren": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Non-AKC/CKC recognized breeds like Jack Russell Terriers were excluded from rankings",
+        "confidence": "medium",
+        "notes": "Coren ranked breeds recognised by AKC/CKC only (judges ranked breeds); mixed breeds therefore have NO rank."
+      },
+      "breed_effect_on_behaviour": {
+        "value": "breed explains ~9% of individual behaviour variation",
+        "unit": "—",
+        "source_id": "S42",
+        "quote": "Breed explains just 9% of behavioral variation in individuals",
+        "confidence": "high",
+        "notes": "Supports modelling a mixed breed as 'average with individual randomness'; the size of the random spread is a proposal."
+      },
+      "game_model": {
+        "value": "average learning speed + individual random factor",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. REALISM_SPEC §4 idea; the numeric spread is not sourced."
+      }
+    },
+    "appearance": {
+      "standard": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "high",
+        "notes": "No standard exists for mixed breeds — nothing to cite for colour/ear/coat frequencies."
+      },
+      "distribution": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. No shelter-intake statistics on mixed-breed appearance were found. Current breed_appearance.php 'mutt' options remain unsourced."
+      }
+    }
+  },
+  "adopted_vs_bought": {
+    "three_three_three_rule": {
+      "value": {
+        "3_days": "adjusting to new surroundings",
+        "3_weeks": "training and bonding",
+        "3_months": "continued socialisation and training"
+      },
+      "unit": "—",
+      "source_id": "S38",
+      "quote": "the first three days should be used for adjusting to their new surroundings, the next three weeks for training and bonding, and the first three months for continued socialization and training",
+      "confidence": "low",
+      "notes": "Stated by a local US shelter (Longmont Humane Society) as 'a guideline'. ORIGIN UNKNOWN — no national body or study found that defines it."
+    },
+    "adjustment_literature_range": {
+      "value": "4–6 weeks up to 3 months",
+      "unit": "—",
+      "source_id": "S39",
+      "quote": "adoption literature has varyingly indicated that this process can range from four to six weeks or up to three months",
+      "confidence": "medium",
+      "notes": ""
+    },
+    "adjustment_observed": {
+      "value": {
+        "<=3_months": "30%",
+        "4_6_months": "41%",
+        ">7_months": "11%",
+        "not_settled": "19%"
+      },
+      "unit": "% of owners (n=27)",
+      "source_id": "S39",
+      "quote": "Over half of participants perceived the adjustment period to last longer than four months.",
+      "confidence": "medium",
+      "notes": "Small qualitative study (UK, 2025)."
+    },
+    "post_adoption_issues": {
+      "value": {
+        "fear_responses": "63%",
+        "social_contact_changes": "63%",
+        "rest_sleep_changes": "56%",
+        "house_soiling": "26%",
+        "separation_related": "26%",
+        "appetite_changes": "22%",
+        "aggression": "22%"
+      },
+      "unit": "% of owners (n=27)",
+      "source_id": "S39",
+      "quote": "House-soiling: approximately 26% (7 of 27 participants)",
+      "confidence": "low",
+      "notes": "n=27; percentages via Faunalytics summary + paper."
+    },
+    "c_barq_6_months": {
+      "value": {
+        "separation_related": "decrease at 180 d (92.0%→87.5%)",
+        "stranger_aggression": "increase (61.5%→76.9%)",
+        "training_difficulty": "increase at all time points",
+        "nonsocial_fear_180d": "86.3%"
+      },
+      "unit": "prevalence (any score >0)",
+      "source_id": "S40",
+      "quote": "Separation-related behaviors: Decrease reported at 180 days",
+      "confidence": "medium",
+      "notes": "n=99, Ohio. Prevalence = any non-zero C-BARQ score, so numbers look high; not severity."
+    },
+    "shelter_age_distribution": {
+      "value": {
+        "puppies_le_6_months": "26%",
+        "adults_gt_6_months": "74%",
+        "adults_2_to_7_years": "33%"
+      },
+      "unit": "% of admissions",
+      "source_id": "S41",
+      "quote": "Puppies (≤6 months): 26% of admissions; Adults (>6 months): 74%",
+      "confidence": "medium",
+      "notes": "Queensland RSPCA, 2014, n=11,967. Admissions, not adoptions; Australia only."
+    },
+    "bought_puppy_age": {
+      "value": "8–12 weeks",
+      "unit": "age",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal. REALISM_SPEC draft; consistent with training start ~8 weeks (S36) but no source on purchase age was collected."
+    }
+  },
+  "proposed_game_parameters": {
+    "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
+    "feed_windows": {
+      "value": {
+        "2_3_months": 4,
+        "3_6_months": 3,
+        "6_plus_months": 2,
+        "senior": 2
+      },
+      "unit": "meals/day",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal. From feeding_meals_per_day (S18, S21, S19, S14). Window clock times are UNSOURCED.",
+      "derived_from": [
+        "S18",
+        "S21",
+        "S19",
+        "S14"
+      ]
+    },
+    "walk_minutes_puppy": {
+      "value": {
+        "2": 20,
+        "3": 30,
+        "4": 40,
+        "6": 60,
+        "9": 90,
+        "12": 120
+      },
+      "unit": "minutes/day by age in months",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal. 5 min × months × 2 (S24) — contested rule (S25).",
+      "derived_from": [
+        "S24"
+      ]
+    },
+    "step_goal_border_collie_adult": {
+      "value": 12000,
+      "unit": "child steps/day",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal. 120 min (S5) × 100 steps/min (S45, adult heuristic).",
+      "derived_from": [
+        "S5",
+        "S45"
+      ]
+    },
+    "step_goal_mixed_adult": {
+      "value": 6000,
+      "unit": "child steps/day",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal. 60 min (proposal) × 100 steps/min (S45).",
+      "derived_from": [
+        "S24",
+        "S45"
+      ]
+    },
+    "accident_window_hours": {
+      "value": {
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6
+      },
+      "unit": "hours a puppy can hold, by age in months",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal. 1 h per month of age (S30, S31).",
+      "derived_from": [
+        "S30",
+        "S31"
+      ]
+    },
+    "chewing_risk": {
+      "value": {
+        "teething_3_6_months": "high",
+        "after_6_months": "only if bored/under-exercised"
+      },
+      "unit": "—",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal. From S32, S33, S7.",
+      "derived_from": [
+        "S32",
+        "S33",
+        "S7"
+      ]
+    },
+    "training_minigame_minutes": {
+      "value": 5,
+      "unit": "minutes/session",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal. S36/S37: 5–10 min sessions, ≤15 min/day for puppies.",
+      "derived_from": [
+        "S36",
+        "S37"
+      ]
+    }
+  }
+}
