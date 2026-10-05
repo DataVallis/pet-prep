@@ -87,7 +87,9 @@ class ChildProfileController extends Controller
      *
      * 200 `{status: deleted, child_id, pets_deleted, pets_kept}`; 404
      * `child_not_found` (another family / missing / not a child); 422
-     * `invalid_password`; 429 when throttled (5 per 15 min).
+     * `invalid_password`; 429 `too_many_attempts` + `Retry-After` after 5 wrong
+     * passwords in 15 min (only failed attempts count; separate from the
+     * account deletion).
      *
      * DELETE /api/parent/children/{child}
      */
@@ -105,10 +107,10 @@ class ChildProfileController extends Controller
         }
 
         try {
-            $deletion->assertPassword($parent, $request->password());
+            $deletion->confirmPassword($parent, $request->password(), AccountDeletionService::SCOPE_CHILD);
             $result = $deletion->deleteChildProfile($parent, $profile);
         } catch (AccountDeletionException $e) {
-            return response()->json(['message' => $e->getMessage(), 'reason' => $e->reason], $e->status);
+            return $e->toResponse();
         }
 
         return response()->json(['status' => 'deleted'] + $result, 200);

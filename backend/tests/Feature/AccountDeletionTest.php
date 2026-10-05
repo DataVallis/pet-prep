@@ -23,16 +23,19 @@ use App\Models\PetMedia;
 use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\AccountDeletionService;
+use App\Services\CareScoreService;
 use App\Services\FalWebhookVerifier;
 use App\Services\FamilyInviteService;
 use App\Services\FamilyService;
 use App\Services\Media\PetMediaService;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Testing\TestResponse;
@@ -741,5 +744,228 @@ describe('Filament: delete family (superadmin)', function () {
 
         expect(Family::find($f['family']->id))->not->toBeNull()
             ->and(User::find($f['child']->id))->not->toBeNull();
+    });
+});
+
+/* ─────────────────────────── PR #29 review ─────────────────────────── */
+
+/** rsFamily-like: parent with quiet hours + grandfathered child Maja + mutt born $bornUtc + signed sibling Luka. */
+function adScoreFamily(string $bornUtc = '2026-10-11 22:30:00'): array
+{
+    Carbon::setTestNow(Carbon::parse($bornUtc, 'UTC'));
+    $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+    $maja = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Maja']);
+    QuietHours::create([
+        'parent_id' => $parent->id,
+        'school_start' => '08:00', 'school_end' => '13:00',
+        'bedtime_start' => '22:00', 'bedtime_end' => '06:00',
+        'is_active' => true,
+    ]);
+    $pet = disableHygieneEvents(Pet::factory()->mutt()->create(['user_id' => $maja->id]));
+    $luka = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Luka']);
+    app(FamilyService::class)->addCaretaker($pet, $luka, true);
+    PetContract::create(['pet_id' => $pet->id, 'user_id' => $luka->id, 'signature_format' => 'svg_path', 'signature' => 'M1 1 L2 2', 'signed_at' => Carbon::parse($bornUtc, 'UTC')]);
+
+    return [$parent, $maja, $luka, $pet];
+}
+
+/** 2 feeds + 3 waters on local date $date (UTC+2) by $child. */
+function adPerfectDay(Pet $pet, string $date, User $child): void
+{
+    $d = Carbon::parse($date, 'UTC');
+    foreach ([['fed_pet', 4, 30], ['fed_pet', 15, 30], ['watered_pet', 4, 15], ['watered_pet', 11, 30], ['watered_pet', 17, 0]] as [$type, $h, $m]) {
+        DB::table('activities_log')->insert([
+            'pet_id' => $pet->id, 'actor_user_id' => $child->id, 'activity_type' => $type, 'value' => null,
+            'created_at' => $d->copy()->setTime($h, $m)->toDateTimeString(),
+        ]);
+    }
+}
+
+function adScore(Pet $pet, User $child): array
+{
+    $scores = app(CareScoreService::class);
+    $board = $scores->board(Pet::whereKey($pet->id)->get(), 'Europe/Ljubljana');
+
+    return $scores->childScore($board, $child->id, $pet->fresh());
+}
+
+describe('caretaker history (tombstone) — deleting a sibling keeps the past Care Score', function () {
+    it('two siblings alternating days: the remaining child stays at 100 with the same fair share', function () {
+        [$parent, $maja, $luka, $pet] = adScoreFamily();
+        adPerfectDay($pet, '2026-10-12', $maja);
+        adPerfectDay($pet, '2026-10-13', $luka);
+        // 23:30 local: day 13 is done; day 14's routines (water opens at the
+        // local midnight) open only after the deletion.
+        Carbon::setTestNow(Carbon::parse('2026-10-13 21:30:00', 'UTC'));
+
+        $before = adScore($pet, $luka);
+        expect($before)->toMatchArray(['score' => 100, 'done' => 5, 'expected' => 5.0])
+            ->and(adScore($pet, $maja))->toMatchArray(['score' => 100, 'done' => 5, 'expected' => 5.0]);
+
+        app(AccountDeletionService::class)->deleteChildProfile($parent, $maja);
+
+        expect(adScore($pet, $luka))->toMatchArray(['score' => 100, 'done' => 5, 'expected' => 5.0, 'since' => $before['since']]);
+
+        // The tombstone: no user, start = birth (Maja was grandfathered), ended now.
+        $tomb = PetCaretaker::where('pet_id', $pet->id)->whereNull('user_id')->sole();
+        expect($tomb->ended_at->toDateTimeString())->toBe('2026-10-13 21:30:00')
+            ->and($tomb->started_at->toDateTimeString())->toBe($pet->fresh()->born_at->utc()->toDateTimeString())
+            ->and($pet->fresh()->caretakerRows()->pluck('user_id')->all())->toBe([$luka->id]);
+
+        // Routines after the deletion are Luka's alone (full share).
+        adPerfectDay($pet, '2026-10-14', $luka);
+        Carbon::setTestNow(Carbon::parse('2026-10-14 22:30:00', 'UTC'));
+        expect(adScore($pet, $luka))->toMatchArray(['score' => 100, 'done' => 10, 'expected' => 10.0]);
+
+        // Dashboards list only active caretakers.
+        adAs($parent);
+        getJson('/api/parent/dashboard')->assertOk()
+            ->assertJsonPath('family.pets.0.caretakers', [['child_id' => $luka->id, 'contract_signed' => true]])
+            ->assertJsonCount(1, 'family.children')
+            ->assertJsonPath('family.children.0.care_score.score', 100);
+
+        adAs($luka);
+        getJson('/api/child/pet')->assertOk()->assertJsonPath('pet.caretakers_count', 1);
+    });
+
+    it('a signed sibling keeps the start from their contract (the contract itself is deleted)', function () {
+        [$parent, $maja, $luka, $pet] = adScoreFamily();
+        PetContract::where('user_id', $luka->id)->update(['signed_at' => '2026-10-12 12:00:00']);
+        Carbon::setTestNow(Carbon::parse('2026-10-13 22:30:00', 'UTC'));
+
+        app(AccountDeletionService::class)->deleteChildProfile($parent, $luka);
+
+        expect(PetCaretaker::where('pet_id', $pet->id)->whereNull('user_id')->sole()->started_at->toDateTimeString())->toBe('2026-10-12 12:00:00')
+            // Luka's contract (signature) is gone; Maja is grandfathered (none).
+            ->and(PetContract::where('pet_id', $pet->id)->count())->toBe(0);
+    });
+
+    it('the history migration is additive and reversible (tombstones dropped on rollback)', function () {
+        [$parent, $maja, $luka, $pet] = adScoreFamily();
+        app(AccountDeletionService::class)->deleteChildProfile($parent, $luka);
+        $migration = 'database/migrations/2026_10_09_120000_add_caretaker_history_to_pet_caretakers.php';
+
+        $this->artisan('migrate:rollback', ['--path' => $migration])->assertSuccessful();
+        expect(Schema::hasColumn('pet_caretakers', 'ended_at'))->toBeFalse()
+            ->and(DB::table('pet_caretakers')->where('pet_id', $pet->id)->pluck('user_id')->all())->toBe([$maja->id]);
+
+        $this->artisan('migrate', ['--path' => $migration])->assertSuccessful();
+        expect(Schema::hasColumns('pet_caretakers', ['started_at', 'ended_at']))->toBeTrue();
+    });
+
+    it('"one active pet per child" ignores ended rows (index + FamilyService)', function () {
+        $def = DB::selectOne("SELECT indexdef FROM pg_indexes WHERE indexname = 'pet_caretakers_one_active_pet_per_child'")->indexdef;
+        expect($def)->toContain('ended_at IS NULL');
+
+        $f = adFamily();
+        PetCaretaker::where('user_id', $f['child']->id)->update(['ended_at' => now()]);
+        $other = Pet::factory()->create(['user_id' => $f['parent']->id, 'family_id' => $f['family']->id]);
+
+        expect(app(FamilyService::class)->addCaretaker($other, $f['child']))->not->toBeNull()
+            ->and($f['pet']->fresh()->caretakers()->count())->toBe(0);
+    });
+});
+
+describe('transactions and locks', function () {
+    it('runs every deletion with 3 transaction attempts (deadlock retry)', function () {
+        $f = adFamily();
+        $luka = adSharedChild($f['parent'], $f['pet']);
+        $calls = [];
+        $real = DB::getFacadeRoot();
+        // Proxy around the real DatabaseManager: only transaction() is
+        // observed (and passed on), every other call goes to the real one.
+        $proxy = Mockery::mock($real);
+        $proxy->shouldReceive('transaction')
+            ->andReturnUsing(function (Closure $callback, int $attempts = 1) use (&$calls, $real) {
+                $calls[] = $attempts;
+
+                return $real->connection()->transaction($callback, $attempts);
+            });
+        DB::swap($proxy);
+
+        app(AccountDeletionService::class)->deleteChildProfile($f['parent'], $luka);
+        app(AccountDeletionService::class)->deleteParentAccount($f['parent']);
+
+        expect($calls)->toBe([3, 3])
+            ->and(AccountDeletionService::TRANSACTION_ATTEMPTS)->toBe(3);
+    });
+
+    it('locks every parent (id order), then every child (id order), then the family, then pets', function () {
+        $f = adFamily();
+        $second = adSecondParent($f['parent']);
+        $luka = adSharedChild($f['parent'], $f['pet']);
+        $locks = [];
+        DB::listen(function ($q) use (&$locks) {
+            if (str_contains($q->sql, 'for update')) {
+                preg_match('/from "(\w+)"/', $q->sql, $m);
+                $locks[] = [$m[1] ?? '?', $q->bindings];
+            }
+        });
+
+        app(AccountDeletionService::class)->deleteChildProfile($second, $luka);
+
+        expect(array_column($locks, 0))->toBe(['users', 'users', 'families', 'pets'])
+            ->and($locks[0][1])->toBe([$f['parent']->id, $second->id])
+            ->and($locks[1][1])->toBe([$f['child']->id, $luka->id]);
+    });
+});
+
+describe('legacy leftovers', function () {
+    it('full-family deletion also deletes orphaned child accounts of its parents; children of other families are only detached', function () {
+        $f = adFamily();
+        $orphan = User::factory()->child()->create(['parent_id' => $f['parent']->id, 'name' => 'Sirota']);
+        FamilyMember::where('user_id', $orphan->id)->delete();
+        $orphan->createToken('old', ['child']);
+        $elsewhere = adFamily('other@example.com');
+        User::whereKey($elsewhere['child']->id)->update(['parent_id' => $f['parent']->id]);
+
+        adDeleteAccount($f['parent'])->assertOk()->assertJson(['children_deleted' => 2]);
+
+        expect(User::find($orphan->id))->toBeNull()
+            ->and(adTokens($orphan))->toBe(0)
+            ->and(User::find($elsewhere['child']->id))->not->toBeNull()
+            ->and(User::find($elsewhere['child']->id)->parent_id)->toBeNull()
+            ->and(Pet::find($elsewhere['pet']->id))->not->toBeNull();
+    });
+
+    it('a leaving parent\'s legacy pets: the family\'s go to the other parent, other families\' are deleted with files, ledger kept', function () {
+        $f = adFamily();
+        $second = adSecondParent($f['parent']);
+        $own = Pet::factory()->create(['user_id' => $f['parent']->id, 'family_id' => $f['family']->id]);
+        $other = adFamily('other@example.com');
+        $foreign = Pet::factory()->create(['user_id' => $f['parent']->id, 'family_id' => $other['family']->id]);
+        $image = adStoredImage($foreign);
+        $ledger = AiSpendLedger::create(['purpose' => 'reference_image', 'profile' => 'p', 'endpoint' => 'e', 'unit' => 'image', 'units' => 1, 'cost_usd' => 0.15, 'status' => 'committed', 'pet_id' => $foreign->id, 'pet_media_id' => $image->id]);
+
+        adDeleteAccount($f['parent'])->assertOk()->assertJson(['scope' => 'parent', 'pets_deleted' => 1]);
+
+        expect($own->fresh()->user_id)->toBe($second->id)
+            ->and(Pet::find($foreign->id))->toBeNull()
+            ->and(Storage::disk('pet_media')->exists($image->storage_path))->toBeFalse()
+            ->and($ledger->fresh())->pet_id->toBeNull()->pet_media_id->toBeNull()
+            ->and(Pet::find($other['pet']->id))->not->toBeNull()
+            ->and(Pet::find($f['pet']->id))->not->toBeNull();
+    });
+});
+
+describe('password throttles (failures only, per scope)', function () {
+    it('counts only wrong passwords and keeps account and child deletion apart', function () {
+        $f = adFamily();
+        $luka = adSharedChild($f['parent'], $f['pet']);
+        $mia = adSharedChild($f['parent'], $f['pet'], 'Mia');
+
+        // 4 wrong child-deletion passwords, then a correct one clears the counter.
+        foreach (range(1, 4) as $i) {
+            adDeleteChild($f['parent'], $luka->id, ['password' => 'wrong-'.$i])->assertStatus(422);
+        }
+        adDeleteChild($f['parent'], $luka->id)->assertOk();
+        foreach (range(1, 5) as $i) {
+            adDeleteChild($f['parent'], $mia->id, ['password' => 'again-'.$i])->assertStatus(422);
+        }
+        adDeleteChild($f['parent'], $mia->id)->assertStatus(429)->assertHeader('Retry-After')->assertJson(['reason' => 'too_many_attempts']);
+
+        // The account deletion has its own counter.
+        adDeleteAccount($f['parent'], ['password' => 'nope'])->assertStatus(422)->assertJson(['reason' => 'invalid_password']);
+        expect(User::find($mia->id))->not->toBeNull();
     });
 });

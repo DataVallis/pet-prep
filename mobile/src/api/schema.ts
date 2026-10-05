@@ -31,7 +31,8 @@ export interface paths {
          * @description 200 `{status: deleted, scope: family|parent, family_deleted, parents_deleted,
          *     children_deleted, pets_deleted}`; 422 `invalid_password` (or validation:
          *     `password` required, `confirm` must be true); 403 `superadmin_protected`;
-         *     429 when throttled (5 per 15 min).
+         *     429 `too_many_attempts` + `Retry-After` after 5 wrong passwords in 15 min
+         *     (only failed attempts count; separate from the child deletion).
          *
          *     POST /api/parent/account/delete
          */
@@ -412,7 +413,9 @@ export interface paths {
          *     for the pet, without a name
          * @description 200 `{status: deleted, child_id, pets_deleted, pets_kept}`; 404
          *     `child_not_found` (another family / missing / not a child); 422
-         *     `invalid_password`; 429 when throttled (5 per 15 min).
+         *     `invalid_password`; 429 `too_many_attempts` + `Retry-After` after 5 wrong
+         *     passwords in 15 min (only failed attempts count; separate from the
+         *     account deletion).
          *
          *     DELETE /api/parent/children/{child}
          */
@@ -2293,7 +2296,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": unknown[] | string;
+                    "application/json": Record<string, never>;
                 };
             };
             401: components["responses"]["AuthenticationException"];
@@ -2309,19 +2312,6 @@ export interface operations {
                          * @example
                          */
                         message: string;
-                    };
-                };
-            };
-            404: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "application/json": {
-                        /** @constant */
-                        message: "No such child in your family.";
-                        /** @constant */
-                        reason: "child_not_found";
                     };
                 };
             };
@@ -2693,8 +2683,12 @@ export interface operations {
                                 is_hard_stopped: boolean;
                                 is_ill: boolean;
                                 escalation_level: number;
+                                /**
+                                 * @description Active caretakers only; a deleted child's tombstone (M2-08)
+                                 *     stays in the board for the fair share but is not listed.
+                                 */
                                 caretakers: {
-                                    child_id: number;
+                                    child_id: number | null;
                                     contract_signed: boolean;
                                 }[];
                                 /** @description Displayed metrics (same rounding the child sees). */
@@ -2794,8 +2788,12 @@ export interface operations {
                                 is_hard_stopped: boolean;
                                 is_ill: boolean;
                                 escalation_level: number;
+                                /**
+                                 * @description Active caretakers only; a deleted child's tombstone (M2-08)
+                                 *     stays in the board for the fair share but is not listed.
+                                 */
                                 caretakers: {
-                                    child_id: number;
+                                    child_id: number | null;
                                     contract_signed: boolean;
                                 }[];
                                 /** @description Displayed metrics (same rounding the child sees). */

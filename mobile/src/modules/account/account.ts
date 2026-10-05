@@ -73,7 +73,7 @@ export type DeletionErrorKind =
   | 'not_found'
   | 'throttled'
   | 'invalid'
-  | 'offline'
+  | 'unknown'
   | 'server';
 
 function reasonOf(error: ApiError): AccountDeletionReason | null {
@@ -85,9 +85,13 @@ function reasonOf(error: ApiError): AccountDeletionReason | null {
   return null;
 }
 
-/** Map a failed deletion to a message key. Network errors (no ApiError) → offline. */
+/**
+ * Map a failed deletion to a message key. No HTTP answer (offline, timeout, connection
+ * dropped) → `unknown`: the request may have reached the server and the deletion may
+ * have happened, so the app must not claim "nothing was deleted" (PR #29 m6).
+ */
 export function classifyDeletionError(error: unknown): DeletionErrorKind {
-  if (!(error instanceof ApiError)) return 'offline';
+  if (!(error instanceof ApiError)) return 'unknown';
   const reason = reasonOf(error);
   if (reason === 'invalid_password') return 'invalid_password';
   if (reason === 'superadmin_protected') return 'protected';
@@ -97,9 +101,36 @@ export function classifyDeletionError(error: unknown): DeletionErrorKind {
   return 'server';
 }
 
-export type ExportErrorKind = 'too_large' | 'throttled' | 'offline' | 'server';
+export type ExportErrorKind = 'too_large' | 'too_large_to_share' | 'throttled' | 'offline' | 'server';
+
+/**
+ * The share sheet carries the export as text; above this size platforms truncate or
+ * fail (Android Binder ~1 MB transaction limit, iOS share extensions). A file export
+ * (expo-sharing) comes with the dev build (M2-08a).
+ */
+export const EXPORT_SHARE_MAX_BYTES = 400 * 1024;
+
+/** The export was downloaded but is too large to hand to the share sheet as text. */
+export class ExportTooLargeToShareError extends Error {
+  constructor(public readonly bytes: number) {
+    super(`Export of ${bytes} bytes is too large to share as text`);
+    this.name = 'ExportTooLargeToShareError';
+  }
+}
+
+/** UTF-8 size of a string (Slovenian letters are 2 bytes). */
+export function utf8Bytes(text: string): number {
+  if (typeof TextEncoder !== 'undefined') return new TextEncoder().encode(text).length;
+  let bytes = 0;
+  for (const ch of text) {
+    const code = ch.codePointAt(0) ?? 0;
+    bytes += code < 0x80 ? 1 : code < 0x800 ? 2 : code < 0x10000 ? 3 : 4;
+  }
+  return bytes;
+}
 
 export function classifyExportError(error: unknown): ExportErrorKind {
+  if (error instanceof ExportTooLargeToShareError) return 'too_large_to_share';
   if (!(error instanceof ApiError)) return 'offline';
   if (error.status === 413) return 'too_large';
   if (error.status === 429) return 'throttled';
@@ -116,7 +147,7 @@ export function exportFileName(data: Pick<FamilyExport, 'generated_at'>): string
  * Fetch the export and hand it to the share sheet as text (pretty JSON). Uses the core
  * `Share` API — no native file module needed in Expo Go; a file share (expo-sharing)
  * can follow with the dev build (M3-01). Resolves to false when the parent dismissed
- * the sheet.
+ * the sheet; throws `ExportTooLargeToShareError` above `EXPORT_SHARE_MAX_BYTES`.
  */
 export async function shareFamilyExport(
   fetchExport: () => Promise<FamilyExport> = api.exportFamilyData,
@@ -124,7 +155,13 @@ export async function shareFamilyExport(
 ): Promise<boolean> {
   const data = await fetchExport();
   const title = exportFileName(data);
-  const result = await share({ title, message: JSON.stringify(data, null, 2) }, { subject: title, dialogTitle: title });
+  const message = JSON.stringify(data, null, 2);
+  const bytes = utf8Bytes(message);
+  if (bytes > EXPORT_SHARE_MAX_BYTES) {
+    // Never hand an oversized text to the share sheet (it fails or truncates silently).
+    throw new ExportTooLargeToShareError(bytes);
+  }
+  const result = await share({ title, message }, { subject: title, dialogTitle: title });
   return result.action !== Share.dismissedAction;
 }
 

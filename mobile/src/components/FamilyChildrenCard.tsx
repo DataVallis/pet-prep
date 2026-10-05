@@ -59,9 +59,9 @@ export const FAMILY_STRINGS = {
     invalid_password: 'Geslo ni pravilno.',
     protected: 'Tega profila ni mogoče izbrisati.',
     not_found: 'Tega otroka ni več v vaši družini.',
-    throttled: 'Preveč poskusov. Poskusite znova čez 15 minut.',
+    throttled: 'Preveč napačnih gesel. Poskusite znova čez 15 minut.',
     invalid: 'Vpišite geslo in potrdite brisanje.',
-    offline: 'Ni povezave s strežnikom. Nič ni bilo izbrisano.',
+    unknown: 'Ni znano, ali je bil izbris izveden — preverite seznam otrok.',
     server: 'Brisanje ni uspelo. Nič ni bilo izbrisano — poskusite znova.',
   } satisfies Record<DeletionErrorKind, string>,
 } as const;

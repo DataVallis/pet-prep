@@ -206,7 +206,7 @@ class AccountExportService
         $byPet = fn (string $table, array $columns, string $order = 'id'): Collection => DB::table($table)
             ->whereIn('pet_id', $petIds)->orderBy($order)->orderBy('id')->get(array_merge(['pet_id'], $columns))->groupBy('pet_id');
 
-        $caretakers = $byPet('pet_caretakers', ['user_id', 'requires_contract', 'created_at']);
+        $caretakers = $byPet('pet_caretakers', ['user_id', 'requires_contract', 'created_at', 'ended_at']);
         $contracts = $byPet('pet_contracts', ['user_id', 'signature_format', 'signature', 'signed_at'], 'signed_at');
         $activities = $byPet('activities_log', ['actor_user_id', 'activity_type', 'value', 'created_at'], 'created_at');
         $steps = $byPet('pet_daily_steps', ['user_id', 'local_date', 'steps'], 'local_date');
@@ -236,10 +236,12 @@ class AccountExportService
                 'daily_step_count' => (int) $pet->daily_step_count,
                 // Appearance traits only (never the fal prompt / seed / URL).
                 'appearance' => $dna['traits'] ?? $dna['visual_traits'] ?? null,
+                // child_id null + ended_at = a deleted child's history row (M2-08).
                 'caretakers' => $rows($caretakers)->map(fn ($r) => [
-                    'child_id' => (int) $r->user_id,
+                    'child_id' => $r->user_id === null ? null : (int) $r->user_id,
                     'requires_contract' => (bool) $r->requires_contract,
                     'since' => $this->iso($r->created_at),
+                    'ended_at' => $this->iso($r->ended_at),
                 ])->values()->all(),
                 'contracts' => $rows($contracts)->map(fn ($r) => [
                     'child_id' => (int) $r->user_id,

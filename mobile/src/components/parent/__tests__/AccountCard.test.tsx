@@ -37,6 +37,9 @@ jest.mock('@/screens/parent/ParentDashboardScreen', () => {
   return { __esModule: true, default: () => <Card family={null} /> };
 });
 
+// Renders the real AppNavigator in one test — slow under a loaded full run.
+jest.setTimeout(20_000);
+
 const deleteAccount = api.deleteAccount as jest.Mock;
 const exportFamilyData = api.exportFamilyData as jest.Mock;
 const apiLogout = api.logout as jest.Mock;
@@ -91,6 +94,23 @@ describe('AccountCard — export', () => {
       expect.anything(),
     );
     expect(screen.getByTestId('account-export-result').props.children).toBe(ACCOUNT_STRINGS.exportDone);
+  });
+
+  it('a too large export is explained instead of failing in the share sheet', async () => {
+    const shareSpy = jest.spyOn(Share, 'share').mockClear();
+    exportFamilyData.mockResolvedValue({
+      format: 'petprep.family-export',
+      version: 1,
+      generated_at: '2026-10-05T10:00:00+00:00',
+      pets: [{ activities: 'x'.repeat(450 * 1024) }],
+    });
+    renderWithQuery(<AccountCard family={FAMILY} />);
+
+    fireEvent.press(screen.getByTestId('account-export'));
+    await flush();
+
+    expect(shareSpy).not.toHaveBeenCalled();
+    expect(screen.getByText(ACCOUNT_STRINGS.exportErrors.too_large_to_share)).toBeTruthy();
   });
 
   it('explains the hourly limit on 429', async () => {
@@ -159,6 +179,23 @@ describe('AccountCard — delete account', () => {
     expect(deleteAccount).toHaveBeenCalledWith('napačno');
     expect(screen.getByTestId('account-delete-form-error').props.children).toBe(ACCOUNT_STRINGS.deleteErrors.invalid_password);
     expect(useAppStore.getState().user?.id).toBe(1);
+    expect(deleteItem).not.toHaveBeenCalled();
+  });
+
+  it('no answer after sending (offline / timeout): says the outcome is unknown, stays on the screen', async () => {
+    useAppStore.setState({ authToken: 't', user: { id: 1, name: 'Mama', email: 'm@x.si', role: 'parent' } });
+    deleteAccount.mockRejectedValue(new TypeError('Network request failed'));
+    renderWithQuery(<AccountCard family={FAMILY} />);
+    const form = openDeleteForm();
+
+    fireEvent.changeText(form.password, 'Varno1Geslo');
+    fireEvent.changeText(form.confirm, 'IZBRIŠI');
+    fireEvent.press(screen.getByTestId('account-delete-form-submit'));
+    await flush();
+
+    expect(screen.getByTestId('account-delete-form-error').props.children).toBe(
+      'Ni znano, ali je bil izbris izveden — preverite s ponovno prijavo.',
+    );
     expect(deleteItem).not.toHaveBeenCalled();
   });
 

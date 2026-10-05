@@ -134,7 +134,7 @@ class FamilyService
     public function activePetOf(User $child): ?Pet
     {
         return Pet::query()
-            ->whereIn('id', PetCaretaker::where('user_id', $child->id)->select('pet_id'))
+            ->whereIn('id', PetCaretaker::where('user_id', $child->id)->whereNull('ended_at')->select('pet_id'))
             ->where('is_active', true)
             ->first();
     }
@@ -165,7 +165,7 @@ class FamilyService
     public function caretakerRecipients(Pet $pet): Collection
     {
         return User::query()
-            ->whereIn('id', PetCaretaker::where('pet_id', $pet->id)->select('user_id'))
+            ->whereIn('id', PetCaretaker::where('pet_id', $pet->id)->active()->select('user_id'))
             ->orderBy('id')
             ->get();
     }

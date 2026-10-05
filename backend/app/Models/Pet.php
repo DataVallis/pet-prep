@@ -301,13 +301,17 @@ class Pet extends Model
     {
         return $this->belongsToMany(User::class, 'pet_caretakers')
             ->withPivot(['requires_contract'])
+            ->wherePivotNull('ended_at')
             ->withTimestamps()
             ->orderBy('pet_caretakers.id');
     }
 
+    /**
+     * Active caretaker rows (M2-08: a deleted child's tombstone is history only).
+     */
     public function caretakerRows(): HasMany
     {
-        return $this->hasMany(PetCaretaker::class)->orderBy('id');
+        return $this->hasMany(PetCaretaker::class)->active()->orderBy('id');
     }
 
     /**

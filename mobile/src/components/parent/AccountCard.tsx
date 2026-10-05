@@ -48,13 +48,15 @@ export const ACCOUNT_STRINGS = {
     invalid_password: 'Geslo ni pravilno.',
     protected: 'Tega računa ni mogoče izbrisati v aplikaciji.',
     not_found: 'Računa ni bilo mogoče najti.',
-    throttled: 'Preveč poskusov. Poskusite znova čez 15 minut.',
+    throttled: 'Preveč napačnih gesel. Poskusite znova čez 15 minut.',
     invalid: 'Vpišite geslo in potrdite brisanje.',
-    offline: 'Ni povezave s strežnikom. Nič ni bilo izbrisano.',
+    unknown: 'Ni znano, ali je bil izbris izveden — preverite s ponovno prijavo.',
     server: 'Brisanje ni uspelo. Nič ni bilo izbrisano — poskusite znova.',
   } satisfies Record<DeletionErrorKind, string>,
   exportErrors: {
     too_large: 'Podatkov je preveč za izvoz v aplikaciji. Pišite nam na podporo.',
+    too_large_to_share:
+      'Izvoz je prevelik za deljenje kot besedilo. Izvoz v datoteko pripravljamo — do takrat nam pišite na podporo.',
     throttled: 'Izvoz je mogoč trikrat na uro. Poskusite pozneje.',
     offline: 'Ni povezave s strežnikom. Poskusite znova.',
     server: 'Izvoz ni uspel. Poskusite znova.',

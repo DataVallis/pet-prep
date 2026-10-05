@@ -12,9 +12,12 @@ import {
   classifyDeletionError,
   classifyExportError,
   deleteAccountAndLogout,
+  EXPORT_SHARE_MAX_BYTES,
   exportFileName,
+  ExportTooLargeToShareError,
   isConfirmWord,
   shareFamilyExport,
+  utf8Bytes,
 } from '@/modules/account/account';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
@@ -82,7 +85,8 @@ describe('errors', () => {
     expect(classifyDeletionError(new ApiError('x', 429, null, 900))).toBe('throttled');
     expect(classifyDeletionError(new ApiError('x', 422, { errors: { confirm: ['…'] } }))).toBe('invalid');
     expect(classifyDeletionError(new ApiError('x', 500, null))).toBe('server');
-    expect(classifyDeletionError(new TypeError('Network request failed'))).toBe('offline');
+    // No HTTP answer: the deletion may have happened — never "nothing deleted".
+    expect(classifyDeletionError(new TypeError('Network request failed'))).toBe('unknown');
   });
 
   it('maps export refusals', () => {
@@ -90,6 +94,7 @@ describe('errors', () => {
     expect(classifyExportError(new ApiError('x', 429, null))).toBe('throttled');
     expect(classifyExportError(new ApiError('x', 500, null))).toBe('server');
     expect(classifyExportError(new Error('offline'))).toBe('offline');
+    expect(classifyExportError(new ExportTooLargeToShareError(500_000))).toBe('too_large_to_share');
   });
 });
 
@@ -109,6 +114,16 @@ describe('export', () => {
     expect(JSON.parse(content.message)).toEqual(EXPORT);
     expect(content.message).toContain('\n  "format"');
     expect(options).toEqual({ subject: 'petprep-izvoz-2026-10-05.json', dialogTitle: 'petprep-izvoz-2026-10-05.json' });
+  });
+
+  it('refuses to share a text above ~400 KB (UTF-8) — clear error, no share sheet', async () => {
+    const share = jest.fn();
+    const big: FamilyExport = { ...EXPORT, blob: 'ž'.repeat(Math.ceil(EXPORT_SHARE_MAX_BYTES / 2) + 10) };
+
+    await expect(shareFamilyExport(() => Promise.resolve(big), share)).rejects.toBeInstanceOf(ExportTooLargeToShareError);
+    expect(share).not.toHaveBeenCalled();
+    expect(utf8Bytes('žš')).toBe(4);
+    expect(utf8Bytes('ab')).toBe(2);
   });
 
   it('reports a dismissed sheet and passes fetch errors through', async () => {

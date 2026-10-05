@@ -97,7 +97,7 @@ describe('FamilyChildrenCard — delete a child profile', () => {
     expect(screen.queryByTestId('child-deleted-notice')).toBeNull();
   });
 
-  it('a child already gone (404) and offline get their own messages', async () => {
+  it('a child already gone (404) and a lost answer (unknown outcome) get their own messages', async () => {
     deleteChild.mockRejectedValueOnce(new ApiError('No such child in your family.', 404, { reason: 'child_not_found' }));
     renderCard();
     fireEvent.press(screen.getByTestId('child-delete-5'));
@@ -108,7 +108,8 @@ describe('FamilyChildrenCard — delete a child profile', () => {
     deleteChild.mockRejectedValueOnce(new TypeError('Network request failed'));
     fireEvent.press(screen.getByTestId('child-delete-form-5-submit'));
     await flush();
-    expect(screen.getByTestId('child-delete-form-5-error').props.children).toBe(FAMILY_STRINGS.deleteErrors.offline);
+    expect(screen.getByTestId('child-delete-form-5-error').props.children).toBe(FAMILY_STRINGS.deleteErrors.unknown);
+    expect(FAMILY_STRINGS.deleteErrors.unknown).toContain('Ni znano, ali je bil izbris izveden');
   });
 
   it('cancel deletes nothing; only one child\'s delete form is open at a time', () => {

@@ -73,20 +73,33 @@ class CareScoreService
         $routines = $this->ledger->routinesFor($born, $from, $today, $now);
 
         // When each caretaker started: their own contract, or the birth for
-        // grandfathered caretakers (no contract required).
+        // grandfathered caretakers (no contract required). A deleted child's
+        // tombstone (M2-08) keeps its stored started_at and has an end; it is
+        // keyed "ended:{row id}" (no user) and only ever counts as a sharer of
+        // routines that opened while it was caring.
         $starts = [];
+        $ends = [];
         foreach ($pets as $pet) {
             $starts[$pet->id] = [];
+            $ends[$pet->id] = [];
             if ($pet->isUnborn()) {
                 continue;
             }
             $bornAt = CarbonImmutable::instance($pet->born_at)->utc();
             foreach ($caretakers->where('pet_id', $pet->id) as $c) {
-                $signed = $contracts->first(fn ($k) => (int) $k->pet_id === $pet->id && (int) $k->user_id === (int) $c->user_id);
-                $start = $c->requires_contract
-                    ? ($signed?->signed_at !== null ? CarbonImmutable::instance($signed->signed_at)->utc() : null)
-                    : $bornAt;
-                $starts[$pet->id][(int) $c->user_id] = $start !== null && $start->lessThan($bornAt) ? $bornAt : $start;
+                $key = $c->user_id !== null ? (int) $c->user_id : 'ended:'.$c->id;
+                if ($c->started_at !== null) {
+                    $start = CarbonImmutable::instance($c->started_at)->utc();
+                } elseif ($c->user_id === null) {
+                    $start = null; // tombstone without a known start: not a sharer
+                } else {
+                    $signed = $contracts->first(fn ($k) => (int) $k->pet_id === $pet->id && (int) $k->user_id === (int) $c->user_id);
+                    $start = $c->requires_contract
+                        ? ($signed?->signed_at !== null ? CarbonImmutable::instance($signed->signed_at)->utc() : null)
+                        : $bornAt;
+                }
+                $starts[$pet->id][$key] = $start !== null && $start->lessThan($bornAt) ? $bornAt : $start;
+                $ends[$pet->id][$key] = $c->ended_at !== null ? CarbonImmutable::instance($c->ended_at)->utc() : null;
             }
         }
 
@@ -119,6 +132,7 @@ class CareScoreService
             'pets' => $pets->keyBy('id'),
             'routines' => $routines,
             'starts' => $starts,
+            'ends' => $ends,
             'illnesses' => $illnesses->map(fn ($rows) => $rows->map(fn ($r) => CarbonImmutable::instance($r->started_at)->utc())->values()->all())->all(),
             'steps' => $steps,
         ];
@@ -379,7 +393,8 @@ class CareScoreService
         $row['fair_expected'] = round($fair, 2);
 
         // One caretaker: steps without a per-child row (before M2-01) are theirs.
-        if ($row['walk_steps'] === 0 && count($board['starts'][$pet->id] ?? []) === 1) {
+        $current = array_filter($board['ends'][$pet->id] ?? [], fn ($end) => $end === null);
+        if ($row['walk_steps'] === 0 && count($current) === 1) {
             foreach ($this->routinesOn($board, $pet, $date) as $r) {
                 if ($r->type === RoutineType::Walk) {
                     $row['walk_steps'] = (int) $r->steps;
@@ -456,7 +471,11 @@ class CareScoreService
 
     /**
      * Number of caretakers sharing $r, or 0 when $childId is not one of them
-     * (they started caring after the routine opened).
+     * (they started caring after the routine opened). A caretaker shares a
+     * routine that opened while they were caring — including a deleted
+     * child's tombstone (M2-08), so a sibling's deletion never rewrites the
+     * remaining children's past fair share; routines opened after the end
+     * are shared by the remaining caretakers only.
      *
      * @param  array<string, mixed>  $board
      */
@@ -465,7 +484,9 @@ class CareScoreService
         $n = 0;
         $member = false;
         foreach ($board['starts'][$pet->id] ?? [] as $id => $start) {
-            if ($start !== null && $start->lessThanOrEqualTo($r->opensAt)) {
+            $end = $board['ends'][$pet->id][$id] ?? null;
+            if ($start !== null && $start->lessThanOrEqualTo($r->opensAt)
+                && ($end === null || $end->greaterThan($r->opensAt))) {
                 $n++;
                 $member = $member || $id === $childId;
             }

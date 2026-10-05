@@ -32,7 +32,8 @@ class AccountController extends Controller
      * 200 `{status: deleted, scope: family|parent, family_deleted, parents_deleted,
      * children_deleted, pets_deleted}`; 422 `invalid_password` (or validation:
      * `password` required, `confirm` must be true); 403 `superadmin_protected`;
-     * 429 when throttled (5 per 15 min).
+     * 429 `too_many_attempts` + `Retry-After` after 5 wrong passwords in 15 min
+     * (only failed attempts count; separate from the child deletion).
      *
      * POST /api/parent/account/delete
      */
@@ -45,7 +46,7 @@ class AccountController extends Controller
         }
 
         try {
-            $this->deletion->assertPassword($parent, $request->password());
+            $this->deletion->confirmPassword($parent, $request->password(), AccountDeletionService::SCOPE_ACCOUNT);
             $result = $this->deletion->deleteParentAccount($parent);
         } catch (AccountDeletionException $e) {
             return $this->refusal($e);
@@ -91,6 +92,6 @@ class AccountController extends Controller
 
     private function refusal(AccountDeletionException $e): JsonResponse
     {
-        return response()->json(['message' => $e->getMessage(), 'reason' => $e->reason], $e->status);
+        return $e->toResponse();
     }
 }
