@@ -26,26 +26,26 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 - Pes se hrani enkrat na okno ne glede na to, kdo ga nahrani — pes ne je dvakrat, ker ga hranita dva.
 
 ## Izberite kužka: izvor in starost *(od 5. 10. 2026 na strežniku — izbira v aplikaciji še ni narejena, načrt)*
-Ob kodi za novega psa izberete **pasmo**, **izvor** (*kupljen* pri vzreditelju ali *posvojen* iz zavetišča) in **starost ob prihodu**: *mladiček* (pride pri 2 mesecih), *mlad pes* (9 mesecev), *odrasel* (3 leta) ali *starejši* (9 let; Border Collie 9,8 leta) *(meje obdobij in starosti ob prihodu so predlog, še niso potrjene)*. Mešanček je brezplačen v vseh kombinacijah. Kuža se stara **1 mesec na vsak teden** igre, zato mladiček v 12 tednih zraste v mladega psa — in z njim se spremenijo njegove potrebe in njegova slika.
+Ob kodi za novega psa izberete **pasmo**, **izvor** (*kupljen* pri vzreditelju ali *posvojen* iz zavetišča) in **starost ob prihodu**: *mladiček* (pride pri 2 mesecih), *mlad pes* (9 mesecev), *odrasel* (3 leta) ali *starejši* (9 let; Border Collie 9,8 leta) (mladiček je pes do 9 mesecev, mlad pes do 3 let, starejši pa je pes v zadnji četrtini pričakovane življenjske dobe). Mešanček je brezplačen v vseh kombinacijah. Kuža se stara **1 mesec na vsak teden** igre, zato mladiček v 12 tednih zraste v mladega psa — in z njim se spremenijo njegove potrebe in njegova slika.
 
-**Številke izhajajo iz virov**, ne izmišljujemo si jih: veterinarska združenja (AAHA), kinološke zveze (FCI, AKC, The Royal Kennel Club), dobrodelne organizacije (ASPCA, Dogs Trust, PDSA) in raziskave — vsaka številka ima v naši bazi zapisan vir ali oznako *predlog*. Iz preverjenih virov so: število obrokov po starosti (mladiček, mlad, odrasel pes) in več kot 2 uri gibanja na dan za odraslega Border Collieja. **Predlog (še ni potrjeno):** točne ure obrokov, meje obdobij, cilji korakov za mladiče (sporno pravilo "5 minut na mesec starosti", S24 — drugi viri ga zavračajo), 60 minut gibanja za odraslega mešančka (vir daje le razpon 30–120 minut) in vse za starejše pse.
+**Številke izhajajo iz virov**, ne izmišljujemo si jih: veterinarska združenja (AAHA), kinološke zveze (FCI, AKC, The Royal Kennel Club), dobrodelne organizacije (ASPCA, Dogs Trust, PDSA) in raziskave — vsaka številka ima v naši bazi zapisan vir ali označeno odločitev ustanovitelja. Neposredno iz virov so: število obrokov po starosti (mladiček, mlad, odrasel pes) in več kot 2 uri gibanja na dan za odraslega Border Collieja. **Kjer viri dajo le razpon ali pravilo brez točne številke, vrednost postavi PetPrep na podlagi virov** (odločitev ustanovitelja, 5. 10. 2026): točne ure obrokov (2-urna okna), meja med obdobji znotraj razponov iz virov, cilji korakov za mladiče (pravilo "5 minut na mesec starosti, dvakrat na dan", S24 — nekateri strokovnjaki ga zavračajo), 60 minut gibanja za odraslega mešančka (vir daje razpon 30–120 minut) ter za starejše pse 75 % gibanja odraslega in 2 obroka (vir: 2–3 manjši obroki).
 
-| Starost psa | Obroki na dan | Sprehod (koraki na dan) — mešanček / Border Collie |
+| Starost psa | Obroki na dan (okna po vašem času) | Sprehod (koraki na dan) — mešanček / Border Collie |
 |---|---|---|
-| mladiček 2 meseca | 4 | 2.000 / 2.000 (vsak teden več) *(predlog)* |
-| mladiček 3–6 mesecev | 3 | 3.000–5.000 / 3.000–5.000 *(predlog)* |
-| mladiček 6–9 mesecev | 2 | 6.000 / 6.000–8.000 *(predlog)* |
-| mlad pes, odrasel | 2 | 6.000 *(predlog)* / do 12.000 |
-| starejši | 2 *(predlog)* | 4.500 / 9.000 *(predlog)* |
+| mladiček 2 meseca | 4 (7–9, 11–13, 15–17, 19–21) | 2.000 / 2.000 (vsak teden več) |
+| mladiček 3–6 mesecev | 3 (7–9, 13–15, 19–21) | 3.000–5.000 / 3.000–5.000 |
+| mladiček 6–9 mesecev | 2 (6–10, 17–21) | 6.000 / 6.000–8.000 |
+| mlad pes, odrasel | 2 (6–10, 17–21) | 6.000 / do 12.000 |
+| starejši | 2 (6–10, 17–21) | 4.500 / 9.000 |
 
-Cilj korakov = koliko minut gibanja pes te starosti potrebuje × 100 korakov na minuto. **Psi, ki so v igri že pred to spremembo — in novi psi, dokler v aplikaciji ni izbire kužka —, ostanejo na dosedanjih pravilih do konca svojega izziva** (2 obroka 6–10 in 17–21, mešanček 4.000 korakov na dan, brez obdobij) — nič se jim ne spremeni sredi izziva. *(Odločitev še čaka potrditev.)* **Obroki med šolo ali spanjem so vaši:** če okno hranjenja v celoti pade v tihe ure (npr. obrok mladička ob 11. uri med šolo), ga od otroka ne pričakujemo in mu ne šteje v oceno — v igri kužka takrat nahrani starš (samodejno).
+Cilj korakov = koliko minut gibanja pes te starosti potrebuje × 100 korakov na minuto. **Psi, ki so v igri že pred to spremembo — in novi psi, dokler v aplikaciji ni izbire kužka —, ostanejo na dosedanjih pravilih za vedno** — tudi po koncu izziva (2 obroka 6–10 in 17–21, mešanček 4.000 korakov na dan, brez obdobij); nič se jim ne spremeni. Nova pravila dobijo psi, ustvarjeni z izbiro kužka. **Obroki med šolo ali spanjem so vaši:** če okno hranjenja v celoti pade v tihe ure (npr. obrok mladička 11–13 med šolo 8–13), ga od otroka ne pričakujemo in mu ne šteje v oceno — v igri kužka takrat nahrani starš (samodejno).
 
 ## Kaj mora otrok početi (mešanček)
 | Skrb | Kako pogosto | Kaj se zgodi, če pozabi |
 |---|---|---|
 | Hrana | odrasel pes: zjutraj (6–10) in zvečer (17–21) po vašem času; mladiček več krat na dan (glej zgoraj); **enkrat v vsakem oknu** — hranjenje "na zalogo" ni mogoče; izven okna je gumb zasenčen in otroku pove, kdaj bo spet čas | pes je lačen po ~12,5 urah |
 | Voda | 3× na dan, vsaj 3 ure narazen (aplikacija pokaže, kdaj spet) | pes je žejen po ~10 urah |
-| Sprehod (vsak dan) | cilj po starosti psa (novi psi: odrasel mešanček 6.000 korakov *(predlog)* — od 5. 10. 2026 na strežniku; psi iz prejšnjih izzivov ostanejo pri 4.000) (pravi koraki s telefona) — energija = današnji koraki / cilj, vsako polnoč (po vašem času) se začne znova pri 0 % (= "danes še ni sprehoda", ne zanemarjanje). Koraki s senzorja telefona: iPhone pošlje vse današnje korake, Android šteje, ko je aplikacija odprta; pošiljanje ob odprtju in vsakih 5 minut *(načrt: Apple Zdravje / Health Connect za korake tudi pri zaprti aplikaciji na Androidu)* | pes je utrujen; dan brez enega samega koraka → naslednje jutro zboli |
+| Sprehod (vsak dan) | cilj po starosti psa (novi psi: odrasel mešanček 6.000 korakov — od 5. 10. 2026 na strežniku; psi iz prejšnjih izzivov ostanejo pri 4.000) (pravi koraki s telefona) — energija = današnji koraki / cilj, vsako polnoč (po vašem času) se začne znova pri 0 % (= "danes še ni sprehoda", ne zanemarjanje). Koraki s senzorja telefona: iPhone pošlje vse današnje korake, Android šteje, ko je aplikacija odprta; pošiljanje ob odprtju in vsakih 5 minut *(načrt: Apple Zdravje / Health Connect za korake tudi pri zaprti aplikaciji na Androidu)* | pes je utrujen; dan brez enega samega koraka → naslednje jutro zboli |
 | Čiščenje | ko pes "naredi nered" — naključno **1× na dan** (Border Collie 2×), **nikoli med tihimi urami**; dokler ni počiščeno, hrane in vode ni | higiena pade na 0 % |
 
 Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), odrasel potrebuje 12.000 korakov (več kot 2 uri gibanja na dan po The Royal Kennel Club) in naredi nered 2× na dan.

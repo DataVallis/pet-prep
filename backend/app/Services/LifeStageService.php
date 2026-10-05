@@ -32,7 +32,7 @@ use Illuminate\Support\Facades\Log;
  * else the breed-level row (stage `all`). Feed windows belong to the meal
  * band: the windows row with the same (stage, from) as the meals row, else
  * the breed's breed_configs.feed_windows when the count matches, else N
- * derived windows (07:00 … 19:00, 1 h — logged). Step goal = exercise
+ * derived windows (07:00 … 19:00, 2 h — logged). Step goal = exercise
  * minutes × steps per minute (puppy / young: minutes per month of age,
  * capped at the adult minutes), capped by breed_configs.daily_steps_cap.
  *
@@ -40,9 +40,10 @@ use Illuminate\Support\Facades\Log;
  * breed config (feed_windows, daily_steps_required) and the stage is null.
  *
  * Legacy profile (`pets.arrival_age_months` null — pets created before
- * M5-R01 or without a profile choice; grandfathered, orchestrator
- * 2026-10-05, pending David): no age, no stage, never a transition, and
- * exactly the pre-M5 rules on every day, whatever the stage data says.
+ * M5-R01 or without a profile choice; grandfathered PERMANENTLY, David
+ * 2026-10-05 — also after their challenge ends): no age, no stage, never a
+ * transition, and exactly the pre-M5 rules on every day, whatever the
+ * stage data says.
  */
 class LifeStageService
 {
@@ -52,6 +53,9 @@ class LifeStageService
     private const DERIVED_FIRST_HOUR = 7;
 
     private const DERIVED_LAST_HOUR = 19;
+
+    /** Window length (David 2026-10-05: 2 h). */
+    private const DERIVED_WINDOW_MINUTES = 120;
 
     /** @var array<string, list<array<string, mixed>>> */
     private array $memo = [];
@@ -390,22 +394,25 @@ class LifeStageService
     }
 
     /**
-     * Evenly spread windows (Claude proposal, same as the seeded ones):
-     * first 07:00, last 19:00, 1 hour each.
+     * Evenly spread windows (same rule as the seeded ones, David
+     * 2026-10-05): first 07:00, last 19:00, 2 hours each (shorter when the
+     * spacing is shorter, so windows never overlap).
      *
      * @return list<array{0: string, 1: string}>
      */
     public function derivedWindows(int $meals): array
     {
         if ($meals <= 1) {
-            return [['07:00', '08:00']];
+            return [['07:00', '09:00']];
         }
 
         $windows = [];
         $span = (self::DERIVED_LAST_HOUR - self::DERIVED_FIRST_HOUR) * 60;
+        $length = min(self::DERIVED_WINDOW_MINUTES, intdiv($span, $meals - 1));
+        $hm = fn (int $m): string => sprintf('%02d:%02d', intdiv($m, 60), $m % 60);
         for ($i = 0; $i < $meals; $i++) {
             $start = self::DERIVED_FIRST_HOUR * 60 + intdiv($span * $i, $meals - 1);
-            $windows[] = [sprintf('%02d:%02d', intdiv($start, 60), $start % 60), sprintf('%02d:%02d', intdiv($start + 60, 60), ($start + 60) % 60)];
+            $windows[] = [$hm($start), $hm($start + $length)];
         }
 
         return $windows;

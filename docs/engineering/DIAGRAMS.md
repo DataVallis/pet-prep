@@ -1044,15 +1044,31 @@ flowchart TD
   A --> S["stage = last starts_at_months ≤ age<br/>(puppy 0 · young 9 · adult 36 · senior 108 / 118)"]
   S --> M["meals_per_day: band of the stage with greatest from ≤ age<br/>(puppy 0 → 4 · 3 → 3 · 6 → 2; young/adult/senior 2)"]
   M --> W{"feed_windows row of the same band?"}
-  W -- yes --> W1["4: 07–08 · 11–12 · 15–16 · 19–20<br/>3: 07–08 · 13–14 · 19–20 (proposal)"]
+  W -- yes --> W1["4: 07–09 · 11–13 · 15–17 · 19–21<br/>3: 07–09 · 13–15 · 19–21 (2 h, David 2026-10-05)"]
   W -- "no, breed windows match the count" --> W2["breed_configs.feed_windows 06–10 · 17–21"]
-  W -- "no, mismatch" --> W3["N derived 1-h windows 07:00…19:00 (logged)"]
+  W -- "no, mismatch" --> W3["N derived 2-h windows 07:00…19:00 (logged)"]
   S --> E["exercise minutes: puppy/young 10 × age, capped at adult<br/>adult: BC 120 · mutt 60 · senior 75 %"]
   E --> G["step goal = minutes × 100 (cap: breed_configs.daily_steps_cap)"]
   W1 & W2 & W3 --> Q{"window entirely in quiet hours?"}
   Q -- yes --> PC["parent covers it: tick feeds at start (parent_fed_pet),<br/>never a child routine"]
   Q -- no --> CR["child's feed routine (ledger)"]
   G --> EN["energy = steps / goal · walk routine · pet_daily_walks.goal"]
+```
+
+### 12b-2. David's decisions → existing production rows (M5-R01b, one-off migration)
+
+```mermaid
+flowchart TD
+  R["28 TARGETS frozen in the migration<br/>(= seeder rows with decision 'potrdil David 2026-10-05')"] --> T{"tuple has any<br/>breed_stage_param_changes row?"}
+  T -- "yes (admin edit / re-key / delete)" --> SK1["skip — Filament wins"]
+  T -- no --> X{"row exists?"}
+  X -- "no (fresh DB)" --> SK2["skip — seeder inserts the confirmed row"]
+  X -- yes --> V{"value = PR #37 value<br/>or confirmed value?"}
+  V -- no --> SK3["skip + warning (changed outside Filament)"]
+  V -- yes --> D{"any column differs?"}
+  D -- no --> SK4["nothing (idempotent)"]
+  D -- yes --> U["UPDATE value / verified = true / notes / data_ref<br/>+ audit row: updated, user_id null,<br/>actor 'system: David decision 2026-10-05'"]
+  U --> C["forget LifeStageService cache → profile.data_verified = true"]
 ```
 
 ### 12c. Stage transition and stage images

@@ -444,11 +444,12 @@ class Pet extends Model
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * Legacy profile (M5-R01 grandfathering, orchestrator 2026-10-05,
-     * pending David): a pet created before M5-R01 or without a profile
-     * choice has no `arrival_age_months`. It keeps exactly the pre-M5 rules
-     * (breed feed windows + daily_steps_required, no parent-covered meals,
-     * no life stage, no stage images) until its challenge ends.
+     * Legacy profile (M5-R01 grandfathering, David 2026-10-05): a pet
+     * created before M5-R01 or without a profile choice has no
+     * `arrival_age_months`. It keeps exactly the pre-M5 rules (breed feed
+     * windows + daily_steps_required, no parent-covered meals, no life
+     * stage, no stage images) PERMANENTLY — also after its challenge ends.
+     * New pets get a profile through the picker.
      */
     public function isLegacyProfile(): bool
     {

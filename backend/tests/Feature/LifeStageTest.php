@@ -187,13 +187,13 @@ describe('rules per breed and stage', function () {
             ->and($rules->feedWindows)->toBe($windows)
             ->and($rules->stepGoal)->toBe($steps);
     })->with([
-        'mutt puppy 2 mo' => ['mutt', 2, LifeStage::Puppy, 4, [['07:00', '08:00'], ['11:00', '12:00'], ['15:00', '16:00'], ['19:00', '20:00']], 2000],
-        'mutt puppy 3 mo' => ['mutt', 3, LifeStage::Puppy, 3, [['07:00', '08:00'], ['13:00', '14:00'], ['19:00', '20:00']], 3000],
+        'mutt puppy 2 mo' => ['mutt', 2, LifeStage::Puppy, 4, [['07:00', '09:00'], ['11:00', '13:00'], ['15:00', '17:00'], ['19:00', '21:00']], 2000],
+        'mutt puppy 3 mo' => ['mutt', 3, LifeStage::Puppy, 3, [['07:00', '09:00'], ['13:00', '15:00'], ['19:00', '21:00']], 3000],
         'mutt puppy 6 mo' => ['mutt', 6, LifeStage::Puppy, 2, [['06:00', '10:00'], ['17:00', '21:00']], 6000],
         'mutt young 9 mo' => ['mutt', 9, LifeStage::Young, 2, [['06:00', '10:00'], ['17:00', '21:00']], 6000],
         'mutt adult' => ['mutt', 36, LifeStage::Adult, 2, [['06:00', '10:00'], ['17:00', '21:00']], 6000],
         'mutt senior' => ['mutt', 108, LifeStage::Senior, 2, [['06:00', '10:00'], ['17:00', '21:00']], 4500],
-        'BC puppy 2 mo' => ['border_collie', 2, LifeStage::Puppy, 4, [['07:00', '08:00'], ['11:00', '12:00'], ['15:00', '16:00'], ['19:00', '20:00']], 2000],
+        'BC puppy 2 mo' => ['border_collie', 2, LifeStage::Puppy, 4, [['07:00', '09:00'], ['11:00', '13:00'], ['15:00', '17:00'], ['19:00', '21:00']], 2000],
         'BC puppy 8 mo' => ['border_collie', 8, LifeStage::Puppy, 2, [['06:00', '10:00'], ['17:00', '21:00']], 8000],
         'BC young 9 mo' => ['border_collie', 9, LifeStage::Young, 2, [['06:00', '10:00'], ['17:00', '21:00']], 9000],
         'BC young 14 mo' => ['border_collie', 14, LifeStage::Young, 2, [['06:00', '10:00'], ['17:00', '21:00']], 12000],
@@ -212,7 +212,13 @@ describe('rules per breed and stage', function () {
 
     it('flags the rules as unverified while a used value is an UNSOURCED proposal', function () {
         [, , $pet] = lsFamily('2026-10-05 08:00:00');
-        $rules = lsRules($pet, '2026-10-05');
+        // Since David's 2026-10-05 answers every imported value is verified.
+        expect(lsRules($pet, '2026-10-05')->verified())->toBeTrue();
+
+        // An admin turns two values back into proposals (Filament → cache refreshed).
+        DB::table('breed_stage_params')->where('breed_slug', 'mutt')->whereIn('key', ['feed_windows', 'exercise_minutes_per_age_month'])->update(['verified' => false]);
+        Cache::flush();
+        $rules = app(LifeStageService::class)->rulesOn($pet->fresh(), '2026-10-05');
 
         expect($rules->verified())->toBeFalse()
             ->and($rules->unverifiedKeys())->toContain('feed_windows', 'exercise_minutes_per_age_month')
@@ -238,9 +244,9 @@ describe('feed windows by stage', function () {
         // Born Monday 2026-10-05 10:00 local; age 3 from Monday 2026-10-12 10:00 → 3 meals from Tuesday.
         [, $child, $pet] = lsFamily('2026-10-05 08:00:00');
 
-        expect(lsWindows($pet, '2026-10-11'))->toBe(['07:00-08:00', '11:00-12:00', '15:00-16:00', '19:00-20:00'])
-            ->and(lsWindows($pet, '2026-10-12'))->toBe(['07:00-08:00', '11:00-12:00', '15:00-16:00', '19:00-20:00'])
-            ->and(lsWindows($pet, '2026-10-13'))->toBe(['07:00-08:00', '13:00-14:00', '19:00-20:00']);
+        expect(lsWindows($pet, '2026-10-11'))->toBe(['07:00-09:00', '11:00-13:00', '15:00-17:00', '19:00-21:00'])
+            ->and(lsWindows($pet, '2026-10-12'))->toBe(['07:00-09:00', '11:00-13:00', '15:00-17:00', '19:00-21:00'])
+            ->and(lsWindows($pet, '2026-10-13'))->toBe(['07:00-09:00', '13:00-15:00', '19:00-21:00']);
 
         // Monday 11:30 local, already 3 months old since 10:00 — still Monday's rules.
         lsAt('2026-10-12 09:30:00');
@@ -268,7 +274,7 @@ describe('feed windows by stage', function () {
 
 describe('meals in quiet hours are done by the parent', function () {
     it('feeds the dog at the window start, logs parent_fed_pet and never expects the meal from the child', function () {
-        // 2-month puppy, school 08–13: the 11–12 window is entirely quiet → parent.
+        // 2-month puppy, school 08–13: the 11–13 window is entirely quiet → parent.
         [$parent, $child, $pet] = lsFamily('2026-10-05 04:30:00', [], quiet: true);
         Pet::whereKey($pet->id)->update(['hunger_level' => 40.0]);
         $decay = app(PetDecayService::class);
@@ -315,7 +321,7 @@ describe('meals in quiet hours are done by the parent', function () {
 
     it('does not feed a frozen (hard-stopped) dog and expects nothing in a partly quiet window from the parent', function () {
         [, , $pet] = lsFamily('2026-10-05 04:30:00', ['arrival_age_months' => 3], quiet: true);
-        // 3 meals: 07–08 (child), 13–14 (school ends 13 → child), 19–20 (child).
+        // 3 meals: 07–09 (partly quiet → child), 13–15 (school ends 13 → child), 19–21 (child).
         lsAt('2026-10-06 10:59:00');
         app(PetDecayService::class)->processPetDecay($pet);
         lsAt('2026-10-06 11:30:00');
@@ -758,7 +764,7 @@ describe('profile in the API and backfill', function () {
             ->and($state['pet']['profile']['today']['sleep_hours'])->toBe(['min' => 14, 'max' => 16])
             ->and($state['pet']['profile']['next_stage'])->toBe(['life_stage' => 'young', 'from_date' => '2026-11-24'])
             ->and($state['steps']['goal'])->toBe(3000)
-            ->and($state['feeding']['windows'])->toBe([['start' => '07:00', 'end' => '08:00'], ['start' => '13:00', 'end' => '14:00'], ['start' => '19:00', 'end' => '20:00']]);
+            ->and($state['feeding']['windows'])->toBe([['start' => '07:00', 'end' => '09:00'], ['start' => '13:00', 'end' => '15:00'], ['start' => '19:00', 'end' => '21:00']]);
 
         app('auth')->forgetGuards();
         actingAsRole($parent);

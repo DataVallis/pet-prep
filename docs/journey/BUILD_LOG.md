@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-05 — David potrdil pravila rasti: 2-urna okna za mladička (M5-R01b)
+
+**Kaj se je zgodilo:** David je odgovoril na odprta vprašanja realistične simulacije. **Okna hranjenja mladička so zdaj 2-urna** (4 obroki 7–9, 11–13, 15–17, 19–21; 3 obroki 7–9, 13–15, 19–21) — 1 ura je bila za otroka prekratka. Potrjene so meje obdobij (mladiček do 9 mesecev, mlad pes do 3 let, starejši v zadnji četrtini življenjske dobe — mešanček 9 let, Border Collie 9,8), starosti ob prihodu, minute gibanja (odrasel mešanček 60 min = 6.000 korakov, mladiček 10 min na mesec starosti, starejši 75 %) in 2 obroka za starejše. **Psi, ki že igrajo, ostanejo na starih pravilih za vedno.** V bazi so vse vrednosti zdaj potrjene: iz vira ali z oznako »potrdil David 2026-10-05« — vir ostane zapisan kot dokaz, odločitev se nikoli ne predstavi kot literatura. Strežnik že zapisane vrednosti posodobi enkrat, z revizijsko sledjo, in ne povozi ničesar, kar je admin že ročno spremenil. **985 zelenih testov** (+8).
+
+**Kako to povedati**
+- 👩 *"Mladiček je lačen štirikrat na dan — a otrok ima za vsak obrok 2 uri časa. Kjer viri dajo le razpon, smo številko postavili v PetPrepu na podlagi virov."*
+- 💼 *"Vsaka številka v simulaciji ima vir ali zapisano odločitev ustanovitelja — ločeno in preverljivo."*
+
 ## 2026-10-05 — Kuža raste: izvor, starost in pravila iz preverjenih virov (M5-R01, strežnik)
 
 **Kaj se je zgodilo:** Dosedanji kuža je bil "večni mladiček brez starosti": vsak dan 2 obroka in 4.000 / 10.000 korakov — številke iz prve specifikacije, brez vira. Zdaj:

@@ -59,8 +59,8 @@ describe('import provenance', function () {
             }
 
             if ($row['ref'] === null) {
-                // Claude proposal without a research entry (representative arrival ages).
-                expect($row['verified'])->toBeFalse("{$label} has no data.json entry, so it must be unverified");
+                // A value without a research entry is verified only as a recorded decision.
+                expect($row['verified'] && $row['decision'] === null)->toBeFalse("{$label} has no data.json entry, so it must be unverified");
 
                 continue;
             }
@@ -70,6 +70,10 @@ describe('import provenance', function () {
 
             if ($unsourced && $row['decision'] === null) {
                 expect($row['verified'])->toBeFalse("{$label} is UNSOURCED in data.json");
+            }
+            if ($row['decision'] === BreedStageParamsSeeder::CONFIRMED) {
+                // David's 2026-10-05 answers are recorded in data.json too.
+                expect((string) ($entry['decision'] ?? ''))->toStartWith('potrdil David 2026-10-05', "{$label}: data.json has no decision");
             }
             if ($row['verified'] && $row['source_id'] !== null && ($entry['source_id'] ?? null) !== null) {
                 // The cited source is the one data.json names for that value (or one of its derivations).
@@ -104,6 +108,13 @@ describe('import provenance', function () {
             ->and($value('mutt', 'senior', 0, StageParamKey::StartsAtMonths))->toBe((int) round(ldData('medium_mixed_breed.lifespan.senior_from')['value'] * 12))
             ->and($value('border-collie', 'all', 0, StageParamKey::CorenRank))->toBe(ldData('border_collie.trainability.coren_rank')['value'])
             ->and($value('mutt', 'all', 0, StageParamKey::CorenRank))->toBeNull();
+        // David's game values (2026-10-05): 2-hour windows, arrival ages, senior minutes.
+        expect($value('mutt', 'puppy', 0, StageParamKey::FeedWindows))->toBe(ldData('proposed_game_parameters.feed_window_times')['value']['4_meals'])
+            ->and($value('border-collie', 'puppy', 3, StageParamKey::FeedWindows))->toBe(ldData('proposed_game_parameters.feed_window_times')['value']['3_meals'])
+            ->and($value('mutt', 'adult', 0, StageParamKey::ArrivalAgeMonths))->toBe(ldData('proposed_game_parameters.arrival_age_months')['value']['adult'])
+            ->and($value('border-collie', 'senior', 0, StageParamKey::ArrivalAgeMonths))->toBe(ldData('proposed_game_parameters.arrival_age_months')['value']['senior']['border_collie'])
+            ->and($value('mutt', 'senior', 0, StageParamKey::ExerciseMinutesPerDay))->toBe(ldData('proposed_game_parameters.senior_exercise_minutes')['value']['medium_mixed_breed'])
+            ->and($value('border-collie', 'senior', 0, StageParamKey::ExerciseMinutesPerDay))->toBe(ldData('proposed_game_parameters.senior_exercise_minutes')['value']['border_collie']);
         // Every value passes its key's shape check.
         foreach (BreedStageParamsSeeder::rows() as $row) {
             expect(StageParamKey::from($row['key'])->validate($row['value']))->toBeNull();
@@ -135,29 +146,44 @@ describe('import provenance', function () {
         expect($meals)->source_id->toBe('S18')->confidence->toBe('high')->verified->toBeTrue()
             ->data_ref->toBe('general_by_size.feeding_meals_per_day.8_12_weeks')
             ->quote->toBe('Puppies eight to 12 weeks old need four meals a day.')
-            ->and($windows)->source_id->toBeNull()->verified->toBeFalse()
-            ->and($windows->notes)->toContain('Claude proposal');
-        expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->sort()->values()->all())
-            ->toBe(['arrival_age_months', 'exercise_minutes_per_age_month', 'exercise_minutes_per_day', 'feed_windows', 'meals_per_day', 'starts_at_months']);
+            ->and($windows)->source_id->toBeNull()->verified->toBeTrue()->data_ref->toBe('proposed_game_parameters.feed_window_times')
+            ->and($windows->notes)->toStartWith('Decision: potrdil David 2026-10-05.')
+            ->and($windows->notes)->toContain('no literature number');
+        // Since David's answers (2026-10-05) no imported value is an open proposal.
+        expect(BreedStageParam::where('verified', false)->count())->toBe(0);
     });
 
-    it('keeps Claude\'s choices that wait for David unverified (stage boundaries, arrival ages, senior meals) — data_verified stays false', function () {
+    it('marks David\'s 2026-10-05 answers verified as decisions and keeps the underlying source ids — data_verified turns true', function () {
         seedLifeStageData();
-        $verified = fn (string $stage, string $key) => BreedStageParam::where(['stage' => $stage, 'key' => $key])->pluck('verified')->unique()->values()->all();
+        $confirmed = fn (string $breed, string $stage, string $key) => BreedStageParam::where(['breed_slug' => $breed, 'stage' => $stage, 'key' => $key])->orderBy('age_from_months')->get();
 
-        expect($verified('puppy', 'starts_at_months'))->toBe([true])
-            ->and($verified('young', 'starts_at_months'))->toBe([false])
-            ->and($verified('adult', 'starts_at_months'))->toBe([false])
-            ->and($verified('senior', 'starts_at_months'))->toBe([false])
-            ->and($verified('puppy', 'arrival_age_months'))->toBe([false])
-            ->and($verified('senior', 'meals_per_day'))->toBe([false])
-            ->and($verified('adult', 'meals_per_day'))->toBe([true]);
+        foreach (['mutt', 'border-collie'] as $breed) {
+            foreach ([['young', 'starts_at_months'], ['adult', 'starts_at_months'], ['senior', 'starts_at_months'], ['puppy', 'arrival_age_months'],
+                ['adult', 'arrival_age_months'], ['senior', 'meals_per_day'], ['puppy', 'feed_windows'], ['puppy', 'exercise_minutes_per_age_month'],
+                ['young', 'exercise_minutes_per_age_month'], ['senior', 'exercise_minutes_per_day']] as [$stage, $key]) {
+                foreach ($confirmed($breed, $stage, $key) as $row) {
+                    expect($row->verified)->toBeTrue("{$breed}.{$stage}.{$key}")
+                        ->and($row->notes)->toStartWith('Decision: potrdil David 2026-10-05.');
+                }
+            }
+        }
+        // The evidence stays the literature's (never replaced by the decision).
+        expect($confirmed('mutt', 'senior', 'starts_at_months')->sole())->source_id->toBe('S11,S15')->confidence->toBe('medium')
+            ->and($confirmed('mutt', 'puppy', 'arrival_age_months')->sole())->source_id->toBe('S36')
+            ->and($confirmed('mutt', 'puppy', 'exercise_minutes_per_age_month')->sole())->source_id->toBe('S24')->confidence->toBe('low')
+            ->and($confirmed('mutt', 'adult', 'exercise_minutes_per_day')->sole()->source_id)->toBeNull()
+            ->and($confirmed('mutt', 'adult', 'exercise_minutes_per_day')->sole()->value)->toBe(60)
+            ->and($confirmed('mutt', 'senior', 'exercise_minutes_per_day')->sole()->value)->toBe(45)
+            ->and($confirmed('border-collie', 'senior', 'exercise_minutes_per_day')->sole()->value)->toBe(90)
+            // David's earlier decision (adult 2 meals) keeps its own marker.
+            ->and($confirmed('mutt', 'adult', 'meals_per_day')->sole()->notes)->toStartWith('Decision: David 2026-10-05.');
 
-        // A Border Collie that arrived as an adult: every care number is sourced, but the stage rests on Claude's boundary.
-        $pet = Pet::factory()->borderCollie()->create(['user_id' => User::factory()->child()->create()->id, 'arrival_age_months' => 36]);
-        $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
-        expect($rules->verified())->toBeFalse()
-            ->and($rules->unverifiedKeys())->toContain('starts_at_months', 'arrival_age_months');
+        foreach ([['border_collie', 36], ['mutt', 2], ['mutt', 9], ['mutt', 108]] as [$breed, $age]) {
+            $pet = Pet::factory()->state(['breed_type' => $breed])->create(['user_id' => User::factory()->child()->create()->id, 'arrival_age_months' => $age]);
+            $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
+            expect($rules->verified())->toBeTrue("{$breed} {$age} months")
+                ->and($rules->unverifiedKeys())->toBe([]);
+        }
     });
 });
 
@@ -201,12 +227,12 @@ describe('edits', function () {
 
         actingAs($admin);
         $param = BreedStageParam::where(['breed_slug' => 'mutt', 'stage' => 'adult', 'key' => 'exercise_minutes_per_day'])->sole();
-        $param->update(['value' => 70, 'verified' => true, 'notes' => 'David approved']);
+        $param->update(['value' => 70, 'verified' => false, 'notes' => 'Trial value']);
 
         $change = BreedStageParamChange::sole();
-        expect($change)->action->toBe('updated')->user_id->toBe($admin->id)->key->toBe('exercise_minutes_per_day')
+        expect($change)->action->toBe('updated')->user_id->toBe($admin->id)->actor->toBeNull()->key->toBe('exercise_minutes_per_day')
             ->and($change->old['value'])->toBe(60)->and($change->new['value'])->toBe(70)
-            ->and($change->old['verified'])->toBeFalse()
+            ->and($change->old['verified'])->toBeTrue()
             ->and($param->fresh()->updated_by)->toBe($admin->id)
             ->and(app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()))->stepGoal)->toBe(7000);
     });
@@ -214,16 +240,21 @@ describe('edits', function () {
     it('lists the data in Filament with unverified rows marked and validates edited values per key', function () {
         seedLifeStageData();
         actingAs(User::factory()->create(['role' => 'parent', 'is_superadmin' => true]));
+        // Every imported value is verified since 2026-10-05: plant one open proposal (no audit row).
+        DB::table('breed_stage_params')->where(['breed_slug' => 'mutt', 'stage' => 'senior', 'key' => 'sleep_hours'])->update(['verified' => false]);
 
         Livewire::test(ListBreedStageParams::class)
             ->assertOk()
+            ->searchTable('sleep_hours')
             ->assertSee('UNSOURCED — proposal')
+            ->searchTable('feed_windows')
+            ->assertSee('verified — decision')
             ->searchTable('meals_per_day')
             ->assertSee('S18');
 
         $param = BreedStageParam::where(['breed_slug' => 'mutt', 'stage' => 'puppy', 'age_from_months' => 0, 'key' => 'feed_windows'])->sole();
         Livewire::test(EditBreedStageParam::class, ['record' => $param->getRouteKey()])
-            ->assertFormSet(['value' => '[["07:00","08:00"],["11:00","12:00"],["15:00","16:00"],["19:00","20:00"]]'])
+            ->assertFormSet(['value' => '[["07:00","09:00"],["11:00","13:00"],["15:00","17:00"],["19:00","21:00"]]'])
             ->fillForm(['value' => '[["7am","8am"]]'])
             ->call('save')
             ->assertHasFormErrors(['value']);

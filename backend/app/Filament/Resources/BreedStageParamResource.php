@@ -133,7 +133,7 @@ class BreedStageParamResource extends Resource
                     ->state(fn (BreedStageParam $record): string => self::valueToForm($record->value))
                     ->wrap(),
                 Tables\Columns\TextColumn::make('unit')->toggleable(),
-                Tables\Columns\TextColumn::make('source_id')->label('Source')->placeholder('UNSOURCED'),
+                Tables\Columns\TextColumn::make('source_id')->label('Source')->placeholder('none'),
                 Tables\Columns\TextColumn::make('confidence')
                     ->badge()
                     ->color(fn (string $state): string => match ($state) {
@@ -144,7 +144,8 @@ class BreedStageParamResource extends Resource
                 Tables\Columns\TextColumn::make('verified')
                     ->label('Status')
                     ->badge()
-                    ->state(fn (BreedStageParam $record): string => $record->verified ? 'verified' : 'UNSOURCED — proposal')
+                    // A verified row without a source is a recorded decision (e.g. David 2026-10-05), not literature.
+                    ->state(fn (BreedStageParam $record): string => $record->verified ? ($record->source_id === null ? 'verified — decision' : 'verified') : 'UNSOURCED — proposal')
                     ->color(fn (BreedStageParam $record): string => $record->verified ? 'success' : 'danger'),
                 Tables\Columns\TextColumn::make('editor.name')->label('Last edited by')->placeholder('seeder')->toggleable(),
                 Tables\Columns\TextColumn::make('updated_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
