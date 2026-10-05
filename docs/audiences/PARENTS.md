@@ -40,7 +40,7 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), potrebuje 10.000 k
 ## Vsak kuža je unikaten *(od 4. 10. 2026 na strežniku; slike v aplikaciji: načrt)*
 Kot v resnici: dva psa iste pasme nista enaka. Ob rojstvu vsak kuža dobi svojo kombinacijo lastnosti (velikost, postava, barva in dolžina dlake, lise, ušesa, oči, rep) znotraj tega, kar je pri pasmi mogoče, in jo obdrži za vedno. V isti družini dva psa iste pasme nikoli nista enaka. *(Seznami možnosti po pasmah so še osnutek; zamenjali jih bomo s podatki iz uradnih standardov pasem.)*
 
-**Fotografija in kratki videi kužka** *(od 5. 10. 2026 na strežniku; predvajanje v aplikaciji: načrt)*: ob rojstvu umetna inteligenca naredi fotorealistično sliko vašega kužka in iz nje kratke 5-sekundne videe brez zvoka, v katerih je vedno isti pes. Brezplačni mešanček dobi 2 videa (miruje, spi), plačljiva pasma (izziv) vseh 6 — tudi lačen, utrujen, bolan in igriv. *(Razdelitev je predlog in še ni potrjena.)* Ustvarjanje traja nekaj minut; medtem igra normalno teče.
+**Fotografija in kratki videi kužka** *(od 5. 10. 2026 na strežniku; predvajanje v aplikaciji: načrt)*: ob paritvi umetna inteligenca naredi fotorealistično sliko vašega kužka, ko otrok podpiše pogodbo (rojstvo), pa iz nje še kratke 5-sekundne videe brez zvoka, v katerih je vedno isti pes. Brezplačni mešanček dobi 2 videa (miruje, spi), plačljiva pasma (izziv) vseh 6 — tudi lačen, utrujen, bolan in igriv. *(Razdelitev je predlog in še ni potrjena.)* Ustvarjanje traja nekaj minut; medtem igra normalno teče.
 
 ## Kaj vidite vi
 - **Semafor** za vsakega otroka in vsakega psa, za današnji dan po vašem času:

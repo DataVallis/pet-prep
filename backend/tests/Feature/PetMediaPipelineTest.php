@@ -12,6 +12,7 @@ use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\User;
 use App\Services\FalWebhookVerifier;
+use App\Services\FamilyService;
 use App\Services\Media\FalGateway;
 use App\Services\Media\MediaEntitlementService;
 use App\Services\Media\PetMediaService;
@@ -110,7 +111,7 @@ function pmPath(string $url): string
 /* ─────────────────────────── End-to-end pipeline ─────────────────────────── */
 
 describe('pipeline at birth', function () {
-    it('goes pairing → reference image → stored → entitled videos → webhook → stored → signed URLs in the state', function () {
+    it('goes pairing → reference image → stored → contract (birth) → entitled videos → webhook → stored → signed URLs in the state', function () {
         fakeFalJwks();
         Http::fake([
             'fal.run/fal-ai/nano-banana-pro' => Http::response(['images' => [['url' => 'https://v3.fal.media/files/dog/ref.jpg']]]),
@@ -138,7 +139,14 @@ describe('pipeline at birth', function () {
             ->and(Storage::disk('pet_media')->exists($image->storage_path))->toBeTrue()
             ->and($pet->fresh()->media_status)->toBe('ready');
 
-        // Free mutt → basic set: idle + sleeping, submitted with our signed start image + webhook.
+        // Unborn (contract not signed yet): no videos, no Kling call.
+        expect(PetMedia::where('pet_id', $pet->id)->videos()->count())->toBe(0);
+        Http::assertNotSent(fn (Request $r) => str_contains($r->url(), 'queue.fal.run'));
+
+        // First contract = birth → the free mutt's basic set: idle + sleeping.
+        app('auth')->forgetGuards();
+        $this->actingAs($child)->postJson('/api/child/contract', ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20'])->assertCreated();
+
         $videos = PetMedia::where('pet_id', $pet->id)->videos()->orderBy('id')->get();
         expect($videos->pluck('state')->all())->toBe(['idle', 'sleeping'])
             ->and($videos->pluck('status')->unique()->all())->toBe(['running'])
@@ -159,8 +167,8 @@ describe('pipeline at birth', function () {
         expect(PetMedia::where('pet_id', $pet->id)->videos()->pluck('status')->unique()->all())->toBe(['ready']);
         expect((float) AiSpendLedger::where('pet_id', $pet->id)->counted()->sum('cost_usd'))->toEqualWithDelta(0.15 + 2 * 0.56, 1e-9);
 
-        // One broadcast per stored file: image + 2 videos.
-        Event::assertDispatchedTimes(PetUpdated::class, 3);
+        // One broadcast per stored file (image + 2 videos) + the birth.
+        Event::assertDispatchedTimes(PetUpdated::class, 4);
         Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'video_ready' && $e->payload['media']['status'] === 'ready');
 
         // The child's state carries only our signed URLs.
@@ -178,6 +186,52 @@ describe('pipeline at birth', function () {
 
         app('auth')->forgetGuards();
         $this->get(pmPath($state['media']['videos']['sleeping']))->assertOk()->assertHeader('Content-Type', 'video/mp4');
+    });
+
+    it('queues no videos for an unborn pet — not from the stored image, the backfill or the panel', function () {
+        Queue::fake([SubmitPetStateVideo::class]);
+        [, , $pet] = pmFamilyPet();
+        $pet->update(['born_at' => null]);
+        pmStored($pet);
+
+        expect(app(PetMediaService::class)->queueStateVideos($pet->fresh()))->toBe(0)
+            ->and(app(PetMediaService::class)->planMissing($pet->fresh()))->toMatchArray(['image' => 'ok', 'videos' => [], 'cost_usd' => 0.0])
+            ->and(app(PetMediaService::class)->generateMissing($pet->fresh()))->toBe(['image' => false, 'videos' => 0]);
+        Queue::assertNothingPushed();
+        expect(PetMedia::where('pet_id', $pet->id)->videos()->count())->toBe(0);
+    });
+
+    it('queues the videos when the first contract births the pet, and not again for a second caretaker', function () {
+        Queue::fake([SubmitPetStateVideo::class]);
+        [$parent, $first, $pet] = pmFamilyPet();
+        $pet->update(['born_at' => null, 'last_decay_at' => null]);
+        pmStored($pet);
+        $second = createChildUser(['parent_id' => $parent->id]);
+        app(FamilyService::class)->addCaretaker($pet, $second, requiresContract: true);
+        $svg = ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20'];
+
+        $this->actingAs($first, 'sanctum')->postJson('/api/child/contract', $svg)->assertCreated();
+
+        expect($pet->fresh()->born_at)->not->toBeNull();
+        Queue::assertPushed(SubmitPetStateVideo::class, 2);
+        expect(PetMedia::where('pet_id', $pet->id)->videos()->orderBy('id')->pluck('state')->all())->toBe(['idle', 'sleeping']);
+
+        app('auth')->forgetGuards();
+        $this->actingAs($second, 'sanctum')->postJson('/api/child/contract', $svg)->assertCreated();
+
+        Queue::assertPushed(SubmitPetStateVideo::class, 2); // no duplicate jobs
+        expect(PetMedia::where('pet_id', $pet->id)->videos()->count())->toBe(2);
+    });
+
+    it('queues the videos once the image is stored when the contract was signed first', function () {
+        Queue::fake([SubmitPetStateVideo::class]);
+        Http::fake(['v3.fal.media/*' => Http::response(pmJpeg(), 200, ['Content-Type' => 'image/jpeg'])]);
+        [, , $pet] = pmFamilyPet(); // born
+        $image = PetMedia::create(['pet_id' => $pet->id, 'kind' => 'image', 'status' => 'running', 'source_url' => 'https://v3.fal.media/files/late.jpg']);
+
+        app(PetMediaService::class)->storeResult($image->id);
+
+        Queue::assertPushed(SubmitPetStateVideo::class, 2);
     });
 
     it('gives a paid breed (premium_unlock) all six state videos', function () {

@@ -721,6 +721,7 @@ sequenceDiagram
   Q->>Disk: {pet}/reference-g1.jpg
   Q->>DB: slot ready, pets.media_status = ready
   Q-->>App: PetUpdated reference_image_ready (media.reference_image_url signed)
+  Note over Pair,Q: videos only once the pet is born:<br/>first contract → signContract → queueStateVideos (after commit)<br/>(image stored first? then StorePetMedia queues them)
   Q->>DB: queueStateVideos: slots per MediaEntitlementService<br/>(mutt: idle + sleeping · premium breed: all 6)
   loop each entitled state
     Q->>DB: SubmitPetStateVideo: claim slot

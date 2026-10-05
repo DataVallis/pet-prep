@@ -27,7 +27,8 @@ use Illuminate\Support\Facades\URL;
  *   pairing → GeneratePetReferenceImage (sync fal call, image slot)
  *           → StorePetMedia (download to the private pet-media disk)
  *           → queueStateVideos(): one SubmitPetStateVideo per entitled state
- *             (MediaEntitlementService) — fal queue + signed webhook
+ *             (MediaEntitlementService) — fal queue + signed webhook — only once
+ *             the pet is born (first contract: PetActivityService::signContract)
  *   webhook → recordVideoResult() → StorePetMedia → ready → PetUpdated
  *
  * Slots: one pet_media row per (pet, kind, state). Every step is idempotent
@@ -182,13 +183,16 @@ class PetMediaService
      * finished slots made from an older image generation. With $includeFailed
      * (backfill / admin) failed slots of the current image are retried too.
      *
-     * Only once the reference image is stored. Returns how many were queued.
+     * Only once the reference image is stored AND the pet is born (signContract()
+     * calls this after the birth commits). Returns how many were queued.
      */
     public function queueStateVideos(Pet $pet, bool $includeFailed = false): int
     {
         $image = $this->imageSlot($pet);
 
-        if (! $this->fal->isEnabled() || $image->status !== PetMedia::STATUS_READY || ! $pet->is_active) {
+        // Videos only for a BORN pet (first contract signed — orchestrator decision 2026-10-05,
+        // waiting for David): an unborn pet whose child never signs costs only the image.
+        if (! $this->fal->isEnabled() || $image->status !== PetMedia::STATUS_READY || ! $pet->is_active || $pet->isUnborn()) {
             return 0;
         }
 
@@ -486,7 +490,8 @@ class PetMediaService
         $currentImageGeneration = $imageAction === 'ok' ? $image->generation : PHP_INT_MAX;
         $videos = [];
 
-        foreach ($this->entitlements->videoStatesFor($pet) as $state) {
+        // Unborn pets get no videos yet (they follow the first contract).
+        foreach ($pet->isUnborn() ? [] : $this->entitlements->videoStatesFor($pet) as $state) {
             $slot = $slots->first(fn (PetMedia $m) => $m->isVideo() && $m->state === $state->value);
 
             if ($slot === null

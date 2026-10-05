@@ -12,11 +12,11 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Kaj se je zgodilo:** David je v AI laboratoriju izbral modela: **Nano Banana Pro** za fotografijo psa in **Kling 3.0 Pro** za videe. Strežnik zdaj ob rojstvu sam naredi celoten paket (v aplikaciji se predvajanje doda v naslednjem koraku):
 - **Fotografija** po "DNK" psa (pasma + izžrebane lastnosti), pokončna 9:16.
-- Iz te fotografije **kratki 5-sekundni videi brez zvoka**, v katerih je vedno **isti pes** — mirna kamera, subtilno, realistično gibanje, brez ljudi in besedila. Brezplačni mešanček dobi **2 videa** (miruje, spi), plačljiva pasma (izziv) **vseh 6** (miruje, spi, utrujen, lačen, bolan, igriv). *(Razdelitev je Claudov predlog in čaka Davidovo potrditev.)*
+- Ko otrok podpiše pogodbo (rojstvo), iz te fotografije nastanejo **kratki 5-sekundni videi brez zvoka**, v katerih je vedno **isti pes** — mirna kamera, subtilno, realistično gibanje, brez ljudi in besedila. Brezplačni mešanček dobi **2 videa** (miruje, spi), plačljiva pasma (izziv) **vseh 6** (miruje, spi, utrujen, lačen, bolan, igriv). *(Razdelitev je Claudov predlog in čaka Davidovo potrditev.)*
 - **Vse se shrani na naš strežnik v EU**, preden ga otrok vidi: strežnik datoteko prenese samo z naslovov fal.ai, preveri velikost (do 25 MB slika, 60 MB video) in da je res slika / video. Aplikacija dobi samo **naše povezave, ki veljajo 60–90 minut** — nikoli povezav na zunanjo storitev.
 - **Strošek na psa (ocena po ceniku fal):** ≈ **1,27 $** za mešančka (0,15 $ slika + 2 × 0,56 $ video), ≈ **3,51 $** za plačljivo pasmo. Še vedno velja dnevna (5 $) in mesečna (50 $) meja — če je dosežena, kuža živi naprej brez novega videa, sistem pa naslednji dan nadaljuje. Psi, rojeni prej, dobijo medije samo, ko jih administrator ročno sproži (z ogledom stroška vnaprej).
 - Administrator vidi za vsakega psa sliko, videe, ceno in morebitno napako ter lahko posamezen video ali sliko naredi znova.
-- **Številke:** 44 novih avtomatskih testov, strežnik skupaj **746 zelenih**; mobilna aplikacija 494 zelenih.
+- **Številke:** 47 novih avtomatskih testov, strežnik skupaj **749 zelenih**; mobilna aplikacija 494 zelenih.
 
 **Zakaj je pomembno**
 Kuža ni več ikona — je *tvoj* pes, ki diha, spi in se igra, vedno isti. Hkrati je strošek predvidljiv: videi se naredijo enkrat ob rojstvu, potem jih aplikacija samo predvaja (brez novega plačila za vsak ogled), in vsi mediji so pod našim nadzorom.
@@ -26,7 +26,8 @@ Kuža ni več ikona — je *tvoj* pes, ki diha, spi in se igra, vedno isti. Hkra
 - 👩 *"Slike in videe ustvari umetna inteligenca brez kakršnihkoli podatkov o vašem otroku in jih hranimo na strežniku v EU. Povezave do njih veljajo le kratek čas in jih dobi samo vaša družina."*
 - 💼 *"Izbrana najboljša realistična modela; strošek medijev ≈ 1,27 $ na brezplačnega in ≈ 3,51 $ na plačljivega psa, enkratno ob rojstvu, z dnevno/mesečno mejo — brez stroška na ogled."*
 - 🛠 *"Pipeline: slika → prenos na lasten disk → videi po stanjih prek fal queue + podpisan webhook → prenos → podpisani, časovno omejeni URL-ji z Range podporo za iOS. Vsak korak idempotenten (atomski 'claim' reže), proračun preverjen pred vsakim klicem."*
-- Opomba: "720p" pri Klingu 3.0 Pro ni nastavljiv (video sledi sliki); predvajanje v aplikaciji je *načrt* (naslednja mobilna naloga).
+- Videi se naredijo šele ob rojstvu (podpis pogodbe), zato pes, ki se nikoli ne rodi, stane samo sliko.
+- Opomba: Kling 3.0 Pro nima nastavitve ločljivosti (video sledi sliki 9:16 v izvorni ločljivosti); predvajanje v aplikaciji je *načrt* (naslednja mobilna naloga).
 
 ## 2026-10-04 — Vsak kuža je unikaten + AI laboratorij z omejitvijo stroškov
 
