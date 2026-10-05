@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Enums\UserRole;
 use App\Filament\Resources\UserResource\Pages;
 use App\Models\User;
+use Closure;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -34,11 +35,17 @@ class UserResource extends Resource
                     ->maxLength(255),
 
                 // M2-02: PIN-only child profiles have no e-mail.
+                // M2-10a / PR #25: stored trimmed + lower case; unique ignoring case
+                // (same rule as POST /api/register and the lower(email) index).
                 Forms\Components\TextInput::make('email')
                     ->email()
                     ->requiredUnless('role', UserRole::Child->value)
-                    ->dehydrateStateUsing(fn (?string $state): ?string => filled($state) ? $state : null)
-                    ->unique(User::class, 'email', ignoreRecord: true)
+                    ->dehydrateStateUsing(fn (?string $state): ?string => filled($state) ? User::normalizeEmail($state) : null)
+                    ->rule(fn (?User $record): Closure => function (string $attribute, mixed $value, Closure $fail) use ($record): void {
+                        if (is_string($value) && User::emailTaken($value, $record?->getKey())) {
+                            $fail('This e-mail address is already used by another account (letter case is ignored).');
+                        }
+                    })
                     ->maxLength(255),
 
                 Forms\Components\TextInput::make('birth_year')

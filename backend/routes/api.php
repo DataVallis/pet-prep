@@ -23,6 +23,11 @@ use Illuminate\Support\Facades\Route;
 */
 Route::post('login', [AuthController::class, 'login']);
 
+// M2-10a: parent self-registration (e-mail + password) → parent + own family
+// + parent token. Per-IP throttle (5/min, 20/h).
+Route::post('register', [AuthController::class, 'register'])
+    ->middleware('throttle:register');
+
 // M2-02: a child signs in with the one-time PIN their parent generated for
 // their profile (no e-mail / password). Hard per-IP throttle on the route +
 // failed-attempt lockouts (per IP and global) in ChildPinLoginService.

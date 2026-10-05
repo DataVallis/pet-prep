@@ -28,6 +28,16 @@
 - **Password:** `password`
 - Linked to the test parent. Has a pet (Mutt breed).
 
+### Register a new parent account (M2-10a)
+In the app: **Sem starš → "Nimate računa? Registracija"**. Or via the API (5 per minute / 20 per hour per IP):
+```bash
+curl -s -X POST http://localhost:8000/api/register \
+  -H "Content-Type: application/json" -H "Accept: application/json" \
+  -d '{"name":"Test Parent","email":"me@example.com","password":"Varno1Geslo","password_confirmation":"Varno1Geslo","timezone":"Europe/Ljubljana","accept_terms":true,"device_name":"curl"}'
+# → 201 {"token":"…","abilities":["parent"],"user":{…},"pet":null,"awaiting_contract":null}
+```
+Password: ≥ 10 characters with upper + lower case and a digit. No e-mail verification yet (M2-10b) — use any address you control; don't register real families on production for testing.
+
 ### How to Get a Pairing PIN
 ```bash
 # 1. Login as parent to get an API token
@@ -162,7 +172,8 @@ All authenticated endpoints require `Authorization: Bearer {token}` header.
 
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
-| `POST` | `/api/login` | None | Login with email + password, returns Sanctum token |
+| `POST` | `/api/register` | None (throttled) | Parent sign-up (M2-10a): parent + own family + parent token (201) |
+| `POST` | `/api/login` | None | Login with email (case-insensitive) + password, returns Sanctum token |
 | `GET` | `/api/user` | Bearer token | Get authenticated user's profile |
 | `POST` | `/api/logout` | Bearer token | Revoke current token (logout) |
 

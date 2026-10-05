@@ -2,12 +2,23 @@
 
 namespace App\Http\Requests;
 
+use App\Http\Requests\Concerns\NormalizesTimezoneInput;
 use App\Models\User;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateParentSettingsRequest extends FormRequest
 {
+    use NormalizesTimezoneInput;
+
+    /**
+     * Device aliases (Etc/UTC, Asia/Calcutta, …) → canonical IANA name (PR #25).
+     */
+    protected function prepareForValidation(): void
+    {
+        $this->normalizeTimezoneInput();
+    }
+
     /**
      * Only the parent profile may change family settings (UserPolicy).
      */

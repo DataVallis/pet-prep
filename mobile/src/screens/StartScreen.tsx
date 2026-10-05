@@ -1,6 +1,7 @@
 /**
  * StartScreen — first screen when nobody is signed in (M2-02): two clear paths.
- * "Sem starš" → e-mail login; "Sem otrok" → the 6-digit PIN from the parent.
+ * "Sem starš" → e-mail login (with "Registracija" → ParentSignupScreen, M2-10a);
+ * "Sem otrok" → the 6-digit PIN from the parent.
  * Which path is open is local UI state (nothing to persist).
  */
 
@@ -10,6 +11,7 @@ import { ChevronRight, KeyRound, PawPrint, ShieldCheck } from 'lucide-react-nati
 
 import ChildPinLoginScreen from '@/screens/ChildPinLoginScreen';
 import ParentLoginScreen from '@/screens/ParentLoginScreen';
+import ParentSignupScreen from '@/screens/ParentSignupScreen';
 
 /** All user-visible strings of this screen (extract to i18n with M1-18). */
 export const START_STRINGS = {
@@ -18,17 +20,22 @@ export const START_STRINGS = {
   child: 'Sem otrok',
   childHint: 'Imam kodo od staršev',
   parent: 'Sem starš',
-  parentHint: 'Prijava z e-pošto',
+  parentHint: 'Prijava ali registracija z e-pošto',
 } as const;
 
 const S = START_STRINGS;
 
-type Path = 'choose' | 'parent' | 'child';
+type Path = 'choose' | 'parent' | 'signup' | 'child';
 
 export default function StartScreen() {
   const [path, setPath] = useState<Path>('choose');
 
-  if (path === 'parent') return <ParentLoginScreen onBack={() => setPath('choose')} />;
+  if (path === 'parent') {
+    return <ParentLoginScreen onBack={() => setPath('choose')} onSignup={() => setPath('signup')} />;
+  }
+  if (path === 'signup') {
+    return <ParentSignupScreen onBack={() => setPath('parent')} onLogin={() => setPath('parent')} />;
+  }
   if (path === 'child') return <ChildPinLoginScreen onBack={() => setPath('choose')} />;
 
   return (

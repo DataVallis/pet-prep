@@ -41,15 +41,18 @@ export const PARENT_LOGIN_STRINGS = {
   offline: 'Ni povezave s strežnikom. Preverite internet in poskusite znova.',
   failed: 'Prijava ni uspela. Poskusite znova.',
   childAccount: 'To je otroški račun. Otrok se prijavi s kodo, ki jo ustvari starš (»Sem otrok«).',
+  noAccount: 'Nimate računa? Registracija',
 } as const;
 
 const S = PARENT_LOGIN_STRINGS;
 
 interface ParentLoginScreenProps {
   onBack: () => void;
+  /** "Nimate računa? Registracija" → ParentSignupScreen (M2-10a). Hidden when absent. */
+  onSignup?: () => void;
 }
 
-export default function ParentLoginScreen({ onBack }: ParentLoginScreenProps) {
+export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScreenProps) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -188,6 +191,19 @@ export default function ParentLoginScreen({ onBack }: ParentLoginScreenProps) {
                 </>
               )}
             </Pressable>
+
+            {onSignup && (
+              <Pressable
+                onPress={onSignup}
+                hitSlop={8}
+                style={styles.switchRow}
+                accessibilityRole="button"
+                disabled={isLoading}
+                testID="parent-login-signup"
+              >
+                <Text style={styles.switchText}>{S.noAccount}</Text>
+              </Pressable>
+            )}
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -281,5 +297,7 @@ const styles = StyleSheet.create({
   },
   buttonDisabled: { backgroundColor: 'rgba(51, 65, 85, 0.6)' },
   primaryButtonText: { fontSize: 16, fontWeight: '700', color: '#ffffff' },
+  switchRow: { marginTop: 16, alignItems: 'center', paddingVertical: 4 },
+  switchText: { fontSize: 14, color: '#a5b4fc', fontWeight: '600' },
   pressed: { opacity: 0.85, transform: [{ scale: 0.98 }] },
 });
