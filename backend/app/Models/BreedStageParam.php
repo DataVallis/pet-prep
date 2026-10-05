@@ -18,7 +18,9 @@ use Illuminate\Support\Facades\Auth;
  * LifeStageService (cached per breed); every create / update / delete made
  * through Eloquent (Filament) is audited in `breed_stage_param_changes`
  * with the acting admin and the old / new values. The insert-only seeder
- * writes with the query builder and creates no audit rows.
+ * writes with the query builder and creates no audit rows; it skips every
+ * tuple that has an audit row (also the original tuple of a re-key), so an
+ * admin delete / re-key is never undone by a deploy.
  *
  * @property int $id
  * @property string $breed_slug
@@ -39,7 +41,7 @@ class BreedStageParam extends Model
     public const STAGE_ALL = 'all';
 
     /** Fields whose change is audited. */
-    public const AUDITED = ['value', 'unit', 'source_id', 'confidence', 'verified', 'quote', 'notes', 'stage', 'age_from_months', 'key'];
+    public const AUDITED = ['value', 'unit', 'source_id', 'confidence', 'verified', 'quote', 'notes', 'breed_slug', 'stage', 'age_from_months', 'key'];
 
     /**
      * @var list<string>

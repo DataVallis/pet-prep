@@ -80,9 +80,10 @@ class ChildPetStateResource extends JsonResource
                 'caretakers_count' => $pet->caretakerRows()->count(),
                 // Months (= real weeks) since birth: the 12-week challenge clock.
                 'virtual_age_months' => $pet->virtualAgeInMonths(),
-                // M5-R01: the dog's age (arrival age + weeks since birth), origin, stage.
+                // M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
+                // null for a legacy pet (pre-M5 rules, `profile.legacy`).
                 'age_months' => $profile->ageMonths,
-                /** @var 'bought'|'adopted' */
+                /** @var 'bought'|'adopted'|null */
                 'origin' => $profile->origin,
                 /** @var 'puppy'|'young'|'adult'|'senior'|null */
                 'life_stage' => $profile->lifeStage,

@@ -189,7 +189,8 @@ class ChildPinLoginService
                         ])->saveQuietly();
                     }
                     ['pet' => $pet, 'joined_existing' => $joined] = $this->pairing->attachChildToPet(
-                        $family, $child, $locked->pet_id, PetProfileChoice::fromArray($locked->pet_options),
+                        // A PIN without options (issued before M5-R01) → legacy-profile pet.
+                        $family, $child, $locked->pet_id, $locked->pet_options !== null ? PetProfileChoice::fromArray($locked->pet_options) : null,
                     );
                 }
 

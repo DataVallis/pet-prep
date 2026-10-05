@@ -302,21 +302,30 @@ class PetDecayService
         // Hunger / thirst: full rate outside quiet hours, 10 % inside.
         $weightedHours = ($normalSeconds + $quietSeconds * self::QUIET_HOURS_DECAY_MULTIPLIER) / 3600;
 
-        $newHunger = $this->decayMetric((float) $pet->hunger_level, $breedConfig->hunger_decay_rate * $weightedHours);
         $newThirst = $this->decayMetric((float) $pet->thirst_level, $breedConfig->thirst_decay_rate * $weightedHours);
 
         // Meals in quiet hours are done by the parent (M5-R01, David
         // 2026-10-05): fed at the window start, one parent_fed_pet row each.
+        // Hunger decays piecewise — up to each meal, 100 % at the meal, then
+        // on to $now — so a late tick (scheduler outage) gives the same value
+        // as ticks in real time. Without a meal this is the single interval.
+        $hunger = (float) $pet->hunger_level;
+        $cursor = $from;
         foreach ($this->schedule->dueParentMeals($pet, $breedConfig, $from, $now, $quietHours) as [$mealAt]) {
+            $hunger = $this->decayMetric($hunger, $breedConfig->hunger_decay_rate * $this->weightedHours($quietHours, $cursor, $mealAt));
             ActivityLog::withoutEvents(fn () => (new ActivityLog)->forceFill([
                 'pet_id' => $pet->id,
                 'actor_user_id' => null,
                 'activity_type' => ActivityType::ParentFedPet,
-                'value' => Pet::displayValue($newHunger),
+                'value' => Pet::displayValue($hunger),
                 'created_at' => $mealAt->utc(),
             ])->save());
-            $newHunger = 100.0;
+            $hunger = 100.0;
+            $cursor = $mealAt;
         }
+        $newHunger = $cursor === $from
+            ? $this->decayMetric($hunger, $breedConfig->hunger_decay_rate * $weightedHours)
+            : $this->decayMetric($hunger, $breedConfig->hunger_decay_rate * $this->weightedHours($quietHours, $cursor, $now));
 
         // Energy is not time-decayed (M1-04): it follows the step count, which
         // goes back to 0 at the family's local midnight (energy → 0 with it).
@@ -416,6 +425,16 @@ class PetDecayService
      * Subtract decay and clamp to 0–100 (precise, no rounding except
      * snapping float noise onto integers).
      */
+    /**
+     * Decay hours between two instants: full rate outside quiet hours, 10 % inside.
+     */
+    private function weightedHours(?QuietHours $quietHours, CarbonInterface $from, CarbonInterface $to): float
+    {
+        ['normal' => $normal, 'quiet' => $quiet] = QuietHours::splitSecondsBetween($quietHours, $from, $to);
+
+        return ($normal + $quiet * self::QUIET_HOURS_DECAY_MULTIPLIER) / 3600;
+    }
+
     private function decayMetric(float $current, float $decay): float
     {
         $value = max(0.0, min(100.0, $current - $decay));

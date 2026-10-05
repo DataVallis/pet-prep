@@ -137,18 +137,6 @@ class Pet extends Model
     }
 
     /**
-     * Same as the DB column defaults (M5-R01 migration): a pet created without
-     * a profile choice is a bought puppy that arrived at 2 months — also in
-     * memory before a refresh.
-     *
-     * @var array<string, mixed>
-     */
-    protected $attributes = [
-        'origin' => 'bought',
-        'arrival_age_months' => 2,
-    ];
-
-    /**
      * The attributes that are mass assignable.
      *
      * @var list<string>
@@ -456,10 +444,23 @@ class Pet extends Model
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * The dog's age in months (M5-R01): age at arrival (parent's choice) +
-     * one month per week since birth (LifeStageService::ageMonthsAt).
+     * Legacy profile (M5-R01 grandfathering, orchestrator 2026-10-05,
+     * pending David): a pet created before M5-R01 or without a profile
+     * choice has no `arrival_age_months`. It keeps exactly the pre-M5 rules
+     * (breed feed windows + daily_steps_required, no parent-covered meals,
+     * no life stage, no stage images) until its challenge ends.
      */
-    public function ageMonths(?CarbonInterface $at = null): int
+    public function isLegacyProfile(): bool
+    {
+        return $this->arrival_age_months === null;
+    }
+
+    /**
+     * The dog's age in months (M5-R01): age at arrival (parent's choice) +
+     * one month per week since birth (LifeStageService::ageMonthsAt). Null
+     * for a legacy-profile pet (no age at arrival).
+     */
+    public function ageMonths(?CarbonInterface $at = null): ?int
     {
         return app(LifeStageService::class)->ageMonthsAt($this, $at ?? now());
     }

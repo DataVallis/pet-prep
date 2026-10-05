@@ -44,7 +44,8 @@ class PairingController extends Controller
      * Without `child_id` (**deprecated**, `Deprecation: true` header): the
      * PIN is for a child already signed in with e-mail, used with
      * `POST /api/child/pair`; optional `pet_id` = join that pet. The
-     * profile fields are ignored there (always a bought mutt puppy).
+     * profile fields are refused there (422 validation error); the pet it
+     * creates has a legacy profile (pre-M5 rules).
      *
      * POST /api/parent/generate-pin
      */

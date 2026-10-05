@@ -9,8 +9,9 @@ use App\Enums\LifeStage;
  * LifeStageService::rulesOn). Rules switch at the family-local midnight:
  * they follow the dog's age at the START of the day.
  *
- * Without life-stage data for the breed (`$lifeStage` null) these are the
- * pre-M5 rules: the breed's feed windows and daily_steps_required.
+ * Without life-stage data for the breed or for a legacy-profile pet
+ * (`$lifeStage` null; `$ageMonths` null for legacy) these are the pre-M5
+ * rules: the breed's feed windows and daily_steps_required.
  */
 final readonly class StageRules
 {
@@ -21,7 +22,7 @@ final readonly class StageRules
      */
     public function __construct(
         public string $date,
-        public int $ageMonths,
+        public ?int $ageMonths,
         public ?LifeStage $lifeStage,
         public int $mealsPerDay,
         public array $feedWindows,

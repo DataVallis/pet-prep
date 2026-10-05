@@ -6,11 +6,15 @@ import type { ChildPetState } from '@/api/client';
 import type { FamilyChild, FamilyPetRaw } from '@/modules/family/family';
 import type { Pet, PetMedia, PetUpdatedBroadcast } from '@/types';
 
-/** `profile` of a pet (M5-R01): a bought mutt puppy of 2 months, 4 meals (11–12 by the parent). */
+/**
+ * `profile` of a pet (M5-R01): a bought mutt puppy of 2 months, 4 meals (11–12 by the parent).
+ * A pet created before M5-R01 has `legacy: true` and null origin / ages / stage — see makeLegacyPetProfile().
+ */
 export function makePetProfile(
   overrides: Partial<ChildPetState['pet']['profile']> = {},
 ): ChildPetState['pet']['profile'] {
   return {
+    legacy: false,
     origin: 'bought',
     arrival_age_months: 2,
     age_months: 2,
@@ -35,6 +39,36 @@ export function makePetProfile(
     },
     ...overrides,
   };
+}
+
+/** `profile` of a legacy pet (created before M5-R01): pre-M5 rules — breed windows, breed step goal. */
+export function makeLegacyPetProfile(
+  overrides: Partial<ChildPetState['pet']['profile']> = {},
+): ChildPetState['pet']['profile'] {
+  return makePetProfile({
+    legacy: true,
+    origin: null,
+    arrival_age_months: null,
+    age_months: null,
+    life_stage: null,
+    next_stage: null,
+    data_verified: false,
+    unverified: [],
+    today: {
+      date: '2026-10-04',
+      meals_per_day: 2,
+      meals_by_child: 2,
+      meals_by_parent: 0,
+      feed_windows: [
+        { start: '06:00', end: '10:00', parent_covered: false },
+        { start: '17:00', end: '21:00', parent_covered: false },
+      ],
+      step_goal: 4000,
+      exercise_minutes: null,
+      sleep_hours: null,
+    },
+    ...overrides,
+  });
 }
 
 /** `media` of a pet (M4-05): nothing stored yet. */

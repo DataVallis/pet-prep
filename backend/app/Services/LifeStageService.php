@@ -38,6 +38,11 @@ use Illuminate\Support\Facades\Log;
  *
  * Without stage data for the breed every rule falls back to the pre-M5
  * breed config (feed_windows, daily_steps_required) and the stage is null.
+ *
+ * Legacy profile (`pets.arrival_age_months` null — pets created before
+ * M5-R01 or without a profile choice; grandfathered, orchestrator
+ * 2026-10-05, pending David): no age, no stage, never a transition, and
+ * exactly the pre-M5 rules on every day, whatever the stage data says.
  */
 class LifeStageService
 {
@@ -93,10 +98,15 @@ class LifeStageService
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * Dog age in months at an instant (arrival + completed local weeks since birth).
+     * Dog age in months at an instant (arrival + completed local weeks since
+     * birth); null for a legacy-profile pet.
      */
-    public function ageMonthsAt(Pet $pet, CarbonInterface $at): int
+    public function ageMonthsAt(Pet $pet, CarbonInterface $at): ?int
     {
+        if ($pet->isLegacyProfile()) {
+            return null;
+        }
+
         $arrival = (int) $pet->arrival_age_months;
         if ($pet->born_at === null) {
             return $arrival;
@@ -107,9 +117,9 @@ class LifeStageService
 
     /**
      * Dog age at the start (local midnight) of a family-local date — the age
-     * the rules of that day use.
+     * the rules of that day use (null for a legacy-profile pet).
      */
-    public function ageMonthsOn(Pet $pet, string $localDate): int
+    public function ageMonthsOn(Pet $pet, string $localDate): ?int
     {
         return $this->ageMonthsAt($pet, CarbonImmutable::parse($localDate, $pet->familyTimezone())->startOfDay());
     }
@@ -203,15 +213,17 @@ class LifeStageService
 
     /**
      * Today's stage written onto the pet (attribute only — the caller holds
-     * the row lock and saves). Returns the transition [from, to] when a known
-     * stage changed (→ new stage images), null otherwise (no change, first
-     * assignment of a backfilled pet, unborn pet, no stage data).
+     * the row lock and saves). Returns the transition [from, to] only when
+     * the dog moved FORWARD from a known stage (→ new stage images); null
+     * otherwise: no change, first assignment, a backward move (an admin edit
+     * of the stage boundaries — the stage follows, no new images), unborn
+     * pet, no stage data, legacy profile (never touched).
      *
      * @return array{from: LifeStage, to: LifeStage}|null
      */
     public function syncStage(Pet $pet, CarbonInterface $now): ?array
     {
-        if ($pet->isUnborn()) {
+        if ($pet->isUnborn() || $pet->isLegacyProfile()) {
             return null;
         }
 
@@ -223,19 +235,25 @@ class LifeStageService
 
         $pet->life_stage = $stage;
 
-        return $previous instanceof LifeStage ? ['from' => $previous, 'to' => $stage] : null;
+        if (! $previous instanceof LifeStage) {
+            return null;
+        }
+
+        $order = array_flip(array_map(fn (LifeStage $s) => $s->value, LifeStage::ordered()));
+
+        return $order[$stage->value] > $order[$previous->value] ? ['from' => $previous, 'to' => $stage] : null;
     }
 
     /**
      * The next stage change of a born pet: the stage and the family-local
-     * date from which its rules apply. Null for an unborn pet, a senior or
-     * without stage data.
+     * date from which its rules apply. Null for an unborn pet, a senior, a
+     * legacy-profile pet or without stage data.
      *
      * @return array{stage: LifeStage, date: string}|null
      */
     public function nextTransition(Pet $pet, CarbonInterface $now): ?array
     {
-        if ($pet->born_at === null) {
+        if ($pet->born_at === null || $pet->isLegacyProfile()) {
             return null;
         }
 
@@ -274,12 +292,14 @@ class LifeStageService
         $config ??= $pet->breedConfig();
         $slug = $pet->breed_type->slug();
         $age = $this->ageMonthsOn($pet, $localDate);
-        $stage = $this->stageForAge($slug, $age);
+        // Legacy profile → always the pre-M5 rules (grandfathered).
+        $stage = $age !== null ? $this->stageForAge($slug, $age) : null;
         $breedWindows = $this->breedWindows($config);
 
         if ($stage === null) {
-            // Pre-M5 rules. The raw breed windows: CareScheduleService
-            // validates them (and logs a broken config) as before.
+            // Pre-M5 rules (legacy profile or no stage data). The raw breed
+            // windows: CareScheduleService validates them (and logs a broken
+            // config) as before.
             return new StageRules(
                 date: $localDate,
                 ageMonths: $age,
@@ -302,6 +322,14 @@ class LifeStageService
 
             return $row['value'] ?? null;
         };
+
+        // The stage itself rests on the stage boundary and the age at
+        // arrival: their provenance counts for `data_verified` too.
+        $use($this->row($params, $stage->value, 0, StageParamKey::StartsAtMonths));
+        $arrivalStage = $this->stageForAge($slug, (int) $pet->arrival_age_months);
+        if ($arrivalStage !== null) {
+            $use($this->row($params, $arrivalStage->value, 0, StageParamKey::ArrivalAgeMonths));
+        }
 
         // Meals and their windows (same band).
         $mealsRow = $this->band($params, $stage, StageParamKey::MealsPerDay, $age);

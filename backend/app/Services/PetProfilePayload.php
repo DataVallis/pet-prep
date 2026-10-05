@@ -12,6 +12,11 @@ use Carbon\CarbonInterface;
  * life stage and today's stage rules (meals and who covers them, step goal).
  * Typed so Scramble documents it (mobile/src/api/schema.ts). No personal
  * data — pet facts only.
+ *
+ * Legacy profile (pet created before M5-R01 / without a profile choice,
+ * grandfathered on the pre-M5 rules): `legacy` true, `origin`,
+ * `arrival_age_months`, `age_months`, `life_stage`, `next_stage` null,
+ * `today` = the pre-M5 rules (breed windows, breed step goal).
  */
 final class PetProfilePayload
 {
@@ -22,9 +27,10 @@ final class PetProfilePayload
      * @param  list<string>  $unverified
      */
     public function __construct(
-        public readonly string $origin,
-        public readonly int $arrivalAgeMonths,
-        public readonly int $ageMonths,
+        public readonly bool $legacy,
+        public readonly ?string $origin,
+        public readonly ?int $arrivalAgeMonths,
+        public readonly ?int $ageMonths,
         public readonly ?string $lifeStage,
         public readonly ?array $nextStage,
         public readonly bool $dataVerified,
@@ -56,16 +62,16 @@ final class PetProfilePayload
             $windows[] = [
                 'start' => $start->format('H:i'),
                 'end' => $end->format('H:i'),
-                'parent_covered' => $schedule->isParentCovered($quiet, $start, $end),
+                'parent_covered' => $schedule->isParentCoveredFor($pet, $quiet, $start, $end),
             ];
         }
         $byParent = count(array_filter($windows, fn (array $w) => $w['parent_covered']));
         $next = $lifeStages->nextTransition($pet, $now);
-        $origin = $pet->origin;
 
         return new self(
-            origin: $origin instanceof \BackedEnum ? $origin->value : (string) ($origin ?? 'bought'),
-            arrivalAgeMonths: (int) $pet->arrival_age_months,
+            legacy: $pet->isLegacyProfile(),
+            origin: self::originOf($pet),
+            arrivalAgeMonths: $pet->arrival_age_months !== null ? (int) $pet->arrival_age_months : null,
             ageMonths: $lifeStages->ageMonthsAt($pet, $now),
             lifeStage: $rules->lifeStage?->value,
             nextStage: $next !== null ? ['life_stage' => $next['stage']->value, 'from_date' => $next['date']] : null,
@@ -83,26 +89,29 @@ final class PetProfilePayload
     }
 
     /**
-     * @return array{origin: string, arrival_age_months: int, age_months: int, life_stage: string|null, next_stage: array{life_stage: string, from_date: string}|null, data_verified: bool, unverified: list<string>, today: array{date: string, meals_per_day: int, meals_by_child: int, meals_by_parent: int, feed_windows: list<array{start: string, end: string, parent_covered: bool}>, step_goal: int, exercise_minutes: int|null, sleep_hours: array{min: float|int, max: float|int}|null}}
+     * @return array{legacy: bool, origin: string|null, arrival_age_months: int|null, age_months: int|null, life_stage: string|null, next_stage: array{life_stage: string, from_date: string}|null, data_verified: bool, unverified: list<string>, today: array{date: string, meals_per_day: int, meals_by_child: int, meals_by_parent: int, feed_windows: list<array{start: string, end: string, parent_covered: bool}>, step_goal: int, exercise_minutes: int|null, sleep_hours: array{min: float|int, max: float|int}|null}}
      */
     public function toArray(): array
     {
         return [
-            /** @var 'bought'|'adopted' */
+            // True for a pet created before M5-R01 (no profile choice): it keeps the pre-M5 rules
+            // until its challenge ends; origin / ages / stage are null.
+            'legacy' => $this->legacy,
+            /** @var 'bought'|'adopted'|null */
             'origin' => $this->origin,
-            // Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118).
+            // Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy.
             'arrival_age_months' => $this->arrivalAgeMonths,
-            // The dog's age now: arrival age + one month per real week since birth (contract).
+            // The dog's age now: arrival age + one month per real week since birth (contract); null = legacy.
             'age_months' => $this->ageMonths,
             /**
              * Stage of today's rules (switches at the family-local midnight after the weekly birthday);
-             * null for a breed without life-stage data (pre-M5 rules).
+             * null for a legacy pet or a breed without life-stage data (pre-M5 rules).
              *
              * @var 'puppy'|'young'|'adult'|'senior'|null
              */
             'life_stage' => $this->lifeStage,
             /**
-             * The next stage and the family-local date its rules start; null for an unborn pet / a senior.
+             * The next stage and the family-local date its rules start; null for an unborn / legacy pet or a senior.
              *
              * @var array{life_stage: 'puppy'|'young'|'adult'|'senior', from_date: string}|null
              */
@@ -143,20 +152,26 @@ final class PetProfilePayload
     }
 
     /**
-     * Small subset for broadcasts (PetUpdated).
+     * Small subset for broadcasts (PetUpdated); all null for a legacy pet.
      *
-     * @return array{origin: string, age_months: int, life_stage: string|null}
+     * @return array{origin: string|null, age_months: int|null, life_stage: string|null}
      */
     public static function brief(Pet $pet): array
     {
         $lifeStages = app(LifeStageService::class);
-        $origin = $pet->origin;
         $config = $pet->breedConfig();
 
         return [
-            'origin' => $origin instanceof \BackedEnum ? $origin->value : (string) ($origin ?? 'bought'),
+            'origin' => self::originOf($pet),
             'age_months' => $lifeStages->ageMonthsAt($pet, now()),
             'life_stage' => $config !== null ? $lifeStages->rulesAt($pet, now(), $config)->lifeStage?->value : null,
         ];
+    }
+
+    private static function originOf(Pet $pet): ?string
+    {
+        $origin = $pet->origin;
+
+        return $origin instanceof \BackedEnum ? (string) $origin->value : ($origin !== null ? (string) $origin : null);
     }
 }

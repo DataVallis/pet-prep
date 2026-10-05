@@ -26,6 +26,7 @@ use App\Services\Media\PetAppearancePrompt;
 use App\Services\Media\PetMediaService;
 use App\Services\PetDecayService;
 use App\Services\RoutineLedgerService;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Client\Request;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Carbon;
@@ -331,6 +332,33 @@ describe('meals in quiet hours are done by the parent', function () {
         expect(ActivityLog::where('pet_id', $frozen->id)->where('activity_type', ActivityType::ParentFedPet->value)
             ->where('created_at', '>=', '2026-10-06 00:00:00')->count())->toBe(0);
     });
+
+    it('gives a parent-fed meal after a scheduler outage the same hunger as ticks in real time', function () {
+        // Two 2-month puppies, school 08–13: the 11:00 window is the parent's.
+        [, , $live] = lsFamily('2026-10-05 04:30:00', [], quiet: true);
+        [, , $late] = lsFamily('2026-10-05 04:30:00', [], quiet: true);
+        $decay = app(PetDecayService::class);
+
+        lsAt('2026-10-05 08:00:00'); // 10:00 local — first tick starts the clocks
+        foreach ([$live, $late] as $pet) {
+            $decay->processPetDecay($pet->fresh());
+            Pet::whereKey($pet->id)->update(['hunger_level' => 40.0]);
+        }
+
+        // $live ticks every 10 minutes until 14:00 local; $late misses everything until then.
+        for ($t = Carbon::parse('2026-10-05 08:10:00', 'UTC'); $t->lte(Carbon::parse('2026-10-05 12:00:00', 'UTC')); $t->addMinutes(10)) {
+            lsAt($t->toDateTimeString());
+            $decay->processPetDecay($live->fresh());
+        }
+        $decay->processPetDecay($late->fresh());
+
+        $meal = fn (Pet $pet) => ActivityLog::where('pet_id', $pet->id)->where('activity_type', ActivityType::ParentFedPet->value)->sole();
+        // 10:00–11:00 quiet (×0.10), then 100 %, then 11–13 quiet + 13–14 normal: 100 − (0.2 + 1) × 8 = 90.4.
+        expect((float) $late->fresh()->hunger_level)->toEqualWithDelta((float) $live->fresh()->hunger_level, 0.001)
+            ->and((float) $late->fresh()->hunger_level)->toEqualWithDelta(90.4, 0.001)
+            ->and($meal($late)->value)->toBe($meal($live)->value)
+            ->and($meal($late)->created_at->utc()->toDateTimeString())->toBe('2026-10-05 09:00:00');
+    });
 });
 
 /* ─────────────────────────── Step goal by stage ─────────────────────────── */
@@ -385,6 +413,39 @@ describe('stage transition', function () {
         app(PetDecayService::class)->processPetDecay($pet);
 
         expect($pet->fresh()->life_stage)->toBe(LifeStage::Puppy);
+        Queue::assertNotPushed(RegeneratePetStageMedia::class);
+    });
+
+    it('follows a backward stage change (admin moved a boundary) without new images', function () {
+        Queue::fake([RegeneratePetStageMedia::class]);
+        // A 2-month puppy stored as "young" (e.g. the young boundary was 2 and an admin set it back to 9).
+        [, , $pet] = lsFamily('2026-10-05 08:00:00', ['life_stage' => 'young']);
+
+        lsAt('2026-10-06 08:00:00');
+        app(PetDecayService::class)->processPetDecay($pet);
+
+        expect($pet->fresh()->life_stage)->toBe(LifeStage::Puppy);
+        Queue::assertNotPushed(RegeneratePetStageMedia::class);
+    });
+
+    it('never gives a legacy-profile pet a stage, a transition or a next stage', function () {
+        Queue::fake([RegeneratePetStageMedia::class]);
+        [, , $pet] = lsFamily('2026-10-05 08:00:00', ['arrival_age_months' => null]);
+        $decay = app(PetDecayService::class);
+
+        foreach (['2026-10-06 08:00:00', '2026-11-30 08:00:00', '2027-03-01 08:00:00'] as $at) {
+            lsAt($at);
+            $decay->processPetDecay($pet->fresh());
+        }
+
+        $pet = $pet->fresh();
+        expect($pet->life_stage)->toBeNull()
+            ->and($pet->isLegacyProfile())->toBeTrue()
+            ->and($pet->ageMonths())->toBeNull()
+            ->and(app(LifeStageService::class)->nextTransition($pet, now()))->toBeNull()
+            ->and(lsRules($pet, '2027-03-01')->lifeStage)->toBeNull()
+            ->and(lsRules($pet, '2027-03-01')->stepGoal)->toBe(4000)
+            ->and(lsWindows($pet, '2027-03-01'))->toBe(['06:00-10:00', '17:00-21:00']);
         Queue::assertNotPushed(RegeneratePetStageMedia::class);
     });
 });
@@ -475,6 +536,56 @@ describe('stage images', function () {
 
         expect(app(PetMediaService::class)->startStageTransition($pet->fresh()))->toBe('busy');
         Queue::assertNotPushed(GeneratePetReferenceImage::class);
+    });
+
+    it('does not grow the image backward when the stored image shows a later stage', function () {
+        Queue::fake([GeneratePetReferenceImage::class]);
+        [, , $pet] = lsFamily('2026-10-05 08:00:00', ['life_stage' => 'puppy']);
+        lsStoredImage($pet, 'young');
+
+        expect(app(PetMediaService::class)->startStageTransition($pet->fresh()))->toBe('up_to_date')
+            ->and(PetMediaHistory::where('pet_id', $pet->id)->exists())->toBeFalse();
+        Queue::assertNotPushed(GeneratePetReferenceImage::class);
+    });
+
+    it('re-queues a lost stage transition in the daily retry and the backfill — forward only, never for legacy pets', function () {
+        Queue::fake([RegeneratePetStageMedia::class, GeneratePetReferenceImage::class]);
+        [, , $behind] = lsFamily('2026-10-05 08:00:00', ['life_stage' => 'young']);
+        lsStoredImage($behind, 'puppy');
+        [, , $ahead] = lsFamily('2026-10-05 08:00:00', ['life_stage' => 'puppy']);
+        lsStoredImage($ahead, 'young');
+        [, , $legacy] = lsFamily('2026-10-05 08:00:00', ['arrival_age_months' => null]);
+        lsStoredImage($legacy, 'puppy');
+        [, , $unborn] = lsFamily('2026-10-05 08:00:00', ['life_stage' => 'young', 'born_at' => null]);
+        lsStoredImage($unborn, 'puppy');
+
+        $this->artisan('media:retry')->assertSuccessful()
+            ->expectsOutputToContain('1 life-stage image(s)');
+
+        Queue::assertPushed(RegeneratePetStageMedia::class, 1);
+        Queue::assertPushed(RegeneratePetStageMedia::class, fn ($job) => $job->petId === $behind->id);
+
+        $media = app(PetMediaService::class);
+        expect($media->planMissing($behind->fresh()))->toMatchArray(['image' => 'stage', 'videos' => []])
+            ->and($media->planMissing($ahead->fresh())['image'])->toBe('ok')
+            ->and($media->planMissing($legacy->fresh())['image'])->toBe('ok');
+        // The backfill queues it too (deduplicated by the job's unique lock while one is pending).
+        expect($media->generateMissing($behind->fresh()))->toBe(['image' => true, 'videos' => 0]);
+        Queue::assertPushed(RegeneratePetStageMedia::class, fn ($job) => $job->petId === $behind->id);
+    });
+
+    it('retries a stage image that failed on the budget (its slot still points at the archived image)', function () {
+        Queue::fake([GeneratePetReferenceImage::class]);
+        [, , $pet] = lsFamily('2026-10-05 08:00:00', ['life_stage' => 'young', 'media_status' => 'failed', 'media_error' => 'budget_daily']);
+        $slot = lsStoredImage($pet, 'puppy');
+        PetMediaHistory::create(['pet_id' => $pet->id, 'kind' => 'image', 'life_stage' => 'puppy', 'generation' => 1, 'storage_path' => $slot->storage_path]);
+        $slot->update(['status' => 'failed', 'error_reason' => 'budget_daily', 'life_stage' => 'young', 'generation' => 2]);
+
+        $this->artisan('media:retry')->assertSuccessful();
+
+        Queue::assertPushed(GeneratePetReferenceImage::class, fn ($job) => $job->petId === $pet->id);
+        expect($slot->fresh()->status)->toBe('pending')
+            ->and($pet->fresh()->media_status)->toBe('pending');
     });
 });
 
@@ -574,6 +685,35 @@ describe('pet creation with origin and age stage', function () {
         postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'breed' => 'mutt', 'origin' => 'adopted', 'age_stage' => 'senior'])->assertOk()
             ->assertJsonPath('pet_profile.age_stage', 'senior');
     });
+
+    it('creates a legacy-profile pet from a PIN issued before M5-R01 (no profile on the PIN)', function () {
+        lsAt('2026-10-05 08:00:00');
+        $parent = User::factory()->parent()->create();
+        $child = app(ChildProfileService::class)->createChild($parent, 'Maja', null);
+        actingAsRole($parent);
+        $pin = postJson('/api/parent/generate-pin', ['child_id' => $child->id])->assertOk()->json('pin');
+        DB::table('child_login_pins')->where('child_user_id', $child->id)->update(['pet_options' => null]);
+
+        app('auth')->forgetGuards();
+        test()->withHeaders(['Authorization' => '']);
+        $login = postJson('/api/child/pin-login', ['pin' => $pin, 'device_name' => 'Tablet'])->assertSuccessful()->json();
+        $pet = Pet::findOrFail($login['pet']['id']);
+
+        expect($pet->isLegacyProfile())->toBeTrue()
+            ->and($pet->origin)->toBeNull()
+            ->and($pet->life_stage)->toBeNull()
+            ->and($login['pet']['profile']['legacy'])->toBeTrue()
+            ->and($login['pet']['profile']['age_months'])->toBeNull()
+            ->and($login['pet']['profile']['today']['step_goal'])->toBe(4000);
+    });
+
+    it('refuses profile fields on the deprecated generate-pin without child_id', function () {
+        $parent = User::factory()->parent()->create();
+        actingAsRole($parent);
+
+        postJson('/api/parent/generate-pin', ['age_stage' => 'adult'])->assertUnprocessable()->assertJsonValidationErrors('age_stage');
+        postJson('/api/parent/generate-pin', ['breed' => 'mutt', 'origin' => 'adopted'])->assertUnprocessable()->assertJsonValidationErrors(['breed', 'origin']);
+    });
 });
 
 /* ─────────────────────────── API + backfill ─────────────────────────── */
@@ -603,7 +743,7 @@ describe('profile in the API and backfill', function () {
             ->and(json_encode($dash['family']['pets'][0]['profile']))->not->toContain('Maja');
     });
 
-    it('backfills existing pets as bought puppies that arrived at 2 months (column defaults)', function () {
+    it('leaves pets created before the migration on a legacy profile (all profile columns null)', function () {
         $child = User::factory()->child()->create();
         $family = app(FamilyService::class)->ensureFamilyFor($child);
         $id = DB::table('pets')->insertGetId([
@@ -613,8 +753,83 @@ describe('profile in the API and backfill', function () {
         ]);
         $row = DB::table('pets')->where('id', $id)->first(['origin', 'arrival_age_months', 'life_stage']);
 
-        expect($row->origin)->toBe('bought')
-            ->and($row->arrival_age_months)->toBe(2)
-            ->and($row->life_stage)->toBeNull();
+        expect($row->origin)->toBeNull()
+            ->and($row->arrival_age_months)->toBeNull()
+            ->and($row->life_stage)->toBeNull()
+            ->and(Pet::findOrFail($id)->isLegacyProfile())->toBeTrue();
+        // A stage needs a profile (DB CHECK).
+        expect(fn () => DB::table('pets')->where('id', $id)->update(['life_stage' => 'puppy']))->toThrow(QueryException::class);
+    });
+});
+
+/* ─────────────────────────── Grandfathering (PR #37 review B1) ─────────────────────────── */
+
+describe('existing pets keep the pre-M5 rules', function () {
+    it('a deploy (migration + stage data) changes neither today\'s live ledger nor closed routine / walk rows of an existing pet', function () {
+        // Before the deploy: no life-stage data yet; the pet has no profile (as every pre-M5 pet).
+        DB::table('breed_stage_params')->delete();
+        Cache::flush();
+        [$parent, $child, $pet] = lsFamily('2026-10-05 08:00:00', ['arrival_age_months' => null], quiet: true);
+        $decay = app(PetDecayService::class);
+        $ledger = app(RoutineLedgerService::class);
+
+        // Two days of care: feeds at 06:30 / 17:30 local, steps on the 6th.
+        foreach (['2026-10-06 04:30:00', '2026-10-06 15:30:00', '2026-10-07 04:30:00'] as $fedAt) {
+            DB::table('activities_log')->insert(['pet_id' => $pet->id, 'actor_user_id' => $child->id, 'activity_type' => 'fed_pet', 'value' => 100, 'created_at' => $fedAt]);
+        }
+        for ($t = Carbon::parse('2026-10-05 09:00:00', 'UTC'); $t->lte(Carbon::parse('2026-10-07 08:00:00', 'UTC')); $t->addHour()) {
+            lsAt($t->toDateTimeString());
+            if ($t->toDateTimeString() === '2026-10-06 16:00:00') {
+                actingAsRole($child);
+                postJson('/api/child/pet/steps', ['steps_today' => 4500, 'recorded_at' => '2026-10-06T18:00:00+02:00', 'source' => 'healthkit'])->assertOk();
+            }
+            $decay->processPetDecay($pet->fresh());
+            $ledger->closeDueDays(now());
+        }
+
+        // Wednesday 2026-10-07 10:00 local (school): snapshot.
+        $routineRows = fn () => DB::table('pet_daily_routines')->where('pet_id', $pet->id)->orderBy('id')->get()->map(fn ($r) => (array) $r)->all();
+        $walkRows = fn () => DB::table('pet_daily_walks')->where('pet_id', $pet->id)->orderBy('id')->get()->map(fn ($r) => (array) $r)->all();
+        $today = fn () => collect($ledger->routinesFor(collect([$pet->fresh()]), '2026-10-07', '2026-10-07')[$pet->id])
+            ->map(fn ($r) => [$r->type->value, $r->slot, $r->opensAt->toIso8601String(), $r->dueAt->toIso8601String(), $r->status->value, $r->goal])->all();
+        $state = function () use ($child) {
+            app('auth')->forgetGuards();
+            actingAsRole($child);
+
+            return getJson('/api/child/pet')->assertOk()->json();
+        };
+
+        $before = ['routines' => $routineRows(), 'walks' => $walkRows(), 'today' => $today(), 'state' => $state()];
+        expect($before['routines'])->not->toBeEmpty()
+            ->and($before['walks'])->not->toBeEmpty()
+            ->and($before['state']['feeding']['windows'])->toBe([['start' => '06:00', 'end' => '10:00'], ['start' => '17:00', 'end' => '21:00']]);
+
+        // The deploy: stage data arrives (BreedConfigsSeeder::run()), caches are cold, the tick runs.
+        seedLifeStageData();
+        Cache::flush();
+        $decay->processPetDecay($pet->fresh());
+        $ledger->closeDueDays(now());
+
+        $after = ['routines' => $routineRows(), 'walks' => $walkRows(), 'today' => $today(), 'state' => $state()];
+        expect($after['routines'])->toBe($before['routines'])
+            ->and($after['walks'])->toBe($before['walks'])
+            ->and($after['today'])->toBe($before['today'])
+            ->and($after['state']['feeding'])->toBe($before['state']['feeding'])
+            ->and($after['state']['steps']['goal'])->toBe(4000)
+            ->and($after['state']['pet']['profile']['legacy'])->toBeTrue()
+            ->and($after['state']['pet']['life_stage'])->toBeNull()
+            ->and($after['state']['pet']['age_months'])->toBeNull()
+            ->and($after['state']['pet']['origin'])->toBeNull();
+
+        // Later: no puppy windows, no parent meal in the 11:00 school window, no stage, ever.
+        foreach (['2026-10-07 09:30:00', '2026-10-08 08:00:00', '2026-12-01 08:00:00'] as $at) {
+            lsAt($at);
+            $decay->processPetDecay($pet->fresh());
+            $ledger->closeDueDays(now());
+        }
+        expect(ActivityLog::where('pet_id', $pet->id)->where('activity_type', ActivityType::ParentFedPet->value)->exists())->toBeFalse()
+            ->and($pet->fresh()->life_stage)->toBeNull()
+            ->and(lsWindows($pet, '2026-12-01'))->toBe(['06:00-10:00', '17:00-21:00'])
+            ->and(DB::table('pet_daily_walks')->where('pet_id', $pet->id)->pluck('goal')->unique()->values()->all())->toBe([4000]);
     });
 });

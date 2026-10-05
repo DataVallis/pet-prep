@@ -16,10 +16,13 @@ use Illuminate\Support\Facades\Schema;
  *  - breed_stage_param_changes: audit of every edit (who, old, new).
  *  - breed_configs.daily_steps_cap: optional per-breed cap on the derived
  *    step goal (David: no cap for now → null).
- *  - pets.origin / arrival_age_months / life_stage. Existing pets are
- *    backfilled as bought puppies that arrived at 2 months (DB defaults);
- *    life_stage stays null until the next decay tick derives it (no media
- *    regeneration for that first assignment).
+ *  - pets.origin / arrival_age_months / life_stage, all NULLABLE without a
+ *    default. Existing pets stay NULL = "legacy profile" (grandfathered,
+ *    orchestrator 2026-10-05, pending David): they keep exactly the pre-M5
+ *    rules (breed feed windows, daily_steps_required, no parent-covered
+ *    meals, no stage transitions, no stage images) until their challenge
+ *    ends. Only pets created from a PIN that carries a profile choice
+ *    (generate-pin with child_id, M5-R01) get a profile and stage rules.
  *  - child_login_pins.pet_options: the parent's choice {breed, origin,
  *    age_stage} for a new pet, used when the PIN creates the pet.
  *  - activities_log: new type parent_fed_pet (meal in quiet hours).
@@ -93,12 +96,15 @@ return new class extends Migration
         DB::statement('ALTER TABLE breed_configs ADD CONSTRAINT breed_configs_daily_steps_cap_check CHECK (daily_steps_cap IS NULL OR daily_steps_cap > 0)');
 
         Schema::table('pets', function (Blueprint $table) {
-            $table->string('origin')->default('bought');
-            $table->unsignedSmallInteger('arrival_age_months')->default(2);
+            // NULL = legacy profile (pet created before M5-R01 / without a profile choice).
+            $table->string('origin')->nullable();
+            $table->unsignedSmallInteger('arrival_age_months')->nullable();
             $table->string('life_stage')->nullable();
         });
-        DB::statement("ALTER TABLE pets ADD CONSTRAINT pets_origin_check CHECK (origin IN ('bought', 'adopted'))");
-        DB::statement('ALTER TABLE pets ADD CONSTRAINT pets_arrival_age_months_check CHECK (arrival_age_months <= 300)');
+        DB::statement("ALTER TABLE pets ADD CONSTRAINT pets_origin_check CHECK (origin IS NULL OR origin IN ('bought', 'adopted'))");
+        DB::statement('ALTER TABLE pets ADD CONSTRAINT pets_arrival_age_months_check CHECK (arrival_age_months IS NULL OR arrival_age_months <= 300)');
+        // A legacy pet has no stage: life_stage only with an arrival age.
+        DB::statement('ALTER TABLE pets ADD CONSTRAINT pets_life_stage_profile_check CHECK (life_stage IS NULL OR arrival_age_months IS NOT NULL)');
         DB::statement('ALTER TABLE pets ADD CONSTRAINT pets_life_stage_check CHECK (life_stage IS NULL OR life_stage IN ('.self::STAGES.'))');
 
         Schema::table('child_login_pins', function (Blueprint $table) {
@@ -147,7 +153,7 @@ return new class extends Migration
             $table->dropColumn('pet_options');
         });
 
-        foreach (['pets_origin_check', 'pets_arrival_age_months_check', 'pets_life_stage_check'] as $constraint) {
+        foreach (['pets_origin_check', 'pets_arrival_age_months_check', 'pets_life_stage_check', 'pets_life_stage_profile_check'] as $constraint) {
             DB::statement("ALTER TABLE pets DROP CONSTRAINT IF EXISTS {$constraint}");
         }
         Schema::table('pets', function (Blueprint $table) {

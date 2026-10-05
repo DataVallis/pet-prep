@@ -37,12 +37,14 @@ class GeneratePinRequest extends FormRequest
             // Family model (M2-01): omit for a new pet; an existing pet of
             // the family = the child will share it (shared custody).
             'pet_id' => ['sometimes', 'nullable', 'integer', 'min:1'],
-            // M5-R01: the new pet's profile (only for a new pet — not with
-            // pet_id). Defaults: mutt, bought, puppy. Premium breeds need
-            // the purchase (422 breed_locked); every origin / age is free.
-            'breed' => ['sometimes', 'nullable', Rule::enum(BreedType::class), 'prohibited_unless:pet_id,null'],
-            'origin' => ['sometimes', 'nullable', Rule::enum(PetOrigin::class), 'prohibited_unless:pet_id,null'],
-            'age_stage' => ['sometimes', 'nullable', Rule::enum(LifeStage::class), 'prohibited_unless:pet_id,null'],
+            // M5-R01: the new pet's profile (only for a new pet of a child
+            // profile — not with pet_id, and 422 on the deprecated flow
+            // without child_id, which creates a legacy-profile pet).
+            // Defaults: mutt, bought, puppy. Premium breeds need the
+            // purchase (422 breed_locked); every origin / age is free.
+            'breed' => ['sometimes', 'nullable', Rule::enum(BreedType::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
+            'origin' => ['sometimes', 'nullable', Rule::enum(PetOrigin::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
+            'age_stage' => ['sometimes', 'nullable', Rule::enum(LifeStage::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
         ];
     }
 

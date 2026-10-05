@@ -9,6 +9,7 @@ use App\Models\Pet;
 use App\Models\User;
 use App\Services\LifeStageService;
 use Database\Seeders\BreedStageParamsSeeder;
+use Filament\Actions\DeleteAction;
 use Illuminate\Support\Facades\DB;
 use Livewire\Livewire;
 
@@ -109,12 +110,13 @@ describe('import provenance', function () {
         }
     });
 
-    it('imports insert-only: an existing (edited) row is never overwritten, missing rows are added', function () {
+    it('imports insert-only: an existing (edited) row is never overwritten, never-touched missing rows are added', function () {
         seedLifeStageData();
         $count = BreedStageParam::count();
         expect($count)->toBe(count(BreedStageParamsSeeder::rows()));
 
         BreedStageParam::where(['breed_slug' => 'mutt', 'stage' => 'adult', 'key' => 'exercise_minutes_per_day'])->update(['value' => json_encode(75)]);
+        // Removed without an audit row (= a value the seeder adds for the first time, e.g. a new key).
         BreedStageParam::where(['breed_slug' => 'mutt', 'stage' => 'senior', 'key' => 'sleep_hours'])->delete();
 
         (new BreedStageParamsSeeder)->run();
@@ -136,11 +138,61 @@ describe('import provenance', function () {
             ->and($windows)->source_id->toBeNull()->verified->toBeFalse()
             ->and($windows->notes)->toContain('Claude proposal');
         expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->sort()->values()->all())
-            ->toBe(['arrival_age_months', 'exercise_minutes_per_age_month', 'exercise_minutes_per_day', 'feed_windows']);
+            ->toBe(['arrival_age_months', 'exercise_minutes_per_age_month', 'exercise_minutes_per_day', 'feed_windows', 'meals_per_day', 'starts_at_months']);
+    });
+
+    it('keeps Claude\'s choices that wait for David unverified (stage boundaries, arrival ages, senior meals) — data_verified stays false', function () {
+        seedLifeStageData();
+        $verified = fn (string $stage, string $key) => BreedStageParam::where(['stage' => $stage, 'key' => $key])->pluck('verified')->unique()->values()->all();
+
+        expect($verified('puppy', 'starts_at_months'))->toBe([true])
+            ->and($verified('young', 'starts_at_months'))->toBe([false])
+            ->and($verified('adult', 'starts_at_months'))->toBe([false])
+            ->and($verified('senior', 'starts_at_months'))->toBe([false])
+            ->and($verified('puppy', 'arrival_age_months'))->toBe([false])
+            ->and($verified('senior', 'meals_per_day'))->toBe([false])
+            ->and($verified('adult', 'meals_per_day'))->toBe([true]);
+
+        // A Border Collie that arrived as an adult: every care number is sourced, but the stage rests on Claude's boundary.
+        $pet = Pet::factory()->borderCollie()->create(['user_id' => User::factory()->child()->create()->id, 'arrival_age_months' => 36]);
+        $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
+        expect($rules->verified())->toBeFalse()
+            ->and($rules->unverifiedKeys())->toContain('starts_at_months', 'arrival_age_months');
     });
 });
 
 describe('edits', function () {
+    it('never resurrects a value an admin deleted (Filament delete action) or re-keyed', function () {
+        seedLifeStageData();
+        $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
+        actingAs($admin);
+        $count = BreedStageParam::count();
+
+        // Delete through the Filament edit page header action (model delete → audit row with the tuple).
+        $sleep = BreedStageParam::where(['breed_slug' => 'mutt', 'stage' => 'senior', 'key' => 'sleep_hours'])->sole();
+        Livewire::test(EditBreedStageParam::class, ['record' => $sleep->getRouteKey()])
+            ->callAction(DeleteAction::class);
+        // Re-key through the model: puppy meals band 3 → 4 months.
+        BreedStageParam::where(['breed_slug' => 'mutt', 'stage' => 'puppy', 'age_from_months' => 3, 'key' => 'meals_per_day'])->sole()
+            ->update(['age_from_months' => 4]);
+        // Move a Border Collie value to the mutt (breed re-key).
+        BreedStageParam::where(['breed_slug' => 'border-collie', 'stage' => 'all', 'key' => 'lifespan_years'])->sole()->delete();
+        BreedStageParam::where(['breed_slug' => 'mutt', 'stage' => 'all', 'key' => 'lifespan_years'])->sole()
+            ->update(['breed_slug' => 'border-collie', 'value' => 13.5]);
+
+        expect(BreedStageParamChange::where('action', 'deleted')->where('key', 'sleep_hours')->sole())
+            ->breed_slug->toBe('mutt')->stage->toBe('senior')->age_from_months->toBe(0)->user_id->toBe($admin->id);
+
+        (new BreedStageParamsSeeder)->run();
+        (new BreedStageParamsSeeder)->run();
+
+        expect(BreedStageParam::where(['breed_slug' => 'mutt', 'stage' => 'senior', 'key' => 'sleep_hours'])->exists())->toBeFalse()
+            ->and(BreedStageParam::where(['breed_slug' => 'mutt', 'stage' => 'puppy', 'key' => 'meals_per_day'])->pluck('age_from_months')->sort()->values()->all())->toBe([0, 4, 6])
+            ->and(BreedStageParam::where(['breed_slug' => 'mutt', 'stage' => 'all', 'key' => 'lifespan_years'])->exists())->toBeFalse()
+            ->and(BreedStageParam::where(['breed_slug' => 'border-collie', 'stage' => 'all', 'key' => 'lifespan_years'])->value('value'))->toBe(13.5)
+            ->and(BreedStageParam::count())->toBe($count - 2);
+    });
+
     it('audits who changed which value (old → new) and refreshes the cached rules', function () {
         seedLifeStageData();
         $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);

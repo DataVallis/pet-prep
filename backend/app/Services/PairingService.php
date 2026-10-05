@@ -183,6 +183,10 @@ class PairingService
      * Must run inside the caller's transaction, after the parent → child →
      * family row locks; the child must already be a member of $family.
      *
+     * `$profile` (M5-R01) = the parent's choice stored on the PIN; null (a
+     * PIN issued before M5-R01, the deprecated /child/pair path) creates a
+     * legacy-profile pet that keeps the pre-M5 rules (grandfathering).
+     *
      * @return array{pet: Pet, joined_existing: bool}
      *
      * @throws PairingException
@@ -200,7 +204,7 @@ class PairingService
             return ['pet' => $pet, 'joined_existing' => true];
         }
 
-        return ['pet' => $this->createPet($family->id, $child, $profile ?? PetProfileChoice::default()), 'joined_existing' => false];
+        return ['pet' => $this->createPet($family->id, $child, $profile), 'joined_existing' => false];
     }
 
     /**
@@ -220,7 +224,7 @@ class PairingService
         }
     }
 
-    private function createPet(int $familyId, User $child, PetProfileChoice $profile): Pet
+    private function createPet(int $familyId, User $child, ?PetProfileChoice $profile): Pet
     {
         // Pet DNA is generated offline. The reference image is produced
         // asynchronously by a queued job dispatched after this transaction
@@ -230,12 +234,13 @@ class PairingService
         // family row lock, which makes the per-family uniqueness check safe.
         // M5-R01: breed / origin / age stage chosen by the parent (default:
         // a bought mutt puppy). A premium breed chosen at PIN time but locked
-        // by now falls back to the mutt.
-        $breed = $profile->breed;
+        // by now falls back to the mutt. Without a profile (old PIN,
+        // deprecated /child/pair) → a legacy-profile mutt (pre-M5 rules).
+        $breed = $profile?->breed ?? BreedType::Mutt;
         if (BreedConfig::forBreed($breed)?->premium_unlock !== false) {
             $breed = BreedType::Mutt;
         }
-        $arrivalAge = $this->lifeStages->arrivalAgeFor($breed->slug(), $profile->ageStage);
+        $arrivalAge = $profile !== null ? $this->lifeStages->arrivalAgeFor($breed->slug(), $profile->ageStage) : null;
         $stage = $arrivalAge !== null ? $this->lifeStages->stageForAge($breed->slug(), $arrivalAge) : null;
         $dnaVersion = (int) config('media.pet_dna_version', PetDnaService::VERSION);
         $petDna = $dnaVersion === PetDnaService::VERSION ? null : $this->falAiService->generateInitialPetDna($breed);
@@ -258,9 +263,10 @@ class PairingService
             'hygiene_level' => 100,
             'born_at' => null,
             'is_active' => true,
-            'origin' => $profile->origin->value,
-            // Without life-stage data for the breed: the column default (a 2-month puppy).
-            ...($arrivalAge !== null ? ['arrival_age_months' => $arrivalAge] : []),
+            // Legacy profile (null arrival age) without a choice or without
+            // life-stage data for the breed: the pre-M5 rules.
+            'origin' => $profile?->origin->value,
+            'arrival_age_months' => $arrivalAge,
             'life_stage' => $stage?->value,
         ]);
 

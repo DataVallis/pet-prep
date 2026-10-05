@@ -195,6 +195,15 @@ class CareScheduleService
     }
 
     /**
+     * A window of this pet that the parent feeds: entirely in quiet hours and
+     * the pet is not on the legacy (pre-M5) profile.
+     */
+    public function isParentCoveredFor(Pet $pet, ?QuietHours $quiet, CarbonInterface $start, CarbonInterface $end): bool
+    {
+        return ! $pet->isLegacyProfile() && $this->isParentCovered($quiet, $start, $end);
+    }
+
+    /**
      * Parent-covered windows that STARTED in ($from, $to] after the birth and
      * are not fed yet (no fed_pet / parent_fed_pet row inside the window):
      * the decay tick feeds the dog for each (M5-R01). Oldest first.
@@ -203,7 +212,8 @@ class CareScheduleService
      */
     public function dueParentMeals(Pet $pet, BreedConfig $config, CarbonInterface $from, CarbonInterface $to, ?QuietHours $quiet): array
     {
-        if ($pet->born_at === null || $quiet === null || ! $quiet->is_active) {
+        // Legacy-profile pets keep the pre-M5 rules: nobody feeds in quiet hours.
+        if ($pet->born_at === null || $pet->isLegacyProfile() || $quiet === null || ! $quiet->is_active) {
             return [];
         }
 

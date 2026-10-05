@@ -13,7 +13,8 @@ use Illuminate\Support\Carbon;
  *
  * @property string $local_date Y-m-d in the family timezone.
  * @property int $steps Steps counted for that day.
- * @property int $goal Breed daily_steps_required on that day.
+ * @property int $goal The day's step goal (LifeStageService rules of that day: the life-stage goal
+ *                     since M5-R01, breed daily_steps_required for legacy-profile pets / breeds without stage data).
  * @property bool $achieved steps >= goal.
  * @property bool $birth_day The pet was born that day (never causes illness).
  * @property Carbon|null $illness_due_at Planned illness start (no walk at all).
