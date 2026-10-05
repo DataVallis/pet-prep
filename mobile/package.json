@@ -6,7 +6,6 @@
     "@react-native-community/netinfo": "^12.0.1",
     "@tanstack/react-query": "^5.103.1",
     "expo": "~57.0.23",
-    "expo-av": "^16.0.8",
     "expo-secure-store": "^57.0.4",
     "expo-sensors": "^57.0.3",
     "expo-status-bar": "~57.0.1",
