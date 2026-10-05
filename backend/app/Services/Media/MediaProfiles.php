@@ -2,6 +2,7 @@
 
 namespace App\Services\Media;
 
+use Illuminate\Support\Facades\Log;
 use InvalidArgumentException;
 
 /**
@@ -54,13 +55,36 @@ class MediaProfiles
         return array_filter($this->all($kind), fn (ModelProfile $p) => $p->enabled && $p->lab);
     }
 
+    /** Production defaults (David, 2026-10-05). */
+    public const DEFAULT_REFERENCE_IMAGE = 'nano_banana_pro';
+
+    public const DEFAULT_STATE_VIDEO = 'kling_v3_pro';
+
     public function referenceImage(): ModelProfile
     {
-        return $this->image((string) config('media.reference_image_profile', 'flux_schnell'));
+        return $this->image($this->configured(ModelProfile::KIND_IMAGE, 'media.reference_image_profile', self::DEFAULT_REFERENCE_IMAGE));
     }
 
     public function stateVideo(): ModelProfile
     {
-        return $this->video((string) config('media.state_video_profile', 'kling_v16_legacy'));
+        return $this->video($this->configured(ModelProfile::KIND_VIDEO, 'media.state_video_profile', self::DEFAULT_STATE_VIDEO));
+    }
+
+    /**
+     * The configured profile key, or the shipped default when the env names a
+     * profile that no longer exists (e.g. an old server .env still saying
+     * `kling_v16_legacy`, removed 2026-10-05) — logged, never a crash.
+     */
+    private function configured(string $kind, string $configKey, string $default): string
+    {
+        $key = (string) config($configKey, $default);
+
+        if (! is_array(config("media.profiles.{$kind}.{$key}"))) {
+            Log::error('MediaProfiles: unknown profile configured, using the default', ['config' => $configKey, 'profile' => $key, 'default' => $default]);
+
+            return $default;
+        }
+
+        return $key;
     }
 }

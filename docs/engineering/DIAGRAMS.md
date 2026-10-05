@@ -16,13 +16,14 @@ flowchart LR
     CAD[Caddy TLS]
     APP["Laravel API<br/>+ Filament admin"]
     REV[Reverb WebSockets]
-    Q["Queue worker<br/>(default: fal.ai)"]
+    Q["Queue worker<br/>(default: fal.ai, media downloads)"]
+    VOL[("app_storage volume<br/>storage/app/pet-media")]
     QB["Broadcast worker<br/>(queue: broadcasts)"]
     S["Scheduler<br/>pets:process-decay every minute"]
     PG[(PostgreSQL 18)]
     R[(Redis)]
   end
-  FAL["fal.ai<br/>Flux image · Kling video"]
+  FAL["fal.ai<br/>Nano Banana Pro image · Kling 3.0 Pro video"]
   RC[RevenueCat]
   HK["HealthKit / Health Connect"]
   P -- HTTPS --> CAD
@@ -39,9 +40,11 @@ flowchart LR
   APP -- "PetUpdated job (after commit)" --> R
   R --> QB
   QB -- "Pusher HTTP API" --> REV
-  Q -- "reference image (job)" --> FAL
-  APP -- "video job" --> FAL
+  Q -- "reference image + state video jobs" --> FAL
   FAL -- "signed webhook (ED25519)" --> APP
+  Q -- "download result (M4-05)" --> VOL
+  APP -- "signed GET /api/media/{id}" --> VOL
+  FAL -- "fetch start frame (signed URL)" --> CAD
   RC -. "webhook (M3-08)" .-> APP
   C -. "steps (M3-04/05)" .- HK
 ```
@@ -69,10 +72,12 @@ sequenceDiagram
   API->>DB: transaction: lock parent, link child,<br/>create UNBORN pet (Pet DNA, born_at null), consume PIN
   API-->>Child: 201 pet (born_at null, awaiting_contract, media_status=pending|disabled)
   API->>Q: GeneratePetReferenceImage (after commit)
-  Q->>FAL: fal.run Flux (seed + prompt anchor)
+  Q->>FAL: fal.run Nano Banana Pro (seed + DNA prompt)
   FAL-->>Q: image URL (*.fal.media)
-  Q->>DB: pet_dna.reference_image_url, media_status=ready
-  Q-->>Child: PetUpdated "reference_image_ready" (Reverb)
+  Q->>Q: StorePetMedia: download → our disk (M4-05)
+  Q->>DB: pet_media image ready, media_status=ready
+  Q-->>Child: PetUpdated "reference_image_ready" (Reverb, signed URL)
+  Note over Q,FAL: then the entitled state videos — see §10a
   Parent->>API: GET /api/parent/dashboard → pet ≠ null, awaiting_contract
   Note over Parent: "Otrok je povezan!" → GET /api/user refreshes the session pet
   Note over Child,DB: unborn: no decay, hygiene events, day close or escalation;<br/>every child action except the contract → 423 contract_required
@@ -384,7 +389,8 @@ erDiagram
   USERS ||--o{ USERS : "parent_id (deprecated)"
   USERS ||--o{ PETS : "user_id (deprecated, primary caretaker)"
   PETS ||--o{ ACTIVITIES_LOG : logs
-  PETS ||--o{ PET_MEDIA_JOBS : "fal.ai requests"
+  PETS ||--o{ PET_MEDIA : "image + state video slots (M4-03)"
+  PET_MEDIA ||--o{ AI_SPEND_LEDGER : "estimated cost per call"
   PETS ||--o{ PET_HYGIENE_EVENTS : "random messes"
   PETS ||--o{ PET_DAILY_WALKS : "closed days"
   PETS ||--o{ PET_CONTRACTS : "one per caretaker"
@@ -685,11 +691,61 @@ flowchart TD
   H -- "402 / 403 exhausted balance" --> B["ledger void, fal_balance<br/>Log::critical once per hour<br/>Filament flag 24 h"]
   H -- "4xx/5xx answer or not sent (DNS / connect / TLS)" --> E["ledger void, http_error<br/>reference image: queue retry"]
   H -- "timeout / reset after sending" --> T["ledger committed + http_error (cost kept)<br/>lab video: status unknown"]
-  X1 -.-> RT["daily media:retry-references<br/>(budget / balance cases) + Filament Retry image"]
+  X1 -.-> RT["daily media:retry<br/>(budget / balance: images, then videos) + Filament Retry image"]
   S2 -.-> SW["hourly media:sweep-lab: running > 1 h → timed_out"]
-  C --> S1["image url (*.fal.media) → pet_dna.reference_image_url / lab result"]
-  C --> S2["request_id → pet_media_jobs / media_lab_results"]
-  S2 -.-> W["POST /api/webhooks/fal-ai (ED25519, fail closed)<br/>pet_media_jobs → pet video + PetUpdated<br/>else media_lab_results → lab gallery"]
+  C --> S1["image url (*.fal.media) → pet_media image slot → StorePetMedia / lab result"]
+  C --> S2["request_id → pet_media / media_lab_results"]
+  S2 -.-> W["POST /api/webhooks/fal-ai (ED25519, fail closed)<br/>pet_media → StorePetMedia (§10a)<br/>else media_lab_results → lab gallery"]
   S2 -.-> PL["AI Lab 'Check pending' → PollMediaLabResult<br/>(free status read, queue.fal.run only)"]
   C --> WG["Filament AiSpendOverview: today / month vs caps, fal balance"]
+```
+
+## 10a. Pet media at birth + own storage (M4-03 / M4-05, 2026-10-05)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant Pair as Pairing (transaction)
+  participant Q as Queue worker
+  participant FAL as fal.ai
+  participant API as Laravel API
+  participant DB as PostgreSQL
+  participant Disk as pet-media disk (app_storage)
+  participant App as Child / parent app
+  Pair->>Q: GeneratePetReferenceImage (after commit)
+  Q->>DB: claim image slot pending → running
+  Q->>FAL: fal.run nano-banana-pro (DNA v2 prompt, seed) — budget reserve first
+  FAL-->>Q: images[0].url (*.fal.media, allowlisted)
+  Q->>DB: slot.source_url, ledger committed ($0.15)
+  Q->>FAL: StorePetMedia: GET url (≤ 25 MB, finfo jpeg/png/webp, ≤ 3 allowlisted redirects)
+  Q->>Disk: {pet}/reference-g1.jpg
+  Q->>DB: slot ready, pets.media_status = ready
+  Q-->>App: PetUpdated reference_image_ready (media.reference_image_url signed)
+  Q->>DB: queueStateVideos: slots per MediaEntitlementService<br/>(mutt: idle + sleeping · premium breed: all 6)
+  loop each entitled state
+    Q->>DB: SubmitPetStateVideo: claim slot
+    Q->>FAL: queue.fal.run kling-video/v3/pro/image-to-video<br/>start_image_url = our signed URL (6 h), 5 s, no audio, fal_webhook
+    FAL->>API: GET /api/media/{image}?signature (start frame)
+    FAL-->>Q: request_id → slot (ledger $0.56)
+    FAL->>API: POST /api/webhooks/fal-ai (ED25519)
+    API->>DB: lock slot by request_id, source_url (idempotent)
+    API->>Q: StorePetMedia (after commit)
+    Q->>FAL: GET video (≤ 60 MB, video/mp4)
+    Q->>Disk: {pet}/{state}-g1.mp4
+    Q->>DB: slot ready
+    Q-->>App: PetUpdated video_ready (media.videos, current_video_url)
+  end
+  App->>API: GET /api/media/{id}?expires&v&signature (Range)
+  API-->>App: 200 / 206 from disk (403 expired / tampered / other family token)
+```
+
+```mermaid
+flowchart LR
+  F{"failure"} --> B["budget / fal balance / disabled"] --> BF["slot failed + reason<br/>pet playable without media"] --> RT["daily media:retry (00:23 UTC)<br/>within budget: images, then videos"]
+  F --> N["fal 5xx / network before acceptance"] --> QR["queue retry 30 s · 2 min · 10 min"] --> GF["failed http_error"]
+  F --> T["submit timed out after sending"] --> TK["failed http_error, cost kept"]
+  F --> E["webhook ERROR / non-fal URL"] --> EF["failed generation_failed / invalid_response"]
+  F --> D["download 4xx / too big / wrong type"] --> DF["failed invalid_response<br/>(image: fal URL forgotten)"]
+  F --> L["lost webhook / job / worker"] --> SW["hourly media:sweep:<br/>2 h → timed_out · re-queue download · reclaim after 10 min"]
+  GF & TK & EF & DF & SW -.-> AD["media:backfill / Filament Generate missing / Regenerate"]
 ```

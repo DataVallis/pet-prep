@@ -38,6 +38,17 @@ return [
             'report' => false,
         ],
 
+        // AI pet media (M4-05): private, served only through signed GET /api/media/{media}.
+        // storage/ is the Docker volume app_storage in production (survives deploys).
+        'pet_media' => [
+            'driver' => 'local',
+            'root' => storage_path('app/pet-media'),
+            'visibility' => 'private',
+            'serve' => false,
+            'throw' => true,
+            'report' => false,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

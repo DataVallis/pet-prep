@@ -31,8 +31,8 @@ Lead magnet "Pet Promise Reality Check" (free web tool → signed PDF contract) 
 - Game engine verified by automated whole-day simulations (e.g. mutt hungry after exactly 12 h 30 min, per spec).
 - AI dog identity ("Pet DNA") with fal.ai image/video; webhooks cryptographically verified (child-safety by design).
 - **Every dog looks unique** (2026-10-04, backend): appearance traits are drawn within the breed's range (>300,000 combinations for the mutt), reproducible per dog, never duplicated within a family; the image prompt contains no child data. *(Breed trait lists are a draft pending sourced breed standards.)*
-- **AI cost is measured and capped before launch** (2026-10-04): every AI call is costed and booked in a ledger; daily / monthly spend caps fail closed (the game keeps working without new media); an internal AI Lab compares models side by side on cost and quality. **Estimated** media cost per dog at birth (1 image + 6 short state videos, list prices 2026-10-04): **≈ $0.73 – $3.51** depending on the models chosen (*estimate*, models not yet picked). Extra media via token packs (*planned*, M4-09).
-- CI on every change (183 backend + 74 mobile tests as of 2026-10-03; **621 backend + 425 mobile as of 2026-10-04**), independent AI code review, one-click deploys.
+- **AI cost is measured and capped before launch** (2026-10-04): every AI call is costed and booked in a ledger; daily / monthly spend caps fail closed (the game keeps working without new media); an internal AI Lab compares models side by side on cost and quality. **Production models picked 2026-10-05:** Nano Banana Pro (photoreal reference image) + Kling 3.0 Pro (5-second state videos, no audio). **Estimated** media cost per dog at birth (fal list prices): **≈ $1.27** for the free mutt (1 image + 2 state videos) and **≈ $3.51** for a paid breed (1 image + 6 state videos) (*estimate*; the split is a proposal awaiting founder sign-off). All media are copied to our own EU storage and served through short-lived signed links (built 2026-10-05). Extra media via token packs (*planned*, M4-09).
+- CI on every change (183 backend + 74 mobile tests as of 2026-10-03; **621 backend + 425 mobile as of 2026-10-04**; **746 backend + 494 mobile as of 2026-10-05**), independent AI code review, one-click deploys.
 - Scoring engine tested on edge cases that real families hit: daylight-saving days (25-hour day), school and sleep hours, a dog born mid-evening, parent pause, vet time, siblings joining later; the parent dashboard costs the same database work for 7 or 84 days of history.
 - Built by one founder + an AI engineering team with documented process (see BUILD_LOG).
 
@@ -54,7 +54,7 @@ Goal: extend LTV from the 3-month challenge to the dog's 10–15-year life. One 
 |---|---|
 | Kids drop off in days | That *is* the signal parents pay for; 7-day early win (badge) for the parent. |
 | App-store rules for kids apps | No ads, minimal data, PIN login without email, parent-controlled purchases. |
-| AI media cost | Pre-generate a fixed set of 6 videos per dog; free tier uses a static set; per-call cost ledger with daily / monthly caps (built 2026-10-04); estimated ≈ $0.73–3.51 per dog at birth (*estimate*). |
+| AI media cost | Pre-generate a fixed set per dog at birth (free mutt: image + 2 videos ≈ $1.27; paid breed: image + 6 videos ≈ $3.51 — *estimates*, built 2026-10-05); per-call cost ledger with daily / monthly caps (built 2026-10-04); media stored on our own server (no per-view AI cost). |
 | Simulation ≠ reality | Conditional guarantee; certificate tied to 12 weeks of objective data. |
 
 ## Team

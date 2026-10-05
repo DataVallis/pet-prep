@@ -6,6 +6,7 @@ use App\Enums\BreedType;
 use App\Enums\PetLockReason;
 use App\Enums\PetStateEnum;
 use App\Services\FamilyService;
+use App\Services\Media\PetMediaService;
 use App\Services\PetStatusPeriodService;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
@@ -15,6 +16,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Facades\DB;
 
 class Pet extends Model
 {
@@ -29,6 +31,11 @@ class Pet extends Model
 
     protected static function booted(): void
     {
+        // AI media files (M4-05) go with the pet; the pet_media rows cascade in the DB.
+        static::deleted(function (Pet $pet): void {
+            DB::afterCommit(fn () => app(PetMediaService::class)->deleteFilesOf($pet->id));
+        });
+
         // Start the decay clock at creation so the first tick decays from birth.
         // An unborn pet (born_at null, waiting for the contract — M1-07b)
         // gets its clocks at birth instead (PetActivityService::signContract).
@@ -403,11 +410,11 @@ class Pet extends Model
     }
 
     /**
-     * Asynchronous fal.ai generation requests for this pet.
+     * AI media slots (reference image + state videos, M4-03 / M4-05).
      */
-    public function mediaJobs(): HasMany
+    public function media(): HasMany
     {
-        return $this->hasMany(PetMediaJob::class);
+        return $this->hasMany(PetMedia::class);
     }
 
     // ──────────────────────────────────────────────────────────────

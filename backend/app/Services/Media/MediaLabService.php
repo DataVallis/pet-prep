@@ -153,7 +153,7 @@ class MediaLabService
         $this->assertAffordable($estimate);
 
         $breedKey = (string) $source->run->breed;
-        $prompt = $this->prompts->videoPrompt($breedKey, $state);
+        $prompt = $this->prompts->videoPrompt($breedKey, $state, is_array($source->traits) ? $source->traits : []);
 
         return DB::transaction(function () use ($admin, $source, $profiles, $estimate, $state, $prompt, $breedKey) {
             $run = MediaLabRun::create([
@@ -175,8 +175,8 @@ class MediaLabService
                     'sample_index' => 0,
                     'traits' => $source->traits,
                     'prompt' => $prompt,
-                    'negative_prompt' => $profile->supportsNegativePrompt ? $this->prompts->negativePrompt() : null,
-                    'params' => $profile->videoInput((string) $source->result_url, $prompt, $this->prompts->negativePrompt()),
+                    'negative_prompt' => $profile->supportsNegativePrompt ? $this->prompts->videoNegativePrompt() : null,
+                    'params' => $profile->videoInput((string) $source->result_url, $prompt, $this->prompts->videoNegativePrompt()),
                     'source_image_url' => $source->result_url,
                     'status' => MediaLabResult::STATUS_QUEUED,
                 ]);

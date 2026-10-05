@@ -3,6 +3,8 @@
  * These mirror the backend Eloquent models and broadcast payloads.
  */
 
+import type { components } from '@/api/schema';
+
 export type BreedType = 'mutt' | 'border_collie';
 
 export type PetState = 'idle' | 'sleeping' | 'low_energy' | 'hungry' | 'sick' | 'playing';
@@ -65,6 +67,13 @@ export interface Pet {
  * `pet.updated` on `private-pet.{id}` (backend PetUpdated::payloadFor,
  * ARCHITECTURE §4). Pet state only — no child PII, no user id (M1-08).
  */
+/**
+ * AI media of a pet (M4-03 / M4-05) — same shape in GET /api/child/pet, the
+ * parent dashboard, pairing and `pet.updated`. URLs are signed and expire at
+ * `expires_at` (60–90 min); the server re-issues them with every state.
+ */
+export type PetMedia = components['schemas']['PairedPetResource']['media'];
+
 export interface PetUpdatedBroadcast {
   pet_id: number;
   breed_type: BreedType;
@@ -84,9 +93,13 @@ export interface PetUpdatedBroadcast {
   /** null until the contract is signed (M1-07b). */
   born_at?: string | null;
   virtual_age_months: number;
+  /** Signed URL of the video for pet_state (fallback idle), our storage — M4-05. */
   current_video_url: string | null;
   media_status?: MediaStatus;
+  /** Signed URL of our stored reference image — M4-05. */
   reference_image_url: string | null;
+  /** AI media (M4-05); missing in broadcasts from servers before M4-05. */
+  media?: PetMedia;
   event_type: string | null;
   updated_at: string | null;
   /** When the server emitted this snapshot (ms precision); newer wins. */

@@ -250,6 +250,16 @@ if [ -n "$rq" ] && [ "$rq" != "default" ]; then
     echo "ERROR: REDIS_QUEUE must be unset or 'default' in ${ENV_FILE} (found '${rq}')." >&2
     exit 1
 fi
+# AI models (M4, David 2026-10-05): the defaults are nano_banana_pro / kling_v3_pro.
+# An old .env copied from .env.example may still pin flux_schnell / kling_v16_legacy
+# (removed — the app falls back to the default and logs an error). Warn, don't block.
+for pair in "AI_REFERENCE_IMAGE_PROFILE=nano_banana_pro" "AI_STATE_VIDEO_PROFILE=kling_v3_pro"; do
+    key="${pair%%=*}"; want="${pair#*=}"
+    have=$(env_value "$key")
+    if [ -n "$have" ] && [ "$have" != "$want" ]; then
+        echo "WARNING: ${key}='${have}' in ${ENV_FILE} overrides the production default '${want}' — remove the line unless intended." >&2
+    fi
+done
 log "Env preflight OK."
 
 # ---- 2. Record the previous release ----------------------------------------------

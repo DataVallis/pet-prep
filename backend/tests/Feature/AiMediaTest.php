@@ -11,11 +11,13 @@ use App\Filament\Widgets\AiSpendOverview;
 use App\Jobs\GeneratePetReferenceImage;
 use App\Jobs\PollMediaLabResult;
 use App\Jobs\RunMediaLabImage;
+use App\Jobs\StorePetMedia;
 use App\Jobs\SubmitMediaLabVideo;
 use App\Models\AiSpendLedger;
 use App\Models\MediaLabResult;
 use App\Models\MediaLabRun;
 use App\Models\Pet;
+use App\Models\PetMedia;
 use App\Models\User;
 use App\Services\FalAiService;
 use App\Services\FalWebhookVerifier;
@@ -27,6 +29,7 @@ use App\Services\Media\MediaProfiles;
 use App\Services\Media\ModelProfile;
 use App\Services\Media\PetAppearancePrompt;
 use App\Services\Media\PetDnaService;
+use App\Services\Media\PetMediaService;
 use App\Services\PairingService;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Console\Scheduling\Schedule;
@@ -38,6 +41,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Livewire;
 
 /*
@@ -61,7 +65,12 @@ beforeEach(function () {
         'media.lab.max_run_usd' => 3.0,
         'media.lab.daily_usd' => 3.0,
         'media.lab.monthly_usd' => 30.0,
+        // These tests pin the cheap pre-M4 image model (request body + 0.006 cost);
+        // the production defaults are asserted separately ("production defaults").
+        'media.reference_image_profile' => 'flux_schnell',
+        'media.state_video_profile' => 'kling_v3_pro',
     ]);
+    Storage::fake('pet_media');
 });
 
 function aiSuperadmin(): User
@@ -129,18 +138,54 @@ describe('model profiles', function () {
         }
 
         expect(array_keys($profiles->all('image')))->toBe(['flux_schnell', 'flux2_pro', 'nano_banana_pro', 'seedream_v5_lite'])
-            ->and(array_keys($profiles->all('video')))->toBe(['kling_v16_legacy', 'kling_v3_pro', 'kling_v26_pro', 'veo31_fast', 'veo31_lite']);
+            ->and(array_keys($profiles->all('video')))->toBe(['kling_v3_pro', 'kling_v26_pro', 'veo31_fast', 'veo31_lite']);
     });
 
-    it('keeps the pre-M4 models as production defaults', function () {
+    it('uses Nano Banana Pro and Kling 3.0 Pro as production defaults (David 2026-10-05)', function () {
+        // The shipped config file (beforeEach overrides the runtime config for older tests).
+        $config = require config_path('media.php');
+        config(['media.reference_image_profile' => $config['reference_image_profile'], 'media.state_video_profile' => $config['state_video_profile']]);
         $profiles = app(MediaProfiles::class);
 
-        expect($profiles->referenceImage()->endpoint)->toBe('fal-ai/flux/schnell')
-            ->and($profiles->stateVideo()->endpoint)->toBe('fal-ai/kling-v1.6/pro/image-to-video');
+        expect($config['reference_image_profile'])->toBe('nano_banana_pro')
+            ->and($config['state_video_profile'])->toBe('kling_v3_pro')
+            ->and($profiles->referenceImage()->endpoint)->toBe('fal-ai/nano-banana-pro')
+            ->and($profiles->referenceImage()->estimatedCostUsd())->toEqualWithDelta(0.15, 1e-9)
+            ->and($profiles->stateVideo()->endpoint)->toBe('fal-ai/kling-video/v3/pro/image-to-video')
+            ->and($profiles->stateVideo()->estimatedCostUsd())->toEqualWithDelta(0.56, 1e-9)
+            ->and($profiles->stateVideo()->params)->toMatchArray(['duration' => '5', 'generate_audio' => false]);
     });
 
-    it('keeps the deprecated legacy video profile out of the lab', function () {
-        expect(array_keys(app(MediaProfiles::class)->forLab('video')))->not->toContain('kling_v16_legacy')
+    it('builds the Nano Banana Pro request from the verified schema and the DNA v2 prompt', function () {
+        config(['media.reference_image_profile' => 'nano_banana_pro']);
+        $profile = app(MediaProfiles::class)->referenceImage();
+
+        expect($profile->imageInput('A photorealistic photograph of a dog', 77, 'cartoon'))->toBe([
+            'prompt' => 'A photorealistic photograph of a dog',
+            'seed' => 77,
+            'num_images' => 1,
+            'aspect_ratio' => '9:16',
+            'resolution' => '1K',
+            'output_format' => 'jpeg',
+            'safety_tolerance' => '2',
+        ]); // no negative_prompt: not in the model's schema
+    });
+
+    it('falls back to the production default when the env names a removed profile', function () {
+        config(['media.state_video_profile' => 'kling_v16_legacy', 'media.reference_image_profile' => 'nope']);
+        Log::spy();
+
+        expect(app(MediaProfiles::class)->stateVideo()->key)->toBe('kling_v3_pro')
+            ->and(app(MediaProfiles::class)->referenceImage()->key)->toBe('nano_banana_pro');
+        Log::shouldHaveReceived('error')->twice();
+
+        config(['media.reference_image_profile' => 'flux_schnell']); // a valid explicit choice is kept
+        expect(app(MediaProfiles::class)->referenceImage()->key)->toBe('flux_schnell');
+    });
+
+    it('puts every enabled video profile in the lab (the broken Kling 1.6 legacy profile is gone)', function () {
+        expect(array_keys(app(MediaProfiles::class)->forLab('video')))->toBe(['kling_v3_pro', 'kling_v26_pro', 'veo31_fast', 'veo31_lite'])
+            ->and(fn () => app(MediaProfiles::class)->video('kling_v16_legacy'))->toThrow(InvalidArgumentException::class)
             ->and(array_keys(app(MediaProfiles::class)->forLab('image')))->toContain('flux_schnell', 'flux2_pro', 'nano_banana_pro', 'seedream_v5_lite');
     });
 
@@ -312,7 +357,7 @@ describe('pet DNA v2', function () {
     it('builds a video prompt from breed and state only', function () {
         $prompt = app(PetAppearancePrompt::class)->videoPrompt('border_collie', PetStateEnum::Sleeping);
 
-        expect($prompt)->toContain('Border Collie')->toContain('sleeping')->toContain('No people');
+        expect($prompt)->toContain('Border Collie')->toContain('asleep')->toContain('No people')->toContain('Static locked-off camera');
     });
 });
 
@@ -320,10 +365,11 @@ describe('pet DNA v2', function () {
 
 describe('spend caps and ledger', function () {
     it('records the reference image call in the ledger and keeps the pre-M4 request body', function () {
+        Queue::fake([StorePetMedia::class]);
         Http::fake(['fal.run/fal-ai/flux/schnell' => Http::response(['images' => [['url' => 'https://v3.fal.media/files/ref.jpg']]])]);
         $pet = Pet::factory()->withPetDna(['seed' => 1234, 'prompt_anchor' => 'A dog'])->create(['user_id' => createChildUser()->id, 'media_status' => 'pending']);
 
-        (new GeneratePetReferenceImage($pet->id))->handle(app(FalAiService::class));
+        (new GeneratePetReferenceImage($pet->id))->handle(app(PetMediaService::class));
 
         Http::assertSent(fn (Request $r) => $r->url() === 'https://fal.run/fal-ai/flux/schnell' && $r->data() === [
             'prompt' => 'A dog',
@@ -339,8 +385,12 @@ describe('spend caps and ledger', function () {
             ->profile->toBe('flux_schnell')
             ->status->toBe('committed')
             ->pet_id->toBe($pet->id)
+            ->pet_media_id->toBe(PetMedia::sole()->id)
             ->cost_usd->toEqualWithDelta(0.006, 1e-9);
-        expect($pet->fresh())->media_status->toBe('ready')->media_error->toBeNull();
+        // Ready only once our copy is stored (M4-05).
+        expect($pet->fresh())->media_status->toBe('pending')->media_error->toBeNull()
+            ->and(PetMedia::sole())->status->toBe('running')->source_url->toBe('https://v3.fal.media/files/ref.jpg')->cost_usd->toEqualWithDelta(0.006, 1e-9);
+        Queue::assertPushed(StorePetMedia::class, fn ($job) => $job->petMediaId === PetMedia::sole()->id);
     });
 
     it('refuses the call before any HTTP when the daily cap is reached; the pet keeps working without media', function () {
@@ -348,7 +398,7 @@ describe('spend caps and ledger', function () {
         aiSpend(4.999);
         $pet = Pet::factory()->withPetDna()->create(['user_id' => createChildUser()->id, 'media_status' => 'pending']);
 
-        (new GeneratePetReferenceImage($pet->id))->handle(app(FalAiService::class)); // no exception → no queue retry
+        (new GeneratePetReferenceImage($pet->id))->handle(app(PetMediaService::class)); // no exception → no queue retry
 
         Http::assertNothingSent();
         expect($pet->fresh())->media_status->toBe('failed')->media_error->toBe('budget_daily')
@@ -384,7 +434,7 @@ describe('spend caps and ledger', function () {
         Http::fake(['fal.run/*' => fn () => throw new ConnectionException('cURL error 28: Operation timed out after 60001 milliseconds with 0 bytes received')]);
         $pet = Pet::factory()->withPetDna()->create(['user_id' => createChildUser()->id, 'media_status' => 'pending']);
 
-        expect(fn () => (new GeneratePetReferenceImage($pet->id))->handle(app(FalAiService::class)))->toThrow(RuntimeException::class); // queue retries
+        expect(fn () => (new GeneratePetReferenceImage($pet->id))->handle(app(PetMediaService::class)))->toThrow(RuntimeException::class); // queue retries
 
         expect(AiSpendLedger::sole())->status->toBe('committed')->error_reason->toBe('http_error')
             ->and(app(AiSpendGuard::class)->spentTodayUsd())->toEqualWithDelta(0.006, 1e-9);
@@ -460,7 +510,7 @@ describe('spend caps and ledger', function () {
         Http::fake(['fal.run/*' => Http::response(['detail' => 'boom'], 500)]);
         $pet = Pet::factory()->withPetDna()->create(['user_id' => createChildUser()->id, 'media_status' => 'pending']);
 
-        expect(fn () => (new GeneratePetReferenceImage($pet->id))->handle(app(FalAiService::class)))->toThrow(RuntimeException::class);
+        expect(fn () => (new GeneratePetReferenceImage($pet->id))->handle(app(PetMediaService::class)))->toThrow(RuntimeException::class);
 
         expect(AiSpendLedger::sole())->status->toBe('void')->error_reason->toBe('http_error')
             ->and(app(AiSpendGuard::class)->spentTodayUsd())->toEqualWithDelta(0.0, 1e-9);
@@ -472,8 +522,8 @@ describe('spend caps and ledger', function () {
         $a = Pet::factory()->withPetDna()->create(['user_id' => createChildUser()->id, 'media_status' => 'pending']);
         $b = Pet::factory()->withPetDna()->create(['user_id' => createChildUser()->id, 'media_status' => 'pending']);
 
-        (new GeneratePetReferenceImage($a->id))->handle(app(FalAiService::class));
-        (new GeneratePetReferenceImage($b->id))->handle(app(FalAiService::class));
+        (new GeneratePetReferenceImage($a->id))->handle(app(PetMediaService::class));
+        (new GeneratePetReferenceImage($b->id))->handle(app(PetMediaService::class));
 
         expect($a->fresh())->media_status->toBe('failed')->media_error->toBe('fal_balance')
             ->and($b->fresh()->media_error)->toBe('fal_balance')
@@ -489,15 +539,19 @@ describe('spend caps and ledger', function () {
             ->toThrow(fn (AiCallException $e) => expect($e->reason)->toBe(AiCallFailure::FalBalance));
     });
 
-    it('records state video submissions with the default legacy profile unchanged', function () {
+    it('records state video submissions with Kling 3.0 Pro (5 s, no audio) in the ledger', function () {
         Http::fake(['queue.fal.run/*' => Http::response(['request_id' => 'req-sv', 'status' => 'IN_QUEUE'])]);
-        $pet = Pet::factory()->withPetDna(['reference_image_url' => 'https://v3.fal.media/files/ref.jpg'])->create(['user_id' => createChildUser()->id]);
+        $pet = Pet::factory()->withPetDna()->create(['user_id' => createChildUser()->id]);
+        $image = PetMedia::create(['pet_id' => $pet->id, 'kind' => 'image', 'status' => 'ready', 'storage_path' => "{$pet->id}/reference-g1.jpg", 'mime' => 'image/jpeg']);
+        $slot = PetMedia::create(['pet_id' => $pet->id, 'kind' => 'video', 'state' => 'idle', 'status' => 'pending']);
 
-        expect(app(FalAiService::class)->generatePetVideoState($pet, PetStateEnum::Idle))->toBe('req-sv');
+        expect(app(PetMediaService::class)->submitVideo($slot->id))->toBeTrue();
 
-        Http::assertSent(fn (Request $r) => str_starts_with($r->url(), 'https://queue.fal.run/fal-ai/kling-v1.6/pro/image-to-video?fal_webhook=')
-            && $r['image_url'] === 'https://v3.fal.media/files/ref.jpg' && $r['duration'] === '5' && $r['aspect_ratio'] === '9:16' && $r['cfg_scale'] === 0.7);
-        expect(AiSpendLedger::sole())->purpose->toBe('state_video')->request_id->toBe('req-sv')->cost_usd->toEqualWithDelta(0.475, 1e-9);
+        Http::assertSent(fn (Request $r) => str_starts_with($r->url(), 'https://queue.fal.run/fal-ai/kling-video/v3/pro/image-to-video?fal_webhook=')
+            && str_starts_with($r['start_image_url'], "https://api.petprep.si/api/media/{$image->id}?")
+            && $r['duration'] === '5' && $r['generate_audio'] === false && ! isset($r['image_url']));
+        expect(AiSpendLedger::sole())->purpose->toBe('state_video')->request_id->toBe('req-sv')->pet_media_id->toBe($slot->id)->cost_usd->toEqualWithDelta(0.56, 1e-9)
+            ->and($slot->fresh())->status->toBe('running')->request_id->toBe('req-sv')->profile->toBe('kling_v3_pro')->source_generation->toBe(1)->cost_usd->toEqualWithDelta(0.56, 1e-9);
     });
 });
 
@@ -622,7 +676,8 @@ describe('AI lab', function () {
         Http::assertSent(fn (Request $r) => str_starts_with($r->url(), 'https://queue.fal.run/fal-ai/kling-video/v3/pro/image-to-video?fal_webhook='.urlencode('https://api.petprep.si/api/webhooks/fal-ai'))
             && $r['start_image_url'] === 'https://v3.fal.media/files/lab/dog.jpg'
             && $r['generate_audio'] === false
-            && str_contains($r['prompt'], 'running joyfully'));
+            && str_contains($r['prompt'], 'playful bow')
+            && str_contains($r['prompt'], 'black and white')); // lab image traits
         expect($video->fresh())->status->toBe('running')->request_id->toBe('lab-req-1')->estimated_cost_usd->toEqualWithDelta(0.56, 1e-9);
         expect(AiSpendLedger::sole())->purpose->toBe('lab')->status->toBe('committed')->request_id->toBe('lab-req-1')->media_lab_result_id->toBe($video->id);
 
@@ -750,20 +805,20 @@ describe('PR #22 review follow-ups', function () {
 
         // Balance still flagged → nothing.
         Cache::put(FalGateway::BALANCE_FLAG_KEY, now()->toIso8601String());
-        $this->artisan('media:retry-references')->assertSuccessful();
+        $this->artisan('media:retry')->assertSuccessful();
         Queue::assertNothingPushed();
         Cache::forget(FalGateway::BALANCE_FLAG_KEY);
 
         // Budget room for exactly one more image (0.006) → only the first pet.
         aiSpend(4.99);
-        $this->artisan('media:retry-references')->assertSuccessful();
+        $this->artisan('media:retry')->assertSuccessful();
         Queue::assertPushed(GeneratePetReferenceImage::class, 1);
         expect($blockedDaily->fresh())->media_status->toBe('pending')->media_error->toBeNull()
             ->and($blockedBalance->fresh()->media_status)->toBe('failed');
 
         // Next day: the rest of the eligible pets.
         $this->travel(1)->days();
-        $this->artisan('media:retry-references')->assertSuccessful();
+        $this->artisan('media:retry')->assertSuccessful();
         expect($blockedBalance->fresh()->media_status)->toBe('pending')
             ->and($httpFailed->fresh()->media_status)->toBe('failed')   // not an automatic retry reason
             ->and($inactive->fresh()->media_status)->toBe('failed');
@@ -773,7 +828,7 @@ describe('PR #22 review follow-ups', function () {
     it('is scheduled: daily reference retry and hourly lab sweep', function () {
         $events = collect(app(Schedule::class)->events())->map(fn ($e) => $e->command.' '.$e->expression);
 
-        expect($events->first(fn ($e) => str_contains($e, 'media:retry-references')))->toContain('23 0 * * *')
+        expect($events->first(fn ($e) => str_contains($e, 'media:retry')))->toContain('23 0 * * *')
             ->and($events->first(fn ($e) => str_contains($e, 'media:sweep-lab')))->toContain('41 * * * *');
     });
 

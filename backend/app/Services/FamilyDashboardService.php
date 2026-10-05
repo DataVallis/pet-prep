@@ -13,6 +13,7 @@ use App\Models\PetContract;
 use App\Models\PetDailyStep;
 use App\Models\PetStatusPeriod;
 use App\Models\User;
+use App\Services\Media\PetMediaService;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -34,7 +35,10 @@ class FamilyDashboardService
     /** Timeline items per pet in the dashboard. */
     public const TIMELINE_ITEMS = 20;
 
-    public function __construct(private readonly CareScoreService $scores) {}
+    public function __construct(
+        private readonly CareScoreService $scores,
+        private readonly PetMediaService $media,
+    ) {}
 
     private const CHILD_ACTIONS = [
         ActivityType::FedPet,
@@ -77,7 +81,7 @@ class FamilyDashboardService
     public function family(Family $family, User $viewer): array
     {
         $tz = $family->timezone;
-        $pets = Pet::where('family_id', $family->id)->orderBy('id')->get();
+        $pets = Pet::where('family_id', $family->id)->orderBy('id')->with('media')->get();
         $caretakers = PetCaretaker::whereIn('pet_id', $pets->pluck('id'))->orderBy('id')->get();
         $contracts = PetContract::whereIn('pet_id', $pets->pluck('id'))->get(['pet_id', 'user_id', 'signed_at']);
         $children = $family->children()->get(['users.id', 'users.name', 'users.birth_year', DB::raw('(users.password IS NULL) AS pin_only')]);
@@ -179,6 +183,8 @@ class FamilyDashboardService
                     'hygiene' => $pet->displayMetric('hygiene_level'),
                 ],
                 'timeline' => $timelines[$pet->id] ?? [],
+                // AI media (M4-05): signed URLs to our stored copies.
+                'media' => $this->media->mediaFor($pet)->toArray(),
             ], $this->scores->petSummary($board, $pet)))->values()->all(),
         ];
     }

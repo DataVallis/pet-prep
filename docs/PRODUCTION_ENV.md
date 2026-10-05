@@ -74,14 +74,19 @@ This document describes all environment variables used by the PetPrep production
 | `AI_DAILY_BUDGET_USD` | Optional | No | Cap on **estimated** fal.ai spend per day (M4-07); calls over it are refused (fail closed), pets work without media. `0` = no AI calls | `5` |
 | `AI_MONTHLY_BUDGET_USD` | Optional | No | Cap on estimated fal.ai spend per month | `50` |
 | `AI_BUDGET_TIMEZONE` | Optional | No | Day / month boundary for the caps (operations clock) | `UTC` |
-| `AI_REFERENCE_IMAGE_PROFILE` | Optional | No | Image profile from `config/media.php` for new pets' reference image | `flux_schnell` |
-| `AI_STATE_VIDEO_PROFILE` | Optional | No | Video profile for pet state videos (not wired yet, M4-03) | `kling_v16_legacy` |
+| `AI_REFERENCE_IMAGE_PROFILE` | Optional | No | Image profile from `config/media.php` for new pets' reference image (David 2026-10-05: Nano Banana Pro). **Remove the line** from an old `/opt/petprep/.env` that still says `flux_schnell` — an unknown key falls back to the default with an error log; the deploy preflight warns about non-default values | `nano_banana_pro` |
+| `AI_STATE_VIDEO_PROFILE` | Optional | No | Video profile for the pet state videos (M4-03; David 2026-10-05: Kling 3.0 Pro, 5 s, no audio). `kling_v16_legacy` no longer exists (falls back to the default + error log) | `kling_v3_pro` |
+| `PET_MEDIA_DISK` | Optional | No | Filesystem disk for stored pet images / videos (M4-05); `pet_media` = `storage/app/pet-media` on the `app_storage` volume | `pet_media` |
+| `PET_MEDIA_MAX_IMAGE_MB` | Optional | No | Largest image downloaded from fal | `25` |
+| `PET_MEDIA_MAX_VIDEO_MB` | Optional | No | Largest video downloaded from fal | `60` |
+| `PET_MEDIA_DOWNLOAD_TIMEOUT` | Optional | No | Seconds per download (capped at 80 — below the queue's `retry_after` 90) | `60` |
+| `PET_MEDIA_URL_TTL_MINUTES` | Optional | No | Lifetime of the signed media URLs in API responses (min 10); URLs stay identical for half of it and are valid between TTL and 1.5 × TTL | `60` |
 | `AI_PET_DNA_VERSION` | Optional | No | DNA for new pets: `2` unique traits (M4-08), `1` pre-M4 anchors | `2` |
 | `AI_LAB_ENABLED` | Optional | No | Show the Filament AI Lab (superadmin only) | `true` |
 | `AI_LAB_MAX_RUN_USD` | Optional | No | Max estimated cost of one AI Lab run | `3` |
 | `AI_LAB_DAILY_USD` | Optional | No | Separate AI Lab budget per day (lab spend never counts against the pets' caps) | `3` |
 | `AI_LAB_MONTHLY_USD` | Optional | No | Separate AI Lab budget per month | `30` |
-| `FAL_MODEL_*` | Optional | No | Override a profile's fal endpoint id (`FAL_MODEL_FLUX_SCHNELL`, `FAL_MODEL_FLUX2_PRO`, `FAL_MODEL_NANO_BANANA_PRO`, `FAL_MODEL_SEEDREAM`, `FAL_MODEL_KLING_LEGACY`, `FAL_MODEL_KLING_V3_PRO`, `FAL_MODEL_KLING_V26_PRO`, `FAL_MODEL_VEO31_FAST`, `FAL_MODEL_VEO31_LITE`) — only `owner/model/...` ids are accepted. **The price stays the profile's** (`config/media.php`): overriding the endpoint does not change the cost estimate | `fal-ai/flux-2-pro` |
+| `FAL_MODEL_*` | Optional | No | Override a profile's fal endpoint id (`FAL_MODEL_FLUX_SCHNELL`, `FAL_MODEL_FLUX2_PRO`, `FAL_MODEL_NANO_BANANA_PRO`, `FAL_MODEL_SEEDREAM`, `FAL_MODEL_KLING_V3_PRO`, `FAL_MODEL_KLING_V26_PRO`, `FAL_MODEL_VEO31_FAST`, `FAL_MODEL_VEO31_LITE`) — only `owner/model/...` ids are accepted. **The price stays the profile's** (`config/media.php`): overriding the endpoint does not change the cost estimate | `fal-ai/flux-2-pro` |
 | `REVENUECAT_SECRET_KEY` | Optional | **Yes** | RevenueCat secret API key for IAP | `sk_...` |
 | `REVENUECAT_PUBLIC_KEY` | Optional | No | RevenueCat public SDK key | `test_...` or `appl_...` |
 | `MAIL_MAILER` | Optional | No | Mail driver (`log`, `smtp`, `resend`, `ses`) | `log` |

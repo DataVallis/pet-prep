@@ -197,8 +197,9 @@ describe('PetUpdated event shape', function () {
             'pet_id', 'breed_type', 'hunger_level', 'thirst_level', 'energy_level', 'hygiene_level',
             'is_active', 'pet_state', 'escalation_level', 'is_ill', 'illness_until', 'is_game_over',
             'is_hard_stopped', 'virtual_age_months', 'born_at', 'awaiting_contract', 'current_video_url', 'media_status',
-            'reference_image_url', 'event_type', 'updated_at', 'emitted_at',
+            'reference_image_url', 'media', 'event_type', 'updated_at', 'emitted_at',
         ]);
+        expect(array_keys($payload['media']))->toBe(['status', 'reference_image_url', 'videos', 'current_video_url', 'states', 'expires_at']);
         expect($payload['hunger_level'])->toBe(34);
         expect($payload['event_type'])->toBe('fed_pet');
 

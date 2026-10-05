@@ -34,14 +34,14 @@ Schedule::command('pins:prune')
     ->name('prune-child-login-pins')
     ->description('Delete expired / used child login PINs older than 7 days');
 
-// Daily (M4, PR #22 review): re-queue reference images blocked by the AI budget
-// or an exhausted fal balance. 00:23 UTC — just after the budget day rolls over
-// (AI_BUDGET_TIMEZONE defaults to UTC).
-Schedule::command('media:retry-references')
+// Daily (M4, PR #22 review; videos since M4-03): re-queue reference images and
+// state videos blocked by the AI budget or an exhausted fal balance. 00:23 UTC —
+// just after the budget day rolls over (AI_BUDGET_TIMEZONE defaults to UTC).
+Schedule::command('media:retry')
     ->dailyAt('00:23')
     ->withoutOverlapping()
     ->name('retry-reference-images')
-    ->description('Re-queue reference images blocked by the AI budget / fal balance');
+    ->description('Re-queue AI reference images / state videos blocked by the AI budget / fal balance');
 
 // Hourly: fail AI Lab results stuck in `running` for over an hour.
 Schedule::command('media:sweep-lab')
@@ -49,3 +49,11 @@ Schedule::command('media:sweep-lab')
     ->withoutOverlapping()
     ->name('sweep-media-lab')
     ->description('Fail AI Lab results running for more than an hour');
+
+// Hourly (M4-03): pet media stuck after a lost job / fal webhook — videos without
+// a webhook after 2 h fail as timed_out, lost downloads and dead claims re-queue.
+Schedule::command('media:sweep')
+    ->hourlyAt(47)
+    ->withoutOverlapping()
+    ->name('sweep-pet-media')
+    ->description('Recover pet media slots stuck after a lost job or webhook');

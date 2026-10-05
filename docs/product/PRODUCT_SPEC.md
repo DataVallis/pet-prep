@@ -133,11 +133,13 @@ Za **gibanje (energijo)** veljata samo fazi 1 in 2, in to le izven tihih ur; faz
 ## 10. AI mediji
 
 - **Pet DNA:** seed + prompt anchor + vizualne lastnosti + referenčna slika → vsak pes je vizualno konsistenten.
-- Referenčna slika: NanoBanana Pro (ali enakovreden model na fal.ai); videi: Kling (image-to-video, 9:16, ~5 s zanka).
-- Priporočilo: ob rojstvu predgenerirati vseh 6 stanj (nadzorovan strošek), aplikacija preklaplja lokalno.
+- Referenčna slika: **Nano Banana Pro** (David, 5. 10. 2026; 9:16); videi stanj: **Kling 3.0 Pro** (image-to-video iz referenčne slike, **5 s, brez zvoka**, statična kamera, subtilno realistično gibanje, isti pes, brez ljudi in besedila). Modela se lahko zamenjata v nastavitvah.
+- **Ob rojstvu (ko je slika shranjena)** se generirajo videi stanj, do katerih je pes upravičen (*predlog Claude, čaka Davida*): **brezplačni mešanček** = slika + 2 videa (`idle` miruje, `sleeping` spi); **plačljiva pasma** (Border Collie / izziv) = slika + vseh 6 (`idle, sleeping, low_energy, hungry, sick, playing`). Za stanje brez videa aplikacija predvaja `idle`. Aplikacija preklaplja med videi lokalno, brez novega generiranja. Več videov za mešančka = žetoni (M4-09, *načrt*).
+- **Ocenjen strošek na psa:** ≈ **1,27 $** osnovno (0,15 $ slika + 2 × 0,56 $), ≈ **3,51 $** polno (0,15 $ + 6 × 0,56 $).
+- **Hramba:** vsaka slika in video se prenese na naš strežnik; aplikacija dobi le naše podpisane povezave z rokom (60–90 min), nikoli povezav zunanje storitve. Dokler mediji niso shranjeni, jih ni (pes je prikazan brez slike / videa, igra teče normalno).
 - **Unikaten videz (DNA v2, 4. 10. 2026):** vsak nov pes dobi naključno, a ponovljivo kombinacijo lastnosti znotraj možnosti pasme (velikost, postava, dolžina in barva dlake, vzorec, oznake, ušesa, oči, rep). V isti družini dva psa iste pasme nimata enake kombinacije. Prompt = pasma + opis lastnosti + slog fotografije (fotorealistično, cel pes, dnevna svetloba, preprosto domače ozadje, brez ljudi, otrok, besedila). Nikoli imena ali drugih osebnih podatkov. Psi, rojeni prej, obdržijo svoj videz. *Možnosti videza po pasmah so osnutek in čakajo preverjene vire (M1-19).*
 - **Strošek in izpad:** vsak klic AI ima ocenjen strošek; dnevna in mesečna meja porabe (privzeto 5 $ / 50 $). Če je meja dosežena ali je račun pri fal.ai prazen, slika/video ni ustvarjen, **igra pa teče normalno** (pes brez slike). Osnovni mediji ob rojstvu so brezplačni za družino; več prek žetonov (M4-09, *načrt*).
-- **Izbira modelov:** David izbere produkcijska modela v AI Labu (admin); do takrat ostaja dosedanji model za sliko (FLUX.1 schnell).
+- **Izbira modelov:** David je 5. 10. 2026 izbral Nano Banana Pro + Kling 3.0 Pro; AI Lab (admin) ostaja za primerjavo novih modelov.
 
 ## 11. Ocenjevanje in certifikat
 

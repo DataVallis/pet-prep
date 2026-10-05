@@ -5,8 +5,8 @@ namespace App\Jobs;
 use App\Enums\AiCallFailure;
 use App\Events\PetUpdated;
 use App\Models\Pet;
-use App\Services\FalAiService;
-use App\Services\Media\AiCallException;
+use App\Models\PetMedia;
+use App\Services\Media\PetMediaService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -18,7 +18,9 @@ use RuntimeException;
 use Throwable;
 
 /**
- * Generates the canonical reference image (Pet DNA anchor) for a newly born pet.
+ * Generates the canonical reference image (Pet DNA anchor) for a new pet —
+ * first step of the media pipeline (M4-03, PetMediaService). On success the
+ * fal result is downloaded by StorePetMedia, which then queues the state videos.
  *
  * Runs on the queue so pairing never waits on fal.ai and no external HTTP call
  * happens inside a database transaction. Dispatched after the pairing commit.
@@ -45,7 +47,7 @@ class GeneratePetReferenceImage implements ShouldBeUnique, ShouldQueue
         return (string) $this->petId;
     }
 
-    public function handle(FalAiService $fal): void
+    public function handle(PetMediaService $media): void
     {
         $pet = Pet::find($this->petId);
 
@@ -53,50 +55,10 @@ class GeneratePetReferenceImage implements ShouldBeUnique, ShouldQueue
             return;
         }
 
-        if (! $fal->isEnabled()) {
-            $pet->updateQuietly(['media_status' => 'disabled']);
-
-            return;
-        }
-
-        $dna = $pet->pet_dna ?? [];
-
-        if (! empty($dna['reference_image_url'])) {
-            $pet->updateQuietly(['media_status' => 'ready']);
-
-            return;
-        }
-
-        try {
-            $url = $fal->generateReferenceImage(
-                (string) ($dna['prompt_anchor'] ?? ''),
-                (int) ($dna['seed'] ?? 0),
-                $pet->id,
-                isset($dna['negative_prompt']) ? (string) $dna['negative_prompt'] : null,
-            );
-        } catch (AiCallException $e) {
-            // Budget cap / fal balance / disabled profile: a retry cannot help. The pet
-            // keeps working without media (M4-07, fail closed); the reason shows in Filament.
-            $pet->updateQuietly(['media_status' => 'failed', 'media_error' => $e->reason->value]);
-            PetUpdated::afterCommit($pet->fresh(), 'reference_image_failed');
-            Log::warning('GeneratePetReferenceImage: not generated', ['pet_id' => $pet->id, 'reason' => $e->reason->value]);
-
-            return;
-        }
-
-        if ($url === null) {
+        if (! $media->generateReferenceImage($pet)) {
             // Let the queue retry with backoff; failed() marks the pet when retries run out.
             throw new RuntimeException("fal.ai reference image generation failed for pet {$pet->id}");
         }
-
-        $dna['reference_image_url'] = $url;
-        $pet->updateQuietly([
-            'pet_dna' => $dna,
-            'media_status' => 'ready',
-            'media_error' => null,
-        ]);
-
-        PetUpdated::afterCommit($pet->fresh(), 'reference_image_ready');
     }
 
     public function failed(?Throwable $exception): void
@@ -104,8 +66,16 @@ class GeneratePetReferenceImage implements ShouldBeUnique, ShouldQueue
         $pet = Pet::find($this->petId);
 
         if ($pet) {
-            $pet->updateQuietly(['media_status' => 'failed', 'media_error' => AiCallFailure::HttpError->value]);
-            PetUpdated::afterCommit($pet->fresh(), 'reference_image_failed');
+            $slot = PetMedia::where('pet_id', $pet->id)->where('kind', PetMedia::KIND_IMAGE)->first();
+
+            if ($slot !== null && $slot->status !== PetMedia::STATUS_READY) {
+                app(PetMediaService::class)->fail($slot, AiCallFailure::HttpError, $exception?->getMessage());
+            }
+
+            if ($pet->media_status !== 'ready') {
+                $pet->updateQuietly(['media_status' => 'failed', 'media_error' => AiCallFailure::HttpError->value]);
+                PetUpdated::afterCommit($pet->fresh(), 'reference_image_failed');
+            }
         }
 
         Log::error('GeneratePetReferenceImage: giving up', [
