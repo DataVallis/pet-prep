@@ -7,6 +7,7 @@
 export const PUSH_TYPES = [
   'soft_warning',
   'critical_alert',
+  'walk_reminder',
   'parent_intervention_alarm',
   'illness_triggered',
   'game_over_virtual_shelter',
@@ -33,7 +34,10 @@ export function parsePushData(data: unknown): PushData | null {
   return { type, petId: id };
 }
 
-/** Phase 2 and above: sound in the foreground too (Android channel "alarm" on the server side). */
+/**
+ * Phase 2 and above: sound in the foreground too (Android channel "alarm" on the server
+ * side). The daily walk reminder is never urgent (PR #35).
+ */
 export function isUrgentPush(type: PushType | null | undefined): boolean {
-  return type !== null && type !== undefined && type !== 'soft_warning';
+  return type !== null && type !== undefined && type !== 'soft_warning' && type !== 'walk_reminder';
 }

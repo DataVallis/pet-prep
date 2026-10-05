@@ -58,6 +58,14 @@ Schedule::command('media:sweep')
     ->name('sweep-pet-media')
     ->description('Recover pet media slots stuck after a lost job or webhook');
 
+// Every minute (M3-02, PR #35 review): queue held pushes that are due (illness /
+// game over after quiet hours, the daily walk reminder at its earliest time).
+Schedule::command('push:dispatch-scheduled')
+    ->everyMinute()
+    ->withoutOverlapping()
+    ->name('push-dispatch-scheduled')
+    ->description('Queue held push notifications whose send_after has passed');
+
 // Every 15 min (M3-02): queue the Expo push receipt check (DeviceNotRegistered →
 // device disabled) and delete push rows older than 30 days. Off the quarter hour.
 Schedule::command('push:receipts')

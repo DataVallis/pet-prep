@@ -11,8 +11,10 @@ use App\Models\PushNotification;
  * - Title is always "PetPrep"; texts never contain a child's or pet's name
  *   (Expo / APNs / FCM are third parties, and lock screens are public).
  * - Phase 1 / 2 hunger texts are the spec wording; the other metrics follow
- *   the same pattern. Energy is the daily walk: no "zbolel v 30 minutah"
- *   (a walk can't be missed in 30 min, DECISIONS 2026-10-03).
+ *   the same pattern. Energy is the daily walk: phase 1 / 2 from energy become
+ *   one `walk_reminder` per day (PR #35) — no "zbolel v 30 minutah"
+ *   (a walk can't be missed in 30 min, DECISIONS 2026-10-03). The SOFT /
+ *   CRITICAL energy texts stay for safety but are not used by escalation.
  * - Phase 3 = the spec sentence for the parent plus what is missing.
  *
  * Metric keys: hunger | thirst | hygiene | energy; illness uses
@@ -35,6 +37,9 @@ final class PushCopy
         'hygiene' => 'Kuža je naredil nered! Počisti ga čim prej, sicer bo zbolel.',
         'energy' => 'Kuža je ves utrujen, ker danes še ni bil na sprehodu. Pojdita ven še danes!',
     ];
+
+    /** Energy = the daily walk: one friendly reminder per day, no illness threat. */
+    private const WALK_REMINDER = 'Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?';
 
     private const PARENT_ALARM = 'Tvoj otrok danes ni poskrbel za psa.';
 
@@ -67,6 +72,7 @@ final class PushCopy
         return match ($type) {
             PushType::SoftWarning => self::SOFT[$metric ?? 'hunger'] ?? self::SOFT['hunger'],
             PushType::CriticalAlert => self::CRITICAL[$metric ?? 'hunger'] ?? self::CRITICAL['hunger'],
+            PushType::WalkReminder => self::WALK_REMINDER,
             PushType::ParentAlarm => trim(self::PARENT_ALARM.' '.(self::PARENT_ALARM_DETAIL[$metric ?? ''] ?? '')),
             PushType::Illness => self::ILLNESS[$audience][$metric ?? 'other'] ?? self::ILLNESS[$audience]['other'],
             PushType::GameOver => self::GAME_OVER[$audience],

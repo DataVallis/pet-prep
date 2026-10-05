@@ -11,12 +11,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 ## 2026-10-05 — Kuža zdaj lahko pokliče: push obvestila (M3-02)
 
 **Kaj se je zgodilo:** Pravila opozoril so v igri obstajala že od začetka (faza 1 pri 30 %, faza 2 pri 10 %, alarm staršem po uri na 0 %), a so ostala v aplikaciji — kdor je ni odprl, ni izvedel ničesar. Zdaj gre vsak korak tudi kot **obvestilo na telefon** (prek Expo → Apple / Google):
-- **Otrok** dobi blag opomnik (»Tvoj kuža te milo gleda in kaže na posodo s hrano.«), pri 10 % pa nujnega z zvokom. Besedilo sledi temu, kar manjka — hrana, voda, nered ali sprehod; pri sprehodu brez grožnje »bo zbolel v 30 minutah«.
+- **Otrok** dobi blag opomnik (»Tvoj kuža te milo gleda in kaže na posodo s hrano.«), pri 10 % pa nujnega z zvokom. Besedilo sledi temu, kar manjka — hrana, voda ali nered. Za **sprehod** dobi otrok največ **en prijazen opomnik na dan**, najprej 2 uri po koncu tihih ur (npr. ob 15:00 po šoli), brez grožnje z boleznijo.
 - **Starši** (vsi v družini) dobijo alarm, ko pes več kot uro nima hrane, vode ali čistoče: »Tvoj otrok danes ni poskrbel za psa.« O bolezni in odhodu v zavetišče izvedo starši in otrok.
-- **Tihe ure veljajo tudi za obvestila:** med šolo in spanjem telefon molči. Isto obvestilo za istega psa največ enkrat na 30 minut.
+- **Tihe ure veljajo tudi za obvestila:** med šolo in spanjem telefon molči; novica o bolezni ali zavetišču počaka do jutra (*pravilo čaka Davidovo potrditev*). Starš v »Nadzoru« vidi, ali so obvestila vklopljena. Isto obvestilo za istega psa največ enkrat na 30 minut.
 - **Brez imen:** obvestilo nosi samo vrsto dogodka in številko psa; naslov je vedno »PetPrep«. Hranimo le žeton naprave, iOS/Android in različico aplikacije.
 - Aplikacija vpraša za dovoljenje **ob pravem trenutku** — otroka takoj po podpisu pogodbe, starša po dodanem otroku — in najprej s slovensko razlago. Tap na obvestilo odpre kužka (otrok) oziroma podrobnosti otroka (starš).
-- **Številke:** 35 novih strežniških testov (skupaj **896 zelenih**), 39 novih testov v aplikaciji (skupaj **774 zelenih**). Na telefonih deluje z naslednjo novo gradnjo aplikacije *(načrt: preizkus na iPhonu in Androidu)*.
+- **Številke:** 49 novih strežniških testov (skupaj **910 zelenih**), 53 novih testov v aplikaciji (skupaj **788 zelenih**). Na telefonih deluje z naslednjo novo gradnjo aplikacije *(načrt: preizkus na iPhonu in Androidu)*.
 
 **Zakaj je pomembno**
 Simulacija psa, ki »nima glasu«, ne uči odgovornosti — pravi pes zacvili, ko je lačen. Obvestila so most med igro in vsakdanom otroka; tihe ure poskrbijo, da PetPrep ne moti šole in spanja.

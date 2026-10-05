@@ -31,6 +31,19 @@ describe('api client', () => {
     expect(init.headers.Authorization).toBe('Bearer tok');
   });
 
+  it('unregisters a push device with the token in the POST body, never in the URL (M3-02, PR #35)', async () => {
+    getItem.mockResolvedValueOnce('tok');
+    const fetchMock = mockFetch(204, undefined);
+    const token = 'ExponentPushToken[abcdefghijklmnop]';
+
+    await expect(api.unregisterDevice(token)).resolves.toBeNull();
+    const [url, init] = fetchMock.mock.calls[0] as [string, RequestInit];
+    expect(url).toMatch(/\/api\/devices\/unregister$/);
+    expect(url).not.toContain('Exponent');
+    expect(init.method).toBe('POST');
+    expect(JSON.parse(String(init.body))).toEqual({ expo_push_token: token });
+  });
+
   it('exposes Retry-After on a 429', async () => {
     getItem.mockResolvedValueOnce('tok');
     mockFetch(429, { message: 'Too Many Attempts.' }, { 'Retry-After': '37' });

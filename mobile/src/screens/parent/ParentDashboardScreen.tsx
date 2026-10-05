@@ -18,6 +18,7 @@ import { isNoChildPaired, useParentDashboard } from '@/hooks/queries/useParentDa
 import { familyFromDashboard, petOfChild, type FamilyChild } from '@/modules/family/family';
 import { logout } from '@/modules/session/logout';
 import { useAppStore } from '@/store/appStore';
+import { usePushPromptOnFirstView } from '@/modules/push/usePushPromptOnFirstView';
 import AddChildCard from '@/components/AddChildCard';
 import ChildOverviewCard from '@/components/parent/ChildOverviewCard';
 import JoinFamilyCard from '@/components/parent/JoinFamilyCard';
@@ -103,6 +104,8 @@ export default function ParentDashboardScreen() {
 
   // A tapped push (M3-02) → the detail of the (first) child caring for that pet. Waits
   // for the dashboard; a pet that is not (any more) in the family just clears the target.
+  // PR #35: first view of the session → ask about alarms while undecided.
+  usePushPromptOnFirstView('parent');
   const pushTarget = useAppStore((s) => s.pushTarget);
   const setPushTarget = useAppStore((s) => s.setPushTarget);
   useEffect(() => {

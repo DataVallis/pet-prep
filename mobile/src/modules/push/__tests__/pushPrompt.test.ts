@@ -3,11 +3,11 @@
  */
 import * as Notifications from 'expo-notifications';
 import * as SecureStore from 'expo-secure-store';
-import { Alert, type AlertButton } from 'react-native';
+import { Alert, Linking, type AlertButton } from 'react-native';
 
 import { api } from '@/api/client';
 import { PRE_PROMPT_RETRY_MS, PUSH_STORAGE_KEYS, PUSH_STRINGS } from '@/modules/push/pushConfig';
-import { maybeAskForPush } from '@/modules/push/pushPrompt';
+import { enablePushNotifications, getPushPermissionStatus, maybeAskForPush } from '@/modules/push/pushPrompt';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -123,6 +123,71 @@ describe('maybeAskForPush', () => {
     await expect(maybeAskForPush('child', NOW)).resolves.toBe('registered');
 
     expect(alert).not.toHaveBeenCalled();
+    expect(requestPermissions).not.toHaveBeenCalled();
+  });
+
+  it('first-view mode never registers or prompts an already allowed install', async () => {
+    getPermissions.mockResolvedValue(granted);
+    const alert = answerAlert(1);
+
+    await expect(maybeAskForPush('parent', NOW, { onlyIfUndetermined: true })).resolves.toBe('skipped');
+
+    expect(alert).not.toHaveBeenCalled();
+    expect(registerDevice).not.toHaveBeenCalled();
+  });
+
+  it('asks only once when two moments overlap (contract → first HUD view)', async () => {
+    let answer: ((allow: boolean) => void) | undefined;
+    const alert = jest.spyOn(Alert, 'alert').mockImplementation((_t, _m, buttons?: AlertButton[]) => {
+      answer = (allow) => buttons?.[allow ? 1 : 0]?.onPress?.();
+    });
+
+    const first = maybeAskForPush('child', NOW);
+    const second = maybeAskForPush('child', NOW, { onlyIfUndetermined: true });
+    await Promise.resolve();
+    await new Promise((r) => setTimeout(r, 0));
+    answer?.(false);
+
+    await expect(first).resolves.toBe('declined');
+    await expect(second).resolves.toBe('declined');
+    expect(alert).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('Nadzor "Obvestila" helpers', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    jest.restoreAllMocks();
+  });
+
+  it('reports on / off / blocked', async () => {
+    getPermissions.mockResolvedValueOnce(granted);
+    await expect(getPushPermissionStatus()).resolves.toBe('on');
+    getPermissions.mockResolvedValueOnce(undetermined);
+    await expect(getPushPermissionStatus()).resolves.toBe('off');
+    getPermissions.mockResolvedValueOnce(deniedForGood);
+    await expect(getPushPermissionStatus()).resolves.toBe('blocked');
+  });
+
+  it('"Vklopi obvestila" goes straight to the system prompt, clears "Ne zdaj" and registers', async () => {
+    getPermissions.mockResolvedValueOnce(undetermined).mockResolvedValue(granted);
+    requestPermissions.mockResolvedValueOnce(granted);
+    const alert = jest.spyOn(Alert, 'alert');
+
+    await expect(enablePushNotifications()).resolves.toBe('on');
+
+    expect(alert).not.toHaveBeenCalled();
+    expect(SecureStore.deleteItemAsync).toHaveBeenCalledWith(PUSH_STORAGE_KEYS.declinedAt);
+    expect(registerDevice).toHaveBeenCalled();
+  });
+
+  it('opens the phone settings once the system will not ask again', async () => {
+    getPermissions.mockResolvedValue(deniedForGood);
+    const openSettings = jest.spyOn(Linking, 'openSettings').mockResolvedValue(undefined);
+
+    await expect(enablePushNotifications()).resolves.toBe('blocked');
+
+    expect(openSettings).toHaveBeenCalled();
     expect(requestPermissions).not.toHaveBeenCalled();
   });
 });

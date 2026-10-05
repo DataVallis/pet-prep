@@ -5,7 +5,8 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-05 (Claude, backend-engineer — **M3-02 push notifications** (Expo, backend + mobile); branch `feat/M3-02-push`, pushed, no PR)
+- **Last updated:** 2026-10-05 (Claude, backend-engineer — **PR #35 review fixes** (M3-02 push: walk reminder, held illness / game over, unregister in body, Nadzor "Obvestila" …); branch `feat/M3-02-push`, **PR #35**)
+- Before: 2026-10-05 (Claude, backend-engineer — **M3-02 push notifications** (Expo, backend + mobile); branch `feat/M3-02-push`, pushed, no PR)
 - Before: 2026-10-05 (Claude, mobile-engineer — **"Moj kuža" album** (child sees every photo / state video; parent read-only link) + PR #30 review minors + **PR #31 review minors**; branch `feat/mobile-pet-album`, **PR #31** (review APPROVED with minors → fixed))
 - Before: 2026-10-05 (Claude, mobile-engineer — **TestFlight fixes**: unstyled walk overlay (NativeWind removed, StyleSheet only), HUD metric bars behind the dock, permanent red "BREZ POVEZAVE" (two pusher-js bugs); branch `fix/mobile-unstyled-overlays`, pushed, no PR)
 - Before: 2026-10-05 (Claude, backend-engineer — **PR #29 review fixes** (CHANGES REQUESTED → fixed): caretaker history / tombstones, retries + lock order, orphans, legacy pets, mobile m5/m6, throttles; branch `feat/M2-08-account-deletion`, **PR #29**)
@@ -66,7 +67,7 @@
 
 ## 5. Next steps (priority queue)
 
-0. **M3-02 push (2026-10-05, `feat/M3-02-push`):** qa-reviewer → PR → merge (migration `2026_10_10_120000`, additive; `queue-broadcasts` now also works the `notifications` queue — the deploy must recreate that container). **David — before pushes reach phones:** APNs key + FCM (steps in the session log below) → new native build (`eas build`) → device checks.
+0. **M3-02 push (2026-10-05, `feat/M3-02-push`, PR #35 — review fixes pushed):** re-review → merge (migration `2026_10_10_120000`, additive; `queue-broadcasts` now also works the `notifications` queue — the deploy must recreate that container). **David — before pushes reach phones:** APNs key + FCM (steps in the session log below) → new native build (`eas build`) → device checks. **Before the closed beta (required):** turn on *Enhanced security for push notifications* for the `petprep` project on expo.dev and put an access token (robot user) into `/opt/petprep/.env` as `EXPO_ACCESS_TOKEN=…` (PRODUCTION_ENV §5) — without it anyone who learns a device's Expo token can send it pushes. **David to confirm** (DECISIONS, "Claude, čaka Davida"): walk reminder once per day ≥ 2 h after quiet hours; illness / game over held until quiet hours end.
 1. **David:** merge PR #4 (M0-10) → PR #5 (M1-01/02 decay) → Actions → Run workflow; merge `fix/M1-01b-display-thresholds`.
 2. **David:** rotate EAS signing passwords (M0-12); confirm free/paid split (BUSINESS_MODEL §7, B7).
 3. **Claude:** merge M1-04/05/06 + illness recovery + daily walk (PR from `feat/M1-04-energy-hygiene-breeds`). Then **M1-19** sourced breed data import (David: no invented breed numbers).
@@ -78,6 +79,20 @@
 6. **M4 (2026-10-05, `feat/M4-state-videos`):** independent qa-reviewer review → PR → merge. **On deploy:** delete `AI_REFERENCE_IMAGE_PROFILE` / `AI_STATE_VIDEO_PROFILE` from `/opt/petprep/.env` if they pin the old models (DEPLOYMENT D13), queue worker running, `APP_URL` public; then `php artisan media:backfill --dry-run` and, if the cost is OK, `media:backfill`. **David:** confirm the entitlement sets (mutt idle + sleeping, premium breed all 6) and the "videos at birth" decision (DECISIONS). **Mobile:** play `media.current_video_url` with expo-video (loop, muted), fall back to `media.reference_image_url`, refetch before `media.expires_at`. Then M1-19 sourced breed appearance.
 
 ## 6. Session log
+
+### 2026-10-05 (cloud, backend-engineer) — PR #35 review fixes (CHANGES REQUESTED → fixed, same branch)
+`origin/main` merged first (PR #34 dog-data docs, no conflicts).
+- **M1 walk reminder (Claude, čaka Davida):** new `PushType::WalkReminder` (`walk_reminder`; CHECK updated — migration `2026_10_10_120000` edited in place, unmerged): phase 1 / 2 whose metric is energy → normal priority, channel `default`, never alarm style, **one per family-local day**, not before `Push\PushTiming::walkReminderEarliest()` (2 h after the quiet stretch running now, else after the day's last quiet stretch). Too early → `scheduled` + `send_after`; dropped `walk_day_over` / `walk_done` (energy > 30 % at send). Copy "Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?". DECISIONS + PRODUCT_SPEC §6.
+- **M2 prompt + Nadzor:** `usePushPromptOnFirstView` (ParentDashboardScreen / ChildHudScreen, once per session token, `maybeAskForPush(…, {onlyIfUndetermined: true})`; 3-day "Ne zdaj" kept; one question at a time via an in-flight guard). `components/parent/NotificationsCard` in Nadzor: status on / off / blocked (re-read on foreground), "Vklopi obvestila" → system prompt directly (clears "Ne zdaj") → register, "Odpri nastavitve" → `Linking.openSettings()`.
+- **3:** device moves logged (`Push: device moved to another account`, device id + from / to user id, no token). `EXPO_ACCESS_TOKEN` + Expo Enhanced Security documented as **required before beta** (PRODUCTION_ENV, next steps).
+- **4:** `POST /api/devices/unregister {expo_push_token}` (`UnregisterDeviceRequest`); `DELETE /api/devices/{token}` removed; client + `schema.ts` regenerated.
+- **5 (Claude, čaka Davida):** illness / game over in quiet hours → `scheduled` until the end of the quiet stretch (`PushTiming::quietStretchEnd`, walks adjacent windows); phase 1 / 2 / 3 still dropped. `push:dispatch-scheduled` every minute claims due rows (`scheduled → queued`) and queues the job. `send_after` stored in UTC (a local-offset Carbon was saved 2 h off — caught by the tests).
+- **6:** `deliver()` drops non-news pushes when the pet is hard-stopped / inactive / game over / ill (`pet_locked`); illness / game over news still go out.
+- **7:** logout: `unregisterFromPush({timeoutMs: 2000})` first (own controller), then the revoke with its own 5 s.
+- **8:** `PUSH_TOO_MANY_EXPERIENCE_IDS` → `ExpoMixedProjectsException` (tokens per project from `details`) → the chunk is re-sent per project, tickets stored per group.
+- **Tests:** Pest `PushNotificationTest` 35 → **49** (walk: bedtime + school 06:30 → 08:00 → held to 15:00 → sent, same-day duplicate, next day; walk done; no-wait case; game over 23:00 → 06:00 to parents + child; illness across bedtime → school; phase 1/2/3 dropped; pet locked ×4; illness news while ill; project split; unregister body / DELETE gone / 422; device-move log). Jest +14: client unregister body, logout 2 s + 5 s budgets, first-view mode + single question, status / enable / settings helpers, `usePushPromptOnFirstView`, `NotificationsCard` ×4, dashboard first view, `walk_reminder` parsing / not urgent.
+- **Commands:** Pest full suite on `testing_m302` **910 passed**; Pint on touched PHP files passed; deploy harness `scripts/tests/deploy-production.test.sh` **189 passed / 0 failed** (`up -d` of `APP_SERVICES` recreates `queue-broadcasts` with its new `--queue=broadcasts,notifications` command); `npx tsc --noEmit` clean; `yarn test` **788 passed / 68 suites**, twice.
+- **New debt:** (1) the walk reminder / held news depend on the every-minute `push:dispatch-scheduled` — a scheduler outage delays them (the job then re-checks the day); (2) `NotificationsCard` is parent-only (children have no settings screen); (3) a held illness / game over push is sent even if the parent already saw it in the app.
 
 ### 2026-10-05 (cloud, backend-engineer) — M3-02 push notifications (Expo), backend + mobile (`feat/M3-02-push`)
 Branch from `origin/main` @ bb5f463 (a stale local `feat/M3-02-push` pointer without own commits was held by another worktree, so the work is on local `feat/M3-02-push-impl`, pushed to `origin/feat/M3-02-push`).

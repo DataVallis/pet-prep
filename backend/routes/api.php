@@ -45,12 +45,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('user', [AuthController::class, 'user']);
     Route::post('logout', [AuthController::class, 'logout']);
 
-    // M3-02: push devices (parent or child token). The Expo token travels
-    // URL-encoded in the DELETE path (ExponentPushToken%5B…%5D).
+    // M3-02: push devices (parent or child token). Unregister takes the Expo
+    // token in the body (PR #35 review: never in a URL / access log).
     Route::middleware('throttle:api')->group(function () {
         Route::post('devices', [DeviceController::class, 'store']);
-        Route::delete('devices/{token}', [DeviceController::class, 'destroy'])
-            ->where('token', '.+');
+        Route::post('devices/unregister', [DeviceController::class, 'unregister']);
     });
 });
 

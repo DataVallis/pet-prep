@@ -8,6 +8,8 @@ import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
 import { useAppStore } from '@/store/appStore';
 import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { maybeAskForPush } from '@/modules/push/pushPrompt';
+import { resetFirstViewPromptForTests } from '@/modules/push/usePushPromptOnFirstView';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -24,6 +26,7 @@ jest.mock('@/api/client', () => {
 });
 jest.mock('@/hooks/usePetChannels', () => ({ usePetChannels: jest.fn() }));
 jest.mock('@/modules/session/logout', () => ({ logout: jest.fn(() => Promise.resolve()) }));
+jest.mock('@/modules/push/pushPrompt', () => ({ maybeAskForPush: jest.fn(() => Promise.resolve('skipped')) }));
 
 const getParentDashboard = api.getParentDashboard as jest.Mock;
 
@@ -67,6 +70,15 @@ describe('ParentDashboardScreen — push tap (M3-02)', () => {
 
     expect(api.getChildReport).toHaveBeenCalledWith(2, 7);
     expect(useAppStore.getState().pushTarget).toBeNull();
+  });
+
+  it('first dashboard view of the session asks about alarms (only while undecided)', async () => {
+    resetFirstViewPromptForTests();
+    useAppStore.getState().signIn({ token: 'tok', user: { id: 1, name: 'Mama', email: 'm@x.si', role: 'parent' }, pet: null });
+    renderWithQuery(<ParentDashboardScreen />);
+    await flush();
+
+    expect(maybeAskForPush).toHaveBeenCalledWith('parent', expect.any(Number), { onlyIfUndetermined: true });
   });
 
   it('a pet that is not in the family just clears the target', async () => {

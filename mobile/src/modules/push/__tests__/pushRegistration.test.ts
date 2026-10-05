@@ -8,7 +8,7 @@ import { Platform } from 'react-native';
 import { api } from '@/api/client';
 import { PUSH_CHANNELS, PUSH_STORAGE_KEYS } from '@/modules/push/pushConfig';
 import { easProjectId, registerForPush, unregisterFromPush } from '@/modules/push/pushRegistration';
-import { logout } from '@/modules/session/logout';
+import { logout, REVOKE_TIMEOUT_MS, UNREGISTER_TIMEOUT_MS } from '@/modules/session/logout';
 import { useAppStore } from '@/store/appStore';
 
 jest.mock('@/api/client', () => {
@@ -121,7 +121,7 @@ describe('unregisterFromPush / logout', () => {
 
     await unregisterFromPush();
 
-    expect(unregisterDevice).toHaveBeenCalledWith(TOKEN, undefined);
+    expect(unregisterDevice).toHaveBeenCalledWith(TOKEN, expect.any(AbortSignal));
     expect(deleteItem).toHaveBeenCalledWith(PUSH_STORAGE_KEYS.token);
   });
 
@@ -142,6 +142,47 @@ describe('unregisterFromPush / logout', () => {
     expect(order).toEqual(['unregister', 'revoke']);
     expect(deleteItem).toHaveBeenCalledWith(PUSH_STORAGE_KEYS.token);
     expect(useAppStore.getState().authToken).toBeNull();
+  });
+
+  it('gives the unregister its own 2 s budget; the revoke still gets its full 5 s afterwards', async () => {
+    jest.useFakeTimers();
+    try {
+      getItem.mockImplementation(async (key: string) => (key === PUSH_STORAGE_KEYS.token ? TOKEN : null));
+      let unregisterSignal: AbortSignal | undefined;
+      unregisterDevice.mockImplementation(
+        (_t: string, s?: AbortSignal) =>
+          new Promise((_, reject) => {
+            unregisterSignal = s;
+            s?.addEventListener('abort', () => reject(new Error('Aborted')));
+          }),
+      );
+      let revokeSignal: AbortSignal | undefined;
+      apiLogout.mockImplementation(
+        (s?: AbortSignal) =>
+          new Promise((_, reject) => {
+            revokeSignal = s;
+            s?.addEventListener('abort', () => reject(new Error('Aborted')));
+          }),
+      );
+
+      const done = logout();
+      await jest.advanceTimersByTimeAsync(UNREGISTER_TIMEOUT_MS - 1);
+      expect(unregisterSignal?.aborted).toBe(false);
+      expect(apiLogout).not.toHaveBeenCalled();
+
+      await jest.advanceTimersByTimeAsync(1);
+      expect(unregisterSignal?.aborted).toBe(true);
+      expect(apiLogout).toHaveBeenCalledTimes(1);
+
+      await jest.advanceTimersByTimeAsync(REVOKE_TIMEOUT_MS - 1);
+      expect(revokeSignal?.aborted).toBe(false);
+      await jest.advanceTimersByTimeAsync(1);
+      await done;
+      expect(revokeSignal?.aborted).toBe(true);
+      expect(useAppStore.getState().authToken).toBeNull();
+    } finally {
+      jest.useRealTimers();
+    }
   });
 
   it('after a 401 (token already gone) only forgets the token locally', async () => {

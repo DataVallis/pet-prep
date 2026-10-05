@@ -2,7 +2,10 @@
  * Ask for the notification permission at a good moment (M3-02), with our own
  * Slovenian explanation first (the system prompt can be shown only once on iOS):
  *  - child: right after signing the contract (the pet is born);
- *  - parent: right after adding a child.
+ *  - parent: right after adding a child;
+ *  - both (PR #35): the first dashboard / HUD view of a session while the user
+ *    hasn't decided (`usePushPromptOnFirstView`).
+ * The parent's "Obvestila" row in Nadzor shows the status and enables directly.
  *
  * "Ne zdaj" is remembered; we ask again at the next good moment after 3 days.
  * A permanent "no" (system) is respected — no nagging, the settings app is the way back.
@@ -10,7 +13,7 @@
 
 import * as Notifications from 'expo-notifications';
 import * as SecureStore from 'expo-secure-store';
-import { Alert, Platform } from 'react-native';
+import { Alert, Linking, Platform } from 'react-native';
 
 import { PRE_PROMPT_RETRY_MS, PUSH_STORAGE_KEYS, PUSH_STRINGS, type PushAudience } from '@/modules/push/pushConfig';
 import { ensureAndroidChannels, isPushAllowed, registerForPush } from '@/modules/push/pushRegistration';
@@ -43,7 +46,30 @@ async function declinedRecently(now: number): Promise<boolean> {
   }
 }
 
-export async function maybeAskForPush(audience: PushAudience, now: number = Date.now()): Promise<PushPromptOutcome> {
+export interface MaybeAskOptions {
+  /**
+   * First-view prompt (PR #35): only ask when the user hasn't decided yet; an
+   * already allowed install is registered by `usePushNotifications`, not here.
+   */
+  onlyIfUndetermined?: boolean;
+}
+
+/** One question at a time (contract → HUD first view can overlap). */
+let inFlight: Promise<PushPromptOutcome> | null = null;
+
+export function maybeAskForPush(
+  audience: PushAudience,
+  now: number = Date.now(),
+  options: MaybeAskOptions = {},
+): Promise<PushPromptOutcome> {
+  if (inFlight) return inFlight;
+  inFlight = askForPush(audience, now, options).finally(() => {
+    inFlight = null;
+  });
+  return inFlight;
+}
+
+async function askForPush(audience: PushAudience, now: number, { onlyIfUndetermined = false }: MaybeAskOptions): Promise<PushPromptOutcome> {
   if (Platform.OS !== 'ios' && Platform.OS !== 'android') return 'skipped';
 
   let permissions: Notifications.NotificationPermissionsStatus;
@@ -54,6 +80,7 @@ export async function maybeAskForPush(audience: PushAudience, now: number = Date
   }
 
   if (isPushAllowed(permissions)) {
+    if (onlyIfUndetermined) return 'skipped';
     const result = await registerForPush();
     return result.status === 'registered' ? 'registered' : 'granted';
   }
@@ -82,4 +109,57 @@ export async function maybeAskForPush(audience: PushAudience, now: number = Date
 
   const result = await registerForPush();
   return result.status === 'registered' ? 'registered' : 'granted';
+}
+
+/** Notification permission as the parent's "Obvestila" row shows it (PR #35). */
+export type PushPermissionStatus = 'on' | 'off' | 'blocked' | 'unsupported';
+
+export async function getPushPermissionStatus(): Promise<PushPermissionStatus> {
+  if (Platform.OS !== 'ios' && Platform.OS !== 'android') return 'unsupported';
+  try {
+    const permissions = await Notifications.getPermissionsAsync();
+    if (isPushAllowed(permissions)) return 'on';
+    return permissions.canAskAgain ? 'off' : 'blocked';
+  } catch {
+    return 'unsupported';
+  }
+}
+
+/**
+ * The user tapped "Vklopi obvestila" (Nadzor): ask the system right away (the row
+ * itself explains why), or open the phone settings once the system won't ask again.
+ * Clears an earlier "Ne zdaj".
+ */
+export async function enablePushNotifications(): Promise<PushPermissionStatus> {
+  const status = await getPushPermissionStatus();
+  if (status === 'unsupported') return status;
+  if (status === 'on') {
+    await registerForPush();
+    return 'on';
+  }
+  if (status === 'blocked') {
+    try {
+      await Linking.openSettings();
+    } catch {
+      // Nothing else we can do.
+    }
+    return 'blocked';
+  }
+
+  try {
+    await SecureStore.deleteItemAsync(PUSH_STORAGE_KEYS.declinedAt);
+  } catch {
+    // Not important.
+  }
+  try {
+    await ensureAndroidChannels();
+    const answer = await Notifications.requestPermissionsAsync({
+      ios: { allowAlert: true, allowSound: true, allowBadge: false },
+    });
+    if (!isPushAllowed(answer)) return answer.canAskAgain ? 'off' : 'blocked';
+  } catch {
+    return 'off';
+  }
+  await registerForPush();
+  return 'on';
 }

@@ -17,7 +17,9 @@ use LogicException;
  * - receipts(): ≤ 1000 ticket ids → receipt per id.
  *
  * Errors: connection problems, 429 and 5xx → ExpoPushException (retryable);
- * any other 4xx or an unreadable body → ExpoPushException (not retryable).
+ * PUSH_TOO_MANY_EXPERIENCE_IDS → ExpoMixedProjectsException (tokens per
+ * project; the caller splits); any other 4xx or an unreadable body →
+ * ExpoPushException (not retryable).
  */
 class ExpoPushClient
 {
@@ -84,6 +86,17 @@ class ExpoPushClient
 
         if (! $response->successful()) {
             $code = $response->json('errors.0.code');
+
+            if ($code === 'PUSH_TOO_MANY_EXPERIENCE_IDS') {
+                $groups = [];
+                foreach ((array) $response->json('errors.0.details', []) as $project => $tokens) {
+                    if (is_string($project) && is_array($tokens)) {
+                        $groups[$project] = array_values(array_filter($tokens, 'is_string'));
+                    }
+                }
+
+                throw new ExpoMixedProjectsException($groups);
+            }
 
             throw new ExpoPushException(
                 "Expo rejected the request: HTTP {$response->status()}".(is_string($code) ? " {$code}" : ''),

@@ -29,6 +29,16 @@ class PushDeviceService
         $now = now();
         $accessTokenId = $accessToken !== null && $accessToken->exists ? $accessToken->getKey() : null;
 
+        // Audit a move to another account (PR #35 review) — ids only, never the token.
+        $previous = DevicePushToken::where('expo_push_token', $expoPushToken)->first(['id', 'user_id']);
+        if ($previous !== null && $previous->user_id !== $user->id) {
+            Log::info('Push: device moved to another account', [
+                'device_push_token_id' => $previous->id,
+                'from_user_id' => $previous->user_id,
+                'to_user_id' => $user->id,
+            ]);
+        }
+
         // Atomic insert-or-update on the unique token (ON CONFLICT): two
         // concurrent registrations of one install can't create two rows.
         DevicePushToken::upsert([[

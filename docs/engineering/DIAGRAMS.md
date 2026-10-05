@@ -945,18 +945,23 @@ sequenceDiagram
   E->>E: level up → activities_log + PetUpdated::afterCommit
   E->>N: escalation(pet, type, metric)
   N->>F: phase 1/2 → caretakerRecipients · phase 3 → parentRecipients · illness / game over → both
+  Note over N: energy phase 1/2 → walk_reminder (normal, 1 per local day)
   alt PUSH_ENABLED=false
     N-->>E: nothing (no row)
-  else quiet hours now · same pet+type within 30 min · nobody to reach
+  else same pet+type within 30 min (walk: same day) · nobody to reach · quiet hours (phase 1/2/3)
     N->>DB: status suppressed (+ reason) — never sent later
+  else quiet hours (illness / game over) · walk before last quiet end + 2 h
+    N->>DB: status scheduled, send_after (push:dispatch-scheduled queues it when due)
   else
     N->>DB: status queued (uuid idempotency key, recipient ids only)
     N->>Q: dispatch after commit
   end
   Q->>J: run (unique per notification, 5 tries, backoff 10/30/60/180 s)
-  J->>J: still queued? quiet hours now? → suppressed
+  J->>J: still queued? pet locked (not illness/game over) / walk done → suppressed; quiet or too early → held again
   J->>X: POST /push/send, ≤ 100 messages {to, title "PetPrep", body (sl), data {type, pet_id}, priority, channelId, ttl}
-  alt connection / 429 / 5xx
+  alt PUSH_TOO_MANY_EXPERIENCE_IDS
+    X-->>J: tokens per Expo project → one request per project
+  else connection / 429 / 5xx
     X-->>J: error → retry (devices with a ticket are skipped)
   else other 4xx
     X-->>J: rejected → failed (no retry)
@@ -980,7 +985,8 @@ flowchart LR
   S --> PR["delete push rows older than 30 days"]
   REG["POST /api/devices (login, app start, token rotation)"] -->|"upsert by token; re-enables;<br/>moves to the account that registered last"| DEV["device_push_tokens"]
   DEV -.->|"FK cascade"| PAT["personal_access_tokens<br/>(logout · revoke all · prune 4th device)"]
-  DEL["DELETE /api/devices/{token} (logout)"] --> DEV
+  DEL["POST /api/devices/unregister {expo_push_token} (logout)"] --> DEV
+  DS["push:dispatch-scheduled (every minute)"] -->|"scheduled → queued when send_after passed"| CJ2["SendPushNotification"]
   ACC["child / parent account deleted"] --> DEV
 ```
 
@@ -991,6 +997,8 @@ flowchart TD
   SI["sign-in / session restore"] --> AL{"notifications already allowed?"}
   AL -- no --> W["wait for a good moment"]
   AL -- yes --> REG["Android channels default + alarm → Expo token (EAS projectId) → POST /api/devices → token in SecureStore"]
+  W --> C0["first dashboard / HUD view of the session"]
+  C0 --> PP
   W --> C1["child: contract signed (pet born)"]
   W --> C2["parent: child profile created"]
   C1 --> PP["Slovenian pre-prompt (Alert)"]
@@ -1002,5 +1010,7 @@ flowchart TD
   TAP["push tapped (live or cold start, once)"] --> RO{"role"}
   RO -- child --> HUD["close album, refetch ['child','pet'] → HUD"]
   RO -- parent --> PT["store.pushTarget = {petId} → dashboard opens that child's detail"]
-  LO["logout"] --> UN["DELETE /api/devices/{token} → POST /api/logout"]
+  NZ["Nadzor → Obvestila"] -->|"off"| SYS
+  NZ -->|"blocked"| SET["phone settings"]
+  LO["logout"] --> UN["POST /api/devices/unregister (≤ 2 s) → POST /api/logout (≤ 5 s)"]
 ```

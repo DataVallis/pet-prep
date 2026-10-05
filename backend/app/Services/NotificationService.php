@@ -9,24 +9,39 @@ use App\Models\Pet;
 use App\Models\PushNotification;
 use App\Models\PushTicket;
 use App\Models\User;
+use App\Services\Push\ExpoMixedProjectsException;
 use App\Services\Push\ExpoPushClient;
 use App\Services\Push\PushCopy;
 use App\Services\Push\PushDeviceService;
+use App\Services\Push\PushTiming;
+use Carbon\CarbonInterface;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 /**
- * Escalation push notifications (M3-02, PRODUCT_SPEC §6/§7).
+ * Escalation push notifications (M3-02, PRODUCT_SPEC §6/§7; PR #35 review).
  *
  * escalation() is called by EscalationService inside its per-pet
- * transaction (pet row locked): it decides — recipients, quiet hours,
- * duplicate guard — writes one push_notifications row and queues
- * SendPushNotification after commit. No HTTP here.
+ * transaction (pet row locked): it decides — recipients, duplicate guard,
+ * timing — writes one push_notifications row and, when it may go out now,
+ * queues SendPushNotification after commit. No HTTP here.
  *
- * deliver() runs in the job: builds one message per enabled device of the
- * recipients, sends in chunks of ≤ 100, stores one ticket per device
- * (idempotent per notification + device), disables DeviceNotRegistered tokens.
+ * Timing (family-local clock, `timing()`):
+ *  - phase 1 / 2 caused by energy become ONE `walk_reminder` per local day
+ *    (normal priority, default channel), not before 2 h after the day's last
+ *    quiet stretch ended — held (`scheduled`) until then;
+ *  - quiet hours: illness / game over are held until the quiet stretch ends,
+ *    every other push is dropped.
+ * `push:dispatch-scheduled` (every minute) queues held rows when due.
+ *
+ * deliver() runs in the job: re-checks the pet (hard stop / inactive / game
+ * over / ill → dropped, except illness / game over news; walk done → dropped)
+ * and the timing, builds one message per enabled device of the recipients,
+ * sends in chunks of ≤ 100 (split per Expo project on
+ * PUSH_TOO_MANY_EXPERIENCE_IDS), stores one ticket per device (idempotent per
+ * notification + device), disables DeviceNotRegistered tokens.
  * checkReceipts() reads the receipts ≥ 15 min later.
  *
  * Payload data = {type, pet_id} only. Texts come from PushCopy (no names).
@@ -38,14 +53,17 @@ class NotificationService
 
     public const RECEIPT_MAX_AGE_HOURS = 24;
 
+    /** Held rows queued per `push:dispatch-scheduled` run. */
+    public const DISPATCH_BATCH = 500;
+
     public function __construct(
         private readonly FamilyService $families,
         private readonly PushDeviceService $devices,
     ) {}
 
     /**
-     * Record + queue the push for one escalation step of a pet whose row
-     * the caller holds locked. Returns null when push is switched off.
+     * Record + queue (or hold) the push for one escalation step of a pet whose
+     * row the caller holds locked. Returns null when push is switched off.
      */
     public function escalation(Pet $pet, PushType $type, ?string $metric = null): ?PushNotification
     {
@@ -53,13 +71,30 @@ class NotificationService
             return null;
         }
 
+        // Energy is the daily walk: never an alarm, one reminder per day.
+        if ($metric === 'energy' && in_array($type, [PushType::SoftWarning, PushType::CriticalAlert], true)) {
+            $type = PushType::WalkReminder;
+        }
+
+        $now = now();
         $recipients = $this->recipientsFor($pet, $type);
+        $status = PushNotification::STATUS_QUEUED;
+        $sendAfter = null;
         $suppressed = match (true) {
             $recipients === [] => 'no_recipients',
-            $pet->quietHours()?->isQuietNow() ?? false => 'quiet_hours',
-            $this->isDuplicate($pet, $type) => 'duplicate',
+            $this->isDuplicate($pet, $type, $now) => 'duplicate',
             default => null,
         };
+
+        if ($suppressed === null) {
+            [$action, $at, $reason] = $this->timing($pet, $type, $now);
+            if ($action === 'drop') {
+                $suppressed = $reason;
+            } elseif ($action === 'defer') {
+                $status = PushNotification::STATUS_SCHEDULED;
+                $sendAfter = $at;
+            }
+        }
 
         $notification = PushNotification::create([
             'idempotency_key' => (string) Str::uuid(),
@@ -67,8 +102,9 @@ class NotificationService
             'type' => $type,
             'metric' => $metric,
             'recipients' => $recipients,
-            'status' => $suppressed === null ? PushNotification::STATUS_QUEUED : PushNotification::STATUS_SUPPRESSED,
+            'status' => $suppressed === null ? $status : PushNotification::STATUS_SUPPRESSED,
             'suppressed_reason' => $suppressed,
+            'send_after' => $sendAfter,
         ]);
 
         if ($suppressed !== null) {
@@ -82,17 +118,52 @@ class NotificationService
             return $notification;
         }
 
-        SendPushNotification::dispatch($notification->id)
-            ->onQueue((string) config('push.queue'))
-            ->afterCommit();
+        if ($status === PushNotification::STATUS_SCHEDULED) {
+            Log::info('Push: held', [
+                'push_notification_id' => $notification->id,
+                'type' => $type->value,
+                'send_after' => $sendAfter?->toIso8601String(),
+            ]);
+
+            return $notification;
+        }
+
+        $this->dispatch($notification->id, afterCommit: true);
 
         return $notification;
     }
 
     /**
+     * `push:dispatch-scheduled`: queue held rows whose time has come. The
+     * job re-checks everything (quiet hours, pet state, walk).
+     */
+    public function dispatchScheduled(): int
+    {
+        $ids = PushNotification::where('status', PushNotification::STATUS_SCHEDULED)
+            ->where('send_after', '<=', now())
+            ->orderBy('send_after')
+            ->limit(self::DISPATCH_BATCH)
+            ->pluck('id');
+
+        $queued = 0;
+        foreach ($ids as $id) {
+            // Claim: a parallel run can't queue the same row twice.
+            $claimed = PushNotification::whereKey($id)
+                ->where('status', PushNotification::STATUS_SCHEDULED)
+                ->update(['status' => PushNotification::STATUS_QUEUED]);
+            if ($claimed === 1) {
+                $this->dispatch((int) $id, afterCommit: false);
+                $queued++;
+            }
+        }
+
+        return $queued;
+    }
+
+    /**
      * Send a queued notification (job). Safe to run twice: devices that
      * already have a ticket for it are skipped; a sent / suppressed / failed
-     * notification is not touched.
+     * / scheduled notification is not touched.
      */
     public function deliver(int $notificationId, ExpoPushClient $client): void
     {
@@ -103,10 +174,29 @@ class NotificationService
 
         $notification->increment('attempts');
         $pet = $notification->pet;
+        $type = $notification->type;
 
-        // A retry that slipped into quiet hours stays silent (spec §6).
-        if ($pet->quietHours()?->isQuietNow() ?? false) {
-            $this->markSuppressed($notification, 'quiet_hours');
+        // The game moved on since the decision (PR #35 review, item 6).
+        if (! $type->isLockNews() && $this->petLocked($pet)) {
+            $this->markSuppressed($notification, 'pet_locked');
+
+            return;
+        }
+        if ($type === PushType::WalkReminder && $pet->displayMetric('energy_level') > EscalationService::SOFT_WARNING_THRESHOLD) {
+            $this->markSuppressed($notification, 'walk_done');
+
+            return;
+        }
+
+        // A retry / held row that meets quiet hours or comes too early.
+        [$action, $at, $reason] = $this->timing($pet, $type, $notification->created_at);
+        if ($action === 'drop') {
+            $this->markSuppressed($notification, (string) $reason);
+
+            return;
+        }
+        if ($action === 'defer') {
+            $notification->forceFill(['status' => PushNotification::STATUS_SCHEDULED, 'send_after' => $at])->save();
 
             return;
         }
@@ -129,16 +219,9 @@ class NotificationService
         $pending = $devices->reject(fn (DevicePushToken $d): bool => in_array($d->id, $done, true))->values();
 
         foreach ($pending->chunk((int) config('push.chunk_size', 100)) as $chunk) {
-            $chunk = $chunk->values();
-            $messages = $chunk->map(fn (DevicePushToken $d): array => $this->message(
-                $notification, $d, $audience[$d->user_id] ?? PushNotification::AUDIENCE_CHILD,
-            ))->all();
-
             // Throws on transport / Expo errors → the job retries; tickets
-            // stored for earlier chunks keep those devices from a repeat.
-            $tickets = $client->send($messages);
-
-            $this->storeTickets($notification, $chunk, $tickets);
+            // stored for earlier chunks / groups keep those devices from a repeat.
+            $this->sendChunk($notification, $chunk->values(), $audience, $client);
         }
 
         $notification->forceFill([
@@ -212,7 +295,7 @@ class NotificationService
 
     /**
      * Who hears about which step (single recipient resolution: FamilyService).
-     * Phase 1 / 2 → caretakers; phase 3 → all parents; illness / game over →
+     * Phase 1 / 2 and the walk reminder → caretakers; phase 3 → all parents; illness / game over →
      * parents + caretakers.
      *
      * @return list<array{user_id: int, audience: string}>
@@ -225,7 +308,7 @@ class NotificationService
             ->map(fn (User $u): array => ['user_id' => $u->id, 'audience' => PushNotification::AUDIENCE_PARENT]);
 
         $list = match ($type) {
-            PushType::SoftWarning, PushType::CriticalAlert => $children(),
+            PushType::SoftWarning, PushType::CriticalAlert, PushType::WalkReminder => $children(),
             PushType::ParentAlarm => $parents(),
             PushType::Illness, PushType::GameOver => $parents()->concat($children()),
         };
@@ -233,13 +316,114 @@ class NotificationService
         return $list->unique('user_id')->values()->all();
     }
 
-    private function isDuplicate(Pet $pet, PushType $type): bool
+    /**
+     * Same pet + type within PUSH_DEDUPE_MINUTES (held, queued or sent); the
+     * walk reminder at most once per family-local day.
+     */
+    private function isDuplicate(Pet $pet, PushType $type, CarbonInterface $now): bool
     {
+        $since = $type === PushType::WalkReminder
+            ? Carbon::instance($now)->setTimezone($pet->familyTimezone())->startOfDay()->utc()
+            : Carbon::instance($now)->subMinutes((int) config('push.dedupe_minutes', 30));
+
         return PushNotification::where('pet_id', $pet->id)
             ->where('type', $type->value)
-            ->whereIn('status', [PushNotification::STATUS_QUEUED, PushNotification::STATUS_SENT])
-            ->where('created_at', '>', now()->subMinutes((int) config('push.dedupe_minutes', 30)))
+            ->whereIn('status', [PushNotification::STATUS_SCHEDULED, PushNotification::STATUS_QUEUED, PushNotification::STATUS_SENT])
+            ->where('created_at', $type === PushType::WalkReminder ? '>=' : '>', $since)
             ->exists();
+    }
+
+    /**
+     * When may this push go out (family-local clock)?
+     *  - walk reminder: not before PushTiming::walkReminderEarliest(); dropped
+     *    when that is no longer the day it was decided on;
+     *  - quiet hours: illness / game over held until the stretch ends, the
+     *    rest dropped.
+     *
+     * @return array{0: 'send'|'defer'|'drop', 1: Carbon|null, 2: string|null}
+     */
+    private function timing(Pet $pet, PushType $type, CarbonInterface $decidedAt): array
+    {
+        $now = now();
+        $quietHours = $pet->quietHours();
+        $timezone = $pet->familyTimezone();
+
+        if ($type === PushType::WalkReminder) {
+            $earliest = PushTiming::walkReminderEarliest($quietHours, $now, $timezone);
+            $day = Carbon::instance($decidedAt)->setTimezone($timezone)->toDateString();
+            if ($earliest->copy()->setTimezone($timezone)->toDateString() !== $day) {
+                return ['drop', null, 'walk_day_over'];
+            }
+
+            // Stored as UTC (timestamp columns drop the offset).
+            return $earliest->greaterThan($now) ? ['defer', $earliest->copy()->utc(), null] : ['send', null, null];
+        }
+
+        if ($quietHours?->isQuietNow($now) ?? false) {
+            return $type->isLockNews()
+                ? ['defer', PushTiming::quietStretchEnd($quietHours, $now)->utc(), null]
+                : ['drop', null, 'quiet_hours'];
+        }
+
+        return ['send', null, null];
+    }
+
+    private function petLocked(Pet $pet): bool
+    {
+        return (bool) $pet->is_hard_stopped || ! $pet->is_active || (bool) $pet->is_game_over || $pet->isIll();
+    }
+
+    private function dispatch(int $notificationId, bool $afterCommit): void
+    {
+        $pending = SendPushNotification::dispatch($notificationId)->onQueue((string) config('push.queue'));
+        if ($afterCommit) {
+            $pending->afterCommit();
+        }
+    }
+
+    /**
+     * Send one chunk and store its tickets. On PUSH_TOO_MANY_EXPERIENCE_IDS
+     * (tokens of more than one Expo project) the chunk is sent again per
+     * project, each group's tickets stored before the next request.
+     *
+     * @param  Collection<int, DevicePushToken>  $chunk
+     * @param  Collection<int, string>  $audience  user id → audience
+     */
+    private function sendChunk(PushNotification $notification, Collection $chunk, Collection $audience, ExpoPushClient $client): void
+    {
+        $messages = $chunk->map(fn (DevicePushToken $d): array => $this->message(
+            $notification, $d, $audience[$d->user_id] ?? PushNotification::AUDIENCE_CHILD,
+        ))->all();
+
+        try {
+            $this->storeTickets($notification, $chunk, $client->send($messages));
+
+            return;
+        } catch (ExpoMixedProjectsException $e) {
+            $projectOf = [];
+            foreach ($e->groups as $project => $tokens) {
+                foreach ($tokens as $token) {
+                    $projectOf[$token] = $project;
+                }
+            }
+            $groups = $chunk->groupBy(fn (DevicePushToken $d): string => $projectOf[$d->expo_push_token] ?? '?');
+            if ($groups->count() < 2) {
+                throw $e; // nothing to split by — give up (not retryable)
+            }
+
+            Log::warning('Push: tokens of several Expo projects — sending per project', [
+                'push_notification_id' => $notification->id,
+                'projects' => $groups->count(),
+            ]);
+
+            foreach ($groups as $group) {
+                $group = $group->values();
+                $groupMessages = $group->map(fn (DevicePushToken $d): array => $this->message(
+                    $notification, $d, $audience[$d->user_id] ?? PushNotification::AUDIENCE_CHILD,
+                ))->all();
+                $this->storeTickets($notification, $group, $client->send($groupMessages));
+            }
+        }
     }
 
     /**

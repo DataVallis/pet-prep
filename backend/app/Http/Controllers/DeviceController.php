@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\RegisterDeviceRequest;
+use App\Http\Requests\UnregisterDeviceRequest;
 use App\Models\User;
 use App\Services\Push\PushDeviceService;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Laravel\Sanctum\PersonalAccessToken;
 
@@ -53,17 +53,14 @@ class DeviceController extends Controller
      * Stop pushes to this install (logout). Idempotent: an unknown token or
      * one registered by another account also answers 204.
      *
-     * DELETE /api/devices/{token}
+     * POST /api/devices/unregister
      */
-    public function destroy(Request $request, string $token): Response
+    public function unregister(UnregisterDeviceRequest $request): Response
     {
         /** @var User $user */
         $user = $request->user();
-        if (! $user->can('managePushDevices', User::class)) {
-            abort(403);
-        }
 
-        $this->devices->unregister($user, $token);
+        $this->devices->unregister($user, (string) $request->validated('expo_push_token'));
 
         return response()->noContent();
     }

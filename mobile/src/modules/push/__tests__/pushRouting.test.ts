@@ -34,6 +34,7 @@ describe('parsePushData', () => {
   it('accepts exactly {type, pet_id} of a PetPrep escalation push', () => {
     expect(parsePushData({ type: 'critical_alert', pet_id: 7 })).toEqual({ type: 'critical_alert', petId: 7 });
     expect(parsePushData({ type: 'soft_warning', pet_id: '12' })).toEqual({ type: 'soft_warning', petId: 12 });
+    expect(parsePushData({ type: 'walk_reminder', pet_id: 3 })).toEqual({ type: 'walk_reminder', petId: 3 });
   });
 
   it.each([null, 'x', {}, { type: 'marketing', pet_id: 1 }, { type: 'soft_warning' }, { type: 'soft_warning', pet_id: -1 }, { type: 'soft_warning', pet_id: 1.5 }])(
@@ -46,6 +47,7 @@ describe('parsePushData', () => {
   it('treats phase 2 and above as urgent', () => {
     expect(isUrgentPush('soft_warning')).toBe(false);
     expect(isUrgentPush('critical_alert')).toBe(true);
+    expect(isUrgentPush('walk_reminder')).toBe(false);
     expect(isUrgentPush('parent_intervention_alarm')).toBe(true);
     expect(isUrgentPush(null)).toBe(false);
   });

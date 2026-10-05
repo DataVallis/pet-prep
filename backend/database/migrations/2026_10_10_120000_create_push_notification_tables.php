@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Schema;
  *   revocation / pruning (personal_access_tokens rows deleted) removes the
  *   push token with it (FK cascade).
  * - push_notifications: one row per escalation push decision (audit, duplicate
- *   guard, idempotency key); recipients are user ids, never names.
+ *   guard, idempotency key); recipients are user ids, never names. `scheduled`
+ *   rows wait for `send_after` (push:dispatch-scheduled).
  * - push_tickets: one Expo ticket per (notification, device) — the unique key
  *   makes a retried send job skip devices that already got the message;
  *   receipts are checked later (DeviceNotRegistered → token disabled).
@@ -50,6 +51,9 @@ return new class extends Migration
             // [{"user_id": 12, "audience": "child"}, …] — ids only, no names.
             $table->jsonb('recipients');
             $table->string('status', 16);
+            // Deferred sends (PR #35 review): illness / game over held over quiet
+            // hours, the daily walk reminder held until its earliest time.
+            $table->timestamp('send_after')->nullable();
             $table->string('suppressed_reason', 32)->nullable();
             $table->unsignedSmallInteger('attempts')->default(0);
             $table->timestamp('sent_at')->nullable();
@@ -57,10 +61,11 @@ return new class extends Migration
             $table->timestamps();
 
             $table->index(['pet_id', 'type', 'created_at']);
+            $table->index(['status', 'send_after']);
         });
 
-        DB::statement("ALTER TABLE push_notifications ADD CONSTRAINT push_notifications_status_check CHECK (status IN ('queued', 'sent', 'suppressed', 'failed'))");
-        DB::statement("ALTER TABLE push_notifications ADD CONSTRAINT push_notifications_type_check CHECK (type IN ('soft_warning', 'critical_alert', 'parent_intervention_alarm', 'illness_triggered', 'game_over_virtual_shelter'))");
+        DB::statement("ALTER TABLE push_notifications ADD CONSTRAINT push_notifications_status_check CHECK (status IN ('scheduled', 'queued', 'sent', 'suppressed', 'failed'))");
+        DB::statement("ALTER TABLE push_notifications ADD CONSTRAINT push_notifications_type_check CHECK (type IN ('soft_warning', 'critical_alert', 'walk_reminder', 'parent_intervention_alarm', 'illness_triggered', 'game_over_virtual_shelter'))");
 
         Schema::create('push_tickets', function (Blueprint $table) {
             $table->id();

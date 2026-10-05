@@ -15,6 +15,9 @@ import { useAppStore } from '@/store/appStore';
 /** The server revoke is best effort: give up after this long so "Odjava" never hangs offline. */
 export const REVOKE_TIMEOUT_MS = 5_000;
 
+/** The push unregister (M3-02, PR #35) gets its own short budget before the revoke's. */
+export const UNREGISTER_TIMEOUT_MS = 2_000;
+
 interface LogoutOptions {
   /** Call `POST /api/logout` first. False when the server already rejected the token (401). */
   revoke?: boolean;
@@ -23,11 +26,12 @@ interface LogoutOptions {
 export async function logout({ revoke = true }: LogoutOptions = {}): Promise<void> {
   const userId = useAppStore.getState().user?.id ?? null;
   if (revoke) {
+    // M3-02: no more pushes to this phone (needs the token, so before the revoke);
+    // at most 2 s, never eats into the revoke's 5 s. Never throws.
+    await unregisterFromPush({ timeoutMs: UNREGISTER_TIMEOUT_MS });
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), REVOKE_TIMEOUT_MS);
     try {
-      // M3-02: no more pushes to this phone (needs the token, so before the revoke).
-      await unregisterFromPush({ signal: controller.signal });
       await api.logout(controller.signal);
     } catch {
       // Offline, aborted, or token already invalid — local logout must still happen.

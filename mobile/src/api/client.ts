@@ -436,11 +436,15 @@ export const api = {
     }),
 
   /**
-   * DELETE /api/devices/{token} (M3-02) — stop pushes to this install (logout). 204,
-   * idempotent. The token (`ExponentPushToken[…]`) is URL-encoded into the path.
+   * POST /api/devices/unregister (M3-02, PR #35) — stop pushes to this install
+   * (logout). 204, idempotent. The token travels in the body, never in the URL.
    */
   unregisterDevice: (expoPushToken: string, signal?: AbortSignal) =>
-    apiRequest<null>(`/api/devices/${encodeURIComponent(expoPushToken)}`, { method: 'DELETE', signal }),
+    apiRequest<null>('/api/devices/unregister', {
+      method: 'POST',
+      body: { expo_push_token: expoPushToken } satisfies components['schemas']['UnregisterDeviceRequest'],
+      signal,
+    }),
 
   /** POST /api/logout — Revoke the current token. Pass a signal to abort (offline logout). */
   logout: (signal?: AbortSignal) =>

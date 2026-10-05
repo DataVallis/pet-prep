@@ -119,7 +119,11 @@ export async function registerForPush(): Promise<PushRegistrationResult> {
  * Logout: remove this install's registration (best effort, before the session token
  * is revoked — the server would drop it with the token anyway).
  */
-export async function unregisterFromPush({ signal, callServer = true }: { signal?: AbortSignal; callServer?: boolean } = {}): Promise<void> {
+export async function unregisterFromPush({
+  signal,
+  callServer = true,
+  timeoutMs,
+}: { signal?: AbortSignal; callServer?: boolean; timeoutMs?: number } = {}): Promise<void> {
   let token: string | null = null;
   try {
     token = await SecureStore.getItemAsync(PUSH_STORAGE_KEYS.token);
@@ -127,10 +131,18 @@ export async function unregisterFromPush({ signal, callServer = true }: { signal
     token = null;
   }
   if (token && callServer) {
+    // Own timeout (logout: 2 s) on top of an optional caller signal.
+    const controller = new AbortController();
+    const onAbort = () => controller.abort();
+    signal?.addEventListener('abort', onAbort);
+    const timer = timeoutMs !== undefined ? setTimeout(() => controller.abort(), timeoutMs) : null;
     try {
-      await api.unregisterDevice(token, signal);
+      await api.unregisterDevice(token, controller.signal);
     } catch {
-      // Offline / aborted / already gone — fine.
+      // Offline / aborted / already gone — fine (the revoke drops it server side).
+    } finally {
+      if (timer !== null) clearTimeout(timer);
+      signal?.removeEventListener('abort', onAbort);
     }
   }
   try {

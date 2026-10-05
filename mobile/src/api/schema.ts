@@ -464,7 +464,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/devices/{token}": {
+    "/devices/unregister": {
         parameters: {
             query?: never;
             header?: never;
@@ -473,13 +473,13 @@ export interface paths {
         };
         get?: never;
         put?: never;
-        post?: never;
         /**
          * Stop pushes to this install (logout). Idempotent: an unknown token or
          *     one registered by another account also answers 204
-         * @description DELETE /api/devices/{token}
+         * @description POST /api/devices/unregister
          */
-        delete: operations["device.destroy"];
+        post: operations["device.unregister"];
+        delete?: never;
         options?: never;
         head?: never;
         patch?: never;
@@ -1075,6 +1075,15 @@ export interface components {
              *     date-only and offset-less strings.
              */
             recorded_at: string;
+        };
+        /**
+         * UnregisterDeviceRequest
+         * @description POST /api/devices/unregister (M3-02, PR #35 review): stop pushes to this
+         *     install. The token travels in the body (not the URL, so it never lands in
+         *     access logs).
+         */
+        UnregisterDeviceRequest: {
+            expo_push_token: string;
         };
         /** UpdateParentSettingsRequest */
         UpdateParentSettingsRequest: {
@@ -2466,16 +2475,18 @@ export interface operations {
             422: components["responses"]["ValidationException"];
         };
     };
-    "device.destroy": {
+    "device.unregister": {
         parameters: {
             query?: never;
             header?: never;
-            path: {
-                token: string;
-            };
+            path?: never;
             cookie?: never;
         };
-        requestBody?: never;
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["UnregisterDeviceRequest"];
+            };
+        };
         responses: {
             /** @description No content */
             204: {
@@ -2485,21 +2496,8 @@ export interface operations {
                 content?: never;
             };
             401: components["responses"]["AuthenticationException"];
-            /** @description An error */
-            403: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "application/json": {
-                        /**
-                         * @description Error overview.
-                         * @example
-                         */
-                        message: string;
-                    };
-                };
-            };
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
         };
     };
     "falAiWebhook.handle": {
