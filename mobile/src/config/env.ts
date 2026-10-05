@@ -1,6 +1,14 @@
 /**
  * Environment configuration for PetPrep mobile app.
- * Values are read from app.json extras or fall back to localhost defaults.
+ *
+ * `EXPO_PUBLIC_*` variables are inlined by Metro at bundle time (from `mobile/.env`
+ * locally, from `eas.json` `build.<profile>.env` / EAS environment variables on EAS
+ * Build). Unset → the production defaults below (`https://api.petprep.si`, Reverb
+ * over wss on 443 behind Caddy, which proxies `/app/*` to `reverb:8080`).
+ *
+ * `EXPO_PUBLIC_REVERB_APP_KEY` must equal the server's `REVERB_APP_KEY`
+ * (`/opt/petprep/.env`) — a public identifier, not a secret; a mismatch makes Reverb
+ * refuse the socket and the HUD falls back to 10 s polling (grey refresh icon).
  */
 
 export const ENV = {

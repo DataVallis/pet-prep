@@ -9,7 +9,7 @@ PetPrep uses a **dual-profile model**:
 - **Child Profile** — Video HUD interface, performs daily pet maintenance tasks (feeding, watering, cleaning, walking), tracks step counts, receives escalation alerts.
 
 ## Tech Stack
-- **Frontend:** React Native (Expo SDK 57) + NativeWind (Tailwind CSS)
+- **Frontend:** React Native (Expo SDK 57), styled with React Native `StyleSheet` (NativeWind removed 2026-10-05, see ADR-002)
 - **Backend:** Laravel 11 API (PHP 8.5) + Laravel Filament (admin)
 - **Database:** PostgreSQL 18
 - **Real-time:** Laravel Reverb WebSockets
@@ -24,7 +24,7 @@ PetPrep/
 │   ├── compose.yaml    # Laravel Sail Docker Compose config
 │   ├── sail            # Sail launcher script
 │   └── docker/         # Published Sail Dockerfiles (PHP 8.0–8.5, pgsql, mysql, mariadb)
-├── mobile/         # React Native / Expo SDK 57 app (NativeWind, TanStack Query, Zustand)
+├── mobile/         # React Native / Expo SDK 57 app (StyleSheet, TanStack Query, Zustand)
 ├── scripts/        # TypeScript SDK generation script (openapi-typescript)
 ├── HANDOFF.md      # Continuous handoff & state directory (all 9 phases documented)
 ├── ACCESS.md       # Credentials, URLs, webhook testing, database commands
@@ -179,7 +179,7 @@ npm run test:mobile           # mobile Jest tests
 **Consequences:** Tighter Laravel integration, shared auth via Sanctum, no need for a separate Node.js process. Reverb is purpose-built for Laravel broadcasting.
 
 ### ADR-002: NativeWind over StyleSheet
-**Status:** Accepted
+**Status:** Superseded (2026-10-05) — NativeWind `className` styles were silently dropped in the production (TestFlight) build because babel-preset-expo (SDK 57) adds the `react-native-worklets` Babel plugin automatically, which conflicts with NativeWind's `jsxImportSource`. Only 4 files still used it; they were converted to `StyleSheet` and NativeWind / Tailwind removed. The app is styled with `StyleSheet` only (guard: `mobile/src/__tests__/noClassName.test.ts`). See `docs/product/DECISIONS.md`.
 **Context:** The child app uses complex glassmorphism HUD overlays and dynamic color states (traffic-light system).
 **Decision:** Use NativeWind (Tailwind CSS for React Native) instead of raw StyleSheet.
 **Consequences:** Faster styling iteration, consistent design tokens, utility-first classes map directly to the design system specified in Phase 5.

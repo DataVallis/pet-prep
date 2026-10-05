@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-05 — Popravki s prvega TestFlighta: sprehod, merilniki, povezava v živo
+
+**Kaj se je zgodilo:** David je na iPhonu (TestFlight) našel tri napake; vse tri so popravljene na veji `fix/mobile-unstyled-overlays`:
+- **Okno »Sprehod« je bilo brez oblike** (črno besedilo levo zgoraj čez igro). Vzrok: knjižnica za sloge (NativeWind) se v produkcijski gradnji ni ujela z orodjem, ki ga Expo doda samodejno. Uporabljale so jo le 4 datoteke → prepisane v standardne sloge React Native, knjižnica odstranjena (≈ 440 vrstic manj v `yarn.lock`), test pa prepreči, da bi se vrnila.
+- **Četrti merilnik (Čistoča) se je skrival pod gumbi.** Merilniki se zdaj prilagodijo velikosti zaslona (od iPhona SE do Pro Maxa) in izrezu/otoku zgoraj; »ENERGIJA« se ne lomi več v dve vrstici.
+- **Rdeč »BREZ POVEZAVE«, čeprav je vse delovalo.** Našli smo dve napaki v povezavi v živo (knjižnica pusher-js na telefonu izvaža drugače kot v brskalniku; nastavitev prenosov je izklopila edino pot, ki jo uporablja). Telefon se zdaj lahko poveže v živo; kadar povezave v živo ni, otrok vidi le majhno sivo ikono osveževanja namesto rdečega opozorila.
+- **Številke:** 59 novih testov v aplikaciji (skupaj **698 zelenih**), merilniki preverjeni na 6 velikostih zaslona.
+
+**Zakaj je pomembno**
+Prvi pravi test na telefonu je pokazal, česar testi na računalniku niso: razliko med razvojno in produkcijsko gradnjo. Zdaj imamo teste, ki preverijo pravo knjižnico za telefon in velikosti pravih zaslonov.
+
+**Kako to povedati**
+- 🛠 *"Expo SDK 57 doda Babel plugin za worklets samodejno — z NativeWindovim jsxImportSource se v release gradnji className tiho izgubi. Mi smo NativeWind odstranili (4 datoteke), pusher-js RN build pa izvaža `{ Pusher }` brez default exporta, in `enabledTransports: ['wss']` z `forceTLS` izklopi vse prenose."*
+- 👩 *"Otrok ne vidi več strašljivih rdečih opozoril — kuža se osvežuje tudi, ko povezava v živo za hip pade."*
+
 ## 2026-10-05 — Starši lahko izbrišejo račun in izvozijo vse podatke (M2-08)
 
 **Kaj se je zgodilo:** V aplikaciji za starše je v zavihku **»Nadzor«** nov razdelek **»Račun«**:

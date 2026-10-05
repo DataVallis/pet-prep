@@ -5,7 +5,7 @@
 Root rules in `../CLAUDE.md` apply. Since 2026-10-02 this folder is a normal part of the `pet-prep` monorepo (no submodule).
 
 ## Stack
-Expo SDK 57 · React Native 0.86 · React 19 · TypeScript (strict) · NativeWind 4 (Tailwind 3) · Zustand 5 · TanStack Query 5 · laravel-echo + pusher-js · expo-video · expo-secure-store · expo-sensors · lucide-react-native · Jest (jest-expo) + RNTL.
+Expo SDK 57 · React Native 0.86 · React 19 · TypeScript (strict) · StyleSheet only (NativeWind removed 2026-10-05) · Zustand 5 · TanStack Query 5 · laravel-echo + pusher-js · expo-video · expo-secure-store · expo-sensors · lucide-react-native · Jest (jest-expo) + RNTL.
 Expo APIs change between SDKs — check https://docs.expo.dev/versions/v57.0.0/ (see AGENTS.md) before using any module. The `expo` Claude plugin is enabled in `.claude/settings.json`.
 
 ## Commands
@@ -17,7 +17,7 @@ Env: `EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_REVERB_APP_KEY|HOST|PORT|SCHEME` (see `
 - `src/api/client.ts` — the only place that calls `fetch`. Type requests/responses with `src/api/schema.ts` (generated; never hand-edit).
 - Server state → TanStack Query hooks (`src/hooks/queries/…`); Zustand (`src/store/appStore.ts`) only for session token, ws status, lock state, overlay visibility.
 - Screens in `src/screens/` (child) and `src/screens/parent/`; reusable UI in `src/components/`; feature modules in `src/modules/<feature>/`.
-- Styling: NativeWind classes; design tokens per README ADR-007 (child = dark glass HUD, parent = clean light). Status colours: emerald-500 / amber-500 / rose-500.
+- Styling: React Native `StyleSheet` only (no `className`; guarded by `src/__tests__/noClassName.test.ts`); design tokens per README ADR-007 (child = dark glass HUD, parent = clean light). Status colours: emerald-500 / amber-500 / rose-500.
 - Path aliases: `@/`, `@api/`, `@components/`, `@hooks/`, `@screens/`, `@store/`, `@modules/`, `@types/`, `@utils/`.
 - No `any`. No `console.log` left in committed code (use a tiny logger).
 
@@ -33,5 +33,6 @@ Env: `EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_REVERB_APP_KEY|HOST|PORT|SCHEME` (see `
 - Lock comes from the server state (`lockStateFromView` in the HUD, `lockStateFromPet` on restore — hard stop, inactive, illness, game over) with `lockDetails` for "do 18:30"; `LockedScreen` is rendered only by `AppNavigator`.
 - `expo-sensors` Pedometer cannot read step history on Android → Health Connect needed (M3-05).
 - HealthKit, RevenueCat and push require a **dev build**, not Expo Go.
-- Jest: NativeWind babel preset is disabled in tests. Keep `@react-native/jest-preset` pinned to the installed RN minor (0.86.x) — 0.87 mocks `react-native/setup-env`, which RN 0.86 lacks. TypeScript 6 needs explicit `"types": ["jest"]` in tsconfig.
+- Realtime: `enabledTransports: ['ws','wss']` always; Pusher constructor via `resolvePusherConstructor` (the RN build exports `{ Pusher }`). HUD geometry in `modules/hud/hudLayout.ts`.
+- Jest: Keep `@react-native/jest-preset` pinned to the installed RN minor (0.86.x) — 0.87 mocks `react-native/setup-env`, which RN 0.86 lacks. TypeScript 6 needs explicit `"types": ["jest"]` in tsconfig.
 - `usePetWebSocket(petId, handler?)` reports `connected` only after the channel subscription succeeds and drops events older than the last `emitted_at`; `useChildPet` polls every 10 s while not connected; the child routes broadcasts to `applyBroadcastToCache`, the parent (no handler) to the store. Jest runs with `TZ=UTC` (`jest.config.js`). Tests: `makeLiveChildState()` / `makeBroadcast()` in `test-utils/fixtures.ts`.

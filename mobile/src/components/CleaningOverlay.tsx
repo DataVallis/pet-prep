@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { useContext, useEffect, useRef, useState } from 'react';
+import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 
 const TOTAL_SPOTS = 5;
 
@@ -40,6 +41,8 @@ export interface CleaningOverlayProps {
 export default function CleaningOverlay({ onCleaned, onClose }: CleaningOverlayProps) {
   const [spots, setSpots] = useState<DirtSpot[]>([]);
   const reportedRef = useRef(false);
+  // Context (not the hook): renders without a SafeAreaProvider too (tests).
+  const insets = useContext(SafeAreaInsetsContext) ?? ZERO_INSETS;
 
   // Generate randomly positioned dirt spots on mount.
   useEffect(() => {
@@ -67,25 +70,16 @@ export default function CleaningOverlay({ onCleaned, onClose }: CleaningOverlayP
   };
 
   return (
-    <View className="absolute inset-0 z-20 bg-amber-950/70" testID="cleaning-overlay">
-      <View className="items-center pt-16">
-        <View className="flex-col items-center gap-2 rounded-2xl border border-white/10 bg-slate-900/40 px-6 py-4 backdrop-blur-md">
-          <Text className="text-2xl font-bold text-white">{CLEANING_STRINGS.title}</Text>
-          <Text className="font-mono text-sm text-amber-300">
-            {CLEANING_STRINGS.progress(cleanedCount, TOTAL_SPOTS)}
-          </Text>
+    <View style={styles.backdrop} testID="cleaning-overlay">
+      <View style={[styles.top, { paddingTop: Math.max(insets.top, 20) + 16 }]}>
+        <View style={styles.card}>
+          <Text style={styles.title}>{CLEANING_STRINGS.title}</Text>
+          <Text style={styles.progressText}>{CLEANING_STRINGS.progress(cleanedCount, TOTAL_SPOTS)}</Text>
+          <View style={styles.progressTrack} testID="cleaning-progress">
+            <View style={[styles.progressFill, { width: `${(cleanedCount / TOTAL_SPOTS) * 100}%` }]} />
+          </View>
         </View>
-        {cleanedCount === 0 && (
-          <Text className="mt-3 text-sm text-amber-400/80">{CLEANING_STRINGS.hint}</Text>
-        )}
-      </View>
-
-      {/* Progress indicator */}
-      <View className="absolute left-1/2 top-[120] h-1.5 w-32 -translate-x-1/2 overflow-hidden rounded-full bg-white/10">
-        <View
-          className="h-full rounded-full bg-amber-400"
-          style={{ width: `${(cleanedCount / TOTAL_SPOTS) * 100}%` }}
-        />
+        {cleanedCount === 0 && <Text style={styles.hint}>{CLEANING_STRINGS.hint}</Text>}
       </View>
 
       {spots.map((spot) =>
@@ -96,23 +90,124 @@ export default function CleaningOverlay({ onCleaned, onClose }: CleaningOverlayP
             accessibilityRole="button"
             accessibilityLabel={CLEANING_STRINGS.spot}
             onPress={() => handleCleanSpot(spot.id)}
-            className="absolute items-center justify-center rounded-full bg-amber-700/80 border border-amber-600/40 active:scale-75"
-            style={{ left: `${spot.x}%`, top: `${spot.y}%`, width: spot.size, height: spot.size }}
+            hitSlop={6}
+            style={({ pressed }) => [
+              styles.spot,
+              {
+                left: `${spot.x}%`,
+                top: `${spot.y}%`,
+                width: spot.size,
+                height: spot.size,
+                borderRadius: spot.size / 2,
+                marginLeft: -spot.size / 2,
+              },
+              pressed && styles.spotPressed,
+            ]}
           />
         ),
       )}
 
       {onClose && (
-        <View className="absolute bottom-16 w-full items-center">
+        <View style={[styles.bottom, { bottom: Math.max(insets.bottom, 16) + 32 }]}>
           <Pressable
             onPress={onClose}
             accessibilityRole="button"
-            className="rounded-xl bg-white/15 px-6 py-3 active:scale-95"
+            testID="cleaning-close"
+            style={({ pressed }) => [styles.closeButton, pressed && styles.pressed]}
           >
-            <Text className="text-sm font-semibold text-white">{CLEANING_STRINGS.close}</Text>
+            <Text style={styles.closeText}>{CLEANING_STRINGS.close}</Text>
           </Pressable>
         </View>
       )}
     </View>
   );
 }
+
+const ZERO_INSETS = { top: 0, bottom: 0 } as const;
+
+/** Dark glass HUD card over a warm brown "mess" veil. */
+const styles = StyleSheet.create({
+  backdrop: {
+    ...StyleSheet.absoluteFill,
+    zIndex: 20,
+    backgroundColor: 'rgba(69, 26, 3, 0.72)',
+  },
+  top: {
+    alignItems: 'center',
+    paddingHorizontal: 16,
+  },
+  card: {
+    alignItems: 'center',
+    gap: 8,
+    paddingHorizontal: 24,
+    paddingVertical: 16,
+    borderRadius: 24,
+    backgroundColor: 'rgba(15, 23, 42, 0.85)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.15)',
+  },
+  title: {
+    fontSize: 22,
+    fontWeight: '800',
+    color: '#ffffff',
+    textAlign: 'center',
+  },
+  progressText: {
+    fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#fcd34d',
+  },
+  progressTrack: {
+    marginTop: 4,
+    height: 6,
+    width: 128,
+    overflow: 'hidden',
+    borderRadius: 3,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+  },
+  progressFill: {
+    height: '100%',
+    borderRadius: 3,
+    backgroundColor: '#fbbf24',
+  },
+  hint: {
+    marginTop: 12,
+    fontSize: 14,
+    fontWeight: '600',
+    color: 'rgba(251, 191, 36, 0.85)',
+    textAlign: 'center',
+  },
+  spot: {
+    position: 'absolute',
+    backgroundColor: 'rgba(180, 83, 9, 0.85)',
+    borderWidth: 1,
+    borderColor: 'rgba(217, 119, 6, 0.45)',
+  },
+  spotPressed: {
+    transform: [{ scale: 0.75 }],
+  },
+  bottom: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    alignItems: 'center',
+  },
+  closeButton: {
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 16,
+    backgroundColor: 'rgba(255, 255, 255, 0.16)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.25)',
+  },
+  closeText: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#ffffff',
+  },
+  pressed: {
+    transform: [{ scale: 0.95 }],
+    opacity: 0.85,
+  },
+});

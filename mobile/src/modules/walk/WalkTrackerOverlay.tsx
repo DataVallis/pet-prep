@@ -1,4 +1,4 @@
-import { Platform, Pressable, Text, View } from 'react-native';
+import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import { Footprints, RefreshCw, X } from 'lucide-react-native';
 
 import type { ChildPetView } from '@/modules/childPet/childPetView';
@@ -39,50 +39,56 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
   const { permission } = stepSync;
 
   return (
-    <View className="absolute inset-0 z-30 items-center justify-center bg-slate-900/80" testID="walk-overlay">
-      <View className="w-80 rounded-3xl border border-white/20 bg-slate-800/90 p-6">
-        <View className="flex-row items-center justify-between">
-          <View className="flex-row items-center gap-2">
+    <View style={styles.backdrop} testID="walk-overlay" accessibilityViewIsModal>
+      <View style={styles.card}>
+        <View style={styles.headerRow}>
+          <View style={styles.titleRow}>
             <Footprints color="#ffffff" size={24} />
-            <Text className="text-lg font-bold text-white">{WALK_STRINGS.title}</Text>
+            <Text style={styles.title}>{WALK_STRINGS.title}</Text>
           </View>
-          <Pressable onPress={onClose} accessibilityRole="button" accessibilityLabel={WALK_STRINGS.close} className="active:scale-90">
-            <X color="#ffffff" size={24} />
+          <Pressable
+            onPress={onClose}
+            accessibilityRole="button"
+            accessibilityLabel={WALK_STRINGS.close}
+            hitSlop={8}
+            testID="walk-close"
+            style={({ pressed }) => [styles.closeButton, pressed && styles.pressedSmall]}
+          >
+            <X color="#ffffff" size={20} />
           </Pressable>
         </View>
 
-        <View className="mt-6 items-center">
-          <Text className="text-3xl font-bold text-white">
+        <View style={styles.stats}>
+          <Text style={styles.steps} adjustsFontSizeToFit numberOfLines={1}>
             {WALK_STRINGS.steps(formatSteps(steps), formatSteps(goal))}
           </Text>
-          <Text className="mt-1 text-sm text-emerald-300">{WALK_STRINGS.energy(energy)}</Text>
-          {shared && <Text className="mt-1 text-xs text-slate-300">{WALK_STRINGS.mine(formatSteps(mine))}</Text>}
+          <Text style={styles.energy}>{WALK_STRINGS.energy(energy)}</Text>
+          {shared && <Text style={styles.mine}>{WALK_STRINGS.mine(formatSteps(mine))}</Text>}
         </View>
 
-        <View className="mt-4 h-3 w-full overflow-hidden rounded-full bg-slate-700">
-          <View className="h-full rounded-full bg-emerald-400" style={{ width: `${progressPct}%` }} />
+        <View style={styles.progressTrack} testID="walk-progress">
+          <View style={[styles.progressFill, { width: `${progressPct}%` }]} />
         </View>
-        {progressPct >= 100 && (
-          <Text className="mt-2 text-center text-xs text-emerald-300">{WALK_STRINGS.goalReached}</Text>
-        )}
+        {progressPct >= 100 && <Text style={styles.goalReached}>{WALK_STRINGS.goalReached}</Text>}
 
-        <View className="mt-6 gap-3">
+        <View style={styles.actions}>
           {permission === 'unavailable' ? (
-            <Text className="text-center text-sm text-slate-300">{WALK_STRINGS.unavailable}</Text>
+            <Text style={styles.note}>{WALK_STRINGS.unavailable}</Text>
           ) : permission === 'denied' ? (
-            <Text className="text-center text-sm text-slate-300">{WALK_STRINGS.denied}</Text>
+            <Text style={styles.note}>{WALK_STRINGS.denied}</Text>
           ) : permission === 'undetermined' ? (
             <>
-              <Text className="text-center text-xs text-slate-300">{WALK_STRINGS.allowHint}</Text>
+              <Text style={styles.hint}>{WALK_STRINGS.allowHint}</Text>
               <Pressable
                 onPress={() => {
                   void stepSync.requestPermission();
                 }}
                 accessibilityRole="button"
-                className="flex-row items-center justify-center gap-2 rounded-xl bg-emerald-500 px-6 py-3 active:scale-95"
+                testID="walk-allow"
+                style={({ pressed }) => [styles.button, styles.primaryButton, pressed && styles.pressed]}
               >
                 <Footprints color="#ffffff" size={18} />
-                <Text className="text-sm font-semibold text-white">{WALK_STRINGS.allow}</Text>
+                <Text style={styles.buttonText}>{WALK_STRINGS.allow}</Text>
               </Pressable>
             </>
           ) : permission === 'granted' ? (
@@ -94,16 +100,20 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
                 disabled={stepSync.isSyncing}
                 accessibilityRole="button"
                 accessibilityState={{ disabled: stepSync.isSyncing }}
-                className="flex-row items-center justify-center gap-2 rounded-xl bg-white/20 px-6 py-3 active:scale-95 disabled:opacity-40"
+                testID="walk-refresh"
+                style={({ pressed }) => [
+                  styles.button,
+                  styles.secondaryButton,
+                  stepSync.isSyncing && styles.disabled,
+                  pressed && !stepSync.isSyncing && styles.pressed,
+                ]}
               >
                 <RefreshCw color="#ffffff" size={18} />
-                <Text className="text-sm font-semibold text-white">
+                <Text style={styles.buttonText}>
                   {stepSync.isSyncing ? WALK_STRINGS.syncing : WALK_STRINGS.refresh}
                 </Text>
               </Pressable>
-              {Platform.OS === 'android' && (
-                <Text className="text-center text-xs text-slate-400">{WALK_STRINGS.androidNote}</Text>
-              )}
+              {Platform.OS === 'android' && <Text style={styles.footnote}>{WALK_STRINGS.androidNote}</Text>}
             </>
           ) : null}
         </View>
@@ -111,3 +121,147 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
     </View>
   );
 }
+
+/** Dark glass HUD card (same tokens as the HUD header / dock in ChildHudScreen). */
+const styles = StyleSheet.create({
+  backdrop: {
+    ...StyleSheet.absoluteFill,
+    zIndex: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 16,
+    backgroundColor: 'rgba(2, 6, 23, 0.78)',
+  },
+  card: {
+    width: '100%',
+    maxWidth: 340,
+    padding: 24,
+    borderRadius: 24,
+    backgroundColor: 'rgba(15, 23, 42, 0.92)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.15)',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.5,
+    shadowRadius: 16,
+    elevation: 12,
+  },
+  headerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  titleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#ffffff',
+  },
+  closeButton: {
+    width: 34,
+    height: 34,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+  },
+  stats: {
+    marginTop: 24,
+    alignItems: 'center',
+  },
+  steps: {
+    fontSize: 28,
+    fontWeight: '800',
+    color: '#ffffff',
+  },
+  energy: {
+    marginTop: 4,
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#6ee7b7',
+  },
+  mine: {
+    marginTop: 4,
+    fontSize: 12,
+    color: '#cbd5e1',
+  },
+  progressTrack: {
+    marginTop: 16,
+    height: 12,
+    width: '100%',
+    overflow: 'hidden',
+    borderRadius: 6,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.15)',
+  },
+  progressFill: {
+    height: '100%',
+    borderRadius: 6,
+    backgroundColor: '#34d399',
+  },
+  goalReached: {
+    marginTop: 8,
+    textAlign: 'center',
+    fontSize: 12,
+    fontWeight: '600',
+    color: '#6ee7b7',
+  },
+  actions: {
+    marginTop: 24,
+    gap: 12,
+  },
+  note: {
+    textAlign: 'center',
+    fontSize: 14,
+    lineHeight: 20,
+    color: '#cbd5e1',
+  },
+  hint: {
+    textAlign: 'center',
+    fontSize: 12,
+    lineHeight: 17,
+    color: '#cbd5e1',
+  },
+  footnote: {
+    textAlign: 'center',
+    fontSize: 12,
+    color: '#94a3b8',
+  },
+  button: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 16,
+  },
+  primaryButton: {
+    backgroundColor: '#10b981',
+  },
+  secondaryButton: {
+    backgroundColor: 'rgba(255, 255, 255, 0.16)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.25)',
+  },
+  buttonText: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#ffffff',
+  },
+  disabled: {
+    opacity: 0.4,
+  },
+  pressed: {
+    transform: [{ scale: 0.95 }],
+    opacity: 0.85,
+  },
+  pressedSmall: {
+    transform: [{ scale: 0.9 }],
+  },
+});

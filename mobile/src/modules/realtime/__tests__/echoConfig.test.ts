@@ -67,16 +67,22 @@ describe('buildPusherOptions', () => {
       wsHost: 'api.petprep.si',
       wssPort: 443,
       forceTLS: true,
-      enabledTransports: ['wss'],
+      // NOT ['wss'] alone: with forceTLS pusher-js only uses the transport named `ws`.
+      enabledTransports: ['ws', 'wss'],
       disableStats: true,
     });
   });
 
-  it('uses plain ws only for local http development', () => {
+  it('uses plain ws (no TLS) for local http development', () => {
     const options = buildPusherOptions(LOCAL_ENV, authorize);
 
     expect(usesTls(LOCAL_ENV)).toBe(false);
-    expect(options).toMatchObject({ wsHost: '10.0.2.2', wsPort: 8080, forceTLS: false, enabledTransports: ['ws'] });
+    expect(options).toMatchObject({ wsHost: '10.0.2.2', wsPort: 8080, forceTLS: false, enabledTransports: ['ws', 'wss'] });
+  });
+
+  it('treats a wss scheme like https', () => {
+    expect(usesTls({ REVERB_SCHEME: 'wss' })).toBe(true);
+    expect(buildPusherOptions({ ...PROD_ENV, REVERB_SCHEME: 'wss' }, authorize).forceTLS).toBe(true);
   });
 
   it('authorizes private channels through the given authorize function', async () => {

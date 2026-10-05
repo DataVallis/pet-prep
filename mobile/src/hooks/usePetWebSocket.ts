@@ -17,26 +17,23 @@
 import { useEffect, useRef } from 'react';
 import Echo from 'laravel-echo';
 import Pusher from 'pusher-js';
-import type { Options as PusherOptions } from 'pusher-js';
 import { useAppStore } from '@/store/appStore';
 import { ENV } from '@/config/env';
 import { api } from '@/api/client';
-import { buildPusherOptions, petChannelName, PET_UPDATED_EVENT } from '@/modules/realtime/echoConfig';
+import {
+  buildPusherOptions,
+  petChannelName,
+  PET_UPDATED_EVENT,
+  resolvePusherConstructor,
+} from '@/modules/realtime/echoConfig';
 import type { PetUpdatedBroadcast } from '@/types';
-
-type PusherConstructor = new (appKey: string, options: PusherOptions) => Pusher;
-
-// Safely resolve the Pusher constructor across CJS and ESM interop.
-const pusherInterop: unknown = Pusher;
-const PusherClient: PusherConstructor =
-  typeof pusherInterop === 'function'
-    ? (pusherInterop as PusherConstructor)
-    : (pusherInterop as { default: PusherConstructor }).default;
 
 export type BroadcastHandler = (event: PetUpdatedBroadcast) => void;
 
 /** One Echo (= one websocket) for the app's Reverb, authorizing private channels with the Bearer token. */
 export function createEcho(): Echo<'reverb'> {
+  // Resolved per call (not at import): on device the import is `{ Pusher }` (RN build).
+  const PusherClient = resolvePusherConstructor<Pusher>(Pusher);
   return new Echo<'reverb'>({
     broadcaster: 'reverb',
     client: new PusherClient(ENV.REVERB_APP_KEY, buildPusherOptions(ENV, api.authorizeChannel)),
