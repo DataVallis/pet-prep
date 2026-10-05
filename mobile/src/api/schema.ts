@@ -577,11 +577,14 @@ export interface paths {
          *     404 `child_not_found`, 422 `pet_not_joinable` | `already_paired` |
          *     `breed_locked`.
          *
-         *     New pet profile (M5-R01, only without `pet_id`): `breed` (mutt free;
-         *     a premium breed → 422 `breed_locked`, it is unlocked by purchase),
-         *     `origin` bought | adopted, `age_stage` puppy | young | adult | senior.
-         *     Omitted → a bought mutt puppy (as before). The pet is created with
-         *     this profile when the child uses the PIN.
+         *     New pet profile (M5-R01, only without `pet_id`), all or nothing:
+         *     `origin` bought | adopted and `age_stage` puppy | young | adult |
+         *     senior (both required as soon as any profile field is sent),
+         *     optional `breed` (default mutt; a premium breed → 422
+         *     `breed_locked`, it is unlocked by purchase). The pet is created with
+         *     this profile (life-stage rules) when the child uses the PIN. **None
+         *     of the fields** (old app builds) → `pet_profile: null` and a
+         *     legacy-profile pet that keeps the pre-M5 rules.
          *
          *     Without `child_id` (**deprecated**, `Deprecation: true` header): the
          *     PIN is for a child already signed in with e-mail, used with
@@ -3123,7 +3126,10 @@ export interface operations {
                         pet_id: number | null;
                         /** @enum {string} */
                         mode: "join_pet" | "new_pet" | "relogin";
-                        /** @description M5-R01: the new pet's profile the PIN will create (mode new_pet), else null. */
+                        /**
+                         * @description M5-R01: the new pet's profile the PIN will create (mode new_pet with a profile);
+                         *     null = join / re-login, or no profile sent (→ legacy pet, pre-M5 rules).
+                         */
                         pet_profile: {
                             /** @enum {string} */
                             breed: "mutt" | "border_collie";

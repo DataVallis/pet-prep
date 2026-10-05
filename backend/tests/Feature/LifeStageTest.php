@@ -657,18 +657,38 @@ describe('pet creation with origin and age stage', function () {
             ->and($login['pet']['profile']['next_stage'])->toBeNull();
     });
 
-    it('defaults to a bought mutt puppy (2 months) when the profile is omitted', function () {
+    it('creates a legacy-profile pet when no profile field is sent (old app builds keep the pre-M5 rules)', function () {
         lsAt('2026-10-05 08:00:00');
         $parent = User::factory()->parent()->create();
 
-        [$pin, $login] = lsCreateViaPin($parent, []);
+        [$pin, $login, $child] = lsCreateViaPin($parent, []);
+        $pet = Pet::findOrFail($login['pet']['id']);
+
+        expect($pin['pet_profile'])->toBeNull()
+            ->and(DB::table('child_login_pins')->where('child_user_id', $child->id)->value('pet_options'))->toBeNull()
+            ->and($pet->breed_type->value)->toBe('mutt')
+            ->and($pet->isLegacyProfile())->toBeTrue()
+            ->and($pet->origin)->toBeNull()
+            ->and($pet->life_stage)->toBeNull()
+            ->and($login['pet']['profile']['legacy'])->toBeTrue()
+            ->and($login['pet']['profile']['today']['meals_per_day'])->toBe(2)
+            ->and($login['pet']['profile']['today']['step_goal'])->toBe(4000);
+    });
+
+    it('creates a bought mutt puppy with stage rules when the full profile is sent (breed optional → mutt)', function () {
+        lsAt('2026-10-05 08:00:00');
+        $parent = User::factory()->parent()->create();
+
+        [$pin, $login] = lsCreateViaPin($parent, ['origin' => 'bought', 'age_stage' => 'puppy']);
         $pet = Pet::findOrFail($login['pet']['id']);
 
         expect($pin['pet_profile'])->toBe(['breed' => 'mutt', 'origin' => 'bought', 'age_stage' => 'puppy'])
             ->and($pet->breed_type->value)->toBe('mutt')
             ->and($pet->origin)->toBe(PetOrigin::Bought)
             ->and($pet->arrival_age_months)->toBe(2)
-            ->and($pet->life_stage)->toBe(LifeStage::Puppy);
+            ->and($pet->life_stage)->toBe(LifeStage::Puppy)
+            ->and($login['pet']['profile']['legacy'])->toBeFalse()
+            ->and($login['pet']['profile']['today']['meals_per_day'])->toBe(4);
     });
 
     it('validates the choice: unknown values, profile with pet_id, premium breed', function () {
@@ -676,11 +696,15 @@ describe('pet creation with origin and age stage', function () {
         $child = app(ChildProfileService::class)->createChild($parent, 'Luka', null);
         actingAsRole($parent);
 
-        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'stolen'])->assertUnprocessable()->assertJsonValidationErrors('origin');
-        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'age_stage' => 'baby'])->assertUnprocessable()->assertJsonValidationErrors('age_stage');
-        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'breed' => 'poodle'])->assertUnprocessable()->assertJsonValidationErrors('breed');
-        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'pet_id' => 5, 'age_stage' => 'adult'])->assertUnprocessable()->assertJsonValidationErrors('age_stage');
-        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'breed' => 'border_collie'])->assertStatus(422)->assertJsonPath('reason', 'breed_locked');
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'stolen', 'age_stage' => 'puppy'])->assertUnprocessable()->assertJsonValidationErrors('origin');
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'bought', 'age_stage' => 'baby'])->assertUnprocessable()->assertJsonValidationErrors('age_stage');
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'breed' => 'poodle', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertUnprocessable()->assertJsonValidationErrors('breed');
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'pet_id' => 5, 'origin' => 'bought', 'age_stage' => 'adult'])->assertUnprocessable()->assertJsonValidationErrors('age_stage');
+        // All or nothing: any profile field requires origin AND age_stage.
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'age_stage' => 'adult'])->assertUnprocessable()->assertJsonValidationErrors('origin')->assertJsonMissingValidationErrors('age_stage');
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'adopted'])->assertUnprocessable()->assertJsonValidationErrors('age_stage');
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'breed' => 'mutt'])->assertUnprocessable()->assertJsonValidationErrors(['origin', 'age_stage']);
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertStatus(422)->assertJsonPath('reason', 'breed_locked');
         // Every age / origin is free for the mutt.
         postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'breed' => 'mutt', 'origin' => 'adopted', 'age_stage' => 'senior'])->assertOk()
             ->assertJsonPath('pet_profile.age_stage', 'senior');
@@ -691,7 +715,8 @@ describe('pet creation with origin and age stage', function () {
         $parent = User::factory()->parent()->create();
         $child = app(ChildProfileService::class)->createChild($parent, 'Maja', null);
         actingAsRole($parent);
-        $pin = postJson('/api/parent/generate-pin', ['child_id' => $child->id])->assertOk()->json('pin');
+        // A PIN row from before the deploy: no pet_options column value.
+        $pin = postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()->json('pin');
         DB::table('child_login_pins')->where('child_user_id', $child->id)->update(['pet_options' => null]);
 
         app('auth')->forgetGuards();

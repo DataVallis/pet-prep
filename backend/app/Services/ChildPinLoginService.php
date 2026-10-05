@@ -78,7 +78,9 @@ class ChildPinLoginService
     /**
      * Issue a one-time PIN for $child (a child of the parent's family).
      * `$profile` (M5-R01) is the new pet's breed / origin / age stage, kept
-     * on the PIN until it creates the pet (ignored for join / re-login).
+     * on the PIN until it creates the pet (ignored for join / re-login);
+     * null = no profile chosen (old app builds) → the PIN creates a
+     * legacy-profile pet on the pre-M5 rules.
      *
      * @return array{pin: string, expires_at: Carbon, child_id: int, pet_id: int|null, mode: string, pet_profile: array{breed: string, origin: string, age_stage: string}|null}
      *
@@ -90,8 +92,6 @@ class ChildPinLoginService
         if (! $parent->isParent()) {
             throw new FamilyException('not_a_parent', 'Only a parent can generate a PIN.', 403);
         }
-
-        $profile ??= PetProfileChoice::default();
 
         return DB::transaction(function () use ($parent, $childId, $joinPetId, $profile): array {
             // Lock order: parent user row → child user row → family row.
@@ -107,7 +107,7 @@ class ChildPinLoginService
             Family::whereKey($family->id)->lockForUpdate()->first();
 
             $mode = $this->resolveMode($family, $child, $joinPetId, forGeneration: true);
-            if ($mode === self::MODE_NEW_PET) {
+            if ($mode === self::MODE_NEW_PET && $profile !== null) {
                 $this->pairing->assertProfileAllowed($profile);
             }
 
@@ -115,7 +115,8 @@ class ChildPinLoginService
             ChildLoginPin::open()->where('child_user_id', $child->id)->update(['revoked_at' => now()]);
 
             $expiresAt = now()->addMinutes(self::PIN_EXPIRY_MINUTES)->startOfSecond();
-            $options = $mode === self::MODE_NEW_PET ? $profile->toArray() : null;
+            // No profile (old app builds) → no options → a legacy-profile pet (pre-M5 rules).
+            $options = $mode === self::MODE_NEW_PET ? $profile?->toArray() : null;
             $pin = $this->insertUniquePin($family, $child, $parent, $joinPetId, $expiresAt, $options);
 
             return [

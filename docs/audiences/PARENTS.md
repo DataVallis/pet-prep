@@ -38,7 +38,7 @@ Ob kodi za novega psa izberete **pasmo**, **izvor** (*kupljen* pri vzreditelju a
 | mlad pes, odrasel | 2 | 6.000 *(predlog)* / do 12.000 |
 | starejši | 2 *(predlog)* | 4.500 / 9.000 *(predlog)* |
 
-Cilj korakov = koliko minut gibanja pes te starosti potrebuje × 100 korakov na minuto. **Psi, ki so v igri že pred to spremembo, ostanejo na dosedanjih pravilih do konca svojega izziva** (2 obroka 6–10 in 17–21, mešanček 4.000 korakov na dan, brez obdobij) — nič se jim ne spremeni sredi izziva. *(Odločitev še čaka potrditev.)* **Obroki med šolo ali spanjem so vaši:** če okno hranjenja v celoti pade v tihe ure (npr. obrok mladička ob 11. uri med šolo), ga od otroka ne pričakujemo in mu ne šteje v oceno — v igri kužka takrat nahrani starš (samodejno).
+Cilj korakov = koliko minut gibanja pes te starosti potrebuje × 100 korakov na minuto. **Psi, ki so v igri že pred to spremembo — in novi psi, dokler v aplikaciji ni izbire kužka —, ostanejo na dosedanjih pravilih do konca svojega izziva** (2 obroka 6–10 in 17–21, mešanček 4.000 korakov na dan, brez obdobij) — nič se jim ne spremeni sredi izziva. *(Odločitev še čaka potrditev.)* **Obroki med šolo ali spanjem so vaši:** če okno hranjenja v celoti pade v tihe ure (npr. obrok mladička ob 11. uri med šolo), ga od otroka ne pričakujemo in mu ne šteje v oceno — v igri kužka takrat nahrani starš (samodejno).
 
 ## Kaj mora otrok početi (mešanček)
 | Skrb | Kako pogosto | Kaj se zgodi, če pozabi |
