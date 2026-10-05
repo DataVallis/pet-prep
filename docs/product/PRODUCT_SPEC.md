@@ -87,6 +87,8 @@
 | 3 — Intervencija | metrika 0 % > 1 h | alarm na telefonu starša (Reverb + push): "Tvoj otrok danes ni poskrbel za psa." |
 
 Pragovi se primerjajo s prikazano (zaokroženo) vrednostjo.
+
+**Push obvestila (M3-02, 5. 10. 2026 — podrobnosti in besedila v DECISIONS):** faza 1 in 2 gresta vsem otrokom, ki skrbijo za psa; faza 3 vsem staršem družine; bolezen in game over staršem in otrokom. Besedilo sledi metriki, ki je najnižja (hrana, voda, nered, sprehod); pri sprehodu brez »bo zbolel v 30 minutah«. **Med tihimi urami ni nobenega obvestila** in preskočeno obvestilo se kasneje ne pošlje. Ista vrsta obvestila za istega psa največ enkrat na 30 minut. Naslov je vedno »PetPrep«, v obvestilu ni imen otrok ali psa.
 Za **gibanje (energijo)** veljata samo fazi 1 in 2, in to le izven tihih ur; faza 3, bolezen po 6 h in game over se za energijo ne štejejo (dnevni sprehod, §7). Stanje psa "bolan" (`sick`) pomeni samo umazanega ali dejansko bolnega psa — pri 0 % energije je pes "utrujen" (`low_energy`).
 
 ## 7. Kazni

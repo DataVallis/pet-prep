@@ -1,12 +1,14 @@
 /**
- * The one logout path for both roles: revoke the token on the server (best
- * effort), delete it from SecureStore, drop cached queries, reset the store.
+ * The one logout path for both roles: unregister this install from pushes and revoke
+ * the token on the server (best effort), delete it from SecureStore, drop cached
+ * queries, reset the store.
  */
 
 import * as SecureStore from 'expo-secure-store';
 
 import { api, clearAuthToken } from '@/api/client';
 import { clearLiveSteps } from '@/modules/steps/stepCounter';
+import { unregisterFromPush } from '@/modules/push/pushRegistration';
 import { queryClient } from '@/api/queryClient';
 import { useAppStore } from '@/store/appStore';
 
@@ -24,12 +26,18 @@ export async function logout({ revoke = true }: LogoutOptions = {}): Promise<voi
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), REVOKE_TIMEOUT_MS);
     try {
+      // M3-02: no more pushes to this phone (needs the token, so before the revoke).
+      await unregisterFromPush({ signal: controller.signal });
       await api.logout(controller.signal);
     } catch {
       // Offline, aborted, or token already invalid — local logout must still happen.
     } finally {
       clearTimeout(timer);
     }
+  }
+  if (!revoke) {
+    // The server already dropped the token (and the push registration with it).
+    await unregisterFromPush({ callServer: false });
   }
   try {
     await clearAuthToken();

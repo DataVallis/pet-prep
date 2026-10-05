@@ -43,3 +43,6 @@ yarn-error.*
 # EAS signing credentials
 credentials.json
 credentials/
+
+# Firebase config for Android push (M3-02): local file or EAS file env GOOGLE_SERVICES_JSON
+google-services.json

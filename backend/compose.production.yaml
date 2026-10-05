@@ -12,7 +12,7 @@
 #
 # Variables interpolated here come from backend/.env (copy of /opt/petprep/.env
 # written by the deploy script) or the shell: PETPREP_IMAGE_TAG (default
-# production), PET_MEDIA_SERVE_VIA (default caddy), DB_*.
+# production), PET_MEDIA_SERVE_VIA (default caddy), PUSH_ENABLED (default true), DB_*.
 
 x-php: &php
   image: petprep-app:${PETPREP_IMAGE_TAG:-production}
@@ -24,6 +24,8 @@ x-php: &php
     APP_DEBUG: 'false'
     # Caddy sends the bytes of GET /api/media/{id} (X-Accel-Redirect); `php` = stream from PHP.
     PET_MEDIA_SERVE_VIA: ${PET_MEDIA_SERVE_VIA:-caddy}
+    # Escalation pushes via Expo (M3-02); PUSH_ENABLED=false in /opt/petprep/.env silences them.
+    PUSH_ENABLED: ${PUSH_ENABLED:-true}
   volumes:
     - /opt/petprep/.env:/var/www/html/.env:ro
     # storage/ only (logs, maintenance flag, pet media). Every PHP container runs
@@ -101,13 +103,14 @@ services:
       redis:
         condition: service_healthy
 
-  # Real-time PetUpdated delivery to Reverb (M1-09). Separate from `queue` so a
-  # slow fal.ai job never delays a broadcast and a Reverb outage never blocks
-  # fal.ai jobs. The scheduler tick only pushes jobs onto the `broadcasts` queue.
+  # Real-time PetUpdated delivery to Reverb (M1-09) and escalation pushes to Expo
+  # (M3-02, `notifications` queue, after broadcasts). Separate from `queue` so a
+  # slow fal.ai job never delays a broadcast or an alarm and a Reverb outage never
+  # blocks fal.ai jobs. Push jobs set their own tries / backoff / timeout (≤ 60 s).
   queue-broadcasts:
     <<: *php
-    command: ["php", "artisan", "queue:work", "redis", "--queue=broadcasts", "--tries=3", "--backoff=2", "--timeout=15", "--sleep=1"]
-    stop_grace_period: 20s
+    command: ["php", "artisan", "queue:work", "redis", "--queue=broadcasts,notifications", "--tries=3", "--backoff=2", "--timeout=15", "--sleep=1"]
+    stop_grace_period: 65s
     depends_on:
       app:
         condition: service_started

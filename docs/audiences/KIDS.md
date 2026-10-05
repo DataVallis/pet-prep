@@ -32,10 +32,10 @@ Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova p
 Na desni strani zaslona vidiš štiri stolpce. **Zelena** = kuža je vesel. **Rumena** = pazi. **Rdeča** = kuža te zelo potrebuje!
 
 ## Ko si v šoli ali spiš
-Starši nastavijo **tihe ure**. Takrat kuža počiva in te ne moti.
+Starši nastavijo **tihe ure**. Takrat kuža počiva in te ne moti — tudi obvestil ne pošilja.
 
 ## Kaj, če pozabiš
-- Najprej te kuža **opomni**.
+- Najprej te kuža **opomni** — ko podpišeš pogodbo, te aplikacija vpraša, ali te kuža sme poklicati z obvestilom (npr. »Tvoj kuža te milo gleda in kaže na posodo s hrano.«). Če je zelo nujno, obvestilo tudi zazvoni. Tapni ga in že si pri kužku. *(na telefonu z naslednjo novo različico aplikacije)*
 - Če dolgo pozabljaš, **zboli** in mora za 12 ur k veterinarju.
 - Ko se kuža od veterinarja vrne, je **čist** in začneta znova — takrat ga hitro nahrani in mu daj vode!
 - Če zanj ne skrbiš cel dan, ga odpelje zavetišče. Ampak lahko poskusiš znova!

@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { isAwaitingContract, useAppStore, type LockState } from '@/store/appStore';
 import { logout } from '@/modules/session/logout';
 import { useSessionBootstrap } from '@/modules/session/useSessionBootstrap';
+import { usePushNotifications } from '@/modules/push/usePushNotifications';
 import SplashScreen from '@/screens/SplashScreen';
 import StartScreen from '@/screens/StartScreen';
 import ContractScreen from '@/screens/ContractScreen';
@@ -61,6 +62,8 @@ export default function AppNavigator() {
   const lockState = useAppStore((s) => s.lockState);
   const bootStatus = useAppStore((s) => s.bootStatus);
   const { retry } = useSessionBootstrap();
+  // M3-02: register this install for pushes on sign-in, route tapped pushes.
+  usePushNotifications();
 
   if (bootStatus !== 'ready') {
     return (

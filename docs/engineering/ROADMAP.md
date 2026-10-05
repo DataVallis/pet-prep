@@ -101,7 +101,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 ## M3 — Obvestila, senzorji, plačila (1,5 tedna)
 
 - [ ] M3-01 EAS projekt, `expo-dev-client`, dev build za iOS + Android (Expo Go ne podpira HealthKit / RevenueCat)
-- [ ] M3-02 `expo-notifications`: registracija Expo push tokena → `POST /api/devices`; queue jobi za Phase 1 / 2; parent alarm (Phase 3) kot push + Reverb
+- [x] M3-02 `expo-notifications`: registracija Expo push tokena → `POST /api/devices`; queue jobi za Phase 1 / 2; parent alarm (Phase 3) kot push + Reverb — **koda končana 2026-10-05 (`feat/M3-02-push`):** tabele `device_push_tokens` / `push_notifications` / `push_tickets`, `POST /api/devices` + `DELETE /api/devices/{token}` (starš ali otrok, upsert, vezano na prijavni žeton), `NotificationService` + `SendPushNotification` (Expo Push API, ≤ 100 na zahtevek, ticketi + potrdila `push:receipts`, DeviceNotRegistered → naprava izklopljena, ponovni poskusi z zamikom, brez podvajanja 30 min, tihe ure = nič), faza 1/2 → otroci skrbniki, faza 3 → vsi starši, bolezen / game over → oboji; slovenska besedila po metriki brez imen, `data {type, pet_id}`. Aplikacija: `expo-notifications` 57, slovensko vprašanje (otrok po pogodbi, starš po dodanem otroku), registracija ob prijavi / zagonu, odjava odstrani napravo, tap → HUD / podrobnosti otroka, Android kanal »alarm«. **Odprto (David):** nova native gradnja + APNs ključ + FCM (HANDOFF), preizkus na napravah.
 - [ ] M3-03 Lokalni opomniki po urniku (hranjenje zjutraj / zvečer) — delujejo offline
 - [ ] M3-04 iOS: HealthKit (`react-native-health` ali `@kingstinct/react-native-healthkit`) — branje korakov za danes
 - [ ] M3-05 Android: Health Connect (`react-native-health-connect`); Google Fit je deprecated

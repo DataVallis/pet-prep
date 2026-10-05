@@ -8,6 +8,25 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-05 — Kuža zdaj lahko pokliče: push obvestila (M3-02)
+
+**Kaj se je zgodilo:** Pravila opozoril so v igri obstajala že od začetka (faza 1 pri 30 %, faza 2 pri 10 %, alarm staršem po uri na 0 %), a so ostala v aplikaciji — kdor je ni odprl, ni izvedel ničesar. Zdaj gre vsak korak tudi kot **obvestilo na telefon** (prek Expo → Apple / Google):
+- **Otrok** dobi blag opomnik (»Tvoj kuža te milo gleda in kaže na posodo s hrano.«), pri 10 % pa nujnega z zvokom. Besedilo sledi temu, kar manjka — hrana, voda, nered ali sprehod; pri sprehodu brez grožnje »bo zbolel v 30 minutah«.
+- **Starši** (vsi v družini) dobijo alarm, ko pes več kot uro nima hrane, vode ali čistoče: »Tvoj otrok danes ni poskrbel za psa.« O bolezni in odhodu v zavetišče izvedo starši in otrok.
+- **Tihe ure veljajo tudi za obvestila:** med šolo in spanjem telefon molči. Isto obvestilo za istega psa največ enkrat na 30 minut.
+- **Brez imen:** obvestilo nosi samo vrsto dogodka in številko psa; naslov je vedno »PetPrep«. Hranimo le žeton naprave, iOS/Android in različico aplikacije.
+- Aplikacija vpraša za dovoljenje **ob pravem trenutku** — otroka takoj po podpisu pogodbe, starša po dodanem otroku — in najprej s slovensko razlago. Tap na obvestilo odpre kužka (otrok) oziroma podrobnosti otroka (starš).
+- **Številke:** 35 novih strežniških testov (skupaj **896 zelenih**), 39 novih testov v aplikaciji (skupaj **774 zelenih**). Na telefonih deluje z naslednjo novo gradnjo aplikacije *(načrt: preizkus na iPhonu in Androidu)*.
+
+**Zakaj je pomembno**
+Simulacija psa, ki »nima glasu«, ne uči odgovornosti — pravi pes zacvili, ko je lačen. Obvestila so most med igro in vsakdanom otroka; tihe ure poskrbijo, da PetPrep ne moti šole in spanja.
+
+**Kako to povedati**
+- 🧒 *"Tvoj kuža te zdaj lahko pokliče, ko je lačen ali bi rad šel ven — ampak nikoli med šolo ali ponoči."*
+- 👩 *"Če otrok pozabi, najprej opomnimo otroka. Šele ko kuža več kot uro ostane brez hrane ali vode, pokličemo vas. V obvestilih ni imen otrok."*
+- 💼 *"Push zanka (opomnik → nujno → alarm staršem) zapira krog vedenjske spremembe; vse po pravilih iz specifikacije, s spoštovanjem tihih ur in brez osebnih podatkov pri tretjih straneh."*
+- 🛠 *"Laravel: eskalacija v transakciji z zaklepom vrstice zapiše odločitev (dedupe, tihe ure) in po commitu pošlje job; Expo Push API v kosih po 100, ticketi unikatni na (obvestilo, napravo) — ponovni poskus nikoli ne pošlje dvakrat; DeviceNotRegistered iz ticketov in potrdil izklopi napravo."*
+
 ## 2026-10-05 — Album »Moj kuža«: otrok vidi vse posnetke svojega psa
 
 **Kaj se je zgodilo:** David je kot otrok na glavnem zaslonu videl le en video v zanki — želel je videti vse. Zdaj ima otrok v glavi zaslona gumb za **album »Moj kuža«**: fotografija psa in ploščica za vsak njegov video (*Miruje, Spi, Utrujen, Lačen, Bolan, Se igra* — toliko, kolikor jih ima ta pes). Tap odpre posnetek čez cel zaslon (v zanki, brez zvoka, z gumbom za zvok); s puščicami ali potegom gre na naslednjega. Posnetki, ki se še pripravljajo, so sivi »Še ni posnetka«; posnetkov, ki jih pes nima (npr. dodatna stanja plačljive pasme), album ne kaže — nič otroka ne vabi k nakupu. Hkrati teče le en video (glavni zaslon se ustavi), zato album ne prazni baterije in ne porablja dvojnih podatkov. Isti album lahko odpre tudi starš iz podrobnosti otroka.

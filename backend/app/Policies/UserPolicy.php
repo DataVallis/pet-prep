@@ -20,6 +20,15 @@ class UserPolicy
     }
 
     /**
+     * Register / remove this app install for escalation pushes (M3-02):
+     * parents (phase 3 alarm, illness, game over) and children (phase 1 / 2).
+     */
+    public function managePushDevices(User $user): bool
+    {
+        return $user->isParent() || $user->isChild();
+    }
+
+    /**
      * Parent-only family endpoints (dashboard, PINs, invites, join).
      */
     public function manageFamily(User $user): bool

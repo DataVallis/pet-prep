@@ -14,6 +14,9 @@ jest.mock('expo-secure-store', () => ({
 // events; registry in src/test-utils/videoPlayers.ts).
 jest.mock('expo-video');
 
+// expo-notifications (M3-02): manual mock in __mocks__/expo-notifications.ts.
+jest.mock('expo-notifications');
+
 // Mock expo-sensors (Pedometer)
 jest.mock('expo-sensors', () => ({
   Pedometer: {

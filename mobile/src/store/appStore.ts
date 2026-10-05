@@ -16,6 +16,11 @@ export interface AppUser {
   role: 'parent' | 'child';
 }
 
+/** Where a tapped push should lead (parent app): the pet it is about. */
+export interface PushTarget {
+  petId: number;
+}
+
 export type PairingStatus = 'unpaired' | 'pairing' | 'paired' | 'error';
 
 export type WebSocketStatus = 'disconnected' | 'connecting' | 'connected' | 'reconnecting';
@@ -136,6 +141,12 @@ interface AppStore {
   /** "Moj kuža" album over the HUD (the HUD video pauses while it is open). */
   isAlbumVisible: boolean;
   setAlbumVisible: (visible: boolean) => void;
+  /**
+   * Parent: a tapped push (M3-02) asks the dashboard to open the detail of the child
+   * caring for this pet; the dashboard clears it once handled.
+   */
+  pushTarget: PushTarget | null;
+  setPushTarget: (target: PushTarget | null) => void;
 
   // Logout / reset
   reset: () => void;
@@ -228,6 +239,8 @@ export const useAppStore = create<AppStore>((set) => ({
   setCleaningOverlayVisible: (isCleaningOverlayVisible) => set({ isCleaningOverlayVisible }),
   isAlbumVisible: false,
   setAlbumVisible: (isAlbumVisible) => set({ isAlbumVisible }),
+  pushTarget: null,
+  setPushTarget: (pushTarget) => set({ pushTarget }),
 
   // Logout / reset — leaves the app on the login screen (bootStatus 'ready').
   reset: () =>
@@ -244,5 +257,6 @@ export const useAppStore = create<AppStore>((set) => ({
       isWalkModalVisible: false,
       isCleaningOverlayVisible: false,
       isAlbumVisible: false,
+      pushTarget: null,
     }),
 }));

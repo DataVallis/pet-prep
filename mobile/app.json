@@ -43,6 +43,14 @@
         {
           "faceIDPermission": "Allow PetPrep to access your Face ID for secure authentication."
         }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/android-icon-monochrome.png",
+          "color": "#10b981",
+          "defaultChannel": "default"
+        }
       ]
     ],
     "extra": {

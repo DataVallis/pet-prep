@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Enums\FamilyRole;
 use App\Exceptions\AccountDeletionException;
+use App\Models\DevicePushToken;
 use App\Models\Family;
 use App\Models\FamilyMember;
 use App\Models\Pet;
@@ -28,7 +29,7 @@ use Laravel\Sanctum\PersonalAccessToken;
  * stored AI images / videos (no binaries).
  *
  * Never exported: password hashes, remember tokens, API tokens (only a device
- * count), PIN hashes / legacy pairing PINs, invite codes, RevenueCat ids, fal
+ * count), Expo push tokens (only platform / app version / dates), PIN hashes / legacy pairing PINs, invite codes, RevenueCat ids, fal
  * request ids / source URLs / prompts and seeds, cost data.
  *
  * Synchronous; above `privacy.export_max_rows` history rows → 413
@@ -70,7 +71,7 @@ class AccountExportService
         if ($family === null) {
             return $base + [
                 'family' => null,
-                'parents' => [$this->parentRow($parent, $this->deviceCounts([$parent->id]))],
+                'parents' => [$this->parentRow($parent, $this->deviceCounts([$parent->id]), $this->pushDevices([$parent->id]))],
                 'children' => [],
                 'quiet_hours' => null,
                 'invites' => [],
@@ -87,6 +88,7 @@ class AccountExportService
         $this->assertSize($petIds);
 
         $devices = $this->deviceCounts(array_merge($parentIds, $childIds));
+        $push = $this->pushDevices(array_merge($parentIds, $childIds));
         $users = User::whereIn('id', array_merge($parentIds, $childIds))->orderBy('id')->get();
 
         return $base + [
@@ -95,7 +97,7 @@ class AccountExportService
                 'timezone' => $family->timezone,
                 'created_at' => $family->created_at?->utc()->toIso8601String(),
             ],
-            'parents' => $users->whereIn('id', $parentIds)->map(fn (User $u) => $this->parentRow($u, $devices))->values()->all(),
+            'parents' => $users->whereIn('id', $parentIds)->map(fn (User $u) => $this->parentRow($u, $devices, $push))->values()->all(),
             'children' => $users->whereIn('id', $childIds)->map(fn (User $u) => [
                 'id' => $u->id,
                 'nickname' => $u->name,
@@ -104,6 +106,7 @@ class AccountExportService
                 'login' => $u->password === null ? 'pin' : 'email',
                 'email' => $u->email,
                 'devices' => (int) ($devices[$u->id] ?? 0),
+                'push_devices' => $push[$u->id] ?? [],
                 'created_at' => $this->iso($u->created_at),
             ])->values()->all(),
             'quiet_hours' => $this->quietHours($family),
@@ -144,9 +147,10 @@ class AccountExportService
 
     /**
      * @param  array<int, int>  $devices
+     * @param  array<int, list<array<string, mixed>>>  $push
      * @return array<string, mixed>
      */
-    private function parentRow(User $u, array $devices): array
+    private function parentRow(User $u, array $devices, array $push = []): array
     {
         return [
             'id' => $u->id,
@@ -155,8 +159,29 @@ class AccountExportService
             'timezone' => $u->timezone,
             'terms_accepted_at' => $this->iso($u->terms_accepted_at),
             'devices' => (int) ($devices[$u->id] ?? 0),
+            'push_devices' => $push[$u->id] ?? [],
             'created_at' => $this->iso($u->created_at),
         ];
+    }
+
+    /**
+     * Push devices per user (M3-02) — without the Expo token itself.
+     *
+     * @param  list<int>  $userIds
+     * @return array<int, list<array<string, mixed>>>
+     */
+    private function pushDevices(array $userIds): array
+    {
+        return DevicePushToken::whereIn('user_id', $userIds)->orderBy('id')->get()
+            ->groupBy('user_id')
+            ->map(fn ($rows) => $rows->map(fn (DevicePushToken $d) => [
+                'platform' => $d->platform->value,
+                'app_version' => $d->app_version,
+                'enabled' => $d->disabled_at === null,
+                'last_seen_at' => $this->iso($d->last_seen_at),
+                'created_at' => $this->iso($d->created_at),
+            ])->values()->all())
+            ->all();
     }
 
     /**

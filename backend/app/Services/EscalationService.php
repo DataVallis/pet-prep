@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\ActivityType;
+use App\Enums\PushType;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\Pet;
@@ -15,21 +16,27 @@ use Illuminate\Support\Facades\Log;
 /**
  * EscalationService — 3-Tier Escalation Matrix & Neglect Mechanics
  *
- * Phase 1 (Soft Warning at 30%): Standard push notification to child
- *   "Your pet is looking at its food bowl..."
+ * Phase 1 (Soft Warning at 30%): push to every caretaker child
+ *   "Tvoj kuža te milo gleda in kaže na posodo s hrano." (per metric)
  *
- * Phase 2 (Critical Alert at 10%): High-priority push with sound/vibration
- *   "Critical warning: Your pet is starving!..."
+ * Phase 2 (Critical Alert at 10%): high-priority push with sound (Android
+ *   channel "alarm") to every caretaker child
  *
- * Phase 3 (Parent Intervention at 0% for >1 hour): WebSocket alarm to parent
- *   "Your child has neglected their pet!"
+ * Phase 3 (Parent Intervention at 0% for >1 hour): Reverb event + push to
+ *   every parent: "Tvoj otrok danes ni poskrbel za psa."
+ *
+ * Pushes (M3-02) go through NotificationService::escalation() — one call per
+ * escalation step, inside this per-pet transaction; it applies quiet hours
+ * (no pushes), the duplicate guard and the recipients (FamilyService), and
+ * queues the Expo send after commit.
  *
  * Severe Neglect:
  *   Illness State: hygiene at 0% for >=6 hours counted outside quiet hours,
  *     or no walk at all yesterday (daily walk rule: DailyWalkService plans
  *     the start at the end of the night's quiet hours)
  *     → Pet state = SICK, 12-hour action lockout; afterwards a fresh start
- *       (Pet::recoverFromIllnessIfDue: hygiene 100 %, clocks restart)
+ *       (Pet::recoverFromIllnessIfDue: hygiene 100 %, clocks restart);
+ *       push to parents + caretakers
  *
  *   Game Over / Virtual Shelter Protocol: hunger, thirst or hygiene at 0% for
  *     24 continuous hours → Lock pet session, is_active = false, notify parent
@@ -197,9 +204,10 @@ class EscalationService
         $currentLevel = $pet->escalation_level;
 
         // Phase 3: 0% for >1 hour — Parent WebSocket alarm
-        if ($this->hasMetricAtZeroForHours($pet, self::PARENT_INTERVENTION_HOURS)) {
+        $zeroMetric = $this->metricAtZeroForHours($pet, self::PARENT_INTERVENTION_HOURS);
+        if ($zeroMetric !== null) {
             if ($currentLevel < 3) {
-                $this->triggerPhase3ParentAlarm($pet);
+                $this->triggerPhase3ParentAlarm($pet, $zeroMetric);
 
                 return true;
             }
@@ -210,7 +218,7 @@ class EscalationService
         // Phase 2: Critical Alert at 10%
         if ($lowestMetric <= self::CRITICAL_ALERT_THRESHOLD) {
             if ($currentLevel < 2) {
-                $this->triggerPhase2CriticalAlert($pet);
+                $this->triggerPhase2CriticalAlert($pet, $this->lowestMetricKey($pet, includeEnergy: ! $isQuiet));
 
                 return true;
             }
@@ -221,7 +229,7 @@ class EscalationService
         // Phase 1: Soft Warning at 30%
         if ($lowestMetric <= self::SOFT_WARNING_THRESHOLD) {
             if ($currentLevel < 1) {
-                $this->triggerPhase1SoftWarning($pet);
+                $this->triggerPhase1SoftWarning($pet, $this->lowestMetricKey($pet, includeEnergy: ! $isQuiet));
 
                 return true;
             }
@@ -246,7 +254,7 @@ class EscalationService
     /**
      * Trigger Phase 1: Soft Warning push notification to child.
      */
-    private function triggerPhase1SoftWarning(Pet $pet): void
+    private function triggerPhase1SoftWarning(Pet $pet, string $metric): void
     {
         $pet->update(['escalation_level' => 1]);
 
@@ -259,9 +267,8 @@ class EscalationService
 
         PetUpdated::afterCommit($pet, 'soft_warning');
 
-        // Push to every caretaker child of the pet once push exists (M3);
-        // recipients: FamilyService::caretakerRecipients (M2-01).
-        // SendSoftWarningNotification::dispatch($pet);
+        // Push to every caretaker child (M3-02).
+        $this->notifications()->escalation($pet, PushType::SoftWarning, $metric);
 
         Log::info('EscalationService: Phase 1 soft warning triggered', [
             'pet_id' => $pet->id,
@@ -273,7 +280,7 @@ class EscalationService
     /**
      * Trigger Phase 2: Critical Alert push notification with sound/vibration.
      */
-    private function triggerPhase2CriticalAlert(Pet $pet): void
+    private function triggerPhase2CriticalAlert(Pet $pet, string $metric): void
     {
         $pet->update(['escalation_level' => 2]);
 
@@ -285,8 +292,8 @@ class EscalationService
 
         PetUpdated::afterCommit($pet, 'critical_alert');
 
-        // Critical push to every caretaker child (M3), see Phase 1.
-        // SendCriticalAlertNotification::dispatch($pet);
+        // Critical push to every caretaker child (M3-02).
+        $this->notifications()->escalation($pet, PushType::CriticalAlert, $metric);
 
         Log::info('EscalationService: Phase 2 critical alert triggered', [
             'pet_id' => $pet->id,
@@ -297,7 +304,7 @@ class EscalationService
     /**
      * Trigger Phase 3: Parent WebSocket alarm via Reverb.
      */
-    private function triggerPhase3ParentAlarm(Pet $pet): void
+    private function triggerPhase3ParentAlarm(Pet $pet, string $metric): void
     {
         $pet->update(['escalation_level' => 3]);
 
@@ -311,7 +318,8 @@ class EscalationService
         PetUpdated::afterCommit($pet, 'parent_intervention_alarm');
 
         // Every parent of the family is alarmed (M2-01): the realtime channel
-        // already reaches them; push / e-mail (M3) use the same recipients.
+        // reaches open apps, the push (M3-02) the others.
+        $this->notifications()->escalation($pet, PushType::ParentAlarm, $metric);
         Log::warning('EscalationService: Phase 3 parent intervention alarm triggered', [
             'pet_id' => $pet->id,
             'parent_recipient_ids' => $this->families()->parentRecipients($pet)->pluck('id')->all(),
@@ -417,6 +425,7 @@ class EscalationService
 
         // Broadcast illness state to parent and child
         PetUpdated::afterCommit($pet, 'illness_triggered');
+        $this->notifications()->escalation($pet, PushType::Illness, $reason === 'missed_walk' ? 'walk' : $reason);
 
         Log::warning('EscalationService: Pet entered illness state', [
             'pet_id' => $pet->id,
@@ -482,6 +491,7 @@ class EscalationService
 
         // Broadcast game over to parent and child via Reverb
         PetUpdated::afterCommit($pet, 'game_over_virtual_shelter');
+        $this->notifications()->escalation($pet, PushType::GameOver);
 
         Log::critical('EscalationService: VIRTUAL SHELTER PROTOCOL triggered — Game Over', [
             'pet_id' => $pet->id,
@@ -500,6 +510,11 @@ class EscalationService
     private function families(): FamilyService
     {
         return app(FamilyService::class);
+    }
+
+    private function notifications(): NotificationService
+    {
+        return app(NotificationService::class);
     }
 
     /**
@@ -530,29 +545,49 @@ class EscalationService
      * The neglect clocks that drive phase 3, illness and game over. Energy is
      * not one of them (daily walk rule, David 2026-10-03).
      *
-     * @return list<CarbonInterface|null>
+     * @return array{hunger: CarbonInterface|null, thirst: CarbonInterface|null, hygiene: CarbonInterface|null}
      */
     private function neglectClocks(Pet $pet): array
     {
         return [
-            $pet->hunger_zero_since,
-            $pet->thirst_zero_since,
-            $pet->hygiene_zero_since,
+            'hunger' => $pet->hunger_zero_since,
+            'thirst' => $pet->thirst_zero_since,
+            'hygiene' => $pet->hygiene_zero_since,
         ];
     }
 
     /**
-     * Check if any metric has been at 0% for at least the given number of hours.
+     * The first neglect metric (hunger | thirst | hygiene) that has been at
+     * 0 % for at least the given number of hours, or null.
      * *_zero_since is stamped when a metric first *shows* 0 % (PetDecayService).
      */
-    private function hasMetricAtZeroForHours(Pet $pet, float $hours): bool
+    private function metricAtZeroForHours(Pet $pet, float $hours): ?string
     {
-        foreach ($this->neglectClocks($pet) as $zeroSince) {
+        foreach ($this->neglectClocks($pet) as $metric => $zeroSince) {
             if ($zeroSince && $zeroSince->diffInHours(now()) >= $hours) {
-                return true;
+                return $metric;
             }
         }
 
-        return false;
+        return null;
+    }
+
+    /**
+     * Push copy key of the lowest displayed metric (ties: hunger, thirst,
+     * hygiene, energy). Energy only outside quiet hours, like the threshold.
+     */
+    private function lowestMetricKey(Pet $pet, bool $includeEnergy): string
+    {
+        $shown = $pet->displayMetrics();
+        $candidates = [
+            'hunger' => $shown['hunger_level'],
+            'thirst' => $shown['thirst_level'],
+            'hygiene' => $shown['hygiene_level'],
+        ];
+        if ($includeEnergy) {
+            $candidates['energy'] = $shown['energy_level'];
+        }
+
+        return (string) array_search(min($candidates), $candidates, true);
     }
 }

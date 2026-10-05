@@ -17,6 +17,7 @@ import { ApiError } from '@/api/client';
 import { isNoChildPaired, useParentDashboard } from '@/hooks/queries/useParentDashboard';
 import { familyFromDashboard, petOfChild, type FamilyChild } from '@/modules/family/family';
 import { logout } from '@/modules/session/logout';
+import { useAppStore } from '@/store/appStore';
 import AddChildCard from '@/components/AddChildCard';
 import ChildOverviewCard from '@/components/parent/ChildOverviewCard';
 import JoinFamilyCard from '@/components/parent/JoinFamilyCard';
@@ -99,6 +100,20 @@ export default function ParentDashboardScreen() {
   useEffect(() => {
     if (detailMissing) setOverlay({ kind: 'none' });
   }, [detailMissing]);
+
+  // A tapped push (M3-02) → the detail of the (first) child caring for that pet. Waits
+  // for the dashboard; a pet that is not (any more) in the family just clears the target.
+  const pushTarget = useAppStore((s) => s.pushTarget);
+  const setPushTarget = useAppStore((s) => s.setPushTarget);
+  useEffect(() => {
+    if (pushTarget === null || dashboard.data === undefined) return;
+    const child = children.find((c) => c.pet_id === pushTarget.petId);
+    if (child) {
+      setActiveTab('dashboard');
+      setOverlay({ kind: 'child', childId: child.id });
+    }
+    setPushTarget(null);
+  }, [pushTarget, dashboard.data, children, setPushTarget]);
 
   // One stable position for the live subscriptions, whatever tab / overlay is shown.
   return (

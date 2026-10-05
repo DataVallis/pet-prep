@@ -12,6 +12,7 @@ import { makeChildState, makePet } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import { childPetKey } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
+import { maybeAskForPush } from '@/modules/push/pushPrompt';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -20,6 +21,9 @@ jest.mock('@/api/client', () => {
     api: { ...actual.api, signContract: jest.fn(), getChildPet: jest.fn(), logout: jest.fn() },
   };
 });
+
+// M3-02: the push pre-prompt follows a successful signature.
+jest.mock('@/modules/push/pushPrompt', () => ({ maybeAskForPush: jest.fn(() => Promise.resolve('skipped')) }));
 
 const signContract = api.signContract as jest.Mock;
 
@@ -81,6 +85,8 @@ describe('ContractScreen (M1-07b)', () => {
     const cached = queryClient.getQueryData<ChildPetView>(childPetKey);
     expect(cached?.pet.awaiting_contract).toBe(false);
     expect(cached?.pet.id).toBe(7);
+    // M3-02: the pet is born → ask (child wording) whether it may call the child.
+    expect(maybeAskForPush).toHaveBeenCalledWith('child');
   });
 
   it('409 already signed → continues with the state from the body', async () => {
@@ -103,6 +109,7 @@ describe('ContractScreen (M1-07b)', () => {
 
     expect(await screen.findByText(CONTRACT_STRINGS.invalid)).toBeTruthy();
     expect(isAwaitingContract(useAppStore.getState().pet)).toBe(true);
+    expect(maybeAskForPush).not.toHaveBeenCalled();
     // Pad cleared → accept disabled again.
     fireEvent.press(screen.getByText(CONTRACT_STRINGS.accept));
     expect(signContract).toHaveBeenCalledTimes(1);

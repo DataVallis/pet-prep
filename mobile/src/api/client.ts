@@ -53,6 +53,13 @@ export type RegisterParentRequest = components['schemas']['RegisterParentRequest
  */
 export type RegisterResponse = LoginResponse;
 
+/** `POST /api/devices` body (M3-02): this install's Expo push token. */
+export type RegisterDeviceRequest = components['schemas']['RegisterDeviceRequest'];
+
+/** `POST /api/devices` 200 body. The Expo token itself is never echoed. */
+export type RegisterDeviceResponse =
+  operations['device.store']['responses'][200]['content']['application/json'];
+
 /** Laravel validation error body (422). */
 export interface ValidationErrorBody {
   message: string;
@@ -413,6 +420,27 @@ export const api = {
       body: { ...body },
       anonymous: true,
     }),
+
+  /**
+   * POST /api/devices (M3-02, parent or child) — register / refresh this install for
+   * escalation pushes. Upsert on the server: the token moves to the signed-in account.
+   */
+  registerDevice: (body: RegisterDeviceRequest) =>
+    apiRequest<RegisterDeviceResponse>('/api/devices', {
+      method: 'POST',
+      body: {
+        expo_push_token: body.expo_push_token,
+        platform: body.platform,
+        app_version: body.app_version ?? null,
+      },
+    }),
+
+  /**
+   * DELETE /api/devices/{token} (M3-02) — stop pushes to this install (logout). 204,
+   * idempotent. The token (`ExponentPushToken[…]`) is URL-encoded into the path.
+   */
+  unregisterDevice: (expoPushToken: string, signal?: AbortSignal) =>
+    apiRequest<null>(`/api/devices/${encodeURIComponent(expoPushToken)}`, { method: 'DELETE', signal }),
 
   /** POST /api/logout — Revoke the current token. Pass a signal to abort (offline logout). */
   logout: (signal?: AbortSignal) =>

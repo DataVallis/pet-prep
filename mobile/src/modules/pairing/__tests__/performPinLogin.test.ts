@@ -10,7 +10,7 @@ import { makeMedia, makePet } from '@/test-utils/fixtures';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
-  return { ...actual, api: { ...actual.api, pinLogin: jest.fn(), getUser: jest.fn(), logout: jest.fn() } };
+  return { ...actual, api: { ...actual.api, pinLogin: jest.fn(), getUser: jest.fn(), logout: jest.fn(), unregisterDevice: jest.fn() } };
 });
 
 const getItem = SecureStore.getItemAsync as jest.Mock;
@@ -73,8 +73,9 @@ describe('performPinLogin', () => {
       order.push('revoke');
       return { message: 'ok' };
     });
-    deleteItem.mockImplementationOnce(async () => {
-      order.push('clear');
+    // logout() also forgets the push registration key (M3-02) — only the session token counts here.
+    deleteItem.mockImplementation(async (key: string) => {
+      if (key === 'petprep_auth_token') order.push('clear');
     });
     setItem.mockImplementationOnce(async () => {
       order.push('save');

@@ -17,6 +17,7 @@ use App\Models\PetCaretaker;
 use App\Models\PetContract;
 use App\Models\QuietHours;
 use App\Models\User;
+use App\Services\Push\PushDeviceService;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -32,7 +33,7 @@ use Laravel\Sanctum\PersonalAccessToken;
  *
  *  - deleteParentAccount(): the parent's own account. The LAST parent of a
  *    family takes the whole family with them (children, pets, media files,
- *    contracts incl. signatures, logs, tokens, PINs, invites, quiet hours,
+ *    contracts incl. signatures, logs, tokens, push devices, PINs, invites, quiet hours,
  *    routines) — plus orphaned legacy child accounts that point at one of its
  *    parents (users.parent_id) but belong to no family. If another parent
  *    remains, only this parent goes (user, tokens, invites); the deprecated
@@ -485,7 +486,8 @@ class AccountDeletionService
     }
 
     /**
-     * Delete user rows with their tokens, web sessions and reset tokens.
+     * Delete user rows with their push devices, tokens, web sessions and
+     * reset tokens.
      *
      * @param  list<int>  $userIds
      */
@@ -495,6 +497,9 @@ class AccountDeletionService
             return;
         }
 
+        // M3-02: explicit (the FKs cascade too) — no push may reach a phone
+        // of a deleted account, even from a send job already queued.
+        app(PushDeviceService::class)->removeForUsers($userIds);
         PersonalAccessToken::where('tokenable_type', User::class)->whereIn('tokenable_id', $userIds)->delete();
         DB::table('sessions')->whereIn('user_id', $userIds)->delete();
 

@@ -57,3 +57,11 @@ Schedule::command('media:sweep')
     ->withoutOverlapping()
     ->name('sweep-pet-media')
     ->description('Recover pet media slots stuck after a lost job or webhook');
+
+// Every 15 min (M3-02): queue the Expo push receipt check (DeviceNotRegistered →
+// device disabled) and delete push rows older than 30 days. Off the quarter hour.
+Schedule::command('push:receipts')
+    ->cron('7,22,37,52 * * * *')
+    ->withoutOverlapping()
+    ->name('push-receipts')
+    ->description('Check Expo push receipts and prune old push rows');

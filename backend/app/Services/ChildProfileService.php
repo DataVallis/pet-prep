@@ -9,6 +9,7 @@ use App\Models\ChildLoginPin;
 use App\Models\Family;
 use App\Models\FamilyMember;
 use App\Models\User;
+use App\Services\Push\PushDeviceService;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -122,8 +123,8 @@ class ChildProfileService
     }
 
     /**
-     * Sign the child out on every device: delete all their tokens and revoke
-     * their open login PINs.
+     * Sign the child out on every device: delete all their tokens and push
+     * devices and revoke their open login PINs.
      *
      * @return array{tokens: int, pins: int}
      */
@@ -136,6 +137,9 @@ class ChildProfileService
             User::whereKey($child->id)->lockForUpdate()->first();
 
             $tokens = $child->tokens()->delete();
+            // M3-02: the signed-out phones get no more pushes (rows tied to
+            // a token cascade anyway; this also catches unlinked ones).
+            app(PushDeviceService::class)->removeForUsers([$child->id]);
             $pins = ChildLoginPin::open()
                 ->where('child_user_id', $child->id)
                 ->update(['revoked_at' => now()]);

@@ -924,3 +924,83 @@ flowchart TD
   X["1 min before media.expiresAt (album open)"] --> RF
   RF -->|"re-signed URLs"| VW
 ```
+
+## 11. Push notifications (M3-02, 2026-10-05)
+
+### 11a. Escalation → push
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant T as pets:process-decay (every minute)
+  participant E as EscalationService (pet row locked)
+  participant N as NotificationService
+  participant F as FamilyService
+  participant DB as push_notifications
+  participant Q as queue "notifications"
+  participant J as SendPushNotification
+  participant X as Expo Push API
+  participant P as Phones (APNs / FCM)
+  T->>E: escalate pet (one step per tick)
+  E->>E: level up → activities_log + PetUpdated::afterCommit
+  E->>N: escalation(pet, type, metric)
+  N->>F: phase 1/2 → caretakerRecipients · phase 3 → parentRecipients · illness / game over → both
+  alt PUSH_ENABLED=false
+    N-->>E: nothing (no row)
+  else quiet hours now · same pet+type within 30 min · nobody to reach
+    N->>DB: status suppressed (+ reason) — never sent later
+  else
+    N->>DB: status queued (uuid idempotency key, recipient ids only)
+    N->>Q: dispatch after commit
+  end
+  Q->>J: run (unique per notification, 5 tries, backoff 10/30/60/180 s)
+  J->>J: still queued? quiet hours now? → suppressed
+  J->>X: POST /push/send, ≤ 100 messages {to, title "PetPrep", body (sl), data {type, pet_id}, priority, channelId, ttl}
+  alt connection / 429 / 5xx
+    X-->>J: error → retry (devices with a ticket are skipped)
+  else other 4xx
+    X-->>J: rejected → failed (no retry)
+  else ok
+    X-->>J: one ticket per message
+    J->>DB: push_tickets (unique notification+device) · status sent
+    J->>J: ticket DeviceNotRegistered → device disabled
+    X->>P: deliver (Android channel "alarm" for phase 2+)
+  end
+```
+
+### 11b. Receipts, devices and cleanup
+
+```mermaid
+flowchart LR
+  S["push:receipts<br/>7,22,37,52 * * * *"] --> CJ["CheckPushReceipts (queue notifications)"]
+  CJ --> R{"tickets 15 min – 24 h old,<br/>no receipt yet"}
+  R --> GR["POST /push/getReceipts (≤ 1000 ids)"]
+  GR -->|"DeviceNotRegistered"| DIS["device_push_tokens.disabled_at"]
+  GR -->|"ok / other error"| OK["receipt stored"]
+  S --> PR["delete push rows older than 30 days"]
+  REG["POST /api/devices (login, app start, token rotation)"] -->|"upsert by token; re-enables;<br/>moves to the account that registered last"| DEV["device_push_tokens"]
+  DEV -.->|"FK cascade"| PAT["personal_access_tokens<br/>(logout · revoke all · prune 4th device)"]
+  DEL["DELETE /api/devices/{token} (logout)"] --> DEV
+  ACC["child / parent account deleted"] --> DEV
+```
+
+### 11c. App side
+
+```mermaid
+flowchart TD
+  SI["sign-in / session restore"] --> AL{"notifications already allowed?"}
+  AL -- no --> W["wait for a good moment"]
+  AL -- yes --> REG["Android channels default + alarm → Expo token (EAS projectId) → POST /api/devices → token in SecureStore"]
+  W --> C1["child: contract signed (pet born)"]
+  W --> C2["parent: child profile created"]
+  C1 --> PP["Slovenian pre-prompt (Alert)"]
+  C2 --> PP
+  PP -- "Ne zdaj" --> D3["remember 3 days"]
+  PP -- "Dovoli obvestila" --> SYS["system permission prompt"]
+  SYS -- allowed --> REG
+  SYS -- "don't allow" --> END["never asked again (settings)"]
+  TAP["push tapped (live or cold start, once)"] --> RO{"role"}
+  RO -- child --> HUD["close album, refetch ['child','pet'] → HUD"]
+  RO -- parent --> PT["store.pushTarget = {petId} → dashboard opens that child's detail"]
+  LO["logout"] --> UN["DELETE /api/devices/{token} → POST /api/logout"]
+```

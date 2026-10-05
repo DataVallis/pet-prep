@@ -10,9 +10,18 @@
  * - `extra.appVersion` — `version` from app.json.
  *
  * Read in the app via `src/config/buildInfo.ts` (expo-constants).
+ *
+ * Push (M3-02): the `expo-notifications` plugin's iOS `mode` (aps-environment) follows
+ * the EAS profile — `development` builds are signed for the APNs sandbox, preview
+ * (ad hoc) and production (TestFlight / App Store) builds for production APNs.
+ * Android needs Firebase's `google-services.json` for FCM: the EAS file env var
+ * `GOOGLE_SERVICES_JSON` (path on the build server), else `./google-services.json` if
+ * present locally (gitignored), else nothing (Android push then can't get a token).
  */
 
 import { execSync } from 'node:child_process';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { env } from 'node:process';
 import type { ConfigContext, ExpoConfig } from 'expo/config';
 
@@ -32,13 +41,51 @@ export function resolveGitSha(
   }
 }
 
-export default ({ config }: ConfigContext): ExpoConfig => ({
-  ...config,
-  name: config.name ?? 'PetPrep',
-  slug: config.slug ?? 'petprep',
-  extra: {
-    ...config.extra,
-    gitSha: resolveGitSha(),
-    appVersion: config.version ?? '0.0.0',
-  },
-});
+type PluginEntry = NonNullable<ExpoConfig['plugins']>[number];
+
+/** APNs environment for the build: sandbox only for EAS `development` / local dev builds. */
+export function apnsMode(vars: Readonly<Record<string, string | undefined>> = env): 'development' | 'production' {
+  const profile = vars.EAS_BUILD_PROFILE?.trim();
+  return profile && profile !== 'development' ? 'production' : 'development';
+}
+
+/** Set `mode` on the expo-notifications plugin entry (other plugins unchanged). */
+export function withPushMode(plugins: ExpoConfig['plugins'], mode: 'development' | 'production'): ExpoConfig['plugins'] {
+  return plugins?.map((entry): PluginEntry => {
+    if (entry === 'expo-notifications') return ['expo-notifications', { mode }];
+    if (Array.isArray(entry) && entry[0] === 'expo-notifications') {
+      const options = (entry[1] ?? {}) as Record<string, unknown>;
+      return ['expo-notifications', { ...options, mode }];
+    }
+    return entry;
+  });
+}
+
+/** Firebase config for Android push: EAS file env var, else a local file, else none. */
+export function resolveGoogleServicesFile(
+  vars: Readonly<Record<string, string | undefined>> = env,
+  exists: (path: string) => boolean = (path) => existsSync(join(__dirname, path)),
+): string | undefined {
+  const fromEas = vars.GOOGLE_SERVICES_JSON?.trim();
+  if (fromEas) return fromEas;
+  return exists('google-services.json') ? './google-services.json' : undefined;
+}
+
+export default ({ config }: ConfigContext): ExpoConfig => {
+  const googleServicesFile = resolveGoogleServicesFile();
+  return {
+    ...config,
+    plugins: withPushMode(config.plugins, apnsMode()),
+    android: {
+      ...config.android,
+      ...(googleServicesFile ? { googleServicesFile } : {}),
+    },
+    name: config.name ?? 'PetPrep',
+    slug: config.slug ?? 'petprep',
+    extra: {
+      ...config.extra,
+      gitSha: resolveGitSha(),
+      appVersion: config.version ?? '0.0.0',
+    },
+  };
+};
