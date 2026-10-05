@@ -66,6 +66,9 @@
 
 ## 6. Session log
 
+### 2026-10-05 (cloud, orchestrator) — iOS EAS build fix
+- EAS iOS build failed in fastlane: `'ExpoModulesCore/EXEventEmitter.h' file not found` / `could not build Objective-C module 'EXAV'`. Cause: `expo-av` ^16 (SDK 54-era, deprecated) is incompatible with Expo SDK 57 and was unused in `src/` (video uses `expo-video`). Removed from `package.json` + `yarn.lock`. tsc + Jest 494 green. Rebuild needed: `eas build -p ios` (clear cache: `--clear-cache`).
+
 ### 2026-10-04 (cloud, backend-engineer) — PR #22 review fixes (APPROVED with one major → fixed, same branch)
 - **Major (spend settlement):** `FalGateway` voids a reservation only when nothing reached fal (cURL 5/6/7/35/51/58/60, or 28 "Resolving / Connection timed out") or fal answered 4xx/5xx. A timeout / reset after sending → ledger `committed` + `error_reason=http_error` (cost counts); `AiCallException` carries `chargedUsd` / `outcomeUnknown`. Lab video submit that timed out → result status **`unknown`** (cost kept; no `request_id`, so no status URL can be derived → not pollable); lab image → `failed` with the cost kept; 2xx queue answer without `request_id` → committed + `invalid_response`.
 - **Minor 1:** separate lab budget `AI_LAB_DAILY_USD` (3) + `AI_LAB_MONTHLY_USD` (30, Claude's addition so the lab is bounded monthly too) → refusal `budget_lab`; production caps count only `reference_image` / `state_video`. `ReferenceImageRetryService` + `media:retry-references` (daily 00:23 UTC: pets with `budget_daily` / `budget_monthly` / `fal_balance`, skipped while the balance flag is set, stops when the budget would be exceeded) + PetResource row action **"Retry image"** (any failed reference image of an active pet).
