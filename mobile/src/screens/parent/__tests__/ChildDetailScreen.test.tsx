@@ -8,7 +8,7 @@ import { api } from '@/api/client';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import ChildDetailScreen, { CHILD_DETAIL_STRINGS, formatSteps } from '@/screens/parent/ChildDetailScreen';
 import { makeDayRow, makeFamilyPet, makeMedia, makeMissed, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
-import { liveVideoPlayers, mockVideoPlayers, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
+import { liveVideoPlayers, mockVideoPlayers, playerUris, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -181,9 +181,31 @@ describe('ChildDetailScreen', () => {
     const { unmount } = renderWithQuery(<ChildDetailScreen child={LUKA} family={family} onBack={jest.fn()} />);
     await flush();
     expect(screen.getByTestId('detail-pet-media')).toBeTruthy();
-    expect(mockVideoPlayers.map((p) => p.source)).toEqual([IDLE]);
+    expect(playerUris()).toEqual([IDLE]);
     unmount();
     expect(liveVideoPlayers()).toHaveLength(0);
+  });
+
+  it('m7: a locked pet (vet / hard stop / game over) shows the still image, no video', async () => {
+    const IMG = 'https://api.petprep.si/api/media/1?expires=1&v=img&signature=a';
+    for (const flags of [{ is_ill: true }, { is_hard_stopped: true }, { is_game_over: true }]) {
+      resetMockVideoPlayers();
+      const family = familyFromDashboard(
+        makeScoredDashboard([LUKA], [
+          makeFamilyPet({
+            id: 7,
+            caretakers: [{ child_id: 2, contract_signed: true }],
+            media: makeMedia({ status: 'ready', reference_image_url: IMG, videos: { idle: 'https://x/i?v=i' } }),
+            ...flags,
+          }),
+        ]) as never,
+      ) as FamilyOverview;
+      const { unmount } = renderWithQuery(<ChildDetailScreen child={LUKA} family={family} onBack={jest.fn()} />);
+      await flush();
+      expect(screen.getByTestId('detail-pet-media-image')).toBeTruthy();
+      expect(mockVideoPlayers).toHaveLength(0);
+      unmount();
+    }
   });
 
   it('formatSteps', () => {

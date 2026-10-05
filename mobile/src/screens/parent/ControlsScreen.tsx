@@ -15,6 +15,7 @@ import JoinFamilyCard from '@/components/parent/JoinFamilyCard';
 import PetControlsCard from '@/components/parent/PetControlsCard';
 import QuietHoursCard from '@/components/parent/QuietHoursCard';
 import { NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
+import BuildLabel from '@/components/BuildLabel';
 import type { FamilyChild, FamilyOverview } from '@/modules/family/family';
 
 export const CONTROLS_STRINGS = {
@@ -22,6 +23,7 @@ export const CONTROLS_STRINGS = {
   back: 'Nazaj na pregled',
   pets: 'Psi',
   closeNotice: 'Zapri',
+  about: 'O aplikaciji',
 } as const;
 
 interface ControlsScreenProps {
@@ -71,6 +73,12 @@ export default function ControlsScreen({ onBack, family, onAddChild, onChildPin,
 
         {family && <FamilyParentsCard family={family} />}
         {isEmpty && <JoinFamilyCard onJoined={(text) => onNotice?.(text)} />}
+
+        {/* Build identity (which code David / testers run). */}
+        <View style={styles.about} testID="controls-about">
+          <Text style={styles.group}>{CONTROLS_STRINGS.about}</Text>
+          <BuildLabel tone="light" style={styles.aboutLabel} />
+        </View>
       </ScrollView>
     </View>
   );
@@ -93,4 +101,6 @@ const styles = StyleSheet.create({
   title: { fontSize: 20, fontWeight: '800', color: C.text },
   content: { padding: 16, gap: 14, paddingBottom: 32 },
   group: { fontSize: 13, fontWeight: '700', color: C.muted, textTransform: 'uppercase', letterSpacing: 0.4, marginTop: 4 },
+  about: { gap: 6, alignItems: 'center', paddingTop: 8 },
+  aboutLabel: { textAlign: 'center' },
 });

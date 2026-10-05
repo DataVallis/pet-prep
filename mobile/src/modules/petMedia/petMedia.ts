@@ -6,8 +6,9 @@
  * dashboard (`family.pets[]`) and `pet.updated` (backend `PetMediaPayload`):
  * `{status, reference_image_url, videos {state: url}, current_video_url, states,
  * expires_at}`. URLs are our own signed `GET /api/media/{id}?expires=…&v=…&signature=…`
- * links, bucketed by the server (the same URL for ~30 min, valid 60–90 min). `v` is a
- * hash of the stored file, so `path + v` identifies the media; `expires` / `signature`
+ * links, bucketed by the server (the same URL for ~30 min, valid 60–90 min). `v` is the
+ * first 10 hex chars of sha1(storage path) — the path carries the generation, so `v`
+ * changes with every newly stored file and `path + v` identifies the media; `expires` / `signature`
  * only renew the capability. The player is keyed by that identity, never by the raw
  * URL, so a poll that re-signs the URL doesn't restart playback.
  *
@@ -101,7 +102,7 @@ export function normalizePetMedia(raw: PetMedia | null | undefined | unknown, le
 
 /**
  * Identity of a signed media URL: everything but the capability part. Keeps the path
- * and the `v` (stored-file hash) parameter, drops `expires`, `signature` and anything
+ * and the `v` parameter (sha1 of the storage path — new with every stored file), drops `expires`, `signature` and anything
  * else. Two URLs with the same key point at the same file.
  */
 export function mediaKey(url: string): string {
@@ -196,52 +197,89 @@ export function isMediaPending(media: PetMediaInfo): boolean {
 }
 
 /**
- * Expired-URL recovery per media key (pure reducer so it can be tested without a
- * player): first error → ask for a fresh state once (`refetch`) and wait for a new URL;
- * a new URL for the same key → retry it; a second error (or no way to refetch) → the
- * key is failed for good and the chain falls back to the image.
+ * Video error recovery per media key (pure reducer so it can be tested without a
+ * player):
+ * 1. first error → ask for a fresh state once (`refetch`) and wait for a new URL
+ *    (an expired signature is the usual cause); if the same URL is still all we have
+ *    after `FAILED_RETRY_MS`, it is tried once more;
+ * 2. a new URL for the same key → retry it;
+ * 3. a second error (or no way to refetch) → the key is failed for
+ *    `FAILED_RETRY_MS` (a decoder / network hiccup may pass) and the chain falls back;
+ * 4. after that one more try with the current URL; failing again → failed for good
+ *    (until the file changes — a new `v` is a new key).
+ * A frame from the video clears the key's history (the next expiry starts at 1).
  */
+export const FAILED_RETRY_MS = 60_000;
+
 export interface VideoErrorState {
-  /** key → URL that failed once (waiting for a re-signed one). */
-  retrying: Readonly<Record<string, string>>;
-  /** keys that failed for good. */
-  failed: ReadonlySet<string>;
+  /** key → URL that failed once and when (waiting for a re-signed one). */
+  retrying: Readonly<Record<string, { url: string; since: number }>>;
+  /** key → device ms until which it is failed; null = for good. */
+  failed: Readonly<Record<string, number | null>>;
 }
 
-export const NO_VIDEO_ERRORS: VideoErrorState = { retrying: {}, failed: new Set<string>() };
+export const NO_VIDEO_ERRORS: VideoErrorState = { retrying: {}, failed: {} };
+
+function without<T>(record: Readonly<Record<string, T>>, key: string): Record<string, T> {
+  const next = { ...record };
+  delete next[key];
+  return next;
+}
 
 export function recordVideoError(
   state: VideoErrorState,
   url: string,
   canRefetch: boolean,
+  nowMs: number,
 ): { state: VideoErrorState; refetch: boolean } {
   const key = mediaKey(url);
-  if (state.failed.has(key)) return { state, refetch: false };
-  // Second error for this media (the re-signed URL failed too), or nothing to refetch.
-  if (!canRefetch || key in state.retrying) {
-    const retrying = { ...state.retrying };
-    delete retrying[key];
-    return { state: { retrying, failed: new Set([...state.failed, key]) }, refetch: false };
+  const failedUntil = state.failed[key];
+  if (failedUntil === null) return { state, refetch: false };
+  if (failedUntil !== undefined) {
+    if (nowMs < failedUntil) return { state, refetch: false };
+    // The extra try after the cool-down failed too.
+    return { state: { retrying: without(state.retrying, key), failed: { ...state.failed, [key]: null } }, refetch: false };
   }
-  return { state: { ...state, retrying: { ...state.retrying, [key]: url } }, refetch: true };
+  // Second error for this media (the retried URL failed too), or nothing to refetch.
+  if (!canRefetch || key in state.retrying) {
+    return {
+      state: { retrying: without(state.retrying, key), failed: { ...state.failed, [key]: nowMs + FAILED_RETRY_MS } },
+      refetch: false,
+    };
+  }
+  return { state: { ...state, retrying: { ...state.retrying, [key]: { url, since: nowMs } } }, refetch: true };
 }
 
-/** The video showed a frame: its key may refetch again on a later error (next expiry). */
+/** The video showed a frame: forget its errors (a later expiry may refetch again). */
 export function recordVideoReady(state: VideoErrorState, url: string): VideoErrorState {
   const key = mediaKey(url);
-  if (!(key in state.retrying)) return state;
-  const retrying = { ...state.retrying };
-  delete retrying[key];
-  return { ...state, retrying };
+  if (!(key in state.retrying) && !(key in state.failed)) return state;
+  return { retrying: without(state.retrying, key), failed: without(state.failed, key) };
 }
 
 /**
- * Whether `url` may be loaded now: not failed, and — while its key waits for a fresh
- * URL — only once the URL actually changed (the re-signed one).
+ * Whether `url` may be loaded now: not failed (or its cool-down is over), and — while
+ * its key waits for a fresh URL — only a changed URL, or the same one after the wait.
  */
-export function canPlayUrl(state: VideoErrorState, url: string): boolean {
+export function canPlayUrl(state: VideoErrorState, url: string, nowMs: number): boolean {
   const key = mediaKey(url);
-  if (state.failed.has(key)) return false;
-  const waitingOn = state.retrying[key];
-  return waitingOn === undefined || waitingOn !== url;
+  const failedUntil = state.failed[key];
+  if (failedUntil === null) return false;
+  if (failedUntil !== undefined) return nowMs >= failedUntil;
+  const waiting = state.retrying[key];
+  return waiting === undefined || waiting.url !== url || nowMs - waiting.since >= FAILED_RETRY_MS;
+}
+
+/** Next moment a cool-down / wait ends (device ms), or null — the view re-evaluates then. */
+export function nextFailedExpiry(state: VideoErrorState, nowMs: number): number | null {
+  const ends = [
+    ...Object.values(state.failed).filter((t): t is number => t !== null),
+    ...Object.values(state.retrying).map((w) => w.since + FAILED_RETRY_MS),
+  ].filter((t) => t > nowMs);
+  return ends.length > 0 ? Math.min(...ends) : null;
+}
+
+/** The key waits for a re-signed URL (its frozen last frame may stay on screen). */
+export function isWaitingForUrl(state: VideoErrorState, key: string): boolean {
+  return key in state.retrying;
 }

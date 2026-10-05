@@ -261,6 +261,7 @@ export default function ChildHudScreen() {
 
   const { pet } = view;
   const locked = view.lock.is_locked;
+  const opaqueLock = view.lock.reason === 'game_over' || view.lock.reason === 'inactive';
   const feedDisabled = !view.feeding.can_feed;
   const waterDisabled = !view.water.can_water;
   const walkDisabled = locked;
@@ -277,8 +278,10 @@ export default function ChildHudScreen() {
         petState={pet.pet_state}
         lockReason={view.lock.reason}
         breed={pet.breed_type}
-        // Paused under the lock screen and the walk tracker (and in the background).
-        active={!locked && !isWalkModalVisible}
+        // Vet visit / hard stop: the sick / sleeping video keeps playing under the
+        // translucent grey lock (PRODUCT_SPEC §7). Paused under the opaque game-over /
+        // inactive screen, the walk tracker and in the background.
+        active={!opaqueLock && !isWalkModalVisible}
         onMediaExpired={onMediaExpired}
         variant="hud"
         testID="hud-pet-media"

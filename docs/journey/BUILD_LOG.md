@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-05 — Bolan kuža je siv, a živ; in vedno vemo, katero različico testiramo
+
+**Kaj se je zgodilo:** Po pregledu kode (PR #28) sta dve spremembi vidni na zaslonu:
+- **Pri veterinarju** otrok ne vidi več črnega zaslona: kuža je viden skozi **prosojno sivo plast** in se v videu (če ga ima) težko diha in leži — točno tako, kot pravijo pravila igre (»zaslon sivo, video težkega dihanja«). Enako, ko starš ustavi igro: kuža spi pod sivo plastjo. Besedilo (npr. »do 18:30«) ostane berljivo. Ob game overu ostane temen zaslon.
+- **Oznaka različice:** na začetnem zaslonu in v starševskem »Nadzor → O aplikaciji« je majhna siva oznaka, npr. `v1.10.2 · 23cd58a` — različica in koda, iz katere je aplikacija zgrajena.
+- Popravljen redek primer, ko je kuža med hitrim preklopom stanj za trenutek izginil; videi se zdaj shranjujejo v predpomnilnik telefona. **599 zelenih testov** (dvakrat zapored).
+
+**Zakaj je pomembno**
+Bolezen mora biti vidna in čutna, ne le napis — otrok vidi, da kužku ni dobro. Oznaka različice pa pri testiranju prihrani ugibanje, kateri popravek je že na telefonu.
+
+**Kako to povedati**
+- 🧒 *"Ko je kuža pri veterinarju, ga vidiš sivega in utrujenega. Počakaj, da se vrne zdrav!"*
+- 👩 *"Ko je kuža bolan, otrok to vidi na lastne oči — brez strašljivih slik, le umirjen siv prikaz."*
+- 🛠 *"Prosojen zaklep čez predvajani video; build identity iz EAS_BUILD_GIT_COMMIT_HASH v app.config.ts → expo-constants."*
+
 ## 2026-10-05 — Kuža v aplikaciji oživi: AI videi na glavnem zaslonu
 
 **Kaj se je zgodilo:** Videi, ki jih umetna inteligenca naredi za vsakega psa ob rojstvu, so zdaj **na otrokovem glavnem zaslonu**. Namesto risbe otrok vidi svojega, edinstvenega kužka v 5-sekundnem videu brez zvoka, ki se neprekinjeno ponavlja — in video ustreza stanju igre:

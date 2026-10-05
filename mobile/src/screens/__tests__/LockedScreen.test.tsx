@@ -1,10 +1,32 @@
 import { render, screen } from '@testing-library/react-native';
 
-import LockedScreen, { LOCKED_STRINGS, lockedCopy } from '@/screens/LockedScreen';
+import LockedScreen, { LOCKED_STRINGS, isTranslucentLock, lockedCopy } from '@/screens/LockedScreen';
 import { useAppStore } from '@/store/appStore';
 
 describe('LockedScreen (M1-16)', () => {
   beforeEach(() => useAppStore.setState(useAppStore.getInitialState(), true));
+
+  it('M4-03 / spec §7: vet visit and hard stop are a translucent grey veil over the dog; game over / inactive opaque', () => {
+    expect(isTranslucentLock('illness')).toBe(true);
+    expect(isTranslucentLock('hard_stop')).toBe(true);
+    expect(isTranslucentLock('game_over')).toBe(false);
+    expect(isTranslucentLock('inactive')).toBe(false);
+
+    useAppStore.getState().setLockState('hard_stop');
+    const { unmount } = render(<LockedScreen />);
+    const bg = () =>
+      ([screen.getByTestId('locked-screen').props.style].flat(3) as Array<{ backgroundColor?: string } | undefined>)
+        .map((st) => st?.backgroundColor)
+        .filter(Boolean);
+    expect(bg()).toEqual(['rgba(71, 85, 105, 0.55)']);
+    expect(screen.getByTestId('locked-card-glass')).toBeTruthy();
+    unmount();
+
+    useAppStore.getState().setLockState('game_over');
+    render(<LockedScreen />);
+    expect(bg()).toEqual(['#000000']);
+    expect(screen.getByTestId('locked-card')).toBeTruthy();
+  });
 
   it('hard stop: "Starš je ustavil igro" with the spec text', () => {
     useAppStore.getState().setLockState('hard_stop');

@@ -25,7 +25,7 @@ Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova p
 - 👣 **Sprehod** — **vsak dan** pojdi ven in hodi s telefonom v žepu. Vsak tvoj korak šteje! Ob polnoči se začne nov dan in kuža spet čaka na sprehod. Če en dan sploh ne greš z njim ven, naslednje jutro zboli. V "Sprehod" vidiš, koliko korakov si že naredil (npr. 1.250 / 4.000). Na iPhonu se štejejo vsi današnji koraki, na Androidu pa samo, ko je aplikacija odprta.
 - 🧹 **Čiščenje** — kuža enkrat ali dvakrat na dan naredi nered (nikoli, ko si v šoli ali spiš). Pobriši ga s prstom! Dokler ni čisto, mu ne moreš dati hrane ne vode — aplikacija ti reče "Najprej pospravi".
 
-**Če starši ustavijo igro**, vidiš "Starš je ustavil igro" in počakaš, da jo spet vklopijo. Ko je kuža pri veterinarju, ti aplikacija pove, do kdaj (npr. "do 18:30").
+**Če starši ustavijo igro**, vidiš "Starš je ustavil igro" in počakaš, da jo spet vklopijo. Ko je kuža pri veterinarju, ti aplikacija pove, do kdaj (npr. "do 18:30"), kužka pa vidiš skozi sivo zaveso, ko počiva. Tudi ko starši ustavijo igro, ga vidiš skozi sivo zaveso.
 
 Na desni strani zaslona vidiš štiri stolpce. **Zelena** = kuža je vesel. **Rumena** = pazi. **Rdeča** = kuža te zelo potrebuje!
 

@@ -825,8 +825,9 @@ flowchart TD
   V3 -- no --> IMG{"reference image?"} -- yes --> I["image (useStableUrl)"]
   IMG -- no --> PH["placeholder (HUD avatar / paw + breed)"]
   PLAY --> R{"first frame?"} -- yes --> X["300 ms crossfade, old player released"]
-  PLAY --> E{"player error"} -- first --> RF["image + refetch state once → re-signed URL → retry"]
-  E -- second --> I
+  PLAY --> E{"player error"} -- first --> RF["keep last frame + refetch state once → re-signed URL → retry"]
+  E -- second --> CD["failed 60 s (image / idle) → one more try"] -- fails --> I
+  W -. "vet / hard stop" .-> GREY["video keeps playing under the translucent grey lock"]
 ```
 
 ```mermaid
@@ -842,5 +843,8 @@ sequenceDiagram
   B-->>V: onFirstFrameRender (or readyToPlay + 1 s)
   V->>B: fade in 300 ms
   V->>A: unmount → player released
-  Note over V: AppState background / lock screen / walk → pause · foreground → play
+  S->>V: pet_state idle again during B's 300 ms fade-in
+  V->>B: stop fade-in, fade out (leaving) → released
+  V->>A: (still mounted) back to opacity 1
+  Note over V: AppState background / opaque lock (game over, inactive) / walk → pause · foreground → play
 ```

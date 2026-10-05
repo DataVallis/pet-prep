@@ -165,10 +165,12 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
       </View>
 
       <ScrollView style={styles.flex} contentContainerStyle={styles.content}>
-        {pet !== null && !pet.is_game_over && (
+        {pet !== null && (
           <PetMediaView
             media={normalizePetMedia(pet.media)}
             petState="idle"
+            // A locked pet (vet, hard stop, game over, inactive) is shown as a still image.
+            videoEnabled={pet.is_active && !pet.is_ill && !pet.is_hard_stopped && !pet.is_game_over}
             breed={toBreedType(pet.breed_type)}
             onMediaExpired={onMediaExpired}
             variant="card"

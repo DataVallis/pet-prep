@@ -6,8 +6,12 @@
 
 export type MockPlayerEvent = 'statusChange' | 'playingChange' | 'sourceLoad';
 
+export type MockPlayerStatus = 'idle' | 'loading' | 'readyToPlay' | 'error';
+
 export interface MockVideoPlayer {
   source: unknown;
+  /** Like the real player: the last status (statusChange payloads update it). */
+  status: MockPlayerStatus;
   loop: boolean;
   muted: boolean;
   playing: boolean;
@@ -28,6 +32,7 @@ export function createMockVideoPlayer(source: unknown): MockVideoPlayer {
   const listeners = new Map<MockPlayerEvent, Set<(payload: unknown) => void>>();
   const player: MockVideoPlayer = {
     source,
+    status: 'idle',
     loop: false,
     muted: false,
     playing: false,
@@ -55,6 +60,9 @@ export function createMockVideoPlayer(source: unknown): MockVideoPlayer {
       return { remove: () => set.delete(listener) };
     },
     emit: (event, payload) => {
+      if (event === 'statusChange' && typeof payload === 'object' && payload !== null && 'status' in payload) {
+        player.status = (payload as { status: MockPlayerStatus }).status;
+      }
       listeners.get(event)?.forEach((l) => l(payload));
     },
   };
@@ -69,4 +77,20 @@ export function resetMockVideoPlayers(): void {
 /** Players not yet released (= mounted). */
 export function liveVideoPlayers(): MockVideoPlayer[] {
   return mockVideoPlayers.filter((p) => !p.released);
+}
+
+/** URI a player was created with (string sources or `{ uri }` objects). */
+export function sourceUri(player: MockVideoPlayer): string | null {
+  const s = player.source;
+  if (typeof s === 'string') return s;
+  if (typeof s === 'object' && s !== null && 'uri' in s) {
+    const uri = (s as { uri: unknown }).uri;
+    return typeof uri === 'string' ? uri : null;
+  }
+  return null;
+}
+
+/** URIs of all players created so far, in order. */
+export function playerUris(): Array<string | null> {
+  return mockVideoPlayers.map(sourceUri);
 }

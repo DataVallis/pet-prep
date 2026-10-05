@@ -5,11 +5,11 @@
  * pauses in the background and releases every player.
  */
 import { act, fireEvent, render, screen } from '@testing-library/react-native';
-import { AppState, type AppStateStatus } from 'react-native';
+import { Animated, AppState, type AppStateStatus } from 'react-native';
 
 import PetMediaView, { CROSSFADE_MS, PET_MEDIA_STRINGS, READY_FALLBACK_MS } from '@/components/PetMediaView';
-import { EMPTY_PET_MEDIA, type PetMediaInfo } from '@/modules/petMedia/petMedia';
-import { liveVideoPlayers, mockVideoPlayers, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
+import { EMPTY_PET_MEDIA, FAILED_RETRY_MS, type PetMediaInfo } from '@/modules/petMedia/petMedia';
+import { liveVideoPlayers, mockVideoPlayers, playerUris, resetMockVideoPlayers, sourceUri } from '@/test-utils/videoPlayers';
 import type { PetState } from '@/types';
 
 const BASE = 'https://api.petprep.si/api/media';
@@ -57,8 +57,51 @@ async function showFirstFrame(phaseTestId = 'pet-media-video-loading') {
 
 let appStateListeners: Array<(state: AppStateStatus) => void> = [];
 
+/**
+ * Controlled Animated.timing: completes exactly after `duration` ms of fake time;
+ * `stopAnimation()` on the value ends it unfinished (like the real driver). Makes the
+ * 300 ms crossfade window testable.
+ */
+type EndCallback = Animated.EndCallback | undefined;
+const running = new Map<Animated.Value, { timer: ReturnType<typeof setTimeout>; cb: EndCallback }>();
+
+function stopRunning(value: Animated.Value): void {
+  const r = running.get(value);
+  if (!r) return;
+  running.delete(value);
+  clearTimeout(r.timer);
+  r.cb?.({ finished: false });
+}
+
+function mockAnimatedTiming(): void {
+  jest.spyOn(Animated, 'timing').mockImplementation((value, config) => {
+    const v = value as Animated.Value;
+    const toValue = config.toValue as number;
+    return {
+      start: (cb?: Animated.EndCallback) => {
+        stopRunning(v);
+        const timer = setTimeout(() => {
+          running.delete(v);
+          v.setValue(toValue);
+          cb?.({ finished: true });
+        }, config.duration ?? 0);
+        running.set(v, { timer, cb });
+      },
+      stop: () => stopRunning(v),
+      reset: () => stopRunning(v),
+    };
+  });
+  const original = Animated.Value.prototype.stopAnimation;
+  jest.spyOn(Animated.Value.prototype, 'stopAnimation').mockImplementation(function (this: Animated.Value, callback) {
+    stopRunning(this);
+    return original.call(this, callback);
+  });
+}
+
 beforeEach(() => {
   jest.useFakeTimers();
+  running.clear();
+  mockAnimatedTiming();
   resetMockVideoPlayers();
   appStateListeners = [];
   jest.spyOn(AppState, 'addEventListener').mockImplementation((_type, listener) => {
@@ -77,7 +120,8 @@ describe('source selection', () => {
     renderMedia({ petState: 'hungry' });
     expect(mockVideoPlayers).toHaveLength(1);
     const [player] = mockVideoPlayers;
-    expect(player.source).toBe(HUNGRY);
+    expect(sourceUri(player)).toBe(HUNGRY);
+    expect(player.source).toEqual({ uri: HUNGRY, useCaching: true });
     expect(player.loop).toBe(true);
     expect(player.muted).toBe(true);
     expect((player as unknown as { keepScreenOnWhilePlaying: boolean }).keepScreenOnWhilePlaying).toBe(false);
@@ -90,7 +134,7 @@ describe('source selection', () => {
 
   it('falls back to idle for a state without a video (basic entitlement)', () => {
     renderMedia({ petState: 'sick' });
-    expect(mockVideoPlayers[0].source).toBe(IDLE);
+    expect(sourceUri(mockVideoPlayers[0])).toBe(IDLE);
   });
 
   it('no videos → the reference image, no player', () => {
@@ -114,9 +158,9 @@ describe('source selection', () => {
 
   it('vet visit plays the sick video, a hard stop the sleeping one', () => {
     const { update } = renderMedia({ petState: 'playing', lockReason: 'hard_stopped' });
-    expect(mockVideoPlayers[0].source).toBe(SLEEPING);
+    expect(sourceUri(mockVideoPlayers[0])).toBe(SLEEPING);
     update({ petState: 'playing', lockReason: 'ill', media: media({ videos: { idle: IDLE, sick: url(5, 'sick') } }) });
-    expect(mockVideoPlayers[1].source).toBe(url(5, 'sick'));
+    expect(sourceUri(mockVideoPlayers[1])).toBe(url(5, 'sick'));
   });
 });
 
@@ -129,7 +173,7 @@ describe('state change crossfade', () => {
     update({ petState: 'sleeping' });
     expect(mockVideoPlayers).toHaveLength(2);
     const sleepPlayer = mockVideoPlayers[1];
-    expect(sleepPlayer.source).toBe(SLEEPING);
+    expect(sourceUri(sleepPlayer)).toBe(SLEEPING);
     // Old frame stays on screen while the new one loads.
     expect(screen.getByTestId('pet-media-video-visible')).toBeTruthy();
     expect(screen.getByTestId('pet-media-video-loading')).toBeTruthy();
@@ -152,6 +196,66 @@ describe('state change crossfade', () => {
       jest.advanceTimersByTime(READY_FALLBACK_MS + CROSSFADE_MS + 50);
     });
     expect(liveVideoPlayers()).toEqual([mockVideoPlayers[1]]);
+  });
+
+  it('M1: back to the previous video during the 300 ms fade-in keeps it, fades the newer one out', async () => {
+    const { update } = renderMedia({ petState: 'idle' });
+    await showFirstFrame();
+    const idlePlayer = mockVideoPlayers[0];
+
+    update({ petState: 'sleeping' });
+    const sleepPlayer = mockVideoPlayers[1];
+    fireEvent(screen.getByTestId('pet-media-video-loading'), 'firstFrameRender');
+    // Inside the fade window: sleeping is half-way in.
+    await act(async () => {
+      jest.advanceTimersByTime(CROSSFADE_MS / 2);
+    });
+    expect(idlePlayer.released).toBe(false);
+
+    update({ petState: 'idle' });
+    expect(screen.getByTestId('pet-media-video-leaving')).toBeTruthy();
+    // Past the moment the interrupted fade-in would have finished (and removed idle).
+    await act(async () => {
+      jest.advanceTimersByTime(CROSSFADE_MS + 50);
+    });
+    expect(idlePlayer.released).toBe(false);
+    expect(sleepPlayer.released).toBe(true);
+    expect(liveVideoPlayers()).toEqual([idlePlayer]);
+    expect(screen.getAllByTestId('pet-media-video-visible')).toHaveLength(1);
+    // Idle is back at full opacity.
+    const opacityOf = (testId: string): unknown => {
+      let node: ReturnType<typeof screen.getByTestId> | null = screen.getByTestId(testId).parent;
+      while (node) {
+        const flat = [node.props.style].flat(5) as Array<Record<string, unknown> | null | undefined>;
+        const found = flat.find((st) => st != null && typeof st === 'object' && 'opacity' in st);
+        if (found) return found.opacity;
+        node = node.parent;
+      }
+      return undefined;
+    };
+    expect(opacityOf('pet-media-video-visible')).toBe(1);
+  });
+
+  it('M1: back to a video that is fading out revives it', async () => {
+    const { update } = renderMedia({ petState: 'idle' });
+    await showFirstFrame();
+    update({ lockReason: 'game_over' });
+    await act(async () => {
+      jest.advanceTimersByTime(CROSSFADE_MS / 2);
+    });
+    update({ lockReason: null });
+    await act(async () => {
+      jest.advanceTimersByTime(CROSSFADE_MS + 50);
+    });
+    expect(mockVideoPlayers).toHaveLength(1);
+    expect(mockVideoPlayers[0].released).toBe(false);
+    expect(screen.getByTestId('pet-media-video-visible')).toBeTruthy();
+  });
+
+  it('m7: videoEnabled=false shows the still image, no player', () => {
+    renderMedia({ videoEnabled: false });
+    expect(mockVideoPlayers).toHaveLength(0);
+    expect(screen.getByTestId('pet-media-image')).toBeTruthy();
   });
 
   it('a quick change back drops the never-shown layer', async () => {
@@ -196,7 +300,7 @@ describe('URL stability', () => {
     const { update } = renderMedia({ petState: 'idle' });
     update({ media: media({ videos: { idle: url(2, 'idle-g2') } }) });
     expect(mockVideoPlayers).toHaveLength(2);
-    expect(mockVideoPlayers[1].source).toBe(url(2, 'idle-g2'));
+    expect(sourceUri(mockVideoPlayers[1])).toBe(url(2, 'idle-g2'));
   });
 
   it('a re-signed image URL keeps the rendered image', () => {
@@ -206,50 +310,109 @@ describe('URL stability', () => {
   });
 });
 
-describe('expired URL', () => {
-  it('player error → refetch once → retry with the re-signed URL → second error falls back to the image', async () => {
+describe('player errors', () => {
+  it('error → keeps the last frame, refetches once → retry with the re-signed URL replaces it', async () => {
     const onMediaExpired = jest.fn();
     const { update } = renderMedia({ petState: 'idle', onMediaExpired });
     await showFirstFrame();
+    const first = mockVideoPlayers[0];
 
     act(() => {
-      mockVideoPlayers[0].emit('statusChange', { status: 'error', error: { message: '403' } });
+      first.emit('statusChange', { status: 'error', error: { message: '403' } });
     });
     expect(onMediaExpired).toHaveBeenCalledTimes(1);
-    expect(mockVideoPlayers[0].released).toBe(true);
-    expect(screen.queryByTestId('pet-media-video-visible')).toBeNull();
-    expect(screen.getByTestId('pet-media-image')).toBeTruthy();
+    // m5: the frozen last frame stays (paused) while we wait for a new URL.
+    expect(screen.getByTestId('pet-media-video-errored')).toBeTruthy();
+    expect(first.released).toBe(false);
+    expect(first.playing).toBe(false);
 
     // A poll with the same (failed) URL does not reload it.
     update({ media: media() });
     expect(mockVideoPlayers).toHaveLength(1);
 
-    // The refetch brings a freshly signed URL → one retry.
-    const fresh = media({ videos: { idle: url(2, 'idle', 'fresh', 5_000), sleeping: SLEEPING } });
-    update({ media: fresh });
-    expect(mockVideoPlayers).toHaveLength(2);
-    expect(mockVideoPlayers[1].source).toBe(url(2, 'idle', 'fresh', 5_000));
+    // The refetch brings a freshly signed URL → one retry, the frozen frame stays until it is ready.
+    const freshUrl = url(2, 'idle', 'fresh', 5_000);
+    update({ media: media({ videos: { idle: freshUrl, sleeping: SLEEPING } }) });
+    expect(playerUris()).toEqual([IDLE, freshUrl]);
+    expect(first.released).toBe(false);
+    await showFirstFrame();
+    expect(first.released).toBe(true);
+    expect(liveVideoPlayers()).toEqual([mockVideoPlayers[1]]);
+  });
 
+  it('second error → image for 60 s, then one more try, then image for good', async () => {
+    const onMediaExpired = jest.fn();
+    const { update } = renderMedia({ petState: 'idle', onMediaExpired });
+    act(() => {
+      mockVideoPlayers[0].emit('statusChange', { status: 'error' });
+    });
+    // Never shown → dropped at once.
+    expect(liveVideoPlayers()).toHaveLength(0);
+    const fresh = media({ videos: { idle: url(2, 'idle', 'fresh', 5_000) } });
+    update({ media: fresh });
     act(() => {
       mockVideoPlayers[1].emit('statusChange', { status: 'error' });
     });
     expect(onMediaExpired).toHaveBeenCalledTimes(1);
     expect(liveVideoPlayers()).toHaveLength(0);
     expect(screen.getByTestId('pet-media-image')).toBeTruthy();
-
-    // Even newer signatures of the same file stay on the image.
-    update({ media: media({ videos: { idle: url(2, 'idle', 'newest', 9_000) } }) });
-    expect(liveVideoPlayers()).toHaveLength(0);
     expect(screen.queryByText(/napak|error/i)).toBeNull();
+
+    // m6: after the cool-down the same media is tried once more.
+    await act(async () => {
+      jest.advanceTimersByTime(FAILED_RETRY_MS + 50);
+    });
+    expect(mockVideoPlayers).toHaveLength(3);
+    act(() => {
+      mockVideoPlayers[2].emit('statusChange', { status: 'error' });
+    });
+    await act(async () => {
+      jest.advanceTimersByTime(10 * FAILED_RETRY_MS);
+    });
+    expect(mockVideoPlayers).toHaveLength(3);
+    expect(liveVideoPlayers()).toHaveLength(0);
+    expect(onMediaExpired).toHaveBeenCalledTimes(1);
   });
 
-  it('without a refetch handler the first error falls back to the image', () => {
-    renderMedia({ petState: 'idle' });
+  it('a failed shown video with no other video fades out to the image', async () => {
+    renderMedia({ petState: 'idle' }); // no refetch handler → straight to the cool-down
+    await showFirstFrame();
     act(() => {
       mockVideoPlayers[0].emit('statusChange', { status: 'error' });
     });
+    await act(async () => {
+      jest.advanceTimersByTime(CROSSFADE_MS + 50);
+    });
     expect(liveVideoPlayers()).toHaveLength(0);
     expect(screen.getByTestId('pet-media-image')).toBeTruthy();
+  });
+
+  it('m4: a status reached before subscribing is honoured (error / readyToPlay)', async () => {
+    // Simulate the native side being faster than our effect: patch the status in setup.
+    const videoModule = jest.requireMock<typeof import('expo-video')>('expo-video');
+    const real = videoModule.useVideoPlayer;
+    const spy = jest.spyOn(videoModule, 'useVideoPlayer').mockImplementation((source, setup) =>
+      real(source, (p) => {
+        setup?.(p);
+        (p as unknown as { status: string }).status = 'readyToPlay';
+      }),
+    );
+    renderMedia({ petState: 'idle' });
+    await act(async () => {
+      jest.advanceTimersByTime(READY_FALLBACK_MS + CROSSFADE_MS + 50);
+    });
+    expect(screen.getByTestId('pet-media-video-visible')).toBeTruthy();
+
+    spy.mockImplementation((source, setup) =>
+      real(source, (p) => {
+        setup?.(p);
+        (p as unknown as { status: string }).status = 'error';
+      }),
+    );
+    const onMediaExpired = jest.fn();
+    renderMedia({ petState: 'sleeping', onMediaExpired, media: media({ videos: { sleeping: SLEEPING } }) });
+    expect(onMediaExpired).toHaveBeenCalledTimes(1);
+    expect(liveVideoPlayers().filter((p) => sourceUri(p) === SLEEPING)).toHaveLength(0);
   });
 });
 

@@ -4,10 +4,13 @@
  */
 import {
   EMPTY_PET_MEDIA,
+  FAILED_RETRY_MS,
   NO_VIDEO_ERRORS,
   canPlayUrl,
   isMediaPending,
+  isWaitingForUrl,
   mediaKey,
+  nextFailedExpiry,
   normalizePetMedia,
   recordVideoError,
   recordVideoReady,
@@ -147,39 +150,60 @@ describe('selectMediaSource — fallback chain', () => {
   });
 });
 
-describe('expired URL recovery', () => {
+describe('video error recovery', () => {
   const first = signed(2, 'i', 1_000, 'old');
   const resigned = signed(2, 'i', 2_800, 'new');
+  const T0 = 1_000_000;
 
-  it('first error → refetch once and wait for a re-signed URL', () => {
-    const { state, refetch } = recordVideoError(NO_VIDEO_ERRORS, first, true);
+  it('first error → refetch once and wait for a re-signed URL (same URL again only after the wait)', () => {
+    const { state, refetch } = recordVideoError(NO_VIDEO_ERRORS, first, true, T0);
     expect(refetch).toBe(true);
-    expect(canPlayUrl(state, first)).toBe(false); // same URL: still waiting
-    expect(canPlayUrl(state, resigned)).toBe(true); // the refetch brought a new one
+    expect(isWaitingForUrl(state, mediaKey(first))).toBe(true);
+    expect(canPlayUrl(state, first, T0 + 1_000)).toBe(false); // same URL: still waiting
+    expect(canPlayUrl(state, resigned, T0 + 1_000)).toBe(true); // the refetch brought a new one
+    expect(nextFailedExpiry(state, T0)).toBe(T0 + FAILED_RETRY_MS);
+    expect(canPlayUrl(state, first, T0 + FAILED_RETRY_MS)).toBe(true); // no new URL came: try it once more
   });
 
-  it('second error → failed for good, no second refetch', () => {
-    const once = recordVideoError(NO_VIDEO_ERRORS, first, true).state;
-    const twice = recordVideoError(once, resigned, true);
+  it('second error → failed for 60 s, then one more try, then for good', () => {
+    const once = recordVideoError(NO_VIDEO_ERRORS, first, true, T0).state;
+    const twice = recordVideoError(once, resigned, true, T0 + 2_000);
     expect(twice.refetch).toBe(false);
-    expect(canPlayUrl(twice.state, resigned)).toBe(false);
-    expect(canPlayUrl(twice.state, signed(2, 'i', 9_999, 'newer'))).toBe(false);
+    expect(canPlayUrl(twice.state, resigned, T0 + 2_000)).toBe(false);
+    expect(canPlayUrl(twice.state, signed(2, 'i', 9_999, 'newer'), T0 + 30_000)).toBe(false);
+    expect(nextFailedExpiry(twice.state, T0 + 2_000)).toBe(T0 + 2_000 + FAILED_RETRY_MS);
+    // Cool-down over → retry allowed.
+    const later = T0 + 2_000 + FAILED_RETRY_MS;
+    expect(canPlayUrl(twice.state, resigned, later)).toBe(true);
+    // Fails again → for good.
+    const third = recordVideoError(twice.state, resigned, true, later + 500);
+    expect(third.refetch).toBe(false);
+    expect(canPlayUrl(third.state, resigned, later + 10 * FAILED_RETRY_MS)).toBe(false);
+    expect(nextFailedExpiry(third.state, later)).toBeNull();
+    expect(recordVideoError(third.state, resigned, true, later + 1).state).toBe(third.state);
     // A different file (new generation) is a new chance.
-    expect(canPlayUrl(twice.state, signed(2, 'v2'))).toBe(true);
-    expect(recordVideoError(twice.state, resigned, true).refetch).toBe(false);
+    expect(canPlayUrl(third.state, signed(2, 'v2'), later)).toBe(true);
   });
 
-  it('without a refetch handler the first error already falls back', () => {
-    const { state, refetch } = recordVideoError(NO_VIDEO_ERRORS, first, false);
+  it('an error during the cool-down changes nothing', () => {
+    const cooling = recordVideoError(NO_VIDEO_ERRORS, first, false, T0).state;
+    expect(recordVideoError(cooling, first, true, T0 + 1).state).toBe(cooling);
+  });
+
+  it('without a refetch handler the first error starts the cool-down', () => {
+    const { state, refetch } = recordVideoError(NO_VIDEO_ERRORS, first, false, T0);
     expect(refetch).toBe(false);
-    expect(canPlayUrl(state, resigned)).toBe(false);
+    expect(canPlayUrl(state, resigned, T0 + 1)).toBe(false);
+    expect(canPlayUrl(state, resigned, T0 + FAILED_RETRY_MS)).toBe(true);
   });
 
-  it('a successful retry re-arms the single refetch for the next expiry', () => {
-    const once = recordVideoError(NO_VIDEO_ERRORS, first, true).state;
+  it('a frame from the video clears its history (the next expiry refetches again)', () => {
+    const once = recordVideoError(NO_VIDEO_ERRORS, first, true, T0).state;
     const ready = recordVideoReady(once, resigned);
-    expect(ready.retrying).toEqual({});
-    expect(recordVideoError(ready, resigned, true).refetch).toBe(true);
+    expect(ready).toEqual(NO_VIDEO_ERRORS);
+    expect(recordVideoError(ready, resigned, true, T0 + 5).refetch).toBe(true);
+    const cooled = recordVideoError(NO_VIDEO_ERRORS, first, false, T0).state;
+    expect(recordVideoReady(cooled, first).failed).toEqual({});
     expect(recordVideoReady(NO_VIDEO_ERRORS, first)).toBe(NO_VIDEO_ERRORS);
   });
 });

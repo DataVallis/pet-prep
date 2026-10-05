@@ -4,34 +4,28 @@
  * video, then the reference image, then a breed placeholder.
  *
  * - **Crossfade:** a state change mounts the new video in a hidden layer; the previous
- *   one keeps playing until the new one renders its first frame, then fades out. One
- *   player in steady state, two only during the ~0.3 s crossfade; every player is
- *   released when its layer unmounts (`useVideoPlayer` cleans up).
- * - **Stable URLs:** layers are keyed by the media identity (`mediaKey`: path + file
- *   hash `v`), not the signed URL — a poll that re-signs the URL doesn't restart
- *   playback. A layer keeps the URL it started with.
- * - **Expired URL:** a player error removes that layer (the image underneath shows),
- *   asks for a fresh state once (`onMediaExpired`) and retries with the re-signed URL;
- *   a second error falls back to the image for good (until the file changes).
+ *   one keeps playing until the new one renders its first frame, then the new one fades
+ *   in and the old one is released. Going back to the previous media while the newer
+ *   one is still fading in stops that fade, fades the newer one out and brings the
+ *   previous one back to full opacity. One player in steady state, two only during a
+ *   crossfade; every player is released when its layer unmounts.
+ * - **Stable URLs:** layers are keyed by the media identity (`mediaKey`: path + `v`),
+ *   not the signed URL — a poll that re-signs the URL doesn't restart playback. A layer
+ *   keeps the URL it started with. Sources use expo-video's disk cache (`useCaching`).
+ * - **Errors:** a layer that never showed is dropped; a visible one keeps its last frame
+ *   until a replacement is ready. The first error asks for a fresh state once
+ *   (`onMediaExpired`, expired signature) and retries the re-signed URL; a second error
+ *   fails the media for 60 s, then one more try, then for good (until the file changes).
  * - **Battery:** players pause while the app is in the background or `active` is
- *   false (screen covered, lock overlay, walk); they don't keep the screen on.
+ *   false (screen covered); they don't keep the screen on.
  * - The child never sees a media error: pending shows a gentle "getting ready" hint,
  *   failed / disabled just show the image or the placeholder.
  */
 
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import {
-  Animated,
-  Image,
-  Platform,
-  StyleSheet,
-  Text,
-  View,
-  type StyleProp,
-  type ViewStyle,
-} from 'react-native';
+import { memo, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { Animated, Image, Platform, StyleSheet, Text, View, type StyleProp, type ViewStyle } from 'react-native';
 import { PawPrint } from 'lucide-react-native';
-import { useVideoPlayer, VideoView, type StatusChangeEventPayload } from 'expo-video';
+import { useVideoPlayer, VideoView, type StatusChangeEventPayload, type VideoPlayerStatus } from 'expo-video';
 
 import type { LockReason } from '@/modules/childPet/childPetView';
 import { useAppActive, useStableUrl } from '@/modules/petMedia/hooks';
@@ -39,6 +33,8 @@ import {
   NO_VIDEO_ERRORS,
   canPlayUrl,
   isMediaPending,
+  isWaitingForUrl,
+  nextFailedExpiry,
   recordVideoError,
   recordVideoReady,
   selectMediaSource,
@@ -73,6 +69,8 @@ interface Layer {
   url: string;
   opacity: Animated.Value;
   phase: LayerPhase;
+  /** The player failed; the view keeps its last frame until a replacement is ready. */
+  errored: boolean;
 }
 
 export interface PetMediaViewProps {
@@ -83,6 +81,8 @@ export interface PetMediaViewProps {
   breed: BreedType;
   /** false = screen not focused / covered → pause every player. */
   active?: boolean;
+  /** false = never play a video, show the still image (parent view of a locked pet). */
+  videoEnabled?: boolean;
   /** Called once per media key when a player fails (likely an expired URL) — refetch the state. */
   onMediaExpired?: () => void;
   /** `hud`: full-bleed dark (child); `card`: rounded box (parent). */
@@ -94,7 +94,9 @@ export interface PetMediaViewProps {
 }
 
 interface VideoLayerProps {
-  layer: Layer;
+  id: string;
+  url: string;
+  opacity: Animated.Value;
   playing: boolean;
   onReady: (id: string) => void;
   onError: (id: string) => void;
@@ -102,8 +104,8 @@ interface VideoLayerProps {
 }
 
 /** One player + view. The source is fixed for the layer's life (no restart on re-sign). */
-function VideoLayer({ layer, playing, onReady, onError, testID }: VideoLayerProps) {
-  const [source] = useState(layer.url);
+const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, onReady, onError, testID }: VideoLayerProps) {
+  const [source] = useState(() => ({ uri: url, useCaching: true }));
   const player = useVideoPlayer(source, (p) => {
     p.loop = true;
     p.muted = true;
@@ -116,24 +118,27 @@ function VideoLayer({ layer, playing, onReady, onError, testID }: VideoLayerProp
     else player.pause();
   }, [player, playing]);
 
-  const { id } = layer;
   useEffect(() => {
     let fallback: ReturnType<typeof setTimeout> | null = null;
-    const sub = player.addListener('statusChange', (payload: StatusChangeEventPayload) => {
-      if (payload.status === 'error') {
-        onError(id);
-      } else if (payload.status === 'readyToPlay' && fallback === null) {
+    const handle = (status: VideoPlayerStatus) => {
+      if (status === 'error') onError(id);
+      else if (status === 'readyToPlay' && fallback === null) {
         fallback = setTimeout(() => onReady(id), READY_FALLBACK_MS);
       }
-    });
+    };
+    const sub = player.addListener('statusChange', (payload: StatusChangeEventPayload) => handle(payload.status));
+    // The status may have changed before we subscribed (fast cache hit / instant error).
+    handle(player.status);
     return () => {
       sub.remove();
       if (fallback !== null) clearTimeout(fallback);
     };
   }, [player, id, onReady, onError]);
 
+  const onFirstFrameRender = useCallback(() => onReady(id), [onReady, id]);
+
   return (
-    <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { opacity: layer.opacity }]}>
+    <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { opacity }]}>
       <VideoView
         player={player}
         contentFit="cover"
@@ -141,13 +146,13 @@ function VideoLayer({ layer, playing, onReady, onError, testID }: VideoLayerProp
         allowsPictureInPicture={false}
         // Two views overlap during the crossfade: TextureView respects opacity on Android.
         surfaceType={Platform.OS === 'android' ? 'textureView' : undefined}
-        onFirstFrameRender={() => onReady(id)}
+        onFirstFrameRender={onFirstFrameRender}
         style={StyleSheet.absoluteFill}
         testID={testID}
       />
     </Animated.View>
   );
-}
+});
 
 function DefaultPlaceholder({ breed, variant }: { breed: BreedType; variant: 'hud' | 'card' }) {
   const dark = variant === 'hud';
@@ -163,12 +168,19 @@ function DefaultPlaceholder({ breed, variant }: { breed: BreedType; variant: 'hu
 
 let layerSeq = 0;
 
+function animateTo(value: Animated.Value, toValue: number, done?: () => void): void {
+  Animated.timing(value, { toValue, duration: CROSSFADE_MS, useNativeDriver: true }).start(({ finished }) => {
+    if (finished) done?.();
+  });
+}
+
 export default function PetMediaView({
   media,
   petState,
   lockReason = null,
   breed,
   active = true,
+  videoEnabled = true,
   onMediaExpired,
   variant = 'hud',
   placeholder,
@@ -179,12 +191,24 @@ export default function PetMediaView({
   const [errors, setErrors] = useState<VideoErrorState>(NO_VIDEO_ERRORS);
   const errorsRef = useRef(errors);
   errorsRef.current = errors;
+  const expiredRef = useRef(onMediaExpired);
+  expiredRef.current = onMediaExpired;
 
-  const wanted = videoStateFor(petState, lockReason);
-  const target = useMemo(
-    () => selectMediaSource(media, wanted, { canPlayVideo: (url) => canPlayUrl(errors, url) }),
-    [media, wanted, errors],
-  );
+  // Re-evaluate when a cool-down / wait ends.
+  const [clock, setClock] = useState(() => Date.now());
+  useEffect(() => {
+    const now = Date.now();
+    const next = nextFailedExpiry(errors, now);
+    if (next === null) return;
+    const timer = setTimeout(() => setClock(Date.now()), next - now + 10);
+    return () => clearTimeout(timer);
+  }, [errors, clock]);
+
+  const wanted = videoEnabled ? videoStateFor(petState, lockReason) : null;
+  const target = useMemo(() => {
+    const now = Math.max(clock, Date.now());
+    return selectMediaSource(media, wanted, { canPlayVideo: (url) => canPlayUrl(errors, url, now) });
+  }, [media, wanted, errors, clock]);
   const image = useStableUrl(media.referenceImageUrl);
 
   // ── Video layers ─────────────────────────────────────────────
@@ -203,31 +227,27 @@ export default function PetMediaView({
     };
   }, []);
 
-  const fadeOut = useCallback(
-    (layer: Layer) => {
-      Animated.timing(layer.opacity, { toValue: 0, duration: CROSSFADE_MS, useNativeDriver: true }).start(
-        ({ finished }) => {
-          if (!finished || !mounted.current) return;
-          const current = layersRef.current.find((l) => l.id === layer.id);
-          if (current?.phase === 'leaving') commit(layersRef.current.filter((l) => l.id !== layer.id));
-        },
-      );
+  const removeIfLeaving = useCallback(
+    (id: string) => {
+      if (!mounted.current) return;
+      if (layersRef.current.find((l) => l.id === id)?.phase === 'leaving') {
+        commit(layersRef.current.filter((l) => l.id !== id));
+      }
     },
     [commit],
   );
 
-  const fadeIn = useCallback(
-    (layer: Layer) => {
-      // Layers shown before this one go away once it is fully visible.
-      const older = layersRef.current.filter((l) => l.id !== layer.id && l.phase !== 'loading').map((l) => l.id);
-      Animated.timing(layer.opacity, { toValue: 1, duration: CROSSFADE_MS, useNativeDriver: true }).start(
-        ({ finished }) => {
-          if (!finished || !mounted.current) return;
-          commit(layersRef.current.filter((l) => !older.includes(l.id)));
-        },
-      );
+  /** Mark layers leaving (stopping any fade-in, whose completion then removes nothing) and fade them out. */
+  const retire = useCallback(
+    (ids: readonly string[], base: Layer[]): Layer[] => {
+      for (const l of base) {
+        if (!ids.includes(l.id) || l.phase === 'leaving') continue;
+        l.opacity.stopAnimation();
+        animateTo(l.opacity, 0, () => removeIfLeaving(l.id));
+      }
+      return base.map((l) => (ids.includes(l.id) ? { ...l, phase: 'leaving' as const } : l));
     },
-    [commit],
+    [removeIfLeaving],
   );
 
   const targetVideoKey = target.kind === 'video' ? target.key : null;
@@ -235,27 +255,36 @@ export default function PetMediaView({
   useEffect(() => {
     const prev = layersRef.current;
     if (targetVideoKey === null || targetVideoUrl === null) {
-      // No video wanted: drop what never showed, fade out what is visible.
-      const next = prev
-        .filter((l) => l.phase !== 'loading')
-        .map((l) => (l.phase === 'visible' ? { ...l, phase: 'leaving' as const } : l));
-      commit(next);
-      next.filter((l) => l.phase === 'leaving').forEach(fadeOut);
+      // No video wanted: drop what never showed, fade out what is visible — except a
+      // frozen frame whose media waits for a re-signed URL.
+      const kept = prev.filter((l) => l.phase !== 'loading');
+      const retiring = kept
+        .filter((l) => l.phase === 'visible' && !(l.errored && isWaitingForUrl(errors, l.key)))
+        .map((l) => l.id);
+      if (kept.length !== prev.length || retiring.length > 0) commit(retire(retiring, kept));
       return;
     }
-    const same = prev.find((l) => l.key === targetVideoKey);
-    if (same && same.phase !== 'leaving') {
-      // Already showing / loading this media (maybe a re-signed URL — keep the player).
-      const next = prev.filter((l) => l.phase !== 'loading' || l.key === targetVideoKey);
-      if (next.length !== prev.length) commit(next);
+    const same = prev.find((l) => l.key === targetVideoKey && !l.errored);
+    const othersLoading = prev.filter((l) => l.phase === 'loading' && l.id !== same?.id);
+    const base = prev.filter((l) => !othersLoading.includes(l));
+
+    if (same?.phase === 'loading') {
+      if (othersLoading.length > 0) commit(base);
       return;
     }
     if (same) {
-      // Back to a media that is fading out: fade it in again.
+      const shown = base.filter((l) => l.phase !== 'loading');
+      if (same.phase === 'visible' && shown[shown.length - 1]?.id === same.id) {
+        // Already the newest visible media (maybe a re-signed URL) — keep the player.
+        if (othersLoading.length > 0) commit(base);
+        return;
+      }
+      // Back to a media that is under a newer one or fading out: stop the newer one's
+      // fade-in, fade the others out, bring this one back to full opacity.
+      const others = shown.filter((l) => l.id !== same.id).map((l) => l.id);
       same.opacity.stopAnimation();
-      const revived: Layer = { ...same, phase: 'visible' };
-      commit(prev.filter((l) => l.phase !== 'loading').map((l) => (l.id === same.id ? revived : l)));
-      fadeIn(revived);
+      commit(retire(others, base).map((l) => (l.id === same.id ? { ...l, phase: 'visible' as const } : l)));
+      animateTo(same.opacity, 1);
       return;
     }
     layerSeq += 1;
@@ -265,34 +294,47 @@ export default function PetMediaView({
       url: targetVideoUrl,
       opacity: new Animated.Value(0),
       phase: 'loading',
+      errored: false,
     };
-    commit([...prev.filter((l) => l.phase !== 'loading'), layer]);
-  }, [targetVideoKey, targetVideoUrl, commit, fadeIn, fadeOut]);
+    commit([...base, layer]);
+  }, [targetVideoKey, targetVideoUrl, errors, commit, retire]);
 
   const onReady = useCallback(
     (id: string) => {
       const layer = layersRef.current.find((l) => l.id === id);
       if (!layer || layer.phase !== 'loading') return;
-      const visible: Layer = { ...layer, phase: 'visible' };
-      commit(layersRef.current.map((l) => (l.id === id ? visible : l)));
-      fadeIn(visible);
+      // Layers shown before this one go away once it is fully visible.
+      const older = layersRef.current.filter((l) => l.id !== id && l.phase !== 'loading').map((l) => l.id);
+      commit(layersRef.current.map((l) => (l.id === id ? { ...l, phase: 'visible' as const } : l)));
+      animateTo(layer.opacity, 1, () => {
+        if (mounted.current) commit(layersRef.current.filter((l) => !older.includes(l.id)));
+      });
       const next = recordVideoReady(errorsRef.current, layer.url);
-      if (next !== errorsRef.current) setErrors(next);
+      if (next !== errorsRef.current) {
+        errorsRef.current = next;
+        setErrors(next);
+      }
     },
-    [commit, fadeIn],
+    [commit],
   );
 
   const onError = useCallback(
     (id: string) => {
       const layer = layersRef.current.find((l) => l.id === id);
-      if (!layer) return;
-      layer.opacity.stopAnimation();
-      commit(layersRef.current.filter((l) => l.id !== id));
-      const result = recordVideoError(errorsRef.current, layer.url, onMediaExpired !== undefined);
+      if (!layer || layer.errored) return;
+      if (layer.phase === 'visible') {
+        // Keep the last frame on screen until something replaces it.
+        commit(layersRef.current.map((l) => (l.id === id ? { ...l, errored: true } : l)));
+      } else {
+        layer.opacity.stopAnimation();
+        commit(layersRef.current.filter((l) => l.id !== id));
+      }
+      const result = recordVideoError(errorsRef.current, layer.url, expiredRef.current !== undefined, Date.now());
+      errorsRef.current = result.state;
       setErrors(result.state);
-      if (result.refetch) onMediaExpired?.();
+      if (result.refetch) expiredRef.current?.();
     },
-    [commit, onMediaExpired],
+    [commit],
   );
 
   const playing = active && appActive;
@@ -325,11 +367,13 @@ export default function PetMediaView({
       {layers.map((layer) => (
         <VideoLayer
           key={layer.id}
-          layer={layer}
-          playing={playing}
+          id={layer.id}
+          url={layer.url}
+          opacity={layer.opacity}
+          playing={playing && !layer.errored}
           onReady={onReady}
           onError={onError}
-          testID={`${testID}-video-${layer.phase}`}
+          testID={`${testID}-video-${layer.errored ? 'errored' : layer.phase}`}
         />
       ))}
 
