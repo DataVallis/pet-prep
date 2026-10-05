@@ -1,6 +1,6 @@
 # Podatki o psih iz virov — raziskava za realistično simulacijo (M1-19 / M5)
 
-> **Status:** osnutek za Davidov pregled (5. 10. 2026). Nič od tega še ni uvoženo v `breed_configs`.
+> **Status:** David je 5. 10. 2026 sprejel odločitve (DECISIONS); življenjske faze, obroki, gibanje, spanje, teža, učljivost in življenjska doba so **uvoženi v `breed_stage_params`** (M5-R01, `BreedStageParamsSeeder`, vsaka vrednost z `source_id` in `verified`; NEPODPRTO = `verified = false`). `breed_configs` (hitrosti lakote / žeje, voda, kakci) ostaja neuvoženo.
 > **Datoteke:** `data.json` (strojno berljivo, vsaka vrednost z virom, citatom in zanesljivostjo) · `sources.md` (seznam virov S1–S46 z URL-ji, založnikom, datumom dostopa).
 > **Pravilo:** vse, kar ni neposredno podprto z virom, je označeno **NEPODPRTO — predlog** (v JSON: `UNSOURCED — proposal`) in se staršem/otrokom ne sme prikazati kot dejstvo.
 > **Opozorilo o citatih:** strani sem bral z orodjem, ki vrne zahtevane odlomke. Pred uvozom naj človek odpre URL in preveri citat (zlasti PDF-je S1, S12, S13, S24, S30).

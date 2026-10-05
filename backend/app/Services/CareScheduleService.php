@@ -6,6 +6,7 @@ use App\Enums\ActivityType;
 use App\Models\ActivityLog;
 use App\Models\BreedConfig;
 use App\Models\Pet;
+use App\Models\QuietHours;
 use App\Services\Results\FeedingStatus;
 use App\Services\Results\WaterStatus;
 use Carbon\CarbonImmutable;
@@ -30,11 +31,23 @@ use Illuminate\Support\Facades\Log;
  * counts real minutes; the fall-back day has 25 h, the spring-forward day 23 h.
  *
  * The source of truth for "already fed / watered" is `activities_log`
- * (fed_pet / watered_pet rows). Callers that act on the result hold the pet's
- * row lock, so the count can't change underneath them.
+ * (fed_pet / parent_fed_pet / watered_pet rows). Callers that act on the
+ * result hold the pet's row lock, so the count can't change underneath them.
+ *
+ * Life stages (M5-R01): the windows of a family-local day come from the
+ * pet's stage rules of that day (LifeStageService::rulesOn — e.g. a 2-month
+ * puppy 4 meals 07–08, 11–12, 15–16, 19–20; adults the breed windows). A
+ * window that lies entirely inside quiet hours (school / sleep) is "done by
+ * the parent" (David 2026-10-05): not expected from the child, and the decay
+ * tick feeds the dog at its start (dueParentMeals → parent_fed_pet row).
  */
 class CareScheduleService
 {
+    /** Activity rows that count as "this window is fed". */
+    public const FED_TYPES = [ActivityType::FedPet, ActivityType::ParentFedPet];
+
+    public function __construct(private readonly LifeStageService $lifeStages) {}
+
     /**
      * How many local days around today are scanned for feed windows
      * (yesterday covers windows over midnight, +2 finds the next window).
@@ -45,11 +58,11 @@ class CareScheduleService
     {
         $tz = $pet->familyTimezone();
         $now = CarbonImmutable::instance($now)->setTimezone($tz);
-        $windows = $this->configuredWindows($config);
+        $windows = $this->windowsOn($pet, $config, $now->toDateString());
 
         $current = null;
         $upcoming = null;
-        foreach ($this->windowInstances($windows, $now, $tz) as [$start, $end]) {
+        foreach ($this->windowInstances($pet, $config, $now, $tz) as [$start, $end]) {
             if ($current === null && $start->lessThanOrEqualTo($now) && $now->lessThan($end)) {
                 $current = [$start, $end];
             } elseif ($upcoming === null && $start->greaterThan($now)) {
@@ -58,7 +71,7 @@ class CareScheduleService
         }
 
         $lastFed = ActivityLog::where('pet_id', $pet->id)
-            ->where('activity_type', ActivityType::FedPet->value)
+            ->whereIn('activity_type', array_map(fn (ActivityType $t) => $t->value, self::FED_TYPES))
             ->orderByDesc('created_at')
             ->orderByDesc('id')
             ->value('created_at');
@@ -136,14 +149,16 @@ class CareScheduleService
      * sorted by start (routine ledger, M2-06: one feed routine per window).
      * Same rules as feeding(): [start, end), an end ≤ start runs over
      * midnight, a time in the spring-forward gap resolves after the jump,
-     * a broken config falls back to the default windows.
+     * a broken config falls back to the default windows. Windows are the
+     * pet's stage rules of $date (M5-R01).
      *
      * @return list<array{0: CarbonImmutable, 1: CarbonImmutable}>
      */
-    public function feedWindowsStartingOn(BreedConfig $config, string $date, string $tz): array
+    public function feedWindowsStartingOn(Pet $pet, BreedConfig $config, string $date): array
     {
+        $tz = $pet->familyTimezone();
         $instances = [];
-        foreach ($this->configuredWindows($config) as [$start, $end]) {
+        foreach ($this->windowsOn($pet, $config, $date) as [$start, $end]) {
             $endDate = $end > $start
                 ? $date
                 : CarbonImmutable::parse($date, 'UTC')->addDay()->toDateString();
@@ -157,16 +172,84 @@ class CareScheduleService
     }
 
     /**
-     * The breed's windows; an empty or broken config falls back to the spec
-     * default (06–10, 17–21) instead of making feeding impossible.
+     * The validated windows of a family-local date (the pet's stage rules).
      *
      * @return list<array{0: string, 1: string}>
      */
-    private function configuredWindows(BreedConfig $config): array
+    public function windowsOn(Pet $pet, BreedConfig $config, string $date): array
+    {
+        return $this->configuredWindows($config, $this->lifeStages->rulesOn($pet, $date, $config)->feedWindows);
+    }
+
+    /**
+     * A feed window that lies entirely inside the family's quiet hours
+     * (school / sleep): the parent feeds the dog (M5-R01, David 2026-10-05).
+     */
+    public function isParentCovered(?QuietHours $quiet, CarbonInterface $start, CarbonInterface $end): bool
+    {
+        if ($quiet === null || ! $quiet->is_active) {
+            return false;
+        }
+
+        return QuietHours::splitSecondsBetween($quiet, $start, $end)['normal'] <= 0;
+    }
+
+    /**
+     * Parent-covered windows that STARTED in ($from, $to] after the birth and
+     * are not fed yet (no fed_pet / parent_fed_pet row inside the window):
+     * the decay tick feeds the dog for each (M5-R01). Oldest first.
+     *
+     * @return list<array{0: CarbonImmutable, 1: CarbonImmutable}>
+     */
+    public function dueParentMeals(Pet $pet, BreedConfig $config, CarbonInterface $from, CarbonInterface $to, ?QuietHours $quiet): array
+    {
+        if ($pet->born_at === null || $quiet === null || ! $quiet->is_active) {
+            return [];
+        }
+
+        $tz = $pet->familyTimezone();
+        $fromUtc = CarbonImmutable::instance($from)->utc();
+        $toUtc = CarbonImmutable::instance($to)->utc();
+        $born = CarbonImmutable::instance($pet->born_at)->utc();
+        $firstDate = $fromUtc->setTimezone($tz)->subDay()->toDateString();
+        $lastDate = $toUtc->setTimezone($tz)->toDateString();
+
+        $due = [];
+        for ($date = $firstDate; $date <= $lastDate; $date = CarbonImmutable::parse($date, 'UTC')->addDay()->toDateString()) {
+            foreach ($this->feedWindowsStartingOn($pet, $config, $date) as [$start, $end]) {
+                $startUtc = $start->utc();
+                if ($startUtc->lessThanOrEqualTo($fromUtc) || $startUtc->greaterThan($toUtc) || $startUtc->lessThan($born)) {
+                    continue;
+                }
+                if (! $this->isParentCovered($quiet, $start, $end)) {
+                    continue;
+                }
+                $fed = ActivityLog::where('pet_id', $pet->id)
+                    ->whereIn('activity_type', array_map(fn (ActivityType $t) => $t->value, self::FED_TYPES))
+                    ->where('created_at', '>=', $startUtc)
+                    ->where('created_at', '<', $end->utc())
+                    ->exists();
+                if (! $fed) {
+                    $due[] = [$start, $end];
+                }
+            }
+        }
+
+        return $due;
+    }
+
+    /**
+     * Valid windows of a list; empty or broken → the spec default (06–10,
+     * 17–21) instead of making feeding impossible.
+     *
+     * @param  list<array{0: string, 1: string}>|null  $windows  null = the breed's feed_windows
+     * @return list<array{0: string, 1: string}>
+     */
+    private function configuredWindows(BreedConfig $config, ?array $windows = null): array
     {
         $valid = [];
         $invalid = 0;
-        foreach ((array) $config->feed_windows as $window) {
+        foreach ((array) ($windows ?? $config->feed_windows) as $window) {
             $start = is_array($window) ? ($window[0] ?? null) : null;
             $end = is_array($window) ? ($window[1] ?? null) : null;
             if (is_string($start) && is_string($end) && $this->isTime($start) && $this->isTime($end) && $start !== $end) {
@@ -205,19 +288,19 @@ class CareScheduleService
     }
 
     /**
-     * Concrete window instances for the local days around $now, sorted by start.
+     * Concrete window instances for the local days around $now, sorted by
+     * start — each day with the windows of its own stage rules.
      *
-     * @param  list<array{0: string, 1: string}>  $windows
      * @return list<array{0: CarbonImmutable, 1: CarbonImmutable}>
      */
-    private function windowInstances(array $windows, CarbonImmutable $now, string $tz): array
+    private function windowInstances(Pet $pet, BreedConfig $config, CarbonImmutable $now, string $tz): array
     {
         $today = $now->toDateString();
         $instances = [];
 
         foreach (self::WINDOW_DAYS as $offset) {
             $date = CarbonImmutable::parse($today, 'UTC')->addDays($offset)->toDateString();
-            foreach ($windows as [$start, $end]) {
+            foreach ($this->windowsOn($pet, $config, $date) as [$start, $end]) {
                 $endDate = $end > $start
                     ? $date
                     : CarbonImmutable::parse($date, 'UTC')->addDay()->toDateString();

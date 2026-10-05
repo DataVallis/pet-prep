@@ -51,6 +51,7 @@ class PetActivityService
         private DailyWalkService $dailyWalks,
         private PetDecayService $decay,
         private CareScheduleService $schedule,
+        private LifeStageService $lifeStages,
     ) {}
 
     /**
@@ -61,7 +62,8 @@ class PetActivityService
      * - Anti-cheat: the increment is capped at 200 steps per minute between
      *   the last accepted sync (or local midnight) and `$recordedAt`; the
      *   excess is refused now and can still be accepted by a later sync.
-     * - Energy = min(100, steps / breed daily_steps_required × 100); a sync
+     * - Energy = min(100, steps / today's step goal × 100) — the goal of the
+     *   dog's life stage (M5-R01, LifeStageService); a sync
      *   never lowers it (birth-day grace, DECISIONS 2026-10-03).
      * - A sync for a local day that is already over is ignored (stale).
      * - Activity log: one `walked_pet` row per day, when the sync first
@@ -134,11 +136,13 @@ class PetActivityService
             }
 
             $breedConfig = $this->breedConfigOf($locked);
+            // Today's goal of the dog's life stage (M5-R01).
+            $goal = $this->lifeStages->rulesOn($locked, $today, $breedConfig)->stepGoal;
 
             $row->forceFill(['steps' => $current + $accepted, 'last_sync_at' => $at])->save();
 
             $newCount = $petCount + $accepted;
-            $energy = max((float) $locked->energy_level, $breedConfig->energyForSteps($newCount));
+            $energy = max((float) $locked->energy_level, self::energyForSteps($newCount, $goal));
 
             $locked->forceFill([
                 'daily_step_count' => $newCount,
@@ -148,7 +152,6 @@ class PetActivityService
             ]);
             $locked->saveQuietly();
 
-            $goal = (int) $breedConfig->daily_steps_required;
             if ($goal > 0 && $petCount < $goal && $newCount >= $goal) {
                 $this->logActivity($locked, ActivityType::WalkedPet, $newCount, $actorId);
             }
@@ -488,6 +491,19 @@ class PetActivityService
             'escalation_level' => (int) $pet->escalation_level,
             'is_ill' => $pet->isIll(),
         ]);
+    }
+
+    /**
+     * Energy (0–100, precise) for a number of steps and a goal:
+     * min(100, steps / goal × 100); a goal of 0 means "no walk needed".
+     */
+    public static function energyForSteps(int $steps, int $goal): float
+    {
+        if ($goal <= 0) {
+            return 100.0;
+        }
+
+        return min(100.0, max(0, $steps) / $goal * 100);
     }
 
     private function breedConfigOf(Pet $pet): BreedConfig

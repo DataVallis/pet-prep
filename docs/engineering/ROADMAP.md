@@ -61,7 +61,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
   - [ ] Odprto (backend): hard stop preklop brez zaklepa vrstice / transakcije
 - [ ] M1-17 Generirani tipi iz OpenAPI (`schema.ts`) se uporabljajo v `client.ts` namesto ročnih
 - [ ] M1-18 i18n s `expo-localization` + `i18next`: **EN privzeto + SL**; tudi strežniška sporočila (push, napake) prek Laravel lang datotek
-- [ ] M1-19 **Uvoz podatkov o pasmah iz virov** (David, 2026-10-03): zbrati zanesljive vire (FCI/AKC standardi, veterinarska literatura o gibanju, prehrani, vodi), AI izlušči vrednosti → tabela z virom na vsako številko → David potrdi → uvoz v `breed_configs` (+ stolpec/tabela za vire). Do takrat so številke iz izvirne specifikacije označene kot *nepreverjene*. Sejalnik je insert-only.
+- [~] M1-19 **Uvoz podatkov o pasmah iz virov** (David, 2026-10-03) — **2026-10-05:** raziskava `docs/research/dog-data/` (S1–S46) + uvoz življenjskih faz v `breed_stage_params` (M5-R01, vsaka vrednost z virom / `verified`); `breed_configs` hitrosti lakote / žeje, voda in kakci ostajajo nepreverjeni (viri jih ne podajo — glej dog-data README §2): zbrati zanesljive vire (FCI/AKC standardi, veterinarska literatura o gibanju, prehrani, vodi), AI izlušči vrednosti → tabela z virom na vsako številko → David potrdi → uvoz v `breed_configs` (+ stolpec/tabela za vire). Do takrat so številke iz izvirne specifikacije označene kot *nepreverjene*. Sejalnik je insert-only.
 
 ## M2 — Starš, avtentikacija, dashboard (1 teden)
 
@@ -137,6 +137,15 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M5-07 TestFlight + Google Play Internal testing; 20–50 beta družin (waitlist)
 - [ ] M5-08 Analitika produkta (PostHog EU): aktivacija, D1 / D7, dokončanje dneva, konverzija paywalla
 
+## M5-R — Realistična simulacija (David, 5. 10. 2026; spec `docs/product/REALISM_SPEC.md`)
+
+> ID-ji `M5-R…`, ker `M5-01…M5-08` zgoraj že označujejo produkcijo in beto.
+
+- [x] M5-R01 **Profil psa in življenjske faze (strežnik)** — 2026-10-05, branch `feat/M5-A-pet-profile-stages`: izbira pasme / izvora (kupljen, posvojen) / starosti (mladiček, mlad, odrasel, starejši) ob PIN-u; `pets.origin`, `arrival_age_months`, `life_stage`; podatki iz virov v `breed_stage_params` (+ revizija sprememb, Filament "Life-stage data"); pravila po fazi: obroki 4 / 3 / 2 in okna, cilj korakov = minute × 100, obrok v tihih urah opravi starš; prehod faze ob lokalni polnoči → nova referenčna slika istega psa (Nano Banana Pro Edit) + videi, stare slike v `pet_media_history`; popravki videza (Border Collie po FCI / AKC, mešanček srednje velik); API `profile` povsod.
+- [ ] M5-R02 **Vedenjski dogodki** — nered v stanovanju (mladiček / posvojen, zdrži ~1 h na mesec starosti, S30 / S31), uničevanje (menjava zob 3–6 mes., dolgčas ob premalo gibanja), plašnost posvojenega psa v prvih tednih (S39 / S40); nova stanja videov.
+- [ ] M5-R03 **Šolanje (dresura)** — dnevna mini-vaja (~5 min), napredek po ukazu 0–100 %, hitrost po učljivosti (Coren: Border Collie #1; mešanček povprečje + naključje), upad brez vaje; šteje v Care Score (predlog).
+- [ ] M5-R04 **Mobilni UI** — "Izberi kužka" (pasma, izvor, starost) pred PIN-om; starost / faza / "naslednja faza" v HUD-u in pri staršu; obroki dneva z oznako "nahrani starš"; album rasti (`pet_media_history`).
+
 ## Po MVP (backlog)
 
 - Certifikat odgovornosti (PDF) + fizična licenca po pošti
@@ -145,7 +154,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - Second Chance reset (19,99 € consumable)
 - IAP ekonomija: veterinar, priboljški, igrače
 - B2B affiliate (Mr. Pet) — QR kuponi
-- **M5 Realistična simulacija** (David, 5. 10. 2026; spec `docs/product/REALISM_SPEC.md`): izbira izvora in starosti, rast in mediji po fazah, vedenje (nered, uničevanje), šolanje z učljivostjo po pasmi — predpogoj M1-19 (podatki iz virov)
+- ~~M5 Realistična simulacija~~ → premaknjeno v **M5-R** zgoraj (2026-10-05)
 - Skaliranje in nove države: glej `docs/engineering/SCALING.md` (sprožilci + ukrepi)
 - Faza 2: Real-World AI asistent (LLM + RAG, pgvector), IoT ovratnice — spec `docs/product/PHASE2_SPEC.md`; predpogoj: metrika "% družin, ki po izzivu kupijo psa"
 - Mačka

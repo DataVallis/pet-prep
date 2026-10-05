@@ -137,7 +137,7 @@ describe('model profiles', function () {
             }
         }
 
-        expect(array_keys($profiles->all('image')))->toBe(['flux_schnell', 'flux2_pro', 'nano_banana_pro', 'seedream_v5_lite'])
+        expect(array_keys($profiles->all('image')))->toBe(['flux_schnell', 'flux2_pro', 'nano_banana_pro', 'nano_banana_pro_edit', 'seedream_v5_lite'])
             ->and(array_keys($profiles->all('video')))->toBe(['kling_v3_pro', 'kling_v26_pro', 'veo31_fast', 'veo31_lite']);
     });
 
@@ -253,9 +253,11 @@ describe('pet DNA v2', function () {
                 expect($options[$trait])->toContain($value);
             }
 
-            if ($traits['eye_color'] === 'blue') {
-                expect($traits['coat_color'])->toBe('blue merle and white');
+            // FCI / RKC (M5-R01 research): blue eyes only in merles (blue and red merle).
+            if (in_array($traits['eye_color'], ['blue', 'partly blue'], true)) {
+                expect($traits['coat_color'])->toContain('merle');
             }
+            expect($traits['eye_color'])->not->toBe('amber');
             if ($traits['eye_color'] === 'one blue and one brown') {
                 expect($traits['coat_color'])->toContain('merle');
             }

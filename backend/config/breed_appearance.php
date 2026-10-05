@@ -10,14 +10,14 @@
 | a deterministic seed, so every dog of a breed looks different (like in real
 | life) but stays inside what the breed can look like.
 |
-| !!! NOT VERIFIED !!!
-| David 2026-10-03 (DECISIONS, ROADMAP M1-19): breed data must come from
-| verifiable sources. These option lists are a first draft written by Claude from
-| general knowledge so that DNA v2 and the AI Lab can be tested. Every breed is
-| marked `verified => false` and must be replaced in M1-19 with options sourced
-| from the FCI standard (border collie: FCI No. 297) / AKC standard, with the
-| source recorded in `source`. Do not present these lists as breed facts to
-| parents or children.
+| PARTLY VERIFIED (M5-R01, 2026-10-05 — docs/research/dog-data, README §4)
+| David 2026-10-03: breed data must come from verifiable sources. `sources`
+| names the source of each trait that a breed standard supports (FCI 297 = S1,
+| AKC 2015 = S3, RKC = S6, size class S5); every trait NOT listed there, and
+| every `weight`, is an unsourced draft (no standard lists colour names or
+| frequencies, face markings or mixed-breed appearance). That is why each
+| breed stays `verified => false`. Do not present these lists as breed facts
+| to parents or children.
 |
 | Format of a trait: ordered list of options. An option is either a string or
 | ['value' => string, 'weight' => int (default 1),
@@ -35,10 +35,13 @@ return [
     'mutt' => [
         'display_name' => 'mixed-breed dog',
         'verified' => false,
-        'source' => null,
-        'todo' => 'M1-19: no breed standard exists for mixed breeds; define a broad, realistic range (e.g. from shelter intake statistics) and record the source.',
+        'source' => 'Size: David 2026-10-05 — the game\'s mutt is a medium mixed breed of 15–30 kg adult weight (Salt size category IV, S8). Everything else: no standard exists and no shelter appearance statistics were found (dog-data README §2.10) — unsourced draft.',
+        'sources' => [
+            'size' => 'S8 (category IV 15–<30 kg) + David 2026-10-05',
+        ],
         'traits' => [
-            'size' => ['small', ['value' => 'medium-sized', 'weight' => 3], 'large'],
+            // Medium mixed breed only (David 2026-10-05: 15–30 kg adult weight).
+            'size' => ['medium-sized'],
             'build' => ['slender', ['value' => 'athletic', 'weight' => 2], 'sturdy', 'stocky'],
             'coat_length' => [['value' => 'short smooth', 'weight' => 3], 'medium-length', 'wiry', 'long fluffy'],
             'coat_color' => [
@@ -77,13 +80,23 @@ return [
 
     'border_collie' => [
         'display_name' => 'Border Collie',
+        // Colour names / weights, coat patterns and face markings are not in any standard (unsourced).
         'verified' => false,
-        'source' => null,
-        'todo' => 'M1-19: replace with options sourced from the FCI standard No. 297 (Border Collie) and the AKC standard; record both URLs here.',
+        'source' => 'FCI-Standard N° 297 (S1, https://www.fci.be/Nomenclature/Standards/297g01-en.pdf), AKC standard 2015 (S3), Royal Kennel Club standard (S6), RKC breed page (S5) — for the traits listed in `sources`.',
+        'sources' => [
+            'size' => 'S5 "Size: Medium"',
+            'build' => 'S1 "sufficient substance to give impression of endurance" (partly)',
+            'coat_length' => 'S1 "Two varieties: Moderately long or Smooth … topcoat dense … undercoat soft and dense"; S3',
+            'coat_color' => 'S1 "Variety of colours permissible. White should never predominate." (the names and weights are unsourced)',
+            'ear_carriage' => 'S1 "Carried erect or semi-erect"; S3 "one or both carried erect and/or semi-erect"',
+            'eye_color' => 'S1/S6 "Brown in colour except in merles where one or both or part of one or both may be blue."',
+            'tail' => 'S1 "Moderately long … set on low … with an upward swirl towards the end"',
+        ],
         'traits' => [
             'size' => ['medium-sized'],
             'build' => [['value' => 'athletic', 'weight' => 3], 'lean', 'well-muscled'],
-            'coat_length' => [['value' => 'medium-length rough double', 'weight' => 3], 'smooth short'],
+            // FCI / AKC: two varieties, both with a double coat (S1, S3).
+            'coat_length' => [['value' => 'moderately long double', 'weight' => 3], 'smooth double'],
             'coat_color' => [
                 ['value' => 'black and white', 'weight' => 6],
                 ['value' => 'black, white and tan tricolour', 'weight' => 2],
@@ -107,13 +120,16 @@ return [
                 'freckles of colour on the white legs',
             ],
             'ear_carriage' => ['semi-erect', 'erect', 'one erect and one semi-erect'],
+            // FCI / RKC (S1, S6): brown; in merles (blue AND red merle) one or both, or part
+            // of one or both, may be blue. Amber is named by no standard (AKC: "any eye
+            // colour acceptable") → dropped (dog-data README §4).
             'eye_color' => [
                 ['value' => 'brown', 'weight' => 6],
-                ['value' => 'amber', 'only_with' => ['coat_color' => ['red and white', 'red merle and white', 'sable and white']]],
                 ['value' => 'one blue and one brown', 'only_with' => ['coat_color' => ['blue merle and white', 'red merle and white']]],
-                ['value' => 'blue', 'only_with' => ['coat_color' => ['blue merle and white']]],
+                ['value' => 'blue', 'only_with' => ['coat_color' => ['blue merle and white', 'red merle and white']]],
+                ['value' => 'partly blue', 'only_with' => ['coat_color' => ['blue merle and white', 'red merle and white']]],
             ],
-            'tail' => ['long, low-set with an upward swirl at the tip'],
+            'tail' => ['moderately long, low-set with an upward swirl at the tip'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'markings', 'ear_carriage', 'eye_color', 'tail'],
     ],

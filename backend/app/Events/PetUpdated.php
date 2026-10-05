@@ -4,6 +4,7 @@ namespace App\Events;
 
 use App\Models\Pet;
 use App\Services\Media\PetMediaPayload;
+use App\Services\PetProfilePayload;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
@@ -153,6 +154,8 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'is_game_over' => (bool) $pet->is_game_over,
             'is_hard_stopped' => (bool) $pet->is_hard_stopped,
             'virtual_age_months' => $pet->virtualAgeInMonths(),
+            // M5-R01: the dog's age, origin and life stage (full profile via GET).
+            ...PetProfilePayload::brief($pet),
             // Contract before birth (M1-07b): null / true until the child signs.
             'born_at' => $pet->born_at?->toIso8601String(),
             'awaiting_contract' => $pet->isUnborn(),

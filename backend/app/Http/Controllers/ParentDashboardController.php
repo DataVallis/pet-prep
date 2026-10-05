@@ -13,6 +13,7 @@ use App\Services\FamilyDashboardService;
 use App\Services\FamilyService;
 use App\Services\HardStopService;
 use App\Services\Media\PetMediaService;
+use App\Services\PetProfilePayload;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -108,6 +109,8 @@ class ParentDashboardController extends Controller
                 'is_hard_stopped' => $pet->is_hard_stopped,
                 'escalation_level' => $pet->escalation_level,
                 'virtual_age_months' => $pet->virtualAgeInMonths(),
+                // M5-R01: origin, age, life stage and today's rules.
+                'profile' => PetProfilePayload::for($pet)->toArray(),
                 // AI media (M4-05): signed URLs to our stored copies.
                 'current_video_url' => $media->currentVideoUrl,
                 'reference_image_url' => $media->referenceImageUrl,

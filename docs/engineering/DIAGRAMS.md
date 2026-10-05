@@ -1014,3 +1014,63 @@ flowchart TD
   NZ -->|"blocked"| SET["phone settings"]
   LO["logout"] --> UN["POST /api/devices/unregister (≤ 2 s) → POST /api/logout (≤ 5 s)"]
 ```
+
+## 12. Pet profile and life stages (M5-R01, 2026-10-05)
+
+### 12a. Creation: parent's choice → PIN → pet
+
+```mermaid
+sequenceDiagram
+  participant P as Parent app
+  participant API as Laravel API
+  participant DB as PostgreSQL
+  participant C as Child app
+  P->>API: POST /api/parent/generate-pin {child_id, breed?, origin?, age_stage?}
+  API->>API: GeneratePinRequest (enums; profile not with pet_id)<br/>premium breed → 422 breed_locked
+  API->>DB: child_login_pins (+ pet_options {breed, origin, age_stage})
+  API-->>P: {pin, mode: new_pet, pet_profile}
+  C->>API: POST /api/child/pin-login {pin}
+  API->>DB: breed_stage_params → arrival age (puppy 2 · young 9 · adult 36 · senior 108/118)
+  API->>DB: pets (unborn, origin, arrival_age_months, life_stage)
+  API-->>C: pet {…, profile}
+  C->>API: POST /api/child/contract → birth (age clock starts)
+```
+
+### 12b. Rules of a day (LifeStageService::rulesOn)
+
+```mermaid
+flowchart TD
+  D["family-local date"] --> A["age at local midnight = arrival_age_months + completed weeks since born_at<br/>(7 local days at the birth's wall-clock time)"]
+  A --> S["stage = last starts_at_months ≤ age<br/>(puppy 0 · young 9 · adult 36 · senior 108 / 118)"]
+  S --> M["meals_per_day: band of the stage with greatest from ≤ age<br/>(puppy 0 → 4 · 3 → 3 · 6 → 2; young/adult/senior 2)"]
+  M --> W{"feed_windows row of the same band?"}
+  W -- yes --> W1["4: 07–08 · 11–12 · 15–16 · 19–20<br/>3: 07–08 · 13–14 · 19–20 (proposal)"]
+  W -- "no, breed windows match the count" --> W2["breed_configs.feed_windows 06–10 · 17–21"]
+  W -- "no, mismatch" --> W3["N derived 1-h windows 07:00…19:00 (logged)"]
+  S --> E["exercise minutes: puppy/young 10 × age, capped at adult<br/>adult: BC 120 · mutt 60 · senior 75 %"]
+  E --> G["step goal = minutes × 100 (cap: breed_configs.daily_steps_cap)"]
+  W1 & W2 & W3 --> Q{"window entirely in quiet hours?"}
+  Q -- yes --> PC["parent covers it: tick feeds at start (parent_fed_pet),<br/>never a child routine"]
+  Q -- no --> CR["child's feed routine (ledger)"]
+  G --> EN["energy = steps / goal · walk routine · pet_daily_walks.goal"]
+```
+
+### 12c. Stage transition and stage images
+
+```mermaid
+sequenceDiagram
+  participant T as pets:process-decay (tick, row lock)
+  participant J as RegeneratePetStageMedia (queue)
+  participant MS as PetMediaService
+  participant FAL as fal.ai (Nano Banana Pro Edit)
+  T->>T: syncStage(): rules of today → life_stage puppy → young
+  T-->>J: dispatch after commit (once — lock + ShouldBeUnique)
+  J->>MS: startStageTransition(pet)
+  MS->>MS: image slot in flight → busy (release 10 min)<br/>already this stage → up_to_date
+  MS->>MS: archive stored image → pet_media_history (file kept)
+  MS->>MS: reset slot (generation + 1) → GeneratePetReferenceImage
+  MS->>FAL: edit {image_urls: [our signed URL of the old image], prompt: same dog, now <stage cue>, seed}
+  Note over MS,FAL: edit profile off → text-to-image, same seed + DNA traits + stage/origin cues
+  FAL-->>MS: images[0].url → StorePetMedia (new file, old one kept)
+  MS->>MS: queueStateVideos(): entitled videos regenerated (older source generation)
+```

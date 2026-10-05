@@ -25,20 +25,35 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 - **Skupni sprehod:** pri skupnem psu se koraki vseh otrok seštejejo za dnevni sprehod — lahko gresta skupaj ali vsak posebej.
 - Pes se hrani enkrat na okno ne glede na to, kdo ga nahrani — pes ne je dvakrat, ker ga hranita dva.
 
+## Izberite kužka: izvor in starost *(od 5. 10. 2026 na strežniku — izbira v aplikaciji še ni narejena, načrt)*
+Ob kodi za novega psa izberete **pasmo**, **izvor** (*kupljen* pri vzreditelju ali *posvojen* iz zavetišča) in **starost ob prihodu**: *mladiček* (pride pri 2 mesecih), *mlad pes* (9 mesecev), *odrasel* (3 leta) ali *starejši* (9 let; Border Collie 9,8 leta). Mešanček je brezplačen v vseh kombinacijah. Kuža se stara **1 mesec na vsak teden** igre, zato mladiček v 12 tednih zraste v mladega psa — in z njim se spremenijo njegove potrebe in njegova slika.
+
+**Številke so iz preverjenih virov**, ne izmišljene: veterinarska združenja (AAHA), kinološke zveze (FCI, AKC, The Royal Kennel Club), dobrodelne organizacije (ASPCA, Dogs Trust, PDSA) in raziskave — vsaka številka ima v naši bazi zapisan vir. Kjer vira ni (npr. točne ure obrokov), je vrednost označena kot predlog in jo še preverjamo.
+
+| Starost psa | Obroki na dan | Sprehod (koraki na dan) — mešanček / Border Collie |
+|---|---|---|
+| mladiček 2 meseca | 4 | 2.000 / 2.000 (vsak teden več) |
+| mladiček 3–6 mesecev | 3 | 3.000–5.000 / 3.000–5.000 |
+| mladiček 6–9 mesecev | 2 | 6.000 / 6.000–8.000 |
+| mlad pes, odrasel | 2 | 6.000 / do 12.000 |
+| starejši | 2 | 4.500 / 9.000 *(predlog)* |
+
+Cilj korakov = koliko minut gibanja pes te starosti potrebuje × 100 korakov na minuto. **Obroki med šolo ali spanjem so vaši:** če okno hranjenja v celoti pade v tihe ure (npr. obrok mladička ob 11. uri med šolo), ga od otroka ne pričakujemo in mu ne šteje v oceno — v igri kužka takrat nahrani starš (samodejno).
+
 ## Kaj mora otrok početi (mešanček)
 | Skrb | Kako pogosto | Kaj se zgodi, če pozabi |
 |---|---|---|
-| Hrana | zjutraj (6–10) in zvečer (17–21) po vašem času, **enkrat v vsakem oknu** — hranjenje "na zalogo" ni mogoče; izven okna je gumb zasenčen in otroku pove, kdaj bo spet čas | pes je lačen po ~12,5 urah |
+| Hrana | odrasel pes: zjutraj (6–10) in zvečer (17–21) po vašem času; mladiček več krat na dan (glej zgoraj); **enkrat v vsakem oknu** — hranjenje "na zalogo" ni mogoče; izven okna je gumb zasenčen in otroku pove, kdaj bo spet čas | pes je lačen po ~12,5 urah |
 | Voda | 3× na dan, vsaj 3 ure narazen (aplikacija pokaže, kdaj spet) | pes je žejen po ~10 urah |
-| Sprehod (vsak dan) | 4.000 korakov na dan (pravi koraki s telefona) — energija = današnji koraki / cilj, vsako polnoč (po vašem času) se začne znova pri 0 % (= "danes še ni sprehoda", ne zanemarjanje). Koraki s senzorja telefona: iPhone pošlje vse današnje korake, Android šteje, ko je aplikacija odprta; pošiljanje ob odprtju in vsakih 5 minut *(načrt: Apple Zdravje / Health Connect za korake tudi pri zaprti aplikaciji na Androidu)* | pes je utrujen; dan brez enega samega koraka → naslednje jutro zboli |
+| Sprehod (vsak dan) | cilj po starosti psa (odrasel mešanček 6.000 korakov — od 5. 10. 2026 na strežniku; prej 4.000) (pravi koraki s telefona) — energija = današnji koraki / cilj, vsako polnoč (po vašem času) se začne znova pri 0 % (= "danes še ni sprehoda", ne zanemarjanje). Koraki s senzorja telefona: iPhone pošlje vse današnje korake, Android šteje, ko je aplikacija odprta; pošiljanje ob odprtju in vsakih 5 minut *(načrt: Apple Zdravje / Health Connect za korake tudi pri zaprti aplikaciji na Androidu)* | pes je utrujen; dan brez enega samega koraka → naslednje jutro zboli |
 | Čiščenje | ko pes "naredi nered" — naključno **1× na dan** (Border Collie 2×), **nikoli med tihimi urami**; dokler ni počiščeno, hrane in vode ni | higiena pade na 0 % |
 
-Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), potrebuje 10.000 korakov in naredi nered 2× na dan.
+Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), odrasel potrebuje 12.000 korakov (več kot 2 uri gibanja na dan po The Royal Kennel Club) in naredi nered 2× na dan.
 
 **Pošteno štetje korakov:** upoštevamo največ 200 korakov na minuto; če telefon javi več, preostanek štejemo šele, ko je to realno mogoče. Tako hitro tresenje telefona ne prinese več kot hoja.
 
 ## Vsak kuža je unikaten *(od 4. 10. 2026 na strežniku; slike in videi v aplikaciji od 5. 10. 2026 — še ni v trgovini)*
-Kot v resnici: dva psa iste pasme nista enaka. Ob rojstvu vsak kuža dobi svojo kombinacijo lastnosti (velikost, postava, barva in dolžina dlake, lise, ušesa, oči, rep) znotraj tega, kar je pri pasmi mogoče, in jo obdrži za vedno. V isti družini dva psa iste pasme nikoli nista enaka. *(Seznami možnosti po pasmah so še osnutek; zamenjali jih bomo s podatki iz uradnih standardov pasem.)*
+Kot v resnici: dva psa iste pasme nista enaka. Ob rojstvu vsak kuža dobi svojo kombinacijo lastnosti (velikost, postava, barva in dolžina dlake, lise, ušesa, oči, rep) znotraj tega, kar je pri pasmi mogoče, in jo obdrži za vedno. V isti družini dva psa iste pasme nikoli nista enaka. *(Od 5. 10. 2026: Border Collie po uradnih standardih FCI in AKC — npr. modre oči samo pri merlih; mešanček je srednje velik pes 15–30 kg. Seznami barv in oznak so še predlog.)* **Kuža raste:** ko preide v novo življenjsko obdobje (npr. iz mladička v mladega psa), dobi novo fotografijo — istega psa, le starejšega — prejšnje ostanejo shranjene *(strežnik od 5. 10. 2026; album rasti v aplikaciji je načrt)*. Posvojen kuža je prikazan zdrav in miren, brez "žalostnih" prizorov.
 
 **Fotografija in kratki videi kužka** *(od 5. 10. 2026 na strežniku in v aplikaciji — še ni v trgovini)*: ob paritvi umetna inteligenca naredi fotorealistično sliko vašega kužka, ko otrok podpiše pogodbo (rojstvo), pa iz nje še kratke 5-sekundne videe brez zvoka, v katerih je vedno isti pes. Brezplačni mešanček dobi 2 videa (miruje, spi), plačljiva pasma (izziv) vseh 6 — tudi lačen, utrujen, bolan in igriv. *(Razdelitev je predlog in še ni potrjena.)* Ustvarjanje traja nekaj minut; medtem igra normalno teče. **V aplikaciji:** otrok na glavnem zaslonu vidi video trenutnega stanja (stanje brez svojega videa pokaže video "miruje", sicer sliko); vi v pregledu družine vidite sliko kužka, v podrobnostih otroka pa njegov video "miruje". Videi so brez zvoka, se ustavijo, ko aplikacija ni odprta ali je zaklenjena, in ne prižigajo zaslona — da ne praznijo baterije. Če slike ali videa ni, otrok ne vidi napake, samo sliko ali risbo kužka. Ko je kuža pri veterinarju ali ste igro ustavili, otrok vidi kužka skozi prosojno sivo plast (video "bolan" oz. "spi", če ga pes ima, sicer "miruje" ali sliko), ob game overu pa temen zaslon; vi v podrobnostih takrat vidite le sliko.
 

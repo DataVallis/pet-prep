@@ -8,6 +8,28 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-05 — Kuža raste: izvor, starost in pravila iz preverjenih virov (M5-R01, strežnik)
+
+**Kaj se je zgodilo:** Dosedanji kuža je bil "večni mladiček brez starosti": vsak dan 2 obroka in 4.000 / 10.000 korakov — številke iz prve specifikacije, brez vira. Zdaj:
+- **Starš izbere kužka** — pasmo, **izvor** (*kupljen* ali *posvojen* iz zavetišča) in **starost ob prihodu** (*mladiček* 2 meseca, *mlad pes* 9 mesecev, *odrasel* 3 leta, *starejši* 9 let; Border Collie 9,8). Mešanček je brezplačen v vseh kombinacijah. *(Strežnik; zaslon za izbiro v aplikaciji je načrt.)*
+- **Kuža se stara** 1 mesec na teden in prehaja skozi življenjska obdobja (mladiček do 9 mesecev, mlad pes do 3 let, odrasel, starejši) — meje iz smernic ameriškega veterinarskega združenja AAHA in raziskave o življenjski dobi 2024 (Border Collie 13,1 leta, mešanci 12,0).
+- **Potrebe sledijo starosti:** mladiček 4 obroke na dan, od 3. meseca 3, od 6. meseca 2 (ASPCA, The Royal Kennel Club). **Cilj korakov = minute gibanja × 100 korakov**: odrasel Border Collie 12.000 ("več kot 2 uri na dan", The Royal Kennel Club), odrasel mešanček 6.000, mladiček 2 meseca 2.000 in vsak teden več.
+- **Obrok med šolo ali spanjem opravi starš** — otroku se ne šteje kot zamujen; kuža je ob začetku okna samodejno nahranjen.
+- **Vsaka številka ima vir** (46 virov v `docs/research/dog-data`), v bazi zapisan z ID-jem vira, zanesljivostjo in oznako *preverjeno*. Kjer vira ni (npr. točne ure obrokov, minute mešančka), je vrednost označena kot **predlog** — vidno v administraciji in je staršem ne prikazujemo kot dejstva. Vsako urejanje teh podatkov se zabeleži (kdo, kaj, prej → potem).
+- **Kuža na sliki raste z njim:** ob prehodu v novo obdobje umetna inteligenca iz prejšnje fotografije naredi novo — isti pes, isti kožuh in oznake, le starejši (Nano Banana Pro Edit, ≈ 0,15 $ + videi). Stare slike ostanejo za album rasti *(album je načrt)*. Mladiček ima na sliki velike tace in puhasto dlako, starejši siv gobček; posvojen pes je prikazan zdrav in miren — brez klišejev "žalostnega psa iz zavetišča".
+- **Videz po standardih:** Border Collie po FCI / AKC (npr. modre oči le pri merlih, jantarnih ni), mešanček je srednje velik pes 15–30 kg.
+- **Številke:** 45 novih strežniških testov (skupaj **965 zelenih**), med njimi prehod 4 → 3 obroke, rojstni dan čez spremembo ure, izbira kužka, samodejni obrok med šolo, preverjanje vsake vrednosti proti datoteki virov; aplikacija **788 zelenih**.
+
+**Zakaj je pomembno**
+PetPrep obljublja "objektiven dokaz, ali je otrok pripravljen na psa" — to drži le, če je simuliran pes podoben pravemu. Mladiček, ki je lačen štirikrat na dan in vsak teden potrebuje več gibanja, je drugačna odgovornost kot odrasel pes; starš lahko zdaj preizkusi točno tisto, kar namerava domov pripeljati — tudi posvojenega psa.
+
+**Kako to povedati**
+- 👩 *"Izberite psa, kot bi ga res pripeljali domov: mladička od vzreditelja ali odraslega psa iz zavetišča. Vse potrebe — koliko obrokov, koliko sprehoda — so iz veterinarskih virov, ne izmišljene."*
+- 🧒 *"Tvoj kuža raste! Vsak teden je mesec starejši — in ko zraste, dobi novo sliko."*
+- 💼 *"Simulacija temelji na 46 preverljivih virih; vsaka številka v bazi nosi svoj vir. To je osnova za kasnejšo Fazo 2 (asistent za pravega psa) in za partnerstva z zavetišči."*
+- 🤝 *(zavetišča)* *"Družine lahko pred posvojitvijo preizkusijo skrb za odraslega psa iz zavetišča — prikazan je dostojanstveno, brez žalostnih klišejev."*
+- 🛠 *"Laravel: `breed_stage_params` (ena vrednost na vrstico z virom, revizija sprememb), pravila dneva po starosti ob lokalni polnoči (DST-varno), prehod faze v ticku z zaklepom vrstice → en job → image-to-image iz shranjene slike."*
+
 ## 2026-10-05 — Kuža zdaj lahko pokliče: push obvestila (M3-02)
 
 **Kaj se je zgodilo:** Pravila opozoril so v igri obstajala že od začetka (faza 1 pri 30 %, faza 2 pri 10 %, alarm staršem po uri na 0 %), a so ostala v aplikaciji — kdor je ni odprl, ni izvedel ničesar. Zdaj gre vsak korak tudi kot **obvestilo na telefon** (prek Expo → Apple / Google):

@@ -6,6 +6,37 @@ import type { ChildPetState } from '@/api/client';
 import type { FamilyChild, FamilyPetRaw } from '@/modules/family/family';
 import type { Pet, PetMedia, PetUpdatedBroadcast } from '@/types';
 
+/** `profile` of a pet (M5-R01): a bought mutt puppy of 2 months, 4 meals (11–12 by the parent). */
+export function makePetProfile(
+  overrides: Partial<ChildPetState['pet']['profile']> = {},
+): ChildPetState['pet']['profile'] {
+  return {
+    origin: 'bought',
+    arrival_age_months: 2,
+    age_months: 2,
+    life_stage: 'puppy',
+    next_stage: { life_stage: 'young', from_date: '2026-11-24' },
+    data_verified: false,
+    unverified: ['feed_windows', 'exercise_minutes_per_age_month'],
+    today: {
+      date: '2026-10-04',
+      meals_per_day: 4,
+      meals_by_child: 3,
+      meals_by_parent: 1,
+      feed_windows: [
+        { start: '07:00', end: '08:00', parent_covered: false },
+        { start: '11:00', end: '12:00', parent_covered: true },
+        { start: '15:00', end: '16:00', parent_covered: false },
+        { start: '19:00', end: '20:00', parent_covered: false },
+      ],
+      step_goal: 2000,
+      exercise_minutes: 20,
+      sleep_hours: { min: 15, max: 20 },
+    },
+    ...overrides,
+  };
+}
+
 /** `media` of a pet (M4-05): nothing stored yet. */
 export function makeMedia(overrides: Partial<PetMedia> = {}): PetMedia {
   return {
@@ -82,6 +113,10 @@ export function makeChildState(
       awaiting_contract: false,
       caretakers_count: 1,
       virtual_age_months: 0,
+      age_months: 2,
+      origin: 'bought',
+      life_stage: 'puppy',
+      profile: makePetProfile(),
       hunger_level: 100,
       thirst_level: 100,
       energy_level: 100,
@@ -273,6 +308,7 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     is_hard_stopped: false,
     is_ill: false,
     escalation_level: 0,
+    profile: makePetProfile(),
     caretakers: [],
     // M2-05 / M2-06: spec traffic light, metrics, Care Score, today, timeline.
     metrics: { hunger: 100, thirst: 100, energy: 100, hygiene: 100 },

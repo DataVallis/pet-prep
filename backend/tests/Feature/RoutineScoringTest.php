@@ -18,6 +18,7 @@ use App\Services\Results\Routine;
 use App\Services\RoutineLedgerService;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
@@ -796,6 +797,8 @@ describe('GET /api/parent/dashboard (M2-05)', function () {
 
     it('keeps the query count bounded: 2 pets × 84 days costs the same as 7 days', function () {
         $count = function (int $days): int {
+            // Cold caches in both runs (life-stage params are cached per breed, M5-R01).
+            Cache::flush();
             seedBreedConfigs();
             $now = Carbon::parse('2027-01-10 10:00:00', 'UTC');
             rsAt($now->copy()->subDays($days)->toDateTimeString());

@@ -421,6 +421,8 @@ const ACTIVITY_LABELS: Record<string, string> = {
 
 const SYSTEM_ACTIVITY_LABELS: Record<string, string> = {
   ignored_warning: 'Opozorilo ni bilo upoštevano',
+  // M5-R01: meal whose window lies in quiet hours (school / sleep) — done by the parent.
+  parent_fed_pet: 'Obrok med tihimi urami (nahrani starš)',
 };
 
 /** "Maja nahranil(a) kužka", "Opozorilo ni bilo upoštevano". */

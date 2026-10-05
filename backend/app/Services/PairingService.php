@@ -8,11 +8,13 @@ use App\Enums\UserRole;
 use App\Exceptions\FamilyException;
 use App\Exceptions\PairingException;
 use App\Jobs\GeneratePetReferenceImage;
+use App\Models\BreedConfig;
 use App\Models\Family;
 use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\User;
 use App\Services\Media\PetDnaService;
+use App\Services\Results\PetProfileChoice;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -31,6 +33,7 @@ class PairingService
         private readonly FalAiService $falAiService,
         private readonly FamilyService $families,
         private readonly PetDnaService $petDna,
+        private readonly LifeStageService $lifeStages,
     ) {}
 
     /**
@@ -184,7 +187,7 @@ class PairingService
      *
      * @throws PairingException
      */
-    public function attachChildToPet(Family $family, User $child, ?int $joinPetId): array
+    public function attachChildToPet(Family $family, User $child, ?int $joinPetId, ?PetProfileChoice $profile = null): array
     {
         if ($joinPetId !== null) {
             $pet = Pet::whereKey($joinPetId)->lockForUpdate()->first();
@@ -197,10 +200,27 @@ class PairingService
             return ['pet' => $pet, 'joined_existing' => true];
         }
 
-        return ['pet' => $this->createPet($family->id, $child), 'joined_existing' => false];
+        return ['pet' => $this->createPet($family->id, $child, $profile ?? PetProfileChoice::default()), 'joined_existing' => false];
     }
 
-    private function createPet(int $familyId, User $child): Pet
+    /**
+     * A new pet's profile must be a breed with a config that needs no
+     * purchase (M5-R01): premium breeds stay purchase-only as before (the
+     * RevenueCat unlock upgrades an existing pet). Every origin / age stage
+     * is free (David 2026-10-05).
+     *
+     * @throws FamilyException breed_locked (422)
+     */
+    public function assertProfileAllowed(PetProfileChoice $profile): void
+    {
+        $config = BreedConfig::forBreed($profile->breed);
+
+        if ($config === null || $config->premium_unlock) {
+            throw new FamilyException('breed_locked', 'This breed is part of the paid PetPrep challenge.');
+        }
+    }
+
+    private function createPet(int $familyId, User $child, PetProfileChoice $profile): Pet
     {
         // Pet DNA is generated offline. The reference image is produced
         // asynchronously by a queued job dispatched after this transaction
@@ -208,7 +228,15 @@ class PairingService
         // DNA v2 (M4-08): unique traits seeded from the pet id + a random salt,
         // so it is assigned right after the insert; the caller holds the
         // family row lock, which makes the per-family uniqueness check safe.
-        $breed = BreedType::Mutt; // Free tier default
+        // M5-R01: breed / origin / age stage chosen by the parent (default:
+        // a bought mutt puppy). A premium breed chosen at PIN time but locked
+        // by now falls back to the mutt.
+        $breed = $profile->breed;
+        if (BreedConfig::forBreed($breed)?->premium_unlock !== false) {
+            $breed = BreedType::Mutt;
+        }
+        $arrivalAge = $this->lifeStages->arrivalAgeFor($breed->slug(), $profile->ageStage);
+        $stage = $arrivalAge !== null ? $this->lifeStages->stageForAge($breed->slug(), $arrivalAge) : null;
         $dnaVersion = (int) config('media.pet_dna_version', PetDnaService::VERSION);
         $petDna = $dnaVersion === PetDnaService::VERSION ? null : $this->falAiService->generateInitialPetDna($breed);
         $mediaEnabled = $this->falAiService->isEnabled();
@@ -230,6 +258,10 @@ class PairingService
             'hygiene_level' => 100,
             'born_at' => null,
             'is_active' => true,
+            'origin' => $profile->origin->value,
+            // Without life-stage data for the breed: the column default (a 2-month puppy).
+            ...($arrivalAge !== null ? ['arrival_age_months' => $arrivalAge] : []),
+            'life_stage' => $stage?->value,
         ]);
 
         if ($petDna === null) {

@@ -13,6 +13,7 @@ use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\PetCaretaker;
 use App\Models\User;
+use App\Services\Results\PetProfileChoice;
 use App\Support\ClientIp;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Carbon;
@@ -76,19 +77,23 @@ class ChildPinLoginService
 
     /**
      * Issue a one-time PIN for $child (a child of the parent's family).
+     * `$profile` (M5-R01) is the new pet's breed / origin / age stage, kept
+     * on the PIN until it creates the pet (ignored for join / re-login).
      *
-     * @return array{pin: string, expires_at: Carbon, child_id: int, pet_id: int|null, mode: string}
+     * @return array{pin: string, expires_at: Carbon, child_id: int, pet_id: int|null, mode: string, pet_profile: array{breed: string, origin: string, age_stage: string}|null}
      *
      * @throws FamilyException child_not_found (404), pet_not_joinable (422),
-     *                         already_paired (422)
+     *                         already_paired (422), breed_locked (422)
      */
-    public function generatePin(User $parent, int $childId, ?int $joinPetId): array
+    public function generatePin(User $parent, int $childId, ?int $joinPetId, ?PetProfileChoice $profile = null): array
     {
         if (! $parent->isParent()) {
             throw new FamilyException('not_a_parent', 'Only a parent can generate a PIN.', 403);
         }
 
-        return DB::transaction(function () use ($parent, $childId, $joinPetId): array {
+        $profile ??= PetProfileChoice::default();
+
+        return DB::transaction(function () use ($parent, $childId, $joinPetId, $profile): array {
             // Lock order: parent user row → child user row → family row.
             User::whereKey($parent->id)->lockForUpdate()->first();
 
@@ -102,12 +107,16 @@ class ChildPinLoginService
             Family::whereKey($family->id)->lockForUpdate()->first();
 
             $mode = $this->resolveMode($family, $child, $joinPetId, forGeneration: true);
+            if ($mode === self::MODE_NEW_PET) {
+                $this->pairing->assertProfileAllowed($profile);
+            }
 
             // One open PIN per child: a new one replaces the previous.
             ChildLoginPin::open()->where('child_user_id', $child->id)->update(['revoked_at' => now()]);
 
             $expiresAt = now()->addMinutes(self::PIN_EXPIRY_MINUTES)->startOfSecond();
-            $pin = $this->insertUniquePin($family, $child, $parent, $joinPetId, $expiresAt);
+            $options = $mode === self::MODE_NEW_PET ? $profile->toArray() : null;
+            $pin = $this->insertUniquePin($family, $child, $parent, $joinPetId, $expiresAt, $options);
 
             return [
                 'pin' => $pin,
@@ -115,6 +124,7 @@ class ChildPinLoginService
                 'child_id' => $child->id,
                 'pet_id' => $joinPetId,
                 'mode' => $mode,
+                'pet_profile' => $options,
             ];
         });
     }
@@ -178,7 +188,9 @@ class ChildPinLoginService
                             'parent_id' => $locked->created_by ?? $family->parents()->value('users.id'),
                         ])->saveQuietly();
                     }
-                    ['pet' => $pet, 'joined_existing' => $joined] = $this->pairing->attachChildToPet($family, $child, $locked->pet_id);
+                    ['pet' => $pet, 'joined_existing' => $joined] = $this->pairing->attachChildToPet(
+                        $family, $child, $locked->pet_id, PetProfileChoice::fromArray($locked->pet_options),
+                    );
                 }
 
                 if ($pet === null) {
@@ -253,7 +265,10 @@ class ChildPinLoginService
         throw new PairingException($message);
     }
 
-    private function insertUniquePin(Family $family, User $child, User $parent, ?int $joinPetId, Carbon $expiresAt): string
+    /**
+     * @param  array<string, string>|null  $petOptions
+     */
+    private function insertUniquePin(Family $family, User $child, User $parent, ?int $joinPetId, Carbon $expiresAt, ?array $petOptions = null): string
     {
         for ($attempt = 0; $attempt < 20; $attempt++) {
             $pin = str_pad((string) random_int(0, 999999), 6, '0', STR_PAD_LEFT);
@@ -273,6 +288,7 @@ class ChildPinLoginService
                     'pet_id' => $joinPetId,
                     'pin_hash' => $hash,
                     'expires_at' => $expiresAt,
+                    'pet_options' => $petOptions,
                 ]));
 
                 return $pin;

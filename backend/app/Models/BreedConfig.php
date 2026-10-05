@@ -16,6 +16,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property list<array{0: string, 1: string}> $feed_windows Family-local [start, end) "HH:MM" pairs (M1-07).
  * @property int $water_times_per_day Max water refills per family-local day (M1-07).
  * @property int $water_min_gap_minutes Minimum gap between refills (M1-07).
+ * @property int|null $daily_steps_cap Optional cap on the stage-derived step goal (M5-R01; null = none, David 2026-10-05).
+ *
+ * Since M5-R01 meals / feed windows / the step goal depend on the pet's life
+ * stage (`breed_stage_params`, LifeStageService). `feed_windows` stay the
+ * windows of two-meal days and the fallback; `daily_steps_required` is used
+ * only for a breed without life-stage data.
  */
 class BreedConfig extends Model
 {
@@ -39,6 +45,7 @@ class BreedConfig extends Model
         'water_times_per_day',
         'water_min_gap_minutes',
         'premium_unlock',
+        'daily_steps_cap',
     ];
 
     /**
@@ -57,6 +64,7 @@ class BreedConfig extends Model
             'water_times_per_day' => 'integer',
             'water_min_gap_minutes' => 'integer',
             'premium_unlock' => 'boolean',
+            'daily_steps_cap' => 'integer',
         ];
     }
 

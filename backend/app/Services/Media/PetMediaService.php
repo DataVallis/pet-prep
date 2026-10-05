@@ -11,6 +11,7 @@ use App\Jobs\SubmitPetStateVideo;
 use App\Models\AiSpendLedger;
 use App\Models\Pet;
 use App\Models\PetMedia;
+use App\Models\PetMediaHistory;
 use App\Services\FalAiService;
 use Carbon\CarbonImmutable;
 use Illuminate\Contracts\Filesystem\Filesystem;
@@ -49,6 +50,7 @@ class PetMediaService
         private readonly FalAiService $fal,
         private readonly MediaProfiles $profiles,
         private readonly MediaDownloader $downloader,
+        private readonly PetAppearancePrompt $prompts,
     ) {}
 
     public function disk(): Filesystem
@@ -130,20 +132,42 @@ class PetMediaService
             return true;
         }
 
-        if (! $this->claim($slot, [PetMedia::STATUS_PENDING, PetMedia::STATUS_FAILED], ['source_url' => null])) {
+        // Life-stage growth (M5-R01): the stored file was archived at the stage
+        // change → its successor is an EDIT of it (same dog, older), unless
+        // the edit profile is off (then text-to-image, same seed + DNA + stage).
+        $growFrom = $slot->storage_path !== null
+            && $pet->life_stage !== null
+            && PetMediaHistory::where('storage_path', $slot->storage_path)->exists();
+
+        if (! $this->claim($slot, [PetMedia::STATUS_PENDING, PetMedia::STATUS_FAILED], ['source_url' => null, 'life_stage' => $pet->life_stage?->value])) {
             return true; // another worker has it
         }
 
         $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
+        // DNA v2: breed + traits + stage + origin cues (never personal data);
+        // DNA v1 pets: their stored prompt anchor + the same cues.
+        $prompt = (int) ($dna['version'] ?? 1) >= 2
+            ? $this->prompts->imagePromptForPet($pet)
+            : $this->prompts->legacyPromptForPet($pet);
 
         try {
-            $result = $this->fal->generateReferenceImage(
-                (string) ($dna['prompt'] ?? $dna['prompt_anchor'] ?? ''),
-                (int) ($dna['seed'] ?? 0),
-                $pet->id,
-                isset($dna['negative_prompt']) ? (string) $dna['negative_prompt'] : null,
-                $slot->id,
-            );
+            if ($growFrom && $this->profiles->stageEdit() !== null) {
+                $result = $this->fal->editReferenceImage(
+                    $this->prompts->stageEditPrompt($pet, $pet->life_stage),
+                    $this->falFetchUrl($slot),
+                    (int) ($dna['seed'] ?? 0),
+                    $pet->id,
+                    $slot->id,
+                );
+            } else {
+                $result = $this->fal->generateReferenceImage(
+                    $prompt,
+                    (int) ($dna['seed'] ?? 0),
+                    $pet->id,
+                    isset($dna['negative_prompt']) ? (string) $dna['negative_prompt'] : null,
+                    $slot->id,
+                );
+            }
         } catch (AiCallException $e) {
             // Budget cap / fal balance / disabled profile: a retry cannot help now. The pet
             // keeps working without media (M4-07, fail closed); the daily retry picks it up.
@@ -445,7 +469,9 @@ class PetMediaService
             return true;
         }
 
-        if ($previous !== null && $previous !== $path) {
+        // An image archived at a life-stage change (M5-R01) stays on the disk
+        // (pet_media_history, growth album); anything else is replaced.
+        if ($previous !== null && $previous !== $path && ! PetMediaHistory::where('storage_path', $previous)->exists()) {
             $this->disk()->delete($previous);
         }
 
@@ -468,6 +494,65 @@ class PetMediaService
             $pet->updateQuietly(['pet_dna' => $dna, 'media_status' => 'failed', 'media_error' => AiCallFailure::InvalidResponse->value]);
             PetUpdated::afterCommit($pet->fresh(), 'reference_image_failed');
         }
+    }
+
+    // ──────────────────────────────────────────────────────────────
+    //  Life-stage growth (M5-R01, RegeneratePetStageMedia)
+    // ──────────────────────────────────────────────────────────────
+
+    /**
+     * The pet reached a new life stage: archive the stored reference image
+     * (pet_media_history — the file stays) and generate the image of the new
+     * stage as an edit of it; the state videos of the pet's entitlement
+     * follow automatically once the new image is stored (their source
+     * generation is older). Budget / ledger as every reference image.
+     *
+     * @return 'started'|'up_to_date'|'busy'|'no_image'|'disabled'
+     */
+    public function startStageTransition(Pet $pet): string
+    {
+        $stage = $pet->life_stage;
+
+        if (! $this->fal->isEnabled() || ! $pet->is_active || $pet->isUnborn() || $stage === null) {
+            return 'disabled';
+        }
+
+        $slot = $this->imageSlot($pet);
+
+        if ($slot->life_stage === $stage->value) {
+            return 'up_to_date';
+        }
+
+        if ($slot->isInFlight()) {
+            // A first image (or an admin regeneration) is running: it is
+            // generated for the stage of its claim; try again later.
+            return 'busy';
+        }
+
+        if (! $slot->isServable()) {
+            // No image to grow from (failed / never generated): the normal
+            // retry / backfill path generates one for the current stage.
+            return 'no_image';
+        }
+
+        PetMediaHistory::query()->insertOrIgnore([
+            'pet_id' => $pet->id,
+            'kind' => PetMedia::KIND_IMAGE,
+            'life_stage' => $slot->life_stage,
+            'generation' => $slot->generation,
+            'storage_path' => $slot->storage_path,
+            'bytes' => $slot->bytes,
+            'mime' => $slot->mime,
+            'archived_at' => now(),
+        ]);
+
+        if (! $this->resetForNewGeneration($slot, bump: true)) {
+            return 'busy';
+        }
+
+        GeneratePetReferenceImage::dispatch($pet->id);
+
+        return 'started';
     }
 
     // ──────────────────────────────────────────────────────────────

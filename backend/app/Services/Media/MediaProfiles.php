@@ -65,6 +65,22 @@ class MediaProfiles
         return $this->image($this->configured(ModelProfile::KIND_IMAGE, 'media.reference_image_profile', self::DEFAULT_REFERENCE_IMAGE));
     }
 
+    /** Image-to-image profile for stage growth (M5-R01), or null when disabled / unknown. */
+    public function stageEdit(): ?ModelProfile
+    {
+        $key = (string) config('media.stage_edit_profile', 'nano_banana_pro_edit');
+
+        if (! is_array(config("media.profiles.image.{$key}"))) {
+            Log::error('MediaProfiles: unknown stage edit profile configured, using text-to-image', ['profile' => $key]);
+
+            return null;
+        }
+
+        $profile = $this->image($key);
+
+        return $profile->enabled ? $profile : null;
+    }
+
     public function stateVideo(): ModelProfile
     {
         return $this->video($this->configured(ModelProfile::KIND_VIDEO, 'media.state_video_profile', self::DEFAULT_STATE_VIDEO));

@@ -574,11 +574,19 @@ export interface paths {
          *     it will do: `new_pet` (first pairing), `join_pet` (with `pet_id`: the
          *     child joins that shared pet), `relogin` (already paired child, new
          *     device). A new PIN for the child replaces their previous one.
-         *     404 `child_not_found`, 422 `pet_not_joinable` | `already_paired`.
+         *     404 `child_not_found`, 422 `pet_not_joinable` | `already_paired` |
+         *     `breed_locked`.
+         *
+         *     New pet profile (M5-R01, only without `pet_id`): `breed` (mutt free;
+         *     a premium breed → 422 `breed_locked`, it is unlocked by purchase),
+         *     `origin` bought | adopted, `age_stage` puppy | young | adult | senior.
+         *     Omitted → a bought mutt puppy (as before). The pet is created with
+         *     this profile when the child uses the PIN.
          *
          *     Without `child_id` (**deprecated**, `Deprecation: true` header): the
          *     PIN is for a child already signed in with e-mail, used with
-         *     `POST /api/child/pair`; optional `pet_id` = join that pet.
+         *     `POST /api/child/pair`; optional `pet_id` = join that pet. The
+         *     profile fields are ignored there (always a bought mutt puppy).
          *
          *     POST /api/parent/generate-pin
          */
@@ -841,6 +849,9 @@ export interface components {
              *     the family = the child will share it (shared custody).
              */
             pet_id?: number | null;
+            breed?: components["schemas"]["BreedType"] | null;
+            origin?: components["schemas"]["PetOrigin"] | null;
+            age_stage?: components["schemas"]["LifeStage"] | null;
         };
         /**
          * HardStopRequest
@@ -858,6 +869,12 @@ export interface components {
             /** @description 8 characters; case and surrounding spaces are forgiven. */
             code: string;
         };
+        /**
+         * LifeStage
+         * @description Life stage of a pet (M5-R01, REALISM_SPEC §2, David 2026-10-05). Boundaries are per breed and come from sourced data (`breed_stage_params`, key `starts_at_months`): AAHA life stages (S11) and the breed's median lifespan (S15). The parent picks the stage at arrival; the stage then follows the dog's age (1 real week = 1 month). Mirrored in DB CHECK constraints (pets.life_stage, breed_stage_params.stage, pet_media.life_stage, pet_media_history.life_stage).
+         * @enum {string}
+         */
+        LifeStage: "puppy" | "young" | "adult" | "senior";
         /** LoginRequest */
         LoginRequest: {
             /** Format: email */
@@ -886,6 +903,54 @@ export interface components {
             awaiting_contract: boolean;
             is_active: boolean;
             is_game_over: boolean;
+            /** @description M5-R01: origin, age, life stage and today's rules. */
+            profile: {
+                /** @enum {string} */
+                origin: "bought" | "adopted";
+                /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118). */
+                arrival_age_months: number;
+                /** @description The dog's age now: arrival age + one month per real week since birth (contract). */
+                age_months: number;
+                /**
+                 * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                 *     null for a breed without life-stage data (pre-M5 rules).
+                 * @enum {string|null}
+                 */
+                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                /** @description The next stage and the family-local date its rules start; null for an unborn pet / a senior. */
+                next_stage: {
+                    /** @enum {string} */
+                    life_stage: "puppy" | "young" | "adult" | "senior";
+                    from_date: string;
+                } | null;
+                /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                data_verified: boolean;
+                /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                unverified: string[];
+                today: {
+                    /** @description Family-local date (Y-m-d) these rules are for. */
+                    date: string;
+                    meals_per_day: number;
+                    /** @description Meals the child is expected to give (windows not covered by the parent). */
+                    meals_by_child: number;
+                    /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                    meals_by_parent: number;
+                    /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                    feed_windows: {
+                        start: string;
+                        end: string;
+                        parent_covered: boolean;
+                    }[];
+                    /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                    step_goal: number;
+                    exercise_minutes: number | null;
+                    /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                    sleep_hours: {
+                        min: number;
+                        max: number;
+                    } | null;
+                };
+            };
             pet_dna: {
                 seed: string | null;
                 prompt_anchor: string | null;
@@ -966,7 +1031,16 @@ export interface components {
             /** Format: date-time */
             walk_illness_due_at: string | null;
             family_id: number;
+            origin: components["schemas"]["PetOrigin"];
+            arrival_age_months: number;
+            life_stage: components["schemas"]["LifeStage"] | null;
         };
+        /**
+         * PetOrigin
+         * @description Where the dog came from (M5-R01, REALISM_SPEC §1, David 2026-10-05): bought from a breeder or adopted from a shelter. Chosen by the parent at pet creation; free for the mutt in every combination. Mirrored in the pets_origin_check constraint.
+         * @enum {string}
+         */
+        PetOrigin: "bought" | "adopted";
         /**
          * PetStateEnum
          * @description Represents the visual/behavioral state of a pet. Each state maps to a state video generated by fal.ai (Kling 3.0 Pro, M4-03) and stored in pet_media.
@@ -1485,7 +1559,61 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
+                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
                                 virtual_age_months: number;
+                                /** @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage. */
+                                age_months: number;
+                                /** @enum {string} */
+                                origin: "bought" | "adopted";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                profile: {
+                                    /** @enum {string} */
+                                    origin: "bought" | "adopted";
+                                    /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118). */
+                                    arrival_age_months: number;
+                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract). */
+                                    age_months: number;
+                                    /**
+                                     * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                     *     null for a breed without life-stage data (pre-M5 rules).
+                                     * @enum {string|null}
+                                     */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /** @description The next stage and the family-local date its rules start; null for an unborn pet / a senior. */
+                                    next_stage: {
+                                        /** @enum {string} */
+                                        life_stage: "puppy" | "young" | "adult" | "senior";
+                                        from_date: string;
+                                    } | null;
+                                    /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                    data_verified: boolean;
+                                    /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                    unverified: string[];
+                                    today: {
+                                        /** @description Family-local date (Y-m-d) these rules are for. */
+                                        date: string;
+                                        meals_per_day: number;
+                                        /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                        meals_by_child: number;
+                                        /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                        meals_by_parent: number;
+                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        feed_windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                        }[];
+                                        /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                        step_goal: number;
+                                        exercise_minutes: number | null;
+                                        /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                        sleep_hours: {
+                                            min: number;
+                                            max: number;
+                                        } | null;
+                                    };
+                                };
                                 hunger_level: number;
                                 thirst_level: number;
                                 energy_level: number;
@@ -1565,6 +1693,7 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
                             };
@@ -1604,7 +1733,61 @@ export interface operations {
                              */
                             awaiting_contract: boolean;
                             caretakers_count: number;
+                            /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
                             virtual_age_months: number;
+                            /** @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage. */
+                            age_months: number;
+                            /** @enum {string} */
+                            origin: "bought" | "adopted";
+                            /** @enum {string|null} */
+                            life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                            profile: {
+                                /** @enum {string} */
+                                origin: "bought" | "adopted";
+                                /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118). */
+                                arrival_age_months: number;
+                                /** @description The dog's age now: arrival age + one month per real week since birth (contract). */
+                                age_months: number;
+                                /**
+                                 * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                 *     null for a breed without life-stage data (pre-M5 rules).
+                                 * @enum {string|null}
+                                 */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /** @description The next stage and the family-local date its rules start; null for an unborn pet / a senior. */
+                                next_stage: {
+                                    /** @enum {string} */
+                                    life_stage: "puppy" | "young" | "adult" | "senior";
+                                    from_date: string;
+                                } | null;
+                                /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                data_verified: boolean;
+                                /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                unverified: string[];
+                                today: {
+                                    /** @description Family-local date (Y-m-d) these rules are for. */
+                                    date: string;
+                                    meals_per_day: number;
+                                    /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                    meals_by_child: number;
+                                    /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                    meals_by_parent: number;
+                                    /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                    feed_windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                    /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                    step_goal: number;
+                                    exercise_minutes: number | null;
+                                    /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                    sleep_hours: {
+                                        min: number;
+                                        max: number;
+                                    } | null;
+                                };
+                            };
                             hunger_level: number;
                             thirst_level: number;
                             energy_level: number;
@@ -1684,6 +1867,7 @@ export interface operations {
                         steps: {
                             steps_today: number;
                             my_steps_today: number;
+                            /** @description Today's step goal of the dog's life stage (M5-R01). */
                             goal: number;
                             energy_level: number;
                         };
@@ -1743,7 +1927,61 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
+                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
                                 virtual_age_months: number;
+                                /** @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage. */
+                                age_months: number;
+                                /** @enum {string} */
+                                origin: "bought" | "adopted";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                profile: {
+                                    /** @enum {string} */
+                                    origin: "bought" | "adopted";
+                                    /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118). */
+                                    arrival_age_months: number;
+                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract). */
+                                    age_months: number;
+                                    /**
+                                     * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                     *     null for a breed without life-stage data (pre-M5 rules).
+                                     * @enum {string|null}
+                                     */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /** @description The next stage and the family-local date its rules start; null for an unborn pet / a senior. */
+                                    next_stage: {
+                                        /** @enum {string} */
+                                        life_stage: "puppy" | "young" | "adult" | "senior";
+                                        from_date: string;
+                                    } | null;
+                                    /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                    data_verified: boolean;
+                                    /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                    unverified: string[];
+                                    today: {
+                                        /** @description Family-local date (Y-m-d) these rules are for. */
+                                        date: string;
+                                        meals_per_day: number;
+                                        /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                        meals_by_child: number;
+                                        /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                        meals_by_parent: number;
+                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        feed_windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                        }[];
+                                        /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                        step_goal: number;
+                                        exercise_minutes: number | null;
+                                        /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                        sleep_hours: {
+                                            min: number;
+                                            max: number;
+                                        } | null;
+                                    };
+                                };
                                 hunger_level: number;
                                 thirst_level: number;
                                 energy_level: number;
@@ -1823,6 +2061,7 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
                             };
@@ -1880,7 +2119,61 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
+                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
                                 virtual_age_months: number;
+                                /** @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage. */
+                                age_months: number;
+                                /** @enum {string} */
+                                origin: "bought" | "adopted";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                profile: {
+                                    /** @enum {string} */
+                                    origin: "bought" | "adopted";
+                                    /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118). */
+                                    arrival_age_months: number;
+                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract). */
+                                    age_months: number;
+                                    /**
+                                     * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                     *     null for a breed without life-stage data (pre-M5 rules).
+                                     * @enum {string|null}
+                                     */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /** @description The next stage and the family-local date its rules start; null for an unborn pet / a senior. */
+                                    next_stage: {
+                                        /** @enum {string} */
+                                        life_stage: "puppy" | "young" | "adult" | "senior";
+                                        from_date: string;
+                                    } | null;
+                                    /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                    data_verified: boolean;
+                                    /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                    unverified: string[];
+                                    today: {
+                                        /** @description Family-local date (Y-m-d) these rules are for. */
+                                        date: string;
+                                        meals_per_day: number;
+                                        /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                        meals_by_child: number;
+                                        /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                        meals_by_parent: number;
+                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        feed_windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                        }[];
+                                        /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                        step_goal: number;
+                                        exercise_minutes: number | null;
+                                        /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                        sleep_hours: {
+                                            min: number;
+                                            max: number;
+                                        } | null;
+                                    };
+                                };
                                 hunger_level: number;
                                 thirst_level: number;
                                 energy_level: number;
@@ -1960,6 +2253,7 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
                             };
@@ -2017,7 +2311,61 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
+                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
                                 virtual_age_months: number;
+                                /** @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage. */
+                                age_months: number;
+                                /** @enum {string} */
+                                origin: "bought" | "adopted";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                profile: {
+                                    /** @enum {string} */
+                                    origin: "bought" | "adopted";
+                                    /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118). */
+                                    arrival_age_months: number;
+                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract). */
+                                    age_months: number;
+                                    /**
+                                     * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                     *     null for a breed without life-stage data (pre-M5 rules).
+                                     * @enum {string|null}
+                                     */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /** @description The next stage and the family-local date its rules start; null for an unborn pet / a senior. */
+                                    next_stage: {
+                                        /** @enum {string} */
+                                        life_stage: "puppy" | "young" | "adult" | "senior";
+                                        from_date: string;
+                                    } | null;
+                                    /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                    data_verified: boolean;
+                                    /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                    unverified: string[];
+                                    today: {
+                                        /** @description Family-local date (Y-m-d) these rules are for. */
+                                        date: string;
+                                        meals_per_day: number;
+                                        /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                        meals_by_child: number;
+                                        /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                        meals_by_parent: number;
+                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        feed_windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                        }[];
+                                        /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                        step_goal: number;
+                                        exercise_minutes: number | null;
+                                        /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                        sleep_hours: {
+                                            min: number;
+                                            max: number;
+                                        } | null;
+                                    };
+                                };
                                 hunger_level: number;
                                 thirst_level: number;
                                 energy_level: number;
@@ -2097,6 +2445,7 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
                             };
@@ -2158,7 +2507,61 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
+                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
                                 virtual_age_months: number;
+                                /** @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage. */
+                                age_months: number;
+                                /** @enum {string} */
+                                origin: "bought" | "adopted";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                profile: {
+                                    /** @enum {string} */
+                                    origin: "bought" | "adopted";
+                                    /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118). */
+                                    arrival_age_months: number;
+                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract). */
+                                    age_months: number;
+                                    /**
+                                     * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                     *     null for a breed without life-stage data (pre-M5 rules).
+                                     * @enum {string|null}
+                                     */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /** @description The next stage and the family-local date its rules start; null for an unborn pet / a senior. */
+                                    next_stage: {
+                                        /** @enum {string} */
+                                        life_stage: "puppy" | "young" | "adult" | "senior";
+                                        from_date: string;
+                                    } | null;
+                                    /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                    data_verified: boolean;
+                                    /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                    unverified: string[];
+                                    today: {
+                                        /** @description Family-local date (Y-m-d) these rules are for. */
+                                        date: string;
+                                        meals_per_day: number;
+                                        /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                        meals_by_child: number;
+                                        /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                        meals_by_parent: number;
+                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        feed_windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                        }[];
+                                        /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                        step_goal: number;
+                                        exercise_minutes: number | null;
+                                        /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                        sleep_hours: {
+                                            min: number;
+                                            max: number;
+                                        } | null;
+                                    };
+                                };
                                 hunger_level: number;
                                 thirst_level: number;
                                 energy_level: number;
@@ -2238,6 +2641,7 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
                             };
@@ -2665,6 +3069,15 @@ export interface operations {
                         pet_id: number | null;
                         /** @enum {string} */
                         mode: "join_pet" | "new_pet" | "relogin";
+                        /** @description M5-R01: the new pet's profile the PIN will create (mode new_pet), else null. */
+                        pet_profile: {
+                            /** @enum {string} */
+                            breed: "mutt" | "border_collie";
+                            /** @enum {string} */
+                            origin: "bought" | "adopted";
+                            /** @enum {string} */
+                            age_stage: "puppy" | "young" | "adult" | "senior";
+                        } | null;
                     };
                 };
             };
@@ -2742,6 +3155,54 @@ export interface operations {
                             is_hard_stopped: boolean;
                             escalation_level: number;
                             virtual_age_months: number;
+                            /** @description M5-R01: origin, age, life stage and today's rules. */
+                            profile: {
+                                /** @enum {string} */
+                                origin: "bought" | "adopted";
+                                /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118). */
+                                arrival_age_months: number;
+                                /** @description The dog's age now: arrival age + one month per real week since birth (contract). */
+                                age_months: number;
+                                /**
+                                 * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                 *     null for a breed without life-stage data (pre-M5 rules).
+                                 * @enum {string|null}
+                                 */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /** @description The next stage and the family-local date its rules start; null for an unborn pet / a senior. */
+                                next_stage: {
+                                    /** @enum {string} */
+                                    life_stage: "puppy" | "young" | "adult" | "senior";
+                                    from_date: string;
+                                } | null;
+                                /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                data_verified: boolean;
+                                /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                unverified: string[];
+                                today: {
+                                    /** @description Family-local date (Y-m-d) these rules are for. */
+                                    date: string;
+                                    meals_per_day: number;
+                                    /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                    meals_by_child: number;
+                                    /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                    meals_by_parent: number;
+                                    /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                    feed_windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                    /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                    step_goal: number;
+                                    exercise_minutes: number | null;
+                                    /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                    sleep_hours: {
+                                        min: number;
+                                        max: number;
+                                    } | null;
+                                };
+                            };
                             /** @description AI media (M4-05): signed URLs to our stored copies. */
                             current_video_url: string | null;
                             reference_image_url: string | null;
@@ -2812,6 +3273,57 @@ export interface operations {
                                 is_hard_stopped: boolean;
                                 is_ill: boolean;
                                 escalation_level: number;
+                                /**
+                                 * @description M5-R01: origin, age, life stage and today's rules (meals by
+                                 *     child / by parent in quiet hours, step goal).
+                                 */
+                                profile: {
+                                    /** @enum {string} */
+                                    origin: "bought" | "adopted";
+                                    /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118). */
+                                    arrival_age_months: number;
+                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract). */
+                                    age_months: number;
+                                    /**
+                                     * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                     *     null for a breed without life-stage data (pre-M5 rules).
+                                     * @enum {string|null}
+                                     */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /** @description The next stage and the family-local date its rules start; null for an unborn pet / a senior. */
+                                    next_stage: {
+                                        /** @enum {string} */
+                                        life_stage: "puppy" | "young" | "adult" | "senior";
+                                        from_date: string;
+                                    } | null;
+                                    /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                    data_verified: boolean;
+                                    /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                    unverified: string[];
+                                    today: {
+                                        /** @description Family-local date (Y-m-d) these rules are for. */
+                                        date: string;
+                                        meals_per_day: number;
+                                        /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                        meals_by_child: number;
+                                        /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                        meals_by_parent: number;
+                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        feed_windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                        }[];
+                                        /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                        step_goal: number;
+                                        exercise_minutes: number | null;
+                                        /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                        sleep_hours: {
+                                            min: number;
+                                            max: number;
+                                        } | null;
+                                    };
+                                };
                                 /**
                                  * @description Active caretakers only; a deleted child's tombstone (M2-08)
                                  *     stays in the board for the fair share but is not listed.
@@ -2917,6 +3429,57 @@ export interface operations {
                                 is_hard_stopped: boolean;
                                 is_ill: boolean;
                                 escalation_level: number;
+                                /**
+                                 * @description M5-R01: origin, age, life stage and today's rules (meals by
+                                 *     child / by parent in quiet hours, step goal).
+                                 */
+                                profile: {
+                                    /** @enum {string} */
+                                    origin: "bought" | "adopted";
+                                    /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118). */
+                                    arrival_age_months: number;
+                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract). */
+                                    age_months: number;
+                                    /**
+                                     * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                     *     null for a breed without life-stage data (pre-M5 rules).
+                                     * @enum {string|null}
+                                     */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /** @description The next stage and the family-local date its rules start; null for an unborn pet / a senior. */
+                                    next_stage: {
+                                        /** @enum {string} */
+                                        life_stage: "puppy" | "young" | "adult" | "senior";
+                                        from_date: string;
+                                    } | null;
+                                    /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                    data_verified: boolean;
+                                    /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                    unverified: string[];
+                                    today: {
+                                        /** @description Family-local date (Y-m-d) these rules are for. */
+                                        date: string;
+                                        meals_per_day: number;
+                                        /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                        meals_by_child: number;
+                                        /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                        meals_by_parent: number;
+                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        feed_windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                        }[];
+                                        /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                        step_goal: number;
+                                        exercise_minutes: number | null;
+                                        /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                        sleep_hours: {
+                                            min: number;
+                                            max: number;
+                                        } | null;
+                                    };
+                                };
                                 /**
                                  * @description Active caretakers only; a deleted child's tombstone (M2-08)
                                  *     stays in the board for the fair share but is not listed.

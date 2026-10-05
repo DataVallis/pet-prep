@@ -89,6 +89,26 @@ class PetResource extends Resource
                     ])
                     ->columns(3),
 
+                // M5-R01: parent's choice at creation + age / stage (read-only; the
+                // stage follows the age and the sourced breed_stage_params).
+                Forms\Components\Section::make('Profile (origin, age, life stage)')
+                    ->schema([
+                        Forms\Components\Placeholder::make('origin_view')
+                            ->label('Origin')
+                            ->content(fn (?Pet $record): string => $record?->origin?->value ?? '—'),
+                        Forms\Components\Placeholder::make('arrival_age_view')
+                            ->label('Age at arrival (months)')
+                            ->content(fn (?Pet $record): string => $record !== null ? (string) $record->arrival_age_months : '—'),
+                        Forms\Components\Placeholder::make('age_view')
+                            ->label('Age now (months)')
+                            ->content(fn (?Pet $record): string => $record !== null ? (string) $record->ageMonths() : '—'),
+                        Forms\Components\Placeholder::make('life_stage_view')
+                            ->label('Life stage (last tick)')
+                            ->content(fn (?Pet $record): string => $record?->life_stage?->value ?? '—'),
+                    ])
+                    ->columns(4)
+                    ->visibleOn('edit'),
+
                 Forms\Components\Section::make('Vital Levels')
                     ->schema([
                         self::metricInput('hunger_level', 'Hunger'),
@@ -162,6 +182,15 @@ class PetResource extends Resource
                     ->label('Breed')
                     ->badge()
                     ->sortable(),
+                Tables\Columns\TextColumn::make('life_stage')
+                    ->label('Stage')
+                    ->badge()
+                    ->placeholder('—')
+                    ->toggleable(),
+                Tables\Columns\TextColumn::make('origin')
+                    ->label('Origin')
+                    ->badge()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('pet_state')
                     ->label('State')
                     ->badge()

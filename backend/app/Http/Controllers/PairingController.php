@@ -32,11 +32,19 @@ class PairingController extends Controller
      * it will do: `new_pet` (first pairing), `join_pet` (with `pet_id`: the
      * child joins that shared pet), `relogin` (already paired child, new
      * device). A new PIN for the child replaces their previous one.
-     * 404 `child_not_found`, 422 `pet_not_joinable` | `already_paired`.
+     * 404 `child_not_found`, 422 `pet_not_joinable` | `already_paired` |
+     * `breed_locked`.
+     *
+     * New pet profile (M5-R01, only without `pet_id`): `breed` (mutt free;
+     * a premium breed → 422 `breed_locked`, it is unlocked by purchase),
+     * `origin` bought | adopted, `age_stage` puppy | young | adult | senior.
+     * Omitted → a bought mutt puppy (as before). The pet is created with
+     * this profile when the child uses the PIN.
      *
      * Without `child_id` (**deprecated**, `Deprecation: true` header): the
      * PIN is for a child already signed in with e-mail, used with
-     * `POST /api/child/pair`; optional `pet_id` = join that pet.
+     * `POST /api/child/pair`; optional `pet_id` = join that pet. The
+     * profile fields are ignored there (always a bought mutt puppy).
      *
      * POST /api/parent/generate-pin
      */
@@ -46,7 +54,7 @@ class PairingController extends Controller
 
         try {
             if ($childId !== null) {
-                $result = $this->childLogins->generatePin($request->user(), $childId, $request->joinPetId());
+                $result = $this->childLogins->generatePin($request->user(), $childId, $request->joinPetId(), $request->petProfile());
 
                 return response()->json([
                     'pin' => $result['pin'],
@@ -56,6 +64,12 @@ class PairingController extends Controller
                     // null = new pet (or re-login); otherwise the pet to join.
                     'pet_id' => $result['pet_id'],
                     'mode' => $result['mode'],
+                    /**
+                     * M5-R01: the new pet's profile the PIN will create (mode new_pet), else null.
+                     *
+                     * @var array{breed: 'mutt'|'border_collie', origin: 'bought'|'adopted', age_stage: 'puppy'|'young'|'adult'|'senior'}|null
+                     */
+                    'pet_profile' => $result['pet_profile'],
                 ], 200);
             }
 

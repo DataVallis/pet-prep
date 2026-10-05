@@ -2,9 +2,14 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\BreedType;
+use App\Enums\LifeStage;
+use App\Enums\PetOrigin;
 use App\Models\User;
+use App\Services\Results\PetProfileChoice;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class GeneratePinRequest extends FormRequest
 {
@@ -32,6 +37,12 @@ class GeneratePinRequest extends FormRequest
             // Family model (M2-01): omit for a new pet; an existing pet of
             // the family = the child will share it (shared custody).
             'pet_id' => ['sometimes', 'nullable', 'integer', 'min:1'],
+            // M5-R01: the new pet's profile (only for a new pet — not with
+            // pet_id). Defaults: mutt, bought, puppy. Premium breeds need
+            // the purchase (422 breed_locked); every origin / age is free.
+            'breed' => ['sometimes', 'nullable', Rule::enum(BreedType::class), 'prohibited_unless:pet_id,null'],
+            'origin' => ['sometimes', 'nullable', Rule::enum(PetOrigin::class), 'prohibited_unless:pet_id,null'],
+            'age_stage' => ['sometimes', 'nullable', Rule::enum(LifeStage::class), 'prohibited_unless:pet_id,null'],
         ];
     }
 
@@ -47,5 +58,17 @@ class GeneratePinRequest extends FormRequest
         $petId = $this->validated('pet_id');
 
         return $petId === null ? null : (int) $petId;
+    }
+
+    /**
+     * The new pet's profile (M5-R01); omitted fields → mutt / bought / puppy.
+     */
+    public function petProfile(): PetProfileChoice
+    {
+        return PetProfileChoice::fromArray([
+            'breed' => $this->validated('breed'),
+            'origin' => $this->validated('origin'),
+            'age_stage' => $this->validated('age_stage'),
+        ]);
     }
 }
