@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { ChevronRight, KeyRound, PawPrint, ShieldCheck } from 'lucide-react-native';
 
+import BuildLabel from '@/components/BuildLabel';
 import ChildPinLoginScreen from '@/screens/ChildPinLoginScreen';
 import ParentLoginScreen from '@/screens/ParentLoginScreen';
 import ParentSignupScreen from '@/screens/ParentSignupScreen';
@@ -84,6 +85,9 @@ export default function StartScreen() {
           <ChevronRight color="#94a3b8" size={22} />
         </Pressable>
       </View>
+
+      {/* Build identity: which code is being tested. */}
+      <BuildLabel tone="dark" style={styles.buildLabel} />
     </View>
   );
 }
@@ -91,6 +95,7 @@ export default function StartScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#020617', justifyContent: 'center', paddingHorizontal: 24 },
   glowOrb: { position: 'absolute', borderRadius: 9999 },
+  buildLabel: { position: 'absolute', bottom: 28, left: 0, right: 0 },
   glowIndigo: { width: 300, height: 300, top: 60, left: -90, backgroundColor: 'rgba(79, 70, 229, 0.22)' },
   glowEmerald: { width: 240, height: 240, bottom: 80, right: -60, backgroundColor: 'rgba(16, 185, 129, 0.12)' },
   header: { alignItems: 'center', marginBottom: 36 },

@@ -16,6 +16,7 @@ import type { ChildPetState } from '@/api/client';
 import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
 import type { LockState } from '@/store/appStore';
 import { familyCalendar } from '@/modules/childPet/familyTime';
+import { normalizePetMedia, type PetMediaInfo } from '@/modules/petMedia/petMedia';
 
 export type LockReason = 'game_over' | 'inactive' | 'hard_stopped' | 'contract_required' | 'ill';
 
@@ -48,6 +49,8 @@ export interface ChildPetView {
     certificate_eligible: boolean;
     current_video_url: string | null;
     reference_image_url: string | null;
+    /** AI media (M4-03 / M4-05): state videos + reference image, signed URLs. */
+    media: PetMediaInfo;
   };
   lock: { is_locked: boolean; reason: LockReason | null; until: string | null };
   /** IANA zone of the family (all wall-clock rules). */
@@ -162,6 +165,11 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       certificate_eligible: bool(p.certificate_eligible),
       current_video_url: isoOrNull(p.current_video_url),
       reference_image_url: isoOrNull(p.reference_image_url),
+      media: normalizePetMedia(p.media, {
+        current_video_url: p.current_video_url,
+        reference_image_url: p.reference_image_url,
+        media_status: p.media_status,
+      }),
     },
     lock: {
       is_locked: bool(raw.lock.is_locked),
@@ -285,6 +293,9 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     awaiting_contract: view.pet.awaiting_contract || b.awaiting_contract === true,
     current_video_url: b.current_video_url ?? view.pet.current_video_url,
     reference_image_url: b.reference_image_url ?? view.pet.reference_image_url,
+    // Every broadcast since M4-05 carries the full `media` (freshly signed); an older
+    // server's event without it keeps what the view has.
+    media: b.media ? normalizePetMedia(b.media) : view.pet.media,
   };
   const lock = lockFromFlags(pet, view.lock);
   const blocked = lock.is_locked || pet.needs_cleaning;

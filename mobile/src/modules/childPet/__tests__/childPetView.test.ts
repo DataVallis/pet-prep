@@ -10,7 +10,7 @@ import {
   optimisticView,
   revertOptimistic,
 } from '@/modules/childPet/childPetView';
-import { makeBroadcast, makeChildState, makeLiveChildState } from '@/test-utils/fixtures';
+import { makeBroadcast, makeChildState, makeLiveChildState, makeMedia } from '@/test-utils/fixtures';
 
 describe('normalizeChildState', () => {
   it('reads the backend shape (booleans, numbers) into proper types', () => {
@@ -291,5 +291,31 @@ describe('revertOptimistic (M4)', () => {
     const reverted = revertOptimistic(optimisticView(messy, 'clean'), messy, 'clean');
     expect(reverted.pet.hygiene_level).toBe(0);
     expect(reverted.pet.needs_cleaning).toBe(true);
+  });
+});
+
+describe('pet media (M4-03 app side)', () => {
+  const IDLE = 'https://api.petprep.si/api/media/2?expires=1&v=i&signature=a';
+  const IMG = 'https://api.petprep.si/api/media/1?expires=1&v=img&signature=a';
+
+  it('normalises the media object of the child state', () => {
+    const view = normalizeChildState(
+      makeLiveChildState({
+        pet: { media: makeMedia({ status: 'partial', reference_image_url: IMG, videos: { idle: IDLE }, current_video_url: IDLE }) },
+      }),
+    );
+    expect(view.pet.media).toMatchObject({ status: 'partial', referenceImageUrl: IMG, videos: { idle: IDLE } });
+  });
+
+  it('a broadcast with media replaces it; one without keeps the cached media', () => {
+    const view = normalizeChildState(makeLiveChildState({ pet: { media: makeMedia({ status: 'pending' }) } }));
+    const withMedia = applyBroadcast(
+      view,
+      makeBroadcast({ emitted_at: '2026-10-04T10:00:05.250Z', event_type: 'video_ready', media: makeMedia({ status: 'partial', reference_image_url: IMG, videos: { idle: IDLE } }) }),
+    );
+    expect(withMedia?.view.pet.media.videos.idle).toBe(IDLE);
+    expect(withMedia?.refetch).toBe(true);
+    const without = applyBroadcast(view, makeBroadcast({ emitted_at: '2026-10-04T10:00:05.250Z' }));
+    expect(without?.view.pet.media).toBe(view.pet.media);
   });
 });

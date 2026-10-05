@@ -2,7 +2,8 @@
  * One child on the parent's family overview (M2-05, PRODUCT_SPEC §9 / §11): traffic
  * light with friendly reasons, Care Score ("x od y rutin", illnesses), 12-week
  * progress, today's routines (missed ones with type and family-local time), the
- * last 7 days as simple bars, and the pet's mini status. All numbers come from the
+ * last 7 days as simple bars, and the pet's mini status with its AI reference image
+ * thumbnail (M4-03). All numbers come from the
  * server — nothing is scored on the phone.
  */
 
@@ -34,6 +35,8 @@ import {
   weekdayShort,
   type DayRow,
 } from '@/modules/family/scoring';
+import PetThumbnail from '@/components/parent/PetThumbnail';
+import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 
 export const CHILD_CARD_STRINGS = {
   scoreTitle: 'Care Score',
@@ -222,12 +225,17 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
 
       {pet !== null && (
         <View style={styles.block} testID={`child-pet-${id}`}>
-          <Text style={styles.label}>{S.pet}</Text>
-          {status && (
-            <Text style={[styles.status, status === 'game_over' && styles.statusRed]} testID={`child-pet-status-${id}`}>
-              {PET_STATUS_LABELS[status]}
-            </Text>
-          )}
+          <View style={styles.petHeader}>
+            <PetThumbnail media={normalizePetMedia(pet.media)} size={56} testID={`child-pet-thumb-${id}`} />
+            <View style={styles.flex}>
+              <Text style={styles.label}>{S.pet}</Text>
+              {status && (
+                <Text style={[styles.status, status === 'game_over' && styles.statusRed]} testID={`child-pet-status-${id}`}>
+                  {PET_STATUS_LABELS[status]}
+                </Text>
+              )}
+            </View>
+          </View>
           <MetricRow label={S.metrics.hunger} value={pet.metrics.hunger} />
           <MetricRow label={S.metrics.thirst} value={pet.metrics.thirst} />
           <MetricRow label={S.metrics.energy} value={pet.metrics.energy} />
@@ -309,6 +317,7 @@ const styles = StyleSheet.create({
   weekLabel: { fontSize: 10, fontWeight: '600', color: C.muted },
   status: { fontSize: 13, fontWeight: '600', color: C.yellowText },
   statusRed: { color: C.redText },
+  petHeader: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   secondaryButton: {
     flexDirection: 'row',
     alignItems: 'center',

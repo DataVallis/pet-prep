@@ -2,7 +2,7 @@
   "expo": {
     "name": "PetPrep",
     "slug": "petprep",
-    "version": "1.10.2",
+    "version": "1.10.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",

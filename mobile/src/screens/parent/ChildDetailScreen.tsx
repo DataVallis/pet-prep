@@ -1,12 +1,14 @@
 /**
- * Child detail for the parent (M2-05): `GET /api/parent/children/{child}/report`
+ * Child detail for the parent (M2-05): the pet's idle video on top (M4-03, one player,
+ * released when the screen closes), then `GET /api/parent/children/{child}/report`
  * for 7 / 30 / 84 days — score of the period, totals per routine type, one row per
  * day (done / expected, walk steps vs goal), missed routines, illnesses — and the
  * activity timeline of the child's pet (`/api/parent/activities?pet_id=`, paginated)
  * with the nicknames of the children who acted. Light parent theme (ADR-007).
  */
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Check, ChevronLeft, X } from 'lucide-react-native';
 
@@ -22,7 +24,10 @@ import {
   Segmented,
   TrafficLightBadge,
 } from '@/components/parent/ParentUi';
-import { nicknameOf, type FamilyChild, type FamilyOverview } from '@/modules/family/family';
+import { nicknameOf, petOfChild, type FamilyChild, type FamilyOverview } from '@/modules/family/family';
+import { parentDashboardKey } from '@/modules/family/live';
+import { normalizePetMedia, toBreedType } from '@/modules/petMedia/petMedia';
+import PetMediaView from '@/components/PetMediaView';
 import {
   REPORT_PERIODS,
   ROUTINE_LABELS,
@@ -142,6 +147,12 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
   const tz = data?.timezone ?? family.timezone;
   const petId = data?.pet_id ?? child.pet_id;
   const offline = report.isError && !(report.error instanceof ApiError);
+  const pet = petOfChild(child, family);
+  const queryClient = useQueryClient();
+  // A signed media URL failed (likely expired): refresh the dashboard once for new URLs.
+  const onMediaExpired = useCallback(() => {
+    void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
+  }, [queryClient]);
 
   return (
     <View style={styles.root}>
@@ -154,6 +165,20 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
       </View>
 
       <ScrollView style={styles.flex} contentContainerStyle={styles.content}>
+        {pet !== null && (
+          <PetMediaView
+            media={normalizePetMedia(pet.media)}
+            petState="idle"
+            // A locked pet (vet, hard stop, game over, inactive) is shown as a still image.
+            videoEnabled={pet.is_active && !pet.is_ill && !pet.is_hard_stopped && !pet.is_game_over}
+            breed={toBreedType(pet.breed_type)}
+            onMediaExpired={onMediaExpired}
+            variant="card"
+            style={styles.petMedia}
+            testID="detail-pet-media"
+          />
+        )}
+
         <Segmented
           options={REPORT_PERIODS.map((p) => ({ value: p, label: S.periods[p] }))}
           value={days}
@@ -295,6 +320,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: { flex: 1, fontSize: 20, fontWeight: '800', color: C.text },
   content: { padding: 16, gap: 14, paddingBottom: 32 },
+  petMedia: { height: 220 },
   label: { fontSize: 12, fontWeight: '700', color: C.muted, textTransform: 'uppercase', letterSpacing: 0.4 },
   score: { fontSize: 48, fontWeight: '800', color: C.text, fontVariant: ['tabular-nums'] },
   noScore: { fontSize: 18, fontWeight: '700', color: C.text },

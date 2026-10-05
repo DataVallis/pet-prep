@@ -10,20 +10,9 @@ jest.mock('expo-secure-store', () => ({
   deleteItemAsync: jest.fn(),
 }));
 
-// Mock expo-video
-jest.mock('expo-video', () => ({
-  useVideoPlayer: jest.fn(() => ({
-    play: jest.fn(),
-    pause: jest.fn(),
-    replay: jest.fn(),
-    replace: jest.fn(),
-    setCurrentTime: jest.fn(),
-    enterFullscreen: jest.fn(),
-    exitFullscreen: jest.fn(),
-  })),
-  VideoView: 'VideoView',
-  VideoContent: 'VideoContent',
-}));
+// expo-video: manual mock in __mocks__/expo-video.tsx (one fake player per hook, with
+// events; registry in src/test-utils/videoPlayers.ts).
+jest.mock('expo-video');
 
 // Mock expo-sensors (Pedometer)
 jest.mock('expo-sensors', () => ({
