@@ -1,6 +1,6 @@
 # PetPrep za starše
 
-> **Stanje na dan 4. 10. 2026:** aplikacija je v razvoju (zaprta testna faza še ni začela). Spodaj je opisano, kako PetPrep deluje po specifikaciji; kar še ni zgrajeno, je označeno *načrt*.
+> **Stanje na dan 5. 10. 2026:** aplikacija je v razvoju (zaprta testna faza še ni začela). Spodaj je opisano, kako PetPrep deluje po specifikaciji; kar še ni zgrajeno, je označeno *načrt*.
 
 ## V enem stavku
 Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu menja vodo, čisti za njim in z njim **zares hodi**. Vi pa v živo vidite, ali to res počne.
@@ -92,7 +92,12 @@ Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava �
 - **Videz psa ustvari umetna inteligenca brez podatkov o otroku** *(od 4. 10. 2026, strežnik)*: opis za sliko vsebuje samo pasmo in lastnosti psa (barva, dlaka, ušesa …) — nikoli imena, vzdevka ali česarkoli o vaši družini.
 - **Igra deluje tudi brez slike ali videa.** Če ustvarjanje ne uspe ali je dosežena dnevna meja stroškov, kuža normalno živi naprej (le brez nove slike / videa); sistem poskusi znova naslednji dan.
 - Brez oglasov. Brez klepeta s tujci.
-- Strežniki v EU (Hetzner). *(načrt: politika zasebnosti, privolitev staršev, izbris računa)*
+- **Vaši podatki, vaša odločitev** *(v aplikaciji od 5. 10. 2026)*:
+  - **Izvoz:** »Nadzor« → »Račun« → **»Izvozi moje podatke«**. Dobite eno datoteko (JSON) z vsem, kar hranimo o družini: starši, vzdevki in letnice otrok, psi z vso zgodovino skrbi, pogodbe z otrokovim podpisom, ocene ter povezave do slik in videov kužka (povezave veljajo približno eno uro). Gesel, kod PIN in kod povabil izvoz ne vsebuje. Izvoz je mogoč 3-krat na uro.
+  - **Izbris otrokovega profila:** v seznamu otrok tapnete **»Izbriši profil«**, preberete, kaj se izbriše, vpišete svoje geslo in besedo **IZBRIŠI**. Izbriše se otrokov profil z vsemi prijavami in njegovo pogodbo. Pes, za katerega je skrbel sam, se izbriše z vso zgodovino, slikami in videi. **Skupni pes ostane** drugim otrokom; kar je izbrisani otrok naredil zanj, ostane v dnevniku, a brez imena.
+  - **Izbris računa:** »Nadzor« → »Račun« → **»Izbriši račun«**, geslo in beseda **IZBRIŠI**. Če ste **edini starš**, se izbriše **celotna družina** — vsi otroški profili, psi, slike in videi, pogodbe, dnevnik in ocene, vse naprave se odjavijo. Če je v družini še drug starš, se izbriše samo vaš račun; družina ostane njemu. Nato vas aplikacija odjavi.
+  - Izbris je **takojšen in ga ni mogoče razveljaviti** — zato pred tem raje izvozite podatke. Potrditvenega e-sporočila zaenkrat ne pošljemo *(načrt)*.
+- Strežniki v EU (Hetzner). *(načrt: politika zasebnosti, privolitev staršev)*
 
 ## Cena
 - **Mešanček: brezplačen za vedno.**

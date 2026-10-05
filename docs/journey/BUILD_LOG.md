@@ -8,6 +8,26 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-05 — Starši lahko izbrišejo račun in izvozijo vse podatke (M2-08)
+
+**Kaj se je zgodilo:** V aplikaciji za starše je v zavihku **»Nadzor«** nov razdelek **»Račun«**:
+- **»Izvozi moje podatke«** — ena datoteka JSON z vsem, kar PetPrep hrani o družini: starši, vzdevki in letnice otrok, psi z vso zgodovino (hranjenje, voda, čiščenje, koraki, sprehodi, rutine, bolezni, premori), pogodbe z otrokovim podpisom, ocene (Care Score, semafor) in povezave do slik in videov kužka. Brez gesel, kod PIN in kod povabil. Odpre se sistemsko okno za deljenje (pošljete si po e-pošti, shranite v datoteke …).
+- **»Izbriši račun«** — aplikacija najprej pove, kaj se bo zgodilo: če ste **edini starš, gre celotna družina** (otroci, psi, slike, videi, pogodbe, dnevnik); če je v družini še drug starš, gre samo vaš račun. Potrdite z geslom in besedo **IZBRIŠI**, nato vas aplikacija odjavi.
+- Pri vsakem otroku **»Izbriši profil«** — pes, za katerega je skrbel sam, gre z njim; **skupni pes ostane** bratu ali sestri, otrokova pretekla skrb pa ostane v dnevniku brez imena.
+- Izbris je takojšen in nepovraten (brez čakalne dobe — *Claudova izbira, čaka Davida*). Vse se izbriše v enem koraku v bazi; slike in videi se z diska pobrišejo takoj zatem. Strošek AI ostane v knjigovodstvu, a brez povezave na psa. Zapis v dnevnik strežnika ne vsebuje imen ali e-pošte — samo številko družine in koliko je bilo izbrisano.
+- Administracija (Filament) ima dejanje **»Delete family«** z istimi pravili; navadno brisanje uporabnikov je odstranjeno, ker bi pustilo datoteke in obšlo pravila.
+- **Med delom najden in popravljen hrošč:** brisanje psa, ki je že imel AI sliko s stroškom, je v bazi padlo (dve »nastavi na prazno« pravili v istem koraku). Brez popravka izbris računa ne bi uspel za nobenega psa s sliko.
+- **Številke:** 38 novih testov na strežniku (skupaj **852 zelenih**), 26 novih v aplikaciji (skupaj **552 zelenih**). Zavore: 5 poskusov brisanja na 15 min, 3 izvozi na uro.
+- *Načrt:* potrditveno e-sporočilo o izbrisu (ko bo ponudnik e-pošte), izvoz kot datoteka namesto besedila, asinhroni izvoz za zelo velike družine.
+
+**Zakaj je pomembno**
+Apple aplikacije brez izbrisa računa v aplikaciji ne sprejme v App Store, GDPR pa staršem zagotavlja dostop do podatkov in njihov izbris. Pri aplikaciji za otroke je to temelj zaupanja: starš lahko kadarkoli vzame vse s sabo ali vse pobriše.
+
+**Kako to povedati**
+- 👩 *"Vaši podatki so vaši: z enim dotikom jih izvozite, z dvema izbrišete — celotno družino ali samo enega otroka. Brez klicev na podporo."*
+- 💼 *"Skladnost z App Store (in-app account deletion) in GDPR čl. 15/17/20 pred beto: izvoz in izbris sta samopostrežna, revizijska sled brez PII."*
+- 🛠 *"Laravel: izbris družine v eni transakciji z vrstnim redom zaklepov (starš → otroci → družina → psi), datoteke v queued jobu po commitu, idempotentno; pazili smo na zastarele kaskadne tuje ključe in na PostgreSQL past z dvema ON DELETE SET NULL v isti vrstici."*
+
 ## 2026-10-05 — Administracija hitrejša, videi ne zavirajo več aplikacije (produkcijski strežnik PHP)
 
 **Kaj se je zgodilo:** Produkcija je do zdaj tekla na **razvojnem** strežniku PHP (`php artisan serve`, 4 delavci, brez predpomnilnika prevedene kode). Zato je bila administracija (Filament) počasna, vsak prenos videa psa pa je za ves čas prenosa zasedel enega od štirih delavcev. Pripravljen je pravi produkcijski način (velja ob naslednjem deployu, ko se veja združi):
