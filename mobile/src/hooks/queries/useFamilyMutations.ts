@@ -9,6 +9,7 @@ import {
   api,
   type CreateChildRequest,
   type CreateChildResponse,
+  type DeleteChildResponse,
   type RevokeChildTokensResponse,
 } from '@/api/client';
 import { parentDashboardKey } from '@/hooks/queries/useParentDashboard';
@@ -17,6 +18,16 @@ export function useCreateChild() {
   const queryClient = useQueryClient();
   return useMutation<CreateChildResponse, unknown, CreateChildRequest>({
     mutationFn: (body) => api.createChild(body),
+    retry: false,
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),
+  });
+}
+
+/** M2-08: delete a child profile (password re-entry). Refreshes the family afterwards. */
+export function useDeleteChild() {
+  const queryClient = useQueryClient();
+  return useMutation<DeleteChildResponse, unknown, { childId: number; password: string }>({
+    mutationFn: ({ childId, password }) => api.deleteChild(childId, password),
     retry: false,
     onSuccess: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),
   });

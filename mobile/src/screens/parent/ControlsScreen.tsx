@@ -2,7 +2,8 @@
  * ControlsScreen — "Nadzor" tab of the parent app (light theme, ADR-007; M2-05):
  * children and their devices, controls per pet (caretakers, hard stop with in-app
  * confirmation), family quiet hours, the family's parents with the second-parent
- * invite, and — while the family is empty — joining another family by code.
+ * invite, and — while the family is empty — joining another family by code; last the
+ * "Račun" section (M2-08): data export and account deletion.
  */
 
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
@@ -10,6 +11,7 @@ import { ChevronLeft } from 'lucide-react-native';
 
 import AddChildCard from '@/components/AddChildCard';
 import FamilyChildrenCard from '@/components/FamilyChildrenCard';
+import AccountCard from '@/components/parent/AccountCard';
 import FamilyParentsCard from '@/components/parent/FamilyParentsCard';
 import JoinFamilyCard from '@/components/parent/JoinFamilyCard';
 import PetControlsCard from '@/components/parent/PetControlsCard';
@@ -71,6 +73,8 @@ export default function ControlsScreen({ onBack, family, onAddChild, onChildPin,
 
         {family && <FamilyParentsCard family={family} />}
         {isEmpty && <JoinFamilyCard onJoined={(text) => onNotice?.(text)} />}
+
+        <AccountCard family={family} />
       </ScrollView>
     </View>
   );
