@@ -46,6 +46,9 @@ fi
 if [ -n "${FAIL_MATCH:-}" ] && [[ "$args" =~ $FAIL_MATCH ]]; then exit 1; fi
 case "$args" in
     *"ps -q --status running postgres"*) echo "c0ffee" ;;
+    *"exec -T caddy cat /etc/caddy/Caddyfile"*)
+        [ -f "${PETPREP_ROOT}/caddy.running" ] || exit 1
+        cat "${PETPREP_ROOT}/caddy.running" ;;
     *"exec -T app curl"*) printf '%s' "${CURL_STATUS:-200}" ;;
 esac
 exit 0
@@ -68,6 +71,7 @@ write_tree() { # dir release
     mkdir -p "$1/backend" "$1/scripts"
     echo "services: {}" > "$1/backend/compose.production.yaml"
     echo "$2" > "$1/backend/app.txt"
+    mkdir -p "$1/deployment"; echo "caddy-config-same" > "$1/deployment/Caddyfile"
     echo "only-in-$2" > "$1/backend/only-$2.txt"
     printf '#!/usr/bin/env bash\necho "backup (%s)"\n' "$2" > "$1/scripts/backup-production-db.sh"
 }
@@ -101,6 +105,8 @@ EOF
         write_tree "$ROOT/incoming" v2
     fi
     mkdir -p "$ROOT/repo/backend/vendor"; echo keep > "$ROOT/repo/backend/vendor/autoload.php"
+    # The running caddy container sees the same Caddyfile as repo/ (default).
+    cp "$ROOT/repo/deployment/Caddyfile" "$ROOT/caddy.running"
     CALL_LOG="$ROOT/calls.log"; : > "$CALL_LOG"
 }
 
@@ -152,6 +158,8 @@ check "vendor/ preserved" vendor_kept
 check "backend/.env installed (600)" test "$(stat -c %a "$ROOT/repo/backend/.env")" = 600
 check "previous release snapshot = v1" test "$(cat "$ROOT/releases/previous/backend/app.txt")" = v1
 check "no env secret in output" no_secret
+check "Caddyfile unchanged → no validate" not_called 'caddy validate'
+check "Caddyfile unchanged → caddy not force-recreated" not_called 'force-recreate'
 finish
 
 start preflight "preflight fail (QUEUE_CONNECTION=sync) → no docker/git call"
@@ -267,6 +275,46 @@ start git_unknown "git mode: unknown SHA → fails before maintenance"
 new_root git; run_deploy -- deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
 check "exit != 0" rc_nonzero
 check "no docker call" not_called '^docker'
+finish
+
+start caddy_changed "Caddyfile changed → validated before migrate, caddy recreated after"
+new_root dir; echo "caddy-config-NEW" > "$ROOT/incoming/deployment/Caddyfile"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "validate runs on the new tree (one-off, no deps)" called 'run --rm --no-deps -T caddy caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile \[code=v2\]'
+check "validate before build/migrate" before 'caddy validate' 'migrate --force'
+check "caddy force-recreated" called 'up -d --force-recreate --no-deps caddy \[code=v2\]'
+check "recreate after migrate" before 'migrate --force' 'force-recreate'
+check "recreate before artisan up" before 'force-recreate' 'artisan up'
+check "new Caddyfile on disk" eq "$(cat "$ROOT/repo/deployment/Caddyfile")" caddy-config-NEW
+finish
+
+start caddy_stale "running caddy already stale (repo == new, container differs) → recreated"
+new_root dir; echo "caddy-config-OLDER" > "$ROOT/caddy.running"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "validated" called 'caddy validate'
+check "caddy force-recreated" called 'force-recreate --no-deps caddy'
+finish
+
+start caddy_first "caddy not running (first run) → treated as changed"
+new_root dir; rm -f "$ROOT/caddy.running"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "warning printed" out_has "treating it as changed"
+check "validated" called 'caddy validate'
+check "caddy force-recreated" called 'force-recreate --no-deps caddy'
+finish
+
+start caddy_invalid "invalid new Caddyfile → abort pre-migration, code reverted, old caddy untouched"
+new_root dir; echo "caddy-config-BROKEN" > "$ROOT/incoming/deployment/Caddyfile"
+run_deploy FAIL_MATCH='caddy validate' -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "explains" out_has "Caddyfile is invalid"
+check "no build / migrate" not_called 'build app|migrate'
+check "caddy not recreated" not_called 'force-recreate'
+check "old code + old Caddyfile back on disk" eq "$(code_on_disk) $(cat "$ROOT/repo/deployment/Caddyfile")" "v1 caddy-config-same"
+check "artisan up (old code)" called 'artisan up \[code=v1\]'
 finish
 
 start idempotent "re-running the same deploy is a no-op success"
