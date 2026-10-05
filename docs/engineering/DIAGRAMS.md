@@ -235,13 +235,13 @@ Not yet (M2-10b): e-mail verification and password reset need a mail provider; `
 ```mermaid
 flowchart TD
   A[Parent: Nadzor → Račun<br/>&quot;Izbriši račun&quot;] --> B[App explains consequences<br/>password + types IZBRIŠI]
-  B --> C[POST /api/parent/account/delete<br/>password, confirm: true<br/>throttle 5 / 15 min per user]
+  B --> C[POST /api/parent/account/delete<br/>password, confirm: true<br/>5 wrong passwords / 15 min per user, scope account]
   C -->|wrong password| E1[422 invalid_password<br/>nothing deleted]
   C -->|superadmin| E2[403 superadmin_protected]
-  C --> T[DB::transaction<br/>lock parent row → child rows → family row → pet rows]
+  C --> T[DB::transaction, 3 attempts<br/>lock all parent rows → all child rows id order → family row → pet rows]
   T --> Q{another parent<br/>in the family?}
-  Q -->|yes| P[remove only this parent<br/>hand over mirrors: children.parent_id,<br/>quiet_hours.parent_id, legacy pets.user_id → other parent<br/>delete own invites, membership, tokens, sessions, user]
-  Q -->|no: last parent| F[purge family<br/>ledger: pet_id / pet_media_id → null, cost kept<br/>pets → cascades: activities, contracts + signatures,<br/>caretakers, steps, walks, routines, periods,<br/>hygiene events, PINs, media slots<br/>quiet hours, PINs, invites, memberships,<br/>tokens, sessions, users, family]
+  Q -->|yes| P[remove only this parent<br/>hand over mirrors: children.parent_id,<br/>quiet_hours.parent_id, legacy pets.user_id → other parent<br/>its legacy pets in other families → deleted<br/>delete own invites, membership, tokens, sessions, user]
+  Q -->|no: last parent| F[purge family + orphaned legacy children<br/>+ the parents legacy pets anywhere<br/>ledger: pet_id / pet_media_id → null, cost kept<br/>pets → cascades: activities, contracts + signatures,<br/>caretakers, steps, walks, routines, periods,<br/>hygiene events, PINs, media slots<br/>quiet hours, PINs, invites, memberships,<br/>tokens, sessions, users, family]
   P --> L[audit log line<br/>family id + counts, no PII]
   F --> L
   L --> K[COMMIT]
@@ -253,10 +253,10 @@ flowchart TD
 ```mermaid
 flowchart TD
   C1[Parent: Otroci → &quot;Izbriši profil&quot;<br/>password + IZBRIŠI] --> C2[DELETE /api/parent/children/:child<br/>another family / not a child → 404 child_not_found]
-  C2 --> C3[transaction: lock parent → child → family → the child's pets]
+  C2 --> C3[transaction x3 attempts: lock all parents → all children id order<br/>→ family → the child's pets; wrong password: 5 failures / 15 min, scope child]
   C3 --> C4{per pet: other caretakers?}
   C4 -->|no: sole caretaker| C5[delete pet + all its data<br/>files after commit]
-  C4 -->|yes: shared| C6[pet stays; pets.user_id → next caretaker<br/>child's contract, caretaker row, step rows go<br/>activities / routines keep actor_user_id = null<br/>PetUpdated caretaker_removed after commit]
+  C4 -->|yes: shared| C6[pet stays; pets.user_id → next caretaker<br/>caretaker row → TOMBSTONE: user_id null, started_at kept, ended_at now<br/>so siblings' past fair share / Care Score is unchanged<br/>child's contract + step rows go<br/>activities / routines keep actor_user_id = null<br/>PetUpdated caretaker_removed after commit]
   C5 --> C7[delete PINs, membership, tokens, child user]
   C6 --> C7
 ```

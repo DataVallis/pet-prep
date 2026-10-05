@@ -17,7 +17,8 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - Izbris je takojšen in nepovraten (brez čakalne dobe — *Claudova izbira, čaka Davida*). Vse se izbriše v enem koraku v bazi; slike in videi se z diska pobrišejo takoj zatem. Strošek AI ostane v knjigovodstvu, a brez povezave na psa. Zapis v dnevnik strežnika ne vsebuje imen ali e-pošte — samo številko družine in koliko je bilo izbrisano.
 - Administracija (Filament) ima dejanje **»Delete family«** z istimi pravili; navadno brisanje uporabnikov je odstranjeno, ker bi pustilo datoteke in obšlo pravila.
 - **Med delom najden in popravljen hrošč:** brisanje psa, ki je že imel AI sliko s stroškom, je v bazi padlo (dve »nastavi na prazno« pravili v istem koraku). Brez popravka izbris računa ne bi uspel za nobenega psa s sliko.
-- **Številke:** 38 novih testov na strežniku (skupaj **852 zelenih**), 26 novih v aplikaciji (skupaj **552 zelenih**). Zavore: 5 poskusov brisanja na 15 min, 3 izvozi na uro.
+- **Številke:** 47 novih testov na strežniku (skupaj **861 zelenih**), 29 novih v aplikaciji (skupaj **555 zelenih**). Zavore: 5 napačnih gesel na 15 min (ločeno za račun in otroka), 3 izvozi na uro.
+- **Po pregledu kode (PR #29):** izbris brata ali sestre **ne spremeni pretekle ocene** otroka, ki ostane — sistem si zapomni, da je izbrisani otrok skrbel (brez imena ali drugih podatkov), zato pošten delež ostane enak (preizkus: otroka, ki sta skrbela izmenično, imata 100; po izbrisu enega ima drugi še vedno 100, ne 50). Če po pošiljanju zmanjka povezave, aplikacija ne trdi več, da se ni nič izbrisalo, ampak pošteno pove, da izid ni znan. Zavora šteje samo napačna gesla.
 - *Načrt:* potrditveno e-sporočilo o izbrisu (ko bo ponudnik e-pošte), izvoz kot datoteka namesto besedila, asinhroni izvoz za zelo velike družine.
 
 **Zakaj je pomembno**
