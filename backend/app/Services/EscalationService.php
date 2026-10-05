@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\ActivityType;
+use App\Enums\PushType;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\Pet;
@@ -15,28 +16,37 @@ use Illuminate\Support\Facades\Log;
 /**
  * EscalationService — 3-Tier Escalation Matrix & Neglect Mechanics
  *
- * Phase 1 (Soft Warning at 30%): Standard push notification to child
- *   "Your pet is looking at its food bowl..."
+ * Phase 1 (Soft Warning at 30%): push to every caretaker child
+ *   "Tvoj kuža te milo gleda in kaže na posodo s hrano." (per metric)
  *
- * Phase 2 (Critical Alert at 10%): High-priority push with sound/vibration
- *   "Critical warning: Your pet is starving!..."
+ * Phase 2 (Critical Alert at 10%): high-priority push with sound (Android
+ *   channel "alarm") to every caretaker child
  *
- * Phase 3 (Parent Intervention at 0% for >1 hour): WebSocket alarm to parent
- *   "Your child has neglected their pet!"
+ * Phase 3 (Parent Intervention at 0% for >1 hour): Reverb event + push to
+ *   every parent: "Tvoj otrok danes ni poskrbel za psa."
+ *
+ * Pushes (M3-02) go through NotificationService::escalation() — one call per
+ * escalation step, inside this per-pet transaction; it applies quiet hours
+ * (no pushes), the duplicate guard and the recipients (FamilyService), and
+ * queues the Expo send after commit.
  *
  * Severe Neglect:
  *   Illness State: hygiene at 0% for >=6 hours counted outside quiet hours,
  *     or no walk at all yesterday (daily walk rule: DailyWalkService plans
  *     the start at the end of the night's quiet hours)
  *     → Pet state = SICK, 12-hour action lockout; afterwards a fresh start
- *       (Pet::recoverFromIllnessIfDue: hygiene 100 %, clocks restart)
+ *       (Pet::recoverFromIllnessIfDue: hygiene 100 %, clocks restart);
+ *       push to parents + caretakers
  *
  *   Game Over / Virtual Shelter Protocol: hunger, thirst or hygiene at 0% for
  *     24 continuous hours → Lock pet session, is_active = false, notify parent
  *
  * Energy (daily walk, David 2026-10-03) has no hourly neglect clock: no
- * phase 3, no 6 h illness and no game over from energy. Low energy gives
- * phase 1 / 2 only outside quiet hours.
+ * phase 3, no 6 h illness and no game over from energy. Since the PR #35
+ * re-review energy is not on the phase ladder at all: energy ≤ 30 % outside
+ * quiet hours only asks NotificationService::walkReminder() (at most one
+ * walk reminder per family-local day, its own timing rules);
+ * escalation_level follows hunger / thirst / hygiene only.
  */
 class EscalationService
 {
@@ -173,10 +183,18 @@ class EscalationService
             return true;
         }
 
-        // Check 3-tier escalation matrix
+        // Check 3-tier escalation matrix (hunger / thirst / hygiene only)
         $isQuiet = $pet->quietHours()?->isQuietNow() ?? false;
+        $escalated = $this->checkEscalationMatrix($pet);
 
-        return $this->checkEscalationMatrix($pet, $isQuiet);
+        // Energy = the daily walk, outside the ladder (PR #35 re-review): a
+        // separate, at most daily walk reminder; no level, no log row, no
+        // broadcast (the HUD shows low_energy from the metric itself).
+        if (! $isQuiet && $pet->displayMetric('energy_level') <= self::SOFT_WARNING_THRESHOLD) {
+            $this->notifications()->walkReminder($pet);
+        }
+
+        return $escalated;
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -188,18 +206,20 @@ class EscalationService
      *
      * @return bool True if an escalation was triggered or changed.
      */
-    private function checkEscalationMatrix(Pet $pet, bool $isQuiet): bool
+    private function checkEscalationMatrix(Pet $pet): bool
     {
         // Thresholds compare the value the child sees (rounded half up,
         // Pet::displayMetric): 30.4 shows 30 % → phase 1 (decision 2026-10-03).
-        // Energy counts only outside quiet hours (daily walk rule).
-        $lowestMetric = $this->lowestDisplayedMetric($pet, includeEnergy: ! $isQuiet);
+        // Energy is not on this ladder (daily walk → separate walk reminder,
+        // PR #35 re-review), so a low walk never blocks a hunger alarm.
+        $lowestMetric = $this->lowestDisplayedMetric($pet);
         $currentLevel = $pet->escalation_level;
 
         // Phase 3: 0% for >1 hour — Parent WebSocket alarm
-        if ($this->hasMetricAtZeroForHours($pet, self::PARENT_INTERVENTION_HOURS)) {
+        $zeroMetric = $this->metricAtZeroForHours($pet, self::PARENT_INTERVENTION_HOURS);
+        if ($zeroMetric !== null) {
             if ($currentLevel < 3) {
-                $this->triggerPhase3ParentAlarm($pet);
+                $this->triggerPhase3ParentAlarm($pet, $zeroMetric);
 
                 return true;
             }
@@ -210,7 +230,7 @@ class EscalationService
         // Phase 2: Critical Alert at 10%
         if ($lowestMetric <= self::CRITICAL_ALERT_THRESHOLD) {
             if ($currentLevel < 2) {
-                $this->triggerPhase2CriticalAlert($pet);
+                $this->triggerPhase2CriticalAlert($pet, $this->lowestMetricKey($pet));
 
                 return true;
             }
@@ -221,7 +241,7 @@ class EscalationService
         // Phase 1: Soft Warning at 30%
         if ($lowestMetric <= self::SOFT_WARNING_THRESHOLD) {
             if ($currentLevel < 1) {
-                $this->triggerPhase1SoftWarning($pet);
+                $this->triggerPhase1SoftWarning($pet, $this->lowestMetricKey($pet));
 
                 return true;
             }
@@ -246,7 +266,7 @@ class EscalationService
     /**
      * Trigger Phase 1: Soft Warning push notification to child.
      */
-    private function triggerPhase1SoftWarning(Pet $pet): void
+    private function triggerPhase1SoftWarning(Pet $pet, string $metric): void
     {
         $pet->update(['escalation_level' => 1]);
 
@@ -259,21 +279,20 @@ class EscalationService
 
         PetUpdated::afterCommit($pet, 'soft_warning');
 
-        // Push to every caretaker child of the pet once push exists (M3);
-        // recipients: FamilyService::caretakerRecipients (M2-01).
-        // SendSoftWarningNotification::dispatch($pet);
+        // Push to every caretaker child (M3-02).
+        $this->notifications()->escalation($pet, PushType::SoftWarning, $metric);
 
         Log::info('EscalationService: Phase 1 soft warning triggered', [
             'pet_id' => $pet->id,
             'child_recipient_ids' => $this->families()->caretakerRecipients($pet)->pluck('id')->all(),
-            'lowest_metric' => $this->lowestDisplayedMetric($pet, includeEnergy: true),
+            'lowest_metric' => $this->lowestDisplayedMetric($pet),
         ]);
     }
 
     /**
      * Trigger Phase 2: Critical Alert push notification with sound/vibration.
      */
-    private function triggerPhase2CriticalAlert(Pet $pet): void
+    private function triggerPhase2CriticalAlert(Pet $pet, string $metric): void
     {
         $pet->update(['escalation_level' => 2]);
 
@@ -285,8 +304,8 @@ class EscalationService
 
         PetUpdated::afterCommit($pet, 'critical_alert');
 
-        // Critical push to every caretaker child (M3), see Phase 1.
-        // SendCriticalAlertNotification::dispatch($pet);
+        // Critical push to every caretaker child (M3-02).
+        $this->notifications()->escalation($pet, PushType::CriticalAlert, $metric);
 
         Log::info('EscalationService: Phase 2 critical alert triggered', [
             'pet_id' => $pet->id,
@@ -297,7 +316,7 @@ class EscalationService
     /**
      * Trigger Phase 3: Parent WebSocket alarm via Reverb.
      */
-    private function triggerPhase3ParentAlarm(Pet $pet): void
+    private function triggerPhase3ParentAlarm(Pet $pet, string $metric): void
     {
         $pet->update(['escalation_level' => 3]);
 
@@ -311,7 +330,8 @@ class EscalationService
         PetUpdated::afterCommit($pet, 'parent_intervention_alarm');
 
         // Every parent of the family is alarmed (M2-01): the realtime channel
-        // already reaches them; push / e-mail (M3) use the same recipients.
+        // reaches open apps, the push (M3-02) the others.
+        $this->notifications()->escalation($pet, PushType::ParentAlarm, $metric);
         Log::warning('EscalationService: Phase 3 parent intervention alarm triggered', [
             'pet_id' => $pet->id,
             'parent_recipient_ids' => $this->families()->parentRecipients($pet)->pluck('id')->all(),
@@ -417,6 +437,7 @@ class EscalationService
 
         // Broadcast illness state to parent and child
         PetUpdated::afterCommit($pet, 'illness_triggered');
+        $this->notifications()->escalation($pet, PushType::Illness, $reason === 'missed_walk' ? 'walk' : $reason);
 
         Log::warning('EscalationService: Pet entered illness state', [
             'pet_id' => $pet->id,
@@ -482,6 +503,7 @@ class EscalationService
 
         // Broadcast game over to parent and child via Reverb
         PetUpdated::afterCommit($pet, 'game_over_virtual_shelter');
+        $this->notifications()->escalation($pet, PushType::GameOver);
 
         Log::critical('EscalationService: VIRTUAL SHELTER PROTOCOL triggered — Game Over', [
             'pet_id' => $pet->id,
@@ -502,6 +524,11 @@ class EscalationService
         return app(FamilyService::class);
     }
 
+    private function notifications(): NotificationService
+    {
+        return app(NotificationService::class);
+    }
+
     /**
      * Seconds since $zeroSince that fall outside quiet hours (family-local
      * clock). Frozen time is already excluded: thawing shifts *_zero_since
@@ -513,15 +540,13 @@ class EscalationService
     }
 
     /**
-     * Lowest metric as displayed to the child (integer 0–100). Energy only
-     * outside quiet hours (daily walk rule).
+     * Lowest of hunger / thirst / hygiene as displayed to the child (0–100).
+     * Energy is never part of the ladder (daily walk rule, PR #35 re-review).
      */
-    private function lowestDisplayedMetric(Pet $pet, bool $includeEnergy): int
+    private function lowestDisplayedMetric(Pet $pet): int
     {
         $metrics = $pet->displayMetrics();
-        if (! $includeEnergy) {
-            unset($metrics['energy_level']);
-        }
+        unset($metrics['energy_level']);
 
         return min($metrics);
     }
@@ -530,29 +555,46 @@ class EscalationService
      * The neglect clocks that drive phase 3, illness and game over. Energy is
      * not one of them (daily walk rule, David 2026-10-03).
      *
-     * @return list<CarbonInterface|null>
+     * @return array{hunger: CarbonInterface|null, thirst: CarbonInterface|null, hygiene: CarbonInterface|null}
      */
     private function neglectClocks(Pet $pet): array
     {
         return [
-            $pet->hunger_zero_since,
-            $pet->thirst_zero_since,
-            $pet->hygiene_zero_since,
+            'hunger' => $pet->hunger_zero_since,
+            'thirst' => $pet->thirst_zero_since,
+            'hygiene' => $pet->hygiene_zero_since,
         ];
     }
 
     /**
-     * Check if any metric has been at 0% for at least the given number of hours.
+     * The first neglect metric (hunger | thirst | hygiene) that has been at
+     * 0 % for at least the given number of hours, or null.
      * *_zero_since is stamped when a metric first *shows* 0 % (PetDecayService).
      */
-    private function hasMetricAtZeroForHours(Pet $pet, float $hours): bool
+    private function metricAtZeroForHours(Pet $pet, float $hours): ?string
     {
-        foreach ($this->neglectClocks($pet) as $zeroSince) {
+        foreach ($this->neglectClocks($pet) as $metric => $zeroSince) {
             if ($zeroSince && $zeroSince->diffInHours(now()) >= $hours) {
-                return true;
+                return $metric;
             }
         }
 
-        return false;
+        return null;
+    }
+
+    /**
+     * Push copy key of the lowest displayed ladder metric (ties: hunger,
+     * thirst, hygiene).
+     */
+    private function lowestMetricKey(Pet $pet): string
+    {
+        $shown = $pet->displayMetrics();
+        $candidates = [
+            'hunger' => $shown['hunger_level'],
+            'thirst' => $shown['thirst_level'],
+            'hygiene' => $shown['hygiene_level'],
+        ];
+
+        return (string) array_search(min($candidates), $candidates, true);
     }
 }

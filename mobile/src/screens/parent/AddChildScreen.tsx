@@ -48,6 +48,7 @@ import {
   type FamilyChild,
 } from '@/modules/family/family';
 import { classifyPinError, formatCountdown, formatPin, type PinErrorKind } from '@/modules/pairing/pin';
+import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { refreshSessionPet } from '@/modules/session/logout';
 
 /** All user-visible strings of this screen (extract to i18n with M1-18). */
@@ -195,7 +196,13 @@ function ProfileStep({ onCreated }: { onCreated: (child: { id: number; name: str
     setValidation(null);
     create.mutate(
       { display_name: name, birth_year: year },
-      { onSuccess: (res) => onCreated({ id: res.child.id, name: res.child.display_name }) },
+      {
+        onSuccess: (res) => {
+          onCreated({ id: res.child.id, name: res.child.display_name });
+          // M3-02: a child to watch over — ask the parent about alarms (once, see pushPrompt).
+          void maybeAskForPush('parent');
+        },
+      },
     );
   };
 

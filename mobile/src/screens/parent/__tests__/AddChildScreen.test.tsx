@@ -9,6 +9,7 @@ import AddChildScreen, { ADD_CHILD_STRINGS as S } from '@/screens/parent/AddChil
 import { useAppStore } from '@/store/appStore';
 import { makeFamilyChild, makeFamilyDashboard, makeFamilyPet, makePet } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { maybeAskForPush } from '@/modules/push/pushPrompt';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -23,6 +24,9 @@ jest.mock('@/api/client', () => {
     },
   };
 });
+
+// M3-02: adding a child is the moment to ask the parent about alarms.
+jest.mock('@/modules/push/pushPrompt', () => ({ maybeAskForPush: jest.fn(() => Promise.resolve('skipped')) }));
 
 const createChild = api.createChild as jest.Mock;
 const generatePin = api.generatePin as jest.Mock;
@@ -109,6 +113,7 @@ describe('AddChildScreen', () => {
 
       expect(createChild).toHaveBeenCalledWith({ display_name: 'Maja Mala', birth_year: 2016 });
       expect(screen.getByText(S.petTitle('Maja Mala'))).toBeTruthy();
+      expect(maybeAskForPush).toHaveBeenCalledWith('parent');
 
       fireEvent.press(screen.getByTestId('pet-option-new'));
       await flush();

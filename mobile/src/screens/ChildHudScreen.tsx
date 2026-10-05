@@ -61,6 +61,7 @@ import CleaningOverlay from '@/components/CleaningOverlay';
 import MetricBar from '@/components/MetricBar';
 import PetMediaView from '@/components/PetMediaView';
 import WalkTrackerOverlay from '@/modules/walk/WalkTrackerOverlay';
+import { usePushPromptOnFirstView } from '@/modules/push/usePushPromptOnFirstView';
 import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
 
 /** User-visible strings of the HUD (i18n with M1-18). */
@@ -174,6 +175,8 @@ function useSessionSync(view: ChildPetView | undefined): void {
 }
 
 export default function ChildHudScreen() {
+  // M3-02 / PR #35: first HUD view of the session → "Naj te kuža pokliče?" while undecided.
+  usePushPromptOnFirstView('child');
   const sessionPet = useAppStore((s) => s.pet);
   const wsStatus = useAppStore((s) => s.wsStatus);
   const isWalkModalVisible = useAppStore((s) => s.isWalkModalVisible);

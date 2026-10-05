@@ -2,8 +2,9 @@
  * ControlsScreen — "Nadzor" tab of the parent app (light theme, ADR-007; M2-05):
  * children and their devices, controls per pet (caretakers, hard stop with in-app
  * confirmation), family quiet hours, the family's parents with the second-parent
- * invite, and — while the family is empty — joining another family by code; last the
- * "Račun" section (M2-08): data export and account deletion.
+ * invite, and — while the family is empty — joining another family by code; push
+ * "Obvestila" status (M3-02); last the "Račun" section (M2-08): data export and account
+ * deletion.
  */
 
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
@@ -14,6 +15,7 @@ import FamilyChildrenCard from '@/components/FamilyChildrenCard';
 import AccountCard from '@/components/parent/AccountCard';
 import FamilyParentsCard from '@/components/parent/FamilyParentsCard';
 import JoinFamilyCard from '@/components/parent/JoinFamilyCard';
+import NotificationsCard from '@/components/parent/NotificationsCard';
 import PetControlsCard from '@/components/parent/PetControlsCard';
 import QuietHoursCard from '@/components/parent/QuietHoursCard';
 import { NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
@@ -72,6 +74,7 @@ export default function ControlsScreen({ onBack, family, onAddChild, onChildPin,
         )}
 
         <QuietHoursCard />
+        <NotificationsCard />
 
         {family && <FamilyParentsCard family={family} />}
         {isEmpty && <JoinFamilyCard onJoined={(text) => onNotice?.(text)} />}

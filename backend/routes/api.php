@@ -7,6 +7,7 @@ use App\Http\Controllers\ChildContractController;
 use App\Http\Controllers\ChildPetController;
 use App\Http\Controllers\ChildProfileController;
 use App\Http\Controllers\ChildReportController;
+use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\FalAiWebhookController;
 use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\PairingController;
@@ -43,6 +44,13 @@ Route::post('child/pin-login', [ChildAuthController::class, 'pinLogin'])
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('user', [AuthController::class, 'user']);
     Route::post('logout', [AuthController::class, 'logout']);
+
+    // M3-02: push devices (parent or child token). Unregister takes the Expo
+    // token in the body (PR #35 review: never in a URL / access log).
+    Route::middleware('throttle:api')->group(function () {
+        Route::post('devices', [DeviceController::class, 'store']);
+        Route::post('devices/unregister', [DeviceController::class, 'unregister']);
+    });
 });
 
 /*

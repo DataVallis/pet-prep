@@ -88,6 +88,9 @@ This document describes all environment variables used by the PetPrep production
 | `AI_LAB_DAILY_USD` | Optional | No | Separate AI Lab budget per day (lab spend never counts against the pets' caps) | `3` |
 | `AI_LAB_MONTHLY_USD` | Optional | No | Separate AI Lab budget per month | `30` |
 | `FAL_MODEL_*` | Optional | No | Override a profile's fal endpoint id (`FAL_MODEL_FLUX_SCHNELL`, `FAL_MODEL_FLUX2_PRO`, `FAL_MODEL_NANO_BANANA_PRO`, `FAL_MODEL_SEEDREAM`, `FAL_MODEL_KLING_V3_PRO`, `FAL_MODEL_KLING_V26_PRO`, `FAL_MODEL_VEO31_FAST`, `FAL_MODEL_VEO31_LITE`) — only `owner/model/...` ids are accepted. **The price stays the profile's** (`config/media.php`): overriding the endpoint does not change the cost estimate | `fal-ai/flux-2-pro` |
+| `PUSH_ENABLED` | Optional | No | Escalation pushes via Expo (M3-02). **Production default `true` comes from `compose.production.yaml`** — leave the line out of `/opt/petprep/.env`; set `false` there only to silence all pushes (then `docker compose … up -d`). Tests / local default `false` | `true` |
+| `EXPO_ACCESS_TOKEN` | **Required before the closed beta** (PR #35 review) | **Yes** | expo.dev access token (robot user, scope: push) sent as `Authorization: Bearer` to the Expo Push API. **Turn on "Enhanced security for push notifications"** for the `petprep` project on expo.dev at the same time — without it anyone who learns a device's Expo token can push to it. Empty = unauthenticated sends (works today, not acceptable with real families) | `expo_...` |
+| `PUSH_DEDUPE_MINUTES` | Optional | No | Duplicate guard: the same pet + push type at most once per window | `30` |
 | `REVENUECAT_SECRET_KEY` | Optional | **Yes** | RevenueCat secret API key for IAP | `sk_...` |
 | `REVENUECAT_PUBLIC_KEY` | Optional | No | RevenueCat public SDK key | `test_...` or `appl_...` |
 | `MAIL_MAILER` | Optional | No | Mail driver (`log`, `smtp`, `resend`, `ses`) | `log` |

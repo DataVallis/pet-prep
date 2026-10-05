@@ -17,6 +17,7 @@ import { writeChildState } from '@/hooks/queries/useChildPet';
 import { petFromChildState } from '@/modules/contract/petFromChildState';
 import { hasSignature } from '@/modules/contract/signaturePath';
 import { submitSignature } from '@/modules/contract/signContract';
+import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { logout } from '@/modules/session/logout';
 import { lockStateFromPet, useAppStore } from '@/store/appStore';
 
@@ -101,6 +102,8 @@ export default function ContractScreen() {
       case 'signed':
       case 'already_signed':
         completeContract(outcome.state);
+        // M3-02: the pet is born — now the "may your dog call you?" question makes sense.
+        void maybeAskForPush('child');
         return;
       case 'invalid':
         setSignature('');

@@ -178,7 +178,7 @@ describe('EscalationService - illness state', function () {
         $pet->refresh();
         expect($pet->illness_until)->toBeNull();
         expect($pet->is_game_over)->toBeFalse();
-        expect($pet->escalation_level)->toBe(2); // ≤ 10 % reminder outside quiet hours only
+        expect($pet->escalation_level)->toBe(0); // energy is not on the phase ladder (PR #35 re-review; walk reminder instead)
     });
 
     it('does not trigger illness if metric has been at 0% for less than 6 hours', function () {
