@@ -79,6 +79,8 @@ services:
   reverb:
     <<: *php
     command: ["php", "artisan", "reverb:start", "--host=0.0.0.0", "--port=8080"]
+    # Lets reverb close the open WebSocket connections cleanly on a deploy.
+    stop_grace_period: 30s
     depends_on:
       app:
         condition: service_started
@@ -88,6 +90,9 @@ services:
   queue:
     <<: *php
     command: ["php", "artisan", "queue:work", "redis", "--queue=default", "--tries=3", "--timeout=90", "--sleep=3"]
+    # > --timeout=90: a running fal.ai / media download job finishes on SIGTERM
+    # instead of being killed after Docker's default 10 s.
+    stop_grace_period: 100s
     depends_on:
       app:
         condition: service_started
@@ -102,6 +107,7 @@ services:
   queue-broadcasts:
     <<: *php
     command: ["php", "artisan", "queue:work", "redis", "--queue=broadcasts", "--tries=3", "--backoff=2", "--timeout=15", "--sleep=1"]
+    stop_grace_period: 20s
     depends_on:
       app:
         condition: service_started
@@ -111,6 +117,8 @@ services:
   scheduler:
     <<: *php
     command: ["php", "artisan", "schedule:work"]
+    # A tick (decay, media:sweep) runs inside schedule:work's process tree.
+    stop_grace_period: 60s
     depends_on:
       app:
         condition: service_started

@@ -149,9 +149,11 @@ jobs:
           set -eux
           test "$(docker run --rm petprep-app:ci id -u)" = 1000
           docker run --rm --entrypoint php-fpm petprep-app:ci -t
-          docker run --rm --entrypoint php petprep-app:ci -m | grep -qx pdo_pgsql
-          docker run --rm --entrypoint php petprep-app:ci -m | grep -qx redis
-          docker run --rm --entrypoint php petprep-app:ci -m | grep -qx intl
+          # Every extension the app needs (OPcache is listed as "Zend OPcache").
+          docker run --rm --entrypoint php petprep-app:ci -m > php-modules.txt
+          for ext in sodium pcntl gd exif pdo_pgsql redis intl zip bcmath "Zend OPcache"; do
+            grep -qx "$ext" php-modules.txt || { echo "missing PHP extension: $ext"; exit 1; }
+          done
           # No dev packages, no secrets, no tests in the image.
           docker run --rm --entrypoint sh petprep-app:ci -c '! test -e vendor/fakerphp && ! test -e .env && ! test -e tests'
           # The entrypoint builds every cache (config, events, routes, views, Filament).

@@ -109,3 +109,5 @@ Set by the image, `compose.production.yaml` or `deploy-production.sh`; listed so
 | `DEPLOY_APP_WAIT_TRIES` | deploy script env | `php-fpm-ping` attempts (3 s apart) after `up -d` | `40` |
 | `DEPLOY_RETRY_SLEEP` | deploy script env | Seconds between `artisan up` / health check attempts | `3` |
 | `DEPLOY_ALLOW_NO_BACKUP` | deploy script env | `1` = continue when the pre-deploy backup fails (emergency only) | `0` |
+| `DEPLOY_COMPOSE_PROJECT` | deploy script env | Compose project (network + volume prefix, e.g. `backend_app_storage`). Only if production ever runs under another project name — the deploy aborts when the volume is missing while the app runs | `backend` |
+| `DEPLOY_APP_UID` | deploy script env | uid the FPM image runs as; storage is chowned to it before every deploy | `1000` |

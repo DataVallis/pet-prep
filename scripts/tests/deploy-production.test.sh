@@ -7,7 +7,9 @@
 #           demand: FAIL_MATCH (ERE over the args), UP_FAILS (number of failing
 #           `artisan up` invocations, exec and run --rm count separately),
 #           DOWN_FAILS (same for `artisan down`), NO_PREV_IMAGES=1 (`image inspect`
-#           fails: first deploy of the M4-05b runtime, no petprep-*:production yet).
+#           fails: first deploy of the M4-05b runtime, no petprep-*:production yet),
+#           NO_VOLUME=1 (`volume inspect` fails), APP_RUNNING=0 (`ps -q app` empty),
+#           STORAGE_BAD=1 (the uid-1000 storage check in the new image fails).
 #           PETPREP_IMAGE_TAG (compose against the new tree) is logged in front.
 #   git     logs the call, then runs the real git (git-mode cases use a real temp repo).
 #   curl    prints CURL_STATUS (default 200).
@@ -49,6 +51,9 @@ fi
 if [ -n "${FAIL_MATCH:-}" ] && [[ "$args" =~ $FAIL_MATCH ]]; then exit 1; fi
 case "$args" in
     "image inspect "*) [ "${NO_PREV_IMAGES:-0}" = "1" ] && exit 1 ;;
+    "volume inspect "*) [ "${NO_VOLUME:-0}" = "1" ] && exit 1 ;;
+    *" ps -q app"*) [ "${APP_RUNNING:-1}" = "1" ] && echo "c0ffee" ;;
+    *"--entrypoint sh app -c "*) [ "${STORAGE_BAD:-0}" = "1" ] && exit 1 ;;
     *"ps -q --status running postgres"*) echo "c0ffee" ;;
     *"exec -T caddy cat /etc/caddy/Caddyfile"*)
         [ -f "${PETPREP_ROOT}/caddy.running" ] || exit 1
@@ -149,7 +154,16 @@ finish() { if [ "$FAIL" -gt "${FAIL_BEFORE:-0}" ]; then dump; fi; FAIL_BEFORE=$F
 start success "success (--from)"
 new_root dir; run_deploy -- --from "$ROOT/incoming" sha-v2
 check "exit 0" rc_is 0
-check "artisan down runs on the OLD code" called 'exec -T app php artisan down --retry=15 \[code=v1\]'
+check "artisan down runs on the OLD code, as uid 1000" called 'exec -T --user 1000:1000 app php artisan down --retry=15 \[code=v1\]'
+check "artisan up as uid 1000" called 'exec -T --user 1000:1000 app php artisan up'
+check "explicit compose project (same volumes for repo/ and the build tree)" called 'compose -p backend -f .*incoming/backend/compose.production.yaml'
+check "buildx preflight before the build" before 'buildx version' 'build app caddy'
+check "storage chowned as root in the NEW image" called 'PETPREP_IMAGE_TAG=next .*run --rm --no-deps -T --user root --entrypoint chown app -R 1000:1000 /var/www/html/storage'
+check "storage verified as uid 1000 in the NEW image" called 'PETPREP_IMAGE_TAG=next .*run --rm --no-deps -T --user 1000:1000 --entrypoint sh app -c '
+check "chown after the smoke test" before 'artisan optimize' 'entrypoint chown'
+check "chown + verify before maintenance" before 'entrypoint sh app -c' 'artisan down'
+check "re-chown after up -d (old containers gone)" after_last 'entrypoint chown app' 'up -d --remove-orphans app'
+check "build cache pruned with a keep limit" called 'builder prune -f --filter until=168h --keep-storage 5GB'
 check "images built from the NEW tree as :next" called 'PETPREP_IMAGE_TAG=next .*incoming/backend/compose.production.yaml --env-file .* build app caddy'
 check "smoke test (artisan optimize) on the :next image" called 'PETPREP_IMAGE_TAG=next .*incoming/backend/compose.production.yaml .*run --rm --no-deps -T app php artisan optimize'
 check "build BEFORE maintenance mode" before 'build app caddy' 'artisan down'
@@ -202,6 +216,61 @@ run_deploy -- --from "$ROOT/incoming" sha-v2
 check "exit 0" rc_is 0
 check "warns about the override" out_has "PET_MEDIA_SERVE_VIA='php'"
 check "no env secret in output" no_secret
+finish
+
+start no_buildx "docker buildx missing → clear error, nothing changed"
+new_root dir; run_deploy FAIL_MATCH='buildx version' -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "explains" out_has "docker buildx (BuildKit) is not available"
+check "no build attempted" not_called 'build app caddy'
+check "never entered maintenance" not_called 'artisan down'
+check "code untouched" eq "$(code_on_disk)" v1
+finish
+
+start storage_chown_fail "chown of the storage volume fails → abort before maintenance"
+new_root dir; run_deploy FAIL_MATCH='entrypoint chown' -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "explains" out_has "could not chown the storage volume"
+check "never entered maintenance" not_called 'artisan down'
+check "code untouched" eq "$(code_on_disk)" v1
+check "no image promoted" not_called ' tag '
+finish
+
+start storage_check_fail "storage not writable as uid 1000 after the chown → abort before maintenance"
+new_root dir; run_deploy STORAGE_BAD=1 -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "explains" out_has "storage is not fully writable as uid 1000"
+check "never entered maintenance" not_called 'artisan down'
+check "no backup / migrate" not_called 'migrate'
+check "code untouched" eq "$(code_on_disk)" v1
+finish
+
+start storage_wrong_project "storage volume missing while app runs (wrong compose project) → abort"
+new_root dir; run_deploy NO_VOLUME=1 -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "explains" out_has "set DEPLOY_COMPOSE_PROJECT"
+check "no chown on a wrong volume" not_called 'entrypoint chown app -R 1000:1000 /var/www/html/storage \[code=v1\]'
+check "never entered maintenance" not_called 'artisan down'
+finish
+
+start storage_fresh_server "no storage volume and no app container (fresh server) → warn, continue"
+new_root dir; run_deploy NO_VOLUME=1 APP_RUNNING=0 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "warns" out_has "does not exist yet (first deploy on a fresh server)"
+check "no pre-maintenance chown" before 'artisan down' 'entrypoint chown'
+finish
+
+start rechown_fail "re-chown after up -d fails → warning only, deploy succeeds"
+new_root dir; run_deploy FAIL_MATCH='-f [^ ]*/repo/backend/compose.production.yaml run --rm --no-deps -T --user root --entrypoint chown' -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "warns" out_has "storage re-normalisation after the switch failed"
+check "artisan up" called 'artisan up \[code=v2\]'
+finish
+
+start builder_prune_fail "builder prune fails → warning only"
+new_root dir; run_deploy FAIL_MATCH='builder prune' -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "warns" out_has "docker builder prune failed"
 finish
 
 start build_fail "image build fails → nothing changed: no maintenance, no code switch, no promote"

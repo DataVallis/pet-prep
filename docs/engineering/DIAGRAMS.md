@@ -568,18 +568,20 @@ flowchart LR
 ```mermaid
 flowchart TD
   A["1 env preflight<br/>(no git / docker before)"] --> B["2 record previous release<br/>.deployed-sha + releases/previous"]
-  B --> C["3 build petprep-app:next + petprep-web:next<br/>from the NEW tree (incoming/ or git archive)"]
+  B --> C["3 buildx preflight · build petprep-app:next + petprep-web:next<br/>from the NEW tree (incoming/ or git archive)"]
   C --> D["smoke: run --rm app php artisan optimize<br/>(new image, production env)"]
+  D --> ST["storage: chown -R 1000:1000 as root (new image)<br/>verify writable as uid 1000"]
   C -- fails --> X0["exit ≠ 0 · nothing changed<br/>old release keeps serving"]
   D -- fails --> X0
-  D --> E["4 artisan down (old code)"] --> F["5 pg_dump backup"] --> G["6 code switch repo/<br/>promote :production→:previous, :next→:production"]
+  ST -- fails --> X0
+  ST --> E["4 artisan down (old code, exec --user 1000)"] --> F["5 pg_dump backup"] --> G["6 code switch repo/<br/>promote :production→:previous, :next→:production"]
   G --> H{"Caddyfile changed?"}
   H -- yes --> HV["caddy validate (new image)"]
   H -- no --> I
   HV --> I["7 postgres/redis · migrate --force"]
   I --> J["8 up -d app reverb queue queue-broadcasts scheduler caddy<br/>(entrypoint: per-container caches)<br/>+ force-recreate caddy if Caddyfile changed"]
-  J --> K["wait: php-fpm-ping"] --> L["queue:restart"] --> M2["9 artisan up (3×)"] --> N["health /up through Caddy (5×)<br/>--resolve api.petprep.si:443 → IP site fallback"]
-  N --> O["image prune (dangling only)"]
+  J --> K["re-chown storage (warn-only) · wait: php-fpm-ping"] --> L["queue:restart"] --> M2["9 artisan up (3×)"] --> N["health /up through Caddy (5×)<br/>--resolve api.petprep.si:443 → IP site fallback"]
+  N --> O["image prune (dangling) · builder prune (> 7 days, keep 5 GB)"]
   G & HV & I -- "fails (pre-migration)" --> R1["revert code + images (:previous→:production)<br/>restart workers · artisan up"]
   J & K & N -- "fails (post-migration)" --> R2["keep new release (schema is new)<br/>up -d · restart workers · artisan up · loud error"]
 ```

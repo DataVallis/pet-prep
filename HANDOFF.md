@@ -5,7 +5,7 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-05 (Claude, devops — **M4-05b production runtime**: PHP-FPM 8.3 + OPcache image, Caddy serves static files + pet media (X-Accel-Redirect), deploy builds the image before maintenance; branch `feat/M4-05b-prod-runtime`, pushed, no PR)
+- **Last updated:** 2026-10-05 (Claude, devops — **M4-05b production runtime**: PHP-FPM 8.3 + OPcache image, Caddy serves static files + pet media (X-Accel-Redirect), deploy builds the image before maintenance; branch `feat/M4-05b-prod-runtime`, **PR #27** — review CHANGES REQUIRED → fixed)
 - Before: 2026-10-05 (Claude, backend-engineer — **M2-10a parent self-registration** (e-mail + password, backend + mobile) + PR #25 review fixes; branch `feat/M2-10-parent-signup`, **PR #25**)
 - Before: 2026-10-05 (Claude, backend-engineer — **M4 part B**: David's models (Nano Banana Pro + Kling 3.0 Pro), state videos at birth (M4-03), own media storage + signed URLs (M4-05 local), `media:backfill`, Filament media panel; branch `feat/M4-state-videos`, pushed, no PR yet)
 - Before: 2026-10-04 (Claude, backend-engineer — **M4 part A** + PR #22 review fixes: AI model profiles + AI Lab (M4-02 partial), spend ledger + caps (M4-07), Pet DNA v2 unique appearance (M4-08); branch `feat/M4-ai-lab-dna`, **PR #22** (review APPROVED, major fixed))
@@ -70,7 +70,14 @@
 
 ## 6. Session log
 
-### 2026-10-05 (cloud, devops) — M4-05b production PHP runtime + Caddy file serving (`feat/M4-05b-prod-runtime`, pushed, no PR)
+### 2026-10-05 (cloud, devops) — PR #27 review fixes (CHANGES REQUIRED → fixed, same branch)
+- **M1 storage ownership:** before maintenance the deploy chowns `storage/` to 1000:1000 as root in a one-off container of the new image and verifies as uid 1000 (framework/cache/sessions/views, logs, app/pet-media writable; nothing in the top 3 levels owned by another uid) → abort before maintenance on failure; re-chown (warn-only) after `up -d`. `artisan down/up` via `exec --user 1000:1000` (Sail's exec defaulted to root); `run --rm` fallback unchanged (Sail entrypoint needs root, gosu's to 1000). Explicit compose project `-p backend` (`DEPLOY_COMPOSE_PROJECT`); missing `backend_app_storage` while the app runs → abort.
+- **m1** `docker buildx version` preflight. **m2** CI checks `php -m` for sodium, pcntl, gd, exif, pdo_pgsql, redis, intl, zip, bcmath, Zend OPcache. **m3** D11 → recreate containers instead of `config:cache`; `config/trustedproxy.php` comment explains php_fastcgi (REMOTE_ADDR + forwarded params).
+- **Nits:** Caddy 404 for dotfiles (first `handle` block — a bare `respond` sorted after the static `handle` and still served `/css/.hidden`, caught by a local Caddy run), `stop_grace_period` (queue 100 s, queue-broadcasts 20 s, reverb 30 s, scheduler 60 s), `docker builder prune --filter until=168h --keep-storage 5GB`.
+- **Commands:** Pest full suite on `testing_runtime` → **814 passed**; shellcheck clean; harness **32 cases / 189 checks**; `caddy validate` + local dotfile check (/.env, /.htaccess, /.git/config, /css/.hidden → 404; /css/app.css 200; /.well-known and /up → PHP); actionlint OK; storage check rehearsed with dash as a non-root uid (clean → 0, root-owned down file → 1, unwritable logs → 1).
+- **Next:** re-review → CI `production-image` green → merge → watch the first deploy.
+
+### 2026-10-05 (cloud, devops) — M4-05b production PHP runtime + Caddy file serving (`feat/M4-05b-prod-runtime`, PR #27)
 - **Choice:** PHP-FPM 8.3 (`php:8.3-fpm-bookworm`) behind the existing Caddy, not FrankenPHP (DECISIONS 2026-10-05; DEPLOYMENT.md **D14** has the full write-up).
 - **Image** `backend/docker/production/{Dockerfile,php.ini,php-fpm.conf,entrypoint.sh,php-fpm-ping.sh}` + `backend/.dockerignore`: multi-stage, `composer install --no-dev` + `dump-autoload --optimize` in the build (**fixes debt: `vendor/` was never deployed** — it was a hand-installed copy in `repo/backend/vendor`, excluded from every sync), non-root uid 1000, OPcache `validate_timestamps=0`, realpath cache, FPM `pm=dynamic` / 12 children / `request_terminate_timeout 65s`. Target `web` = caddy:2.8-alpine + `public/`. Caches per container on start (`php artisan optimize` for FPM, config + events for CLI); the shared `app_bootstrap_cache` volume is no longer mounted.
 - **Compose:** `x-php` anchor for app / reverb / queue / queue-broadcasts / scheduler (image `petprep-app:${PETPREP_IMAGE_TAG:-production}`, no code bind mount), app healthcheck `php-fpm-ping`, caddy `petprep-web` with `app_storage:/srv/storage:ro`, `PET_MEDIA_SERVE_VIA=${PET_MEDIA_SERVE_VIA:-caddy}`.

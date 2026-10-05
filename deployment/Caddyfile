@@ -14,6 +14,18 @@
 
 # Laravel over FastCGI + static files + pet media (imported by both sites below).
 (laravel) {
+    # Never serve or route dotfiles (/.env, /.htaccess, /css/.x, /.git/…) — 404
+    # before any file_server or PHP. Must be the FIRST handle block: `respond`
+    # alone would sort after `handle` and never run. /.well-known/ stays
+    # reachable (ACME, app links).
+    @dotfiles {
+        path */.*
+        not path /.well-known/*
+    }
+    handle @dotfiles {
+        respond 404
+    }
+
     # Filament / app assets straight from disk. Filament URLs carry ?v=<version>,
     # Vite (/build) file names carry a content hash.
     @static_immutable path /build/*

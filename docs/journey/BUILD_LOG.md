@@ -15,7 +15,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - **Caddy sam streže** statične datoteke administracije (z dolgim predpomnjenjem) in **videe ter slike psov**: PHP samo preveri, ali je povezava podpisana in ali jo sme gledati ta uporabnik, datoteko pa pošlje Caddy (tudi po delih za iPhone).
 - **Varnejši deploy:** nova slika se zgradi in preizkusi, **preden** gre aplikacija v vzdrževalni način — če gradnja ne uspe, uporabniki ničesar ne opazijo. Ob napaki pred migracijami se samodejno vrne prejšnja različica (koda in slika).
 - Odpravljen star dolg: knjižnice (`vendor`) se zdaj res namestijo ob vsakem deployu (prej je bila na strežniku ročno nameščena kopija).
-- **Številke (lokalni preizkus):** med 4 hkratnimi prenosi 10 MB videa je odziv API-ja trajal **4,4 s** na starem strežniku in **0,01–0,02 s** na novem. Strežnik: **814 zelenih testov**, test deploya **153 preverjanj**, 30 preverjanj celotne poti Caddy → PHP-FPM.
+- **Številke (lokalni preizkus):** med 4 hkratnimi prenosi 10 MB videa je odziv API-ja trajal **4,4 s** na starem strežniku in **0,01–0,02 s** na novem. Strežnik: **814 zelenih testov**, test deploya **189 preverjanj**, 30 preverjanj celotne poti Caddy → PHP-FPM.
 - *Načrt:* omejitev hkratnih povezav na napravo; Object Storage + CDN, ko bo uporabnikov več (SCALING.md).
 
 **Zakaj je pomembno**

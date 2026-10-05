@@ -26,14 +26,17 @@
 #   2. Record the previous release: PREV_SHA (repo/.deployed-sha, or git HEAD in git
 #      mode) and, for --from deploys, a copy of the current tree in
 #      /opt/petprep/releases/previous.
-#   3. Build the new images as :next from the NEW tree (--from dir, `git archive` of
-#      the commit, or repo/ in place) and smoke-test them: `php artisan optimize`
+#   3. Preflight `docker buildx version` (compose builds through BuildKit), then build
+#      the new images as :next from the NEW tree (--from dir, `git archive` of the
+#      commit, or repo/ in place) and smoke-test them: `php artisan optimize`
 #      (config / events / routes / views / Filament) in a one-off container with
-#      the production env. Still BEFORE maintenance mode: a failing build or smoke
-#      test aborts the deploy while the old release keeps serving (nothing changed).
-#   4. `artisan down --retry=15` on the OLD code (exec in the running app container,
-#      fallback `run --rm`; if both fail — first deploy on a fresh server — warn and
-#      continue). The down file lives on the shared app_storage volume, so HTTP → 503,
+#      the production env. Then normalise the storage volume for the non-root
+#      runtime (STORAGE below). Still BEFORE maintenance mode: a failure here
+#      aborts the deploy while the old release keeps serving (nothing changed).
+#   4. `artisan down --retry=15` on the OLD code (`exec --user 1000:1000` in the
+#      running app container, so the down file belongs to uid 1000; fallback
+#      `run --rm`, which runs as uid 1000 in both the Sail and the FPM image; if both
+#      fail — first deploy on a fresh server — warn and continue). The down file lives on the shared app_storage volume, so HTTP → 503,
 #      the scheduler skips its ticks and queue workers pause.
 #   5. Pre-migration DB backup (aborts the deploy if Postgres runs but the backup
 #      fails; DEPLOY_ALLOW_NO_BACKUP=1 overrides).
@@ -46,6 +49,19 @@
 #      builds its own caches on start, docker/production/entrypoint.sh), wait until
 #      PHP-FPM answers, queue:restart, `artisan up` (3 attempts, exec then run --rm
 #      fallback), end-to-end health check through Caddy (`/up`, 5 attempts).
+#
+# STORAGE (PR #27 review)
+#   Every PHP container of the FPM image runs as uid 1000. The Sail runtime wrote
+#   storage/ mostly as uid 1000 too, but `docker compose exec` ran as root there
+#   (maintenance file, logs of exec'd commands). Before maintenance the script runs
+#   `chown -R 1000:1000 /var/www/html/storage` as root in a one-off container of the
+#   new image (idempotent) and then checks AS uid 1000 that storage/framework{,/cache,
+#   /sessions,/views}, storage/logs and storage/app/pet-media are writable and that
+#   nothing in the top three levels belongs to another uid — failure aborts before
+#   maintenance. The volume is `${DEPLOY_COMPOSE_PROJECT:-backend}_app_storage`; if it
+#   does not exist while an app container runs, the project name is wrong → abort.
+#   After `up -d` (old containers gone) the chown runs once more (warn-only) for files
+#   an old root process may have created in between.
 #
 # CADDY
 #   caddy bind-mounts the single file deployment/Caddyfile. A sync/checkout replaces a
@@ -86,6 +102,8 @@
 #
 # Idempotent: re-running with the same SHA re-applies the same tree (the image build
 # is a cache hit), migrations are no-ops, `artisan down/up` tolerate being repeated.
+# After success: `docker image prune -f` (dangling only) and `docker builder prune`
+# (build cache older than 7 days beyond 5 GB) — both warn-only.
 # No env values except the three preflight keys are printed.
 #
 # Test harness (stubbed docker/git/curl, no server): scripts/tests/deploy-production.test.sh
@@ -110,6 +128,26 @@ HEALTH_IP_HOST="${DEPLOY_HEALTH_IP_HOST:-138.199.172.97}"
 APP_SERVICES=(app reverb queue queue-broadcasts scheduler caddy)
 WORKER_SERVICES=(reverb queue queue-broadcasts scheduler)
 IMAGES=(petprep-app petprep-web)
+# Compose project = network + volume prefix. Default "backend" = the directory of
+# the compose file (what production has always used); explicit so the build tree
+# (incoming/backend, releases/build-src/backend) addresses the SAME volumes.
+COMPOSE_PROJECT="${DEPLOY_COMPOSE_PROJECT:-backend}"
+STORAGE_VOLUME="${COMPOSE_PROJECT}_app_storage"
+APP_UID="${DEPLOY_APP_UID:-1000}"
+# Run as APP_UID inside the new image (sh -c): every directory the app writes must
+# be writable, nothing in the top levels may belong to another uid.
+# shellcheck disable=SC2016  # expanded inside the container
+STORAGE_CHECK='set -e
+cd /var/www/html/storage
+for d in framework framework/cache framework/sessions framework/views logs app app/pet-media; do
+    mkdir -p "$d" || { echo "cannot create storage/$d as uid $(id -u)" >&2; exit 1; }
+    probe="$d/.deploy-write-probe.$$"
+    if ! touch "$probe" 2>/dev/null; then echo "storage/$d is not writable as uid $(id -u)" >&2; exit 1; fi
+    rm -f "$probe"
+done
+bad=$(find . -maxdepth 3 ! -uid "$(id -u)" -print | head -n 5)
+if [ -n "$bad" ]; then echo "not owned by uid $(id -u): $bad" >&2; exit 1; fi
+echo "storage writable as uid $(id -u)"'
 # Paths a code sync never touches (also protected from --delete). backend/vendor
 # stays on disk only for a rollback to the Sail runtime (it bind-mounts the code).
 RSYNC_EXCLUDES=(
@@ -144,7 +182,7 @@ loud() {
     for line in "$@"; do echo "## $line" >&2; done
     echo "##################################################################" >&2
 }
-dc() { docker compose -f "$COMPOSE_FILE" "$@"; }
+dc() { docker compose -p "$COMPOSE_PROJECT" -f "$COMPOSE_FILE" "$@"; }
 
 # ---- state read by the EXIT trap -------------------------------------------------
 SWITCH_MODE="none"      # dir | git | none
@@ -164,16 +202,27 @@ FAILED_AT=""
 trap 'FAILED_AT="line ${LINENO}: ${BASH_COMMAND}"' ERR
 trap 'on_exit $?' EXIT
 
-# Compose against the NEW tree with the :next tag (build + smoke test). Same
-# project name ("backend", the compose file's directory) → same network/volumes.
+# Compose against the NEW tree with the :next tag (build, smoke test, storage
+# normalisation). Same project → same network/volumes as dc.
 dcn() {
-    PETPREP_IMAGE_TAG=next docker compose -f "${BUILD_DIR}/backend/compose.production.yaml" \
+    PETPREP_IMAGE_TAG=next docker compose -p "$COMPOSE_PROJECT" -f "${BUILD_DIR}/backend/compose.production.yaml" \
         --env-file "$ENV_FILE" "$@"
 }
 
-# artisan <args…>: run in the running app container, else in a one-off container.
+# artisan <args…>: in the running app container as APP_UID (Sail's exec default is
+# root → a root-owned down file / log), else in a one-off container (uid 1000 in
+# both images: Sail's entrypoint gosu's to WWWUSER=1000; it would break with --user).
 artisan() {
-    dc exec -T app php artisan "$@" || dc run --rm app php artisan "$@"
+    dc exec -T --user "${APP_UID}:${APP_UID}" app php artisan "$@" || dc run --rm app php artisan "$@"
+}
+
+# chown storage/ to APP_UID as root in a one-off container (<compose fn> = dc | dcn).
+chown_storage() {
+    "$1" run --rm --no-deps -T --user root --entrypoint chown app -R "${APP_UID}:${APP_UID}" /var/www/html/storage
+}
+
+verify_storage() {
+    "$1" run --rm --no-deps -T --user "${APP_UID}:${APP_UID}" --entrypoint sh app -c "$STORAGE_CHECK"
 }
 
 enter_maintenance() {
@@ -387,6 +436,11 @@ fi
 log "Previous release: ${PREV_SHA:-unknown}"
 
 # ---- 3. Build + smoke-test the new images (old release keeps serving) -------------
+if ! docker buildx version > /dev/null 2>&1; then
+    echo "ERROR: docker buildx (BuildKit) is not available — compose cannot build the production images." >&2
+    echo "       Install it (apt-get install docker-buildx-plugin) and redeploy. Nothing was changed." >&2
+    exit 1
+fi
 log "Building production images petprep-app:next / petprep-web:next from ${BUILD_DIR}..."
 if ! dcn build app caddy; then
     echo "ERROR: image build failed — nothing was changed, the current release keeps serving." >&2
@@ -396,6 +450,26 @@ log "Smoke test: php artisan optimize in a one-off container of the new image...
 if ! dcn run --rm --no-deps -T app php artisan optimize; then
     echo "ERROR: the new image cannot build its caches with the production env — nothing was changed." >&2
     exit 1
+fi
+
+# Storage volume ownership for the non-root runtime (see STORAGE above).
+if docker volume inspect "$STORAGE_VOLUME" > /dev/null 2>&1; then
+    log "Normalising ownership of ${STORAGE_VOLUME} to uid ${APP_UID} (idempotent)..."
+    if ! chown_storage dcn; then
+        echo "ERROR: could not chown the storage volume — nothing was changed." >&2
+        exit 1
+    fi
+    if ! verify_storage dcn; then
+        echo "ERROR: storage is not fully writable as uid ${APP_UID} after the chown — nothing was changed." >&2
+        echo "       Inspect: docker run --rm -v ${STORAGE_VOLUME}:/s alpine find /s -maxdepth 3 ! -uid ${APP_UID}" >&2
+        exit 1
+    fi
+elif [ -n "$(dc ps -q app 2>/dev/null || true)" ]; then
+    echo "ERROR: volume ${STORAGE_VOLUME} not found although the app container runs —" >&2
+    echo "       the compose project is not '${COMPOSE_PROJECT}' (set DEPLOY_COMPOSE_PROJECT). Nothing was changed." >&2
+    exit 1
+else
+    warn "volume ${STORAGE_VOLUME} does not exist yet (first deploy on a fresh server) — compose creates it from the image (owned by uid ${APP_UID})."
 fi
 
 # Caddyfile as the running caddy container sees it (empty → caddy not running).
@@ -503,6 +577,9 @@ if [ "$CADDY_CHANGED" = "1" ]; then
     dc up -d --force-recreate --no-deps caddy
 fi
 
+# Old containers are gone now: fix anything an old root process wrote since step 3.
+chown_storage dc || warn "storage re-normalisation after the switch failed — check ownership (uid ${APP_UID})."
+
 log "Waiting for PHP-FPM (entrypoint builds the caches first)..."
 wait_for_app
 
@@ -530,6 +607,9 @@ fi
 
 # Untagged images of older releases (keeps :production, :previous and the Sail image).
 docker image prune -f > /dev/null || warn "docker image prune failed."
+# Build cache: drop entries older than 7 days, but always keep up to 5 GB (layers of
+# the PHP extension build — the expensive part of a rebuild).
+docker builder prune -f --filter until=168h --keep-storage 5GB > /dev/null || warn "docker builder prune failed."
 
 echo "=================================================="
 echo " DEPLOYMENT SUCCESSFUL!"
