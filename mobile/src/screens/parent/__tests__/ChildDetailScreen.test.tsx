@@ -208,6 +208,41 @@ describe('ChildDetailScreen', () => {
     }
   });
 
+  it('read-only album: opens over the detail, pauses the card video, closes back', async () => {
+    resetMockVideoPlayers();
+    const IDLE = 'https://api.petprep.si/api/media/2?expires=1&v=idle&signature=a';
+    const SLEEP = 'https://api.petprep.si/api/media/3?expires=1&v=sleep&signature=a';
+    const family = familyFromDashboard(
+      makeScoredDashboard([LUKA], [
+        makeFamilyPet({
+          id: 7,
+          caretakers: [{ child_id: 2, contract_signed: true }],
+          media: makeMedia({ status: 'ready', videos: { idle: IDLE, sleeping: SLEEP }, states: ['idle', 'sleeping'] }),
+        }),
+      ]) as never,
+    ) as FamilyOverview;
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={family} onBack={jest.fn()} />);
+    await flush();
+    const card = liveVideoPlayers()[0];
+    expect(card.playing).toBe(true);
+
+    fireEvent.press(screen.getByText(CHILD_DETAIL_STRINGS.album));
+    expect(screen.getByTestId('detail-album')).toBeTruthy();
+    expect(card.playing).toBe(false);
+    fireEvent.press(screen.getByTestId('album-item-sleeping'));
+    expect(liveVideoPlayers().filter((p) => p.playing)).toHaveLength(1);
+
+    fireEvent.press(screen.getByTestId('album-close'));
+    expect(screen.queryByTestId('detail-album')).toBeNull();
+    expect(card.playing).toBe(true);
+  });
+
+  it('no album link while the pet has no media', async () => {
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={FAMILY} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.queryByTestId('detail-album-open')).toBeNull();
+  });
+
   it('formatSteps', () => {
     expect(formatSteps(12500)).toBe('12.500');
     expect(formatSteps(999)).toBe('999');

@@ -10,9 +10,10 @@ import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { ApiError, api } from '@/api/client';
 import { childPetKey } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
-import { computeHudLayout } from '@/modules/hud/hudLayout';
+import { computeHudLayout, METRICS_RESERVED_RIGHT } from '@/modules/hud/hudLayout';
 import AppNavigator from '@/navigation/AppNavigator';
 import ChildHudScreen, { formatAgeMonths, HUD_STRINGS } from '@/screens/ChildHudScreen';
+import { ALBUM_STRINGS } from '@/modules/petMedia/album';
 import { LOCKED_STRINGS } from '@/screens/LockedScreen';
 import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
 import { isAwaitingContract, useAppStore } from '@/store/appStore';
@@ -337,6 +338,17 @@ describe('ChildHudScreen', () => {
     expect(await screen.findByText('1.900/4.000')).toBeTruthy();
   });
 
+  it('PR #30 review: the toast sits left of the metric column, never over the bars', async () => {
+    waterPet.mockRejectedValueOnce(new TypeError('Network request failed'));
+    await renderHud();
+    fireEvent.press(screen.getByTestId('action-water'));
+    await screen.findByTestId('hud-toast');
+    const slot = StyleSheet.flatten(screen.getByTestId('hud-toast-slot').props.style) as ViewStyle;
+    expect(slot).toMatchObject({ position: 'absolute', left: 16, right: METRICS_RESERVED_RIGHT, alignItems: 'center' });
+    // right 12 + MetricBar width 58 < reserved width
+    expect(METRICS_RESERVED_RIGHT).toBeGreaterThanOrEqual(12 + 58 + 8);
+  });
+
   describe('2026-10-05 TestFlight fixes', () => {
     const styleOf = (testID: string): ViewStyle => StyleSheet.flatten(screen.getByTestId(testID).props.style) as ViewStyle;
     const METRICS = ['metric-hunger', 'metric-thirst', 'metric-energy', 'metric-hygiene'] as const;
@@ -484,5 +496,69 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
         mockVideoPlayers[0].emit('statusChange', { status: 'error' });
       });
       await waitFor(() => expect(getChildPet.mock.calls.length).toBe(calls + 1));
+    });
+
+    describe('"Moj kuža" album', () => {
+      const SLEEP = 'https://api.petprep.si/api/media/3?expires=1&v=sleep&signature=a';
+      const album = makeMedia({
+        status: 'partial',
+        reference_image_url: IMG,
+        videos: { idle: IDLE, sleeping: SLEEP },
+        states: ['idle', 'sleeping', 'hungry'],
+      });
+
+      it('opens from the header, lists the entitled media and pauses the HUD video', async () => {
+        await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: album } }));
+        const hudPlayer = liveVideoPlayers()[0];
+        expect(hudPlayer.playing).toBe(true);
+
+        fireEvent.press(screen.getByLabelText(ALBUM_STRINGS.open));
+        expect(screen.getByTestId('hud-album')).toBeTruthy();
+        expect(useAppStore.getState().isAlbumVisible).toBe(true);
+        expect(hudPlayer.playing).toBe(false);
+        expect(screen.getByTestId('album-item-photo')).toBeTruthy();
+        expect(screen.getByTestId('album-item-sleeping')).toBeTruthy();
+        expect(screen.getByTestId('album-item-hungry')).toBeTruthy(); // greyed "Še ni posnetka"
+        expect(screen.queryByTestId('album-item-playing')).toBeNull();
+      });
+
+      it('plays the selected video with one active player; closing resumes the HUD dog', async () => {
+        await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: album } }));
+        const hudPlayer = liveVideoPlayers()[0];
+
+        fireEvent.press(screen.getByTestId('hud-album-open'));
+        fireEvent.press(screen.getByTestId('album-item-sleeping'));
+        const playing = liveVideoPlayers().filter((p) => p.playing);
+        expect(playing).toHaveLength(1);
+        expect(playing[0].source).toEqual({ uri: SLEEP, useCaching: true });
+
+        fireEvent.press(screen.getByTestId('album-close'));
+        expect(screen.queryByTestId('hud-album')).toBeNull();
+        expect(hudPlayer.playing).toBe(true);
+        expect(liveVideoPlayers()).toEqual([hudPlayer]);
+      });
+
+      it('an expired album video refetches the child state', async () => {
+        await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: album } }));
+        fireEvent.press(screen.getByTestId('hud-album-open'));
+        fireEvent.press(screen.getByTestId('album-item-sleeping'));
+        const calls = getChildPet.mock.calls.length;
+        const albumPlayer = liveVideoPlayers().find((p) => p.playing);
+        await act(async () => {
+          albumPlayer?.emit('statusChange', { status: 'error' });
+        });
+        await waitFor(() => expect(getChildPet.mock.calls.length).toBe(calls + 1));
+      });
+
+      it('is not shown while the pet is locked', async () => {
+        useAppStore.getState().setAlbumVisible(true);
+        await renderHud(
+          makeLiveChildState({
+            pet: { is_hard_stopped: true, media: album },
+            lock: { is_locked: true, reason: 'hard_stopped', until: null },
+          }),
+        );
+        expect(screen.queryByTestId('hud-album')).toBeNull();
+      });
     });
   });

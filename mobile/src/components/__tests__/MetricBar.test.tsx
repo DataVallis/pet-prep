@@ -70,4 +70,19 @@ describe('MetricBar', () => {
     expect(screen.queryByText('Energija')).toBeNull();
     expect(screen.getByText('50%')).toBeTruthy();
   });
+
+  it('micro variant: badge and bar only (no percentage, no label)', () => {
+    render(
+      <MetricBar
+        testID="m"
+        level={50}
+        label="Energija"
+        icon={<Beef />}
+        sizing={{ badge: 18, innerGap: 2, trackHeight: 4, showLabel: false, showPercent: false }}
+      />,
+    );
+    expect(screen.queryByText('50%')).toBeNull();
+    expect(screen.queryByText('Energija')).toBeNull();
+    expect(screen.getByLabelText('Energija 50%')).toBeTruthy();
+  });
 });

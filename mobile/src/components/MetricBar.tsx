@@ -14,7 +14,7 @@ export interface MetricBarProps {
   /** Optional override fill color; defaults to interpolateColor(level). */
   color?: string;
   /** Size from `computeHudLayout` (the HUD fits four bars to the screen); default = 100 pt track. */
-  sizing?: Pick<MetricSizing, 'badge' | 'innerGap' | 'trackHeight' | 'showLabel'>;
+  sizing?: Pick<MetricSizing, 'badge' | 'innerGap' | 'trackHeight' | 'showLabel'> & { showPercent?: boolean };
   testID?: string;
 }
 
@@ -44,7 +44,9 @@ export default function MetricBar({ level, label, icon, color, sizing = DEFAULT_
         />
       </View>
 
-      <Text style={styles.percentText} numberOfLines={1} maxFontSizeMultiplier={1}>{clamped}%</Text>
+      {sizing.showPercent !== false && (
+        <Text style={styles.percentText} numberOfLines={1} maxFontSizeMultiplier={1}>{clamped}%</Text>
+      )}
       {label && sizing.showLabel ? (
         // One line always ("ENERGIJA" used to wrap to "ENERGIJ / A"): narrow mono font,
         // no letter-spacing, fixed font scale (the HUD height math relies on the line

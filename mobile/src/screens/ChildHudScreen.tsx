@@ -27,6 +27,7 @@ import {
   Droplet,
   Footprints,
   Heart,
+  Images,
   LogOut,
   PawPrint,
   RefreshCw,
@@ -48,12 +49,14 @@ import {
   waterHint,
 } from '@/modules/childPet/actionMessages';
 import { lockStateFromView, type CareAction, type ChildPetView } from '@/modules/childPet/childPetView';
-import { computeHudLayout, type HudLayout } from '@/modules/hud/hudLayout';
+import { computeHudLayout, METRICS_RESERVED_RIGHT, type HudLayout } from '@/modules/hud/hudLayout';
 import { WS_BADGE_STRINGS, wsBadge } from '@/modules/hud/wsBadge';
 import { formatSteps } from '@/modules/steps/stepCounter';
 import { useStepSync } from '@/modules/steps/useStepSync';
 import { logout } from '@/modules/session/logout';
 import ActionButton from '@/components/ActionButton';
+import PetAlbum from '@/components/PetAlbum';
+import { ALBUM_STRINGS } from '@/modules/petMedia/album';
 import CleaningOverlay from '@/components/CleaningOverlay';
 import MetricBar from '@/components/MetricBar';
 import PetMediaView from '@/components/PetMediaView';
@@ -177,6 +180,8 @@ export default function ChildHudScreen() {
   const isCleaningOverlayVisible = useAppStore((s) => s.isCleaningOverlayVisible);
   const setWalkModalVisible = useAppStore((s) => s.setWalkModalVisible);
   const setCleaningOverlayVisible = useAppStore((s) => s.setCleaningOverlayVisible);
+  const isAlbumVisible = useAppStore((s) => s.isAlbumVisible);
+  const setAlbumVisible = useAppStore((s) => s.setAlbumVisible);
 
   const queryClient = useQueryClient();
   const { layout, onHeaderLayout, onDockLayout } = useHudLayout();
@@ -309,6 +314,7 @@ export default function ChildHudScreen() {
   const cleanDisabled = locked || alreadyClean;
   const showCleaning = !locked && (pet.needs_cleaning || isCleaningOverlayVisible);
   const stale = petQuery.isError;
+  const showAlbum = isAlbumVisible && !locked;
 
   return (
     <View style={styles.container}>
@@ -320,8 +326,8 @@ export default function ChildHudScreen() {
         breed={pet.breed_type}
         // Vet visit / hard stop: the sick / sleeping video keeps playing under the
         // translucent grey lock (PRODUCT_SPEC §7). Paused under the opaque game-over /
-        // inactive screen, the walk tracker and in the background.
-        active={!opaqueLock && !isWalkModalVisible}
+        // inactive screen, the walk tracker, the album (one player at a time) and in the background.
+        active={!opaqueLock && !isWalkModalVisible && !showAlbum}
         onMediaExpired={onMediaExpired}
         variant="hud"
         testID="hud-pet-media"
@@ -363,6 +369,15 @@ export default function ChildHudScreen() {
           <WsStatusDot status={wsStatus} />
           <Pressable
             accessibilityRole="button"
+            accessibilityLabel={ALBUM_STRINGS.open}
+            testID="hud-album-open"
+            style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
+            onPress={() => setAlbumVisible(true)}
+          >
+            <Images color="#a5b4fc" size={16} />
+          </Pressable>
+          <Pressable
+            accessibilityRole="button"
             accessibilityLabel={HUD_STRINGS.logout}
             style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
             onPress={handleLogout}
@@ -373,53 +388,57 @@ export default function ChildHudScreen() {
       </View>
 
       {stale && (
-        <View style={[styles.staleBanner, { top: layout.bannerTop }]} testID="hud-stale">
-          <WifiOff color="#fbbf24" size={14} />
-          <Text style={styles.staleText}>{HUD_STRINGS.stale}</Text>
+        // Left of the metric column (PR #30 review): never covers the bars.
+        <View pointerEvents="none" style={[styles.bannerSlot, { top: layout.bannerTop }]} testID="hud-stale-slot">
+          <View style={styles.staleBanner} testID="hud-stale">
+            <WifiOff color="#fbbf24" size={14} />
+            <Text style={styles.staleText}>{HUD_STRINGS.stale}</Text>
+          </View>
         </View>
       )}
 
       {/* Feedback toast */}
       {toast && (
-        <View
-          style={[styles.feedbackToast, { top: layout.bannerTop + 40 }, toast.tone === 'info' && styles.feedbackToastInfo]}
-          testID="hud-toast"
-        >
-          <Text style={styles.feedbackText}>{toast.message}</Text>
+        <View pointerEvents="none" style={[styles.bannerSlot, styles.toastSlot, { top: layout.bannerTop + 40 }]} testID="hud-toast-slot">
+          <View style={[styles.feedbackToast, toast.tone === 'info' && styles.feedbackToastInfo]} testID="hud-toast">
+            <Text style={styles.feedbackText}>{toast.message}</Text>
+          </View>
         </View>
       )}
 
       {/* Right-edge vertical progress sliders — sized to fit between header and dock */}
-      <View style={[styles.metricsColumn, { top: layout.metricsTop, gap: layout.metric.gap }]} testID="hud-metrics">
-        <MetricBar
-          testID="metric-hunger"
-          level={pet.hunger_level}
-          label={HUD_STRINGS.metrics.hunger}
-          sizing={layout.metric}
-          icon={<Beef color="#ffffff" size={layout.metric.iconSize} />}
-        />
-        <MetricBar
-          testID="metric-thirst"
-          level={pet.thirst_level}
-          label={HUD_STRINGS.metrics.thirst}
-          sizing={layout.metric}
-          icon={<Droplet color="#ffffff" size={layout.metric.iconSize} />}
-        />
-        <MetricBar
-          testID="metric-energy"
-          level={pet.energy_level}
-          label={HUD_STRINGS.metrics.energy}
-          sizing={layout.metric}
-          icon={<Footprints color="#ffffff" size={layout.metric.iconSize} />}
-        />
-        <MetricBar
-          testID="metric-hygiene"
-          level={pet.hygiene_level}
-          label={HUD_STRINGS.metrics.hygiene}
-          sizing={layout.metric}
-          icon={<Sparkles color="#ffffff" size={layout.metric.iconSize} />}
-        />
-      </View>
+      {layout.metric.variant !== 'hidden' && (
+        <View style={[styles.metricsColumn, { top: layout.metricsTop, gap: layout.metric.gap }]} testID="hud-metrics">
+          <MetricBar
+            testID="metric-hunger"
+            level={pet.hunger_level}
+            label={HUD_STRINGS.metrics.hunger}
+            sizing={layout.metric}
+            icon={<Beef color="#ffffff" size={layout.metric.iconSize} />}
+          />
+          <MetricBar
+            testID="metric-thirst"
+            level={pet.thirst_level}
+            label={HUD_STRINGS.metrics.thirst}
+            sizing={layout.metric}
+            icon={<Droplet color="#ffffff" size={layout.metric.iconSize} />}
+          />
+          <MetricBar
+            testID="metric-energy"
+            level={pet.energy_level}
+            label={HUD_STRINGS.metrics.energy}
+            sizing={layout.metric}
+            icon={<Footprints color="#ffffff" size={layout.metric.iconSize} />}
+          />
+          <MetricBar
+            testID="metric-hygiene"
+            level={pet.hygiene_level}
+            label={HUD_STRINGS.metrics.hygiene}
+            sizing={layout.metric}
+            icon={<Sparkles color="#ffffff" size={layout.metric.iconSize} />}
+          />
+        </View>
+      )}
 
       {/* Bottom floating control dock */}
       <View style={[styles.bottomDock, { bottom: layout.dockBottom }]} onLayout={onDockLayout} testID="hud-dock">
@@ -471,6 +490,9 @@ export default function ChildHudScreen() {
             void stepSync.syncNow();
           }}
         />
+      )}
+      {showAlbum && (
+        <PetAlbum media={pet.media} onClose={() => setAlbumVisible(false)} onMediaExpired={onMediaExpired} testID="hud-album" />
       )}
       {showCleaning && (
         <CleaningOverlay
@@ -650,11 +672,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  feedbackToast: {
+  /** Row between the screen's left edge and the metric column; centres its pill. */
+  bannerSlot: {
     position: 'absolute',
-    maxWidth: '82%',
-    alignSelf: 'center',
+    left: 16,
+    right: METRICS_RESERVED_RIGHT,
+    zIndex: 25,
+    alignItems: 'center',
+  },
+  toastSlot: {
     zIndex: 30,
+  },
+  feedbackToast: {
+    maxWidth: '100%',
     backgroundColor: '#4f46e5',
     paddingHorizontal: 20,
     paddingVertical: 10,
@@ -733,9 +763,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   staleBanner: {
-    position: 'absolute',
-    alignSelf: 'center',
-    zIndex: 25,
+    maxWidth: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
@@ -747,6 +775,7 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(251, 191, 36, 0.35)',
   },
   staleText: {
+    flexShrink: 1,
     color: '#fbbf24',
     fontSize: 11,
     fontWeight: '600',

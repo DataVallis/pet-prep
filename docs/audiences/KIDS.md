@@ -19,6 +19,8 @@ Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova p
 
 **Tvoj kuža je edini na svetu, ki je točno tak!** 🐾 Ko se rodi, dobi svojo barvo, lise, ušesa in oči — noben drug kuža ni enak njemu. Dobi tudi svojo fotografijo in kratke videe: na glavnem zaslonu ga vidiš živega — mirno sedi, ponoči in med tihimi urami pa spi. Če ima tvoj kuža več videov (posebna pasma), ga vidiš tudi lačnega, utrujenega, bolnega ali igrivega. Ko se razpoloženje spremeni, se video mehko zamenja. Dokler se video še pripravlja, vidiš njegovo sliko in napis "Kuža se pripravlja…". *(v aplikaciji od 5. 10. 2026 — še ni v trgovini)*
 
+**Album »Moj kuža«** 📸 Zgoraj desno tapni ikono s slikami in odpre se album tvojega kužka: njegova fotografija in vsi njegovi videi — *Miruje, Spi, Utrujen, Lačen, Bolan, Se igra* (toliko, kolikor jih ima tvoj kuža). Tapni enega in ga gledaš čez cel zaslon; s puščicami ali s potegom prsta greš na naslednjega, z gumbom za zvok ga lahko tudi slišiš. Če piše **»Še ni posnetka«**, se ta video še pripravlja. Ko album zapreš, si spet pri kužku. *(v aplikaciji od 5. 10. 2026 — še ni v trgovini)*
+
 ## Kaj kuža potrebuje
 - 🍖 **Hrano** — zjutraj (med 6. in 10. uro) in zvečer (med 17. in 21. uro), enkrat vsakič. Ob drugih urah kuža ni lačen — gumb je zasenčen in pod njim piše, kdaj bo spet čas (npr. "ob 17:00").
 - 💧 **Vodo** — trikrat na dan, vsaj 3 ure narazen. Pod gumbom vidiš, kdaj lahko spet natočiš.

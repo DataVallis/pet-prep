@@ -28,6 +28,7 @@ import { nicknameOf, petOfChild, type FamilyChild, type FamilyOverview } from '@
 import { parentDashboardKey } from '@/modules/family/live';
 import { normalizePetMedia, toBreedType } from '@/modules/petMedia/petMedia';
 import PetMediaView from '@/components/PetMediaView';
+import PetAlbum from '@/components/PetAlbum';
 import {
   REPORT_PERIODS,
   ROUTINE_LABELS,
@@ -47,6 +48,7 @@ import { localParts } from '@/modules/childPet/familyTime';
 
 export const CHILD_DETAIL_STRINGS = {
   back: 'Nazaj',
+  album: 'Vsi posnetki kužka',
   periods: { 7: '7 dni', 30: '30 dni', 84: '12 tednov' } satisfies Record<ReportDays, string>,
   periodA11y: (label: string) => `Obdobje: ${label}`,
   loading: 'Nalagam poročilo …',
@@ -149,6 +151,8 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
   const offline = report.isError && !(report.error instanceof ApiError);
   const pet = petOfChild(child, family);
   const queryClient = useQueryClient();
+  const [albumOpen, setAlbumOpen] = useState(false);
+  const media = pet !== null ? normalizePetMedia(pet.media) : null;
   // A signed media URL failed (likely expired): refresh the dashboard once for new URLs.
   const onMediaExpired = useCallback(() => {
     void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
@@ -164,10 +168,17 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
         <TrafficLightBadge color={(data?.traffic_light ?? child.traffic_light).color} />
       </View>
 
+      {/* Read-only "Moj kuža" album (same viewer as the child), over the whole screen. */}
+      {albumOpen && media !== null && (
+        <PetAlbum media={media} onClose={() => setAlbumOpen(false)} onMediaExpired={onMediaExpired} testID="detail-album" />
+      )}
+
       <ScrollView style={styles.flex} contentContainerStyle={styles.content}>
-        {pet !== null && (
+        {pet !== null && media !== null && (
           <PetMediaView
-            media={normalizePetMedia(pet.media)}
+            media={media}
+            // One player at a time: paused while the album is open.
+            active={!albumOpen}
             petState="idle"
             // A locked pet (vet, hard stop, game over, inactive) is shown as a still image.
             videoEnabled={pet.is_active && !pet.is_ill && !pet.is_hard_stopped && !pet.is_game_over}
@@ -177,6 +188,16 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
             style={styles.petMedia}
             testID="detail-pet-media"
           />
+        )}
+        {media !== null && (media.referenceImageUrl !== null || Object.keys(media.videos).length > 0) && (
+          <Pressable
+            onPress={() => setAlbumOpen(true)}
+            accessibilityRole="button"
+            testID="detail-album-open"
+            style={({ pressed }) => [styles.moreButton, pressed && styles.pressed]}
+          >
+            <Text style={styles.moreText}>{S.album}</Text>
+          </Pressable>
         )}
 
         <Segmented
