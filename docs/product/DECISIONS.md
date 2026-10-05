@@ -5,6 +5,7 @@
 
 | Datum | Kdo | Odločitev | Zakaj | Kje |
 |---|---|---|---|---|
+| 2026-10-05 | David | **Mediji zdaj prek Caddyja (lokalni disk), CDN + Hetzner Object Storage ob rasti**; načrt skaliranja se vodi v `SCALING.md`. | Brezplačno in dovolj za beto; CDN ko pridejo tisoči uporabnikov in nove države. | SCALING.md, ROADMAP M4-05b |
 | 2026-10-05 | Claude (pregled PR #25) | **Časovni pas naprave se "popravi", ne zavrne:** stara imena (Etc/UTC, Asia/Calcutta, Europe/Kiev …) strežnik pretvori v veljavno ime; neznan, a veljaven pas (npr. "+02:00") ob **registraciji** postane Europe/Ljubljana (z zapisom v dnevnik), aplikacija ob zavrnitvi poskusi še enkrat brez pasu. Pri **ročni spremembi v nastavitvah / tihih urah** se popravijo samo stara imena in velike/male črke — "+02:00" ostane napaka (brez tihe zamenjave ure družine). | Registracija ne sme pasti zaradi nastavitve telefona; ročna sprememba pa mora biti točna. | PR #25, ARCHITECTURE §3 |
 | 2026-10-05 | Claude (pregled PR #25) | **Shranimo različico pogojev** (`users.terms_version`, zdaj `draft-2026-10`), ki jo je starš sprejel; API je ne vrača. Pravna besedila še niso napisana. | Ob spremembi pogojev vemo, kdo je sprejel katero različico. | PR #25, `config/legal.php` |
 | 2026-10-05 | Claude (pregled PR #25) | **Preverjanje e-pošte v aplikaciji je strožje od strežnika** (zahteva domeno s piko; strežnik `email:rfc` sprejme tudi `ana@localhost`). | Prava starševska e-pošta ima vedno domeno s piko; tipkarsko napako ujamemo pred pošiljanjem. Strežnik ostaja avtoriteta. | PR #25 |
