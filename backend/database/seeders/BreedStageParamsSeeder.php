@@ -14,15 +14,19 @@ use InvalidArgumentException;
  * Every value comes from docs/research/dog-data/data.json (`ref` = JSON path)
  * with the source id of docs/research/dog-data/sources.md. Rules:
  *  - `verified` = true only when the value is directly backed by the cited
- *    source (or is a recorded David decision — `decision`); every value the
- *    research marked "UNSOURCED — proposal" and every Claude proposal (the
- *    feed window CLOCK TIMES, representative arrival ages, mixed-breed and
- *    senior exercise minutes, the contested puppy exercise rule) stays
- *    `verified = false` and is shown as such in Filament. So does every
- *    CHOICE Claude made inside a sourced range that DECISIONS lists as
- *    "Claude, čaka Davida" (PR #37 review M2): the stage boundaries 9 / 36 /
- *    108–118 months, the puppy arrival age 2 months, senior 2 meals — the
- *    quote stays as the evidence, `verified` turns true when David confirms.
+ *    source or is a recorded David decision (`decision`); every value the
+ *    research marked "UNSOURCED — proposal" without a decision stays
+ *    `verified = false` and is shown as such in Filament.
+ *  - David confirmed every open M5-R01 choice on 2026-10-05 (`CONFIRMED`,
+ *    "potrdil David 2026-10-05"): feed window clock times (now 2 h each),
+ *    stage boundaries 9 / 36 / 108–118 months, arrival ages (puppy 2 months,
+ *    others the first month of the stage), exercise minutes (mutt adult 60,
+ *    puppy / young 10 × age months, senior 75 % of adult) and senior 2 meals.
+ *    Those rows are `verified = true` with the decision in `notes`; their
+ *    `source_id` stays the underlying evidence (null where literature gives
+ *    no number) — the decision is never presented as literature.
+ *    Production rows from PR #37 were updated once by the data migration
+ *    2026_10_12_120000_apply_david_stage_decisions (the seeder never updates).
  *  - INSERT-ONLY (like BreedConfigsSeeder, DECISIONS 2026-10-03): an
  *    existing (breed, stage, from month, key) row is never touched, so admin
  *    edits in Filament always win. Runs on every production deploy through
@@ -35,15 +39,24 @@ use InvalidArgumentException;
  *
  * tests/Feature/LifeStageDataTest cross-checks every row against data.json.
  *
- * Feed window times (Claude proposal, derivation): N meals → the first
- * window at 07:00, the last at 19:00, equal spacing (12 h / (N − 1)), each
- * window 1 hour long: 4 meals = 07–08, 11–12, 15–16, 19–20; 3 meals =
- * 07–08, 13–14, 19–20. Two meals have no row → the breed's existing
+ * Feed window times (David 2026-10-05): N meals → the first window at
+ * 07:00, the last at 19:00, equal spacing (12 h / (N − 1)), each window
+ * 2 hours long: 4 meals = 07–09, 11–13, 15–17, 19–21; 3 meals = 07–09,
+ * 13–15, 19–21. Two meals have no row → the breed's existing
  * breed_configs.feed_windows (06–10, 17–21) stay in force.
  */
 class BreedStageParamsSeeder extends Seeder
 {
     public const DECISION = 'David 2026-10-05';
+
+    /** David's answers to the M5-R01 open questions (2026-10-05). */
+    public const CONFIRMED = 'potrdil David 2026-10-05';
+
+    /** @var list<array{0: string, 1: string}> */
+    public const PUPPY_4_MEAL_WINDOWS = [['07:00', '09:00'], ['11:00', '13:00'], ['15:00', '17:00'], ['19:00', '21:00']];
+
+    /** @var list<array{0: string, 1: string}> */
+    public const PUPPY_3_MEAL_WINDOWS = [['07:00', '09:00'], ['13:00', '15:00'], ['19:00', '21:00']];
 
     /**
      * @return list<array<string, mixed>>
@@ -80,36 +93,38 @@ class BreedStageParamsSeeder extends Seeder
                 'quote' => 'From birth to cessation of rapid growth (~6–9 months, varying with breed and size)',
             ]);
             $add('young', 0, StageParamKey::StartsAtMonths, 9, [
-                'unit' => 'months', 'source_id' => 'S11', 'confidence' => 'medium', 'verified' => false,
-                'ref' => 'general_by_size.life_stages.young_adult',
+                'unit' => 'months', 'source_id' => 'S11', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'general_by_size.life_stages.young_adult', 'decision' => self::CONFIRMED,
                 'quote' => 'From cessation of rapid growth to completion of physical and social maturation',
-                'notes' => 'Claude choice inside the sourced range, waiting for David (DECISIONS 2026-10-05). AAHA: puppy ends ~6–9 months; 9 = upper end chosen for medium dogs (still 72 % of adult weight at 6 months, S9 logistic proposal).',
+                'notes' => 'Game boundary inside the sourced range (no exact month in the literature). AAHA: puppy ends ~6–9 months; 9 = upper end for medium dogs (still 72 % of adult weight at 6 months, S9 logistic proposal).',
             ]);
             $add('adult', 0, StageParamKey::StartsAtMonths, 36, [
-                'unit' => 'months', 'source_id' => 'S11', 'confidence' => 'medium', 'verified' => false,
-                'ref' => 'general_by_size.life_stages.mature_adult',
+                'unit' => 'months', 'source_id' => 'S11', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'general_by_size.life_stages.mature_adult', 'decision' => self::CONFIRMED,
                 'quote' => 'From completion of physical and social maturation until the last 25% of estimated lifespan',
-                'notes' => 'Claude choice inside the sourced range, waiting for David (DECISIONS 2026-10-05). Maturation completes at 3–4 years (S11); 36 months = lower end.',
+                'notes' => 'Game boundary inside the sourced range (no exact month in the literature). Maturation completes at 3–4 years (S11); 36 months = lower end.',
             ]);
             $add('senior', 0, StageParamKey::StartsAtMonths, $bc ? 118 : 108, [
-                'unit' => 'months', 'source_id' => 'S11,S15', 'confidence' => 'medium', 'verified' => false,
+                'unit' => 'months', 'source_id' => 'S11,S15', 'confidence' => 'medium', 'verified' => true,
                 'ref' => $bc ? 'border_collie.lifespan.senior_from' : 'medium_mixed_breed.lifespan.senior_from',
+                'decision' => self::CONFIRMED,
                 'notes' => $bc
-                    ? 'Claude derivation, waiting for David (DECISIONS 2026-10-05). Last 25 % of lifespan (S11) × median 13.1 y (S15) = 9.8 y = 118 months. Dogs Trust rule of thumb: > 7 y (S14).'
-                    : 'Claude derivation, waiting for David (DECISIONS 2026-10-05). Last 25 % of lifespan (S11) × median 12.0 y for crossbreeds (S15) = 9.0 y = 108 months. Dogs Trust rule of thumb: > 7 y (S14).',
+                    ? 'Derived game boundary: last 25 % of lifespan (S11) × median 13.1 y (S15) = 9.8 y = 118 months. Dogs Trust rule of thumb: > 7 y (S14).'
+                    : 'Derived game boundary: last 25 % of lifespan (S11) × median 12.0 y for crossbreeds (S15) = 9.0 y = 108 months. Dogs Trust rule of thumb: > 7 y (S14).',
             ]);
 
             // ── Age at arrival (parent's choice → pets.arrival_age_months) ──
             $add('puppy', 0, StageParamKey::ArrivalAgeMonths, 2, [
-                'unit' => 'months', 'source_id' => 'S36', 'confidence' => 'medium', 'verified' => false,
-                'ref' => 'general_by_size.training.start_age',
+                'unit' => 'months', 'source_id' => 'S36', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'general_by_size.training.start_age', 'decision' => self::CONFIRMED,
                 'quote' => 'Puppies can begin very simple training starting as soon as they come home, usually around 8 weeks old.',
-                'notes' => 'Claude choice backed by S36 ("home at ~8 weeks"), waiting for David (DECISIONS 2026-10-05).',
+                'notes' => 'Game value backed by S36 ("home at ~8 weeks").',
             ]);
             foreach (['young' => 9, 'adult' => 36, 'senior' => $bc ? 118 : 108] as $stage => $age) {
                 $add($stage, 0, StageParamKey::ArrivalAgeMonths, $age, [
-                    'unit' => 'months',
-                    'notes' => 'Claude proposal (UNSOURCED): representative age = first month of the stage, so the dog stays in this stage for the 12-week challenge.',
+                    'unit' => 'months', 'verified' => true,
+                    'ref' => 'proposed_game_parameters.arrival_age_months', 'decision' => self::CONFIRMED,
+                    'notes' => 'Game value (no literature number): representative age = first month of the stage, so the dog stays in this stage for the 12-week challenge.',
                 ]);
             }
 
@@ -143,33 +158,33 @@ class BreedStageParamsSeeder extends Seeder
                 'notes' => 'ASPCA (S18) says one meal can be enough; David chose 2 (2026-10-05).',
             ]);
             $add('senior', 0, StageParamKey::MealsPerDay, 2, [
-                'unit' => 'meals/day', 'source_id' => 'S14', 'confidence' => 'medium', 'verified' => false,
-                'ref' => 'general_by_size.feeding_meals_per_day.senior',
+                'unit' => 'meals/day', 'source_id' => 'S14', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'general_by_size.feeding_meals_per_day.senior', 'decision' => self::CONFIRMED,
                 'quote' => 'feeding your dog smaller meals two or three times a day',
-                'notes' => 'Claude choice inside the sourced 2–3, waiting for David (DECISIONS open question 2026-10-05): lower end, same as adult (David 2026-10-05: adults 2 meals).',
+                'notes' => 'Game value inside the sourced 2–3: lower end, same as adult (David 2026-10-05: adults 2 meals).',
             ]);
 
-            // ── Feed window clock times (Claude proposal) ───────────────────
+            // ── Feed window clock times (David decision) ────────────────────
             $windowsMeta = [
-                'unit' => 'HH:MM family-local [start, end)',
-                'ref' => 'proposed_game_parameters.feed_windows',
-                'notes' => 'Claude proposal (UNSOURCED clock times; the meal COUNT is sourced). Derivation: first window 07:00, last 19:00, equal spacing, 1 h each. A window entirely inside quiet hours is done by the parent.',
+                'unit' => 'HH:MM family-local [start, end)', 'verified' => true,
+                'ref' => 'proposed_game_parameters.feed_window_times', 'decision' => self::CONFIRMED,
+                'notes' => 'Game clock times (no literature number; the meal COUNT is sourced, S18). First window 07:00, last 19:00, equal spacing, 2 h each. A window entirely inside quiet hours is done by the parent.',
             ];
-            $add('puppy', 0, StageParamKey::FeedWindows, [['07:00', '08:00'], ['11:00', '12:00'], ['15:00', '16:00'], ['19:00', '20:00']], $windowsMeta);
-            $add('puppy', 3, StageParamKey::FeedWindows, [['07:00', '08:00'], ['13:00', '14:00'], ['19:00', '20:00']], $windowsMeta);
+            $add('puppy', 0, StageParamKey::FeedWindows, self::PUPPY_4_MEAL_WINDOWS, $windowsMeta);
+            $add('puppy', 3, StageParamKey::FeedWindows, self::PUPPY_3_MEAL_WINDOWS, $windowsMeta);
 
             // ── Exercise → step goal ────────────────────────────────────────
             $add('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth, 10, [
-                'unit' => 'minutes/day per month of age', 'source_id' => 'S24', 'confidence' => 'low',
-                'ref' => 'general_by_size.exercise.puppy_rule_of_thumb',
+                'unit' => 'minutes/day per month of age', 'source_id' => 'S24', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'general_by_size.exercise.puppy_rule_of_thumb', 'decision' => self::CONFIRMED,
                 'quote' => 'five minutes of exercise per month of age, twice a day, until the puppy is full-grown',
-                'notes' => 'CONTESTED (S25 calls it a misconception) — proposal, not a fact. 5 min × 2 per day; capped at the adult minutes.',
+                'notes' => 'Game rule; the source rule is CONTESTED (S25 calls it a misconception), so confidence stays low. 5 min × 2 per day; capped at the adult minutes.',
             ]);
             $add('young', 0, StageParamKey::ExerciseMinutesPerAgeMonth, 10, [
-                'unit' => 'minutes/day per month of age', 'source_id' => 'S24', 'confidence' => 'low',
-                'ref' => 'general_by_size.exercise.puppy_rule_of_thumb',
+                'unit' => 'minutes/day per month of age', 'source_id' => 'S24', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'general_by_size.exercise.puppy_rule_of_thumb', 'decision' => self::CONFIRMED,
                 'quote' => 'five minutes of exercise per month of age, twice a day, until the puppy is full-grown',
-                'notes' => 'Applies "until full-grown" (12–15 months, S10); capped at the adult minutes, so from ~12 months it equals the adult value.',
+                'notes' => 'Game rule; applies "until full-grown" (12–15 months, S10); capped at the adult minutes, so from ~12 months it equals the adult value.',
             ]);
             foreach (['young', 'adult'] as $stage) {
                 $add($stage, 0, StageParamKey::ExerciseMinutesPerDay, $bc ? 120 : 60, $bc ? [
@@ -178,15 +193,15 @@ class BreedStageParamsSeeder extends Seeder
                     'quote' => 'Exercise: More than 2 hours per day',
                     'notes' => '"More than 2 hours" → 120 minutes (lower bound).',
                 ] : [
-                    'unit' => 'minutes/day',
-                    'ref' => 'medium_mixed_breed.exercise.adult_game_target',
-                    'notes' => 'UNSOURCED — proposal: 60 min inside the sourced 30–120 min adult range (S24). David accepted the resulting ≈ 6,000 steps (2026-10-05).',
+                    'unit' => 'minutes/day', 'verified' => true,
+                    'ref' => 'medium_mixed_breed.exercise.adult_game_target', 'decision' => self::CONFIRMED,
+                    'notes' => 'Game value (no literature number): 60 min inside the sourced 30–120 min adult range (S24) → ≈ 6,000 steps.',
                 ]);
             }
             $add('senior', 0, StageParamKey::ExerciseMinutesPerDay, $bc ? 90 : 45, [
-                'unit' => 'minutes/day',
-                'ref' => 'general_by_size.exercise.senior',
-                'notes' => 'Claude proposal (UNSOURCED): 75 % of the adult minutes. Sources only say "frequent short walks instead of one long one" (S14) and that energy needs fall with age (S13) — no minutes.',
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.senior_exercise_minutes', 'decision' => self::CONFIRMED,
+                'notes' => 'Game value (no literature number): 75 % of the adult minutes. Sources only say "frequent short walks instead of one long one" (S14) and that energy needs fall with age (S13).',
             ]);
             $add('all', 0, StageParamKey::StepsPerExerciseMinute, 100, [
                 'unit' => 'child steps per walking minute', 'source_id' => 'S45', 'confidence' => 'low', 'verified' => true,
@@ -281,28 +296,43 @@ class BreedStageParamsSeeder extends Seeder
                 throw new InvalidArgumentException("BreedStageParamsSeeder: {$row['breed_slug']}.{$row['stage']}.{$row['key']}: {$error}");
             }
 
-            $notes = trim(implode(' ', array_filter([
-                $row['decision'] !== null ? "Decision: {$row['decision']}." : null,
-                $row['notes'],
-            ])));
-
-            DB::table('breed_stage_params')->insertOrIgnore([
+            DB::table('breed_stage_params')->insertOrIgnore(array_merge([
                 'breed_slug' => $row['breed_slug'],
                 'stage' => $row['stage'],
                 'age_from_months' => $row['age_from_months'],
                 'key' => $row['key'],
-                'value' => $row['value'] === null ? null : json_encode($row['value']),
-                'unit' => $row['unit'],
-                'source_id' => $row['source_id'],
-                'confidence' => $row['confidence'],
-                'verified' => $row['verified'],
-                'quote' => $row['quote'],
-                'notes' => $notes !== '' ? $notes : null,
-                'data_ref' => $row['ref'],
+            ], self::columns($row), [
                 'created_at' => $now,
                 'updated_at' => $now,
-            ]);
+            ]));
         }
+    }
+
+    /**
+     * The stored columns of one seeder row except the tuple (value as JSON,
+     * the decision folded into `notes`). Shared with the data migration that
+     * applied David's 2026-10-05 decisions to existing rows.
+     *
+     * @param  array<string, mixed>  $row
+     * @return array{value: string|null, unit: string|null, source_id: string|null, confidence: string, verified: bool, quote: string|null, notes: string|null, data_ref: string|null}
+     */
+    public static function columns(array $row): array
+    {
+        $notes = trim(implode(' ', array_filter([
+            $row['decision'] !== null ? "Decision: {$row['decision']}." : null,
+            $row['notes'],
+        ])));
+
+        return [
+            'value' => $row['value'] === null ? null : json_encode($row['value']),
+            'unit' => $row['unit'],
+            'source_id' => $row['source_id'],
+            'confidence' => $row['confidence'],
+            'verified' => (bool) $row['verified'],
+            'quote' => $row['quote'],
+            'notes' => $notes !== '' ? $notes : null,
+            'data_ref' => $row['ref'],
+        ];
     }
 
     /**

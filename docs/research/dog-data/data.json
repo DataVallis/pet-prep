@@ -3,14 +3,15 @@
     "task": "M1-19 / M5 — sourced dog data for realism",
     "compiled": "2026-10-05",
     "compiled_by": "Claude (research agent)",
-    "status": "DRAFT — awaiting David's review. Nothing here is imported into breed_configs yet.",
+    "status": "Imported into breed_stage_params (M5-R01, BreedStageParamsSeeder). Game values David confirmed on 2026-10-05 carry a \"decision\" field.",
     "sources": "docs/research/dog-data/sources.md",
     "conventions": {
       "value_object": "{value, unit, source_id, quote, confidence, notes}",
       "confidence": "high = breed standard / peer-reviewed / vet association and consistent across sources; medium = single reputable source or sources disagree a little; low = secondary source, strong disagreement, or derived/proposal",
       "unsourced": "Anything with source_id null is marked 'UNSOURCED — proposal' and must not be shown to parents/children as fact.",
       "quotes": "Quotes are as returned by the web-fetch tool on 2026-10-05; spot-check against the URL before import.",
-      "game_time": "1 real week = 1 month of dog age (REALISM_SPEC §2)."
+      "game_time": "1 real week = 1 month of dog age (REALISM_SPEC §2).",
+      "decision": "\"potrdil David 2026-10-05: …\" = the game value David confirmed (DECISIONS 2026-10-05). It is a product decision, NOT literature: source_id stays the underlying evidence and is null where the literature gives no number."
     }
   },
   "general_by_size": {
@@ -60,7 +61,8 @@
         "source_id": "S11",
         "quote": "From cessation of rapid growth to completion of physical and social maturation, which occurs in most dogs by 3 to 4 years of age",
         "confidence": "high",
-        "notes": "AAHA has no separate 'adolescent' stage; it is inside 'young adult'."
+        "notes": "AAHA has no separate 'adolescent' stage; it is inside 'young adult'.",
+        "decision": "potrdil David 2026-10-05: young stage starts at 9 months (upper end of ~6–9 months)"
       },
       "adolescence": {
         "value": "begins 6–9 months; puberty ~8 months",
@@ -76,7 +78,8 @@
         "source_id": "S11",
         "quote": "From completion of physical and social maturation until the last 25% of estimated lifespan (breed and size dependent)",
         "confidence": "high",
-        "notes": ""
+        "notes": "",
+        "decision": "potrdil David 2026-10-05: adult stage starts at 36 months (lower end of 3–4 years)"
       },
       "senior": {
         "value": "last 25% of estimated lifespan",
@@ -210,7 +213,8 @@
         "source_id": "S14",
         "quote": "feeding your dog smaller meals two or three times a day",
         "confidence": "medium",
-        "notes": "AAHA (S13): 'Maintenance energy requirements (MER) generally decrease over a dog's lifetime.'"
+        "notes": "AAHA (S13): 'Maintenance energy requirements (MER) generally decrease over a dog's lifetime.'",
+        "decision": "potrdil David 2026-10-05: senior = 2 meals/day (lower end of 2–3)"
       },
       "hunger_physiology": {
         "value": "8–10",
@@ -262,7 +266,8 @@
         "source_id": "S24",
         "quote": "five minutes of exercise per month of age, twice a day, until the puppy is full-grown",
         "confidence": "low",
-        "notes": "CONTESTED: Veterinary Ireland Journal (S25) lists it among 'misconceptions like five minutes of exercise per month of life'. No study behind the number was found."
+        "notes": "CONTESTED: Veterinary Ireland Journal (S25) lists it among 'misconceptions like five minutes of exercise per month of life'. No study behind the number was found.",
+        "decision": "potrdil David 2026-10-05: puppy and young dog = 10 min/day × age in months, capped at the adult minutes (rule stays contested, confidence low)"
       },
       "puppy_evidence": {
         "value": "off-lead exercise on soft ground ≤ 3 months protective; stairs ≤ 3 months risk",
@@ -476,7 +481,8 @@
         "source_id": "S36",
         "quote": "Puppies can begin very simple training starting as soon as they come home, usually around 8 weeks old.",
         "confidence": "high",
-        "notes": "PetMD (S37) same."
+        "notes": "PetMD (S37) same.",
+        "decision": "potrdil David 2026-10-05: a puppy arrives at 2 months"
       },
       "session_length_puppy": {
         "value": "5–10",
@@ -748,7 +754,8 @@
         "derived_from": [
           "S11",
           "S15"
-        ]
+        ],
+        "decision": "potrdil David 2026-10-05: senior from 118 months (0.75 × 13.1 y)"
       }
     },
     "exercise": {
@@ -1002,7 +1009,8 @@
         "derived_from": [
           "S11",
           "S15"
-        ]
+        ],
+        "decision": "potrdil David 2026-10-05: senior from 108 months (0.75 × 12.0 y)"
       }
     },
     "exercise": {
@@ -1020,7 +1028,8 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED — proposal. Midpoint-ish choice inside the 30–120 range; not a sourced value."
+        "notes": "UNSOURCED in the literature — game value inside the sourced 30–120 range (S24).",
+        "decision": "potrdil David 2026-10-05: mixed-breed adult = 60 min/day"
       }
     },
     "trainability": {
@@ -1171,7 +1180,8 @@
         "S21",
         "S19",
         "S14"
-      ]
+      ],
+      "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
     },
     "walk_minutes_puppy": {
       "value": {
@@ -1189,7 +1199,8 @@
       "notes": "UNSOURCED — proposal. 5 min × months × 2 (S24) — contested rule (S25).",
       "derived_from": [
         "S24"
-      ]
+      ],
+      "decision": "potrdil David 2026-10-05: 10 min × age in months"
     },
     "step_goal_border_collie_adult": {
       "value": 12000,
@@ -1213,7 +1224,8 @@
       "derived_from": [
         "S24",
         "S45"
-      ]
+      ],
+      "decision": "potrdil David 2026-10-05: 60 min → 6,000 steps"
     },
     "accident_window_hours": {
       "value": {
@@ -1260,6 +1272,78 @@
         "S36",
         "S37"
       ]
+    },
+    "feed_window_times": {
+      "value": {
+        "4_meals": [
+          [
+            "07:00",
+            "09:00"
+          ],
+          [
+            "11:00",
+            "13:00"
+          ],
+          [
+            "15:00",
+            "17:00"
+          ],
+          [
+            "19:00",
+            "21:00"
+          ]
+        ],
+        "3_meals": [
+          [
+            "07:00",
+            "09:00"
+          ],
+          [
+            "13:00",
+            "15:00"
+          ],
+          [
+            "19:00",
+            "21:00"
+          ]
+        ],
+        "2_meals": "breed_configs.feed_windows (06–10, 17–21)"
+      },
+      "unit": "HH:MM family-local [start, end)",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED in the literature (clock times; the meal COUNT is sourced, S18). Derivation: first window 07:00, last 19:00, equal spacing, 2 h each. A window entirely inside quiet hours is done by the parent.",
+      "decision": "potrdil David 2026-10-05: 2-hour windows (was a 1-hour proposal), start times kept"
+    },
+    "arrival_age_months": {
+      "value": {
+        "puppy": 2,
+        "young": 9,
+        "adult": 36,
+        "senior": {
+          "medium_mixed_breed": 108,
+          "border_collie": 118
+        }
+      },
+      "unit": "months",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED in the literature except the puppy (~8 weeks, S36): representative age = first month of the stage, so the dog stays in that stage for the 12-week challenge.",
+      "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+    },
+    "senior_exercise_minutes": {
+      "value": {
+        "medium_mixed_breed": 45,
+        "border_collie": 90
+      },
+      "unit": "minutes/day",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED in the literature: 75 % of the adult minutes. Sources only say \"frequent short walks instead of one long one\" (S14) and that energy needs fall with age (S13).",
+      "decision": "potrdil David 2026-10-05: senior = 75 % of the adult minutes"
     }
   }
 }

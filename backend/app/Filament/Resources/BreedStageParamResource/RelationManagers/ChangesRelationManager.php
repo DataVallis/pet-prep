@@ -30,7 +30,7 @@ class ChangesRelationManager extends RelationManager
             ->columns([
                 Tables\Columns\TextColumn::make('created_at')->dateTime(),
                 Tables\Columns\TextColumn::make('action')->badge(),
-                Tables\Columns\TextColumn::make('user.name')->label('By')->placeholder('system'),
+                Tables\Columns\TextColumn::make('by')->label('By')->state(fn (BreedStageParamChange $r): string => $r->user?->name ?? $r->actor ?? 'system'),
                 Tables\Columns\TextColumn::make('old')->state(fn (BreedStageParamChange $r): string => $json($r->old))->wrap(),
                 Tables\Columns\TextColumn::make('new')->state(fn (BreedStageParamChange $r): string => $json($r->new))->wrap(),
             ]);

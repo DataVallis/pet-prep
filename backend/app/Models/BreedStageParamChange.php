@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * Audit row of one change to a sourced life-stage value (M5-R01): who
  * (admin user), what (created / updated / deleted), old and new values.
- * Append-only.
+ * Append-only. `actor` labels a non-user writer (user_id null), e.g. the
+ * M5-R01b data migration "system: David decision 2026-10-05".
  */
 class BreedStageParamChange extends Model
 {
@@ -19,7 +20,7 @@ class BreedStageParamChange extends Model
      */
     protected $fillable = [
         'breed_stage_param_id', 'breed_slug', 'stage', 'age_from_months', 'key',
-        'action', 'user_id', 'old', 'new',
+        'action', 'user_id', 'actor', 'old', 'new',
     ];
 
     /**
