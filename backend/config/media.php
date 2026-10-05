@@ -65,7 +65,8 @@ return [
         // Must stay below the queue's retry_after (90 s) — StorePetMedia::$timeout is 85.
         'download_timeout_seconds' => min(80, (int) env('PET_MEDIA_DOWNLOAD_TIMEOUT', 60)),
         'image_mimes' => ['image/jpeg', 'image/png', 'image/webp'],
-        'video_mimes' => ['video/mp4'],
+        // QuickTime (`ftypqt`) is accepted and stored as video/mp4 (PR #24 review m4).
+        'video_mimes' => ['video/mp4', 'video/quicktime'],
         // Signed URL lifetime. URLs are bucketed (same URL for half the TTL) so a
         // state poll does not change the URI and restart the player; a URL is
         // valid for between TTL and 1.5 × TTL.

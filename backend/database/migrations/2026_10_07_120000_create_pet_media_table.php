@@ -63,10 +63,11 @@ return new class extends Migration
 
         if (Schema::hasTable('pet_media_jobs')) {
             DB::statement(<<<'SQL'
-                INSERT INTO pet_media (pet_id, kind, state, profile, status, request_id, error, created_at, updated_at)
+                INSERT INTO pet_media (pet_id, kind, state, profile, status, source_generation, request_id, error, created_at, updated_at)
                 SELECT DISTINCT ON (pet_id, pet_state)
                        pet_id, 'video', pet_state, NULL,
                        CASE status WHEN 'pending' THEN 'running' ELSE 'failed' END,
+                       1, -- made from the first image generation (PR #24 review m6)
                        CASE status WHEN 'pending' THEN request_id ELSE NULL END,
                        CASE status WHEN 'completed' THEN 'migrated from pet_media_jobs (never stored)' ELSE error END,
                        created_at, updated_at

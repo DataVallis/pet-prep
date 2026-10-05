@@ -20,7 +20,7 @@ class SweepPetMediaCommand extends Command
     {
         $result = $media->sweepStale();
 
-        $this->info("Timed out {$result['timed_out']}, re-queued {$result['downloads']} download(s) and {$result['reclaimed']} stale claim(s).");
+        $this->info("Timed out {$result['timed_out']}, re-queued {$result['downloads']} download(s) and {$result['reclaimed']} stale claim(s), deleted {$result['temp_files']} stale temp file(s).");
 
         return self::SUCCESS;
     }

@@ -14,9 +14,14 @@ use App\Models\User;
 use App\Services\FalWebhookVerifier;
 use App\Services\FamilyService;
 use App\Services\Media\FalGateway;
+use App\Services\Media\MediaDownloader;
+use App\Services\Media\MediaDownloadException;
 use App\Services\Media\MediaEntitlementService;
 use App\Services\Media\PetMediaService;
 use App\Services\PairingService;
+use Carbon\CarbonInterface;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Http\Client\ConnectionException;
@@ -771,7 +776,7 @@ describe('media:sweep', function () {
         $dead = PetMedia::create(['pet_id' => $pet->id, 'kind' => 'image', 'status' => 'running']);
         PetMedia::whereKey([$waiting->id, $download->id, $dead->id])->update(['updated_at' => now()->subHours(3)]);
 
-        $this->artisan('media:sweep')->assertSuccessful()->expectsOutputToContain('Timed out 1, re-queued 1 download(s) and 1 stale claim(s).');
+        $this->artisan('media:sweep')->assertSuccessful()->expectsOutputToContain('Timed out 1, re-queued 1 download(s) and 1 stale claim(s), deleted 0 stale temp file(s).');
 
         expect($waiting->fresh())->status->toBe('failed')->error_reason->toBe('timed_out')
             ->and($fresh->fresh()->status)->toBe('running');
@@ -831,8 +836,8 @@ describe('pet_media migration', function () {
         expect(Schema::hasTable('pet_media_jobs'))->toBeFalse();
         // Still waiting → running with the same request id (a late webhook matches);
         // completed but never downloaded → failed (media:backfill regenerates).
-        expect(PetMedia::where('state', 'idle')->sole())->status->toBe('running')->request_id->toBe('old-pending')
-            ->and(PetMedia::where('state', 'hungry')->sole())->status->toBe('failed')->request_id->toBeNull();
+        expect(PetMedia::where('state', 'idle')->sole())->status->toBe('running')->request_id->toBe('old-pending')->source_generation->toBe(1)
+            ->and(PetMedia::where('state', 'hungry')->sole())->status->toBe('failed')->request_id->toBeNull()->source_generation->toBe(1);
     });
 
     it('allows one slot per pet, kind and state (the image state is NULL)', function () {
@@ -840,5 +845,148 @@ describe('pet_media migration', function () {
         PetMedia::create(['pet_id' => $pet->id, 'kind' => 'image']);
 
         expect(fn () => PetMedia::create(['pet_id' => $pet->id, 'kind' => 'image']))->toThrow(UniqueConstraintViolationException::class);
+    });
+});
+
+/* ─────────────────────────── PR #24 review fixes ─────────────────────────── */
+
+describe('PR #24 review', function () {
+    function prLedger(PetMedia $slot, string $requestId, CarbonInterface $at): AiSpendLedger
+    {
+        $row = AiSpendLedger::create(['purpose' => 'state_video', 'profile' => 'kling_v3_pro', 'endpoint' => 'fal-ai/kling-video/v3/pro/image-to-video', 'unit' => 'second', 'units' => 5, 'cost_usd' => 0.56, 'status' => 'committed', 'request_id' => $requestId, 'pet_id' => $slot->pet_id, 'pet_media_id' => $slot->id]);
+        $row->forceFill(['created_at' => $at, 'updated_at' => $at])->saveQuietly();
+
+        return $row;
+    }
+
+    it('m1: a reclaimed slot adopts the request id fal already accepted from the dead worker — no second paid submit', function () {
+        Http::fake(['queue.fal.run/*' => Http::response(['request_id' => 'req-second'])]);
+        [, , $pet] = pmFamilyPet();
+        pmStored($pet);
+        $slot = PetMedia::create(['pet_id' => $pet->id, 'kind' => 'video', 'state' => 'idle', 'status' => 'running', 'attempts' => 1]);
+        PetMedia::whereKey($slot->id)->update(['updated_at' => now()->subMinutes(15)]);
+        prLedger($slot, 'req-dead', now()->subMinutes(14)); // accepted after the dead worker's claim
+
+        expect(app(PetMediaService::class)->submitVideo($slot->id))->toBeTrue();
+
+        Http::assertNothingSent();
+        expect($slot->fresh())->status->toBe('running')->request_id->toBe('req-dead')->source_generation->toBe(1)->cost_usd->toEqualWithDelta(0.56, 1e-9)
+            ->and(AiSpendLedger::count())->toBe(1);
+    });
+
+    it('m1: a ledger row from before the dead claim (older generation) is not adopted', function () {
+        Http::fake(['queue.fal.run/*' => Http::response(['request_id' => 'req-new'])]);
+        [, , $pet] = pmFamilyPet();
+        pmStored($pet);
+        $slot = PetMedia::create(['pet_id' => $pet->id, 'kind' => 'video', 'state' => 'idle', 'status' => 'running', 'attempts' => 1]);
+        PetMedia::whereKey($slot->id)->update(['updated_at' => now()->subMinutes(15)]);
+        prLedger($slot, 'req-old-generation', now()->subHours(3));
+
+        app(PetMediaService::class)->submitVideo($slot->id);
+
+        Http::assertSentCount(1);
+        expect($slot->fresh()->request_id)->toBe('req-new');
+    });
+
+    it('m2: a late successful webhook still stores the video of a slot the sweep failed', function () {
+        fakeFalJwks();
+        Queue::fake([StorePetMedia::class]);
+        [, , $pet] = pmFamilyPet();
+        $slot = PetMedia::create(['pet_id' => $pet->id, 'kind' => 'video', 'state' => 'idle', 'status' => 'failed', 'error_reason' => 'timed_out', 'request_id' => 'req-late']);
+
+        sendFalWebhook(['request_id' => 'req-late', 'status' => 'ERROR', 'error' => 'late error'])->assertOk()->assertJson(['message' => 'Already processed.']);
+        expect($slot->fresh())->status->toBe('failed')->error_reason->toBe('timed_out');
+
+        sendFalWebhook(['request_id' => 'req-late', 'status' => 'OK', 'payload' => ['video' => ['url' => 'https://v3.fal.media/files/late.mp4']]])
+            ->assertOk()->assertJson(['pet_id' => $pet->id]);
+
+        expect($slot->fresh())->status->toBe('running')->error_reason->toBeNull()->source_url->toBe('https://v3.fal.media/files/late.mp4');
+        Queue::assertPushed(StorePetMedia::class, fn ($job) => $job->petMediaId === $slot->id);
+    });
+
+    it('m3: refuses a redirect to a host outside the allowlist — nothing stored', function () {
+        $mock = new MockHandler([
+            new Response(302, ['Location' => 'https://evil.example.com/dog.mp4']),
+            new Response(200, ['Content-Type' => 'video/mp4'], pmMp4()),
+        ]);
+        app()->instance(MediaDownloader::class, app(MediaDownloader::class)->withHandler($mock));
+        [, , $pet] = pmFamilyPet();
+        $slot = PetMedia::create(['pet_id' => $pet->id, 'kind' => 'video', 'state' => 'idle', 'status' => 'running', 'request_id' => 'r1', 'source_url' => 'https://v3.fal.media/files/redirect.mp4']);
+
+        expect(app(PetMediaService::class)->storeResult($slot->id))->toBeTrue();
+
+        expect($slot->fresh())->status->toBe('failed')->error->toContain('Redirect to a host outside')->storage_path->toBeNull()
+            ->and(Storage::disk('pet_media')->allFiles())->toBe([])
+            ->and($mock->count())->toBe(1); // the evil host was never requested
+    });
+
+    it('m3: follows a redirect inside the allowlist', function () {
+        $mock = new MockHandler([
+            new Response(302, ['Location' => 'https://v2.fal.media/files/moved.mp4']),
+            new Response(200, ['Content-Type' => 'video/mp4'], pmMp4()),
+        ]);
+        $file = app(MediaDownloader::class)->withHandler($mock)->download('https://v3.fal.media/files/a.mp4', 1024 * 1024, ['video/mp4']);
+
+        expect($file['mime'])->toBe('video/mp4')->and(file_get_contents($file['path']))->toBe(pmMp4());
+        @unlink($file['path']);
+    });
+
+    it('m3: aborts on a too large Content-Length and while streaming (progress)', function () {
+        $downloader = app(MediaDownloader::class);
+        $mock = new MockHandler([
+            new Response(200, ['Content-Type' => 'video/mp4', 'Content-Length' => '5000000'], pmMp4()),
+        ]);
+        $tempBefore = count(glob(sys_get_temp_dir().'/petmedia-*') ?: []);
+
+        expect(fn () => $downloader->withHandler($mock)->download('https://v3.fal.media/files/big.mp4', 1000, ['video/mp4']))
+            ->toThrow(MediaDownloadException::class, 'File too large (5000000 bytes');
+        expect(count(glob(sys_get_temp_dir().'/petmedia-*') ?: []))->toBe($tempBefore); // temp file removed
+
+        // MockHandler does not stream; the progress callback cURL calls is checked directly.
+        $progress = $downloader->transferOptions('/dev/null', 1000)['progress'];
+        $progress(0, 1000); // at the limit: fine
+        expect(fn () => $progress(0, 1001))->toThrow(MediaDownloadException::class, 'over 1000 bytes');
+    });
+
+    it('m4: accepts a QuickTime container and stores it as video/mp4', function () {
+        $qt = "\x00\x00\x00\x14ftypqt  \x00\x00\x02\x00qt  ".str_repeat("\x00", 512);
+        Http::fake(['v3.fal.media/*' => Http::response($qt, 200, ['Content-Type' => 'video/quicktime'])]);
+        [, , $pet] = pmFamilyPet();
+        $slot = PetMedia::create(['pet_id' => $pet->id, 'kind' => 'video', 'state' => 'idle', 'status' => 'running', 'request_id' => 'rq', 'source_url' => 'https://v3.fal.media/files/clip.mov']);
+
+        app(PetMediaService::class)->storeResult($slot->id);
+
+        expect($slot->fresh())->status->toBe('ready')->mime->toBe('video/mp4')->storage_path->toBe("{$pet->id}/idle-g1.mp4");
+        $this->get(pmPath(app(PetMediaService::class)->signedUrl($slot->fresh())))->assertOk()->assertHeader('Content-Type', 'video/mp4');
+    });
+
+    it('m7: never resets a slot another worker has pending or running', function () {
+        Queue::fake([SubmitPetStateVideo::class]);
+        [, , $pet] = pmFamilyPet();
+        pmStored($pet);
+        $slot = pmStored($pet, 'video', 'idle');
+        $service = app(PetMediaService::class);
+
+        // Loaded as ready, but a worker claimed it meanwhile.
+        PetMedia::whereKey($slot->id)->update(['status' => 'running', 'request_id' => 'req-busy']);
+        expect($service->resetForNewGeneration($slot, bump: true))->toBeFalse()
+            ->and($slot->fresh())->status->toBe('running')->request_id->toBe('req-busy')->generation->toBe(1)
+            ->and($service->regenerate($slot))->toBeFalse();
+
+        PetMedia::whereKey($slot->id)->update(['status' => 'ready', 'request_id' => null]);
+        expect($service->resetForNewGeneration($slot->fresh(), bump: true))->toBeTrue()
+            ->and($slot->fresh())->status->toBe('pending')->generation->toBe(2);
+        Queue::assertNothingPushed();
+    });
+
+    it('n3: the sweep deletes download temp files older than 2 h only', function () {
+        $old = tempnam(sys_get_temp_dir(), 'petmedia-');
+        $fresh = tempnam(sys_get_temp_dir(), 'petmedia-');
+        touch($old, now()->subHours(3)->getTimestamp());
+
+        expect(app(PetMediaService::class)->cleanupTempFiles())->toBeGreaterThanOrEqual(1);
+
+        expect(file_exists($old))->toBeFalse()->and(file_exists($fresh))->toBeTrue();
+        @unlink($fresh);
     });
 });

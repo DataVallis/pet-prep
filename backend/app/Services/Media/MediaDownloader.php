@@ -3,6 +3,7 @@
 namespace App\Services\Media;
 
 use App\Services\FalAiService;
+use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Uri;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
@@ -24,7 +25,71 @@ use Throwable;
  */
 class MediaDownloader
 {
+    /** Temp files of downloads in progress (sys_get_temp_dir()); the hourly sweep deletes stale ones. */
+    public const TEMP_PREFIX = 'petmedia-';
+
+    /**
+     * Types that are stored under another name: a QuickTime container (`ftypqt`)
+     * holding an H.264 clip plays as mp4 everywhere (PR #24 review m4).
+     */
+    private const STORED_AS = ['video/quicktime' => 'video/mp4'];
+
+    /** Guzzle handler override — tests only (redirects / streaming with a MockHandler). */
+    private mixed $handler = null;
+
     public function __construct(private readonly FalAiService $fal) {}
+
+    /**
+     * A copy that sends through $handler (wrapped in Guzzle's default stack, so
+     * redirects and on_headers run). Tests only.
+     */
+    public function withHandler(callable $handler): self
+    {
+        $copy = clone $this;
+        $copy->handler = $handler;
+
+        return $copy;
+    }
+
+    /**
+     * Guzzle options enforcing the limits while the bytes arrive.
+     *
+     * @return array<string, mixed>
+     */
+    public function transferOptions(string $sink, int $maxBytes): array
+    {
+        $options = [
+            'sink' => $sink,
+            'allow_redirects' => [
+                'max' => 3,
+                'protocols' => ['https'],
+                'on_redirect' => function ($request, $response, UriInterface $uri): void {
+                    if (! $this->fal->isAllowedMediaUrl((string) $uri)) {
+                        throw new MediaDownloadException('Redirect to a host outside the fal media allowlist.');
+                    }
+                },
+            ],
+            'on_headers' => function (ResponseInterface $response) use ($maxBytes): void {
+                $length = $response->getHeaderLine('Content-Length');
+
+                if ($length !== '' && (int) $length > $maxBytes) {
+                    throw new MediaDownloadException("File too large ({$length} bytes, limit {$maxBytes}).");
+                }
+            },
+            // cURL calls this while streaming; throwing aborts the transfer.
+            'progress' => function ($downloadTotal, $downloaded) use ($maxBytes): void {
+                if ($downloaded > $maxBytes) {
+                    throw new MediaDownloadException("File too large (over {$maxBytes} bytes).");
+                }
+            },
+        ];
+
+        if ($this->handler !== null) {
+            $options['handler'] = HandlerStack::create($this->handler);
+        }
+
+        return $options;
+    }
 
     /**
      * @param  list<string>  $allowedMimes
@@ -42,37 +107,14 @@ class MediaDownloader
             throw new MediaDownloadException('Source URL is not on the fal media allowlist.');
         }
 
-        $tmp = tempnam(sys_get_temp_dir(), 'petmedia-');
+        $tmp = tempnam(sys_get_temp_dir(), self::TEMP_PREFIX);
 
         if ($tmp === false) {
             throw new MediaDownloadException('Could not create a temporary file.', permanent: false);
         }
 
         try {
-            $response = Http::withOptions([
-                'sink' => $tmp,
-                'allow_redirects' => [
-                    'max' => 3,
-                    'protocols' => ['https'],
-                    'on_redirect' => function ($request, $response, UriInterface $uri): void {
-                        if (! $this->fal->isAllowedMediaUrl((string) $uri)) {
-                            throw new MediaDownloadException('Redirect to a host outside the fal media allowlist.');
-                        }
-                    },
-                ],
-                'on_headers' => function (ResponseInterface $response) use ($maxBytes): void {
-                    $length = $response->getHeaderLine('Content-Length');
-
-                    if ($length !== '' && (int) $length > $maxBytes) {
-                        throw new MediaDownloadException("File too large ({$length} bytes, limit {$maxBytes}).");
-                    }
-                },
-                'progress' => function ($downloadTotal, $downloaded) use ($maxBytes): void {
-                    if ($downloaded > $maxBytes) {
-                        throw new MediaDownloadException("File too large (over {$maxBytes} bytes).");
-                    }
-                },
-            ])
+            $response = Http::withOptions($this->transferOptions($tmp, $maxBytes))
                 ->connectTimeout(10)
                 ->timeout((int) config('media.storage.download_timeout_seconds', 60))
                 ->get((string) new Uri($url));
@@ -106,8 +148,9 @@ class MediaDownloader
             }
 
             $declared = strtolower(trim(explode(';', $response->header('Content-Type'))[0]));
+            $sameContainer = in_array($declared, ['video/mp4', 'video/quicktime'], true) && in_array($sniffed, ['video/mp4', 'video/quicktime'], true);
 
-            if ($declared !== '' && $declared !== $sniffed && $declared !== 'application/octet-stream') {
+            if ($declared !== '' && $declared !== $sniffed && ! $sameContainer && $declared !== 'application/octet-stream') {
                 throw new MediaDownloadException("Declared content type {$declared} does not match the file ({$sniffed}).");
             }
         } catch (MediaDownloadException $e) {
@@ -116,7 +159,7 @@ class MediaDownloader
             throw $e;
         }
 
-        return ['path' => $tmp, 'bytes' => $bytes, 'mime' => $sniffed];
+        return ['path' => $tmp, 'bytes' => $bytes, 'mime' => self::STORED_AS[$sniffed] ?? $sniffed];
     }
 
     /**

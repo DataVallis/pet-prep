@@ -209,15 +209,8 @@ class PetMediaService
                 continue;
             }
 
-            if (! $neverSubmitted) {
-                $slot->update([
-                    'status' => PetMedia::STATUS_PENDING,
-                    'generation' => $slot->generation + ($slot->isServable() || $slot->request_id !== null ? 1 : 0),
-                    'request_id' => null,
-                    'source_url' => null,
-                    'error_reason' => null,
-                    'error' => null,
-                ]);
+            if (! $neverSubmitted && ! $this->resetForNewGeneration($slot, bump: $slot->isServable() || $slot->request_id !== null)) {
+                continue; // another worker moved it meanwhile (PR #24 review m7)
             }
 
             SubmitPetStateVideo::dispatch($slot->id);
@@ -234,9 +227,16 @@ class PetMediaService
     public function submitVideo(int $slotId): bool
     {
         $slot = PetMedia::find($slotId);
+        // A stale `running` claim = a worker died; its submit may already have been
+        // accepted (and paid) by fal before the request id reached the slot.
+        $deadClaimSince = $slot?->status === PetMedia::STATUS_RUNNING ? $slot->updated_at : null;
 
         if ($slot === null || ! $slot->isVideo() || ! $this->claim($slot, [PetMedia::STATUS_PENDING], [], requireNoRequest: true)) {
             return true;
+        }
+
+        if ($deadClaimSince !== null && $this->adoptAcceptedRequest($slot, $deadClaimSince)) {
+            return true; // no second paid submit (PR #24 review m1)
         }
 
         $pet = $slot->pet;
@@ -287,6 +287,39 @@ class PetMediaService
     }
 
     /**
+     * A dead worker's submit that fal accepted: the ledger row (committed with a
+     * request id, linked to this slot, made after that worker's claim) is the
+     * proof. Adopt its request id so the webhook matches — fal is not called again.
+     */
+    private function adoptAcceptedRequest(PetMedia $slot, \DateTimeInterface $claimedAt): bool
+    {
+        $ledger = AiSpendLedger::query()
+            ->where('pet_media_id', $slot->id)
+            ->where('purpose', 'state_video')
+            ->where('status', AiSpendLedger::STATUS_COMMITTED)
+            ->whereNotNull('request_id')
+            ->where('created_at', '>=', $claimedAt)
+            ->latest('id')
+            ->first();
+
+        if ($ledger === null || PetMedia::where('request_id', $ledger->request_id)->exists()) {
+            return false;
+        }
+
+        $image = $slot->pet !== null ? $this->imageSlot($slot->pet) : null;
+        $slot->update([
+            'request_id' => $ledger->request_id,
+            'profile' => $ledger->profile,
+            'source_generation' => $image?->generation,
+            'duration_seconds' => (float) $ledger->units,
+        ]);
+        $this->syncCost($slot);
+        Log::warning('PetMediaService: adopted the request id of a dead worker', ['pet_media_id' => $slot->id, 'request_id' => $ledger->request_id]);
+
+        return true;
+    }
+
+    /**
      * Signed fal webhook for a pet_media request (FalAiWebhookController, inside
      * its transaction with the slot row locked). Idempotent.
      *
@@ -295,8 +328,17 @@ class PetMediaService
      */
     public function recordVideoResult(PetMedia $slot, array $result): string
     {
-        if ($slot->status !== PetMedia::STATUS_RUNNING || $slot->source_url !== null) {
+        // The slot was found by THIS request id, so it is still the current generation.
+        // A slot the sweep failed (timed_out) or any other failed one still takes a
+        // successful late result (PR #24 review m2); a late ERROR changes nothing.
+        $lateSuccess = $slot->status === PetMedia::STATUS_FAILED && $slot->source_url === null && $result['ok'];
+
+        if (($slot->status !== PetMedia::STATUS_RUNNING && ! $lateSuccess) || $slot->source_url !== null) {
             return 'already_processed';
+        }
+
+        if ($lateSuccess) {
+            $slot->update(['status' => PetMedia::STATUS_RUNNING, 'error_reason' => null, 'error' => null, 'completed_at' => null]);
         }
 
         if (! $result['ok']) {
@@ -439,15 +481,11 @@ class PetMediaService
             return false;
         }
 
+        if (! $this->resetForNewGeneration($slot, bump: true)) {
+            return false;
+        }
+
         if ($slot->isImage()) {
-            $slot->update([
-                'status' => PetMedia::STATUS_PENDING,
-                'generation' => $slot->generation + 1,
-                'request_id' => null,
-                'source_url' => null,
-                'error_reason' => null,
-                'error' => null,
-            ]);
             $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
             $dna['reference_image_url'] = null;
             $pet->updateQuietly(['pet_dna' => $dna, 'media_status' => 'pending', 'media_error' => null]);
@@ -456,17 +494,36 @@ class PetMediaService
             return true;
         }
 
-        $slot->update([
-            'status' => PetMedia::STATUS_PENDING,
-            'generation' => $slot->generation + 1,
-            'request_id' => null,
-            'source_url' => null,
-            'error_reason' => null,
-            'error' => null,
-        ]);
         SubmitPetStateVideo::dispatch($slot->id);
 
         return true;
+    }
+
+    /**
+     * Put a finished slot (ready / failed) back to `pending` for a new generation —
+     * conditional (`WHERE status NOT IN (pending, running)`), so a slot another
+     * worker just claimed is never reset under it (PR #24 review m7).
+     */
+    public function resetForNewGeneration(PetMedia $slot, bool $bump): bool
+    {
+        $reset = PetMedia::query()
+            ->whereKey($slot->id)
+            ->whereNotIn('status', [PetMedia::STATUS_PENDING, PetMedia::STATUS_RUNNING])
+            ->update([
+                'status' => PetMedia::STATUS_PENDING,
+                'generation' => DB::raw('generation + '.($bump ? 1 : 0)),
+                'request_id' => null,
+                'source_url' => null,
+                'error_reason' => null,
+                'error' => null,
+                'updated_at' => now(),
+            ]) === 1;
+
+        if ($reset) {
+            $slot->refresh();
+        }
+
+        return $reset;
     }
 
     /**
@@ -642,9 +699,10 @@ class PetMediaService
      *  - submitted videos without a webhook after 2 h → failed `timed_out`
      *    (cost kept; media:backfill / Filament can regenerate);
      *  - a result URL whose download job got lost → StorePetMedia again;
-     *  - a claim of a dead worker → its job again.
+     *  - a claim of a dead worker → its job again (which adopts an accepted request id);
+     *  - stale download temp files are deleted.
      *
-     * @return array{timed_out: int, downloads: int, reclaimed: int}
+     * @return array{timed_out: int, downloads: int, reclaimed: int, temp_files: int}
      */
     public function sweepStale(): array
     {
@@ -681,7 +739,25 @@ class PetMediaService
                 $reclaimed++;
             });
 
-        return ['timed_out' => $timedOut, 'downloads' => $downloads, 'reclaimed' => $reclaimed];
+        return ['timed_out' => $timedOut, 'downloads' => $downloads, 'reclaimed' => $reclaimed, 'temp_files' => $this->cleanupTempFiles()];
+    }
+
+    /**
+     * Download temp files (`petmedia-*`) older than 2 h — left behind only when a
+     * worker died mid-download (PR #24 review n3).
+     */
+    public function cleanupTempFiles(int $olderThanMinutes = 120): int
+    {
+        $deleted = 0;
+        $cutoff = now()->subMinutes($olderThanMinutes)->getTimestamp();
+
+        foreach (glob(rtrim(sys_get_temp_dir(), '/').'/'.MediaDownloader::TEMP_PREFIX.'*') ?: [] as $file) {
+            if (is_file($file) && (int) @filemtime($file) < $cutoff && @unlink($file)) {
+                $deleted++;
+            }
+        }
+
+        return $deleted;
     }
 
     /** Stored files of a deleted pet (rows go with the FK cascade). */
