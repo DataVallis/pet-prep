@@ -79,6 +79,11 @@ export type PetBehaviourRaw = NonNullable<
   operations['parentDashboard.dashboard']['responses'][200]['content']['application/json']['family']
 >['pets'][number]['behaviour'];
 
+/** `training` of `pet.updated` / the parent dashboard as generated (M5-R03). */
+export type PetTrainingRaw = NonNullable<
+  operations['parentDashboard.dashboard']['responses'][200]['content']['application/json']['family']
+>['pets'][number]['training'];
+
 export interface PetUpdatedBroadcast {
   pet_id: number;
   breed_type: BreedType;
@@ -110,6 +115,11 @@ export interface PetUpdatedBroadcast {
    * flags; missing in broadcasts from servers before M5-R02. Read via `readPetBehaviour`.
    */
   behaviour?: PetBehaviourRaw;
+  /**
+   * M5-R03 training summary (progress per command, today's routine, a session running);
+   * missing in broadcasts from servers before M5-R03. Read via `readPetTraining`.
+   */
+  training?: PetTrainingRaw;
   event_type: string | null;
   updated_at: string | null;
   /** When the server emitted this snapshot (ms precision); newer wins. */

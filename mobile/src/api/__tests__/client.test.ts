@@ -135,7 +135,7 @@ describe('api client', () => {
       expect(init.method).toBe('POST');
       expect(init.headers.Authorization).toBeUndefined();
       // M5-R02: the child's device always declares what it can show.
-      expect(JSON.parse(String(init.body))).toEqual({ pin: '734912', device_name: 'iPhone', features: ['behaviour_events'] });
+      expect(JSON.parse(String(init.body))).toEqual({ pin: '734912', device_name: 'iPhone', features: ['behaviour_events', 'training'] });
       getItem.mockReset();
     });
 
@@ -180,7 +180,7 @@ describe('api client', () => {
       await api.generatePin({ child_id: 5, pet_id: 9, profile });
       const bodies = fetchMock.mock.calls.map(([, init]) => JSON.parse(String((init as Init).body)));
       expect(bodies).toEqual([
-        { child_id: 5, breed: 'mutt', origin: 'adopted', age_stage: 'senior', features: ['behaviour_events'] },
+        { child_id: 5, breed: 'mutt', origin: 'adopted', age_stage: 'senior', features: ['behaviour_events', 'training'] },
         { child_id: 5, pet_id: 9 },
       ]);
       getItem.mockReset();
@@ -193,7 +193,7 @@ describe('api client', () => {
         breed: 'mutt',
         origin: 'bought',
         age_stage: 'puppy',
-        features: ['behaviour_events'],
+        features: ['behaviour_events', 'training'],
       });
       // Joining a pet: the shared pet keeps what its creating app declared.
       expect(generatePinBody({ child_id: 5, pet_id: 9, profile })).toEqual({ child_id: 5, pet_id: 9 });

@@ -15,9 +15,10 @@ import { PARENT_BEHAVIOUR_STRINGS, type BehaviourKind } from '@/modules/behaviou
 
 export type LightColor = 'green' | 'yellow' | 'red';
 export type LightReason = 'game_over' | 'phase3_alarm' | 'fell_ill_today' | 'missed_routines';
-export type RoutineType = 'feed' | 'water' | 'clean' | 'walk';
+/** `training` (M5-R03): one completed training session per day, only for a pet with training. */
+export type RoutineType = 'feed' | 'water' | 'clean' | 'walk' | 'training';
 
-export const ROUTINE_TYPES: readonly RoutineType[] = ['feed', 'water', 'clean', 'walk'];
+export const ROUTINE_TYPES: readonly RoutineType[] = ['feed', 'water', 'clean', 'walk', 'training'];
 
 export interface TrafficLight {
   color: LightColor;
@@ -312,6 +313,8 @@ export function readChildReport(value: unknown): ChildReport | null {
       water: readTypeTotals(byTypeRaw.water),
       clean: readTypeTotals(byTypeRaw.clean),
       walk: readTypeTotals(byTypeRaw.walk),
+      // Older servers send no `training` → zeros (the detail hides an all-zero training row).
+      training: readTypeTotals(byTypeRaw.training),
     },
     daily: readDayRows(value.daily),
     missed: readMissed(value.missed),
@@ -336,6 +339,7 @@ export const ROUTINE_LABELS: Record<RoutineType, string> = {
   water: 'Voda',
   clean: 'Čiščenje',
   walk: 'Sprehod',
+  training: 'Šola',
 };
 
 /**
@@ -450,6 +454,9 @@ const ACTIVITY_LABELS: Record<string, string> = {
   // M5-R02 behaviour events.
   took_out_pet: 'peljal(a) kužka ven',
   resolved_chewing: 'pospravil(a) copat in dal(a) igračo',
+  // M5-R03 training ("Šola").
+  trained_pet: 'opravil(a) vajo v šoli',
+  training_started: 'začel(a) vajo v šoli',
 };
 
 const SYSTEM_ACTIVITY_LABELS: Record<string, string> = {

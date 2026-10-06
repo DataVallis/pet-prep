@@ -228,6 +228,8 @@ export interface LiveStateOverrides {
   steps?: Partial<RawState['steps']>;
   /** M5-R02 `behaviour` (raw, may be malformed on purpose); `null` drops the key (older server). */
   behaviour?: Partial<Record<keyof RawState['behaviour'], unknown>> | null;
+  /** M5-R03 `training` (raw); `null` drops the key (older server). */
+  training?: Partial<Record<keyof RawState['training'], unknown>> | null;
   timezone?: string;
   server_time?: string;
 }
@@ -268,6 +270,7 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
     },
     steps: { steps_today: 1250, my_steps_today: 1250, goal: 4000, energy_level: 30, ...o.steps },
     behaviour: o.behaviour === null ? undefined : { ...base.behaviour, ...o.behaviour },
+    training: o.training === null ? undefined : { ...base.training, ...o.training },
   };
   return raw as unknown as ChildPetState;
 }
@@ -350,7 +353,7 @@ export function makeScoredChild(overrides: Partial<FamilyChild> = {}): FamilyChi
 
 /** A missed routine as in `today.missed[]` (family offset); `kind` = the mess of a missed clean (M5-R02). */
 export function makeMissed(
-  type: 'feed' | 'water' | 'clean' | 'walk',
+  type: 'feed' | 'water' | 'clean' | 'walk' | 'training',
   opensAt: string,
   dueAt: string,
   date = '2026-10-04',
@@ -444,6 +447,102 @@ export function makeBehaviourEvent(
     kind,
     started_at: '2026-10-04T11:30:00+02:00',
     due_at: '2026-10-04T13:30:00+02:00',
+    ...overrides,
+  };
+}
+
+// ── M5-R03 training ──────────────────────────────────────────
+
+/** All four commands; `progress` per command (default 0). */
+export function makeTrainingCommands(progress: Partial<Record<'sit' | 'come' | 'place' | 'potty', number>> = {}) {
+  return (['sit', 'come', 'place', 'potty'] as const).map((command) => {
+    const p = progress[command] ?? 0;
+    return { command, progress: p, learned: p >= 100, last_practised_at: p > 0 ? '2026-10-03T17:00:00+02:00' : null };
+  });
+}
+
+/** `training` of a pet with training: nothing done today, 6 sessions left, may start. */
+export function makeEnabledTraining(overrides: Partial<ChildPetState['training']> = {}): ChildPetState['training'] {
+  return makeTrainingState({
+    enabled: true,
+    commands: makeTrainingCommands({ sit: 40, come: 100 }),
+    daily_budget_seconds: 300,
+    daily_budget_left_seconds: 300,
+    can_start: true,
+    ...overrides,
+  });
+}
+
+/** Obeys pattern of `makeTrainingSessionPayload` (8 cues, 2 s lead-in, every 6 s). */
+export const TRAINING_OBEYS = [true, false, true, true, false, true, true, false] as const;
+/** The dog obeys 1 000 ms after each obeyed cue; the praise window is 1 500 ms. */
+export const TRAINING_OBEY_DELAY_MS = 1_000;
+
+/** `session` of a `training/start` 200 (instants Ljubljana, 2026-10-04 12:00). */
+export function makeTrainingSessionPayload(overrides: Record<string, unknown> = {}) {
+  return {
+    id: '7b0d7a8e-3c1f-4f7e-9d65-0a6a9c0b1e11',
+    command: 'sit',
+    started_at: '2026-10-04T12:00:00+02:00',
+    ends_at: '2026-10-04T12:00:50+02:00',
+    expires_at: '2026-10-04T12:01:50+02:00',
+    duration_ms: 50_000,
+    praise_window_ms: 1_500,
+    min_reaction_ms: 150,
+    trials: TRAINING_OBEYS.map((obeys, index) => {
+      const cue = 2_000 + index * 6_000;
+      return {
+        index,
+        cue_at_ms: cue,
+        obeys,
+        obey_at_ms: obeys ? cue + TRAINING_OBEY_DELAY_MS : null,
+        window_end_ms: obeys ? cue + TRAINING_OBEY_DELAY_MS + 1_500 : null,
+      };
+    }),
+    ...overrides,
+  };
+}
+
+/** `result` of a `training/finish` 200. */
+export function makeTrainingResult(overrides: Record<string, unknown> = {}) {
+  return {
+    session_id: '7b0d7a8e-3c1f-4f7e-9d65-0a6a9c0b1e11',
+    command: 'sit',
+    successes: 3,
+    obeyed: 5,
+    trials: TRAINING_OBEYS.map((obeys, index) => ({
+      index,
+      obeys,
+      outcome: obeys ? (index < 4 ? 'in_time' : 'too_late') : 'waited',
+      tap_ms: obeys ? 2_000 + index * 6_000 + 1_200 : null,
+    })),
+    progress_before: 40,
+    progress_after: 43,
+    progress_gain: 3,
+    ...overrides,
+  };
+}
+
+/**
+ * `training.session` of the child state (PR #53): a sibling's session carries no schedule;
+ * the child's own (`mine: true`) carries the whole schedule for a resume.
+ */
+export function makeRunningSession(
+  overrides: Partial<NonNullable<ChildPetState['training']['session']>> = {},
+): NonNullable<ChildPetState['training']['session']> {
+  const mine = overrides.mine ?? false;
+  const schedule = makeTrainingSessionPayload();
+  return {
+    id: 's1',
+    command: 'come',
+    started_at: '2026-10-04T11:59:40+02:00',
+    ends_at: '2026-10-04T12:00:30+02:00',
+    expires_at: '2026-10-04T12:01:30+02:00',
+    mine,
+    duration_ms: mine ? schedule.duration_ms : null,
+    praise_window_ms: mine ? schedule.praise_window_ms : null,
+    min_reaction_ms: mine ? schedule.min_reaction_ms : null,
+    trials: mine ? schedule.trials : null,
     ...overrides,
   };
 }

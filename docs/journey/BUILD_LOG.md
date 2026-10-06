@@ -8,6 +8,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-06 — »Šola« v aplikaciji: pohvali ob pravem trenutku (M5-R03, aplikacija)
+
+**Kaj se je zgodilo:** Mini-igra šolanja je v aplikaciji. Otrok tapne **»Šola«** nad gumbi (oranžna pika = današnja vaja še čaka), izbere ukaz in 50 sekund gleda kužka: pokaže se »Sedi!«, nato »Kuža se usede.« — in takrat velik zelen gumb **»Pohvali«**. Po vsakem ukazu takoj prijazen odziv (»Bravo, ob pravem trenutku!«, »Prezgodaj«, »Malo prepozno«, »Super, da si počakal(a)«), na koncu napredek (»Sedi: 40 % → 43 %«) in pri 100 % »Kuža zna ukaz »Sedi«!«. Starš v podrobnostih otroka vidi »Kuža zna: sedi ✓, pridi 60 % …« in ali je bila vaja danes opravljena. Aplikacija še ni v trgovini.
+
+**Zakaj je pomembno:** Otrok se nauči bistva pozitivne vzgoje z lastnimi prsti — in nikoli ni grajan: tudi »počakal si, ker kuža ni ubogal« je pravilen odgovor.
+
+**Številke:** 4 ukazi · 8 ukazov v 50 s · okno za pohvalo 1,5 s · odziv po vsakem ukazu takoj · ura vaje se začne, ko telefon dobi urnik (zamik omrežja ne pokvari časa) · pohvala šteje šele 150 ms po tem, ko kuža uboga (prej ne more biti odziv) · vaja se po ponovnem zagonu aplikacije nadaljuje · 68 novih avtomatskih testov (18 zaslonskih, 50 za logiko igre in podatke).
+
+**Kako povedati:**
+- 📣 Omrežja: "»Sedi!« … kuža sede … ZDAJ! 💚 Pohvali ob pravem trenutku — nova Šola v PetPrep."
+- 👩 Starši: "Vaja traja manj kot minuto, aplikacija nikoli ne graja, vi pa vidite, kaj kuža že zna."
+- 🧒 Otroci: "Ko se kuža usede, hitro pritisni Pohvali! Če ne uboga — počakaj, tudi to je prav."
+- 🛠 Tehnično: "Taps se merijo z monotono uro od prejema urnika, po vrnitvi iz ozadja se uskladi z wall clock; lokalni odziv uporablja isto pravilo kot strežniški scorer; finish natanko enkrat na sejo."
+
+---
+
 ## 2026-10-06 — Kuža se uči: sedi, pridi, prostor, lulat zunaj (M5-R03, strežnik)
 
 **Kaj se je zgodilo:** Strežnik zna šolanje psa. Otrok izbere ukaz (sedi, pridi, prostor, lulat zunaj) in začne 50-sekundno vajo: 8-krat reče ukaz, kuža včasih uboga 0,8–2,5 sekunde kasneje — in otrok mora v **1,5 sekunde** pritisniti »Pohvali«. Prezgodaj ali prepozno = nič napredka. Urnik izbere in pritiske oceni **strežnik**; spremenjena (vdrta) aplikacija bi sicer lahko poslala izmišljene popolne pritiske, a dnevna omejitev (5 min) omeji, koliko bi s tem pridobila, sumljivo enakomerne odzive strežnik zabeleži, pohvala hitreje od 150 ms po ukazu pa ne šteje. Napredek vsakega ukaza 0–100 %; **Border Collie se uči 2× hitreje** (Coren: prvi na lestvici poslušnosti), **vsak mešanček ±20 %** — enkrat izžreban in shranjen (David). Ena vaja na dan je **nova rutina v Care Score** (kot sprehod); brez vaje znanje upada. Mladiček, ki zna »lulat zunaj«, pokaže, da mora ven, in naredi manj luž; »prostor« zmanjša grizenje med menjavo zob. Šolanje dobijo samo novi psi iz aplikacije, ki ga zna prikazati; stari psi ostanejo nespremenjeni. 27 novih testov, vsa obstoječa pravila zelena.
@@ -18,7 +34,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Kako povedati:**
 - 📣 Omrežja: "Pohvala mora priti v pravem trenutku — tudi v PetPrep. Kuža sede, ti imaš sekundo in pol. Prezgodaj? Ni se naučil nič. 🐶🎓"
-- 👩 Starši: "Otrok se nauči, kako pes res uči: kratke vaje, vsak dan, nagrada takoj. Vi vidite: 'Kuža zna: sedi ✓, pridi 60 %'." *(prikaz v aplikaciji — načrt)*
+- 👩 Starši: "Otrok se nauči, kako pes res uči: kratke vaje, vsak dan, nagrada takoj. Vi vidite: 'Kuža zna: sedi ✓, pridi 60 %'." *(prikaz v aplikaciji od 6. 10. 2026 — glej vnos zgoraj)*
 - 🧒 Otroci: "Ko kuža sede — hitro pritisni Pohvali! Border Collie je pameten, tvoj mešanček pa je čisto svoj."
 - 💼 Investitorji: "Vsak nov sistem v igri je iz virov (Coren, AKC, VCA, ASPCA) ali označen kot naš predlog; urnik in oceno naredi strežnik; ker urnik vidi aplikacija, bi spremenjena aplikacija lahko ponaredila pritiske — tveganje omejujeta dnevni čas vaje in beleženje sumljivih vaj, sprotno razkrivanje urnika je možnost po MVP."
 - 🤝 Partnerji (pasje šole): "PetPrep uči osnovno načelo pozitivne vzgoje — odlična priprava na tečaj v pasji šoli."

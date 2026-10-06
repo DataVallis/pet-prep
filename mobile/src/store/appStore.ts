@@ -153,6 +153,9 @@ interface AppStore {
   /** "Moj kuža" album over the HUD (the HUD video pauses while it is open). */
   isAlbumVisible: boolean;
   setAlbumVisible: (visible: boolean) => void;
+  /** "Šola" training overlay over the HUD (M5-R03; the HUD video pauses while it is open). */
+  isTrainingVisible: boolean;
+  setTrainingVisible: (visible: boolean) => void;
   /**
    * Parent: a tapped push (M3-02) asks the dashboard to open the detail of the child
    * caring for this pet; the dashboard clears it once handled.
@@ -253,6 +256,8 @@ export const useAppStore = create<AppStore>((set) => ({
   setCleaningOverlayVisible: (isCleaningOverlayVisible) => set({ isCleaningOverlayVisible }),
   isAlbumVisible: false,
   setAlbumVisible: (isAlbumVisible) => set({ isAlbumVisible }),
+  isTrainingVisible: false,
+  setTrainingVisible: (isTrainingVisible) => set({ isTrainingVisible }),
   pushTarget: null,
   setPushTarget: (pushTarget) => set({ pushTarget }),
 
@@ -272,6 +277,7 @@ export const useAppStore = create<AppStore>((set) => ({
       isWalkModalVisible: false,
       isCleaningOverlayVisible: false,
       isAlbumVisible: false,
+      isTrainingVisible: false,
       pushTarget: null,
     }),
 }));
