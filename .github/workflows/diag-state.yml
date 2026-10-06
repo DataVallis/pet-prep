@@ -7,6 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
+      - name: Tokens and access log (read-only)
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/id && chmod 600 ~/.ssh/id
+          ssh-keyscan -H 138.199.172.97 >> ~/.ssh/known_hosts 2>/dev/null
+          T=$(ssh -i ~/.ssh/id deploy@138.199.172.97 "cd /opt/petprep/repo/backend && docker compose -p backend -f compose.production.yaml exec -T app sh -c 'php artisan tinker --execute=\"\$(echo JGNpZCA9IElsbHVtaW5hdGVcU3VwcG9ydFxGYWNhZGVzXERCOjp0YWJsZSgncGV0X2NhcmV0YWtlcnMnKS0+d2hlcmUoJ3BldF9pZCcsIDMpLT53aGVyZU51bGwoJ2VuZGVkX2F0JyktPnZhbHVlKCd1c2VyX2lkJyk7CiR0ID0gSWxsdW1pbmF0ZVxTdXBwb3J0XEZhY2FkZXNcREI6OnRhYmxlKCdwZXJzb25hbF9hY2Nlc3NfdG9rZW5zJyktPndoZXJlKCd0b2tlbmFibGVfaWQnLCAkY2lkKS0+b3JkZXJCeURlc2MoJ2lkJyktPmxpbWl0KDUpLT5nZXQoWydpZCcsJ25hbWUnLCdhYmlsaXRpZXMnLCdsYXN0X3VzZWRfYXQnLCdjcmVhdGVkX2F0JywnZXhwaXJlc19hdCddKTsKZWNobyBqc29uX2VuY29kZShbJ2NoaWxkJz0+JGNpZCwndG9rZW5zJz0+JHRdKTsK | base64 -d)\"' 2>&1 | tail -c 1800")
+          echo "$T" | fold -w 900 | while IFS= read -r l; do echo "::notice title=tok::$l"; done
+          A=$(ssh -i ~/.ssh/id deploy@138.199.172.97 "cd /opt/petprep/repo/backend && docker compose -p backend -f compose.production.yaml logs --since 4h caddy 2>&1 | grep -F '/api/child/' | grep -v '\"status\":200' | sed -E 's/.*\"ts\":([0-9.]+).*\"uri\":\"([^\"]*)\".*\"status\":([0-9]+).*/\\1 \\2 \\3/' | tail -n 9")
+          echo "$A" | while IFS= read -r l; do echo "::warning title=caddy::$l"; done
       - name: Read-only state dump
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
