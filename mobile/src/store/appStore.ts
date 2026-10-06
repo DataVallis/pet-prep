@@ -6,7 +6,8 @@
  */
 
 import { create } from 'zustand';
-import type { Pet, PetState, PetUpdatedBroadcast } from '@/types';
+import type { Pet, PetUpdatedBroadcast } from '@/types';
+import type { VideoState } from '@/modules/petMedia/petMedia';
 
 export interface AppUser {
   id: number;
@@ -136,8 +137,8 @@ interface AppStore {
    * State video the child HUD is showing (after fallbacks; null = image / placeholder /
    * unknown). The vet lock darkens its veil unless this is a real `sick` video.
    */
-  hudVideoState: PetState | null;
-  setHudVideoState: (state: PetState | null) => void;
+  hudVideoState: VideoState | null;
+  setHudVideoState: (state: VideoState | null) => void;
 
   // UI state
   isWalkModalVisible: boolean;

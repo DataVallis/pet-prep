@@ -1,6 +1,6 @@
 import * as SecureStore from 'expo-secure-store';
 
-import { ApiError, api, setUnauthorizedHandler } from '@/api/client';
+import { ApiError, CLIENT_FEATURES, api, generatePinBody, setUnauthorizedHandler } from '@/api/client';
 
 const getItem = SecureStore.getItemAsync as jest.Mock;
 
@@ -125,7 +125,7 @@ describe('api client', () => {
   describe('M2-02 endpoints', () => {
     type Init = RequestInit & { headers: Record<string, string> };
 
-    it('pin-login is anonymous: no Bearer even when a token is stored, body {pin, device_name}', async () => {
+    it('pin-login is anonymous: no Bearer even when a token is stored, body {pin, device_name, features}', async () => {
       getItem.mockResolvedValue('stale-token');
       const fetchMock = mockFetch(200, { token: 't' });
 
@@ -134,7 +134,8 @@ describe('api client', () => {
       expect(url).toMatch(/\/api\/child\/pin-login$/);
       expect(init.method).toBe('POST');
       expect(init.headers.Authorization).toBeUndefined();
-      expect(JSON.parse(String(init.body))).toEqual({ pin: '734912', device_name: 'iPhone' });
+      // M5-R02: the child's device always declares what it can show.
+      expect(JSON.parse(String(init.body))).toEqual({ pin: '734912', device_name: 'iPhone', features: ['behaviour_events'] });
       getItem.mockReset();
     });
 
@@ -179,10 +180,29 @@ describe('api client', () => {
       await api.generatePin({ child_id: 5, pet_id: 9, profile });
       const bodies = fetchMock.mock.calls.map(([, init]) => JSON.parse(String((init as Init).body)));
       expect(bodies).toEqual([
-        { child_id: 5, breed: 'mutt', origin: 'adopted', age_stage: 'senior' },
+        { child_id: 5, breed: 'mutt', origin: 'adopted', age_stage: 'senior', features: ['behaviour_events'] },
         { child_id: 5, pet_id: 9 },
       ]);
       getItem.mockReset();
+    });
+
+    it('generatePinBody declares features only with the profile (M5-R02 gate)', () => {
+      const profile = { breed: 'mutt', origin: 'bought', age_stage: 'puppy' } as const;
+      expect(generatePinBody({ child_id: 5, profile })).toEqual({
+        child_id: 5,
+        breed: 'mutt',
+        origin: 'bought',
+        age_stage: 'puppy',
+        features: ['behaviour_events'],
+      });
+      // Joining a pet: the shared pet keeps what its creating app declared.
+      expect(generatePinBody({ child_id: 5, pet_id: 9, profile })).toEqual({ child_id: 5, pet_id: 9 });
+      // Legacy / re-login call without a profile: no features.
+      expect(generatePinBody({ child_id: 5 })).toEqual({ child_id: 5 });
+      expect(generatePinBody({ child_id: 5, pet_id: null, profile: null })).toEqual({ child_id: 5 });
+      // A fresh array each time (the constant is never shared / mutated).
+      const a = generatePinBody({ child_id: 1, profile }).features;
+      expect(a).not.toBe(CLIENT_FEATURES);
     });
 
     it('revokeChildTokens deletes /api/parent/children/{id}/tokens', async () => {

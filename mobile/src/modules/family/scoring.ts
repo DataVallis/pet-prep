@@ -9,6 +9,7 @@
  */
 
 import { familyClock, localParts } from '@/modules/childPet/familyTime';
+import { PARENT_BEHAVIOUR_STRINGS, type BehaviourKind } from '@/modules/behaviour/behaviour';
 
 // ── Types ─────────────────────────────────────────────────────
 
@@ -38,6 +39,8 @@ export interface CareScore {
 
 export interface MissedRoutine {
   type: RoutineType;
+  /** M5-R02: which mess a missed `clean` was (poop | accident | chewing); null otherwise / older server. */
+  kind: BehaviourKind | null;
   /** Family-local day of the routine (`YYYY-MM-DD`). */
   date: string;
   opens_at: string;
@@ -183,10 +186,24 @@ function isRoutineType(value: unknown): value is RoutineType {
   return ROUTINE_TYPES.some((t) => t === value);
 }
 
+const BEHAVIOUR_KINDS: readonly BehaviourKind[] = ['poop', 'accident', 'chewing'];
+
+function readKind(value: unknown): BehaviourKind | null {
+  return BEHAVIOUR_KINDS.find((k) => k === value) ?? null;
+}
+
 function readMissed(value: unknown): MissedRoutine[] {
   return arr(value).flatMap((item) => {
     if (!isObj(item) || !isRoutineType(item.type)) return [];
-    return [{ type: item.type, date: str(item.date), opens_at: str(item.opens_at), due_at: str(item.due_at) }];
+    return [
+      {
+        type: item.type,
+        kind: item.type === 'clean' ? readKind(item.kind) : null,
+        date: str(item.date),
+        opens_at: str(item.opens_at),
+        due_at: str(item.due_at),
+      },
+    ];
   });
 }
 
@@ -239,6 +256,9 @@ export function readProgress(value: unknown): ChallengeProgress | null {
   };
 }
 
+/** System rows that are bad news (fallback when a payload has no `is_positive`). */
+const NEGATIVE_ACTIVITIES: readonly string[] = ['ignored_warning', 'pet_accident', 'pet_chewed'];
+
 export function readTimeline(value: unknown): TimelineEntry[] {
   return arr(value).flatMap((item) => {
     if (!isObj(item)) return [];
@@ -253,7 +273,8 @@ export function readTimeline(value: unknown): TimelineEntry[] {
         actor_user_id: actor,
         actor_nickname: strOrNull(item.actor_nickname),
         created_at: strOrNull(item.created_at),
-        is_positive: typeof item.is_positive === 'boolean' ? item.is_positive : item.activity_type !== 'ignored_warning',
+        is_positive:
+          typeof item.is_positive === 'boolean' ? item.is_positive : !NEGATIVE_ACTIVITIES.includes(item.activity_type),
       },
     ];
   });
@@ -316,6 +337,15 @@ export const ROUTINE_LABELS: Record<RoutineType, string> = {
   clean: 'Čiščenje',
   walk: 'Sprehod',
 };
+
+/**
+ * Label of a missed routine: a missed `clean` names its mess (M5-R02) — "Luža",
+ * "Pregrizen copat", "Kakec"; without a kind (older server) the type label ("Čiščenje").
+ */
+export function missedLabel(item: Pick<MissedRoutine, 'type' | 'kind'>): string {
+  if (item.type === 'clean' && item.kind !== null) return PARENT_BEHAVIOUR_STRINGS.kinds[item.kind];
+  return ROUTINE_LABELS[item.type];
+}
 
 /** "9", "9,5" — Slovenian decimal comma, at most one decimal. */
 export function formatAmount(value: number): string {
@@ -417,12 +447,18 @@ const ACTIVITY_LABELS: Record<string, string> = {
   cleaned_poop: 'počistil(a)',
   walked_pet: 'dosegel(a) cilj sprehoda',
   signed_contract: 'podpisal(a) pogodbo',
+  // M5-R02 behaviour events.
+  took_out_pet: 'peljal(a) kužka ven',
+  resolved_chewing: 'pospravil(a) copat in dal(a) igračo',
 };
 
 const SYSTEM_ACTIVITY_LABELS: Record<string, string> = {
   ignored_warning: 'Opozorilo ni bilo upoštevano',
   // M5-R01: meal whose window lies in quiet hours (school / sleep) — done by the parent.
   parent_fed_pet: 'Obrok med tihimi urami (nahrani starš)',
+  // M5-R02 (system, negative): nobody took the puppy out in time / the dog chewed something.
+  pet_accident: 'Mladiček je naredil lužo',
+  pet_chewed: 'Kuža je pregrizel copat',
 };
 
 /** "Maja nahranil(a) kužka", "Opozorilo ni bilo upoštevano". */

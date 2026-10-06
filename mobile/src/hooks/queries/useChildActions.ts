@@ -1,5 +1,6 @@
 /**
- * Child care actions (M1-13 / M1-14): `useFeed`, `useWater`, `useClean`, `useSyncSteps`.
+ * Child care actions (M1-13 / M1-14): `useFeed`, `useWater`, `useClean`, `useSyncSteps`;
+ * M5-R02: `useTakeOut` ("Pelji ven") and `useResolveChewing` ("Pospravi in daj igračo").
  *
  * Feed / water / clean are optimistic — the metric jumps to 100 % at once — and the
  * cache is then ALWAYS replaced by the server's `state` (200, 422 refusal, 423 lock).
@@ -44,6 +45,8 @@ const CALLS: Record<CareAction, () => Promise<ChildActionResponse>> = {
   feed: () => api.feedPet(),
   water: () => api.waterPet(),
   clean: () => api.cleanPet(),
+  take_out: () => api.takeOutPet(),
+  resolve_chewing: () => api.resolveChewing(),
 };
 
 /** Put the server's answer into the cache, or undo the optimistic change and refetch. */
@@ -92,6 +95,8 @@ function useCareAction(action: CareAction) {
 export const useFeed = () => useCareAction('feed');
 export const useWater = () => useCareAction('water');
 export const useClean = () => useCareAction('clean');
+export const useTakeOut = () => useCareAction('take_out');
+export const useResolveChewing = () => useCareAction('resolve_chewing');
 
 export interface StepSyncVariables {
   stepsToday: number;

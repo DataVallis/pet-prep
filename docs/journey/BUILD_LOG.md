@@ -8,6 +8,20 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-06 — »Pelji ven« in pregrizen copat zdaj tudi v aplikaciji (M5-R02, aplikacija)
+
+**Kaj se je zgodilo:** Mladiček ima v aplikaciji peti gumb **»Pelji ven«**, nad gumbi pa mirno odštevanje (»Kuža bo moral ven čez ~1 h 20 min« — brez rdeče barve in alarmov). Če ga nihče ne pelje ven, nastane luža: otrok jo pobriše v znani igri čiščenja, le da so namesto madežev lužice. Pregrizen copat se pokaže ob kužku z gumbom **»Pospravi in daj igračo«** — copata otrok ne »drgne«. Brezplačni pes pokaže lužo in copat kot risbo v aplikaciji, plačljiva pasma kot AI video. Starš pri otroku vidi, do kdaj mora mladiček ven, odprte nerede z rokom, kolikokrat ga je otrok v 7 dneh peljal ven, in v časovnici »Mladiček je naredil lužo«. Stari psi in starejši strežniki ostanejo brez sprememb. 75 novih testov (skupaj 915 zelenih).
+
+**Zakaj je pomembno:** Pravilo iz veterinarskih navodil (»1 ura na mesec starosti«) otrok zdaj občuti vsak dan — in se nauči načrtovati, ne pa panično reagirati.
+
+**Kako povedati:**
+- 🧒 Otroci: "Poglej nad gumbi — tam piše, čez koliko časa mora tvoj mladiček ven. Pritisni »Pelji ven« in ura se začne znova."
+- 👩 Starši: "Vidite, do kdaj mora mladiček ven in kdo ga je peljal — brez alarmov, ki bi otroka strašili."
+- 💼 Investitorji: "Brezplačni pes dobi risbe, plačljiva pasma AI videe istih trenutkov — vidna razlika brez stroška na dogodek."
+- 🛠 Tehnično: stanje vedno s strežnika (optimistično + odgovor strežnika), odštevanje v strežniškem času, SVG z react-native-svg, brez novih nativnih modulov.
+
+---
+
 ## 2026-10-06 — Mladiček mora ven, kuža grize copate (M5-R02, strežnik)
 
 **Kaj se je zgodilo:** Kuža se zdaj vede kot pravi pes. **Mladiček zdrži približno eno uro na mesec starosti** (2 meseca → 2 uri; Ryan Veterinary Hospital Univerze v Pensilvaniji in WebMD) — otrok ga z gumbom **»Pelji ven«** odpelje ven in ura se začne znova; če pozabi, nastane **luža**. Ura teče samo, ko je otrok doma in buden (izven tihih ur): mladiček, ki gre ven ob 6:30, pri šoli 8–13 naredi lužo šele ob 13:30. **Uničevanje (»uničil copat«)**: pes, ki včeraj ni dosegel cilja sprehoda, danes nekaj zgrize (dolgčas, ASPCA / PDSA); mladiček med menjavo zob (3–6 mesecev, American Kennel Club) občasno tudi brez razloga — pogostost (zdaj ~vsak drugi dan) je naš predlog, ki ga David še potrdi. Otrok ga reši z **»Pospravi in daj igračo«**. Oboje je rutina kot kakec: 2 uri časa, sicer zamujeno, in šteje v Care Score. Plačljiva pasma dobi dva nova AI videa (luža, grizenje), ustvarjena enkrat na življenjsko obdobje, ne ob vsakem dogodku.

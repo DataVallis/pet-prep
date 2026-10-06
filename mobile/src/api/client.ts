@@ -192,12 +192,29 @@ export interface GenerateChildPinRequest {
   profile?: NewPetProfile | null;
 }
 
-/** The JSON body of a generate-pin request: profile fields only for a new pet, always all three. */
-export function generatePinBody(body: GenerateChildPinRequest): Record<string, number | string> {
+/**
+ * A UI feature this app build can show for a new pet (backend `ClientFeature`; the schema
+ * types it as `string` because unknown values are dropped server-side, not refused).
+ */
+export type ClientFeature = 'behaviour_events';
+
+/**
+ * What this build declares (M5-R02, PR #42): it can show the behaviour events ("Pelji
+ * ven", luža, pregrizen copat). A new pet gets them only when BOTH the parent's
+ * generate-pin and the child's pin-login sent this — an older build on either phone
+ * never gets events it can't show.
+ */
+export const CLIENT_FEATURES: readonly ClientFeature[] = ['behaviour_events'];
+
+/**
+ * The JSON body of a generate-pin request: profile fields only for a new pet, always all
+ * three, together with `features` (never with `pet_id`, never without the profile).
+ */
+export function generatePinBody(body: GenerateChildPinRequest): Record<string, number | string | ClientFeature[]> {
   if (body.pet_id != null) return { child_id: body.child_id, pet_id: body.pet_id };
   if (body.profile) {
     const { breed, origin, age_stage } = body.profile;
-    return { child_id: body.child_id, breed, origin, age_stage };
+    return { child_id: body.child_id, breed, origin, age_stage, features: [...CLIENT_FEATURES] };
   }
   return { child_id: body.child_id };
 }
@@ -480,11 +497,12 @@ export const api = {
   /**
    * POST /api/child/pin-login (M2-02, public) — the child's only way in: PIN from the
    * parent → child token. 422 `invalid_pin` / `pin_not_usable`, 429 with Retry-After.
+   * Always declares this build's `features` (M5-R02: the child's device must show them too).
    */
   pinLogin: (pin: string, deviceName: string) =>
     apiRequest<PinLoginResponse>('/api/child/pin-login', {
       method: 'POST',
-      body: { pin, device_name: deviceName },
+      body: { pin, device_name: deviceName, features: [...CLIENT_FEATURES] },
       anonymous: true,
     }),
 
@@ -564,6 +582,16 @@ export const api = {
 
   /** POST /api/child/pet/clean — hygiene → 100 % (`unchanged` when already clean), 423 locked. */
   cleanPet: () => apiRequest<ChildActionResponse>('/api/child/pet/clean', { method: 'POST' }),
+
+  /**
+   * POST /api/child/pet/take-out — "Pelji ven" (M5-R02): the puppy's bladder clock restarts.
+   * `unchanged` for a repeat within 60 s, 422 `take_out_not_needed` (not a puppy / legacy), 423 locked.
+   * An accident that is already due is recorded first; the answer always carries `state`.
+   */
+  takeOutPet: () => apiRequest<ChildActionResponse>('/api/child/pet/take-out', { method: 'POST' }),
+
+  /** POST /api/child/pet/resolve-chewing — "Pospravi in daj igračo" (M5-R02); `unchanged` when nothing is chewed. */
+  resolveChewing: () => apiRequest<ChildActionResponse>('/api/child/pet/resolve-chewing', { method: 'POST' }),
 
   /** POST /api/child/pet/steps — today's cumulative steps of this device (max wins on the server). */
   syncSteps: (body: SyncStepsRequest) =>

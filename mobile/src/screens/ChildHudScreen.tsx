@@ -7,6 +7,10 @@
  * `state.water`; locks come from the server's per-child lock (M1-16). The dog itself is
  * `PetMediaView` (M4-03): the AI state video of `pet_state`, crossfaded, paused under
  * the lock screen / walk tracker and in the background.
+ * M5-R02: a puppy gets a fifth dock button "Pelji ven" with a calm countdown above the
+ * dock; an open accident / chewed slipper shows its scene (premium video, else an in-app
+ * graphic) — an accident is cleaned with the cleaning game (puddles), a slipper with
+ * "Pospravi in daj igračo", never by scrubbing.
  */
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
@@ -24,6 +28,7 @@ import {
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import {
   Beef,
+  DoorOpen,
   Droplet,
   Footprints,
   Heart,
@@ -39,15 +44,24 @@ import { useQueryClient } from '@tanstack/react-query';
 import { useAppStore, type WebSocketStatus } from '@/store/appStore';
 import { usePetWebSocket } from '@/hooks/usePetWebSocket';
 import { applyBroadcastToCache, childPetKey, useChildPet } from '@/hooks/queries/useChildPet';
-import { useClean, useFeed, useWater } from '@/hooks/queries/useChildActions';
+import { useClean, useFeed, useResolveChewing, useTakeOut, useWater } from '@/hooks/queries/useChildActions';
+import { useServerNow } from '@/hooks/useServerNow';
 import {
   classifyActionError,
+  cleanHint,
   failureMessage,
   feedHint,
-  HUD_HINTS,
   successMessage,
   waterHint,
 } from '@/modules/childPet/actionMessages';
+import {
+  BEHAVIOUR_STRINGS,
+  cleaningMess,
+  needsScrubbing,
+  onlyChewingOpen,
+  takeOutCountdown,
+} from '@/modules/behaviour/behaviour';
+import BehaviourPanel from '@/components/BehaviourPanel';
 import { lockStateFromView, type CareAction, type ChildPetView } from '@/modules/childPet/childPetView';
 import { computeHudLayout, METRICS_RESERVED_RIGHT, METRICS_RIGHT, type HudLayout } from '@/modules/hud/hudLayout';
 import { WS_BADGE_STRINGS, wsBadge } from '@/modules/hud/wsBadge';
@@ -71,6 +85,7 @@ export const HUD_STRINGS = {
   water: 'Voda',
   walk: 'Sprehod',
   clean: 'Očisti',
+  takeOut: BEHAVIOUR_STRINGS.takeOut,
   metrics: { hunger: 'Hrana', thirst: 'Voda', energy: 'Energija', hygiene: 'Čistoča' },
   ws: WS_BADGE_STRINGS,
   loading: 'Nalagam kužka …',
@@ -193,6 +208,7 @@ export default function ChildHudScreen() {
   const isAlbumVisible = useAppStore((s) => s.isAlbumVisible);
   const setAlbumVisible = useAppStore((s) => s.setAlbumVisible);
   const setHudVideoState = useAppStore((s) => s.setHudVideoState);
+  const hudVideoState = useAppStore((s) => s.hudVideoState);
   // No HUD → no video under the lock veil.
   useEffect(() => () => setHudVideoState(null), [setHudVideoState]);
 
@@ -217,6 +233,13 @@ export default function ChildHudScreen() {
   const feed = useFeed();
   const water = useWater();
   const clean = useClean();
+  const takeOut = useTakeOut();
+  const resolveChewing = useResolveChewing();
+  // M5-R02: a puppy (bladder clock) gets "Pelji ven" and the countdown ticks while unlocked.
+  // The server refuses take-out (422) exactly when `take_out` is null (PR #42) — and a pet
+  // created without the `behaviour_events` feature never has one.
+  const hasTakeOut = view !== undefined && view.behaviour.take_out !== null;
+  const serverNow = useServerNow(view?.clockSkewMs ?? 0, hasTakeOut && !(view?.lock.is_locked ?? false));
   // The album never survives a lock (it would reopen when the lock lifts) or the HUD.
   const lockedNow = view?.lock.is_locked ?? false;
   useEffect(() => {
@@ -263,7 +286,7 @@ export default function ChildHudScreen() {
     void queryClient.invalidateQueries({ queryKey: childPetKey });
   }, [queryClient]);
 
-  const mutations = { feed, water, clean } as const;
+  const mutations = { feed, water, clean, take_out: takeOut, resolve_chewing: resolveChewing } as const;
   const runAction = (action: CareAction) => {
     mutations[action].mutate(undefined, {
       onSuccess: (response) => {
@@ -336,8 +359,15 @@ export default function ChildHudScreen() {
   const waterDisabled = !view.water.can_water;
   const walkDisabled = locked;
   const alreadyClean = pet.hygiene_level >= 100 && !pet.needs_cleaning;
-  const cleanDisabled = locked || alreadyClean;
-  const showCleaning = !locked && (pet.needs_cleaning || isCleaningOverlayVisible);
+  // M5-R02: a chewed slipper is tidied up with its own button — never scrubbed.
+  const needsScrub = needsScrubbing(pet.needs_cleaning, view.behaviour);
+  const chewingOnly = pet.needs_cleaning && onlyChewingOpen(view.behaviour);
+  const cleanDisabled = locked || alreadyClean || chewingOnly;
+  const showCleaning = !locked && (needsScrub || (isCleaningOverlayVisible && !chewingOnly));
+  const takeOutClock = view.behaviour.take_out;
+  const countdown = !locked && takeOutClock !== null ? takeOutCountdown(takeOutClock, serverNow, view.timezone) : null;
+  const takeOutDisabled = !view.behaviour.can_take_out;
+  const iconSize = hasTakeOut ? 20 : 24;
   const stale = petQuery.isError;
   const albumAvailable = hasAlbum(pet.media);
   const showAlbum = isAlbumVisible && !locked && albumAvailable;
@@ -354,6 +384,7 @@ export default function ChildHudScreen() {
           media={pet.media}
           petState={pet.pet_state}
           lockReason={view.lock.reason}
+          scene={view.behaviour.scene}
           breed={pet.breed_type}
           // Vet visit / hard stop: the sick / sleeping video keeps playing under the
           // translucent grey lock (PRODUCT_SPEC §7). Paused under the opaque game-over /
@@ -492,40 +523,70 @@ export default function ChildHudScreen() {
         <View style={[styles.bottomDock, { bottom: layout.dockBottom }]} onLayout={onDockLayout} testID="hud-dock">
           <ActionButton
             testID="action-feed"
-            icon={<Beef color="#ffffff" size={24} />}
+            icon={<Beef color="#ffffff" size={iconSize} />}
             label={HUD_STRINGS.feed}
             onPress={() => runAction('feed')}
             disabled={feedDisabled}
             busy={feed.isPending}
             hint={feedHint(view)}
+            compact={hasTakeOut}
           />
           <ActionButton
             testID="action-water"
-            icon={<Droplet color="#ffffff" size={24} />}
+            icon={<Droplet color="#ffffff" size={iconSize} />}
             label={HUD_STRINGS.water}
             onPress={() => runAction('water')}
             disabled={waterDisabled}
             busy={water.isPending}
             hint={waterHint(view)}
+            compact={hasTakeOut}
           />
+          {hasTakeOut && (
+            <ActionButton
+              testID="action-take-out"
+              icon={<DoorOpen color="#ffffff" size={iconSize} />}
+              label={HUD_STRINGS.takeOut}
+              onPress={() => runAction('take_out')}
+              disabled={takeOutDisabled}
+              busy={takeOut.isPending}
+              hint={countdown?.hint ?? null}
+              accessibilityHint={countdown?.line}
+              compact
+            />
+          )}
           <ActionButton
             testID="action-walk"
-            icon={<Footprints color="#ffffff" size={24} />}
+            icon={<Footprints color="#ffffff" size={iconSize} />}
             label={HUD_STRINGS.walk}
             onPress={() => setWalkModalVisible(true)}
             disabled={walkDisabled}
             hint={`${formatSteps(view.steps.steps_today)}/${formatSteps(view.steps.goal)}`}
+            compact={hasTakeOut}
           />
           <ActionButton
             testID="action-clean"
-            icon={<Sparkles color="#ffffff" size={24} />}
+            icon={<Sparkles color="#ffffff" size={iconSize} />}
             label={HUD_STRINGS.clean}
             onPress={() => setCleaningOverlayVisible(true)}
             disabled={cleanDisabled}
             busy={clean.isPending}
-            hint={alreadyClean ? HUD_HINTS.clean : null}
+            hint={cleanHint(view)}
+            compact={hasTakeOut}
           />
         </View>
+
+        {/* M5-R02: puppy countdown and the scene of an open accident / chewed slipper, above the dock */}
+        {!locked && (
+          <BehaviourPanel
+            behaviour={view.behaviour}
+            countdown={countdown}
+            videoState={hudVideoState}
+            onResolveChewing={() => runAction('resolve_chewing')}
+            resolveBusy={resolveChewing.isPending}
+            bottom={layout.aboveDock}
+            right={METRICS_RESERVED_RIGHT}
+          />
+        )}
 
         {/* Conditional overlays (the lock overlay is rendered by AppNavigator above this screen) */}
         {isWalkModalVisible && !locked && (
@@ -542,7 +603,8 @@ export default function ChildHudScreen() {
         {showCleaning && (
           <CleaningOverlay
             onCleaned={handleCleaned}
-            onClose={pet.needs_cleaning ? undefined : () => setCleaningOverlayVisible(false)}
+            onClose={needsScrub ? undefined : () => setCleaningOverlayVisible(false)}
+            mess={cleaningMess(view.behaviour)}
           />
         )}
       </View>

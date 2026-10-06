@@ -16,7 +16,14 @@
  */
 
 import type { LockReason } from '@/modules/childPet/childPetView';
+import { isBehaviourScene, type BehaviourScene } from '@/modules/behaviour/behaviour';
 import type { BreedType, PetMedia, PetState } from '@/types';
+
+/**
+ * A stored video: one of the six pet states, or a M5-R02 behaviour scene (`accident`,
+ * `chewing` — premium only, played while `behaviour.scene` says so).
+ */
+export type VideoState = PetState | BehaviourScene;
 
 export type PetMediaStatus = 'disabled' | 'pending' | 'failed' | 'partial' | 'ready';
 
@@ -24,12 +31,12 @@ export type PetMediaStatus = 'disabled' | 'pending' | 'failed' | 'partial' | 're
 export interface PetMediaInfo {
   status: PetMediaStatus;
   referenceImageUrl: string | null;
-  /** Stored state videos only. */
-  videos: Partial<Record<PetState, string>>;
+  /** Stored state videos only (incl. behaviour scenes). */
+  videos: Partial<Record<VideoState, string>>;
   /** Server's pick for the current `pet_state` (fallback idle) — used when `videos` is empty (older payloads). */
   currentVideoUrl: string | null;
-  /** Entitled video states (idle first). */
-  states: PetState[];
+  /** Entitled video states (idle first; behaviour scenes after the six). */
+  states: VideoState[];
   expiresAt: string | null;
 }
 
@@ -47,6 +54,10 @@ export const EMPTY_PET_MEDIA: PetMediaInfo = {
 
 function isPetState(value: unknown): value is PetState {
   return typeof value === 'string' && (PET_STATES as readonly string[]).includes(value);
+}
+
+export function isVideoState(value: unknown): value is VideoState {
+  return isPetState(value) || isBehaviourScene(value);
 }
 
 function urlOrNull(value: unknown): string | null {
@@ -79,11 +90,11 @@ export function normalizePetMedia(raw: PetMedia | null | undefined | unknown, le
     return { ...EMPTY_PET_MEDIA, status: legacyStatus(legacy), currentVideoUrl, referenceImageUrl };
   }
   const m = raw as Record<string, unknown>;
-  const videos: Partial<Record<PetState, string>> = {};
+  const videos: Partial<Record<VideoState, string>> = {};
   if (typeof m.videos === 'object' && m.videos !== null && !Array.isArray(m.videos)) {
     for (const [state, url] of Object.entries(m.videos as Record<string, unknown>)) {
       const u = urlOrNull(url);
-      if (isPetState(state) && u !== null) videos[state] = u;
+      if (isVideoState(state) && u !== null) videos[state] = u;
     }
   }
   const status =
@@ -95,7 +106,7 @@ export function normalizePetMedia(raw: PetMedia | null | undefined | unknown, le
     referenceImageUrl: urlOrNull(m.reference_image_url),
     videos,
     currentVideoUrl: urlOrNull(m.current_video_url),
-    states: Array.isArray(m.states) ? m.states.filter(isPetState) : [],
+    states: Array.isArray(m.states) ? m.states.filter(isVideoState) : [],
     expiresAt: urlOrNull(m.expires_at),
   };
 }
@@ -134,8 +145,14 @@ export function sameMedia(a: string | null, b: string | null): boolean {
  * - parent's hard stop → `sleeping` (the game is paused, the dog rests)
  * - game over / inactive / unborn (contract) → no video (the lock screen covers the HUD;
  *   a happy loop behind "the dog was taken" would be wrong)
+ * - M5-R02: an open accident / chewing (`behaviour.scene`) without a lock → that scene;
+ *   `selectMediaSource` falls back to the `pet_state` chain when it isn't stored (free tier).
  */
-export function videoStateFor(petState: PetState, lockReason: LockReason | null = null): PetState | null {
+export function videoStateFor(
+  petState: PetState,
+  lockReason: LockReason | null = null,
+  scene: BehaviourScene | null = null,
+): VideoState | null {
   switch (lockReason) {
     case 'game_over':
     case 'inactive':
@@ -146,18 +163,23 @@ export function videoStateFor(petState: PetState, lockReason: LockReason | null 
     case 'hard_stopped':
       return 'sleeping';
     default:
-      return petState;
+      return scene ?? petState;
   }
 }
 
 export type MediaSource =
-  | { kind: 'video'; state: PetState | null; url: string; key: string }
+  | { kind: 'video'; state: VideoState | null; url: string; key: string }
   | { kind: 'image'; url: string; key: string }
   | { kind: 'placeholder' };
 
 export interface SelectOptions {
   /** Videos the player may load now (see `canPlayUrl`); default: all. Images are always usable. */
   canPlayVideo?: (url: string) => boolean;
+  /**
+   * Behaviour scene wanted: the pet state whose chain follows when the scene video is
+   * missing (default `sick` — a dirty dog is `sick` on the server).
+   */
+  sceneFallback?: PetState;
 }
 
 /**
@@ -176,9 +198,13 @@ export const VIDEO_FALLBACKS: Readonly<Record<PetState, readonly PetState[]>> = 
   playing: ['idle'],
 };
 
-/** Video states to try for `wanted`, best first. */
-export function videoChain(wanted: PetState): PetState[] {
-  const chain = [wanted, ...VIDEO_FALLBACKS[wanted]];
+/**
+ * Video states to try for `wanted`, best first. A behaviour scene (M5-R02) is followed by
+ * the chain of `sceneFallback` (the pet state the server reports).
+ */
+export function videoChain(wanted: VideoState, sceneFallback: PetState = 'sick'): VideoState[] {
+  if (isBehaviourScene(wanted)) return [wanted, ...videoChain(sceneFallback)];
+  const chain: PetState[] = [wanted, ...VIDEO_FALLBACKS[wanted]];
   return chain.includes('idle') ? chain : [...chain, 'idle'];
 }
 
@@ -187,14 +213,14 @@ export function videoChain(wanted: PetState): PetState[] {
  * sick → sleeping → idle) → the server's `current_video_url` (payloads without `videos`)
  * → reference image → placeholder. `wanted = null` skips the videos (locked states).
  */
-export function selectMediaSource(media: PetMediaInfo, wanted: PetState | null, options: SelectOptions = {}): MediaSource {
+export function selectMediaSource(media: PetMediaInfo, wanted: VideoState | null, options: SelectOptions = {}): MediaSource {
   const present = (url: string | null | undefined): url is string => typeof url === 'string' && url.length > 0;
   const playable = (url: string | null | undefined): url is string =>
     present(url) && (options.canPlayVideo?.(url) ?? true);
 
   if (wanted !== null) {
-    const candidates: Array<[PetState | null, string | null | undefined]> = videoChain(wanted).map(
-      (state): [PetState, string | undefined] => [state, media.videos[state]],
+    const candidates: Array<[VideoState | null, string | null | undefined]> = videoChain(wanted, options.sceneFallback).map(
+      (state): [VideoState, string | undefined] => [state, media.videos[state]],
     );
     if (Object.keys(media.videos).length === 0) candidates.push([null, media.currentVideoUrl]);
     for (const [state, url] of candidates) {

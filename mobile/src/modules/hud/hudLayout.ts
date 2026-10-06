@@ -56,6 +56,8 @@ export interface HudLayout {
   metricsHeight: number;
   /** `bottom` of the action dock. */
   dockBottom: number;
+  /** `bottom` of content that sits just above the dock (M5-R02 behaviour panel). */
+  aboveDock: number;
   /** `top` of the "stale" banner / toast (just below the header). */
   bannerTop: number;
   metric: MetricSizing;
@@ -161,6 +163,7 @@ export function computeHudLayout({
     metricsAvailable,
     metricsHeight: metricsColumnHeight(metric),
     dockBottom,
+    aboveDock: dockBottom + dockHeight + SPACING,
     bannerTop: headerTop + headerHeight + 6,
     metric,
   };
