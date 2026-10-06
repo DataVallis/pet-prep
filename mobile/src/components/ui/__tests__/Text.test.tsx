@@ -7,6 +7,10 @@ import { render, screen } from '@testing-library/react-native';
 
 import { Text, brandFontStyle } from '@/components/ui/Text';
 import { fonts } from '@/theme';
+import { setBrandFontsReady } from '@/theme/typography';
+
+beforeEach(() => setBrandFontsReady(true));
+afterEach(() => setBrandFontsReady(false));
 
 describe('brandFontStyle', () => {
   it('defaults to Instrument Sans Regular', () => {
@@ -38,7 +42,31 @@ describe('brandFontStyle', () => {
   });
 });
 
+describe('brandFontStyle before the fonts are registered', () => {
+  it('leaves the style alone (system font keeps its fontWeight)', () => {
+    setBrandFontsReady(false);
+    expect(brandFontStyle({ fontWeight: '700' })).toEqual({});
+  });
+});
+
 describe('Text', () => {
+  it('nested text without weight/family inherits the parent face', () => {
+    render(
+      <Text style={{ fontWeight: '700' }}>
+        Krepko <Text style={{ color: 'red' }}>povezava</Text>
+      </Text>,
+    );
+    const inner = StyleSheet.flatten(screen.getByText('povezava').props.style);
+    expect(inner.fontFamily).toBeUndefined();
+    expect(brandFontStyle({ fontWeight: '600' }, true).fontFamily).toBe(fonts.bodySemiBold);
+  });
+
+  it('without registered fonts renders the plain style', () => {
+    setBrandFontsReady(false);
+    render(<Text style={{ fontWeight: '700' }}>Sistem</Text>);
+    expect(StyleSheet.flatten(screen.getByText('Sistem').props.style)).toEqual({ fontWeight: '700' });
+  });
+
   it('renders the brand face and drops fontWeight', () => {
     render(<Text style={{ fontWeight: '700', fontSize: 14 }}>Pozdravljen</Text>);
     const style = StyleSheet.flatten(screen.getByText('Pozdravljen').props.style);

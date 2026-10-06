@@ -96,7 +96,7 @@ export default function AppNavigator() {
 
   return (
     <ErrorBoundary>
-      <View style={[styles.root, isAuthenticated && user.role !== 'parent' && styles.rootChild]}>
+      <View style={[styles.root, isAuthenticated && user.role !== 'parent' && pet !== null && styles.rootChild]}>
         {!isAuthenticated ? (
           // "Sem starš" (e-mail) or "Sem otrok" (PIN only, M2-02).
           <StartScreen />
@@ -104,7 +104,7 @@ export default function AppNavigator() {
           <ParentDashboardScreen />
         ) : (
           <>
-            <DarkStatusBar />
+            {pet !== null && <DarkStatusBar />}
             {pet === null ? (
               // A child session without a pet can only be a legacy e-mail child account
               // (pin-login always returns a pet). Its token must not linger: sign it out

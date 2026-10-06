@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Enotna podoba v aplikaciji, na spletu (petprep.si) in v gradivih — resna in zaupanja vredna za starše in partnerje, igriva na enem mestu za otroke. Pripravljeno za več živalskih vrst (ikona ni pes).
 
-**Številke:** 68 datotek · ~60 zaslonov in komponent na barvnih žetonih · 6 rezov pisav (namesto 15) · nov test prepreči trde barvne kode zunaj teme · 1060 avtomatskih testov zelenih.
+**Številke:** 68 datotek · ~60 zaslonov in komponent na barvnih žetonih · 6 rezov pisav (namesto 15) · nov test prepreči trde barvne kode zunaj teme · 1064 avtomatskih testov zelenih.
 
 **Kako povedati:**
 - 📣 Omrežja: "Nova preobleka! 👀💚 PetPrep je zdaj grafit in meta — pozdravite Radovedneža."

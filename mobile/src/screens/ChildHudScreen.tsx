@@ -400,10 +400,11 @@ export default function ChildHudScreen() {
   const takeOutClock = view.behaviour.take_out;
   const countdown = !locked && takeOutClock !== null ? takeOutCountdown(takeOutClock, serverNow, view.timezone) : null;
   const takeOutDisabled = !view.behaviour.can_take_out;
-  // CGP v2: the care that is due right now is the one solid-mint button.
-  const feedDue = !locked && view.feeding.can_feed;
-  const cleanDue = !cleanDisabled && needsScrub;
+  // CGP v2: the care that is due right now is the ONE solid-mint button —
+  // priority: puppy must go out > a mess to scrub > food.
   const takeOutDue = !takeOutDisabled && countdown?.due === true;
+  const cleanDue = !takeOutDue && !cleanDisabled && needsScrub;
+  const feedDue = !takeOutDue && !cleanDue && !locked && view.feeding.can_feed;
   const dockIcon = (due: boolean) => (due ? palette.graphite : palette.white);
   const iconSize = hasTakeOut ? 20 : 24;
   const stale = petQuery.isError;

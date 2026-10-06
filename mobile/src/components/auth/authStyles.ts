@@ -56,7 +56,7 @@ export const AUTH_STYLES = {
     justifyContent: 'center',
     gap: 8,
   } satisfies ViewStyle,
-  buttonDisabled: { opacity: 0.35 } satisfies ViewStyle,
+  buttonDisabled: { opacity: 0.45 } satisfies ViewStyle,
   primaryButtonText: { fontSize: 16, fontWeight: '600', color: light.onAction } satisfies TextStyle,
   switchRow: { marginTop: 14, alignItems: 'center', justifyContent: 'center', minHeight: 44 } satisfies ViewStyle,
   switchText: { fontSize: 14, color: light.mintText, fontWeight: '600' } satisfies TextStyle,

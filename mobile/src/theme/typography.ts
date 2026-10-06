@@ -1,7 +1,9 @@
 /**
  * CGP v2 type: Bricolage Grotesque 700/800 for headings and numbers, Instrument Sans
  * 400–700 for body and UI (both cover Slovenian diacritics). Loaded at runtime in
- * `App.tsx` via `useBrandFonts()`; until then (and in Jest) the system font is used.
+ * `App.tsx` via `useBrandFonts()`, which then calls `setBrandFontsReady(true)`. Until
+ * then (failed load, Jest) the brand Text leaves styles untouched → system font with
+ * the requested fontWeight.
  *
  * React Native picks a face by family name, not by `fontWeight`, so `@/components/ui/Text`
  * maps `fontWeight` → the matching Instrument Sans face whenever a style sets no family.
@@ -26,6 +28,17 @@ export const fonts = {
   bodySemiBold: 'InstrumentSans_600SemiBold',
   bodyBold: 'InstrumentSans_700Bold',
 } as const;
+
+let brandFontsReady = false;
+
+/** Whether the brand faces are registered (set by App once `useFonts` succeeded). */
+export function setBrandFontsReady(ready: boolean): void {
+  brandFontsReady = ready;
+}
+
+export function areBrandFontsReady(): boolean {
+  return brandFontsReady;
+}
 
 const DISPLAY_FAMILIES: ReadonlySet<string> = new Set([fonts.display, fonts.displayBold]);
 

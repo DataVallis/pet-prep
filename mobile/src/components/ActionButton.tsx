@@ -59,7 +59,7 @@ export default function ActionButton({
           compact && styles.buttonCompact,
           disabled ? styles.buttonDisabled : due ? styles.buttonDue : styles.buttonActive,
           busy && styles.buttonBusy,
-          pressed && !blocked && styles.buttonPressed,
+          pressed && !blocked && (due && !disabled ? styles.buttonDuePressed : styles.buttonPressed),
         ]}
       >
         {icon}
@@ -120,6 +120,10 @@ const styles = StyleSheet.create({
     backgroundColor: palette.mint,
     shadowColor: palette.mint,
     shadowOpacity: 0.35,
+  },
+  buttonDuePressed: {
+    transform: [{ scale: 0.9 }],
+    opacity: 0.85,
   },
   buttonDisabled: {
     borderWidth: 1,
