@@ -247,6 +247,9 @@ describe('edits', function () {
 
         Livewire::test(ListBreedStageParams::class)
             ->assertOk()
+            // 12 sleep_hours rows (2 breeds × 6) — all on one page, so the
+            // planted mutt senior row is visible whatever the page size.
+            ->set('tableRecordsPerPage', 50)
             ->searchTable('sleep_hours')
             ->assertSee('UNSOURCED — proposal')
             ->searchTable('feed_windows')
