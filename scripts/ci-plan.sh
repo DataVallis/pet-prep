@@ -7,12 +7,15 @@
 #   1. Changed files (path filter)
 #        pull_request       HEAD^1..HEAD of the PR merge commit = exactly what the PR
 #                           changes against the current main.
-#        push to main       base = head of the last SUCCESSFUL run of this workflow on
-#                           main (push / workflow_dispatch). Not event.before: a queued
-#                           run that GitHub cancels (concurrency) or a failed deploy
-#                           would otherwise drop its changes from the next diff. Base
-#                           not found / not an ancestor (force push, rollback re-run)
-#                           → full run.
+#        push to main       base = head of the last successful run of this workflow on
+#                           main (push / workflow_dispatch) whose job "Deploy to Hetzner
+#                           Production" SUCCEEDED = what production runs. Not
+#                           event.before and not merely the last green run: a queued run
+#                           that GitHub cancels (concurrency), a failed deploy or a green
+#                           run whose deploy was skipped (by design or by a bug — the
+#                           2026-10-06 incident) never drops changes from the next diff.
+#                           Base not found / not an ancestor (force push) / API error /
+#                           diff error / empty diff between different trees → full run.
 #        workflow_dispatch  full run (+ deploy on main).
 #        re-run (attempt>1) full run (+ deploy on main) — "Re-run all jobs" repeats a deploy
 #                           (only of the current main head: scripts/ci-deploy-guard.sh).
@@ -35,10 +38,12 @@
 #      pull_request and workflow_dispatch runs never skip on markers (dispatch = the
 #      manual "test everything + deploy" button).
 #
-# Env: EVENT_NAME, GIT_REF, RUN_ATTEMPT, REPO (owner/name), WORKFLOW_FILE (basename), GH_TOKEN (for
-# gh), GITHUB_OUTPUT, GITHUB_STEP_SUMMARY (optional). Test hooks: CI_PLAN_GH (gh binary).
+# Env: EVENT_NAME, GIT_REF, RUN_ATTEMPT, REPO (owner/name), WORKFLOW_FILE (basename),
+# DEPLOY_JOB_NAME (default "Deploy to Hetzner Production"), GH_TOKEN (for gh),
+# GITHUB_OUTPUT, GITHUB_STEP_SUMMARY (optional). Test hooks: CI_PLAN_GH (gh binary).
 # Output (GITHUB_OUTPUT): tree, base, mode, backend, mobile, scripts, image, deploy
-# (each suite/deploy "true"/"false").
+# (each suite/deploy "true"/"false"). The whole decision is also printed as a
+# "::notice title=plan::" annotation (readable through the check-runs API).
 set -Eeuo pipefail
 
 EVENT_NAME="${EVENT_NAME:?EVENT_NAME is required}"
@@ -49,8 +54,29 @@ GH="${CI_PLAN_GH:-gh}"
 OUT="${GITHUB_OUTPUT:-/dev/stdout}"
 SUMMARY="${GITHUB_STEP_SUMMARY:-/dev/null}"
 WORKFLOW_PATH=".github/workflows/${WORKFLOW_FILE}"
+DEPLOY_JOB_NAME="${DEPLOY_JOB_NAME:-Deploy to Hetzner Production}"
 
 log() { echo "ci-plan: $*" >&2; }
+
+# last_deployed_sha: head sha of the newest successful main run (push / dispatch, this
+# repository) in which the deploy job succeeded. Prints nothing when none of the last 50
+# green runs deployed; returns 1 on any API error.
+last_deployed_sha() {
+  local runs id sha deployed
+  runs="$("$GH" api "repos/${REPO}/actions/workflows/${WORKFLOW_FILE}/runs?branch=main&status=success&per_page=50" \
+        --jq '.workflow_runs[] | select(.event == "push" or .event == "workflow_dispatch") | select(.head_repository.full_name == "'"${REPO}"'") | "\(.id) \(.head_sha)"' \
+        2>/dev/null)" || return 1
+  while read -r id sha; do
+    [ -n "$id" ] || continue
+    deployed="$("$GH" api "repos/${REPO}/actions/runs/${id}/jobs?per_page=100" \
+          --jq '[.jobs[] | select(.name == "'"${DEPLOY_JOB_NAME}"'" and .conclusion == "success")] | length' \
+          2>/dev/null)" || return 1
+    if [ "${deployed:-0}" -gt 0 ]; then
+      echo "$sha"
+      return 0
+    fi
+  done <<< "$runs"
+}
 
 tree="$(git rev-parse 'HEAD^{tree}')"
 mode="full"
@@ -72,17 +98,15 @@ case "$EVENT_NAME" in
       # re-run is how a deploy is repeated — test and deploy everything.
       reason="re-run (attempt ${RUN_ATTEMPT})"
     elif [ "$GIT_REF" = "refs/heads/main" ]; then
-      if base="$("$GH" api "repos/${REPO}/actions/workflows/${WORKFLOW_FILE}/runs?branch=main&status=success&per_page=50" \
-            --jq '.workflow_runs[] | select(.event == "push" or .event == "workflow_dispatch") | select(.head_repository.full_name == "'"${REPO}"'") | .head_sha' \
-            2>/dev/null | head -n 1)" && [ -n "$base" ]; then
-        if git merge-base --is-ancestor "$base" HEAD 2>/dev/null; then
-          mode="diff"
-        else
-          reason="last green main commit ${base} is not an ancestor of HEAD"
-        fi
-      else
+      if ! base="$(last_deployed_sha)"; then
         base=""
-        reason="no successful main run found (or API error)"
+        reason="GitHub API error while looking up the last deployed main run"
+      elif [ -z "$base" ]; then
+        reason="no successful deploy among the last 50 green main runs"
+      elif git merge-base --is-ancestor "$base" HEAD 2>/dev/null; then
+        mode="diff"
+      else
+        reason="last deployed main commit ${base} is not an ancestor of HEAD"
       fi
     else
       reason="push outside main"
@@ -112,8 +136,19 @@ classify() {
   done
 }
 
+files=()
 if [ "$mode" = diff ]; then
-  mapfile -t files < <(git diff --name-only --no-renames "$base" HEAD)
+  # Fail closed: a failing diff (e.g. a partial clone that cannot fetch an object) or an
+  # empty file list between two different trees means we don't know what changed.
+  if ! changed="$(git diff --name-only --no-renames "$base" HEAD)"; then
+    mode="full"; reason="git diff ${base} HEAD failed"
+  elif [ -z "$changed" ] && [ "$(git rev-parse "${base}^{tree}")" != "$tree" ]; then
+    mode="full"; reason="empty diff although ${base} has a different tree"
+  else
+    [ -n "$changed" ] && mapfile -t files <<< "$changed"
+  fi
+fi
+if [ "$mode" = diff ]; then
   classify "${files[@]}"
   log "base ${base}, ${#files[@]} changed file(s)"
 else
@@ -188,3 +223,11 @@ fi
   [ -n "$verified_by" ] && echo "| already green on the PR (same tree) | ${verified_by}|"
   echo "| deploy | ${deploy} |"
 } >> "$SUMMARY"
+
+# One-line decision as a workflow annotation (stdout; GitHub reads "::notice::"), so it
+# can be read without the job log (check-runs annotations API). % / CR / LF escaped.
+notice="event=${EVENT_NAME} ref=${GIT_REF} attempt=${RUN_ATTEMPT:-1} mode=${mode} base=${base:-none} reason=${reason:-none} changed_files=${#files[@]} tree=${tree}"
+notice="${notice} need: backend=${need_backend} mobile=${need_mobile} scripts=${need_scripts} image=${need_image} deploy_paths=${need_deploy}"
+notice="${notice} run: backend=${run_backend} mobile=${run_mobile} scripts=${run_scripts} image=${run_image} green_on_pr=${verified_by:-none} deploy=${deploy}"
+notice="${notice//'%'/'%25'}"; notice="${notice//$'\r'/'%0D'}"; notice="${notice//$'\n'/'%0A'}"
+echo "::notice title=plan::${notice}"
