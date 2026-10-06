@@ -8,6 +8,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-06 — Kuža se uči: sedi, pridi, prostor, lulat zunaj (M5-R03, strežnik)
+
+**Kaj se je zgodilo:** Strežnik zna šolanje psa. Otrok izbere ukaz (sedi, pridi, prostor, lulat zunaj) in začne 50-sekundno vajo: 8-krat reče ukaz, kuža včasih uboga 0,8–2,5 sekunde kasneje — in otrok mora v **1,5 sekunde** pritisniti »Pohvali«. Prezgodaj ali prepozno = nič napredka. Urnik in oceno naredi **strežnik** (aplikacija pošlje samo čase pritiskov), zato vaje ni mogoče prelisičiti. Napredek vsakega ukaza 0–100 %; **Border Collie se uči 2× hitreje** (Coren: prvi na lestvici poslušnosti), **vsak mešanček ±20 %** — enkrat izžreban in shranjen (David). Ena vaja na dan je **nova rutina v Care Score** (kot sprehod); brez vaje znanje upada. Mladiček, ki zna »lulat zunaj«, pokaže, da mora ven, in naredi manj luž; »prostor« zmanjša grizenje med menjavo zob. Šolanje dobijo samo novi psi iz aplikacije, ki ga zna prikazati; stari psi ostanejo nespremenjeni. 27 novih testov, vsa obstoječa pravila zelena.
+
+**Zakaj je pomembno:** Šolanje je največja razlika med »imeti psa« in »skrbeti za psa« — in ga je v resničnem življenju najlažje opustiti. Igra nauči otroka bistva pozitivne vzgoje: **nagrada šteje ob pravem trenutku**. Starš dobi nov dokaz o odgovornosti: vsakodnevno vajo.
+
+**Številke:** 4 ukazi · vaja 50 s (8 ukazov, okno za pohvalo 1,5 s) · do 5 min vaje na dan (≈ 6 vaj; viri AKC / PetMD: 5–10 min, mladiček ≤ 15 min) · Border Collie 2× · mešanček 0,8–1,2× · mešanček z eno vajo na dan obvlada ukaz v ~16 dneh, vse 4 ukaze v ~12 tednih (predlog) · −2 % na zamujen dan (predlog) · lulat zunaj 100 % → ~¾ manj luž (predlog, VCA) · nov vir S47 (VCA, veterinarska vedenjska specialistka).
+
+**Kako povedati:**
+- 📣 Omrežja: "Pohvala mora priti v pravem trenutku — tudi v PetPrep. Kuža sede, ti imaš sekundo in pol. Prezgodaj? Ni se naučil nič. 🐶🎓"
+- 👩 Starši: "Otrok se nauči, kako pes res uči: kratke vaje, vsak dan, nagrada takoj. Vi vidite: 'Kuža zna: sedi ✓, pridi 60 %'." *(prikaz v aplikaciji — načrt)*
+- 🧒 Otroci: "Ko kuža sede — hitro pritisni Pohvali! Border Collie je pameten, tvoj mešanček pa je čisto svoj."
+- 💼 Investitorji: "Vsak nov sistem v igri je iz virov (Coren, AKC, VCA, ASPCA) ali označen kot naš predlog; strežnik je sodnik, zato so rezultati za certifikat zaupanja vredni."
+- 🤝 Partnerji (pasje šole): "PetPrep uči osnovno načelo pozitivne vzgoje — odlična priprava na tečaj v pasji šoli."
+- 🛠 Tehnično: "Server-authoritative mini-game: start vrne urnik (cue / obey / window v ms), finish pošlje le tap offsete; oceni ga čista funkcija, napredek je double 0–100 pod row lockom, ena aktivna seja na psa (partial unique index), TTL 60 s, idempotenten finish."
+
+---
+
 ## 2026-10-06 — Hitrejša pot od popravka do strežnika (CI)
 
 **Kaj se je zgodilo:** Vsaka sprememba je doslej dvakrat čakala na iste teste — enkrat v predlogu (PR) in še enkrat po združitvi v `main`, preden je šla na strežnik. Zdaj sistem prepozna, da je bila *točno ista* koda (isto git drevo) že preizkušena v predlogu, in na `main` teste preskoči. Testira se samo tisto, kar se je spremenilo: sprememba dokumentacije je preverjena v manj kot minuti in ne gre na strežnik, sprememba samo mobilne aplikacije prav tako ne. Strežniški testi (1.040) tečejo vzporedno — lokalno 186 s namesto 288 s. Pred vsako namestitvijo strežnik še vedno sam zgradi in preveri sliko, preden vklopi vzdrževalni način. Ob vsakem dvomu (neznana osnova, napaka GitHub API, drugačno drevo) se testira vse.

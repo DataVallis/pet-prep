@@ -1,6 +1,6 @@
 # PetPrep za starše
 
-> **Stanje na dan 5. 10. 2026:** aplikacija je v razvoju (zaprta testna faza še ni začela). Spodaj je opisano, kako PetPrep deluje po specifikaciji; kar še ni zgrajeno, je označeno *načrt*.
+> **Stanje na dan 6. 10. 2026:** aplikacija je v razvoju (zaprta testna faza še ni začela). Spodaj je opisano, kako PetPrep deluje po specifikaciji; kar še ni zgrajeno, je označeno *načrt*.
 
 ## V enem stavku
 Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu menja vodo, čisti za njim in z njim **zares hodi**. Vi pa v živo vidite, ali to res počne.
@@ -61,6 +61,14 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), odrasel potrebuje 
 - **Mladiček mora ven:** mladiček zdrži približno **1 uro na mesec starosti** (2 meseca → 2 uri; vir: Ryan Veterinary Hospital Univerze v Pensilvaniji, WebMD). Otrok ga s tipko **»Pelji ven«** odpelje in ura se začne znova. Ura teče **samo izven tihih ur** (šola, spanje) — noč je vaša. Če ga nihče ne pelje ven pravočasno, nastane **luža** — otrok jo počisti kot običajen nered.
 - **Uničen copat:** pes, ki prejšnji dan ni dosegel cilja sprehoda, naslednji dan nekaj zgrize (dolgčas ob premalo gibanja — vir: ASPCA, PDSA). Mladiček med menjavo zob (3–6 mesecev, vir: American Kennel Club) občasno grize tudi sam od sebe — največ enkrat na dan, pogostost je **naš predlog, ki ga še preverjamo** (zdaj približno vsak drugi dan). Otrok ga reši s tipko **»Pospravi in daj igračo«**.
 - Oboje šteje kot rutina **čiščenja**: rešiti v 2 urah izven tihih ur. Nikoli se ne zgodi med tihimi urami, med ustavljeno igro ali pri veterinarju. Otrok vidi mirno odštevanje (»Kuža bo moral ven čez ~1 h 20 min«, brez alarmov) in gumb **»Pelji ven«**; lužo pobriše v igri čiščenja, copat pospravi s svojim gumbom. Brezplačni pes pokaže lužo in pregrizen copat kot sliko v aplikaciji, plačljiva pasma kot AI video. Vi pri otroku vidite, do kdaj mora mladiček ven, odprte nerede z rokom, kolikokrat ga je otrok v zadnjih 7 dneh peljal ven / pospravil copat, zamujeno čiščenje z vrsto (»Luža«, »Pregrizen copat«) in v časovnici »… peljal(a) kužka ven«, »Mladiček je naredil lužo«, »Kuža je pregrizel copat« *(naslednja različica aplikacije)*.
+
+**Šolanje (dresura)** *(od 6. 10. 2026 na strežniku; zaslon za vajo v aplikaciji je **načrt** — naslednja različica; velja samo za nove pse, ustvarjene z različico aplikacije, ki šolanje zna; psi iz prejšnjih izzivov in starejših različic šolanja nimajo)*:
+- Kuža se uči štirih ukazov: **sedi**, **pridi**, **prostor** in **lulat zunaj** (navajanje na čistočo). Napredek vsakega ukaza je od 0 do 100 %.
+- **Vaja je kratka igra (50 sekund):** otrok da ukaz, kuža včasih uboga — takrat mora otrok **v sekundi in pol pritisniti »Pohvali«**. Prezgodnja ali prepozna pohvala ne nauči ničesar (tako je tudi pri pravem psu — nagrada šteje ob pravem trenutku). Ali in kdaj kuža uboga, določi strežnik, zato vaje ni mogoče »prelisičiti«.
+- **Hitrost učenja po pasmi:** Border Collie se uči **dvakrat hitreje** (po raziskavi Stanleyja Corena, *The Intelligence of Dogs*, je Border Collie prvi na lestvici poslušnosti); vsak mešanček je malo drugačen — uči se do **20 % hitreje ali počasneje** od povprečja (posamezen pes se razlikuje bolj kot pasma — revija *Science*, 2022). To je **odločitev PetPrep** na podlagi teh virov, ne točna številka iz literature.
+- **Ena vaja na dan je rutina** (kot sprehod) in šteje v **Care Score**; kuža lahko vadi največ **5 minut na dan** (predlog po American Kennel Club in PetMD: vaje po 5–10 minut, mladiček največ 15 minut na dan). Če otrok kakšen dan ne vadi, kuža znanje počasi pozablja (zdaj **2 % na dan pri vsakem ukazu** — **naš predlog, ki ga še preverjamo**). Dnevi, ko ste igro ustavili ali je bil kuža pri veterinarju, se ne štejejo.
+- **Kaj šolanje spremeni:** mladiček, ki zna »lulat zunaj«, **večkrat pokaže, da mora ven**, in naredi manj luž (pri 100 % se izogne približno trem od štirih luž — VCA: navajen mladiček se nauči »prositi«); »prostor« zmanjša grizenje med menjavo zob (do polovice — ASPCA). Velikost učinka je **naš predlog, ki ga še preverjamo**.
+- Vi boste videli **»Kuža zna: sedi ✓, pridi 60 %«**, ali je bila vaja danes opravljena in kdo jo je opravil *(prikaz v aplikaciji — naslednja različica)*.
 
 **Pošteno štetje korakov:** upoštevamo največ 200 korakov na minuto; če telefon javi več, preostanek štejemo šele, ko je to realno mogoče. Tako hitro tresenje telefona ne prinese več kot hoja.
 

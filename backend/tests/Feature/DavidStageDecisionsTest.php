@@ -168,8 +168,11 @@ describe('data migration for the rows PR #37 seeded', function () {
 
         expect(dsdParam('mutt', 'puppy', 0, 'feed_windows')->value)->toBe(BreedStageParamsSeeder::PUPPY_4_MEAL_WINDOWS)
             ->and(dsdParam('border-collie', 'puppy', 3, 'feed_windows')->value)->toBe(BreedStageParamsSeeder::PUPPY_3_MEAL_WINDOWS)
-            // The only open proposal is M5-R02's teething chewing chance (Claude, waiting for David).
-            ->and(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
+            // Open proposals: M5-R02's teething chewing chance and the M5-R03 training numbers (Claude, waiting for David).
+            ->and(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())->toEqualCanonicalizing([
+                'chewing_chance_per_day', 'training_minutes_per_day', 'training_progress_per_success',
+                'training_decay_per_missed_day', 'potty_training_accident_reduction', 'place_training_chewing_reduction',
+            ]);
 
         // Every confirmed row now equals a fresh seed of the same tuple (value + provenance).
         foreach (dsdConfirmedRows() as $row) {
@@ -315,9 +318,11 @@ describe('frozen migration data and rollback', function () {
         $audits = DB::table('breed_stage_param_changes')->orderBy('id')->get()->map(fn ($r) => (array) $r)->all();
         expect(collect($audits)->pluck('actor')->unique()->all())->toBe(['system: David decision 2026-10-05']);
 
-        // Roll back only the decision migration (newer migrations, e.g. M5-R02, stay —
-        // with --path the others in the step window are skipped as "not found").
-        expect(Artisan::call('migrate:rollback', ['--step' => 2, '--path' => 'database/migrations/'.DSD_MIGRATION]))->toBe(0);
+        // Roll back only the decision migration (newer migrations, e.g. M5-R02 / M5-R03, stay —
+        // with --path the others in the step window are skipped as "not found"). The window
+        // reaches back to the decision migration however many migrations come after it.
+        $steps = DB::table('migrations')->where('migration', '>=', str_replace('.php', '', DSD_MIGRATION))->count();
+        expect(Artisan::call('migrate:rollback', ['--step' => $steps, '--path' => 'database/migrations/'.DSD_MIGRATION]))->toBe(0);
         expect(DB::table('migrations')->where('migration', str_replace('.php', '', DSD_MIGRATION))->exists())->toBeFalse()
             ->and(Schema::hasColumn('breed_stage_param_changes', 'actor'))->toBeTrue()
             ->and(DB::table('breed_stage_param_changes')->orderBy('id')->get()->map(fn ($r) => (array) $r)->all())->toBe($audits);

@@ -76,6 +76,7 @@ class PetDecayService
         private LifeStageService $lifeStages,
         private CareScheduleService $schedule,
         private BehaviourEventService $behaviour,
+        private TrainingService $training,
     ) {}
 
     /**
@@ -340,6 +341,10 @@ class PetDecayService
         // The midnight also closes the day for the daily walk rule.
         $this->dailyWalks->closeDayIfNeeded($pet, $now, allowIllness: true);
         $newEnergy = (float) $pet->energy_level;
+
+        // Training (M5-R03): a finished day whose training routine was missed
+        // costs every command some progress (once per day, pointer on the pet).
+        $this->training->applyDecay($pet, $now);
 
         // Hygiene (M1-05): no gradual decay; scheduled random events that
         // fall into this interval drop it to 0. The neglect clock starts at

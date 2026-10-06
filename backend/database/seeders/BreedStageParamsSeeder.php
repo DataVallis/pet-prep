@@ -55,6 +55,9 @@ class BreedStageParamsSeeder extends Seeder
     /** David's M5-R02 decisions (behaviour events, 2026-10-06). */
     public const CONFIRMED_R02 = 'potrdil David 2026-10-06';
 
+    /** David's M5-R03 decisions (training, 2026-10-06): Border Collie 2×, mixed breed baseline ±20 %. */
+    public const CONFIRMED_R03 = 'potrdil David 2026-10-06';
+
     /** @var list<array{0: string, 1: string}> */
     public const PUPPY_4_MEAL_WINDOWS = [['07:00', '09:00'], ['11:00', '13:00'], ['15:00', '17:00'], ['19:00', '21:00']];
 
@@ -280,6 +283,50 @@ class BreedStageParamsSeeder extends Seeder
                 'quote' => 'Non-AKC/CKC recognized breeds like Jack Russell Terriers were excluded from rankings',
                 'notes' => 'Mixed breeds are not ranked; the game models them as average + individual randomness (proposal, M5 training).',
             ]);
+            // ── Training (M5-R03, David 2026-10-06) ─────────────────────────
+            $add('all', 0, StageParamKey::TrainingLearningMultiplier, $bc ? 2.0 : 1.0, $bc ? [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S34,S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'border_collie.trainability.learning_multiplier', 'decision' => self::CONFIRMED_R03,
+                'notes' => 'Game value (no literature factor): Coren rank #1 (S34), "brightest" tier < 5 repetitions vs 25–40 for average dogs (S35, secondary source). Multiplies the progress per correctly timed praise.',
+            ] : [
+                'unit' => '× baseline learning speed', 'source_id' => 'S35,S42', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'medium_mixed_breed.trainability.learning_multiplier', 'decision' => self::CONFIRMED_R03,
+                'notes' => 'Game baseline: mixed breeds have no Coren rank (S35); breed explains ~9 % of individual behaviour (S42).',
+            ]);
+            if (! $bc) {
+                // No row for the Border Collie = no individual variation.
+                $add('all', 0, StageParamKey::TrainingIndividualVariation, 0.2, [
+                    'unit' => '± share of the learning speed, drawn once per dog', 'source_id' => 'S42', 'confidence' => 'low', 'verified' => true,
+                    'ref' => 'medium_mixed_breed.trainability.individual_variation', 'decision' => self::CONFIRMED_R03,
+                    'notes' => 'Game value: uniform factor in [0.8, 1.2], seeded per pet and stored (pets.training_learning_factor). S42: individuals vary much more than breeds.',
+                ]);
+            }
+            $add('all', 0, StageParamKey::TrainingMinutesPerDay, 5, [
+                'unit' => 'minutes of mini-game per dog and family-local day', 'source_id' => 'S36,S37', 'confidence' => 'low', 'verified' => false,
+                'ref' => 'proposed_game_parameters.training_minigame_minutes',
+                'notes' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): S36 / S37 say 5–10 min sessions and ≤ 15 min a day for puppies; 5 min = the daily budget (≈ 6 sessions of 50 s), same for every stage.',
+            ]);
+            $add('all', 0, StageParamKey::TrainingProgressPerSuccess, 1.0, [
+                'unit' => 'percentage points per correctly timed praise (baseline)', 'confidence' => 'low', 'verified' => false,
+                'ref' => 'proposed_game_parameters.training_progress_per_success',
+                'notes' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): game balance — about 16 good sessions per command for a mixed breed.',
+            ]);
+            $add('all', 0, StageParamKey::TrainingDecayPerMissedDay, 2.0, [
+                'unit' => 'percentage points per missed training day, every command', 'confidence' => 'low', 'verified' => false,
+                'ref' => 'proposed_game_parameters.training_decay_per_missed_day',
+                'notes' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): no source gives a forgetting rate.',
+            ]);
+            $add('all', 0, StageParamKey::PottyTrainingAccidentReduction, 0.75, [
+                'unit' => 'share of due puppy accidents avoided at 100 % potty training', 'source_id' => 'S47,S31', 'confidence' => 'low', 'verified' => false,
+                'ref' => 'proposed_game_parameters.potty_training_accident_reduction',
+                'notes' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): a house-trained puppy learns to ask to go out (S47); the size of the effect is ours. Bladder hold (S30 / S31) unchanged.',
+            ]);
+            $add('all', 0, StageParamKey::PlaceTrainingChewingReduction, 0.5, [
+                'unit' => 'share of the teething chewing chance removed at 100 % place training', 'source_id' => 'S33', 'confidence' => 'low', 'verified' => false,
+                'ref' => 'proposed_game_parameters.place_training_chewing_reduction',
+                'notes' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): guidance teaches a puppy to chew its toys (S33); the size of the effect is ours. Chewing after a missed walk stays certain.',
+            ]);
+
             $add('all', 0, StageParamKey::LifespanYears, $bc ? 13.1 : 12.0, [
                 'unit' => 'years', 'source_id' => 'S15', 'confidence' => $bc ? 'high' : 'medium', 'verified' => true,
                 'ref' => $bc ? 'border_collie.lifespan.median_uk' : 'medium_mixed_breed.lifespan.median_uk_crossbreeds',

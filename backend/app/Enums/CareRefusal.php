@@ -31,4 +31,29 @@ enum CareRefusal: string
      * past the puppy stage has no bladder clock.
      */
     case TakeOutNotNeeded = 'take_out_not_needed';
+
+    /**
+     * Training (M5-R03) is only for a pet created by an app build that
+     * declared `training` (legacy-profile pets never — they keep the pre-M5
+     * rules).
+     */
+    case TrainingNotAvailable = 'training_not_available';
+
+    /** Another training session of this pet is still running (next_allowed_at = its expiry). */
+    case TrainingSessionActive = 'training_session_active';
+
+    /** The dog's training minutes of the family-local day are used up (next_allowed_at = local midnight). */
+    case TrainingDailyBudgetUsed = 'training_daily_budget_used';
+
+    /** Unknown session, another child's session, or a session of another pet. */
+    case TrainingSessionInvalid = 'training_session_invalid';
+
+    /** The session's schedule has not run its course yet. */
+    case TrainingSessionNotOver = 'training_session_not_over';
+
+    /** Finished after the session's expiry (TTL) — no progress. */
+    case TrainingSessionExpired = 'training_session_expired';
+
+    /** A tap offset lies outside the session (impossible value). */
+    case TrainingInvalidTaps = 'training_invalid_taps';
 }

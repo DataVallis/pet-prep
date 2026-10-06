@@ -136,7 +136,7 @@ class AccountExportService
         }
 
         $rows = 0;
-        foreach (['activities_log', 'pet_daily_steps', 'pet_daily_walks', 'pet_daily_routines', 'pet_status_periods', 'pet_hygiene_events'] as $table) {
+        foreach (['activities_log', 'pet_daily_steps', 'pet_daily_walks', 'pet_daily_routines', 'pet_status_periods', 'pet_hygiene_events', 'pet_training_sessions'] as $table) {
             $rows += DB::table($table)->whereIn('pet_id', $petIds)->count();
         }
 
@@ -239,9 +239,12 @@ class AccountExportService
         $routines = $byPet('pet_daily_routines', ['local_date', 'routine_type', 'slot', 'status', 'opens_at', 'due_at', 'done_at', 'actor_user_id'], 'local_date');
         $periods = $byPet('pet_status_periods', ['kind', 'started_at', 'ended_at'], 'started_at');
         $hygiene = $byPet('pet_hygiene_events', ['local_date', 'scheduled_at', 'status', 'cleaned_at'], 'scheduled_at');
+        // M5-R03 training: progress per command and every session (who, when, how well).
+        $skills = $byPet('pet_training_skills', ['command', 'progress', 'last_practised_at', 'sessions_completed']);
+        $sessions = $byPet('pet_training_sessions', ['user_id', 'command', 'local_date', 'started_at', 'status', 'finished_at', 'taps', 'result', 'progress_gain'], 'started_at');
         $expires = $this->media->urlExpiry();
 
-        return $pets->map(function (Pet $pet) use ($caretakers, $contracts, $activities, $steps, $walks, $routines, $periods, $hygiene, $expires): array {
+        return $pets->map(function (Pet $pet) use ($caretakers, $contracts, $activities, $steps, $walks, $routines, $periods, $hygiene, $skills, $sessions, $expires): array {
             $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
             $rows = fn (Collection $group) => $group->get($pet->id, collect());
 
@@ -314,6 +317,24 @@ class AccountExportService
                     'scheduled_at' => $this->iso($r->scheduled_at),
                     'status' => $r->status,
                     'cleaned_at' => $this->iso($r->cleaned_at),
+                ])->values()->all(),
+                'training_skills' => $rows($skills)->map(fn ($r) => [
+                    'command' => $r->command,
+                    'progress' => Pet::displayValue((float) $r->progress),
+                    'last_practised_at' => $this->iso($r->last_practised_at),
+                    'sessions_completed' => (int) $r->sessions_completed,
+                ])->values()->all(),
+                'training_sessions' => $rows($sessions)->map(fn ($r) => [
+                    // null = a deleted child.
+                    'child_id' => $r->user_id === null ? null : (int) $r->user_id,
+                    'command' => $r->command,
+                    'local_date' => $this->date($r->local_date),
+                    'started_at' => $this->iso($r->started_at),
+                    'status' => $r->status,
+                    'finished_at' => $this->iso($r->finished_at),
+                    'taps' => is_string($r->taps) ? json_decode($r->taps, true) : $r->taps,
+                    'result' => is_string($r->result) ? json_decode($r->result, true) : $r->result,
+                    'progress_gain' => $r->progress_gain === null ? null : round((float) $r->progress_gain, 2),
                 ])->values()->all(),
                 // Stored AI media as signed, expiring URLs (our copies, never fal's).
                 'media' => $pet->media

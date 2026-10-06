@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Concerns\HandlesChildPet;
 use App\Http\Requests\ChildPetRequest;
+use App\Http\Requests\FinishTrainingRequest;
+use App\Http\Requests\StartTrainingRequest;
 use App\Http\Requests\SyncStepsRequest;
 use App\Http\Resources\ChildPetStateResource;
 use App\Services\PetActivityService;
@@ -93,6 +95,40 @@ class ChildPetController extends Controller
         $pet = $this->childPet($request);
 
         return $this->actionResponse($this->activities->resolveChewing($pet, $request->user()), $pet, $request);
+    }
+
+    /**
+     * Training (M5-R03): start a reward-timing session for one command. The
+     * response carries `session` — the server's schedule (cues, whether and
+     * when the dog obeys, the praise window; offsets in ms since start).
+     * 422 training_not_available | training_session_active (next_allowed_at
+     * = its expiry) | training_daily_budget_used (next_allowed_at = local
+     * midnight); 423 while locked.
+     *
+     * POST /api/child/pet/training/start
+     */
+    public function startTraining(StartTrainingRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->startTraining($pet, $request->user(), $request->command()), $pet, $request);
+    }
+
+    /**
+     * Training (M5-R03): finish the session with the "Pohvali" tap offsets
+     * (ms since start). The server scores them against its schedule and
+     * returns `result` (per-cue outcome, progress before / after). A repeat
+     * of a completed finish → `unchanged` with the same result.
+     * 422 training_session_invalid | training_session_expired |
+     * training_session_not_over | training_invalid_taps | training_not_available.
+     *
+     * POST /api/child/pet/training/finish
+     */
+    public function finishTraining(FinishTrainingRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->finishTraining($pet, $request->user(), $request->sessionId(), $request->taps()), $pet, $request);
     }
 
     /**

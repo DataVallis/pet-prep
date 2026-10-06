@@ -1,7 +1,7 @@
 # Podatki o psih iz virov — raziskava za realistično simulacijo (M1-19 / M5)
 
 > **Status:** David je 5. 10. 2026 sprejel odločitve (DECISIONS); življenjske faze, obroki, gibanje, spanje, teža, učljivost in življenjska doba so **uvoženi v `breed_stage_params`** (M5-R01, `BreedStageParamsSeeder`, vsaka vrednost z `source_id` in `verified`; NEPODPRTO = `verified = false`). Odprte izbire (ure oken — zdaj 2-urna, meje faz, starosti ob prihodu, minute gibanja, starejši 2 obroka) je David potrdil 5. 10. 2026: v `data.json` polje `decision` (»potrdil David 2026-10-05«), v bazi `verified = true` — to je odločitev, ne literatura; vir ostane dokaz. `breed_configs` (hitrosti lakote / žeje, voda, kakci) ostaja neuvoženo.
-> **Datoteke:** `data.json` (strojno berljivo, vsaka vrednost z virom, citatom in zanesljivostjo) · `sources.md` (seznam virov S1–S46 z URL-ji, založnikom, datumom dostopa).
+> **Datoteke:** `data.json` (strojno berljivo, vsaka vrednost z virom, citatom in zanesljivostjo) · `sources.md` (seznam virov S1–S47 z URL-ji, založnikom, datumom dostopa).
 > **Pravilo:** vse, kar ni neposredno podprto z virom, je označeno **NEPODPRTO — predlog** (v JSON: `UNSOURCED — proposal`) in se staršem/otrokom ne sme prikazati kot dejstvo.
 > **Opozorilo o citatih:** strani sem bral z orodjem, ki vrne zahtevane odlomke. Pred uvozom naj človek odpre URL in preveri citat (zlasti PDF-je S1, S12, S13, S24, S30).
 
@@ -72,6 +72,7 @@ Nizka zanesljivost: Border Collie in mešanci niso bili v vzorcu S9 (21 psov).
 **e) Uničevanje (grizenje)** — visoko tveganje pri 3–6 mes. (menjava zob, S32/S33); po 6 mes. le ob dolgčasu (premalo gibanja/vaje; S33, S7, S12). Border Collie: večje tveganje ob nedoseženem gibanju (S4, S7).
 
 **f) Šolanje** — mini-igra ~5 min (S36/S37: 5–10 min, mladiček ≤15 min/dan); začetek pri 8 tednih; prvi ukazi: pridi, hoja na povodcu, sedi, prostor, ostani (S36). Hitrost učenja: Border Collie "najbistrejši" razred (<5 ponovitev — S35, preveriti v knjigi); mešanček povprečje + naključje (S42: pasma ~9 %). Pri ~8 mes. kratkotrajen upad poslušnosti (S43) — zanimiv realističen dogodek.
+**M5-R03 (6. 10. 2026):** David potrdil Border Collie 2× in mešanček ±20 % (`learning_multiplier`, `individual_variation` — odločitev, vir ostane dokaz). Dodano: S47 (VCA, navajen mladiček se nauči prositi, da gre ven) in citat ASPCA (S33) o usmerjanju grizenja; številke vaje (5 min / dan, +1 / −2 točki) in učinkov (0,75 manj luž, 0,5 manj grizenja pri 100 %) so predlogi brez vira (`verified = false`).
 
 **g) Spanje v videih** — mladiček 3–6 mes. 14–16 h, >6 mes. 12–14 h (RKC); merjenje kaže ~11 h → predlagam RKC razpone za "več spanja" v videih, brez strogih številk.
 

@@ -195,6 +195,8 @@ class FamilyDashboardService
                 'timeline' => $timelines[$pet->id] ?? [],
                 // M5-R02: puppy bladder clock, open messes, behaviour video (BehaviourPayload).
                 'behaviour' => BehaviourPayload::for($pet)->toArray(),
+                // M5-R03: "Kuža zna: sedi ✓, pridi 60 %" — progress per command, today's routine.
+                'training' => TrainingPayload::for($pet)->summary(),
                 // AI media (M4-05): signed URLs to our stored copies.
                 'media' => $this->media->mediaFor($pet)->toArray(),
             ], $this->scores->petSummary($board, $pet)))->values()->all(),

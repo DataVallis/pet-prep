@@ -157,6 +157,9 @@ Route::middleware(['auth:sanctum', 'ability:child', 'throttle:api'])
             // M5-R02 behaviour events: puppy take-out, tidy up after chewing.
             Route::post('pet/take-out', [ChildPetController::class, 'takeOut']);
             Route::post('pet/resolve-chewing', [ChildPetController::class, 'resolveChewing']);
+            // M5-R03 training mini-game: server-generated schedule, server-scored taps.
+            Route::post('pet/training/start', [ChildPetController::class, 'startTraining']);
+            Route::post('pet/training/finish', [ChildPetController::class, 'finishTraining']);
             Route::post('pet/steps', [ChildPetController::class, 'steps']);
             Route::post('contract', [ChildContractController::class, 'store']);
         });

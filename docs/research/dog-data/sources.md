@@ -1,6 +1,6 @@
 # Sources — dog data for realism (M1-19 / M5)
 
-All sources accessed **2026-10-05** by Claude (research branch `research/M1-19-dog-data`).
+All sources accessed **2026-10-05** by Claude (research branch `research/M1-19-dog-data`); S47 and the ASPCA (S33) chewing quote on **2026-10-06** (M5-R03).
 
 **How quotes were captured:** pages were read through a web-fetch tool that returns the
 requested passages; quotes in `data.json` are the passages it returned. Before any value is
@@ -60,6 +60,7 @@ particular for the PDFs, S1, S12, S13, S24, S30).
 | S44 | B | Purdue University Canine Welfare Science | Socialization & Early Exposure | https://caninewelfare.centers.purdue.edu/behavior/socialization/ | Sensitive period ~3–14 weeks. |
 | S45 | A | British Journal of Sports Medicine (2018) | Tudor-Locke C. et al. How fast is fast enough? Walking cadence (steps/min) as a practical estimate of intensity in adults. doi:10.1136/bjsports-2017-097628 | https://pmc.ncbi.nlm.nih.gov/articles/PMC6029645 | **Human** cadence; adults only. |
 | S46 | A (negative finding) | Colorado State University thesis (2011) | Weber D. I. S. Objectively measured free-living physical activity in pet dogs | https://mountainscholar.org/handle/10217/48144 | Uses accelerometer counts, **no dog steps/day** — shows steps are not a standard dog measure. |
+| S47 | B | VCA Animal Hospitals — E. Lindell, VMD, DACVB; M. Feyrecilde, LVT, VTS (Behavior) (updated 2023-01-18) | House Training for Puppies and Dogs | https://vcahospitals.com/know-your-pet/house-training-your-puppy | Added 2026-10-06 (M5-R03): a house-trained puppy learns to "ask" to go out. |
 
 ## Looked for but not found / not usable
 - **AKC breed page** `akc.org/dog-breeds/border-collie/` (colour list, "trainability" bar) — not reachable from this environment. Colour list therefore not sourced.

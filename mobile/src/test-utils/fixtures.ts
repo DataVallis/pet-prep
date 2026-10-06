@@ -198,6 +198,23 @@ export function makeChildState(
     contract: { signed: true, signed_at: '2026-10-04T09:00:00+00:00' },
     // M5-R02 behaviour events: no bladder clock, nothing open (a legacy-like pet).
     behaviour: { take_out: null, active_events: [], scene: null, can_take_out: false, can_resolve_chewing: false },
+    // M5-R03 training: off (pet created by an app without the `training` feature).
+    training: makeTrainingState(),
+  };
+}
+
+/** M5-R03 `training` of the child state; default = training off (legacy / older app). */
+export function makeTrainingState(overrides: Partial<ChildPetState['training']> = {}): ChildPetState['training'] {
+  return {
+    enabled: false,
+    commands: [],
+    today_done: false,
+    session: null,
+    session_seconds: 50,
+    daily_budget_seconds: 0,
+    daily_budget_left_seconds: 0,
+    can_start: false,
+    ...overrides,
   };
 }
 
@@ -375,6 +392,8 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     timeline: [],
     // M5-R02 behaviour events: nothing open.
     behaviour: { take_out: null, active_events: [], scene: null },
+    // M5-R03 training: off.
+    training: { enabled: false, commands: [], today_done: false, session_active: false },
     media: makeMedia(),
     traffic_light: { color: 'green', reasons: [] },
     care_score: { score: null, done: 0, expected: 0, illnesses: 0, since: '2026-10-01T08:00:00+00:00' },

@@ -13,7 +13,10 @@ namespace App\Enums;
  *    MEALS_PER_DAY, FEED_WINDOWS, EXERCISE_MINUTES_PER_DAY,
  *    EXERCISE_MINUTES_PER_AGE_MONTH, SLEEP_HOURS, and the M5-R02 behaviour
  *    keys ACCIDENT_HOLD_HOURS_PER_AGE_MONTH, CHEWING_CHANCE_PER_DAY;
- *  - breed keys (stage = all): the rest.
+ *  - breed keys (stage = all): the rest, including the M5-R03 training
+ *    keys (learning multiplier, individual variation, minutes per day,
+ *    progress per success, decay per missed day, and the effects of potty /
+ *    place training on accidents / chewing).
  */
 enum StageParamKey: string
 {
@@ -37,12 +40,23 @@ enum StageParamKey: string
     case GrowthEndMonths = 'growth_end_months';
     case CorenRank = 'coren_rank';
     case LifespanYears = 'lifespan_years';
+    // M5-R03 training (breed keys)
+    case TrainingLearningMultiplier = 'training_learning_multiplier';
+    case TrainingIndividualVariation = 'training_individual_variation';
+    case TrainingMinutesPerDay = 'training_minutes_per_day';
+    case TrainingProgressPerSuccess = 'training_progress_per_success';
+    case TrainingDecayPerMissedDay = 'training_decay_per_missed_day';
+    case PottyTrainingAccidentReduction = 'potty_training_accident_reduction';
+    case PlaceTrainingChewingReduction = 'place_training_chewing_reduction';
 
     public function isBreedLevel(): bool
     {
         return in_array($this, [
             self::StepsPerExerciseMinute, self::AdultWeightKg, self::HouseTrainedByMonths,
             self::TeethingMonths, self::GrowthEndMonths, self::CorenRank, self::LifespanYears,
+            self::TrainingLearningMultiplier, self::TrainingIndividualVariation, self::TrainingMinutesPerDay,
+            self::TrainingProgressPerSuccess, self::TrainingDecayPerMissedDay,
+            self::PottyTrainingAccidentReduction, self::PlaceTrainingChewingReduction,
         ], true);
     }
 
@@ -73,6 +87,15 @@ enum StageParamKey: string
             self::CorenRank => $value === null || (is_int($value) && $value >= 1)
                 ? null : 'Expected a rank ≥ 1 or null (not ranked).',
             self::LifespanYears => $isNumber($value) ? null : 'Expected a number of years.',
+            self::TrainingLearningMultiplier => $isNumber($value) && $value > 0 && $value <= 10
+                ? null : 'Expected a learning speed factor > 0 and ≤ 10 (mixed breed = 1).',
+            self::TrainingIndividualVariation, self::PottyTrainingAccidentReduction,
+            self::PlaceTrainingChewingReduction => $isNumber($value) && $value <= 1
+                ? null : 'Expected a share 0–1.',
+            self::TrainingMinutesPerDay => is_int($value) && $value >= 1 && $value <= 60
+                ? null : 'Expected whole minutes per day, 1–60.',
+            self::TrainingProgressPerSuccess, self::TrainingDecayPerMissedDay => $isNumber($value) && $value <= 100
+                ? null : 'Expected percentage points 0–100.',
         };
     }
 

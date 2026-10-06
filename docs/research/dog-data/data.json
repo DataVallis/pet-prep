@@ -3,7 +3,7 @@
     "task": "M1-19 / M5 — sourced dog data for realism",
     "compiled": "2026-10-05",
     "compiled_by": "Claude (research agent)",
-    "status": "Imported into breed_stage_params (M5-R01, BreedStageParamsSeeder). Game values David confirmed on 2026-10-05 carry a \"decision\" field.",
+    "status": "Imported into breed_stage_params (M5-R01, BreedStageParamsSeeder). Game values David confirmed on 2026-10-05 carry a \"decision\" field. M5-R03 (2026-10-06): training values added (learning multiplier, individual variation — David decisions; minutes, progress, decay, effects — proposals).",
     "sources": "docs/research/dog-data/sources.md",
     "conventions": {
       "value_object": "{value, unit, source_id, quote, confidence, notes}",
@@ -416,6 +416,14 @@
         "quote": "you can expect to take puppies out every 2 hours or so during the day",
         "confidence": "medium",
         "notes": ""
+      },
+      "learns_to_signal": {
+        "value": "a house-trained puppy can learn to 'ask' to go out (door, bell)",
+        "unit": "—",
+        "source_id": "S47",
+        "quote": "Once your puppy is physically mature enough to hold her bladder consistently, she can learn to 'ask' to be taken outside.",
+        "confidence": "medium",
+        "notes": "VCA (S47, E. Lindell VMD DACVB): 'She may develop a signal on her own, such as coming to you and barking, or going to the door and scratching.' Basis of the game effect potty training → fewer accidents (M5-R03); the size of the effect is not sourced."
       }
     },
     "teething_chewing": {
@@ -472,6 +480,14 @@
         "quote": "Daily exercise and mental stimulation may diminish tendency to seek novelty from boredom",
         "confidence": "high",
         "notes": ""
+      },
+      "guidance_reduces_chewing": {
+        "value": "guidance / training restricts chewing to appropriate objects",
+        "unit": "—",
+        "source_id": "S33",
+        "quote": "Although puppies do need to chew on things, gentle guidance can teach your puppy to restrict chewing to appropriate objects, like his own toys.",
+        "confidence": "medium",
+        "notes": "ASPCA (S33), fetched 2026-10-06. Basis of the game effect 'place' training → less chewing (M5-R03); the size of the effect is not sourced."
       }
     },
     "training": {
@@ -834,6 +850,19 @@
         "quote": "border collie ancestry correlates with increased biddability",
         "confidence": "high",
         "notes": "But breed explains ~9% of individual behaviour variation (S42) — individual dogs vary."
+      },
+      "learning_multiplier": {
+        "value": 2.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED as a number — game value. Coren ranks the Border Collie #1 (S34) and puts it in the 'brightest' tier (<5 repetitions to learn a command vs 25–40 for 'average', S35 — secondary source), but gives no speed factor. Training progress per correctly timed praise × 2.",
+        "derived_from": [
+          "S34",
+          "S35"
+        ],
+        "decision": "potrdil David 2026-10-06: Border Collie learns ~2× faster than the mixed-breed baseline (M5-R03)"
       }
     },
     "appearance": {
@@ -1056,6 +1085,31 @@
         "quote": null,
         "confidence": "low",
         "notes": "UNSOURCED — proposal. REALISM_SPEC §4 idea; the numeric spread is not sourced."
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× baseline learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED as a number — game baseline. Mixed breeds have no Coren rank (S35); breed explains only ~9 % of individual behaviour (S42), so the mixed breed is the average dog.",
+        "derived_from": [
+          "S35",
+          "S42"
+        ],
+        "decision": "potrdil David 2026-10-06: the mixed breed is the baseline (1.0) (M5-R03)"
+      },
+      "individual_variation": {
+        "value": 0.2,
+        "unit": "± share of the learning speed, drawn once per dog",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED as a number — game value for 'average + individual randomness' (game_model). S42: breed explains ~9 % of behavioural variation, individuals vary. Uniform draw in [0.8, 1.2], seeded per pet and stored (pets.training_learning_factor).",
+        "derived_from": [
+          "S42"
+        ],
+        "decision": "potrdil David 2026-10-06: mixed breed = baseline with a per-pet random factor ±20 % (M5-R03)"
       }
     },
     "appearance": {
@@ -1277,11 +1331,11 @@
     },
     "training_minigame_minutes": {
       "value": 5,
-      "unit": "minutes/session",
+      "unit": "minutes of mini-game per dog and family-local day (budget)",
       "source_id": null,
       "quote": null,
       "confidence": "low",
-      "notes": "UNSOURCED — proposal. S36/S37: 5–10 min sessions, ≤15 min/day for puppies.",
+      "notes": "UNSOURCED — proposal (Claude, M5-R03, waiting for David). S36/S37: 5–10 min sessions, ≤15 min/day for puppies. Used as the dog's daily training budget (one mini-game session ≈ 50 s, so ≤ 6 sessions a day); same for every stage (no source for adults).",
       "derived_from": [
         "S36",
         "S37"
@@ -1358,6 +1412,45 @@
       "confidence": "low",
       "notes": "UNSOURCED in the literature: 75 % of the adult minutes. Sources only say \"frequent short walks instead of one long one\" (S14) and that energy needs fall with age (S13).",
       "decision": "potrdil David 2026-10-05: senior = 75 % of the adult minutes"
+    },
+    "training_progress_per_success": {
+      "value": 1.0,
+      "unit": "percentage points of command progress per correctly timed praise (mixed-breed baseline, before the breed / individual factors)",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal (Claude, M5-R03, waiting for David). Game balance: a session has 8 cues; about 16 good daily sessions teach one command to a mixed breed (≈ 8 for a Border Collie), so all four commands take about the 12-week challenge with one session a day."
+    },
+    "training_decay_per_missed_day": {
+      "value": 2.0,
+      "unit": "percentage points lost by every command per family-local day whose training routine was missed",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal (Claude, M5-R03, waiting for David). REALISM_SPEC §4 / David 2026-10-06: without practice progress slowly decays; no source gives a rate. A day excused like the walk (hard stop / vet ≥ 50 % of the day) or the birth day never decays."
+    },
+    "potty_training_accident_reduction": {
+      "value": 0.75,
+      "unit": "share of due puppy accidents avoided at 100 % potty training (linear in progress)",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal (Claude, M5-R03, waiting for David). A house-trained puppy learns to 'ask' to go out (S47); full house training takes 4–6 months (S31). The bladder physics (1 h per month of age, S30 / S31) stay unchanged: when the hold runs out, a trained puppy signals instead of having an accident with this probability, and its clock restarts.",
+      "derived_from": [
+        "S47",
+        "S31"
+      ]
+    },
+    "place_training_chewing_reduction": {
+      "value": 0.5,
+      "unit": "share of the teething chewing chance removed at 100 % 'place' training (linear in progress)",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal (Claude, M5-R03, waiting for David). ASPCA: guidance teaches a puppy to restrict chewing to its toys (S33). Applies to the teething chance only — the chewing after a missed walk stays certain (David 2026-10-06).",
+      "derived_from": [
+        "S33"
+      ]
     }
   }
 }

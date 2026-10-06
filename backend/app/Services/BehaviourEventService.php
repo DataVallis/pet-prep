@@ -50,6 +50,15 @@ use Random\Randomizer;
  *    the hygiene schedule); the tick applies it like a "kakec" — not inside
  *    a freeze, not before birth, not in quiet hours changed later.
  *
+ * Training effects (M5-R03 — proposals, Claude, waiting for David): a puppy
+ * with `potty` progress may "ask to go out" instead of having the accident
+ * (S47) — when its hold runs out, the accident is avoided with probability
+ * potty_training_accident_reduction × potty progress (seeded roll per due
+ * instant) and the clock restarts as after a take-out; the bladder hold
+ * itself (S30 / S31) is unchanged. `place` progress multiplies the teething
+ * chewing chance by 1 − place_training_chewing_reduction × progress; the
+ * chewing after a missed walk stays certain (David 2026-10-06).
+ *
  * Every event is one `clean` routine with its kind (resolved within 2 h
  * outside quiet hours) and drops hygiene to 0, so the existing escalation
  * and push rules apply unchanged. Accidents are cleaned with the cleaning
@@ -113,6 +122,7 @@ class BehaviourEventService
         private readonly LifeStageService $lifeStages,
         private readonly RoutineLedgerService $ledger,
         private readonly DailyWalkService $walks,
+        private readonly TrainingService $training,
         private ?string $seedSalt = null,
     ) {
         $this->seedSalt ??= (string) config('app.key');
@@ -199,6 +209,15 @@ class BehaviourEventService
             $due = $clock['due_at'];
             if ($due->lessThanOrEqualTo($from)) {
                 $pet->potty_clock_started_at = $from;
+
+                continue;
+            }
+
+            // M5-R03 (proposal): a potty-trained puppy asks to go out instead.
+            $avoid = $this->training->accidentAvoidanceChance($pet, $pet->localDate($due));
+            if ($avoid > 0 && $this->training->accidentSignalRoll($pet, $due) < $avoid) {
+                Log::info('BehaviourEventService: trained puppy asked to go out', ['pet_id' => $pet->id, 'at' => $due->toIso8601String()]);
+                $pet->potty_clock_started_at = $due;
 
                 continue;
             }
@@ -377,7 +396,9 @@ class BehaviourEventService
             return 'walk_missed';
         }
 
-        return $this->isTeethingOn($pet, $localDate) && $roll < $this->teethingChanceOn($pet, $localDate)
+        // M5-R03 (proposal): `place` training lowers the teething chance.
+        return $this->isTeethingOn($pet, $localDate)
+            && $roll < $this->teethingChanceOn($pet, $localDate) * $this->training->chewingChanceFactor($pet, $localDate)
             ? 'teething'
             : null;
     }

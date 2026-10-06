@@ -6,6 +6,7 @@ use App\Enums\TokenAbility;
 use App\Models\User;
 use App\Services\BehaviourEventService;
 use App\Services\HygieneEventService;
+use App\Services\TrainingService;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Support\Facades\DB;
@@ -28,6 +29,7 @@ abstract class TestCase extends BaseTestCase
         // whole suite (useHygieneSalt() / useBehaviourSalt() still override it).
         $this->app->when(HygieneEventService::class)->needs('$seedSalt')->give(self::RNG_SALT);
         $this->app->when(BehaviourEventService::class)->needs('$seedSalt')->give(self::RNG_SALT);
+        $this->app->when(TrainingService::class)->needs('$seedSalt')->give(self::RNG_SALT);
     }
 
     public const RNG_SALT = 'petprep-test-suite';
