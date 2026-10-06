@@ -46,6 +46,20 @@ describe('family training (M5-R03)', () => {
     const running = { ...ENABLED, today_done: false, session_active: true };
     const patched = patchDashboardPet(data, makeBroadcast({ pet_id: 7, training: running }));
     expect(familyFromDashboard(patched)?.pets[0].training.session_active).toBe(true);
+    // A partial / malformed broadcast summary is normalised, never cached raw.
+    const partial = patchDashboardPet(data, makeBroadcast({ pet_id: 7, training: { enabled: true, commands: [{ command: 'sit', progress: '70' }], today_done: 'yes' } as never }));
+    const pet = partial?.family?.pets[0] as unknown as { training: unknown };
+    expect(pet.training).toEqual({
+      enabled: true,
+      commands: [
+        { command: 'sit', progress: 70, learned: false, last_practised_at: null },
+        { command: 'come', progress: 0, learned: false, last_practised_at: null },
+        { command: 'place', progress: 0, learned: false, last_practised_at: null },
+        { command: 'potty', progress: 0, learned: false, last_practised_at: null },
+      ],
+      today_done: false,
+      session_active: false,
+    });
     const kept = patchDashboardPet(data, makeBroadcast({ pet_id: 7 }));
     expect(familyFromDashboard(kept)?.pets[0].training.today_done).toBe(true);
   });

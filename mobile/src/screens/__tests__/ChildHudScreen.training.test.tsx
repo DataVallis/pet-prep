@@ -371,4 +371,74 @@ describe('ChildHudScreen — training (M5-R03)', () => {
     expect(isDisabled('training-start-sit')).toBe(true);
     expect(screen.getByTestId('training-blocked').props.children).toBe(S.blocked.day_ending);
   });
+
+  describe('QA PR review', () => {
+    it('the HUD under the game is hidden from TalkBack; the game itself is not', async () => {
+      await renderHud(withTraining());
+      expect(screen.getByTestId('hud-content').props.importantForAccessibility).toBe('auto');
+      fireEvent.press(screen.getByTestId('hud-training-open'));
+      const content = screen.getByTestId('hud-content', { includeHiddenElements: true });
+      expect(content.props.importantForAccessibility).toBe('no-hide-descendants');
+      expect(content.props.accessibilityElementsHidden).toBe(true);
+      // The overlay is outside hud-content → still reachable.
+      expect(screen.getByTestId('training-start-sit')).toBeTruthy();
+    });
+
+    it('while the session can still be saved only "Poskusi znova" is offered', async () => {
+      startTraining.mockResolvedValueOnce({ status: 'accepted', session: makeTrainingSessionPayload({ id: 'retry-1' }), state: withTraining() });
+      finishTraining.mockRejectedValueOnce(new TypeError('Network request failed'));
+      await renderHud(withTraining());
+      fireEvent.press(screen.getByTestId('hud-training-open'));
+      fireEvent.press(screen.getByTestId('training-start-sit'));
+      await flush();
+      await flush(50_200);
+      await flush();
+      expect(screen.getByTestId('training-retry')).toBeTruthy();
+      expect(screen.queryByTestId('training-back')).toBeNull();
+    });
+
+    it('a final failure offers "Nazaj v šolo"', async () => {
+      startTraining.mockResolvedValueOnce({ status: 'accepted', session: makeTrainingSessionPayload({ id: 'final-1' }), state: withTraining() });
+      finishTraining.mockRejectedValueOnce(new ApiError('x', 422, { reason: 'training_invalid_taps', state: withTraining() }));
+      await renderHud(withTraining());
+      fireEvent.press(screen.getByTestId('hud-training-open'));
+      fireEvent.press(screen.getByTestId('training-start-sit'));
+      await flush();
+      await flush(50_200);
+      await flush();
+      expect(screen.queryByTestId('training-retry')).toBeNull();
+      expect(screen.getByTestId('training-back')).toBeTruthy();
+    });
+
+    it('resume: cues that passed while the app was closed are neutral dots', async () => {
+      // Resumed 21 s into the session: cues 0–2 are over (neutral), 3+ still to play.
+      const own = makeRunningSession({ mine: true, id: 'own-away', started_at: '2026-10-04T11:59:39+02:00', ends_at: '2026-10-04T12:00:29+02:00', expires_at: '2026-10-04T12:01:29+02:00' });
+      await renderHud(withTraining(makeEnabledTraining({ can_start: false, session: own })));
+      await flush();
+      expect(screen.getByTestId('training-dot-away-0')).toBeTruthy();
+      expect(screen.getByTestId('training-dot-away-1')).toBeTruthy();
+      expect(screen.getByTestId('training-dot-away-2')).toBeTruthy();
+      expect(screen.getByTestId('training-dot-3')).toBeTruthy();
+      expect(screen.queryByTestId('training-feedback')).toBeNull();
+    });
+
+    it('a long hold is one tap: its release never counts, whatever the duration', async () => {
+      startTraining.mockResolvedValueOnce({ status: 'accepted', session: makeTrainingSessionPayload({ id: 'hold-1' }), state: withTraining() });
+      finishTraining.mockResolvedValueOnce({ status: 'accepted', result: makeTrainingResult(), state: withTraining() });
+      await renderHud(withTraining());
+      fireEvent.press(screen.getByTestId('hud-training-open'));
+      fireEvent.press(screen.getByTestId('training-start-sit'));
+      await flush();
+      const startedAt = Date.now();
+      await flush(3_300);
+      fireEvent(screen.getByTestId('training-praise'), 'pressIn', { nativeEvent: {} });
+      // Held for 5 s, released in cue 1's slot.
+      await flush(startedAt + 8_300 - Date.now());
+      fireEvent.press(screen.getByTestId('training-praise'));
+      await flush(startedAt + 50_200 - Date.now());
+      await flush();
+      expect(finishTraining).toHaveBeenCalledWith('hold-1', [3_300]);
+    });
+  });
 });
+

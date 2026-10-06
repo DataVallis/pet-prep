@@ -4,7 +4,7 @@
  * exactly once, background → finish within the TTL or explain the expiry, refusals and
  * locks become calm messages with the server state in the cache, offline finish retries.
  */
-import type { ReactNode } from 'react';
+import { StrictMode, type ReactNode } from 'react';
 import { act, renderHook } from '@testing-library/react-native';
 import { AppState, type AppStateStatus } from 'react-native';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -326,7 +326,7 @@ describe('useTrainingGame', () => {
       const { result } = setupResume(session);
       await advance(0);
       const phase = result.current.phase;
-      expect(phase.kind === 'running' && phase.resumed).toBe(true);
+      expect(phase.kind === 'running' && phase.resumedAtMs).toBe(20_000);
       expect(result.current.elapsedMs).toBe(20_000);
       // Cue 3 obeys at 21 000 → praise at 21 400 (local time + 1.4 s).
       await advance(1_400);
@@ -370,4 +370,119 @@ describe('useTrainingGame', () => {
       expect(finishTraining).toHaveBeenCalledTimes(1);
     });
   });
+
+  describe('QA PR review', () => {
+    function setupStrict(resume: TrainingSession | null) {
+      const client = new QueryClient({
+        defaultOptions: { queries: { retry: false, gcTime: Infinity }, mutations: { retry: false, gcTime: Infinity } },
+      });
+      writeChildState(client, stateWith());
+      const wrapper = ({ children }: { children: ReactNode }) => (
+        <StrictMode>
+          <QueryClientProvider client={client}>{children}</QueryClientProvider>
+        </StrictMode>
+      );
+      return renderHook(() => useTrainingGame({ clockSkewMs: 0, timezone: 'Europe/Ljubljana', clock, resume }), { wrapper });
+    }
+
+    it('StrictMode: one start request, one finish, the game still ticks', async () => {
+      startTraining.mockResolvedValueOnce(startBody());
+      finishTraining.mockResolvedValue(finishBody());
+      const { result } = setupStrict(null);
+      act(() => result.current.start('sit'));
+      await advance(0);
+      expect(startTraining).toHaveBeenCalledTimes(1);
+      expect(result.current.phase.kind).toBe('running');
+      await advance(50_000 + GAME_TICK_MS);
+      expect(finishTraining).toHaveBeenCalledTimes(1);
+      expect(result.current.phase.kind).toBe('result');
+    });
+
+    it('StrictMode: a resume runs once (double effects never finish twice)', async () => {
+      finishTraining.mockResolvedValue(finishBody());
+      const { result } = setupStrict(ownSchedule('2026-10-04T09:58:50.000Z'));
+      await advance(0);
+      expect(finishTraining).toHaveBeenCalledTimes(1);
+      expect(result.current.phase.kind).toBe('result');
+    });
+
+    it('StrictMode: a running resume continues once', async () => {
+      finishTraining.mockResolvedValue(finishBody());
+      const { result } = setupStrict(ownSchedule('2026-10-04T09:59:40.000Z'));
+      await advance(0);
+      const phase = result.current.phase;
+      expect(phase.kind === 'running' && phase.resumedAtMs).toBe(20_000);
+      await advance(30_000 + GAME_TICK_MS);
+      expect(finishTraining).toHaveBeenCalledTimes(1);
+    });
+
+    it.each([
+      ['training_invalid_taps', false],
+      ['training_session_invalid', false],
+      ['training_session_not_over', true],
+    ])('finish 422 %s → retry %s', async (reason, retry) => {
+      startTraining.mockResolvedValueOnce(startBody());
+      finishTraining.mockRejectedValueOnce(new ApiError('x', 422, { reason, state: stateWith() }));
+      const { result } = setup();
+      act(() => result.current.start('sit'));
+      await advance(0);
+      await advance(50_000 + GAME_TICK_MS);
+      const phase = result.current.phase;
+      expect(phase.kind).toBe('failed');
+      expect(phase.kind === 'failed' && phase.retry !== null).toBe(retry);
+    });
+
+    it('a lock while finishing (423 hard stop) → lock text, no retry, state cached', async () => {
+      startTraining.mockResolvedValueOnce(startBody());
+      let rejectFinish: (e: unknown) => void = () => undefined;
+      finishTraining.mockReturnValueOnce(new Promise((_r, rej) => (rejectFinish = rej)));
+      const lockedState = makeLiveChildState({ training: makeEnabledTraining({ can_start: false }), lock: { is_locked: true, reason: 'hard_stopped' }, pet: { is_hard_stopped: true } });
+      const { result, cached } = setup();
+      act(() => result.current.start('sit'));
+      await advance(0);
+      await advance(50_000 + GAME_TICK_MS);
+      expect(result.current.phase.kind).toBe('finishing');
+      await act(async () => {
+        rejectFinish(new ApiError('x', 423, { reason: 'hard_stopped', state: lockedState }));
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      const phase = result.current.phase;
+      expect(phase.kind === 'failed' && phase.message).toBe('Starš je ustavil igro.');
+      expect(phase.kind === 'failed' && phase.retry).toBeNull();
+      expect(cached()?.lock.is_locked).toBe(true);
+    });
+
+    it('a retried finish answered `unchanged` (first answer lost) shows the result as a normal one', async () => {
+      startTraining.mockResolvedValueOnce(startBody());
+      finishTraining.mockRejectedValueOnce(new TypeError('Network request failed')).mockResolvedValueOnce(finishBody('unchanged'));
+      const { result } = setup();
+      act(() => result.current.start('sit'));
+      await advance(0);
+      await advance(50_000 + GAME_TICK_MS);
+      act(() => result.current.retryFinish());
+      await advance(0);
+      const phase = result.current.phase;
+      expect(phase.kind === 'result' && phase.status).toBe('accepted');
+    });
+
+    it('praise uses the touch timestamp (mapped onto the game clock), not the handler time', async () => {
+      startTraining.mockResolvedValueOnce(startBody());
+      finishTraining.mockResolvedValue(finishBody());
+      const { result } = setup();
+      act(() => result.current.start('sit'));
+      await advance(0);
+      const startedAt = Date.now();
+      // Event clock = Date.now() − 1 000 000. Calibration touch: handler 10 ms after the touch.
+      await advance(2_510);
+      act(() => result.current.praise(Date.now() - 1_000_000 - 10));
+      // Cue 1 slot: a touch at 9 000 whose handler ran 300 ms late.
+      await advance(startedAt + 9_300 - Date.now());
+      act(() => result.current.praise(startedAt + 9_000 - 1_000_000));
+      const phase = result.current.phase;
+      // First touch only calibrates (handler time 2 510); the late handler is corrected to
+      // touch + the 10 ms best-known delay (9 010) instead of 9 300.
+      expect(phase.kind === 'running' && phase.taps).toEqual([2_510, 9_010]);
+    });
+  });
 });
+

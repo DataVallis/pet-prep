@@ -31,6 +31,7 @@ import {
   canStillFinish,
   DEFAULT_CLOCK_SOURCES,
   SessionClock,
+  TouchTimeMapper,
   type ClockSources,
 } from '@/modules/training/game';
 import {
@@ -57,14 +58,20 @@ const FINAL_FINISH_REFUSALS = new Set([
 export type TrainingPhase =
   | { kind: 'pick' }
   | { kind: 'starting'; command: TrainingCommand }
-  | { kind: 'running'; session: TrainingSession; taps: readonly number[]; resumed: boolean }
-  | { kind: 'finishing'; session: TrainingSession; taps: readonly number[] }
+  | {
+      kind: 'running';
+      session: TrainingSession;
+      taps: readonly number[];
+      /** ms into the session when it was resumed after an app restart; null = played from the start. */
+      resumedAtMs: number | null;
+    }
+  | { kind: 'finishing'; session: TrainingSession; taps: readonly number[]; resumedAtMs: number | null }
   | { kind: 'result'; result: TrainingResult; status: 'accepted' | 'unchanged' }
   | {
       kind: 'failed';
       message: string;
       /** Set when the same session may still be finished ("Poskusi znova"). */
-      retry: { session: TrainingSession; taps: readonly number[] } | null;
+      retry: { session: TrainingSession; taps: readonly number[]; resumedAtMs: number | null } | null;
     };
 
 export interface TrainingGameOptions {
@@ -83,7 +90,11 @@ export interface TrainingGame {
   /** ms since the local start (running / finishing), else 0. */
   elapsedMs: number;
   start: (command: TrainingCommand) => void;
-  praise: () => void;
+  /**
+   * Record a "Pohvali" tap. `touchTimestamp` = the touch event's `nativeEvent.timestamp`
+   * (mapped onto the game clock by `TouchTimeMapper`); without it, the handler time.
+   */
+  praise: (touchTimestamp?: number | null) => void;
   retryFinish: () => void;
   /** Back to the command list (after a result / failure). */
   reset: () => void;
@@ -132,6 +143,7 @@ export function useTrainingGame({
   const finishedRef = useRef<Set<string>>(new Set());
   /** Session ids this hook played or resumed (never resumed again). */
   const playedRef = useRef<Set<string>>(new Set());
+  const touchMapper = useRef(new TouchTimeMapper());
   const mounted = useRef(true);
   const skewRef = useRef(clockSkewMs);
   skewRef.current = clockSkewMs;
@@ -156,7 +168,9 @@ export function useTrainingGame({
   const { mutate: finishMutate } = finishMutation;
 
   const sendFinish = useCallback(
-    (session: TrainingSession, taps: readonly number[]) => {
+    (session: TrainingSession, taps: readonly number[], resumedAtMs: number | null = null) => {
+      // A retry after a lost answer: the server may already have saved the first attempt.
+      const isRetry = finishedRef.current.has(session.id);
       const serverNow = clockSourcesRef.current.wall() + skewRef.current;
       if (!canStillFinish(session, serverNow)) {
         // Too late for the server (the app was away): say so instead of a doomed request.
@@ -166,16 +180,18 @@ export function useTrainingGame({
         return;
       }
       finishedRef.current.add(session.id);
-      setPhase({ kind: 'finishing', session, taps });
+      setPhase({ kind: 'finishing', session, taps, resumedAtMs });
       finishMutate(
         { sessionId: session.id, taps },
         {
           onSuccess: (response) => {
-            setPhase({ kind: 'result', result: response.result, status: response.status });
+            // `unchanged` after a retry = our own first attempt arrived; show it like a fresh result.
+            const status = isRetry && response.status === 'unchanged' ? 'accepted' : response.status;
+            setPhase({ kind: 'result', result: response.result, status });
           },
           onError: (error) => {
             const retry = canRetryFinish(error) && canStillFinish(session, clockSourcesRef.current.wall() + skewRef.current);
-            setPhase({ kind: 'failed', message: failureText(error, tzRef.current), retry: retry ? { session, taps } : null });
+            setPhase({ kind: 'failed', message: failureText(error, tzRef.current), retry: retry ? { session, taps, resumedAtMs } : null });
           },
         },
       );
@@ -191,7 +207,7 @@ export function useTrainingGame({
     const elapsed = sessionClock.elapsed();
     if (mounted.current) setElapsedMs(elapsed);
     if (elapsed < current.session.duration_ms || finishedRef.current.has(current.session.id)) return;
-    sendFinish(current.session, current.taps);
+    sendFinish(current.session, current.taps, current.resumedAtMs);
   }, [sendFinish]);
 
   // The game loop: tick while running.
@@ -223,7 +239,7 @@ export function useTrainingGame({
           clockRef.current = new SessionClock(clockSourcesRef.current);
           playedRef.current.add(response.session.id);
           if (mounted.current) setElapsedMs(0);
-          setPhase({ kind: 'running', session: response.session, taps: [], resumed: false });
+          setPhase({ kind: 'running', session: response.session, taps: [], resumedAtMs: null });
         },
         onError: (error) => {
           setPhase({ kind: 'failed', message: failureText(error, tzRef.current), retry: null });
@@ -249,18 +265,18 @@ export function useTrainingGame({
     if (elapsed < session.duration_ms) {
       clockRef.current = new SessionClock(clockSourcesRef.current, elapsed);
       if (mounted.current) setElapsedMs(elapsed);
-      setPhase({ kind: 'running', session, taps: [], resumed: true });
+      setPhase({ kind: 'running', session, taps: [], resumedAtMs: elapsed });
       return;
     }
     // The schedule ran out while the app was closed: save it now if the server still takes it.
     sendFinish(session, []);
   }, [resumeId, sendFinish, setPhase]);
 
-  const praise = useCallback(() => {
+  const praise = useCallback((touchTimestamp?: number | null) => {
     const current = phaseRef.current;
     const sessionClock = clockRef.current;
     if (current.kind !== 'running' || sessionClock === null) return;
-    const ms = sessionClock.elapsed();
+    const ms = sessionClock.elapsedAt(touchMapper.current.map(touchTimestamp, sessionClock.monoNow()));
     const taps = addTap(current.session, current.taps, ms);
     if (mounted.current) setElapsedMs(ms);
     if (taps !== current.taps) setPhase({ ...current, taps });
@@ -269,7 +285,7 @@ export function useTrainingGame({
   const retryFinish = useCallback(() => {
     const current = phaseRef.current;
     if (current.kind !== 'failed' || current.retry === null) return;
-    sendFinish(current.retry.session, current.retry.taps);
+    sendFinish(current.retry.session, current.retry.taps, current.retry.resumedAtMs);
   }, [sendFinish]);
 
   const reset = useCallback(() => {

@@ -596,7 +596,7 @@ export const api = {
   /**
    * POST /api/child/pet/training/start {command} (M5-R03) — the server's schedule for one
    * 50 s session. 200 untyped in `schema.ts` → read with `readStartResponse`. 422
-   * `training_not_available` / `training_session_active` / `training_daily_budget_used`
+   * `training_not_available` / `training_session_active` / `training_daily_budget_used` / `training_day_ending` (the session + TTL would cross the family midnight)
    * (+ `next_allowed_at`), 423 locked; refusals carry `state`.
    */
   startTraining: (command: components['schemas']['StartTrainingRequest']['command']) =>
@@ -609,7 +609,7 @@ export const api = {
    * POST /api/child/pet/training/finish {session_id, taps} (M5-R03) — the "Pohvali" taps as
    * whole ms since the app's local start (≤ 64, ≤ duration); the server scores them. A
    * repeat answers `unchanged` with the stored result. 200 untyped → `readFinishResponse`.
-   * 422 `training_session_invalid|not_over|expired|invalid_taps|not_available`, 423 locked.
+   * 422 `training_session_invalid|not_over|expired|invalid_taps|not_available|interrupted`, 423 locked.
    */
   finishTraining: (sessionId: string, taps: readonly number[]) =>
     apiRequest<unknown>('/api/child/pet/training/finish', {

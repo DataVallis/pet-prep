@@ -11,7 +11,10 @@ import {
   frameAt,
   liveOutcome,
   MAX_TAPS,
+  MAX_TOUCH_AGE_MS,
+  missedWhileAway,
   SessionClock,
+  TouchTimeMapper,
   slotIndex,
   trialOutcome,
 } from '@/modules/training/game';
@@ -166,3 +169,50 @@ describe('canStillFinish', () => {
     expect(canStillFinish(SESSION, exp + 1)).toBe(false);
   });
 });
+
+describe('TouchTimeMapper (QA: tap time from the touch event)', () => {
+  it('learns the clock offset from the touches; a slow handler no longer delays the tap', () => {
+    const m = new TouchTimeMapper();
+    // Event clock = mono − 1 000 000. First touch: handler ran 20 ms after the touch.
+    expect(m.map(9_000, 1_009_020)).toBe(1_009_020); // best offset so far = handler time
+    // Second touch: handler ran 180 ms late (busy JS) — mapped back to 20 ms after the touch.
+    expect(m.map(15_000, 1_015_180)).toBe(1_015_020);
+    // A faster handler improves the estimate.
+    expect(m.map(20_000, 1_020_005)).toBe(1_020_005);
+    expect(m.map(25_000, 1_025_100)).toBe(1_025_005);
+  });
+
+  it('missing / implausible timestamps fall back to the handler time', () => {
+    const m = new TouchTimeMapper();
+    expect(m.map(undefined, 500)).toBe(500);
+    expect(m.map(null, 500)).toBe(500);
+    expect(m.map(0, 500)).toBe(500);
+    m.map(1_000, 1_010);
+    // Mapped far older than allowed → handler time.
+    expect(m.map(1_000, 1_010 + MAX_TOUCH_AGE_MS + 100)).toBe(1_010 + MAX_TOUCH_AGE_MS + 100);
+  });
+
+  it('SessionClock.elapsedAt measures a mapped instant', () => {
+    let mono = 100;
+    const clock = new SessionClock({ mono: () => mono, wall: () => 0 });
+    mono = 3_400;
+    expect(clock.elapsedAt(3_250)).toBe(3_150);
+    expect(clock.monoNow()).toBe(3_400);
+  });
+});
+
+describe('missedWhileAway (resume)', () => {
+  it('cues whose chance ended before the resume are neutral; the current one is not', () => {
+    // Resumed at 21 000: cue 0 window ended 4 500, cue 1 (no obey) slot ended 14 000,
+    // cue 2 window 15 000–16 500, cue 3 obeys at 21 000 (still open).
+    expect(missedWhileAway(SESSION, 0, 21_000)).toBe(true);
+    expect(missedWhileAway(SESSION, 1, 21_000)).toBe(true);
+    expect(missedWhileAway(SESSION, 2, 21_000)).toBe(true);
+    expect(missedWhileAway(SESSION, 3, 21_000)).toBe(false);
+    expect(missedWhileAway(SESSION, 0, null)).toBe(false);
+    // No verdict is shown for them either.
+    expect(feedbackAt(SESSION, [], 20_500, 20_000)).toBeNull();
+    expect(feedbackAt(SESSION, [], 20_500)).toEqual({ slot: 2, outcome: 'no_praise' });
+  });
+});
+

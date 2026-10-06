@@ -415,8 +415,8 @@ export default function ChildHudScreen() {
   // M5-R03: "Šola" only for a pet with training (legacy / older app / older server: nothing).
   const hasTraining = showTrainingEntry(view.training);
   const showTraining = isTrainingVisible && !locked && hasTraining && !showAlbum;
-  // Android: TalkBack must not reach the HUD under the album (iOS: accessibilityViewIsModal).
-  const hiddenUnderAlbum = showAlbum
+  // Android: TalkBack must not reach the HUD under the album / training game (iOS: accessibilityViewIsModal).
+  const hiddenUnderAlbum = showAlbum || showTraining
     ? ({ importantForAccessibility: 'no-hide-descendants', accessibilityElementsHidden: true } as const)
     : ({ importantForAccessibility: 'auto', accessibilityElementsHidden: false } as const);
 
@@ -649,7 +649,6 @@ export default function ChildHudScreen() {
             }}
           />
         )}
-        {showTraining && <TrainingOverlay view={view} onClose={closeTraining} />}
         {showCleaning && (
           <CleaningOverlay
             onCleaned={handleCleaned}
@@ -658,6 +657,8 @@ export default function ChildHudScreen() {
           />
         )}
       </View>
+      {/* Outside hud-content, so hiding the HUD from TalkBack never hides the game. */}
+      {showTraining && <TrainingOverlay view={view} onClose={closeTraining} />}
       {showAlbum && (
         <PetAlbum media={pet.media} onClose={() => setAlbumVisible(false)} onMediaExpired={onMediaExpired} testID="hud-album" />
       )}

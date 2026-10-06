@@ -99,9 +99,11 @@ export function feedbackAt(
   session: TrainingSession,
   taps: readonly number[],
   elapsedMs: number,
+  resumedAtMs: number | null = null,
 ): { slot: number; outcome: TrialOutcome } | null {
   const firsts = firstTapsBySlot(session.trials, taps);
-  const outcomeOf = (i: number) => liveOutcome(session, i, firsts.get(i) ?? null, elapsedMs);
+  const outcomeOf = (i: number) =>
+    missedWhileAway(session, i, resumedAtMs) ? null : liveOutcome(session, i, firsts.get(i) ?? null, elapsedMs);
   const last = session.trials.length - 1;
   if (elapsedMs >= session.duration_ms) {
     const outcome = outcomeOf(last);
@@ -207,7 +209,17 @@ export class SessionClock {
 
   /** ms since the local start (monotonic). */
   elapsed(): number {
-    return Math.max(0, Math.round(this.sources.mono() - this.monoOrigin));
+    return this.elapsedAt(this.sources.mono());
+  }
+
+  /** ms since the local start of a monotonic instant (e.g. a touch mapped by `TouchTimeMapper`). */
+  elapsedAt(mono: number): number {
+    return Math.max(0, Math.round(mono - this.monoOrigin));
+  }
+
+  /** Monotonic now (the base `elapsedAt` expects). */
+  monoNow(): number {
+    return this.sources.mono();
   }
 
   /** ms since the local start by the wall clock. */
@@ -225,6 +237,44 @@ export class SessionClock {
     const drift = this.wallElapsed() - this.elapsed();
     if (Math.abs(drift) > RESYNC_THRESHOLD_MS) this.monoOrigin -= drift;
   }
+}
+
+/** A touch older than this (by the mapping) is not trusted — the handler time is used. */
+export const MAX_TOUCH_AGE_MS = 500;
+
+/**
+ * Maps a touch event's `nativeEvent.timestamp` (the OS input clock — not the same base as
+ * `performance.now`) onto the monotonic clock, so a praise counts when the finger touched
+ * the glass, not when JS got round to the handler. The offset between the two clocks is
+ * learned from the touches themselves: a handler always runs after its touch, so
+ * `mono − timestamp` is the offset plus that touch's delay — its minimum over the touches
+ * is the best estimate. Unknown / implausible timestamps (in the future, or older than
+ * `MAX_TOUCH_AGE_MS`) fall back to the handler time.
+ */
+export class TouchTimeMapper {
+  private offset: number | null = null;
+
+  map(eventTimestamp: number | null | undefined, monoNow: number): number {
+    if (typeof eventTimestamp !== 'number' || !Number.isFinite(eventTimestamp) || eventTimestamp <= 0) return monoNow;
+    const candidate = monoNow - eventTimestamp;
+    if (this.offset === null || candidate < this.offset) this.offset = candidate;
+    const mapped = eventTimestamp + this.offset;
+    return mapped > monoNow || monoNow - mapped > MAX_TOUCH_AGE_MS ? monoNow : mapped;
+  }
+}
+
+/**
+ * A cue whose chance passed while the app was closed (resume after a restart): its praise
+ * window (or, when the dog doesn't obey, the whole slot) ended before `resumedAtMs`. The
+ * screen shows it neutral — the child couldn't play it.
+ */
+export function missedWhileAway(session: TrainingSession, i: number, resumedAtMs: number | null): boolean {
+  if (resumedAtMs === null || resumedAtMs <= 0) return false;
+  const trial = session.trials[i];
+  if (trial === undefined) return false;
+  const closesAt =
+    trial.obeys && trial.obey_at_ms !== null ? trial.obey_at_ms + session.praise_window_ms : slotEnd(session.trials, i, session.duration_ms);
+  return closesAt <= resumedAtMs;
 }
 
 /**

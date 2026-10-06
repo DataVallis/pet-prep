@@ -14,7 +14,16 @@
  */
 
 import { useEffect, useMemo, useRef } from 'react';
-import { ActivityIndicator, Animated, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import {
+  ActivityIndicator,
+  Animated,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  type GestureResponderEvent,
+} from 'react-native';
 import { Check, GraduationCap, Heart, X } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
@@ -22,7 +31,15 @@ import PetMediaView from '@/components/PetMediaView';
 import { childPetKey } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { selectMediaSource } from '@/modules/petMedia/petMedia';
-import { feedbackAt, firstTapsBySlot, frameAt, liveOutcome, type ClockSources, type DogAction } from '@/modules/training/game';
+import {
+  feedbackAt,
+  firstTapsBySlot,
+  frameAt,
+  liveOutcome,
+  missedWhileAway,
+  type ClockSources,
+  type DogAction,
+} from '@/modules/training/game';
 import { familyCalendar } from '@/modules/childPet/familyTime';
 import {
   isDayEnding,
@@ -37,9 +54,6 @@ import {
 import { useTrainingGame } from '@/modules/training/useTrainingGame';
 
 const S = TRAINING_STRINGS;
-
-/** A press release this soon after its touch-down is the same tap (not a second praise). */
-const RELEASE_IGNORE_MS = 2_000;
 
 /** Good verdicts are emerald; the others a calm amber — never the rose alarm colour. */
 const GOOD: ReadonlySet<TrialOutcome> = new Set(['in_time', 'waited']);
@@ -136,11 +150,25 @@ function dogLine(session: TrainingSession, action: DogAction): string {
   }
 }
 
-function TrialDots({ session, taps, elapsedMs }: { session: TrainingSession; taps: readonly number[]; elapsedMs: number }) {
+function TrialDots({
+  session,
+  taps,
+  elapsedMs,
+  resumedAtMs,
+}: {
+  session: TrainingSession;
+  taps: readonly number[];
+  elapsedMs: number;
+  resumedAtMs: number | null;
+}) {
   const firsts = firstTapsBySlot(session.trials, taps);
   return (
     <View style={styles.dots}>
       {session.trials.map((trial, i) => {
+        // Cues that passed while the app was closed are neutral — the child couldn't play them.
+        if (missedWhileAway(session, i, resumedAtMs)) {
+          return <View key={trial.index} style={[styles.dot, styles.dotAway]} testID={`training-dot-away-${i}`} />;
+        }
         const outcome = liveOutcome(session, i, firsts.get(i) ?? null, elapsedMs);
         const style = outcome === null ? styles.dotOpen : GOOD.has(outcome) ? styles.dotGood : styles.dotTry;
         return <View key={trial.index} style={[styles.dot, style]} testID={`training-dot-${i}`} />;
@@ -277,7 +305,7 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
           taps={phase.taps}
           elapsedMs={elapsedMs}
           finishing={phase.kind === 'finishing'}
-          resumed={phase.kind === 'running' && phase.resumed}
+          resumedAtMs={phase.resumedAtMs}
           premiumVideo={premiumVideo}
           view={view}
           onPraise={game.praise}
@@ -299,9 +327,12 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
               <Text style={styles.startText}>{S.retry}</Text>
             </Pressable>
           )}
-          <Pressable accessibilityRole="button" testID="training-back" onPress={game.reset} style={({ pressed }) => [styles.secondaryButton, pressed && styles.pressed]}>
-            <Text style={styles.secondaryText}>{S.result.again}</Text>
-          </Pressable>
+          {/* While the session can still be saved, leaving would throw it away — only "Poskusi znova". */}
+          {phase.retry === null && (
+            <Pressable accessibilityRole="button" testID="training-back" onPress={game.reset} style={({ pressed }) => [styles.secondaryButton, pressed && styles.pressed]}>
+              <Text style={styles.secondaryText}>{S.result.again}</Text>
+            </Pressable>
+          )}
         </View>
       )}
     </View>
@@ -313,7 +344,7 @@ function RunningView({
   taps,
   elapsedMs,
   finishing,
-  resumed = false,
+  resumedAtMs,
   premiumVideo,
   view,
   onPraise,
@@ -323,19 +354,20 @@ function RunningView({
   taps: readonly number[];
   elapsedMs: number;
   finishing: boolean;
-  /** Continued after an app restart (taps before it are lost). */
-  resumed?: boolean;
+  /** ms into the session when it was resumed after an app restart (null = played from the start). */
+  resumedAtMs: number | null;
   premiumVideo: boolean;
   view: ChildPetView;
-  onPraise: () => void;
+  onPraise: (touchTimestamp?: number | null) => void;
   onMediaExpired: () => void;
 }) {
   const frame = frameAt(session, elapsedMs);
-  const feedback = feedbackAt(session, taps, elapsedMs);
+  const feedback = feedbackAt(session, taps, elapsedMs, resumedAtMs);
   const text = S.commands[session.command];
   const trialNo = frame.slot === null ? 0 : frame.slot + 1;
   const praiseDisabled = finishing || frame.over;
-  const pressedInAt = useRef(Number.NEGATIVE_INFINITY);
+  /** A touch is down: its release (onPress) is the same tap, however long it was held. */
+  const touchActive = useRef(false);
 
   return (
     <View style={styles.running} testID="training-running">
@@ -347,8 +379,8 @@ function RunningView({
           {S.secondsLeft(frame.secondsLeft)}
         </Text>
       </View>
-      <TrialDots session={session} taps={taps} elapsedMs={elapsedMs} />
-      {resumed && (
+      <TrialDots session={session} taps={taps} elapsedMs={elapsedMs} resumedAtMs={resumedAtMs} />
+      {resumedAtMs !== null && (
         <Text style={styles.muted} testID="training-resumed">
           {S.resumed}
         </Text>
@@ -400,12 +432,17 @@ function RunningView({
           disabled={praiseDisabled}
           // The touch counts at once (timing game); a screen reader activates with onPress
           // only. The release of a touch never counts again (it could fall into the next cue).
-          onPressIn={() => {
-            pressedInAt.current = Date.now();
-            onPraise();
+          onPressIn={(e: GestureResponderEvent) => {
+            touchActive.current = true;
+            // When the finger touched the glass (mapped onto the game clock), not when JS ran.
+            onPraise(e?.nativeEvent?.timestamp ?? null);
           }}
           onPress={() => {
-            if (Date.now() - pressedInAt.current > RELEASE_IGNORE_MS) onPraise();
+            if (touchActive.current) {
+              touchActive.current = false;
+              return;
+            }
+            onPraise(null);
           }}
           style={({ pressed }) => [styles.praiseButton, pressed && styles.praisePressed, praiseDisabled && styles.disabled]}
         >
@@ -509,6 +546,7 @@ const styles = StyleSheet.create({
   dotOpen: { backgroundColor: 'rgba(255, 255, 255, 0.18)' },
   dotGood: { backgroundColor: '#10b981' },
   dotTry: { backgroundColor: '#f59e0b' },
+  dotAway: { backgroundColor: 'transparent', borderWidth: 1, borderColor: 'rgba(255, 255, 255, 0.25)' },
   stage: {
     flex: 1,
     minHeight: 180,
