@@ -17,6 +17,7 @@ use App\Services\NotificationService;
 use App\Services\Push\ExpoPushClient;
 use App\Services\Push\ExpoPushException;
 use App\Services\Push\PushCopy;
+use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Contracts\Bus\Dispatcher as BusDispatcher;
 use Illuminate\Http\Client\Factory as HttpFactory;
 use Illuminate\Http\Client\Request;
@@ -26,6 +27,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
 
 /*
@@ -1095,4 +1097,33 @@ it('registers push devices on their own rate limiter, not the shared api bucket 
 
     expect($route->gatherMiddleware())->toContain('throttle:devices')
         ->not->toContain('throttle:api');
+});
+
+it('limits device registration to 10 per minute per user outside testing, falling back to the IP for guests', function () {
+    $limitFor = function (?User $user, string $ip = '203.0.113.7'): Limit {
+        $request = Illuminate\Http\Request::create('/api/devices', 'POST', server: ['REMOTE_ADDR' => $ip]);
+        $request->setUserResolver(fn () => $user);
+
+        return RateLimiter::limiter('devices')($request);
+    };
+
+    // In testing the limiter is off (functional tests register freely).
+    expect($limitFor(null)->maxAttempts)->toBe(Limit::none()->maxAttempts);
+
+    $env = app()['env'];
+    app()['env'] = 'production';
+    try {
+        $parent = createParentUser();
+        $child = createChildUser();
+
+        $limit = $limitFor($parent);
+        expect($limit->maxAttempts)->toBe(10)
+            ->and($limit->decaySeconds)->toBe(60)
+            ->and($limit->key)->toBe('devices:'.$parent->id)
+            // Per user: another user on the same IP has its own bucket.
+            ->and($limitFor($child)->key)->toBe('devices:'.$child->id)
+            ->and($limitFor(null)->key)->toBe('devices:203.0.113.7');
+    } finally {
+        app()['env'] = $env;
+    }
 });

@@ -836,6 +836,8 @@ describe('API', function () {
     it('broadcasts once per take-out / resolve and carries the behaviour summary', function () {
         Event::fake([PetUpdated::class]);
         [, $child, $pet] = beFamily('2026-10-12 04:00:00', 3);
+        // Teething chewing off (a draw landing in 04:00–04:02 would add an open mess).
+        Pet::whereKey($pet->id)->update(['behaviour_scheduled_through' => '2999-12-31']);
         actingAsRole($child);
 
         beAt('2026-10-12 04:02:00');

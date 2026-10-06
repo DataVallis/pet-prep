@@ -78,6 +78,7 @@ class ActivityLogResource extends Resource
                     ->sortable(),
             ])
             ->defaultSort('created_at', 'desc')
+            ->defaultKeySort()   // stable pages when rows share a created_at
             ->filters([
                 Tables\Filters\SelectFilter::make('activity_type')
                     ->options(ActivityType::class),

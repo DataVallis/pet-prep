@@ -549,6 +549,9 @@ describe('shared pet', function () {
         postJson('/api/child/contract', FM_SVG)->assertCreated();
         $bornAt = $pet->fresh()->born_at;
         expect($bornAt->equalTo(now()->startOfSecond()))->toBeTrue();
+        // Birth starts the random poop schedule; a poop in the 10 minutes
+        // before the feed below made it a 422 needs_cleaning (flaky in CI).
+        disableHygieneEvents($pet);
 
         actingAsRole($child1);
         postJson('/api/child/pet/feed')->assertStatus(423)->assertJsonPath('reason', 'contract_required');

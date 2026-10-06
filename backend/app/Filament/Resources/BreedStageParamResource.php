@@ -124,6 +124,9 @@ class BreedStageParamResource extends Resource
     {
         return $table
             ->defaultSort('breed_slug')
+            // Tie-break on the id (seeder order): without it rows of one breed
+            // came back in any order, so pages could repeat or skip rows.
+            ->defaultKeySort()
             ->columns([
                 Tables\Columns\TextColumn::make('breed_slug')->label('Breed')->badge()->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('stage')->badge()->sortable(),
