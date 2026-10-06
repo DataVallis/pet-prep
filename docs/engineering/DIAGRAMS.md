@@ -502,7 +502,7 @@ flowchart TD
 
 ### 5e. Training mini-game (M5-R03, David 2026-10-06)
 
-Server-authoritative reward timing: the server writes the schedule, the app only reports tap offsets.
+The server picks the schedule and scores; the app receives the schedule and reports tap offsets — a modified app could fake taps (budget caps the gain, < 150 ms reactions are too early, uniform latencies are logged).
 
 ```mermaid
 sequenceDiagram

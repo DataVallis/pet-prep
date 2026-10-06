@@ -277,9 +277,10 @@ class PetActivityService
      * Start a training session (M5-R03, David 2026-10-06): the server
      * generates the schedule (TrainingService::start). Locks first (423),
      * then 422 training_not_available / training_session_active /
-     * training_daily_budget_used. `extra.session` = the schedule for the app.
-     * One `PetUpdated('training_started')` (the payload shows a running
-     * session). No activity row — the routine is the completed session.
+     * training_day_ending / training_daily_budget_used. `extra.session` = the
+     * schedule for the app. One `PetUpdated('training_started')` (the payload
+     * shows a running session). Broadcast only, no activity row (would need a
+     * new activity type + timeline label; the routine is the completed session).
      */
     public function startTraining(Pet $pet, User $child, TrainingCommand $command): ActionResult
     {
@@ -312,7 +313,8 @@ class PetActivityService
      * `trained_pet` row (the day's training routine, value = correctly timed
      * praises). A repeat of a completed finish → `unchanged` with the stored
      * result. Refusals 422: training_not_available, training_session_invalid,
-     * training_session_expired, training_session_not_over, training_invalid_taps.
+     * training_session_expired, training_session_not_over, training_invalid_taps,
+     * training_session_interrupted (a lock began during the session — PR #53 m2).
      *
      * @param  list<int>  $taps  ms since the session start
      */
@@ -349,7 +351,7 @@ class PetActivityService
     /**
      * The session as the app gets it on start (instants in the family tz).
      *
-     * @return array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, duration_ms: int, praise_window_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>}
+     * @return array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, duration_ms: int, praise_window_ms: int, min_reaction_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>}
      */
     public static function sessionPayload(PetTrainingSession $session, string $tz): array
     {
@@ -363,7 +365,9 @@ class PetActivityService
             'expires_at' => $session->expires_at->copy()->setTimezone($tz)->toIso8601String(),
             'duration_ms' => $session->duration_ms,
             'praise_window_ms' => (int) $session->schedule['praise_window_ms'],
-            'trials' => $session->schedule['trials'],
+            // A praise earlier than obey_at + this counts as too early (human reaction floor).
+            'min_reaction_ms' => (int) ($session->schedule['min_reaction_ms'] ?? TrainingService::MIN_REACTION_MS),
+            'trials' => TrainingService::trialsOf($session->schedule),
         ];
     }
 

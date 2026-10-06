@@ -15,6 +15,7 @@ use App\Models\PetTrainingSkill;
 use App\Models\User;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
@@ -84,6 +85,21 @@ class TrainingService
 
     public const PRAISE_WINDOW_MS = 1500;
 
+    /**
+     * Human reaction floor (PR #53 M1): a praise less than this long after
+     * the dog obeys cannot be a reaction to it — it counts as `too_early`.
+     */
+    public const MIN_REACTION_MS = 150;
+
+    /**
+     * PR #53 M1: a session whose in-time praises (≥ SUSPICIOUS_MIN_TAPS) all
+     * have the same latency within ±SUSPICIOUS_LATENCY_SPREAD_MS looks
+     * scripted — logged (pet id only), still scored.
+     */
+    public const SUSPICIOUS_MIN_TAPS = 3;
+
+    public const SUSPICIOUS_LATENCY_SPREAD_MS = 30;
+
     /** Chance the dog obeys a cue at 0 % / 100 % progress (linear in between). */
     public const OBEY_CHANCE_UNTRAINED = 0.5;
 
@@ -125,10 +141,19 @@ class TrainingService
         return $minutes === null ? 0 : (int) round($minutes * 60);
     }
 
-    /** Seconds of mini-game already started on a family-local day (every session counts in full). */
+    /**
+     * Seconds of mini-game already started on a family-local day: every
+     * session counts in full, except one a lock (hard stop, vet, game over)
+     * interrupted — PR #53 m2: its time is refunded.
+     */
     public function usedSecondsOn(Pet $pet, string $localDate): int
     {
-        $ms = (int) PetTrainingSession::where('pet_id', $pet->id)->where('local_date', $localDate)->sum('duration_ms');
+        $now = now();
+        $ms = (int) PetTrainingSession::where('pet_id', $pet->id)->where('local_date', $localDate)
+            ->where('status', '!=', PetTrainingSession::STATUS_INTERRUPTED)
+            ->where(fn ($q) => $q->where('status', '!=', PetTrainingSession::STATUS_ACTIVE)
+                ->orWhereNot(fn ($q) => $this->whereInterrupted($q, $now)))
+            ->sum('duration_ms');
 
         return intdiv($ms + 999, 1000);
     }
@@ -226,13 +251,49 @@ class TrainingService
         return (float) (PetTrainingSkill::where('pet_id', $pet->id)->where('command', $command->value)->value('progress') ?? 0.0);
     }
 
-    /** The pet's running session (active and not past its TTL), if any. */
+    /** The pet's running session (active, not past its TTL, not interrupted by a lock), if any. */
     public function liveSession(Pet $pet, CarbonInterface $now): ?PetTrainingSession
     {
         return PetTrainingSession::where('pet_id', $pet->id)
             ->where('status', PetTrainingSession::STATUS_ACTIVE)
             ->where('expires_at', '>', $now)
+            ->whereNot(fn ($q) => $this->whereInterrupted($q, $now))
             ->first();
+    }
+
+    /**
+     * Sessions during which a lock began (PR #53 m2): a hard stop / illness /
+     * inactive (game over) period of the pet started after the session
+     * started, before its TTL and not after $now.
+     *
+     * @param  Builder<PetTrainingSession>  $query
+     */
+    private function whereInterrupted($query, CarbonInterface $now): void
+    {
+        $at = CarbonImmutable::instance($now)->utc()->format('Y-m-d H:i:s');
+        $query->whereExists(fn ($q) => $q->selectRaw('1')->from('pet_status_periods')
+            ->whereColumn('pet_status_periods.pet_id', 'pet_training_sessions.pet_id')
+            ->whereColumn('pet_status_periods.started_at', '>', 'pet_training_sessions.started_at')
+            ->whereColumn('pet_status_periods.started_at', '<=', 'pet_training_sessions.expires_at')
+            ->where('pet_status_periods.started_at', '<=', $at));
+    }
+
+    /**
+     * The family-local midnight ending the day of $now (UTC). A session must
+     * expire before it (PR #53 m1: the routine and the budget belong to one day).
+     */
+    public function dayEndsAt(Pet $pet, CarbonInterface $now): CarbonImmutable
+    {
+        return CarbonImmutable::parse($pet->localDate($now), $pet->familyTimezone())->addDay()->startOfDay()->utc();
+    }
+
+    /** A session started now would still run (TTL included) at the family-local midnight. */
+    public function dayEndingAt(Pet $pet, CarbonInterface $now): bool
+    {
+        $expires = CarbonImmutable::instance($now)->utc()->startOfSecond()
+            ->addMilliseconds(self::sessionDurationMs())->addSeconds(self::FINISH_GRACE_SECONDS);
+
+        return $expires->greaterThan($this->dayEndsAt($pet, $now));
     }
 
     /** A completed session (any child) on the family-local day of $now. */
@@ -255,6 +316,8 @@ class TrainingService
     /**
      * Start a session. Refusals: training_not_available (no training for
      * this pet), training_session_active (next_allowed = its expiry),
+     * training_day_ending (the session + TTL would run past the
+     * family-local midnight; next_allowed = midnight — PR #53 m1),
      * training_daily_budget_used (next_allowed = next local midnight).
      *
      * @return array{refusal: CareRefusal|null, next_allowed_at: CarbonInterface|null, session: PetTrainingSession|null}
@@ -272,6 +335,9 @@ class TrainingService
         $live = $this->liveSession($pet, $now);
         if ($live !== null) {
             return $refuse(CareRefusal::TrainingSessionActive, $live->expires_at);
+        }
+        if ($this->dayEndingAt($pet, $now)) {
+            return $refuse(CareRefusal::TrainingDayEnding, $this->dayEndsAt($pet, $now));
         }
 
         $today = $pet->localDate($now);
@@ -335,6 +401,11 @@ class TrainingService
         if ($session->status === PetTrainingSession::STATUS_COMPLETED) {
             return ['refusal' => null, 'session' => $session, 'repeat' => true];
         }
+        $this->expireStale($pet, $now);
+        $session->refresh();
+        if ($session->status === PetTrainingSession::STATUS_INTERRUPTED) {
+            return $refuse(CareRefusal::TrainingSessionInterrupted, $session);
+        }
         if ($session->status !== PetTrainingSession::STATUS_ACTIVE || ! $session->expires_at->greaterThan($now)) {
             if ($session->status === PetTrainingSession::STATUS_ACTIVE) {
                 $session->forceFill(['status' => PetTrainingSession::STATUS_EXPIRED])->save();
@@ -351,7 +422,17 @@ class TrainingService
             }
         }
 
-        $score = self::score($session->schedule['trials'], (int) $session->schedule['praise_window_ms'], $taps);
+        $score = self::score(
+            $session->schedule['trials'],
+            (int) $session->schedule['praise_window_ms'],
+            $taps,
+            (int) ($session->schedule['min_reaction_ms'] ?? self::MIN_REACTION_MS),
+        );
+        $score['suspicious'] = self::looksScripted($score);
+        if ($score['suspicious']) {
+            // PR #53 M1: identical reaction times look like a modified app. Pet id only (no child data).
+            Log::warning('TrainingService: suspicious training session (uniform praise latency)', ['pet_id' => $pet->id]);
+        }
         $today = $pet->localDate($now);
         $skill = PetTrainingSkill::firstOrNew(['pet_id' => $pet->id, 'command' => $session->command->value]);
         $before = (float) ($skill->progress ?? 0.0);
@@ -380,13 +461,15 @@ class TrainingService
     /**
      * Score taps against a schedule. Taps are assigned to the trial whose
      * slot [cue, next cue) contains them (taps before the first cue are
-     * ignored); the FIRST tap of a trial decides. Pure — no I/O.
+     * ignored); the FIRST tap of a trial decides. In time = obey_at +
+     * $minReactionMs ≤ tap ≤ obey_at + window; a faster "reaction" is
+     * too_early (PR #53 M1). Pure — no I/O.
      *
      * @param  list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>  $trials
      * @param  list<int>  $taps
-     * @return array{successes: int, obeyed: int, trials: list<array{index: int, obeys: bool, outcome: string, tap_ms: int|null}>}
+     * @return array{successes: int, obeyed: int, trials: list<array{index: int, obeys: bool, outcome: string, tap_ms: int|null, latency_ms: int|null}>}
      */
-    public static function score(array $trials, int $windowMs, array $taps): array
+    public static function score(array $trials, int $windowMs, array $taps, int $minReactionMs = self::MIN_REACTION_MS): array
     {
         sort($taps);
         $out = [];
@@ -409,7 +492,7 @@ class TrainingService
                 $obeyAt = (int) $trial['obey_at_ms'];
                 $outcome = match (true) {
                     $first === null => 'no_praise',
-                    $first < $obeyAt => 'too_early',
+                    $first < $obeyAt + $minReactionMs => 'too_early',
                     $first <= $obeyAt + $windowMs => 'in_time',
                     default => 'too_late',
                 };
@@ -420,10 +503,36 @@ class TrainingService
             if ($outcome === 'in_time') {
                 $successes++;
             }
-            $out[] = ['index' => (int) $trial['index'], 'obeys' => (bool) $trial['obeys'], 'outcome' => $outcome, 'tap_ms' => $first];
+            $out[] = [
+                'index' => (int) $trial['index'],
+                'obeys' => (bool) $trial['obeys'],
+                'outcome' => $outcome,
+                'tap_ms' => $first,
+                'latency_ms' => $trial['obeys'] && $first !== null ? $first - (int) $trial['obey_at_ms'] : null,
+            ];
         }
 
         return ['successes' => $successes, 'obeyed' => $obeyed, 'trials' => $out];
+    }
+
+    /**
+     * PR #53 M1: at least SUSPICIOUS_MIN_TAPS in-time praises whose latencies
+     * all lie within ±SUSPICIOUS_LATENCY_SPREAD_MS of one value — human
+     * reactions vary far more. Pure.
+     *
+     * @param  array{trials: list<array{outcome: string, latency_ms: int|null}>}  $score
+     */
+    public static function looksScripted(array $score): bool
+    {
+        $latencies = [];
+        foreach ($score['trials'] as $t) {
+            if ($t['outcome'] === 'in_time' && $t['latency_ms'] !== null) {
+                $latencies[] = $t['latency_ms'];
+            }
+        }
+
+        return count($latencies) >= self::SUSPICIOUS_MIN_TAPS
+            && max($latencies) - min($latencies) <= 2 * self::SUSPICIOUS_LATENCY_SPREAD_MS;
     }
 
     /**
@@ -431,7 +540,7 @@ class TrainingService
      * with a chance that grows with progress, after a random delay. At least
      * one cue is obeyed and at least one is not.
      *
-     * @return array{praise_window_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>}
+     * @return array{praise_window_ms: int, min_reaction_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>}
      */
     public function schedule(float $progress, Randomizer $rng): array
     {
@@ -461,12 +570,38 @@ class TrainingService
             ];
         }
 
-        return ['praise_window_ms' => self::PRAISE_WINDOW_MS, 'trials' => $trials];
+        return ['praise_window_ms' => self::PRAISE_WINDOW_MS, 'min_reaction_ms' => self::MIN_REACTION_MS, 'trials' => $trials];
     }
 
-    /** Active sessions past their TTL become `expired` (frees the one-active slot). */
+    /**
+     * The trials of a stored schedule with a stable key order (jsonb does not
+     * keep it): index, cue_at_ms, obeys, obey_at_ms, window_end_ms.
+     *
+     * @param  array<string, mixed>  $schedule
+     * @return list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>
+     */
+    public static function trialsOf(array $schedule): array
+    {
+        return array_map(fn (array $t): array => [
+            'index' => (int) $t['index'],
+            'cue_at_ms' => (int) $t['cue_at_ms'],
+            'obeys' => (bool) $t['obeys'],
+            'obey_at_ms' => $t['obey_at_ms'] === null ? null : (int) $t['obey_at_ms'],
+            'window_end_ms' => $t['window_end_ms'] === null ? null : (int) $t['window_end_ms'],
+        ], array_values($schedule['trials'] ?? []));
+    }
+
+    /**
+     * Settle active sessions: one during which a lock began becomes
+     * `interrupted` (its time is refunded, it never counts — PR #53 m2);
+     * one past its TTL becomes `expired`. Frees the one-active slot.
+     */
     public function expireStale(Pet $pet, CarbonInterface $now): void
     {
+        PetTrainingSession::where('pet_id', $pet->id)
+            ->where('status', PetTrainingSession::STATUS_ACTIVE)
+            ->where(fn ($q) => $this->whereInterrupted($q, $now))
+            ->update(['status' => PetTrainingSession::STATUS_INTERRUPTED, 'updated_at' => $now]);
         PetTrainingSession::where('pet_id', $pet->id)
             ->where('status', PetTrainingSession::STATUS_ACTIVE)
             ->where('expires_at', '<=', $now)

@@ -392,8 +392,9 @@ export interface paths {
          *     response carries `session` — the server's schedule (cues, whether and
          *     when the dog obeys, the praise window; offsets in ms since start).
          *     422 training_not_available | training_session_active (next_allowed_at
-         *     = its expiry) | training_daily_budget_used (next_allowed_at = local
-         *     midnight); 423 while locked
+         *     = its expiry) | training_day_ending (session + TTL would cross the
+         *     family-local midnight; next_allowed_at = midnight) |
+         *     training_daily_budget_used (next_allowed_at = local midnight); 423 while locked
          * @description POST /api/child/pet/training/start
          */
         post: operations["childPet.startTraining"];
@@ -418,7 +419,8 @@ export interface paths {
          *     returns `result` (per-cue outcome, progress before / after). A repeat
          *     of a completed finish → `unchanged` with the same result.
          *     422 training_session_invalid | training_session_expired |
-         *     training_session_not_over | training_invalid_taps | training_not_available
+         *     training_session_not_over | training_invalid_taps | training_session_interrupted |
+         *     training_not_available
          * @description POST /api/child/pet/training/finish
          */
         post: operations["childPet.finishTraining"];
@@ -1945,7 +1947,10 @@ export interface operations {
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
-                                /** @description The running session (any caretaker), `mine` = started by this child; else null. */
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
                                 session: {
                                     id: string;
                                     /** @enum {string} */
@@ -1954,6 +1959,16 @@ export interface operations {
                                     ends_at: string;
                                     expires_at: string;
                                     mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
                                 } | null;
                                 /** @description Length of one session in seconds. */
                                 session_seconds: number;
@@ -1962,7 +1977,8 @@ export interface operations {
                                 daily_budget_left_seconds: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session).
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -2198,7 +2214,10 @@ export interface operations {
                             }[];
                             /** @description A session was completed today (the daily training routine). */
                             today_done: boolean;
-                            /** @description The running session (any caretaker), `mine` = started by this child; else null. */
+                            /**
+                             * @description The running session (any caretaker), `mine` = started by this child; else null.
+                             *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                             */
                             session: {
                                 id: string;
                                 /** @enum {string} */
@@ -2207,6 +2226,16 @@ export interface operations {
                                 ends_at: string;
                                 expires_at: string;
                                 mine: boolean;
+                                duration_ms: number | null;
+                                praise_window_ms: number | null;
+                                min_reaction_ms: number | null;
+                                trials: {
+                                    index: number;
+                                    cue_at_ms: number;
+                                    obeys: boolean;
+                                    obey_at_ms: number | null;
+                                    window_end_ms: number | null;
+                                }[] | null;
                             } | null;
                             /** @description Length of one session in seconds. */
                             session_seconds: number;
@@ -2215,7 +2244,8 @@ export interface operations {
                             daily_budget_left_seconds: number;
                             /**
                              * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                             *     locked, no running session, enough budget left for one session).
+                             *     locked, no running session, enough budget left for one session, and the
+                             *     session would end before the family-local midnight).
                              */
                             can_start: boolean;
                         };
@@ -2471,7 +2501,10 @@ export interface operations {
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
-                                /** @description The running session (any caretaker), `mine` = started by this child; else null. */
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
                                 session: {
                                     id: string;
                                     /** @enum {string} */
@@ -2480,6 +2513,16 @@ export interface operations {
                                     ends_at: string;
                                     expires_at: string;
                                     mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
                                 } | null;
                                 /** @description Length of one session in seconds. */
                                 session_seconds: number;
@@ -2488,7 +2531,8 @@ export interface operations {
                                 daily_budget_left_seconds: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session).
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -2742,7 +2786,10 @@ export interface operations {
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
-                                /** @description The running session (any caretaker), `mine` = started by this child; else null. */
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
                                 session: {
                                     id: string;
                                     /** @enum {string} */
@@ -2751,6 +2798,16 @@ export interface operations {
                                     ends_at: string;
                                     expires_at: string;
                                     mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
                                 } | null;
                                 /** @description Length of one session in seconds. */
                                 session_seconds: number;
@@ -2759,7 +2816,8 @@ export interface operations {
                                 daily_budget_left_seconds: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session).
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -3013,7 +3071,10 @@ export interface operations {
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
-                                /** @description The running session (any caretaker), `mine` = started by this child; else null. */
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
                                 session: {
                                     id: string;
                                     /** @enum {string} */
@@ -3022,6 +3083,16 @@ export interface operations {
                                     ends_at: string;
                                     expires_at: string;
                                     mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
                                 } | null;
                                 /** @description Length of one session in seconds. */
                                 session_seconds: number;
@@ -3030,7 +3101,8 @@ export interface operations {
                                 daily_budget_left_seconds: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session).
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -3284,7 +3356,10 @@ export interface operations {
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
-                                /** @description The running session (any caretaker), `mine` = started by this child; else null. */
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
                                 session: {
                                     id: string;
                                     /** @enum {string} */
@@ -3293,6 +3368,16 @@ export interface operations {
                                     ends_at: string;
                                     expires_at: string;
                                     mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
                                 } | null;
                                 /** @description Length of one session in seconds. */
                                 session_seconds: number;
@@ -3301,7 +3386,8 @@ export interface operations {
                                 daily_budget_left_seconds: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session).
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -3555,7 +3641,10 @@ export interface operations {
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
-                                /** @description The running session (any caretaker), `mine` = started by this child; else null. */
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
                                 session: {
                                     id: string;
                                     /** @enum {string} */
@@ -3564,6 +3653,16 @@ export interface operations {
                                     ends_at: string;
                                     expires_at: string;
                                     mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
                                 } | null;
                                 /** @description Length of one session in seconds. */
                                 session_seconds: number;
@@ -3572,7 +3671,8 @@ export interface operations {
                                 daily_budget_left_seconds: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session).
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -3830,7 +3930,10 @@ export interface operations {
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
-                                /** @description The running session (any caretaker), `mine` = started by this child; else null. */
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
                                 session: {
                                     id: string;
                                     /** @enum {string} */
@@ -3839,6 +3942,16 @@ export interface operations {
                                     ends_at: string;
                                     expires_at: string;
                                     mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
                                 } | null;
                                 /** @description Length of one session in seconds. */
                                 session_seconds: number;
@@ -3847,7 +3960,8 @@ export interface operations {
                                 daily_budget_left_seconds: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session).
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -4105,7 +4219,10 @@ export interface operations {
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
-                                /** @description The running session (any caretaker), `mine` = started by this child; else null. */
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
                                 session: {
                                     id: string;
                                     /** @enum {string} */
@@ -4114,6 +4231,16 @@ export interface operations {
                                     ends_at: string;
                                     expires_at: string;
                                     mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
                                 } | null;
                                 /** @description Length of one session in seconds. */
                                 session_seconds: number;
@@ -4122,7 +4249,8 @@ export interface operations {
                                 daily_budget_left_seconds: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session).
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -4380,7 +4508,10 @@ export interface operations {
                                 }[];
                                 /** @description A session was completed today (the daily training routine). */
                                 today_done: boolean;
-                                /** @description The running session (any caretaker), `mine` = started by this child; else null. */
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
                                 session: {
                                     id: string;
                                     /** @enum {string} */
@@ -4389,6 +4520,16 @@ export interface operations {
                                     ends_at: string;
                                     expires_at: string;
                                     mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
                                 } | null;
                                 /** @description Length of one session in seconds. */
                                 session_seconds: number;
@@ -4397,7 +4538,8 @@ export interface operations {
                                 daily_budget_left_seconds: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session).
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };

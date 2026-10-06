@@ -28,6 +28,7 @@ use App\Services\TrainingService;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Testing\TestResponse;
 use Random\Engine\Xoshiro256StarStar;
 use Random\Randomizer;
@@ -117,7 +118,8 @@ function trFinish(User $child, string $sessionId, array $taps): TestResponse
 }
 
 /**
- * Taps 100 ms after every obey instant (a perfect child).
+ * Taps 400–610 ms after every obey instant (a good child with human, varied
+ * reaction times — above the 150 ms floor, not "scripted").
  *
  * @param  array<string, mixed>  $session
  * @return list<int>
@@ -127,7 +129,7 @@ function trPerfectTaps(array $session): array
     $taps = [];
     foreach ($session['trials'] as $trial) {
         if ($trial['obeys']) {
-            $taps[] = $trial['obey_at_ms'] + 100;
+            $taps[] = $trial['obey_at_ms'] + 400 + 30 * count($taps);
         }
     }
 
@@ -359,6 +361,98 @@ describe('session', function () {
         trFinish($child, $s['id'], [50000])->assertOk();
     });
 
+    it('refuses a start whose session + TTL would cross the family-local midnight (also on the 25-hour DST day)', function () {
+        [, $child, $pet] = trFamily();
+
+        // 23:58:00 local (CEST) + 50 s + 60 s TTL = 23:59:50 → ok; 23:58:11 → would end 00:00:01.
+        trAt('2026-10-08 21:58:11');
+        trStart($child)->assertStatus(422)
+            ->assertJsonPath('reason', 'training_day_ending')
+            ->assertJsonPath('next_allowed_at', '2026-10-09T00:00:00+02:00')
+            ->assertJsonPath('state.training.can_start', false);
+        trAt('2026-10-08 21:58:00');
+        trStart($child)->assertOk();
+
+        // 2026-10-25 has 25 hours (CEST → CET at 03:00): its midnight is 23:00 UTC.
+        trAt('2026-10-25 22:58:11');
+        trStart($child)->assertStatus(422)
+            ->assertJsonPath('reason', 'training_day_ending')
+            ->assertJsonPath('next_allowed_at', '2026-10-26T00:00:00+01:00');
+        trAt('2026-10-25 22:58:00');
+        $s = trStart($child)->assertOk()->json('session');
+        Carbon::setTestNow(Carbon::parse($s['ends_at'])->utc());
+        trFinish($child, $s['id'], trPerfectTaps($s))->assertOk();
+        expect(trRoutines($pet, '2026-10-25')[0]->status)->toBe(RoutineStatus::Done);
+    });
+
+    it('does not count a session a lock began during: no progress, no routine, its time refunded', function () {
+        [, $child, $pet] = trFamily();
+        trAt('2026-10-08 08:00:00');
+        $s = trStart($child)->assertOk()->json('session');
+
+        // The parent pauses the game during the session, and lifts it again.
+        trAt('2026-10-08 08:00:20');
+        Pet::find($pet->id)->update(['is_hard_stopped' => true]);
+        trAt('2026-10-08 08:00:50');
+        trFinish($child, $s['id'], trPerfectTaps($s))->assertStatus(423)->assertJsonPath('reason', 'hard_stopped');
+        trAt('2026-10-08 08:01:00');
+        Pet::find($pet->id)->update(['is_hard_stopped' => false]);
+
+        trFinish($child, $s['id'], trPerfectTaps($s))->assertStatus(422)
+            ->assertJsonPath('reason', 'training_session_interrupted')
+            ->assertJsonPath('state.training.session', null)
+            ->assertJsonPath('state.training.daily_budget_left_seconds', 300)
+            ->assertJsonPath('state.training.can_start', true);
+        expect(PetTrainingSession::where('public_id', $s['id'])->value('status'))->toBe('interrupted')
+            ->and(ActivityLog::where('pet_id', $pet->id)->where('activity_type', 'trained_pet')->count())->toBe(0)
+            ->and(trProgress($pet, TrainingCommand::Sit))->toBe(0.0);
+
+        // A new session can start right away (slot freed, budget refunded).
+        trStart($child)->assertOk()->assertJsonPath('state.training.daily_budget_left_seconds', 250);
+
+        // A lock that began BEFORE the session (and ended) does not interrupt it.
+        expect(app(TrainingService::class)->usedSecondsOn($pet->fresh(), '2026-10-08'))->toBe(50);
+    });
+
+    it('gives the child their own running session with its schedule (resume after a restart), others only the summary', function () {
+        [$parent, $child, $pet] = trFamily();
+        $sibling = trSibling($parent, $pet, '2026-10-07 06:00:00');
+        trAt('2026-10-08 08:00:00');
+        $s = trStart($child, 'come')->assertOk()->json('session');
+
+        trAt('2026-10-08 08:00:10');
+        app('auth')->forgetGuards();
+        actingAsRole($child);
+        getJson('/api/child/pet')->assertOk()
+            ->assertJsonPath('training.session.id', $s['id'])
+            ->assertJsonPath('training.session.mine', true)
+            ->assertJsonPath('training.session.duration_ms', 50000)
+            ->assertJsonPath('training.session.praise_window_ms', 1500)
+            ->assertJsonPath('training.session.min_reaction_ms', 150)
+            ->assertJsonPath('training.session.trials', $s['trials']);
+
+        app('auth')->forgetGuards();
+        actingAsRole($sibling);
+        getJson('/api/child/pet')->assertOk()
+            ->assertJsonPath('training.session.mine', false)
+            ->assertJsonPath('training.session.trials', null)
+            ->assertJsonPath('training.session.duration_ms', null);
+    });
+
+    it('builds the broadcast / dashboard summary without budget queries', function () {
+        [, $child, $pet] = trFamily();
+        trSession($child, '2026-10-08 08:00:00');
+        $sql = [];
+        DB::listen(function ($q) use (&$sql) {
+            $sql[] = $q->sql;
+        });
+
+        $summary = PetUpdated::payloadFor($pet->fresh(), 'trained_pet')['training'];
+
+        expect($summary['today_done'])->toBeTrue()
+            ->and(collect($sql)->filter(fn ($q) => str_contains($q, 'sum(') || str_contains($q, 'breed_stage_params'))->all())->toBe([]);
+    });
+
     it('limits the dog to 5 minutes of mini-game per family-local day (6 sessions of 50 s)', function () {
         [, $child, $pet] = trFamily();
         for ($i = 0; $i < 6; $i++) {
@@ -432,7 +526,7 @@ describe('scoring', function () {
     it('scores the first tap of each cue: in time (window edges included), too early, too late, no praise, waited, praised without obeying', function () use ($trials) {
         $taps = [
             500,          // lead-in: ignored
-            3000,         // 0: exactly at the obey instant → in time
+            3150,         // 0: exactly at the 150 ms reaction floor → in time
             4500, 4600,   // 1: no tap in its slot is in [8000, 14000) … 4500/4600 belong to cue 0 (already decided)
             14999, 15200, // 2: first tap 1 ms early → too early (the second does not rescue it)
             22501,        // 3: 1 ms after the window → too late
@@ -452,13 +546,61 @@ describe('scoring', function () {
     });
 
     it('scores taps in any order and counts nothing for a child who taps all the time', function () use ($trials) {
-        expect(TrainingService::score($trials, 1500, [45100, 3100])['successes'])->toBe(2);
+        expect(TrainingService::score($trials, 1500, [45300, 3200])['successes'])->toBe(2);
 
         // Tapping every 500 ms from the first cue: every obeying cue is "too early".
         $spam = range(2000, 49500, 500);
         $score = TrainingService::score($trials, 1500, $spam);
         expect($score['successes'])->toBe(0)
             ->and(array_unique(array_column($score['trials'], 'outcome')))->toEqualCanonicalizing(['too_early', 'praised_without_obeying']);
+    });
+
+    it('treats a praise faster than a human reaction (< 150 ms after obeying) as too early', function () use ($trials) {
+        $score = TrainingService::score($trials, 1500, [3000, 9149, 15150]);
+
+        expect(array_column(array_slice($score['trials'], 0, 3), 'outcome'))->toBe(['too_early', 'too_early', 'in_time'])
+            ->and($score['trials'][2]['latency_ms'])->toBe(150)
+            ->and($score['successes'])->toBe(1);
+    });
+
+    it('logs a session with uniformly perfect latency as suspicious (pet id only) and still scores it', function () {
+        [, $child, $pet] = trFamily();
+        trAt('2026-10-08 08:00:00');
+        $s = trStart($child)->assertOk()->json('session');
+        expect($s['min_reaction_ms'])->toBe(150);
+        // Pin the stored schedule (a random one may have < 3 obeyed cues): 4 obeyed, 4 ignored.
+        $trials = [];
+        for ($i = 0; $i < 8; $i++) {
+            $cue = 2000 + 6000 * $i;
+            $trials[] = ['index' => $i, 'cue_at_ms' => $cue, 'obeys' => $i % 2 === 0,
+                'obey_at_ms' => $i % 2 === 0 ? $cue + 1000 : null, 'window_end_ms' => $i % 2 === 0 ? $cue + 2500 : null];
+        }
+        PetTrainingSession::where('public_id', $s['id'])->update(['schedule' => json_encode(['praise_window_ms' => 1500, 'min_reaction_ms' => 150, 'trials' => $trials])]);
+        $robot = [];
+        foreach ($trials as $t) {
+            if ($t['obeys']) {
+                $robot[] = $t['obey_at_ms'] + 200;   // identical reaction every time
+            }
+        }
+        Log::spy();
+        trAt('2026-10-08 08:00:50');
+        trFinish($child, $s['id'], $robot)->assertOk()->assertJsonPath('result.successes', count($robot));
+
+        Log::shouldHaveReceived('warning')->with('TrainingService: suspicious training session (uniform praise latency)', ['pet_id' => $pet->id])->once();
+        expect(PetTrainingSession::where('public_id', $s['id'])->value('result')['suspicious'] ?? null)->toBeTrue();
+
+        // A human-like spread is not suspicious.
+        $human = ['trials' => [
+            ['outcome' => 'in_time', 'latency_ms' => 310], ['outcome' => 'in_time', 'latency_ms' => 520],
+            ['outcome' => 'in_time', 'latency_ms' => 450], ['outcome' => 'too_late', 'latency_ms' => 1700],
+        ]];
+        $bot = ['trials' => [
+            ['outcome' => 'in_time', 'latency_ms' => 300], ['outcome' => 'in_time', 'latency_ms' => 330],
+            ['outcome' => 'in_time', 'latency_ms' => 360],
+        ]];
+        expect(TrainingService::looksScripted($human))->toBeFalse()
+            ->and(TrainingService::looksScripted($bot))->toBeTrue()
+            ->and(TrainingService::looksScripted(['trials' => array_slice($bot['trials'], 0, 2)]))->toBeFalse();
     });
 
     it('adds progress for every in-time praise, logs the routine once and returns the result (repeat = unchanged)', function () {
