@@ -284,3 +284,15 @@ When assigning a domain name (e.g. `api.petprep.io`):
    REVERB_SCHEME=https
    ```
 3. **Restart Caddy:** Caddy will automatically provision Let's Encrypt SSL/TLS certificates.
+
+## 10. Marketing website (petprep.si)
+
+The public website is a separate repository, `DataVallis/pet-prep-website`, deployed to the same server:
+
+- **Container:** `petprep-website` (image `petprep-website:production`, `:previous` for rollback), Node 22 Next.js standalone server on port 3000, no published ports; joins `backend_petprep-network` with the alias `website`.
+- **Files:** `/opt/petprep/website/incoming` (last uploaded commit, holds `deploy/compose.yaml` and `deploy/deploy.sh`), `/opt/petprep/website/.deployed-sha`.
+- **Deploy:** push to `main` in the website repo → GitHub Actions (lint, build, Docker smoke test) → rsync + `deploy/deploy.sh` as `deploy`. Secrets in that repo: `PRODUCTION_SSH_PRIVATE_KEY` (same key as here), optional `PRODUCTION_HOST`, `PRODUCTION_USER`.
+- **Routing:** Caddy (this repo, `deployment/Caddyfile`) serves `petprep.si` → `website:3000` and redirects `www.petprep.si` → `petprep.si`. The API stays on `api.petprep.si`.
+- **Logs / restart:** `docker logs -f petprep-website`; `docker compose -f /opt/petprep/website/incoming/deploy/compose.yaml up -d --force-recreate`.
+- **Rollback:** `docker tag petprep-website:previous petprep-website:production` and the restart command above.
+
