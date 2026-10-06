@@ -1089,3 +1089,10 @@ describe('PR #35 re-review — DST (Europe/Ljubljana, 2026-10-25: 03:00 CEST →
         expect($row->refresh()->status)->toBe('sent')->and($sent)->toHaveCount(2);
     });
 });
+
+it('registers push devices on their own rate limiter, not the shared api bucket (hotfix 2026-10-06)', function () {
+    $route = app('router')->getRoutes()->match(Illuminate\Http\Request::create('/api/devices', 'POST'));
+
+    expect($route->gatherMiddleware())->toContain('throttle:devices')
+        ->not->toContain('throttle:api');
+});
