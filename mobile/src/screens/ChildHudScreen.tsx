@@ -236,7 +236,9 @@ export default function ChildHudScreen() {
   const takeOut = useTakeOut();
   const resolveChewing = useResolveChewing();
   // M5-R02: a puppy (bladder clock) gets "Pelji ven" and the countdown ticks while unlocked.
-  const hasTakeOut = view !== undefined && (view.behaviour.take_out !== null || view.behaviour.can_take_out);
+  // The server refuses take-out (422) exactly when `take_out` is null (PR #42) — and a pet
+  // created without the `behaviour_events` feature never has one.
+  const hasTakeOut = view !== undefined && view.behaviour.take_out !== null;
   const serverNow = useServerNow(view?.clockSkewMs ?? 0, hasTakeOut && !(view?.lock.is_locked ?? false));
   // The album never survives a lock (it would reopen when the lock lifts) or the HUD.
   const lockedNow = view?.lock.is_locked ?? false;

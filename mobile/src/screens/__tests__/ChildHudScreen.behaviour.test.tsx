@@ -231,6 +231,23 @@ describe('ChildHudScreen — behaviour events (M5-R02)', () => {
     expect(screen.queryByTestId('cleaning-overlay')).toBeNull();
   });
 
+  it('behaviour_enabled false (pet from an older app build): nothing new, regular dock', async () => {
+    await renderHud(
+      makeLiveChildState({
+        pet: { profile: { ...makeLiveChildState().pet.profile, behaviour_enabled: false } },
+        behaviour: { take_out: null, active_events: [], scene: null, can_take_out: false, can_resolve_chewing: false },
+      }),
+    );
+    expect(screen.queryByTestId('action-take-out')).toBeNull();
+    expect(screen.queryByTestId('hud-behaviour')).toBeNull();
+    expect(screen.queryByTestId('hud-take-out-countdown')).toBeNull();
+  });
+
+  it('no button without a clock, even if a flag says otherwise (422 ⇔ take_out null)', async () => {
+    await renderHud(makeLiveChildState({ behaviour: { take_out: null, can_take_out: true } }));
+    expect(screen.queryByTestId('action-take-out')).toBeNull();
+  });
+
   it('labels the new dock button', async () => {
     await renderHud(puppy());
     expect(screen.getByText(HUD_STRINGS.takeOut)).toBeTruthy();

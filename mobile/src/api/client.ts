@@ -192,12 +192,25 @@ export interface GenerateChildPinRequest {
   profile?: NewPetProfile | null;
 }
 
-/** The JSON body of a generate-pin request: profile fields only for a new pet, always all three. */
-export function generatePinBody(body: GenerateChildPinRequest): Record<string, number | string> {
+/** A UI feature this app build can show for a new pet (backend `ClientFeature`). */
+export type ClientFeature = NonNullable<components['schemas']['GeneratePinRequest']['features']>[number];
+
+/**
+ * What this build declares for every new pet (M5-R02, PR #42 B1): it can show the
+ * behaviour events ("Pelji ven", luža, pregrizen copat). The server enables them on the
+ * pet only when the creating app sent this — older builds never get events they can't show.
+ */
+export const CLIENT_FEATURES: readonly ClientFeature[] = ['behaviour_events'];
+
+/**
+ * The JSON body of a generate-pin request: profile fields only for a new pet, always all
+ * three, together with `features` (never with `pet_id`, never without the profile).
+ */
+export function generatePinBody(body: GenerateChildPinRequest): Record<string, number | string | ClientFeature[]> {
   if (body.pet_id != null) return { child_id: body.child_id, pet_id: body.pet_id };
   if (body.profile) {
     const { breed, origin, age_stage } = body.profile;
-    return { child_id: body.child_id, breed, origin, age_stage };
+    return { child_id: body.child_id, breed, origin, age_stage, features: [...CLIENT_FEATURES] };
   }
   return { child_id: body.child_id };
 }
