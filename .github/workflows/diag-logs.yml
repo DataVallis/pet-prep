@@ -13,5 +13,5 @@ jobs:
         run: |
           mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/id && chmod 600 ~/.ssh/id
           ssh-keyscan -H 138.199.172.97 >> ~/.ssh/known_hosts 2>/dev/null
-          OUT=$(ssh -i ~/.ssh/id deploy@138.199.172.97 "cd /opt/petprep/repo/backend && docker compose -p backend -f compose.production.yaml exec -T app sh -c 'ls -lt storage/logs | head -4; F=\$(ls -t storage/logs/*.log | head -1); grep -hE \"production\\.(ERROR|CRITICAL)\" \$F | grep -v Pusher | tail -n 12' 2>&1 | cut -c1-900")
+          OUT=$(ssh -i ~/.ssh/id deploy@138.199.172.97 "cd /opt/petprep/repo/backend && docker compose -p backend -f compose.production.yaml exec -T app sh -c 'grep -nE \"^\\[2026-10-06\" storage/logs/laravel.log | grep -v Pusher | tail -n 15' 2>&1 | cut -c1-1200; docker compose -p backend -f compose.production.yaml logs --since 4h app queue scheduler 2>&1 | grep -iE 'error|exception|fatal' | grep -v Pusher | tail -n 15 | cut -c1-900")
           while IFS= read -r line; do echo "::error title=log::$line"; done <<< "$OUT"
