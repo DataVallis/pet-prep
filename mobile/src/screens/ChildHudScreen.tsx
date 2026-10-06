@@ -42,8 +42,9 @@ import {
 import { useQueryClient } from '@tanstack/react-query';
 
 import { useAppStore, type WebSocketStatus } from '@/store/appStore';
+import { rememberFamilyTimezone } from '@/modules/session/familyTimezone';
 import { usePetWebSocket } from '@/hooks/usePetWebSocket';
-import { applyBroadcastToCache, childPetKey, useChildPet } from '@/hooks/queries/useChildPet';
+import { applyBroadcastToCache, childPetKey, isRecoverableError, useChildPet } from '@/hooks/queries/useChildPet';
 import { useClean, useFeed, useResolveChewing, useTakeOut, useWater } from '@/hooks/queries/useChildActions';
 import { useServerNow } from '@/hooks/useServerNow';
 import {
@@ -90,6 +91,8 @@ export const HUD_STRINGS = {
   ws: WS_BADGE_STRINGS,
   loading: 'Nalagam kužka …',
   loadFailed: 'Kužka ni bilo mogoče naložiti.',
+  /** Under the error screen: the HUD keeps trying by itself (hotfix 2026-10-06). */
+  autoRetry: 'Poskušam znova samodejno …',
   retry: 'Poskusi znova',
   logout: 'Odjava',
   stale: 'Ni povezave — prikazujem zadnje stanje.',
@@ -191,6 +194,8 @@ function useSessionSync(view: ChildPetView | undefined): void {
       until: view.lock.until ?? view.pet.illness_until,
       timezone: view.timezone,
     });
+    // For the lock overlay after a relaunch, before this state loads (hotfix 2026-10-06).
+    rememberFamilyTimezone(view.timezone);
     // AppNavigator swaps the HUD for ContractScreen (M1-07b / M2-01).
     if (view.pet.awaiting_contract) setAwaitingContract(true);
   }, [view, setLockState, setAwaitingContract]);
@@ -328,6 +333,11 @@ export default function ChildHudScreen() {
           <View style={styles.centeredBox} testID="hud-load-error">
             <WifiOff color="#94a3b8" size={32} />
             <Text style={styles.centeredText}>{HUD_STRINGS.loadFailed}</Text>
+            {isRecoverableError(petQuery.error) && (
+              <Text style={styles.centeredHint} testID="hud-auto-retry">
+                {HUD_STRINGS.autoRetry}
+              </Text>
+            )}
             <Pressable
               accessibilityRole="button"
               style={({ pressed }) => [styles.retryButton, pressed && styles.pressed]}
@@ -857,6 +867,11 @@ const styles = StyleSheet.create({
     color: '#cbd5e1',
     fontSize: 15,
     fontWeight: '600',
+    textAlign: 'center',
+  },
+  centeredHint: {
+    color: '#94a3b8',
+    fontSize: 13,
     textAlign: 'center',
   },
   retryButton: {

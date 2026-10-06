@@ -3,6 +3,7 @@ import { StyleSheet, type TextStyle, type ViewStyle } from 'react-native';
 
 import LockedScreen, { LOCKED_STRINGS, isTranslucentLock, lockVeil, lockedCopy } from '@/screens/LockedScreen';
 import { useAppStore } from '@/store/appStore';
+import { makePet } from '@/test-utils/fixtures';
 
 describe('LockedScreen (M1-16)', () => {
   beforeEach(() => useAppStore.setState(useAppStore.getInitialState(), true));
@@ -102,6 +103,36 @@ describe('LockedScreen (M1-16)', () => {
     useAppStore.getState().setLockState('illness', { until: '2026-10-04T16:30:00+00:00', timezone: 'Europe/Ljubljana' });
     render(<LockedScreen />);
     expect(screen.getByText('Kuža je pri veterinarju do 18:30. Potrebuje počitek.')).toBeTruthy();
+  });
+
+  describe('hotfix 2026-10-06: restored session, no child state loaded (429 / offline)', () => {
+    // /api/user gives a UTC illness_until; the device (Jest) runs on UTC.
+    const UTC_END = '2026-10-06T08:41:01+00:00';
+
+    it('uses the remembered family zone from the restore — never the UTC wall clock', () => {
+      jest.useFakeTimers({ now: new Date('2026-10-06T08:40:00Z') });
+      useAppStore.getState().signIn({
+        token: 't',
+        user: { id: 2, name: 'Maja', email: null, role: 'child' },
+        pet: makePet({ illness_until: UTC_END }),
+        awaitingContract: false,
+        familyTimezone: 'Europe/Ljubljana',
+      });
+      jest.useRealTimers();
+      expect(useAppStore.getState().lockState).toBe('illness');
+      render(<LockedScreen />);
+      expect(screen.getByText('Kuža je pri veterinarju do 10:41. Potrebuje počitek.')).toBeTruthy();
+    });
+
+    it('without a remembered zone: the device zone', () => {
+      const details = { until: UTC_END, timezone: null };
+      expect(lockedCopy('illness', details, 'Europe/Ljubljana').body).toBe(LOCKED_STRINGS.illness.body('10:41'));
+      expect(lockedCopy('illness', details, 'America/New_York').body).toBe(LOCKED_STRINGS.illness.body('04:41'));
+      // Unknown device zone → the device's local clock (UTC in Jest), still not the string's own clock.
+      expect(lockedCopy('illness', { until: '2026-10-06T10:41:01+02:00', timezone: null }, null).body).toBe(
+        LOCKED_STRINGS.illness.body('08:41'),
+      );
+    });
   });
 
   it('game over, inactive, illness without a time', () => {

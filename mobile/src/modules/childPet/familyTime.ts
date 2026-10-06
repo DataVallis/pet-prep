@@ -129,6 +129,35 @@ export function lockClock(iso: string | null, timeZone: string | null): string |
   return familyClock(iso, timeZone);
 }
 
+/** IANA zone of the device (`Intl`), or null when the runtime can't tell. */
+export function deviceTimeZone(): string | null {
+  try {
+    const zone = new Intl.DateTimeFormat().resolvedOptions().timeZone;
+    return typeof zone === 'string' && zone.length > 0 ? zone : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Lock end "HH:MM" when the family zone may be unknown (session restored, no state
+ * loaded yet — hotfix 2026-10-06): the family zone if known, else the device zone, else
+ * the device's local clock. Never the UTC wall clock of a `+00:00` instant.
+ */
+export function lockClockWithFallback(
+  iso: string | null,
+  familyZone: string | null,
+  deviceZone: string | null = deviceTimeZone(),
+): string | null {
+  if (!iso) return null;
+  const ms = Date.parse(iso);
+  if (Number.isNaN(ms)) return null;
+  const zone = familyZone ?? deviceZone;
+  if (zone !== null && zoneOffsetMinutes(ms, zone) !== null) return lockClock(iso, zone);
+  const local = new Date(ms);
+  return `${String(local.getHours()).padStart(2, '0')}:${String(local.getMinutes()).padStart(2, '0')}`;
+}
+
 /** Minutes east of UTC written in an ISO string (`Z` → 0), or null without one. */
 export function isoOffsetMinutes(iso: string | null): number | null {
   if (!iso) return null;

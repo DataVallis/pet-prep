@@ -53,6 +53,11 @@ export interface SignInPayload {
    * already born pet must still sign (the pet's `born_at` says "born").
    */
   awaitingContract?: boolean | null;
+  /**
+   * Family IANA zone remembered on this device (child, session restore) — the lock
+   * overlay shows the vet end time in it before the child state loads.
+   */
+  familyTimezone?: string | null;
 }
 
 /** The session pet with the server's per-child contract flag applied (if any). */
@@ -169,7 +174,7 @@ export const useAppStore = create<AppStore>((set) => ({
   setUser: (user) => set({ user }),
   setPairingStatus: (status, error = null) =>
     set({ pairingStatus: status, pairingError: error }),
-  signIn: ({ token, user, pet, awaitingContract }) => {
+  signIn: ({ token, user, pet, awaitingContract, familyTimezone }) => {
     const sessionPet = petWithContractFlag(pet, awaitingContract);
     set({
       authToken: token,
@@ -178,7 +183,7 @@ export const useAppStore = create<AppStore>((set) => ({
       pairingStatus: sessionPet ? 'paired' : 'unpaired',
       pairingError: null,
       lockState: lockStateFromPet(sessionPet),
-      lockDetails: { until: sessionPet?.illness_until ?? null, timezone: null },
+      lockDetails: { until: sessionPet?.illness_until ?? null, timezone: familyTimezone ?? null },
       bootStatus: 'ready',
     });
   },

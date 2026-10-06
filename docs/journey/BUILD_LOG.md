@@ -8,6 +8,18 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-06 — Hitri popravek: aplikacija ne obupa več ob preobremenitvi
+
+**Kaj se je zgodilo:** Na Davidovem TestFlightu (1.24.4) je bil kuža pri veterinarju. Strežnik je otrokovi aplikaciji za nekaj minut odgovoril »preveč zahtev« (429 — omejitev 60 zahtev na minuto na uporabnika), aplikacija se je zaprla, po ponovnem zagonu pa je ostala na zaslonu »Kužka ni bilo mogoče naložiti« in čas vrnitve od veterinarja pokazala v napačnem pasu (08:41 namesto 10:41). Popravek: aplikacija stanje vpraša največ ~10× na minuto, ob 429 počaka, kolikor strežnik reče, obdrži zadnje znano stanje in sama poskusi znova — brez tipke. Konec obiska pri veterinarju zdaj aplikacija ve tudi sama. Če se zaslon kužka kdaj zatakne, otrok vidi »Ups, nekaj se je zataknilo« z gumbom »Poskusi znova«, namesto da se aplikacija zapre. 31 novih testov (skupaj 946 zelenih).
+
+**Zakaj je pomembno:** Otrok ne sme ostati pred praznim zaslonom, ko je kuža bolan — takrat je skrb najbolj pomembna. In strežnik ostane miren tudi, ko bo otrok veliko.
+
+**Kako povedati:**
+- 👩 Starši: "Tudi ko je internet slab ali je strežnik zaseden, otrok vidi svojega kužka in čas, ko se vrne od veterinarja — po vašem času."
+- 🛠 Tehnično: omejevalnik zahtev na odjemalcu (žetoni, 3 + 1 na 6 s), eksponentno odlašanje pri časovnih mejah, `Retry-After`, error boundary okoli HUD-a; incident ponovljen v Jest testih z lažnimi urami.
+
+---
+
 ## 2026-10-06 — »Pelji ven« in pregrizen copat zdaj tudi v aplikaciji (M5-R02, aplikacija)
 
 **Kaj se je zgodilo:** Mladiček ima v aplikaciji peti gumb **»Pelji ven«**, nad gumbi pa mirno odštevanje (»Kuža bo moral ven čez ~1 h 20 min« — brez rdeče barve in alarmov). Če ga nihče ne pelje ven, nastane luža: otrok jo pobriše v znani igri čiščenja, le da so namesto madežev lužice. Pregrizen copat se pokaže ob kužku z gumbom **»Pospravi in daj igračo«** — copata otrok ne »drgne«. Brezplačni pes pokaže lužo in copat kot risbo v aplikaciji, plačljiva pasma kot AI video. Starš pri otroku vidi, do kdaj mora mladiček ven, odprte nerede z rokom, kolikokrat ga je otrok v 7 dneh peljal ven, in v časovnici »Mladiček je naredil lužo«. Stari psi in starejši strežniki ostanejo brez sprememb. 75 novih testov (skupaj 915 zelenih).

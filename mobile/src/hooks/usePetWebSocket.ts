@@ -20,6 +20,7 @@ import Pusher from 'pusher-js';
 import { useAppStore } from '@/store/appStore';
 import { ENV } from '@/config/env';
 import { api } from '@/api/client';
+import { channelAuthGate, gatedCall } from '@/modules/childPet/refetchGovernor';
 import {
   buildPusherOptions,
   petChannelName,
@@ -36,7 +37,13 @@ export function createEcho(): Echo<'reverb'> {
   const PusherClient = resolvePusherConstructor<Pusher>(Pusher);
   return new Echo<'reverb'>({
     broadcaster: 'reverb',
-    client: new PusherClient(ENV.REVERB_APP_KEY, buildPusherOptions(ENV, api.authorizeChannel)),
+    // Gated: reconnect storms must not drain the per-user API limit (hotfix 2026-10-06).
+    client: new PusherClient(
+      ENV.REVERB_APP_KEY,
+      buildPusherOptions(ENV, (socketId, channelName) =>
+        gatedCall(channelAuthGate, () => api.authorizeChannel(socketId, channelName)),
+      ),
+    ),
   });
 }
 

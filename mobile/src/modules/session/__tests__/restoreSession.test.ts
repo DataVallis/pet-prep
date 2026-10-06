@@ -36,7 +36,7 @@ describe('restoreSession', () => {
 
     await expect(restoreSession()).resolves.toEqual({
       status: 'authenticated',
-      session: { token: 'tok-123', user: { id: 2, name: 'Otrok', email: 'c@x.si', role: 'child' }, pet },
+      session: { token: 'tok-123', user: { id: 2, name: 'Otrok', email: 'c@x.si', role: 'child' }, pet, familyTimezone: null },
     });
   });
 
@@ -48,9 +48,26 @@ describe('restoreSession', () => {
     const result = await restoreSession();
     expect(result).toEqual({
       status: 'authenticated',
-      session: { token: 'tok-9', user: { id: 3, name: 'Bor', email: null, role: 'child' }, pet, awaitingContract: true },
+      session: { token: 'tok-9', user: { id: 3, name: 'Bor', email: null, role: 'child' }, pet, awaitingContract: true, familyTimezone: null },
     });
     if (result.status === 'authenticated') expect(result.session.user).not.toHaveProperty('awaiting_contract');
+  });
+
+  it('hotfix 2026-10-06: a child session carries the remembered family timezone (lock overlay before the state loads)', async () => {
+    getItem.mockImplementation((key: string) =>
+      Promise.resolve(key === 'petprep.family_timezone' ? 'Europe/Ljubljana' : 'tok-5'),
+    );
+    getUser.mockResolvedValueOnce({ id: 4, name: 'Ana', email: null, role: 'child', pet: makePet() });
+    const result = await restoreSession();
+    expect(result.status === 'authenticated' && result.session.familyTimezone).toBe('Europe/Ljubljana');
+
+    // A garbage value is ignored; a parent never reads it.
+    getItem.mockImplementation((key: string) => Promise.resolve(key === 'petprep.family_timezone' ? '../etc' : 'tok-5'));
+    getUser.mockResolvedValueOnce({ id: 4, name: 'Ana', email: null, role: 'child', pet: makePet() });
+    const garbage = await restoreSession();
+    expect(garbage.status === 'authenticated' && garbage.session.familyTimezone).toBeNull();
+    getItem.mockReset();
+    getItem.mockResolvedValue(null);
   });
 
   it('clears the token on 401', async () => {
