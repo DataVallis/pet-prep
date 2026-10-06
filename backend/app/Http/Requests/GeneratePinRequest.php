@@ -49,7 +49,7 @@ class GeneratePinRequest extends FormRequest
             'origin' => ['nullable', 'required_with:breed,age_stage', Rule::enum(PetOrigin::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
             'age_stage' => ['nullable', 'required_with:breed,origin', Rule::enum(LifeStage::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
             // M5-R02 (PR #42 B1): what this app build can show for the new pet,
-            // e.g. ["behaviour_events"]. An array of ≤ 10 strings; values this
+            // e.g. ["behaviour_events", "training"]. An array of ≤ 10 strings; values this
             // server doesn't know (newer apps) are dropped, not refused
             // (ClientFeature::known). Stored with the profile; the pet gets a
             // feature only if the child's device declares it too at pin-login.

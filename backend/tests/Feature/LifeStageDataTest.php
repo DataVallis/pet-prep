@@ -38,7 +38,7 @@ function ldData(string $path): array
     return $node;
 }
 
-/** Source ids S1–S46 listed in sources.md. */
+/** Source ids S1–S47 listed in sources.md. */
 function ldSourceIds(): array
 {
     preg_match_all('/^\| (S\d+) \|/m', (string) file_get_contents(base_path('../docs/research/dog-data/sources.md')), $m);
@@ -150,9 +150,18 @@ describe('import provenance', function () {
             ->and($windows->notes)->toStartWith('Decision: potrdil David 2026-10-05.')
             ->and($windows->notes)->toContain('no literature number');
         // Since David's answers (2026-10-05) no imported value is an open proposal —
-        // except the M5-R02 teething chewing chance (Claude's proposal, waiting for David).
+        // except the M5-R02 teething chewing chance and the M5-R03 training
+        // proposals (Claude, waiting for David). The training multiplier and
+        // the individual variation are David's decisions (verified).
         expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())
-            ->toBe([StageParamKey::ChewingChancePerDay->value]);
+            ->toEqualCanonicalizing([
+                StageParamKey::ChewingChancePerDay->value,
+                StageParamKey::TrainingMinutesPerDay->value,
+                StageParamKey::TrainingProgressPerSuccess->value,
+                StageParamKey::TrainingDecayPerMissedDay->value,
+                StageParamKey::PottyTrainingAccidentReduction->value,
+                StageParamKey::PlaceTrainingChewingReduction->value,
+            ]);
     });
 
     it('marks David\'s 2026-10-05 answers verified as decisions and keeps the underlying source ids — data_verified turns true', function () {

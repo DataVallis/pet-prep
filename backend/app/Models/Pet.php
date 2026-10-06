@@ -178,6 +178,8 @@ class Pet extends Model
         'life_stage',
         // M5-R02 / PR #42: set once at creation from the app's generate-pin `features`.
         'behaviour_events_enabled',
+        // M5-R03: set once at creation (generate-pin + pin-login `features: ["training"]`).
+        'training_enabled',
     ];
 
     /**
@@ -193,6 +195,9 @@ class Pet extends Model
         // M5-R02 bookkeeping (the apps get BehaviourPayload instead).
         'potty_clock_started_at',
         'behaviour_scheduled_through',
+        // M5-R03 bookkeeping (the apps get TrainingPayload instead).
+        'training_learning_factor',
+        'training_decayed_through',
     ];
 
     /**
@@ -215,6 +220,8 @@ class Pet extends Model
             'frozen_at' => 'datetime',
             'potty_clock_started_at' => 'datetime',
             'behaviour_events_enabled' => 'boolean',
+            'training_enabled' => 'boolean',
+            'training_learning_factor' => 'float',
             'hunger_level' => 'float',
             'thirst_level' => 'float',
             'energy_level' => 'float',
@@ -447,6 +454,22 @@ class Pet extends Model
         return $this->hasMany(PetMedia::class);
     }
 
+    /**
+     * Training progress per command (M5-R03).
+     */
+    public function trainingSkills(): HasMany
+    {
+        return $this->hasMany(PetTrainingSkill::class);
+    }
+
+    /**
+     * Training mini-game sessions (M5-R03).
+     */
+    public function trainingSessions(): HasMany
+    {
+        return $this->hasMany(PetTrainingSession::class);
+    }
+
     // ──────────────────────────────────────────────────────────────
     //  Virtual Age (Time Asymmetry: 1 real week = 1 virtual month)
     // ──────────────────────────────────────────────────────────────
@@ -473,6 +496,17 @@ class Pet extends Model
     public function behaviourEventsEnabled(): bool
     {
         return (bool) $this->behaviour_events_enabled && ! $this->isLegacyProfile();
+    }
+
+    /**
+     * Training (M5-R03, David 2026-10-06) applies only to a profiled pet whose
+     * creating app builds (parent and child) declared the `training` feature.
+     * Legacy-profile pets keep the pre-M5 rules: no training, no training
+     * routine. Fixed at creation; existing pets: off.
+     */
+    public function trainingEnabled(): bool
+    {
+        return (bool) $this->training_enabled && ! $this->isLegacyProfile();
     }
 
     /**
@@ -595,6 +629,8 @@ class Pet extends Model
             // decided from the birth day on.
             'potty_clock_started_at' => $at,
             'behaviour_scheduled_through' => null,
+            // M5-R03: "no practice → decay" is evaluated from the birth day on.
+            'training_decayed_through' => null,
             'frozen_at' => null,
         ]);
     }

@@ -34,6 +34,7 @@
 - **Učljivost po pasmi** iz virov (npr. raziskava Stanley Coren, *The Intelligence of Dogs* — rangiranje poslušnosti; AKC opisi temperamenta). Border Collie hitro, nekatere pasme počasneje; mešanček povprečno z naključjem.
 - Šolanje **zmanjša** nered, uničevanje, pobege; neredno šolanje → napredek počasi upada.
 - Šolanje šteje kot rutina v Care Score (predlog) in je vidno staršu ("Kuža zna: sedi ✓, pridi 60 %").
+- **Stanje (6. 10. 2026, M5-R03):** ✅ **strežnik** — ukazi sedi, pridi, prostor, lulat zunaj (David); mini-igra s pravim trenutkom za pohvalo, ki jo oceni strežnik; Border Collie 2×, mešanček ±20 % na psa (David); 5 min na dan, +1 / −2 točki, učinka na luže in uničevanje (predlogi, *čaka Davida*); dnevna rutina v Care Score; staršu vidno. ⏳ **aplikacija** (zaslon vaje, gumb »Pohvali«, prikaz pri staršu) — *načrt*. Podrobno: PRODUCT_SPEC §5 / §11.
 
 ## 5. Kaj to pomeni za aplikacijo in strežnik (pregled)
 - Nov korak pri staršu: **"Izberi kužka"** (pasma, izvor, starost) pred PIN-om (nadgradnja M2-04).
@@ -67,5 +68,5 @@ Za vsako pasmo in fazo zbrati z viri: velikost/teža po starosti (rastne krivulj
 | §3 Več spanja | 🟡 podatki shranjeni (S28), uporaba v videih / vedenju še ne | `breed_stage_params.sleep_hours` |
 | §3 Nered (luža mladička), uničevanje | ✅ **strežnik** (M5-R02, David 6. 10. 2026) — mladiček zdrži 1 h na mesec starosti (S30 / S31), ura teče samo izven tihih ur, »Pelji ven« jo ponastavi; uničevanje ob menjavi zob (3–6 mes., verjetnost 0,5 / dan — *nepreverjen predlog*) ali dan po zamujenem sprehodu, reši se s »Pospravi in daj igračo«; oboje je rutina čiščenja (2 h) in zniža čistočo; plačljiva pasma dobi videa luže in grizenja. ⏳ **aplikacija** (gumbi, ikone, videi) | PRODUCT_SPEC §5 / §10 / §11 |
 | §3 Plašnost posvojenega psa, nered posvojenega odraslega psa (S39 / S40) | ⏳ odprto vprašanje (DECISIONS 6. 10.) | ROADMAP |
-| §4 Šolanje | ⏳ M5-R03 (učljivost Coren shranjena) | ROADMAP |
+| §4 Šolanje | ✅ **strežnik** (M5-R03, David 6. 10. 2026) — 4 ukazi, mini-igra »Pohvali ob pravem trenutku« (urnik in ocena na strežniku), Border Collie 2× / mešanček ±20 %, 5 min na dan, upad brez vaje, rutina v Care Score, manj luž (lulat zunaj) in manj grizenja med menjavo zob (prostor) — številke vaje in učinkov so *nepreverjeni predlogi*; ⏳ **aplikacija** | PRODUCT_SPEC §5 / §11 |
 | §6 Podatki iz virov | ✅ uvoženo (insert-only); od 5. 10. vse vrednosti potrjene — iz vira ali z Davidovo odločitvijo (»potrdil David 2026-10-05«, enkratna podatkovna migracija za produkcijo); kar admin označi kot NEPODPRTO, je vidno v Filamentu | `docs/research/dog-data/`, DECISIONS 5. 10. |

@@ -500,6 +500,51 @@ flowchart TD
   CL -. "≤ 2 h outside quiet hours" .-> DONE
 ```
 
+### 5e. Training mini-game (M5-R03, David 2026-10-06)
+
+The server picks the schedule and scores; the app receives the schedule and reports tap offsets — a modified app could fake taps (budget caps the gain, < 150 ms reactions are too early, uniform latencies are logged).
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant C as Child app
+  participant API as Laravel API
+  participant T as TrainingService
+  participant DB as PostgreSQL
+  Note over T: only pets with training_enabled (profile + generate-pin AND pin-login features ["training"])<br/>legacy / older-app pets → 422 training_not_available · locks (423) are checked first
+  C->>API: POST /api/child/pet/training/start {command: sit}
+  API->>T: lock pet · decay missed days · expire stale sessions
+  T->>DB: one active session per pet? daily budget (5 min, 50 s per session) left?
+  alt running session / budget used
+    API-->>C: 422 training_session_active (next = expires_at) / training_daily_budget_used (next = midnight)
+  else ok
+    T->>DB: pet_training_sessions (active, schedule: 8 cues every 6 s, obeys? 50→90 % by progress, obey 0.8–2.5 s after cue)
+    API-->>C: 200 {session {id, trials[{cue_at_ms, obeys, obey_at_ms, window_end_ms}], praise_window_ms 1500, ends_at, expires_at}, state}
+    API-->>C: PetUpdated training_started (summary.session_active)
+  end
+  Note over C: app plays the 50 s timeline: "Sedi!" at each cue,<br/>dog obeys (or not), child taps "Pohvali" → offsets in ms
+  C->>API: POST /api/child/pet/training/finish {session_id, taps[ms]}
+  API->>T: same child? ends_at − 2 s ≤ now < expires_at? every tap ≤ duration?
+  T->>T: score(): first tap per cue → in_time / too_early / too_late / no_praise · waited / praised_without_obeying
+  T->>DB: progress += in_time × per_success × breed multiplier (BC 2, mutt 1) × pet factor (mutt 0.8–1.2) · cap 100
+  T->>DB: activities_log trained_pet (actor child) = today's training routine
+  API-->>C: 200 {result {trials[outcome], successes, progress_before, progress_after}, state} + PetUpdated trained_pet
+```
+
+Routine, decay and effects:
+
+```mermaid
+flowchart TD
+  D([Family-local day]) --> Q{"Completed session<br/>(trained_pet row)?"}
+  Q -- yes --> DONE["training routine done<br/>(credited to that child — fair share)"]
+  Q -- no --> EX{"Birth day, or hard stop / vet / game over<br/>≥ 50 % of the day's non-quiet time?"}
+  EX -- yes --> NONE["not expected · no decay"]
+  EX -- no --> MISS["missed at midnight → Care Score"]
+  MISS --> DEC["next tick: every command −2 points<br/>(proposal, never below 0)"]
+  P["potty progress"] --> ACC["puppy hold runs out:<br/>P(asks to go out) = 0.75 × progress (proposal, S47)<br/>→ no accident, clock restarts"]
+  PL["place progress"] --> CHW["teething chewing chance × (1 − 0.5 × progress)<br/>(proposal, S33) · chewing after a missed walk unchanged"]
+```
+
 ## 6. Data model (core)
 
 Family model (M2-01, ADR-012): `families` own pets and quiet hours; `family_user` puts parents and children in a family; `pet_caretakers` links children to pets (shared pet = several rows). `users.parent_id` and `pets.user_id` are deprecated mirrors.

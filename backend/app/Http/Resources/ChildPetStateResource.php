@@ -10,6 +10,8 @@ use App\Services\CareScheduleService;
 use App\Services\Media\PetMediaPayload;
 use App\Services\Media\PetMediaService;
 use App\Services\PetProfilePayload;
+use App\Services\TrainingPayload;
+use App\Services\TrainingService;
 use Carbon\CarbonInterface;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -37,6 +39,10 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * (`active_events`: poop | accident | chewing, with the 2-hour deadline),
  * the behaviour video to show (`scene`) and whether the take-out /
  * resolve-chewing actions apply now — {@see BehaviourPayload}.
+ *
+ * `training` (M5-R03): progress per command, today's routine, the running
+ * session, the dog's daily mini-game budget and whether a session can start
+ * now — {@see TrainingPayload}.
  *
  * `pet.media` (M4-05): status + signed URLs of the stored reference image and
  * state videos ({@see PetMediaService::mediaFor()}); `current_video_url` is
@@ -75,6 +81,7 @@ class ChildPetStateResource extends JsonResource
         $profile = PetProfilePayload::for($pet, $now);
         $behaviour = BehaviourPayload::for($pet, $now);
         $hasOpenChewing = in_array('chewing', array_column($behaviour->activeEvents, 'kind'), true);
+        $training = TrainingPayload::for($pet, $actor, $now);
 
         return [
             'pet' => [
@@ -184,6 +191,20 @@ class ChildPetStateResource extends JsonResource
                  */
                 'can_resolve_chewing' => (bool) (! $locked && $hasOpenChewing),
             ],
+            // M5-R03 training: progress per command (sit, come, place, potty), today's
+            // routine, the running session and the dog's daily mini-game budget.
+            'training' => array_merge($training->toArray(), [
+                /**
+                 * POST /api/child/pet/training/start would be accepted now (enabled, not
+                 * locked, no running session, enough budget left for one session, and the
+                 * session would end before the family-local midnight).
+                 *
+                 * @var bool
+                 */
+                'can_start' => (bool) (! $locked && $training->enabled && $training->session === null
+                    && $training->dailyBudgetLeftSeconds >= TrainingPayload::sessionSeconds()
+                    && ! app(TrainingService::class)->dayEndingAt($pet, $now)),
+            ]),
         ];
     }
 }

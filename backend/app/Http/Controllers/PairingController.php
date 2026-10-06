@@ -45,11 +45,12 @@ class PairingController extends Controller
      * legacy-profile pet that keeps the pre-M5 rules.
      *
      * Optional `features` (M5-R02, PR #42): the UI features of this app
-     * build (`behaviour_events`; ≤ 10 strings, unknown values ignored).
-     * Stored with the profile; the new pet gets behaviour events (puppy
-     * accidents, chewing, take-out) only when `behaviour_events` was sent
-     * here AND by the child's device at pin-login. Ignored without a
-     * profile and with `pet_id`.
+     * build (`behaviour_events`, `training`; ≤ 10 strings, unknown values
+     * ignored). Stored with the profile; the new pet gets behaviour events
+     * (puppy accidents, chewing, take-out) / training (M5-R03 mini-game,
+     * daily training routine) only when the feature was sent here AND by
+     * the child's device at pin-login. Ignored without a profile and with
+     * `pet_id`.
      *
      * Without `child_id` (**deprecated**, `Deprecation: true` header): the
      * PIN is for a child already signed in with e-mail, used with
@@ -79,9 +80,9 @@ class PairingController extends Controller
                      * M5-R01: the new pet's profile the PIN will create (mode new_pet with a profile);
                      * null = join / re-login, or no profile sent (→ legacy pet, pre-M5 rules).
                      *
-                     * `features` (M5-R02): the app features stored for the new pet (e.g. behaviour_events).
+                     * `features` (M5-R02 / M5-R03): the app features stored for the new pet (behaviour_events, training).
                      *
-                     * @var array{breed: 'mutt'|'border_collie', origin: 'bought'|'adopted', age_stage: 'puppy'|'young'|'adult'|'senior', features: list<'behaviour_events'>}|null
+                     * @var array{breed: 'mutt'|'border_collie', origin: 'bought'|'adopted', age_stage: 'puppy'|'young'|'adult'|'senior', features: list<'behaviour_events'|'training'>}|null
                      */
                     'pet_profile' => $result['pet_profile'],
                 ], 200);

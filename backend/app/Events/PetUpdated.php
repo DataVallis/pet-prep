@@ -6,6 +6,7 @@ use App\Models\Pet;
 use App\Services\BehaviourPayload;
 use App\Services\Media\PetMediaPayload;
 use App\Services\PetProfilePayload;
+use App\Services\TrainingPayload;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
@@ -162,6 +163,8 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'awaiting_contract' => $pet->isUnborn(),
             // M5-R02: puppy bladder clock, open messes (poop / accident / chewing), behaviour video.
             'behaviour' => BehaviourPayload::for($pet)->toArray(),
+            // M5-R03: training progress per command, today's routine, a session running.
+            'training' => TrainingPayload::summaryFor($pet)->summary(),
             // AI media (M4-05): signed URLs (≤ 90 min) to our copies — the channel is
             // private to the pet's caretakers and family parents; legacy fields mirror it.
             'current_video_url' => $media->currentVideoUrl,

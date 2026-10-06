@@ -24,6 +24,9 @@ enum ActivityType: string
     // accident / the dog chewed something. Never a child's action.
     case PetAccident = 'pet_accident';
     case PetChewed = 'pet_chewed';
+    // M5-R03 (David 2026-10-06): child completed a training session (the
+    // day's training routine); value = correctly timed praises.
+    case TrainedPet = 'trained_pet';
 
     /**
      * Rows that describe something that happened to the dog, not a care

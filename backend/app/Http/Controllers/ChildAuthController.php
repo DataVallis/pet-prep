@@ -31,9 +31,10 @@ class ChildAuthController extends Controller
      * 429 `too_many_attempts` (`retry_after` seconds).
      *
      * Optional `features` (M5-R02, PR #42): this child app build's UI
-     * features (`behaviour_events`; unknown values ignored, ≤ 10 strings).
-     * A new pet gets behaviour events only when the parent's PIN AND this
-     * device declared `behaviour_events`; join / re-login never change it.
+     * features (`behaviour_events`, `training`; unknown values ignored, ≤ 10
+     * strings). A new pet gets a feature (behaviour events, training — M5-R03)
+     * only when the parent's PIN AND this device declared it; join /
+     * re-login never change it.
      *
      * POST /api/child/pin-login
      */

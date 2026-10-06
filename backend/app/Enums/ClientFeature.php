@@ -20,6 +20,12 @@ enum ClientFeature: string
     case BehaviourEvents = 'behaviour_events';
 
     /**
+     * Training mini-game (M5-R03): POST /api/child/pet/training/start|finish,
+     * the `training` payload → `pets.training_enabled`.
+     */
+    case Training = 'training';
+
+    /**
      * @return list<string>
      */
     public static function values(): array

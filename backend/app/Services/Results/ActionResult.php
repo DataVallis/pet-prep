@@ -43,6 +43,13 @@ final readonly class ActionResult
         public ?PetLockReason $lockReason = null,
         public ?CareRefusal $refusal = null,
         public ?CarbonInterface $nextAllowedAt = null,
+        /**
+         * Additional top-level response keys of an action (M5-R03 training:
+         * `session` on start, `result` on finish).
+         *
+         * @var array<string, mixed>
+         */
+        public array $extra = [],
     ) {}
 
     public function changed(): bool

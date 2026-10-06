@@ -3,7 +3,7 @@
 namespace App\Enums;
 
 /**
- * The four care routines a child is scored on (M2-06, PRODUCT_SPEC §11).
+ * The care routines a child is scored on (M2-06, PRODUCT_SPEC §11).
  * Mirrored by the pet_daily_routines_type_check constraint.
  */
 enum RoutineType: string
@@ -19,4 +19,11 @@ enum RoutineType: string
 
     /** The daily step goal of a family-local day. */
     case Walk = 'walk';
+
+    /**
+     * One completed training session per family-local day (M5-R03, David
+     * 2026-10-06) — a whole-day routine like the walk; only for pets with
+     * training enabled.
+     */
+    case Training = 'training';
 }

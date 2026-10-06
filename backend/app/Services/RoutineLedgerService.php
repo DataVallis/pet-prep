@@ -48,6 +48,10 @@ use Throwable;
  *    (`pet_daily_walks.achieved`, live for today); missed at day end. Not
  *    expected on the birth day (energy grace) or for a past day without any
  *    step data (scheduler outage).
+ *  - training (M5-R03, David 2026-10-06): one completed training session
+ *    per day (`trained_pet` row, actor = the child) for a pet with training
+ *    enabled (never a legacy-profile pet); missed at day end. Not expected on
+ *    the birth day; excused like the walk (whole-day routine).
  *
  * Not expected at all: before birth (an unborn pet has none), before
  * FIRST_LEDGER_DATE, and — unless it was done anyway — any routine whose
@@ -100,6 +104,7 @@ class RoutineLedgerService
         ActivityType::CleanedPoop,
         ActivityType::WalkedPet,
         ActivityType::ResolvedChewing,
+        ActivityType::TrainedPet,
     ];
 
     public function __construct(
@@ -448,6 +453,16 @@ class RoutineLedgerService
             }
         }
 
+        // Whole-day routines (walk, training) are excused only if the freeze
+        // covered at least half of the day's non-quiet time.
+        $dayPlayable = 0.0;
+        foreach ($this->subtract($dayStartUtc, $dayEndUtc, $blocks) as [$a, $b]) {
+            $split = QuietHours::splitSecondsBetween($quiet, $a, $b);
+            $dayPlayable += $useNormal ? $split['normal'] : $split['normal'] + $split['quiet'];
+        }
+        $blockedShare = $denominator > 0 ? 1 - $dayPlayable / $denominator : 1.0;
+        $wholeDayExcused = $blockedShare >= self::WHOLE_DAY_EXCUSE_SHARE - 1e-9;
+
         // Walk: the daily step goal (not on the birth day).
         if ($date !== $pet->localDate($born)) {
             $walk = $this->walkFor($pet, $in, $date, $date >= $pet->localDate($now));
@@ -455,21 +470,25 @@ class RoutineLedgerService
                 $done = $walk['steps'] >= $walk['goal']
                     ? ($this->walkActivity($in['activities'], $dayStartUtc, $dayEndUtc) ?? ['at' => $dayEndUtc, 'actor' => null])
                     : null;
-                // Whole-day routine: excused only if the freeze covered at
-                // least half of the day's non-quiet time.
-                $dayPlayable = 0.0;
-                foreach ($this->subtract($dayStartUtc, $dayEndUtc, $blocks) as [$a, $b]) {
-                    $split = QuietHours::splitSecondsBetween($quiet, $a, $b);
-                    $dayPlayable += $useNormal ? $split['normal'] : $split['normal'] + $split['quiet'];
-                }
-                $blockedShare = $denominator > 0 ? 1 - $dayPlayable / $denominator : 1.0;
                 $routine = $this->resolve(
                     $pet, $date, RoutineType::Walk, 0, $dayStartUtc, $dayEndUtc, $done, $blocks, $now,
-                    $walk['steps'], $walk['goal'], excused: $blockedShare >= self::WHOLE_DAY_EXCUSE_SHARE - 1e-9,
+                    $walk['steps'], $walk['goal'], excused: $wholeDayExcused,
                 );
                 if ($routine !== null) {
                     $routines[] = $routine;
                 }
+            }
+        }
+
+        // Training (M5-R03): one completed session a day (not on the birth day).
+        if ($pet->trainingEnabled() && $date !== $pet->localDate($born)) {
+            $trained = $this->firstActivity($in['activities'], ActivityType::TrainedPet, $dayStartUtc, $dayEndUtc);
+            $routine = $this->resolve(
+                $pet, $date, RoutineType::Training, 0, $dayStartUtc, $dayEndUtc, $trained, $blocks, $now,
+                excused: $wholeDayExcused,
+            );
+            if ($routine !== null) {
+                $routines[] = $routine;
             }
         }
 

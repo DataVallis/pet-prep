@@ -83,7 +83,7 @@ trait HandlesChildPet
 
         return response()->json(array_merge([
             'status' => $result->status,
-        ], $extra, [
+        ], $result->extra, $extra, [
             'state' => $state,
         ]), $result->status === ActionResult::ACCEPTED ? $successStatus : 200);
     }
@@ -98,6 +98,15 @@ trait HandlesChildPet
             CareRefusal::NeedsCleaning => 'Clean up the mess first.',
             CareRefusal::ContractAlreadySigned => 'The contract is already signed.',
             CareRefusal::TakeOutNotNeeded => 'Only a puppy needs to be taken out on a schedule.',
+            CareRefusal::TrainingNotAvailable => 'Training is not available for this pet.',
+            CareRefusal::TrainingSessionActive => 'A training session is already running.',
+            CareRefusal::TrainingDailyBudgetUsed => 'The dog has trained enough for today.',
+            CareRefusal::TrainingSessionInvalid => 'Unknown training session.',
+            CareRefusal::TrainingSessionNotOver => 'The training session is not over yet.',
+            CareRefusal::TrainingSessionExpired => 'The training session has expired.',
+            CareRefusal::TrainingInvalidTaps => 'A tap lies outside the training session.',
+            CareRefusal::TrainingDayEnding => 'The day is ending — train again after midnight.',
+            CareRefusal::TrainingSessionInterrupted => 'The training session was interrupted.',
             default => 'Action not allowed right now.',
         };
     }

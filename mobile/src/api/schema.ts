@@ -219,9 +219,10 @@ export interface paths {
          *     429 `too_many_attempts` (`retry_after` seconds).
          *
          *     Optional `features` (M5-R02, PR #42): this child app build's UI
-         *     features (`behaviour_events`; unknown values ignored, ≤ 10 strings).
-         *     A new pet gets behaviour events only when the parent's PIN AND this
-         *     device declared `behaviour_events`; join / re-login never change it.
+         *     features (`behaviour_events`, `training`; unknown values ignored, ≤ 10
+         *     strings). A new pet gets a feature (behaviour events, training — M5-R03)
+         *     only when the parent's PIN AND this device declared it; join /
+         *     re-login never change it.
          *
          *     POST /api/child/pin-login
          */
@@ -371,6 +372,58 @@ export interface paths {
          * @description POST /api/child/pet/resolve-chewing
          */
         post: operations["childPet.resolveChewing"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/child/pet/training/start": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Training (M5-R03): start a reward-timing session for one command. The
+         *     response carries `session` — the server's schedule (cues, whether and
+         *     when the dog obeys, the praise window; offsets in ms since start).
+         *     422 training_not_available | training_session_active (next_allowed_at
+         *     = its expiry) | training_day_ending (session + TTL would cross the
+         *     family-local midnight; next_allowed_at = midnight) |
+         *     training_daily_budget_used (next_allowed_at = local midnight); 423 while locked
+         * @description POST /api/child/pet/training/start
+         */
+        post: operations["childPet.startTraining"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/child/pet/training/finish": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Training (M5-R03): finish the session with the "Pohvali" tap offsets
+         *     (ms since start). The server scores them against its schedule and
+         *     returns `result` (per-cue outcome, progress before / after). A repeat
+         *     of a completed finish → `unchanged` with the same result.
+         *     422 training_session_invalid | training_session_expired |
+         *     training_session_not_over | training_invalid_taps | training_session_interrupted |
+         *     training_not_available
+         * @description POST /api/child/pet/training/finish
+         */
+        post: operations["childPet.finishTraining"];
         delete?: never;
         options?: never;
         head?: never;
@@ -636,11 +689,12 @@ export interface paths {
          *     legacy-profile pet that keeps the pre-M5 rules.
          *
          *     Optional `features` (M5-R02, PR #42): the UI features of this app
-         *     build (`behaviour_events`; ≤ 10 strings, unknown values ignored).
-         *     Stored with the profile; the new pet gets behaviour events (puppy
-         *     accidents, chewing, take-out) only when `behaviour_events` was sent
-         *     here AND by the child's device at pin-login. Ignored without a
-         *     profile and with `pet_id`.
+         *     build (`behaviour_events`, `training`; ≤ 10 strings, unknown values
+         *     ignored). Stored with the profile; the new pet gets behaviour events
+         *     (puppy accidents, chewing, take-out) / training (M5-R03 mini-game,
+         *     daily training routine) only when the feature was sent here AND by
+         *     the child's device at pin-login. Ignored without a profile and with
+         *     `pet_id`.
          *
          *     Without `child_id` (**deprecated**, `Deprecation: true` header): the
          *     PIN is for a child already signed in with e-mail, used with
@@ -896,6 +950,20 @@ export interface components {
             payload?: string[] | null;
             error?: string | null;
         };
+        /**
+         * FinishTrainingRequest
+         * @description POST /api/child/pet/training/finish (M5-R03): the session id from start
+         *     and the child's "Pohvali" taps as whole milliseconds since the session
+         *     start (the app's own clock from the moment it started the session).
+         *     Static bounds here; offsets beyond the session's own length are refused
+         *     by TrainingService (422 training_invalid_taps).
+         */
+        FinishTrainingRequest: {
+            /** Format: uuid */
+            session_id: string;
+            /** @description May be empty (the child never tapped). */
+            taps: number[];
+        };
         /** GeneratePinRequest */
         GeneratePinRequest: {
             /**
@@ -914,7 +982,7 @@ export interface components {
             age_stage?: components["schemas"]["LifeStage"] | null;
             /**
              * @description M5-R02 (PR #42 B1): what this app build can show for the new pet,
-             *     e.g. ["behaviour_events"]. An array of ≤ 10 strings; values this
+             *     e.g. ["behaviour_events", "training"]. An array of ≤ 10 strings; values this
              *     server doesn't know (newer apps) are dropped, not refused
              *     (ClientFeature::known). Stored with the profile; the pet gets a
              *     feature only if the child's device declares it too at pin-login.
@@ -1117,6 +1185,7 @@ export interface components {
             arrival_age_months: number | null;
             life_stage: components["schemas"]["LifeStage"] | null;
             behaviour_events_enabled: boolean;
+            training_enabled: boolean;
         };
         /**
          * PetOrigin
@@ -1221,6 +1290,24 @@ export interface components {
             signature: string;
         };
         /**
+         * StartTrainingRequest
+         * @description POST /api/child/pet/training/start (M5-R03): the command to train.
+         *     Only children (PetPolicy).
+         */
+        StartTrainingRequest: {
+            /**
+             * @description sit | come | place | potty
+             *
+             *     | |
+             *     |---|
+             *     | `sit` <br/> "Sedi". |
+             *     | `come` <br/> "Pridi" (recall). |
+             *     | `place` <br/> "Prostor" (go to your place / stay there). Reduces chewing (proposal). |
+             *     | `potty` <br/> "Lulat zunaj" (house training). Reduces puppy accidents (proposal). |
+             */
+            command: components["schemas"]["TrainingCommand"];
+        };
+        /**
          * SyncStepsRequest
          * @description POST /api/child/pet/steps (M1-04 / M1-07): today's cumulative step count
          *     from the phone. The service handles idempotency (max wins), anti-cheat and
@@ -1239,6 +1326,18 @@ export interface components {
              */
             recorded_at: string;
         };
+        /**
+         * TrainingCommand
+         * @description The commands a child can train (M5-R03, David 2026-10-06; REALISM_SPEC §4). AKC (S36) lists come, sit, down/stay, loose-leash walking as first commands; v1 is David's choice. Mirrored by the pet_training_skills_command_check / pet_training_sessions_command_check constraints.
+         *     | |
+         *     |---|
+         *     | `sit` <br/> "Sedi". |
+         *     | `come` <br/> "Pridi" (recall). |
+         *     | `place` <br/> "Prostor" (go to your place / stay there). Reduces chewing (proposal). |
+         *     | `potty` <br/> "Lulat zunaj" (house training). Reduces puppy accidents (proposal). |
+         * @enum {string}
+         */
+        TrainingCommand: "sit" | "come" | "place" | "potty";
         /**
          * UnregisterDeviceRequest
          * @description POST /api/devices/unregister (M3-02, PR #35 review): stop pushes to this
@@ -1831,6 +1930,58 @@ export interface operations {
                                 /** @description POST /api/child/pet/resolve-chewing has something to tidy up. */
                                 can_resolve_chewing: boolean;
                             };
+                            /**
+                             * @description M5-R03 training: progress per command (sit, come, place, potty), today's
+                             *     routine, the running session and the dog's daily mini-game budget.
+                             */
+                            training: {
+                                /** @description Training exists for this pet (new pet + app feature `training`); false for legacy pets. */
+                                enabled: boolean;
+                                /** @description Every command with displayed progress 0–100 (empty when not enabled). */
+                                commands: {
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    progress: number;
+                                    learned: boolean;
+                                    last_practised_at: string | null;
+                                }[];
+                                /** @description A session was completed today (the daily training routine). */
+                                today_done: boolean;
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                /** @description Length of one session in seconds. */
+                                session_seconds: number;
+                                /** @description The dog's mini-game seconds per family-local day, and what is left today. */
+                                daily_budget_seconds: number;
+                                daily_budget_left_seconds: number;
+                                /**
+                                 * @description POST /api/child/pet/training/start would be accepted now (enabled, not
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
+                                 */
+                                can_start: boolean;
+                            };
                         };
                     };
                 };
@@ -2045,6 +2196,58 @@ export interface operations {
                             can_take_out: boolean;
                             /** @description POST /api/child/pet/resolve-chewing has something to tidy up. */
                             can_resolve_chewing: boolean;
+                        };
+                        /**
+                         * @description M5-R03 training: progress per command (sit, come, place, potty), today's
+                         *     routine, the running session and the dog's daily mini-game budget.
+                         */
+                        training: {
+                            /** @description Training exists for this pet (new pet + app feature `training`); false for legacy pets. */
+                            enabled: boolean;
+                            /** @description Every command with displayed progress 0–100 (empty when not enabled). */
+                            commands: {
+                                /** @enum {string} */
+                                command: "sit" | "come" | "place" | "potty";
+                                progress: number;
+                                learned: boolean;
+                                last_practised_at: string | null;
+                            }[];
+                            /** @description A session was completed today (the daily training routine). */
+                            today_done: boolean;
+                            /**
+                             * @description The running session (any caretaker), `mine` = started by this child; else null.
+                             *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                             */
+                            session: {
+                                id: string;
+                                /** @enum {string} */
+                                command: "sit" | "come" | "place" | "potty";
+                                started_at: string;
+                                ends_at: string;
+                                expires_at: string;
+                                mine: boolean;
+                                duration_ms: number | null;
+                                praise_window_ms: number | null;
+                                min_reaction_ms: number | null;
+                                trials: {
+                                    index: number;
+                                    cue_at_ms: number;
+                                    obeys: boolean;
+                                    obey_at_ms: number | null;
+                                    window_end_ms: number | null;
+                                }[] | null;
+                            } | null;
+                            /** @description Length of one session in seconds. */
+                            session_seconds: number;
+                            /** @description The dog's mini-game seconds per family-local day, and what is left today. */
+                            daily_budget_seconds: number;
+                            daily_budget_left_seconds: number;
+                            /**
+                             * @description POST /api/child/pet/training/start would be accepted now (enabled, not
+                             *     locked, no running session, enough budget left for one session, and the
+                             *     session would end before the family-local midnight).
+                             */
+                            can_start: boolean;
                         };
                     };
                 };
@@ -2281,6 +2484,58 @@ export interface operations {
                                 /** @description POST /api/child/pet/resolve-chewing has something to tidy up. */
                                 can_resolve_chewing: boolean;
                             };
+                            /**
+                             * @description M5-R03 training: progress per command (sit, come, place, potty), today's
+                             *     routine, the running session and the dog's daily mini-game budget.
+                             */
+                            training: {
+                                /** @description Training exists for this pet (new pet + app feature `training`); false for legacy pets. */
+                                enabled: boolean;
+                                /** @description Every command with displayed progress 0–100 (empty when not enabled). */
+                                commands: {
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    progress: number;
+                                    learned: boolean;
+                                    last_practised_at: string | null;
+                                }[];
+                                /** @description A session was completed today (the daily training routine). */
+                                today_done: boolean;
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                /** @description Length of one session in seconds. */
+                                session_seconds: number;
+                                /** @description The dog's mini-game seconds per family-local day, and what is left today. */
+                                daily_budget_seconds: number;
+                                daily_budget_left_seconds: number;
+                                /**
+                                 * @description POST /api/child/pet/training/start would be accepted now (enabled, not
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
+                                 */
+                                can_start: boolean;
+                            };
                         };
                     };
                 };
@@ -2513,6 +2768,58 @@ export interface operations {
                                 can_take_out: boolean;
                                 /** @description POST /api/child/pet/resolve-chewing has something to tidy up. */
                                 can_resolve_chewing: boolean;
+                            };
+                            /**
+                             * @description M5-R03 training: progress per command (sit, come, place, potty), today's
+                             *     routine, the running session and the dog's daily mini-game budget.
+                             */
+                            training: {
+                                /** @description Training exists for this pet (new pet + app feature `training`); false for legacy pets. */
+                                enabled: boolean;
+                                /** @description Every command with displayed progress 0–100 (empty when not enabled). */
+                                commands: {
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    progress: number;
+                                    learned: boolean;
+                                    last_practised_at: string | null;
+                                }[];
+                                /** @description A session was completed today (the daily training routine). */
+                                today_done: boolean;
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                /** @description Length of one session in seconds. */
+                                session_seconds: number;
+                                /** @description The dog's mini-game seconds per family-local day, and what is left today. */
+                                daily_budget_seconds: number;
+                                daily_budget_left_seconds: number;
+                                /**
+                                 * @description POST /api/child/pet/training/start would be accepted now (enabled, not
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
+                                 */
+                                can_start: boolean;
                             };
                         };
                     };
@@ -2747,6 +3054,58 @@ export interface operations {
                                 /** @description POST /api/child/pet/resolve-chewing has something to tidy up. */
                                 can_resolve_chewing: boolean;
                             };
+                            /**
+                             * @description M5-R03 training: progress per command (sit, come, place, potty), today's
+                             *     routine, the running session and the dog's daily mini-game budget.
+                             */
+                            training: {
+                                /** @description Training exists for this pet (new pet + app feature `training`); false for legacy pets. */
+                                enabled: boolean;
+                                /** @description Every command with displayed progress 0–100 (empty when not enabled). */
+                                commands: {
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    progress: number;
+                                    learned: boolean;
+                                    last_practised_at: string | null;
+                                }[];
+                                /** @description A session was completed today (the daily training routine). */
+                                today_done: boolean;
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                /** @description Length of one session in seconds. */
+                                session_seconds: number;
+                                /** @description The dog's mini-game seconds per family-local day, and what is left today. */
+                                daily_budget_seconds: number;
+                                daily_budget_left_seconds: number;
+                                /**
+                                 * @description POST /api/child/pet/training/start would be accepted now (enabled, not
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
+                                 */
+                                can_start: boolean;
+                            };
                         };
                     };
                 };
@@ -2980,6 +3339,58 @@ export interface operations {
                                 /** @description POST /api/child/pet/resolve-chewing has something to tidy up. */
                                 can_resolve_chewing: boolean;
                             };
+                            /**
+                             * @description M5-R03 training: progress per command (sit, come, place, potty), today's
+                             *     routine, the running session and the dog's daily mini-game budget.
+                             */
+                            training: {
+                                /** @description Training exists for this pet (new pet + app feature `training`); false for legacy pets. */
+                                enabled: boolean;
+                                /** @description Every command with displayed progress 0–100 (empty when not enabled). */
+                                commands: {
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    progress: number;
+                                    learned: boolean;
+                                    last_practised_at: string | null;
+                                }[];
+                                /** @description A session was completed today (the daily training routine). */
+                                today_done: boolean;
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                /** @description Length of one session in seconds. */
+                                session_seconds: number;
+                                /** @description The dog's mini-game seconds per family-local day, and what is left today. */
+                                daily_budget_seconds: number;
+                                daily_budget_left_seconds: number;
+                                /**
+                                 * @description POST /api/child/pet/training/start would be accepted now (enabled, not
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
+                                 */
+                                can_start: boolean;
+                            };
                         };
                     };
                 };
@@ -3212,6 +3623,636 @@ export interface operations {
                                 can_take_out: boolean;
                                 /** @description POST /api/child/pet/resolve-chewing has something to tidy up. */
                                 can_resolve_chewing: boolean;
+                            };
+                            /**
+                             * @description M5-R03 training: progress per command (sit, come, place, potty), today's
+                             *     routine, the running session and the dog's daily mini-game budget.
+                             */
+                            training: {
+                                /** @description Training exists for this pet (new pet + app feature `training`); false for legacy pets. */
+                                enabled: boolean;
+                                /** @description Every command with displayed progress 0–100 (empty when not enabled). */
+                                commands: {
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    progress: number;
+                                    learned: boolean;
+                                    last_practised_at: string | null;
+                                }[];
+                                /** @description A session was completed today (the daily training routine). */
+                                today_done: boolean;
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                /** @description Length of one session in seconds. */
+                                session_seconds: number;
+                                /** @description The dog's mini-game seconds per family-local day, and what is left today. */
+                                daily_budget_seconds: number;
+                                daily_budget_left_seconds: number;
+                                /**
+                                 * @description POST /api/child/pet/training/start would be accepted now (enabled, not
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
+                                 */
+                                can_start: boolean;
+                            };
+                        };
+                    };
+                };
+            };
+        };
+    };
+    "childPet.startTraining": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["StartTrainingRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown[] | string;
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+            423: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "The pet is locked right now.";
+                        status: string;
+                        reason: string | null;
+                        /** @description End of the vet visit; null for locks without an end time. */
+                        locked_until: string | null;
+                        state: {
+                            pet: {
+                                id: number;
+                                breed_type: string;
+                                /** @description null until the first contract is signed (unborn, M1-07b). */
+                                born_at: string | null;
+                                /**
+                                 * @description This child must sign before acting (pet unborn, or this
+                                 *     child joined a shared pet and hasn't signed yet — M2-01).
+                                 */
+                                awaiting_contract: boolean;
+                                caretakers_count: number;
+                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
+                                virtual_age_months: number;
+                                /**
+                                 * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
+                                 *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
+                                 */
+                                age_months: number | null;
+                                /** @enum {string|null} */
+                                origin: "bought" | "adopted" | null;
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                profile: {
+                                    /**
+                                     * @description True for a pet created before M5-R01 (no profile choice): it keeps the pre-M5 rules
+                                     *     until its challenge ends; origin / ages / stage are null.
+                                     */
+                                    legacy: boolean;
+                                    /** @enum {string|null} */
+                                    origin: "bought" | "adopted" | null;
+                                    /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
+                                    arrival_age_months: number | null;
+                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    age_months: number | null;
+                                    /**
+                                     * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                     *     null for a legacy pet or a breed without life-stage data (pre-M5 rules).
+                                     * @enum {string|null}
+                                     */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /** @description The next stage and the family-local date its rules start; null for an unborn / legacy pet or a senior. */
+                                    next_stage: {
+                                        /** @enum {string} */
+                                        life_stage: "puppy" | "young" | "adult" | "senior";
+                                        from_date: string;
+                                    } | null;
+                                    /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                    data_verified: boolean;
+                                    /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                    unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
+                                    today: {
+                                        /** @description Family-local date (Y-m-d) these rules are for. */
+                                        date: string;
+                                        meals_per_day: number;
+                                        /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                        meals_by_child: number;
+                                        /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                        meals_by_parent: number;
+                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        feed_windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                        }[];
+                                        /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                        step_goal: number;
+                                        exercise_minutes: number | null;
+                                        /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                        sleep_hours: {
+                                            min: number;
+                                            max: number;
+                                        } | null;
+                                    };
+                                };
+                                hunger_level: number;
+                                thirst_level: number;
+                                energy_level: number;
+                                hygiene_level: number;
+                                pet_state: string;
+                                escalation_level: number;
+                                needs_cleaning: boolean;
+                                is_active: boolean;
+                                is_hard_stopped: boolean;
+                                is_ill: boolean;
+                                illness_until: string | null;
+                                is_game_over: boolean;
+                                certificate_eligible: boolean;
+                                /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
+                                current_video_url: string | null;
+                                media_status: string;
+                                reference_image_url: string | null;
+                                /** @description AI media (M4-03 / M4-05): signed, expiring URLs (re-issued with every state). */
+                                media: {
+                                    /**
+                                     * @description pending: reference image not stored yet · failed: no image (budget, fal error) ·
+                                     *     disabled: AI media off · partial: image stored, some videos missing · ready: all stored.
+                                     * @enum {string}
+                                     */
+                                    status: "disabled" | "pending" | "failed" | "partial" | "ready";
+                                    /** @description Signed URL of our stored reference image (null until stored). */
+                                    reference_image_url: string | null;
+                                    /**
+                                     * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Always a JSON object ({} when empty).
+                                     */
+                                    videos: {
+                                        [key: string]: string;
+                                    };
+                                    /** @description Video for the current pet_state, falling back to idle; null if none is stored. */
+                                    current_video_url: string | null;
+                                    /**
+                                     * @description Video states this pet is entitled to (basic: idle + sleeping; full: all six +
+                                     *     M5-R02 behaviour videos accident (non-legacy puppy) / chewing (non-legacy dog)).
+                                     */
+                                    states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing")[];
+                                    /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
+                                    expires_at: string | null;
+                                };
+                            };
+                            lock: {
+                                is_locked: boolean;
+                                /** @description game_over | inactive | hard_stopped | contract_required | ill | null */
+                                reason: string | null;
+                                /** @description End of the vet visit; null for locks without an end time. */
+                                until: string | null;
+                            };
+                            timezone: string;
+                            server_time: string;
+                            feeding: {
+                                windows: unknown[];
+                                current_window: {
+                                    start: string;
+                                    end: string;
+                                } | null;
+                                fed_in_current_window: boolean;
+                                can_feed: string;
+                                /** @description The current window while unused, otherwise the next one. */
+                                next_feed_window: {
+                                    start: string;
+                                    end: string;
+                                } | null;
+                                last_fed_at: string;
+                            };
+                            water: {
+                                times_per_day: string | 0;
+                                min_gap_minutes: string | 0;
+                                used_today: string | 0;
+                                remaining_today: string | 0;
+                                last_watered_at: string;
+                                can_water: string;
+                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                next_allowed_at: string;
+                            };
+                            steps: {
+                                steps_today: number;
+                                my_steps_today: number;
+                                /** @description Today's step goal of the dog's life stage (M5-R01). */
+                                goal: number;
+                                energy_level: number;
+                            };
+                            contract: {
+                                signed: boolean;
+                                signed_at: string;
+                            };
+                            /**
+                             * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
+                             *     (poop / accident / chewing) with their 2-hour deadline, the behaviour video.
+                             */
+                            behaviour: {
+                                take_out: {
+                                    hold_hours: number;
+                                    clock_started_at: string;
+                                    next_due_at: string;
+                                    last_taken_out_at: string | null;
+                                } | null;
+                                active_events: {
+                                    id: number;
+                                    /** @enum {string} */
+                                    kind: "poop" | "accident" | "chewing";
+                                    started_at: string;
+                                    due_at: string;
+                                }[];
+                                /** @enum {string|null} */
+                                scene: "accident" | "chewing" | null;
+                                /** @description POST /api/child/pet/take-out would be accepted (puppy, not locked). */
+                                can_take_out: boolean;
+                                /** @description POST /api/child/pet/resolve-chewing has something to tidy up. */
+                                can_resolve_chewing: boolean;
+                            };
+                            /**
+                             * @description M5-R03 training: progress per command (sit, come, place, potty), today's
+                             *     routine, the running session and the dog's daily mini-game budget.
+                             */
+                            training: {
+                                /** @description Training exists for this pet (new pet + app feature `training`); false for legacy pets. */
+                                enabled: boolean;
+                                /** @description Every command with displayed progress 0–100 (empty when not enabled). */
+                                commands: {
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    progress: number;
+                                    learned: boolean;
+                                    last_practised_at: string | null;
+                                }[];
+                                /** @description A session was completed today (the daily training routine). */
+                                today_done: boolean;
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                /** @description Length of one session in seconds. */
+                                session_seconds: number;
+                                /** @description The dog's mini-game seconds per family-local day, and what is left today. */
+                                daily_budget_seconds: number;
+                                daily_budget_left_seconds: number;
+                                /**
+                                 * @description POST /api/child/pet/training/start would be accepted now (enabled, not
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
+                                 */
+                                can_start: boolean;
+                            };
+                        };
+                    };
+                };
+            };
+        };
+    };
+    "childPet.finishTraining": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["FinishTrainingRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown[] | string;
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+            423: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "The pet is locked right now.";
+                        status: string;
+                        reason: string | null;
+                        /** @description End of the vet visit; null for locks without an end time. */
+                        locked_until: string | null;
+                        state: {
+                            pet: {
+                                id: number;
+                                breed_type: string;
+                                /** @description null until the first contract is signed (unborn, M1-07b). */
+                                born_at: string | null;
+                                /**
+                                 * @description This child must sign before acting (pet unborn, or this
+                                 *     child joined a shared pet and hasn't signed yet — M2-01).
+                                 */
+                                awaiting_contract: boolean;
+                                caretakers_count: number;
+                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
+                                virtual_age_months: number;
+                                /**
+                                 * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
+                                 *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
+                                 */
+                                age_months: number | null;
+                                /** @enum {string|null} */
+                                origin: "bought" | "adopted" | null;
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                profile: {
+                                    /**
+                                     * @description True for a pet created before M5-R01 (no profile choice): it keeps the pre-M5 rules
+                                     *     until its challenge ends; origin / ages / stage are null.
+                                     */
+                                    legacy: boolean;
+                                    /** @enum {string|null} */
+                                    origin: "bought" | "adopted" | null;
+                                    /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
+                                    arrival_age_months: number | null;
+                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    age_months: number | null;
+                                    /**
+                                     * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                     *     null for a legacy pet or a breed without life-stage data (pre-M5 rules).
+                                     * @enum {string|null}
+                                     */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /** @description The next stage and the family-local date its rules start; null for an unborn / legacy pet or a senior. */
+                                    next_stage: {
+                                        /** @enum {string} */
+                                        life_stage: "puppy" | "young" | "adult" | "senior";
+                                        from_date: string;
+                                    } | null;
+                                    /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                    data_verified: boolean;
+                                    /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                    unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
+                                    today: {
+                                        /** @description Family-local date (Y-m-d) these rules are for. */
+                                        date: string;
+                                        meals_per_day: number;
+                                        /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                        meals_by_child: number;
+                                        /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                        meals_by_parent: number;
+                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        feed_windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                        }[];
+                                        /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                        step_goal: number;
+                                        exercise_minutes: number | null;
+                                        /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                        sleep_hours: {
+                                            min: number;
+                                            max: number;
+                                        } | null;
+                                    };
+                                };
+                                hunger_level: number;
+                                thirst_level: number;
+                                energy_level: number;
+                                hygiene_level: number;
+                                pet_state: string;
+                                escalation_level: number;
+                                needs_cleaning: boolean;
+                                is_active: boolean;
+                                is_hard_stopped: boolean;
+                                is_ill: boolean;
+                                illness_until: string | null;
+                                is_game_over: boolean;
+                                certificate_eligible: boolean;
+                                /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
+                                current_video_url: string | null;
+                                media_status: string;
+                                reference_image_url: string | null;
+                                /** @description AI media (M4-03 / M4-05): signed, expiring URLs (re-issued with every state). */
+                                media: {
+                                    /**
+                                     * @description pending: reference image not stored yet · failed: no image (budget, fal error) ·
+                                     *     disabled: AI media off · partial: image stored, some videos missing · ready: all stored.
+                                     * @enum {string}
+                                     */
+                                    status: "disabled" | "pending" | "failed" | "partial" | "ready";
+                                    /** @description Signed URL of our stored reference image (null until stored). */
+                                    reference_image_url: string | null;
+                                    /**
+                                     * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Always a JSON object ({} when empty).
+                                     */
+                                    videos: {
+                                        [key: string]: string;
+                                    };
+                                    /** @description Video for the current pet_state, falling back to idle; null if none is stored. */
+                                    current_video_url: string | null;
+                                    /**
+                                     * @description Video states this pet is entitled to (basic: idle + sleeping; full: all six +
+                                     *     M5-R02 behaviour videos accident (non-legacy puppy) / chewing (non-legacy dog)).
+                                     */
+                                    states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing")[];
+                                    /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
+                                    expires_at: string | null;
+                                };
+                            };
+                            lock: {
+                                is_locked: boolean;
+                                /** @description game_over | inactive | hard_stopped | contract_required | ill | null */
+                                reason: string | null;
+                                /** @description End of the vet visit; null for locks without an end time. */
+                                until: string | null;
+                            };
+                            timezone: string;
+                            server_time: string;
+                            feeding: {
+                                windows: unknown[];
+                                current_window: {
+                                    start: string;
+                                    end: string;
+                                } | null;
+                                fed_in_current_window: boolean;
+                                can_feed: string;
+                                /** @description The current window while unused, otherwise the next one. */
+                                next_feed_window: {
+                                    start: string;
+                                    end: string;
+                                } | null;
+                                last_fed_at: string;
+                            };
+                            water: {
+                                times_per_day: string | 0;
+                                min_gap_minutes: string | 0;
+                                used_today: string | 0;
+                                remaining_today: string | 0;
+                                last_watered_at: string;
+                                can_water: string;
+                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                next_allowed_at: string;
+                            };
+                            steps: {
+                                steps_today: number;
+                                my_steps_today: number;
+                                /** @description Today's step goal of the dog's life stage (M5-R01). */
+                                goal: number;
+                                energy_level: number;
+                            };
+                            contract: {
+                                signed: boolean;
+                                signed_at: string;
+                            };
+                            /**
+                             * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
+                             *     (poop / accident / chewing) with their 2-hour deadline, the behaviour video.
+                             */
+                            behaviour: {
+                                take_out: {
+                                    hold_hours: number;
+                                    clock_started_at: string;
+                                    next_due_at: string;
+                                    last_taken_out_at: string | null;
+                                } | null;
+                                active_events: {
+                                    id: number;
+                                    /** @enum {string} */
+                                    kind: "poop" | "accident" | "chewing";
+                                    started_at: string;
+                                    due_at: string;
+                                }[];
+                                /** @enum {string|null} */
+                                scene: "accident" | "chewing" | null;
+                                /** @description POST /api/child/pet/take-out would be accepted (puppy, not locked). */
+                                can_take_out: boolean;
+                                /** @description POST /api/child/pet/resolve-chewing has something to tidy up. */
+                                can_resolve_chewing: boolean;
+                            };
+                            /**
+                             * @description M5-R03 training: progress per command (sit, come, place, potty), today's
+                             *     routine, the running session and the dog's daily mini-game budget.
+                             */
+                            training: {
+                                /** @description Training exists for this pet (new pet + app feature `training`); false for legacy pets. */
+                                enabled: boolean;
+                                /** @description Every command with displayed progress 0–100 (empty when not enabled). */
+                                commands: {
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    progress: number;
+                                    learned: boolean;
+                                    last_practised_at: string | null;
+                                }[];
+                                /** @description A session was completed today (the daily training routine). */
+                                today_done: boolean;
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                /** @description Length of one session in seconds. */
+                                session_seconds: number;
+                                /** @description The dog's mini-game seconds per family-local day, and what is left today. */
+                                daily_budget_seconds: number;
+                                daily_budget_left_seconds: number;
+                                /**
+                                 * @description POST /api/child/pet/training/start would be accepted now (enabled, not
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
+                                 */
+                                can_start: boolean;
                             };
                         };
                     };
@@ -3449,6 +4490,58 @@ export interface operations {
                                 can_take_out: boolean;
                                 /** @description POST /api/child/pet/resolve-chewing has something to tidy up. */
                                 can_resolve_chewing: boolean;
+                            };
+                            /**
+                             * @description M5-R03 training: progress per command (sit, come, place, potty), today's
+                             *     routine, the running session and the dog's daily mini-game budget.
+                             */
+                            training: {
+                                /** @description Training exists for this pet (new pet + app feature `training`); false for legacy pets. */
+                                enabled: boolean;
+                                /** @description Every command with displayed progress 0–100 (empty when not enabled). */
+                                commands: {
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    progress: number;
+                                    learned: boolean;
+                                    last_practised_at: string | null;
+                                }[];
+                                /** @description A session was completed today (the daily training routine). */
+                                today_done: boolean;
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                /** @description Length of one session in seconds. */
+                                session_seconds: number;
+                                /** @description The dog's mini-game seconds per family-local day, and what is left today. */
+                                daily_budget_seconds: number;
+                                daily_budget_left_seconds: number;
+                                /**
+                                 * @description POST /api/child/pet/training/start would be accepted now (enabled, not
+                                 *     locked, no running session, enough budget left for one session, and the
+                                 *     session would end before the family-local midnight).
+                                 */
+                                can_start: boolean;
                             };
                         };
                     };
@@ -3872,7 +4965,7 @@ export interface operations {
                         mode: "join_pet" | "new_pet" | "relogin";
                         /**
                          * @description M5-R01: the new pet's profile the PIN will create (mode new_pet with a profile);
-                         *     null = join / re-login, or no profile sent (→ legacy pet, pre-M5 rules). `features` (M5-R02): the app features stored for the new pet (e.g. behaviour_events).
+                         *     null = join / re-login, or no profile sent (→ legacy pet, pre-M5 rules). `features` (M5-R02 / M5-R03): the app features stored for the new pet (behaviour_events, training).
                          */
                         pet_profile: {
                             /** @enum {string} */
@@ -3881,7 +4974,7 @@ export interface operations {
                             origin: "bought" | "adopted";
                             /** @enum {string} */
                             age_stage: "puppy" | "young" | "adult" | "senior";
-                            features: "behaviour_events"[];
+                            features: ("behaviour_events" | "training")[];
                         } | null;
                     };
                 };
@@ -4194,6 +5287,20 @@ export interface operations {
                                      */
                                     scene: "accident" | "chewing" | null;
                                 };
+                                /** @description M5-R03: "Kuža zna: sedi ✓, pridi 60 %" — progress per command, today's routine. */
+                                training: {
+                                    enabled: boolean;
+                                    commands: {
+                                        /** @enum {string} */
+                                        command: "sit" | "come" | "place" | "potty";
+                                        progress: number;
+                                        learned: boolean;
+                                        last_practised_at: string | null;
+                                    }[];
+                                    today_done: boolean;
+                                    /** @description A child is training the dog right now. */
+                                    session_active: boolean;
+                                };
                                 /** @description AI media (M4-05): signed URLs to our stored copies. */
                                 media: {
                                     /**
@@ -4387,6 +5494,20 @@ export interface operations {
                                      * @enum {string|null}
                                      */
                                     scene: "accident" | "chewing" | null;
+                                };
+                                /** @description M5-R03: "Kuža zna: sedi ✓, pridi 60 %" — progress per command, today's routine. */
+                                training: {
+                                    enabled: boolean;
+                                    commands: {
+                                        /** @enum {string} */
+                                        command: "sit" | "come" | "place" | "potty";
+                                        progress: number;
+                                        learned: boolean;
+                                        last_practised_at: string | null;
+                                    }[];
+                                    today_done: boolean;
+                                    /** @description A child is training the dog right now. */
+                                    session_active: boolean;
                                 };
                                 /** @description AI media (M4-05): signed URLs to our stored copies. */
                                 media: {

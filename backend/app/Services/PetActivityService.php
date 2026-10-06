@@ -5,12 +5,14 @@ namespace App\Services;
 use App\Enums\ActivityType;
 use App\Enums\CareRefusal;
 use App\Enums\PetLockReason;
+use App\Enums\TrainingCommand;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\BreedConfig;
 use App\Models\Pet;
 use App\Models\PetContract;
 use App\Models\PetDailyStep;
+use App\Models\PetTrainingSession;
 use App\Models\User;
 use App\Services\Media\PetMediaService;
 use App\Services\Results\ActionResult;
@@ -56,6 +58,7 @@ class PetActivityService
         private CareScheduleService $schedule,
         private LifeStageService $lifeStages,
         private BehaviourEventService $behaviour,
+        private TrainingService $training,
     ) {}
 
     /**
@@ -271,6 +274,127 @@ class PetActivityService
     }
 
     /**
+     * Start a training session (M5-R03, David 2026-10-06): the server
+     * generates the schedule (TrainingService::start). Locks first (423),
+     * then 422 training_not_available / training_session_active /
+     * training_day_ending / training_daily_budget_used. `extra.session` = the
+     * schedule for the app. One `PetUpdated('training_started')` (the payload
+     * shows a running session). Broadcast only, no activity row (would need a
+     * new activity type + timeline label; the routine is the completed session).
+     */
+    public function startTraining(Pet $pet, User $child, TrainingCommand $command): ActionResult
+    {
+        return $this->withLockedPet($pet, 'training_started', function (Pet $locked) use ($child, $command): ActionResult {
+            $now = now();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+
+            // A missed day since the last tick decays progress first (same rule as the tick).
+            $this->training->applyDecay($locked, $now);
+
+            $started = $this->training->start($locked, $child, $command, $now);
+            if ($started['refusal'] !== null) {
+                return $this->refused($locked, $started['refusal'], $started['next_allowed_at']);
+            }
+
+            $locked->saveQuietly(); // learning factor drawn on the first session, decay pointer
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: [
+                'session' => self::sessionPayload($started['session'], $locked->familyTimezone()),
+            ]);
+        });
+    }
+
+    /**
+     * Finish a training session with the child's tap offsets (M5-R03): the
+     * server scores them against its schedule, adds progress and logs one
+     * `trained_pet` row (the day's training routine, value = correctly timed
+     * praises). A repeat of a completed finish → `unchanged` with the stored
+     * result. Refusals 422: training_not_available, training_session_invalid,
+     * training_session_expired, training_session_not_over, training_invalid_taps,
+     * training_session_interrupted (a lock began during the session — PR #53 m2).
+     *
+     * @param  list<int>  $taps  ms since the session start
+     */
+    public function finishTraining(Pet $pet, User $child, string $sessionId, array $taps): ActionResult
+    {
+        return $this->withLockedPet($pet, ActivityType::TrainedPet->value, function (Pet $locked) use ($child, $sessionId, $taps): ActionResult {
+            $now = now();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+
+            $this->training->applyDecay($locked, $now);
+
+            $finished = $this->training->finish($locked, $child, $sessionId, $taps, $now);
+            if ($finished['refusal'] !== null) {
+                return $this->refused($locked, $finished['refusal']);
+            }
+
+            /** @var PetTrainingSession $session */
+            $session = $finished['session'];
+            $extra = ['result' => self::resultPayload($session)];
+            if ($finished['repeat']) {
+                return $this->unchanged(ActionResult::UNCHANGED, $locked, $extra);
+            }
+
+            $locked->saveQuietly();
+            $this->logActivity($locked, ActivityType::TrainedPet, (int) ($session->result['successes'] ?? 0), $child->id);
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: $extra);
+        });
+    }
+
+    /**
+     * The session as the app gets it on start (instants in the family tz).
+     *
+     * @return array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, duration_ms: int, praise_window_ms: int, min_reaction_ms: int, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>}
+     */
+    public static function sessionPayload(PetTrainingSession $session, string $tz): array
+    {
+        return [
+            'id' => $session->public_id,
+            'command' => $session->command->value,
+            'started_at' => $session->started_at->copy()->setTimezone($tz)->toIso8601String(),
+            // The schedule has run its course; finish from here on.
+            'ends_at' => $session->ends_at->copy()->setTimezone($tz)->toIso8601String(),
+            // Last moment a finish is accepted (TTL).
+            'expires_at' => $session->expires_at->copy()->setTimezone($tz)->toIso8601String(),
+            'duration_ms' => $session->duration_ms,
+            'praise_window_ms' => (int) $session->schedule['praise_window_ms'],
+            // A praise earlier than obey_at + this counts as too early (human reaction floor).
+            'min_reaction_ms' => (int) ($session->schedule['min_reaction_ms'] ?? TrainingService::MIN_REACTION_MS),
+            'trials' => TrainingService::trialsOf($session->schedule),
+        ];
+    }
+
+    /**
+     * The scored session on finish.
+     *
+     * @return array{session_id: string, command: 'sit'|'come'|'place'|'potty', successes: int, obeyed: int, trials: list<array{index: int, obeys: bool, outcome: 'in_time'|'too_early'|'too_late'|'no_praise'|'waited'|'praised_without_obeying', tap_ms: int|null}>, progress_before: int, progress_after: int, progress_gain: float}
+     */
+    public static function resultPayload(PetTrainingSession $session): array
+    {
+        $before = (float) $session->progress_before;
+        $gain = (float) $session->progress_gain;
+
+        return [
+            'session_id' => $session->public_id,
+            'command' => $session->command->value,
+            'successes' => (int) ($session->result['successes'] ?? 0),
+            'obeyed' => (int) ($session->result['obeyed'] ?? 0),
+            'trials' => $session->result['trials'] ?? [],
+            'progress_before' => Pet::displayValue($before),
+            'progress_after' => Pet::displayValue($before + $gain),
+            // Precise gain in percentage points (rounded to 0.01 for display).
+            'progress_gain' => round($gain, 2),
+        ];
+    }
+
+    /**
      * After a mess was resolved: hygiene 100 % and its neglect clock cleared
      * once no mess of any kind is open (M5-R02); the pet state follows.
      */
@@ -449,8 +573,10 @@ class PetActivityService
      *
      * @param  Closure(Pet): ActionResult  $action
      */
-    private function withLockedPet(Pet $pet, ActivityType $activity, Closure $action): ActionResult
+    private function withLockedPet(Pet $pet, ActivityType|string $activity, Closure $action): ActionResult
     {
+        $eventType = $activity instanceof ActivityType ? $activity->value : $activity;
+
         $work = function () use ($pet, $action): array {
             $locked = Pet::whereKey($pet->id)->lockForUpdate()->firstOrFail();
             // An illness that ended before the next tick: fresh start first,
@@ -483,7 +609,7 @@ class PetActivityService
         // metric_changed for a recovery / midnight reset / decay catch-up
         // the action applied.
         if ($result->changed()) {
-            PetUpdated::afterCommit($locked, $activity->value);
+            PetUpdated::afterCommit($locked, $eventType);
         } elseif ($bookkeeping) {
             PetUpdated::afterCommit($locked, 'metric_changed');
         }
@@ -495,13 +621,16 @@ class PetActivityService
      * Persist bookkeeping (e.g. a midnight reset, illness recovery) without
      * counting as an action.
      */
-    private function unchanged(string $status, Pet $locked): ActionResult
+    /**
+     * @param  array<string, mixed>  $extra
+     */
+    private function unchanged(string $status, Pet $locked, array $extra = []): ActionResult
     {
         if ($locked->isDirty()) {
             $locked->saveQuietly();
         }
 
-        return $this->result($status, $locked);
+        return $this->result($status, $locked, extra: $extra);
     }
 
     /**
@@ -557,6 +686,7 @@ class PetActivityService
         ?PetLockReason $lockReason = null,
         ?CareRefusal $refusal = null,
         ?CarbonInterface $nextAllowedAt = null,
+        array $extra = [],
     ): ActionResult {
         return new ActionResult(
             status: $status,
@@ -567,6 +697,7 @@ class PetActivityService
             lockReason: $lockReason,
             refusal: $refusal,
             nextAllowedAt: $nextAllowedAt,
+            extra: $extra,
         );
     }
 

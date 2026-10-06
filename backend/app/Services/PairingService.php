@@ -273,6 +273,9 @@ class PairingService
             // build can show them (generate-pin `features`) and the pet has a
             // profile; never changed later (a joining caretaker keeps it).
             'behaviour_events_enabled' => $arrivalAge !== null && $profile?->supports(ClientFeature::BehaviourEvents) === true,
+            // M5-R03: training (mini-game + daily training routine) the same way —
+            // profile + `training` declared by the parent's PIN and the child's device.
+            'training_enabled' => $arrivalAge !== null && $profile?->supports(ClientFeature::Training) === true,
         ]);
 
         if ($petDna === null) {
