@@ -6,8 +6,11 @@
 # jq filter from ci-plan.sh over a JSON fixture picked by the path:
 #   …/actions/workflows/<file>/runs?…   → $FIX/runs.json
 #   …/actions/artifacts?name=<name>&…   → $FIX/artifacts-<name>.json (none → empty list)
+#   …/actions/runs/<id>/jobs?…          → $FIX/jobs-<id>.json
 #   …/actions/runs/<id>                 → $FIX/run-<id>.json
 # GH_FAIL=1 makes every call fail; GH_FAIL_MATCH (ERE over the path) fails matching ones.
+# A `git` shim passes through to the real git, except `git diff` when GIT_DIFF_FAIL=1
+# (exit 128) or GIT_DIFF_EMPTY=1 (prints nothing, exit 0).
 #
 # Also covers scripts/ci-deploy-guard.sh against a local bare "origin".
 #
@@ -44,12 +47,27 @@ case "$path" in
     name="${path#*name=}"; name="${name%%&*}"
     file="$FIX/artifacts-${name}.json"
     [ -f "$file" ] || { echo '{"total_count":0,"artifacts":[]}' > "$file"; } ;;
+  */actions/runs/*/jobs\?*) id="${path%/jobs*}"; id="${id##*/}"; file="$FIX/jobs-${id}.json"
+    [ -f "$file" ] || { echo '{"message":"Not Found"}' >&2; exit 1; } ;;
   */actions/runs/*) file="$FIX/run-${path##*/}.json"; [ -f "$file" ] || { echo '{"message":"Not Found"}' >&2; exit 1; } ;;
   *) echo "gh shim: unknown path $path" >&2; exit 64 ;;
 esac
 jq -r "$filter" "$file"
 SHIM
 chmod +x "$TMP/bin/gh"
+REAL_GIT="$(command -v git)"
+cat > "$TMP/bin/git" <<SHIM
+#!/usr/bin/env bash
+for a in "\$@"; do
+  if [ "\$a" = diff ]; then
+    [ "\${GIT_DIFF_FAIL:-0}" = 1 ] && { echo "fatal: could not fetch object (shim)" >&2; exit 128; }
+    [ "\${GIT_DIFF_EMPTY:-0}" = 1 ] && exit 0
+    break
+  fi
+done
+exec "$REAL_GIT" "\$@"
+SHIM
+chmod +x "$TMP/bin/git"
 
 pass=0 fail=0 n=0
 check() { # check DESC EXPECTED ACTUAL
@@ -85,9 +103,19 @@ pr_merge() {
   git -C "$W" checkout -q --detach main
   git -C "$W" merge -q --no-ff --no-edit feature
 }
-green_runs() { # green_runs SHA [EVENT] [REPO_FULL]: one successful main run
+green_runs() { # green_runs SHA [EVENT] [REPO_FULL]: one successful main run that deployed
   jq -n --arg s "$1" --arg e "${2:-push}" --arg r "${3:-$REPO_NAME}" \
     '{workflow_runs:[{id:1,event:$e,head_sha:$s,head_repository:{full_name:$r}}]}' > "$FIX/runs.json"
+  jobs_json 1 success
+}
+jobs_json() { # jobs_json RUN_ID DEPLOY_CONCLUSION (success / skipped / failure)
+  jq -n --arg c "$2" '{jobs:[{name:"Plan (changed paths, tested tree)",conclusion:"success"},
+    {name:"CI OK",conclusion:"success"},{name:"Deploy to Hetzner Production",conclusion:$c}]}' > "$FIX/jobs-$1.json"
+}
+runs_list() { # runs_list "ID SHA" ...: successful main push runs, newest first
+  local r
+  for r in "$@"; do echo "$r"; done | jq -R 'split(" ") | {id:(.[0]|tonumber),event:"push",head_sha:.[1],head_repository:{full_name:"'"$REPO_NAME"'"}}' \
+    | jq -s '{workflow_runs:.}' > "$FIX/runs.json"
 }
 marker() { # marker SUITE TREE RUN_ID [HEAD_REPO_ID] [EXPIRED]
   jq -n --argjson id "$3" --argjson rid "$REPO_ID" --argjson hid "${4:-$REPO_ID}" --argjson exp "${5:-false}" \
@@ -104,7 +132,7 @@ plan() {
   : > "$out"
   ( cd "$W" && PATH="$TMP/bin:$PATH" FIX="$fix" EVENT_NAME="$1" GIT_REF="$2" RUN_ATTEMPT="${3:-1}" \
       REPO="$REPO_NAME" WORKFLOW_FILE=deploy-production.yml GITHUB_OUTPUT="$out" \
-      GITHUB_STEP_SUMMARY="$fix/summary" bash "$SCRIPT" 2>"$fix/stderr" ) || rc=$?
+      GITHUB_STEP_SUMMARY="$fix/summary" bash "$SCRIPT" >"$fix/stdout" 2>"$fix/stderr" ) || rc=$?
   o_rc=$rc
   o_mode="$(sed -n 's/^mode=//p' "$out")"; o_base="$(sed -n 's/^base=//p' "$out")"
   o_tree="$(sed -n 's/^tree=//p' "$out")"
@@ -186,6 +214,62 @@ check "dog-data merge: backend tests" "$S_BTESTS" "$o_suites"; check "dog-data m
 new_repo; base="$(sha)"; commit docs/research/dog-data/data.json backend/app/A.php; green_runs "$base"
 plan push refs/heads/main
 check "dog-data + backend merge: deploy" true "$o_deploy"; check "dog-data + backend merge: suites" "$S_BACKEND" "$o_suites"
+
+echo "== push to main: base = last run that really deployed (2026-10-06 incident) =="
+# A (deployed) → B (workflow + scripts merged; green, deploy SKIPPED) → C (docs only).
+new_repo; a="$(sha)"; commit "$WF" scripts/ci-plan.sh; b="$(sha)"; commit docs/X.md
+runs_list "2 $b" "1 $a"; jobs_json 2 skipped; jobs_json 1 success
+plan push refs/heads/main
+check "skipped-deploy run is not a base" "$a" "$o_base"
+check "B's undeployed changes still deploy" true "$o_deploy"; check "→ all suites" "$S_ALL" "$o_suites"
+new_repo; a="$(sha)"; commit backend/app/A.php; b="$(sha)"; commit docs/X.md
+runs_list "2 $b" "1 $a"; jobs_json 2 failure; jobs_json 1 success
+plan push refs/heads/main
+check "failed-deploy run is not a base" "$a" "$o_base"; check "→ deploy" true "$o_deploy"
+new_repo; a="$(sha)"; commit backend/app/A.php; b="$(sha)"; commit docs/X.md
+runs_list "2 $b" "1 $a"; jobs_json 2 success; jobs_json 1 success
+plan push refs/heads/main
+check "newest deployed run is the base" "$b" "$o_base"; check "docs-only since → no deploy" false "$o_deploy"
+new_repo; a="$(sha)"; commit docs/X.md; runs_list "1 $a"; jobs_json 1 skipped
+plan push refs/heads/main
+check "no deployed run → full" full "$o_mode"; check "no deployed run → deploy" true "$o_deploy"
+new_repo; a="$(sha)"; commit docs/X.md; green_runs "$a"; GH_FAIL_MATCH='/jobs' plan push refs/heads/main
+check "jobs API error → full" full "$o_mode"; check "jobs API error → deploy" true "$o_deploy"
+check "jobs API error: exit 0" 0 "$o_rc"
+
+echo "== push to main: fail closed on a broken diff =="
+new_repo; a="$(sha)"; commit docs/X.md; green_runs "$a"; GIT_DIFF_FAIL=1 plan push refs/heads/main
+check "diff fails → exit 0" 0 "$o_rc"; check "diff fails → full" full "$o_mode"; check "diff fails → deploy" true "$o_deploy"
+check "diff fails → all suites" "$S_ALL" "$o_suites"
+new_repo; a="$(sha)"; commit docs/X.md; green_runs "$a"; GIT_DIFF_EMPTY=1 plan push refs/heads/main
+check "empty diff, different trees → full" full "$o_mode"; check "empty diff, different trees → deploy" true "$o_deploy"
+new_repo; green_runs "$(sha)"; plan push refs/heads/main
+check "base == HEAD (already deployed): diff" diff "$o_mode"; check "base == HEAD: no deploy" false "$o_deploy"
+new_repo; pr_merge docs/X.md; GIT_DIFF_FAIL=1 plan pull_request refs/pull/1/merge
+check "PR diff fails → full" "full $S_ALL" "$o_mode $o_suites"
+
+echo "== plan annotation =="
+new_repo; a="$(sha)"; commit backend/app/A.php; green_runs "$a"; plan push refs/heads/main
+note="$(grep '^::notice title=plan::' "$FIX/stdout" || true)"
+check "one notice line" 1 "$(grep -c '^::notice title=plan::' "$FIX/stdout" || true)"
+for want in "mode=diff" "base=$a" "changed_files=1" "deploy_paths=true" "need: backend=true" "deploy=true"; do
+  case "$note" in *"$want"*) r=0 ;; *) r=1 ;; esac
+  check "notice has $want" 0 "$r"
+done
+new_repo; GH_FAIL=1 plan push refs/heads/main
+case "$(cat "$FIX/stdout")" in *"reason=GitHub API error"*"deploy=true"*) r=0 ;; *) r=1 ;; esac
+check "notice carries the full-run reason" 0 "$r"
+
+echo "== workflow: deploy must not inherit skipped suites =="
+# GitHub's implicit success() on a job looks at ALL upstream jobs (transitively): with
+# skipped suites behind ci-ok, `needs: [plan, ci-ok]` without a status function skips
+# deploy even when ci-ok succeeded. The deploy condition must therefore be explicit.
+WFFILE="${HERE}/../../${WF}"
+deploy_if="$(awk '/^  deploy:/{d=1} d&&/^    if:/{f=1} f{print} f&&/^    [a-z-]+:/&&!/^    if:/{exit}' "$WFFILE" | tr -s ' \n' ' ')"
+for want in "!cancelled()" "needs.plan.result == 'success'" "needs.ci-ok.result == 'success'" "needs.plan.outputs.deploy == 'true'"; do
+  case "$deploy_if" in *"$want"*) r=0 ;; *) r=1 ;; esac
+  check "deploy if: has $want" 0 "$r"
+done
 
 echo "== push to main: a failed / cancelled run in between is not lost =="
 new_repo; base="$(sha)"; commit backend/app/A.php; commit docs/X.md; green_runs "$base"

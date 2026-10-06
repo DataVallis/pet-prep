@@ -9,8 +9,9 @@ name: CI & Deploy
 # main, skips a suite that already passed in a successful PR run on the identical git
 # tree (marker artifacts "ci-green-<suite>-<tree>", uploaded below on pull_request).
 # `ci-ok` fails unless every suite either passed or was skipped because plan said so.
-# `deploy` needs ci-ok (no always()) and runs on main only when backend/, deployment/,
-# scripts/ or this file changed since the last green main run, or on "Run workflow";
+# `deploy` runs only when plan and ci-ok succeeded (explicit result checks — see the job)
+# and only when backend/, deployment/, scripts/ or this file changed since the last main
+# run that really deployed, or on "Run workflow";
 # its first step refuses a commit that is no longer the head of main.
 
 on:
@@ -343,13 +344,18 @@ jobs:
 
   deploy:
     name: Deploy to Hetzner Production
-    # No always(): runs only when plan AND ci-ok succeeded.
     needs: [plan, ci-ok]
+    # Explicit status checks, NOT the implicit success(): GitHub's job-level success()
+    # looks at every upstream job transitively, so suites that plan skipped (behind ci-ok)
+    # skipped this job even with ci-ok green (run 37467604915, 2026-10-06). !cancelled()
+    # lets it be evaluated; it runs only when plan AND ci-ok themselves succeeded — ci-ok
+    # is red whenever a suite failed, was cancelled or was skipped against the plan.
     # Pre-production phase (David, 2026-10-03): every push/merge to main that changes
     # backend/, deployment/, scripts/ or this workflow deploys automatically once ci-ok is
     # green; "Run workflow" on main always tests everything and deploys. To require manual
     # deploys again, restrict this to workflow_dispatch — see docs/engineering/DEPLOYMENT.md D2.
     if: >-
+      !cancelled() && needs.plan.result == 'success' && needs.ci-ok.result == 'success' &&
       needs.plan.outputs.deploy == 'true' && github.ref == 'refs/heads/main' &&
       (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     concurrency:
