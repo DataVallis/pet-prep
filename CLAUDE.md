@@ -75,6 +75,7 @@ Keep the claude.ai Project copies (`petprep/*.md`) in sync after merges. No chil
 Do NOT build: AR, GPS maps, weather API, LLM/vision vet, B2B QR coupons, cats. (Multiple parents/children/pets per family is IN scope since 2026-10-04 — see `docs/decisions/ADR-012-family-model.md`.) Post-MVP ideas go to the backlog in `ROADMAP.md`.
 
 ## Orchestration
+**Long sessions (David, 2026-10-06):** when a session gets very long (older context already compacted into summaries) or after a larger finished block of work, run `/handoff` so `HANDOFF.md` is complete, then recommend David to start a new session; the new agent starts by reading `HANDOFF.md`.
 Delegate by area: `backend-engineer`, `mobile-engineer`, `qa-reviewer` (independent review before merge), `devops` (Hetzner / Docker / CI), `growth-marketer` (copy, funnels, decks — Slovenian/English). Slash commands: `/handoff`, `/verify`, `/feature <ID>`, `/deploy`.
 
 ## Secrets & infra
