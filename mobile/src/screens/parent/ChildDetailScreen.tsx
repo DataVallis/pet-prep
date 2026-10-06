@@ -4,7 +4,9 @@
  * for 7 / 30 / 84 days — score of the period, totals per routine type, one row per
  * day (done / expected, walk steps vs goal), missed routines, illnesses — and the
  * activity timeline of the child's pet (`/api/parent/activities?pet_id=`, paginated)
- * with the nicknames of the children who acted. Light parent theme (ADR-007).
+ * with the nicknames of the children who acted. M5-R04: the dog's stage and age
+ * ("Mladiček · 3 mesece"), origin, next stage and today's meals — nothing for a
+ * legacy pet. Light parent theme (ADR-007).
  */
 
 import { useCallback, useMemo, useState } from 'react';
@@ -46,6 +48,7 @@ import {
   type ReportDays,
 } from '@/modules/family/scoring';
 import { localParts } from '@/modules/childPet/familyTime';
+import { mealsLine, nextStageLine, originLine, readPetProfile, stageLine } from '@/modules/petProfile/petProfile';
 
 export const CHILD_DETAIL_STRINGS = {
   back: 'Nazaj',
@@ -158,6 +161,8 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
   const petMediaRaw = pet?.media;
   const media = useMemo(() => (hasPet ? normalizePetMedia(petMediaRaw) : null), [hasPet, petMediaRaw]);
   const albumAvailable = media !== null && hasAlbum(media);
+  const petProfileRaw: unknown = pet?.profile;
+  const profile = useMemo(() => readPetProfile(petProfileRaw), [petProfileRaw]);
   const showAlbum = albumOpen && albumAvailable;
   // A signed media URL failed (likely expired): refresh the dashboard once for new URLs.
   const onMediaExpired = useCallback(() => {
@@ -206,6 +211,21 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
             >
               <Text style={styles.moreText}>{S.album}</Text>
             </Pressable>
+          )}
+
+          {profile !== null && (
+            <Card testID="detail-pet-profile">
+              <Text style={styles.strong} testID="detail-pet-stage">
+                {stageLine(profile)}
+              </Text>
+              {[originLine(profile), nextStageLine(profile), mealsLine(profile)]
+                .filter((line): line is string => line !== null)
+                .map((line) => (
+                  <Text key={line} style={styles.muted}>
+                    {line}
+                  </Text>
+                ))}
+            </Card>
           )}
 
           <Segmented

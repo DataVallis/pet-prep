@@ -8,6 +8,20 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-05 — Starš izbere kužka v aplikaciji (M5-R04, del 1)
+
+**Kaj se je zgodilo:** Izbira kužka, ki jo je strežnik znal že zjutraj, je zdaj tudi v aplikaciji. Ko starš doda otroka in izbere *Nov pes*, se odpre zaslon **Izberi kužka**: pasma (mešanček brezplačen, Border Collie viden, a zaklenjen — del plačljivega izziva), **od kod pride** (*kupljen* pri vzreditelju / *posvojen* iz zavetišča) in **starost ob prihodu** (mladiček, mlad pes, odrasel, starejši). Ob vsaki starosti je ena poštena vrstica, kaj to pomeni za otroka — npr. mešanček mladiček: 4 obroki na dan, sprehod 2.000 korakov na dan in vsak teden več do 6.000; Border Collie mladiček prav tako začne z 2.000, a pri 12 mesecih pride do 12.000, starejši Border Collie hodi 9.000 korakov na dan. Dokler se otrok ne poveže, lahko starš izbiro še spremeni (*Spremeni kužka* — stara koda takrat preneha veljati). Izvor in starost nimata privzete izbire: starš mora prebrati in se odločiti. Otrok nato na svojem zaslonu vidi "Mladiček · 2 meseca" in kdaj postane mlad pes; starš v pregledu otroka vidi isto in koliko obrokov danes v tihih urah nahrani sam. Psi iz časa pred to spremembo ostanejo, kot so bili.
+
+**Zakaj je pomembno:** Šele s tem zaslonom nova pravila po starosti (M5-R01) zares pridejo do družin — prej je bil vsak nov pes še "star" pes po pravilih pred M5. Opisi uporabljajo samo številke iz virov in Davidovih potrjenih odločitev; česar igra še ne simulira (nezgode v hiši, plašnost), je označeno "pride kmalu".
+
+**Kako povedati:**
+- 👩 Starši: "Preden otrok dobi kodo, izberete, kakšnega kužka bo imel — mladička s štirimi obroki na dan ali starejšega psa iz zavetišča s krajšimi sprehodi. Vidite, kaj vsaka izbira pomeni."
+- 🧒 Otroci: "Tvoj kuža ima zdaj starost — vidiš, koliko je star in kdaj bo zrasel."
+- 🤝 Zavetišča: "V aplikaciji je *posvojen pes iz zavetišča* enakovredna izbira — brez klišejev, z enako skrbjo."
+- 🛠 Tehnično: izbira se pošlje kot celoten nabor (vse ali nič), plačljiva pasma je zaklenjena tudi na strežniku (`breed_locked`), stari psi brez profila se prikažejo nespremenjeno; vsako število v opisih test preveri proti potrjenim pravilom; 828 testov zelenih.
+
+---
+
 ## 2026-10-05 — David potrdil pravila rasti: 2-urna okna za mladička (M5-R01b)
 
 **Kaj se je zgodilo:** David je odgovoril na odprta vprašanja realistične simulacije. **Okna hranjenja mladička so zdaj 2-urna** (4 obroki 7–9, 11–13, 15–17, 19–21; 3 obroki 7–9, 13–15, 19–21) — 1 ura je bila za otroka prekratka. Potrjene so meje obdobij (mladiček do 9 mesecev, mlad pes do 3 let, starejši v zadnji četrtini življenjske dobe — mešanček 9 let, Border Collie 9,8), starosti ob prihodu, minute gibanja (odrasel mešanček 60 min = 6.000 korakov, mladiček 10 min na mesec starosti, starejši 75 %) in 2 obroka za starejše. **Psi, ki že igrajo, ostanejo na starih pravilih za vedno.** V bazi so vse vrednosti zdaj potrjene: iz vira ali z oznako »potrdil David 2026-10-05« — vir ostane zapisan kot dokaz, odločitev se nikoli ne predstavi kot literatura. Strežnik že zapisane vrednosti posodobi enkrat, z revizijsko sledjo, in ne povozi ničesar, kar je admin že ročno spremenil. **985 zelenih testov** (+8).

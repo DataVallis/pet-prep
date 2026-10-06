@@ -104,5 +104,9 @@ describe('family helpers', () => {
     expect(classifyPinError(new ApiError('x', 422, { reason: 'pet_not_joinable' })).kind).toBe('pet_not_joinable');
     expect(classifyPinError(new ApiError('x', 422, { reason: 'already_paired' })).kind).toBe('already_paired');
     expect(classifyPinError(new ApiError('x', 422, { errors: {} })).kind).toBe('server');
+    // M5-R04: premium breed at PIN time, or a rejected picker field.
+    expect(classifyPinError(new ApiError('x', 422, { reason: 'breed_locked' })).kind).toBe('breed_locked');
+    expect(classifyPinError(new ApiError('x', 422, { errors: { age_stage: ['required'] } })).kind).toBe('invalid_profile');
+    expect(classifyPinError(new ApiError('x', 422, { errors: { child_id: ['x'] } })).kind).toBe('server');
   });
 });
