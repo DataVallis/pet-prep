@@ -26,7 +26,7 @@ import {
 import { useAppStore } from '@/store/appStore';
 import { childPetKey, writeChildState } from '@/hooks/queries/useChildPet';
 
-interface SessionContext {
+export interface SessionContext {
   /** Child signed in when the request started; writes are skipped for another session. */
   userId: number | null;
 }
@@ -35,9 +35,9 @@ interface CareContext extends SessionContext {
   previous: ChildPetView | undefined;
 }
 
-const currentUserId = (): number | null => useAppStore.getState().user?.id ?? null;
+export const currentUserId = (): number | null => useAppStore.getState().user?.id ?? null;
 
-function sameSession(context: SessionContext | undefined): boolean {
+export function sameSession(context: SessionContext | undefined): boolean {
   return context !== undefined && context.userId !== null && context.userId === currentUserId();
 }
 
@@ -50,7 +50,7 @@ const CALLS: Record<CareAction, () => Promise<ChildActionResponse>> = {
 };
 
 /** Put the server's answer into the cache, or undo the optimistic change and refetch. */
-function settleFromError(
+export function settleFromError(
   client: QueryClient,
   error: unknown,
   action: CareAction | null,

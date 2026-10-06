@@ -11,6 +11,8 @@
  * dock; an open accident / chewed slipper shows its scene (premium video, else an in-app
  * graphic) — an accident is cleaned with the cleaning game (puddles), a slipper with
  * "Pospravi in daj igračo", never by scrubbing.
+ * M5-R03: a pet with training gets a "Šola" chip above the dock (amber dot while today's
+ * session is open) that opens the training mini-game (`modules/training/TrainingOverlay`).
  */
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
@@ -78,6 +80,9 @@ import PetMediaView from '@/components/PetMediaView';
 import WalkTrackerOverlay from '@/modules/walk/WalkTrackerOverlay';
 import { usePushPromptOnFirstView } from '@/modules/push/usePushPromptOnFirstView';
 import { nextStageLine, originLine, stageLine } from '@/modules/petProfile/petProfile';
+import TrainingChip from '@/modules/training/TrainingChip';
+import TrainingOverlay from '@/modules/training/TrainingOverlay';
+import { showTrainingEntry } from '@/modules/training/training';
 import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
 
 /** User-visible strings of the HUD (i18n with M1-18). */
@@ -212,6 +217,8 @@ export default function ChildHudScreen() {
   const setCleaningOverlayVisible = useAppStore((s) => s.setCleaningOverlayVisible);
   const isAlbumVisible = useAppStore((s) => s.isAlbumVisible);
   const setAlbumVisible = useAppStore((s) => s.setAlbumVisible);
+  const isTrainingVisible = useAppStore((s) => s.isTrainingVisible);
+  const setTrainingVisible = useAppStore((s) => s.setTrainingVisible);
   const setHudVideoState = useAppStore((s) => s.setHudVideoState);
   const hudVideoState = useAppStore((s) => s.hudVideoState);
   // No HUD → no video under the lock veil.
@@ -248,9 +255,19 @@ export default function ChildHudScreen() {
   // The album never survives a lock (it would reopen when the lock lifts) or the HUD.
   const lockedNow = view?.lock.is_locked ?? false;
   useEffect(() => {
-    if (lockedNow) setAlbumVisible(false);
-  }, [lockedNow, setAlbumVisible]);
-  useEffect(() => () => setAlbumVisible(false), [setAlbumVisible]);
+    if (lockedNow) {
+      setAlbumVisible(false);
+      // A lock ends a running training session on this screen (the server refuses it anyway).
+      setTrainingVisible(false);
+    }
+  }, [lockedNow, setAlbumVisible, setTrainingVisible]);
+  useEffect(
+    () => () => {
+      setAlbumVisible(false);
+      setTrainingVisible(false);
+    },
+    [setAlbumVisible, setTrainingVisible],
+  );
 
   const stepSync = useStepSync({
     enabled: view !== undefined && !view.lock.is_locked,
@@ -373,7 +390,8 @@ export default function ChildHudScreen() {
   const needsScrub = needsScrubbing(pet.needs_cleaning, view.behaviour);
   const chewingOnly = pet.needs_cleaning && onlyChewingOpen(view.behaviour);
   const cleanDisabled = locked || alreadyClean || chewingOnly;
-  const showCleaning = !locked && (needsScrub || (isCleaningOverlayVisible && !chewingOnly));
+  // A mess that appears during a training session waits until the game is closed.
+  const showCleaning = !locked && !(isTrainingVisible && showTrainingEntry(view.training)) && (needsScrub || (isCleaningOverlayVisible && !chewingOnly));
   const takeOutClock = view.behaviour.take_out;
   const countdown = !locked && takeOutClock !== null ? takeOutCountdown(takeOutClock, serverNow, view.timezone) : null;
   const takeOutDisabled = !view.behaviour.can_take_out;
@@ -381,6 +399,9 @@ export default function ChildHudScreen() {
   const stale = petQuery.isError;
   const albumAvailable = hasAlbum(pet.media);
   const showAlbum = isAlbumVisible && !locked && albumAvailable;
+  // M5-R03: "Šola" only for a pet with training (legacy / older app / older server: nothing).
+  const hasTraining = showTrainingEntry(view.training);
+  const showTraining = isTrainingVisible && !locked && hasTraining && !showAlbum;
   // Android: TalkBack must not reach the HUD under the album (iOS: accessibilityViewIsModal).
   const hiddenUnderAlbum = showAlbum
     ? ({ importantForAccessibility: 'no-hide-descendants', accessibilityElementsHidden: true } as const)
@@ -399,7 +420,7 @@ export default function ChildHudScreen() {
           // Vet visit / hard stop: the sick / sleeping video keeps playing under the
           // translucent grey lock (PRODUCT_SPEC §7). Paused under the opaque game-over /
           // inactive screen, the walk tracker, the album (one player at a time) and in the background.
-          active={!opaqueLock && !isWalkModalVisible && !showAlbum}
+          active={!opaqueLock && !isWalkModalVisible && !showAlbum && !showTraining}
           onMediaExpired={onMediaExpired}
           // The vet veil darkens when a substitute (sleeping / idle) stands in for `sick`.
           onVideoStateChange={setHudVideoState}
@@ -595,6 +616,11 @@ export default function ChildHudScreen() {
             resolveBusy={resolveChewing.isPending}
             bottom={layout.aboveDock}
             right={METRICS_RESERVED_RIGHT}
+            footer={
+              hasTraining ? (
+                <TrainingChip todayDone={view.training.today_done} onPress={() => setTrainingVisible(true)} />
+              ) : null
+            }
           />
         )}
 
@@ -610,6 +636,7 @@ export default function ChildHudScreen() {
             }}
           />
         )}
+        {showTraining && <TrainingOverlay view={view} onClose={() => setTrainingVisible(false)} />}
         {showCleaning && (
           <CleaningOverlay
             onCleaned={handleCleaned}

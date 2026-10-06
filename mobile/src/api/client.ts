@@ -196,15 +196,15 @@ export interface GenerateChildPinRequest {
  * A UI feature this app build can show for a new pet (backend `ClientFeature`; the schema
  * types it as `string` because unknown values are dropped server-side, not refused).
  */
-export type ClientFeature = 'behaviour_events';
+export type ClientFeature = 'behaviour_events' | 'training';
 
 /**
- * What this build declares (M5-R02, PR #42): it can show the behaviour events ("Pelji
- * ven", luža, pregrizen copat). A new pet gets them only when BOTH the parent's
- * generate-pin and the child's pin-login sent this — an older build on either phone
- * never gets events it can't show.
+ * What this build declares: it can show the behaviour events ("Pelji ven", luža,
+ * pregrizen copat — M5-R02, PR #42) and the training mini-game ("Šola" — M5-R03). A new
+ * pet gets a feature only when BOTH the parent's generate-pin and the child's pin-login
+ * sent it — an older build on either phone never gets something it can't show.
  */
-export const CLIENT_FEATURES: readonly ClientFeature[] = ['behaviour_events'];
+export const CLIENT_FEATURES: readonly ClientFeature[] = ['behaviour_events', 'training'];
 
 /**
  * The JSON body of a generate-pin request: profile fields only for a new pet, always all
@@ -592,6 +592,30 @@ export const api = {
 
   /** POST /api/child/pet/resolve-chewing — "Pospravi in daj igračo" (M5-R02); `unchanged` when nothing is chewed. */
   resolveChewing: () => apiRequest<ChildActionResponse>('/api/child/pet/resolve-chewing', { method: 'POST' }),
+
+  /**
+   * POST /api/child/pet/training/start {command} (M5-R03) — the server's schedule for one
+   * 50 s session. 200 untyped in `schema.ts` → read with `readStartResponse`. 422
+   * `training_not_available` / `training_session_active` / `training_daily_budget_used`
+   * (+ `next_allowed_at`), 423 locked; refusals carry `state`.
+   */
+  startTraining: (command: components['schemas']['StartTrainingRequest']['command']) =>
+    apiRequest<unknown>('/api/child/pet/training/start', {
+      method: 'POST',
+      body: { command } satisfies components['schemas']['StartTrainingRequest'],
+    }),
+
+  /**
+   * POST /api/child/pet/training/finish {session_id, taps} (M5-R03) — the "Pohvali" taps as
+   * whole ms since the app's local start (≤ 64, ≤ duration); the server scores them. A
+   * repeat answers `unchanged` with the stored result. 200 untyped → `readFinishResponse`.
+   * 422 `training_session_invalid|not_over|expired|invalid_taps|not_available`, 423 locked.
+   */
+  finishTraining: (sessionId: string, taps: readonly number[]) =>
+    apiRequest<unknown>('/api/child/pet/training/finish', {
+      method: 'POST',
+      body: { session_id: sessionId, taps: [...taps] } satisfies components['schemas']['FinishTrainingRequest'],
+    }),
 
   /** POST /api/child/pet/steps — today's cumulative steps of this device (max wins on the server). */
   syncSteps: (body: SyncStepsRequest) =>

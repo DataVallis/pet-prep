@@ -61,6 +61,8 @@ export function patchDashboardPet(
     media: event.media ?? pet.media,
     // M5-R02: bladder clock / open messes — an accident arrives with a plain decay tick.
     behaviour: event.behaviour ?? pet.behaviour,
+    // M5-R03: training progress / today's session / a session running.
+    training: event.training ?? pet.training,
   };
   const nextPets = pets.slice();
   nextPets[index] = patched;

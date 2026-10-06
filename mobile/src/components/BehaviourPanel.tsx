@@ -5,9 +5,11 @@
  *   `BehaviourGraphics`) unless the premium scene video is already on screen, a short kind
  *   caption, and for a chewed slipper the "Pospravi in daj igračo" button. An accident is
  *   cleaned with the existing cleaning game, so it has no button here.
- * Nothing renders for a legacy pet / older server (no clock, no events).
+ * Nothing renders for a legacy pet / older server (no clock, no events) unless a `footer`
+ * (M5-R03 "Šola" chip) is passed — the chip then sits in the same column, nearest the dock.
  */
 
+import type { ReactNode } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { DoorOpen, ToyBrick } from 'lucide-react-native';
 
@@ -33,6 +35,8 @@ export interface BehaviourPanelProps {
   bottom: number;
   /** Right edge kept free for the metric column. */
   right: number;
+  /** Rendered last, closest to the dock (M5-R03 "Šola" chip); the panel shows when only this is set. */
+  footer?: ReactNode;
 }
 
 export default function BehaviourPanel({
@@ -43,10 +47,11 @@ export default function BehaviourPanel({
   resolveBusy,
   bottom,
   right,
+  footer = null,
 }: BehaviourPanelProps) {
   const scene = panelScene(behaviour);
   const chewing = hasOpenChewing(behaviour) || behaviour.can_resolve_chewing;
-  if (countdown === null && scene === null && !chewing) return null;
+  if (countdown === null && scene === null && !chewing && footer === null) return null;
   // A slipper can be tidied up whatever scene is shown (e.g. a newer accident on top).
   const cardScene = scene ?? (chewing ? 'chewing' : null);
 
@@ -87,6 +92,7 @@ export default function BehaviourPanel({
           <Text style={styles.countdownText}>{countdown.line}</Text>
         </View>
       )}
+      {footer}
     </View>
   );
 }

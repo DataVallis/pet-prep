@@ -7,8 +7,9 @@
  * with the nicknames of the children who acted. M5-R04: the dog's stage and age
  * ("Mladiček · 3 mesece"), origin, next stage and today's meals — nothing for a
  * legacy pet. M5-R02: the puppy's bladder clock and open messes (luža, pregrizen copat)
- * with deadlines, missed cleans named by their mess, new timeline rows. Light parent
- * theme (ADR-007).
+ * with deadlines, missed cleans named by their mess, new timeline rows. M5-R03: "Šola" —
+ * "Kuža zna: sedi ✓, pridi 60 % …", whether today's session is done, the training routine
+ * in the totals (only for a pet with training). Light parent theme (ADR-007).
  */
 
 import { useCallback, useMemo, useState } from 'react';
@@ -53,6 +54,7 @@ import {
 import { localParts } from '@/modules/childPet/familyTime';
 import { mealsLine, nextStageLine, originLine, readPetProfile, stageLine } from '@/modules/petProfile/petProfile';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
+import { PARENT_TRAINING_STRINGS, parentTrainingLines } from '@/modules/training/training';
 
 export const CHILD_DETAIL_STRINGS = {
   back: 'Nazaj',
@@ -169,6 +171,8 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
   const profile = useMemo(() => readPetProfile(petProfileRaw), [petProfileRaw]);
   const showAlbum = albumOpen && albumAvailable;
   const behaviourLines = pet ? parentBehaviourLines(pet.behaviour, family.timezone) : [];
+  const trainingLines = pet ? parentTrainingLines(pet.training) : [];
+  const trainingEnabled = pet?.training.enabled ?? false;
   // A signed media URL failed (likely expired): refresh the dashboard once for new URLs.
   const onMediaExpired = useCallback(() => {
     void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
@@ -244,6 +248,17 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
             </Card>
           )}
 
+          {trainingLines.length > 0 && (
+            <Card testID="detail-pet-training">
+              <SectionTitle>{PARENT_TRAINING_STRINGS.title}</SectionTitle>
+              {trainingLines.map((line, i) => (
+                <Text key={line} style={i === 0 ? styles.strong : styles.body} testID={`detail-training-line-${i}`}>
+                  {line}
+                </Text>
+              ))}
+            </Card>
+          )}
+
           <Segmented
             options={REPORT_PERIODS.map((p) => ({ value: p, label: S.periods[p] }))}
             value={days}
@@ -301,6 +316,8 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
                 <SectionTitle>{S.byType}</SectionTitle>
                 {ROUTINE_TYPES.map((type) => {
                   const t = data.by_type[type];
+                  // Training (M5-R03) only for a pet that has it — or a period in which it counted.
+                  if (type === 'training' && !trainingEnabled && t.expected === 0 && t.done === 0) return null;
                   return (
                     <View key={type} style={styles.typeRow} testID={`report-type-${type}`}>
                       <RoutineIcon type={type} />
