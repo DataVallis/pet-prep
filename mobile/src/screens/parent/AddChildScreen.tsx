@@ -118,6 +118,10 @@ export const ADD_CHILD_STRINGS = {
     server: 'Kode trenutno ni bilo mogoče ustvariti. Poskusite znova.',
   } satisfies Record<PinErrorKind, string | ((seconds: number) => string)>,
   changeDog: 'Izberi drugega kužka',
+  editDog: 'Spremeni kužka',
+  editDogHint: 'Nova izbira ustvari novo kodo; ta koda takrat preneha veljati.',
+  /** 422 breed_locked for the free mutt is a server misconfiguration — explain; "Nova koda" can retry, no loop to the picker. */
+  muttLocked: 'Mešanček je brezplačen, a strežnik ga je zavrnil. To je napaka pri nas — pišite nam na podporo.',
   rateLimitedNoWait: 'Preveč novih kod v kratkem času. Poskusite znova.',
   retry: 'Poskusi znova',
 } as const;
@@ -200,6 +204,10 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
           target={target}
           joinPetId={joinPetId}
           profile={joinPetId === null && target.pet_id === null ? newPetProfile : null}
+          onChangeDog={() => {
+            setPickerNotice(null);
+            setStep('dog');
+          }}
           onProfileRejected={(kind) => {
             // The server refused the choice (premium breed / validation): back to the picker.
             // The free mutt is never locked (PRODUCT_SPEC §3) — only a paid breed is added.
@@ -396,10 +404,12 @@ interface PinStepProps {
   profile: NewPetProfile | null;
   /** The server refused the picker choice → let the parent choose again. */
   onProfileRejected: (kind: 'breed_locked' | 'invalid_profile') => void;
+  /** New pet only: back to the picker before the child connects ("Spremeni kužka"). */
+  onChangeDog: () => void;
   onDone: () => void;
 }
 
-function PinStep({ target, joinPetId, profile, onProfileRejected, onDone }: PinStepProps) {
+function PinStep({ target, joinPetId, profile, onProfileRejected, onChangeDog, onDone }: PinStepProps) {
   const generate = useGeneratePin();
   const [cooldownUntil, setCooldownUntil] = useState<string | null>(null);
   // Last PIN the server issued. Kept across a failed "Nova koda" (e.g. 429): the
@@ -452,8 +462,12 @@ function PinStep({ target, joinPetId, profile, onProfileRejected, onDone }: PinS
     });
   }, [isConnected, mode]);
 
+  // The free mutt refused as locked = our misconfiguration: explain, never send the parent round in circles.
+  const muttLocked = pinError?.kind === 'breed_locked' && profile?.breed === 'mutt';
   const profileRejected =
-    pin === null && (pinError?.kind === 'breed_locked' || pinError?.kind === 'invalid_profile') ? pinError.kind : null;
+    pin === null && !muttLocked && (pinError?.kind === 'breed_locked' || pinError?.kind === 'invalid_profile')
+      ? pinError.kind
+      : null;
 
   const isCoolingDown = cooldown > 0;
   const canRequest = !generate.isPending && !isCoolingDown;
@@ -463,6 +477,7 @@ function PinStep({ target, joinPetId, profile, onProfileRejected, onDone }: PinS
 
   const errorText = (() => {
     if (!pinError) return null;
+    if (muttLocked) return S.muttLocked;
     if (pinError.kind === 'rate_limited') {
       if (pinError.retryAfterSeconds === null) return S.rateLimitedNoWait;
       if (cooldownUntil !== null && !isCoolingDown) return null; // wait is over — "Nova koda" works again
@@ -536,22 +551,24 @@ function PinStep({ target, joinPetId, profile, onProfileRejected, onDone }: PinS
           </Pressable>
         )}
 
-        <Pressable
-          style={({ pressed }) => [styles.secondaryButton, !canRequest && styles.buttonDisabled, pressed && styles.pressed]}
-          onPress={requestNewPin}
-          disabled={!canRequest}
-          accessibilityRole="button"
-          accessibilityState={{ disabled: !canRequest }}
-        >
-          {generate.isPending && pin !== null ? (
-            <ActivityIndicator color="#4f46e5" />
-          ) : (
-            <>
-              <RefreshCw color="#4f46e5" size={16} />
-              <Text style={styles.secondaryButtonText}>{pin === null && pinError ? S.retry : S.newCode}</Text>
-            </>
-          )}
-        </Pressable>
+        {profileRejected === null && (
+          <Pressable
+            style={({ pressed }) => [styles.secondaryButton, !canRequest && styles.buttonDisabled, pressed && styles.pressed]}
+            onPress={requestNewPin}
+            disabled={!canRequest}
+            accessibilityRole="button"
+            accessibilityState={{ disabled: !canRequest }}
+          >
+            {generate.isPending && pin !== null ? (
+              <ActivityIndicator color="#4f46e5" />
+            ) : (
+              <>
+                <RefreshCw color="#4f46e5" size={16} />
+                <Text style={styles.secondaryButtonText}>{pin === null && pinError ? S.retry : S.newCode}</Text>
+              </>
+            )}
+          </Pressable>
+        )}
 
         {pin !== null && !isExpired && (
           <View style={styles.waitingRow}>
@@ -573,6 +590,18 @@ function PinStep({ target, joinPetId, profile, onProfileRejected, onDone }: PinS
           </View>
         ))}
         {mode === 'relogin' && <Text style={styles.note}>{S.reloginNote}</Text>}
+        {profile !== null && pin !== null && (
+          <Pressable
+            onPress={onChangeDog}
+            hitSlop={8}
+            accessibilityRole="link"
+            accessibilityHint={S.editDogHint}
+            style={({ pressed }) => [styles.linkButton, pressed && styles.pressed]}
+            testID="pin-edit-dog"
+          >
+            <Text style={styles.linkText}>{S.editDog}</Text>
+          </Pressable>
+        )}
         <Text style={styles.note}>{S.oneTime}</Text>
       </View>
     </ScrollView>
@@ -708,6 +737,8 @@ const styles = StyleSheet.create({
   },
   stepText: { flex: 1, fontSize: 14, lineHeight: 20, color: '#334155' },
   note: { alignSelf: 'stretch', fontSize: 12, color: '#94a3b8' },
+  linkButton: { alignSelf: 'flex-start', paddingVertical: 4 },
+  linkText: { fontSize: 14, fontWeight: '700', color: '#4f46e5', textDecorationLine: 'underline' },
   pairedTitle: { fontSize: 20, fontWeight: '800', color: '#0f172a' },
   primaryButton: {
     alignSelf: 'stretch',

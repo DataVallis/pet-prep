@@ -20,18 +20,20 @@ export function makePetProfile(
     age_months: 2,
     life_stage: 'puppy',
     next_stage: { life_stage: 'young', from_date: '2026-11-24' },
-    data_verified: false,
-    unverified: ['feed_windows', 'exercise_minutes_per_age_month'],
+    // Since 2026-10-05 every imported value is confirmed (PRODUCT_SPEC §5) → verified.
+    data_verified: true,
+    unverified: [],
     today: {
       date: '2026-10-04',
       meals_per_day: 4,
       meals_by_child: 3,
       meals_by_parent: 1,
+      // 4 puppy meals, 2-hour windows (David 2026-10-05, PR #38).
       feed_windows: [
-        { start: '07:00', end: '08:00', parent_covered: false },
-        { start: '11:00', end: '12:00', parent_covered: true },
-        { start: '15:00', end: '16:00', parent_covered: false },
-        { start: '19:00', end: '20:00', parent_covered: false },
+        { start: '07:00', end: '09:00', parent_covered: false },
+        { start: '11:00', end: '13:00', parent_covered: true },
+        { start: '15:00', end: '17:00', parent_covered: false },
+        { start: '19:00', end: '21:00', parent_covered: false },
       ],
       step_goal: 2000,
       exercise_minutes: 20,

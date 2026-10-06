@@ -42,7 +42,9 @@ export default function DogPickerStep({ childName, initial, lockedBreeds = PREMI
 
   return (
     <ScrollView contentContainerStyle={styles.content} testID="dog-picker">
-      <Text style={styles.title}>{S.title(childName)}</Text>
+      <Text style={styles.title} accessibilityRole="header">
+        {S.title(childName)}
+      </Text>
       <Text style={styles.intro}>{S.intro}</Text>
 
       {notice && (
@@ -51,7 +53,9 @@ export default function DogPickerStep({ childName, initial, lockedBreeds = PREMI
         </View>
       )}
 
-      <Text style={styles.sectionTitle}>{S.breedTitle}</Text>
+      <Text style={styles.sectionTitle} accessibilityRole="header">
+        {S.breedTitle}
+      </Text>
       {PICKER_BREEDS.map((breed) => {
         const locked = isBreedLocked(breed, lockedBreeds);
         return (
@@ -79,7 +83,9 @@ export default function DogPickerStep({ childName, initial, lockedBreeds = PREMI
         </Text>
       )}
 
-      <Text style={styles.sectionTitle}>{S.originTitle}</Text>
+      <Text style={styles.sectionTitle} accessibilityRole="header">
+        {S.originTitle}
+      </Text>
       {PICKER_ORIGINS.map((origin) => (
         <Option
           key={origin}
@@ -91,12 +97,14 @@ export default function DogPickerStep({ childName, initial, lockedBreeds = PREMI
         />
       ))}
 
-      <Text style={styles.sectionTitle}>{S.ageTitle}</Text>
+      <Text style={styles.sectionTitle} accessibilityRole="header">
+        {S.ageTitle}
+      </Text>
       {PICKER_AGES.map((age) => (
         <Option
           key={age}
           title={S.ages[age]}
-          hint={S.ageHints[age]}
+          hint={S.ageHints[choice.breed][age]}
           selected={choice.age_stage === age}
           onPress={() => setChoice((c) => ({ ...c, age_stage: age }))}
           testID={`age-option-${age}`}
@@ -137,7 +145,7 @@ function Option({ title, hint, selected, locked = false, accessibilityLabel, onP
       onPress={onPress}
       style={({ pressed }) => [styles.option, selected && styles.optionSelected, locked && styles.optionLocked, pressed && styles.pressed]}
       accessibilityRole="radio"
-      accessibilityState={{ selected, disabled: locked }}
+      accessibilityState={{ checked: selected, disabled: locked }}
       accessibilityLabel={accessibilityLabel ?? title}
       testID={testID}
     >
