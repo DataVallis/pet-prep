@@ -19,6 +19,7 @@ specialised subagents live in `.claude/agents/`.
 ## Monorepo map
 - `backend/` — Laravel 11 API, PHP 8.5 (Sail), PostgreSQL 18, Reverb, Sanctum, Filament 3 (`/admin`), Scramble (`/docs/api`), Pest. See `backend/CLAUDE.md`.
 - `mobile/` — Expo SDK 57, RN 0.86, React 19, StyleSheet (no NativeWind), Zustand, TanStack Query, EAS (`eas.json`). See `mobile/CLAUDE.md`. Part of this repo since 2026-10-02 (the old `pet-prep-mobile` repo is retired).
+- `brand/` — CGP v2 ("Grafit in meta"): logos, app icons (iOS + Android adaptive/monochrome, splash), fonts, colour tokens, voice. Read `brand/README.md` before any UI, icon or marketing work.
 - `scripts/` — `generate-api-types.mjs` (OpenAPI → `mobile/src/api/schema.ts`), production deploy/backup/restore scripts.
 - `deployment/Caddyfile`, `backend/compose.production.yaml`, `.github/workflows/deploy-production.yml` — production stack.
 
