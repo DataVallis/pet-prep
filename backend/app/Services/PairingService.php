@@ -35,6 +35,7 @@ class PairingService
         private readonly FamilyService $families,
         private readonly PetDnaService $petDna,
         private readonly LifeStageService $lifeStages,
+        private readonly TrainingService $training,
     ) {}
 
     /**
@@ -285,6 +286,13 @@ class PairingService
         // Pet::created already added the caretaker row; this is a no-op
         // that keeps the invariant explicit.
         $this->addCaretakerOrFail($pet, $child);
+
+        // M5-R03b (David 2026-10-06): a dog arriving young / adult / senior
+        // already knows some commands (its arrival stage's
+        // training_starting_progress); a puppy starts at 0. Here because this
+        // is the only place a pet gets its profile and `training_enabled` —
+        // never changed later, so the values are applied exactly once.
+        $this->training->applyStartingProgress($pet, now());
 
         if ($mediaEnabled) {
             GeneratePetReferenceImage::dispatch($pet->id)->afterCommit();

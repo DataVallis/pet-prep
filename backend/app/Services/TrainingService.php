@@ -4,12 +4,14 @@ namespace App\Services;
 
 use App\Enums\ActivityType;
 use App\Enums\CareRefusal;
+use App\Enums\LifeStage;
 use App\Enums\RoutineStatus;
 use App\Enums\RoutineType;
 use App\Enums\StageParamKey;
 use App\Enums\TrainingCommand;
 use App\Models\ActivityLog;
 use App\Models\Pet;
+use App\Models\PetCaretaker;
 use App\Models\PetTrainingSession;
 use App\Models\PetTrainingSkill;
 use App\Models\User;
@@ -50,8 +52,13 @@ use Random\Randomizer;
  * at least one cue the dog obeys and one it ignores.
  *
  * Budget: training_minutes_per_day of mini-game per dog and family-local
- * day (proposal 5 min, S36 / S37); every started session counts its full
- * length. One active session per pet; a session can be finished from its
+ * day (5 min, S36 / S37, confirmed by David 2026-10-06); every started
+ * session counts its full length. Fair share (M5-R03b, David 2026-10-06):
+ * the budget is split equally between the children who can train the dog
+ * — active caretakers who signed their contract (or grandfathered ones);
+ * one child alone = the whole budget. A child cannot start a session that
+ * would exceed THEIR share (training_child_share_used); the pet-wide check
+ * stays. One active session per pet; a session can be finished from its
  * scheduled end (minus FINISH_EARLY_TOLERANCE_MS) until FINISH_GRACE_SECONDS
  * later (TTL); a later finish is refused and the session expires. Only the
  * child who started it can finish it.
@@ -61,6 +68,11 @@ use Random\Randomizer;
  * training routine was MISSED (not excused) costs every command
  * training_decay_per_missed_day points (applyDecay(), at the first tick
  * after the family-local midnight).
+ *
+ * Starting progress (M5-R03b, David 2026-10-06): a dog arriving young, adult
+ * or senior (bought or adopted) already knows some commands —
+ * training_starting_progress of its arrival stage, applied once when the
+ * pet is created (applyStartingProgress); a puppy starts at 0.
  *
  * Effects (proposals): potty progress lets a puppy "ask to go out" instead
  * of having an accident (accidentAvoidanceChance, S47); place progress
@@ -144,18 +156,74 @@ class TrainingService
     /**
      * Seconds of mini-game already started on a family-local day: every
      * session counts in full, except one a lock (hard stop, vet, game over)
-     * interrupted — PR #53 m2: its time is refunded.
+     * interrupted — PR #53 m2: its time is refunded. With $child: only the
+     * sessions that child started (their fair share, M5-R03b).
      */
-    public function usedSecondsOn(Pet $pet, string $localDate): int
+    public function usedSecondsOn(Pet $pet, string $localDate, ?User $child = null): int
     {
         $now = now();
         $ms = (int) PetTrainingSession::where('pet_id', $pet->id)->where('local_date', $localDate)
+            ->when($child !== null, fn ($q) => $q->where('user_id', $child->id))
             ->where('status', '!=', PetTrainingSession::STATUS_INTERRUPTED)
             ->where(fn ($q) => $q->where('status', '!=', PetTrainingSession::STATUS_ACTIVE)
                 ->orWhereNot(fn ($q) => $this->whereInterrupted($q, $now)))
             ->sum('duration_ms');
 
         return intdiv($ms + 999, 1000);
+    }
+
+    /**
+     * Children who can train the dog (M5-R03b): ACTIVE caretakers (not a
+     * deleted child's tombstone) who signed their own contract, or whose row
+     * needs none (grandfathered). A child who joined but has not signed yet
+     * is locked (contract_required) and does not reduce the others' share.
+     *
+     * @return list<int>
+     */
+    public function trainerIds(Pet $pet): array
+    {
+        return PetCaretaker::where('pet_id', $pet->id)->active()
+            ->where(fn ($q) => $q->where('requires_contract', false)
+                ->orWhereExists(fn ($c) => $c->selectRaw('1')->from('pet_contracts')
+                    ->whereColumn('pet_contracts.pet_id', 'pet_caretakers.pet_id')
+                    ->whereColumn('pet_contracts.user_id', 'pet_caretakers.user_id')))
+            ->orderBy('user_id')
+            ->pluck('user_id')
+            ->map(fn ($id) => (int) $id)
+            ->all();
+    }
+
+    /**
+     * A child's fair share of the dog's daily budget (M5-R03b): budget / n
+     * (whole seconds, rounded down) for the n children who can train; one
+     * child alone = the whole budget. 0 for a viewer who cannot train.
+     * At least one session (QA m3, Claude — waiting for David): with 7+
+     * children budget / n would be shorter than a session and nobody could
+     * ever train, so each share is max(budget / n, one session); the
+     * pet-wide budget still caps the total (the first children to train
+     * get it).
+     *
+     * @param  list<int>|null  $trainerIds  trainerIds() when already loaded
+     */
+    public function childShareSeconds(Pet $pet, string $localDate, User $child, ?array $trainerIds = null): int
+    {
+        $trainerIds ??= $this->trainerIds($pet);
+        if (! in_array($child->id, $trainerIds, true)) {
+            return 0;
+        }
+
+        $budget = $this->dailyBudgetSeconds($pet, $localDate);
+        if ($budget <= 0) {
+            return 0;
+        }
+
+        return max(intdiv($budget, count($trainerIds)), self::sessionSeconds());
+    }
+
+    /** Whole seconds one session takes from the budget. */
+    public static function sessionSeconds(): int
+    {
+        return intdiv(self::sessionDurationMs() + 999, 1000);
     }
 
     /**
@@ -310,6 +378,57 @@ class TrainingService
     }
 
     // ──────────────────────────────────────────────────────────────
+    //  Starting progress (M5-R03b)
+    // ──────────────────────────────────────────────────────────────
+
+    /**
+     * Give a newly created pet the progress its arrival stage already brings
+     * (training_starting_progress, David 2026-10-06: young / adult / senior
+     * sit 50, potty 70, come 30, place 0; puppy 0). Only for pets with
+     * training; called once by PairingService::createPet (the only place a
+     * training pet gets its profile). Not a session: sessions_completed 0,
+     * last_practised_at null. Commands with 0 get no row (= never practised).
+     * Returns the skills written as {command: progress}.
+     *
+     * @return array<string, float>
+     */
+    public function applyStartingProgress(Pet $pet, CarbonInterface $now): array
+    {
+        if (! $pet->trainingEnabled()) {
+            return [];
+        }
+
+        $value = $this->lifeStages->stageValueOn($pet, $pet->localDate($now), StageParamKey::TrainingStartingProgress)['value'] ?? null;
+        if (! is_array($value)) {
+            if ($pet->life_stage !== LifeStage::Puppy) {
+                // QA m2: a grown arrival should know some commands — the data row is missing.
+                Log::warning('TrainingService: no training_starting_progress for a grown arrival', [
+                    'pet_id' => $pet->id, 'breed' => $pet->breed_type->value, 'life_stage' => $pet->life_stage?->value,
+                ]);
+            }
+
+            return [];
+        }
+
+        $written = [];
+        foreach (TrainingCommand::cases() as $command) {
+            $progress = $value[$command->value] ?? 0;
+            $progress = is_int($progress) || is_float($progress) ? max(0.0, min(100.0, (float) $progress)) : 0.0;
+            if ($progress <= 0) {
+                continue;
+            }
+
+            PetTrainingSkill::updateOrCreate(
+                ['pet_id' => $pet->id, 'command' => $command->value],
+                ['progress' => $progress, 'last_practised_at' => null, 'sessions_completed' => 0],
+            );
+            $written[$command->value] = $progress;
+        }
+
+        return $written;
+    }
+
+    // ──────────────────────────────────────────────────────────────
     //  Session start / finish (caller holds the pet lock)
     // ──────────────────────────────────────────────────────────────
 
@@ -318,7 +437,9 @@ class TrainingService
      * this pet), training_session_active (next_allowed = its expiry),
      * training_day_ending (the session + TTL would run past the
      * family-local midnight; next_allowed = midnight — PR #53 m1),
-     * training_daily_budget_used (next_allowed = next local midnight).
+     * training_daily_budget_used (next_allowed = next local midnight),
+     * training_child_share_used (this child's fair share of the budget is
+     * used — M5-R03b; next_allowed = next local midnight).
      *
      * @return array{refusal: CareRefusal|null, next_allowed_at: CarbonInterface|null, session: PetTrainingSession|null}
      */
@@ -348,10 +469,20 @@ class TrainingService
 
             return $refuse(CareRefusal::TrainingNotAvailable);
         }
-        if ($this->usedSecondsOn($pet, $today) + intdiv($durationMs + 999, 1000) > $budget) {
-            $midnight = Carbon::parse($today, $pet->familyTimezone())->addDay()->startOfDay()->utc();
-
+        $sessionSeconds = intdiv($durationMs + 999, 1000);
+        $midnight = Carbon::parse($today, $pet->familyTimezone())->addDay()->startOfDay()->utc();
+        if ($this->usedSecondsOn($pet, $today) + $sessionSeconds > $budget) {
             return $refuse(CareRefusal::TrainingDailyBudgetUsed, $midnight);
+        }
+        // M5-R03b fair share: budget / n children who can train — the same
+        // trainerIds() rule as the payload (QA n1). A child who is not one of
+        // them (no signed contract, not an active caretaker) cannot train.
+        $trainers = $this->trainerIds($pet);
+        if (! in_array($child->id, $trainers, true)) {
+            return $refuse(CareRefusal::TrainingNotAvailable);
+        }
+        if ($this->usedSecondsOn($pet, $today, $child) + $sessionSeconds > $this->childShareSeconds($pet, $today, $child, $trainers)) {
+            return $refuse(CareRefusal::TrainingChildShareUsed, $midnight);
         }
 
         $this->learningFactor($pet); // drawn and stored on the first session

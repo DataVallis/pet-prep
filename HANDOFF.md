@@ -5,7 +5,7 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-06 late evening (Claude, orchestrator — mobile app rebranded to CGP v2: theme tokens, brand fonts, new app icons / splash, logos).
+- **Last updated:** 2026-10-06 night (Claude, orchestrator — M5-R03b training decisions: confirmed numbers, starting skills for non-puppies, fair share of the training budget).
 - **Production:** `https://api.petprep.si` live (Hetzner CX23, Docker Compose + Caddy). Merge to `main` → CI (`CI OK`) → automatic deploy when backend / deployment / scripts / workflow changed (DEPLOYMENT.md D16). Website `petprep.si` is served from the separate repo `DataVallis/pet-prep-website` (D15). Last verified deploy: `98eabfb` (M5-R03 training backend), 2026-10-06.
 - **App:** TestFlight build 1.24.4 has the push-registration loop (fixed on `main`, PR #45/#48). **David must ship a new TestFlight build from `main`** (he owns app version — commit `58551b1` "mobile version change" is his). Nothing from M5-R02 / M5-R03 UI and nothing of the **CGP v2 rebrand** has been checked on a device yet. The rebrand adds native modules (`expo-font`, `expo-splash-screen`) and new icons / splash → needs a **new native EAS build** (an OTA update is not enough).
 - **All PRs #1–#56 are merged; no open PRs.** `main` @ `58551b1`.
@@ -19,7 +19,7 @@
 | M3 Notifications, sensors, payments | push (M3-02) done; HealthKit, Health Connect, RevenueCat, paywall, trial, signature open |
 | M4 AI media | 7 done / 4 open (M4-05 object storage, M4-05b, M4-06 fallback, M4-09 tokens) |
 | M5 Production + beta | partial: deploy pipeline (fast, D16), backups same-disk only; Sentry, privacy, TestFlight beta, analytics open |
-| M5-R Realism | R01, R02, R03 done; **R03b** (David's training decisions) open; R04 part 1 done, **part 2 (growth album)** open |
+| M5-R Realism | R01, R02, R03, R03b done; R04 part 1 done, **part 2 (growth album)** open |
 
 ## 2. Decisions (2026-10-02)
 
@@ -50,17 +50,24 @@
 - Production docs: `docs/PRODUCTION_DEPLOYMENT.md`, `docs/PRODUCTION_ENV.md`; findings: `docs/engineering/DEPLOYMENT.md`.
 - SSH key of David's second Mac added to the server.
 - **Cloud sessions (no Docker / Sail):** PostgreSQL 16 runs locally on `127.0.0.1:5432` (postgres / postgres). Run Pest with `DB_CONNECTION=pgsql DB_HOST=127.0.0.1 DB_DATABASE=testing_<branch> DB_USERNAME=postgres DB_PASSWORD=postgres php vendor/bin/pest --parallel`; in a worktree copy `vendor/` with `rsync -a --exclude=.git backend/vendor/ <worktree>/backend/vendor/` and delete it afterwards (disk is limited). The main checkout's `mobile/node_modules` is outdated (no `expo-notifications`) → `yarn install --frozen-lockfile` in the worktree.
+- **Composer as root (cloud):** run `COMPOSER_ALLOW_SUPERUSER=1 composer install`, otherwise plugins are skipped, `vendor/pest-plugins.json` is missing and `pest --parallel` fails with "Unknown option". Start Postgres with `service postgresql start` and set the postgres password (`ALTER USER postgres PASSWORD 'postgres'`).
 - **GitHub:** private repo on the free plan → no branch protection; the single gate is the `CI OK` check run. Actions logs can't be downloaded through the cloud proxy — read check-run **annotations** (the `plan` job prints its decision as a `::notice title=plan::`).
 
 ## 5. Next steps (priority queue)
 
 1. **David:** new TestFlight / Android build from `main` (fixes the push loop; contains M5-R02 + M5-R03 UI and the CGP v2 rebrand). Rebrand checks: home-screen icon (iOS + Android adaptive / themed), splash on fog, fonts render (Instrument Sans body, Bricolage headings, Slovenian č/š/ž), status-bar text dark on light screens and light in the child app, mint "due" care button. Then device checks: one `POST /api/devices` per login in the Caddy log; "Šola" chip at 375 pt; "Pohvali" responsiveness; kill app mid-training and reopen; TalkBack / VoiceOver.
 2. **David:** delete stale remote branches `diag/pet-state-1006`, `diag/prod-logs-1006`, `diag/child-flow`, `wip/M5-R04-picker-followup` (agent can't delete remote branches).
-3. **M5-R03b** (backend + app): flip the confirmed training numbers to `verified = true`; adult-arrival start progress (sit 50, potty 70, come 30, place 0; puppies 0); fair share of the 5 min daily budget between the pet's children. Tests + docs.
+3. **`docs/product/FEATURES.md`** — feature catalogue (what the app does today, per area, status built / verified on device / planned) for website and materials; proposed to David 2026-10-06, waiting for his OK; keep it updated in every PR.
 4. **M5-R04 part 2:** growth album (pet images across life stages).
-5. **David:** answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
+5. **David:** M5-R03b open questions (unsigned child not counted in the share; shares recomputed when a sibling signs mid-day; minimum one session per child with ≥ 7 trainers; effect params 0.75 / 0.5 still unverified). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-06 night (cloud, orchestrator) — M5-R03b training decisions
+- **Backend:** migration `2026_10_15_110000` (new stage key `training_starting_progress`), data migration `2026_10_15_120000` flips 5 min / +1 / −2 to `verified` ("potrdil David 2026-10-06", audit row, admin edits win, idempotent); seeder clears the rules cache. Starting skills (young / adult / senior: sit 50, potty 70, come 30, place 0; puppy 0) applied once in `PairingService::createPet` for training-enabled pets; shown before birth. Fair share: trainers = active caretakers with a signed (or grandfathered) contract; share = `max(⌊budget / n⌋, session)`, pet-wide budget still caps; 422 `training_child_share_used`; child state `training.children_sharing` / `my_share_seconds` / `my_seconds_left` (additive). Pest 1095 green.
+- **App:** remaining sessions from `my_seconds_left`, shared-time hint, kind refusal text, chip dot only when the child can still start. Jest 1081 green, tsc clean.
+- **QA (independent):** approved; fixed m2 (cache after seeding + warning), m3 (≥ 7 trainers locked out → minimum one session), n1 (one trainer rule in service and payload).
+- **Not verified on a device.** Debt: "Danes še 0 vaj" line still shown above the share-used reason; `TrainingPayload` +3 queries per child state.
 
 ### 2026-10-06 late (cloud, orchestrator) — CGP v2 mobile rebrand
 - **Theme:** `mobile/src/theme/` (palette + light/dark/meter tokens from `brand/README.md`, radii, fonts); every screen/component recoloured from the old Tailwind palette (codemod + manual pass): parent, auth, start, splash and the breed paywall are light (fog + white cards, graphite primary, mint-text links); child PIN, contract, HUD, overlays dark graphite (mint primary with graphite text). Glow orbs removed / calmed. Guard `src/__tests__/brandColours.test.ts` (no hex outside `src/theme`, `Text` only from `@/components/ui/Text`).

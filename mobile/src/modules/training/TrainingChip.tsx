@@ -1,7 +1,8 @@
 /**
  * "Šola" entry of the child HUD (M5-R03): a glass chip just above the action dock (the
  * dock already holds up to five buttons — a sixth would not fit a 375 pt phone). A small
- * amber dot marks a day whose training session is still open; a done day shows ✓.
+ * amber dot marks a day whose training session is still open AND this child can still
+ * train (`showTrainingDot`, M5-R03b); a done day shows ✓, otherwise nothing.
  * Rendered only for a pet with training (never for a legacy pet / older server).
  */
 
@@ -14,11 +15,13 @@ import { alpha, palette } from '@/theme';
 
 export interface TrainingChipProps {
   todayDone: boolean;
+  /** Today's practice is waiting and I can still train (`showTrainingDot`). */
+  pending: boolean;
   onPress: () => void;
   disabled?: boolean;
 }
 
-export default function TrainingChip({ todayDone, onPress, disabled = false }: TrainingChipProps) {
+export default function TrainingChip({ todayDone, pending, onPress, disabled = false }: TrainingChipProps) {
   return (
     <Pressable
       testID="hud-training-open"
@@ -36,9 +39,9 @@ export default function TrainingChip({ todayDone, onPress, disabled = false }: T
         <View style={styles.done} testID="hud-training-done">
           <Check color={palette.white} size={10} />
         </View>
-      ) : (
+      ) : pending ? (
         <View style={styles.badge} testID="hud-training-badge" />
-      )}
+      ) : null}
     </Pressable>
   );
 }

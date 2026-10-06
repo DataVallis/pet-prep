@@ -196,13 +196,15 @@ class ChildPetStateResource extends JsonResource
             'training' => array_merge($training->toArray(), [
                 /**
                  * POST /api/child/pet/training/start would be accepted now (enabled, not
-                 * locked, no running session, enough budget left for one session, and the
-                 * session would end before the family-local midnight).
+                 * locked, no running session, enough of the dog's budget AND of this
+                 * child's fair share left for one session, and the session would end
+                 * before the family-local midnight).
                  *
                  * @var bool
                  */
                 'can_start' => (bool) (! $locked && $training->enabled && $training->session === null
                     && $training->dailyBudgetLeftSeconds >= TrainingPayload::sessionSeconds()
+                    && $training->mySecondsLeft >= TrainingPayload::sessionSeconds()
                     && ! app(TrainingService::class)->dayEndingAt($pet, $now)),
             ]),
         ];

@@ -89,6 +89,20 @@ describe('ChildDetailScreen — training (M5-R03)', () => {
     expect(screen.getByTestId('detail-pet-training')).toHaveTextContent(/Današnja vaja: opravljena ✓/);
   });
 
+  it('a dog that arrived older (M5-R03b): starting skills read naturally', async () => {
+    getChildReport.mockResolvedValue(report({ expected: 0, done: 0, done_by_child: 0, missed: 0, pending: 0 }));
+    const commands = [
+      { command: 'sit', progress: 50, learned: false, last_practised_at: null },
+      { command: 'come', progress: 30, learned: false, last_practised_at: null },
+      { command: 'place', progress: 0, learned: false, last_practised_at: null },
+      { command: 'potty', progress: 70, learned: false, last_practised_at: null },
+    ];
+    const f = family({ enabled: true, commands, today_done: false, session_active: false });
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={f} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('detail-pet-training')).toHaveTextContent(/Kuža zna: sedi 50 %, pridi 30 %, prostor 0 %, lulat zunaj 70 %/);
+  });
+
   it('legacy pet / older server: no card, no training row', async () => {
     getChildReport.mockResolvedValue(report({ expected: 0, done: 0, done_by_child: 0, missed: 0, pending: 0 }));
     const { unmount } = renderWithQuery(

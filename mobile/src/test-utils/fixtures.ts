@@ -213,6 +213,9 @@ export function makeTrainingState(overrides: Partial<ChildPetState['training']> 
     session_seconds: 50,
     daily_budget_seconds: 0,
     daily_budget_left_seconds: 0,
+    children_sharing: 1,
+    my_share_seconds: 0,
+    my_seconds_left: 0,
     can_start: false,
     ...overrides,
   };
@@ -468,6 +471,9 @@ export function makeEnabledTraining(overrides: Partial<ChildPetState['training']
     commands: makeTrainingCommands({ sit: 40, come: 100 }),
     daily_budget_seconds: 300,
     daily_budget_left_seconds: 300,
+    children_sharing: 1,
+    my_share_seconds: 300,
+    my_seconds_left: 300,
     can_start: true,
     ...overrides,
   });

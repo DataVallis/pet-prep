@@ -394,7 +394,9 @@ export interface paths {
          *     422 training_not_available | training_session_active (next_allowed_at
          *     = its expiry) | training_day_ending (session + TTL would cross the
          *     family-local midnight; next_allowed_at = midnight) |
-         *     training_daily_budget_used (next_allowed_at = local midnight); 423 while locked
+         *     training_daily_budget_used (next_allowed_at = local midnight) |
+         *     training_child_share_used (this child's fair share — budget / children
+         *     who can train — is used; next_allowed_at = local midnight); 423 while locked
          * @description POST /api/child/pet/training/start
          */
         post: operations["childPet.startTraining"];
@@ -1975,10 +1977,17 @@ export interface operations {
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
                                 daily_budget_left_seconds: number;
+                                /** @description M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally. */
+                                children_sharing: number;
+                                /** @description This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train). */
+                                my_share_seconds: number;
+                                /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
+                                my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session, and the
-                                 *     session would end before the family-local midnight).
+                                 *     locked, no running session, enough of the dog's budget AND of this
+                                 *     child's fair share left for one session, and the session would end
+                                 *     before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -2242,10 +2251,17 @@ export interface operations {
                             /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                             daily_budget_seconds: number;
                             daily_budget_left_seconds: number;
+                            /** @description M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally. */
+                            children_sharing: number;
+                            /** @description This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train). */
+                            my_share_seconds: number;
+                            /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
+                            my_seconds_left: number;
                             /**
                              * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                             *     locked, no running session, enough budget left for one session, and the
-                             *     session would end before the family-local midnight).
+                             *     locked, no running session, enough of the dog's budget AND of this
+                             *     child's fair share left for one session, and the session would end
+                             *     before the family-local midnight).
                              */
                             can_start: boolean;
                         };
@@ -2529,10 +2545,17 @@ export interface operations {
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
                                 daily_budget_left_seconds: number;
+                                /** @description M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally. */
+                                children_sharing: number;
+                                /** @description This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train). */
+                                my_share_seconds: number;
+                                /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
+                                my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session, and the
-                                 *     session would end before the family-local midnight).
+                                 *     locked, no running session, enough of the dog's budget AND of this
+                                 *     child's fair share left for one session, and the session would end
+                                 *     before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -2814,10 +2837,17 @@ export interface operations {
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
                                 daily_budget_left_seconds: number;
+                                /** @description M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally. */
+                                children_sharing: number;
+                                /** @description This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train). */
+                                my_share_seconds: number;
+                                /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
+                                my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session, and the
-                                 *     session would end before the family-local midnight).
+                                 *     locked, no running session, enough of the dog's budget AND of this
+                                 *     child's fair share left for one session, and the session would end
+                                 *     before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -3099,10 +3129,17 @@ export interface operations {
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
                                 daily_budget_left_seconds: number;
+                                /** @description M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally. */
+                                children_sharing: number;
+                                /** @description This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train). */
+                                my_share_seconds: number;
+                                /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
+                                my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session, and the
-                                 *     session would end before the family-local midnight).
+                                 *     locked, no running session, enough of the dog's budget AND of this
+                                 *     child's fair share left for one session, and the session would end
+                                 *     before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -3384,10 +3421,17 @@ export interface operations {
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
                                 daily_budget_left_seconds: number;
+                                /** @description M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally. */
+                                children_sharing: number;
+                                /** @description This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train). */
+                                my_share_seconds: number;
+                                /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
+                                my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session, and the
-                                 *     session would end before the family-local midnight).
+                                 *     locked, no running session, enough of the dog's budget AND of this
+                                 *     child's fair share left for one session, and the session would end
+                                 *     before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -3669,10 +3713,17 @@ export interface operations {
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
                                 daily_budget_left_seconds: number;
+                                /** @description M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally. */
+                                children_sharing: number;
+                                /** @description This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train). */
+                                my_share_seconds: number;
+                                /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
+                                my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session, and the
-                                 *     session would end before the family-local midnight).
+                                 *     locked, no running session, enough of the dog's budget AND of this
+                                 *     child's fair share left for one session, and the session would end
+                                 *     before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -3958,10 +4009,17 @@ export interface operations {
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
                                 daily_budget_left_seconds: number;
+                                /** @description M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally. */
+                                children_sharing: number;
+                                /** @description This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train). */
+                                my_share_seconds: number;
+                                /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
+                                my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session, and the
-                                 *     session would end before the family-local midnight).
+                                 *     locked, no running session, enough of the dog's budget AND of this
+                                 *     child's fair share left for one session, and the session would end
+                                 *     before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -4247,10 +4305,17 @@ export interface operations {
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
                                 daily_budget_left_seconds: number;
+                                /** @description M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally. */
+                                children_sharing: number;
+                                /** @description This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train). */
+                                my_share_seconds: number;
+                                /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
+                                my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session, and the
-                                 *     session would end before the family-local midnight).
+                                 *     locked, no running session, enough of the dog's budget AND of this
+                                 *     child's fair share left for one session, and the session would end
+                                 *     before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };
@@ -4536,10 +4601,17 @@ export interface operations {
                                 /** @description The dog's mini-game seconds per family-local day, and what is left today. */
                                 daily_budget_seconds: number;
                                 daily_budget_left_seconds: number;
+                                /** @description M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally. */
+                                children_sharing: number;
+                                /** @description This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train). */
+                                my_share_seconds: number;
+                                /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
+                                my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough budget left for one session, and the
-                                 *     session would end before the family-local midnight).
+                                 *     locked, no running session, enough of the dog's budget AND of this
+                                 *     child's fair share left for one session, and the session would end
+                                 *     before the family-local midnight).
                                  */
                                 can_start: boolean;
                             };

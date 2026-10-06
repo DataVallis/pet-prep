@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Enums\BreedType;
+use App\Enums\LifeStage;
 use App\Enums\StageParamKey;
+use App\Services\LifeStageService;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use InvalidArgumentException;
@@ -55,8 +57,19 @@ class BreedStageParamsSeeder extends Seeder
     /** David's M5-R02 decisions (behaviour events, 2026-10-06). */
     public const CONFIRMED_R02 = 'potrdil David 2026-10-06';
 
-    /** David's M5-R03 decisions (training, 2026-10-06): Border Collie 2×, mixed breed baseline ±20 %. */
+    /**
+     * David's M5-R03 decisions (training, 2026-10-06): Border Collie 2×, mixed
+     * breed baseline ±20 %; M5-R03b: 5 min a day, +1 per praise, −2 per missed
+     * day (production rows flipped by 2026_10_15_120000_apply_david_training_decisions),
+     * starting progress per arrival stage.
+     */
     public const CONFIRMED_R03 = 'potrdil David 2026-10-06';
+
+    /** M5-R03b: starting progress of a puppy (also bought) — David 2026-10-06. */
+    public const PUPPY_STARTING_PROGRESS = ['sit' => 0, 'come' => 0, 'place' => 0, 'potty' => 0];
+
+    /** M5-R03b: starting progress of a dog arriving young, adult or senior — David 2026-10-06. */
+    public const GROWN_STARTING_PROGRESS = ['sit' => 50, 'come' => 30, 'place' => 0, 'potty' => 70];
 
     /** @var list<array{0: string, 1: string}> */
     public const PUPPY_4_MEAL_WINDOWS = [['07:00', '09:00'], ['11:00', '13:00'], ['15:00', '17:00'], ['19:00', '21:00']];
@@ -301,20 +314,21 @@ class BreedStageParamsSeeder extends Seeder
                     'notes' => 'Game value: uniform factor in [0.8, 1.2], seeded per pet and stored (pets.training_learning_factor). S42: individuals vary much more than breeds.',
                 ]);
             }
+            // M5-R03b: David confirmed the three numbers on 2026-10-06 (verified, decision in notes).
             $add('all', 0, StageParamKey::TrainingMinutesPerDay, 5, [
-                'unit' => 'minutes of mini-game per dog and family-local day', 'source_id' => 'S36,S37', 'confidence' => 'low', 'verified' => false,
-                'ref' => 'proposed_game_parameters.training_minigame_minutes',
-                'notes' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): S36 / S37 say 5–10 min sessions and ≤ 15 min a day for puppies; 5 min = the daily budget (≈ 6 sessions of 50 s), same for every stage.',
+                'unit' => 'minutes of mini-game per dog and family-local day', 'source_id' => 'S36,S37', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.training_minigame_minutes', 'decision' => self::CONFIRMED_R03,
+                'notes' => 'Game value (no literature number): S36 / S37 say 5–10 min sessions and ≤ 15 min a day for puppies; 5 min = the dog\'s daily budget (≈ 6 sessions of 50 s), same for every stage, split equally between the children who care for the dog (M5-R03b).',
             ]);
             $add('all', 0, StageParamKey::TrainingProgressPerSuccess, 1.0, [
-                'unit' => 'percentage points per correctly timed praise (baseline)', 'confidence' => 'low', 'verified' => false,
-                'ref' => 'proposed_game_parameters.training_progress_per_success',
-                'notes' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): game balance — about 16 good sessions per command for a mixed breed.',
+                'unit' => 'percentage points per correctly timed praise (baseline)', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.training_progress_per_success', 'decision' => self::CONFIRMED_R03,
+                'notes' => 'Game value (no literature number): game balance — about 16 good sessions per command for a mixed breed.',
             ]);
             $add('all', 0, StageParamKey::TrainingDecayPerMissedDay, 2.0, [
-                'unit' => 'percentage points per missed training day, every command', 'confidence' => 'low', 'verified' => false,
-                'ref' => 'proposed_game_parameters.training_decay_per_missed_day',
-                'notes' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): no source gives a forgetting rate.',
+                'unit' => 'percentage points per missed training day, every command', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.training_decay_per_missed_day', 'decision' => self::CONFIRMED_R03,
+                'notes' => 'Game value (no literature number): no source gives a forgetting rate.',
             ]);
             $add('all', 0, StageParamKey::PottyTrainingAccidentReduction, 0.75, [
                 'unit' => 'share of due puppy accidents avoided at 100 % potty training', 'source_id' => 'S47,S31', 'confidence' => 'low', 'verified' => false,
@@ -326,6 +340,17 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'proposed_game_parameters.place_training_chewing_reduction',
                 'notes' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): guidance teaches a puppy to chew its toys (S33); the size of the effect is ours. Chewing after a missed walk stays certain.',
             ]);
+
+            // M5-R03b (David 2026-10-06): a dog arriving young, adult or senior
+            // (bought or adopted) already knows some commands; a puppy starts at 0.
+            foreach (LifeStage::ordered() as $stage) {
+                $add($stage->value, 0, StageParamKey::TrainingStartingProgress, $stage === LifeStage::Puppy
+                    ? self::PUPPY_STARTING_PROGRESS : self::GROWN_STARTING_PROGRESS, [
+                        'unit' => 'progress % per command when the dog arrives in this stage', 'confidence' => 'low', 'verified' => true,
+                        'ref' => 'proposed_game_parameters.training_starting_progress', 'decision' => self::CONFIRMED_R03,
+                        'notes' => 'No source; Claude proposal confirmed by David. Applied once when a pet with training is created (arrival stage, any origin); not a session.',
+                    ]);
+            }
 
             $add('all', 0, StageParamKey::LifespanYears, $bc ? 13.1 : 12.0, [
                 'unit' => 'years', 'source_id' => 'S15', 'confidence' => $bc ? 'high' : 'medium', 'verified' => true,
@@ -368,6 +393,12 @@ class BreedStageParamsSeeder extends Seeder
                 'created_at' => $now,
                 'updated_at' => $now,
             ]));
+        }
+
+        // QA m2: raw inserts bypass the model hooks that forget the rules
+        // cache — clear it for every breed so new rows apply right away.
+        foreach ($breeds as $slug) {
+            LifeStageService::forgetBreed($slug);
         }
     }
 

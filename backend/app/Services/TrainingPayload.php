@@ -27,7 +27,11 @@ use Illuminate\Support\Collection;
  *   viewing child's OWN session (`mine`) also its schedule (duration,
  *   praise window, reaction floor, trials) so the app can resume after a
  *   restart (PR #53) — null for anyone else.
- * - budget: the dog's mini-game seconds per family-local day and what is left.
+ * - budget: the dog's mini-game seconds per family-local day and what is left;
+ *   M5-R03b fair share (child state only): `children_sharing` (children who
+ *   can train the dog), `my_share_seconds` (budget / children_sharing, 0 when
+ *   the viewer cannot train; at least one session, QA m3) and `my_seconds_left` (what the viewing child
+ *   may still start today, never more than the dog's budget left).
  *
  * summaryFor() (broadcast, parent dashboard) runs no budget / session-detail
  * queries (PR #53 m6).
@@ -47,12 +51,19 @@ final class TrainingPayload
         public readonly ?array $session,
         public readonly int $dailyBudgetSeconds,
         public readonly int $dailyBudgetLeftSeconds,
+        public readonly int $childrenSharing = 0,
+        public readonly int $myShareSeconds = 0,
+        public readonly int $mySecondsLeft = 0,
     ) {}
 
     public static function for(Pet $pet, ?User $viewer = null, ?CarbonInterface $now = null, bool $full = true): self
     {
-        if (! $pet->trainingEnabled() || $pet->isUnborn()) {
-            return new self($pet->trainingEnabled(), $pet->trainingEnabled() ? self::commandsOf($pet, collect()) : [], false, null, 0, 0);
+        if (! $pet->trainingEnabled()) {
+            return new self(false, [], false, null, 0, 0);
+        }
+        if ($pet->isUnborn()) {
+            // The starting progress of a grown arrival (M5-R03b) shows before birth too.
+            return new self(true, self::commandsOf($pet, app(TrainingService::class)->skills($pet)), false, null, 0, 0);
         }
 
         $now = CarbonImmutable::instance($now ?? now());
@@ -64,6 +75,12 @@ final class TrainingPayload
         $live = $service->liveSession($pet, $now);
         $mine = $live !== null && $viewer !== null && (int) $live->user_id === $viewer->id;
         $budget = $full ? $service->dailyBudgetSeconds($pet, $today) : 0;
+        $left = $full ? max(0, $budget - $service->usedSecondsOn($pet, $today)) : 0;
+        // M5-R03b fair share of the viewing child (child state only) — the same
+        // trainerIds() / childShareSeconds() rules start() uses (QA n1, m3).
+        $trainers = $full ? $service->trainerIds($pet) : [];
+        $myShare = $full && $viewer !== null ? $service->childShareSeconds($pet, $today, $viewer, $trainers) : 0;
+        $myLeft = $myShare > 0 ? min($left, max(0, $myShare - $service->usedSecondsOn($pet, $today, $viewer))) : 0;
 
         return new self(
             true,
@@ -83,7 +100,10 @@ final class TrainingPayload
                 'trials' => $mine ? TrainingService::trialsOf($live->schedule) : null,
             ],
             $budget,
-            $full ? max(0, $budget - $service->usedSecondsOn($pet, $today)) : 0,
+            $left,
+            count($trainers),
+            $myShare,
+            $myLeft,
         );
     }
 
@@ -121,13 +141,13 @@ final class TrainingPayload
     /** Seconds of one session (the app can show "a session takes 50 s"). */
     public static function sessionSeconds(): int
     {
-        return intdiv(TrainingService::sessionDurationMs() + 999, 1000);
+        return TrainingService::sessionSeconds();
     }
 
     /**
      * Full object for the child state.
      *
-     * @return array{enabled: bool, commands: list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>, today_done: bool, session: array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>|null}|null, session_seconds: int, daily_budget_seconds: int, daily_budget_left_seconds: int}
+     * @return array{enabled: bool, commands: list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>, today_done: bool, session: array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>|null}|null, session_seconds: int, daily_budget_seconds: int, daily_budget_left_seconds: int, children_sharing: int, my_share_seconds: int, my_seconds_left: int}
      */
     public function toArray(): array
     {
@@ -154,6 +174,12 @@ final class TrainingPayload
             // The dog's mini-game seconds per family-local day, and what is left today.
             'daily_budget_seconds' => $this->dailyBudgetSeconds,
             'daily_budget_left_seconds' => $this->dailyBudgetLeftSeconds,
+            // M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally.
+            'children_sharing' => $this->childrenSharing,
+            // This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train).
+            'my_share_seconds' => $this->myShareSeconds,
+            // Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left).
+            'my_seconds_left' => $this->mySecondsLeft,
         ];
     }
 
