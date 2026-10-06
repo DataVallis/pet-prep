@@ -21,6 +21,7 @@ import {
   type TrafficLight,
 } from '@/modules/family/scoring';
 import { readPetBehaviour, type PetBehaviour } from '@/modules/behaviour/behaviour';
+import { readPetTraining, type PetTrainingSummary } from '@/modules/training/training';
 
 /** One pet of the family as the generated schema types it (raw API). */
 export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'][number];
@@ -29,13 +30,15 @@ export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'
  * One pet of the family after normalisation: the schema's loose `timeline` and
  * union-typed `traffic_light` replaced by real types (M2-05).
  */
-export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today' | 'behaviour'> & {
+export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today' | 'behaviour' | 'training'> & {
   traffic_light: TrafficLight;
   care_score: CareScore;
   today: TodayRoutines;
   timeline: TimelineEntry[];
   /** M5-R02: bladder clock + open messes; nothing for a legacy pet / older server. */
   behaviour: PetBehaviour;
+  /** M5-R03: "Kuža zna …", today's training; disabled for a legacy pet / older server. */
+  training: PetTrainingSummary;
 };
 
 export interface FamilyChildStats {
@@ -155,6 +158,7 @@ export function normalizePet(raw: FamilyPetRaw): FamilyPet {
     today: readToday(p.today),
     timeline: readTimeline(p.timeline),
     behaviour: readPetBehaviour(p.behaviour),
+    training: readPetTraining(p.training),
   };
 }
 

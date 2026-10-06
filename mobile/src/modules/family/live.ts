@@ -8,6 +8,7 @@
  * refreshes every 3 min (feed windows / deadlines pass without any event).
  */
 
+import { readPetTraining } from '@/modules/training/training';
 import type { QueryClient } from '@tanstack/react-query';
 
 import type { ParentDashboardResponse } from '@/api/client';
@@ -61,6 +62,9 @@ export function patchDashboardPet(
     media: event.media ?? pet.media,
     // M5-R02: bladder clock / open messes — an accident arrives with a plain decay tick.
     behaviour: event.behaviour ?? pet.behaviour,
+    // M5-R03: training progress / today's session / a session running — normalised like the
+    // dashboard read (a malformed / partial broadcast never lands in the cache raw).
+    training: event.training !== undefined && event.training !== null ? readPetTraining(event.training) : pet.training,
   };
   const nextPets = pets.slice();
   nextPets[index] = patched;

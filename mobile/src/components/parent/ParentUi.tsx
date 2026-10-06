@@ -6,7 +6,7 @@
 
 import type { ReactNode } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, View, type StyleProp, type ViewStyle } from 'react-native';
-import { AlertTriangle, Beef, Droplet, Footprints, Sparkles, WifiOff } from 'lucide-react-native';
+import { AlertTriangle, Beef, Droplet, Footprints, GraduationCap, Sparkles, WifiOff } from 'lucide-react-native';
 
 import { LIGHT_LABELS, type LightColor, type RoutineType } from '@/modules/family/scoring';
 
@@ -76,6 +76,7 @@ const ROUTINE_ICONS: Record<RoutineType, typeof Beef> = {
   water: Droplet,
   clean: Sparkles,
   walk: Footprints,
+  training: GraduationCap,
 };
 
 export function RoutineIcon({ type, color = C.accent, size = 16 }: { type: RoutineType; color?: string; size?: number }) {

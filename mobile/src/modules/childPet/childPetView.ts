@@ -27,6 +27,7 @@ import {
   readPetBehaviour,
   type ChildBehaviour,
 } from '@/modules/behaviour/behaviour';
+import { readChildTraining, readPetTraining, type ChildTraining } from '@/modules/training/training';
 
 export type LockReason = 'game_over' | 'inactive' | 'hard_stopped' | 'contract_required' | 'ill';
 
@@ -95,6 +96,11 @@ export interface ChildPetView {
    * the child may do. `EMPTY_BEHAVIOUR` for a legacy pet / an older server.
    */
   behaviour: ChildBehaviour;
+  /**
+   * M5-R03 training ("Šola"): progress per command, today's routine, the running session,
+   * budget, `can_start`. `EMPTY_TRAINING` for a legacy pet / older app / older server.
+   */
+  training: ChildTraining;
   /** ms of `server_time` (whole seconds). */
   snapshotAtMs: number;
   /** ms of the newest applied broadcast `emitted_at`; 0 if none. */
@@ -222,6 +228,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     contract: { signed: bool(raw.contract.signed), signed_at: isoOrNull(raw.contract.signed_at) },
     // Older servers send no `behaviour` (typed as required by the current schema).
     behaviour: readChildBehaviour((raw as { behaviour?: unknown }).behaviour),
+    // Older servers send no `training` (typed as required by the current schema).
+    training: readChildTraining((raw as { training?: unknown }).training),
     snapshotAtMs: msOf(raw.server_time),
     lastEmittedMs,
     clockSkewMs: msOf(raw.server_time) > 0 ? msOf(raw.server_time) - receivedAtMs : 0,
@@ -320,6 +328,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
   const lock = lockFromFlags(pet, view.lock);
   const blocked = lock.is_locked || pet.needs_cleaning;
   const behaviour = broadcastBehaviour(view.behaviour, b.behaviour, lock.is_locked);
+  const training = broadcastTraining(view.training, b.training, lock.is_locked);
 
   const next: ChildPetView = {
     ...view,
@@ -329,6 +338,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     water: { ...view.water, can_water: view.water.can_water && !blocked },
     steps: { ...view.steps, energy_level: b.energy_level },
     behaviour,
+    training,
     lastEmittedMs: emittedMs,
   };
 
@@ -357,6 +367,26 @@ export function broadcastBehaviour(current: ChildBehaviour, raw: unknown, locked
     ...next,
     can_take_out: next.take_out !== null && !locked,
     can_resolve_chewing: hasOpenChewing(next) && !locked,
+  };
+}
+
+/**
+ * `training` after a `PetUpdated` (M5-R03): the broadcast carries the summary (progress,
+ * today's routine, whether a session runs) but not the budget or the running session's
+ * details. A session that ended clears it; a newly started one (`training_started`, a
+ * refetching event) arrives with the refetch. A lock or a running session disables
+ * "Začni vajo" at once. Without `training` (older server) the view keeps what it has.
+ */
+export function broadcastTraining(current: ChildTraining, raw: unknown, locked: boolean): ChildTraining {
+  if (raw === undefined || raw === null) return locked ? { ...current, can_start: false } : current;
+  const summary = readPetTraining(raw);
+  if (!summary.enabled || !current.enabled) return current;
+  return {
+    ...current,
+    commands: summary.commands.length > 0 ? summary.commands : current.commands,
+    today_done: summary.today_done,
+    session: summary.session_active ? current.session : null,
+    can_start: current.can_start && !locked && !summary.session_active,
   };
 }
 
@@ -463,7 +493,10 @@ export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): numbe
   // Back from the vet: the lock ends at `lock.until` (hotfix 2026-10-06 — don't depend on
   // the recovery broadcast alone; repeated refetches are bounded by the backoff in useChildPet).
   const illnessEnd = view.lock.reason === 'ill' ? at(view.lock.until) : Number.NaN;
-  const future = [nextWindow, windowEnd, water, accident, illnessEnd].filter((ms) => Number.isFinite(ms) && ms > serverNow);
+  // M5-R03: a running training session (a sibling's, or one this device lost) blocks
+  // "Začni vajo" until it expires — fetch the state that frees it.
+  const trainingEnd = at(view.training.session?.expires_at);
+  const future = [nextWindow, windowEnd, water, accident, illnessEnd, trainingEnd].filter((ms) => Number.isFinite(ms) && ms > serverNow);
   future.push(familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
   let delay = Math.min(...future) - serverNow;
 
@@ -472,7 +505,8 @@ export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): numbe
     (Number.isFinite(windowEnd) && windowEnd <= serverNow) ||
     (Number.isFinite(water) && water <= serverNow && !view.water.can_water && !blocked) ||
     (Number.isFinite(accident) && accident <= serverNow) ||
-    (Number.isFinite(illnessEnd) && illnessEnd <= serverNow);
+    (Number.isFinite(illnessEnd) && illnessEnd <= serverNow) ||
+    (Number.isFinite(trainingEnd) && trainingEnd <= serverNow);
   if (stale) delay = Math.min(delay, BOUNDARY_RETRY_MS);
 
   return Number.isFinite(delay) ? Math.max(0, delay) : null;
