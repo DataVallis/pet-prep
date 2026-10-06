@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-06 — Bolan kuža zdaj tudi izgleda bolan (tudi brezplačni)
+
+**Kaj se je zgodilo:** David je v resničnem testu poslal svojega brezplačnega mešančka k veterinarju — a aplikacija je še vedno kazala istega veselega psa kot ves dan. Brezplačni pes ima namreč samo dva videa (miruje, spi), zato je aplikacija namesto »bolan« vzela »miruje«. Zdaj ima vsako stanje jasen nadomestek: bolan → spi → miruje, utrujen → spi → miruje. Mešanček pri veterinarju zato **spi pod temnejšo, hladno sivo plastjo**; pes s pravim videom »bolan« (plačljiva pasma) ostane pod svetlejšo plastjo. *(Čaka Davidovo potrditev.)*
+
+**Kako to povedati**
+- 👩 *"Ko kuža zboli, otrok to vidi takoj — tudi v brezplačni različici: kuža leži in počiva, zaslon potemni."*
+- 🛠 *"Majhna tabela nadomestkov namesto ad-hoc pogojev: vsako stanje ve, kateri video ga najbolje nadomesti."*
+
 ## 2026-10-05 — David potrdil pravila rasti: 2-urna okna za mladička (M5-R01b)
 
 **Kaj se je zgodilo:** David je odgovoril na odprta vprašanja realistične simulacije. **Okna hranjenja mladička so zdaj 2-urna** (4 obroki 7–9, 11–13, 15–17, 19–21; 3 obroki 7–9, 13–15, 19–21) — 1 ura je bila za otroka prekratka. Potrjene so meje obdobij (mladiček do 9 mesecev, mlad pes do 3 let, starejši v zadnji četrtini življenjske dobe — mešanček 9 let, Border Collie 9,8), starosti ob prihodu, minute gibanja (odrasel mešanček 60 min = 6.000 korakov, mladiček 10 min na mesec starosti, starejši 75 %) in 2 obroka za starejše. **Psi, ki že igrajo, ostanejo na starih pravilih za vedno.** V bazi so vse vrednosti zdaj potrjene: iz vira ali z oznako »potrdil David 2026-10-05« — vir ostane zapisan kot dokaz, odločitev se nikoli ne predstavi kot literatura. Strežnik že zapisane vrednosti posodobi enkrat, z revizijsko sledjo, in ne povozi ničesar, kar je admin že ročno spremenil. **985 zelenih testov** (+8).

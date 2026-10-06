@@ -5,7 +5,8 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-05 (Claude, backend-engineer — **M5-R01b David's decisions**: 2-hour puppy feed windows, confirmed stage boundaries / arrival ages / exercise minutes / senior meals → `verified = true`, one-off data migration for the PR #37 rows, legacy pets on the old rules permanently; branch `feat/M5-R01b-david-decisions`, **PR #38** — QA approved with minors → fixed)
+- **Last updated:** 2026-10-06 (Claude, mobile-engineer — **M4-03 fix**: a free mutt at the vet plays the sleeping video (fallback table sick → sleeping → idle) under a darker veil; branch `fix/M4-03-sick-fallback`, pushed, no PR)
+- Before: 2026-10-05 (Claude, backend-engineer — **M5-R01b David's decisions**: 2-hour puppy feed windows, confirmed stage boundaries / arrival ages / exercise minutes / senior meals → `verified = true`, one-off data migration for the PR #37 rows, legacy pets on the old rules permanently; branch `feat/M5-R01b-david-decisions`, **PR #38** — QA approved with minors → fixed)
 - Before: 2026-10-05 (Claude, backend-engineer — **PR #37 review fixes (M5-R01)**: existing pets grandfathered on the pre-M5 rules, seeder never resurrects admin deletes / re-keys, pending-David values unverified, stage media retry, outage-safe parent meals; branch `feat/M5-A-pet-profile-stages`, **PR #37**)
 - Before: 2026-10-05 (Claude, backend-engineer — **M5-R01 pet profile + life stages from sourced data** (origin, age at arrival, stage rules, parent-covered meals, stage images); branch `feat/M5-A-pet-profile-stages`, pushed, no PR)
 - Before: 2026-10-05 (Claude, backend-engineer — **PR #35 re-review fixes** (energy off the phase ladder, recovered reminders, stuck rows, DST tests); branch `feat/M3-02-push`, **PR #35**)
@@ -87,6 +88,15 @@
 6. **M4 (2026-10-05, `feat/M4-state-videos`):** independent qa-reviewer review → PR → merge. **On deploy:** delete `AI_REFERENCE_IMAGE_PROFILE` / `AI_STATE_VIDEO_PROFILE` from `/opt/petprep/.env` if they pin the old models (DEPLOYMENT D13), queue worker running, `APP_URL` public; then `php artisan media:backfill --dry-run` and, if the cost is OK, `media:backfill`. **David:** confirm the entitlement sets (mutt idle + sleeping, premium breed all 6) and the "videos at birth" decision (DECISIONS). **Mobile:** play `media.current_video_url` with expo-video (loop, muted), fall back to `media.reference_image_url`, refetch before `media.expires_at`. Then M1-19 sourced breed appearance.
 
 ## 6. Session log
+
+### 2026-10-06 (cloud, mobile-engineer) — M4-03 fix: sick dog at the vet falls back to sleeping (`fix/M4-03-sick-fallback`)
+Bug from David's real test: his free mutt was at the vet but the child HUD played the same happy `idle` loop under a light grey veil. Cause: free mutts only get `idle` + `sleeping` (backend `config/media.php` basic set) and `selectMediaSource` fell back wanted → idle.
+- **Fallback table** `VIDEO_FALLBACKS` + `videoChain()` (`modules/petMedia/petMedia.ts`): `sick` → sleeping → idle, `low_energy` → sleeping → idle, others → idle; then server `current_video_url` (no `videos` map) → reference image → placeholder as before.
+- **Darker vet veil:** `PetMediaView` `onVideoStateChange` reports the state it actually picked (after fallbacks / failed players) → store `hudVideoState` (reset on logout and HUD unmount). `LockedScreen.lockVeil()`: illness without a real `sick` video → `ill` veil `rgba(30,41,59,0.8)`; real sick video → grey `rgba(71,85,105,0.55)` as before; hard stop grey; game over / inactive opaque. Card text unchanged (own dark glass card).
+- **Parent views:** `ChildDetailScreen` asks for `idle` and disables video for locked pets (still image), `PetThumbnail` is image only → unaffected.
+- **Tests:** petMedia (table, mutt at vet → sleeping, premium → sick, low_energy, idle-only / failed sleeping, legacy URL), PetMediaView (substitute reported), LockedScreen (`lockVeil` matrix, veil colours), ChildHudScreen integration (mutt at vet → sleeping player + `ill` veil). Mobile `yarn test` green, `npx tsc --noEmit` clean.
+- **Waiting for David** (DECISIONS 2026-10-06): substitute sick → sleeping + darker veil for the free tier. Needs a look on a device (veil darkness over the real sleeping video).
+- **New debt:** RN `filter: grayscale()` would desaturate the video properly but is Android-only in RN 0.86 → colour veil only for now.
 
 ### 2026-10-05 (cloud, backend-engineer) — M5-R01b David's decisions (`feat/M5-R01b-david-decisions`, PR #38)
 Branch from `origin/main` @ 5d9b382. David answered the M5-R01 open questions (DECISIONS: 4 new "David" rows; the "Claude, čaka Davida" rows for 1-hour windows, stage boundaries, exercise minutes and grandfathering marked confirmed / superseded; open question (5) — partly-quiet windows stay the child's — still open).

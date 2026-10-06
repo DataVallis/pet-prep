@@ -85,6 +85,12 @@ export interface PetMediaViewProps {
   videoEnabled?: boolean;
   /** Called once per media key when a player fails (likely an expired URL) — refetch the state. */
   onMediaExpired?: () => void;
+  /**
+   * The state whose video the view picked (after the fallback chain and failed players);
+   * null = no state video (image, placeholder or the server's legacy URL). The child lock
+   * overlay uses it to darken a vet visit that shows a substitute instead of a real sick video.
+   */
+  onVideoStateChange?: (state: PetState | null) => void;
   /** `hud`: full-bleed dark (child); `card`: rounded box (parent). */
   variant?: 'hud' | 'card';
   /** Custom placeholder (the HUD's animated avatar); default: paw + breed. */
@@ -182,6 +188,7 @@ export default function PetMediaView({
   active = true,
   videoEnabled = true,
   onMediaExpired,
+  onVideoStateChange,
   variant = 'hud',
   placeholder,
   style,
@@ -210,6 +217,13 @@ export default function PetMediaView({
     return selectMediaSource(media, wanted, { canPlayVideo: (url) => canPlayUrl(errors, url, now) });
   }, [media, wanted, errors, clock]);
   const image = useStableUrl(media.referenceImageUrl);
+
+  const targetVideoState = target.kind === 'video' ? target.state : null;
+  const videoStateRef = useRef(onVideoStateChange);
+  videoStateRef.current = onVideoStateChange;
+  useEffect(() => {
+    videoStateRef.current?.(targetVideoState);
+  }, [targetVideoState]);
 
   // ── Video layers ─────────────────────────────────────────────
   const [layers, setLayers] = useState<Layer[]>([]);

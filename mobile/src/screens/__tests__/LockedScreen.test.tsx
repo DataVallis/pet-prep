@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react-native';
 import { StyleSheet, type TextStyle, type ViewStyle } from 'react-native';
 
-import LockedScreen, { LOCKED_STRINGS, isTranslucentLock, lockedCopy } from '@/screens/LockedScreen';
+import LockedScreen, { LOCKED_STRINGS, isTranslucentLock, lockVeil, lockedCopy } from '@/screens/LockedScreen';
 import { useAppStore } from '@/store/appStore';
 
 describe('LockedScreen (M1-16)', () => {
@@ -27,6 +27,47 @@ describe('LockedScreen (M1-16)', () => {
     render(<LockedScreen />);
     expect(bg()).toEqual(['#000000']);
     expect(screen.getByTestId('locked-card')).toBeTruthy();
+  });
+
+  describe('2026-10-06: vet veil by sick-video availability', () => {
+    const bg = () =>
+      ([screen.getByTestId('locked-screen').props.style].flat(3) as Array<{ backgroundColor?: string } | undefined>)
+        .map((st) => st?.backgroundColor)
+        .filter(Boolean);
+
+    it('lockVeil: real sick video → grey; substitute / no video → ill; hard stop always grey; game over opaque', () => {
+      expect(lockVeil('illness', 'sick')).toBe('grey');
+      expect(lockVeil('illness', 'sleeping')).toBe('ill');
+      expect(lockVeil('illness', 'idle')).toBe('ill');
+      expect(lockVeil('illness', null)).toBe('ill');
+      expect(lockVeil('hard_stop', 'sleeping')).toBe('grey');
+      expect(lockVeil('hard_stop', null)).toBe('grey');
+      expect(lockVeil('game_over', 'sick')).toBe('opaque');
+      expect(lockVeil('inactive', null)).toBe('opaque');
+    });
+
+    it('free mutt at the vet (sleeping substitute): dark veil, card text still on the glass card', () => {
+      useAppStore.getState().setLockState('illness');
+      useAppStore.getState().setHudVideoState('sleeping');
+      render(<LockedScreen />);
+      expect(bg()).toEqual(['rgba(30, 41, 59, 0.8)']);
+      expect(screen.getByTestId('locked-card-glass')).toBeTruthy();
+      const title = StyleSheet.flatten(screen.getByText(LOCKED_STRINGS.illness.title).props.style) as TextStyle;
+      expect(title.color).toBe('#ffffff');
+    });
+
+    it('premium at the vet (real sick video): the lighter grey veil stays', () => {
+      useAppStore.getState().setLockState('illness');
+      useAppStore.getState().setHudVideoState('sick');
+      render(<LockedScreen />);
+      expect(bg()).toEqual(['rgba(71, 85, 105, 0.55)']);
+    });
+
+    it('the HUD video state is reset with the session', () => {
+      useAppStore.getState().setHudVideoState('sick');
+      useAppStore.getState().reset();
+      expect(useAppStore.getState().hudVideoState).toBeNull();
+    });
   });
 
   it('2026-10-05: is a full-screen overlay styled by StyleSheet (no NativeWind)', () => {

@@ -6,7 +6,7 @@
  */
 
 import { create } from 'zustand';
-import type { Pet, PetUpdatedBroadcast } from '@/types';
+import type { Pet, PetState, PetUpdatedBroadcast } from '@/types';
 
 export interface AppUser {
   id: number;
@@ -132,6 +132,12 @@ interface AppStore {
   lockState: LockState;
   lockDetails: LockDetails;
   setLockState: (state: LockState, details?: LockDetails) => void;
+  /**
+   * State video the child HUD is showing (after fallbacks; null = image / placeholder /
+   * unknown). The vet lock darkens its veil unless this is a real `sick` video.
+   */
+  hudVideoState: PetState | null;
+  setHudVideoState: (state: PetState | null) => void;
 
   // UI state
   isWalkModalVisible: boolean;
@@ -231,6 +237,8 @@ export const useAppStore = create<AppStore>((set) => ({
         ? {}
         : { lockState, lockDetails: details },
     ),
+  hudVideoState: null,
+  setHudVideoState: (hudVideoState) => set((state) => (state.hudVideoState === hudVideoState ? {} : { hudVideoState })),
 
   // UI state
   isWalkModalVisible: false,
@@ -254,6 +262,7 @@ export const useAppStore = create<AppStore>((set) => ({
       wsStatus: 'disconnected',
       lockState: 'none',
       lockDetails: { until: null, timezone: null },
+      hudVideoState: null,
       isWalkModalVisible: false,
       isCleaningOverlayVisible: false,
       isAlbumVisible: false,
