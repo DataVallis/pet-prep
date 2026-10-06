@@ -7,6 +7,30 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
+      - name: Request counts 08:30-08:45 UTC (read-only)
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/id && chmod 600 ~/.ssh/id
+          ssh-keyscan -H 138.199.172.97 >> ~/.ssh/known_hosts 2>/dev/null
+          ssh -i ~/.ssh/id deploy@138.199.172.97 "cd /opt/petprep/repo/backend && docker compose -p backend -f compose.production.yaml logs --no-log-prefix --since 6h caddy 2>&1" > c.log || true
+          python3 - <<'PY'
+          import json,collections
+          c=collections.Counter(); m=collections.Counter()
+          for line in open('c.log',errors='ignore'):
+              i=line.find('{')
+              if i<0: continue
+              try: d=json.loads(line[i:])
+              except Exception: continue
+              ts=d.get('ts',0); r=d.get('request',{}); u=r.get('uri','').split('?')[0]
+              if not u.startswith('/api/') or u.startswith('/api/media'): continue
+              if 1791275400<=ts<=1791276300:
+                  c[(int((ts-1791275400)//60), u, d.get('status'))]+=1
+          rows=sorted(c.items())
+          out=' ; '.join(f"m{k[0]} {k[1]} {k[2]} x{v}" for k,v in rows)
+          for j in range(0,len(out),900):
+              print('::warning title=req::'+out[j:j+900])
+          PY
       - name: Tokens and access log (read-only)
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
