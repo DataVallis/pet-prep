@@ -8,6 +8,18 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-06 — Hitrejša pot od popravka do strežnika (CI)
+
+**Kaj se je zgodilo:** Vsaka sprememba je doslej dvakrat čakala na iste teste — enkrat v predlogu (PR) in še enkrat po združitvi v `main`, preden je šla na strežnik. Zdaj sistem prepozna, da je bila *točno ista* koda (isto git drevo) že preizkušena v predlogu, in na `main` teste preskoči. Testira se samo tisto, kar se je spremenilo: sprememba dokumentacije je preverjena v manj kot minuti in ne gre na strežnik, sprememba samo mobilne aplikacije prav tako ne. Strežniški testi (1.040) tečejo vzporedno — lokalno 186 s namesto 288 s. Pred vsako namestitvijo strežnik še vedno sam zgradi in preveri sliko, preden vklopi vzdrževalni način. Ob vsakem dvomu (neznana osnova, napaka GitHub API, drugačno drevo) se testira vse.
+
+**Zakaj je pomembno:** Manj čakanja na vsak popravek, brez popuščanja pri varnosti — na strežnik nikoli ne gre nepreizkušena ali rdeča koda.
+
+**Kako povedati:**
+- 🛠 Tehnično: "Isti git tree = isti rezultat testov. PR shrani marker `ci-green-<suite>-<tree>`, `main` ga preveri prek GitHub API (uspešen PR run, isti repo, isti workflow) in preskoči ponovitev; path filter primerja z zadnjim zelenim `main`, ne z `event.before`, zato preklican run ne izgubi sprememb."
+- 💼 Investitorji: "Majhna ekipa z AI agenti: od popravka do produkcije v nekaj minutah, z avtomatskimi varovalkami."
+
+---
+
 ## 2026-10-06 — Hitri popravek: aplikacija ne obupa več ob preobremenitvi
 
 **Kaj se je zgodilo:** Na Davidovem TestFlightu (1.24.4) je bil kuža pri veterinarju. Strežnik je otrokovi aplikaciji za nekaj minut odgovoril »preveč zahtev« (429 — omejitev 60 zahtev na minuto na uporabnika), aplikacija se je zaprla, po ponovnem zagonu pa je ostala na zaslonu »Kužka ni bilo mogoče naložiti« in čas vrnitve od veterinarja pokazala v napačnem pasu (08:41 namesto 10:41). **Pravi vzrok:** prijava naprave za obvestila se je na iPhonu sama sprožala v krogu — vsak prevzem žetona je sistem iOS ponovno sporočil, aplikacija pa je napravo prijavila znova (strežnik je naštel do ~1 700 zahtev `POST /api/devices` na minuto). To je porabilo omejitev in verjetno tudi zrušilo aplikacijo. Zdaj se naprava prijavi enkrat na sejo, ponovno samo ob res novem žetonu, z zavoro in odlašanjem. Dodatno: aplikacija stanje vpraša največ ~10× na minuto, ob 429 počaka, kolikor strežnik reče, obdrži zadnje znano stanje in sama poskusi znova — brez tipke. Konec obiska pri veterinarju zdaj aplikacija ve tudi sama. Če se zaslon kužka kdaj zatakne, otrok vidi »Ups, nekaj se je zataknilo« z gumbom »Poskusi znova«, namesto da se aplikacija zapre. 35 novih testov (skupaj 950 zelenih); test ponovi zanko (stara koda: 60 002 prijav v eni minuti, nova: 1).
