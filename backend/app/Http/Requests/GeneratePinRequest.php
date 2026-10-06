@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Enums\BreedType;
+use App\Enums\ClientFeature;
 use App\Enums\LifeStage;
 use App\Enums\PetOrigin;
 use App\Models\User;
@@ -47,6 +48,13 @@ class GeneratePinRequest extends FormRequest
             'breed' => ['sometimes', 'nullable', Rule::enum(BreedType::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
             'origin' => ['nullable', 'required_with:breed,age_stage', Rule::enum(PetOrigin::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
             'age_stage' => ['nullable', 'required_with:breed,origin', Rule::enum(LifeStage::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
+            // M5-R02 (PR #42 B1): what this app build can show for the new pet,
+            // e.g. ["behaviour_events"]. Known values only (ClientFeature); stored
+            // with the profile and copied to the pet at creation. Ignored without
+            // a profile (legacy pet) and when joining a pet (pet_id): a shared
+            // pet keeps what its creating app declared.
+            'features' => ['sometimes', 'nullable', 'array', 'max:10'],
+            'features.*' => ['string', 'distinct', Rule::in(ClientFeature::values())],
         ];
     }
 
@@ -79,6 +87,7 @@ class GeneratePinRequest extends FormRequest
             'breed' => $this->validated('breed'),
             'origin' => $this->validated('origin'),
             'age_stage' => $this->validated('age_stage'),
+            'features' => $this->validated('features') ?? [],
         ]);
     }
 }

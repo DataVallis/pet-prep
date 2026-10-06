@@ -23,6 +23,8 @@ export function makePetProfile(
     // Since 2026-10-05 every imported value is confirmed (PRODUCT_SPEC §5) → verified.
     data_verified: true,
     unverified: [],
+    // M5-R02: behaviour events only for pets created with generate-pin features ["behaviour_events"].
+    behaviour_enabled: false,
     today: {
       date: '2026-10-04',
       meals_per_day: 4,

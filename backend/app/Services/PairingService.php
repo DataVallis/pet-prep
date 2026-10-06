@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\BreedType;
+use App\Enums\ClientFeature;
 use App\Enums\FamilyRole;
 use App\Enums\UserRole;
 use App\Exceptions\FamilyException;
@@ -268,6 +269,10 @@ class PairingService
             'origin' => $profile?->origin->value,
             'arrival_age_months' => $arrivalAge,
             'life_stage' => $stage?->value,
+            // M5-R02 (PR #42 B1): behaviour events only when the creating app
+            // build can show them (generate-pin `features`) and the pet has a
+            // profile; never changed later (a joining caretaker keeps it).
+            'behaviour_events_enabled' => $arrivalAge !== null && $profile?->supports(ClientFeature::BehaviourEvents) === true,
         ]);
 
         if ($petDna === null) {

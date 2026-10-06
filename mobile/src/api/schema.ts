@@ -630,6 +630,12 @@ export interface paths {
          *     of the fields** (old app builds) → `pet_profile: null` and a
          *     legacy-profile pet that keeps the pre-M5 rules.
          *
+         *     Optional `features` (M5-R02, PR #42): the UI features of this app
+         *     build, known values only (`behaviour_events`; anything else → 422).
+         *     Stored with the profile; the new pet gets behaviour events (puppy
+         *     accidents, chewing, take-out) only when `behaviour_events` was sent.
+         *     Ignored without a profile and with `pet_id`.
+         *
          *     Without `child_id` (**deprecated**, `Deprecation: true` header): the
          *     PIN is for a child already signed in with e-mail, used with
          *     `POST /api/child/pair`; optional `pet_id` = join that pet. The
@@ -900,6 +906,14 @@ export interface components {
             breed?: components["schemas"]["BreedType"] | null;
             origin?: components["schemas"]["PetOrigin"] | null;
             age_stage?: components["schemas"]["LifeStage"] | null;
+            /**
+             * @description M5-R02 (PR #42 B1): what this app build can show for the new pet,
+             *     e.g. ["behaviour_events"]. Known values only (ClientFeature); stored
+             *     with the profile and copied to the pet at creation. Ignored without
+             *     a profile (legacy pet) and when joining a pet (pet_id): a shared
+             *     pet keeps what its creating app declared.
+             */
+            features?: "behaviour_events"[] | null;
         };
         /**
          * HardStopRequest
@@ -980,6 +994,11 @@ export interface components {
                 data_verified: boolean;
                 /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
                 unverified: string[];
+                /**
+                 * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                 *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                 */
+                behaviour_enabled: boolean;
                 today: {
                     /** @description Family-local date (Y-m-d) these rules are for. */
                     date: string;
@@ -1090,6 +1109,7 @@ export interface components {
             origin: components["schemas"]["PetOrigin"] | null;
             arrival_age_months: number | null;
             life_stage: components["schemas"]["LifeStage"] | null;
+            behaviour_events_enabled: boolean;
         };
         /**
          * PetOrigin
@@ -1654,6 +1674,11 @@ export interface operations {
                                     data_verified: boolean;
                                     /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
                                     unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
                                     today: {
                                         /** @description Family-local date (Y-m-d) these rules are for. */
                                         date: string;
@@ -1864,6 +1889,11 @@ export interface operations {
                                 data_verified: boolean;
                                 /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
                                 unverified: string[];
+                                /**
+                                 * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                 *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                 */
+                                behaviour_enabled: boolean;
                                 today: {
                                     /** @description Family-local date (Y-m-d) these rules are for. */
                                     date: string;
@@ -2094,6 +2124,11 @@ export interface operations {
                                     data_verified: boolean;
                                     /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
                                     unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
                                     today: {
                                         /** @description Family-local date (Y-m-d) these rules are for. */
                                         date: string;
@@ -2322,6 +2357,11 @@ export interface operations {
                                     data_verified: boolean;
                                     /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
                                     unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
                                     today: {
                                         /** @description Family-local date (Y-m-d) these rules are for. */
                                         date: string;
@@ -2550,6 +2590,11 @@ export interface operations {
                                     data_verified: boolean;
                                     /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
                                     unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
                                     today: {
                                         /** @description Family-local date (Y-m-d) these rules are for. */
                                         date: string;
@@ -2778,6 +2823,11 @@ export interface operations {
                                     data_verified: boolean;
                                     /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
                                     unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
                                     today: {
                                         /** @description Family-local date (Y-m-d) these rules are for. */
                                         date: string;
@@ -3006,6 +3056,11 @@ export interface operations {
                                     data_verified: boolean;
                                     /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
                                     unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
                                     today: {
                                         /** @description Family-local date (Y-m-d) these rules are for. */
                                         date: string;
@@ -3238,6 +3293,11 @@ export interface operations {
                                     data_verified: boolean;
                                     /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
                                     unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
                                     today: {
                                         /** @description Family-local date (Y-m-d) these rules are for. */
                                         date: string;
@@ -3799,7 +3859,7 @@ export interface operations {
                         mode: "join_pet" | "new_pet" | "relogin";
                         /**
                          * @description M5-R01: the new pet's profile the PIN will create (mode new_pet with a profile);
-                         *     null = join / re-login, or no profile sent (→ legacy pet, pre-M5 rules).
+                         *     null = join / re-login, or no profile sent (→ legacy pet, pre-M5 rules). `features` (M5-R02): the app features stored for the new pet (e.g. behaviour_events).
                          */
                         pet_profile: {
                             /** @enum {string} */
@@ -3808,6 +3868,7 @@ export interface operations {
                             origin: "bought" | "adopted";
                             /** @enum {string} */
                             age_stage: "puppy" | "young" | "adult" | "senior";
+                            features: "behaviour_events"[];
                         } | null;
                     };
                 };
@@ -3915,6 +3976,11 @@ export interface operations {
                                 data_verified: boolean;
                                 /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
                                 unverified: string[];
+                                /**
+                                 * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                 *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                 */
+                                behaviour_enabled: boolean;
                                 today: {
                                     /** @description Family-local date (Y-m-d) these rules are for. */
                                     date: string;
@@ -3990,6 +4056,7 @@ export interface operations {
                             /** @description The child who did it (M2-01); null for system events. */
                             actor_user_id: string;
                             created_at: string | null;
+                            /** @description Ignored warnings and M5-R02 behaviour events (accident, chewing) are negative. */
                             is_positive: boolean;
                         }[];
                         weekly_performance: {
@@ -4044,6 +4111,11 @@ export interface operations {
                                     data_verified: boolean;
                                     /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
                                     unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
                                     today: {
                                         /** @description Family-local date (Y-m-d) these rules are for. */
                                         date: string;
@@ -4233,6 +4305,11 @@ export interface operations {
                                     data_verified: boolean;
                                     /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
                                     unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
                                     today: {
                                         /** @description Family-local date (Y-m-d) these rules are for. */
                                         date: string;
@@ -4418,6 +4495,7 @@ export interface operations {
                             /** @description The child who did it (M2-01); null for system events. */
                             actor_user_id: string;
                             created_at: string | null;
+                            /** @description Ignored warnings and M5-R02 behaviour events (accident, chewing) are negative. */
                             is_positive: boolean;
                         }[];
                         meta: {

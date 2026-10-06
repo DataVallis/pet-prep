@@ -176,6 +176,8 @@ class Pet extends Model
         'origin',
         'arrival_age_months',
         'life_stage',
+        // M5-R02 / PR #42: set once at creation from the app's generate-pin `features`.
+        'behaviour_events_enabled',
     ];
 
     /**
@@ -212,6 +214,7 @@ class Pet extends Model
             'last_decay_at' => 'datetime',
             'frozen_at' => 'datetime',
             'potty_clock_started_at' => 'datetime',
+            'behaviour_events_enabled' => 'boolean',
             'hunger_level' => 'float',
             'thirst_level' => 'float',
             'energy_level' => 'float',
@@ -459,6 +462,17 @@ class Pet extends Model
     public function isLegacyProfile(): bool
     {
         return $this->arrival_age_months === null;
+    }
+
+    /**
+     * Behaviour events (M5-R02: puppy accidents + take-out, chewing) apply
+     * only to a profiled pet whose creating app build declared the
+     * `behaviour_events` feature (PR #42 B1) — an old build has no UI to
+     * resolve them. Fixed at creation; existing pets: off.
+     */
+    public function behaviourEventsEnabled(): bool
+    {
+        return (bool) $this->behaviour_events_enabled && ! $this->isLegacyProfile();
     }
 
     /**

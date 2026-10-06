@@ -82,7 +82,7 @@ class ChildPinLoginService
      * null = no profile chosen (old app builds) → the PIN creates a
      * legacy-profile pet on the pre-M5 rules.
      *
-     * @return array{pin: string, expires_at: Carbon, child_id: int, pet_id: int|null, mode: string, pet_profile: array{breed: string, origin: string, age_stage: string}|null}
+     * @return array{pin: string, expires_at: Carbon, child_id: int, pet_id: int|null, mode: string, pet_profile: array{breed: string, origin: string, age_stage: string, features: list<string>}|null}
      *
      * @throws FamilyException child_not_found (404), pet_not_joinable (422),
      *                         already_paired (422), breed_locked (422)

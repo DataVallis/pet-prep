@@ -246,6 +246,10 @@ class PetDecayService
         // illness_until (hygiene 100 %, neglect clocks restart) — also while
         // a hard stop keeps the pet frozen.
         $recovered = $pet->recoverFromIllnessIfDue($now);
+        if ($recovered) {
+            // M5-R02: the puppy's bladder clock starts at the recovery (fresh start).
+            $this->behaviour->holdClockWhileFrozen($pet, $pet->last_decay_at);
+        }
 
         // Frozen states (M1-02): no decay, but keep the clock current so
         // there is no catch-up burst after unfreezing. Hard stop / illness

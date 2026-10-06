@@ -230,8 +230,9 @@ class PetActivityService
 
     /**
      * "Pelji ven" (M5-R02, David 2026-10-06): a puppy's bladder clock
-     * restarts now (BehaviourEventService). Only for a non-legacy pet in the
-     * puppy stage (else 422 take_out_not_needed). An accident that is
+     * restarts now (BehaviourEventService). Only for a pet with a bladder
+     * clock — behaviour events enabled, puppy stage (else 422
+     * take_out_not_needed, exactly when `behaviour.take_out` is null). An accident that is
      * already due happens first (decay catch-up). A second take-out by
      * anyone within a minute is a double tap → unchanged. Allowed while a
      * mess is open (it is a different job) and in quiet hours.
@@ -247,7 +248,8 @@ class PetActivityService
 
             $this->decay->catchUpLocked($locked);
 
-            if ($this->behaviour->holdHoursOn($locked, $locked->localDate($now)) === null) {
+            // Same rule as the payload (`behaviour.take_out` null ⇔ refused, PR #42 m2).
+            if ($this->behaviour->pottyClock($locked, $locked->quietHours()) === null) {
                 return $this->refused($locked, CareRefusal::TakeOutNotNeeded);
             }
 

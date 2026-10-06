@@ -18,9 +18,12 @@ use App\Models\Pet;
  * `accident` and `chewing`. They are generated like every state video —
  * once per life stage from the stage's reference image, regenerated at a
  * stage transition — but only where the event can happen (Claude's cost
- * rule, waiting for David): `accident` for a non-legacy pet in the puppy
- * stage, `chewing` for any non-legacy pet. A legacy-profile pet never has
- * behaviour events, so it never gets these videos. The free set is unchanged.
+ * rule, waiting for David): `accident` for a pet with behaviour events
+ * (`Pet::behaviourEventsEnabled`, PR #42) in the puppy stage, `chewing` for
+ * any pet with behaviour events. Other pets never have these events, so
+ * they never get these videos. The free set is unchanged. A stored
+ * behaviour video the pet is no longer entitled to (accident after
+ * puppy → young) is not served (PetMediaService::mediaFor).
  *
  * This is the single place the decision is made, so payments (M3 —
  * RevenueCat entitlement) and AI media tokens (M4-09) can plug in here
@@ -75,8 +78,8 @@ class MediaEntitlementService
     private function behaviourApplies(Pet $pet, PetStateEnum $state): bool
     {
         return match ($state) {
-            PetStateEnum::Accident => ! $pet->isLegacyProfile() && $pet->life_stage === LifeStage::Puppy,
-            PetStateEnum::Chewing => ! $pet->isLegacyProfile(),
+            PetStateEnum::Accident => $pet->behaviourEventsEnabled() && $pet->life_stage === LifeStage::Puppy,
+            PetStateEnum::Chewing => $pet->behaviourEventsEnabled(),
             default => true,
         };
     }

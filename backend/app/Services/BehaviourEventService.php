@@ -54,7 +54,12 @@ use Random\Randomizer;
  * and push rules apply unchanged. Accidents are cleaned with the cleaning
  * game; chewing with POST /api/child/pet/resolve-chewing.
  *
- * Legacy-profile and unborn pets never get behaviour events. All callers
+ * Only pets with `behaviour_events_enabled` (set at creation when the app
+ * build declared the `behaviour_events` feature, PR #42 B1 —
+ * Pet::behaviourEventsEnabled) get behaviour events; legacy-profile and
+ * unborn pets never. After a scheduler outage (a tick interval >
+ * OUTAGE_TOLERANCE_SECONDS) nothing is made up: the bladder clock restarts
+ * at the tick and chewing is decided for today only. All callers
  * hold the pet's row lock (backend/CLAUDE.md); attributes are written on
  * $pet, the caller saves.
  */
@@ -68,6 +73,17 @@ class BehaviourEventService
 
     /** Midnight resets / quiet hops when looking for the due instant. */
     private const MAX_HOPS = 16;
+
+    /**
+     * A tick interval longer than this is a scheduler outage (PR #42 M1):
+     * behaviour events are not made up for it (the tick runs every minute).
+     */
+    public const OUTAGE_TOLERANCE_SECONDS = 300;
+
+    public static function isOutage(CarbonInterface $from, CarbonInterface $now): bool
+    {
+        return (int) CarbonImmutable::instance($from)->diffInSeconds(CarbonImmutable::instance($now), true) > self::OUTAGE_TOLERANCE_SECONDS;
+    }
 
     public function __construct(
         private readonly HygieneEventService $hygiene,
@@ -90,7 +106,7 @@ class BehaviourEventService
      */
     public function holdHoursOn(Pet $pet, string $localDate): ?int
     {
-        if ($pet->isLegacyProfile()) {
+        if (! $pet->behaviourEventsEnabled()) {
             return null;
         }
 
@@ -111,7 +127,7 @@ class BehaviourEventService
      */
     public function pottyClock(Pet $pet, ?QuietHours $quiet): ?array
     {
-        if ($pet->isLegacyProfile() || $pet->isUnborn()) {
+        if (! $pet->behaviourEventsEnabled() || $pet->isUnborn()) {
             return null;
         }
 
@@ -134,13 +150,21 @@ class BehaviourEventService
      */
     public function applyDueAccidents(Pet $pet, CarbonInterface $from, CarbonInterface $now, ?QuietHours $quiet): ?Carbon
     {
-        if ($pet->isLegacyProfile() || $pet->isUnborn()) {
+        if (! $pet->behaviourEventsEnabled() || $pet->isUnborn()) {
             return null;
         }
 
         $from = CarbonImmutable::instance($from)->utc();
         $now = CarbonImmutable::instance($now)->utc();
         $first = null;
+
+        // Scheduler outage (PR #42 M1): nobody could react during the gap,
+        // so no accident is made up for it — the clock restarts now.
+        if (self::isOutage($from, $now)) {
+            $pet->potty_clock_started_at = $now;
+
+            return null;
+        }
 
         for ($i = 0; $i < self::MAX_ACCIDENTS_PER_TICK; $i++) {
             $clock = $this->pottyClock($pet, $quiet);
@@ -189,7 +213,7 @@ class BehaviourEventService
      */
     public function holdClockWhileFrozen(Pet $pet, CarbonInterface $now): void
     {
-        if ($pet->isLegacyProfile() || $pet->isUnborn()) {
+        if (! $pet->behaviourEventsEnabled() || $pet->isUnborn()) {
             return;
         }
 
@@ -245,13 +269,19 @@ class BehaviourEventService
      */
     public function ensureChewingScheduled(Pet $pet, CarbonInterface $from, CarbonInterface $now, ?QuietHours $quiet): void
     {
-        if ($pet->isUnborn() || $pet->isLegacyProfile()) {
+        if ($pet->isUnborn() || ! $pet->behaviourEventsEnabled()) {
             return;
         }
 
         $tz = $pet->familyTimezone();
         $today = Carbon::parse($pet->localDate($now), $tz);
         $day = Carbon::parse($pet->localDate($from), $tz);
+        // Scheduler outage (PR #42 M1): never back-schedule past days, and
+        // today's event is not made up if its time already passed.
+        $outage = self::isOutage($from, $now);
+        if ($outage) {
+            $day = $today->copy();
+        }
 
         $through = $pet->behaviour_scheduled_through;
         if ($through !== null) {
@@ -284,7 +314,8 @@ class BehaviourEventService
                     'kind' => HygieneEventKind::Chewing->value,
                     'local_date' => $date,
                     'scheduled_at' => $at,
-                    'status' => HygieneEventStatus::Pending->value,
+                    'status' => $outage && $at->lessThanOrEqualTo($now) ? HygieneEventStatus::Skipped->value : HygieneEventStatus::Pending->value,
+                    'resolved_at' => $outage && $at->lessThanOrEqualTo($now) ? $stamp : null,
                     'created_at' => $stamp,
                     'updated_at' => $stamp,
                 ];
@@ -309,7 +340,7 @@ class BehaviourEventService
      */
     public function chewingReasonOn(Pet $pet, string $localDate, CarbonInterface $now, ?Randomizer $rng = null): ?string
     {
-        if ($pet->isLegacyProfile() || $pet->isUnborn()) {
+        if (! $pet->behaviourEventsEnabled() || $pet->isUnborn()) {
             return null;
         }
 

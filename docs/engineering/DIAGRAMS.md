@@ -467,7 +467,7 @@ sequenceDiagram
   participant API as Laravel API
   participant B as BehaviourEventService
   participant T as Decay tick (every minute)
-  Note over B: clock start = max(take-out / accident / end of freeze, birth, local midnight)<br/>due = start + hold hours counted ONLY outside quiet hours
+  Note over B: only pets with behaviour_events_enabled (app sent generate-pin features ["behaviour_events"], PR #42)<br/>clock start = max(take-out / accident / end of freeze, birth, local midnight)<br/>due = start + hold hours counted ONLY outside quiet hours · tick gap > 5 min → no accident, clock restarts
   C->>API: POST /api/child/pet/take-out (06:30)
   API->>B: catch-up (a due accident happens first) · puppy? else 422 take_out_not_needed
   B-->>API: clock start = 06:30 → due 13:30 (1.5 h before school + 0.5 h after)
