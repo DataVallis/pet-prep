@@ -440,7 +440,8 @@ export const BOUNDARY_RETRY_MS = 30_000;
 
 /**
  * How long until the cached state goes stale by the clock alone (M3): a feed window
- * opens or closes, the water gap ends, or the family midnight resets steps / water.
+ * opens or closes, the water gap ends, a vet visit ends, or the family midnight resets
+ * steps / water.
  * Boundaries are server instants, so they are compared in SERVER time (device clock +
  * `clockSkewMs`, N2) — a fast or slow phone clock doesn't shift the refresh. When a
  * boundary is already past but the state still blocks the action (a refetch raced the
@@ -459,7 +460,10 @@ export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): numbe
   // records it on its next tick; until the clock moves on, retry like other boundaries).
   // A lock freezes the clock.
   const accident = view.lock.is_locked ? Number.NaN : at(view.behaviour.take_out?.next_due_at);
-  const future = [nextWindow, windowEnd, water, accident].filter((ms) => Number.isFinite(ms) && ms > serverNow);
+  // Back from the vet: the lock ends at `lock.until` (hotfix 2026-10-06 — don't depend on
+  // the recovery broadcast alone; repeated refetches are bounded by the backoff in useChildPet).
+  const illnessEnd = view.lock.reason === 'ill' ? at(view.lock.until) : Number.NaN;
+  const future = [nextWindow, windowEnd, water, accident, illnessEnd].filter((ms) => Number.isFinite(ms) && ms > serverNow);
   future.push(familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
   let delay = Math.min(...future) - serverNow;
 
@@ -467,7 +471,8 @@ export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): numbe
     (Number.isFinite(nextWindow) && nextWindow <= serverNow && !view.feeding.can_feed && !blocked) ||
     (Number.isFinite(windowEnd) && windowEnd <= serverNow) ||
     (Number.isFinite(water) && water <= serverNow && !view.water.can_water && !blocked) ||
-    (Number.isFinite(accident) && accident <= serverNow);
+    (Number.isFinite(accident) && accident <= serverNow) ||
+    (Number.isFinite(illnessEnd) && illnessEnd <= serverNow);
   if (stale) delay = Math.min(delay, BOUNDARY_RETRY_MS);
 
   return Number.isFinite(delay) ? Math.max(0, delay) : null;

@@ -11,6 +11,8 @@ import { clearLiveSteps } from '@/modules/steps/stepCounter';
 import { unregisterFromPush } from '@/modules/push/pushRegistration';
 import { queryClient } from '@/api/queryClient';
 import { useAppStore } from '@/store/appStore';
+import { channelAuthGate, childPetFetchGate } from '@/modules/childPet/refetchGovernor';
+import { forgetFamilyTimezone } from './familyTimezone';
 
 /** The server revoke is best effort: give up after this long so "Odjava" never hangs offline. */
 export const REVOKE_TIMEOUT_MS = 5_000;
@@ -50,6 +52,10 @@ export async function logout({ revoke = true }: LogoutOptions = {}): Promise<voi
   }
   // Android live step total of this child: the next child on this phone starts at 0.
   await clearLiveSteps(userId, SecureStore);
+  await forgetFamilyTimezone(SecureStore);
+  // The next user starts with a fresh fetch budget (the server limit is per user).
+  childPetFetchGate.reset();
+  channelAuthGate.reset();
   queryClient.clear();
   useAppStore.getState().reset();
 }

@@ -8,6 +8,7 @@ import { Alert, Linking, type AlertButton } from 'react-native';
 import { api } from '@/api/client';
 import { PRE_PROMPT_RETRY_MS, PUSH_STORAGE_KEYS, PUSH_STRINGS } from '@/modules/push/pushConfig';
 import { enablePushNotifications, getPushPermissionStatus, maybeAskForPush } from '@/modules/push/pushPrompt';
+import { resetPushRegistration } from '@/modules/push/pushRegistration';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -42,6 +43,7 @@ const NOW = Date.parse('2026-10-14T10:00:00Z');
 
 describe('maybeAskForPush', () => {
   beforeEach(() => {
+    resetPushRegistration();
     jest.clearAllMocks();
     jest.restoreAllMocks();
     getItem.mockResolvedValue(null);
@@ -156,6 +158,7 @@ describe('maybeAskForPush', () => {
 
 describe('Nadzor "Obvestila" helpers', () => {
   beforeEach(() => {
+    resetPushRegistration();
     jest.clearAllMocks();
     jest.restoreAllMocks();
   });

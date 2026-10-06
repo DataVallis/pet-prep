@@ -7,6 +7,7 @@ import { AppState, type AppStateStatus } from 'react-native';
 import { QueryClient, focusManager } from '@tanstack/react-query';
 
 import { ApiError } from '@/api/client';
+import { retryDelayFor } from '@/modules/childPet/refetchGovernor';
 
 /**
  * React Native has no window focus events: tell TanStack the app is "focused"
@@ -37,6 +38,8 @@ export const queryClient = new QueryClient({
     queries: {
       staleTime: 30_000,
       retry: shouldRetry,
+      // Exponential (2 s, 4 s …); a query that retries a 429 (the child state) waits Retry-After.
+      retryDelay: retryDelayFor,
     },
   },
 });

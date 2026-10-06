@@ -10,6 +10,7 @@ import StartScreen from '@/screens/StartScreen';
 import ContractScreen from '@/screens/ContractScreen';
 import LockedScreen from '@/screens/LockedScreen';
 import ChildHudScreen from '@/screens/ChildHudScreen';
+import HudErrorBoundary from '@/components/HudErrorBoundary';
 import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
 
 const LOCKED_STATES: LockState[] = ['game_over', 'hard_stop', 'illness', 'inactive'];
@@ -100,7 +101,10 @@ export default function AppNavigator() {
               // The pet waits for this child's contract (M1-07b / M2-01) — also after a restart.
               <ContractScreen />
             ) : (
-              <ChildHudScreen />
+              // A render error in the HUD shows a retry card, not the dead app (hotfix 2026-10-06).
+              <HudErrorBoundary>
+                <ChildHudScreen />
+              </HudErrorBoundary>
             )}
             {isLocked && <LockedScreen />}
           </>

@@ -217,6 +217,20 @@ describe('nextRefreshDelay (M3 time-based staleness, N2 clock skew)', () => {
     expect(nextRefreshDelay(open, Date.parse('2026-10-04T07:00:00Z'))).toBe(60 * MIN); // window end 10:00
   });
 
+  it('hotfix 2026-10-06: the end of a vet visit is a boundary; past it while still "ill" → the 30 s retry', () => {
+    const ill = viewAt(
+      makeLiveChildState({
+        pet: { is_ill: true, illness_until: '2026-10-04T12:05:00+02:00' },
+        lock: { is_locked: true, reason: 'ill', until: '2026-10-04T12:05:00+02:00' },
+      }),
+    );
+    expect(nextRefreshDelay(ill, now)).toBe(5 * MIN);
+    expect(nextRefreshDelay(ill, now + 6 * MIN)).toBe(BOUNDARY_RETRY_MS);
+    // A hard stop has no end time → no illness boundary.
+    const stopped = viewAt(makeLiveChildState({ lock: { is_locked: true, reason: 'hard_stopped', until: null } }));
+    expect(nextRefreshDelay(stopped, now)).toBeGreaterThan(5 * MIN);
+  });
+
   it('falls back to the next FAMILY midnight (device runs on UTC)', () => {
     const view = viewAt(makeLiveChildState({ server_time: '2026-10-04T21:30:00+02:00', feeding: { next_feed_window: null } }));
     expect(nextRefreshDelay(view, Date.parse('2026-10-04T19:30:00Z'))).toBe(150 * MIN); // 21:30 → 00:00

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { Lock } from 'lucide-react-native';
 
-import { lockClock } from '@/modules/childPet/familyTime';
+import { deviceTimeZone, lockClockWithFallback } from '@/modules/childPet/familyTime';
 import { useAppStore, type LockDetails, type LockState } from '@/store/appStore';
 import type { VideoState } from '@/modules/petMedia/petMedia';
 
@@ -26,11 +26,17 @@ export const LOCKED_STRINGS = {
   },
 } as const;
 
-export function lockedCopy(lockState: LockState, details: LockDetails): { title: string; body: string } {
+export function lockedCopy(
+  lockState: LockState,
+  details: LockDetails,
+  deviceZone: string | null = deviceTimeZone(),
+): { title: string; body: string } {
   switch (lockState) {
     case 'illness': {
       // Server `lock.until` carries the family offset → its own wall clock; UTC → Intl.
-      const until = lockClock(details.until, details.timezone);
+      // Without a known family zone (restored session, no state yet): the device zone —
+      // never the UTC wall clock (hotfix 2026-10-06: "do 08:41" instead of 10:41).
+      const until = lockClockWithFallback(details.until, details.timezone, deviceZone);
       return {
         title: LOCKED_STRINGS.illness.title,
         body: until ? LOCKED_STRINGS.illness.body(until) : LOCKED_STRINGS.illness.bodyNoTime,

@@ -47,10 +47,14 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // M3-02: push devices (parent or child token). Unregister takes the Expo
     // token in the body (PR #35 review: never in a URL / access log).
-    Route::middleware('throttle:api')->group(function () {
+    // Own bucket (hotfix 2026-10-06): a looping client (iOS token echo, app
+    // 1.24.4) must never exhaust the shared `api` budget for the pet state.
+    Route::middleware('throttle:devices')->group(function () {
         Route::post('devices', [DeviceController::class, 'store']);
-        Route::post('devices/unregister', [DeviceController::class, 'unregister']);
     });
+    // Logout's unregister must never be starved by a looping register.
+    Route::post('devices/unregister', [DeviceController::class, 'unregister'])
+        ->middleware('throttle:api');
 });
 
 /*

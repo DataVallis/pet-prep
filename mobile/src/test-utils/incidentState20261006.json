@@ -1,0 +1,128 @@
+{
+  "pet": {
+    "id": 3,
+    "breed_type": "mutt",
+    "born_at": "2026-10-05T13:15:45+02:00",
+    "awaiting_contract": false,
+    "caretakers_count": 1,
+    "virtual_age_months": 0,
+    "age_months": null,
+    "origin": null,
+    "life_stage": null,
+    "profile": {
+      "legacy": true,
+      "origin": null,
+      "arrival_age_months": null,
+      "age_months": null,
+      "life_stage": null,
+      "next_stage": null,
+      "data_verified": false,
+      "unverified": [],
+      "behaviour_enabled": false,
+      "today": {
+        "date": "2026-10-06",
+        "meals_per_day": 2,
+        "meals_by_child": 2,
+        "meals_by_parent": 0,
+        "feed_windows": [
+          {
+            "start": "06:00",
+            "end": "10:00",
+            "parent_covered": false
+          },
+          {
+            "start": "17:00",
+            "end": "21:00",
+            "parent_covered": false
+          }
+        ],
+        "step_goal": 4000,
+        "exercise_minutes": null,
+        "sleep_hours": null
+      }
+    },
+    "hunger_level": 19,
+    "thirst_level": 0,
+    "energy_level": 0,
+    "hygiene_level": 100,
+    "pet_state": "hungry",
+    "escalation_level": 2,
+    "needs_cleaning": false,
+    "is_active": true,
+    "is_hard_stopped": false,
+    "is_ill": false,
+    "illness_until": null,
+    "is_game_over": false,
+    "certificate_eligible": false,
+    "current_video_url": "https://api.example.test/api/media/3?expires=1791282600&v=d57a491515&signature=redacted",
+    "media_status": "ready",
+    "reference_image_url": "https://api.example.test/api/media/2?expires=1791282600&v=68c95a3d03&signature=redacted",
+    "media": {
+      "status": "ready",
+      "reference_image_url": "https://api.example.test/api/media/2?expires=1791282600&v=68c95a3d03&signature=redacted",
+      "videos": {
+        "idle": "https://api.example.test/api/media/3?expires=1791282600&v=d57a491515&signature=redacted",
+        "sleeping": "https://api.example.test/api/media/4?expires=1791282600&v=306a49ecbb&signature=redacted"
+      },
+      "current_video_url": "https://api.example.test/api/media/3?expires=1791282600&v=d57a491515&signature=redacted",
+      "states": [
+        "idle",
+        "sleeping"
+      ],
+      "expires_at": "2026-10-06T10:30:00+00:00"
+    }
+  },
+  "lock": {
+    "is_locked": false,
+    "reason": null,
+    "until": null
+  },
+  "timezone": "Europe/Ljubljana",
+  "server_time": "2026-10-06T11:20:19+02:00",
+  "feeding": {
+    "windows": [
+      {
+        "start": "06:00",
+        "end": "10:00"
+      },
+      {
+        "start": "17:00",
+        "end": "21:00"
+      }
+    ],
+    "current_window": null,
+    "fed_in_current_window": false,
+    "can_feed": false,
+    "next_feed_window": {
+      "start": "2026-10-06T17:00:00+02:00",
+      "end": "2026-10-06T21:00:00+02:00"
+    },
+    "last_fed_at": null
+  },
+  "water": {
+    "times_per_day": 3,
+    "min_gap_minutes": 180,
+    "used_today": 0,
+    "remaining_today": 3,
+    "last_watered_at": "2026-10-05T13:16:17+02:00",
+    "can_water": true,
+    "next_allowed_at": null
+  },
+  "steps": {
+    "steps_today": 0,
+    "my_steps_today": 0,
+    "goal": 4000,
+    "energy_level": 0
+  },
+  "contract": {
+    "signed": true,
+    "signed_at": "2026-10-05T13:15:45+02:00"
+  },
+  "behaviour": {
+    "take_out": null,
+    "active_events": [],
+    "scene": null,
+    "can_take_out": false,
+    "can_resolve_chewing": false
+  }
+}

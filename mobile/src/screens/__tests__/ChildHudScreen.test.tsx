@@ -113,13 +113,26 @@ describe('ChildHudScreen', () => {
   });
 
   it('load error without any state → retry + logout', async () => {
-    getChildPet.mockRejectedValueOnce(new TypeError('Network request failed'));
-    renderWithQuery(<ChildHudScreen />);
-    expect(await screen.findByText(HUD_STRINGS.loadFailed)).toBeTruthy();
+    jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });
+    try {
+      // Hotfix 2026-10-06: a network error is retried twice (2 s, 4 s) before the error screen.
+      getChildPet.mockRejectedValue(new TypeError('Network request failed'));
+      renderWithQuery(<ChildHudScreen />);
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(7_000);
+      });
+      expect(getChildPet).toHaveBeenCalledTimes(3);
+      expect(screen.getByText(HUD_STRINGS.loadFailed)).toBeTruthy();
 
-    getChildPet.mockResolvedValueOnce(makeLiveChildState());
-    fireEvent.press(screen.getByText(HUD_STRINGS.retry));
-    expect(await screen.findByTestId('action-feed')).toBeTruthy();
+      getChildPet.mockResolvedValue(makeLiveChildState());
+      fireEvent.press(screen.getByText(HUD_STRINGS.retry));
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(6_000);
+      });
+      expect(screen.getByTestId('action-feed')).toBeTruthy();
+    } finally {
+      jest.useRealTimers();
+    }
   });
 
   it('outside the feed window: feed disabled with "ob 17:00" (Ljubljana), water enabled', async () => {
