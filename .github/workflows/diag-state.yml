@@ -1,0 +1,19 @@
+name: Diag pet state (temporary, read-only)
+on:
+  push:
+    branches: ['diag/**']
+jobs:
+  state:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Read-only state dump
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/id && chmod 600 ~/.ssh/id
+          ssh-keyscan -H 138.199.172.97 >> ~/.ssh/known_hosts 2>/dev/null
+          OUT=$(ssh -i ~/.ssh/id deploy@138.199.172.97 "cd /opt/petprep/repo/backend && docker compose -p backend -f compose.production.yaml exec -T app sh -c 'php artisan tinker --execute=\"\$(echo JHBldCA9IEFwcFxNb2RlbHNcUGV0OjpmaW5kKDMpOwokY2lkID0gSWxsdW1pbmF0ZVxTdXBwb3J0XEZhY2FkZXNcREI6OnRhYmxlKCdwZXRfY2FyZXRha2VycycpLT53aGVyZSgncGV0X2lkJywgMyktPndoZXJlTnVsbCgnZW5kZWRfYXQnKS0+dmFsdWUoJ3VzZXJfaWQnKTsKJHUgPSBBcHBcTW9kZWxzXFVzZXI6OmZpbmQoJGNpZCk7CiRyID0gSWxsdW1pbmF0ZVxIdHRwXFJlcXVlc3Q6OmNyZWF0ZSgnL2FwaS9jaGlsZC9wZXQnLCAnR0VUJyk7CiRyLT5zZXRVc2VyUmVzb2x2ZXIoZm4gKCkgPT4gJHUpOwp0cnkgeyAkYSA9IChuZXcgQXBwXEh0dHBcUmVzb3VyY2VzXENoaWxkUGV0U3RhdGVSZXNvdXJjZSgkcGV0KSktPnRvQXJyYXkoJHIpOyAkaiA9IGpzb25fZW5jb2RlKCRhKTsgJGogPSBwcmVnX3JlcGxhY2UoJy8iKGRpc3BsYXlfbmFtZXxuYW1lfGNoaWxkX25hbWUpIjoiW14iXSoiLycsICciJDEiOiJYIicsICRqKTsgZWNobyAiT0s6Ii5iYXNlNjRfZW5jb2RlKGd6ZW5jb2RlKCRqLCA5KSk7IH0gY2F0Y2ggKFRocm93YWJsZSAkZSkgeyBlY2hvICJFWEM6Ii5nZXRfY2xhc3MoJGUpLic6ICcuJGUtPmdldE1lc3NhZ2UoKS4nIEAgJy4kZS0+Z2V0RmlsZSgpLic6Jy4kZS0+Z2V0TGluZSgpOyB9Cg== | base64 -d)\"' 2>&1 | tail -c 9000")
+          echo "$OUT" | fold -w 900 | head -9 | while IFS= read -r l; do echo "::error title=s::$l"; done
+          A=$(ssh -i ~/.ssh/id deploy@138.199.172.97 "cd /opt/petprep/repo/backend && docker compose -p backend -f compose.production.yaml logs --since 3h caddy 2>&1 | grep -o '\"uri\":\"/api/child/pet[^\"]*\"[^}]*\"status\":[0-9]*' | grep -v '\"status\":200' | tail -n 8 | cut -c1-300")
+          echo "$A" | while IFS= read -r l; do echo "::warning title=caddy::$l"; done
