@@ -24,8 +24,8 @@ jobs:
               except Exception: continue
               ts=d.get('ts',0); r=d.get('request',{}); u=r.get('uri','').split('?')[0]
               if not u.startswith('/api/') or u.startswith('/api/media'): continue
-              if 1791275400<=ts<=1791276300:
-                  c[(int((ts-1791275400)//60), u, d.get('status'))]+=1
+              if ts>=__import__('time').time()-900:
+                  c[(int((__import__('time').time()-ts)//60), u, d.get('status'))]+=1
           rows=sorted(c.items())
           out=' ; '.join(f"m{k[0]} {k[1]} {k[2]} x{v}" for k,v in rows)
           for j in range(0,len(out),900):
