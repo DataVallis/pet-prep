@@ -4,9 +4,9 @@
  * `POST /api/parent/generate-pin` as the full set `{breed, origin, age_stage}` — the
  * server contract is all or nothing.
  *
- * Descriptions use only facts from PRODUCT_SPEC §4 / §5 and REALISM_SPEC (sourced meal
- * counts; walk lengths and behaviour stay qualitative — the minutes are unverified
- * proposals). Behaviour events (accidents, shyness) are M5-R02 → "pride kmalu".
+ * Descriptions use only sourced facts and David's confirmed decisions (PRODUCT_SPEC §4 /
+ * §5, DECISIONS 2026-10-05): meals per day and the daily step goal per breed. Anything the
+ * game does not simulate yet (accidents, shyness — M5-R02) is marked "pride kmalu".
  */
 
 import type { LifeStage, NewPetProfile, PetBreed, PetOrigin } from '@/api/client';
@@ -37,17 +37,26 @@ export const PICKER_STRINGS = {
   originTitle: 'Od kod pride',
   origins: { bought: 'Kupljen (vzreditelj)', adopted: 'Posvojen (zavetišče)' } satisfies Record<PetOrigin, string>,
   originHints: {
-    bought: 'Od vzreditelja; praviloma pride kot mladiček.',
-    adopted: 'Iz zavetišča; lahko je starejši, preteklost ni znana. Vpliv na vedenje (npr. plašnost) pride kmalu.',
+    bought: 'Od vzreditelja. Vpliv izvora na vedenje pride kmalu.',
+    adopted: 'Iz zavetišča. Vpliv izvora na vedenje (npr. plašnost v prvih tednih) pride kmalu.',
   } satisfies Record<PetOrigin, string>,
   ageTitle: 'Starost ob prihodu',
   ages: { puppy: 'Mladiček', young: 'Mlad pes', adult: 'Odrasel', senior: 'Starejši' } satisfies Record<LifeStage, string>,
+  /** Per breed: confirmed meals + step goals (PRODUCT_SPEC §5; minutes × 100 steps). */
   ageHints: {
-    puppy: 'Pride star 2 meseca. 4 obroki na dan (nato 3, pozneje 2), krajši sprehodi, veliko spanja. Nezgode v hiši pridejo kmalu.',
-    young: '2 obroka na dan, sprehodi se daljšajo do dolžine odraslega psa.',
-    adult: '2 obroka na dan, polni dnevni sprehodi.',
-    senior: '2 obroka na dan, mirnejši, krajši sprehodi in več spanja.',
-  } satisfies Record<LifeStage, string>,
+    mutt: {
+      puppy: 'Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000. Nezgode v hiši pridejo kmalu.',
+      young: '2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel).',
+      adult: '2 obroka na dan; sprehod 6.000 korakov na dan.',
+      senior: '2 obroka na dan; krajši sprehod — 4.500 korakov na dan.',
+    },
+    border_collie: {
+      puppy: 'Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000. Nezgode v hiši pridejo kmalu.',
+      young: '2 obroka na dan; sprehod 9.000 korakov na dan, do 12. meseca 12.000.',
+      adult: '2 obroka na dan; sprehod 12.000 korakov na dan.',
+      senior: '2 obroka na dan; krajši sprehod — 9.000 korakov na dan.',
+    },
+  } satisfies Record<PetBreed, Record<LifeStage, string>>,
   quietHoursNote: 'Obrok, ki pade v celoti v tihe ure (šola, spanje), nahrani starš.',
   missing: 'Izberite izvor in starost.',
   confirm: 'Ustvari kodo',

@@ -398,8 +398,10 @@ describe('AddChildScreen', () => {
     it('shows breed, origin and age with honest one-line descriptions; confirm needs origin + age', async () => {
       await openPicker();
       expect(screen.getByText(PICKER.title('Maja'))).toBeTruthy();
-      expect(screen.getByText(PICKER.ageHints.puppy)).toBeTruthy();
-      expect(screen.getByText(PICKER.ageHints.senior)).toBeTruthy();
+      // Confirmed numbers for the selected breed (mutt): puppy 2.000 → 6.000, young / adult 6.000, senior 4.500.
+      expect(screen.getByText(PICKER.ageHints.mutt.puppy)).toBeTruthy();
+      expect(screen.getByText(PICKER.ageHints.mutt.young)).toHaveTextContent(/6\.000/);
+      expect(screen.getByText(PICKER.ageHints.mutt.senior)).toHaveTextContent(/4\.500/);
       expect(screen.getByText(PICKER.originHints.adopted)).toBeTruthy();
 
       fireEvent.press(screen.getByTestId('dog-picker-confirm'));
@@ -422,11 +424,11 @@ describe('AddChildScreen', () => {
     it('a premium breed is visible but locked: tapping explains, the mutt stays selected', async () => {
       await openPicker();
       const collie = screen.getByTestId('breed-option-border_collie');
-      expect(collie.props.accessibilityState).toEqual({ selected: false, disabled: true });
+      expect(collie.props.accessibilityState).toEqual({ checked: false, disabled: true });
 
       fireEvent.press(collie);
       expect(screen.getByTestId('breed-locked-note')).toHaveTextContent(PICKER.breedLockedNote);
-      expect(screen.getByTestId('breed-option-mutt').props.accessibilityState).toEqual({ selected: true, disabled: false });
+      expect(screen.getByTestId('breed-option-mutt').props.accessibilityState).toEqual({ checked: true, disabled: false });
 
       await pickDog('bought', 'puppy');
       expect(generatePin).toHaveBeenCalledWith(expect.objectContaining({ profile: { breed: 'mutt', origin: 'bought', age_stage: 'puppy' } }));
@@ -438,12 +440,13 @@ describe('AddChildScreen', () => {
       await pickDog('adopted', 'adult');
 
       expect(screen.getByTestId('pin-error')).toHaveTextContent(S.errors.breed_locked);
+      expect(screen.queryByText(S.newCode)).toBeNull(); // no "Nova koda" while the choice is refused
       fireEvent.press(screen.getByTestId('pin-change-dog'));
       await flush();
 
       expect(screen.getByTestId('dog-picker-notice')).toHaveTextContent(S.errors.breed_locked);
-      expect(screen.getByTestId('origin-option-adopted').props.accessibilityState.selected).toBe(true);
-      expect(screen.getByTestId('age-option-adult').props.accessibilityState.selected).toBe(true);
+      expect(screen.getByTestId('origin-option-adopted').props.accessibilityState.checked).toBe(true);
+      expect(screen.getByTestId('age-option-adult').props.accessibilityState.checked).toBe(true);
 
       generatePin.mockResolvedValueOnce(pinResponse('555666', { child_id: 5, mode: 'new_pet' }));
       fireEvent.press(screen.getByTestId('dog-picker-confirm'));
@@ -454,6 +457,65 @@ describe('AddChildScreen', () => {
         profile: { breed: 'mutt', origin: 'adopted', age_stage: 'adult' },
       });
       expect(screen.getByText('555 666')).toBeTruthy();
+    });
+
+    it('422 validation on origin → invalid_profile, back to the picker with the notice', async () => {
+      generatePin.mockRejectedValueOnce(new ApiError('invalid', 422, { message: 'invalid', errors: { origin: ['The origin field is required.'] } }));
+      await openPicker();
+      await pickDog('bought', 'puppy');
+
+      expect(screen.getByTestId('pin-error')).toHaveTextContent(S.errors.invalid_profile);
+      expect(screen.queryByText(S.newCode)).toBeNull();
+      fireEvent.press(screen.getByTestId('pin-change-dog'));
+      await flush();
+      expect(screen.getByTestId('dog-picker-notice')).toHaveTextContent(S.errors.invalid_profile);
+    });
+
+    it('breed_locked for the free mutt → support message, no loop back to the picker', async () => {
+      generatePin.mockRejectedValueOnce(new ApiError('locked', 422, { reason: 'breed_locked', message: 'locked' }));
+      await openPicker();
+      await pickDog('bought', 'adult');
+
+      expect(screen.getByTestId('pin-error')).toHaveTextContent(S.muttLocked);
+      expect(screen.queryByTestId('pin-change-dog')).toBeNull();
+      expect(screen.queryByText(S.newCode)).toBeNull();
+    });
+
+    it('existing child without a pet: Nov pes → picker → PIN with the profile', async () => {
+      await openPicker();
+      expect(screen.getByTestId('dog-picker')).toBeTruthy();
+      expect(generatePin).not.toHaveBeenCalled();
+      await pickDog('adopted', 'puppy');
+      expect(generatePin).toHaveBeenCalledWith({
+        child_id: 5,
+        pet_id: null,
+        profile: { breed: 'mutt', origin: 'adopted', age_stage: 'puppy' },
+      });
+    });
+
+    it('"Spremeni kužka" before the child connects returns to the picker; confirming asks for a new PIN', async () => {
+      await openPicker();
+      await pickDog('bought', 'puppy');
+      expect(screen.getByText('734 912')).toBeTruthy();
+
+      fireEvent.press(screen.getByTestId('pin-edit-dog'));
+      await flush();
+      expect(screen.getByTestId('origin-option-bought').props.accessibilityState.checked).toBe(true);
+      fireEvent.press(screen.getByTestId('age-option-senior'));
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      await flush();
+      expect(generatePin).toHaveBeenLastCalledWith({
+        child_id: 5,
+        pet_id: null,
+        profile: { breed: 'mutt', origin: 'bought', age_stage: 'senior' },
+      });
+    });
+
+    it('join / re-login PIN has no "Spremeni kužka"', async () => {
+      generatePin.mockResolvedValueOnce(pinResponse('734912'));
+      renderRelogin();
+      await flush();
+      expect(screen.queryByTestId('pin-edit-dog')).toBeNull();
     });
 
     it('"Nova koda" for a new pet resends the full profile', async () => {

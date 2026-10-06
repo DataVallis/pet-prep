@@ -382,7 +382,7 @@ export default function ChildHudScreen() {
             <View style={styles.petIconBox}>
               <PawPrint color="#a5b4fc" size={20} />
             </View>
-            <View>
+            <View style={styles.petInfoText}>
               <Text style={styles.petBreedName}>{HUD_STRINGS.breeds[pet.breed_type]}</Text>
               {pet.profile ? (
                 <>
@@ -390,7 +390,7 @@ export default function ChildHudScreen() {
                     {stageLine(pet.profile)}
                   </Text>
                   {profileSubline(pet.profile) && (
-                    <Text style={styles.petProfileText} numberOfLines={2} testID="hud-profile-sub">
+                    <Text style={styles.petProfileText} numberOfLines={2} ellipsizeMode="tail" testID="hud-profile-sub">
                       {profileSubline(pet.profile)}
                     </Text>
                   )}
@@ -663,9 +663,9 @@ const styles = StyleSheet.create({
     textTransform: 'capitalize',
     color: '#ffffff',
   },
+  petInfoText: { flex: 1, minWidth: 0 },
   petProfileText: {
     marginTop: 2,
-    maxWidth: 200,
     fontSize: 11,
     color: 'rgba(255, 255, 255, 0.7)',
   },
