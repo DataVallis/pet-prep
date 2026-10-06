@@ -12,6 +12,7 @@ import { StyleSheet, View, type GestureResponderEvent } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
 import { appendToPath, shouldRecord, type Point } from '@/modules/contract/signaturePath';
+import { alpha, palette } from '@/theme';
 
 interface SignaturePadProps {
   value: string;
@@ -67,7 +68,7 @@ export default function SignaturePad({
         {value.length > 0 && (
           <Path
             d={value}
-            stroke="#a5b4fc"
+            stroke={palette.mint}
             strokeWidth={3}
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -85,8 +86,8 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     borderWidth: 1,
     borderStyle: 'dashed',
-    borderColor: 'rgba(165, 180, 252, 0.45)',
-    backgroundColor: 'rgba(255, 255, 255, 0.04)',
+    borderColor: alpha(palette.mint, 0.45),
+    backgroundColor: alpha(palette.white, 0.04),
     overflow: 'hidden',
   },
   disabled: {

@@ -47,7 +47,7 @@ describe('WalkTrackerOverlay', () => {
 
     const card = StyleSheet.flatten(screen.getByTestId('walk-overlay').props.children.props.style) as ViewStyle;
     expect(card.borderRadius).toBe(24);
-    expect(card.backgroundColor).toMatch(/^rgba\(15, 23, 42/);
+    expect(card.backgroundColor).toMatch(/^rgba\(18, 22, 20/);
   });
 
   it('shows the title, steps / goal and energy from the server', () => {

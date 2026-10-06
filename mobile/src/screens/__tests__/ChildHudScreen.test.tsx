@@ -502,7 +502,7 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
       expect(screen.getByText(LOCKED_STRINGS.illness.title)).toBeTruthy();
       expect(screen.getByText(LOCKED_STRINGS.illness.body('18:30'))).toBeTruthy();
       const flat = [screen.getByTestId('locked-screen').props.style].flat(3) as Array<{ backgroundColor?: string } | undefined>;
-      expect(flat.some((st) => st?.backgroundColor === 'rgba(71, 85, 105, 0.55)')).toBe(true);
+      expect(flat.some((st) => st?.backgroundColor === 'rgba(90, 99, 93, 0.55)')).toBe(true);
       await waitFor(() => expect(playerUris()).toEqual([HUNGRY]));
       expect(liveVideoPlayers()[0].playing).toBe(true);
     });
@@ -521,7 +521,7 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
       await waitFor(() => expect(playerUris()).toEqual([SLEEPING]));
       expect(useAppStore.getState().hudVideoState).toBe('sleeping');
       const flat = [screen.getByTestId('locked-screen').props.style].flat(3) as Array<{ backgroundColor?: string } | undefined>;
-      expect(flat.some((st) => st?.backgroundColor === 'rgba(30, 41, 59, 0.8)')).toBe(true);
+      expect(flat.some((st) => st?.backgroundColor === 'rgba(28, 34, 31, 0.8)')).toBe(true);
     });
 
     it('M3: game over → opaque lock screen, no video', async () => {

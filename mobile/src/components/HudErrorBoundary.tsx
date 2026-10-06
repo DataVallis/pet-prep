@@ -13,7 +13,9 @@
  */
 
 import { Component, type ErrorInfo, type ReactNode } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
+import { alpha, fonts, palette, tightTracking } from '@/theme';
 
 export const HUD_ERROR_STRINGS = {
   title: 'Ups, nekaj se je zataknilo',
@@ -92,7 +94,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#020617',
+    backgroundColor: palette.graphite,
     paddingHorizontal: 24,
   },
   card: {
@@ -101,19 +103,19 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingVertical: 28,
     borderRadius: 28,
-    backgroundColor: 'rgba(15, 23, 42, 0.82)',
+    backgroundColor: alpha(palette.graphite, 0.82),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.12)',
+    borderColor: alpha(palette.white, 0.12),
   },
-  title: { color: '#ffffff', fontSize: 20, fontWeight: '700', textAlign: 'center' },
-  body: { color: '#cbd5e1', fontSize: 15, textAlign: 'center' },
+  title: { color: palette.white, fontSize: 20, letterSpacing: tightTracking(20), fontFamily: fonts.displayBold, textAlign: 'center' },
+  body: { color: palette.n300, fontSize: 15, textAlign: 'center' },
   button: {
     marginTop: 8,
     paddingHorizontal: 24,
     paddingVertical: 12,
     borderRadius: 999,
-    backgroundColor: 'rgba(99, 102, 241, 0.9)',
+    backgroundColor: alpha(palette.mint, 0.9),
   },
   pressed: { opacity: 0.8 },
-  buttonText: { color: '#ffffff', fontSize: 15, fontWeight: '700' },
+  buttonText: { color: palette.white, fontSize: 15, fontWeight: '700' },
 });

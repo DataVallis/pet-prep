@@ -7,7 +7,8 @@
  */
 
 import { useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { Download, Trash2 } from 'lucide-react-native';
 
 import DeletionConfirmForm from '@/components/parent/DeletionConfirmForm';
@@ -22,6 +23,7 @@ import {
   type ExportErrorKind,
 } from '@/modules/account/account';
 import type { FamilyOverview } from '@/modules/family/family';
+import { palette } from '@/theme';
 
 const count = (n: number, one: string, two: string, few: string, many: string): string =>
   `${n} ${n === 1 ? one : n === 2 ? two : n === 3 || n === 4 ? few : many}`;
@@ -171,7 +173,7 @@ const styles = StyleSheet.create({
     backgroundColor: C.bg,
   },
   buttonText: { fontSize: 15, fontWeight: '700', color: C.accent },
-  dangerOutline: { borderColor: '#fecdd3', backgroundColor: C.redSoft },
+  dangerOutline: { borderColor: palette.dangerBorder, backgroundColor: C.redSoft },
   dangerText: { color: C.redText },
   result: { fontSize: 13, color: C.greenText },
   resultError: { color: C.redText },

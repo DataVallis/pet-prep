@@ -1,9 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { Lock } from 'lucide-react-native';
 
 import { deviceTimeZone, lockClockWithFallback } from '@/modules/childPet/familyTime';
 import { useAppStore, type LockDetails, type LockState } from '@/store/appStore';
 import type { VideoState } from '@/modules/petMedia/petMedia';
+import { alpha, fonts, palette } from '@/theme';
 
 /** User-visible strings (i18n with M1-18). PRODUCT_SPEC §7 / §8. */
 export const LOCKED_STRINGS = {
@@ -107,7 +109,7 @@ export default function LockedScreen() {
         testID={translucent ? 'locked-card-glass' : 'locked-card'}
       >
         <View style={styles.iconCircle}>
-          <Lock color="#ef4444" size={48} strokeWidth={2} />
+          <Lock color={palette.dangerDark} size={48} strokeWidth={2} />
         </View>
         <Text style={styles.title}>{title}</Text>
         <Text style={[styles.body, translucent && styles.bodyOnGlass]}>{body}</Text>
@@ -118,17 +120,17 @@ export default function LockedScreen() {
 
 const styles = StyleSheet.create({
   root: { ...StyleSheet.absoluteFill, zIndex: 50, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 24 },
-  opaque: { backgroundColor: '#000000' },
+  opaque: { backgroundColor: palette.graphite },
   /** Grey veil: the dog video stays visible (and playing) underneath. */
-  translucent: { backgroundColor: 'rgba(71, 85, 105, 0.55)' },
+  translucent: { backgroundColor: alpha(palette.n600, 0.55) },
   /** Vet visit without a real sick video: dark, cold, washed-out — the dog barely shows through. */
-  illVeil: { backgroundColor: 'rgba(30, 41, 59, 0.8)' },
+  illVeil: { backgroundColor: alpha(palette.n850, 0.8) },
   glow: {
     position: 'absolute',
     width: 256,
     height: 256,
     borderRadius: 128,
-    backgroundColor: 'rgba(225, 29, 72, 0.15)',
+    backgroundColor: alpha(palette.dangerDark, 0.08),
   },
   content: { alignItems: 'center' },
   card: {
@@ -136,9 +138,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingVertical: 28,
     borderRadius: 28,
-    backgroundColor: 'rgba(15, 23, 42, 0.82)',
+    backgroundColor: alpha(palette.graphite, 0.82),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.12)',
+    borderColor: alpha(palette.white, 0.12),
   },
   iconCircle: {
     width: 96,
@@ -147,17 +149,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,
-    borderColor: 'rgba(244, 63, 94, 0.3)',
-    backgroundColor: 'rgba(244, 63, 94, 0.1)',
+    borderColor: alpha(palette.dangerDark, 0.3),
+    backgroundColor: alpha(palette.dangerDark, 0.1),
   },
   title: {
     marginTop: 32,
     textAlign: 'center',
     fontSize: 24,
     lineHeight: 32,
-    fontWeight: '700',
+    fontFamily: fonts.displayBold,
     letterSpacing: -0.6,
-    color: '#ffffff',
+    color: palette.white,
   },
   body: {
     marginTop: 12,
@@ -165,7 +167,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
     lineHeight: 28,
-    color: '#94a3b8',
+    color: palette.n400,
   },
-  bodyOnGlass: { color: '#cbd5e1' },
+  bodyOnGlass: { color: palette.n300 },
 });

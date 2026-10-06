@@ -1,8 +1,10 @@
 import type { ReactNode } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 
 import { METRIC_BAR_WIDTH, type MetricSizing } from '@/modules/hud/hudLayout';
 import { interpolateColor } from '@/utils/metrics';
+import { alpha, fonts, palette } from '@/theme';
 
 export interface MetricBarProps {
   /** Metric level, clamped to 0–100. */
@@ -48,7 +50,7 @@ export default function MetricBar({ level, label, icon, color, sizing = DEFAULT_
         <Text style={styles.percentText} numberOfLines={1} maxFontSizeMultiplier={1}>{clamped}%</Text>
       )}
       {label && sizing.showLabel ? (
-        // One line always ("ENERGIJA" used to wrap to "ENERGIJ / A"): narrow mono font,
+        // One line always ("ENERGIJA" used to wrap to "ENERGIJ / A"): small Instrument Sans,
         // no letter-spacing, fixed font scale (the HUD height math relies on the line
         // heights; VoiceOver reads the accessibilityLabel above) and shrink-to-fit.
         <Text style={styles.labelText} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.7} maxFontSizeMultiplier={1}>
@@ -66,11 +68,11 @@ const styles = StyleSheet.create({
   },
   iconBadge: {
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.2)',
-    backgroundColor: 'rgba(255, 255, 255, 0.12)',
+    borderColor: alpha(palette.white, 0.2),
+    backgroundColor: alpha(palette.white, 0.12),
     alignItems: 'center',
     justifyContent: 'center',
-    shadowColor: '#000',
+    shadowColor: palette.black,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
     shadowRadius: 4,
@@ -78,9 +80,9 @@ const styles = StyleSheet.create({
   barTrack: {
     width: 12,
     borderRadius: 6,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: alpha(palette.white, 0.1),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
+    borderColor: alpha(palette.white, 0.15),
     overflow: 'hidden',
     justifyContent: 'flex-end',
   },
@@ -89,20 +91,20 @@ const styles = StyleSheet.create({
     borderRadius: 6,
   },
   percentText: {
-    fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
+    fontFamily: fonts.displayBold,
+    fontVariant: ['tabular-nums'],
     fontSize: 12,
     lineHeight: 16,
     fontWeight: '700',
-    color: '#ffffff',
+    color: palette.white,
   },
   labelText: {
-    fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
     fontSize: 9,
     lineHeight: 12,
     fontWeight: '600',
     textTransform: 'uppercase',
     letterSpacing: 0,
-    color: 'rgba(255, 255, 255, 0.6)',
+    color: alpha(palette.white, 0.6),
     maxWidth: METRIC_BAR_WIDTH,
   },
 });

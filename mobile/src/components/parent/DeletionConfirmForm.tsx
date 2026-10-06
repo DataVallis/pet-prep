@@ -6,10 +6,12 @@
  */
 
 import { useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
+import { Text, TextInput } from '@/components/ui/Text';
 
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { canSubmitDeletion, DELETE_CONFIRM_WORD } from '@/modules/account/account';
+import { palette } from '@/theme';
 
 export const DELETION_FORM_STRINGS = {
   passwordLabel: 'Vaše geslo',
@@ -111,7 +113,7 @@ export default function DeletionConfirmForm({
           accessibilityState={{ disabled: !enabled }}
           testID={`${testID}-submit`}
         >
-          {pending ? <ActivityIndicator color="#ffffff" /> : <Text style={styles.dangerText}>{submitLabel}</Text>}
+          {pending ? <ActivityIndicator color={palette.white} /> : <Text style={styles.dangerText}>{submitLabel}</Text>}
         </Pressable>
       </View>
     </View>
@@ -125,9 +127,9 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     backgroundColor: C.redSoft,
     borderWidth: 1,
-    borderColor: '#fecdd3',
+    borderColor: palette.dangerBorder,
   },
-  consequence: { fontSize: 13, lineHeight: 18, color: '#9f1239' },
+  consequence: { fontSize: 13, lineHeight: 18, color: palette.dangerDeep },
   irreversible: { fontSize: 13, fontWeight: '700', color: C.redText },
   label: { fontSize: 12, fontWeight: '700', color: C.muted, marginTop: 4 },
   input: {
@@ -153,9 +155,9 @@ const styles = StyleSheet.create({
     backgroundColor: C.card,
     paddingHorizontal: 10,
   },
-  cancelText: { fontSize: 14, fontWeight: '700', color: C.accent },
-  danger: { backgroundColor: '#e11d48', borderColor: '#e11d48' },
-  dangerText: { fontSize: 14, fontWeight: '800', color: '#ffffff', textAlign: 'center' },
+  cancelText: { fontSize: 14, fontWeight: '700', color: C.link },
+  danger: { backgroundColor: palette.danger, borderColor: palette.danger },
+  dangerText: { fontSize: 14, fontWeight: '800', color: palette.white, textAlign: 'center' },
   disabled: { opacity: 0.45 },
   pressed: { opacity: 0.85 },
 });

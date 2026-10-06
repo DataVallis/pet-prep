@@ -20,18 +20,8 @@
  */
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
-import {
-  BackHandler,
-  Image,
-  PanResponder,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  type GestureResponderEvent,
-  type PanResponderGestureState,
-} from 'react-native';
+import { BackHandler, Image, PanResponder, Pressable, ScrollView, StyleSheet, View, type GestureResponderEvent, type PanResponderGestureState } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { ChevronLeft, ChevronRight, Clock, Image as ImageIcon, Play, Volume2, VolumeX, X } from 'lucide-react-native';
 import { useVideoPlayer, VideoView, type StatusChangeEventPayload } from 'expo-video';
@@ -49,6 +39,7 @@ import {
 } from '@/modules/petMedia/album';
 import { useAppActive, useStableUrl } from '@/modules/petMedia/hooks';
 import { mediaKey, type PetMediaInfo } from '@/modules/petMedia/petMedia';
+import { alpha, fonts, palette, tightTracking } from '@/theme';
 
 export interface PetAlbumProps {
   media: PetMediaInfo;
@@ -91,7 +82,7 @@ function useRefreshBeforeExpiry(expiresAt: string | null, onMediaExpired: (() =>
 function Unavailable({ testID, onRetry }: { testID: string; onRetry?: () => void }) {
   return (
     <View style={styles.unavailable} testID={testID}>
-      <Clock color="#94a3b8" size={28} />
+      <Clock color={palette.n400} size={28} />
       <Text style={styles.unavailableText}>{ALBUM_STRINGS.unavailable}</Text>
       {onRetry && (
         <Pressable onPress={onRetry} accessibilityRole="button" testID={`${testID}-retry`} style={({ pressed }) => [styles.retryButton, pressed && styles.pressed]}>
@@ -186,7 +177,7 @@ function Tile({ item, onPress, onExpired }: { item: AlbumItem; onPress: () => vo
   if (item.kind === 'missing') {
     return (
       <View style={[styles.tile, styles.tileMissing]} testID={testID} accessible accessibilityLabel={`${item.label}, ${ALBUM_STRINGS.missing}`}>
-        <Clock color="rgba(255, 255, 255, 0.35)" size={26} />
+        <Clock color={alpha(palette.white, 0.35)} size={26} />
         <Text style={[styles.tileLabel, styles.tileLabelMissing]}>{item.label}</Text>
         <Text style={styles.tileHint}>{ALBUM_STRINGS.missing}</Text>
       </View>
@@ -205,11 +196,11 @@ function Tile({ item, onPress, onExpired }: { item: AlbumItem; onPress: () => vo
         <AlbumImage url={item.url} onExpired={onExpired} testID={`${testID}-image`} fit="cover" />
       ) : (
         <View style={styles.playBadge}>
-          <Play color="#ffffff" fill="#ffffff" size={22} />
+          <Play color={palette.white} fill={palette.white} size={22} />
         </View>
       )}
       <View style={styles.tileCaption}>
-        {item.kind === 'photo' && <ImageIcon color="#ffffff" size={12} />}
+        {item.kind === 'photo' && <ImageIcon color={palette.white} size={12} />}
         <Text style={styles.tileLabel}>{item.label}</Text>
       </View>
     </Pressable>
@@ -274,7 +265,7 @@ export default function PetAlbum({ media, onClose, onMediaExpired, title = ALBUM
       <View style={[styles.header, { paddingTop: Math.max(insets.top, 20) + 8 }]}>
         {selected ? (
           <Pressable onPress={() => setSelectedId(null)} hitSlop={10} accessibilityRole="button" accessibilityLabel={ALBUM_STRINGS.back} testID="album-back" style={styles.iconButton}>
-            <ChevronLeft color="#ffffff" size={22} />
+            <ChevronLeft color={palette.white} size={22} />
           </Pressable>
         ) : (
           <View style={styles.iconButtonSpacer} />
@@ -283,7 +274,7 @@ export default function PetAlbum({ media, onClose, onMediaExpired, title = ALBUM
           {selected ? selected.label : title}
         </Text>
         <Pressable onPress={onClose} hitSlop={10} accessibilityRole="button" accessibilityLabel={ALBUM_STRINGS.close} testID="album-close" style={styles.iconButton}>
-          <X color="#ffffff" size={22} />
+          <X color={palette.white} size={22} />
         </Pressable>
       </View>
 
@@ -307,7 +298,7 @@ export default function PetAlbum({ media, onClose, onMediaExpired, title = ALBUM
           <View style={[styles.controls, { paddingBottom: Math.max(insets.bottom, 16) + 8 }]}>
             {playable.length > 1 ? (
               <Pressable onPress={() => step(-1)} accessibilityRole="button" accessibilityLabel={ALBUM_STRINGS.previous} testID="album-prev" style={({ pressed }) => [styles.roundButton, pressed && styles.pressed]}>
-                <ChevronLeft color="#ffffff" size={24} />
+                <ChevronLeft color={palette.white} size={24} />
               </Pressable>
             ) : (
               <View style={styles.roundSpacer} />
@@ -324,13 +315,13 @@ export default function PetAlbum({ media, onClose, onMediaExpired, title = ALBUM
                   testID="album-mute"
                   style={({ pressed }) => [styles.muteButton, pressed && styles.pressed]}
                 >
-                  {muted ? <VolumeX color="#ffffff" size={18} /> : <Volume2 color="#ffffff" size={18} />}
+                  {muted ? <VolumeX color={palette.white} size={18} /> : <Volume2 color={palette.white} size={18} />}
                 </Pressable>
               )}
             </View>
             {playable.length > 1 ? (
               <Pressable onPress={() => step(1)} accessibilityRole="button" accessibilityLabel={ALBUM_STRINGS.next} testID="album-next" style={({ pressed }) => [styles.roundButton, pressed && styles.pressed]}>
-                <ChevronRight color="#ffffff" size={24} />
+                <ChevronRight color={palette.white} size={24} />
               </Pressable>
             ) : (
               <View style={styles.roundSpacer} />
@@ -364,7 +355,7 @@ const styles = StyleSheet.create({
   root: {
     ...StyleSheet.absoluteFill,
     zIndex: 40,
-    backgroundColor: '#020617',
+    backgroundColor: palette.graphite,
   },
   header: {
     flexDirection: 'row',
@@ -373,18 +364,18 @@ const styles = StyleSheet.create({
     gap: 12,
     paddingHorizontal: 16,
     paddingBottom: 12,
-    backgroundColor: 'rgba(15, 23, 42, 0.92)',
+    backgroundColor: alpha(palette.graphite, 0.92),
     borderBottomWidth: 1,
-    borderBottomColor: 'rgba(255, 255, 255, 0.1)',
+    borderBottomColor: alpha(palette.white, 0.1),
   },
-  title: { flex: 1, textAlign: 'center', fontSize: 18, fontWeight: '800', color: '#ffffff' },
+  title: { flex: 1, textAlign: 'center', fontSize: 18, letterSpacing: tightTracking(18), fontFamily: fonts.displayBold, color: palette.white },
   iconButton: {
     width: 36,
     height: 36,
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    backgroundColor: alpha(palette.white, 0.08),
   },
   iconButtonSpacer: { width: 36, height: 36 },
   grid: {
@@ -401,14 +392,14 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(15, 23, 42, 0.85)',
+    backgroundColor: alpha(palette.graphite, 0.85),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
+    borderColor: alpha(palette.white, 0.15),
   },
   tileMissing: {
     gap: 6,
-    backgroundColor: 'rgba(30, 41, 59, 0.45)',
-    borderColor: 'rgba(255, 255, 255, 0.06)',
+    backgroundColor: alpha(palette.n850, 0.45),
+    borderColor: alpha(palette.white, 0.06),
     borderStyle: 'dashed',
   },
   playBadge: {
@@ -417,7 +408,7 @@ const styles = StyleSheet.create({
     borderRadius: 26,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(16, 185, 129, 0.85)',
+    backgroundColor: alpha(palette.okDark, 0.85),
   },
   tileCaption: {
     position: 'absolute',
@@ -430,32 +421,32 @@ const styles = StyleSheet.create({
     gap: 5,
     paddingVertical: 5,
     borderRadius: 12,
-    backgroundColor: 'rgba(15, 23, 42, 0.8)',
+    backgroundColor: alpha(palette.graphite, 0.8),
   },
-  tileLabel: { fontSize: 14, fontWeight: '700', color: '#ffffff' },
-  tileLabelMissing: { color: 'rgba(255, 255, 255, 0.45)' },
-  tileHint: { fontSize: 11, fontWeight: '600', color: 'rgba(255, 255, 255, 0.35)' },
+  tileLabel: { fontSize: 14, fontWeight: '700', color: palette.white },
+  tileLabelMissing: { color: alpha(palette.white, 0.45) },
+  tileHint: { fontSize: 11, fontWeight: '600', color: alpha(palette.white, 0.35) },
   viewer: { flex: 1 },
-  stage: { flex: 1, backgroundColor: '#000000' },
+  stage: { flex: 1, backgroundColor: palette.black },
   controls: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
     paddingTop: 12,
-    backgroundColor: 'rgba(15, 23, 42, 0.92)',
+    backgroundColor: alpha(palette.graphite, 0.92),
   },
   controlsCenter: { flexDirection: 'row', alignItems: 'center', gap: 12 },
-  position: { fontSize: 13, fontWeight: '700', color: 'rgba(255, 255, 255, 0.7)' },
+  position: { fontSize: 13, fontWeight: '700', color: alpha(palette.white, 0.7) },
   roundButton: {
     width: 52,
     height: 52,
     borderRadius: 26,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.16)',
+    backgroundColor: alpha(palette.white, 0.16),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.25)',
+    borderColor: alpha(palette.white, 0.25),
   },
   roundSpacer: { width: 52, height: 52 },
   muteButton: {
@@ -464,21 +455,21 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.12)',
+    backgroundColor: alpha(palette.white, 0.12),
   },
   unavailable: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'center', gap: 10, padding: 24 },
-  unavailableText: { fontSize: 14, fontWeight: '600', color: '#cbd5e1', textAlign: 'center' },
+  unavailableText: { fontSize: 14, fontWeight: '600', color: palette.n300, textAlign: 'center' },
   retryButton: {
     marginTop: 4,
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 16,
-    backgroundColor: 'rgba(255, 255, 255, 0.16)',
+    backgroundColor: alpha(palette.white, 0.16),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.25)',
+    borderColor: alpha(palette.white, 0.25),
   },
-  retryText: { fontSize: 14, fontWeight: '700', color: '#ffffff' },
+  retryText: { fontSize: 14, fontWeight: '700', color: palette.white },
   emptyBox: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32 },
-  emptyText: { fontSize: 15, fontWeight: '600', color: '#cbd5e1', textAlign: 'center', lineHeight: 22 },
+  emptyText: { fontSize: 15, fontWeight: '600', color: palette.n300, textAlign: 'center', lineHeight: 22 },
   pressed: { opacity: 0.8, transform: [{ scale: 0.97 }] },
 });

@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-06 — Aplikacija v novi preobleki: »Grafit in meta« (CGP v2)
+
+**Kaj se je zgodilo:** Mobilna aplikacija je v celoti preoblečena v novo celostno podobo. Nova ikona (grafitni »Radovednež« na mint ozadju) za iPhone in Android (tudi prilagodljiva in enobarvna za teme in obvestila), nov zagonski zaslon, logotip na začetnem zaslonu, prijavi, registraciji in v pregledu družine, slogan »Pripravljeni na žival. Ob njej vse življenje.« na začetku. Starši imajo miren, svetel vmesnik (kot bančna aplikacija), otrok temen simulator, v katerem je **gumb za skrb, ki je zdaj na vrsti, poln mint** (hranjenje v oknu, čiščenje nereda, »Pelji ven«). Nove pisave Bricolage Grotesque in Instrument Sans (s šumniki). Aplikacija še ni v trgovini; nova ikona se pokaže z naslednjim buildom.
+
+**Zakaj je pomembno:** Enotna podoba v aplikaciji, na spletu (petprep.si) in v gradivih — resna in zaupanja vredna za starše in partnerje, igriva na enem mestu za otroke. Pripravljeno za več živalskih vrst (ikona ni pes).
+
+**Številke:** 68 datotek · ~60 zaslonov in komponent na barvnih žetonih · 6 rezov pisav (namesto 15) · nov test prepreči trde barvne kode zunaj teme · 1064 avtomatskih testov zelenih.
+
+**Kako povedati:**
+- 📣 Omrežja: "Nova preobleka! 👀💚 PetPrep je zdaj grafit in meta — pozdravite Radovedneža."
+- 👩 Starši: "Pregled je miren in pregleden: bele kartice, jasni semaforji, nič kričečih barv."
+- 🧒 Otroci: "Gumb, ki sveti v mint barvi, ti pove, kaj kuža potrebuje zdaj."
+- 💼 Investitorji / 🤝 partnerji: "Ena celostna podoba čez aplikacijo, splet in gradiva; ikona brez vrste živali — pripravljena na mačke in druge."
+- 🛠 Tehnično: "Design tokens v `src/theme`, brand `Text` mapira fontWeight na Instrument Sans reze (RN izbira po imenu družine), logotipi kot react-native-svg iz istih koordinat kot SVG."
+
+---
+
 ## 2026-10-06 — »Šola« v aplikaciji: pohvali ob pravem trenutku (M5-R03, aplikacija)
 
 **Kaj se je zgodilo:** Mini-igra šolanja je v aplikaciji. Otrok tapne **»Šola«** nad gumbi (oranžna pika = današnja vaja še čaka), izbere ukaz in 50 sekund gleda kužka: pokaže se »Sedi!«, nato »Kuža se usede.« — in takrat velik zelen gumb **»Pohvali«**. Po vsakem ukazu takoj prijazen odziv (»Bravo, ob pravem trenutku!«, »Prezgodaj«, »Malo prepozno«, »Super, da si počakal(a)«), na koncu napredek (»Sedi: 40 % → 43 %«) in pri 100 % »Kuža zna ukaz »Sedi«!«. Starš v podrobnostih otroka vidi »Kuža zna: sedi ✓, pridi 60 % …« in ali je bila vaja danes opravljena. Aplikacija še ni v trgovini.

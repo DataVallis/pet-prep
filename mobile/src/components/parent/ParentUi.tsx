@@ -1,35 +1,46 @@
 /**
- * Light parent theme (README ADR-007: `bg-slate-50`, white cards, `text-slate-900`)
- * — small shared building blocks for every parent screen (M2-05). Status colours
- * emerald-500 / amber-500 / rose-500 (mobile/CLAUDE.md).
+ * Light parent theme (CGP v2 "Grafit in meta", `brand/README.md`: white cards on fog,
+ * graphite ink and primary buttons, mint as the one brand surface) — small shared
+ * building blocks for every parent screen (M2-05). Status colours are the CGP light
+ * status tokens (ok / warn / danger), never mint or raspberry.
  */
 
 import type { ReactNode } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, Text, View, type StyleProp, type ViewStyle } from 'react-native';
+import { ActivityIndicator, Pressable, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { AlertTriangle, Beef, Droplet, Footprints, GraduationCap, Sparkles, WifiOff } from 'lucide-react-native';
 
 import { LIGHT_LABELS, type LightColor, type RoutineType } from '@/modules/family/scoring';
+import { fonts, light, meter, palette, radius } from '@/theme';
 
 export const PARENT_COLORS = {
-  bg: '#f8fafc', // slate-50
-  card: '#ffffff',
-  border: '#e2e8f0', // slate-200
-  divider: '#f1f5f9', // slate-100
-  text: '#0f172a', // slate-900
-  muted: '#64748b', // slate-500
-  faint: '#94a3b8', // slate-400
-  accent: '#4f46e5', // indigo-600
-  accentSoft: '#eef2ff', // indigo-50
-  green: '#10b981', // emerald-500
-  greenSoft: '#ecfdf5',
-  greenText: '#047857',
-  yellow: '#f59e0b', // amber-500
-  yellowSoft: '#fffbeb',
-  yellowText: '#b45309',
-  red: '#f43f5e', // rose-500
-  redSoft: '#fff1f2',
-  redText: '#be123c',
-  track: '#e2e8f0',
+  bg: light.bg,
+  card: light.surface,
+  border: light.border,
+  divider: light.divider,
+  text: light.ink,
+  muted: light.inkMuted,
+  faint: light.inkFaint,
+  /** Primary action (graphite button, icons). */
+  accent: light.action,
+  /** Mint brand surface (selected / highlighted). */
+  accentSoft: palette.mintSoft,
+  accentBorder: palette.mintBorder,
+  /** Links and mint-coloured text (never raw mint on light). */
+  link: light.mintText,
+  green: palette.ok,
+  greenSoft: palette.okSoft,
+  greenText: palette.ok,
+  yellow: palette.warn,
+  yellowSoft: palette.warnSoft,
+  yellowText: palette.warn,
+  red: palette.danger,
+  redSoft: palette.dangerSoft,
+  redText: palette.danger,
+  track: light.track,
+  /** Charts (7-day bars, legend): done = mint, missed = coral — meter colours, not text. */
+  chartDone: meter.good,
+  chartMissed: meter.low,
 } as const;
 
 const C = PARENT_COLORS;
@@ -84,10 +95,10 @@ export function RoutineIcon({ type, color = C.accent, size = 16 }: { type: Routi
   return <Icon color={color} size={size} />;
 }
 
-/** Horizontal metric bar (0–100). Neutral accent, status colour only when low. */
+/** Horizontal metric bar (0–100). Mint meter, status colour only when low. */
 export function MetricRow({ label, value, testID }: { label: string; value: number; testID?: string }) {
   const clamped = Math.max(0, Math.min(100, Math.round(value)));
-  const fill = clamped <= 10 ? C.red : clamped <= 30 ? C.yellow : C.accent;
+  const fill = clamped <= 10 ? meter.low : clamped <= 30 ? meter.mid : meter.good;
   return (
     <View style={styles.metricRow} testID={testID}>
       <Text style={styles.metricLabel}>{label}</Text>
@@ -191,14 +202,14 @@ export const parentStyles = StyleSheet.create({
 const styles = StyleSheet.create({
   card: {
     backgroundColor: C.card,
-    borderRadius: 20,
+    borderRadius: radius.card,
     padding: 16,
     borderWidth: 1,
     borderColor: C.border,
     gap: 12,
   },
   sectionRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8 },
-  sectionTitle: { fontSize: 15, fontWeight: '800', color: C.text },
+  sectionTitle: { fontSize: 16, fontFamily: fonts.displayBold, letterSpacing: -0.2, color: C.text },
   badge: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -220,9 +231,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 10,
     padding: 12,
-    borderRadius: 14,
+    borderRadius: radius.button,
     borderWidth: 1,
-    borderColor: '#fecdd3',
+    borderColor: palette.dangerBorder,
     backgroundColor: C.redSoft,
   },
   errorText: { flex: 1, fontSize: 13, color: C.redText },
@@ -231,13 +242,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 10,
     padding: 12,
-    borderRadius: 14,
+    borderRadius: radius.button,
     borderWidth: 1,
-    borderColor: '#a7f3d0',
+    borderColor: palette.okBorder,
     backgroundColor: C.greenSoft,
   },
   noticeText: { flex: 1, fontSize: 13, color: C.greenText },
-  errorRetry: { fontSize: 13, fontWeight: '700', color: C.accent },
+  errorRetry: { fontSize: 13, fontWeight: '700', color: C.link },
   loading: { alignItems: 'center', gap: 10, paddingVertical: 40 },
   muted: { fontSize: 13, color: C.muted },
   segmented: {

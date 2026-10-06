@@ -7,14 +7,18 @@
  */
 
 import { useEffect, useMemo, useState } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { ChevronLeft, Delete, KeyRound, RotateCcw } from 'lucide-react-native';
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
+import { ChevronLeft, Delete, RotateCcw } from 'lucide-react-native';
 
 import { usePinLogin } from '@/hooks/queries/usePinLogin';
 import { useCountdown } from '@/hooks/useCountdown';
 import { formatCountdown, secondsUntil } from '@/modules/pairing/pin';
 import { classifyPinLoginError, PIN_LENGTH, type PinLoginError } from '@/modules/pairing/pinLogin';
 import { useAppStore } from '@/store/appStore';
+import { alpha, fonts, palette, radius, tightTracking } from '@/theme';
+import { BrandMark } from '@/components/brand/BrandLogo';
+import { useDarkStatusBar } from '@/components/ui/useDarkStatusBar';
 
 /** All user-visible strings of this screen (extract to i18n with M1-18). */
 export const CHILD_PIN_STRINGS = {
@@ -39,6 +43,7 @@ interface ChildPinLoginScreenProps {
 }
 
 export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps) {
+  useDarkStatusBar();
   const [digits, setDigits] = useState('');
   const [error, setError] = useState<PinLoginError | null>(null);
   const [lockedUntil, setLockedUntil] = useState<string | null>(null);
@@ -112,8 +117,6 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
 
   return (
     <View style={styles.container}>
-      <View style={[styles.glowOrb, styles.glowIndigo]} />
-      <View style={[styles.glowOrb, styles.glowEmerald]} />
 
       <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
         <Pressable
@@ -124,14 +127,12 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
           accessibilityLabel={S.back}
           disabled={isBusy}
         >
-          <ChevronLeft color="#94a3b8" size={22} />
+          <ChevronLeft color={palette.n400} size={22} />
           <Text style={styles.backText}>{S.back}</Text>
         </Pressable>
 
         <View style={styles.header}>
-          <View style={styles.badge}>
-            <KeyRound color="#818cf8" size={30} />
-          </View>
+          <BrandMark size={64} tone="dark" />
           <Text style={styles.title}>{S.title}</Text>
           <Text style={styles.hint}>{S.hint}</Text>
         </View>
@@ -159,7 +160,7 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
         <View style={styles.statusArea}>
           {isBusy ? (
             <View style={styles.statusRow} testID="pin-login-loading">
-              <ActivityIndicator color="#a5b4fc" />
+              <ActivityIndicator color={palette.mint} />
               <Text style={styles.statusText}>{S.checking}</Text>
             </View>
           ) : errorText ? (
@@ -173,7 +174,7 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
               onPress={() => submit(digits)}
               accessibilityRole="button"
             >
-              <RotateCcw color="#ffffff" size={18} />
+              <RotateCcw color={palette.graphite} size={18} />
               <Text style={styles.retryText}>{S.retry}</Text>
             </Pressable>
           )}
@@ -193,7 +194,7 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
             accessibilityLabel={S.deleteDigit}
             testID="pin-key-delete"
           >
-            <Delete color="#cbd5e1" size={28} />
+            <Delete color={palette.n300} size={28} />
           </Pressable>
         </View>
       </ScrollView>
@@ -226,62 +227,49 @@ function KeypadButton({ label, onPress, disabled }: KeypadButtonProps) {
 const KEY_SIZE = 76;
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#020617' },
-  glowOrb: { position: 'absolute', borderRadius: 9999 },
-  glowIndigo: { width: 280, height: 280, top: 40, left: -90, backgroundColor: 'rgba(79, 70, 229, 0.2)' },
-  glowEmerald: { width: 240, height: 240, bottom: 60, right: -70, backgroundColor: 'rgba(16, 185, 129, 0.12)' },
+  container: { flex: 1, backgroundColor: palette.graphite },
   content: { flexGrow: 1, alignItems: 'center', paddingHorizontal: 24, paddingTop: 56, paddingBottom: 32 },
-  backRow: { alignSelf: 'flex-start', flexDirection: 'row', alignItems: 'center', gap: 2, paddingVertical: 6 },
-  backText: { fontSize: 15, color: '#94a3b8' },
+  backRow: { alignSelf: 'flex-start', flexDirection: 'row', alignItems: 'center', gap: 2, paddingVertical: 10, minHeight: 44 },
+  backText: { fontSize: 15, color: palette.n400 },
   header: { alignItems: 'center', marginTop: 8, marginBottom: 24 },
-  badge: {
-    width: 64,
-    height: 64,
-    borderRadius: 20,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.18)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: { marginTop: 14, fontSize: 28, fontWeight: '800', color: '#ffffff', textAlign: 'center' },
-  hint: { marginTop: 8, fontSize: 16, lineHeight: 22, color: '#cbd5e1', textAlign: 'center', maxWidth: 300 },
+  title: { marginTop: 16, fontFamily: fonts.display, fontSize: 28, letterSpacing: tightTracking(28), color: palette.fog, textAlign: 'center' },
+  hint: { marginTop: 8, fontSize: 16, lineHeight: 22, color: palette.n300, textAlign: 'center', maxWidth: 300 },
   slotsRow: { flexDirection: 'row', gap: 8 },
   slot: {
     width: 46,
     height: 60,
     borderRadius: 16,
     borderWidth: 2,
-    borderColor: 'rgba(255, 255, 255, 0.18)',
-    backgroundColor: 'rgba(255, 255, 255, 0.06)',
+    borderColor: alpha(palette.white, 0.18),
+    backgroundColor: alpha(palette.white, 0.06),
     alignItems: 'center',
     justifyContent: 'center',
   },
-  slotFilled: { borderColor: '#818cf8', backgroundColor: 'rgba(99, 102, 241, 0.25)' },
+  slotFilled: { borderColor: palette.mint, backgroundColor: alpha(palette.mint, 0.25) },
   slotGap: { marginRight: 10 },
-  slotText: { fontSize: 28, fontWeight: '800', color: '#ffffff', fontVariant: ['tabular-nums'] },
+  slotText: { fontSize: 28, fontWeight: '800', color: palette.white, fontVariant: ['tabular-nums'] },
   statusArea: { minHeight: 76, alignSelf: 'stretch', alignItems: 'center', justifyContent: 'center', gap: 10, marginVertical: 12 },
   statusRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
-  statusText: { fontSize: 16, color: '#c7d2fe' },
+  statusText: { fontSize: 16, color: palette.mint },
   errorBox: {
     alignSelf: 'stretch',
     padding: 12,
     borderRadius: 14,
-    backgroundColor: 'rgba(244, 63, 94, 0.14)',
+    backgroundColor: alpha(palette.dangerDark, 0.14),
     borderWidth: 1,
-    borderColor: 'rgba(244, 63, 94, 0.4)',
+    borderColor: alpha(palette.dangerDark, 0.4),
   },
-  errorText: { fontSize: 15, lineHeight: 21, color: '#fda4af', textAlign: 'center', fontVariant: ['tabular-nums'] },
+  errorText: { fontSize: 15, lineHeight: 21, color: palette.dangerDark, textAlign: 'center', fontVariant: ['tabular-nums'] },
   retryButton: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
     paddingHorizontal: 22,
     height: 48,
-    borderRadius: 14,
-    backgroundColor: '#4f46e5',
+    borderRadius: radius.button,
+    backgroundColor: palette.mint,
   },
-  retryText: { fontSize: 16, fontWeight: '700', color: '#ffffff' },
+  retryText: { fontSize: 16, fontWeight: '700', color: palette.graphite },
   keypad: {
     width: KEY_SIZE * 3 + 18 * 2,
     flexDirection: 'row',
@@ -293,16 +281,16 @@ const styles = StyleSheet.create({
     width: KEY_SIZE,
     height: KEY_SIZE,
     borderRadius: KEY_SIZE / 2,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    backgroundColor: alpha(palette.white, 0.08),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.16)',
+    borderColor: alpha(palette.white, 0.16),
     alignItems: 'center',
     justifyContent: 'center',
   },
   keyGhost: { backgroundColor: 'transparent', borderColor: 'transparent' },
   keySpacer: { width: KEY_SIZE, height: KEY_SIZE },
   keyDisabled: { opacity: 0.4 },
-  keyPressed: { backgroundColor: 'rgba(99, 102, 241, 0.35)', transform: [{ scale: 0.96 }] },
-  keyText: { fontSize: 32, fontWeight: '700', color: '#ffffff' },
+  keyPressed: { backgroundColor: alpha(palette.mint, 0.35), transform: [{ scale: 0.96 }] },
+  keyText: { fontSize: 32, letterSpacing: tightTracking(32), fontFamily: fonts.displayBold, color: palette.white },
   pressed: { opacity: 0.85 },
 });

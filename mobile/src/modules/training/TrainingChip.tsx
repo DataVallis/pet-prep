@@ -5,10 +5,12 @@
  * Rendered only for a pet with training (never for a legacy pet / older server).
  */
 
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { Check, GraduationCap } from 'lucide-react-native';
 
 import { TRAINING_STRINGS } from '@/modules/training/training';
+import { alpha, palette } from '@/theme';
 
 export interface TrainingChipProps {
   todayDone: boolean;
@@ -28,11 +30,11 @@ export default function TrainingChip({ todayDone, onPress, disabled = false }: T
       hitSlop={6}
       style={({ pressed }) => [styles.chip, pressed && styles.pressed, disabled && styles.disabled]}
     >
-      <GraduationCap color="#a5b4fc" size={16} />
+      <GraduationCap color={palette.mint} size={16} />
       <Text style={styles.text}>{TRAINING_STRINGS.entry}</Text>
       {todayDone ? (
         <View style={styles.done} testID="hud-training-done">
-          <Check color="#ffffff" size={10} />
+          <Check color={palette.white} size={10} />
         </View>
       ) : (
         <View style={styles.badge} testID="hud-training-badge" />
@@ -49,17 +51,17 @@ const styles = StyleSheet.create({
     minHeight: 40,
     paddingHorizontal: 14,
     borderRadius: 20,
-    backgroundColor: 'rgba(15, 23, 42, 0.85)',
+    backgroundColor: alpha(palette.graphite, 0.85),
     borderWidth: 1,
-    borderColor: 'rgba(165, 180, 252, 0.35)',
+    borderColor: alpha(palette.mint, 0.35),
   },
-  text: { color: '#ffffff', fontSize: 14, fontWeight: '800' },
-  badge: { width: 9, height: 9, borderRadius: 5, backgroundColor: '#f59e0b' },
+  text: { color: palette.white, fontSize: 14, fontWeight: '800' },
+  badge: { width: 9, height: 9, borderRadius: 5, backgroundColor: palette.warnDark },
   done: {
     width: 16,
     height: 16,
     borderRadius: 8,
-    backgroundColor: '#10b981',
+    backgroundColor: palette.okDark,
     alignItems: 'center',
     justifyContent: 'center',
   },

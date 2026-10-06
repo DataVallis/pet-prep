@@ -4,8 +4,10 @@
  * its own "Dodaj otroka". Light parent theme (ADR-007).
  */
 
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { ChevronRight, UserPlus } from 'lucide-react-native';
+import { fonts, palette, tightTracking } from '@/theme';
 
 /** User-visible strings (extract to i18n with M1-18). */
 export const ADD_CHILD_CARD_STRINGS = {
@@ -31,14 +33,14 @@ export default function AddChildCard({ onPress, compact = false }: AddChildCardP
       style={({ pressed }) => [styles.card, compact && styles.cardCompact, pressed && styles.pressed]}
     >
       <View style={styles.iconBadge}>
-        <UserPlus color="#4f46e5" size={compact ? 20 : 26} />
+        <UserPlus color={palette.graphite} size={compact ? 20 : 26} />
       </View>
       <View style={styles.textCol}>
         <Text style={[styles.title, compact && styles.titleCompact]}>{S.title}</Text>
         {!compact && <Text style={styles.body}>{S.body}</Text>}
         <View style={styles.ctaRow}>
           <Text style={styles.cta}>{S.cta}</Text>
-          <ChevronRight color="#4f46e5" size={16} />
+          <ChevronRight color={palette.graphite} size={16} />
         </View>
       </View>
     </Pressable>
@@ -52,10 +54,10 @@ const styles = StyleSheet.create({
     gap: 14,
     padding: 18,
     borderRadius: 20,
-    backgroundColor: '#ffffff',
+    backgroundColor: palette.white,
     borderWidth: 2,
-    borderColor: '#c7d2fe',
-    shadowColor: '#4f46e5',
+    borderColor: palette.mintBorder,
+    shadowColor: palette.graphite,
     shadowOffset: { width: 0, height: 6 },
     shadowOpacity: 0.15,
     shadowRadius: 14,
@@ -66,15 +68,15 @@ const styles = StyleSheet.create({
     width: 48,
     height: 48,
     borderRadius: 14,
-    backgroundColor: '#eef2ff',
+    backgroundColor: palette.mintSoft,
     alignItems: 'center',
     justifyContent: 'center',
   },
   textCol: { flex: 1, gap: 4 },
-  title: { fontSize: 19, fontWeight: '800', color: '#0f172a' },
+  title: { fontSize: 19, letterSpacing: tightTracking(19), fontFamily: fonts.displayBold, color: palette.graphite },
   titleCompact: { fontSize: 16 },
-  body: { fontSize: 14, lineHeight: 20, color: '#475569' },
+  body: { fontSize: 14, lineHeight: 20, color: palette.n600 },
   ctaRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 4 },
-  cta: { fontSize: 14, fontWeight: '700', color: '#4f46e5' },
+  cta: { fontSize: 14, fontWeight: '700', color: palette.mintDeep },
   pressed: { opacity: 0.85 },
 });

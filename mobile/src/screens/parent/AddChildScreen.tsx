@@ -15,17 +15,8 @@
  */
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import {
-  ActivityIndicator,
-  KeyboardAvoidingView,
-  Platform,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from 'react-native';
+import { ActivityIndicator, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Text, TextInput } from '@/components/ui/Text';
 import { CheckCircle, ChevronLeft, ChevronRight, Dog, KeyRound, Lock, PawPrint, RefreshCw, Smartphone } from 'lucide-react-native';
 
 import type { ChildPinResponse, NewPetProfile, PetBreed, PinLoginMode } from '@/api/client';
@@ -53,6 +44,7 @@ import {
 import { classifyPinError, formatCountdown, formatPin, pinRequestKey, secondsUntil, type PinErrorKind } from '@/modules/pairing/pin';
 import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { refreshSessionPet } from '@/modules/session/logout';
+import { fonts, palette, tightTracking } from '@/theme';
 
 /** All user-visible strings of this screen (extract to i18n with M1-18). */
 export const ADD_CHILD_STRINGS = {
@@ -172,7 +164,7 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
     <View style={styles.root}>
       <View style={styles.header}>
         <Pressable onPress={onBack} hitSlop={8} accessibilityRole="button" accessibilityLabel={S.back}>
-          <ChevronLeft color="#4f46e5" size={28} />
+          <ChevronLeft color={palette.graphite} size={28} />
         </Pressable>
         <Text style={styles.headerTitle}>{isRelogin ? S.titleRelogin : S.title}</Text>
       </View>
@@ -295,7 +287,7 @@ function ProfileStep({ onCreated }: { onCreated: (child: { id: number; name: str
               setValidation(null);
             }}
             placeholder={S.nicknamePlaceholder}
-            placeholderTextColor="#94a3b8"
+            placeholderTextColor={palette.n500}
             maxLength={NICKNAME_MAX_LENGTH}
             autoCapitalize="words"
             autoCorrect={false}
@@ -314,7 +306,7 @@ function ProfileStep({ onCreated }: { onCreated: (child: { id: number; name: str
               setValidation(null);
             }}
             placeholder={S.birthYearPlaceholder}
-            placeholderTextColor="#94a3b8"
+            placeholderTextColor={palette.n500}
             keyboardType="number-pad"
             maxLength={4}
             editable={!create.isPending}
@@ -323,7 +315,7 @@ function ProfileStep({ onCreated }: { onCreated: (child: { id: number; name: str
           />
 
           <View style={styles.privacyBox}>
-            <Lock color="#059669" size={16} />
+            <Lock color={palette.ok} size={16} />
             <View style={styles.flex}>
               <Text style={styles.privacyTitle}>{S.privacy}</Text>
               <Text style={styles.privacyBody}>{S.privacyDetail}</Text>
@@ -342,7 +334,7 @@ function ProfileStep({ onCreated }: { onCreated: (child: { id: number; name: str
             disabled={create.isPending || nickname.trim() === ''}
             accessibilityRole="button"
           >
-            {create.isPending ? <ActivityIndicator color="#ffffff" /> : <Text style={styles.primaryButtonText}>{S.next}</Text>}
+            {create.isPending ? <ActivityIndicator color={palette.white} /> : <Text style={styles.primaryButtonText}>{S.next}</Text>}
           </Pressable>
         </View>
       </ScrollView>
@@ -361,7 +353,7 @@ function PetStep({ childName, onChoose }: { childName: string; onChoose: (petId:
       <Text style={styles.stepTitle}>{S.petTitle(childName)}</Text>
 
       <PetOption
-        icon={<PawPrint color="#4f46e5" size={22} />}
+        icon={<PawPrint color={palette.graphite} size={22} />}
         title={S.newPet}
         hint={S.newPetHint}
         onPress={() => onChoose(null)}
@@ -370,7 +362,7 @@ function PetStep({ childName, onChoose }: { childName: string; onChoose: (petId:
 
       {dashboard.isPending ? (
         <View style={styles.waitingRow}>
-          <ActivityIndicator size="small" color="#94a3b8" />
+          <ActivityIndicator size="small" color={palette.n500} />
           <Text style={styles.muted}>{S.petsLoading}</Text>
         </View>
       ) : (
@@ -378,7 +370,7 @@ function PetStep({ childName, onChoose }: { childName: string; onChoose: (petId:
         pets.map((pet) => (
           <PetOption
             key={pet.id}
-            icon={<Dog color="#4f46e5" size={22} />}
+            icon={<Dog color={palette.graphite} size={22} />}
             title={S.joinPet(breedLabel(pet.breed_type))}
             hint={S.joinPetHint(caretakerNames(pet, family))}
             onPress={() => onChoose(pet.id)}
@@ -412,7 +404,7 @@ function PetOption({ icon, title, hint, onPress, testID }: PetOptionProps) {
         <Text style={styles.optionTitle}>{title}</Text>
         <Text style={styles.optionHint}>{hint}</Text>
       </View>
-      <ChevronRight color="#94a3b8" size={20} />
+      <ChevronRight color={palette.n500} size={20} />
     </Pressable>
   );
 }
@@ -522,7 +514,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
     return (
       <ScrollView contentContainerStyle={styles.content}>
         <View style={styles.card} testID="add-child-paired">
-          <CheckCircle color="#10b981" size={44} />
+          <CheckCircle color={palette.ok} size={44} />
           <Text style={styles.pairedTitle}>{S.pairedTitle}</Text>
           <Text style={styles.bodyCentered}>{S.pairedBody[mode](target.name)}</Text>
           <Pressable style={({ pressed }) => [styles.primaryButton, pressed && styles.pressed]} onPress={onDone}>
@@ -537,14 +529,14 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
     <ScrollView contentContainerStyle={styles.content}>
       <View style={styles.card}>
         <View style={styles.iconBadge}>
-          <KeyRound color="#4f46e5" size={22} />
+          <KeyRound color={palette.graphite} size={22} />
         </View>
         <Text style={styles.pinLabel}>{S.pinLabel}</Text>
         <Text style={styles.pinFor}>{S.pinFor(target.name)}</Text>
 
         {pin === null && generate.isPending ? (
           <View style={styles.pinPlaceholder}>
-            <ActivityIndicator color="#4f46e5" />
+            <ActivityIndicator color={palette.graphite} />
             <Text style={styles.muted}>{S.generating}</Text>
           </View>
         ) : pin !== null ? (
@@ -597,10 +589,10 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
             accessibilityState={{ disabled: !canRequest }}
           >
             {generate.isPending && pin !== null ? (
-              <ActivityIndicator color="#4f46e5" />
+              <ActivityIndicator color={palette.graphite} />
             ) : (
               <>
-                <RefreshCw color="#4f46e5" size={16} />
+                <RefreshCw color={palette.graphite} size={16} />
                 <Text style={styles.secondaryButtonText}>{pin === null && pinError ? S.retry : S.newCode}</Text>
               </>
             )}
@@ -609,7 +601,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
 
         {pin !== null && !isExpired && (
           <View style={styles.waitingRow}>
-            <ActivityIndicator size="small" color="#94a3b8" />
+            <ActivityIndicator size="small" color={palette.n500} />
             <Text style={styles.muted}>{S.waiting}</Text>
           </View>
         )}
@@ -617,7 +609,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
 
       <View style={styles.card}>
         <View style={styles.instructionsHeader}>
-          <Smartphone color="#4f46e5" size={20} />
+          <Smartphone color={palette.graphite} size={20} />
           <Text style={styles.body}>{S.instructions}</Text>
         </View>
         {S.steps[mode].map((text, index) => (
@@ -646,7 +638,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#f8fafc' },
+  root: { flex: 1, backgroundColor: palette.fog },
   flex: { flex: 1 },
   header: {
     paddingTop: Platform.OS === 'ios' ? 56 : 40,
@@ -655,39 +647,39 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
-    backgroundColor: '#ffffff',
+    backgroundColor: palette.white,
     borderBottomWidth: 1,
-    borderBottomColor: '#e2e8f0',
+    borderBottomColor: palette.n200,
   },
-  headerTitle: { fontSize: 20, fontWeight: '800', color: '#0f172a' },
+  headerTitle: { fontSize: 20, letterSpacing: tightTracking(20), fontFamily: fonts.display, color: palette.graphite },
   content: { padding: 16, gap: 16, paddingBottom: 32 },
   card: {
-    backgroundColor: '#ffffff',
+    backgroundColor: palette.white,
     borderRadius: 20,
     padding: 20,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: palette.n200,
     alignItems: 'center',
     gap: 10,
   },
   formCard: {
-    backgroundColor: '#ffffff',
+    backgroundColor: palette.white,
     borderRadius: 20,
     padding: 20,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: palette.n200,
     gap: 8,
   },
-  fieldLabel: { marginTop: 6, fontSize: 13, fontWeight: '700', color: '#334155' },
+  fieldLabel: { marginTop: 6, fontSize: 13, fontWeight: '700', color: palette.n700 },
   input: {
     height: 50,
     borderRadius: 14,
     borderWidth: 1,
-    borderColor: '#cbd5e1',
-    backgroundColor: '#f8fafc',
+    borderColor: palette.n300,
+    backgroundColor: palette.fog,
     paddingHorizontal: 14,
     fontSize: 16,
-    color: '#0f172a',
+    color: palette.graphite,
   },
   privacyBox: {
     marginTop: 10,
@@ -695,97 +687,97 @@ const styles = StyleSheet.create({
     gap: 10,
     padding: 12,
     borderRadius: 14,
-    backgroundColor: '#ecfdf5',
+    backgroundColor: palette.okSoft,
     borderWidth: 1,
-    borderColor: '#a7f3d0',
+    borderColor: palette.okBorder,
   },
-  privacyTitle: { fontSize: 14, fontWeight: '700', color: '#065f46' },
-  privacyBody: { marginTop: 2, fontSize: 13, lineHeight: 18, color: '#047857' },
-  stepTitle: { fontSize: 18, fontWeight: '800', color: '#0f172a' },
+  privacyTitle: { fontSize: 14, fontWeight: '700', color: palette.mintDeep },
+  privacyBody: { marginTop: 2, fontSize: 13, lineHeight: 18, color: palette.ok },
+  stepTitle: { fontSize: 18, letterSpacing: tightTracking(18), fontFamily: fonts.displayBold, color: palette.graphite },
   option: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
     padding: 16,
     borderRadius: 18,
-    backgroundColor: '#ffffff',
+    backgroundColor: palette.white,
     borderWidth: 1,
-    borderColor: '#c7d2fe',
+    borderColor: palette.mintBorder,
   },
-  optionTitle: { fontSize: 16, fontWeight: '700', color: '#0f172a' },
-  optionHint: { marginTop: 2, fontSize: 13, lineHeight: 18, color: '#64748b' },
+  optionTitle: { fontSize: 16, fontWeight: '700', color: palette.graphite },
+  optionHint: { marginTop: 2, fontSize: 13, lineHeight: 18, color: palette.n600 },
   iconBadge: {
     width: 44,
     height: 44,
     borderRadius: 14,
-    backgroundColor: '#eef2ff',
+    backgroundColor: palette.mintSoft,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  pinLabel: { fontSize: 13, fontWeight: '700', letterSpacing: 0.6, color: '#64748b', textTransform: 'uppercase' },
-  pinFor: { fontSize: 15, fontWeight: '600', color: '#334155' },
+  pinLabel: { fontSize: 13, fontWeight: '700', letterSpacing: 0.6, color: palette.n600, textTransform: 'uppercase' },
+  pinFor: { fontSize: 15, fontWeight: '600', color: palette.n700 },
   pinPlaceholder: { height: 72, alignItems: 'center', justifyContent: 'center', gap: 8 },
-  pin: { fontSize: 52, fontWeight: '800', letterSpacing: 4, color: '#0f172a', fontVariant: ['tabular-nums'] },
-  pinExpired: { color: '#cbd5e1', textDecorationLine: 'line-through' },
-  countdown: { fontSize: 15, fontWeight: '600', color: '#10b981', fontVariant: ['tabular-nums'] },
-  expired: { fontSize: 15, fontWeight: '600', color: '#f43f5e' },
+  pin: { fontSize: 52, fontWeight: '800', letterSpacing: 4, color: palette.graphite, fontVariant: ['tabular-nums'] },
+  pinExpired: { color: palette.n300, textDecorationLine: 'line-through' },
+  countdown: { fontSize: 15, fontWeight: '600', color: palette.ok, fontVariant: ['tabular-nums'] },
+  expired: { fontSize: 15, fontWeight: '600', color: palette.danger },
   errorBox: {
     alignSelf: 'stretch',
     marginTop: 6,
     padding: 12,
     borderRadius: 12,
-    backgroundColor: '#fff1f2',
+    backgroundColor: palette.dangerSoft,
     borderWidth: 1,
-    borderColor: '#fecdd3',
+    borderColor: palette.dangerBorder,
   },
-  errorText: { fontSize: 13, color: '#be123c', textAlign: 'center' },
+  errorText: { fontSize: 13, color: palette.danger, textAlign: 'center' },
   secondaryButton: {
     alignSelf: 'stretch',
     height: 48,
     marginTop: 6,
     borderRadius: 14,
     borderWidth: 1,
-    borderColor: '#c7d2fe',
-    backgroundColor: '#eef2ff',
+    borderColor: palette.mintBorder,
+    backgroundColor: palette.mintSoft,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
   },
-  secondaryButtonText: { fontSize: 15, fontWeight: '700', color: '#4f46e5' },
+  secondaryButtonText: { fontSize: 15, fontWeight: '700', color: palette.mintDeep },
   buttonDisabled: { opacity: 0.5 },
   waitingRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 4 },
-  muted: { fontSize: 13, color: '#64748b' },
+  muted: { fontSize: 13, color: palette.n600 },
   instructionsHeader: { flexDirection: 'row', alignItems: 'center', gap: 10, alignSelf: 'stretch' },
-  body: { flex: 1, fontSize: 14, lineHeight: 20, color: '#334155' },
-  bodyCentered: { fontSize: 14, lineHeight: 20, color: '#334155', textAlign: 'center' },
+  body: { flex: 1, fontSize: 14, lineHeight: 20, color: palette.n700 },
+  bodyCentered: { fontSize: 14, lineHeight: 20, color: palette.n700, textAlign: 'center' },
   stepRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10, alignSelf: 'stretch' },
   stepNumber: {
     width: 22,
     height: 22,
     borderRadius: 11,
     overflow: 'hidden',
-    backgroundColor: '#eef2ff',
-    color: '#4f46e5',
+    backgroundColor: palette.mintSoft,
+    color: palette.mintDeep,
     fontSize: 12,
     fontWeight: '800',
     textAlign: 'center',
     lineHeight: 22,
   },
-  stepText: { flex: 1, fontSize: 14, lineHeight: 20, color: '#334155' },
-  note: { alignSelf: 'stretch', fontSize: 12, color: '#94a3b8' },
+  stepText: { flex: 1, fontSize: 14, lineHeight: 20, color: palette.n700 },
+  note: { alignSelf: 'stretch', fontSize: 12, color: palette.n500 },
   linkButton: { alignSelf: 'flex-start', paddingVertical: 4 },
-  linkText: { fontSize: 14, fontWeight: '700', color: '#4f46e5', textDecorationLine: 'underline' },
-  pairedTitle: { fontSize: 20, fontWeight: '800', color: '#0f172a' },
+  linkText: { fontSize: 14, fontWeight: '700', color: palette.mintDeep, textDecorationLine: 'underline' },
+  pairedTitle: { fontSize: 20, letterSpacing: tightTracking(20), fontFamily: fonts.display, color: palette.graphite },
   primaryButton: {
     alignSelf: 'stretch',
     height: 50,
     marginTop: 12,
     borderRadius: 14,
-    backgroundColor: '#4f46e5',
+    backgroundColor: palette.graphite,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  primaryButtonText: { fontSize: 16, fontWeight: '700', color: '#ffffff' },
+  primaryButtonText: { fontSize: 16, fontWeight: '700', color: palette.white },
   pressed: { opacity: 0.85 },
 });

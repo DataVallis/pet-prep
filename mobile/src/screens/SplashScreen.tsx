@@ -1,11 +1,16 @@
 /**
  * SplashScreen — shown while the saved session is restored on launch (M1-12),
  * and when that restore can't reach the server (token kept, retry offered).
- * The role isn't known yet, so it uses the neutral brand background.
+ * The role isn't known yet, so it uses the neutral brand background: fog with the
+ * stacked logo, continuing the native splash (CGP v2 face on #F3F5F2).
  */
 
-import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
-import { PawPrint, WifiOff } from 'lucide-react-native';
+import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
+import { WifiOff } from 'lucide-react-native';
+
+import { BrandLogo } from '@/components/brand/BrandLogo';
+import { fonts, light, radius, tightTracking } from '@/theme';
 
 /** User-visible strings (extract to i18n with M1-18). */
 export const SPLASH_STRINGS = {
@@ -26,19 +31,19 @@ export default function SplashScreen({ mode, onRetry, onLogout }: SplashScreenPr
   const S = SPLASH_STRINGS;
   return (
     <View style={styles.container} testID={`splash-${mode}`}>
-      <View style={styles.logoBadge}>
-        {mode === 'offline' ? <WifiOff color="#fb7185" size={34} /> : <PawPrint color="#818cf8" size={38} />}
-      </View>
-      <Text style={styles.title}>PetPrep</Text>
+      <BrandLogo layout="stacked" width={150} tone="light" testID="splash-logo" />
 
       {mode === 'restoring' ? (
         <>
-          <ActivityIndicator color="#818cf8" style={styles.spinner} />
+          <ActivityIndicator color={light.ink} style={styles.spinner} />
           <Text style={styles.subtitle}>{S.restoring}</Text>
         </>
       ) : (
         <>
-          <Text style={styles.offlineTitle}>{S.offlineTitle}</Text>
+          <View style={styles.offlineRow}>
+            <WifiOff color={light.danger} size={20} />
+            <Text style={styles.offlineTitle}>{S.offlineTitle}</Text>
+          </View>
           <Text style={styles.subtitle}>{S.offlineBody}</Text>
           <Pressable
             style={({ pressed }) => [styles.primaryButton, pressed && styles.pressed]}
@@ -62,33 +67,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 32,
-    backgroundColor: '#020617',
+    backgroundColor: light.bg,
   },
-  logoBadge: {
-    width: 80,
-    height: 80,
-    borderRadius: 24,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.18)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: { marginTop: 14, fontSize: 30, fontWeight: '800', color: '#ffffff' },
-  spinner: { marginTop: 24 },
-  subtitle: { marginTop: 10, fontSize: 14, lineHeight: 20, color: '#94a3b8', textAlign: 'center' },
-  offlineTitle: { marginTop: 20, fontSize: 18, fontWeight: '700', color: '#ffffff' },
+  spinner: { marginTop: 28 },
+  subtitle: { marginTop: 10, maxWidth: 320, fontSize: 14, lineHeight: 20, color: light.inkMuted, textAlign: 'center' },
+  offlineRow: { marginTop: 28, flexDirection: 'row', alignItems: 'center', gap: 8 },
+  offlineTitle: { fontFamily: fonts.displayBold, fontSize: 20, letterSpacing: tightTracking(20), color: light.ink },
   primaryButton: {
     marginTop: 24,
     alignSelf: 'stretch',
+    maxWidth: 380,
     height: 52,
-    borderRadius: 14,
-    backgroundColor: '#4f46e5',
+    borderRadius: radius.button,
+    backgroundColor: light.action,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  primaryButtonText: { fontSize: 16, fontWeight: '700', color: '#ffffff' },
-  linkButton: { marginTop: 14, padding: 8 },
-  linkText: { fontSize: 14, color: '#64748b' },
+  primaryButtonText: { fontSize: 16, fontWeight: '600', color: light.onAction },
+  linkButton: { marginTop: 14, padding: 10, minHeight: 44, justifyContent: 'center' },
+  linkText: { fontSize: 14, fontWeight: '600', color: light.inkMuted },
   pressed: { opacity: 0.85 },
 });

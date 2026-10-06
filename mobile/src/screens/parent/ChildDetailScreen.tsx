@@ -14,7 +14,8 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { Check, ChevronLeft, X } from 'lucide-react-native';
 
 import { ApiError } from '@/api/client';
@@ -55,6 +56,7 @@ import { localParts } from '@/modules/childPet/familyTime';
 import { mealsLine, nextStageLine, originLine, readPetProfile, stageLine } from '@/modules/petProfile/petProfile';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 import { PARENT_TRAINING_STRINGS, parentTrainingLines } from '@/modules/training/training';
+import { fonts, palette, tightTracking } from '@/theme';
 
 export const CHILD_DETAIL_STRINGS = {
   back: 'Nazaj',
@@ -125,7 +127,7 @@ function Timeline({ petId, family }: { petId: number; family: FamilyOverview }) 
           return (
             <View key={item.id} style={styles.timelineRow} testID={`timeline-item-${item.id}`}>
               <View style={[styles.timelineBadge, { backgroundColor: item.is_positive ? C.green : C.red }]}>
-                {item.is_positive ? <Check color="#ffffff" size={12} /> : <X color="#ffffff" size={12} />}
+                {item.is_positive ? <Check color={palette.white} size={12} /> : <X color={palette.white} size={12} />}
               </View>
               <Text style={styles.timelineText}>{activityText({ activity_type: item.activity_type, actor_nickname: nickname })}</Text>
               <Text style={styles.muted}>{activityWhenText(item.created_at, family.timezone, today)}</Text>
@@ -412,7 +414,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: C.border,
   },
-  headerTitle: { flex: 1, fontSize: 20, fontWeight: '800', color: C.text },
+  headerTitle: { flex: 1, fontSize: 20, letterSpacing: tightTracking(20), fontFamily: fonts.display, color: C.text },
   content: { padding: 16, gap: 14, paddingBottom: 32 },
   petMedia: { height: 220 },
   label: { fontSize: 12, fontWeight: '700', color: C.muted, textTransform: 'uppercase', letterSpacing: 0.4 },
@@ -445,6 +447,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     backgroundColor: C.accentSoft,
   },
-  moreText: { fontSize: 14, fontWeight: '700', color: C.accent },
+  moreText: { fontSize: 14, fontWeight: '700', color: C.link },
   pressed: { opacity: 0.8 },
 });

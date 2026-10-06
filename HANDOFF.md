@@ -5,9 +5,9 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-06 evening (Claude, orchestrator — `/handoff` at the end of a long session; David's training decisions recorded; long-session rule added to CLAUDE.md).
+- **Last updated:** 2026-10-06 late evening (Claude, orchestrator — mobile app rebranded to CGP v2: theme tokens, brand fonts, new app icons / splash, logos).
 - **Production:** `https://api.petprep.si` live (Hetzner CX23, Docker Compose + Caddy). Merge to `main` → CI (`CI OK`) → automatic deploy when backend / deployment / scripts / workflow changed (DEPLOYMENT.md D16). Website `petprep.si` is served from the separate repo `DataVallis/pet-prep-website` (D15). Last verified deploy: `98eabfb` (M5-R03 training backend), 2026-10-06.
-- **App:** TestFlight build 1.24.4 has the push-registration loop (fixed on `main`, PR #45/#48). **David must ship a new TestFlight build from `main`** (he owns app version — commit `58551b1` "mobile version change" is his). Nothing from M5-R02 / M5-R03 UI has been checked on a device yet.
+- **App:** TestFlight build 1.24.4 has the push-registration loop (fixed on `main`, PR #45/#48). **David must ship a new TestFlight build from `main`** (he owns app version — commit `58551b1` "mobile version change" is his). Nothing from M5-R02 / M5-R03 UI and nothing of the **CGP v2 rebrand** has been checked on a device yet. The rebrand adds native modules (`expo-font`, `expo-splash-screen`) and new icons / splash → needs a **new native EAS build** (an OTA update is not enough).
 - **All PRs #1–#56 are merged; no open PRs.** `main` @ `58551b1`.
 - **Realistic MVP completion:** ~55 % (payments, HealthKit / Health Connect, i18n, privacy / store review, beta still missing).
 
@@ -54,13 +54,23 @@
 
 ## 5. Next steps (priority queue)
 
-1. **David:** new TestFlight build from `main` (fixes the push loop; contains M5-R02 + M5-R03 UI). Then device checks: one `POST /api/devices` per login in the Caddy log; "Šola" chip at 375 pt; "Pohvali" responsiveness; kill app mid-training and reopen; TalkBack / VoiceOver.
+1. **David:** new TestFlight / Android build from `main` (fixes the push loop; contains M5-R02 + M5-R03 UI and the CGP v2 rebrand). Rebrand checks: home-screen icon (iOS + Android adaptive / themed), splash on fog, fonts render (Instrument Sans body, Bricolage headings, Slovenian č/š/ž), status-bar text dark on light screens and light in the child app, mint "due" care button. Then device checks: one `POST /api/devices` per login in the Caddy log; "Šola" chip at 375 pt; "Pohvali" responsiveness; kill app mid-training and reopen; TalkBack / VoiceOver.
 2. **David:** delete stale remote branches `diag/pet-state-1006`, `diag/prod-logs-1006`, `diag/child-flow`, `wip/M5-R04-picker-followup` (agent can't delete remote branches).
 3. **M5-R03b** (backend + app): flip the confirmed training numbers to `verified = true`; adult-arrival start progress (sit 50, potty 70, come 30, place 0; puppies 0); fair share of the 5 min daily budget between the pet's children. Tests + docs.
 4. **M5-R04 part 2:** growth album (pet images across life stages).
 5. **David:** answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-06 late (cloud, orchestrator) — CGP v2 mobile rebrand
+- **Theme:** `mobile/src/theme/` (palette + light/dark/meter tokens from `brand/README.md`, radii, fonts); every screen/component recoloured from the old Tailwind palette (codemod + manual pass): parent, auth, start, splash and the breed paywall are light (fog + white cards, graphite primary, mint-text links); child PIN, contract, HUD, overlays dark graphite (mint primary with graphite text). Glow orbs removed / calmed. Guard `src/__tests__/brandColours.test.ts` (no hex outside `src/theme`, `Text` only from `@/components/ui/Text`).
+- **Type:** `@expo-google-fonts/bricolage-grotesque` + `instrument-sans` (6 faces via per-weight subpaths), `expo-font`; brand `Text`/`TextInput` maps `fontWeight` → Instrument Sans face; headings Bricolage with tight tracking (codemod on fontSize ≥ 20). Native splash held until fonts load.
+- **Icons / splash / logos:** `mobile/assets/*` replaced with `brand/app-icon/*` (iOS icon flattened to RGB — App Store rejects alpha), adaptive bg `#7FE0B4`, notification colour `#1A7A55`, `expo-splash-screen` plugin (face on `#F3F5F2`). `BrandMark` / `BrandLogo` (react-native-svg, generated wordmark glyphs) on start (logo + slogan), splash (stacked), parent login / signup, child PIN (mark on dark), parent dashboard header.
+- **HUD:** `ActionButton due` = solid mint (feed while `can_feed`, scrub when needed, "Pelji ven" when due).
+- **Status bar:** default dark text; child branch + PIN login use `useDarkStatusBar()` (several `<StatusBar>` elements mounting/unmounting in one commit looped forever under Jest fake timers).
+- **Verified:** `tsc` clean, Jest 1064/1064, `expo config` resolves; visual check via a temporary web export (Playwright screenshots of start, splash, login, signup, PIN, dashboard, child detail, controls, add child, paywall, HUD, contract, lock) — temporary web deps and gallery were removed again. **Not verified on a device.**
+- **QA review (independent):** approved; fixed font-failure fallback (brand family names only once registered + 4 s splash timeout), nested Text inheriting the parent face, due-button pressed state, one due button at a time (take out > scrub > feed), status bar on the legacy no-pet path, disabled auth button contrast.
+- **Debt:** HUD keeps the emoji dog placeholder and the warm "mud" rgba colours in `CleaningOverlay`; `app.json` `userInterfaceStyle` stays `light` (no system dark mode yet); i18n still pending (M1-18).
 
 ### 2026-10-06 (cloud, orchestrator) — incident, CI speed-up, M5-R03, handoff
 - **Incident (TestFlight 1.24.4):** 429 on `GET /api/child/pet` + crash → cause: iOS push-token echo loop (`POST /api/devices` up to ~1 650/min) draining the shared `api` limiter. Fixed: PR #45 (mobile dedupe / limiter / backoff, child refetch governor, 429 handling with Retry-After, HUD error boundary, lock time in family TZ; backend `throttle:devices` 10/min/user, unregister stays on `api`), PR #48 follow-ups (rotation during in-flight run, generation counter, `logRenderError`, LockedScreen boundary). App identity rule in CLAUDE.md (PR #46).
