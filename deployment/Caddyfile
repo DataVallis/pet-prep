@@ -109,8 +109,8 @@
     }
 }
 
-# Production HTTPS domain
-api.petprep.si, petprep.si {
+# Production HTTPS domain — API, Reverb, Filament
+api.petprep.si {
     log {
         output stdout
         # Signed media URLs (GET /api/media/{id}?expires&v&signature, M4-05) are
@@ -129,6 +129,30 @@ api.petprep.si, petprep.si {
 
     import reverb
     import laravel
+}
+
+# Marketing website (repo DataVallis/pet-prep-website). The `petprep-website`
+# container joins this stack's network (backend_petprep-network) with the alias
+# `website`; it is deployed by that repo's own workflow. Until it runs, petprep.si
+# answers 502 — the API above is not affected.
+petprep.si {
+    log {
+        output stdout
+    }
+    encode zstd gzip
+
+    # Next.js build assets carry a content hash.
+    @next_static path /_next/static/*
+    header @next_static Cache-Control "public, max-age=31536000, immutable"
+
+    reverse_proxy website:3000 {
+        # Internal marker of the site's locale proxy; never accepted from clients.
+        header_up -X-Petprep-Locale-Rewrite
+    }
+}
+
+www.petprep.si {
+    redir https://petprep.si{uri} permanent
 }
 
 # Fallback direct IP access over HTTP (DEPLOYMENT.md D8)

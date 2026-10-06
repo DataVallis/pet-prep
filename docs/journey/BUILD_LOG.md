@@ -19,6 +19,13 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 💼 Investitorji: "Majhna ekipa z AI agenti: od popravka do produkcije v nekaj minutah, z avtomatskimi varovalkami."
 
 ---
+## 2026-10-06 — PetPrep dobi svojo spletno stran
+
+**Kaj:** nova celostna grafična podoba (»Grafit in meta«, znak Radovednež) in spletna stran petprep.si v angleščini in slovenščini: domača stran, kako deluje, za starše, po posvojitvi, cenik, pogosta vprašanja, partnerji, vlagatelji, kontakt, zasebnost, pogoji in varnost otrok. Stran je pripravljena za iskalnike in AI asistente (strukturirani podatki, zemljevid strani, `llms.txt`).
+
+**Zakaj je pomembno:** aplikacija že kaže na `petprep.si/pogoji` in `/zasebnost`; zdaj ti strani obstajata. PetPrep cilja na globalni trg — vsak nov jezik je ena datoteka z besedili.
+
+**Kako povedati:** 📣 »PetPrep ima dom na spletu: Pripravljeni na žival. Ob njej vse življenje.« · 💼 dvojezična stran, pripravljena na lokalizacijo, ločen deploy brez vpliva na API · 👩 vse o izzivu, ceni in zasebnosti na enem mestu. *Pravna besedila čakajo pregled pravnika.*
 
 ## 2026-10-06 — Hitri popravek: aplikacija ne obupa več ob preobremenitvi
 

@@ -137,7 +137,7 @@ Docker images on the server (M4-05b):
 
 ## 4. Automated CI/CD (GitHub Actions)
 
-Every pull request and push to `main` runs `.github/workflows/deploy-production.yml` ("CI & Deploy"). **Pre-production phase (David, 2026-10-03): every push/merge to `main` that changes `backend/`, `deployment/`, `scripts/` or the workflow deploys automatically** once `CI OK` is green; "Run workflow" on `main` always tests everything and deploys; restore manual-only deploys before real users (DEPLOYMENT.md D2). Since 2026-10-06 the pipeline does not repeat work (DEPLOYMENT.md D15):
+Every pull request and push to `main` runs `.github/workflows/deploy-production.yml` ("CI & Deploy"). **Pre-production phase (David, 2026-10-03): every push/merge to `main` that changes `backend/`, `deployment/`, `scripts/` or the workflow deploys automatically** once `CI OK` is green; "Run workflow" on `main` always tests everything and deploys; restore manual-only deploys before real users (DEPLOYMENT.md D2). Since 2026-10-06 the pipeline does not repeat work (DEPLOYMENT.md D16):
 
 1. **`plan`** (`scripts/ci-plan.sh`): computes the changed paths (PR: against the current `main`; push to `main`: against the last green `main` run — unknown → full run) and decides which suites run and whether `main` deploys. On a push to `main` it skips every suite that already passed in a successful PR run of this workflow on the **identical git tree** (marker artifacts `ci-green-<suite>-<tree>`). Docs-only changes finish in under a minute and don't deploy; mobile-only changes run only the mobile checks and don't deploy.
 2. **Suites** (each only when planned): `backend-tests` (Pest `--parallel` on PostgreSQL 18, PHP 8.3, one database per process), `mobile-checks` (tsc + Jest), `deploy-script-tests` (shellcheck + `scripts/tests/deploy-production.test.sh` with stubbed docker/git/curl + `scripts/tests/ci-plan.test.sh` with stubbed gh), `production-image` (M4-05b: hadolint, builds the `app` and `web` targets with buildx — GHA layer cache, no push —, `caddy validate` of the real Caddyfile inside the web image, smoke test: uid 1000, `php-fpm -t`, extensions, no dev packages / `.env` / tests in the image, entrypoint `optimize`).
@@ -206,7 +206,7 @@ ls -lh /opt/petprep/backups/
 ## 7. Rollback Procedure
 
 ### Code Rollback
-A failed deploy reverts the code by itself when the failure happens before migrations succeed. For a deliberate rollback to an older commit, merge a **revert commit** (normal PR + merge → tested and deployed like any change), or move `main` where it should be and use **"Run workflow"** on `main`. **Re-running an old run fails by design** (deploy guard, DEPLOYMENT.md D15: its commit is no longer the head of `main`); "Re-run all jobs" of the run of the *current* `main` head still redeploys it. Only roll code back past a migration if that migration is backward compatible — otherwise restore the database too (below). `cat /opt/petprep/repo/.deployed-sha` shows what is live.
+A failed deploy reverts the code by itself when the failure happens before migrations succeed. For a deliberate rollback to an older commit, merge a **revert commit** (normal PR + merge → tested and deployed like any change), or move `main` where it should be and use **"Run workflow"** on `main`. **Re-running an old run fails by design** (deploy guard, DEPLOYMENT.md D16: its commit is no longer the head of `main`); "Re-run all jobs" of the run of the *current* `main` head still redeploys it. Only roll code back past a migration if that migration is backward compatible — otherwise restore the database too (below). `cat /opt/petprep/repo/.deployed-sha` shows what is live.
 
 ### Rollback of the runtime (M4-05b: PHP-FPM image → Sail image)
 
@@ -287,3 +287,15 @@ When assigning a domain name (e.g. `api.petprep.io`):
    REVERB_SCHEME=https
    ```
 3. **Restart Caddy:** Caddy will automatically provision Let's Encrypt SSL/TLS certificates.
+
+## 10. Marketing website (petprep.si)
+
+The public website is a separate repository, `DataVallis/pet-prep-website`, deployed to the same server:
+
+- **Container:** `petprep-website` (image `petprep-website:production`, `:previous` for rollback), Node 22 Next.js standalone server on port 3000, no published ports; joins `backend_petprep-network` with the alias `website`.
+- **Files:** `/opt/petprep/website/incoming` (last uploaded commit, holds `deploy/compose.yaml` and `deploy/deploy.sh`), `/opt/petprep/website/.deployed-sha`.
+- **Deploy:** push to `main` in the website repo → GitHub Actions (lint, build, Docker smoke test) → rsync + `deploy/deploy.sh` as `deploy`. Secrets in that repo: `PRODUCTION_SSH_PRIVATE_KEY` (same key as here), optional `PRODUCTION_HOST`, `PRODUCTION_USER`.
+- **Routing:** Caddy (this repo, `deployment/Caddyfile`) serves `petprep.si` → `website:3000` and redirects `www.petprep.si` → `petprep.si`. The API stays on `api.petprep.si`.
+- **Logs / restart:** `docker logs -f petprep-website`; `docker compose -f /opt/petprep/website/incoming/deploy/compose.yaml up -d --force-recreate`.
+- **Rollback:** `docker tag petprep-website:previous petprep-website:production` and the restart command above.
+

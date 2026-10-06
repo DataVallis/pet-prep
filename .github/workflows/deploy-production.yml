@@ -1,6 +1,6 @@
 name: CI & Deploy
 
-# Pipeline (2026-10-06, DEPLOYMENT.md D15):
+# Pipeline (2026-10-06, DEPLOYMENT.md D16):
 #   plan ─┬─ backend-tests ───────┐
 #         ├─ mobile-checks ───────┤
 #         ├─ deploy-script-tests ─┼─ ci-ok (the one required status) ─ deploy (main only)
@@ -366,7 +366,7 @@ jobs:
 
       # Refuses (red, not skipped) when this run's commit is no longer the head of main —
       # push runs and every re-run; "Run workflow" (attempt 1) is not checked. Rollback =
-      # revert commit or "Run workflow" on main (DEPLOYMENT.md D15).
+      # revert commit or "Run workflow" on main (DEPLOYMENT.md D16).
       - name: Deploy guard (commit is still the head of main)
         env:
           EVENT_NAME: ${{ github.event_name }}
