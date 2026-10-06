@@ -51,8 +51,10 @@ Route::middleware('auth:sanctum')->group(function () {
     // 1.24.4) must never exhaust the shared `api` budget for the pet state.
     Route::middleware('throttle:devices')->group(function () {
         Route::post('devices', [DeviceController::class, 'store']);
-        Route::post('devices/unregister', [DeviceController::class, 'unregister']);
     });
+    // Logout's unregister must never be starved by a looping register.
+    Route::post('devices/unregister', [DeviceController::class, 'unregister'])
+        ->middleware('throttle:api');
 });
 
 /*
