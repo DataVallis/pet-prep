@@ -30,12 +30,17 @@ class ChildAuthController extends Controller
      * 422 `pin_not_usable` (the family changed since the PIN was issued),
      * 429 `too_many_attempts` (`retry_after` seconds).
      *
+     * Optional `features` (M5-R02, PR #42): this child app build's UI
+     * features (`behaviour_events`; unknown values ignored, ≤ 10 strings).
+     * A new pet gets behaviour events only when the parent's PIN AND this
+     * device declared `behaviour_events`; join / re-login never change it.
+     *
      * POST /api/child/pin-login
      */
     public function pinLogin(PinLoginRequest $request): JsonResponse
     {
         try {
-            $result = $this->logins->login($request->pin(), $request->deviceName(), (string) $request->ip());
+            $result = $this->logins->login($request->pin(), $request->deviceName(), (string) $request->ip(), $request->features());
         } catch (ChildLoginException $e) {
             $body = ['message' => $e->getMessage(), 'reason' => $e->reason];
             $headers = [];

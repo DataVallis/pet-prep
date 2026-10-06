@@ -3,12 +3,13 @@
 namespace App\Enums;
 
 /**
- * Features the parent's app build can show for a NEW pet, sent as
- * `features` with POST /api/parent/generate-pin (M5-R02, PR #42 review B1,
- * orchestrator decision 2026-10-06). Game rules that need UI an older app
- * build does not have are switched on per pet only when the creating app
- * declared support — so an old build never gets a dog whose events it
- * cannot resolve.
+ * Features an app build can show, sent as `features` with POST
+ * /api/parent/generate-pin (parent device) and POST /api/child/pin-login
+ * (child device) — M5-R02, PR #42 review, orchestrator decision 2026-10-06.
+ * A game rule that needs UI an older build lacks is switched on for a NEW
+ * pet only when BOTH devices declared it, so neither an old parent nor an
+ * old child app ever gets a dog whose events it cannot show / resolve.
+ * Unknown values are ignored (forward compatible).
  */
 enum ClientFeature: string
 {
@@ -24,5 +25,17 @@ enum ClientFeature: string
     public static function values(): array
     {
         return array_map(fn (self $f) => $f->value, self::cases());
+    }
+
+    /**
+     * The known values of a client's list, deduplicated, in case order.
+     * Unknown values (a newer app build) are dropped — forward compatible.
+     *
+     * @param  array<mixed>  $features
+     * @return list<string>
+     */
+    public static function known(array $features): array
+    {
+        return array_values(array_filter(self::values(), fn (string $v) => in_array($v, $features, true)));
     }
 }

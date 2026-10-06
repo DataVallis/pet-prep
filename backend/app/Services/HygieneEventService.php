@@ -168,6 +168,13 @@ class HygieneEventService
      * Apply pending events whose time has come (decay tick). Events in
      * ($from, $now] outside quiet hours happen; earlier ones are skipped.
      *
+     * Behaviour events (M5-R02 chewing, PR #42 review): after a scheduler
+     * outage (the interval ($from, $now] is longer than
+     * BehaviourEventService::OUTAGE_TOLERANCE_SECONDS) a pending non-poop
+     * event is skipped instead of applied — its 2-hour deadline may already
+     * be gone and nobody could react during the gap. Poops keep the M1-05
+     * rule (applied once, late).
+     *
      * @return Carbon|null The earliest event that happened (hygiene is 0 from then on), or null.
      */
     public function applyDue(Pet $pet, CarbonInterface $from, CarbonInterface $now, ?QuietHours $quietHours): ?Carbon
@@ -177,10 +184,15 @@ class HygieneEventService
         }
 
         $first = null;
+        $outage = BehaviourEventService::isOutage($from, $now);
 
         foreach ($this->duePending($pet, $now) as $event) {
             $happens = $event->scheduled_at->greaterThan($from)
-                && ! ($quietHours?->isQuietNow($event->scheduled_at) ?? false);
+                && ! ($quietHours?->isQuietNow($event->scheduled_at) ?? false)
+                && ! ($outage && $event->kind !== HygieneEventKind::Poop);
+            if ($outage && $event->kind !== HygieneEventKind::Poop) {
+                BehaviourEventService::warnOutage($pet, $from, $now);
+            }
 
             $event->forceFill([
                 'status' => $happens ? HygieneEventStatus::Applied : HygieneEventStatus::Skipped,

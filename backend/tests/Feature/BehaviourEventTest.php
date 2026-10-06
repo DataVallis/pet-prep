@@ -31,8 +31,10 @@ use App\Services\RoutineLedgerService;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Log;
 
 use function Pest\Laravel\getJson;
 use function Pest\Laravel\postJson;
@@ -155,7 +157,7 @@ function beChance(float $chance): void
 }
 
 /** Parent → generate-pin (with $body) → child pin-login: the pet an app build creates. */
-function beCreateViaPin(array $body): Pet
+function beCreateViaPin(array $body, ?array $childFeatures = ['behaviour_events']): Pet
 {
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $child = app(ChildProfileService::class)->createChild($parent, 'Maja', null);
@@ -163,7 +165,10 @@ function beCreateViaPin(array $body): Pet
     $pin = postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id], $body))->assertOk();
     app('auth')->forgetGuards();
     test()->withHeaders(['Authorization' => '']);
-    $login = postJson('/api/child/pin-login', ['pin' => $pin->json('pin'), 'device_name' => 'Tablet'])->assertSuccessful();
+    $login = postJson('/api/child/pin-login', array_merge(
+        ['pin' => $pin->json('pin'), 'device_name' => 'Tablet'],
+        $childFeatures === null ? [] : ['features' => $childFeatures],   // null = old child app (no field)
+    ))->assertSuccessful();
 
     return Pet::findOrFail($login->json('pet.id'));
 }
@@ -185,7 +190,42 @@ describe('client capability gate', function () {
             ->and($legacy->isLegacyProfile())->toBeTrue();
     });
 
-    it('stores features on the PIN and refuses unknown ones', function () {
+    it('needs BOTH devices: new parent + old child app (or the reverse) → off', function () {
+        beAt('2026-10-12 04:00:00');
+        $profile = ['origin' => 'bought', 'age_stage' => 'puppy'];
+
+        $both = beCreateViaPin([...$profile, 'features' => ['behaviour_events']], ['behaviour_events']);
+        $oldChild = beCreateViaPin([...$profile, 'features' => ['behaviour_events']], null);
+        $childWithoutIt = beCreateViaPin([...$profile, 'features' => ['behaviour_events']], []);
+        $oldParent = beCreateViaPin($profile, ['behaviour_events']);
+
+        expect($both->behaviour_events_enabled)->toBeTrue()
+            ->and($oldChild->behaviour_events_enabled)->toBeFalse()
+            ->and($childWithoutIt->behaviour_events_enabled)->toBeFalse()
+            ->and($oldParent->behaviour_events_enabled)->toBeFalse();
+    });
+
+    it('never changes the setting on re-login, whatever the child device declares', function () {
+        beAt('2026-10-12 04:00:00');
+        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        $child = app(ChildProfileService::class)->createChild($parent, 'Maja', null);
+        actingAsRole($parent);
+        $pin = postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'bought', 'age_stage' => 'puppy'])->json('pin');
+        app('auth')->forgetGuards();
+        test()->withHeaders(['Authorization' => '']);
+        $petId = postJson('/api/child/pin-login', ['pin' => $pin, 'device_name' => 'Tablet', 'features' => ['behaviour_events']])->json('pet.id');
+
+        actingAsRole($parent);
+        $relogin = postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'features' => ['behaviour_events']])->json('pin');
+        app('auth')->forgetGuards();
+        test()->withHeaders(['Authorization' => '']);
+        postJson('/api/child/pin-login', ['pin' => $relogin, 'device_name' => 'Phone', 'features' => ['behaviour_events']])
+            ->assertSuccessful()->assertJsonPath('mode', 'relogin');
+
+        expect(Pet::find($petId)->behaviour_events_enabled)->toBeFalse();
+    });
+
+    it('stores features on the PIN, ignores unknown values (forward compatible) and still validates the shape', function () {
         beAt('2026-10-12 04:00:00');
         $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
         $child = app(ChildProfileService::class)->createChild($parent, 'Maja', null);
@@ -193,11 +233,24 @@ describe('client capability gate', function () {
 
         postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'bought', 'age_stage' => 'puppy', 'features' => ['behaviour_events']])
             ->assertOk()->assertJsonPath('pet_profile.features', ['behaviour_events']);
-        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'bought', 'age_stage' => 'puppy', 'features' => ['teleport']])
-            ->assertUnprocessable()->assertJsonValidationErrors('features.0');
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'bought', 'age_stage' => 'puppy', 'features' => ['teleport', 'behaviour_events', 'behaviour_events']])
+            ->assertOk()->assertJsonPath('pet_profile.features', ['behaviour_events']);
+        $pin = postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'bought', 'age_stage' => 'puppy', 'features' => ['teleport']])
+            ->assertOk()->assertJsonPath('pet_profile.features', [])->json('pin');
         postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'bought', 'age_stage' => 'puppy', 'features' => 'behaviour_events'])
             ->assertUnprocessable()->assertJsonValidationErrors('features');
-        expect(DB::table('child_login_pins')->whereNotNull('pet_options')->orderByDesc('id')->value('pet_options'))->toContain('behaviour_events');
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'bought', 'age_stage' => 'puppy', 'features' => [123]])
+            ->assertUnprocessable()->assertJsonValidationErrors('features.0');
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'bought', 'age_stage' => 'puppy', 'features' => array_fill(0, 11, 'x')])
+            ->assertUnprocessable()->assertJsonValidationErrors('features');
+
+        // pin-login: same shape rules, unknown values ignored.
+        app('auth')->forgetGuards();
+        test()->withHeaders(['Authorization' => '']);
+        postJson('/api/child/pin-login', ['pin' => $pin, 'device_name' => 'Tablet', 'features' => 'behaviour_events'])
+            ->assertUnprocessable()->assertJsonValidationErrors('features');
+        postJson('/api/child/pin-login', ['pin' => $pin, 'device_name' => 'Tablet', 'features' => ['teleport', 'behaviour_events']])
+            ->assertSuccessful();
     });
 
     it('never gives an old-client pet (no features) accidents, chewing, a clock, take-out or the new videos', function () {
@@ -550,19 +603,49 @@ describe('chewing', function () {
         [, , $pet] = beFamily('2026-10-12 02:00:00', 3, quiet: false);
         Pet::whereKey($pet->id)->update(['behaviour_scheduled_through' => '2026-10-12', 'potty_clock_started_at' => '2999-12-31 00:00:00']);
 
-        // Down from the 12th to the 15th at 23:00 local (21:00 UTC).
-        $pet = beTick($pet->fresh(), '2026-10-15 21:00:00');
+        useBehaviourSalt('outage-salt');
+        Log::spy();
+        Cache::forget('behaviour-events:outage-warning');
 
-        $chewing = beEvents($pet, HygieneEventKind::Chewing);
-        expect($chewing->map(fn ($e) => $e->local_date->toDateString())->all())->toBe(['2026-10-15'])
-            ->and($pet->behaviour_scheduled_through)->toBe('2026-10-15');
-        $event = $chewing->sole();
-        if ($event->scheduled_at->lessThanOrEqualTo(now())) {
-            expect($event->status)->toBe(HygieneEventStatus::Skipped)
-                ->and($pet->displayMetric('hygiene_level'))->toBe(100);
-        } else {
-            expect($event->status)->toBe(HygieneEventStatus::Pending);
-        }
+        // Down from the 12th until 23:59:30 local on the 15th (no quiet hours): every
+        // whole minute of the day — so today's chewing time — has already passed.
+        $pet = beTick($pet->fresh(), '2026-10-15 21:59:30');
+
+        $event = beEvents($pet, HygieneEventKind::Chewing)->sole();
+        expect($event->local_date->toDateString())->toBe('2026-10-15')
+            ->and($pet->behaviour_scheduled_through)->toBe('2026-10-15')
+            ->and($event->status)->toBe(HygieneEventStatus::Skipped)
+            ->and($pet->displayMetric('hygiene_level'))->toBe(100);
+        // One rate-limited warning for the whole outage.
+        Log::shouldHaveReceived('warning')->with('BehaviourEventService: scheduler gap, behaviour events not made up', Mockery::any())->once();
+    });
+
+    it('skips an already-pending chewing event after an outage instead of applying it with a passed deadline', function () {
+        [, , $pet] = beFamily('2026-10-12 02:00:00', 36, quiet: false);
+        $event = PetHygieneEvent::create([
+            'pet_id' => $pet->id, 'kind' => 'chewing', 'local_date' => '2026-10-12',
+            'scheduled_at' => Carbon::parse('2026-10-12 08:00:00', 'UTC'), 'status' => HygieneEventStatus::Pending,
+        ]);
+        Pet::whereKey($pet->id)->update(['behaviour_scheduled_through' => '2026-10-12', 'last_decay_at' => '2026-10-12 07:00:00']);
+
+        // Down 07:00 → 11:00: the event (08:00) and its 2-hour deadline passed unseen.
+        $pet = beTick($pet->fresh(), '2026-10-12 11:00:00');
+
+        expect($event->fresh()->status)->toBe(HygieneEventStatus::Skipped)
+            ->and($pet->displayMetric('hygiene_level'))->toBe(100)
+            ->and(ActivityLog::where('pet_id', $pet->id)->where('activity_type', 'pet_chewed')->exists())->toBeFalse()
+            ->and(collect(beCleanRoutines($pet, '2026-10-12')))->toHaveCount(0);
+
+        // Without an outage the same pending event happens normally.
+        [, , $other] = beFamily('2026-10-12 02:00:00', 36, quiet: false);
+        $ok = PetHygieneEvent::create([
+            'pet_id' => $other->id, 'kind' => 'chewing', 'local_date' => '2026-10-12',
+            'scheduled_at' => Carbon::parse('2026-10-12 08:00:00', 'UTC'), 'status' => HygieneEventStatus::Pending,
+        ]);
+        Pet::whereKey($other->id)->update(['behaviour_scheduled_through' => '2026-10-12', 'last_decay_at' => '2026-10-12 07:58:00']);
+        $other = beTick($other->fresh(), '2026-10-12 08:01:00');
+        expect($ok->fresh()->status)->toBe(HygieneEventStatus::Applied)
+            ->and($other->displayMetric('hygiene_level'))->toBe(0);
     });
 
     it('chews once the day after a missed walk goal (any dog with behaviour events), not after a reached goal', function () {

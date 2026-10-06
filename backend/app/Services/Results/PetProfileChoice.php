@@ -53,6 +53,17 @@ final readonly class PetProfileChoice
         );
     }
 
+    /**
+     * The same choice keeping only features also in $features (the child
+     * device's, at pin-login — M5-R02, PR #42).
+     *
+     * @param  list<string>  $features
+     */
+    public function withOnlyFeatures(array $features): self
+    {
+        return new self($this->breed, $this->origin, $this->ageStage, array_values(array_intersect($this->features, $features)));
+    }
+
     public function supports(ClientFeature $feature): bool
     {
         return in_array($feature->value, $this->features, true);

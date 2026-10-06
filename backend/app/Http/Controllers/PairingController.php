@@ -45,10 +45,11 @@ class PairingController extends Controller
      * legacy-profile pet that keeps the pre-M5 rules.
      *
      * Optional `features` (M5-R02, PR #42): the UI features of this app
-     * build, known values only (`behaviour_events`; anything else → 422).
+     * build (`behaviour_events`; ≤ 10 strings, unknown values ignored).
      * Stored with the profile; the new pet gets behaviour events (puppy
-     * accidents, chewing, take-out) only when `behaviour_events` was sent.
-     * Ignored without a profile and with `pet_id`.
+     * accidents, chewing, take-out) only when `behaviour_events` was sent
+     * here AND by the child's device at pin-login. Ignored without a
+     * profile and with `pet_id`.
      *
      * Without `child_id` (**deprecated**, `Deprecation: true` header): the
      * PIN is for a child already signed in with e-mail, used with

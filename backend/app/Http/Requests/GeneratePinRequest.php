@@ -49,12 +49,13 @@ class GeneratePinRequest extends FormRequest
             'origin' => ['nullable', 'required_with:breed,age_stage', Rule::enum(PetOrigin::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
             'age_stage' => ['nullable', 'required_with:breed,origin', Rule::enum(LifeStage::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
             // M5-R02 (PR #42 B1): what this app build can show for the new pet,
-            // e.g. ["behaviour_events"]. Known values only (ClientFeature); stored
-            // with the profile and copied to the pet at creation. Ignored without
-            // a profile (legacy pet) and when joining a pet (pet_id): a shared
-            // pet keeps what its creating app declared.
+            // e.g. ["behaviour_events"]. An array of ≤ 10 strings; values this
+            // server doesn't know (newer apps) are dropped, not refused
+            // (ClientFeature::known). Stored with the profile; the pet gets a
+            // feature only if the child's device declares it too at pin-login.
+            // Ignored without a profile (legacy pet) and when joining a pet.
             'features' => ['sometimes', 'nullable', 'array', 'max:10'],
-            'features.*' => ['string', 'distinct', Rule::in(ClientFeature::values())],
+            'features.*' => ['string', 'max:64'],
         ];
     }
 
@@ -87,7 +88,7 @@ class GeneratePinRequest extends FormRequest
             'breed' => $this->validated('breed'),
             'origin' => $this->validated('origin'),
             'age_stage' => $this->validated('age_stage'),
-            'features' => $this->validated('features') ?? [],
+            'features' => ClientFeature::known($this->validated('features') ?? []),
         ]);
     }
 }

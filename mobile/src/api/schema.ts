@@ -218,6 +218,11 @@ export interface paths {
          *     422 `pin_not_usable` (the family changed since the PIN was issued),
          *     429 `too_many_attempts` (`retry_after` seconds).
          *
+         *     Optional `features` (M5-R02, PR #42): this child app build's UI
+         *     features (`behaviour_events`; unknown values ignored, ≤ 10 strings).
+         *     A new pet gets behaviour events only when the parent's PIN AND this
+         *     device declared `behaviour_events`; join / re-login never change it.
+         *
          *     POST /api/child/pin-login
          */
         post: operations["childAuth.pinLogin"];
@@ -631,10 +636,11 @@ export interface paths {
          *     legacy-profile pet that keeps the pre-M5 rules.
          *
          *     Optional `features` (M5-R02, PR #42): the UI features of this app
-         *     build, known values only (`behaviour_events`; anything else → 422).
+         *     build (`behaviour_events`; ≤ 10 strings, unknown values ignored).
          *     Stored with the profile; the new pet gets behaviour events (puppy
-         *     accidents, chewing, take-out) only when `behaviour_events` was sent.
-         *     Ignored without a profile and with `pet_id`.
+         *     accidents, chewing, take-out) only when `behaviour_events` was sent
+         *     here AND by the child's device at pin-login. Ignored without a
+         *     profile and with `pet_id`.
          *
          *     Without `child_id` (**deprecated**, `Deprecation: true` header): the
          *     PIN is for a child already signed in with e-mail, used with
@@ -908,12 +914,13 @@ export interface components {
             age_stage?: components["schemas"]["LifeStage"] | null;
             /**
              * @description M5-R02 (PR #42 B1): what this app build can show for the new pet,
-             *     e.g. ["behaviour_events"]. Known values only (ClientFeature); stored
-             *     with the profile and copied to the pet at creation. Ignored without
-             *     a profile (legacy pet) and when joining a pet (pet_id): a shared
-             *     pet keeps what its creating app declared.
+             *     e.g. ["behaviour_events"]. An array of ≤ 10 strings; values this
+             *     server doesn't know (newer apps) are dropped, not refused
+             *     (ClientFeature::known). Stored with the profile; the pet gets a
+             *     feature only if the child's device declares it too at pin-login.
+             *     Ignored without a profile (legacy pet) and when joining a pet.
              */
-            features?: "behaviour_events"[] | null;
+            features?: string[] | null;
         };
         /**
          * HardStopRequest
@@ -1130,6 +1137,12 @@ export interface components {
         PinLoginRequest: {
             pin: string;
             device_name: string;
+            /**
+             * @description M5-R02 (PR #42): what this child app build can show, e.g.
+             *     ["behaviour_events"]. ≤ 10 strings; unknown values are ignored.
+             *     Only matters when this login creates a new pet.
+             */
+            features?: string[] | null;
         };
         /** QuietHours */
         QuietHours: {

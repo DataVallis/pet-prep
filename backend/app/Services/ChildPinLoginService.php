@@ -133,11 +133,13 @@ class ChildPinLoginService
     /**
      * Consume a PIN and sign the child in on this device.
      *
+     * @param  list<string>  $clientFeatures  ClientFeature values this child device supports (M5-R02):
+     *                                        a new pet gets only features the parent's PIN AND this device declared.
      * @return array{token: string, child: User, pet: Pet, mode: string, joined_existing: bool}
      *
      * @throws ChildLoginException
      */
-    public function login(string $pin, string $deviceName, string $ip): array
+    public function login(string $pin, string $deviceName, string $ip, array $clientFeatures = []): array
     {
         // IPv6 is keyed on its /64 (a client usually owns the whole prefix).
         $ipKey = 'child-pin-login:failures:ip:'.ClientIp::rateLimitKey($ip);
@@ -155,7 +157,7 @@ class ChildPinLoginService
         }
 
         try {
-            return DB::transaction(function () use ($candidate, $deviceName): array {
+            return DB::transaction(function () use ($candidate, $deviceName, $clientFeatures): array {
                 // Lock order (backend/CLAUDE.md): parent → child → family, then
                 // the PIN row; re-validated under the locks.
                 if ($candidate->created_by !== null) {
@@ -191,7 +193,8 @@ class ChildPinLoginService
                     }
                     ['pet' => $pet, 'joined_existing' => $joined] = $this->pairing->attachChildToPet(
                         // A PIN without options (issued before M5-R01) → legacy-profile pet.
-                        $family, $child, $locked->pet_id, $locked->pet_options !== null ? PetProfileChoice::fromArray($locked->pet_options) : null,
+                        // M5-R02: features = parent PIN ∩ this child device (both apps must show them).
+                        $family, $child, $locked->pet_id, $locked->pet_options !== null ? PetProfileChoice::fromArray($locked->pet_options)->withOnlyFeatures($clientFeatures) : null,
                     );
                 }
 

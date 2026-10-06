@@ -15,6 +15,7 @@ use App\Models\QuietHours;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use Random\Engine\Xoshiro256StarStar;
 use Random\Randomizer;
@@ -83,6 +84,28 @@ class BehaviourEventService
     public static function isOutage(CarbonInterface $from, CarbonInterface $now): bool
     {
         return (int) CarbonImmutable::instance($from)->diffInSeconds(CarbonImmutable::instance($now), true) > self::OUTAGE_TOLERANCE_SECONDS;
+    }
+
+    /** At most one outage warning per this many seconds (all pets together). */
+    public const OUTAGE_WARNING_EVERY_SECONDS = 600;
+
+    /**
+     * Log that behaviour events were not made up after a scheduler gap —
+     * once per OUTAGE_WARNING_EVERY_SECONDS (Cache::add as the gate), so an
+     * outage over thousands of pets is one line, not thousands.
+     */
+    public static function warnOutage(Pet $pet, CarbonInterface $from, CarbonInterface $now): void
+    {
+        if (! Cache::add('behaviour-events:outage-warning', true, self::OUTAGE_WARNING_EVERY_SECONDS)) {
+            return;
+        }
+
+        Log::warning('BehaviourEventService: scheduler gap, behaviour events not made up', [
+            'pet_id' => $pet->id,
+            'from' => CarbonImmutable::instance($from)->utc()->toIso8601String(),
+            'now' => CarbonImmutable::instance($now)->utc()->toIso8601String(),
+            'gap_seconds' => (int) CarbonImmutable::instance($from)->diffInSeconds(CarbonImmutable::instance($now), true),
+        ]);
     }
 
     public function __construct(
@@ -161,6 +184,7 @@ class BehaviourEventService
         // Scheduler outage (PR #42 M1): nobody could react during the gap,
         // so no accident is made up for it — the clock restarts now.
         if (self::isOutage($from, $now)) {
+            self::warnOutage($pet, $from, $now);
             $pet->potty_clock_started_at = $now;
 
             return null;
@@ -279,7 +303,8 @@ class BehaviourEventService
         // Scheduler outage (PR #42 M1): never back-schedule past days, and
         // today's event is not made up if its time already passed.
         $outage = self::isOutage($from, $now);
-        if ($outage) {
+        if ($outage && $day->lessThan($today)) {
+            self::warnOutage($pet, $from, $now);
             $day = $today->copy();
         }
 
