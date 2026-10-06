@@ -10,7 +10,8 @@ name: CI & Deploy
 # tree (marker artifacts "ci-green-<suite>-<tree>", uploaded below on pull_request).
 # `ci-ok` fails unless every suite either passed or was skipped because plan said so.
 # `deploy` needs ci-ok (no always()) and runs on main only when backend/, deployment/,
-# scripts/ or this file changed since the last green main run, or on "Run workflow".
+# scripts/ or this file changed since the last green main run, or on "Run workflow";
+# its first step refuses a commit that is no longer the head of main.
 
 on:
   push:
@@ -194,14 +195,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Shellcheck
-        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh
+        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh
 
       # Stubbed docker/git/curl in a temp dir; needs only bash, git and rsync.
       - name: Harness (deploy-production.sh)
         run: bash scripts/tests/deploy-production.test.sh
 
-      # Stubbed gh over JSON fixtures, real git + jq.
-      - name: Harness (ci-plan.sh)
+      # Stubbed gh over JSON fixtures, real git + jq; also the deploy guard (bare origin).
+      - name: Harness (ci-plan.sh + ci-deploy-guard.sh)
         run: bash scripts/tests/ci-plan.test.sh
 
       - name: Record green tree
@@ -362,6 +363,16 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
+      # Refuses (red, not skipped) when this run's commit is no longer the head of main —
+      # push runs and every re-run; "Run workflow" (attempt 1) is not checked. Rollback =
+      # revert commit or "Run workflow" on main (DEPLOYMENT.md D15).
+      - name: Deploy guard (commit is still the head of main)
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          COMMIT_SHA: ${{ github.sha }}
+        run: bash scripts/ci-deploy-guard.sh
 
       - name: Setup SSH Key & Deploy
         env:

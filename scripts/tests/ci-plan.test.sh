@@ -9,6 +9,8 @@
 #   …/actions/runs/<id>                 → $FIX/run-<id>.json
 # GH_FAIL=1 makes every call fail; GH_FAIL_MATCH (ERE over the path) fails matching ones.
 #
+# Also covers scripts/ci-deploy-guard.sh against a local bare "origin".
+#
 # Run: bash scripts/tests/ci-plan.test.sh   (needs bash, git, jq)
 set -Eeuo pipefail
 
@@ -87,9 +89,9 @@ green_runs() { # green_runs SHA [EVENT] [REPO_FULL]: one successful main run
   jq -n --arg s "$1" --arg e "${2:-push}" --arg r "${3:-$REPO_NAME}" \
     '{workflow_runs:[{id:1,event:$e,head_sha:$s,head_repository:{full_name:$r}}]}' > "$FIX/runs.json"
 }
-marker() { # marker SUITE TREE RUN_ID [HEAD_REPO_ID]
-  jq -n --argjson id "$3" --argjson rid "$REPO_ID" --argjson hid "${4:-$REPO_ID}" \
-    '{total_count:1,artifacts:[{name:"x",workflow_run:{id:$id,repository_id:$rid,head_repository_id:$hid}}]}' \
+marker() { # marker SUITE TREE RUN_ID [HEAD_REPO_ID] [EXPIRED]
+  jq -n --argjson id "$3" --argjson rid "$REPO_ID" --argjson hid "${4:-$REPO_ID}" --argjson exp "${5:-false}" \
+    '{total_count:1,artifacts:[{name:"x",expired:$exp,workflow_run:{id:$id,repository_id:$rid,head_repository_id:$hid}}]}' \
     > "$FIX/artifacts-ci-green-$1-$2.json"
 }
 run_json() { # run_json ID EVENT CONCLUSION [PATH]
@@ -114,6 +116,7 @@ S_ALL="backend=true mobile=true scripts=true image=true "
 S_BACKEND="backend=true mobile=false scripts=false image=true "
 S_MOBILE="backend=false mobile=true scripts=false image=false "
 S_BSCRIPTS="backend=true mobile=false scripts=true image=true "
+S_BTESTS="backend=true mobile=false scripts=false image=false "
 
 echo "== pull_request: path filter =="
 pr_case() { # pr_case DESC EXPECTED_SUITES FILE...
@@ -127,6 +130,11 @@ pr_case() { # pr_case DESC EXPECTED_SUITES FILE...
 }
 pr_case "docs only" "$S_NONE" docs/X.md README.md
 pr_case "backend/CLAUDE.md only" "$S_NONE" backend/CLAUDE.md
+pr_case "backend/README.md only" "$S_NONE" backend/README.md
+pr_case "other .md under backend counts" "$S_BACKEND" backend/resources/views/mail/x.md
+pr_case "dog research data: backend tests only" "$S_BTESTS" docs/research/dog-data/data.json
+pr_case "dog research sources: backend tests only" "$S_BTESTS" docs/research/dog-data/sources.md
+pr_case "other research docs" "$S_NONE" docs/research/DOG_DATA_SOURCES.md
 pr_case "backend code" "$S_BACKEND" backend/app/A.php
 pr_case "new backend file" "$S_BACKEND" backend/database/migrations/x.php
 pr_case "mobile only" "$S_MOBILE" mobile/src/a.ts
@@ -170,6 +178,14 @@ check "api-types merge: no deploy" false "$o_deploy"
 new_repo; base="$(sha)"; commit deployment/Caddyfile; green_runs "$base"
 plan push refs/heads/main
 check "Caddyfile merge: deploy" true "$o_deploy"; check "Caddyfile merge: suites" "$S_BSCRIPTS" "$o_suites"
+
+new_repo; base="$(sha)"; commit docs/research/dog-data/data.json; green_runs "$base"
+plan push refs/heads/main
+check "dog-data merge: backend tests" "$S_BTESTS" "$o_suites"; check "dog-data merge: no deploy" false "$o_deploy"
+
+new_repo; base="$(sha)"; commit docs/research/dog-data/data.json backend/app/A.php; green_runs "$base"
+plan push refs/heads/main
+check "dog-data + backend merge: deploy" true "$o_deploy"; check "dog-data + backend merge: suites" "$S_BACKEND" "$o_suites"
 
 echo "== push to main: a failed / cancelled run in between is not lost =="
 new_repo; base="$(sha)"; commit backend/app/A.php; commit docs/X.md; green_runs "$base"
@@ -246,6 +262,10 @@ check "artifact API error → run" "$S_BSCRIPTS" "$o_suites"; check "artifact AP
 setup_green; GH_FAIL_MATCH='runs/77' plan push refs/heads/main
 check "run API error → run" "$S_BSCRIPTS" "$o_suites"
 
+setup_green; marker backend "$t" 77 "$REPO_ID" true; marker image "$t" 77 "$REPO_ID" true; marker scripts "$t" 77 "$REPO_ID" true
+run_json 77 pull_request success; plan push refs/heads/main
+check "expired marker → run" "$S_BSCRIPTS" "$o_suites"
+
 echo "== pull_request never skips on markers =="
 new_repo; pr_merge backend/app/A.php; t="$(tree)"; marker backend "$t" 77; run_json 77 pull_request success
 plan pull_request refs/pull/1/merge
@@ -256,6 +276,27 @@ new_repo; plan workflow_dispatch refs/heads/main
 check "dispatch on main: full + deploy" "full true" "$o_mode $o_deploy"; check "dispatch: all suites" "$S_ALL" "$o_suites"
 new_repo; plan workflow_dispatch refs/heads/feature
 check "dispatch elsewhere: full, no deploy" "full false" "$o_mode $o_deploy"
+
+echo "== deploy guard (scripts/ci-deploy-guard.sh) =="
+GUARD="${HERE}/../ci-deploy-guard.sh"
+new_repo; old="$(sha)"; commit backend/app/A.php; new="$(sha)"
+git init -q --bare "$TMP/origin$n.git"; git -C "$W" -c push.negotiate=false push -q "$TMP/origin$n.git" main
+git -C "$W" remote add origin "$TMP/origin$n.git"
+guard() { # guard EVENT ATTEMPT SHA [REMOTE] → prints the exit code
+  local rc=0
+  ( cd "$W" && EVENT_NAME="$1" RUN_ATTEMPT="$2" COMMIT_SHA="$3" DEPLOY_GUARD_REMOTE="${4:-origin}" \
+      bash "$GUARD" >"$FIX/guard.out" 2>&1 ) || rc=$?
+  echo "$rc"
+}
+check "push of main head → deploy" 0 "$(guard push 1 "$new")"
+check "push of an older commit → refuse" 1 "$(guard push 1 "$old")"
+if grep -q "refusing to deploy an older commit" "$FIX/guard.out"; then r=0; else r=1; fi
+check "refusal says why" 0 "$r"
+check "re-run of main head → deploy" 0 "$(guard push 2 "$new")"
+check "re-run of an old run → refuse" 1 "$(guard push 3 "$old")"
+check "dispatch (attempt 1) not checked" 0 "$(guard workflow_dispatch 1 "$old")"
+check "dispatch re-run of an old commit → refuse" 1 "$(guard workflow_dispatch 2 "$old")"
+check "unreadable remote → refuse" 1 "$(guard push 1 "$new" "$TMP/nope.git")"
 
 echo
 echo "ci-plan harness: ${pass} passed, ${fail} failed (${n} repos)"

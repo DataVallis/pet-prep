@@ -14,13 +14,17 @@
 #                           not found / not an ancestor (force push, rollback re-run)
 #                           → full run.
 #        workflow_dispatch  full run (+ deploy on main).
-#        re-run (attempt>1) full run (+ deploy on main) — "Re-run all jobs" repeats a deploy.
+#        re-run (attempt>1) full run (+ deploy on main) — "Re-run all jobs" repeats a deploy
+#                           (only of the current main head: scripts/ci-deploy-guard.sh).
 #   2. Suites per path (see classify()):
 #        backend + image    backend/**, deployment/**, scripts/** (except
-#                           generate-api-types.mjs), the workflow; *.md under backend/ ignored
+#        + deploy (main)    generate-api-types.mjs), the workflow; backend/README.md and
+#                           backend/CLAUDE.md ignored
+#        backend only       docs/research/dog-data/** (LifeStageDataTest reads data.json /
+#                           sources.md; the seeder embeds the values, nothing ships → no
+#                           image, no deploy)
 #        mobile             mobile/**, scripts/generate-api-types.mjs, the workflow
 #        scripts            scripts/**, deployment/**, the workflow
-#        deploy (main)      same paths as backend
 #   3. Tested tree (push to main only): a needed suite is skipped when a pull_request
 #      run of THIS workflow, from this repository (no forks), with conclusion success,
 #      ran that suite on the identical git tree — marker artifact
@@ -89,19 +93,20 @@ case "$EVENT_NAME" in
     ;;
 esac
 
-need_backend=false need_mobile=false need_scripts=false
+need_backend=false need_mobile=false need_scripts=false need_deploy=false
 
 # classify FILE...: sets need_* from the changed paths.
 classify() {
   local f
   for f in "$@"; do
     case "$f" in
-      "$WORKFLOW_PATH") need_backend=true need_mobile=true need_scripts=true ;;
-      backend/*.md) ;; # docs next to the code (CLAUDE.md, README.md); `*` spans "/" here
-      backend/*) need_backend=true ;;
-      deployment/*) need_backend=true need_scripts=true ;;
+      "$WORKFLOW_PATH") need_backend=true need_deploy=true need_mobile=true need_scripts=true ;;
+      backend/README.md|backend/CLAUDE.md) ;; # docs next to the code
+      backend/*) need_backend=true need_deploy=true ;;
+      docs/research/dog-data/*) need_backend=true ;; # test fixtures only, nothing ships
+      deployment/*) need_backend=true need_deploy=true need_scripts=true ;;
       scripts/generate-api-types.mjs) need_mobile=true ;;
-      scripts/*) need_backend=true need_scripts=true ;;
+      scripts/*) need_backend=true need_deploy=true need_scripts=true ;;
       mobile/*) need_mobile=true ;;
     esac
   done
@@ -112,17 +117,17 @@ if [ "$mode" = diff ]; then
   classify "${files[@]}"
   log "base ${base}, ${#files[@]} changed file(s)"
 else
-  need_backend=true need_mobile=true need_scripts=true
+  need_backend=true need_deploy=true need_mobile=true need_scripts=true
   files=()
   log "full run: ${reason}"
 fi
-need_image="$need_backend"
+need_image="$need_deploy" # the image holds what ships (backend/), not research fixtures
 
 deploy=false
 if [ "$GIT_REF" = "refs/heads/main" ]; then
   case "$EVENT_NAME" in
     workflow_dispatch) deploy=true ;;
-    push) deploy="$need_backend" ;;
+    push) deploy="$need_deploy" ;;
   esac
 fi
 
@@ -131,7 +136,7 @@ fi
 green_on_pr() {
   local suite="$1" ids id ok
   ids="$("$GH" api "repos/${REPO}/actions/artifacts?name=ci-green-${suite}-${tree}&per_page=30" \
-        --jq '.artifacts[] | select(.workflow_run.head_repository_id == .workflow_run.repository_id) | .workflow_run.id' \
+        --jq '.artifacts[] | select(.expired | not) | select(.workflow_run.head_repository_id == .workflow_run.repository_id) | .workflow_run.id' \
         2>/dev/null)" || return 1
   for id in $ids; do
     ok="$("$GH" api "repos/${REPO}/actions/runs/${id}" \
