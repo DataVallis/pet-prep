@@ -4,6 +4,10 @@
  * "Poskusi znova" instead of taking the whole session down. "Poskusi znova" remounts
  * the HUD; the cached pet state is kept, so it comes back without a new request.
  *
+ * `overlay` (the LockedScreen overlay): the boundary itself is laid out as an absolute
+ * full-screen layer, so it takes no space from the HUD underneath and its fallback card
+ * covers the HUD instead of sitting next to it.
+ *
  * It only catches React render / effect errors — an exception thrown from a native
  * callback outside React is still fatal; keep those callbacks free of throws.
  */
@@ -21,6 +25,8 @@ interface Props {
   children: ReactNode;
   /** Called with every caught error (logging); never throws. */
   onError?: (error: Error, info: ErrorInfo) => void;
+  /** Render as an absolute full-screen layer (overlays such as LockedScreen). */
+  overlay?: boolean;
 }
 
 interface State {
@@ -51,7 +57,7 @@ export default class HudErrorBoundary extends Component<Props, State> {
   render(): ReactNode {
     if (this.state.error) {
       return (
-        <View style={styles.root} testID="hud-error-boundary">
+        <View style={[styles.root, this.props.overlay && styles.overlay]} testID="hud-error-boundary">
           <View style={styles.card}>
             <Text style={styles.title}>{HUD_ERROR_STRINGS.title}</Text>
             <Text style={styles.body}>{HUD_ERROR_STRINGS.body}</Text>
@@ -67,12 +73,21 @@ export default class HudErrorBoundary extends Component<Props, State> {
         </View>
       );
     }
-    return <View key={this.state.attempt} style={styles.fill}>{this.props.children}</View>;
+    return (
+      <View
+        key={this.state.attempt}
+        pointerEvents={this.props.overlay ? 'box-none' : 'auto'}
+        style={this.props.overlay ? styles.overlay : styles.fill}
+      >
+        {this.props.children}
+      </View>
+    );
   }
 }
 
 const styles = StyleSheet.create({
   fill: { flex: 1 },
+  overlay: { ...StyleSheet.absoluteFill, zIndex: 50 },
   root: {
     flex: 1,
     alignItems: 'center',

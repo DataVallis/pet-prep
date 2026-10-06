@@ -17,6 +17,10 @@
  * - each (session token, Expo token) pair is sent once per app run;
  * - token events caused by our own token fetch (while it runs and 10 s after) and
  *   events with the device token we already know are ignored ({@link handlePushTokenEvent});
+ * - a REAL rotation (a different device token) that arrives while a run is in flight is
+ *   remembered and registered once after that run settles (follow-up 2026-10-06);
+ * - logout ({@link resetPushRegistration}) bumps a generation: a run that was still in
+ *   flight can no longer touch state, store its token or schedule a retry;
  * - `POST /api/devices` has its own limiter (2, then 1 per minute); a failure retries in
  *   the background with `Retry-After` / backoff, at most {@link MAX_REGISTER_ATTEMPTS}.
  */
@@ -102,10 +106,17 @@ interface RegistrationState {
   registeredKey: string | null;
   /** Device ms until which a token event is the echo of our own fetch. */
   selfFetchUntil: number;
-  /** Device push token of the last token event. */
+  /**
+   * Device push token we consider known: the echo of our own fetch, or the last
+   * rotation we acted on. An event with a different token is a real rotation.
+   */
   lastDeviceToken: string | null;
+  /** A real rotation arrived while a run was in flight → register once after it. */
+  rotationPending: boolean;
   failedAttempts: number;
   retryTimer: ReturnType<typeof setTimeout> | null;
+  /** Bumped by {@link resetPushRegistration}; runs / retries of older generations are ignored. */
+  generation: number;
 }
 
 const state: RegistrationState = {
@@ -113,17 +124,21 @@ const state: RegistrationState = {
   registeredKey: null,
   selfFetchUntil: 0,
   lastDeviceToken: null,
+  rotationPending: false,
   failedAttempts: 0,
   retryTimer: null,
+  generation: 0,
 };
 
 /** Forget this app run's registration (logout, tests). */
 export function resetPushRegistration(): void {
   if (state.retryTimer !== null) clearTimeout(state.retryTimer);
+  state.generation += 1;
   state.inFlight = null;
   state.registeredKey = null;
   state.selfFetchUntil = 0;
   state.lastDeviceToken = null;
+  state.rotationPending = false;
   state.failedAttempts = 0;
   state.retryTimer = null;
   devicesGate.reset();
@@ -132,20 +147,35 @@ export function resetPushRegistration(): void {
 /**
  * `Notifications.addPushTokenListener` handler. Re-registers only for a device token
  * that really changed — never for the echo of our own `getExpoPushTokenAsync()`.
- * Returns whether a registration was started.
+ *
+ * - The first event inside our own fetch window (run in flight or its grace period) is
+ *   the echo of that fetch: it becomes the known token. Repeats of it are ignored.
+ * - A DIFFERENT token is a real rotation. While a run is in flight it is remembered and
+ *   registered once after the run settles; in the grace period after a run (or later)
+ *   it registers right away.
+ * Every registration still goes through the in-flight sharing, the (session, token)
+ * dedupe and the `POST /api/devices` limiter. Returns whether a registration was started.
  */
 export function handlePushTokenEvent(deviceToken: string, nowMs: number = Date.now()): boolean {
-  const previous = state.lastDeviceToken;
+  const known = state.lastDeviceToken;
+  const ownFetchWindow = state.inFlight !== null || nowMs < state.selfFetchUntil;
+  if (known === deviceToken) return false;
   state.lastDeviceToken = deviceToken;
-  if (state.inFlight !== null || nowMs < state.selfFetchUntil) return false;
-  if (previous === deviceToken) return false;
+  // First token we see during our own fetch: its echo, already covered by that run.
+  if (ownFetchWindow && known === null) return false;
+  if (state.inFlight !== null) {
+    state.rotationPending = true;
+    return false;
+  }
   void registerForPush();
   return true;
 }
 
-function scheduleRetry(delayMs: number): void {
+function scheduleRetry(delayMs: number, generation: number): void {
+  if (generation !== state.generation) return;
   if (state.retryTimer !== null || state.failedAttempts >= MAX_REGISTER_ATTEMPTS) return;
   state.retryTimer = setTimeout(() => {
+    if (generation !== state.generation) return;
     state.retryTimer = null;
     void registerForPush();
   }, delayMs);
@@ -158,14 +188,24 @@ function scheduleRetry(delayMs: number): void {
  */
 export function registerForPush(): Promise<PushRegistrationResult> {
   if (state.inFlight !== null) return state.inFlight;
-  const run = registerOnce().finally(() => {
+  const generation = state.generation;
+  const run = registerOnce(generation).finally(() => {
     if (state.inFlight === run) state.inFlight = null;
+    // A real rotation arrived meanwhile → one more (deduped, limited) registration.
+    if (generation === state.generation && state.rotationPending) {
+      state.rotationPending = false;
+      void registerForPush();
+    }
   });
   state.inFlight = run;
   return run;
 }
 
-async function registerOnce(): Promise<PushRegistrationResult> {
+/** Result of a run whose session was reset (logout) while it ran: touches nothing. */
+const STALE: PushRegistrationResult = { status: 'failed', reason: 'server' };
+
+async function registerOnce(generation: number): Promise<PushRegistrationResult> {
+  const stale = (): boolean => generation !== state.generation;
   const platform = devicePlatform();
   if (platform === null) return { status: 'unsupported' };
 
@@ -188,8 +228,10 @@ async function registerOnce(): Promise<PushRegistrationResult> {
     // Offline, simulator, or missing APNs / FCM credentials — next app start retries.
     return { status: 'failed', reason: 'token' };
   } finally {
+    // Also after a reset: the iOS echo of this fetch still arrives and must be ignored.
     state.selfFetchUntil = Date.now() + SELF_TOKEN_EVENT_GRACE_MS;
   }
+  if (stale()) return STALE;
 
   let session: string | null;
   try {
@@ -197,28 +239,32 @@ async function registerOnce(): Promise<PushRegistrationResult> {
   } catch {
     session = null;
   }
+  if (stale()) return STALE;
   const key = `${session ?? ''}|${token}`;
   if (state.registeredKey === key) return { status: 'registered', token };
 
   const wait = devicesGate.waitMs(Date.now());
   if (wait > 0) {
-    scheduleRetry(wait);
+    scheduleRetry(wait, generation);
     return { status: 'failed', reason: 'throttled' };
   }
   devicesGate.take(Date.now());
   try {
     await api.registerDevice({ expo_push_token: token, platform, app_version: appVersion() });
   } catch (error) {
+    if (stale()) return STALE;
     state.failedAttempts += 1;
     const after = retryAfterMs(error);
     if (after !== null) devicesGate.block(Date.now(), after);
     const status = errorStatus(error);
     // 429 / 5xx / network: try again later; other 4xx (validation, auth) won't change.
     if (after !== null || status === null || status >= 500) {
-      scheduleRetry(after ?? Math.min(30_000 * 2 ** (state.failedAttempts - 1), 5 * 60_000));
+      scheduleRetry(after ?? Math.min(30_000 * 2 ** (state.failedAttempts - 1), 5 * 60_000), generation);
     }
     return { status: 'failed', reason: after !== null ? 'throttled' : 'server' };
   }
+  // Logged out meanwhile: don't mark the old session registered or store its token.
+  if (stale()) return STALE;
   state.registeredKey = key;
   state.failedAttempts = 0;
 

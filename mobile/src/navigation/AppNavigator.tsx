@@ -11,6 +11,7 @@ import ContractScreen from '@/screens/ContractScreen';
 import LockedScreen from '@/screens/LockedScreen';
 import ChildHudScreen from '@/screens/ChildHudScreen';
 import HudErrorBoundary from '@/components/HudErrorBoundary';
+import { logRenderError } from '@/utils/logRenderError';
 import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
 
 const LOCKED_STATES: LockState[] = ['game_over', 'hard_stop', 'illness', 'inactive'];
@@ -32,7 +33,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    console.error('AppNavigator ErrorBoundary caught:', error, errorInfo);
+    logRenderError('app', error, errorInfo);
   }
 
   render(): ReactNode {
@@ -47,6 +48,9 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     return this.props.children;
   }
 }
+
+const logHudError = (error: Error, info: ErrorInfo): void => logRenderError('child-hud', error, info);
+const logLockedError = (error: Error, info: ErrorInfo): void => logRenderError('locked-overlay', error, info);
 
 /** Logs the legacy child session out once, showing the start screen meanwhile. */
 function SignOutChildWithoutPet() {
@@ -102,11 +106,16 @@ export default function AppNavigator() {
               <ContractScreen />
             ) : (
               // A render error in the HUD shows a retry card, not the dead app (hotfix 2026-10-06).
-              <HudErrorBoundary>
+              <HudErrorBoundary onError={logHudError}>
                 <ChildHudScreen />
               </HudErrorBoundary>
             )}
-            {isLocked && <LockedScreen />}
+            {isLocked && (
+              // A crash in the lock overlay must not take the session down either.
+              <HudErrorBoundary overlay onError={logLockedError}>
+                <LockedScreen />
+              </HudErrorBoundary>
+            )}
           </>
         )}
       </View>
