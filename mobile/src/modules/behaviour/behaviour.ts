@@ -272,7 +272,8 @@ export function takeOutCountdown(clock: TakeOutClock, serverNowMs: number, timez
   const dueMs = Date.parse(clock.next_due_at);
   if (Number.isNaN(dueMs)) return null;
   const minutes = (dueMs - serverNowMs) / 60_000;
-  if (minutes <= 0) {
+  // Under a minute left: "~1 min" would be a race — the puppy simply wants out now.
+  if (minutes < 1) {
     return { line: BEHAVIOUR_STRINGS.takeOutNow, hint: BEHAVIOUR_STRINGS.hintNow, due: true };
   }
   if (minutes <= TAKE_OUT_DURATION_MAX_MIN) {
@@ -293,9 +294,13 @@ export const PARENT_BEHAVIOUR_STRINGS = {
     accident: 'Luža',
     chewing: 'Pregrizen copat',
   } satisfies Record<BehaviourKind, string>,
-  openEvent: (label: string, due: string) => `${label} — počistiti do ${due}`,
-  takeOut: (due: string, hold: number) => `Mladiček mora ven do ${due} (zdrži ~${hold} h)`,
+  openEvent: (label: string, due: string | null) => (due ? `${label} — počistiti do ${due}` : label),
+  /** `when` from `whenText`: "ob 13:00" / "jutri ob 07:10". */
+  takeOut: (when: string, hold: number) => `Mladiček mora ven ${when} (zdrži ~${hold} h)`,
   lastTakenOut: (at: string) => `Nazadnje zunaj ob ${at}`,
+  /** "Zadnjih 7 dni" with Slovenian number agreement. */
+  lastDays: (n: number) =>
+    n === 1 ? 'Zadnji dan' : n === 2 ? 'Zadnja 2 dneva' : n === 3 || n === 4 ? `Zadnji ${n} dnevi` : `Zadnjih ${n} dni`,
   stats: (takenOut: number, chewing: number) =>
     [takenOut > 0 ? `${takenOut}× peljal(a) ven` : null, chewing > 0 ? `${chewing}× pospravil(a) copat` : null]
       .filter((x): x is string => x !== null)
@@ -303,19 +308,24 @@ export const PARENT_BEHAVIOUR_STRINGS = {
 } as const;
 
 /**
- * Lines for the parent's pet block: the bladder clock ("Mladiček mora ven do 14:30") and
- * each open mess with its deadline, family clock. Empty for a pet without behaviour.
+ * Lines for the parent's pet block: the bladder clock ("Mladiček mora ven ob 13:00" /
+ * "jutri ob 07:10") and each open mess with its deadline (omitted when unreadable), family
+ * clock. Empty for a pet without behaviour.
  */
-export function parentBehaviourLines(b: PetBehaviour, timezone: string | null): string[] {
+export function parentBehaviourLines(
+  b: PetBehaviour,
+  timezone: string | null,
+  nowIso: string = new Date().toISOString(),
+): string[] {
   const lines: string[] = [];
   if (b.take_out) {
-    const due = familyClock(b.take_out.next_due_at, timezone);
-    if (due) lines.push(PARENT_BEHAVIOUR_STRINGS.takeOut(due, b.take_out.hold_hours));
+    const when = whenText(b.take_out.next_due_at, nowIso, timezone);
+    if (when) lines.push(PARENT_BEHAVIOUR_STRINGS.takeOut(when, b.take_out.hold_hours));
     const last = familyClock(b.take_out.last_taken_out_at, timezone);
     if (last) lines.push(PARENT_BEHAVIOUR_STRINGS.lastTakenOut(last));
   }
   for (const e of b.active_events) {
-    const due = familyClock(e.due_at, timezone) ?? '?';
+    const due = familyClock(e.due_at, timezone);
     lines.push(PARENT_BEHAVIOUR_STRINGS.openEvent(PARENT_BEHAVIOUR_STRINGS.kinds[e.kind], due));
   }
   return lines;

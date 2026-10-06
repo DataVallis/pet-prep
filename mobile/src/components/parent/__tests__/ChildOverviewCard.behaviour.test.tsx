@@ -33,7 +33,7 @@ describe('ChildOverviewCard — behaviour (M5-R02)', () => {
       { taken_out: 4, chewing_resolved: 1 },
     );
     expect(screen.getByTestId(`child-pet-behaviour-${id}`)).toBeTruthy();
-    expect(screen.getByText('• Mladiček mora ven do 13:00 (zdrži ~2 h)')).toBeTruthy();
+    expect(screen.getByText('• Mladiček mora ven ob 13:00 (zdrži ~2 h)')).toBeTruthy();
     expect(screen.getByText('• Pregrizen copat — počistiti do 13:30')).toBeTruthy();
     expect(screen.getByText('Zadnjih 7 dni: 4× peljal(a) ven · 1× pospravil(a) copat')).toBeTruthy();
     expect(screen.getByText('Luža')).toBeTruthy();

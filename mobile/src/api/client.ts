@@ -192,13 +192,17 @@ export interface GenerateChildPinRequest {
   profile?: NewPetProfile | null;
 }
 
-/** A UI feature this app build can show for a new pet (backend `ClientFeature`). */
-export type ClientFeature = NonNullable<components['schemas']['GeneratePinRequest']['features']>[number];
+/**
+ * A UI feature this app build can show for a new pet (backend `ClientFeature`; the schema
+ * types it as `string` because unknown values are dropped server-side, not refused).
+ */
+export type ClientFeature = 'behaviour_events';
 
 /**
- * What this build declares for every new pet (M5-R02, PR #42 B1): it can show the
- * behaviour events ("Pelji ven", luža, pregrizen copat). The server enables them on the
- * pet only when the creating app sent this — older builds never get events they can't show.
+ * What this build declares (M5-R02, PR #42): it can show the behaviour events ("Pelji
+ * ven", luža, pregrizen copat). A new pet gets them only when BOTH the parent's
+ * generate-pin and the child's pin-login sent this — an older build on either phone
+ * never gets events it can't show.
  */
 export const CLIENT_FEATURES: readonly ClientFeature[] = ['behaviour_events'];
 
@@ -493,11 +497,12 @@ export const api = {
   /**
    * POST /api/child/pin-login (M2-02, public) — the child's only way in: PIN from the
    * parent → child token. 422 `invalid_pin` / `pin_not_usable`, 429 with Retry-After.
+   * Always declares this build's `features` (M5-R02: the child's device must show them too).
    */
   pinLogin: (pin: string, deviceName: string) =>
     apiRequest<PinLoginResponse>('/api/child/pin-login', {
       method: 'POST',
-      body: { pin, device_name: deviceName },
+      body: { pin, device_name: deviceName, features: [...CLIENT_FEATURES] },
       anonymous: true,
     }),
 

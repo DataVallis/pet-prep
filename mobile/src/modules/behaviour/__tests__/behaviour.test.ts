@@ -165,6 +165,13 @@ describe('calm countdown', () => {
     expect(tomorrow?.line).toBe('Kuža bo moral ven jutri ob 07:10');
   });
 
+  it('under a minute left: "wants to go out", not "~1 min"', () => {
+    const c = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:00:00+02:00') - 40_000, TZ);
+    expect(c).toEqual({ line: 'Kuža bi rad šel ven.', hint: 'zdaj', due: true });
+    const justOver = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:00:00+02:00') - 61_000, TZ);
+    expect(justOver?.line).toBe('Kuža bo moral ven čez ~1 min');
+  });
+
   it('due: a calm line, never an alarm', () => {
     const c = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:05:00+02:00'), TZ);
     expect(c).toEqual({ line: 'Kuža bi rad šel ven.', hint: 'zdaj', due: true });
@@ -181,13 +188,35 @@ describe('parent lines', () => {
         scene: 'chewing',
       },
       TZ,
+      '2026-10-04T12:00:00+02:00',
     );
     expect(lines).toEqual([
-      'Mladiček mora ven do 13:00 (zdrži ~2 h)',
+      'Mladiček mora ven ob 13:00 (zdrži ~2 h)',
       'Nazadnje zunaj ob 11:00',
       'Luža — počistiti do 13:30',
       'Pregrizen copat — počistiti do 15:00',
     ]);
+  });
+
+  it('a take-out due tomorrow says "jutri"; an unreadable deadline is omitted, never "?"', () => {
+    const lines = parentBehaviourLines(
+      {
+        take_out: makeTakeOut({ next_due_at: '2026-10-05T07:10:00+02:00', last_taken_out_at: null }),
+        active_events: [{ ...makeBehaviourEvent('poop'), due_at: '' }],
+        scene: null,
+      },
+      TZ,
+      '2026-10-04T21:00:00+02:00',
+    );
+    expect(lines).toEqual(['Mladiček mora ven jutri ob 07:10 (zdrži ~2 h)', 'Kakec']);
+    expect(PARENT_BEHAVIOUR_STRINGS.openEvent('Luža', null)).toBe('Luža');
+  });
+
+  it('lastDays agrees with the number', () => {
+    expect(PARENT_BEHAVIOUR_STRINGS.lastDays(7)).toBe('Zadnjih 7 dni');
+    expect(PARENT_BEHAVIOUR_STRINGS.lastDays(1)).toBe('Zadnji dan');
+    expect(PARENT_BEHAVIOUR_STRINGS.lastDays(2)).toBe('Zadnja 2 dneva');
+    expect(PARENT_BEHAVIOUR_STRINGS.lastDays(3)).toBe('Zadnji 3 dnevi');
   });
 
   it('nothing for a pet without behaviour', () => {

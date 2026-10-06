@@ -6,6 +6,7 @@
  */
 
 import { useEffect, useState } from 'react';
+import { AppState } from 'react-native';
 
 export const SERVER_NOW_TICK_MS = 15_000;
 
@@ -16,7 +17,14 @@ export function useServerNow(skewMs: number, enabled: boolean, intervalMs: numbe
     if (!enabled) return;
     setDeviceNow(Date.now());
     const id = setInterval(() => setDeviceNow(Date.now()), intervalMs);
-    return () => clearInterval(id);
+    // Back from the background: re-read the clock at once (timers don't run there).
+    const sub = AppState.addEventListener('change', (state) => {
+      if (state === 'active') setDeviceNow(Date.now());
+    });
+    return () => {
+      clearInterval(id);
+      sub.remove();
+    };
   }, [enabled, intervalMs]);
 
   return deviceNow + skewMs;

@@ -125,7 +125,7 @@ describe('api client', () => {
   describe('M2-02 endpoints', () => {
     type Init = RequestInit & { headers: Record<string, string> };
 
-    it('pin-login is anonymous: no Bearer even when a token is stored, body {pin, device_name}', async () => {
+    it('pin-login is anonymous: no Bearer even when a token is stored, body {pin, device_name, features}', async () => {
       getItem.mockResolvedValue('stale-token');
       const fetchMock = mockFetch(200, { token: 't' });
 
@@ -134,7 +134,8 @@ describe('api client', () => {
       expect(url).toMatch(/\/api\/child\/pin-login$/);
       expect(init.method).toBe('POST');
       expect(init.headers.Authorization).toBeUndefined();
-      expect(JSON.parse(String(init.body))).toEqual({ pin: '734912', device_name: 'iPhone' });
+      // M5-R02: the child's device always declares what it can show.
+      expect(JSON.parse(String(init.body))).toEqual({ pin: '734912', device_name: 'iPhone', features: ['behaviour_events'] });
       getItem.mockReset();
     });
 

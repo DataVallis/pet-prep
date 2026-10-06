@@ -195,6 +195,32 @@ describe('ChildHudScreen — behaviour events (M5-R02)', () => {
     expect(resolveChewing).toHaveBeenCalledTimes(1);
   });
 
+  it('accident + chewing open: scrub the puddle, the slipper button is there all along', async () => {
+    await renderHud(
+      makeLiveChildState({
+        pet: { hygiene_level: 0, needs_cleaning: true, pet_state: 'sick' },
+        behaviour: {
+          // The newer accident is the scene; the older slipper still needs tidying.
+          active_events: [makeBehaviourEvent('chewing', { id: 1 }), makeBehaviourEvent('accident', { id: 2 })],
+          scene: 'accident',
+          can_resolve_chewing: true,
+        },
+      }),
+    );
+    expect(screen.getByTestId('hud-scene-accident')).toBeTruthy();
+    expect(screen.getByTestId('action-resolve-chewing')).toBeTruthy();
+    expect(screen.getByTestId('cleaning-overlay')).toBeTruthy();
+    expect(screen.getByText(CLEANING_STRINGS.accident.title)).toBeTruthy();
+
+    // Puddle cleaned: the slipper stays (still dirty), the scrub overlay closes.
+    cleanPet.mockResolvedValueOnce({ status: 'accepted', state: chewingOnly() });
+    for (let i = 0; i < 5; i++) fireEvent.press(screen.getByTestId(`dirt-spot-${i}`));
+    await waitFor(() => expect(cleanPet).toHaveBeenCalledTimes(1));
+    await waitFor(() => expect(screen.queryByTestId('cleaning-overlay')).toBeNull());
+    expect(screen.getByTestId('hud-scene-chewing')).toBeTruthy();
+    expect(screen.getByTestId('action-resolve-chewing')).toBeTruthy();
+  });
+
   it('premium: the scene video plays and replaces the graphic', async () => {
     const url = 'https://api.petprep.si/api/media/9?expires=1&v=chew&signature=s';
     await renderHud(

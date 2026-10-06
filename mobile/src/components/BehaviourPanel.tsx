@@ -47,20 +47,22 @@ export default function BehaviourPanel({
   const scene = panelScene(behaviour);
   const chewing = hasOpenChewing(behaviour) || behaviour.can_resolve_chewing;
   if (countdown === null && scene === null && !chewing) return null;
+  // A slipper can be tidied up whatever scene is shown (e.g. a newer accident on top).
+  const cardScene = scene ?? (chewing ? 'chewing' : null);
 
   const resolveDisabled = !behaviour.can_resolve_chewing || resolveBusy;
 
   return (
     <View pointerEvents="box-none" style={[styles.slot, { bottom, right }]} testID="hud-behaviour">
-      {scene !== null && (
-        <View style={styles.sceneCard} testID={`hud-scene-${scene}`}>
-          {videoState !== scene && (
-            <View accessible accessibilityRole="image" accessibilityLabel={BEHAVIOUR_STRINGS.sceneA11y[scene]}>
-              <SceneGraphic scene={scene} size={84} />
+      {cardScene !== null && (
+        <View style={styles.sceneCard} testID={`hud-scene-${cardScene}`}>
+          {videoState !== cardScene && (
+            <View accessible accessibilityRole="image" accessibilityLabel={BEHAVIOUR_STRINGS.sceneA11y[cardScene]}>
+              <SceneGraphic scene={cardScene} size={84} />
             </View>
           )}
-          <Text style={styles.sceneText}>{BEHAVIOUR_STRINGS.scene[scene]}</Text>
-          {scene === 'chewing' && chewing && (
+          <Text style={styles.sceneText}>{BEHAVIOUR_STRINGS.scene[cardScene]}</Text>
+          {chewing && (
             <Pressable
               testID="action-resolve-chewing"
               accessibilityRole="button"

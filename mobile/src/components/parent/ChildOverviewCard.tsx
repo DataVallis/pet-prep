@@ -61,7 +61,7 @@ export const CHILD_CARD_STRINGS = {
   createPin: 'Ustvari kodo',
   awaitingContract: (name: string) => `Kuža čaka, da ${name} podpiše pogodbo o odgovornosti.`,
   details: 'Podrobnosti',
-  behaviourStats: (text: string) => `Zadnjih 7 dni: ${text}`,
+  behaviourStats: (days: number, text: string) => `${PARENT_BEHAVIOUR_STRINGS.lastDays(days)}: ${text}`,
 } as const;
 
 const S = CHILD_CARD_STRINGS;
@@ -205,7 +205,7 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
             )}
             {behaviourStats !== '' && (
               <Text style={styles.muted} testID={`child-behaviour-stats-${id}`}>
-                {S.behaviourStats(behaviourStats)}
+                {S.behaviourStats(child.stats.days, behaviourStats)}
               </Text>
             )}
             {today.missed.map((m, i) => (
