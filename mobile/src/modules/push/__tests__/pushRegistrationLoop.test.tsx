@@ -9,6 +9,7 @@
  * (`addPushTokenListener(() => registerForPush())`) re-registered on every echo.
  */
 import * as Notifications from 'expo-notifications';
+import * as SecureStore from 'expo-secure-store';
 import { act, renderHook } from '@testing-library/react-native';
 import { Platform } from 'react-native';
 
@@ -49,6 +50,13 @@ function emulateIosTokenEcho() {
     // didRegister: resolve the promise, then sendEvent(onDevicePushToken).
     setTimeout(() => listeners.forEach((l) => l({ type: 'ios', data: deviceToken })), 0);
     return { type: 'expo', data };
+  });
+}
+
+/** The app's token listener (what `usePushNotifications` installs), without the hook. */
+function listenLikeTheApp() {
+  listeners.add((token) => {
+    if (typeof token.data === 'string') handlePushTokenEvent(token.data);
   });
 }
 
@@ -121,6 +129,78 @@ describe('push registration loop (hotfix 2026-10-06)', () => {
     // The same token again (APNs re-delivers it): nothing.
     await advance(60_000);
     expect(handlePushTokenEvent('apns-device-token-2')).toBe(false);
+    expect(registerDevice).toHaveBeenCalledTimes(2);
+  });
+
+  it('a real rotation while a registration is in flight is registered once after it settles', async () => {
+    let release: () => void = () => undefined;
+    listenLikeTheApp();
+    registerDevice.mockImplementationOnce(
+      () => new Promise((resolve) => { release = () => resolve({ device: { id: 1 } }); }),
+    );
+    registerDevice.mockResolvedValue({ device: { id: 1 } });
+    const first = registerForPush();
+    await advance(0); // token fetched, echo (token-1) arrives while POST is in flight
+    expect(registerDevice).toHaveBeenCalledTimes(1);
+
+    deviceToken = 'apns-device-token-2';
+    expect(handlePushTokenEvent('apns-device-token-2')).toBe(false); // recorded, not started
+    expect(handlePushTokenEvent('apns-device-token-2')).toBe(false); // repeats: still one follow-up
+    release();
+    await first;
+    await advance(60_000); // follow-up waits for the limiter if needed
+    expect(registerDevice).toHaveBeenCalledTimes(2);
+    expect(registerDevice.mock.calls[1][0]).toMatchObject({ expo_push_token: 'ExponentPushToken[apns-device-token-2]' });
+
+    // Its own echo (token-2) does not start another one.
+    await advance(10 * 60_000);
+    expect(registerDevice).toHaveBeenCalledTimes(2);
+    expect(getToken).toHaveBeenCalledTimes(2);
+  });
+
+  it('a real rotation inside the grace window after a run registers (was: dropped)', async () => {
+    listenLikeTheApp();
+    registerDevice.mockResolvedValue({ device: { id: 1 } });
+    await registerForPush();
+    await advance(1_000); // echo of our fetch → known token
+    deviceToken = 'apns-device-token-2';
+    expect(handlePushTokenEvent('apns-device-token-2')).toBe(true);
+    await advance(60_000);
+    expect(registerDevice).toHaveBeenCalledTimes(2);
+    expect(registerDevice.mock.calls[1][0]).toMatchObject({ expo_push_token: 'ExponentPushToken[apns-device-token-2]' });
+  });
+
+  it('a run still in flight at logout neither marks the old session registered nor schedules a retry', async () => {
+    let fail: (e: unknown) => void = () => undefined;
+    registerDevice.mockImplementationOnce(() => new Promise((_, reject) => { fail = reject; }));
+    registerDevice.mockResolvedValue({ device: { id: 1 } });
+    const stale = registerForPush();
+    await advance(0);
+    expect(registerDevice).toHaveBeenCalledTimes(1);
+
+    resetPushRegistration(); // logout
+    fail(new ApiError('Too Many Attempts.', 429, undefined, 20));
+    await stale;
+    await advance(10 * 60_000);
+    expect(registerDevice).toHaveBeenCalledTimes(1); // no retry from the old generation
+
+    // The next session registers normally (stale run did not poison dedupe / limiter).
+    await expect(registerForPush()).resolves.toMatchObject({ status: 'registered' });
+    expect(registerDevice).toHaveBeenCalledTimes(2);
+  });
+
+  it('a run that succeeds after logout does not store the token or block the next registration', async () => {
+    let ok: () => void = () => undefined;
+    registerDevice.mockImplementationOnce(() => new Promise((resolve) => { ok = () => resolve({ device: { id: 1 } }); }));
+    registerDevice.mockResolvedValue({ device: { id: 1 } });
+    const stale = registerForPush();
+    await advance(0);
+    resetPushRegistration();
+    ok();
+    await expect(stale).resolves.toEqual({ status: 'failed', reason: 'server' });
+    expect(jest.mocked(SecureStore.setItemAsync)).not.toHaveBeenCalled();
+
+    await expect(registerForPush()).resolves.toMatchObject({ status: 'registered' });
     expect(registerDevice).toHaveBeenCalledTimes(2);
   });
 });
