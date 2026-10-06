@@ -5,16 +5,9 @@
  */
 import { applyBroadcast, broadcastTraining, nextRefreshDelay, normalizeChildState } from '@/modules/childPet/childPetView';
 import { EMPTY_TRAINING, readChildTraining } from '@/modules/training/training';
-import { makeBroadcast, makeEnabledTraining, makeLiveChildState, makeTrainingCommands } from '@/test-utils/fixtures';
+import { makeBroadcast, makeEnabledTraining, makeLiveChildState, makeRunningSession, makeTrainingCommands } from '@/test-utils/fixtures';
 
-const RUNNING = {
-  id: 's1',
-  command: 'come' as const,
-  started_at: '2026-10-04T11:59:40+02:00',
-  ends_at: '2026-10-04T12:00:30+02:00',
-  expires_at: '2026-10-04T12:01:30+02:00',
-  mine: false,
-};
+const RUNNING = makeRunningSession();
 
 describe('training in the child view', () => {
   it('normalises: older server / legacy → EMPTY_TRAINING', () => {

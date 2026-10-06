@@ -23,7 +23,9 @@ import { childPetKey } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { selectMediaSource } from '@/modules/petMedia/petMedia';
 import { feedbackAt, firstTapsBySlot, frameAt, liveOutcome, type ClockSources, type DogAction } from '@/modules/training/game';
+import { familyCalendar } from '@/modules/childPet/familyTime';
 import {
+  isDayEnding,
   sessionsLeftToday,
   startBlock,
   TRAINING_STRINGS,
@@ -147,9 +149,23 @@ function TrialDots({ session, taps, elapsedMs }: { session: TrainingSession; tap
   );
 }
 
-function ResultView({ result, onDone, onAgain, canStartAgain }: { result: TrainingResult; onDone: () => void; onAgain: () => void; canStartAgain: boolean }) {
+function ResultView({
+  result,
+  status,
+  onDone,
+  onAgain,
+  canStartAgain,
+}: {
+  result: TrainingResult;
+  /** `unchanged` = the server returned a result it had saved before (a repeated finish). */
+  status: 'accepted' | 'unchanged';
+  onDone: () => void;
+  onAgain: () => void;
+  canStartAgain: boolean;
+}) {
   const name = S.commands[result.command].name;
   const good = result.successes > 0;
+  const stored = status === 'unchanged';
   const learned = result.progress_after >= 100;
   let gainLine: string;
   if (result.progress_after > result.progress_before) gainLine = S.result.gain(name, result.progress_before, result.progress_after);
@@ -157,7 +173,10 @@ function ResultView({ result, onDone, onAgain, canStartAgain }: { result: Traini
   else gainLine = S.result.noGain;
   return (
     <View style={styles.resultBox} testID="training-result">
-      <Text style={styles.resultTitle}>{good ? S.result.titleGood : S.result.titleLearning}</Text>
+      <Text style={styles.resultTitle} testID="training-result-title">
+        {stored ? S.result.titleStored : good ? S.result.titleGood : S.result.titleLearning}
+      </Text>
+      {stored && <Text style={styles.muted}>{S.result.stored}</Text>}
       <Text style={styles.body} testID="training-result-successes">
         {S.result.successes(result.successes, result.obeyed)}
       </Text>
@@ -169,7 +188,11 @@ function ResultView({ result, onDone, onAgain, canStartAgain }: { result: Traini
           {S.result.learned(name)}
         </Text>
       )}
-      <Text style={styles.muted}>{S.result.routineDone}</Text>
+      {!stored && (
+        <Text style={styles.muted} testID="training-result-routine">
+          {S.result.routineDone}
+        </Text>
+      )}
       <View style={styles.chips}>
         {result.trials.map((t) => (
           <View key={t.index} style={[styles.chip, GOOD.has(t.outcome) ? styles.chipGood : styles.chipTry]} testID={`training-result-trial-${t.index}`}>
@@ -196,11 +219,14 @@ function ResultView({ result, onDone, onAgain, canStartAgain }: { result: Traini
 export default function TrainingOverlay({ view, onClose, clock, testID = 'training-overlay' }: TrainingOverlayProps) {
   const queryClient = useQueryClient();
   const training = view.training;
-  const game = useTrainingGame({ clockSkewMs: view.clockSkewMs, timezone: view.timezone, clock });
+  const ownSchedule = training.session?.mine === true ? training.session.schedule : null;
+  const game = useTrainingGame({ clockSkewMs: view.clockSkewMs, timezone: view.timezone, clock, resume: ownSchedule });
   const { phase, elapsedMs } = game;
   const busy = phase.kind === 'running' || phase.kind === 'finishing' || phase.kind === 'starting';
   const premiumVideo = useMemo(() => selectMediaSource(view.pet.media, 'idle').kind === 'video', [view.pet.media]);
-  const block = startBlock(training);
+  const serverNow = (clock?.wall() ?? Date.now()) + view.clockSkewMs;
+  const dayEnding = isDayEnding(training, serverNow, familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
+  const block = startBlock(training, dayEnding);
   const left = sessionsLeftToday(training);
 
   return (
@@ -251,6 +277,7 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
           taps={phase.taps}
           elapsedMs={elapsedMs}
           finishing={phase.kind === 'finishing'}
+          resumed={phase.kind === 'running' && phase.resumed}
           premiumVideo={premiumVideo}
           view={view}
           onPraise={game.praise}
@@ -260,7 +287,7 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
 
       {phase.kind === 'result' && (
         <ScrollView contentContainerStyle={styles.content}>
-          <ResultView result={phase.result} onDone={onClose} onAgain={game.reset} canStartAgain={left > 0} />
+          <ResultView result={phase.result} status={phase.status} onDone={onClose} onAgain={game.reset} canStartAgain={left > 0} />
         </ScrollView>
       )}
 
@@ -286,6 +313,7 @@ function RunningView({
   taps,
   elapsedMs,
   finishing,
+  resumed = false,
   premiumVideo,
   view,
   onPraise,
@@ -295,6 +323,8 @@ function RunningView({
   taps: readonly number[];
   elapsedMs: number;
   finishing: boolean;
+  /** Continued after an app restart (taps before it are lost). */
+  resumed?: boolean;
   premiumVideo: boolean;
   view: ChildPetView;
   onPraise: () => void;
@@ -318,6 +348,11 @@ function RunningView({
         </Text>
       </View>
       <TrialDots session={session} taps={taps} elapsedMs={elapsedMs} />
+      {resumed && (
+        <Text style={styles.muted} testID="training-resumed">
+          {S.resumed}
+        </Text>
+      )}
 
       <View style={styles.stage}>
         {premiumVideo ? (

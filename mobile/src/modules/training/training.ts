@@ -43,6 +43,11 @@ export interface RunningSessionInfo {
   expires_at: string;
   /** Started by this child (else a sibling is training the dog). */
   mine: boolean;
+  /**
+   * The full schedule of the child's OWN session (PR #53: the server sends it when `mine`),
+   * so the game can resume after an app restart; null for a sibling's / an older server.
+   */
+  schedule: TrainingSession | null;
 }
 
 /** `training` of the child state. */
@@ -104,8 +109,13 @@ export interface TrainingSession {
   expires_at: string;
   duration_ms: number;
   praise_window_ms: number;
+  /** Human reaction floor: a praise earlier than obey_at + this is too early (PR #53). */
+  min_reaction_ms: number;
   trials: TrainingTrial[];
 }
+
+/** Backend `TrainingService::MIN_REACTION_MS` — used when a payload doesn't carry it. */
+export const DEFAULT_MIN_REACTION_MS = 150;
 
 export interface TrialResult {
   index: number;
@@ -203,7 +213,17 @@ function readRunningSession(value: unknown): RunningSessionInfo | null {
   const ends = iso(value.ends_at);
   const expires = iso(value.expires_at);
   if (started === null || ends === null || expires === null) return null;
-  return { id: value.id, command: value.command, started_at: started, ends_at: ends, expires_at: expires, mine: value.mine === true };
+  const mine = value.mine === true;
+  return {
+    id: value.id,
+    command: value.command,
+    started_at: started,
+    ends_at: ends,
+    expires_at: expires,
+    mine,
+    // Only the own session's schedule is playable; a partial one is never guessed.
+    schedule: mine ? readTrainingSession(value) : null,
+  };
 }
 
 /** Child state `training`; missing / malformed / disabled → `EMPTY_TRAINING` (legacy, older server). */
@@ -253,6 +273,7 @@ export function readTrainingSession(raw: unknown): TrainingSession | null {
   const expires = iso(raw.expires_at);
   const duration = int(raw.duration_ms);
   const window = int(raw.praise_window_ms);
+  const minReaction = int(raw.min_reaction_ms);
   if (started === null || ends === null || expires === null || duration === null || duration <= 0 || window === null || window <= 0) {
     return null;
   }
@@ -274,6 +295,7 @@ export function readTrainingSession(raw: unknown): TrainingSession | null {
     expires_at: expires,
     duration_ms: duration,
     praise_window_ms: window,
+    min_reaction_ms: minReaction !== null && minReaction >= 0 && minReaction < window ? minReaction : DEFAULT_MIN_REACTION_MS,
     trials,
   };
 }
@@ -341,13 +363,24 @@ export function sessionsLeftToday(training: ChildTraining): number {
   return Math.floor(training.daily_budget_left_seconds / training.session_seconds);
 }
 
-export type StartBlock = 'sibling_training' | 'own_session_closing' | 'budget_used' | 'unavailable' | null;
+export type StartBlock = 'sibling_training' | 'own_session_closing' | 'budget_used' | 'day_ending' | 'unavailable' | null;
 
-/** Why "Začni vajo" is disabled (null = it isn't). The server decides; this only explains `can_start`. */
-export function startBlock(training: ChildTraining): StartBlock {
+/** A session started now (+ its 60 s finish TTL) would run past the family midnight (PR #53). */
+export const DAY_END_RESERVE_MS = 60_000;
+
+export function isDayEnding(training: ChildTraining, serverNowMs: number, nextMidnightMs: number): boolean {
+  return serverNowMs + training.session_seconds * 1000 + DAY_END_RESERVE_MS > nextMidnightMs;
+}
+
+/**
+ * Why "Začni vajo" is disabled (null = it isn't). The server decides; this only explains
+ * `can_start`. `dayEnding` = `isDayEnding(…)` with the family clock.
+ */
+export function startBlock(training: ChildTraining, dayEnding = false): StartBlock {
   if (training.can_start) return null;
   if (training.session !== null) return training.session.mine ? 'own_session_closing' : 'sibling_training';
   if (training.enabled && sessionsLeftToday(training) === 0) return 'budget_used';
+  if (dayEnding) return 'day_ending';
   return 'unavailable';
 }
 
@@ -385,6 +418,7 @@ export const TRAINING_STRINGS = {
     sibling_training: 'Nekdo drug zdaj vadi s kužkom. Poskusi čez minutko.',
     own_session_closing: 'Prejšnja vaja se še zaključuje. Poskusi čez minutko.',
     budget_used: 'Kuža je danes že dovolj vadil. Jutri spet!',
+    day_ending: 'Dan se izteka — kuža gre spat. Nova vaja jutri!',
     unavailable: 'Zdaj ni čas za vajo.',
   } satisfies Record<Exclude<StartBlock, null>, string>,
   starting: 'Kuža se pripravlja …',
@@ -395,6 +429,7 @@ export const TRAINING_STRINGS = {
   secondsLeft: (s: number) => `še ${s} s`,
   trialOf: (n: number, total: number) => `Ukaz ${n} od ${total}`,
   finishing: 'Shranjujem vajo …',
+  resumed: 'Nadaljujemo vajo, ki se je začela prej.',
   feedback: {
     in_time: 'Bravo, ob pravem trenutku!',
     too_early: 'Prezgodaj — počakaj, da kuža uboga.',
@@ -421,6 +456,9 @@ export const TRAINING_STRINGS = {
     noGain: 'Napredka tokrat ni bilo — jutri bo šlo bolje. Pohvali takoj, ko kuža uboga.',
     learned: (name: string) => `Kuža zna ukaz »${name}«!`,
     routineDone: 'Današnja vaja je opravljena.',
+    /** `unchanged`: the server returned a session it had already saved. */
+    titleStored: 'Ta vaja je že shranjena',
+    stored: 'Tukaj je njen rezultat.',
     again: 'Nazaj v šolo',
     done: 'Končano',
   },
@@ -433,6 +471,8 @@ export const TRAINING_STRINGS = {
     training_session_not_over: 'Vaja še ni čisto končana. Poskusi znova.',
     training_session_expired: 'Vaja se je iztekla, preden smo jo shranili. Napredek tokrat ni zapisan — začni novo vajo.',
     training_invalid_taps: 'Pri štetju je šlo nekaj narobe. Začni novo vajo.',
+    training_day_ending: 'Dan se izteka — kuža gre spat. Nova vaja jutri!',
+    training_session_interrupted: 'Vaja je bila prekinjena, zato tokrat ne šteje. Čas za vajo ti ostane — poskusi znova, ko bo kuža spet prost.',
     expiredWhileAway: 'Vaja se je iztekla, ker je bila aplikacija zaprta. Napredek tokrat ni zapisan — začni novo vajo.',
     badResponse: 'Nekaj je šlo narobe. Poskusi znova.',
   },
@@ -456,6 +496,8 @@ const REFUSALS: readonly TrainingRefusal[] = [
   'training_session_not_over',
   'training_session_expired',
   'training_invalid_taps',
+  'training_day_ending',
+  'training_session_interrupted',
 ];
 
 export function isTrainingRefusal(value: unknown): value is TrainingRefusal {

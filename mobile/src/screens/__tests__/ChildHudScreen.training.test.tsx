@@ -17,6 +17,7 @@ import {
   makeLiveChildState,
   makeMedia,
   makePet,
+  makeRunningSession,
   makeTrainingResult,
   makeTrainingSessionPayload,
 } from '@/test-utils/fixtures';
@@ -67,7 +68,8 @@ async function renderHud(state: ReturnType<typeof makeLiveChildState>) {
   const utils = renderWithQuery(<ChildHudScreen />);
   await flush();
   await flush();
-  expect(screen.getByTestId('action-feed')).toBeTruthy();
+  // A resumed session opens the (modal) overlay at once — the dock is then hidden from a11y.
+  expect(screen.getByTestId('action-feed', { includeHiddenElements: true })).toBeTruthy();
   return utils;
 }
 
@@ -76,6 +78,9 @@ const isDisabled = (testID: string) => screen.getByTestId(testID).props.accessib
 describe('ChildHudScreen — training (M5-R03)', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    // clearAllMocks keeps queued *Once values — a failed test must not leak them.
+    startTraining.mockReset();
+    finishTraining.mockReset();
     jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });
     jest.setSystemTime(new Date('2026-10-04T12:00:00+02:00'));
     mockSocket.handler = null;
@@ -128,7 +133,7 @@ describe('ChildHudScreen — training (M5-R03)', () => {
   });
 
   it('a sibling is training: start disabled with the reason', async () => {
-    const session = { id: 's1', command: 'come' as const, started_at: '2026-10-04T11:59:40+02:00', ends_at: '2026-10-04T12:00:30+02:00', expires_at: '2026-10-04T12:01:30+02:00', mine: false };
+    const session = makeRunningSession();
     await renderHud(withTraining(makeEnabledTraining({ can_start: false, session })));
     fireEvent.press(screen.getByTestId('hud-training-open'));
     expect(isDisabled('training-start-sit')).toBe(true);
@@ -311,5 +316,59 @@ describe('ChildHudScreen — training (M5-R03)', () => {
       await jest.advanceTimersByTimeAsync(0);
     });
     expect(screen.getByTestId('hud-training-done')).toBeTruthy();
+  });
+
+  it('app restarted mid-session: "Šola" opens by itself and the game resumes', async () => {
+    finishTraining.mockResolvedValueOnce({ status: 'accepted', result: makeTrainingResult(), state: withTraining(makeEnabledTraining({ today_done: true })) });
+    // Own session started 12:00:00 − 20 s by the server clock; device = server time 12:00:00.
+    const own = makeRunningSession({
+      mine: true,
+      id: 'own-1',
+      started_at: '2026-10-04T11:59:40+02:00',
+      ends_at: '2026-10-04T12:00:30+02:00',
+      expires_at: '2026-10-04T12:01:30+02:00',
+    });
+    await renderHud(withTraining(makeEnabledTraining({ can_start: false, session: own })));
+    await flush();
+    expect(screen.getByTestId('training-running')).toBeTruthy();
+    expect(screen.getByTestId('training-resumed')).toBeTruthy();
+    expect(screen.queryByTestId('training-close')).toBeNull();
+    await flush(30_200);
+    await flush();
+    expect(finishTraining).toHaveBeenCalledWith('own-1', []);
+    expect(screen.getByTestId('training-result')).toBeTruthy();
+  });
+
+  it('own session over but within the TTL: saved at once; closing never reopens it', async () => {
+    getChildPet.mockResolvedValue(withTraining());
+    finishTraining.mockResolvedValueOnce({ status: 'accepted', result: makeTrainingResult(), state: withTraining(makeEnabledTraining({ today_done: true })) });
+    const own = makeRunningSession({ mine: true, id: 'own-2', started_at: '2026-10-04T11:58:50+02:00', ends_at: '2026-10-04T11:59:40+02:00', expires_at: '2026-10-04T12:00:40+02:00' });
+    await renderHud(withTraining(makeEnabledTraining({ can_start: false, session: own })));
+    await flush();
+    expect(finishTraining).toHaveBeenCalledWith('own-2', []);
+    fireEvent.press(screen.getByTestId('training-done'));
+    expect(screen.queryByTestId('training-overlay')).toBeNull();
+  });
+
+  it('a repeated finish ("unchanged") shows the stored result neutrally', async () => {
+    startTraining.mockResolvedValueOnce({ status: 'accepted', session: makeTrainingSessionPayload({ id: 'abcd-unchanged' }), state: withTraining() });
+    finishTraining.mockResolvedValueOnce({ status: 'unchanged', result: makeTrainingResult(), state: withTraining(makeEnabledTraining({ today_done: true })) });
+    await renderHud(withTraining());
+    fireEvent.press(screen.getByTestId('hud-training-open'));
+    fireEvent.press(screen.getByTestId('training-start-sit'));
+    await flush();
+    await flush(50_200);
+    await flush();
+    expect(screen.getByTestId('training-result-title').props.children).toBe(S.result.titleStored);
+    expect(screen.getByText(S.result.stored)).toBeTruthy();
+    expect(screen.queryByTestId('training-result-routine')).toBeNull();
+  });
+
+  it('day ending (23:59, can_start false): the start is off with a calm reason', async () => {
+    jest.setSystemTime(new Date('2026-10-04T23:59:00+02:00'));
+    await renderHud(makeLiveChildState({ server_time: '2026-10-04T23:59:00+02:00', training: makeEnabledTraining({ can_start: false }) }));
+    fireEvent.press(screen.getByTestId('hud-training-open'));
+    expect(isDisabled('training-start-sit')).toBe(true);
+    expect(screen.getByTestId('training-blocked').props.children).toBe(S.blocked.day_ending);
   });
 });

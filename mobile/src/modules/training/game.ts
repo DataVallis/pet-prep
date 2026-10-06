@@ -33,11 +33,15 @@ export function slotEnd(trials: readonly TrainingTrial[], i: number, durationMs:
   return i + 1 < trials.length ? trials[i + 1].cue_at_ms : durationMs;
 }
 
-/** Outcome of a trial for its first tap (null = no tap). Same rules as the server. */
-export function trialOutcome(trial: TrainingTrial, firstTapMs: number | null, windowMs: number): TrialOutcome {
+/**
+ * Outcome of a trial for its first tap (null = no tap). Same rules as the server: in time
+ * from obey_at + `minReactionMs` (a faster "reaction" can't be one — PR #53) to the end
+ * of the praise window.
+ */
+export function trialOutcome(trial: TrainingTrial, firstTapMs: number | null, windowMs: number, minReactionMs = 0): TrialOutcome {
   if (!trial.obeys || trial.obey_at_ms === null) return firstTapMs === null ? 'waited' : 'praised_without_obeying';
   if (firstTapMs === null) return 'no_praise';
-  if (firstTapMs < trial.obey_at_ms) return 'too_early';
+  if (firstTapMs < trial.obey_at_ms + minReactionMs) return 'too_early';
   if (firstTapMs <= trial.obey_at_ms + windowMs) return 'in_time';
   return 'too_late';
 }
@@ -59,8 +63,8 @@ export function firstTapsBySlot(trials: readonly TrainingTrial[], taps: readonly
 export function liveOutcome(session: TrainingSession, i: number, firstTapMs: number | null, elapsedMs: number): TrialOutcome | null {
   const trial = session.trials[i];
   if (trial === undefined) return null;
-  if (firstTapMs !== null) return trialOutcome(trial, firstTapMs, session.praise_window_ms);
-  if (elapsedMs >= slotEnd(session.trials, i, session.duration_ms)) return trialOutcome(trial, null, session.praise_window_ms);
+  if (firstTapMs !== null) return trialOutcome(trial, firstTapMs, session.praise_window_ms, session.min_reaction_ms);
+  if (elapsedMs >= slotEnd(session.trials, i, session.duration_ms)) return trialOutcome(trial, null, session.praise_window_ms, session.min_reaction_ms);
   // A missed praise window is already final, even before the next cue.
   if (trial.obeys && trial.obey_at_ms !== null && elapsedMs > trial.obey_at_ms + session.praise_window_ms) {
     return 'no_praise';
@@ -157,7 +161,7 @@ export function frameAt(session: TrainingSession, elapsedMs: number): GameFrame 
   if (trial.obeys && trial.obey_at_ms !== null) {
     const windowEnd = trial.obey_at_ms + session.praise_window_ms;
     if (e >= trial.obey_at_ms && e <= windowEnd + OBEY_HOLD_MS) dog = 'obeying';
-    windowOpen = e >= trial.obey_at_ms && e <= windowEnd;
+    windowOpen = e >= trial.obey_at_ms + session.min_reaction_ms && e <= windowEnd;
   } else if (sinceCue >= IGNORE_AFTER_MS) {
     dog = 'ignoring';
   }
@@ -192,9 +196,13 @@ export class SessionClock {
   private monoOrigin: number;
   private readonly wallOrigin: number;
 
-  constructor(private readonly sources: ClockSources = DEFAULT_CLOCK_SOURCES) {
-    this.monoOrigin = sources.mono();
-    this.wallOrigin = sources.wall();
+  /** `alreadyElapsedMs` > 0 resumes a session that started earlier (app restart). */
+  constructor(
+    private readonly sources: ClockSources = DEFAULT_CLOCK_SOURCES,
+    alreadyElapsedMs = 0,
+  ) {
+    this.monoOrigin = sources.mono() - alreadyElapsedMs;
+    this.wallOrigin = sources.wall() - alreadyElapsedMs;
   }
 
   /** ms since the local start (monotonic). */

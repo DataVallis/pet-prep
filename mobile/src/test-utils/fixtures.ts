@@ -488,6 +488,7 @@ export function makeTrainingSessionPayload(overrides: Record<string, unknown> = 
     expires_at: '2026-10-04T12:01:50+02:00',
     duration_ms: 50_000,
     praise_window_ms: 1_500,
+    min_reaction_ms: 150,
     trials: TRAINING_OBEYS.map((obeys, index) => {
       const cue = 2_000 + index * 6_000;
       return {
@@ -518,6 +519,30 @@ export function makeTrainingResult(overrides: Record<string, unknown> = {}) {
     progress_before: 40,
     progress_after: 43,
     progress_gain: 3,
+    ...overrides,
+  };
+}
+
+/**
+ * `training.session` of the child state (PR #53): a sibling's session carries no schedule;
+ * the child's own (`mine: true`) carries the whole schedule for a resume.
+ */
+export function makeRunningSession(
+  overrides: Partial<NonNullable<ChildPetState['training']['session']>> = {},
+): NonNullable<ChildPetState['training']['session']> {
+  const mine = overrides.mine ?? false;
+  const schedule = makeTrainingSessionPayload();
+  return {
+    id: 's1',
+    command: 'come',
+    started_at: '2026-10-04T11:59:40+02:00',
+    ends_at: '2026-10-04T12:00:30+02:00',
+    expires_at: '2026-10-04T12:01:30+02:00',
+    mine,
+    duration_ms: mine ? schedule.duration_ms : null,
+    praise_window_ms: mine ? schedule.praise_window_ms : null,
+    min_reaction_ms: mine ? schedule.min_reaction_ms : null,
+    trials: mine ? schedule.trials : null,
     ...overrides,
   };
 }

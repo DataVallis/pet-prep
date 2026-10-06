@@ -29,7 +29,7 @@ function serverScore(session: TrainingSession, taps: number[]): TrialOutcome[] {
     const first = sorted.find((t) => t >= from && t < to) ?? null;
     if (trial.obeys && trial.obey_at_ms !== null) {
       if (first === null) return 'no_praise';
-      if (first < trial.obey_at_ms) return 'too_early';
+      if (first < trial.obey_at_ms + session.min_reaction_ms) return 'too_early';
       if (first <= trial.obey_at_ms + session.praise_window_ms) return 'in_time';
       return 'too_late';
     }
@@ -53,6 +53,11 @@ describe('slots and outcomes', () => {
     expect(trialOutcome(obeys, 3_000, 1_500)).toBe('in_time');
     expect(trialOutcome(obeys, 4_500, 1_500)).toBe('in_time');
     expect(trialOutcome(obeys, 4_501, 1_500)).toBe('too_late');
+    // PR #53 reaction floor: faster than 150 ms after the dog obeys can't be a reaction.
+    expect(trialOutcome(obeys, 3_149, 1_500, 150)).toBe('too_early');
+    expect(trialOutcome(obeys, 3_150, 1_500, 150)).toBe('in_time');
+    expect(trialOutcome(obeys, 4_500, 1_500, 150)).toBe('in_time');
+    expect(trialOutcome(obeys, 4_501, 1_500, 150)).toBe('too_late');
     expect(trialOutcome(obeys, null, 1_500)).toBe('no_praise');
     const ignores = SESSION.trials[1];
     expect(trialOutcome(ignores, null, 1_500)).toBe('waited');
@@ -60,7 +65,8 @@ describe('slots and outcomes', () => {
   });
 
   it('local verdicts equal the server scoring for the same taps', () => {
-    const taps = [500, 2_100, 3_400, 3_600, 9_500, 14_100, 15_200, 21_000, 26_500, 33_000, 38_900, 45_000];
+    // 33_050 / 39_100: inside the reaction floor of cues 5 (obey 33_000) and 6 (obey 39_000).
+    const taps = [500, 2_100, 3_400, 3_600, 9_500, 14_100, 15_200, 21_000, 26_500, 33_050, 39_100, 45_000];
     const firsts = firstTapsBySlot(SESSION.trials, taps);
     const local = SESSION.trials.map((_, i) => liveOutcome(SESSION, i, firsts.get(i) ?? null, SESSION.duration_ms));
     expect(local).toEqual(serverScore(SESSION, taps));
@@ -91,7 +97,8 @@ describe('frameAt / feedbackAt', () => {
   it('lead-in → cue → dog obeys after its delay → window closes', () => {
     expect(frameAt(SESSION, 0)).toMatchObject({ slot: null, dog: 'waiting', cueVisible: false, secondsLeft: 50 });
     expect(frameAt(SESSION, 2_000)).toMatchObject({ slot: 0, dog: 'listening', cueVisible: true, windowOpen: false });
-    expect(frameAt(SESSION, 3_000)).toMatchObject({ slot: 0, dog: 'obeying', windowOpen: true });
+    expect(frameAt(SESSION, 3_000)).toMatchObject({ slot: 0, dog: 'obeying', windowOpen: false });
+    expect(frameAt(SESSION, 3_150)).toMatchObject({ slot: 0, dog: 'obeying', windowOpen: true });
     expect(frameAt(SESSION, 4_600)).toMatchObject({ dog: 'obeying', windowOpen: false, cueVisible: false });
     expect(frameAt(SESSION, 6_000)).toMatchObject({ dog: 'listening' });
   });
@@ -109,6 +116,7 @@ describe('frameAt / feedbackAt', () => {
     expect(feedbackAt(SESSION, [], 2_500)).toBeNull();
     expect(feedbackAt(SESSION, [2_500], 2_500)).toEqual({ slot: 0, outcome: 'too_early' });
     expect(feedbackAt(SESSION, [3_200], 3_200)).toEqual({ slot: 0, outcome: 'in_time' });
+    expect(feedbackAt(SESSION, [3_100], 3_100)).toEqual({ slot: 0, outcome: 'too_early' });
     // No tap: the missed window is final once it closed.
     expect(feedbackAt(SESSION, [], 4_600)).toEqual({ slot: 0, outcome: 'no_praise' });
     // Slot 1 (no obey) is only "waited" once slot 2 begins …
@@ -137,6 +145,16 @@ describe('SessionClock', () => {
     wall += 100;
     clock.resync();
     expect(clock.elapsed()).toBe(31_234);
+  });
+
+  it('resumes a session that started earlier (app restart)', () => {
+    let mono = 5;
+    const wall = 1_700_000_000_000;
+    const clock = new SessionClock({ mono: () => mono, wall: () => wall }, 12_000);
+    expect(clock.elapsed()).toBe(12_000);
+    expect(clock.wallElapsed()).toBe(12_000);
+    mono += 500;
+    expect(clock.elapsed()).toBe(12_500);
   });
 });
 

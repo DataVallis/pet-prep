@@ -13,6 +13,10 @@
  *   explain that the session expired — no request, the state is refetched.
  * - Refusals / locks / offline become one calm message; a finish that failed for a
  *   network reason may be retried while the session hasn't expired.
+ * - Resume after an app restart (PR #53): the child state carries the schedule of the
+ *   child's own running session. Still running → the game continues from the server's
+ *   `started_at` (no taps recorded before the restart); its time is over but the TTL
+ *   isn't → it is finished at once with no taps; past the TTL → the expiry message.
  */
 
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -46,12 +50,14 @@ const FINAL_FINISH_REFUSALS = new Set([
   'training_session_invalid',
   'training_invalid_taps',
   'training_not_available',
+  // A lock began during the session: it never counts (its time is refunded).
+  'training_session_interrupted',
 ]);
 
 export type TrainingPhase =
   | { kind: 'pick' }
   | { kind: 'starting'; command: TrainingCommand }
-  | { kind: 'running'; session: TrainingSession; taps: readonly number[] }
+  | { kind: 'running'; session: TrainingSession; taps: readonly number[]; resumed: boolean }
   | { kind: 'finishing'; session: TrainingSession; taps: readonly number[] }
   | { kind: 'result'; result: TrainingResult; status: 'accepted' | 'unchanged' }
   | {
@@ -68,6 +74,8 @@ export interface TrainingGameOptions {
   timezone: string | null;
   /** Injected in tests; defaults to performance.now / Date.now. */
   clock?: ClockSources;
+  /** The child's own running session from the child state (with its schedule) — resumed once. */
+  resume?: TrainingSession | null;
 }
 
 export interface TrainingGame {
@@ -106,7 +114,12 @@ export function canRetryFinish(error: unknown): boolean {
   return failure.kind !== 'locked';
 }
 
-export function useTrainingGame({ clockSkewMs, timezone, clock = DEFAULT_CLOCK_SOURCES }: TrainingGameOptions): TrainingGame {
+export function useTrainingGame({
+  clockSkewMs,
+  timezone,
+  clock = DEFAULT_CLOCK_SOURCES,
+  resume = null,
+}: TrainingGameOptions): TrainingGame {
   const queryClient = useQueryClient();
   const startMutation = useStartTraining();
   const finishMutation = useFinishTraining();
@@ -117,6 +130,8 @@ export function useTrainingGame({ clockSkewMs, timezone, clock = DEFAULT_CLOCK_S
   const clockRef = useRef<SessionClock | null>(null);
   /** Session ids a finish was sent for (one request per session unless retried). */
   const finishedRef = useRef<Set<string>>(new Set());
+  /** Session ids this hook played or resumed (never resumed again). */
+  const playedRef = useRef<Set<string>>(new Set());
   const mounted = useRef(true);
   const skewRef = useRef(clockSkewMs);
   skewRef.current = clockSkewMs;
@@ -206,8 +221,9 @@ export function useTrainingGame({ clockSkewMs, timezone, clock = DEFAULT_CLOCK_S
         onSuccess: (response) => {
           // The local clock starts now — the schedule is relative to this moment.
           clockRef.current = new SessionClock(clockSourcesRef.current);
+          playedRef.current.add(response.session.id);
           if (mounted.current) setElapsedMs(0);
-          setPhase({ kind: 'running', session: response.session, taps: [] });
+          setPhase({ kind: 'running', session: response.session, taps: [], resumed: false });
         },
         onError: (error) => {
           setPhase({ kind: 'failed', message: failureText(error, tzRef.current), retry: null });
@@ -216,6 +232,29 @@ export function useTrainingGame({ clockSkewMs, timezone, clock = DEFAULT_CLOCK_S
     },
     [setPhase, startMutate],
   );
+
+  // Resume the child's own session after an app restart (once per session id).
+  const resumeRef = useRef(resume);
+  resumeRef.current = resume;
+  const resumeId = resume?.id ?? null;
+  useEffect(() => {
+    const session = resumeRef.current;
+    if (session === null || session.id !== resumeId) return;
+    if (phaseRef.current.kind !== 'pick') return;
+    if (playedRef.current.has(session.id) || finishedRef.current.has(session.id)) return;
+    playedRef.current.add(session.id);
+    const started = Date.parse(session.started_at);
+    const serverNow = clockSourcesRef.current.wall() + skewRef.current;
+    const elapsed = Number.isNaN(started) ? session.duration_ms : Math.max(0, serverNow - started);
+    if (elapsed < session.duration_ms) {
+      clockRef.current = new SessionClock(clockSourcesRef.current, elapsed);
+      if (mounted.current) setElapsedMs(elapsed);
+      setPhase({ kind: 'running', session, taps: [], resumed: true });
+      return;
+    }
+    // The schedule ran out while the app was closed: save it now if the server still takes it.
+    sendFinish(session, []);
+  }, [resumeId, sendFinish, setPhase]);
 
   const praise = useCallback(() => {
     const current = phaseRef.current;

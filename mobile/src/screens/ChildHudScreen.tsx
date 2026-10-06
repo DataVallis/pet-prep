@@ -268,6 +268,19 @@ export default function ChildHudScreen() {
     },
     [setAlbumVisible, setTrainingVisible],
   );
+  // M5-R03 / PR #53: the child's own session is still running (e.g. the app was restarted
+  // mid-game) → open "Šola" so the game resumes / is saved. Once per session: closing the
+  // overlay never reopens it for the same session.
+  const ownSession = view?.training.session;
+  const ownSessionId = ownSession?.mine === true && ownSession.schedule !== null ? ownSession.id : null;
+  const dismissedSessions = useRef<Set<string>>(new Set());
+  useEffect(() => {
+    if (ownSessionId !== null && !lockedNow && !dismissedSessions.current.has(ownSessionId)) setTrainingVisible(true);
+  }, [ownSessionId, lockedNow, setTrainingVisible]);
+  const closeTraining = useCallback(() => {
+    if (ownSessionId !== null) dismissedSessions.current.add(ownSessionId);
+    setTrainingVisible(false);
+  }, [ownSessionId, setTrainingVisible]);
 
   const stepSync = useStepSync({
     enabled: view !== undefined && !view.lock.is_locked,
@@ -636,7 +649,7 @@ export default function ChildHudScreen() {
             }}
           />
         )}
-        {showTraining && <TrainingOverlay view={view} onClose={() => setTrainingVisible(false)} />}
+        {showTraining && <TrainingOverlay view={view} onClose={closeTraining} />}
         {showCleaning && (
           <CleaningOverlay
             onCleaned={handleCleaned}

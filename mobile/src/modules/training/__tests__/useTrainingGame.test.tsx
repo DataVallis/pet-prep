@@ -13,7 +13,7 @@ import { ApiError, api } from '@/api/client';
 import { childPetKey, writeChildState } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { GAME_TICK_MS, useTrainingGame } from '@/modules/training/useTrainingGame';
-import { TRAINING_STRINGS } from '@/modules/training/training';
+import { readTrainingSession, TRAINING_STRINGS, type TrainingSession } from '@/modules/training/training';
 import { useAppStore } from '@/store/appStore';
 import {
   makeEnabledTraining,
@@ -51,6 +51,26 @@ const finishBody = (status = 'accepted') => ({
   result: makeTrainingResult(),
   state: stateWith(makeEnabledTraining({ today_done: true, daily_budget_left_seconds: 250 })),
 });
+
+/** The child's own running session as the child state would carry it after a restart. */
+function ownSchedule(startedAt: string) {
+  const ends = new Date(Date.parse(startedAt) + 50_000).toISOString();
+  const expires = new Date(Date.parse(startedAt) + 110_000).toISOString();
+  return readTrainingSession(makeTrainingSessionPayload({ id: 'resume-1', started_at: startedAt, ends_at: ends, expires_at: expires })) as TrainingSession;
+}
+
+function setupResume(resume: TrainingSession | null) {
+  const client = new QueryClient({
+    defaultOptions: { queries: { retry: false, gcTime: Infinity }, mutations: { retry: false, gcTime: Infinity } },
+  });
+  writeChildState(client, stateWith());
+  const wrapper = ({ children }: { children: ReactNode }) => <QueryClientProvider client={client}>{children}</QueryClientProvider>;
+  const hook = renderHook(
+    ({ r }: { r: TrainingSession | null }) => useTrainingGame({ clockSkewMs: 0, timezone: 'Europe/Ljubljana', clock, resume: r }),
+    { wrapper, initialProps: { r: resume } },
+  );
+  return { client, ...hook };
+}
 
 function setup() {
   const client = new QueryClient({
@@ -275,5 +295,79 @@ describe('useTrainingGame', () => {
     await advance(0);
     expect(startTraining).toHaveBeenCalledTimes(1);
     expect(startTraining).toHaveBeenCalledWith('sit');
+  });
+
+  it('finish 422 interrupted (a lock began during the session) → calm message, no retry', async () => {
+    startTraining.mockResolvedValueOnce(startBody());
+    finishTraining.mockRejectedValueOnce(new ApiError('x', 422, { reason: 'training_session_interrupted', state: stateWith() }));
+    const { result } = setup();
+    act(() => result.current.start('sit'));
+    await advance(0);
+    await advance(50_000 + GAME_TICK_MS);
+    const phase = result.current.phase;
+    expect(phase.kind === 'failed' && phase.message).toBe(TRAINING_STRINGS.errors.training_session_interrupted);
+    expect(phase.kind === 'failed' && phase.retry).toBeNull();
+  });
+
+  it('start 422 day ending → calm message', async () => {
+    startTraining.mockRejectedValueOnce(new ApiError('x', 422, { reason: 'training_day_ending', next_allowed_at: '2026-10-05T00:00:00+02:00', state: stateWith() }));
+    const { result } = setup();
+    act(() => result.current.start('sit'));
+    await advance(0);
+    const phase = result.current.phase;
+    expect(phase.kind === 'failed' && phase.message).toBe(TRAINING_STRINGS.errors.training_day_ending);
+  });
+
+  describe('resume after an app restart (PR #53)', () => {
+    it('still running: continues from the server start; taps are ms since the server start', async () => {
+      finishTraining.mockResolvedValue(finishBody());
+      // Started 20 s ago by the server clock.
+      const session = ownSchedule('2026-10-04T09:59:40.000Z');
+      const { result } = setupResume(session);
+      await advance(0);
+      const phase = result.current.phase;
+      expect(phase.kind === 'running' && phase.resumed).toBe(true);
+      expect(result.current.elapsedMs).toBe(20_000);
+      // Cue 3 obeys at 21 000 → praise at 21 400 (local time + 1.4 s).
+      await advance(1_400);
+      act(() => result.current.praise());
+      await advance(30_000);
+      expect(finishTraining).toHaveBeenCalledTimes(1);
+      expect(finishTraining).toHaveBeenCalledWith('resume-1', [21_400]);
+      expect(result.current.phase.kind).toBe('result');
+    });
+
+    it('schedule over but within the TTL: finished at once with no taps', async () => {
+      finishTraining.mockResolvedValue(finishBody());
+      const { result } = setupResume(ownSchedule('2026-10-04T09:58:50.000Z')); // 70 s ago
+      await advance(0);
+      expect(finishTraining).toHaveBeenCalledWith('resume-1', []);
+      expect(result.current.phase.kind).toBe('result');
+    });
+
+    it('past the TTL: expiry message, no request', async () => {
+      const { result } = setupResume(ownSchedule('2026-10-04T09:57:00.000Z')); // 3 min ago
+      await advance(0);
+      expect(finishTraining).not.toHaveBeenCalled();
+      const phase = result.current.phase;
+      expect(phase.kind === 'failed' && phase.message).toBe(TRAINING_STRINGS.errors.expiredWhileAway);
+    });
+
+    it('a session this hook started is never "resumed" again (state echoes it as mine)', async () => {
+      startTraining.mockResolvedValueOnce(startBody());
+      finishTraining.mockResolvedValue(finishBody());
+      const { result, rerender } = setupResume(null);
+      act(() => result.current.start('sit'));
+      await advance(0);
+      const own = readTrainingSession(makeTrainingSessionPayload()) as TrainingSession;
+      rerender({ r: own });
+      await advance(50_000 + GAME_TICK_MS);
+      expect(finishTraining).toHaveBeenCalledTimes(1);
+      act(() => result.current.reset());
+      rerender({ r: own });
+      await advance(0);
+      expect(result.current.phase.kind).toBe('pick');
+      expect(finishTraining).toHaveBeenCalledTimes(1);
+    });
   });
 });

@@ -5,6 +5,7 @@
 import {
   EMPTY_TRAINING,
   EMPTY_TRAINING_SUMMARY,
+  isDayEnding,
   knowsLine,
   parentTrainingLines,
   readChildTraining,
@@ -22,6 +23,7 @@ import {
 import {
   makeEnabledTraining,
   makeLiveChildState,
+  makeRunningSession,
   makeTrainingCommands,
   makeTrainingResult,
   makeTrainingSessionPayload,
@@ -60,10 +62,19 @@ describe('readChildTraining', () => {
   });
 
   it('reads the running session; malformed session → null', () => {
-    const session = { id: 'abc', command: 'come' as const, started_at: '2026-10-04T12:00:00+02:00', ends_at: '2026-10-04T12:00:50+02:00', expires_at: '2026-10-04T12:01:50+02:00', mine: false };
-    expect(readChildTraining(makeEnabledTraining({ session, can_start: false })).session).toEqual(session);
+    const session = makeRunningSession();
+    const sibling = readChildTraining(makeEnabledTraining({ session, can_start: false })).session;
+    expect(sibling).toMatchObject({ id: 's1', command: 'come', mine: false, schedule: null });
     expect(readChildTraining(makeEnabledTraining({ session: { ...session, command: 'fly' } as never })).session).toBeNull();
     expect(readChildTraining(makeEnabledTraining({ session: { ...session, ends_at: 'soon' } })).session).toBeNull();
+    // Own session (PR #53): the schedule comes along for a resume.
+    const own = readChildTraining(makeEnabledTraining({ session: makeRunningSession({ mine: true }), can_start: false })).session;
+    expect(own?.schedule?.trials).toHaveLength(8);
+    expect(own?.schedule?.min_reaction_ms).toBe(150);
+    expect(own?.schedule?.id).toBe('s1');
+    // Own session from an older server (no schedule) → nothing to resume.
+    const ownOld = { ...makeRunningSession({ mine: true }), duration_ms: null, trials: null };
+    expect(readChildTraining(makeEnabledTraining({ session: ownOld })).session?.schedule).toBeNull();
   });
 
   it('sessions left and why "Začni vajo" is off', () => {
@@ -71,11 +82,16 @@ describe('readChildTraining', () => {
     expect(sessionsLeftToday(t)).toBe(2);
     expect(startBlock(t)).toBeNull();
     expect(startBlock(readChildTraining(makeEnabledTraining({ can_start: false, daily_budget_left_seconds: 40 })))).toBe('budget_used');
-    const running = { id: 'abc', command: 'sit' as const, started_at: '2026-10-04T12:00:00+02:00', ends_at: '2026-10-04T12:00:50+02:00', expires_at: '2026-10-04T12:01:50+02:00' };
-    expect(startBlock(readChildTraining(makeEnabledTraining({ can_start: false, session: { ...running, mine: false } })))).toBe('sibling_training');
-    expect(startBlock(readChildTraining(makeEnabledTraining({ can_start: false, session: { ...running, mine: true } })))).toBe('own_session_closing');
+    expect(startBlock(readChildTraining(makeEnabledTraining({ can_start: false, session: makeRunningSession() })))).toBe('sibling_training');
+    expect(startBlock(readChildTraining(makeEnabledTraining({ can_start: false, session: makeRunningSession({ mine: true }) })))).toBe('own_session_closing');
     // Locked / other server reasons with budget left.
-    expect(startBlock(readChildTraining(makeEnabledTraining({ can_start: false })))).toBe('unavailable');
+    const off = readChildTraining(makeEnabledTraining({ can_start: false }));
+    expect(startBlock(off)).toBe('unavailable');
+    // PR #53: the session + its 60 s TTL would cross the family midnight.
+    const midnight = Date.parse('2026-10-05T00:00:00+02:00');
+    expect(isDayEnding(off, midnight - 111_000, midnight)).toBe(false);
+    expect(isDayEnding(off, midnight - 109_000, midnight)).toBe(true);
+    expect(startBlock(off, true)).toBe('day_ending');
   });
 
   it('the live fixture without training key (older server) normalises to nothing', () => {
@@ -156,6 +172,8 @@ describe('texts', () => {
       'Nekdo že vadi s kužkom. Poskusi spet ob 12:05.',
     );
     expect(trainingRefusalMessage('something_new', null, null)).toBe(TRAINING_STRINGS.errors.badResponse);
+    expect(trainingRefusalMessage('training_day_ending', '2026-10-05T00:00:00+02:00', 'Europe/Ljubljana')).toBe(TRAINING_STRINGS.errors.training_day_ending);
+    expect(trainingRefusalMessage('training_session_interrupted', null, null)).toBe(TRAINING_STRINGS.errors.training_session_interrupted);
   });
 
   it('sessions-left plural forms', () => {
