@@ -11,7 +11,7 @@ import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
 
 import { queryClient } from '@/api/queryClient';
-import { registerForPush } from '@/modules/push/pushRegistration';
+import { handlePushTokenEvent, registerForPush } from '@/modules/push/pushRegistration';
 import { configurePushPresentation, routePushTap } from '@/modules/push/pushRouting';
 import { useAppStore } from '@/store/appStore';
 
@@ -32,8 +32,10 @@ export function usePushNotifications(): void {
   useEffect(() => {
     if (!pushSupported() || !signedIn || userId === null) return;
     void registerForPush();
-    const subscription = Notifications.addPushTokenListener(() => {
-      void registerForPush();
+    // Hotfix 2026-10-06: on iOS our own token fetch emits this event again with the same
+    // token — re-registering on every event looped thousands of times per minute.
+    const subscription = Notifications.addPushTokenListener((token) => {
+      if (typeof token.data === 'string') handlePushTokenEvent(token.data);
     });
     return () => subscription.remove();
   }, [signedIn, userId]);

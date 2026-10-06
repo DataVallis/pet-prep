@@ -7,7 +7,7 @@ import { Platform } from 'react-native';
 
 import { api } from '@/api/client';
 import { PUSH_CHANNELS, PUSH_STORAGE_KEYS } from '@/modules/push/pushConfig';
-import { easProjectId, registerForPush, unregisterFromPush } from '@/modules/push/pushRegistration';
+import { easProjectId, registerForPush, resetPushRegistration, unregisterFromPush } from '@/modules/push/pushRegistration';
 import { logout, REVOKE_TIMEOUT_MS, UNREGISTER_TIMEOUT_MS } from '@/modules/session/logout';
 import { useAppStore } from '@/store/appStore';
 
@@ -47,6 +47,7 @@ function setPlatform(os: 'ios' | 'android') {
 
 describe('registerForPush', () => {
   beforeEach(() => {
+    resetPushRegistration();
     jest.clearAllMocks();
     setPlatform('ios');
     getPermissions.mockResolvedValue(granted);
@@ -111,6 +112,7 @@ describe('registerForPush', () => {
 
 describe('unregisterFromPush / logout', () => {
   beforeEach(() => {
+    resetPushRegistration();
     jest.clearAllMocks();
     useAppStore.setState(useAppStore.getInitialState(), true);
     useAppStore.getState().signIn({ token: 'tok', user: { id: 1, name: 'Starš', email: 'p@x.si', role: 'parent' }, pet: null });

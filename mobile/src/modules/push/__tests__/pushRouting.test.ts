@@ -110,8 +110,9 @@ describe('routePushTap', () => {
 });
 
 describe('usePushNotifications', () => {
-  it('registers on sign-in (no prompt) and re-registers when the device token rotates', async () => {
+  it('registers on sign-in (no prompt) and hands token events to the loop-safe handler', async () => {
     const register = jest.spyOn(registration, 'registerForPush').mockResolvedValue({ status: 'no_permission' });
+    const handle = jest.spyOn(registration, 'handlePushTokenEvent').mockReturnValue(true);
     let rotate: (() => void) | undefined;
     jest.mocked(Notifications.addPushTokenListener).mockImplementation((listener) => {
       rotate = () => listener({ type: 'ios', data: 'x' });
@@ -126,7 +127,9 @@ describe('usePushNotifications', () => {
     expect(Notifications.requestPermissionsAsync).not.toHaveBeenCalled();
 
     rotate?.();
-    expect(register).toHaveBeenCalledTimes(2);
+    // Hotfix 2026-10-06: never `registerForPush` straight from the event (it echoes on iOS).
+    expect(handle).toHaveBeenCalledWith('x');
+    expect(register).toHaveBeenCalledTimes(1);
   });
 
   it('routes the tap that cold-started the app once, then clears it', async () => {
