@@ -20,6 +20,7 @@ import {
   type TodayRoutines,
   type TrafficLight,
 } from '@/modules/family/scoring';
+import { readPetBehaviour, type PetBehaviour } from '@/modules/behaviour/behaviour';
 
 /** One pet of the family as the generated schema types it (raw API). */
 export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'][number];
@@ -28,11 +29,13 @@ export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'
  * One pet of the family after normalisation: the schema's loose `timeline` and
  * union-typed `traffic_light` replaced by real types (M2-05).
  */
-export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today'> & {
+export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today' | 'behaviour'> & {
   traffic_light: TrafficLight;
   care_score: CareScore;
   today: TodayRoutines;
   timeline: TimelineEntry[];
+  /** M5-R02: bladder clock + open messes; nothing for a legacy pet / older server. */
+  behaviour: PetBehaviour;
 };
 
 export interface FamilyChildStats {
@@ -41,6 +44,10 @@ export interface FamilyChildStats {
   watered: number;
   cleaned: number;
   walk_goals: number;
+  /** M5-R02: puppy take-outs ("Pelji ven"); 0 from older servers. */
+  taken_out: number;
+  /** M5-R02: chewed slippers tidied up; 0 from older servers. */
+  chewing_resolved: number;
   actions_total: number;
   steps: number;
   active_step_days: number;
@@ -99,11 +106,36 @@ function isFamilyParent(value: unknown): value is FamilyParent {
   return typeof p.id === 'number' && typeof p.name === 'string';
 }
 
+const STAT_KEYS = [
+  'days',
+  'fed',
+  'watered',
+  'cleaned',
+  'walk_goals',
+  'taken_out',
+  'chewing_resolved',
+  'actions_total',
+  'steps',
+  'active_step_days',
+] as const satisfies readonly (keyof FamilyChildStats)[];
+
+/** Stats with every counter a number (older servers lack the M5-R02 ones). */
+function readStats(value: unknown): FamilyChildStats {
+  const o = typeof value === 'object' && value !== null ? (value as Record<string, unknown>) : {};
+  const stats = {} as FamilyChildStats;
+  for (const key of STAT_KEYS) {
+    const v = o[key];
+    stats[key] = typeof v === 'number' && Number.isFinite(v) ? v : 0;
+  }
+  return stats;
+}
+
 /** Scoring fields with safe defaults (an older backend without M2-06 sends none). */
 function normalizeChild(raw: FamilyChild): FamilyChild {
   const c = raw as unknown as Record<string, unknown>;
   return {
     ...raw,
+    stats: readStats(c.stats),
     traffic_light: readTrafficLight(c.traffic_light),
     care_score: readCareScore(c.care_score),
     today: c.today === undefined ? emptyToday() : readToday(c.today),
@@ -122,6 +154,7 @@ export function normalizePet(raw: FamilyPetRaw): FamilyPet {
     care_score: readCareScore(p.care_score),
     today: readToday(p.today),
     timeline: readTimeline(p.timeline),
+    behaviour: readPetBehaviour(p.behaviour),
   };
 }
 

@@ -14,7 +14,7 @@
  * `partial` the greyed tiles stay ("Še ni posnetka" — they are on their way).
  */
 
-import { mediaKey, PET_STATES, type PetMediaInfo } from '@/modules/petMedia/petMedia';
+import { mediaKey, PET_STATES, type PetMediaInfo, type VideoState } from '@/modules/petMedia/petMedia';
 import type { PetState } from '@/types';
 
 /** User-visible strings (i18n with M1-18). */
@@ -59,8 +59,9 @@ export function isPlayable(item: AlbumItem): item is PlayableAlbumItem {
   return item.kind !== 'missing';
 }
 
-function ordered(states: readonly PetState[]): PetState[] {
-  const set = new Set(states);
+/** The six pet states in album order; behaviour scenes (M5-R02) are not album tiles. */
+function ordered(states: readonly VideoState[]): PetState[] {
+  const set = new Set<VideoState>(states);
   return PET_STATES.filter((s) => set.has(s));
 }
 
@@ -76,7 +77,7 @@ export function buildAlbumItems(media: PetMediaInfo): AlbumItem[] {
     });
   }
 
-  const stored = Object.keys(media.videos) as PetState[];
+  const stored = Object.keys(media.videos) as VideoState[];
   const entitled = media.states.length > 0 ? ordered(media.states) : ordered(stored);
   for (const state of entitled) {
     const url = media.videos[state];

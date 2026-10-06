@@ -18,6 +18,15 @@ import type { LockState } from '@/store/appStore';
 import { familyCalendar } from '@/modules/childPet/familyTime';
 import { normalizePetMedia, type PetMediaInfo } from '@/modules/petMedia/petMedia';
 import { readPetProfile, type PetProfileInfo } from '@/modules/petProfile/petProfile';
+import {
+  afterClean,
+  afterResolveChewing,
+  afterTakeOut,
+  hasOpenChewing,
+  readChildBehaviour,
+  readPetBehaviour,
+  type ChildBehaviour,
+} from '@/modules/behaviour/behaviour';
 
 export type LockReason = 'game_over' | 'inactive' | 'hard_stopped' | 'contract_required' | 'ill';
 
@@ -81,6 +90,11 @@ export interface ChildPetView {
   };
   steps: { steps_today: number; my_steps_today: number; goal: number; energy_level: number };
   contract: { signed: boolean; signed_at: string | null };
+  /**
+   * M5-R02 behaviour events: puppy bladder clock, open messes, behaviour scene and what
+   * the child may do. `EMPTY_BEHAVIOUR` for a legacy pet / an older server.
+   */
+  behaviour: ChildBehaviour;
   /** ms of `server_time` (whole seconds). */
   snapshotAtMs: number;
   /** ms of the newest applied broadcast `emitted_at`; 0 if none. */
@@ -206,6 +220,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       energy_level: num(raw.steps.energy_level),
     },
     contract: { signed: bool(raw.contract.signed), signed_at: isoOrNull(raw.contract.signed_at) },
+    // Older servers send no `behaviour` (typed as required by the current schema).
+    behaviour: readChildBehaviour((raw as { behaviour?: unknown }).behaviour),
     snapshotAtMs: msOf(raw.server_time),
     lastEmittedMs,
     clockSkewMs: msOf(raw.server_time) > 0 ? msOf(raw.server_time) - receivedAtMs : 0,
@@ -303,6 +319,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
   };
   const lock = lockFromFlags(pet, view.lock);
   const blocked = lock.is_locked || pet.needs_cleaning;
+  const behaviour = broadcastBehaviour(view.behaviour, b.behaviour, lock.is_locked);
 
   const next: ChildPetView = {
     ...view,
@@ -311,6 +328,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     feeding: { ...view.feeding, can_feed: view.feeding.can_feed && !blocked },
     water: { ...view.water, can_water: view.water.can_water && !blocked },
     steps: { ...view.steps, energy_level: b.energy_level },
+    behaviour,
     lastEmittedMs: emittedMs,
   };
 
@@ -324,10 +342,31 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
   return { view: next, refetch };
 }
 
-export type CareAction = 'feed' | 'water' | 'clean';
+/**
+ * `behaviour` after a `PetUpdated` (M5-R02). The broadcast carries the clock, the open
+ * messes and the scene but not the child's `can_*` flags; they follow from the server's
+ * own rules (a puppy with a clock may go out, an open chewing may be tidied up — never
+ * while locked). A broadcast without `behaviour` (older server) keeps what the view has.
+ */
+export function broadcastBehaviour(current: ChildBehaviour, raw: unknown, locked: boolean): ChildBehaviour {
+  if (raw === undefined || raw === null) {
+    return locked ? { ...current, can_take_out: false, can_resolve_chewing: false } : current;
+  }
+  const next = readPetBehaviour(raw);
+  return {
+    ...next,
+    can_take_out: next.take_out !== null && !locked,
+    can_resolve_chewing: hasOpenChewing(next) && !locked,
+  };
+}
 
-/** What the HUD shows while the request is in flight (the response replaces it). */
-export function optimisticView(view: ChildPetView, action: CareAction): ChildPetView {
+export type CareAction = 'feed' | 'water' | 'clean' | 'take_out' | 'resolve_chewing';
+
+/**
+ * What the HUD shows while the request is in flight (the response replaces it).
+ * `nowMs` = server time now (device clock + skew), only used by "Pelji ven".
+ */
+export function optimisticView(view: ChildPetView, action: CareAction, nowMs: number = Date.now() + view.clockSkewMs): ChildPetView {
   switch (action) {
     case 'feed':
       return {
@@ -337,8 +376,20 @@ export function optimisticView(view: ChildPetView, action: CareAction): ChildPet
       };
     case 'water':
       return { ...view, pet: { ...view.pet, thirst_level: 100 }, water: { ...view.water, can_water: false } };
-    case 'clean':
-      return { ...view, pet: { ...view.pet, hygiene_level: 100, needs_cleaning: false } };
+    case 'clean': {
+      // M5-R02: a chewed slipper is not scrubbed away — hygiene stays 0 until it's tidied up.
+      const behaviour = afterClean(view.behaviour);
+      if (hasOpenChewing(behaviour)) return { ...view, behaviour };
+      return { ...view, pet: { ...view.pet, hygiene_level: 100, needs_cleaning: false }, behaviour };
+    }
+    case 'resolve_chewing': {
+      const behaviour = afterResolveChewing(view.behaviour);
+      // Something else still open (poop / accident) → still dirty.
+      if (behaviour.active_events.length > 0 || view.behaviour.active_events.length === 0) return { ...view, behaviour };
+      return { ...view, pet: { ...view.pet, hygiene_level: 100, needs_cleaning: false }, behaviour };
+    }
+    case 'take_out':
+      return { ...view, behaviour: afterTakeOut(view.behaviour, nowMs) };
   }
 }
 
@@ -370,10 +421,17 @@ export function revertOptimistic(current: ChildPetView, previous: ChildPetView, 
           can_water: previous.water.can_water && !current.lock.is_locked && !current.pet.needs_cleaning,
         },
       };
-    case 'clean': {
+    case 'clean':
+    case 'resolve_chewing': {
       const hygiene = broadcastSince ? current.pet.hygiene_level : previous.pet.hygiene_level;
-      return { ...current, pet: { ...current.pet, hygiene_level: hygiene, needs_cleaning: hygiene <= 0 } };
+      return {
+        ...current,
+        pet: { ...current.pet, hygiene_level: hygiene, needs_cleaning: hygiene <= 0 },
+        behaviour: broadcastSince ? current.behaviour : previous.behaviour,
+      };
     }
+    case 'take_out':
+      return { ...current, behaviour: broadcastSince ? current.behaviour : previous.behaviour };
   }
 }
 
@@ -397,14 +455,19 @@ export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): numbe
   const nextWindow = at(view.feeding.next_feed_window?.start);
   const windowEnd = at(view.feeding.current_window?.end);
   const water = at(view.water.next_allowed_at);
-  const future = [nextWindow, windowEnd, water].filter((ms) => Number.isFinite(ms) && ms > serverNow);
+  // M5-R02: the puppy's accident is due — fetch the state that shows it (the server
+  // records it on its next tick; until the clock moves on, retry like other boundaries).
+  // A lock freezes the clock.
+  const accident = view.lock.is_locked ? Number.NaN : at(view.behaviour.take_out?.next_due_at);
+  const future = [nextWindow, windowEnd, water, accident].filter((ms) => Number.isFinite(ms) && ms > serverNow);
   future.push(familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
   let delay = Math.min(...future) - serverNow;
 
   const stale =
     (Number.isFinite(nextWindow) && nextWindow <= serverNow && !view.feeding.can_feed && !blocked) ||
     (Number.isFinite(windowEnd) && windowEnd <= serverNow) ||
-    (Number.isFinite(water) && water <= serverNow && !view.water.can_water && !blocked);
+    (Number.isFinite(water) && water <= serverNow && !view.water.can_water && !blocked) ||
+    (Number.isFinite(accident) && accident <= serverNow);
   if (stale) delay = Math.min(delay, BOUNDARY_RETRY_MS);
 
   return Number.isFinite(delay) ? Math.max(0, delay) : null;

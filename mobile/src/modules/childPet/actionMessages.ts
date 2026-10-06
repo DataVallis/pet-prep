@@ -9,18 +9,23 @@ import { stateFromErrorBody } from '@/modules/contract/signContract';
 import type { ChildPetState } from '@/api/client';
 import type { CareAction, ChildPetView, LockReason } from '@/modules/childPet/childPetView';
 import { familyClock, isLaterDay, whenText } from '@/modules/childPet/familyTime';
+import { BEHAVIOUR_STRINGS, onlyChewingOpen } from '@/modules/behaviour/behaviour';
 
 export const CHILD_ACTION_STRINGS = {
   success: {
     feed: 'Njam! Kuža je sit.',
     water: 'Sveža voda! Kuža je odžejan.',
     clean: 'Bravo, vse je čisto!',
-  },
+    take_out: BEHAVIOUR_STRINGS.success.take_out,
+    resolve_chewing: BEHAVIOUR_STRINGS.success.resolve_chewing,
+  } satisfies Record<CareAction, string>,
   unchanged: {
     feed: 'Kuža je že sit.',
     water: 'Kuža ima že polno posodo.',
     clean: 'Že je bilo čisto.',
-  },
+    take_out: BEHAVIOUR_STRINGS.unchanged.take_out,
+    resolve_chewing: BEHAVIOUR_STRINGS.unchanged.resolve_chewing,
+  } satisfies Record<CareAction, string>,
   refused: {
     outsideFeedWindow: (when: string) => `Kuža bo lačen spet ${when}.`,
     outsideFeedWindowNoTime: 'Zdaj ni čas za hrano.',
@@ -30,6 +35,7 @@ export const CHILD_ACTION_STRINGS = {
     waterTooSoon: (when: string) => `Posoda je še polna. Novo vodo lahko daš ${when}.`,
     waterTooSoonNoTime: 'Posoda je še polna.',
     needsCleaning: 'Najprej pospravi za kužkom!',
+    takeOutNotNeeded: BEHAVIOUR_STRINGS.takeOutNotNeeded,
     other: 'Tega zdaj ne gre. Poskusi malo kasneje.',
   },
   locked: {
@@ -49,7 +55,8 @@ export type RefusalReason =
   | 'already_fed_this_window'
   | 'water_daily_limit'
   | 'water_too_soon'
-  | 'needs_cleaning';
+  | 'needs_cleaning'
+  | 'take_out_not_needed';
 
 export type ActionFailure =
   | { kind: 'refused'; reason: string | null; nextAllowedAt: string | null; state: ChildPetState | null }
@@ -134,6 +141,8 @@ export function refusalMessage(reason: string | null, nextAllowedAt: string | nu
     }
     case 'needs_cleaning':
       return s.needsCleaning;
+    case 'take_out_not_needed':
+      return s.takeOutNotNeeded;
     default:
       return s.other;
   }
@@ -165,7 +174,16 @@ export const HUD_HINTS = {
   cleanFirst: 'Najprej pospravi',
   tomorrow: 'jutri',
   clean: 'Čisto',
+  cleanChewing: BEHAVIOUR_STRINGS.cleanChewing,
 } as const;
+
+/** Hint under "Očisti": "Čisto", or "Pospravi copat" when only a chewed slipper is open (M5-R02). */
+export function cleanHint(view: ChildPetView): string | null {
+  if (view.lock.is_locked) return null;
+  if (view.pet.needs_cleaning && onlyChewingOpen(view.behaviour)) return HUD_HINTS.cleanChewing;
+  if (view.pet.hygiene_level >= 100 && !view.pet.needs_cleaning) return HUD_HINTS.clean;
+  return null;
+}
 
 export function feedHint(view: ChildPetView): string | null {
   if (view.feeding.can_feed || view.lock.is_locked) return null;

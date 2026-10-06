@@ -41,7 +41,9 @@ import {
   videoStateFor,
   type PetMediaInfo,
   type VideoErrorState,
+  type VideoState,
 } from '@/modules/petMedia/petMedia';
+import type { BehaviourScene } from '@/modules/behaviour/behaviour';
 import type { BreedType, PetState } from '@/types';
 
 export const PET_MEDIA_STRINGS = {
@@ -78,6 +80,11 @@ export interface PetMediaViewProps {
   petState: PetState;
   /** Server lock of the pet (child HUD); null / omitted = not locked. */
   lockReason?: LockReason | null;
+  /**
+   * M5-R02 behaviour scene (`behaviour.scene`): its video wins while stored (premium);
+   * otherwise the `petState` chain plays and the HUD draws the scene graphic.
+   */
+  scene?: BehaviourScene | null;
   breed: BreedType;
   /** false = screen not focused / covered → pause every player. */
   active?: boolean;
@@ -90,7 +97,7 @@ export interface PetMediaViewProps {
    * null = no state video (image, placeholder or the server's legacy URL). The child lock
    * overlay uses it to darken a vet visit that shows a substitute instead of a real sick video.
    */
-  onVideoStateChange?: (state: PetState | null) => void;
+  onVideoStateChange?: (state: VideoState | null) => void;
   /** `hud`: full-bleed dark (child); `card`: rounded box (parent). */
   variant?: 'hud' | 'card';
   /** Custom placeholder (the HUD's animated avatar); default: paw + breed. */
@@ -184,6 +191,7 @@ export default function PetMediaView({
   media,
   petState,
   lockReason = null,
+  scene = null,
   breed,
   active = true,
   videoEnabled = true,
@@ -211,11 +219,14 @@ export default function PetMediaView({
     return () => clearTimeout(timer);
   }, [errors, clock]);
 
-  const wanted = videoEnabled ? videoStateFor(petState, lockReason) : null;
+  const wanted = videoEnabled ? videoStateFor(petState, lockReason, scene) : null;
   const target = useMemo(() => {
     const now = Math.max(clock, Date.now());
-    return selectMediaSource(media, wanted, { canPlayVideo: (url) => canPlayUrl(errors, url, now) });
-  }, [media, wanted, errors, clock]);
+    return selectMediaSource(media, wanted, {
+      canPlayVideo: (url) => canPlayUrl(errors, url, now),
+      sceneFallback: petState,
+    });
+  }, [media, wanted, errors, clock, petState]);
   const image = useStableUrl(media.referenceImageUrl);
 
   const targetVideoState = target.kind === 'video' ? target.state : null;

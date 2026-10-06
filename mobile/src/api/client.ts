@@ -565,6 +565,16 @@ export const api = {
   /** POST /api/child/pet/clean — hygiene → 100 % (`unchanged` when already clean), 423 locked. */
   cleanPet: () => apiRequest<ChildActionResponse>('/api/child/pet/clean', { method: 'POST' }),
 
+  /**
+   * POST /api/child/pet/take-out — "Pelji ven" (M5-R02): the puppy's bladder clock restarts.
+   * `unchanged` for a repeat within 60 s, 422 `take_out_not_needed` (not a puppy / legacy), 423 locked.
+   * An accident that is already due is recorded first; the answer always carries `state`.
+   */
+  takeOutPet: () => apiRequest<ChildActionResponse>('/api/child/pet/take-out', { method: 'POST' }),
+
+  /** POST /api/child/pet/resolve-chewing — "Pospravi in daj igračo" (M5-R02); `unchanged` when nothing is chewed. */
+  resolveChewing: () => apiRequest<ChildActionResponse>('/api/child/pet/resolve-chewing', { method: 'POST' }),
+
   /** POST /api/child/pet/steps — today's cumulative steps of this device (max wins on the server). */
   syncSteps: (body: SyncStepsRequest) =>
     apiRequest<SyncStepsResponse>('/api/child/pet/steps', {

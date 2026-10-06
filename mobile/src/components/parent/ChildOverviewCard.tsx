@@ -4,7 +4,9 @@
  * progress, today's routines (missed ones with type and family-local time), the
  * last 7 days as simple bars, and the pet's mini status with its AI reference image
  * thumbnail (M4-03). All numbers come from the
- * server — nothing is scored on the phone.
+ * server — nothing is scored on the phone. M5-R02: missed cleans name their mess
+ * (luža / pregrizen copat), the pet block lists the puppy's bladder clock and open
+ * messes, and the 7-day take-outs / tidied slippers.
  */
 
 import { Pressable, StyleSheet, Text, View } from 'react-native';
@@ -25,8 +27,8 @@ import {
   type FamilyPet,
 } from '@/modules/family/family';
 import {
-  ROUTINE_LABELS,
   illnessesText,
+  missedLabel,
   missedWhenText,
   progressShare,
   progressText,
@@ -37,6 +39,7 @@ import {
 } from '@/modules/family/scoring';
 import PetThumbnail from '@/components/parent/PetThumbnail';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
+import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 
 export const CHILD_CARD_STRINGS = {
   scoreTitle: 'Care Score',
@@ -58,6 +61,7 @@ export const CHILD_CARD_STRINGS = {
   createPin: 'Ustvari kodo',
   awaitingContract: (name: string) => `Kuža čaka, da ${name} podpiše pogodbo o odgovornosti.`,
   details: 'Podrobnosti',
+  behaviourStats: (text: string) => `Zadnjih 7 dni: ${text}`,
 } as const;
 
 const S = CHILD_CARD_STRINGS;
@@ -94,6 +98,8 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
   const score = child.care_score;
   const today = child.today;
   const progress = progressText(child.progress);
+  const behaviourLines = pet ? parentBehaviourLines(pet.behaviour, timezone) : [];
+  const behaviourStats = PARENT_BEHAVIOUR_STRINGS.stats(child.stats.taken_out, child.stats.chewing_resolved);
 
   return (
     <Card testID={`child-card-${id}`}>
@@ -197,10 +203,15 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
                 )}
               </View>
             )}
+            {behaviourStats !== '' && (
+              <Text style={styles.muted} testID={`child-behaviour-stats-${id}`}>
+                {S.behaviourStats(behaviourStats)}
+              </Text>
+            )}
             {today.missed.map((m, i) => (
               <View key={`${m.type}-${m.due_at}-${i}`} style={styles.missedRow} testID={`child-missed-${id}-${i}`}>
                 <RoutineIcon type={m.type} color={C.redText} />
-                <Text style={styles.missedLabel}>{ROUTINE_LABELS[m.type]}</Text>
+                <Text style={styles.missedLabel}>{missedLabel(m)}</Text>
                 <Text style={styles.muted}>{missedWhenText(m, timezone, today.date)}</Text>
               </View>
             ))}
@@ -240,6 +251,15 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
           <MetricRow label={S.metrics.thirst} value={pet.metrics.thirst} />
           <MetricRow label={S.metrics.energy} value={pet.metrics.energy} />
           <MetricRow label={S.metrics.hygiene} value={pet.metrics.hygiene} testID={`child-pet-hygiene-${id}`} />
+          {behaviourLines.length > 0 && (
+            <View style={styles.behaviour} testID={`child-pet-behaviour-${id}`}>
+              {behaviourLines.map((line) => (
+                <Text key={line} style={styles.behaviourLine}>
+                  • {line}
+                </Text>
+              ))}
+            </View>
+          )}
         </View>
       )}
 
@@ -297,7 +317,9 @@ const styles = StyleSheet.create({
   chipDone: { backgroundColor: C.greenSoft, color: C.greenText },
   chipMissed: { backgroundColor: C.redSoft, color: C.redText },
   missedRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  missedLabel: { fontSize: 14, fontWeight: '600', color: C.text, width: 70 },
+  missedLabel: { fontSize: 14, fontWeight: '600', color: C.text, minWidth: 70 },
+  behaviour: { gap: 2, paddingTop: 4 },
+  behaviourLine: { fontSize: 13, color: C.text, lineHeight: 18 },
   legendRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   legend: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   legendDot: { width: 8, height: 8, borderRadius: 4, marginLeft: 6 },

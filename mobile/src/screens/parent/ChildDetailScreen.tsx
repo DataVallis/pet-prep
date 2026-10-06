@@ -6,7 +6,9 @@
  * activity timeline of the child's pet (`/api/parent/activities?pet_id=`, paginated)
  * with the nicknames of the children who acted. M5-R04: the dog's stage and age
  * ("Mladiček · 3 mesece"), origin, next stage and today's meals — nothing for a
- * legacy pet. Light parent theme (ADR-007).
+ * legacy pet. M5-R02: the puppy's bladder clock and open messes (luža, pregrizen copat)
+ * with deadlines, missed cleans named by their mess, new timeline rows. Light parent
+ * theme (ADR-007).
  */
 
 import { useCallback, useMemo, useState } from 'react';
@@ -36,6 +38,7 @@ import {
   REPORT_PERIODS,
   ROUTINE_LABELS,
   ROUTINE_TYPES,
+  missedLabel,
   activityText,
   activityWhenText,
   dayLabel,
@@ -49,6 +52,7 @@ import {
 } from '@/modules/family/scoring';
 import { localParts } from '@/modules/childPet/familyTime';
 import { mealsLine, nextStageLine, originLine, readPetProfile, stageLine } from '@/modules/petProfile/petProfile';
+import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 
 export const CHILD_DETAIL_STRINGS = {
   back: 'Nazaj',
@@ -164,6 +168,7 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
   const petProfileRaw: unknown = pet?.profile;
   const profile = useMemo(() => readPetProfile(petProfileRaw), [petProfileRaw]);
   const showAlbum = albumOpen && albumAvailable;
+  const behaviourLines = pet ? parentBehaviourLines(pet.behaviour, family.timezone) : [];
   // A signed media URL failed (likely expired): refresh the dashboard once for new URLs.
   const onMediaExpired = useCallback(() => {
     void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
@@ -225,6 +230,17 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
                     {line}
                   </Text>
                 ))}
+            </Card>
+          )}
+
+          {behaviourLines.length > 0 && (
+            <Card testID="detail-pet-behaviour">
+              <SectionTitle>{PARENT_BEHAVIOUR_STRINGS.title}</SectionTitle>
+              {behaviourLines.map((line) => (
+                <Text key={line} style={styles.body}>
+                  • {line}
+                </Text>
+              ))}
             </Card>
           )}
 
@@ -324,7 +340,7 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
                   data.missed.map((m, i) => (
                     <View key={`${m.type}-${m.due_at}-${i}`} style={styles.typeRow} testID={`report-missed-${i}`}>
                       <RoutineIcon type={m.type} color={C.redText} />
-                      <Text style={styles.typeLabel}>{ROUTINE_LABELS[m.type]}</Text>
+                      <Text style={[styles.typeLabel, styles.missedType]}>{missedLabel(m)}</Text>
                       <Text style={styles.muted}>
                         {dayLabel(m.date)} · {missedWhenText(m, tz)}
                       </Text>
@@ -390,6 +406,8 @@ const styles = StyleSheet.create({
   strong: { fontSize: 14, fontWeight: '700', color: C.text },
   typeRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   typeLabel: { width: 74, fontSize: 14, fontWeight: '600', color: C.text },
+  // "Pregrizen copat" (M5-R02) is longer than a routine type.
+  missedType: { width: undefined, minWidth: 74 },
   dayRow: {
     flexDirection: 'row',
     alignItems: 'center',

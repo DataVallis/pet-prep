@@ -3,7 +3,7 @@ import { Lock } from 'lucide-react-native';
 
 import { lockClock } from '@/modules/childPet/familyTime';
 import { useAppStore, type LockDetails, type LockState } from '@/store/appStore';
-import type { PetState } from '@/types';
+import type { VideoState } from '@/modules/petMedia/petMedia';
 
 /** User-visible strings (i18n with M1-18). PRODUCT_SPEC §7 / §8. */
 export const LOCKED_STRINGS = {
@@ -67,7 +67,7 @@ export type LockVeil = 'opaque' | 'grey' | 'ill';
 
 // Legacy payloads without a `videos` map report state null → dark veil even if the
 // server's current_video_url happens to be a real sick video (acceptable).
-export function lockVeil(lockState: LockState, hudVideoState: PetState | null): LockVeil {
+export function lockVeil(lockState: LockState, hudVideoState: VideoState | null): LockVeil {
   if (!isTranslucentLock(lockState)) return 'opaque';
   if (lockState === 'illness' && hudVideoState !== 'sick') return 'ill';
   return 'grey';

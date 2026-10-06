@@ -196,7 +196,7 @@ export function makeChildState(
     },
     steps: { steps_today: 0, my_steps_today: 0, goal: 5000, energy_level: 100 },
     contract: { signed: true, signed_at: '2026-10-04T09:00:00+00:00' },
-    // M5-R02 behaviour events (backend only so far): no bladder clock, nothing open.
+    // M5-R02 behaviour events: no bladder clock, nothing open (a legacy-like pet).
     behaviour: { take_out: null, active_events: [], scene: null, can_take_out: false, can_resolve_chewing: false },
   };
 }
@@ -209,6 +209,8 @@ export interface LiveStateOverrides {
   feeding?: Partial<Record<keyof RawState['feeding'], unknown>>;
   water?: Partial<Record<keyof RawState['water'], unknown>>;
   steps?: Partial<RawState['steps']>;
+  /** M5-R02 `behaviour` (raw, may be malformed on purpose); `null` drops the key (older server). */
+  behaviour?: Partial<Record<keyof RawState['behaviour'], unknown>> | null;
   timezone?: string;
   server_time?: string;
 }
@@ -248,6 +250,7 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
       ...o.water,
     },
     steps: { steps_today: 1250, my_steps_today: 1250, goal: 4000, energy_level: 30, ...o.steps },
+    behaviour: o.behaviour === null ? undefined : { ...base.behaviour, ...o.behaviour },
   };
   return raw as unknown as ChildPetState;
 }
@@ -262,7 +265,18 @@ export function makeFamilyChild(overrides: Partial<FamilyChild> = {}): FamilyChi
     devices: 0,
     pet_id: null,
     contract_signed: false,
-    stats: { days: 7, fed: 0, watered: 0, cleaned: 0, walk_goals: 0, actions_total: 0, steps: 0, active_step_days: 0 },
+    stats: {
+      days: 7,
+      fed: 0,
+      watered: 0,
+      cleaned: 0,
+      walk_goals: 0,
+      taken_out: 0,
+      chewing_resolved: 0,
+      actions_total: 0,
+      steps: 0,
+      active_step_days: 0,
+    },
     // M2-06 defaults: a child without a pet (green, no score, no progress).
     traffic_light: { color: 'green', reasons: [] },
     care_score: { score: null, done: 0, expected: 0, routines: null, illnesses: 0, since: null },
@@ -317,9 +331,15 @@ export function makeScoredChild(overrides: Partial<FamilyChild> = {}): FamilyChi
   });
 }
 
-/** A missed routine as in `today.missed[]` (family offset). */
-export function makeMissed(type: 'feed' | 'water' | 'clean' | 'walk', opensAt: string, dueAt: string, date = '2026-10-04') {
-  return { type, date, opens_at: opensAt, due_at: dueAt };
+/** A missed routine as in `today.missed[]` (family offset); `kind` = the mess of a missed clean (M5-R02). */
+export function makeMissed(
+  type: 'feed' | 'water' | 'clean' | 'walk',
+  opensAt: string,
+  dueAt: string,
+  date = '2026-10-04',
+  kind: 'poop' | 'accident' | 'chewing' | null = null,
+) {
+  return { type, kind, date, opens_at: opensAt, due_at: dueAt };
 }
 
 /** `GET /api/parent/dashboard` for a family with children and pets (M2-05 shape). */
@@ -353,7 +373,7 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     // M2-05 / M2-06: spec traffic light, metrics, Care Score, today, timeline.
     metrics: { hunger: 100, thirst: 100, energy: 100, hygiene: 100 },
     timeline: [],
-    // M5-R02 behaviour events (backend only so far).
+    // M5-R02 behaviour events: nothing open.
     behaviour: { take_out: null, active_events: [], scene: null },
     media: makeMedia(),
     traffic_light: { color: 'green', reasons: [] },
@@ -381,5 +401,30 @@ export function makeFamilyDashboard(children: FamilyChild[], pets: FamilyPetRaw[
     quiet_hours: null,
     recent_activities: [],
     family: { id: 1, timezone: 'Europe/Ljubljana', parents: [{ id: 1, name: 'Starš', is_me: true }], children, pets },
+  };
+}
+
+/** A puppy's bladder clock (M5-R02): 2 h hold, started 11:00, due 13:00 Ljubljana on 2026-10-04. */
+export function makeTakeOut(overrides: Partial<NonNullable<RawState['behaviour']['take_out']>> = {}) {
+  return {
+    hold_hours: 2,
+    clock_started_at: '2026-10-04T11:00:00+02:00',
+    next_due_at: '2026-10-04T13:00:00+02:00',
+    last_taken_out_at: '2026-10-04T11:00:00+02:00',
+    ...overrides,
+  };
+}
+
+/** An open mess (M5-R02) with its 2-hour deadline (Ljubljana offset). */
+export function makeBehaviourEvent(
+  kind: 'poop' | 'accident' | 'chewing',
+  overrides: Partial<RawState['behaviour']['active_events'][number]> = {},
+) {
+  return {
+    id: 1,
+    kind,
+    started_at: '2026-10-04T11:30:00+02:00',
+    due_at: '2026-10-04T13:30:00+02:00',
+    ...overrides,
   };
 }

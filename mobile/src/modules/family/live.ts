@@ -59,6 +59,8 @@ export function patchDashboardPet(
     born_at: event.born_at !== undefined ? event.born_at : pet.born_at,
     // Freshly signed media (M4-05) — e.g. the reference image appears on `reference_image_ready`.
     media: event.media ?? pet.media,
+    // M5-R02: bladder clock / open messes — an accident arrives with a plain decay tick.
+    behaviour: event.behaviour ?? pet.behaviour,
   };
   const nextPets = pets.slice();
   nextPets[index] = patched;

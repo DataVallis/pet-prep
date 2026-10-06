@@ -3,7 +3,7 @@
  * These mirror the backend Eloquent models and broadcast payloads.
  */
 
-import type { components } from '@/api/schema';
+import type { components, operations } from '@/api/schema';
 
 export type BreedType = 'mutt' | 'border_collie';
 
@@ -74,6 +74,11 @@ export interface Pet {
  */
 export type PetMedia = components['schemas']['PairedPetResource']['media'];
 
+/** `behaviour` of `pet.updated` / the parent dashboard as generated (M5-R02). */
+export type PetBehaviourRaw = NonNullable<
+  operations['parentDashboard.dashboard']['responses'][200]['content']['application/json']['family']
+>['pets'][number]['behaviour'];
+
 export interface PetUpdatedBroadcast {
   pet_id: number;
   breed_type: BreedType;
@@ -100,6 +105,11 @@ export interface PetUpdatedBroadcast {
   reference_image_url: string | null;
   /** AI media (M4-05); missing in broadcasts from servers before M4-05. */
   media?: PetMedia;
+  /**
+   * M5-R02 behaviour (bladder clock, open messes, scene) without the child's `can_*`
+   * flags; missing in broadcasts from servers before M5-R02. Read via `readPetBehaviour`.
+   */
+  behaviour?: PetBehaviourRaw;
   event_type: string | null;
   updated_at: string | null;
   /** When the server emitted this snapshot (ms precision); newer wins. */

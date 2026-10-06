@@ -11,7 +11,16 @@ export const CLEANING_STRINGS = {
   hint: 'Tapni madeže, da jih zdrgneš.',
   close: 'Kasneje',
   spot: 'Madež',
+  /** M5-R02: a puppy accident — same game, puddles instead of dirt. */
+  accident: {
+    title: 'Ups, luža! Pobriši jo.',
+    hint: 'Tapni lužice, da jih pobrišeš.',
+    spot: 'Lužica',
+  },
 } as const;
+
+/** What is being cleaned: dirt (poop) or a puppy's puddle (M5-R02 accident). */
+export type CleaningMess = 'poop' | 'accident';
 
 interface DirtSpot {
   id: number;
@@ -32,13 +41,19 @@ export interface CleaningOverlayProps {
    * — hygiene 0 % — keeps the overlay until it's cleaned, PRODUCT_SPEC §8).
    */
   onClose?: () => void;
+  /** `accident`: puddle-shaped spots and a puddle title (M5-R02); default dirt. */
+  mess?: CleaningMess;
 }
 
 /**
  * Cleaning mini-game overlay: the child taps each dirt spot; when all are gone
  * `onCleaned` fires once.
  */
-export default function CleaningOverlay({ onCleaned, onClose }: CleaningOverlayProps) {
+export default function CleaningOverlay({ onCleaned, onClose, mess = 'poop' }: CleaningOverlayProps) {
+  const puddle = mess === 'accident';
+  const title = puddle ? CLEANING_STRINGS.accident.title : CLEANING_STRINGS.title;
+  const hint = puddle ? CLEANING_STRINGS.accident.hint : CLEANING_STRINGS.hint;
+  const spotLabel = puddle ? CLEANING_STRINGS.accident.spot : CLEANING_STRINGS.spot;
   const [spots, setSpots] = useState<DirtSpot[]>([]);
   const reportedRef = useRef(false);
   // Context (not the hook): renders without a SafeAreaProvider too (tests).
@@ -70,16 +85,16 @@ export default function CleaningOverlay({ onCleaned, onClose }: CleaningOverlayP
   };
 
   return (
-    <View style={styles.backdrop} testID="cleaning-overlay">
+    <View style={[styles.backdrop, puddle && styles.backdropPuddle]} testID="cleaning-overlay">
       <View style={[styles.top, { paddingTop: Math.max(insets.top, 20) + 16 }]}>
         <View style={styles.card}>
-          <Text style={styles.title}>{CLEANING_STRINGS.title}</Text>
+          <Text style={styles.title}>{title}</Text>
           <Text style={styles.progressText}>{CLEANING_STRINGS.progress(cleanedCount, TOTAL_SPOTS)}</Text>
           <View style={styles.progressTrack} testID="cleaning-progress">
             <View style={[styles.progressFill, { width: `${(cleanedCount / TOTAL_SPOTS) * 100}%` }]} />
           </View>
         </View>
-        {cleanedCount === 0 && <Text style={styles.hint}>{CLEANING_STRINGS.hint}</Text>}
+        {cleanedCount === 0 && <Text style={styles.hint}>{hint}</Text>}
       </View>
 
       {spots.map((spot) =>
@@ -88,18 +103,20 @@ export default function CleaningOverlay({ onCleaned, onClose }: CleaningOverlayP
             key={spot.id}
             testID={`dirt-spot-${spot.id}`}
             accessibilityRole="button"
-            accessibilityLabel={CLEANING_STRINGS.spot}
+            accessibilityLabel={spotLabel}
             onPress={() => handleCleanSpot(spot.id)}
             hitSlop={6}
             style={({ pressed }) => [
               styles.spot,
+              puddle && styles.spotPuddle,
+              // A puddle is a flat oval; dirt is round.
               {
                 left: `${spot.x}%`,
                 top: `${spot.y}%`,
-                width: spot.size,
-                height: spot.size,
+                width: puddle ? spot.size * 1.4 : spot.size,
+                height: puddle ? spot.size * 0.75 : spot.size,
                 borderRadius: spot.size / 2,
-                marginLeft: -spot.size / 2,
+                marginLeft: puddle ? (-spot.size * 1.4) / 2 : -spot.size / 2,
               },
               pressed && styles.spotPressed,
             ]}
@@ -183,6 +200,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(180, 83, 9, 0.85)',
     borderWidth: 1,
     borderColor: 'rgba(217, 119, 6, 0.45)',
+  },
+  backdropPuddle: {
+    backgroundColor: 'rgba(30, 41, 59, 0.72)',
+  },
+  spotPuddle: {
+    backgroundColor: 'rgba(253, 230, 138, 0.8)',
+    borderColor: 'rgba(252, 211, 77, 0.9)',
+    borderWidth: 2,
   },
   spotPressed: {
     transform: [{ scale: 0.75 }],
