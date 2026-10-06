@@ -31,9 +31,18 @@ interface DogPickerStepProps {
   /** A message to show on top (e.g. the server refused the last choice). */
   notice?: string | null;
   onConfirm: (profile: NewPetProfile, choice: PickerChoice) => void;
+  /** "Nazaj" → the previous step (new pet / join a pet); the current choice is handed back to keep it. */
+  onBack?: (choice: PickerChoice) => void;
 }
 
-export default function DogPickerStep({ childName, initial, lockedBreeds = PREMIUM_BREEDS, notice = null, onConfirm }: DogPickerStepProps) {
+export default function DogPickerStep({
+  childName,
+  initial,
+  lockedBreeds = PREMIUM_BREEDS,
+  notice = null,
+  onConfirm,
+  onBack,
+}: DogPickerStepProps) {
   const [choice, setChoice] = useState<PickerChoice>(
     isBreedLocked(initial.breed, lockedBreeds) ? { ...initial, breed: 'mutt' } : initial,
   );
@@ -125,6 +134,16 @@ export default function DogPickerStep({ childName, initial, lockedBreeds = PREMI
       >
         <Text style={styles.primaryButtonText}>{S.confirm}</Text>
       </Pressable>
+      {onBack && (
+        <Pressable
+          style={({ pressed }) => [styles.secondaryButton, pressed && styles.pressed]}
+          onPress={() => onBack(choice)}
+          accessibilityRole="button"
+          testID="dog-picker-back"
+        >
+          <Text style={styles.secondaryButtonText}>{S.back}</Text>
+        </Pressable>
+      )}
     </ScrollView>
   );
 }
@@ -206,6 +225,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   primaryButtonText: { fontSize: 16, fontWeight: '700', color: '#ffffff' },
+  secondaryButton: {
+    height: 48,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: C.border,
+    backgroundColor: C.card,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  secondaryButtonText: { fontSize: 15, fontWeight: '700', color: C.accent },
   buttonDisabled: { opacity: 0.5 },
   pressed: { opacity: 0.85 },
 });

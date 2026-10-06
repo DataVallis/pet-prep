@@ -50,7 +50,7 @@ import {
   type CreateChildErrorKind,
   type FamilyChild,
 } from '@/modules/family/family';
-import { classifyPinError, formatCountdown, formatPin, type PinErrorKind } from '@/modules/pairing/pin';
+import { classifyPinError, formatCountdown, formatPin, pinRequestKey, secondsUntil, type PinErrorKind } from '@/modules/pairing/pin';
 import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { refreshSessionPet } from '@/modules/session/logout';
 
@@ -120,6 +120,8 @@ export const ADD_CHILD_STRINGS = {
   changeDog: 'Izberi drugega kužka',
   editDog: 'Spremeni kužka',
   editDogHint: 'Nova izbira ustvari novo kodo; ta koda takrat preneha veljati.',
+  /** The new choice got no PIN yet (e.g. 429) — the shown one is still the server's valid PIN for the last choice. */
+  previousChoicePin: 'Ta koda še velja za prejšnjo izbiro kužka. Za novo izbiro ustvarite novo kodo.',
   /** 422 breed_locked for the free mutt is a server misconfiguration — explain; "Nova koda" can retry, no loop to the picker. */
   muttLocked: 'Mešanček je brezplačen, a strežnik ga je zavrnil. To je napaka pri nas — pišite nam na podporo.',
   rateLimitedNoWait: 'Preveč novih kod v kratkem času. Poskusite znova.',
@@ -130,6 +132,12 @@ const S = ADD_CHILD_STRINGS;
 const PAIRING_POLL_MS = 5_000;
 
 type Step = 'form' | 'pet' | 'dog' | 'pin';
+
+/** The last PIN the server issued in this flow and what it was issued for (`pinRequestKey`). */
+interface IssuedPin {
+  response: ChildPinResponse;
+  key: string;
+}
 
 /** The child this flow is about (created here or picked from the family list). */
 interface TargetChild extends ChildBaseline {
@@ -155,6 +163,9 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
   const [pickerChoice, setPickerChoice] = useState<PickerChoice>(INITIAL_PICKER_CHOICE);
   const [lockedBreeds, setLockedBreeds] = useState<readonly PetBreed[]>(PREMIUM_BREEDS);
   const [pickerNotice, setPickerNotice] = useState<string | null>(null);
+  // Lives here, not in PinStep: "Spremeni kužka" / "Nazaj" unmount the PIN step, but the server's
+  // PIN stays valid until a new one succeeds — so it is shown again (or reused for the same choice).
+  const [issuedPin, setIssuedPin] = useState<IssuedPin | null>(null);
   const isRelogin = child !== undefined && child.pet_id !== null;
 
   return (
@@ -191,6 +202,11 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
           initial={pickerChoice}
           lockedBreeds={lockedBreeds}
           notice={pickerNotice}
+          onBack={(choice) => {
+            setPickerChoice(choice);
+            setPickerNotice(null);
+            setStep('pet');
+          }}
           onConfirm={(profile, choice) => {
             setPickerChoice(choice);
             setNewPetProfile(profile);
@@ -204,6 +220,8 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
           target={target}
           joinPetId={joinPetId}
           profile={joinPetId === null && target.pet_id === null ? newPetProfile : null}
+          issued={issuedPin}
+          onIssued={setIssuedPin}
           onChangeDog={() => {
             setPickerNotice(null);
             setStep('dog');
@@ -211,6 +229,9 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
           onProfileRejected={(kind) => {
             // The server refused the choice (premium breed / validation): back to the picker.
             // The free mutt is never locked (PRODUCT_SPEC §3) — only a paid breed is added.
+            // Unreachable from the UI today: paid breeds are locked in the picker (PREMIUM_BREEDS)
+            // until purchase unlock lands, so a paid choice never reaches the server yet; kept
+            // for when an unlocked breed is refused (e.g. an expired purchase).
             if (kind === 'breed_locked' && newPetProfile && newPetProfile.breed !== 'mutt') {
               const refused = newPetProfile.breed;
               setLockedBreeds((current) => (current.includes(refused) ? current : [...current, refused]));
@@ -406,15 +427,21 @@ interface PinStepProps {
   onProfileRejected: (kind: 'breed_locked' | 'invalid_profile') => void;
   /** New pet only: back to the picker before the child connects ("Spremeni kužka"). */
   onChangeDog: () => void;
+  /** Last PIN issued in this flow (kept by the parent screen across picker round trips). */
+  issued: IssuedPin | null;
+  onIssued: (issued: IssuedPin) => void;
   onDone: () => void;
 }
 
-function PinStep({ target, joinPetId, profile, onProfileRejected, onChangeDog, onDone }: PinStepProps) {
+function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileRejected, onChangeDog, onDone }: PinStepProps) {
   const generate = useGeneratePin();
   const [cooldownUntil, setCooldownUntil] = useState<string | null>(null);
-  // Last PIN the server issued. Kept across a failed "Nova koda" (e.g. 429): the
-  // server only replaces the PIN on success, so the old one is still valid.
-  const [pin, setPin] = useState<ChildPinResponse | null>(null);
+  // Last PIN the server issued (state in AddChildScreen). Kept across a failed "Nova koda" (e.g. 429)
+  // and across "Spremeni kužka": the server only replaces the PIN on success, so the old one is still valid.
+  const pin = issued?.response ?? null;
+  const requestKey = pinRequestKey(joinPetId, profile);
+  /** The shown PIN was issued for another choice (the new one has no PIN yet). */
+  const isForPreviousChoice = issued !== null && issued.key !== requestKey;
   const startedRef = useRef(false);
 
   const remaining = useCountdown(pin?.expires_at ?? null);
@@ -438,12 +465,17 @@ function PinStep({ target, joinPetId, profile, onProfileRejected, onChangeDog, o
   );
 
   const request = () =>
-    generate.mutate({ child_id: target.id, pet_id: joinPetId, ...(profile ? { profile } : {}) }, { onSuccess: setPin });
+    generate.mutate(
+      { child_id: target.id, pet_id: joinPetId, ...(profile ? { profile } : {}) },
+      { onSuccess: (response) => onIssued({ response, key: requestKey }) },
+    );
 
-  // First PIN as soon as the step opens (the ref guards against a double effect run).
+  // First PIN as soon as the step opens (the ref guards against a double effect run) — unless a
+  // still-valid PIN for exactly this choice exists (parent opened the picker and kept the choice).
   useEffect(() => {
     if (startedRef.current) return;
     startedRef.current = true;
+    if (issued !== null && issued.key === requestKey && secondsUntil(issued.response.expires_at) > 0) return;
     request();
   });
 
@@ -465,7 +497,7 @@ function PinStep({ target, joinPetId, profile, onProfileRejected, onChangeDog, o
   // The free mutt refused as locked = our misconfiguration: explain, never send the parent round in circles.
   const muttLocked = pinError?.kind === 'breed_locked' && profile?.breed === 'mutt';
   const profileRejected =
-    pin === null && !muttLocked && (pinError?.kind === 'breed_locked' || pinError?.kind === 'invalid_profile')
+    (pin === null || isForPreviousChoice) && !muttLocked && (pinError?.kind === 'breed_locked' || pinError?.kind === 'invalid_profile')
       ? pinError.kind
       : null;
 
@@ -535,6 +567,11 @@ function PinStep({ target, joinPetId, profile, onProfileRejected, onChangeDog, o
           </>
         ) : null}
 
+        {isForPreviousChoice && !isExpired && (
+          <Text style={styles.note} testID="pin-previous-choice">
+            {S.previousChoicePin}
+          </Text>
+        )}
         {errorText && (
           <View style={styles.errorBox} testID="pin-error">
             <Text style={styles.errorText}>{errorText}</Text>

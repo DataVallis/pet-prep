@@ -322,6 +322,7 @@ export default function ChildHudScreen() {
   }
 
   const { pet } = view;
+  const profileSub = pet.profile ? profileSubline(pet.profile) : null;
   const locked = view.lock.is_locked;
   const opaqueLock = view.lock.reason === 'game_over' || view.lock.reason === 'inactive';
   const feedDisabled = !view.feeding.can_feed;
@@ -389,9 +390,9 @@ export default function ChildHudScreen() {
                   <Text style={styles.petAgeText} testID="hud-stage">
                     {stageLine(pet.profile)}
                   </Text>
-                  {profileSubline(pet.profile) && (
+                  {profileSub && (
                     <Text style={styles.petProfileText} numberOfLines={2} ellipsizeMode="tail" testID="hud-profile-sub">
-                      {profileSubline(pet.profile)}
+                      {profileSub}
                     </Text>
                   )}
                 </>

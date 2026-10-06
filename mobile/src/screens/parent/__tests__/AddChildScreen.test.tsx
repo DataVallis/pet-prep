@@ -512,6 +512,68 @@ describe('AddChildScreen', () => {
       });
     });
 
+    it('"Spremeni kužka" + the same choice reuses the still-valid PIN (no new request)', async () => {
+      await openPicker();
+      await pickDog('bought', 'puppy');
+      expect(generatePin).toHaveBeenCalledTimes(1);
+
+      fireEvent.press(screen.getByTestId('pin-edit-dog'));
+      await flush();
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      await flush();
+
+      expect(generatePin).toHaveBeenCalledTimes(1);
+      expect(screen.getByText('734 912')).toBeTruthy();
+      expect(screen.queryByTestId('pin-previous-choice')).toBeNull();
+    });
+
+    it('"Spremeni kužka" + a 429 for the new choice keeps showing the still-valid PIN, marked as the previous choice', async () => {
+      await openPicker();
+      await pickDog('bought', 'puppy');
+      expect(screen.getByText('734 912')).toBeTruthy();
+
+      fireEvent.press(screen.getByTestId('pin-edit-dog'));
+      await flush();
+      generatePin.mockRejectedValueOnce(new ApiError('Too Many Attempts.', 429, null, 30));
+      fireEvent.press(screen.getByTestId('age-option-adult'));
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      await flush();
+
+      expect(screen.getByText('734 912')).toBeTruthy();
+      expect(screen.getByTestId('pin-previous-choice')).toHaveTextContent(S.previousChoicePin);
+      expect(screen.getByTestId('pin-error')).toHaveTextContent(S.errors.rate_limited(30));
+
+      // After the wait, "Nova koda" asks for the new choice and the note disappears.
+      generatePin.mockResolvedValueOnce(pinResponse('888999', { child_id: 5, mode: 'new_pet' }));
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(31_000);
+      });
+      fireEvent.press(screen.getByText(S.newCode));
+      await flush();
+      expect(generatePin).toHaveBeenLastCalledWith({
+        child_id: 5,
+        pet_id: null,
+        profile: { breed: 'mutt', origin: 'bought', age_stage: 'adult' },
+      });
+      expect(screen.getByText('888 999')).toBeTruthy();
+      expect(screen.queryByTestId('pin-previous-choice')).toBeNull();
+    });
+
+    it('"Nazaj" on the dog step returns to new pet / join, keeping the choice; no PIN requested', async () => {
+      await openPicker();
+      fireEvent.press(screen.getByTestId('origin-option-adopted'));
+      fireEvent.press(screen.getByTestId('dog-picker-back'));
+      await flush();
+
+      expect(screen.queryByTestId('dog-picker')).toBeNull();
+      expect(screen.getByTestId('pet-option-new')).toBeTruthy();
+      expect(generatePin).not.toHaveBeenCalled();
+
+      fireEvent.press(screen.getByTestId('pet-option-new'));
+      await flush();
+      expect(screen.getByTestId('origin-option-adopted').props.accessibilityState.checked).toBe(true);
+    });
+
     it('join / re-login PIN has no "Spremeni kužka"', async () => {
       generatePin.mockResolvedValueOnce(pinResponse('734912'));
       renderRelogin();

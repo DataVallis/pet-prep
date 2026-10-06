@@ -93,3 +93,15 @@ export function classifyPinError(error: unknown): PinError {
   // fetch() rejects with a TypeError when there is no connection.
   return { kind: 'offline', retryAfterSeconds: null };
 }
+
+/**
+ * What a PIN was issued for (`generate-pin` body minus the child): the shared pet, or the
+ * new pet's picker choice. Two requests with the same key would create the same pet, so a
+ * still-valid PIN with that key can be shown again instead of asking the server for a new one.
+ */
+export function pinRequestKey(
+  petId: number | null,
+  profile: { breed: string; origin: string; age_stage: string } | null,
+): string {
+  return JSON.stringify([petId, profile?.breed ?? null, profile?.origin ?? null, profile?.age_stage ?? null]);
+}

@@ -1,5 +1,5 @@
 import { ApiError } from '@/api/client';
-import { classifyPinError, formatCountdown, formatPin, secondsUntil } from '@/modules/pairing/pin';
+import { classifyPinError, formatCountdown, formatPin, pinRequestKey, secondsUntil } from '@/modules/pairing/pin';
 
 describe('formatPin', () => {
   it('splits a 6-digit PIN into two groups of three', () => {
@@ -83,5 +83,15 @@ describe('classifyPinError', () => {
 
   it('treats a fetch TypeError as offline', () => {
     expect(classifyPinError(new TypeError('Network request failed')).kind).toBe('offline');
+  });
+});
+
+describe('pinRequestKey', () => {
+  const puppy = { breed: 'mutt', origin: 'bought', age_stage: 'puppy' };
+  it('is equal only for the same pet / choice', () => {
+    expect(pinRequestKey(null, puppy)).toBe(pinRequestKey(null, { ...puppy }));
+    expect(pinRequestKey(null, puppy)).not.toBe(pinRequestKey(null, { ...puppy, age_stage: 'adult' }));
+    expect(pinRequestKey(null, puppy)).not.toBe(pinRequestKey(null, null));
+    expect(pinRequestKey(7, null)).not.toBe(pinRequestKey(8, null));
   });
 });

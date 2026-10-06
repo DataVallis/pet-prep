@@ -64,6 +64,7 @@ export const PICKER_STRINGS = {
   quietHoursNote: 'Obrok, ki pade v celoti v tihe ure (šola, spanje), nahrani starš.',
   missing: 'Izberite izvor in starost.',
   confirm: 'Ustvari kodo',
+  back: 'Nazaj',
 } as const;
 
 export const PICKER_ORIGINS: readonly PetOrigin[] = ['bought', 'adopted'];

@@ -18,7 +18,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 👩 Starši: "Preden otrok dobi kodo, izberete, kakšnega kužka bo imel — mladička s štirimi obroki na dan ali starejšega psa iz zavetišča s krajšimi sprehodi. Vidite, kaj vsaka izbira pomeni."
 - 🧒 Otroci: "Tvoj kuža ima zdaj starost — vidiš, koliko je star in kdaj bo zrasel."
 - 🤝 Zavetišča: "V aplikaciji je *posvojen pes iz zavetišča* enakovredna izbira — brez klišejev, z enako skrbjo."
-- 🛠 Tehnično: izbira se pošlje kot celoten nabor (vse ali nič), plačljiva pasma je zaklenjena tudi na strežniku (`breed_locked`), stari psi brez profila se prikažejo nespremenjeno; vsako število v opisih test preveri proti potrjenim pravilom; 824 testov zelenih.
+- 🛠 Tehnično: izbira se pošlje kot celoten nabor (vse ali nič), plačljiva pasma je zaklenjena tudi na strežniku (`breed_locked`), stari psi brez profila se prikažejo nespremenjeno; vsako število v opisih test preveri proti potrjenim pravilom; 828 testov zelenih.
 
 ---
 
