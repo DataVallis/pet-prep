@@ -11,7 +11,8 @@ namespace App\Enums;
  *  - stage keys (stage = puppy|young|adult|senior, optional sub-band
  *    `age_from_months` inside the stage): STARTS_AT_MONTHS, ARRIVAL_AGE_MONTHS,
  *    MEALS_PER_DAY, FEED_WINDOWS, EXERCISE_MINUTES_PER_DAY,
- *    EXERCISE_MINUTES_PER_AGE_MONTH, SLEEP_HOURS;
+ *    EXERCISE_MINUTES_PER_AGE_MONTH, SLEEP_HOURS, and the M5-R02 behaviour
+ *    keys ACCIDENT_HOLD_HOURS_PER_AGE_MONTH, CHEWING_CHANCE_PER_DAY;
  *  - breed keys (stage = all): the rest.
  */
 enum StageParamKey: string
@@ -24,6 +25,9 @@ enum StageParamKey: string
     case ExerciseMinutesPerDay = 'exercise_minutes_per_day';
     case ExerciseMinutesPerAgeMonth = 'exercise_minutes_per_age_month';
     case SleepHours = 'sleep_hours';
+    // M5-R02 behaviour (stage keys; puppy stage only today)
+    case AccidentHoldHoursPerAgeMonth = 'accident_hold_hours_per_age_month';
+    case ChewingChancePerDay = 'chewing_chance_per_day';
 
     // Breed keys (stage = all)
     case StepsPerExerciseMinute = 'steps_per_exercise_minute';
@@ -59,6 +63,10 @@ enum StageParamKey: string
             self::StepsPerExerciseMinute => is_int($value) && $value >= 0 && $value <= 1000
                 ? null : 'Expected a whole number 0–1000.',
             self::FeedWindows => $this->validateWindows($value),
+            self::AccidentHoldHoursPerAgeMonth => is_int($value) && $value >= 1 && $value <= 24
+                ? null : 'Expected whole hours per month of age, 1–24.',
+            self::ChewingChancePerDay => (is_int($value) || is_float($value)) && $value >= 0 && $value <= 1
+                ? null : 'Expected a probability 0–1.',
             self::SleepHours, self::AdultWeightKg, self::HouseTrainedByMonths,
             self::TeethingMonths, self::GrowthEndMonths => $value === null || $isRange($value)
                 ? null : 'Expected [min, max] (numbers, min ≤ max) or null.',

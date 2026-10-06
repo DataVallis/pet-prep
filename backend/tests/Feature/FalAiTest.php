@@ -91,7 +91,10 @@ describe('FalAiService (disabled in test environment)', function () {
 
 describe('PetStateEnum', function () {
     it('has all required pet states', function () {
-        expect(PetStateEnum::cases())->toHaveCount(6);
+        // Six classic states + the M5-R02 behaviour videos (accident, chewing).
+        expect(PetStateEnum::cases())->toHaveCount(8);
+        expect(PetStateEnum::Accident->value)->toBe('accident');
+        expect(PetStateEnum::Chewing->value)->toBe('chewing');
         expect(PetStateEnum::Idle->value)->toBe('idle');
         expect(PetStateEnum::Sleeping->value)->toBe('sleeping');
         expect(PetStateEnum::LowEnergy->value)->toBe('low_energy');

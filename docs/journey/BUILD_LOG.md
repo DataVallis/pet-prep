@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-06 — Mladiček mora ven, kuža grize copate (M5-R02, strežnik)
+
+**Kaj se je zgodilo:** Kuža se zdaj vede kot pravi pes. **Mladiček zdrži približno eno uro na mesec starosti** (2 meseca → 2 uri; Ryan Veterinary Hospital Univerze v Pensilvaniji in WebMD) — otrok ga z gumbom **»Pelji ven«** odpelje ven in ura se začne znova; če pozabi, nastane **luža**. Ura teče samo, ko je otrok doma in buden (izven tihih ur): mladiček, ki gre ven ob 6:30, pri šoli 8–13 naredi lužo šele ob 13:30. **Uničevanje (»uničil copat«)**: pes, ki včeraj ni dosegel cilja sprehoda, danes nekaj zgrize (dolgčas, ASPCA / PDSA); mladiček med menjavo zob (3–6 mesecev, American Kennel Club) občasno tudi brez razloga — pogostost (zdaj ~vsak drugi dan) je naš predlog, ki ga David še potrdi. Otrok ga reši z **»Pospravi in daj igračo«**. Oboje je rutina kot kakec: 2 uri časa, sicer zamujeno, in šteje v Care Score. Plačljiva pasma dobi dva nova AI videa (luža, grizenje), ustvarjena enkrat na življenjsko obdobje, ne ob vsakem dogodku.
+
+**Zakaj je pomembno:** To sta dve najpogostejši »presenečenji« novih lastnikov mladičkov — nočno in dnevno odvajanje ter uničene stvari. Zdaj ju otrok doživi v igri, preden se zgodita na pravi preprogi. Ker vse temelji na isti rutini čiščenja, starš vidi pošteno oceno brez novih pravil.
+
+**Kako povedati:**
+- 👩 Starši: "Mladiček v PetPrepu mora ven vsakih nekaj ur — tako kot pravi. Ko je otrok v šoli ali spi, ura stoji; noč je vaša."
+- 🧒 Otroci: "Tvoj mladiček mora ven! Pritisni »Pelji ven«, preden naredi lužo. Če se dolgočasi, zgrize copat — pospravi in mu daj igračo."
+- 🤝 Veterinarji / šole za pse: "Pravilo »1 ura na mesec starosti« je v igri dobesedno iz veterinarskih navodil za navajanje na čistočo."
+- 💼 Investitorji: "Realizem iz virov: vsaka številka ima vir ali je označena kot predlog; plačljiva pasma dobi vidne dodatne videe po ~0,56 $ na video in obdobje."
+- 🛠 Tehnično: ena tabela za vse nerede (`kind`: kakec, luža, uničevanje), ura mladička šteje samo netihe sekunde in je varna ob prestopu ure (25-urni dan 25. 10.); 26 novih testov, skupaj 1025+ zelenih.
+
+---
+
 ## 2026-10-06 — Bolan kuža zdaj tudi izgleda bolan (tudi brezplačni)
 
 **Kaj se je zgodilo:** David je v resničnem testu poslal svojega brezplačnega mešančka k veterinarju — a aplikacija je še vedno kazala istega veselega psa kot ves dan. Brezplačni pes ima namreč samo dva videa (miruje, spi), zato je aplikacija namesto »bolan« vzela »miruje«. Zdaj ima vsako stanje jasen nadomestek: bolan → spi → miruje, utrujen → spi → miruje. Mešanček pri veterinarju zato **spi pod temnejšo, hladno sivo plastjo**; pes s pravim videom »bolan« (plačljiva pasma) ostane pod svetlejšo plastjo. *(Čaka Davidovo potrditev.)*

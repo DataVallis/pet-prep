@@ -2,6 +2,7 @@
 
 namespace App\Services\Results;
 
+use App\Enums\HygieneEventKind;
 use App\Enums\RoutineStatus;
 use App\Enums\RoutineType;
 use Carbon\CarbonImmutable;
@@ -17,6 +18,8 @@ use Carbon\CarbonImmutable;
  *   of the family-local day).
  * - `actorUserId`: the child who did it (activities_log.actor_user_id);
  *   for a walk the child whose step sync reached the goal.
+ * - `eventKind` (clean only, M5-R02): which mess — poop, puppy accident or
+ *   chewing (resolved by tidying up, not by the cleaning game).
  */
 final readonly class Routine
 {
@@ -32,6 +35,7 @@ final readonly class Routine
         public ?int $actorUserId = null,
         public ?int $steps = null,
         public ?int $goal = null,
+        public ?HygieneEventKind $eventKind = null,
     ) {}
 
     public function isDone(): bool

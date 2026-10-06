@@ -295,11 +295,14 @@ flowchart TD
   D --> MN{"New family-local day?"}
   MN -- yes --> RS["Close yesterday: pet_daily_walks row<br/>energy showed 0 % → walk_illness_due_at<br/>= end of the night's quiet hours<br/>Steps → 0, energy → 0 %"]
   MN -- no --> HS
-  RS --> HS["Schedule today's hygiene events<br/>(poops_per_day, outside quiet hours)"]
-  HS --> HA{"Pending event in<br/>(last_decay_at, now]?"}
+  RS --> HS["Schedule today's hygiene events<br/>(poops_per_day, outside quiet hours)<br/>+ M5-R02: decide today's chewing<br/>(walk missed yesterday · teething roll)"]
+  HS --> HA{"Pending poop / chewing in<br/>(last_decay_at, now]?"}
   HA -- yes --> H0["Hygiene → 0 %<br/>zero_since = event time"]
-  HA -- "no / skipped" --> Z
-  H0 --> Z
+  HA -- "no / skipped" --> AC
+  H0 --> AC{"M5-R02: puppy bladder clock<br/>due in (last_decay_at, now]?"}
+  AC -- yes --> A0["Accident at the due instant<br/>hygiene → 0 % · clock restarts"]
+  AC -- no --> Z
+  A0 --> Z
   Z["Zero tracking (hunger · thirst · hygiene — not energy)<br/>& pet_state on displayed (rounded) values"] --> W{Displayed value changed?}
   W -- yes --> B["Save + PetUpdated::afterCommit<br/>(job on 'broadcasts' queue, never throws)"]
   W -- no --> QS[Save quietly]
@@ -453,6 +456,50 @@ sequenceDiagram
   end
 ```
 
+### 5d. Behaviour events (M5-R02, David 2026-10-06)
+
+Puppy bladder clock and "Pelji ven" (2-month puppy = 2 h; quiet hours school 08–13, bedtime 22–06):
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant C as Child app
+  participant API as Laravel API
+  participant B as BehaviourEventService
+  participant T as Decay tick (every minute)
+  Note over B: clock start = max(take-out / accident / end of freeze, birth, local midnight)<br/>due = start + hold hours counted ONLY outside quiet hours
+  C->>API: POST /api/child/pet/take-out (06:30)
+  API->>B: catch-up (a due accident happens first) · puppy? else 422 take_out_not_needed
+  B-->>API: clock start = 06:30 → due 13:30 (1.5 h before school + 0.5 h after)
+  API-->>C: 200 {status: accepted, state.behaviour.take_out {hold_hours: 2, next_due_at: 13:30}}
+  T->>B: 13:31 — due passed, no take-out
+  B->>B: accident at 13:30 (applied) · clock restarts at 13:30 · timeline row pet_accident
+  T-->>C: PetUpdated {hygiene 0, behaviour.scene: accident, active_events[accident, due 15:30]}
+  C->>API: POST /api/child/pet/clean (≤ 15:30 = done routine, later = missed)
+```
+
+Chewing and how each mess is resolved:
+
+```mermaid
+flowchart TD
+  M([Family-local midnight closes the day]) --> W{"Yesterday's walk routine<br/>missed? (ledger)"}
+  W -- yes --> CH["One chewing event today<br/>(random minute outside quiet hours)"]
+  W -- no --> TE{"Teething puppy<br/>(age 3–6 months)?"}
+  TE -- yes --> R{"Seeded roll < chewing_chance_per_day<br/>(0.5 · unverified proposal)"}
+  R -- yes --> CH
+  R -- no --> N([No chewing today])
+  TE -- no --> N
+  CH --> AP["At its time (not in a freeze / quiet hours):<br/>hygiene → 0 % · pet_chewed row"]
+  AP --> RC["POST /child/pet/resolve-chewing<br/>'Pospravi in daj igračo'"]
+  P["Poop · puppy accident"] --> CL["POST /child/pet/clean<br/>(cleaning game)"]
+  RC --> H{"Any other mess open?"}
+  CL --> H
+  H -- no --> OK["Hygiene 100 %"]
+  H -- yes --> STAY["Hygiene stays 0 %<br/>(feed / water refused: needs_cleaning)"]
+  RC -. "≤ 2 h outside quiet hours" .-> DONE["clean routine done<br/>(event_kind accident / chewing / poop)"]
+  CL -. "≤ 2 h outside quiet hours" .-> DONE
+```
+
 ## 6. Data model (core)
 
 Family model (M2-01, ADR-012): `families` own pets and quiet hours; `family_user` puts parents and children in a family; `pet_caretakers` links children to pets (shared pet = several rows). `users.parent_id` and `pets.user_id` are deprecated mirrors.
@@ -473,7 +520,7 @@ erDiagram
   PETS ||--o{ ACTIVITIES_LOG : logs
   PETS ||--o{ PET_MEDIA : "image + state video slots (M4-03)"
   PET_MEDIA ||--o{ AI_SPEND_LEDGER : "estimated cost per call"
-  PETS ||--o{ PET_HYGIENE_EVENTS : "random messes"
+  PETS ||--o{ PET_HYGIENE_EVENTS : "messes: poop, puppy accident, chewing"
   PETS ||--o{ PET_DAILY_WALKS : "closed days"
   PETS ||--o{ PET_CONTRACTS : "one per caretaker"
   PETS ||--o{ PET_STATUS_PERIODS : "hard stop / illness / inactive (M2-06)"
@@ -567,6 +614,7 @@ erDiagram
     smallint water_min_gap_minutes
   }
   PET_HYGIENE_EVENTS {
+    string kind "poop accident chewing (M5-R02)"
     date local_date
     timestamp scheduled_at
     string status "pending applied skipped"
@@ -677,7 +725,7 @@ Routines are derived from data the game already writes; finished days are frozen
 flowchart LR
   subgraph Sources["Existing data (no new client calls)"]
     A["activities_log<br/>fed / watered / cleaned / walked<br/>+ actor_user_id"]
-    H["pet_hygiene_events<br/>applied, cleaned_at"]
+    H["pet_hygiene_events<br/>applied, cleaned_at, kind<br/>(poop · accident · chewing)"]
     W["pet_daily_walks / pet_daily_steps<br/>steps per day (per child)"]
     S["pet_status_periods<br/>hard stop · illness · inactive"]
     C["breed_configs + quiet_hours<br/>feed windows, water ×/day,<br/>family tz"]

@@ -2,13 +2,17 @@
 
 namespace App\Models;
 
+use App\Enums\HygieneEventKind;
 use App\Enums\HygieneEventStatus;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- * A scheduled random hygiene event ("the dog made a mess", M1-05).
- * See HygieneEventService for scheduling and application rules.
+ * A mess the dog made: a scheduled random hygiene event ("kakec", M1-05)
+ * or a behaviour event (M5-R02 — puppy accident, chewing), see `kind`.
+ * See HygieneEventService (scheduling, application, cleaning) and
+ * BehaviourEventService (accidents, chewing). `cleaned_at` = resolved
+ * (cleaned / tidied up by a child, or by the vet at the end of an illness).
  */
 class PetHygieneEvent extends Model
 {
@@ -17,6 +21,7 @@ class PetHygieneEvent extends Model
      */
     protected $fillable = [
         'pet_id',
+        'kind',
         'local_date',
         'scheduled_at',
         'status',
@@ -35,6 +40,7 @@ class PetHygieneEvent extends Model
             'resolved_at' => 'datetime',
             'cleaned_at' => 'datetime',
             'status' => HygieneEventStatus::class,
+            'kind' => HygieneEventKind::class,
         ];
     }
 

@@ -16,6 +16,13 @@ enum PetStateEnum: string
     case Sick = 'sick';
     case Playing = 'playing';
 
+    // M5-R02 behaviour videos (premium set only, MediaEntitlementService).
+    // `pets.pet_state` never takes these values: a dirty dog stays `sick`
+    // (old app builds know only the six states); the apps pick these videos
+    // from the payload's `behaviour.scene` while such an event is open.
+    case Accident = 'accident';
+    case Chewing = 'chewing';
+
     /**
      * Get a human-readable description of the pet state.
      */
@@ -28,6 +35,8 @@ enum PetStateEnum: string
             self::Hungry => 'Pet is staring at its food bowl',
             self::Sick => 'Pet looks unwell and greyed out',
             self::Playing => 'Pet is energetic and playful',
+            self::Accident => 'Puppy had an accident indoors (puddle)',
+            self::Chewing => 'Dog is chewing a slipper',
         };
     }
 
@@ -46,6 +55,8 @@ enum PetStateEnum: string
             self::Hungry => 'sitting next to an empty dog food bowl, looking down at it and then up hopefully, licking its lips',
             self::Sick => 'lying down quietly with sad tired eyes, head low, slow shallow breathing, not getting up',
             self::Playing => 'in a playful bow with the tail wagging, bouncing gently on the front paws in place, happy open mouth',
+            self::Accident => 'standing next to a small clear puddle on a wooden floor, looking up with a guilty apologetic expression, ears slightly back, a slow low tail wag',
+            self::Chewing => 'lying on the floor chewing a soft house slipper held between the front paws, focused and playful, an occasional tail wag',
         };
     }
 }

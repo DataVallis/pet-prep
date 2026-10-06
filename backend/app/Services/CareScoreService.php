@@ -436,6 +436,8 @@ class CareScoreService
     {
         return [
             'type' => $r->type->value,
+            // M5-R02: which mess a missed `clean` was (poop | accident | chewing); null for other types.
+            'kind' => $r->eventKind?->value,
             'date' => $r->localDate,
             'opens_at' => $r->opensAt->setTimezone($board['timezone'])->toIso8601String(),
             'due_at' => $r->dueAt->setTimezone($board['timezone'])->toIso8601String(),

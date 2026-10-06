@@ -25,4 +25,10 @@ enum CareRefusal: string
 
     /** The responsibility contract is signed once per pet. */
     case ContractAlreadySigned = 'contract_already_signed';
+
+    /**
+     * "Pelji ven" (M5-R02) is a puppy rule: a legacy-profile pet or a dog
+     * past the puppy stage has no bladder clock.
+     */
+    case TakeOutNotNeeded = 'take_out_not_needed';
 }

@@ -14,4 +14,23 @@ enum ActivityType: string
     // sleep) is done by the parent — system row, actor null, never a child
     // routine (David 2026-10-05, PRODUCT_SPEC §5).
     case ParentFedPet = 'parent_fed_pet';
+    // M5-R02 (David 2026-10-06): child took the puppy out ("Pelji ven") —
+    // restarts the bladder clock; not a scored routine itself.
+    case TookOutPet = 'took_out_pet';
+    // M5-R02: child tidied up a chewed item and gave a toy ("Pospravi in daj
+    // igračo") — resolves the chewing routine like cleaned_poop a mess.
+    case ResolvedChewing = 'resolved_chewing';
+    // M5-R02 system rows (actor null, parent timeline): the puppy had an
+    // accident / the dog chewed something. Never a child's action.
+    case PetAccident = 'pet_accident';
+    case PetChewed = 'pet_chewed';
+
+    /**
+     * Rows that describe something that happened to the dog, not a care
+     * action (parent timeline `is_positive` = false for these).
+     */
+    public function isNegativeEvent(): bool
+    {
+        return in_array($this, [self::IgnoredWarning, self::PetAccident, self::PetChewed], true);
+    }
 }

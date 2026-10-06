@@ -57,6 +57,11 @@ Cilj korakov = koliko minut gibanja pes te starosti potrebuje × 100 korakov na 
 
 Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), odrasel potrebuje 12.000 korakov (več kot 2 uri gibanja na dan po The Royal Kennel Club) in naredi nered 2× na dan.
 
+**Vedenje kot pri pravem psu** *(od 6. 10. 2026 na strežniku; gumbi in videi v aplikaciji — načrt; velja za nove pse, psi iz prejšnjih izzivov ostanejo brez tega)*:
+- **Mladiček mora ven:** mladiček zdrži približno **1 uro na mesec starosti** (2 meseca → 2 uri; vir: Ryan Veterinary Hospital Univerze v Pensilvaniji, WebMD). Otrok ga s tipko **»Pelji ven«** odpelje in ura se začne znova. Ura teče **samo izven tihih ur** (šola, spanje) — noč je vaša. Če ga nihče ne pelje ven pravočasno, nastane **luža** — otrok jo počisti kot običajen nered.
+- **Uničen copat:** pes, ki prejšnji dan ni dosegel cilja sprehoda, naslednji dan nekaj zgrize (dolgčas ob premalo gibanja — vir: ASPCA, PDSA). Mladiček med menjavo zob (3–6 mesecev, vir: American Kennel Club) občasno grize tudi sam od sebe — največ enkrat na dan, pogostost je **naš predlog, ki ga še preverjamo** (zdaj približno vsak drugi dan). Otrok ga reši s tipko **»Pospravi in daj igračo«**.
+- Oboje šteje kot rutina **čiščenja**: rešiti v 2 urah izven tihih ur. Nikoli se ne zgodi med tihimi urami, med ustavljeno igro ali pri veterinarju. Strežnik že beleži lužo, grizenje in kdo je kužka peljal ven; prikaz v vaši časovnici je *načrt* (naslednja različica aplikacije).
+
 **Pošteno štetje korakov:** upoštevamo največ 200 korakov na minuto; če telefon javi več, preostanek štejemo šele, ko je to realno mogoče. Tako hitro tresenje telefona ne prinese več kot hoja.
 
 ## Vsak kuža je unikaten *(od 4. 10. 2026 na strežniku; slike in videi v aplikaciji od 5. 10. 2026 — še ni v trgovini)*

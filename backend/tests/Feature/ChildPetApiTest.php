@@ -70,6 +70,8 @@ dataset('child endpoints', [
     'feed' => ['POST', '/api/child/pet/feed', []],
     'water' => ['POST', '/api/child/pet/water', []],
     'clean' => ['POST', '/api/child/pet/clean', []],
+    'take-out' => ['POST', '/api/child/pet/take-out', []],
+    'resolve-chewing' => ['POST', '/api/child/pet/resolve-chewing', []],
     'steps' => ['POST', '/api/child/pet/steps', ['steps_today' => 100, 'source' => 'healthkit', 'recorded_at' => '2026-10-04T08:00:00+02:00']],
     'contract' => ['POST', '/api/child/contract', ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20']],
 ]);
@@ -78,6 +80,8 @@ dataset('child actions', [
     'feed' => ['/api/child/pet/feed', []],
     'water' => ['/api/child/pet/water', []],
     'clean' => ['/api/child/pet/clean', []],
+    'take-out' => ['/api/child/pet/take-out', []],
+    'resolve-chewing' => ['/api/child/pet/resolve-chewing', []],
     'steps' => ['/api/child/pet/steps', ['steps_today' => 100, 'source' => 'healthkit', 'recorded_at' => '2026-10-04T08:00:00+02:00']],
     'contract' => ['/api/child/contract', ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20']],
 ]);
@@ -108,7 +112,7 @@ describe('auth', function () {
     })->with('child endpoints');
 
     it('throttles every POST action with the child-actions limiter', function () {
-        foreach (['api/child/pet/feed', 'api/child/pet/water', 'api/child/pet/clean', 'api/child/pet/steps', 'api/child/contract'] as $uri) {
+        foreach (['api/child/pet/feed', 'api/child/pet/water', 'api/child/pet/clean', 'api/child/pet/take-out', 'api/child/pet/resolve-chewing', 'api/child/pet/steps', 'api/child/contract'] as $uri) {
             $route = Route::getRoutes()->match(request()->create('/'.$uri, 'POST'));
             expect($route->gatherMiddleware())->toContain('throttle:child-actions', 'auth:sanctum');
         }

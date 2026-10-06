@@ -45,6 +45,8 @@ class FamilyDashboardService
         ActivityType::WateredPet,
         ActivityType::CleanedPoop,
         ActivityType::WalkedPet,
+        ActivityType::TookOutPet,
+        ActivityType::ResolvedChewing,
     ];
 
     /**
@@ -152,6 +154,9 @@ class FamilyDashboardService
                         'cleaned' => $counts[ActivityType::CleanedPoop->value],
                         // Days on which this child's sync completed the walk goal.
                         'walk_goals' => $counts[ActivityType::WalkedPet->value],
+                        // M5-R02: puppy take-outs and chewing tidied up.
+                        'taken_out' => $counts[ActivityType::TookOutPet->value],
+                        'chewing_resolved' => $counts[ActivityType::ResolvedChewing->value],
                         'actions_total' => array_sum($counts),
                         'steps' => (int) ($stepRow->total ?? 0),
                         'active_step_days' => (int) ($stepRow->days ?? 0),
@@ -188,6 +193,8 @@ class FamilyDashboardService
                     'hygiene' => $pet->displayMetric('hygiene_level'),
                 ],
                 'timeline' => $timelines[$pet->id] ?? [],
+                // M5-R02: puppy bladder clock, open messes, behaviour video (BehaviourPayload).
+                'behaviour' => BehaviourPayload::for($pet)->toArray(),
                 // AI media (M4-05): signed URLs to our stored copies.
                 'media' => $this->media->mediaFor($pet)->toArray(),
             ], $this->scores->petSummary($board, $pet)))->values()->all(),
@@ -321,7 +328,8 @@ class FamilyDashboardService
                 'actor_user_id' => $actor,
                 'actor_nickname' => $actor !== null ? ($nicknames[$actor] ?? null) : null,
                 'created_at' => Carbon::parse($row->created_at, 'UTC')->setTimezone($tz)->toIso8601String(),
-                'is_positive' => $row->activity_type !== ActivityType::IgnoredWarning->value,
+                // Ignored warnings and M5-R02 behaviour events (accident, chewing) are negative.
+                'is_positive' => ! (ActivityType::tryFrom((string) $row->activity_type)?->isNegativeEvent() ?? false),
             ];
         }
 

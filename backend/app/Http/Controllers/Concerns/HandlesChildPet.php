@@ -97,6 +97,7 @@ trait HandlesChildPet
             CareRefusal::WaterTooSoon => 'Too soon since the last water refill.',
             CareRefusal::NeedsCleaning => 'Clean up the mess first.',
             CareRefusal::ContractAlreadySigned => 'The contract is already signed.',
+            CareRefusal::TakeOutNotNeeded => 'Only a puppy needs to be taken out on a schedule.',
             default => 'Action not allowed right now.',
         };
     }

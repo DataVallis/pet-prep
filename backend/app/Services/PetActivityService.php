@@ -46,12 +46,16 @@ class PetActivityService
      */
     public const MAX_STEPS_PER_MINUTE = 200;
 
+    /** "Pelji ven" twice within this many seconds counts once (double tap, M5-R02). */
+    public const TAKE_OUT_DEDUPE_SECONDS = 60;
+
     public function __construct(
         private HygieneEventService $hygieneEvents,
         private DailyWalkService $dailyWalks,
         private PetDecayService $decay,
         private CareScheduleService $schedule,
         private LifeStageService $lifeStages,
+        private BehaviourEventService $behaviour,
     ) {}
 
     /**
@@ -161,10 +165,13 @@ class PetActivityService
     }
 
     /**
-     * Clean up after the dog (cleaning mini-game done): hygiene back to 100 %,
-     * hygiene neglect clock cleared. Events that are already due but not yet
-     * applied by a tick are settled here, so the pet doesn't get dirty again
-     * a minute after cleaning.
+     * Clean up after the dog (cleaning mini-game done): every open poop and
+     * puppy accident (M5-R02) is cleaned; hygiene back to 100 % and the
+     * hygiene neglect clock cleared — unless a chewing event is still open
+     * (that one is tidied up with resolveChewing; hygiene stays 0 until
+     * then). Decay owed since the last tick is caught up first, so messes
+     * that are already due (also an accident) happen before the clean and
+     * the pet doesn't get dirty again a minute after cleaning.
      */
     public function clean(Pet $pet, ?User $actor = null): ActionResult
     {
@@ -175,23 +182,106 @@ class PetActivityService
                 return $this->locked($locked, $reason);
             }
 
-            $handled = $this->hygieneEvents->settleForCleaning($locked, $now, $locked->quietHours());
+            $this->decay->catchUpLocked($locked);
 
-            if ($handled === 0 && (float) $locked->hygiene_level >= 100.0) {
-                return $this->result(ActionResult::UNCHANGED, $locked);
+            $handled = $this->hygieneEvents->settleForCleaning($locked, $now, $locked->quietHours());
+            $stillOpen = $this->hygieneEvents->openEvents($locked)->isNotEmpty();
+
+            if ($handled === 0 && ((float) $locked->hygiene_level >= 100.0 || $stillOpen)) {
+                return $this->unchanged(ActionResult::UNCHANGED, $locked);
             }
 
-            $locked->forceFill([
-                'hygiene_level' => 100.0,
-                'hygiene_zero_since' => null,
-            ]);
-            $locked->pet_state = $this->decay->derivePetState($locked, $now);
-            $locked->saveQuietly();
+            $this->restoreHygieneIfResolved($locked, $stillOpen, $now);
 
             $this->logActivity($locked, ActivityType::CleanedPoop, null, $actor?->id ?? $locked->user_id);
 
             return $this->result(ActionResult::ACCEPTED, $locked);
         });
+    }
+
+    /**
+     * "Pospravi in daj igračo" (M5-R02, David 2026-10-06): the child tidies
+     * up what the dog chewed and gives it a toy — every open chewing event
+     * is resolved; hygiene back to 100 % unless a poop / accident is still
+     * open. Nothing to tidy up → unchanged (idempotent repeat).
+     */
+    public function resolveChewing(Pet $pet, ?User $actor = null): ActionResult
+    {
+        return $this->withLockedPet($pet, ActivityType::ResolvedChewing, function (Pet $locked) use ($actor): ActionResult {
+            $now = now()->startOfSecond();
+
+            if ($reason = $locked->actionLockReasonFor($actor)) {
+                return $this->locked($locked, $reason);
+            }
+
+            $this->decay->catchUpLocked($locked);
+
+            if ($this->hygieneEvents->settleChewing($locked, $now, $locked->quietHours()) === 0) {
+                return $this->unchanged(ActionResult::UNCHANGED, $locked);
+            }
+
+            $this->restoreHygieneIfResolved($locked, $this->hygieneEvents->openEvents($locked)->isNotEmpty(), $now);
+
+            $this->logActivity($locked, ActivityType::ResolvedChewing, null, $actor?->id ?? $locked->user_id);
+
+            return $this->result(ActionResult::ACCEPTED, $locked);
+        });
+    }
+
+    /**
+     * "Pelji ven" (M5-R02, David 2026-10-06): a puppy's bladder clock
+     * restarts now (BehaviourEventService). Only for a non-legacy pet in the
+     * puppy stage (else 422 take_out_not_needed). An accident that is
+     * already due happens first (decay catch-up). A second take-out by
+     * anyone within a minute is a double tap → unchanged. Allowed while a
+     * mess is open (it is a different job) and in quiet hours.
+     */
+    public function takeOut(Pet $pet, ?User $actor = null): ActionResult
+    {
+        return $this->withLockedPet($pet, ActivityType::TookOutPet, function (Pet $locked) use ($actor): ActionResult {
+            $now = now()->startOfSecond();
+
+            if ($reason = $locked->actionLockReasonFor($actor)) {
+                return $this->locked($locked, $reason);
+            }
+
+            $this->decay->catchUpLocked($locked);
+
+            if ($this->behaviour->holdHoursOn($locked, $locked->localDate($now)) === null) {
+                return $this->refused($locked, CareRefusal::TakeOutNotNeeded);
+            }
+
+            $recent = ActivityLog::where('pet_id', $locked->id)
+                ->where('activity_type', ActivityType::TookOutPet->value)
+                ->where('created_at', '>', $now->copy()->subSeconds(self::TAKE_OUT_DEDUPE_SECONDS))
+                ->exists();
+            if ($recent) {
+                return $this->unchanged(ActionResult::UNCHANGED, $locked);
+            }
+
+            $this->behaviour->takeOut($locked, $now);
+            $locked->saveQuietly();
+
+            $this->logActivity($locked, ActivityType::TookOutPet, null, $actor?->id ?? $locked->user_id);
+
+            return $this->result(ActionResult::ACCEPTED, $locked);
+        });
+    }
+
+    /**
+     * After a mess was resolved: hygiene 100 % and its neglect clock cleared
+     * once no mess of any kind is open (M5-R02); the pet state follows.
+     */
+    private function restoreHygieneIfResolved(Pet $locked, bool $stillOpen, CarbonInterface $now): void
+    {
+        if (! $stillOpen) {
+            $locked->forceFill([
+                'hygiene_level' => 100.0,
+                'hygiene_zero_since' => null,
+            ]);
+        }
+        $locked->pet_state = $this->decay->derivePetState($locked, $now);
+        $locked->saveQuietly();
     }
 
     /**

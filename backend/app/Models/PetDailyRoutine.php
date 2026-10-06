@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\HygieneEventKind;
 use App\Enums\RoutineStatus;
 use App\Enums\RoutineType;
 use Illuminate\Database\Eloquent\Model;
@@ -24,6 +25,7 @@ use Illuminate\Support\Carbon;
  * @property int|null $actor_user_id
  * @property int|null $steps Walk only: the pet's steps that day.
  * @property int|null $goal Walk only: the breed goal that day.
+ * @property HygieneEventKind|null $event_kind Clean only (M5-R02): poop | accident | chewing (null on rows closed before M5-R02 = poop).
  */
 class PetDailyRoutine extends Model
 {
@@ -32,7 +34,7 @@ class PetDailyRoutine extends Model
      */
     protected $fillable = [
         'pet_id', 'local_date', 'routine_type', 'slot', 'opens_at', 'due_at',
-        'status', 'done_at', 'actor_user_id', 'steps', 'goal',
+        'status', 'done_at', 'actor_user_id', 'steps', 'goal', 'event_kind',
     ];
 
     /**
@@ -50,6 +52,7 @@ class PetDailyRoutine extends Model
             'done_at' => 'datetime',
             'steps' => 'integer',
             'goal' => 'integer',
+            'event_kind' => HygieneEventKind::class,
         ];
     }
 
