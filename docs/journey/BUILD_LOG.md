@@ -15,6 +15,19 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 **Kako to povedati**
 - 👩 *"Ko kuža zboli, otrok to vidi takoj — tudi v brezplačni različici: kuža leži in počiva, zaslon potemni."*
 - 🛠 *"Majhna tabela nadomestkov namesto ad-hoc pogojev: vsako stanje ve, kateri video ga najbolje nadomesti."*
+## 2026-10-05 — Starš izbere kužka v aplikaciji (M5-R04, del 1)
+
+**Kaj se je zgodilo:** Izbira kužka, ki jo je strežnik znal že zjutraj, je zdaj tudi v aplikaciji. Ko starš doda otroka in izbere *Nov pes*, se odpre zaslon **Izberi kužka**: pasma (mešanček brezplačen, Border Collie viden, a zaklenjen — del plačljivega izziva), **od kod pride** (*kupljen* pri vzreditelju / *posvojen* iz zavetišča) in **starost ob prihodu** (mladiček, mlad pes, odrasel, starejši). Ob vsaki starosti je ena poštena vrstica, kaj to pomeni za otroka — npr. mešanček mladiček: 4 obroki na dan, sprehod 2.000 korakov na dan in vsak teden več do 6.000; Border Collie mladiček prav tako začne z 2.000, a pri 12 mesecih pride do 12.000, starejši Border Collie hodi 9.000 korakov na dan. Dokler se otrok ne poveže, lahko starš izbiro še spremeni (*Spremeni kužka* — stara koda takrat preneha veljati). Izvor in starost nimata privzete izbire: starš mora prebrati in se odločiti. Otrok nato na svojem zaslonu vidi "Mladiček · 2 meseca" in kdaj postane mlad pes; starš v pregledu otroka vidi isto in koliko obrokov danes v tihih urah nahrani sam. Psi iz časa pred to spremembo ostanejo, kot so bili.
+
+**Zakaj je pomembno:** Šele s tem zaslonom nova pravila po starosti (M5-R01) zares pridejo do družin — prej je bil vsak nov pes še "star" pes po pravilih pred M5. Opisi uporabljajo samo številke iz virov in Davidovih potrjenih odločitev; česar igra še ne simulira (nezgode v hiši, plašnost), je označeno "pride kmalu".
+
+**Kako povedati:**
+- 👩 Starši: "Preden otrok dobi kodo, izberete, kakšnega kužka bo imel — mladička s štirimi obroki na dan ali starejšega psa iz zavetišča s krajšimi sprehodi. Vidite, kaj vsaka izbira pomeni."
+- 🧒 Otroci: "Tvoj kuža ima zdaj starost — vidiš, koliko je star in kdaj bo zrasel."
+- 🤝 Zavetišča: "V aplikaciji je *posvojen pes iz zavetišča* enakovredna izbira — brez klišejev, z enako skrbjo."
+- 🛠 Tehnično: izbira se pošlje kot celoten nabor (vse ali nič), plačljiva pasma je zaklenjena tudi na strežniku (`breed_locked`), stari psi brez profila se prikažejo nespremenjeno; vsako število v opisih test preveri proti potrjenim pravilom; 828 testov zelenih.
+
+---
 
 ## 2026-10-05 — David potrdil pravila rasti: 2-urna okna za mladička (M5-R01b)
 

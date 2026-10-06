@@ -8,7 +8,7 @@ import { BackHandler } from 'react-native';
 import { api } from '@/api/client';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import ChildDetailScreen, { CHILD_DETAIL_STRINGS, formatSteps } from '@/screens/parent/ChildDetailScreen';
-import { makeDayRow, makeFamilyPet, makeMedia, makeMissed, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
+import { makeDayRow, makeFamilyPet, makeLegacyPetProfile, makeMedia, makeMissed, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
 import { liveVideoPlayers, mockVideoPlayers, playerUris, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
@@ -95,6 +95,32 @@ describe('ChildDetailScreen', () => {
     expect(screen.getByTestId('report-missed-0')).toHaveTextContent(/sob 3\. 10\. · okno 17:00–19:00/);
     // Illness in the family's wall clock (UTC in the payload → +02:00).
     expect(screen.getByTestId('report-illnesses')).toHaveTextContent(/čet 1\. 10\. 10:00 – čet 1\. 10\. 22:00/);
+  });
+
+  it('M5-R04: the dog card shows stage · age, origin, next stage and today\'s meals', async () => {
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={FAMILY} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('detail-pet-stage')).toHaveTextContent('Mladiček · 2 meseca');
+    const card = screen.getByTestId('detail-pet-profile');
+    expect(card).toHaveTextContent(/Kupljen pri vzreditelju/);
+    expect(card).toHaveTextContent(/Od 24\. 11\. 2026 mlad pes/);
+    expect(card).toHaveTextContent(/Danes 4 obroki — 1 v tihih urah nahrani starš/);
+  });
+
+  it('M5-R04: a legacy pet shows no dog card (and an old server without profile does not crash)', async () => {
+    const legacy = familyFromDashboard(
+      makeScoredDashboard([LUKA], [makeFamilyPet({ id: 7, profile: makeLegacyPetProfile(), caretakers: [{ child_id: 2, contract_signed: true }] })]) as never,
+    ) as FamilyOverview;
+    const { unmount } = renderWithQuery(<ChildDetailScreen child={LUKA} family={legacy} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.queryByTestId('detail-pet-profile')).toBeNull();
+    expect(screen.getByTestId('report-period-score')).toHaveTextContent('71');
+    unmount();
+
+    const noProfile = { ...FAMILY, pets: FAMILY.pets.map((p) => ({ ...p, profile: undefined as never })) };
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={noProfile} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.queryByTestId('detail-pet-profile')).toBeNull();
   });
 
   it('switches the period to 30 and 84 days (null score → "Še ni dovolj podatkov")', async () => {

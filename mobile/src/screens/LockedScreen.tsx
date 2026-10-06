@@ -65,6 +65,8 @@ export function isTranslucentLock(lockState: LockState): boolean {
  */
 export type LockVeil = 'opaque' | 'grey' | 'ill';
 
+// Legacy payloads without a `videos` map report state null → dark veil even if the
+// server's current_video_url happens to be a real sick video (acceptable).
 export function lockVeil(lockState: LockState, hudVideoState: PetState | null): LockVeil {
   if (!isTranslucentLock(lockState)) return 'opaque';
   if (lockState === 'illness' && hudVideoState !== 'sick') return 'ill';

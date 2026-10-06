@@ -62,6 +62,7 @@ import MetricBar from '@/components/MetricBar';
 import PetMediaView from '@/components/PetMediaView';
 import WalkTrackerOverlay from '@/modules/walk/WalkTrackerOverlay';
 import { usePushPromptOnFirstView } from '@/modules/push/usePushPromptOnFirstView';
+import { nextStageLine, originLine, stageLine } from '@/modules/petProfile/petProfile';
 import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
 
 /** User-visible strings of the HUD (i18n with M1-18). */
@@ -94,6 +95,12 @@ export function formatAgeMonths(months: number): string {
   const mod = n % 100;
   const word = mod === 1 ? 'MESEC' : mod === 2 ? 'MESECA' : mod === 3 || mod === 4 ? 'MESECI' : 'MESECEV';
   return `STAROST: ${n} ${word}`;
+}
+
+/** HUD second line of a profiled pet: "Posvojen iz zavetišča · 24. 11. 2026 postane mlad pes". */
+function profileSubline(profile: NonNullable<ChildPetView['pet']['profile']>): string | null {
+  const parts = [originLine(profile), nextStageLine(profile, 'child')].filter((x): x is string => x !== null);
+  return parts.length > 0 ? parts.join(' · ') : null;
 }
 
 const TOAST_MS = 3_000;
@@ -193,6 +200,10 @@ export default function ChildHudScreen() {
   const { layout, onHeaderLayout, onDockLayout } = useHudLayout();
   const petQuery = useChildPet();
   const view = petQuery.data;
+  // No view → PetMediaView is not mounted; don't keep a stale veil hint.
+  useEffect(() => {
+    if (!view) setHudVideoState(null);
+  }, [view, setHudVideoState]);
   useSessionSync(view);
 
   const onBroadcast = useCallback(
@@ -318,6 +329,7 @@ export default function ChildHudScreen() {
   }
 
   const { pet } = view;
+  const profileSub = pet.profile ? profileSubline(pet.profile) : null;
   const locked = view.lock.is_locked;
   const opaqueLock = view.lock.reason === 'game_over' || view.lock.reason === 'inactive';
   const feedDisabled = !view.feeding.can_feed;
@@ -380,9 +392,22 @@ export default function ChildHudScreen() {
             <View style={styles.petIconBox}>
               <PawPrint color="#a5b4fc" size={20} />
             </View>
-            <View>
+            <View style={styles.petInfoText}>
               <Text style={styles.petBreedName}>{HUD_STRINGS.breeds[pet.breed_type]}</Text>
-              <Text style={styles.petAgeText}>{formatAgeMonths(pet.virtual_age_months)}</Text>
+              {pet.profile ? (
+                <>
+                  <Text style={styles.petAgeText} testID="hud-stage">
+                    {stageLine(pet.profile)}
+                  </Text>
+                  {profileSub && (
+                    <Text style={styles.petProfileText} numberOfLines={2} ellipsizeMode="tail" testID="hud-profile-sub">
+                      {profileSub}
+                    </Text>
+                  )}
+                </>
+              ) : (
+                <Text style={styles.petAgeText}>{formatAgeMonths(pet.virtual_age_months)}</Text>
+              )}
             </View>
           </View>
 
@@ -647,6 +672,12 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     textTransform: 'capitalize',
     color: '#ffffff',
+  },
+  petInfoText: { flex: 1, minWidth: 0 },
+  petProfileText: {
+    marginTop: 2,
+    fontSize: 11,
+    color: 'rgba(255, 255, 255, 0.7)',
   },
   petAgeText: {
     fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
