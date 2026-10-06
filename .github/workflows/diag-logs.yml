@@ -1,0 +1,17 @@
+name: Diag server logs (temporary)
+on:
+  push:
+    branches: ['diag/**']
+jobs:
+  logs:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Server exceptions (read-only)
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/id && chmod 600 ~/.ssh/id
+          ssh-keyscan -H 138.199.172.97 >> ~/.ssh/known_hosts 2>/dev/null
+          OUT=$(ssh -i ~/.ssh/id deploy@138.199.172.97 "cd /opt/petprep/repo/backend && docker compose -p backend -f compose.production.yaml exec -T app sh -c 'grep -hE \"production\\.(ERROR|CRITICAL|WARNING)\" storage/logs/laravel*.log | tail -n 25' 2>&1 | cut -c1-900")
+          while IFS= read -r line; do echo "::error title=log::$line"; done <<< "$OUT"
