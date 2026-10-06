@@ -56,7 +56,7 @@ Za vsako pasmo in fazo zbrati z viri: velikost/teža po starosti (rastne krivulj
   - **Obstoječi (legacy) psi ostanejo na starih pravilih za vedno**, tudi po koncu izziva; novi psi gredo skozi izbiro kužka.
   - Kjer viri ne dajo točne številke, vrednost postavi PetPrep na podlagi virov in te odločitve (v podatkih »potrdil David 2026-10-05«, vir ostane dokaz).
 
-## 8. Stanje izvedbe (posodobljeno 5. 10. 2026)
+## 8. Stanje izvedbe (posodobljeno 6. 10. 2026)
 | Del | Stanje | Kje |
 |---|---|---|
 | §1 Izbira ob ustvarjanju (pasma, izvor, starost) | ✅ **strežnik** (M5-R01) — `POST /api/parent/generate-pin {breed, origin, age_stage}`; mešanček brezplačen v vseh kombinacijah; ✅ **aplikacija** (M5-R04, 5. 10. 2026): "Izberi kužka" pred PIN-om, plačljive pasme vidne a zaklenjene, obdobje / starost / izvor / naslednje obdobje pri otroku in staršu | PRODUCT_SPEC §3 |
@@ -65,6 +65,7 @@ Za vsako pasmo in fazo zbrati z viri: velikost/teža po starosti (rastne krivulj
 | §3 Več obrokov (mladiček 4 → 3 → 2) | ✅ strežnik — okna po fazi (2-urna, David 5. 10.), obrok v tihih urah opravi starš | PRODUCT_SPEC §5 |
 | §3 Potrebe po gibanju po fazi | ✅ strežnik — cilj korakov = minute × 100 (minute potrdil David 5. 10.) | PRODUCT_SPEC §5 |
 | §3 Več spanja | 🟡 podatki shranjeni (S28), uporaba v videih / vedenju še ne | `breed_stage_params.sleep_hours` |
-| §3 Nered, uničevanje, plašnost | ⏳ M5-R02 | ROADMAP |
+| §3 Nered (luža mladička), uničevanje | ✅ **strežnik** (M5-R02, David 6. 10. 2026) — mladiček zdrži 1 h na mesec starosti (S30 / S31), ura teče samo izven tihih ur, »Pelji ven« jo ponastavi; uničevanje ob menjavi zob (3–6 mes., verjetnost 0,5 / dan — *nepreverjen predlog*) ali dan po zamujenem sprehodu, reši se s »Pospravi in daj igračo«; oboje je rutina čiščenja (2 h) in zniža čistočo; plačljiva pasma dobi videa luže in grizenja. ⏳ **aplikacija** (gumbi, ikone, videi) | PRODUCT_SPEC §5 / §10 / §11 |
+| §3 Plašnost posvojenega psa, nered posvojenega odraslega psa (S39 / S40) | ⏳ odprto vprašanje (DECISIONS 6. 10.) | ROADMAP |
 | §4 Šolanje | ⏳ M5-R03 (učljivost Coren shranjena) | ROADMAP |
 | §6 Podatki iz virov | ✅ uvoženo (insert-only); od 5. 10. vse vrednosti potrjene — iz vira ali z Davidovo odločitvijo (»potrdil David 2026-10-05«, enkratna podatkovna migracija za produkcijo); kar admin označi kot NEPODPRTO, je vidno v Filamentu | `docs/research/dog-data/`, DECISIONS 5. 10. |

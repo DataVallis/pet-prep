@@ -3,6 +3,7 @@
 namespace App\Events;
 
 use App\Models\Pet;
+use App\Services\BehaviourPayload;
 use App\Services\Media\PetMediaPayload;
 use App\Services\PetProfilePayload;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -159,6 +160,8 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             // Contract before birth (M1-07b): null / true until the child signs.
             'born_at' => $pet->born_at?->toIso8601String(),
             'awaiting_contract' => $pet->isUnborn(),
+            // M5-R02: puppy bladder clock, open messes (poop / accident / chewing), behaviour video.
+            'behaviour' => BehaviourPayload::for($pet)->toArray(),
             // AI media (M4-05): signed URLs (≤ 90 min) to our copies — the channel is
             // private to the pet's caretakers and family parents; legacy fields mirror it.
             'current_video_url' => $media->currentVideoUrl,

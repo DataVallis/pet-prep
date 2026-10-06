@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\ClientFeature;
 use Illuminate\Foundation\Http\FormRequest;
 
 /**
@@ -31,7 +32,22 @@ class PinLoginRequest extends FormRequest
         return [
             'pin' => ['required', 'string', 'regex:/^[0-9]{6}$/'],
             'device_name' => ['required', 'string', 'min:1', 'max:100'],
+            // M5-R02 (PR #42): what this child app build can show, e.g.
+            // ["behaviour_events"]. ≤ 10 strings; unknown values are ignored.
+            // Only matters when this login creates a new pet.
+            'features' => ['sometimes', 'nullable', 'array', 'max:10'],
+            'features.*' => ['string', 'max:64'],
         ];
+    }
+
+    /**
+     * Known client features of this device (unknown values dropped).
+     *
+     * @return list<string>
+     */
+    public function features(): array
+    {
+        return ClientFeature::known($this->validated('features') ?? []);
     }
 
     public function pin(): string

@@ -149,8 +149,10 @@ describe('import provenance', function () {
             ->and($windows)->source_id->toBeNull()->verified->toBeTrue()->data_ref->toBe('proposed_game_parameters.feed_window_times')
             ->and($windows->notes)->toStartWith('Decision: potrdil David 2026-10-05.')
             ->and($windows->notes)->toContain('no literature number');
-        // Since David's answers (2026-10-05) no imported value is an open proposal.
-        expect(BreedStageParam::where('verified', false)->count())->toBe(0);
+        // Since David's answers (2026-10-05) no imported value is an open proposal —
+        // except the M5-R02 teething chewing chance (Claude's proposal, waiting for David).
+        expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())
+            ->toBe([StageParamKey::ChewingChancePerDay->value]);
     });
 
     it('marks David\'s 2026-10-05 answers verified as decisions and keeps the underlying source ids — data_verified turns true', function () {

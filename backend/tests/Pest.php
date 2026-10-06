@@ -2,6 +2,7 @@
 
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\BehaviourEventService;
 use App\Services\HygieneEventService;
 use Database\Seeders\BreedConfigsSeeder;
 use Database\Seeders\BreedStageParamsSeeder;
@@ -95,14 +96,32 @@ function seedLifeStageData(): void
 }
 
 /**
- * Stop random hygiene events (M1-05) for a pet in tests that are about
- * something else: marks every day up to 2999 as already scheduled.
+ * Stop random hygiene events (M1-05) and behaviour events (M5-R02 puppy
+ * accidents, chewing — they are messes too) for a pet in tests that are
+ * about something else: marks every day up to 2999 as already scheduled and
+ * starts the puppy's bladder clock in 2999 (a take-out restarts it).
  */
 function disableHygieneEvents(Pet $pet): Pet
 {
-    Pet::whereKey($pet->id)->update(['hygiene_scheduled_through' => '2999-12-31']);
+    Pet::whereKey($pet->id)->update([
+        'hygiene_scheduled_through' => '2999-12-31',
+        'behaviour_scheduled_through' => '2999-12-31',
+        'potty_clock_started_at' => '2999-12-31 00:00:00',
+    ]);
 
     return $pet->refresh();
+}
+
+/**
+ * Pin the behaviour-event RNG salt (M5-R02 chewing) so draws are reproducible.
+ */
+function useBehaviourSalt(string $salt = 'test-salt'): BehaviourEventService
+{
+    app()->forgetInstance(BehaviourEventService::class);
+    $service = app()->makeWith(BehaviourEventService::class, ['seedSalt' => $salt]);
+    app()->instance(BehaviourEventService::class, $service);
+
+    return $service;
 }
 
 /**

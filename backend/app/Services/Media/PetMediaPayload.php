@@ -56,9 +56,10 @@ final class PetMediaPayload
             // Video for the current pet_state, falling back to idle; null if none is stored.
             'current_video_url' => $this->currentVideoUrl,
             /**
-             * Video states this pet is entitled to (basic: idle + sleeping; full: all six).
+             * Video states this pet is entitled to (basic: idle + sleeping; full: all six +
+             * M5-R02 behaviour videos accident (non-legacy puppy) / chewing (non-legacy dog)).
              *
-             * @var list<'idle'|'sleeping'|'low_energy'|'hungry'|'sick'|'playing'>
+             * @var list<'idle'|'sleeping'|'low_energy'|'hungry'|'sick'|'playing'|'accident'|'chewing'>
              */
             'states' => $this->states,
             // When the URLs above stop working (ISO 8601); fetch the state again before.

@@ -650,7 +650,7 @@ describe('pet creation with origin and age stage', function () {
         [$pin, $login] = lsCreateViaPin($parent, ['breed' => 'mutt', 'origin' => 'adopted', 'age_stage' => 'adult']);
         $pet = Pet::findOrFail($login['pet']['id']);
 
-        expect($pin['pet_profile'])->toBe(['breed' => 'mutt', 'origin' => 'adopted', 'age_stage' => 'adult'])
+        expect($pin['pet_profile'])->toBe(['breed' => 'mutt', 'origin' => 'adopted', 'age_stage' => 'adult', 'features' => []])
             ->and($pet->origin)->toBe(PetOrigin::Adopted)
             ->and($pet->arrival_age_months)->toBe(36)
             ->and($pet->life_stage)->toBe(LifeStage::Adult)
@@ -688,7 +688,7 @@ describe('pet creation with origin and age stage', function () {
         [$pin, $login] = lsCreateViaPin($parent, ['origin' => 'bought', 'age_stage' => 'puppy']);
         $pet = Pet::findOrFail($login['pet']['id']);
 
-        expect($pin['pet_profile'])->toBe(['breed' => 'mutt', 'origin' => 'bought', 'age_stage' => 'puppy'])
+        expect($pin['pet_profile'])->toBe(['breed' => 'mutt', 'origin' => 'bought', 'age_stage' => 'puppy', 'features' => []])
             ->and($pet->breed_type->value)->toBe('mutt')
             ->and($pet->origin)->toBe(PetOrigin::Bought)
             ->and($pet->arrival_age_months)->toBe(2)

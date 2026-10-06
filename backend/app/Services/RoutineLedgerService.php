@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\ActivityType;
+use App\Enums\HygieneEventKind;
 use App\Enums\HygieneEventStatus;
 use App\Enums\RoutineStatus;
 use App\Enums\RoutineType;
@@ -39,8 +40,10 @@ use Throwable;
  *    the day's non-quiet time the pet was in play (birth day, hard stop,
  *    vet, game over), rounded half up; done = `watered_pet` rows that day
  *    (in order, up to the expected number); the rest is missed at day end.
- *  - clean: one routine per hygiene event that happened (`applied`); done =
- *    cleaned within 2 hours counted outside quiet hours.
+ *  - clean: one routine per hygiene event that happened (`applied`) — a
+ *    poop, a puppy accident or a chewing event (M5-R02, `eventKind`); done =
+ *    resolved within 2 hours counted outside quiet hours (cleaned, or for
+ *    chewing tidied up with a toy).
  *  - walk: the daily step goal (of that day's life stage); done = the day's steps reached the goal
  *    (`pet_daily_walks.achieved`, live for today); missed at day end. Not
  *    expected on the birth day (energy grace) or for a past day without any
@@ -96,6 +99,7 @@ class RoutineLedgerService
         ActivityType::WateredPet,
         ActivityType::CleanedPoop,
         ActivityType::WalkedPet,
+        ActivityType::ResolvedChewing,
     ];
 
     public function __construct(
@@ -432,11 +436,12 @@ class RoutineLedgerService
             }
             $due = $this->addSecondsOutsideQuiet($quiet, $event['at'], self::CLEAN_WITHIN_SECONDS);
             $cleaned = $event['cleaned_at'];
+            // M5-R02: a poop / accident is cleaned (cleaned_poop), chewing is tidied up (resolved_chewing).
             $done = $cleaned !== null && $cleaned->lessThanOrEqualTo($due)
-                ? ['at' => $cleaned, 'actor' => $this->cleanActor($in['activities'], $cleaned)]
+                ? ['at' => $cleaned, 'actor' => $this->cleanActor($in['activities'], $cleaned, $event['kind']->resolvingActivity())]
                 : null;
             // Cleaned too late: missed once the deadline is behind us.
-            $routine = $this->resolve($pet, $date, RoutineType::Clean, $slot, $event['at'], $due, $done, $blocks, $now);
+            $routine = $this->resolve($pet, $date, RoutineType::Clean, $slot, $event['at'], $due, $done, $blocks, $now, eventKind: $event['kind']);
             if ($routine !== null) {
                 $routines[] = $routine;
                 $slot++;
@@ -494,7 +499,7 @@ class RoutineLedgerService
     private function resolve(
         Pet $pet, string $date, RoutineType $type, int $slot,
         CarbonImmutable $opens, CarbonImmutable $due, ?array $done, array $blocks, CarbonImmutable $now,
-        ?int $steps = null, ?int $goal = null, ?bool $excused = null,
+        ?int $steps = null, ?int $goal = null, ?bool $excused = null, ?HygieneEventKind $eventKind = null,
     ): ?Routine {
         if ($done !== null) {
             $status = RoutineStatus::Done;
@@ -518,6 +523,7 @@ class RoutineLedgerService
             actorUserId: $done['actor'] ?? null,
             steps: $steps,
             goal: $goal,
+            eventKind: $eventKind,
         );
     }
 
@@ -588,7 +594,7 @@ class RoutineLedgerService
             ->where('scheduled_at', '<', $toUtc)
             ->orderBy('scheduled_at')
             ->toBase()
-            ->get(['pet_id', 'scheduled_at', 'status', 'cleaned_at'])
+            ->get(['pet_id', 'kind', 'scheduled_at', 'status', 'cleaned_at'])
             ->groupBy('pet_id');
 
         $walks = PetDailyWalk::whereIn('pet_id', $ids)
@@ -631,6 +637,7 @@ class RoutineLedgerService
                     'at' => $this->utc($r->created_at),
                 ])->all(),
                 'hygiene' => $hygiene->get($pet->id, collect())->map(fn ($r) => [
+                    'kind' => HygieneEventKind::tryFrom((string) $r->kind) ?? HygieneEventKind::Poop,
                     'at' => $this->utc($r->scheduled_at),
                     'status' => $r->status,
                     'cleaned_at' => $r->cleaned_at !== null ? $this->utc($r->cleaned_at) : null,
@@ -764,17 +771,18 @@ class RoutineLedgerService
     }
 
     /**
-     * Who cleaned: the `cleaned_poop` row written by the same action as the
-     * event's `cleaned_at` (same request, within a few seconds).
+     * Who cleaned: the resolving row (`cleaned_poop`; `resolved_chewing` for
+     * chewing, M5-R02) written by the same action as the event's
+     * `cleaned_at` (same request, within a few seconds).
      *
      * @param  list<array{type: string, actor: int|null, at: CarbonImmutable}>  $activities
      */
-    private function cleanActor(array $activities, CarbonImmutable $cleanedAt): ?int
+    private function cleanActor(array $activities, CarbonImmutable $cleanedAt, ActivityType $type = ActivityType::CleanedPoop): ?int
     {
         $best = null;
         $bestDiff = 6;
         foreach ($activities as $a) {
-            if ($a['type'] !== ActivityType::CleanedPoop->value) {
+            if ($a['type'] !== $type->value) {
                 continue;
             }
             $diff = abs($a['at']->getTimestamp() - $cleanedAt->getTimestamp());
@@ -821,6 +829,8 @@ class RoutineLedgerService
             actorUserId: $row->actor_user_id,
             steps: $row->steps,
             goal: $row->goal,
+            // Clean rows closed before M5-R02 have no kind: they were all poop.
+            eventKind: $row->routine_type === RoutineType::Clean ? ($row->event_kind ?? HygieneEventKind::Poop) : null,
         );
     }
 
@@ -841,6 +851,7 @@ class RoutineLedgerService
             'actor_user_id' => $r->actorUserId,
             'steps' => $r->steps,
             'goal' => $r->goal,
+            'event_kind' => $r->eventKind?->value,
             'created_at' => $now->format('Y-m-d H:i:s'),
             'updated_at' => $now->format('Y-m-d H:i:s'),
         ];

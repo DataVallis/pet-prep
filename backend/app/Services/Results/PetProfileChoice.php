@@ -3,6 +3,7 @@
 namespace App\Services\Results;
 
 use App\Enums\BreedType;
+use App\Enums\ClientFeature;
 use App\Enums\LifeStage;
 use App\Enums\PetOrigin;
 
@@ -12,13 +13,21 @@ use App\Enums\PetOrigin;
  * adult | senior). Omitted fields keep the pre-M5 behaviour: a bought mutt
  * puppy. Stored on the child PIN (`child_login_pins.pet_options`) until the
  * PIN creates the pet.
+ *
+ * `features` (M5-R02, PR #42 B1): what the parent's app build can show
+ * (ClientFeature values); unknown values are dropped. An old PIN without
+ * the key → [] (behaviour events off).
  */
 final readonly class PetProfileChoice
 {
+    /**
+     * @param  list<string>  $features
+     */
     public function __construct(
         public BreedType $breed = BreedType::Mutt,
         public PetOrigin $origin = PetOrigin::Bought,
         public LifeStage $ageStage = LifeStage::Puppy,
+        public array $features = [],
     ) {}
 
     public static function default(): self
@@ -31,15 +40,37 @@ final readonly class PetProfileChoice
      */
     public static function fromArray(?array $data): self
     {
+        $features = array_values(array_unique(array_filter(
+            is_array($data['features'] ?? null) ? $data['features'] : [],
+            fn (mixed $f): bool => is_string($f) && ClientFeature::tryFrom($f) !== null,
+        )));
+
         return new self(
             BreedType::tryFrom((string) ($data['breed'] ?? '')) ?? BreedType::Mutt,
             PetOrigin::tryFrom((string) ($data['origin'] ?? '')) ?? PetOrigin::Bought,
             LifeStage::tryFrom((string) ($data['age_stage'] ?? '')) ?? LifeStage::Puppy,
+            $features,
         );
     }
 
     /**
-     * @return array{breed: string, origin: string, age_stage: string}
+     * The same choice keeping only features also in $features (the child
+     * device's, at pin-login — M5-R02, PR #42).
+     *
+     * @param  list<string>  $features
+     */
+    public function withOnlyFeatures(array $features): self
+    {
+        return new self($this->breed, $this->origin, $this->ageStage, array_values(array_intersect($this->features, $features)));
+    }
+
+    public function supports(ClientFeature $feature): bool
+    {
+        return in_array($feature->value, $this->features, true);
+    }
+
+    /**
+     * @return array{breed: string, origin: string, age_stage: string, features: list<string>}
      */
     public function toArray(): array
     {
@@ -47,6 +78,7 @@ final readonly class PetProfileChoice
             'breed' => $this->breed->value,
             'origin' => $this->origin->value,
             'age_stage' => $this->ageStage->value,
+            'features' => $this->features,
         ];
     }
 }

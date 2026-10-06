@@ -23,6 +23,8 @@ export function makePetProfile(
     // Since 2026-10-05 every imported value is confirmed (PRODUCT_SPEC §5) → verified.
     data_verified: true,
     unverified: [],
+    // M5-R02: behaviour events only for pets created with generate-pin features ["behaviour_events"].
+    behaviour_enabled: false,
     today: {
       date: '2026-10-04',
       meals_per_day: 4,
@@ -194,6 +196,8 @@ export function makeChildState(
     },
     steps: { steps_today: 0, my_steps_today: 0, goal: 5000, energy_level: 100 },
     contract: { signed: true, signed_at: '2026-10-04T09:00:00+00:00' },
+    // M5-R02 behaviour events (backend only so far): no bladder clock, nothing open.
+    behaviour: { take_out: null, active_events: [], scene: null, can_take_out: false, can_resolve_chewing: false },
   };
 }
 
@@ -349,6 +353,8 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     // M2-05 / M2-06: spec traffic light, metrics, Care Score, today, timeline.
     metrics: { hunger: 100, thirst: 100, energy: 100, hygiene: 100 },
     timeline: [],
+    // M5-R02 behaviour events (backend only so far).
+    behaviour: { take_out: null, active_events: [], scene: null },
     media: makeMedia(),
     traffic_light: { color: 'green', reasons: [] },
     care_score: { score: null, done: 0, expected: 0, illnesses: 0, since: '2026-10-01T08:00:00+00:00' },

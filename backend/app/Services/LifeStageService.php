@@ -394,6 +394,39 @@ class LifeStageService
     }
 
     /**
+     * One stage-dependent value of a family-local date (M5-R02 behaviour
+     * keys): the row of the dog's stage that day with the greatest
+     * `age_from_months` ≤ age (else the breed-level row), with its stage and
+     * the age the rules of that day use. Null for a legacy-profile pet, an
+     * age without stage data, or a key without a row.
+     *
+     * @return array{value: mixed, stage: LifeStage, age: int, verified: bool, source_id: string|null}|null
+     */
+    public function stageValueOn(Pet $pet, string $localDate, StageParamKey $key): ?array
+    {
+        $age = $this->ageMonthsOn($pet, $localDate);
+        if ($age === null) {
+            return null;
+        }
+
+        $slug = $pet->breed_type->slug();
+        $stage = $this->stageForAge($slug, $age);
+        if ($stage === null) {
+            return null;
+        }
+
+        $row = $this->band($this->paramsFor($slug), $stage, $key, $age);
+
+        return $row === null ? null : [
+            'value' => $row['value'],
+            'stage' => $stage,
+            'age' => $age,
+            'verified' => (bool) $row['verified'],
+            'source_id' => $row['source_id'],
+        ];
+    }
+
+    /**
      * Evenly spread windows (same rule as the seeded ones, David
      * 2026-10-05): first 07:00, last 19:00, 2 hours each (shorter when the
      * spacing is shorter, so windows never overlap).

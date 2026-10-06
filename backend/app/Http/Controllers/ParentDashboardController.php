@@ -257,7 +257,8 @@ class ParentDashboardController extends Controller
                 // The child who did it (M2-01); null for system events.
                 'actor_user_id' => $log->actor_user_id,
                 'created_at' => $log->created_at?->toIso8601String(),
-                'is_positive' => $log->activity_type !== ActivityType::IgnoredWarning,
+                // Ignored warnings and M5-R02 behaviour events (accident, chewing) are negative.
+                'is_positive' => ! $log->activity_type->isNegativeEvent(),
             ];
         }
 

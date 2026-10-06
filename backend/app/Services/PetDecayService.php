@@ -75,6 +75,7 @@ class PetDecayService
         private DailyWalkService $dailyWalks,
         private LifeStageService $lifeStages,
         private CareScheduleService $schedule,
+        private BehaviourEventService $behaviour,
     ) {}
 
     /**
@@ -245,6 +246,10 @@ class PetDecayService
         // illness_until (hygiene 100 %, neglect clocks restart) — also while
         // a hard stop keeps the pet frozen.
         $recovered = $pet->recoverFromIllnessIfDue($now);
+        if ($recovered) {
+            // M5-R02: the puppy's bladder clock starts at the recovery (fresh start).
+            $this->behaviour->holdClockWhileFrozen($pet, $pet->last_decay_at);
+        }
 
         // Frozen states (M1-02): no decay, but keep the clock current so
         // there is no catch-up burst after unfreezing. Hard stop / illness
@@ -263,6 +268,9 @@ class PetDecayService
                         ->update(['illness_skipped_at' => $now]);
                     $pet->walk_illness_due_at = null;
                 }
+
+                // M5-R02: the puppy's bladder clock does not run while frozen.
+                $this->behaviour->holdClockWhileFrozen($pet, $now);
             }
             $this->advanceClock($pet, $now);
 
@@ -336,8 +344,17 @@ class PetDecayService
         // Hygiene (M1-05): no gradual decay; scheduled random events that
         // fall into this interval drop it to 0. The neglect clock starts at
         // the event time, also when the tick runs late.
+        // Behaviour events (M5-R02) are messes too: the day's chewing event is
+        // decided after the midnight close (yesterday's walk is known) and
+        // applied with the hygiene events; puppy accidents come due on the
+        // bladder clock. The earliest mess starts the neglect clock.
         $this->hygieneEvents->ensureScheduled($pet, $from, $now, $quietHours, $breedConfig);
+        $this->behaviour->ensureChewingScheduled($pet, $from, $now, $quietHours);
         $messAt = $this->hygieneEvents->applyDue($pet, $from, $now, $quietHours);
+        $accidentAt = $this->behaviour->applyDueAccidents($pet, $from, $now, $quietHours);
+        if ($accidentAt !== null && ($messAt === null || $accidentAt->lessThan($messAt))) {
+            $messAt = $accidentAt;
+        }
         $newHygiene = (float) $pet->hygiene_level;
         if ($messAt !== null) {
             $newHygiene = 0.0;

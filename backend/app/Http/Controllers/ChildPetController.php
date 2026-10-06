@@ -56,7 +56,8 @@ class ChildPetController extends Controller
     }
 
     /**
-     * Cleaning mini-game finished → hygiene 100 %.
+     * Cleaning mini-game finished → every open poop / puppy accident cleaned,
+     * hygiene 100 % (stays 0 while a chewing event is open, M5-R02).
      *
      * POST /api/child/pet/clean
      */
@@ -65,6 +66,33 @@ class ChildPetController extends Controller
         $pet = $this->childPet($request);
 
         return $this->actionResponse($this->activities->clean($pet, $request->user()), $pet, $request);
+    }
+
+    /**
+     * "Pelji ven" (M5-R02): take the puppy out — its bladder clock restarts.
+     * 422 take_out_not_needed when the pet is not a (non-legacy) puppy;
+     * a repeat within a minute is `unchanged`.
+     *
+     * POST /api/child/pet/take-out
+     */
+    public function takeOut(ChildPetRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->takeOut($pet, $request->user()), $pet, $request);
+    }
+
+    /**
+     * "Pospravi in daj igračo" (M5-R02): tidy up what the dog chewed and give
+     * it a toy — resolves every open chewing event (`unchanged` when none).
+     *
+     * POST /api/child/pet/resolve-chewing
+     */
+    public function resolveChewing(ChildPetRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->resolveChewing($pet, $request->user()), $pet, $request);
     }
 
     /**

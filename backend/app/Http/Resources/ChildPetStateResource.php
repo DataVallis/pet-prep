@@ -5,6 +5,7 @@ namespace App\Http\Resources;
 use App\Enums\PetLockReason;
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\BehaviourPayload;
 use App\Services\CareScheduleService;
 use App\Services\Media\PetMediaPayload;
 use App\Services\Media\PetMediaService;
@@ -31,6 +32,11 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * `pet.profile` (M5-R01): origin, age, life stage and today's stage rules
  * (meals and which the parent covers in quiet hours, step goal) —
  * {@see PetProfilePayload}. `steps.goal` is today's stage goal.
+ *
+ * `behaviour` (M5-R02): puppy bladder clock (`take_out`), open messes
+ * (`active_events`: poop | accident | chewing, with the 2-hour deadline),
+ * the behaviour video to show (`scene`) and whether the take-out /
+ * resolve-chewing actions apply now — {@see BehaviourPayload}.
  *
  * `pet.media` (M4-05): status + signed URLs of the stored reference image and
  * state videos ({@see PetMediaService::mediaFor()}); `current_video_url` is
@@ -67,6 +73,8 @@ class ChildPetStateResource extends JsonResource
         $contract = $actor !== null ? $pet->contractOf($actor) : $pet->contract;
         $media = PetMediaPayload::for($pet);
         $profile = PetProfilePayload::for($pet, $now);
+        $behaviour = BehaviourPayload::for($pet, $now);
+        $hasOpenChewing = in_array('chewing', array_column($behaviour->activeEvents, 'kind'), true);
 
         return [
             'pet' => [
@@ -155,6 +163,26 @@ class ChildPetStateResource extends JsonResource
             'contract' => [
                 'signed' => $contract !== null,
                 'signed_at' => $iso($contract?->signed_at),
+            ],
+            // M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
+            // (poop / accident / chewing) with their 2-hour deadline, the behaviour video.
+            'behaviour' => [
+                'take_out' => $behaviour->takeOut,
+                'active_events' => $behaviour->activeEvents,
+                /** @var 'accident'|'chewing'|null */
+                'scene' => $behaviour->scene,
+                /**
+                 * POST /api/child/pet/take-out would be accepted (puppy, not locked).
+                 *
+                 * @var bool
+                 */
+                'can_take_out' => (bool) (! $locked && $behaviour->takeOut !== null),
+                /**
+                 * POST /api/child/pet/resolve-chewing has something to tidy up.
+                 *
+                 * @var bool
+                 */
+                'can_resolve_chewing' => (bool) (! $locked && $hasOpenChewing),
             ],
         ];
     }

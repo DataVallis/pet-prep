@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\BreedType;
+use App\Enums\HygieneEventStatus;
 use App\Enums\LifeStage;
 use App\Enums\PetLockReason;
 use App\Enums\PetOrigin;
@@ -175,6 +176,8 @@ class Pet extends Model
         'origin',
         'arrival_age_months',
         'life_stage',
+        // M5-R02 / PR #42: set once at creation from the app's generate-pin `features`.
+        'behaviour_events_enabled',
     ];
 
     /**
@@ -187,6 +190,9 @@ class Pet extends Model
         'routines_closed_through',
         'routines_next_close_at',
         'media_error',
+        // M5-R02 bookkeeping (the apps get BehaviourPayload instead).
+        'potty_clock_started_at',
+        'behaviour_scheduled_through',
     ];
 
     /**
@@ -207,6 +213,8 @@ class Pet extends Model
             'last_step_sync_at' => 'datetime',
             'last_decay_at' => 'datetime',
             'frozen_at' => 'datetime',
+            'potty_clock_started_at' => 'datetime',
+            'behaviour_events_enabled' => 'boolean',
             'hunger_level' => 'float',
             'thirst_level' => 'float',
             'energy_level' => 'float',
@@ -457,6 +465,17 @@ class Pet extends Model
     }
 
     /**
+     * Behaviour events (M5-R02: puppy accidents + take-out, chewing) apply
+     * only to a profiled pet whose creating app build declared the
+     * `behaviour_events` feature (PR #42 B1) — an old build has no UI to
+     * resolve them. Fixed at creation; existing pets: off.
+     */
+    public function behaviourEventsEnabled(): bool
+    {
+        return (bool) $this->behaviour_events_enabled && ! $this->isLegacyProfile();
+    }
+
+    /**
      * The dog's age in months (M5-R01): age at arrival (parent's choice) +
      * one month per week since birth (LifeStageService::ageMonthsAt). Null
      * for a legacy-profile pet (no age at arrival).
@@ -572,6 +591,10 @@ class Pet extends Model
             'illness_until' => null,
             'walk_illness_due_at' => null,
             'hygiene_scheduled_through' => null,
+            // M5-R02: the puppy's bladder clock starts at birth; chewing is
+            // decided from the birth day on.
+            'potty_clock_started_at' => $at,
+            'behaviour_scheduled_through' => null,
             'frozen_at' => null,
         ]);
     }
@@ -743,6 +766,18 @@ class Pet extends Model
 
         $this->hygiene_level = 100.0;
         $this->hygiene_zero_since = null;
+        // M5-R02: the vet's clean dog closes every open mess (poop, accident,
+        // chewing) at the recovery moment, so no event stays "active" on a
+        // dog that shows 100 %. Their routines keep their outcome (resolved
+        // after the 2 h deadline → missed, or excused by the illness).
+        if ($this->exists) {
+            PetHygieneEvent::query()
+                ->where('pet_id', $this->id)
+                ->where('status', HygieneEventStatus::Applied->value)
+                ->whereNull('cleaned_at')
+                ->where('scheduled_at', '<=', $at)
+                ->update(['cleaned_at' => $at, 'updated_at' => now()]);
+        }
         foreach (self::ZERO_SINCE_COLUMNS as $column) {
             if ($this->getAttribute($column) !== null) {
                 $this->setAttribute($column, $at);

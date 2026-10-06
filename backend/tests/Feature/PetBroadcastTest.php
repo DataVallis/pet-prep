@@ -200,7 +200,10 @@ describe('PetUpdated event shape', function () {
             'reference_image_url', 'media', 'event_type', 'updated_at', 'emitted_at',
             // M5-R01 profile brief
             'age_months', 'origin', 'life_stage',
+            // M5-R02 behaviour events
+            'behaviour',
         ]);
+        expect(array_keys($payload['behaviour']))->toBe(['take_out', 'active_events', 'scene']);
         expect(array_keys($payload['media']))->toBe(['status', 'reference_image_url', 'videos', 'current_video_url', 'states', 'expires_at']);
         expect($payload['hunger_level'])->toBe(34);
         expect($payload['event_type'])->toBe('fed_pet');

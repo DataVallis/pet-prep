@@ -168,7 +168,8 @@ describe('data migration for the rows PR #37 seeded', function () {
 
         expect(dsdParam('mutt', 'puppy', 0, 'feed_windows')->value)->toBe(BreedStageParamsSeeder::PUPPY_4_MEAL_WINDOWS)
             ->and(dsdParam('border-collie', 'puppy', 3, 'feed_windows')->value)->toBe(BreedStageParamsSeeder::PUPPY_3_MEAL_WINDOWS)
-            ->and(BreedStageParam::where('verified', false)->count())->toBe(0);
+            // The only open proposal is M5-R02's teething chewing chance (Claude, waiting for David).
+            ->and(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
 
         // Every confirmed row now equals a fresh seed of the same tuple (value + provenance).
         foreach (dsdConfirmedRows() as $row) {
@@ -314,8 +315,9 @@ describe('frozen migration data and rollback', function () {
         $audits = DB::table('breed_stage_param_changes')->orderBy('id')->get()->map(fn ($r) => (array) $r)->all();
         expect(collect($audits)->pluck('actor')->unique()->all())->toBe(['system: David decision 2026-10-05']);
 
-        // The decision migration is the newest one: --step=1 rolls back only it.
-        expect(Artisan::call('migrate:rollback', ['--step' => 1]))->toBe(0);
+        // Roll back only the decision migration (newer migrations, e.g. M5-R02, stay —
+        // with --path the others in the step window are skipped as "not found").
+        expect(Artisan::call('migrate:rollback', ['--step' => 2, '--path' => 'database/migrations/'.DSD_MIGRATION]))->toBe(0);
         expect(DB::table('migrations')->where('migration', str_replace('.php', '', DSD_MIGRATION))->exists())->toBeFalse()
             ->and(Schema::hasColumn('breed_stage_param_changes', 'actor'))->toBeTrue()
             ->and(DB::table('breed_stage_param_changes')->orderBy('id')->get()->map(fn ($r) => (array) $r)->all())->toBe($audits);

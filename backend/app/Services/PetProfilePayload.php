@@ -43,6 +43,7 @@ final class PetProfilePayload
         public readonly int $stepGoal,
         public readonly ?int $exerciseMinutes,
         public readonly ?array $sleepHours,
+        public readonly bool $behaviourEnabled = false,
     ) {}
 
     public static function for(Pet $pet, ?CarbonInterface $now = null): self
@@ -85,11 +86,12 @@ final class PetProfilePayload
             stepGoal: $rules->stepGoal,
             exerciseMinutes: $rules->exerciseMinutes,
             sleepHours: $rules->sleepHours !== null ? ['min' => $rules->sleepHours[0], 'max' => $rules->sleepHours[1]] : null,
+            behaviourEnabled: $pet->behaviourEventsEnabled(),
         );
     }
 
     /**
-     * @return array{legacy: bool, origin: string|null, arrival_age_months: int|null, age_months: int|null, life_stage: string|null, next_stage: array{life_stage: string, from_date: string}|null, data_verified: bool, unverified: list<string>, today: array{date: string, meals_per_day: int, meals_by_child: int, meals_by_parent: int, feed_windows: list<array{start: string, end: string, parent_covered: bool}>, step_goal: int, exercise_minutes: int|null, sleep_hours: array{min: float|int, max: float|int}|null}}
+     * @return array{legacy: bool, origin: string|null, arrival_age_months: int|null, age_months: int|null, life_stage: string|null, next_stage: array{life_stage: string, from_date: string}|null, data_verified: bool, unverified: list<string>, behaviour_enabled: bool, today: array{date: string, meals_per_day: int, meals_by_child: int, meals_by_parent: int, feed_windows: list<array{start: string, end: string, parent_covered: bool}>, step_goal: int, exercise_minutes: int|null, sleep_hours: array{min: float|int, max: float|int}|null}}
      */
     public function toArray(): array
     {
@@ -124,6 +126,9 @@ final class PetProfilePayload
              * @var list<string>
              */
             'unverified' => $this->unverified,
+            // M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+            // only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+            'behaviour_enabled' => $this->behaviourEnabled,
             'today' => [
                 // Family-local date (Y-m-d) these rules are for.
                 'date' => $this->date,

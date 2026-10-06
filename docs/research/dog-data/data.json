@@ -1243,7 +1243,8 @@
       "derived_from": [
         "S30",
         "S31"
-      ]
+      ],
+      "decision": "potrdil David 2026-10-06: 1 h of hold per month of age (game rule accident_hold_hours_per_age_month = 1), puppy stage only; the clock counts only outside quiet hours and restarts at take-out, accident, birth and family-local midnight"
     },
     "chewing_risk": {
       "value": {
@@ -1259,6 +1260,19 @@
         "S32",
         "S33",
         "S7"
+      ],
+      "decision": "potrdil David 2026-10-06: teething puppies (teething_months) chew occasionally, at most once per local day; any dog whose previous day's walk goal was missed chews once the next day"
+    },
+    "chewing_teething_chance_per_day": {
+      "value": 0.5,
+      "unit": "probability per family-local day (teething puppy)",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal (Claude, M5-R02, waiting for David). S32 / S33 say teething puppies chew a lot but give no frequency; 0.5 = about every other day during teething_months. Stored verified = false.",
+      "derived_from": [
+        "S32",
+        "S33"
       ]
     },
     "training_minigame_minutes": {

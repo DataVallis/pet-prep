@@ -2,7 +2,10 @@
 
 namespace App\Services;
 
+use App\Enums\ActivityType;
+use App\Enums\HygieneEventKind;
 use App\Enums\HygieneEventStatus;
+use App\Models\ActivityLog;
 use App\Models\BreedConfig;
 use App\Models\Pet;
 use App\Models\PetHygieneEvent;
@@ -90,6 +93,7 @@ class HygieneEventService
             foreach ($this->scheduleDay($pet, $date, $quietHours, $breedConfig->poops_per_day) as $at) {
                 $rows[] = [
                     'pet_id' => $pet->id,
+                    'kind' => HygieneEventKind::Poop->value,
                     'local_date' => $date,
                     'scheduled_at' => $at,
                     'status' => HygieneEventStatus::Pending->value,
@@ -164,6 +168,13 @@ class HygieneEventService
      * Apply pending events whose time has come (decay tick). Events in
      * ($from, $now] outside quiet hours happen; earlier ones are skipped.
      *
+     * Behaviour events (M5-R02 chewing, PR #42 review): after a scheduler
+     * outage (the interval ($from, $now] is longer than
+     * BehaviourEventService::OUTAGE_TOLERANCE_SECONDS) a pending non-poop
+     * event is skipped instead of applied — its 2-hour deadline may already
+     * be gone and nobody could react during the gap. Poops keep the M1-05
+     * rule (applied once, late).
+     *
      * @return Carbon|null The earliest event that happened (hygiene is 0 from then on), or null.
      */
     public function applyDue(Pet $pet, CarbonInterface $from, CarbonInterface $now, ?QuietHours $quietHours): ?Carbon
@@ -173,10 +184,15 @@ class HygieneEventService
         }
 
         $first = null;
+        $outage = BehaviourEventService::isOutage($from, $now);
 
         foreach ($this->duePending($pet, $now) as $event) {
             $happens = $event->scheduled_at->greaterThan($from)
-                && ! ($quietHours?->isQuietNow($event->scheduled_at) ?? false);
+                && ! ($quietHours?->isQuietNow($event->scheduled_at) ?? false)
+                && ! ($outage && $event->kind !== HygieneEventKind::Poop);
+            if ($outage && $event->kind !== HygieneEventKind::Poop) {
+                BehaviourEventService::warnOutage($pet, $from, $now);
+            }
 
             $event->forceFill([
                 'status' => $happens ? HygieneEventStatus::Applied : HygieneEventStatus::Skipped,
@@ -187,8 +203,14 @@ class HygieneEventService
                 $first ??= $event->scheduled_at->copy();
                 Log::info('HygieneEventService: hygiene event happened', [
                     'pet_id' => $pet->id,
+                    'kind' => $event->kind->value,
                     'scheduled_at' => $event->scheduled_at->toIso8601String(),
                 ]);
+
+                // M5-R02: the parent timeline shows behaviour events (system row, no actor).
+                if ($event->kind === HygieneEventKind::Chewing) {
+                    self::logSystemEvent($pet, ActivityType::PetChewed, $event->scheduled_at);
+                }
             }
         }
 
@@ -199,11 +221,76 @@ class HygieneEventService
      * Cleaning (PetActivityService::clean): settle events that are already
      * due but not yet processed by a tick — they happened and are cleaned by
      * this action, so the next tick doesn't dirty the pet again — and mark
-     * every uncleaned event as cleaned.
+     * every uncleaned event the cleaning game resolves (poop, puppy accident;
+     * not chewing, M5-R02) as cleaned.
      *
      * @return int Number of events this clean took care of.
      */
     public function settleForCleaning(Pet $pet, CarbonInterface $now, ?QuietHours $quietHours): int
+    {
+        $this->settleDuePending($pet, $now, $quietHours);
+
+        return $pet->hygieneEvents()
+            ->where('status', HygieneEventStatus::Applied->value)
+            ->whereIn('kind', HygieneEventKind::cleanedByCleaning())
+            ->whereNull('cleaned_at')
+            ->update(['cleaned_at' => $now, 'updated_at' => $now]);
+    }
+
+    /**
+     * "Pospravi in daj igračo" (M5-R02, PetActivityService::resolveChewing):
+     * like settleForCleaning, for chewing events only.
+     *
+     * @return int Number of chewing events resolved.
+     */
+    public function settleChewing(Pet $pet, CarbonInterface $now, ?QuietHours $quietHours): int
+    {
+        $this->settleDuePending($pet, $now, $quietHours);
+
+        return $pet->hygieneEvents()
+            ->where('status', HygieneEventStatus::Applied->value)
+            ->where('kind', HygieneEventKind::Chewing->value)
+            ->whereNull('cleaned_at')
+            ->update(['cleaned_at' => $now, 'updated_at' => $now]);
+    }
+
+    /**
+     * Messes that happened and are not resolved yet (any kind), oldest first.
+     * Hygiene shows 0 % exactly while one is open (M5-R02).
+     *
+     * @return Collection<int, PetHygieneEvent>
+     */
+    public function openEvents(Pet $pet)
+    {
+        return $pet->hygieneEvents()
+            ->where('status', HygieneEventStatus::Applied->value)
+            ->whereNull('cleaned_at')
+            ->orderBy('scheduled_at')
+            ->orderBy('id')
+            ->get();
+    }
+
+    /**
+     * One system row in activities_log (actor null) for something that
+     * happened to the dog (M5-R02 accident / chewing), at the event time.
+     * Created without model events (the caller broadcasts once).
+     */
+    public static function logSystemEvent(Pet $pet, ActivityType $type, CarbonInterface $at): void
+    {
+        ActivityLog::withoutEvents(fn () => (new ActivityLog)->forceFill([
+            'pet_id' => $pet->id,
+            'actor_user_id' => null,
+            'activity_type' => $type,
+            'value' => null,
+            'created_at' => Carbon::instance($at)->utc(),
+        ])->save());
+    }
+
+    /**
+     * Events already due but not yet processed by a tick: they happened (or
+     * were skipped) — decided the same way the tick decides.
+     */
+    private function settleDuePending(Pet $pet, CarbonInterface $now, ?QuietHours $quietHours): void
     {
         $from = $pet->last_decay_at;
 
@@ -215,12 +302,11 @@ class HygieneEventService
                 'status' => $happens ? HygieneEventStatus::Applied : HygieneEventStatus::Skipped,
                 'resolved_at' => $now,
             ])->save();
-        }
 
-        return $pet->hygieneEvents()
-            ->where('status', HygieneEventStatus::Applied->value)
-            ->whereNull('cleaned_at')
-            ->update(['cleaned_at' => $now, 'updated_at' => $now]);
+            if ($happens && $event->kind === HygieneEventKind::Chewing) {
+                self::logSystemEvent($pet, ActivityType::PetChewed, $event->scheduled_at);
+            }
+        }
     }
 
     /**

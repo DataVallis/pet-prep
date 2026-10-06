@@ -52,6 +52,9 @@ class BreedStageParamsSeeder extends Seeder
     /** David's answers to the M5-R01 open questions (2026-10-05). */
     public const CONFIRMED = 'potrdil David 2026-10-05';
 
+    /** David's M5-R02 decisions (behaviour events, 2026-10-06). */
+    public const CONFIRMED_R02 = 'potrdil David 2026-10-06';
+
     /** @var list<array{0: string, 1: string}> */
     public const PUPPY_4_MEAL_WINDOWS = [['07:00', '09:00'], ['11:00', '13:00'], ['15:00', '17:00'], ['19:00', '21:00']];
 
@@ -226,6 +229,19 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'general_by_size.sleep.senior',
                 'quote' => 'can become less energetic and tend to sleep more',
                 'notes' => 'No hours given: "more than an adult".',
+            ]);
+
+            // ── Behaviour (M5-R02, David 2026-10-06) ────────────────────────
+            $add('puppy', 0, StageParamKey::AccidentHoldHoursPerAgeMonth, 1, [
+                'unit' => 'hours of hold per month of age', 'source_id' => 'S30,S31', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.accident_window_hours', 'decision' => self::CONFIRMED_R02,
+                'quote' => 'one hour for each month of age, give or take an hour',
+                'notes' => 'S30 (Penn Vet); S31 (WebMD, DVM-reviewed): "1 hour for every month of age until they\'re about a year old". Puppy stage only; the game clock counts only outside quiet hours.',
+            ]);
+            $add('puppy', 0, StageParamKey::ChewingChancePerDay, 0.5, [
+                'unit' => 'probability per family-local day (teething puppy)', 'source_id' => 'S32,S33', 'confidence' => 'low', 'verified' => false,
+                'ref' => 'proposed_game_parameters.chewing_teething_chance_per_day',
+                'notes' => 'UNSOURCED proposal (Claude, M5-R02, waiting for David): the sources say teething puppies chew a lot (S32, S33) but give no frequency. Applies only inside teething_months.',
             ]);
 
             // ── Breed level ─────────────────────────────────────────────────

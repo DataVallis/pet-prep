@@ -44,6 +44,13 @@ class PairingController extends Controller
      * of the fields** (old app builds) → `pet_profile: null` and a
      * legacy-profile pet that keeps the pre-M5 rules.
      *
+     * Optional `features` (M5-R02, PR #42): the UI features of this app
+     * build (`behaviour_events`; ≤ 10 strings, unknown values ignored).
+     * Stored with the profile; the new pet gets behaviour events (puppy
+     * accidents, chewing, take-out) only when `behaviour_events` was sent
+     * here AND by the child's device at pin-login. Ignored without a
+     * profile and with `pet_id`.
+     *
      * Without `child_id` (**deprecated**, `Deprecation: true` header): the
      * PIN is for a child already signed in with e-mail, used with
      * `POST /api/child/pair`; optional `pet_id` = join that pet. The
@@ -72,7 +79,9 @@ class PairingController extends Controller
                      * M5-R01: the new pet's profile the PIN will create (mode new_pet with a profile);
                      * null = join / re-login, or no profile sent (→ legacy pet, pre-M5 rules).
                      *
-                     * @var array{breed: 'mutt'|'border_collie', origin: 'bought'|'adopted', age_stage: 'puppy'|'young'|'adult'|'senior'}|null
+                     * `features` (M5-R02): the app features stored for the new pet (e.g. behaviour_events).
+                     *
+                     * @var array{breed: 'mutt'|'border_collie', origin: 'bought'|'adopted', age_stage: 'puppy'|'young'|'adult'|'senior', features: list<'behaviour_events'>}|null
                      */
                     'pet_profile' => $result['pet_profile'],
                 ], 200);
