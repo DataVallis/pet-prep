@@ -8,6 +8,17 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-06 — Hitrejša pot od popravka do strežnika (CI)
+
+**Kaj se je zgodilo:** Vsaka sprememba je doslej dvakrat čakala na iste teste — enkrat v predlogu (PR) in še enkrat po združitvi v `main`, preden je šla na strežnik. Zdaj sistem prepozna, da je bila *točno ista* koda (isto git drevo) že preizkušena v predlogu, in na `main` teste preskoči. Testira se samo tisto, kar se je spremenilo: sprememba dokumentacije je preverjena v manj kot minuti in ne gre na strežnik, sprememba samo mobilne aplikacije prav tako ne. Strežniški testi (1.040) tečejo vzporedno — lokalno 186 s namesto 288 s. Pred vsako namestitvijo strežnik še vedno sam zgradi in preveri sliko, preden vklopi vzdrževalni način. Ob vsakem dvomu (neznana osnova, napaka GitHub API, drugačno drevo) se testira vse.
+
+**Zakaj je pomembno:** Manj čakanja na vsak popravek, brez popuščanja pri varnosti — na strežnik nikoli ne gre nepreizkušena ali rdeča koda.
+
+**Kako povedati:**
+- 🛠 Tehnično: "Isti git tree = isti rezultat testov. PR shrani marker `ci-green-<suite>-<tree>`, `main` ga preveri prek GitHub API (uspešen PR run, isti repo, isti workflow) in preskoči ponovitev; path filter primerja z zadnjim zelenim `main`, ne z `event.before`, zato preklican run ne izgubi sprememb."
+- 💼 Investitorji: "Majhna ekipa z AI agenti: od popravka do produkcije v nekaj minutah, z avtomatskimi varovalkami."
+
+---
 ## 2026-10-06 — PetPrep dobi svojo spletno stran
 
 **Kaj:** nova celostna grafična podoba (»Grafit in meta«, znak Radovednež) in spletna stran petprep.si v angleščini in slovenščini: domača stran, kako deluje, za starše, po posvojitvi, cenik, pogosta vprašanja, partnerji, vlagatelji, kontakt, zasebnost, pogoji in varnost otrok. Stran je pripravljena za iskalnike in AI asistente (strukturirani podatki, zemljevid strani, `llms.txt`).

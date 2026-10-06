@@ -1,5 +1,18 @@
 name: CI & Deploy
 
+# Pipeline (2026-10-06, DEPLOYMENT.md D16):
+#   plan ─┬─ backend-tests ───────┐
+#         ├─ mobile-checks ───────┤
+#         ├─ deploy-script-tests ─┼─ ci-ok (the one required status) ─ deploy (main only)
+#         └─ production-image ────┘
+# `plan` (scripts/ci-plan.sh) runs only the suites whose paths changed and, on a push to
+# main, skips a suite that already passed in a successful PR run on the identical git
+# tree (marker artifacts "ci-green-<suite>-<tree>", uploaded below on pull_request).
+# `ci-ok` fails unless every suite either passed or was skipped because plan said so.
+# `deploy` needs ci-ok (no always()) and runs on main only when backend/, deployment/,
+# scripts/ or this file changed since the last green main run, or on "Run workflow";
+# its first step refuses a commit that is no longer the head of main.
+
 on:
   push:
     branches:
@@ -11,10 +24,46 @@ concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
+permissions:
+  contents: read
+  actions: read # plan: read runs + marker artifacts of this repository
+
 jobs:
+  plan:
+    name: Plan (changed paths, tested tree)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      tree: ${{ steps.plan.outputs.tree }}
+      backend: ${{ steps.plan.outputs.backend }}
+      mobile: ${{ steps.plan.outputs.mobile }}
+      scripts: ${{ steps.plan.outputs.scripts }}
+      image: ${{ steps.plan.outputs.image }}
+      deploy: ${{ steps.plan.outputs.deploy }}
+    steps:
+      - name: Checkout Code (full history, no blobs)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: blob:none
+
+      - name: Plan
+        id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT_NAME: ${{ github.event_name }}
+          GIT_REF: ${{ github.ref }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          REPO: ${{ github.repository }}
+          WORKFLOW_FILE: deploy-production.yml
+        run: bash scripts/ci-plan.sh
+
   backend-tests:
     name: Backend tests (Pest on PostgreSQL)
+    needs: plan
+    if: needs.plan.outputs.backend == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     services:
       postgres:
         image: postgres:18-alpine
@@ -34,7 +83,7 @@ jobs:
       DB_HOST: 127.0.0.1
       DB_PORT: 5432
       DB_DATABASE: testing
-      DB_USERNAME: postgres
+      DB_USERNAME: postgres # superuser: --parallel creates testing_test_1..N itself
       DB_PASSWORD: postgres
     steps:
       - name: Checkout Code
@@ -47,6 +96,18 @@ jobs:
           extensions: mbstring, xml, ctype, iconv, intl, pdo, pdo_pgsql, pgsql, redis, bcmath, gd, zip, sodium
           coverage: none
 
+      - name: Composer cache dir
+        id: composer-cache
+        working-directory: backend
+        run: echo "dir=$(composer config cache-files-dir)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Composer downloads
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: composer-${{ runner.os }}-php8.3-${{ hashFiles('backend/composer.lock') }}
+          restore-keys: composer-${{ runner.os }}-php8.3-
+
       - name: Install PHP Dependencies
         working-directory: backend
         run: |
@@ -54,13 +115,35 @@ jobs:
           composer install --prefer-dist --no-progress --no-interaction
           php artisan key:generate
 
-      - name: Run Pest
+      # One process per vCPU, each on its own database testing_test_<N> (Laravel
+      # ParallelTesting creates and migrates them; Storage::fake() disks are per process too).
+      - name: Run Pest (parallel)
         working-directory: backend
-        run: php artisan test
+        run: php artisan test --parallel
+
+      - name: Record green tree
+        id: green
+        if: github.event_name == 'pull_request'
+        run: |
+          tree="$(git rev-parse 'HEAD^{tree}')"
+          echo "tree=${tree}" >> "$GITHUB_OUTPUT"
+          echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+
+      - name: Upload green-tree marker
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-green-backend-${{ steps.green.outputs.tree }}
+          path: ${{ runner.temp }}/ci-green.txt
+          retention-days: 14
+          overwrite: true
 
   mobile-checks:
     name: Mobile (tsc + Jest)
+    needs: plan
+    if: needs.plan.outputs.mobile == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     defaults:
       run:
         working-directory: mobile
@@ -84,26 +167,71 @@ jobs:
       - name: Jest
         run: yarn test --ci
 
+      - name: Record green tree
+        id: green
+        if: github.event_name == 'pull_request'
+        run: |
+          tree="$(git rev-parse 'HEAD^{tree}')"
+          echo "tree=${tree}" >> "$GITHUB_OUTPUT"
+          echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+
+      - name: Upload green-tree marker
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-green-mobile-${{ steps.green.outputs.tree }}
+          path: ${{ runner.temp }}/ci-green.txt
+          retention-days: 14
+          overwrite: true
+
   deploy-script-tests:
-    name: Deploy script (shellcheck + harness)
+    name: Deploy + CI scripts (shellcheck + harnesses)
+    needs: plan
+    if: needs.plan.outputs.scripts == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Shellcheck
-        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh
+        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh
 
       # Stubbed docker/git/curl in a temp dir; needs only bash, git and rsync.
-      - name: Harness
+      - name: Harness (deploy-production.sh)
         run: bash scripts/tests/deploy-production.test.sh
 
+      # Stubbed gh over JSON fixtures, real git + jq; also the deploy guard (bare origin).
+      - name: Harness (ci-plan.sh + ci-deploy-guard.sh)
+        run: bash scripts/tests/ci-plan.test.sh
+
+      - name: Record green tree
+        id: green
+        if: github.event_name == 'pull_request'
+        run: |
+          tree="$(git rev-parse 'HEAD^{tree}')"
+          echo "tree=${tree}" >> "$GITHUB_OUTPUT"
+          echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+
+      - name: Upload green-tree marker
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-green-scripts-${{ steps.green.outputs.tree }}
+          path: ${{ runner.temp }}/ci-green.txt
+          retention-days: 14
+          overwrite: true
+
   # M4-05b: the server builds the same Dockerfile on every deploy (before maintenance
-  # mode). Building it here first catches Dockerfile / composer / Caddyfile breakage
-  # in the PR. Nothing is pushed; layers are cached in the GitHub Actions cache.
+  # mode) and smoke-tests it there too. Building it here first catches Dockerfile /
+  # composer / Caddyfile breakage in the PR. Nothing is pushed; layers are cached in the
+  # GitHub Actions cache.
   production-image:
     name: Production image (build + smoke test, no push)
+    needs: plan
+    if: needs.plan.outputs.image == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -160,23 +288,91 @@ jobs:
           docker run --rm -e APP_KEY="base64:$(openssl rand -base64 32)" -e CACHE_STORE=array \
             -e SESSION_DRIVER=array -e PETPREP_OPTIMIZE=full petprep-app:ci php artisan route:list --path=api/media
 
+      - name: Record green tree
+        id: green
+        if: github.event_name == 'pull_request'
+        run: |
+          tree="$(git rev-parse 'HEAD^{tree}')"
+          echo "tree=${tree}" >> "$GITHUB_OUTPUT"
+          echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+
+      - name: Upload green-tree marker
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-green-image-${{ steps.green.outputs.tree }}
+          path: ${{ runner.temp }}/ci-green.txt
+          retention-days: 14
+          overwrite: true
+
+  # The single status for branch protection / the merge helper: always reported, green
+  # only when plan succeeded and every suite passed or was skipped BY THE PLAN. A suite
+  # that failed, was cancelled, or was skipped although planned makes it red.
+  ci-ok:
+    name: CI OK
+    if: always()
+    needs: [plan, backend-tests, mobile-checks, deploy-script-tests, production-image]
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Check results
+        env:
+          PLAN_RESULT: ${{ needs.plan.result }}
+          PLAN_BACKEND: ${{ needs.plan.outputs.backend }}
+          PLAN_MOBILE: ${{ needs.plan.outputs.mobile }}
+          PLAN_SCRIPTS: ${{ needs.plan.outputs.scripts }}
+          PLAN_IMAGE: ${{ needs.plan.outputs.image }}
+          BACKEND_RESULT: ${{ needs.backend-tests.result }}
+          MOBILE_RESULT: ${{ needs.mobile-checks.result }}
+          SCRIPTS_RESULT: ${{ needs.deploy-script-tests.result }}
+          IMAGE_RESULT: ${{ needs.production-image.result }}
+        run: |
+          set -u
+          ok=1
+          if [ "$PLAN_RESULT" != success ]; then echo "plan: $PLAN_RESULT"; ok=0; fi
+          verdict() { # verdict NAME PLANNED RESULT
+            if [ "$3" = success ]; then echo "$1: passed"
+            elif [ "$3" = skipped ] && [ "$2" = false ]; then echo "$1: skipped (not needed / already green on the PR)"
+            else echo "::error::$1: result '$3' (planned: '$2')"; ok=0; fi
+          }
+          verdict backend-tests "$PLAN_BACKEND" "$BACKEND_RESULT"
+          verdict mobile-checks "$PLAN_MOBILE" "$MOBILE_RESULT"
+          verdict deploy-script-tests "$PLAN_SCRIPTS" "$SCRIPTS_RESULT"
+          verdict production-image "$PLAN_IMAGE" "$IMAGE_RESULT"
+          [ "$ok" = 1 ]
+
   deploy:
     name: Deploy to Hetzner Production
-    needs: [backend-tests, mobile-checks, deploy-script-tests, production-image]
-    # Pre-production phase (David, 2026-10-03): every push/merge to main deploys automatically
-    # after both test jobs pass; "Run workflow" on main also deploys. To require manual deploys
-    # again, restrict this to workflow_dispatch — see docs/engineering/DEPLOYMENT.md D2.
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    # No always(): runs only when plan AND ci-ok succeeded.
+    needs: [plan, ci-ok]
+    # Pre-production phase (David, 2026-10-03): every push/merge to main that changes
+    # backend/, deployment/, scripts/ or this workflow deploys automatically once ci-ok is
+    # green; "Run workflow" on main always tests everything and deploys. To require manual
+    # deploys again, restrict this to workflow_dispatch — see docs/engineering/DEPLOYMENT.md D2.
+    if: >-
+      needs.plan.outputs.deploy == 'true' && github.ref == 'refs/heads/main' &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     concurrency:
       group: production
       cancel-in-progress: false
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     environment:
       name: production
       url: https://api.petprep.si
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
+      # Refuses (red, not skipped) when this run's commit is no longer the head of main —
+      # push runs and every re-run; "Run workflow" (attempt 1) is not checked. Rollback =
+      # revert commit or "Run workflow" on main (DEPLOYMENT.md D16).
+      - name: Deploy guard (commit is still the head of main)
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          COMMIT_SHA: ${{ github.sha }}
+        run: bash scripts/ci-deploy-guard.sh
 
       - name: Setup SSH Key & Deploy
         env:
