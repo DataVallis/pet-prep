@@ -7,18 +7,12 @@
  */
 
 import { useState } from 'react';
-import {
-  ActivityIndicator,
-  Alert,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { ActivityIndicator, Alert, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { ChevronLeft, Check, Crown, Footprints, Lock, RotateCcw } from 'lucide-react-native';
 
 import { useAppStore } from '@/store/appStore';
+import { fonts, light, palette, radius, tightTracking } from '@/theme';
 
 // RevenueCat integration placeholder.
 // In production, import and configure Purchases here:
@@ -102,7 +96,7 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
       {/* Header */}
       <View style={styles.header}>
         <Pressable onPress={onBack} hitSlop={8} accessibilityRole="button" testID="paywall-back">
-          <ChevronLeft color="#818cf8" size={28} />
+          <ChevronLeft color={light.ink} size={28} />
         </Pressable>
         <Text style={styles.headerTitle}>Breed Selection</Text>
       </View>
@@ -121,7 +115,7 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
 
             <View style={styles.stats}>
               <View style={styles.statRow}>
-                <Footprints color="#64748b" size={18} />
+                <Footprints color={light.inkMuted} size={18} />
                 <Text style={styles.statText}>{mutt.dailySteps.toLocaleString('en-US')} steps/day</Text>
               </View>
               <Text style={styles.statText}>Decay: {mutt.decayRate}</Text>
@@ -130,7 +124,7 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
             <View style={styles.cardFooter}>
               {pet?.breed_type === 'mutt' ? (
                 <View style={styles.statusRow}>
-                  <Check color="#10B981" size={18} />
+                  <Check color={light.ok} size={18} />
                   <Text style={styles.statusText}>Current Breed</Text>
                 </View>
               ) : (
@@ -143,7 +137,7 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
           <View style={[styles.card, styles.cardPremium]} testID="paywall-card-collie">
             <View style={styles.cardTitleRow}>
               <Text style={styles.cardTitle}>Border Collie</Text>
-              <Crown color="#818cf8" size={20} />
+              <Crown color={light.ink} size={20} />
             </View>
             <View style={[styles.pill, styles.pillPremium]}>
               <Text style={[styles.pillText, styles.pillTextPremium]}>RECOMMENDED · PREMIUM</Text>
@@ -151,7 +145,7 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
 
             <View style={styles.stats}>
               <View style={styles.statRow}>
-                <Footprints color="#818cf8" size={18} />
+                <Footprints color={light.ink} size={18} />
                 <Text style={[styles.statText, styles.statTextPremium]}>
                   {collie.dailySteps.toLocaleString('en-US')} steps/day
                 </Text>
@@ -163,7 +157,7 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
 
             {isUnlocked ? (
               <View style={[styles.statusRow, styles.unlockedRow]}>
-                <Check color="#10B981" size={18} />
+                <Check color={light.ok} size={18} />
                 <Text style={styles.statusText}>Unlocked</Text>
               </View>
             ) : (
@@ -180,10 +174,10 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
                 ]}
               >
                 {isPurchasing ? (
-                  <ActivityIndicator color="#ffffff" />
+                  <ActivityIndicator color={palette.white} />
                 ) : (
                   <View style={styles.statusRow}>
-                    <Lock color="#ffffff" size={18} />
+                    <Lock color={palette.white} size={18} />
                     <Text style={styles.unlockText}>Unlock Now</Text>
                   </View>
                 )}
@@ -200,7 +194,7 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
           testID="paywall-restore"
           style={styles.restore}
         >
-          {isRestoring ? <ActivityIndicator color="#818cf8" size={18} /> : <RotateCcw color="#818cf8" size={18} />}
+          {isRestoring ? <ActivityIndicator color={light.mintText} size={18} /> : <RotateCcw color={light.mintText} size={18} />}
           <Text style={styles.restoreText}>Restore Purchases</Text>
         </Pressable>
       </ScrollView>
@@ -209,68 +203,70 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#020617' },
+  root: { flex: 1, backgroundColor: light.bg },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
     paddingHorizontal: 16,
     paddingVertical: 16,
-    backgroundColor: '#0f172a',
+    backgroundColor: light.surface,
     borderBottomWidth: 1,
-    borderBottomColor: '#1e293b',
+    borderBottomColor: light.border,
   },
-  headerTitle: { fontSize: 20, fontWeight: '700', color: '#f1f5f9' },
+  headerTitle: { fontFamily: fonts.display, fontSize: 20, letterSpacing: tightTracking(20), color: light.ink },
   scroll: { flex: 1 },
   scrollContent: { padding: 16, paddingBottom: 24 },
-  intro: { marginBottom: 16, fontSize: 14, color: '#64748b' },
+  intro: { marginBottom: 16, fontSize: 14, color: light.inkMuted },
   cards: { flexDirection: 'row', gap: 12 },
   card: {
     flex: 1,
     padding: 16,
-    borderRadius: 16,
+    borderRadius: radius.card,
     borderWidth: 1,
-    borderColor: '#334155',
-    backgroundColor: '#0f172a',
+    borderColor: light.border,
+    backgroundColor: light.surface,
   },
-  cardPremium: { borderWidth: 2, borderColor: '#6366f1' },
+  // The premium card is the screen's one mint surface (CGP v2).
+  cardPremium: { borderWidth: 2, borderColor: palette.mint, backgroundColor: palette.mintSoft },
   cardTitleRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 6 },
-  cardTitle: { flexShrink: 1, fontSize: 18, fontWeight: '700', color: '#f1f5f9' },
-  pill: { marginTop: 8, alignSelf: 'flex-start', borderRadius: 999, paddingHorizontal: 10, paddingVertical: 4 },
-  pillFree: { backgroundColor: '#1e293b' },
-  pillPremium: { backgroundColor: 'rgba(99, 102, 241, 0.2)' },
+  cardTitle: { flexShrink: 1, fontFamily: fonts.displayBold, fontSize: 18, letterSpacing: tightTracking(18), color: light.ink },
+  pill: { marginTop: 8, alignSelf: 'flex-start', borderRadius: radius.pill, paddingHorizontal: 10, paddingVertical: 4 },
+  pillFree: { backgroundColor: light.surfaceMuted },
+  pillPremium: { backgroundColor: palette.mint },
   pillText: { fontSize: 11, fontWeight: '700' },
-  pillTextFree: { color: '#94a3b8' },
-  pillTextPremium: { color: '#818cf8' },
+  pillTextFree: { color: light.inkMuted },
+  pillTextPremium: { color: palette.graphite },
   stats: { marginTop: 16, gap: 8 },
   statRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  statText: { flexShrink: 1, fontSize: 14, color: '#94a3b8' },
-  statTextPremium: { color: '#cbd5e1' },
+  statText: { flexShrink: 1, fontSize: 14, color: light.inkMuted },
+  statTextPremium: { color: light.ink },
   cardFooter: { marginTop: 20, alignItems: 'center' },
   statusRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6 },
-  statusText: { fontSize: 14, fontWeight: '600', color: '#34d399' },
-  mutedText: { fontSize: 14, color: '#475569' },
-  price: { marginTop: 12, fontSize: 24, fontWeight: '700', color: '#f1f5f9' },
+  statusText: { fontSize: 14, fontWeight: '600', color: light.ok },
+  mutedText: { fontSize: 14, color: light.inkFaint },
+  price: { marginTop: 12, fontFamily: fonts.display, fontSize: 26, letterSpacing: tightTracking(26), color: light.ink },
   unlockedRow: { marginTop: 16 },
   unlockButton: {
     marginTop: 16,
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: 48,
-    borderRadius: 12,
+    borderRadius: radius.button,
     paddingVertical: 14,
-    backgroundColor: '#4f46e5',
+    backgroundColor: light.action,
   },
-  unlockText: { fontSize: 16, fontWeight: '700', color: '#ffffff' },
+  unlockText: { fontSize: 16, fontWeight: '600', color: light.onAction },
   restore: {
     marginTop: 24,
+    minHeight: 44,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
     alignSelf: 'center',
   },
-  restoreText: { fontSize: 14, fontWeight: '500', color: '#818cf8' },
+  restoreText: { fontSize: 14, fontWeight: '600', color: light.mintText },
   disabled: { opacity: 0.5 },
   pressed: { transform: [{ scale: 0.95 }] },
 });

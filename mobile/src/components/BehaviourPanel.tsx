@@ -10,7 +10,8 @@
  */
 
 import type { ReactNode } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { DoorOpen, ToyBrick } from 'lucide-react-native';
 
 import { SceneGraphic } from '@/components/BehaviourGraphics';
@@ -22,6 +23,7 @@ import {
   type TakeOutCountdown,
 } from '@/modules/behaviour/behaviour';
 import type { VideoState } from '@/modules/petMedia/petMedia';
+import { alpha, palette } from '@/theme';
 
 export interface BehaviourPanelProps {
   behaviour: ChildBehaviour;
@@ -80,7 +82,7 @@ export default function BehaviourPanel({
                 pressed && !resolveDisabled && styles.pressed,
               ]}
             >
-              <ToyBrick color="#ffffff" size={16} />
+              <ToyBrick color={palette.graphite} size={16} />
               <Text style={styles.resolveText}>{BEHAVIOUR_STRINGS.resolveChewing}</Text>
             </Pressable>
           )}
@@ -88,7 +90,7 @@ export default function BehaviourPanel({
       )}
       {countdown !== null && (
         <View style={styles.countdownPill} testID="hud-take-out-countdown" accessible accessibilityLabel={countdown.line}>
-          <DoorOpen color={countdown.due ? '#a5b4fc' : '#94a3b8'} size={14} />
+          <DoorOpen color={countdown.due ? palette.mint : palette.n400} size={14} />
           <Text style={styles.countdownText}>{countdown.line}</Text>
         </View>
       )}
@@ -97,7 +99,7 @@ export default function BehaviourPanel({
   );
 }
 
-/** Dark glass, like the header / dock; indigo accent (never the rose alarm colour). */
+/** Dark glass, like the header / dock; mint accent (never the danger colour). */
 const styles = StyleSheet.create({
   slot: {
     position: 'absolute',
@@ -113,12 +115,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 12,
     borderRadius: 20,
-    backgroundColor: 'rgba(15, 23, 42, 0.82)',
+    backgroundColor: alpha(palette.graphite, 0.82),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
+    borderColor: alpha(palette.white, 0.15),
   },
   sceneText: {
-    color: '#e2e8f0',
+    color: palette.n200,
     fontSize: 13,
     fontWeight: '600',
     textAlign: 'center',
@@ -130,15 +132,15 @@ const styles = StyleSheet.create({
     minHeight: 44,
     paddingHorizontal: 18,
     borderRadius: 22,
-    backgroundColor: '#4f46e5',
+    backgroundColor: palette.mint,
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.25)',
+    borderColor: alpha(palette.white, 0.25),
   },
   resolveDisabled: {
     opacity: 0.5,
   },
   resolveText: {
-    color: '#ffffff',
+    color: palette.graphite,
     fontSize: 14,
     fontWeight: '800',
   },
@@ -150,13 +152,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 14,
-    backgroundColor: 'rgba(15, 23, 42, 0.82)',
+    backgroundColor: alpha(palette.graphite, 0.82),
     borderWidth: 1,
-    borderColor: 'rgba(165, 180, 252, 0.3)',
+    borderColor: alpha(palette.mint, 0.3),
   },
   countdownText: {
     flexShrink: 1,
-    color: '#c7d2fe',
+    color: palette.mint,
     fontSize: 12,
     fontWeight: '600',
   },

@@ -3,20 +3,25 @@
  * "Sem starš" → e-mail login (with "Registracija" → ParentSignupScreen, M2-10a);
  * "Sem otrok" → the 6-digit PIN from the parent.
  * Which path is open is local UI state (nothing to persist).
+ * CGP v2: light fog screen, horizontal logo + slogan, the child path is the one mint surface.
  */
 
 import { useState } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { ChevronRight, KeyRound, PawPrint, ShieldCheck } from 'lucide-react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
+import { ChevronRight, KeyRound, ShieldCheck } from 'lucide-react-native';
 
 import BuildLabel from '@/components/BuildLabel';
+import { BrandLogo } from '@/components/brand/BrandLogo';
 import ChildPinLoginScreen from '@/screens/ChildPinLoginScreen';
 import ParentLoginScreen from '@/screens/ParentLoginScreen';
 import ParentSignupScreen from '@/screens/ParentSignupScreen';
+import { fonts, light, palette, radius, tightTracking } from '@/theme';
 
 /** All user-visible strings of this screen (extract to i18n with M1-18). */
 export const START_STRINGS = {
   title: 'PetPrep',
+  slogan: 'Pripravljeni na žival. Ob njej vse življenje.',
   subtitle: 'Kdo se prijavlja?',
   child: 'Sem otrok',
   childHint: 'Imam kodo od staršev',
@@ -41,18 +46,17 @@ export default function StartScreen() {
 
   return (
     <View style={styles.container} testID="start-screen">
-      <View style={[styles.glowOrb, styles.glowIndigo]} />
-      <View style={[styles.glowOrb, styles.glowEmerald]} />
-
       <View style={styles.header}>
-        <View style={styles.logoBadge}>
-          <PawPrint color="#818cf8" size={38} />
-        </View>
-        <Text style={styles.title}>{S.title}</Text>
-        <Text style={styles.subtitle}>{S.subtitle}</Text>
+        <BrandLogo width={188} tone="light" testID="start-logo" />
+        <Text style={styles.slogan}>{S.slogan}</Text>
       </View>
 
+      <Text style={styles.subtitle} accessibilityRole="header">
+        {S.subtitle}
+      </Text>
+
       <View style={styles.choices}>
+        {/* The child's path is the screen's one mint surface (CGP v2: playfulness in one place). */}
         <Pressable
           onPress={() => setPath('child')}
           style={({ pressed }) => [styles.choice, styles.choiceChild, pressed && styles.pressed]}
@@ -60,13 +64,13 @@ export default function StartScreen() {
           accessibilityLabel={S.child}
         >
           <View style={[styles.choiceIcon, styles.choiceIconChild]}>
-            <KeyRound color="#c7d2fe" size={28} />
+            <KeyRound color={palette.mint} size={24} />
           </View>
           <View style={styles.choiceText}>
             <Text style={styles.choiceTitle}>{S.child}</Text>
-            <Text style={styles.choiceHint}>{S.childHint}</Text>
+            <Text style={[styles.choiceHint, styles.choiceHintChild]}>{S.childHint}</Text>
           </View>
-          <ChevronRight color="#c7d2fe" size={22} />
+          <ChevronRight color={palette.graphite} size={22} />
         </Pressable>
 
         <Pressable
@@ -76,65 +80,62 @@ export default function StartScreen() {
           accessibilityLabel={S.parent}
         >
           <View style={styles.choiceIcon}>
-            <ShieldCheck color="#6ee7b7" size={26} />
+            <ShieldCheck color={palette.graphite} size={24} />
           </View>
           <View style={styles.choiceText}>
             <Text style={styles.choiceTitle}>{S.parent}</Text>
             <Text style={styles.choiceHint}>{S.parentHint}</Text>
           </View>
-          <ChevronRight color="#94a3b8" size={22} />
+          <ChevronRight color={palette.n500} size={22} />
         </Pressable>
       </View>
 
       {/* Build identity: which code is being tested. */}
-      <BuildLabel tone="dark" style={styles.buildLabel} />
+      <BuildLabel tone="light" style={styles.buildLabel} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#020617', justifyContent: 'center', paddingHorizontal: 24 },
-  glowOrb: { position: 'absolute', borderRadius: 9999 },
+  container: { flex: 1, backgroundColor: light.bg, justifyContent: 'center', paddingHorizontal: 24 },
   buildLabel: { position: 'absolute', bottom: 28, left: 0, right: 0 },
-  glowIndigo: { width: 300, height: 300, top: 60, left: -90, backgroundColor: 'rgba(79, 70, 229, 0.22)' },
-  glowEmerald: { width: 240, height: 240, bottom: 80, right: -60, backgroundColor: 'rgba(16, 185, 129, 0.12)' },
-  header: { alignItems: 'center', marginBottom: 36 },
-  logoBadge: {
-    width: 84,
-    height: 84,
-    borderRadius: 26,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.18)',
-    alignItems: 'center',
-    justifyContent: 'center',
+  header: { alignItems: 'center', marginBottom: 44, gap: 14 },
+  slogan: { maxWidth: 300, fontSize: 15, lineHeight: 21, color: light.inkMuted, textAlign: 'center' },
+  subtitle: {
+    width: '100%',
+    maxWidth: 380,
+    alignSelf: 'center',
+    marginBottom: 14,
+    fontFamily: fonts.display,
+    fontSize: 24,
+    letterSpacing: tightTracking(24),
+    color: light.ink,
   },
-  title: { marginTop: 14, fontSize: 34, fontWeight: '800', letterSpacing: -0.5, color: '#ffffff' },
-  subtitle: { marginTop: 6, fontSize: 17, color: '#cbd5e1' },
-  choices: { gap: 14, width: '100%', maxWidth: 380, alignSelf: 'center' },
+  choices: { gap: 12, width: '100%', maxWidth: 380, alignSelf: 'center' },
   choice: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 14,
-    minHeight: 88,
+    minHeight: 84,
     paddingHorizontal: 18,
-    borderRadius: 24,
-    backgroundColor: 'rgba(15, 23, 42, 0.75)',
+    borderRadius: radius.card,
+    backgroundColor: light.surface,
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.14)',
+    borderColor: light.border,
   },
-  choiceChild: { backgroundColor: 'rgba(79, 70, 229, 0.3)', borderColor: 'rgba(129, 140, 248, 0.6)' },
+  choiceChild: { backgroundColor: palette.mint, borderColor: palette.mint },
   choiceIcon: {
-    width: 52,
-    height: 52,
-    borderRadius: 16,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: light.surfaceMuted,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  choiceIconChild: { backgroundColor: 'rgba(129, 140, 248, 0.25)' },
+  choiceIconChild: { backgroundColor: palette.graphite },
   choiceText: { flex: 1, gap: 2 },
-  choiceTitle: { fontSize: 22, fontWeight: '800', color: '#ffffff' },
-  choiceHint: { fontSize: 14, color: '#cbd5e1' },
-  pressed: { opacity: 0.85, transform: [{ scale: 0.98 }] },
+  choiceTitle: { fontFamily: fonts.displayBold, fontSize: 20, letterSpacing: tightTracking(20), color: light.ink },
+  choiceHint: { fontSize: 14, color: light.inkMuted },
+  choiceHintChild: { color: palette.n800 },
+  pressed: { opacity: 0.88, transform: [{ scale: 0.98 }] },
 });

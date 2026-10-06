@@ -7,7 +7,9 @@
  * deletion.
  */
 
-import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
+import { fonts, tightTracking } from '@/theme';
 import { ChevronLeft } from 'lucide-react-native';
 
 import AddChildCard from '@/components/AddChildCard';
@@ -104,7 +106,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: C.border,
   },
-  title: { fontSize: 20, fontWeight: '800', color: C.text },
+  title: { fontSize: 20, letterSpacing: tightTracking(20), fontFamily: fonts.display, color: C.text },
   content: { padding: 16, gap: 14, paddingBottom: 32 },
   group: { fontSize: 13, fontWeight: '700', color: C.muted, textTransform: 'uppercase', letterSpacing: 0.4, marginTop: 4 },
   about: { gap: 6, alignItems: 'center', paddingTop: 8 },

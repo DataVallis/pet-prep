@@ -1,5 +1,6 @@
 import { Component, useEffect, type ErrorInfo, type ReactNode } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 
 import { isAwaitingContract, useAppStore, type LockState } from '@/store/appStore';
 import { logout } from '@/modules/session/logout';
@@ -13,6 +14,8 @@ import ChildHudScreen from '@/screens/ChildHudScreen';
 import HudErrorBoundary from '@/components/HudErrorBoundary';
 import { logRenderError } from '@/utils/logRenderError';
 import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
+import { palette } from '@/theme';
+import { useDarkStatusBar } from '@/components/ui/useDarkStatusBar';
 
 const LOCKED_STATES: LockState[] = ['game_over', 'hard_stop', 'illness', 'inactive'];
 
@@ -60,6 +63,12 @@ function SignOutChildWithoutPet() {
   return <StartScreen />;
 }
 
+/** The child simulator is dark (CGP v2): light status-bar text while it is shown. */
+function DarkStatusBar() {
+  useDarkStatusBar();
+  return null;
+}
+
 export default function AppNavigator() {
   const authToken = useAppStore((s) => s.authToken);
   const user = useAppStore((s) => s.user);
@@ -87,7 +96,7 @@ export default function AppNavigator() {
 
   return (
     <ErrorBoundary>
-      <View style={styles.root}>
+      <View style={[styles.root, isAuthenticated && user.role !== 'parent' && styles.rootChild]}>
         {!isAuthenticated ? (
           // "Sem starš" (e-mail) or "Sem otrok" (PIN only, M2-02).
           <StartScreen />
@@ -95,6 +104,7 @@ export default function AppNavigator() {
           <ParentDashboardScreen />
         ) : (
           <>
+            <DarkStatusBar />
             {pet === null ? (
               // A child session without a pet can only be a legacy e-mail child account
               // (pin-login always returns a pet). Its token must not linger: sign it out
@@ -126,24 +136,27 @@ export default function AppNavigator() {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: '#020617',
+    backgroundColor: palette.fog,
+  },
+  rootChild: {
+    backgroundColor: palette.graphite,
   },
   errorContainer: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#0f172a',
+    backgroundColor: palette.graphite,
     padding: 24,
   },
   errorTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#ef4444',
+    color: palette.dangerDark,
   },
   errorMessage: {
     marginTop: 8,
     fontSize: 14,
-    color: '#94a3b8',
+    color: palette.n400,
     textAlign: 'center',
   },
 });

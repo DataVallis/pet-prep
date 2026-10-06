@@ -23,7 +23,8 @@
  */
 
 import { memo, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import { Animated, Image, Platform, StyleSheet, Text, View, type StyleProp, type ViewStyle } from 'react-native';
+import { Animated, Image, Platform, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { PawPrint } from 'lucide-react-native';
 import { useVideoPlayer, VideoView, type StatusChangeEventPayload, type VideoPlayerStatus } from 'expo-video';
 
@@ -45,6 +46,7 @@ import {
 } from '@/modules/petMedia/petMedia';
 import type { BehaviourScene } from '@/modules/behaviour/behaviour';
 import type { BreedType, PetState } from '@/types';
+import { alpha, palette } from '@/theme';
 
 export const PET_MEDIA_STRINGS = {
   pending: 'Kuža se pripravlja…',
@@ -171,7 +173,7 @@ function DefaultPlaceholder({ breed, variant }: { breed: BreedType; variant: 'hu
   const dark = variant === 'hud';
   return (
     <View style={[styles.placeholder, dark ? styles.placeholderDark : styles.placeholderLight]}>
-      <PawPrint color={dark ? '#a5b4fc' : '#6366f1'} size={variant === 'hud' ? 56 : 28} />
+      <PawPrint color={dark ? palette.mintBorder : palette.graphite} size={variant === 'hud' ? 56 : 28} />
       <Text style={[styles.placeholderText, dark ? styles.placeholderTextDark : styles.placeholderTextLight]}>
         {PET_MEDIA_STRINGS.breeds[breed]}
       </Text>
@@ -418,11 +420,11 @@ const styles = StyleSheet.create({
   card: {
     overflow: 'hidden',
     borderRadius: 16,
-    backgroundColor: '#eef2ff',
+    backgroundColor: palette.mintSoft,
   },
   hudShade: {
     ...StyleSheet.absoluteFill,
-    backgroundColor: 'rgba(0, 0, 0, 0.25)',
+    backgroundColor: alpha(palette.black, 0.25),
   },
   placeholder: {
     flex: 1,
@@ -430,11 +432,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 8,
   },
-  placeholderDark: { backgroundColor: '#020617' },
-  placeholderLight: { backgroundColor: '#eef2ff' },
+  placeholderDark: { backgroundColor: palette.graphite },
+  placeholderLight: { backgroundColor: palette.mintSoft },
   placeholderText: { fontSize: 13, fontWeight: '700' },
-  placeholderTextDark: { color: 'rgba(255, 255, 255, 0.7)' },
-  placeholderTextLight: { color: '#4f46e5' },
+  placeholderTextDark: { color: alpha(palette.white, 0.7) },
+  placeholderTextLight: { color: palette.mintDeep },
   pendingPill: {
     position: 'absolute',
     alignSelf: 'center',
@@ -444,14 +446,14 @@ const styles = StyleSheet.create({
   },
   pendingHud: {
     bottom: Platform.OS === 'ios' ? 140 : 128,
-    backgroundColor: 'rgba(15, 23, 42, 0.8)',
+    backgroundColor: alpha(palette.graphite, 0.8),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
+    borderColor: alpha(palette.white, 0.15),
   },
   pendingCard: {
     bottom: 8,
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    backgroundColor: alpha(palette.white, 0.9),
   },
-  pendingText: { color: '#e0e7ff', fontSize: 12, fontWeight: '700' },
-  pendingTextCard: { color: '#4f46e5' },
+  pendingText: { color: palette.mintBorder, fontSize: 12, fontWeight: '700' },
+  pendingTextCard: { color: palette.mintDeep },
 });

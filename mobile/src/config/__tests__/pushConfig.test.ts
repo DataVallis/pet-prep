@@ -21,12 +21,12 @@ describe('expo-notifications config (app.json / app.config.ts)', () => {
 
   it('sets mode on the plugin entry and leaves other plugins alone', () => {
     const plugins = withPushMode(
-      [['expo-secure-store', { faceIDPermission: 'x' }], ['expo-notifications', { color: '#10b981' }]],
+      [['expo-secure-store', { faceIDPermission: 'x' }], ['expo-notifications', { color: '#1A7A55' }]],
       'production',
     );
     expect(plugins).toEqual([
       ['expo-secure-store', { faceIDPermission: 'x' }],
-      ['expo-notifications', { color: '#10b981', mode: 'production' }],
+      ['expo-notifications', { color: '#1A7A55', mode: 'production' }],
     ]);
     expect(withPushMode(['expo-notifications'], 'development')).toEqual([['expo-notifications', { mode: 'development' }]]);
   });

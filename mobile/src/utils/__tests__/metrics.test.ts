@@ -12,45 +12,45 @@ import {
 
 describe('getMetricColor', () => {
   it('returns green for high levels (>=60)', () => {
-    expect(getMetricColor(100)).toBe('#10B981');
-    expect(getMetricColor(80)).toBe('#10B981');
-    expect(getMetricColor(60)).toBe('#10B981');
+    expect(getMetricColor(100)).toBe('#7FE0B4');
+    expect(getMetricColor(80)).toBe('#7FE0B4');
+    expect(getMetricColor(60)).toBe('#7FE0B4');
   });
 
   it('returns amber for medium levels (30-59)', () => {
-    expect(getMetricColor(50)).toBe('#F59E0B');
-    expect(getMetricColor(40)).toBe('#F59E0B');
-    expect(getMetricColor(30)).toBe('#F59E0B');
+    expect(getMetricColor(50)).toBe('#FFD15C');
+    expect(getMetricColor(40)).toBe('#FFD15C');
+    expect(getMetricColor(30)).toBe('#FFD15C');
   });
 
   it('returns red for low levels (<30)', () => {
-    expect(getMetricColor(20)).toBe('#EF4444');
-    expect(getMetricColor(10)).toBe('#EF4444');
-    expect(getMetricColor(0)).toBe('#EF4444');
+    expect(getMetricColor(20)).toBe('#FF7A6B');
+    expect(getMetricColor(10)).toBe('#FF7A6B');
+    expect(getMetricColor(0)).toBe('#FF7A6B');
   });
 });
 
 describe('interpolateColor', () => {
   it('returns high color at 100%', () => {
     const color = interpolateColor(100);
-    expect(color.toLowerCase()).toBe('#10b981');
+    expect(color.toLowerCase()).toBe('#7fe0b4');
   });
 
   it('returns mid color at 50%', () => {
     const color = interpolateColor(50);
-    expect(color.toLowerCase()).toBe('#f59e0b');
+    expect(color.toLowerCase()).toBe('#ffd15c');
   });
 
   it('returns low color at 0%', () => {
     const color = interpolateColor(0);
-    expect(color.toLowerCase()).toBe('#ef4444');
+    expect(color.toLowerCase()).toBe('#ff7a6b');
   });
 
   it('interpolates between high and mid for values between 50-100', () => {
     const color = interpolateColor(75);
-    // Should be between green (#10B981) and amber (#F59E0B)
-    expect(color).not.toBe('#10B981');
-    expect(color).not.toBe('#F59E0B');
+    // Should be between green (#7FE0B4) and amber (#FFD15C)
+    expect(color).not.toBe('#7FE0B4');
+    expect(color).not.toBe('#FFD15C');
     // Should start with #
     expect(color.startsWith('#')).toBe(true);
     expect(color.length).toBe(7);
@@ -58,8 +58,8 @@ describe('interpolateColor', () => {
 
   it('interpolates between mid and low for values between 0-50', () => {
     const color = interpolateColor(25);
-    expect(color).not.toBe('#F59E0B');
-    expect(color).not.toBe('#EF4444');
+    expect(color).not.toBe('#FFD15C');
+    expect(color).not.toBe('#FF7A6B');
     expect(color.startsWith('#')).toBe(true);
   });
 });

@@ -1,9 +1,11 @@
-import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Platform, Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { Footprints, RefreshCw, X } from 'lucide-react-native';
 
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { formatSteps } from '@/modules/steps/stepCounter';
 import type { StepSync } from '@/modules/steps/useStepSync';
+import { alpha, fonts, palette, tightTracking } from '@/theme';
 
 /** User-visible strings (i18n with M1-18). */
 export const WALK_STRINGS = {
@@ -43,7 +45,7 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
       <View style={styles.card}>
         <View style={styles.headerRow}>
           <View style={styles.titleRow}>
-            <Footprints color="#ffffff" size={24} />
+            <Footprints color={palette.white} size={24} />
             <Text style={styles.title}>{WALK_STRINGS.title}</Text>
           </View>
           <Pressable
@@ -54,7 +56,7 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
             testID="walk-close"
             style={({ pressed }) => [styles.closeButton, pressed && styles.pressedSmall]}
           >
-            <X color="#ffffff" size={20} />
+            <X color={palette.white} size={20} />
           </Pressable>
         </View>
 
@@ -87,7 +89,7 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
                 testID="walk-allow"
                 style={({ pressed }) => [styles.button, styles.primaryButton, pressed && styles.pressed]}
               >
-                <Footprints color="#ffffff" size={18} />
+                <Footprints color={palette.white} size={18} />
                 <Text style={styles.buttonText}>{WALK_STRINGS.allow}</Text>
               </Pressable>
             </>
@@ -108,7 +110,7 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
                   pressed && !stepSync.isSyncing && styles.pressed,
                 ]}
               >
-                <RefreshCw color="#ffffff" size={18} />
+                <RefreshCw color={palette.white} size={18} />
                 <Text style={styles.buttonText}>
                   {stepSync.isSyncing ? WALK_STRINGS.syncing : WALK_STRINGS.refresh}
                 </Text>
@@ -130,17 +132,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 16,
-    backgroundColor: 'rgba(2, 6, 23, 0.78)',
+    backgroundColor: alpha(palette.graphite, 0.78),
   },
   card: {
     width: '100%',
     maxWidth: 340,
     padding: 24,
     borderRadius: 24,
-    backgroundColor: 'rgba(15, 23, 42, 0.92)',
+    backgroundColor: alpha(palette.graphite, 0.92),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
-    shadowColor: '#000',
+    borderColor: alpha(palette.white, 0.15),
+    shadowColor: palette.black,
     shadowOffset: { width: 0, height: 8 },
     shadowOpacity: 0.5,
     shadowRadius: 16,
@@ -158,8 +160,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    fontWeight: '800',
-    color: '#ffffff',
+    letterSpacing: tightTracking(18),
+    fontFamily: fonts.displayBold,
+    color: palette.white,
   },
   closeButton: {
     width: 34,
@@ -167,7 +170,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    backgroundColor: alpha(palette.white, 0.08),
   },
   stats: {
     marginTop: 24,
@@ -175,19 +178,20 @@ const styles = StyleSheet.create({
   },
   steps: {
     fontSize: 28,
-    fontWeight: '800',
-    color: '#ffffff',
+    letterSpacing: tightTracking(28),
+    fontFamily: fonts.display,
+    color: palette.white,
   },
   energy: {
     marginTop: 4,
     fontSize: 14,
     fontWeight: '600',
-    color: '#6ee7b7',
+    color: palette.mint,
   },
   mine: {
     marginTop: 4,
     fontSize: 12,
-    color: '#cbd5e1',
+    color: palette.n300,
   },
   progressTrack: {
     marginTop: 16,
@@ -195,21 +199,21 @@ const styles = StyleSheet.create({
     width: '100%',
     overflow: 'hidden',
     borderRadius: 6,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: alpha(palette.white, 0.1),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
+    borderColor: alpha(palette.white, 0.15),
   },
   progressFill: {
     height: '100%',
     borderRadius: 6,
-    backgroundColor: '#34d399',
+    backgroundColor: palette.okDark,
   },
   goalReached: {
     marginTop: 8,
     textAlign: 'center',
     fontSize: 12,
     fontWeight: '600',
-    color: '#6ee7b7',
+    color: palette.mint,
   },
   actions: {
     marginTop: 24,
@@ -219,18 +223,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 14,
     lineHeight: 20,
-    color: '#cbd5e1',
+    color: palette.n300,
   },
   hint: {
     textAlign: 'center',
     fontSize: 12,
     lineHeight: 17,
-    color: '#cbd5e1',
+    color: palette.n300,
   },
   footnote: {
     textAlign: 'center',
     fontSize: 12,
-    color: '#94a3b8',
+    color: palette.n400,
   },
   button: {
     flexDirection: 'row',
@@ -242,17 +246,17 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
   primaryButton: {
-    backgroundColor: '#10b981',
+    backgroundColor: palette.okDark,
   },
   secondaryButton: {
-    backgroundColor: 'rgba(255, 255, 255, 0.16)',
+    backgroundColor: alpha(palette.white, 0.16),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.25)',
+    borderColor: alpha(palette.white, 0.25),
   },
   buttonText: {
     fontSize: 14,
     fontWeight: '700',
-    color: '#ffffff',
+    color: palette.white,
   },
   disabled: {
     opacity: 0.4,

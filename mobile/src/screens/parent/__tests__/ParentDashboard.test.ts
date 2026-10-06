@@ -49,14 +49,14 @@ describe('Parent dashboard — no demo data (M2-05)', () => {
 
 describe('Metric colours', () => {
   it('green / amber / red thresholds', () => {
-    expect(getMetricColor(80)).toBe('#10B981');
-    expect(getMetricColor(50)).toBe('#F59E0B');
-    expect(getMetricColor(15)).toBe('#EF4444');
+    expect(getMetricColor(80)).toBe('#7FE0B4');
+    expect(getMetricColor(50)).toBe('#FFD15C');
+    expect(getMetricColor(15)).toBe('#FF7A6B');
   });
 
   it('interpolates between the reference colours', () => {
-    expect(interpolateColor(100).toLowerCase()).toBe('#10b981');
-    expect(interpolateColor(50).toLowerCase()).toBe('#f59e0b');
-    expect(interpolateColor(0).toLowerCase()).toBe('#ef4444');
+    expect(interpolateColor(100).toLowerCase()).toBe('#7fe0b4');
+    expect(interpolateColor(50).toLowerCase()).toBe('#ffd15c');
+    expect(interpolateColor(0).toLowerCase()).toBe('#ff7a6b');
   });
 });

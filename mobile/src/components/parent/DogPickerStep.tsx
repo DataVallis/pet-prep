@@ -6,7 +6,8 @@
  */
 
 import { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { Check, Lock } from 'lucide-react-native';
 
 import type { NewPetProfile, PetBreed } from '@/api/client';
@@ -21,6 +22,7 @@ import {
   PREMIUM_BREEDS,
   type PickerChoice,
 } from '@/modules/petProfile/picker';
+import { fonts, palette, tightTracking } from '@/theme';
 
 interface DogPickerStepProps {
   childName: string;
@@ -169,7 +171,7 @@ function Option({ title, hint, selected, locked = false, accessibilityLabel, onP
       testID={testID}
     >
       <View style={[styles.radio, selected && styles.radioSelected]}>
-        {locked ? <Lock color={C.faint} size={12} /> : selected ? <Check color="#ffffff" size={12} /> : null}
+        {locked ? <Lock color={C.faint} size={12} /> : selected ? <Check color={palette.white} size={12} /> : null}
       </View>
       <View style={styles.flex}>
         <Text style={[styles.optionTitle, locked && styles.lockedText]}>{title}</Text>
@@ -182,9 +184,9 @@ function Option({ title, hint, selected, locked = false, accessibilityLabel, onP
 const styles = StyleSheet.create({
   flex: { flex: 1 },
   content: { padding: 16, gap: 10, paddingBottom: 32 },
-  title: { fontSize: 18, fontWeight: '800', color: C.text },
+  title: { fontSize: 18, letterSpacing: tightTracking(18), fontFamily: fonts.displayBold, color: C.text },
   intro: { fontSize: 14, lineHeight: 20, color: C.muted },
-  sectionTitle: { marginTop: 12, fontSize: 13, fontWeight: '700', color: '#334155', textTransform: 'uppercase', letterSpacing: 0.4 },
+  sectionTitle: { marginTop: 12, fontSize: 13, fontWeight: '700', color: palette.n700, textTransform: 'uppercase', letterSpacing: 0.4 },
   option: {
     flexDirection: 'row',
     alignItems: 'flex-start',
@@ -203,7 +205,7 @@ const styles = StyleSheet.create({
     marginTop: 1,
     borderRadius: 11,
     borderWidth: 2,
-    borderColor: '#cbd5e1',
+    borderColor: palette.n300,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -213,7 +215,7 @@ const styles = StyleSheet.create({
   optionHint: { marginTop: 2, fontSize: 13, lineHeight: 18, color: C.muted },
   lockedNote: { fontSize: 13, lineHeight: 18, color: C.yellowText },
   note: { fontSize: 12, lineHeight: 17, color: C.faint },
-  noticeBox: { padding: 12, borderRadius: 12, backgroundColor: C.redSoft, borderWidth: 1, borderColor: '#fecdd3' },
+  noticeBox: { padding: 12, borderRadius: 12, backgroundColor: C.redSoft, borderWidth: 1, borderColor: palette.dangerBorder },
   noticeText: { fontSize: 13, color: C.redText },
   missing: { marginTop: 8, fontSize: 13, color: C.muted, textAlign: 'center' },
   primaryButton: {
@@ -224,7 +226,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  primaryButtonText: { fontSize: 16, fontWeight: '700', color: '#ffffff' },
+  primaryButtonText: { fontSize: 16, fontWeight: '700', color: palette.white },
   secondaryButton: {
     height: 48,
     borderRadius: 14,

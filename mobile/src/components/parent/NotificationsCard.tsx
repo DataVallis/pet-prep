@@ -6,7 +6,8 @@
  */
 
 import { useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, AppState, Pressable, StyleSheet, Text } from 'react-native';
+import { ActivityIndicator, AppState, Pressable, StyleSheet } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { Bell, BellOff } from 'lucide-react-native';
 
 import { Card, PARENT_COLORS as C, SectionTitle } from '@/components/parent/ParentUi';

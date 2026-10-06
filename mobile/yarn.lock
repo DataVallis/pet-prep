@@ -669,6 +669,16 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@expo-google-fonts/bricolage-grotesque@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/bricolage-grotesque/-/bricolage-grotesque-0.4.1.tgz#6fcdf1211601034dda9656ad090e52fd15f517d0"
+  integrity sha512-uijLLg+thOrFgw+gXtYA3dQJTBqqqleabcNFpamaYXqUUcbFe0J18C+4nfL0CyGzSJUicxUBLY4Zv7jdHmTGMA==
+
+"@expo-google-fonts/instrument-sans@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/instrument-sans/-/instrument-sans-0.4.2.tgz#22e2f42d38687fb0c2b3966f72fe02897307b373"
+  integrity sha512-YR0jemCJ/eUlknOfxxxiLnJWpFDaT0KgLiB1q333jIDPlRAERfuMpOislkWA1A7HGX85N9LCsjWLlB3QOZo1wg==
+
 "@expo/cli@^57.0.25":
   version "57.0.25"
   resolved "https://registry.npmjs.org/@expo/cli/-/cli-57.0.25.tgz"
@@ -2725,6 +2735,15 @@ expo-server@^57.0.3:
   version "57.0.3"
   resolved "https://registry.npmjs.org/expo-server/-/expo-server-57.0.3.tgz"
   integrity sha512-aK+LdKzauHSGmsOStZtyxdzv0zWssCkxTw3m4QuOhfDSJsZaMRTd9O41d8ixU/QfELTbaJ0oRNcF7JFV/7O9YQ==
+
+expo-splash-screen@~57.0.9:
+  version "57.0.9"
+  resolved "https://registry.yarnpkg.com/expo-splash-screen/-/expo-splash-screen-57.0.9.tgz#916e23cdfcb1538ba88e091692dedcb36b13b08d"
+  integrity sha512-7cKDn7uBwg0RkcmY015/5j9st4msWJ4zQiPmQdVZoppW3cFSbv05n7xhM6CjUU466Tx4VRTqDF21HuIHkmnEtA==
+  dependencies:
+    "@expo/config-plugins" "~57.0.9"
+    "@expo/image-utils" "^0.11.5"
+    xml2js "0.6.0"
 
 expo-status-bar@~57.0.1:
   version "57.0.1"

@@ -9,7 +9,8 @@
  * messes, and the 7-day take-outs / tidied slippers.
  */
 
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { ChevronRight, KeyRound } from 'lucide-react-native';
 
 import {
@@ -40,6 +41,7 @@ import {
 import PetThumbnail from '@/components/parent/PetThumbnail';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
+import { fonts, palette, tightTracking } from '@/theme';
 
 export const CHILD_CARD_STRINGS = {
   scoreTitle: 'Care Score',
@@ -222,9 +224,9 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
               <View style={styles.legendRow}>
                 <Text style={styles.label}>{S.week}</Text>
                 <View style={styles.legend}>
-                  <View style={[styles.legendDot, { backgroundColor: C.green }]} />
+                  <View style={[styles.legendDot, { backgroundColor: C.chartDone }]} />
                   <Text style={styles.legendText}>{S.legendDone}</Text>
-                  <View style={[styles.legendDot, { backgroundColor: C.red }]} />
+                  <View style={[styles.legendDot, { backgroundColor: C.chartMissed }]} />
                   <Text style={styles.legendText}>{S.legendMissed}</Text>
                 </View>
               </View>
@@ -288,8 +290,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  avatarText: { fontSize: 18, fontWeight: '800', color: C.accent },
-  name: { fontSize: 17, fontWeight: '800', color: C.text },
+  avatarText: { fontSize: 18, letterSpacing: tightTracking(18), fontFamily: fonts.displayBold, color: C.accent },
+  name: { fontSize: 17, letterSpacing: tightTracking(17), fontFamily: fonts.displayBold, color: C.text },
   muted: { fontSize: 13, color: C.muted, lineHeight: 18 },
   reasons: { gap: 2 },
   reason: { fontSize: 13, color: C.text, lineHeight: 18 },
@@ -302,7 +304,7 @@ const styles = StyleSheet.create({
   progressCol: { width: 120, gap: 6, paddingTop: 18 },
   progressText: { fontSize: 13, fontWeight: '700', color: C.text, textAlign: 'right' },
   progressTrack: { height: 6, borderRadius: 3, backgroundColor: C.track, overflow: 'hidden' },
-  progressFill: { height: '100%', backgroundColor: C.accent, borderRadius: 3 },
+  progressFill: { height: '100%', backgroundColor: palette.mint, borderRadius: 3 },
   chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
   chip: {
     fontSize: 12,
@@ -334,8 +336,8 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     justifyContent: 'flex-end',
   },
-  weekDone: { width: '100%', backgroundColor: C.green },
-  weekMissed: { width: '100%', backgroundColor: C.red },
+  weekDone: { width: '100%', backgroundColor: C.chartDone },
+  weekMissed: { width: '100%', backgroundColor: C.chartMissed },
   weekLabel: { fontSize: 10, fontWeight: '600', color: C.muted },
   status: { fontSize: 13, fontWeight: '600', color: C.yellowText },
   statusRed: { color: C.redText },
@@ -362,6 +364,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     backgroundColor: C.accentSoft,
   },
-  detailsText: { fontSize: 14, fontWeight: '700', color: C.accent },
+  detailsText: { fontSize: 14, fontWeight: '700', color: C.link },
   pressed: { opacity: 0.8 },
 });

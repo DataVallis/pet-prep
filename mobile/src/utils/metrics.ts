@@ -1,22 +1,25 @@
 /**
  * Utility functions for metric color interpolation and formatting.
+ * Meter colours follow CGP v2 (`brand/README.md`): good = mint, mid = #FFD15C, low = #FF7A6B.
  */
+
+import { meter } from '@/theme/colors';
 
 /**
  * Get the color for a metric level (0–100).
- * Green (100%) → Amber (50%) → Red (<20%).
+ * Mint (≥ 60) → yellow (30–59) → coral (< 30).
  * Returns a hex color string suitable for React Native styles.
  */
 export function getMetricColor(level: number): string {
   if (level >= 60) {
     // Green to Amber: interpolate from 100% (green) to 60% (green-amber)
-    return '#10B981'; // emerald-500
+    return meter.good;
   } else if (level >= 30) {
     // Amber zone
-    return '#F59E0B'; // amber-500
+    return meter.mid;
   } else {
     // Red zone (<30%)
-    return '#EF4444'; // rose-500
+    return meter.low;
   }
 }
 
@@ -26,9 +29,9 @@ export function getMetricColor(level: number): string {
  */
 export function interpolateColor(
   level: number,
-  highColor: string = '#10B981',
-  midColor: string = '#F59E0B',
-  lowColor: string = '#EF4444',
+  highColor: string = meter.good,
+  midColor: string = meter.mid,
+  lowColor: string = meter.low,
 ): string {
   if (level >= 50) {
     // Interpolate between high (100%) and mid (50%)

@@ -20,13 +20,13 @@ describe('LockedScreen (M1-16)', () => {
       ([screen.getByTestId('locked-screen').props.style].flat(3) as Array<{ backgroundColor?: string } | undefined>)
         .map((st) => st?.backgroundColor)
         .filter(Boolean);
-    expect(bg()).toEqual(['rgba(71, 85, 105, 0.55)']);
+    expect(bg()).toEqual(['rgba(90, 99, 93, 0.55)']);
     expect(screen.getByTestId('locked-card-glass')).toBeTruthy();
     unmount();
 
     useAppStore.getState().setLockState('game_over');
     render(<LockedScreen />);
-    expect(bg()).toEqual(['#000000']);
+    expect(bg()).toEqual(['#121614']);
     expect(screen.getByTestId('locked-card')).toBeTruthy();
   });
 
@@ -51,17 +51,17 @@ describe('LockedScreen (M1-16)', () => {
       useAppStore.getState().setLockState('illness');
       useAppStore.getState().setHudVideoState('sleeping');
       render(<LockedScreen />);
-      expect(bg()).toEqual(['rgba(30, 41, 59, 0.8)']);
+      expect(bg()).toEqual(['rgba(28, 34, 31, 0.8)']);
       expect(screen.getByTestId('locked-card-glass')).toBeTruthy();
       const title = StyleSheet.flatten(screen.getByText(LOCKED_STRINGS.illness.title).props.style) as TextStyle;
-      expect(title.color).toBe('#ffffff');
+      expect(title.color).toBe('#FFFFFF');
     });
 
     it('premium at the vet (real sick video): the lighter grey veil stays', () => {
       useAppStore.getState().setLockState('illness');
       useAppStore.getState().setHudVideoState('sick');
       render(<LockedScreen />);
-      expect(bg()).toEqual(['rgba(71, 85, 105, 0.55)']);
+      expect(bg()).toEqual(['rgba(90, 99, 93, 0.55)']);
     });
 
     it('the HUD video state is reset with the session', () => {
@@ -79,7 +79,7 @@ describe('LockedScreen (M1-16)', () => {
     expect(root).toMatchObject({ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 50 });
     expect(StyleSheet.flatten(screen.getByTestId('locked-glow').props.style)).toMatchObject({ width: 256, borderRadius: 128 });
     const title = StyleSheet.flatten(screen.getByText(LOCKED_STRINGS.game_over.title).props.style) as TextStyle;
-    expect(title).toMatchObject({ color: '#ffffff', fontSize: 24, textAlign: 'center' });
+    expect(title).toMatchObject({ color: '#FFFFFF', fontSize: 24, textAlign: 'center' });
   });
 
   it('translucent locks: glass card, lighter body text, no red glow', () => {
@@ -89,7 +89,7 @@ describe('LockedScreen (M1-16)', () => {
     expect(StyleSheet.flatten(screen.getByTestId('locked-card-glass').props.style)).toMatchObject({ borderRadius: 28 });
     expect(screen.queryByTestId('locked-glow')).toBeNull();
     const body = StyleSheet.flatten(screen.getByText(LOCKED_STRINGS.hard_stop.body).props.style) as TextStyle;
-    expect(body.color).toBe('#cbd5e1');
+    expect(body.color).toBe('#C5CDC7');
   });
 
   it('hard stop: "Starš je ustavil igro" with the spec text', () => {

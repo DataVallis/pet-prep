@@ -10,7 +10,10 @@
  */
 
 import { useEffect, useState } from 'react';
-import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
+import { BrandMark } from '@/components/brand/BrandLogo';
+import { fonts, radius, tightTracking } from '@/theme';
 import { LayoutDashboard, LogOut, PawPrint, Settings } from 'lucide-react-native';
 
 import { ApiError } from '@/api/client';
@@ -180,6 +183,7 @@ export default function ParentDashboardScreen() {
     return (
       <>
         <View style={styles.header}>
+          <BrandMark size={36} tone="light" testID="dashboard-brand-mark" />
           <View style={styles.flex}>
             <Text style={styles.headerTitle}>{DASHBOARD_STRINGS.title}</Text>
             {subtitle !== '' && <Text style={styles.headerSubtitle}>{subtitle}</Text>}
@@ -253,12 +257,12 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: C.border,
   },
-  headerTitle: { fontSize: 22, fontWeight: '800', color: C.text },
+  headerTitle: { fontFamily: fonts.display, fontSize: 22, letterSpacing: tightTracking(22), color: C.text },
   headerSubtitle: { fontSize: 13, color: C.muted, marginTop: 2 },
   logoutButton: {
-    width: 38,
-    height: 38,
-    borderRadius: 12,
+    width: 44,
+    height: 44,
+    borderRadius: radius.button,
     backgroundColor: C.divider,
     alignItems: 'center',
     justifyContent: 'center',

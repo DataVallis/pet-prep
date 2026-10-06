@@ -1,6 +1,8 @@
 import { useContext, useEffect, useRef, useState } from 'react';
-import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
+import { alpha, fonts, palette, tightTracking } from '@/theme';
 
 const TOTAL_SPOTS = 5;
 
@@ -159,21 +161,23 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingVertical: 16,
     borderRadius: 24,
-    backgroundColor: 'rgba(15, 23, 42, 0.85)',
+    backgroundColor: alpha(palette.graphite, 0.85),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
+    borderColor: alpha(palette.white, 0.15),
   },
   title: {
     fontSize: 22,
-    fontWeight: '800',
-    color: '#ffffff',
+    letterSpacing: tightTracking(22),
+    fontFamily: fonts.display,
+    color: palette.white,
     textAlign: 'center',
   },
   progressText: {
-    fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
+    fontFamily: fonts.displayBold,
+    fontVariant: ['tabular-nums'],
     fontSize: 14,
     fontWeight: '700',
-    color: '#fcd34d',
+    color: palette.warnDark,
   },
   progressTrack: {
     marginTop: 4,
@@ -181,18 +185,18 @@ const styles = StyleSheet.create({
     width: 128,
     overflow: 'hidden',
     borderRadius: 3,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: alpha(palette.white, 0.1),
   },
   progressFill: {
     height: '100%',
     borderRadius: 3,
-    backgroundColor: '#fbbf24',
+    backgroundColor: palette.warnDark,
   },
   hint: {
     marginTop: 12,
     fontSize: 14,
     fontWeight: '600',
-    color: 'rgba(251, 191, 36, 0.85)',
+    color: alpha(palette.warnDark, 0.85),
     textAlign: 'center',
   },
   spot: {
@@ -202,7 +206,7 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(217, 119, 6, 0.45)',
   },
   backdropPuddle: {
-    backgroundColor: 'rgba(30, 41, 59, 0.72)',
+    backgroundColor: alpha(palette.n850, 0.72),
   },
   spotPuddle: {
     backgroundColor: 'rgba(253, 230, 138, 0.8)',
@@ -222,14 +226,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingVertical: 12,
     borderRadius: 16,
-    backgroundColor: 'rgba(255, 255, 255, 0.16)',
+    backgroundColor: alpha(palette.white, 0.16),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.25)',
+    borderColor: alpha(palette.white, 0.25),
   },
   closeText: {
     fontSize: 14,
     fontWeight: '700',
-    color: '#ffffff',
+    color: palette.white,
   },
   pressed: {
     transform: [{ scale: 0.95 }],

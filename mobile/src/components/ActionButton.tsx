@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
-import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
+import { alpha, palette } from '@/theme';
 
 export interface ActionButtonProps {
   /** Lucide icon node displayed inside the circular button. */
@@ -12,6 +14,11 @@ export interface ActionButtonProps {
   disabled?: boolean;
   /** Small line under the label explaining a disabled button ("ob 17:00"). */
   hint?: string | null;
+  /**
+   * The care that is due right now (CGP v2: "the care button that is due is solid mint").
+   * Pass a graphite icon when due.
+   */
+  due?: boolean;
   /** Shows a spinner-like dimmed state while the request runs. */
   busy?: boolean;
   /** Smaller button / label for a five-button dock (puppy "Pelji ven", M5-R02). */
@@ -31,6 +38,7 @@ export default function ActionButton({
   disabled,
   hint,
   busy,
+  due,
   compact,
   accessibilityHint,
   testID,
@@ -49,7 +57,7 @@ export default function ActionButton({
         style={({ pressed }) => [
           styles.button,
           compact && styles.buttonCompact,
-          disabled ? styles.buttonDisabled : styles.buttonActive,
+          disabled ? styles.buttonDisabled : due ? styles.buttonDue : styles.buttonActive,
           busy && styles.buttonBusy,
           pressed && !blocked && styles.buttonPressed,
         ]}
@@ -61,7 +69,7 @@ export default function ActionButton({
         style={[
           styles.label,
           compact && styles.labelCompact,
-          disabled ? styles.labelDisabled : styles.labelActive,
+          disabled ? styles.labelDisabled : due ? styles.labelDue : styles.labelActive,
         ]}
         numberOfLines={1}
       >
@@ -90,7 +98,7 @@ const styles = StyleSheet.create({
     borderRadius: 32,
     alignItems: 'center',
     justifyContent: 'center',
-    shadowColor: '#000',
+    shadowColor: palette.black,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.35,
     shadowRadius: 8,
@@ -103,13 +111,20 @@ const styles = StyleSheet.create({
   },
   buttonActive: {
     borderWidth: 1.5,
-    borderColor: 'rgba(255, 255, 255, 0.3)',
-    backgroundColor: 'rgba(255, 255, 255, 0.16)',
+    borderColor: alpha(palette.white, 0.3),
+    backgroundColor: alpha(palette.white, 0.16),
+  },
+  buttonDue: {
+    borderWidth: 1.5,
+    borderColor: palette.mint,
+    backgroundColor: palette.mint,
+    shadowColor: palette.mint,
+    shadowOpacity: 0.35,
   },
   buttonDisabled: {
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.08)',
-    backgroundColor: 'rgba(30, 41, 59, 0.45)',
+    borderColor: alpha(palette.white, 0.08),
+    backgroundColor: alpha(palette.n850, 0.45),
     opacity: 0.5,
   },
   buttonBusy: {
@@ -117,10 +132,9 @@ const styles = StyleSheet.create({
   },
   buttonPressed: {
     transform: [{ scale: 0.9 }],
-    backgroundColor: 'rgba(255, 255, 255, 0.28)',
+    backgroundColor: alpha(palette.white, 0.28),
   },
   label: {
-    fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
     fontSize: 11,
     fontWeight: '700',
     textTransform: 'uppercase',
@@ -131,17 +145,20 @@ const styles = StyleSheet.create({
     letterSpacing: 0.4,
   },
   labelActive: {
-    color: 'rgba(255, 255, 255, 0.85)',
+    color: alpha(palette.white, 0.85),
+  },
+  labelDue: {
+    color: palette.mint,
   },
   labelDisabled: {
-    color: 'rgba(255, 255, 255, 0.3)',
+    color: alpha(palette.white, 0.3),
   },
   hint: {
     marginTop: -4,
     maxWidth: 76,
     fontSize: 10,
     fontWeight: '600',
-    color: '#fbbf24',
+    color: palette.warnDark,
     textAlign: 'center',
   },
   hintCompact: {

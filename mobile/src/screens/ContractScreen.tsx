@@ -7,7 +7,8 @@
  */
 
 import { useState } from 'react';
-import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { Eraser, RotateCcw, ScrollText } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
@@ -20,6 +21,7 @@ import { submitSignature } from '@/modules/contract/signContract';
 import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { logout } from '@/modules/session/logout';
 import { lockStateFromPet, useAppStore } from '@/store/appStore';
+import { alpha, palette, radius } from '@/theme';
 
 const CONTRACT_TEXT = `Zavezujem se, da bom vsak dan odgovorno skrbel za svojega virtualnega ljubljenčka:
 
@@ -125,9 +127,6 @@ export default function ContractScreen() {
 
   return (
     <View style={styles.container}>
-      {/* Ambient background glow orbs */}
-      <View style={[styles.glowOrb, styles.glowIndigo]} />
-      <View style={[styles.glowOrb, styles.glowEmerald]} />
 
       {/* Responsibility Contract — the pet is born when the server accepts the signature */}
       <Modal visible animationType="slide" transparent>
@@ -135,7 +134,7 @@ export default function ContractScreen() {
           <View style={styles.contractModal}>
             <View style={styles.contractHeader}>
               <View style={styles.contractIconBadge}>
-                <ScrollText color="#818cf8" size={22} />
+                <ScrollText color={palette.mint} size={22} />
               </View>
               <Text style={styles.contractTitle}>{CONTRACT_STRINGS.title}</Text>
             </View>
@@ -159,7 +158,7 @@ export default function ContractScreen() {
               onPress={() => setSignature('')}
               disabled={isSigning || signature.length === 0}
             >
-              <Eraser color="#94a3b8" size={14} />
+              <Eraser color={palette.n400} size={14} />
               <Text style={styles.clearButtonText}>{CONTRACT_STRINGS.clear}</Text>
             </Pressable>
 
@@ -176,10 +175,10 @@ export default function ContractScreen() {
                 disabled={isSigning}
               >
                 {isSigning ? (
-                  <ActivityIndicator color="#ffffff" testID="contract-loading" />
+                  <ActivityIndicator color={palette.graphite} testID="contract-loading" />
                 ) : (
                   <>
-                    <RotateCcw color="#ffffff" size={18} />
+                    <RotateCcw color={palette.graphite} size={18} />
                     <Text style={styles.primaryButtonText}>{CONTRACT_STRINGS.retry}</Text>
                   </>
                 )}
@@ -195,7 +194,7 @@ export default function ContractScreen() {
                 disabled={!signatureReady || isSigning}
               >
                 {isSigning ? (
-                  <ActivityIndicator color="#ffffff" testID="contract-loading" />
+                  <ActivityIndicator color={palette.graphite} testID="contract-loading" />
                 ) : (
                   <Text style={styles.primaryButtonText}>{CONTRACT_STRINGS.accept}</Text>
                 )}
@@ -221,62 +220,44 @@ export default function ContractScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#020617',
-  },
-  glowOrb: {
-    position: 'absolute',
-    borderRadius: 9999,
-  },
-  glowIndigo: {
-    width: 280,
-    height: 280,
-    top: 60,
-    left: -80,
-    backgroundColor: 'rgba(79, 70, 229, 0.2)',
-  },
-  glowEmerald: {
-    width: 240,
-    height: 240,
-    bottom: 80,
-    right: -60,
-    backgroundColor: 'rgba(16, 185, 129, 0.12)',
+    backgroundColor: palette.graphite,
   },
   errorBox: {
     marginTop: 14,
     padding: 12,
-    backgroundColor: 'rgba(244, 63, 94, 0.12)',
+    backgroundColor: alpha(palette.dangerDark, 0.12),
     borderWidth: 1,
-    borderColor: 'rgba(244, 63, 94, 0.35)',
+    borderColor: alpha(palette.dangerDark, 0.35),
     borderRadius: 12,
   },
   errorText: {
     fontSize: 13,
-    color: '#fb7185',
+    color: palette.dangerDark,
     textAlign: 'center',
   },
   primaryButton: {
     marginTop: 18,
     height: 52,
-    backgroundColor: '#4f46e5',
-    borderRadius: 14,
+    backgroundColor: palette.mint,
+    borderRadius: radius.button,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
-    shadowColor: '#4f46e5',
+    shadowColor: palette.mint,
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
+    shadowOpacity: 0.25,
     shadowRadius: 10,
     elevation: 4,
   },
   buttonDisabled: {
-    backgroundColor: 'rgba(51, 65, 85, 0.6)',
+    opacity: 0.4,
     shadowOpacity: 0,
   },
   primaryButtonText: {
     fontSize: 16,
     fontWeight: '700',
-    color: '#ffffff',
+    color: palette.graphite,
   },
   pressed: {
     opacity: 0.85,
@@ -289,11 +270,11 @@ const styles = StyleSheet.create({
   },
   backButtonText: {
     fontSize: 13,
-    color: '#64748b',
+    color: palette.n500,
   },
   modalBackdrop: {
     flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    backgroundColor: alpha(palette.black, 0.75),
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
@@ -301,12 +282,12 @@ const styles = StyleSheet.create({
   contractModal: {
     width: '100%',
     maxHeight: '85%',
-    backgroundColor: '#0f172a',
+    backgroundColor: palette.graphite,
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
+    borderColor: alpha(palette.white, 0.15),
     borderRadius: 24,
     padding: 22,
-    shadowColor: '#000000',
+    shadowColor: palette.black,
     shadowOffset: { width: 0, height: 16 },
     shadowOpacity: 0.6,
     shadowRadius: 28,
@@ -321,14 +302,14 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 12,
-    backgroundColor: 'rgba(99, 102, 241, 0.2)',
+    backgroundColor: alpha(palette.mint, 0.2),
     alignItems: 'center',
     justifyContent: 'center',
   },
   contractTitle: {
     fontSize: 19,
     fontWeight: '700',
-    color: '#ffffff',
+    color: palette.white,
   },
   contractScroll: {
     maxHeight: 200,
@@ -337,11 +318,11 @@ const styles = StyleSheet.create({
   contractBody: {
     fontSize: 14,
     lineHeight: 22,
-    color: '#cbd5e1',
+    color: palette.n300,
   },
   padHint: {
     fontSize: 13,
-    color: '#94a3b8',
+    color: palette.n400,
     marginBottom: 8,
   },
   clearButton: {
@@ -354,6 +335,6 @@ const styles = StyleSheet.create({
   },
   clearButtonText: {
     fontSize: 12,
-    color: '#94a3b8',
+    color: palette.n400,
   },
 });

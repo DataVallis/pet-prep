@@ -5,7 +5,8 @@
  */
 
 import { useState } from 'react';
-import { ActivityIndicator, Pressable, Share, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, Share, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { Share2, UserPlus } from 'lucide-react-native';
 
 import { useInviteParent } from '@/hooks/queries/useParentQueries';
@@ -18,6 +19,7 @@ import {
   inviteShareMessage,
   type InviteErrorKind,
 } from '@/modules/family/invite';
+import { palette } from '@/theme';
 
 export const FAMILY_PARENTS_STRINGS = {
   title: 'Starši',
@@ -81,7 +83,7 @@ export default function FamilyParentsCard({ family }: { family: FamilyOverview }
               accessibilityRole="button"
               testID="invite-share"
             >
-              <Share2 color="#ffffff" size={16} />
+              <Share2 color={palette.white} size={16} />
               <Text style={[styles.buttonText, styles.white]}>{S.share}</Text>
             </Pressable>
             <Pressable
@@ -144,12 +146,12 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     paddingHorizontal: 14,
     borderWidth: 1,
-    borderColor: '#c7d2fe',
+    borderColor: palette.mintBorder,
     backgroundColor: C.card,
   },
   primary: { backgroundColor: C.accent, borderColor: C.accent },
   buttonText: { fontSize: 14, fontWeight: '700', color: C.accent },
-  white: { color: '#ffffff' },
+  white: { color: palette.white },
   error: { fontSize: 13, color: C.redText },
   pressed: { opacity: 0.85 },
 });

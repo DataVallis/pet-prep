@@ -16,17 +16,8 @@
  */
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
-import {
-  ActivityIndicator,
-  Animated,
-  Platform,
-  Pressable,
-  StyleSheet,
-  Text,
-  useWindowDimensions,
-  View,
-  type LayoutChangeEvent,
-} from 'react-native';
+import { ActivityIndicator, Animated, Pressable, StyleSheet, useWindowDimensions, View, type LayoutChangeEvent } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import {
   Beef,
@@ -84,6 +75,7 @@ import TrainingChip from '@/modules/training/TrainingChip';
 import TrainingOverlay from '@/modules/training/TrainingOverlay';
 import { showTrainingEntry } from '@/modules/training/training';
 import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
+import { alpha, palette, radius } from '@/theme';
 
 /** User-visible strings of the HUD (i18n with M1-18). */
 export const HUD_STRINGS = {
@@ -139,7 +131,7 @@ function WsStatusDot({ status }: { status: WebSocketStatus }) {
   if (badge.tone === 'polling') {
     return (
       <View style={styles.wsRow} testID="hud-ws-polling" accessible accessibilityLabel={badge.accessibilityLabel}>
-        <RefreshCw color="#64748b" size={11} />
+        <RefreshCw color={palette.n500} size={11} />
       </View>
     );
   }
@@ -361,7 +353,7 @@ export default function ChildHudScreen() {
       <View style={[styles.container, styles.centered]}>
         {petQuery.isError ? (
           <View style={styles.centeredBox} testID="hud-load-error">
-            <WifiOff color="#94a3b8" size={32} />
+            <WifiOff color={palette.n400} size={32} />
             <Text style={styles.centeredText}>{HUD_STRINGS.loadFailed}</Text>
             {isRecoverableError(petQuery.error) && (
               <Text style={styles.centeredHint} testID="hud-auto-retry">
@@ -383,7 +375,7 @@ export default function ChildHudScreen() {
           </View>
         ) : (
           <View style={styles.centeredBox} testID="hud-loading">
-            <ActivityIndicator color="#a5b4fc" />
+            <ActivityIndicator color={palette.mint} />
             <Text style={styles.centeredText}>{HUD_STRINGS.loading}</Text>
           </View>
         )}
@@ -408,6 +400,11 @@ export default function ChildHudScreen() {
   const takeOutClock = view.behaviour.take_out;
   const countdown = !locked && takeOutClock !== null ? takeOutCountdown(takeOutClock, serverNow, view.timezone) : null;
   const takeOutDisabled = !view.behaviour.can_take_out;
+  // CGP v2: the care that is due right now is the one solid-mint button.
+  const feedDue = !locked && view.feeding.can_feed;
+  const cleanDue = !cleanDisabled && needsScrub;
+  const takeOutDue = !takeOutDisabled && countdown?.due === true;
+  const dockIcon = (due: boolean) => (due ? palette.graphite : palette.white);
   const iconSize = hasTakeOut ? 20 : 24;
   const stale = petQuery.isError;
   const albumAvailable = hasAlbum(pet.media);
@@ -441,19 +438,17 @@ export default function ChildHudScreen() {
           testID="hud-pet-media"
           placeholder={
             <View style={styles.fallbackViewport}>
-              <View style={[styles.glowOrb, styles.glowIndigo]} />
-              <View style={[styles.glowOrb, styles.glowEmerald]} />
 
               <Animated.View style={[styles.petAvatarWrapper, { transform: [{ translateY: bounceAnim }] }]}>
                 <View style={styles.petAvatarCircle}>
                   <Text style={styles.petEmoji}>🐕</Text>
                   <View style={styles.petHeartBadge}>
-                    <Heart color="#ef4444" fill="#ef4444" size={16} />
+                    <Heart color={palette.raspberry} fill={palette.raspberry} size={16} />
                   </View>
                 </View>
 
                 <View style={styles.petStatusPill}>
-                  <Sparkles color="#818cf8" size={14} />
+                  <Sparkles color={palette.mint} size={14} />
                   <Text style={styles.petStatusPillText}>{HUD_STRINGS.moods[pet.pet_state]}</Text>
                 </View>
               </Animated.View>
@@ -465,7 +460,7 @@ export default function ChildHudScreen() {
         <View style={[styles.topBar, { top: layout.headerTop }]} onLayout={onHeaderLayout} testID="hud-header">
           <View style={styles.petInfoLeft}>
             <View style={styles.petIconBox}>
-              <PawPrint color="#a5b4fc" size={20} />
+              <PawPrint color={palette.mint} size={20} />
             </View>
             <View style={styles.petInfoText}>
               <Text style={styles.petBreedName}>{HUD_STRINGS.breeds[pet.breed_type]}</Text>
@@ -496,7 +491,7 @@ export default function ChildHudScreen() {
                 style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
                 onPress={() => setAlbumVisible(true)}
               >
-                <Images color="#a5b4fc" size={16} />
+                <Images color={palette.mint} size={16} />
               </Pressable>
             )}
             <Pressable
@@ -505,7 +500,7 @@ export default function ChildHudScreen() {
               style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
               onPress={handleLogout}
             >
-              <LogOut color="#94a3b8" size={16} />
+              <LogOut color={palette.n400} size={16} />
             </Pressable>
           </View>
         </View>
@@ -514,7 +509,7 @@ export default function ChildHudScreen() {
           // Left of the metric column (PR #30 review): never covers the bars.
           <View pointerEvents="none" style={[styles.bannerSlot, { top: layout.bannerTop }]} testID="hud-stale-slot">
             <View style={styles.staleBanner} testID="hud-stale">
-              <WifiOff color="#fbbf24" size={14} />
+              <WifiOff color={palette.warnDark} size={14} />
               <Text style={styles.staleText}>{HUD_STRINGS.stale}</Text>
             </View>
           </View>
@@ -537,28 +532,28 @@ export default function ChildHudScreen() {
               level={pet.hunger_level}
               label={HUD_STRINGS.metrics.hunger}
               sizing={layout.metric}
-              icon={<Beef color="#ffffff" size={layout.metric.iconSize} />}
+              icon={<Beef color={palette.white} size={layout.metric.iconSize} />}
             />
             <MetricBar
               testID="metric-thirst"
               level={pet.thirst_level}
               label={HUD_STRINGS.metrics.thirst}
               sizing={layout.metric}
-              icon={<Droplet color="#ffffff" size={layout.metric.iconSize} />}
+              icon={<Droplet color={palette.white} size={layout.metric.iconSize} />}
             />
             <MetricBar
               testID="metric-energy"
               level={pet.energy_level}
               label={HUD_STRINGS.metrics.energy}
               sizing={layout.metric}
-              icon={<Footprints color="#ffffff" size={layout.metric.iconSize} />}
+              icon={<Footprints color={palette.white} size={layout.metric.iconSize} />}
             />
             <MetricBar
               testID="metric-hygiene"
               level={pet.hygiene_level}
               label={HUD_STRINGS.metrics.hygiene}
               sizing={layout.metric}
-              icon={<Sparkles color="#ffffff" size={layout.metric.iconSize} />}
+              icon={<Sparkles color={palette.white} size={layout.metric.iconSize} />}
             />
           </View>
         )}
@@ -567,17 +562,18 @@ export default function ChildHudScreen() {
         <View style={[styles.bottomDock, { bottom: layout.dockBottom }]} onLayout={onDockLayout} testID="hud-dock">
           <ActionButton
             testID="action-feed"
-            icon={<Beef color="#ffffff" size={iconSize} />}
+            icon={<Beef color={dockIcon(feedDue)} size={iconSize} />}
             label={HUD_STRINGS.feed}
             onPress={() => runAction('feed')}
             disabled={feedDisabled}
+            due={feedDue}
             busy={feed.isPending}
             hint={feedHint(view)}
             compact={hasTakeOut}
           />
           <ActionButton
             testID="action-water"
-            icon={<Droplet color="#ffffff" size={iconSize} />}
+            icon={<Droplet color={palette.white} size={iconSize} />}
             label={HUD_STRINGS.water}
             onPress={() => runAction('water')}
             disabled={waterDisabled}
@@ -588,10 +584,11 @@ export default function ChildHudScreen() {
           {hasTakeOut && (
             <ActionButton
               testID="action-take-out"
-              icon={<DoorOpen color="#ffffff" size={iconSize} />}
+              icon={<DoorOpen color={dockIcon(takeOutDue)} size={iconSize} />}
               label={HUD_STRINGS.takeOut}
               onPress={() => runAction('take_out')}
               disabled={takeOutDisabled}
+              due={takeOutDue}
               busy={takeOut.isPending}
               hint={countdown?.hint ?? null}
               accessibilityHint={countdown?.line}
@@ -600,7 +597,7 @@ export default function ChildHudScreen() {
           )}
           <ActionButton
             testID="action-walk"
-            icon={<Footprints color="#ffffff" size={iconSize} />}
+            icon={<Footprints color={palette.white} size={iconSize} />}
             label={HUD_STRINGS.walk}
             onPress={() => setWalkModalVisible(true)}
             disabled={walkDisabled}
@@ -609,10 +606,11 @@ export default function ChildHudScreen() {
           />
           <ActionButton
             testID="action-clean"
-            icon={<Sparkles color="#ffffff" size={iconSize} />}
+            icon={<Sparkles color={dockIcon(cleanDue)} size={iconSize} />}
             label={HUD_STRINGS.clean}
             onPress={() => setCleaningOverlayVisible(true)}
             disabled={cleanDisabled}
+            due={cleanDue}
             busy={clean.isPending}
             hint={cleanHint(view)}
             compact={hasTakeOut}
@@ -669,31 +667,13 @@ export default function ChildHudScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#020617',
+    backgroundColor: palette.graphite,
   },
   fallbackViewport: {
     ...StyleSheet.absoluteFill,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#020617',
-  },
-  glowOrb: {
-    position: 'absolute',
-    borderRadius: 9999,
-  },
-  glowIndigo: {
-    width: 320,
-    height: 320,
-    top: 100,
-    left: -100,
-    backgroundColor: 'rgba(79, 70, 229, 0.18)',
-  },
-  glowEmerald: {
-    width: 260,
-    height: 260,
-    bottom: 140,
-    right: -80,
-    backgroundColor: 'rgba(16, 185, 129, 0.14)',
+    backgroundColor: palette.graphite,
   },
   petAvatarWrapper: {
     alignItems: 'center',
@@ -704,14 +684,14 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     borderRadius: 75,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    backgroundColor: alpha(palette.white, 0.08),
     borderWidth: 2,
-    borderColor: 'rgba(255, 255, 255, 0.2)',
+    borderColor: alpha(palette.white, 0.2),
     alignItems: 'center',
     justifyContent: 'center',
-    shadowColor: '#4f46e5',
+    shadowColor: palette.mint,
     shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.45,
+    shadowOpacity: 0.25,
     shadowRadius: 20,
     elevation: 10,
   },
@@ -725,9 +705,9 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: 'rgba(15, 23, 42, 0.9)',
+    backgroundColor: alpha(palette.graphite, 0.9),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.2)',
+    borderColor: alpha(palette.white, 0.2),
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -738,14 +718,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 20,
-    backgroundColor: 'rgba(15, 23, 42, 0.8)',
+    backgroundColor: alpha(palette.graphite, 0.8),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
+    borderColor: alpha(palette.white, 0.15),
   },
   petStatusPillText: {
     fontSize: 13,
     fontWeight: '700',
-    color: '#ffffff',
+    color: palette.white,
   },
   topBar: {
     position: 'absolute',
@@ -755,13 +735,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: 'rgba(15, 23, 42, 0.85)',
+    backgroundColor: alpha(palette.graphite, 0.85),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
+    borderColor: alpha(palette.white, 0.15),
     borderRadius: 20,
     paddingHorizontal: 16,
     paddingVertical: 12,
-    shadowColor: '#000',
+    shadowColor: palette.black,
     shadowOffset: { width: 0, height: 6 },
     shadowOpacity: 0.4,
     shadowRadius: 12,
@@ -776,7 +756,7 @@ const styles = StyleSheet.create({
     width: 38,
     height: 38,
     borderRadius: 12,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: alpha(palette.white, 0.1),
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -784,21 +764,20 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '800',
     textTransform: 'capitalize',
-    color: '#ffffff',
+    color: palette.white,
   },
   petInfoText: { flex: 1, minWidth: 0 },
   petProfileText: {
     marginTop: 2,
     fontSize: 11,
-    color: 'rgba(255, 255, 255, 0.7)',
+    color: alpha(palette.white, 0.7),
   },
   petAgeText: {
-    fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
     fontSize: 10,
     fontWeight: '600',
     textTransform: 'uppercase',
     letterSpacing: 0.8,
-    color: 'rgba(255, 255, 255, 0.55)',
+    color: alpha(palette.white, 0.55),
   },
   topBarRight: {
     flexDirection: 'row',
@@ -813,7 +792,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 8,
-    backgroundColor: 'rgba(255, 255, 255, 0.06)',
+    backgroundColor: alpha(palette.white, 0.06),
   },
   wsDot: {
     width: 8,
@@ -821,22 +800,21 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   wsConnected: {
-    backgroundColor: '#10b981',
+    backgroundColor: palette.okDark,
   },
   wsConnecting: {
-    backgroundColor: '#f59e0b',
+    backgroundColor: palette.warnDark,
   },
   wsText: {
-    fontFamily: Platform.OS === 'ios' ? 'Courier New' : 'monospace',
     fontSize: 9,
     fontWeight: '700',
-    color: '#94a3b8',
+    color: palette.n400,
   },
   logoutButton: {
     width: 34,
     height: 34,
     borderRadius: 10,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    backgroundColor: alpha(palette.white, 0.08),
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -853,18 +831,18 @@ const styles = StyleSheet.create({
   },
   feedbackToast: {
     maxWidth: '100%',
-    backgroundColor: '#4f46e5',
+    backgroundColor: palette.mint,
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 20,
-    shadowColor: '#4f46e5',
+    shadowColor: palette.mint,
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.6,
+    shadowOpacity: 0.3,
     shadowRadius: 10,
   },
   feedbackText: {
     textAlign: 'center',
-    color: '#ffffff',
+    color: palette.graphite,
     fontWeight: '700',
     fontSize: 14,
   },
@@ -881,13 +859,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    backgroundColor: 'rgba(15, 23, 42, 0.85)',
+    backgroundColor: alpha(palette.graphite, 0.85),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
+    borderColor: alpha(palette.white, 0.15),
     borderRadius: 30,
     paddingVertical: 14,
     paddingHorizontal: 12,
-    shadowColor: '#000',
+    shadowColor: palette.black,
     shadowOffset: { width: 0, height: 8 },
     shadowOpacity: 0.5,
     shadowRadius: 16,
@@ -905,13 +883,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
   },
   centeredText: {
-    color: '#cbd5e1',
+    color: palette.n300,
     fontSize: 15,
     fontWeight: '600',
     textAlign: 'center',
   },
   centeredHint: {
-    color: '#94a3b8',
+    color: palette.n400,
     fontSize: 13,
     textAlign: 'center',
   },
@@ -919,11 +897,11 @@ const styles = StyleSheet.create({
     marginTop: 4,
     paddingHorizontal: 24,
     paddingVertical: 12,
-    borderRadius: 16,
-    backgroundColor: '#4f46e5',
+    borderRadius: radius.button,
+    backgroundColor: palette.mint,
   },
   retryText: {
-    color: '#ffffff',
+    color: palette.graphite,
     fontWeight: '700',
     fontSize: 15,
   },
@@ -931,7 +909,7 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   linkText: {
-    color: '#94a3b8',
+    color: palette.n400,
     fontSize: 13,
     fontWeight: '600',
   },
@@ -943,18 +921,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 12,
-    backgroundColor: 'rgba(15, 23, 42, 0.9)',
+    backgroundColor: alpha(palette.graphite, 0.9),
     borderWidth: 1,
-    borderColor: 'rgba(251, 191, 36, 0.35)',
+    borderColor: alpha(palette.warnDark, 0.35),
   },
   staleText: {
     flexShrink: 1,
-    color: '#fbbf24',
+    color: palette.warnDark,
     fontSize: 11,
     fontWeight: '600',
   },
   feedbackToastInfo: {
-    backgroundColor: '#b45309',
-    shadowColor: '#b45309',
+    backgroundColor: palette.warn,
+    shadowColor: palette.warn,
   },
 });

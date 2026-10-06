@@ -3,9 +3,11 @@
  * `tone`: `dark` on the child / start screens, `light` in the parent app.
  */
 
-import { StyleSheet, Text, type StyleProp, type TextStyle } from 'react-native';
+import { StyleSheet, type StyleProp, type TextStyle } from 'react-native';
+import { Text } from '@/components/ui/Text';
 
 import { formatBuildLabel, getBuildInfo } from '@/config/buildInfo';
+import { alpha, palette } from '@/theme';
 
 interface BuildLabelProps {
   tone?: 'dark' | 'light';
@@ -27,6 +29,6 @@ export default function BuildLabel({ tone = 'dark', style }: BuildLabelProps) {
 
 const styles = StyleSheet.create({
   label: { fontSize: 11, fontWeight: '500', textAlign: 'center', letterSpacing: 0.3, fontVariant: ['tabular-nums'] },
-  dark: { color: 'rgba(148, 163, 184, 0.55)' },
-  light: { color: '#94a3b8' },
+  dark: { color: alpha(palette.n400, 0.55) },
+  light: { color: palette.n500 },
 });

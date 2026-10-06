@@ -5,12 +5,14 @@
  */
 
 import { useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, Text, TextInput } from 'react-native';
+import { ActivityIndicator, Pressable, StyleSheet } from 'react-native';
+import { Text, TextInput } from '@/components/ui/Text';
 import { Users } from 'lucide-react-native';
 
 import { useJoinFamily } from '@/hooks/queries/useParentQueries';
 import { Card, PARENT_COLORS as C, SectionTitle } from '@/components/parent/ParentUi';
 import { classifyJoinError, normalizeInviteCode, type JoinErrorKind } from '@/modules/family/invite';
+import { fonts, palette } from '@/theme';
 
 export const JOIN_FAMILY_STRINGS = {
   title: 'Imate kodo družine?',
@@ -94,7 +96,7 @@ export default function JoinFamilyCard({ onJoined }: JoinFamilyCardProps) {
         accessibilityRole="button"
         testID="join-submit"
       >
-        {join.isPending ? <ActivityIndicator color="#ffffff" /> : <Text style={styles.buttonText}>{S.join}</Text>}
+        {join.isPending ? <ActivityIndicator color={palette.white} /> : <Text style={styles.buttonText}>{S.join}</Text>}
       </Pressable>
       {message && (
         <Text style={[styles.message, message.isError && styles.error]} testID="join-message">
@@ -115,7 +117,7 @@ const styles = StyleSheet.create({
     backgroundColor: C.bg,
     paddingHorizontal: 14,
     fontSize: 20,
-    fontWeight: '700',
+    fontFamily: fonts.displayBold,
     letterSpacing: 3,
     color: C.text,
   },
@@ -126,7 +128,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     backgroundColor: C.accent,
   },
-  buttonText: { fontSize: 15, fontWeight: '700', color: '#ffffff' },
+  buttonText: { fontSize: 15, fontWeight: '700', color: palette.white },
   message: { fontSize: 13, color: C.greenText },
   error: { color: C.redText },
   disabled: { opacity: 0.5 },

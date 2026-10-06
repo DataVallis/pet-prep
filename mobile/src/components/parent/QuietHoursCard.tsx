@@ -5,12 +5,14 @@
  */
 
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, Switch, Text, TextInput, View } from 'react-native';
+import { ActivityIndicator, Pressable, StyleSheet, Switch, View } from 'react-native';
+import { Text, TextInput } from '@/components/ui/Text';
 
 import { ApiError } from '@/api/client';
 import { useQuietHours, useUpdateQuietHours } from '@/hooks/queries/useParentQueries';
 import { Card, ErrorBanner, PARENT_COLORS as C, SectionTitle } from '@/components/parent/ParentUi';
 import type { QuietHours } from '@/types';
+import { palette } from '@/theme';
 
 export const QUIET_HOURS_STRINGS = {
   title: 'Tihe ure',
@@ -117,7 +119,7 @@ export default function QuietHoursCard() {
             <Switch
               value={times.is_active}
               onValueChange={(v) => set('is_active', v)}
-              trackColor={{ false: C.track, true: C.accent }}
+              trackColor={{ false: C.track, true: palette.mintDeep }}
               accessibilityLabel={S.active}
             />
           </View>
@@ -155,7 +157,7 @@ export default function QuietHoursCard() {
         accessibilityRole="button"
         testID="qh-save"
       >
-        {update.isPending ? <ActivityIndicator color="#ffffff" /> : <Text style={styles.saveText}>{S.save}</Text>}
+        {update.isPending ? <ActivityIndicator color={palette.white} /> : <Text style={styles.saveText}>{S.save}</Text>}
       </Pressable>
     </Card>
   );
@@ -186,7 +188,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     backgroundColor: C.accent,
   },
-  saveText: { fontSize: 15, fontWeight: '700', color: '#ffffff' },
+  saveText: { fontSize: 15, fontWeight: '700', color: palette.white },
   disabled: { opacity: 0.5 },
   pressed: { opacity: 0.85 },
 });

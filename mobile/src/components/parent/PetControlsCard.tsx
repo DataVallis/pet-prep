@@ -12,7 +12,8 @@
  */
 
 import { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { PauseCircle, PlayCircle } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
@@ -28,6 +29,7 @@ import {
   type FamilyOverview,
   type FamilyPet,
 } from '@/modules/family/family';
+import { palette } from '@/theme';
 
 export const PET_CONTROLS_STRINGS = {
   caretakers: (names: string) => `Skrbi: ${names}`,
@@ -165,7 +167,7 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
                 testID={`hard-stop-confirm-button-${pet.id}`}
               >
                 {setHardStop.isPending ? (
-                  <ActivityIndicator color="#ffffff" />
+                  <ActivityIndicator color={palette.white} />
                 ) : (
                   <Text style={[styles.buttonText, styles.whiteText]}>{S.confirm}</Text>
                 )}
@@ -180,7 +182,7 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
             accessibilityLabel={S.a11y(stopped ? S.resume : S.stop, petName, names)}
             testID={`hard-stop-${pet.id}`}
           >
-            {stopped ? <PlayCircle color={C.accent} size={18} /> : <PauseCircle color="#ffffff" size={18} />}
+            {stopped ? <PlayCircle color={C.accent} size={18} /> : <PauseCircle color={palette.white} size={18} />}
             <Text style={[styles.buttonText, !stopped && styles.whiteText]}>{stopped ? S.resume : S.stop}</Text>
           </Pressable>
         ))}
@@ -213,21 +215,21 @@ const styles = StyleSheet.create({
     borderColor: C.border,
     backgroundColor: C.bg,
   },
-  outline: { backgroundColor: C.accentSoft, borderColor: '#c7d2fe' },
-  danger: { backgroundColor: '#e11d48', borderColor: '#e11d48' },
+  outline: { backgroundColor: C.accentSoft, borderColor: palette.mintBorder },
+  danger: { backgroundColor: palette.danger, borderColor: palette.danger },
   primary: { backgroundColor: C.accent, borderColor: C.accent },
   disabled: { opacity: 0.5 },
   buttonText: { fontSize: 14, fontWeight: '700', color: C.accent },
-  whiteText: { color: '#ffffff' },
+  whiteText: { color: palette.white },
   confirmBox: {
     gap: 10,
     padding: 12,
     borderRadius: 14,
     backgroundColor: C.accentSoft,
     borderWidth: 1,
-    borderColor: '#c7d2fe',
+    borderColor: palette.mintBorder,
   },
-  confirmDanger: { backgroundColor: C.redSoft, borderColor: '#fecdd3' },
+  confirmDanger: { backgroundColor: C.redSoft, borderColor: palette.dangerBorder },
   confirmText: { fontSize: 13, lineHeight: 18, color: C.text },
   result: { fontSize: 13, color: C.greenText },
   resultError: { color: C.redText },

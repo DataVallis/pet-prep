@@ -27,8 +27,8 @@ describe('BreedPaywallScreen', () => {
   it('renders both breed cards with real styles', () => {
     render(<BreedPaywallScreen onBack={jest.fn()} />);
 
-    expect(flat('breed-paywall')).toMatchObject({ flex: 1, backgroundColor: '#020617' });
-    expect(flat('paywall-card-collie')).toMatchObject({ borderWidth: 2, borderColor: '#6366f1', borderRadius: 16 });
+    expect(flat('breed-paywall')).toMatchObject({ flex: 1, backgroundColor: '#F3F5F2' });
+    expect(flat('paywall-card-collie')).toMatchObject({ borderWidth: 2, borderColor: '#7FE0B4', borderRadius: 22 });
     expect(screen.getByText('Mutt')).toBeTruthy();
     expect(screen.getByText('Border Collie')).toBeTruthy();
     expect(screen.getByText('4,000 steps/day')).toBeTruthy();

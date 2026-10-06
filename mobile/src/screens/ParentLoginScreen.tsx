@@ -5,22 +5,16 @@
  */
 
 import { useState } from 'react';
-import {
-  ActivityIndicator,
-  KeyboardAvoidingView,
-  Platform,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from 'react-native';
+import { ActivityIndicator, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Text, TextInput } from '@/components/ui/Text';
 import { ChevronLeft, LogIn, ShieldCheck } from 'lucide-react-native';
 
 import { ApiError, api, saveAuthToken } from '@/api/client';
 import { logout } from '@/modules/session/logout';
 import { useAppStore } from '@/store/appStore';
+import { light, palette, radius } from '@/theme';
+import { AUTH_STYLES } from '@/components/auth/authStyles';
+import { BrandLogo } from '@/components/brand/BrandLogo';
 
 /** Seeded demo accounts are offered only in development builds (Expo Go / dev client). */
 export function showDevLogins(): boolean {
@@ -97,8 +91,6 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
 
   return (
     <View style={styles.container}>
-      <View style={[styles.glowOrb, styles.glowIndigo]} />
-      <View style={[styles.glowOrb, styles.glowEmerald]} />
 
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={styles.flex}>
         <ScrollView
@@ -107,14 +99,12 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
           showsVerticalScrollIndicator={false}
         >
           <Pressable onPress={onBack} hitSlop={10} style={styles.backRow} accessibilityRole="button" accessibilityLabel={S.back}>
-            <ChevronLeft color="#94a3b8" size={22} />
+            <ChevronLeft color={light.inkMuted} size={22} />
             <Text style={styles.backText}>{S.back}</Text>
           </Pressable>
 
           <View style={styles.header}>
-            <View style={styles.logoBadge}>
-              <ShieldCheck color="#10b981" size={34} />
-            </View>
+            <BrandLogo width={150} tone="light" />
             <Text style={styles.title}>{S.title}</Text>
           </View>
 
@@ -133,7 +123,7 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
                   }}
                   disabled={isLoading}
                 >
-                  <ShieldCheck color="#10b981" size={16} />
+                  <ShieldCheck color={light.ink} size={16} />
                   <Text style={styles.quickButtonText}>{S.devParent}</Text>
                 </Pressable>
                 <View style={styles.dividerContainer}>
@@ -148,7 +138,7 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
               <TextInput
                 style={styles.input}
                 placeholder={S.email}
-                placeholderTextColor="#64748b"
+                placeholderTextColor={light.inkFaint}
                 keyboardType="email-address"
                 autoCapitalize="none"
                 autoCorrect={false}
@@ -160,7 +150,7 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
               <TextInput
                 style={styles.input}
                 placeholder={S.password}
-                placeholderTextColor="#64748b"
+                placeholderTextColor={light.inkFaint}
                 secureTextEntry
                 autoComplete="password"
                 value={password}
@@ -183,10 +173,10 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
               accessibilityRole="button"
             >
               {isLoading ? (
-                <ActivityIndicator color="#ffffff" />
+                <ActivityIndicator color={palette.white} />
               ) : (
                 <>
-                  <LogIn color="#ffffff" size={18} />
+                  <LogIn color={palette.white} size={18} />
                   <Text style={styles.primaryButtonText}>{S.submit}</Text>
                 </>
               )}
@@ -212,40 +202,12 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#020617' },
-  flex: { flex: 1 },
-  glowOrb: { position: 'absolute', borderRadius: 9999 },
-  glowIndigo: { width: 280, height: 280, top: 60, left: -80, backgroundColor: 'rgba(79, 70, 229, 0.2)' },
-  glowEmerald: { width: 240, height: 240, bottom: 80, right: -60, backgroundColor: 'rgba(16, 185, 129, 0.12)' },
-  scrollContent: { flexGrow: 1, alignItems: 'center', paddingHorizontal: 24, paddingTop: 56, paddingBottom: 40 },
-  backRow: { alignSelf: 'flex-start', flexDirection: 'row', alignItems: 'center', gap: 2, paddingVertical: 6 },
-  backText: { fontSize: 15, color: '#94a3b8' },
-  header: { alignItems: 'center', marginTop: 12, marginBottom: 24 },
-  logoBadge: {
-    width: 72,
-    height: 72,
-    borderRadius: 22,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.18)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: { marginTop: 14, fontSize: 26, fontWeight: '800', color: '#ffffff' },
-  formCard: {
-    width: '100%',
-    maxWidth: 360,
-    backgroundColor: 'rgba(15, 23, 42, 0.75)',
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.12)',
-    borderRadius: 24,
-    padding: 22,
-  },
+  ...AUTH_STYLES,
   quickAccessSection: { marginBottom: 4 },
   quickAccessTitle: {
     fontSize: 11,
     fontWeight: '700',
-    color: '#64748b',
+    color: light.inkFaint,
     letterSpacing: 0.8,
     marginBottom: 10,
     textAlign: 'center',
@@ -255,49 +217,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 6,
-    paddingVertical: 12,
-    borderRadius: 14,
+    minHeight: 44,
+    borderRadius: radius.button,
     borderWidth: 1,
-    backgroundColor: 'rgba(16, 185, 129, 0.12)',
-    borderColor: 'rgba(16, 185, 129, 0.35)',
+    backgroundColor: palette.mintSoft,
+    borderColor: palette.mintBorder,
   },
-  quickButtonText: { fontSize: 13, fontWeight: '600', color: '#ffffff' },
+  quickButtonText: { fontSize: 13, fontWeight: '600', color: light.ink },
   dividerContainer: { flexDirection: 'row', alignItems: 'center', marginVertical: 14 },
-  dividerLine: { flex: 1, height: 1, backgroundColor: 'rgba(255, 255, 255, 0.1)' },
-  dividerText: { paddingHorizontal: 10, fontSize: 11, color: '#64748b' },
-  inputsContainer: { gap: 12 },
-  input: {
-    height: 52,
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
-    borderRadius: 14,
-    paddingHorizontal: 16,
-    fontSize: 15,
-    color: '#ffffff',
-  },
-  errorBox: {
-    marginTop: 14,
-    padding: 12,
-    backgroundColor: 'rgba(244, 63, 94, 0.12)',
-    borderWidth: 1,
-    borderColor: 'rgba(244, 63, 94, 0.35)',
-    borderRadius: 12,
-  },
-  errorText: { fontSize: 13, color: '#fb7185', textAlign: 'center' },
-  primaryButton: {
-    marginTop: 18,
-    height: 52,
-    backgroundColor: '#4f46e5',
-    borderRadius: 14,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
-  },
-  buttonDisabled: { backgroundColor: 'rgba(51, 65, 85, 0.6)' },
-  primaryButtonText: { fontSize: 16, fontWeight: '700', color: '#ffffff' },
-  switchRow: { marginTop: 16, alignItems: 'center', paddingVertical: 4 },
-  switchText: { fontSize: 14, color: '#a5b4fc', fontWeight: '600' },
-  pressed: { opacity: 0.85, transform: [{ scale: 0.98 }] },
+  dividerLine: { flex: 1, height: 1, backgroundColor: light.border },
+  dividerText: { paddingHorizontal: 10, fontSize: 11, color: light.inkFaint },
 });

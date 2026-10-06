@@ -14,16 +14,8 @@
  */
 
 import { useEffect, useMemo, useRef } from 'react';
-import {
-  ActivityIndicator,
-  Animated,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  type GestureResponderEvent,
-} from 'react-native';
+import { ActivityIndicator, Animated, Pressable, ScrollView, StyleSheet, View, type GestureResponderEvent } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { Check, GraduationCap, Heart, X } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
@@ -52,10 +44,11 @@ import {
   type TrialOutcome,
 } from '@/modules/training/training';
 import { useTrainingGame } from '@/modules/training/useTrainingGame';
+import { alpha, fonts, palette, radius, tightTracking } from '@/theme';
 
 const S = TRAINING_STRINGS;
 
-/** Good verdicts are emerald; the others a calm amber — never the rose alarm colour. */
+/** Good verdicts are mint / green; the others a calm yellow — never the danger colour. */
 const GOOD: ReadonlySet<TrialOutcome> = new Set(['in_time', 'waited']);
 
 export interface TrainingOverlayProps {
@@ -91,7 +84,7 @@ function CommandRow({
         <Text style={styles.commandName}>{text.name}</Text>
         {item.learned ? (
           <View style={styles.learnedPill} testID={`training-learned-${item.command}`}>
-            <Check color="#ffffff" size={12} />
+            <Check color={palette.graphite} size={12} />
             <Text style={styles.learnedText}>{S.learned}</Text>
           </View>
         ) : (
@@ -261,12 +254,12 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
     <View style={styles.overlay} testID={testID} accessibilityViewIsModal>
       <View style={styles.header}>
         <View style={styles.titleRow}>
-          <GraduationCap color="#a5b4fc" size={22} />
+          <GraduationCap color={palette.mint} size={22} />
           <Text style={styles.title}>{S.title}</Text>
         </View>
         {!busy && (
           <Pressable accessibilityRole="button" accessibilityLabel={S.close} testID="training-close" onPress={onClose} hitSlop={10} style={({ pressed }) => [styles.closeButton, pressed && styles.pressed]}>
-            <X color="#cbd5e1" size={20} />
+            <X color={palette.n300} size={20} />
           </Pressable>
         )}
       </View>
@@ -294,7 +287,7 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
 
       {phase.kind === 'starting' && (
         <View style={styles.centered} testID="training-starting">
-          <ActivityIndicator color="#a5b4fc" />
+          <ActivityIndicator color={palette.mint} />
           <Text style={styles.body}>{S.starting}</Text>
         </View>
       )}
@@ -420,7 +413,7 @@ function RunningView({
 
       {finishing ? (
         <View style={styles.centeredSmall} testID="training-finishing">
-          <ActivityIndicator color="#a5b4fc" />
+          <ActivityIndicator color={palette.mint} />
           <Text style={styles.body}>{S.finishing}</Text>
         </View>
       ) : (
@@ -446,7 +439,7 @@ function RunningView({
           }}
           style={({ pressed }) => [styles.praiseButton, pressed && styles.praisePressed, praiseDisabled && styles.disabled]}
         >
-          <Heart color="#ffffff" fill="#ffffff" size={28} />
+          <Heart color={palette.graphite} fill={palette.raspberry} size={28} />
           <Text style={styles.praiseText}>{S.praise}</Text>
         </Pressable>
       )}
@@ -458,48 +451,48 @@ const styles = StyleSheet.create({
   overlay: {
     ...StyleSheet.absoluteFill,
     zIndex: 50,
-    backgroundColor: 'rgba(2, 6, 23, 0.96)',
+    backgroundColor: alpha(palette.graphite, 0.96),
     paddingTop: 56,
     paddingHorizontal: 16,
     paddingBottom: 28,
   },
   header: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 },
   titleRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  title: { color: '#ffffff', fontSize: 22, fontWeight: '800' },
+  title: { color: palette.white, fontSize: 22, letterSpacing: tightTracking(22), fontFamily: fonts.display },
   closeButton: {
     width: 40,
     height: 40,
     borderRadius: 12,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    backgroundColor: alpha(palette.white, 0.08),
     alignItems: 'center',
     justifyContent: 'center',
   },
   content: { gap: 12, paddingBottom: 24 },
-  body: { color: '#e2e8f0', fontSize: 15 },
-  bodyCenter: { color: '#e2e8f0', fontSize: 16, textAlign: 'center', lineHeight: 22 },
-  bodyStrong: { color: '#ffffff', fontSize: 15, fontWeight: '700' },
-  doneText: { color: '#6ee7b7' },
-  muted: { color: '#94a3b8', fontSize: 13 },
+  body: { color: palette.n200, fontSize: 15 },
+  bodyCenter: { color: palette.n200, fontSize: 16, textAlign: 'center', lineHeight: 22 },
+  bodyStrong: { color: palette.white, fontSize: 15, fontWeight: '700' },
+  doneText: { color: palette.mint },
+  muted: { color: palette.n400, fontSize: 13 },
   blocked: {
-    color: '#fde68a',
+    color: palette.warnDark,
     fontSize: 14,
     padding: 12,
     borderRadius: 14,
-    backgroundColor: 'rgba(245, 158, 11, 0.12)',
+    backgroundColor: alpha(palette.warnDark, 0.12),
     borderWidth: 1,
-    borderColor: 'rgba(245, 158, 11, 0.3)',
+    borderColor: alpha(palette.warnDark, 0.3),
   },
   commandCard: {
     gap: 10,
     padding: 14,
     borderRadius: 20,
-    backgroundColor: 'rgba(15, 23, 42, 0.85)',
+    backgroundColor: alpha(palette.graphite, 0.85),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
+    borderColor: alpha(palette.white, 0.15),
   },
   commandHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
-  commandName: { color: '#ffffff', fontSize: 18, fontWeight: '800' },
-  percent: { color: '#cbd5e1', fontSize: 14, fontWeight: '700', fontVariant: ['tabular-nums'] },
+  commandName: { color: palette.white, fontSize: 18, letterSpacing: tightTracking(18), fontFamily: fonts.displayBold },
+  percent: { color: palette.n300, fontSize: 14, fontWeight: '700', fontVariant: ['tabular-nums'] },
   learnedPill: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -507,33 +500,33 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 12,
-    backgroundColor: '#10b981',
+    backgroundColor: palette.okDark,
   },
-  learnedText: { color: '#ffffff', fontSize: 12, fontWeight: '800' },
-  track: { height: 10, borderRadius: 5, backgroundColor: 'rgba(255, 255, 255, 0.1)', overflow: 'hidden' },
-  fill: { height: '100%', borderRadius: 5, backgroundColor: '#6366f1' },
-  fillLearned: { backgroundColor: '#10b981' },
+  learnedText: { color: palette.graphite, fontSize: 12, fontWeight: '800' },
+  track: { height: 10, borderRadius: 5, backgroundColor: alpha(palette.white, 0.1), overflow: 'hidden' },
+  fill: { height: '100%', borderRadius: 5, backgroundColor: palette.mint },
+  fillLearned: { backgroundColor: palette.okDark },
   startButton: {
     minHeight: 48,
     paddingHorizontal: 20,
-    borderRadius: 16,
-    backgroundColor: '#4f46e5',
+    borderRadius: radius.button,
+    backgroundColor: palette.mint,
     alignItems: 'center',
     justifyContent: 'center',
   },
   flexButton: { flex: 1 },
-  startText: { color: '#ffffff', fontSize: 16, fontWeight: '800' },
+  startText: { color: palette.graphite, fontSize: 16, fontWeight: '800' },
   secondaryButton: {
     minHeight: 48,
     paddingHorizontal: 18,
-    borderRadius: 16,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    borderRadius: radius.button,
+    backgroundColor: alpha(palette.white, 0.08),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.2)',
+    borderColor: alpha(palette.white, 0.2),
     alignItems: 'center',
     justifyContent: 'center',
   },
-  secondaryText: { color: '#e2e8f0', fontSize: 15, fontWeight: '700' },
+  secondaryText: { color: palette.n200, fontSize: 15, fontWeight: '700' },
   disabled: { opacity: 0.45 },
   pressed: { opacity: 0.75 },
   centered: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16, paddingHorizontal: 12 },
@@ -543,18 +536,18 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row', gap: 10, alignItems: 'center' },
   dots: { flexDirection: 'row', gap: 8, justifyContent: 'center' },
   dot: { width: 14, height: 14, borderRadius: 7 },
-  dotOpen: { backgroundColor: 'rgba(255, 255, 255, 0.18)' },
-  dotGood: { backgroundColor: '#10b981' },
-  dotTry: { backgroundColor: '#f59e0b' },
-  dotAway: { backgroundColor: 'transparent', borderWidth: 1, borderColor: 'rgba(255, 255, 255, 0.25)' },
+  dotOpen: { backgroundColor: alpha(palette.white, 0.18) },
+  dotGood: { backgroundColor: palette.okDark },
+  dotTry: { backgroundColor: palette.warnDark },
+  dotAway: { backgroundColor: 'transparent', borderWidth: 1, borderColor: alpha(palette.white, 0.25) },
   stage: {
     flex: 1,
     minHeight: 180,
     borderRadius: 24,
     overflow: 'hidden',
-    backgroundColor: 'rgba(15, 23, 42, 0.85)',
+    backgroundColor: alpha(palette.graphite, 0.85),
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.12)',
+    borderColor: alpha(palette.white, 0.12),
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -564,13 +557,13 @@ const styles = StyleSheet.create({
     width: 140,
     height: 140,
     borderRadius: 70,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    backgroundColor: alpha(palette.white, 0.08),
     borderWidth: 2,
-    borderColor: 'rgba(255, 255, 255, 0.2)',
+    borderColor: alpha(palette.white, 0.2),
     alignItems: 'center',
     justifyContent: 'center',
   },
-  dogCircleObeying: { borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.15)' },
+  dogCircleObeying: { borderColor: palette.okDark, backgroundColor: alpha(palette.okDark, 0.15) },
   dogEmoji: { fontSize: 72 },
   cueBubble: {
     position: 'absolute',
@@ -579,35 +572,35 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     paddingVertical: 8,
     borderRadius: 18,
-    backgroundColor: '#4f46e5',
+    backgroundColor: palette.mint,
   },
-  cueText: { color: '#ffffff', fontSize: 22, fontWeight: '900' },
-  dogLine: { color: '#ffffff', fontSize: 17, fontWeight: '700', textAlign: 'center' },
+  cueText: { color: palette.graphite, fontSize: 22, letterSpacing: tightTracking(22), fontFamily: fonts.display },
+  dogLine: { color: palette.white, fontSize: 17, fontWeight: '700', textAlign: 'center' },
   feedbackSlot: { minHeight: 44, justifyContent: 'center' },
   feedback: { fontSize: 15, fontWeight: '700', textAlign: 'center' },
-  feedbackGood: { color: '#6ee7b7' },
-  feedbackTry: { color: '#fcd34d' },
+  feedbackGood: { color: palette.mint },
+  feedbackTry: { color: palette.warnDark },
   praiseButton: {
     minHeight: 96,
     borderRadius: 28,
-    backgroundColor: '#10b981',
+    backgroundColor: palette.mint,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 12,
-    shadowColor: '#10b981',
+    shadowColor: palette.mint,
     shadowOffset: { width: 0, height: 6 },
     shadowOpacity: 0.5,
     shadowRadius: 14,
   },
   praisePressed: { transform: [{ scale: 0.97 }], opacity: 0.9 },
-  praiseText: { color: '#ffffff', fontSize: 26, fontWeight: '900' },
+  praiseText: { color: palette.graphite, fontSize: 26, letterSpacing: tightTracking(26), fontFamily: fonts.display },
   resultBox: { gap: 12 },
-  resultTitle: { color: '#ffffff', fontSize: 28, fontWeight: '900' },
-  learnedLine: { color: '#6ee7b7', fontSize: 17, fontWeight: '800' },
+  resultTitle: { color: palette.white, fontSize: 28, letterSpacing: tightTracking(28), fontFamily: fonts.display },
+  learnedLine: { color: palette.mint, fontSize: 17, letterSpacing: tightTracking(17), fontFamily: fonts.displayBold },
   chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
   chip: { paddingHorizontal: 10, paddingVertical: 5, borderRadius: 12 },
-  chipGood: { backgroundColor: 'rgba(16, 185, 129, 0.2)' },
-  chipTry: { backgroundColor: 'rgba(245, 158, 11, 0.18)' },
-  chipText: { color: '#e2e8f0', fontSize: 12, fontWeight: '600' },
+  chipGood: { backgroundColor: alpha(palette.okDark, 0.2) },
+  chipTry: { backgroundColor: alpha(palette.warnDark, 0.18) },
+  chipText: { color: palette.n200, fontSize: 12, fontWeight: '600' },
 });

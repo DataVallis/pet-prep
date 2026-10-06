@@ -8,7 +8,8 @@
  */
 
 import { useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
+import { Text } from '@/components/ui/Text';
 import { KeyRound, LogOut, Smartphone, Trash2, UserPlus, Users } from 'lucide-react-native';
 
 import DeletionConfirmForm from '@/components/parent/DeletionConfirmForm';
@@ -22,6 +23,7 @@ import {
   type FamilyOverview,
   type RevokeErrorKind,
 } from '@/modules/family/family';
+import { fonts, palette, tightTracking } from '@/theme';
 
 /** All user-visible strings (extract to i18n with M1-18). */
 export const FAMILY_STRINGS = {
@@ -132,7 +134,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
   return (
     <View style={styles.card} testID="family-children">
       <View style={styles.titleRow}>
-        <Users color="#4f46e5" size={20} />
+        <Users color={palette.graphite} size={20} />
         <Text style={styles.title}>{S.title}</Text>
       </View>
 
@@ -157,7 +159,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
                 <Text style={styles.childName}>{child.name}</Text>
                 <Text style={styles.childMeta}>{petLine(child)}</Text>
                 <View style={styles.devicesRow}>
-                  <Smartphone color="#64748b" size={13} />
+                  <Smartphone color={palette.n600} size={13} />
                   <Text style={styles.childMeta} testID={`family-child-devices-${child.id}`}>
                     {devicesLabel(child.devices)}
                     {child.login === 'email' ? ` · ${S.legacyEmail}` : ''}
@@ -199,7 +201,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
                     testID={`revoke-confirm-button-${child.id}`}
                   >
                     {isRevoking ? (
-                      <ActivityIndicator color="#ffffff" />
+                      <ActivityIndicator color={palette.white} />
                     ) : (
                       <Text style={[styles.actionText, styles.dangerText]}>{S.confirm}</Text>
                     )}
@@ -214,7 +216,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
                   accessibilityRole="button"
                   testID={`child-pin-${child.id}`}
                 >
-                  <KeyRound color="#4f46e5" size={15} />
+                  <KeyRound color={palette.graphite} size={15} />
                   <Text style={styles.actionText}>{child.pet_id === null ? S.firstPin : S.newLoginPin}</Text>
                 </Pressable>
                 <Pressable
@@ -229,7 +231,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
                   accessibilityState={{ disabled: child.devices === 0 }}
                   testID={`child-revoke-${child.id}`}
                 >
-                  <LogOut color="#e11d48" size={15} />
+                  <LogOut color={palette.danger} size={15} />
                   <Text style={[styles.actionText, styles.revokeText]}>{S.revokeAll}</Text>
                 </Pressable>
                 <Pressable
@@ -238,7 +240,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
                   accessibilityRole="button"
                   testID={`child-delete-${child.id}`}
                 >
-                  <Trash2 color="#e11d48" size={15} />
+                  <Trash2 color={palette.danger} size={15} />
                   <Text style={[styles.actionText, styles.revokeText]}>{S.deleteProfile}</Text>
                 </Pressable>
               </View>
@@ -260,7 +262,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
         accessibilityLabel={S.addChild}
         testID="family-add-child"
       >
-        <UserPlus color="#4f46e5" size={18} />
+        <UserPlus color={palette.graphite} size={18} />
         <Text style={styles.addText}>{S.addChild}</Text>
       </Pressable>
     </View>
@@ -269,29 +271,29 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#ffffff',
+    backgroundColor: palette.white,
     borderRadius: 20,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: palette.n200,
     gap: 12,
   },
   flex: { flex: 1 },
   titleRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  title: { fontSize: 17, fontWeight: '800', color: '#0f172a' },
-  childRow: { paddingTop: 12, borderTopWidth: 1, borderTopColor: '#f1f5f9', gap: 10 },
+  title: { fontSize: 17, letterSpacing: tightTracking(17), fontFamily: fonts.displayBold, color: palette.graphite },
+  childRow: { paddingTop: 12, borderTopWidth: 1, borderTopColor: palette.n100, gap: 10 },
   childHeader: { flexDirection: 'row', gap: 12, alignItems: 'center' },
   avatar: {
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#eef2ff',
+    backgroundColor: palette.mintSoft,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  avatarText: { fontSize: 17, fontWeight: '800', color: '#4f46e5' },
-  childName: { fontSize: 16, fontWeight: '700', color: '#0f172a' },
-  childMeta: { fontSize: 13, color: '#64748b' },
+  avatarText: { fontSize: 17, letterSpacing: tightTracking(17), fontFamily: fonts.displayBold, color: palette.mintDeep },
+  childName: { fontSize: 16, fontWeight: '700', color: palette.graphite },
+  childMeta: { fontSize: 13, color: palette.n600 },
   devicesRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 2 },
   actionsRow: { flexDirection: 'row', gap: 8, flexWrap: 'wrap' },
   actionButton: {
@@ -303,25 +305,25 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
-    backgroundColor: '#f8fafc',
+    borderColor: palette.n200,
+    backgroundColor: palette.fog,
   },
-  actionText: { fontSize: 13, fontWeight: '700', color: '#4f46e5' },
-  revokeText: { color: '#e11d48' },
-  dangerButton: { backgroundColor: '#e11d48', borderColor: '#e11d48', minWidth: 88 },
-  dangerText: { color: '#ffffff' },
+  actionText: { fontSize: 13, fontWeight: '700', color: palette.mintDeep },
+  revokeText: { color: palette.danger },
+  dangerButton: { backgroundColor: palette.danger, borderColor: palette.danger, minWidth: 88 },
+  dangerText: { color: palette.white },
   disabled: { opacity: 0.45 },
   confirmBox: {
     gap: 10,
     padding: 12,
     borderRadius: 14,
-    backgroundColor: '#fff1f2',
+    backgroundColor: palette.dangerSoft,
     borderWidth: 1,
-    borderColor: '#fecdd3',
+    borderColor: palette.dangerBorder,
   },
-  confirmText: { fontSize: 13, lineHeight: 18, color: '#9f1239' },
-  result: { fontSize: 13, color: '#047857' },
-  resultError: { color: '#be123c' },
+  confirmText: { fontSize: 13, lineHeight: 18, color: palette.dangerDeep },
+  result: { fontSize: 13, color: palette.ok },
+  resultError: { color: palette.danger },
   addButton: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -331,9 +333,9 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     borderWidth: 1,
     borderStyle: 'dashed',
-    borderColor: '#a5b4fc',
-    backgroundColor: '#eef2ff',
+    borderColor: palette.mintBorder,
+    backgroundColor: palette.mintSoft,
   },
-  addText: { fontSize: 15, fontWeight: '700', color: '#4f46e5' },
+  addText: { fontSize: 15, fontWeight: '700', color: palette.mintDeep },
   pressed: { opacity: 0.85 },
 });
