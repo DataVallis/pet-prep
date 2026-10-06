@@ -53,6 +53,7 @@ Dev accounts come from `TestUsersSeeder` (`parent@test.com` / `child@test.com`, 
 - Conventional Commits (`feat(backend): add child feed endpoint [M1-07]`). One task per PR.
 - Never commit `.env`, keys, `node_modules/`, `vendor/`, IDE files. Never force-push `main`.
 - **Pre-production autonomy (David, 2026-10-03):** Claude opens a PR per task, waits for green CI (+ independent `qa-reviewer` review for non-trivial code), then **merges it to `main` itself**. A merge to `main` **deploys automatically** to `api.petprep.si` after tests pass. This stays until David says otherwise — then restore manual deploys (see DEPLOYMENT.md D2).
+- CI's single gate is the **`CI OK`** check (no branch protection on this plan — the merge helper waits for it). Bring the PR branch up to date with `main` before CI so `main` can skip re-testing the identical tree; docs-/mobile-only merges don't deploy; "Run workflow" on `main` = full test + deploy (DEPLOYMENT.md D16).
 - Never merge red CI, never force-push `main`, never merge with unresolved review blockers. Delete nothing in production data without David.
 
 ## Living documentation (mandatory — "za nazaj se ne bomo spomnili")
