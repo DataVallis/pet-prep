@@ -4,6 +4,8 @@ namespace Tests;
 
 use App\Enums\TokenAbility;
 use App\Models\User;
+use App\Services\BehaviourEventService;
+use App\Services\HygieneEventService;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Support\Facades\DB;
@@ -19,7 +21,16 @@ abstract class TestCase extends BaseTestCase
         // call fal.ai inside a transaction (PR #22 review) — treat this one as the
         // ambient level so only transactions opened by the code under test count.
         config(['media.ambient_transaction_level' => DB::transactionLevel()]);
+
+        // The hygiene / chewing RNGs are salted with APP_KEY, which CI generates
+        // fresh for every run — so random event times differed between runs and
+        // a test that ignored them failed now and then. Pin one salt for the
+        // whole suite (useHygieneSalt() / useBehaviourSalt() still override it).
+        $this->app->when(HygieneEventService::class)->needs('$seedSalt')->give(self::RNG_SALT);
+        $this->app->when(BehaviourEventService::class)->needs('$seedSalt')->give(self::RNG_SALT);
     }
+
+    public const RNG_SALT = 'petprep-test-suite';
 
     /**
      * `actingAs($user, 'sanctum')` (M2-03): the user gets an in-memory
