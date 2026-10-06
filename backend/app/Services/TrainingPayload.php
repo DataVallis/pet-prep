@@ -23,8 +23,14 @@ use Illuminate\Support\Collection;
  * - `commands`: every command (sit, come, place, potty) with the displayed
  *   progress 0–100, `learned` (100 %) and the last completed session.
  * - `today_done`: a session was completed today (the training routine).
- * - `session` (child state only): the running session, else null.
+ * - `session` (child state only): the running session, else null; for the
+ *   viewing child's OWN session (`mine`) also its schedule (duration,
+ *   praise window, reaction floor, trials) so the app can resume after a
+ *   restart (PR #53) — null for anyone else.
  * - budget: the dog's mini-game seconds per family-local day and what is left.
+ *
+ * summaryFor() (broadcast, parent dashboard) runs no budget / session-detail
+ * queries (PR #53 m6).
  *
  * Instants are ISO 8601 in the family timezone.
  */
@@ -32,7 +38,7 @@ final class TrainingPayload
 {
     /**
      * @param  list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>  $commands
-     * @param  array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool}|null  $session
+     * @param  array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>|null}|null  $session
      */
     public function __construct(
         public readonly bool $enabled,
@@ -43,7 +49,7 @@ final class TrainingPayload
         public readonly int $dailyBudgetLeftSeconds,
     ) {}
 
-    public static function for(Pet $pet, ?User $viewer = null, ?CarbonInterface $now = null): self
+    public static function for(Pet $pet, ?User $viewer = null, ?CarbonInterface $now = null, bool $full = true): self
     {
         if (! $pet->trainingEnabled() || $pet->isUnborn()) {
             return new self($pet->trainingEnabled(), $pet->trainingEnabled() ? self::commandsOf($pet, collect()) : [], false, null, 0, 0);
@@ -56,7 +62,8 @@ final class TrainingPayload
         $today = $pet->localDate($now);
 
         $live = $service->liveSession($pet, $now);
-        $budget = $service->dailyBudgetSeconds($pet, $today);
+        $mine = $live !== null && $viewer !== null && (int) $live->user_id === $viewer->id;
+        $budget = $full ? $service->dailyBudgetSeconds($pet, $today) : 0;
 
         return new self(
             true,
@@ -68,11 +75,25 @@ final class TrainingPayload
                 'started_at' => $iso($live->started_at),
                 'ends_at' => $iso($live->ends_at),
                 'expires_at' => $iso($live->expires_at),
-                'mine' => $viewer !== null && (int) $live->user_id === $viewer->id,
+                'mine' => $mine,
+                // The schedule only for the child's own session (resume after an app restart).
+                'duration_ms' => $mine ? $live->duration_ms : null,
+                'praise_window_ms' => $mine ? (int) $live->schedule['praise_window_ms'] : null,
+                'min_reaction_ms' => $mine ? (int) ($live->schedule['min_reaction_ms'] ?? TrainingService::MIN_REACTION_MS) : null,
+                'trials' => $mine ? TrainingService::trialsOf($live->schedule) : null,
             ],
             $budget,
-            max(0, $budget - $service->usedSecondsOn($pet, $today)),
+            $full ? max(0, $budget - $service->usedSecondsOn($pet, $today)) : 0,
         );
+    }
+
+    /**
+     * Broadcast / parent dashboard: progress, today's routine, a session
+     * running — no budget queries (PR #53 m6). Use with summary().
+     */
+    public static function summaryFor(Pet $pet): self
+    {
+        return self::for($pet, null, null, false);
     }
 
     /**
@@ -106,7 +127,7 @@ final class TrainingPayload
     /**
      * Full object for the child state.
      *
-     * @return array{enabled: bool, commands: list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>, today_done: bool, session: array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool}|null, session_seconds: int, daily_budget_seconds: int, daily_budget_left_seconds: int}
+     * @return array{enabled: bool, commands: list<array{command: 'sit'|'come'|'place'|'potty', progress: int, learned: bool, last_practised_at: string|null}>, today_done: bool, session: array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>|null}|null, session_seconds: int, daily_budget_seconds: int, daily_budget_left_seconds: int}
      */
     public function toArray(): array
     {
@@ -123,8 +144,9 @@ final class TrainingPayload
             'today_done' => $this->todayDone,
             /**
              * The running session (any caretaker), `mine` = started by this child; else null.
+             * For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
              *
-             * @var array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool}|null
+             * @var array{id: string, command: 'sit'|'come'|'place'|'potty', started_at: string, ends_at: string, expires_at: string, mine: bool, duration_ms: int|null, praise_window_ms: int|null, min_reaction_ms: int|null, trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>|null}|null
              */
             'session' => $this->session,
             // Length of one session in seconds.

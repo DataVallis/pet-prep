@@ -54,6 +54,15 @@ enum CareRefusal: string
     /** Finished after the session's expiry (TTL) — no progress. */
     case TrainingSessionExpired = 'training_session_expired';
 
+    /**
+     * The session + its finish TTL would run past the family-local midnight
+     * (next_allowed_at = midnight): routine and budget belong to one day.
+     */
+    case TrainingDayEnding = 'training_day_ending';
+
+    /** A lock (hard stop, vet, game over) began during the session: it does not count, its time is refunded. */
+    case TrainingSessionInterrupted = 'training_session_interrupted';
+
     /** A tap offset lies outside the session (impossible value). */
     case TrainingInvalidTaps = 'training_invalid_taps';
 }

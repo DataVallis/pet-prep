@@ -102,8 +102,9 @@ class ChildPetController extends Controller
      * response carries `session` — the server's schedule (cues, whether and
      * when the dog obeys, the praise window; offsets in ms since start).
      * 422 training_not_available | training_session_active (next_allowed_at
-     * = its expiry) | training_daily_budget_used (next_allowed_at = local
-     * midnight); 423 while locked.
+     * = its expiry) | training_day_ending (session + TTL would cross the
+     * family-local midnight; next_allowed_at = midnight) |
+     * training_daily_budget_used (next_allowed_at = local midnight); 423 while locked.
      *
      * POST /api/child/pet/training/start
      */
@@ -120,7 +121,8 @@ class ChildPetController extends Controller
      * returns `result` (per-cue outcome, progress before / after). A repeat
      * of a completed finish → `unchanged` with the same result.
      * 422 training_session_invalid | training_session_expired |
-     * training_session_not_over | training_invalid_taps | training_not_available.
+     * training_session_not_over | training_invalid_taps | training_session_interrupted |
+     * training_not_available.
      *
      * POST /api/child/pet/training/finish
      */

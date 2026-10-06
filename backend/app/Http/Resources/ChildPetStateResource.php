@@ -11,6 +11,7 @@ use App\Services\Media\PetMediaPayload;
 use App\Services\Media\PetMediaService;
 use App\Services\PetProfilePayload;
 use App\Services\TrainingPayload;
+use App\Services\TrainingService;
 use Carbon\CarbonInterface;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -195,12 +196,14 @@ class ChildPetStateResource extends JsonResource
             'training' => array_merge($training->toArray(), [
                 /**
                  * POST /api/child/pet/training/start would be accepted now (enabled, not
-                 * locked, no running session, enough budget left for one session).
+                 * locked, no running session, enough budget left for one session, and the
+                 * session would end before the family-local midnight).
                  *
                  * @var bool
                  */
                 'can_start' => (bool) (! $locked && $training->enabled && $training->session === null
-                    && $training->dailyBudgetLeftSeconds >= TrainingPayload::sessionSeconds()),
+                    && $training->dailyBudgetLeftSeconds >= TrainingPayload::sessionSeconds()
+                    && ! app(TrainingService::class)->dayEndingAt($pet, $now)),
             ]),
         ];
     }

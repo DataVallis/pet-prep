@@ -105,6 +105,8 @@ trait HandlesChildPet
             CareRefusal::TrainingSessionNotOver => 'The training session is not over yet.',
             CareRefusal::TrainingSessionExpired => 'The training session has expired.',
             CareRefusal::TrainingInvalidTaps => 'A tap lies outside the training session.',
+            CareRefusal::TrainingDayEnding => 'The day is ending — train again after midnight.',
+            CareRefusal::TrainingSessionInterrupted => 'The training session was interrupted.',
             default => 'Action not allowed right now.',
         };
     }

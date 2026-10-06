@@ -24,8 +24,8 @@ use Illuminate\Support\Carbon;
  * @property Carbon $ends_at When the schedule has run its course
  * @property Carbon $expires_at Last moment a finish is accepted (TTL)
  * @property int $duration_ms
- * @property array{trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>, praise_window_ms: int} $schedule
- * @property string $status active | completed | expired
+ * @property array{trials: list<array{index: int, cue_at_ms: int, obeys: bool, obey_at_ms: int|null, window_end_ms: int|null}>, praise_window_ms: int, min_reaction_ms?: int} $schedule
+ * @property string $status active | completed | expired | interrupted
  * @property Carbon|null $finished_at
  * @property list<int>|null $taps
  * @property array<string, mixed>|null $result
@@ -39,6 +39,9 @@ class PetTrainingSession extends Model
     public const STATUS_COMPLETED = 'completed';
 
     public const STATUS_EXPIRED = 'expired';
+
+    /** A lock (hard stop, vet, game over) began during the session: not counted, time refunded (PR #53 m2). */
+    public const STATUS_INTERRUPTED = 'interrupted';
 
     /**
      * @var list<string>
