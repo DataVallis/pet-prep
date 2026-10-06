@@ -130,7 +130,7 @@ export function sameMedia(a: string | null, b: string | null): boolean {
  * `pet_state` already comes from the server's rules (`PetDecayService`): quiet hours →
  * `sleeping`, hygiene 0 → `sick`, hunger / thirst ≤ 30 → `hungry`, energy ≤ 30 →
  * `low_energy`, energy ≥ 80 and hunger ≥ 60 → `playing`, else `idle`. Locks override it:
- * - vet visit (`ill`) → `sick`
+ * - vet visit (`ill`) → `sick` (`selectMediaSource` substitutes `sleeping` when the tier has no sick video)
  * - parent's hard stop → `sleeping` (the game is paused, the dog rests)
  * - game over / inactive / unborn (contract) → no video (the lock screen covers the HUD;
  *   a happy loop behind "the dog was taken" would be wrong)
@@ -161,9 +161,31 @@ export interface SelectOptions {
 }
 
 /**
- * Fallback chain: video of the wanted state → idle video → the server's
- * `current_video_url` (payloads without `videos`) → reference image → placeholder.
- * `wanted = null` skips the videos (locked states).
+ * Substitute videos per wanted state, best first (2026-10-06, awaiting David's OK). A free
+ * mutt is only entitled to `idle` + `sleeping` (backend `config/media.php` basic set), so a
+ * sick dog at the vet must not fall back to the happy idle loop — a resting dog reads as
+ * unwell, a cheerful one doesn't. Same for a tired dog. Hungry / playing have no calmer
+ * substitute → idle. `videoChain` always ends with idle.
+ */
+export const VIDEO_FALLBACKS: Readonly<Record<PetState, readonly PetState[]>> = {
+  idle: [],
+  sleeping: ['idle'],
+  low_energy: ['sleeping', 'idle'],
+  hungry: ['idle'],
+  sick: ['sleeping', 'idle'],
+  playing: ['idle'],
+};
+
+/** Video states to try for `wanted`, best first. */
+export function videoChain(wanted: PetState): PetState[] {
+  const chain = [wanted, ...VIDEO_FALLBACKS[wanted]];
+  return chain.includes('idle') ? chain : [...chain, 'idle'];
+}
+
+/**
+ * Fallback chain: video of the wanted state → its substitutes (`VIDEO_FALLBACKS`, e.g.
+ * sick → sleeping → idle) → the server's `current_video_url` (payloads without `videos`)
+ * → reference image → placeholder. `wanted = null` skips the videos (locked states).
  */
 export function selectMediaSource(media: PetMediaInfo, wanted: PetState | null, options: SelectOptions = {}): MediaSource {
   const present = (url: string | null | undefined): url is string => typeof url === 'string' && url.length > 0;
@@ -171,10 +193,9 @@ export function selectMediaSource(media: PetMediaInfo, wanted: PetState | null, 
     present(url) && (options.canPlayVideo?.(url) ?? true);
 
   if (wanted !== null) {
-    const candidates: Array<[PetState | null, string | null | undefined]> = [
-      [wanted, media.videos[wanted]],
-      ['idle', media.videos.idle],
-    ];
+    const candidates: Array<[PetState | null, string | null | undefined]> = videoChain(wanted).map(
+      (state): [PetState, string | undefined] => [state, media.videos[state]],
+    );
     if (Object.keys(media.videos).length === 0) candidates.push([null, media.currentVideoUrl]);
     for (const [state, url] of candidates) {
       if (playable(url)) return { kind: 'video', state, url, key: mediaKey(url) };

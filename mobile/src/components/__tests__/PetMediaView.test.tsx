@@ -132,9 +132,25 @@ describe('source selection', () => {
     expect(screen.getByTestId('pet-media-video-visible')).toBeTruthy();
   });
 
-  it('falls back to idle for a state without a video (basic entitlement)', () => {
-    renderMedia({ petState: 'sick' });
+  it('falls back to idle for a state without a video or calmer substitute (basic entitlement)', () => {
+    renderMedia({ petState: 'playing' });
     expect(sourceUri(mockVideoPlayers[0])).toBe(IDLE);
+  });
+
+  it('2026-10-06: free mutt (idle + sleeping) at the vet plays the sleeping video and reports the substitute', () => {
+    const onVideoStateChange = jest.fn();
+    const mutt = media({ videos: { idle: IDLE, sleeping: SLEEPING }, states: ['idle', 'sleeping'] });
+    const { update } = renderMedia({ media: mutt, petState: 'idle', onVideoStateChange });
+    expect(onVideoStateChange).toHaveBeenLastCalledWith('idle');
+    update({ media: mutt, petState: 'idle', lockReason: 'ill', onVideoStateChange });
+    expect(sourceUri(mockVideoPlayers[1])).toBe(SLEEPING);
+    expect(onVideoStateChange).toHaveBeenLastCalledWith('sleeping');
+    // Premium / generated later: the real sick video is reported as such.
+    update({ media: media({ videos: { idle: IDLE, sleeping: SLEEPING, sick: url(5, 'sick') } }), petState: 'idle', lockReason: 'ill', onVideoStateChange });
+    expect(onVideoStateChange).toHaveBeenLastCalledWith('sick');
+    // Game over: no video at all.
+    update({ media: mutt, petState: 'idle', lockReason: 'game_over', onVideoStateChange });
+    expect(onVideoStateChange).toHaveBeenLastCalledWith(null);
   });
 
   it('no videos → the reference image, no player', () => {

@@ -494,6 +494,23 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
       expect(liveVideoPlayers()[0].playing).toBe(true);
     });
 
+    it('2026-10-06: a free mutt at the vet plays the sleeping video under the darker "ill" veil', async () => {
+      const SLEEPING = 'https://api.petprep.si/api/media/3?expires=1&v=sleep&signature=a';
+      const mutt = makeMedia({ status: 'ready', reference_image_url: IMG, videos: { idle: IDLE, sleeping: SLEEPING }, states: ['idle', 'sleeping'] });
+      getChildPet.mockResolvedValue(
+        makeLiveChildState({
+          pet: { pet_state: 'idle', is_ill: true, illness_until: '2026-10-04T16:30:00+00:00', media: mutt },
+          lock: { is_locked: true, reason: 'ill', until: '2026-10-04T18:30:00+02:00' },
+        }),
+      );
+      renderWithQuery(<AppNavigator />);
+      expect(await screen.findByTestId('locked-card-glass')).toBeTruthy();
+      await waitFor(() => expect(playerUris()).toEqual([SLEEPING]));
+      expect(useAppStore.getState().hudVideoState).toBe('sleeping');
+      const flat = [screen.getByTestId('locked-screen').props.style].flat(3) as Array<{ backgroundColor?: string } | undefined>;
+      expect(flat.some((st) => st?.backgroundColor === 'rgba(30, 41, 59, 0.8)')).toBe(true);
+    });
+
     it('M3: game over → opaque lock screen, no video', async () => {
       getChildPet.mockResolvedValue(
         makeLiveChildState({

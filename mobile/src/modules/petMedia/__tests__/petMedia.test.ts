@@ -6,6 +6,8 @@ import {
   EMPTY_PET_MEDIA,
   FAILED_RETRY_MS,
   NO_VIDEO_ERRORS,
+  PET_STATES,
+  VIDEO_FALLBACKS,
   canPlayUrl,
   isMediaPending,
   isWaitingForUrl,
@@ -17,6 +19,7 @@ import {
   sameMedia,
   selectMediaSource,
   toBreedType,
+  videoChain,
   videoStateFor,
   type PetMediaInfo,
 } from '@/modules/petMedia/petMedia';
@@ -120,8 +123,67 @@ describe('selectMediaSource — fallback chain', () => {
     });
   });
 
-  it('falls back to idle when the state has no video (basic entitlement)', () => {
-    expect(selectMediaSource(all, 'sick')).toMatchObject({ kind: 'video', state: 'idle', url: signed(2, 'i') });
+  it('falls back to idle when the state has no calmer substitute (basic entitlement)', () => {
+    expect(selectMediaSource(all, 'playing')).toMatchObject({ kind: 'video', state: 'idle', url: signed(2, 'i') });
+    const noHungry = info({ videos: { idle: signed(2, 'i'), sleeping: signed(3, 's') } });
+    expect(selectMediaSource(noHungry, 'hungry')).toMatchObject({ kind: 'video', state: 'idle' });
+  });
+
+  describe('2026-10-06: per-state substitutes (VIDEO_FALLBACKS)', () => {
+    // Free mutt: basic set = idle + sleeping (backend config/media.php).
+    const mutt = info({
+      referenceImageUrl: signed(1, 'img'),
+      videos: { idle: signed(2, 'i'), sleeping: signed(3, 's') },
+      states: ['idle', 'sleeping'],
+    });
+    const premium = info({
+      referenceImageUrl: signed(1, 'img'),
+      videos: { idle: signed(2, 'i'), sleeping: signed(3, 's'), sick: signed(5, 'k'), low_energy: signed(6, 'l') },
+    });
+
+    it('the table is explicit and every chain ends with idle', () => {
+      expect(VIDEO_FALLBACKS).toEqual({
+        idle: [],
+        sleeping: ['idle'],
+        low_energy: ['sleeping', 'idle'],
+        hungry: ['idle'],
+        sick: ['sleeping', 'idle'],
+        playing: ['idle'],
+      });
+      expect(videoChain('sick')).toEqual(['sick', 'sleeping', 'idle']);
+      expect(videoChain('idle')).toEqual(['idle']);
+      for (const s of PET_STATES) expect(videoChain(s).at(-1)).toBe('idle');
+    });
+
+    it('a free mutt at the vet plays the sleeping video, not the happy idle loop', () => {
+      expect(selectMediaSource(mutt, videoStateFor('playing', 'ill'))).toMatchObject({
+        kind: 'video',
+        state: 'sleeping',
+        url: signed(3, 's'),
+      });
+    });
+
+    it('a premium dog at the vet plays its real sick video', () => {
+      expect(selectMediaSource(premium, videoStateFor('idle', 'ill'))).toMatchObject({ kind: 'video', state: 'sick', url: signed(5, 'k') });
+    });
+
+    it('low_energy → sleeping for the mutt, its own video for premium', () => {
+      expect(selectMediaSource(mutt, 'low_energy')).toMatchObject({ kind: 'video', state: 'sleeping' });
+      expect(selectMediaSource(premium, 'low_energy')).toMatchObject({ kind: 'video', state: 'low_energy' });
+    });
+
+    it('sick with only idle (or a failed sleeping player) → idle, then the image', () => {
+      const idleOnly = info({ referenceImageUrl: signed(1, 'img'), videos: { idle: signed(2, 'i') } });
+      expect(selectMediaSource(idleOnly, 'sick')).toMatchObject({ kind: 'video', state: 'idle' });
+      const sleepingFailed = (url: string) => mediaKey(url) !== mediaKey(signed(3, 's'));
+      expect(selectMediaSource(mutt, 'sick', { canPlayVideo: sleepingFailed })).toMatchObject({ state: 'idle' });
+      expect(selectMediaSource(mutt, 'sick', { canPlayVideo: () => false })).toMatchObject({ kind: 'image' });
+    });
+
+    it('legacy payloads (no videos map) still use the server current_video_url after the chain', () => {
+      const legacy = info({ currentVideoUrl: 'https://x/legacy.mp4' });
+      expect(selectMediaSource(legacy, 'sick')).toMatchObject({ kind: 'video', state: null, url: 'https://x/legacy.mp4' });
+    });
   });
 
   it('uses the server current_video_url only when the payload has no videos map', () => {

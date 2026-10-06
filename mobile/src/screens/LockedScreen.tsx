@@ -3,6 +3,7 @@ import { Lock } from 'lucide-react-native';
 
 import { lockClock } from '@/modules/childPet/familyTime';
 import { useAppStore, type LockDetails, type LockState } from '@/store/appStore';
+import type { PetState } from '@/types';
 
 /** User-visible strings (i18n with M1-18). PRODUCT_SPEC §7 / §8. */
 export const LOCKED_STRINGS = {
@@ -54,6 +55,25 @@ export function isTranslucentLock(lockState: LockState): boolean {
 }
 
 /**
+ * Background of the lock overlay:
+ * - `opaque` — game over / inactive (no dog behind);
+ * - `grey` — hard stop (sleeping dog), and a vet visit with a real `sick` video;
+ * - `ill` — vet visit showing a substitute (free tier: sleeping / idle video, image or
+ *   placeholder). A much darker, desaturated veil so the dog reads as unwell instead of
+ *   cheerful (2026-10-06, awaiting David's OK). The card text sits on its own dark glass,
+ *   so it stays readable on any veil.
+ */
+export type LockVeil = 'opaque' | 'grey' | 'ill';
+
+// Legacy payloads without a `videos` map report state null → dark veil even if the
+// server's current_video_url happens to be a real sick video (acceptable).
+export function lockVeil(lockState: LockState, hudVideoState: PetState | null): LockVeil {
+  if (!isTranslucentLock(lockState)) return 'opaque';
+  if (lockState === 'illness' && hudVideoState !== 'sick') return 'ill';
+  return 'grey';
+}
+
+/**
  * Full-screen lock overlay over the child HUD (M1-16). The HUD stays mounted below it,
  * so live updates keep arriving and the overlay disappears as soon as the server lifts
  * the lock (hard stop off, back from the vet). Vet visit / hard stop: translucent grey
@@ -62,12 +82,14 @@ export function isTranslucentLock(lockState: LockState): boolean {
 export default function LockedScreen() {
   const lockState = useAppStore((s) => s.lockState);
   const details = useAppStore((s) => s.lockDetails);
+  const hudVideoState = useAppStore((s) => s.hudVideoState);
   const { title, body } = lockedCopy(lockState, details);
-  const translucent = isTranslucentLock(lockState);
+  const veil = lockVeil(lockState, hudVideoState);
+  const translucent = veil !== 'opaque';
 
   return (
     <View
-      style={[styles.root, translucent ? styles.translucent : styles.opaque]}
+      style={[styles.root, veil === 'opaque' ? styles.opaque : veil === 'ill' ? styles.illVeil : styles.translucent]}
       testID="locked-screen"
       accessibilityViewIsModal
     >
@@ -93,6 +115,8 @@ const styles = StyleSheet.create({
   opaque: { backgroundColor: '#000000' },
   /** Grey veil: the dog video stays visible (and playing) underneath. */
   translucent: { backgroundColor: 'rgba(71, 85, 105, 0.55)' },
+  /** Vet visit without a real sick video: dark, cold, washed-out — the dog barely shows through. */
+  illVeil: { backgroundColor: 'rgba(30, 41, 59, 0.8)' },
   glow: {
     position: 'absolute',
     width: 256,

@@ -192,11 +192,18 @@ export default function ChildHudScreen() {
   const setCleaningOverlayVisible = useAppStore((s) => s.setCleaningOverlayVisible);
   const isAlbumVisible = useAppStore((s) => s.isAlbumVisible);
   const setAlbumVisible = useAppStore((s) => s.setAlbumVisible);
+  const setHudVideoState = useAppStore((s) => s.setHudVideoState);
+  // No HUD → no video under the lock veil.
+  useEffect(() => () => setHudVideoState(null), [setHudVideoState]);
 
   const queryClient = useQueryClient();
   const { layout, onHeaderLayout, onDockLayout } = useHudLayout();
   const petQuery = useChildPet();
   const view = petQuery.data;
+  // No view → PetMediaView is not mounted; don't keep a stale veil hint.
+  useEffect(() => {
+    if (!view) setHudVideoState(null);
+  }, [view, setHudVideoState]);
   useSessionSync(view);
 
   const onBroadcast = useCallback(
@@ -353,6 +360,8 @@ export default function ChildHudScreen() {
           // inactive screen, the walk tracker, the album (one player at a time) and in the background.
           active={!opaqueLock && !isWalkModalVisible && !showAlbum}
           onMediaExpired={onMediaExpired}
+          // The vet veil darkens when a substitute (sleeping / idle) stands in for `sick`.
+          onVideoStateChange={setHudVideoState}
           variant="hud"
           testID="hud-pet-media"
           placeholder={

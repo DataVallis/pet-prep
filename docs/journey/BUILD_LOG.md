@@ -8,6 +8,13 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-06 — Bolan kuža zdaj tudi izgleda bolan (tudi brezplačni)
+
+**Kaj se je zgodilo:** David je v resničnem testu poslal svojega brezplačnega mešančka k veterinarju — a aplikacija je še vedno kazala istega veselega psa kot ves dan. Brezplačni pes ima namreč samo dva videa (miruje, spi), zato je aplikacija namesto »bolan« vzela »miruje«. Zdaj ima vsako stanje jasen nadomestek: bolan → spi → miruje, utrujen → spi → miruje. Mešanček pri veterinarju zato **spi pod temnejšo, hladno sivo plastjo**; pes s pravim videom »bolan« (plačljiva pasma) ostane pod svetlejšo plastjo. *(Čaka Davidovo potrditev.)*
+
+**Kako to povedati**
+- 👩 *"Ko kuža zboli, otrok to vidi takoj — tudi v brezplačni različici: kuža leži in počiva, zaslon potemni."*
+- 🛠 *"Majhna tabela nadomestkov namesto ad-hoc pogojev: vsako stanje ve, kateri video ga najbolje nadomesti."*
 ## 2026-10-05 — Starš izbere kužka v aplikaciji (M5-R04, del 1)
 
 **Kaj se je zgodilo:** Izbira kužka, ki jo je strežnik znal že zjutraj, je zdaj tudi v aplikaciji. Ko starš doda otroka in izbere *Nov pes*, se odpre zaslon **Izberi kužka**: pasma (mešanček brezplačen, Border Collie viden, a zaklenjen — del plačljivega izziva), **od kod pride** (*kupljen* pri vzreditelju / *posvojen* iz zavetišča) in **starost ob prihodu** (mladiček, mlad pes, odrasel, starejši). Ob vsaki starosti je ena poštena vrstica, kaj to pomeni za otroka — npr. mešanček mladiček: 4 obroki na dan, sprehod 2.000 korakov na dan in vsak teden več do 6.000; Border Collie mladiček prav tako začne z 2.000, a pri 12 mesecih pride do 12.000, starejši Border Collie hodi 9.000 korakov na dan. Dokler se otrok ne poveže, lahko starš izbiro še spremeni (*Spremeni kužka* — stara koda takrat preneha veljati). Izvor in starost nimata privzete izbire: starš mora prebrati in se odločiti. Otrok nato na svojem zaslonu vidi "Mladiček · 2 meseca" in kdaj postane mlad pes; starš v pregledu otroka vidi isto in koliko obrokov danes v tihih urah nahrani sam. Psi iz časa pred to spremembo ostanejo, kot so bili.
