@@ -10,6 +10,8 @@
  */
 
 import type { LifeStage, NewPetProfile, PetBreed, PetOrigin } from '@/api/client';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
 export const PICKER_BREEDS: readonly PetBreed[] = ['mutt', 'border_collie'];
 
@@ -21,51 +23,16 @@ export const PICKER_BREEDS: readonly PetBreed[] = ['mutt', 'border_collie'];
  */
 export const PREMIUM_BREEDS: readonly PetBreed[] = ['border_collie'];
 
-/** User-visible strings of the picker (i18n with M1-18). */
-export const PICKER_STRINGS = {
-  title: (name: string) => `Izberi kužka za: ${name}`,
-  intro: 'Izbira določa, kako bo skrb za kužka videti — kot pri pravem psu.',
-  breedTitle: 'Pasma',
-  breeds: { mutt: 'Mešanček', border_collie: 'Border collie' } satisfies Record<PetBreed, string>,
-  breedHints: {
-    mutt: 'Brezplačen v vseh kombinacijah.',
-    border_collie: 'Del plačljivega izziva.',
-  } satisfies Record<PetBreed, string>,
-  breedLockedNote:
-    'Plačljive pasme se odklenejo samo z nakupom. Za začetek izberite mešančka — brezplačen je pri vsakem izvoru in starosti.',
-  lockedA11y: (breed: string) => `${breed}, zaklenjeno — del plačljivega izziva`,
-  originTitle: 'Od kod pride',
-  origins: { bought: 'Kupljen (vzreditelj)', adopted: 'Posvojen (zavetišče)' } satisfies Record<PetOrigin, string>,
-  originHints: {
-    bought: 'Od vzreditelja. Vpliv izvora na vedenje pride kmalu.',
-    adopted: 'Iz zavetišča. Vpliv izvora na vedenje (npr. plašnost v prvih tednih) pride kmalu.',
-  } satisfies Record<PetOrigin, string>,
-  ageTitle: 'Starost ob prihodu',
-  ages: { puppy: 'Mladiček', young: 'Mlad pes', adult: 'Odrasel', senior: 'Starejši' } satisfies Record<LifeStage, string>,
-  /**
-   * Per breed: confirmed meals + step goals (PRODUCT_SPEC §5; minutes × 100 steps; 1 week = 1 month).
-   * Puppy / young: 10 min × age in months up to the adult goal (mutt 60 min, Border Collie 120 min);
-   * senior 75 % of adult. Arrival age: puppy 2, young 9 months (§4).
-   */
-  ageHints: {
-    mutt: {
-      puppy: 'Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000. Nezgode v hiši pridejo kmalu.',
-      young: '2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).',
-      adult: '2 obroka na dan; sprehod 6.000 korakov na dan.',
-      senior: '2 obroka na dan; krajši sprehod — 4.500 korakov na dan.',
-    },
-    border_collie: {
-      puppy: 'Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih. Nezgode v hiši pridejo kmalu.',
-      young: '2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.',
-      adult: '2 obroka na dan; sprehod 12.000 korakov na dan.',
-      senior: '2 obroka na dan; krajši sprehod — 9.000 korakov na dan.',
-    },
-  } satisfies Record<PetBreed, Record<LifeStage, string>>,
-  quietHoursNote: 'Obrok, ki pade v celoti v tihe ure (šola, spanje), nahrani starš.',
-  missing: 'Izberite izvor in starost.',
-  confirm: 'Ustvari kodo',
-  back: 'Nazaj',
-} as const;
+/**
+ * User-visible strings of the picker (`pet:picker`, M1-18). The `ageHints` per breed hold
+ * the confirmed meals + step goals (PRODUCT_SPEC §5; minutes × 100 steps; 1 week = 1 month).
+ * Puppy / young: 10 min × age in months up to the adult goal (mutt 60 min, Border Collie
+ * 120 min); senior 75 % of adult. Arrival age: puppy 2, young 9 months (§4).
+ */
+export const PICKER_STRINGS = strings('pet', 'picker', {
+  title: (name: string) => t('pet:picker.title', { name }),
+  lockedA11y: (breed: string) => t('pet:picker.lockedA11y', { breed }),
+});
 
 export const PICKER_ORIGINS: readonly PetOrigin[] = ['bought', 'adopted'];
 export const PICKER_AGES: readonly LifeStage[] = ['puppy', 'young', 'adult', 'senior'];

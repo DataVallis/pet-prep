@@ -1,1 +1,22 @@
-{}
+{
+  "push": {
+    "channels": {
+      "default": "Dog reminders",
+      "alarm": "Urgent alerts"
+    },
+    "prePrompt": {
+      "child": {
+        "title": "Can your dog call you?",
+        "message": "When your dog is hungry, thirsty, dirty or needs a walk, we'll send you a notification. We never send anything during school or sleep (quiet hours).",
+        "allow": "Allow notifications",
+        "later": "Not now"
+      },
+      "parent": {
+        "title": "Dog care notifications",
+        "message": "We'll let you know when your child hasn't looked after the dog for over an hour, or when the dog gets sick or goes to the shelter. We never send anything during quiet hours. Notifications never include children's names.",
+        "allow": "Allow notifications",
+        "later": "Not now"
+      }
+    }
+  }
+}

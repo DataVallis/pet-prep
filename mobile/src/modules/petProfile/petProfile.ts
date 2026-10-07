@@ -6,26 +6,28 @@
  * null origin / ages / stage) or an older server without `profile` yields `null` — the
  * screens then show exactly what they showed before (no stage, no origin, no crash).
  *
- * Strings are Slovenian (extract to i18n with M1-18). Numbers shown here come only from
+ * Strings come from `pet:profile` / `pet:date` (M1-18). Numbers shown here come only from
  * the API payload; rules marked `unverified` by the server are never shown as facts.
  */
 
 import type { LifeStage, PetOrigin } from '@/api/client';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
 export const LIFE_STAGES: readonly LifeStage[] = ['puppy', 'young', 'adult', 'senior'];
 export const PET_ORIGINS: readonly PetOrigin[] = ['bought', 'adopted'];
 
-/** User-visible strings of the profile display (i18n with M1-18). */
-export const PET_PROFILE_STRINGS = {
-  stages: { puppy: 'Mladiček', young: 'Mlad pes', adult: 'Odrasel', senior: 'Starejši' } satisfies Record<LifeStage, string>,
-  /** Stage name inside a sentence ("od 24. 11. postane mlad pes"). */
-  stagesLower: { puppy: 'mladiček', young: 'mlad pes', adult: 'odrasel pes', senior: 'starejši pes' } satisfies Record<LifeStage, string>,
-  origins: { bought: 'Kupljen pri vzreditelju', adopted: 'Posvojen iz zavetišča' } satisfies Record<PetOrigin, string>,
-  nextStage: (stage: string, date: string) => `Od ${date} ${stage}`,
-  nextStageChild: (stage: string, date: string) => `${date} postane ${stage}`,
+/** User-visible strings of the profile display (`pet:profile`, M1-18). */
+export const PET_PROFILE_STRINGS = strings('pet', 'profile', {
+  /** Parent: "Od 24. 11. 2026 mlad pes" / "Becomes a young dog on 24 Nov 2026". */
+  nextStage: (stage: string, date: string) => t('pet:profile.nextStage', { stage, date }),
+  /** Child: "24. 11. 2026 postane mlad pes" / "Grows into a young dog on 24 Nov 2026". */
+  nextStageChild: (stage: string, date: string) => t('pet:profile.nextStageChild', { stage, date }),
   mealsToday: (meals: number, byParent: number) =>
-    byParent > 0 ? `Danes ${mealsWord(meals)} — ${byParent} v tihih urah nahrani starš` : `Danes ${mealsWord(meals)}`,
-} as const;
+    byParent > 0
+      ? t('pet:profile.mealsTodayWithParent', { count: meals, byParent })
+      : t('pet:profile.mealsToday', { count: meals }),
+});
 
 export interface PetProfileInfo {
   /** The dog's age now in whole months (arrival age + one month per real week). */
@@ -89,25 +91,14 @@ export function readPetProfile(value: unknown): PetProfileInfo | null {
   };
 }
 
-/** Slovenian accusative after a number ("star 3 mesece"): 1 mesec, 2 meseca, 3–4 mesece, 5+ mesecev. */
+/** "3 mesece" / "3 months" (CLDR plurals: sl one/two/few/other). */
 function monthsWord(n: number): string {
-  const mod = n % 100;
-  const word = mod === 1 ? 'mesec' : mod === 2 ? 'meseca' : mod === 3 || mod === 4 ? 'mesece' : 'mesecev';
-  return `${n} ${word}`;
+  return t('pet:profile.months', { count: n });
 }
 
-/** 1 leto, 2 leti, 3–4 leta, 5+ let. */
+/** "2 leti" / "2 years". */
 function yearsWord(n: number): string {
-  const mod = n % 100;
-  const word = mod === 1 ? 'leto' : mod === 2 ? 'leti' : mod === 3 || mod === 4 ? 'leta' : 'let';
-  return `${n} ${word}`;
-}
-
-/** 1 obrok, 2 obroka, 3–4 obroki, 5+ obrokov. */
-function mealsWord(n: number): string {
-  const mod = n % 100;
-  const word = mod === 1 ? 'obrok' : mod === 2 ? 'obroka' : mod === 3 || mod === 4 ? 'obroki' : 'obrokov';
-  return `${n} ${word}`;
+  return t('pet:profile.years', { count: n });
 }
 
 /** 3 → "3 mesece"; 26 → "2 leti in 2 meseca"; 36 → "3 leta" (years from 24 months). */
@@ -116,13 +107,20 @@ export function formatDogAge(months: number): string {
   if (n < 24) return monthsWord(n);
   const years = Math.floor(n / 12);
   const rest = n % 12;
-  return rest === 0 ? yearsWord(years) : `${yearsWord(years)} in ${monthsWord(rest)}`;
+  return rest === 0 ? yearsWord(years) : t('pet:profile.yearsAndMonths', { years: yearsWord(years), months: monthsWord(rest) });
 }
 
-/** "2026-11-24" → "24. 11. 2026" (a family-local calendar date — no time-zone math). */
+const MONTH_KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] as const;
+
+/**
+ * "2026-11-24" → "24. 11. 2026" (sl) / "24 Nov 2026" (en) — a family-local calendar date,
+ * no time-zone math. Built from keys (not `Intl`) so it is the same on every engine.
+ */
 export function formatProfileDate(isoDate: string): string {
   const [y, m, d] = isoDate.split('-').map((part) => Number(part));
-  return `${d}. ${m}. ${y}`;
+  const monthKey = MONTH_KEYS[m - 1];
+  const month = monthKey ? t(`pet:date.months.${monthKey}`) : String(m);
+  return t('pet:date.format', { day: d, month, year: y });
 }
 
 /** "Mladiček · 3 mesece" (or only the age for a breed without stage data). */

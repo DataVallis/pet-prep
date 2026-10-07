@@ -1,1 +1,22 @@
-{}
+{
+  "screen": {
+    "title": "Pogodba o odgovornosti",
+    "body": "Zavezujem se, da bom vsak dan odgovorno skrbel za svojega virtualnega ljubljenčka:\n\n• Hranil ga bom, ko bo lačen.\n• Vsak dan mu bom zagotovil svežo vodo.\n• Vodil ga bom na sprehode za gibanje in zdravje.\n• Redno bom čistil za njim in skrbel za higieno.\n• Odzval se bom na opozorila, preden pride do bolezni ali virtualnega zavetišča.\n\nAli sprejemaš to odgovornost?",
+    "padHint": "Podpiši se s prstom v okvir spodaj",
+    "padLabel": "Polje za podpis",
+    "clear": "Pobriši",
+    "accept": "Sprejmem odgovornost",
+    "retry": "Poskusi znova",
+    "logout": "Odjava",
+    "invalid": "Podpis ni veljaven, poskusi znova",
+    "network": "Povezava s strežnikom ni uspela. Preveri internet in poskusi znova.",
+    "failed": "Podpis ni uspel. Poskusi znova kasneje.",
+    "locked": {
+      "hard_stopped": "Starš je igro začasno ustavil. Pogodbo lahko podpišeš, ko jo spet vklopi.",
+      "inactive": "Ljubljenček trenutno ni aktiven. Prosi starša, da preveri nastavitve.",
+      "game_over": "Igra je končana, pogodbe ni več mogoče podpisati.",
+      "ill": "Ljubljenček je pri veterinarju. Poskusi znova kasneje.",
+      "default": "Podpis trenutno ni mogoč. Poskusi znova kasneje."
+    }
+  }
+}

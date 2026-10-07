@@ -1,1 +1,27 @@
-{}
+{
+  "breeds": {
+    "title": "Izbira pasme",
+    "back": "Nazaj",
+    "intro": "Izberite pasmo, ki ustreza otrokovi aktivnosti.",
+    "mutt": "Mešanček",
+    "collie": "Border collie",
+    "free": "BREZPLAČNO",
+    "premium": "PRIPOROČENO · PREMIUM",
+    "stepsPerDay": "{{steps}} korakov/dan",
+    "decay": "Padanje potreb: −{{rate}} %/h",
+    "currentBreed": "Trenutna pasma",
+    "starterBreed": "Začetna pasma",
+    "unlocked": "Odklenjeno",
+    "unlock": "Odkleni zdaj",
+    "restore": "Obnovi nakupe",
+    "alerts": {
+      "successTitle": "Odklenjeno",
+      "successMessage": "Pasma border collie je odklenjena!",
+      "purchaseFailedTitle": "Nakup ni uspel",
+      "restoreTitle": "Obnovi nakupe",
+      "restoreNone": "Prejšnjih nakupov nismo našli.",
+      "restoreFailedTitle": "Obnova ni uspela",
+      "unexpected": "Prišlo je do napake. Poskusite znova."
+    }
+  }
+}
