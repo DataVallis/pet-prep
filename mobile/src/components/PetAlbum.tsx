@@ -16,6 +16,12 @@
  * - Android hardware back: viewer → grid, grid → close (both callers).
  * - The caller pauses its own player (HUD / parent card) while the album is open.
  *
+ * - "Kako je kuža rasel" (M5-R04 "Album rasti"): with ≥ 2 growth pictures (`growth`,
+ *   fetched by the caller only while the album is open) a horizontal strip above the grid —
+ *   stage, age then, family-local date, the current one marked "Zdaj". Tap → the same
+ *   full-screen viewer; arrows / swipes move between the growth pictures only. Expiring
+ *   growth URLs refetch through `onGrowthExpired` (same rules as the media).
+ *
  * Shared by the child HUD and (read-only, same component) the parent's child detail.
  */
 
@@ -38,6 +44,7 @@ import {
   type PlayableAlbumItem,
 } from '@/modules/petMedia/album';
 import { useAppActive, useStableUrl } from '@/modules/petMedia/hooks';
+import { GROWTH_STRINGS, growthViewerItems, hasGrowthSection, type GrowthAlbum, type GrowthViewerItem } from '@/modules/petMedia/growth';
 import { mediaKey, type PetMediaInfo } from '@/modules/petMedia/petMedia';
 import { alpha, fonts, palette, tightTracking } from '@/theme';
 
@@ -48,8 +55,18 @@ export interface PetAlbumProps {
   onMediaExpired?: () => void;
   /** Header title of the grid (child: "Moj kuža", parent: "Posnetki kužka"). */
   title?: string;
+  /** "Album rasti" (M5-R04); the section shows only from 2 pictures on. null / undefined = none. */
+  growth?: GrowthAlbum | null;
+  /** Family IANA zone for the growth dates. */
+  timeZone?: string | null;
+  /** A growth URL failed (likely expired) or is about to expire — refetch the growth album. */
+  onGrowthExpired?: () => void;
   testID?: string;
 }
+
+/** What the full-screen viewer can show: an album item or a growth picture. */
+type ViewerItem = PlayableAlbumItem | GrowthViewerItem;
+type ViewerList = 'media' | 'growth';
 
 const ZERO_INSETS = { top: 0, bottom: 0 } as const;
 
@@ -207,28 +224,107 @@ function Tile({ item, onPress, onExpired }: { item: AlbumItem; onPress: () => vo
   );
 }
 
-export default function PetAlbum({ media, onClose, onMediaExpired, title = ALBUM_STRINGS.title, testID = 'pet-album' }: PetAlbumProps) {
+/** "Kako je kuža rasel": horizontal strip of growth pictures, oldest first, current last. */
+function GrowthStrip({
+  items,
+  onOpen,
+  onExpired,
+}: {
+  items: GrowthViewerItem[];
+  onOpen: (id: string) => void;
+  onExpired: (url: string) => void;
+}) {
+  return (
+    <View style={styles.growthSection} testID="album-growth">
+      <Text style={styles.sectionTitle} accessibilityRole="header">
+        {GROWTH_STRINGS.section}
+      </Text>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.growthStrip} testID="album-growth-strip">
+        {items.map((item) => {
+          const testID = `album-${item.id}`;
+          const a11y = [item.stageLabel, item.ageLabel, item.dateLabel, item.isCurrent ? GROWTH_STRINGS.current : null]
+            .filter((x): x is string => x !== null)
+            .join(', ');
+          return (
+            <Pressable
+              key={item.id}
+              onPress={() => onOpen(item.id)}
+              accessibilityRole="button"
+              accessibilityLabel={a11y.length > 0 ? a11y : GROWTH_STRINGS.photo}
+              accessibilityHint={GROWTH_STRINGS.hint}
+              testID={testID}
+              style={({ pressed }) => [styles.growthTile, pressed && styles.pressed]}
+            >
+              <View style={[styles.growthPhoto, item.isCurrent && styles.growthPhotoCurrent]}>
+                <AlbumImage url={item.url} onExpired={onExpired} testID={`${testID}-image`} fit="cover" />
+                {item.isCurrent && (
+                  <View style={styles.nowBadge} testID={`${testID}-current`}>
+                    <Text style={styles.nowText}>{GROWTH_STRINGS.current}</Text>
+                  </View>
+                )}
+              </View>
+              {item.stageLabel !== null && (
+                <Text style={styles.growthStage} numberOfLines={1} testID={`${testID}-stage`}>
+                  {item.stageLabel}
+                </Text>
+              )}
+              {item.ageLabel !== null && (
+                <Text style={styles.growthMeta} numberOfLines={1} testID={`${testID}-age`}>
+                  {item.ageLabel}
+                </Text>
+              )}
+              {item.dateLabel !== null && (
+                <Text style={styles.growthDate} numberOfLines={1} testID={`${testID}-date`}>
+                  {item.dateLabel}
+                </Text>
+              )}
+            </Pressable>
+          );
+        })}
+      </ScrollView>
+    </View>
+  );
+}
+
+export default function PetAlbum({
+  media,
+  onClose,
+  onMediaExpired,
+  title = ALBUM_STRINGS.title,
+  growth = null,
+  timeZone = null,
+  onGrowthExpired,
+  testID = 'pet-album',
+}: PetAlbumProps) {
   const insets = useContext(SafeAreaInsetsContext) ?? ZERO_INSETS;
   const items = useMemo(() => buildAlbumItems(media), [media]);
   const playable = useMemo(() => items.filter(isPlayable), [items]);
-  const [selectedId, setSelectedId] = useState<PlayableAlbumItem['id'] | null>(null);
+  const growthItems = useMemo(() => (hasGrowthSection(growth) ? growthViewerItems(growth, timeZone) : []), [growth, timeZone]);
+  const [selection, setSelection] = useState<{ list: ViewerList; id: string } | null>(null);
   const [muted, setMuted] = useState(true);
   const reportExpired = useExpiryReporter(onMediaExpired);
+  const reportGrowthExpired = useExpiryReporter(onGrowthExpired);
   useRefreshBeforeExpiry(media.expiresAt, onMediaExpired);
+  useRefreshBeforeExpiry(growthItems.length > 0 ? (growth?.expiresAt ?? null) : null, onGrowthExpired);
   // "Poskusi znova" remounts the open item (fresh useStableUrl → newest URL).
   const [attempt, setAttempt] = useState(0);
   const retry = useCallback(() => setAttempt((n) => n + 1), []);
 
+  // The viewer moves within one list: the album items or the growth pictures.
+  const viewerList: ViewerList = selection?.list ?? 'media';
+  const viewerItems: readonly ViewerItem[] = viewerList === 'growth' ? growthItems : playable;
+  const onViewerExpired = viewerList === 'growth' ? reportGrowthExpired : reportExpired;
   // An item that vanished (media changed under the viewer) → back to the grid.
-  const index = selectedId === null ? -1 : playable.findIndex((i) => i.id === selectedId);
-  const selected = index >= 0 ? playable[index] : null;
+  const index = selection === null ? -1 : viewerItems.findIndex((i) => i.id === selection.id);
+  const selected = index >= 0 ? viewerItems[index] : null;
+  const selectedDetail = selected !== null && 'detail' in selected ? selected.detail : null;
 
   const step = useCallback(
     (delta: -1 | 1) => {
-      const next = stepIndex(index, delta, playable.length);
-      if (next !== null) setSelectedId(playable[next].id);
+      const next = stepIndex(index, delta, viewerItems.length);
+      if (next !== null) setSelection({ list: viewerList, id: viewerItems[next].id });
     },
-    [index, playable],
+    [index, viewerItems, viewerList],
   );
   const stepRef = useRef(step);
   stepRef.current = step;
@@ -236,7 +332,7 @@ export default function PetAlbum({ media, onClose, onMediaExpired, title = ALBUM
   // Android hardware back: viewer → grid, grid → close.
   const backRef = useRef<() => void>(() => undefined);
   backRef.current = () => {
-    if (selected) setSelectedId(null);
+    if (selected) setSelection(null);
     else onClose();
   };
   useEffect(() => {
@@ -264,7 +360,7 @@ export default function PetAlbum({ media, onClose, onMediaExpired, title = ALBUM
     <View style={styles.root} testID={testID} accessibilityViewIsModal>
       <View style={[styles.header, { paddingTop: Math.max(insets.top, 20) + 8 }]}>
         {selected ? (
-          <Pressable onPress={() => setSelectedId(null)} hitSlop={10} accessibilityRole="button" accessibilityLabel={ALBUM_STRINGS.back} testID="album-back" style={styles.iconButton}>
+          <Pressable onPress={() => setSelection(null)} hitSlop={10} accessibilityRole="button" accessibilityLabel={ALBUM_STRINGS.back} testID="album-back" style={styles.iconButton}>
             <ChevronLeft color={palette.white} size={22} />
           </Pressable>
         ) : (
@@ -285,18 +381,18 @@ export default function PetAlbum({ media, onClose, onMediaExpired, title = ALBUM
               <AlbumImage
                 key={`${selected.key}#${attempt}`}
                 url={selected.url}
-                onExpired={reportExpired}
+                onExpired={onViewerExpired}
                 onRetry={retry}
                 testID="album-photo"
                 fit="contain"
               />
             ) : (
-              <AlbumVideo key={`${selected.key}#${attempt}`} url={selected.url} muted={muted} onExpired={reportExpired} onRetry={retry} />
+              <AlbumVideo key={`${selected.key}#${attempt}`} url={selected.url} muted={muted} onExpired={onViewerExpired} onRetry={retry} />
             )}
           </View>
 
           <View style={[styles.controls, { paddingBottom: Math.max(insets.bottom, 16) + 8 }]}>
-            {playable.length > 1 ? (
+            {viewerItems.length > 1 ? (
               <Pressable onPress={() => step(-1)} accessibilityRole="button" accessibilityLabel={ALBUM_STRINGS.previous} testID="album-prev" style={({ pressed }) => [styles.roundButton, pressed && styles.pressed]}>
                 <ChevronLeft color={palette.white} size={24} />
               </Pressable>
@@ -304,9 +400,16 @@ export default function PetAlbum({ media, onClose, onMediaExpired, title = ALBUM
               <View style={styles.roundSpacer} />
             )}
             <View style={styles.controlsCenter}>
-              <Text style={styles.position} testID="album-position">
-                {ALBUM_STRINGS.position(index + 1, playable.length)}
-              </Text>
+              <View style={styles.positionBox}>
+                <Text style={styles.position} testID="album-position">
+                  {ALBUM_STRINGS.position(index + 1, viewerItems.length)}
+                </Text>
+                {selectedDetail !== null && (
+                  <Text style={styles.detail} numberOfLines={1} testID="album-detail">
+                    {selectedDetail}
+                  </Text>
+                )}
+              </View>
               {selected.kind === 'video' && (
                 <Pressable
                   onPress={() => setMuted((m) => !m)}
@@ -319,7 +422,7 @@ export default function PetAlbum({ media, onClose, onMediaExpired, title = ALBUM
                 </Pressable>
               )}
             </View>
-            {playable.length > 1 ? (
+            {viewerItems.length > 1 ? (
               <Pressable onPress={() => step(1)} accessibilityRole="button" accessibilityLabel={ALBUM_STRINGS.next} testID="album-next" style={({ pressed }) => [styles.roundButton, pressed && styles.pressed]}>
                 <ChevronRight color={palette.white} size={24} />
               </Pressable>
@@ -328,22 +431,27 @@ export default function PetAlbum({ media, onClose, onMediaExpired, title = ALBUM
             )}
           </View>
         </View>
-      ) : items.length === 0 ? (
+      ) : items.length === 0 && growthItems.length === 0 ? (
         <View style={styles.emptyBox} testID="album-empty">
           <Text style={styles.emptyText}>{ALBUM_STRINGS.empty}</Text>
         </View>
       ) : (
-        <ScrollView contentContainerStyle={[styles.grid, { paddingBottom: Math.max(insets.bottom, 16) + 16 }]} testID="album-grid">
-          {items.map((item) => (
-            <Tile
-              key={item.id}
-              item={item}
-              onExpired={reportExpired}
-              onPress={() => {
-                if (isPlayable(item)) setSelectedId(item.id);
-              }}
-            />
-          ))}
+        <ScrollView contentContainerStyle={[styles.scrollContent, { paddingBottom: Math.max(insets.bottom, 16) + 16 }]} testID="album-grid">
+          {growthItems.length > 0 && (
+            <GrowthStrip items={growthItems} onExpired={reportGrowthExpired} onOpen={(id) => setSelection({ list: 'growth', id })} />
+          )}
+          <View style={styles.grid}>
+            {items.map((item) => (
+              <Tile
+                key={item.id}
+                item={item}
+                onExpired={reportExpired}
+                onPress={() => {
+                  if (isPlayable(item)) setSelection({ list: 'media', id: item.id });
+                }}
+              />
+            ))}
+          </View>
         </ScrollView>
       )}
     </View>
@@ -378,13 +486,41 @@ const styles = StyleSheet.create({
     backgroundColor: alpha(palette.white, 0.08),
   },
   iconButtonSpacer: { width: 36, height: 36 },
+  scrollContent: { padding: 16, gap: 20 },
   grid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     rowGap: 12,
-    padding: 16,
   },
+  growthSection: { gap: 10 },
+  sectionTitle: { fontSize: 16, letterSpacing: tightTracking(16), fontFamily: fonts.displayBold, color: palette.white },
+  growthStrip: { gap: 12, paddingRight: 4 },
+  growthTile: { width: 116, gap: 2 },
+  growthPhoto: {
+    width: 116,
+    height: 145,
+    marginBottom: 6,
+    overflow: 'hidden',
+    borderRadius: 20,
+    backgroundColor: alpha(palette.graphite, 0.85),
+    borderWidth: 1,
+    borderColor: alpha(palette.white, 0.15),
+  },
+  growthPhotoCurrent: { borderWidth: 2, borderColor: palette.mint },
+  nowBadge: {
+    position: 'absolute',
+    top: 8,
+    left: 8,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 10,
+    backgroundColor: palette.mint,
+  },
+  nowText: { fontSize: 11, fontWeight: '800', color: palette.graphite },
+  growthStage: { fontSize: 14, fontWeight: '700', color: palette.white },
+  growthMeta: { fontSize: 12, fontWeight: '600', color: palette.n300 },
+  growthDate: { fontSize: 11, fontWeight: '600', color: palette.n400 },
   tile: {
     width: '48%',
     aspectRatio: 0.8,
@@ -437,7 +573,9 @@ const styles = StyleSheet.create({
     backgroundColor: alpha(palette.graphite, 0.92),
   },
   controlsCenter: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  positionBox: { alignItems: 'center', gap: 2 },
   position: { fontSize: 13, fontWeight: '700', color: alpha(palette.white, 0.7) },
+  detail: { fontSize: 12, fontWeight: '600', color: palette.n300 },
   roundButton: {
     width: 52,
     height: 52,

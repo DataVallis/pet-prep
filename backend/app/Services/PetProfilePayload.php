@@ -21,7 +21,7 @@ use Carbon\CarbonInterface;
 final class PetProfilePayload
 {
     /**
-     * @param  list<array{start: string, end: string, parent_covered: bool}>  $feedWindows
+     * @param  list<array{start: string, end: string, parent_covered: bool, fed: bool}>  $feedWindows
      * @param  array{min: float|int, max: float|int}|null  $sleepHours
      * @param  array{life_stage: string, from_date: string}|null  $nextStage
      * @param  list<string>  $unverified
@@ -58,12 +58,16 @@ final class PetProfilePayload
             : new StageRules($today, $lifeStages->ageMonthsOn($pet, $today), null, 0, [], null, 0, null, []);
 
         $quiet = $pet->quietHours();
+        $instances = $config !== null ? $schedule->feedWindowsStartingOn($pet, $config, $today) : [];
+        // One activity-log query for all of today's windows (M5-R04 HUD ticks).
+        $fed = $schedule->fedInWindows($pet, $instances);
         $windows = [];
-        foreach ($config !== null ? $schedule->feedWindowsStartingOn($pet, $config, $today) : [] as [$start, $end]) {
+        foreach ($instances as $i => [$start, $end]) {
             $windows[] = [
                 'start' => $start->format('H:i'),
                 'end' => $end->format('H:i'),
                 'parent_covered' => $schedule->isParentCoveredFor($pet, $quiet, $start, $end),
+                'fed' => $fed[$i],
             ];
         }
         $byParent = count(array_filter($windows, fn (array $w) => $w['parent_covered']));
@@ -91,7 +95,7 @@ final class PetProfilePayload
     }
 
     /**
-     * @return array{legacy: bool, origin: string|null, arrival_age_months: int|null, age_months: int|null, life_stage: string|null, next_stage: array{life_stage: string, from_date: string}|null, data_verified: bool, unverified: list<string>, behaviour_enabled: bool, today: array{date: string, meals_per_day: int, meals_by_child: int, meals_by_parent: int, feed_windows: list<array{start: string, end: string, parent_covered: bool}>, step_goal: int, exercise_minutes: int|null, sleep_hours: array{min: float|int, max: float|int}|null}}
+     * @return array{legacy: bool, origin: string|null, arrival_age_months: int|null, age_months: int|null, life_stage: string|null, next_stage: array{life_stage: string, from_date: string}|null, data_verified: bool, unverified: list<string>, behaviour_enabled: bool, today: array{date: string, meals_per_day: int, meals_by_child: int, meals_by_parent: int, feed_windows: list<array{start: string, end: string, parent_covered: bool, fed: bool}>, step_goal: int, exercise_minutes: int|null, sleep_hours: array{min: float|int, max: float|int}|null}}
      */
     public function toArray(): array
     {
@@ -139,8 +143,13 @@ final class PetProfilePayload
                 'meals_by_parent' => $this->mealsByParent,
                 /**
                  * Today's feed windows, family-local "HH:MM", [start, end).
+                 * `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                 * any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                 * (`parent_fed_pet`, written by the server tick at the window start, so it can
+                 * lag the start by up to one tick). False for an unborn pet and for windows
+                 * not reached yet.
                  *
-                 * @var list<array{start: string, end: string, parent_covered: bool}>
+                 * @var list<array{start: string, end: string, parent_covered: bool, fed: bool}>
                  */
                 'feed_windows' => $this->feedWindows,
                 // Steps for 100 % energy today (exercise minutes × 100 steps).

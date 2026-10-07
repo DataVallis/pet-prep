@@ -19,7 +19,7 @@
 | M3 Notifications, sensors, payments | push (M3-02) done; HealthKit, Health Connect, RevenueCat, paywall, trial, signature open |
 | M4 AI media | 7 done / 4 open (M4-05 object storage, M4-05b, M4-06 fallback, M4-09 tokens) |
 | M5 Production + beta | partial: deploy pipeline (fast, D16), backups same-disk only; Sentry, privacy, TestFlight beta, analytics open |
-| M5-R Realism | R01, R02, R03, R03b done; R04 part 1 done, **part 2 (growth album)** open |
+| M5-R Realism | R01, R02, R03, R03b, R04 done (2026-10-07) |
 
 ## 2. Decisions (2026-10-02)
 
@@ -58,10 +58,16 @@
 1. **David:** new TestFlight / Android build from `main` (fixes the push loop; contains M5-R02 + M5-R03 UI and the CGP v2 rebrand). Rebrand checks: home-screen icon (iOS + Android adaptive / themed), splash on fog, fonts render (Instrument Sans body, Bricolage headings, Slovenian č/š/ž), status-bar text dark on light screens and light in the child app, mint "due" care button. Then device checks: one `POST /api/devices` per login in the Caddy log; "Šola" chip at 375 pt; "Pohvali" responsiveness; kill app mid-training and reopen; TalkBack / VoiceOver.
 2. **David:** delete stale remote branches `diag/pet-state-1006`, `diag/prod-logs-1006`, `diag/child-flow`, `wip/M5-R04-picker-followup` (agent can't delete remote branches).
 3. **David:** review `docs/product/FEATURES.md` (feature catalogue, created 2026-10-07 — keep it updated in every PR, CLAUDE.md rule). Open points from it: the parent "Pasme" tab is a fake purchase placeholder (`BreedPaywallScreen`, local unlock + English alert) — hide before a public build?; no UI to change the family timezone.
-4. **M5-R04 part 2:** growth album (pet images across life stages).
+4. **Hide the parent "Pasme" tab** (fake purchase placeholder) until RevenueCat — David agreed 2026-10-07. Family-timezone UI: later (David).
 5. **David:** M5-R03b — only the minimum-one-session rule (≥ 7 trainers) is still open (the rest confirmed 2026-10-07). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-07 (cloud, orchestrator) — M5-R04 part 2: growth album + meals today
+- Backend: `GET /api/child/pet/growth`, `GET /api/parent/pets/{pet}/growth` (dedicated endpoints, not in `media` — broadcast weight), signed `GET /api/media/history/{id}` (shared `serve()`, X-Accel), migration `pet_media_history.taken_at`, export `growth`; `profile.today.feed_windows[].fed` (one query). Pest 1127 green.
+- App: "Kako je kuža rasel" in the "Moj kuža" album (≥ 2 images, child + parent view-only, query key per pet), "Obroki danes" chips above the dock (✓ from `fed`, "nahrani starš", hidden under a scene card, compact on small screens). Jest 1122 green; fixed slow `ChildHudScreen.behaviour` test (stubbed `Animated.loop`).
+- QA: no blockers; fixed midnight-crossing current window, per-pet query key, HUD crowding, DST / midnight `fed` tests, swapped docblocks.
+- **Not verified on a device.** Debt: parent dashboard +1 query per pet for `fed`; growth refresh uses device clock (rate-limited); album age uses accusative ("3 mesece") like the HUD.
 
 ### 2026-10-07 (cloud, orchestrator) — feature catalogue
 - `docs/product/FEATURES.md` (14 areas, status legend ✅ / 📱 / 🛠 / 🗓 / ⏸, free / paid, roadmap IDs, dates, numbers with sources). CLAUDE.md (DoD 7 + Living documentation 5), `/handoff` and `/feature` now require updating it in every PR (David).

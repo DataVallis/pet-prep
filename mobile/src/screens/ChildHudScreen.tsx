@@ -13,6 +13,8 @@
  * "Pospravi in daj igračo", never by scrubbing.
  * M5-R03: a pet with training gets a "Šola" chip above the dock (amber dot while today's
  * session is open) that opens the training mini-game (`modules/training/TrainingOverlay`).
+ * M5-R04: "Obroki danes" chip row above the dock (today's windows, ✓, now, "nahrani starš")
+ * and the growth section of the album ("Kako je kuža rasel", fetched only while it is open).
  */
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
@@ -39,6 +41,7 @@ import { rememberFamilyTimezone } from '@/modules/session/familyTimezone';
 import { usePetWebSocket } from '@/hooks/usePetWebSocket';
 import { applyBroadcastToCache, childPetKey, isRecoverableError, useChildPet } from '@/hooks/queries/useChildPet';
 import { useClean, useFeed, useResolveChewing, useTakeOut, useWater } from '@/hooks/queries/useChildActions';
+import { childPetGrowthKey, useChildPetGrowth, useGrowthRefresh } from '@/hooks/queries/usePetGrowth';
 import { useServerNow } from '@/hooks/useServerNow';
 import {
   classifyActionError,
@@ -56,6 +59,8 @@ import {
   takeOutCountdown,
 } from '@/modules/behaviour/behaviour';
 import BehaviourPanel from '@/components/BehaviourPanel';
+import MealWindowsRow from '@/components/MealWindowsRow';
+import { buildMealWindows } from '@/modules/childPet/mealWindows';
 import { lockStateFromView, type CareAction, type ChildPetView } from '@/modules/childPet/childPetView';
 import { computeHudLayout, METRICS_RESERVED_RIGHT, METRICS_RIGHT, type HudLayout } from '@/modules/hud/hudLayout';
 import { WS_BADGE_STRINGS, wsBadge } from '@/modules/hud/wsBadge';
@@ -316,6 +321,12 @@ export default function ChildHudScreen() {
     void queryClient.invalidateQueries({ queryKey: childPetKey });
   }, [queryClient]);
 
+  // M5-R04 "Album rasti": only while the album is open; an error just hides the section.
+  const growthPetId = view?.pet.id ?? null;
+  const growthQuery = useChildPetGrowth(growthPetId, isAlbumVisible && !lockedNow);
+  const growth = growthQuery.isError ? null : (growthQuery.data ?? null);
+  const onGrowthExpired = useGrowthRefresh(childPetGrowthKey(growthPetId ?? 0));
+
   const mutations = { feed, water, clean, take_out: takeOut, resolve_chewing: resolveChewing } as const;
   const runAction = (action: CareAction) => {
     mutations[action].mutate(undefined, {
@@ -415,6 +426,9 @@ export default function ChildHudScreen() {
   const showAlbum = isAlbumVisible && !locked && albumAvailable;
   // M5-R03: "Šola" only for a pet with training (legacy / older app / older server: nothing).
   const hasTraining = showTrainingEntry(view.training);
+  // M5-R04: today's feed windows ("nahrani starš" for quiet hours) near the feed button.
+  // Profiled pets only (a legacy pet keeps the pre-M5 HUD).
+  const mealWindows = pet.profile ? buildMealWindows(view) : [];
   const showTraining = isTrainingVisible && !locked && hasTraining && !showAlbum;
   // Android: TalkBack must not reach the HUD under the album / training game (iOS: accessibilityViewIsModal).
   const hiddenUnderAlbum = showAlbum || showTraining
@@ -639,6 +653,10 @@ export default function ChildHudScreen() {
                   onPress={() => setTrainingVisible(true)} />
               ) : null
             }
+            // Hidden by the panel while a scene card is open; one line on smaller screens.
+            meals={
+              mealWindows.length > 0 ? <MealWindowsRow items={mealWindows} compact={layout.metric.variant !== 'regular'} /> : null
+            }
           />
         )}
 
@@ -665,7 +683,15 @@ export default function ChildHudScreen() {
       {/* Outside hud-content, so hiding the HUD from TalkBack never hides the game. */}
       {showTraining && <TrainingOverlay view={view} onClose={closeTraining} />}
       {showAlbum && (
-        <PetAlbum media={pet.media} onClose={() => setAlbumVisible(false)} onMediaExpired={onMediaExpired} testID="hud-album" />
+        <PetAlbum
+          media={pet.media}
+          onClose={() => setAlbumVisible(false)}
+          onMediaExpired={onMediaExpired}
+          growth={growth}
+          timeZone={view.timezone}
+          onGrowthExpired={onGrowthExpired}
+          testID="hud-album"
+        />
       )}
     </View>
   );

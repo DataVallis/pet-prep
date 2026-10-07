@@ -29,6 +29,8 @@ jest.mock('@/api/client', () => {
     api: {
       ...actual.api,
       getChildPet: jest.fn(),
+      // M5-R04 growth album: resolves undefined → no section (covered in ChildHudScreen.growth.test).
+      getChildPetGrowth: jest.fn(),
       feedPet: jest.fn(),
       waterPet: jest.fn(),
       cleanPet: jest.fn(),

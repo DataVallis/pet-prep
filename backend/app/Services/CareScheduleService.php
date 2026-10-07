@@ -172,6 +172,44 @@ class CareScheduleService
     }
 
     /**
+     * Per window: was the dog fed in it — a `fed_pet` (any caretaker child)
+     * or `parent_fed_pet` (decay tick, parent-covered window) row with
+     * created_at in [start, end). One query for all windows (M5-R04 HUD).
+     *
+     * @param  list<array{0: CarbonInterface, 1: CarbonInterface}>  $windows
+     * @return list<bool>
+     */
+    public function fedInWindows(Pet $pet, array $windows): array
+    {
+        if ($windows === [] || $pet->born_at === null) {
+            return array_fill(0, count($windows), false);
+        }
+
+        $from = min(array_map(fn (array $w) => CarbonImmutable::instance($w[0])->utc(), $windows));
+        $to = max(array_map(fn (array $w) => CarbonImmutable::instance($w[1])->utc(), $windows));
+
+        $fedAt = ActivityLog::where('pet_id', $pet->id)
+            ->whereIn('activity_type', array_map(fn (ActivityType $t) => $t->value, self::FED_TYPES))
+            ->where('created_at', '>=', $from)
+            ->where('created_at', '<', $to)
+            ->pluck('created_at')
+            ->map(fn ($v) => $this->instant($v, 'UTC'))
+            ->all();
+
+        return array_map(function (array $w) use ($fedAt): bool {
+            $start = CarbonImmutable::instance($w[0])->utc();
+            $end = CarbonImmutable::instance($w[1])->utc();
+            foreach ($fedAt as $at) {
+                if ($at !== null && $at->greaterThanOrEqualTo($start) && $at->lessThan($end)) {
+                    return true;
+                }
+            }
+
+            return false;
+        }, $windows);
+    }
+
+    /**
      * The validated windows of a family-local date (the pet's stage rules).
      *
      * @return list<array{0: string, 1: string}>

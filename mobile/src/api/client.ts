@@ -93,6 +93,10 @@ export type ParentDashboardResponse =
 export type ChildPetState =
   operations['childPet.show']['responses'][200]['content']['application/json'];
 
+/** `GET /api/child/pet/growth` and `/api/parent/pets/{pet}/growth` (same shape, M5-R04). */
+export type PetGrowthResponse =
+  operations['petGrowth.child']['responses'][200]['content']['application/json'];
+
 /**
  * `POST /api/child/pet/{feed,water,clean}` 200 body (M1-07). Hand-declared: Scramble
  * types these responses as `unknown[] | string` (HANDOFF M1-07 debt 2). Refusals
@@ -571,6 +575,9 @@ export const api = {
   /** GET /api/child/pet — the child's full pet state (read-only, also while locked / unborn). */
   getChildPet: () => apiRequest<ChildPetState>('/api/child/pet'),
 
+  /** GET /api/child/pet/growth (M5-R04) — the pet's pictures per life stage, oldest first; 404 `no_pet` before pairing. */
+  getChildPetGrowth: () => apiRequest<PetGrowthResponse>('/api/child/pet/growth'),
+
   /**
    * POST /api/child/pet/feed — hunger → 100 % inside a feed window, once per window.
    * 422 `outside_feed_window` / `already_fed_this_window` / `needs_cleaning`, 423 locked.
@@ -667,6 +674,9 @@ export const api = {
    */
   getChildReport: (childId: number, days: 7 | 30 | 84) =>
     apiRequest<unknown>(`/api/parent/children/${childId}/report?days=${days}`),
+
+  /** GET /api/parent/pets/{pet}/growth (M5-R04) — growth album of a family pet; 404 `pet_not_found` otherwise. */
+  getParentPetGrowth: (petId: number) => apiRequest<PetGrowthResponse>(`/api/parent/pets/${petId}/growth`),
 
   /** GET /api/parent/activities — one page of a family pet's activities, newest first. */
   getPetActivities: (petId: number, page: number, perPage: number = 20) =>
