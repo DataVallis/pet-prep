@@ -8,7 +8,7 @@
 - **Last updated:** 2026-10-06 night (Claude, orchestrator — M5-R03b training decisions: confirmed numbers, starting skills for non-puppies, fair share of the training budget).
 - **Production:** `https://api.petprep.si` live (Hetzner CX23, Docker Compose + Caddy). Merge to `main` → CI (`CI OK`) → automatic deploy when backend / deployment / scripts / workflow changed (DEPLOYMENT.md D16). Website `petprep.si` is served from the separate repo `DataVallis/pet-prep-website` (D15). Last verified deploy: `98eabfb` (M5-R03 training backend), 2026-10-06.
 - **App:** TestFlight build 1.24.4 has the push-registration loop (fixed on `main`, PR #45/#48). **David must ship a new TestFlight build from `main`** (he owns app version — commit `58551b1` "mobile version change" is his). Nothing from M5-R02 / M5-R03 UI and nothing of the **CGP v2 rebrand** has been checked on a device yet. The rebrand adds native modules (`expo-font`, `expo-splash-screen`) and new icons / splash → needs a **new native EAS build** (an OTA update is not enough).
-- **All PRs #1–#56 are merged; no open PRs.** `main` @ `58551b1`.
+- **PR #59 (M5-R03b) merged and deployed 2026-10-07** (`b3246ef`; GitHub Actions billing was blocking the `CI OK` job on 2026-10-06 — David fixed it). Small fix PR `fix/legacy-pet-age-label` (mobile only).
 - **Realistic MVP completion:** ~55 % (payments, HealthKit / Health Connect, i18n, privacy / store review, beta still missing).
 
 | Milestone | Status (ROADMAP checkboxes, 2026-10-06) |
@@ -62,6 +62,9 @@
 5. **David:** M5-R03b open questions (unsigned child not counted in the share; shares recomputed when a sibling signs mid-day; minimum one session per child with ≥ 7 trainers; effect params 0.75 / 0.5 still unverified). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-07 (cloud, orchestrator) — merge + legacy age label
+- PR #59 merged and deployed (`Deploy to Hetzner Production` success). Legacy pets (no profile) showed "STAROST: 0 MESECEV" in the child HUD — `virtual_age_months` is the challenge clock, not the dog's age → HUD now shows "TEDEN N OD 12" (`formatChallengeWeek`). Jest 1081 green.
 
 ### 2026-10-06 night (cloud, orchestrator) — M5-R03b training decisions
 - **Backend:** migration `2026_10_15_110000` (new stage key `training_starting_progress`), data migration `2026_10_15_120000` flips 5 min / +1 / −2 to `verified` ("potrdil David 2026-10-06", audit row, admin edits win, idempotent); seeder clears the rules cache. Starting skills (young / adult / senior: sit 50, potty 70, come 30, place 0; puppy 0) applied once in `PairingService::createPet` for training-enabled pets; shown before birth. Fair share: trainers = active caretakers with a signed (or grandfathered) contract; share = `max(⌊budget / n⌋, session)`, pet-wide budget still caps; 422 `training_child_share_used`; child state `training.children_sharing` / `my_share_seconds` / `my_seconds_left` (additive). Pest 1095 green.
