@@ -1056,6 +1056,12 @@ export interface components {
             /** @enum {unknown} */
             confirm: "yes" | "on" | "1" | 1 | "true" | true;
             /**
+             * @description M3-11 P5: the parent saw that a paid, unfinished 12-week challenge
+             *     is lost with the pet (the purchase stays used). Without it such a
+             *     deletion → 422 `paid_challenge_ack_required`.
+             */
+            acknowledge_paid_challenge?: boolean;
+            /**
              * @description `required` under `sometimes`: present ⇒ non-empty (TrimStrings +
              *     ConvertEmptyStringsToNull turn "  " into null, which must fail).
              */
@@ -1855,6 +1861,8 @@ export interface operations {
                             status: "trial" | "payment_required" | "paid" | null;
                             trial_ends_at: string | null;
                             paid_at: string | null;
+                            trial_available: boolean | null;
+                            deletion_loses_purchase: boolean;
                         }[];
                     };
                 };
@@ -5156,6 +5164,12 @@ export interface operations {
                 password: string;
                 confirm: "yes" | "on" | "1" | 1 | "true" | true;
                 /**
+                 * @description M3-11 P5: the parent saw that a paid, unfinished 12-week challenge
+                 *     is lost with the pet (the purchase stays used). Without it such a
+                 *     deletion → 422 `paid_challenge_ack_required`.
+                 */
+                acknowledge_paid_challenge?: boolean;
+                /**
                  * @description `required` under `sometimes`: present ⇒ non-empty (TrimStrings +
                  *     ConvertEmptyStringsToNull turn "  " into null, which must fail).
                  */
@@ -5494,6 +5508,12 @@ export interface operations {
                          * @enum {string|null}
                          */
                         plan: "free" | "challenge" | null;
+                        /**
+                         * @description M3-11 P7: the new challenge pet gets the 7-day free trial (one per child,
+                         *     ever); false = payment_required from birth; null = no challenge pet. M3-11 P7: whether the new challenge pet gets the 7-day free trial
+                         *     (one per child, ever); null when no challenge pet is created.
+                         */
+                        trial_available: boolean | null;
                     };
                 };
             };
