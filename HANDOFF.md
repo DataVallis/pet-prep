@@ -5,11 +5,11 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-07 evening (Claude — PR #65 i18n, #67 payments, #68 RevenueCat iOS key merged and deployed; David tested TestFlight 3.0.0 and the RevenueCat webhook; **device feedback recorded as ROADMAP M5-F01–F07 + M5-R06**; next session starts with M5-F).
+- **Last updated:** 2026-10-07 night (Claude — PR #70 M3-11b (lock time off the 12-week clock), #71 M3-04/05/06 health steps, #72 M3-12 emergency meal + honest pushes, #73 dock time / album posters merged; #70 and #72 deployed. **Next: M5-F01–F07**, then M5-R05, M5-R06. Payments sandbox test by David on 2026-10-08.)
 - **Production:** `https://api.petprep.si` live (Hetzner CX23, Docker Compose + Caddy). Merge to `main` → CI (`CI OK`) → automatic deploy when backend / deployment / scripts / workflow changed (DEPLOYMENT.md D16). Website `petprep.si` is served from the separate repo `DataVallis/pet-prep-website` (D15). Last verified deploy: `98eabfb` (M5-R03 training backend), 2026-10-06.
 - **App:** TestFlight build 1.24.4 has the push-registration loop (fixed on `main`, PR #45/#48). **David must ship a new TestFlight build from `main`** (he owns app version — commit `58551b1` "mobile version change" is his). Nothing from M5-R02 / M5-R03 UI and nothing of the **CGP v2 rebrand** has been checked on a device yet. The rebrand adds native modules (`expo-font`, `expo-splash-screen`) and new icons / splash → needs a **new native EAS build** (an OTA update is not enough).
 - **PR #59 (M5-R03b) merged and deployed 2026-10-07** (`b3246ef`; GitHub Actions billing was blocking the `CI OK` job on 2026-10-06 — David fixed it). Small fix PR `fix/legacy-pet-age-label` (mobile only).
-- **Realistic MVP completion:** ~60 % (payments, HealthKit / Health Connect, privacy / store review, beta still missing; i18n built 2026-10-07, not on a device).
+- **Realistic MVP completion:** ~65 % (payments, i18n and health steps built but not verified on a device; privacy / store review, beta still missing).
 
 | Milestone | Status (ROADMAP checkboxes, 2026-10-06) |
 |---|---|
@@ -55,13 +55,13 @@
 
 ## 5. Next steps (priority queue)
 
-**Start here (new session, 2026-10-07 evening):**
-1. **M5-F01–F07** (device feedback, ROADMAP section M5-F): visible paywall entry, mutt shows "Free" not "Paid", mutt disabled under the challenge, honest dog-school result, tap-to-expand HUD header, "getting ready" notice hidden behind the meals card, check the unsigned-contract pet showing alarms. Small, mostly mobile — one PR per task or one bundled `fix/M5-F-device-feedback` PR (David merges).
-2. **M3-12** emergency feeding (approved).
-3. **M5-R05** play & cuddle — decisions recorded (DECISIONS 2026-10-07), write a short spec, then build.
-4. **M3-04/05/06** HealthKit / Health Connect steps.
-5. **M5-R06** species → breed picker (dog + cat). Needs a cat care spec approved by David first (scope change 2026-10-07).
-6. Paywall sandbox test (David): child card → "Preizkus" badge → "Kupi" → Apple sandbox → "Plačano". The price showed **$44.99** because the sandbox Apple ID is in the US storefront — expected (store-localised price); use a Slovenian sandbox tester to see 49,99 €. Before launch: D7a go-live checklist (`PAYMENTS_ENFORCED=true`, sandbox decision, Android key/product).
+**Start here (new session, after 2026-10-07 night):**
+1. **David (2026-10-08):** payments sandbox test on a new native build from `main` (child card → "Preizkus" → "Kupi" → Apple sandbox → "Plačano"; US sandbox Apple ID shows $44.99 — use a Slovenian sandbox tester for 49,99 €). The same build carries health steps (needs new native modules + HealthKit capability, minSdk 26) — device checklist in `docs/engineering/HEALTH_STEPS.md`; also check emergency meal, dock time lines at 375 pt and the album posters.
+2. **M5-F01–F07** (device feedback, ROADMAP M5-F): visible paywall entry, mutt "Free" not "Paid", mutt disabled under the challenge, honest dog-school result, tap-to-expand HUD header, "getting ready" notice hidden behind the meals card, unsigned-contract pet showing alarms (partly covered: care reminders no longer go to unsigned caretakers, PR #72).
+3. **M5-R05** play & cuddle — decisions recorded, write a short spec, then build.
+4. **M5-R06** species → breed picker (dog + cat) — cat care spec first.
+5. **Optional (David asked 19:32):** language switch also in the child app (today: device language → saved choice; switch on the start screen and parent Nadzor → Jezik).
+6. Before Play release: Health Connect privacy-policy rationale screen + Play Console health declaration; App Review may ask about unused `UIBackgroundModes: fetch` (added by `expo-task-manager`).
 
 Older queue (still valid where not done):
 1. **David:** new TestFlight / Android build from `main` (fixes the push loop; contains M5-R02 + M5-R03 UI and the CGP v2 rebrand). Rebrand checks: home-screen icon (iOS + Android adaptive / themed), splash on fog, fonts render (Instrument Sans body, Bricolage headings, Slovenian č/š/ž), status-bar text dark on light screens and light in the child app, mint "due" care button. Then device checks: one `POST /api/devices` per login in the Caddy log; "Šola" chip at 375 pt; "Pohvali" responsiveness; kill app mid-training and reopen; TalkBack / VoiceOver.
@@ -71,6 +71,14 @@ Older queue (still valid where not done):
 5. **David:** M5-R03b — only the minimum-one-session rule (≥ 7 trainers) is still open (the rest confirmed 2026-10-07). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-07 night (cloud, orchestrator) — M3-11b, M3-12, health steps, device fixes
+- **PR #70 M3-11b (deployed):** payment-lock time does not count toward the 12 weeks (David) — program clock = `born_at` + `payment_lock` periods excluded (`Pet::programBirthAt` etc.); used by `virtualAgeInMonths`, certificate, life stages, `CareScoreService::progress`. Lock starts at `max(born_at, trial_ends_at)`. Runbook D7a: admin-unlock locked pets before turning `PAYMENTS_ENFORCED` off. David accepted the refund risk (full AI videos stay). Both former "open for David" items resolved (PAYMENTS_SPEC P9/P10).
+- **PR #72 M3-12 (deployed):** emergency meal only **after a missed meal** (David chose rule A at ~20:15: hunger ≤ 20 % AND last ended child window unfed); pushes re-check `CareScheduleService::feedCheck/waterCheck` (`wait` / `clean_first` / `tidy` / dropped `not_actionable`); API additive (`feeding.feed_mode`, `feeding.emergency_threshold`). Open "čaka Davida": a child window that ended during a freeze counts as missed; phase-2 text "zbolel bo v 30 min" is still not literally true (hunger alone never makes the dog sick).
+- **PR #71 M3-04/05/06:** `@kingstinct/react-native-healthkit` 16.0.0 (+ nitro-modules), `react-native-health-connect` 4.1.3, `expo-background-task`, minSdk 26; max(health, sensor) per day, read-only steps, lazy native loading. No backend change. ROADMAP `[~]` until a device test. Debt: Watch steps arriving late catch up at ≤ 200/min (David to confirm), Android has no background read.
+- **PR #73 (David's device feedback 19:32):** dock "tomorrow" / time on two lines (time never cut), album video tiles use the reference photo as poster + label pill + play badge.
+- Verified: each PR green `CI OK`; independent QA on all four (all blockers / majors fixed). **Nothing verified on a device.** Merge helper `/tmp/claude-0/prflow.sh` (waits for `CI OK` on the PR head, then merges) is session-local.
+- `schema.ts` can be regenerated without a running server: `php artisan scramble:export --path=<f>` (pgsql env) → `npx -y openapi-typescript@7 <f> -o mobile/src/api/schema.ts` → prepend the header from `scripts/generate-api-types.mjs`.
 
 ### 2026-10-07 evening (cloud, orchestrator) — device feedback from TestFlight 3.0.0
 - PR #67 (payments) and #68 (RevenueCat iOS public key in `eas.json`) merged and deployed; RevenueCat webhook "Send test event" verified by David (TEST event in Filament). App Store in-app purchase `petprep_challenge_12w` + RevenueCat project/offering set up by David.
