@@ -106,7 +106,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M3-04 iOS: HealthKit (`react-native-health` ali `@kingstinct/react-native-healthkit`) — branje korakov za danes
 - [ ] M3-05 Android: Health Connect (`react-native-health-connect`); Google Fit je deprecated
 - [ ] M3-06 Sync korakov ob odprtju aplikacije + background fetch (`expo-background-task`)
-- [ ] M3-07 RevenueCat SDK (`react-native-purchases`), `appUserID = user.id` (string), Offerings
+- [~] M3-07 RevenueCat SDK (`react-native-purchases`), `appUserID = user.id` (string), Offerings — infrastruktura zgrajena 2026-10-07 (`feat/M3-07-revenuecat-sdk`: samo starš, ponudbe, nakup / obnova, strežniški entitlement); **needs dev build + RevenueCat keys/products from David**
 - [ ] M3-08 Webhook rewrite: tabela `purchases` (idempotentno po `event.id`), `entitlements` na družino, podpora `CANCELLATION` / `REFUND` / `TRANSFER`, fail-closed brez secreta
 - [ ] M3-09 Paywall (**odločeno**): mešanček vedno brezplačen; 12-tedenski izziv 49,99 € s 7-dnevnim preizkusom; entitlement `challenge` (BUSINESS_MODEL §7) — **(D)** B7 non-consumable vs. naročnina
 - [ ] M3-11 Trial logika na strežniku: `trial_started_at`, konec preizkusa → zaklep plačljivih funkcij, mešanček ostane

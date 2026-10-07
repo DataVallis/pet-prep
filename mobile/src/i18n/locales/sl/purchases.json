@@ -1,0 +1,17 @@
+{
+  "result": {
+    "success": "Hvala! Nakup je zaključen.",
+    "successPending": "Hvala! Nakup je zaključen. Odklep lahko traja minuto; če se ne prikaže, osveži.",
+    "cancelled": "Nakup je preklican. Nič ni bilo zaračunano.",
+    "pending": "Nakup čaka na odobritev. Odklene se takoj, ko je odobren.",
+    "alreadyOwned": "To že imate. Tapnite »Obnovi nakupe«, da se odklene na tem računu.",
+    "network": "Ni povezave s trgovino. Preverite internet in poskusite znova.",
+    "storeProblem": "Trgovina nakupa ni mogla zaključiti. Poskusite znova kasneje.",
+    "notAllowed": "Nakupi na tej napravi niso dovoljeni. Preverite nastavitve nakupov na napravi.",
+    "unavailable": "Nakupi v tej različici aplikacije niso na voljo."
+  },
+  "restore": {
+    "restored": "Nakupi so obnovljeni.",
+    "nothing": "Za ta račun trgovine ni prejšnjih nakupov."
+  }
+}
