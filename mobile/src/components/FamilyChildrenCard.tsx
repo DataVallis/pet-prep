@@ -14,7 +14,14 @@ import { KeyRound, LogOut, Smartphone, Trash2, UserPlus, Users } from 'lucide-re
 
 import DeletionConfirmForm from '@/components/parent/DeletionConfirmForm';
 import { useDeleteChild, useRevokeChildDevices } from '@/hooks/queries/useFamilyMutations';
-import { childDeletionImpact, classifyDeletionError, type DeletionErrorKind } from '@/modules/account/account';
+import {
+  childDeletionImpact,
+  classifyDeletionError,
+  deletionLosesPurchase,
+  petsDeletedWithChild,
+  type DeletionErrorKind,
+} from '@/modules/account/account';
+import { useBilling } from '@/modules/purchases';
 import {
   breedLabel,
   classifyRevokeError,
@@ -58,6 +65,10 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
   const [deletingId, setDeletingId] = useState<number | null>(null);
   const [deleteError, setDeleteError] = useState<{ text: () => string } | null>(null);
   const [deletedNotice, setDeletedNotice] = useState<{ text: () => string } | null>(null);
+  // M3-11 P5: billing tells up front whether a deletion loses a purchase; a server 422
+  // `paid_challenge_ack_required` forces the warning too (stale billing).
+  const billing = useBilling();
+  const [paidRequired, setPaidRequired] = useState<number | null>(null);
 
   const openDelete = (child: FamilyChild) => {
     setResult(null);
@@ -67,10 +78,10 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
     setDeletingId(child.id);
   };
 
-  const confirmDelete = (child: FamilyChild, password: string) => {
+  const confirmDelete = (child: FamilyChild, password: string, acknowledgePaidChallenge: boolean) => {
     setDeleteError(null);
     removeChild.mutate(
-      { childId: child.id, password },
+      { childId: child.id, password, acknowledgePaidChallenge },
       {
         onSuccess: () => {
           setDeletingId(null);
@@ -78,6 +89,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
         },
         onError: (err) => {
           const kind = classifyDeletionError(err);
+          if (kind === 'paid_challenge') setPaidRequired(child.id);
           setDeleteError({ text: () => S.deleteErrors[kind] });
         },
       },
@@ -154,7 +166,8 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
                   setDeletingId(null);
                   setDeleteError(null);
                 }}
-                onSubmit={(password) => confirmDelete(child, password)}
+                paidChallenge={paidRequired === child.id || deletionLosesPurchase(petsDeletedWithChild(child, family), billing.data)}
+                onSubmit={(password, ack) => confirmDelete(child, password, ack)}
                 testID={`child-delete-form-${child.id}`}
               />
             ) : isConfirming ? (

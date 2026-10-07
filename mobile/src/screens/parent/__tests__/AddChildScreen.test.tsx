@@ -62,6 +62,7 @@ async function flush() {
 
 /** M5-R04 "Izberi kužka": pick origin + age (breed stays the free mutt unless given) and confirm. */
 async function pickDog(origin: 'bought' | 'adopted' = 'bought', age: 'puppy' | 'young' | 'adult' | 'senior' = 'puppy') {
+  fireEvent.press(screen.getByTestId('plan-option-challenge'));
   fireEvent.press(screen.getByTestId(`origin-option-${origin}`));
   fireEvent.press(screen.getByTestId(`age-option-${age}`));
   fireEvent.press(screen.getByTestId('dog-picker-confirm'));
@@ -131,7 +132,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'adopted', age_stage: 'young' },
+        profile: { breed: 'mutt', origin: 'adopted', age_stage: 'young', plan: 'challenge' },
       });
       expect(screen.getByText('734 912')).toBeTruthy();
       expect(screen.getByText(S.pinFor('Maja Mala'))).toBeTruthy();
@@ -393,6 +394,7 @@ describe('AddChildScreen', () => {
       await flush();
       fireEvent.press(screen.getByTestId('pet-option-new'));
       await flush();
+      fireEvent.press(screen.getByTestId('plan-option-challenge'));
     }
 
     it('shows breed, origin and age with honest one-line descriptions; confirm needs origin + age', async () => {
@@ -418,21 +420,52 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'bought', age_stage: 'senior' },
+        profile: { breed: 'mutt', origin: 'bought', age_stage: 'senior', plan: 'challenge' },
       });
     });
 
-    it('a premium breed is visible but locked: tapping explains, the mutt stays selected', async () => {
+    it('free plan (M3-09): the Border Collie is locked and explained, the mutt is sent with plan free', async () => {
       await openPicker();
+      fireEvent.press(screen.getByTestId('plan-option-free'));
       const collie = screen.getByTestId('breed-option-border_collie');
       expect(collie.props.accessibilityState).toEqual({ checked: false, disabled: true });
 
       fireEvent.press(collie);
-      expect(screen.getByTestId('breed-locked-note')).toHaveTextContent(PICKER.breedLockedNote);
+      expect(screen.getByTestId('breed-locked-note')).toHaveTextContent(PICKER.breedFreeNote);
       expect(screen.getByTestId('breed-option-mutt').props.accessibilityState).toEqual({ checked: true, disabled: false });
 
-      await pickDog('bought', 'puppy');
-      expect(generatePin).toHaveBeenCalledWith(expect.objectContaining({ profile: { breed: 'mutt', origin: 'bought', age_stage: 'puppy' } }));
+      fireEvent.press(screen.getByTestId('origin-option-bought'));
+      fireEvent.press(screen.getByTestId('age-option-puppy'));
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      await flush();
+      expect(generatePin).toHaveBeenCalledWith(expect.objectContaining({ profile: { breed: 'mutt', origin: 'bought', age_stage: 'puppy', plan: 'free' } }));
+    });
+
+    it('challenge plan (M3-09): the Border Collie can be chosen (also during the trial)', async () => {
+      await openPicker();
+      const collie = screen.getByTestId('breed-option-border_collie');
+      expect(collie.props.accessibilityState).toEqual({ checked: false, disabled: false });
+      fireEvent.press(collie);
+      fireEvent.press(screen.getByTestId('origin-option-bought'));
+      fireEvent.press(screen.getByTestId('age-option-puppy'));
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      await flush();
+      expect(generatePin).toHaveBeenCalledWith(
+        expect.objectContaining({ profile: { breed: 'border_collie', origin: 'bought', age_stage: 'puppy', plan: 'challenge' } }),
+      );
+    });
+
+    it('confirm needs a plan first (no default)', async () => {
+      renderWithQuery(<AddChildScreen onBack={jest.fn()} child={NEW_CHILD} />);
+      await flush();
+      fireEvent.press(screen.getByTestId('pet-option-new'));
+      await flush();
+      fireEvent.press(screen.getByTestId('origin-option-bought'));
+      fireEvent.press(screen.getByTestId('age-option-puppy'));
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      await flush();
+      expect(generatePin).not.toHaveBeenCalled();
+      expect(screen.getByText(PICKER.planMissing)).toBeTruthy();
     });
 
     // A paid breed can't be chosen in the UI yet (locked client-side), so the server-refusal round trip
@@ -458,7 +491,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenLastCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'adopted', age_stage: 'adult' },
+        profile: { breed: 'mutt', origin: 'adopted', age_stage: 'adult', plan: 'challenge' },
       });
       expect(screen.getByText('555 666')).toBeTruthy();
     });
@@ -477,7 +510,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenLastCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'bought', age_stage: 'adult' },
+        profile: { breed: 'mutt', origin: 'bought', age_stage: 'adult', plan: 'challenge' },
       });
       expect(screen.getByText('777 888')).toBeTruthy();
     });
@@ -490,7 +523,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'adopted', age_stage: 'puppy' },
+        profile: { breed: 'mutt', origin: 'adopted', age_stage: 'puppy', plan: 'challenge' },
       });
     });
 
@@ -508,7 +541,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenLastCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'bought', age_stage: 'senior' },
+        profile: { breed: 'mutt', origin: 'bought', age_stage: 'senior', plan: 'challenge' },
       });
     });
 
@@ -553,7 +586,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenLastCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'bought', age_stage: 'adult' },
+        profile: { breed: 'mutt', origin: 'bought', age_stage: 'adult', plan: 'challenge' },
       });
       expect(screen.getByText('888 999')).toBeTruthy();
       expect(screen.queryByTestId('pin-previous-choice')).toBeNull();
@@ -592,7 +625,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenNthCalledWith(2, {
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'bought', age_stage: 'young' },
+        profile: { breed: 'mutt', origin: 'bought', age_stage: 'young', plan: 'challenge' },
       });
     });
 

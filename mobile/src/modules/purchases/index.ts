@@ -1,6 +1,8 @@
 /** In-app purchases (M3-07) — see `purchases.ts` for the rules (parent only, server is the truth). */
 
 export {
+  CHALLENGE_PRODUCT_ID,
+  challengePackage,
   configurePurchases,
   ensureParentIdentified,
   fetchOfferings,
@@ -15,10 +17,10 @@ export {
   type PurchasesStatus,
   type RestoreOutcome,
 } from './purchases';
-export { ENTITLEMENTS_KEY, isEntitlementActive, readEntitlements } from './entitlements';
+export { BILLING_KEY, billingPet, readBilling, type Billing, type PurchaseTarget } from './billing';
 export { purchaseOutcomeMessage, restoreOutcomeMessage } from './messages';
 export {
-  useEntitlements,
+  useBilling,
   useOfferings,
   usePurchasePackage,
   usePurchasesSession,

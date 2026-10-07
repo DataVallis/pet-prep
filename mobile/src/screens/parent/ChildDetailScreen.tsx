@@ -281,6 +281,11 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
             </Card>
           ) : (
             <>
+              {(data as { history_limited?: boolean }).history_limited === true && (
+                <View style={styles.historyLimited} testID="report-history-limited">
+                  <Text style={styles.body}>{t('paywall:history.limited')}</Text>
+                </View>
+              )}
               <Card testID={`report-${data.days}`}>
                 {data.traffic_light.reasons.map((r) => (
                   <Text key={r} style={styles.body}>
@@ -395,6 +400,7 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
 }
 
 const styles = StyleSheet.create({
+  historyLimited: { padding: 12, borderRadius: 12, backgroundColor: palette.mintSoft, borderWidth: 1, borderColor: palette.mintBorder },
   root: { flex: 1, backgroundColor: C.bg },
   flex: { flex: 1 },
   right: { textAlign: 'right' },

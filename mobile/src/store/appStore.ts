@@ -5,6 +5,7 @@
  * steps) is server state in TanStack Query (`useChildPet`, M1-13), not here.
  */
 
+import { isPaymentRequired, readPetPlan } from '@/modules/plan/plan';
 import { create } from 'zustand';
 import type { Pet, PetUpdatedBroadcast } from '@/types';
 import type { VideoState } from '@/modules/petMedia/petMedia';
@@ -26,7 +27,7 @@ export type PairingStatus = 'unpaired' | 'pairing' | 'paired' | 'error';
 
 export type WebSocketStatus = 'disconnected' | 'connecting' | 'connected' | 'reconnecting';
 
-export type LockState = 'none' | 'hard_stop' | 'illness' | 'game_over' | 'inactive';
+export type LockState = 'none' | 'hard_stop' | 'payment_required' | 'illness' | 'game_over' | 'inactive';
 
 /** Details for the lock overlay (e.g. "do 18:30" at the vet). */
 export interface LockDetails {
@@ -68,7 +69,7 @@ export function petWithContractFlag(pet: Pet | null, awaitingContract?: boolean 
 
 /**
  * Lock state from a raw pet snapshot (login / session restore, M1-16), in the server's
- * priority: game over › inactive › hard stop › illness. The HUD replaces it with the
+ * priority: game over › inactive › hard stop › payment (M3-11) › illness. The HUD replaces it with the
  * per-child lock from `GET /api/child/pet` as soon as that arrives.
  */
 export function lockStateFromPet(pet: Pet | null, now: number = Date.now()): LockState {
@@ -76,6 +77,7 @@ export function lockStateFromPet(pet: Pet | null, now: number = Date.now()): Loc
   if (pet.is_game_over) return 'game_over';
   if (pet.is_active === false) return 'inactive';
   if (pet.is_hard_stopped === true) return 'hard_stop';
+  if (isPaymentRequired(readPetPlan(pet.plan))) return 'payment_required';
   if (pet.illness_until && Date.parse(pet.illness_until) > now) return 'illness';
   return 'none';
 }
@@ -85,6 +87,7 @@ export function lockStateFromBroadcast(broadcast: PetUpdatedBroadcast): LockStat
   if (broadcast.is_game_over) return 'game_over';
   if (!broadcast.is_active) return 'inactive';
   if (broadcast.is_hard_stopped) return 'hard_stop';
+  if (isPaymentRequired(readPetPlan(broadcast.plan))) return 'payment_required';
   if (broadcast.is_ill) return 'illness';
   return 'none';
 }

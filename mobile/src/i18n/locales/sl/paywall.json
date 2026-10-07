@@ -69,5 +69,8 @@
     "noCredit": "Ni kupljenega izziva, ki bi ga lahko uporabili.",
     "refused": "Ta pes izziva ne potrebuje (brezplačni načrt ali je že plačan).",
     "activateFailed": "Izziva ni bilo mogoče odkleniti. Preverite povezavo in poskusite znova."
+  },
+  "history": {
+    "limited": "Brezplačni načrt: zgodovina kaže zadnjih 7 dni. 12-tedenski izziv hrani celotno zgodovino."
   }
 }

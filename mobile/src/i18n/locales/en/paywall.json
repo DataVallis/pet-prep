@@ -65,5 +65,8 @@
     "noCredit": "There is no purchased challenge to use.",
     "refused": "This dog doesn't need a challenge (free plan or already paid).",
     "activateFailed": "The challenge couldn't be unlocked. Check your connection and try again."
+  },
+  "history": {
+    "limited": "Free plan: the history shows the last 7 days. The 12-week challenge keeps the full history."
   }
 }

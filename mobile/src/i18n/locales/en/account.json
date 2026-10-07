@@ -33,7 +33,8 @@
       "throttled": "Too many wrong passwords. Please try again in 15 minutes.",
       "invalid": "Enter your password and confirm the deletion.",
       "unknown": "We don't know whether the deletion went through — check by signing in again.",
-      "server": "Deleting didn't work. Nothing was deleted — please try again."
+      "server": "Deleting didn't work. Nothing was deleted — please try again.",
+      "paid_challenge": "This deletion removes a dog whose 12-week challenge was purchased. Tick the box to confirm that the purchase is used up."
     },
     "exportErrors": {
       "too_large": "There's too much data to export in the app. Please contact support.",
@@ -48,6 +49,8 @@
     "passwordPlaceholder": "Your sign-in password",
     "confirmLabel": "To confirm, type {{word}}",
     "cancel": "Cancel",
-    "irreversible": "Deletion is immediate and can't be undone."
+    "irreversible": "Deletion is immediate and can't be undone.",
+    "paidWarning": "A 12-week challenge was purchased for this dog. If you delete it, the purchase is used up — a new dog's challenge has to be bought again.",
+    "paidAck": "I understand: the purchase is used up and is not refunded."
   }
 }

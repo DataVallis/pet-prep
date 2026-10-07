@@ -157,7 +157,7 @@ describe('deleteAccountAndLogout', () => {
     });
 
     await expect(deleteAccountAndLogout('Geslo123', del, signOut)).resolves.toEqual(RESULT);
-    expect(del).toHaveBeenCalledWith('Geslo123');
+    expect(del).toHaveBeenCalledWith('Geslo123', false);
     expect(signOut).toHaveBeenCalledWith({ revoke: false });
     expect(order).toEqual(['delete', 'logout']);
   });

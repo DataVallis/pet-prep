@@ -27,8 +27,9 @@ export function useCreateChild() {
 /** M2-08: delete a child profile (password re-entry). Refreshes the family afterwards. */
 export function useDeleteChild() {
   const queryClient = useQueryClient();
-  return useMutation<DeleteChildResponse, unknown, { childId: number; password: string }>({
-    mutationFn: ({ childId, password }) => api.deleteChild(childId, password, deleteConfirmWord()),
+  return useMutation<DeleteChildResponse, unknown, { childId: number; password: string; acknowledgePaidChallenge?: boolean }>({
+    mutationFn: ({ childId, password, acknowledgePaidChallenge }) =>
+      api.deleteChild(childId, password, deleteConfirmWord(), acknowledgePaidChallenge === true),
     retry: false,
     // Also after a failure: without an answer the deletion may have happened (PR #29 m6).
     onSettled: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),

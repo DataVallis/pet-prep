@@ -12,6 +12,7 @@
  * keeps a newer broadcast over an older poll.
  */
 
+import { isPaymentRequired, readPetPlan, type PetPlan } from '@/modules/plan/plan';
 import type { ChildPetState } from '@/api/client';
 import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
 import type { LockState } from '@/store/appStore';
@@ -29,7 +30,7 @@ import {
 } from '@/modules/behaviour/behaviour';
 import { readChildTraining, readPetTraining, type ChildTraining } from '@/modules/training/training';
 
-export type LockReason = 'game_over' | 'inactive' | 'hard_stopped' | 'contract_required' | 'ill';
+export type LockReason = 'game_over' | 'inactive' | 'hard_stopped' | 'payment_required' | 'contract_required' | 'ill';
 
 export interface TimeWindow {
   start: string;
@@ -72,6 +73,8 @@ export interface ChildPetView {
     media: PetMediaInfo;
     /** M5-R01 profile (stage, age, origin, next stage); null for a legacy pet. */
     profile: PetProfileInfo | null;
+    /** M3-11: free mutt sandbox or the challenge (trial / payment_required / paid); legacy → paid. */
+    plan: PetPlan;
   };
   lock: { is_locked: boolean; reason: LockReason | null; until: string | null };
   /** IANA zone of the family (all wall-clock rules). */
@@ -127,7 +130,7 @@ export interface ChildPetView {
 
 const BREEDS: readonly BreedType[] = ['mutt', 'border_collie'];
 const PET_STATES: readonly PetState[] = ['idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing'];
-const LOCK_REASONS: readonly LockReason[] = ['game_over', 'inactive', 'hard_stopped', 'contract_required', 'ill'];
+const LOCK_REASONS: readonly LockReason[] = ['game_over', 'inactive', 'hard_stopped', 'payment_required', 'contract_required', 'ill'];
 
 function bool(value: unknown): boolean {
   return value === true || value === 'true' || value === 1 || value === '1';
@@ -215,6 +218,7 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       is_ill: bool(p.is_ill),
       illness_until: isoOrNull(p.illness_until),
       is_game_over: bool(p.is_game_over),
+      plan: readPetPlan(p.plan),
       certificate_eligible: bool(p.certificate_eligible),
       current_video_url: isoOrNull(p.current_video_url),
       reference_image_url: isoOrNull(p.reference_image_url),
@@ -277,6 +281,7 @@ export function lockFromFlags(pet: ChildPetView['pet'], previous?: ChildPetView[
   if (pet.is_game_over) reason = 'game_over';
   else if (!pet.is_active) reason = 'inactive';
   else if (pet.is_hard_stopped) reason = 'hard_stopped';
+  else if (isPaymentRequired(pet.plan)) reason = 'payment_required';
   else if (pet.awaiting_contract) reason = 'contract_required';
   else if (pet.is_ill) reason = 'ill';
   let until: string | null = null;
@@ -345,6 +350,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     is_ill: b.is_ill,
     illness_until: b.illness_until,
     is_game_over: b.is_game_over,
+    plan: b.plan !== undefined ? readPetPlan(b.plan) : view.pet.plan,
     virtual_age_months: b.virtual_age_months,
     born_at: b.born_at !== undefined ? b.born_at : view.pet.born_at,
     // The broadcast flag is pet-level: a child who joined a born pet still has to sign
@@ -552,6 +558,8 @@ export function lockStateFromView(view: ChildPetView): LockState {
       return 'inactive';
     case 'hard_stopped':
       return 'hard_stop';
+    case 'payment_required':
+      return 'payment_required';
     case 'ill':
       return 'illness';
     default:

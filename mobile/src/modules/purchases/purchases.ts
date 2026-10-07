@@ -13,12 +13,12 @@
  * - `logout()` calls {@link resetPurchasesIdentity} → `Purchases.logOut()` (bounded).
  * - Missing public SDK key, Expo Go (no native module) or web → `disabled`: no SDK call,
  *   no network, every action answers `unavailable`.
- * - The server is the source of truth for what is unlocked (`GET /api/parent/entitlements`);
+ * - The server is the source of truth for what is unlocked (`GET /api/parent/billing`: credits + plan per pet);
  *   `customerInfo` updates only invalidate that query, deduplicated by content so a burst
  *   of identical SDK events causes at most one refetch (2026-10-06 push-loop lesson: no
  *   effect may loop on state it changes).
  * - Everything that touches the network is single-flight and bounded (identify on demand
- *   only, logOut ≤ 2 s, entitlement polling 5 × 2 s).
+ *   only, logOut ≤ 2 s, billing polling 5 × 2 s).
  */
 
 import Constants, { ExecutionEnvironment } from 'expo-constants';
@@ -30,11 +30,11 @@ import Purchases, {
   type PurchasesPackage,
 } from 'react-native-purchases';
 
-import type { Entitlement } from '@/api/client';
 import { queryClient } from '@/api/queryClient';
 import { ENV } from '@/config/env';
 import { useAppStore } from '@/store/appStore';
-import { ENTITLEMENTS_KEY, pollServerEntitlement } from './entitlements';
+import { api, ApiError } from '@/api/client';
+import { BILLING_KEY, billingPet, fetchBilling, pollBilling, type Billing, type PurchaseTarget } from './billing';
 
 // ──────────────────────────────────────────────────────────────
 //  Status (observable, for hooks)
@@ -148,7 +148,7 @@ function infoSignature(info: CustomerInfo): string {
 }
 
 /**
- * SDK `customerInfo` listener: the store state changed → re-read the server entitlements.
+ * SDK `customerInfo` listener: the store state changed → re-read the server billing state.
  * Identical updates (the SDK repeats them on foreground, logIn, …) are ignored; the very
  * first one of an identity only matters if it already carries something active.
  */
@@ -159,7 +159,7 @@ export function handleCustomerInfo(info: CustomerInfo): void {
   if (signature === previous) return;
   lastInfoSignature = signature;
   if (previous === null && activeEntitlementIds(info).length === 0) return;
-  void queryClient.invalidateQueries({ queryKey: ENTITLEMENTS_KEY });
+  void queryClient.invalidateQueries({ queryKey: BILLING_KEY });
 }
 
 function signedInParentId(): string | null {
@@ -300,6 +300,15 @@ export class PurchasesUnavailableError extends Error {
   }
 }
 
+/** RevenueCat product of the 12-week challenge (PAYMENTS_SPEC P1, consumable). */
+export const CHALLENGE_PRODUCT_ID = 'petprep_challenge_12w';
+
+/** The challenge package of the current offering (by product id, else its first package). */
+export function challengePackage(offerings: PurchasesOfferings | undefined | null): PurchasesPackage | null {
+  const packages = offerings?.current?.availablePackages ?? [];
+  return packages.find((p) => p.product.identifier === CHALLENGE_PRODUCT_ID) ?? packages[0] ?? null;
+}
+
 /** Store offerings for the identified parent (throws {@link PurchasesUnavailableError} otherwise). */
 export async function fetchOfferings(): Promise<PurchasesOfferings> {
   const blocked = await blockedReason();
@@ -307,16 +316,31 @@ export async function fetchOfferings(): Promise<PurchasesOfferings> {
   return Purchases.getOfferings();
 }
 
-function writeEntitlementsCache(list: Entitlement[]): void {
-  queryClient.setQueryData(ENTITLEMENTS_KEY, list);
+function writeBillingCache(billing: Billing): void {
+  queryClient.setQueryData(BILLING_KEY, billing);
 }
 
 /**
- * Buy one package (parent only). On success the server entitlement is polled a bounded
+ * Assign a landed purchase to the pet it was bought for (PAYMENTS_SPEC: one purchase = one
+ * dog). Idempotent on the server (`already_active` when the webhook auto-assigned it); one
+ * call, no retry loop — a 409 `no_credit` means the webhook is still on its way.
+ */
+async function activateFor(petId: number): Promise<boolean> {
+  try {
+    await api.activateChallenge(petId);
+    return true;
+  } catch (error) {
+    if (error instanceof ApiError && error.status === 422) return true; // already paid / not a challenge pet
+    return false;
+  }
+}
+
+/**
+ * Buy one package (parent only). On success the server billing state is polled a bounded
  * number of times, because the RevenueCat webhook reaches the server asynchronously.
  * A second call while one is running returns the same promise (double tap).
  */
-export function purchasePackage(pkg: PurchasesPackage): Promise<PurchaseOutcome> {
+export function purchasePackage(pkg: PurchasesPackage, target: PurchaseTarget = { petId: null, baselineCredits: 0 }): Promise<PurchaseOutcome> {
   if (purchaseInFlight) return purchaseInFlight;
   const promise = (async (): Promise<PurchaseOutcome> => {
     const blocked = await blockedReason();
@@ -329,12 +353,22 @@ export function purchasePackage(pkg: PurchasesPackage): Promise<PurchaseOutcome>
       return { status: mapPurchaseError(error) };
     }
     if (gen !== generation) return { status: 'success', serverConfirmed: false };
-    const serverConfirmed = await pollServerEntitlement({
-      keys: activeEntitlementIds(customerInfo),
-      onRead: writeEntitlementsCache,
+    void customerInfo;
+    let serverConfirmed = await pollBilling({
+      target,
+      onRead: writeBillingCache,
       shouldContinue: () => gen === generation,
     });
-    if (gen === generation && !serverConfirmed) void queryClient.invalidateQueries({ queryKey: ENTITLEMENTS_KEY });
+    // The credit landed but the webhook did not auto-assign it (several dogs waiting):
+    // assign it to the dog the parent bought for, then refresh once.
+    if (serverConfirmed && target.petId !== null && gen === generation) {
+      const cached = queryClient.getQueryData<Billing>(BILLING_KEY);
+      if (billingPet(cached, target.petId)?.status !== 'paid') {
+        serverConfirmed = await activateFor(target.petId);
+        if (gen === generation) writeBillingCache(await fetchBilling().catch(() => cached ?? { credits_available: 0, pets: [] }));
+      }
+    }
+    if (gen === generation && !serverConfirmed) void queryClient.invalidateQueries({ queryKey: BILLING_KEY });
     return { status: 'success', serverConfirmed };
   })().finally(() => {
     if (purchaseInFlight === promise) purchaseInFlight = null;
@@ -355,8 +389,10 @@ export async function restorePurchases(): Promise<RestoreOutcome> {
     const mapped = mapPurchaseError(error);
     return { status: mapped === 'network' || mapped === 'not_allowed' || mapped === 'unavailable' ? mapped : 'store_problem' };
   }
-  if (gen === generation) void queryClient.invalidateQueries({ queryKey: ENTITLEMENTS_KEY });
-  return { status: activeEntitlementIds(info).length > 0 ? 'restored' : 'nothing' };
+  if (gen === generation) void queryClient.invalidateQueries({ queryKey: BILLING_KEY });
+  // The challenge is a consumable: the store reports past purchases as transactions; the
+  // server (credits) decides what is still usable.
+  return { status: activeEntitlementIds(info).length > 0 || (info.nonSubscriptionTransactions?.length ?? 0) > 0 ? 'restored' : 'nothing' };
 }
 
 /** Test hook: back to a fresh app run. */

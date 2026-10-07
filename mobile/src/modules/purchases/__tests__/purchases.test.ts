@@ -5,7 +5,7 @@ import { queryClient } from '@/api/queryClient';
 import { i18n } from '@/i18n';
 import { logout } from '@/modules/session/logout';
 import { useAppStore } from '@/store/appStore';
-import { ENTITLEMENTS_KEY, isEntitlementActive, pollServerEntitlement, readEntitlements } from '../entitlements';
+import { BILLING_KEY, pollBilling, purchaseLanded, readBilling, type Billing } from '../billing';
 import { purchaseOutcomeMessage, restoreOutcomeMessage } from '../messages';
 import {
   ensureParentIdentified,
@@ -31,11 +31,12 @@ const { makeCustomerInfo, makePurchasesError, PURCHASES_ERROR_CODE } = jest.requ
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
-  return { ...actual, api: { ...actual.api, logout: jest.fn(() => Promise.resolve({ message: 'ok' })), getEntitlements: jest.fn() } };
+  return { ...actual, api: { ...actual.api, logout: jest.fn(() => Promise.resolve({ message: 'ok' })), getBilling: jest.fn(), activateChallenge: jest.fn() } };
 });
 
 const sdk = Purchases as unknown as Record<string, jest.Mock>;
-const getEntitlements = api.getEntitlements as jest.Mock;
+const getBilling = api.getBilling as jest.Mock;
+const activateChallenge = api.activateChallenge as jest.Mock;
 
 const KEYS = { REVENUECAT_IOS_KEY: 'appl_test', REVENUECAT_ANDROID_KEY: 'goog_test' };
 const OPTS: ConfigureOptions = { platform: 'ios', keys: KEYS, executionEnvironment: 'bare' };
@@ -49,8 +50,18 @@ function signIn(role: 'parent' | 'child', id = 7) {
   });
 }
 
-const active = (key = 'challenge') => ({ entitlements: [{ key, active: true, source: 'purchase', store: 'app_store', granted_at: null, expires_at: null }] });
-const inactive = { entitlements: [] };
+const pet = (status: 'trial' | 'payment_required' | 'paid') => ({
+  pet_id: 7,
+  plan: 'challenge',
+  status,
+  trial_ends_at: '2026-10-14T12:00:00+02:00',
+  paid_at: status === 'paid' ? '2026-10-07T12:00:00+02:00' : null,
+  trial_available: true,
+  deletion_loses_purchase: status === 'paid',
+});
+const active = () => ({ credits_available: 0, pets: [pet('paid')] });
+const inactive = { credits_available: 0, pets: [pet('trial')] };
+const TARGET = { petId: 7, baselineCredits: 0 };
 
 beforeEach(() => {
   jest.clearAllMocks();
@@ -91,7 +102,7 @@ describe('missing key', () => {
     await logout();
 
     for (const fn of Object.values(sdk)) if (jest.isMockFunction(fn)) expect(fn).not.toHaveBeenCalled();
-    expect(getEntitlements).not.toHaveBeenCalled();
+    expect(getBilling).not.toHaveBeenCalled();
   });
 
   it('a throwing configure (native module missing) also just disables', async () => {
@@ -241,45 +252,60 @@ describe('purchasePackage', () => {
     await ensureParentIdentified(OPTS);
   });
 
-  it('success: polls the server until the entitlement is active (bounded)', async () => {
+  it('success: polls the server billing until the dog is paid (bounded)', async () => {
     jest.useFakeTimers();
     sdk.purchasePackage.mockResolvedValueOnce({ productIdentifier: 'p', customerInfo: makeCustomerInfo(['challenge']), transaction: {} });
-    getEntitlements.mockResolvedValueOnce(inactive).mockRejectedValueOnce(new Error('offline')).mockResolvedValueOnce(active());
+    getBilling.mockResolvedValueOnce(inactive).mockRejectedValueOnce(new Error('offline')).mockResolvedValueOnce(active());
 
-    const result = purchasePackage(PKG);
+    const result = purchasePackage(PKG, TARGET);
     await jest.advanceTimersByTimeAsync(10_000);
     await expect(result).resolves.toEqual({ status: 'success', serverConfirmed: true });
-    expect(getEntitlements).toHaveBeenCalledTimes(3);
-    expect(isEntitlementActive(queryClient.getQueryData(ENTITLEMENTS_KEY), 'challenge')).toBe(true);
+    expect(getBilling).toHaveBeenCalledTimes(3);
+    expect(queryClient.getQueryData<Billing>(BILLING_KEY)?.pets[0].status).toBe('paid');
+    expect(activateChallenge).not.toHaveBeenCalled(); // the webhook auto-assigned it
+  });
+
+  it('success: a new credit that was not auto-assigned is activated for the dog bought for', async () => {
+    jest.useFakeTimers();
+    sdk.purchasePackage.mockResolvedValueOnce({ productIdentifier: 'p', customerInfo: makeCustomerInfo(), transaction: {} });
+    getBilling.mockResolvedValueOnce({ credits_available: 1, pets: [pet('trial')] }).mockResolvedValueOnce(active());
+    activateChallenge.mockResolvedValueOnce({ status: 'activated' });
+
+    const result = purchasePackage(PKG, TARGET);
+    await jest.advanceTimersByTimeAsync(10_000);
+    await expect(result).resolves.toEqual({ status: 'success', serverConfirmed: true });
+    expect(activateChallenge).toHaveBeenCalledTimes(1);
+    expect(activateChallenge).toHaveBeenCalledWith(7);
+    expect(queryClient.getQueryData<Billing>(BILLING_KEY)?.pets[0].status).toBe('paid');
   });
 
   it('success: gives up after 5 reads × 2 s when the webhook is late', async () => {
     jest.useFakeTimers();
     sdk.purchasePackage.mockResolvedValueOnce({ productIdentifier: 'p', customerInfo: makeCustomerInfo(['challenge']), transaction: {} });
-    getEntitlements.mockResolvedValue(inactive);
+    getBilling.mockResolvedValue(inactive);
     const invalidate = jest.spyOn(queryClient, 'invalidateQueries');
 
-    const result = purchasePackage(PKG);
+    const result = purchasePackage(PKG, TARGET);
     await jest.advanceTimersByTimeAsync(60_000);
     await expect(result).resolves.toEqual({ status: 'success', serverConfirmed: false });
-    expect(getEntitlements).toHaveBeenCalledTimes(5);
-    expect(invalidate).toHaveBeenCalledWith({ queryKey: ENTITLEMENTS_KEY });
+    expect(getBilling).toHaveBeenCalledTimes(5);
+    expect(invalidate).toHaveBeenCalledWith({ queryKey: BILLING_KEY });
     // Nothing keeps polling (the only timer left is TanStack's cache GC of the written list).
     await jest.advanceTimersByTimeAsync(10 * 60_000);
-    expect(getEntitlements).toHaveBeenCalledTimes(5);
+    expect(getBilling).toHaveBeenCalledTimes(5);
   });
 
   it('logout stops the polling', async () => {
     jest.useFakeTimers();
     sdk.purchasePackage.mockResolvedValueOnce({ productIdentifier: 'p', customerInfo: makeCustomerInfo(['challenge']), transaction: {} });
-    getEntitlements.mockResolvedValue(inactive);
-    const result = purchasePackage(PKG);
+    getBilling.mockResolvedValue(inactive);
+    const result = purchasePackage(PKG, TARGET);
     await jest.advanceTimersByTimeAsync(0);
-    expect(getEntitlements).toHaveBeenCalledTimes(1);
+    expect(getBilling).toHaveBeenCalledTimes(1);
     await resetPurchasesIdentity();
     await jest.advanceTimersByTimeAsync(20_000);
     await expect(result).resolves.toEqual({ status: 'success', serverConfirmed: false });
-    expect(getEntitlements).toHaveBeenCalledTimes(1);
+    expect(getBilling).toHaveBeenCalledTimes(1);
   });
 
   it.each([
@@ -292,7 +318,7 @@ describe('purchasePackage', () => {
   ])('store error %s → %s, no server polling', async (name, expected) => {
     sdk.purchasePackage.mockRejectedValueOnce(makePurchasesError(PURCHASES_ERROR_CODE[name]));
     await expect(purchasePackage(PKG)).resolves.toEqual({ status: expected });
-    expect(getEntitlements).not.toHaveBeenCalled();
+    expect(getBilling).not.toHaveBeenCalled();
   });
 
   it('a double tap starts one purchase', async () => {
@@ -311,12 +337,12 @@ describe('restorePurchases', () => {
     await ensureParentIdentified(OPTS);
   });
 
-  it('restored / nothing, and re-reads the server entitlements', async () => {
+  it('restored / nothing, and re-reads the server billing', async () => {
     const invalidate = jest.spyOn(queryClient, 'invalidateQueries');
     sdk.restorePurchases.mockResolvedValueOnce(makeCustomerInfo(['challenge']));
     await expect(restorePurchases()).resolves.toEqual({ status: 'restored' });
     await expect(restorePurchases()).resolves.toEqual({ status: 'nothing' });
-    expect(invalidate).toHaveBeenCalledWith({ queryKey: ENTITLEMENTS_KEY });
+    expect(invalidate).toHaveBeenCalledWith({ queryKey: BILLING_KEY });
   });
 
   it('maps errors (a cancel-like error is a store problem)', async () => {
@@ -328,7 +354,7 @@ describe('restorePurchases', () => {
 });
 
 describe('customerInfo listener', () => {
-  it('invalidates the server entitlements only when the content changes', async () => {
+  it('invalidates the server billing only when the content changes', async () => {
     signIn('parent', 7);
     await ensureParentIdentified(OPTS);
     const listener = sdk.addCustomerInfoUpdateListener.mock.calls[0][0] as typeof handleCustomerInfo;
@@ -338,7 +364,7 @@ describe('customerInfo listener', () => {
     expect(invalidate).not.toHaveBeenCalled();
     for (let i = 0; i < 50; i += 1) listener(makeCustomerInfo(['challenge'], ['petprep_challenge_12w']) as never);
     expect(invalidate).toHaveBeenCalledTimes(1);
-    expect(invalidate).toHaveBeenCalledWith({ queryKey: ENTITLEMENTS_KEY });
+    expect(invalidate).toHaveBeenCalledWith({ queryKey: BILLING_KEY });
     // Refetching entitlements doesn't feed back into the SDK: no further events, no loop.
     listener(makeCustomerInfo() as never);
     expect(invalidate).toHaveBeenCalledTimes(2);
@@ -351,25 +377,26 @@ describe('customerInfo listener', () => {
   });
 });
 
-describe('entitlements', () => {
-  it('reads loose bodies safely (locked by default)', () => {
-    expect(readEntitlements(null)).toEqual([]);
-    expect(readEntitlements({ entitlements: 'x' })).toEqual([]);
-    expect(readEntitlements({ entitlements: [{ key: 'challenge', active: 1 }, { active: true }, null] })).toEqual([
-      { key: 'challenge', active: false, source: null, store: null, granted_at: null, expires_at: null },
-    ]);
+describe('billing', () => {
+  it('reads loose bodies safely (nothing to buy by default)', () => {
+    expect(readBilling(null)).toEqual({ credits_available: 0, pets: [] });
+    expect(readBilling({ credits_available: -2, pets: 'x' })).toEqual({ credits_available: 0, pets: [] });
+    expect(readBilling({ credits_available: 1.7, pets: [{ pet_id: 3, plan: 'free', status: 'trial', trial_available: true }, { plan: 'challenge' }] })).toEqual({
+      credits_available: 1,
+      pets: [{ pet_id: 3, plan: 'free', status: null, trial_ends_at: null, paid_at: null, trial_available: null, deletion_loses_purchase: false }],
+    });
   });
 
-  it('treats a past expires_at as inactive', () => {
-    const now = Date.parse('2026-10-07T12:00:00Z');
-    const list = readEntitlements({ entitlements: [{ key: 'challenge', active: true, expires_at: '2026-10-07T11:00:00Z' }] });
-    expect(isEntitlementActive(list, 'challenge', now)).toBe(false);
-    expect(isEntitlementActive(list, 'challenge', Date.parse('2026-10-07T10:00:00Z'))).toBe(true);
+  it('a purchase has landed when the dog is paid or a new credit exists', () => {
+    expect(purchaseLanded(readBilling(active()), TARGET)).toBe(true);
+    expect(purchaseLanded(readBilling(inactive), TARGET)).toBe(false);
+    expect(purchaseLanded(readBilling({ credits_available: 1, pets: [pet('trial')] }), TARGET)).toBe(true);
+    expect(purchaseLanded(readBilling({ credits_available: 1, pets: [] }), { petId: null, baselineCredits: 1 })).toBe(false);
   });
 
-  it('pollServerEntitlement never exceeds its attempts', async () => {
+  it('pollBilling never exceeds its attempts', async () => {
     const fetch = jest.fn(() => Promise.reject(new Error('500')));
-    await expect(pollServerEntitlement({ keys: ['challenge'], fetch, intervalMs: 0, attempts: 3 })).resolves.toBe(false);
+    await expect(pollBilling({ target: TARGET, fetch, intervalMs: 0, attempts: 3 })).resolves.toBe(false);
     expect(fetch).toHaveBeenCalledTimes(3);
   });
 });

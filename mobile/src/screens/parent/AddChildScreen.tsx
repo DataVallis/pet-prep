@@ -21,7 +21,8 @@ import { CheckCircle, ChevronLeft, ChevronRight, Dog, KeyRound, Lock, PawPrint, 
 
 import type { ChildPinResponse, NewPetProfile, PetBreed, PinLoginMode } from '@/api/client';
 import DogPickerStep from '@/components/parent/DogPickerStep';
-import { INITIAL_PICKER_CHOICE, PREMIUM_BREEDS, type PickerChoice } from '@/modules/petProfile/picker';
+import { INITIAL_PICKER_CHOICE, type PickerChoice } from '@/modules/petProfile/picker';
+import { challengePackage, useOfferings } from '@/modules/purchases';
 import { useCreateChild } from '@/hooks/queries/useFamilyMutations';
 import { useGeneratePin } from '@/hooks/queries/useGeneratePin';
 import { useParentDashboard } from '@/hooks/queries/useParentDashboard';
@@ -110,7 +111,10 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
   /** M5-R04: the "Izberi kužka" choice of a new pet (null = join / re-login → no profile). */
   const [newPetProfile, setNewPetProfile] = useState<NewPetProfile | null>(null);
   const [pickerChoice, setPickerChoice] = useState<PickerChoice>(INITIAL_PICKER_CHOICE);
-  const [lockedBreeds, setLockedBreeds] = useState<readonly PetBreed[]>(PREMIUM_BREEDS);
+  /** Breeds the server refused for the current choice (422 `breed_locked`); plan rules live in the picker. */
+  const [lockedBreeds, setLockedBreeds] = useState<readonly PetBreed[]>([]);
+  const offerings = useOfferings();
+  const challengePrice = challengePackage(offerings.data)?.product.priceString ?? null;
   const [pickerNotice, setPickerNotice] = useState<string | null>(null);
   // Lives here, not in PinStep: "Spremeni kužka" / "Nazaj" unmount the PIN step, but the server's
   // PIN stays valid until a new one succeeds — so it is shown again (or reused for the same choice).
@@ -149,7 +153,8 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
         <DogPickerStep
           childName={target.name}
           initial={pickerChoice}
-          lockedBreeds={lockedBreeds}
+          serverLockedBreeds={lockedBreeds}
+          challengePrice={challengePrice}
           notice={pickerNotice}
           onBack={(choice) => {
             setPickerChoice(choice);
@@ -177,10 +182,8 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
           }}
           onProfileRejected={(kind) => {
             // The server refused the choice (premium breed / validation): back to the picker.
-            // The free mutt is never locked (PRODUCT_SPEC §3) — only a paid breed is added.
-            // Unreachable from the UI today: paid breeds are locked in the picker (PREMIUM_BREEDS)
-            // until purchase unlock lands, so a paid choice never reaches the server yet; kept
-            // for when an unlocked breed is refused (e.g. an expired purchase).
+            // The free mutt is never locked (PRODUCT_SPEC §3) — only a paid breed is added
+            // (M3-11: premium breeds need the challenge plan; the picker already enforces it).
             if (kind === 'breed_locked' && newPetProfile && newPetProfile.breed !== 'mutt') {
               const refused = newPetProfile.breed;
               setLockedBreeds((current) => (current.includes(refused) ? current : [...current, refused]));
@@ -511,6 +514,12 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
             ) : (
               <Text style={styles.countdown} testID="pin-countdown">
                 {S.validFor(formatCountdown(remaining))}
+              </Text>
+            )}
+            {/* P7: one free trial per child — this child already had theirs. */}
+            {(pin as { trial_available?: boolean | null }).trial_available === false && (
+              <Text style={styles.muted} testID="pin-no-trial">
+                {t('pet:picker.noTrial', { name: target.name })}
               </Text>
             )}
           </>

@@ -35,6 +35,8 @@ function readBillingPet(raw: unknown): BillingPet | null {
     status: plan === 'free' ? null : (STATUSES.find((s) => s === o.status) ?? null),
     trial_ends_at: plan === 'free' ? null : strOrNull(o.trial_ends_at),
     paid_at: plan === 'free' ? null : strOrNull(o.paid_at),
+    trial_available: plan === 'free' || typeof o.trial_available !== 'boolean' ? null : o.trial_available,
+    deletion_loses_purchase: o.deletion_loses_purchase === true,
   };
 }
 

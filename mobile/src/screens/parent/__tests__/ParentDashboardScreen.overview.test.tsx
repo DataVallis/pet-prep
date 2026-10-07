@@ -56,14 +56,14 @@ describe('ParentDashboardScreen — family overview (M2-05)', () => {
     useAppStore.setState(useAppStore.getInitialState(), true);
   });
 
-  it('hides the simulated "Pasme" paywall tab until payments exist (David 2026-10-07)', async () => {
+  it('has only the Pregled and Nadzor tabs (the simulated "Pasme" tab is gone, M3-09)', async () => {
     getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [PET7]));
     renderWithQuery(<ParentDashboardScreen />);
     await flush();
 
     expect(screen.getByText(DASHBOARD_STRINGS.tabs.dashboard)).toBeTruthy();
     expect(screen.getByText(DASHBOARD_STRINGS.tabs.controls)).toBeTruthy();
-    expect(screen.queryByText(DASHBOARD_STRINGS.tabs.breeds)).toBeNull();
+    expect(screen.queryByTestId('tab-breeds')).toBeNull();
   });
 
   it('green child: Care Score, "x od y rutin", week of 12, today, 7-day bars, pet metrics — no mock data', async () => {

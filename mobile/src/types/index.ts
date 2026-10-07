@@ -60,6 +60,8 @@ export interface Pet {
   is_game_over: boolean;
   /** Parent's pause (raw model column; M1-16 derives the lock from it on restore). */
   is_hard_stopped?: boolean;
+  /** M3-11 plan (free / challenge + status); read with `readPetPlan`. */
+  plan?: unknown;
   certificate_eligible: boolean;
 }
 
@@ -98,6 +100,8 @@ export interface PetUpdatedBroadcast {
   illness_until: string | null;
   is_game_over: boolean;
   is_hard_stopped: boolean;
+  /** M3-11 plan (free / challenge + status); read with `readPetPlan`. Missing on older servers. */
+  plan?: unknown;
   /** false once the contract is signed (birth arrives as event_type `signed_contract`, M1-07b). */
   awaiting_contract?: boolean;
   /** null until the contract is signed (M1-07b). */

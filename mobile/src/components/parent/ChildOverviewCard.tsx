@@ -39,6 +39,7 @@ import {
   type DayRow,
 } from '@/modules/family/scoring';
 import PetThumbnail from '@/components/parent/PetThumbnail';
+import PlanBadge from '@/components/parent/PlanBadge';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 import { fonts, palette, tightTracking } from '@/theme';
@@ -103,6 +104,7 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
         <View style={styles.flex}>
           <Text style={styles.name}>{child.name}</Text>
           {pet && <Text style={styles.muted}>{breedLabel(pet.breed_type)}</Text>}
+          {pet && !pet.is_game_over && <PlanBadge plan={pet.plan} testID={`child-plan-${id}`} />}
         </View>
         <TrafficLightBadge color={child.traffic_light.color} testID={`child-light-${id}-${child.traffic_light.color}`} />
       </View>

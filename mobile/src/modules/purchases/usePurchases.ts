@@ -7,9 +7,8 @@ import { useEffect, useSyncExternalStore } from 'react';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import type { PurchasesOfferings, PurchasesPackage } from 'react-native-purchases';
 
-import type { Entitlement } from '@/api/client';
 import { useAppStore } from '@/store/appStore';
-import { ENTITLEMENTS_KEY, fetchEntitlements } from './entitlements';
+import { BILLING_KEY, fetchBilling, type Billing, type PurchaseTarget } from './billing';
 import {
   ensureParentIdentified,
   fetchOfferings,
@@ -62,12 +61,12 @@ export function useOfferings() {
   });
 }
 
-/** The family's server entitlements (`GET /api/parent/entitlements`) — what is actually unlocked. */
-export function useEntitlements() {
+/** The family's billing state (`GET /api/parent/billing`): credits + plan / status per pet. */
+export function useBilling() {
   const parentId = useParentId();
-  return useQuery<Entitlement[]>({
-    queryKey: ENTITLEMENTS_KEY,
-    queryFn: fetchEntitlements,
+  return useQuery<Billing>({
+    queryKey: BILLING_KEY,
+    queryFn: fetchBilling,
     enabled: parentId !== null,
     staleTime: 60_000,
   });
@@ -75,7 +74,10 @@ export function useEntitlements() {
 
 /** Buy a package; the outcome is a code — show it with `purchaseOutcomeMessage` at render. */
 export function usePurchasePackage() {
-  return useMutation<PurchaseOutcome, Error, PurchasesPackage>({ mutationFn: purchasePackage, retry: false });
+  return useMutation<PurchaseOutcome, Error, { pkg: PurchasesPackage; target: PurchaseTarget }>({
+    mutationFn: ({ pkg, target }) => purchasePackage(pkg, target),
+    retry: false,
+  });
 }
 
 export function useRestorePurchases() {

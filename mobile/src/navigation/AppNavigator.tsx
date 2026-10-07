@@ -20,7 +20,7 @@ import { useDarkStatusBar } from '@/components/ui/useDarkStatusBar';
 import { useTranslation } from 'react-i18next';
 import { t } from '@/i18n';
 
-const LOCKED_STATES: LockState[] = ['game_over', 'hard_stop', 'illness', 'inactive'];
+const LOCKED_STATES: LockState[] = ['game_over', 'hard_stop', 'payment_required', 'illness', 'inactive'];
 
 interface ErrorBoundaryProps {
   children: ReactNode;

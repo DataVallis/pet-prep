@@ -489,7 +489,8 @@ export default function ChildHudScreen() {
                   )}
                 </>
               ) : (
-                <Text style={styles.petAgeText}>{formatChallengeWeek(pet.virtual_age_months)}</Text>
+                // Free plan = sandbox without the 12-week programme (PAYMENTS_SPEC §2): no week label.
+                pet.plan.type !== 'free' && <Text style={styles.petAgeText}>{formatChallengeWeek(pet.virtual_age_months)}</Text>
               )}
             </View>
           </View>

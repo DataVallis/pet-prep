@@ -18,8 +18,7 @@
     "closeNotice": "Close",
     "tabs": {
       "dashboard": "Overview",
-      "controls": "Controls",
-      "breeds": "Breeds"
+      "controls": "Controls"
     }
   },
   "controls": {

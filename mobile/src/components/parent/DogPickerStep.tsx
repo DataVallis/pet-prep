@@ -1,8 +1,10 @@
 /**
- * "Izberi kužka" (M5-R04): breed, origin and age at arrival of a new pet, before the
- * child's PIN (REALISM_SPEC §1). Premium breeds are visible but locked (purchase-only,
- * server 422 `breed_locked`). Origin and age have no default — the parent reads the
- * one-line description of each and chooses. Light parent theme (ADR-007).
+ * "Izberi kužka" (M5-R04): plan (M3-09: free mutt sandbox or the 12-week challenge with a
+ * 7-day trial — PAYMENTS_SPEC), breed, origin and age at arrival of a new pet, before the
+ * child's PIN (REALISM_SPEC §1). Premium breeds need the challenge plan (server 422
+ * `breed_locked` otherwise). Plan, origin and age have no default — the parent reads the
+ * description of each and chooses. Price shown honestly: from the store when loaded, else
+ * the list price; no automatic charge. Light parent theme (ADR-007).
  */
 
 import { useState } from 'react';
@@ -13,13 +15,15 @@ import { Check, Lock } from 'lucide-react-native';
 import type { NewPetProfile, PetBreed } from '@/api/client';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import {
+  CHALLENGE_LIST_PRICE,
   completeChoice,
   isBreedLocked,
+  lockedBreedsFor,
   PICKER_AGES,
   PICKER_BREEDS,
   PICKER_ORIGINS,
+  PICKER_PLANS,
   PICKER_STRINGS as S,
-  PREMIUM_BREEDS,
   type PickerChoice,
 } from '@/modules/petProfile/picker';
 import { fonts, palette, tightTracking } from '@/theme';
@@ -28,8 +32,10 @@ interface DogPickerStepProps {
   childName: string;
   /** The choice to start from (kept when the parent comes back from the PIN). */
   initial: PickerChoice;
-  /** Breeds that cannot be picked right now (premium; plus any the server refused). */
-  lockedBreeds?: readonly PetBreed[];
+  /** Breeds the server refused for this choice (422 `breed_locked`), on top of the plan rules. */
+  serverLockedBreeds?: readonly PetBreed[];
+  /** Store price of the challenge ("49,99 €"), null while unknown → list price. */
+  challengePrice?: string | null;
   /** A message to show on top (e.g. the server refused the last choice). */
   notice?: string | null;
   onConfirm: (profile: NewPetProfile, choice: PickerChoice) => void;
@@ -40,16 +46,19 @@ interface DogPickerStepProps {
 export default function DogPickerStep({
   childName,
   initial,
-  lockedBreeds = PREMIUM_BREEDS,
+  serverLockedBreeds = [],
+  challengePrice = null,
   notice = null,
   onConfirm,
   onBack,
 }: DogPickerStepProps) {
   const [choice, setChoice] = useState<PickerChoice>(
-    isBreedLocked(initial.breed, lockedBreeds) ? { ...initial, breed: 'mutt' } : initial,
+    isBreedLocked(initial.breed, lockedBreedsFor(initial.plan, serverLockedBreeds)) ? { ...initial, breed: 'mutt' } : initial,
   );
   const [lockedTapped, setLockedTapped] = useState(false);
-  const profile = completeChoice(choice, lockedBreeds);
+  const lockedBreeds = lockedBreedsFor(choice.plan, serverLockedBreeds);
+  const profile = completeChoice(choice, serverLockedBreeds);
+  const price = challengePrice ?? CHALLENGE_LIST_PRICE;
 
   return (
     <ScrollView contentContainerStyle={styles.content} testID="dog-picker">
@@ -63,6 +72,24 @@ export default function DogPickerStep({
           <Text style={styles.noticeText}>{notice}</Text>
         </View>
       )}
+
+      <Text style={styles.sectionTitle} accessibilityRole="header">
+        {S.planTitle}
+      </Text>
+      {PICKER_PLANS.map((plan) => (
+        <Option
+          key={plan}
+          title={plan === 'challenge' ? S.plans.challenge.title(price) : S.plans.free.title}
+          hint={plan === 'challenge' ? S.plans.challenge.hint : S.plans.free.hint}
+          selected={choice.plan === plan}
+          onPress={() => {
+            setLockedTapped(false);
+            // Free plan = always the mutt (PAYMENTS_SPEC §2).
+            setChoice((c) => ({ ...c, plan, breed: plan === 'free' ? 'mutt' : c.breed }));
+          }}
+          testID={`plan-option-${plan}`}
+        />
+      ))}
 
       <Text style={styles.sectionTitle} accessibilityRole="header">
         {S.breedTitle}
@@ -90,7 +117,7 @@ export default function DogPickerStep({
       })}
       {lockedTapped && (
         <Text style={styles.lockedNote} testID="breed-locked-note">
-          {S.breedLockedNote}
+          {choice.plan === 'free' || choice.plan === null ? S.breedFreeNote : S.breedLockedNote}
         </Text>
       )}
 
@@ -123,7 +150,7 @@ export default function DogPickerStep({
       ))}
       <Text style={styles.note}>{S.quietHoursNote}</Text>
 
-      {profile === null && <Text style={styles.missing}>{S.missing}</Text>}
+      {profile === null && <Text style={styles.missing}>{choice.plan === null ? S.planMissing : S.missing}</Text>}
       <Pressable
         style={({ pressed }) => [styles.primaryButton, profile === null && styles.buttonDisabled, pressed && styles.pressed]}
         onPress={() => {

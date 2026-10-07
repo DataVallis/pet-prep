@@ -341,7 +341,7 @@ export interface PetActivitiesResponse {
 export type PetPlanType = 'free' | 'challenge';
 export type ChallengeStatus = 'trial' | 'payment_required' | 'paid';
 
-/** `plan` on the child state, the parent dashboard pet and `pet.updated` (schema regen pending). */
+/** `plan` on the child state, the parent dashboard pet and `pet.updated` (cleaned shape; raw types in schema.ts, read through the readers). */
 export interface PetPlan {
   type: PetPlanType;
   status: ChallengeStatus | null;
@@ -349,16 +349,20 @@ export interface PetPlan {
   paid_at: string | null;
 }
 
-/** One pet of `GET /api/parent/billing` (schema regen pending). */
+/** One pet of `GET /api/parent/billing` (cleaned shape; raw types in schema.ts, read through the readers). */
 export interface BillingPet {
   pet_id: number;
   plan: PetPlanType;
   status: ChallengeStatus | null;
   trial_ends_at: string | null;
   paid_at: string | null;
+  /** P7: the pet has / will get the free trial (one per child); null for a free pet. */
+  trial_available: boolean | null;
+  /** P5: deleting this pet loses a purchased, unfinished challenge. */
+  deletion_loses_purchase: boolean;
 }
 
-/** `GET /api/parent/billing` 200 body (schema regen pending). */
+/** `GET /api/parent/billing` 200 body (cleaned shape; raw types in schema.ts, read through the readers). */
 export interface BillingResponse {
   /** Purchased challenges not yet assigned to a pet. */
   credits_available: number;
@@ -366,7 +370,7 @@ export interface BillingResponse {
 }
 
 /**
- * `POST /api/parent/pets/{pet}/challenge/activate` 200 body (schema regen pending).
+ * `POST /api/parent/pets/{pet}/challenge/activate` 200 body (cleaned shape; raw types in schema.ts, read through the readers).
  * 409 `{ reason: 'no_credit' }`, 422 (free plan / already paid).
  */
 export interface ActivateChallengeResponse {
@@ -448,8 +452,14 @@ function retryAfterFrom(response: Response): number | null {
  * confirmation word of the app language ("IZBRIŠI" / "DELETE"), sent once the parent's
  * input matched it; the server accepts the word of any supported language.
  */
-function confirmBody(password: string, confirmWord?: string): Record<string, unknown> {
-  return confirmWord ? { password, confirm: true, confirm_word: confirmWord } : { password, confirm: true };
+function confirmBody(password: string, confirmWord?: string, acknowledgePaidChallenge = false): Record<string, unknown> {
+  return {
+    password,
+    confirm: true,
+    ...(confirmWord ? { confirm_word: confirmWord } : {}),
+    // M3-11 P5: the parent confirmed that a purchased, unfinished challenge is lost.
+    ...(acknowledgePaidChallenge ? { acknowledge_paid_challenge: true } : {}),
+  };
 }
 
 /** Type-safe wrapper around fetch with auth header and JSON handling. */
@@ -609,10 +619,10 @@ export const api = {
    * A pet only this child cared for goes with it; a shared pet stays. 404
    * `child_not_found`, 422 `invalid_password`, 429 (5 per 15 min).
    */
-  deleteChild: (childId: number, password: string, confirmWord?: string) =>
+  deleteChild: (childId: number, password: string, confirmWord?: string, acknowledgePaidChallenge = false) =>
     apiRequest<DeleteChildResponse>(`/api/parent/children/${childId}`, {
       method: 'DELETE',
-      body: confirmBody(password, confirmWord),
+      body: confirmBody(password, confirmWord, acknowledgePaidChallenge),
     }),
 
   /**
@@ -620,10 +630,10 @@ export const api = {
    * parent deletes the whole family. Every token is revoked → the app must log out
    * locally afterwards. 422 `invalid_password`, 403 `superadmin_protected`, 429.
    */
-  deleteAccount: (password: string, confirmWord?: string) =>
+  deleteAccount: (password: string, confirmWord?: string, acknowledgePaidChallenge = false) =>
     apiRequest<DeleteAccountResponse>('/api/parent/account/delete', {
       method: 'POST',
-      body: confirmBody(password, confirmWord),
+      body: confirmBody(password, confirmWord, acknowledgePaidChallenge),
     }),
 
   /** GET /api/parent/account/export (M2-08) — the family's data as JSON. 413 too large, 429 (3/h). */

@@ -3,6 +3,7 @@
  * for the parent's children list and "Dodaj otroka" flow.
  */
 
+import { readPetPlan, type PetPlan } from '@/modules/plan/plan';
 import { ApiError, type ParentDashboardResponse } from '@/api/client';
 import { reasonOf } from '@/modules/pairing/pin';
 import {
@@ -32,7 +33,9 @@ export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'
  * One pet of the family after normalisation: the schema's loose `timeline` and
  * union-typed `traffic_light` replaced by real types (M2-05).
  */
-export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today' | 'behaviour' | 'training'> & {
+export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today' | 'behaviour' | 'training' | 'plan'> & {
+  /** M3-11: free mutt sandbox or the challenge (trial / payment_required / paid); legacy → paid. */
+  plan: PetPlan;
   traffic_light: TrafficLight;
   care_score: CareScore;
   today: TodayRoutines;
@@ -161,6 +164,7 @@ export function normalizePet(raw: FamilyPetRaw): FamilyPet {
     timeline: readTimeline(p.timeline),
     behaviour: readPetBehaviour(p.behaviour),
     training: readPetTraining(p.training),
+    plan: readPetPlan(p.plan),
   };
 }
 

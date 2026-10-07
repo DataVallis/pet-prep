@@ -36,6 +36,9 @@ export function lockedCopy(
       return { title: LOCKED_STRINGS.game_over.title, body: LOCKED_STRINGS.game_over.body };
     case 'inactive':
       return { title: LOCKED_STRINGS.inactive.title, body: LOCKED_STRINGS.inactive.body };
+    case 'payment_required':
+      // Kind, no prices, no purchase UI — the child never buys (PAYMENTS_SPEC §2).
+      return { title: LOCKED_STRINGS.payment_required.title, body: LOCKED_STRINGS.payment_required.body };
     default:
       return { title: LOCKED_STRINGS.hard_stop.title, body: LOCKED_STRINGS.hard_stop.body };
   }
@@ -47,7 +50,7 @@ export function lockedCopy(
  * under a translucent grey layer. Game over / inactive stay opaque, without video.
  */
 export function isTranslucentLock(lockState: LockState): boolean {
-  return lockState === 'illness' || lockState === 'hard_stop';
+  return lockState === 'illness' || lockState === 'hard_stop' || lockState === 'payment_required';
 }
 
 /**
