@@ -4,6 +4,7 @@
  * live updates per pet and the 30 s polling fallback.
  */
 import { act, fireEvent, screen } from '@testing-library/react-native';
+import { BackHandler } from 'react-native';
 
 import { api } from '@/api/client';
 import { CHILD_CARD_STRINGS } from '@/components/parent/ChildOverviewCard';
@@ -345,6 +346,42 @@ describe('ParentDashboardScreen — purchase entry (M5-F01)', () => {
     fireEvent.press(screen.getByLabelText('Nazaj'));
     await flush();
     expect(screen.getByTestId('child-card-2')).toBeTruthy();
+  });
+
+  it('detail → buy → "Nazaj" → the same child detail; Android back does the same', async () => {
+    (api.getChildReport as jest.Mock).mockReturnValue(new Promise(() => undefined));
+    (api.getPetActivities as jest.Mock).mockReturnValue(new Promise(() => undefined));
+    getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [TRIAL_PET]));
+    const handlers: (() => boolean | null | undefined)[] = [];
+    const spy = jest.spyOn(BackHandler, 'addEventListener').mockImplementation((_event, h) => {
+      handlers.push(h as () => boolean);
+      return { remove: () => handlers.splice(handlers.indexOf(h as () => boolean), 1) };
+    });
+    try {
+      renderWithQuery(<ParentDashboardScreen />);
+      await flush();
+      fireEvent.press(screen.getByTestId('child-details-2'));
+      fireEvent.press(screen.getByTestId('detail-buy-challenge'));
+      expect(screen.getByTestId('challenge-screen')).toBeTruthy();
+      fireEvent.press(screen.getByLabelText('Nazaj'));
+      await flush();
+      expect(screen.getByTestId('detail-buy-challenge')).toBeTruthy();
+      expect(screen.queryByTestId('challenge-screen')).toBeNull();
+
+      // Android hardware back on the paywall = "Nazaj".
+      fireEvent.press(screen.getByTestId('detail-buy-challenge'));
+      expect(screen.getByTestId('challenge-screen')).toBeTruthy();
+      let handled: boolean | null | undefined;
+      act(() => {
+        handled = handlers[handlers.length - 1]?.();
+      });
+      expect(handled).toBe(true);
+      await flush();
+      expect(screen.queryByTestId('challenge-screen')).toBeNull();
+      expect(screen.getByTestId('detail-buy-challenge')).toBeTruthy();
+    } finally {
+      spy.mockRestore();
+    }
   });
 
   it('Nadzor row → paywall → back to Nadzor', async () => {

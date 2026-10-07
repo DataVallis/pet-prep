@@ -437,7 +437,10 @@ export function MediaPendingNotice({ testID = 'hud-media-pending' }: { testID?: 
       accessibilityRole="text"
       accessibilityLiveRegion="polite"
     >
-      <Text style={[styles.pendingText, styles.pendingTextInline]}>{PET_MEDIA_STRINGS.pending}</Text>
+      {/* Capped growth (M5-F01 QA): at fontScale 2 the column above the dock can't reach the header. */}
+      <Text style={[styles.pendingText, styles.pendingTextInline]} numberOfLines={2} maxFontSizeMultiplier={1.5}>
+        {PET_MEDIA_STRINGS.pending}
+      </Text>
     </View>
   );
 }

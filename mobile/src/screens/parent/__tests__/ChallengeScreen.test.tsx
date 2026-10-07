@@ -65,7 +65,7 @@ const billingPet = (status: 'trial' | 'payment_required' | 'paid', extra: Record
 function family(plan: Record<string, unknown>) {
   const dashboard = makeScoredDashboard(
     [makeScoredChild()],
-    [makeFamilyPet({ id: 7, caretakers: [{ child_id: 2, contract_signed: true }], plan } as never)],
+    [makeFamilyPet({ id: 7, breed_type: 'border_collie', caretakers: [{ child_id: 2, contract_signed: true }], plan } as never)],
   );
   return familyFromDashboard(dashboard as unknown as ParentDashboardResponse);
 }

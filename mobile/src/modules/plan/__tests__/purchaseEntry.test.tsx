@@ -7,7 +7,15 @@ import { fireEvent, render, screen } from '@testing-library/react-native';
 import ChildOverviewCard from '@/components/parent/ChildOverviewCard';
 import PurchasesRow, { purchasesRowSubtitle } from '@/components/parent/PurchasesRow';
 import { normalizePet, type FamilyOverview, type FamilyPet } from '@/modules/family/family';
-import { canBuyChallenge, petsAwaitingPurchase, showPurchasesRow } from '@/modules/plan/purchaseEntry';
+import {
+  canBuyChallenge,
+  isBillingPetPurchasable,
+  isOfferablePet,
+  petsAwaitingPurchase,
+  showPurchasesRow,
+} from '@/modules/plan/purchaseEntry';
+import ChallengeBanner from '@/components/parent/ChallengeBanner';
+import type { BillingPet } from '@/api/client';
 import { i18n } from '@/i18n';
 import { makeFamilyPet, makeScoredChild } from '@/test-utils/fixtures';
 
@@ -16,7 +24,8 @@ type RawPlan = ReturnType<typeof makeFamilyPet>['plan'];
 const TRIAL: RawPlan = { type: 'challenge', status: 'trial', trial_ends_at: '2026-10-12T10:00:00+02:00', paid_at: null, payments_enforced: true };
 const LOCKED: RawPlan = { type: 'challenge', status: 'payment_required', trial_ends_at: '2026-10-05T10:00:00+02:00', paid_at: null, payments_enforced: true };
 const PAID: RawPlan = { type: 'challenge', status: 'paid', trial_ends_at: null, paid_at: '2026-10-01T10:00:00+02:00', payments_enforced: true };
-const NOT_STARTED: RawPlan = { type: 'challenge', status: null, trial_ends_at: null, paid_at: null, payments_enforced: true };
+/** What the server really sends for an unborn challenge dog: `trial` without an end (starts at signing). */
+const UNBORN_TRIAL: RawPlan = { type: 'challenge', status: 'trial', trial_ends_at: null, paid_at: null, payments_enforced: true };
 const FREE: RawPlan = { type: 'free', status: null, trial_ends_at: null, paid_at: null, payments_enforced: true };
 
 function pet(plan: RawPlan, overrides: Partial<ReturnType<typeof makeFamilyPet>> = {}): FamilyPet {
@@ -35,7 +44,9 @@ describe('canBuyChallenge (M5-F01)', () => {
 
   it('paid / grandfathered, not started yet, free plan → no buy', () => {
     expect(canBuyChallenge(pet(PAID))).toBe(false);
-    expect(canBuyChallenge(pet(NOT_STARTED))).toBe(false);
+    expect(canBuyChallenge(pet(UNBORN_TRIAL, { born_at: null }))).toBe(false);
+    // Same payload once born (kill switch / unknown end) → buyable.
+    expect(canBuyChallenge(pet(UNBORN_TRIAL))).toBe(true);
     expect(canBuyChallenge(pet(FREE))).toBe(false);
   });
 
@@ -62,6 +73,8 @@ describe('Nadzor row (M5-F01)', () => {
   it('lists only purchasable pets and hides for a mutt-only family', () => {
     const f = family([pet(TRIAL, { id: 1 }), pet(PAID, { id: 2 }), pet(LOCKED, { id: 3 })]);
     expect(petsAwaitingPurchase(f).map((p) => p.id)).toEqual([1, 3]);
+    // An unborn dog is not counted (its trial starts at the contract).
+    expect(petsAwaitingPurchase(family([pet(UNBORN_TRIAL, { id: 4, born_at: null })]))).toEqual([]);
     expect(showPurchasesRow(f)).toBe(true);
     expect(showPurchasesRow(family([pet(FREE, { breed_type: 'mutt' })]))).toBe(false);
     expect(showPurchasesRow(family([pet(PAID)]))).toBe(true);
@@ -120,5 +133,42 @@ describe('ChildOverviewCard buy button (M5-F01)', () => {
     screen.unmount();
     const mutt = renderCard(FREE, 'mutt');
     expect(screen.queryByTestId(`child-buy-${mutt.id}`)).toBeNull();
+  });
+});
+
+describe('shared purchase rule — paywall list and banner (M5-F01 QA)', () => {
+  const billing = (petId: number, status: BillingPet['status']): BillingPet => ({
+    pet_id: petId,
+    plan: 'challenge',
+    status,
+    trial_ends_at: null,
+    paid_at: null,
+    trial_available: true,
+    deletion_loses_purchase: false,
+  });
+
+  it('isOfferablePet: never a mutt or a game-over pet', () => {
+    expect(isOfferablePet(pet(TRIAL))).toBe(true);
+    expect(isOfferablePet(pet(TRIAL, { breed_type: 'mutt' }))).toBe(false);
+    expect(isOfferablePet(pet(TRIAL, { is_game_over: true }))).toBe(false);
+    expect(isOfferablePet(null)).toBe(false);
+  });
+
+  it('paywall lists a challenge dog but never a mutt, a game-over pet or one missing from the family', () => {
+    const f = family([pet(TRIAL, { id: 1 }), pet(LOCKED, { id: 2, breed_type: 'mutt' }), pet(LOCKED, { id: 3, is_game_over: true })]);
+    expect(isBillingPetPurchasable(billing(1, 'trial'), f)).toBe(true);
+    expect(isBillingPetPurchasable(billing(1, 'paid'), f)).toBe(false);
+    expect(isBillingPetPurchasable(billing(2, 'payment_required'), f)).toBe(false);
+    expect(isBillingPetPurchasable(billing(3, 'payment_required'), f)).toBe(false);
+    expect(isBillingPetPurchasable(billing(9, 'trial'), f)).toBe(false);
+    expect(isBillingPetPurchasable(billing(1, 'trial'), null)).toBe(false);
+  });
+
+  it('the banner never asks to buy for a mutt', () => {
+    const { unmount } = render(<ChallengeBanner family={family([pet(LOCKED, { breed_type: 'mutt' })])} onOpen={jest.fn()} />);
+    expect(screen.queryByTestId('challenge-banner-paused')).toBeNull();
+    unmount();
+    render(<ChallengeBanner family={family([pet(LOCKED)])} onOpen={jest.fn()} />);
+    expect(screen.getByTestId('challenge-banner-paused')).toBeTruthy();
   });
 });

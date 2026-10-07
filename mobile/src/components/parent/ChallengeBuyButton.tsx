@@ -11,7 +11,7 @@ import { ShoppingBag } from 'lucide-react-native';
 import { Text } from '@/components/ui/Text';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { t } from '@/i18n';
-import { palette } from '@/theme';
+import { MIN_TOUCH, palette, radius } from '@/theme';
 
 interface ChallengeBuyButtonProps {
   onPress: () => void;
@@ -42,10 +42,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
-    minHeight: 44,
+    minHeight: MIN_TOUCH,
     paddingHorizontal: 16,
     paddingVertical: 10,
-    borderRadius: 12,
+    borderRadius: radius.button,
     backgroundColor: C.accent,
   },
   text: { flexShrink: 1, fontSize: 15, fontWeight: '700', color: palette.white, textAlign: 'center' },

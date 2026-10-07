@@ -11,12 +11,15 @@ import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { t } from '@/i18n';
 import { caretakerNames, type FamilyOverview } from '@/modules/family/family';
 import { planBanner } from '@/modules/plan/plan';
+import { isOfferablePet } from '@/modules/plan/purchaseEntry';
 import { palette } from '@/theme';
 
 export default function ChallengeBanner({ family, onOpen }: { family: FamilyOverview | null; onOpen: () => void }) {
   if (!family) return null;
-  const paused = family.pets.filter((p) => p.is_active && !p.is_game_over && planBanner(p.plan) === 'payment_required');
-  const ending = family.pets.filter((p) => p.is_active && !p.is_game_over && planBanner(p.plan) === 'trial_last_day');
+  // M5-F01 QA: the shared rule — a mutt / game-over pet is never offered a purchase.
+  const offered = family.pets.filter((p) => p.is_active && isOfferablePet(p));
+  const paused = offered.filter((p) => planBanner(p.plan) === 'payment_required');
+  const ending = offered.filter((p) => planBanner(p.plan) === 'trial_last_day');
   const pets = paused.length > 0 ? paused : ending;
   if (pets.length === 0) return null;
   const isPaused = paused.length > 0;

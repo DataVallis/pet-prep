@@ -466,7 +466,8 @@ export default function ChildHudScreen() {
           onVideoStateChange={setHudVideoState}
           variant="hud"
           // M5-F06: the "getting ready" notice is stacked above the dock (BehaviourPanel), not on the media.
-          pendingNotice="none"
+          // Under a translucent lock (vet, hard stop, payment) the panel is hidden → keep it on the media.
+          pendingNotice={locked ? 'overlay' : 'none'}
           testID="hud-pet-media"
           placeholder={
             <View style={styles.fallbackViewport}>
@@ -503,7 +504,7 @@ export default function ChildHudScreen() {
               <PawPrint color={palette.mint} size={20} />
             </View>
             <View style={styles.petInfoText}>
-              <Text style={styles.petBreedName} numberOfLines={1}>
+              <Text style={styles.petBreedName} numberOfLines={pet.profile ? 1 : 2}>
                 {HUD_STRINGS.breeds[pet.breed_type]}
               </Text>
               {pet.profile ? (

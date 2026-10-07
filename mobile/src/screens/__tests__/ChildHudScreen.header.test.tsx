@@ -115,6 +115,8 @@ describe('ChildHudScreen header sheet (M5-F05)', () => {
     await renderHud(makeLiveChildState({ pet: { profile: makeLegacyPetProfile() } }));
     const header = screen.getByTestId('hud-profile-open');
     expect(header.props.accessibilityRole).toBeUndefined();
+    // No sheet to read it in → the breed name may wrap instead of being cut.
+    expect(within(header).getByText('Mešanček').props.numberOfLines).toBe(2);
     fireEvent.press(header);
     expect(screen.queryByTestId('hud-profile-sheet')).toBeNull();
   });
@@ -138,6 +140,29 @@ describe('ChildHudScreen "getting ready" notice (M5-F06)', () => {
     // The column is positioned from the measured dock height (layout.aboveDock), never under it.
     const style = Array.isArray(column.props.style) ? Object.assign({}, ...column.props.style) : column.props.style;
     expect(style.bottom).toBeGreaterThan(134);
+  });
+
+  it('large fonts: the notice text is capped (≤ 2 lines, ≤ 1.5× growth) so the column cannot reach the header', async () => {
+    mockWindow.fontScale = 2;
+    try {
+      await renderHud(makeLiveChildState({ pet: { profile: makePetProfile(), media: makeMedia({ status: 'pending' }) } }));
+      const text = within(screen.getByTestId('hud-pet-media-pending')).getByText(PET_MEDIA_STRINGS.pending);
+      expect(text.props.numberOfLines).toBe(2);
+      expect(text.props.maxFontSizeMultiplier).toBe(1.5);
+    } finally {
+      mockWindow.fontScale = 1;
+    }
+  });
+
+  it('under a translucent lock (hard stop) the panel is hidden, so the notice stays on the media', async () => {
+    await renderHud(
+      makeLiveChildState({
+        pet: { profile: makePetProfile(), media: makeMedia({ status: 'pending' }), is_hard_stopped: true },
+        lock: { is_locked: true, reason: 'hard_stopped' },
+      }),
+    );
+    expect(screen.queryByTestId('hud-behaviour')).toBeNull();
+    expect(within(screen.getByTestId('hud-pet-media')).getByText(PET_MEDIA_STRINGS.pending)).toBeTruthy();
   });
 
   it('ready media: no notice', async () => {

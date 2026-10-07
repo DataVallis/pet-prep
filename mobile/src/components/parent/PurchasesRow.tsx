@@ -13,6 +13,7 @@ import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { t } from '@/i18n';
 import type { FamilyOverview } from '@/modules/family/family';
 import { petsAwaitingPurchase } from '@/modules/plan/purchaseEntry';
+import { radius } from '@/theme';
 
 interface PurchasesRowProps {
   family: FamilyOverview;
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
     gap: 12,
     minHeight: 56,
     padding: 14,
-    borderRadius: 22,
+    borderRadius: radius.card,
     borderWidth: 1,
     borderColor: C.border,
     backgroundColor: C.card,
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 36,
     height: 36,
-    borderRadius: 18,
+    borderRadius: radius.pill,
     backgroundColor: C.accentSoft,
     alignItems: 'center',
     justifyContent: 'center',

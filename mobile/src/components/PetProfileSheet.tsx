@@ -6,7 +6,9 @@
  * and an accessibility-modal container for free.
  */
 
+import { useContext } from 'react';
 import { Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { X } from 'lucide-react-native';
 
 import { Text } from '@/components/ui/Text';
@@ -22,6 +24,8 @@ interface PetProfileSheetProps {
 }
 
 export default function PetProfileSheet({ visible, rows, onClose, testID = 'hud-profile-sheet' }: PetProfileSheetProps) {
+  // Home indicator / gesture bar: the last row stays above it (no provider in tests → 0).
+  const bottomInset = useContext(SafeAreaInsetsContext)?.bottom ?? 0;
   return (
     <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose} statusBarTranslucent>
       <View style={styles.backdrop}>
@@ -33,7 +37,7 @@ export default function PetProfileSheet({ visible, rows, onClose, testID = 'hud-
           importantForAccessibility="no"
           testID={`${testID}-backdrop`}
         />
-        <View style={styles.sheet} testID={testID} accessibilityViewIsModal>
+        <View style={[styles.sheet, { paddingBottom: 20 + bottomInset }]} testID={testID} accessibilityViewIsModal>
           <View style={styles.headerRow}>
             <Text style={styles.title} accessibilityRole="header">
               {t('child:hud.profileSheet.title')}
@@ -68,7 +72,6 @@ const styles = StyleSheet.create({
     maxHeight: '75%',
     paddingHorizontal: 20,
     paddingTop: 16,
-    paddingBottom: 36,
     borderTopLeftRadius: radius.sheet,
     borderTopRightRadius: radius.sheet,
     backgroundColor: dark.glassStrong,

@@ -1,26 +1,33 @@
 /**
- * M5-F01 — where the parent app offers "12-week challenge — buy" (device feedback 2026-10-07:
- * the small "Trial" badge alone was overlooked). Pure, parent app only.
+ * M5-F01 — where the parent app offers the 12-week challenge for purchase (device feedback
+ * 2026-10-07: the small "Trial" badge alone was overlooked). Pure, parent app only.
  *
- * The button follows the pet's `plan` payload, the same rule the paywall uses to list a dog
- * (`needsPurchase`: a challenge on trial or locked for payment). So it never shows for:
- * - a free plan (the mutt is free forever),
- * - a paid / grandfathered challenge,
- * - a challenge whose trial hasn't started yet (contract not signed — the paywall wouldn't list it),
- * - a finished (game over) pet.
- * A mixed breed is never offered a purchase, even if an old payload still carries a challenge
- * (M5-F02/F03 move every mutt to the free plan).
+ * One shared rule for every purchase surface (buy button, Nadzor row, paywall list, banner):
+ * `isOfferablePet` — a mixed breed (free forever) and a finished (game over) pet are never
+ * offered a purchase, even if an old payload still carries a challenge (M5-F02/F03 and the
+ * backend migration move every unpaid mutt challenge to the free plan).
+ *
+ * The buy button additionally follows the pet's `plan` (`needsPurchase`: a challenge on trial
+ * or locked for payment) and needs a born pet: an unborn challenge dog is sent as `trial`
+ * with `trial_ends_at` null — its trial only starts when the child signs the contract.
  */
 
+import type { BillingPet } from '@/api/client';
 import type { FamilyOverview, FamilyPet } from '@/modules/family/family';
-import { needsPurchase } from '@/modules/plan/plan';
+import { needsPurchase, planOfBillingPet } from '@/modules/plan/plan';
 
-type PurchasablePet = Pick<FamilyPet, 'plan' | 'is_game_over' | 'breed_type'>;
+type OfferablePet = Pick<FamilyPet, 'is_game_over' | 'breed_type'>;
+type PurchasablePet = Pick<FamilyPet, 'plan' | 'is_game_over' | 'breed_type' | 'born_at'>;
 
-/** Show the "buy" button for this pet (overview card, child detail). */
+/** Shared exclusion for every purchase surface: never a mutt, never a game-over pet. */
+export function isOfferablePet(pet: OfferablePet | null | undefined): boolean {
+  return !!pet && !pet.is_game_over && pet.breed_type !== 'mutt';
+}
+
+/** Show the "buy" button for this pet (overview card, child detail, Nadzor count). */
 export function canBuyChallenge(pet: PurchasablePet | null | undefined): boolean {
-  if (!pet || pet.is_game_over) return false;
-  if (pet.breed_type === 'mutt') return false;
+  if (!pet || !isOfferablePet(pet)) return false;
+  if (pet.born_at === null) return false;
   return needsPurchase(pet.plan);
 }
 
@@ -30,9 +37,20 @@ export function petsAwaitingPurchase(family: FamilyOverview | null): FamilyPet[]
 }
 
 /**
+ * A pet of `GET /api/parent/billing` the paywall lists: the billing status needs a purchase
+ * and the family pet passes the shared exclusion. A billing pet missing from the family
+ * overview (breed unknown) is not listed — a mutt must never be offered.
+ */
+export function isBillingPetPurchasable(pet: BillingPet, family: FamilyOverview | null): boolean {
+  if (!needsPurchase(planOfBillingPet(pet))) return false;
+  return isOfferablePet(family?.pets.find((p) => p.id === pet.pet_id));
+}
+
+/**
  * The "Purchases / challenge" row in Nadzor: shown while the family has any challenge dog
- * (to buy, or to restore purchases on a new phone); hidden for a mutt-only family.
+ * that may be offered (to buy, or to restore purchases on a new phone); hidden for a
+ * mutt-only family.
  */
 export function showPurchasesRow(family: FamilyOverview | null): boolean {
-  return (family?.pets ?? []).some((pet) => pet.plan.type === 'challenge' && pet.breed_type !== 'mutt');
+  return (family?.pets ?? []).some((pet) => pet.plan.type === 'challenge' && isOfferablePet(pet));
 }
