@@ -30,7 +30,7 @@ Starši izberejo, ali je tvoj kuža **mladiček**, **mlad pes**, **odrasel** ali
 Če je čas za hrano, ko si v šoli ali spiš, ga nahrani starš — ti nisi nič zamudil.
 
 ## Kaj kuža potrebuje
-- 🍖 **Hrano** — odrasel kuža zjutraj (med 6. in 10. uro) in zvečer (med 17. in 21. uro), enkrat vsakič; mladiček večkrat na dan (aplikacija ti pokaže, kdaj). Ob drugih urah kuža ni lačen — gumb je zasenčen in pod njim piše, kdaj bo spet čas (npr. "ob 17:00").
+- 🍖 **Hrano** — odrasel kuža zjutraj (med 6. in 10. uro) in zvečer (med 17. in 21. uro), enkrat vsakič; mladiček večkrat na dan (aplikacija ti pokaže, kdaj). Ob drugih urah je gumb zasenčen in pod njim piše, kdaj je naslednji obrok (npr. "ob 17:00"). **Če si obrok zamudil in je kuža zelo lačen** (hrana 20 % ali manj), se gumb spremeni v **»Nujni obrok«** in ga lahko nahraniš takoj — a pomni: obrok si zamudil, zato ne šteje kot pravočasen. Če kužka hraniš ob pravem času, nujnega obroka ne potrebuješ. Naslednji obrok ob pravem času ne pozabi! *(v naslednji različici aplikacije)*
 - 💧 **Vodo** — trikrat na dan, vsaj 3 ure narazen. Pod gumbom vidiš, kdaj lahko spet natočiš.
 - 👣 **Sprehod** — **vsak dan** pojdi ven in hodi s telefonom v žepu. Vsak tvoj korak šteje! Ob polnoči se začne nov dan in kuža spet čaka na sprehod. Če en dan sploh ne greš z njim ven, naslednje jutro zboli. V "Sprehod" vidiš, koliko korakov si že naredil (npr. 1.250 / 6.000) — cilj je odvisen od tega, kako star je tvoj kuža. Na iPhonu se štejejo vsi današnji koraki, na Androidu pa samo, ko je aplikacija odprta.
 - 🧹 **Čiščenje** — kuža enkrat ali dvakrat na dan naredi nered (nikoli, ko si v šoli ali spiš). Pobriši ga s prstom! Dokler ni čisto, mu ne moreš dati hrane ne vode — aplikacija ti reče "Najprej pospravi".

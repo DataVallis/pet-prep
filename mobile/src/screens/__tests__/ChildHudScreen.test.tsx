@@ -208,7 +208,7 @@ describe('ChildHudScreen', () => {
     expect(screen.getByText('ob 15:00')).toBeTruthy();
   });
 
-  it('feed 422 outside_feed_window → "Kuža bo lačen spet ob 17:00." and the value rolls back', async () => {
+  it('feed 422 outside_feed_window → "Naslednji obrok je ob 17:00." and the value rolls back', async () => {
     const state = makeLiveChildState({ feeding: { can_feed: true } });
     feedPet.mockRejectedValueOnce(
       new ApiError('refused', 422, {
@@ -221,9 +221,46 @@ describe('ChildHudScreen', () => {
     await renderHud(state);
     fireEvent.press(screen.getByTestId('action-feed'));
 
-    expect(await screen.findByText('Kuža bo lačen spet ob 17:00.')).toBeTruthy();
+    expect(await screen.findByText('Naslednji obrok je ob 17:00.')).toBeTruthy();
     expect(screen.getByText('60%')).toBeTruthy();
     expect(isDisabled('action-feed')).toBe(true);
+  });
+
+  // M3-12 (David 2026-10-07, device 12:11): hunger 0 % at noon, window missed, button "ob 17:00".
+  it('emergency meal: at ≤ 20 % hunger outside a window the feed button says "Nujni obrok" and works', async () => {
+    feedPet.mockResolvedValueOnce({
+      status: 'accepted',
+      feed_mode: 'emergency',
+      state: makeLiveChildState({ pet: { hunger_level: 100 }, feeding: { can_feed: false, feed_mode: null } }),
+    });
+    await renderHud(makeLiveChildState({ pet: { hunger_level: 0 }, feeding: { can_feed: true, feed_mode: 'emergency' } }));
+
+    expect(screen.getByText('Nujni obrok')).toBeTruthy();
+    expect(screen.queryByText('Hrani')).toBeNull();
+    expect(isDisabled('action-feed')).toBe(false);
+    // No contradicting "ob 17:00" hint under an enabled button.
+    expect(screen.queryByText('ob 17:00')).toBeNull();
+
+    fireEvent.press(screen.getByTestId('action-feed'));
+    await waitFor(() => expect(feedPet).toHaveBeenCalledTimes(1));
+    expect(
+      await screen.findByText('Njam! Kuža je sit. Obrok je bil zamujen, zato ne šteje kot pravočasen — naslednji obrok je ob 17:00.'),
+    ).toBeTruthy();
+    expect(screen.getByText('Hrani')).toBeTruthy();
+    expect(isDisabled('action-feed')).toBe(true);
+  });
+
+  it('emergency meal: the button unlocks live when a tick brings hunger to 20 %', async () => {
+    await renderHud(makeLiveChildState({ pet: { hunger_level: 25 }, feeding: { can_feed: false, feed_mode: null } }));
+    expect(isDisabled('action-feed')).toBe(true);
+    expect(screen.getByText('ob 17:00')).toBeTruthy();
+
+    act(() => {
+      mockSocket.handler?.(makeBroadcast({ hunger_level: 20, event_type: 'metric_changed', emitted_at: '2026-10-04T10:00:30.000+00:00' }));
+    });
+    expect(await screen.findByText('Nujni obrok')).toBeTruthy();
+    expect(isDisabled('action-feed')).toBe(false);
+    expect(screen.queryByText('ob 17:00')).toBeNull();
   });
 
   it('water 422 water_too_soon → names the time', async () => {

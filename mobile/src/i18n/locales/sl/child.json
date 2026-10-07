@@ -1,6 +1,7 @@
 {
   "hud": {
     "feed": "Hrani",
+    "emergencyFeed": "Nujni obrok",
     "water": "Voda",
     "walk": "Sprehod",
     "clean": "Očisti",
@@ -51,8 +52,10 @@
       "water": "Kuža ima že polno posodo.",
       "clean": "Že je bilo čisto."
     },
+    "emergencyFeed": "Njam! Kuža je sit. Obrok je bil zamujen, zato ne šteje kot pravočasen — naslednji obrok je {{when}}.",
+    "emergencyFeedNoTime": "Njam! Kuža je sit. Obrok je bil zamujen, zato ne šteje kot pravočasen.",
     "refused": {
-      "outsideFeedWindow": "Kuža bo lačen spet {{when}}.",
+      "outsideFeedWindow": "Naslednji obrok je {{when}}.",
       "outsideFeedWindowNoTime": "Zdaj ni čas za hrano.",
       "alreadyFed": "Kuža je že jedel. Spet ga nahraniš {{when}}.",
       "alreadyFedNoTime": "Kuža je že jedel.",

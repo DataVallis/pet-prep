@@ -8,6 +8,20 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-07 — Nujni obrok: obvestilo nikoli ne zahteva nemogočega (M3-12)
+
+**Kaj se je zgodilo:** David je na telefonu opoldne videl kužka z lakoto 0 %. Jutranje okno (6–10) je bilo zamujeno, gumb za hrano je kazal »ob 17:00«, obvestilo pa je reklo »Če ga ne nahraniš v 30 minutah, bo zbolel.« Otrok torej ni mogel narediti tistega, kar je zahtevalo obvestilo. Isti dan sta se dogovorila za dve pravili. (1) **Nujni obrok:** če je otrok zadnji obrok zamudil in lakota kaže 20 % ali manj, kužka lahko nahrani tudi izven okna, gumb se takrat pokaže kot »Nujni obrok«. Kdor hrani pravočasno, ga ne vidi (David je to pravilo potrdil zvečer po neodvisnem pregledu — sicer bi se dalo obiti okna). Obrok ne šteje kot pravočasen: zamujeno okno ostane zamujeno, naslednji obrok ob 17:00 pa ostane normalen. (2) **Obvestilo nikoli ne zahteva nemogočega:** strežnik pred pošiljanjem preveri ista pravila kot gumb. Če hranjenje ni mogoče, obvestilo pove »Naslednji obrok je ob 17:00 — ne pozabi nanj.« ali »najprej počisti nered«. Če danes ni več mogoče nič, obvestila ni.
+
+**Zakaj je pomembno:** Otrok se uči odgovornosti, ne frustracije. Nemogoča zahteva uči samo, da obvestila lažejo. Zdaj ima vsak opomnik dejanje, ki ga otrok res lahko naredi, ocena pa ostane poštena (zamuda se ne izbriše).
+
+**Številke:** prag 20 % (prikazana vrednost; 20,4 → 20 še velja, 20,5 → 21 ne), en vir resnice za gumb, stanje in obvestila. Testi: strežnik 1.304 zelenih (42 novih, med njimi Davidov primer 12:11, otrok, ki je hranil pravočasno, in preizkus vseh 24 ur dneva za 6 vrednosti lakote), aplikacija 1.313 zelenih (19 novih). Novi testi padejo, če pravilo odstranimo. **Na telefonu še ni preizkušeno.**
+
+**Kako povedati:**
+- 👩 Starši: »Če otrok zamudi obrok in je kuža zelo lačen, ga lahko nahrani takoj — kdor hrani pravočasno, tega ne potrebuje. Ocena pa pove resnico: zamujen obrok ostane zamujen.«
+- 🧒 Otroci: »Je kuža zelo lačen? Tapni ›Nujni obrok‹! Naslednjič pa ga nahrani ob pravem času.«
+- 💼 Investitorji: »Pravila igre in obvestila izhajajo iz enega mesta v kodi. Tako sistem otroka nikoli ne prosi za nemogoče, kar pomeni manj frustracije in manj odhodov.«
+- 📣 Omrežja: »Pravi pes ne čaka do 17:00. Tudi naš ne. Ampak zamuda je še vedno zamuda.«
+- 🛠 Tehnično: »`CareScheduleService::feedCheck/waterCheck` odloča za akcijo (pravilo »zamujen obrok«: zadnje končano okno brez obroka), `ChildPetStateResource` (`feed_mode`, `emergency_threshold` ali null) in čas pošiljanja pusha (`wait` / `clean_first` / `not_actionable`). Ledger je ostal nespremenjen, ker je nujni obrok izven vseh oken.«
 ## 2026-10-07 — Pravi koraki iz Apple Zdravje in Health Connect (M3-04 – M3-06)
 
 **Kaj se je zgodilo:** Kuža zdaj dobi korake tudi, ko je aplikacija zaprta. Otrok v oknu »Sprehod« prebere kratko razlago (»Kužku gre samo današnje število korakov — nič drugega«), tapne **Poveži** in dovoli samo branje korakov iz **Apple Zdravje** (iPhone) ali **Health Connect** (Android). Ob odprtju aplikacija pošlje ves današnji seštevek — tudi korake z ure. iPhone jih občasno pošlje že v ozadju. Če otrok dostop zavrne ali ga telefon nima, šteje senzor gibanja kot doslej.

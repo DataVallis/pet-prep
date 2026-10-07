@@ -89,7 +89,7 @@ describe('ChildHudScreen in English', () => {
     await screen.findByTestId('action-feed');
     fireEvent.press(screen.getByTestId('action-feed'));
 
-    expect(await screen.findByText('Your pup will be hungry again at 17:00.')).toBeTruthy();
+    expect(await screen.findByText('The next meal is at 17:00.')).toBeTruthy();
   });
 
   it('switching the language re-renders the HUD', async () => {

@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Enums\CareRefusal;
+use App\Enums\HygieneEventKind;
 use App\Enums\PushType;
 use App\Jobs\SendPushNotification;
 use App\Models\DevicePushToken;
@@ -39,7 +41,10 @@ use Throwable;
  *
  * deliver() runs in the job: re-checks the pet (hard stop / inactive / game
  * over / ill → dropped, except illness / game over news; walk done or a
- * phase 1 / 2 metric back above its threshold → dropped)
+ * phase 1 / 2 metric back above its threshold → dropped; M3-12: a food /
+ * water reminder whose action the app refuses now gets a "wait" / "clean
+ * first" text or is dropped, and care reminders skip children who still have
+ * to sign their contract)
  * and the timing, builds one message per enabled device of the recipients,
  * sends in chunks of ≤ 100 (split per Expo project on
  * PUSH_TOO_MANY_EXPERIENCE_IDS), stores one ticket per device (idempotent per
@@ -68,6 +73,8 @@ class NotificationService
     public function __construct(
         private readonly FamilyService $families,
         private readonly PushDeviceService $devices,
+        private readonly CareScheduleService $schedule,
+        private readonly HygieneEventService $hygieneEvents,
     ) {}
 
     /**
@@ -281,8 +288,24 @@ class NotificationService
             return;
         }
 
+        // M3-12: never ask for an action the app refuses right now (decided at
+        // send time, from the same rules as the feed / water actions).
+        $copy = $this->actionCopy($notification, $pet);
+        if ($copy === null) {
+            $this->markSuppressed($notification, 'not_actionable');
+
+            return;
+        }
+
         $audience = collect($notification->recipients)
             ->mapWithKeys(fn (array $r): array => [(int) $r['user_id'] => (string) $r['audience']]);
+
+        // M3-12: a caretaker who still has to sign their contract can't act
+        // (423 contract_required) — care reminders skip them.
+        if ($type->asksChildToAct()) {
+            $blocked = $this->childrenWithoutContract($pet, $audience->filter(fn (string $a): bool => $a === PushNotification::AUDIENCE_CHILD)->keys()->all());
+            $audience = $audience->reject(fn (string $a, int $userId): bool => in_array($userId, $blocked, true));
+        }
 
         $devices = DevicePushToken::enabled()
             ->whereIn('user_id', $audience->keys()->all())
@@ -301,7 +324,7 @@ class NotificationService
         foreach ($pending->chunk((int) config('push.chunk_size', 100)) as $chunk) {
             // Throws on transport / Expo errors → the job retries; tickets
             // stored for earlier chunks / groups keep those devices from a repeat.
-            $this->sendChunk($notification, $chunk->values(), $audience, $client);
+            $this->sendChunk($notification, $chunk->values(), $audience, $client, $copy);
         }
 
         $notification->forceFill([
@@ -469,6 +492,101 @@ class NotificationService
         return $pet->displayMetric($metric.'_level') > $threshold;
     }
 
+    /**
+     * M3-12 (David 2026-10-07): which text a phase 1 / 2 food or water
+     * reminder may use right now — CareScheduleService decides, exactly as for
+     * the feed / water actions:
+     *  - the action is allowed (meal window, emergency meal after a missed
+     *    window at ≤ 20 % hunger, water left) → the normal text (variant null);
+     *  - hygiene shows 0 % (food and water refused) → `clean_first`;
+     *  - refused until a later time today (next meal window, water gap) →
+     *    `wait` with that family-local time;
+     *  - not possible again today (water limit, last window over) → null:
+     *    the reminder is not sent.
+     * Hygiene reminders point to "Pospravi in daj igračo" while a chewed item
+     * is open (hygieneVariant). Every other push (walk, parent alarm, illness,
+     * game over, billing) asks for nothing the app refuses → the normal text.
+     *
+     * @return array{variant: string|null, replace: array<string, string>}|null
+     */
+    private function actionCopy(PushNotification $notification, Pet $pet): ?array
+    {
+        $plain = ['variant' => null, 'replace' => []];
+        $metric = $notification->metric;
+        if (! in_array($notification->type, [PushType::SoftWarning, PushType::CriticalAlert], true)) {
+            return $plain;
+        }
+        if ($metric === 'hygiene') {
+            return ['variant' => $this->hygieneVariant($pet), 'replace' => []];
+        }
+        if (! in_array($metric, ['hunger', 'thirst'], true)) {
+            return $plain;
+        }
+
+        $config = $pet->breedConfig();
+        if ($config === null) {
+            return $plain;
+        }
+
+        $now = now();
+        $check = $metric === 'hunger'
+            ? $this->schedule->feedCheck($pet, $config, $now)
+            : $this->schedule->waterCheck($pet, $config, $now);
+
+        if ($check->allowed) {
+            return $plain;
+        }
+        if ($check->refusal === CareRefusal::NeedsCleaning) {
+            return ['variant' => PushCopy::VARIANT_CLEAN_FIRST, 'replace' => []];
+        }
+
+        $tz = $pet->familyTimezone();
+        $next = $check->nextAllowedAt?->setTimezone($tz);
+        if ($next !== null && $next->toDateString() === $now->copy()->setTimezone($tz)->toDateString()) {
+            return ['variant' => PushCopy::VARIANT_WAIT, 'replace' => ['time' => $next->format('H:i')]];
+        }
+
+        return null;
+    }
+
+    /**
+     * M3-12: a chewed item is not scrubbed away — it is tidied up with "Pospravi
+     * in daj igračo" (resolve-chewing). Only chewing open → `tidy`; chewing plus
+     * a poop / accident → `clean_and_tidy`; otherwise the plain mess text.
+     */
+    private function hygieneVariant(Pet $pet): ?string
+    {
+        $kinds = $this->hygieneEvents->openEvents($pet)
+            ->map(fn ($event): string => $event->kind instanceof HygieneEventKind ? $event->kind->value : (string) $event->kind)
+            ->unique();
+        if (! $kinds->contains(HygieneEventKind::Chewing->value)) {
+            return null;
+        }
+
+        return $kinds->count() > 1 ? PushCopy::VARIANT_CLEAN_AND_TIDY : PushCopy::VARIANT_TIDY;
+    }
+
+    /**
+     * Children among $userIds who still have to sign their own contract for
+     * $pet (Pet::caretakerNeedsContract — 423 contract_required for every
+     * care action).
+     *
+     * @param  list<int>  $userIds
+     * @return list<int>
+     */
+    private function childrenWithoutContract(Pet $pet, array $userIds): array
+    {
+        if ($userIds === []) {
+            return [];
+        }
+
+        return User::whereIn('id', $userIds)->get()
+            ->filter(fn (User $child): bool => $pet->caretakerNeedsContract($child))
+            ->map(fn (User $child): int => (int) $child->id)
+            ->values()
+            ->all();
+    }
+
     private function petLocked(Pet $pet): bool
     {
         return (bool) $pet->is_hard_stopped || ! $pet->is_active || (bool) $pet->is_game_over || $pet->isIll()
@@ -490,11 +608,12 @@ class NotificationService
      *
      * @param  Collection<int, DevicePushToken>  $chunk
      * @param  Collection<int, string>  $audience  user id → audience
+     * @param  array{variant: string|null, replace: array<string, string>}  $copy
      */
-    private function sendChunk(PushNotification $notification, Collection $chunk, Collection $audience, ExpoPushClient $client): void
+    private function sendChunk(PushNotification $notification, Collection $chunk, Collection $audience, ExpoPushClient $client, array $copy): void
     {
         $messages = $chunk->map(fn (DevicePushToken $d): array => $this->message(
-            $notification, $d, $audience[$d->user_id] ?? PushNotification::AUDIENCE_CHILD,
+            $notification, $d, $audience[$d->user_id] ?? PushNotification::AUDIENCE_CHILD, $copy,
         ))->all();
 
         try {
@@ -521,7 +640,7 @@ class NotificationService
             foreach ($groups as $group) {
                 $group = $group->values();
                 $groupMessages = $group->map(fn (DevicePushToken $d): array => $this->message(
-                    $notification, $d, $audience[$d->user_id] ?? PushNotification::AUDIENCE_CHILD,
+                    $notification, $d, $audience[$d->user_id] ?? PushNotification::AUDIENCE_CHILD, $copy,
                 ))->all();
                 $this->storeTickets($notification, $group, $client->send($groupMessages));
             }
@@ -531,9 +650,10 @@ class NotificationService
     /**
      * One Expo message. data = {type, pet_id} only (third parties).
      *
+     * @param  array{variant: string|null, replace: array<string, string>}  $copy
      * @return array<string, mixed>
      */
-    private function message(PushNotification $notification, DevicePushToken $device, string $audience): array
+    private function message(PushNotification $notification, DevicePushToken $device, string $audience, array $copy): array
     {
         $type = $notification->type;
 
@@ -541,7 +661,7 @@ class NotificationService
             'to' => $device->expo_push_token,
             // M1-18: in this install's language (null → default).
             'title' => PushCopy::title($device->locale),
-            'body' => PushCopy::body($type, $notification->metric, $audience, $device->locale),
+            'body' => PushCopy::body($type, $notification->metric, $audience, $device->locale, $copy['variant'], $copy['replace']),
             'data' => [
                 'type' => $type->value,
                 'pet_id' => $notification->pet_id,

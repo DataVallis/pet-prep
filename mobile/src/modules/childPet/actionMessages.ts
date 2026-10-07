@@ -31,6 +31,7 @@ export const CHILD_ACTION_STRINGS = strings('child', 'actions', {
       return BEHAVIOUR_STRINGS.unchanged.resolve_chewing;
     },
   },
+  emergencyFeed: (when: string) => t('child:actions.emergencyFeed', { when }),
   refused: {
     outsideFeedWindow: (when: string) => t('child:actions.refused.outsideFeedWindow', { when }),
     alreadyFed: (when: string) => t('child:actions.refused.alreadyFed', { when }),
@@ -168,6 +169,28 @@ export function failureMessage(failure: ActionFailure, view: ChildPetView | null
 export function successMessage(action: CareAction, status: 'accepted' | 'unchanged'): string {
   return status === 'accepted' ? CHILD_ACTION_STRINGS.success[action] : CHILD_ACTION_STRINGS.unchanged[action];
 }
+
+/**
+ * Toast after an accepted feed (M3-12): an emergency meal is honest — it doesn't count as
+ * on time, and the next regular meal (`view` = the state after the feed) still comes.
+ */
+export function feedSuccessMessage(
+  status: 'accepted' | 'unchanged',
+  feedMode: 'window' | 'emergency' | null | undefined,
+  view: ChildPetView | null,
+): string {
+  if (status !== 'accepted' || feedMode !== 'emergency') return successMessage('feed', status);
+  const when = view ? whenText(view.feeding.next_feed_window?.start ?? null, view.server_time, view.timezone) : null;
+  return when ? CHILD_ACTION_STRINGS.emergencyFeed(when) : CHILD_ACTION_STRINGS.emergencyFeedNoTime;
+}
+
+const HUD_LABELS = strings('child', 'hud', {});
+
+/** Label of the feed button: "Nujni obrok" while only an emergency meal is possible (M3-12). */
+export function feedLabel(view: ChildPetView): string {
+  return view.feeding.can_feed && view.feeding.mode === 'emergency' ? HUD_LABELS.emergencyFeed : HUD_LABELS.feed;
+}
+
 
 /** Short hint under a disabled HUD button ("ob 17:00", "Najprej pospravi"); null when enabled. */
 export const HUD_HINTS = strings('child', 'hints', {

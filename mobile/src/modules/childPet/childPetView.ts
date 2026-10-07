@@ -45,6 +45,13 @@ export interface TodayFeedWindow extends TimeWindow {
   fed: boolean;
 }
 
+/**
+ * How a feed now would count (M3-12): `window` = inside an unused meal window (on time),
+ * `emergency` = outside a window because hunger shows ≤ the server's threshold (the missed
+ * window stays missed in the score).
+ */
+export type FeedMode = 'window' | 'emergency';
+
 export interface ChildPetView {
   pet: {
     id: number;
@@ -87,6 +94,14 @@ export interface ChildPetView {
     current_window: TimeWindow | null;
     fed_in_current_window: boolean;
     can_feed: boolean;
+    /** M3-12: how a feed now counts; null when feeding is not possible now. */
+    mode: FeedMode | null;
+    /**
+     * M3-12 rule A: displayed hunger (%) at or below which the server allows an emergency
+     * meal. The server sends it only while the last ended meal window was missed (nothing
+     * fed since) and no window is open; null otherwise (and from an older server).
+     */
+    emergency_threshold: number | null;
     /** The current window while unused, otherwise the next one (ISO instants). */
     next_feed_window: TimeWindow | null;
     last_fed_at: string | null;
@@ -143,6 +158,31 @@ function num(value: unknown): number {
 
 function isoOrNull(value: unknown): string | null {
   return typeof value === 'string' && value.length > 0 ? value : null;
+}
+
+function feedMode(value: unknown, canFeed: boolean): FeedMode | null {
+  if (!canFeed) return null;
+  // An older server sends no `feed_mode`: any allowed feed was a window meal.
+  return value === 'emergency' ? 'emergency' : 'window';
+}
+
+function thresholdOrNull(value: unknown): number | null {
+  const n = typeof value === 'number' ? value : typeof value === 'string' && value !== '' ? Number(value) : Number.NaN;
+  return Number.isFinite(n) ? n : null;
+}
+
+/**
+ * Feeding after a metric change the server hasn't re-evaluated yet (a `PetUpdated` tick).
+ * No game rule lives here: whether a meal was missed is the server's decision
+ * (`emergency_threshold` is null when not). The client only compares the live hunger with
+ * the threshold the server sent, so the button turns into "Nujni obrok" the moment a tick
+ * brings hunger there — never while locked or dirty.
+ */
+export function deriveFeeding(feeding: ChildPetView['feeding'], hungerLevel: number, blocked: boolean): ChildPetView['feeding'] {
+  const windowOpen = feeding.can_feed && feeding.mode === 'window';
+  const emergency = feeding.emergency_threshold !== null && hungerLevel <= feeding.emergency_threshold;
+  const canFeed = !blocked && (windowOpen || emergency);
+  return { ...feeding, can_feed: canFeed, mode: !canFeed ? null : windowOpen ? 'window' : 'emergency' };
 }
 
 function windowOrNull(value: unknown): TimeWindow | null {
@@ -241,6 +281,9 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       current_window: windowOrNull(raw.feeding.current_window),
       fed_in_current_window: bool(raw.feeding.fed_in_current_window),
       can_feed: bool(raw.feeding.can_feed),
+      // Older servers send neither key (typed as required by the current schema).
+      mode: feedMode((raw.feeding as { feed_mode?: unknown }).feed_mode, bool(raw.feeding.can_feed)),
+      emergency_threshold: thresholdOrNull((raw.feeding as { emergency_threshold?: unknown }).emergency_threshold),
       next_feed_window: windowOrNull(raw.feeding.next_feed_window),
       last_fed_at: isoOrNull(raw.feeding.last_fed_at),
       today: readTodayFeedWindows((p as { profile?: unknown }).profile),
@@ -371,7 +414,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     ...view,
     pet,
     lock,
-    feeding: { ...view.feeding, can_feed: view.feeding.can_feed && !blocked },
+    feeding: deriveFeeding(view.feeding, pet.hunger_level, blocked),
     water: { ...view.water, can_water: view.water.can_water && !blocked },
     steps: { ...view.steps, energy_level: b.energy_level },
     behaviour,
@@ -439,7 +482,15 @@ export function optimisticView(view: ChildPetView, action: CareAction, nowMs: nu
       return {
         ...view,
         pet: { ...view.pet, hunger_level: 100 },
-        feeding: { ...view.feeding, can_feed: false, fed_in_current_window: true },
+        feeding: {
+          ...view.feeding,
+          can_feed: false,
+          mode: null,
+          // Any meal means "nothing missed since" (rule A) until the server says otherwise.
+          emergency_threshold: null,
+          // An emergency meal is outside every window: the current (if any) stays as it was.
+          fed_in_current_window: view.feeding.mode === 'emergency' ? view.feeding.fed_in_current_window : true,
+        },
       };
     case 'water':
       return { ...view, pet: { ...view.pet, thirst_level: 100 }, water: { ...view.water, can_water: false } };
@@ -476,7 +527,12 @@ export function revertOptimistic(current: ChildPetView, previous: ChildPetView, 
         feeding: {
           ...current.feeding,
           can_feed: previous.feeding.can_feed && !current.lock.is_locked && !current.pet.needs_cleaning,
+          mode:
+            previous.feeding.can_feed && !current.lock.is_locked && !current.pet.needs_cleaning
+              ? previous.feeding.mode
+              : null,
           fed_in_current_window: previous.feeding.fed_in_current_window,
+          emergency_threshold: previous.feeding.emergency_threshold,
         },
       };
     case 'water':

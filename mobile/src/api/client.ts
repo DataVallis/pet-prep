@@ -109,6 +109,8 @@ export type PetGrowthResponse =
  */
 export interface ChildActionResponse {
   status: 'accepted' | 'unchanged';
+  /** Feed only (M3-12): `emergency` = an emergency meal outside a window (not scored as on time). */
+  feed_mode?: 'window' | 'emergency' | null;
   state: ChildPetState;
 }
 
@@ -660,7 +662,8 @@ export const api = {
   getChildPetGrowth: () => apiRequest<PetGrowthResponse>('/api/child/pet/growth'),
 
   /**
-   * POST /api/child/pet/feed — hunger → 100 % inside a feed window, once per window.
+   * POST /api/child/pet/feed — hunger → 100 % inside a feed window, once per window, or an
+   * emergency meal outside a window while hunger shows ≤ 20 % (M3-12, `feed_mode`).
    * 422 `outside_feed_window` / `already_fed_this_window` / `needs_cleaning`, 423 locked.
    */
   feedPet: () => apiRequest<ChildActionResponse>('/api/child/pet/feed', { method: 'POST' }),

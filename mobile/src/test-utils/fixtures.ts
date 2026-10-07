@@ -184,6 +184,9 @@ export function makeChildState(
       current_window: null,
       fed_in_current_window: false,
       can_feed: 'false',
+      // M3-12 (additive): emergency meal at ≤ 20 % hunger.
+      feed_mode: null,
+      emergency_threshold: 20,
       next_feed_window: null,
       last_fed_at: '',
     },
@@ -259,6 +262,8 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
       current_window: null,
       fed_in_current_window: false,
       can_feed: false,
+      feed_mode: null,
+      emergency_threshold: 20,
       next_feed_window: { start: '2026-10-04T17:00:00+02:00', end: '2026-10-04T21:00:00+02:00' },
       last_fed_at: '2026-10-04T07:10:00+02:00',
       ...o.feeding,

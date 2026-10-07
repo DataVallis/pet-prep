@@ -34,7 +34,9 @@ class ChildPetController extends Controller
     }
 
     /**
-     * Feed inside a breed feed window (family-local), once per window → hunger 100 %.
+     * Feed inside a breed feed window (family-local), once per window → hunger 100 %;
+     * an emergency meal outside a window while hunger shows ≤ 20 % (M3-12, body
+     * `feed_mode`: window | emergency).
      *
      * POST /api/child/pet/feed
      */

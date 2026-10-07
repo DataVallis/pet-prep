@@ -3,10 +3,12 @@
 namespace App\Services;
 
 use App\Enums\ActivityType;
+use App\Enums\CareRefusal;
 use App\Models\ActivityLog;
 use App\Models\BreedConfig;
 use App\Models\Pet;
 use App\Models\QuietHours;
+use App\Services\Results\CareCheck;
 use App\Services\Results\FeedingStatus;
 use App\Services\Results\WaterStatus;
 use Carbon\CarbonImmutable;
@@ -20,7 +22,11 @@ use Illuminate\Support\Facades\Log;
  *
  * - Feeding: only inside the breed's `feed_windows`, family-local [start, end)
  *   "HH:MM" pairs (default 06–10 and 17–21); one feed per window. A window
- *   whose end is not after its start runs over midnight.
+ *   whose end is not after its start runs over midnight. Exception (M3-12):
+ *   an emergency meal after a missed window while hunger shows
+ *   ≤ EMERGENCY_FEED_THRESHOLD (rule A).
+ *   feedCheck() / waterCheck() are the one answer to "may the child feed /
+ *   water now" (actions, child state, push copy).
  * - Water: at most `water_times_per_day` refills per family-local day and at
  *   least `water_min_gap_minutes` real minutes between two refills (the gap
  *   also applies across midnight).
@@ -46,6 +52,19 @@ class CareScheduleService
     /** Activity rows that count as "this window is fed". */
     public const FED_TYPES = [ActivityType::FedPet, ActivityType::ParentFedPet];
 
+    /**
+     * Emergency meal (M3-12, David 2026-10-07): when the hunger the child
+     * sees (Pet::displayMetric, rounded half up — 20.4 → 20 allowed, 20.5 →
+     * 21 not) is at most this AND the last ended meal window was missed
+     * (rule A, FeedingStatus::missedMeal), the child may feed outside a window.
+     * Not per breed (like the escalation thresholds on EscalationService);
+     * documented in PRODUCT_SPEC §5. The feed is a normal `fed_pet` row
+     * outside every window, so the routine ledger never counts it as an
+     * on-time meal (the missed window stays missed) and it does not use up
+     * the next window.
+     */
+    public const EMERGENCY_FEED_THRESHOLD = 20;
+
     public function __construct(private readonly LifeStageService $lifeStages) {}
 
     /**
@@ -60,13 +79,28 @@ class CareScheduleService
         $now = CarbonImmutable::instance($now)->setTimezone($tz);
         $windows = $this->windowsOn($pet, $config, $now->toDateString());
 
+        // Legacy pets have no parent-covered windows: no quiet-hours query.
+        $quiet = $pet->isLegacyProfile() ? null : $pet->quietHours();
         $current = null;
         $upcoming = null;
+        $lastEnded = null;
         foreach ($this->windowInstances($pet, $config, $now, $tz) as [$start, $end]) {
             if ($current === null && $start->lessThanOrEqualTo($now) && $now->lessThan($end)) {
                 $current = [$start, $end];
-            } elseif ($upcoming === null && $start->greaterThan($now)) {
+            } elseif ($upcoming === null && $start->greaterThan($now)
+                // M3-12: the next meal the CHILD can give — a window the parent
+                // feeds in quiet hours is skipped (HUD time, refusal, push copy).
+                && ! $this->isParentCoveredFor($pet, $quiet, $start, $end)) {
                 $upcoming = [$start, $end];
+            }
+            // Rule A looks at the last ended CHILD window: a parent-covered one is
+            // skipped (if the parent tick skipped it — hard stop / vet — it must
+            // not hide the child's missed meal; a real parent meal still counts
+            // through "nothing fed since", parent_fed_pet is in FED_TYPES).
+            if ($end->lessThanOrEqualTo($now)
+                && ($lastEnded === null || $end->greaterThan($lastEnded[1]))
+                && ! $this->isParentCoveredFor($pet, $quiet, $start, $end)) {
+                $lastEnded = [$start, $end];
             }
         }
 
@@ -82,8 +116,18 @@ class CareScheduleService
             && $lastFedAt->greaterThanOrEqualTo($current[0]);
 
         // The next window in which feeding is possible: the current one while
-        // it is unused, otherwise the next one that starts later.
+        // it is unused, otherwise the next child window that starts later.
         $next = $current !== null && ! $fedInCurrent ? $current : $upcoming;
+
+        // M3-12 rule A (David 2026-10-07 20:15): the most recent ended child
+        // window was missed — it started after the birth and nothing (child or
+        // parent meal) was fed since its start. A child window that ended during
+        // a hard stop / vet / payment lock counts as missed (kind to the dog —
+        // Claude, čaka Davida).
+        $missedMeal = $lastEnded !== null
+            && $pet->born_at !== null
+            && $lastEnded[0]->greaterThanOrEqualTo(CarbonImmutable::instance($pet->born_at))
+            && ($lastFedAt === null || $lastFedAt->lessThan($lastEnded[0]));
 
         return new FeedingStatus(
             windows: $windows,
@@ -93,6 +137,7 @@ class CareScheduleService
             nextStart: $next[0] ?? null,
             nextEnd: $next[1] ?? null,
             lastFedAt: $lastFedAt,
+            missedMeal: $missedMeal,
         );
     }
 
@@ -142,6 +187,65 @@ class CareScheduleService
             limitReached: $limitReached,
             tooSoon: $tooSoon,
         );
+    }
+
+    /**
+     * May the child feed now by the game rules (M3-12: single source of truth
+     * for the feed action, the child state and the push copy)? Locks are not
+     * checked here. Uses the pet's current (already caught-up) metrics:
+     *  1. hygiene shows 0 % → needs_cleaning (clean first, PRODUCT_SPEC §8);
+     *  2. inside an unused meal window → allowed, mode `window` (on time);
+     *  3. emergency meal (rule A, David 2026-10-07): hunger shows
+     *     ≤ EMERGENCY_FEED_THRESHOLD AND the last ended window was missed
+     *     (FeedingStatus::missedMeal) → allowed, mode `emergency`. A child who
+     *     fed on time never gets one; after an emergency meal the next one is
+     *     possible only once another window has ended unfed;
+     *  4. otherwise already_fed_this_window / outside_feed_window with the
+     *     start of the next window.
+     */
+    public function feedCheck(Pet $pet, BreedConfig $config, CarbonInterface $now, ?FeedingStatus $feeding = null): CareCheck
+    {
+        if ($pet->displayMetric('hygiene_level') <= 0) {
+            return CareCheck::refuse(CareRefusal::NeedsCleaning);
+        }
+
+        $feeding ??= $this->feeding($pet, $config, $now);
+
+        if ($feeding->windowOpen()) {
+            return CareCheck::allow(CareCheck::MODE_WINDOW);
+        }
+
+        if ($feeding->missedMeal && $pet->displayMetric('hunger_level') <= self::EMERGENCY_FEED_THRESHOLD) {
+            return CareCheck::allow(CareCheck::MODE_EMERGENCY);
+        }
+
+        return CareCheck::refuse(
+            $feeding->currentStart !== null ? CareRefusal::AlreadyFedThisWindow : CareRefusal::OutsideFeedWindow,
+            $feeding->nextStart,
+        );
+    }
+
+    /**
+     * May the child give water now by the game rules (M3-12, same role as
+     * feedCheck)? Hygiene 0 % → needs_cleaning; then the daily limit and the
+     * minimum gap (next_allowed_at from water()).
+     */
+    public function waterCheck(Pet $pet, BreedConfig $config, CarbonInterface $now, ?WaterStatus $water = null): CareCheck
+    {
+        if ($pet->displayMetric('hygiene_level') <= 0) {
+            return CareCheck::refuse(CareRefusal::NeedsCleaning);
+        }
+
+        $water ??= $this->water($pet, $config, $now);
+
+        if ($water->limitReached) {
+            return CareCheck::refuse(CareRefusal::WaterDailyLimit, $water->nextAllowedAt);
+        }
+        if ($water->tooSoon) {
+            return CareCheck::refuse(CareRefusal::WaterTooSoon, $water->nextAllowedAt);
+        }
+
+        return CareCheck::allow();
     }
 
     /**

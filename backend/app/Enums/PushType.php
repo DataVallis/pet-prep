@@ -62,6 +62,16 @@ enum PushType: string
         return in_array($this, [self::Illness, self::GameOver, self::TrialEnding, self::PaymentRequired], true);
     }
 
+    /**
+     * Care reminders that ask the child to do something (feed, water, clean,
+     * walk) — M3-12: only children who can act right now get them (not a
+     * caretaker who still has to sign their contract).
+     */
+    public function asksChildToAct(): bool
+    {
+        return in_array($this, [self::SoftWarning, self::CriticalAlert, self::WalkReminder], true);
+    }
+
     /** Android notification channel (created by the app, M3-02). */
     public function androidChannel(): string
     {

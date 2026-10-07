@@ -22,6 +22,29 @@ return [
         'hygiene' => 'Kuža je naredil nered! Počisti ga čim prej, sicer bo zbolel.',
     ],
 
+    // M3-12 (David 7. 10. 2026): opomnik nikoli ne zahteva dejanja, ki ga aplikacija
+    // trenutno zavrne — namesto »nahrani zdaj« pove, kdaj bo mogoče, ali »najprej počisti«.
+    'wait' => [
+        'hunger' => 'Tvoj kuža postaja lačen. Naslednji obrok je ob :time — ne pozabi nanj.',
+        'thirst' => 'Tvoj kuža je žejen. Vodo mu lahko spet daš ob :time — ne pozabi nanj.',
+    ],
+
+    'clean_first' => [
+        'hunger' => 'Tvoj kuža je lačen, a najprej je treba počistiti nered. Potem ga lahko nahraniš.',
+        'thirst' => 'Tvoj kuža je žejen, a najprej je treba počistiti nered. Potem mu lahko daš vodo.',
+    ],
+
+    // M3-12: odprt pregrizen predmet se ne počisti z drgnjenjem, ampak pospravi z igračo.
+    'tidy' => [
+        'soft' => 'Tvoj kuža je nekaj pregriznil. Pospravi in mu daj igračo.',
+        'critical' => 'Kuža je pregriznil copat! Pospravi in mu daj igračo čim prej, sicer bo zbolel.',
+    ],
+
+    'clean_and_tidy' => [
+        'soft' => 'Tvoj kuža te čaka: počisti nered, pospravi pregrizeno in mu daj igračo.',
+        'critical' => 'Počisti nered, pospravi pregrizeno in kužku daj igračo čim prej, sicer bo zbolel.',
+    ],
+
     'walk_reminder' => 'Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?',
 
     'parent_alarm' => 'Tvoj otrok danes ni poskrbel za psa.',
