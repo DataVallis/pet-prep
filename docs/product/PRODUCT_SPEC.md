@@ -32,7 +32,7 @@
 
 **Vključeno:** dvojni profil starš–otrok, PIN pairing, samo pes (mešanček brezplačno + Border Collie premium), 4 metrike, koraki iz zdravstvenih API-jev, push obvestila in eskalacija, starševska nadzorna plošča s semaforjem, tihe ure, hard stop, bolezen in game over, AI video psa, IAP prek RevenueCat.
 
-**Izključeno (ne gradimo v MVP):** AR, GPS sledenje in zemljevidi, vremenski API, LLM / vision veterinar, B2B QR kuponi, mačke, naročnina Pro skrbnik.
+**Izključeno (ne gradimo v MVP):** AR, GPS sledenje in zemljevidi, vremenski API, LLM / vision veterinar, B2B QR kuponi, naročnina Pro skrbnik. *(Mačke: David 2026-10-07 — v obseg skupaj s psi, izbira vrste → pasme (ROADMAP M5-R06); pravila skrbi za mačko še niso določena.)*
 
 ## 3. Profili in onboarding
 

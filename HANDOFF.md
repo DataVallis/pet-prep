@@ -5,7 +5,7 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-07 afternoon (Claude — M1-18 merged (PR #65); **payments M3-07/08/09/11 on PR #67, waiting for David to merge** (kill switch `PAYMENTS_ENFORCED` off → safe to deploy); next: M3-12 emergency feeding, then M3-04/05/06 HealthKit / Health Connect, then M5-R05 play & cuddle).
+- **Last updated:** 2026-10-07 evening (Claude — PR #65 i18n, #67 payments, #68 RevenueCat iOS key merged and deployed; David tested TestFlight 3.0.0 and the RevenueCat webhook; **device feedback recorded as ROADMAP M5-F01–F07 + M5-R06**; next session starts with M5-F).
 - **Production:** `https://api.petprep.si` live (Hetzner CX23, Docker Compose + Caddy). Merge to `main` → CI (`CI OK`) → automatic deploy when backend / deployment / scripts / workflow changed (DEPLOYMENT.md D16). Website `petprep.si` is served from the separate repo `DataVallis/pet-prep-website` (D15). Last verified deploy: `98eabfb` (M5-R03 training backend), 2026-10-06.
 - **App:** TestFlight build 1.24.4 has the push-registration loop (fixed on `main`, PR #45/#48). **David must ship a new TestFlight build from `main`** (he owns app version — commit `58551b1` "mobile version change" is his). Nothing from M5-R02 / M5-R03 UI and nothing of the **CGP v2 rebrand** has been checked on a device yet. The rebrand adds native modules (`expo-font`, `expo-splash-screen`) and new icons / splash → needs a **new native EAS build** (an OTA update is not enough).
 - **PR #59 (M5-R03b) merged and deployed 2026-10-07** (`b3246ef`; GitHub Actions billing was blocking the `CI OK` job on 2026-10-06 — David fixed it). Small fix PR `fix/legacy-pet-age-label` (mobile only).
@@ -55,6 +55,15 @@
 
 ## 5. Next steps (priority queue)
 
+**Start here (new session, 2026-10-07 evening):**
+1. **M5-F01–F07** (device feedback, ROADMAP section M5-F): visible paywall entry, mutt shows "Free" not "Paid", mutt disabled under the challenge, honest dog-school result, tap-to-expand HUD header, "getting ready" notice hidden behind the meals card, check the unsigned-contract pet showing alarms. Small, mostly mobile — one PR per task or one bundled `fix/M5-F-device-feedback` PR (David merges).
+2. **M3-12** emergency feeding (approved).
+3. **M5-R05** play & cuddle — decisions recorded (DECISIONS 2026-10-07), write a short spec, then build.
+4. **M3-04/05/06** HealthKit / Health Connect steps.
+5. **M5-R06** species → breed picker (dog + cat). Needs a cat care spec approved by David first (scope change 2026-10-07).
+6. Paywall sandbox test (David): child card → "Preizkus" badge → "Kupi" → Apple sandbox → "Plačano". The price showed **$44.99** because the sandbox Apple ID is in the US storefront — expected (store-localised price); use a Slovenian sandbox tester to see 49,99 €. Before launch: D7a go-live checklist (`PAYMENTS_ENFORCED=true`, sandbox decision, Android key/product).
+
+Older queue (still valid where not done):
 1. **David:** new TestFlight / Android build from `main` (fixes the push loop; contains M5-R02 + M5-R03 UI and the CGP v2 rebrand). Rebrand checks: home-screen icon (iOS + Android adaptive / themed), splash on fog, fonts render (Instrument Sans body, Bricolage headings, Slovenian č/š/ž), status-bar text dark on light screens and light in the child app, mint "due" care button. Then device checks: one `POST /api/devices` per login in the Caddy log; "Šola" chip at 375 pt; "Pohvali" responsiveness; kill app mid-training and reopen; TalkBack / VoiceOver.
 2. **David:** delete stale remote branches `diag/pet-state-1006`, `diag/prod-logs-1006`, `diag/child-flow`, `wip/M5-R04-picker-followup` (agent can't delete remote branches).
 3. **David:** review `docs/product/FEATURES.md` (feature catalogue, created 2026-10-07 — keep it updated in every PR, CLAUDE.md rule). Open points from it: the parent "Pasme" tab is a fake purchase placeholder (`BreedPaywallScreen`, local unlock + English alert) — hide before a public build?; no UI to change the family timezone.
@@ -62,6 +71,11 @@
 5. **David:** M5-R03b — only the minimum-one-session rule (≥ 7 trainers) is still open (the rest confirmed 2026-10-07). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-07 evening (cloud, orchestrator) — device feedback from TestFlight 3.0.0
+- PR #67 (payments) and #68 (RevenueCat iOS public key in `eas.json`) merged and deployed; RevenueCat webhook "Send test event" verified by David (TEST event in Filament). App Store in-app purchase `petprep_challenge_12w` + RevenueCat project/offering set up by David.
+- David's device feedback (screenshots 20:01) → ROADMAP **M5-F01–F07**, **M5-R05** updated with his play/cuddle decisions, new **M5-R06** species → breed picker. Decisions in DECISIONS.md (mutt never "Paid", challenge disables mutt, dog + cat, honest school result, visible paywall entry). **Scope change: cats are in** (CLAUDE.md scope guard, PRODUCT_SPEC §1) — care spec first.
+- No code changed in this entry (docs PR `docs/device-feedback-2026-10-07`).
 
 ### 2026-10-07 afternoon (cloud, orchestrator) — payments finished on PR #67
 - **PR #67 (`feat/M3-09-paywall-v2`)** = M3-08 ledger + M3-11 per-pet challenge / trial / lock (backend agent) + M3-07 SDK + M3-09 paywall (orchestrator). David's P5–P8 (14:20): paid dog deletion keeps the purchase used (+ explicit acknowledgement), full AI media only after a purchase (tokens M4-09 later, also for the free mutt), game over is not unlockable — new dog, one free trial per child (Claude's reading), Second Chance post-MVP.
