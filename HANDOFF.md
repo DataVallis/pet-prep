@@ -5,7 +5,7 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-07 night (Claude — PR #70 M3-11b (lock time off the 12-week clock), #71 M3-04/05/06 health steps, #72 M3-12 emergency meal + honest pushes, #73 dock time / album posters merged; #70 and #72 deployed. **Next: M5-F01–F07**, then M5-R05, M5-R06. Payments sandbox test by David on 2026-10-08.)
+- **Last updated:** 2026-10-08 early (Claude — M5-F device fixes: PR #77 F07, #75 F01/F05/F06, #78 F02/F03 merged; #78 deployed `a0eb4d0` (Deploy to Hetzner: success). **PR #76 (F04 school result) open — waits for David's denominator decision.** Next: M5-R05, M5-R06. Payments sandbox test by David on 2026-10-08 — needs a new native build from `main`.)
 - **Production:** `https://api.petprep.si` live (Hetzner CX23, Docker Compose + Caddy). Merge to `main` → CI (`CI OK`) → automatic deploy when backend / deployment / scripts / workflow changed (DEPLOYMENT.md D16). Website `petprep.si` is served from the separate repo `DataVallis/pet-prep-website` (D15). Last verified deploy: `98eabfb` (M5-R03 training backend), 2026-10-06.
 - **App:** TestFlight build 1.24.4 has the push-registration loop (fixed on `main`, PR #45/#48). **David must ship a new TestFlight build from `main`** (he owns app version — commit `58551b1` "mobile version change" is his). Nothing from M5-R02 / M5-R03 UI and nothing of the **CGP v2 rebrand** has been checked on a device yet. The rebrand adds native modules (`expo-font`, `expo-splash-screen`) and new icons / splash → needs a **new native EAS build** (an OTA update is not enough).
 - **PR #59 (M5-R03b) merged and deployed 2026-10-07** (`b3246ef`; GitHub Actions billing was blocking the `CI OK` job on 2026-10-06 — David fixed it). Small fix PR `fix/legacy-pet-age-label` (mobile only).
@@ -55,9 +55,10 @@
 
 ## 5. Next steps (priority queue)
 
-**Start here (new session, after 2026-10-07 night):**
+**Start here (new session, after 2026-10-08 early):**
+0. **PR #76 (M5-F04)** — David confirmed the 4 titles (21:35) but QA found the denominator "all commands" makes "Odlično!" unreachable (server always schedules ≥ 1 ignored command). Proposed to David: count only obeyed commands; excellent = all obeyed praised on time AND no praise when the dog did not obey. After his answer: update `trainingResultBucket` + tests + DECISIONS/PRODUCT_SPEC on the PR branch, rebase (docs conflicts), CI, merge.
 1. **David (2026-10-08):** payments sandbox test on a new native build from `main` (child card → "Preizkus" → "Kupi" → Apple sandbox → "Plačano"; US sandbox Apple ID shows $44.99 — use a Slovenian sandbox tester for 49,99 €). The same build carries health steps (needs new native modules + HealthKit capability, minSdk 26) — device checklist in `docs/engineering/HEALTH_STEPS.md`; also check emergency meal, dock time lines at 375 pt and the album posters.
-2. **M5-F01–F07** (device feedback, ROADMAP M5-F): visible paywall entry, mutt "Free" not "Paid", mutt disabled under the challenge, honest dog-school result, tap-to-expand HUD header, "getting ready" notice hidden behind the meals card, unsigned-contract pet showing alarms (partly covered: care reminders no longer go to unsigned caretakers, PR #72).
+2. **M5-F01–F07** — done except F04 (PR #76, see 0.).
 3. **M5-R05** play & cuddle — decisions recorded, write a short spec, then build.
 4. **M5-R06** species → breed picker (dog + cat) — cat care spec first.
 5. **Optional (David asked 19:32):** language switch also in the child app (today: device language → saved choice; switch on the start screen and parent Nadzor → Jezik).
@@ -71,6 +72,14 @@ Older queue (still valid where not done):
 5. **David:** M5-R03b — only the minimum-one-session rule (≥ 7 trainers) is still open (the rest confirmed 2026-10-07). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-08 early (cloud, orchestrator) — M5-F device fixes
+- **PR #77 M5-F07 (merged):** root cause = dashboard `contract_signed` meant "contract row exists"; grandfathered caretakers (`requires_contract` false) have none → parent saw "waits for contract" next to real alarms. Now = pet born AND (row OR not required). Data was fine.
+- **PR #75 M5-F01/F05/F06 (merged, mobile):** buy button on child card / detail + Nadzor row "Nakupi / izziv" (one rule `isOfferablePet`: never mutt, game over; card button not for unborn), paywall Android back, HUD header → `PetProfileSheet`, "getting ready" notice above the dock (overlay under locks).
+- **PR #78 M5-F02/F03 (merged + deployed):** `plan.display_type` (grandfathered/admin mutt shows Free); `generate-pin` challenge + mutt → 422 `challenge_requires_paid_breed`; migration `2026_10_21_120000` converts unpaid mutt challenges → free (`converted_to_free_at`, lock periods closed, program clock unchanged); `Pet::creating` and mutt refund never yield an unpaid mutt challenge; picker greys mutt under challenge. **TestFlight 3.0.0 shows a generic error for challenge + default mutt until the next build** (accepted, pre-production).
+- QA (independent) on all four PRs, two rounds for #75/#78; all blockers / majors fixed. Not verified on a device.
+- Debt: migration calls `ChallengeService` directly; mutt/paid-breed rule is `BreedType::isPremium()` not breed config (move with M5-R06); unborn no-trial challenge dog has no card buy button (paywall lists it); paywall can say "all paid" briefly if a new pet is not yet in the family overview; lock-overlay notice text uncapped at large fonts; `training:result.noObey` unused.
+- Cloud tooling: `gh pr create` / `gh pr checks` use GraphQL (blocked) → `gh api repos/DataVallis/pet-prep/pulls` and `/commits/<ref>/check-runs`. QA agents: name scratch worktrees per agent (one shared `scratchpad/wt` collided).
 
 ### 2026-10-07 night (cloud, orchestrator) — M3-11b, M3-12, health steps, device fixes
 - **PR #70 M3-11b (deployed):** payment-lock time does not count toward the 12 weeks (David) — program clock = `born_at` + `payment_lock` periods excluded (`Pet::programBirthAt` etc.); used by `virtualAgeInMonths`, certificate, life stages, `CareScoreService::progress`. Lock starts at `max(born_at, trial_ends_at)`. Runbook D7a: admin-unlock locked pets before turning `PAYMENTS_ENFORCED` off. David accepted the refund risk (full AI videos stay). Both former "open for David" items resolved (PAYMENTS_SPEC P9/P10).
