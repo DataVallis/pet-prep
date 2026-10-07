@@ -15,12 +15,13 @@ import { ChevronLeft, Check, Crown, Footprints, Lock, RotateCcw } from 'lucide-r
 import { useAppStore } from '@/store/appStore';
 import { fonts, light, palette, radius, tightTracking } from '@/theme';
 import { currentLanguageTag, t } from '@/i18n';
+import { formatThousands } from '@/i18n/format';
 import { strings } from '@/i18n/strings';
 
 /** User-visible strings of the breed paywall (`paywall:breeds`, M1-18). */
 export const PAYWALL_STRINGS = strings('paywall', 'breeds', {
   stepsPerDay: (steps: number) =>
-    t('paywall:breeds.stepsPerDay', { steps: steps.toLocaleString(currentLanguageTag()) }),
+    t('paywall:breeds.stepsPerDay', { steps: formatThousands(steps) }),
   decay: (rate: number) => t('paywall:breeds.decay', { rate }),
 });
 

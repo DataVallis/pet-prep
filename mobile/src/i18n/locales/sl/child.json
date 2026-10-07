@@ -40,9 +40,6 @@
     "at": "ob {{time}}",
     "tomorrowAt": "jutri ob {{time}}"
   },
-  "format": {
-    "thousandsSeparator": "."
-  },
   "actions": {
     "success": {
       "feed": "Njam! Kuža je sit.",

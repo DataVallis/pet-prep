@@ -167,12 +167,12 @@ describe('ContractScreen (M1-07b)', () => {
       signContract.mockRejectedValueOnce(new ApiError('locked', 423, { reason: 'ill', state: makeChildState() }));
       await openContract();
       expect(screen.getByText('Responsibility Contract')).toBeTruthy();
-      expect(screen.getByText(/^I promise to take good care of my virtual pet/)).toBeTruthy();
+      expect(screen.getByText(/^I promise to take good care of my virtual pup/)).toBeTruthy();
       expect(screen.getByText('Sign with your finger in the box below')).toBeTruthy();
       sign();
       fireEvent.press(screen.getByText('I accept this responsibility'));
 
-      expect(await screen.findByText('Your pet is at the vet. Please try again later.')).toBeTruthy();
+      expect(await screen.findByText('Your pup is at the vet. Please try again later.')).toBeTruthy();
     });
 
     it('an unknown lock reason falls back to the default message', async () => {

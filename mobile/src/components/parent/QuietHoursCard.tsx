@@ -59,7 +59,8 @@ export default function QuietHoursCard() {
   const query = useQuietHours();
   const update = useUpdateQuietHours();
   const [times, setTimes] = useState<Times>(DEFAULT_TIMES);
-  const [message, setMessage] = useState<{ text: string; isError: boolean } | null>(null);
+  // Message as a thunk: translated at render, so it follows a language switch (M1-18 review).
+  const [message, setMessage] = useState<{ text: () => string; isError: boolean } | null>(null);
 
   // Seed the form from the server whenever the stored hours change (first load, after
   // a save, another parent's edit). Nothing polls this query, so a parent's unsaved
@@ -79,7 +80,7 @@ export default function QuietHoursCard() {
   const save = () => {
     const values = [times.school_start, times.school_end, times.bedtime_start, times.bedtime_end];
     if (values.some((t) => t !== null && t !== '' && !isValidTime(t))) {
-      setMessage({ text: S.invalidTime, isError: true });
+      setMessage({ text: () => S.invalidTime, isError: true });
       return;
     }
     const orNull = (t: string | null) => (t === '' ? null : t);
@@ -92,8 +93,8 @@ export default function QuietHoursCard() {
         is_active: times.is_active,
       },
       {
-        onSuccess: () => setMessage({ text: S.saved, isError: false }),
-        onError: (err) => setMessage({ text: err instanceof ApiError ? S.saveError : S.offline, isError: true }),
+        onSuccess: () => setMessage({ text: () => S.saved, isError: false }),
+        onError: (err) => setMessage({ text: () => err instanceof ApiError ? S.saveError : S.offline, isError: true }),
       },
     );
   };
@@ -134,7 +135,7 @@ export default function QuietHoursCard() {
 
       {message && (
         <Text style={[styles.message, message.isError && styles.messageError]} testID="qh-message">
-          {message.text}
+          {message.text()}
         </Text>
       )}
 

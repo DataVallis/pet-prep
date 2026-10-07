@@ -23,8 +23,10 @@ import { t } from '@/i18n';
 
 /**
  * What the parent has to type before the red button unlocks, in the app language
- * ("IZBRIŠI" / "DELETE", `account:confirmWord`). Client-side only: the server checks
- * the password + `confirm: true` (`ConfirmDeletionRequest`), never this word.
+ * ("IZBRIŠI" / "DELETE", `account:confirmWord`). Checked here (`isConfirmWord`) and also
+ * sent as `confirm_word` with the password + `confirm: true` — the canonical word of the
+ * app language, not the parent's raw input; the server accepts the word of any
+ * supported language (M1-18).
  */
 export function deleteConfirmWord(): string {
   return t('account:confirmWord');

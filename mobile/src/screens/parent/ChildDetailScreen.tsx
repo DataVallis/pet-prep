@@ -59,6 +59,7 @@ import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behavi
 import { PARENT_TRAINING_STRINGS, parentTrainingLines } from '@/modules/training/training';
 import { fonts, palette, tightTracking } from '@/theme';
 import { t } from '@/i18n';
+import { formatThousands } from '@/i18n/format';
 import { strings } from '@/i18n/strings';
 
 /** All user-visible strings of this screen (`parent:childDetail`, M1-18). */
@@ -82,9 +83,9 @@ interface ChildDetailScreenProps {
   onBack: () => void;
 }
 
-/** 12500 → "12.500" (sl) / "12,500" (en) — the language's thousands separator, no Intl needed. */
+/** 12500 → "12.500" (sl) / "12,500" (en) — `common:format.thousands` (M1-18). */
 export function formatSteps(n: number): string {
-  return String(Math.max(0, Math.round(n))).replace(/\B(?=(\d{3})+(?!\d))/g, t('family:format.thousands'));
+  return formatThousands(Math.round(n));
 }
 
 function instantText(iso: string | null, timezone: string): string {

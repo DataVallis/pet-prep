@@ -70,6 +70,7 @@
   },
   "media": {
     "pending": "Kuža se pripravlja…",
+    "pendingParent": "Kuža se pripravlja…",
     "breeds": { "mutt": "Mešanček", "border_collie": "Border collie" },
     "a11y": "Tvoj kuža ({{breed}})"
   },

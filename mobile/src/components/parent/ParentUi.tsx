@@ -107,7 +107,7 @@ export function MetricRow({ label, value, testID }: { label: string; value: numb
       <View style={styles.metricTrack}>
         <View style={[styles.metricFill, { width: `${clamped}%`, backgroundColor: fill }]} />
       </View>
-      <Text style={styles.metricValue}>{clamped} %</Text>
+      <Text style={styles.metricValue}>{t('common:format.percent', { value: clamped })}</Text>
     </View>
   );
 }

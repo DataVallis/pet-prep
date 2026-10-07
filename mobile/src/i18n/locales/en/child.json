@@ -15,7 +15,7 @@
     "loadFailed": "We couldn't load your pup.",
     "autoRetry": "Trying again on its own …",
     "retry": "Try again",
-    "logout": "Log out",
+    "logout": "Sign out",
     "stale": "No connection — showing the last update.",
     "breeds": {
       "mutt": "Mixed breed",
@@ -39,9 +39,6 @@
   "time": {
     "at": "at {{time}}",
     "tomorrowAt": "tomorrow at {{time}}"
-  },
-  "format": {
-    "thousandsSeparator": ","
   },
   "actions": {
     "success": {

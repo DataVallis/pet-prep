@@ -1,7 +1,6 @@
 {
   "format": {
-    "decimal": ",",
-    "thousands": "."
+    "decimal": ","
   },
   "light": {
     "green": "Vse v redu",

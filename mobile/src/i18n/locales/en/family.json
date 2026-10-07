@@ -1,7 +1,6 @@
 {
   "format": {
-    "decimal": ".",
-    "thousands": ","
+    "decimal": "."
   },
   "light": {
     "green": "All good",
@@ -97,7 +96,7 @@
   },
   "breeds": {
     "mutt": "Mixed breed",
-    "border_collie": "Border collie"
+    "border_collie": "Border Collie"
   },
   "devices_one": "{{count}} device",
   "devices_other": "{{count}} devices",

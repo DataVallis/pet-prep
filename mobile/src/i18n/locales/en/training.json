@@ -40,7 +40,7 @@
       "too_early": "Too early — wait until your pup obeys.",
       "too_late": "A little late — praise right when your pup obeys.",
       "no_praise": "Your pup obeyed — praise it next time!",
-      "waited": "Nice waiting — your pup didn't obey this time.",
+      "waited": "Good job waiting — your pup didn't obey this time.",
       "praised_without_obeying": "Your pup hasn't obeyed yet — praise it when it does."
     },
     "outcomeShort": {

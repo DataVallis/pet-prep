@@ -61,12 +61,13 @@
     "back": "Back"
   },
   "media": {
-    "pending": "Your dog is getting ready…",
+    "pending": "Your pup is getting ready…",
+    "pendingParent": "The dog is getting ready…",
     "breeds": { "mutt": "Mixed breed", "border_collie": "Border Collie" },
-    "a11y": "Your dog ({{breed}})"
+    "a11y": "Your pup ({{breed}})"
   },
   "album": {
-    "title": "My dog",
+    "title": "My pup",
     "parentTitle": "Dog's photos and videos",
     "videoHint": "video",
     "photoHint": "photo",
@@ -76,7 +77,7 @@
     "back": "Back to album",
     "photo": "Photo",
     "missing": "No video yet",
-    "empty": "Your dog is still getting ready. Its photos and videos will be here soon.",
+    "empty": "Your pup is still getting ready. Its photos and videos will be here soon.",
     "unavailable": "This video can't be played right now.",
     "previous": "Previous",
     "next": "Next",
@@ -93,7 +94,7 @@
     }
   },
   "growth": {
-    "section": "How your dog grew",
+    "section": "How your pup grew",
     "current": "Now",
     "photo": "Photo",
     "hint": "Open photo"
