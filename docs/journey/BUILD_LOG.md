@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-07 — Popravki po TestFlightu: ura pod gumbi in ploščice albuma
+
+**Kaj se je zgodilo:** David je na iPhonu videl »tomorrow at 0…« pod gumbom za hrano (ura odrezana) in prazne temne ploščice videov v albumu »Moj kuža«. Zdaj je čas za jutri v dveh vrsticah (»jutri« / »06:00«) in se nikoli ne odreže; ploščice videov kažejo sliko kužka z gumbom ▶ in enotno oznako, med nalaganjem pa mirno ploščico v barvah znamke. Testi aplikacije: 1.340 zelenih (29 novih). **Na telefonu še ni preizkušeno.**
+
+---
+
 ## 2026-10-07 — Nujni obrok: obvestilo nikoli ne zahteva nemogočega (M3-12)
 
 **Kaj se je zgodilo:** David je na telefonu opoldne videl kužka z lakoto 0 %. Jutranje okno (6–10) je bilo zamujeno, gumb za hrano je kazal »ob 17:00«, obvestilo pa je reklo »Če ga ne nahraniš v 30 minutah, bo zbolel.« Otrok torej ni mogel narediti tistega, kar je zahtevalo obvestilo. Isti dan sta se dogovorila za dve pravili. (1) **Nujni obrok:** ko lakota kaže 20 % ali manj, otrok kužka lahko nahrani tudi izven okna, gumb se takrat pokaže kot »Nujni obrok«. Obrok ne šteje kot pravočasen: zamujeno okno ostane zamujeno, naslednji obrok ob 17:00 pa ostane normalen. (2) **Obvestilo nikoli ne zahteva nemogočega:** strežnik pred pošiljanjem preveri ista pravila kot gumb. Če hranjenje ni mogoče, obvestilo pove »Naslednji obrok je ob 17:00 — ne pozabi nanj.« ali »najprej počisti nered«. Če danes ni več mogoče nič, obvestila ni.
