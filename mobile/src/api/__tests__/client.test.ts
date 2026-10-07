@@ -216,3 +216,18 @@ describe('api client', () => {
     });
   });
 });
+
+describe('deletion confirm word (M1-18)', () => {
+  it('sends confirm_word only when given', async () => {
+    (SecureStore.getItemAsync as jest.Mock).mockResolvedValue('tok');
+    const fetchMock = mockFetch(200, { deleted: true });
+    await api.deleteAccount('pw', 'DELETE');
+    await api.deleteChild(3, 'pw');
+    expect(JSON.parse(String((fetchMock.mock.calls[0][1] as RequestInit).body))).toEqual({
+      password: 'pw',
+      confirm: true,
+      confirm_word: 'DELETE',
+    });
+    expect(JSON.parse(String((fetchMock.mock.calls[1][1] as RequestInit).body))).toEqual({ password: 'pw', confirm: true });
+  });
+});

@@ -177,7 +177,7 @@ describe('AccountCard — delete account', () => {
     fireEvent.press(screen.getByTestId('account-delete-form-submit'));
     await flush();
 
-    expect(deleteAccount).toHaveBeenCalledWith('napačno');
+    expect(deleteAccount).toHaveBeenCalledWith('napačno', 'IZBRIŠI');
     expect(screen.getByTestId('account-delete-form-error').props.children).toBe(ACCOUNT_STRINGS.deleteErrors.invalid_password);
     expect(useAppStore.getState().user?.id).toBe(1);
     expect(deleteItem).not.toHaveBeenCalled();
@@ -220,7 +220,7 @@ describe('AccountCard — delete account', () => {
     fireEvent.press(screen.getByTestId('account-delete-form-submit'));
 
     expect(await screen.findByText(START_STRINGS.subtitle)).toBeTruthy();
-    expect(deleteAccount).toHaveBeenCalledWith('Varno1Geslo');
+    expect(deleteAccount).toHaveBeenCalledWith('Varno1Geslo', 'IZBRIŠI');
     expect(apiLogout).not.toHaveBeenCalled();
     expect(deleteItem).toHaveBeenCalled();
     expect(useAppStore.getState().user).toBeNull();
@@ -240,7 +240,7 @@ describe('AccountCard — in English (M1-18)', () => {
     });
   });
 
-  it('asks for "DELETE" and sends only the password', async () => {
+  it('asks for "DELETE" and sends it with the password', async () => {
     deleteAccount.mockRejectedValue(new ApiError('Invalid', 422, { reason: 'invalid_password' }));
     renderWithQuery(<AccountCard family={FAMILY} />);
     expect(screen.getByText('Account')).toBeTruthy();
@@ -255,7 +255,7 @@ describe('AccountCard — in English (M1-18)', () => {
     fireEvent.press(screen.getByTestId('account-delete-form-submit'));
     await flush();
 
-    expect(deleteAccount).toHaveBeenCalledWith('Safe1Password');
+    expect(deleteAccount).toHaveBeenCalledWith('Safe1Password', 'DELETE');
     expect(screen.getByTestId('account-delete-form-error').props.children).toBe('The password is incorrect.');
   });
 });

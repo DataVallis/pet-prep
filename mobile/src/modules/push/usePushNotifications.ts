@@ -4,7 +4,8 @@
  *  - register this install on login / app start when the user already allowed
  *    notifications (no prompt here), and again when the device token rotates;
  *  - route taps — also the tap that cold-started the app;
- *  - Android: rename the notification channels after a language switch (M1-18).
+ *  - after a language switch (M1-18): register again (the server keeps the push language
+ *    per device) and, on Android, rename the notification channels.
  */
 
 import { useEffect, useRef } from 'react';
@@ -34,14 +35,21 @@ export function usePushNotifications(): void {
   // language (only when notifications are already allowed — never a prompt). Once per switch.
   const { i18n } = useTranslation();
   const language = i18n.language;
-  const channelLanguage = useRef(language);
+  const seenLanguage = useRef(language);
   useEffect(() => {
-    if (Platform.OS !== 'android' || language === channelLanguage.current) return;
-    channelLanguage.current = language;
+    if (!pushSupported() || language === seenLanguage.current) return;
+    seenLanguage.current = language;
+    // Signed in: re-register so pushes come in the new language. Deduped per (session,
+    // token, language) and limited by the devices gate; no prompt (needs permission).
+    if (signedIn && userId !== null) {
+      void registerForPush();
+      return;
+    }
+    if (Platform.OS !== 'android') return;
     void Notifications.getPermissionsAsync()
       .then((permissions) => (isPushAllowed(permissions) ? ensureAndroidChannels() : undefined))
       .catch(() => undefined);
-  }, [language]);
+  }, [language, signedIn, userId]);
 
   // Registration: on every sign-in / restore of a session.
   useEffect(() => {

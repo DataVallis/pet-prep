@@ -178,7 +178,8 @@ export async function shareFamilyExport(
  */
 export async function deleteAccountAndLogout(
   password: string,
-  deleteAccount: (password: string) => Promise<DeleteAccountResponse> = api.deleteAccount,
+  deleteAccount: (password: string) => Promise<DeleteAccountResponse> = (password) =>
+    api.deleteAccount(password, deleteConfirmWord()),
   signOut: (options: { revoke: boolean }) => Promise<void> = logout,
 ): Promise<DeleteAccountResponse> {
   const result = await deleteAccount(password);

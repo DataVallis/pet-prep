@@ -80,7 +80,7 @@ describe('FamilyChildrenCard — delete a child profile', () => {
     fillAndSubmit(2, 'Varno1Geslo');
     await flush();
 
-    expect(deleteChild).toHaveBeenCalledWith(2, 'Varno1Geslo');
+    expect(deleteChild).toHaveBeenCalledWith(2, 'Varno1Geslo', 'IZBRIŠI');
     expect(screen.getByTestId('child-deleted-notice').props.children).toBe(FAMILY_STRINGS.deleted('Maja'));
     expect(screen.queryByTestId('child-delete-form-2')).toBeNull();
   });

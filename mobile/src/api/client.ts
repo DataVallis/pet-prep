@@ -385,6 +385,14 @@ function retryAfterFrom(response: Response): number | null {
   return Number.isFinite(seconds) && seconds >= 0 ? Math.ceil(seconds) : null;
 }
 
+/**
+ * Deletion body (M2-08). `confirm_word` (M1-18) is the word the parent typed in the app
+ * language ("IZBRIŠI" / "DELETE"); the server accepts the word of any supported language.
+ */
+function confirmBody(password: string, confirmWord?: string): Record<string, unknown> {
+  return confirmWord ? { password, confirm: true, confirm_word: confirmWord } : { password, confirm: true };
+}
+
 /** Type-safe wrapper around fetch with auth header and JSON handling. */
 async function apiRequest<T>(
   path: string,
@@ -541,10 +549,10 @@ export const api = {
    * A pet only this child cared for goes with it; a shared pet stays. 404
    * `child_not_found`, 422 `invalid_password`, 429 (5 per 15 min).
    */
-  deleteChild: (childId: number, password: string) =>
+  deleteChild: (childId: number, password: string, confirmWord?: string) =>
     apiRequest<DeleteChildResponse>(`/api/parent/children/${childId}`, {
       method: 'DELETE',
-      body: { password, confirm: true },
+      body: confirmBody(password, confirmWord),
     }),
 
   /**
@@ -552,10 +560,10 @@ export const api = {
    * parent deletes the whole family. Every token is revoked → the app must log out
    * locally afterwards. 422 `invalid_password`, 403 `superadmin_protected`, 429.
    */
-  deleteAccount: (password: string) =>
+  deleteAccount: (password: string, confirmWord?: string) =>
     apiRequest<DeleteAccountResponse>('/api/parent/account/delete', {
       method: 'POST',
-      body: { password, confirm: true },
+      body: confirmBody(password, confirmWord),
     }),
 
   /** GET /api/parent/account/export (M2-08) — the family's data as JSON. 413 too large, 429 (3/h). */

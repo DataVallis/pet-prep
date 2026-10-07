@@ -32,6 +32,7 @@ import { Platform } from 'react-native';
 
 import { api, getAuthToken } from '@/api/client';
 import { getBuildInfo } from '@/config/buildInfo';
+import { currentLanguage } from '@/i18n';
 import { createFetchGate, errorStatus, retryAfterMs, type FetchGate } from '@/modules/childPet/refetchGovernor';
 import { ALARM_VIBRATION, PUSH_CHANNELS, PUSH_STORAGE_KEYS, PUSH_STRINGS } from '@/modules/push/pushConfig';
 
@@ -102,7 +103,7 @@ export const devicesGate: FetchGate = createFetchGate(DEVICES_BURST, DEVICES_REF
 
 interface RegistrationState {
   inFlight: Promise<PushRegistrationResult> | null;
-  /** `${session token}|${expo token}` the server accepted in this app run. */
+  /** `${session token}|${expo token}|${language}` the server accepted in this app run. */
   registeredKey: string | null;
   /** Device ms until which a token event is the echo of our own fetch. */
   selfFetchUntil: number;
@@ -240,7 +241,8 @@ async function registerOnce(generation: number): Promise<PushRegistrationResult>
     session = null;
   }
   if (stale()) return STALE;
-  const key = `${session ?? ''}|${token}`;
+  // The server stores the push language per device (M1-18): a language switch re-registers.
+  const key = `${session ?? ''}|${token}|${currentLanguage()}`;
   if (state.registeredKey === key) return { status: 'registered', token };
 
   const wait = devicesGate.waitMs(Date.now());

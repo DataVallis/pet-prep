@@ -10,6 +10,7 @@ import { PUSH_CHANNELS, PUSH_STORAGE_KEYS } from '@/modules/push/pushConfig';
 import { easProjectId, registerForPush, resetPushRegistration, unregisterFromPush } from '@/modules/push/pushRegistration';
 import { logout, REVOKE_TIMEOUT_MS, UNREGISTER_TIMEOUT_MS } from '@/modules/session/logout';
 import { useAppStore } from '@/store/appStore';
+import { i18n } from '@/i18n';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -103,6 +104,22 @@ describe('registerForPush', () => {
     registerDevice.mockRejectedValueOnce(new Error('500'));
     await expect(registerForPush()).resolves.toEqual({ status: 'failed', reason: 'server' });
     expect(setItem).not.toHaveBeenCalled();
+  });
+
+  it('registers the same token again only when the app language changed (M1-18)', async () => {
+    await registerForPush();
+    await registerForPush();
+    expect(registerDevice).toHaveBeenCalledTimes(1);
+
+    await i18n.changeLanguage('en');
+    try {
+      await registerForPush();
+      expect(registerDevice).toHaveBeenCalledTimes(2);
+      await registerForPush();
+      expect(registerDevice).toHaveBeenCalledTimes(2);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
   });
 
   it('reads the EAS project id from app config', () => {
