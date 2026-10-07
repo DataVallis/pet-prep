@@ -19,12 +19,14 @@ import { SIGNUP_STRINGS } from '@/modules/auth/signup';
 import StartScreen from '@/screens/StartScreen';
 
 const setItem = SecureStore.setItemAsync as jest.Mock;
+const originalFetch = globalThis.fetch;
 const getItem = SecureStore.getItemAsync as jest.Mock;
 
 afterEach(async () => {
   await act(async () => {
     await i18n.changeLanguage('sl');
   });
+  globalThis.fetch = originalFetch;
   jest.clearAllMocks();
 });
 
@@ -51,14 +53,6 @@ describe('language resolution', () => {
 });
 
 describe('saved choice', () => {
-  it('setLanguage switches and remembers the choice on the device', async () => {
-    await act(async () => {
-      await setLanguage('en');
-    });
-    expect(currentLanguage()).toBe('en');
-    expect(setItem).toHaveBeenCalledWith(LANGUAGE_STORE_KEY, 'en');
-  });
-
   it('loadSavedLanguage applies a saved choice and ignores garbage', async () => {
     getItem.mockResolvedValueOnce('en');
     await act(async () => {
@@ -76,6 +70,24 @@ describe('saved choice', () => {
     getItem.mockRejectedValueOnce(new Error('keychain locked'));
     await expect(loadSavedLanguage()).resolves.toBe('sl');
   });
+
+  it('setLanguage switches and remembers the choice on the device', async () => {
+    await act(async () => {
+      await setLanguage('en');
+    });
+    expect(currentLanguage()).toBe('en');
+    expect(setItem).toHaveBeenCalledWith(LANGUAGE_STORE_KEY, 'en');
+  });
+
+  it('a saved value arriving after the user chose keeps the fresh choice', async () => {
+    await act(async () => {
+      await setLanguage('en');
+    });
+    getItem.mockResolvedValueOnce('sl');
+    await act(async () => {
+      await expect(loadSavedLanguage()).resolves.toBe('en');
+    });
+  });
 });
 
 describe('strings()', () => {
@@ -90,7 +102,9 @@ describe('strings()', () => {
 
   it('resolves nested sections, interpolating functions and nested extras', async () => {
     expect(CHILD_PIN_STRINGS.rateLimited('2 min')).toBe('Preveč poskusov. Počakaj še 2 min, potem poskusi znova.');
-    expect(CHILD_PIN_STRINGS.digitsEntered(3)).toBe('Vpisanih 3 od 6 številk');
+    expect(CHILD_PIN_STRINGS.digitsEntered(1)).toBe('Vpisana 1 od 6 številk');
+    expect(CHILD_PIN_STRINGS.digitsEntered(3)).toBe('Vpisane 3 od 6 številk');
+    expect(CHILD_PIN_STRINGS.digitsEntered(5)).toBe('Vpisanih 5 od 6 številk');
     expect(SIGNUP_STRINGS.errors.tooManyAttemptsMinutes(4)).toBe('Preveč poskusov registracije. Poskusite znova čez 4 min.');
     expect(SIGNUP_STRINGS.errors.offline).toBe('Ni povezave s strežnikom. Preverite internet in poskusite znova.');
     await act(async () => {

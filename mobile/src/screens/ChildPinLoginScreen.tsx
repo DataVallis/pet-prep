@@ -7,6 +7,7 @@
  */
 
 import { useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { ChevronLeft, Delete, RotateCcw } from 'lucide-react-native';
@@ -90,6 +91,7 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
     if (error && error.kind !== 'rate_limited') setError(null);
   };
 
+  const { i18n: { language } } = useTranslation(); // errorText is memoised text
   const errorText = useMemo(() => {
     if (!error) return null;
     switch (error.kind) {
@@ -104,7 +106,7 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
       case 'server':
         return S.server;
     }
-  }, [error, isLockedOut, lockRemaining]);
+  }, [error, isLockedOut, lockRemaining, language]);
 
   const canRetry = (error?.kind === 'offline' || error?.kind === 'server') && digits.length === PIN_LENGTH;
 

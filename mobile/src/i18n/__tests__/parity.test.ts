@@ -74,8 +74,10 @@ describe.each(NAMESPACES)('namespace %s', (ns) => {
     for (const [key, value] of flat) {
       const base = key.replace(PLURAL_SUFFIX, '');
       const enValue = enFlat.get(key) ?? enFlat.get(`${base}_other`) ?? '';
-      const expected = placeholders(enValue).filter((p) => p !== 'count');
-      expect({ key, vars: placeholders(value).filter((p) => p !== 'count') }).toEqual({ key, vars: expected });
+      // `{{count}}` may be left out only in the "one"/"two" forms ("en pes", "dva psa").
+      const countOptional = /_(one|two)$/.test(key);
+      const strip = (vars: string[]) => (countOptional ? vars.filter((p) => p !== 'count') : vars);
+      expect({ key, vars: strip(placeholders(value)) }).toEqual({ key, vars: strip(placeholders(enValue)) });
     }
   });
 

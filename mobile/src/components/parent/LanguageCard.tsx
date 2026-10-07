@@ -1,6 +1,7 @@
 /**
  * "Jezik / Language" section of the Nadzor tab (M1-18): the app language on this
- * device. Server texts (push notifications) follow it through `Accept-Language`.
+ * device. The app sends it as `Accept-Language`; the server stores it per push device
+ * on registration (backend part of M1-18).
  */
 
 import { StyleSheet } from 'react-native';

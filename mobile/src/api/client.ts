@@ -400,7 +400,7 @@ async function apiRequest<T>(
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     Accept: 'application/json',
-    // Server texts (push, errors) follow the app language (M1-18).
+    // App language (M1-18): server texts; stored per device on push registration.
     'Accept-Language': currentLanguageTag(),
   };
 

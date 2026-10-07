@@ -73,10 +73,13 @@ type LanguageStore = Pick<typeof SecureStore, 'getItemAsync' | 'setItemAsync'>;
  * Apply the user's saved choice (if any) — call once at startup. A failing store keeps
  * the device language.
  */
+let chosenThisSession = false;
+
 export async function loadSavedLanguage(store: LanguageStore = SecureStore): Promise<Language> {
   try {
     const saved = await store.getItemAsync(LANGUAGE_STORE_KEY);
-    if (isLanguage(saved) && saved !== currentLanguage()) await i18n.changeLanguage(saved);
+    // A slow keychain must not undo a choice the user made meanwhile.
+    if (!chosenThisSession && isLanguage(saved) && saved !== currentLanguage()) await i18n.changeLanguage(saved);
   } catch {
     // keep the device language
   }
@@ -85,6 +88,7 @@ export async function loadSavedLanguage(store: LanguageStore = SecureStore): Pro
 
 /** Switch the app language and remember the choice on this device. */
 export async function setLanguage(language: Language, store: LanguageStore = SecureStore): Promise<void> {
+  chosenThisSession = true;
   await i18n.changeLanguage(language);
   try {
     await store.setItemAsync(LANGUAGE_STORE_KEY, language);
