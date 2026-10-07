@@ -655,7 +655,7 @@ describe('shared pet', function () {
             ->and($kids[$child1->id]['stats'])->toMatchArray(['fed' => 1, 'watered' => 0, 'steps' => 800, 'actions_total' => 1, 'walk_goals' => 0])
             ->and($kids[$child2->id]['stats'])->toMatchArray(['fed' => 0, 'watered' => 1, 'steps' => 3300, 'actions_total' => 2, 'walk_goals' => 1])
             ->and($kids[$child2->id]['contract_signed'])->toBeTrue()
-            ->and($kids[$child1->id]['contract_signed'])->toBeFalse() // grandfathered pet, never signed
+            ->and($kids[$child1->id]['contract_signed'])->toBeTrue() // grandfathered caretaker: never has to sign (M5-F07)
             ->and($dash->json('family.pets.0.caretakers'))->toHaveCount(2)
             ->and(collect($dash->json('recent_activities'))->pluck('actor_user_id')->filter()->unique()->sort()->values()->all())
             ->toBe([$child1->id, $child2->id]);

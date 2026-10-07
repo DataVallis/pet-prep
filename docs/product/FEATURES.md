@@ -41,7 +41,7 @@ Razmejitev brezplačno / plačljivo v `BUSINESS_MODEL.md` §7 je **predlog**, ki
 | Nova naprava, odjava povsod | »Nova koda za prijavo« prijavi otroka na novem telefonu (isti kuža), največ 3 naprave. »Odjavi vse naprave« pri izgubljenem telefonu. | starš | ✅ | M2-02 | 2026-10-04 |
 | Več otrok, svoj ali skupni pes | Vsak otrok ima svojega psa ali več otrok skrbi za enega. Vsako dejanje se zapiše otroku, ki ga je naredil. Otrok ima največ enega aktivnega psa. | starš, otrok | ✅ | M2-01, M2-01a | 2026-10-04 |
 | Povabilo drugega starša | Koda (8 znakov, 24 ur, enkratna), deli se prek telefona; drugi starš jo vnese v »Imate kodo družine?«. Oba vidita vse in oba lahko ustavita igro. | starš | ✅ | M2-01a | 2026-10-04 |
-| Pogodba o odgovornosti = rojstvo | Otrok se s prstom podpiše pod obljubo; šele takrat se kuža »rodi« (vse 100 %). Do podpisa se nič ne zgodi; starš vidi »čaka na podpis pogodbe«. | otrok | ✅ | M1-07b | 2026-10-04 |
+| Pogodba o odgovornosti = rojstvo | Otrok se s prstom podpiše pod obljubo; šele takrat se kuža »rodi« (vse 100 %). Do podpisa se nič ne zgodi; starš vidi »čaka na podpis pogodbe« — samo, dokler otrok res mora podpisati (stari psi iz časa pred pogodbami tega ne kažejo, M5-F07). | otrok | ✅ | M1-07b, M5-F07 | 2026-10-07 |
 | Pridružitev skupnemu psu | Otrok, ki se pridruži psu brata ali sestre, podpiše svojo pogodbo; pes se ne rodi znova. | otrok | ✅ | M2-01 | 2026-10-04 |
 | Izvoz podatkov | »Nadzor → Račun → Izvozi moje podatke«: ena datoteka JSON z vsem o družini (brez gesel in kod), največ 3× na uro. | starš | ✅ | M2-08 | 2026-10-05 |
 | Izbris računa / profila otroka | Takoj in nepovratno, z geslom in besedo »IZBRIŠI«. Zadnji starš izbriše celo družino; skupni pes ostane drugim otrokom. | starš | ✅ | M2-08 | 2026-10-05 |
