@@ -190,6 +190,11 @@ export interface NewPetProfile {
   breed: PetBreed;
   origin: PetOrigin;
   age_stage: LifeStage;
+  /**
+   * M3-09: free mutt sandbox or the 12-week challenge (7-day trial). Free → breed is
+   * always `mutt` (the server refuses anything else). Sent with the profile only.
+   */
+  plan: PetPlanType;
 }
 
 /** `POST /api/parent/generate-pin` body — always with `child_id` (the legacy call is deprecated). */
@@ -217,13 +222,16 @@ export const CLIENT_FEATURES: readonly ClientFeature[] = ['behaviour_events', 't
 
 /**
  * The JSON body of a generate-pin request: profile fields only for a new pet, always all
- * three, together with `features` (never with `pet_id`, never without the profile).
+ * three plus the plan (M3-09), together with `features` (never with `pet_id`, never
+ * without the profile).
  */
 export function generatePinBody(body: GenerateChildPinRequest): Record<string, number | string | ClientFeature[]> {
   if (body.pet_id != null) return { child_id: body.child_id, pet_id: body.pet_id };
   if (body.profile) {
-    const { breed, origin, age_stage } = body.profile;
-    return { child_id: body.child_id, breed, origin, age_stage, features: [...CLIENT_FEATURES] };
+    const { origin, age_stage, plan } = body.profile;
+    // A free pet is always the mutt (PAYMENTS_SPEC §2) — never send a premium breed with it.
+    const breed = plan === 'free' ? 'mutt' : body.profile.breed;
+    return { child_id: body.child_id, breed, origin, age_stage, plan, features: [...CLIENT_FEATURES] };
   }
   return { child_id: body.child_id };
 }
@@ -322,26 +330,48 @@ export interface PetActivitiesResponse {
 }
 
 /**
- * One family entitlement from `GET /api/parent/entitlements` (M3-07 / M3-08).
- * Local type — schema regen pending: the backend endpoint is being built in parallel;
- * replace with `components['schemas'][…]` after `npm run generate-api-types`. Read the
- * body through `readEntitlements` (`modules/purchases/entitlements.ts`), never directly.
+ * Plan of one pet (M3-09 / M3-11, PAYMENTS_SPEC §2). Local types — **schema regen
+ * pending**: the backend (`feat/M3-11-challenge-trial`) is built in parallel; replace with
+ * `components['schemas'][…]` after `npm run generate-api-types`. Read every payload
+ * through `readPetPlan` / `readBilling`, never directly.
+ * - `free` — the mutt sandbox, free forever (no 12-week programme).
+ * - `challenge` — the 12-week challenge: `trial` (born, unpaid, 7 days) →
+ *   `payment_required` (lock) → `paid`; null before birth (trial not started).
  */
-export interface Entitlement {
-  /** Entitlement identifier, e.g. `challenge` (BUSINESS_MODEL §7). */
-  key: string;
-  active: boolean;
-  /** How it was granted, e.g. `purchase` / `trial` / `admin` (free-form until the schema lands). */
-  source: string | null;
-  /** `app_store` / `play_store` / … or null when not store-backed. */
-  store: string | null;
-  granted_at: string | null;
-  expires_at: string | null;
+export type PetPlanType = 'free' | 'challenge';
+export type ChallengeStatus = 'trial' | 'payment_required' | 'paid';
+
+/** `plan` on the child state, the parent dashboard pet and `pet.updated` (schema regen pending). */
+export interface PetPlan {
+  type: PetPlanType;
+  status: ChallengeStatus | null;
+  trial_ends_at: string | null;
+  paid_at: string | null;
 }
 
-/** `GET /api/parent/entitlements` 200 body (local type — schema regen pending). */
-export interface EntitlementsResponse {
-  entitlements: Entitlement[];
+/** One pet of `GET /api/parent/billing` (schema regen pending). */
+export interface BillingPet {
+  pet_id: number;
+  plan: PetPlanType;
+  status: ChallengeStatus | null;
+  trial_ends_at: string | null;
+  paid_at: string | null;
+}
+
+/** `GET /api/parent/billing` 200 body (schema regen pending). */
+export interface BillingResponse {
+  /** Purchased challenges not yet assigned to a pet. */
+  credits_available: number;
+  pets: BillingPet[];
+}
+
+/**
+ * `POST /api/parent/pets/{pet}/challenge/activate` 200 body (schema regen pending).
+ * 409 `{ reason: 'no_credit' }`, 422 (free plan / already paid).
+ */
+export interface ActivateChallengeResponse {
+  pet_id: number;
+  plan: PetPlan;
 }
 
 /** Response from POST /api/broadcasting/auth (Pusher protocol signature). */
@@ -726,11 +756,20 @@ export const api = {
     ),
 
   /**
-   * GET /api/parent/entitlements (M3-07, parent only) — the family's entitlements; the
-   * server is the source of truth (RevenueCat webhook, trial, admin grants). Returned
-   * untyped until `schema.ts` is regenerated → read with `readEntitlements`.
+   * GET /api/parent/billing (M3-09 / M3-11, parent only) — unassigned challenge credits and
+   * the plan + challenge status of every family pet; the server is the source of truth
+   * (RevenueCat webhook, trial clock, admin grants). Untyped until `schema.ts` is
+   * regenerated → read with `readBilling`.
    */
-  getEntitlements: () => apiRequest<unknown>('/api/parent/entitlements'),
+  getBilling: () => apiRequest<unknown>('/api/parent/billing'),
+
+  /**
+   * POST /api/parent/pets/{pet}/challenge/activate (M3-11) — assign the family's oldest
+   * unassigned challenge credit to this pet (idempotent: an already paid pet stays paid).
+   * 409 `no_credit`, 422 free plan / already paid. Body read with `readPetPlan`.
+   */
+  activateChallenge: (petId: number) =>
+    apiRequest<unknown>(`/api/parent/pets/${petId}/challenge/activate`, { method: 'POST' }),
 
   /** POST /api/parent/invite-parent — code for a second parent (revokes this parent's previous code). */
   inviteParent: () => apiRequest<InviteParentResponse>('/api/parent/invite-parent', { method: 'POST' }),
