@@ -513,7 +513,7 @@ class Pet extends Model
     }
 
     // ──────────────────────────────────────────────────────────────
-    //  Virtual Age (Time Asymmetry: 1 real week = 1 virtual month)
+    //  Virtual Age (Time Asymmetry: 1 program week = 1 virtual month)
     // ──────────────────────────────────────────────────────────────
 
     /**
@@ -610,6 +610,13 @@ class Pet extends Model
         }
         // Free plan (never locked), unborn or unsaved: nothing to read.
         if ($this->born_at === null || ! $this->exists || $this->plan === PetPlan::Free) {
+            return [];
+        }
+        // An unpaid, unlocked challenge still inside its trial was provably never
+        // locked: a lock only starts after the trial end (or at a refund after
+        // it) and is only lifted by a payment. Not cached — it changes with time.
+        if ($this->challenge_paid_at === null && $this->payment_locked_at === null
+            && $this->trial_ends_at !== null && $this->trial_ends_at->isFuture()) {
             return [];
         }
 

@@ -77,21 +77,6 @@ export function formatStepCount(steps: number): string {
 }
 
 /**
- * Calculate virtual age label from born_at timestamp.
- * 1 real week = 1 virtual month.
- */
-export function formatVirtualAge(bornAt: string | null): string {
-  if (!bornAt) return 'AGE: 0 MONTHS';
-
-  const born = new Date(bornAt);
-  const now = new Date();
-  const diffMs = now.getTime() - born.getTime();
-  const diffWeeks = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 7));
-
-  return `AGE: ${diffWeeks} MONTHS`;
-}
-
-/**
  * Check if an action button should be disabled based on pet state.
  */
 export function isActionDisabled(

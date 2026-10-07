@@ -473,7 +473,8 @@ class PetDecayService
 
     /**
      * Check if the pet is eligible for a Responsibility Certificate.
-     * Must have reached 12 virtual months (12 real weeks) with satisfactory performance.
+     * Must have reached 12 virtual months (12 program weeks — payment-lock time
+     * excluded, M3-11b) with satisfactory performance.
      */
     private function checkCertificateEligibility(Pet $pet): bool
     {

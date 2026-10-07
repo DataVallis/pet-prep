@@ -143,7 +143,10 @@ class ChallengeService
                 return false;
             }
 
-            $this->lock($pet, $now);
+            // M3-11b: the lock is due since the trial end (birth for a pet without a
+            // trial) — a late tick or a scheduler outage is not program time.
+            $due = $pet->trial_ends_at->greaterThan($pet->born_at) ? $pet->trial_ends_at : $pet->born_at;
+            $this->lock($pet, $now, $due);
 
             return true;
         });
@@ -169,11 +172,20 @@ class ChallengeService
     /**
      * Start the payment lock on a row the caller holds locked (non-quiet save:
      * hooks freeze + status period). Parents + caretakers get one push.
+     *
+     * `payment_locked_at` = $since, the instant the lock became due (≤ $now):
+     * the trial end for an expired trial, $now for a refund re-lock (the pet
+     * was paid — and playing — until the refund). The `payment_lock` status
+     * period starts there, so the program clock (M3-11b) excludes the gap
+     * between the trial end and the tick. Needs are unaffected: the freeze
+     * (`frozen_at`) starts now, and decay before the tick was never charged
+     * (the lock runs before decay in the same tick).
      */
-    private function lock(Pet $pet, CarbonInterface $now): void
+    private function lock(Pet $pet, CarbonInterface $now, ?CarbonInterface $since = null): void
     {
+        $since = $since !== null && $since->lessThan($now) ? $since->copy()->startOfSecond() : $now;
         $pet->forceFill([
-            'payment_locked_at' => $now,
+            'payment_locked_at' => $since,
             // A reminder a late tick never sent is not sent after the lock.
             'trial_reminder_sent_at' => $pet->trial_reminder_sent_at ?? $now,
         ])->save();

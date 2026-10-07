@@ -2,14 +2,17 @@
 
 use App\Enums\ChallengePaidSource;
 use App\Enums\PetStatusPeriodKind;
+use App\Events\PetUpdated;
 use App\Models\Pet;
 use App\Models\PetStatusPeriod;
 use App\Models\User;
 use App\Services\ChallengeCreditService;
 use App\Services\ChallengeService;
 use App\Services\LifeStageService;
+use App\Services\PetDecayService;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Queue;
 
 use function Pest\Laravel\getJson;
@@ -228,6 +231,108 @@ describe('payment lock pauses the program clock', function () {
         pcAt('2026-10-28 12:00:00');
         expect($trial->fresh()->virtualAgeInMonths())->toBe(3)
             ->and(pcAge($trial))->toBe(5);
+    });
+});
+
+describe('lock start, other freezes, certificate, queries (QA minors)', function () {
+    it('excludes the gap between the trial end and a late lock tick (scheduler down 3 h)', function () {
+        pcAt(PC_BORN);
+        [, , $pet] = pcFamily();
+
+        pcAt('2026-10-14 13:00:00'); // trial ended at 10:00, first tick only now
+        pcLockDue();
+        $locked = $pet->fresh();
+        expect($locked->payment_locked_at->toIso8601String())->toBe('2026-10-14T10:00:00+00:00')
+            ->and(PetStatusPeriod::where('pet_id', $pet->id)->where('kind', 'payment_lock')->sole()->started_at->toIso8601String())->toBe('2026-10-14T10:00:00+00:00')
+            ->and($locked->programSecondsAt(now()))->toBe(7 * 86400);
+
+        pcAt('2026-10-24 10:00:00');
+        pcAdminUnlock($pet);
+        expect($pet->fresh()->programSecondsPausedBefore(now()))->toBe(10 * 86400);
+    });
+
+    it('still counts illness and inactive time', function () {
+        pcAt(PC_BORN);
+        [, , $pet] = pcFamily('grandfathered');
+
+        pcAt('2026-10-10 10:00:00');
+        $pet->fresh()->forceFill(['illness_until' => now()->addHours(12), 'frozen_at' => now()])->save();
+        pcAt('2026-10-12 10:00:00');
+        $pet->fresh()->forceFill(['is_active' => false])->save();
+        pcAt('2026-10-20 10:00:00');
+        $pet->fresh()->forceFill(['is_active' => true])->save();
+
+        expect(PetStatusPeriod::where('pet_id', $pet->id)->pluck('kind')->map->value->sort()->values()->all())->toBe(['illness', 'inactive']);
+
+        pcAt('2026-10-28 12:00:00'); // three real weeks
+        expect($pet->fresh()->virtualAgeInMonths())->toBe(3)
+            ->and(pcAge($pet))->toBe(5)
+            ->and($pet->fresh()->programSecondsPausedBefore(now()))->toBe(0);
+    });
+
+    it('broadcasts the paused clock in PetUpdated after the lock and after the payment', function () {
+        Event::fake([PetUpdated::class]);
+        pcAt(PC_BORN);
+        [, , $pet] = pcFamily();
+
+        pcAt('2026-10-14 10:00:00');
+        pcLockDue();
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id
+            && $e->eventType === 'payment_required' && $e->payload['virtual_age_months'] === 1 && $e->payload['age_months'] === 3);
+
+        pcAt('2026-11-04 10:00:00'); // three weeks locked
+        pcAdminUnlock($pet);
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id
+            && $e->eventType === 'challenge_paid' && $e->payload['virtual_age_months'] === 1 && $e->payload['age_months'] === 3);
+
+        pcAt('2026-11-12 10:00:00'); // 15 program days
+        $payload = PetUpdated::payloadFor($pet->fresh());
+        expect($payload['virtual_age_months'])->toBe(2)
+            ->and($payload['age_months'])->toBe(4);
+    });
+
+    it('delays certificate eligibility in the decay tick by the locked time', function () {
+        pcAt(PC_BORN);
+        [, , $pet] = pcFamily();
+        $decay = app(PetDecayService::class);
+
+        pcAt('2026-10-14 10:00:00');
+        pcLockDue();
+        pcAt('2026-10-24 10:00:00');
+        pcAdminUnlock($pet);
+
+        pcAt('2026-12-30 10:00:00'); // 12 real weeks
+        $decay->processPetDecay($pet->fresh());
+        expect($pet->fresh()->certificate_eligible)->toBeFalse();
+
+        pcAt('2027-01-09 09:59:00');
+        $decay->processPetDecay($pet->fresh());
+        expect($pet->fresh()->certificate_eligible)->toBeFalse();
+
+        pcAt('2027-01-09 10:00:00'); // 12 program weeks
+        $decay->processPetDecay($pet->fresh());
+        expect($pet->fresh()->certificate_eligible)->toBeTrue();
+    });
+
+    it('reads no lock history for a pet that provably was never locked', function () {
+        pcAt(PC_BORN);
+        [, , $trial] = pcFamily();
+        [, , $free] = pcFamily('free');
+        [, , $paid] = pcFamily('grandfathered');
+        pcAt('2026-10-10 10:00:00');
+
+        DB::enableQueryLog();
+        $trial->fresh()->virtualAgeInMonths();
+        $free->fresh()->virtualAgeInMonths();
+        $periodQueries = fn () => collect(DB::getQueryLog())->filter(fn ($q) => str_contains($q['query'], 'pet_status_periods'))->count();
+        expect($periodQueries())->toBe(0);
+
+        // A paid pet may have past locks: one query, memoised per instance.
+        $p = $paid->fresh();
+        $p->virtualAgeInMonths();
+        $p->ageMonths();
+        expect($periodQueries())->toBe(1);
+        DB::disableQueryLog();
     });
 });
 
