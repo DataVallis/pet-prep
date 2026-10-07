@@ -253,8 +253,10 @@ describe('feed windows by stage', function () {
         actingAsRole($child);
         postJson('/api/child/pet/feed')->assertOk();
 
-        // Tuesday 11:30: no window any more → next is 13:00.
+        // Tuesday 11:30: no window any more → next is 13:00 (a well-fed dog —
+        // at ≤ 20 % hunger an emergency meal would be allowed, M3-12).
         lsAt('2026-10-13 09:30:00');
+        Pet::whereKey($pet->id)->update(['hunger_level' => 90, 'last_decay_at' => now()]);
         postJson('/api/child/pet/feed')->assertStatus(422)
             ->assertJsonPath('reason', 'outside_feed_window')
             ->assertJsonPath('next_allowed_at', '2026-10-13T13:00:00+02:00');

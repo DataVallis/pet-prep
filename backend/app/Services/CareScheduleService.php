@@ -3,10 +3,12 @@
 namespace App\Services;
 
 use App\Enums\ActivityType;
+use App\Enums\CareRefusal;
 use App\Models\ActivityLog;
 use App\Models\BreedConfig;
 use App\Models\Pet;
 use App\Models\QuietHours;
+use App\Services\Results\CareCheck;
 use App\Services\Results\FeedingStatus;
 use App\Services\Results\WaterStatus;
 use Carbon\CarbonImmutable;
@@ -20,7 +22,10 @@ use Illuminate\Support\Facades\Log;
  *
  * - Feeding: only inside the breed's `feed_windows`, family-local [start, end)
  *   "HH:MM" pairs (default 06–10 and 17–21); one feed per window. A window
- *   whose end is not after its start runs over midnight.
+ *   whose end is not after its start runs over midnight. Exception (M3-12):
+ *   an emergency meal whenever hunger shows ≤ EMERGENCY_FEED_THRESHOLD.
+ *   feedCheck() / waterCheck() are the one answer to "may the child feed /
+ *   water now" (actions, child state, push copy).
  * - Water: at most `water_times_per_day` refills per family-local day and at
  *   least `water_min_gap_minutes` real minutes between two refills (the gap
  *   also applies across midnight).
@@ -45,6 +50,18 @@ class CareScheduleService
 {
     /** Activity rows that count as "this window is fed". */
     public const FED_TYPES = [ActivityType::FedPet, ActivityType::ParentFedPet];
+
+    /**
+     * Emergency meal (M3-12, David 2026-10-07): when the hunger the child
+     * sees (Pet::displayMetric, rounded half up — 20.4 → 20 allowed, 20.5 →
+     * 21 not) is at most this, the child may feed outside a meal window.
+     * Not per breed (like the escalation thresholds on EscalationService);
+     * documented in PRODUCT_SPEC §5. The feed is a normal `fed_pet` row
+     * outside every window, so the routine ledger never counts it as an
+     * on-time meal (the missed window stays missed) and it does not use up
+     * the next window.
+     */
+    public const EMERGENCY_FEED_THRESHOLD = 20;
 
     public function __construct(private readonly LifeStageService $lifeStages) {}
 
@@ -142,6 +159,62 @@ class CareScheduleService
             limitReached: $limitReached,
             tooSoon: $tooSoon,
         );
+    }
+
+    /**
+     * May the child feed now by the game rules (M3-12: single source of truth
+     * for the feed action, the child state and the push copy)? Locks are not
+     * checked here. Uses the pet's current (already caught-up) metrics:
+     *  1. hygiene shows 0 % → needs_cleaning (clean first, PRODUCT_SPEC §8);
+     *  2. inside an unused meal window → allowed, mode `window` (on time);
+     *  3. hunger shows ≤ EMERGENCY_FEED_THRESHOLD → allowed, mode `emergency`
+     *     (also when the current window was already used — the dog is hungry);
+     *  4. otherwise already_fed_this_window / outside_feed_window with the
+     *     start of the next window.
+     */
+    public function feedCheck(Pet $pet, BreedConfig $config, CarbonInterface $now, ?FeedingStatus $feeding = null): CareCheck
+    {
+        if ($pet->displayMetric('hygiene_level') <= 0) {
+            return CareCheck::refuse(CareRefusal::NeedsCleaning);
+        }
+
+        $feeding ??= $this->feeding($pet, $config, $now);
+
+        if ($feeding->windowOpen()) {
+            return CareCheck::allow(CareCheck::MODE_WINDOW);
+        }
+
+        if ($pet->displayMetric('hunger_level') <= self::EMERGENCY_FEED_THRESHOLD) {
+            return CareCheck::allow(CareCheck::MODE_EMERGENCY);
+        }
+
+        return CareCheck::refuse(
+            $feeding->currentStart !== null ? CareRefusal::AlreadyFedThisWindow : CareRefusal::OutsideFeedWindow,
+            $feeding->nextStart,
+        );
+    }
+
+    /**
+     * May the child give water now by the game rules (M3-12, same role as
+     * feedCheck)? Hygiene 0 % → needs_cleaning; then the daily limit and the
+     * minimum gap (next_allowed_at from water()).
+     */
+    public function waterCheck(Pet $pet, BreedConfig $config, CarbonInterface $now, ?WaterStatus $water = null): CareCheck
+    {
+        if ($pet->displayMetric('hygiene_level') <= 0) {
+            return CareCheck::refuse(CareRefusal::NeedsCleaning);
+        }
+
+        $water ??= $this->water($pet, $config, $now);
+
+        if ($water->limitReached) {
+            return CareCheck::refuse(CareRefusal::WaterDailyLimit, $water->nextAllowedAt);
+        }
+        if ($water->tooSoon) {
+            return CareCheck::refuse(CareRefusal::WaterTooSoon, $water->nextAllowedAt);
+        }
+
+        return CareCheck::allow();
     }
 
     /**

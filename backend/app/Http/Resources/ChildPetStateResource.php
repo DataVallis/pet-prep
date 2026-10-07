@@ -24,7 +24,9 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * (e.g. 2026-10-04T17:00:00+02:00); feed windows also as local "HH:MM".
  *
  * `can_feed` / `can_water` combine every server rule (lock, mess, window /
- * limit), so the app can disable the button and show `next_*` times.
+ * limit, emergency meal — CareScheduleService::feedCheck / waterCheck), so
+ * the app can disable the button and show `next_*` times; `feed_mode` says
+ * whether a feed now is an on-time window meal or an emergency meal (M3-12).
  *
  * Family model (M2-01): the state is for the requesting child. `lock`,
  * `pet.awaiting_contract` and `contract` are that child's (a child who
@@ -77,6 +79,10 @@ class ChildPetStateResource extends JsonResource
 
         $feeding = $config ? $schedule->feeding($pet, $config, $now) : null;
         $water = $config ? $schedule->water($pet, $config, $now) : null;
+        // M3-12: one answer to "may the child feed / water now" (also used by the actions and pushes).
+        $feedCheck = $config && $feeding ? $schedule->feedCheck($pet, $config, $now, $feeding) : null;
+        $waterCheck = $config && $water ? $schedule->waterCheck($pet, $config, $now, $water) : null;
+        $canFeed = ! $locked && (bool) $feedCheck?->allowed;
         $contract = $actor !== null ? $pet->contractOf($actor) : $pet->contract;
         $media = PetMediaPayload::for($pet);
         $profile = PetProfilePayload::for($pet, $now);
@@ -144,7 +150,22 @@ class ChildPetStateResource extends JsonResource
                     ? ['start' => $iso($feeding->currentStart), 'end' => $iso($feeding->currentEnd)]
                     : null,
                 'fed_in_current_window' => (bool) $feeding?->fedInCurrent,
-                'can_feed' => ! $locked && ! $needsCleaning && (bool) $feeding?->windowOpen(),
+                'can_feed' => $canFeed,
+                /**
+                 * M3-12: how a feed now would count — `window` (inside an unused meal
+                 * window, on time) or `emergency` (outside a window because hunger shows
+                 * ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                 * feeding is not possible now.
+                 *
+                 * @var 'window'|'emergency'|null
+                 */
+                'feed_mode' => $canFeed ? $feedCheck?->mode : null,
+                /**
+                 * M3-12: displayed hunger (%) at or below which an emergency meal is allowed.
+                 *
+                 * @var int
+                 */
+                'emergency_threshold' => CareScheduleService::EMERGENCY_FEED_THRESHOLD,
                 // The current window while unused, otherwise the next one.
                 'next_feed_window' => $feeding?->nextStart
                     ? ['start' => $iso($feeding->nextStart), 'end' => $iso($feeding->nextEnd)]
@@ -157,7 +178,7 @@ class ChildPetStateResource extends JsonResource
                 'used_today' => $water->usedToday ?? 0,
                 'remaining_today' => $water?->remainingToday() ?? 0,
                 'last_watered_at' => $iso($water?->lastAt),
-                'can_water' => ! $locked && ! $needsCleaning && (bool) $water?->allowedNow(),
+                'can_water' => ! $locked && (bool) $waterCheck?->allowed,
                 // Earliest next refill by the water rules; null when allowed now.
                 'next_allowed_at' => $iso($water?->nextAllowedAt),
             ],

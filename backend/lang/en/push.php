@@ -22,6 +22,18 @@ return [
         'hygiene' => 'Your dog made a mess! Clean it up as soon as you can, or it will get sick.',
     ],
 
+    // M3-12 (David 2026-10-07): a reminder never asks for an action the app refuses
+    // right now — instead of "feed now" it says when it will be possible, or "clean first".
+    'wait' => [
+        'hunger' => 'Your dog is getting hungry. The next meal is at :time — don’t forget it.',
+        'thirst' => 'Your dog is thirsty. You can give it water again at :time — don’t forget it.',
+    ],
+
+    'clean_first' => [
+        'hunger' => 'Your dog is hungry, but the mess has to be cleaned up first. Then you can feed it.',
+        'thirst' => 'Your dog is thirsty, but the mess has to be cleaned up first. Then you can give it water.',
+    ],
+
     'walk_reminder' => 'Your dog hasn’t been for a walk today and is waiting for you with the lead. Shall we go out?',
 
     'parent_alarm' => 'Your child hasn’t looked after the dog today.',

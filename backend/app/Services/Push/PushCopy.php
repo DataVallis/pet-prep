@@ -19,6 +19,11 @@ use App\Support\RequestLocale;
  *   `walk_reminder` per day (PR #35) — no "zbolel v 30 minutah"
  *   (a walk can't be missed in 30 min, DECISIONS 2026-10-03).
  * - Phase 3 = the spec sentence for the parent plus what is missing.
+ * - M3-12 (David 2026-10-07): a push never asks for an action the app refuses
+ *   at that moment. NotificationService::deliver() asks CareScheduleService
+ *   and passes a variant: `wait` ("next meal at 17:00", "water again at
+ *   15:30") or `clean_first` (hygiene 0 % blocks food and water); when the
+ *   action is not possible again today the reminder is not sent at all.
  *
  * Metric keys: hunger | thirst | hygiene (walk reminder: energy); illness uses
  * hygiene | walk (its reason); game over has none.
@@ -28,6 +33,16 @@ final class PushCopy
     private const METRICS = ['hunger', 'thirst', 'hygiene'];
 
     private const ILLNESS_REASONS = ['hygiene', 'walk'];
+
+    /** M3-12 copy variants of phase 1 / 2 reminders whose action is refused right now. */
+    public const VARIANT_WAIT = 'wait';
+
+    public const VARIANT_CLEAN_FIRST = 'clean_first';
+
+    private const VARIANTS = [self::VARIANT_WAIT, self::VARIANT_CLEAN_FIRST];
+
+    /** Cleaning is never refused (outside locks), so only food and water have variants. */
+    private const VARIANT_METRICS = ['hunger', 'thirst'];
 
     public static function locale(?string $locale): string
     {
@@ -39,13 +54,26 @@ final class PushCopy
         return self::line('title', self::locale($locale));
     }
 
-    public static function body(PushType $type, ?string $metric, string $audience, ?string $locale = null): string
+    /**
+     * @param  string|null  $variant  M3-12, phase 1 / 2 hunger / thirst only: `wait` (the action is
+     *                                refused now — "next meal at :time") or `clean_first` (hygiene 0 %
+     *                                blocks feeding / water); null = the plain "feed / water now" text.
+     * @param  array<string, string>  $replace  e.g. ['time' => '17:00'] for `wait`.
+     */
+    public static function body(PushType $type, ?string $metric, string $audience, ?string $locale = null, ?string $variant = null, array $replace = []): string
     {
         $locale = self::locale($locale);
         $audience = $audience === PushNotification::AUDIENCE_PARENT
             ? PushNotification::AUDIENCE_PARENT
             : PushNotification::AUDIENCE_CHILD;
         $phaseMetric = in_array($metric, self::METRICS, true) ? $metric : 'hunger';
+
+        // M3-12: a reminder never asks for an action the app refuses right now.
+        if (in_array($type, [PushType::SoftWarning, PushType::CriticalAlert], true)
+            && in_array($variant, self::VARIANTS, true)
+            && in_array($phaseMetric, self::VARIANT_METRICS, true)) {
+            return self::line("{$variant}.{$phaseMetric}", $locale, $replace);
+        }
 
         return match ($type) {
             PushType::SoftWarning => self::line("soft.{$phaseMetric}", $locale),
@@ -63,9 +91,12 @@ final class PushCopy
         };
     }
 
-    private static function line(string $key, string $locale): string
+    /**
+     * @param  array<string, string>  $replace
+     */
+    private static function line(string $key, string $locale, array $replace = []): string
     {
-        $line = trans("push.{$key}", [], $locale);
+        $line = trans("push.{$key}", $replace, $locale);
 
         return is_string($line) ? $line : '';
     }

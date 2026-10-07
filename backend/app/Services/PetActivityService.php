@@ -413,10 +413,14 @@ class PetActivityService
     }
 
     /**
-     * Feed the dog (PRODUCT_SPEC §5): only inside a breed feed window
-     * (family-local), one feed per window, hunger → 100 %. Refused while the
-     * mess isn't cleaned (hygiene shows 0 %, PRODUCT_SPEC §8).
-     * Activity value = hunger shown before feeding.
+     * Feed the dog (PRODUCT_SPEC §5): inside a breed feed window
+     * (family-local), one feed per window, hunger → 100 %. Emergency meal
+     * (M3-12): also outside a window while hunger shows ≤ 20 % — the same
+     * `fed_pet` row, which lies outside every window, so the ledger keeps
+     * the window missed and the next window stays feedable. Refused while the
+     * mess isn't cleaned (hygiene shows 0 %, PRODUCT_SPEC §8). Rules:
+     * CareScheduleService::feedCheck(). Activity value = hunger shown before
+     * feeding.
      */
     public function feed(Pet $pet, ?User $actor = null): ActionResult
     {
@@ -430,16 +434,9 @@ class PetActivityService
             // Decay owed since the last tick applies to the old value.
             $this->decay->catchUpLocked($locked);
 
-            if ($locked->displayMetric('hygiene_level') <= 0) {
-                return $this->refused($locked, CareRefusal::NeedsCleaning);
-            }
-
-            $feeding = $this->schedule->feeding($locked, $this->breedConfigOf($locked), $now);
-            if ($feeding->currentStart === null) {
-                return $this->refused($locked, CareRefusal::OutsideFeedWindow, $feeding->nextStart);
-            }
-            if ($feeding->fedInCurrent) {
-                return $this->refused($locked, CareRefusal::AlreadyFedThisWindow, $feeding->nextStart);
+            $check = $this->schedule->feedCheck($locked, $this->breedConfigOf($locked), $now);
+            if (! $check->allowed) {
+                return $this->refused($locked, $check->refusal ?? CareRefusal::OutsideFeedWindow, $check->nextAllowedAt);
             }
 
             $before = $locked->displayMetric('hunger_level');
@@ -452,7 +449,8 @@ class PetActivityService
 
             $this->logActivity($locked, ActivityType::FedPet, $before, $actor?->id ?? $locked->user_id);
 
-            return $this->result(ActionResult::ACCEPTED, $locked);
+            // M3-12: the app words an emergency meal honestly ("doesn't count as on time").
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: ['feed_mode' => $check->mode]);
         });
     }
 
@@ -473,16 +471,9 @@ class PetActivityService
 
             $this->decay->catchUpLocked($locked);
 
-            if ($locked->displayMetric('hygiene_level') <= 0) {
-                return $this->refused($locked, CareRefusal::NeedsCleaning);
-            }
-
-            $water = $this->schedule->water($locked, $this->breedConfigOf($locked), $now);
-            if ($water->limitReached) {
-                return $this->refused($locked, CareRefusal::WaterDailyLimit, $water->nextAllowedAt);
-            }
-            if ($water->tooSoon) {
-                return $this->refused($locked, CareRefusal::WaterTooSoon, $water->nextAllowedAt);
+            $check = $this->schedule->waterCheck($locked, $this->breedConfigOf($locked), $now);
+            if (! $check->allowed) {
+                return $this->refused($locked, $check->refusal ?? CareRefusal::WaterTooSoon, $check->nextAllowedAt);
             }
 
             $before = $locked->displayMetric('thirst_level');
