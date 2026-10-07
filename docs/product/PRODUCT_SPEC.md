@@ -161,8 +161,6 @@ Pragovi se primerjajo s prikazano (zaokroženo) vrednostjo.
 - Zgoraj: glassmorphism vrstica (ime / pasma, starost, indikator povezave).
 - Desno: 4 vertikalne vrstice (lakota, žeja, gibanje, higiena), barva zelena → rumena → rdeča.
 - Spodaj: 4 okrogli gumbi (briketi, kaplja, povodec, metla); izven okna so zasenčeni s pojasnilom. Pri lakoti ≤ 20 % po zamujenem obroku je gumb za hrano odklenjen tudi izven okna z napisom **»Nujni obrok«** (M3-12).
-- **Sprehod:** overlay s števcem "1.250 / 4.000 korakov", sync ob vrnitvi.
-- Spodaj: 4 okrogli gumbi (briketi, kaplja, povodec, metla); izven okna so zasenčeni s pojasnilom.
 - **Sprehod:** overlay s števcem "1.250 / 4.000 korakov", sync ob vrnitvi; kartica »Štej korake z aplikacijo Zdravje / s Health Connect« s kratko razlago pred sistemskim dovoljenjem (samo današnje število korakov gre kužku), po povezavi »Koraki iz …«; na Androidu »Odpri Health Connect« (zavrnjeno) oz. »Odpri Google Play« (ni nameščen / zastarel).
 - **Čiščenje:** ko higiena pade na 0 %, umazanija prekrije zaslon; dokler je otrok ne zdrgne, druge akcije niso mogoče.
 - **Vedenje (M5-R02, *načrt* za aplikacijo — strežnik pripravljen):** pri mladičku gumb **»Pelji ven«** z odštevanjem do naslednje luže; pri uničevanju gumb **»Pospravi in daj igračo«**. Plačljiva pasma pokaže video luže / grizenja, brezplačni mešanček ikono.
