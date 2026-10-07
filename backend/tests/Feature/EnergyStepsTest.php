@@ -291,6 +291,30 @@ describe('Idempotency and anti-cheat', function () {
         expect($later->dailyStepCount)->toBe(3000);
     });
 
+    it('accepts a health-store catch-up after the app was closed for hours (M3-06)', function () {
+        $pet = stepsPet();
+        steps($pet, 500, '2026-10-05 05:00:00'); // 07:00 local, then the app is closed
+
+        // Apple Health / Health Connect kept counting; at 12:00 local the app reports the day total.
+        $result = steps($pet, 9500, '2026-10-05 10:00:00');
+
+        expect($result->status)->toBe(ActionResult::ACCEPTED);
+        expect($result->acceptedSteps)->toBe(9000);
+        expect($result->dailyStepCount)->toBe(9500);
+    });
+
+    it('still caps a catch-up above 200 steps per minute of elapsed real time (M3-06)', function () {
+        $pet = stepsPet();
+        steps($pet, 500, '2026-10-05 09:00:00');
+
+        // One hour later a "health" total claims +19,500 → 60 min × 200 = 12,000 accepted.
+        $result = steps($pet, 20000, '2026-10-05 10:00:00');
+
+        expect($result->status)->toBe(ActionResult::CAPPED);
+        expect($result->acceptedSteps)->toBe(12000);
+        expect($result->dailyStepCount)->toBe(12500);
+    });
+
     it('measures the first sync of the day from local midnight', function () {
         Carbon::setTestNow('2026-10-05 22:10:00'); // 00:10 CEST on 6 Oct
         $pet = stepsPet();
