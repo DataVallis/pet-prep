@@ -9,10 +9,11 @@ use Illuminate\Support\Facades\Schema;
  * M1-18 — push notifications in the device's language.
  *
  * device_push_tokens.locale: the language of the app install ('en' | 'sl',
- * config/locales.php), written by POST /api/devices from the request's
- * `Accept-Language` when it names a supported language; otherwise the stored
- * value is kept. Null = the install never said → pushes use the default
- * (English).
+ * config/locales.php), written by POST /api/devices from the explicit body
+ * field `locale` (never from Accept-Language — iOS sends that implicitly);
+ * without the field the stored value is kept, and a new row gets
+ * `locales.unstated_device` ('sl', pre-M1-18 builds). Null is only a safety
+ * net (pushes then use the default, English).
  *
  * Backfill: every install registered before this migration ran a
  * Slovenian-only app build, so existing rows become 'sl' (their pushes stay

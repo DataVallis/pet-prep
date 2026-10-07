@@ -18,10 +18,10 @@ use Laravel\Sanctum\PersonalAccessToken;
  * pushes. The row is tied to the Sanctum token that registered it: deleting
  * that token (logout, revoke, prune) deletes the row (FK cascade).
  *
- * Language (M1-18): `$locale` is the supported language the request named
- * in `Accept-Language` (RequestLocale::fromHeader) — stored, and refreshed
- * on every re-registration. A request without one (old app builds) keeps
- * the stored language; a new row then stays null (→ default English).
+ * Language (M1-18): `$locale` is the explicit `locale` body field (en | sl)
+ * — stored, and refreshed on every re-registration that sends it. Without
+ * it the stored language is kept; a new row gets `locales.unstated_device`
+ * ('sl': every app build before M1-18 is Slovenian-only and sends none).
  */
 class PushDeviceService
 {
@@ -35,6 +35,8 @@ class PushDeviceService
     ): DevicePushToken {
         $now = now();
         $locale = RequestLocale::isSupported($locale) ? $locale : null;
+        $unstated = config('locales.unstated_device');
+        $insertLocale = $locale ?? (RequestLocale::isSupported(is_string($unstated) ? $unstated : null) ? $unstated : null);
         $accessTokenId = $accessToken !== null && $accessToken->exists ? $accessToken->getKey() : null;
 
         // Audit a move to another account (PR #35 review) — ids only, never the token.
@@ -55,7 +57,7 @@ class PushDeviceService
             'expo_push_token' => $expoPushToken,
             'platform' => $platform->value,
             'app_version' => $appVersion,
-            'locale' => $locale,
+            'locale' => $insertLocale,
             'last_seen_at' => $now,
             'disabled_at' => null,
             'disabled_reason' => null,

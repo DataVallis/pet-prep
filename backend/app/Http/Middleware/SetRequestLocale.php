@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
  * (supported list in config/locales.php, default English) becomes the app
  * locale for translated server texts (__()). Always set — also to the
  * default — so nothing leaks from an earlier request in a long-lived
- * worker. The answer carries `Content-Language`.
+ * worker. The answer carries `Content-Language` and `Vary: Accept-Language`.
  */
 class SetRequestLocale
 {
@@ -24,6 +24,7 @@ class SetRequestLocale
 
         $response = $next($request);
         $response->headers->set('Content-Language', $locale);
+        $response->setVary('Accept-Language', false);
 
         return $response;
     }

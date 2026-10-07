@@ -1140,48 +1140,72 @@ it('limits device registration to 10 per minute per user outside testing, fallin
 // ──────────────────────────────────────────────────────────────
 
 describe('POST /api/devices — install language (M1-18)', function () {
-    it('stores the language from Accept-Language and refreshes it on every re-registration', function () {
+    it('stores the explicit `locale` field and refreshes it on every re-registration that sends it', function () {
         [, $child] = pnFamily();
         $token = pnToken('langFFFFFFFFFFFFFFFFFFF');
         actingAsRole($child);
-        $register = fn (array $headers) => $this->postJson('/api/devices', ['expo_push_token' => $token, 'platform' => 'ios'], $headers);
+        $register = fn (array $body, array $headers = []) => $this->postJson(
+            '/api/devices', ['expo_push_token' => $token, 'platform' => 'ios'] + $body, $headers,
+        );
 
-        $register(['Accept-Language' => 'sl-SI'])->assertOk()->assertJsonPath('device.locale', 'sl');
-        expect(DevicePushToken::where('expo_push_token', $token)->value('locale'))->toBe('sl');
+        $register(['locale' => 'en'])->assertOk()->assertJsonPath('device.locale', 'en');
+        expect(DevicePushToken::where('expo_push_token', $token)->value('locale'))->toBe('en');
 
-        $register(['Accept-Language' => 'en-GB'])->assertOk()->assertJsonPath('device.locale', 'en');
-        expect(DevicePushToken::where('expo_push_token', $token)->sole()->locale)->toBe('en');
+        // The body decides, not Accept-Language.
+        $register(['locale' => 'sl'], ['Accept-Language' => 'en-GB'])->assertOk()->assertJsonPath('device.locale', 'sl');
+        expect(DevicePushToken::where('expo_push_token', $token)->sole()->locale)->toBe('sl');
 
-        $register(['Accept-Language' => 'de-DE;q=1, sl;q=0.5'])->assertOk()->assertJsonPath('device.locale', 'sl');
+        $register(['locale' => 'en'], ['Accept-Language' => 'sl-SI'])->assertOk()->assertJsonPath('device.locale', 'en');
     });
 
-    it('keeps the stored language when a request names none (old builds), and leaves a new install null', function () {
-        [$parent, $child] = pnFamily();
+    it('never takes the push language from an implicit iOS Accept-Language (installed 2.0.2 builds)', function () {
+        [, $child] = pnFamily();
         $known = pnToken('knownGGGGGGGGGGGGGGGGG');
-        pnDevice($child, $known, 'ios', 'sl');
+        pnDevice($child, $known, 'ios', 'sl'); // backfilled pre-M1-18 install
         actingAsRole($child);
-        // The test client sends "en-us,en;q=0.5" by default (Symfony); an empty
-        // header stands for an old Android build that sends none.
-        $noLanguage = ['Accept-Language' => ''];
 
-        $this->postJson('/api/devices', ['expo_push_token' => $known, 'platform' => 'ios'], $noLanguage)->assertOk()
-            ->assertJsonPath('device.locale', 'sl');
-        $this->postJson('/api/devices', ['expo_push_token' => $known, 'platform' => 'ios'], ['Accept-Language' => 'fr-FR, *;q=0.1'])->assertOk()
-            ->assertJsonPath('device.locale', 'sl');
+        foreach (['en-US,en;q=0.9', 'en-GB', '', 'fr-FR, *;q=0.1'] as $header) {
+            $this->postJson('/api/devices', ['expo_push_token' => $known, 'platform' => 'ios'], ['Accept-Language' => $header])
+                ->assertOk()->assertJsonPath('device.locale', 'sl');
+        }
+        // An explicit null is "not sent" too.
+        $this->postJson('/api/devices', ['expo_push_token' => $known, 'platform' => 'ios', 'locale' => null], ['Accept-Language' => 'en-US,en;q=0.9'])
+            ->assertOk()->assertJsonPath('device.locale', 'sl');
+        expect(DevicePushToken::where('expo_push_token', $known)->sole()->locale)->toBe('sl');
+    });
+
+    it('gives a new install without `locale` Slovenian (only pre-M1-18 builds omit it)', function () {
+        [$parent, $child] = pnFamily();
+        actingAsRole($child);
 
         $fresh = pnToken('freshHHHHHHHHHHHHHHHHH');
-        $this->postJson('/api/devices', ['expo_push_token' => $fresh, 'platform' => 'android'], $noLanguage)->assertOk()
-            ->assertJsonPath('device.locale', null);
-        expect(DevicePushToken::where('expo_push_token', $fresh)->value('locale'))->toBeNull();
+        $this->postJson('/api/devices', ['expo_push_token' => $fresh, 'platform' => 'ios'], ['Accept-Language' => 'en-US,en;q=0.9'])
+            ->assertOk()->assertJsonPath('device.locale', 'sl');
+        expect(DevicePushToken::where('expo_push_token', $fresh)->value('locale'))->toBe('sl');
 
-        // Moving the install to another account takes that request's language.
+        // Moving the install to another account with an explicit language takes it.
         app('auth')->forgetGuards();
         actingAsRole($parent);
-        $this->postJson('/api/devices', ['expo_push_token' => $known, 'platform' => 'ios'], ['Accept-Language' => 'en'])->assertOk();
-        expect(DevicePushToken::where('expo_push_token', $known)->sole())
+        $this->postJson('/api/devices', ['expo_push_token' => $fresh, 'platform' => 'ios', 'locale' => 'en'])->assertOk();
+        expect(DevicePushToken::where('expo_push_token', $fresh)->sole())
             ->user_id->toBe($parent->id)
             ->locale->toBe('en');
     });
+
+    it('refuses an unsupported or malformed locale', function (mixed $locale) {
+        [, $child] = pnFamily();
+        actingAsRole($child);
+
+        $this->postJson('/api/devices', ['expo_push_token' => pnToken(), 'platform' => 'ios', 'locale' => $locale])
+            ->assertUnprocessable()->assertJsonValidationErrors('locale');
+        expect(DevicePushToken::count())->toBe(0);
+    })->with([
+        'unsupported' => ['de'],
+        'region tag' => ['sl-SI'],
+        'upper case' => ['EN'],
+        'array' => [['en']],
+        'number' => [1],
+    ]);
 });
 
 describe('Escalation pushes — copy per install language (M1-18)', function () {

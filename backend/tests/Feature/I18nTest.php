@@ -73,7 +73,8 @@ describe('SetRequestLocale middleware (API group)', function () {
         $parent = User::factory()->parent()->create();
         actingAsRole($parent);
 
-        getJson('/api/user', ['Accept-Language' => 'sl-SI'])->assertOk()->assertHeader('Content-Language', 'sl');
+        $sl = getJson('/api/user', ['Accept-Language' => 'sl-SI'])->assertOk()->assertHeader('Content-Language', 'sl');
+        expect($sl->headers->get('Vary'))->toContain('Accept-Language');
         expect(App::getLocale())->toBe('sl');
 
         getJson('/api/user', ['Accept-Language' => 'fr-FR'])->assertOk()->assertHeader('Content-Language', 'en');
@@ -86,7 +87,8 @@ describe('SetRequestLocale middleware (API group)', function () {
     });
 
     it('also localises error answers (guest 401 still gets the header)', function () {
-        getJson('/api/user', ['Accept-Language' => 'sl'])->assertUnauthorized()->assertHeader('Content-Language', 'sl');
+        $r = getJson('/api/user', ['Accept-Language' => 'sl'])->assertUnauthorized()->assertHeader('Content-Language', 'sl');
+        expect($r->headers->get('Vary'))->toContain('Accept-Language');
     });
 
     it('has every lang key in every supported language', function () {
@@ -108,6 +110,8 @@ describe('Deletion confirmation word (ConfirmDeletionRequest)', function () {
         ['Izbriši', true],
         ['DELETE', true],
         [' delete ', true],
+        'NFD (S + combining caron)' => ["IZBRIS\u{030C}I", true],
+        'NFD lower case' => ["izbris\u{030C}i", true],
         ['IZBRISI', false], // "š" required, as in the app
         ['IZBRIŠ', false],
         ['DELET', false],
@@ -126,6 +130,22 @@ describe('Deletion confirmation word (ConfirmDeletionRequest)', function () {
         'IZBRIŠI from a Slovenian app' => ['IZBRIŠI', 'sl-SI'],
         'DELETE from an English app' => ['DELETE', 'en-GB'],
         'IZBRIŠI from an English request' => ['izbriši', 'en'],
+        'IZBRIŠI typed in NFD' => ["IZBRIS\u{030C}I", 'sl-SI'],
+    ]);
+
+    it('refuses an explicitly sent empty, blank or null word (present key must match)', function (mixed $word) {
+        [$parent, $child] = i18nParentWithChild();
+        actingAsRole($parent);
+
+        deleteJson("/api/parent/children/{$child->id}", ['password' => 'password', 'confirm' => true, 'confirm_word' => $word], ['Accept-Language' => 'sl'])
+            ->assertStatus(422)
+            ->assertJsonPath('errors.confirm_word.0', 'Za potrditev izbrisa vpišite IZBRIŠI.');
+        expect(User::find($child->id))->not->toBeNull();
+    })->with([
+        'empty' => [''],
+        'blank' => ['   '],
+        'null' => [null],
+        'array' => [['IZBRIŠI']],
     ]);
 
     it('still works without confirm_word (app builds before M1-18)', function () {
@@ -196,7 +216,7 @@ describe('GDPR export in the request language', function () {
 });
 
 describe('device_push_tokens.locale migration', function () {
-    it('backfills installs registered before M1-18 with sl and leaves later rows to the request', function () {
+    it('backfills installs registered before M1-18 with sl; later rows are written by POST /api/devices', function () {
         $migration = require database_path('migrations/2026_10_18_120000_add_locale_to_device_push_tokens.php');
         $parent = User::factory()->parent()->create();
 

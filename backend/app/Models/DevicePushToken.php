@@ -17,7 +17,8 @@ use Illuminate\Support\Carbon;
  * "sign out all devices" and pruning a child's old devices drop it too.
  * `disabled_at` is set when Expo answers DeviceNotRegistered; registering
  * again re-enables it. `locale` = the install's language for push texts
- * (M1-18; null → default English, rows from before M1-18 were backfilled 'sl').
+ * (M1-18, from the `locale` body field of POST /api/devices; rows from before
+ * M1-18 and new rows without the field get 'sl'; null → default English).
  *
  * @property int $id
  * @property int $user_id

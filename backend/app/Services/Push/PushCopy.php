@@ -25,8 +25,6 @@ use App\Support\RequestLocale;
  */
 final class PushCopy
 {
-    public const TITLE = 'PetPrep';
-
     private const METRICS = ['hunger', 'thirst', 'hygiene'];
 
     private const ILLNESS_REASONS = ['hygiene', 'walk'];
