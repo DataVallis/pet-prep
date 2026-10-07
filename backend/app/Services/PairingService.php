@@ -242,6 +242,32 @@ class PairingService
         }
     }
 
+    /**
+     * M5-F03 (David 2026-10-07): the 12-week challenge needs a paid breed —
+     * the mutt (also the default when no breed / no profile is sent) is the
+     * free plan's dog only. Called for a new pet when the parent explicitly
+     * chose `plan: challenge` (an omitted plan keeps the old-build default).
+     *
+     * @throws FamilyException challenge_requires_paid_breed (422)
+     */
+    public function assertPlanAllowed(?PetProfileChoice $profile, PetPlan $plan): void
+    {
+        $breed = $profile?->breed ?? BreedType::Mutt;
+        if ($plan === PetPlan::Challenge && ! $breed->isPremium()) {
+            throw new FamilyException('challenge_requires_paid_breed', 'The 12-week challenge needs a paid breed; the mixed breed is the free plan.');
+        }
+    }
+
+    /**
+     * The plan of a new pet when the app sent none (builds before M3-09):
+     * the challenge for a paid breed, the free plan for the mutt
+     * (PAYMENTS_SPEC P4 — a mutt is never a lockable challenge).
+     */
+    public static function defaultPlanFor(BreedType $breed): PetPlan
+    {
+        return $breed->isPremium() ? PetPlan::Challenge : PetPlan::Free;
+    }
+
     private function createPet(Family $family, User $child, ?PetProfileChoice $profile, PetPlan $plan): Pet
     {
         // Pet DNA is generated offline. The reference image is produced
@@ -258,6 +284,11 @@ class PairingService
         $breed = $profile?->breed ?? BreedType::Mutt;
         if (! self::breedAllowed($breed, $plan)) {
             $breed = BreedType::Mutt;
+        }
+        // PAYMENTS_SPEC P4 / M5-F03: a mutt is never a (lockable) challenge — also
+        // for PINs stored before M5-F03 and the deprecated /child/pair flow.
+        if ($plan === PetPlan::Challenge && ! $breed->isPremium()) {
+            $plan = PetPlan::Free;
         }
         $arrivalAge = $profile !== null ? $this->lifeStages->arrivalAgeFor($breed->slug(), $profile->ageStage) : null;
         $stage = $arrivalAge !== null ? $this->lifeStages->stageForAge($breed->slug(), $arrivalAge) : null;

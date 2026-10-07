@@ -34,6 +34,8 @@ export type PinErrorKind =
   | 'already_paired'
   /** M5-R04: a premium breed was picked for a new pet (purchase-only). */
   | 'breed_locked'
+  /** M5-F03: the 12-week challenge was picked with the mutt (the free plan's dog). */
+  | 'challenge_requires_paid_breed'
   /** M5-R04: the server rejected the profile choice (422 validation without a reason). */
   | 'invalid_profile'
   | 'offline'
@@ -82,7 +84,10 @@ export function classifyPinError(error: unknown): PinError {
     if (error.status === 401) return { kind: 'unauthorized', retryAfterSeconds: null };
     if (error.status === 404) return { kind: 'child_not_found', retryAfterSeconds: null };
     const reason = reasonOf(error);
-    if (error.status === 422 && (reason === 'pet_not_joinable' || reason === 'already_paired' || reason === 'breed_locked')) {
+    if (
+      error.status === 422 &&
+      (reason === 'pet_not_joinable' || reason === 'already_paired' || reason === 'breed_locked' || reason === 'challenge_requires_paid_breed')
+    ) {
       return { kind: reason, retryAfterSeconds: null };
     }
     if (error.status === 422 && hasProfileValidationErrors(error.data)) {

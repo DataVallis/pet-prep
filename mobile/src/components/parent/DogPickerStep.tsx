@@ -2,7 +2,8 @@
  * "Izberi kužka" (M5-R04): plan (M3-09: free mutt sandbox or the 12-week challenge with a
  * 7-day trial — PAYMENTS_SPEC), breed, origin and age at arrival of a new pet, before the
  * child's PIN (REALISM_SPEC §1). Premium breeds need the challenge plan (server 422
- * `breed_locked` otherwise). Plan, origin and age have no default — the parent reads the
+ * `breed_locked` otherwise); the challenge needs a premium breed — the mutt is greyed out
+ * while it is chosen (M5-F03, server 422 `challenge_requires_paid_breed`). Plan, origin and age have no default — the parent reads the
  * description of each and chooses. Price shown honestly: from the store when loaded, else
  * the list price; no automatic charge. Light parent theme (ADR-007).
  */
@@ -15,7 +16,9 @@ import { Check, Lock } from 'lucide-react-native';
 import type { NewPetProfile, PetBreed } from '@/api/client';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import {
+  breedLockReason,
   CHALLENGE_LIST_PRICE,
+  choiceWithPlan,
   completeChoice,
   isBreedLocked,
   lockedBreedsFor,
@@ -52,11 +55,16 @@ export default function DogPickerStep({
   onConfirm,
   onBack,
 }: DogPickerStepProps) {
-  const [choice, setChoice] = useState<PickerChoice>(
-    isBreedLocked(initial.breed, lockedBreedsFor(initial.plan, serverLockedBreeds)) ? { ...initial, breed: 'mutt' } : initial,
-  );
-  const [lockedTapped, setLockedTapped] = useState(false);
+  const [choice, setChoice] = useState<PickerChoice>(() => {
+    if (!isBreedLocked(initial.breed, lockedBreedsFor(initial.plan, serverLockedBreeds))) return initial;
+    return initial.plan === null ? { ...initial, breed: 'mutt' } : choiceWithPlan(initial, initial.plan, serverLockedBreeds);
+  });
+  /** The locked breed the parent tapped last (explains why), null when none. */
+  const [lockedTapped, setLockedTapped] = useState<PetBreed | null>(null);
   const lockedBreeds = lockedBreedsFor(choice.plan, serverLockedBreeds);
+  // Every breed of this plan is locked (e.g. the server refused the only paid breed): the
+  // way out is the free plan — say so instead of "choose a breed" (M5-F03).
+  const noOpenBreed = PICKER_BREEDS.every((b) => isBreedLocked(b, lockedBreeds));
   const profile = completeChoice(choice, serverLockedBreeds);
   const price = challengePrice ?? CHALLENGE_LIST_PRICE;
 
@@ -83,9 +91,9 @@ export default function DogPickerStep({
           hint={plan === 'challenge' ? S.plans.challenge.hint : S.plans.free.hint}
           selected={choice.plan === plan}
           onPress={() => {
-            setLockedTapped(false);
-            // Free plan = always the mutt (PAYMENTS_SPEC §2).
-            setChoice((c) => ({ ...c, plan, breed: plan === 'free' ? 'mutt' : c.breed }));
+            setLockedTapped(null);
+            // Free plan = always the mutt (PAYMENTS_SPEC §2); the challenge never keeps the mutt (M5-F03).
+            setChoice((c) => choiceWithPlan(c, plan, serverLockedBreeds));
           }}
           testID={`plan-option-${plan}`}
         />
@@ -103,21 +111,28 @@ export default function DogPickerStep({
             hint={S.breedHints[breed]}
             selected={!locked && choice.breed === breed}
             locked={locked}
-            accessibilityLabel={locked ? S.lockedA11y(S.breeds[breed]) : S.breeds[breed]}
+            accessibilityLabel={
+              !locked
+                ? S.breeds[breed]
+                : breedLockReason(breed, choice.plan, serverLockedBreeds) === 'free_only'
+                  ? S.lockedFreeOnlyA11y(S.breeds[breed])
+                  : S.lockedA11y(S.breeds[breed])
+            }
             onPress={() => {
               if (locked) {
-                setLockedTapped(true);
+                setLockedTapped(breed);
                 return;
               }
+              setLockedTapped(null);
               setChoice((c) => ({ ...c, breed }));
             }}
             testID={`breed-option-${breed}`}
           />
         );
       })}
-      {lockedTapped && (
+      {lockedTapped !== null && (
         <Text style={styles.lockedNote} testID="breed-locked-note">
-          {choice.plan === 'free' || choice.plan === null ? S.breedFreeNote : S.breedLockedNote}
+          {lockedNote(breedLockReason(lockedTapped, choice.plan, serverLockedBreeds))}
         </Text>
       )}
 
@@ -150,7 +165,17 @@ export default function DogPickerStep({
       ))}
       <Text style={styles.note}>{S.quietHoursNote}</Text>
 
-      {profile === null && <Text style={styles.missing}>{choice.plan === null ? S.planMissing : S.missing}</Text>}
+      {profile === null && (
+        <Text style={styles.missing}>
+          {choice.plan === null
+            ? S.planMissing
+            : noOpenBreed
+              ? S.noPaidBreed
+              : isBreedLocked(choice.breed, lockedBreeds)
+                ? S.breedMissing
+                : S.missing}
+        </Text>
+      )}
       <Pressable
         style={({ pressed }) => [styles.primaryButton, profile === null && styles.buttonDisabled, pressed && styles.pressed]}
         onPress={() => {
@@ -175,6 +200,13 @@ export default function DogPickerStep({
       )}
     </ScrollView>
   );
+}
+
+/** The note under the breeds after a tap on a locked one. */
+function lockedNote(reason: ReturnType<typeof breedLockReason>): string {
+  if (reason === 'free_only') return S.breedChallengeNote;
+  if (reason === 'challenge_only') return S.breedFreeNote;
+  return S.breedLockedNote;
 }
 
 interface OptionProps {

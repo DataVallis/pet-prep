@@ -48,6 +48,9 @@ class ChallengeService
 
     public const EVENT_REFUNDED = 'challenge_refunded';
 
+    /** M5-F02: an unpaid mutt challenge became the free mutt (data migration). */
+    public const EVENT_FREE_PLAN = 'plan_free';
+
     /** The parent's reminder goes out this long before the trial ends ("tomorrow"). */
     public const REMINDER_HOURS_BEFORE = 24;
 
@@ -238,10 +241,49 @@ class ChallengeService
     }
 
     /**
+     * M5-F02 / M5-F03 (PAYMENTS_SPEC P4: the mutt is free forever): an UNPAID
+     * challenge of a breed without premium (the mutt — trial, payment
+     * required or not born yet) becomes the free plan, so it can never be
+     * bought or locked. Paid challenges (purchase, grandfathered, admin) are
+     * never touched (`plan.display_type` shows them as free).
+     *
+     * Under the row lock with a non-quiet save, so the Pet hooks treat a
+     * lifted payment lock exactly like a payment (M3-11b): the open
+     * `payment_lock` status period is closed now (the locked time stays
+     * excluded from the program clock — `converted_to_free_at` keeps
+     * Pet::paymentLockSpans() reading the periods), applyThaw() shifts the
+     * neglect clocks, the decay clock restarts. No media change, no push.
+     * One PetUpdated after commit. Returns false when nothing was converted.
+     */
+    public function convertUnpaidMuttToFree(int $petId, CarbonInterface $now): bool
+    {
+        return DB::transaction(function () use ($petId, $now): bool {
+            $pet = Pet::whereKey($petId)->lockForUpdate()->first();
+            if ($pet === null || $pet->plan !== PetPlan::Challenge || $pet->challenge_paid_at !== null
+                || $pet->breed_type->isPremium()) {
+                return false;
+            }
+
+            $pet->forceFill([
+                'plan' => PetPlan::Free,
+                'trial_ends_at' => null,
+                'payment_locked_at' => null,
+                'converted_to_free_at' => $now,
+            ])->save();
+
+            PetUpdated::afterCommit($pet, self::EVENT_FREE_PLAN);
+            Log::info('Challenge: unpaid mutt challenge converted to the free plan', ['pet_id' => $pet->id]);
+
+            return true;
+        });
+    }
+
+    /**
      * The pet's credit was refunded (PAYMENTS_SPEC §2): unless the 12-week
      * challenge is already finished, the pet is unpaid again — back in its
      * trial if still inside the 7 days, otherwise locked at once (with the
-     * lock pushes). Caller holds the pet row lock. Returns true if changed.
+     * lock pushes). A mutt becomes the free plan instead (P4 — never locked).
+     * Caller holds the pet row lock. Returns true if changed.
      */
     public function markRefunded(Pet $pet, CarbonInterface $now): bool
     {
@@ -250,6 +292,22 @@ class ChallengeService
         }
         if ($pet->hasReachedSimulationEnd()) {
             return false; // finished challenge: the record stays
+        }
+
+        // PAYMENTS_SPEC P4 / M5-F02: a refunded mutt (bought before M5-F03) is never
+        // re-locked — it becomes the free mutt (same bookkeeping as the migration).
+        if (! $pet->breed_type->isPremium()) {
+            $pet->forceFill([
+                'challenge_paid_at' => null,
+                'challenge_paid_source' => null,
+                'plan' => PetPlan::Free,
+                'trial_ends_at' => null,
+                'payment_locked_at' => null,
+                'converted_to_free_at' => $now,
+            ])->save();
+            PetUpdated::afterCommit($pet, self::EVENT_FREE_PLAN);
+
+            return true;
         }
 
         $pet->forceFill(['challenge_paid_at' => null, 'challenge_paid_source' => null])->save();

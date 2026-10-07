@@ -104,6 +104,7 @@
       "pet_not_joinable": "This dog can't be joined any more. Choose another dog or a new one.",
       "already_paired": "This child already cares for a dog — they can only get a code to sign in on a new device.",
       "breed_locked": "This breed is part of a paid challenge and is unlocked only with a purchase. Choose another breed.",
+      "challenge_requires_paid_breed": "The 12-week challenge needs a paid breed. The mixed breed is the free plan's dog — choose another breed or the free plan.",
       "invalid_profile": "The dog choice couldn't be saved. Please choose again.",
       "offline": "Can't reach the server. Check your internet connection and try again.",
       "server": "The code couldn't be created right now. Please try again."

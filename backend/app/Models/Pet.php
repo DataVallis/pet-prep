@@ -15,6 +15,7 @@ use App\Enums\PetStatusPeriodKind;
 use App\Jobs\DeletePetMediaFiles;
 use App\Services\FamilyService;
 use App\Services\LifeStageService;
+use App\Services\PairingService;
 use App\Services\PetStatusPeriodService;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
@@ -67,8 +68,15 @@ class Pet extends Model
             }
 
             // M3-11: a pet's plan is fixed at creation; only a challenge has a trial.
-            if ($pet->plan === null) {
-                $pet->plan = PetPlan::Challenge;
+            // PAYMENTS_SPEC P4 / M5-F03: the default follows the breed, and an unpaid
+            // challenge of a breed without premium (the mutt) is the free plan — no
+            // creation path (admin, seeders, legacy pairing) makes a lockable mutt.
+            $pet->plan ??= PairingService::defaultPlanFor($pet->breed_type ?? BreedType::Mutt);
+            if ($pet->plan === PetPlan::Challenge && $pet->challenge_paid_at === null
+                && ! ($pet->breed_type ?? BreedType::Mutt)->isPremium()) {
+                $pet->plan = PetPlan::Free;
+                $pet->trial_ends_at = null;
+                $pet->payment_locked_at = null;
             }
 
             if ($pet->isUnborn()) {
@@ -224,6 +232,8 @@ class Pet extends Model
         'training_decayed_through',
         // M3-11 bookkeeping (the apps get PetPlanPayload instead).
         'trial_reminder_sent_at',
+        // M5-F02: when an unpaid mutt challenge became the free plan (program clock bookkeeping).
+        'converted_to_free_at',
     ];
 
     /**
@@ -269,6 +279,7 @@ class Pet extends Model
             'challenge_paid_source' => ChallengePaidSource::class,
             'payment_locked_at' => 'datetime',
             'trial_reminder_sent_at' => 'datetime',
+            'converted_to_free_at' => 'datetime',
         ];
     }
 
@@ -608,8 +619,10 @@ class Pet extends Model
         if ($this->paymentLockSpans !== null) {
             return $this->paymentLockSpans;
         }
-        // Free plan (never locked), unborn or unsaved: nothing to read.
-        if ($this->born_at === null || ! $this->exists || $this->plan === PetPlan::Free) {
+        // Free plan (never locked — unless it was an unpaid mutt challenge
+        // converted by M5-F02, whose past locks still count), unborn or unsaved.
+        if ($this->born_at === null || ! $this->exists
+            || ($this->plan === PetPlan::Free && $this->converted_to_free_at === null)) {
             return [];
         }
         // An unpaid, unlocked challenge still inside its trial was provably never

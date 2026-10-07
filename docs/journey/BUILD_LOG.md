@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-07 — Mešanček je brezplačen pes, izziv je s plačljivo pasmo (M5-F02, M5-F03)
+
+**Kaj se je zgodilo:** David je na TestFlightu videl dve neskladji. (1) Pri starem mešančku je značka kazala »Plačano«, čeprav ga ni nihče kupil — ob uvedbi plačil so bili vsi obstoječi psi označeni kot odklenjen izziv (da se nikomur nič ne zaklene). (2) V »Izberi kužka« je bil mešanček izbirljiv tudi pri 12-tedenskem izzivu (»Brezplačen v vseh kombinacijah«). Zdaj: mešanček se staršu vedno pokaže kot **»Brezplačno«**; pri izbiri izziva je mešanček **siv** z razlago (»izziv je s plačljivo pasmo, mešanček je pes brezplačnega načrta«), preklop na izziv sam izbere Border Collieja, strežnik pa takšno kombinacijo zavrne.
+
+**Zakaj je pomembno:** Starš mora iz značke takoj razbrati, kaj je plačal in kaj ne. In paketa se morata jasno ločiti: brezplačni mešanček za spoznavanje, plačljivi izziv s pravo zahtevnejšo pasmo. Plačanim psom testerjev se pri tem ni spremenilo nič — 12-tedenski program, zgodovina in ura tečejo naprej, popravljen je samo prikaz. Mešančki, ki so bili po pomoti na neplačanem izzivu, so dobili brezplačni načrt: nikoli več ne bodo čakali na nakup, zaklenjen kuža spet igra, zaklenjeni čas pa se mu ne šteje v starost. Novega neplačanega mešančka na izzivu ne more ustvariti nobena pot več (tudi admin ali testni podatki ne), vračilo kupnine za mešančka pa ga naredi brezplačnega namesto zaklenjenega. Starša s TestFlight 3.0.0, ki izbere izziv in pusti mešančka, do naslednje različice vidi splošno napako — sprejeto, ker smo še pred objavo.
+
+**Številke:** strežnik 26 novih testov (izziv + mešanček → zavrnjeno tudi brez izbrane pasme; Border Collie izziv in brezplačni mešanček delujeta; stare aplikacije brez izbire plana dobijo brezplačnega mešančka; star mešanček »Brezplačno«, a program ostane; kupljen izziv ostane »Plačano«; migracija: mešanček na preizkusu in zaklenjen mešanček → brezplačno, zaklenjen spet igra, zaklenjeni dnevi ostanejo izven starosti; od tega v zadnjem krogu 6: admin / seeder / `/child/pair` ne ustvarijo zaklenljivega mešančka, vračilo → brezplačno, en dogodek na psa, omejitev v bazi), skupaj 1.349 zelenih; aplikacija 7 novih testov, skupaj 1.439 zelenih (z vsem z `main`).
+
+**Kako povedati:**
+- 👩 Starši: »Mešanček je vedno brezplačen. 12-tedenski izziv je s plačljivo pasmo (Border Collie) — tako je jasno, za kaj plačate.«
+- 💼 Investitorji: »Jasna ločnica med brezplačnim in plačljivim paketom: brezplačni mešanček je vstop, izziv s premium pasmo je produkt.«
+- 🛠 Tehnično: »Plačani mešančki: samo prikaz (`plan.display_type`), `type` / `status` ostaneta resnica za pravila igre. Neplačani: migracija na `free` z istimi kavlji kot plačilo (zaklep zaprt, odmrznitev) in `converted_to_free_at`, da zaklenjeni čas ostane izven ure programa. `generate-pin` → 422 `challenge_requires_paid_breed` samo ob izrecni izbiri plana, da stare aplikacije ne dobijo napake.«
+
+---
+
 ## 2026-10-07 — Popravki po TestFlightu 3.0.0: opazen nakup, cela glava, viden »Kuža se pripravlja«
 
 **Kaj se je zgodilo:** Trije popravki z Davidovega preizkusa na iPhonu (M5-F01, F05, F06). (1) Starš majhne značke »Preizkus« ni opazil — zdaj ima kartica otroka in podrobnosti otroka jasen gumb **»12-tedenski izziv — kupi«**, v »Nadzoru« pa je vrstica **»Nakupi / izziv«**. Gumb se pokaže samo, dokler izziv psa ni plačan, nikoli za brezplačnega mešančka. (2) Glava otroškega zaslona je bila odrezana (»… Grows into a young dog on 2…«) — zdaj je vsak podatek v eni vrstici, tap na glavo pa odpre list z vsem: pasma, obdobje, starost, izvor, naslednje obdobje, obroki na dan. (3) Obvestilo »Kuža se pripravlja …« je bilo skrito pod karto obrokov in za gumbi — zdaj je nad njimi. Testi aplikacije: vsi zeleni (glej PR). **Na telefonu še ni preizkušeno.**

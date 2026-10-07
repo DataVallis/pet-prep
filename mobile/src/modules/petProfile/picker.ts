@@ -38,6 +38,7 @@ export const PICKER_STRINGS = strings('pet', 'picker', {
     },
   },
   lockedA11y: (breed: string) => t('pet:picker.lockedA11y', { breed }),
+  lockedFreeOnlyA11y: (breed: string) => t('pet:picker.lockedFreeOnlyA11y', { breed }),
 });
 
 export const PICKER_ORIGINS: readonly PetOrigin[] = ['bought', 'adopted'];
@@ -60,12 +61,46 @@ export const INITIAL_PICKER_CHOICE: PickerChoice = { plan: null, breed: 'mutt', 
 
 /**
  * Premium breeds are part of the 12-week challenge (M3-11: also during its trial); on the
- * free plan — or before a plan is chosen — only the mutt. `serverLocked` = breeds the
- * server refused for this choice (422 `breed_locked`).
+ * free plan — or before a plan is chosen — only the mutt. The challenge is only with a
+ * paid breed (M5-F03, David 2026-10-07): the mutt is the free plan's dog, so it is locked
+ * when the challenge is chosen (server 422 `challenge_requires_paid_breed`). `serverLocked`
+ * = breeds the server refused for this choice (422 `breed_locked`).
  */
 export function lockedBreedsFor(plan: PetPlanType | null, serverLocked: readonly PetBreed[] = []): PetBreed[] {
-  const base = plan === 'challenge' ? [] : [...PREMIUM_BREEDS];
+  const base = plan === 'challenge' ? PICKER_BREEDS.filter((b) => !PREMIUM_BREEDS.includes(b)) : [...PREMIUM_BREEDS];
   return [...new Set([...base, ...serverLocked])];
+}
+
+/**
+ * Why a breed can't be picked with this plan — for the note and the a11y label:
+ * `free_only` = the mutt while the challenge is chosen, `challenge_only` = a premium breed on
+ * the free plan (or before a plan), `server` = the server refused it; null = pickable.
+ */
+export type BreedLockReason = 'free_only' | 'challenge_only' | 'server';
+
+export function breedLockReason(
+  breed: PetBreed,
+  plan: PetPlanType | null,
+  serverLocked: readonly PetBreed[] = [],
+): BreedLockReason | null {
+  const premium = PREMIUM_BREEDS.includes(breed);
+  if (plan === 'challenge' && !premium) return 'free_only';
+  if (plan !== 'challenge' && premium) return 'challenge_only';
+  return serverLocked.includes(breed) ? 'server' : null;
+}
+
+/**
+ * The choice after the parent picks `plan`: the free plan is always the mutt; the challenge
+ * never keeps a breed it locks (the mutt) — it moves to the first pickable breed (today the
+ * Border Collie), so switching plans never leaves an invalid selection behind. When no
+ * breed is pickable the breed stays and {@link completeChoice} stays null.
+ */
+export function choiceWithPlan(choice: PickerChoice, plan: PetPlanType, serverLocked: readonly PetBreed[] = []): PickerChoice {
+  if (plan === 'free') return { ...choice, plan, breed: 'mutt' };
+  const locked = lockedBreedsFor(plan, serverLocked);
+  if (!isBreedLocked(choice.breed, locked)) return { ...choice, plan };
+  const firstOpen = PICKER_BREEDS.find((b) => !isBreedLocked(b, locked));
+  return { ...choice, plan, breed: firstOpen ?? choice.breed };
 }
 
 export function isBreedLocked(breed: PetBreed, locked: readonly PetBreed[] = PREMIUM_BREEDS): boolean {

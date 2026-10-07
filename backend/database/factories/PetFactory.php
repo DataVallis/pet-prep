@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Enums\BreedType;
 use App\Models\Pet;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @extends Factory<Pet>
@@ -61,6 +62,22 @@ class PetFactory extends Factory
             'challenge_paid_at' => null,
             'challenge_paid_source' => null,
         ]);
+    }
+
+    /**
+     * M5-F02: an UNPAID mutt challenge as it could exist before M5-F03 (data
+     * the 2026_10_21 migration converts). Pet::creating no longer lets such a
+     * pet be created, so the row is rewritten without model hooks.
+     */
+    public function legacyUnpaidMuttChallenge(): static
+    {
+        return $this->mutt()->trial()->afterCreating(function (Pet $pet): void {
+            DB::table('pets')->where('id', $pet->id)->update([
+                'plan' => 'challenge',
+                'trial_ends_at' => $pet->born_at !== null ? $pet->trialEndFor($pet->born_at) : null,
+            ]);
+            $pet->refresh();
+        });
     }
 
     /**

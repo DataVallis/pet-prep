@@ -61,17 +61,19 @@
     },
     "planMissing": "Choose a plan.",
     "breedFreeNote": "On the free plan the dog is always a mixed breed. The Border Collie is part of the 12-week challenge.",
+    "breedChallengeNote": "The 12-week challenge is with a paid breed (Border Collie). The mixed breed is the free plan's dog — choose “Free mixed breed” for it.",
     "breedTitle": "Breed",
     "breeds": {
       "mutt": "Mixed breed",
       "border_collie": "Border Collie"
     },
     "breedHints": {
-      "mutt": "Free with every combination.",
+      "mutt": "The free plan's dog. Not part of the 12-week challenge.",
       "border_collie": "Part of the 12-week challenge (also during the free trial)."
     },
     "breedLockedNote": "This breed can't be chosen right now. Choose a mixed breed or try again later.",
     "lockedA11y": "{{breed}}, locked — part of the paid challenge",
+    "lockedFreeOnlyA11y": "{{breed}}, not available — only on the free plan",
     "originTitle": "Where it comes from",
     "origins": {
       "bought": "Bought (breeder)",
@@ -104,6 +106,8 @@
     },
     "quietHoursNote": "A meal that falls entirely within quiet hours (school, sleep) is given by a parent.",
     "missing": "Choose an origin and an age.",
+    "breedMissing": "Choose a breed.",
+    "noPaidBreed": "No paid breed can be chosen right now. Choose “Free mixed breed”, or try again later.",
     "confirm": "Create code",
     "back": "Back",
     "noTrial": "{{name}} has already had a free trial. The challenge for this dog starts with a purchase: after the contract is signed, unlock it in the app."

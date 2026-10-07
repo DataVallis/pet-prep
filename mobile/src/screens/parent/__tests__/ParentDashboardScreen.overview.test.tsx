@@ -328,7 +328,7 @@ describe('ParentDashboardScreen — purchase entry (M5-F01)', () => {
     id: 7,
     breed_type: 'border_collie',
     caretakers: [{ child_id: 2, contract_signed: true }],
-    plan: { type: 'challenge', status: 'trial', trial_ends_at: '2026-10-12T10:00:00+02:00', paid_at: null, payments_enforced: true },
+    plan: { type: 'challenge', status: 'trial', trial_ends_at: '2026-10-12T10:00:00+02:00', paid_at: null, payments_enforced: true, display_type: 'challenge' },
   });
 
   beforeEach(() => {

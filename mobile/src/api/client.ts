@@ -349,6 +349,13 @@ export interface PetPlan {
   status: ChallengeStatus | null;
   trial_ends_at: string | null;
   paid_at: string | null;
+  /**
+   * M5-F02: the plan a parent sees — `free` also for a mutt whose challenge nobody bought
+   * (grandfathered by the M3-11 backfill / admin unlock), so a mutt is never "Plačano".
+   * Display only: `type` / `status` stay the real plan (12-week programme, history).
+   * Missing (older server) = `type`.
+   */
+  display_type?: PetPlanType;
 }
 
 /** One pet of `GET /api/parent/billing` (cleaned shape; raw types in schema.ts, read through the readers). */
