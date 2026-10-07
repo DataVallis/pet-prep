@@ -287,6 +287,61 @@ describe('useStepSync with Apple Health / Health Connect', () => {
       expect(result.current.health.status).toBe('connected');
       expect(lastBody()).toEqual(expect.objectContaining({ steps_today: 4321, source: 'healthkit' }));
       expect(registerBackground).toHaveBeenCalledTimes(1);
+      // iOS hides a denied Health read → the motion sensor is asked right after the sheet.
+      expect(pedometer.requestPermissionsAsync).toHaveBeenCalledTimes(1);
+    });
+
+    it('iOS: Health connected but the read was denied (0) + sensor undetermined → sensor can still be allowed and wins', async () => {
+      const health = makeFakeHealth({ steps: 0 });
+      const { pedometer } = makePedometer('undetermined', 3700);
+      const { result } = setup({ platform: 'ios', pedometer, health });
+      await flush();
+      expect(result.current.health.status).toBe('connected');
+      expect(result.current.permission).toBe('undetermined');
+      expect(pedometer.getStepCountAsync).not.toHaveBeenCalled();
+      expect(syncSteps).not.toHaveBeenCalled(); // 0 from Health is nothing new
+
+      (pedometer.requestPermissionsAsync as jest.Mock).mockResolvedValueOnce({
+        status: 'granted',
+        granted: true,
+        canAskAgain: true,
+        expires: 'never',
+      });
+      await act(async () => {
+        await result.current.requestPermission();
+      });
+      await act(async () => {
+        await result.current.syncNow();
+      });
+      expect(result.current.permission).toBe('granted');
+      expect(lastBody()).toEqual(expect.objectContaining({ steps_today: 3700, source: 'pedometer' }));
+    });
+
+    it('Android: Health Connect granted but nothing writes to it (0) + sensor undetermined → allowing the sensor starts the live counter', async () => {
+      const health = makeFakeHealth({ source: 'health_connect', steps: 0 });
+      const { pedometer, emit } = makePedometer('undetermined');
+      const { result } = setup({ platform: 'android', pedometer, health, storage: memoryStore() });
+      await flush();
+      expect(result.current.health.status).toBe('connected');
+      expect(result.current.permission).toBe('undetermined');
+      expect(pedometer.watchStepCount).not.toHaveBeenCalled();
+
+      (pedometer.requestPermissionsAsync as jest.Mock).mockResolvedValueOnce({
+        status: 'granted',
+        granted: true,
+        canAskAgain: true,
+        expires: 'never',
+      });
+      await act(async () => {
+        await result.current.requestPermission();
+      });
+      await flush();
+      expect(pedometer.watchStepCount).toHaveBeenCalled();
+      act(() => emit(250));
+      await act(async () => {
+        await result.current.syncNow();
+      });
+      expect(lastBody()).toEqual(expect.objectContaining({ steps_today: 250, source: 'pedometer' }));
     });
 
     it('Android denied → keeps the live counter; openSettings opens Health Connect; access re-checked on foreground', async () => {

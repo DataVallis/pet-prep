@@ -9,6 +9,7 @@
 
 import { ApiError, api, clearAuthToken, getAuthToken } from '@/api/client';
 import type { SignInPayload } from '@/store/appStore';
+import { unregisterStepSyncTask } from '@/modules/steps/backgroundSteps';
 import { loadFamilyTimezone } from './familyTimezone';
 
 export type RestoreResult =
@@ -35,6 +36,8 @@ export async function restoreSession(): Promise<RestoreResult> {
   } catch (error) {
     if (error instanceof ApiError && error.status === 401) {
       await clearAuthToken();
+      // M3-06: no background step sync with a revoked token (never throws).
+      await unregisterStepSyncTask();
       return { status: 'anonymous' };
     }
     return { status: 'offline', error };

@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Do zdaj je Android štel samo, ko je bila aplikacija odprta — otrok, ki je šel s psom ven s telefonom v žepu, ni dobil koraka. To je bila največja luknja v »pravem sprehodu«. Obenem ostajamo pri minimumu podatkov: dovoljenje samo za korake, na strežnik gre ena številka.
 
-**Številke:** 1 vrsta podatkov (koraki, samo branje); 2 vira na telefonu, šteje večji (nikoli vsota — en sprehod ne šteje dvakrat); sync največ 1× na minuto samodejno, vsakih 5 min in ob »Osveži«; v ozadju iPhone približno na 15 min ali redkeje (odloča iOS); anti-cheat ostaja 200 korakov na minuto. Testi: 1.349 v aplikaciji (56 novih), 1.264 na strežniku (2 nova). **Še ni na telefonu — potreben je nov native build.**
+**Številke:** 1 vrsta podatkov (koraki, samo branje); 2 vira na telefonu, šteje večji (nikoli vsota — en sprehod ne šteje dvakrat); sync največ 1× na minuto samodejno, vsakih 5 min in ob »Osveži«; v ozadju iPhone približno na 15 min ali redkeje (odloča iOS); anti-cheat ostaja 200 korakov na minuto. Testi: 1.355 v aplikaciji (62 novih), 1.264 na strežniku (2 nova). **Še ni na telefonu — potreben je nov native build.**
 
 **Kako povedati:**
 - 🧒 Otroci: "Poveži Zdravje in kuža dobi tudi korake, ko je aplikacija zaprta!"

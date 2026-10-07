@@ -10,6 +10,7 @@ import {
   defineStepSyncTask,
   registerStepSyncTask,
   runBackgroundStepSync,
+  setNativeModuleProbeForTests,
   STEP_SYNC_TASK,
   stepSyncTaskBody,
   unregisterStepSyncTask,
@@ -120,8 +121,32 @@ describe('task registration', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     setOS('ios');
+    setNativeModuleProbeForTests(() => true);
   });
-  afterAll(() => setOS(originalOS));
+  afterAll(() => {
+    setOS(originalOS);
+    setNativeModuleProbeForTests(null);
+  });
+
+  it('old binary / dev client without the native task modules: define, register and unregister are no-ops (no crash)', async () => {
+    const probe = jest.fn((name: string) => name !== 'ExpoBackgroundTask');
+    setNativeModuleProbeForTests(probe);
+    expect(() => defineStepSyncTask()).not.toThrow();
+    expect(await registerStepSyncTask()).toBe(false);
+    await expect(unregisterStepSyncTask()).resolves.toBeUndefined();
+    expect(probe).toHaveBeenCalledWith('ExpoBackgroundTask');
+    expect(TaskManager.defineTask).not.toHaveBeenCalled();
+    expect(TaskManager.isTaskRegisteredAsync).not.toHaveBeenCalled();
+    expect(BackgroundTask.registerTaskAsync).not.toHaveBeenCalled();
+    expect(BackgroundTask.unregisterTaskAsync).not.toHaveBeenCalled();
+  });
+
+  it('a probe that throws counts as missing', async () => {
+    setNativeModuleProbeForTests(() => {
+      throw new Error('no expo-modules-core');
+    });
+    expect(await registerStepSyncTask()).toBe(false);
+  });
 
   it('defines the task once, at module scope, on iOS only', () => {
     defineStepSyncTask();
@@ -161,6 +186,6 @@ describe('task registration', () => {
 
   it('the task body reports Success for a skipped run (Failed is only for errors)', async () => {
     // Default deps in Jest: the health adapter mock returns null → skipped → Success.
-    expect(await stepSyncTaskBody()).toBe(BackgroundTask.BackgroundTaskResult.Success);
+    expect(await stepSyncTaskBody()).toBe(1); // BackgroundTaskResult.Success
   });
 });

@@ -135,6 +135,24 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
 
         <View style={styles.actions}>
           <HealthCard health={health} />
+          {permission === 'undetermined' && (
+            // Always offered while undetermined — also when Health is connected: a denied iOS
+            // Health read or an empty Health Connect gives 0, the sensor is the fallback.
+            <>
+              <Text style={styles.hint}>{WALK_STRINGS.allowHint}</Text>
+              <Pressable
+                onPress={() => {
+                  void stepSync.requestPermission();
+                }}
+                accessibilityRole="button"
+                testID="walk-allow"
+                style={({ pressed }) => [styles.button, styles.primaryButton, pressed && styles.pressed]}
+              >
+                <Footprints color={palette.white} size={18} />
+                <Text style={styles.buttonText}>{WALK_STRINGS.allow}</Text>
+              </Pressable>
+            </>
+          )}
           {stepSync.canSync ? (
             <>
               <Pressable
@@ -165,21 +183,6 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
             healthOffered ? null : <Text style={styles.note}>{WALK_STRINGS.unavailable}</Text>
           ) : permission === 'denied' ? (
             <Text style={styles.note}>{WALK_STRINGS.denied}</Text>
-          ) : permission === 'undetermined' ? (
-            <>
-              <Text style={styles.hint}>{WALK_STRINGS.allowHint}</Text>
-              <Pressable
-                onPress={() => {
-                  void stepSync.requestPermission();
-                }}
-                accessibilityRole="button"
-                testID="walk-allow"
-                style={({ pressed }) => [styles.button, styles.primaryButton, pressed && styles.pressed]}
-              >
-                <Footprints color={palette.white} size={18} />
-                <Text style={styles.buttonText}>{WALK_STRINGS.allow}</Text>
-              </Pressable>
-            </>
           ) : null}
         </View>
       </View>

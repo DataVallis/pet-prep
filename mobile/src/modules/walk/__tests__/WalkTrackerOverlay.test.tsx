@@ -148,6 +148,20 @@ describe('WalkTrackerOverlay', () => {
       expect(stepSync.syncNow).toHaveBeenCalledTimes(1);
     });
 
+    it('connected + sensor undetermined: the sensor permission button stays (fallback for a 0 Health read)', () => {
+      const { stepSync } = renderOverlay('undetermined', { sync: { health: makeHealth('connected') } });
+      expect(screen.getByText(WALK_STRINGS.health.connected.ios)).toBeTruthy();
+      expect(screen.getByTestId('walk-refresh')).toBeTruthy();
+      fireEvent.press(screen.getByTestId('walk-allow'));
+      expect(stepSync.requestPermission).toHaveBeenCalledTimes(1);
+    });
+
+    it('undetermined Health + undetermined sensor: both offered', () => {
+      renderOverlay('undetermined', { sync: { health: makeHealth('undetermined') } });
+      expect(screen.getByTestId('walk-health-connect')).toBeTruthy();
+      expect(screen.getByTestId('walk-allow')).toBeTruthy();
+    });
+
     it('Android connected: no "only while open" footnote', () => {
       const { Platform } = jest.requireActual<typeof import('react-native')>('react-native');
       const original = Platform.OS;

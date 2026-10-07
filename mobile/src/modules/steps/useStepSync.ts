@@ -339,14 +339,17 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
   }, []);
 
   const connect = useCallback(async () => {
-    const { health } = depsRef.current;
+    const { health, platform } = depsRef.current;
     if (health === null) return;
     try {
       setHealthStatus(await health.requestAccess());
     } catch {
       await refreshHealth();
     }
-  }, [refreshHealth]);
+    // iOS hides a denied Health read (it returns 0 steps): ask for the motion sensor too,
+    // right after the Health sheet, so the max-merge always has a real second source.
+    if (platform === 'ios' && permissionRef.current === 'undetermined') await requestPermission();
+  }, [refreshHealth, requestPermission]);
 
   const openSettings = useCallback(async () => {
     try {
