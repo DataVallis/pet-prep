@@ -47,11 +47,11 @@ import {
   classifyActionError,
   cleanHint,
   failureMessage,
-  feedHint,
+  feedDockHint,
   feedLabel,
   feedSuccessMessage,
   successMessage,
-  waterHint,
+  waterDockHint,
 } from '@/modules/childPet/actionMessages';
 import {
   BEHAVIOUR_STRINGS,
@@ -588,7 +588,7 @@ export default function ChildHudScreen() {
             disabled={feedDisabled}
             due={feedDue}
             busy={feed.isPending}
-            hint={feedHint(view)}
+            hint={feedDockHint(view)}
             compact={hasTakeOut}
           />
           <ActionButton
@@ -598,7 +598,7 @@ export default function ChildHudScreen() {
             onPress={() => runAction('water')}
             disabled={waterDisabled}
             busy={water.isPending}
-            hint={waterHint(view)}
+            hint={waterDockHint(view)}
             compact={hasTakeOut}
           />
           {hasTakeOut && (
@@ -892,7 +892,8 @@ const styles = StyleSheet.create({
     right: 20,
     zIndex: 20,
     flexDirection: 'row',
-    alignItems: 'center',
+    // Top-aligned: buttons with a one- or two-line hint keep their circles in one row.
+    alignItems: 'flex-start',
     justifyContent: 'space-around',
     backgroundColor: alpha(palette.graphite, 0.85),
     borderWidth: 1,

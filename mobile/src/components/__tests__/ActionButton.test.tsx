@@ -62,3 +62,47 @@ describe('ActionButton', () => {
     expect(getByText('Water')).toBeTruthy();
   });
 });
+
+describe('ActionButton dock hint (device feedback 2026-10-07)', () => {
+  it('a day hint renders two lines; the time line is never ellipsised (shrinks instead)', () => {
+    const r = render(
+      <ActionButton
+        testID="feed"
+        icon={<Beef />}
+        label="Feed"
+        onPress={jest.fn()}
+        disabled
+        hint={{ day: 'tomorrow', text: '06:00', a11y: 'tomorrow at 06:00' }}
+        compact
+      />,
+    );
+    expect(r.getByTestId('feed-hint-day').props.children).toBe('tomorrow');
+    const time = r.getByTestId('feed-hint-text');
+    expect(time.props.children).toBe('06:00');
+    expect(time.props.numberOfLines).toBe(1);
+    expect(time.props.adjustsFontSizeToFit).toBe(true);
+    expect(time.props.ellipsizeMode).toBeUndefined();
+    expect(r.getByTestId('feed').props.accessibilityLabel).toBe('Feed, tomorrow at 06:00');
+  });
+
+  it('a plain string hint is one block that may wrap to two lines', () => {
+    const r = render(<ActionButton testID="clean" icon={<Beef />} label="Clean" onPress={jest.fn()} disabled hint="Najprej pospravi" />);
+    expect(r.queryByTestId('clean-hint-day')).toBeNull();
+    expect(r.getByTestId('clean-hint-text').props.numberOfLines).toBe(2);
+    expect(r.getByTestId('clean').props.accessibilityLabel).toBe('Clean, Najprej pospravi');
+  });
+
+  it('long labels ("Emergency meal", "Nujni obrok") may wrap and shrink, capped against huge text sizes', () => {
+    const r = render(<ActionButton testID="feed" icon={<Beef />} label="Emergency meal" onPress={jest.fn()} due />);
+    const label = r.getByTestId('feed-label');
+    expect(label.props.numberOfLines).toBe(2);
+    expect(label.props.adjustsFontSizeToFit).toBe(true);
+    expect(label.props.maxFontSizeMultiplier).toBeGreaterThan(1);
+    expect(StyleSheet.flatten(label.props.style).textAlign).toBe('center');
+  });
+
+  it('no hint → no hint block', () => {
+    const r = render(<ActionButton testID="walk" icon={<Beef />} label="Walk" onPress={jest.fn()} hint={null} />);
+    expect(r.queryByTestId('walk-hint')).toBeNull();
+  });
+});
