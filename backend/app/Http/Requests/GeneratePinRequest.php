@@ -6,6 +6,7 @@ use App\Enums\BreedType;
 use App\Enums\ClientFeature;
 use App\Enums\LifeStage;
 use App\Enums\PetOrigin;
+use App\Enums\PetPlan;
 use App\Models\User;
 use App\Services\Results\PetProfileChoice;
 use Illuminate\Contracts\Validation\ValidationRule;
@@ -56,7 +57,19 @@ class GeneratePinRequest extends FormRequest
             // Ignored without a profile (legacy pet) and when joining a pet.
             'features' => ['sometimes', 'nullable', 'array', 'max:10'],
             'features.*' => ['string', 'max:64'],
+            // M3-11 (PAYMENTS_SPEC): plan of the new pet — `free` (mutt only,
+            // 422 breed_locked for a premium breed) or `challenge` (7-day trial
+            // from birth, Border Collie allowed). Omitted → `challenge` (old
+            // app builds). Ignored when joining a pet / re-login.
+            'plan' => ['sometimes', 'nullable', Rule::enum(PetPlan::class)],
         ];
+    }
+
+    public function plan(): PetPlan
+    {
+        $plan = $this->validated('plan');
+
+        return $plan === null ? PetPlan::Challenge : PetPlan::from((string) $plan);
     }
 
     public function childId(): ?int

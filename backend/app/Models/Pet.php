@@ -3,10 +3,13 @@
 namespace App\Models;
 
 use App\Enums\BreedType;
+use App\Enums\ChallengePaidSource;
+use App\Enums\ChallengeStatus;
 use App\Enums\HygieneEventStatus;
 use App\Enums\LifeStage;
 use App\Enums\PetLockReason;
 use App\Enums\PetOrigin;
+use App\Enums\PetPlan;
 use App\Enums\PetStateEnum;
 use App\Jobs\DeletePetMediaFiles;
 use App\Services\FamilyService;
@@ -61,8 +64,18 @@ class Pet extends Model
                     : Family::create([])->id;
             }
 
+            // M3-11: a pet's plan is fixed at creation; only a challenge has a trial.
+            if ($pet->plan === null) {
+                $pet->plan = PetPlan::Challenge;
+            }
+
             if ($pet->isUnborn()) {
                 return;
+            }
+
+            // Born at creation (factories, admin): the trial starts now.
+            if ($pet->plan === PetPlan::Challenge && $pet->trial_ends_at === null) {
+                $pet->trial_ends_at = $pet->trialEndFor($pet->born_at);
             }
 
             $pet->last_decay_at ??= now();
@@ -122,7 +135,9 @@ class Pet extends Model
 
             $reactivated = ($pet->isDirty('is_active') && $pet->is_active)
                 || ($pet->isDirty('is_game_over') && ! $pet->is_game_over)
-                || ($pet->isDirty('is_hard_stopped') && ! $pet->is_hard_stopped);
+                || ($pet->isDirty('is_hard_stopped') && ! $pet->is_hard_stopped)
+                // M3-11: the payment lock lifted (challenge paid).
+                || ($pet->isDirty('payment_locked_at') && $pet->payment_locked_at === null);
 
             if ($reactivated && ! $pet->isDirty('last_decay_at')) {
                 $pet->last_decay_at = $now;
@@ -180,6 +195,10 @@ class Pet extends Model
         'behaviour_events_enabled',
         // M5-R03: set once at creation (generate-pin + pin-login `features: ["training"]`).
         'training_enabled',
+        // M3-11: plan chosen at creation (generate-pin `plan`). Payment state
+        // (trial_ends_at, challenge_paid_*, payment_locked_at) is written only
+        // by ChallengeService / Pet::giveBirth via forceFill.
+        'plan',
     ];
 
     /**
@@ -198,6 +217,8 @@ class Pet extends Model
         // M5-R03 bookkeeping (the apps get TrainingPayload instead).
         'training_learning_factor',
         'training_decayed_through',
+        // M3-11 bookkeeping (the apps get PetPlanPayload instead).
+        'trial_reminder_sent_at',
     ];
 
     /**
@@ -237,6 +258,12 @@ class Pet extends Model
             'origin' => PetOrigin::class,
             'arrival_age_months' => 'integer',
             'life_stage' => LifeStage::class,
+            'plan' => PetPlan::class,
+            'trial_ends_at' => 'datetime',
+            'challenge_paid_at' => 'datetime',
+            'challenge_paid_source' => ChallengePaidSource::class,
+            'payment_locked_at' => 'datetime',
+            'trial_reminder_sent_at' => 'datetime',
         ];
     }
 
@@ -546,10 +573,70 @@ class Pet extends Model
 
     /**
      * Determine if the simulation has reached its end (12 real weeks = 12 virtual months).
+     * A free-plan pet never completes (M3-11: no 12-week program, no certificate).
      */
     public function hasReachedSimulationEnd(): bool
     {
-        return $this->virtualAgeInMonths() >= 12;
+        return ! $this->isFreePlan() && $this->virtualAgeInMonths() >= 12;
+    }
+
+    // ──────────────────────────────────────────────────────────────
+    //  Plan / trial / payment (M3-11, PAYMENTS_SPEC)
+    // ──────────────────────────────────────────────────────────────
+
+    /** Trial length from birth (PAYMENTS_SPEC P2), family-local calendar days. */
+    public const TRIAL_DAYS = 7;
+
+    public function isFreePlan(): bool
+    {
+        return $this->plan === PetPlan::Free;
+    }
+
+    /**
+     * End of the 7-day trial for a birth at $birth: the same family-local
+     * wall-clock time 7 days later (DST-safe), stored as UTC.
+     */
+    public function trialEndFor(CarbonInterface $birth): CarbonInterface
+    {
+        return $birth->copy()->setTimezone($this->familyTimezone())->addDays(self::TRIAL_DAYS)->utc();
+    }
+
+    /**
+     * Payment status of the pet — THE single derivation (M3-11). Free plan →
+     * null. Challenge: paid (credit or grandfathered) › trial (unborn = the
+     * trial has not started, or before `trial_ends_at`) › payment_required.
+     */
+    public function challengeStatus(?CarbonInterface $now = null): ?ChallengeStatus
+    {
+        if ($this->plan !== PetPlan::Challenge) {
+            return null;
+        }
+        if ($this->challenge_paid_at !== null) {
+            return ChallengeStatus::Paid;
+        }
+        if ($this->trial_ends_at === null || $this->trial_ends_at->greaterThan($now ?? now())) {
+            return ChallengeStatus::Trial;
+        }
+
+        return ChallengeStatus::PaymentRequired;
+    }
+
+    /**
+     * The game-loop freeze of an unpaid challenge after its trial (set by the
+     * tick, ChallengeService::processTrials; cleared on payment).
+     */
+    public function isPaymentLocked(): bool
+    {
+        return $this->payment_locked_at !== null;
+    }
+
+    /**
+     * Child actions wait for the parent: the lock is on, or the trial just
+     * ended and the tick has not locked the pet yet.
+     */
+    public function awaitsPayment(): bool
+    {
+        return $this->isPaymentLocked() || $this->challengeStatus() === ChallengeStatus::PaymentRequired;
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -565,12 +652,14 @@ class Pet extends Model
     }
 
     /**
-     * Hard stop or illness: metrics AND neglect clocks (*_zero_since) are
-     * frozen, and no escalation runs (PRODUCT_SPEC §5, M1-02).
+     * Hard stop, payment lock (M3-11) or illness: metrics AND neglect clocks
+     * (*_zero_since) are frozen, and no escalation runs (PRODUCT_SPEC §5,
+     * M1-02). The payment lock reuses the hard-stop mechanism: `frozen_at`
+     * on entry, applyThaw() on payment (pause time never counts).
      */
     public function isFrozen(): bool
     {
-        return (bool) $this->is_hard_stopped || $this->isIll();
+        return (bool) $this->is_hard_stopped || $this->isPaymentLocked() || $this->isIll();
     }
 
     /**
@@ -632,6 +721,8 @@ class Pet extends Model
             // M5-R03: "no practice → decay" is evaluated from the birth day on.
             'training_decayed_through' => null,
             'frozen_at' => null,
+            // M3-11 (PAYMENTS_SPEC P2): the 7-day trial of a challenge starts at birth.
+            'trial_ends_at' => $this->plan === PetPlan::Free ? null : $this->trialEndFor($at),
         ]);
     }
 
@@ -647,8 +738,9 @@ class Pet extends Model
     /**
      * Why child actions are refused right now (HTTP 423, M1-07), or null.
      * Priority when several apply: game over › inactive › hard stop ›
-     * contract required › illness (the parent's pause wins over the contract
-     * screen and the vet screen; an unborn pet can't be ill or game over).
+     * payment required (M3-11) › contract required › illness (the parent's
+     * pause wins over the contract screen and the vet screen; an unborn pet
+     * can't be ill or game over, and its trial has not started).
      */
     public function actionLockReason(): ?PetLockReason
     {
@@ -656,6 +748,7 @@ class Pet extends Model
             (bool) $this->is_game_over => PetLockReason::GameOver,
             ! $this->is_active => PetLockReason::Inactive,
             (bool) $this->is_hard_stopped => PetLockReason::HardStopped,
+            $this->awaitsPayment() => PetLockReason::PaymentRequired,
             $this->isUnborn() => PetLockReason::ContractRequired,
             $this->isIll() => PetLockReason::Ill,
             default => null,
@@ -679,6 +772,7 @@ class Pet extends Model
             (bool) $this->is_game_over => PetLockReason::GameOver,
             ! $this->is_active => PetLockReason::Inactive,
             (bool) $this->is_hard_stopped => PetLockReason::HardStopped,
+            $this->awaitsPayment() => PetLockReason::PaymentRequired,
             $this->isUnborn() || $this->caretakerNeedsContract($actor) => PetLockReason::ContractRequired,
             $this->isIll() => PetLockReason::Ill,
             default => null,
@@ -829,7 +923,8 @@ class Pet extends Model
         // Hard-stopped through the recovery (stored value; a hard stop being
         // switched on in this very write freezes from now via the hook): the
         // freeze continues from the recovery moment. Otherwise not frozen.
-        $this->frozen_at = $this->getOriginal('is_hard_stopped') ? $at : null;
+        // M3-11: the payment lock keeps the freeze going the same way.
+        $this->frozen_at = ($this->getOriginal('is_hard_stopped') || $this->getOriginal('payment_locked_at') !== null) ? $at : null;
 
         return true;
     }

@@ -12,7 +12,9 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * A family (M2-01, ADR-012): several parents, several children, one or more
  * pets. All parents see every child and pet of the family. The family
  * timezone drives every wall-clock rule (quiet hours, midnight, feed windows).
- * The billing unit is the pet, not the family.
+ * Billing (M3-11, PAYMENTS_SPEC P1): the pet is the billing unit — one
+ * purchased 12-week challenge per pet. Purchases land as challenge credits
+ * of the buyer's family (any parent may assign them to a pet of the family).
  *
  * @property int $id
  * @property string $timezone
@@ -54,6 +56,14 @@ class Family extends Model
     public function quietHours(): HasOne
     {
         return $this->hasOne(QuietHours::class);
+    }
+
+    /**
+     * Purchased 12-week challenges (M3-11) — written by ChallengeCreditService.
+     */
+    public function challengeCredits(): HasMany
+    {
+        return $this->hasMany(ChallengeCredit::class);
     }
 
     public function invites(): HasMany

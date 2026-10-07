@@ -66,7 +66,7 @@ class PairingController extends Controller
 
         try {
             if ($childId !== null) {
-                $result = $this->childLogins->generatePin($request->user(), $childId, $request->joinPetId(), $request->petProfile());
+                $result = $this->childLogins->generatePin($request->user(), $childId, $request->joinPetId(), $request->petProfile(), $request->plan());
 
                 return response()->json([
                     'pin' => $result['pin'],
@@ -85,6 +85,13 @@ class PairingController extends Controller
                      * @var array{breed: 'mutt'|'border_collie', origin: 'bought'|'adopted', age_stage: 'puppy'|'young'|'adult'|'senior', features: list<'behaviour_events'|'training'>}|null
                      */
                     'pet_profile' => $result['pet_profile'],
+                    /**
+                     * M3-11: the new pet's plan (mode new_pet; null for join / re-login).
+                     * Request `plan` defaults to `challenge` (old app builds).
+                     *
+                     * @var 'free'|'challenge'|null
+                     */
+                    'plan' => $result['plan'],
                 ], 200);
             }
 

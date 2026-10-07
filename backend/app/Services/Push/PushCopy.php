@@ -56,6 +56,9 @@ final class PushCopy
                 : '')),
             PushType::Illness => self::line('illness.'.$audience.'.'.(in_array($metric, self::ILLNESS_REASONS, true) ? $metric : 'other'), $locale),
             PushType::GameOver => self::line("game_over.{$audience}", $locale),
+            // M3-11: only parents get the trial reminder.
+            PushType::TrialEnding => self::line('trial_ending', $locale),
+            PushType::PaymentRequired => self::line("payment_required.{$audience}", $locale),
         };
     }
 

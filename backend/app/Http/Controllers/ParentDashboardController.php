@@ -13,6 +13,7 @@ use App\Services\FamilyDashboardService;
 use App\Services\FamilyService;
 use App\Services\HardStopService;
 use App\Services\Media\PetMediaService;
+use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -109,6 +110,8 @@ class ParentDashboardController extends Controller
                 'is_hard_stopped' => $pet->is_hard_stopped,
                 'escalation_level' => $pet->escalation_level,
                 'virtual_age_months' => $pet->virtualAgeInMonths(),
+                // M3-11: plan + payment status (paywall per pet).
+                'plan' => PetPlanPayload::for($pet, $family->timezone)->toArray(),
                 // M5-R01: origin, age, life stage and today's rules.
                 'profile' => PetProfilePayload::for($pet)->toArray(),
                 // AI media (M4-05): signed URLs to our stored copies.
@@ -124,6 +127,8 @@ class ParentDashboardController extends Controller
             'traffic_light' => FamilyDashboardService::trafficLight($pet),
             'quiet_hours' => $this->formatQuietHours($quietHours),
             'recent_activities' => $this->activityItems($pet->activities()
+                // M3-11: a free pet's history is limited to the last 7 days.
+                ->when($pet->isFreePlan(), fn ($q) => $q->where('created_at', '>=', FamilyDashboardService::historyStart($pet)))
                 ->orderBy('created_at', 'desc')
                 ->orderBy('id', 'desc')
                 ->limit(20)
@@ -174,6 +179,8 @@ class ParentDashboardController extends Controller
 
         $perPage = (int) $request->query('per_page', 20);
         $paginated = $pet->activities()
+            // M3-11: a free pet's history is limited to the last 7 family-local days.
+            ->when($pet->isFreePlan(), fn ($q) => $q->where('created_at', '>=', FamilyDashboardService::historyStart($pet)))
             ->orderBy('created_at', 'desc')
             ->orderBy('id', 'desc')
             ->paginate($perPage);

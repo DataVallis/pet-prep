@@ -55,13 +55,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | RevenueCat — In-App Purchase Verification
+    | RevenueCat — purchase webhook + challenge credits (M3-08 / M3-11)
     |--------------------------------------------------------------------------
     */
     'revenuecat' => [
-        'secret_key' => env('REVENUECAT_SECRET_KEY'),
+        // The webhook's Authorization header value (RevenueCat → "Bearer <secret>").
+        // Empty → POST /api/webhooks/revenuecat answers 503 and processes nothing (fail closed).
+        'webhook_secret' => env('REVENUECAT_WEBHOOK_SECRET'),
         'public_key' => env('REVENUECAT_PUBLIC_KEY'),
-        'border_collie_product_id' => env('REVENUECAT_BORDER_COLLIE_PRODUCT_ID', 'border_collie_unlock'),
+        // Store product ids of the consumable 12-week challenge (PAYMENTS_SPEC P1),
+        // comma-separated. A purchase of one of them = one challenge credit.
+        'challenge_products' => array_values(array_filter(array_map('trim', explode(',', (string) env('REVENUECAT_CHALLENGE_PRODUCTS', 'petprep_challenge_12w'))))),
+        // SANDBOX events are always stored; they grant / revoke only when this is true.
+        'accept_sandbox' => (bool) env('REVENUECAT_ACCEPT_SANDBOX', env('APP_ENV', 'production') !== 'production'),
     ],
 
 ];

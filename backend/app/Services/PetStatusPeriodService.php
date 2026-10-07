@@ -28,6 +28,9 @@ class PetStatusPeriodService
         if ($pet->is_hard_stopped) {
             $this->open($pet, PetStatusPeriodKind::HardStop, $now);
         }
+        if ($pet->isPaymentLocked()) {
+            $this->open($pet, PetStatusPeriodKind::PaymentLock, $now);
+        }
         if (! $pet->is_active) {
             $this->open($pet, PetStatusPeriodKind::Inactive, $now);
         }
@@ -44,6 +47,13 @@ class PetStatusPeriodService
             $pet->is_hard_stopped
                 ? $this->open($pet, PetStatusPeriodKind::HardStop, $now)
                 : $this->close($pet, PetStatusPeriodKind::HardStop, $now);
+        }
+
+        // M3-11: trial over, unpaid → payment lock (routines excused, training interrupted).
+        if ($pet->wasChanged('payment_locked_at')) {
+            $pet->isPaymentLocked()
+                ? $this->open($pet, PetStatusPeriodKind::PaymentLock, $now)
+                : $this->close($pet, PetStatusPeriodKind::PaymentLock, $now);
         }
 
         if ($pet->wasChanged('is_active')) {

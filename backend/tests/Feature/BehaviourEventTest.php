@@ -871,7 +871,8 @@ describe('API', function () {
     });
 
     it('keeps the free mutt payload unchanged: media states idle + sleeping, pet_state one of the six', function () {
-        [, $child, $pet] = beFamily('2026-10-12 04:00:00', 2);
+        // M3-11: the basic media set follows the free plan, not the breed.
+        [, $child, $pet] = beFamily('2026-10-12 04:00:00', 2, attributes: ['plan' => 'free', 'challenge_paid_at' => null, 'challenge_paid_source' => null]);
         actingAsRole($child);
 
         getJson('/api/child/pet')->assertOk()
@@ -896,14 +897,17 @@ describe('behaviour videos', function () {
         [, , $bcYoung] = beFamily('2026-10-12 04:00:00', 9, attributes: ['breed_type' => 'border_collie', 'life_stage' => 'young']);
         [, , $bcLegacy] = beFamily('2026-10-12 04:00:00', 2, attributes: ['breed_type' => 'border_collie', 'arrival_age_months' => null]);
         [, , $bcOldClient] = beFamily('2026-10-12 04:00:00', 2, attributes: ['breed_type' => 'border_collie', 'life_stage' => 'puppy', 'behaviour_events_enabled' => false]);
-        [, , $mutt] = beFamily('2026-10-12 04:00:00', 2, attributes: ['life_stage' => 'puppy']);
+        [, , $mutt] = beFamily('2026-10-12 04:00:00', 2, attributes: ['life_stage' => 'puppy', 'plan' => 'free', 'challenge_paid_at' => null, 'challenge_paid_source' => null]);
+        // M3-11: a mutt on the challenge plan (trial included) gets the full set.
+        [, , $challengeMutt] = beFamily('2026-10-12 04:00:00', 2, attributes: ['life_stage' => 'puppy', 'challenge_paid_at' => null, 'challenge_paid_source' => null]);
 
         $six = ['idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing'];
         expect($states($bcPuppy))->toBe([...$six, 'accident', 'chewing'])
             ->and($states($bcYoung))->toBe([...$six, 'chewing'])
             ->and($states($bcLegacy))->toBe($six)
             ->and($states($bcOldClient))->toBe($six)
-            ->and($states($mutt))->toBe(['idle', 'sleeping']);
+            ->and($states($mutt))->toBe(['idle', 'sleeping'])
+            ->and($states($challengeMutt))->toBe([...$six, 'accident', 'chewing']);
     });
 
     it('plans the two new videos from the current stage image and stops serving the puppy accident video after puppy → young', function () {

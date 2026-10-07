@@ -2,49 +2,64 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * RevenueCat webhook body (M3-08). Authentication is the
+ * VerifyRevenueCatWebhook middleware (runs first, fails closed).
+ *
+ * Only the fields we read are validated; everything else RevenueCat sends
+ * is kept in the stored payload. `app_user_id` is optional: TRANSFER events
+ * carry `transferred_from` / `transferred_to` instead.
+ */
 class RevenueCatWebhookRequest extends FormRequest
 {
-    /**
-     * Webhook endpoints are called by RevenueCat servers, not by authenticated users.
-     * Authorization is handled via Authorization header secret validation in the controller.
-     */
     public function authorize(): bool
     {
         return true;
     }
 
     /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * @return array<string, ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
         return [
             'event' => ['required', 'array'],
-            'event.type' => ['required', 'string'],
-            'event.app_user_id' => ['required', 'string'],
-            'event.subscriber_id' => ['nullable', 'string'],
-            'event.original_app_user_id' => ['nullable', 'string'],
-            'event.product_id' => ['nullable', 'string'],
-            'event.store' => ['nullable', 'string'],
+            'event.id' => ['required', 'string', 'max:128'],
+            'event.type' => ['required', 'string', 'max:64'],
+            'event.app_user_id' => ['nullable', 'string', 'max:255'],
+            'event.original_app_user_id' => ['nullable', 'string', 'max:255'],
+            'event.aliases' => ['nullable', 'array', 'max:100'],
+            'event.aliases.*' => ['nullable', 'string', 'max:255'],
+            'event.product_id' => ['nullable', 'string', 'max:255'],
+            'event.new_product_id' => ['nullable', 'string', 'max:255'],
+            'event.entitlement_ids' => ['nullable', 'array', 'max:50'],
+            'event.entitlement_ids.*' => ['string', 'max:64'],
+            'event.entitlement_id' => ['nullable', 'string', 'max:64'],
+            'event.store' => ['nullable', 'string', 'max:32'],
+            'event.environment' => ['nullable', 'string', 'max:16'],
+            'event.transaction_id' => ['nullable', 'string', 'max:255'],
+            'event.original_transaction_id' => ['nullable', 'string', 'max:255'],
+            'event.purchased_at_ms' => ['nullable', 'integer', 'min:0'],
+            'event.expiration_at_ms' => ['nullable', 'integer', 'min:0'],
+            'event.event_timestamp_ms' => ['nullable', 'integer', 'min:0'],
+            'event.cancel_reason' => ['nullable', 'string', 'max:64'],
+            'event.transferred_from' => ['nullable', 'array', 'max:100'],
+            'event.transferred_from.*' => ['nullable', 'string', 'max:255'],
+            'event.transferred_to' => ['nullable', 'array', 'max:100'],
+            'event.transferred_to.*' => ['nullable', 'string', 'max:255'],
         ];
     }
 
     /**
-     * Get custom validation messages.
+     * The whole body as sent (stored as the event's raw payload).
      *
-     * @return array<string, string>
+     * @return array<string, mixed>
      */
-    public function messages(): array
+    public function body(): array
     {
-        return [
-            'event.required' => 'The event payload is required.',
-            'event.array' => 'The event must be an object.',
-            'event.type.required' => 'The event type is required.',
-            'event.app_user_id.required' => 'The app_user_id is required.',
-        ];
+        return $this->all();
     }
 }
