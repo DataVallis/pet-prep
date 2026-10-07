@@ -1,27 +1,77 @@
 {
-  "breeds": {
-    "title": "Izbira pasme",
+  "plan": {
+    "badge": {
+      "free": "Brezplačno",
+      "trialDays_one": "Preizkus: še {{count}} dan",
+      "trialDays_two": "Preizkus: še {{count}} dneva",
+      "trialDays_few": "Preizkus: še {{count}} dni",
+      "trialDays_other": "Preizkus: še {{count}} dni",
+      "trial": "Preizkus",
+      "trialLastDay": "Preizkus: zadnji dan",
+      "trialNotStarted": "Izziv: preizkus se začne ob podpisu",
+      "paymentRequired": "Čaka na nakup",
+      "paid": "Plačano"
+    },
+    "badgeA11y": "Načrt: {{label}}"
+  },
+  "banner": {
+    "paymentRequiredTitle": "Igra je ustavljena",
+    "paymentRequired": "Brezplačni preizkus je potekel ({{names}}). Pes čaka na varnem: potrebe ne padajo in napredek ostane, dokler izziva ne kupite.",
+    "trialLastDayTitle": "Preizkus se izteka",
+    "trialLastDay": "Brezplačni preizkus ({{names}}) se izteče v manj kot 24 urah. Nato se igra ustavi, dokler izziva ne kupite. Nič se ne zaračuna samodejno.",
+    "open": "Odkleni izziv",
+    "openTrial": "Poglej izziv"
+  },
+  "challenge": {
+    "title": "12-tedenski izziv",
     "back": "Nazaj",
-    "intro": "Izberite pasmo, ki ustreza otrokovi aktivnosti.",
-    "mutt": "Mešanček",
-    "collie": "Border collie",
-    "free": "BREZPLAČNO",
-    "premium": "PRIPOROČENO · PREMIUM",
-    "stepsPerDay": "{{steps}} korakov/dan",
-    "decay": "Padanje potreb: −{{rate}} %/h",
-    "currentBreed": "Trenutna pasma",
-    "starterBreed": "Začetna pasma",
-    "unlocked": "Odklenjeno",
-    "unlock": "Odkleni zdaj",
+    "intro": "Izziv v 12 tednih pokaže, ali je otrok pripravljen na pravega psa. En nakup velja za enega psa.",
+    "includesTitle": "Kaj vključuje",
+    "includes": {
+      "program": "12-tedenski program s tedenskim napredkom",
+      "breed": "Pasma Border Collie",
+      "certificate": "Certifikat ob uspešnem koncu",
+      "history": "Celotna zgodovina (brezplačno: zadnjih 7 dni)",
+      "media": "Personaliziran AI pes z videom za vsa stanja"
+    },
+    "honest": "Enkratni nakup {{price}} za enega psa. Brez naročnine in brez samodejnega plačila: po 7-dnevnem preizkusu se igra ustavi, dokler izziva ne kupite.",
+    "priceEstimate": "Končno ceno pokaže trgovina pred plačilom.",
+    "petsTitle": "Psi na preizkusu",
+    "petLine": "{{breed}} · {{names}}",
+    "trialEnds": "Preizkus se izteče {{when}}.",
+    "trialEndsUnknown": "Preizkus še teče.",
+    "paused": "Igra je ustavljena. Pes čaka na varnem, napredek ostane.",
+    "buy": "Kupi za {{price}}",
+    "buyNoPrice": "Kupi izziv",
+    "priceLoading": "Nalagam ceno iz trgovine …",
+    "useCredit": "Uporabi kupljen izziv",
+    "credits_one": "Imate {{count}} kupljen izziv, ki še ni uporabljen.",
+    "credits_two": "Imate {{count}} kupljena izziva, ki še nista uporabljena.",
+    "credits_few": "Imate {{count}} kupljene izzive, ki še niso uporabljeni.",
+    "credits_other": "Imate {{count}} kupljenih izzivov, ki še niso uporabljeni.",
     "restore": "Obnovi nakupe",
-    "alerts": {
-      "successTitle": "Odklenjeno",
-      "successMessage": "Pasma border collie je odklenjena!",
-      "purchaseFailedTitle": "Nakup ni uspel",
-      "restoreTitle": "Obnovi nakupe",
-      "restoreNone": "Prejšnjih nakupov nismo našli.",
-      "restoreFailedTitle": "Obnova ni uspela",
-      "unexpected": "Prišlo je do napake. Poskusite znova."
-    }
+    "terms": "Pogoji uporabe",
+    "privacy": "Zasebnost",
+    "storeNote": "Plačilo opravi trgovina (App Store ali Google Play) prek vašega računa trgovine.",
+    "allPaid": "Noben pes ne čaka na nakup. Vsi izzivi so odklenjeni.",
+    "loading": "Nalagam stanje nakupov …",
+    "loadError": "Stanja nakupov ni bilo mogoče naložiti.",
+    "offline": "Ni povezave. Preverite internet in poskusite znova.",
+    "retry": "Poskusi znova",
+    "offeringMissing": "Izziva iz trgovine trenutno ni mogoče naložiti. Poskusite znova kasneje.",
+    "retryStore": "Znova naloži ceno",
+    "busy": "Počakajte …",
+    "noTrial": "Za tega psa ni brezplačnega preizkusa (otrok ga je že imel) — izziv se začne z nakupom."
+  },
+  "result": {
+    "unlocked": "Hvala! Izziv je odklenjen, igra se nadaljuje.",
+    "restoredUnlocked": "Nakupi so obnovljeni in izziv je odklenjen.",
+    "restoredNoCredit": "Nakupi so obnovljeni, a ni neuporabljenega izziva. Vsak izziv velja za enega psa.",
+    "noCredit": "Ni kupljenega izziva, ki bi ga lahko uporabili.",
+    "refused": "Ta pes izziva ne potrebuje (brezplačni načrt ali je že plačan).",
+    "activateFailed": "Izziva ni bilo mogoče odkleniti. Preverite povezavo in poskusite znova."
+  },
+  "history": {
+    "limited": "Brezplačni načrt: zgodovina kaže zadnjih 7 dni. 12-tedenski izziv hrani celotno zgodovino."
   }
 }

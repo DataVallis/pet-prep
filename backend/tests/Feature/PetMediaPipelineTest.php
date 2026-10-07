@@ -76,12 +76,18 @@ beforeEach(function () {
     seedBreedConfigs();
 });
 
-/** A born pet of a child in a parent's family. */
+/**
+ * A born pet of a child in a parent's family. M3-11 P6: the full media tier
+ * needs a purchased challenge — the mutt here is a free-plan pet (basic
+ * set), every other breed a purchased challenge (full set).
+ */
 function pmFamilyPet(string $breed = 'mutt', array $dna = []): array
 {
     $parent = createParentUser();
     $child = createChildUser(['parent_id' => $parent->id]);
-    $pet = Pet::factory()->withPetDna($dna)->create(['user_id' => $child->id, 'breed_type' => $breed, 'media_status' => 'pending']);
+    $factory = Pet::factory()->withPetDna($dna);
+    $factory = $breed === 'mutt' ? $factory->freePlan() : $factory->purchased();
+    $pet = $factory->create(['user_id' => $child->id, 'breed_type' => $breed, 'media_status' => 'pending']);
 
     return [$parent, $child, $pet];
 }
@@ -151,6 +157,9 @@ describe('pipeline at birth', function () {
         Http::assertNotSent(fn (Request $r) => str_contains($r->url(), 'queue.fal.run'));
 
         // First contract = birth → the free mutt's basic set: idle + sleeping.
+        // M3-11: the deprecated /child/pair path creates a challenge pet (full
+        // set); this test is about the pipeline, so the pet is made free here.
+        Pet::whereKey($pet->id)->update(['plan' => 'free', 'challenge_paid_at' => null, 'challenge_paid_source' => null]);
         app('auth')->forgetGuards();
         $this->actingAs($child)->postJson('/api/child/contract', ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20'])->assertCreated();
 
@@ -731,6 +740,7 @@ describe('media payload', function () {
 
         $pet = $this->actingAs($child)->postJson('/api/child/pair', ['pin' => $pin])->assertCreated()->json('pet');
 
+        // M3-11 P6: /child/pair creates an unpaid challenge pet (trial) → the basic set.
         expect($pet['media'])->toMatchArray(['status' => 'pending', 'states' => ['idle', 'sleeping']])
             ->and($pet['pet_dna']['reference_image_url'])->toBeNull();
     });

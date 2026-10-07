@@ -1,8 +1,21 @@
 {
   "profile": {
-    "stages": { "puppy": "Mladiček", "young": "Mlad pes", "adult": "Odrasel", "senior": "Starejši" },
-    "stagesLower": { "puppy": "mladiček", "young": "mlad pes", "adult": "odrasel pes", "senior": "starejši pes" },
-    "origins": { "bought": "Kupljen pri vzreditelju", "adopted": "Posvojen iz zavetišča" },
+    "stages": {
+      "puppy": "Mladiček",
+      "young": "Mlad pes",
+      "adult": "Odrasel",
+      "senior": "Starejši"
+    },
+    "stagesLower": {
+      "puppy": "mladiček",
+      "young": "mlad pes",
+      "adult": "odrasel pes",
+      "senior": "starejši pes"
+    },
+    "origins": {
+      "bought": "Kupljen pri vzreditelju",
+      "adopted": "Posvojen iz zavetišča"
+    },
     "nextStage": "Od {{date}} {{stage}}",
     "nextStageChild": "{{date}} postane {{stage}}",
     "mealsToday_one": "Danes {{count}} obrok",
@@ -26,29 +39,63 @@
   "date": {
     "format": "{{day}}. {{month}} {{year}}",
     "months": {
-      "1": "1.", "2": "2.", "3": "3.", "4": "4.", "5": "5.", "6": "6.",
-      "7": "7.", "8": "8.", "9": "9.", "10": "10.", "11": "11.", "12": "12."
+      "1": "1.",
+      "2": "2.",
+      "3": "3.",
+      "4": "4.",
+      "5": "5.",
+      "6": "6.",
+      "7": "7.",
+      "8": "8.",
+      "9": "9.",
+      "10": "10.",
+      "11": "11.",
+      "12": "12."
     }
   },
   "picker": {
     "title": "Izberi kužka za: {{name}}",
     "intro": "Izbira določa, kako bo skrb za kužka videti — kot pri pravem psu.",
+    "planTitle": "Način",
+    "plans": {
+      "free": {
+        "title": "Brezplačni mešanček",
+        "hint": "Za vedno brezplačno. Vse nege in pravila igre, brez 12-tedenskega programa in certifikata; zgodovina zadnjih 7 dni. Pes je vedno mešanček."
+      },
+      "challenge": {
+        "title": "12-tedenski izziv — 7 dni brezplačno, nato {{price}}",
+        "hint": "Program, ki pokaže, ali je otrok pripravljen na psa, z Border Colliejem, certifikatom in celotno zgodovino. Preizkus se začne, ko otrok podpiše pogodbo. Ni samodejnega plačila: po 7 dneh se igra ustavi, dokler izziva za tega psa ne kupite. Če je otrok brezplačni preizkus že imel, se izziv začne z nakupom."
+      }
+    },
+    "planMissing": "Izberite način.",
+    "breedFreeNote": "V brezplačnem načrtu je pes vedno mešanček. Border Collie je del 12-tedenskega izziva.",
     "breedTitle": "Pasma",
-    "breeds": { "mutt": "Mešanček", "border_collie": "Border collie" },
+    "breeds": {
+      "mutt": "Mešanček",
+      "border_collie": "Border collie"
+    },
     "breedHints": {
       "mutt": "Brezplačen v vseh kombinacijah.",
-      "border_collie": "Del plačljivega izziva."
+      "border_collie": "Del 12-tedenskega izziva (tudi med brezplačnim preizkusom)."
     },
-    "breedLockedNote": "Plačljive pasme se odklenejo samo z nakupom. Za začetek izberite mešančka — brezplačen je pri vsakem izvoru in starosti.",
+    "breedLockedNote": "Te pasme zdaj ni mogoče izbrati. Izberite mešančka ali poskusite pozneje.",
     "lockedA11y": "{{breed}}, zaklenjeno — del plačljivega izziva",
     "originTitle": "Od kod pride",
-    "origins": { "bought": "Kupljen (vzreditelj)", "adopted": "Posvojen (zavetišče)" },
+    "origins": {
+      "bought": "Kupljen (vzreditelj)",
+      "adopted": "Posvojen (zavetišče)"
+    },
     "originHints": {
       "bought": "Od vzreditelja. Vpliv izvora na vedenje pride kmalu.",
       "adopted": "Iz zavetišča. Vpliv izvora na vedenje (npr. plašnost v prvih tednih) pride kmalu."
     },
     "ageTitle": "Starost ob prihodu",
-    "ages": { "puppy": "Mladiček", "young": "Mlad pes", "adult": "Odrasel", "senior": "Starejši" },
+    "ages": {
+      "puppy": "Mladiček",
+      "young": "Mlad pes",
+      "adult": "Odrasel",
+      "senior": "Starejši"
+    },
     "ageHints": {
       "mutt": {
         "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000. Nezgode v hiši pridejo kmalu.",
@@ -66,12 +113,16 @@
     "quietHoursNote": "Obrok, ki pade v celoti v tihe ure (šola, spanje), nahrani starš.",
     "missing": "Izberite izvor in starost.",
     "confirm": "Ustvari kodo",
-    "back": "Nazaj"
+    "back": "Nazaj",
+    "noTrial": "{{name}} je brezplačni preizkus že imel(a). Izziv za tega psa se začne z nakupom: po podpisu pogodbe ga odklenete v aplikaciji."
   },
   "media": {
     "pending": "Kuža se pripravlja…",
     "pendingParent": "Kuža se pripravlja…",
-    "breeds": { "mutt": "Mešanček", "border_collie": "Border collie" },
+    "breeds": {
+      "mutt": "Mešanček",
+      "border_collie": "Border collie"
+    },
     "a11y": "Tvoj kuža ({{breed}})"
   },
   "album": {

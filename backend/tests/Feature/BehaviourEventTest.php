@@ -255,7 +255,7 @@ describe('client capability gate', function () {
 
     it('never gives an old-client pet (no features) accidents, chewing, a clock, take-out or the new videos', function () {
         beChance(1.0);
-        [, $child, $pet] = beFamily('2026-10-12 02:00:00', 3, quiet: false, attributes: ['behaviour_events_enabled' => false, 'breed_type' => 'border_collie', 'life_stage' => 'puppy']);
+        [, $child, $pet] = beFamily('2026-10-12 02:00:00', 3, quiet: false, attributes: ['behaviour_events_enabled' => false, 'breed_type' => 'border_collie', 'challenge_paid_source' => 'purchase', 'life_stage' => 'puppy']);
 
         $pet = beRun($pet, '2026-10-12 02:00:00', '2026-10-13 02:00:00');
         expect(beEvents($pet))->toHaveCount(0)
@@ -871,7 +871,8 @@ describe('API', function () {
     });
 
     it('keeps the free mutt payload unchanged: media states idle + sleeping, pet_state one of the six', function () {
-        [, $child, $pet] = beFamily('2026-10-12 04:00:00', 2);
+        // M3-11: the basic media set follows the free plan, not the breed.
+        [, $child, $pet] = beFamily('2026-10-12 04:00:00', 2, attributes: ['plan' => 'free', 'challenge_paid_at' => null, 'challenge_paid_source' => null]);
         actingAsRole($child);
 
         getJson('/api/child/pet')->assertOk()
@@ -892,22 +893,30 @@ describe('behaviour videos', function () {
         $entitlements = app(MediaEntitlementService::class);
         $states = fn (Pet $p) => array_map(fn (PetStateEnum $s) => $s->value, $entitlements->videoStatesFor($p));
 
-        [, , $bcPuppy] = beFamily('2026-10-12 04:00:00', 2, attributes: ['breed_type' => 'border_collie', 'life_stage' => 'puppy']);
-        [, , $bcYoung] = beFamily('2026-10-12 04:00:00', 9, attributes: ['breed_type' => 'border_collie', 'life_stage' => 'young']);
-        [, , $bcLegacy] = beFamily('2026-10-12 04:00:00', 2, attributes: ['breed_type' => 'border_collie', 'arrival_age_months' => null]);
-        [, , $bcOldClient] = beFamily('2026-10-12 04:00:00', 2, attributes: ['breed_type' => 'border_collie', 'life_stage' => 'puppy', 'behaviour_events_enabled' => false]);
-        [, , $mutt] = beFamily('2026-10-12 04:00:00', 2, attributes: ['life_stage' => 'puppy']);
+        [, , $bcPuppy] = beFamily('2026-10-12 04:00:00', 2, attributes: ['breed_type' => 'border_collie', 'challenge_paid_source' => 'purchase', 'life_stage' => 'puppy']);
+        [, , $bcYoung] = beFamily('2026-10-12 04:00:00', 9, attributes: ['breed_type' => 'border_collie', 'challenge_paid_source' => 'purchase', 'life_stage' => 'young']);
+        [, , $bcLegacy] = beFamily('2026-10-12 04:00:00', 2, attributes: ['breed_type' => 'border_collie', 'challenge_paid_source' => 'purchase', 'arrival_age_months' => null]);
+        [, , $bcOldClient] = beFamily('2026-10-12 04:00:00', 2, attributes: ['breed_type' => 'border_collie', 'challenge_paid_source' => 'purchase', 'life_stage' => 'puppy', 'behaviour_events_enabled' => false]);
+        [, , $mutt] = beFamily('2026-10-12 04:00:00', 2, attributes: ['life_stage' => 'puppy', 'plan' => 'free', 'challenge_paid_at' => null, 'challenge_paid_source' => null]);
+        // M3-11 P6: the full set needs a purchase — a purchased mutt gets it; a
+        // trial or grandfathered Border Collie gets the basic set.
+        [, , $paidMutt] = beFamily('2026-10-12 04:00:00', 2, attributes: ['life_stage' => 'puppy', 'challenge_paid_source' => 'purchase']);
+        [, , $trialBc] = beFamily('2026-10-12 04:00:00', 2, attributes: ['breed_type' => 'border_collie', 'life_stage' => 'puppy', 'challenge_paid_at' => null, 'challenge_paid_source' => null]);
+        [, , $oldBc] = beFamily('2026-10-12 04:00:00', 2, attributes: ['breed_type' => 'border_collie', 'life_stage' => 'puppy']);
 
         $six = ['idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing'];
         expect($states($bcPuppy))->toBe([...$six, 'accident', 'chewing'])
             ->and($states($bcYoung))->toBe([...$six, 'chewing'])
             ->and($states($bcLegacy))->toBe($six)
             ->and($states($bcOldClient))->toBe($six)
-            ->and($states($mutt))->toBe(['idle', 'sleeping']);
+            ->and($states($mutt))->toBe(['idle', 'sleeping'])
+            ->and($states($paidMutt))->toBe([...$six, 'accident', 'chewing'])
+            ->and($states($trialBc))->toBe(['idle', 'sleeping'])
+            ->and($states($oldBc))->toBe(['idle', 'sleeping']);
     });
 
     it('plans the two new videos from the current stage image and stops serving the puppy accident video after puppy → young', function () {
-        [, , $bc] = beFamily('2026-10-12 04:00:00', 2, attributes: ['breed_type' => 'border_collie', 'life_stage' => 'puppy']);
+        [, , $bc] = beFamily('2026-10-12 04:00:00', 2, attributes: ['breed_type' => 'border_collie', 'challenge_paid_source' => 'purchase', 'life_stage' => 'puppy']);
         PetMedia::create(['pet_id' => $bc->id, 'kind' => 'image', 'status' => 'ready', 'generation' => 1, 'life_stage' => 'puppy', 'storage_path' => $bc->id.'/reference-g1.jpg']);
         foreach (['idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing'] as $state) {
             PetMedia::create(['pet_id' => $bc->id, 'kind' => 'video', 'state' => $state, 'status' => 'ready', 'generation' => 1, 'source_generation' => 1, 'storage_path' => "{$bc->id}/{$state}-g1.mp4"]);

@@ -174,27 +174,32 @@ describe('api client', () => {
     it('generatePin sends the full picker set for a new pet, never with pet_id (M5-R04)', async () => {
       getItem.mockResolvedValue('tok');
       const fetchMock = mockFetch(200, { pin: '123456' });
-      const profile = { breed: 'mutt', origin: 'adopted', age_stage: 'senior' } as const;
+      const profile = { breed: 'mutt', origin: 'adopted', age_stage: 'senior', plan: 'challenge' } as const;
 
       await api.generatePin({ child_id: 5, pet_id: null, profile });
       await api.generatePin({ child_id: 5, pet_id: 9, profile });
       const bodies = fetchMock.mock.calls.map(([, init]) => JSON.parse(String((init as Init).body)));
       expect(bodies).toEqual([
-        { child_id: 5, breed: 'mutt', origin: 'adopted', age_stage: 'senior', features: ['behaviour_events', 'training'] },
+        { child_id: 5, breed: 'mutt', origin: 'adopted', age_stage: 'senior', plan: 'challenge', features: ['behaviour_events', 'training'] },
         { child_id: 5, pet_id: 9 },
       ]);
       getItem.mockReset();
     });
 
     it('generatePinBody declares features only with the profile (M5-R02 gate)', () => {
-      const profile = { breed: 'mutt', origin: 'bought', age_stage: 'puppy' } as const;
+      const profile = { breed: 'mutt', origin: 'bought', age_stage: 'puppy', plan: 'challenge' } as const;
       expect(generatePinBody({ child_id: 5, profile })).toEqual({
         child_id: 5,
         breed: 'mutt',
         origin: 'bought',
         age_stage: 'puppy',
+        plan: 'challenge',
         features: ['behaviour_events', 'training'],
       });
+      // M3-09: the free plan is always the mutt, whatever breed is passed.
+      expect(generatePinBody({ child_id: 5, profile: { ...profile, breed: 'border_collie', plan: 'free' } })).toEqual(
+        expect.objectContaining({ breed: 'mutt', plan: 'free' }),
+      );
       // Joining a pet: the shared pet keeps what its creating app declared.
       expect(generatePinBody({ child_id: 5, pet_id: 9, profile })).toEqual({ child_id: 5, pet_id: 9 });
       // Legacy / re-login call without a profile: no features.

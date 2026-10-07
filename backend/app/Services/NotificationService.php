@@ -390,7 +390,9 @@ class NotificationService
         $list = match ($type) {
             PushType::SoftWarning, PushType::CriticalAlert, PushType::WalkReminder => $children(),
             PushType::ParentAlarm => $parents(),
-            PushType::Illness, PushType::GameOver => $parents()->concat($children()),
+            PushType::Illness, PushType::GameOver, PushType::PaymentRequired => $parents()->concat($children()),
+            // M3-11: billing is the parent's business.
+            PushType::TrialEnding => $parents(),
         };
 
         return $list->unique('user_id')->values()->all();
@@ -469,7 +471,8 @@ class NotificationService
 
     private function petLocked(Pet $pet): bool
     {
-        return (bool) $pet->is_hard_stopped || ! $pet->is_active || (bool) $pet->is_game_over || $pet->isIll();
+        return (bool) $pet->is_hard_stopped || ! $pet->is_active || (bool) $pet->is_game_over || $pet->isIll()
+            || $pet->isPaymentLocked();
     }
 
     private function dispatch(int $notificationId, bool $afterCommit): void

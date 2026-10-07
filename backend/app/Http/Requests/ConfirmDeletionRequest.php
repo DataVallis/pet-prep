@@ -36,6 +36,10 @@ class ConfirmDeletionRequest extends FormRequest
         return [
             'password' => ['required', 'string', 'max:255'],
             'confirm' => ['required', 'accepted'],
+            // M3-11 P5: the parent saw that a paid, unfinished 12-week challenge
+            // is lost with the pet (the purchase stays used). Without it such a
+            // deletion → 422 `paid_challenge_ack_required`.
+            'acknowledge_paid_challenge' => ['sometimes', 'boolean'],
             // `required` under `sometimes`: present ⇒ non-empty (TrimStrings +
             // ConvertEmptyStringsToNull turn "  " into null, which must fail).
             'confirm_word' => ['sometimes', 'required', 'string', 'max:32', function (string $attribute, mixed $value, Closure $fail): void {
@@ -102,5 +106,11 @@ class ConfirmDeletionRequest extends FormRequest
     public function password(): string
     {
         return (string) $this->input('password');
+    }
+
+    /** M3-11 P5: losing a paid, unfinished challenge was acknowledged. */
+    public function acknowledgesPaidChallenge(): bool
+    {
+        return $this->boolean('acknowledge_paid_challenge');
     }
 }

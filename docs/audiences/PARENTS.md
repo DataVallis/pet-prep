@@ -27,7 +27,7 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 
 ## Izberite kužka: izvor in starost *(od 5. 10. 2026 na strežniku; zaslon "Izberi kužka" v aplikaciji od 5. 10. 2026 — še ni v trgovini)*
 **Kako izberete (v aplikaciji):** *Dodaj otroka* → vzdevek → **Nov pes** → zaslon **Izberi kužka**. Izberete tri stvari:
-1. **Pasmo** — mešanček je brezplačen. Plačljive pasme (Border Collie) vidite, a so zaklenjene: odklenejo se samo z nakupom, zato za začetek izberite mešančka.
+1. **Plan** — *brezplačni mešanček* (za vedno, brez 12-tedenskega programa) ali *12-tedenski izziv* (7 dni brezplačno, nato 49,99 € za tega psa, brez naročnine in brez samodejnega plačila). **Pasma** — na brezplačnem planu vedno mešanček; na izzivu tudi Border Collie *(v aplikaciji od 7. 10. 2026 — še ni v trgovini)*.
 2. **Od kod pride** — *Kupljen (vzreditelj)* ali *Posvojen (zavetišče)*. Izvor se zdaj pokaže na profilu psa; vpliv izvora na vedenje (npr. plašnost posvojenega psa v prvih tednih) pride kmalu.
 3. **Starost ob prihodu** — ob vsaki je ena vrstica s številkami za izbrano pasmo (mešanček): *mladiček* (pride star 2 meseca; 4 obroki na dan, nato 3, od 6. meseca 2; sprehod 2.000 korakov na dan, vsak teden več do 6.000; nezgode v hiši pridejo kmalu), *mlad pes* (2 obroka, 6.000 korakov kot odrasel), *odrasel* (2 obroka, 6.000 korakov), *starejši* (2 obroka, 4.500 korakov). Za Border Collieja (plačljivo): mladiček 2.000 → 12.000, mlad pes 9.000 → 12.000, odrasel 12.000, starejši 9.000 korakov.
 
@@ -144,7 +144,7 @@ Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava �
 
 ## Cena
 - **Mešanček: brezplačen za vedno.**
-- **12-tedenski PetPrep izziv: 49,99 € na psa**, prvih **7 dni brezplačno**. Skupni pes več otrok = **ena cena**; drugi pes v družini = nov izziv. Dostop imata oba starša. Vključuje zahtevno pasmo, personaliziranega AI psa, certifikat in bonuse. *(načrt: nakup v aplikaciji)*
+- **12-tedenski PetPrep izziv: 49,99 € na psa**, prvih **7 dni brezplačno**. Skupni pes več otrok = **ena cena**; drugi pes v družini = nov izziv. Dostop imata oba starša. Vključuje zahtevno pasmo, personaliziranega AI psa, certifikat in bonuse. Po 7 dneh brez nakupa se igra **ustavi** (kuža varno čaka, nič ne propade), dokler izziva ne kupite; vsak otrok ima brezplačni preizkus le enkrat. Če izbrišete psa s kupljenim izzivom, je nakup porabljen (aplikacija vas na to posebej opozori). Nakup je samo v starševskem delu aplikacije. *(Zgrajeno 7. 10. 2026; nakup bo mogoč, ko bo izdelek objavljen v App Store in Google Play.)*
 
 ## Pogosta vprašanja *(dopolnjujemo)*
 - **Kaj, če otrok nima telefona?** *(odgovor v pripravi)*

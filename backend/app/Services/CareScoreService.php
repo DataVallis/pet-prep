@@ -216,7 +216,8 @@ class CareScoreService
                 ? $this->dayBlock($board, $pet, $childId, $board['today'])
                 : $this->emptyDay($board['today']),
             'last_7_days' => array_map(fn (string $date) => $this->dailyRow($board, $childId, $pet, $date), $days),
-            'progress' => $this->progress($board, $start),
+            // M3-11: the free plan has no 12-week program → no progress.
+            'progress' => $pet !== null && $pet->isFreePlan() ? null : $this->progress($board, $start),
         ];
     }
 

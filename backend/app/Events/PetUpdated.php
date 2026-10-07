@@ -5,6 +5,7 @@ namespace App\Events;
 use App\Models\Pet;
 use App\Services\BehaviourPayload;
 use App\Services\Media\PetMediaPayload;
+use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
 use App\Services\TrainingPayload;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -156,6 +157,8 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'is_game_over' => (bool) $pet->is_game_over,
             'is_hard_stopped' => (bool) $pet->is_hard_stopped,
             'virtual_age_months' => $pet->virtualAgeInMonths(),
+            // M3-11: plan + payment status (event types payment_required / challenge_paid / challenge_refunded).
+            'plan' => PetPlanPayload::for($pet)->toArray(),
             // M5-R01: the dog's age, origin and life stage (full profile via GET).
             ...PetProfilePayload::brief($pet),
             // Contract before birth (M1-07b): null / true until the child signs.

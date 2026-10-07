@@ -37,7 +37,8 @@
       "throttled": "Preveč napačnih gesel. Poskusite znova čez 15 minut.",
       "invalid": "Vpišite geslo in potrdite brisanje.",
       "unknown": "Ni znano, ali je bil izbris izveden — preverite s ponovno prijavo.",
-      "server": "Brisanje ni uspelo. Nič ni bilo izbrisano — poskusite znova."
+      "server": "Brisanje ni uspelo. Nič ni bilo izbrisano — poskusite znova.",
+      "paid_challenge": "Ta izbris odstrani psa, za katerega je bil kupljen 12-tedenski izziv. Odkljukajte potrditev, da je nakup porabljen."
     },
     "exportErrors": {
       "too_large": "Podatkov je preveč za izvoz v aplikaciji. Pišite nam na podporo.",
@@ -52,6 +53,8 @@
     "passwordPlaceholder": "Geslo za prijavo",
     "confirmLabel": "Za potrditev vpišite {{word}}",
     "cancel": "Prekliči",
-    "irreversible": "Brisanje je takojšnje in ga ni mogoče razveljaviti."
+    "irreversible": "Brisanje je takojšnje in ga ni mogoče razveljaviti.",
+    "paidWarning": "Za tega psa je bil kupljen 12-tedenski izziv. Če ga izbrišete, je nakup porabljen — za novega psa boste morali izziv kupiti znova.",
+    "paidAck": "Razumem: nakup je porabljen in se ne povrne."
   }
 }

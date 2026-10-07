@@ -101,7 +101,8 @@ export function classifyPinError(error: unknown): PinError {
  */
 export function pinRequestKey(
   petId: number | null,
-  profile: { breed: string; origin: string; age_stage: string } | null,
+  profile: { breed: string; origin: string; age_stage: string; plan?: string } | null,
 ): string {
-  return JSON.stringify([petId, profile?.breed ?? null, profile?.origin ?? null, profile?.age_stage ?? null]);
+  // M3-09: the plan is part of the choice — a PIN issued for a free pet is never reused for a challenge.
+  return JSON.stringify([petId, profile?.breed ?? null, profile?.origin ?? null, profile?.age_stage ?? null, profile?.plan ?? null]);
 }

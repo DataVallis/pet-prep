@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\BreedType;
 use App\Enums\ClientFeature;
 use App\Enums\FamilyRole;
+use App\Enums\PetPlan;
 use App\Enums\UserRole;
 use App\Exceptions\FamilyException;
 use App\Exceptions\PairingException;
@@ -189,11 +190,15 @@ class PairingService
      * PIN issued before M5-R01, the deprecated /child/pair path) creates a
      * legacy-profile pet that keeps the pre-M5 rules (grandfathering).
      *
+     * `$plan` (M3-11) = the parent's plan stored on the PIN (null on a PIN
+     * from an old app build → `challenge`); ignored when joining a pet (the
+     * pet keeps its plan).
+     *
      * @return array{pet: Pet, joined_existing: bool}
      *
      * @throws PairingException
      */
-    public function attachChildToPet(Family $family, User $child, ?int $joinPetId, ?PetProfileChoice $profile = null): array
+    public function attachChildToPet(Family $family, User $child, ?int $joinPetId, ?PetProfileChoice $profile = null, PetPlan $plan = PetPlan::Challenge): array
     {
         if ($joinPetId !== null) {
             $pet = Pet::whereKey($joinPetId)->lockForUpdate()->first();
@@ -206,27 +211,38 @@ class PairingService
             return ['pet' => $pet, 'joined_existing' => true];
         }
 
-        return ['pet' => $this->createPet($family->id, $child, $profile), 'joined_existing' => false];
+        return ['pet' => $this->createPet($family, $child, $profile, $plan), 'joined_existing' => false];
     }
 
     /**
-     * A new pet's profile must be a breed with a config that needs no
-     * purchase (M5-R01): premium breeds stay purchase-only as before (the
-     * RevenueCat unlock upgrades an existing pet). Every origin / age stage
-     * is free (David 2026-10-05).
+     * Breeds a new pet of this plan may have (M5-R01, M3-11 PAYMENTS_SPEC):
+     * a breed needs a config; a premium breed (`breed_configs.premium_unlock`,
+     * the Border Collie) only on the `challenge` plan — also during the trial
+     * (no purchase needed up front). The free plan is the mutt only.
+     */
+    public static function breedAllowed(BreedType $breed, PetPlan $plan): bool
+    {
+        $config = BreedConfig::forBreed($breed);
+        if ($config === null) {
+            return false;
+        }
+
+        return $plan === PetPlan::Challenge || $breed === BreedType::Mutt;
+    }
+
+    /**
+     * Every origin / age stage is free (David 2026-10-05).
      *
      * @throws FamilyException breed_locked (422)
      */
-    public function assertProfileAllowed(PetProfileChoice $profile): void
+    public function assertProfileAllowed(PetProfileChoice $profile, PetPlan $plan): void
     {
-        $config = BreedConfig::forBreed($profile->breed);
-
-        if ($config === null || $config->premium_unlock) {
+        if (! self::breedAllowed($profile->breed, $plan)) {
             throw new FamilyException('breed_locked', 'This breed is part of the paid PetPrep challenge.');
         }
     }
 
-    private function createPet(int $familyId, User $child, ?PetProfileChoice $profile): Pet
+    private function createPet(Family $family, User $child, ?PetProfileChoice $profile, PetPlan $plan): Pet
     {
         // Pet DNA is generated offline. The reference image is produced
         // asynchronously by a queued job dispatched after this transaction
@@ -235,11 +251,12 @@ class PairingService
         // so it is assigned right after the insert; the caller holds the
         // family row lock, which makes the per-family uniqueness check safe.
         // M5-R01: breed / origin / age stage chosen by the parent (default:
-        // a bought mutt puppy). A premium breed chosen at PIN time but locked
-        // by now falls back to the mutt. Without a profile (old PIN,
+        // a bought mutt puppy). A breed the plan does not allow (or without a
+        // config) falls back to the mutt (M3-11). Without a profile (old PIN,
         // deprecated /child/pair) → a legacy-profile mutt (pre-M5 rules).
+        $familyId = $family->id;
         $breed = $profile?->breed ?? BreedType::Mutt;
-        if (BreedConfig::forBreed($breed)?->premium_unlock !== false) {
+        if (! self::breedAllowed($breed, $plan)) {
             $breed = BreedType::Mutt;
         }
         $arrivalAge = $profile !== null ? $this->lifeStages->arrivalAgeFor($breed->slug(), $profile->ageStage) : null;
@@ -265,6 +282,8 @@ class PairingService
             'hygiene_level' => 100,
             'born_at' => null,
             'is_active' => true,
+            // M3-11: fixed for life; the challenge trial starts at birth (contract).
+            'plan' => $plan->value,
             // Legacy profile (null arrival age) without a choice or without
             // life-stage data for the breed: the pre-M5 rules.
             'origin' => $profile?->origin->value,

@@ -190,6 +190,11 @@ export interface NewPetProfile {
   breed: PetBreed;
   origin: PetOrigin;
   age_stage: LifeStage;
+  /**
+   * M3-09: free mutt sandbox or the 12-week challenge (7-day trial). Free → breed is
+   * always `mutt` (the server refuses anything else). Sent with the profile only.
+   */
+  plan: PetPlanType;
 }
 
 /** `POST /api/parent/generate-pin` body — always with `child_id` (the legacy call is deprecated). */
@@ -217,13 +222,16 @@ export const CLIENT_FEATURES: readonly ClientFeature[] = ['behaviour_events', 't
 
 /**
  * The JSON body of a generate-pin request: profile fields only for a new pet, always all
- * three, together with `features` (never with `pet_id`, never without the profile).
+ * three plus the plan (M3-09), together with `features` (never with `pet_id`, never
+ * without the profile).
  */
 export function generatePinBody(body: GenerateChildPinRequest): Record<string, number | string | ClientFeature[]> {
   if (body.pet_id != null) return { child_id: body.child_id, pet_id: body.pet_id };
   if (body.profile) {
-    const { breed, origin, age_stage } = body.profile;
-    return { child_id: body.child_id, breed, origin, age_stage, features: [...CLIENT_FEATURES] };
+    const { origin, age_stage, plan } = body.profile;
+    // A free pet is always the mutt (PAYMENTS_SPEC §2) — never send a premium breed with it.
+    const breed = plan === 'free' ? 'mutt' : body.profile.breed;
+    return { child_id: body.child_id, breed, origin, age_stage, plan, features: [...CLIENT_FEATURES] };
   }
   return { child_id: body.child_id };
 }
@@ -321,6 +329,55 @@ export interface PetActivitiesResponse {
   meta: { current_page: number; last_page: number; total: number };
 }
 
+/**
+ * Plan of one pet (M3-09 / M3-11, PAYMENTS_SPEC §2). Local types — **schema regen
+ * pending**: the backend (`feat/M3-11-challenge-trial`) is built in parallel; replace with
+ * `components['schemas'][…]` after `npm run generate-api-types`. Read every payload
+ * through `readPetPlan` / `readBilling`, never directly.
+ * - `free` — the mutt sandbox, free forever (no 12-week programme).
+ * - `challenge` — the 12-week challenge: `trial` (born, unpaid, 7 days) →
+ *   `payment_required` (lock) → `paid`; null before birth (trial not started).
+ */
+export type PetPlanType = 'free' | 'challenge';
+export type ChallengeStatus = 'trial' | 'payment_required' | 'paid';
+
+/** `plan` on the child state, the parent dashboard pet and `pet.updated` (cleaned shape; raw types in schema.ts, read through the readers). */
+export interface PetPlan {
+  type: PetPlanType;
+  status: ChallengeStatus | null;
+  trial_ends_at: string | null;
+  paid_at: string | null;
+}
+
+/** One pet of `GET /api/parent/billing` (cleaned shape; raw types in schema.ts, read through the readers). */
+export interface BillingPet {
+  pet_id: number;
+  plan: PetPlanType;
+  status: ChallengeStatus | null;
+  trial_ends_at: string | null;
+  paid_at: string | null;
+  /** P7: the pet has / will get the free trial (one per child); null for a free pet. */
+  trial_available: boolean | null;
+  /** P5: deleting this pet loses a purchased, unfinished challenge. */
+  deletion_loses_purchase: boolean;
+}
+
+/** `GET /api/parent/billing` 200 body (cleaned shape; raw types in schema.ts, read through the readers). */
+export interface BillingResponse {
+  /** Purchased challenges not yet assigned to a pet. */
+  credits_available: number;
+  pets: BillingPet[];
+}
+
+/**
+ * `POST /api/parent/pets/{pet}/challenge/activate` 200 body (cleaned shape; raw types in schema.ts, read through the readers).
+ * 409 `{ reason: 'no_credit' }`, 422 (free plan / already paid).
+ */
+export interface ActivateChallengeResponse {
+  pet_id: number;
+  plan: PetPlan;
+}
+
 /** Response from POST /api/broadcasting/auth (Pusher protocol signature). */
 export interface BroadcastAuthResponse {
   auth: string;
@@ -395,8 +452,14 @@ function retryAfterFrom(response: Response): number | null {
  * confirmation word of the app language ("IZBRIŠI" / "DELETE"), sent once the parent's
  * input matched it; the server accepts the word of any supported language.
  */
-function confirmBody(password: string, confirmWord?: string): Record<string, unknown> {
-  return confirmWord ? { password, confirm: true, confirm_word: confirmWord } : { password, confirm: true };
+function confirmBody(password: string, confirmWord?: string, acknowledgePaidChallenge = false): Record<string, unknown> {
+  return {
+    password,
+    confirm: true,
+    ...(confirmWord ? { confirm_word: confirmWord } : {}),
+    // M3-11 P5: the parent confirmed that a purchased, unfinished challenge is lost.
+    ...(acknowledgePaidChallenge ? { acknowledge_paid_challenge: true } : {}),
+  };
 }
 
 /** Type-safe wrapper around fetch with auth header and JSON handling. */
@@ -556,10 +619,10 @@ export const api = {
    * A pet only this child cared for goes with it; a shared pet stays. 404
    * `child_not_found`, 422 `invalid_password`, 429 (5 per 15 min).
    */
-  deleteChild: (childId: number, password: string, confirmWord?: string) =>
+  deleteChild: (childId: number, password: string, confirmWord?: string, acknowledgePaidChallenge = false) =>
     apiRequest<DeleteChildResponse>(`/api/parent/children/${childId}`, {
       method: 'DELETE',
-      body: confirmBody(password, confirmWord),
+      body: confirmBody(password, confirmWord, acknowledgePaidChallenge),
     }),
 
   /**
@@ -567,10 +630,10 @@ export const api = {
    * parent deletes the whole family. Every token is revoked → the app must log out
    * locally afterwards. 422 `invalid_password`, 403 `superadmin_protected`, 429.
    */
-  deleteAccount: (password: string, confirmWord?: string) =>
+  deleteAccount: (password: string, confirmWord?: string, acknowledgePaidChallenge = false) =>
     apiRequest<DeleteAccountResponse>('/api/parent/account/delete', {
       method: 'POST',
-      body: confirmBody(password, confirmWord),
+      body: confirmBody(password, confirmWord, acknowledgePaidChallenge),
     }),
 
   /** GET /api/parent/account/export (M2-08) — the family's data as JSON. 413 too large, 429 (3/h). */
@@ -701,6 +764,22 @@ export const api = {
     apiRequest<PetActivitiesResponse>(
       `/api/parent/activities?pet_id=${petId}&per_page=${perPage}&page=${page}`,
     ),
+
+  /**
+   * GET /api/parent/billing (M3-09 / M3-11, parent only) — unassigned challenge credits and
+   * the plan + challenge status of every family pet; the server is the source of truth
+   * (RevenueCat webhook, trial clock, admin grants). Untyped until `schema.ts` is
+   * regenerated → read with `readBilling`.
+   */
+  getBilling: () => apiRequest<unknown>('/api/parent/billing'),
+
+  /**
+   * POST /api/parent/pets/{pet}/challenge/activate (M3-11) — assign the family's oldest
+   * unassigned challenge credit to this pet (idempotent: an already paid pet stays paid).
+   * 409 `no_credit`, 422 free plan / already paid. Body read with `readPetPlan`.
+   */
+  activateChallenge: (petId: number) =>
+    apiRequest<unknown>(`/api/parent/pets/${petId}/challenge/activate`, { method: 'POST' }),
 
   /** POST /api/parent/invite-parent — code for a second parent (revokes this parent's previous code). */
   inviteParent: () => apiRequest<InviteParentResponse>('/api/parent/invite-parent', { method: 'POST' }),

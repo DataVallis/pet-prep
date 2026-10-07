@@ -8,6 +8,7 @@
 import { useState } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 import { Text, TextInput } from '@/components/ui/Text';
+import { Check } from 'lucide-react-native';
 
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { canSubmitDeletion, deleteConfirmWord } from '@/modules/account/account';
@@ -34,7 +35,13 @@ interface DeletionConfirmFormProps {
   /** Error text from the last attempt (null = none). */
   error: string | null;
   onCancel: () => void;
-  onSubmit: (password: string) => void;
+  /** `acknowledgedPaidChallenge` — the parent ticked the paid-challenge warning (M3-11 P5). */
+  onSubmit: (password: string, acknowledgedPaidChallenge: boolean) => void;
+  /**
+   * M3-11 P5: the deletion removes a dog with a purchased, unfinished challenge. Shows the
+   * warning and an extra checkbox the red button needs (accidental deletion made harder).
+   */
+  paidChallenge?: boolean;
   /** Prefix for test ids (`${testID}-password`, `-confirm`, `-submit`, `-cancel`, `-error`). */
   testID: string;
 }
@@ -46,11 +53,13 @@ export default function DeletionConfirmForm({
   error,
   onCancel,
   onSubmit,
+  paidChallenge = false,
   testID,
 }: DeletionConfirmFormProps) {
   const [password, setPassword] = useState('');
   const [confirmText, setConfirmText] = useState('');
-  const enabled = canSubmitDeletion(password, confirmText) && !pending;
+  const [paidAck, setPaidAck] = useState(false);
+  const enabled = canSubmitDeletion(password, confirmText) && (!paidChallenge || paidAck) && !pending;
 
   return (
     <View style={styles.box} testID={testID}>
@@ -60,6 +69,24 @@ export default function DeletionConfirmForm({
         </Text>
       ))}
       <Text style={styles.irreversible}>{S.irreversible}</Text>
+      {paidChallenge && (
+        <>
+          <Text style={styles.paidWarning} testID={`${testID}-paid-warning`}>
+            {S.paidWarning}
+          </Text>
+          <Pressable
+            style={styles.ackRow}
+            onPress={() => setPaidAck((v) => !v)}
+            disabled={pending}
+            accessibilityRole="checkbox"
+            accessibilityState={{ checked: paidAck }}
+            testID={`${testID}-paid-ack`}
+          >
+            <View style={[styles.checkbox, paidAck && styles.checkboxOn]}>{paidAck && <Check color={palette.white} size={14} />}</View>
+            <Text style={styles.ackText}>{S.paidAck}</Text>
+          </Pressable>
+        </>
+      )}
 
       <Text style={styles.label}>{S.passwordLabel}</Text>
       <TextInput
@@ -109,7 +136,7 @@ export default function DeletionConfirmForm({
         </Pressable>
         <Pressable
           style={({ pressed }) => [styles.button, styles.danger, !enabled && styles.disabled, pressed && styles.pressed]}
-          onPress={() => onSubmit(password)}
+          onPress={() => onSubmit(password, paidChallenge && paidAck)}
           disabled={!enabled}
           accessibilityRole="button"
           accessibilityState={{ disabled: !enabled }}
@@ -133,6 +160,11 @@ const styles = StyleSheet.create({
   },
   consequence: { fontSize: 13, lineHeight: 18, color: palette.dangerDeep },
   irreversible: { fontSize: 13, fontWeight: '700', color: C.redText },
+  paidWarning: { fontSize: 13, lineHeight: 18, fontWeight: '600', color: palette.dangerDeep, marginTop: 4 },
+  ackRow: { flexDirection: 'row', alignItems: 'center', gap: 10, minHeight: 44 },
+  checkbox: { width: 22, height: 22, borderRadius: 6, borderWidth: 2, borderColor: palette.danger, alignItems: 'center', justifyContent: 'center' },
+  checkboxOn: { backgroundColor: palette.danger },
+  ackText: { flex: 1, fontSize: 13, lineHeight: 18, color: C.text },
   label: { fontSize: 12, fontWeight: '700', color: C.muted, marginTop: 4 },
   input: {
     height: 44,

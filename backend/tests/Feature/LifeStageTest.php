@@ -391,6 +391,23 @@ describe('step goal by stage', function () {
 /* ─────────────────────────── Stage transitions ─────────────────────────── */
 
 describe('stage transition', function () {
+    it('a payment-locked pet does not grow or queue AI media until it is paid (QA PR #67 M1)', function () {
+        Queue::fake([RegeneratePetStageMedia::class]);
+        [, , $pet] = lsFamily('2026-10-05 08:00:00', ['life_stage' => 'puppy', 'payment_locked_at' => '2026-10-12 08:00:00']);
+        $decay = app(PetDecayService::class);
+
+        lsAt('2026-11-23 23:01:30'); // past the puppy → young transition
+        $decay->processPetDecay($pet->fresh());
+        expect($pet->fresh()->life_stage)->toBe(LifeStage::Puppy);
+        Queue::assertNotPushed(RegeneratePetStageMedia::class);
+
+        Pet::whereKey($pet->id)->update(['payment_locked_at' => null]);
+        lsAt('2026-11-23 23:02:30');
+        $decay->processPetDecay($pet->fresh());
+        expect($pet->fresh()->life_stage)->toBe(LifeStage::Young);
+        Queue::assertPushed(RegeneratePetStageMedia::class, 1);
+    });
+
     it('writes the stage at the local midnight and queues the new stage images exactly once', function () {
         Queue::fake([RegeneratePetStageMedia::class]);
         // Born Monday 10:00 local, puppy at 2 → young (9) on Monday 2026-11-23 10:00 → rules Tuesday.
@@ -489,7 +506,7 @@ describe('stage images', function () {
             'fal.run/fal-ai/nano-banana-pro/edit' => Http::response(['images' => [['url' => 'https://v3.fal.media/files/dog/young.jpg']], 'description' => '']),
             'v3.fal.media/files/dog/young.jpg' => Http::response("\xFF\xD8\xFF\xE0\x00\x10JFIF".str_repeat("\x01", 300), 200, ['Content-Type' => 'image/jpeg']),
         ]);
-        [, , $pet] = lsFamily('2026-10-05 08:00:00', ['life_stage' => 'young', 'media_status' => 'ready']);
+        [, , $pet] = lsFamily('2026-10-05 08:00:00', ['life_stage' => 'young', 'media_status' => 'ready', 'plan' => 'free', 'challenge_paid_at' => null, 'challenge_paid_source' => null]);
         $old = lsStoredImage($pet, 'puppy');
 
         (new RegeneratePetStageMedia($pet->id))->handle(app(PetMediaService::class));
@@ -511,7 +528,7 @@ describe('stage images', function () {
             ->and($history->storage_path)->toBe($old->storage_path)
             ->and(Storage::disk('pet_media')->exists($old->storage_path))->toBeTrue()
             ->and(Storage::disk('pet_media')->exists($image->storage_path))->toBeTrue();
-        // Videos follow the new image only for a born pet: idle + sleeping (mutt basic set).
+        // Videos follow the new image only for a born pet: idle + sleeping (M3-11: free plan → basic set).
         Queue::assertPushed(SubmitPetStateVideo::class, 2);
 
         // A second run is a no-op.
@@ -710,7 +727,9 @@ describe('pet creation with origin and age stage', function () {
         postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'age_stage' => 'adult'])->assertUnprocessable()->assertJsonValidationErrors('origin')->assertJsonMissingValidationErrors('age_stage');
         postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'origin' => 'adopted'])->assertUnprocessable()->assertJsonValidationErrors('age_stage');
         postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'breed' => 'mutt'])->assertUnprocessable()->assertJsonValidationErrors(['origin', 'age_stage']);
-        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertStatus(422)->assertJsonPath('reason', 'breed_locked');
+        // M3-11: premium breeds only on the challenge plan (the default), never free.
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'plan' => 'free', 'breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertStatus(422)->assertJsonPath('reason', 'breed_locked');
+        postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()->assertJsonPath('plan', 'challenge');
         // Every age / origin is free for the mutt.
         postJson('/api/parent/generate-pin', ['child_id' => $child->id, 'breed' => 'mutt', 'origin' => 'adopted', 'age_stage' => 'senior'])->assertOk()
             ->assertJsonPath('pet_profile.age_stage', 'senior');

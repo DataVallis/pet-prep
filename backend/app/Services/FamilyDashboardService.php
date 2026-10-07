@@ -35,6 +35,19 @@ class FamilyDashboardService
     /** Timeline items per pet in the dashboard. */
     public const TIMELINE_ITEMS = 20;
 
+    /** M3-11 (PAYMENTS_SPEC): a free-plan pet's parent history covers this many family-local days. */
+    public const FREE_HISTORY_DAYS = 7;
+
+    /**
+     * Start (UTC) of the history a parent may see for a free-plan pet: the
+     * family-local start of the day FREE_HISTORY_DAYS − 1 days ago (today
+     * included) — the same window as the 7-day stats.
+     */
+    public static function historyStart(Pet $pet): Carbon
+    {
+        return Carbon::now($pet->familyTimezone())->startOfDay()->subDays(self::FREE_HISTORY_DAYS - 1)->utc();
+    }
+
     public function __construct(
         private readonly CareScoreService $scores,
         private readonly PetMediaService $media,
@@ -176,6 +189,8 @@ class FamilyDashboardService
                 'is_hard_stopped' => (bool) $pet->is_hard_stopped,
                 'is_ill' => $pet->isIll(),
                 'escalation_level' => (int) $pet->escalation_level,
+                // M3-11: plan + payment status (paywall per pet).
+                'plan' => PetPlanPayload::for($pet, $tz)->toArray(),
                 // M5-R01: origin, age, life stage and today's rules (meals by
                 // child / by parent in quiet hours, step goal).
                 'profile' => PetProfilePayload::for($pet)->toArray(),
@@ -222,6 +237,12 @@ class FamilyDashboardService
             ->sortByDesc(fn (Pet $p) => [(int) $p->is_active, $p->id])
             ->first();
 
+        // M3-11: a free-plan pet's history is limited to 7 days (30 / 84 → 7).
+        $limited = $pet !== null && $pet->isFreePlan() && $days > self::FREE_HISTORY_DAYS;
+        if ($pet !== null && $pet->isFreePlan()) {
+            $days = min($days, self::FREE_HISTORY_DAYS);
+        }
+
         $today = now()->setTimezone($tz)->toDateString();
         $from = Carbon::parse($today, 'UTC')->subDays($days - 1)->toDateString();
 
@@ -230,6 +251,8 @@ class FamilyDashboardService
             'pet_id' => $pet?->id,
             'timezone' => $tz,
             'days' => $days,
+            // M3-11: true when the requested period was cut to 7 days (free plan).
+            'history_limited' => $limited,
             'from' => $from,
             'to' => $today,
         ];
@@ -308,10 +331,14 @@ class FamilyDashboardService
             return [];
         }
 
+        // M3-11: free-plan pets show only the last 7 family-local days.
+        $freeIds = $pets->filter(fn (Pet $p) => $p->isFreePlan())->pluck('id')->all();
         $ranked = DB::table('activities_log')
             ->select(['id', 'pet_id', 'actor_user_id', 'activity_type', 'value', 'created_at'])
             ->selectRaw('row_number() over (partition by pet_id order by created_at desc, id desc) as rn')
-            ->whereIn('pet_id', $pets->pluck('id'));
+            ->whereIn('pet_id', $pets->pluck('id'))
+            ->when($freeIds !== [], fn ($q) => $q->where(fn ($w) => $w->whereNotIn('pet_id', $freeIds)
+                ->orWhere('created_at', '>=', self::historyStart($pets->first()))));
 
         $rows = DB::query()->fromSub($ranked, 't')
             ->where('rn', '<=', $limit)

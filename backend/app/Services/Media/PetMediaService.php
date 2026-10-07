@@ -782,7 +782,9 @@ class PetMediaService
         foreach (PetStateEnum::cases() as $state) {
             // M5-R02: a behaviour video the pet is not entitled to any more (the
             // puppy's `accident` after puppy → young) is kept but not served.
-            if (in_array($state, [PetStateEnum::Accident, PetStateEnum::Chewing], true) && ! in_array($state->value, $states, true)) {
+            // M3-11 P6: judged by whether the event can happen, not by the tier, so a
+            // pet whose tier dropped (grandfathered → basic) keeps serving what it has.
+            if (in_array($state, [PetStateEnum::Accident, PetStateEnum::Chewing], true) && ! $this->entitlements->behaviourApplies($pet, $state)) {
                 continue;
             }
             $slot = $slots->first(fn (PetMedia $m) => $m->isVideo() && $m->state === $state->value);

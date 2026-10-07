@@ -1,27 +1,73 @@
 {
-  "breeds": {
-    "title": "Breed selection",
+  "plan": {
+    "badge": {
+      "free": "Free",
+      "trialDays_one": "Trial: {{count}} day left",
+      "trialDays_other": "Trial: {{count}} days left",
+      "trial": "Trial",
+      "trialLastDay": "Trial: last day",
+      "trialNotStarted": "Challenge: trial starts at signing",
+      "paymentRequired": "Waiting for purchase",
+      "paid": "Paid"
+    },
+    "badgeA11y": "Plan: {{label}}"
+  },
+  "banner": {
+    "paymentRequiredTitle": "The game is paused",
+    "paymentRequired": "The free trial has ended ({{names}}). The dog is safe: its needs don't drop and progress is kept until you buy the challenge.",
+    "trialLastDayTitle": "The trial is ending",
+    "trialLastDay": "The free trial ({{names}}) ends in less than 24 hours. After that the game pauses until you buy the challenge. Nothing is charged automatically.",
+    "open": "Unlock the challenge",
+    "openTrial": "See the challenge"
+  },
+  "challenge": {
+    "title": "12-week challenge",
     "back": "Back",
-    "intro": "Choose the breed that fits your child's activity level.",
-    "mutt": "Mixed breed",
-    "collie": "Border Collie",
-    "free": "FREE",
-    "premium": "RECOMMENDED · PREMIUM",
-    "stepsPerDay": "{{steps}} steps/day",
-    "decay": "Needs drop: −{{rate}}%/h",
-    "currentBreed": "Current breed",
-    "starterBreed": "Starter breed",
-    "unlocked": "Unlocked",
-    "unlock": "Unlock now",
+    "intro": "Over 12 weeks the challenge shows whether your child is ready for a real dog. One purchase covers one dog.",
+    "includesTitle": "What's included",
+    "includes": {
+      "program": "The 12-week programme with weekly progress",
+      "breed": "The Border Collie breed",
+      "certificate": "A certificate when the challenge is completed",
+      "history": "The full history (free plan: last 7 days)",
+      "media": "A personalised AI dog with a video for every state"
+    },
+    "honest": "One-time purchase of {{price}} for one dog. No subscription and no automatic charge: after the 7-day trial the game pauses until you buy the challenge.",
+    "priceEstimate": "The store shows the final price before you pay.",
+    "petsTitle": "Dogs on trial",
+    "petLine": "{{breed}} · {{names}}",
+    "trialEnds": "The trial ends {{when}}.",
+    "trialEndsUnknown": "The trial is running.",
+    "paused": "The game is paused. The dog is safe and progress is kept.",
+    "buy": "Buy for {{price}}",
+    "buyNoPrice": "Buy the challenge",
+    "priceLoading": "Loading the price from the store …",
+    "useCredit": "Use a purchased challenge",
+    "credits_one": "You have {{count}} purchased challenge that hasn't been used yet.",
+    "credits_other": "You have {{count}} purchased challenges that haven't been used yet.",
     "restore": "Restore purchases",
-    "alerts": {
-      "successTitle": "Unlocked",
-      "successMessage": "The Border Collie breed is unlocked!",
-      "purchaseFailedTitle": "Purchase failed",
-      "restoreTitle": "Restore purchases",
-      "restoreNone": "No previous purchases found.",
-      "restoreFailedTitle": "Restore failed",
-      "unexpected": "Something went wrong. Please try again."
-    }
+    "terms": "Terms of use",
+    "privacy": "Privacy",
+    "storeNote": "Payment is handled by the store (App Store or Google Play) with your store account.",
+    "allPaid": "No dog is waiting for a purchase. All challenges are unlocked.",
+    "loading": "Loading your purchases …",
+    "loadError": "Your purchases couldn't be loaded.",
+    "offline": "No connection. Check your internet and try again.",
+    "retry": "Try again",
+    "offeringMissing": "The challenge can't be loaded from the store right now. Please try again later.",
+    "retryStore": "Reload the price",
+    "busy": "Please wait …",
+    "noTrial": "No free trial for this dog (the child already had one) — the challenge starts with a purchase."
+  },
+  "result": {
+    "unlocked": "Thank you! The challenge is unlocked and the game continues.",
+    "restoredUnlocked": "Your purchases have been restored and the challenge is unlocked.",
+    "restoredNoCredit": "Your purchases have been restored, but there is no unused challenge. Each challenge covers one dog.",
+    "noCredit": "There is no purchased challenge to use.",
+    "refused": "This dog doesn't need a challenge (free plan or already paid).",
+    "activateFailed": "The challenge couldn't be unlocked. Check your connection and try again."
+  },
+  "history": {
+    "limited": "Free plan: the history shows the last 7 days. The 12-week challenge keeps the full history."
   }
 }

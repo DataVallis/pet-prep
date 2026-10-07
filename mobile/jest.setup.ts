@@ -23,6 +23,9 @@ jest.mock('expo-video');
 // expo-notifications (M3-02): manual mock in __mocks__/expo-notifications.ts.
 jest.mock('expo-notifications');
 
+// react-native-purchases (M3-07): manual mock in __mocks__/react-native-purchases.ts.
+jest.mock('react-native-purchases');
+
 // Mock expo-sensors (Pedometer)
 jest.mock('expo-sensors', () => ({
   Pedometer: {

@@ -47,7 +47,7 @@ class AccountController extends Controller
 
         try {
             $this->deletion->confirmPassword($parent, $request->password(), AccountDeletionService::SCOPE_ACCOUNT);
-            $result = $this->deletion->deleteParentAccount($parent);
+            $result = $this->deletion->deleteParentAccount($parent, $request->acknowledgesPaidChallenge());
         } catch (AccountDeletionException $e) {
             return $this->refusal($e);
         }

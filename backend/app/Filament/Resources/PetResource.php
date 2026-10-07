@@ -3,10 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Enums\BreedType;
+use App\Enums\PetPlan;
 use App\Enums\PetStateEnum;
 use App\Filament\Resources\PetResource\Pages;
 use App\Filament\Resources\PetResource\RelationManagers;
 use App\Models\Pet;
+use App\Services\ChallengeCreditService;
 use App\Services\Media\ReferenceImageRetryService;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -262,6 +264,26 @@ class PetResource extends Resource
                         Notification::make()
                             ->title($queued ? 'Reference image queued' : 'Cannot retry this pet')
                             ->status($queued ? 'success' : 'warning')
+                            ->send();
+                    }),
+                // QA PR #67 B1c: unlock an unpaid challenge without a store purchase
+                // (support / testers). Superadmin only; the pet's media tier stays basic (P6).
+                Tables\Actions\Action::make('grantChallenge')
+                    ->label('Unlock challenge (admin)')
+                    ->icon('heroicon-o-lock-open')
+                    ->color('warning')
+                    ->requiresConfirmation()
+                    ->modalDescription('Marks this dog\'s 12-week challenge as paid by an admin (no store purchase, no credit used). A payment lock is lifted.')
+                    ->visible(fn (Pet $record): bool => auth()->user()?->is_superadmin === true
+                        && $record->plan === PetPlan::Challenge
+                        && $record->challenge_paid_at === null
+                        && $record->is_active && ! $record->is_game_over)
+                    ->action(function (Pet $record): void {
+                        $granted = app(ChallengeCreditService::class)->grantByAdmin($record);
+
+                        Notification::make()
+                            ->title($granted ? 'Challenge unlocked' : 'Nothing to unlock for this dog')
+                            ->status($granted ? 'success' : 'warning')
                             ->send();
                     }),
             ])

@@ -1,8 +1,21 @@
 {
   "profile": {
-    "stages": { "puppy": "Puppy", "young": "Young dog", "adult": "Adult", "senior": "Senior" },
-    "stagesLower": { "puppy": "a puppy", "young": "a young dog", "adult": "an adult dog", "senior": "a senior dog" },
-    "origins": { "bought": "Bought from a breeder", "adopted": "Adopted from a shelter" },
+    "stages": {
+      "puppy": "Puppy",
+      "young": "Young dog",
+      "adult": "Adult",
+      "senior": "Senior"
+    },
+    "stagesLower": {
+      "puppy": "a puppy",
+      "young": "a young dog",
+      "adult": "an adult dog",
+      "senior": "a senior dog"
+    },
+    "origins": {
+      "bought": "Bought from a breeder",
+      "adopted": "Adopted from a shelter"
+    },
     "nextStage": "Becomes {{stage}} on {{date}}",
     "nextStageChild": "Grows into {{stage}} on {{date}}",
     "mealsToday_one": "{{count}} meal today",
@@ -18,29 +31,63 @@
   "date": {
     "format": "{{day}} {{month}} {{year}}",
     "months": {
-      "1": "Jan", "2": "Feb", "3": "Mar", "4": "Apr", "5": "May", "6": "Jun",
-      "7": "Jul", "8": "Aug", "9": "Sep", "10": "Oct", "11": "Nov", "12": "Dec"
+      "1": "Jan",
+      "2": "Feb",
+      "3": "Mar",
+      "4": "Apr",
+      "5": "May",
+      "6": "Jun",
+      "7": "Jul",
+      "8": "Aug",
+      "9": "Sep",
+      "10": "Oct",
+      "11": "Nov",
+      "12": "Dec"
     }
   },
   "picker": {
     "title": "Choose a dog for {{name}}",
     "intro": "Your choice shapes what caring for the dog will be like — just like with a real dog.",
+    "planTitle": "Plan",
+    "plans": {
+      "free": {
+        "title": "Free mixed breed",
+        "hint": "Free forever. All the care and game rules, without the 12-week programme or a certificate; history of the last 7 days. The dog is always a mixed breed."
+      },
+      "challenge": {
+        "title": "12-week challenge — 7 days free, then {{price}}",
+        "hint": "The programme that shows whether your child is ready for a dog, with the Border Collie, a certificate and the full history. The trial starts when your child signs the contract. No automatic charge: after 7 days the game pauses until you buy the challenge for this dog. If your child already had a free trial, the challenge starts with a purchase."
+      }
+    },
+    "planMissing": "Choose a plan.",
+    "breedFreeNote": "On the free plan the dog is always a mixed breed. The Border Collie is part of the 12-week challenge.",
     "breedTitle": "Breed",
-    "breeds": { "mutt": "Mixed breed", "border_collie": "Border Collie" },
+    "breeds": {
+      "mutt": "Mixed breed",
+      "border_collie": "Border Collie"
+    },
     "breedHints": {
       "mutt": "Free with every combination.",
-      "border_collie": "Part of the paid challenge."
+      "border_collie": "Part of the 12-week challenge (also during the free trial)."
     },
-    "breedLockedNote": "Paid breeds can only be unlocked with a purchase. To start, choose a mixed breed — it's free with every origin and age.",
+    "breedLockedNote": "This breed can't be chosen right now. Choose a mixed breed or try again later.",
     "lockedA11y": "{{breed}}, locked — part of the paid challenge",
     "originTitle": "Where it comes from",
-    "origins": { "bought": "Bought (breeder)", "adopted": "Adopted (shelter)" },
+    "origins": {
+      "bought": "Bought (breeder)",
+      "adopted": "Adopted (shelter)"
+    },
     "originHints": {
       "bought": "From a breeder. How origin affects behaviour is coming soon.",
       "adopted": "From a shelter. How origin affects behaviour (e.g. shyness in the first weeks) is coming soon."
     },
     "ageTitle": "Age on arrival",
-    "ages": { "puppy": "Puppy", "young": "Young dog", "adult": "Adult", "senior": "Senior" },
+    "ages": {
+      "puppy": "Puppy",
+      "young": "Young dog",
+      "adult": "Adult",
+      "senior": "Senior"
+    },
     "ageHints": {
       "mutt": {
         "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000. Accidents in the house are coming soon.",
@@ -58,12 +105,16 @@
     "quietHoursNote": "A meal that falls entirely within quiet hours (school, sleep) is given by a parent.",
     "missing": "Choose an origin and an age.",
     "confirm": "Create code",
-    "back": "Back"
+    "back": "Back",
+    "noTrial": "{{name}} has already had a free trial. The challenge for this dog starts with a purchase: after the contract is signed, unlock it in the app."
   },
   "media": {
     "pending": "Your pup is getting ready…",
     "pendingParent": "The dog is getting ready…",
-    "breeds": { "mutt": "Mixed breed", "border_collie": "Border Collie" },
+    "breeds": {
+      "mutt": "Mixed breed",
+      "border_collie": "Border Collie"
+    },
     "a11y": "Your pup ({{breed}})"
   },
   "album": {

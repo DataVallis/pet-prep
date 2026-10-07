@@ -49,4 +49,13 @@ return [
         'child' => 'Kuža je odšel v zavetišče, ker zanj predolgo ni nihče poskrbel. Pogovori se s starši.',
         'parent' => 'Kuža je odšel v zavetišče, ker 24 ur ni dobil nujne skrbi. V aplikaciji izberite, kako naprej.',
     ],
+
+    // M3-11 (PAYMENTS_SPEC): 6. dan preizkusa (samo starši) in zaklep do plačila.
+    'trial_ending' => 'Preizkus se izteče jutri. Odklenite 12-tedenski izziv v aplikaciji, da se igra nadaljuje.',
+
+    'payment_required' => [
+        'child' => 'Igra počaka na starša. Tvoj kuža je na varnem in počiva.',
+        'parent' => 'Brezplačni preizkus je končan. Kuža varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
+        'parent_no_trial' => 'Kuža varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
+    ],
 ];

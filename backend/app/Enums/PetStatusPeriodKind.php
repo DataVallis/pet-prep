@@ -16,4 +16,7 @@ enum PetStatusPeriodKind: string
 
     /** Session inactive — game over or switched off by an admin. */
     case Inactive = 'inactive';
+
+    /** Trial over, challenge not paid yet (M3-11, lock reason `payment_required`). */
+    case PaymentLock = 'payment_lock';
 }

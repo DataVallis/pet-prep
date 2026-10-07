@@ -37,6 +37,15 @@ class UserPolicy
     }
 
     /**
+     * The family billing (M3-11: challenge credits + pet payment status): parents only; the
+     * controller reads the caller's own family, never another one.
+     */
+    public function viewBilling(User $user): bool
+    {
+        return $user->isParent();
+    }
+
+    /**
      * Delete one's own parent account (M2-08). A superadmin is refused in
      * AccountDeletionService with the explicit reason `superadmin_protected`.
      */

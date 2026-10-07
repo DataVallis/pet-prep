@@ -49,4 +49,13 @@ return [
         'child' => 'Your dog has gone to a shelter because nobody looked after it for too long. Talk to your parents.',
         'parent' => 'The dog has gone to a shelter because it went 24 hours without essential care. Choose how to continue in the app.',
     ],
+
+    // M3-11 (PAYMENTS_SPEC): trial day 6 (parents only) and the payment lock.
+    'trial_ending' => 'The free trial ends tomorrow. Unlock the 12-week challenge in the app so the game can go on.',
+
+    'payment_required' => [
+        'child' => 'The game is waiting for your parent. Your dog is safe and resting.',
+        'parent' => 'The free trial has ended. The dog is waiting safely until you unlock the 12-week challenge in the app.',
+        'parent_no_trial' => 'The dog is waiting safely until you unlock the 12-week challenge in the app.',
+    ],
 ];

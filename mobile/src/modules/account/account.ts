@@ -63,6 +63,24 @@ export interface ChildDeletionImpact {
   keptPets: number;
 }
 
+/**
+ * M3-11 P5: would this deletion remove a dog whose challenge was purchased and isn't over?
+ * (`billing.pets[].deletion_loses_purchase`; `petIds` = the dogs the deletion removes.)
+ */
+export function deletionLosesPurchase(petIds: readonly number[], billing: { pets: readonly { pet_id: number; deletion_loses_purchase?: boolean }[] } | undefined): boolean {
+  return (billing?.pets ?? []).some((p) => p.deletion_loses_purchase === true && petIds.includes(p.pet_id));
+}
+
+/** Pets only this child cares for — the ones a child deletion removes. */
+export function petsDeletedWithChild(child: Pick<FamilyChild, 'id'>, family: FamilyOverview): number[] {
+  return family.pets
+    .filter((pet) => {
+      const ids = pet.caretakers.map((c) => c.child_id);
+      return ids.length === 1 && ids[0] === child.id;
+    })
+    .map((pet) => pet.id);
+}
+
 /** Which of the family's pets go with the child (sole caretaker) and which stay (shared). */
 export function childDeletionImpact(child: Pick<FamilyChild, 'id'>, family: FamilyOverview): ChildDeletionImpact {
   let deletedPets = 0;
@@ -83,7 +101,9 @@ export type DeletionErrorKind =
   | 'throttled'
   | 'invalid'
   | 'unknown'
-  | 'server';
+  | 'server'
+  /** M3-11 P5: the deletion removes a dog with a purchased challenge — confirm first. */
+  | 'paid_challenge';
 
 function reasonOf(error: ApiError): AccountDeletionReason | null {
   const data = error.data;
@@ -104,6 +124,7 @@ export function classifyDeletionError(error: unknown): DeletionErrorKind {
   const reason = reasonOf(error);
   if (reason === 'invalid_password') return 'invalid_password';
   if (reason === 'superadmin_protected') return 'protected';
+  if ((reason as string | null) === 'paid_challenge_ack_required') return 'paid_challenge';
   if (error.status === 404) return 'not_found';
   if (error.status === 429) return 'throttled';
   if (error.status === 422) return 'invalid';
@@ -180,11 +201,12 @@ export async function shareFamilyExport(
  */
 export async function deleteAccountAndLogout(
   password: string,
-  deleteAccount: (password: string) => Promise<DeleteAccountResponse> = (password) =>
-    api.deleteAccount(password, deleteConfirmWord()),
+  deleteAccount: (password: string, acknowledgePaidChallenge?: boolean) => Promise<DeleteAccountResponse> = (password, ack) =>
+    api.deleteAccount(password, deleteConfirmWord(), ack === true),
   signOut: (options: { revoke: boolean }) => Promise<void> = logout,
+  acknowledgePaidChallenge = false,
 ): Promise<DeleteAccountResponse> {
-  const result = await deleteAccount(password);
+  const result = await deleteAccount(password, acknowledgePaidChallenge);
   await signOut({ revoke: false });
   return result;
 }

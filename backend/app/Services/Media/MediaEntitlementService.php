@@ -2,17 +2,18 @@
 
 namespace App\Services\Media;
 
+use App\Enums\ChallengePaidSource;
 use App\Enums\LifeStage;
+use App\Enums\PetPlan;
 use App\Enums\PetStateEnum;
 use App\Models\Pet;
 
 /**
  * Which AI state videos a pet gets at birth (M4-03).
  *
- * Today (Claude's proposal 2026-10-05, waiting for David): a breed with
- * `breed_configs.premium_unlock` (Border Collie — the paid challenge) gets the
- * `full` set; every other pet (the free mutt) the `basic` set (idle +
- * sleeping). Sets live in config('media.video_states').
+ * A `challenge` pet gets the `full` set, a `free` pet the `basic` set
+ * (idle + sleeping) — see M3-11 below. Sets live in
+ * config('media.video_states').
  *
  * Behaviour videos (M5-R02, David 2026-10-06): the `full` set also has
  * `accident` and `chewing`. They are generated like every state video —
@@ -28,6 +29,16 @@ use App\Models\Pet;
  * This is the single place the decision is made, so payments (M3 —
  * RevenueCat entitlement) and AI media tokens (M4-09) can plug in here
  * without touching the pipeline. The reference image is always included.
+ *
+ * M3-11 P6 (David 2026-10-07, AI cost): the `full` set only for a pet
+ * whose challenge was PAID BY A PURCHASE (`challenge_paid_source =
+ * purchase`). Trial, payment_required, free-plan and grandfathered pets get
+ * the `basic` set. Media a pet already has stays served (mediaFor serves
+ * every stored classic state; behaviour videos while their event can
+ * happen); this rule never deletes or regenerates anything by itself. A
+ * purchase queues the missing full-set videos (ChallengeService::markPaid).
+ * More media for other pets: AI-media tokens (M4-09, planned — also for the
+ * free mutt).
  */
 class MediaEntitlementService
 {
@@ -37,7 +48,9 @@ class MediaEntitlementService
 
     public function tierFor(Pet $pet): string
     {
-        return $pet->breedConfig()?->premium_unlock ? self::TIER_FULL : self::TIER_BASIC;
+        return $pet->plan === PetPlan::Challenge && $pet->challenge_paid_source === ChallengePaidSource::Purchase
+            ? self::TIER_FULL
+            : self::TIER_BASIC;
     }
 
     /**
@@ -75,7 +88,7 @@ class MediaEntitlementService
      * A behaviour video only where its event can happen (M5-R02); every
      * other state always applies.
      */
-    private function behaviourApplies(Pet $pet, PetStateEnum $state): bool
+    public function behaviourApplies(Pet $pet, PetStateEnum $state): bool
     {
         return match ($state) {
             PetStateEnum::Accident => $pet->behaviourEventsEnabled() && $pet->life_stage === LifeStage::Puppy,

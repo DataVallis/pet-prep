@@ -6,7 +6,8 @@
  * days, pet mini status). Live: one private Reverb channel per pet patches / refetches
  * the cache; without a subscribed socket the query polls every 30 s. Tapping a child
  * opens the report (`ChildDetailScreen`). "Nadzor": children + devices, hard stop per
- * pet, quiet hours, parents + invite / join. "Pasme": simulated paywall (M3).
+ * pet, quiet hours, parents + invite / join. M3-09: a banner (trial ending / game paused)
+ * opens the challenge paywall (`ChallengeScreen`); the simulated "Pasme" tab is gone.
  */
 
 import { useEffect, useState } from 'react';
@@ -14,7 +15,7 @@ import { Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native'
 import { Text } from '@/components/ui/Text';
 import { BrandMark } from '@/components/brand/BrandLogo';
 import { fonts, radius, tightTracking } from '@/theme';
-import { LayoutDashboard, LogOut, PawPrint, Settings } from 'lucide-react-native';
+import { LayoutDashboard, LogOut, Settings } from 'lucide-react-native';
 
 import { ApiError } from '@/api/client';
 import { isNoChildPaired, useParentDashboard } from '@/hooks/queries/useParentDashboard';
@@ -28,7 +29,8 @@ import JoinFamilyCard, { joinNoticeText, type JoinNotice } from '@/components/pa
 import ParentLiveChannels from '@/components/ParentLiveChannels';
 import { ErrorBanner, LoadingBlock, NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import ControlsScreen from '@/screens/parent/ControlsScreen';
-import BreedPaywallScreen from '@/screens/parent/BreedPaywallScreen';
+import ChallengeScreen from '@/screens/parent/ChallengeScreen';
+import ChallengeBanner from '@/components/parent/ChallengeBanner';
 import AddChildScreen from '@/screens/parent/AddChildScreen';
 import ChildDetailScreen from '@/screens/parent/ChildDetailScreen';
 import { t } from '@/i18n';
@@ -44,21 +46,19 @@ export const DASHBOARD_STRINGS = strings('parent', 'dashboard', {
     }),
 });
 
-type Tab = 'dashboard' | 'controls' | 'breeds';
+type Tab = 'dashboard' | 'controls';
 
-/**
- * The "Pasme" tab is a simulated purchase (local unlock, no server effect) until
- * payments exist (RevenueCat, M3-07 – M3-11). Hidden for testers (David, 2026-10-07).
- */
-export const SHOW_BREED_PAYWALL_TAB = false;
 /** `child` set = PIN for an existing child (pet choice or re-login); unset = new child. */
-type Overlay = { kind: 'none' } | { kind: 'addChild'; child?: FamilyChild } | { kind: 'child'; childId: number };
+type Overlay =
+  | { kind: 'none' }
+  | { kind: 'addChild'; child?: FamilyChild }
+  | { kind: 'child'; childId: number }
+  | { kind: 'challenge' };
 
 function BottomNavBar({ activeTab, onSelect }: { activeTab: Tab; onSelect: (tab: Tab) => void }) {
   const tabs: { id: Tab; label: string; Icon: typeof LayoutDashboard }[] = [
     { id: 'dashboard', label: DASHBOARD_STRINGS.tabs.dashboard, Icon: LayoutDashboard },
     { id: 'controls', label: DASHBOARD_STRINGS.tabs.controls, Icon: Settings },
-    ...(SHOW_BREED_PAYWALL_TAB ? [{ id: 'breeds' as const, label: DASHBOARD_STRINGS.tabs.breeds, Icon: PawPrint }] : []),
   ];
   return (
     <View style={styles.navBar}>
@@ -164,12 +164,15 @@ export default function ParentDashboardScreen() {
       );
     }
 
-    if (SHOW_BREED_PAYWALL_TAB && activeTab === 'breeds') {
+    if (overlay.kind === 'challenge') {
       return (
-        <>
-          <BreedPaywallScreen onBack={() => setActiveTab('dashboard')} />
-          <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} />
-        </>
+        <ChallengeScreen
+          family={family}
+          onBack={() => {
+            closeOverlay();
+            void dashboard.refetch();
+          }}
+        />
       );
     }
 
@@ -200,6 +203,7 @@ export default function ParentDashboardScreen() {
         </View>
 
         <ScrollView style={styles.flex} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+          <ChallengeBanner family={family} onOpen={() => setOverlay({ kind: 'challenge' })} />
           {notice && <NoticeBanner text={joinNoticeText(notice)} closeLabel={DASHBOARD_STRINGS.closeNotice} onClose={() => setNotice(null)} />}
           {dashboard.isError && (
             <ErrorBanner
@@ -233,6 +237,7 @@ export default function ParentDashboardScreen() {
                 timezone={family?.timezone ?? 'Europe/Ljubljana'}
                 onOpen={openChild}
                 onChildPin={openChildPin}
+                onOpenChallenge={() => setOverlay({ kind: 'challenge' })}
               />
             ))
           )}

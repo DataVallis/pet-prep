@@ -40,7 +40,53 @@ class PetFactory extends Factory
             'is_game_over' => false,
             'is_hard_stopped' => false,
             'certificate_eligible' => false,
+            // M3-11: like the pets that existed before payments — a challenge,
+            // paid as `grandfathered`, so time travel in older tests never hits
+            // the trial lock. Use ->trial() / ->freePlan() for payment rules.
+            'plan' => 'challenge',
+            'challenge_paid_at' => now(),
+            'challenge_paid_source' => 'grandfathered',
         ];
+    }
+
+    /**
+     * M3-11: an unpaid challenge pet — the 7-day trial runs from birth
+     * (trial_ends_at is set at creation for a born pet, at the contract for
+     * an unborn one).
+     */
+    public function trial(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'plan' => 'challenge',
+            'challenge_paid_at' => null,
+            'challenge_paid_source' => null,
+        ]);
+    }
+
+    /**
+     * M3-11: a challenge paid by a store purchase (full AI media tier, P6).
+     */
+    public function purchased(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'plan' => 'challenge',
+            'challenge_paid_at' => now(),
+            'challenge_paid_source' => 'purchase',
+        ]);
+    }
+
+    /**
+     * M3-11: the free mutt sandbox (no trial, no payment).
+     */
+    public function freePlan(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'plan' => 'free',
+            'breed_type' => BreedType::Mutt->value,
+            'challenge_paid_at' => null,
+            'challenge_paid_source' => null,
+            'trial_ends_at' => null,
+        ]);
     }
 
     /**

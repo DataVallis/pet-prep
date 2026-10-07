@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-07 — Plačila: izziv za enega psa, 7 dni brezplačno (M3-07 – M3-11)
+
+**Kaj se je zgodilo:** Zgrajen je celoten plačilni del. Ob novem psu starš izbere **brezplačnega mešančka** (za vedno, brez 12-tedenskega programa) ali **12-tedenski izziv** — 7 dni brezplačno od »rojstva« psa, nato 49,99 € za tega psa. Brez naročnine in brez samodejnega plačila: po preizkusu se igra varno ustavi, dokler starš ne kupi. Nakup je samo v starševskem delu (otrok nikoli ne vidi cen), strežnik vodi vsak nakup enkrat in ga dodeli izbranemu psu; vračilo kupnine ga prekliče.
+
+**Zakaj je pomembno:** To je prvi prihodek. Pravila so poštena (jasna cena, en pes = en nakup, ni naročnine) in poceni za nas: dragi AI videi se ustvarijo šele po nakupu. Dokler izdelki v trgovinah niso objavljeni, je stikalo izklopljeno — nihče ni zaklenjen.
+
+**Številke:** 1 nakup = 1 pes (49,99 €), 7 dni preizkusa, en preizkus na otroka; ~1.300 testov v aplikaciji in ~1.260 na strežniku zelenih; neodvisni pregled je našel 1 blokado in 4 večje pripombe — vse popravljene pred združitvijo.
+
+**Kako povedati:**
+- 👩 Starši: "Preizkusite 7 dni brezplačno. Če se odločite, plačate enkrat 49,99 € za tega psa — brez naročnine, brez samodejnega plačila."
+- 🧒 Otroci: "Ko preizkus mine, kuža varno počaka, da ga starši odklenejo."
+- 💼 Investitorji: "Enkratni nakup na psa; stroški AI so vezani na plačane pse; brezplačni mešanček kot vstopna točka."
+- 📣 Omrežja: "7 dni zastonj. Nato odločitev: je vaš otrok pripravljen na psa?"
+- 🛠 Tehnično: "RevenueCat consumable → webhook (fail-closed, idempotenten) → krediti izziva na družino → dodelitev psu; zaklep `payment_required` uporablja zamrznitev hard stopa; stikalo `PAYMENTS_ENFORCED`."
+
+---
+
 ## 2026-10-07 — PetPrep govori angleško (M1-18)
 
 **Kaj se je zgodilo:** Aplikacija je zdaj dvojezična: **angleščina je privzeta**, slovenščina ostaja. Jezik se izbere sam po jeziku telefona, otrok ali starš pa ga lahko zamenja z enim dotikom (EN / SL na začetnem zaslonu, »Nadzor → Jezik«). Prevedeni so vsi zasloni — otroški simulator, šola, pogodba, starševski pregled, družina, račun — in tudi potisna obvestila, ki jih strežnik pošlje v jeziku, ki ga ima vsak telefon. Slovenska besedila so ostala do črke enaka.

@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Services\ChallengeService;
 use App\Services\EscalationService;
 use App\Services\PetDecayService;
 use App\Services\RoutineLedgerService;
@@ -22,8 +23,13 @@ class ProcessPetDecayCommand extends Command
     /**
      * Execute the console command.
      */
-    public function handle(PetDecayService $decayService, EscalationService $escalationService, RoutineLedgerService $ledger): int
+    public function handle(PetDecayService $decayService, EscalationService $escalationService, RoutineLedgerService $ledger, ChallengeService $challenges): int
     {
+        // M3-11: trial reminders and payment locks first, so a pet whose
+        // trial just ended is frozen before this tick's decay / escalation.
+        $trials = $challenges->processTrials();
+        $this->info("Trials: reminded {$trials['reminded']}, locked {$trials['locked']}.");
+
         $this->info('Processing pet metric decay...');
 
         $decayResult = $decayService->processAllActivePets();

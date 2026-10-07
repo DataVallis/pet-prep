@@ -18,10 +18,12 @@ import {
   classifyDeletionError,
   classifyExportError,
   deleteAccountAndLogout,
+  deletionLosesPurchase,
   shareFamilyExport,
   type DeletionErrorKind,
   type ExportErrorKind,
 } from '@/modules/account/account';
+import { useBilling } from '@/modules/purchases';
 import type { FamilyOverview } from '@/modules/family/family';
 import { palette } from '@/theme';
 import { t } from '@/i18n';
@@ -55,6 +57,9 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
   const [deleteError, setDeleteError] = useState<{ text: () => string } | null>(null);
 
   const impact = accountDeletionImpact(family);
+  // M3-11 P5: the last parent's deletion removes every dog — warn when a purchase is lost.
+  const billing = useBilling();
+  const [paidRequired, setPaidRequired] = useState(false);
   const consequences = impact.lastParent
     ? [...S.lastParent(impact.children, impact.pets), S.exportFirst]
     : [...S.otherParentStays, S.exportFirst];
@@ -72,14 +77,15 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
     }
   };
 
-  const runDelete = async (password: string) => {
+  const runDelete = async (password: string, acknowledgePaidChallenge: boolean) => {
     setDeleteError(null);
     setDeleting(true);
     try {
       // Success signs out: the navigator unmounts this screen (StartScreen).
-      await deleteAccountAndLogout(password);
+      await deleteAccountAndLogout(password, undefined, undefined, acknowledgePaidChallenge);
     } catch (err) {
       const kind = classifyDeletionError(err);
+      if (kind === 'paid_challenge') setPaidRequired(true);
       setDeleteError({ text: () => S.deleteErrors[kind] });
       setDeleting(false);
     }
@@ -122,7 +128,8 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
             setConfirming(false);
             setDeleteError(null);
           }}
-          onSubmit={(password) => void runDelete(password)}
+          paidChallenge={paidRequired || (impact.lastParent && deletionLosesPurchase((family?.pets ?? []).map((p) => p.id), billing.data))}
+          onSubmit={(password, ack) => void runDelete(password, ack)}
           testID="account-delete-form"
         />
       ) : (

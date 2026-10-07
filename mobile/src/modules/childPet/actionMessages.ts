@@ -110,6 +110,8 @@ export function lockMessage(reason: LockReason | null, until: string | null, tim
       return CHILD_ACTION_STRINGS.locked.game_over;
     case 'inactive':
       return CHILD_ACTION_STRINGS.locked.inactive;
+    case 'payment_required':
+      return CHILD_ACTION_STRINGS.locked.payment_required;
     default:
       return null;
   }

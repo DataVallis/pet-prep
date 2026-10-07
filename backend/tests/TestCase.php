@@ -23,6 +23,10 @@ abstract class TestCase extends BaseTestCase
         // ambient level so only transactions opened by the code under test count.
         config(['media.ambient_transaction_level' => DB::transactionLevel()]);
 
+        // Payments (M3-11): the suite tests the enforced rules; the kill switch
+        // (config/payments.php, off by default) has its own tests.
+        config(['payments.enforced' => true]);
+
         // The hygiene / chewing RNGs are salted with APP_KEY, which CI generates
         // fresh for every run — so random event times differed between runs and
         // a test that ignored them failed now and then. Pin one salt for the

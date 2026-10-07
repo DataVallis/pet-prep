@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BillingController;
 use App\Http\Controllers\ChildAuthController;
 use App\Http\Controllers\ChildContractController;
 use App\Http\Controllers\ChildPetController;
@@ -17,6 +18,7 @@ use App\Http\Controllers\PetGrowthController;
 use App\Http\Controllers\PetMediaController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
+use App\Http\Middleware\VerifyRevenueCatWebhook;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,8 +68,9 @@ Route::middleware('auth:sanctum')->group(function () {
 Route::post('webhooks/fal-ai', [FalAiWebhookController::class, 'handle'])
     ->middleware('throttle:api');
 
+// M3-08: fails closed (no REVENUECAT_WEBHOOK_SECRET → 503), auth before validation.
 Route::post('webhooks/revenuecat', [RevenueCatWebhookController::class, 'handle'])
-    ->middleware('throttle:api');
+    ->middleware(['throttle:api', VerifyRevenueCatWebhook::class]);
 
 /*
 |--------------------------------------------------------------------------
@@ -138,6 +141,11 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
 
         // Family settings (timezone, M1-03)
         Route::put('settings', [ParentSettingsController::class, 'update']);
+
+        // 12-week challenge billing (M3-11, PAYMENTS_SPEC): unused purchases + pet
+        // payment status; assign a purchase (challenge credit) to a pet.
+        Route::get('billing', [BillingController::class, 'index']);
+        Route::post('pets/{pet}/challenge/activate', [BillingController::class, 'activate']);
     });
 
 /*

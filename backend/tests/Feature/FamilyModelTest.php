@@ -161,6 +161,8 @@ describe('migration backfill', function () {
         $contracts = require database_path('migrations/2026_10_04_140100_make_pet_contracts_unique_per_caretaker.php');
         $family = require database_path('migrations/2026_10_04_140000_create_family_model.php');
         // M2-02 depends on families: roll it back first.
+        // M3-08 ledger references families too.
+        (require database_path('migrations/2026_10_19_120000_create_revenuecat_ledger.php'))->down();
         (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->down();
         $contracts->down();
         $family->down();
@@ -186,6 +188,7 @@ describe('migration backfill', function () {
         $family->up();
         $contracts->up();
         (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->up();
+        (require database_path('migrations/2026_10_19_120000_create_revenuecat_ledger.php'))->up();
 
         $familyOf = fn (int $id) => DB::table('family_user')->where('user_id', $id)->value('family_id');
         $f1 = $familyOf($parent);
@@ -221,6 +224,8 @@ describe('migration backfill', function () {
         $contracts = require database_path('migrations/2026_10_04_140100_make_pet_contracts_unique_per_caretaker.php');
         $family = require database_path('migrations/2026_10_04_140000_create_family_model.php');
         // M2-02 depends on families: roll it back first.
+        // M3-08 ledger references families too.
+        (require database_path('migrations/2026_10_19_120000_create_revenuecat_ledger.php'))->down();
         (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->down();
         $contracts->down();
         $family->down();
@@ -241,6 +246,8 @@ describe('migration backfill', function () {
         $family = require database_path('migrations/2026_10_04_140000_create_family_model.php');
 
         // M2-02 depends on families: roll it back first.
+        // M3-08 ledger references families too.
+        (require database_path('migrations/2026_10_19_120000_create_revenuecat_ledger.php'))->down();
         (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->down();
         $contracts->down();
         $family->down();
@@ -250,6 +257,7 @@ describe('migration backfill', function () {
         $family->up();
         $contracts->up();
         (require database_path('migrations/2026_10_04_150000_add_pin_only_child_profiles.php'))->up();
+        (require database_path('migrations/2026_10_19_120000_create_revenuecat_ledger.php'))->up();
         expect(DB::table('pets')->where('id', $pet->id)->value('family_id'))
             ->toBe(DB::table('family_user')->where('user_id', $parent->id)->value('family_id'));
     });

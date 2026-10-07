@@ -108,7 +108,7 @@ class ChildProfileController extends Controller
 
         try {
             $deletion->confirmPassword($parent, $request->password(), AccountDeletionService::SCOPE_CHILD);
-            $result = $deletion->deleteChildProfile($parent, $profile);
+            $result = $deletion->deleteChildProfile($parent, $profile, $request->acknowledgesPaidChallenge());
         } catch (AccountDeletionException $e) {
             return $e->toResponse();
         }

@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\FamilyRole;
+use App\Enums\PetPlan;
 use App\Enums\TokenAbility;
 use App\Exceptions\ChildLoginException;
 use App\Exceptions\FamilyException;
@@ -68,6 +69,7 @@ class ChildPinLoginService
         private readonly FamilyService $families,
         private readonly PairingService $pairing,
         private readonly ChildProfileService $profiles,
+        private readonly ChallengeService $challenges,
     ) {}
 
     public static function hashPin(string $pin): string
@@ -80,20 +82,21 @@ class ChildPinLoginService
      * `$profile` (M5-R01) is the new pet's breed / origin / age stage, kept
      * on the PIN until it creates the pet (ignored for join / re-login);
      * null = no profile chosen (old app builds) → the PIN creates a
-     * legacy-profile pet on the pre-M5 rules.
+     * legacy-profile pet on the pre-M5 rules. `$plan` (M3-11) is the new
+     * pet's plan, kept on the PIN the same way (free → mutt only).
      *
-     * @return array{pin: string, expires_at: Carbon, child_id: int, pet_id: int|null, mode: string, pet_profile: array{breed: string, origin: string, age_stage: string, features: list<string>}|null}
+     * @return array{pin: string, expires_at: Carbon, child_id: int, pet_id: int|null, mode: string, pet_profile: array{breed: string, origin: string, age_stage: string, features: list<string>}|null, plan: string|null, trial_available: bool|null}
      *
      * @throws FamilyException child_not_found (404), pet_not_joinable (422),
      *                         already_paired (422), breed_locked (422)
      */
-    public function generatePin(User $parent, int $childId, ?int $joinPetId, ?PetProfileChoice $profile = null): array
+    public function generatePin(User $parent, int $childId, ?int $joinPetId, ?PetProfileChoice $profile = null, PetPlan $plan = PetPlan::Challenge): array
     {
         if (! $parent->isParent()) {
             throw new FamilyException('not_a_parent', 'Only a parent can generate a PIN.', 403);
         }
 
-        return DB::transaction(function () use ($parent, $childId, $joinPetId, $profile): array {
+        return DB::transaction(function () use ($parent, $childId, $joinPetId, $profile, $plan): array {
             // Lock order: parent user row → child user row → family row.
             User::whereKey($parent->id)->lockForUpdate()->first();
 
@@ -108,7 +111,7 @@ class ChildPinLoginService
 
             $mode = $this->resolveMode($family, $child, $joinPetId, forGeneration: true);
             if ($mode === self::MODE_NEW_PET && $profile !== null) {
-                $this->pairing->assertProfileAllowed($profile);
+                $this->pairing->assertProfileAllowed($profile, $plan);
             }
 
             // One open PIN per child: a new one replaces the previous.
@@ -117,7 +120,8 @@ class ChildPinLoginService
             $expiresAt = now()->addMinutes(self::PIN_EXPIRY_MINUTES)->startOfSecond();
             // No profile (old app builds) → no options → a legacy-profile pet (pre-M5 rules).
             $options = $mode === self::MODE_NEW_PET ? $profile?->toArray() : null;
-            $pin = $this->insertUniquePin($family, $child, $parent, $joinPetId, $expiresAt, $options);
+            $newPetPlan = $mode === self::MODE_NEW_PET ? $plan : null;
+            $pin = $this->insertUniquePin($family, $child, $parent, $joinPetId, $expiresAt, $options, $newPetPlan);
 
             return [
                 'pin' => $pin,
@@ -126,6 +130,10 @@ class ChildPinLoginService
                 'pet_id' => $joinPetId,
                 'mode' => $mode,
                 'pet_profile' => $options,
+                'plan' => $newPetPlan?->value,
+                // M3-11 P7: whether the new challenge pet gets the 7-day free trial
+                // (one per child, ever); null when no challenge pet is created.
+                'trial_available' => $newPetPlan === PetPlan::Challenge ? ! $this->challenges->childHadTrial($child) : null,
             ];
         });
     }
@@ -195,6 +203,8 @@ class ChildPinLoginService
                         // A PIN without options (issued before M5-R01) → legacy-profile pet.
                         // M5-R02: features = parent PIN ∩ this child device (both apps must show them).
                         $family, $child, $locked->pet_id, $locked->pet_options !== null ? PetProfileChoice::fromArray($locked->pet_options)->withOnlyFeatures($clientFeatures) : null,
+                        // M3-11: a PIN from an old app build has no plan → challenge.
+                        $locked->plan ?? PetPlan::Challenge,
                     );
                 }
 
@@ -273,7 +283,7 @@ class ChildPinLoginService
     /**
      * @param  array<string, string>|null  $petOptions
      */
-    private function insertUniquePin(Family $family, User $child, User $parent, ?int $joinPetId, Carbon $expiresAt, ?array $petOptions = null): string
+    private function insertUniquePin(Family $family, User $child, User $parent, ?int $joinPetId, Carbon $expiresAt, ?array $petOptions = null, ?PetPlan $plan = null): string
     {
         for ($attempt = 0; $attempt < 20; $attempt++) {
             $pin = str_pad((string) random_int(0, 999999), 6, '0', STR_PAD_LEFT);
@@ -294,6 +304,7 @@ class ChildPinLoginService
                     'pin_hash' => $hash,
                     'expires_at' => $expiresAt,
                     'pet_options' => $petOptions,
+                    'plan' => $plan?->value,
                 ]));
 
                 return $pin;

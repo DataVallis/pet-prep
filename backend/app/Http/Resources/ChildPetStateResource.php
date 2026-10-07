@@ -9,6 +9,7 @@ use App\Services\BehaviourPayload;
 use App\Services\CareScheduleService;
 use App\Services\Media\PetMediaPayload;
 use App\Services\Media\PetMediaService;
+use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
 use App\Services\TrainingPayload;
 use App\Services\TrainingService;
@@ -116,6 +117,8 @@ class ChildPetStateResource extends JsonResource
                 'illness_until' => $pet->isIll() ? $iso($pet->illness_until) : null,
                 'is_game_over' => (bool) $pet->is_game_over,
                 'certificate_eligible' => (bool) $pet->certificate_eligible,
+                // M3-11: free | challenge, trial / payment_required / paid (null for free).
+                'plan' => PetPlanPayload::for($pet, $tz, $now)->toArray(),
                 // Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs.
                 'current_video_url' => $media->currentVideoUrl,
                 'media_status' => $pet->media_status,
@@ -125,7 +128,7 @@ class ChildPetStateResource extends JsonResource
             ],
             'lock' => [
                 'is_locked' => $locked,
-                // game_over | inactive | hard_stopped | contract_required | ill | null
+                // game_over | inactive | hard_stopped | payment_required | contract_required | ill | null
                 'reason' => $lockReason?->value,
                 // End of the vet visit; null for locks without an end time.
                 'until' => $lockReason === PetLockReason::Ill ? $iso($pet->illness_until) : null,

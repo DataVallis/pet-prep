@@ -39,6 +39,7 @@ import {
   type DayRow,
 } from '@/modules/family/scoring';
 import PetThumbnail from '@/components/parent/PetThumbnail';
+import PlanBadge from '@/components/parent/PlanBadge';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 import { fonts, palette, tightTracking } from '@/theme';
@@ -65,6 +66,8 @@ interface ChildOverviewCardProps {
   timezone: string;
   onOpen: (child: FamilyChild) => void;
   onChildPin: (child: FamilyChild) => void;
+  /** M3-09: the plan badge of an unpaid challenge opens the paywall (pay any time, QA PR #67 m6). */
+  onOpenChallenge?: () => void;
 }
 
 function WeekBars({ days }: { days: DayRow[] }) {
@@ -84,7 +87,7 @@ function WeekBars({ days }: { days: DayRow[] }) {
   );
 }
 
-export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChildPin }: ChildOverviewCardProps) {
+export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChildPin, onOpenChallenge }: ChildOverviewCardProps) {
   const id = child.id;
   const status = pet ? petStatus(pet) : null;
   const waitsForContract = pet !== null && (pet.awaiting_contract || !child.contract_signed);
@@ -103,6 +106,13 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
         <View style={styles.flex}>
           <Text style={styles.name}>{child.name}</Text>
           {pet && <Text style={styles.muted}>{breedLabel(pet.breed_type)}</Text>}
+          {pet && !pet.is_game_over && (
+            <PlanBadge
+              plan={pet.plan}
+              onPress={pet.plan.type === 'challenge' && pet.plan.status !== 'paid' ? onOpenChallenge : undefined}
+              testID={`child-plan-${id}`}
+            />
+          )}
         </View>
         <TrafficLightBadge color={child.traffic_light.color} testID={`child-light-${id}-${child.traffic_light.color}`} />
       </View>

@@ -47,7 +47,7 @@ flowchart LR
   Q -- "download result (M4-05)" --> VOL
   APP -- "exists() check" --> VOL
   FAL -- "fetch start frame (signed URL)" --> CAD
-  RC -. "webhook (M3-08)" .-> APP
+  RC -- "webhook, Bearer secret (M3-08)" --> APP
   C -. "steps (M3-04/05)" .- HK
 ```
 
@@ -553,7 +553,11 @@ Family model (M2-01, ADR-012): `families` own pets and quiet hours; `family_user
 erDiagram
   FAMILIES ||--|{ FAMILY_USER : "members"
   USERS ||--o| FAMILY_USER : "one family"
-  FAMILIES ||--o{ PETS : "billing unit = pet"
+  FAMILIES ||--o{ PETS : "owns"
+  FAMILIES ||--o{ CHALLENGE_CREDITS : "purchased challenges (M3-11)"
+  PURCHASE_EVENTS ||--o| CHALLENGE_CREDITS : "one credit per purchase"
+  PETS |o--o| CHALLENGE_CREDITS : "paid by (one unrevoked)"
+  FAMILIES |o--o{ PURCHASE_EVENTS : "RevenueCat ledger (null after delete)"
   FAMILIES ||--o| QUIET_HOURS : "one per family"
   FAMILIES ||--o{ FAMILY_INVITES : "second parent"
   PETS ||--|{ PET_CARETAKERS : "1..n children"
@@ -577,6 +581,24 @@ erDiagram
   FAMILIES {
     bigint id
     string timezone "family tz, every wall-clock rule"
+  }
+  CHALLENGE_CREDITS {
+    bigint family_id
+    bigint purchase_event_id "unique"
+    string product_id "petprep_challenge_12w"
+    string transaction_id "refund match"
+    bigint pet_id "null = available"
+    timestamp assigned_at
+    string assigned_via "parent or webhook"
+    timestamp revoked_at "refund"
+  }
+  PURCHASE_EVENTS {
+    string event_id "RevenueCat event.id, unique"
+    string type
+    string app_user_id "our parent id"
+    string environment "SANDBOX or PRODUCTION"
+    jsonb payload "without subscriber_attributes"
+    string outcome
   }
   CHILD_LOGIN_PINS {
     bigint child_user_id
@@ -923,7 +945,7 @@ sequenceDiagram
   Q->>DB: slot ready, pets.media_status = ready
   Q-->>App: PetUpdated reference_image_ready (media.reference_image_url signed)
   Note over Pair,Q: videos only once the pet is born:<br/>first contract → signContract → queueStateVideos (after commit)<br/>(image stored first? then StorePetMedia queues them)
-  Q->>DB: queueStateVideos: slots per MediaEntitlementService<br/>(mutt: idle + sleeping · premium breed: all 6)
+  Q->>DB: queueStateVideos: slots per MediaEntitlementService<br/>(basic: idle + sleeping · challenge paid by a purchase, M3-11 P6: all 6)
   loop each entitled state
     Q->>DB: SubmitPetStateVideo: claim slot
     Q->>FAL: queue.fal.run kling-video/v3/pro/image-to-video<br/>start_image_url = our signed URL (6 h), 5 s, no audio, fal_webhook
@@ -1200,4 +1222,82 @@ sequenceDiagram
     Caddy->>API: signed:relative + PetPolicy::listen
     API-->>Caddy: X-Accel-Redirect (file)
     Caddy-->>App: image
+```
+
+## 13. Purchases: RevenueCat → webhook → challenge credit → pet (M3-08 ledger, M3-11 per-pet consumable, 2026-10-07)
+
+The app (M3-07, not built yet) logs in to RevenueCat with `appUserID = <parent user id>`. One purchase of the consumable `petprep_challenge_12w` = one challenge credit of the family, assigned to one pet (PAYMENTS_SPEC P1).
+
+```mermaid
+sequenceDiagram
+    participant P as Parent app
+    participant Store as App Store / Play
+    participant RC as RevenueCat
+    participant API as POST /api/webhooks/revenuecat
+    participant DB as PostgreSQL
+    participant Q as broadcasts queue → Reverb
+    participant A as Parent API
+    P->>Store: buy petprep_challenge_12w (49,99 €, consumable) for pet X
+    Store-->>RC: receipt
+    RC->>API: {event: {id, type, app_user_id, product_id, transaction_id, …}}<br/>Authorization: Bearer secret
+    API->>API: no secret → 503 · wrong → 401 (constant time, before validation)
+    API->>DB: purchase_events has event.id? → 200 duplicate, stop
+    rect rgb(235, 240, 250)
+    Note over API,DB: one transaction
+    API->>DB: INSERT purchase_events (unique event_id)
+    API->>DB: app_user_id / original / aliases → first PARENT → family (none → unknown_user)
+    API->>API: SANDBOX and not accepted → sandbox_ignored · other product → unknown_product
+    API->>DB: lock families row
+    API->>DB: INSERT challenge_credits (one per purchase event)
+    alt family has exactly ONE active unpaid challenge pet
+      API->>DB: lock pet → credit.pet_id, assigned_via=webhook → pet paid (purchase), payment lock lifted
+    end
+    API->>DB: purchase_events.outcome = granted
+    end
+    API-->>RC: 200 {received, duplicate, outcome}
+    API-)Q: PetUpdated('challenge_paid') when a pet was paid (after commit)
+    P->>A: POST /api/parent/pets/X/challenge/activate
+    alt pet already paid by a purchase (webhook was first)
+      A-->>P: 200 {status: already_active, plan, credits_available}
+    else oldest available credit of the family
+      A->>DB: lock family → pet → credit; assign; pet paid; unlock
+      A-->>P: 200 {status: activated, plan, credits_available}
+      A-)Q: PetUpdated('challenge_paid')
+    else no credit yet (webhook not arrived)
+      A-->>P: 409 no_credit → retry shortly / poll GET /api/parent/billing
+    end
+```
+
+Challenge status of a pet (M3-11, derived only by `Pet::challengeStatus()`; a `free` pet has none):
+
+```mermaid
+stateDiagram-v2
+    [*] --> Unborn: PIN with plan challenge (default)
+    Unborn --> Trial: contract signed = birth, trial_ends_at = birth + 7 family-local days
+    Unborn --> PaymentRequired: birth, child already had its one free trial (P7) → trial_ends_at = born_at
+    Unborn --> Paid: credit assigned before birth
+    Trial --> Paid: credit assigned (webhook auto-assign or activate) — clock keeps running from birth
+    Trial --> PaymentRequired: now ≥ trial_ends_at (child actions 423 at once)
+    PaymentRequired --> Locked: tick (pets:process-decay, before decay): payment_locked_at, frozen_at, status period payment_lock, PetUpdated + push parents + child
+    Locked --> Paid: credit assigned → lock lifted, applyThaw shifts *_zero_since by the pause
+    Paid --> Trial: refund inside the 7 days
+    Paid --> Locked: refund after the trial (unless 12 weeks done → stays Paid)
+    note right of Trial: day 6 (≥ 24 h before the end): one trial_ending push to parents
+    note right of Locked: like a hard stop: no decay, escalation, illness, game over, walk illness, behaviour, training decay
+    Trial --> GameOver: 24 h neglect (game over is never unlocked by a purchase, P7)
+    Paid --> GameOver: 24 h neglect
+    GameOver --> [*]
+```
+
+Credit lifecycle:
+
+```mermaid
+stateDiagram-v2
+    [*] --> Available: INITIAL_PURCHASE / NON_RENEWING_PURCHASE of the consumable
+    Available --> Assigned: activate (oldest first) · webhook auto-assign (exactly one unpaid pet)
+    Available --> Available: TRANSFER → moves to the receiver family
+    Assigned --> Assigned: TRANSFER (recorded, stays with its pet) · pet deleted (pet_id null, still used — P5: deletion of a paid, unfinished pet needs acknowledge_paid_challenge)
+    Available --> Revoked: refund (CANCELLATION without expiration / REFUND, matched by transaction_id)
+    Assigned --> Revoked: refund → pet back to Trial / Locked
+    Revoked --> [*]
 ```

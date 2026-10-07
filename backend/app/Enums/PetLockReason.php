@@ -18,6 +18,13 @@ enum PetLockReason: string
     case HardStopped = 'hard_stopped';
 
     /**
+     * The 7-day trial of a `challenge` pet is over and nobody has paid
+     * (M3-11, PAYMENTS_SPEC P3): the pet waits frozen like a hard stop until
+     * a parent buys the challenge. The child sees a kind waiting screen.
+     */
+    case PaymentRequired = 'payment_required';
+
+    /**
      * The pet is not born yet: the child must sign the responsibility
      * contract first (PRODUCT_SPEC §3, M1-07b). Only POST /api/child/contract
      * is allowed; signing births the pet.
