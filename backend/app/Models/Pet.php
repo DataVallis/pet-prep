@@ -11,10 +11,12 @@ use App\Enums\PetLockReason;
 use App\Enums\PetOrigin;
 use App\Enums\PetPlan;
 use App\Enums\PetStateEnum;
+use App\Enums\PetStatusPeriodKind;
 use App\Jobs\DeletePetMediaFiles;
 use App\Services\FamilyService;
 use App\Services\LifeStageService;
 use App\Services\PetStatusPeriodService;
+use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -104,12 +106,15 @@ class Pet extends Model
             }
 
             app(PetStatusPeriodService::class)->recordCreated($pet);
+            $pet->forgetProgramPauses();
         });
 
         // History of hard stops, illnesses and inactive periods for the
         // routine ledger (M2-06). Runs inside the writer's transaction.
         static::updated(function (Pet $pet): void {
             app(PetStatusPeriodService::class)->recordUpdated($pet);
+            // A payment lock / payment just opened or closed a period (M3-11b).
+            $pet->forgetProgramPauses();
         });
 
         // Freeze bookkeeping (M1-02). Hard stop and illness freeze both the
@@ -457,6 +462,16 @@ class Pet extends Model
     }
 
     /**
+     * Payment-lock periods only (M3-11b program clock). Eager-load it in
+     * list endpoints (`->with('paymentLockPeriods')`) so paymentLockSpans()
+     * needs no query per pet.
+     */
+    public function paymentLockPeriods(): HasMany
+    {
+        return $this->hasMany(PetStatusPeriod::class)->where('kind', PetStatusPeriodKind::PaymentLock->value);
+    }
+
+    /**
      * Materialised routines of closed days (M2-06).
      */
     public function dailyRoutines(): HasMany
@@ -498,7 +513,7 @@ class Pet extends Model
     }
 
     // ──────────────────────────────────────────────────────────────
-    //  Virtual Age (Time Asymmetry: 1 real week = 1 virtual month)
+    //  Virtual Age (Time Asymmetry: 1 program week = 1 virtual month)
     // ──────────────────────────────────────────────────────────────
 
     /**
@@ -547,10 +562,11 @@ class Pet extends Model
     }
 
     /**
-     * Months (= real weeks) since birth — the 12-week challenge clock
+     * Months (= program weeks) since birth — the 12-week challenge clock
      * (certificate, `virtual_age_months` in the API). Since M5-R01 this is
      * not the dog's age any more: see ageMonths().
-     * 1 real week = 1 virtual month.
+     * 1 program week (7 × 24 h of program time) = 1 virtual month; time in a
+     * payment lock does not count (M3-11b, see programSecondsAt()).
      */
     public function virtualAgeInMonths(): int
     {
@@ -558,7 +574,165 @@ class Pet extends Model
             return 0;
         }
 
-        return (int) floor($this->born_at->diffInWeeks(now()));
+        return intdiv($this->programSecondsAt(now()), 7 * 86400);
+    }
+
+    // ──────────────────────────────────────────────────────────────
+    //  Program clock (M3-11b, David 2026-10-07)
+    // ──────────────────────────────────────────────────────────────
+    //
+    // Time the pet spends locked waiting for payment (`payment_lock` status
+    // periods, lock reason `payment_required`) is not program time: the
+    // challenge week does not advance and the dog does not age while locked;
+    // after payment the clock resumes where it stopped. Hard stop, illness
+    // and inactive periods still count. The `payment_lock` rows of
+    // `pet_status_periods` (PetStatusPeriodService) are the source of truth,
+    // so the pause before any instant is exact — an older date is never
+    // shifted by a later lock. `born_at` itself is never changed.
+
+    /**
+     * Payment-lock spans of this pet as [start, end|null] UNIX timestamps,
+     * clamped to the birth, oldest first. Loaded once per model instance
+     * (or taken from an eager-loaded `paymentLockPeriods` relation); the Pet
+     * hooks forget them after every save (a lock / payment writes a period).
+     *
+     * @var list<array{0: int, 1: int|null}>|null
+     */
+    private ?array $paymentLockSpans = null;
+
+    /**
+     * @return list<array{0: int, 1: int|null}>
+     */
+    public function paymentLockSpans(): array
+    {
+        if ($this->paymentLockSpans !== null) {
+            return $this->paymentLockSpans;
+        }
+        // Free plan (never locked), unborn or unsaved: nothing to read.
+        if ($this->born_at === null || ! $this->exists || $this->plan === PetPlan::Free) {
+            return [];
+        }
+        // An unpaid, unlocked challenge still inside its trial was provably never
+        // locked: a lock only starts after the trial end (or at a refund after
+        // it) and is only lifted by a payment. Not cached — it changes with time.
+        if ($this->challenge_paid_at === null && $this->payment_locked_at === null
+            && $this->trial_ends_at !== null && $this->trial_ends_at->isFuture()) {
+            return [];
+        }
+
+        $periods = $this->relationLoaded('paymentLockPeriods')
+            ? $this->paymentLockPeriods
+            : $this->paymentLockPeriods()->get();
+
+        $born = $this->born_at->getTimestamp();
+        $spans = [];
+        foreach ($periods->sortBy(fn (PetStatusPeriod $p) => $p->started_at->getTimestamp()) as $p) {
+            $start = max($born, $p->started_at->getTimestamp());
+            $end = $p->ended_at?->getTimestamp();
+            if ($end !== null && $end <= $start) {
+                continue;
+            }
+            $spans[] = [$start, $end];
+        }
+
+        return $this->paymentLockSpans = $spans;
+    }
+
+    /** Drop the memoised payment-lock spans (after a write that may add / close one). */
+    public function forgetProgramPauses(): void
+    {
+        $this->paymentLockSpans = null;
+        $this->unsetRelation('paymentLockPeriods');
+    }
+
+    /**
+     * Seconds of payment lock in [$from, $to) — program time that did not run.
+     */
+    public function programSecondsPausedBetween(CarbonInterface $from, CarbonInterface $to): int
+    {
+        $a = $from->getTimestamp();
+        $b = $to->getTimestamp();
+        $paused = 0;
+        foreach ($this->paymentLockSpans() as [$start, $end]) {
+            $overlap = min($b, $end ?? PHP_INT_MAX) - max($a, $start);
+            $paused += max(0, $overlap);
+        }
+
+        return $paused;
+    }
+
+    /**
+     * Seconds of payment lock before $at (since birth).
+     */
+    public function programSecondsPausedBefore(CarbonInterface $at): int
+    {
+        if ($this->born_at === null) {
+            return 0;
+        }
+
+        return $this->programSecondsPausedBetween($this->born_at, $at);
+    }
+
+    /**
+     * The instant the program clock shows at $at: $at itself, or — when $at
+     * lies inside a payment lock (open, or closed later) — the start of that
+     * lock (the clock stands still while locked).
+     */
+    public function programInstantAt(CarbonInterface $at): CarbonImmutable
+    {
+        $t = $at->getTimestamp();
+        foreach ($this->paymentLockSpans() as [$start, $end]) {
+            if ($start <= $t && ($end === null || $t < $end)) {
+                return CarbonImmutable::createFromTimestampUTC($start);
+            }
+        }
+
+        return CarbonImmutable::instance($at)->utc();
+    }
+
+    /**
+     * The effective birth for the program clock at $at: `born_at` shifted
+     * forward by the payment-lock time before programInstantAt($at). Weeks /
+     * dog age are counted from it up to programInstantAt($at). Null when
+     * unborn. Equal to `born_at` for a pet that was never locked.
+     *
+     * DST: the shift is in absolute seconds, so when a DST change falls
+     * between birth and the end of a pause, the weekly birthday's
+     * family-local wall-clock hour moves by one hour from then on (the
+     * 12-week clock in virtualAgeInMonths() counts absolute seconds and is
+     * not affected).
+     */
+    public function programBirthAt(CarbonInterface $at): ?CarbonImmutable
+    {
+        if ($this->born_at === null) {
+            return null;
+        }
+
+        $born = CarbonImmutable::instance($this->born_at)->utc();
+        $paused = $this->programSecondsPausedBefore($this->programInstantAt($at));
+
+        return $paused > 0 ? $born->addSeconds($paused) : $born;
+    }
+
+    /**
+     * Program seconds elapsed since birth at $at (≥ 0): real time minus the
+     * payment-lock time; constant while the pet is locked.
+     */
+    public function programSecondsAt(CarbonInterface $at): int
+    {
+        $birth = $this->programBirthAt($at);
+        if ($birth === null) {
+            return 0;
+        }
+
+        return max(0, $this->programInstantAt($at)->getTimestamp() - $birth->getTimestamp());
+    }
+
+    public function refresh()
+    {
+        $this->forgetProgramPauses();
+
+        return parent::refresh();
     }
 
     /**
@@ -572,7 +746,8 @@ class Pet extends Model
     }
 
     /**
-     * Determine if the simulation has reached its end (12 real weeks = 12 virtual months).
+     * Determine if the simulation has reached its end (12 program weeks = 12
+     * virtual months; payment-lock time does not count — M3-11b).
      * A free-plan pet never completes (M3-11: no 12-week program, no certificate).
      */
     public function hasReachedSimulationEnd(): bool

@@ -22,6 +22,19 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 📣 Omrežja: "Pravi sprehod šteje — tudi s telefonom v žepu. 🐾"
 - 💼 Investitorji: "Integracija z Apple Health in Health Connect: zanesljivo merjenje gibanja, ki deluje v ozadju, z minimalnim dostopom do zdravstvenih podatkov."
 - 🛠 Tehnično: "Adapter nad `@kingstinct/react-native-healthkit` (Nitro) in `react-native-health-connect`; zdravje + CoreMotion / live števec, merge = max; `expo-background-task` na iOS; strežniški anti-cheat od zadnjega synca dovoli dohitevanje."
+## 2026-10-07 — Ura izziva stoji, dokler pes čaka na plačilo (M3-11b)
+
+**Kaj se je zgodilo:** David je odločil, da čas, ko pes po preizkusu čaka zaklenjen na nakup, **ne šteje v 12 tednov**. Strežnik zdaj iz zgodovine zaklepov izračuna »čas programa«: med zaklepom kuža ne stara, »Teden N od 12« in napredek otroka stojita, po plačilu pa se vse nadaljuje točno tam, kjer je obstalo. Več zaklepov (npr. po vračilu) se sešteje; pavza starša (hard stop) in bolezen se štejeta kot doslej. Isti dan je David sprejel tudi tveganje vračil: AI videi, ustvarjeni po nakupu, ostanejo tudi po vračilu (brez 48-urnega zamika).
+
+**Zakaj je pomembno:** Plačan izziv mora pomeniti polnih 12 tednov igre. Otrok ne sme izgubiti tednov ali mladičkove faze samo zato, ker starš z nakupom odlaša.
+
+**Številke:** pes, ki je čakal 10 dni, konča izziv 10 dni pozneje; 6 novih testov (vključno z dvema zaklepoma, ki se seštejeta, in s starostjo za pretekle dni, ki se ne spremeni).
+
+**Kako povedati:**
+- 👩 Starši: "Če z nakupom malo počakate, vaš otrok ne izgubi nič — 12 tednov se začne šteti naprej šele, ko izziv odklenete."
+- 🧒 Otroci: "Ko kuža čaka na starše, tudi on počaka — ne zraste brez tebe."
+- 💼 Investitorji: "Plačan izdelek = polna vrednost; brez skritega krajšanja programa."
+- 🛠 Tehnično: "Efektivno rojstvo = `born_at` + sekunde v obdobjih `payment_lock` pred trenutkom (med zaklepom ura stoji na začetku zaklepa); `born_at` se ne spremeni, pretekli dnevi se nikoli ne preračunajo."
 
 ---
 
