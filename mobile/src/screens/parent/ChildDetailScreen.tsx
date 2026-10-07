@@ -9,7 +9,8 @@
  * legacy pet. M5-R02: the puppy's bladder clock and open messes (luža, pregrizen copat)
  * with deadlines, missed cleans named by their mess, new timeline rows. M5-R03: "Šola" —
  * "Kuža zna: sedi ✓, pridi 60 % …", whether today's session is done, the training routine
- * in the totals (only for a pet with training). Light parent theme (ADR-007).
+ * in the totals (only for a pet with training). M5-F01: "12-week challenge — buy" on top
+ * while the dog's challenge can be bought. Light parent theme (ADR-007).
  */
 
 import { useCallback, useMemo, useState } from 'react';
@@ -34,6 +35,8 @@ import { nicknameOf, petOfChild, type FamilyChild, type FamilyOverview } from '@
 import { parentDashboardKey } from '@/modules/family/live';
 import { normalizePetMedia, toBreedType } from '@/modules/petMedia/petMedia';
 import PetMediaView from '@/components/PetMediaView';
+import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
+import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
 import { parentPetGrowthKey, useGrowthRefresh, useParentPetGrowth } from '@/hooks/queries/usePetGrowth';
 import PetAlbum from '@/components/PetAlbum';
 import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
@@ -81,6 +84,8 @@ interface ChildDetailScreenProps {
   child: FamilyChild;
   family: FamilyOverview;
   onBack: () => void;
+  /** M5-F01: opens the challenge paywall; the button shows only while `canBuyChallenge(pet)`. */
+  onOpenChallenge?: () => void;
 }
 
 /** 12500 → "12.500" (sl) / "12,500" (en) — `common:format.thousands` (M1-18). */
@@ -141,7 +146,7 @@ function Timeline({ petId, family }: { petId: number; family: FamilyOverview }) 
   );
 }
 
-export default function ChildDetailScreen({ child, family, onBack }: ChildDetailScreenProps) {
+export default function ChildDetailScreen({ child, family, onBack, onOpenChallenge }: ChildDetailScreenProps) {
   const [days, setDays] = useState<ReportDays>(7);
   const report = useChildReport(child.id, days);
   const data = report.data;
@@ -190,6 +195,9 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
         </View>
 
         <ScrollView style={styles.flex} contentContainerStyle={styles.content}>
+          {onOpenChallenge && canBuyChallenge(pet) && (
+            <ChallengeBuyButton onPress={onOpenChallenge} childName={child.name} testID="detail-buy-challenge" />
+          )}
           {pet !== null && media !== null && (
             <PetMediaView
               media={media}

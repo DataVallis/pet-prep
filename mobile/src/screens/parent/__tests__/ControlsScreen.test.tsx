@@ -414,3 +414,38 @@ describe('ControlsScreen — family (invite / join)', () => {
     expect(screen.queryByTestId('family-parents')).toBeNull();
   });
 });
+
+describe('ControlsScreen — "Nakupi / izziv" row (M5-F01)', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    (api.getQuietHours as jest.Mock).mockResolvedValue({ quiet_hours: null });
+  });
+
+  it('a family with a challenge dog gets the row; it opens the paywall', async () => {
+    const trial: FamilyOverview = {
+      ...FAMILY,
+      pets: FAMILY.pets.map((p) =>
+        p.id === 7 ? { ...p, breed_type: 'border_collie', plan: { type: 'challenge', status: 'trial', trial_ends_at: null, paid_at: null } } : p,
+      ),
+    };
+    const onOpenChallenge = jest.fn();
+    renderWithQuery(
+      <ControlsScreen onBack={jest.fn()} family={trial} onAddChild={jest.fn()} onChildPin={jest.fn()} onOpenChallenge={onOpenChallenge} />,
+    );
+    await flush();
+    expect(screen.getByText('Nakupi / izziv')).toBeTruthy();
+    expect(screen.getByTestId('controls-purchases-subtitle')).toHaveTextContent('1 pes čaka na nakup');
+    fireEvent.press(screen.getByTestId('controls-purchases'));
+    expect(onOpenChallenge).toHaveBeenCalledTimes(1);
+  });
+
+  it('a mutt-only family on the free plan has no row', async () => {
+    const free: FamilyOverview = {
+      ...FAMILY,
+      pets: FAMILY.pets.map((p) => ({ ...p, breed_type: 'mutt', plan: { type: 'free', status: null, trial_ends_at: null, paid_at: null } })),
+    };
+    renderWithQuery(<ControlsScreen onBack={jest.fn()} family={free} onAddChild={jest.fn()} onChildPin={jest.fn()} onOpenChallenge={jest.fn()} />);
+    await flush();
+    expect(screen.queryByTestId('controls-purchases')).toBeNull();
+  });
+});

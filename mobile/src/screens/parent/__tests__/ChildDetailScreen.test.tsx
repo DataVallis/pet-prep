@@ -120,6 +120,31 @@ describe('ChildDetailScreen', () => {
     expect(card).toHaveTextContent(/Danes 4 obroki — 1 v tihih urah nahrani starš/);
   });
 
+  it('M5-F01: "12-tedenski izziv — kupi" on top while the challenge can be bought; none when paid', async () => {
+    const trial = familyFromDashboard(
+      makeScoredDashboard([LUKA], [
+        makeFamilyPet({
+          id: 7,
+          breed_type: 'border_collie',
+          plan: { type: 'challenge', status: 'trial', trial_ends_at: '2026-10-12T10:00:00+02:00', paid_at: null, payments_enforced: true },
+          caretakers: [{ child_id: 2, contract_signed: true }],
+        }),
+      ]) as never,
+    ) as FamilyOverview;
+    const onOpenChallenge = jest.fn();
+    const { unmount } = renderWithQuery(<ChildDetailScreen child={LUKA} family={trial} onBack={jest.fn()} onOpenChallenge={onOpenChallenge} />);
+    await flush();
+    expect(screen.getByText('12-tedenski izziv — kupi')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('detail-buy-challenge'));
+    expect(onOpenChallenge).toHaveBeenCalledTimes(1);
+    unmount();
+
+    // FAMILY's dog is a grandfathered paid challenge.
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={FAMILY} onBack={jest.fn()} onOpenChallenge={jest.fn()} />);
+    await flush();
+    expect(screen.queryByTestId('detail-buy-challenge')).toBeNull();
+  });
+
   it('M5-R04: a legacy pet shows no dog card (and an old server without profile does not crash)', async () => {
     const legacy = familyFromDashboard(
       makeScoredDashboard([LUKA], [makeFamilyPet({ id: 7, profile: makeLegacyPetProfile(), caretakers: [{ child_id: 2, contract_signed: true }] })]) as never,

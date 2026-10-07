@@ -4,7 +4,8 @@
  * confirmation), family quiet hours, the family's parents with the second-parent
  * invite, and — while the family is empty — joining another family by code; push
  * "Obvestila" status (M3-02); last the "Račun" section (M2-08): data export and account
- * deletion.
+ * deletion. M5-F01: a "Purchases / challenge" row (while the family has a challenge dog)
+ * opens the paywall.
  */
 
 import { Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
@@ -21,6 +22,8 @@ import LanguageCard from '@/components/parent/LanguageCard';
 import NotificationsCard from '@/components/parent/NotificationsCard';
 import PetControlsCard from '@/components/parent/PetControlsCard';
 import QuietHoursCard from '@/components/parent/QuietHoursCard';
+import PurchasesRow from '@/components/parent/PurchasesRow';
+import { showPurchasesRow } from '@/modules/plan/purchaseEntry';
 import { NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import BuildLabel from '@/components/BuildLabel';
 import type { FamilyChild, FamilyOverview } from '@/modules/family/family';
@@ -39,13 +42,23 @@ interface ControlsScreenProps {
   onAddChild: () => void;
   /** PIN for an existing child (pet choice or re-login on a new device). */
   onChildPin: (child: FamilyChild) => void;
+  /** M5-F01: open the challenge paywall ("Purchases / challenge" row). */
+  onOpenChallenge?: () => void;
   /** Confirmation owned by the parent screen (survives the join card disappearing). */
   /** Kept as data, translated at render (follows a language switch). */
   notice?: JoinNotice | null;
   onNotice?: (notice: JoinNotice | null) => void;
 }
 
-export default function ControlsScreen({ onBack, family, onAddChild, onChildPin, notice = null, onNotice }: ControlsScreenProps) {
+export default function ControlsScreen({
+  onBack,
+  family,
+  onAddChild,
+  onChildPin,
+  onOpenChallenge,
+  notice = null,
+  onNotice,
+}: ControlsScreenProps) {
   const isEmpty = !family || (family.children.length === 0 && family.pets.length === 0);
 
   return (
@@ -73,6 +86,8 @@ export default function ControlsScreen({ onBack, family, onAddChild, onChildPin,
             ))}
           </>
         )}
+
+        {family && onOpenChallenge && showPurchasesRow(family) && <PurchasesRow family={family} onPress={onOpenChallenge} />}
 
         <QuietHoursCard />
         <NotificationsCard />

@@ -321,3 +321,42 @@ describe('ParentDashboardScreen — polling fallback', () => {
     expect(getParentDashboard).toHaveBeenCalledTimes(4);
   });
 });
+
+describe('ParentDashboardScreen — purchase entry (M5-F01)', () => {
+  const TRIAL_PET = makeFamilyPet({
+    id: 7,
+    breed_type: 'border_collie',
+    caretakers: [{ child_id: 2, contract_signed: true }],
+    plan: { type: 'challenge', status: 'trial', trial_ends_at: '2026-10-12T10:00:00+02:00', paid_at: null, payments_enforced: true },
+  });
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    useAppStore.setState(useAppStore.getInitialState(), true);
+    (api.getQuietHours as jest.Mock).mockResolvedValue({ quiet_hours: null });
+  });
+
+  it('card button → paywall → back to the overview', async () => {
+    getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [TRIAL_PET]));
+    renderWithQuery(<ParentDashboardScreen />);
+    await flush();
+    fireEvent.press(screen.getByTestId('child-buy-2'));
+    expect(screen.getByTestId('challenge-screen')).toBeTruthy();
+    fireEvent.press(screen.getByLabelText('Nazaj'));
+    await flush();
+    expect(screen.getByTestId('child-card-2')).toBeTruthy();
+  });
+
+  it('Nadzor row → paywall → back to Nadzor', async () => {
+    getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [TRIAL_PET]));
+    renderWithQuery(<ParentDashboardScreen />);
+    await flush();
+    fireEvent.press(screen.getByTestId('tab-controls'));
+    await flush();
+    fireEvent.press(screen.getByTestId('controls-purchases'));
+    expect(screen.getByTestId('challenge-screen')).toBeTruthy();
+    fireEvent.press(screen.getByLabelText('Nazaj'));
+    await flush();
+    expect(screen.getByTestId('controls-purchases')).toBeTruthy();
+  });
+});

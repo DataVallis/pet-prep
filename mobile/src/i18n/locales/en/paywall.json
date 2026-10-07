@@ -20,6 +20,15 @@
     "open": "Unlock the challenge",
     "openTrial": "See the challenge"
   },
+  "entry": {
+    "buy": "12-week challenge — buy",
+    "buyA11y": "Buy the 12-week challenge for {{name}}'s dog",
+    "buyHint": "Opens the challenge purchase",
+    "rowTitle": "Purchases / challenge",
+    "rowWaiting_one": "{{count}} dog is waiting for a purchase",
+    "rowWaiting_other": "{{count}} dogs are waiting for a purchase",
+    "rowAllPaid": "No dog is waiting for a purchase. You can also restore purchases on a new phone here."
+  },
   "challenge": {
     "title": "12-week challenge",
     "back": "Back",

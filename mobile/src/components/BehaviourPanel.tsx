@@ -9,6 +9,8 @@
  * (M5-R03 "Šola" chip) is passed — the chip then sits in the same column, nearest the dock.
  * M5-R04: `meals` ("Obroki danes") sits last, but only while no scene card is open — on a
  * small phone the scene card + meals + chip would crowd the dog.
+ * M5-F06: `notice` ("Your pup is getting ready…" while the AI media is pending) sits on top
+ * of the column, so it is stacked above the meals row and the dock instead of under them.
  */
 
 import type { ReactNode } from 'react';
@@ -43,6 +45,8 @@ export interface BehaviourPanelProps {
   footer?: ReactNode;
   /** M5-R04 "Obroki danes", closest to the dock; hidden while a scene card is open. */
   meals?: ReactNode;
+  /** M5-F06: a short notice at the top of the column (media "getting ready"); always shown. */
+  notice?: ReactNode;
 }
 
 export default function BehaviourPanel({
@@ -55,18 +59,20 @@ export default function BehaviourPanel({
   right,
   footer = null,
   meals = null,
+  notice = null,
 }: BehaviourPanelProps) {
   const scene = panelScene(behaviour);
   const chewing = hasOpenChewing(behaviour) || behaviour.can_resolve_chewing;
   // A slipper can be tidied up whatever scene is shown (e.g. a newer accident on top).
   const cardScene = scene ?? (chewing ? 'chewing' : null);
   const shownMeals = cardScene === null ? meals : null;
-  if (countdown === null && cardScene === null && footer === null && shownMeals === null) return null;
+  if (notice === null && countdown === null && cardScene === null && footer === null && shownMeals === null) return null;
 
   const resolveDisabled = !behaviour.can_resolve_chewing || resolveBusy;
 
   return (
     <View pointerEvents="box-none" style={[styles.slot, { bottom, right }]} testID="hud-behaviour">
+      {notice}
       {cardScene !== null && (
         <View style={styles.sceneCard} testID={`hud-scene-${cardScene}`}>
           {videoState !== cardScene && (

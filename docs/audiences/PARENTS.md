@@ -145,7 +145,7 @@ Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava �
 
 ## Cena
 - **Mešanček: brezplačen za vedno.**
-- **12-tedenski PetPrep izziv: 49,99 € na psa**, prvih **7 dni brezplačno**. Skupni pes več otrok = **ena cena**; drugi pes v družini = nov izziv. Dostop imata oba starša. Vključuje zahtevno pasmo, personaliziranega AI psa, certifikat in bonuse. Po 7 dneh brez nakupa se igra **ustavi** (kuža varno čaka, nič ne propade), dokler izziva ne kupite; vsak otrok ima brezplačni preizkus le enkrat. Če izbrišete psa s kupljenim izzivom, je nakup porabljen (aplikacija vas na to posebej opozori). Nakup je samo v starševskem delu aplikacije. *(Zgrajeno 7. 10. 2026; nakup bo mogoč, ko bo izdelek objavljen v App Store in Google Play.)*
+- **12-tedenski PetPrep izziv: 49,99 € na psa**, prvih **7 dni brezplačno**. Skupni pes več otrok = **ena cena**; drugi pes v družini = nov izziv. Dostop imata oba starša. Vključuje zahtevno pasmo, personaliziranega AI psa, certifikat in bonuse. Po 7 dneh brez nakupa se igra **ustavi** (kuža varno čaka, nič ne propade), dokler izziva ne kupite; vsak otrok ima brezplačni preizkus le enkrat. Če izbrišete psa s kupljenim izzivom, je nakup porabljen (aplikacija vas na to posebej opozori). Nakup je samo v starševskem delu aplikacije: dokler izziv psa ni plačan, ima kartica otroka v pregledu (in podrobnosti otroka) gumb **»12-tedenski izziv — kupi«**, v zavihku »Nadzor« pa je vrstica **»Nakupi / izziv«** (tudi za obnovo nakupov na novem telefonu). Za brezplačnega mešančka gumba ni. *(Zgrajeno 7. 10. 2026; nakup bo mogoč, ko bo izdelek objavljen v App Store in Google Play.)*
 
 ## Pogosta vprašanja *(dopolnjujemo)*
 - **Kaj, če otrok nima telefona?** *(odgovor v pripravi)*
