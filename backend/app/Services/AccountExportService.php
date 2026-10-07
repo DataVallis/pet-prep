@@ -10,6 +10,7 @@ use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\User;
+use App\Services\Media\PetGrowthService;
 use App\Services\Media\PetMediaService;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Collection;
@@ -46,6 +47,7 @@ class AccountExportService
         private readonly FamilyService $families,
         private readonly FamilyDashboardService $dashboard,
         private readonly PetMediaService $media,
+        private readonly PetGrowthService $growth,
     ) {}
 
     /**
@@ -65,7 +67,7 @@ class AccountExportService
             'requested_by' => ['id' => $parent->id],
             'about' => 'Izvoz podatkov družine iz aplikacije PetPrep (GDPR čl. 15 in 20). '
                 .'Časi so v UTC (ISO 8601), datumi (local_date) v časovnem pasu družine. '
-                .'Povezave do slik in videov psov veljajo omejen čas (media[].expires_at).',
+                .'Povezave do slik in videov psov veljajo omejen čas (media[].expires_at, growth[] do growth_expires_at).',
         ];
 
         if ($family === null) {
@@ -247,6 +249,7 @@ class AccountExportService
         return $pets->map(function (Pet $pet) use ($caretakers, $contracts, $activities, $steps, $walks, $routines, $periods, $hygiene, $skills, $sessions, $expires): array {
             $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
             $rows = fn (Collection $group) => $group->get($pet->id, collect());
+            $album = $this->growth->albumFor($pet, $expires)->toArray()['growth'];
 
             return [
                 'id' => $pet->id,
@@ -348,6 +351,10 @@ class AccountExportService
                         'url' => $this->media->signedUrl($slot, $expires),
                         'expires_at' => $expires->toIso8601String(),
                     ])->values()->all(),
+                // M5-R04 growth album: every stored reference image across life
+                // stages (archived ones included), oldest first, signed URLs.
+                'growth' => $album,
+                'growth_expires_at' => $album === [] ? null : $expires->toIso8601String(),
             ];
         })->values()->all();
     }

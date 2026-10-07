@@ -2,7 +2,7 @@
  * Shared test fixtures (not shipped: only imported from __tests__).
  */
 
-import type { ChildPetState } from '@/api/client';
+import type { ChildPetState, PetGrowthResponse } from '@/api/client';
 import type { FamilyChild, FamilyPetRaw } from '@/modules/family/family';
 import type { Pet, PetMedia, PetUpdatedBroadcast } from '@/types';
 
@@ -32,10 +32,10 @@ export function makePetProfile(
       meals_by_parent: 1,
       // 4 puppy meals, 2-hour windows (David 2026-10-05, PR #38).
       feed_windows: [
-        { start: '07:00', end: '09:00', parent_covered: false },
-        { start: '11:00', end: '13:00', parent_covered: true },
-        { start: '15:00', end: '17:00', parent_covered: false },
-        { start: '19:00', end: '21:00', parent_covered: false },
+        { start: '07:00', end: '09:00', parent_covered: false, fed: false },
+        { start: '11:00', end: '13:00', parent_covered: true, fed: false },
+        { start: '15:00', end: '17:00', parent_covered: false, fed: false },
+        { start: '19:00', end: '21:00', parent_covered: false, fed: false },
       ],
       step_goal: 2000,
       exercise_minutes: 20,
@@ -64,8 +64,8 @@ export function makeLegacyPetProfile(
       meals_by_child: 2,
       meals_by_parent: 0,
       feed_windows: [
-        { start: '06:00', end: '10:00', parent_covered: false },
-        { start: '17:00', end: '21:00', parent_covered: false },
+        { start: '06:00', end: '10:00', parent_covered: false, fed: false },
+        { start: '17:00', end: '21:00', parent_covered: false, fed: false },
       ],
       step_goal: 4000,
       exercise_minutes: null,
@@ -551,4 +551,39 @@ export function makeRunningSession(
     trials: mine ? schedule.trials : null,
     ...overrides,
   };
+}
+
+type GrowthEntryRaw = PetGrowthResponse['growth'][number];
+
+/** One picture of `GET …/growth` (M5-R04 "Album rasti"): a 2-month puppy, taken 4. 10. 2026. */
+export function makeGrowthEntry(overrides: Partial<GrowthEntryRaw> = {}): GrowthEntryRaw {
+  const generation = overrides.generation ?? 1;
+  return {
+    generation,
+    life_stage: 'puppy',
+    age_months: 2,
+    taken_at: '2026-10-04T09:00:00Z',
+    is_current: false,
+    image_url: `https://api.petprep.si/api/media/history/${generation}?expires=1&v=g${generation}&signature=a`,
+    ...overrides,
+  };
+}
+
+/** `GET /api/child/pet/growth` / `GET /api/parent/pets/7/growth` body. */
+export function makeGrowth(
+  growth: GrowthEntryRaw[] = [],
+  expiresAt: string | null = '2026-10-04T10:00:00Z',
+): PetGrowthResponse {
+  return { pet_id: 7, growth, expires_at: expiresAt };
+}
+
+/** A puppy that became a young dog: two pictures, the second current. */
+export function makeTwoStageGrowth(expiresAt: string | null = '2026-10-04T10:00:00Z'): PetGrowthResponse {
+  return makeGrowth(
+    [
+      makeGrowthEntry({ generation: 1 }),
+      makeGrowthEntry({ generation: 2, life_stage: 'young', age_months: 9, taken_at: '2026-11-24T08:00:00Z', is_current: true }),
+    ],
+    expiresAt,
+  );
 }

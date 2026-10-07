@@ -829,6 +829,47 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/parent/pets/{pet}/growth": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * A pet of the parent's family. Another family's pet (or an unknown id)
+         *     → 404 `pet_not_found`
+         * @description GET /api/parent/pets/{pet}/growth
+         */
+        get: operations["petGrowth.parent"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/child/pet/growth": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * The child's pet. 404 `no_pet` before pairing
+         * @description GET /api/child/pet/growth
+         */
+        get: operations["petGrowth.child"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/media/{media}": {
         parameters: {
             query?: never;
@@ -842,6 +883,27 @@ export interface paths {
          *     it from `response()->file()`; the Caddy branch lives in accelRedirect()
          */
         get: operations["media.show"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/media/history/{history}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * GET /api/media/history/{history}?expires=…&v=…&signature=… (M5-R04)
+         * @description An archived reference image of an earlier life stage (growth album,
+         *     `pet_media_history`). Same capability and authorization rules as show().
+         */
+        get: operations["media.history.show"];
         put?: never;
         post?: never;
         delete?: never;
@@ -1084,11 +1146,19 @@ export interface components {
                     meals_by_child: number;
                     /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                     meals_by_parent: number;
-                    /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                    /**
+                     * @description Today's feed windows, family-local "HH:MM", [start, end).
+                     *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                     *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                     *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                     *     lag the start by up to one tick). False for an unborn pet and for windows
+                     *     not reached yet.
+                     */
                     feed_windows: {
                         start: string;
                         end: string;
                         parent_covered: boolean;
+                        fed: boolean;
                     }[];
                     /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                     step_goal: number;
@@ -1801,11 +1871,19 @@ export interface operations {
                                         meals_by_child: number;
                                         /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                         meals_by_parent: number;
-                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
                                         feed_windows: {
                                             start: string;
                                             end: string;
                                             parent_covered: boolean;
+                                            fed: boolean;
                                         }[];
                                         /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                         step_goal: number;
@@ -2075,11 +2153,19 @@ export interface operations {
                                     meals_by_child: number;
                                     /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                     meals_by_parent: number;
-                                    /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                    /**
+                                     * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                     *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                     *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                     *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                     *     lag the start by up to one tick). False for an unborn pet and for windows
+                                     *     not reached yet.
+                                     */
                                     feed_windows: {
                                         start: string;
                                         end: string;
                                         parent_covered: boolean;
+                                        fed: boolean;
                                     }[];
                                     /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                     step_goal: number;
@@ -2369,11 +2455,19 @@ export interface operations {
                                         meals_by_child: number;
                                         /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                         meals_by_parent: number;
-                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
                                         feed_windows: {
                                             start: string;
                                             end: string;
                                             parent_covered: boolean;
+                                            fed: boolean;
                                         }[];
                                         /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                         step_goal: number;
@@ -2661,11 +2755,19 @@ export interface operations {
                                         meals_by_child: number;
                                         /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                         meals_by_parent: number;
-                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
                                         feed_windows: {
                                             start: string;
                                             end: string;
                                             parent_covered: boolean;
+                                            fed: boolean;
                                         }[];
                                         /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                         step_goal: number;
@@ -2953,11 +3055,19 @@ export interface operations {
                                         meals_by_child: number;
                                         /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                         meals_by_parent: number;
-                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
                                         feed_windows: {
                                             start: string;
                                             end: string;
                                             parent_covered: boolean;
+                                            fed: boolean;
                                         }[];
                                         /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                         step_goal: number;
@@ -3245,11 +3355,19 @@ export interface operations {
                                         meals_by_child: number;
                                         /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                         meals_by_parent: number;
-                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
                                         feed_windows: {
                                             start: string;
                                             end: string;
                                             parent_covered: boolean;
+                                            fed: boolean;
                                         }[];
                                         /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                         step_goal: number;
@@ -3537,11 +3655,19 @@ export interface operations {
                                         meals_by_child: number;
                                         /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                         meals_by_parent: number;
-                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
                                         feed_windows: {
                                             start: string;
                                             end: string;
                                             parent_covered: boolean;
+                                            fed: boolean;
                                         }[];
                                         /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                         step_goal: number;
@@ -3833,11 +3959,19 @@ export interface operations {
                                         meals_by_child: number;
                                         /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                         meals_by_parent: number;
-                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
                                         feed_windows: {
                                             start: string;
                                             end: string;
                                             parent_covered: boolean;
+                                            fed: boolean;
                                         }[];
                                         /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                         step_goal: number;
@@ -4129,11 +4263,19 @@ export interface operations {
                                         meals_by_child: number;
                                         /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                         meals_by_parent: number;
-                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
                                         feed_windows: {
                                             start: string;
                                             end: string;
                                             parent_covered: boolean;
+                                            fed: boolean;
                                         }[];
                                         /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                         step_goal: number;
@@ -4425,11 +4567,19 @@ export interface operations {
                                         meals_by_child: number;
                                         /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                         meals_by_parent: number;
-                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
                                         feed_windows: {
                                             start: string;
                                             end: string;
                                             parent_covered: boolean;
+                                            fed: boolean;
                                         }[];
                                         /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                         step_goal: number;
@@ -5167,11 +5317,19 @@ export interface operations {
                                     meals_by_child: number;
                                     /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                     meals_by_parent: number;
-                                    /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                    /**
+                                     * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                     *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                     *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                     *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                     *     lag the start by up to one tick). False for an unborn pet and for windows
+                                     *     not reached yet.
+                                     */
                                     feed_windows: {
                                         start: string;
                                         end: string;
                                         parent_covered: boolean;
+                                        fed: boolean;
                                     }[];
                                     /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                     step_goal: number;
@@ -5302,11 +5460,19 @@ export interface operations {
                                         meals_by_child: number;
                                         /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                         meals_by_parent: number;
-                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
                                         feed_windows: {
                                             start: string;
                                             end: string;
                                             parent_covered: boolean;
+                                            fed: boolean;
                                         }[];
                                         /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                         step_goal: number;
@@ -5510,11 +5676,19 @@ export interface operations {
                                         meals_by_child: number;
                                         /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
                                         meals_by_parent: number;
-                                        /** @description Today's feed windows, family-local "HH:MM", [start, end). */
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
                                         feed_windows: {
                                             start: string;
                                             end: string;
                                             parent_covered: boolean;
+                                            fed: boolean;
                                         }[];
                                         /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
                                         step_goal: number;
@@ -5836,6 +6010,113 @@ export interface operations {
             422: components["responses"]["ValidationException"];
         };
     };
+    "petGrowth.parent": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                pet: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        pet_id: number;
+                        /**
+                         * @description Pictures of the pet, oldest first; the pet's current picture is the
+                         *     one with `is_current` (normally the last). Only stored images (failed
+                         *     or missing generations are left out). A pet that never changed its
+                         *     life stage — and every legacy pet — has exactly one entry; show an
+                         *     album only from 2 entries on. - generation: image generation of the pet (unique per pet, ascending — use as key)
+                         *     - life_stage: stage the picture shows; null for a legacy pet (no life stages)
+                         *     - age_months: the dog's age in months when the picture was taken; null for a legacy pet
+                         *     - taken_at: when the picture became the pet's image (ISO 8601, UTC)
+                         *     - image_url: signed URL, valid until `expires_at`
+                         */
+                        growth: {
+                            generation: number;
+                            /** @enum {string|null} */
+                            life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                            age_months: number | null;
+                            taken_at: string | null;
+                            is_current: boolean;
+                            image_url: string;
+                        }[];
+                        /** @description When the image URLs stop working (ISO 8601); null when there is no picture. */
+                        expires_at: string | null;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "No such pet in your family.";
+                        /** @constant */
+                        reason: "pet_not_found";
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "petGrowth.child": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        pet_id: number;
+                        /**
+                         * @description Pictures of the pet, oldest first; the pet's current picture is the
+                         *     one with `is_current` (normally the last). Only stored images (failed
+                         *     or missing generations are left out). A pet that never changed its
+                         *     life stage — and every legacy pet — has exactly one entry; show an
+                         *     album only from 2 entries on. - generation: image generation of the pet (unique per pet, ascending — use as key)
+                         *     - life_stage: stage the picture shows; null for a legacy pet (no life stages)
+                         *     - age_months: the dog's age in months when the picture was taken; null for a legacy pet
+                         *     - taken_at: when the picture became the pet's image (ISO 8601, UTC)
+                         *     - image_url: signed URL, valid until `expires_at`
+                         */
+                        growth: {
+                            generation: number;
+                            /** @enum {string|null} */
+                            life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                            age_months: number | null;
+                            taken_at: string | null;
+                            is_current: boolean;
+                            image_url: string;
+                        }[];
+                        /** @description When the image URLs stop working (ISO 8601); null when there is no picture. */
+                        expires_at: string | null;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+        };
+    };
     "media.show": {
         parameters: {
             query?: never;
@@ -5856,19 +6137,27 @@ export interface operations {
                     "application/octet-stream": string;
                 };
             };
-            /** @description An error */
-            403: {
+            404: components["responses"]["ModelNotFoundException"];
+        };
+    };
+    "media.history.show": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description The history ID */
+                history: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
                 headers: {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": {
-                        /**
-                         * @description Error overview.
-                         * @example
-                         */
-                        message: string;
-                    };
+                    "application/octet-stream": string;
                 };
             };
             404: components["responses"]["ModelNotFoundException"];

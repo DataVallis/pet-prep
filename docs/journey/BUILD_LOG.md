@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-07 — Album rasti in »Obroki danes« (M5-R04, del 2)
+
+**Kaj se je zgodilo:** Ko kuža preide v novo življenjsko obdobje, umetna inteligenca iz stare fotografije naredi novo — isti pes, le starejši (od 5. 10.). Zdaj so vse te fotografije vidne: v albumu »Moj kuža« je nov razdelek **»Kako je kuža rasel«** — fotografije po vrsti z obdobjem (Mladiček, Mlad pes, Odrasel, Starejši), starostjo in datumom, trenutna označena z »Zdaj«; tap odpre fotografijo čez cel zaslon. Vidita ga otrok in starš (samo ogled); pokaže se, ko sta vsaj dve fotografiji. Fotografije so tudi v izvozu podatkov in se izbrišejo z računom. Otrok nad gumbi vidi še **»Obroki danes«**: okna obrokov s kljukico za vsak dobljeni obrok, trenutno okno poudarjeno, obroke med šolo označene »nahrani starš«; na manjših telefonih ena vrstica, med pospravljanjem nereda se skrije. Aplikacija še ni v trgovini.
+
+**Zakaj je pomembno:** Otrok v 12 tednih vidi, kako je njegov kuža zrasel — to je spomin in dokaz skrbi hkrati. »Obroki danes« pa pokaže ritem dneva brez strašenja: zamujeno okno je le zatemnjeno.
+
+**Številke:** 27 novih strežniških testov (skupaj 1.127 zelenih), 41 novih testov v aplikaciji (skupaj 1.122 zelenih); slike se strežejo prek podpisanih povezav, ki veljajo 60–90 minut in jih odpre samo družina; neodvisni pregled kode: brez blokad, 5 manjših popravkov narejenih.
+
+**Kako povedati:**
+- 🧒 Otroci: "Poglej, kako je tvoj kuža zrasel — od malega mladička do zdaj!"
+- 👩 Starši: "Album rasti: vse fotografije vašega kužka skozi obdobja, vidne samo vaši družini — in tudi v izvozu podatkov."
+- 📣 Omrežja: "Mladiček → mlad pes → odrasel. Isti pes, le starejši. 🐶📸 Album rasti v PetPrep."
+- 💼 Investitorji: "AI slike se ustvarijo enkrat na obdobje (≈ 0,15 $), album jih samo prikaže — brez dodatnega stroška na ogled."
+- 🛠 Tehnično: "Arhivirane slike prek `GET /api/media/history/{id}` (signed:relative + policy + X-Accel-Redirect v Caddy), `taken_at` ob arhiviranju, en poizvedbeni klic za kljukice obrokov (`fed` po oknu, UTC primerjava, DST test)."
+
+---
+
 ## 2026-10-06 — Starejši kuža že nekaj zna, čas za šolo pa si otroci delijo pošteno (M5-R03b)
 
 **Kaj se je zgodilo:** David je potrdil številke šolanja in dve novi pravili; zdaj so v strežniku in aplikaciji. **(1)** 5 minut vaje na psa na dan, +1 % na pravočasno pohvalo, −2 % na dan brez vaje so v bazi označeni »potrdil David 2026-10-06« (vir ostane dokaz, odločitev se ne predstavlja kot literatura); obstoječe vrednosti v produkciji se posodobijo enkrat, z revizijsko sledjo, in ne povozijo ničesar, kar je administrator že spremenil. **(2)** Pes, ki pride kot **mlad pes, odrasel ali starejši**, že zna **sedi 50 %, lulat zunaj 70 %, pridi 30 %, prostor 0 %**; mladiček začne z 0 %. Starš in otrok to vidita takoj, še pred podpisom pogodbe. **(3)** Če za psa skrbi več otrok, si **dnevnih 5 minut razdelijo enako** (dva otroka po 150 s = 3 vaje, trije po 2 vaji; vsak otrok vsaj eno vajo). Otrok vidi »Danes še 3 vaje« in »Čas za šolo si deliš z bratom ali sestro.«; ko porabi svoj del: »Tvoj današnji čas za šolo je porabljen. Brat ali sestra lahko s kužkom še vadi — ti pa spet jutri!«. Aplikacija še ni v trgovini.

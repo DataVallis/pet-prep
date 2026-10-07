@@ -21,6 +21,10 @@ Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova p
 
 **Album »Moj kuža«** 📸 Zgoraj desno tapni ikono s slikami in odpre se album tvojega kužka: njegova fotografija in vsi njegovi videi — *Miruje, Spi, Utrujen, Lačen, Bolan, Se igra* (toliko, kolikor jih ima tvoj kuža). Tapni enega in ga gledaš čez cel zaslon; s puščicami ali s potegom prsta greš na naslednjega, z gumbom za zvok ga lahko tudi slišiš. Če piše **»Še ni posnetka«**, se ta video še pripravlja. Ko album zapreš, si spet pri kužku. *(v aplikaciji od 5. 10. 2026 — še ni v trgovini)*
 
+**Kako je kuža rasel** 🌱 Ko tvoj kuža zraste (iz mladička v mladega psa in naprej), dobi novo fotografijo. V albumu na vrhu vidiš vse njegove fotografije po vrsti — od malega mladička do zdaj.
+
+**Obroki danes** 🍽 Nad gumbi vidiš, kdaj je danes čas za hrano. Kljukica ✓ pomeni, da je kuža že jedel. Kjer piše »nahrani starš«, si v šoli in kužka nahrani mami ali ati.
+
 ## Tvoj kuža raste 🐕 *(kmalu v aplikaciji)*
 Starši izberejo, ali je tvoj kuža **mladiček**, **mlad pes**, **odrasel** ali **starejši** — in ali so ga **posvojili** iz zavetišča ali **kupili**. Vsak teden igre je tvoj kuža **en mesec starejši**. Mladiček je lačen večkrat na dan (najprej 4-krat, potem 3-krat, nato 2-krat) in sprva hodi manj — vsak teden malo več. Ko zraste v mladega psa, dobi **novo sliko** — to je še vedno tvoj kuža, le večji!
 Če je čas za hrano, ko si v šoli ali spiš, ga nahrani starš — ti nisi nič zamudil.

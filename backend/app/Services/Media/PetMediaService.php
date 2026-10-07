@@ -551,6 +551,8 @@ class PetMediaService
             'bytes' => $slot->bytes,
             'mime' => $slot->mime,
             'archived_at' => now(),
+            // M5-R04 growth album: when this picture became the pet's image.
+            'taken_at' => $this->storedAt($slot),
         ]);
 
         if (! $this->resetForNewGeneration($slot, bump: true)) {
@@ -810,6 +812,37 @@ class PetMediaService
     }
 
     /**
+     * When the slot's stored file was stored (growth album, M5-R04):
+     * `completed_at` of a READY slot; otherwise (a later generation failed or
+     * is running and the old file is kept) the file's modification time —
+     * `completed_at` then belongs to the failed attempt. Null without a file.
+     */
+    public function storedAt(PetMedia $slot): ?CarbonImmutable
+    {
+        if (! $slot->isServable()) {
+            return null;
+        }
+
+        if ($slot->status === PetMedia::STATUS_READY && $slot->completed_at !== null) {
+            return CarbonImmutable::instance($slot->completed_at);
+        }
+
+        return $this->fileModifiedAt((string) $slot->storage_path);
+    }
+
+    /** Modification time of a file on the pet-media disk (null if missing / unreadable). */
+    public function fileModifiedAt(string $path): ?CarbonImmutable
+    {
+        try {
+            return $this->disk()->exists($path)
+                ? CarbonImmutable::createFromTimestampUTC($this->disk()->lastModified($path))
+                : null;
+        } catch (\Throwable) {
+            return null;
+        }
+    }
+
+    /**
      * Expiry for app URLs, bucketed to half the TTL: the same URL for ~30 min
      * (no player restart on every state poll), valid for 60–90 min (default TTL).
      */
@@ -831,6 +864,23 @@ class PetMediaService
             'media.show',
             $expires ?? $this->urlExpiry(),
             ['media' => $slot->id, 'v' => substr(sha1((string) $slot->storage_path), 0, 10)],
+            absolute: false,
+        );
+
+        return rtrim((string) config('app.url'), '/').$path;
+    }
+
+    /**
+     * Absolute signed URL to GET /api/media/history/{history} — an archived
+     * reference image of an earlier life stage (growth album, M5-R04). Same
+     * capability rules as signedUrl().
+     */
+    public function signedHistoryUrl(PetMediaHistory $entry, ?CarbonImmutable $expires = null): string
+    {
+        $path = URL::temporarySignedRoute(
+            'media.history.show',
+            $expires ?? $this->urlExpiry(),
+            ['history' => $entry->id, 'v' => substr(sha1($entry->storage_path), 0, 10)],
             absolute: false,
         );
 

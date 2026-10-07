@@ -36,6 +36,14 @@ export interface TimeWindow {
   end: string;
 }
 
+/** One of today's feed windows of the pet's stage (M5-R04): family-local "HH:MM", [start, end). */
+export interface TodayFeedWindow extends TimeWindow {
+  /** Falls into quiet hours (school / sleep): the parent feeds this meal. */
+  parent_covered: boolean;
+  /** A meal (child, or the parent's quiet-hours meal) was logged inside this window today. */
+  fed: boolean;
+}
+
 export interface ChildPetView {
   pet: {
     id: number;
@@ -79,6 +87,11 @@ export interface ChildPetView {
     /** The current window while unused, otherwise the next one (ISO instants). */
     next_feed_window: TimeWindow | null;
     last_fed_at: string | null;
+    /**
+     * Today's windows of the pet's stage with who covers them (`pet.profile.today.feed_windows`,
+     * also for a legacy pet); [] when the server sends none (older server).
+     */
+    today: TodayFeedWindow[];
   };
   water: {
     times_per_day: number;
@@ -133,6 +146,23 @@ function windowOrNull(value: unknown): TimeWindow | null {
   if (typeof value !== 'object' || value === null) return null;
   const { start, end } = value as Record<string, unknown>;
   return typeof start === 'string' && typeof end === 'string' ? { start, end } : null;
+}
+
+const HH_MM = /^\d{2}:\d{2}$/;
+
+/** `pet.profile.today.feed_windows`, read loosely (any malformed entry is dropped). */
+export function readTodayFeedWindows(profile: unknown): TodayFeedWindow[] {
+  if (typeof profile !== 'object' || profile === null) return [];
+  const today = (profile as Record<string, unknown>).today;
+  if (typeof today !== 'object' || today === null) return [];
+  const list = (today as Record<string, unknown>).feed_windows;
+  if (!Array.isArray(list)) return [];
+  return list.flatMap((entry: unknown): TodayFeedWindow[] => {
+    if (typeof entry !== 'object' || entry === null) return [];
+    const { start, end, parent_covered, fed } = entry as Record<string, unknown>;
+    if (typeof start !== 'string' || typeof end !== 'string' || !HH_MM.test(start) || !HH_MM.test(end)) return [];
+    return [{ start, end, parent_covered: parent_covered === true, fed: fed === true }];
+  });
 }
 
 function lockReason(value: unknown): LockReason | null {
@@ -209,6 +239,7 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       can_feed: bool(raw.feeding.can_feed),
       next_feed_window: windowOrNull(raw.feeding.next_feed_window),
       last_fed_at: isoOrNull(raw.feeding.last_fed_at),
+      today: readTodayFeedWindows((p as { profile?: unknown }).profile),
     },
     water: {
       times_per_day: num(raw.water.times_per_day),

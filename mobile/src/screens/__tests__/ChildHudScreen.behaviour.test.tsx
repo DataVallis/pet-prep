@@ -5,6 +5,7 @@
  * vs premium scene video, realtime behaviour from PetUpdated.
  */
 import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
+import { Animated } from 'react-native';
 
 import { ApiError, api } from '@/api/client';
 import ChildHudScreen, { HUD_STRINGS } from '@/screens/ChildHudScreen';
@@ -104,6 +105,9 @@ describe('ChildHudScreen — behaviour events (M5-R02)', () => {
 
   it('puppy: "Pelji ven" with a calm countdown that ticks down (fake timers)', async () => {
     jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });
+    // The placeholder's breathing Animated.loop would render frames through all 81 fake
+    // minutes (~15 s of CPU, near the 20 s budget); the countdown doesn't need it.
+    const loopSpy = jest.spyOn(Animated, 'loop').mockReturnValue({ start: () => undefined, stop: () => undefined, reset: () => undefined });
     // Device = server clock at 11:40 Ljubljana; accident due 13:00 → 1 h 20 min.
     jest.setSystemTime(new Date('2026-10-04T11:40:00+02:00'));
     getChildPet.mockResolvedValue(puppy({ server_time: '2026-10-04T11:40:00+02:00' }));
@@ -133,6 +137,7 @@ describe('ChildHudScreen — behaviour events (M5-R02)', () => {
     });
     expect(screen.getByText(BEHAVIOUR_STRINGS.takeOutNow)).toBeTruthy();
     expect(screen.getByText(BEHAVIOUR_STRINGS.hintNow)).toBeTruthy();
+    loopSpy.mockRestore();
   });
 
   it('take-out success and double tap → friendly toasts', async () => {
@@ -265,7 +270,9 @@ describe('ChildHudScreen — behaviour events (M5-R02)', () => {
       }),
     );
     expect(screen.queryByTestId('action-take-out')).toBeNull();
-    expect(screen.queryByTestId('hud-behaviour')).toBeNull();
+    // The panel slot only holds the M5-R04 "Obroki danes" row — no scene, no countdown.
+    expect(screen.getByTestId('hud-meals')).toBeTruthy();
+    expect(screen.queryByTestId('action-resolve-chewing')).toBeNull();
     expect(screen.queryByTestId('hud-take-out-countdown')).toBeNull();
   });
 

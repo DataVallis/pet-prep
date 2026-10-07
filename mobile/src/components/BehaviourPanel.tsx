@@ -7,6 +7,8 @@
  *   cleaned with the existing cleaning game, so it has no button here.
  * Nothing renders for a legacy pet / older server (no clock, no events) unless a `footer`
  * (M5-R03 "Šola" chip) is passed — the chip then sits in the same column, nearest the dock.
+ * M5-R04: `meals` ("Obroki danes") sits last, but only while no scene card is open — on a
+ * small phone the scene card + meals + chip would crowd the dog.
  */
 
 import type { ReactNode } from 'react';
@@ -37,8 +39,10 @@ export interface BehaviourPanelProps {
   bottom: number;
   /** Right edge kept free for the metric column. */
   right: number;
-  /** Rendered last, closest to the dock (M5-R03 "Šola" chip); the panel shows when only this is set. */
+  /** Rendered after the countdown (M5-R03 "Šola" chip); the panel shows when only this is set. */
   footer?: ReactNode;
+  /** M5-R04 "Obroki danes", closest to the dock; hidden while a scene card is open. */
+  meals?: ReactNode;
 }
 
 export default function BehaviourPanel({
@@ -50,12 +54,14 @@ export default function BehaviourPanel({
   bottom,
   right,
   footer = null,
+  meals = null,
 }: BehaviourPanelProps) {
   const scene = panelScene(behaviour);
   const chewing = hasOpenChewing(behaviour) || behaviour.can_resolve_chewing;
-  if (countdown === null && scene === null && !chewing && footer === null) return null;
   // A slipper can be tidied up whatever scene is shown (e.g. a newer accident on top).
   const cardScene = scene ?? (chewing ? 'chewing' : null);
+  const shownMeals = cardScene === null ? meals : null;
+  if (countdown === null && cardScene === null && footer === null && shownMeals === null) return null;
 
   const resolveDisabled = !behaviour.can_resolve_chewing || resolveBusy;
 
@@ -95,6 +101,7 @@ export default function BehaviourPanel({
         </View>
       )}
       {footer}
+      {shownMeals}
     </View>
   );
 }

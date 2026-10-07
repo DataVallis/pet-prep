@@ -14,6 +14,7 @@ import { useAppStore } from '@/store/appStore';
 import {
   makeBroadcast,
   makeEnabledTraining,
+  makeLegacyPetProfile,
   makeLiveChildState,
   makeMedia,
   makePet,
@@ -99,7 +100,7 @@ describe('ChildHudScreen — training (M5-R03)', () => {
   });
 
   it('legacy pet (training off) and older server (no key): no "Šola", no panel', async () => {
-    const { unmount } = await renderHud(makeLiveChildState());
+    const { unmount } = await renderHud(makeLiveChildState({ pet: { profile: makeLegacyPetProfile() } }));
     expect(screen.queryByTestId('hud-training-open')).toBeNull();
     expect(screen.queryByTestId('hud-behaviour')).toBeNull();
     unmount();

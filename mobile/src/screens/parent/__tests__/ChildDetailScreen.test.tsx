@@ -8,7 +8,18 @@ import { BackHandler } from 'react-native';
 import { api } from '@/api/client';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import ChildDetailScreen, { CHILD_DETAIL_STRINGS, formatSteps } from '@/screens/parent/ChildDetailScreen';
-import { makeDayRow, makeFamilyPet, makeLegacyPetProfile, makeMedia, makeMissed, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
+import {
+  makeDayRow,
+  makeFamilyPet,
+  makeGrowth,
+  makeLegacyPetProfile,
+  makeMedia,
+  makeMissed,
+  makeScoredChild,
+  makeScoredDashboard,
+  makeTwoStageGrowth,
+} from '@/test-utils/fixtures';
+import { GROWTH_STRINGS } from '@/modules/petMedia/growth';
 import { liveVideoPlayers, mockVideoPlayers, playerUris, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
@@ -16,7 +27,7 @@ jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
   return {
     ...actual,
-    api: { ...actual.api, getChildReport: jest.fn(), getPetActivities: jest.fn() },
+    api: { ...actual.api, getChildReport: jest.fn(), getPetActivities: jest.fn(), getParentPetGrowth: jest.fn() },
   };
 });
 
@@ -25,6 +36,7 @@ type BackPressHandler = Parameters<typeof BackHandler.addEventListener>[1];
 const pressBack = (h: BackPressHandler | null | undefined) => h?.({} as Parameters<BackPressHandler>[0]);
 const getChildReport = api.getChildReport as jest.Mock;
 const getPetActivities = api.getPetActivities as jest.Mock;
+const getParentPetGrowth = api.getParentPetGrowth as jest.Mock;
 
 async function flush() {
   await act(async () => {
@@ -78,6 +90,7 @@ describe('ChildDetailScreen', () => {
       Promise.resolve(report(days, days === 7 ? 71 : days === 30 ? 64 : null)),
     );
     getPetActivities.mockResolvedValue(page(1, 1, []));
+    getParentPetGrowth.mockResolvedValue(makeGrowth([]));
   });
 
   it('shows the 7-day report: score, routines, types, days with steps, missed, illnesses', async () => {
@@ -269,6 +282,57 @@ describe('ChildDetailScreen', () => {
     fireEvent.press(screen.getByTestId('album-close'));
     expect(screen.queryByTestId('detail-album')).toBeNull();
     expect(card.playing).toBe(true);
+  });
+
+  it('"Album rasti" (view-only): fetched for the pet only when the album opens; ≥ 2 pictures → section', async () => {
+    resetMockVideoPlayers();
+    getParentPetGrowth.mockResolvedValue(makeTwoStageGrowth(new Date(Date.now() + 30 * 60_000).toISOString()));
+    const family = familyFromDashboard(
+      makeScoredDashboard([LUKA], [
+        makeFamilyPet({
+          id: 7,
+          caretakers: [{ child_id: 2, contract_signed: true }],
+          media: makeMedia({ status: 'ready', reference_image_url: 'https://api.petprep.si/api/media/1?v=img', states: ['idle'] }),
+        }),
+      ]) as never,
+    ) as FamilyOverview;
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={family} onBack={jest.fn()} />);
+    await flush();
+    expect(getParentPetGrowth).not.toHaveBeenCalled();
+
+    fireEvent.press(screen.getByTestId('detail-album-open'));
+    expect(await screen.findByText(GROWTH_STRINGS.section)).toBeTruthy();
+    expect(getParentPetGrowth).toHaveBeenCalledTimes(1);
+    expect(getParentPetGrowth).toHaveBeenCalledWith(7);
+    // Family-local date of the second picture (Europe/Ljubljana).
+    expect(screen.getByText('24. 11. 2026')).toBeTruthy();
+    expect(screen.getByTestId('album-growth-2-current')).toBeTruthy();
+
+    // View-only: tapping opens the same viewer, nothing else (no care actions in the album).
+    fireEvent.press(screen.getByTestId('album-growth-1'));
+    expect(screen.getByTestId('album-viewer')).toBeTruthy();
+    expect(screen.getByText('Mladiček · 2 meseca')).toBeTruthy();
+    expect(screen.queryByTestId(/^action-/)).toBeNull();
+  });
+
+  it('"Album rasti": an error → no section, album unchanged', async () => {
+    getParentPetGrowth.mockRejectedValueOnce(new Error('offline'));
+    const family = familyFromDashboard(
+      makeScoredDashboard([LUKA], [
+        makeFamilyPet({
+          id: 7,
+          caretakers: [{ child_id: 2, contract_signed: true }],
+          media: makeMedia({ status: 'ready', reference_image_url: 'https://api.petprep.si/api/media/1?v=img', states: ['idle'] }),
+        }),
+      ]) as never,
+    ) as FamilyOverview;
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={family} onBack={jest.fn()} />);
+    await flush();
+    fireEvent.press(screen.getByTestId('detail-album-open'));
+    await flush();
+    expect(getParentPetGrowth).toHaveBeenCalledTimes(1);
+    expect(screen.queryByTestId('album-growth')).toBeNull();
+    expect(screen.getByTestId('album-item-photo')).toBeTruthy();
   });
 
   it('Android back closes the parent album', async () => {

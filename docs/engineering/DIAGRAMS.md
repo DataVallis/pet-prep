@@ -1183,3 +1183,21 @@ sequenceDiagram
   FAL-->>MS: images[0].url → StorePetMedia (new file, old one kept)
   MS->>MS: queueStateVideos(): entitled videos regenerated (older source generation)
 ```
+
+### 12d. Growth album (M5-R04 part 2, 2026-10-07)
+
+```mermaid
+sequenceDiagram
+    participant App as App (child / parent)
+    participant API as Laravel API
+    participant DB as PostgreSQL
+    participant Caddy
+    App->>API: GET /api/child/pet/growth  |  GET /api/parent/pets/{pet}/growth
+    API->>API: policy (caretaker / family parent)
+    API->>DB: pet_media_history (oldest first) + current reference image
+    API-->>App: growth[] {generation, life_stage, age_months, taken_at, is_current, image_url (signed, 60–90 min)}
+    App->>Caddy: GET /api/media/history/{id}?signature=…
+    Caddy->>API: signed:relative + PetPolicy::listen
+    API-->>Caddy: X-Accel-Redirect (file)
+    Caddy-->>App: image
+```

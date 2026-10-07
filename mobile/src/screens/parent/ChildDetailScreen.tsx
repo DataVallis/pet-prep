@@ -34,6 +34,7 @@ import { nicknameOf, petOfChild, type FamilyChild, type FamilyOverview } from '@
 import { parentDashboardKey } from '@/modules/family/live';
 import { normalizePetMedia, toBreedType } from '@/modules/petMedia/petMedia';
 import PetMediaView from '@/components/PetMediaView';
+import { parentPetGrowthKey, useGrowthRefresh, useParentPetGrowth } from '@/hooks/queries/usePetGrowth';
 import PetAlbum from '@/components/PetAlbum';
 import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
 import {
@@ -179,6 +180,11 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
   const onMediaExpired = useCallback(() => {
     void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
   }, [queryClient]);
+  // M5-R04 "Album rasti" (view-only): only while the album is open; an error hides the section.
+  const growthPetId = pet?.id ?? null;
+  const growthQuery = useParentPetGrowth(growthPetId, showAlbum);
+  const growth = growthQuery.isError ? null : (growthQuery.data ?? null);
+  const onGrowthExpired = useGrowthRefresh(parentPetGrowthKey(growthPetId ?? 0));
 
   return (
     <View style={styles.root}>
@@ -392,6 +398,9 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
           title={ALBUM_STRINGS.parentTitle}
           onClose={() => setAlbumOpen(false)}
           onMediaExpired={onMediaExpired}
+          growth={growth}
+          timeZone={family.timezone}
+          onGrowthExpired={onGrowthExpired}
           testID="detail-album"
         />
       )}

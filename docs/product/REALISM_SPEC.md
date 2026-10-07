@@ -62,7 +62,7 @@ Za vsako pasmo in fazo zbrati z viri: velikost/teža po starosti (rastne krivulj
 |---|---|---|
 | §1 Izbira ob ustvarjanju (pasma, izvor, starost) | ✅ **strežnik** (M5-R01) — `POST /api/parent/generate-pin {breed, origin, age_stage}`; mešanček brezplačen v vseh kombinacijah; ✅ **aplikacija** (M5-R04, 5. 10. 2026): "Izberi kužka" pred PIN-om, plačljive pasme vidne a zaklenjene, obdobje / starost / izvor / naslednje obdobje pri otroku in staršu | PRODUCT_SPEC §3 |
 | §2 Starost in faze | ✅ strežnik — starost = ob prihodu + tedni; faze iz virov, meje potrdil David (mladiček < 9 mes., mlad < 36 mes., starejši od 108 / 118 mes.); pravila faze od lokalne polnoči po tedenskem rojstnem dnevu | PRODUCT_SPEC §4, `breed_stage_params` |
-| §2 Slika raste s psom | ✅ strežnik — ob prehodu faze nova referenčna slika istega psa (image-to-image, Nano Banana Pro Edit) + videi; stare slike v zgodovini (album pozneje) | PRODUCT_SPEC §10 |
+| §2 Slika raste s psom | ✅ strežnik — ob prehodu faze nova referenčna slika istega psa (image-to-image, Nano Banana Pro Edit) + videi; stare slike v zgodovini; album rasti: 🛠 strežnik (M5-R04, `GET /api/child/pet/growth`, `GET /api/parent/pets/{pet}/growth`), aplikacija še ne | PRODUCT_SPEC §10 |
 | §3 Več obrokov (mladiček 4 → 3 → 2) | ✅ strežnik — okna po fazi (2-urna, David 5. 10.), obrok v tihih urah opravi starš | PRODUCT_SPEC §5 |
 | §3 Potrebe po gibanju po fazi | ✅ strežnik — cilj korakov = minute × 100 (minute potrdil David 5. 10.) | PRODUCT_SPEC §5 |
 | §3 Več spanja | 🟡 podatki shranjeni (S28), uporaba v videih / vedenju še ne | `breed_stage_params.sleep_hours` |

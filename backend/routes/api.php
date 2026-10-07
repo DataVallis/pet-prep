@@ -13,6 +13,7 @@ use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\PairingController;
 use App\Http\Controllers\ParentDashboardController;
 use App\Http\Controllers\ParentSettingsController;
+use App\Http\Controllers\PetGrowthController;
 use App\Http\Controllers\PetMediaController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
@@ -79,6 +80,10 @@ Route::post('webhooks/revenuecat', [RevenueCatWebhookController::class, 'handle'
 Route::get('media/{media}', [PetMediaController::class, 'show'])
     ->middleware(['signed:relative', 'throttle:media'])
     ->name('media.show');
+// M5-R04 growth album: archived reference images of earlier life stages.
+Route::get('media/history/{history}', [PetMediaController::class, 'showHistory'])
+    ->middleware(['signed:relative', 'throttle:media'])
+    ->name('media.history.show');
 
 /*
 |--------------------------------------------------------------------------
@@ -104,6 +109,8 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
             ->middleware('throttle:account-export');
         // Care Score / routine report of one child (M2-05 / M2-06).
         Route::get('children/{child}/report', [ChildReportController::class, 'show']);
+        // Growth album of one pet of the family (M5-R04): pictures across life stages.
+        Route::get('pets/{pet}/growth', [PetGrowthController::class, 'parent']);
 
         // Generate a 6-digit one-time child PIN (throttled more aggressively).
         // child_id (M2-02) = PIN login for that child profile; without it the
@@ -149,6 +156,8 @@ Route::middleware(['auth:sanctum', 'ability:child', 'throttle:api'])
         // Child API (M1-07): state + care actions. Children only (PetPolicy);
         // 423 while hard-stopped / ill / game over, 422 outside game rules.
         Route::get('pet', [ChildPetController::class, 'show']);
+        // Growth album (M5-R04): the pet's pictures across life stages.
+        Route::get('pet/growth', [PetGrowthController::class, 'child']);
 
         Route::middleware('throttle:child-actions')->group(function () {
             Route::post('pet/feed', [ChildPetController::class, 'feed']);

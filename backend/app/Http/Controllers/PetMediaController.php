@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pet;
 use App\Models\PetMedia;
+use App\Models\PetMediaHistory;
 use App\Models\User;
 use App\Services\Media\PetMediaService;
 use Illuminate\Support\Facades\Auth;
@@ -10,6 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 /**
  * GET /api/media/{media}?expires=…&v=…&signature=… (M4-05 / M4-05b)
+ * GET /api/media/history/{history}?… (growth album, M5-R04)
  *
  * Serves a stored pet image / state video from the private pet-media disk.
  * The URL is a short-lived capability (relative signed route, `signed:relative`
@@ -44,20 +47,35 @@ class PetMediaController extends Controller
      */
     public function show(PetMedia $media, PetMediaService $service): Response
     {
+        return $this->serve($media->pet, $media->isServable(), (string) $media->storage_path, (string) $media->mime, $service);
+    }
+
+    /**
+     * GET /api/media/history/{history}?expires=…&v=…&signature=… (M5-R04)
+     *
+     * An archived reference image of an earlier life stage (growth album,
+     * `pet_media_history`). Same capability and authorization rules as show().
+     */
+    public function showHistory(PetMediaHistory $history, PetMediaService $service): Response
+    {
+        return $this->serve($history->pet, true, $history->storage_path, (string) $history->mime, $service);
+    }
+
+    private function serve(?Pet $pet, bool $servable, string $path, string $mime, PetMediaService $service): Response
+    {
         $user = Auth::guard('sanctum')->user();
 
-        if ($user instanceof User && ($media->pet === null || ! $user->can('listen', $media->pet))) {
+        if ($user instanceof User && ($pet === null || ! $user->can('listen', $pet))) {
             abort(403);
         }
 
         $disk = $service->disk();
-        $path = (string) $media->storage_path;
 
-        abort_unless($media->isServable() && $disk->exists($path), 404);
+        abort_unless($servable && $path !== '' && $disk->exists($path), 404);
 
         $maxAge = max(60, (int) request()->query('expires', 0) - now()->getTimestamp());
         $headers = [
-            'Content-Type' => (string) $media->mime,
+            'Content-Type' => $mime,
             'Cache-Control' => 'private, max-age='.min($maxAge, 5400),
             'X-Content-Type-Options' => 'nosniff',
             'Content-Disposition' => 'inline',
