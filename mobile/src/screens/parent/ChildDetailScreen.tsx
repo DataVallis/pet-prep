@@ -58,36 +58,21 @@ import { mealsLine, nextStageLine, originLine, readPetProfile, stageLine } from 
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 import { PARENT_TRAINING_STRINGS, parentTrainingLines } from '@/modules/training/training';
 import { fonts, palette, tightTracking } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-export const CHILD_DETAIL_STRINGS = {
-  back: 'Nazaj',
-  album: 'Vsi posnetki kužka',
-  periods: { 7: '7 dni', 30: '30 dni', 84: '12 tednov' } satisfies Record<ReportDays, string>,
-  periodA11y: (label: string) => `Obdobje: ${label}`,
-  loading: 'Nalagam poročilo …',
-  loadError: 'Poročila ni bilo mogoče naložiti.',
-  offline: 'Ni povezave. Prikazani so zadnji naloženi podatki.',
-  retry: 'Poskusi znova',
-  periodScore: 'Ocena v obdobju',
-  totalScore: (n: number | null) => `Skupaj od začetka: ${n === null ? '—' : n}`,
-  noScore: 'Še ni dovolj podatkov',
-  byType: 'Po rutinah',
-  typeLine: (own: number, expected: number) => `${own} od ${expected}`,
-  typeMissed: (n: number) => `zamujeno ${n}`,
-  typePending: (n: number) => `odprto ${n}`,
-  daily: 'Po dnevih',
-  walk: (steps: string, goal: string | null) => (goal ? `${steps} / ${goal} korakov` : `${steps} korakov`),
-  noRoutines: 'brez rutin',
-  missed: 'Zamujene rutine',
-  noMissed: 'V tem obdobju ni zamujene rutine.',
-  illnesses: 'Bolezni',
-  illnessRow: (from: string, to: string | null) => (to ? `${from} – ${to}` : `${from} – še traja`),
-  timeline: 'Časovnica',
-  timelineEmpty: 'Še ni dejavnosti.',
-  timelineError: 'Časovnice ni bilo mogoče naložiti.',
-  loadMore: 'Naloži več',
-  noPet: 'Otrok še nima psa — poročilo bo na voljo po podpisu pogodbe.',
-} as const;
+/** All user-visible strings of this screen (`parent:childDetail`, M1-18). */
+export const CHILD_DETAIL_STRINGS = strings('parent', 'childDetail', {
+  periodA11y: (label: string) => t('parent:childDetail.periodA11y', { label }),
+  totalScore: (n: number | null) => t('parent:childDetail.totalScore', { score: n === null ? '—' : String(n) }),
+  typeLine: (own: number, expected: number) => t('parent:childDetail.typeLine', { own, expected }),
+  typeMissed: (n: number) => t('parent:childDetail.typeMissed', { n }),
+  typePending: (n: number) => t('parent:childDetail.typePending', { n }),
+  walk: (steps: string, goal: string | null) =>
+    goal ? t('parent:childDetail.walkGoal', { steps, goal }) : t('parent:childDetail.walk', { steps }),
+  illnessRow: (from: string, to: string | null) =>
+    to ? t('parent:childDetail.illnessRange', { from, to }) : t('parent:childDetail.illnessOngoing', { from }),
+});
 
 const S = CHILD_DETAIL_STRINGS;
 
@@ -97,15 +82,15 @@ interface ChildDetailScreenProps {
   onBack: () => void;
 }
 
-/** 12500 → "12.500" (Slovenian thousands separator, no Intl needed). */
+/** 12500 → "12.500" (sl) / "12,500" (en) — the language's thousands separator, no Intl needed. */
 export function formatSteps(n: number): string {
-  return String(Math.max(0, Math.round(n))).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  return String(Math.max(0, Math.round(n))).replace(/\B(?=(\d{3})+(?!\d))/g, t('family:format.thousands'));
 }
 
 function instantText(iso: string | null, timezone: string): string {
   if (!iso) return '';
   const p = localParts(iso, timezone);
-  return p ? `${dayLabel(p.date)} ${p.time}` : iso;
+  return p ? t('family:date.dateTime', { date: dayLabel(p.date), time: p.time }) : iso;
 }
 
 function Timeline({ petId, family }: { petId: number; family: FamilyOverview }) {
@@ -323,16 +308,16 @@ export default function ChildDetailScreen({ child, family, onBack }: ChildDetail
               <Card>
                 <SectionTitle>{S.byType}</SectionTitle>
                 {ROUTINE_TYPES.map((type) => {
-                  const t = data.by_type[type];
+                  const totals = data.by_type[type];
                   // Training (M5-R03) only for a pet that has it — or a period in which it counted.
-                  if (type === 'training' && !trainingEnabled && t.expected === 0 && t.done === 0) return null;
+                  if (type === 'training' && !trainingEnabled && totals.expected === 0 && totals.done === 0) return null;
                   return (
                     <View key={type} style={styles.typeRow} testID={`report-type-${type}`}>
                       <RoutineIcon type={type} />
                       <Text style={styles.typeLabel}>{ROUTINE_LABELS[type]}</Text>
-                      <Text style={styles.strong}>{S.typeLine(t.done_by_child, t.expected)}</Text>
+                      <Text style={styles.strong}>{S.typeLine(totals.done_by_child, totals.expected)}</Text>
                       <Text style={[styles.muted, styles.flex, styles.right]}>
-                        {[t.missed > 0 ? S.typeMissed(t.missed) : null, t.pending > 0 ? S.typePending(t.pending) : null]
+                        {[totals.missed > 0 ? S.typeMissed(totals.missed) : null, totals.pending > 0 ? S.typePending(totals.pending) : null]
                           .filter((x): x is string => x !== null)
                           .join(' · ')}
                       </Text>

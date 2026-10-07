@@ -31,24 +31,18 @@ import ControlsScreen from '@/screens/parent/ControlsScreen';
 import BreedPaywallScreen from '@/screens/parent/BreedPaywallScreen';
 import AddChildScreen from '@/screens/parent/AddChildScreen';
 import ChildDetailScreen from '@/screens/parent/ChildDetailScreen';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-/** User-visible strings (extract to i18n with M1-18). */
-export const DASHBOARD_STRINGS = {
-  title: 'Pregled družine',
-  noChildSubtitle: 'Še ni povezanega otroka',
+/** User-visible strings (`parent:dashboard`, M1-18). */
+export const DASHBOARD_STRINGS = strings('parent', 'dashboard', {
+  /** "2 otroka · 1 kuža" / "2 children · 1 dog". */
   familySubtitle: (children: number, pets: number) =>
-    `${children} ${children === 1 ? 'otrok' : children === 2 ? 'otroka' : children <= 4 ? 'otroci' : 'otrok'} · ${pets} ${
-      pets === 1 ? 'kuža' : pets === 2 ? 'kužka' : pets <= 4 ? 'kužki' : 'kužkov'
-    }`,
-  loading: 'Nalagam pregled …',
-  loadError: 'Pregleda ni bilo mogoče osvežiti. Prikazani so zadnji znani podatki.',
-  offline: 'Ni povezave. Prikazani so zadnji znani podatki.',
-  firstLoadError: 'Pregleda ni bilo mogoče naložiti.',
-  retry: 'Poskusi znova',
-  logout: 'Odjava',
-  closeNotice: 'Zapri',
-  tabs: { dashboard: 'Pregled', controls: 'Nadzor', breeds: 'Pasme' },
-} as const;
+    t('parent:dashboard.familySubtitle', {
+      children: t('parent:dashboard.counts.children', { count: children }),
+      pets: t('parent:dashboard.counts.dogs', { count: pets }),
+    }),
+});
 
 type Tab = 'dashboard' | 'controls' | 'breeds';
 

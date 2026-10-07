@@ -1,1 +1,233 @@
-{}
+{
+  "dashboard": {
+    "title": "Family overview",
+    "noChildSubtitle": "No child connected yet",
+    "familySubtitle": "{{children}} · {{pets}}",
+    "counts": {
+      "children_one": "{{count}} child",
+      "children_other": "{{count}} children",
+      "dogs_one": "{{count}} dog",
+      "dogs_other": "{{count}} dogs"
+    },
+    "loading": "Loading the overview …",
+    "loadError": "The overview couldn't be refreshed. Showing the last known data.",
+    "offline": "No connection. Showing the last known data.",
+    "firstLoadError": "The overview couldn't be loaded.",
+    "retry": "Try again",
+    "logout": "Sign out",
+    "closeNotice": "Close",
+    "tabs": {
+      "dashboard": "Overview",
+      "controls": "Controls",
+      "breeds": "Breeds"
+    }
+  },
+  "controls": {
+    "title": "Controls and family",
+    "back": "Back to the overview",
+    "pets": "Dogs",
+    "closeNotice": "Close",
+    "about": "About the app"
+  },
+  "addChildCard": {
+    "title": "Add a child",
+    "body": "Enter your child's nickname and get a 6-digit code. Your child types it in on their own phone — no e-mail or password needed.",
+    "cta": "Start"
+  },
+  "ui": {
+    "lightA11y": "Traffic light: {{label}}"
+  },
+  "addChild": {
+    "title": "Add a child",
+    "titleRelogin": "New sign-in code",
+    "back": "Back",
+    "nicknameLabel": "Child's nickname",
+    "nicknamePlaceholder": "e.g. Mia",
+    "birthYearLabel": "Year of birth (optional)",
+    "birthYearPlaceholder": "e.g. 2016",
+    "privacy": "We don't need an e-mail address or a surname.",
+    "privacyDetail": "Your child signs in only with the code you create here.",
+    "next": "Next",
+    "nicknameInvalid": "Enter a nickname (up to {{max}} characters, no @).",
+    "birthYearInvalid": "The year must be between {{min}} and {{max}}.",
+    "createErrors": {
+      "too_many_children": "A family can have at most 10 children.",
+      "invalid_name": "A nickname can only contain letters, numbers, spaces, hyphens, apostrophes and full stops.",
+      "offline": "Can't reach the server. Check your internet connection and try again.",
+      "server": "The child couldn't be added right now. Please try again."
+    },
+    "petTitle": "Which dog will {{name}} care for?",
+    "newPet": "New dog",
+    "newPetHint": "Your child gets their own puppy. It is born when your child signs the Responsibility Contract.",
+    "joinPet": "Join a dog: {{label}}",
+    "joinPetHintNames": "Already cared for by {{names}}. A shared dog — each child has their own score.",
+    "joinPetHint": "A shared dog — each child has their own score.",
+    "petsLoading": "Loading the family's dogs …",
+    "pinLabel": "Sign-in code",
+    "pinFor": "For: {{name}}",
+    "instructions": "Your child opens PetPrep on their phone, chooses \"I'm a kid\" and types in this code.",
+    "stepLines": {
+      "new_pet": {
+        "open": "Open PetPrep on your child's phone.",
+        "code": "Your child chooses \"I'm a kid\" and types in the 6-digit code.",
+        "finish": "Your child signs the Responsibility Contract and the puppy is born."
+      },
+      "join_pet": {
+        "open": "Open PetPrep on your child's phone.",
+        "code": "Your child chooses \"I'm a kid\" and types in the 6-digit code.",
+        "finish": "Your child signs their own Responsibility Contract and can then care for the dog."
+      },
+      "relogin": {
+        "open": "Open PetPrep on the new phone or tablet.",
+        "code": "Your child chooses \"I'm a kid\" and types in the 6-digit code.",
+        "finish": "The dog and the progress stay the same."
+      }
+    },
+    "reloginNote": "A child can be signed in on up to 3 devices — on the fourth, the oldest one is signed out.",
+    "validFor": "Code valid for another {{time}}",
+    "expired": "The code has expired. Create a new one.",
+    "newCode": "New code",
+    "generating": "Creating the code …",
+    "waiting": "Waiting for your child to enter the code …",
+    "oneTime": "The code works only once. A new code cancels the previous one.",
+    "pairedTitle": "Your child is connected!",
+    "pairedBody": {
+      "new_pet": "{{name}} can now sign the Responsibility Contract on their phone — that's when the puppy is born.",
+      "join_pet": "{{name}} can now sign their own Responsibility Contract and then care for the dog.",
+      "relogin": "{{name}} is signed in on the new device. The dog is still the same."
+    },
+    "toDashboard": "To the overview",
+    "errors": {
+      "rate_limited": "Too many new codes in a short time. Please try again in {{seconds}} s.",
+      "forbidden": "Only a parent account can create a code.",
+      "unauthorized": "Your session has expired. Please sign in again.",
+      "child_not_found": "This child is no longer in your family.",
+      "pet_not_joinable": "This dog can't be joined any more. Choose another dog or a new one.",
+      "already_paired": "This child already cares for a dog — they can only get a code to sign in on a new device.",
+      "breed_locked": "This breed is part of a paid challenge and is unlocked only with a purchase. Choose another breed.",
+      "invalid_profile": "The dog choice couldn't be saved. Please choose again.",
+      "offline": "Can't reach the server. Check your internet connection and try again.",
+      "server": "The code couldn't be created right now. Please try again."
+    },
+    "changeDog": "Choose another dog",
+    "editDog": "Change the dog",
+    "editDogHint": "A new choice creates a new code; this code then stops working.",
+    "previousChoicePin": "This code still works for the previous dog choice. Create a new code for the new choice.",
+    "muttLocked": "The mixed breed is free, but the server refused it. This is our mistake — please contact support.",
+    "rateLimitedNoWait": "Too many new codes in a short time. Please try again.",
+    "retry": "Try again"
+  },
+  "childDetail": {
+    "back": "Back",
+    "album": "All of the dog's videos",
+    "periods": {
+      "7": "7 days",
+      "30": "30 days",
+      "84": "12 weeks"
+    },
+    "periodA11y": "Period: {{label}}",
+    "loading": "Loading the report …",
+    "loadError": "The report couldn't be loaded.",
+    "offline": "No connection. Showing the last loaded data.",
+    "retry": "Try again",
+    "periodScore": "Score for the period",
+    "totalScore": "Overall since the start: {{score}}",
+    "noScore": "Not enough data yet",
+    "byType": "By routine",
+    "typeLine": "{{own}} of {{expected}}",
+    "typeMissed": "missed {{n}}",
+    "typePending": "open {{n}}",
+    "daily": "By day",
+    "walkGoal": "{{steps}} / {{goal}} steps",
+    "walk": "{{steps}} steps",
+    "noRoutines": "no routines",
+    "missed": "Missed routines",
+    "noMissed": "No routine was missed in this period.",
+    "illnesses": "Illnesses",
+    "illnessRange": "{{from}} – {{to}}",
+    "illnessOngoing": "{{from}} – still ongoing",
+    "timeline": "Timeline",
+    "timelineEmpty": "No activity yet.",
+    "timelineError": "The timeline couldn't be loaded.",
+    "loadMore": "Load more",
+    "noPet": "This child doesn't have a dog yet — the report will be available once the contract is signed."
+  },
+  "childCard": {
+    "scoreTitle": "Care Score",
+    "noScore": "Not enough data yet",
+    "noScoreHint": "The score appears once the first routine is due.",
+    "illnessPenalty": "{{illnesses}} (−{{points}} points)",
+    "today": "Today",
+    "todayDone": "Done {{n}}",
+    "todayOwn": "{{name}}: {{n}}",
+    "todayPending": "Still open {{n}}",
+    "todayMissed": "Missed {{n}}",
+    "todayNothing": "No routine has come up yet today.",
+    "week": "Last 7 days",
+    "legendDone": "done",
+    "legendMissed": "missed",
+    "pet": "Dog",
+    "metrics": {
+      "hunger": "Food",
+      "thirst": "Water",
+      "energy": "Exercise",
+      "hygiene": "Cleanliness"
+    },
+    "noPet": "No dog yet. Create a code — your child types it in and gets a puppy.",
+    "createPin": "Create a code",
+    "awaitingContract": "The dog is waiting for {{name}} to sign the Responsibility Contract.",
+    "details": "Details",
+    "detailsA11y": "Details: {{name}}"
+  },
+  "petControls": {
+    "caretakers": "Cared for by {{names}}",
+    "noCaretakers": "Nobody is caring for it yet",
+    "playing": "Game running",
+    "stop": "Pause the game (hard stop)",
+    "resume": "Resume the game",
+    "a11y": "{{action}}: {{pet}}",
+    "a11yNames": "{{action}}: {{pet}} ({{names}})",
+    "confirmStop": "Pause the game? The dog freezes and your child can't do anything until you resume the game.",
+    "confirmStopFor": "Pause the game for {{names}}? The dog freezes and your child can't do anything until you resume the game.",
+    "confirmResume": "Resume the game? The dog unfreezes and your child can care for it again.",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "stopped": "The game is paused.",
+    "resumed": "The game is running again.",
+    "alreadyStopped": "The game is already paused.",
+    "alreadyRunning": "The game is already running.",
+    "checking": "Checking the status …",
+    "errors": {
+      "offline": "Can't reach the server. We refreshed the status — please try again.",
+      "not_found": "This dog is no longer one of the family's active dogs.",
+      "server": "The command didn't work. Please try again."
+    }
+  },
+  "quietHours": {
+    "title": "Quiet hours",
+    "hint": "During quiet hours the dog hardly gets hungry, makes no mess and sends no notifications. Times follow the family's time zone.",
+    "active": "On",
+    "school": "School",
+    "bedtime": "Bedtime",
+    "start": "Start",
+    "end": "End",
+    "save": "Save",
+    "saved": "Saved.",
+    "invalidTime": "Enter times as HH:MM (e.g. 08:00).",
+    "loadError": "Quiet hours couldn't be loaded.",
+    "retry": "Try again",
+    "saveError": "Saving didn't work. Check the times and try again.",
+    "offline": "Can't reach the server. Please try again."
+  },
+  "notifications": {
+    "title": "Notifications",
+    "status": {
+      "on": "On — this phone gets an alarm when your child hasn't cared for the dog for over an hour, and news about illness or the shelter.",
+      "off": "Off — you'll only find out about a neglected dog when you open the app.",
+      "blocked": "Turned off in the phone's settings."
+    },
+    "quietHours": "Nothing is sent during quiet hours. Notifications never include children's names.",
+    "enable": "Turn on notifications",
+    "openSettings": "Open settings"
+  }
+}

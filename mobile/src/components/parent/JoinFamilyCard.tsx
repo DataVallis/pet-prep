@@ -13,28 +13,14 @@ import { useJoinFamily } from '@/hooks/queries/useParentQueries';
 import { Card, PARENT_COLORS as C, SectionTitle } from '@/components/parent/ParentUi';
 import { classifyJoinError, normalizeInviteCode, type JoinErrorKind } from '@/modules/family/invite';
 import { fonts, palette } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-export const JOIN_FAMILY_STRINGS = {
-  title: 'Imate kodo družine?',
-  hint: 'Če vas je drugi starš povabil, vpišite njegovo kodo. Mogoče le, dokler v svoji družini še nimate otrok ali psov.',
-  placeholder: 'ABCD EFGH',
-  join: 'Pridruži se družini',
-  joined: (parents: number) =>
-    `Pridružili ste se družini (${parents} ${parents === 1 ? 'starš' : parents === 2 ? 'starša' : parents <= 4 ? 'starši' : 'staršev'}).`,
-  errors: {
-    invalid_code: 'Ta koda ne obstaja. Preverite jo in poskusite znova.',
-    code_expired: 'Koda je potekla. Prosite drugega starša za novo.',
-    code_used: 'Koda je že uporabljena. Prosite drugega starša za novo.',
-    already_member: 'V tej družini že ste.',
-    family_not_empty: 'Vaša družina že ima otroke ali pse, zato se ne morete pridružiti drugi družini.',
-    too_many_attempts: 'Preveč napačnih kod. Poskusite znova čez 15 minut.',
-    rate_limited: 'Preveč poskusov v kratkem času. Počakajte minuto in poskusite znova.',
-    not_a_parent: 'Družini se lahko pridruži samo starševski račun.',
-    invalid_format: 'Koda ima 8 črk in številk (npr. ABCD EFGH).',
-    offline: 'Ni povezave s strežnikom. Poskusite znova.',
-    server: 'Pridružitev ni uspela. Poskusite znova.',
-  } satisfies Record<JoinErrorKind, string>,
-} as const;
+
+/** All user-visible strings (`family:join`, M1-18). */
+export const JOIN_FAMILY_STRINGS = strings('family', 'join', {
+  joined: (parents: number) => t('family:join.joined', { count: parents }),
+});
 
 const S = JOIN_FAMILY_STRINGS;
 
