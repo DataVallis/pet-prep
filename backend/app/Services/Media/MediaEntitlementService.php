@@ -28,6 +28,12 @@ use App\Models\Pet;
  * This is the single place the decision is made, so payments (M3 —
  * RevenueCat entitlement) and AI media tokens (M4-09) can plug in here
  * without touching the pipeline. The reference image is always included.
+ *
+ * M3-08: a premium-breed pet can only be created while the family has the
+ * `challenge` entitlement (EntitlementService::canUseBreed at generate-pin
+ * and at pairing), so the breed stays the proof here. A later refund /
+ * expiry does not downgrade an existing pet's video set (open question for
+ * David, M3-11 trial rules).
  */
 class MediaEntitlementService
 {

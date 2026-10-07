@@ -9,7 +9,6 @@ use App\Enums\UserRole;
 use App\Exceptions\FamilyException;
 use App\Exceptions\PairingException;
 use App\Jobs\GeneratePetReferenceImage;
-use App\Models\BreedConfig;
 use App\Models\Family;
 use App\Models\FamilyMember;
 use App\Models\Pet;
@@ -36,6 +35,7 @@ class PairingService
         private readonly PetDnaService $petDna,
         private readonly LifeStageService $lifeStages,
         private readonly TrainingService $training,
+        private readonly EntitlementService $entitlements,
     ) {}
 
     /**
@@ -206,27 +206,26 @@ class PairingService
             return ['pet' => $pet, 'joined_existing' => true];
         }
 
-        return ['pet' => $this->createPet($family->id, $child, $profile), 'joined_existing' => false];
+        return ['pet' => $this->createPet($family, $child, $profile), 'joined_existing' => false];
     }
 
     /**
-     * A new pet's profile must be a breed with a config that needs no
-     * purchase (M5-R01): premium breeds stay purchase-only as before (the
-     * RevenueCat unlock upgrades an existing pet). Every origin / age stage
-     * is free (David 2026-10-05).
+     * A new pet's profile must be a breed with a config the family may use
+     * (M5-R01, M3-08): free breeds always; a premium breed
+     * (`breed_configs.premium_unlock`, the Border Collie) only with the
+     * family's active `challenge` entitlement (EntitlementService). Every
+     * origin / age stage is free (David 2026-10-05).
      *
      * @throws FamilyException breed_locked (422)
      */
-    public function assertProfileAllowed(PetProfileChoice $profile): void
+    public function assertProfileAllowed(PetProfileChoice $profile, Family $family): void
     {
-        $config = BreedConfig::forBreed($profile->breed);
-
-        if ($config === null || $config->premium_unlock) {
+        if (! $this->entitlements->canUseBreed($family, $profile->breed)) {
             throw new FamilyException('breed_locked', 'This breed is part of the paid PetPrep challenge.');
         }
     }
 
-    private function createPet(int $familyId, User $child, ?PetProfileChoice $profile): Pet
+    private function createPet(Family $family, User $child, ?PetProfileChoice $profile): Pet
     {
         // Pet DNA is generated offline. The reference image is produced
         // asynchronously by a queued job dispatched after this transaction
@@ -235,11 +234,13 @@ class PairingService
         // so it is assigned right after the insert; the caller holds the
         // family row lock, which makes the per-family uniqueness check safe.
         // M5-R01: breed / origin / age stage chosen by the parent (default:
-        // a bought mutt puppy). A premium breed chosen at PIN time but locked
-        // by now falls back to the mutt. Without a profile (old PIN,
-        // deprecated /child/pair) → a legacy-profile mutt (pre-M5 rules).
+        // a bought mutt puppy). A premium breed chosen at PIN time whose
+        // entitlement is gone by now (refund / expiry, M3-08) falls back to
+        // the mutt. Without a profile (old PIN, deprecated /child/pair) → a
+        // legacy-profile mutt (pre-M5 rules).
+        $familyId = $family->id;
         $breed = $profile?->breed ?? BreedType::Mutt;
-        if (BreedConfig::forBreed($breed)?->premium_unlock !== false) {
+        if (! $this->entitlements->canUseBreed($family, $breed)) {
             $breed = BreedType::Mutt;
         }
         $arrivalAge = $profile !== null ? $this->lifeStages->arrivalAgeFor($breed->slug(), $profile->ageStage) : null;

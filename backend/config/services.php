@@ -55,13 +55,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | RevenueCat — In-App Purchase Verification
+    | RevenueCat — purchase webhook + family entitlements (M3-08)
     |--------------------------------------------------------------------------
     */
     'revenuecat' => [
-        'secret_key' => env('REVENUECAT_SECRET_KEY'),
+        // The webhook's Authorization header value (RevenueCat → "Bearer <secret>").
+        // Empty → POST /api/webhooks/revenuecat answers 503 and processes nothing (fail closed).
+        'webhook_secret' => env('REVENUECAT_WEBHOOK_SECRET'),
         'public_key' => env('REVENUECAT_PUBLIC_KEY'),
-        'border_collie_product_id' => env('REVENUECAT_BORDER_COLLIE_PRODUCT_ID', 'border_collie_unlock'),
+        // Product id → our entitlement key, used when an event has no entitlement_ids.
+        // The values are also the entitlement keys we know (others are ignored).
+        'entitlements' => json_decode((string) env('REVENUECAT_ENTITLEMENTS', ''), true)
+            ?: ['petprep_challenge_12w' => 'challenge'],
+        // SANDBOX events are always stored; they grant / revoke only when this is true.
+        'accept_sandbox' => (bool) env('REVENUECAT_ACCEPT_SANDBOX', env('APP_ENV', 'production') !== 'production'),
     ],
 
 ];

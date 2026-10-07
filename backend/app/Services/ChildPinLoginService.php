@@ -108,7 +108,7 @@ class ChildPinLoginService
 
             $mode = $this->resolveMode($family, $child, $joinPetId, forGeneration: true);
             if ($mode === self::MODE_NEW_PET && $profile !== null) {
-                $this->pairing->assertProfileAllowed($profile);
+                $this->pairing->assertProfileAllowed($profile, $family);
             }
 
             // One open PIN per child: a new one replaces the previous.

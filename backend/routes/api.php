@@ -8,6 +8,7 @@ use App\Http\Controllers\ChildPetController;
 use App\Http\Controllers\ChildProfileController;
 use App\Http\Controllers\ChildReportController;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\EntitlementController;
 use App\Http\Controllers\FalAiWebhookController;
 use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\PairingController;
@@ -17,6 +18,7 @@ use App\Http\Controllers\PetGrowthController;
 use App\Http\Controllers\PetMediaController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
+use App\Http\Middleware\VerifyRevenueCatWebhook;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,8 +68,9 @@ Route::middleware('auth:sanctum')->group(function () {
 Route::post('webhooks/fal-ai', [FalAiWebhookController::class, 'handle'])
     ->middleware('throttle:api');
 
+// M3-08: fails closed (no REVENUECAT_WEBHOOK_SECRET → 503), auth before validation.
 Route::post('webhooks/revenuecat', [RevenueCatWebhookController::class, 'handle'])
-    ->middleware('throttle:api');
+    ->middleware(['throttle:api', VerifyRevenueCatWebhook::class]);
 
 /*
 |--------------------------------------------------------------------------
@@ -138,6 +141,9 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
 
         // Family settings (timezone, M1-03)
         Route::put('settings', [ParentSettingsController::class, 'update']);
+
+        // What the family has unlocked (M3-08, RevenueCat → family_entitlements).
+        Route::get('entitlements', [EntitlementController::class, 'index']);
     });
 
 /*

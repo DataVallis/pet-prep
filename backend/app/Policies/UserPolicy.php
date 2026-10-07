@@ -37,6 +37,15 @@ class UserPolicy
     }
 
     /**
+     * The family's purchases / entitlements (M3-08): parents only; the
+     * controller reads the caller's own family, never another one.
+     */
+    public function viewEntitlements(User $user): bool
+    {
+        return $user->isParent();
+    }
+
+    /**
      * Delete one's own parent account (M2-08). A superadmin is refused in
      * AccountDeletionService with the explicit reason `superadmin_protected`.
      */

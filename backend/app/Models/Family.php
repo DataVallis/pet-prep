@@ -12,7 +12,9 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * A family (M2-01, ADR-012): several parents, several children, one or more
  * pets. All parents see every child and pet of the family. The family
  * timezone drives every wall-clock rule (quiet hours, midnight, feed windows).
- * The billing unit is the pet, not the family.
+ * Entitlements (M3-08) belong to the family: whatever one parent buys,
+ * every parent shares (ADR-012 originally planned per-pet billing — see
+ * DECISIONS 2026-10-07).
  *
  * @property int $id
  * @property string $timezone
@@ -54,6 +56,14 @@ class Family extends Model
     public function quietHours(): HasOne
     {
         return $this->hasOne(QuietHours::class);
+    }
+
+    /**
+     * Paid features of the family (M3-08) — read through EntitlementService.
+     */
+    public function entitlements(): HasMany
+    {
+        return $this->hasMany(FamilyEntitlement::class);
     }
 
     public function invites(): HasMany
