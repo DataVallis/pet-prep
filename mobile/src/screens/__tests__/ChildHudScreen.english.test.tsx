@@ -10,6 +10,11 @@ import ChildHudScreen from '@/screens/ChildHudScreen';
 import { useAppStore } from '@/store/appStore';
 import { makeLiveChildState, makePet } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { configure } from '@testing-library/react-native';
+// Dock label/hint texts are hidden from the screen reader (the button's accessibilityLabel
+// carries the full phrase, asserted separately); these tests still query the visible text.
+configure({ defaultIncludeHiddenElements: true });
+
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');

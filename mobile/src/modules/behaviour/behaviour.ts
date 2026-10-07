@@ -17,6 +17,7 @@
  */
 
 import { familyClock, whenText } from '@/modules/childPet/familyTime';
+import { dockWhen, type DockHint } from '@/modules/childPet/dockHint';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -243,8 +244,11 @@ export function durationText(minutes: number): string {
 export interface TakeOutCountdown {
   /** Line above the dock. */
   line: string;
-  /** Short hint under the "Pelji ven" button. */
-  hint: string;
+  /**
+   * Short hint under the "Pelji ven" button; a later family day is a two-line
+   * {@link DockHint} ("jutri" above "07:10") so the time is never cut off.
+   */
+  hint: string | DockHint;
   /** The puppy should go out now (the accident is due / overdue). */
   due: boolean;
 }
@@ -266,9 +270,11 @@ export function takeOutCountdown(clock: TakeOutClock, serverNowMs: number, timez
     const d = durationText(minutes);
     return { line: BEHAVIOUR_STRINGS.takeOutIn(d), hint: d, due: false };
   }
-  const when = whenText(clock.next_due_at, new Date(serverNowMs).toISOString(), timezone);
-  if (when === null) return null;
-  return { line: BEHAVIOUR_STRINGS.takeOutAt(when), hint: when, due: false };
+  const nowIso = new Date(serverNowMs).toISOString();
+  const when = whenText(clock.next_due_at, nowIso, timezone);
+  const dock = dockWhen(clock.next_due_at, nowIso, timezone);
+  if (when === null || dock === null) return null;
+  return { line: BEHAVIOUR_STRINGS.takeOutAt(when), hint: dock.day === null ? dock.text : dock, due: false };
 }
 
 // ── Texts (parent) ────────────────────────────────────────────

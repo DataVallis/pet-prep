@@ -24,6 +24,11 @@ import {
 import { playerUris, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import type { PetUpdatedBroadcast } from '@/types';
+import { configure } from '@testing-library/react-native';
+// Dock label/hint texts are hidden from the screen reader (the button's accessibilityLabel
+// carries the full phrase, asserted separately); these tests still query the visible text.
+configure({ defaultIncludeHiddenElements: true });
+
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');

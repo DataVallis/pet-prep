@@ -9,6 +9,7 @@ import { stateFromErrorBody } from '@/modules/contract/signContract';
 import type { ChildPetState } from '@/api/client';
 import type { CareAction, ChildPetView, LockReason } from '@/modules/childPet/childPetView';
 import { familyClock, isLaterDay, whenText } from '@/modules/childPet/familyTime';
+import { dockText, dockWhen, type DockHint } from '@/modules/childPet/dockHint';
 import { BEHAVIOUR_STRINGS, onlyChewingOpen } from '@/modules/behaviour/behaviour';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
@@ -207,18 +208,33 @@ export function cleanHint(view: ChildPetView): string | null {
   return null;
 }
 
-export function feedHint(view: ChildPetView): string | null {
+/**
+ * Dock hint under a disabled "Hrani": "ob 17:00", "jutri" + "06:00" (two lines, the time
+ * never cut), "Najprej pospravi"; null when enabled / locked.
+ */
+export function feedDockHint(view: ChildPetView): DockHint | null {
   if (view.feeding.can_feed || view.lock.is_locked) return null;
-  if (view.pet.needs_cleaning) return HUD_HINTS.cleanFirst;
+  if (view.pet.needs_cleaning) return dockText(HUD_HINTS.cleanFirst);
   const next = view.feeding.next_feed_window?.start ?? null;
   // The current, unused window can still be closed for the moment (e.g. a lock just ended).
-  return whenText(next, view.server_time, view.timezone);
+  return dockWhen(next, view.server_time, view.timezone);
 }
 
-export function waterHint(view: ChildPetView): string | null {
+/** Full-phrase feed hint ("jutri ob 06:00") — the screen-reader text of {@link feedDockHint}. */
+export function feedHint(view: ChildPetView): string | null {
+  return feedDockHint(view)?.a11y ?? null;
+}
+
+/** Dock hint under a disabled "Voda": "ob 15:30", "jutri" (daily limit), "Najprej pospravi". */
+export function waterDockHint(view: ChildPetView): DockHint | null {
   if (view.water.can_water || view.lock.is_locked) return null;
-  if (view.pet.needs_cleaning) return HUD_HINTS.cleanFirst;
+  if (view.pet.needs_cleaning) return dockText(HUD_HINTS.cleanFirst);
   const next = view.water.next_allowed_at;
-  if (!next || isLaterDay(next, view.server_time, view.timezone)) return HUD_HINTS.tomorrow;
-  return whenText(next, view.server_time, view.timezone);
+  if (!next || isLaterDay(next, view.server_time, view.timezone)) return dockText(HUD_HINTS.tomorrow);
+  return dockWhen(next, view.server_time, view.timezone);
+}
+
+/** Full-phrase water hint — the screen-reader text of {@link waterDockHint}. */
+export function waterHint(view: ChildPetView): string | null {
+  return waterDockHint(view)?.a11y ?? null;
 }

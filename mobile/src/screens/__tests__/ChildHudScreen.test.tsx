@@ -21,6 +21,11 @@ import { makeBroadcast, makeLegacyPetProfile, makeLiveChildState, makeMedia, mak
 import { liveVideoPlayers, mockVideoPlayers, playerUris, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import type { PetUpdatedBroadcast } from '@/types';
+import { configure } from '@testing-library/react-native';
+// Dock label/hint texts are hidden from the screen reader (the button's accessibilityLabel
+// carries the full phrase, asserted separately); these tests still query the visible text.
+configure({ defaultIncludeHiddenElements: true });
+
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -154,7 +159,11 @@ describe('ChildHudScreen', () => {
         water: { can_water: false, next_allowed_at: '2026-10-04T23:15:00-04:00' },
       }),
     );
-    expect(screen.getByText('jutri ob 06:00')).toBeTruthy();
+    // Tomorrow: two dock lines ("jutri" above "06:00") — the time is never cut off;
+    // the screen reader still hears the full phrase.
+    expect(screen.getByTestId('action-feed-hint-day')).toHaveTextContent('jutri');
+    expect(screen.getByTestId('action-feed-hint-text')).toHaveTextContent('06:00');
+    expect(screen.getByTestId('action-feed').props.accessibilityLabel).toBe('Hrani, jutri ob 06:00');
     expect(screen.getByText('ob 23:15')).toBeTruthy();
   });
 

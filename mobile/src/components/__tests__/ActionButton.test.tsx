@@ -7,6 +7,11 @@ import { StyleSheet } from 'react-native';
 import { render, fireEvent } from '@testing-library/react-native';
 import { Beef } from 'lucide-react-native';
 import ActionButton from '@/components/ActionButton';
+import { configure } from '@testing-library/react-native';
+// Dock label/hint texts are hidden from the screen reader (the button's accessibilityLabel
+// carries the full phrase, asserted separately); these tests still query the visible text.
+configure({ defaultIncludeHiddenElements: true });
+
 
 describe('ActionButton', () => {
   // CGP v2: the care that is due is the one solid-mint button; a disabled one never is.
@@ -60,5 +65,67 @@ describe('ActionButton', () => {
       <ActionButton icon={<Beef />} label="Water" onPress={jest.fn()} />,
     );
     expect(getByText('Water')).toBeTruthy();
+  });
+});
+
+describe('ActionButton dock hint (device feedback 2026-10-07)', () => {
+  it('a day hint renders two lines; the time line is never ellipsised (shrinks instead)', () => {
+    const r = render(
+      <ActionButton
+        testID="feed"
+        icon={<Beef />}
+        label="Feed"
+        onPress={jest.fn()}
+        disabled
+        hint={{ day: 'tomorrow', text: '06:00', a11y: 'tomorrow at 06:00' }}
+        compact
+      />,
+    );
+    expect(r.getByTestId('feed-hint-day').props.children).toBe('tomorrow');
+    const time = r.getByTestId('feed-hint-text');
+    expect(time.props.children).toBe('06:00');
+    expect(time.props.numberOfLines).toBe(1);
+    expect(time.props.adjustsFontSizeToFit).toBe(true);
+    expect(time.props.ellipsizeMode).toBeUndefined();
+    expect(r.getByTestId('feed').props.accessibilityLabel).toBe('Feed, tomorrow at 06:00');
+  });
+
+  it('a plain string hint is one block that may wrap to two lines', () => {
+    const r = render(<ActionButton testID="clean" icon={<Beef />} label="Clean" onPress={jest.fn()} disabled hint="Najprej pospravi" />);
+    expect(r.queryByTestId('clean-hint-day')).toBeNull();
+    expect(r.getByTestId('clean-hint-text').props.numberOfLines).toBe(2);
+    expect(r.getByTestId('clean').props.accessibilityLabel).toBe('Clean, Najprej pospravi');
+  });
+
+  it('long labels ("Emergency meal", "Nujni obrok") may wrap and shrink, capped against huge text sizes', () => {
+    const r = render(<ActionButton testID="feed" icon={<Beef />} label="Emergency meal" onPress={jest.fn()} due />);
+    const label = r.getByTestId('feed-label');
+    expect(label.props.numberOfLines).toBe(2);
+    expect(label.props.adjustsFontSizeToFit).toBe(true);
+    expect(label.props.maxFontSizeMultiplier).toBeGreaterThan(1);
+    expect(StyleSheet.flatten(label.props.style).textAlign).toBe('center');
+  });
+
+  it('no hint → no hint block', () => {
+    const r = render(<ActionButton testID="walk" icon={<Beef />} label="Walk" onPress={jest.fn()} hint={null} />);
+    expect(r.queryByTestId('walk-hint')).toBeNull();
+  });
+});
+
+describe('ActionButton a11y and dock slots (QA 2026-10-07)', () => {
+  it('visible label/hint are hidden from the screen reader; the button label carries the phrase', () => {
+    const r = render(<ActionButton testID="feed" icon={<Beef />} label="Feed" onPress={jest.fn()} disabled hint={{ day: 'tomorrow', text: '06:00', a11y: 'tomorrow at 06:00' }} />);
+    const texts = r.getByTestId('feed-texts');
+    expect(texts.props.accessibilityElementsHidden).toBe(true);
+    expect(texts.props.importantForAccessibility).toBe('no-hide-descendants');
+    expect(r.getByTestId('feed').props.accessibilityLabel).toBe('Feed, tomorrow at 06:00');
+  });
+
+  it('each button is an equal flex slot; the walk counter is one shrinking line', () => {
+    const r = render(<ActionButton testID="walk" icon={<Beef />} label="Walk" onPress={jest.fn()} hint="4.857/4.000" hintSingleLine />);
+    expect(StyleSheet.flatten(r.getByTestId('walk-slot').props.style)).toMatchObject({ flex: 1, minWidth: 0 });
+    const hint = r.getByTestId('walk-hint-text');
+    expect(hint.props.numberOfLines).toBe(1);
+    expect(hint.props.adjustsFontSizeToFit).toBe(true);
   });
 });
