@@ -150,15 +150,13 @@ describe('import provenance', function () {
             ->and($windows->notes)->toStartWith('Decision: potrdil David 2026-10-05.')
             ->and($windows->notes)->toContain('no literature number');
         // Since David's answers (2026-10-05) no imported value is an open proposal —
-        // except the M5-R02 teething chewing chance and the M5-R03 training
-        // effects (Claude, waiting for David). The training multiplier, the
-        // individual variation, the M5-R03b numbers (minutes, progress, decay)
-        // and the starting progress are David's decisions (verified).
+        // except the M5-R02 teething chewing chance (Claude, waiting for David).
+        // The training multiplier, the individual variation, the M5-R03b numbers
+        // (minutes, progress, decay), the starting progress and the two training
+        // effects (David 2026-10-07) are David's decisions (verified).
         expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
-                StageParamKey::PottyTrainingAccidentReduction->value,
-                StageParamKey::PlaceTrainingChewingReduction->value,
             ]);
     });
 
