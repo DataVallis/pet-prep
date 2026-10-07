@@ -104,12 +104,15 @@ export const HUD_STRINGS = {
   } satisfies Record<PetState, string>,
 } as const;
 
-/** "STAROST: 2 MESECA" — Slovenian dual / plural (PRODUCT_SPEC §4). */
-export function formatAgeMonths(months: number): string {
-  const n = Math.max(0, Math.floor(months));
-  const mod = n % 100;
-  const word = mod === 1 ? 'MESEC' : mod === 2 ? 'MESECA' : mod === 3 || mod === 4 ? 'MESECI' : 'MESECEV';
-  return `STAROST: ${n} ${word}`;
+/**
+ * Legacy pet (no profile = no real age): the server's `virtual_age_months` is the
+ * 12-week challenge clock (whole weeks since birth), not the dog's age — so the HUD
+ * shows "TEDEN 1 OD 12" (same wording as the parent dashboard) instead of a
+ * misleading "STAROST: 0 MESECEV".
+ */
+export function formatChallengeWeek(weeksSinceBirth: number): string {
+  const week = Math.min(12, Math.max(0, Math.floor(weeksSinceBirth)) + 1);
+  return `TEDEN ${week} OD 12`;
 }
 
 /** HUD second line of a profiled pet: "Posvojen iz zavetišča · 24. 11. 2026 postane mlad pes". */
@@ -477,7 +480,7 @@ export default function ChildHudScreen() {
                   )}
                 </>
               ) : (
-                <Text style={styles.petAgeText}>{formatAgeMonths(pet.virtual_age_months)}</Text>
+                <Text style={styles.petAgeText}>{formatChallengeWeek(pet.virtual_age_months)}</Text>
               )}
             </View>
           </View>

@@ -12,7 +12,7 @@ import { childPetKey } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { computeHudLayout, METRIC_BAR_WIDTH, METRICS_RESERVED_RIGHT, METRICS_RIGHT } from '@/modules/hud/hudLayout';
 import AppNavigator from '@/navigation/AppNavigator';
-import ChildHudScreen, { formatAgeMonths, HUD_STRINGS } from '@/screens/ChildHudScreen';
+import ChildHudScreen, { formatChallengeWeek, HUD_STRINGS } from '@/screens/ChildHudScreen';
 import { ALBUM_STRINGS } from '@/modules/petMedia/album';
 import { LOCKED_STRINGS } from '@/screens/LockedScreen';
 import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
@@ -101,13 +101,13 @@ describe('ChildHudScreen', () => {
     // M5-R04: a profiled pet shows stage · age, origin and the next stage instead of the old age.
     expect(screen.getByTestId('hud-stage')).toHaveTextContent('Mladiček · 2 meseca');
     expect(screen.getByTestId('hud-profile-sub')).toHaveTextContent('Kupljen pri vzreditelju · 24. 11. 2026 postane mlad pes');
-    expect(screen.queryByText(formatAgeMonths(0))).toBeNull();
+    expect(screen.queryByText(formatChallengeWeek(0))).toBeNull();
   });
 
   it('legacy pet (profile.legacy, null fields): the old age line, nothing new, no crash', async () => {
     getChildPet.mockResolvedValueOnce(makeLiveChildState({ pet: { profile: makeLegacyPetProfile(), age_months: null, origin: null, life_stage: null } }));
     renderWithQuery(<ChildHudScreen />);
-    expect(await screen.findByText(formatAgeMonths(0))).toBeTruthy();
+    expect(await screen.findByText(formatChallengeWeek(0))).toBeTruthy();
     expect(screen.queryByTestId('hud-stage')).toBeNull();
     expect(screen.queryByTestId('hud-profile-sub')).toBeNull();
   });
@@ -435,15 +435,14 @@ describe('ChildHudScreen', () => {
   });
 });
 
-describe('formatAgeMonths', () => {
-  it('Slovenian forms', () => {
-    expect(formatAgeMonths(0)).toBe('STAROST: 0 MESECEV');
-    expect(formatAgeMonths(1)).toBe('STAROST: 1 MESEC');
-    expect(formatAgeMonths(2)).toBe('STAROST: 2 MESECA');
-    expect(formatAgeMonths(3)).toBe('STAROST: 3 MESECI');
-    expect(formatAgeMonths(11)).toBe('STAROST: 11 MESECEV');
+describe('formatChallengeWeek', () => {
+  it('shows the challenge week instead of a fake age for legacy pets', () => {
+    expect(formatChallengeWeek(0)).toBe('TEDEN 1 OD 12');
+    expect(formatChallengeWeek(1)).toBe('TEDEN 2 OD 12');
+    expect(formatChallengeWeek(11)).toBe('TEDEN 12 OD 12');
+    expect(formatChallengeWeek(30)).toBe('TEDEN 12 OD 12');
+    expect(formatChallengeWeek(-3)).toBe('TEDEN 1 OD 12');
   });
-
 });
 
 describe('ChildHudScreen — AI dog media (M4-03)', () => {
