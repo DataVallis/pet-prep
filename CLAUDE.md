@@ -74,7 +74,7 @@ Keep the claude.ai Project copies (`petprep/*.md`) in sync after merges. No chil
 **Both:** the child is a minor — collect the minimum data, no analytics SDK without David's OK, no third-party calls carrying child PII.
 
 ## Scope guard (MVP)
-Do NOT build: AR, GPS maps, weather API, LLM/vision vet, B2B QR coupons, cats. (Multiple parents/children/pets per family is IN scope since 2026-10-04 — see `docs/decisions/ADR-012-family-model.md`.) Post-MVP ideas go to the backlog in `ROADMAP.md`.
+Do NOT build: AR, GPS maps, weather API, LLM/vision vet, B2B QR coupons. (Cats are IN scope since 2026-10-07 — species → breed picker, ROADMAP M5-R06 — but need a care spec first; don't build cat rules before David approves it. Multiple parents/children/pets per family is IN scope since 2026-10-04 — see `docs/decisions/ADR-012-family-model.md`.) Post-MVP ideas go to the backlog in `ROADMAP.md`.
 
 ## Orchestration
 **Long sessions (David, 2026-10-06):** when a session gets very long (older context already compacted into summaries) or after a larger finished block of work, run `/handoff` so `HANDOFF.md` is complete, then recommend David to start a new session; the new agent starts by reading `HANDOFF.md`.

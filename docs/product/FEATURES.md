@@ -56,7 +56,7 @@ Razmejitev brezplačno / plačljivo v `BUSINESS_MODEL.md` §7 je **predlog**, ki
 |---|---|---|---|---|---|
 | Zaslon »Izberi kužka« | Pri »Nov pes« starš izbere pasmo, izvor in starost ob prihodu, šele nato dobi kodo. Pred povezavo otroka lahko izbiro spremeni (»Spremeni kužka«). | starš | ✅ | M5-R04 (del 1) | 2026-10-05 |
 | Pasma | Mešanček 🆓. Border Collie 💶 se izbere na planu izziv (že v preizkusu); na brezplačnem planu je zaklenjen z razlago. | starš | ✅ | M5-R04, M3-11, M3-09 | 2026-10-07 |
-| Izbira plana (brezplačni mešanček / 12-tedenski izziv — 7 dni brezplačno) | V »Izberi kužka« starš najprej izbere plan (brez privzete izbire); cena iz trgovine, sicer 49,99 €; jasno: brez samodejnega plačila, po 7 dneh se igra ustavi do nakupa. Če je otrok preizkus že imel, PIN zaslon to pove. | starš | ✅ | M3-11, M3-09 | 2026-10-07 |
+| Izbira plana (brezplačni mešanček / 12-tedenski izziv — 7 dni brezplačno) | V »Izberi kužka« starš najprej izbere plan (brez privzete izbire); cena iz trgovine, sicer 49,99 €; jasno: brez samodejnega plačila, po 7 dneh se igra ustavi do nakupa. Če je otrok preizkus že imel, PIN zaslon to pove. | starš | ✅ | M3-11, M3-09 | 2026-10-07 — 📱 viden na TestFlight 3.0.0 (David, 7. 10.); popravki: mešanček pri izzivu onemogočen (M5-F03), cena v sandboxu je po trgovini računa (npr. $44.99 v ZDA) |
 | Izvor: kupljen / posvojen | Pokaže se na profilu psa; posvojen pes je na sliki zdrav in miren, brez »žalostnih« klišejev. Vpliv izvora na vedenje (plašnost, nered) še ni v igri. | starš | ✅ (vedenje 🗓, čaka Davida) | M5-R01 | 2026-10-05 |
 | Starost ob prihodu | Mladiček (2 meseca), mlad pes (9 mesecev), odrasel (3 leta), starejši (9 let; Border Collie 9,8). Ob vsaki ena poštena vrstica s številkami (obroki, koraki). Brez privzete izbire. | starš | ✅ | M5-R01, M5-R04 | 2026-10-05 |
 | Kuža se stara | 1 teden igre = 1 mesec življenja; obdobja mladiček → mlad pes → odrasel → starejši (meje iz virov, potrdil David). Otrok in starš vidita npr. »Mladiček · 3 mesece« in kdaj pride naslednje obdobje. | otrok, starš | ✅ | M5-R01, M5-R04 | 2026-10-05 |
@@ -99,7 +99,7 @@ Velja samo za nove pse, ustvarjene z različico aplikacije, ki vedenje zna prika
 
 ## 5. Šolanje (dresura)
 
-Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na telefonu.**
+Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7. 10. 2026 (TestFlight 3.0.0, David): deluje; napaka — slab rezultat pokaže »Great job!« (M5-F04).**
 
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID | Od kdaj |
 |---|---|---|---|---|---|
@@ -227,7 +227,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 | Zaprta beta (TestFlight + Google Play, 20–50 družin) | — | — | 🗓 | M5-07 |
 | Breed Matchmaker | Primerna pasma iz 12-tedenskih podatkov otroka. | starš | ⏸ | backlog |
 | Faza 2: asistent za pravega psa | Gumb »Kupili smo pravo žival«: ovratnice, AI prvi stik z napotitvijo k veterinarju, rast in prehrana. | lastnik | ⏸ | backlog, `PHASE2_SPEC.md` |
-| Mačka in druge živali | Podoba je že pripravljena (znak ni pes). | — | ⏸ | backlog |
+| Mačka in druge živali | David 7. 10. 2026: na začetku **pes in mačka**, izbira vrste → pasme. Pravila skrbi za mačko še niso določena. Podoba je že pripravljena (znak ni pes). | starš, otrok | 🗓 | M5-R06 | 2026-10-07 |
 | AR, GPS zemljevidi, vremenski API, LLM veterinar | Izključeno iz MVP. | — | ⏸ | scope guard |
 
 ---
