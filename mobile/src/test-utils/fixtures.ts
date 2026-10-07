@@ -168,6 +168,8 @@ export function makeChildState(
       illness_until: null,
       is_game_over: false,
       certificate_eligible: false,
+      // M3-11 (additive): plan + payment status — a grandfathered paid challenge.
+      plan: { type: 'challenge', status: 'paid', trial_ends_at: '2026-10-11T09:00:00+00:00', paid_at: '2026-10-04T09:00:00+00:00' },
       current_video_url: null,
       media_status: 'disabled',
       reference_image_url: null,
@@ -391,6 +393,8 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     is_hard_stopped: false,
     is_ill: false,
     escalation_level: 0,
+    // M3-11 (additive): plan + payment status — a grandfathered paid challenge.
+    plan: { type: 'challenge', status: 'paid', trial_ends_at: '2026-10-08T10:00:00+02:00', paid_at: '2026-10-01T10:00:00+02:00' },
     profile: makePetProfile(),
     caretakers: [],
     // M2-05 / M2-06: spec traffic light, metrics, Care Score, today, timeline.
