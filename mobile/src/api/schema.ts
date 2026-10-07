@@ -2190,8 +2190,13 @@ export interface operations {
                                  * @enum {string|null}
                                  */
                                 feed_mode: "window" | "emergency" | null;
-                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
-                                emergency_threshold: number;
+                                /**
+                                 * @description M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                                 *     is allowed — sent only while the last ended meal window was missed
+                                 *     (nothing fed since its start) and no window is open; null otherwise.
+                                 *     The app compares the live hunger with it and nothing else.
+                                 */
+                                emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -2491,8 +2496,13 @@ export interface operations {
                              * @enum {string|null}
                              */
                             feed_mode: "window" | "emergency" | null;
-                            /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
-                            emergency_threshold: number;
+                            /**
+                             * @description M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                             *     is allowed — sent only while the last ended meal window was missed
+                             *     (nothing fed since its start) and no window is open; null otherwise.
+                             *     The app compares the live hunger with it and nothing else.
+                             */
+                            emergency_threshold: number | null;
                             /** @description The current window while unused, otherwise the next one. */
                             next_feed_window: {
                                 start: string;
@@ -2812,8 +2822,13 @@ export interface operations {
                                  * @enum {string|null}
                                  */
                                 feed_mode: "window" | "emergency" | null;
-                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
-                                emergency_threshold: number;
+                                /**
+                                 * @description M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                                 *     is allowed — sent only while the last ended meal window was missed
+                                 *     (nothing fed since its start) and no window is open; null otherwise.
+                                 *     The app compares the live hunger with it and nothing else.
+                                 */
+                                emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -3131,8 +3146,13 @@ export interface operations {
                                  * @enum {string|null}
                                  */
                                 feed_mode: "window" | "emergency" | null;
-                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
-                                emergency_threshold: number;
+                                /**
+                                 * @description M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                                 *     is allowed — sent only while the last ended meal window was missed
+                                 *     (nothing fed since its start) and no window is open; null otherwise.
+                                 *     The app compares the live hunger with it and nothing else.
+                                 */
+                                emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -3450,8 +3470,13 @@ export interface operations {
                                  * @enum {string|null}
                                  */
                                 feed_mode: "window" | "emergency" | null;
-                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
-                                emergency_threshold: number;
+                                /**
+                                 * @description M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                                 *     is allowed — sent only while the last ended meal window was missed
+                                 *     (nothing fed since its start) and no window is open; null otherwise.
+                                 *     The app compares the live hunger with it and nothing else.
+                                 */
+                                emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -3769,8 +3794,13 @@ export interface operations {
                                  * @enum {string|null}
                                  */
                                 feed_mode: "window" | "emergency" | null;
-                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
-                                emergency_threshold: number;
+                                /**
+                                 * @description M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                                 *     is allowed — sent only while the last ended meal window was missed
+                                 *     (nothing fed since its start) and no window is open; null otherwise.
+                                 *     The app compares the live hunger with it and nothing else.
+                                 */
+                                emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -4088,8 +4118,13 @@ export interface operations {
                                  * @enum {string|null}
                                  */
                                 feed_mode: "window" | "emergency" | null;
-                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
-                                emergency_threshold: number;
+                                /**
+                                 * @description M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                                 *     is allowed — sent only while the last ended meal window was missed
+                                 *     (nothing fed since its start) and no window is open; null otherwise.
+                                 *     The app compares the live hunger with it and nothing else.
+                                 */
+                                emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -4411,8 +4446,13 @@ export interface operations {
                                  * @enum {string|null}
                                  */
                                 feed_mode: "window" | "emergency" | null;
-                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
-                                emergency_threshold: number;
+                                /**
+                                 * @description M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                                 *     is allowed — sent only while the last ended meal window was missed
+                                 *     (nothing fed since its start) and no window is open; null otherwise.
+                                 *     The app compares the live hunger with it and nothing else.
+                                 */
+                                emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -4734,8 +4774,13 @@ export interface operations {
                                  * @enum {string|null}
                                  */
                                 feed_mode: "window" | "emergency" | null;
-                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
-                                emergency_threshold: number;
+                                /**
+                                 * @description M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                                 *     is allowed — sent only while the last ended meal window was missed
+                                 *     (nothing fed since its start) and no window is open; null otherwise.
+                                 *     The app compares the live hunger with it and nothing else.
+                                 */
+                                emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -5057,8 +5102,13 @@ export interface operations {
                                  * @enum {string|null}
                                  */
                                 feed_mode: "window" | "emergency" | null;
-                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
-                                emergency_threshold: number;
+                                /**
+                                 * @description M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                                 *     is allowed — sent only while the last ended meal window was missed
+                                 *     (nothing fed since its start) and no window is open; null otherwise.
+                                 *     The app compares the live hunger with it and nothing else.
+                                 */
+                                emergency_threshold: number | null;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;

@@ -97,8 +97,9 @@ export interface ChildPetView {
     /** M3-12: how a feed now counts; null when feeding is not possible now. */
     mode: FeedMode | null;
     /**
-     * M3-12: displayed hunger (%) at or below which the server allows an emergency meal;
-     * null for an older server without the rule (no emergency meals then).
+     * M3-12 rule A: displayed hunger (%) at or below which the server allows an emergency
+     * meal. The server sends it only while the last ended meal window was missed (nothing
+     * fed since) and no window is open; null otherwise (and from an older server).
      */
     emergency_threshold: number | null;
     /** The current window while unused, otherwise the next one (ISO instants). */
@@ -171,10 +172,11 @@ function thresholdOrNull(value: unknown): number | null {
 }
 
 /**
- * Feeding after a metric change the server hasn't re-evaluated yet (a `PetUpdated` tick):
- * the same rule as `CareScheduleService::feedCheck` — an unused window still open (as the
- * server last said), or an emergency meal once hunger shows ≤ the threshold — never while
- * locked or dirty. So the button turns into "Nujni obrok" the moment hunger reaches 20 %.
+ * Feeding after a metric change the server hasn't re-evaluated yet (a `PetUpdated` tick).
+ * No game rule lives here: whether a meal was missed is the server's decision
+ * (`emergency_threshold` is null when not). The client only compares the live hunger with
+ * the threshold the server sent, so the button turns into "Nujni obrok" the moment a tick
+ * brings hunger there — never while locked or dirty.
  */
 export function deriveFeeding(feeding: ChildPetView['feeding'], hungerLevel: number, blocked: boolean): ChildPetView['feeding'] {
   const windowOpen = feeding.can_feed && feeding.mode === 'window';
@@ -484,6 +486,8 @@ export function optimisticView(view: ChildPetView, action: CareAction, nowMs: nu
           ...view.feeding,
           can_feed: false,
           mode: null,
+          // Any meal means "nothing missed since" (rule A) until the server says otherwise.
+          emergency_threshold: null,
           // An emergency meal is outside every window: the current (if any) stays as it was.
           fed_in_current_window: view.feeding.mode === 'emergency' ? view.feeding.fed_in_current_window : true,
         },
@@ -528,6 +532,7 @@ export function revertOptimistic(current: ChildPetView, previous: ChildPetView, 
               ? previous.feeding.mode
               : null,
           fed_in_current_window: previous.feeding.fed_in_current_window,
+          emergency_threshold: previous.feeding.emergency_threshold,
         },
       };
     case 'water':

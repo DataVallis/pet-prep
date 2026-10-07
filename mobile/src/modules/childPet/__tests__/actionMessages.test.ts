@@ -50,11 +50,11 @@ describe('classifyActionError', () => {
 
 describe('refusalMessage (family timezone)', () => {
   it('outside_feed_window → "Naslednji obrok je ob 17:00"', () => {
-    expect(refusalMessage('outside_feed_window', '2026-10-04T17:00:00+02:00', lj)).toBe('Naslednji obrok je ob 17:00. Če bo kuža zelo lačen, mu lahko daš nujni obrok.');
+    expect(refusalMessage('outside_feed_window', '2026-10-04T17:00:00+02:00', lj)).toBe('Naslednji obrok je ob 17:00.');
   });
 
   it('outside_feed_window without next_allowed_at uses the state window; New York family sees its own clock', () => {
-    expect(refusalMessage('outside_feed_window', null, ny)).toBe('Naslednji obrok je ob 17:00. Če bo kuža zelo lačen, mu lahko daš nujni obrok.');
+    expect(refusalMessage('outside_feed_window', null, ny)).toBe('Naslednji obrok je ob 17:00.');
   });
 
   it('after the evening window → "jutri ob 06:00"', () => {

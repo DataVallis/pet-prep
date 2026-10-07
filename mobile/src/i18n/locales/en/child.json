@@ -52,10 +52,10 @@
       "water": "The water bowl is already full.",
       "clean": "It was already clean."
     },
-    "emergencyFeed": "Yum! Your pup is full. An emergency meal doesn't count as on time — the next meal is {{when}}.",
-    "emergencyFeedNoTime": "Yum! Your pup is full. An emergency meal doesn't count as on time.",
+    "emergencyFeed": "Yum! Your pup is full. The meal was missed, so it doesn't count as on time — the next meal is {{when}}.",
+    "emergencyFeedNoTime": "Yum! Your pup is full. The meal was missed, so it doesn't count as on time.",
     "refused": {
-      "outsideFeedWindow": "The next meal is {{when}}. If your pup gets very hungry, you can give it an emergency meal.",
+      "outsideFeedWindow": "The next meal is {{when}}.",
       "outsideFeedWindowNoTime": "It's not mealtime right now.",
       "alreadyFed": "Your pup has already eaten. You can feed it again {{when}}.",
       "alreadyFedNoTime": "Your pup has already eaten.",
