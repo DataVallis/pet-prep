@@ -67,7 +67,8 @@
       "ill": "Your pup is at the vet until {{until}}.",
       "illNoTime": "Your pup is at the vet.",
       "game_over": "Your pup has gone to the shelter. Talk to your parents.",
-      "inactive": "The game isn't on right now."
+      "inactive": "The game isn't on right now.",
+      "payment_required": "The game waits until a parent unlocks it."
     },
     "offline": "No connection. Check the internet and try again.",
     "tooFast": "Slow down! Try again in a moment.",
@@ -102,6 +103,10 @@
     "inactive": {
       "title": "The game isn't on",
       "body": "The game isn't on right now. Ask a parent to check the settings."
+    },
+    "payment_required": {
+      "title": "The game is waiting for a parent",
+      "body": "The game waits until a parent unlocks it. Your pup is safe."
     }
   },
   "cleaning": {

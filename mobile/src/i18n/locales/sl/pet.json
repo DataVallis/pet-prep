@@ -33,6 +33,19 @@
   "picker": {
     "title": "Izberi kužka za: {{name}}",
     "intro": "Izbira določa, kako bo skrb za kužka videti — kot pri pravem psu.",
+    "planTitle": "Način",
+    "plans": {
+      "free": {
+        "title": "Brezplačni mešanček",
+        "hint": "Za vedno brezplačno. Vse nege in pravila igre, brez 12-tedenskega programa in certifikata; zgodovina zadnjih 7 dni. Pes je vedno mešanček."
+      },
+      "challenge": {
+        "title": "12-tedenski izziv — 7 dni brezplačno, nato {{price}}",
+        "hint": "Program, ki pokaže, ali je otrok pripravljen na psa, z Border Colliejem, certifikatom in celotno zgodovino. Preizkus se začne, ko otrok podpiše pogodbo. Ni samodejnega plačila: po 7 dneh se igra ustavi, dokler izziva za tega psa ne kupite."
+      }
+    },
+    "planMissing": "Izberite način.",
+    "breedFreeNote": "V brezplačnem načrtu je pes vedno mešanček. Border Collie je del 12-tedenskega izziva.",
     "breedTitle": "Pasma",
     "breeds": { "mutt": "Mešanček", "border_collie": "Border collie" },
     "breedHints": {

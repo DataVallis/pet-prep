@@ -67,7 +67,8 @@
       "ill": "Kuža je pri veterinarju do {{until}}.",
       "illNoTime": "Kuža je pri veterinarju.",
       "game_over": "Kuža je odšel v zavetišče. Pogovori se s starši.",
-      "inactive": "Igra trenutno ni aktivna."
+      "inactive": "Igra trenutno ni aktivna.",
+      "payment_required": "Igra počaka, da jo starš odklene."
     },
     "offline": "Ni povezave. Preveri internet in poskusi znova.",
     "tooFast": "Počasi! Poskusi čez trenutek.",
@@ -102,6 +103,10 @@
     "inactive": {
       "title": "Igra ni aktivna",
       "body": "Igra trenutno ni aktivna. Prosi starša, da preveri nastavitve."
+    },
+    "payment_required": {
+      "title": "Igra počaka na starša",
+      "body": "Igra počaka, da jo starš odklene. Kuža je na varnem."
     }
   },
   "cleaning": {
