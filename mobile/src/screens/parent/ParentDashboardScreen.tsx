@@ -24,31 +24,25 @@ import { useAppStore } from '@/store/appStore';
 import { usePushPromptOnFirstView } from '@/modules/push/usePushPromptOnFirstView';
 import AddChildCard from '@/components/AddChildCard';
 import ChildOverviewCard from '@/components/parent/ChildOverviewCard';
-import JoinFamilyCard from '@/components/parent/JoinFamilyCard';
+import JoinFamilyCard, { joinNoticeText, type JoinNotice } from '@/components/parent/JoinFamilyCard';
 import ParentLiveChannels from '@/components/ParentLiveChannels';
 import { ErrorBanner, LoadingBlock, NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import ControlsScreen from '@/screens/parent/ControlsScreen';
 import BreedPaywallScreen from '@/screens/parent/BreedPaywallScreen';
 import AddChildScreen from '@/screens/parent/AddChildScreen';
 import ChildDetailScreen from '@/screens/parent/ChildDetailScreen';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-/** User-visible strings (extract to i18n with M1-18). */
-export const DASHBOARD_STRINGS = {
-  title: 'Pregled družine',
-  noChildSubtitle: 'Še ni povezanega otroka',
+/** User-visible strings (`parent:dashboard`, M1-18). */
+export const DASHBOARD_STRINGS = strings('parent', 'dashboard', {
+  /** "2 otroka · 1 kuža" / "2 children · 1 dog". */
   familySubtitle: (children: number, pets: number) =>
-    `${children} ${children === 1 ? 'otrok' : children === 2 ? 'otroka' : children <= 4 ? 'otroci' : 'otrok'} · ${pets} ${
-      pets === 1 ? 'kuža' : pets === 2 ? 'kužka' : pets <= 4 ? 'kužki' : 'kužkov'
-    }`,
-  loading: 'Nalagam pregled …',
-  loadError: 'Pregleda ni bilo mogoče osvežiti. Prikazani so zadnji znani podatki.',
-  offline: 'Ni povezave. Prikazani so zadnji znani podatki.',
-  firstLoadError: 'Pregleda ni bilo mogoče naložiti.',
-  retry: 'Poskusi znova',
-  logout: 'Odjava',
-  closeNotice: 'Zapri',
-  tabs: { dashboard: 'Pregled', controls: 'Nadzor', breeds: 'Pasme' },
-} as const;
+    t('parent:dashboard.familySubtitle', {
+      children: t('parent:dashboard.counts.children', { count: children }),
+      pets: t('parent:dashboard.counts.dogs', { count: pets }),
+    }),
+});
 
 type Tab = 'dashboard' | 'controls' | 'breeds';
 
@@ -91,7 +85,8 @@ function BottomNavBar({ activeTab, onSelect }: { activeTab: Tab; onSelect: (tab:
 export default function ParentDashboardScreen() {
   const [activeTab, setActiveTab] = useState<Tab>('dashboard');
   const [overlay, setOverlay] = useState<Overlay>({ kind: 'none' });
-  const [notice, setNotice] = useState<string | null>(null);
+  // A code, not text: translated at render so it follows a language switch (M1-18 review).
+  const [notice, setNotice] = useState<JoinNotice | null>(null);
   const dashboard = useParentDashboard();
   const noChild = isNoChildPaired(dashboard.data);
   const family = familyFromDashboard(dashboard.data);
@@ -205,7 +200,7 @@ export default function ParentDashboardScreen() {
         </View>
 
         <ScrollView style={styles.flex} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-          {notice && <NoticeBanner text={notice} closeLabel={DASHBOARD_STRINGS.closeNotice} onClose={() => setNotice(null)} />}
+          {notice && <NoticeBanner text={joinNoticeText(notice)} closeLabel={DASHBOARD_STRINGS.closeNotice} onClose={() => setNotice(null)} />}
           {dashboard.isError && (
             <ErrorBanner
               text={

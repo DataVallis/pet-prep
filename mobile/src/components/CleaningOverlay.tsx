@@ -3,23 +3,15 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { alpha, fonts, palette, tightTracking } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
 const TOTAL_SPOTS = 5;
 
-/** User-visible strings (i18n with M1-18). */
-export const CLEANING_STRINGS = {
-  title: 'Pospravi za kužkom!',
-  progress: (done: number, total: number) => `${done} / ${total} madežev`,
-  hint: 'Tapni madeže, da jih zdrgneš.',
-  close: 'Kasneje',
-  spot: 'Madež',
-  /** M5-R02: a puppy accident — same game, puddles instead of dirt. */
-  accident: {
-    title: 'Ups, luža! Pobriši jo.',
-    hint: 'Tapni lužice, da jih pobrišeš.',
-    spot: 'Lužica',
-  },
-} as const;
+/** User-visible strings (`child:cleaning`, M1-18); `accident` = M5-R02 puddles instead of dirt. */
+export const CLEANING_STRINGS = strings('child', 'cleaning', {
+  progress: (done: number, total: number) => t('child:cleaning.progress', { done, total }),
+});
 
 /** What is being cleaned: dirt (poop) or a puppy's puddle (M5-R02 accident). */
 export type CleaningMess = 'poop' | 'accident';

@@ -4,6 +4,7 @@
  * Two breed cards side by side: Mutt (free tier) and Border Collie
  * (premium, €4.99 one-time unlock). Includes placeholder
  * react-native-purchases integration and restore-purchases flow.
+ * Hidden until payments exist (#64). Texts in `paywall:breeds` (M1-18).
  */
 
 import { useState } from 'react';
@@ -13,6 +14,18 @@ import { ChevronLeft, Check, Crown, Footprints, Lock, RotateCcw } from 'lucide-r
 
 import { useAppStore } from '@/store/appStore';
 import { fonts, light, palette, radius, tightTracking } from '@/theme';
+import { currentLanguageTag, t } from '@/i18n';
+import { formatThousands } from '@/i18n/format';
+import { strings } from '@/i18n/strings';
+
+/** User-visible strings of the breed paywall (`paywall:breeds`, M1-18). */
+export const PAYWALL_STRINGS = strings('paywall', 'breeds', {
+  stepsPerDay: (steps: number) =>
+    t('paywall:breeds.stepsPerDay', { steps: formatThousands(steps) }),
+  decay: (rate: number) => t('paywall:breeds.decay', { rate }),
+});
+
+const S = PAYWALL_STRINGS;
 
 // RevenueCat integration placeholder.
 // In production, import and configure Purchases here:
@@ -27,15 +40,21 @@ interface BreedPaywallScreenProps {
 
 interface BreedStats {
   dailySteps: number;
-  decayRate: string;
+  /** Needs drop by this many percent per hour. */
+  decayPercentPerHour: number;
 }
 
 const BREED_STATS: Record<'mutt' | 'border_collie', BreedStats> = {
-  mutt: { dailySteps: 4_000, decayRate: '-8%/hr' },
-  border_collie: { dailySteps: 10_000, decayRate: '-12%/hr' },
+  mutt: { dailySteps: 4_000, decayPercentPerHour: 8 },
+  border_collie: { dailySteps: 10_000, decayPercentPerHour: 12 },
 };
 
-const PREMIUM_PRICE = '4.99 €';
+const PREMIUM_PRICE_EUR = 4.99;
+
+/** "€4.99" (en) / "4,99 €" (sl) in the current language. */
+export function formatPremiumPrice(): string {
+  return new Intl.NumberFormat(currentLanguageTag(), { style: 'currency', currency: 'EUR' }).format(PREMIUM_PRICE_EUR);
+}
 const PREMIUM_ENTITLEMENT = 'border_collie_unlock';
 
 export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) {
@@ -57,12 +76,9 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
       // }
       await new Promise((resolve) => setTimeout(resolve, 1_500));
       setIsUnlocked(true);
-      Alert.alert('Success', 'Border Collie breed unlocked!');
-    } catch (err) {
-      Alert.alert(
-        'Purchase Failed',
-        err instanceof Error ? err.message : 'An unexpected error occurred.',
-      );
+      Alert.alert(S.alerts.successTitle, S.alerts.successMessage);
+    } catch {
+      Alert.alert(S.alerts.purchaseFailedTitle, S.alerts.unexpected);
     } finally {
       setIsPurchasing(false);
     }
@@ -77,12 +93,9 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
       //   setIsUnlocked(true);
       // }
       await new Promise((resolve) => setTimeout(resolve, 1_500));
-      Alert.alert('Restore', 'No previous purchases found.');
-    } catch (err) {
-      Alert.alert(
-        'Restore Failed',
-        err instanceof Error ? err.message : 'An unexpected error occurred.',
-      );
+      Alert.alert(S.alerts.restoreTitle, S.alerts.restoreNone);
+    } catch {
+      Alert.alert(S.alerts.restoreFailedTitle, S.alerts.unexpected);
     } finally {
       setIsRestoring(false);
     }
@@ -95,40 +108,40 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
     <View style={styles.root} testID="breed-paywall">
       {/* Header */}
       <View style={styles.header}>
-        <Pressable onPress={onBack} hitSlop={8} accessibilityRole="button" testID="paywall-back">
+        <Pressable onPress={onBack} hitSlop={8} accessibilityRole="button" accessibilityLabel={S.back} testID="paywall-back">
           <ChevronLeft color={light.ink} size={28} />
         </Pressable>
-        <Text style={styles.headerTitle}>Breed Selection</Text>
+        <Text style={styles.headerTitle}>{S.title}</Text>
       </View>
 
       <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
-        <Text style={styles.intro}>Choose the breed that fits your child's activity level.</Text>
+        <Text style={styles.intro}>{S.intro}</Text>
 
         {/* Breed cards side by side */}
         <View style={styles.cards}>
           {/* Mutt (Free) */}
           <View style={styles.card} testID="paywall-card-mutt">
-            <Text style={styles.cardTitle}>Mutt</Text>
+            <Text style={styles.cardTitle}>{S.mutt}</Text>
             <View style={[styles.pill, styles.pillFree]}>
-              <Text style={[styles.pillText, styles.pillTextFree]}>FREE</Text>
+              <Text style={[styles.pillText, styles.pillTextFree]}>{S.free}</Text>
             </View>
 
             <View style={styles.stats}>
               <View style={styles.statRow}>
                 <Footprints color={light.inkMuted} size={18} />
-                <Text style={styles.statText}>{mutt.dailySteps.toLocaleString('en-US')} steps/day</Text>
+                <Text style={styles.statText}>{S.stepsPerDay(mutt.dailySteps)}</Text>
               </View>
-              <Text style={styles.statText}>Decay: {mutt.decayRate}</Text>
+              <Text style={styles.statText}>{S.decay(mutt.decayPercentPerHour)}</Text>
             </View>
 
             <View style={styles.cardFooter}>
               {pet?.breed_type === 'mutt' ? (
                 <View style={styles.statusRow}>
                   <Check color={light.ok} size={18} />
-                  <Text style={styles.statusText}>Current Breed</Text>
+                  <Text style={styles.statusText}>{S.currentBreed}</Text>
                 </View>
               ) : (
-                <Text style={styles.mutedText}>Starter breed</Text>
+                <Text style={styles.mutedText}>{S.starterBreed}</Text>
               )}
             </View>
           </View>
@@ -136,29 +149,29 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
           {/* Border Collie (Premium) */}
           <View style={[styles.card, styles.cardPremium]} testID="paywall-card-collie">
             <View style={styles.cardTitleRow}>
-              <Text style={styles.cardTitle}>Border Collie</Text>
+              <Text style={styles.cardTitle}>{S.collie}</Text>
               <Crown color={light.ink} size={20} />
             </View>
             <View style={[styles.pill, styles.pillPremium]}>
-              <Text style={[styles.pillText, styles.pillTextPremium]}>RECOMMENDED · PREMIUM</Text>
+              <Text style={[styles.pillText, styles.pillTextPremium]}>{S.premium}</Text>
             </View>
 
             <View style={styles.stats}>
               <View style={styles.statRow}>
                 <Footprints color={light.ink} size={18} />
                 <Text style={[styles.statText, styles.statTextPremium]}>
-                  {collie.dailySteps.toLocaleString('en-US')} steps/day
+                  {S.stepsPerDay(collie.dailySteps)}
                 </Text>
               </View>
-              <Text style={[styles.statText, styles.statTextPremium]}>Decay: {collie.decayRate}</Text>
+              <Text style={[styles.statText, styles.statTextPremium]}>{S.decay(collie.decayPercentPerHour)}</Text>
             </View>
 
-            <Text style={styles.price}>{PREMIUM_PRICE}</Text>
+            <Text style={styles.price}>{formatPremiumPrice()}</Text>
 
             {isUnlocked ? (
               <View style={[styles.statusRow, styles.unlockedRow]}>
                 <Check color={light.ok} size={18} />
-                <Text style={styles.statusText}>Unlocked</Text>
+                <Text style={styles.statusText}>{S.unlocked}</Text>
               </View>
             ) : (
               <Pressable
@@ -178,7 +191,7 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
                 ) : (
                   <View style={styles.statusRow}>
                     <Lock color={palette.white} size={18} />
-                    <Text style={styles.unlockText}>Unlock Now</Text>
+                    <Text style={styles.unlockText}>{S.unlock}</Text>
                   </View>
                 )}
               </Pressable>
@@ -195,7 +208,7 @@ export default function BreedPaywallScreen({ onBack }: BreedPaywallScreenProps) 
           style={styles.restore}
         >
           {isRestoring ? <ActivityIndicator color={light.mintText} size={18} /> : <RotateCcw color={light.mintText} size={18} />}
-          <Text style={styles.restoreText}>Restore Purchases</Text>
+          <Text style={styles.restoreText}>{S.restore}</Text>
         </Pressable>
       </ScrollView>
     </View>

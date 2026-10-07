@@ -1,0 +1,237 @@
+{
+  "dashboard": {
+    "title": "Pregled družine",
+    "noChildSubtitle": "Še ni povezanega otroka",
+    "familySubtitle": "{{children}} · {{pets}}",
+    "counts": {
+      "children_one": "{{count}} otrok",
+      "children_two": "{{count}} otroka",
+      "children_few": "{{count}} otroci",
+      "children_other": "{{count}} otrok",
+      "dogs_one": "{{count}} kuža",
+      "dogs_two": "{{count}} kužka",
+      "dogs_few": "{{count}} kužki",
+      "dogs_other": "{{count}} kužkov"
+    },
+    "loading": "Nalagam pregled …",
+    "loadError": "Pregleda ni bilo mogoče osvežiti. Prikazani so zadnji znani podatki.",
+    "offline": "Ni povezave. Prikazani so zadnji znani podatki.",
+    "firstLoadError": "Pregleda ni bilo mogoče naložiti.",
+    "retry": "Poskusi znova",
+    "logout": "Odjava",
+    "closeNotice": "Zapri",
+    "tabs": {
+      "dashboard": "Pregled",
+      "controls": "Nadzor",
+      "breeds": "Pasme"
+    }
+  },
+  "controls": {
+    "title": "Nadzor in družina",
+    "back": "Nazaj na pregled",
+    "pets": "Psi",
+    "closeNotice": "Zapri",
+    "about": "O aplikaciji"
+  },
+  "addChildCard": {
+    "title": "Dodaj otroka",
+    "body": "Vpišite vzdevek otroka in dobite 6-mestno kodo. Otrok jo vtipka na svojem telefonu — brez e-pošte in gesla.",
+    "cta": "Začni"
+  },
+  "ui": {
+    "lightA11y": "Semafor: {{label}}"
+  },
+  "addChild": {
+    "title": "Dodaj otroka",
+    "titleRelogin": "Nova koda za prijavo",
+    "back": "Nazaj",
+    "nicknameLabel": "Vzdevek otroka",
+    "nicknamePlaceholder": "npr. Maja",
+    "birthYearLabel": "Letnica rojstva (neobvezno)",
+    "birthYearPlaceholder": "npr. 2016",
+    "privacy": "Ne potrebujemo e-pošte ali priimka.",
+    "privacyDetail": "Otrok se bo prijavil samo s kodo, ki jo ustvarite tukaj.",
+    "next": "Naprej",
+    "nicknameInvalid": "Vpišite vzdevek (do {{max}} znakov, brez @).",
+    "birthYearInvalid": "Letnica mora biti med {{min}} in {{max}}.",
+    "createErrors": {
+      "too_many_children": "V družini je lahko največ 10 otrok.",
+      "invalid_name": "Vzdevek lahko vsebuje le črke, številke, presledke, vezaj, opuščaj in piko.",
+      "offline": "Ni povezave s strežnikom. Preverite internet in poskusite znova.",
+      "server": "Otroka trenutno ni bilo mogoče dodati. Poskusite znova."
+    },
+    "petTitle": "Za katerega psa bo skrbel(a) {{name}}?",
+    "newPet": "Nov pes",
+    "newPetHint": "Otrok dobi svojega kužka. Rodi se, ko otrok podpiše Pogodbo o odgovornosti.",
+    "joinPet": "Pridruži se psu: {{label}}",
+    "joinPetHintNames": "Zanj že skrbi: {{names}}. Skupni pes, vsak otrok ima svojo oceno.",
+    "joinPetHint": "Skupni pes, vsak otrok ima svojo oceno.",
+    "petsLoading": "Nalagam pse v družini …",
+    "pinLabel": "Koda za prijavo",
+    "pinFor": "Za: {{name}}",
+    "instructions": "Otrok naj na svojem telefonu odpre PetPrep, izbere »Sem otrok« in vtipka to kodo.",
+    "stepLines": {
+      "new_pet": {
+        "open": "Na otrokovem telefonu odprite PetPrep.",
+        "code": "Otrok izbere »Sem otrok« in vtipka 6-mestno kodo.",
+        "finish": "Otrok podpiše Pogodbo o odgovornosti in kuža se rodi."
+      },
+      "join_pet": {
+        "open": "Na otrokovem telefonu odprite PetPrep.",
+        "code": "Otrok izbere »Sem otrok« in vtipka 6-mestno kodo.",
+        "finish": "Otrok podpiše svojo Pogodbo o odgovornosti, nato lahko skrbi za psa."
+      },
+      "relogin": {
+        "open": "Na novem telefonu ali tablici odprite PetPrep.",
+        "code": "Otrok izbere »Sem otrok« in vtipka 6-mestno kodo.",
+        "finish": "Kuža in napredek ostaneta ista."
+      }
+    },
+    "reloginNote": "Otrok je lahko prijavljen na največ 3 napravah — ob četrti se najstarejša odjavi.",
+    "validFor": "Koda velja še {{time}}",
+    "expired": "Koda je potekla. Ustvarite novo.",
+    "newCode": "Nova koda",
+    "generating": "Ustvarjam kodo …",
+    "waiting": "Čakam, da otrok vnese kodo …",
+    "oneTime": "Koda deluje samo enkrat. Nova koda razveljavi prejšnjo.",
+    "pairedTitle": "Otrok je povezan!",
+    "pairedBody": {
+      "new_pet": "{{name}} naj zdaj na svojem telefonu podpiše Pogodbo o odgovornosti — takrat se kuža rodi.",
+      "join_pet": "{{name}} naj zdaj podpiše svojo Pogodbo o odgovornosti, nato lahko skrbi za psa.",
+      "relogin": "{{name}} je prijavljen(a) na novi napravi. Kuža je ostal isti."
+    },
+    "toDashboard": "Na pregled",
+    "errors": {
+      "rate_limited": "Preveč novih kod v kratkem času. Poskusite znova čez {{seconds}} s.",
+      "forbidden": "Kodo lahko ustvari samo starševski račun.",
+      "unauthorized": "Seja je potekla. Prijavite se znova.",
+      "child_not_found": "Tega otroka ni več v vaši družini.",
+      "pet_not_joinable": "Temu psu se ni več mogoče pridružiti. Izberite drugega ali novega psa.",
+      "already_paired": "Otrok že skrbi za psa — lahko dobi samo kodo za prijavo na novi napravi.",
+      "breed_locked": "Ta pasma je del plačljivega izziva in se odklene samo z nakupom. Izberite drugo pasmo.",
+      "invalid_profile": "Izbire kužka ni bilo mogoče shraniti. Izberite znova.",
+      "offline": "Ni povezave s strežnikom. Preverite internet in poskusite znova.",
+      "server": "Kode trenutno ni bilo mogoče ustvariti. Poskusite znova."
+    },
+    "changeDog": "Izberi drugega kužka",
+    "editDog": "Spremeni kužka",
+    "editDogHint": "Nova izbira ustvari novo kodo; ta koda takrat preneha veljati.",
+    "previousChoicePin": "Ta koda še velja za prejšnjo izbiro kužka. Za novo izbiro ustvarite novo kodo.",
+    "muttLocked": "Mešanček je brezplačen, a strežnik ga je zavrnil. To je napaka pri nas — pišite nam na podporo.",
+    "rateLimitedNoWait": "Preveč novih kod v kratkem času. Poskusite znova.",
+    "retry": "Poskusi znova"
+  },
+  "childDetail": {
+    "back": "Nazaj",
+    "album": "Vsi posnetki kužka",
+    "periods": {
+      "7": "7 dni",
+      "30": "30 dni",
+      "84": "12 tednov"
+    },
+    "periodA11y": "Obdobje: {{label}}",
+    "loading": "Nalagam poročilo …",
+    "loadError": "Poročila ni bilo mogoče naložiti.",
+    "offline": "Ni povezave. Prikazani so zadnji naloženi podatki.",
+    "retry": "Poskusi znova",
+    "periodScore": "Ocena v obdobju",
+    "totalScore": "Skupaj od začetka: {{score}}",
+    "noScore": "Še ni dovolj podatkov",
+    "byType": "Po rutinah",
+    "typeLine": "{{own}} od {{expected}}",
+    "typeMissed": "zamujeno {{n}}",
+    "typePending": "odprto {{n}}",
+    "daily": "Po dnevih",
+    "walkGoal": "{{steps}} / {{goal}} korakov",
+    "walk": "{{steps}} korakov",
+    "noRoutines": "brez rutin",
+    "missed": "Zamujene rutine",
+    "noMissed": "V tem obdobju ni zamujene rutine.",
+    "illnesses": "Bolezni",
+    "illnessRange": "{{from}} – {{to}}",
+    "illnessOngoing": "{{from}} – še traja",
+    "timeline": "Časovnica",
+    "timelineEmpty": "Še ni dejavnosti.",
+    "timelineError": "Časovnice ni bilo mogoče naložiti.",
+    "loadMore": "Naloži več",
+    "noPet": "Otrok še nima psa — poročilo bo na voljo po podpisu pogodbe."
+  },
+  "childCard": {
+    "scoreTitle": "Care Score",
+    "noScore": "Še ni dovolj podatkov",
+    "noScoreHint": "Ocena se pokaže, ko pride prva rutina na vrsto.",
+    "illnessPenalty": "{{illnesses}} (−{{points}} točk)",
+    "today": "Danes",
+    "todayDone": "Opravljeno {{n}}",
+    "todayOwn": "{{name}}: {{n}}",
+    "todayPending": "Še odprto {{n}}",
+    "todayMissed": "Zamujeno {{n}}",
+    "todayNothing": "Danes še ni bilo nobene rutine.",
+    "week": "Zadnjih 7 dni",
+    "legendDone": "opravljeno",
+    "legendMissed": "zamujeno",
+    "pet": "Kuža",
+    "metrics": {
+      "hunger": "Hrana",
+      "thirst": "Voda",
+      "energy": "Gibanje",
+      "hygiene": "Čistoča"
+    },
+    "noPet": "Še brez psa. Ustvarite kodo — otrok jo vtipka in dobi kužka.",
+    "createPin": "Ustvari kodo",
+    "awaitingContract": "Kuža čaka, da {{name}} podpiše pogodbo o odgovornosti.",
+    "details": "Podrobnosti",
+    "detailsA11y": "Podrobnosti: {{name}}"
+  },
+  "petControls": {
+    "caretakers": "Skrbi: {{names}}",
+    "noCaretakers": "Še nihče ne skrbi zanj",
+    "playing": "Igra teče",
+    "stop": "Ustavi igro (hard stop)",
+    "resume": "Nadaljuj igro",
+    "a11y": "{{action}}: {{pet}}",
+    "a11yNames": "{{action}}: {{pet}} ({{names}})",
+    "confirmStop": "Ustaviti igro? Kuža se zamrzne in otrok ne more ničesar narediti, dokler igre ne nadaljujete.",
+    "confirmStopFor": "Ustaviti igro za {{names}}? Kuža se zamrzne in otrok ne more ničesar narediti, dokler igre ne nadaljujete.",
+    "confirmResume": "Nadaljevati igro? Kuža se odmrzne in otrok lahko spet skrbi zanj.",
+    "confirm": "Potrdi",
+    "cancel": "Prekliči",
+    "stopped": "Igra je ustavljena.",
+    "resumed": "Igra spet teče.",
+    "alreadyStopped": "Igra je že ustavljena.",
+    "alreadyRunning": "Igra že teče.",
+    "checking": "Preverjam stanje …",
+    "errors": {
+      "offline": "Ni povezave s strežnikom. Stanje smo osvežili — poskusite znova.",
+      "not_found": "Tega psa ni več med aktivnimi psi družine.",
+      "server": "Ukaz ni uspel. Poskusite znova."
+    }
+  },
+  "quietHours": {
+    "title": "Tihe ure",
+    "hint": "V tihih urah kuža skoraj ne lakoti, ni neredov in ni obvestil. Ure veljajo po času družine.",
+    "active": "Vklopljeno",
+    "school": "Šola",
+    "bedtime": "Spanje",
+    "start": "Začetek",
+    "end": "Konec",
+    "save": "Shrani",
+    "saved": "Shranjeno.",
+    "invalidTime": "Čas vpišite kot UU:MM (npr. 08:00).",
+    "loadError": "Tihih ur ni bilo mogoče naložiti.",
+    "retry": "Poskusi znova",
+    "saveError": "Shranjevanje ni uspelo. Preverite čase in poskusite znova.",
+    "offline": "Ni povezave s strežnikom. Poskusite znova."
+  },
+  "notifications": {
+    "title": "Obvestila",
+    "status": {
+      "on": "Vklopljena — ta telefon prejme alarm, ko otrok več kot uro ne poskrbi za kužo, in novico o bolezni ali zavetišču.",
+      "off": "Izklopljena — o zanemarjenem kužu boste izvedeli šele, ko odprete aplikacijo.",
+      "blocked": "Izklopljena v nastavitvah telefona."
+    },
+    "quietHours": "Med tihimi urami ne pošiljamo ničesar. Obvestila ne vsebujejo imen otrok.",
+    "enable": "Vklopi obvestila",
+    "openSettings": "Odpri nastavitve"
+  }
+}

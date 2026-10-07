@@ -42,29 +42,20 @@ import PetThumbnail from '@/components/parent/PetThumbnail';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 import { fonts, palette, tightTracking } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-export const CHILD_CARD_STRINGS = {
-  scoreTitle: 'Care Score',
-  noScore: 'Še ni dovolj podatkov',
-  noScoreHint: 'Ocena se pokaže, ko pride prva rutina na vrsto.',
-  illnessPenalty: (n: number) => `${illnessesText(n)} (−${n * 10} točk)`,
-  today: 'Danes',
-  todayDone: (n: number) => `Opravljeno ${n}`,
-  todayOwn: (name: string, n: number) => `${name}: ${n}`,
-  todayPending: (n: number) => `Še odprto ${n}`,
-  todayMissed: (n: number) => `Zamujeno ${n}`,
-  todayNothing: 'Danes še ni bilo nobene rutine.',
-  week: 'Zadnjih 7 dni',
-  legendDone: 'opravljeno',
-  legendMissed: 'zamujeno',
-  pet: 'Kuža',
-  metrics: { hunger: 'Hrana', thirst: 'Voda', energy: 'Gibanje', hygiene: 'Čistoča' },
-  noPet: 'Še brez psa. Ustvarite kodo — otrok jo vtipka in dobi kužka.',
-  createPin: 'Ustvari kodo',
-  awaitingContract: (name: string) => `Kuža čaka, da ${name} podpiše pogodbo o odgovornosti.`,
-  details: 'Podrobnosti',
+/** All user-visible strings of the card (`parent:childCard`, M1-18). */
+export const CHILD_CARD_STRINGS = strings('parent', 'childCard', {
+  illnessPenalty: (n: number) => t('parent:childCard.illnessPenalty', { illnesses: illnessesText(n), points: n * 10 }),
+  todayDone: (n: number) => t('parent:childCard.todayDone', { n }),
+  todayOwn: (name: string, n: number) => t('parent:childCard.todayOwn', { name, n }),
+  todayPending: (n: number) => t('parent:childCard.todayPending', { n }),
+  todayMissed: (n: number) => t('parent:childCard.todayMissed', { n }),
+  awaitingContract: (name: string) => t('parent:childCard.awaitingContract', { name }),
+  detailsA11y: (name: string) => t('parent:childCard.detailsA11y', { name }),
   behaviourStats: (days: number, text: string) => `${PARENT_BEHAVIOUR_STRINGS.lastDays(days)}: ${text}`,
-} as const;
+});
 
 const S = CHILD_CARD_STRINGS;
 
@@ -269,7 +260,7 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
         style={({ pressed }) => [styles.detailsButton, pressed && styles.pressed]}
         onPress={() => onOpen(child)}
         accessibilityRole="button"
-        accessibilityLabel={`${S.details}: ${child.name}`}
+        accessibilityLabel={S.detailsA11y(child.name)}
         testID={`child-details-${id}`}
       >
         <Text style={styles.detailsText}>{S.details}</Text>

@@ -61,6 +61,21 @@
           "color": "#1A7A55",
           "defaultChannel": "default"
         }
+      ],
+      [
+        "expo-localization",
+        {
+          "supportedLocales": {
+            "ios": [
+              "en",
+              "sl"
+            ],
+            "android": [
+              "en",
+              "sl"
+            ]
+          }
+        }
       ]
     ],
     "extra": {
@@ -68,6 +83,9 @@
         "projectId": "04c069be-7cf1-43df-98b9-58fd692a7be6"
       }
     },
-    "owner": "petprep"
+    "owner": "petprep",
+    "locales": {
+      "sl": "./locales/sl.json"
+    }
   }
 }

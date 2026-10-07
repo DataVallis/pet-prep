@@ -47,12 +47,13 @@ import {
 import type { BehaviourScene } from '@/modules/behaviour/behaviour';
 import type { BreedType, PetState } from '@/types';
 import { alpha, palette } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-export const PET_MEDIA_STRINGS = {
-  pending: 'Kuža se pripravlja…',
-  breeds: { mutt: 'Mešanček', border_collie: 'Border collie' } satisfies Record<BreedType, string>,
-  a11y: (breed: string) => `Tvoj kuža (${breed})`,
-} as const;
+/** User-visible strings (`pet:media`, M1-18). */
+export const PET_MEDIA_STRINGS = strings('pet', 'media', {
+  a11y: (breed: string) => t('pet:media.a11y', { breed }),
+});
 
 /** Crossfade duration between two state videos (ms). */
 export const CROSSFADE_MS = 300;

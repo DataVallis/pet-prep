@@ -90,7 +90,7 @@ function CommandRow({
             <Text style={styles.learnedText}>{S.learned}</Text>
           </View>
         ) : (
-          <Text style={styles.percent}>{item.progress} %</Text>
+          <Text style={styles.percent}>{S.percent(item.progress)}</Text>
         )}
       </View>
       <ProgressBar value={item.progress} learned={item.learned} testID={`training-progress-${item.command}`} />

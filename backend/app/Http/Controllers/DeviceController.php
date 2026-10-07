@@ -20,7 +20,9 @@ class DeviceController extends Controller
     /**
      * Register (or refresh) this app install for escalation pushes. Called
      * on login and on every app start; the same token moves to the account
-     * that registered it last.
+     * that registered it last. The install's push language comes from the
+     * body field `locale` (en | sl) and is refreshed whenever it is sent;
+     * without it the stored language is kept, a new install gets 'sl' (M1-18).
      *
      * POST /api/devices
      */
@@ -36,6 +38,7 @@ class DeviceController extends Controller
             $request->platform(),
             $request->validated('app_version'),
             $accessToken instanceof PersonalAccessToken ? $accessToken : null,
+            $request->pushLocale(),
         );
 
         return response()->json([
@@ -43,6 +46,8 @@ class DeviceController extends Controller
                 'id' => $device->id,
                 'platform' => $device->platform->value,
                 'app_version' => $device->app_version,
+                /** Language of this install's pushes (M1-18): the `locale` field; new installs without it get 'sl'. */
+                'locale' => $device->locale,
                 'enabled' => $device->disabled_at === null,
                 'last_seen_at' => $device->last_seen_at?->toIso8601String(),
             ],

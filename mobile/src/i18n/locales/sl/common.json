@@ -1,0 +1,14 @@
+{
+  "language": {
+    "title": "Jezik",
+    "label": "Jezik aplikacije",
+    "hint": "Velja za to napravo."
+  },
+  "errors": {
+    "crashTitle": "Nekaj je šlo narobe"
+  },
+  "format": {
+    "thousands": ".",
+    "percent": "{{value}} %"
+  }
+}

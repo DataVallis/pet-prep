@@ -65,9 +65,8 @@ class AccountExportService
             'version' => self::VERSION,
             'generated_at' => $generatedAt->toIso8601String(),
             'requested_by' => ['id' => $parent->id],
-            'about' => 'Izvoz podatkov družine iz aplikacije PetPrep (GDPR čl. 15 in 20). '
-                .'Časi so v UTC (ISO 8601), datumi (local_date) v časovnem pasu družine. '
-                .'Povezave do slik in videov psov veljajo omejen čas (media[].expires_at, growth[] do growth_expires_at).',
+            // M1-18: in the request language (lang/<locale>/account.php).
+            'about' => __('account.export.about'),
         ];
 
         if ($family === null) {
@@ -179,6 +178,7 @@ class AccountExportService
             ->map(fn ($rows) => $rows->map(fn (DevicePushToken $d) => [
                 'platform' => $d->platform->value,
                 'app_version' => $d->app_version,
+                'locale' => $d->locale,
                 'enabled' => $d->disabled_at === null,
                 'last_seen_at' => $this->iso($d->last_seen_at),
                 'created_at' => $this->iso($d->created_at),

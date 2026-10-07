@@ -16,16 +16,10 @@
 
 import { localParts } from '@/modules/childPet/familyTime';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
+import { strings } from '@/i18n/strings';
 
-/** User-visible strings (i18n with M1-18). */
-export const MEAL_STRINGS = {
-  title: 'Obroki danes',
-  byParent: 'nahrani starš',
-  /** Screen-reader words. */
-  done: 'nahranjen',
-  now: 'zdaj',
-  past: 'minil',
-} as const;
+/** User-visible strings (`child:meals`, M1-18); `done` / `now` / `past` are screen-reader words. */
+export const MEAL_STRINGS = strings('child', 'meals');
 
 export interface MealWindowItem {
   /** "07:00-09:00" (stable key). */

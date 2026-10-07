@@ -13,12 +13,14 @@
  * and an older server send no / a disabled `training` → `EMPTY_TRAINING` → nothing new
  * on screen.
  *
- * Texts are Slovenian (i18n with M1-18), warm and never shaming: a dog that doesn't
+ * Texts (`training` namespace, M1-18) are warm and never shaming: a dog that doesn't
  * obey is part of learning, a late praise is "malo prepozno", not a failure.
  */
 
 import type { ChildPetState } from '@/api/client';
 import { familyClock } from '@/modules/childPet/familyTime';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
 export type TrainingCommand = 'sit' | 'come' | 'place' | 'potty';
 export const TRAINING_COMMANDS: readonly TrainingCommand[] = ['sit', 'come', 'place', 'potty'];
@@ -432,111 +434,41 @@ export function startBlock(training: ChildTraining, dayEnding = false): StartBlo
   return 'unavailable';
 }
 
-// ── Slovenian text ────────────────────────────────────────────
+// ── Text (`training:child`, M1-18) ────────────────────────────
 
-interface CommandText {
-  /** Button / list name. */
-  name: string;
-  /** What the child "says" (the cue bubble). */
-  cue: string;
-  /** The dog obeys. */
-  obeys: string;
-  /** The dog doesn't obey this time. */
-  ignores: string;
-  /** Parent line ("sedi ✓"). */
-  lower: string;
-}
-
-export const TRAINING_STRINGS = {
-  entry: 'Šola',
-  entryA11y: (todayDone: boolean) => (todayDone ? 'Šola — današnja vaja je opravljena' : 'Šola — današnja vaja te še čaka'),
-  title: 'Šola',
-  close: 'Zapri',
-  intro: 'Izberi ukaz. Ko kuža uboga, ga takoj pohvali!',
-  howTo: 'Kuža ne uboga vsakič. Če ne uboga, počakaj — pohvala šteje samo, ko uboga.',
-  learned: 'naučeno',
-  todayDone: 'Današnja vaja: opravljena ✓',
-  todayOpen: 'Današnja vaja te še čaka.',
-  sessionsLeft: (n: number) =>
-    n === 1 ? 'Danes še 1 vaja.' : n === 2 ? 'Danes še 2 vaji.' : n === 3 || n === 4 ? `Danes še ${n} vaje.` : `Danes še ${n} vaj.`,
-  sessionLength: (seconds: number) => `Vaja traja ${seconds} s.`,
+/** Per command: `name` (button / list), `cue` (what the child "says"), `obeys`, `ignores`, `lower` (parent line "sedi ✓"). */
+export const TRAINING_STRINGS = strings('training', 'child', {
+  entryA11y: (todayDone: boolean) => (todayDone ? t('training:child.entryA11yDone') : t('training:child.entryA11yOpen')),
+  /** "60 %" / "60%". */
+  percent: (value: number) => t('training:child.percent', { value }),
+  sessionsLeft: (n: number) => t('training:child.sessionsLeft', { count: n }),
+  sessionLength: (seconds: number) => t('training:child.sessionLength', { seconds }),
   /** M5-R03b: the daily time is split fairly between the children of the dog. */
   sharedTime: (children: number) =>
-    children === 2 ? 'Čas za šolo si deliš z bratom ali sestro.' : 'Čas za šolo si deliš z brati in sestrami.',
-  start: 'Začni vajo',
-  startA11y: (name: string) => `Začni vajo: ${name}`,
-  blocked: {
-    sibling_training: 'Nekdo drug zdaj vadi s kužkom. Poskusi čez minutko.',
-    own_session_closing: 'Prejšnja vaja se še zaključuje. Poskusi čez minutko.',
-    budget_used: 'Kuža je danes že dovolj vadil. Jutri spet!',
-    share_used: 'Tvoj današnji čas za šolo je porabljen. Brat ali sestra lahko s kužkom še vadi — ti pa spet jutri!',
-    day_ending: 'Dan se izteka — kuža gre spat. Nova vaja jutri!',
-    unavailable: 'Zdaj ni čas za vajo.',
-  } satisfies Record<Exclude<StartBlock, null>, string>,
-  starting: 'Kuža se pripravlja …',
-  getReady: 'Pripravi se …',
-  listening: 'Kuža posluša …',
-  praise: 'Pohvali',
-  praiseA11y: 'Pohvali kužka',
-  secondsLeft: (s: number) => `še ${s} s`,
-  trialOf: (n: number, total: number) => `Ukaz ${n} od ${total}`,
-  finishing: 'Shranjujem vajo …',
-  resumed: 'Nadaljujemo vajo, ki se je začela prej.',
-  feedback: {
-    in_time: 'Bravo, ob pravem trenutku!',
-    too_early: 'Prezgodaj — počakaj, da kuža uboga.',
-    too_late: 'Malo prepozno — pohvali takoj, ko uboga.',
-    no_praise: 'Kuža je ubogal — naslednjič ga pohvali!',
-    waited: 'Super, da si počakal(a) — kuža tokrat ni ubogal.',
-    praised_without_obeying: 'Kuža še ni ubogal — pohvali, ko uboga.',
-  } satisfies Record<TrialOutcome, string>,
-  outcomeShort: {
-    in_time: 'pravočasno',
-    too_early: 'prezgodaj',
-    too_late: 'prepozno',
-    no_praise: 'brez pohvale',
-    waited: 'počakal(a)',
-    praised_without_obeying: 'ni ubogal',
-  } satisfies Record<TrialOutcome, string>,
+    children === 2 ? t('training:child.sharedTimeSibling') : t('training:child.sharedTimeSiblings'),
+  startA11y: (name: string) => t('training:child.startA11y', { name }),
+  secondsLeft: (seconds: number) => t('training:child.secondsLeft', { seconds }),
+  trialOf: (n: number, total: number) => t('training:child.trialOf', { n, total }),
   result: {
-    titleGood: 'Bravo!',
-    titleLearning: 'Kuža se uči!',
     successes: (successes: number, obeyed: number) =>
-      obeyed === 0 ? 'Kuža tokrat ni ubogal.' : `Pravočasne pohvale: ${successes} od ${obeyed}.`,
-    gain: (name: string, before: number, after: number) => `${name}: ${before} % → ${after} %`,
-    gainSmall: (name: string, after: number) => `${name}: ${after} % — kuža je malo bližje.`,
-    noGain: 'Napredka tokrat ni bilo — jutri bo šlo bolje. Pohvali takoj, ko kuža uboga.',
-    learned: (name: string) => `Kuža zna ukaz »${name}«!`,
-    routineDone: 'Današnja vaja je opravljena.',
-    /** `unchanged`: the server returned a session it had already saved. */
-    titleStored: 'Ta vaja je že shranjena',
-    stored: 'Tukaj je njen rezultat.',
-    again: 'Nazaj v šolo',
-    done: 'Končano',
+      obeyed === 0 ? t('training:child.result.noObey') : t('training:child.result.successes', { successes, obeyed }),
+    gain: (name: string, before: number, after: number) => t('training:child.result.gain', { name, before, after }),
+    gainSmall: (name: string, after: number) => t('training:child.result.gainSmall', { name, after }),
+    learned: (name: string) => t('training:child.result.learned', { name }),
   },
   errors: {
-    training_not_available: 'Šola za tega kužka ni na voljo.',
-    training_session_active: 'Nekdo že vadi s kužkom. Poskusi čez minutko.',
-    training_session_active_until: (clock: string) => `Nekdo že vadi s kužkom. Poskusi spet ob ${clock}.`,
-    training_daily_budget_used: 'Kuža je danes že dovolj vadil. Jutri spet!',
-    training_child_share_used: 'Tvoj današnji čas za šolo je porabljen. Brat ali sestra lahko s kužkom še vadi — ti pa spet jutri!',
-    training_session_invalid: 'Te vaje ni več. Začni novo vajo.',
-    training_session_not_over: 'Vaja še ni čisto končana. Poskusi znova.',
-    training_session_expired: 'Vaja se je iztekla, preden smo jo shranili. Napredek tokrat ni zapisan — začni novo vajo.',
-    training_invalid_taps: 'Pri štetju je šlo nekaj narobe. Začni novo vajo.',
-    training_day_ending: 'Dan se izteka — kuža gre spat. Nova vaja jutri!',
-    training_session_interrupted: 'Vaja je bila prekinjena, zato tokrat ne šteje. Čas za vajo ti ostane — poskusi znova, ko bo kuža spet prost.',
-    expiredWhileAway: 'Vaja se je iztekla, ker je bila aplikacija zaprta. Napredek tokrat ni zapisan — začni novo vajo.',
-    badResponse: 'Nekaj je šlo narobe. Poskusi znova.',
+    training_session_active_until: (clock: string) => t('training:child.errors.training_session_active_until', { clock }),
   },
-  retry: 'Poskusi znova',
-  commands: {
-    sit: { name: 'Sedi', cue: 'Sedi!', obeys: 'Kuža se usede.', ignores: 'Kuža voha naokrog …', lower: 'sedi' },
-    come: { name: 'Pridi', cue: 'Pridi!', obeys: 'Kuža priteče k tebi.', ignores: 'Kuža ostane, kjer je …', lower: 'pridi' },
-    place: { name: 'Prostor', cue: 'Prostor!', obeys: 'Kuža gre na svoj prostor.', ignores: 'Kuža se raje igra …', lower: 'prostor' },
-    potty: { name: 'Lulat zunaj', cue: 'Lulat zunaj!', obeys: 'Kuža lula zunaj.', ignores: 'Kuža gleda metuljčka …', lower: 'lulat zunaj' },
-  } satisfies Record<TrainingCommand, CommandText>,
-} as const;
+});
+
+/** Every block, outcome and command has its texts (compile-time check). */
+const _trainingTexts: {
+  blocked: Record<Exclude<StartBlock, null>, string>;
+  feedback: Record<TrialOutcome, string>;
+  outcomeShort: Record<TrialOutcome, string>;
+  commands: Record<TrainingCommand, { name: string; cue: string; obeys: string; ignores: string; lower: string }>;
+} = TRAINING_STRINGS;
+void _trainingTexts;
 
 /** Refusal reasons of the two training endpoints (backend `CareRefusal`). */
 export type TrainingRefusal = Exclude<keyof typeof TRAINING_STRINGS.errors, 'training_session_active_until' | 'expiredWhileAway' | 'badResponse'>;
@@ -570,26 +502,25 @@ export function trainingRefusalMessage(reason: string | null, nextAllowedAt: str
 /** "Kuža zna: sedi ✓, pridi 60 %, prostor 0 %, lulat zunaj 10 %" (parent). Empty commands → null. */
 export function knowsLine(commands: readonly CommandProgress[]): string | null {
   if (commands.length === 0) return null;
-  const parts = commands.map((c) =>
-    c.learned ? `${TRAINING_STRINGS.commands[c.command].lower} ✓` : `${TRAINING_STRINGS.commands[c.command].lower} ${c.progress} %`,
-  );
-  return `Kuža zna: ${parts.join(', ')}`;
+  const parts = commands.map((c) => {
+    const name = TRAINING_STRINGS.commands[c.command].lower;
+    return c.learned
+      ? t('training:parent.knowsLearned', { name })
+      : t('training:parent.knowsProgress', { name, value: c.progress });
+  });
+  return t('training:parent.knows', { list: parts.join(', ') });
 }
 
-export const PARENT_TRAINING_STRINGS = {
-  title: 'Šola',
-  todayDone: 'Današnja vaja: opravljena ✓',
-  todayOpen: 'Današnja vaja: še ne',
-  sessionActive: 'Otrok zdaj vadi s kužkom.',
-} as const;
+/** Parent texts (`training:parent`, M1-18). */
+export const PARENT_TRAINING_STRINGS = strings('training', 'parent');
 
 /** Parent lines for a pet with training; empty for a legacy pet / older server. */
-export function parentTrainingLines(t: PetTrainingSummary): string[] {
-  if (!t.enabled) return [];
-  const knows = knowsLine(t.commands);
+export function parentTrainingLines(training: PetTrainingSummary): string[] {
+  if (!training.enabled) return [];
+  const knows = knowsLine(training.commands);
   return [
     ...(knows !== null ? [knows] : []),
-    t.today_done ? PARENT_TRAINING_STRINGS.todayDone : PARENT_TRAINING_STRINGS.todayOpen,
-    ...(t.session_active ? [PARENT_TRAINING_STRINGS.sessionActive] : []),
+    training.today_done ? PARENT_TRAINING_STRINGS.todayDone : PARENT_TRAINING_STRINGS.todayOpen,
+    ...(training.session_active ? [PARENT_TRAINING_STRINGS.sessionActive] : []),
   ];
 }

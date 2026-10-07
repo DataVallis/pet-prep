@@ -6,6 +6,7 @@ import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
 import type { QueryClient } from '@tanstack/react-query';
 
 import { ApiError, api } from '@/api/client';
+import { i18n } from '@/i18n';
 import ContractScreen, { CONTRACT_STRINGS } from '@/screens/ContractScreen';
 import { isAwaitingContract, useAppStore } from '@/store/appStore';
 import { makeChildState, makePet } from '@/test-utils/fixtures';
@@ -150,5 +151,37 @@ describe('ContractScreen (M1-07b)', () => {
 
     await waitFor(() => expect(isAwaitingContract(useAppStore.getState().pet)).toBe(false));
     expect(useAppStore.getState().pet?.born_at).toBe('2026-10-01T08:00:00+00:00');
+  });
+
+  describe('in English (M1-18)', () => {
+    afterEach(async () => {
+      await act(async () => {
+        await i18n.changeLanguage('sl');
+      });
+    });
+
+    it('shows the contract and the lock reason in English', async () => {
+      await act(async () => {
+        await i18n.changeLanguage('en');
+      });
+      signContract.mockRejectedValueOnce(new ApiError('locked', 423, { reason: 'ill', state: makeChildState() }));
+      await openContract();
+      expect(screen.getByText('Responsibility Contract')).toBeTruthy();
+      expect(screen.getByText(/^I promise to take good care of my virtual pup/)).toBeTruthy();
+      expect(screen.getByText('Sign with your finger in the box below')).toBeTruthy();
+      sign();
+      fireEvent.press(screen.getByText('I accept this responsibility'));
+
+      expect(await screen.findByText('Your pup is at the vet. Please try again later.')).toBeTruthy();
+    });
+
+    it('an unknown lock reason falls back to the default message', async () => {
+      signContract.mockRejectedValueOnce(new ApiError('locked', 423, { reason: 'something_new', state: makeChildState() }));
+      await openContract();
+      sign();
+      fireEvent.press(screen.getByText(CONTRACT_STRINGS.accept));
+
+      expect(await screen.findByText('Podpis trenutno ni mogoč. Poskusi znova kasneje.')).toBeTruthy();
+    });
   });
 });

@@ -81,33 +81,26 @@ import TrainingOverlay from '@/modules/training/TrainingOverlay';
 import { showTrainingDot, showTrainingEntry } from '@/modules/training/training';
 import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
 import { alpha, palette, radius } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
+import { useTranslation } from 'react-i18next';
 
-/** User-visible strings of the HUD (i18n with M1-18). */
-export const HUD_STRINGS = {
-  feed: 'Hrani',
-  water: 'Voda',
-  walk: 'Sprehod',
-  clean: 'Očisti',
-  takeOut: BEHAVIOUR_STRINGS.takeOut,
-  metrics: { hunger: 'Hrana', thirst: 'Voda', energy: 'Energija', hygiene: 'Čistoča' },
+/**
+ * User-visible strings of the HUD (`child:hud`, M1-18). `autoRetry` sits under the error
+ * screen: the HUD keeps trying by itself (hotfix 2026-10-06).
+ */
+export const HUD_STRINGS = strings('child', 'hud', {
+  get takeOut(): string {
+    return BEHAVIOUR_STRINGS.takeOut;
+  },
   ws: WS_BADGE_STRINGS,
-  loading: 'Nalagam kužka …',
-  loadFailed: 'Kužka ni bilo mogoče naložiti.',
-  /** Under the error screen: the HUD keeps trying by itself (hotfix 2026-10-06). */
-  autoRetry: 'Poskušam znova samodejno …',
-  retry: 'Poskusi znova',
-  logout: 'Odjava',
-  stale: 'Ni povezave — prikazujem zadnje stanje.',
-  breeds: { mutt: 'Mešanček', border_collie: 'Border collie' } satisfies Record<BreedType, string>,
-  moods: {
-    idle: 'Srečen in igriv',
-    playing: 'Igriv',
-    hungry: 'Lačen kužek',
-    sleeping: 'Počiva',
-    low_energy: 'Utrujen',
-    sick: 'Bolan',
-  } satisfies Record<PetState, string>,
-} as const;
+});
+
+/** Every breed and mood has a label (compile-time check). */
+const _hudTexts: { breeds: Record<BreedType, string>; moods: Record<PetState, string> } = HUD_STRINGS;
+void _hudTexts;
+
+const CHALLENGE_WEEKS = 12;
 
 /**
  * Legacy pet (no profile = no real age): the server's `virtual_age_months` is the
@@ -116,8 +109,8 @@ export const HUD_STRINGS = {
  * misleading "STAROST: 0 MESECEV".
  */
 export function formatChallengeWeek(weeksSinceBirth: number): string {
-  const week = Math.min(12, Math.max(0, Math.floor(weeksSinceBirth)) + 1);
-  return `TEDEN ${week} OD 12`;
+  const week = Math.min(CHALLENGE_WEEKS, Math.max(0, Math.floor(weeksSinceBirth)) + 1);
+  return t('child:hud.challengeWeek', { week, total: CHALLENGE_WEEKS });
 }
 
 /** HUD second line of a profiled pet: "Posvojen iz zavetišča · 24. 11. 2026 postane mlad pes". */
@@ -209,6 +202,8 @@ function useSessionSync(view: ChildPetView | undefined): void {
 export default function ChildHudScreen() {
   // M3-02 / PR #35: first HUD view of the session → "Naj te kuža pokliče?" while undecided.
   usePushPromptOnFirstView('child');
+  // Re-render on a language switch (hints, toasts and the dock are read at render time).
+  useTranslation();
   const sessionPet = useAppStore((s) => s.pet);
   const wsStatus = useAppStore((s) => s.wsStatus);
   const isWalkModalVisible = useAppStore((s) => s.isWalkModalVisible);

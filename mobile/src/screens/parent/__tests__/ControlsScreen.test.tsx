@@ -8,7 +8,10 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { act, fireEvent, screen } from '@testing-library/react-native';
 import { Alert, Share } from 'react-native';
 
+import { useTranslation } from 'react-i18next';
+
 import { ApiError } from '@/api/client';
+import { i18n } from '@/i18n';
 import { api } from '@/api/client';
 import { JOIN_FAMILY_STRINGS } from '@/components/parent/JoinFamilyCard';
 import { FAMILY_PARENTS_STRINGS } from '@/components/parent/FamilyParentsCard';
@@ -79,6 +82,12 @@ function rerenderWith(view: ReturnType<typeof renderWithQuery>, ui: ReactElement
 }
 
 const EMPTY: FamilyOverview = { ...FAMILY, children: [], pets: [] };
+
+/** Like the app (AppNavigator subscribes to the language): re-renders on a switch. */
+function LocalizedControls() {
+  useTranslation();
+  return <ControlsScreen onBack={jest.fn()} family={FAMILY} onAddChild={jest.fn()} onChildPin={jest.fn()} />;
+}
 
 function renderControls(family: FamilyOverview | null = FAMILY) {
   return renderWithQuery(<ControlsScreen onBack={jest.fn()} family={family} onAddChild={jest.fn()} onChildPin={jest.fn()} />);
@@ -230,6 +239,27 @@ describe('ControlsScreen — quiet hours', () => {
     });
   });
 
+  it('a shown message follows a language switch (M1-18 review)', async () => {
+    renderWithQuery(<LocalizedControls />);
+    await flush();
+    fireEvent.changeText(screen.getByTestId('qh-school-start'), '7:3');
+    fireEvent.press(screen.getByTestId('qh-save'));
+    const slovenian = QUIET_HOURS_STRINGS.invalidTime;
+    expect(screen.getByTestId('qh-message')).toHaveTextContent(slovenian);
+
+    try {
+      await act(async () => {
+        await i18n.changeLanguage('en');
+      });
+      expect(QUIET_HOURS_STRINGS.invalidTime).not.toBe(slovenian);
+      expect(screen.getByTestId('qh-message')).toHaveTextContent(QUIET_HOURS_STRINGS.invalidTime);
+    } finally {
+      await act(async () => {
+        await i18n.changeLanguage('sl');
+      });
+    }
+  });
+
   it('loads, validates HH:MM and saves', async () => {
     updateQuietHours.mockResolvedValueOnce({
       message: 'ok',
@@ -313,7 +343,7 @@ describe('ControlsScreen — family (invite / join)', () => {
     fireEvent.changeText(screen.getByTestId('join-code-input'), 'K7QM2XPA');
     fireEvent.press(screen.getByTestId('join-submit'));
     await flush();
-    expect(onNotice).toHaveBeenCalledWith(JOIN_FAMILY_STRINGS.joined(2));
+    expect(onNotice).toHaveBeenCalledWith({ kind: 'joined', parents: 2 });
 
     // The family is no longer empty → join card gone, the lifted notice stays.
     rerenderWith(
@@ -323,7 +353,7 @@ describe('ControlsScreen — family (invite / join)', () => {
         family={FAMILY}
         onAddChild={jest.fn()}
         onChildPin={jest.fn()}
-        notice={JOIN_FAMILY_STRINGS.joined(2)}
+        notice={{ kind: 'joined', parents: 2 }}
         onNotice={onNotice}
       />,
     );

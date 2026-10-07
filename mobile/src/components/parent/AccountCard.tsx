@@ -2,7 +2,7 @@
  * "Račun" section of the Nadzor tab (M2-08): export the family's data (GDPR art. 15 /
  * 20 — JSON through the share sheet) and delete the parent's own account. The
  * deletion explains its consequences first (last parent → the whole family incl.
- * children and pets), then asks for the password and the typed word "IZBRIŠI"; on
+ * children and pets), then asks for the password and the typed confirmation word ("IZBRIŠI" / "DELETE"); on
  * success the app signs out to the StartScreen.
  */
 
@@ -24,55 +24,35 @@ import {
 } from '@/modules/account/account';
 import type { FamilyOverview } from '@/modules/family/family';
 import { palette } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-const count = (n: number, one: string, two: string, few: string, many: string): string =>
-  `${n} ${n === 1 ? one : n === 2 ? two : n === 3 || n === 4 ? few : many}`;
-
-export const ACCOUNT_STRINGS = {
-  title: 'Račun',
-  exportButton: 'Izvozi moje podatke',
-  exportHint: 'Vsi podatki družine v datoteki JSON (otroci, psi, dnevnik, pogodbe, ocene). Povezave do slik in videov veljajo približno eno uro.',
-  exportDone: 'Izvoz je pripravljen.',
-  deleteButton: 'Izbriši račun',
-  deleteSubmit: 'Izbriši za vedno',
-  lastParent: (children: number, pets: number) => [
-    'Ste edini starš v družini, zato se izbriše CELOTNA družina:',
-    `vaš račun, ${count(children, 'otroški profil', 'otroška profila', 'otroški profili', 'otroških profilov')} in ${count(pets, 'pes', 'psa', 'psi', 'psov')},`,
-    'z vsemi pogodbami (podpisi), dnevnikom skrbi, ocenami, slikami in videi psov,',
-    'vse naprave (tudi otroške) bodo odjavljene.',
+/** All user-visible strings of the "Račun" section (`account:card`, M1-18). */
+export const ACCOUNT_STRINGS = strings('account', 'card', {
+  /** Last parent: what the whole-family deletion takes ("vaš račun, 2 otroška profila in 3 psi"). */
+  lastParent: (children: number, pets: number): string[] => [
+    t('account:card.lastParentLines.intro'),
+    t('account:card.lastParentLines.what', {
+      children: t('account:counts.childProfiles', { count: children }),
+      pets: t('account:counts.dogs', { count: pets }),
+    }),
+    t('account:card.lastParentLines.records'),
+    t('account:card.lastParentLines.devices'),
   ],
-  otherParentStays: [
-    'Izbriše se samo vaš račun in vaše naprave se odjavijo.',
-    'Družina, otroci in psi ostanejo drugemu staršu.',
-  ],
-  exportFirst: 'Nasvet: pred brisanjem izvozite svoje podatke.',
-  deleteErrors: {
-    invalid_password: 'Geslo ni pravilno.',
-    protected: 'Tega računa ni mogoče izbrisati v aplikaciji.',
-    not_found: 'Računa ni bilo mogoče najti.',
-    throttled: 'Preveč napačnih gesel. Poskusite znova čez 15 minut.',
-    invalid: 'Vpišite geslo in potrdite brisanje.',
-    unknown: 'Ni znano, ali je bil izbris izveden — preverite s ponovno prijavo.',
-    server: 'Brisanje ni uspelo. Nič ni bilo izbrisano — poskusite znova.',
-  } satisfies Record<DeletionErrorKind, string>,
-  exportErrors: {
-    too_large: 'Podatkov je preveč za izvoz v aplikaciji. Pišite nam na podporo.',
-    too_large_to_share:
-      'Izvoz je prevelik za deljenje kot besedilo. Izvoz v datoteko pripravljamo — do takrat nam pišite na podporo.',
-    throttled: 'Izvoz je mogoč trikrat na uro. Poskusite pozneje.',
-    offline: 'Ni povezave s strežnikom. Poskusite znova.',
-    server: 'Izvoz ni uspel. Poskusite znova.',
-  } satisfies Record<ExportErrorKind, string>,
-} as const;
+  get otherParentStays(): string[] {
+    return [t('account:card.otherParentStaysLines.account'), t('account:card.otherParentStaysLines.family')];
+  },
+});
 
 const S = ACCOUNT_STRINGS;
 
 export default function AccountCard({ family }: { family: FamilyOverview | null }) {
   const [exporting, setExporting] = useState(false);
-  const [exportMessage, setExportMessage] = useState<{ text: string; isError: boolean } | null>(null);
+  // Message as a thunk: translated at render, so it follows a language switch (M1-18 review).
+  const [exportMessage, setExportMessage] = useState<{ text: () => string; isError: boolean } | null>(null);
   const [confirming, setConfirming] = useState(false);
   const [deleting, setDeleting] = useState(false);
-  const [deleteError, setDeleteError] = useState<string | null>(null);
+  const [deleteError, setDeleteError] = useState<{ text: () => string } | null>(null);
 
   const impact = accountDeletionImpact(family);
   const consequences = impact.lastParent
@@ -84,9 +64,9 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
     setExporting(true);
     try {
       const shared = await shareFamilyExport();
-      if (shared) setExportMessage({ text: S.exportDone, isError: false });
+      if (shared) setExportMessage({ text: () => S.exportDone, isError: false });
     } catch (err) {
-      setExportMessage({ text: S.exportErrors[classifyExportError(err)], isError: true });
+      setExportMessage({ text: () => S.exportErrors[classifyExportError(err)], isError: true });
     } finally {
       setExporting(false);
     }
@@ -99,7 +79,8 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
       // Success signs out: the navigator unmounts this screen (StartScreen).
       await deleteAccountAndLogout(password);
     } catch (err) {
-      setDeleteError(S.deleteErrors[classifyDeletionError(err)]);
+      const kind = classifyDeletionError(err);
+      setDeleteError({ text: () => S.deleteErrors[kind] });
       setDeleting(false);
     }
   };
@@ -127,7 +108,7 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
       </Pressable>
       {exportMessage && (
         <Text style={[styles.result, exportMessage.isError && styles.resultError]} testID="account-export-result">
-          {exportMessage.text}
+          {exportMessage.text()}
         </Text>
       )}
 
@@ -136,7 +117,7 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
           consequences={consequences}
           submitLabel={S.deleteSubmit}
           pending={deleting}
-          error={deleteError}
+          error={deleteError?.text() ?? null}
           onCancel={() => {
             setConfirming(false);
             setDeleteError(null);

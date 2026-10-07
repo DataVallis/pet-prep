@@ -1,0 +1,27 @@
+{
+  "breeds": {
+    "title": "Breed selection",
+    "back": "Back",
+    "intro": "Choose the breed that fits your child's activity level.",
+    "mutt": "Mixed breed",
+    "collie": "Border Collie",
+    "free": "FREE",
+    "premium": "RECOMMENDED · PREMIUM",
+    "stepsPerDay": "{{steps}} steps/day",
+    "decay": "Needs drop: −{{rate}}%/h",
+    "currentBreed": "Current breed",
+    "starterBreed": "Starter breed",
+    "unlocked": "Unlocked",
+    "unlock": "Unlock now",
+    "restore": "Restore purchases",
+    "alerts": {
+      "successTitle": "Unlocked",
+      "successMessage": "The Border Collie breed is unlocked!",
+      "purchaseFailedTitle": "Purchase failed",
+      "restoreTitle": "Restore purchases",
+      "restoreNone": "No previous purchases found.",
+      "restoreFailedTitle": "Restore failed",
+      "unexpected": "Something went wrong. Please try again."
+    }
+  }
+}

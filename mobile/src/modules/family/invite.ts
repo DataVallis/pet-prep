@@ -7,6 +7,8 @@
 import { ApiError } from '@/api/client';
 import { reasonOf } from '@/modules/pairing/pin';
 import { localParts } from '@/modules/childPet/familyTime';
+import { shortDate } from '@/modules/family/scoring';
+import { t } from '@/i18n';
 
 /** Invite codes are 8 characters (backend `FamilyInviteService::CODE_LENGTH`). */
 export const INVITE_CODE_LENGTH = 8;
@@ -25,21 +27,18 @@ export function formatInviteCode(code: string): string {
   return code.length === INVITE_CODE_LENGTH ? `${code.slice(0, 4)} ${code.slice(4)}` : code;
 }
 
-/** "5. 10. ob 14:30" in the family's wall clock (falls back to the ISO's own clock). */
+/** "5. 10. ob 14:30" / "5 Oct at 14:30" in the family's wall clock (falls back to the ISO's own clock). */
 export function expiryText(expiresAt: string, timezone: string | null): string | null {
   const parts = localParts(expiresAt, timezone);
   if (!parts) return null;
   const [, m, d] = parts.date.split('-');
-  return `${Number(d)}. ${Number(m)}. ob ${parts.time}`;
+  return t('family:date.at', { date: shortDate(Number(d), Number(m)), time: parts.time });
 }
 
 /** Text for the system share sheet (no child data — just the code and where to type it). */
 export function inviteShareMessage(code: string, expires: string | null): string {
-  const validity = expires ? ` Koda velja do ${expires}.` : '';
-  return (
-    `Pridruži se naši družini v aplikaciji PetPrep. V aplikaciji izberi "Sem starš", se prijavi ` +
-    `in v zavihku Nadzor vnesi kodo družine: ${formatInviteCode(code)}.${validity}`
-  );
+  const message = t('family:invite.share', { code: formatInviteCode(code) });
+  return expires ? t('family:invite.shareValidity', { message, expires }) : message;
 }
 
 export type JoinErrorKind =

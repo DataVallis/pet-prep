@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-07 — PetPrep govori angleško (M1-18)
+
+**Kaj se je zgodilo:** Aplikacija je zdaj dvojezična: **angleščina je privzeta**, slovenščina ostaja. Jezik se izbere sam po jeziku telefona, otrok ali starš pa ga lahko zamenja z enim dotikom (EN / SL na začetnem zaslonu, »Nadzor → Jezik«). Prevedeni so vsi zasloni — otroški simulator, šola, pogodba, starševski pregled, družina, račun — in tudi potisna obvestila, ki jih strežnik pošlje v jeziku, ki ga ima vsak telefon. Slovenska besedila so ostala do črke enaka.
+
+**Zakaj je pomembno:** Brez angleščine ni tujih trgov. Zdaj je dodajanje novega jezika predvsem prevajalsko delo (ena mapa datotek JSON za aplikacijo in ena za strežnik), ne programersko. Slovnica je pravilna tudi pri številkah (»2 psa«, »3 psi«, »5 psov«), tudi v angleščini.
+
+**Številke:** ~800 besedil v aplikaciji v 12 sklopih (833 v slovenščini zaradi dvojine in množine), 1.240 zelenih testov v aplikaciji, 1.211 na strežniku; test preveri, da imata oba jezika enake ključe, spremenljivke in slovnične oblike množine.
+
+**Kako povedati:**
+- 🧒 Otroci: "Tvoj kuža zdaj razume tudi angleško — izberi EN ali SL!"
+- 👩 Starši: "PetPrep je zdaj v angleščini in slovenščini. Vsak telefon v družini ima lahko svoj jezik — tudi obvestila pridejo v njem."
+- 📣 Omrežja: "Hello, world 🌍🐶 PetPrep now speaks English."
+- 💼 Investitorji: "Aplikacija je pripravljena za tuje trge: nov jezik = prevod datotek, brez sprememb kode."
+- 🛠 Tehnično: "i18next + expo-localization, tipizirani ključi iz angleških JSON, test enakosti ključev / spremenljivk / CLDR množin, `Accept-Language` za odgovore, jezik obvestil shranjen na napravo (`device_push_tokens.locale`)."
+
+---
+
 ## 2026-10-07 — Album rasti in »Obroki danes« (M5-R04, del 2)
 
 **Kaj se je zgodilo:** Ko kuža preide v novo življenjsko obdobje, umetna inteligenca iz stare fotografije naredi novo — isti pes, le starejši (od 5. 10.). Zdaj so vse te fotografije vidne: v albumu »Moj kuža« je nov razdelek **»Kako je kuža rasel«** — fotografije po vrsti z obdobjem (Mladiček, Mlad pes, Odrasel, Starejši), starostjo in datumom, trenutna označena z »Zdaj«; tap odpre fotografijo čez cel zaslon. Vidita ga otrok in starš (samo ogled); pokaže se, ko sta vsaj dve fotografiji. Fotografije so tudi v izvozu podatkov in se izbrišejo z računom. Otrok nad gumbi vidi še **»Obroki danes«**: okna obrokov s kljukico za vsak dobljeni obrok, trenutno okno poudarjeno, obroke med šolo označene »nahrani starš«; na manjših telefonih ena vrstica, med pospravljanjem nereda se skrije. Aplikacija še ni v trgovini.

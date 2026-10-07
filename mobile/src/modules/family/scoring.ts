@@ -3,13 +3,15 @@
  * (M2-05 / M2-06, PRODUCT_SPEC §9 / §11). The backend computes everything; this module
  * only reads the loosely generated payloads (`schema.ts` types `family.children` as a
  * string, pet timelines as `{[key]: unknown}`, the child report as `unknown[]`) into
- * real types with safe defaults, and turns codes into friendly Slovenian text.
+ * real types with safe defaults, and turns codes into friendly text (i18n `family`, M1-18).
  *
  * No game rule is re-implemented here.
  */
 
 import { familyClock, localParts } from '@/modules/childPet/familyTime';
 import { PARENT_BEHAVIOUR_STRINGS, type BehaviourKind } from '@/modules/behaviour/behaviour';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
 // ── Types ─────────────────────────────────────────────────────
 
@@ -326,21 +328,14 @@ export function readChildReport(value: unknown): ChildReport | null {
   };
 }
 
-// ── Slovenian text ────────────────────────────────────────────
+// ── Text (i18n `family`, M1-18) ───────────────────────────────
 
-export const LIGHT_LABELS: Record<LightColor, string> = {
-  green: 'Vse v redu',
-  yellow: 'Potrebna pozornost',
-  red: 'Nujno',
-};
+/** "Vse v redu" / "All good" … — a live view: read it when rendering. */
+export const LIGHT_LABELS: Readonly<Record<LightColor, string>> = strings('family', 'light');
 
-export const ROUTINE_LABELS: Record<RoutineType, string> = {
-  feed: 'Hrana',
-  water: 'Voda',
-  clean: 'Čiščenje',
-  walk: 'Sprehod',
-  training: 'Šola',
-};
+export const ROUTINE_LABELS: Readonly<Record<RoutineType, string>> = strings('family', 'routines');
+
+const DATE = strings('family', 'date');
 
 /**
  * Label of a missed routine: a missed `clean` names its mess (M5-R02) — "Luža",
@@ -351,16 +346,15 @@ export function missedLabel(item: Pick<MissedRoutine, 'type' | 'kind'>): string 
   return ROUTINE_LABELS[item.type];
 }
 
-/** "9", "9,5" — Slovenian decimal comma, at most one decimal. */
+/** "9", "9,5" (sl) / "9.5" (en) — at most one decimal, the language's decimal mark. */
 export function formatAmount(value: number): string {
   const rounded = Math.round(value * 10) / 10;
-  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1).replace('.', ',');
+  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1).replace('.', t('family:format.decimal'));
 }
 
-/** Genitive after "od": "od 1 rutine", "od 2 rutin", "od 9,5 rutin". */
+/** "1 od 1 rutine", "8 od 9,5 rutin" / "8 of 9.5 routines" (plural by the denominator). */
 export function routinesOfText(done: number, expected: number): string {
-  const noun = expected === 1 ? 'rutine' : 'rutin';
-  return `${formatAmount(done)} od ${formatAmount(expected)} ${noun}`;
+  return t('family:score.routinesOf', { count: expected, done: formatAmount(done), expected: formatAmount(expected) });
 }
 
 /**
@@ -373,34 +367,30 @@ export function scoreRoutinesText(score: Pick<CareScore, 'done' | 'expected' | '
   const total = score.routines !== null && score.routines > 0 ? score.routines : score.expected;
   const base = routinesOfText(Math.min(score.done, total), total);
   const shared = score.routines !== null && score.routines > 0 && Math.abs(score.routines - score.expected) >= 0.01;
-  return shared ? `${base} · pošten delež ${formatAmount(score.expected)}` : base;
+  return shared ? t('family:score.fairShare', { text: base, share: formatAmount(score.expected) }) : base;
 }
 
-/** "1 bolezen", "2 bolezni", "5 bolezni". */
+/** "1 bolezen", "2 bolezni", "5 bolezni" / "1 illness", "3 illnesses". */
 export function illnessesText(count: number): string {
-  return count === 1 ? '1 bolezen' : `${count} bolezni`;
+  return t('family:score.illnesses', { count });
 }
 
-/** Friendly reason text for the parent (child nickname optional). */
+/** Friendly reason text for the parent. */
 export function reasonText(reason: LightReason, missedToday = 0): string {
   switch (reason) {
     case 'game_over':
-      return 'Kuža je bil odvzet — igra je končana.';
     case 'phase3_alarm':
-      return 'Kuža že več kot uro nima hrane, vode ali čistoče.';
     case 'fell_ill_today':
-      return 'Kuža je danes zbolel in je pri veterinarju.';
+      return t(`family:reasons.${reason}`);
     case 'missed_routines':
-      if (missedToday === 3 || missedToday === 4) return `Danes so zamujene že ${missedToday} rutine.`;
-      if (missedToday > 4) return `Danes je zamujenih že ${missedToday} rutin.`;
-      return 'Danes so zamujene več kot 2 rutini.';
+      return missedToday > 2 ? t('family:reasons.missedMany', { count: missedToday }) : t('family:reasons.missedSome');
   }
 }
 
 export function progressText(progress: ChallengeProgress | null): string | null {
   if (!progress) return null;
-  if (progress.completed) return `Izziv zaključen (${progress.weeks_total} tednov)`;
-  return `Teden ${progress.week} od ${progress.weeks_total}`;
+  if (progress.completed) return t('family:progress.completed', { count: progress.weeks_total });
+  return t('family:progress.week', { week: progress.week, total: progress.weeks_total });
 }
 
 /** 0–1 share of the challenge done (for a progress bar). */
@@ -410,20 +400,32 @@ export function progressShare(progress: ChallengeProgress | null): number {
   return total > 0 ? Math.max(0, Math.min(1, progress.days_elapsed / total)) : 0;
 }
 
-const WEEKDAYS = ['ned', 'pon', 'tor', 'sre', 'čet', 'pet', 'sob'];
-
-/** "pon 4. 10." for a family-local `YYYY-MM-DD`; the raw string if it isn't one. */
-export function dayLabel(date: string): string {
-  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
-  if (!match) return date;
-  const [, y, m, d] = match;
-  const weekday = WEEKDAYS[new Date(Date.UTC(Number(y), Number(m) - 1, Number(d))).getUTCDay()];
-  return `${weekday} ${Number(d)}. ${Number(m)}.`;
+/** Day + month without the year: "4. 10." (sl) / "4 Oct" (en). */
+export function shortDate(day: number, month: number): string {
+  const monthLabel = (DATE.months as Readonly<Record<string, string | undefined>>)[String(month)] ?? String(month);
+  return t('family:date.short', { day, month: monthLabel });
 }
 
-/** Short weekday for a chart column ("pon"). */
+function weekdayOf(year: number, month: number, day: number): string {
+  const index = new Date(Date.UTC(year, month - 1, day)).getUTCDay();
+  return (DATE.weekdays as Readonly<Record<string, string | undefined>>)[String(index)] ?? '';
+}
+
+const ISO_DATE = /^(\d{4})-(\d{2})-(\d{2})$/;
+
+/** "pon 4. 10." / "Mon 4 Oct" for a family-local `YYYY-MM-DD`; the raw string if it isn't one. */
+export function dayLabel(date: string): string {
+  const match = ISO_DATE.exec(date);
+  if (!match) return date;
+  const [y, m, d] = [Number(match[1]), Number(match[2]), Number(match[3])];
+  return t('family:date.day', { weekday: weekdayOf(y, m, d), date: shortDate(d, m) });
+}
+
+/** Short weekday for a chart column ("pon" / "Mon"). */
 export function weekdayShort(date: string): string {
-  return dayLabel(date).split(' ')[0] ?? date;
+  const match = ISO_DATE.exec(date);
+  if (!match) return date;
+  return weekdayOf(Number(match[1]), Number(match[2]), Number(match[3]));
 }
 
 /**
@@ -432,43 +434,30 @@ export function weekdayShort(date: string): string {
  * A routine from another day than `today` gets its date in front.
  */
 export function missedWhenText(item: MissedRoutine, timezone: string | null, today: string | null = null): string {
-  const prefix = today && item.date && item.date !== today ? `${dayLabel(item.date)} · ` : '';
   const opens = familyClock(item.opens_at, timezone);
   const due = familyClock(item.due_at, timezone);
+  let when: string;
   switch (item.type) {
     case 'feed':
-      return `${prefix}okno ${opens ?? '?'}–${due ?? '?'}`;
+      when = t('family:missedWhen.window', { opens: opens ?? '?', due: due ?? '?' });
+      break;
     case 'clean':
-      return `${prefix}rok ${due ?? '?'}`;
+      when = t('family:missedWhen.deadline', { due: due ?? '?' });
+      break;
     default:
-      return `${prefix}do konca dneva`;
+      when = t('family:missedWhen.endOfDay');
   }
+  return today && item.date && item.date !== today
+    ? t('family:missedWhen.withDay', { day: dayLabel(item.date), when })
+    : when;
 }
 
-const ACTIVITY_LABELS: Record<string, string> = {
-  fed_pet: 'nahranil(a) kužka',
-  watered_pet: 'nalil(a) vodo',
-  cleaned_poop: 'počistil(a)',
-  walked_pet: 'dosegel(a) cilj sprehoda',
-  signed_contract: 'podpisal(a) pogodbo',
-  // M5-R02 behaviour events.
-  took_out_pet: 'peljal(a) kužka ven',
-  resolved_chewing: 'pospravil(a) copat in dal(a) igračo',
-  // M5-R03 training ("Šola").
-  trained_pet: 'opravil(a) vajo v šoli',
-  training_started: 'začel(a) vajo v šoli',
-};
+/** Child actions in the timeline ("nahranil(a) kužka"), keyed by `activity_type`. */
+const ACTIVITY_LABELS = strings('family', 'activities') as Readonly<Record<string, string | undefined>>;
+/** System rows ("Opozorilo ni bilo upoštevano"), keyed by `activity_type`. */
+const SYSTEM_ACTIVITY_LABELS = strings('family', 'systemActivities') as Readonly<Record<string, string | undefined>>;
 
-const SYSTEM_ACTIVITY_LABELS: Record<string, string> = {
-  ignored_warning: 'Opozorilo ni bilo upoštevano',
-  // M5-R01: meal whose window lies in quiet hours (school / sleep) — done by the parent.
-  parent_fed_pet: 'Obrok med tihimi urami (nahrani starš)',
-  // M5-R02 (system, negative): nobody took the puppy out in time / the dog chewed something.
-  pet_accident: 'Mladiček je naredil lužo',
-  pet_chewed: 'Kuža je pregrizel copat',
-};
-
-/** "Maja nahranil(a) kužka", "Opozorilo ni bilo upoštevano". */
+/** "Maja nahranil(a) kužka", "Opozorilo ni bilo upoštevano"; an unknown type shows its code. */
 export function activityText(entry: Pick<TimelineEntry, 'activity_type' | 'actor_nickname'>): string {
   const system = SYSTEM_ACTIVITY_LABELS[entry.activity_type];
   if (system) return system;
@@ -483,12 +472,14 @@ export function activityWhenText(createdAt: string | null, timezone: string | nu
   if (!parts) return '';
   if (today && parts.date === today) return parts.time;
   if (today) {
-    const t = Date.parse(`${today}T00:00:00Z`);
-    const d = Date.parse(`${parts.date}T00:00:00Z`);
-    if (!Number.isNaN(t) && !Number.isNaN(d) && t - d === 86_400_000) return `včeraj ${parts.time}`;
+    const todayMs = Date.parse(`${today}T00:00:00Z`);
+    const dayMs = Date.parse(`${parts.date}T00:00:00Z`);
+    if (!Number.isNaN(todayMs) && !Number.isNaN(dayMs) && todayMs - dayMs === 86_400_000) {
+      return t('family:date.yesterday', { time: parts.time });
+    }
   }
   const [, m, d] = parts.date.split('-');
-  return `${Number(d)}. ${Number(m)}. ${parts.time}`;
+  return t('family:date.dateTime', { date: shortDate(Number(d), Number(m)), time: parts.time });
 }
 
 /** The family-local date of an instant (`YYYY-MM-DD`), e.g. "today" from a timestamp. */

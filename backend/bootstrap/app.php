@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\SetRequestLocale;
 use App\Http\Middleware\TrustProxies;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -34,6 +35,10 @@ return Application::configure(basePath: dirname(__DIR__))
         // the real client (per-IP PIN-login limits). The list lives in
         // config/trustedproxy.php (env TRUSTED_PROXIES), read per request.
         $middleware->replace(BaseTrustProxies::class, TrustProxies::class);
+
+        // M1-18: Accept-Language → App::setLocale() for every API request
+        // (also /api/broadcasting/auth, which uses the `api` group).
+        $middleware->api(prepend: [SetRequestLocale::class]);
 
         // API guests get a JSON 401 (see withExceptions), not a redirect to a
         // `login` route this app doesn't have. Filament has its own login.

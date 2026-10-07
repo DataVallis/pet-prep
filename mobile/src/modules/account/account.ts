@@ -5,7 +5,7 @@
  *
  * Deletion is immediate and irreversible (no grace period in the MVP). The server
  * requires the password + `confirm: true`; the app additionally makes the parent
- * type `DELETE_CONFIRM_WORD`.
+ * type the confirmation word of the app language (`deleteConfirmWord()`).
  */
 
 import { Share } from 'react-native';
@@ -19,13 +19,22 @@ import {
 } from '@/api/client';
 import type { FamilyChild, FamilyOverview } from '@/modules/family/family';
 import { logout } from '@/modules/session/logout';
+import { t } from '@/i18n';
 
-/** What the parent has to type before the red button unlocks. */
-export const DELETE_CONFIRM_WORD = 'IZBRIŠI';
+/**
+ * What the parent has to type before the red button unlocks, in the app language
+ * ("IZBRIŠI" / "DELETE", `account:confirmWord`). Checked here (`isConfirmWord`) and also
+ * sent as `confirm_word` with the password + `confirm: true` — the canonical word of the
+ * app language, not the parent's raw input; the server accepts the word of any
+ * supported language (M1-18).
+ */
+export function deleteConfirmWord(): string {
+  return t('account:confirmWord');
+}
 
 /** True when the typed text is the confirmation word (spaces and letter case forgiven, "š" required). */
 export function isConfirmWord(text: string): boolean {
-  return text.trim().toUpperCase() === DELETE_CONFIRM_WORD;
+  return text.trim().toUpperCase() === deleteConfirmWord().toUpperCase();
 }
 
 /** The delete button is enabled only with a password and the confirmation word. */
@@ -137,10 +146,10 @@ export function classifyExportError(error: unknown): ExportErrorKind {
   return 'server';
 }
 
-/** `petprep-izvoz-2026-10-05.json` — the date of the export (from `generated_at`). */
+/** `petprep-izvoz-2026-10-05.json` / `petprep-export-…` — the date of the export (from `generated_at`). */
 export function exportFileName(data: Pick<FamilyExport, 'generated_at'>): string {
   const date = typeof data.generated_at === 'string' ? data.generated_at.slice(0, 10) : '';
-  return /^\d{4}-\d{2}-\d{2}$/.test(date) ? `petprep-izvoz-${date}.json` : 'petprep-izvoz.json';
+  return /^\d{4}-\d{2}-\d{2}$/.test(date) ? t('account:exportFile', { date }) : t('account:exportFileUndated');
 }
 
 /**
@@ -171,7 +180,8 @@ export async function shareFamilyExport(
  */
 export async function deleteAccountAndLogout(
   password: string,
-  deleteAccount: (password: string) => Promise<DeleteAccountResponse> = api.deleteAccount,
+  deleteAccount: (password: string) => Promise<DeleteAccountResponse> = (password) =>
+    api.deleteAccount(password, deleteConfirmWord()),
   signOut: (options: { revoke: boolean }) => Promise<void> = logout,
 ): Promise<DeleteAccountResponse> {
   const result = await deleteAccount(password);

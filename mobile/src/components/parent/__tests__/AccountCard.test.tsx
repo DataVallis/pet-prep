@@ -12,6 +12,7 @@ import { familyFromDashboard, type FamilyOverview } from '@/modules/family/famil
 import AppNavigator from '@/navigation/AppNavigator';
 import { START_STRINGS } from '@/screens/StartScreen';
 import { useAppStore } from '@/store/appStore';
+import { i18n } from '@/i18n';
 import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
@@ -176,7 +177,7 @@ describe('AccountCard — delete account', () => {
     fireEvent.press(screen.getByTestId('account-delete-form-submit'));
     await flush();
 
-    expect(deleteAccount).toHaveBeenCalledWith('napačno');
+    expect(deleteAccount).toHaveBeenCalledWith('napačno', 'IZBRIŠI');
     expect(screen.getByTestId('account-delete-form-error').props.children).toBe(ACCOUNT_STRINGS.deleteErrors.invalid_password);
     expect(useAppStore.getState().user?.id).toBe(1);
     expect(deleteItem).not.toHaveBeenCalled();
@@ -219,9 +220,42 @@ describe('AccountCard — delete account', () => {
     fireEvent.press(screen.getByTestId('account-delete-form-submit'));
 
     expect(await screen.findByText(START_STRINGS.subtitle)).toBeTruthy();
-    expect(deleteAccount).toHaveBeenCalledWith('Varno1Geslo');
+    expect(deleteAccount).toHaveBeenCalledWith('Varno1Geslo', 'IZBRIŠI');
     expect(apiLogout).not.toHaveBeenCalled();
     expect(deleteItem).toHaveBeenCalled();
     expect(useAppStore.getState().user).toBeNull();
+  });
+});
+
+describe('AccountCard — in English (M1-18)', () => {
+  beforeEach(async () => {
+    jest.clearAllMocks();
+    await act(async () => {
+      await i18n.changeLanguage('en');
+    });
+  });
+  afterEach(async () => {
+    await act(async () => {
+      await i18n.changeLanguage('sl');
+    });
+  });
+
+  it('asks for "DELETE" and sends it with the password', async () => {
+    deleteAccount.mockRejectedValue(new ApiError('Invalid', 422, { reason: 'invalid_password' }));
+    renderWithQuery(<AccountCard family={FAMILY} />);
+    expect(screen.getByText('Account')).toBeTruthy();
+    const form = openDeleteForm();
+
+    expect(screen.getByText(/your account, 2 child profiles and 2 dogs/)).toBeTruthy();
+    expect(screen.getByText('To confirm, type DELETE')).toBeTruthy();
+    fireEvent.changeText(form.password, 'Safe1Password');
+    fireEvent.changeText(form.confirm, 'IZBRIŠI');
+    expect(screen.getByTestId('account-delete-form-submit').props.accessibilityState).toEqual({ disabled: true });
+    fireEvent.changeText(form.confirm, 'delete');
+    fireEvent.press(screen.getByTestId('account-delete-form-submit'));
+    await flush();
+
+    expect(deleteAccount).toHaveBeenCalledWith('Safe1Password', 'DELETE');
+    expect(screen.getByTestId('account-delete-form-error').props.children).toBe('The password is incorrect.');
   });
 });

@@ -13,48 +13,46 @@ import { useJoinFamily } from '@/hooks/queries/useParentQueries';
 import { Card, PARENT_COLORS as C, SectionTitle } from '@/components/parent/ParentUi';
 import { classifyJoinError, normalizeInviteCode, type JoinErrorKind } from '@/modules/family/invite';
 import { fonts, palette } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-export const JOIN_FAMILY_STRINGS = {
-  title: 'Imate kodo družine?',
-  hint: 'Če vas je drugi starš povabil, vpišite njegovo kodo. Mogoče le, dokler v svoji družini še nimate otrok ali psov.',
-  placeholder: 'ABCD EFGH',
-  join: 'Pridruži se družini',
-  joined: (parents: number) =>
-    `Pridružili ste se družini (${parents} ${parents === 1 ? 'starš' : parents === 2 ? 'starša' : parents <= 4 ? 'starši' : 'staršev'}).`,
-  errors: {
-    invalid_code: 'Ta koda ne obstaja. Preverite jo in poskusite znova.',
-    code_expired: 'Koda je potekla. Prosite drugega starša za novo.',
-    code_used: 'Koda je že uporabljena. Prosite drugega starša za novo.',
-    already_member: 'V tej družini že ste.',
-    family_not_empty: 'Vaša družina že ima otroke ali pse, zato se ne morete pridružiti drugi družini.',
-    too_many_attempts: 'Preveč napačnih kod. Poskusite znova čez 15 minut.',
-    rate_limited: 'Preveč poskusov v kratkem času. Počakajte minuto in poskusite znova.',
-    not_a_parent: 'Družini se lahko pridruži samo starševski račun.',
-    invalid_format: 'Koda ima 8 črk in številk (npr. ABCD EFGH).',
-    offline: 'Ni povezave s strežnikom. Poskusite znova.',
-    server: 'Pridružitev ni uspela. Poskusite znova.',
-  } satisfies Record<JoinErrorKind, string>,
-} as const;
+
+/** All user-visible strings (`family:join`, M1-18). */
+export const JOIN_FAMILY_STRINGS = strings('family', 'join', {
+  joined: (parents: number) => t('family:join.joined', { count: parents }),
+});
 
 const S = JOIN_FAMILY_STRINGS;
 
 interface JoinFamilyCardProps {
   /**
-   * Called with the success text. After joining, the family is no longer empty and
-   * this card disappears with the refetch — the parent screen shows the notice.
+   * Called with the joined notice (a code, translated at render — M1-18 review). After
+   * joining, the family is no longer empty and this card disappears with the refetch —
+   * the parent screen shows the notice.
    */
-  onJoined?: (message: string) => void;
+  onJoined?: (notice: JoinNotice) => void;
+}
+
+/** "You joined the family" notice, kept as data so it follows a language switch. */
+export interface JoinNotice {
+  kind: 'joined';
+  parents: number;
+}
+
+export function joinNoticeText(notice: JoinNotice): string {
+  return S.joined(notice.parents);
 }
 
 export default function JoinFamilyCard({ onJoined }: JoinFamilyCardProps) {
   const join = useJoinFamily();
   const [input, setInput] = useState('');
-  const [message, setMessage] = useState<{ text: string; isError: boolean } | null>(null);
+  // Message as a thunk: translated at render, so it follows a language switch (M1-18 review).
+  const [message, setMessage] = useState<{ text: () => string; isError: boolean } | null>(null);
 
   const submit = () => {
     const code = normalizeInviteCode(input);
     if (!code) {
-      setMessage({ text: S.errors.invalid_format, isError: true });
+      setMessage({ text: () => S.errors.invalid_format, isError: true });
       return;
     }
     setMessage(null);
@@ -62,11 +60,11 @@ export default function JoinFamilyCard({ onJoined }: JoinFamilyCardProps) {
       onSuccess: (res) => {
         setInput('');
         const parents = Array.isArray(res.family?.parents) ? res.family.parents.length : 2;
-        const text = S.joined(parents);
-        setMessage({ text, isError: false });
-        onJoined?.(text);
+        const notice: JoinNotice = { kind: 'joined', parents };
+        setMessage({ text: () => joinNoticeText(notice), isError: false });
+        onJoined?.(notice);
       },
-      onError: (err) => setMessage({ text: S.errors[classifyJoinError(err)], isError: true }),
+      onError: (err) => setMessage({ text: () => S.errors[classifyJoinError(err)], isError: true }),
     });
   };
 
@@ -100,7 +98,7 @@ export default function JoinFamilyCard({ onJoined }: JoinFamilyCardProps) {
       </Pressable>
       {message && (
         <Text style={[styles.message, message.isError && styles.error]} testID="join-message">
-          {message.text}
+          {message.text()}
         </Text>
       )}
     </Card>

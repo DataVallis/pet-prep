@@ -1,6 +1,6 @@
 /**
  * Irreversible-deletion confirmation (M2-08): what will be deleted, the parent's
- * password and the typed word "IZBRIŠI". The red button unlocks only with both.
+ * password and the typed confirmation word ("IZBRIŠI" / "DELETE", in the app language). The red button unlocks only with both.
  * Used for the parent's own account (AccountCard) and a child profile
  * (FamilyChildrenCard). Light parent theme (ADR-007).
  */
@@ -10,16 +10,18 @@ import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 import { Text, TextInput } from '@/components/ui/Text';
 
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
-import { canSubmitDeletion, DELETE_CONFIRM_WORD } from '@/modules/account/account';
+import { canSubmitDeletion, deleteConfirmWord } from '@/modules/account/account';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 import { palette } from '@/theme';
 
-export const DELETION_FORM_STRINGS = {
-  passwordLabel: 'Vaše geslo',
-  passwordPlaceholder: 'Geslo za prijavo',
-  confirmLabel: `Za potrditev vpišite ${DELETE_CONFIRM_WORD}`,
-  cancel: 'Prekliči',
-  irreversible: 'Brisanje je takojšnje in ga ni mogoče razveljaviti.',
-} as const;
+/** All user-visible strings of the form (`account:deletionForm`, M1-18). */
+export const DELETION_FORM_STRINGS = strings('account', 'deletionForm', {
+  /** "Za potrditev vpišite IZBRIŠI" / "To confirm, type DELETE". */
+  get confirmLabel(): string {
+    return t('account:deletionForm.confirmLabel', { word: deleteConfirmWord() });
+  },
+});
 
 const S = DELETION_FORM_STRINGS;
 
@@ -80,7 +82,7 @@ export default function DeletionConfirmForm({
         style={styles.input}
         value={confirmText}
         onChangeText={setConfirmText}
-        placeholder={DELETE_CONFIRM_WORD}
+        placeholder={deleteConfirmWord()}
         placeholderTextColor={C.faint}
         autoCapitalize="characters"
         autoCorrect={false}

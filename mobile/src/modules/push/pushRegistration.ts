@@ -32,6 +32,7 @@ import { Platform } from 'react-native';
 
 import { api, getAuthToken } from '@/api/client';
 import { getBuildInfo } from '@/config/buildInfo';
+import { currentLanguage } from '@/i18n';
 import { createFetchGate, errorStatus, retryAfterMs, type FetchGate } from '@/modules/childPet/refetchGovernor';
 import { ALARM_VIBRATION, PUSH_CHANNELS, PUSH_STORAGE_KEYS, PUSH_STRINGS } from '@/modules/push/pushConfig';
 
@@ -102,7 +103,7 @@ export const devicesGate: FetchGate = createFetchGate(DEVICES_BURST, DEVICES_REF
 
 interface RegistrationState {
   inFlight: Promise<PushRegistrationResult> | null;
-  /** `${session token}|${expo token}` the server accepted in this app run. */
+  /** `${session token}|${expo token}|${language}` the server accepted in this app run. */
   registeredKey: string | null;
   /** Device ms until which a token event is the echo of our own fetch. */
   selfFetchUntil: number;
@@ -113,6 +114,8 @@ interface RegistrationState {
   lastDeviceToken: string | null;
   /** A real rotation arrived while a run was in flight → register once after it. */
   rotationPending: boolean;
+  /** The language changed while a run was in flight (it may have sent the old one) → once more after it. */
+  languagePending: boolean;
   failedAttempts: number;
   retryTimer: ReturnType<typeof setTimeout> | null;
   /** Bumped by {@link resetPushRegistration}; runs / retries of older generations are ignored. */
@@ -125,6 +128,7 @@ const state: RegistrationState = {
   selfFetchUntil: 0,
   lastDeviceToken: null,
   rotationPending: false,
+  languagePending: false,
   failedAttempts: 0,
   retryTimer: null,
   generation: 0,
@@ -139,6 +143,7 @@ export function resetPushRegistration(): void {
   state.selfFetchUntil = 0;
   state.lastDeviceToken = null;
   state.rotationPending = false;
+  state.languagePending = false;
   state.failedAttempts = 0;
   state.retryTimer = null;
   devicesGate.reset();
@@ -191,14 +196,30 @@ export function registerForPush(): Promise<PushRegistrationResult> {
   const generation = state.generation;
   const run = registerOnce(generation).finally(() => {
     if (state.inFlight === run) state.inFlight = null;
-    // A real rotation arrived meanwhile → one more (deduped, limited) registration.
-    if (generation === state.generation && state.rotationPending) {
+    // A real rotation or a language switch arrived meanwhile → one more (deduped,
+    // limited by the devices gate) registration.
+    if (generation === state.generation && (state.rotationPending || state.languagePending)) {
       state.rotationPending = false;
+      state.languagePending = false;
       void registerForPush();
     }
   });
   state.inFlight = run;
   return run;
+}
+
+/**
+ * The app language changed (signed in): register again so pushes come in the new language.
+ * A run in flight may already have sent the old language — then exactly one more run
+ * follows it (several switches during one run still mean one more run). Deduped per
+ * (session, token, language) and limited by {@link devicesGate}.
+ */
+export function registerForLanguageChange(): void {
+  if (state.inFlight !== null) {
+    state.languagePending = true;
+    return;
+  }
+  void registerForPush();
 }
 
 /** Result of a run whose session was reset (logout) while it ran: touches nothing. */
@@ -240,7 +261,10 @@ async function registerOnce(generation: number): Promise<PushRegistrationResult>
     session = null;
   }
   if (stale()) return STALE;
-  const key = `${session ?? ''}|${token}`;
+  // The server stores the push language per device, only from the explicit `locale`
+  // field (M1-18): a language switch re-registers.
+  const locale = currentLanguage();
+  const key = `${session ?? ''}|${token}|${locale}`;
   if (state.registeredKey === key) return { status: 'registered', token };
 
   const wait = devicesGate.waitMs(Date.now());
@@ -250,7 +274,7 @@ async function registerOnce(generation: number): Promise<PushRegistrationResult>
   }
   devicesGate.take(Date.now());
   try {
-    await api.registerDevice({ expo_push_token: token, platform, app_version: appVersion() });
+    await api.registerDevice({ expo_push_token: token, platform, app_version: appVersion(), locale });
   } catch (error) {
     if (stale()) return STALE;
     state.failedAttempts += 1;

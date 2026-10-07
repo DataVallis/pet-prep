@@ -5,6 +5,7 @@ namespace App\Services\Push;
 use App\Enums\DevicePlatform;
 use App\Models\DevicePushToken;
 use App\Models\User;
+use App\Support\RequestLocale;
 use Illuminate\Support\Facades\Log;
 use Laravel\Sanctum\PersonalAccessToken;
 
@@ -16,6 +17,11 @@ use Laravel\Sanctum\PersonalAccessToken;
  * on the child's phone) moves it, so a phone never gets another account's
  * pushes. The row is tied to the Sanctum token that registered it: deleting
  * that token (logout, revoke, prune) deletes the row (FK cascade).
+ *
+ * Language (M1-18): `$locale` is the explicit `locale` body field (en | sl)
+ * — stored, and refreshed on every re-registration that sends it. Without
+ * it the stored language is kept; a new row gets `locales.unstated_device`
+ * ('sl': every app build before M1-18 is Slovenian-only and sends none).
  */
 class PushDeviceService
 {
@@ -25,8 +31,12 @@ class PushDeviceService
         DevicePlatform $platform,
         ?string $appVersion,
         ?PersonalAccessToken $accessToken,
+        ?string $locale = null,
     ): DevicePushToken {
         $now = now();
+        $locale = RequestLocale::isSupported($locale) ? $locale : null;
+        $unstated = config('locales.unstated_device');
+        $insertLocale = $locale ?? (RequestLocale::isSupported(is_string($unstated) ? $unstated : null) ? $unstated : null);
         $accessTokenId = $accessToken !== null && $accessToken->exists ? $accessToken->getKey() : null;
 
         // Audit a move to another account (PR #35 review) — ids only, never the token.
@@ -47,12 +57,14 @@ class PushDeviceService
             'expo_push_token' => $expoPushToken,
             'platform' => $platform->value,
             'app_version' => $appVersion,
+            'locale' => $insertLocale,
             'last_seen_at' => $now,
             'disabled_at' => null,
             'disabled_reason' => null,
         ]], ['expo_push_token'], [
             'user_id', 'personal_access_token_id', 'platform', 'app_version',
             'last_seen_at', 'disabled_at', 'disabled_reason', 'updated_at',
+            ...($locale !== null ? ['locale'] : []),
         ]);
 
         return DevicePushToken::where('expo_push_token', $expoPushToken)->firstOrFail();

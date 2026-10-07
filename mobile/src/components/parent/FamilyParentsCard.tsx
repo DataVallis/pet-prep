@@ -20,35 +20,32 @@ import {
   type InviteErrorKind,
 } from '@/modules/family/invite';
 import { palette } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-export const FAMILY_PARENTS_STRINGS = {
-  title: 'Starši',
-  me: '(vi)',
-  invite: 'Povabi drugega starša',
-  inviteHint: 'Drugi starš vidi iste otroke in pse ter lahko upravlja nadzor. Koda velja 24 ur in le enkrat.',
-  codeLabel: 'Koda družine',
-  validUntil: (when: string) => `Velja do ${when}.`,
-  share: 'Deli kodo',
-  newCode: 'Nova koda',
-  newCodeHint: 'Nova koda razveljavi prejšnjo.',
+
+/** All user-visible strings (`family:parents`, M1-18). */
+export const FAMILY_PARENTS_STRINGS = strings('family', 'parents', {
+  validUntil: (when: string) => t('family:parents.validUntil', { when }),
   errors: {
-    too_many: 'Preveč novih kod v kratkem času. Poskusite čez nekaj časa.',
-    offline: 'Ni povezave s strežnikom. Poskusite znova.',
-    server: 'Kode ni bilo mogoče ustvariti. Poskusite znova.',
-  } satisfies Record<InviteErrorKind, string>,
-} as const;
+    // JSON key `tooMany`: a `_many` suffix would read as an i18next plural form.
+    get too_many(): string {
+      return t('family:parents.errors.tooMany');
+    },
+  },
+});
 
 const S = FAMILY_PARENTS_STRINGS;
 
 export default function FamilyParentsCard({ family }: { family: FamilyOverview }) {
   const invite = useInviteParent();
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<InviteErrorKind | null>(null);
   const code = invite.data ?? null;
   const expires = code ? expiryText(code.expires_at, family.timezone) : null;
 
   const create = () => {
     setError(null);
-    invite.mutate(undefined, { onError: (err) => setError(S.errors[classifyInviteError(err)]) });
+    invite.mutate(undefined, { onError: (err) => setError(classifyInviteError(err)) });
   };
 
   const share = () => {
@@ -122,7 +119,7 @@ export default function FamilyParentsCard({ family }: { family: FamilyOverview }
 
       {error && (
         <Text style={styles.error} testID="invite-error">
-          {error}
+          {S.errors[error]}
         </Text>
       )}
     </Card>

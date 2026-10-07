@@ -1,7 +1,7 @@
 /**
  * The family's children for the parent (M2-01a slice, M2-02): nickname, pet,
  * signed-in devices, and per child "Nova koda za prijavo" / "Odjavi vse naprave" /
- * "Izbriši profil" (M2-08: consequences, password + "IZBRIŠI"). Signing out and
+ * "Izbriši profil" (M2-08: consequences, password + the confirmation word). Signing out and
  * deleting ask for confirmation inline (no native alert). "Dodaj otroka" is
  * always offered (several children per family; backend limit 10).
  * Light parent theme (ADR-007).
@@ -24,49 +24,21 @@ import {
   type RevokeErrorKind,
 } from '@/modules/family/family';
 import { fonts, palette, tightTracking } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-/** All user-visible strings (extract to i18n with M1-18). */
-export const FAMILY_STRINGS = {
-  title: 'Otroci',
-  addChild: 'Dodaj otroka',
-  noPet: 'Še brez psa',
-  awaitingContract: 'čaka na podpis pogodbe',
-  gameOver: 'igra končana',
-  legacyEmail: 'stari račun z e-pošto',
-  newLoginPin: 'Nova koda za prijavo',
-  firstPin: 'Ustvari kodo',
-  revokeAll: 'Odjavi vse naprave',
-  confirmRevoke: (name: string) => `${name}: odjava z vseh naprav? Za ponovno prijavo bo potrebna nova koda.`,
-  cancel: 'Prekliči',
-  confirm: 'Odjavi',
-  revoked: (devices: string) => `Odjavljeno (${devices}).`,
-  errors: {
-    not_found: 'Tega otroka ni več v vaši družini.',
-    offline: 'Ni povezave s strežnikom. Poskusite znova.',
-    server: 'Odjava ni uspela. Poskusite znova.',
-  } satisfies Record<RevokeErrorKind, string>,
-  deleteProfile: 'Izbriši profil',
-  deleteSubmit: 'Izbriši profil za vedno',
+
+/** All user-visible strings (`family:children`, M1-18). */
+export const FAMILY_STRINGS = strings('family', 'children', {
+  confirmRevoke: (name: string) => t('family:children.confirmRevoke', { name }),
+  revoked: (devices: string) => t('family:children.revoked', { devices }),
   deleteConsequences: (name: string, deletedPets: number, keptPets: number): string[] => [
-    `Izbriše se profil »${name}«: vse prijave na napravah, kode in otrokova pogodba (podpis).`,
-    ...(deletedPets > 0
-      ? [`${deletedPets === 1 ? 'Pes, za katerega skrbi sam, se izbriše' : `Psi, za katere skrbi sam (${deletedPets}), se izbrišejo`} — z dnevnikom, ocenami, slikami in videi.`]
-      : []),
-    ...(keptPets > 0
-      ? [`${keptPets === 1 ? 'Skupni pes ostane' : `Skupni psi (${keptPets}) ostanejo`} drugim otrokom; otrokova pretekla skrb ostane v dnevniku brez imena.`]
-      : []),
+    t('family:children.deleteWhat', { name }),
+    ...(deletedPets > 0 ? [t('family:children.deletePets', { count: deletedPets })] : []),
+    ...(keptPets > 0 ? [t('family:children.keptPets', { count: keptPets })] : []),
   ],
-  deleted: (name: string) => `Profil »${name}« je izbrisan.`,
-  deleteErrors: {
-    invalid_password: 'Geslo ni pravilno.',
-    protected: 'Tega profila ni mogoče izbrisati.',
-    not_found: 'Tega otroka ni več v vaši družini.',
-    throttled: 'Preveč napačnih gesel. Poskusite znova čez 15 minut.',
-    invalid: 'Vpišite geslo in potrdite brisanje.',
-    unknown: 'Ni znano, ali je bil izbris izveden — preverite seznam otrok.',
-    server: 'Brisanje ni uspelo. Nič ni bilo izbrisano — poskusite znova.',
-  } satisfies Record<DeletionErrorKind, string>,
-} as const;
+  deleted: (name: string) => t('family:children.deleted', { name }),
+});
 
 const S = FAMILY_STRINGS;
 
@@ -81,10 +53,11 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
   const revoke = useRevokeChildDevices();
   const removeChild = useDeleteChild();
   const [confirmingId, setConfirmingId] = useState<number | null>(null);
-  const [result, setResult] = useState<{ childId: number; text: string; isError: boolean } | null>(null);
+  // Message as a thunk: translated at render, so it follows a language switch (M1-18 review).
+  const [result, setResult] = useState<{ childId: number; text: () => string; isError: boolean } | null>(null);
   const [deletingId, setDeletingId] = useState<number | null>(null);
-  const [deleteError, setDeleteError] = useState<string | null>(null);
-  const [deletedNotice, setDeletedNotice] = useState<string | null>(null);
+  const [deleteError, setDeleteError] = useState<{ text: () => string } | null>(null);
+  const [deletedNotice, setDeletedNotice] = useState<{ text: () => string } | null>(null);
 
   const openDelete = (child: FamilyChild) => {
     setResult(null);
@@ -101,9 +74,12 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
       {
         onSuccess: () => {
           setDeletingId(null);
-          setDeletedNotice(S.deleted(child.name));
+          setDeletedNotice({ text: () => S.deleted(child.name) });
         },
-        onError: (err) => setDeleteError(S.deleteErrors[classifyDeletionError(err)]),
+        onError: (err) => {
+          const kind = classifyDeletionError(err);
+          setDeleteError({ text: () => S.deleteErrors[kind] });
+        },
       },
     );
   };
@@ -123,10 +99,10 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
     revoke.mutate(child.id, {
       onSuccess: (res) => {
         setConfirmingId(null);
-        setResult({ childId: child.id, text: S.revoked(devicesLabel(res.revoked_tokens)), isError: false });
+        setResult({ childId: child.id, text: () => S.revoked(devicesLabel(res.revoked_tokens)), isError: false });
       },
       onError: (err) => {
-        setResult({ childId: child.id, text: S.errors[classifyRevokeError(err)], isError: true });
+        setResult({ childId: child.id, text: () => S.errors[classifyRevokeError(err)], isError: true });
       },
     });
   };
@@ -140,7 +116,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
 
       {deletedNotice && (
         <Text style={styles.result} testID="child-deleted-notice" accessibilityLiveRegion="polite">
-          {deletedNotice}
+          {deletedNotice.text()}
         </Text>
       )}
 
@@ -173,7 +149,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
                 consequences={S.deleteConsequences(child.name, impact.deletedPets, impact.keptPets)}
                 submitLabel={S.deleteSubmit}
                 pending={removeChild.isPending}
-                error={deleteError}
+                error={deleteError?.text() ?? null}
                 onCancel={() => {
                   setDeletingId(null);
                   setDeleteError(null);
@@ -248,7 +224,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
 
             {result?.childId === child.id && (
               <Text style={[styles.result, result.isError && styles.resultError]} testID={`revoke-result-${child.id}`}>
-                {result.text}
+                {result.text()}
               </Text>
             )}
           </View>

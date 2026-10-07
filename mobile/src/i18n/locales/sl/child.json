@@ -1,0 +1,139 @@
+{
+  "hud": {
+    "feed": "Hrani",
+    "water": "Voda",
+    "walk": "Sprehod",
+    "clean": "Očisti",
+    "metrics": {
+      "hunger": "Hrana",
+      "thirst": "Voda",
+      "energy": "Energija",
+      "hygiene": "Čistoča"
+    },
+    "metricA11y": "{{label}} {{value}}%",
+    "loading": "Nalagam kužka …",
+    "loadFailed": "Kužka ni bilo mogoče naložiti.",
+    "autoRetry": "Poskušam znova samodejno …",
+    "retry": "Poskusi znova",
+    "logout": "Odjava",
+    "stale": "Ni povezave — prikazujem zadnje stanje.",
+    "breeds": {
+      "mutt": "Mešanček",
+      "border_collie": "Border collie"
+    },
+    "moods": {
+      "idle": "Srečen in igriv",
+      "playing": "Igriv",
+      "hungry": "Lačen kužek",
+      "sleeping": "Počiva",
+      "low_energy": "Utrujen",
+      "sick": "Bolan"
+    },
+    "challengeWeek": "TEDEN {{week}} OD {{total}}"
+  },
+  "ws": {
+    "live": "V ŽIVO",
+    "connecting": "POVEZUJEM",
+    "polling": "Samodejno osveževanje"
+  },
+  "time": {
+    "at": "ob {{time}}",
+    "tomorrowAt": "jutri ob {{time}}"
+  },
+  "actions": {
+    "success": {
+      "feed": "Njam! Kuža je sit.",
+      "water": "Sveža voda! Kuža je odžejan.",
+      "clean": "Bravo, vse je čisto!"
+    },
+    "unchanged": {
+      "feed": "Kuža je že sit.",
+      "water": "Kuža ima že polno posodo.",
+      "clean": "Že je bilo čisto."
+    },
+    "refused": {
+      "outsideFeedWindow": "Kuža bo lačen spet {{when}}.",
+      "outsideFeedWindowNoTime": "Zdaj ni čas za hrano.",
+      "alreadyFed": "Kuža je že jedel. Spet ga nahraniš {{when}}.",
+      "alreadyFedNoTime": "Kuža je že jedel.",
+      "waterDailyLimit": "Danes je kuža popil dovolj vode. Nova voda jutri.",
+      "waterTooSoon": "Posoda je še polna. Novo vodo lahko daš {{when}}.",
+      "waterTooSoonNoTime": "Posoda je še polna.",
+      "needsCleaning": "Najprej pospravi za kužkom!",
+      "other": "Tega zdaj ne gre. Poskusi malo kasneje."
+    },
+    "locked": {
+      "hard_stopped": "Starš je ustavil igro.",
+      "ill": "Kuža je pri veterinarju do {{until}}.",
+      "illNoTime": "Kuža je pri veterinarju.",
+      "game_over": "Kuža je odšel v zavetišče. Pogovori se s starši.",
+      "inactive": "Igra trenutno ni aktivna."
+    },
+    "offline": "Ni povezave. Preveri internet in poskusi znova.",
+    "tooFast": "Počasi! Poskusi čez trenutek.",
+    "failed": "Nekaj je šlo narobe. Poskusi znova."
+  },
+  "hints": {
+    "cleanFirst": "Najprej pospravi",
+    "tomorrow": "jutri",
+    "clean": "Čisto"
+  },
+  "meals": {
+    "title": "Obroki danes",
+    "byParent": "nahrani starš",
+    "done": "nahranjen",
+    "now": "zdaj",
+    "past": "minil"
+  },
+  "locked": {
+    "hard_stop": {
+      "title": "Starš je ustavil igro",
+      "body": "Simulacija je začasno ustavljena. Pogovori se s starši."
+    },
+    "illness": {
+      "title": "Kuža je pri veterinarju",
+      "body": "Kuža je pri veterinarju do {{until}}. Potrebuje počitek.",
+      "bodyNoTime": "Kuža potrebuje počitek. Kmalu se vrne."
+    },
+    "game_over": {
+      "title": "Kuža je v zavetišču",
+      "body": "Kuža je odšel v virtualno zavetišče. Pogovori se s starši o novem začetku."
+    },
+    "inactive": {
+      "title": "Igra ni aktivna",
+      "body": "Igra trenutno ni aktivna. Prosi starša, da preveri nastavitve."
+    }
+  },
+  "cleaning": {
+    "title": "Pospravi za kužkom!",
+    "progress": "{{done}} / {{total}} madežev",
+    "hint": "Tapni madeže, da jih zdrgneš.",
+    "close": "Kasneje",
+    "spot": "Madež",
+    "accident": {
+      "title": "Ups, luža! Pobriši jo.",
+      "hint": "Tapni lužice, da jih pobrišeš.",
+      "spot": "Lužica"
+    }
+  },
+  "hudError": {
+    "title": "Ups, nekaj se je zataknilo",
+    "body": "Kuža je v redu. Poskusi znova.",
+    "retry": "Poskusi znova"
+  },
+  "walk": {
+    "title": "Sprehod",
+    "steps": "{{steps}} / {{goal}} korakov",
+    "energy": "Energija {{pct}} %",
+    "mine": "Tvoji koraki danes: {{steps}}",
+    "goalReached": "Bravo! Današnji sprehod je opravljen.",
+    "allow": "Dovoli štetje korakov",
+    "allowHint": "Telefon bo štel tvoje korake, da kuža dobi energijo.",
+    "denied": "Štetje korakov ni dovoljeno. Prosi starša, da ga vklopi v nastavitvah telefona.",
+    "unavailable": "Ta telefon ne zna šteti korakov.",
+    "refresh": "Osveži korake",
+    "syncing": "Shranjujem …",
+    "androidNote": "Koraki se štejejo, ko je aplikacija odprta.",
+    "close": "Zapri"
+  }
+}

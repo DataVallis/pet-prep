@@ -1,0 +1,110 @@
+{
+  "profile": {
+    "stages": { "puppy": "Mladiček", "young": "Mlad pes", "adult": "Odrasel", "senior": "Starejši" },
+    "stagesLower": { "puppy": "mladiček", "young": "mlad pes", "adult": "odrasel pes", "senior": "starejši pes" },
+    "origins": { "bought": "Kupljen pri vzreditelju", "adopted": "Posvojen iz zavetišča" },
+    "nextStage": "Od {{date}} {{stage}}",
+    "nextStageChild": "{{date}} postane {{stage}}",
+    "mealsToday_one": "Danes {{count}} obrok",
+    "mealsToday_two": "Danes {{count}} obroka",
+    "mealsToday_few": "Danes {{count}} obroki",
+    "mealsToday_other": "Danes {{count}} obrokov",
+    "mealsTodayWithParent_one": "Danes {{count}} obrok — {{byParent}} v tihih urah nahrani starš",
+    "mealsTodayWithParent_two": "Danes {{count}} obroka — {{byParent}} v tihih urah nahrani starš",
+    "mealsTodayWithParent_few": "Danes {{count}} obroki — {{byParent}} v tihih urah nahrani starš",
+    "mealsTodayWithParent_other": "Danes {{count}} obrokov — {{byParent}} v tihih urah nahrani starš",
+    "months_one": "{{count}} mesec",
+    "months_two": "{{count}} meseca",
+    "months_few": "{{count}} mesece",
+    "months_other": "{{count}} mesecev",
+    "years_one": "{{count}} leto",
+    "years_two": "{{count}} leti",
+    "years_few": "{{count}} leta",
+    "years_other": "{{count}} let",
+    "yearsAndMonths": "{{years}} in {{months}}"
+  },
+  "date": {
+    "format": "{{day}}. {{month}} {{year}}",
+    "months": {
+      "1": "1.", "2": "2.", "3": "3.", "4": "4.", "5": "5.", "6": "6.",
+      "7": "7.", "8": "8.", "9": "9.", "10": "10.", "11": "11.", "12": "12."
+    }
+  },
+  "picker": {
+    "title": "Izberi kužka za: {{name}}",
+    "intro": "Izbira določa, kako bo skrb za kužka videti — kot pri pravem psu.",
+    "breedTitle": "Pasma",
+    "breeds": { "mutt": "Mešanček", "border_collie": "Border collie" },
+    "breedHints": {
+      "mutt": "Brezplačen v vseh kombinacijah.",
+      "border_collie": "Del plačljivega izziva."
+    },
+    "breedLockedNote": "Plačljive pasme se odklenejo samo z nakupom. Za začetek izberite mešančka — brezplačen je pri vsakem izvoru in starosti.",
+    "lockedA11y": "{{breed}}, zaklenjeno — del plačljivega izziva",
+    "originTitle": "Od kod pride",
+    "origins": { "bought": "Kupljen (vzreditelj)", "adopted": "Posvojen (zavetišče)" },
+    "originHints": {
+      "bought": "Od vzreditelja. Vpliv izvora na vedenje pride kmalu.",
+      "adopted": "Iz zavetišča. Vpliv izvora na vedenje (npr. plašnost v prvih tednih) pride kmalu."
+    },
+    "ageTitle": "Starost ob prihodu",
+    "ages": { "puppy": "Mladiček", "young": "Mlad pes", "adult": "Odrasel", "senior": "Starejši" },
+    "ageHints": {
+      "mutt": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000. Nezgode v hiši pridejo kmalu.",
+        "young": "2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
+      },
+      "border_collie": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih. Nezgode v hiši pridejo kmalu.",
+        "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
+      }
+    },
+    "quietHoursNote": "Obrok, ki pade v celoti v tihe ure (šola, spanje), nahrani starš.",
+    "missing": "Izberite izvor in starost.",
+    "confirm": "Ustvari kodo",
+    "back": "Nazaj"
+  },
+  "media": {
+    "pending": "Kuža se pripravlja…",
+    "pendingParent": "Kuža se pripravlja…",
+    "breeds": { "mutt": "Mešanček", "border_collie": "Border collie" },
+    "a11y": "Tvoj kuža ({{breed}})"
+  },
+  "album": {
+    "title": "Moj kuža",
+    "parentTitle": "Posnetki kužka",
+    "videoHint": "video",
+    "photoHint": "fotografija",
+    "retry": "Poskusi znova",
+    "open": "Odpri album",
+    "close": "Zapri album",
+    "back": "Nazaj na album",
+    "photo": "Fotografija",
+    "missing": "Še ni posnetka",
+    "empty": "Kuža se še pripravlja. Kmalu bodo tu njegove slike in posnetki.",
+    "unavailable": "Posnetka trenutno ni mogoče predvajati.",
+    "previous": "Prejšnji",
+    "next": "Naslednji",
+    "mute": "Izklopi zvok",
+    "unmute": "Vklopi zvok",
+    "position": "{{index}} / {{total}}",
+    "states": {
+      "idle": "Miruje",
+      "sleeping": "Spi",
+      "low_energy": "Utrujen",
+      "hungry": "Lačen",
+      "sick": "Bolan",
+      "playing": "Se igra"
+    }
+  },
+  "growth": {
+    "section": "Kako je kuža rasel",
+    "current": "Zdaj",
+    "photo": "Fotografija",
+    "hint": "Odpri fotografijo"
+  }
+}

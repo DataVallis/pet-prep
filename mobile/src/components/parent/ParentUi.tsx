@@ -12,6 +12,8 @@ import { AlertTriangle, Beef, Droplet, Footprints, GraduationCap, Sparkles, Wifi
 
 import { LIGHT_LABELS, type LightColor, type RoutineType } from '@/modules/family/scoring';
 import { fonts, light, meter, palette, radius } from '@/theme';
+import { t } from '@/i18n';
+
 
 export const PARENT_COLORS = {
   bg: light.bg,
@@ -74,7 +76,7 @@ export function TrafficLightBadge({ color, testID }: { color: LightColor; testID
     <View
       style={[styles.badge, { backgroundColor: s.bg }]}
       testID={testID}
-      accessibilityLabel={`Semafor: ${LIGHT_LABELS[color]}`}
+      accessibilityLabel={t('parent:ui.lightA11y', { label: LIGHT_LABELS[color] })}
     >
       <View style={[styles.badgeDot, { backgroundColor: s.dot }]} />
       <Text style={[styles.badgeText, { color: s.text }]}>{LIGHT_LABELS[color]}</Text>
@@ -105,7 +107,7 @@ export function MetricRow({ label, value, testID }: { label: string; value: numb
       <View style={styles.metricTrack}>
         <View style={[styles.metricFill, { width: `${clamped}%`, backgroundColor: fill }]} />
       </View>
-      <Text style={styles.metricValue}>{clamped} %</Text>
+      <Text style={styles.metricValue}>{t('common:format.percent', { value: clamped })}</Text>
     </View>
   );
 }

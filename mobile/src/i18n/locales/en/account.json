@@ -1,0 +1,53 @@
+{
+  "confirmWord": "DELETE",
+  "exportFile": "petprep-export-{{date}}.json",
+  "exportFileUndated": "petprep-export.json",
+  "counts": {
+    "childProfiles_one": "{{count}} child profile",
+    "childProfiles_other": "{{count}} child profiles",
+    "dogs_one": "{{count}} dog",
+    "dogs_other": "{{count}} dogs"
+  },
+  "card": {
+    "title": "Account",
+    "exportButton": "Export my data",
+    "exportHint": "All of your family's data in a JSON file (children, dogs, log, contracts, scores). Links to pictures and videos work for about an hour.",
+    "exportDone": "Your export is ready.",
+    "deleteButton": "Delete account",
+    "deleteSubmit": "Delete for good",
+    "lastParentLines": {
+      "intro": "You're the only parent in the family, so the WHOLE family will be deleted:",
+      "what": "your account, {{children}} and {{pets}},",
+      "records": "with all contracts (signatures), the care log, scores, and the dogs' pictures and videos,",
+      "devices": "and every device (the children's too) will be signed out."
+    },
+    "otherParentStaysLines": {
+      "account": "Only your account will be deleted and your devices signed out.",
+      "family": "The family, the children and the dogs stay with the other parent."
+    },
+    "exportFirst": "Tip: export your data before deleting.",
+    "deleteErrors": {
+      "invalid_password": "The password is incorrect.",
+      "protected": "This account can't be deleted in the app.",
+      "not_found": "The account couldn't be found.",
+      "throttled": "Too many wrong passwords. Please try again in 15 minutes.",
+      "invalid": "Enter your password and confirm the deletion.",
+      "unknown": "We don't know whether the deletion went through — check by signing in again.",
+      "server": "Deleting didn't work. Nothing was deleted — please try again."
+    },
+    "exportErrors": {
+      "too_large": "There's too much data to export in the app. Please contact support.",
+      "too_large_to_share": "The export is too large to share as text. Exporting to a file is on its way — until then, please contact support.",
+      "throttled": "You can export three times an hour. Please try again later.",
+      "offline": "Can't reach the server. Please try again.",
+      "server": "The export didn't work. Please try again."
+    }
+  },
+  "deletionForm": {
+    "passwordLabel": "Your password",
+    "passwordPlaceholder": "Your sign-in password",
+    "confirmLabel": "To confirm, type {{word}}",
+    "cancel": "Cancel",
+    "irreversible": "Deletion is immediate and can't be undone."
+  }
+}

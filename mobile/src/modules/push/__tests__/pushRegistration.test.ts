@@ -7,9 +7,16 @@ import { Platform } from 'react-native';
 
 import { api } from '@/api/client';
 import { PUSH_CHANNELS, PUSH_STORAGE_KEYS } from '@/modules/push/pushConfig';
-import { easProjectId, registerForPush, resetPushRegistration, unregisterFromPush } from '@/modules/push/pushRegistration';
+import {
+  easProjectId,
+  registerForLanguageChange,
+  registerForPush,
+  resetPushRegistration,
+  unregisterFromPush,
+} from '@/modules/push/pushRegistration';
 import { logout, REVOKE_TIMEOUT_MS, UNREGISTER_TIMEOUT_MS } from '@/modules/session/logout';
 import { useAppStore } from '@/store/appStore';
+import { i18n } from '@/i18n';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -45,6 +52,11 @@ function setPlatform(os: 'ios' | 'android') {
   Object.defineProperty(Platform, 'OS', { configurable: true, get: () => os });
 }
 
+/** Let chained registration runs (promise callbacks) settle. */
+async function flushRuns() {
+  for (let i = 0; i < 20; i += 1) await Promise.resolve();
+}
+
 describe('registerForPush', () => {
   beforeEach(() => {
     resetPushRegistration();
@@ -59,7 +71,7 @@ describe('registerForPush', () => {
     await expect(registerForPush()).resolves.toEqual({ status: 'registered', token: TOKEN });
 
     expect(getToken).toHaveBeenCalledWith({ projectId: 'project-uuid' });
-    expect(registerDevice).toHaveBeenCalledWith({ expo_push_token: TOKEN, platform: 'ios', app_version: '1.10.4 (abc1234)' });
+    expect(registerDevice).toHaveBeenCalledWith({ expo_push_token: TOKEN, platform: 'ios', app_version: '1.10.4 (abc1234)', locale: 'sl' });
     expect(setItem).toHaveBeenCalledWith(PUSH_STORAGE_KEYS.token, TOKEN);
   });
 
@@ -103,6 +115,68 @@ describe('registerForPush', () => {
     registerDevice.mockRejectedValueOnce(new Error('500'));
     await expect(registerForPush()).resolves.toEqual({ status: 'failed', reason: 'server' });
     expect(setItem).not.toHaveBeenCalled();
+  });
+
+  it('registers the same token again only when the app language changed (M1-18)', async () => {
+    await registerForPush();
+    await registerForPush();
+    expect(registerDevice).toHaveBeenCalledTimes(1);
+
+    await i18n.changeLanguage('en');
+    try {
+      await registerForPush();
+      expect(registerDevice).toHaveBeenCalledTimes(2);
+      expect(registerDevice).toHaveBeenLastCalledWith(expect.objectContaining({ locale: 'en' }));
+      await registerForPush();
+      expect(registerDevice).toHaveBeenCalledTimes(2);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('a switch during an in-flight registration is not lost: exactly one more run (M1-18 review)', async () => {
+    let releasePost: () => void = () => undefined;
+    registerDevice.mockImplementationOnce(
+      () => new Promise((resolve) => {
+        releasePost = () => resolve({ device: { id: 1, platform: 'ios', app_version: null, enabled: true, last_seen_at: null } });
+      }),
+    );
+    const first = registerForPush();
+    await flushRuns();
+    expect(registerDevice).toHaveBeenCalledTimes(1);
+    expect(registerDevice).toHaveBeenLastCalledWith(expect.objectContaining({ locale: 'sl' }));
+
+    try {
+      // Switches while the first POST (still Slovenian) is in flight.
+      await i18n.changeLanguage('en');
+      registerForLanguageChange();
+      await i18n.changeLanguage('sl');
+      await i18n.changeLanguage('en');
+      registerForLanguageChange();
+      expect(registerDevice).toHaveBeenCalledTimes(1);
+      releasePost();
+      await first;
+      await flushRuns();
+
+      expect(registerDevice).toHaveBeenCalledTimes(2);
+      expect(registerDevice).toHaveBeenLastCalledWith(expect.objectContaining({ locale: 'en' }));
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('rapid EN/SL toggling stays within the devices gate (≤ 2 POSTs per minute)', async () => {
+    try {
+      for (let i = 0; i < 8; i += 1) {
+        await i18n.changeLanguage(i % 2 === 0 ? 'en' : 'sl');
+        registerForLanguageChange();
+        await flushRuns();
+      }
+      expect(registerDevice.mock.calls.length).toBeLessThanOrEqual(2);
+    } finally {
+      await i18n.changeLanguage('sl');
+      resetPushRegistration();
+    }
   });
 
   it('reads the EAS project id from app config', () => {

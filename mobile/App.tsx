@@ -7,6 +7,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { queryClient } from './src/api/queryClient';
 import AppNavigator from './src/navigation/AppNavigator';
 import { setBrandFontsReady, useBrandFonts } from './src/theme/typography';
+import { loadSavedLanguage } from './src/i18n';
 
 // Keep the native splash (CGP v2 face on fog) up until the brand fonts are ready, so the
 // first frame is already in Instrument Sans / Bricolage. A failed or hanging load renders
@@ -18,9 +19,16 @@ const FONT_TIMEOUT_MS = 4000;
 export default function App() {
   const [fontsLoaded, fontError] = useBrandFonts();
   const [timedOut, setTimedOut] = useState(false);
-  const ready = fontsLoaded || fontError !== null || timedOut;
+  // The user's saved language (M1-18) before the first frame; the device language
+  // already applies, so a slow or failing store only delays up to the font timeout.
+  const [languageLoaded, setLanguageLoaded] = useState(false);
+  const ready = ((fontsLoaded || fontError !== null) && languageLoaded) || timedOut;
   // Brand family names only once they are registered (else the system font + fontWeight).
   setBrandFontsReady(fontsLoaded && fontError === null);
+
+  useEffect(() => {
+    void loadSavedLanguage().finally(() => setLanguageLoaded(true));
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => setTimedOut(true), FONT_TIMEOUT_MS);

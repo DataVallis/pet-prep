@@ -9,6 +9,7 @@ import {
   formatVirtualAge,
   isActionDisabled,
 } from '@/utils/metrics';
+import { i18n } from '@/i18n';
 
 describe('getMetricColor', () => {
   it('returns green for high levels (>=60)', () => {
@@ -65,11 +66,20 @@ describe('interpolateColor', () => {
 });
 
 describe('formatStepCount', () => {
-  it('formats numbers with thousands separators', () => {
-    expect(formatStepCount(5120)).toBe('5,120');
-    expect(formatStepCount(10000)).toBe('10,000');
+  afterEach(async () => {
+    await i18n.changeLanguage('sl');
+  });
+
+  it('formats numbers with the Slovenian grouping on a Slovenian device', () => {
+    expect(formatStepCount(10000)).toBe('10.000');
     expect(formatStepCount(0)).toBe('0');
     expect(formatStepCount(245)).toBe('245');
+  });
+
+  it('formats numbers with English thousands separators in English', async () => {
+    await i18n.changeLanguage('en');
+    expect(formatStepCount(5120)).toBe('5,120');
+    expect(formatStepCount(10000)).toBe('10,000');
   });
 });
 

@@ -3,15 +3,18 @@
  *  - foreground presentation handler (once);
  *  - register this install on login / app start when the user already allowed
  *    notifications (no prompt here), and again when the device token rotates;
- *  - route taps — also the tap that cold-started the app.
+ *  - route taps — also the tap that cold-started the app;
+ *  - after a language switch (M1-18): register again (the server keeps the push language
+ *    per device) and, on Android, rename the notification channels.
  */
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
 
 import { queryClient } from '@/api/queryClient';
-import { handlePushTokenEvent, registerForPush } from '@/modules/push/pushRegistration';
+import { ensureAndroidChannels, handlePushTokenEvent, isPushAllowed, registerForLanguageChange, registerForPush } from '@/modules/push/pushRegistration';
 import { configurePushPresentation, routePushTap } from '@/modules/push/pushRouting';
 import { useAppStore } from '@/store/appStore';
 
@@ -27,6 +30,26 @@ export function usePushNotifications(): void {
   useEffect(() => {
     if (pushSupported()) configurePushPresentation();
   }, []);
+
+  // Channel names are shown in Android's system settings: re-save them in the new
+  // language (only when notifications are already allowed — never a prompt). Once per switch.
+  const { i18n } = useTranslation();
+  const language = i18n.language;
+  const seenLanguage = useRef(language);
+  useEffect(() => {
+    if (!pushSupported() || language === seenLanguage.current) return;
+    seenLanguage.current = language;
+    // Signed in: re-register so pushes come in the new language. Deduped per (session,
+    // token, language) and limited by the devices gate; no prompt (needs permission).
+    if (signedIn && userId !== null) {
+      registerForLanguageChange();
+      return;
+    }
+    if (Platform.OS !== 'android') return;
+    void Notifications.getPermissionsAsync()
+      .then((permissions) => (isPushAllowed(permissions) ? ensureAndroidChannels() : undefined))
+      .catch(() => undefined);
+  }, [language, signedIn, userId]);
 
   // Registration: on every sign-in / restore of a session.
   useEffect(() => {

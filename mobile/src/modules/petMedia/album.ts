@@ -16,36 +16,13 @@
 
 import { mediaKey, PET_STATES, type PetMediaInfo, type VideoState } from '@/modules/petMedia/petMedia';
 import type { PetState } from '@/types';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-/** User-visible strings (i18n with M1-18). */
-export const ALBUM_STRINGS = {
-  title: 'Moj kuža',
-  /** Parent's child detail (read-only viewer). */
-  parentTitle: 'Posnetki kužka',
-  videoHint: 'video',
-  photoHint: 'fotografija',
-  retry: 'Poskusi znova',
-  open: 'Odpri album',
-  close: 'Zapri album',
-  back: 'Nazaj na album',
-  photo: 'Fotografija',
-  missing: 'Še ni posnetka',
-  empty: 'Kuža se še pripravlja. Kmalu bodo tu njegove slike in posnetki.',
-  unavailable: 'Posnetka trenutno ni mogoče predvajati.',
-  previous: 'Prejšnji',
-  next: 'Naslednji',
-  mute: 'Izklopi zvok',
-  unmute: 'Vklopi zvok',
-  position: (index: number, total: number) => `${index} / ${total}`,
-  states: {
-    idle: 'Miruje',
-    sleeping: 'Spi',
-    low_energy: 'Utrujen',
-    hungry: 'Lačen',
-    sick: 'Bolan',
-    playing: 'Se igra',
-  } satisfies Record<PetState, string>,
-} as const;
+/** User-visible strings (`pet:album`, M1-18). Items built from them carry the language of their build. */
+export const ALBUM_STRINGS = strings('pet', 'album', {
+  position: (index: number, total: number) => t('pet:album.position', { index, total }),
+});
 
 export type AlbumItem =
   | { kind: 'photo'; id: 'photo'; label: string; url: string; key: string }

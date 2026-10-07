@@ -1,0 +1,197 @@
+{
+  "format": {
+    "decimal": ","
+  },
+  "light": {
+    "green": "Vse v redu",
+    "yellow": "Potrebna pozornost",
+    "red": "Nujno"
+  },
+  "routines": {
+    "feed": "Hrana",
+    "water": "Voda",
+    "clean": "Čiščenje",
+    "walk": "Sprehod",
+    "training": "Šola"
+  },
+  "score": {
+    "routinesOf_one": "{{done}} od {{expected}} rutine",
+    "routinesOf_two": "{{done}} od {{expected}} rutin",
+    "routinesOf_few": "{{done}} od {{expected}} rutin",
+    "routinesOf_other": "{{done}} od {{expected}} rutin",
+    "fairShare": "{{text}} · pošten delež {{share}}",
+    "illnesses_one": "{{count}} bolezen",
+    "illnesses_two": "{{count}} bolezni",
+    "illnesses_few": "{{count}} bolezni",
+    "illnesses_other": "{{count}} bolezni"
+  },
+  "reasons": {
+    "game_over": "Kuža je bil odvzet — igra je končana.",
+    "phase3_alarm": "Kuža že več kot uro nima hrane, vode ali čistoče.",
+    "fell_ill_today": "Kuža je danes zbolel in je pri veterinarju.",
+    "missedMany_one": "Danes je zamujena že {{count}} rutina.",
+    "missedMany_two": "Danes sta zamujeni že {{count}} rutini.",
+    "missedMany_few": "Danes so zamujene že {{count}} rutine.",
+    "missedMany_other": "Danes je zamujenih že {{count}} rutin.",
+    "missedSome": "Danes so zamujene več kot 2 rutini."
+  },
+  "progress": {
+    "week": "Teden {{week}} od {{total}}",
+    "completed_one": "Izziv zaključen ({{count}} teden)",
+    "completed_two": "Izziv zaključen ({{count}} tedna)",
+    "completed_few": "Izziv zaključen ({{count}} tedni)",
+    "completed_other": "Izziv zaključen ({{count}} tednov)"
+  },
+  "date": {
+    "weekdays": {
+      "0": "ned",
+      "1": "pon",
+      "2": "tor",
+      "3": "sre",
+      "4": "čet",
+      "5": "pet",
+      "6": "sob"
+    },
+    "months": {
+      "1": "1.",
+      "2": "2.",
+      "3": "3.",
+      "4": "4.",
+      "5": "5.",
+      "6": "6.",
+      "7": "7.",
+      "8": "8.",
+      "9": "9.",
+      "10": "10.",
+      "11": "11.",
+      "12": "12."
+    },
+    "short": "{{day}}. {{month}}",
+    "day": "{{weekday}} {{date}}",
+    "dateTime": "{{date}} {{time}}",
+    "yesterday": "včeraj {{time}}",
+    "at": "{{date}} ob {{time}}"
+  },
+  "missedWhen": {
+    "window": "okno {{opens}}–{{due}}",
+    "deadline": "rok {{due}}",
+    "endOfDay": "do konca dneva",
+    "withDay": "{{day}} · {{when}}"
+  },
+  "activities": {
+    "fed_pet": "nahranil(a) kužka",
+    "watered_pet": "nalil(a) vodo",
+    "cleaned_poop": "počistil(a)",
+    "walked_pet": "dosegel(a) cilj sprehoda",
+    "signed_contract": "podpisal(a) pogodbo",
+    "took_out_pet": "peljal(a) kužka ven",
+    "resolved_chewing": "pospravil(a) copat in dal(a) igračo",
+    "trained_pet": "opravil(a) vajo v šoli",
+    "training_started": "začel(a) vajo v šoli"
+  },
+  "systemActivities": {
+    "ignored_warning": "Opozorilo ni bilo upoštevano",
+    "parent_fed_pet": "Obrok med tihimi urami (nahrani starš)",
+    "pet_accident": "Mladiček je naredil lužo",
+    "pet_chewed": "Kuža je pregrizel copat"
+  },
+  "petStatus": {
+    "game_over": "Igra končana — kuža je bil odvzet",
+    "awaiting_contract": "Kuža čaka na podpis pogodbe",
+    "inactive": "Kuža ni aktiven",
+    "hard_stopped": "Igra je ustavljena (hard stop)",
+    "ill": "Kuža je pri veterinarju"
+  },
+  "breeds": {
+    "mutt": "Mešanček",
+    "border_collie": "Border collie"
+  },
+  "devices_one": "{{count}} naprava",
+  "devices_two": "{{count}} napravi",
+  "devices_few": "{{count}} naprave",
+  "devices_other": "{{count}} naprav",
+  "invite": {
+    "share": "Pridruži se naši družini v aplikaciji PetPrep. V aplikaciji izberi \"Sem starš\", se prijavi in v zavihku Nadzor vnesi kodo družine: {{code}}.",
+    "shareValidity": "{{message}} Koda velja do {{expires}}."
+  },
+  "children": {
+    "title": "Otroci",
+    "addChild": "Dodaj otroka",
+    "noPet": "Še brez psa",
+    "awaitingContract": "čaka na podpis pogodbe",
+    "gameOver": "igra končana",
+    "legacyEmail": "stari račun z e-pošto",
+    "newLoginPin": "Nova koda za prijavo",
+    "firstPin": "Ustvari kodo",
+    "revokeAll": "Odjavi vse naprave",
+    "confirmRevoke": "{{name}}: odjava z vseh naprav? Za ponovno prijavo bo potrebna nova koda.",
+    "cancel": "Prekliči",
+    "confirm": "Odjavi",
+    "revoked": "Odjavljeno ({{devices}}).",
+    "errors": {
+      "not_found": "Tega otroka ni več v vaši družini.",
+      "offline": "Ni povezave s strežnikom. Poskusite znova.",
+      "server": "Odjava ni uspela. Poskusite znova."
+    },
+    "deleteProfile": "Izbriši profil",
+    "deleteSubmit": "Izbriši profil za vedno",
+    "deleteWhat": "Izbriše se profil »{{name}}«: vse prijave na napravah, kode in otrokova pogodba (podpis).",
+    "deletePets_one": "Pes, za katerega skrbi sam, se izbriše — z dnevnikom, ocenami, slikami in videi.",
+    "deletePets_two": "Psi, za katere skrbi sam ({{count}}), se izbrišejo — z dnevnikom, ocenami, slikami in videi.",
+    "deletePets_few": "Psi, za katere skrbi sam ({{count}}), se izbrišejo — z dnevnikom, ocenami, slikami in videi.",
+    "deletePets_other": "Psi, za katere skrbi sam ({{count}}), se izbrišejo — z dnevnikom, ocenami, slikami in videi.",
+    "keptPets_one": "Skupni pes ostane drugim otrokom; otrokova pretekla skrb ostane v dnevniku brez imena.",
+    "keptPets_two": "Skupni psi ({{count}}) ostanejo drugim otrokom; otrokova pretekla skrb ostane v dnevniku brez imena.",
+    "keptPets_few": "Skupni psi ({{count}}) ostanejo drugim otrokom; otrokova pretekla skrb ostane v dnevniku brez imena.",
+    "keptPets_other": "Skupni psi ({{count}}) ostanejo drugim otrokom; otrokova pretekla skrb ostane v dnevniku brez imena.",
+    "deleted": "Profil »{{name}}« je izbrisan.",
+    "deleteErrors": {
+      "invalid_password": "Geslo ni pravilno.",
+      "protected": "Tega profila ni mogoče izbrisati.",
+      "not_found": "Tega otroka ni več v vaši družini.",
+      "throttled": "Preveč napačnih gesel. Poskusite znova čez 15 minut.",
+      "invalid": "Vpišite geslo in potrdite brisanje.",
+      "unknown": "Ni znano, ali je bil izbris izveden — preverite seznam otrok.",
+      "server": "Brisanje ni uspelo. Nič ni bilo izbrisano — poskusite znova."
+    }
+  },
+  "parents": {
+    "title": "Starši",
+    "me": "(vi)",
+    "invite": "Povabi drugega starša",
+    "inviteHint": "Drugi starš vidi iste otroke in pse ter lahko upravlja nadzor. Koda velja 24 ur in le enkrat.",
+    "codeLabel": "Koda družine",
+    "validUntil": "Velja do {{when}}.",
+    "share": "Deli kodo",
+    "newCode": "Nova koda",
+    "newCodeHint": "Nova koda razveljavi prejšnjo.",
+    "errors": {
+      "tooMany": "Preveč novih kod v kratkem času. Poskusite čez nekaj časa.",
+      "offline": "Ni povezave s strežnikom. Poskusite znova.",
+      "server": "Kode ni bilo mogoče ustvariti. Poskusite znova."
+    }
+  },
+  "join": {
+    "title": "Imate kodo družine?",
+    "hint": "Če vas je drugi starš povabil, vpišite njegovo kodo. Mogoče le, dokler v svoji družini še nimate otrok ali psov.",
+    "placeholder": "ABCD EFGH",
+    "join": "Pridruži se družini",
+    "joined_one": "Pridružili ste se družini ({{count}} starš).",
+    "joined_two": "Pridružili ste se družini ({{count}} starša).",
+    "joined_few": "Pridružili ste se družini ({{count}} starši).",
+    "joined_other": "Pridružili ste se družini ({{count}} staršev).",
+    "errors": {
+      "invalid_code": "Ta koda ne obstaja. Preverite jo in poskusite znova.",
+      "code_expired": "Koda je potekla. Prosite drugega starša za novo.",
+      "code_used": "Koda je že uporabljena. Prosite drugega starša za novo.",
+      "already_member": "V tej družini že ste.",
+      "family_not_empty": "Vaša družina že ima otroke ali pse, zato se ne morete pridružiti drugi družini.",
+      "too_many_attempts": "Preveč napačnih kod. Poskusite znova čez 15 minut.",
+      "rate_limited": "Preveč poskusov v kratkem času. Počakajte minuto in poskusite znova.",
+      "not_a_parent": "Družini se lahko pridruži samo starševski račun.",
+      "invalid_format": "Koda ima 8 črk in številk (npr. ABCD EFGH).",
+      "offline": "Ni povezave s strežnikom. Poskusite znova.",
+      "server": "Pridružitev ni uspela. Poskusite znova."
+    }
+  }
+}

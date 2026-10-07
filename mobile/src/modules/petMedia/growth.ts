@@ -15,15 +15,10 @@ import type { LifeStage } from '@/api/client';
 import { localParts } from '@/modules/childPet/familyTime';
 import { mediaKey } from '@/modules/petMedia/petMedia';
 import { formatDogAge, formatProfileDate, LIFE_STAGES, PET_PROFILE_STRINGS } from '@/modules/petProfile/petProfile';
+import { strings } from '@/i18n/strings';
 
-/** User-visible strings (i18n with M1-18). */
-export const GROWTH_STRINGS = {
-  section: 'Kako je kuža rasel',
-  current: 'Zdaj',
-  /** Viewer title of a legacy picture (no stage, no age). */
-  photo: 'Fotografija',
-  hint: 'Odpri fotografijo',
-} as const;
+/** User-visible strings (`pet:growth`, M1-18). `photo` = viewer title of a legacy picture (no stage, no age). */
+export const GROWTH_STRINGS = strings('pet', 'growth');
 
 /** The section shows from this many pictures on. */
 export const GROWTH_MIN_ENTRIES = 2;

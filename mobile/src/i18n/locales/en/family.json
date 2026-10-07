@@ -1,0 +1,181 @@
+{
+  "format": {
+    "decimal": "."
+  },
+  "light": {
+    "green": "All good",
+    "yellow": "Needs attention",
+    "red": "Urgent"
+  },
+  "routines": {
+    "feed": "Food",
+    "water": "Water",
+    "clean": "Cleaning",
+    "walk": "Walk",
+    "training": "Training"
+  },
+  "score": {
+    "routinesOf_one": "{{done}} of {{expected}} routine",
+    "routinesOf_other": "{{done}} of {{expected}} routines",
+    "fairShare": "{{text}} · fair share {{share}}",
+    "illnesses_one": "{{count}} illness",
+    "illnesses_other": "{{count}} illnesses"
+  },
+  "reasons": {
+    "game_over": "The dog was taken away — the game is over.",
+    "phase3_alarm": "The dog has had no food, water or cleaning for over an hour.",
+    "fell_ill_today": "The dog got sick today and is at the vet.",
+    "missedMany_one": "{{count}} routine already missed today.",
+    "missedMany_other": "{{count}} routines already missed today.",
+    "missedSome": "More than 2 routines missed today."
+  },
+  "progress": {
+    "week": "Week {{week}} of {{total}}",
+    "completed_one": "Challenge complete ({{count}} week)",
+    "completed_other": "Challenge complete ({{count}} weeks)"
+  },
+  "date": {
+    "weekdays": {
+      "0": "Sun",
+      "1": "Mon",
+      "2": "Tue",
+      "3": "Wed",
+      "4": "Thu",
+      "5": "Fri",
+      "6": "Sat"
+    },
+    "months": {
+      "1": "Jan",
+      "2": "Feb",
+      "3": "Mar",
+      "4": "Apr",
+      "5": "May",
+      "6": "Jun",
+      "7": "Jul",
+      "8": "Aug",
+      "9": "Sep",
+      "10": "Oct",
+      "11": "Nov",
+      "12": "Dec"
+    },
+    "short": "{{day}} {{month}}",
+    "day": "{{weekday}} {{date}}",
+    "dateTime": "{{date}} {{time}}",
+    "yesterday": "yesterday {{time}}",
+    "at": "{{date}} at {{time}}"
+  },
+  "missedWhen": {
+    "window": "window {{opens}}–{{due}}",
+    "deadline": "due {{due}}",
+    "endOfDay": "by the end of the day",
+    "withDay": "{{day}} · {{when}}"
+  },
+  "activities": {
+    "fed_pet": "fed the dog",
+    "watered_pet": "refilled the water",
+    "cleaned_poop": "cleaned up",
+    "walked_pet": "reached the walk goal",
+    "signed_contract": "signed the contract",
+    "took_out_pet": "took the dog out",
+    "resolved_chewing": "tidied up the slipper and gave a toy",
+    "trained_pet": "finished a training session",
+    "training_started": "started a training session"
+  },
+  "systemActivities": {
+    "ignored_warning": "A warning was ignored",
+    "parent_fed_pet": "Meal during quiet hours (fed by a parent)",
+    "pet_accident": "The puppy had an accident",
+    "pet_chewed": "The dog chewed a slipper"
+  },
+  "petStatus": {
+    "game_over": "Game over — the dog was taken away",
+    "awaiting_contract": "The dog is waiting for the contract to be signed",
+    "inactive": "The dog is not active",
+    "hard_stopped": "Game paused (hard stop)",
+    "ill": "The dog is at the vet"
+  },
+  "breeds": {
+    "mutt": "Mixed breed",
+    "border_collie": "Border Collie"
+  },
+  "devices_one": "{{count}} device",
+  "devices_other": "{{count}} devices",
+  "invite": {
+    "share": "Join our family in the PetPrep app. Choose \"I'm a parent\", sign in and enter the family code in the Controls tab: {{code}}.",
+    "shareValidity": "{{message}} The code is valid until {{expires}}."
+  },
+  "children": {
+    "title": "Children",
+    "addChild": "Add a child",
+    "noPet": "No dog yet",
+    "awaitingContract": "waiting for the contract to be signed",
+    "gameOver": "game over",
+    "legacyEmail": "old e-mail account",
+    "newLoginPin": "New sign-in code",
+    "firstPin": "Create a code",
+    "revokeAll": "Sign out all devices",
+    "confirmRevoke": "{{name}}: sign out of all devices? A new code will be needed to sign in again.",
+    "cancel": "Cancel",
+    "confirm": "Sign out",
+    "revoked": "Signed out ({{devices}}).",
+    "errors": {
+      "not_found": "This child is no longer in your family.",
+      "offline": "Can't reach the server. Please try again.",
+      "server": "Signing out didn't work. Please try again."
+    },
+    "deleteProfile": "Delete profile",
+    "deleteSubmit": "Delete profile for good",
+    "deleteWhat": "The profile \"{{name}}\" will be deleted: all device sign-ins, codes and the child's contract (signature).",
+    "deletePets_one": "The dog only this child cares for will be deleted — with its log, scores, pictures and videos.",
+    "deletePets_other": "The dogs only this child cares for ({{count}}) will be deleted — with their log, scores, pictures and videos.",
+    "keptPets_one": "The shared dog stays with the other children; this child's past care stays in the log without a name.",
+    "keptPets_other": "The shared dogs ({{count}}) stay with the other children; this child's past care stays in the log without a name.",
+    "deleted": "The profile \"{{name}}\" has been deleted.",
+    "deleteErrors": {
+      "invalid_password": "The password is incorrect.",
+      "protected": "This profile can't be deleted.",
+      "not_found": "This child is no longer in your family.",
+      "throttled": "Too many wrong passwords. Please try again in 15 minutes.",
+      "invalid": "Enter your password and confirm the deletion.",
+      "unknown": "We don't know whether the deletion went through — please check the list of children.",
+      "server": "Deleting didn't work. Nothing was deleted — please try again."
+    }
+  },
+  "parents": {
+    "title": "Parents",
+    "me": "(you)",
+    "invite": "Invite another parent",
+    "inviteHint": "The other parent sees the same children and dogs and can manage the controls. The code is valid for 24 hours and works once.",
+    "codeLabel": "Family code",
+    "validUntil": "Valid until {{when}}.",
+    "share": "Share code",
+    "newCode": "New code",
+    "newCodeHint": "A new code cancels the previous one.",
+    "errors": {
+      "tooMany": "Too many new codes in a short time. Please try again a bit later.",
+      "offline": "Can't reach the server. Please try again.",
+      "server": "The code couldn't be created. Please try again."
+    }
+  },
+  "join": {
+    "title": "Have a family code?",
+    "hint": "If another parent invited you, enter their code. This only works while your own family has no children or dogs yet.",
+    "placeholder": "ABCD EFGH",
+    "join": "Join the family",
+    "joined_one": "You've joined the family ({{count}} parent).",
+    "joined_other": "You've joined the family ({{count}} parents).",
+    "errors": {
+      "invalid_code": "This code doesn't exist. Check it and try again.",
+      "code_expired": "The code has expired. Ask the other parent for a new one.",
+      "code_used": "The code has already been used. Ask the other parent for a new one.",
+      "already_member": "You're already in this family.",
+      "family_not_empty": "Your family already has children or dogs, so you can't join another family.",
+      "too_many_attempts": "Too many wrong codes. Please try again in 15 minutes.",
+      "rate_limited": "Too many attempts in a short time. Wait a minute and try again.",
+      "not_a_parent": "Only a parent account can join a family.",
+      "invalid_format": "The code has 8 letters and numbers (e.g. ABCD EFGH).",
+      "offline": "Can't reach the server. Please try again.",
+      "server": "Joining didn't work. Please try again."
+    }
+  }
+}

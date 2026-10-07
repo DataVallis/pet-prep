@@ -1,0 +1,14 @@
+{
+  "language": {
+    "title": "Language",
+    "label": "App language",
+    "hint": "Applies to this device."
+  },
+  "errors": {
+    "crashTitle": "Something went wrong"
+  },
+  "format": {
+    "thousands": ",",
+    "percent": "{{value}}%"
+  }
+}

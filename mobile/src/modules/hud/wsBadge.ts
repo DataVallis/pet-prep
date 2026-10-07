@@ -9,14 +9,10 @@
  */
 
 import type { WebSocketStatus } from '@/store/appStore';
+import { strings } from '@/i18n/strings';
 
-/** User-visible strings (i18n with M1-18). */
-export const WS_BADGE_STRINGS = {
-  live: 'V ŽIVO',
-  connecting: 'POVEZUJEM',
-  /** Screen reader only — the badge shows just an icon. */
-  polling: 'Samodejno osveževanje',
-} as const;
+/** User-visible strings (`child:ws`, M1-18); `polling` is screen-reader only (the badge shows just an icon). */
+export const WS_BADGE_STRINGS = strings('child', 'ws');
 
 export type WsBadge =
   | { tone: 'live'; label: string; accessibilityLabel: string }
