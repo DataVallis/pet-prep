@@ -58,7 +58,7 @@
 1. **David:** new TestFlight / Android build from `main` (fixes the push loop; contains M5-R02 + M5-R03 UI and the CGP v2 rebrand). Rebrand checks: home-screen icon (iOS + Android adaptive / themed), splash on fog, fonts render (Instrument Sans body, Bricolage headings, Slovenian č/š/ž), status-bar text dark on light screens and light in the child app, mint "due" care button. Then device checks: one `POST /api/devices` per login in the Caddy log; "Šola" chip at 375 pt; "Pohvali" responsiveness; kill app mid-training and reopen; TalkBack / VoiceOver.
 2. **David:** delete stale remote branches `diag/pet-state-1006`, `diag/prod-logs-1006`, `diag/child-flow`, `wip/M5-R04-picker-followup` (agent can't delete remote branches).
 3. **David:** review `docs/product/FEATURES.md` (feature catalogue, created 2026-10-07 — keep it updated in every PR, CLAUDE.md rule). Open points from it: the parent "Pasme" tab is a fake purchase placeholder (`BreedPaywallScreen`, local unlock + English alert) — hide before a public build?; no UI to change the family timezone.
-4. **Hide the parent "Pasme" tab** (fake purchase placeholder) until RevenueCat — David agreed 2026-10-07. Family-timezone UI: later (David).
+4. Parent "Pasme" tab hidden until RevenueCat (2026-10-07, `SHOW_BREED_PAYWALL_TAB`); family-timezone UI later (David). Next development: pick with David — candidates M1-18 i18n (EN default), M3 payments (RevenueCat), M3-04/05 HealthKit / Health Connect.
 5. **David:** M5-R03b — only the minimum-one-session rule (≥ 7 trainers) is still open (the rest confirmed 2026-10-07). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
