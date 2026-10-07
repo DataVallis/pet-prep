@@ -196,7 +196,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 
 ## 12. Poslovni model
 
-**Danes ni mogoče ničesar kupiti.** Zavihek »Pasme« v starševski aplikaciji je še nadomestni zaslon (angleško, nakup je simuliran in nima učinka na strežniku) — ne uporabljati v gradivih.
+**Danes ni mogoče ničesar kupiti.** Zavihek »Pasme« (simuliran nakup brez učinka na strežniku) je od 7. 10. 2026 **skrit**, dokler plačila niso zgrajena (David).
 
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID | Od kdaj |
 |---|---|---|---|---|---|

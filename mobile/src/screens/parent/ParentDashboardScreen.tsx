@@ -51,6 +51,12 @@ export const DASHBOARD_STRINGS = {
 } as const;
 
 type Tab = 'dashboard' | 'controls' | 'breeds';
+
+/**
+ * The "Pasme" tab is a simulated purchase (local unlock, no server effect) until
+ * payments exist (RevenueCat, M3-07 – M3-11). Hidden for testers (David, 2026-10-07).
+ */
+export const SHOW_BREED_PAYWALL_TAB = false;
 /** `child` set = PIN for an existing child (pet choice or re-login); unset = new child. */
 type Overlay = { kind: 'none' } | { kind: 'addChild'; child?: FamilyChild } | { kind: 'child'; childId: number };
 
@@ -58,7 +64,7 @@ function BottomNavBar({ activeTab, onSelect }: { activeTab: Tab; onSelect: (tab:
   const tabs: { id: Tab; label: string; Icon: typeof LayoutDashboard }[] = [
     { id: 'dashboard', label: DASHBOARD_STRINGS.tabs.dashboard, Icon: LayoutDashboard },
     { id: 'controls', label: DASHBOARD_STRINGS.tabs.controls, Icon: Settings },
-    { id: 'breeds', label: DASHBOARD_STRINGS.tabs.breeds, Icon: PawPrint },
+    ...(SHOW_BREED_PAYWALL_TAB ? [{ id: 'breeds' as const, label: DASHBOARD_STRINGS.tabs.breeds, Icon: PawPrint }] : []),
   ];
   return (
     <View style={styles.navBar}>
@@ -163,7 +169,7 @@ export default function ParentDashboardScreen() {
       );
     }
 
-    if (activeTab === 'breeds') {
+    if (SHOW_BREED_PAYWALL_TAB && activeTab === 'breeds') {
       return (
         <>
           <BreedPaywallScreen onBack={() => setActiveTab('dashboard')} />
