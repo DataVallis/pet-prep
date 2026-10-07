@@ -536,8 +536,9 @@ class NotificationService
 
         return [
             'to' => $device->expo_push_token,
-            'title' => PushCopy::TITLE,
-            'body' => PushCopy::body($type, $notification->metric, $audience),
+            // M1-18: in this install's language (null → default).
+            'title' => PushCopy::title($device->locale),
+            'body' => PushCopy::body($type, $notification->metric, $audience, $device->locale),
             'data' => [
                 'type' => $type->value,
                 'pet_id' => $notification->pet_id,

@@ -4,9 +4,13 @@ namespace App\Services\Push;
 
 use App\Enums\PushType;
 use App\Models\PushNotification;
+use App\Support\RequestLocale;
 
 /**
- * Slovenian push texts (M3-02, PRODUCT_SPEC §6/§7, DECISIONS 2026-10-05).
+ * Push texts (M3-02, PRODUCT_SPEC §6/§7, DECISIONS 2026-10-05), per language
+ * since M1-18: lang/<locale>/push.php. The caller passes the device's
+ * language (`device_push_tokens.locale`); null or unsupported → the default
+ * (config/locales.php, English).
  *
  * - Title is always "PetPrep"; texts never contain a child's or pet's name
  *   (Expo / APNs / FCM are third parties, and lock screens are public).
@@ -23,56 +27,44 @@ final class PushCopy
 {
     public const TITLE = 'PetPrep';
 
-    private const SOFT = [
-        'hunger' => 'Tvoj kuža te milo gleda in kaže na posodo s hrano.',
-        'thirst' => 'Tvoj kuža te milo gleda in kaže na prazno posodo za vodo.',
-        'hygiene' => 'Tvoj kuža te milo gleda in kaže na nered, ki ga je treba počistiti.',
-    ];
+    private const METRICS = ['hunger', 'thirst', 'hygiene'];
 
-    private const CRITICAL = [
-        'hunger' => 'Če ga ne nahraniš v 30 minutah, bo zbolel.',
-        'thirst' => 'Če mu ne daš vode v 30 minutah, bo zbolel.',
-        'hygiene' => 'Kuža je naredil nered! Počisti ga čim prej, sicer bo zbolel.',
-    ];
+    private const ILLNESS_REASONS = ['hygiene', 'walk'];
 
-    /** Energy = the daily walk: one friendly reminder per day, no illness threat. */
-    private const WALK_REMINDER = 'Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?';
-
-    private const PARENT_ALARM = 'Tvoj otrok danes ni poskrbel za psa.';
-
-    private const PARENT_ALARM_DETAIL = [
-        'hunger' => 'Kuža je že več kot uro brez hrane.',
-        'thirst' => 'Kuža je že več kot uro brez vode.',
-        'hygiene' => 'Nered že več kot uro ni počiščen.',
-    ];
-
-    private const ILLNESS = [
-        PushNotification::AUDIENCE_CHILD => [
-            'hygiene' => 'Kuža je predolgo živel v neredu in je zbolel. 12 ur bo na opazovanju pri veterinarju.',
-            'walk' => 'Kuža včeraj ni bil na sprehodu in je zbolel. 12 ur bo na opazovanju pri veterinarju.',
-            'other' => 'Kuža je zbolel. 12 ur bo na opazovanju pri veterinarju.',
-        ],
-        PushNotification::AUDIENCE_PARENT => [
-            'hygiene' => 'Kuža je zbolel, ker nered ni bil počiščen. 12 ur bo na opazovanju pri veterinarju.',
-            'walk' => 'Kuža je zbolel, ker včeraj ni bil na sprehodu. 12 ur bo na opazovanju pri veterinarju.',
-            'other' => 'Kuža je zbolel. 12 ur bo na opazovanju pri veterinarju.',
-        ],
-    ];
-
-    private const GAME_OVER = [
-        PushNotification::AUDIENCE_CHILD => 'Kuža je odšel v zavetišče, ker zanj predolgo ni nihče poskrbel. Pogovori se s starši.',
-        PushNotification::AUDIENCE_PARENT => 'Kuža je odšel v zavetišče, ker 24 ur ni dobil nujne skrbi. V aplikaciji izberite, kako naprej.',
-    ];
-
-    public static function body(PushType $type, ?string $metric, string $audience): string
+    public static function locale(?string $locale): string
     {
+        return RequestLocale::isSupported($locale) ? (string) $locale : RequestLocale::default();
+    }
+
+    public static function title(?string $locale = null): string
+    {
+        return self::line('title', self::locale($locale));
+    }
+
+    public static function body(PushType $type, ?string $metric, string $audience, ?string $locale = null): string
+    {
+        $locale = self::locale($locale);
+        $audience = $audience === PushNotification::AUDIENCE_PARENT
+            ? PushNotification::AUDIENCE_PARENT
+            : PushNotification::AUDIENCE_CHILD;
+        $phaseMetric = in_array($metric, self::METRICS, true) ? $metric : 'hunger';
+
         return match ($type) {
-            PushType::SoftWarning => self::SOFT[$metric ?? 'hunger'] ?? self::SOFT['hunger'],
-            PushType::CriticalAlert => self::CRITICAL[$metric ?? 'hunger'] ?? self::CRITICAL['hunger'],
-            PushType::WalkReminder => self::WALK_REMINDER,
-            PushType::ParentAlarm => trim(self::PARENT_ALARM.' '.(self::PARENT_ALARM_DETAIL[$metric ?? ''] ?? '')),
-            PushType::Illness => self::ILLNESS[$audience][$metric ?? 'other'] ?? self::ILLNESS[$audience]['other'],
-            PushType::GameOver => self::GAME_OVER[$audience],
+            PushType::SoftWarning => self::line("soft.{$phaseMetric}", $locale),
+            PushType::CriticalAlert => self::line("critical.{$phaseMetric}", $locale),
+            PushType::WalkReminder => self::line('walk_reminder', $locale),
+            PushType::ParentAlarm => trim(self::line('parent_alarm', $locale).' '.(in_array($metric, self::METRICS, true)
+                ? self::line("parent_alarm_detail.{$metric}", $locale)
+                : '')),
+            PushType::Illness => self::line('illness.'.$audience.'.'.(in_array($metric, self::ILLNESS_REASONS, true) ? $metric : 'other'), $locale),
+            PushType::GameOver => self::line("game_over.{$audience}", $locale),
         };
+    }
+
+    private static function line(string $key, string $locale): string
+    {
+        $line = trans("push.{$key}", [], $locale);
+
+        return is_string($line) ? $line : '';
     }
 }

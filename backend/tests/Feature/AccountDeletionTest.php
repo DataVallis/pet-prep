@@ -604,7 +604,7 @@ describe('GET /api/parent/account/export', function () {
             ->assertJsonPath('scores.pets.0.pet_id', $f['pet']->id)
             ->assertJsonPath('scores.children.0.child_id', $f['child']->id);
 
-        expect($response->headers->get('Content-Disposition'))->toStartWith('attachment; filename="petprep-izvoz-')
+        expect($response->headers->get('Content-Disposition'))->toStartWith('attachment; filename="petprep-export-')
             ->and($response->json('pets.0.media.0.url'))->toStartWith('https://api.petprep.si/api/media/')
             ->and($response->json('pets.0.media.0.url'))->toContain('signature=')
             ->and($response->json('parents.1.id'))->toBe($second->id);

@@ -16,7 +16,8 @@ use Illuminate\Support\Carbon;
  * tied to the Sanctum token that registered it (FK cascade), so logout,
  * "sign out all devices" and pruning a child's old devices drop it too.
  * `disabled_at` is set when Expo answers DeviceNotRegistered; registering
- * again re-enables it.
+ * again re-enables it. `locale` = the install's language for push texts
+ * (M1-18; null → default English, rows from before M1-18 were backfilled 'sl').
  *
  * @property int $id
  * @property int $user_id
@@ -24,6 +25,7 @@ use Illuminate\Support\Carbon;
  * @property string $expo_push_token
  * @property DevicePlatform $platform
  * @property string|null $app_version
+ * @property string|null $locale
  * @property Carbon|null $last_seen_at
  * @property Carbon|null $disabled_at
  * @property string|null $disabled_reason
@@ -45,6 +47,7 @@ class DevicePushToken extends Model
         'expo_push_token',
         'platform',
         'app_version',
+        'locale',
         'last_seen_at',
         'disabled_at',
         'disabled_reason',
