@@ -56,7 +56,8 @@
     "retry": "Try again",
     "offeringMissing": "The challenge can't be loaded from the store right now. Please try again later.",
     "retryStore": "Reload the price",
-    "busy": "Please wait …"
+    "busy": "Please wait …",
+    "noTrial": "No free trial for this dog (the child already had one) — the challenge starts with a purchase."
   },
   "result": {
     "unlocked": "Thank you! The challenge is unlocked and the game continues.",

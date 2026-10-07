@@ -5,7 +5,7 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-07 midday (Claude — M1-18 on PR #65 **waiting for David to merge**; M3 payments decided + partly built on stacked branches, WIP; next: finish M3-11/M3-09, then HealthKit / Health Connect).
+- **Last updated:** 2026-10-07 afternoon (Claude — M1-18 merged (PR #65); **payments M3-07/08/09/11 on PR #67, waiting for David to merge** (kill switch `PAYMENTS_ENFORCED` off → safe to deploy); next: M3-12 emergency feeding, then M3-04/05/06 HealthKit / Health Connect, then M5-R05 play & cuddle).
 - **Production:** `https://api.petprep.si` live (Hetzner CX23, Docker Compose + Caddy). Merge to `main` → CI (`CI OK`) → automatic deploy when backend / deployment / scripts / workflow changed (DEPLOYMENT.md D16). Website `petprep.si` is served from the separate repo `DataVallis/pet-prep-website` (D15). Last verified deploy: `98eabfb` (M5-R03 training backend), 2026-10-06.
 - **App:** TestFlight build 1.24.4 has the push-registration loop (fixed on `main`, PR #45/#48). **David must ship a new TestFlight build from `main`** (he owns app version — commit `58551b1` "mobile version change" is his). Nothing from M5-R02 / M5-R03 UI and nothing of the **CGP v2 rebrand** has been checked on a device yet. The rebrand adds native modules (`expo-font`, `expo-splash-screen`) and new icons / splash → needs a **new native EAS build** (an OTA update is not enough).
 - **PR #59 (M5-R03b) merged and deployed 2026-10-07** (`b3246ef`; GitHub Actions billing was blocking the `CI OK` job on 2026-10-06 — David fixed it). Small fix PR `fix/legacy-pet-age-label` (mobile only).
@@ -39,7 +39,7 @@
 4. **Training:** schedule is sent to the app, so a modified app can fake praise taps — **accepted by David** (only system security matters); taps before an app restart are lost on resume; potty "asked to go out" only logged, no timeline row; minors m3/m4 (catch-up accidents use today's potty progress; decay applied after later gains) open in DECISIONS.
 5. **Tests / tooling:** Pint fails repo-wide on 9 untouched files; two Pest runs in one checkout share `storage/framework/testing/disks` (use separate worktrees); cold-cache Jest timeout in `ChildHudScreen.behaviour.test.tsx`; GitHub Actions: `actions/checkout@v4` on deprecated Node 20, `ubuntu-latest` moves to Ubuntu 26 on 2026-10-19 — check CI after that date.
 6. **i18n (M1-18) not verified on a device:** Hermes plural rules (polyfill `@formatjs/intl-pluralrules` loads only if needed), Android channel names after a switch, iOS Slovenian permission texts — all need the new native build. English copy (contract, push, legal/deletion texts, terms like "pup", "Dog school", "Mixed breed", "Place") awaits David's read-through. Terms / privacy URLs are the same for both languages.
-7. **Security / hygiene still open:** test accounts in production DB (M0-15), EAS signing passwords in old repo history (M0-12), RevenueCat webhook fails open (M3-08), PHP 8.3 prod vs 8.5 Sail (M0-11).
+7. **Security / hygiene still open:** test accounts in production DB (M0-15), EAS signing passwords in old repo history (M0-12), RevenueCat payments built but not live (D7a checklist: store products, webhook secret, SDK keys, then `PAYMENTS_ENFORCED=true`), PHP 8.3 prod vs 8.5 Sail (M0-11).
 8. **About 40 decisions marked "čaka Davida"** in DECISIONS.md (incl. 7 behaviour questions from M5-R02: chewing 0.5, accidents vs. score, midnight clock, hard stop, quiet hours, walk for all breeds, adopted dogs).
 
 ## 4. Environment & configuration
@@ -62,6 +62,12 @@
 5. **David:** M5-R03b — only the minimum-one-session rule (≥ 7 trainers) is still open (the rest confirmed 2026-10-07). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-07 afternoon (cloud, orchestrator) — payments finished on PR #67
+- **PR #67 (`feat/M3-09-paywall-v2`)** = M3-08 ledger + M3-11 per-pet challenge / trial / lock (backend agent) + M3-07 SDK + M3-09 paywall (orchestrator). David's P5–P8 (14:20): paid dog deletion keeps the purchase used (+ explicit acknowledgement), full AI media only after a purchase (tokens M4-09 later, also for the free mutt), game over is not unlockable — new dog, one free trial per child (Claude's reading), Second Chance post-MVP.
+- **QA (independent) on #67:** blocker = deploy would lock new pets with no way to pay → fixed with `PAYMENTS_ENFORCED` (default off; DEPLOYMENT.md D7a go-live checklist) + Filament "Unlock challenge (admin)". Also fixed: locked pets don't grow / generate AI media; exact product only; restore never assigns a credit by itself; "unlocked" only when it really is; no-trial honesty in picker / paywall; pressable plan badge (pay any time). Docs: DECISIONS (superseded M3-08 rows marked), PARENTS / INVESTORS pricing, PRODUCTION_ENV, BUILD_LOG.
+- **Open for David:** (1) certificate after a long payment lock — should locked time count toward the 12 weeks? (QA M2; today the program clock runs through the lock); (2) refund abuse: a purchase queues the full AI video set (~3,5 $) which stays after a refund — accept or delay generation 48 h? (QA m7); (3) sandbox purchases in production during TestFlight (D7a).
+- Verified: Jest 1295/1295, tsc clean, Pest (see PR). **Not verified on a device**; needs a native build (RevenueCat SDK, expo-localization).
 
 ### 2026-10-07 midday (cloud, orchestrator) — M3 payments started, stopped at the usage limit
 - **David's payment decisions (2026-10-07):** one purchase = **one 12-week challenge for one pet** (consumable `petprep_challenge_12w`, 49,99 €); the 7-day trial starts at the pet's **birth**; after the trial without a purchase the **game pauses** (new lock `payment_required`, like hard stop); the free/paid split of BUSINESS_MODEL §7 is confirmed (mutt free forever as a sandbox). Full spec: `docs/product/PAYMENTS_SPEC.md` (on `feat/M3-11-challenge-trial`).

@@ -230,7 +230,9 @@ class PetDecayService
 
         // Life stage of today (M5-R01): written with this tick's save; a
         // change between two stages queues the new stage images once.
-        $transition = $this->lifeStages->syncStage($pet, $now);
+        // QA PR #67 M1: a payment-locked pet doesn't grow (and costs no AI media)
+        // while it waits; the next unfrozen tick catches the stage up once.
+        $transition = $pet->isPaymentLocked() ? null : $this->lifeStages->syncStage($pet, $now);
         if ($transition !== null) {
             $this->queueStageMedia($pet, $transition);
         }

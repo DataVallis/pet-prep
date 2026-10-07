@@ -38,6 +38,11 @@ export function readPetPlan(raw: unknown): PetPlan {
   if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return LEGACY_PLAN;
   const o = raw as Record<string, unknown>;
   const type = PLAN_TYPES.find((p) => p === o.type) ?? 'challenge';
+  // Kill switch on the server (`payments_enforced: false`): nobody is locked after the
+  // trial yet → no countdown, no banner — just "Preizkus" until purchases are live.
+  if (type === 'challenge' && o.payments_enforced === false && o.status !== 'paid') {
+    return { type, status: 'trial', trial_ends_at: null, paid_at: null };
+  }
   return {
     type,
     status: type === 'free' ? null : readStatus(o.status),

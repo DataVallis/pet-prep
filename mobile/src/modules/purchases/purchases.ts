@@ -303,10 +303,12 @@ export class PurchasesUnavailableError extends Error {
 /** RevenueCat product of the 12-week challenge (PAYMENTS_SPEC P1, consumable). */
 export const CHALLENGE_PRODUCT_ID = 'petprep_challenge_12w';
 
-/** The challenge package of the current offering (by product id, else its first package). */
+/** The challenge package of the current offering (by product id; null when the store doesn't offer it). */
 export function challengePackage(offerings: PurchasesOfferings | undefined | null): PurchasesPackage | null {
   const packages = offerings?.current?.availablePackages ?? [];
-  return packages.find((p) => p.product.identifier === CHALLENGE_PRODUCT_ID) ?? packages[0] ?? null;
+  // Exact product only — never another package of the offering (a token pack would be
+  // charged without giving a challenge, QA PR #67 m3).
+  return packages.find((p) => p.product.identifier === CHALLENGE_PRODUCT_ID) ?? null;
 }
 
 /** Store offerings for the identified parent (throws {@link PurchasesUnavailableError} otherwise). */
@@ -330,8 +332,10 @@ async function activateFor(petId: number): Promise<boolean> {
     await api.activateChallenge(petId);
     return true;
   } catch (error) {
-    if (error instanceof ApiError && error.status === 422) return true; // already paid / not a challenge pet
-    return false;
+    // Only "already unlocked another way" counts; pet_not_active / free_plan leave the
+    // credit unused and must not read as success (QA PR #67 m2).
+    const reason = error instanceof ApiError && typeof error.data === 'object' && error.data !== null ? (error.data as { reason?: unknown }).reason : null;
+    return error instanceof ApiError && error.status === 422 && reason === 'already_paid';
   }
 }
 

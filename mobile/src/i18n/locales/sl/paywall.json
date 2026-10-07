@@ -60,7 +60,8 @@
     "retry": "Poskusi znova",
     "offeringMissing": "Izziva iz trgovine trenutno ni mogoče naložiti. Poskusite znova kasneje.",
     "retryStore": "Znova naloži ceno",
-    "busy": "Počakajte …"
+    "busy": "Počakajte …",
+    "noTrial": "Za tega psa ni brezplačnega preizkusa (otrok ga je že imel) — izziv se začne z nakupom."
   },
   "result": {
     "unlocked": "Hvala! Izziv je odklenjen, igra se nadaljuje.",

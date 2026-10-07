@@ -74,6 +74,27 @@ class ChallengeCreditService
      *
      * @throws ChallengeException free_plan / already_paid / pet_not_active (422), no_credit (409)
      */
+    /**
+     * Superadmin unlock in Filament (QA PR #67 B1c): the challenge counts as paid
+     * without a store purchase (`challenge_paid_source = admin`) — support cases,
+     * refunds outside the store, testers. No credit is used; a payment lock is
+     * lifted like after a purchase. False when it was not a challenge pet in play
+     * or was already paid. Lock order family → pet (as `activate`).
+     */
+    public function grantByAdmin(Pet $pet): bool
+    {
+        return DB::transaction(function () use ($pet): bool {
+            Family::whereKey($pet->family_id)->lockForUpdate()->first();
+            $locked = Pet::whereKey($pet->id)->lockForUpdate()->firstOrFail();
+            if ($locked->plan !== PetPlan::Challenge || $locked->challenge_paid_at !== null
+                || ! $locked->is_active || $locked->is_game_over) {
+                return false;
+            }
+
+            return $this->challenges->markPaid($locked, ChallengePaidSource::Admin, now()->startOfSecond());
+        });
+    }
+
     public function activate(Pet $pet): array
     {
         return DB::transaction(function () use ($pet): array {
@@ -175,7 +196,7 @@ class ChallengeCreditService
     public function billing(?Family $family): array
     {
         if ($family === null) {
-            return ['credits_available' => 0, 'pets' => []];
+            return ['credits_available' => 0, 'payments_enforced' => Pet::paymentsEnforced(), 'pets' => []];
         }
 
         $tz = $family->timezone;
@@ -183,6 +204,8 @@ class ChallengeCreditService
 
         return [
             'credits_available' => ChallengeCredit::where('family_id', $family->id)->available()->count(),
+            // Kill switch (config/payments.php): false = nobody is locked after the trial yet.
+            'payments_enforced' => Pet::paymentsEnforced(),
             'pets' => $pets->map(fn (Pet $pet): array => [
                 'pet_id' => $pet->id,
                 'plan' => $pet->plan->value,

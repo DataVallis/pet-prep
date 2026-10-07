@@ -16,6 +16,7 @@ use App\Models\Pet;
 use App\Models\PetStatusPeriod;
 use App\Models\PushNotification;
 use App\Models\User;
+use App\Services\ChallengeCreditService;
 use App\Services\ChallengeService;
 use App\Services\ChildProfileService;
 use App\Services\FamilyInviteService;
@@ -162,7 +163,7 @@ describe('status derivation and the trial clock', function () {
             ->and($locked->frozen_at)->not->toBeNull()
             ->and(PetStatusPeriod::where('pet_id', $pet->id)->where('kind', PetStatusPeriodKind::PaymentLock->value)->whereNull('ended_at')->exists())->toBeTrue();
         Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id && $e->eventType === 'payment_required'
-            && $e->payload['plan'] === ['type' => 'challenge', 'status' => 'payment_required', 'trial_ends_at' => '2026-10-14T10:00:00+00:00', 'paid_at' => null]);
+            && $e->payload['plan'] === ['type' => 'challenge', 'status' => 'payment_required', 'trial_ends_at' => '2026-10-14T10:00:00+00:00', 'paid_at' => null, 'payments_enforced' => true]);
 
         // Child: state shows the lock, actions are 423 payment_required.
         app('auth')->forgetGuards();
@@ -170,7 +171,7 @@ describe('status derivation and the trial clock', function () {
         getJson('/api/child/pet')->assertOk()
             ->assertJsonPath('lock.reason', 'payment_required')
             ->assertJsonPath('lock.until', null)
-            ->assertJsonPath('pet.plan', ['type' => 'challenge', 'status' => 'payment_required', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null]);
+            ->assertJsonPath('pet.plan', ['type' => 'challenge', 'status' => 'payment_required', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null, 'payments_enforced' => true]);
         postJson('/api/child/pet/water')->assertStatus(423)->assertJsonPath('reason', 'payment_required');
 
         // Parent buys + activates → paid, unlocked, period closed.
@@ -385,6 +386,7 @@ describe('credits: purchase, auto-assign, activate', function () {
 
         ctBilling($parent)->assertOk()->assertExactJson([
             'credits_available' => 1,
+            'payments_enforced' => true,
             'pets' => [
                 ['pet_id' => $a->id, 'plan' => 'challenge', 'status' => 'trial', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null, 'trial_available' => true, 'deletion_loses_purchase' => false],
                 ['pet_id' => $b->id, 'plan' => 'challenge', 'status' => 'trial', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null, 'trial_available' => true, 'deletion_loses_purchase' => false],
@@ -394,7 +396,7 @@ describe('credits: purchase, auto-assign, activate', function () {
         // Pet A paid by the parent → the next purchase auto-assigns to B.
         ctActivate($parent, $a)->assertOk()->assertExactJson([
             'status' => 'activated', 'pet_id' => $a->id, 'credits_available' => 0,
-            'plan' => ['type' => 'challenge', 'status' => 'paid', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => '2026-10-07T12:00:00+02:00'],
+            'plan' => ['type' => 'challenge', 'status' => 'paid', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => '2026-10-07T12:00:00+02:00', 'payments_enforced' => true],
         ]);
         expect($credit->fresh())->pet_id->toBe($a->id)->assigned_via->toBe('parent');
 
@@ -571,7 +573,7 @@ describe('free plan rules', function () {
         getJson('/api/parent/dashboard')->assertOk()
             ->assertJsonCount(1, 'recent_activities')
             ->assertJsonCount(1, 'family.pets.0.timeline')
-            ->assertJsonPath('family.pets.0.plan', ['type' => 'free', 'status' => null, 'trial_ends_at' => null, 'paid_at' => null])
+            ->assertJsonPath('family.pets.0.plan', ['type' => 'free', 'status' => null, 'trial_ends_at' => null, 'paid_at' => null, 'payments_enforced' => true])
             ->assertJsonPath('pet.plan.type', 'free')
             // No 12-week program on the free plan.
             ->assertJsonPath('family.children.0.progress', null);
@@ -793,5 +795,46 @@ describe('P7 — one free trial per child; game over is not unlocked by a purcha
             ->assertJsonPath('plan', 'challenge')->assertJsonPath('trial_available', true);
         postJson('/api/parent/generate-pin', ['child_id' => $fresh->id, 'plan' => 'free'])->assertOk()
             ->assertJsonPath('plan', 'free')->assertJsonPath('trial_available', null);
+    });
+});
+
+// ─────────────────────────────────────────────────────────────────────────
+describe('kill switch, admin unlock, no growth while locked (QA PR #67)', function () {
+    it('with payments not enforced an expired trial keeps playing: no lock, no push, status trial', function () {
+        config(['payments.enforced' => false]);
+        Queue::fake();
+        [$parent, , $pet] = ctFamily();
+
+        ctAt('2026-10-14 10:00:00'); // trial ended (factory: born 2026-10-07 10:00)
+        ctTick();
+        $fresh = $pet->fresh();
+
+        expect($fresh->isPaymentLocked())->toBeFalse()
+            ->and($fresh->challengeStatus())->toBe(ChallengeStatus::Trial)
+            ->and($fresh->awaitsPayment())->toBeFalse()
+            ->and(PushNotification::count())->toBe(0);
+        ctBilling($parent)->assertOk()
+            ->assertJsonPath('payments_enforced', false)
+            ->assertJsonPath('pets.0.status', 'trial');
+    });
+
+    it('a superadmin unlocks a payment-locked challenge without a credit (source admin)', function () {
+        [$parent, , $pet] = ctFamily();
+        ctAt('2026-10-14 10:00:00');
+        ctTick();
+        expect($pet->fresh()->isPaymentLocked())->toBeTrue();
+
+        expect(app(ChallengeCreditService::class)->grantByAdmin($pet->fresh()))->toBeTrue();
+        $fresh = $pet->fresh();
+        expect($fresh->isPaymentLocked())->toBeFalse()
+            ->and($fresh->challengeStatus())->toBe(ChallengeStatus::Paid)
+            ->and($fresh->challenge_paid_source)->toBe(ChallengePaidSource::Admin)
+            ->and($fresh->deletionLosesPurchase())->toBeFalse()
+            ->and(ChallengeCredit::count())->toBe(0);
+
+        // Idempotent; never for a free pet.
+        expect(app(ChallengeCreditService::class)->grantByAdmin($fresh))->toBeFalse();
+        [, , $free] = ctFamily([], 'free');
+        expect(app(ChallengeCreditService::class)->grantByAdmin($free))->toBeFalse();
     });
 });

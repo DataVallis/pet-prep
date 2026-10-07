@@ -391,6 +391,23 @@ describe('step goal by stage', function () {
 /* ─────────────────────────── Stage transitions ─────────────────────────── */
 
 describe('stage transition', function () {
+    it('a payment-locked pet does not grow or queue AI media until it is paid (QA PR #67 M1)', function () {
+        Queue::fake([RegeneratePetStageMedia::class]);
+        [, , $pet] = lsFamily('2026-10-05 08:00:00', ['life_stage' => 'puppy', 'payment_locked_at' => '2026-10-12 08:00:00']);
+        $decay = app(PetDecayService::class);
+
+        lsAt('2026-11-23 23:01:30'); // past the puppy → young transition
+        $decay->processPetDecay($pet->fresh());
+        expect($pet->fresh()->life_stage)->toBe(LifeStage::Puppy);
+        Queue::assertNotPushed(RegeneratePetStageMedia::class);
+
+        Pet::whereKey($pet->id)->update(['payment_locked_at' => null]);
+        lsAt('2026-11-23 23:02:30');
+        $decay->processPetDecay($pet->fresh());
+        expect($pet->fresh()->life_stage)->toBe(LifeStage::Young);
+        Queue::assertPushed(RegeneratePetStageMedia::class, 1);
+    });
+
     it('writes the stage at the local midnight and queues the new stage images exactly once', function () {
         Queue::fake([RegeneratePetStageMedia::class]);
         // Born Monday 10:00 local, puppy at 2 → young (9) on Monday 2026-11-23 10:00 → rules Tuesday.

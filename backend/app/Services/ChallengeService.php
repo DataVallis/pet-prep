@@ -106,6 +106,10 @@ class ChallengeService
     public function processTrials(?CarbonInterface $now = null): array
     {
         $now = ($now ?? now())->copy()->startOfSecond();
+        // Kill switch: no locks and no "trial ends tomorrow" pushes before purchases are live.
+        if (! Pet::paymentsEnforced()) {
+            return ['reminded' => 0, 'locked' => 0];
+        }
         $base = fn () => Pet::born()
             ->where('plan', PetPlan::Challenge->value)
             ->whereNull('challenge_paid_at')

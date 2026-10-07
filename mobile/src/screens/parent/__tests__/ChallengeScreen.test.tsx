@@ -11,6 +11,7 @@ import PlanBadge from '@/components/parent/PlanBadge';
 import { familyFromDashboard } from '@/modules/family/family';
 import { planBadge, planBanner, readPetPlan, trialDaysLeft } from '@/modules/plan/plan';
 import ChallengeScreen from '@/screens/parent/ChallengeScreen';
+import { challengePackage } from '@/modules/purchases';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
 import type { ParentDashboardResponse } from '@/api/client';
@@ -104,6 +105,26 @@ describe('plan helpers', () => {
     expect(planBadge(readPetPlan({ type: 'free' }), NOW).label).toBe('Brezplačno');
   });
 
+  it('kill switch: with payments not enforced an unpaid challenge shows no countdown or banner', () => {
+    const plan = readPetPlan({ ...trialPlan(-5), payments_enforced: false });
+    expect(plan).toEqual({ type: 'challenge', status: 'trial', trial_ends_at: null, paid_at: null });
+    expect(planBanner(plan, NOW)).toBeNull();
+    expect(planBadge(plan, NOW).label).toBe('Preizkus');
+  });
+
+  it('only the exact challenge product is ever bought (never another package)', () => {
+    const other = { product: { identifier: 'petprep_tokens_10', priceString: '4,99 €' } };
+    expect(challengePackage({ current: { availablePackages: [other] } } as never)).toBeNull();
+    expect(challengePackage({ current: { availablePackages: [other, mockPackage] } } as never)).toBe(mockPackage);
+  });
+
+  it('a pressable badge opens the paywall', () => {
+    const onPress = jest.fn();
+    render(<PlanBadge plan={readPetPlan(trialPlan(48))} onPress={onPress} testID="badge" />);
+    fireEvent.press(screen.getByTestId('badge'));
+    expect(onPress).toHaveBeenCalled();
+  });
+
   it('the badge renders with an accessible label', () => {
     render(<PlanBadge plan={readPetPlan({ type: 'challenge', status: 'paid' })} testID="badge" />);
     expect(screen.getByTestId('badge').props.accessibilityLabel).toBe('Načrt: Plačano');
@@ -165,6 +186,25 @@ describe('ChallengeScreen', () => {
     await flush();
     expect(activateChallenge).toHaveBeenCalledWith(7);
     expect(mockPurchase).not.toHaveBeenCalled();
+    expect(screen.getByTestId('challenge-message')).toBeTruthy();
+  });
+
+  it('a dog without a free trial (P7) says so instead of a trial end', async () => {
+    getBilling.mockResolvedValue({ credits_available: 0, pets: [billingPet('trial', { trial_ends_at: null, trial_available: false })] });
+    renderWithQuery(<ChallengeScreen family={family({ type: 'challenge', status: 'trial' })} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('challenge-pet-7')).toHaveTextContent(/ni brezplačnega preizkusa/);
+  });
+
+  it('restore never assigns a credit by itself; the parent chooses the dog', async () => {
+    getBilling.mockResolvedValue({ credits_available: 0, pets: [billingPet('trial'), billingPet('trial', { pet_id: 8 })] });
+    renderWithQuery(<ChallengeScreen family={family(trialPlan(48))} onBack={jest.fn()} />);
+    await flush();
+    fireEvent.press(screen.getByTestId('challenge-restore'));
+    await act(async () => {
+      mockRestore.mock.calls[0][1].onSuccess({ status: 'restored' });
+    });
+    expect(activateChallenge).not.toHaveBeenCalled();
     expect(screen.getByTestId('challenge-message')).toBeTruthy();
   });
 

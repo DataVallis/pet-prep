@@ -618,6 +618,12 @@ class Pet extends Model
             return ChallengeStatus::Trial;
         }
 
+        // Kill switch (config/payments.php): until purchases are live nobody is
+        // asked to pay — an expired trial simply keeps playing.
+        if (! self::paymentsEnforced()) {
+            return ChallengeStatus::Trial;
+        }
+
         return ChallengeStatus::PaymentRequired;
     }
 
@@ -639,6 +645,11 @@ class Pet extends Model
      * The game-loop freeze of an unpaid challenge after its trial (set by the
      * tick, ChallengeService::processTrials; cleared on payment).
      */
+    public static function paymentsEnforced(): bool
+    {
+        return (bool) config('payments.enforced', false);
+    }
+
     public function isPaymentLocked(): bool
     {
         return $this->payment_locked_at !== null;

@@ -237,6 +237,7 @@ export default function ParentDashboardScreen() {
                 timezone={family?.timezone ?? 'Europe/Ljubljana'}
                 onOpen={openChild}
                 onChildPin={openChildPin}
+                onOpenChallenge={() => setOverlay({ kind: 'challenge' })}
               />
             ))
           )}

@@ -3,7 +3,7 @@
  * "Preizkus: zadnji dan" · "Čaka na nakup" · "Plačano". Status tokens only, never prices.
  */
 
-import { StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
 
 import { Text } from '@/components/ui/Text';
 import { t } from '@/i18n';
@@ -18,16 +18,22 @@ const TONES: Record<PlanBadgeTone, { bg: string; border: string; text: string }>
   danger: { bg: palette.dangerSoft, border: palette.dangerBorder, text: palette.danger },
 };
 
-export default function PlanBadge({ plan, testID }: { plan: PetPlan; testID?: string }) {
+export default function PlanBadge({ plan, onPress, testID }: { plan: PetPlan; onPress?: () => void; testID?: string }) {
   const badge = planBadge(plan);
   const tone = TONES[badge.tone];
+  const label = t('paywall:plan.badgeA11y', { label: badge.label });
+  const content = <Text style={[styles.text, { color: tone.text }]}>{badge.label}</Text>;
+  const style = [styles.badge, { backgroundColor: tone.bg, borderColor: tone.border }];
+  if (onPress) {
+    return (
+      <Pressable style={style} onPress={onPress} hitSlop={10} accessibilityRole="button" accessibilityLabel={label} testID={testID}>
+        {content}
+      </Pressable>
+    );
+  }
   return (
-    <View
-      style={[styles.badge, { backgroundColor: tone.bg, borderColor: tone.border }]}
-      accessibilityLabel={t('paywall:plan.badgeA11y', { label: badge.label })}
-      testID={testID}
-    >
-      <Text style={[styles.text, { color: tone.text }]}>{badge.label}</Text>
+    <View style={style} accessibilityLabel={label} testID={testID}>
+      {content}
     </View>
   );
 }

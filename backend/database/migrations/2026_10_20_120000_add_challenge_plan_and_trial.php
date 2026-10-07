@@ -43,7 +43,7 @@ return new class extends Migration
         DB::statement("UPDATE pets SET challenge_paid_at = COALESCE(born_at, created_at, now()), challenge_paid_source = 'grandfathered', trial_ends_at = born_at + interval '7 days'");
 
         DB::statement("ALTER TABLE pets ADD CONSTRAINT pets_plan_check CHECK (plan IN ('free', 'challenge'))");
-        DB::statement("ALTER TABLE pets ADD CONSTRAINT pets_challenge_paid_check CHECK ((challenge_paid_at IS NULL AND challenge_paid_source IS NULL) OR (challenge_paid_at IS NOT NULL AND challenge_paid_source IN ('purchase', 'grandfathered')))");
+        DB::statement("ALTER TABLE pets ADD CONSTRAINT pets_challenge_paid_check CHECK ((challenge_paid_at IS NULL AND challenge_paid_source IS NULL) OR (challenge_paid_at IS NOT NULL AND challenge_paid_source IN ('purchase', 'grandfathered', 'admin')))");
         DB::statement("ALTER TABLE pets ADD CONSTRAINT pets_free_plan_check CHECK (plan = 'challenge' OR (challenge_paid_at IS NULL AND trial_ends_at IS NULL AND payment_locked_at IS NULL))");
         // The tick's trial scan: unpaid challenge pets only.
         DB::statement("CREATE INDEX pets_unpaid_trial_idx ON pets (trial_ends_at) WHERE plan = 'challenge' AND challenge_paid_at IS NULL");

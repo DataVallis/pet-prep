@@ -1032,9 +1032,10 @@ export interface components {
          *     |---|
          *     | `purchase` <br/> A challenge credit (store purchase) is assigned to the pet. |
          *     | `grandfathered` <br/> Created before payments existed (testers) — never locked (PAYMENTS_SPEC §2). |
+         *     | `admin` <br/> Unlocked by a superadmin in Filament (support, refunds outside the store, testers). |
          * @enum {string}
          */
-        ChallengePaidSource: "purchase" | "grandfathered";
+        ChallengePaidSource: "purchase" | "grandfathered" | "admin";
         /**
          * ConfirmDeletionRequest
          * @description Body of every irreversible deletion (M2-08):
@@ -1853,6 +1854,7 @@ export interface operations {
                 content: {
                     "application/json": {
                         credits_available: number;
+                        payments_enforced: boolean;
                         pets: {
                             pet_id: number;
                             /** @enum {string} */
@@ -1898,6 +1900,7 @@ export interface operations {
                             status: "trial" | "payment_required" | "paid" | null;
                             trial_ends_at: string | null;
                             paid_at: string | null;
+                            payments_enforced: boolean;
                         };
                         credits_available: number;
                     } | string;
@@ -2126,6 +2129,7 @@ export interface operations {
                                     status: "trial" | "payment_required" | "paid" | null;
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
+                                    payments_enforced: boolean;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -2416,6 +2420,7 @@ export interface operations {
                                 status: "trial" | "payment_required" | "paid" | null;
                                 trial_ends_at: string | null;
                                 paid_at: string | null;
+                                payments_enforced: boolean;
                             };
                             /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                             current_video_url: string | null;
@@ -2726,6 +2731,7 @@ export interface operations {
                                     status: "trial" | "payment_required" | "paid" | null;
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
+                                    payments_enforced: boolean;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -3034,6 +3040,7 @@ export interface operations {
                                     status: "trial" | "payment_required" | "paid" | null;
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
+                                    payments_enforced: boolean;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -3342,6 +3349,7 @@ export interface operations {
                                     status: "trial" | "payment_required" | "paid" | null;
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
+                                    payments_enforced: boolean;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -3650,6 +3658,7 @@ export interface operations {
                                     status: "trial" | "payment_required" | "paid" | null;
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
+                                    payments_enforced: boolean;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -3958,6 +3967,7 @@ export interface operations {
                                     status: "trial" | "payment_required" | "paid" | null;
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
+                                    payments_enforced: boolean;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -4270,6 +4280,7 @@ export interface operations {
                                     status: "trial" | "payment_required" | "paid" | null;
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
+                                    payments_enforced: boolean;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -4582,6 +4593,7 @@ export interface operations {
                                     status: "trial" | "payment_required" | "paid" | null;
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
+                                    payments_enforced: boolean;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -4894,6 +4906,7 @@ export interface operations {
                                     status: "trial" | "payment_required" | "paid" | null;
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
+                                    payments_enforced: boolean;
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -5598,6 +5611,7 @@ export interface operations {
                                 status: "trial" | "payment_required" | "paid" | null;
                                 trial_ends_at: string | null;
                                 paid_at: string | null;
+                                payments_enforced: boolean;
                             };
                             /** @description M5-R01: origin, age, life stage and today's rules. */
                             profile: {
@@ -5746,6 +5760,7 @@ export interface operations {
                                     status: "trial" | "payment_required" | "paid" | null;
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
+                                    payments_enforced: boolean;
                                 };
                                 /**
                                  * @description M5-R01: origin, age, life stage and today's rules (meals by
@@ -5970,6 +5985,7 @@ export interface operations {
                                     status: "trial" | "payment_required" | "paid" | null;
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
+                                    payments_enforced: boolean;
                                 };
                                 /**
                                  * @description M5-R01: origin, age, life stage and today's rules (meals by

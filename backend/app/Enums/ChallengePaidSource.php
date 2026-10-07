@@ -13,4 +13,7 @@ enum ChallengePaidSource: string
 
     /** Created before payments existed (testers) — never locked (PAYMENTS_SPEC §2). */
     case Grandfathered = 'grandfathered';
+
+    /** Unlocked by a superadmin in Filament (support, refunds outside the store, testers). */
+    case Admin = 'admin';
 }

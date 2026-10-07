@@ -27,7 +27,6 @@ import { parentDashboardKey } from '@/hooks/queries/useParentDashboard';
 import { PRIVACY_URL, TERMS_URL } from '@/modules/auth/signup';
 import { breedLabel, caretakerNames, type FamilyOverview } from '@/modules/family/family';
 import { needsPurchase, planOfBillingPet } from '@/modules/plan/plan';
-import { fetchBilling } from '@/modules/purchases/billing';
 import {
   BILLING_KEY,
   challengePackage,
@@ -164,19 +163,10 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
     if (busy) return;
     setMessage(null);
     restore.mutate(undefined, {
-      onSuccess: async (outcome) => {
-        // A restored credit goes to the first dog waiting (one purchase = one dog).
-        let activated: boolean | null = null;
-        if (outcome.status === 'restored' && waiting.length > 0) {
-          const latest = await queryClient.fetchQuery({ queryKey: BILLING_KEY, queryFn: fetchBilling, staleTime: 0 }).catch(() => null);
-          if (latest && latest.credits_available > 0) {
-            const result = await activate(waiting[0].pet_id);
-            activated = result.kind === 'activate' && result.result === 'unlocked';
-          } else {
-            activated = false;
-          }
-        }
-        setMessage({ kind: 'restore', outcome, activated });
+      // A restored purchase becomes a credit on the server; the parent picks the dog
+      // ("Uporabi kupljen izziv") — never assigned automatically (QA PR #67 m1).
+      onSuccess: (outcome) => {
+        setMessage({ kind: 'restore', outcome, activated: null });
         refresh();
       },
     });
@@ -242,7 +232,13 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
                 <Card key={pet.pet_id} testID={`challenge-pet-${pet.pet_id}`}>
                   <Text style={styles.petTitle}>{S.petLine(breedLabel(familyPet?.breed_type ?? 'mutt'), names)}</Text>
                   <Text style={[styles.body, paused && styles.pausedText]}>
-                    {paused ? S.paused : pet.trial_ends_at ? S.trialEnds(formatTrialEnd(pet.trial_ends_at, timezone)) : S.trialEndsUnknown}
+                    {paused
+                      ? S.paused
+                      : pet.trial_available === false
+                        ? S.noTrial
+                        : pet.trial_ends_at
+                          ? S.trialEnds(formatTrialEnd(pet.trial_ends_at, timezone))
+                          : S.trialEndsUnknown}
                   </Text>
                   {credits > 0 ? (
                     <Pressable
