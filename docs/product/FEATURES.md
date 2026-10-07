@@ -22,7 +22,7 @@
 | Oznaka | Pomen |
 |---|---|
 | 🆓 | brezplačno — mešanček (za vedno, odločitev 2. 10. 2026) |
-| 💶 | plačljivo — 12-tedenski izziv / plačljiva pasma (Border Collie). **Plačila še niso zgrajena (RevenueCat odprt, M3-07 – M3-11) — danes ni mogoče ničesar kupiti.** |
+| 💶 | plačljivo — 12-tedenski izziv / plačljiva pasma (Border Collie). **Nakup v aplikaciji še ni zgrajen (RevenueCat SDK M3-07, paywall M3-09; strežnik M3-08 / M3-11 pripravljen) — danes ni mogoče ničesar kupiti.** |
 
 Razmejitev brezplačno / plačljivo v `BUSINESS_MODEL.md` §7 je **predlog**, ki ga David še potrjuje. Potrjeno je samo: mešanček brezplačen, Border Collie plačljiv, brezplačni mešanček nima videa »bolan« (David, 6. 10. 2026).
 
@@ -55,7 +55,8 @@ Razmejitev brezplačno / plačljivo v `BUSINESS_MODEL.md` §7 je **predlog**, ki
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID | Od kdaj |
 |---|---|---|---|---|---|
 | Zaslon »Izberi kužka« | Pri »Nov pes« starš izbere pasmo, izvor in starost ob prihodu, šele nato dobi kodo. Pred povezavo otroka lahko izbiro spremeni (»Spremeni kužka«). | starš | ✅ | M5-R04 (del 1) | 2026-10-05 |
-| Pasma | Mešanček 🆓. Border Collie 💶 je viden, a zaklenjen (zaklep velja tudi na strežniku). | starš | ✅ (nakup 🗓) | M5-R04, M3-07 | 2026-10-05 |
+| Pasma | Mešanček 🆓. Border Collie 💶 je v aplikaciji viden, a zaklenjen. Strežnik od M3-11 dovoli Border Collie na planu izziv (že v preizkusu), na brezplačnem planu ne. | starš | ✅ (aplikacija: zaklenjen; nakup 🗓) | M5-R04, M3-11, M3-09 | 2026-10-07 |
+| Izbira plana (brezplačni mešanček / 12-tedenski izziv — 7 dni brezplačno) | Strežnik sprejme `plan` ob PIN-u (privzeto izziv); zaslona za izbiro še ni. | starš | 🛠 | M3-11, M3-09 | 2026-10-07 |
 | Izvor: kupljen / posvojen | Pokaže se na profilu psa; posvojen pes je na sliki zdrav in miren, brez »žalostnih« klišejev. Vpliv izvora na vedenje (plašnost, nered) še ni v igri. | starš | ✅ (vedenje 🗓, čaka Davida) | M5-R01 | 2026-10-05 |
 | Starost ob prihodu | Mladiček (2 meseca), mlad pes (9 mesecev), odrasel (3 leta), starejši (9 let; Border Collie 9,8). Ob vsaki ena poštena vrstica s številkami (obroki, koraki). Brez privzete izbire. | starš | ✅ | M5-R01, M5-R04 | 2026-10-05 |
 | Kuža se stara | 1 teden igre = 1 mesec življenja; obdobja mladiček → mlad pes → odrasel → starejši (meje iz virov, potrdil David). Otrok in starš vidita npr. »Mladiček · 3 mesece« in kdaj pride naslednje obdobje. | otrok, starš | ✅ | M5-R01, M5-R04 | 2026-10-05 |
@@ -202,9 +203,12 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID | Od kdaj |
 |---|---|---|---|---|---|
 | Mešanček brezplačen za vedno 🆓 | Vsaka družina lahko preizkusi osnovno skrb brez plačila. | starš | ✅ (odločeno 2026-10-02) | B1a | 2026-10-02 |
-| 12-tedenski PetPrep izziv 💶 | **49,99 € na psa**, prvih **7 dni brezplačno**; skupni pes = ena cena, dostop za oba starša. Pes je v bazi že »enota plačila«. | starš | 🗓 (plačila niso zgrajena) | M3-09, M3-11 | — |
-| Nakup v aplikaciji (RevenueCat), paywall, preizkus na strežniku | En entitlement `challenge`; non-consumable ali naročnina še odprto (B7). | starš | 🗓 | M3-07 – M3-11 | — |
-| Plačljiva pasma (Border Collie) 💶 | Vidna in zaklenjena v izbiri kužka; odklep z nakupom. | starš | ✅ zaklep · 🗓 nakup | M5-R04, M3-07 | 2026-10-05 |
+| 12-tedenski PetPrep izziv 💶 | **49,99 € na psa** (David 7. 10.: en nakup = en izziv za enega psa; skupni pes = ena cena; kupi lahko katerikoli starš družine), prvih **7 dni brezplačno od rojstva psa**. | starš | 🗓 (nakup v aplikaciji ni zgrajen) | M3-07, M3-09 | — |
+| Strežnik: plan psa in 7-dnevni preizkus 💶 | Vsak pes ima plan: **brezplačni mešanček** ali **izziv** (starš ga izbere ob PIN-u; starejša aplikacija = izziv). Preizkus izziva se začne ob podpisu pogodbe in traja 7 dni; dan prej starši dobijo obvestilo »Preizkus se izteče jutri«. Brez nakupa se igra **ustavi kot pri hard stopu** (nič ne upada, napredek ostane, otrok vidi »Igra počaka na starša«, obvestilo staršem in otroku); po nakupu se nadaljuje, kjer je obstala. Obstoječi psi testerjev so odklenjeni (`grandfathered`). Aplikacija tega še ne prikazuje (M3-09). | starš, otrok | 🛠 | M3-11 | 2026-10-07 |
+| Strežnik: dnevnik nakupov in krediti izziva 💶 | Strežnik sprejme vsak RevenueCat dogodek enkrat (zaščiten s skrivnostjo — brez nje zavrne vse) in iz vsakega nakupa `petprep_challenge_12w` naredi »kredit izziva« družine. Kredit se sam dodeli, če ima družina samo enega neplačanega psa; sicer ga starš dodeli psu (`POST /api/parent/pets/{pet}/challenge/activate`). Pregled: `GET /api/parent/billing`. Vračilo kupnine kredit prekliče (pes nazaj v preizkus ali zaklep); prenos med računi prestavi neporabljene kredite. Admin vidi nakupe in kredite v Filamentu (samo branje). Kupiti v aplikaciji še ni mogoče. | starš, admin | 🛠 | M3-08, M3-11 | 2026-10-07 |
+| Strežnik: pravila brezplačnega plana 🆓 | Brezplačni plan: samo mešanček, brez »teden N od 12« in certifikata, starš vidi zgodovino **zadnjih 7 dni**, osnovni nabor videov (miruje, spi). Izziv (tudi v preizkusu): poln nabor videov. | starš | 🛠 | M3-11 | 2026-10-07 |
+| Nakup v aplikaciji (RevenueCat SDK), paywall na psa | Consumable `petprep_challenge_12w`; izbira plana v izbirniku kužka; paywall pri psu; zaklenjen zaslon otroka. | starš, otrok | 🗓 | M3-07, M3-09 | — |
+| Plačljiva pasma (Border Collie) 💶 | V aplikaciji vidna in zaklenjena v izbiri kužka. Strežnik (M3-11) jo dovoli na planu **izziv** (že v preizkusu, brez nakupa vnaprej), na brezplačnem planu ne. | starš | ✅ zaklep v aplikaciji · 🛠 izziv na strežniku · 🗓 v aplikaciji | M5-R04, M3-11, M3-09 | 2026-10-07 |
 | Second Chance reset (19,99 €) | — | starš | ⏸ | backlog | — |
 | Priboljški, veterinar, igrače (IAP), garancija »Real-World Relief«, bonusi | — | starš | ⏸ | backlog | — |
 | Partnerski kuponi (B2B) | Izključeno iz MVP. | partnerji | ⏸ | backlog | — |
@@ -215,7 +219,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 |---|---|---|---|---|
 | Koraki iz Apple Zdravje / Health Connect | Koraki tudi pri zaprti aplikaciji (Android danes šteje samo, ko je odprta). | otrok | 🗓 | M3-04, M3-05, M3-06 |
 | Angleščina v aplikaciji | Glej §10 »Jezik aplikacije«. | vsi | ✅ | M1-18 |
-| Plačila | Glej §12. | starš | 🗓 | M3-07 – M3-11 |
+| Plačila | Glej §12 (strežniški del M3-08 / M3-11 🛠). | starš | 🗓 | M3-07, M3-09 |
 | Certifikat odgovornosti | Glej §7. | otrok, starš | 🗓 | M2-01d |
 | Zaprta beta (TestFlight + Google Play, 20–50 družin) | — | — | 🗓 | M5-07 |
 | Breed Matchmaker | Primerna pasma iz 12-tedenskih podatkov otroka. | starš | ⏸ | backlog |

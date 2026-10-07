@@ -72,7 +72,16 @@ Ne prodajamo "igrice", ampak **orodje za oceno zrelosti in zavarovalno polico pr
 | B3 | Preizkus traja 7 dni in sovpada s "Puppy Promoter" momentom → paywall na 7. dan. |
 | L1 | Jezik aplikacije: **angleščina (privzeto) + slovenščina**; ostali jeziki kasneje. |
 
-### Predlog razmejitve brezplačno / plačljivo (potrdi ali popravi)
+### Sprejete (David, 7. 10. 2026 — podrobno [`PAYMENTS_SPEC.md`](../product/PAYMENTS_SPEC.md))
+
+| # | Odločitev |
+|---|---|
+| P1 | **Nakup = en 12-tedenski izziv za enega psa**, vsak nov izziv (nov otrok ali nov pes) znova 49,99 €. V trgovinah **consumable** `petprep_challenge_12w` (RevenueCat); strežnik vodi, kateremu psu pripada. **B7 rešen.** |
+| P2 | 7-dnevni brezplačni preizkus se začne **ob rojstvu psa** (podpis pogodbe), samo za pse na izzivu. |
+| P3 | Po preizkusu brez nakupa se igra **ustavi** (pes čaka zaklenjen kot pri hard stopu, napredek ostane), dokler starš ne kupi. |
+| P4 | **Razmejitev spodaj potrjena**: mešanček brezplačen za vedno (peskovnik brez 12-tedenskega programa); izziv = program, Border Collie, certifikat, celotna zgodovina, personaliziran AI pes. |
+
+### Razmejitev brezplačno / plačljivo (potrdil David 7. 10. 2026, P4)
 
 | | Mešanček (free, za vedno) | 12-tedenski izziv (49,99 €, 7 dni brezplačno) |
 |---|---|---|
@@ -87,7 +96,7 @@ Ne prodajamo "igrice", ampak **orodje za oceno zrelosti in zavarovalno polico pr
 | Breed Downgrade reset | ✓ | ✓ |
 | Second Chance reset (19,99 €) | – | po MVP |
 
-Tehnično (RevenueCat): en entitlement `challenge`, produkt non-consumable `petprep_challenge_12w` (49,99 €), 7-dnevni preizkus kot "trial" stanje na strežniku (`trial_started_at`), ker non-consumable IAP nima vgrajenega triala. Alternativa: naročnina 3 × 9,99 € z vgrajenim 7-dnevnim introductory trialom — **(D)** izberi, ko nastavljamo App Store produkte.
+Tehnično (RevenueCat, **odločeno 7. 10. 2026, P1**): produkt **consumable** `petprep_challenge_12w` (49,99 €) — vsak nakup postane »kredit izziva« družine na strežniku, ki se dodeli enemu psu (`challenge_credits`, M3-11); 7-dnevni preizkus je stanje na strežniku (`pets.trial_ends_at` = rojstvo + 7 dni), ker IAP brez naročnine nima vgrajenega triala. Naročnina ni izbrana.
 
 ### Še odprte
 
@@ -97,7 +106,7 @@ Tehnično (RevenueCat): en entitlement `challenge`, produkt non-consumable `petp
 | B4 | Prvi trg | Slovenija + Hrvaška za validacijo (nizek CPM), nato DE / AT / UK |
 | B5 | Garancija 100 € | Obdržati v copyju, pogoje pravno preveriti |
 | B6 | Mr. Pet partnerstvo | Pogovor po prvih 50 certifikatih |
-| B7 | Non-consumable + strežniški trial vs. naročnina z IAP trialom | Non-consumable (jasnejša ponudba "enkratno 49,99 €") |
+| ~~B7~~ | ~~Non-consumable + strežniški trial vs. naročnina z IAP trialom~~ | **Rešeno 7. 10. 2026 (P1):** consumable na psa + strežniški trial |
 
 ## 8. Prihodnji materiali (orkestrator lahko pripravi)
 
