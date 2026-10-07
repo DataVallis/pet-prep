@@ -16,12 +16,10 @@ import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { alpha, fonts, palette, tightTracking } from '@/theme';
+import { strings } from '@/i18n/strings';
 
-export const HUD_ERROR_STRINGS = {
-  title: 'Ups, nekaj se je zataknilo',
-  body: 'Kuža je v redu. Poskusi znova.',
-  retry: 'Poskusi znova',
-} as const;
+/** User-visible strings (`child:hudError`, M1-18). */
+export const HUD_ERROR_STRINGS = strings('child', 'hudError');
 
 interface Props {
   children: ReactNode;

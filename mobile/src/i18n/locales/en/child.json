@@ -1,1 +1,142 @@
-{}
+{
+  "hud": {
+    "feed": "Feed",
+    "water": "Water",
+    "walk": "Walk",
+    "clean": "Clean",
+    "metrics": {
+      "hunger": "Food",
+      "thirst": "Water",
+      "energy": "Energy",
+      "hygiene": "Clean"
+    },
+    "metricA11y": "{{label}} {{value}}%",
+    "loading": "Fetching your pup …",
+    "loadFailed": "We couldn't load your pup.",
+    "autoRetry": "Trying again on its own …",
+    "retry": "Try again",
+    "logout": "Log out",
+    "stale": "No connection — showing the last update.",
+    "breeds": {
+      "mutt": "Mixed breed",
+      "border_collie": "Border Collie"
+    },
+    "moods": {
+      "idle": "Happy and playful",
+      "playing": "Playful",
+      "hungry": "Hungry pup",
+      "sleeping": "Resting",
+      "low_energy": "Tired",
+      "sick": "Not feeling well"
+    },
+    "challengeWeek": "WEEK {{week}} OF {{total}}"
+  },
+  "ws": {
+    "live": "LIVE",
+    "connecting": "CONNECTING",
+    "polling": "Auto-refresh"
+  },
+  "time": {
+    "at": "at {{time}}",
+    "tomorrowAt": "tomorrow at {{time}}"
+  },
+  "format": {
+    "thousandsSeparator": ","
+  },
+  "actions": {
+    "success": {
+      "feed": "Yum! Your pup is full.",
+      "water": "Fresh water! Your pup isn't thirsty anymore.",
+      "clean": "Great job, it's all clean!"
+    },
+    "unchanged": {
+      "feed": "Your pup is already full.",
+      "water": "The water bowl is already full.",
+      "clean": "It was already clean."
+    },
+    "refused": {
+      "outsideFeedWindow": "Your pup will be hungry again {{when}}.",
+      "outsideFeedWindowNoTime": "It's not mealtime right now.",
+      "alreadyFed": "Your pup has already eaten. You can feed it again {{when}}.",
+      "alreadyFedNoTime": "Your pup has already eaten.",
+      "waterDailyLimit": "Your pup has had enough water today. More water tomorrow!",
+      "waterTooSoon": "The bowl is still full. You can give fresh water {{when}}.",
+      "waterTooSoonNoTime": "The bowl is still full.",
+      "needsCleaning": "Clean up after your pup first!",
+      "other": "You can't do that right now. Try again a bit later."
+    },
+    "locked": {
+      "hard_stopped": "A parent has paused the game.",
+      "ill": "Your pup is at the vet until {{until}}.",
+      "illNoTime": "Your pup is at the vet.",
+      "game_over": "Your pup has gone to the shelter. Talk to your parents.",
+      "inactive": "The game isn't on right now."
+    },
+    "offline": "No connection. Check the internet and try again.",
+    "tooFast": "Slow down! Try again in a moment.",
+    "failed": "Something went wrong. Try again."
+  },
+  "hints": {
+    "cleanFirst": "Clean up first",
+    "tomorrow": "tomorrow",
+    "clean": "All clean"
+  },
+  "meals": {
+    "title": "Meals today",
+    "byParent": "parent feeds",
+    "done": "fed",
+    "now": "now",
+    "past": "over"
+  },
+  "locked": {
+    "hard_stop": {
+      "title": "A parent paused the game",
+      "body": "The game is paused for now. Talk to your parents."
+    },
+    "illness": {
+      "title": "Your pup is at the vet",
+      "body": "Your pup is at the vet until {{until}}. It needs some rest.",
+      "bodyNoTime": "Your pup needs some rest. It'll be back soon."
+    },
+    "game_over": {
+      "title": "Your pup is at the shelter",
+      "body": "Your pup has gone to a pretend shelter. Talk to your parents about starting again."
+    },
+    "inactive": {
+      "title": "The game isn't on",
+      "body": "The game isn't on right now. Ask a parent to check the settings."
+    }
+  },
+  "cleaning": {
+    "title": "Clean up after your pup!",
+    "progress": "{{done}} / {{total}} spots",
+    "hint": "Tap the spots to scrub them away.",
+    "close": "Later",
+    "spot": "Spot",
+    "accident": {
+      "title": "Oops, a puddle! Wipe it up.",
+      "hint": "Tap the puddles to wipe them up.",
+      "spot": "Puddle"
+    }
+  },
+  "hudError": {
+    "title": "Oops, something got stuck",
+    "body": "Your pup is fine. Try again.",
+    "retry": "Try again"
+  },
+  "walk": {
+    "title": "Walk",
+    "steps": "{{steps}} / {{goal}} steps",
+    "energy": "Energy {{pct}}%",
+    "mine": "Your steps today: {{steps}}",
+    "goalReached": "Great job! Today's walk is done.",
+    "allow": "Allow step counting",
+    "allowHint": "Your phone will count your steps so your pup gets energy.",
+    "denied": "Step counting is turned off. Ask a parent to turn it on in the phone's settings.",
+    "unavailable": "This phone can't count steps.",
+    "refresh": "Refresh steps",
+    "syncing": "Saving …",
+    "androidNote": "Steps are counted while the app is open.",
+    "close": "Close"
+  }
+}

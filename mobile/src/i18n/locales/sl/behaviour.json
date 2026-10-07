@@ -1,1 +1,46 @@
-{}
+{
+  "child": {
+    "takeOut": "Pelji ven",
+    "resolveChewing": "Pospravi in daj igračo",
+    "success": {
+      "take_out": "Bravo! Kuža je opravil potrebo zunaj.",
+      "resolve_chewing": "Bravo! Copat je pospravljen, kuža se igra z igračo."
+    },
+    "unchanged": {
+      "take_out": "Kuža je bil pravkar zunaj.",
+      "resolve_chewing": "Ni več kaj pospraviti."
+    },
+    "takeOutNotNeeded": "Kuža zdaj ne rabi ven.",
+    "takeOutIn": "Kuža bo moral ven čez {{duration}}",
+    "takeOutAt": "Kuža bo moral ven {{when}}",
+    "takeOutNow": "Kuža bi rad šel ven.",
+    "hintNow": "zdaj",
+    "scene": {
+      "accident": "Ups, luža! Kuža je bil premajhen, da bi zdržal.",
+      "chewing": "Kuža je pregrizel copat. Dolgčas mu je."
+    },
+    "sceneA11y": {
+      "accident": "Luža na tleh",
+      "chewing": "Pregrizen copat"
+    },
+    "cleanChewing": "Pospravi copat"
+  },
+  "parent": {
+    "title": "Vedenje",
+    "kinds": {
+      "poop": "Kakec",
+      "accident": "Luža",
+      "chewing": "Pregrizen copat"
+    },
+    "openEvent": "{{label}} — počistiti do {{due}}",
+    "takeOut": "Mladiček mora ven {{when}} (zdrži ~{{hold}} h)",
+    "lastTakenOut": "Nazadnje zunaj ob {{at}}",
+    "lastDay": "Zadnji dan",
+    "lastDays_one": "Zadnji {{count}} dan",
+    "lastDays_two": "Zadnja {{count}} dneva",
+    "lastDays_few": "Zadnji {{count}} dnevi",
+    "lastDays_other": "Zadnjih {{count}} dni",
+    "statsTakenOut": "{{n}}× peljal(a) ven",
+    "statsChewing": "{{n}}× pospravil(a) copat"
+  }
+}

@@ -4,6 +4,7 @@
  */
 
 import { meter } from '@/theme/colors';
+import { currentLanguageTag } from '@/i18n';
 
 /**
  * Get the color for a metric level (0–100).
@@ -67,11 +68,12 @@ function lerpColor(a: string, b: string, t: number): string {
 }
 
 /**
- * Format a step count with thousands separator.
- * e.g., 5120 → "5,120"
+ * Format a step count with the current language's grouping (M1-18).
+ * e.g., 5120 → "5,120" (en), 10000 → "10.000" (sl; CLDR leaves 4 digits ungrouped in sl).
+ * Unused by the app today (the HUD uses `formatSteps`).
  */
 export function formatStepCount(steps: number): string {
-  return steps.toLocaleString('en-US');
+  return steps.toLocaleString(currentLanguageTag());
 }
 
 /**

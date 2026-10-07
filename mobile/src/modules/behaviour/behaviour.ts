@@ -12,11 +12,13 @@
  * deadline); this module only reads, words and — for the optimistic HUD — predicts the
  * obvious effect of the child's own action until the server's answer replaces it.
  *
- * Pure functions only; texts are Slovenian (i18n with M1-18), calm and kind — a child
+ * Pure functions only; texts (`behaviour` namespace, M1-18) are calm and kind — a child
  * must never feel alarmed or shamed by a puppy that needs to go out.
  */
 
 import { familyClock, whenText } from '@/modules/childPet/familyTime';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
 export type BehaviourKind = 'poop' | 'accident' | 'chewing';
 /** Behaviour video / graphic shown over the dog (newest open accident or chewing). */
@@ -208,35 +210,19 @@ export function afterResolveChewing(b: ChildBehaviour): ChildBehaviour {
 
 // ── Texts (child) ─────────────────────────────────────────────
 
-export const BEHAVIOUR_STRINGS = {
-  takeOut: 'Pelji ven',
-  resolveChewing: 'Pospravi in daj igračo',
-  success: {
-    take_out: 'Bravo! Kuža je opravil potrebo zunaj.',
-    resolve_chewing: 'Bravo! Copat je pospravljen, kuža se igra z igračo.',
-  },
-  unchanged: {
-    take_out: 'Kuža je bil pravkar zunaj.',
-    resolve_chewing: 'Ni več kaj pospraviti.',
-  },
-  takeOutNotNeeded: 'Kuža zdaj ne rabi ven.',
-  /** Calm countdown above the dock. */
-  takeOutIn: (duration: string) => `Kuža bo moral ven čez ${duration}`,
-  takeOutAt: (when: string) => `Kuža bo moral ven ${when}`,
-  takeOutNow: 'Kuža bi rad šel ven.',
-  /** Short hint under the button. */
-  hintNow: 'zdaj',
-  scene: {
-    accident: 'Ups, luža! Kuža je bil premajhen, da bi zdržal.',
-    chewing: 'Kuža je pregrizel copat. Dolgčas mu je.',
-  } satisfies Record<BehaviourScene, string>,
-  sceneA11y: {
-    accident: 'Luža na tleh',
-    chewing: 'Pregrizen copat',
-  } satisfies Record<BehaviourScene, string>,
-  /** Hint under the disabled "Očisti" when only a slipper is open. */
-  cleanChewing: 'Pospravi copat',
-} as const;
+/**
+ * Child texts (`behaviour:child`, M1-18): `takeOutIn` / `takeOutAt` are the calm countdown
+ * above the dock, `hintNow` the short hint under the button, `cleanChewing` the hint under
+ * the disabled "Očisti" when only a slipper is open.
+ */
+export const BEHAVIOUR_STRINGS = strings('behaviour', 'child', {
+  takeOutIn: (duration: string) => t('behaviour:child.takeOutIn', { duration }),
+  takeOutAt: (when: string) => t('behaviour:child.takeOutAt', { when }),
+});
+
+/** Every scene has a caption and a screen-reader label (compile-time check). */
+const _sceneTexts: { scene: Record<BehaviourScene, string>; sceneA11y: Record<BehaviourScene, string> } = BEHAVIOUR_STRINGS;
+void _sceneTexts;
 
 /** Above this the countdown shows a clock time ("ob 14:30") instead of a duration. */
 export const TAKE_OUT_DURATION_MAX_MIN = 180;
@@ -287,25 +273,26 @@ export function takeOutCountdown(clock: TakeOutClock, serverNowMs: number, timez
 
 // ── Texts (parent) ────────────────────────────────────────────
 
-export const PARENT_BEHAVIOUR_STRINGS = {
-  title: 'Vedenje',
-  kinds: {
-    poop: 'Kakec',
-    accident: 'Luža',
-    chewing: 'Pregrizen copat',
-  } satisfies Record<BehaviourKind, string>,
-  openEvent: (label: string, due: string | null) => (due ? `${label} — počistiti do ${due}` : label),
+/** Parent texts (`behaviour:parent`, M1-18). */
+export const PARENT_BEHAVIOUR_STRINGS = strings('behaviour', 'parent', {
+  openEvent: (label: string, due: string | null) => (due ? t('behaviour:parent.openEvent', { label, due }) : label),
   /** `when` from `whenText`: "ob 13:00" / "jutri ob 07:10". */
-  takeOut: (when: string, hold: number) => `Mladiček mora ven ${when} (zdrži ~${hold} h)`,
-  lastTakenOut: (at: string) => `Nazadnje zunaj ob ${at}`,
-  /** "Zadnjih 7 dni" with Slovenian number agreement. */
-  lastDays: (n: number) =>
-    n === 1 ? 'Zadnji dan' : n === 2 ? 'Zadnja 2 dneva' : n === 3 || n === 4 ? `Zadnji ${n} dnevi` : `Zadnjih ${n} dni`,
+  takeOut: (when: string, hold: number) => t('behaviour:parent.takeOut', { when, hold }),
+  lastTakenOut: (at: string) => t('behaviour:parent.lastTakenOut', { at }),
+  /** "Zadnjih 7 dni" (CLDR plurals); exactly one day is just "Zadnji dan" / "Last day". */
+  lastDays: (n: number) => (n === 1 ? t('behaviour:parent.lastDay') : t('behaviour:parent.lastDays', { count: n })),
   stats: (takenOut: number, chewing: number) =>
-    [takenOut > 0 ? `${takenOut}× peljal(a) ven` : null, chewing > 0 ? `${chewing}× pospravil(a) copat` : null]
+    [
+      takenOut > 0 ? t('behaviour:parent.statsTakenOut', { n: takenOut }) : null,
+      chewing > 0 ? t('behaviour:parent.statsChewing', { n: chewing }) : null,
+    ]
       .filter((x): x is string => x !== null)
       .join(' · '),
-} as const;
+});
+
+/** Every behaviour kind has a parent label (compile-time check). */
+const _kindTexts: { kinds: Record<BehaviourKind, string> } = PARENT_BEHAVIOUR_STRINGS;
+void _kindTexts;
 
 /**
  * Lines for the parent's pet block: the bladder clock ("Mladiček mora ven ob 13:00" /

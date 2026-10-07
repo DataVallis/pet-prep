@@ -1,1 +1,44 @@
-{}
+{
+  "child": {
+    "takeOut": "Take out",
+    "resolveChewing": "Tidy up & give a toy",
+    "success": {
+      "take_out": "Great job! Your pup went potty outside.",
+      "resolve_chewing": "Great job! The slipper is put away and your pup is playing with a toy."
+    },
+    "unchanged": {
+      "take_out": "Your pup was just outside.",
+      "resolve_chewing": "There's nothing left to tidy up."
+    },
+    "takeOutNotNeeded": "Your pup doesn't need to go out right now.",
+    "takeOutIn": "Your pup will need to go out in {{duration}}",
+    "takeOutAt": "Your pup will need to go out {{when}}",
+    "takeOutNow": "Your pup wants to go outside.",
+    "hintNow": "now",
+    "scene": {
+      "accident": "Oops, a puddle! Your pup was too little to hold it.",
+      "chewing": "Your pup chewed a slipper. It was bored."
+    },
+    "sceneA11y": {
+      "accident": "Puddle on the floor",
+      "chewing": "Chewed slipper"
+    },
+    "cleanChewing": "Tidy the slipper"
+  },
+  "parent": {
+    "title": "Behaviour",
+    "kinds": {
+      "poop": "Poop",
+      "accident": "Puddle",
+      "chewing": "Chewed slipper"
+    },
+    "openEvent": "{{label}} — clean up by {{due}}",
+    "takeOut": "The puppy needs to go out {{when}} (can hold it ~{{hold}} h)",
+    "lastTakenOut": "Last taken out at {{at}}",
+    "lastDay": "Last day",
+    "lastDays_one": "Last {{count}} day",
+    "lastDays_other": "Last {{count}} days",
+    "statsTakenOut": "taken out {{n}}×",
+    "statsChewing": "slipper tidied {{n}}×"
+  }
+}

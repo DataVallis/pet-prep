@@ -1,5 +1,5 @@
 /**
- * Child-facing texts for care actions (M1-14). Slovenian, short, kind; i18n with M1-18.
+ * Child-facing texts for care actions (M1-14). Short, kind; `child:actions` (M1-18).
  * The server decides (422 reason + `next_allowed_at`, 423 lock); this only words it,
  * with times in the family's timezone (`state.timezone`).
  */
@@ -10,45 +10,43 @@ import type { ChildPetState } from '@/api/client';
 import type { CareAction, ChildPetView, LockReason } from '@/modules/childPet/childPetView';
 import { familyClock, isLaterDay, whenText } from '@/modules/childPet/familyTime';
 import { BEHAVIOUR_STRINGS, onlyChewingOpen } from '@/modules/behaviour/behaviour';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-export const CHILD_ACTION_STRINGS = {
+/** All child texts of care actions (`child:actions`); behaviour texts come from `behaviour:child`. */
+export const CHILD_ACTION_STRINGS = strings('child', 'actions', {
   success: {
-    feed: 'Njam! Kuža je sit.',
-    water: 'Sveža voda! Kuža je odžejan.',
-    clean: 'Bravo, vse je čisto!',
-    take_out: BEHAVIOUR_STRINGS.success.take_out,
-    resolve_chewing: BEHAVIOUR_STRINGS.success.resolve_chewing,
-  } satisfies Record<CareAction, string>,
+    get take_out(): string {
+      return BEHAVIOUR_STRINGS.success.take_out;
+    },
+    get resolve_chewing(): string {
+      return BEHAVIOUR_STRINGS.success.resolve_chewing;
+    },
+  },
   unchanged: {
-    feed: 'Kuža je že sit.',
-    water: 'Kuža ima že polno posodo.',
-    clean: 'Že je bilo čisto.',
-    take_out: BEHAVIOUR_STRINGS.unchanged.take_out,
-    resolve_chewing: BEHAVIOUR_STRINGS.unchanged.resolve_chewing,
-  } satisfies Record<CareAction, string>,
+    get take_out(): string {
+      return BEHAVIOUR_STRINGS.unchanged.take_out;
+    },
+    get resolve_chewing(): string {
+      return BEHAVIOUR_STRINGS.unchanged.resolve_chewing;
+    },
+  },
   refused: {
-    outsideFeedWindow: (when: string) => `Kuža bo lačen spet ${when}.`,
-    outsideFeedWindowNoTime: 'Zdaj ni čas za hrano.',
-    alreadyFed: (when: string) => `Kuža je že jedel. Spet ga nahraniš ${when}.`,
-    alreadyFedNoTime: 'Kuža je že jedel.',
-    waterDailyLimit: 'Danes je kuža popil dovolj vode. Nova voda jutri.',
-    waterTooSoon: (when: string) => `Posoda je še polna. Novo vodo lahko daš ${when}.`,
-    waterTooSoonNoTime: 'Posoda je še polna.',
-    needsCleaning: 'Najprej pospravi za kužkom!',
-    takeOutNotNeeded: BEHAVIOUR_STRINGS.takeOutNotNeeded,
-    other: 'Tega zdaj ne gre. Poskusi malo kasneje.',
+    outsideFeedWindow: (when: string) => t('child:actions.refused.outsideFeedWindow', { when }),
+    alreadyFed: (when: string) => t('child:actions.refused.alreadyFed', { when }),
+    waterTooSoon: (when: string) => t('child:actions.refused.waterTooSoon', { when }),
+    get takeOutNotNeeded(): string {
+      return BEHAVIOUR_STRINGS.takeOutNotNeeded;
+    },
   },
   locked: {
-    hard_stopped: 'Starš je ustavil igro.',
-    ill: (until: string) => `Kuža je pri veterinarju do ${until}.`,
-    illNoTime: 'Kuža je pri veterinarju.',
-    game_over: 'Kuža je odšel v zavetišče. Pogovori se s starši.',
-    inactive: 'Igra trenutno ni aktivna.',
+    ill: (until: string) => t('child:actions.locked.ill', { until }),
   },
-  offline: 'Ni povezave. Preveri internet in poskusi znova.',
-  tooFast: 'Počasi! Poskusi čez trenutek.',
-  failed: 'Nekaj je šlo narobe. Poskusi znova.',
-} as const;
+});
+
+/** Every care action has a success and an unchanged text (compile-time check). */
+const _careTexts: { success: Record<CareAction, string>; unchanged: Record<CareAction, string> } = CHILD_ACTION_STRINGS;
+void _careTexts;
 
 export type RefusalReason =
   | 'outside_feed_window'
@@ -170,12 +168,11 @@ export function successMessage(action: CareAction, status: 'accepted' | 'unchang
 }
 
 /** Short hint under a disabled HUD button ("ob 17:00", "Najprej pospravi"); null when enabled. */
-export const HUD_HINTS = {
-  cleanFirst: 'Najprej pospravi',
-  tomorrow: 'jutri',
-  clean: 'Čisto',
-  cleanChewing: BEHAVIOUR_STRINGS.cleanChewing,
-} as const;
+export const HUD_HINTS = strings('child', 'hints', {
+  get cleanChewing(): string {
+    return BEHAVIOUR_STRINGS.cleanChewing;
+  },
+});
 
 /** Hint under "Očisti": "Čisto", or "Pospravi copat" when only a chewed slipper is open (M5-R02). */
 export function cleanHint(view: ChildPetView): string | null {

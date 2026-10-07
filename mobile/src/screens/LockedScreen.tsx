@@ -6,27 +6,15 @@ import { deviceTimeZone, lockClockWithFallback } from '@/modules/childPet/family
 import { useAppStore, type LockDetails, type LockState } from '@/store/appStore';
 import type { VideoState } from '@/modules/petMedia/petMedia';
 import { alpha, fonts, palette } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-/** User-visible strings (i18n with M1-18). PRODUCT_SPEC §7 / §8. */
-export const LOCKED_STRINGS = {
-  hard_stop: {
-    title: 'Starš je ustavil igro',
-    body: 'Simulacija je začasno ustavljena. Pogovori se s starši.',
-  },
+/** User-visible strings (`child:locked`, M1-18). PRODUCT_SPEC §7 / §8. */
+export const LOCKED_STRINGS = strings('child', 'locked', {
   illness: {
-    title: 'Kuža je pri veterinarju',
-    body: (until: string) => `Kuža je pri veterinarju do ${until}. Potrebuje počitek.`,
-    bodyNoTime: 'Kuža potrebuje počitek. Kmalu se vrne.',
+    body: (until: string) => t('child:locked.illness.body', { until }),
   },
-  game_over: {
-    title: 'Kuža je v zavetišču',
-    body: 'Kuža je odšel v virtualno zavetišče. Pogovori se s starši o novem začetku.',
-  },
-  inactive: {
-    title: 'Igra ni aktivna',
-    body: 'Igra trenutno ni aktivna. Prosi starša, da preveri nastavitve.',
-  },
-} as const;
+});
 
 export function lockedCopy(
   lockState: LockState,
@@ -45,11 +33,11 @@ export function lockedCopy(
       };
     }
     case 'game_over':
-      return LOCKED_STRINGS.game_over;
+      return { title: LOCKED_STRINGS.game_over.title, body: LOCKED_STRINGS.game_over.body };
     case 'inactive':
-      return LOCKED_STRINGS.inactive;
+      return { title: LOCKED_STRINGS.inactive.title, body: LOCKED_STRINGS.inactive.body };
     default:
-      return LOCKED_STRINGS.hard_stop;
+      return { title: LOCKED_STRINGS.hard_stop.title, body: LOCKED_STRINGS.hard_stop.body };
   }
 }
 

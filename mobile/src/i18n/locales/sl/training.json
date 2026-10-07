@@ -1,1 +1,127 @@
-{}
+{
+  "child": {
+    "entry": "Šola",
+    "entryA11yDone": "Šola — današnja vaja je opravljena",
+    "entryA11yOpen": "Šola — današnja vaja te še čaka",
+    "title": "Šola",
+    "close": "Zapri",
+    "intro": "Izberi ukaz. Ko kuža uboga, ga takoj pohvali!",
+    "howTo": "Kuža ne uboga vsakič. Če ne uboga, počakaj — pohvala šteje samo, ko uboga.",
+    "learned": "naučeno",
+    "percent": "{{value}} %",
+    "todayDone": "Današnja vaja: opravljena ✓",
+    "todayOpen": "Današnja vaja te še čaka.",
+    "sessionsLeft_one": "Danes še {{count}} vaja.",
+    "sessionsLeft_two": "Danes še {{count}} vaji.",
+    "sessionsLeft_few": "Danes še {{count}} vaje.",
+    "sessionsLeft_other": "Danes še {{count}} vaj.",
+    "sessionLength": "Vaja traja {{seconds}} s.",
+    "sharedTimeSibling": "Čas za šolo si deliš z bratom ali sestro.",
+    "sharedTimeSiblings": "Čas za šolo si deliš z brati in sestrami.",
+    "start": "Začni vajo",
+    "startA11y": "Začni vajo: {{name}}",
+    "blocked": {
+      "sibling_training": "Nekdo drug zdaj vadi s kužkom. Poskusi čez minutko.",
+      "own_session_closing": "Prejšnja vaja se še zaključuje. Poskusi čez minutko.",
+      "budget_used": "Kuža je danes že dovolj vadil. Jutri spet!",
+      "share_used": "Tvoj današnji čas za šolo je porabljen. Brat ali sestra lahko s kužkom še vadi — ti pa spet jutri!",
+      "day_ending": "Dan se izteka — kuža gre spat. Nova vaja jutri!",
+      "unavailable": "Zdaj ni čas za vajo."
+    },
+    "starting": "Kuža se pripravlja …",
+    "getReady": "Pripravi se …",
+    "listening": "Kuža posluša …",
+    "praise": "Pohvali",
+    "praiseA11y": "Pohvali kužka",
+    "secondsLeft": "še {{seconds}} s",
+    "trialOf": "Ukaz {{n}} od {{total}}",
+    "finishing": "Shranjujem vajo …",
+    "resumed": "Nadaljujemo vajo, ki se je začela prej.",
+    "feedback": {
+      "in_time": "Bravo, ob pravem trenutku!",
+      "too_early": "Prezgodaj — počakaj, da kuža uboga.",
+      "too_late": "Malo prepozno — pohvali takoj, ko uboga.",
+      "no_praise": "Kuža je ubogal — naslednjič ga pohvali!",
+      "waited": "Super, da si počakal(a) — kuža tokrat ni ubogal.",
+      "praised_without_obeying": "Kuža še ni ubogal — pohvali, ko uboga."
+    },
+    "outcomeShort": {
+      "in_time": "pravočasno",
+      "too_early": "prezgodaj",
+      "too_late": "prepozno",
+      "no_praise": "brez pohvale",
+      "waited": "počakal(a)",
+      "praised_without_obeying": "ni ubogal"
+    },
+    "result": {
+      "titleGood": "Bravo!",
+      "titleLearning": "Kuža se uči!",
+      "noObey": "Kuža tokrat ni ubogal.",
+      "successes": "Pravočasne pohvale: {{successes}} od {{obeyed}}.",
+      "gain": "{{name}}: {{before}} % → {{after}} %",
+      "gainSmall": "{{name}}: {{after}} % — kuža je malo bližje.",
+      "noGain": "Napredka tokrat ni bilo — jutri bo šlo bolje. Pohvali takoj, ko kuža uboga.",
+      "learned": "Kuža zna ukaz »{{name}}«!",
+      "routineDone": "Današnja vaja je opravljena.",
+      "titleStored": "Ta vaja je že shranjena",
+      "stored": "Tukaj je njen rezultat.",
+      "again": "Nazaj v šolo",
+      "done": "Končano"
+    },
+    "errors": {
+      "training_not_available": "Šola za tega kužka ni na voljo.",
+      "training_session_active": "Nekdo že vadi s kužkom. Poskusi čez minutko.",
+      "training_session_active_until": "Nekdo že vadi s kužkom. Poskusi spet ob {{clock}}.",
+      "training_daily_budget_used": "Kuža je danes že dovolj vadil. Jutri spet!",
+      "training_child_share_used": "Tvoj današnji čas za šolo je porabljen. Brat ali sestra lahko s kužkom še vadi — ti pa spet jutri!",
+      "training_session_invalid": "Te vaje ni več. Začni novo vajo.",
+      "training_session_not_over": "Vaja še ni čisto končana. Poskusi znova.",
+      "training_session_expired": "Vaja se je iztekla, preden smo jo shranili. Napredek tokrat ni zapisan — začni novo vajo.",
+      "training_invalid_taps": "Pri štetju je šlo nekaj narobe. Začni novo vajo.",
+      "training_day_ending": "Dan se izteka — kuža gre spat. Nova vaja jutri!",
+      "training_session_interrupted": "Vaja je bila prekinjena, zato tokrat ne šteje. Čas za vajo ti ostane — poskusi znova, ko bo kuža spet prost.",
+      "expiredWhileAway": "Vaja se je iztekla, ker je bila aplikacija zaprta. Napredek tokrat ni zapisan — začni novo vajo.",
+      "badResponse": "Nekaj je šlo narobe. Poskusi znova."
+    },
+    "retry": "Poskusi znova",
+    "commands": {
+      "sit": {
+        "name": "Sedi",
+        "cue": "Sedi!",
+        "obeys": "Kuža se usede.",
+        "ignores": "Kuža voha naokrog …",
+        "lower": "sedi"
+      },
+      "come": {
+        "name": "Pridi",
+        "cue": "Pridi!",
+        "obeys": "Kuža priteče k tebi.",
+        "ignores": "Kuža ostane, kjer je …",
+        "lower": "pridi"
+      },
+      "place": {
+        "name": "Prostor",
+        "cue": "Prostor!",
+        "obeys": "Kuža gre na svoj prostor.",
+        "ignores": "Kuža se raje igra …",
+        "lower": "prostor"
+      },
+      "potty": {
+        "name": "Lulat zunaj",
+        "cue": "Lulat zunaj!",
+        "obeys": "Kuža lula zunaj.",
+        "ignores": "Kuža gleda metuljčka …",
+        "lower": "lulat zunaj"
+      }
+    }
+  },
+  "parent": {
+    "title": "Šola",
+    "todayDone": "Današnja vaja: opravljena ✓",
+    "todayOpen": "Današnja vaja: še ne",
+    "sessionActive": "Otrok zdaj vadi s kužkom.",
+    "knows": "Kuža zna: {{list}}",
+    "knowsLearned": "{{name}} ✓",
+    "knowsProgress": "{{name}} {{value}} %"
+  }
+}

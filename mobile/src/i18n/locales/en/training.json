@@ -1,1 +1,125 @@
-{}
+{
+  "child": {
+    "entry": "Dog school",
+    "entryA11yDone": "Dog school — today's practice is done",
+    "entryA11yOpen": "Dog school — today's practice is waiting for you",
+    "title": "Dog school",
+    "close": "Close",
+    "intro": "Pick a command. When your pup obeys, praise it right away!",
+    "howTo": "Your pup won't obey every time. If it doesn't, just wait — praise only counts when it obeys.",
+    "learned": "learned",
+    "percent": "{{value}}%",
+    "todayDone": "Today's practice: done ✓",
+    "todayOpen": "Today's practice is waiting for you.",
+    "sessionsLeft_one": "{{count}} more practice today.",
+    "sessionsLeft_other": "{{count}} more practices today.",
+    "sessionLength": "A practice lasts {{seconds}} s.",
+    "sharedTimeSibling": "You share dog school time with your brother or sister.",
+    "sharedTimeSiblings": "You share dog school time with your brothers and sisters.",
+    "start": "Start practice",
+    "startA11y": "Start practice: {{name}}",
+    "blocked": {
+      "sibling_training": "Someone else is practising with your pup right now. Try again in a minute.",
+      "own_session_closing": "Your last practice is still finishing. Try again in a minute.",
+      "budget_used": "Your pup has practised enough for today. More tomorrow!",
+      "share_used": "Your dog school time for today is used up. Your brother or sister can still practise with your pup — you can play again tomorrow!",
+      "day_ending": "The day is almost over — your pup is going to sleep. New practice tomorrow!",
+      "unavailable": "It's not practice time right now."
+    },
+    "starting": "Your pup is getting ready …",
+    "getReady": "Get ready …",
+    "listening": "Your pup is listening …",
+    "praise": "Praise",
+    "praiseA11y": "Praise your pup",
+    "secondsLeft": "{{seconds}} s left",
+    "trialOf": "Command {{n}} of {{total}}",
+    "finishing": "Saving your practice …",
+    "resumed": "Let's finish the practice you started earlier.",
+    "feedback": {
+      "in_time": "Great job, perfect timing!",
+      "too_early": "Too early — wait until your pup obeys.",
+      "too_late": "A little late — praise right when your pup obeys.",
+      "no_praise": "Your pup obeyed — praise it next time!",
+      "waited": "Nice waiting — your pup didn't obey this time.",
+      "praised_without_obeying": "Your pup hasn't obeyed yet — praise it when it does."
+    },
+    "outcomeShort": {
+      "in_time": "on time",
+      "too_early": "too early",
+      "too_late": "too late",
+      "no_praise": "no praise",
+      "waited": "waited",
+      "praised_without_obeying": "didn't obey"
+    },
+    "result": {
+      "titleGood": "Great job!",
+      "titleLearning": "Your pup is learning!",
+      "noObey": "Your pup didn't obey this time.",
+      "successes": "Praise on time: {{successes}} of {{obeyed}}.",
+      "gain": "{{name}}: {{before}}% → {{after}}%",
+      "gainSmall": "{{name}}: {{after}}% — your pup is a little closer.",
+      "noGain": "No progress this time — tomorrow will go better. Praise right when your pup obeys.",
+      "learned": "Your pup knows “{{name}}”!",
+      "routineDone": "Today's practice is done.",
+      "titleStored": "This practice is already saved",
+      "stored": "Here's how it went.",
+      "again": "Back to dog school",
+      "done": "Done"
+    },
+    "errors": {
+      "training_not_available": "Dog school isn't available for this pup.",
+      "training_session_active": "Someone is already practising with your pup. Try again in a minute.",
+      "training_session_active_until": "Someone is already practising with your pup. Try again at {{clock}}.",
+      "training_daily_budget_used": "Your pup has practised enough for today. More tomorrow!",
+      "training_child_share_used": "Your dog school time for today is used up. Your brother or sister can still practise with your pup — you can play again tomorrow!",
+      "training_session_invalid": "This practice is gone. Start a new one.",
+      "training_session_not_over": "The practice isn't quite over yet. Try again.",
+      "training_session_expired": "The practice ran out before we could save it, so it didn't count this time. Start a new practice.",
+      "training_invalid_taps": "Something went wrong while counting. Start a new practice.",
+      "training_day_ending": "The day is almost over — your pup is going to sleep. New practice tomorrow!",
+      "training_session_interrupted": "The practice was interrupted, so it doesn't count this time. You still have your practice time — try again when your pup is free.",
+      "expiredWhileAway": "The practice ran out because the app was closed, so it didn't count this time. Start a new practice.",
+      "badResponse": "Something went wrong. Try again."
+    },
+    "retry": "Try again",
+    "commands": {
+      "sit": {
+        "name": "Sit",
+        "cue": "Sit!",
+        "obeys": "Your pup sits down.",
+        "ignores": "Your pup is sniffing around …",
+        "lower": "sit"
+      },
+      "come": {
+        "name": "Come",
+        "cue": "Come!",
+        "obeys": "Your pup runs to you.",
+        "ignores": "Your pup stays where it is …",
+        "lower": "come"
+      },
+      "place": {
+        "name": "Place",
+        "cue": "Place!",
+        "obeys": "Your pup goes to its spot.",
+        "ignores": "Your pup would rather play …",
+        "lower": "place"
+      },
+      "potty": {
+        "name": "Potty outside",
+        "cue": "Go potty!",
+        "obeys": "Your pup pees outside.",
+        "ignores": "Your pup is watching a butterfly …",
+        "lower": "potty outside"
+      }
+    }
+  },
+  "parent": {
+    "title": "Training",
+    "todayDone": "Today's practice: done ✓",
+    "todayOpen": "Today's practice: not yet",
+    "sessionActive": "Your child is practising with the dog right now.",
+    "knows": "The dog knows: {{list}}",
+    "knowsLearned": "{{name}} ✓",
+    "knowsProgress": "{{name}} {{value}}%"
+  }
+}

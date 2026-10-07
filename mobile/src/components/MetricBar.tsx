@@ -5,6 +5,7 @@ import { Text } from '@/components/ui/Text';
 import { METRIC_BAR_WIDTH, type MetricSizing } from '@/modules/hud/hudLayout';
 import { interpolateColor } from '@/utils/metrics';
 import { alpha, fonts, palette } from '@/theme';
+import { t } from '@/i18n';
 
 export interface MetricBarProps {
   /** Metric level, clamped to 0–100. */
@@ -32,7 +33,7 @@ export default function MetricBar({ level, label, icon, color, sizing = DEFAULT_
   const badge = { width: sizing.badge, height: sizing.badge, borderRadius: sizing.badge / 2 };
 
   return (
-    <View style={[styles.container, { gap: sizing.innerGap }]} testID={testID} accessible accessibilityLabel={`${label} ${clamped}%`}>
+    <View style={[styles.container, { gap: sizing.innerGap }]} testID={testID} accessible accessibilityLabel={t('child:hud.metricA11y', { label, value: clamped })}>
       <View style={[styles.iconBadge, badge]}>
         {icon}
       </View>

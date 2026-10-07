@@ -3,7 +3,12 @@
  * and midnight is family-local). The server sends instants as ISO 8601 with the
  * family offset (`2026-10-04T17:00:00+02:00`); broadcasts send UTC. Both are shown
  * as the family's local "HH:MM" using `state.timezone`.
+ *
+ * The `en-GB` formatter below only extracts numeric date/time parts (language-neutral);
+ * visible phrases come from `child:time` (M1-18).
  */
+
+import { t } from '@/i18n';
 
 export interface LocalParts {
   /** `YYYY-MM-DD` in the family timezone. */
@@ -98,16 +103,17 @@ export function familyClock(iso: string | null, timeZone: string | null): string
 }
 
 /**
- * "ob 17:00" when `iso` is on the same family-local day as `nowIso`, "jutri ob 06:00"
- * the next day, else just "ob 17:00" (the child only needs the hour).
+ * "ob 17:00" / "at 17:00" when `iso` is on the same family-local day as `nowIso`,
+ * "jutri ob 06:00" / "tomorrow at 06:00" the next day, else just "ob 17:00" (the child
+ * only needs the hour). Current language (`child:time`, M1-18).
  */
 export function whenText(iso: string | null, nowIso: string | null, timeZone: string | null): string | null {
   if (!iso) return null;
   const target = localParts(iso, timeZone);
   if (!target) return null;
   const now = nowIso ? localParts(nowIso, timeZone) : null;
-  if (now && target.date > now.date) return `jutri ob ${target.time}`;
-  return `ob ${target.time}`;
+  if (now && target.date > now.date) return t('child:time.tomorrowAt', { time: target.time });
+  return t('child:time.at', { time: target.time });
 }
 
 /**

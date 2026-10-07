@@ -6,23 +6,15 @@ import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { formatSteps } from '@/modules/steps/stepCounter';
 import type { StepSync } from '@/modules/steps/useStepSync';
 import { alpha, fonts, palette, tightTracking } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-/** User-visible strings (i18n with M1-18). */
-export const WALK_STRINGS = {
-  title: 'Sprehod',
-  steps: (steps: string, goal: string) => `${steps} / ${goal} korakov`,
-  energy: (pct: number) => `Energija ${pct} %`,
-  mine: (steps: string) => `Tvoji koraki danes: ${steps}`,
-  goalReached: 'Bravo! Današnji sprehod je opravljen.',
-  allow: 'Dovoli štetje korakov',
-  allowHint: 'Telefon bo štel tvoje korake, da kuža dobi energijo.',
-  denied: 'Štetje korakov ni dovoljeno. Prosi starša, da ga vklopi v nastavitvah telefona.',
-  unavailable: 'Ta telefon ne zna šteti korakov.',
-  refresh: 'Osveži korake',
-  syncing: 'Shranjujem …',
-  androidNote: 'Koraki se štejejo, ko je aplikacija odprta.',
-  close: 'Zapri',
-} as const;
+/** User-visible strings (`child:walk`, M1-18). */
+export const WALK_STRINGS = strings('child', 'walk', {
+  steps: (steps: string, goal: string) => t('child:walk.steps', { steps, goal }),
+  energy: (pct: number) => t('child:walk.energy', { pct }),
+  mine: (steps: string) => t('child:walk.mine', { steps }),
+});
 
 export interface WalkTrackerOverlayProps {
   view: ChildPetView;
