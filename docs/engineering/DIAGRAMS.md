@@ -47,7 +47,7 @@ flowchart LR
   Q -- "download result (M4-05)" --> VOL
   APP -- "exists() check" --> VOL
   FAL -- "fetch start frame (signed URL)" --> CAD
-  RC -. "webhook (M3-08)" .-> APP
+  RC -- "webhook, Bearer secret (M3-08)" --> APP
   C -. "steps (M3-04/05)" .- HK
 ```
 
@@ -553,7 +553,9 @@ Family model (M2-01, ADR-012): `families` own pets and quiet hours; `family_user
 erDiagram
   FAMILIES ||--|{ FAMILY_USER : "members"
   USERS ||--o| FAMILY_USER : "one family"
-  FAMILIES ||--o{ PETS : "billing unit = pet"
+  FAMILIES ||--o{ PETS : "owns"
+  FAMILIES ||--o{ FAMILY_ENTITLEMENTS : "paid features (M3-08)"
+  FAMILIES |o--o{ PURCHASE_EVENTS : "RevenueCat ledger (null after delete)"
   FAMILIES ||--o| QUIET_HOURS : "one per family"
   FAMILIES ||--o{ FAMILY_INVITES : "second parent"
   PETS ||--|{ PET_CARETAKERS : "1..n children"
@@ -577,6 +579,22 @@ erDiagram
   FAMILIES {
     bigint id
     string timezone "family tz, every wall-clock rule"
+  }
+  FAMILY_ENTITLEMENTS {
+    bigint family_id
+    string entitlement "challenge; one unrevoked row per family"
+    string product_id
+    timestamp expires_at "null = lifetime"
+    timestamp revoked_at
+    string revoke_reason "expired, refund, transferred"
+  }
+  PURCHASE_EVENTS {
+    string event_id "RevenueCat event.id, unique"
+    string type
+    string app_user_id "our parent id"
+    string environment "SANDBOX or PRODUCTION"
+    jsonb payload "without subscriber_attributes"
+    string outcome
   }
   CHILD_LOGIN_PINS {
     bigint child_user_id
@@ -1200,4 +1218,50 @@ sequenceDiagram
     Caddy->>API: signed:relative + PetPolicy::listen
     API-->>Caddy: X-Accel-Redirect (file)
     Caddy-->>App: image
+```
+
+## 13. Purchases: RevenueCat → webhook → family entitlement (M3-08, 2026-10-07)
+
+The app (M3-07, not built yet) logs in to RevenueCat with `appUserID = <parent user id>`. Trial / paywall rules (M3-09 / M3-11) are not in this flow yet.
+
+```mermaid
+sequenceDiagram
+    participant P as Parent app
+    participant Store as App Store / Play
+    participant RC as RevenueCat
+    participant API as POST /api/webhooks/revenuecat
+    participant DB as PostgreSQL
+    participant Q as broadcasts queue → Reverb
+    P->>Store: buy petprep_challenge_12w (49,99 €)
+    Store-->>RC: receipt
+    RC->>API: {event: {id, type, app_user_id, entitlement_ids, …}}<br/>Authorization: Bearer secret
+    API->>API: no secret → 503 · wrong → 401 (constant time, before validation)
+    API->>DB: purchase_events has event.id? → 200 duplicate, stop
+    rect rgb(235, 240, 250)
+    Note over API,DB: one transaction
+    API->>DB: INSERT purchase_events (unique event_id)
+    API->>DB: app_user_id / original / aliases → first PARENT → family (none → unknown_user)
+    API->>API: SANDBOX and not accepted → sandbox_ignored
+    API->>DB: lock families row(s) in id order
+    API->>DB: grant / extend / revoke family_entitlements (one unrevoked row per family + key)
+    API->>DB: purchase_events.outcome, processed_at
+    end
+    API-->>RC: 200 {received, duplicate, outcome}
+    API-)Q: active flag flipped → PetUpdated('entitlements_updated') per active pet (after commit)
+    Q-)P: private-pet.{id}
+    P->>API: GET /api/parent/entitlements → {entitlements: [{key: challenge, active, …}]}
+    P->>API: POST /api/parent/generate-pin {breed: border_collie} → allowed only with active challenge
+```
+
+```mermaid
+stateDiagram-v2
+    [*] --> Active: INITIAL_PURCHASE / NON_RENEWING_PURCHASE
+    Active --> Active: RENEWAL · UNCANCELLATION · SUBSCRIPTION_EXTENDED (later expiry, lifetime wins)
+    Active --> Active: CANCELLATION of a subscription (access until expiry) · BILLING_ISSUE · PRODUCT_CHANGE (recorded)
+    Active --> Lapsed: expires_at passed (no event needed)
+    Lapsed --> Active: RENEWAL (new granted_at)
+    Active --> Revoked: CANCELLATION of the one-time product, cancel_reason CUSTOMER_SUPPORT (refund)
+    Lapsed --> Revoked: EXPIRATION (ignored for lifetime rows and when already renewed past it)
+    Active --> Revoked: TRANSFER away (granted to the transferred_to family)
+    Revoked --> [*]
 ```

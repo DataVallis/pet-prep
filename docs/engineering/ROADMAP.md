@@ -107,7 +107,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M3-05 Android: Health Connect (`react-native-health-connect`); Google Fit je deprecated
 - [ ] M3-06 Sync korakov ob odprtju aplikacije + background fetch (`expo-background-task`)
 - [ ] M3-07 RevenueCat SDK (`react-native-purchases`), `appUserID = user.id` (string), Offerings
-- [ ] M3-08 Webhook rewrite: tabela `purchases` (idempotentno po `event.id`), `entitlements` na družino, podpora `CANCELLATION` / `REFUND` / `TRANSFER`, fail-closed brez secreta
+- [x] M3-08 Webhook rewrite: tabela `purchases` (idempotentno po `event.id`), `entitlements` na družino, podpora `CANCELLATION` / `REFUND` / `TRANSFER`, fail-closed brez secreta — *2026-10-07: `purchase_events` (vsak dogodek enkrat, surovi payload brez `subscriber_attributes`), `family_entitlements` (en živ zapis na družino + pravico), `EntitlementService` (`familyHas`, `canUseBreed` — Border Collie z aktivnim `challenge`; stari prepis pasme odstranjen), `GET /api/parent/entitlements`, Filament »Payments« (samo branje), webhook zaprt brez `REVENUECAT_WEBHOOK_SECRET` (503). Brez trial logike (M3-11). Odprto za Davida: družina vs. pes kot enota plačila (DECISIONS).*
 - [ ] M3-09 Paywall (**odločeno**): mešanček vedno brezplačen; 12-tedenski izziv 49,99 € s 7-dnevnim preizkusom; entitlement `challenge` (BUSINESS_MODEL §7) — **(D)** B7 non-consumable vs. naročnina
 - [ ] M3-11 Trial logika na strežniku: `trial_started_at`, konec preizkusa → zaklep plačljivih funkcij, mešanček ostane
 - [ ] M3-10 Podpis s prstom (`react-native-signature-canvas` ali Skia) → `POST /api/child/contract`

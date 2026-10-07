@@ -91,7 +91,9 @@ This document describes all environment variables used by the PetPrep production
 | `PUSH_ENABLED` | Optional | No | Escalation pushes via Expo (M3-02). **Production default `true` comes from `compose.production.yaml`** — leave the line out of `/opt/petprep/.env`; set `false` there only to silence all pushes (then `docker compose … up -d`). Tests / local default `false` | `true` |
 | `EXPO_ACCESS_TOKEN` | **Required before the closed beta** (PR #35 review) | **Yes** | expo.dev access token (robot user, scope: push) sent as `Authorization: Bearer` to the Expo Push API. **Turn on "Enhanced security for push notifications"** for the `petprep` project on expo.dev at the same time — without it anyone who learns a device's Expo token can push to it. Empty = unauthenticated sends (works today, not acceptable with real families) | `expo_...` |
 | `PUSH_DEDUPE_MINUTES` | Optional | No | Duplicate guard: the same pet + push type at most once per window | `30` |
-| `REVENUECAT_SECRET_KEY` | Optional | **Yes** | RevenueCat secret API key for IAP | `sk_...` |
+| `REVENUECAT_WEBHOOK_SECRET` | **Required before RevenueCat is enabled** (M3-08) | **Yes** | Shared secret of `POST /api/webhooks/revenuecat`; set the webhook's Authorization header in RevenueCat to `Bearer <this value>`. **Fails closed:** empty → every webhook call is answered 503 and nothing is processed. Replaces `REVENUECAT_SECRET_KEY` (no longer read) | long random string |
+| `REVENUECAT_ENTITLEMENTS` | Optional | No | JSON map product id → entitlement key, used when an event carries no `entitlement_ids` (M3-08) | `{"petprep_challenge_12w":"challenge"}` (default) |
+| `REVENUECAT_ACCEPT_SANDBOX` | Optional | No | Whether SANDBOX purchases grant / revoke entitlements (they are always stored). Default `false` when `APP_ENV=production`, `true` elsewhere — set `true` in production only for a store review / TestFlight phase | `false` |
 | `REVENUECAT_PUBLIC_KEY` | Optional | No | RevenueCat public SDK key | `test_...` or `appl_...` |
 | `MAIL_MAILER` | Optional | No | Mail driver (`log`, `smtp`, `resend`, `ses`) | `log` |
 

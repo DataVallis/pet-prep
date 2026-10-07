@@ -202,9 +202,10 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID | Od kdaj |
 |---|---|---|---|---|---|
 | Mešanček brezplačen za vedno 🆓 | Vsaka družina lahko preizkusi osnovno skrb brez plačila. | starš | ✅ (odločeno 2026-10-02) | B1a | 2026-10-02 |
-| 12-tedenski PetPrep izziv 💶 | **49,99 € na psa**, prvih **7 dni brezplačno**; skupni pes = ena cena, dostop za oba starša. Pes je v bazi že »enota plačila«. | starš | 🗓 (plačila niso zgrajena) | M3-09, M3-11 | — |
-| Nakup v aplikaciji (RevenueCat), paywall, preizkus na strežniku | En entitlement `challenge`; non-consumable ali naročnina še odprto (B7). | starš | 🗓 | M3-07 – M3-11 | — |
-| Plačljiva pasma (Border Collie) 💶 | Vidna in zaklenjena v izbiri kužka; odklep z nakupom. | starš | ✅ zaklep · 🗓 nakup | M5-R04, M3-07 | 2026-10-05 |
+| 12-tedenski PetPrep izziv 💶 | **49,99 € na psa**, prvih **7 dni brezplačno**; skupni pes = ena cena, dostop za oba starša. Strežnik (M3-08) vodi pravico na **družino**; ali en nakup pokrije enega psa ali celo družino, mora potrditi David (DECISIONS 2026-10-07). | starš | 🗓 (plačila niso zgrajena) | M3-09, M3-11 | — |
+| Strežnik: dnevnik nakupov in družinska pravica 💶 | Strežnik sprejme vsak RevenueCat dogodek enkrat (zaščiten s skrivnostjo — brez nje zavrne vse), ga shrani in vodi pravico `challenge` **na družino** (velja za oba starša); vračilo enkratnega nakupa jo odvzame, iztek naročnine tudi. Starševska aplikacija jo lahko prebere (`GET /api/parent/entitlements`), admin vidi oboje v Filamentu (samo branje). Kupiti v aplikaciji še ni mogoče. | starš, admin | 🛠 | M3-08 | 2026-10-07 |
+| Nakup v aplikaciji (RevenueCat SDK), paywall, preizkus na strežniku | En entitlement `challenge`; non-consumable ali naročnina še odprto (B7). | starš | 🗓 | M3-07, M3-09, M3-11 | — |
+| Plačljiva pasma (Border Collie) 💶 | Vidna in zaklenjena v izbiri kužka. Strežnik jo dovoli, ko ima družina aktivno pravico `challenge` (M3-08); nakup sam še ni mogoč. Nakup ne spremeni več pasme obstoječega psa. | starš | ✅ zaklep · 🛠 odklep s pravico · 🗓 nakup | M5-R04, M3-08, M3-07 | 2026-10-07 |
 | Second Chance reset (19,99 €) | — | starš | ⏸ | backlog | — |
 | Priboljški, veterinar, igrače (IAP), garancija »Real-World Relief«, bonusi | — | starš | ⏸ | backlog | — |
 | Partnerski kuponi (B2B) | Izključeno iz MVP. | partnerji | ⏸ | backlog | — |
@@ -215,7 +216,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 |---|---|---|---|---|
 | Koraki iz Apple Zdravje / Health Connect | Koraki tudi pri zaprti aplikaciji (Android danes šteje samo, ko je odprta). | otrok | 🗓 | M3-04, M3-05, M3-06 |
 | Angleščina v aplikaciji | Glej §10 »Jezik aplikacije«. | vsi | ✅ | M1-18 |
-| Plačila | Glej §12. | starš | 🗓 | M3-07 – M3-11 |
+| Plačila | Glej §12 (strežniški del M3-08 🛠). | starš | 🗓 | M3-07, M3-09 – M3-11 |
 | Certifikat odgovornosti | Glej §7. | otrok, starš | 🗓 | M2-01d |
 | Zaprta beta (TestFlight + Google Play, 20–50 družin) | — | — | 🗓 | M5-07 |
 | Breed Matchmaker | Primerna pasma iz 12-tedenskih podatkov otroka. | starš | ⏸ | backlog |
