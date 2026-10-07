@@ -24,6 +24,8 @@ use App\Support\RequestLocale;
  *   and passes a variant: `wait` ("next meal at 17:00", "water again at
  *   15:30") or `clean_first` (hygiene 0 % blocks food and water); when the
  *   action is not possible again today the reminder is not sent at all.
+ *   Hygiene reminders say `tidy` / `clean_and_tidy` while a chewed item is
+ *   open (it is tidied up with a toy, not scrubbed).
  *
  * Metric keys: hunger | thirst | hygiene (walk reminder: energy); illness uses
  * hygiene | walk (its reason); game over has none.
@@ -40,6 +42,13 @@ final class PushCopy
     public const VARIANT_CLEAN_FIRST = 'clean_first';
 
     private const VARIANTS = [self::VARIANT_WAIT, self::VARIANT_CLEAN_FIRST];
+
+    /** M3-12 hygiene variants while a chewed item is open (only chewing / chewing + another mess). */
+    public const VARIANT_TIDY = 'tidy';
+
+    public const VARIANT_CLEAN_AND_TIDY = 'clean_and_tidy';
+
+    private const HYGIENE_VARIANTS = [self::VARIANT_TIDY, self::VARIANT_CLEAN_AND_TIDY];
 
     /** Cleaning is never refused (outside locks), so only food and water have variants. */
     private const VARIANT_METRICS = ['hunger', 'thirst'];
@@ -73,6 +82,11 @@ final class PushCopy
             && in_array($variant, self::VARIANTS, true)
             && in_array($phaseMetric, self::VARIANT_METRICS, true)) {
             return self::line("{$variant}.{$phaseMetric}", $locale, $replace);
+        }
+        if (in_array($type, [PushType::SoftWarning, PushType::CriticalAlert], true)
+            && $phaseMetric === 'hygiene'
+            && in_array($variant, self::HYGIENE_VARIANTS, true)) {
+            return self::line($variant.'.'.($type === PushType::SoftWarning ? 'soft' : 'critical'), $locale);
         }
 
         return match ($type) {

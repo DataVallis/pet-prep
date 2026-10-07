@@ -34,6 +34,17 @@ return [
         'thirst' => 'Your dog is thirsty, but the mess has to be cleaned up first. Then you can give it water.',
     ],
 
+    // M3-12: a chewed item is not scrubbed away — it is tidied up and swapped for a toy.
+    'tidy' => [
+        'soft' => 'Your dog has chewed something. Tidy it up and give it a toy.',
+        'critical' => 'Your dog chewed a slipper! Tidy it up and give it a toy as soon as you can, or it will get sick.',
+    ],
+
+    'clean_and_tidy' => [
+        'soft' => 'Your dog is waiting: clean up the mess, tidy away what it chewed and give it a toy.',
+        'critical' => 'Clean up the mess, tidy away what it chewed and give your dog a toy as soon as you can, or it will get sick.',
+    ],
+
     'walk_reminder' => 'Your dog hasn’t been for a walk today and is waiting for you with the lead. Shall we go out?',
 
     'parent_alarm' => 'Your child hasn’t looked after the dog today.',

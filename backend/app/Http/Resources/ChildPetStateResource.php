@@ -161,11 +161,14 @@ class ChildPetStateResource extends JsonResource
                  */
                 'feed_mode' => $canFeed ? $feedCheck?->mode : null,
                 /**
-                 * M3-12: displayed hunger (%) at or below which an emergency meal is allowed.
+                 * M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                 * is allowed — sent only while the last ended meal window was missed
+                 * (nothing fed since its start) and no window is open; null otherwise.
+                 * The app compares the live hunger with it and nothing else.
                  *
-                 * @var int
+                 * @var int|null
                  */
-                'emergency_threshold' => CareScheduleService::EMERGENCY_FEED_THRESHOLD,
+                'emergency_threshold' => $feeding?->emergencyPossible() ? CareScheduleService::EMERGENCY_FEED_THRESHOLD : null,
                 // The current window while unused, otherwise the next one.
                 'next_feed_window' => $feeding?->nextStart
                     ? ['start' => $iso($feeding->nextStart), 'end' => $iso($feeding->nextEnd)]
