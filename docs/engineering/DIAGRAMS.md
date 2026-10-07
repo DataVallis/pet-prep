@@ -945,7 +945,7 @@ sequenceDiagram
   Q->>DB: slot ready, pets.media_status = ready
   Q-->>App: PetUpdated reference_image_ready (media.reference_image_url signed)
   Note over Pair,Q: videos only once the pet is born:<br/>first contract → signContract → queueStateVideos (after commit)<br/>(image stored first? then StorePetMedia queues them)
-  Q->>DB: queueStateVideos: slots per MediaEntitlementService<br/>(free plan: idle + sleeping · challenge plan, M3-11: all 6)
+  Q->>DB: queueStateVideos: slots per MediaEntitlementService<br/>(basic: idle + sleeping · challenge paid by a purchase, M3-11 P6: all 6)
   loop each entitled state
     Q->>DB: SubmitPetStateVideo: claim slot
     Q->>FAL: queue.fal.run kling-video/v3/pro/image-to-video<br/>start_image_url = our signed URL (6 h), 5 s, no audio, fal_webhook
@@ -1274,6 +1274,7 @@ Challenge status of a pet (M3-11, derived only by `Pet::challengeStatus()`; a `f
 stateDiagram-v2
     [*] --> Unborn: PIN with plan challenge (default)
     Unborn --> Trial: contract signed = birth, trial_ends_at = birth + 7 family-local days
+    Unborn --> PaymentRequired: birth, child already had its one free trial (P7) → trial_ends_at = born_at
     Unborn --> Paid: credit assigned before birth
     Trial --> Paid: credit assigned (webhook auto-assign or activate) — clock keeps running from birth
     Trial --> PaymentRequired: now ≥ trial_ends_at (child actions 423 at once)
@@ -1283,6 +1284,9 @@ stateDiagram-v2
     Paid --> Locked: refund after the trial (unless 12 weeks done → stays Paid)
     note right of Trial: day 6 (≥ 24 h before the end): one trial_ending push to parents
     note right of Locked: like a hard stop: no decay, escalation, illness, game over, walk illness, behaviour, training decay
+    Trial --> GameOver: 24 h neglect (game over is never unlocked by a purchase, P7)
+    Paid --> GameOver: 24 h neglect
+    GameOver --> [*]
 ```
 
 Credit lifecycle:
@@ -1292,7 +1296,7 @@ stateDiagram-v2
     [*] --> Available: INITIAL_PURCHASE / NON_RENEWING_PURCHASE of the consumable
     Available --> Assigned: activate (oldest first) · webhook auto-assign (exactly one unpaid pet)
     Available --> Available: TRANSFER → moves to the receiver family
-    Assigned --> Assigned: TRANSFER (recorded, stays with its pet) · pet deleted (pet_id null, still used)
+    Assigned --> Assigned: TRANSFER (recorded, stays with its pet) · pet deleted (pet_id null, still used — P5: deletion of a paid, unfinished pet needs acknowledge_paid_challenge)
     Available --> Revoked: refund (CANCELLATION without expiration / REFUND, matched by transaction_id)
     Assigned --> Revoked: refund → pet back to Trial / Locked
     Revoked --> [*]
