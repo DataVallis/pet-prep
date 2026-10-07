@@ -12,6 +12,19 @@
       "hygiene": "Čistoča"
     },
     "metricA11y": "{{label}} {{value}}%",
+    "profileSheet": {
+      "title": "O tvojem kužku",
+      "close": "Zapri",
+      "openHint": "Pokaže vse o tvojem kužku",
+      "labels": {
+        "breed": "Pasma",
+        "stage": "Faza",
+        "age": "Starost",
+        "origin": "Od kod je",
+        "nextStage": "Naslednja faza",
+        "meals": "Obroki na dan"
+      }
+    },
     "loading": "Nalagam kužka …",
     "loadFailed": "Kužka ni bilo mogoče naložiti.",
     "autoRetry": "Poskušam znova samodejno …",

@@ -8,6 +8,19 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-07 — Popravki po TestFlightu 3.0.0: opazen nakup, cela glava, viden »Kuža se pripravlja«
+
+**Kaj se je zgodilo:** Trije popravki z Davidovega preizkusa na iPhonu (M5-F01, F05, F06). (1) Starš majhne značke »Preizkus« ni opazil — zdaj ima kartica otroka in podrobnosti otroka jasen gumb **»12-tedenski izziv — kupi«**, v »Nadzoru« pa je vrstica **»Nakupi / izziv«**. Gumb se pokaže samo, dokler izziv psa ni plačan, nikoli za brezplačnega mešančka. (2) Glava otroškega zaslona je bila odrezana (»… Grows into a young dog on 2…«) — zdaj je vsak podatek v eni vrstici, tap na glavo pa odpre list z vsem: pasma, obdobje, starost, izvor, naslednje obdobje, obroki na dan. (3) Obvestilo »Kuža se pripravlja …« je bilo skrito pod karto obrokov in za gumbi — zdaj je nad njimi. Testi aplikacije: vsi zeleni (glej PR). **Na telefonu še ni preizkušeno.**
+
+**Zakaj je pomembno:** Nakup, ki ga starš ne najde, je izgubljen prihodek; podatek, ki ga otrok ne more prebrati, ne uči ničesar.
+
+**Kako povedati:**
+- 👩 Starši: »Izziv kupite z enim tapom na kartici otroka — ali v Nadzoru pod ›Nakupi / izziv‹.«
+- 🧒 Otroci: »Tapni zgoraj na svojega kužka in izveš vse o njem!«
+- 🛠 Tehnično: »En pogoj za gumb nakupa (plan psa s strežnika) za vse tri vhode; obvestilo je v istem stolpcu nad dokom kot obroki, zato ga postavitev po izmerjeni višini doka nikoli ne prekrije.«
+
+---
+
 ## 2026-10-07 — »Čaka na podpis« samo, ko otrok res mora podpisati (M5-F07)
 
 **Kaj se je zgodilo:** David je na Pregledu pri testnem otroku hkrati videl »Nujno«, »brez hrane / vode več kot uro«, »zbolel je« **in** »pes čaka, da otrok podpiše pogodbo«. Pes pred podpisom ne upada, zato se to ne bi smelo zgoditi skupaj. Vzrok: napaka prikaza, ne igre. Star testni pes je iz časa pred pogodbami — otrok zanj nikoli ne podpiše in pes normalno živi. Nadzorna plošča pa je »podpisano« štela samo, če obstaja zapis pogodbe. Zdaj strežnik pove »podpisano«, ko otroku ni (več) treba podpisati: pes je rojen in otrok je podpisal ali je skrbnik iz časa pred pogodbami.

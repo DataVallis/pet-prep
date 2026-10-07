@@ -12,8 +12,8 @@
  * - Outcomes are kept as codes and translated at render (follow a language switch).
  */
 
-import { useState } from 'react';
-import { ActivityIndicator, Linking, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { useEffect, useRef, useState } from 'react';
+import { ActivityIndicator, BackHandler, Linking, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { ChevronLeft, Check } from 'lucide-react-native';
@@ -26,7 +26,7 @@ import { strings } from '@/i18n/strings';
 import { parentDashboardKey } from '@/hooks/queries/useParentDashboard';
 import { PRIVACY_URL, TERMS_URL } from '@/modules/auth/signup';
 import { breedLabel, caretakerNames, type FamilyOverview } from '@/modules/family/family';
-import { needsPurchase, planOfBillingPet } from '@/modules/plan/plan';
+import { isBillingPetPurchasable } from '@/modules/plan/purchaseEntry';
 import {
   BILLING_KEY,
   challengePackage,
@@ -111,6 +111,16 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
   useTranslation(); // all text below is read at render
   const S = CHALLENGE_STRINGS;
   const queryClient = useQueryClient();
+  // Android hardware back = the header "Nazaj" (M5-F01 QA): returns where the parent came from.
+  const backRef = useRef(onBack);
+  backRef.current = onBack;
+  useEffect(() => {
+    const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+      backRef.current();
+      return true;
+    });
+    return () => sub.remove();
+  }, []);
   const billing = useBilling();
   const offerings = useOfferings();
   const purchase = usePurchasePackage();
@@ -121,7 +131,8 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
   const pkg = challengePackage(offerings.data);
   const price = pkg?.product.priceString ?? null;
   const busy = purchase.isPending || restore.isPending || activating !== null;
-  const waiting = (billing.data?.pets ?? []).filter((p) => needsPurchase(planOfBillingPet(p)));
+  // M5-F01 QA: one shared rule with the buy buttons — a mutt / game-over pet is never listed.
+  const waiting = (billing.data?.pets ?? []).filter((p) => isBillingPetPurchasable(p, family));
   const credits = billing.data?.credits_available ?? 0;
   const timezone = family?.timezone ?? 'Europe/Ljubljana';
 

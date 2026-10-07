@@ -105,6 +105,12 @@ export interface PetMediaViewProps {
   variant?: 'hud' | 'card';
   /** Custom placeholder (the HUD's animated avatar); default: paw + breed. */
   placeholder?: ReactNode;
+  /**
+   * `overlay` (default): the "getting ready" pill sits on the media. `none`: the host shows
+   * {@link MediaPendingNotice} itself — the child HUD stacks it above the dock (M5-F06: the
+   * fixed `bottom` put it under the "Meals today" row and behind the dock buttons).
+   */
+  pendingNotice?: 'overlay' | 'none';
   style?: StyleProp<ViewStyle>;
   testID?: string;
 }
@@ -202,6 +208,7 @@ export default function PetMediaView({
   onVideoStateChange,
   variant = 'hud',
   placeholder,
+  pendingNotice = 'overlay',
   style,
   testID = 'pet-media',
 }: PetMediaViewProps) {
@@ -408,11 +415,32 @@ export default function PetMediaView({
       {/* Readability of the HUD on top of real media. */}
       {hud && (showImage || layers.length > 0) && <View pointerEvents="none" style={styles.hudShade} />}
 
-      {pending && (
+      {pending && pendingNotice === 'overlay' && (
         <View pointerEvents="none" style={[styles.pendingPill, hud ? styles.pendingHud : styles.pendingCard]} testID={`${testID}-pending`}>
           <Text style={[styles.pendingText, !hud && styles.pendingTextCard]}>{PET_MEDIA_STRINGS.pending}</Text>
         </View>
       )}
+    </View>
+  );
+}
+
+/**
+ * The child HUD's "Your pup is getting ready…" notice as a normal flow element (M5-F06):
+ * wraps at large font sizes, never covered by the dock. Show it while `isMediaPending(media)`.
+ */
+export function MediaPendingNotice({ testID = 'hud-media-pending' }: { testID?: string }) {
+  return (
+    <View
+      style={[styles.pendingPill, styles.pendingInline]}
+      testID={testID}
+      accessible
+      accessibilityRole="text"
+      accessibilityLiveRegion="polite"
+    >
+      {/* Capped growth (M5-F01 QA): at fontScale 2 the column above the dock can't reach the header. */}
+      <Text style={[styles.pendingText, styles.pendingTextInline]} numberOfLines={2} maxFontSizeMultiplier={1.5}>
+        {PET_MEDIA_STRINGS.pending}
+      </Text>
     </View>
   );
 }
@@ -455,6 +483,16 @@ const styles = StyleSheet.create({
     bottom: 8,
     backgroundColor: alpha(palette.white, 0.9),
   },
+  /** In the HUD's above-dock column: no absolute offset. */
+  pendingInline: {
+    position: 'relative',
+    alignSelf: 'center',
+    maxWidth: '100%',
+    backgroundColor: alpha(palette.graphite, 0.8),
+    borderWidth: 1,
+    borderColor: alpha(palette.white, 0.15),
+  },
   pendingText: { color: palette.mintBorder, fontSize: 12, fontWeight: '700' },
+  pendingTextInline: { textAlign: 'center' },
   pendingTextCard: { color: palette.mintDeep },
 });

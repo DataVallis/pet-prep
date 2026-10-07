@@ -6,7 +6,8 @@
  * thumbnail (M4-03). All numbers come from the
  * server — nothing is scored on the phone. M5-R02: missed cleans name their mess
  * (luža / pregrizen copat), the pet block lists the puppy's bladder clock and open
- * messes, and the 7-day take-outs / tidied slippers.
+ * messes, and the 7-day take-outs / tidied slippers. M5-F01: "12-week challenge — buy"
+ * under the header while the dog's challenge can be bought (`canBuyChallenge`).
  */
 
 import { Pressable, StyleSheet, View } from 'react-native';
@@ -40,6 +41,8 @@ import {
 } from '@/modules/family/scoring';
 import PetThumbnail from '@/components/parent/PetThumbnail';
 import PlanBadge from '@/components/parent/PlanBadge';
+import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
+import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 import { fonts, palette, tightTracking } from '@/theme';
@@ -116,6 +119,11 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
         </View>
         <TrafficLightBadge color={child.traffic_light.color} testID={`child-light-${id}-${child.traffic_light.color}`} />
       </View>
+
+      {/* M5-F01: the badge alone was overlooked on a device — a clear entry until the challenge is paid. */}
+      {onOpenChallenge && canBuyChallenge(pet) && (
+        <ChallengeBuyButton onPress={onOpenChallenge} childName={child.name} testID={`child-buy-${id}`} />
+      )}
 
       {child.traffic_light.reasons.length > 0 && (
         <View style={styles.reasons}>

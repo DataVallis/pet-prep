@@ -12,6 +12,19 @@
       "hygiene": "Clean"
     },
     "metricA11y": "{{label}} {{value}}%",
+    "profileSheet": {
+      "title": "About your pup",
+      "close": "Close",
+      "openHint": "Shows everything about your pup",
+      "labels": {
+        "breed": "Breed",
+        "stage": "Stage",
+        "age": "Age",
+        "origin": "Where it's from",
+        "nextStage": "Next stage",
+        "meals": "Meals per day"
+      }
+    },
     "loading": "Fetching your pup …",
     "loadFailed": "We couldn't load your pup.",
     "autoRetry": "Trying again on its own …",

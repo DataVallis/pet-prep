@@ -22,6 +22,17 @@
     "open": "Odkleni izziv",
     "openTrial": "Poglej izziv"
   },
+  "entry": {
+    "buy": "12-tedenski izziv — kupi",
+    "buyA11y": "Kupite 12-tedenski izziv za psa, za katerega skrbi {{name}}",
+    "buyHint": "Odpre nakup izziva",
+    "rowTitle": "Nakupi / izziv",
+    "rowWaiting_one": "{{count}} pes čaka na nakup",
+    "rowWaiting_two": "{{count}} psa čakata na nakup",
+    "rowWaiting_few": "{{count}} psi čakajo na nakup",
+    "rowWaiting_other": "{{count}} psov čaka na nakup",
+    "rowAllPaid": "Noben pes ne čaka na nakup. Tukaj lahko obnovite tudi nakupe na novem telefonu."
+  },
   "challenge": {
     "title": "12-tedenski izziv",
     "back": "Nazaj",

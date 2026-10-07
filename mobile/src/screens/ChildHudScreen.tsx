@@ -15,6 +15,9 @@
  * session is open) that opens the training mini-game (`modules/training/TrainingOverlay`).
  * M5-R04: "Obroki danes" chip row above the dock (today's windows, ✓, now, "nahrani starš")
  * and the growth section of the album ("Kako je kuža rasel", fetched only while it is open).
+ * M5-F05: the header is one short line; tapping it opens `PetProfileSheet` (breed, stage,
+ * age, origin, next stage, meals per day). M5-F06: "Kuža se pripravlja …" sits at the top
+ * of the above-dock column (never under the meals row or the dock).
  */
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
@@ -27,6 +30,7 @@ import {
   Droplet,
   Footprints,
   Heart,
+  ChevronDown,
   Images,
   LogOut,
   PawPrint,
@@ -72,12 +76,15 @@ import { logout } from '@/modules/session/logout';
 import ActionButton from '@/components/ActionButton';
 import PetAlbum from '@/components/PetAlbum';
 import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
+import { isMediaPending } from '@/modules/petMedia/petMedia';
 import CleaningOverlay from '@/components/CleaningOverlay';
 import MetricBar from '@/components/MetricBar';
-import PetMediaView from '@/components/PetMediaView';
+import PetMediaView, { MediaPendingNotice } from '@/components/PetMediaView';
 import WalkTrackerOverlay from '@/modules/walk/WalkTrackerOverlay';
 import { usePushPromptOnFirstView } from '@/modules/push/usePushPromptOnFirstView';
 import { nextStageLine, originLine, stageLine } from '@/modules/petProfile/petProfile';
+import { profileHeaderA11y, profileSheetRows } from '@/modules/petProfile/profileSheet';
+import PetProfileSheet from '@/components/PetProfileSheet';
 import TrainingChip from '@/modules/training/TrainingChip';
 import TrainingOverlay from '@/modules/training/TrainingOverlay';
 import { showTrainingDot, showTrainingEntry } from '@/modules/training/training';
@@ -287,6 +294,8 @@ export default function ChildHudScreen() {
   });
 
   const [toast, setToast] = useState<Toast | null>(null);
+  // M5-F05: the header shows one short line; a tap opens the full profile.
+  const [isProfileVisible, setProfileVisible] = useState(false);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const showToast = useCallback((next: Toast) => {
     if (toastTimer.current) clearTimeout(toastTimer.current);
@@ -400,6 +409,7 @@ export default function ChildHudScreen() {
 
   const { pet } = view;
   const profileSub = pet.profile ? profileSubline(pet.profile) : null;
+  const profileRows = pet.profile ? profileSheetRows(HUD_STRINGS.breeds[pet.breed_type], pet.profile) : [];
   const locked = view.lock.is_locked;
   const opaqueLock = view.lock.reason === 'game_over' || view.lock.reason === 'inactive';
   const feedDisabled = !view.feeding.can_feed;
@@ -424,6 +434,7 @@ export default function ChildHudScreen() {
   const iconSize = hasTakeOut ? 20 : 24;
   const stale = petQuery.isError;
   const albumAvailable = hasAlbum(pet.media);
+  const mediaPending = isMediaPending(pet.media);
   const showAlbum = isAlbumVisible && !locked && albumAvailable;
   // M5-R03: "Šola" only for a pet with training (legacy / older app / older server: nothing).
   const hasTraining = showTrainingEntry(view.training);
@@ -454,6 +465,9 @@ export default function ChildHudScreen() {
           // The vet veil darkens when a substitute (sleeping / idle) stands in for `sick`.
           onVideoStateChange={setHudVideoState}
           variant="hud"
+          // M5-F06: the "getting ready" notice is stacked above the dock (BehaviourPanel), not on the media.
+          // Under a translucent lock (vet, hard stop, payment) the panel is hidden → keep it on the media.
+          pendingNotice={locked ? 'overlay' : 'none'}
           testID="hud-pet-media"
           placeholder={
             <View style={styles.fallbackViewport}>
@@ -477,19 +491,29 @@ export default function ChildHudScreen() {
 
         {/* Glassmorphism top status bar */}
         <View style={[styles.topBar, { top: layout.headerTop }]} onLayout={onHeaderLayout} testID="hud-header">
-          <View style={styles.petInfoLeft}>
+          <Pressable
+            style={({ pressed }) => [styles.petInfoLeft, pressed && pet.profile !== null && styles.pressed]}
+            onPress={pet.profile ? () => setProfileVisible(true) : undefined}
+            disabled={!pet.profile}
+            accessibilityRole={pet.profile ? 'button' : undefined}
+            accessibilityLabel={pet.profile ? profileHeaderA11y(profileRows) : undefined}
+            accessibilityHint={pet.profile ? t('child:hud.profileSheet.openHint') : undefined}
+            testID="hud-profile-open"
+          >
             <View style={styles.petIconBox}>
               <PawPrint color={palette.mint} size={20} />
             </View>
             <View style={styles.petInfoText}>
-              <Text style={styles.petBreedName}>{HUD_STRINGS.breeds[pet.breed_type]}</Text>
+              <Text style={styles.petBreedName} numberOfLines={pet.profile ? 1 : 2}>
+                {HUD_STRINGS.breeds[pet.breed_type]}
+              </Text>
               {pet.profile ? (
                 <>
-                  <Text style={styles.petAgeText} testID="hud-stage">
+                  <Text style={styles.petAgeText} numberOfLines={1} testID="hud-stage">
                     {stageLine(pet.profile)}
                   </Text>
                   {profileSub && (
-                    <Text style={styles.petProfileText} numberOfLines={2} ellipsizeMode="tail" testID="hud-profile-sub">
+                    <Text style={styles.petProfileText} numberOfLines={1} ellipsizeMode="tail" testID="hud-profile-sub">
                       {profileSub}
                     </Text>
                   )}
@@ -499,7 +523,8 @@ export default function ChildHudScreen() {
                 pet.plan.type !== 'free' && <Text style={styles.petAgeText}>{formatChallengeWeek(pet.virtual_age_months)}</Text>
               )}
             </View>
-          </View>
+            {pet.profile && <ChevronDown color={alpha(palette.white, 0.6)} size={16} />}
+          </Pressable>
 
           <View style={styles.topBarRight}>
             <WsStatusDot status={wsStatus} />
@@ -648,6 +673,7 @@ export default function ChildHudScreen() {
             resolveBusy={resolveChewing.isPending}
             bottom={layout.aboveDock}
             right={METRICS_RESERVED_RIGHT}
+            notice={mediaPending ? <MediaPendingNotice testID="hud-pet-media-pending" /> : null}
             footer={
               hasTraining ? (
                 <TrainingChip
@@ -685,6 +711,7 @@ export default function ChildHudScreen() {
       </View>
       {/* Outside hud-content, so hiding the HUD from TalkBack never hides the game. */}
       {showTraining && <TrainingOverlay view={view} onClose={closeTraining} />}
+      <PetProfileSheet visible={isProfileVisible && profileRows.length > 0} rows={profileRows} onClose={() => setProfileVisible(false)} />
       {showAlbum && (
         <PetAlbum
           media={pet.media}

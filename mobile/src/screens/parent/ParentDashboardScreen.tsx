@@ -8,6 +8,8 @@
  * opens the report (`ChildDetailScreen`). "Nadzor": children + devices, hard stop per
  * pet, quiet hours, parents + invite / join. M3-09: a banner (trial ending / game paused)
  * opens the challenge paywall (`ChallengeScreen`); the simulated "Pasme" tab is gone.
+ * M5-F01: "12-week challenge — buy" on the child card and detail, and the "Purchases /
+ * challenge" row in Nadzor open the same paywall (it lists every dog that can be bought).
  */
 
 import { useEffect, useState } from 'react';
@@ -53,7 +55,8 @@ type Overlay =
   | { kind: 'none' }
   | { kind: 'addChild'; child?: FamilyChild }
   | { kind: 'child'; childId: number }
-  | { kind: 'challenge' };
+  /** `backToChildId`: opened from a child's detail → "Back" returns there (M5-F01). */
+  | { kind: 'challenge'; backToChildId?: number };
 
 function BottomNavBar({ activeTab, onSelect }: { activeTab: Tab; onSelect: (tab: Tab) => void }) {
   const tabs: { id: Tab; label: string; Icon: typeof LayoutDashboard }[] = [
@@ -97,6 +100,7 @@ export default function ParentDashboardScreen() {
   const openChildPin = (child: FamilyChild) => setOverlay({ kind: 'addChild', child });
   const openChild = (child: FamilyChild) => setOverlay({ kind: 'child', childId: child.id });
   const closeOverlay = () => setOverlay({ kind: 'none' });
+  const openChallenge = (backToChildId?: number) => setOverlay({ kind: 'challenge', backToChildId });
 
   // The child shown in the detail left the family list (removed / other parent's change)
   // → back to the overview instead of a stale or empty screen.
@@ -143,9 +147,30 @@ export default function ParentDashboardScreen() {
       );
     }
 
+    // Before the tabs: the paywall also opens from the "Nadzor" tab (M5-F01) and returns there.
+    if (overlay.kind === 'challenge') {
+      const backTo = overlay.backToChildId;
+      return (
+        <ChallengeScreen
+          family={family}
+          onBack={() => {
+            setOverlay(backTo !== undefined ? { kind: 'child', childId: backTo } : { kind: 'none' });
+            void dashboard.refetch();
+          }}
+        />
+      );
+    }
+
     const detailChild = overlay.kind === 'child' ? children.find((c) => c.id === overlay.childId) : undefined;
     if (overlay.kind === 'child' && family && detailChild) {
-      return <ChildDetailScreen child={detailChild} family={family} onBack={closeOverlay} />;
+      return (
+        <ChildDetailScreen
+          child={detailChild}
+          family={family}
+          onBack={closeOverlay}
+          onOpenChallenge={() => openChallenge(detailChild.id)}
+        />
+      );
     }
 
     if (activeTab === 'controls') {
@@ -156,23 +181,12 @@ export default function ParentDashboardScreen() {
             family={family}
             onAddChild={openAddChild}
             onChildPin={openChildPin}
+            onOpenChallenge={() => openChallenge()}
             notice={notice}
             onNotice={setNotice}
           />
           <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} />
         </>
-      );
-    }
-
-    if (overlay.kind === 'challenge') {
-      return (
-        <ChallengeScreen
-          family={family}
-          onBack={() => {
-            closeOverlay();
-            void dashboard.refetch();
-          }}
-        />
       );
     }
 
@@ -203,7 +217,7 @@ export default function ParentDashboardScreen() {
         </View>
 
         <ScrollView style={styles.flex} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-          <ChallengeBanner family={family} onOpen={() => setOverlay({ kind: 'challenge' })} />
+          <ChallengeBanner family={family} onOpen={() => openChallenge()} />
           {notice && <NoticeBanner text={joinNoticeText(notice)} closeLabel={DASHBOARD_STRINGS.closeNotice} onClose={() => setNotice(null)} />}
           {dashboard.isError && (
             <ErrorBanner
@@ -237,7 +251,7 @@ export default function ParentDashboardScreen() {
                 timezone={family?.timezone ?? 'Europe/Ljubljana'}
                 onOpen={openChild}
                 onChildPin={openChildPin}
-                onOpenChallenge={() => setOverlay({ kind: 'challenge' })}
+                onOpenChallenge={() => openChallenge()}
               />
             ))
           )}
