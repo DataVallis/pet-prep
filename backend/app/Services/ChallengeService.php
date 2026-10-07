@@ -36,7 +36,9 @@ use Illuminate\Support\Facades\Log;
  * `frozen_at`, record the `payment_lock` status period (routines excused,
  * training sessions interrupted) and, when it lifts, applyThaw() shifts the
  * neglect clocks and restarts the decay clock — the pause never counts
- * against the needs. One PetUpdated after commit per change.
+ * against the needs. The lock time is not program time either (M3-11b):
+ * the 12-week clock and the dog's age stand still (Pet::programBirthAt,
+ * from the `payment_lock` status periods). One PetUpdated after commit per change.
  */
 class ChallengeService
 {
@@ -185,7 +187,8 @@ class ChallengeService
 
     /**
      * The challenge is paid (credit assigned). Lifts a payment lock; the
-     * challenge clock keeps running from birth (no trial extension). Caller
+     * challenge clock resumes where it stopped at the lock (M3-11b: lock time
+     * is not program time — Pet::programSecondsAt), no trial extension. Caller
      * holds the pet row lock. Returns false when it already was paid.
      */
     public function markPaid(Pet $pet, ChallengePaidSource $source, CarbonInterface $now): bool
