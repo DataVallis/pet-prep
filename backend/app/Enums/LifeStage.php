@@ -8,7 +8,8 @@ namespace App\Enums;
  * Boundaries are per breed and come from sourced data
  * (`breed_stage_params`, key `starts_at_months`): AAHA life stages (S11)
  * and the breed's median lifespan (S15). The parent picks the stage at
- * arrival; the stage then follows the dog's age (1 real week = 1 month).
+ * arrival; the stage then follows the dog's age (1 program week = 1 month;
+ * payment-lock time does not count — M3-11b).
  * Mirrored in DB CHECK constraints (pets.life_stage, breed_stage_params.stage,
  * pet_media.life_stage, pet_media_history.life_stage).
  */

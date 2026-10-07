@@ -34,6 +34,17 @@ return [
         'thirst' => 'Tvoj kuža je žejen, a najprej je treba počistiti nered. Potem mu lahko daš vodo.',
     ],
 
+    // M3-12: odprt pregrizen predmet se ne počisti z drgnjenjem, ampak pospravi z igračo.
+    'tidy' => [
+        'soft' => 'Tvoj kuža je nekaj pregriznil. Pospravi in mu daj igračo.',
+        'critical' => 'Kuža je pregriznil copat! Pospravi in mu daj igračo čim prej, sicer bo zbolel.',
+    ],
+
+    'clean_and_tidy' => [
+        'soft' => 'Tvoj kuža te čaka: počisti nered, pospravi pregrizeno in mu daj igračo.',
+        'critical' => 'Počisti nered, pospravi pregrizeno in kužku daj igračo čim prej, sicer bo zbolel.',
+    ],
+
     'walk_reminder' => 'Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?',
 
     'parent_alarm' => 'Tvoj otrok danes ni poskrbel za psa.',

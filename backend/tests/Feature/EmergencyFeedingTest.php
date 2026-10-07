@@ -1,16 +1,21 @@
 <?php
 
 use App\Enums\ActivityType;
+use App\Enums\HygieneEventKind;
+use App\Enums\HygieneEventStatus;
 use App\Enums\PushType;
 use App\Enums\RoutineType;
 use App\Jobs\SendPushNotification;
 use App\Models\ActivityLog;
+use App\Models\BreedConfig;
 use App\Models\DevicePushToken;
 use App\Models\Pet;
+use App\Models\PetHygieneEvent;
 use App\Models\PushNotification;
 use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\CareScheduleService;
+use App\Services\EscalationService;
 use App\Services\FamilyService;
 use App\Services\NotificationService;
 use App\Services\Push\ExpoPushClient;
@@ -19,6 +24,7 @@ use App\Services\RoutineLedgerService;
 use Illuminate\Http\Client\Factory as HttpFactory;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Queue;
@@ -84,6 +90,24 @@ function efSet(Pet $pet, array $attributes): Pet
     return $pet->refresh();
 }
 
+function efFed(Pet $pet, Carbon $at, ActivityType $type = ActivityType::FedPet): void
+{
+    $row = ActivityLog::create(['pet_id' => $pet->id, 'actor_user_id' => $type === ActivityType::FedPet ? $pet->user_id : null, 'activity_type' => $type->value, 'value' => 50]);
+    ActivityLog::whereKey($row->id)->toBase()->update(['created_at' => $at]);
+}
+
+function efMess(Pet $pet, HygieneEventKind $kind): void
+{
+    PetHygieneEvent::create([
+        'pet_id' => $pet->id,
+        'local_date' => $pet->localDate(now()),
+        'scheduled_at' => now()->subMinutes(10),
+        'status' => HygieneEventStatus::Applied,
+        'resolved_at' => now()->subMinutes(10),
+        'kind' => $kind,
+    ]);
+}
+
 function efFeedRows(Pet $pet)
 {
     return ActivityLog::where('pet_id', $pet->id)->where('activity_type', ActivityType::FedPet->value)->orderBy('id')->get();
@@ -127,6 +151,7 @@ describe('emergency meal (feed outside a window at ≤ 20 %)', function () {
 
         $rows = efFeedRows($pet);
         expect($rows)->toHaveCount(1)->and($rows[0]->value)->toBe(20);
+        $this->getJson('/api/child/pet')->assertJsonPath('feeding.emergency_threshold', null);
         expect(Pet::findOrFail($pet->id)->hunger_zero_since)->toBeNull();
     });
 
@@ -169,17 +194,197 @@ describe('emergency meal (feed outside a window at ≤ 20 %)', function () {
         $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'window');
     });
 
-    it('allows an emergency meal for a dog whose current window was already used', function () {
+    it('refuses a second meal in a window already used, even at low hunger (rule A: nothing was missed)', function () {
         [, $pet] = efChild('2026-10-07 04:30:00'); // 06:30, morning window
         $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'window');
 
-        efAt('2026-10-07 07:30:00'); // 09:30, same window, the dog is starving (admin edit / tests)
+        efAt('2026-10-07 07:30:00'); // 09:30, same window, starving dog (admin edit)
         efSet($pet, ['hunger_level' => 15]);
-        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'emergency');
-
-        efSet($pet, ['hunger_level' => 60]);
+        $this->getJson('/api/child/pet')->assertJsonPath('feeding.can_feed', false)->assertJsonPath('feeding.emergency_threshold', null);
         $this->postJson('/api/child/pet/feed')->assertStatus(422)->assertJsonPath('reason', 'already_fed_this_window');
     });
+
+    it('rule A: a child who fed on time gets no emergency meal at 16:00 with 20 %', function () {
+        [, $pet] = efChild('2026-10-07 05:00:00'); // 07:00 local
+        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'window');
+
+        efAt('2026-10-07 14:00:00'); // 16:00, last ended window (06–10) was fed
+        efSet($pet, ['hunger_level' => 20]);
+        $this->getJson('/api/child/pet')
+            ->assertJsonPath('feeding.can_feed', false)
+            ->assertJsonPath('feeding.feed_mode', null)
+            ->assertJsonPath('feeding.emergency_threshold', null);
+        $this->postJson('/api/child/pet/feed')->assertStatus(422)
+            ->assertJsonPath('reason', 'outside_feed_window')
+            ->assertJsonPath('next_allowed_at', '2026-10-07T17:00:00+02:00');
+    });
+
+    it('rule A: after an emergency meal no second one until the next window ends unfed', function () {
+        [, $pet] = efChild(pet: ['hunger_level' => 5]); // 12:11, 06–10 missed
+        $this->getJson('/api/child/pet')->assertJsonPath('feeding.emergency_threshold', 20);
+        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'emergency');
+
+        // A minute later (double tap) and at 16:30 with low hunger: refused.
+        efAt('2026-10-07 10:12:00');
+        efSet($pet, ['hunger_level' => 15]);
+        $this->postJson('/api/child/pet/feed')->assertStatus(422)->assertJsonPath('reason', 'outside_feed_window');
+        efAt('2026-10-07 14:30:00');
+        efSet($pet, ['hunger_level' => 15]);
+        $this->getJson('/api/child/pet')->assertJsonPath('feeding.emergency_threshold', null);
+        $this->postJson('/api/child/pet/feed')->assertStatus(422);
+
+        // 21:30: the evening window ended unfed → a new emergency meal is possible.
+        efAt('2026-10-07 19:30:00');
+        efSet($pet, ['hunger_level' => 15]);
+        $this->getJson('/api/child/pet')->assertJsonPath('feeding.emergency_threshold', 20)->assertJsonPath('feeding.feed_mode', 'emergency');
+        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'emergency');
+    });
+
+    it('rule A: no ended window since the birth → not missed (newborn)', function () {
+        // Born 12:00 local, the 06–10 window ended before the birth.
+        [, $pet] = efChild(pet: ['born_at' => Carbon::parse('2026-10-07 10:00:00', 'UTC'), 'hunger_level' => 15]);
+        efAt('2026-10-07 13:00:00'); // 15:00
+        efSet($pet, ['hunger_level' => 15]);
+        $this->postJson('/api/child/pet/feed')->assertStatus(422)->assertJsonPath('reason', 'outside_feed_window');
+    });
+
+    it('rule A: a real parent meal blocks it; a skipped parent window does not hide the missed child window; the HUD next meal skips it', function () {
+        seedStageParams();
+        // 2-month puppy: 07–09, 11–13, 15–17, 19–21; school 10–13 covers 11–13.
+        [, $pet, $parent] = efChild('2026-10-07 11:30:00', ['arrival_age_months' => 2]); // 13:30
+        QuietHours::create([
+            'parent_id' => $parent->id,
+            'school_start' => '10:00', 'school_end' => '13:00',
+            'bedtime_start' => '22:00', 'bedtime_end' => '06:00',
+            'is_active' => true,
+        ]);
+        efSet($pet, ['hunger_level' => 15]);
+        // 07–09 missed, the parent tick did not run for 11–13 (no parent_fed_pet) → missed.
+        $this->getJson('/api/child/pet')
+            ->assertJsonPath('feeding.windows.1.start', '11:00')
+            ->assertJsonPath('feeding.can_feed', true)
+            ->assertJsonPath('feeding.emergency_threshold', 20);
+
+        // The parent's quiet-hour meal at 11:00 is a real meal since 07:00 → not missed.
+        efFed($pet, Carbon::parse('2026-10-07 09:00:00', 'UTC'), ActivityType::ParentFedPet);
+        $this->getJson('/api/child/pet')
+            ->assertJsonPath('feeding.can_feed', false)
+            ->assertJsonPath('feeding.emergency_threshold', null);
+        ActivityLog::where('pet_id', $pet->id)->delete();
+
+        // 09:30: 07–09 missed but hunger 28 → refused; next CHILD meal is 15:00, not 11:00.
+        efAt('2026-10-07 07:30:00');
+        efSet($pet, ['hunger_level' => 28]);
+        $this->postJson('/api/child/pet/feed')->assertStatus(422)
+            ->assertJsonPath('next_allowed_at', '2026-10-07T15:00:00+02:00')
+            ->assertJsonPath('state.feeding.next_feed_window.start', '2026-10-07T15:00:00+02:00');
+    });
+
+    it('rule A: puppy misses 07–09, is at the vet through the parent window 11–13, back at 13:30 with 10 % → emergency meal', function () {
+        seedStageParams();
+        [, $pet, $parent] = efChild('2026-10-07 11:30:00', [
+            'arrival_age_months' => 2,
+            'hunger_level' => 10,
+            'illness_until' => Carbon::parse('2026-10-07 11:20:00', 'UTC'), // 13:20 local — over
+            'frozen_at' => Carbon::parse('2026-10-07 07:30:00', 'UTC'),
+        ]);
+        QuietHours::create([
+            'parent_id' => $parent->id,
+            'school_start' => '10:00', 'school_end' => '13:00',
+            'bedtime_start' => '22:00', 'bedtime_end' => '06:00',
+            'is_active' => true,
+        ]);
+
+        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'emergency');
+    });
+
+    it('rule A: a child window that ended during a lock counts as missed after the thaw', function (array $after) {
+        // 06–10 window spent in a hard stop / payment lock that ended at 10:30.
+        [, $pet] = efChild('2026-10-07 08:30:00', array_merge(['hunger_level' => 10], $after));
+
+        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'emergency');
+    })->with([
+        'hard stop lifted' => [['is_hard_stopped' => false, 'frozen_at' => null]],
+        'payment lock lifted' => [['payment_locked_at' => null]],
+    ]);
+
+    it('rule A: at 05:00 the last ended window is yesterday evening', function () {
+        [, $pet] = efChild('2026-10-07 03:00:00', ['hunger_level' => 10]); // 05:00 local
+        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'emergency');
+
+        [, $fedPet] = efChild('2026-10-07 03:00:00', ['hunger_level' => 10]);
+        efFed($fedPet, Carbon::parse('2026-10-06 16:00:00', 'UTC')); // 18:00 yesterday, inside 17–21
+        $this->postJson('/api/child/pet/feed')->assertStatus(422)
+            ->assertJsonPath('reason', 'outside_feed_window')
+            ->assertJsonPath('next_allowed_at', '2026-10-07T06:00:00+02:00');
+    });
+
+    it('rule A: a window over midnight (22–02) is the last ended window at 03:00', function () {
+        BreedConfig::where('breed_slug', 'mutt')->firstOrFail()->update(['feed_windows' => [['06:00', '10:00'], ['22:00', '02:00']]]);
+        Cache::flush();
+
+        [, $pet] = efChild('2026-10-06 23:00:00', ['hunger_level' => 10]); // 01:00 local, inside 22–02
+        $this->getJson('/api/child/pet')->assertJsonPath('feeding.feed_mode', 'window');
+
+        efAt('2026-10-07 01:00:00'); // 03:00, 22–02 ended unfed
+        efSet($pet, ['hunger_level' => 10]);
+        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'emergency');
+
+        [, $fedPet] = efChild('2026-10-07 01:00:00', ['hunger_level' => 10]);
+        efFed($fedPet, Carbon::parse('2026-10-06 21:00:00', 'UTC')); // 23:00, inside 22–02
+        $this->postJson('/api/child/pet/feed')->assertStatus(422)->assertJsonPath('reason', 'outside_feed_window');
+    });
+
+    it('rule A: on the day the meal count changes (4 → 3) it uses that day\'s windows', function () {
+        seedStageParams();
+        // Born Monday 2026-10-05 10:00 local, 2 months: 3 meals (07–09, 13–15, 19–21) from Tuesday.
+        [, $pet] = efChild('2026-10-13 10:00:00', [ // Tuesday 12:00 local
+            'arrival_age_months' => 2,
+            'born_at' => Carbon::parse('2026-10-05 08:00:00', 'UTC'),
+            'hunger_level' => 10,
+        ]);
+        efFed($pet, Carbon::parse('2026-10-12 17:30:00', 'UTC')); // Monday 19:30, inside 19–21
+
+        // Under Monday's rules 11–13 would be open now; Tuesday has none → 07–09 missed.
+        $this->getJson('/api/child/pet')
+            ->assertJsonPath('feeding.current_window', null)
+            ->assertJsonPath('feeding.feed_mode', 'emergency')
+            ->assertJsonPath('feeding.next_feed_window.start', '2026-10-13T13:00:00+02:00');
+
+        efFed($pet, Carbon::parse('2026-10-13 06:00:00', 'UTC')); // Tuesday 08:00, inside 07–09
+        $this->getJson('/api/child/pet')->assertJsonPath('feeding.can_feed', false)->assertJsonPath('feeding.emergency_threshold', null);
+    });
+
+    it('rule A: on the autumn DST day windows follow the wall clock', function () {
+        // 2026-10-25: CET from 01:00 UTC → 06:00 local = 05:00 UTC.
+        [, $pet] = efChild('2026-10-25 11:00:00', ['hunger_level' => 10]); // 12:00 CET
+        efFed($pet, Carbon::parse('2026-10-25 04:30:00', 'UTC')); // 05:30 CET — before the window (06:00 CEST would be 04:00 UTC)
+        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'emergency');
+
+        [, $fedPet] = efChild('2026-10-25 11:00:00', ['hunger_level' => 10]);
+        efFed($fedPet, Carbon::parse('2026-10-25 05:00:00', 'UTC')); // 06:00 CET, window start
+        $this->postJson('/api/child/pet/feed')->assertStatus(422)->assertJsonPath('reason', 'outside_feed_window');
+    });
+
+    it('is refused (423) and not offered under payment_required, illness, unborn and a missing own contract', function (array $attributes, string $reason) {
+        [$child, $pet, $parent] = efChild(pet: ['hunger_level' => 5]);
+        if ($reason === 'contract_required' && ($attributes['sibling'] ?? false)) {
+            $sibling = User::factory()->child()->create(['parent_id' => $parent->id]);
+            app(FamilyService::class)->addCaretaker($pet, $sibling, requiresContract: true);
+            actingAsRole($sibling);
+        } else {
+            efSet($pet, $attributes);
+        }
+
+        $this->getJson('/api/child/pet')->assertJsonPath('feeding.can_feed', false)->assertJsonPath('feeding.feed_mode', null);
+        $this->postJson('/api/child/pet/feed')->assertStatus(423)->assertJsonPath('reason', $reason);
+        expect(efFeedRows($pet))->toHaveCount(0);
+    })->with([
+        'payment_required' => [['payment_locked_at' => '2026-10-07 09:00:00'], 'payment_required'],
+        'ill' => [['illness_until' => '2026-10-07 20:00:00', 'frozen_at' => '2026-10-07 08:00:00'], 'ill'],
+        'unborn' => [['born_at' => null], 'contract_required'],
+        'sibling without contract' => [['sibling' => true], 'contract_required'],
+    ]);
 
     it('works for a profiled pet (stage windows) too', function () {
         seedStageParams();
@@ -434,6 +639,105 @@ describe('pushes never ask for a refused action', function () {
         expect(collect($sent->getArrayCopy())->pluck('to')->all())->toBe([$signed->expo_push_token]);
     });
 
+    it('a "wait" hunger push names the next CHILD window, skipping a parent-covered one', function () {
+        seedStageParams();
+        [$child, $pet, $parent] = efChild('2026-10-07 07:30:00', ['arrival_age_months' => 2, 'hunger_level' => 28]); // 09:30
+        QuietHours::create([
+            'parent_id' => $parent->id,
+            'school_start' => '10:00', 'school_end' => '13:00',
+            'bedtime_start' => '22:00', 'bedtime_end' => '06:00',
+            'is_active' => true,
+        ]);
+        efDevice($child);
+        $sent = efFakeExpo();
+
+        efPush($pet, PushType::SoftWarning, 'hunger');
+
+        expect($sent[0]['body'])->toBe('Tvoj kuža postaja lačen. Naslednji obrok je ob 15:00 — ne pozabi nanj.');
+    });
+
+    it('drops a "wait" push when no child meal is left today', function () {
+        seedStageParams();
+        // 20:30 → 21:15: 19–21 used; puppy windows done; bedtime 21:00–06:00 would cover nothing else today.
+        [$child, $pet] = efChild('2026-10-07 18:30:00', ['arrival_age_months' => 2]);
+        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'window');
+        efAt('2026-10-07 18:45:00');
+        efSet($pet, ['hunger_level' => 28]);
+        efDevice($child);
+        $sent = efFakeExpo();
+
+        $row = efPush($pet, PushType::SoftWarning, 'hunger');
+
+        expect($row->suppressed_reason)->toBe('not_actionable')->and($sent)->toHaveCount(0);
+    });
+
+    it('hygiene reminders point to "tidy up and give a toy" while a chewed item is open', function () {
+        [$child, $pet] = efChild(pet: ['hygiene_level' => 0]);
+        $sl = efDevice($child, 'sl');
+        $en = efDevice($child, 'en');
+        efMess($pet, HygieneEventKind::Chewing);
+        $sent = efFakeExpo();
+
+        efPush($pet, PushType::SoftWarning, 'hygiene');
+        $byToken = collect($sent->getArrayCopy())->keyBy('to');
+        expect($byToken[$sl->expo_push_token]['body'])->toBe('Tvoj kuža je nekaj pregriznil. Pospravi in mu daj igračo.')
+            ->and($byToken[$en->expo_push_token]['body'])->toBe('Your dog has chewed something. Tidy it up and give it a toy.');
+
+        // Chewing + a poop: both actions; critical copy.
+        efMess($pet, HygieneEventKind::Poop);
+        $sent = efFakeExpo();
+        efPush($pet, PushType::CriticalAlert, 'hygiene');
+        $byToken = collect($sent->getArrayCopy())->keyBy('to');
+        expect($byToken[$sl->expo_push_token]['body'])->toBe('Počisti nered, pospravi pregrizeno in kužku daj igračo čim prej, sicer bo zbolel.');
+    });
+
+    it('keeps the plain mess text when only a poop is open', function () {
+        [$child, $pet] = efChild(pet: ['hygiene_level' => 0]);
+        efDevice($child);
+        efMess($pet, HygieneEventKind::Poop);
+        $sent = efFakeExpo();
+
+        efPush($pet, PushType::SoftWarning, 'hygiene');
+
+        expect($sent[0]['body'])->toBe('Tvoj kuža te milo gleda in kaže na nered, ki ga je treba počistiti.');
+    });
+
+    it('a not_actionable drop keeps the escalation ladder: phase 2 and 3 still go out', function () {
+        config(['push.enabled' => true]);
+        Queue::fake([SendPushNotification::class]);
+        [$child, $pet, $parent] = efChild('2026-10-07 19:30:00', ['hunger_level' => 28]); // 21:30, evening missed
+        // The child fed the evening window late? No: nobody fed today — but at 28 % feeding is refused and no window is left today.
+        efDevice($child);
+        efDevice($parent);
+        $sent = efFakeExpo();
+        $deliverAll = function () use ($pet): void {
+            PushNotification::where('pet_id', $pet->id)->where('status', PushNotification::STATUS_QUEUED)->pluck('id')
+                ->each(fn ($id) => (new SendPushNotification($id))->handle(app(NotificationService::class), app(ExpoPushClient::class)));
+        };
+
+        app(EscalationService::class)->processPetEscalation($pet->fresh());
+        $deliverAll();
+        expect(Pet::findOrFail($pet->id)->escalation_level)->toBe(1)
+            ->and(PushNotification::where('pet_id', $pet->id)->where('type', PushType::SoftWarning->value)->value('suppressed_reason'))->toBe('not_actionable')
+            ->and($sent)->toHaveCount(0);
+
+        // 21:40, hunger 8 % → phase 2; the 17–21 window was missed → emergency meal possible → plain text.
+        efAt('2026-10-07 19:40:00');
+        efSet($pet, ['hunger_level' => 8]);
+        app(EscalationService::class)->processPetEscalation($pet->fresh());
+        $deliverAll();
+        expect(Pet::findOrFail($pet->id)->escalation_level)->toBe(2)
+            ->and(collect($sent->getArrayCopy())->pluck('body')->all())->toBe(['Če ga ne nahraniš v 30 minutah, bo zbolel.']);
+
+        // 0 % for more than an hour → phase 3 to the parent.
+        efAt('2026-10-07 21:00:00');
+        efSet($pet, ['hunger_level' => 0, 'hunger_zero_since' => Carbon::parse('2026-10-07 19:50:00', 'UTC')]);
+        app(EscalationService::class)->processPetEscalation($pet->fresh());
+        $deliverAll();
+        expect(Pet::findOrFail($pet->id)->escalation_level)->toBe(3)
+            ->and(PushNotification::where('pet_id', $pet->id)->where('type', PushType::ParentAlarm->value)->value('status'))->toBe(PushNotification::STATUS_SENT);
+    });
+
     it('property: over a whole day, a hunger reminder says "feed" only when the feed action would be accepted', function () {
         [$child, $pet] = efChild('2026-10-06 22:00:00'); // 00:00 local
         efDevice($child);
@@ -453,7 +757,8 @@ describe('pushes never ask for a refused action', function () {
                 $saysFeed = in_array($body, EF_FEED_NOW_TEXTS, true);
 
                 expect($saysFeed)->toBe($allowed, "hunger {$hunger} at local hour {$hour}: '{$body}'");
-                // At ≤ 20 % feeding is always possible (no mess, no lock) → always the plain text.
+                // Nobody fed since the birth, so every ended window was missed:
+                // at ≤ 20 % the emergency meal is always possible → plain text.
                 if ($hunger <= CareScheduleService::EMERGENCY_FEED_THRESHOLD) {
                     expect($saysFeed)->toBeTrue();
                 }

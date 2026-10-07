@@ -52,10 +52,10 @@
       "water": "The water bowl is already full.",
       "clean": "It was already clean."
     },
-    "emergencyFeed": "Yum! Your pup is full. An emergency meal doesn't count as on time — the next meal is {{when}}.",
-    "emergencyFeedNoTime": "Yum! Your pup is full. An emergency meal doesn't count as on time.",
+    "emergencyFeed": "Yum! Your pup is full. The meal was missed, so it doesn't count as on time — the next meal is {{when}}.",
+    "emergencyFeedNoTime": "Yum! Your pup is full. The meal was missed, so it doesn't count as on time.",
     "refused": {
-      "outsideFeedWindow": "The next meal is {{when}}. If your pup gets very hungry, you can give it an emergency meal.",
+      "outsideFeedWindow": "The next meal is {{when}}.",
       "outsideFeedWindowNoTime": "It's not mealtime right now.",
       "alreadyFed": "Your pup has already eaten. You can feed it again {{when}}.",
       "alreadyFedNoTime": "Your pup has already eaten.",
@@ -142,6 +142,23 @@
     "refresh": "Refresh steps",
     "syncing": "Saving …",
     "androidNote": "Steps are counted while the app is open.",
-    "close": "Close"
+    "close": "Close",
+    "health": {
+      "title": {
+        "ios": "Count steps with Apple Health",
+        "android": "Count steps with Health Connect"
+      },
+      "body": "Then your steps count even when PetPrep is closed. Only today's number of steps goes to your pup — nothing else.",
+      "connect": "Connect",
+      "connected": {
+        "ios": "Steps from Apple Health",
+        "android": "Steps from Health Connect"
+      },
+      "iosHelp": "Steps missing? A parent can check Settings → Health → Data Access & Devices → PetPrep.",
+      "denied": "Health Connect can't share steps yet. Ask a parent to allow \"Steps\" for PetPrep in Health Connect.",
+      "openSettings": "Open Health Connect",
+      "needsUpdate": "Health Connect needs to be installed or updated first. Ask a parent to help.",
+      "openStore": "Open Google Play"
+    }
   }
 }

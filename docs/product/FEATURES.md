@@ -56,7 +56,7 @@ Razmejitev brezplačno / plačljivo v `BUSINESS_MODEL.md` §7 je **predlog**, ki
 |---|---|---|---|---|---|
 | Zaslon »Izberi kužka« | Pri »Nov pes« starš izbere pasmo, izvor in starost ob prihodu, šele nato dobi kodo. Pred povezavo otroka lahko izbiro spremeni (»Spremeni kužka«). | starš | ✅ | M5-R04 (del 1) | 2026-10-05 |
 | Pasma | Mešanček 🆓. Border Collie 💶 se izbere na planu izziv (že v preizkusu); na brezplačnem planu je zaklenjen z razlago. | starš | ✅ | M5-R04, M3-11, M3-09 | 2026-10-07 |
-| Izbira plana (brezplačni mešanček / 12-tedenski izziv — 7 dni brezplačno) | V »Izberi kužka« starš najprej izbere plan (brez privzete izbire); cena iz trgovine, sicer 49,99 €; jasno: brez samodejnega plačila, po 7 dneh se igra ustavi do nakupa. Če je otrok preizkus že imel, PIN zaslon to pove. | starš | ✅ | M3-11, M3-09 | 2026-10-07 |
+| Izbira plana (brezplačni mešanček / 12-tedenski izziv — 7 dni brezplačno) | V »Izberi kužka« starš najprej izbere plan (brez privzete izbire); cena iz trgovine, sicer 49,99 €; jasno: brez samodejnega plačila, po 7 dneh se igra ustavi do nakupa. Če je otrok preizkus že imel, PIN zaslon to pove. | starš | ✅ | M3-11, M3-09 | 2026-10-07 — 📱 viden na TestFlight 3.0.0 (David, 7. 10.); popravki: mešanček pri izzivu onemogočen (M5-F03), cena v sandboxu je po trgovini računa (npr. $44.99 v ZDA) |
 | Izvor: kupljen / posvojen | Pokaže se na profilu psa; posvojen pes je na sliki zdrav in miren, brez »žalostnih« klišejev. Vpliv izvora na vedenje (plašnost, nered) še ni v igri. | starš | ✅ (vedenje 🗓, čaka Davida) | M5-R01 | 2026-10-05 |
 | Starost ob prihodu | Mladiček (2 meseca), mlad pes (9 mesecev), odrasel (3 leta), starejši (9 let; Border Collie 9,8). Ob vsaki ena poštena vrstica s številkami (obroki, koraki). Brez privzete izbire. | starš | ✅ | M5-R01, M5-R04 | 2026-10-05 |
 | Kuža se stara | 1 teden igre = 1 mesec življenja; obdobja mladiček → mlad pes → odrasel → starejši (meje iz virov, potrdil David). Otrok in starš vidita npr. »Mladiček · 3 mesece« in kdaj pride naslednje obdobje. | otrok, starš | ✅ | M5-R01, M5-R04 | 2026-10-05 |
@@ -70,12 +70,13 @@ Razmejitev brezplačno / plačljivo v `BUSINESS_MODEL.md` §7 je **predlog**, ki
 |---|---|---|---|---|---|
 | Glavni zaslon s 4 merilniki | Lakota, žeja, energija (sprehod), čistoča; barva zelena → rumena → rdeča. Merilniki se prilagodijo velikosti zaslona. Gumb, ki je na vrsti, sveti v mint barvi (nova podoba). | otrok | ✅ · 📱 (3. 10. in TestFlight 5. 10.; popravek merilnikov iz 5. 10. še ni preverjen) | M1-14, M0-14 | 2026-10-04 |
 | Hrana samo v oknih | Enkrat v vsakem oknu (odrasel pes 6–10 in 17–21 po času družine). Izven okna je gumb zasenčen in pove, kdaj je naslednji obrok (»ob 17:00«; za jutri v dveh vrsticah »jutri« / »06:00«, da ura nikoli ni odrezana — tudi pri večji pisavi in na 375-pt zaslonu). | otrok | ✅ | M1-07, M1-14, M3-12 | 2026-10-04 (besedilo in prikaz ure 2026-10-07) |
-| Nujni obrok | Ko lakota kaže 20 % ali manj, otrok kužka lahko nahrani tudi izven okna — gumb se pokaže kot »Nujni obrok« (tudi takoj, ko lakota v živo pade na 20 %). Ne šteje kot pravočasno: zamujeno okno ostane zamujeno, naslednji obrok v oknu je mogoč normalno; po hranjenju aplikacija to pove. Najprej čiščenje in zaklepi veljajo še naprej. Tudi pri obstoječih psih. | otrok | ✅ | M3-12 | 2026-10-07 |
+| Nujni obrok | Samo po zamujenem obroku: če zadnje okno ni bilo nahranjeno in lakota kaže 20 % ali manj, otrok kužka lahko nahrani izven okna — gumb se pokaže kot »Nujni obrok« (tudi takoj, ko lakota v živo pade na 20 %). Kdor hrani pravočasno, ga ne vidi; po nujnem obroku naslednjega ni, dokler se ne zamudi naslednje okno. Ne šteje kot pravočasno: zamujeno okno ostane zamujeno, naslednji obrok v oknu je mogoč normalno; po hranjenju aplikacija to pove. Najprej čiščenje in zaklepi veljajo še naprej. Tudi pri obstoječih psih. | otrok | ✅ | M3-12 | 2026-10-07 |
 | Obroki danes | Nad gumbi za nego mirna vrstica današnjih oken po času družine, npr. »7–9 ✓ · 11–13 nahrani starš · 15–17 · 19–21«: ✓ pri vsakem oknu, v katerem je bil danes zabeležen obrok (otrokov ali starševski v tihih urah; strežnik to pošlje za vsako okno), trenutno okno poudarjeno, okna v tihih urah z oznako »nahrani starš«, minula okna brez obroka samo zatemnjena (nikoli »zamujeno«). Takoj po hranjenju se ✓ pokaže že pred osvežitvijo stanja. Samo psi z izbiro kužka (pes brez profila ostane kot prej). | otrok | ✅ | M5-R04 (del 2) | 2026-10-07 |
 | Voda | 3× na dan, vsaj 3 ure narazen (tudi čez polnoč); pod gumbom piše, kdaj spet (»ob 15:30« ali »jutri«; besedilo pod gumbi se ne odreže, ampak se prelomi ali pomanjša). | otrok | ✅ | M1-07, M1-14 | 2026-10-04 (prikaz 2026-10-07) |
 | Čiščenje | Kuža naključno naredi nered (mešanček 1×, Border Collie 2× na dan), nikoli v tihih urah. Otrok ga zdrgne s prstom. Dokler ni čisto, hrane in vode ni. | otrok | ✅ | M1-05, M1-14 | 2026-10-04 |
-| Sprehod s pravimi koraki | Energija = današnji koraki / cilj, ob polnoči (po času družine) znova 0 %. iPhone pošlje vse današnje korake s senzorja gibanja, Android šteje samo, ko je aplikacija odprta. Brez GPS. | otrok | ✅ · 📱 okno sprehoda videno na TestFlightu 5. 10. (z napako oblike; popravek še ni preverjen) | M1-04, M1-14 | 2026-10-04 |
+| Sprehod s pravimi koraki | Energija = današnji koraki / cilj, ob polnoči (po času družine) znova 0 %. Koraki iz Apple Zdravje / Health Connect, če jih otrok poveže (glej naslednjo vrstico); sicer kot doslej: iPhone pošlje vse današnje korake s senzorja gibanja, Android šteje samo, ko je aplikacija odprta. Brez GPS. | otrok | ✅ · 📱 okno sprehoda videno na TestFlightu 5. 10. (z napako oblike; popravek še ni preverjen) | M1-04, M1-14 | 2026-10-04 |
 | Pošteno štetje korakov | Največ 200 korakov na minuto; tresenje telefona ne prinese več kot hoja. | otrok | ✅ | M1-04 | 2026-10-03 |
+| Koraki iz Apple Zdravje / Health Connect | Otrok v oknu »Sprehod« po kratki razlagi tapne »Poveži« in dovoli **samo branje korakov** (nič drugega, nič se ne zapisuje). Koraki se štejejo tudi, ko je aplikacija zaprta (tudi z uro): ob odprtju aplikacija pošlje ves današnji seštevek. Iz telefona gre samo današnje število korakov. Vir z več koraki šteje (zdravje ali senzor) — nikoli seštevek obeh. iPhone občasno pošlje korake tudi v ozadju (ko iOS dovoli). Android: če Health Connect manjka ali je star, gumb »Odpri Google Play«; če otrok dostop zavrne, »Odpri Health Connect«. Zavrnjeno ali brez zdravja → senzor kot doslej. **Potreben nov native build.** | otrok | ✅ (ni na napravi) | M3-04, M3-05, M3-06 | 2026-10-07 |
 | Skupni sprehod | Pri skupnem psu se koraki vseh otrok seštejejo; vsak vidi svoj del. | otrok | ✅ | M2-01 | 2026-10-04 |
 | Tihe ure | Starš nastavi šolo in spanje; kuža takrat skoraj ne upada, ne dela nereda in ne pošilja obvestil. | starš | ✅ | M1-03 | 2026-10-03 |
 | Časovni pas družine | Vsa pravila po uri v kuhinji, tudi ob premiku ure (25. 10. 2026, 28. 3. 2027 preverjeno s testi). | — | ✅ | M1-03 | 2026-10-03 |
@@ -100,7 +101,7 @@ Velja samo za nove pse, ustvarjene z različico aplikacije, ki vedenje zna prika
 
 ## 5. Šolanje (dresura)
 
-Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na telefonu.**
+Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7. 10. 2026 (TestFlight 3.0.0, David): deluje; napaka — slab rezultat pokaže »Great job!« (M5-F04).**
 
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID | Od kdaj |
 |---|---|---|---|---|---|
@@ -152,7 +153,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID | Od kdaj |
 |---|---|---|---|---|---|
-| Opomnik otroku (30 %) in nujno (10 %) | Blag opomnik, nato nujen z zvokom; besedilo po tem, kar manjka (hrana, voda, nered). **Nikoli ne zahteva nemogočega** (M3-12): če hranjenje / voda zdaj ni mogoča, pove, kdaj bo (»Naslednji obrok je ob 17:00«) ali »najprej počisti nered«; če danes ni več mogoče, opomnika ni. Otrok, ki še ni podpisal pogodbe, opomnikov za nego ne dobi. | otrok | ✅ | M3-02, M3-12 | 2026-10-05 (M3-12 2026-10-07) |
+| Opomnik otroku (30 %) in nujno (10 %) | Blag opomnik, nato nujen z zvokom; besedilo po tem, kar manjka (hrana, voda, nered). **Nikoli ne zahteva nemogočega** (M3-12): če hranjenje / voda zdaj ni mogoča, pove, kdaj bo (»Naslednji obrok je ob 17:00«) ali »najprej počisti nered« (pri pregriznjenem copatu »pospravi in mu daj igračo«); naslednji obrok je otrokov (okno staršev v tihih urah se preskoči); če danes ni več mogoče, opomnika ni. Otrok, ki še ni podpisal pogodbe, opomnikov za nego ne dobi. | otrok | ✅ | M3-02, M3-12 | 2026-10-05 (M3-12 2026-10-07) |
 | Alarm staršem | Ko pes več kot uro nima hrane, vode ali čistoče: »Tvoj otrok danes ni poskrbel za psa.« Vsem staršem družine. | starš | ✅ | M3-02 | 2026-10-05 |
 | Bolezen in zavetišče | Obvestilo staršem in otroku. | starš, otrok | ✅ | M3-02 | 2026-10-05 |
 | Opomnik za sprehod | Največ enkrat na dan, najprej 2 uri po koncu tihih ur, brez groženj (*predlog*). | otrok | ✅ | M3-02 | 2026-10-05 |
@@ -168,6 +169,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 | Varna koda PIN | Na strežniku samo zgoščena vrednost; enak odgovor za vse napake; omejitev poskusov (15 min premora). | — | ✅ | M2-02 | 2026-10-04 |
 | Ločeni vlogi | Otroški telefon ne more odpreti starševskih nastavitev (ločen ključ za starša in otroka). | — | ✅ | M2-03 (delno) | 2026-10-04 |
 | Zasebni kanali v živo | Stanje psa vidijo samo njegovi skrbniki in starši družine; sporočila brez imen in e-pošte. | — | ✅ | M1-08 | 2026-10-04 |
+| Zdravje: samo število korakov | Iz Apple Zdravje / Health Connect aplikacija bere samo današnji seštevek korakov (dovoljenje samo za branje korakov); na strežnik gre samo to število — brez drugih zdravstvenih podatkov in brez tretjih strani. | otrok, starš | ✅ (ni na napravi) | M3-04, M3-05 | 2026-10-07 |
 | Obvestila brez imen | Naslov vedno »PetPrep«, brez imena otroka ali psa; hranimo samo žeton naprave, platformo in različico aplikacije. | — | ✅ | M3-02 | 2026-10-05 |
 | Preverjeni AI videi | Podpis ED25519 na sporočilih AI storitve; na zaslon pride samo vsebina, ki jo je naročil PetPrep. | — | ✅ | M4-04 | 2026-10-02 |
 | Strežnik in mediji v EU | Hetzner; slike in videi pri nas, povezave s kratkim rokom. | — | ✅ | M5-01, M4-05 | 2026-10-05 |
@@ -205,7 +207,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 |---|---|---|---|---|---|
 | Mešanček brezplačen za vedno 🆓 | Vsaka družina lahko preizkusi osnovno skrb brez plačila. | starš | ✅ (odločeno 2026-10-02) | B1a | 2026-10-02 |
 | 12-tedenski PetPrep izziv 💶 | **49,99 € na psa** (David 7. 10.: en nakup = en izziv za enega psa; skupni pes = ena cena; kupi lahko katerikoli starš družine), prvih **7 dni brezplačno od rojstva psa**. | starš | ✅ v aplikaciji (nakup deluje po nastavitvi trgovin) | M3-07, M3-09 | 2026-10-07 |
-| Strežnik: plan psa in 7-dnevni preizkus 💶 | Vsak pes ima plan: **brezplačni mešanček** ali **izziv** (starš ga izbere ob PIN-u; starejša aplikacija = izziv). Preizkus izziva se začne ob podpisu pogodbe in traja 7 dni; dan prej starši dobijo obvestilo »Preizkus se izteče jutri«. Brez nakupa se igra **ustavi kot pri hard stopu** (nič ne upada, napredek ostane, otrok vidi »Igra počaka na starša«, obvestilo staršem in otroku); po nakupu se nadaljuje, kjer je obstala. Obstoječi psi testerjev so odklenjeni (`grandfathered`). Aplikacija tega še ne prikazuje (M3-09). | starš, otrok | 🛠 | M3-11 | 2026-10-07 |
+| Strežnik: plan psa in 7-dnevni preizkus 💶 | Vsak pes ima plan: **brezplačni mešanček** ali **izziv** (starš ga izbere ob PIN-u; starejša aplikacija = izziv). Preizkus izziva se začne ob podpisu pogodbe in traja 7 dni; dan prej starši dobijo obvestilo »Preizkus se izteče jutri«. Brez nakupa se igra **ustavi kot pri hard stopu** (nič ne upada, napredek ostane, otrok vidi »Igra počaka na starša«, obvestilo staršem in otroku); po nakupu se nadaljuje, kjer je obstala. **Čas zaklepa se ne šteje v 12 tednov** (M3-11b, 7. 10.): kuža se med čakanjem ne stara, »Teden N od 12« in napredek otroka stojita. Obstoječi psi testerjev so odklenjeni (`grandfathered`). Aplikacija tega še ne prikazuje (M3-09). | starš, otrok | 🛠 | M3-11, M3-11b | 2026-10-07 |
 | Strežnik: dnevnik nakupov in krediti izziva 💶 | Strežnik sprejme vsak RevenueCat dogodek enkrat (zaščiten s skrivnostjo — brez nje zavrne vse) in iz vsakega nakupa `petprep_challenge_12w` naredi »kredit izziva« družine. Kredit se sam dodeli, če ima družina samo enega neplačanega psa; sicer ga starš dodeli psu (`POST /api/parent/pets/{pet}/challenge/activate`). Pregled: `GET /api/parent/billing`. Vračilo kupnine kredit prekliče (pes nazaj v preizkus ali zaklep); prenos med računi prestavi neporabljene kredite. Admin vidi nakupe in kredite v Filamentu (samo branje). Kupiti v aplikaciji še ni mogoče. | starš, admin | 🛠 | M3-08, M3-11 | 2026-10-07 |
 | Strežnik: pravila brezplačnega plana 🆓 | Brezplačni plan: samo mešanček, brez »teden N od 12« in certifikata, starš vidi zgodovino **zadnjih 7 dni**, osnovni nabor videov (miruje, spi). | starš | 🛠 | M3-11 | 2026-10-07 |
 | Strežnik: AI mediji po nakupu 💶 | Poln nabor videov (6 stanj) samo za pse z **kupljenim** izzivom (David P6); nakup sproži manjkajoče videe. Preizkus, brezplačni mešanček in obstoječi psi: osnovni nabor (kar že imajo, ostane). Žetoni za več medijev (tudi za mešančka) 🗓 M4-09. | starš, otrok | 🛠 | M3-11 | 2026-10-07 |
@@ -221,14 +223,14 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID |
 |---|---|---|---|---|
-| Koraki iz Apple Zdravje / Health Connect | Koraki tudi pri zaprti aplikaciji (Android danes šteje samo, ko je odprta). | otrok | 🗓 | M3-04, M3-05, M3-06 |
+| Koraki iz Apple Zdravje / Health Connect | Glej §3 (zgrajeno; čaka nov native build in preizkus na telefonu). | otrok | ✅ (ni na napravi) | M3-04, M3-05, M3-06 |
 | Angleščina v aplikaciji | Glej §10 »Jezik aplikacije«. | vsi | ✅ | M1-18 |
 | Plačila | Glej §12 (zgrajeno; čaka nastavitev trgovin in RevenueCat ter native build). | starš | ✅ (ni na napravi) | M3-07, M3-09 |
 | Certifikat odgovornosti | Glej §7. | otrok, starš | 🗓 | M2-01d |
 | Zaprta beta (TestFlight + Google Play, 20–50 družin) | — | — | 🗓 | M5-07 |
 | Breed Matchmaker | Primerna pasma iz 12-tedenskih podatkov otroka. | starš | ⏸ | backlog |
 | Faza 2: asistent za pravega psa | Gumb »Kupili smo pravo žival«: ovratnice, AI prvi stik z napotitvijo k veterinarju, rast in prehrana. | lastnik | ⏸ | backlog, `PHASE2_SPEC.md` |
-| Mačka in druge živali | Podoba je že pripravljena (znak ni pes). | — | ⏸ | backlog |
+| Mačka in druge živali | David 7. 10. 2026: na začetku **pes in mačka**, izbira vrste → pasme. Pravila skrbi za mačko še niso določena. Podoba je že pripravljena (znak ni pes). | starš, otrok | 🗓 | M5-R06 | 2026-10-07 |
 | AR, GPS zemljevidi, vremenski API, LLM veterinar | Izključeno iz MVP. | — | ⏸ | scope guard |
 
 ---

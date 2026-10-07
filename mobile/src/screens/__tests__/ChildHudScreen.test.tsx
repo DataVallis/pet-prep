@@ -217,7 +217,7 @@ describe('ChildHudScreen', () => {
     expect(screen.getByText('ob 15:00')).toBeTruthy();
   });
 
-  it('feed 422 outside_feed_window → "Naslednji obrok je ob 17:00. Če bo kuža zelo lačen, mu lahko daš nujni obrok." and the value rolls back', async () => {
+  it('feed 422 outside_feed_window → "Naslednji obrok je ob 17:00." and the value rolls back', async () => {
     const state = makeLiveChildState({ feeding: { can_feed: true } });
     feedPet.mockRejectedValueOnce(
       new ApiError('refused', 422, {
@@ -230,7 +230,7 @@ describe('ChildHudScreen', () => {
     await renderHud(state);
     fireEvent.press(screen.getByTestId('action-feed'));
 
-    expect(await screen.findByText('Naslednji obrok je ob 17:00. Če bo kuža zelo lačen, mu lahko daš nujni obrok.')).toBeTruthy();
+    expect(await screen.findByText('Naslednji obrok je ob 17:00.')).toBeTruthy();
     expect(screen.getByText('60%')).toBeTruthy();
     expect(isDisabled('action-feed')).toBe(true);
   });
@@ -253,7 +253,7 @@ describe('ChildHudScreen', () => {
     fireEvent.press(screen.getByTestId('action-feed'));
     await waitFor(() => expect(feedPet).toHaveBeenCalledTimes(1));
     expect(
-      await screen.findByText('Njam! Kuža je sit. Nujni obrok ne šteje kot pravočasen — naslednji obrok je ob 17:00.'),
+      await screen.findByText('Njam! Kuža je sit. Obrok je bil zamujen, zato ne šteje kot pravočasen — naslednji obrok je ob 17:00.'),
     ).toBeTruthy();
     expect(screen.getByText('Hrani')).toBeTruthy();
     expect(isDisabled('action-feed')).toBe(true);

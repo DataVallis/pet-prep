@@ -1,6 +1,6 @@
 /**
- * M3-12 (David 2026-10-07): emergency meal at ≤ 20 % displayed hunger outside a meal
- * window — how the app reads it, derives it between server snapshots, labels it and
+ * M3-12 (David 2026-10-07, rule A): emergency meal at ≤ 20 % displayed hunger after a
+ * missed meal window — how the app reads it, derives it between server snapshots, labels it and
  * words the result.
  */
 import { i18n } from '@/i18n';
@@ -44,8 +44,14 @@ describe('normalizeChildState', () => {
   });
 });
 
-describe('deriveFeeding (same rule as the server feedCheck)', () => {
+describe('deriveFeeding (uses only what the server sent)', () => {
   const closed = view({ feeding: { can_feed: false, feed_mode: null } }).feeding;
+
+  it('no missed meal (server threshold null) → no emergency meal however low the hunger', () => {
+    const notMissed = view({ feeding: { can_feed: false, feed_mode: null, emergency_threshold: null } }).feeding;
+    expect(deriveFeeding(notMissed, 0, false)).toMatchObject({ can_feed: false, mode: null });
+  });
+
   const open = view({ feeding: { can_feed: true, feed_mode: 'window' } }).feeding;
 
   it.each([
@@ -75,6 +81,12 @@ describe('applyBroadcast', () => {
     expect(next?.view.feeding).toMatchObject({ can_feed: true, mode: 'emergency' });
   });
 
+  it('an on-time child (server threshold null) stays closed at 20 %', () => {
+    const fedOnTime = view({ pet: { hunger_level: 25 }, feeding: { can_feed: false, feed_mode: null, emergency_threshold: null } });
+    const next = applyBroadcast(fedOnTime, makeBroadcast({ hunger_level: 20, emitted_at: at(10), event_type: 'metric_changed' }));
+    expect(next?.view.feeding).toMatchObject({ can_feed: false, mode: null });
+  });
+
   it('21 % keeps it closed', () => {
     const next = applyBroadcast(base, makeBroadcast({ hunger_level: 21, emitted_at: at(10), event_type: 'metric_changed' }));
     expect(next?.view.feeding).toMatchObject({ can_feed: false, mode: null });
@@ -92,7 +104,7 @@ describe('optimistic emergency feed', () => {
   it('disables the button and leaves the window state alone (an emergency meal is outside every window)', () => {
     const v = view({ pet: { hunger_level: 5 }, feeding: { can_feed: true, feed_mode: 'emergency', fed_in_current_window: false } });
     const next = optimisticView(v, 'feed');
-    expect(next.feeding).toMatchObject({ can_feed: false, mode: null, fed_in_current_window: false });
+    expect(next.feeding).toMatchObject({ can_feed: false, mode: null, fed_in_current_window: false, emergency_threshold: null });
     expect(next.pet.hunger_level).toBe(100);
   });
 });
@@ -118,10 +130,10 @@ describe('label, hint and toast', () => {
   it('the toast after an emergency meal is honest about the score and names the next meal', () => {
     const after = view({ pet: { hunger_level: 100 } });
     expect(feedSuccessMessage('accepted', 'emergency', after)).toBe(
-      'Njam! Kuža je sit. Nujni obrok ne šteje kot pravočasen — naslednji obrok je ob 17:00.',
+      'Njam! Kuža je sit. Obrok je bil zamujen, zato ne šteje kot pravočasen — naslednji obrok je ob 17:00.',
     );
     expect(feedSuccessMessage('accepted', 'emergency', view({ feeding: { next_feed_window: null } }))).toBe(
-      'Njam! Kuža je sit. Nujni obrok ne šteje kot pravočasen.',
+      'Njam! Kuža je sit. Obrok je bil zamujen, zato ne šteje kot pravočasen.',
     );
     expect(feedSuccessMessage('accepted', 'window', after)).toBe('Njam! Kuža je sit.');
     expect(feedSuccessMessage('accepted', undefined, after)).toBe('Njam! Kuža je sit.');
@@ -132,7 +144,7 @@ describe('label, hint and toast', () => {
     const emergency = view({ pet: { hunger_level: 0 }, feeding: { can_feed: true, feed_mode: 'emergency' } });
     expect(feedLabel(emergency)).toBe('Emergency meal');
     expect(feedSuccessMessage('accepted', 'emergency', view())).toBe(
-      "Yum! Your pup is full. An emergency meal doesn't count as on time — the next meal is at 17:00.",
+      "Yum! Your pup is full. The meal was missed, so it doesn't count as on time — the next meal is at 17:00.",
     );
   });
 });

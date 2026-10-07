@@ -3,12 +3,11 @@
 namespace App\Services;
 
 use App\Enums\CareRefusal;
+use App\Enums\HygieneEventKind;
 use App\Enums\PushType;
 use App\Jobs\SendPushNotification;
 use App\Models\DevicePushToken;
 use App\Models\Pet;
-use App\Models\PetCaretaker;
-use App\Models\PetContract;
 use App\Models\PushNotification;
 use App\Models\PushTicket;
 use App\Models\User;
@@ -75,6 +74,7 @@ class NotificationService
         private readonly FamilyService $families,
         private readonly PushDeviceService $devices,
         private readonly CareScheduleService $schedule,
+        private readonly HygieneEventService $hygieneEvents,
     ) {}
 
     /**
@@ -496,15 +496,16 @@ class NotificationService
      * M3-12 (David 2026-10-07): which text a phase 1 / 2 food or water
      * reminder may use right now — CareScheduleService decides, exactly as for
      * the feed / water actions:
-     *  - the action is allowed (meal window, emergency meal at ≤ 20 % hunger,
-     *    water left) → the normal text (variant null);
+     *  - the action is allowed (meal window, emergency meal after a missed
+     *    window at ≤ 20 % hunger, water left) → the normal text (variant null);
      *  - hygiene shows 0 % (food and water refused) → `clean_first`;
      *  - refused until a later time today (next meal window, water gap) →
      *    `wait` with that family-local time;
      *  - not possible again today (water limit, last window over) → null:
      *    the reminder is not sent.
-     * Every other push (hygiene, walk, parent alarm, illness, game over,
-     * billing) asks for nothing the app refuses → the normal text.
+     * Hygiene reminders point to "Pospravi in daj igračo" while a chewed item
+     * is open (hygieneVariant). Every other push (walk, parent alarm, illness,
+     * game over, billing) asks for nothing the app refuses → the normal text.
      *
      * @return array{variant: string|null, replace: array<string, string>}|null
      */
@@ -512,8 +513,13 @@ class NotificationService
     {
         $plain = ['variant' => null, 'replace' => []];
         $metric = $notification->metric;
-        if (! in_array($notification->type, [PushType::SoftWarning, PushType::CriticalAlert], true)
-            || ! in_array($metric, ['hunger', 'thirst'], true)) {
+        if (! in_array($notification->type, [PushType::SoftWarning, PushType::CriticalAlert], true)) {
+            return $plain;
+        }
+        if ($metric === 'hygiene') {
+            return ['variant' => $this->hygieneVariant($pet), 'replace' => []];
+        }
+        if (! in_array($metric, ['hunger', 'thirst'], true)) {
             return $plain;
         }
 
@@ -544,8 +550,26 @@ class NotificationService
     }
 
     /**
-     * Children among $userIds who are caretakers of $pet but have not signed
-     * their own contract yet (423 contract_required for every care action).
+     * M3-12: a chewed item is not scrubbed away — it is tidied up with "Pospravi
+     * in daj igračo" (resolve-chewing). Only chewing open → `tidy`; chewing plus
+     * a poop / accident → `clean_and_tidy`; otherwise the plain mess text.
+     */
+    private function hygieneVariant(Pet $pet): ?string
+    {
+        $kinds = $this->hygieneEvents->openEvents($pet)
+            ->map(fn ($event): string => $event->kind instanceof HygieneEventKind ? $event->kind->value : (string) $event->kind)
+            ->unique();
+        if (! $kinds->contains(HygieneEventKind::Chewing->value)) {
+            return null;
+        }
+
+        return $kinds->count() > 1 ? PushCopy::VARIANT_CLEAN_AND_TIDY : PushCopy::VARIANT_TIDY;
+    }
+
+    /**
+     * Children among $userIds who still have to sign their own contract for
+     * $pet (Pet::caretakerNeedsContract — 423 contract_required for every
+     * care action).
      *
      * @param  list<int>  $userIds
      * @return list<int>
@@ -556,23 +580,11 @@ class NotificationService
             return [];
         }
 
-        $mustSign = PetCaretaker::where('pet_id', $pet->id)
-            ->whereIn('user_id', $userIds)
-            ->where('requires_contract', true)
-            ->pluck('user_id')
-            ->map(fn ($id): int => (int) $id)
+        return User::whereIn('id', $userIds)->get()
+            ->filter(fn (User $child): bool => $pet->caretakerNeedsContract($child))
+            ->map(fn (User $child): int => (int) $child->id)
+            ->values()
             ->all();
-        if ($mustSign === []) {
-            return [];
-        }
-
-        $signed = PetContract::where('pet_id', $pet->id)
-            ->whereIn('user_id', $mustSign)
-            ->pluck('user_id')
-            ->map(fn ($id): int => (int) $id)
-            ->all();
-
-        return array_values(array_diff($mustSign, $signed));
     }
 
     private function petLocked(Pet $pet): bool

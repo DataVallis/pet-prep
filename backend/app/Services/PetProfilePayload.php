@@ -107,7 +107,7 @@ final class PetProfilePayload
             'origin' => $this->origin,
             // Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy.
             'arrival_age_months' => $this->arrivalAgeMonths,
-            // The dog's age now: arrival age + one month per real week since birth (contract); null = legacy.
+            // The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy.
             'age_months' => $this->ageMonths,
             /**
              * Stage of today's rules (switches at the family-local midnight after the weekly birthday);

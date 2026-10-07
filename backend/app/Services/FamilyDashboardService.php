@@ -96,7 +96,7 @@ class FamilyDashboardService
     public function family(Family $family, User $viewer): array
     {
         $tz = $family->timezone;
-        $pets = Pet::where('family_id', $family->id)->orderBy('id')->with('media')->get();
+        $pets = Pet::where('family_id', $family->id)->orderBy('id')->with(['media', 'paymentLockPeriods'])->get();
         $caretakers = PetCaretaker::whereIn('pet_id', $pets->pluck('id'))->orderBy('id')->get();
         $contracts = PetContract::whereIn('pet_id', $pets->pluck('id'))->get(['pet_id', 'user_id', 'signed_at']);
         $children = $family->children()->get(['users.id', 'users.name', 'users.birth_year', DB::raw('(users.password IS NULL) AS pin_only')]);

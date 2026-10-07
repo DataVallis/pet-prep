@@ -2,6 +2,7 @@ import * as SecureStore from 'expo-secure-store';
 
 import { ApiError, api } from '@/api/client';
 import { restoreSession } from '@/modules/session/restoreSession';
+import { unregisterStepSyncTask } from '@/modules/steps/backgroundSteps';
 import { makePet } from '@/test-utils/fixtures';
 
 jest.mock('@/api/client', () => {
@@ -12,6 +13,8 @@ jest.mock('@/api/client', () => {
 const getItem = SecureStore.getItemAsync as jest.Mock;
 const deleteItem = SecureStore.deleteItemAsync as jest.Mock;
 const getUser = api.getUser as jest.Mock;
+
+jest.mock('@/modules/steps/backgroundSteps', () => ({ unregisterStepSyncTask: jest.fn(async () => undefined) }));
 
 describe('restoreSession', () => {
   beforeEach(() => {
@@ -76,6 +79,7 @@ describe('restoreSession', () => {
 
     await expect(restoreSession()).resolves.toEqual({ status: 'anonymous' });
     expect(deleteItem).toHaveBeenCalledWith('petprep_auth_token');
+    expect(unregisterStepSyncTask).toHaveBeenCalledTimes(1); // M3-06: no background sync with a revoked token
   });
 
   it('keeps the token when the server is unreachable (offline)', async () => {
@@ -85,6 +89,7 @@ describe('restoreSession', () => {
     const result = await restoreSession();
     expect(result.status).toBe('offline');
     expect(deleteItem).not.toHaveBeenCalled();
+    expect(unregisterStepSyncTask).not.toHaveBeenCalled();
   });
 
   it('keeps the token on a 5xx', async () => {
