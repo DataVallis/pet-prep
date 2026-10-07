@@ -123,16 +123,20 @@ class AccountDeletionService
      *
      * @return array{scope: 'family'|'parent', family_deleted: bool, parents_deleted: int, children_deleted: int, pets_deleted: int}
      *
-     * @throws AccountDeletionException not_a_parent (403), superadmin_protected (403)
+     * `$acknowledgePaidChallenge` (M3-11 P5): required when a deleted pet has
+     * a paid, unfinished challenge (the purchase stays used).
+     *
+     * @throws AccountDeletionException not_a_parent (403), superadmin_protected (403),
+     *                                  paid_challenge_ack_required (422)
      */
-    public function deleteParentAccount(User $parent): array
+    public function deleteParentAccount(User $parent, bool $acknowledgePaidChallenge = false): array
     {
         if (! $parent->isParent()) {
             throw new AccountDeletionException('not_a_parent', 'Only a parent account can be deleted here.', 403);
         }
         $this->assertNotSuperadmin($parent);
 
-        return DB::transaction(function () use ($parent): array {
+        return DB::transaction(function () use ($parent, $acknowledgePaidChallenge): array {
             $familyId = FamilyMember::where('user_id', $parent->id)->value('family_id');
 
             if ($familyId === null) {
@@ -143,8 +147,10 @@ class AccountDeletionService
                     return $this->summary('parent', false, 0, 0, 0); // already gone (idempotent)
                 }
                 $this->assertNotSuperadmin($locked);
+                $legacyPets = $this->legacyPetIdsOf([$parent->id])->all();
+                $this->assertPaidChallengeAcknowledged($legacyPets, $acknowledgePaidChallenge);
                 $this->detachLegacyMirrors([$parent->id]);
-                $pets = $this->deletePets($this->legacyPetIdsOf([$parent->id])->all());
+                $pets = $this->deletePets($legacyPets);
                 $this->deleteUsers([$parent->id]);
                 $this->audit('parent_deleted', null, self::BY_SELF, 1, 0, $pets);
 
@@ -163,6 +169,7 @@ class AccountDeletionService
             $others = array_values(array_diff($members['parents'], [$parent->id]));
 
             if ($others === []) {
+                $this->assertPaidChallengeAcknowledged(Pet::where('family_id', $familyId)->pluck('id')->all(), $acknowledgePaidChallenge);
                 $result = $this->purgeFamily((int) $familyId);
                 $this->audit('family_deleted', (int) $familyId, self::BY_SELF, $result['parents'], $result['children'], $result['pets']);
 
@@ -181,15 +188,16 @@ class AccountDeletionService
      *
      * @return array{child_id: int, pets_deleted: int, pets_kept: int}
      *
-     * @throws AccountDeletionException child_not_found (404), not_a_parent (403)
+     * @throws AccountDeletionException child_not_found (404), not_a_parent (403),
+     *                                  paid_challenge_ack_required (422, M3-11 P5)
      */
-    public function deleteChildProfile(User $parent, User $child): array
+    public function deleteChildProfile(User $parent, User $child, bool $acknowledgePaidChallenge = false): array
     {
         if (! $parent->isParent()) {
             throw new AccountDeletionException('not_a_parent', 'Only a parent can delete a child profile.', 403);
         }
 
-        return DB::transaction(function () use ($parent, $child): array {
+        return DB::transaction(function () use ($parent, $child, $acknowledgePaidChallenge): array {
             $notFound = fn () => new AccountDeletionException('child_not_found', 'No such child in your family.', 404);
 
             $familyId = FamilyMember::where('user_id', $child->id)
@@ -236,6 +244,9 @@ class AccountDeletionService
                 $kept[] = $pet;
             }
 
+            // M3-11 P5: checked before anything is written (the transaction
+            // rolls the shared-pet changes above back on a refusal).
+            $this->assertPaidChallengeAcknowledged($toDelete, $acknowledgePaidChallenge);
             $deleted = $this->deletePets($toDelete);
             ChildLoginPin::where('child_user_id', $child->id)->delete();
             FamilyMember::where('user_id', $child->id)->delete();
@@ -284,6 +295,38 @@ class AccountDeletionService
     // ──────────────────────────────────────────────────────────────
     //  Internals (callers hold the locks inside one transaction)
     // ──────────────────────────────────────────────────────────────
+
+    /**
+     * M3-11 P5 (David 2026-10-07): deleting a pet with a paid, unfinished
+     * challenge throws the purchase away (it stays used, no refund to the
+     * family) — the parent must say so explicitly. The body lists those pets
+     * (id + breed; no child data). Admin (Filament) deletions are not gated.
+     *
+     * @param  list<int>|array<int, int|string>  $petIds
+     *
+     * @throws AccountDeletionException paid_challenge_ack_required (422)
+     */
+    private function assertPaidChallengeAcknowledged(array $petIds, bool $acknowledged): void
+    {
+        if ($acknowledged || $petIds === []) {
+            return;
+        }
+
+        $losing = Pet::whereIn('id', $petIds)->orderBy('id')->get()
+            ->filter(fn (Pet $pet): bool => $pet->deletionLosesPurchase())
+            ->map(fn (Pet $pet): array => ['pet_id' => $pet->id, 'breed_type' => $pet->breed_type->value])
+            ->values()
+            ->all();
+
+        if ($losing !== []) {
+            throw new AccountDeletionException(
+                'paid_challenge_ack_required',
+                'This deletes a dog whose paid 12-week challenge is not finished. The purchase stays used. Send acknowledge_paid_challenge: true to continue.',
+                422,
+                extra: ['pets' => $losing],
+            );
+        }
+    }
 
     /**
      * The family lock order: every parent row (id order), every child row (id

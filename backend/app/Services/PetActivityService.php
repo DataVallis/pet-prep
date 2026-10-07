@@ -59,6 +59,7 @@ class PetActivityService
         private LifeStageService $lifeStages,
         private BehaviourEventService $behaviour,
         private TrainingService $training,
+        private ChallengeService $challenges,
     ) {}
 
     /**
@@ -541,6 +542,9 @@ class PetActivityService
 
             if ($locked->isUnborn()) {
                 $locked->giveBirth($now);
+                // M3-11 P7: one free trial per child — a child who already had one
+                // starts this challenge as payment_required (trial_ends_at = birth).
+                $locked->trial_ends_at = $this->challenges->trialEndAtBirth($locked, $child, $now);
                 $locked->pet_state = $this->decay->derivePetState($locked, $now);
                 $locked->saveQuietly();
 

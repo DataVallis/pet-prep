@@ -10,7 +10,9 @@ use App\Exceptions\ChallengeException;
 use App\Models\ChallengeCredit;
 use App\Models\Family;
 use App\Models\Pet;
+use App\Models\PetCaretaker;
 use App\Models\PurchaseEvent;
+use App\Models\User;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -168,7 +170,7 @@ class ChallengeCreditService
      * Read model for GET /api/parent/billing: available credits + the active
      * pets of the family with plan and payment status.
      *
-     * @return array{credits_available: int, pets: list<array{pet_id: int, plan: string, status: string|null, trial_ends_at: string|null, paid_at: string|null}>}
+     * @return array{credits_available: int, pets: list<array{pet_id: int, plan: string, status: string|null, trial_ends_at: string|null, paid_at: string|null, trial_available: bool|null, deletion_loses_purchase: bool}>}
      */
     public function billing(?Family $family): array
     {
@@ -187,8 +189,31 @@ class ChallengeCreditService
                 'status' => $pet->challengeStatus()?->value,
                 'trial_ends_at' => $pet->trial_ends_at?->copy()->setTimezone($tz)->toIso8601String(),
                 'paid_at' => $pet->challenge_paid_at?->copy()->setTimezone($tz)->toIso8601String(),
+                // P7: the pet has / gets the 7-day free trial (null for a free pet).
+                'trial_available' => $this->trialAvailable($pet),
+                // P5: deleting the pet (or its only child) throws the purchase away.
+                'deletion_loses_purchase' => $pet->deletionLosesPurchase(),
             ])->values()->all(),
         ];
+    }
+
+    /**
+     * P7: born → whether its trial ran (trial_ends_at after birth); unborn →
+     * whether its first caretaker still has the one free trial per child.
+     */
+    private function trialAvailable(Pet $pet): ?bool
+    {
+        if ($pet->plan !== PetPlan::Challenge) {
+            return null;
+        }
+        if ($pet->born_at !== null) {
+            return ! ChallengeService::startedWithoutTrial($pet);
+        }
+
+        $childId = PetCaretaker::where('pet_id', $pet->id)->orderBy('id')->value('user_id');
+        $child = $childId !== null ? User::find($childId) : null;
+
+        return $child === null || ! $this->challenges->childHadTrial($child, $pet->id);
     }
 
     /**

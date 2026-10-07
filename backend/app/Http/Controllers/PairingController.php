@@ -92,6 +92,13 @@ class PairingController extends Controller
                      * @var 'free'|'challenge'|null
                      */
                     'plan' => $result['plan'],
+                    /**
+                     * M3-11 P7: the new challenge pet gets the 7-day free trial (one per child,
+                     * ever); false = payment_required from birth; null = no challenge pet.
+                     *
+                     * @var bool|null
+                     */
+                    'trial_available' => $result['trial_available'],
                 ], 200);
             }
 

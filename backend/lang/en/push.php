@@ -56,5 +56,6 @@ return [
     'payment_required' => [
         'child' => 'The game is waiting for your parent. Your dog is safe and resting.',
         'parent' => 'The free trial has ended. The dog is waiting safely until you unlock the 12-week challenge in the app.',
+        'parent_no_trial' => 'The dog is waiting safely until you unlock the 12-week challenge in the app.',
     ],
 ];

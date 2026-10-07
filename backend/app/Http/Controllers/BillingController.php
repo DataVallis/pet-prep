@@ -42,7 +42,7 @@ class BillingController extends Controller
         return response()->json([
             /** @var int */
             'credits_available' => $billing['credits_available'],
-            /** @var list<array{pet_id: int, plan: 'free'|'challenge', status: 'trial'|'payment_required'|'paid'|null, trial_ends_at: string|null, paid_at: string|null}> */
+            /** @var list<array{pet_id: int, plan: 'free'|'challenge', status: 'trial'|'payment_required'|'paid'|null, trial_ends_at: string|null, paid_at: string|null, trial_available: bool|null, deletion_loses_purchase: bool}> */
             'pets' => $billing['pets'],
         ]);
     }

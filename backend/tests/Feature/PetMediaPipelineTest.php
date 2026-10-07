@@ -77,18 +77,16 @@ beforeEach(function () {
 });
 
 /**
- * A born pet of a child in a parent's family. M3-11: the media tier follows
- * the plan — the mutt here is a free-plan pet (basic set), every other breed
- * a challenge (full set).
+ * A born pet of a child in a parent's family. M3-11 P6: the full media tier
+ * needs a purchased challenge — the mutt here is a free-plan pet (basic
+ * set), every other breed a purchased challenge (full set).
  */
 function pmFamilyPet(string $breed = 'mutt', array $dna = []): array
 {
     $parent = createParentUser();
     $child = createChildUser(['parent_id' => $parent->id]);
     $factory = Pet::factory()->withPetDna($dna);
-    if ($breed === 'mutt') {
-        $factory = $factory->freePlan();
-    }
+    $factory = $breed === 'mutt' ? $factory->freePlan() : $factory->purchased();
     $pet = $factory->create(['user_id' => $child->id, 'breed_type' => $breed, 'media_status' => 'pending']);
 
     return [$parent, $child, $pet];
@@ -742,8 +740,8 @@ describe('media payload', function () {
 
         $pet = $this->actingAs($child)->postJson('/api/child/pair', ['pin' => $pin])->assertCreated()->json('pet');
 
-        // M3-11: /child/pair creates a challenge pet (old app builds) → the full set.
-        expect($pet['media'])->toMatchArray(['status' => 'pending', 'states' => ['idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing']])
+        // M3-11 P6: /child/pair creates an unpaid challenge pet (trial) → the basic set.
+        expect($pet['media'])->toMatchArray(['status' => 'pending', 'states' => ['idle', 'sleeping']])
             ->and($pet['pet_dna']['reference_image_url'])->toBeNull();
     });
 });

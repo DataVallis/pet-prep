@@ -16,8 +16,11 @@ use App\Models\Pet;
 use App\Models\PetStatusPeriod;
 use App\Models\PushNotification;
 use App\Models\User;
+use App\Services\ChallengeService;
 use App\Services\ChildProfileService;
 use App\Services\FamilyInviteService;
+use App\Services\Media\MediaEntitlementService;
+use App\Services\Media\PetMediaService;
 use App\Services\NotificationService;
 use App\Services\Push\ExpoPushClient;
 use App\Services\Push\PushCopy;
@@ -383,8 +386,8 @@ describe('credits: purchase, auto-assign, activate', function () {
         ctBilling($parent)->assertOk()->assertExactJson([
             'credits_available' => 1,
             'pets' => [
-                ['pet_id' => $a->id, 'plan' => 'challenge', 'status' => 'trial', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null],
-                ['pet_id' => $b->id, 'plan' => 'challenge', 'status' => 'trial', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null],
+                ['pet_id' => $a->id, 'plan' => 'challenge', 'status' => 'trial', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null, 'trial_available' => true, 'deletion_loses_purchase' => false],
+                ['pet_id' => $b->id, 'plan' => 'challenge', 'status' => 'trial', 'trial_ends_at' => '2026-10-14T12:00:00+02:00', 'paid_at' => null, 'trial_available' => true, 'deletion_loses_purchase' => false],
             ],
         ]);
 
@@ -633,5 +636,162 @@ describe('migration backfill', function () {
             ->toThrow(QueryException::class);
         expect(fn () => DB::transaction(fn () => DB::table('pets')->where('id', $free->id)->update(['challenge_paid_at' => now()])))
             ->toThrow(QueryException::class);
+    });
+});
+
+// ─────────────────────────────────────────────────────────────────────────
+describe('P5 — deleting a pet with a paid, unfinished challenge', function () {
+    function ctDeleteChild(User $parent, User $child, array $extra = []): TestResponse
+    {
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+
+        return test()->deleteJson("/api/parent/children/{$child->id}", array_merge(['password' => 'password', 'confirm' => true], $extra));
+    }
+
+    it('asks for acknowledge_paid_challenge before a child deletion takes a purchased pet; the purchase stays used', function () {
+        [$parent, $child, $pet] = ctFamily();
+        ctPurchase($parent)->assertJsonPath('outcome', 'granted'); // auto-assigned
+        ctBilling($parent)->assertJsonPath('pets.0.deletion_loses_purchase', true);
+
+        ctDeleteChild($parent, $child)->assertStatus(422)->assertExactJson([
+            'message' => 'This deletes a dog whose paid 12-week challenge is not finished. The purchase stays used. Send acknowledge_paid_challenge: true to continue.',
+            'reason' => 'paid_challenge_ack_required',
+            'pets' => [['pet_id' => $pet->id, 'breed_type' => 'mutt']],
+        ]);
+        expect(Pet::find($pet->id))->not->toBeNull()->and(User::find($child->id))->not->toBeNull();
+
+        ctDeleteChild($parent, $child, ['acknowledge_paid_challenge' => true])->assertOk()->assertJsonPath('pets_deleted', 1);
+        $credit = ChallengeCredit::sole();
+        expect(Pet::find($pet->id))->toBeNull()
+            ->and($credit->pet_id)->toBeNull()
+            ->and($credit->assigned_at)->not->toBeNull()
+            ->and($credit->revoked_at)->toBeNull();
+        ctBilling($parent)->assertJsonPath('credits_available', 0);
+    });
+
+    it('needs no acknowledgement for trial, grandfathered, finished or game-over pets', function () {
+        [$p1, $c1] = ctFamily();
+        ctDeleteChild($p1, $c1)->assertOk();
+        [$p2, $c2] = ctFamily([], 'grandfathered');
+        ctDeleteChild($p2, $c2)->assertOk();
+        [$p3, $c3, $over] = ctFamily();
+        ctPurchase($p3);
+        Pet::whereKey($over->id)->update(['is_game_over' => true, 'is_active' => false]);
+        ctDeleteChild($p3, $c3)->assertOk();
+        [$p4, $c4] = ctFamily();
+        ctPurchase($p4);
+        ctAt('2027-01-07 10:00:00'); // 13 weeks
+        ctDeleteChild($p4, $c4)->assertOk();
+    });
+
+    it('asks the last parent too; a parent who leaves the family does not', function () {
+        [$parent, , $pet] = ctFamily();
+        ctPurchase($parent);
+        $second = User::factory()->parent()->create();
+        $invites = app(FamilyInviteService::class);
+        $invites->joinFamily($second, $invites->createInvite($parent)['code']);
+
+        app('auth')->forgetGuards();
+        actingAsRole($second);
+        postJson('/api/parent/account/delete', ['password' => 'password', 'confirm' => true])->assertOk()->assertJsonPath('scope', 'parent');
+
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        postJson('/api/parent/account/delete', ['password' => 'password', 'confirm' => true])
+            ->assertStatus(422)->assertJsonPath('reason', 'paid_challenge_ack_required')->assertJsonPath('pets.0.pet_id', $pet->id);
+        postJson('/api/parent/account/delete', ['password' => 'password', 'confirm' => true, 'acknowledge_paid_challenge' => true])
+            ->assertOk()->assertJsonPath('family_deleted', true);
+    });
+});
+
+// ─────────────────────────────────────────────────────────────────────────
+describe('P6 — full AI media only for a purchased challenge', function () {
+    it('gives trial, grandfathered and free pets the basic tier, a purchased one the full tier', function () {
+        $tier = fn (Pet $p) => app(MediaEntitlementService::class)->tierFor($p->fresh());
+        [, , $trial] = ctFamily();
+        [, , $old] = ctFamily([], 'grandfathered');
+        [, , $free] = ctFamily([], 'free');
+        [$parent, , $bought] = ctFamily();
+        ctPurchase($parent);
+
+        expect($tier($trial))->toBe('basic')
+            ->and($tier($old))->toBe('basic')
+            ->and($tier($free))->toBe('basic')
+            ->and($tier($bought))->toBe('full');
+    });
+
+    it('queues the missing full-set videos once the purchase is assigned (after commit)', function () {
+        [$parent, , $pet] = ctFamily();
+        $this->partialMock(PetMediaService::class, function ($mock) use ($pet) {
+            $mock->shouldReceive('queueStateVideos')->once()->withArgs(fn (Pet $p) => $p->id === $pet->id)->andReturn(4);
+        });
+
+        ctPurchase($parent)->assertJsonPath('outcome', 'granted');
+    });
+});
+
+// ─────────────────────────────────────────────────────────────────────────
+describe('P7 — one free trial per child; game over is not unlocked by a purchase', function () {
+    it('starts a second challenge pet of the same child as payment_required at birth', function () {
+        config(['push.enabled' => true]);
+        Queue::fake([SendPushNotification::class]);
+        [$parent, $child, $first] = ctFamily();
+        // The first challenge ended in game over during its trial.
+        Pet::whereKey($first->id)->update(['is_game_over' => true, 'is_active' => false]);
+
+        // Activating the game-over pet is refused; the purchase waits.
+        ctPurchase($parent);
+        ctActivate($parent, $first)->assertStatus(422)->assertJsonPath('reason', 'pet_not_active');
+
+        // (A paired child's PIN is a re-login, so generate-pin answers trial_available
+        // null here; the next pet is created directly — see the open question in the report.)
+        expect(app(ChallengeService::class)->childHadTrial($child))->toBeTrue();
+
+        $second = Pet::factory()->mutt()->trial()->unborn()->create(['user_id' => $child->id]);
+        ctBilling($parent)->assertJsonPath('pets.0.pet_id', $second->id)->assertJsonPath('pets.0.trial_available', false);
+
+        ctAt('2026-10-08 10:00:00');
+        app('auth')->forgetGuards();
+        actingAsRole($child);
+        postJson('/api/child/contract', ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20'])->assertCreated()
+            ->assertJsonPath('state.lock.reason', 'payment_required')
+            ->assertJsonPath('state.pet.plan.status', 'payment_required')
+            ->assertJsonPath('state.pet.plan.trial_ends_at', '2026-10-08T12:00:00+02:00');
+
+        ctTick();
+        expect($second->fresh()->isPaymentLocked())->toBeTrue()
+            ->and(PushNotification::where('type', 'payment_required')->sole()->metric)->toBe('no_trial')
+            ->and(PushCopy::body(PushType::PaymentRequired, 'no_trial', 'parent', 'en'))->toBe('The dog is waiting safely until you unlock the 12-week challenge in the app.')
+            ->and(PushCopy::body(PushType::PaymentRequired, 'no_trial', 'child', 'sl'))->toBe('Igra počaka na starša. Tvoj kuža je na varnem in počiva.');
+
+        // The waiting credit pays the new pet.
+        ctActivate($parent, $second)->assertOk()->assertJsonPath('status', 'activated');
+        expect($second->fresh()->isPaymentLocked())->toBeFalse();
+    });
+
+    it('keeps the trial for a child whose earlier pet was grandfathered', function () {
+        [, $child, $old] = ctFamily([], 'grandfathered');
+        Pet::whereKey($old->id)->update(['is_game_over' => true, 'is_active' => false]);
+        $next = Pet::factory()->mutt()->trial()->unborn()->create(['user_id' => $child->id]);
+
+        actingAsRole($child);
+        postJson('/api/child/contract', ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20'])->assertCreated()
+            ->assertJsonPath('state.pet.plan.status', 'trial')
+            ->assertJsonPath('state.pet.plan.trial_ends_at', '2026-10-14T12:00:00+02:00');
+        expect(app(ChallengeService::class)->childHadTrial($child, $next->id))->toBeFalse();
+    });
+
+    it('tells the parent at PIN time whether the new challenge pet gets the free trial', function () {
+        seedLifeStageData();
+        $parent = User::factory()->parent()->create();
+        $fresh = app(ChildProfileService::class)->createChild($parent, 'Nova', null);
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+
+        postJson('/api/parent/generate-pin', ['child_id' => $fresh->id])->assertOk()
+            ->assertJsonPath('plan', 'challenge')->assertJsonPath('trial_available', true);
+        postJson('/api/parent/generate-pin', ['child_id' => $fresh->id, 'plan' => 'free'])->assertOk()
+            ->assertJsonPath('plan', 'free')->assertJsonPath('trial_available', null);
     });
 });

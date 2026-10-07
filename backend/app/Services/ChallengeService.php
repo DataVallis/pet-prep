@@ -8,6 +8,9 @@ use App\Enums\PetPlan;
 use App\Enums\PushType;
 use App\Events\PetUpdated;
 use App\Models\Pet;
+use App\Models\PetCaretaker;
+use App\Models\User;
+use App\Services\Media\PetMediaService;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -53,6 +56,46 @@ class ChallengeService
     public function statusOf(Pet $pet, ?CarbonInterface $now = null): ?ChallengeStatus
     {
         return $pet->challengeStatus($now);
+    }
+
+    /**
+     * P7 (David 2026-10-07; "one free trial per child, ever" is Claude's
+     * interpretation, DECISIONS): did this child already have a free trial —
+     * is / was it a caretaker (ended rows included) of another born challenge
+     * pet that was not grandfathered? Trial ended in game over, still running,
+     * or paid during or after it: all count.
+     */
+    public function childHadTrial(User $child, ?int $exceptPetId = null): bool
+    {
+        return Pet::query()
+            ->whereIn('id', PetCaretaker::query()->where('user_id', $child->id)->select('pet_id'))
+            ->when($exceptPetId !== null, fn ($q) => $q->where('id', '!=', $exceptPetId))
+            ->where('plan', PetPlan::Challenge->value)
+            ->whereNotNull('born_at')
+            ->whereNotNull('trial_ends_at')
+            ->where(fn ($q) => $q->whereNull('challenge_paid_source')
+                ->orWhere('challenge_paid_source', '!=', ChallengePaidSource::Grandfathered->value))
+            ->exists();
+    }
+
+    /**
+     * Trial end for a challenge pet born now with $child's contract: birth +
+     * 7 family-local days, or the birth itself (no trial → payment_required
+     * from birth) when the child already had a trial. Null for a free pet.
+     */
+    public function trialEndAtBirth(Pet $pet, User $child, CarbonInterface $birth): ?CarbonInterface
+    {
+        if ($pet->plan !== PetPlan::Challenge) {
+            return null;
+        }
+
+        return $this->childHadTrial($child, $pet->id) ? $birth->copy()->utc() : $pet->trialEndFor($birth);
+    }
+
+    /** True when the pet's challenge started without a free trial (P7). */
+    public static function startedWithoutTrial(Pet $pet): bool
+    {
+        return $pet->born_at !== null && $pet->trial_ends_at !== null && $pet->trial_ends_at->lessThanOrEqualTo($pet->born_at);
     }
 
     /**
@@ -130,7 +173,8 @@ class ChallengeService
         ])->save();
 
         PetUpdated::afterCommit($pet, self::EVENT_LOCKED);
-        $this->notifications->escalation($pet, PushType::PaymentRequired);
+        // P7: a challenge without a free trial gets its own parent copy (no "trial ended").
+        $this->notifications->escalation($pet, PushType::PaymentRequired, self::startedWithoutTrial($pet) ? 'no_trial' : null);
 
         Log::info('Challenge: payment lock', ['pet_id' => $pet->id]);
     }
@@ -153,6 +197,23 @@ class ChallengeService
         ])->save();
 
         PetUpdated::afterCommit($pet, self::EVENT_PAID);
+
+        // P6: a purchase entitles the pet to the full video set — queue what is
+        // missing (born pets only; queueStateVideos skips stored / running slots).
+        if ($source === ChallengePaidSource::Purchase) {
+            $petId = $pet->id;
+            DB::afterCommit(function () use ($petId): void {
+                try {
+                    $paid = Pet::find($petId);
+                    if ($paid !== null) {
+                        app(PetMediaService::class)->queueStateVideos($paid);
+                    }
+                } catch (\Throwable $e) {
+                    Log::error('Challenge: full media set not queued', ['pet_id' => $petId, 'error' => $e->getMessage()]);
+                    report($e);
+                }
+            });
+        }
 
         return true;
     }

@@ -69,6 +69,7 @@ class ChildPinLoginService
         private readonly FamilyService $families,
         private readonly PairingService $pairing,
         private readonly ChildProfileService $profiles,
+        private readonly ChallengeService $challenges,
     ) {}
 
     public static function hashPin(string $pin): string
@@ -84,7 +85,7 @@ class ChildPinLoginService
      * legacy-profile pet on the pre-M5 rules. `$plan` (M3-11) is the new
      * pet's plan, kept on the PIN the same way (free → mutt only).
      *
-     * @return array{pin: string, expires_at: Carbon, child_id: int, pet_id: int|null, mode: string, pet_profile: array{breed: string, origin: string, age_stage: string, features: list<string>}|null, plan: string|null}
+     * @return array{pin: string, expires_at: Carbon, child_id: int, pet_id: int|null, mode: string, pet_profile: array{breed: string, origin: string, age_stage: string, features: list<string>}|null, plan: string|null, trial_available: bool|null}
      *
      * @throws FamilyException child_not_found (404), pet_not_joinable (422),
      *                         already_paired (422), breed_locked (422)
@@ -130,6 +131,9 @@ class ChildPinLoginService
                 'mode' => $mode,
                 'pet_profile' => $options,
                 'plan' => $newPetPlan?->value,
+                // M3-11 P7: whether the new challenge pet gets the 7-day free trial
+                // (one per child, ever); null when no challenge pet is created.
+                'trial_available' => $newPetPlan === PetPlan::Challenge ? ! $this->challenges->childHadTrial($child) : null,
             ];
         });
     }

@@ -64,6 +64,18 @@ class PetFactory extends Factory
     }
 
     /**
+     * M3-11: a challenge paid by a store purchase (full AI media tier, P6).
+     */
+    public function purchased(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'plan' => 'challenge',
+            'challenge_paid_at' => now(),
+            'challenge_paid_source' => 'purchase',
+        ]);
+    }
+
+    /**
      * M3-11: the free mutt sandbox (no trial, no payment).
      */
     public function freePlan(): static

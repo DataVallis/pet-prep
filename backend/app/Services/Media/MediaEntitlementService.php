@@ -2,6 +2,7 @@
 
 namespace App\Services\Media;
 
+use App\Enums\ChallengePaidSource;
 use App\Enums\LifeStage;
 use App\Enums\PetPlan;
 use App\Enums\PetStateEnum;
@@ -29,11 +30,15 @@ use App\Models\Pet;
  * RevenueCat entitlement) and AI media tokens (M4-09) can plug in here
  * without touching the pipeline. The reference image is always included.
  *
- * M3-11 (PAYMENTS_SPEC P4, "personaliziran AI pes"): the tier follows the
- * pet's PLAN, not its breed — a `challenge` pet gets the `full` set (also
- * during the trial and while payment is required: the videos are made at
- * birth, before anyone could pay), a `free` pet the `basic` set. A refund
- * never deletes videos already made.
+ * M3-11 P6 (David 2026-10-07, AI cost): the `full` set only for a pet
+ * whose challenge was PAID BY A PURCHASE (`challenge_paid_source =
+ * purchase`). Trial, payment_required, free-plan and grandfathered pets get
+ * the `basic` set. Media a pet already has stays served (mediaFor serves
+ * every stored classic state; behaviour videos while their event can
+ * happen); this rule never deletes or regenerates anything by itself. A
+ * purchase queues the missing full-set videos (ChallengeService::markPaid).
+ * More media for other pets: AI-media tokens (M4-09, planned — also for the
+ * free mutt).
  */
 class MediaEntitlementService
 {
@@ -43,7 +48,9 @@ class MediaEntitlementService
 
     public function tierFor(Pet $pet): string
     {
-        return $pet->plan === PetPlan::Challenge ? self::TIER_FULL : self::TIER_BASIC;
+        return $pet->plan === PetPlan::Challenge && $pet->challenge_paid_source === ChallengePaidSource::Purchase
+            ? self::TIER_FULL
+            : self::TIER_BASIC;
     }
 
     /**
@@ -81,7 +88,7 @@ class MediaEntitlementService
      * A behaviour video only where its event can happen (M5-R02); every
      * other state always applies.
      */
-    private function behaviourApplies(Pet $pet, PetStateEnum $state): bool
+    public function behaviourApplies(Pet $pet, PetStateEnum $state): bool
     {
         return match ($state) {
             PetStateEnum::Accident => $pet->behaviourEventsEnabled() && $pet->life_stage === LifeStage::Puppy,

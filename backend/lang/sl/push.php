@@ -56,5 +56,6 @@ return [
     'payment_required' => [
         'child' => 'Igra počaka na starša. Tvoj kuža je na varnem in počiva.',
         'parent' => 'Brezplačni preizkus je končan. Kuža varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
+        'parent_no_trial' => 'Kuža varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
     ],
 ];

@@ -622,6 +622,20 @@ class Pet extends Model
     }
 
     /**
+     * Deleting this pet throws away a purchase (P5, David 2026-10-07): a
+     * challenge paid by a store purchase (not grandfathered) that is neither
+     * finished (12 weeks) nor ended by game over. The purchase stays used;
+     * deletions ask for `acknowledge_paid_challenge`.
+     */
+    public function deletionLosesPurchase(): bool
+    {
+        return $this->plan === PetPlan::Challenge
+            && $this->challenge_paid_source === ChallengePaidSource::Purchase
+            && ! $this->is_game_over
+            && ! $this->hasReachedSimulationEnd();
+    }
+
+    /**
      * The game-loop freeze of an unpaid challenge after its trial (set by the
      * tick, ChallengeService::processTrials; cleared on payment).
      */
