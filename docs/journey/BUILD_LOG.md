@@ -8,6 +8,20 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-07 — »Čaka na podpis« samo, ko otrok res mora podpisati (M5-F07)
+
+**Kaj se je zgodilo:** David je na Pregledu pri testnem otroku hkrati videl »Nujno«, »brez hrane / vode več kot uro«, »zbolel je« **in** »pes čaka, da otrok podpiše pogodbo«. Pes pred podpisom ne upada, zato se to ne bi smelo zgoditi skupaj. Vzrok: napaka prikaza, ne igre. Star testni pes je iz časa pred pogodbami — otrok zanj nikoli ne podpiše in pes normalno živi. Nadzorna plošča pa je »podpisano« štela samo, če obstaja zapis pogodbe. Zdaj strežnik pove »podpisano«, ko otroku ni (več) treba podpisati: pes je rojen in otrok je podpisal ali je skrbnik iz časa pred pogodbami.
+
+**Zakaj je pomembno:** Starš mora videti isto, kar velja za otroka. Napačno »čaka na podpis« ob alarmih zmede in zmanjša zaupanje v vsa ostala opozorila.
+
+**Številke:** 6 novih testov (stari pes → podpisano, nerojen pes → ne, pridruženi otrok brez podpisa → ne, podpisal → da, prvi podpis rodi psa → da, ujemanje s pravilom zaklepa za vsakega skrbnika); strežnik 1.323 zelenih testov. Aplikacija brez sprememb.
+
+**Kako povedati:**
+- 👩 Starši: »Opozorilo ›čaka na podpis pogodbe‹ se pokaže samo, ko otrok res še mora podpisati.«
+- 🛠 Tehnično: »`contract_signed` na `/api/parent/dashboard` je zdaj enako pravilo kot zaklep otroka (`isUnborn() || caretakerNeedsContract()`), izračunano iz že naloženih zbirk — brez dodatnih poizvedb.«
+
+---
+
 ## 2026-10-07 — Popravki po TestFlightu: ura pod gumbi in ploščice albuma
 
 **Kaj se je zgodilo:** David je na iPhonu videl »tomorrow at 0…« pod gumbom za hrano (ura odrezana) in prazne temne ploščice videov v albumu »Moj kuža«. Zdaj je čas za jutri v dveh vrsticah (»jutri« / »06:00«) in se nikoli ne odreže; ploščice videov kažejo sliko kužka z gumbom ▶ in enotno oznako, med nalaganjem pa mirno ploščico v barvah znamke. Testi aplikacije: 1.340 zelenih (29 novih). **Na telefonu še ni preizkušeno.**

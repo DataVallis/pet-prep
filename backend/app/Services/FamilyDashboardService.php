@@ -157,8 +157,11 @@ class FamilyDashboardService
                     'login' => $child->getAttribute('pin_only') ? 'pin' : 'email',
                     'devices' => (int) ($devices[$child->id] ?? 0),
                     'pet_id' => $current?->id,
+                    // M5-F07: true when the child no longer has to sign (born
+                    // pet + signed or grandfathered caretaker) — not "a
+                    // contract row exists".
                     'contract_signed' => $current !== null
-                        && $contracts->where('pet_id', $current->id)->where('user_id', $child->id)->isNotEmpty(),
+                        && self::contractSettled($current, $child->id, $caretakers, $contracts),
                     // Last 7 family-local days, only this child's own actions.
                     'stats' => [
                         'days' => self::STATS_DAYS,
@@ -198,7 +201,7 @@ class FamilyDashboardService
                 // stays in the board for the fair share but is not listed.
                 'caretakers' => $caretakers->where('pet_id', $pet->id)->filter(fn (PetCaretaker $c) => ! $c->isTombstone())->map(fn (PetCaretaker $c) => [
                     'child_id' => $c->user_id,
-                    'contract_signed' => $contracts->where('pet_id', $pet->id)->where('user_id', $c->user_id)->isNotEmpty(),
+                    'contract_signed' => self::contractSettled($pet, $c->user_id, $caretakers, $contracts),
                 ])->values()->all(),
                 // Displayed metrics (same rounding the child sees).
                 'metrics' => [
@@ -363,6 +366,32 @@ class FamilyDashboardService
         }
 
         return $out;
+    }
+
+    /**
+     * M5-F07: true when $childId does not (any more) have to sign a contract
+     * for $pet — the pet is born AND the child either signed (a
+     * `pet_contracts` row) or is a grandfathered caretaker
+     * (`pet_caretakers.requires_contract` false: pets born before contracts,
+     * factory / test pets). The same rule as
+     * `! ($pet->isUnborn() || $pet->caretakerNeedsContract($child))`, but
+     * computed from the collections the dashboard already loaded (no N+1).
+     *
+     * @param  Collection<int, PetCaretaker>  $caretakers
+     * @param  Collection<int, PetContract>  $contracts
+     */
+    public static function contractSettled(Pet $pet, int $childId, Collection $caretakers, Collection $contracts): bool
+    {
+        if ($pet->isUnborn()) {
+            return false;
+        }
+
+        $row = $caretakers->first(fn (PetCaretaker $c) => (int) $c->pet_id === $pet->id && (int) $c->user_id === $childId);
+        if ($row !== null && ! $row->requires_contract) {
+            return true;
+        }
+
+        return $contracts->contains(fn (PetContract $k) => (int) $k->pet_id === $pet->id && (int) $k->user_id === $childId);
     }
 
     /**
