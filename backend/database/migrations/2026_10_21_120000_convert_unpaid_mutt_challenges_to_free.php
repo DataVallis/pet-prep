@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Schema;
  *    free plan. A converted pet may have past `payment_lock` periods, which
  *    must stay out of its program clock (Pet::paymentLockSpans reads them
  *    for a free pet only when this is set).
+ *    CHECK pets_converted_free_check: only a free pet can carry it.
  *  - Data: every UNPAID mutt challenge (trial, payment required or not born
  *    yet — `challenge_paid_at` null) → plan free via
  *    ChallengeService::convertUnpaidMuttToFree (row lock, non-quiet save:
@@ -33,6 +34,7 @@ return new class extends Migration
         Schema::table('pets', function (Blueprint $table) {
             $table->timestamp('converted_to_free_at')->nullable();
         });
+        DB::statement("ALTER TABLE pets ADD CONSTRAINT pets_converted_free_check CHECK (converted_to_free_at IS NULL OR plan = 'free')");
 
         $ids = DB::table('pets')
             ->where('breed_type', 'mutt')
@@ -50,6 +52,7 @@ return new class extends Migration
 
     public function down(): void
     {
+        DB::statement('ALTER TABLE pets DROP CONSTRAINT IF EXISTS pets_converted_free_check');
         Schema::table('pets', function (Blueprint $table) {
             $table->dropColumn('converted_to_free_at');
         });

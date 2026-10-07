@@ -102,7 +102,7 @@ function rcParentWithPet(): array
 {
     $parent = User::factory()->parent()->create();
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
-    $pet = Pet::factory()->mutt()->trial()->create(['user_id' => $child->id]);
+    $pet = Pet::factory()->borderCollie()->trial()->create(['user_id' => $child->id]);
 
     return [$parent, $pet];
 }

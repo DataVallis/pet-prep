@@ -15,6 +15,7 @@ use App\Enums\PetStatusPeriodKind;
 use App\Jobs\DeletePetMediaFiles;
 use App\Services\FamilyService;
 use App\Services\LifeStageService;
+use App\Services\PairingService;
 use App\Services\PetStatusPeriodService;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
@@ -67,8 +68,15 @@ class Pet extends Model
             }
 
             // M3-11: a pet's plan is fixed at creation; only a challenge has a trial.
-            if ($pet->plan === null) {
-                $pet->plan = PetPlan::Challenge;
+            // PAYMENTS_SPEC P4 / M5-F03: the default follows the breed, and an unpaid
+            // challenge of a breed without premium (the mutt) is the free plan — no
+            // creation path (admin, seeders, legacy pairing) makes a lockable mutt.
+            $pet->plan ??= PairingService::defaultPlanFor($pet->breed_type ?? BreedType::Mutt);
+            if ($pet->plan === PetPlan::Challenge && $pet->challenge_paid_at === null
+                && ! ($pet->breed_type ?? BreedType::Mutt)->isPremium()) {
+                $pet->plan = PetPlan::Free;
+                $pet->trial_ends_at = null;
+                $pet->payment_locked_at = null;
             }
 
             if ($pet->isUnborn()) {

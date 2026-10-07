@@ -49,11 +49,11 @@ function pcFamily(string $state = 'trial', ?User $parent = null): array
 {
     $parent ??= User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
-    $factory = Pet::factory()->mutt();
+    // M5-F03: a challenge on trial is a paid breed (an unpaid mutt challenge is the free plan).
     $factory = match ($state) {
-        'trial' => $factory->trial(),
-        'free' => $factory->freePlan(),
-        default => $factory,
+        'trial' => Pet::factory()->borderCollie()->trial(),
+        'free' => Pet::factory()->mutt()->freePlan(),
+        default => Pet::factory()->mutt(),
     };
     $pet = $factory->create(['user_id' => $child->id, 'arrival_age_months' => 2]);
 

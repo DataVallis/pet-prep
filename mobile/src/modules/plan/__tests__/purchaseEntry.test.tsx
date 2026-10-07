@@ -21,12 +21,12 @@ import { makeFamilyPet, makeScoredChild } from '@/test-utils/fixtures';
 
 type RawPlan = ReturnType<typeof makeFamilyPet>['plan'];
 
-const TRIAL: RawPlan = { type: 'challenge', status: 'trial', trial_ends_at: '2026-10-12T10:00:00+02:00', paid_at: null, payments_enforced: true };
-const LOCKED: RawPlan = { type: 'challenge', status: 'payment_required', trial_ends_at: '2026-10-05T10:00:00+02:00', paid_at: null, payments_enforced: true };
-const PAID: RawPlan = { type: 'challenge', status: 'paid', trial_ends_at: null, paid_at: '2026-10-01T10:00:00+02:00', payments_enforced: true };
+const TRIAL: RawPlan = { type: 'challenge', status: 'trial', trial_ends_at: '2026-10-12T10:00:00+02:00', paid_at: null, payments_enforced: true, display_type: 'challenge' };
+const LOCKED: RawPlan = { type: 'challenge', status: 'payment_required', trial_ends_at: '2026-10-05T10:00:00+02:00', paid_at: null, payments_enforced: true, display_type: 'challenge' };
+const PAID: RawPlan = { type: 'challenge', status: 'paid', trial_ends_at: null, paid_at: '2026-10-01T10:00:00+02:00', payments_enforced: true, display_type: 'challenge' };
 /** What the server really sends for an unborn challenge dog: `trial` without an end (starts at signing). */
-const UNBORN_TRIAL: RawPlan = { type: 'challenge', status: 'trial', trial_ends_at: null, paid_at: null, payments_enforced: true };
-const FREE: RawPlan = { type: 'free', status: null, trial_ends_at: null, paid_at: null, payments_enforced: true };
+const UNBORN_TRIAL: RawPlan = { type: 'challenge', status: 'trial', trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'challenge' };
+const FREE: RawPlan = { type: 'free', status: null, trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'free' };
 
 function pet(plan: RawPlan, overrides: Partial<ReturnType<typeof makeFamilyPet>> = {}): FamilyPet {
   return normalizePet(makeFamilyPet({ breed_type: 'border_collie', plan, ...overrides }));

@@ -11,8 +11,12 @@ use App\Models\User;
 use App\Services\ChallengeService;
 use App\Services\ChildProfileService;
 use App\Services\PetPlanPayload;
+use Database\Seeders\TestUsersSeeder;
+use Illuminate\Database\QueryException;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Testing\TestResponse;
 
 use function Pest\Laravel\getJson;
@@ -241,7 +245,7 @@ describe('M5-F02 data migration: unpaid mutt challenges become the free plan (P4
     }
 
     it('converts a mutt on its trial; it can never be locked afterwards', function () {
-        [$parent, $pet] = mfFamilyPet(fn ($f) => $f->mutt()->trial());
+        [$parent, $pet] = mfFamilyPet(fn ($f) => $f->legacyUnpaidMuttChallenge());
         expect($pet->challengeStatus())->toBe(ChallengeStatus::Trial);
 
         expect(mfConvert($pet))->toBeTrue();
@@ -265,7 +269,7 @@ describe('M5-F02 data migration: unpaid mutt challenges become the free plan (P4
     });
 
     it('makes a payment-locked mutt playable again; the lock period is closed and stays out of the program clock', function () {
-        [, $pet] = mfFamilyPet(fn ($f) => $f->mutt()->trial());
+        [, $pet] = mfFamilyPet(fn ($f) => $f->legacyUnpaidMuttChallenge());
         $child = $pet->caretakers()->first();
 
         // Trial over (2026-10-14 10:00 UTC), the tick locks it.
@@ -307,7 +311,7 @@ describe('M5-F02 data migration: unpaid mutt challenges become the free plan (P4
     });
 
     it('converts an unborn mutt challenge', function () {
-        [, $pet] = mfFamilyPet(fn ($f) => $f->mutt()->trial()->unborn());
+        [, $pet] = mfFamilyPet(fn ($f) => $f->legacyUnpaidMuttChallenge()->unborn());
 
         expect(mfConvert($pet))->toBeTrue()
             ->and($pet->fresh()->plan)->toBe(PetPlan::Free)
@@ -328,13 +332,13 @@ describe('M5-F02 data migration: unpaid mutt challenges become the free plan (P4
                 ->and($pet->fresh()->converted_to_free_at)->toBeNull();
         }
 
-        [, $trial] = mfFamilyPet(fn ($f) => $f->mutt()->trial());
+        [, $trial] = mfFamilyPet(fn ($f) => $f->legacyUnpaidMuttChallenge());
         expect(mfConvert($trial))->toBeTrue()->and(mfConvert($trial))->toBeFalse();
     });
 
     it('the migration converts exactly the unpaid mutt challenges', function () {
-        [, $trial] = mfFamilyPet(fn ($f) => $f->mutt()->trial());
-        [, $unborn] = mfFamilyPet(fn ($f) => $f->mutt()->trial()->unborn());
+        [, $trial] = mfFamilyPet(fn ($f) => $f->legacyUnpaidMuttChallenge());
+        [, $unborn] = mfFamilyPet(fn ($f) => $f->legacyUnpaidMuttChallenge()->unborn());
         [, $grandfathered] = mfFamilyPet(fn ($f) => $f->mutt());
         [, $collie] = mfFamilyPet(fn ($f) => $f->borderCollie()->trial());
 
@@ -348,5 +352,105 @@ describe('M5-F02 data migration: unpaid mutt challenges become the free plan (P4
             ->and($grandfathered->fresh()->challenge_paid_source)->toBe(ChallengePaidSource::Grandfathered)
             ->and($collie->fresh()->plan)->toBe(PetPlan::Challenge)
             ->and($collie->fresh()->challengeStatus())->toBe(ChallengeStatus::Trial);
+    });
+});
+
+// ─────────────────────────────────────────────────────────────────────────
+describe('M5-F02 QA: no path creates or re-locks an unpaid mutt challenge', function () {
+    it('Pet::creating: plan defaults by breed; an unpaid mutt challenge becomes free; paid mutts stay', function () {
+        $parent = User::factory()->parent()->create();
+        $childA = User::factory()->child()->create(['parent_id' => $parent->id]);
+        $childB = User::factory()->child()->create(['parent_id' => $parent->id]);
+        $base = ['born_at' => now(), 'hunger_level' => 100, 'thirst_level' => 100, 'energy_level' => 100, 'hygiene_level' => 100, 'is_active' => true];
+
+        // Admin / seeder style: no plan → by breed.
+        $mutt = Pet::create($base + ['user_id' => $childA->id, 'breed_type' => 'mutt']);
+        expect($mutt->plan)->toBe(PetPlan::Free)->and($mutt->trial_ends_at)->toBeNull()->and($mutt->challengeStatus())->toBeNull();
+
+        $collie = Pet::create($base + ['user_id' => $childB->id, 'breed_type' => 'border_collie']);
+        expect($collie->plan)->toBe(PetPlan::Challenge)->and($collie->challengeStatus())->toBe(ChallengeStatus::Trial);
+
+        // An explicit unpaid mutt challenge is coerced.
+        [, $coerced] = mfFamilyPet(fn ($f) => $f->mutt()->trial());
+        expect($coerced->fresh()->plan)->toBe(PetPlan::Free)->and($coerced->fresh()->trial_ends_at)->toBeNull();
+
+        // Paid mutt challenges (grandfathered / purchase) are created as given.
+        [, $grandfathered] = mfFamilyPet(fn ($f) => $f->mutt());
+        [, $purchased] = mfFamilyPet(fn ($f) => $f->mutt()->purchased());
+        expect($grandfathered->fresh()->plan)->toBe(PetPlan::Challenge)->and($purchased->fresh()->plan)->toBe(PetPlan::Challenge);
+    });
+
+    it('TestUsersSeeder creates no lockable mutt', function () {
+        $this->seed(TestUsersSeeder::class);
+
+        expect(Pet::where('breed_type', 'mutt')->where('plan', 'challenge')->whereNull('challenge_paid_at')->count())->toBe(0)
+            ->and(Pet::count())->toBeGreaterThan(0);
+    });
+
+    it('the deprecated /child/pair flow creates a free mutt', function () {
+        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        $pin = postJson('/api/parent/generate-pin', [])->assertOk()->json('pin');
+
+        $child = User::factory()->child()->create(['parent_id' => null]);
+        app('auth')->forgetGuards();
+        actingAsRole($child);
+        $petId = postJson('/api/child/pair', ['pin' => $pin])->assertCreated()->json('pet.id');
+
+        $pet = Pet::findOrFail($petId);
+        expect($pet->plan)->toBe(PetPlan::Free)->and($pet->breed_type->value)->toBe('mutt');
+    });
+
+    it('a refunded mutt challenge becomes the free mutt instead of being locked', function () {
+        Event::fake([PetUpdated::class]);
+        [, $pet] = mfFamilyPet(fn ($f) => $f->mutt()->purchased());
+
+        // Refund 10 days after birth (the trial would be over → a collie would lock).
+        Carbon::setTestNow(Carbon::parse('2026-10-17 10:00:00', 'UTC'));
+        $changed = DB::transaction(fn () => app(ChallengeService::class)->markRefunded(Pet::whereKey($pet->id)->lockForUpdate()->first(), now()));
+
+        $pet->refresh();
+        expect($changed)->toBeTrue()
+            ->and($pet->plan)->toBe(PetPlan::Free)
+            ->and($pet->challenge_paid_at)->toBeNull()
+            ->and($pet->challenge_paid_source)->toBeNull()
+            ->and($pet->isPaymentLocked())->toBeFalse()
+            ->and($pet->actionLockReason())->toBeNull()
+            ->and($pet->converted_to_free_at?->toIso8601String())->toBe('2026-10-17T10:00:00+00:00');
+        Event::assertDispatchedTimes(PetUpdated::class, 1);
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id && $e->eventType === 'plan_free');
+
+        // A refunded collie still goes back to payment_required (unchanged rule).
+        [, $collie] = mfFamilyPet(fn ($f) => $f->borderCollie()->purchased());
+        Carbon::setTestNow(Carbon::parse('2026-10-27 10:00:00', 'UTC'));
+        DB::transaction(fn () => app(ChallengeService::class)->markRefunded(Pet::whereKey($collie->id)->lockForUpdate()->first(), now()));
+        expect($collie->fresh()->plan)->toBe(PetPlan::Challenge)->and($collie->fresh()->isPaymentLocked())->toBeTrue();
+    });
+
+    it('sends exactly one PetUpdated plan_free per converted pet, after commit', function () {
+        [, $a] = mfFamilyPet(fn ($f) => $f->legacyUnpaidMuttChallenge());
+        [, $b] = mfFamilyPet(fn ($f) => $f->legacyUnpaidMuttChallenge()->unborn());
+        Event::fake([PetUpdated::class]);
+
+        DB::transaction(function () use ($a) {
+            expect(app(ChallengeService::class)->convertUnpaidMuttToFree($a->id, now()))->toBeTrue();
+            // Not before the outer transaction commits.
+            Event::assertNotDispatched(PetUpdated::class);
+        });
+        app(ChallengeService::class)->convertUnpaidMuttToFree($b->id, now());
+        app(ChallengeService::class)->convertUnpaidMuttToFree($b->id, now()); // idempotent: no second event
+
+        Event::assertDispatchedTimes(PetUpdated::class, 2);
+        foreach ([$a, $b] as $pet) {
+            expect(Event::dispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id && $e->eventType === 'plan_free'))->toHaveCount(1);
+        }
+    });
+
+    it('the database refuses converted_to_free_at on a challenge', function () {
+        [, $pet] = mfFamilyPet(fn ($f) => $f->mutt());
+
+        expect(fn () => DB::table('pets')->where('id', $pet->id)->update(['converted_to_free_at' => now()]))
+            ->toThrow(QueryException::class);
     });
 });

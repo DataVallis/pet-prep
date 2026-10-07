@@ -75,11 +75,11 @@ function ctFamily(array $attributes = [], string $state = 'trial'): array
 {
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
-    $factory = Pet::factory()->mutt();
+    // M5-F03: a challenge on trial is a paid breed (an unpaid mutt challenge is the free plan).
     $factory = match ($state) {
-        'trial' => $factory->trial(),
-        'free' => $factory->freePlan(),
-        default => $factory,
+        'trial' => Pet::factory()->borderCollie()->trial(),
+        'free' => Pet::factory()->mutt()->freePlan(),
+        default => Pet::factory()->mutt(),
     };
     $pet = $factory->create(array_merge(['user_id' => $child->id], $attributes));
 
@@ -91,7 +91,7 @@ function ctSecondPet(User $parent): Pet
 {
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
 
-    return disableHygieneEvents(Pet::factory()->mutt()->trial()->create(['user_id' => $child->id]));
+    return disableHygieneEvents(Pet::factory()->borderCollie()->trial()->create(['user_id' => $child->id]));
 }
 
 function ctTick(): void
@@ -195,7 +195,7 @@ describe('status derivation and the trial clock', function () {
     it('starts the trial at birth (the contract), 7 family-local days later across the DST change', function () {
         $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
         $child = User::factory()->child()->create(['parent_id' => $parent->id]);
-        $pet = Pet::factory()->mutt()->trial()->unborn()->create(['user_id' => $child->id]);
+        $pet = Pet::factory()->borderCollie()->trial()->unborn()->create(['user_id' => $child->id]);
 
         expect($pet->trial_ends_at)->toBeNull()
             ->and($pet->challengeStatus())->toBe(ChallengeStatus::Trial);
@@ -268,10 +268,11 @@ describe('the payment lock pauses the game like a hard stop', function () {
         expect($resumed->hunger_zero_since->toDateTimeString())->toBe('2026-10-14 14:29:00')
             ->and($resumed->last_decay_at->toDateTimeString())->toBe('2026-10-14 15:00:00');
 
-        // One more hour of play decays one hour (mutt thirst 10 %/h), not six.
+        // One more hour of play decays one hour (the breed's thirst rate per hour), not six.
         ctAt('2026-10-14 16:00:00');
         ctTick();
-        expect($pet->fresh()->thirst_level)->toEqualWithDelta($thirst - 10.0, 1e-6)
+        $perHour = (float) $pet->fresh()->breedConfig()->thirst_decay_rate;
+        expect($pet->fresh()->thirst_level)->toEqualWithDelta($thirst - $perHour, 1e-6)
             // 30 min at 0 before + 1 h after = 1.5 h → phase 3 (> 1 h), not game over.
             ->and($pet->fresh()->is_game_over)->toBeFalse();
     });
@@ -659,7 +660,7 @@ describe('P5 — deleting a pet with a paid, unfinished challenge', function () 
         ctDeleteChild($parent, $child)->assertStatus(422)->assertExactJson([
             'message' => 'This deletes a dog whose paid 12-week challenge is not finished. The purchase stays used. Send acknowledge_paid_challenge: true to continue.',
             'reason' => 'paid_challenge_ack_required',
-            'pets' => [['pet_id' => $pet->id, 'breed_type' => 'mutt']],
+            'pets' => [['pet_id' => $pet->id, 'breed_type' => 'border_collie']],
         ]);
         expect(Pet::find($pet->id))->not->toBeNull()->and(User::find($child->id))->not->toBeNull();
 
@@ -750,7 +751,7 @@ describe('P7 — one free trial per child; game over is not unlocked by a purcha
         // null here; the next pet is created directly — see the open question in the report.)
         expect(app(ChallengeService::class)->childHadTrial($child))->toBeTrue();
 
-        $second = Pet::factory()->mutt()->trial()->unborn()->create(['user_id' => $child->id]);
+        $second = Pet::factory()->borderCollie()->trial()->unborn()->create(['user_id' => $child->id]);
         ctBilling($parent)->assertJsonPath('pets.0.pet_id', $second->id)->assertJsonPath('pets.0.trial_available', false);
 
         ctAt('2026-10-08 10:00:00');
@@ -775,7 +776,7 @@ describe('P7 — one free trial per child; game over is not unlocked by a purcha
     it('keeps the trial for a child whose earlier pet was grandfathered', function () {
         [, $child, $old] = ctFamily([], 'grandfathered');
         Pet::whereKey($old->id)->update(['is_game_over' => true, 'is_active' => false]);
-        $next = Pet::factory()->mutt()->trial()->unborn()->create(['user_id' => $child->id]);
+        $next = Pet::factory()->borderCollie()->trial()->unborn()->create(['user_id' => $child->id]);
 
         actingAsRole($child);
         postJson('/api/child/contract', ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20'])->assertCreated()

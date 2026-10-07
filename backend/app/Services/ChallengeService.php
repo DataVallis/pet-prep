@@ -282,7 +282,8 @@ class ChallengeService
      * The pet's credit was refunded (PAYMENTS_SPEC §2): unless the 12-week
      * challenge is already finished, the pet is unpaid again — back in its
      * trial if still inside the 7 days, otherwise locked at once (with the
-     * lock pushes). Caller holds the pet row lock. Returns true if changed.
+     * lock pushes). A mutt becomes the free plan instead (P4 — never locked).
+     * Caller holds the pet row lock. Returns true if changed.
      */
     public function markRefunded(Pet $pet, CarbonInterface $now): bool
     {
@@ -291,6 +292,22 @@ class ChallengeService
         }
         if ($pet->hasReachedSimulationEnd()) {
             return false; // finished challenge: the record stays
+        }
+
+        // PAYMENTS_SPEC P4 / M5-F02: a refunded mutt (bought before M5-F03) is never
+        // re-locked — it becomes the free mutt (same bookkeeping as the migration).
+        if (! $pet->breed_type->isPremium()) {
+            $pet->forceFill([
+                'challenge_paid_at' => null,
+                'challenge_paid_source' => null,
+                'plan' => PetPlan::Free,
+                'trial_ends_at' => null,
+                'payment_locked_at' => null,
+                'converted_to_free_at' => $now,
+            ])->save();
+            PetUpdated::afterCommit($pet, self::EVENT_FREE_PLAN);
+
+            return true;
         }
 
         $pet->forceFill(['challenge_paid_at' => null, 'challenge_paid_source' => null])->save();
