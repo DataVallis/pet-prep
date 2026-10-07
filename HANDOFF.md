@@ -59,9 +59,12 @@
 2. **David:** delete stale remote branches `diag/pet-state-1006`, `diag/prod-logs-1006`, `diag/child-flow`, `wip/M5-R04-picker-followup` (agent can't delete remote branches).
 3. **`docs/product/FEATURES.md`** — feature catalogue (what the app does today, per area, status built / verified on device / planned) for website and materials; proposed to David 2026-10-06, waiting for his OK; keep it updated in every PR.
 4. **M5-R04 part 2:** growth album (pet images across life stages).
-5. **David:** M5-R03b open questions (unsigned child not counted in the share; shares recomputed when a sibling signs mid-day; minimum one session per child with ≥ 7 trainers; effect params 0.75 / 0.5 still unverified). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
+5. **David:** M5-R03b — only the minimum-one-session rule (≥ 7 trainers) is still open (the rest confirmed 2026-10-07). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-07 (cloud, orchestrator) — David confirms training effects
+- David: unsigned child not in the share, mid-day recalculation OK, effects 0.75 / 0.5 confirmed → seeder + data migration `2026_10_16_120000` (verified, audit, admin edits win). Pest 1100 green. Only `chewing_chance_per_day` remains unverified among behaviour/training numbers.
 
 ### 2026-10-07 (cloud, orchestrator) — merge + legacy age label
 - PR #59 merged and deployed (`Deploy to Hetzner Production` success). Legacy pets (no profile) showed "STAROST: 0 MESECEV" in the child HUD — `virtual_age_months` is the challenge clock, not the dog's age → HUD now shows "TEDEN N OD 12" (`formatChallengeWeek`). Jest 1081 green.

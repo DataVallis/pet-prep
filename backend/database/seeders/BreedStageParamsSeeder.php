@@ -65,6 +65,13 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R03 = 'potrdil David 2026-10-06';
 
+    /**
+     * David's M5-R03b answers (2026-10-07): the two training effects (potty
+     * 0.75, place 0.5) — production rows flipped by
+     * 2026_10_16_120000_apply_david_training_effect_decisions.
+     */
+    public const CONFIRMED_R03_EFFECTS = 'potrdil David 2026-10-07';
+
     /** M5-R03b: starting progress of a puppy (also bought) — David 2026-10-06. */
     public const PUPPY_STARTING_PROGRESS = ['sit' => 0, 'come' => 0, 'place' => 0, 'potty' => 0];
 
@@ -314,7 +321,8 @@ class BreedStageParamsSeeder extends Seeder
                     'notes' => 'Game value: uniform factor in [0.8, 1.2], seeded per pet and stored (pets.training_learning_factor). S42: individuals vary much more than breeds.',
                 ]);
             }
-            // M5-R03b: David confirmed the three numbers on 2026-10-06 (verified, decision in notes).
+            // M5-R03b: David confirmed the three numbers on 2026-10-06 and the two
+            // effects on 2026-10-07 (verified, decision in notes).
             $add('all', 0, StageParamKey::TrainingMinutesPerDay, 5, [
                 'unit' => 'minutes of mini-game per dog and family-local day', 'source_id' => 'S36,S37', 'confidence' => 'low', 'verified' => true,
                 'ref' => 'proposed_game_parameters.training_minigame_minutes', 'decision' => self::CONFIRMED_R03,
@@ -331,14 +339,14 @@ class BreedStageParamsSeeder extends Seeder
                 'notes' => 'Game value (no literature number): no source gives a forgetting rate.',
             ]);
             $add('all', 0, StageParamKey::PottyTrainingAccidentReduction, 0.75, [
-                'unit' => 'share of due puppy accidents avoided at 100 % potty training', 'source_id' => 'S47,S31', 'confidence' => 'low', 'verified' => false,
-                'ref' => 'proposed_game_parameters.potty_training_accident_reduction',
-                'notes' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): a house-trained puppy learns to ask to go out (S47); the size of the effect is ours. Bladder hold (S30 / S31) unchanged.',
+                'unit' => 'share of due puppy accidents avoided at 100 % potty training', 'source_id' => 'S47,S31', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.potty_training_accident_reduction', 'decision' => self::CONFIRMED_R03_EFFECTS,
+                'notes' => 'Game value (no literature number for the size): a house-trained puppy learns to ask to go out (S47); the size of the effect is PetPrep\'s. Bladder hold (S30 / S31) unchanged.',
             ]);
             $add('all', 0, StageParamKey::PlaceTrainingChewingReduction, 0.5, [
-                'unit' => 'share of the teething chewing chance removed at 100 % place training', 'source_id' => 'S33', 'confidence' => 'low', 'verified' => false,
-                'ref' => 'proposed_game_parameters.place_training_chewing_reduction',
-                'notes' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): guidance teaches a puppy to chew its toys (S33); the size of the effect is ours. Chewing after a missed walk stays certain.',
+                'unit' => 'share of the teething chewing chance removed at 100 % place training', 'source_id' => 'S33', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.place_training_chewing_reduction', 'decision' => self::CONFIRMED_R03_EFFECTS,
+                'notes' => 'Game value (no literature number for the size): guidance teaches a puppy to chew its toys (S33); the size of the effect is PetPrep\'s. Chewing after a missed walk stays certain.',
             ]);
 
             // M5-R03b (David 2026-10-06): a dog arriving young, adult or senior

@@ -33,6 +33,10 @@ use function Pest\Laravel\postJson;
 |  2. a dog arriving young / adult / senior starts with sit 50 %, potty 70 %,
 |     come 30 %, place 0 % (puppy 0 %), from `training_starting_progress`;
 |  3. the daily budget is split equally between the children who can train.
+| David's answers of 2026-10-07: an unsigned child does not count in the
+| fair share, shares are recalculated at once when a child signs mid-day
+| (both already the behaviour), and the two effects (potty 0.75, place 0.5)
+| are confirmed → verified (seeder + one-off data migration).
 |--------------------------------------------------------------------------
 | Family in Europe/Ljubljana (UTC+2 in early October 2026).
 */
@@ -40,6 +44,10 @@ use function Pest\Laravel\postJson;
 const TD_MIGRATION = '2026_10_15_120000_apply_david_training_decisions.php';
 
 const TD_CONFIRMED_KEYS = ['training_minutes_per_day', 'training_progress_per_success', 'training_decay_per_missed_day'];
+
+const TD_EFFECTS_MIGRATION = '2026_10_16_120000_apply_david_training_effect_decisions.php';
+
+const TD_EFFECT_KEYS = ['potty_training_accident_reduction', 'place_training_chewing_reduction'];
 
 beforeEach(function () {
     seedLifeStageData();
@@ -58,6 +66,31 @@ function tdMigrate(): void
 function tdParam(string $breed, string $stage, int $from, string $key): BreedStageParam
 {
     return BreedStageParam::where(['breed_slug' => $breed, 'stage' => $stage, 'age_from_months' => $from, 'key' => $key])->sole();
+}
+
+function tdMigrateEffects(): void
+{
+    (require database_path('migrations/'.TD_EFFECTS_MIGRATION))->up();
+}
+
+/** @return list<array<string, mixed>> */
+function tdEffectRows(): array
+{
+    return array_values(array_filter(BreedStageParamsSeeder::rows(), fn (array $r) => $r['stage'] === 'all' && in_array($r['key'], TD_EFFECT_KEYS, true)));
+}
+
+/** The production state after PR #59: the two effects seeded as unverified proposals. */
+function tdRevertEffectsToPr59(): void
+{
+    $notes = [
+        'potty_training_accident_reduction' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): a house-trained puppy learns to ask to go out (S47); the size of the effect is ours. Bladder hold (S30 / S31) unchanged.',
+        'place_training_chewing_reduction' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): guidance teaches a puppy to chew its toys (S33); the size of the effect is ours. Chewing after a missed walk stays certain.',
+    ];
+    foreach ($notes as $key => $note) {
+        DB::table('breed_stage_params')->where(['stage' => 'all', 'key' => $key])->update(['verified' => false, 'notes' => $note]);
+    }
+    LifeStageService::forgetBreed('mutt');
+    LifeStageService::forgetBreed('border-collie');
 }
 
 /** @return list<array<string, mixed>> */
@@ -183,7 +216,7 @@ function tdSkills(Pet $pet): array
 // ──────────────────────────────────────────────────────────────
 
 describe('confirmed numbers (5 min, +1, −2)', function () {
-    it('seeds them verified with David\'s decision; the two effects stay unverified proposals', function () {
+    it('seeds them verified with David\'s decision', function () {
         $data = json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
 
         foreach (['mutt', 'border-collie'] as $breed) {
@@ -198,16 +231,11 @@ describe('confirmed numbers (5 min, +1, −2)', function () {
             }
             expect($minutes->source_id)->toBe('S36,S37')->and($gain->source_id)->toBeNull();
 
-            foreach (['potty_training_accident_reduction', 'place_training_chewing_reduction'] as $key) {
-                expect(tdParam($breed, 'all', 0, $key)->verified)->toBeFalse()
-                    ->and(tdParam($breed, 'all', 0, $key)->notes)->toContain('waiting for David');
-            }
         }
 
         foreach (['training_minigame_minutes', 'training_progress_per_success', 'training_decay_per_missed_day'] as $entry) {
             expect($data['proposed_game_parameters'][$entry]['decision'])->toStartWith('potrdil David 2026-10-06');
         }
-        expect($data['proposed_game_parameters']['potty_training_accident_reduction'])->not->toHaveKey('decision');
         // The service reads them: 300 s budget.
         [, , $pet] = tdFamily();
         expect(app(TrainingService::class)->dailyBudgetSeconds($pet, '2026-10-08'))->toBe(300);
@@ -239,9 +267,7 @@ describe('confirmed numbers (5 min, +1, −2)', function () {
                 ->and($stored->notes)->toBe(BreedStageParamsSeeder::columns($row)['notes'])
                 ->and((float) $stored->value)->toBe((float) $row['value']);
         }
-        expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())->toEqualCanonicalizing([
-            'chewing_chance_per_day', 'potty_training_accident_reduction', 'place_training_chewing_reduction',
-        ]);
+        expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
 
         $changes = BreedStageParamChange::orderBy('id')->get();
         expect($changes)->toHaveCount(6)
@@ -308,6 +334,142 @@ describe('confirmed numbers (5 min, +1, −2)', function () {
         // The admin's 7 minutes are what the game uses.
         [, , $pet] = tdFamily();
         expect(app(TrainingService::class)->dailyBudgetSeconds($pet, '2026-10-08'))->toBe(420);
+    });
+});
+
+// ──────────────────────────────────────────────────────────────
+//  1b. Confirmed effects (David 2026-10-07: potty 0.75, place 0.5)
+// ──────────────────────────────────────────────────────────────
+
+describe('confirmed effects (potty 0.75, place 0.5)', function () {
+    it('seeds them verified with David\'s 2026-10-07 decision and keeps the source ids', function () {
+        $data = json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
+
+        foreach (['mutt', 'border-collie'] as $breed) {
+            $potty = tdParam($breed, 'all', 0, 'potty_training_accident_reduction');
+            $place = tdParam($breed, 'all', 0, 'place_training_chewing_reduction');
+            expect($potty->value)->toEqual(0.75)->and($place->value)->toEqual(0.5)
+                ->and($potty->source_id)->toBe('S47,S31')->and($place->source_id)->toBe('S33');
+            foreach ([$potty, $place] as $row) {
+                expect($row->verified)->toBeTrue()
+                    ->and($row->notes)->toStartWith('Decision: potrdil David 2026-10-07.')
+                    ->and($row->notes)->toContain("the size of the effect is PetPrep's")
+                    ->and($row->notes)->not->toContain('waiting for David')
+                    ->and($row->confidence)->toBe('low');
+            }
+        }
+        expect(BreedStageParamsSeeder::CONFIRMED_R03_EFFECTS)->toBe('potrdil David 2026-10-07');
+        foreach (TD_EFFECT_KEYS as $entry) {
+            expect($data['proposed_game_parameters'][$entry]['decision'])->toStartWith('potrdil David 2026-10-07');
+        }
+        // The only open proposal left is M5-R02's teething chewing chance.
+        expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
+    });
+
+    it('freezes exactly the seeder\'s 4 effect rows (tuple + columns) in the migration', function () {
+        $migration = require database_path('migrations/'.TD_EFFECTS_MIGRATION);
+        $fromSeeder = array_map(function (array $row): array {
+            $columns = BreedStageParamsSeeder::columns($row);
+            $columns['value'] = $row['value'];
+
+            return [$row['breed_slug'], $row['stage'], $row['age_from_months'], $row['key'], $columns];
+        }, tdEffectRows());
+
+        expect($migration::TARGETS)->toHaveCount(4)
+            ->and($migration::TARGETS)->toBe($fromSeeder)
+            ->and($migration::ACTOR)->toBe('system: David decision 2026-10-07')
+            ->and($migration->withinTransaction)->toBeFalse();
+    });
+
+    it('flips the PR #59 production rows to verified with one system audit row each, nothing else', function () {
+        tdRevertEffectsToPr59();
+        foreach (['mutt', 'border-collie'] as $slug) {
+            app(LifeStageService::class)->paramsFor($slug);
+        }
+        $before = DB::table('breed_stage_params')->orderBy('id')->get()->keyBy('id');
+
+        tdMigrateEffects();
+
+        foreach (tdEffectRows() as $row) {
+            $stored = tdParam($row['breed_slug'], 'all', 0, $row['key']);
+            expect($stored->verified)->toBeTrue()
+                ->and($stored->notes)->toBe(BreedStageParamsSeeder::columns($row)['notes'])
+                ->and((float) $stored->value)->toBe((float) $row['value']);
+        }
+        expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
+
+        $changes = BreedStageParamChange::orderBy('id')->get();
+        expect($changes)->toHaveCount(4)
+            ->and($changes->pluck('action')->unique()->all())->toBe(['updated'])
+            ->and($changes->pluck('user_id')->unique()->all())->toBe([null])
+            ->and($changes->pluck('actor')->unique()->all())->toBe(['system: David decision 2026-10-07'])
+            ->and($changes->pluck('key')->unique()->sort()->values()->all())->toBe(collect(TD_EFFECT_KEYS)->sort()->values()->all());
+        $potty = $changes->firstWhere(fn ($c) => $c->breed_slug === 'mutt' && $c->key === 'potty_training_accident_reduction');
+        expect($potty->old['verified'])->toBeFalse()
+            ->and($potty->new['verified'])->toBeTrue()
+            ->and($potty->new['notes'])->toStartWith('Decision: potrdil David 2026-10-07.')
+            ->and($potty->new)->not->toHaveKey('value'); // the number itself did not change
+
+        // The rules cache is cleared after the commit.
+        foreach (['mutt', 'border-collie'] as $slug) {
+            expect(Cache::has(LifeStageService::cacheKey($slug)))->toBeFalse();
+        }
+
+        // Rows outside the decision are untouched.
+        $after = DB::table('breed_stage_params')->orderBy('id')->get()->keyBy('id');
+        $changedIds = $changes->pluck('breed_stage_param_id')->all();
+        foreach ($before as $id => $row) {
+            if (! in_array($id, $changedIds, true)) {
+                expect((array) $after[$id])->toBe((array) $row);
+            }
+        }
+    });
+
+    it('is idempotent and writes nothing on a fresh install', function () {
+        tdMigrateEffects();
+        expect(BreedStageParamChange::count())->toBe(0);
+
+        tdRevertEffectsToPr59();
+        tdMigrateEffects();
+        $snapshot = DB::table('breed_stage_params')->orderBy('id')->get()->map(fn ($r) => (array) $r)->all();
+        $audits = BreedStageParamChange::count();
+        expect($audits)->toBe(4);
+
+        tdMigrateEffects();
+        (new BreedStageParamsSeeder)->run();
+
+        expect(DB::table('breed_stage_params')->orderBy('id')->get()->map(fn ($r) => (array) $r)->all())->toBe($snapshot)
+            ->and(BreedStageParamChange::count())->toBe($audits);
+    });
+
+    it('never overwrites a value an admin changed, and skips a row changed outside Filament', function () {
+        tdRevertEffectsToPr59();
+        $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
+        actingAs($admin);
+        // Filament edit (audited): the mutt's potty effect becomes 0.6.
+        tdParam('mutt', 'all', 0, 'potty_training_accident_reduction')->update(['value' => 0.6]);
+        // Raw SQL (no audit): the Border Collie's place effect becomes 0.3.
+        DB::table('breed_stage_params')->where(['breed_slug' => 'border-collie', 'key' => 'place_training_chewing_reduction'])->update(['value' => json_encode(0.3)]);
+        app('auth')->forgetGuards();
+        $adminAudits = BreedStageParamChange::count();
+
+        Log::spy();
+        tdMigrateEffects();
+
+        $edited = tdParam('mutt', 'all', 0, 'potty_training_accident_reduction');
+        $outside = tdParam('border-collie', 'all', 0, 'place_training_chewing_reduction');
+        expect((float) $edited->value)->toBe(0.6)->and($edited->verified)->toBeFalse()
+            ->and((float) $outside->value)->toBe(0.3)->and($outside->verified)->toBeFalse()
+            ->and(tdParam('mutt', 'all', 0, 'place_training_chewing_reduction')->verified)->toBeTrue()
+            ->and(tdParam('border-collie', 'all', 0, 'potty_training_accident_reduction')->verified)->toBeTrue()
+            ->and(BreedStageParamChange::count())->toBe($adminAudits + 2)
+            ->and(BreedStageParamChange::where('actor', 'system: David decision 2026-10-07')->where('breed_slug', 'mutt')->where('key', 'potty_training_accident_reduction')->exists())->toBeFalse();
+        Log::shouldHaveReceived('warning')->withArgs(fn (string $msg, array $ctx) => str_contains($msg, 'changed outside Filament')
+            && $ctx['tuple'] === 'border-collie|all|0|place_training_chewing_reduction')->once();
+
+        // The seeder never brings the proposal text back over the admin's value.
+        (new BreedStageParamsSeeder)->run();
+        expect((float) tdParam('mutt', 'all', 0, 'potty_training_accident_reduction')->value)->toBe(0.6);
     });
 });
 

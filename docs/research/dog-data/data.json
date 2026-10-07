@@ -1442,7 +1442,8 @@
       "derived_from": [
         "S47",
         "S31"
-      ]
+      ],
+      "decision": "potrdil David 2026-10-07: a puppy at 100 % potty training avoids 3 of 4 due accidents (linear in progress); the size of the effect is PetPrep's"
     },
     "place_training_chewing_reduction": {
       "value": 0.5,
@@ -1453,7 +1454,8 @@
       "notes": "UNSOURCED — proposal (Claude, M5-R03, waiting for David). ASPCA: guidance teaches a puppy to restrict chewing to its toys (S33). Applies to the teething chance only — the chewing after a missed walk stays certain (David 2026-10-06).",
       "derived_from": [
         "S33"
-      ]
+      ],
+      "decision": "potrdil David 2026-10-07: 100 % place training halves the teething chewing chance (linear in progress); chewing after a missed walk stays certain; the size of the effect is PetPrep's"
     },
     "training_starting_progress": {
       "value": {

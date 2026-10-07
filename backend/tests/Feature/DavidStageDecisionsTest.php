@@ -168,10 +168,10 @@ describe('data migration for the rows PR #37 seeded', function () {
 
         expect(dsdParam('mutt', 'puppy', 0, 'feed_windows')->value)->toBe(BreedStageParamsSeeder::PUPPY_4_MEAL_WINDOWS)
             ->and(dsdParam('border-collie', 'puppy', 3, 'feed_windows')->value)->toBe(BreedStageParamsSeeder::PUPPY_3_MEAL_WINDOWS)
-            // Open proposals: M5-R02's teething chewing chance and the M5-R03 training effects
-            // (Claude, waiting for David; the training numbers were confirmed in M5-R03b).
+            // Open proposal: M5-R02's teething chewing chance (Claude, waiting for David;
+            // the training numbers and effects were confirmed in M5-R03b).
             ->and(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())->toEqualCanonicalizing([
-                'chewing_chance_per_day', 'potty_training_accident_reduction', 'place_training_chewing_reduction',
+                'chewing_chance_per_day',
             ]);
 
         // Every confirmed row now equals a fresh seed of the same tuple (value + provenance).
