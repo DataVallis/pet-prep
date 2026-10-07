@@ -18,8 +18,10 @@ use Illuminate\Support\Facades\Log;
  * David 2026-10-05, REALISM_SPEC §2/§7, PRODUCT_SPEC §4/§5).
  *
  * Age: `pets.arrival_age_months` (parent's choice at creation) + one month
- * per real week since birth (contract signature). A "week" is 7 family-local
+ * per program week since birth (contract signature). A "week" is 7 family-local
  * days at the birth's wall-clock time, so DST never moves the birthday hour.
+ * Program time excludes payment locks (M3-11b): the dog does not age while
+ * it waits for payment (see weeksSinceBirth()).
  * An unborn pet is as old as it arrived.
  *
  * Stage + rules: from `breed_stage_params` (sourced, cached per breed).
@@ -129,7 +131,14 @@ class LifeStageService
     }
 
     /**
-     * Completed weeks since birth: 7 family-local days at the birth's wall-clock time.
+     * Completed program weeks since birth: 7 family-local days at the
+     * birth's wall-clock time. Payment-lock time does not count (M3-11b,
+     * David 2026-10-07): weeks run from the effective birth
+     * (Pet::programBirthAt — `born_at` shifted by the lock time before $at)
+     * up to Pet::programInstantAt($at) (the lock start while $at is inside a
+     * lock), so the dog does not age while locked and the age of an older
+     * date never moves because of a later lock. See Pet::programBirthAt()
+     * for DST.
      */
     public function weeksSinceBirth(Pet $pet, CarbonInterface $at): int
     {
@@ -138,8 +147,8 @@ class LifeStageService
         }
 
         $tz = $pet->familyTimezone();
-        $born = CarbonImmutable::instance($pet->born_at)->setTimezone($tz);
-        $t = CarbonImmutable::instance($at)->setTimezone($tz);
+        $born = $pet->programBirthAt($at)->setTimezone($tz);
+        $t = $pet->programInstantAt($at)->setTimezone($tz);
         if ($t->lessThanOrEqualTo($born)) {
             return 0;
         }
@@ -266,7 +275,10 @@ class LifeStageService
         foreach ($this->stageStarts($slug) as $value => $from) {
             if ($from > $age) {
                 $tz = $pet->familyTimezone();
-                $born = CarbonImmutable::instance($pet->born_at)->setTimezone($tz);
+                // Effective birth (M3-11b): all payment-lock time up to now is
+                // skipped — while locked this assumes the clock resumes now.
+                $born = CarbonImmutable::instance($pet->born_at)->utc()
+                    ->addSeconds($pet->programSecondsPausedBefore($now))->setTimezone($tz);
                 $at = $this->anniversary($born, $from - (int) $pet->arrival_age_months, $tz);
                 // Rules follow the age at local midnight: the day after the
                 // birthday (or the day itself when born exactly at midnight).

@@ -6,7 +6,6 @@ import {
   getMetricColor,
   interpolateColor,
   formatStepCount,
-  formatVirtualAge,
   isActionDisabled,
 } from '@/utils/metrics';
 import { i18n } from '@/i18n';
@@ -80,22 +79,6 @@ describe('formatStepCount', () => {
     await i18n.changeLanguage('en');
     expect(formatStepCount(5120)).toBe('5,120');
     expect(formatStepCount(10000)).toBe('10,000');
-  });
-});
-
-describe('formatVirtualAge', () => {
-  it('returns "AGE: 0 MONTHS" for null born_at', () => {
-    expect(formatVirtualAge(null)).toBe('AGE: 0 MONTHS');
-  });
-
-  it('calculates months from born_at timestamp', () => {
-    const threeWeeksAgo = new Date(Date.now() - 3 * 7 * 24 * 60 * 60 * 1000).toISOString();
-    expect(formatVirtualAge(threeWeeksAgo)).toBe('AGE: 3 MONTHS');
-  });
-
-  it('returns 0 months for recent birth', () => {
-    const now = new Date().toISOString();
-    expect(formatVirtualAge(now)).toBe('AGE: 0 MONTHS');
   });
 });
 

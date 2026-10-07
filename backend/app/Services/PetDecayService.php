@@ -52,8 +52,9 @@ use Illuminate\Support\Facades\Log;
  * at the window start the tick sets hunger to 100 % and writes one
  * `parent_fed_pet` row (CareScheduleService::dueParentMeals).
  *
- * Time Asymmetry: 1 real week = 1 virtual month.
- *   Total MVP: 12 real weeks = 12 virtual months (1 virtual year).
+ * Time Asymmetry: 1 program week = 1 virtual month (program time = real
+ *   time minus payment-lock time, M3-11b — Pet::programSecondsAt).
+ *   Total MVP: 12 program weeks = 12 virtual months (1 virtual year).
  *   At 12 weeks with satisfactory performance → Responsibility Certificate.
  */
 class PetDecayService
@@ -232,6 +233,9 @@ class PetDecayService
         // change between two stages queues the new stage images once.
         // QA PR #67 M1: a payment-locked pet doesn't grow (and costs no AI media)
         // while it waits; the next unfrozen tick catches the stage up once.
+        // Since M3-11b the lock time is not program time at all (the age stands
+        // still); the skip still keeps a stage switch that falls on the first
+        // locked midnight from queueing media before payment.
         $transition = $pet->isPaymentLocked() ? null : $this->lifeStages->syncStage($pet, $now);
         if ($transition !== null) {
             $this->queueStageMedia($pet, $transition);
@@ -469,7 +473,8 @@ class PetDecayService
 
     /**
      * Check if the pet is eligible for a Responsibility Certificate.
-     * Must have reached 12 virtual months (12 real weeks) with satisfactory performance.
+     * Must have reached 12 virtual months (12 program weeks — payment-lock time
+     * excluded, M3-11b) with satisfactory performance.
      */
     private function checkCertificateEligibility(Pet $pet): bool
     {

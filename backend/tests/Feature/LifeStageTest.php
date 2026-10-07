@@ -393,18 +393,34 @@ describe('step goal by stage', function () {
 /* ─────────────────────────── Stage transitions ─────────────────────────── */
 
 describe('stage transition', function () {
-    it('a payment-locked pet does not grow or queue AI media until it is paid (QA PR #67 M1)', function () {
+    it('a payment-locked pet does not grow or queue AI media until it is paid (QA PR #67 M1, M3-11b)', function () {
         Queue::fake([RegeneratePetStageMedia::class]);
-        [, , $pet] = lsFamily('2026-10-05 08:00:00', ['life_stage' => 'puppy', 'payment_locked_at' => '2026-10-12 08:00:00']);
+        // Born Monday 10:00 local, puppy at 2 → young (9) on 2026-11-23 10:00 local without a lock.
+        [, , $pet] = lsFamily('2026-10-05 08:00:00', ['life_stage' => 'puppy']);
         $decay = app(PetDecayService::class);
 
-        lsAt('2026-11-23 23:01:30'); // past the puppy → young transition
+        lsAt('2026-11-16 08:00:00');
+        $pet->fresh()->forceFill(['payment_locked_at' => now()])->save();
+
+        lsAt('2026-11-23 23:01:30'); // past the unlocked puppy → young transition
         $decay->processPetDecay($pet->fresh());
         expect($pet->fresh()->life_stage)->toBe(LifeStage::Puppy);
         Queue::assertNotPushed(RegeneratePetStageMedia::class);
 
-        Pet::whereKey($pet->id)->update(['payment_locked_at' => null]);
-        lsAt('2026-11-23 23:02:30');
+        // Paid after 8 locked days: the dog did not age while it waited (M3-11b).
+        lsAt('2026-11-24 08:00:00');
+        $pet->fresh()->forceFill(['payment_locked_at' => null])->save();
+        lsAt('2026-11-24 08:00:30');
+        $decay->processPetDecay($pet->fresh());
+        expect($pet->fresh()->life_stage)->toBe(LifeStage::Puppy);
+
+        // Young 8 days later: Tuesday 2026-12-01 10:00 local → rules from Wednesday 12-02.
+        lsAt('2026-12-01 22:58:00'); // 23:58 Tuesday local
+        $decay->processPetDecay($pet->fresh());
+        expect($pet->fresh()->life_stage)->toBe(LifeStage::Puppy);
+        Queue::assertNotPushed(RegeneratePetStageMedia::class);
+
+        lsAt('2026-12-01 23:01:30'); // 00:01:30 Wednesday
         $decay->processPetDecay($pet->fresh());
         expect($pet->fresh()->life_stage)->toBe(LifeStage::Young);
         Queue::assertPushed(RegeneratePetStageMedia::class, 1);

@@ -6,6 +6,7 @@ use App\Enums\PetStatusPeriodKind;
 use App\Models\Pet;
 use App\Models\PetStatusPeriod;
 use Carbon\CarbonInterface;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -29,7 +30,7 @@ class PetStatusPeriodService
             $this->open($pet, PetStatusPeriodKind::HardStop, $now);
         }
         if ($pet->isPaymentLocked()) {
-            $this->open($pet, PetStatusPeriodKind::PaymentLock, $now);
+            $this->open($pet, PetStatusPeriodKind::PaymentLock, $this->paymentLockStart($pet, $now));
         }
         if (! $pet->is_active) {
             $this->open($pet, PetStatusPeriodKind::Inactive, $now);
@@ -52,7 +53,7 @@ class PetStatusPeriodService
         // M3-11: trial over, unpaid → payment lock (routines excused, training interrupted).
         if ($pet->wasChanged('payment_locked_at')) {
             $pet->isPaymentLocked()
-                ? $this->open($pet, PetStatusPeriodKind::PaymentLock, $now)
+                ? $this->open($pet, PetStatusPeriodKind::PaymentLock, $this->paymentLockStart($pet, $now))
                 : $this->close($pet, PetStatusPeriodKind::PaymentLock, $now);
         }
 
@@ -83,6 +84,34 @@ class PetStatusPeriodService
                     ->update(['ended_at' => $now, 'updated_at' => $now]);
             }
         }
+    }
+
+    /**
+     * Start of a payment-lock period (M3-11b): `payment_locked_at` — the
+     * instant the lock is due (ChallengeService::lock: the trial end for an
+     * expired trial, so a late tick / scheduler outage never counts as
+     * program time; the refund time for a refund re-lock) — clamped to
+     * [birth, now] and never before the end of the previous payment lock
+     * (periods must not overlap, the program clock sums them).
+     */
+    private function paymentLockStart(Pet $pet, CarbonInterface $now): CarbonInterface
+    {
+        $start = $pet->payment_locked_at ?? $now;
+        if ($pet->born_at !== null && $start->lessThan($pet->born_at)) {
+            $start = $pet->born_at;
+        }
+        $previousEnd = PetStatusPeriod::where('pet_id', $pet->id)
+            ->where('kind', PetStatusPeriodKind::PaymentLock->value)
+            ->whereNotNull('ended_at')
+            ->max('ended_at');
+        if ($previousEnd !== null) {
+            $previousEnd = Carbon::parse($previousEnd, 'UTC');
+            if ($start->lessThan($previousEnd)) {
+                $start = $previousEnd;
+            }
+        }
+
+        return $start->greaterThan($now) ? $now : $start;
     }
 
     private function open(Pet $pet, PetStatusPeriodKind $kind, CarbonInterface $start, ?CarbonInterface $end = null): void

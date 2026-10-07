@@ -217,7 +217,7 @@ class CareScoreService
                 : $this->emptyDay($board['today']),
             'last_7_days' => array_map(fn (string $date) => $this->dailyRow($board, $childId, $pet, $date), $days),
             // M3-11: the free plan has no 12-week program → no progress.
-            'progress' => $pet !== null && $pet->isFreePlan() ? null : $this->progress($board, $start),
+            'progress' => $pet !== null && $pet->isFreePlan() ? null : $this->progress($board, $start, $pet),
         ];
     }
 
@@ -408,17 +408,21 @@ class CareScoreService
 
     /**
      * 12-week challenge progress since the child started (contract).
+     * Payment-lock time does not count (M3-11b, David 2026-10-07): the
+     * days stand still while the pet waits for payment.
      *
      * @param  array<string, mixed>  $board
      * @return array<string, mixed>|null
      */
-    public function progress(array $board, ?CarbonImmutable $start): ?array
+    public function progress(array $board, ?CarbonImmutable $start, ?Pet $pet = null): ?array
     {
         if ($start === null) {
             return null;
         }
 
-        $days = max(0, intdiv($board['now']->getTimestamp() - $start->getTimestamp(), 86400));
+        $now = $board['now'];
+        $paused = $pet !== null ? $pet->programSecondsPausedBetween($start, $now) : 0;
+        $days = max(0, intdiv($now->getTimestamp() - $start->getTimestamp() - $paused, 86400));
 
         return [
             'started_at' => $start->toIso8601String(),

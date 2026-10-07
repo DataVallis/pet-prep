@@ -1157,7 +1157,7 @@ export interface components {
         };
         /**
          * LifeStage
-         * @description Life stage of a pet (M5-R01, REALISM_SPEC §2, David 2026-10-05). Boundaries are per breed and come from sourced data (`breed_stage_params`, key `starts_at_months`): AAHA life stages (S11) and the breed's median lifespan (S15). The parent picks the stage at arrival; the stage then follows the dog's age (1 real week = 1 month). Mirrored in DB CHECK constraints (pets.life_stage, breed_stage_params.stage, pet_media.life_stage, pet_media_history.life_stage).
+         * @description Life stage of a pet (M5-R01, REALISM_SPEC §2, David 2026-10-05). Boundaries are per breed and come from sourced data (`breed_stage_params`, key `starts_at_months`): AAHA life stages (S11) and the breed's median lifespan (S15). The parent picks the stage at arrival; the stage then follows the dog's age (1 program week = 1 month; payment-lock time does not count — M3-11b). Mirrored in DB CHECK constraints (pets.life_stage, breed_stage_params.stage, pet_media.life_stage, pet_media_history.life_stage).
          * @enum {string}
          */
         LifeStage: "puppy" | "young" | "adult" | "senior";
@@ -1200,7 +1200,7 @@ export interface components {
                 origin: "bought" | "adopted" | null;
                 /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                 arrival_age_months: number | null;
-                /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                 age_months: number | null;
                 /**
                  * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -2035,7 +2035,7 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
-                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
+                                /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
@@ -2056,7 +2056,7 @@ export interface operations {
                                     origin: "bought" | "adopted" | null;
                                     /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                     arrival_age_months: number | null;
-                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                     age_months: number | null;
                                     /**
                                      * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -2341,7 +2341,7 @@ export interface operations {
                              */
                             awaiting_contract: boolean;
                             caretakers_count: number;
-                            /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
+                            /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                             virtual_age_months: number;
                             /**
                              * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
@@ -2362,7 +2362,7 @@ export interface operations {
                                 origin: "bought" | "adopted" | null;
                                 /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                 arrival_age_months: number | null;
-                                /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                 age_months: number | null;
                                 /**
                                  * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -2667,7 +2667,7 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
-                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
+                                /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
@@ -2688,7 +2688,7 @@ export interface operations {
                                     origin: "bought" | "adopted" | null;
                                     /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                     arrival_age_months: number | null;
-                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                     age_months: number | null;
                                     /**
                                      * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -2991,7 +2991,7 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
-                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
+                                /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
@@ -3012,7 +3012,7 @@ export interface operations {
                                     origin: "bought" | "adopted" | null;
                                     /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                     arrival_age_months: number | null;
-                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                     age_months: number | null;
                                     /**
                                      * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -3315,7 +3315,7 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
-                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
+                                /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
@@ -3336,7 +3336,7 @@ export interface operations {
                                     origin: "bought" | "adopted" | null;
                                     /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                     arrival_age_months: number | null;
-                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                     age_months: number | null;
                                     /**
                                      * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -3639,7 +3639,7 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
-                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
+                                /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
@@ -3660,7 +3660,7 @@ export interface operations {
                                     origin: "bought" | "adopted" | null;
                                     /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                     arrival_age_months: number | null;
-                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                     age_months: number | null;
                                     /**
                                      * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -3963,7 +3963,7 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
-                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
+                                /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
@@ -3984,7 +3984,7 @@ export interface operations {
                                     origin: "bought" | "adopted" | null;
                                     /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                     arrival_age_months: number | null;
-                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                     age_months: number | null;
                                     /**
                                      * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -4291,7 +4291,7 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
-                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
+                                /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
@@ -4312,7 +4312,7 @@ export interface operations {
                                     origin: "bought" | "adopted" | null;
                                     /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                     arrival_age_months: number | null;
-                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                     age_months: number | null;
                                     /**
                                      * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -4619,7 +4619,7 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
-                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
+                                /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
@@ -4640,7 +4640,7 @@ export interface operations {
                                     origin: "bought" | "adopted" | null;
                                     /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                     arrival_age_months: number | null;
-                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                     age_months: number | null;
                                     /**
                                      * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -4947,7 +4947,7 @@ export interface operations {
                                  */
                                 awaiting_contract: boolean;
                                 caretakers_count: number;
-                                /** @description Months (= real weeks) since birth: the 12-week challenge clock. */
+                                /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
                                 virtual_age_months: number;
                                 /**
                                  * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
@@ -4968,7 +4968,7 @@ export interface operations {
                                     origin: "bought" | "adopted" | null;
                                     /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                     arrival_age_months: number | null;
-                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                     age_months: number | null;
                                     /**
                                      * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -5776,7 +5776,7 @@ export interface operations {
                                 origin: "bought" | "adopted" | null;
                                 /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                 arrival_age_months: number | null;
-                                /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                 age_months: number | null;
                                 /**
                                  * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -5928,7 +5928,7 @@ export interface operations {
                                     origin: "bought" | "adopted" | null;
                                     /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                     arrival_age_months: number | null;
-                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                     age_months: number | null;
                                     /**
                                      * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
@@ -6153,7 +6153,7 @@ export interface operations {
                                     origin: "bought" | "adopted" | null;
                                     /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
                                     arrival_age_months: number | null;
-                                    /** @description The dog's age now: arrival age + one month per real week since birth (contract); null = legacy. */
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
                                     age_months: number | null;
                                     /**
                                      * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
