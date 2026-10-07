@@ -14,7 +14,7 @@ import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
 
 import { queryClient } from '@/api/queryClient';
-import { ensureAndroidChannels, handlePushTokenEvent, isPushAllowed, registerForPush } from '@/modules/push/pushRegistration';
+import { ensureAndroidChannels, handlePushTokenEvent, isPushAllowed, registerForLanguageChange, registerForPush } from '@/modules/push/pushRegistration';
 import { configurePushPresentation, routePushTap } from '@/modules/push/pushRouting';
 import { useAppStore } from '@/store/appStore';
 
@@ -42,7 +42,7 @@ export function usePushNotifications(): void {
     // Signed in: re-register so pushes come in the new language. Deduped per (session,
     // token, language) and limited by the devices gate; no prompt (needs permission).
     if (signedIn && userId !== null) {
-      void registerForPush();
+      registerForLanguageChange();
       return;
     }
     if (Platform.OS !== 'android') return;

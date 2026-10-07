@@ -11,6 +11,8 @@
  * - Plurals use i18next's `count` (CLDR: en one/other, sl one/two/few/other).
  */
 
+// First: `Intl.PluralRules` polyfill (Hermes) — i18next reads it when resolving plurals.
+import { warnIfPluralRulesMissing } from './pluralRules';
 import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import * as Localization from 'expo-localization';
@@ -38,6 +40,8 @@ function deviceLanguage(): Language {
     return DEFAULT_LANGUAGE;
   }
 }
+
+warnIfPluralRulesMissing();
 
 // Synchronous init (bundled resources): `t()` works from the first render on.
 void i18n.use(initReactI18next).init({

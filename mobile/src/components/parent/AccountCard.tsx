@@ -48,10 +48,11 @@ const S = ACCOUNT_STRINGS;
 
 export default function AccountCard({ family }: { family: FamilyOverview | null }) {
   const [exporting, setExporting] = useState(false);
-  const [exportMessage, setExportMessage] = useState<{ text: string; isError: boolean } | null>(null);
+  // Message as a thunk: translated at render, so it follows a language switch (M1-18 review).
+  const [exportMessage, setExportMessage] = useState<{ text: () => string; isError: boolean } | null>(null);
   const [confirming, setConfirming] = useState(false);
   const [deleting, setDeleting] = useState(false);
-  const [deleteError, setDeleteError] = useState<string | null>(null);
+  const [deleteError, setDeleteError] = useState<{ text: () => string } | null>(null);
 
   const impact = accountDeletionImpact(family);
   const consequences = impact.lastParent
@@ -63,9 +64,9 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
     setExporting(true);
     try {
       const shared = await shareFamilyExport();
-      if (shared) setExportMessage({ text: S.exportDone, isError: false });
+      if (shared) setExportMessage({ text: () => S.exportDone, isError: false });
     } catch (err) {
-      setExportMessage({ text: S.exportErrors[classifyExportError(err)], isError: true });
+      setExportMessage({ text: () => S.exportErrors[classifyExportError(err)], isError: true });
     } finally {
       setExporting(false);
     }
@@ -78,7 +79,8 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
       // Success signs out: the navigator unmounts this screen (StartScreen).
       await deleteAccountAndLogout(password);
     } catch (err) {
-      setDeleteError(S.deleteErrors[classifyDeletionError(err)]);
+      const kind = classifyDeletionError(err);
+      setDeleteError({ text: () => S.deleteErrors[kind] });
       setDeleting(false);
     }
   };
@@ -106,7 +108,7 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
       </Pressable>
       {exportMessage && (
         <Text style={[styles.result, exportMessage.isError && styles.resultError]} testID="account-export-result">
-          {exportMessage.text}
+          {exportMessage.text()}
         </Text>
       )}
 
@@ -115,7 +117,7 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
           consequences={consequences}
           submitLabel={S.deleteSubmit}
           pending={deleting}
-          error={deleteError}
+          error={deleteError?.text() ?? null}
           onCancel={() => {
             setConfirming(false);
             setDeleteError(null);

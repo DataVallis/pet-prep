@@ -6,8 +6,8 @@
     },
     "prePrompt": {
       "child": {
-        "title": "Can your dog call you?",
-        "message": "When your dog is hungry, thirsty, dirty or needs a walk, we'll send you a notification. We never send anything during school or sleep (quiet hours).",
+        "title": "Can your pup call you?",
+        "message": "When your pup is hungry, thirsty, dirty or needs a walk, we'll send you a notification. We never send anything during school or sleep (quiet hours).",
         "allow": "Allow notifications",
         "later": "Not now"
       },

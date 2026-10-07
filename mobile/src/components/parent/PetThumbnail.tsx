@@ -30,7 +30,7 @@ export default function PetThumbnail({ media, size = 56, testID = 'pet-thumbnail
       <View
         style={[styles.placeholder, box]}
         testID={`${testID}-${pending ? 'pending' : 'placeholder'}`}
-        accessibilityLabel={pending ? PET_MEDIA_STRINGS.pending : undefined}
+        accessibilityLabel={pending ? PET_MEDIA_STRINGS.pendingParent : undefined}
       >
         <PawPrint color={pending ? C.muted : C.accent} size={Math.round(size * 0.45)} />
       </View>

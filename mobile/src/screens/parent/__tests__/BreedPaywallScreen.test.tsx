@@ -35,7 +35,7 @@ describe('BreedPaywallScreen', () => {
     expect(flat('paywall-card-collie')).toMatchObject({ borderWidth: 2, borderColor: '#7FE0B4', borderRadius: 22 });
     expect(screen.getByText('Mešanček')).toBeTruthy();
     expect(screen.getByText('Border collie')).toBeTruthy();
-    expect(screen.getByText('4000 korakov/dan')).toBeTruthy();
+    expect(screen.getByText('4.000 korakov/dan')).toBeTruthy();
     expect(screen.getByText('10.000 korakov/dan')).toBeTruthy();
     expect(screen.getByText('Trenutna pasma')).toBeTruthy();
     expect(screen.getByText('4,99 €')).toBeTruthy();
@@ -51,7 +51,7 @@ describe('BreedPaywallScreen', () => {
     expect(screen.getByText('Mixed breed')).toBeTruthy();
     expect(screen.getByText('4,000 steps/day')).toBeTruthy();
     expect(screen.getByText('10,000 steps/day')).toBeTruthy();
-    expect(screen.getByText('Needs drop: −12 %/h')).toBeTruthy();
+    expect(screen.getByText('Needs drop: −12%/h')).toBeTruthy();
     expect(screen.getByText('Current breed')).toBeTruthy();
     expect(screen.getByText('€4.99')).toBeTruthy();
   });

@@ -56,7 +56,8 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
   /** null = no confirmation open; true / false = the state the parent wants. */
   const [intent, setIntent] = useState<boolean | null>(null);
   const [refreshing, setRefreshing] = useState(false);
-  const [result, setResult] = useState<{ text: string; isError: boolean } | null>(null);
+  // Message as a thunk: translated at render, so it follows a language switch (M1-18 review).
+  const [result, setResult] = useState<{ text: () => string; isError: boolean } | null>(null);
   const inFlight = useRef(false);
   const names = caretakerNames(pet, family);
   const status = petStatus(pet);
@@ -69,7 +70,7 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
     if (intent === null || inFlight.current) return;
     if (stopped === intent) {
       setIntent(null);
-      setResult({ text: intent ? S.alreadyStopped : S.alreadyRunning, isError: false });
+      setResult({ text: () => intent ? S.alreadyStopped : S.alreadyRunning, isError: false });
     }
   }, [intent, stopped]);
 
@@ -82,7 +83,7 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
     if (intent === null || inFlight.current || refreshing) return;
     if (stopped === intent) {
       setIntent(null);
-      setResult({ text: intent ? S.alreadyStopped : S.alreadyRunning, isError: false });
+      setResult({ text: () => intent ? S.alreadyStopped : S.alreadyRunning, isError: false });
       return;
     }
     inFlight.current = true;
@@ -92,10 +93,10 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
       {
         onSuccess: (res) => {
           setIntent(null);
-          setResult({ text: res.is_hard_stopped ? S.stopped : S.resumed, isError: false });
+          setResult({ text: () => res.is_hard_stopped ? S.stopped : S.resumed, isError: false });
         },
         onError: (err) => {
-          setResult({ text: errorText(err), isError: true });
+          setResult({ text: () => errorText(err), isError: true });
           if (!(err instanceof ApiError)) {
             // The request may have landed (lost response): show the real state before a retry.
             setRefreshing(true);
@@ -177,7 +178,7 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
 
       {result && (
         <Text style={[styles.result, result.isError && styles.resultError]} testID={`hard-stop-result-${pet.id}`}>
-          {result.text}
+          {result.text()}
         </Text>
       )}
     </Card>

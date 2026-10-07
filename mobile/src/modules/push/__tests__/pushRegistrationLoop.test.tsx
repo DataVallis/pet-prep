@@ -22,6 +22,7 @@ import {
 } from '@/modules/push/pushRegistration';
 import { usePushNotifications } from '@/modules/push/usePushNotifications';
 import { useAppStore } from '@/store/appStore';
+import { i18n } from '@/i18n';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -202,5 +203,69 @@ describe('push registration loop (hotfix 2026-10-06)', () => {
 
     await expect(registerForPush()).resolves.toMatchObject({ status: 'registered' });
     expect(registerDevice).toHaveBeenCalledTimes(2);
+  });
+
+  describe('language switch while signed in (M1-18 review)', () => {
+    async function switchTo(language: 'en' | 'sl') {
+      await act(async () => {
+        await i18n.changeLanguage(language);
+      });
+    }
+
+    afterEach(async () => {
+      await switchTo('sl');
+    });
+
+    function signInChild() {
+      renderHook(() => usePushNotifications());
+      act(() => {
+        useAppStore.getState().signIn({ token: 'tok', user: { id: 2, name: 'M', email: null, role: 'child' }, pet: null });
+      });
+    }
+
+    it('one switch → exactly one extra registration, with the new locale', async () => {
+      registerDevice.mockResolvedValue({ device: { id: 1 } });
+      signInChild();
+      await advance(1_000);
+      expect(registerDevice).toHaveBeenCalledTimes(1);
+      expect(registerDevice).toHaveBeenLastCalledWith(expect.objectContaining({ locale: 'sl' }));
+
+      await switchTo('en');
+      await advance(60_000);
+      expect(registerDevice).toHaveBeenCalledTimes(2);
+      expect(registerDevice).toHaveBeenLastCalledWith(expect.objectContaining({ locale: 'en' }));
+    });
+
+    it('a switch during the sign-in POST is not lost', async () => {
+      let ok: () => void = () => undefined;
+      registerDevice.mockImplementationOnce(() => new Promise((resolve) => { ok = () => resolve({ device: { id: 1 } }); }));
+      registerDevice.mockResolvedValue({ device: { id: 1 } });
+      signInChild();
+      await advance(0);
+      expect(registerDevice).toHaveBeenCalledTimes(1);
+
+      await switchTo('en'); // the in-flight POST still carries 'sl'
+      ok();
+      await advance(1_000);
+      expect(registerDevice).toHaveBeenCalledTimes(2);
+      expect(registerDevice).toHaveBeenLastCalledWith(expect.objectContaining({ locale: 'en' }));
+    });
+
+    it('rapid EN/SL toggling → at most 2 POSTs per minute', async () => {
+      registerDevice.mockResolvedValue({ device: { id: 1 } });
+      signInChild();
+      await advance(1_000);
+      for (let i = 0; i < 10; i += 1) {
+        await switchTo(i % 2 === 0 ? 'en' : 'sl');
+        await advance(500);
+      }
+      await advance(50_000);
+      // Within the first minute: the sign-in POST plus the burst refill — never one per switch.
+      expect(registerDevice.mock.calls.length).toBeLessThanOrEqual(2);
+      await advance(10 * 60_000);
+      // Afterwards: one catch-up POST at the refill, in the final language.
+      expect(registerDevice.mock.calls.length).toBeLessThanOrEqual(3); // one catch-up POST after the refill
+      expect(registerDevice).toHaveBeenLastCalledWith(expect.objectContaining({ locale: 'sl' }));
+    });
   });
 });

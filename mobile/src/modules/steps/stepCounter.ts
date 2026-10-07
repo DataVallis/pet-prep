@@ -15,7 +15,7 @@
  * so the app only reports totals — never deltas.
  */
 
-import { t } from '@/i18n';
+import { formatThousands } from '@/i18n/format';
 
 /** Device-local `YYYY-MM-DD`. */
 export function localDateKey(date: Date): string {
@@ -191,9 +191,8 @@ export function createDeltaTracker(): (cumulative: number) => number {
 
 /**
  * "4.000" (sl) / "4,000" (en) — thousands separator of the current language
- * (`child:format.thousandsSeparator`, M1-18). Hand-rolled instead of `Intl.NumberFormat`
- * so 4-digit counts are grouped the same on every engine.
+ * (`common:format.thousands` via `formatThousands`, M1-18).
  */
 export function formatSteps(steps: number): string {
-  return String(Math.max(0, Math.floor(steps))).replace(/\B(?=(\d{3})+(?!\d))/g, t('child:format.thousandsSeparator'));
+  return formatThousands(steps);
 }

@@ -24,7 +24,7 @@ import { useAppStore } from '@/store/appStore';
 import { usePushPromptOnFirstView } from '@/modules/push/usePushPromptOnFirstView';
 import AddChildCard from '@/components/AddChildCard';
 import ChildOverviewCard from '@/components/parent/ChildOverviewCard';
-import JoinFamilyCard from '@/components/parent/JoinFamilyCard';
+import JoinFamilyCard, { joinNoticeText, type JoinNotice } from '@/components/parent/JoinFamilyCard';
 import ParentLiveChannels from '@/components/ParentLiveChannels';
 import { ErrorBanner, LoadingBlock, NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import ControlsScreen from '@/screens/parent/ControlsScreen';
@@ -85,7 +85,8 @@ function BottomNavBar({ activeTab, onSelect }: { activeTab: Tab; onSelect: (tab:
 export default function ParentDashboardScreen() {
   const [activeTab, setActiveTab] = useState<Tab>('dashboard');
   const [overlay, setOverlay] = useState<Overlay>({ kind: 'none' });
-  const [notice, setNotice] = useState<string | null>(null);
+  // A code, not text: translated at render so it follows a language switch (M1-18 review).
+  const [notice, setNotice] = useState<JoinNotice | null>(null);
   const dashboard = useParentDashboard();
   const noChild = isNoChildPaired(dashboard.data);
   const family = familyFromDashboard(dashboard.data);
@@ -199,7 +200,7 @@ export default function ParentDashboardScreen() {
         </View>
 
         <ScrollView style={styles.flex} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-          {notice && <NoticeBanner text={notice} closeLabel={DASHBOARD_STRINGS.closeNotice} onClose={() => setNotice(null)} />}
+          {notice && <NoticeBanner text={joinNoticeText(notice)} closeLabel={DASHBOARD_STRINGS.closeNotice} onClose={() => setNotice(null)} />}
           {dashboard.isError && (
             <ErrorBanner
               text={

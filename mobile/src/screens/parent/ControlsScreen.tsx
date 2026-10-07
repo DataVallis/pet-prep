@@ -16,7 +16,7 @@ import AddChildCard from '@/components/AddChildCard';
 import FamilyChildrenCard from '@/components/FamilyChildrenCard';
 import AccountCard from '@/components/parent/AccountCard';
 import FamilyParentsCard from '@/components/parent/FamilyParentsCard';
-import JoinFamilyCard from '@/components/parent/JoinFamilyCard';
+import JoinFamilyCard, { joinNoticeText, type JoinNotice } from '@/components/parent/JoinFamilyCard';
 import LanguageCard from '@/components/parent/LanguageCard';
 import NotificationsCard from '@/components/parent/NotificationsCard';
 import PetControlsCard from '@/components/parent/PetControlsCard';
@@ -40,8 +40,9 @@ interface ControlsScreenProps {
   /** PIN for an existing child (pet choice or re-login on a new device). */
   onChildPin: (child: FamilyChild) => void;
   /** Confirmation owned by the parent screen (survives the join card disappearing). */
-  notice?: string | null;
-  onNotice?: (text: string | null) => void;
+  /** Kept as data, translated at render (follows a language switch). */
+  notice?: JoinNotice | null;
+  onNotice?: (notice: JoinNotice | null) => void;
 }
 
 export default function ControlsScreen({ onBack, family, onAddChild, onChildPin, notice = null, onNotice }: ControlsScreenProps) {
@@ -57,7 +58,7 @@ export default function ControlsScreen({ onBack, family, onAddChild, onChildPin,
       </View>
 
       <ScrollView style={styles.flex} contentContainerStyle={styles.content}>
-        {notice && <NoticeBanner text={notice} closeLabel={CONTROLS_STRINGS.closeNotice} onClose={() => onNotice?.(null)} />}
+        {notice && <NoticeBanner text={joinNoticeText(notice)} closeLabel={CONTROLS_STRINGS.closeNotice} onClose={() => onNotice?.(null)} />}
         {family && family.children.length > 0 ? (
           <FamilyChildrenCard family={family} onAddChild={onAddChild} onChildPin={onChildPin} />
         ) : (
@@ -77,7 +78,7 @@ export default function ControlsScreen({ onBack, family, onAddChild, onChildPin,
         <NotificationsCard />
 
         {family && <FamilyParentsCard family={family} />}
-        {isEmpty && <JoinFamilyCard onJoined={(text) => onNotice?.(text)} />}
+        {isEmpty && <JoinFamilyCard onJoined={(joined) => onNotice?.(joined)} />}
 
         <LanguageCard />
         <AccountCard family={family} />
