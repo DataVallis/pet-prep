@@ -21,6 +21,7 @@ use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Contracts\Bus\Dispatcher as BusDispatcher;
 use Illuminate\Http\Client\Factory as HttpFactory;
 use Illuminate\Http\Client\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\DB;
@@ -70,13 +71,19 @@ function pnFamily(array $petAttributes = []): array
     return [$parent, $child, disableHygieneEvents($pet)];
 }
 
-function pnDevice(User $user, ?string $token = null, string $platform = 'ios'): DevicePushToken
+/**
+ * A registered install. Default language 'sl' = an install from before M1-18
+ * (backfilled), so the copy assertions below stay Slovenian; pass null for an
+ * install that never stated a language.
+ */
+function pnDevice(User $user, ?string $token = null, string $platform = 'ios', ?string $locale = 'sl'): DevicePushToken
 {
     return DevicePushToken::create([
         'user_id' => $user->id,
         'expo_push_token' => $token ?? pnToken(),
         'platform' => $platform,
         'app_version' => '1.0.0',
+        'locale' => $locale,
         'last_seen_at' => now(),
     ]);
 }
@@ -390,8 +397,8 @@ describe('Escalation pushes — recipients and copy', function () {
         expect($pet->refresh()->isIll())->toBeTrue();
         $byToken = collect($sent->getArrayCopy())->keyBy('to');
         expect($byToken)->toHaveCount(2)
-            ->and($byToken[$parentDevice->expo_push_token]['body'])->toBe(PushCopy::body(PushType::Illness, 'hygiene', 'parent'))
-            ->and($byToken[$childDevice->expo_push_token]['body'])->toBe(PushCopy::body(PushType::Illness, 'hygiene', 'child'))
+            ->and($byToken[$parentDevice->expo_push_token]['body'])->toBe(PushCopy::body(PushType::Illness, 'hygiene', 'parent', 'sl'))
+            ->and($byToken[$childDevice->expo_push_token]['body'])->toBe(PushCopy::body(PushType::Illness, 'hygiene', 'child', 'sl'))
             ->and($byToken[$childDevice->expo_push_token]['data'])->toBe(['type' => 'illness_triggered', 'pet_id' => $pet->id]);
     });
 
@@ -1126,4 +1133,165 @@ it('limits device registration to 10 per minute per user outside testing, fallin
     } finally {
         app()['env'] = $env;
     }
+});
+
+// ──────────────────────────────────────────────────────────────
+// M1-18: push language per install
+// ──────────────────────────────────────────────────────────────
+
+describe('POST /api/devices — install language (M1-18)', function () {
+    it('stores the language from Accept-Language and refreshes it on every re-registration', function () {
+        [, $child] = pnFamily();
+        $token = pnToken('langFFFFFFFFFFFFFFFFFFF');
+        actingAsRole($child);
+        $register = fn (array $headers) => $this->postJson('/api/devices', ['expo_push_token' => $token, 'platform' => 'ios'], $headers);
+
+        $register(['Accept-Language' => 'sl-SI'])->assertOk()->assertJsonPath('device.locale', 'sl');
+        expect(DevicePushToken::where('expo_push_token', $token)->value('locale'))->toBe('sl');
+
+        $register(['Accept-Language' => 'en-GB'])->assertOk()->assertJsonPath('device.locale', 'en');
+        expect(DevicePushToken::where('expo_push_token', $token)->sole()->locale)->toBe('en');
+
+        $register(['Accept-Language' => 'de-DE;q=1, sl;q=0.5'])->assertOk()->assertJsonPath('device.locale', 'sl');
+    });
+
+    it('keeps the stored language when a request names none (old builds), and leaves a new install null', function () {
+        [$parent, $child] = pnFamily();
+        $known = pnToken('knownGGGGGGGGGGGGGGGGG');
+        pnDevice($child, $known, 'ios', 'sl');
+        actingAsRole($child);
+        // The test client sends "en-us,en;q=0.5" by default (Symfony); an empty
+        // header stands for an old Android build that sends none.
+        $noLanguage = ['Accept-Language' => ''];
+
+        $this->postJson('/api/devices', ['expo_push_token' => $known, 'platform' => 'ios'], $noLanguage)->assertOk()
+            ->assertJsonPath('device.locale', 'sl');
+        $this->postJson('/api/devices', ['expo_push_token' => $known, 'platform' => 'ios'], ['Accept-Language' => 'fr-FR, *;q=0.1'])->assertOk()
+            ->assertJsonPath('device.locale', 'sl');
+
+        $fresh = pnToken('freshHHHHHHHHHHHHHHHHH');
+        $this->postJson('/api/devices', ['expo_push_token' => $fresh, 'platform' => 'android'], $noLanguage)->assertOk()
+            ->assertJsonPath('device.locale', null);
+        expect(DevicePushToken::where('expo_push_token', $fresh)->value('locale'))->toBeNull();
+
+        // Moving the install to another account takes that request's language.
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        $this->postJson('/api/devices', ['expo_push_token' => $known, 'platform' => 'ios'], ['Accept-Language' => 'en'])->assertOk();
+        expect(DevicePushToken::where('expo_push_token', $known)->sole())
+            ->user_id->toBe($parent->id)
+            ->locale->toBe('en');
+    });
+});
+
+describe('Escalation pushes — copy per install language (M1-18)', function () {
+    it('renders each device in its own language in a single Expo request (mixed batch)', function () {
+        [, $child, $pet] = pnFamily(['hunger_level' => 30]);
+        $sl = pnDevice($child, null, 'ios', 'sl');
+        $en = pnDevice($child, null, 'android', 'en');
+        $none = pnDevice($child, null, 'ios', null);
+        $sent = pnFakeExpo();
+
+        pnEscalate($pet);
+
+        Http::assertSentCount(1);
+        $byToken = collect($sent->getArrayCopy())->keyBy('to');
+        expect($byToken)->toHaveCount(3)
+            ->and($byToken[$sl->expo_push_token]['body'])->toBe('Tvoj kuža te milo gleda in kaže na posodo s hrano.')
+            ->and($byToken[$en->expo_push_token]['body'])->toBe('Your dog is giving you a gentle look and pointing at the food bowl.')
+            ->and($byToken[$none->expo_push_token]['body'])->toBe($byToken[$en->expo_push_token]['body']) // null → English
+            ->and(collect($sent->getArrayCopy())->pluck('title')->unique()->all())->toBe(['PetPrep'])
+            ->and(collect($sent->getArrayCopy())->pluck('data')->unique()->values()->all())->toBe([['type' => 'soft_warning', 'pet_id' => $pet->id]]);
+
+        // Still one notification (dedupe is per pet + type, not per language) and one ticket per device.
+        expect(PushNotification::count())->toBe(1)
+            ->and(PushTicket::count())->toBe(3);
+
+        pnEscalate($pet);
+        expect(PushNotification::count())->toBe(1);
+    });
+
+    it('keeps batching (≤ chunk size per request) with mixed languages, parents and children each in their own words', function () {
+        config(['push.chunk_size' => 2]);
+        [$parent, $child, $pet] = pnFamily(['hygiene_level' => 0, 'hygiene_zero_since' => now()->subHours(7), 'escalation_level' => 3]);
+        $devices = [
+            pnDevice($parent, null, 'ios', 'en'),
+            pnDevice($parent, null, 'ios', 'sl'),
+            pnDevice($child, null, 'android', 'sl'),
+            pnDevice($child, null, 'ios', 'en'),
+            pnDevice($child, null, 'ios', null),
+        ];
+        $sent = pnFakeExpo();
+
+        pnEscalate($pet);
+
+        Http::assertSentCount(3); // 2 + 2 + 1
+        $byToken = collect($sent->getArrayCopy())->keyBy('to');
+        $expected = [
+            PushCopy::body(PushType::Illness, 'hygiene', 'parent', 'en'),
+            PushCopy::body(PushType::Illness, 'hygiene', 'parent', 'sl'),
+            PushCopy::body(PushType::Illness, 'hygiene', 'child', 'sl'),
+            PushCopy::body(PushType::Illness, 'hygiene', 'child', 'en'),
+            PushCopy::body(PushType::Illness, 'hygiene', 'child', 'en'),
+        ];
+        foreach ($devices as $i => $device) {
+            expect($byToken[$device->expo_push_token]['body'])->toBe($expected[$i]);
+        }
+        expect($expected[1])->toBe('Kuža je zbolel, ker nered ni bil počiščen. 12 ur bo na opazovanju pri veterinarju.')
+            ->and($expected[0])->toBe('The dog got sick because a mess wasn’t cleaned up. It will stay at the vet for 12 hours of observation.');
+    });
+});
+
+describe('PushCopy languages (M1-18)', function () {
+    // The Slovenian texts exactly as PushCopy had them before M1-18 — must stay byte-identical.
+    it('keeps every Slovenian text byte-identical', function (PushType $type, ?string $metric, string $audience, string $text) {
+        expect(PushCopy::body($type, $metric, $audience, 'sl'))->toBe($text)
+            ->and(PushCopy::title('sl'))->toBe('PetPrep');
+    })->with([
+        [PushType::SoftWarning, 'hunger', 'child', 'Tvoj kuža te milo gleda in kaže na posodo s hrano.'],
+        [PushType::SoftWarning, 'thirst', 'child', 'Tvoj kuža te milo gleda in kaže na prazno posodo za vodo.'],
+        [PushType::SoftWarning, 'hygiene', 'child', 'Tvoj kuža te milo gleda in kaže na nered, ki ga je treba počistiti.'],
+        [PushType::SoftWarning, null, 'child', 'Tvoj kuža te milo gleda in kaže na posodo s hrano.'],
+        [PushType::CriticalAlert, 'hunger', 'child', 'Če ga ne nahraniš v 30 minutah, bo zbolel.'],
+        [PushType::CriticalAlert, 'thirst', 'child', 'Če mu ne daš vode v 30 minutah, bo zbolel.'],
+        [PushType::CriticalAlert, 'hygiene', 'child', 'Kuža je naredil nered! Počisti ga čim prej, sicer bo zbolel.'],
+        [PushType::WalkReminder, 'energy', 'child', 'Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?'],
+        [PushType::ParentAlarm, 'hunger', 'parent', 'Tvoj otrok danes ni poskrbel za psa. Kuža je že več kot uro brez hrane.'],
+        [PushType::ParentAlarm, 'thirst', 'parent', 'Tvoj otrok danes ni poskrbel za psa. Kuža je že več kot uro brez vode.'],
+        [PushType::ParentAlarm, 'hygiene', 'parent', 'Tvoj otrok danes ni poskrbel za psa. Nered že več kot uro ni počiščen.'],
+        [PushType::ParentAlarm, null, 'parent', 'Tvoj otrok danes ni poskrbel za psa.'],
+        [PushType::Illness, 'hygiene', 'child', 'Kuža je predolgo živel v neredu in je zbolel. 12 ur bo na opazovanju pri veterinarju.'],
+        [PushType::Illness, 'walk', 'child', 'Kuža včeraj ni bil na sprehodu in je zbolel. 12 ur bo na opazovanju pri veterinarju.'],
+        [PushType::Illness, null, 'child', 'Kuža je zbolel. 12 ur bo na opazovanju pri veterinarju.'],
+        [PushType::Illness, 'hygiene', 'parent', 'Kuža je zbolel, ker nered ni bil počiščen. 12 ur bo na opazovanju pri veterinarju.'],
+        [PushType::Illness, 'walk', 'parent', 'Kuža je zbolel, ker včeraj ni bil na sprehodu. 12 ur bo na opazovanju pri veterinarju.'],
+        [PushType::Illness, 'hunger', 'parent', 'Kuža je zbolel. 12 ur bo na opazovanju pri veterinarju.'],
+        [PushType::GameOver, null, 'child', 'Kuža je odšel v zavetišče, ker zanj predolgo ni nihče poskrbel. Pogovori se s starši.'],
+        [PushType::GameOver, null, 'parent', 'Kuža je odšel v zavetišče, ker 24 ur ni dobil nujne skrbi. V aplikaciji izberite, kako naprej.'],
+    ]);
+
+    it('has an English text for every case, and null / unknown languages fall back to English', function () {
+        $cases = [
+            [PushType::SoftWarning, 'thirst', 'child'], [PushType::CriticalAlert, 'hygiene', 'child'],
+            [PushType::WalkReminder, 'energy', 'child'], [PushType::ParentAlarm, 'thirst', 'parent'],
+            [PushType::Illness, 'walk', 'child'], [PushType::Illness, 'walk', 'parent'],
+            [PushType::GameOver, null, 'child'], [PushType::GameOver, null, 'parent'],
+        ];
+        foreach ($cases as [$type, $metric, $audience]) {
+            $en = PushCopy::body($type, $metric, $audience, 'en');
+            expect($en)->not->toBe('')
+                ->not->toStartWith('push.')
+                ->not->toBe(PushCopy::body($type, $metric, $audience, 'sl'))
+                ->and(PushCopy::body($type, $metric, $audience, null))->toBe($en)
+                ->and(PushCopy::body($type, $metric, $audience, 'de'))->toBe($en);
+        }
+        expect(PushCopy::body(PushType::ParentAlarm, 'hunger', 'parent', 'en'))
+            ->toBe('Your child hasn’t looked after the dog today. The dog has had no food for over an hour.');
+    });
+
+    it('has the same keys in every language file', function () {
+        $keys = fn (string $locale): array => array_keys(Arr::dot(require lang_path("{$locale}/push.php")));
+
+        expect($keys('sl'))->toBe($keys('en'));
+    });
 });

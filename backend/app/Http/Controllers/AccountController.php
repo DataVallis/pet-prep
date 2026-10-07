@@ -81,7 +81,7 @@ class AccountController extends Controller
             return $this->refusal($e);
         }
 
-        $filename = 'petprep-izvoz-'.now()->setTimezone($parent->familyTimezone())->toDateString().'.json';
+        $filename = __('account.export.filename_prefix').'-'.now()->setTimezone($parent->familyTimezone())->toDateString().'.json';
 
         return response()
             ->json($data, 200, [

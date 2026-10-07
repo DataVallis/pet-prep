@@ -5,6 +5,7 @@ namespace App\Http\Requests;
 use App\Enums\DevicePlatform;
 use App\Models\DevicePushToken;
 use App\Models\User;
+use App\Support\RequestLocale;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
@@ -32,6 +33,15 @@ class RegisterDeviceRequest extends FormRequest
             // e.g. "1.4.0" or "1.4.0 (57)"; free text would invite PII.
             'app_version' => ['nullable', 'string', 'max:32', 'regex:/^[0-9A-Za-z.\-+() ]+$/'],
         ];
+    }
+
+    /**
+     * Push language of this install (M1-18): the supported language named in
+     * `Accept-Language`, or null when the header names none (keep the stored one).
+     */
+    public function pushLocale(): ?string
+    {
+        return RequestLocale::fromHeader($this->header('Accept-Language'));
     }
 
     public function platform(): DevicePlatform
