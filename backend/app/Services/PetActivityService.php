@@ -277,7 +277,8 @@ class PetActivityService
      * Start a training session (M5-R03, David 2026-10-06): the server
      * generates the schedule (TrainingService::start). Locks first (423),
      * then 422 training_not_available / training_session_active /
-     * training_day_ending / training_daily_budget_used. `extra.session` = the
+     * training_day_ending / training_daily_budget_used /
+     * training_child_share_used (M5-R03b). `extra.session` = the
      * schedule for the app. One `PetUpdated('training_started')` (the payload
      * shows a running session). Broadcast only, no activity row (would need a
      * new activity type + timeline label; the routine is the completed session).

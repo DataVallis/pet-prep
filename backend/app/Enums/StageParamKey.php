@@ -12,7 +12,9 @@ namespace App\Enums;
  *    `age_from_months` inside the stage): STARTS_AT_MONTHS, ARRIVAL_AGE_MONTHS,
  *    MEALS_PER_DAY, FEED_WINDOWS, EXERCISE_MINUTES_PER_DAY,
  *    EXERCISE_MINUTES_PER_AGE_MONTH, SLEEP_HOURS, and the M5-R02 behaviour
- *    keys ACCIDENT_HOLD_HOURS_PER_AGE_MONTH, CHEWING_CHANCE_PER_DAY;
+ *    keys ACCIDENT_HOLD_HOURS_PER_AGE_MONTH, CHEWING_CHANCE_PER_DAY, and the
+ *    M5-R03b TRAINING_STARTING_PROGRESS (the arrival stage's command
+ *    progress, {command: percent}, applied once when the pet is created);
  *  - breed keys (stage = all): the rest, including the M5-R03 training
  *    keys (learning multiplier, individual variation, minutes per day,
  *    progress per success, decay per missed day, and the effects of potty /
@@ -31,6 +33,8 @@ enum StageParamKey: string
     // M5-R02 behaviour (stage keys; puppy stage only today)
     case AccidentHoldHoursPerAgeMonth = 'accident_hold_hours_per_age_month';
     case ChewingChancePerDay = 'chewing_chance_per_day';
+    // M5-R03b training (stage key): starting progress per command of a dog arriving in this stage
+    case TrainingStartingProgress = 'training_starting_progress';
 
     // Breed keys (stage = all)
     case StepsPerExerciseMinute = 'steps_per_exercise_minute';
@@ -96,7 +100,28 @@ enum StageParamKey: string
                 ? null : 'Expected whole minutes per day, 1–60.',
             self::TrainingProgressPerSuccess, self::TrainingDecayPerMissedDay => $isNumber($value) && $value <= 100
                 ? null : 'Expected percentage points 0–100.',
+            self::TrainingStartingProgress => $this->validateStartingProgress($value),
         };
+    }
+
+    /**
+     * {"sit": 50, "come": 30, "place": 0, "potty": 70}: known commands only,
+     * each 0–100 (a missing command starts at 0).
+     */
+    private function validateStartingProgress(mixed $value): ?string
+    {
+        $error = 'Expected {"sit"|"come"|"place"|"potty": percent 0–100, …}.';
+        if (! is_array($value) || ($value !== [] && array_is_list($value))) {
+            return $error;
+        }
+        foreach ($value as $command => $progress) {
+            if (TrainingCommand::tryFrom((string) $command) === null
+                || ! (is_int($progress) || is_float($progress)) || $progress < 0 || $progress > 100) {
+                return $error;
+            }
+        }
+
+        return null;
     }
 
     private function validateWindows(mixed $value): ?string

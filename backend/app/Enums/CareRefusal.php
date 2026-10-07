@@ -45,6 +45,13 @@ enum CareRefusal: string
     /** The dog's training minutes of the family-local day are used up (next_allowed_at = local midnight). */
     case TrainingDailyBudgetUsed = 'training_daily_budget_used';
 
+    /**
+     * This child's fair share of the dog's daily training budget is used
+     * (budget / children who can train, M5-R03b; next_allowed_at = local
+     * midnight). A sibling may still have time left.
+     */
+    case TrainingChildShareUsed = 'training_child_share_used';
+
     /** Unknown session, another child's session, or a session of another pet. */
     case TrainingSessionInvalid = 'training_session_invalid';
 

@@ -73,7 +73,7 @@ import { usePushPromptOnFirstView } from '@/modules/push/usePushPromptOnFirstVie
 import { nextStageLine, originLine, stageLine } from '@/modules/petProfile/petProfile';
 import TrainingChip from '@/modules/training/TrainingChip';
 import TrainingOverlay from '@/modules/training/TrainingOverlay';
-import { showTrainingEntry } from '@/modules/training/training';
+import { showTrainingDot, showTrainingEntry } from '@/modules/training/training';
 import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
 import { alpha, palette, radius } from '@/theme';
 
@@ -630,7 +630,10 @@ export default function ChildHudScreen() {
             right={METRICS_RESERVED_RIGHT}
             footer={
               hasTraining ? (
-                <TrainingChip todayDone={view.training.today_done} onPress={() => setTrainingVisible(true)} />
+                <TrainingChip
+                  todayDone={view.training.today_done}
+                  pending={showTrainingDot(view.training)}
+                  onPress={() => setTrainingVisible(true)} />
               ) : null
             }
           />

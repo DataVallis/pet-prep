@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-06 — Starejši kuža že nekaj zna, čas za šolo pa si otroci delijo pošteno (M5-R03b)
+
+**Kaj se je zgodilo:** David je potrdil številke šolanja in dve novi pravili; zdaj so v strežniku in aplikaciji. **(1)** 5 minut vaje na psa na dan, +1 % na pravočasno pohvalo, −2 % na dan brez vaje so v bazi označeni »potrdil David 2026-10-06« (vir ostane dokaz, odločitev se ne predstavlja kot literatura); obstoječe vrednosti v produkciji se posodobijo enkrat, z revizijsko sledjo, in ne povozijo ničesar, kar je administrator že spremenil. **(2)** Pes, ki pride kot **mlad pes, odrasel ali starejši**, že zna **sedi 50 %, lulat zunaj 70 %, pridi 30 %, prostor 0 %**; mladiček začne z 0 %. Starš in otrok to vidita takoj, še pred podpisom pogodbe. **(3)** Če za psa skrbi več otrok, si **dnevnih 5 minut razdelijo enako** (dva otroka po 150 s = 3 vaje, trije po 2 vaji; vsak otrok vsaj eno vajo). Otrok vidi »Danes še 3 vaje« in »Čas za šolo si deliš z bratom ali sestro.«; ko porabi svoj del: »Tvoj današnji čas za šolo je porabljen. Brat ali sestra lahko s kužkom še vadi — ti pa spet jutri!«. Aplikacija še ni v trgovini.
+
+**Zakaj je pomembno:** Posvojen odrasel pes iz zavetišča navadno že nekaj zna — igra zdaj to upošteva. Pri dveh otrocih ne more eden porabiti vsega časa in drugega pustiti brez vaje.
+
+**Številke:** 22 novih strežniških testov (skupaj 1.095 zelenih), 17 novih testov v aplikaciji (skupaj 1.081 zelenih); neodvisni pregled kode odobril (popravljeni 3 manjši predlogi).
+
+**Kako povedati:**
+- 👩 Starši: "Posvojite odraslega psa? V PetPrepu že zna sesti in prositi, da gre ven — kot pravi pes iz zavetišča. Dva otroka? Čas za šolo si pošteno razdelita."
+- 🧒 Otroci: "Če kuža k tebi pride že velik, zna nekaj ukazov že od prej! S sestro ali bratom si čas za šolo delita."
+- 🤝 Zavetišča: "Odrasel posvojen pes v igri ni 'prazen list' — pride s svojim znanjem."
+- 💼 Investitorji: "Vsaka številka simulacije ima vir ali zapisano odločitev ustanovitelja; spremembe v produkciji gredo z revizijsko sledjo."
+- 🛠 Tehnično: "Delež otroka = max(⌊300 s / n⌋, 50 s) pod istim zaklepom vrstice kot dnevni proračun psa; začetno znanje je podatek v `breed_stage_params` (`training_starting_progress`) z oznako odločitve, uporabljen enkrat ob nastanku psa."
+
+---
+
 ## 2026-10-06 — Aplikacija v novi preobleki: »Grafit in meta« (CGP v2)
 
 **Kaj se je zgodilo:** Mobilna aplikacija je v celoti preoblečena v novo celostno podobo. Nova ikona (grafitni »Radovednež« na mint ozadju) za iPhone in Android (tudi prilagodljiva in enobarvna za teme in obvestila), nov zagonski zaslon, logotip na začetnem zaslonu, prijavi, registraciji in v pregledu družine, slogan »Pripravljeni na žival. Ob njej vse življenje.« na začetku. Starši imajo miren, svetel vmesnik (kot bančna aplikacija), otrok temen simulator, v katerem je **gumb za skrb, ki je zdaj na vrsti, poln mint** (hranjenje v oknu, čiščenje nereda, »Pelji ven«). Nove pisave Bricolage Grotesque in Instrument Sans (s šumniki). Aplikacija še ni v trgovini; nova ikona se pokaže z naslednjim buildom.

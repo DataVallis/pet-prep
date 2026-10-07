@@ -928,8 +928,14 @@ describe('data', function () {
             ->and($data['medium_mixed_breed']['trainability']['individual_variation']['decision'])->toStartWith('potrdil David 2026-10-06')
             ->and($data['general_by_size']['house_training']['learns_to_signal']['source_id'])->toBe('S47');
 
-        foreach ([StageParamKey::TrainingMinutesPerDay, StageParamKey::TrainingProgressPerSuccess, StageParamKey::TrainingDecayPerMissedDay,
-            StageParamKey::PottyTrainingAccidentReduction, StageParamKey::PlaceTrainingChewingReduction] as $key) {
+        // M5-R03b: David confirmed the three numbers on 2026-10-06; the two effects stay proposals.
+        foreach ([StageParamKey::TrainingMinutesPerDay, StageParamKey::TrainingProgressPerSuccess, StageParamKey::TrainingDecayPerMissedDay] as $key) {
+            foreach (['mutt', 'border-collie'] as $breed) {
+                expect($row($breed, $key)->verified)->toBeTrue()
+                    ->and($row($breed, $key)->notes)->toStartWith('Decision: potrdil David 2026-10-06.');
+            }
+        }
+        foreach ([StageParamKey::PottyTrainingAccidentReduction, StageParamKey::PlaceTrainingChewingReduction] as $key) {
             foreach (['mutt', 'border-collie'] as $breed) {
                 expect($row($breed, $key)->verified)->toBeFalse()
                     ->and($row($breed, $key)->notes)->toContain('UNSOURCED proposal (Claude, M5-R03, waiting for David)');

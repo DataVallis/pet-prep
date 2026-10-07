@@ -60,6 +60,12 @@ export interface ChildTraining {
   session_seconds: number;
   daily_budget_seconds: number;
   daily_budget_left_seconds: number;
+  /** M5-R03b: children who can train this dog today (1 = only me). */
+  children_sharing: number;
+  /** M5-R03b: my fair share of the daily budget (budget / children_sharing; 0 = I can't train). */
+  my_share_seconds: number;
+  /** M5-R03b: my share minus my sessions today, capped by `daily_budget_left_seconds`. */
+  my_seconds_left: number;
   can_start: boolean;
 }
 
@@ -79,6 +85,9 @@ export const EMPTY_TRAINING: ChildTraining = {
   session_seconds: 50,
   daily_budget_seconds: 0,
   daily_budget_left_seconds: 0,
+  children_sharing: 1,
+  my_share_seconds: 0,
+  my_seconds_left: 0,
   can_start: false,
 };
 
@@ -230,14 +239,21 @@ function readRunningSession(value: unknown): RunningSessionInfo | null {
 export function readChildTraining(raw: unknown): ChildTraining {
   if (!isObj(raw) || raw.enabled !== true) return EMPTY_TRAINING;
   const sessionSeconds = num(raw.session_seconds, EMPTY_TRAINING.session_seconds);
+  const budget = Math.max(0, num(raw.daily_budget_seconds));
+  const budgetLeft = Math.max(0, num(raw.daily_budget_left_seconds));
+  // A pre-M5-R03b server sends no share: the whole budget is "mine" (old behaviour).
+  const myLeft = Math.max(0, num(raw.my_seconds_left, budgetLeft));
   return {
     enabled: true,
     commands: readCommands(raw.commands),
     today_done: raw.today_done === true,
     session: readRunningSession(raw.session),
     session_seconds: sessionSeconds > 0 ? sessionSeconds : EMPTY_TRAINING.session_seconds,
-    daily_budget_seconds: Math.max(0, num(raw.daily_budget_seconds)),
-    daily_budget_left_seconds: Math.max(0, num(raw.daily_budget_left_seconds)),
+    daily_budget_seconds: budget,
+    daily_budget_left_seconds: budgetLeft,
+    children_sharing: Math.max(1, Math.round(num(raw.children_sharing, 1))),
+    my_share_seconds: Math.max(0, num(raw.my_share_seconds, budget)),
+    my_seconds_left: Math.min(myLeft, budgetLeft),
     can_start: raw.can_start === true,
   };
 }
@@ -357,13 +373,43 @@ export function showTrainingEntry(training: ChildTraining): boolean {
   return training.enabled && training.commands.length > 0;
 }
 
-/** Whole sessions the dog may still do today (5 min budget / 50 s). */
+/**
+ * Whole sessions THIS child may still do today (M5-R03b): my share of the 5 min / 50 s,
+ * i.e. `my_seconds_left` (already capped by what the dog has left).
+ */
 export function sessionsLeftToday(training: ChildTraining): number {
+  if (training.session_seconds <= 0) return 0;
+  return Math.floor(Math.min(training.my_seconds_left, training.daily_budget_left_seconds) / training.session_seconds);
+}
+
+/** Whole sessions the dog may still do today, whoever trains (pet-wide budget). */
+function petSessionsLeftToday(training: ChildTraining): number {
   if (training.session_seconds <= 0) return 0;
   return Math.floor(training.daily_budget_left_seconds / training.session_seconds);
 }
 
-export type StartBlock = 'sibling_training' | 'own_session_closing' | 'budget_used' | 'day_ending' | 'unavailable' | null;
+/** The daily time is split between siblings (show the "deliš" hint). */
+export function isTimeShared(training: ChildTraining): boolean {
+  return training.enabled && training.children_sharing > 1;
+}
+
+/**
+ * The HUD chip's amber "today's practice is waiting" dot: the routine isn't done today
+ * AND I still have time to train (not shown to a child whose share is used up — they
+ * couldn't act on it). A sibling's running session doesn't hide it (that's only a minute).
+ */
+export function showTrainingDot(training: ChildTraining): boolean {
+  return !training.today_done && sessionsLeftToday(training) > 0;
+}
+
+export type StartBlock =
+  | 'sibling_training'
+  | 'own_session_closing'
+  | 'budget_used'
+  | 'share_used'
+  | 'day_ending'
+  | 'unavailable'
+  | null;
 
 /** A session started now (+ its 60 s finish TTL) would run past the family midnight (PR #53). */
 export const DAY_END_RESERVE_MS = 60_000;
@@ -379,7 +425,9 @@ export function isDayEnding(training: ChildTraining, serverNowMs: number, nextMi
 export function startBlock(training: ChildTraining, dayEnding = false): StartBlock {
   if (training.can_start) return null;
   if (training.session !== null) return training.session.mine ? 'own_session_closing' : 'sibling_training';
-  if (training.enabled && sessionsLeftToday(training) === 0) return 'budget_used';
+  // Same order as the server: the dog's whole budget first, then my share of it.
+  if (training.enabled && petSessionsLeftToday(training) === 0) return 'budget_used';
+  if (training.enabled && sessionsLeftToday(training) === 0) return 'share_used';
   if (dayEnding) return 'day_ending';
   return 'unavailable';
 }
@@ -412,12 +460,16 @@ export const TRAINING_STRINGS = {
   sessionsLeft: (n: number) =>
     n === 1 ? 'Danes še 1 vaja.' : n === 2 ? 'Danes še 2 vaji.' : n === 3 || n === 4 ? `Danes še ${n} vaje.` : `Danes še ${n} vaj.`,
   sessionLength: (seconds: number) => `Vaja traja ${seconds} s.`,
+  /** M5-R03b: the daily time is split fairly between the children of the dog. */
+  sharedTime: (children: number) =>
+    children === 2 ? 'Čas za šolo si deliš z bratom ali sestro.' : 'Čas za šolo si deliš z brati in sestrami.',
   start: 'Začni vajo',
   startA11y: (name: string) => `Začni vajo: ${name}`,
   blocked: {
     sibling_training: 'Nekdo drug zdaj vadi s kužkom. Poskusi čez minutko.',
     own_session_closing: 'Prejšnja vaja se še zaključuje. Poskusi čez minutko.',
     budget_used: 'Kuža je danes že dovolj vadil. Jutri spet!',
+    share_used: 'Tvoj današnji čas za šolo je porabljen. Brat ali sestra lahko s kužkom še vadi — ti pa spet jutri!',
     day_ending: 'Dan se izteka — kuža gre spat. Nova vaja jutri!',
     unavailable: 'Zdaj ni čas za vajo.',
   } satisfies Record<Exclude<StartBlock, null>, string>,
@@ -467,6 +519,7 @@ export const TRAINING_STRINGS = {
     training_session_active: 'Nekdo že vadi s kužkom. Poskusi čez minutko.',
     training_session_active_until: (clock: string) => `Nekdo že vadi s kužkom. Poskusi spet ob ${clock}.`,
     training_daily_budget_used: 'Kuža je danes že dovolj vadil. Jutri spet!',
+    training_child_share_used: 'Tvoj današnji čas za šolo je porabljen. Brat ali sestra lahko s kužkom še vadi — ti pa spet jutri!',
     training_session_invalid: 'Te vaje ni več. Začni novo vajo.',
     training_session_not_over: 'Vaja še ni čisto končana. Poskusi znova.',
     training_session_expired: 'Vaja se je iztekla, preden smo jo shranili. Napredek tokrat ni zapisan — začni novo vajo.',
@@ -492,6 +545,7 @@ const REFUSALS: readonly TrainingRefusal[] = [
   'training_not_available',
   'training_session_active',
   'training_daily_budget_used',
+  'training_child_share_used',
   'training_session_invalid',
   'training_session_not_over',
   'training_session_expired',

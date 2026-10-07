@@ -101,6 +101,7 @@ trait HandlesChildPet
             CareRefusal::TrainingNotAvailable => 'Training is not available for this pet.',
             CareRefusal::TrainingSessionActive => 'A training session is already running.',
             CareRefusal::TrainingDailyBudgetUsed => 'The dog has trained enough for today.',
+            CareRefusal::TrainingChildShareUsed => 'You have used your share of today\'s training time.',
             CareRefusal::TrainingSessionInvalid => 'Unknown training session.',
             CareRefusal::TrainingSessionNotOver => 'The training session is not over yet.',
             CareRefusal::TrainingSessionExpired => 'The training session has expired.',

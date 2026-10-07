@@ -3,7 +3,7 @@
     "task": "M1-19 / M5 — sourced dog data for realism",
     "compiled": "2026-10-05",
     "compiled_by": "Claude (research agent)",
-    "status": "Imported into breed_stage_params (M5-R01, BreedStageParamsSeeder). Game values David confirmed on 2026-10-05 carry a \"decision\" field. M5-R03 (2026-10-06): training values added (learning multiplier, individual variation — David decisions; minutes, progress, decay, effects — proposals).",
+    "status": "Imported into breed_stage_params (M5-R01, BreedStageParamsSeeder). Game values David confirmed on 2026-10-05 carry a \"decision\" field. M5-R03 (2026-10-06): training values added (learning multiplier, individual variation — David decisions; minutes, progress, decay, effects — proposals). M5-R03b (2026-10-06): David confirmed minutes, progress and decay; starting progress per arrival stage added (decision); the two effects stay proposals.",
     "sources": "docs/research/dog-data/sources.md",
     "conventions": {
       "value_object": "{value, unit, source_id, quote, confidence, notes}",
@@ -1339,7 +1339,8 @@
       "derived_from": [
         "S36",
         "S37"
-      ]
+      ],
+      "decision": "potrdil David 2026-10-06: 5 minutes of mini-game per dog and day, shared equally by the children who care for the dog (M5-R03b)"
     },
     "feed_window_times": {
       "value": {
@@ -1419,7 +1420,8 @@
       "source_id": null,
       "quote": null,
       "confidence": "low",
-      "notes": "UNSOURCED — proposal (Claude, M5-R03, waiting for David). Game balance: a session has 8 cues; about 16 good daily sessions teach one command to a mixed breed (≈ 8 for a Border Collie), so all four commands take about the 12-week challenge with one session a day."
+      "notes": "UNSOURCED — proposal (Claude, M5-R03, waiting for David). Game balance: a session has 8 cues; about 16 good daily sessions teach one command to a mixed breed (≈ 8 for a Border Collie), so all four commands take about the 12-week challenge with one session a day.",
+      "decision": "potrdil David 2026-10-06: +1 point per correctly timed praise (× breed × individual factor)"
     },
     "training_decay_per_missed_day": {
       "value": 2.0,
@@ -1427,7 +1429,8 @@
       "source_id": null,
       "quote": null,
       "confidence": "low",
-      "notes": "UNSOURCED — proposal (Claude, M5-R03, waiting for David). REALISM_SPEC §4 / David 2026-10-06: without practice progress slowly decays; no source gives a rate. A day excused like the walk (hard stop / vet ≥ 50 % of the day) or the birth day never decays."
+      "notes": "UNSOURCED — proposal (Claude, M5-R03, waiting for David). REALISM_SPEC §4 / David 2026-10-06: without practice progress slowly decays; no source gives a rate. A day excused like the walk (hard stop / vet ≥ 50 % of the day) or the birth day never decays.",
+      "decision": "potrdil David 2026-10-06: −2 points per missed training day, every command"
     },
     "potty_training_accident_reduction": {
       "value": 0.75,
@@ -1451,6 +1454,40 @@
       "derived_from": [
         "S33"
       ]
+    },
+    "training_starting_progress": {
+      "value": {
+        "puppy": {
+          "sit": 0,
+          "come": 0,
+          "place": 0,
+          "potty": 0
+        },
+        "young": {
+          "sit": 50,
+          "come": 30,
+          "place": 0,
+          "potty": 70
+        },
+        "adult": {
+          "sit": 50,
+          "come": 30,
+          "place": 0,
+          "potty": 70
+        },
+        "senior": {
+          "sit": 50,
+          "come": 30,
+          "place": 0,
+          "potty": 70
+        }
+      },
+      "unit": "training progress % per command when the dog arrives in that life stage (bought or adopted)",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — Claude proposal (M5-R03b): a dog that arrives grown has usually learnt some basics in its previous home or shelter; no source gives numbers. Applied once at pet creation, only for pets with training; not a session.",
+      "decision": "potrdil David 2026-10-06: young, adult and senior arrivals start with sit 50 %, potty 70 %, come 30 %, place 0 %; a puppy (also bought) starts at 0 %"
     }
   }
 }

@@ -442,3 +442,89 @@ describe('ChildHudScreen — training (M5-R03)', () => {
   });
 });
 
+
+describe('ChildHudScreen — training fair share & starting progress (M5-R03b)', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    startTraining.mockReset();
+    finishTraining.mockReset();
+    jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });
+    jest.setSystemTime(new Date('2026-10-04T12:00:00+02:00'));
+    mockSocket.handler = null;
+    useAppStore.setState(useAppStore.getInitialState(), true);
+    useAppStore.getState().signIn({
+      token: 'child-token',
+      user: { id: 2, name: 'Maja', email: null, role: 'child' },
+      pet: makePet({ id: 7, born_at: '2026-10-01T08:00:00Z' }),
+      awaitingContract: false,
+    });
+    useAppStore.getState().setWsStatus('connected');
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  const shared = (overrides: Parameters<typeof makeEnabledTraining>[0] = {}) =>
+    makeEnabledTraining({ children_sharing: 2, my_share_seconds: 150, my_seconds_left: 150, ...overrides });
+
+  it('two children: 3 sessions of my share and the "deliš" hint', async () => {
+    await renderHud(withTraining(shared()));
+    fireEvent.press(screen.getByTestId('hud-training-open'));
+    expect(screen.getByTestId('training-left').props.children.join('')).toBe('Danes še 3 vaje. Vaja traja 50 s.');
+    expect(screen.getByTestId('training-shared').props.children).toBe('Čas za šolo si deliš z bratom ali sestro.');
+  });
+
+  it('one child: no "deliš" hint', async () => {
+    await renderHud(withTraining());
+    fireEvent.press(screen.getByTestId('hud-training-open'));
+    expect(screen.queryByTestId('training-shared')).toBeNull();
+  });
+
+  it('my share used (sibling still has time): no dot, start off with a kind reason', async () => {
+    await renderHud(withTraining(shared({ my_seconds_left: 0, daily_budget_left_seconds: 150, can_start: false })));
+    expect(screen.getByTestId('hud-training-open')).toBeTruthy();
+    expect(screen.queryByTestId('hud-training-badge')).toBeNull();
+    expect(screen.queryByTestId('hud-training-done')).toBeNull();
+    fireEvent.press(screen.getByTestId('hud-training-open'));
+    expect(screen.getByTestId('training-left').props.children.join('')).toBe('Danes še 0 vaj. Vaja traja 50 s.');
+    expect(screen.getByTestId('training-blocked').props.children).toBe(S.blocked.share_used);
+    expect(isDisabled('training-start-sit')).toBe(true);
+  });
+
+  it('start refused (training_child_share_used): kind message, then the list explains it', async () => {
+    startTraining.mockRejectedValueOnce(
+      new ApiError('x', 422, {
+        reason: 'training_child_share_used',
+        next_allowed_at: '2026-10-05T00:00:00+02:00',
+        state: withTraining(shared({ my_seconds_left: 0, daily_budget_left_seconds: 150, can_start: false })),
+      }),
+    );
+    await renderHud(withTraining(shared()));
+    fireEvent.press(screen.getByTestId('hud-training-open'));
+    fireEvent.press(screen.getByTestId('training-start-sit'));
+    await flush();
+    await flush();
+    expect(screen.getByText(S.errors.training_child_share_used)).toBeTruthy();
+    fireEvent.press(screen.getByTestId('training-back'));
+    expect(screen.getByTestId('training-blocked').props.children).toBe(S.blocked.share_used);
+  });
+
+  it('a dog that arrived older shows its starting progress (sit 50 %, potty 70 %), nothing learned', async () => {
+    const commands = [
+      { command: 'sit' as const, progress: 50, learned: false, last_practised_at: null },
+      { command: 'come' as const, progress: 30, learned: false, last_practised_at: null },
+      { command: 'place' as const, progress: 0, learned: false, last_practised_at: null },
+      { command: 'potty' as const, progress: 70, learned: false, last_practised_at: null },
+    ];
+    await renderHud(withTraining(makeEnabledTraining({ commands })));
+    expect(screen.getByTestId('hud-training-badge')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('hud-training-open'));
+    expect(within(screen.getByTestId('training-command-sit')).getByText('50 %')).toBeTruthy();
+    expect(within(screen.getByTestId('training-command-potty')).getByText('70 %')).toBeTruthy();
+    expect(screen.getByTestId('training-progress-potty').props.accessibilityValue).toEqual({ min: 0, max: 100, now: 70 });
+    expect(screen.queryByTestId('training-learned-sit')).toBeNull();
+    expect(screen.queryByTestId('training-learned-potty')).toBeNull();
+    expect(isDisabled('training-start-place')).toBe(false);
+  });
+});

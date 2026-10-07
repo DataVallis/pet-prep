@@ -104,7 +104,9 @@ class ChildPetController extends Controller
      * 422 training_not_available | training_session_active (next_allowed_at
      * = its expiry) | training_day_ending (session + TTL would cross the
      * family-local midnight; next_allowed_at = midnight) |
-     * training_daily_budget_used (next_allowed_at = local midnight); 423 while locked.
+     * training_daily_budget_used (next_allowed_at = local midnight) |
+     * training_child_share_used (this child's fair share — budget / children
+     * who can train — is used; next_allowed_at = local midnight); 423 while locked.
      *
      * POST /api/child/pet/training/start
      */

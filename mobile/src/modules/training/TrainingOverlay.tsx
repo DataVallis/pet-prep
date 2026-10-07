@@ -3,7 +3,8 @@
  * HUD style, ADR-007).
  *
  * 1. Pick a command: progress bar per command ("naučeno ✓" at 100 %), today's routine,
- *    sessions left today. "Začni vajo" follows the server's `can_start`; when it is off
+ *    sessions left today for THIS child (`my_seconds_left`, M5-R03b; a "deliš" hint when
+ *    siblings share the time). "Začni vajo" follows the server's `can_start`; when it is off
  *    the reason is explained (a sibling is training, the daily budget is used …).
  * 2. The 50 s game: the cue ("Sedi!"), the dog's reaction from the server's schedule
  *    (free tier: an animated illustration + a line of text; premium: the pet's own
@@ -35,6 +36,7 @@ import {
 import { familyCalendar } from '@/modules/childPet/familyTime';
 import {
   isDayEnding,
+  isTimeShared,
   sessionsLeftToday,
   startBlock,
   TRAINING_STRINGS,
@@ -273,6 +275,11 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
           <Text style={styles.muted} testID="training-left">
             {S.sessionsLeft(left)} {S.sessionLength(training.session_seconds)}
           </Text>
+          {isTimeShared(training) && (
+            <Text style={styles.muted} testID="training-shared">
+              {S.sharedTime(training.children_sharing)}
+            </Text>
+          )}
           {block !== null && (
             <Text style={styles.blocked} testID="training-blocked">
               {S.blocked[block]}
