@@ -558,7 +558,9 @@ export interface paths {
         /**
          * Register (or refresh) this app install for escalation pushes. Called
          *     on login and on every app start; the same token moves to the account
-         *     that registered it last
+         *     that registered it last. The install's push language comes from the
+         *     body field `locale` (en | sl) and is refreshed whenever it is sent;
+         *     without it the stored language is kept, a new install gets 'sl' (M1-18)
          * @description POST /api/devices
          */
         post: operations["device.store"];
@@ -976,15 +978,26 @@ export interface components {
          * @description Body of every irreversible deletion (M2-08):
          *     `POST /api/parent/account/delete` and `DELETE /api/parent/children/{child}`.
          *
-         *     `{password: the parent's current password, confirm: true}`. The app also
-         *     makes the parent type "IZBRIŠI" before it sends the request; the server
-         *     requires the password re-entry + the explicit `confirm` flag. A wrong
-         *     password is checked in AccountDeletionService (422 `invalid_password`).
+         *     `{password: the parent's current password, confirm: true, confirm_word?}`.
+         *     The app makes the parent type the confirmation word of its language
+         *     ("IZBRIŠI" in Slovenian, "DELETE" in English — lang/<locale>/account.php)
+         *     before it sends the request. `confirm_word` is optional (app builds before
+         *     M1-18 don't send it), but once the key is present it must match — an empty,
+         *     whitespace-only or null value is refused. The word of **any** supported
+         *     language is accepted, with the app's normalisation (Unicode NFC, surrounding
+         *     spaces and letter case forgiven, "Š" required). A wrong password is checked in
+         *     AccountDeletionService (422 `invalid_password`). Error texts follow the
+         *     request language (M1-18).
          */
         ConfirmDeletionRequest: {
             password: string;
             /** @enum {unknown} */
             confirm: "yes" | "on" | "1" | 1 | "true" | true;
+            /**
+             * @description `required` under `sometimes`: present ⇒ non-empty (TrimStrings +
+             *     ConvertEmptyStringsToNull turn "  " into null, which must fail).
+             */
+            confirm_word?: string;
         };
         /**
          * CreateChildRequest
@@ -1303,14 +1316,20 @@ export interface components {
         /**
          * RegisterDeviceRequest
          * @description POST /api/devices (M3-02): register this app install for pushes. Parent or
-         *     child token. Only the Expo token, the platform and the app version are
-         *     stored — no device name or model (child data minimisation).
+         *     child token. Only the Expo token, the platform, the app version and the
+         *     app language (`locale`, M1-18) are stored — no device name or model (child data minimisation).
          */
         RegisterDeviceRequest: {
             expo_push_token: string;
             platform: components["schemas"]["DevicePlatform"];
             /** @description e.g. "1.4.0" or "1.4.0 (57)"; free text would invite PII. */
             app_version?: string | null;
+            /**
+             * @description M1-18: the app's language for pushes (en | sl, config/locales.php).
+             *     Never derived from Accept-Language: iOS adds that header on its own.
+             * @enum {string|null}
+             */
+            locale?: "en" | "sl" | null;
         };
         /**
          * RegisterParentRequest
@@ -4872,6 +4891,11 @@ export interface operations {
             query: {
                 password: string;
                 confirm: "yes" | "on" | "1" | 1 | "true" | true;
+                /**
+                 * @description `required` under `sometimes`: present ⇒ non-empty (TrimStrings +
+                 *     ConvertEmptyStringsToNull turn "  " into null, which must fail).
+                 */
+                confirm_word?: string;
             };
             header?: never;
             path: {
@@ -4984,6 +5008,8 @@ export interface operations {
                             id: number;
                             platform: string;
                             app_version: string | null;
+                            /** @description Language of this install's pushes (M1-18): the `locale` field; new installs without it get 'sl'. */
+                            locale: string | null;
                             enabled: boolean;
                             last_seen_at: string | null;
                         };

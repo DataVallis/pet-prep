@@ -5,16 +5,16 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-06 night (Claude, orchestrator — M5-R03b training decisions: confirmed numbers, starting skills for non-puppies, fair share of the training budget).
+- **Last updated:** 2026-10-07 (Claude, orchestrator — M1-18 i18n complete on PR #65, **waiting for David to merge**; next: M3 payments, then HealthKit / Health Connect — David's order).
 - **Production:** `https://api.petprep.si` live (Hetzner CX23, Docker Compose + Caddy). Merge to `main` → CI (`CI OK`) → automatic deploy when backend / deployment / scripts / workflow changed (DEPLOYMENT.md D16). Website `petprep.si` is served from the separate repo `DataVallis/pet-prep-website` (D15). Last verified deploy: `98eabfb` (M5-R03 training backend), 2026-10-06.
 - **App:** TestFlight build 1.24.4 has the push-registration loop (fixed on `main`, PR #45/#48). **David must ship a new TestFlight build from `main`** (he owns app version — commit `58551b1` "mobile version change" is his). Nothing from M5-R02 / M5-R03 UI and nothing of the **CGP v2 rebrand** has been checked on a device yet. The rebrand adds native modules (`expo-font`, `expo-splash-screen`) and new icons / splash → needs a **new native EAS build** (an OTA update is not enough).
 - **PR #59 (M5-R03b) merged and deployed 2026-10-07** (`b3246ef`; GitHub Actions billing was blocking the `CI OK` job on 2026-10-06 — David fixed it). Small fix PR `fix/legacy-pet-age-label` (mobile only).
-- **Realistic MVP completion:** ~55 % (payments, HealthKit / Health Connect, i18n, privacy / store review, beta still missing).
+- **Realistic MVP completion:** ~60 % (payments, HealthKit / Health Connect, privacy / store review, beta still missing; i18n built 2026-10-07, not on a device).
 
 | Milestone | Status (ROADMAP checkboxes, 2026-10-06) |
 |---|---|
 | M0 Repo hygiene | 9 done / 6 open (M0-06, M0-07, M0-09, M0-11, M0-12, M0-15) |
-| M1 Core loop | 14 done / 2 partial (M1-16, M1-19) / 4 open (M1-10, M1-11, M1-17, M1-18 i18n) |
+| M1 Core loop | 14 done / 2 partial (M1-16, M1-19) / 3 open (M1-10, M1-11, M1-17); M1-18 i18n built (PR #65, not merged) |
 | M2 Parent + auth | 3 done / 3 partial / 4 open (M2-04, M2-07, M2-09, M2-10 social login) |
 | M3 Notifications, sensors, payments | push (M3-02) done; HealthKit, Health Connect, RevenueCat, paywall, trial, signature open |
 | M4 AI media | 7 done / 4 open (M4-05 object storage, M4-05b, M4-06 fallback, M4-09 tokens) |
@@ -38,7 +38,7 @@
 3. **No crash reporter:** render errors only reach the device console (`logRenderError`); Sentry needs David's OK (M5-05).
 4. **Training:** schedule is sent to the app, so a modified app can fake praise taps — **accepted by David** (only system security matters); taps before an app restart are lost on resume; potty "asked to go out" only logged, no timeline row; minors m3/m4 (catch-up accidents use today's potty progress; decay applied after later gains) open in DECISIONS.
 5. **Tests / tooling:** Pint fails repo-wide on 9 untouched files; two Pest runs in one checkout share `storage/framework/testing/disks` (use separate worktrees); cold-cache Jest timeout in `ChildHudScreen.behaviour.test.tsx`; GitHub Actions: `actions/checkout@v4` on deprecated Node 20, `ubuntu-latest` moves to Ubuntu 26 on 2026-10-19 — check CI after that date.
-6. **Strings inline** in the app until i18n (M1-18).
+6. **i18n (M1-18) not verified on a device:** Hermes plural rules (polyfill `@formatjs/intl-pluralrules` loads only if needed), Android channel names after a switch, iOS Slovenian permission texts — all need the new native build. English copy (contract, push, legal/deletion texts, terms like "pup", "Dog school", "Mixed breed", "Place") awaits David's read-through. Terms / privacy URLs are the same for both languages.
 7. **Security / hygiene still open:** test accounts in production DB (M0-15), EAS signing passwords in old repo history (M0-12), RevenueCat webhook fails open (M3-08), PHP 8.3 prod vs 8.5 Sail (M0-11).
 8. **About 40 decisions marked "čaka Davida"** in DECISIONS.md (incl. 7 behaviour questions from M5-R02: chewing 0.5, accidents vs. score, midnight clock, hard stop, quiet hours, walk for all breeds, adopted dogs).
 
@@ -58,10 +58,17 @@
 1. **David:** new TestFlight / Android build from `main` (fixes the push loop; contains M5-R02 + M5-R03 UI and the CGP v2 rebrand). Rebrand checks: home-screen icon (iOS + Android adaptive / themed), splash on fog, fonts render (Instrument Sans body, Bricolage headings, Slovenian č/š/ž), status-bar text dark on light screens and light in the child app, mint "due" care button. Then device checks: one `POST /api/devices` per login in the Caddy log; "Šola" chip at 375 pt; "Pohvali" responsiveness; kill app mid-training and reopen; TalkBack / VoiceOver.
 2. **David:** delete stale remote branches `diag/pet-state-1006`, `diag/prod-logs-1006`, `diag/child-flow`, `wip/M5-R04-picker-followup` (agent can't delete remote branches).
 3. **David:** review `docs/product/FEATURES.md` (feature catalogue, created 2026-10-07 — keep it updated in every PR, CLAUDE.md rule). Open points from it: the parent "Pasme" tab is a fake purchase placeholder (`BreedPaywallScreen`, local unlock + English alert) — hide before a public build?; no UI to change the family timezone.
-4. Parent "Pasme" tab hidden until RevenueCat (2026-10-07, `SHOW_BREED_PAYWALL_TAB`); family-timezone UI later (David). Next development: pick with David — candidates M1-18 i18n (EN default), M3 payments (RevenueCat), M3-04/05 HealthKit / Health Connect.
+4. Parent "Pasme" tab hidden until RevenueCat (2026-10-07, `SHOW_BREED_PAYWALL_TAB`); family-timezone UI later (David). Next development (David 2026-10-07): M3 payments (RevenueCat), then M3-04/05/06 HealthKit / Health Connect.
 5. **David:** M5-R03b — only the minimum-one-session rule (≥ 7 trainers) is still open (the rest confirmed 2026-10-07). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-07 (cloud, orchestrator) — M1-18 i18n (English default + Slovenian)
+- David's order for today: 1. English, 2. payments (49,99 € challenge, 7-day trial, Apple + Google), 3. real steps (HealthKit / Health Connect).
+- **PR #65 (`feat/M1-18-i18n-core`) contains everything:** core (`mobile/src/i18n`, `strings()` live views keep the `*_STRINGS` objects, typed keys, parity test incl. CLDR plurals, EN|SL switch on start + Nadzor, saved per device, `Accept-Language`), areas child / parent / misc (≈ 800 strings, 12 namespaces; Slovenian byte-identical — QA checked all removed literals), backend (middleware `SetRequestLocale` + `Vary`, `config/locales.php`, `lang/{en,sl}/{push,account}.php`, `device_push_tokens.locale` from explicit body field `locale` only — iOS adds its own Accept-Language — backfill + new installs without it = `sl`, export / deletion texts, optional `confirm_word` IZBRIŠI/DELETE), follow-ups (re-register push after a switch with `languagePending`, bounded by the devices gate; `confirm_word` sent), PluralRules polyfill, `schema.ts` regenerated.
+- Verified: Jest 1240/1240, tsc clean; Pest 1211 passed (agent run; one unidentified flake once in a parallel run — watch CI). Three independent QA reviews (core, mobile, backend); all blockers / majors fixed.
+- **Merge is David's** (the session may not merge to `main`): merging #65 deploys the backend (migration `2026_10_18_120000_add_locale_to_device_push_tokens`, backfills `sl`). Branches `feat/M1-18-i18n-{child,parent,misc,backend}`, `fix/M1-18-i18n-*-review`, `integ/…` are history only — delete after the merge.
+- Docs: `docs/engineering/I18N.md` (rules + terminology), ARCHITECTURE, DECISIONS, FEATURES, ROADMAP `[x]`, BUILD_LOG.
 
 ### 2026-10-07 (cloud, orchestrator) — M5-R04 part 2: growth album + meals today
 - Backend: `GET /api/child/pet/growth`, `GET /api/parent/pets/{pet}/growth` (dedicated endpoints, not in `media` — broadcast weight), signed `GET /api/media/history/{id}` (shared `serve()`, X-Accel), migration `pet_media_history.taken_at`, export `growth`; `profile.today.feed_windows[].fed` (one query). Pest 1127 green.

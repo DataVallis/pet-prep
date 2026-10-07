@@ -5,7 +5,7 @@
 
 import * as SecureStore from 'expo-secure-store';
 import { ENV } from '@/config/env';
-import { currentLanguageTag, type Language } from '@/i18n';
+import { currentLanguageTag } from '@/i18n';
 import type { components, operations } from '@/api/schema';
 import type { Pet, QuietHours } from '@/types';
 
@@ -57,11 +57,9 @@ export type RegisterResponse = LoginResponse;
 /**
  * `POST /api/devices` body (M3-02): this install's Expo push token, plus the push language
  * (M1-18 review: the server stores it only from this explicit field — iOS adds its own
- * implicit `Accept-Language`). `locale` is widened here locally: schema regen pending.
+ * implicit `Accept-Language`).
  */
-export type RegisterDeviceRequest = components['schemas']['RegisterDeviceRequest'] & {
-  locale?: Language;
-};
+export type RegisterDeviceRequest = components['schemas']['RegisterDeviceRequest'];
 
 /** `POST /api/devices` 200 body. The Expo token itself is never echoed. */
 export type RegisterDeviceResponse =
