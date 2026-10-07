@@ -188,10 +188,17 @@ function AlbumVideo({
     else player.pause();
   }, [player, source, appActive]);
 
+  // Reset the poster only for a different file / URL — not when the listener effect re-runs
+  // (e.g. a new onExpired after re-signed URLs), so it never covers a playing video again.
+  const sourceUri = source?.uri ?? null;
+  useEffect(() => {
+    setReady(player.status === 'readyToPlay');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sourceUri]);
+
   const onStableError = stable.onError;
   useEffect(() => {
     if (source === null) return;
-    setReady(player.status === 'readyToPlay');
     const handle = (status: StatusChangeEventPayload['status']) => {
       if (status === 'readyToPlay') setReady(true);
       if (status !== 'error') return;

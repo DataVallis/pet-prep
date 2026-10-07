@@ -622,6 +622,7 @@ export default function ChildHudScreen() {
             onPress={() => setWalkModalVisible(true)}
             disabled={walkDisabled}
             hint={`${formatSteps(view.steps.steps_today)}/${formatSteps(view.steps.goal)}`}
+            hintSingleLine
             compact={hasTakeOut}
           />
           <ActionButton
@@ -894,7 +895,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     // Top-aligned: buttons with a one- or two-line hint keep their circles in one row.
     alignItems: 'flex-start',
-    justifyContent: 'space-around',
+    // Equal slots: every ActionButton is flex: 1 / minWidth: 0.
     backgroundColor: alpha(palette.graphite, 0.85),
     borderWidth: 1,
     borderColor: alpha(palette.white, 0.15),

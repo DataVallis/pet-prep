@@ -145,3 +145,15 @@ describe('viewer', () => {
     expect(screen.queryByTestId('album-video-poster')).toBeNull();
   });
 });
+
+describe('viewer poster after re-signed URLs (QA 2026-10-07)', () => {
+  it('a re-render with a new onMediaExpired does not bring the poster back over a playing video', () => {
+    const media = mediaWith();
+    const r = render(<PetAlbum media={media} onClose={jest.fn()} onMediaExpired={jest.fn()} />);
+    fireEvent.press(screen.getByTestId('album-item-idle'));
+    act(() => liveVideoPlayers()[0].emit('statusChange', { status: 'readyToPlay' }));
+    expect(screen.queryByTestId('album-video-poster')).toBeNull();
+    r.rerender(<PetAlbum media={{ ...media, expiresAt: '2030-01-01T00:00:00Z' }} onClose={jest.fn()} onMediaExpired={jest.fn()} />);
+    expect(screen.queryByTestId('album-video-poster')).toBeNull();
+  });
+});

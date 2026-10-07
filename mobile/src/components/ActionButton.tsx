@@ -35,6 +35,8 @@ export interface ActionButtonProps {
   compact?: boolean;
   /** Spoken label when it should say more than the visible one (e.g. the full countdown). */
   accessibilityHint?: string;
+  /** Numeric hint (walk counter "4.857/4.000"): one line that shrinks, never wraps. */
+  hintSingleLine?: boolean;
   testID?: string;
 }
 
@@ -51,12 +53,13 @@ export default function ActionButton({
   due,
   compact,
   accessibilityHint,
+  hintSingleLine,
   testID,
 }: ActionButtonProps) {
   const blocked = disabled === true || busy === true;
   const dock = toDockHint(hint);
   return (
-    <View style={[styles.container, compact && styles.containerCompact]}>
+    <View style={[styles.container, compact && styles.containerCompact]} testID={testID ? `${testID}-slot` : undefined}>
       <Pressable
         testID={testID}
         onPress={onPress}
@@ -76,6 +79,13 @@ export default function ActionButton({
         {icon}
       </Pressable>
 
+      {/* Visible texts are hidden from the screen reader: the Pressable's label says it all. */}
+      <View
+        style={styles.texts}
+        accessibilityElementsHidden
+        importantForAccessibility="no-hide-descendants"
+        testID={testID ? `${testID}-texts` : undefined}
+      >
       <Text
         style={[
           styles.label,
@@ -106,8 +116,8 @@ export default function ActionButton({
           )}
           <Text
             style={[styles.hint, compact && styles.hintCompact, dock.day !== null && styles.hintTime]}
-            // A time (with a day line above) is one line that shrinks; a text may wrap once.
-            numberOfLines={dock.day !== null ? 1 : 2}
+            // A time (day line above) or a number is one line that shrinks; a text may wrap once.
+            numberOfLines={dock.day !== null || hintSingleLine === true ? 1 : 2}
             adjustsFontSizeToFit
             minimumFontScale={0.7}
             maxFontSizeMultiplier={DOCK_MAX_FONT_SCALE}
@@ -117,17 +127,27 @@ export default function ActionButton({
           </Text>
         </View>
       ) : null}
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  // Each button takes an equal slot of the dock (flex: 1, minWidth: 0), so five buttons
+  // with large text split 375 pt evenly instead of pushing each other.
   container: {
+    flex: 1,
+    minWidth: 0,
     alignItems: 'center',
     gap: 8,
   },
   containerCompact: {
     gap: 6,
+  },
+  texts: {
+    alignSelf: 'stretch',
+    alignItems: 'center',
+    gap: 8,
   },
   button: {
     width: 64,

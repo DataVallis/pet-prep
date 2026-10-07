@@ -8,7 +8,7 @@
  * visible phrases come from `child:time` (M1-18).
  */
 
-import { t } from '@/i18n';
+import { dockWhen } from '@/modules/childPet/dockHint';
 
 export interface LocalParts {
   /** `YYYY-MM-DD` in the family timezone. */
@@ -108,12 +108,8 @@ export function familyClock(iso: string | null, timeZone: string | null): string
  * only needs the hour). Current language (`child:time`, M1-18).
  */
 export function whenText(iso: string | null, nowIso: string | null, timeZone: string | null): string | null {
-  if (!iso) return null;
-  const target = localParts(iso, timeZone);
-  if (!target) return null;
-  const now = nowIso ? localParts(nowIso, timeZone) : null;
-  if (now && target.date > now.date) return t('child:time.tomorrowAt', { time: target.time });
-  return t('child:time.at', { time: target.time });
+  // Single source for the day rule: the dock hint's full phrase (`dockHint.ts`).
+  return dockWhen(iso, nowIso, timeZone)?.a11y ?? null;
 }
 
 /**
