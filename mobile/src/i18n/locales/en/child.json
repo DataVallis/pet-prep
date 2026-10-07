@@ -1,6 +1,7 @@
 {
   "hud": {
     "feed": "Feed",
+    "emergencyFeed": "Emergency meal",
     "water": "Water",
     "walk": "Walk",
     "clean": "Clean",
@@ -51,8 +52,10 @@
       "water": "The water bowl is already full.",
       "clean": "It was already clean."
     },
+    "emergencyFeed": "Yum! Your pup is full. An emergency meal doesn't count as on time — the next meal is {{when}}.",
+    "emergencyFeedNoTime": "Yum! Your pup is full. An emergency meal doesn't count as on time.",
     "refused": {
-      "outsideFeedWindow": "Your pup will be hungry again {{when}}.",
+      "outsideFeedWindow": "The next meal is {{when}}. If your pup gets very hungry, you can give it an emergency meal.",
       "outsideFeedWindowNoTime": "It's not mealtime right now.",
       "alreadyFed": "Your pup has already eaten. You can feed it again {{when}}.",
       "alreadyFedNoTime": "Your pup has already eaten.",

@@ -332,7 +332,9 @@ export interface paths {
         get?: never;
         put?: never;
         /**
-         * Feed inside a breed feed window (family-local), once per window → hunger 100 %
+         * Feed inside a breed feed window (family-local), once per window → hunger 100 %;
+         *     an emergency meal outside a window while hunger shows ≤ 20 % (M3-12, body
+         *     `feed_mode`: window | emergency)
          * @description POST /api/child/pet/feed
          */
         post: operations["childPet.feed"];
@@ -2180,6 +2182,16 @@ export interface operations {
                                 } | null;
                                 fed_in_current_window: boolean;
                                 can_feed: string;
+                                /**
+                                 * @description M3-12: how a feed now would count — `window` (inside an unused meal
+                                 *     window, on time) or `emergency` (outside a window because hunger shows
+                                 *     ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                                 *     feeding is not possible now.
+                                 * @enum {string|null}
+                                 */
+                                feed_mode: "window" | "emergency" | null;
+                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
+                                emergency_threshold: number;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -2471,6 +2483,16 @@ export interface operations {
                             } | null;
                             fed_in_current_window: boolean;
                             can_feed: string;
+                            /**
+                             * @description M3-12: how a feed now would count — `window` (inside an unused meal
+                             *     window, on time) or `emergency` (outside a window because hunger shows
+                             *     ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                             *     feeding is not possible now.
+                             * @enum {string|null}
+                             */
+                            feed_mode: "window" | "emergency" | null;
+                            /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
+                            emergency_threshold: number;
                             /** @description The current window while unused, otherwise the next one. */
                             next_feed_window: {
                                 start: string;
@@ -2782,6 +2804,16 @@ export interface operations {
                                 } | null;
                                 fed_in_current_window: boolean;
                                 can_feed: string;
+                                /**
+                                 * @description M3-12: how a feed now would count — `window` (inside an unused meal
+                                 *     window, on time) or `emergency` (outside a window because hunger shows
+                                 *     ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                                 *     feeding is not possible now.
+                                 * @enum {string|null}
+                                 */
+                                feed_mode: "window" | "emergency" | null;
+                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
+                                emergency_threshold: number;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -3091,6 +3123,16 @@ export interface operations {
                                 } | null;
                                 fed_in_current_window: boolean;
                                 can_feed: string;
+                                /**
+                                 * @description M3-12: how a feed now would count — `window` (inside an unused meal
+                                 *     window, on time) or `emergency` (outside a window because hunger shows
+                                 *     ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                                 *     feeding is not possible now.
+                                 * @enum {string|null}
+                                 */
+                                feed_mode: "window" | "emergency" | null;
+                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
+                                emergency_threshold: number;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -3400,6 +3442,16 @@ export interface operations {
                                 } | null;
                                 fed_in_current_window: boolean;
                                 can_feed: string;
+                                /**
+                                 * @description M3-12: how a feed now would count — `window` (inside an unused meal
+                                 *     window, on time) or `emergency` (outside a window because hunger shows
+                                 *     ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                                 *     feeding is not possible now.
+                                 * @enum {string|null}
+                                 */
+                                feed_mode: "window" | "emergency" | null;
+                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
+                                emergency_threshold: number;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -3709,6 +3761,16 @@ export interface operations {
                                 } | null;
                                 fed_in_current_window: boolean;
                                 can_feed: string;
+                                /**
+                                 * @description M3-12: how a feed now would count — `window` (inside an unused meal
+                                 *     window, on time) or `emergency` (outside a window because hunger shows
+                                 *     ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                                 *     feeding is not possible now.
+                                 * @enum {string|null}
+                                 */
+                                feed_mode: "window" | "emergency" | null;
+                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
+                                emergency_threshold: number;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -4018,6 +4080,16 @@ export interface operations {
                                 } | null;
                                 fed_in_current_window: boolean;
                                 can_feed: string;
+                                /**
+                                 * @description M3-12: how a feed now would count — `window` (inside an unused meal
+                                 *     window, on time) or `emergency` (outside a window because hunger shows
+                                 *     ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                                 *     feeding is not possible now.
+                                 * @enum {string|null}
+                                 */
+                                feed_mode: "window" | "emergency" | null;
+                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
+                                emergency_threshold: number;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -4331,6 +4403,16 @@ export interface operations {
                                 } | null;
                                 fed_in_current_window: boolean;
                                 can_feed: string;
+                                /**
+                                 * @description M3-12: how a feed now would count — `window` (inside an unused meal
+                                 *     window, on time) or `emergency` (outside a window because hunger shows
+                                 *     ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                                 *     feeding is not possible now.
+                                 * @enum {string|null}
+                                 */
+                                feed_mode: "window" | "emergency" | null;
+                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
+                                emergency_threshold: number;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -4644,6 +4726,16 @@ export interface operations {
                                 } | null;
                                 fed_in_current_window: boolean;
                                 can_feed: string;
+                                /**
+                                 * @description M3-12: how a feed now would count — `window` (inside an unused meal
+                                 *     window, on time) or `emergency` (outside a window because hunger shows
+                                 *     ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                                 *     feeding is not possible now.
+                                 * @enum {string|null}
+                                 */
+                                feed_mode: "window" | "emergency" | null;
+                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
+                                emergency_threshold: number;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;
@@ -4957,6 +5049,16 @@ export interface operations {
                                 } | null;
                                 fed_in_current_window: boolean;
                                 can_feed: string;
+                                /**
+                                 * @description M3-12: how a feed now would count — `window` (inside an unused meal
+                                 *     window, on time) or `emergency` (outside a window because hunger shows
+                                 *     ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                                 *     feeding is not possible now.
+                                 * @enum {string|null}
+                                 */
+                                feed_mode: "window" | "emergency" | null;
+                                /** @description M3-12: displayed hunger (%) at or below which an emergency meal is allowed. */
+                                emergency_threshold: number;
                                 /** @description The current window while unused, otherwise the next one. */
                                 next_feed_window: {
                                     start: string;

@@ -48,6 +48,8 @@ import {
   cleanHint,
   failureMessage,
   feedHint,
+  feedLabel,
+  feedSuccessMessage,
   successMessage,
   waterHint,
 } from '@/modules/childPet/actionMessages';
@@ -61,7 +63,7 @@ import {
 import BehaviourPanel from '@/components/BehaviourPanel';
 import MealWindowsRow from '@/components/MealWindowsRow';
 import { buildMealWindows } from '@/modules/childPet/mealWindows';
-import { lockStateFromView, type CareAction, type ChildPetView } from '@/modules/childPet/childPetView';
+import { lockStateFromView, normalizeChildState, type CareAction, type ChildPetView } from '@/modules/childPet/childPetView';
 import { computeHudLayout, METRICS_RESERVED_RIGHT, METRICS_RIGHT, type HudLayout } from '@/modules/hud/hudLayout';
 import { WS_BADGE_STRINGS, wsBadge } from '@/modules/hud/wsBadge';
 import { formatSteps } from '@/modules/steps/stepCounter';
@@ -326,7 +328,11 @@ export default function ChildHudScreen() {
   const runAction = (action: CareAction) => {
     mutations[action].mutate(undefined, {
       onSuccess: (response) => {
-        showToast({ tone: 'ok', message: successMessage(action, response.status) });
+        const message =
+          action === 'feed'
+            ? feedSuccessMessage(response.status, response.feed_mode, normalizeChildState(response.state))
+            : successMessage(action, response.status);
+        showToast({ tone: 'ok', message });
       },
       onError: (error) => {
         const message = failureMessage(
@@ -577,7 +583,7 @@ export default function ChildHudScreen() {
           <ActionButton
             testID="action-feed"
             icon={<Beef color={dockIcon(feedDue)} size={iconSize} />}
-            label={HUD_STRINGS.feed}
+            label={feedLabel(view)}
             onPress={() => runAction('feed')}
             disabled={feedDisabled}
             due={feedDue}
