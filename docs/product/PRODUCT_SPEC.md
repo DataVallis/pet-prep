@@ -69,7 +69,7 @@
 
 | Metrika | Mešanček (brezplačno) | Border Collie (premium) | Kako jo otrok dvigne |
 |---|---|---|---|
-| Lakota | −8 %/h (0 % v 12,5 h) | −12 %/h (0 % v 8,3 h) | gumb Hrani — **samo v oknih** → 100 %; število obrokov po starosti (M5-R01, spodaj): mladiček 4 → 3 → 2, sicer 2× / dan |
+| Lakota | −8 %/h (0 % v 12,5 h) | −12 %/h (0 % v 8,3 h) | gumb Hrani — **samo v oknih** → 100 % (izjema: **nujni obrok** pri lakoti ≤ 20 %, M3-12, spodaj); število obrokov po starosti (M5-R01, spodaj): mladiček 4 → 3 → 2, sicer 2× / dan |
 | Žeja | −10 %/h | −15 %/h | gumb Voda — 3× / dan → 100 % |
 | Gibanje (energija) = **dnevni sprehod** | cilj po fazi (M5-R01): odrasel **6.000**, mladiček 2.000 → 6.000 | cilj po fazi: odrasel **12.000**, mladiček 2.000 → 12.000 | koraki iz HealthKit / Health Connect; energija = današnji koraki / cilj; **reset na 0 % ob lokalni polnoči** (0 % = "danes še ni bilo sprehoda", ne zanemarjanje) |
 | Higiena | naključno **1× / dan** pade na 0 % | naključno **2× / dan** pade na 0 % | mini-igra čiščenja (drgnjenje madežev) → 100 % |
@@ -109,6 +109,7 @@
 
 **Pojasnila implementacije (M1-07 — 4. 10. 2026, otroški API):**
 - **Hrana:** samo znotraj okna pasme po lokalnem času družine; okno vključuje začetek in ne konca (06:00 da, 10:00 ne). **Eno hranjenje na okno** (2 okni = 2× / dan). Izven okna ali drugič v istem oknu strežnik zavrne in pove začetek naslednjega okna. Ob prestopu ure okna sledijo stenski uri (06:00 je poleti 04:00 UTC, pozimi 05:00 UTC).
+- **Nujni obrok (M3-12, David 7. 10. 2026):** ko lakota **kaže ≤ 20 %** (prikazana, zaokrožena vrednost — 20,4 → 20 da, 20,5 → 21 ne), otrok lahko kužka nahrani **tudi izven okna** (in tudi v oknu, ki je že porabljeno). Lakota → 100 %. **Ne šteje kot pravočasna rutina:** okno, ki je bilo zamujeno, ostane zamujeno (rutina hrane je opravljena samo s hranjenjem znotraj okna, §11.1), za nujni obrok ni nagrade. **Naslednjega okna ne porabi** — naslednji obrok v oknu je mogoč in šteje normalno (primer: zamujeno 06–10, nujni obrok ob 12:11, obrok ob 17:30 → jutranja rutina zamujena, večerna opravljena). Velja za obstoječe (legacy) pse in pse s profilom. Ostala pravila ostanejo: najprej čiščenje (higiena 0 % → zavrnjeno), zaklepi (hard stop, veterinar, pogodba, plačilo, game over); tihe ure hranjenja ne preprečujejo (kot pri vsakem hranjenju). Če je okno odprto in neporabljeno, je obrok vedno običajen (pravočasen), tudi pri nizki lakoti. Prag 20 % je ena številka za vse pasme (`CareScheduleService::EMERGENCY_FEED_THRESHOLD`, kot pragovi eskalacije 30 / 10 %). Aplikacija gumb takrat pokaže kot **»Nujni obrok«** in po hranjenju pove, da ne šteje kot pravočasen in kdaj je naslednji obrok; izven okna nad pragom pove »Naslednji obrok je ob 17:00«. Zapis v časovnici je običajno »nahranil« (*Claude: ločen zapis »nujni obrok« za starša je možna nadgradnja*).
 - **Voda:** največ `water_times_per_day` (3) na lokalni dan (meja se ponastavi ob lokalni polnoči), med dvema najmanj `water_min_gap_minutes` (180) **realnih** minut, tudi čez polnoč. Ko je dnevna meja dosežena, je naslednja voda ob lokalni polnoči (oz. kasneje, če razmik še ni potekel). *(Potrdil David, 4. 10. 2026.)*
 - **Najprej čiščenje:** dokler higiena kaže 0 %, hrana in voda nista mogoči (§8); koraki in čiščenje vedno. *(Potrdil David, 4. 10. 2026.)*
 - **Zaklep:** med hard stopom, boleznijo, po game overju in pred podpisom pogodbe (nerojen pes, §3) strežnik zavrne vsako otroško akcijo z razlogom; pogodbo je mogoče podpisati samo, ko je edini razlog "najprej pogodba". Če velja več razlogov hkrati, se pokaže prvi od: game over › neaktiven › hard stop › pogodba › bolezen.
@@ -133,6 +134,7 @@ Pragovi se primerjajo s prikazano (zaokroženo) vrednostjo.
 **Push obvestila (M3-02, 5. 10. 2026 — podrobnosti in besedila v DECISIONS):** faza 1 in 2 gresta vsem otrokom, ki skrbijo za psa; faza 3 vsem staršem družine; bolezen in game over staršem in otrokom. Besedilo sledi metriki, ki je najnižja (hrana, voda, nered). Ista vrsta obvestila za istega psa največ enkrat na 30 minut. **Med tihimi urami ni nobenega obvestila;** opomniki in alarm, preskočeni med tihimi urami, se kasneje ne pošljejo.
 - **Sprehod (energija) — *Claude, čaka Davida (PR #35)*:** energija ni na lestvici faz 1–3 (ta sledi samo hrani, vodi in čistoči — nizka energija nikoli ne zadrži alarma za hrano). Ko energija izven tihih ur kaže ≤ 30 %, gre ločeno navadno obvestilo za sprehod (ne alarm, brez zvoka v ospredju), **največ enkrat na lokalni dan**, **ne prej kot 2 h po koncu zadnjih tihih ur tega dne** (spanje do 06:00 → 08:00; šola 08–13 → 15:00); če je otrok medtem šel na sprehod, ga ni. Brez »bo zbolel v 30 minutah«.
 - **Bolezen in game over med tihimi urami — *Claude, čaka Davida (PR #35)*:** obvestilo počaka do konca tihega obdobja in se pošlje takrat.
+- **Obvestila nikoli ne zahtevajo dejanja, ki ga aplikacija zavrne (M3-12, David 7. 10. 2026).** Ob pošiljanju strežnik za opomnik o hrani / vodi preveri ista pravila kot gumb (`CareScheduleService`): če je dejanje mogoče (okno, nujni obrok pri ≤ 20 %, voda še na voljo) → običajno besedilo; če higiena kaže 0 % → »Tvoj kuža je lačen / žejen, a najprej je treba počistiti nered«; če bo mogoče kasneje danes → »Tvoj kuža postaja lačen. Naslednji obrok je ob 17:00 — ne pozabi nanj.« / »Vodo mu lahko spet daš ob 15:30«; če danes ni več mogoče (dnevna meja vode, zadnje okno minilo) → obvestila ni. Pri ≤ 10 % (faza 2) je hranjenje zaradi nujnega obroka vedno mogoče (razen nereda / zaklepa). Opomniki za nego (faza 1, 2, sprehod) ne gredo otroku, ki se je psu pridružil in še ni podpisal pogodbe (ne more ničesar). Čiščenje, sprehod, alarm staršem, bolezen, game over in plačilna obvestila ne zahtevajo zavrnjenega dejanja.
 - Opomniki in alarm se ne pošljejo, če je pes medtem ustavljen (hard stop), neaktiven, v zavetišču ali bolan. Naslov je vedno »PetPrep«, v obvestilu ni imen otrok ali psa.
 **Gibanje (energija)** ni na tej lestvici (*Claude, čaka Davida — pregled PR #35*; prej: fazi 1 in 2 izven tihih ur): namesto faz je en dnevni opomnik za sprehod (spodaj); faza 3, bolezen po 6 h in game over se za energijo ne štejejo (dnevni sprehod, §7). Stanje psa "bolan" (`sick`) pomeni samo umazanega ali dejansko bolnega psa — pri 0 % energije je pes "utrujen" (`low_energy`).
 
@@ -158,7 +160,7 @@ Pragovi se primerjajo s prikazano (zaokroženo) vrednostjo.
 - Celozaslonski AI video psa; video se menja glede na stanje (`idle, sleeping, low_energy, hungry, sick, playing`).
 - Zgoraj: glassmorphism vrstica (ime / pasma, starost, indikator povezave).
 - Desno: 4 vertikalne vrstice (lakota, žeja, gibanje, higiena), barva zelena → rumena → rdeča.
-- Spodaj: 4 okrogli gumbi (briketi, kaplja, povodec, metla); izven okna so zasenčeni s pojasnilom.
+- Spodaj: 4 okrogli gumbi (briketi, kaplja, povodec, metla); izven okna so zasenčeni s pojasnilom. Pri lakoti ≤ 20 % je gumb za hrano odklenjen tudi izven okna z napisom **»Nujni obrok«** (M3-12).
 - **Sprehod:** overlay s števcem "1.250 / 4.000 korakov", sync ob vrnitvi.
 - **Čiščenje:** ko higiena pade na 0 %, umazanija prekrije zaslon; dokler je otrok ne zdrgne, druge akcije niso mogoče.
 - **Vedenje (M5-R02, *načrt* za aplikacijo — strežnik pripravljen):** pri mladičku gumb **»Pelji ven«** z odštevanjem do naslednje luže; pri uničevanju gumb **»Pospravi in daj igračo«**. Plačljiva pasma pokaže video luže / grizenja, brezplačni mešanček ikono.
@@ -206,7 +208,7 @@ Rutina je ena obveznost, ki jo otrok pravočasno opravi ali zamudi. Vse po **lok
 
 | Rutina | Koliko | Opravljena | Zamujena |
 |---|---|---|---|
-| **Hrana** | eno okno hranjenja tistega dne = ena rutina (okna po starosti psa, M5-R01: mladiček 4 / 3 / 2, sicer 2) | hranjenje znotraj okna | okno se konča brez hranjenja |
+| **Hrana** | eno okno hranjenja tistega dne = ena rutina (okna po starosti psa, M5-R01: mladiček 4 / 3 / 2, sicer 2) | hranjenje znotraj okna | okno se konča brez hranjenja (nujni obrok izven okna, M3-12, okna ne reši) |
 | **Voda** | `water_times_per_day` (3) na lokalni dan | vsako dolivanje tega dne (po vrsti, do pričakovanega števila) | vsako manjkajoče dolivanje ob koncu dneva |
 | **Čiščenje** | vsak nered = ena rutina: "kakec", **luža mladička** in **uničevanje** (M5-R02, David 6. 10. 2026; vrsta je zapisana pri rutini) | počiščeno (luža, kakec) oz. pospravljeno z igračo (uničevanje) v **2 urah, šteto samo izven tihih ur** | ni rešeno v tem času |
 | **Sprehod** | dnevni cilj korakov (po starosti psa tisti dan) | koraki dneva ≥ cilj | dan se konča pod ciljem |

@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-07 — Nujni obrok: obvestilo nikoli ne zahteva nemogočega (M3-12)
+
+**Kaj se je zgodilo:** David je na telefonu opoldne videl kužka z lakoto 0 %. Jutranje okno (6–10) je bilo zamujeno, gumb za hrano je kazal »ob 17:00«, obvestilo pa je reklo »Če ga ne nahraniš v 30 minutah, bo zbolel.« Otrok torej ni mogel narediti tistega, kar je zahtevalo obvestilo. Isti dan sta se dogovorila za dve pravili. (1) **Nujni obrok:** ko lakota kaže 20 % ali manj, otrok kužka lahko nahrani tudi izven okna, gumb se takrat pokaže kot »Nujni obrok«. Obrok ne šteje kot pravočasen: zamujeno okno ostane zamujeno, naslednji obrok ob 17:00 pa ostane normalen. (2) **Obvestilo nikoli ne zahteva nemogočega:** strežnik pred pošiljanjem preveri ista pravila kot gumb. Če hranjenje ni mogoče, obvestilo pove »Naslednji obrok je ob 17:00 — ne pozabi nanj.« ali »najprej počisti nered«. Če danes ni več mogoče nič, obvestila ni.
+
+**Zakaj je pomembno:** Otrok se uči odgovornosti, ne frustracije. Nemogoča zahteva uči samo, da obvestila lažejo. Zdaj ima vsak opomnik dejanje, ki ga otrok res lahko naredi, ocena pa ostane poštena (zamuda se ne izbriše).
+
+**Številke:** prag 20 % (prikazana vrednost; 20,4 → 20 še velja, 20,5 → 21 ne), en vir resnice za gumb, stanje in obvestila. Testi: strežnik 1.284 zelenih (22 novih, med njimi Davidov primer 12:11 in preizkus vseh 24 ur dneva za 6 vrednosti lakote), aplikacija 1.311 zelenih (17 novih). Novi testi padejo, če pravilo odstranimo. **Na telefonu še ni preizkušeno.**
+
+**Kako povedati:**
+- 👩 Starši: »Če otrok zamudi obrok in je kuža zelo lačen, ga lahko nahrani takoj. Ocena pa pove resnico: zamujen obrok ostane zamujen.«
+- 🧒 Otroci: »Je kuža zelo lačen? Tapni ›Nujni obrok‹! Naslednjič pa ga nahrani ob pravem času.«
+- 💼 Investitorji: »Pravila igre in obvestila izhajajo iz enega mesta v kodi. Tako sistem otroka nikoli ne prosi za nemogoče, kar pomeni manj frustracije in manj odhodov.«
+- 📣 Omrežja: »Pravi pes ne čaka do 17:00. Tudi naš ne. Ampak zamuda je še vedno zamuda.«
+- 🛠 Tehnično: »`CareScheduleService::feedCheck/waterCheck` odloča za akcijo, `ChildPetStateResource` (`feed_mode`) in čas pošiljanja pusha (`wait` / `clean_first` / `not_actionable`). Ledger je ostal nespremenjen, ker je nujni obrok izven vseh oken.«
+
+---
+
 ## 2026-10-07 — Plačila: izziv za enega psa, 7 dni brezplačno (M3-07 – M3-11)
 
 **Kaj se je zgodilo:** Zgrajen je celoten plačilni del. Ob novem psu starš izbere **brezplačnega mešančka** (za vedno, brez 12-tedenskega programa) ali **12-tedenski izziv** — 7 dni brezplačno od »rojstva« psa, nato 49,99 € za tega psa. Brez naročnine in brez samodejnega plačila: po preizkusu se igra varno ustavi, dokler starš ne kupi. Nakup je samo v starševskem delu (otrok nikoli ne vidi cen), strežnik vodi vsak nakup enkrat in ga dodeli izbranemu psu; vračilo kupnine ga prekliče.

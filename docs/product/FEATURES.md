@@ -69,7 +69,8 @@ Razmejitev brezplačno / plačljivo v `BUSINESS_MODEL.md` §7 je **predlog**, ki
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID | Od kdaj |
 |---|---|---|---|---|---|
 | Glavni zaslon s 4 merilniki | Lakota, žeja, energija (sprehod), čistoča; barva zelena → rumena → rdeča. Merilniki se prilagodijo velikosti zaslona. Gumb, ki je na vrsti, sveti v mint barvi (nova podoba). | otrok | ✅ · 📱 (3. 10. in TestFlight 5. 10.; popravek merilnikov iz 5. 10. še ni preverjen) | M1-14, M0-14 | 2026-10-04 |
-| Hrana samo v oknih | Enkrat v vsakem oknu (odrasel pes 6–10 in 17–21 po času družine). Izven okna je gumb zasenčen in pove, kdaj bo spet čas. | otrok | ✅ | M1-07, M1-14 | 2026-10-04 |
+| Hrana samo v oknih | Enkrat v vsakem oknu (odrasel pes 6–10 in 17–21 po času družine). Izven okna je gumb zasenčen in pove, kdaj je naslednji obrok (»ob 17:00«). | otrok | ✅ | M1-07, M1-14, M3-12 | 2026-10-04 (besedilo 2026-10-07) |
+| Nujni obrok | Ko lakota kaže 20 % ali manj, otrok kužka lahko nahrani tudi izven okna — gumb se pokaže kot »Nujni obrok« (tudi takoj, ko lakota v živo pade na 20 %). Ne šteje kot pravočasno: zamujeno okno ostane zamujeno, naslednji obrok v oknu je mogoč normalno; po hranjenju aplikacija to pove. Najprej čiščenje in zaklepi veljajo še naprej. Tudi pri obstoječih psih. | otrok | ✅ | M3-12 | 2026-10-07 |
 | Obroki danes | Nad gumbi za nego mirna vrstica današnjih oken po času družine, npr. »7–9 ✓ · 11–13 nahrani starš · 15–17 · 19–21«: ✓ pri vsakem oknu, v katerem je bil danes zabeležen obrok (otrokov ali starševski v tihih urah; strežnik to pošlje za vsako okno), trenutno okno poudarjeno, okna v tihih urah z oznako »nahrani starš«, minula okna brez obroka samo zatemnjena (nikoli »zamujeno«). Takoj po hranjenju se ✓ pokaže že pred osvežitvijo stanja. Samo psi z izbiro kužka (pes brez profila ostane kot prej). | otrok | ✅ | M5-R04 (del 2) | 2026-10-07 |
 | Voda | 3× na dan, vsaj 3 ure narazen (tudi čez polnoč); pod gumbom piše, kdaj spet. | otrok | ✅ | M1-07, M1-14 | 2026-10-04 |
 | Čiščenje | Kuža naključno naredi nered (mešanček 1×, Border Collie 2× na dan), nikoli v tihih urah. Otrok ga zdrgne s prstom. Dokler ni čisto, hrane in vode ni. | otrok | ✅ | M1-05, M1-14 | 2026-10-04 |
@@ -151,7 +152,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID | Od kdaj |
 |---|---|---|---|---|---|
-| Opomnik otroku (30 %) in nujno (10 %) | Blag opomnik, nato nujen z zvokom; besedilo po tem, kar manjka (hrana, voda, nered). | otrok | ✅ | M3-02 | 2026-10-05 |
+| Opomnik otroku (30 %) in nujno (10 %) | Blag opomnik, nato nujen z zvokom; besedilo po tem, kar manjka (hrana, voda, nered). **Nikoli ne zahteva nemogočega** (M3-12): če hranjenje / voda zdaj ni mogoča, pove, kdaj bo (»Naslednji obrok je ob 17:00«) ali »najprej počisti nered«; če danes ni več mogoče, opomnika ni. Otrok, ki še ni podpisal pogodbe, opomnikov za nego ne dobi. | otrok | ✅ | M3-02, M3-12 | 2026-10-05 (M3-12 2026-10-07) |
 | Alarm staršem | Ko pes več kot uro nima hrane, vode ali čistoče: »Tvoj otrok danes ni poskrbel za psa.« Vsem staršem družine. | starš | ✅ | M3-02 | 2026-10-05 |
 | Bolezen in zavetišče | Obvestilo staršem in otroku. | starš, otrok | ✅ | M3-02 | 2026-10-05 |
 | Opomnik za sprehod | Največ enkrat na dan, najprej 2 uri po koncu tihih ur, brez groženj (*predlog*). | otrok | ✅ | M3-02 | 2026-10-05 |
