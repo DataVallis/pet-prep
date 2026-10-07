@@ -10,6 +10,12 @@ jest.mock('expo-secure-store', () => ({
   deleteItemAsync: jest.fn(),
 }));
 
+// expo-localization (M1-18): the test device prefers Slovenian, so existing tests keep
+// asserting the Slovenian copy; English is covered by explicit `i18n.changeLanguage('en')`.
+jest.mock('expo-localization', () => ({
+  getLocales: () => [{ languageTag: 'sl-SI', languageCode: 'sl' }],
+}));
+
 // expo-video: manual mock in __mocks__/expo-video.tsx (one fake player per hook, with
 // events; registry in src/test-utils/videoPlayers.ts).
 jest.mock('expo-video');

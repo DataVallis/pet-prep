@@ -8,6 +8,7 @@ import { Text } from '@/components/ui/Text';
 
 import { formatBuildLabel, getBuildInfo } from '@/config/buildInfo';
 import { alpha, palette } from '@/theme';
+import { t } from '@/i18n';
 
 interface BuildLabelProps {
   tone?: 'dark' | 'light';
@@ -20,7 +21,7 @@ export default function BuildLabel({ tone = 'dark', style }: BuildLabelProps) {
       style={[styles.label, tone === 'dark' ? styles.dark : styles.light, style]}
       testID="build-label"
       selectable
-      accessibilityLabel={`Različica ${formatBuildLabel(getBuildInfo())}`}
+      accessibilityLabel={t('auth:build.label', { build: formatBuildLabel(getBuildInfo()) })}
     >
       {formatBuildLabel(getBuildInfo())}
     </Text>

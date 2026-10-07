@@ -19,21 +19,14 @@ import { useAppStore } from '@/store/appStore';
 import { alpha, fonts, palette, radius, tightTracking } from '@/theme';
 import { BrandMark } from '@/components/brand/BrandLogo';
 import { useDarkStatusBar } from '@/components/ui/useDarkStatusBar';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-/** All user-visible strings of this screen (extract to i18n with M1-18). */
-export const CHILD_PIN_STRINGS = {
-  title: 'Vpiši svojo kodo',
-  hint: 'Kodo s 6 številkami ti pokaže starš na svojem telefonu.',
-  checking: 'Preverjam kodo …',
-  invalid: 'Ta koda ne deluje. Prosi starša za novo kodo.',
-  rateLimited: (time: string) => `Preveč poskusov. Počakaj še ${time}, potem poskusi znova.`,
-  offline: 'Ni povezave z internetom. Preveri povezavo in poskusi znova.',
-  server: 'Nekaj je šlo narobe. Poskusi znova čez trenutek.',
-  retry: 'Poskusi znova',
-  back: 'Nazaj',
-  deleteDigit: 'Pobriši številko',
-  digitsEntered: (count: number) => `Vpisanih ${count} od ${PIN_LENGTH} številk`,
-} as const;
+/** All user-visible strings of this screen (`auth:pin`, M1-18). */
+export const CHILD_PIN_STRINGS = strings('auth', 'pin', {
+  rateLimited: (time: string) => t('auth:pin.rateLimited', { time }),
+  digitsEntered: (count: number) => t('auth:pin.digitsEntered', { count, total: PIN_LENGTH }),
+});
 
 const S = CHILD_PIN_STRINGS;
 const KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', '9'] as const;

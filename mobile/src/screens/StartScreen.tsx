@@ -7,27 +7,22 @@
  */
 
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { ChevronRight, KeyRound, ShieldCheck } from 'lucide-react-native';
 
 import BuildLabel from '@/components/BuildLabel';
+import LanguageSwitch from '@/components/LanguageSwitch';
 import { BrandLogo } from '@/components/brand/BrandLogo';
 import ChildPinLoginScreen from '@/screens/ChildPinLoginScreen';
 import ParentLoginScreen from '@/screens/ParentLoginScreen';
 import ParentSignupScreen from '@/screens/ParentSignupScreen';
 import { fonts, light, palette, radius, tightTracking } from '@/theme';
+import { strings } from '@/i18n/strings';
 
-/** All user-visible strings of this screen (extract to i18n with M1-18). */
-export const START_STRINGS = {
-  title: 'PetPrep',
-  slogan: 'Pripravljeni na žival. Ob njej vse življenje.',
-  subtitle: 'Kdo se prijavlja?',
-  child: 'Sem otrok',
-  childHint: 'Imam kodo od staršev',
-  parent: 'Sem starš',
-  parentHint: 'Prijava ali registracija z e-pošto',
-} as const;
+/** All user-visible strings of this screen (`auth:start`, M1-18). */
+export const START_STRINGS = strings('auth', 'start');
 
 const S = START_STRINGS;
 
@@ -35,6 +30,7 @@ type Path = 'choose' | 'parent' | 'signup' | 'child';
 
 export default function StartScreen() {
   const [path, setPath] = useState<Path>('choose');
+  useTranslation(); // hosts the language switch: re-render here, not only via AppNavigator
 
   if (path === 'parent') {
     return <ParentLoginScreen onBack={() => setPath('choose')} onSignup={() => setPath('signup')} />;
@@ -46,6 +42,8 @@ export default function StartScreen() {
 
   return (
     <View style={styles.container} testID="start-screen">
+      {/* M1-18: language before anything else — a child may not read the device language. */}
+      <LanguageSwitch compact style={styles.language} />
       <View style={styles.header}>
         <BrandLogo width={188} tone="light" testID="start-logo" />
         <Text style={styles.slogan}>{S.slogan}</Text>
@@ -99,6 +97,7 @@ export default function StartScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: light.bg, justifyContent: 'center', paddingHorizontal: 24 },
   buildLabel: { position: 'absolute', bottom: 28, left: 0, right: 0 },
+  language: { position: 'absolute', top: 56, right: 20 },
   header: { alignItems: 'center', marginBottom: 44, gap: 14 },
   slogan: { maxWidth: 300, fontSize: 15, lineHeight: 21, color: light.inkMuted, textAlign: 'center' },
   subtitle: {

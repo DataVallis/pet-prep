@@ -5,6 +5,7 @@
 
 import * as SecureStore from 'expo-secure-store';
 import { ENV } from '@/config/env';
+import { currentLanguageTag } from '@/i18n';
 import type { components, operations } from '@/api/schema';
 import type { Pet, QuietHours } from '@/types';
 
@@ -399,6 +400,8 @@ async function apiRequest<T>(
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     Accept: 'application/json',
+    // Server texts (push, errors) follow the app language (M1-18).
+    'Accept-Language': currentLanguageTag(),
   };
 
   if (token) {

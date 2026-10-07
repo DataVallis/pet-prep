@@ -17,6 +17,7 @@ import FamilyChildrenCard from '@/components/FamilyChildrenCard';
 import AccountCard from '@/components/parent/AccountCard';
 import FamilyParentsCard from '@/components/parent/FamilyParentsCard';
 import JoinFamilyCard from '@/components/parent/JoinFamilyCard';
+import LanguageCard from '@/components/parent/LanguageCard';
 import NotificationsCard from '@/components/parent/NotificationsCard';
 import PetControlsCard from '@/components/parent/PetControlsCard';
 import QuietHoursCard from '@/components/parent/QuietHoursCard';
@@ -81,6 +82,7 @@ export default function ControlsScreen({ onBack, family, onAddChild, onChildPin,
         {family && <FamilyParentsCard family={family} />}
         {isEmpty && <JoinFamilyCard onJoined={(text) => onNotice?.(text)} />}
 
+        <LanguageCard />
         <AccountCard family={family} />
         {/* Build identity (which code David / testers run). */}
         <View style={styles.about} testID="controls-about">

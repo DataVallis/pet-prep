@@ -15,28 +15,15 @@ import { useAppStore } from '@/store/appStore';
 import { light, palette, radius } from '@/theme';
 import { AUTH_STYLES } from '@/components/auth/authStyles';
 import { BrandLogo } from '@/components/brand/BrandLogo';
+import { strings } from '@/i18n/strings';
 
 /** Seeded demo accounts are offered only in development builds (Expo Go / dev client). */
 export function showDevLogins(): boolean {
   return __DEV__ === true;
 }
 
-/** All user-visible strings of this screen (extract to i18n with M1-18). */
-export const PARENT_LOGIN_STRINGS = {
-  title: 'Prijava za starše',
-  back: 'Nazaj',
-  email: 'E-pošta',
-  password: 'Geslo',
-  submit: 'Prijava',
-  devTitle: 'HITRO TESTIRANJE (1 KLIK):',
-  devParent: 'Starš (Nadzor)',
-  divider: 'ali ročna prijava',
-  wrongCredentials: 'E-pošta ali geslo ni pravilno.',
-  offline: 'Ni povezave s strežnikom. Preverite internet in poskusite znova.',
-  failed: 'Prijava ni uspela. Poskusite znova.',
-  childAccount: 'To je otroški račun. Otrok se prijavi s kodo, ki jo ustvari starš (»Sem otrok«).',
-  noAccount: 'Nimate računa? Registracija',
-} as const;
+/** All user-visible strings of this screen (`auth:login`, M1-18). */
+export const PARENT_LOGIN_STRINGS = strings('auth', 'login');
 
 const S = PARENT_LOGIN_STRINGS;
 

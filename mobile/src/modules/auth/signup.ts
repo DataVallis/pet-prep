@@ -18,43 +18,15 @@ import {
   type ValidationErrorBody,
 } from '@/api/client';
 import type { SignInPayload } from '@/store/appStore';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-/** All user-visible strings of the sign-up flow (extract to i18n with M1-18). */
-export const SIGNUP_STRINGS = {
-  title: 'Registracija za starše',
-  subtitle: 'Ustvarite račun, nato dodajte otroka.',
-  back: 'Nazaj',
-  name: 'Ime (kako vas kliče družina)',
-  email: 'E-pošta',
-  password: 'Geslo',
-  passwordRepeat: 'Ponovite geslo',
-  passwordHint: 'Vsaj 10 znakov, velike in male črke ter številka.',
-  show: 'Pokaži geslo',
-  hide: 'Skrij geslo',
-  termsPrefix: 'Strinjam se s ',
-  termsLink: 'pogoji uporabe',
-  termsMiddle: ' in ',
-  privacyLink: 'politiko zasebnosti',
-  termsSuffix: '.',
-  submit: 'Ustvari račun',
-  haveAccount: 'Že imate račun? Prijava',
+/** All user-visible strings of the sign-up flow (`auth:signup`, M1-18). */
+export const SIGNUP_STRINGS = strings('auth', 'signup', {
   errors: {
-    nameRequired: 'Vpišite ime.',
-    nameTooLong: 'Ime je lahko dolgo največ 60 znakov.',
-    nameInvalid: 'Vpišite ime (največ 60 znakov).',
-    emailInvalid: 'Vpišite veljaven e-poštni naslov.',
-    emailTaken: 'Ta e-poštni naslov je že registriran. Prijavite se ali uporabite drugega.',
-    passwordWeak: 'Geslo mora imeti vsaj 10 znakov, velike in male črke ter številko.',
-    passwordMismatch: 'Gesli se ne ujemata.',
-    termsRequired: 'Za registracijo se morate strinjati s pogoji uporabe in politiko zasebnosti.',
-    timezoneInvalid: 'Časovnega pasu naprave ni bilo mogoče prebrati. Poskusite znova.',
-    tooManyAttempts: 'Preveč poskusov registracije. Poskusite znova čez nekaj minut.',
-    tooManyAttemptsMinutes: (minutes: number) =>
-      `Preveč poskusov registracije. Poskusite znova čez ${minutes} min.`,
-    offline: 'Ni povezave s strežnikom. Preverite internet in poskusite znova.',
-    failed: 'Registracija ni uspela. Poskusite znova.',
+    tooManyAttemptsMinutes: (minutes: number) => t('auth:signup.errors.tooManyAttemptsMinutes', { minutes }),
   },
-} as const;
+});
 
 /**
  * Legal texts. TODO(M2-10a): placeholders — the real terms of use and privacy policy
@@ -191,7 +163,7 @@ export function isTimezoneRejection(err: unknown): boolean {
   return errorCodes(err.data).timezone !== undefined || validationErrors(err.data).timezone !== undefined;
 }
 
-/** Maps a failed `api.register` call to what the form shows (always Slovenian). */
+/** Maps a failed `api.register` call to what the form shows (in the app language). */
 export function mapSignupError(err: unknown): SignupFailure {
   if (!(err instanceof ApiError)) return { fields: {}, general: E.offline };
 

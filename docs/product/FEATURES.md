@@ -181,6 +181,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 | Varnostna kopija baze | Pred vsakim deployem, 7 dni, isti disk. Dnevna kopija drugam in test obnove še manjkata. | — | ✅ (delno) | M5-04 | 2026-10-03 |
 | Odpornost aplikacije | Ob preobremenitvi počaka in sama poskusi znova, obdrži zadnje stanje; »Ups, nekaj se je zataknilo« z »Poskusi znova« namesto zrušitve. | otrok | ✅ | — (PR #45, #48) | 2026-10-06 |
 | Nova podoba »Grafit in meta« | Nova ikona, zagonski zaslon, logotip, pisave, mirna starševska in temna otroška tema. Potreben nov native build. | otrok, starš | ✅ | — (CGP v2) | 2026-10-06 |
+| Jezik aplikacije (EN / SL) | Angleščina privzeto, slovenščina; izbira na začetnem zaslonu (EN / SL) in v »Nadzor → Jezik«, velja za napravo; sicer jezik telefona. Strežnik dobi jezik z vsako zahtevo (`Accept-Language`). Potreben nov native build. | otrok, starš | ✅ (zasloni še v prevodu) | M1-18 | 2026-10-07 |
 | Oznaka različice | Npr. `v1.10.2 · 23cd58a` na začetnem zaslonu in v »Nadzor«. | — | ✅ | — | 2026-10-05 |
 | Administracija (Filament) | Nastavitve pasem, podatki obdobij z virom in revizijo, AI mediji (ponovno ustvarjanje), poraba AI, »Delete family«. | admin | ✅ | M1-06, M4-03, M4-07, M5-R01, M2-08 | 2026-10-05 |
 | Poročanje o napakah, nadzor delovanja | Sentry, uptime. | — | 🗓 (čaka Davida) | M5-05 | — |
@@ -213,7 +214,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **Ni še bilo na tel
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID |
 |---|---|---|---|---|
 | Koraki iz Apple Zdravje / Health Connect | Koraki tudi pri zaprti aplikaciji (Android danes šteje samo, ko je odprta). | otrok | 🗓 | M3-04, M3-05, M3-06 |
-| Angleščina v aplikaciji | Aplikacija je danes v slovenščini (besedila v kodi); EN privzeto + SL. | vsi | 🗓 | M1-18 |
+| Angleščina v aplikaciji | EN privzeto + SL. Ogrodje, izbira jezika in prijava / registracija / PIN so prevedeni (2026-10-07, M1-18 del 1); ostali zasloni in strežniška besedila (push) v teku. | vsi | ✅ delno · 🗓 ostalo | M1-18 |
 | Plačila | Glej §12. | starš | 🗓 | M3-07 – M3-11 |
 | Certifikat odgovornosti | Glej §7. | otrok, starš | 🗓 | M2-01d |
 | Zaprta beta (TestFlight + Google Play, 20–50 družin) | — | — | 🗓 | M5-07 |

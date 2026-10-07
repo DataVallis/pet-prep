@@ -11,15 +11,10 @@ import { WifiOff } from 'lucide-react-native';
 
 import { BrandLogo } from '@/components/brand/BrandLogo';
 import { fonts, light, radius, tightTracking } from '@/theme';
+import { strings } from '@/i18n/strings';
 
-/** User-visible strings (extract to i18n with M1-18). */
-export const SPLASH_STRINGS = {
-  restoring: 'Nalagam …',
-  offlineTitle: 'Ni povezave',
-  offlineBody: 'Ne moremo doseči strežnika PetPrep. Preverite internet in poskusite znova.',
-  retry: 'Poskusi znova',
-  logout: 'Odjava',
-} as const;
+/** User-visible strings (`auth:splash`, M1-18). */
+export const SPLASH_STRINGS = strings('auth', 'splash');
 
 interface SplashScreenProps {
   mode: 'restoring' | 'offline';

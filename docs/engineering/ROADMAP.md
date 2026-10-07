@@ -60,7 +60,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
   - [x] Aplikacija: zaklep iz strežniškega stanja (obnova seje z `is_hard_stopped` / `is_active`, v živo iz dogodka, odklep ob preklicu), zaslon z razlogom in uro veterinarja po času družine *(2026-10-04, `feat/M1-14-child-actions-ui`)*
   - [ ] Odprto (backend): hard stop preklop brez zaklepa vrstice / transakcije
 - [ ] M1-17 Generirani tipi iz OpenAPI (`schema.ts`) se uporabljajo v `client.ts` namesto ročnih
-- [ ] M1-18 i18n s `expo-localization` + `i18next`: **EN privzeto + SL**; tudi strežniška sporočila (push, napake) prek Laravel lang datotek
+- [~] M1-18 i18n s `expo-localization` + `i18next`: **EN privzeto + SL**; tudi strežniška sporočila (push, napake) prek Laravel lang datotek — *2026-10-07 del 1: ogrodje (`mobile/src/i18n`, `strings()`, test enakosti ključev), izbira jezika (začetni zaslon + Nadzor), `Accept-Language`, iOS dovoljenja v SL, prijava / registracija / PIN / zagon prevedeni; glej `docs/engineering/I18N.md`*
 - [~] M1-19 **Uvoz podatkov o pasmah iz virov** (David, 2026-10-03) — **2026-10-05:** raziskava `docs/research/dog-data/` (S1–S46) + uvoz življenjskih faz v `breed_stage_params` (M5-R01, vsaka vrednost z virom / `verified`); `breed_configs` hitrosti lakote / žeje, voda in kakci ostajajo nepreverjeni (viri jih ne podajo — glej dog-data README §2): zbrati zanesljive vire (FCI/AKC standardi, veterinarska literatura o gibanju, prehrani, vodi), AI izlušči vrednosti → tabela z virom na vsako številko → David potrdi → uvoz v `breed_configs` (+ stolpec/tabela za vire). Do takrat so številke iz izvirne specifikacije označene kot *nepreverjene*. Sejalnik je insert-only.
 
 ## M2 — Starš, avtentikacija, dashboard (1 teden)

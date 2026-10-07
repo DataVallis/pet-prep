@@ -16,6 +16,8 @@ import { logRenderError } from '@/utils/logRenderError';
 import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
 import { palette } from '@/theme';
 import { useDarkStatusBar } from '@/components/ui/useDarkStatusBar';
+import { useTranslation } from 'react-i18next';
+import { t } from '@/i18n';
 
 const LOCKED_STATES: LockState[] = ['game_over', 'hard_stop', 'illness', 'inactive'];
 
@@ -43,7 +45,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     if (this.state.hasError) {
       return (
         <View style={styles.errorContainer}>
-          <Text style={styles.errorTitle}>Nekaj je šlo narobe</Text>
+          <Text style={styles.errorTitle}>{t('common:errors.crashTitle')}</Text>
           <Text style={styles.errorMessage}>{this.state.error?.message}</Text>
         </View>
       );
@@ -75,6 +77,9 @@ export default function AppNavigator() {
   const pet = useAppStore((s) => s.pet);
   const lockState = useAppStore((s) => s.lockState);
   const bootStatus = useAppStore((s) => s.bootStatus);
+  // M1-18: re-render the whole tree when the language changes (screens read their
+  // strings at render time through `strings()` / `t()`).
+  useTranslation();
   const { retry } = useSessionBootstrap();
   // M3-02: register this install for pushes on sign-in, route tapped pushes.
   usePushNotifications();
