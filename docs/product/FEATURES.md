@@ -73,8 +73,9 @@ Razmejitev brezplačno / plačljivo v `BUSINESS_MODEL.md` §7 je **predlog**, ki
 | Obroki danes | Nad gumbi za nego mirna vrstica današnjih oken po času družine, npr. »7–9 ✓ · 11–13 nahrani starš · 15–17 · 19–21«: ✓ pri vsakem oknu, v katerem je bil danes zabeležen obrok (otrokov ali starševski v tihih urah; strežnik to pošlje za vsako okno), trenutno okno poudarjeno, okna v tihih urah z oznako »nahrani starš«, minula okna brez obroka samo zatemnjena (nikoli »zamujeno«). Takoj po hranjenju se ✓ pokaže že pred osvežitvijo stanja. Samo psi z izbiro kužka (pes brez profila ostane kot prej). | otrok | ✅ | M5-R04 (del 2) | 2026-10-07 |
 | Voda | 3× na dan, vsaj 3 ure narazen (tudi čez polnoč); pod gumbom piše, kdaj spet. | otrok | ✅ | M1-07, M1-14 | 2026-10-04 |
 | Čiščenje | Kuža naključno naredi nered (mešanček 1×, Border Collie 2× na dan), nikoli v tihih urah. Otrok ga zdrgne s prstom. Dokler ni čisto, hrane in vode ni. | otrok | ✅ | M1-05, M1-14 | 2026-10-04 |
-| Sprehod s pravimi koraki | Energija = današnji koraki / cilj, ob polnoči (po času družine) znova 0 %. iPhone pošlje vse današnje korake s senzorja gibanja, Android šteje samo, ko je aplikacija odprta. Brez GPS. | otrok | ✅ · 📱 okno sprehoda videno na TestFlightu 5. 10. (z napako oblike; popravek še ni preverjen) | M1-04, M1-14 | 2026-10-04 |
+| Sprehod s pravimi koraki | Energija = današnji koraki / cilj, ob polnoči (po času družine) znova 0 %. Koraki iz Apple Zdravje / Health Connect, če jih otrok poveže (glej naslednjo vrstico); sicer kot doslej: iPhone pošlje vse današnje korake s senzorja gibanja, Android šteje samo, ko je aplikacija odprta. Brez GPS. | otrok | ✅ · 📱 okno sprehoda videno na TestFlightu 5. 10. (z napako oblike; popravek še ni preverjen) | M1-04, M1-14 | 2026-10-04 |
 | Pošteno štetje korakov | Največ 200 korakov na minuto; tresenje telefona ne prinese več kot hoja. | otrok | ✅ | M1-04 | 2026-10-03 |
+| Koraki iz Apple Zdravje / Health Connect | Otrok v oknu »Sprehod« po kratki razlagi tapne »Poveži« in dovoli **samo branje korakov** (nič drugega, nič se ne zapisuje). Koraki se štejejo tudi, ko je aplikacija zaprta (tudi z uro): ob odprtju aplikacija pošlje ves današnji seštevek. Iz telefona gre samo današnje število korakov. Vir z več koraki šteje (zdravje ali senzor) — nikoli seštevek obeh. iPhone občasno pošlje korake tudi v ozadju (ko iOS dovoli). Android: če Health Connect manjka ali je star, gumb »Odpri Google Play«; če otrok dostop zavrne, »Odpri Health Connect«. Zavrnjeno ali brez zdravja → senzor kot doslej. **Potreben nov native build.** | otrok | ✅ (ni na napravi) | M3-04, M3-05, M3-06 | 2026-10-07 |
 | Skupni sprehod | Pri skupnem psu se koraki vseh otrok seštejejo; vsak vidi svoj del. | otrok | ✅ | M2-01 | 2026-10-04 |
 | Tihe ure | Starš nastavi šolo in spanje; kuža takrat skoraj ne upada, ne dela nereda in ne pošilja obvestil. | starš | ✅ | M1-03 | 2026-10-03 |
 | Časovni pas družine | Vsa pravila po uri v kuhinji, tudi ob premiku ure (25. 10. 2026, 28. 3. 2027 preverjeno s testi). | — | ✅ | M1-03 | 2026-10-03 |
@@ -167,6 +168,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7
 | Varna koda PIN | Na strežniku samo zgoščena vrednost; enak odgovor za vse napake; omejitev poskusov (15 min premora). | — | ✅ | M2-02 | 2026-10-04 |
 | Ločeni vlogi | Otroški telefon ne more odpreti starševskih nastavitev (ločen ključ za starša in otroka). | — | ✅ | M2-03 (delno) | 2026-10-04 |
 | Zasebni kanali v živo | Stanje psa vidijo samo njegovi skrbniki in starši družine; sporočila brez imen in e-pošte. | — | ✅ | M1-08 | 2026-10-04 |
+| Zdravje: samo število korakov | Iz Apple Zdravje / Health Connect aplikacija bere samo današnji seštevek korakov (dovoljenje samo za branje korakov); na strežnik gre samo to število — brez drugih zdravstvenih podatkov in brez tretjih strani. | otrok, starš | ✅ (ni na napravi) | M3-04, M3-05 | 2026-10-07 |
 | Obvestila brez imen | Naslov vedno »PetPrep«, brez imena otroka ali psa; hranimo samo žeton naprave, platformo in različico aplikacije. | — | ✅ | M3-02 | 2026-10-05 |
 | Preverjeni AI videi | Podpis ED25519 na sporočilih AI storitve; na zaslon pride samo vsebina, ki jo je naročil PetPrep. | — | ✅ | M4-04 | 2026-10-02 |
 | Strežnik in mediji v EU | Hetzner; slike in videi pri nas, povezave s kratkim rokom. | — | ✅ | M5-01, M4-05 | 2026-10-05 |
@@ -220,7 +222,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7
 
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID |
 |---|---|---|---|---|
-| Koraki iz Apple Zdravje / Health Connect | Koraki tudi pri zaprti aplikaciji (Android danes šteje samo, ko je odprta). | otrok | 🗓 | M3-04, M3-05, M3-06 |
+| Koraki iz Apple Zdravje / Health Connect | Glej §3 (zgrajeno; čaka nov native build in preizkus na telefonu). | otrok | ✅ (ni na napravi) | M3-04, M3-05, M3-06 |
 | Angleščina v aplikaciji | Glej §10 »Jezik aplikacije«. | vsi | ✅ | M1-18 |
 | Plačila | Glej §12 (zgrajeno; čaka nastavitev trgovin in RevenueCat ter native build). | starš | ✅ (ni na napravi) | M3-07, M3-09 |
 | Certifikat odgovornosti | Glej §7. | otrok, starš | 🗓 | M2-01d |

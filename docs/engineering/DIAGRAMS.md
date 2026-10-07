@@ -25,7 +25,7 @@ flowchart LR
   end
   FAL["fal.ai<br/>Nano Banana Pro image · Kling 3.0 Pro video"]
   RC[RevenueCat]
-  HK["HealthKit / Health Connect"]
+  HK["Apple Health (HealthKit) / Health Connect<br/>on the child's phone — read today's step total only"]
   P -- HTTPS --> CAD
   C -- HTTPS --> CAD
   P -- "wss · private-pet.{id}" --- CAD
@@ -48,7 +48,7 @@ flowchart LR
   APP -- "exists() check" --> VOL
   FAL -- "fetch start frame (signed URL)" --> CAD
   RC -- "webhook, Bearer secret (M3-08)" --> APP
-  C -. "steps (M3-04/05)" .- HK
+  HK -. "steps today (on-device read, M3-04/05)" .-> C
 ```
 
 Runtime (M4-05b): every PHP container (app = php-fpm, reverb, queue, queue-broadcasts, scheduler) runs the same image `petprep-app` (code + `composer install --no-dev` baked in, uid 1000, caches built per container on start); Caddy runs `petprep-web` (caddy:2.8-alpine + `public/`). Video bytes never pass through PHP: Laravel only checks the signed URL and answers with an internal `X-Accel-Redirect` header, Caddy serves the file (Range, ETag) from `app_storage` mounted read-only.
@@ -418,6 +418,33 @@ sequenceDiagram
   S-->>App: PetUpdated "walked_pet" after commit (Reverb)
 ```
 
+### 5b′. Where the phone's step total comes from (M3-04 / M3-05 / M3-06)
+
+Sources overlap (one walk is seen by the motion sensor AND the health store), so the app sends the **maximum**, never the sum. Only the number leaves the phone.
+
+```mermaid
+flowchart TD
+  T([Trigger: HUD mount · foreground ≤ 1/min · every 5 min ·<br/>»Osveži« / overlay closed · iOS background task ~15 min+]) --> D["Family day: familyCalendar(state.timezone)<br/>window = [family midnight, now]"]
+  D --> H{Health connected?<br/>iOS: Health sheet answered<br/>Android: READ_STEPS granted}
+  H -- yes --> HR["HealthKit statistics cumulativeSum (StepCount)<br/>or Health Connect aggregate (Steps)<br/>de-duplicated phone + watch; throws → no reading"]
+  H -- "no / denied / not installed" --> X[no health reading]
+  D --> P{Motion permission?}
+  P -- "iOS yes" --> PI["CoreMotion history since family midnight"]
+  P -- "Android yes" --> PA["Live counter per child (app open only)"]
+  P -- no --> Y[no sensor reading]
+  HR --> M["max(readings) — on a tie the health source"]
+  X --> M
+  PI --> M
+  PA --> M
+  Y --> M
+  M --> C{"total > server my_steps_today<br/>of the same family day?"}
+  C -- no --> N[nothing sent]
+  C -- yes --> POST["POST /api/child/pet/steps<br/>{steps_today, source: healthkit | health_connect | pedometer, recorded_at ±HH:MM}"]
+  POST --> SRV["Server (§5b): max per child per day,<br/>≤ 200 steps/min since the last accepted sync<br/>→ hours-long catch-up after a closed app is accepted"]
+```
+
+Background (iOS only): `expo-background-task` registered by the child HUD once Apple Health is connected, unregistered on logout; the task restores the token, `GET /api/child/pet` (zone, lock, server count), reads as above, posts. Android has no background read (Health Connect would need `READ_HEALTH_DATA_IN_BACKGROUND`); its history is caught up on the next app open.
+
 ### 5c. Child app: action ↔ cache ↔ Reverb (M1-13 / M1-14 / M1-15 / M1-16)
 
 ```mermaid
@@ -450,8 +477,8 @@ sequenceDiagram
   Q-->>Store: lockStateFromView → setLockState(hard_stop | illness | game_over | inactive, until, tz)<br/>awaiting_contract → setAwaitingContract(true)
   Store-->>HUD: AppNavigator: LockedScreen over the HUD (unlocks live) · ContractScreen instead of the HUD
   Note over HUD,Q: timer at the earliest of next window start, current window end,<br/>water next_allowed_at, next family midnight → refetch GET (also while live)
-  loop on mount (permission granted), on foreground, every 5 min, on walk overlay close
-    HUD->>API: POST /api/child/pet/steps {steps_today, source: pedometer, recorded_at ±HH:MM}<br/>(iOS: CoreMotion since the FAMILY midnight · Android: live counter per child, family day) — only if > my_steps_today of that family day
+  loop on mount (sensor granted or Health connected), on foreground (≤ 1/min), every 5 min, on walk overlay close
+    HUD->>API: POST /api/child/pet/steps {steps_today, source, recorded_at ±HH:MM}<br/>max of Apple Health / Health Connect and the sensor (iOS: CoreMotion since the FAMILY midnight · Android: live counter per child), family day — only if > my_steps_today of that family day (§5b′)
     API-->>Q: replace with response.state (any status; 423 too)
   end
 ```

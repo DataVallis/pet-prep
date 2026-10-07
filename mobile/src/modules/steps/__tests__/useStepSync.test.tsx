@@ -177,6 +177,8 @@ describe('useStepSync', () => {
     expect(syncSteps).toHaveBeenCalledTimes(1);
 
     step.mockResolvedValueOnce({ steps: 3100 });
+    // M3-06: automatic triggers are throttled to one a minute (the interval just read).
+    jest.setSystemTime(Date.now() + 60_000);
     await act(async () => {
       fireAppState('active');
       await jest.advanceTimersByTimeAsync(0);
