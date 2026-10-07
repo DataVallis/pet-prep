@@ -11,5 +11,5 @@ Implement roadmap task **$ARGUMENTS** for PetPrep.
 4. Write a short plan (files, migrations, endpoints, tests) and mark the task `[~]` in ROADMAP.md.
 5. Delegate: backend work → `backend-engineer`, app work → `mobile-engineer`. Backend contract first, then regenerate types, then mobile.
 6. Run `/verify`. Then ask `qa-reviewer` for an independent review of the diff; fix blockers/majors.
-7. Update docs: tick `[x]` in ROADMAP.md, ARCHITECTURE.md if API/schema changed, and run `/handoff`.
+7. Update docs: tick `[x]` in ROADMAP.md, ARCHITECTURE.md if API/schema changed, `docs/product/FEATURES.md` (row + status for every user-visible change), and run `/handoff`.
 8. Summarise for David in Slovenian: what now works, how to try it, what's left. Do not commit/push unless asked.

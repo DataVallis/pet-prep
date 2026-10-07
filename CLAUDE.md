@@ -48,6 +48,7 @@ Dev accounts come from `TestUsersSeeder` (`parent@test.com` / `child@test.com`, 
 4. API changed → regenerate types (`npm run generate-api-types`) and update `ARCHITECTURE.md` §3.
 5. Tick the task in `ROADMAP.md`, add a dated entry to `HANDOFF.md` (what changed, new debt, next step).
 6. Notable progress → entry in `docs/journey/BUILD_LOG.md` (Slovenian; raw material for social, investor, partner and parent content).
+7. Any user-visible feature added, changed, removed or verified on a device → update its row in `docs/product/FEATURES.md` (status, roadmap ID, date) in the same PR.
 
 ## Git
 - Branch from `main`: `feat/M1-07-child-actions`, `fix/M1-01-decay-rounding`, `chore/…`, `docs/…`.
@@ -63,7 +64,8 @@ Documentation is written **while** building, not afterwards. From it we will lat
 2. `docs/product/DECISIONS.md` — one dated line per decision (who decided, what, why, link to PR). Product rules also go to `PRODUCT_SPEC.md`.
 3. `docs/audiences/*` when anything a parent, child, investor or partner would notice changes (features, safety, privacy, pricing, numbers). Facts only; unbuilt things marked *načrt*/*planned*.
 4. `docs/journey/BUILD_LOG.md` — dated story entry for every notable change (what · why it matters · how to tell it per audience), with real numbers.
-5. `HANDOFF.md` + `ROADMAP.md` as before.
+5. `docs/product/FEATURES.md` — **feature catalogue (David, 2026-10-07): what the product can do today**, per area, with status (✅ in the app · 📱 verified on a phone · 🛠 backend only · 🗓 planned · ⏸ post-MVP), free/paid, roadmap ID and date. It is the source for the website, store listings and audience material, so it must never lag behind: every PR that adds, changes or removes something a parent, child or admin can see updates its row; when David confirms a feature on a device, change it to 📱 with date and build. Facts only — nothing planned may read as available.
+6. `HANDOFF.md` + `ROADMAP.md` as before.
 Keep the claude.ai Project copies (`petprep/*.md`) in sync after merges. No child personal data in any doc.
 
 ## Engineering rules

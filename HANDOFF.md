@@ -57,11 +57,14 @@
 
 1. **David:** new TestFlight / Android build from `main` (fixes the push loop; contains M5-R02 + M5-R03 UI and the CGP v2 rebrand). Rebrand checks: home-screen icon (iOS + Android adaptive / themed), splash on fog, fonts render (Instrument Sans body, Bricolage headings, Slovenian č/š/ž), status-bar text dark on light screens and light in the child app, mint "due" care button. Then device checks: one `POST /api/devices` per login in the Caddy log; "Šola" chip at 375 pt; "Pohvali" responsiveness; kill app mid-training and reopen; TalkBack / VoiceOver.
 2. **David:** delete stale remote branches `diag/pet-state-1006`, `diag/prod-logs-1006`, `diag/child-flow`, `wip/M5-R04-picker-followup` (agent can't delete remote branches).
-3. **`docs/product/FEATURES.md`** — feature catalogue (what the app does today, per area, status built / verified on device / planned) for website and materials; proposed to David 2026-10-06, waiting for his OK; keep it updated in every PR.
+3. **David:** review `docs/product/FEATURES.md` (feature catalogue, created 2026-10-07 — keep it updated in every PR, CLAUDE.md rule). Open points from it: the parent "Pasme" tab is a fake purchase placeholder (`BreedPaywallScreen`, local unlock + English alert) — hide before a public build?; no UI to change the family timezone.
 4. **M5-R04 part 2:** growth album (pet images across life stages).
 5. **David:** M5-R03b — only the minimum-one-session rule (≥ 7 trainers) is still open (the rest confirmed 2026-10-07). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-07 (cloud, orchestrator) — feature catalogue
+- `docs/product/FEATURES.md` (14 areas, status legend ✅ / 📱 / 🛠 / 🗓 / ⏸, free / paid, roadmap IDs, dates, numbers with sources). CLAUDE.md (DoD 7 + Living documentation 5), `/handoff` and `/feature` now require updating it in every PR (David).
 
 ### 2026-10-07 (cloud, orchestrator) — David confirms training effects
 - David: unsigned child not in the share, mid-day recalculation OK, effects 0.75 / 0.5 confirmed → seeder + data migration `2026_10_16_120000` (verified, audit, admin edits win). Pest 1100 green. Only `chewing_chance_per_day` remains unverified among behaviour/training numbers.

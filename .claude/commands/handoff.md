@@ -9,4 +9,5 @@ Update `HANDOFF.md` so the next agent (or David) can continue without losing con
 3. Keep it factual: only claim something works if it was tested in this session. Never write "100 %" without passing end-to-end verification.
 4. Record every decision of the session in `docs/product/DECISIONS.md`; update `docs/audiences/*` and `docs/engineering/DIAGRAMS.md` if user-visible behaviour or structure changed.
 5. If the session produced something worth telling (shipped feature, decision, milestone, interesting finding), add a dated entry at the top of `docs/journey/BUILD_LOG.md` in Slovenian using its format (what happened · why it matters · how to tell it per audience). Facts only, mark unbuilt things as *načrt*, no child personal data.
-6. Keep the file under ~300 lines; move older session-log entries to `docs/engineering/handoff-archive.md` when needed.
+6. Check `docs/product/FEATURES.md`: every feature touched this session has the right status / roadmap ID / date (add rows for new features; 📱 only when David confirmed it on a device). Sync the claude.ai Project copy `petprep/FEATURES.md` after merge.
+7. Keep the file under ~300 lines; move older session-log entries to `docs/engineering/handoff-archive.md` when needed.
