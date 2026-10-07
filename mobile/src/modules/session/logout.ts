@@ -9,6 +9,7 @@ import * as SecureStore from 'expo-secure-store';
 import { api, clearAuthToken } from '@/api/client';
 import { clearLiveSteps } from '@/modules/steps/stepCounter';
 import { unregisterFromPush } from '@/modules/push/pushRegistration';
+import { resetPurchasesIdentity } from '@/modules/purchases/purchases';
 import { queryClient } from '@/api/queryClient';
 import { useAppStore } from '@/store/appStore';
 import { channelAuthGate, childPetFetchGate } from '@/modules/childPet/refetchGovernor';
@@ -45,6 +46,9 @@ export async function logout({ revoke = true }: LogoutOptions = {}): Promise<voi
     // The server already dropped the token (and the push registration with it).
     await unregisterFromPush({ callServer: false });
   }
+  // M3-07: the parent stops being the RevenueCat app user on this install (≤ 2 s, never
+  // throws; no-op when no parent was identified, e.g. a child session).
+  await resetPurchasesIdentity();
   try {
     await clearAuthToken();
   } catch {

@@ -6,6 +6,7 @@ import { isAwaitingContract, useAppStore, type LockState } from '@/store/appStor
 import { logout } from '@/modules/session/logout';
 import { useSessionBootstrap } from '@/modules/session/useSessionBootstrap';
 import { usePushNotifications } from '@/modules/push/usePushNotifications';
+import { usePurchasesSession } from '@/modules/purchases/usePurchases';
 import SplashScreen from '@/screens/SplashScreen';
 import StartScreen from '@/screens/StartScreen';
 import ContractScreen from '@/screens/ContractScreen';
@@ -83,6 +84,8 @@ export default function AppNavigator() {
   const { retry } = useSessionBootstrap();
   // M3-02: register this install for pushes on sign-in, route tapped pushes.
   usePushNotifications();
+  // M3-07: identify a parent session with RevenueCat (never a child; no-op without keys).
+  usePurchasesSession();
 
   if (bootStatus !== 'ready') {
     return (

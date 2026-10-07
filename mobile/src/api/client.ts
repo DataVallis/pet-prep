@@ -321,6 +321,29 @@ export interface PetActivitiesResponse {
   meta: { current_page: number; last_page: number; total: number };
 }
 
+/**
+ * One family entitlement from `GET /api/parent/entitlements` (M3-07 / M3-08).
+ * Local type — schema regen pending: the backend endpoint is being built in parallel;
+ * replace with `components['schemas'][…]` after `npm run generate-api-types`. Read the
+ * body through `readEntitlements` (`modules/purchases/entitlements.ts`), never directly.
+ */
+export interface Entitlement {
+  /** Entitlement identifier, e.g. `challenge` (BUSINESS_MODEL §7). */
+  key: string;
+  active: boolean;
+  /** How it was granted, e.g. `purchase` / `trial` / `admin` (free-form until the schema lands). */
+  source: string | null;
+  /** `app_store` / `play_store` / … or null when not store-backed. */
+  store: string | null;
+  granted_at: string | null;
+  expires_at: string | null;
+}
+
+/** `GET /api/parent/entitlements` 200 body (local type — schema regen pending). */
+export interface EntitlementsResponse {
+  entitlements: Entitlement[];
+}
+
 /** Response from POST /api/broadcasting/auth (Pusher protocol signature). */
 export interface BroadcastAuthResponse {
   auth: string;
@@ -701,6 +724,13 @@ export const api = {
     apiRequest<PetActivitiesResponse>(
       `/api/parent/activities?pet_id=${petId}&per_page=${perPage}&page=${page}`,
     ),
+
+  /**
+   * GET /api/parent/entitlements (M3-07, parent only) — the family's entitlements; the
+   * server is the source of truth (RevenueCat webhook, trial, admin grants). Returned
+   * untyped until `schema.ts` is regenerated → read with `readEntitlements`.
+   */
+  getEntitlements: () => apiRequest<unknown>('/api/parent/entitlements'),
 
   /** POST /api/parent/invite-parent — code for a second parent (revokes this parent's previous code). */
   inviteParent: () => apiRequest<InviteParentResponse>('/api/parent/invite-parent', { method: 'POST' }),

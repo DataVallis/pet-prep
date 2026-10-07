@@ -1,0 +1,17 @@
+{
+  "result": {
+    "success": "Thank you! Your purchase is complete.",
+    "successPending": "Thank you! Your purchase is complete. Unlocking can take a minute; refresh if it doesn't appear.",
+    "cancelled": "Purchase cancelled. You were not charged.",
+    "pending": "Your purchase is waiting for approval. It unlocks as soon as it is approved.",
+    "alreadyOwned": "You already own this. Tap “Restore purchases” to unlock it on this account.",
+    "network": "No connection to the store. Check your internet and try again.",
+    "storeProblem": "The store couldn't complete the purchase. Please try again later.",
+    "notAllowed": "Purchases are not allowed on this device. Check the device's purchase settings.",
+    "unavailable": "Purchases aren't available in this version of the app."
+  },
+  "restore": {
+    "restored": "Your purchases have been restored.",
+    "nothing": "No previous purchases found for this store account."
+  }
+}
