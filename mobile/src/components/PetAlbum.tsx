@@ -3,7 +3,13 @@
  *
  * - Grid: the reference photo + one tile per entitled state (`modules/petMedia/album.ts`);
  *   not-yet-stored states are greyed "Še ni posnetka", non-entitled ones are hidden.
- *   Video tiles have no thumbnails (no player in the grid — only ONE player at a time).
+ *   Video tiles use the pet's reference photo as their poster (device feedback 2026-10-07:
+ *   empty dark boxes): the state videos are image-to-video clips generated FROM that photo,
+ *   so it is their real first frame — at zero cost (no player in the grid — only ONE
+ *   player at a time; expo-image / thumbnail APIs are not installed). Every tile shares
+ *   one layout: picture (or a brand placeholder while it loads / when it fails), a bottom
+ *   caption pill (icon + label) and, for videos, a small play badge top-right.
+ * - The viewer shows the same poster until the video's first frame is ready (no black box).
  * - Viewer: tap a tile → full-screen photo or looping video (expo-video, muted by
  *   default with a sound toggle, disk cache). Arrows and horizontal swipes move between
  *   the playable items (wrapping); back returns to the grid, X closes the album.
@@ -27,10 +33,22 @@
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { BackHandler, Image, PanResponder, Pressable, ScrollView, StyleSheet, View, type GestureResponderEvent, type PanResponderGestureState } from 'react-native';
+import {
+  ActivityIndicator,
+  BackHandler,
+  Image,
+  PanResponder,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  View,
+  type GestureResponderEvent,
+  type LayoutChangeEvent,
+  type PanResponderGestureState,
+} from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
-import { ChevronLeft, ChevronRight, Clock, Image as ImageIcon, Play, Volume2, VolumeX, X } from 'lucide-react-native';
+import { ChevronLeft, ChevronRight, Clock, Image as ImageIcon, Play, Video as VideoIcon, Volume2, VolumeX, X } from 'lucide-react-native';
 import { useVideoPlayer, VideoView, type StatusChangeEventPayload } from 'expo-video';
 
 import {
@@ -137,11 +155,14 @@ function AlbumImage({
 /** The one video player of the album. Keyed by media by the caller → a new item = a new player. */
 function AlbumVideo({
   url,
+  posterUrl,
   muted,
   onExpired,
   onRetry,
 }: {
   url: string;
+  /** Shown over the player until its first frame is ready (the reference photo). */
+  posterUrl: string | null;
   muted: boolean;
   onExpired: (url: string) => void;
   onRetry: () => void;
@@ -154,6 +175,9 @@ function AlbumVideo({
     p.muted = true;
     p.audioMixingMode = 'mixWithOthers';
   });
+  // The poster covers the player until a frame can be shown (status or first frame —
+  // some devices are late with one of them).
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     player.muted = muted;
@@ -167,7 +191,9 @@ function AlbumVideo({
   const onStableError = stable.onError;
   useEffect(() => {
     if (source === null) return;
+    setReady(player.status === 'readyToPlay');
     const handle = (status: StatusChangeEventPayload['status']) => {
+      if (status === 'readyToPlay') setReady(true);
       if (status !== 'error') return;
       onStableError();
       onExpired(source.uri);
@@ -179,47 +205,145 @@ function AlbumVideo({
 
   if (source === null) return <Unavailable testID="album-video-unavailable" onRetry={onRetry} />;
   return (
-    <VideoView
-      player={player}
-      contentFit="contain"
-      nativeControls={false}
-      allowsPictureInPicture={false}
-      style={StyleSheet.absoluteFill}
-      testID="album-video"
-    />
+    <>
+      <VideoView
+        player={player}
+        contentFit="contain"
+        nativeControls={false}
+        allowsPictureInPicture={false}
+        onFirstFrameRender={() => setReady(true)}
+        style={StyleSheet.absoluteFill}
+        testID="album-video"
+      />
+      {!ready && (
+        <View style={styles.videoPoster} pointerEvents="none" testID="album-video-poster">
+          <TileBackdrop url={posterUrl} kind="video" fit="contain" testID="album-video-poster" />
+          <ActivityIndicator color={palette.mint} style={styles.videoSpinner} />
+        </View>
+      )}
+    </>
   );
 }
 
-function Tile({ item, onPress, onExpired }: { item: AlbumItem; onPress: () => void; onExpired: (url: string) => void }) {
+/**
+ * Picture of a tile (or of the viewer while a video loads): a brand placeholder — graphite
+ * surface, soft mint disc, photo / video icon — under the image, visible until the image
+ * has loaded and again when it fails (never a bare black box). A failed URL is reported
+ * once (`onExpired`) so the caller can refetch fresh signed URLs.
+ */
+export function TileBackdrop({
+  url,
+  kind,
+  fit = 'cover',
+  onExpired,
+  testID,
+}: {
+  url: string | null;
+  kind: 'photo' | 'video';
+  fit?: 'cover' | 'contain';
+  onExpired?: (url: string) => void;
+  testID: string;
+}) {
+  const image = useStableUrl(url);
+  const [loadedUri, setLoadedUri] = useState<string | null>(null);
+  const loaded = image.uri !== null && loadedUri === image.uri;
+  const Icon = kind === 'video' ? VideoIcon : ImageIcon;
+  return (
+    <>
+      {!loaded && (
+        <View style={styles.placeholder} testID={`${testID}-placeholder`}>
+          <View style={styles.placeholderDisc}>
+            <Icon color={palette.mint} size={26} />
+          </View>
+        </View>
+      )}
+      {image.uri !== null && (
+        <Image
+          source={{ uri: image.uri }}
+          resizeMode={fit}
+          onLoad={() => setLoadedUri(image.uri)}
+          onError={() => {
+            image.onError();
+            if (url !== null) onExpired?.(url);
+          }}
+          style={StyleSheet.absoluteFill}
+          testID={`${testID}-image`}
+        />
+      )}
+    </>
+  );
+}
+
+/** Two columns, 12 pt apart, portrait 4:5 — measured from the grid so it fits any width. */
+const GRID_GAP = 12;
+const TILE_ASPECT = 0.8;
+
+export function tileSize(gridWidth: number): { width: number; height: number } | null {
+  if (!(gridWidth > GRID_GAP)) return null;
+  const width = Math.floor((gridWidth - GRID_GAP) / 2);
+  return { width, height: Math.round(width / TILE_ASPECT) };
+}
+
+function Tile({
+  item,
+  posterUrl,
+  size,
+  onPress,
+  onExpired,
+}: {
+  item: AlbumItem;
+  /** Poster of a video tile (the reference photo); null → brand placeholder. */
+  posterUrl: string | null;
+  size: { width: number; height: number } | null;
+  onPress: () => void;
+  onExpired: (url: string) => void;
+}) {
   const testID = `album-item-${item.id}`;
+  const sized = size ?? styles.tileFallbackSize;
   if (item.kind === 'missing') {
     return (
-      <View style={[styles.tile, styles.tileMissing]} testID={testID} accessible accessibilityLabel={`${item.label}, ${ALBUM_STRINGS.missing}`}>
+      <View
+        style={[styles.tile, sized, styles.tileMissing]}
+        testID={testID}
+        accessible
+        accessibilityLabel={`${item.label}, ${ALBUM_STRINGS.missing}`}
+      >
         <Clock color={alpha(palette.white, 0.35)} size={26} />
-        <Text style={[styles.tileLabel, styles.tileLabelMissing]}>{item.label}</Text>
-        <Text style={styles.tileHint}>{ALBUM_STRINGS.missing}</Text>
+        <Text style={[styles.tileLabel, styles.tileLabelMissing]} numberOfLines={1}>
+          {item.label}
+        </Text>
+        <Text style={styles.tileHint} numberOfLines={2}>
+          {ALBUM_STRINGS.missing}
+        </Text>
       </View>
     );
   }
+  const isVideo = item.kind === 'video';
   return (
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={item.label}
-      accessibilityHint={item.kind === 'video' ? ALBUM_STRINGS.videoHint : ALBUM_STRINGS.photoHint}
+      accessibilityHint={isVideo ? ALBUM_STRINGS.videoHint : ALBUM_STRINGS.photoHint}
       testID={testID}
-      style={({ pressed }) => [styles.tile, pressed && styles.pressed]}
+      style={({ pressed }) => [styles.tile, sized, pressed && styles.pressed]}
     >
-      {item.kind === 'photo' ? (
-        <AlbumImage url={item.url} onExpired={onExpired} testID={`${testID}-image`} fit="cover" />
-      ) : (
-        <View style={styles.playBadge}>
-          <Play color={palette.white} fill={palette.white} size={22} />
+      <TileBackdrop
+        url={isVideo ? posterUrl : item.url}
+        kind={item.kind}
+        onExpired={onExpired}
+        testID={isVideo ? `${testID}-poster` : testID}
+      />
+      {isVideo && (
+        <View style={styles.playBadge} testID={`${testID}-play`}>
+          <Play color={palette.white} fill={palette.white} size={14} />
         </View>
       )}
-      <View style={styles.tileCaption}>
-        {item.kind === 'photo' && <ImageIcon color={palette.white} size={12} />}
-        <Text style={styles.tileLabel}>{item.label}</Text>
+      <View style={styles.tileCaption} testID={`${testID}-caption`}>
+        {isVideo ? <VideoIcon color={palette.white} size={13} /> : <ImageIcon color={palette.white} size={12} />}
+        <Text style={styles.tileLabel} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.8}>
+          {item.label}
+        </Text>
       </View>
     </Pressable>
   );
@@ -316,6 +440,9 @@ export default function PetAlbum({
   // "Poskusi znova" remounts the open item (fresh useStableUrl → newest URL).
   const [attempt, setAttempt] = useState(0);
   const retry = useCallback(() => setAttempt((n) => n + 1), []);
+  const [gridWidth, setGridWidth] = useState(0);
+  const onGridLayout = useCallback((e: LayoutChangeEvent) => setGridWidth(e.nativeEvent.layout.width), []);
+  const size = useMemo(() => tileSize(gridWidth), [gridWidth]);
 
   // The viewer moves within one list: the album items or the growth pictures.
   const viewerList: ViewerList = selection?.list ?? 'media';
@@ -394,7 +521,14 @@ export default function PetAlbum({
                 fit="contain"
               />
             ) : (
-              <AlbumVideo key={`${selected.key}#${attempt}`} url={selected.url} muted={muted} onExpired={onViewerExpired} onRetry={retry} />
+              <AlbumVideo
+                key={`${selected.key}#${attempt}`}
+                url={selected.url}
+                posterUrl={media.referenceImageUrl}
+                muted={muted}
+                onExpired={onViewerExpired}
+                onRetry={retry}
+              />
             )}
           </View>
 
@@ -447,11 +581,13 @@ export default function PetAlbum({
           {growthItems.length > 0 && (
             <GrowthStrip items={growthItems} onExpired={reportGrowthExpired} onOpen={(id) => setSelection({ list: 'growth', id })} />
           )}
-          <View style={styles.grid}>
+          <View style={styles.grid} onLayout={onGridLayout} testID="album-tiles">
             {items.map((item) => (
               <Tile
                 key={item.id}
                 item={item}
+                posterUrl={media.referenceImageUrl}
+                size={size}
                 onExpired={reportExpired}
                 onPress={() => {
                   if (isPlayable(item)) setSelection({ list: 'media', id: item.id });
@@ -498,7 +634,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    rowGap: 12,
+    rowGap: GRID_GAP,
   },
   growthSection: { gap: 10 },
   sectionTitle: { fontSize: 16, letterSpacing: tightTracking(16), fontFamily: fonts.displayBold, color: palette.white },
@@ -529,29 +665,52 @@ const styles = StyleSheet.create({
   growthMeta: { fontSize: 12, fontWeight: '600', color: palette.n300 },
   growthDate: { fontSize: 11, fontWeight: '600', color: palette.n400 },
   tile: {
-    width: '48%',
-    aspectRatio: 0.8,
     overflow: 'hidden',
     borderRadius: 24,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: alpha(palette.graphite, 0.85),
+    backgroundColor: palette.n850,
     borderWidth: 1,
     borderColor: alpha(palette.white, 0.15),
   },
+  /** Until the grid is measured (first frame only). */
+  tileFallbackSize: { width: '48%', aspectRatio: TILE_ASPECT },
   tileMissing: {
     gap: 6,
+    paddingHorizontal: 12,
     backgroundColor: alpha(palette.n850, 0.45),
     borderColor: alpha(palette.white, 0.06),
     borderStyle: 'dashed',
   },
-  playBadge: {
-    width: 52,
-    height: 52,
-    borderRadius: 26,
+  placeholder: {
+    ...StyleSheet.absoluteFill,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: alpha(palette.okDark, 0.85),
+    backgroundColor: palette.n850,
+  },
+  placeholderDisc: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: alpha(palette.mint, 0.12),
+    borderWidth: 1,
+    borderColor: alpha(palette.mint, 0.25),
+  },
+  playBadge: {
+    position: 'absolute',
+    top: 10,
+    right: 10,
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingLeft: 2,
+    backgroundColor: alpha(palette.graphite, 0.72),
+    borderWidth: 1,
+    borderColor: alpha(palette.white, 0.25),
   },
   tileCaption: {
     position: 'absolute',
@@ -561,14 +720,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 5,
-    paddingVertical: 5,
+    gap: 6,
+    paddingVertical: 6,
+    paddingHorizontal: 10,
     borderRadius: 12,
     backgroundColor: alpha(palette.graphite, 0.8),
   },
-  tileLabel: { fontSize: 14, fontWeight: '700', color: palette.white },
+  tileLabel: { flexShrink: 1, fontSize: 14, fontWeight: '700', color: palette.white },
   tileLabelMissing: { color: alpha(palette.white, 0.45) },
-  tileHint: { fontSize: 11, fontWeight: '600', color: alpha(palette.white, 0.35) },
+  tileHint: { fontSize: 11, fontWeight: '600', color: alpha(palette.white, 0.35), textAlign: 'center' },
+  videoPoster: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'center' },
+  videoSpinner: { position: 'absolute', bottom: 24 },
   viewer: { flex: 1 },
   stage: { flex: 1, backgroundColor: palette.black },
   controls: {
