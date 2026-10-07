@@ -11,6 +11,7 @@ use App\Enums\PetLockReason;
 use App\Enums\PetOrigin;
 use App\Enums\PetPlan;
 use App\Enums\PetStateEnum;
+use App\Enums\PetStatusPeriodKind;
 use App\Jobs\DeletePetMediaFiles;
 use App\Services\FamilyService;
 use App\Services\LifeStageService;
@@ -575,9 +576,27 @@ class Pet extends Model
      * Determine if the simulation has reached its end (12 real weeks = 12 virtual months).
      * A free-plan pet never completes (M3-11: no 12-week program, no certificate).
      */
-    public function hasReachedSimulationEnd(): bool
+    public function hasReachedSimulationEnd(?CarbonInterface $now = null): bool
     {
-        return ! $this->isFreePlan() && $this->virtualAgeInMonths() >= 12;
+        if ($this->isFreePlan() || $this->born_at === null) {
+            return false;
+        }
+        $now ??= now();
+
+        // David 2026-10-07: time spent waiting for the purchase (payment lock) does
+        // not count toward the 12 weeks — the program ends 12 weeks of play after birth.
+        return $this->born_at->copy()->addWeeks(12)->addSeconds($this->paymentLockedSeconds($now))->lessThanOrEqualTo($now);
+    }
+
+    /** Seconds this pet spent payment-locked (closed + running `payment_lock` periods). */
+    public function paymentLockedSeconds(?CarbonInterface $now = null): int
+    {
+        $now ??= now();
+
+        return (int) $this->statusPeriods()
+            ->where('kind', PetStatusPeriodKind::PaymentLock->value)
+            ->get(['started_at', 'ended_at'])
+            ->sum(fn (PetStatusPeriod $p): int => max(0, (int) $p->started_at->diffInSeconds($p->ended_at ?? $now, false)));
     }
 
     // ──────────────────────────────────────────────────────────────

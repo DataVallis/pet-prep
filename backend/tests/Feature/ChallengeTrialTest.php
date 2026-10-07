@@ -838,3 +838,23 @@ describe('kill switch, admin unlock, no growth while locked (QA PR #67)', functi
         expect(app(ChallengeCreditService::class)->grantByAdmin($free))->toBeFalse();
     });
 });
+
+describe('payment-lock time does not count toward the 12 weeks (David 2026-10-07)', function () {
+    it('moves the end of the challenge by the time spent locked', function () {
+        [, , $pet] = ctFamily(); // born 2026-10-07 10:00 UTC
+        ctAt('2026-10-14 10:00:00');
+        ctTick(); // locked at the end of the trial
+        expect($pet->fresh()->isPaymentLocked())->toBeTrue();
+
+        ctAt('2026-10-24 10:00:00'); // 10 days locked, then a purchase
+        expect(app(ChallengeCreditService::class)->grantByAdmin($pet->fresh()))->toBeTrue();
+        $paid = $pet->fresh();
+        expect($paid->paymentLockedSeconds())->toBe(10 * 86400);
+
+        // 12 weeks after birth: not over — 10 days of the program are still to play.
+        ctAt('2026-12-30 10:00:00');
+        expect($paid->fresh()->hasReachedSimulationEnd())->toBeFalse();
+        ctAt('2027-01-09 10:00:00');
+        expect($paid->fresh()->hasReachedSimulationEnd())->toBeTrue();
+    });
+});
