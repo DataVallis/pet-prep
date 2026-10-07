@@ -1,10 +1,10 @@
 import { Platform, Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
-import { Footprints, RefreshCw, X } from 'lucide-react-native';
+import { Footprints, HeartPulse, RefreshCw, X } from 'lucide-react-native';
 
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { formatSteps } from '@/modules/steps/stepCounter';
-import type { StepSync } from '@/modules/steps/useStepSync';
+import type { StepHealth, StepSync } from '@/modules/steps/useStepSync';
 import { alpha, fonts, palette, tightTracking } from '@/theme';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
@@ -22,15 +22,83 @@ export interface WalkTrackerOverlayProps {
   onClose: () => void;
 }
 
+/** Platform wording of the health store (Apple Health / Health Connect). */
+function platformKey(health: StepHealth): 'ios' | 'android' {
+  return health.source === 'healthkit' ? 'ios' : 'android';
+}
+
+/**
+ * Apple Health / Health Connect card (M3-04 / M3-05): a short, kind pre-permission
+ * explanation before the system sheet, the connected state, and a way back after a
+ * refusal (Health Connect) or when Health Connect must be installed / updated first.
+ */
+function HealthCard({ health }: { health: StepHealth }) {
+  const key = platformKey(health);
+  if (health.status === 'connected') {
+    return (
+      <View style={styles.healthCard} testID="walk-health-connected">
+        <View style={styles.healthTitleRow}>
+          <HeartPulse color={palette.mint} size={16} />
+          <Text style={styles.healthConnected}>{WALK_STRINGS.health.connected[key]}</Text>
+        </View>
+        {key === 'ios' && <Text style={styles.healthBody}>{WALK_STRINGS.health.iosHelp}</Text>}
+      </View>
+    );
+  }
+  if (health.status === 'undetermined') {
+    return (
+      <View style={styles.healthCard} testID="walk-health-card">
+        <View style={styles.healthTitleRow}>
+          <HeartPulse color={palette.mint} size={18} />
+          <Text style={styles.healthTitle}>{WALK_STRINGS.health.title[key]}</Text>
+        </View>
+        <Text style={styles.healthBody}>{WALK_STRINGS.health.body}</Text>
+        <Pressable
+          onPress={() => {
+            void health.connect();
+          }}
+          accessibilityRole="button"
+          testID="walk-health-connect"
+          style={({ pressed }) => [styles.button, styles.primaryButton, pressed && styles.pressed]}
+        >
+          <Text style={styles.buttonText}>{WALK_STRINGS.health.connect}</Text>
+        </Pressable>
+      </View>
+    );
+  }
+  if (health.status === 'denied' || health.status === 'needs_update') {
+    const denied = health.status === 'denied';
+    return (
+      <View style={styles.healthCard} testID={denied ? 'walk-health-denied' : 'walk-health-update'}>
+        <Text style={styles.healthBody}>{denied ? WALK_STRINGS.health.denied : WALK_STRINGS.health.needsUpdate}</Text>
+        <Pressable
+          onPress={() => {
+            void (denied ? health.openSettings() : health.openStore());
+          }}
+          accessibilityRole="button"
+          testID={denied ? 'walk-health-settings' : 'walk-health-store'}
+          style={({ pressed }) => [styles.button, styles.secondaryButton, pressed && styles.pressed]}
+        >
+          <Text style={styles.buttonText}>{denied ? WALK_STRINGS.health.openSettings : WALK_STRINGS.health.openStore}</Text>
+        </Pressable>
+      </View>
+    );
+  }
+  return null;
+}
+
 /**
  * Daily walk (M1-14): today's steps and energy from the server (`state.steps`); the
- * phone's count is synced by `useStepSync` (foreground + every 5 min, or "Osveži").
+ * phone's count is synced by `useStepSync` (foreground + every 5 min, or "Osveži") from
+ * Apple Health / Health Connect when connected, else from the motion sensor.
  */
 export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrackerOverlayProps) {
   const { steps_today: steps, goal, energy_level: energy, my_steps_today: mine } = view.steps;
   const progressPct = goal > 0 ? Math.min(100, Math.round((steps / goal) * 100)) : 0;
   const shared = view.pet.caretakers_count > 1;
-  const { permission } = stepSync;
+  const { permission, health } = stepSync;
+  // The health card already offers a way to count steps → no "can't count" dead end.
+  const healthOffered = health.status === 'undetermined' || health.status === 'denied' || health.status === 'needs_update';
 
   return (
     <View style={styles.backdrop} testID="walk-overlay" accessibilityViewIsModal>
@@ -66,26 +134,8 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
         {progressPct >= 100 && <Text style={styles.goalReached}>{WALK_STRINGS.goalReached}</Text>}
 
         <View style={styles.actions}>
-          {permission === 'unavailable' ? (
-            <Text style={styles.note}>{WALK_STRINGS.unavailable}</Text>
-          ) : permission === 'denied' ? (
-            <Text style={styles.note}>{WALK_STRINGS.denied}</Text>
-          ) : permission === 'undetermined' ? (
-            <>
-              <Text style={styles.hint}>{WALK_STRINGS.allowHint}</Text>
-              <Pressable
-                onPress={() => {
-                  void stepSync.requestPermission();
-                }}
-                accessibilityRole="button"
-                testID="walk-allow"
-                style={({ pressed }) => [styles.button, styles.primaryButton, pressed && styles.pressed]}
-              >
-                <Footprints color={palette.white} size={18} />
-                <Text style={styles.buttonText}>{WALK_STRINGS.allow}</Text>
-              </Pressable>
-            </>
-          ) : permission === 'granted' ? (
+          <HealthCard health={health} />
+          {stepSync.canSync ? (
             <>
               <Pressable
                 onPress={() => {
@@ -107,7 +157,28 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
                   {stepSync.isSyncing ? WALK_STRINGS.syncing : WALK_STRINGS.refresh}
                 </Text>
               </Pressable>
-              {Platform.OS === 'android' && <Text style={styles.footnote}>{WALK_STRINGS.androidNote}</Text>}
+              {Platform.OS === 'android' && health.status !== 'connected' && (
+                <Text style={styles.footnote}>{WALK_STRINGS.androidNote}</Text>
+              )}
+            </>
+          ) : permission === 'unavailable' ? (
+            healthOffered ? null : <Text style={styles.note}>{WALK_STRINGS.unavailable}</Text>
+          ) : permission === 'denied' ? (
+            <Text style={styles.note}>{WALK_STRINGS.denied}</Text>
+          ) : permission === 'undetermined' ? (
+            <>
+              <Text style={styles.hint}>{WALK_STRINGS.allowHint}</Text>
+              <Pressable
+                onPress={() => {
+                  void stepSync.requestPermission();
+                }}
+                accessibilityRole="button"
+                testID="walk-allow"
+                style={({ pressed }) => [styles.button, styles.primaryButton, pressed && styles.pressed]}
+              >
+                <Footprints color={palette.white} size={18} />
+                <Text style={styles.buttonText}>{WALK_STRINGS.allow}</Text>
+              </Pressable>
             </>
           ) : null}
         </View>
@@ -210,6 +281,36 @@ const styles = StyleSheet.create({
   actions: {
     marginTop: 24,
     gap: 12,
+  },
+  healthCard: {
+    gap: 8,
+    padding: 16,
+    borderRadius: 16,
+    backgroundColor: alpha(palette.white, 0.06),
+    borderWidth: 1,
+    borderColor: alpha(palette.white, 0.12),
+  },
+  healthTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  healthTitle: {
+    flexShrink: 1,
+    fontSize: 14,
+    fontWeight: '700',
+    color: palette.white,
+  },
+  healthConnected: {
+    flexShrink: 1,
+    fontSize: 13,
+    fontWeight: '600',
+    color: palette.mint,
+  },
+  healthBody: {
+    fontSize: 12,
+    lineHeight: 17,
+    color: palette.n300,
   },
   note: {
     textAlign: 'center',

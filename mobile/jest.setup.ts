@@ -26,6 +26,25 @@ jest.mock('expo-notifications');
 // react-native-purchases (M3-07): manual mock in __mocks__/react-native-purchases.ts.
 jest.mock('react-native-purchases');
 
+// Health step stores (M3-04 / M3-05): manual mock in
+// src/modules/steps/health/__mocks__/healthAdapter.ts — no health store unless a test
+// injects one (`deps.health`), so the native libraries are never loaded in Jest.
+jest.mock('@/modules/steps/health/healthAdapter');
+
+// Background step sync (M3-06): native task scheduler.
+jest.mock('expo-task-manager', () => ({
+  defineTask: jest.fn(),
+  isTaskDefined: jest.fn(() => false),
+  isTaskRegisteredAsync: jest.fn(() => Promise.resolve(false)),
+}));
+jest.mock('expo-background-task', () => ({
+  BackgroundTaskStatus: { Restricted: 1, Available: 2 },
+  BackgroundTaskResult: { Success: 1, Failed: 2 },
+  getStatusAsync: jest.fn(() => Promise.resolve(2)),
+  registerTaskAsync: jest.fn(() => Promise.resolve()),
+  unregisterTaskAsync: jest.fn(() => Promise.resolve()),
+}));
+
 // Mock expo-sensors (Pedometer)
 jest.mock('expo-sensors', () => ({
   Pedometer: {

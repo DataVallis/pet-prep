@@ -9,8 +9,7 @@
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "NSHealthShareUsageDescription": "PetPrep reads your step count to track your pet's daily walking goals.",
-        "NSHealthUpdateUsageDescription": "PetPrep updates your step count to sync pet walking activity.",
+        "NSHealthShareUsageDescription": "PetPrep reads only today's step count from Apple Health so your virtual dog gets its daily walk. Nothing else is read and nothing is written.",
         "NSMotionUsageDescription": "PetPrep counts your steps so your virtual dog gets its daily walk.",
         "NSAppTransportSecurity": {
           "NSAllowsArbitraryLoads": true,
@@ -29,7 +28,8 @@
       },
       "predictiveBackGestureEnabled": false,
       "permissions": [
-        "android.permission.ACTIVITY_RECOGNITION"
+        "android.permission.ACTIVITY_RECOGNITION",
+        "android.permission.health.READ_STEPS"
       ],
       "usesCleartextTraffic": true,
       "package": "com.datavallis.petprep"
@@ -76,7 +76,24 @@
             ]
           }
         }
-      ]
+      ],
+      [
+        "@kingstinct/react-native-healthkit",
+        {
+          "NSHealthUpdateUsageDescription": false,
+          "background": false
+        }
+      ],
+      "react-native-health-connect",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ],
+      "expo-background-task"
     ],
     "extra": {
       "eas": {

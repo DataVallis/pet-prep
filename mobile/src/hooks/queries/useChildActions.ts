@@ -15,7 +15,7 @@
 
 import { useMutation, useQueryClient, type QueryClient } from '@tanstack/react-query';
 
-import { api, type ChildActionResponse, type SyncStepsResponse } from '@/api/client';
+import { api, type ChildActionResponse, type SyncStepsRequest, type SyncStepsResponse } from '@/api/client';
 import { classifyActionError } from '@/modules/childPet/actionMessages';
 import {
   optimisticView,
@@ -102,6 +102,8 @@ export interface StepSyncVariables {
   stepsToday: number;
   /** ISO 8601 with the device offset (`isoWithOffset`). */
   recordedAt: string;
+  /** Which source gave the (max-merged) total; validated by the server, not stored. Default `pedometer`. */
+  source?: SyncStepsRequest['source'];
 }
 
 /**
@@ -115,8 +117,8 @@ export function useSyncSteps() {
     mutationKey: ['child', 'pet', 'steps'],
     networkMode: 'always',
     onMutate: () => ({ userId: currentUserId() }),
-    mutationFn: ({ stepsToday, recordedAt }) =>
-      api.syncSteps({ steps_today: stepsToday, source: 'pedometer', recorded_at: recordedAt }),
+    mutationFn: ({ stepsToday, recordedAt, source = 'pedometer' }) =>
+      api.syncSteps({ steps_today: stepsToday, source, recorded_at: recordedAt }),
     onSuccess: (response, _variables, context) => {
       if (sameSession(context)) writeChildState(client, response.state);
     },

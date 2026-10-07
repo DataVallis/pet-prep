@@ -6,17 +6,30 @@ import { fireEvent, render, screen } from '@testing-library/react-native';
 import { StyleSheet, type ViewStyle } from 'react-native';
 
 import { normalizeChildState } from '@/modules/childPet/childPetView';
-import type { StepPermission, StepSync } from '@/modules/steps/useStepSync';
+import type { HealthStatus, StepHealth, StepPermission, StepSync } from '@/modules/steps/useStepSync';
 import WalkTrackerOverlay, { WALK_STRINGS } from '@/modules/walk/WalkTrackerOverlay';
 import { makeLiveChildState } from '@/test-utils/fixtures';
 
+function makeHealth(status: HealthStatus = 'unavailable', source: StepHealth['source'] = 'healthkit'): StepHealth {
+  return {
+    status,
+    source,
+    connect: jest.fn(() => Promise.resolve()),
+    openSettings: jest.fn(() => Promise.resolve()),
+    openStore: jest.fn(() => Promise.resolve()),
+  };
+}
+
 function makeStepSync(permission: StepPermission, overrides: Partial<StepSync> = {}): StepSync {
+  const health = overrides.health ?? makeHealth();
   return {
     permission,
     requestPermission: jest.fn(() => Promise.resolve()),
     syncNow: jest.fn(() => Promise.resolve()),
     isSyncing: false,
+    canSync: permission === 'granted' || health.status === 'connected',
     ...overrides,
+    health,
   };
 }
 
@@ -107,5 +120,69 @@ describe('WalkTrackerOverlay', () => {
     const { onClose } = renderOverlay('granted');
     fireEvent.press(screen.getByLabelText(WALK_STRINGS.close));
     expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  describe('Apple Health / Health Connect card (M3-04 / M3-05)', () => {
+    it('undetermined: a kind explanation first, the system sheet only after "Poveži"', () => {
+      const health = makeHealth('undetermined');
+      renderOverlay('undetermined', { sync: { health } });
+      expect(screen.getByText(WALK_STRINGS.health.title.ios)).toBeTruthy();
+      expect(screen.getByText(WALK_STRINGS.health.body)).toBeTruthy();
+      expect(health.connect).not.toHaveBeenCalled();
+      fireEvent.press(screen.getByTestId('walk-health-connect'));
+      expect(health.connect).toHaveBeenCalledTimes(1);
+    });
+
+    it('says what leaves the phone: only today’s step count', () => {
+      renderOverlay('undetermined', { sync: { health: makeHealth('undetermined', 'health_connect') } });
+      expect(screen.getByText(/samo današnje število korakov/)).toBeTruthy();
+      expect(screen.getByText('Štej korake s Health Connect')).toBeTruthy();
+    });
+
+    it('connected (sensor denied): Health is the source → "Osveži", no dead-end text', () => {
+      const { stepSync } = renderOverlay('denied', { sync: { health: makeHealth('connected') } });
+      expect(screen.getByText(WALK_STRINGS.health.connected.ios)).toBeTruthy();
+      expect(screen.getByText(WALK_STRINGS.health.iosHelp)).toBeTruthy();
+      expect(screen.queryByText(WALK_STRINGS.denied)).toBeNull();
+      fireEvent.press(screen.getByTestId('walk-refresh'));
+      expect(stepSync.syncNow).toHaveBeenCalledTimes(1);
+    });
+
+    it('Android connected: no "only while open" footnote', () => {
+      const { Platform } = jest.requireActual<typeof import('react-native')>('react-native');
+      const original = Platform.OS;
+      Object.defineProperty(Platform, 'OS', { value: 'android', configurable: true });
+      try {
+        renderOverlay('granted', { sync: { health: makeHealth('connected', 'health_connect') } });
+        expect(screen.getByText(WALK_STRINGS.health.connected.android)).toBeTruthy();
+        expect(screen.queryByText(WALK_STRINGS.androidNote)).toBeNull();
+      } finally {
+        Object.defineProperty(Platform, 'OS', { value: original, configurable: true });
+      }
+    });
+
+    it('denied (Android): explains and opens Health Connect to retry', () => {
+      const health = makeHealth('denied', 'health_connect');
+      renderOverlay('granted', { sync: { health } });
+      expect(screen.getByText(WALK_STRINGS.health.denied)).toBeTruthy();
+      fireEvent.press(screen.getByTestId('walk-health-settings'));
+      expect(health.openSettings).toHaveBeenCalledTimes(1);
+      expect(screen.getByTestId('walk-refresh')).toBeTruthy(); // the sensor path still works
+    });
+
+    it('Health Connect missing / outdated: offers Google Play instead of a dead end', () => {
+      const health = makeHealth('needs_update', 'health_connect');
+      renderOverlay('unavailable', { sync: { health } });
+      expect(screen.getByText(WALK_STRINGS.health.needsUpdate)).toBeTruthy();
+      expect(screen.queryByText(WALK_STRINGS.unavailable)).toBeNull();
+      fireEvent.press(screen.getByTestId('walk-health-store'));
+      expect(health.openStore).toHaveBeenCalledTimes(1);
+    });
+
+    it('unavailable: no card at all', () => {
+      renderOverlay('granted');
+      expect(screen.queryByTestId('walk-health-card')).toBeNull();
+      expect(screen.queryByTestId('walk-health-connected')).toBeNull();
+    });
   });
 });
