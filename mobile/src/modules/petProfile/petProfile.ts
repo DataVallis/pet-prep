@@ -30,7 +30,7 @@ export const PET_PROFILE_STRINGS = strings('pet', 'profile', {
 });
 
 export interface PetProfileInfo {
-  /** The dog's age now in whole months (arrival age + one month per real week). */
+  /** The dog's age now in whole months (arrival age + one month per program week; time locked waiting for payment does not count). */
   ageMonths: number;
   /** null for a breed without life-stage data (the age is still shown). */
   stage: LifeStage | null;

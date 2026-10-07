@@ -94,7 +94,7 @@ class ChildPetStateResource extends JsonResource
                 // child joined a shared pet and hasn't signed yet — M2-01).
                 'awaiting_contract' => $lockReason === PetLockReason::ContractRequired,
                 'caretakers_count' => $pet->caretakerRows()->count(),
-                // Months (= real weeks) since birth: the 12-week challenge clock.
+                // Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b).
                 'virtual_age_months' => $pet->virtualAgeInMonths(),
                 // M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
                 // null for a legacy pet (pre-M5 rules, `profile.legacy`).
