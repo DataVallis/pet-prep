@@ -45,80 +45,37 @@ import { classifyPinError, formatCountdown, formatPin, pinRequestKey, secondsUnt
 import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { refreshSessionPet } from '@/modules/session/logout';
 import { fonts, palette, tightTracking } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-/** All user-visible strings of this screen (extract to i18n with M1-18). */
-export const ADD_CHILD_STRINGS = {
-  title: 'Dodaj otroka',
-  titleRelogin: 'Nova koda za prijavo',
-  back: 'Nazaj',
-  // Step 1 — profile
-  nicknameLabel: 'Vzdevek otroka',
-  nicknamePlaceholder: 'npr. Maja',
-  birthYearLabel: 'Letnica rojstva (neobvezno)',
-  birthYearPlaceholder: 'npr. 2016',
-  privacy: 'Ne potrebujemo e-pošte ali priimka.',
-  privacyDetail: 'Otrok se bo prijavil samo s kodo, ki jo ustvarite tukaj.',
-  next: 'Naprej',
-  nicknameInvalid: `Vpišite vzdevek (do ${NICKNAME_MAX_LENGTH} znakov, brez @).`,
-  birthYearInvalid: (min: number, max: number) => `Letnica mora biti med ${min} in ${max}.`,
-  createErrors: {
-    too_many_children: 'V družini je lahko največ 10 otrok.',
-    invalid_name: 'Vzdevek lahko vsebuje le črke, številke, presledke, vezaj, opuščaj in piko.',
-    offline: 'Ni povezave s strežnikom. Preverite internet in poskusite znova.',
-    server: 'Otroka trenutno ni bilo mogoče dodati. Poskusite znova.',
-  } satisfies Record<CreateChildErrorKind, string>,
-  // Step 2 — pet
-  petTitle: (name: string) => `Za katerega psa bo skrbel(a) ${name}?`,
-  newPet: 'Nov pes',
-  newPetHint: 'Otrok dobi svojega kužka. Rodi se, ko otrok podpiše Pogodbo o odgovornosti.',
-  joinPet: (label: string) => `Pridruži se psu: ${label}`,
-  joinPetHint: (names: string) => (names ? `Zanj že skrbi: ${names}. Skupni pes, vsak otrok ima svojo oceno.` : 'Skupni pes, vsak otrok ima svojo oceno.'),
-  petsLoading: 'Nalagam pse v družini …',
-  // Step 3 — PIN
-  pinLabel: 'Koda za prijavo',
-  pinFor: (name: string) => `Za: ${name}`,
-  instructions: 'Otrok naj na svojem telefonu odpre PetPrep, izbere »Sem otrok« in vtipka to kodo.',
-  steps: {
-    new_pet: ['Na otrokovem telefonu odprite PetPrep.', 'Otrok izbere »Sem otrok« in vtipka 6-mestno kodo.', 'Otrok podpiše Pogodbo o odgovornosti in kuža se rodi.'],
-    join_pet: ['Na otrokovem telefonu odprite PetPrep.', 'Otrok izbere »Sem otrok« in vtipka 6-mestno kodo.', 'Otrok podpiše svojo Pogodbo o odgovornosti, nato lahko skrbi za psa.'],
-    relogin: ['Na novem telefonu ali tablici odprite PetPrep.', 'Otrok izbere »Sem otrok« in vtipka 6-mestno kodo.', 'Kuža in napredek ostaneta ista.'],
-  } satisfies Record<PinLoginMode, string[]>,
-  reloginNote: 'Otrok je lahko prijavljen na največ 3 napravah — ob četrti se najstarejša odjavi.',
-  validFor: (time: string) => `Koda velja še ${time}`,
-  expired: 'Koda je potekla. Ustvarite novo.',
-  newCode: 'Nova koda',
-  generating: 'Ustvarjam kodo …',
-  waiting: 'Čakam, da otrok vnese kodo …',
-  oneTime: 'Koda deluje samo enkrat. Nova koda razveljavi prejšnjo.',
-  pairedTitle: 'Otrok je povezan!',
+const STEP_LINES = ['open', 'code', 'finish'] as const;
+
+/** All user-visible strings of this screen (`parent:addChild`, M1-18). */
+export const ADD_CHILD_STRINGS = strings('parent', 'addChild', {
+  get nicknameInvalid(): string {
+    return t('parent:addChild.nicknameInvalid', { max: NICKNAME_MAX_LENGTH });
+  },
+  birthYearInvalid: (min: number, max: number) => t('parent:addChild.birthYearInvalid', { min, max }),
+  petTitle: (name: string) => t('parent:addChild.petTitle', { name }),
+  joinPet: (label: string) => t('parent:addChild.joinPet', { label }),
+  joinPetHint: (names: string) =>
+    names ? t('parent:addChild.joinPetHintNames', { names }) : t('parent:addChild.joinPetHint'),
+  pinFor: (name: string) => t('parent:addChild.pinFor', { name }),
+  /** The three numbered instructions per PIN mode. */
+  get steps(): Record<PinLoginMode, string[]> {
+    const lines = (mode: PinLoginMode) => STEP_LINES.map((line) => t(`parent:addChild.stepLines.${mode}.${line}`));
+    return { new_pet: lines('new_pet'), join_pet: lines('join_pet'), relogin: lines('relogin') };
+  },
+  validFor: (time: string) => t('parent:addChild.validFor', { time }),
   pairedBody: {
-    new_pet: (name: string) => `${name} naj zdaj na svojem telefonu podpiše Pogodbo o odgovornosti — takrat se kuža rodi.`,
-    join_pet: (name: string) => `${name} naj zdaj podpiše svojo Pogodbo o odgovornosti, nato lahko skrbi za psa.`,
-    relogin: (name: string) => `${name} je prijavljen(a) na novi napravi. Kuža je ostal isti.`,
+    new_pet: (name: string) => t('parent:addChild.pairedBody.new_pet', { name }),
+    join_pet: (name: string) => t('parent:addChild.pairedBody.join_pet', { name }),
+    relogin: (name: string) => t('parent:addChild.pairedBody.relogin', { name }),
   } satisfies Record<PinLoginMode, (name: string) => string>,
-  toDashboard: 'Na pregled',
   errors: {
-    rate_limited: (seconds: number) => `Preveč novih kod v kratkem času. Poskusite znova čez ${seconds} s.`,
-    forbidden: 'Kodo lahko ustvari samo starševski račun.',
-    unauthorized: 'Seja je potekla. Prijavite se znova.',
-    child_not_found: 'Tega otroka ni več v vaši družini.',
-    pet_not_joinable: 'Temu psu se ni več mogoče pridružiti. Izberite drugega ali novega psa.',
-    already_paired: 'Otrok že skrbi za psa — lahko dobi samo kodo za prijavo na novi napravi.',
-    breed_locked: 'Ta pasma je del plačljivega izziva in se odklene samo z nakupom. Izberite drugo pasmo.',
-    invalid_profile: 'Izbire kužka ni bilo mogoče shraniti. Izberite znova.',
-    offline: 'Ni povezave s strežnikom. Preverite internet in poskusite znova.',
-    server: 'Kode trenutno ni bilo mogoče ustvariti. Poskusite znova.',
-  } satisfies Record<PinErrorKind, string | ((seconds: number) => string)>,
-  changeDog: 'Izberi drugega kužka',
-  editDog: 'Spremeni kužka',
-  editDogHint: 'Nova izbira ustvari novo kodo; ta koda takrat preneha veljati.',
-  /** The new choice got no PIN yet (e.g. 429) — the shown one is still the server's valid PIN for the last choice. */
-  previousChoicePin: 'Ta koda še velja za prejšnjo izbiro kužka. Za novo izbiro ustvarite novo kodo.',
-  /** 422 breed_locked for the free mutt is a server misconfiguration — explain; "Nova koda" can retry, no loop to the picker. */
-  muttLocked: 'Mešanček je brezplačen, a strežnik ga je zavrnil. To je napaka pri nas — pišite nam na podporo.',
-  rateLimitedNoWait: 'Preveč novih kod v kratkem času. Poskusite znova.',
-  retry: 'Poskusi znova',
-} as const;
+    rate_limited: (seconds: number) => t('parent:addChild.errors.rate_limited', { seconds }),
+  },
+});
 
 const S = ADD_CHILD_STRINGS;
 const PAIRING_POLL_MS = 5_000;

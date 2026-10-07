@@ -12,18 +12,11 @@ import { Bell, BellOff } from 'lucide-react-native';
 
 import { Card, PARENT_COLORS as C, SectionTitle } from '@/components/parent/ParentUi';
 import { enablePushNotifications, getPushPermissionStatus, type PushPermissionStatus } from '@/modules/push/pushPrompt';
+import { strings } from '@/i18n/strings';
 
-export const NOTIFICATIONS_STRINGS = {
-  title: 'Obvestila',
-  status: {
-    on: 'Vklopljena — ta telefon prejme alarm, ko otrok več kot uro ne poskrbi za kužo, in novico o bolezni ali zavetišču.',
-    off: 'Izklopljena — o zanemarjenem kužu boste izvedeli šele, ko odprete aplikacijo.',
-    blocked: 'Izklopljena v nastavitvah telefona.',
-  },
-  quietHours: 'Med tihimi urami ne pošiljamo ničesar. Obvestila ne vsebujejo imen otrok.',
-  enable: 'Vklopi obvestila',
-  openSettings: 'Odpri nastavitve',
-} as const;
+
+/** All user-visible strings (`parent:notifications`, M1-18). */
+export const NOTIFICATIONS_STRINGS = strings('parent', 'notifications');
 
 const S = NOTIFICATIONS_STRINGS;
 

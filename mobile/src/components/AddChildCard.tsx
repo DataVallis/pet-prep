@@ -8,13 +8,11 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { ChevronRight, UserPlus } from 'lucide-react-native';
 import { fonts, palette, tightTracking } from '@/theme';
+import { strings } from '@/i18n/strings';
 
-/** User-visible strings (extract to i18n with M1-18). */
-export const ADD_CHILD_CARD_STRINGS = {
-  title: 'Dodaj otroka',
-  body: 'Vpišite vzdevek otroka in dobite 6-mestno kodo. Otrok jo vtipka na svojem telefonu — brez e-pošte in gesla.',
-  cta: 'Začni',
-} as const;
+
+/** User-visible strings (`parent:addChildCard`, M1-18). */
+export const ADD_CHILD_CARD_STRINGS = strings('parent', 'addChildCard');
 
 interface AddChildCardProps {
   onPress: () => void;

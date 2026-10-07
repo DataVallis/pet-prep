@@ -13,23 +13,11 @@ import { useQuietHours, useUpdateQuietHours } from '@/hooks/queries/useParentQue
 import { Card, ErrorBanner, PARENT_COLORS as C, SectionTitle } from '@/components/parent/ParentUi';
 import type { QuietHours } from '@/types';
 import { palette } from '@/theme';
+import { strings } from '@/i18n/strings';
 
-export const QUIET_HOURS_STRINGS = {
-  title: 'Tihe ure',
-  hint: 'V tihih urah kuža skoraj ne lakoti, ni neredov in ni obvestil. Ure veljajo po času družine.',
-  active: 'Vklopljeno',
-  school: 'Šola',
-  bedtime: 'Spanje',
-  start: 'Začetek',
-  end: 'Konec',
-  save: 'Shrani',
-  saved: 'Shranjeno.',
-  invalidTime: 'Čas vpišite kot UU:MM (npr. 08:00).',
-  loadError: 'Tihih ur ni bilo mogoče naložiti.',
-  retry: 'Poskusi znova',
-  saveError: 'Shranjevanje ni uspelo. Preverite čase in poskusite znova.',
-  offline: 'Ni povezave s strežnikom. Poskusite znova.',
-} as const;
+
+/** All user-visible strings (`parent:quietHours`, M1-18). */
+export const QUIET_HOURS_STRINGS = strings('parent', 'quietHours');
 
 const S = QUIET_HOURS_STRINGS;
 

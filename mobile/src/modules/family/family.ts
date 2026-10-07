@@ -22,6 +22,8 @@ import {
 } from '@/modules/family/scoring';
 import { readPetBehaviour, type PetBehaviour } from '@/modules/behaviour/behaviour';
 import { readPetTraining, type PetTrainingSummary } from '@/modules/training/training';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
 /** One pet of the family as the generated schema types it (raw API). */
 export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'][number];
@@ -200,24 +202,17 @@ export function petStatus(pet: FamilyPet): PetStatus | null {
   return null;
 }
 
-export const PET_STATUS_LABELS: Record<PetStatus, string> = {
-  game_over: 'Igra končana — kuža je bil odvzet',
-  awaiting_contract: 'Kuža čaka na podpis pogodbe',
-  inactive: 'Kuža ni aktiven',
-  hard_stopped: 'Igra je ustavljena (hard stop)',
-  ill: 'Kuža je pri veterinarju',
-};
+/** "Kuža je pri veterinarju" … — a live view (i18n `family:petStatus`): read it when rendering. */
+export const PET_STATUS_LABELS: Readonly<Record<PetStatus, string>> = strings('family', 'petStatus');
 
 /** Pets a new child may join: alive and active (the backend refuses others with `pet_not_joinable`). */
 export function joinablePets(family: FamilyOverview | null): FamilyPet[] {
   return family ? family.pets.filter((p) => p.is_active && !p.is_game_over) : [];
 }
 
-const BREED_LABELS: Record<string, string> = {
-  mutt: 'Mešanček',
-  border_collie: 'Border collie',
-};
+const BREED_LABELS = strings('family', 'breeds') as Readonly<Record<string, string | undefined>>;
 
+/** "Mešanček" / "Mixed breed"; an unknown breed code is shown as is. */
 export function breedLabel(breed: string): string {
   return BREED_LABELS[breed] ?? breed;
 }
@@ -230,14 +225,9 @@ export function caretakerNames(pet: Pick<FamilyPet, 'caretakers'>, family: Famil
     .join(', ');
 }
 
-/** Slovenian count of devices: 1 naprava, 2 napravi, 3–4 naprave, 0 / 5+ naprav. */
+/** Count of devices: "1 naprava", "2 napravi", "3 naprave", "5 naprav" / "1 device", "2 devices". */
 export function devicesLabel(count: number): string {
-  const n = Math.max(0, Math.floor(count));
-  const mod100 = n % 100;
-  if (mod100 === 1) return `${n} naprava`;
-  if (mod100 === 2) return `${n} napravi`;
-  if (mod100 === 3 || mod100 === 4) return `${n} naprave`;
-  return `${n} naprav`;
+  return t('family:devices', { count: Math.max(0, Math.floor(count)) });
 }
 
 /** What the parent knew about the child when the PIN was issued. */

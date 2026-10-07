@@ -24,14 +24,11 @@ import QuietHoursCard from '@/components/parent/QuietHoursCard';
 import { NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import BuildLabel from '@/components/BuildLabel';
 import type { FamilyChild, FamilyOverview } from '@/modules/family/family';
+import { strings } from '@/i18n/strings';
 
-export const CONTROLS_STRINGS = {
-  title: 'Nadzor in družina',
-  back: 'Nazaj na pregled',
-  pets: 'Psi',
-  closeNotice: 'Zapri',
-  about: 'O aplikaciji',
-} as const;
+
+/** All user-visible strings of this screen (`parent:controls`, M1-18). */
+export const CONTROLS_STRINGS = strings('parent', 'controls');
 
 interface ControlsScreenProps {
   /** Navigate back to the dashboard. */

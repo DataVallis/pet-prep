@@ -30,30 +30,18 @@ import {
   type FamilyPet,
 } from '@/modules/family/family';
 import { palette } from '@/theme';
+import { t } from '@/i18n';
+import { strings } from '@/i18n/strings';
 
-export const PET_CONTROLS_STRINGS = {
-  caretakers: (names: string) => `Skrbi: ${names}`,
-  noCaretakers: 'Še nihče ne skrbi zanj',
-  playing: 'Igra teče',
-  stop: 'Ustavi igro (hard stop)',
-  resume: 'Nadaljuj igro',
-  a11y: (action: string, pet: string, names: string) => `${action}: ${pet}${names ? ` (${names})` : ''}`,
+
+/** All user-visible strings (`parent:petControls`, M1-18). */
+export const PET_CONTROLS_STRINGS = strings('parent', 'petControls', {
+  caretakers: (names: string) => t('parent:petControls.caretakers', { names }),
+  a11y: (action: string, pet: string, names: string) =>
+    names ? t('parent:petControls.a11yNames', { action, pet, names }) : t('parent:petControls.a11y', { action, pet }),
   confirmStop: (names: string) =>
-    `Ustaviti igro${names ? ` za ${names}` : ''}? Kuža se zamrzne in otrok ne more ničesar narediti, dokler igre ne nadaljujete.`,
-  confirmResume: 'Nadaljevati igro? Kuža se odmrzne in otrok lahko spet skrbi zanj.',
-  confirm: 'Potrdi',
-  cancel: 'Prekliči',
-  stopped: 'Igra je ustavljena.',
-  resumed: 'Igra spet teče.',
-  alreadyStopped: 'Igra je že ustavljena.',
-  alreadyRunning: 'Igra že teče.',
-  checking: 'Preverjam stanje …',
-  errors: {
-    offline: 'Ni povezave s strežnikom. Stanje smo osvežili — poskusite znova.',
-    not_found: 'Tega psa ni več med aktivnimi psi družine.',
-    server: 'Ukaz ni uspel. Poskusite znova.',
-  },
-} as const;
+    names ? t('parent:petControls.confirmStopFor', { names }) : t('parent:petControls.confirmStop'),
+});
 
 const S = PET_CONTROLS_STRINGS;
 
