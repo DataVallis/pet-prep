@@ -1,1 +1,22 @@
-{}
+{
+  "push": {
+    "channels": {
+      "default": "Opomniki za kužo",
+      "alarm": "Nujna opozorila"
+    },
+    "prePrompt": {
+      "child": {
+        "title": "Naj te kuža pokliče?",
+        "message": "Ko bo tvoj kuža lačen, žejen, umazan ali bo moral na sprehod, ti pošljemo obvestilo. Med šolo in spanjem (tihe ure) ne pošiljamo ničesar.",
+        "allow": "Dovoli obvestila",
+        "later": "Ne zdaj"
+      },
+      "parent": {
+        "title": "Obvestila o skrbi za kužo",
+        "message": "Obvestimo vas, ko otrok več kot uro ne poskrbi za kužo, ko kuža zboli ali odide v zavetišče. Med tihimi urami ne pošiljamo ničesar. Obvestila ne vsebujejo imen otrok.",
+        "allow": "Dovoli obvestila",
+        "later": "Ne zdaj"
+      }
+    }
+  }
+}

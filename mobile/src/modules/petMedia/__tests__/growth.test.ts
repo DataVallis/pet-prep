@@ -14,6 +14,7 @@ import {
   type GrowthEntry,
 } from '@/modules/petMedia/growth';
 import { makeGrowth, makeGrowthEntry } from '@/test-utils/fixtures';
+import { i18n } from '@/i18n';
 
 const entry = (overrides: Partial<GrowthEntry> = {}): GrowthEntry => ({
   generation: 1,
@@ -105,6 +106,20 @@ describe('captions', () => {
       isCurrent: false,
     });
     expect(items[1]).toMatchObject({ label: GROWTH_STRINGS.photo, detail: 'Zdaj', stageLabel: null, ageLabel: null, dateLabel: null, key: 'https://x/2?v=2' });
+  });
+
+  it('captions in English (M1-18)', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      const items = growthViewerItems(
+        { petId: 7, entries: [entry(), entry({ generation: 2, stage: null, ageMonths: null, takenAt: null, isCurrent: true, url: 'https://x/2?v=2' })], expiresAt: null },
+        'Europe/Ljubljana',
+      );
+      expect(items[0]).toMatchObject({ label: 'Puppy · 2 months', detail: '4 Oct 2026' });
+      expect(items[1]).toMatchObject({ label: 'Photo', detail: 'Now' });
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
   });
 });
 

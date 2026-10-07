@@ -26,6 +26,7 @@
  */
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { BackHandler, Image, PanResponder, Pressable, ScrollView, StyleSheet, View, type GestureResponderEvent, type PanResponderGestureState } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
@@ -297,9 +298,15 @@ export default function PetAlbum({
   testID = 'pet-album',
 }: PetAlbumProps) {
   const insets = useContext(SafeAreaInsetsContext) ?? ZERO_INSETS;
-  const items = useMemo(() => buildAlbumItems(media), [media]);
+  // Item labels are translated when built → rebuild on a language change (M1-18).
+  const { i18n } = useTranslation();
+  const language = i18n.language;
+  const items = useMemo(() => buildAlbumItems(media), [media, language]);
   const playable = useMemo(() => items.filter(isPlayable), [items]);
-  const growthItems = useMemo(() => (hasGrowthSection(growth) ? growthViewerItems(growth, timeZone) : []), [growth, timeZone]);
+  const growthItems = useMemo(
+    () => (hasGrowthSection(growth) ? growthViewerItems(growth, timeZone) : []),
+    [growth, timeZone, language],
+  );
   const [selection, setSelection] = useState<{ list: ViewerList; id: string } | null>(null);
   const [muted, setMuted] = useState(true);
   const reportExpired = useExpiryReporter(onMediaExpired);

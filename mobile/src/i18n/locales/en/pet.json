@@ -1,1 +1,101 @@
-{}
+{
+  "profile": {
+    "stages": { "puppy": "Puppy", "young": "Young dog", "adult": "Adult", "senior": "Senior" },
+    "stagesLower": { "puppy": "a puppy", "young": "a young dog", "adult": "an adult dog", "senior": "a senior dog" },
+    "origins": { "bought": "Bought from a breeder", "adopted": "Adopted from a shelter" },
+    "nextStage": "Becomes {{stage}} on {{date}}",
+    "nextStageChild": "Grows into {{stage}} on {{date}}",
+    "mealsToday_one": "{{count}} meal today",
+    "mealsToday_other": "{{count}} meals today",
+    "mealsTodayWithParent_one": "{{count}} meal today — a parent gives {{byParent}} during quiet hours",
+    "mealsTodayWithParent_other": "{{count}} meals today — a parent gives {{byParent}} during quiet hours",
+    "months_one": "{{count}} month",
+    "months_other": "{{count}} months",
+    "years_one": "{{count}} year",
+    "years_other": "{{count}} years",
+    "yearsAndMonths": "{{years}} and {{months}}"
+  },
+  "date": {
+    "format": "{{day}} {{month}} {{year}}",
+    "months": {
+      "1": "Jan", "2": "Feb", "3": "Mar", "4": "Apr", "5": "May", "6": "Jun",
+      "7": "Jul", "8": "Aug", "9": "Sep", "10": "Oct", "11": "Nov", "12": "Dec"
+    }
+  },
+  "picker": {
+    "title": "Choose a dog for {{name}}",
+    "intro": "Your choice shapes what caring for the dog will be like — just like with a real dog.",
+    "breedTitle": "Breed",
+    "breeds": { "mutt": "Mixed breed", "border_collie": "Border Collie" },
+    "breedHints": {
+      "mutt": "Free with every combination.",
+      "border_collie": "Part of the paid challenge."
+    },
+    "breedLockedNote": "Paid breeds can only be unlocked with a purchase. To start, choose a mixed breed — it's free with every origin and age.",
+    "lockedA11y": "{{breed}}, locked — part of the paid challenge",
+    "originTitle": "Where it comes from",
+    "origins": { "bought": "Bought (breeder)", "adopted": "Adopted (shelter)" },
+    "originHints": {
+      "bought": "From a breeder. How origin affects behaviour is coming soon.",
+      "adopted": "From a shelter. How origin affects behaviour (e.g. shyness in the first weeks) is coming soon."
+    },
+    "ageTitle": "Age on arrival",
+    "ages": { "puppy": "Puppy", "young": "Young dog", "adult": "Adult", "senior": "Senior" },
+    "ageHints": {
+      "mutt": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000. Accidents in the house are coming soon.",
+        "young": "2 meals a day; walks of 6,000 steps a day (like an adult dog).",
+        "adult": "2 meals a day; walks of 6,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 4,500 steps a day."
+      },
+      "border_collie": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months. Accidents in the house are coming soon.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      }
+    },
+    "quietHoursNote": "A meal that falls entirely within quiet hours (school, sleep) is given by a parent.",
+    "missing": "Choose an origin and an age.",
+    "confirm": "Create code",
+    "back": "Back"
+  },
+  "media": {
+    "pending": "Your dog is getting ready…",
+    "breeds": { "mutt": "Mixed breed", "border_collie": "Border Collie" },
+    "a11y": "Your dog ({{breed}})"
+  },
+  "album": {
+    "title": "My dog",
+    "parentTitle": "Dog's photos and videos",
+    "videoHint": "video",
+    "photoHint": "photo",
+    "retry": "Try again",
+    "open": "Open album",
+    "close": "Close album",
+    "back": "Back to album",
+    "photo": "Photo",
+    "missing": "No video yet",
+    "empty": "Your dog is still getting ready. Its photos and videos will be here soon.",
+    "unavailable": "This video can't be played right now.",
+    "previous": "Previous",
+    "next": "Next",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "position": "{{index}} / {{total}}",
+    "states": {
+      "idle": "Resting",
+      "sleeping": "Sleeping",
+      "low_energy": "Tired",
+      "hungry": "Hungry",
+      "sick": "Sick",
+      "playing": "Playing"
+    }
+  },
+  "growth": {
+    "section": "How your dog grew",
+    "current": "Now",
+    "photo": "Photo",
+    "hint": "Open photo"
+  }
+}

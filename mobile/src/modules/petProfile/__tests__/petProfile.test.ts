@@ -11,6 +11,7 @@ import {
   stageLine,
 } from '@/modules/petProfile/petProfile';
 import { completeChoice, INITIAL_PICKER_CHOICE, isBreedLocked } from '@/modules/petProfile/picker';
+import { i18n, t } from '@/i18n';
 import { makeLegacyPetProfile, makePetProfile } from '@/test-utils/fixtures';
 
 describe('readPetProfile', () => {
@@ -113,5 +114,32 @@ describe('picker choice', () => {
       origin: 'bought',
       age_stage: 'young',
     });
+  });
+});
+
+describe('profile texts per language (M1-18)', () => {
+  afterEach(async () => {
+    await i18n.changeLanguage('sl');
+  });
+
+  it('Slovenian plurals follow CLDR (101 one, 102 two, 103 few)', () => {
+    expect(t('pet:profile.months', { count: 101 })).toBe('101 mesec');
+    expect(t('pet:profile.months', { count: 102 })).toBe('102 meseca');
+    expect(t('pet:profile.months', { count: 103 })).toBe('103 mesece');
+    expect(t('pet:profile.months', { count: 105 })).toBe('105 mesecev');
+  });
+
+  it('reads the profile in English', async () => {
+    await i18n.changeLanguage('en');
+    const info = readPetProfile(makePetProfile({ age_months: 3 }))!;
+    expect(stageLine(info)).toBe('Puppy · 3 months');
+    expect(originLine(info)).toBe('Bought from a breeder');
+    expect(nextStageLine(info)).toBe('Becomes a young dog on 24 Nov 2026');
+    expect(nextStageLine(info, 'child')).toBe('Grows into a young dog on 24 Nov 2026');
+    expect(mealsLine(info)).toBe('4 meals today — a parent gives 1 during quiet hours');
+    expect(formatDogAge(1)).toBe('1 month');
+    expect(formatDogAge(26)).toBe('2 years and 2 months');
+    expect(formatDogAge(36)).toBe('3 years');
+    expect(formatProfileDate('2026-01-05')).toBe('5 Jan 2026');
   });
 });

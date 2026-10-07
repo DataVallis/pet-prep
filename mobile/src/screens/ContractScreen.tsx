@@ -22,44 +22,18 @@ import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { logout } from '@/modules/session/logout';
 import { lockStateFromPet, useAppStore } from '@/store/appStore';
 import { alpha, palette, radius } from '@/theme';
+import { strings } from '@/i18n/strings';
 
-const CONTRACT_TEXT = `Zavezujem se, da bom vsak dan odgovorno skrbel za svojega virtualnega ljubljenčka:
+/** User-visible strings of the contract step (`contract:screen`, M1-18). */
+export const CONTRACT_STRINGS = strings('contract', 'screen');
 
-• Hranil ga bom, ko bo lačen.
-• Vsak dan mu bom zagotovil svežo vodo.
-• Vodil ga bom na sprehode za gibanje in zdravje.
-• Redno bom čistil za njim in skrbel za higieno.
-• Odzval se bom na opozorila, preden pride do bolezni ali virtualnega zavetišča.
+const LOCKED_REASONS = ['hard_stopped', 'inactive', 'game_over', 'ill'] as const;
 
-Ali sprejemaš to odgovornost?`;
-
-/** User-visible strings of the contract step (i18n with M1-18). */
-export const CONTRACT_STRINGS = {
-  title: 'Pogodba o odgovornosti',
-  padHint: 'Podpiši se s prstom v okvir spodaj',
-  padLabel: 'Polje za podpis',
-  clear: 'Pobriši',
-  accept: 'Sprejmem odgovornost',
-  retry: 'Poskusi znova',
-  logout: 'Odjava',
-  invalid: 'Podpis ni veljaven, poskusi znova',
-  network: 'Povezava s strežnikom ni uspela. Preveri internet in poskusi znova.',
-  failed: 'Podpis ni uspel. Poskusi znova kasneje.',
-  locked: {
-    hard_stopped: 'Starš je igro začasno ustavil. Pogodbo lahko podpišeš, ko jo spet vklopi.',
-    inactive: 'Ljubljenček trenutno ni aktiven. Prosi starša, da preveri nastavitve.',
-    game_over: 'Igra je končana, pogodbe ni več mogoče podpisati.',
-    ill: 'Ljubljenček je pri veterinarju. Poskusi znova kasneje.',
-    default: 'Podpis trenutno ni mogoč. Poskusi znova kasneje.',
-  },
-} as const;
-
-type LockedReasonKey = keyof typeof CONTRACT_STRINGS.locked;
+type LockedReasonKey = (typeof LOCKED_REASONS)[number];
 
 function lockedMessage(reason: string | null): string {
-  const key: LockedReasonKey =
-    reason !== null && reason in CONTRACT_STRINGS.locked ? (reason as LockedReasonKey) : 'default';
-  return CONTRACT_STRINGS.locked[key];
+  const known = (LOCKED_REASONS as readonly string[]).includes(reason ?? '');
+  return known ? CONTRACT_STRINGS.locked[reason as LockedReasonKey] : CONTRACT_STRINGS.locked.default;
 }
 
 interface ContractError {
@@ -140,7 +114,7 @@ export default function ContractScreen() {
             </View>
 
             <ScrollView style={styles.contractScroll}>
-              <Text style={styles.contractBody}>{CONTRACT_TEXT}</Text>
+              <Text style={styles.contractBody}>{CONTRACT_STRINGS.body}</Text>
             </ScrollView>
 
             <Text style={styles.padHint}>{CONTRACT_STRINGS.padHint}</Text>

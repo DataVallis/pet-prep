@@ -1,1 +1,22 @@
-{}
+{
+  "screen": {
+    "title": "Responsibility Contract",
+    "body": "I promise to take good care of my virtual pet, every single day:\n\n• I will feed it when it is hungry.\n• I will give it fresh water every day.\n• I will take it for walks to keep it fit and healthy.\n• I will clean up after it and keep it clean.\n• I will act on warnings before it gets sick or has to go to the virtual shelter.\n\nDo you accept this responsibility?",
+    "padHint": "Sign with your finger in the box below",
+    "padLabel": "Signature box",
+    "clear": "Clear",
+    "accept": "I accept this responsibility",
+    "retry": "Try again",
+    "logout": "Log out",
+    "invalid": "That signature didn't work. Please try again.",
+    "network": "We couldn't reach the server. Check your internet and try again.",
+    "failed": "Signing didn't work. Please try again later.",
+    "locked": {
+      "hard_stopped": "Your parent has paused the game. You can sign the contract when they turn it back on.",
+      "inactive": "Your pet isn't active right now. Ask your parent to check the settings.",
+      "game_over": "The game is over, so the contract can't be signed any more.",
+      "ill": "Your pet is at the vet. Please try again later.",
+      "default": "You can't sign right now. Please try again later."
+    }
+  }
+}
