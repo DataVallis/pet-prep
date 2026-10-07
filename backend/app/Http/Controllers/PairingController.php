@@ -89,7 +89,7 @@ class PairingController extends Controller
                     'pet_profile' => $result['pet_profile'],
                     /**
                      * M3-11: the new pet's plan (mode new_pet; null for join / re-login).
-                     * Request `plan` defaults to `challenge` (old app builds).
+                     * Request `plan` omitted (old app builds) → `challenge` for a paid breed, `free` for the mutt.
                      *
                      * @var 'free'|'challenge'|null
                      */

@@ -67,8 +67,10 @@ final class PetPlanPayload
         /** @var 'trial'|'payment_required'|'paid'|null $status */
         $status = $pet->challengeStatus($now)?->value;
 
-        return new self($type, $status, $iso($pet->trial_ends_at), $iso($pet->challenge_paid_at), Pet::paymentsEnforced(),
-            self::displaysAsFree($pet) ? PetPlan::Free->value : $type);
+        /** @var 'free'|'challenge' $displayType */
+        $displayType = self::displaysAsFree($pet) ? PetPlan::Free->value : $type;
+
+        return new self($type, $status, $iso($pet->trial_ends_at), $iso($pet->challenge_paid_at), Pet::paymentsEnforced(), $displayType);
     }
 
     /**
@@ -82,6 +84,11 @@ final class PetPlanPayload
             'trial_ends_at' => $this->trialEndsAt,
             'paid_at' => $this->paidAt,
             'payments_enforced' => $this->paymentsEnforced,
+            /**
+             * M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+             *
+             * @var 'free'|'challenge'
+             */
             'display_type' => $this->displayType ?? $this->type,
         ];
     }

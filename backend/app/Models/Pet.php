@@ -224,6 +224,8 @@ class Pet extends Model
         'training_decayed_through',
         // M3-11 bookkeeping (the apps get PetPlanPayload instead).
         'trial_reminder_sent_at',
+        // M5-F02: when an unpaid mutt challenge became the free plan (program clock bookkeeping).
+        'converted_to_free_at',
     ];
 
     /**
@@ -269,6 +271,7 @@ class Pet extends Model
             'challenge_paid_source' => ChallengePaidSource::class,
             'payment_locked_at' => 'datetime',
             'trial_reminder_sent_at' => 'datetime',
+            'converted_to_free_at' => 'datetime',
         ];
     }
 
@@ -608,8 +611,10 @@ class Pet extends Model
         if ($this->paymentLockSpans !== null) {
             return $this->paymentLockSpans;
         }
-        // Free plan (never locked), unborn or unsaved: nothing to read.
-        if ($this->born_at === null || ! $this->exists || $this->plan === PetPlan::Free) {
+        // Free plan (never locked — unless it was an unpaid mutt challenge
+        // converted by M5-F02, whose past locks still count), unborn or unsaved.
+        if ($this->born_at === null || ! $this->exists
+            || ($this->plan === PetPlan::Free && $this->converted_to_free_at === null)) {
             return [];
         }
         // An unpaid, unlocked challenge still inside its trial was provably never

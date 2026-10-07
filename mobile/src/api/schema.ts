@@ -1905,7 +1905,11 @@ export interface operations {
                             trial_ends_at: string | null;
                             paid_at: string | null;
                             payments_enforced: boolean;
-                            display_type: string;
+                            /**
+                             * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                             * @enum {string}
+                             */
+                            display_type: "free" | "challenge";
                         };
                         credits_available: number;
                     } | string;
@@ -2135,7 +2139,11 @@ export interface operations {
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
                                     payments_enforced: boolean;
-                                    display_type: string;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -2442,7 +2450,11 @@ export interface operations {
                                 trial_ends_at: string | null;
                                 paid_at: string | null;
                                 payments_enforced: boolean;
-                                display_type: string;
+                                /**
+                                 * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                 * @enum {string}
+                                 */
+                                display_type: "free" | "challenge";
                             };
                             /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                             current_video_url: string | null;
@@ -2769,7 +2781,11 @@ export interface operations {
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
                                     payments_enforced: boolean;
-                                    display_type: string;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -3094,7 +3110,11 @@ export interface operations {
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
                                     payments_enforced: boolean;
-                                    display_type: string;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -3419,7 +3439,11 @@ export interface operations {
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
                                     payments_enforced: boolean;
-                                    display_type: string;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -3744,7 +3768,11 @@ export interface operations {
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
                                     payments_enforced: boolean;
-                                    display_type: string;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -4069,7 +4097,11 @@ export interface operations {
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
                                     payments_enforced: boolean;
-                                    display_type: string;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -4398,7 +4430,11 @@ export interface operations {
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
                                     payments_enforced: boolean;
-                                    display_type: string;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -4727,7 +4763,11 @@ export interface operations {
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
                                     payments_enforced: boolean;
-                                    display_type: string;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -5056,7 +5096,11 @@ export interface operations {
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
                                     payments_enforced: boolean;
-                                    display_type: string;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
                                 };
                                 /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
                                 current_video_url: string | null;
@@ -5682,7 +5726,7 @@ export interface operations {
                         } | null;
                         /**
                          * @description M3-11: the new pet's plan (mode new_pet; null for join / re-login).
-                         *     Request `plan` defaults to `challenge` (old app builds).
+                         *     Request `plan` omitted (old app builds) → `challenge` for a paid breed, `free` for the mutt.
                          * @enum {string|null}
                          */
                         plan: "free" | "challenge" | null;
@@ -5777,7 +5821,11 @@ export interface operations {
                                 trial_ends_at: string | null;
                                 paid_at: string | null;
                                 payments_enforced: boolean;
-                                display_type: string;
+                                /**
+                                 * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                 * @enum {string}
+                                 */
+                                display_type: "free" | "challenge";
                             };
                             /** @description M5-R01: origin, age, life stage and today's rules. */
                             profile: {
@@ -5927,7 +5975,11 @@ export interface operations {
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
                                     payments_enforced: boolean;
-                                    display_type: string;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
                                 };
                                 /**
                                  * @description M5-R01: origin, age, life stage and today's rules (meals by
@@ -6153,7 +6205,11 @@ export interface operations {
                                     trial_ends_at: string | null;
                                     paid_at: string | null;
                                     payments_enforced: boolean;
-                                    display_type: string;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
                                 };
                                 /**
                                  * @description M5-R01: origin, age, life stage and today's rules (meals by

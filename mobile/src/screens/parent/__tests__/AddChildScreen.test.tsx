@@ -478,6 +478,30 @@ describe('AddChildScreen', () => {
       expect(screen.getByTestId('breed-option-mutt').props.accessibilityState).toEqual({ checked: true, disabled: false });
     });
 
+    it('M5-F03: challenge with every paid breed refused → points to the free plan, never a dead end', async () => {
+      generatePin.mockRejectedValueOnce(new ApiError('locked', 422, { reason: 'breed_locked', message: 'locked' }));
+      await openPicker();
+      fireEvent.press(screen.getByTestId('plan-option-challenge'));
+      fireEvent.press(screen.getByTestId('origin-option-bought'));
+      fireEvent.press(screen.getByTestId('age-option-puppy'));
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      await flush();
+      fireEvent.press(screen.getByTestId('pin-change-dog'));
+      await flush();
+
+      // The collie is refused by the server, the mutt is not part of the challenge.
+      expect(screen.getByTestId('breed-option-border_collie').props.accessibilityState.disabled).toBe(true);
+      expect(screen.getByTestId('breed-option-mutt').props.accessibilityState.disabled).toBe(true);
+      expect(screen.getByText(PICKER.noPaidBreed)).toBeTruthy();
+      expect(screen.queryByText(PICKER.breedMissing)).toBeNull();
+      expect(screen.getByTestId('dog-picker-confirm').props.accessibilityState.disabled).toBe(true);
+
+      // The way out: the free plan.
+      fireEvent.press(screen.getByTestId('plan-option-free'));
+      expect(screen.queryByText(PICKER.noPaidBreed)).toBeNull();
+      expect(screen.getByTestId('dog-picker-confirm').props.accessibilityState.disabled).toBe(false);
+    });
+
     it('M5-F03: a server 422 challenge_requires_paid_breed sends the parent back to the picker with an explanation', async () => {
       generatePin.mockRejectedValueOnce(new ApiError('x', 422, { reason: 'challenge_requires_paid_breed' }));
       await openPicker();

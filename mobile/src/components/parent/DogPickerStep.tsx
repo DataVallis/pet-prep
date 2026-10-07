@@ -62,6 +62,9 @@ export default function DogPickerStep({
   /** The locked breed the parent tapped last (explains why), null when none. */
   const [lockedTapped, setLockedTapped] = useState<PetBreed | null>(null);
   const lockedBreeds = lockedBreedsFor(choice.plan, serverLockedBreeds);
+  // Every breed of this plan is locked (e.g. the server refused the only paid breed): the
+  // way out is the free plan — say so instead of "choose a breed" (M5-F03).
+  const noOpenBreed = PICKER_BREEDS.every((b) => isBreedLocked(b, lockedBreeds));
   const profile = completeChoice(choice, serverLockedBreeds);
   const price = challengePrice ?? CHALLENGE_LIST_PRICE;
 
@@ -166,9 +169,11 @@ export default function DogPickerStep({
         <Text style={styles.missing}>
           {choice.plan === null
             ? S.planMissing
-            : isBreedLocked(choice.breed, lockedBreeds)
-              ? S.breedMissing
-              : S.missing}
+            : noOpenBreed
+              ? S.noPaidBreed
+              : isBreedLocked(choice.breed, lockedBreeds)
+                ? S.breedMissing
+                : S.missing}
         </Text>
       )}
       <Pressable

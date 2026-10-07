@@ -4,8 +4,11 @@ use App\Enums\ChallengePaidSource;
 use App\Enums\ChallengeStatus;
 use App\Enums\PetPlan;
 use App\Events\PetUpdated;
+use App\Models\ChildLoginPin;
 use App\Models\Pet;
+use App\Models\PetStatusPeriod;
 use App\Models\User;
+use App\Services\ChallengeService;
 use App\Services\ChildProfileService;
 use App\Services\PetPlanPayload;
 use Illuminate\Routing\Middleware\ThrottleRequests;
@@ -136,11 +139,26 @@ describe('M5-F03 generate-pin: the challenge needs a paid breed', function () {
         expect(mfPinLogin($pin)->plan)->toBe(PetPlan::Free);
     });
 
-    it('keeps old builds working: no plan → challenge default, also with the mutt (unchanged)', function () {
+    it('old builds (no plan): no 422; the mutt becomes the free plan, a paid breed the challenge (P4)', function () {
         $parent = User::factory()->parent()->create();
 
-        mfPin($parent, [])->assertOk()->assertJsonPath('plan', 'challenge');
-        mfPin($parent, ['breed' => 'mutt', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()->assertJsonPath('plan', 'challenge');
+        $legacy = mfPin($parent, [])->assertOk()->assertJsonPath('plan', 'free')->assertJsonPath('trial_available', null)->json('pin');
+        expect(mfPinLogin($legacy)->plan)->toBe(PetPlan::Free);
+
+        $mutt = mfPin($parent, ['breed' => 'mutt', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()->assertJsonPath('plan', 'free')->json('pin');
+        expect(mfPinLogin($mutt)->plan)->toBe(PetPlan::Free);
+
+        mfPin($parent, ['breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()->assertJsonPath('plan', 'challenge');
+    });
+
+    it('a PIN stored as challenge + mutt before M5-F03 still creates a free mutt (never a lockable challenge)', function () {
+        $parent = User::factory()->parent()->create();
+        $pin = mfPin($parent, ['plan' => 'free', 'breed' => 'mutt', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()->json('pin');
+        // Simulate a PIN issued by the previous release.
+        ChildLoginPin::open()->update(['plan' => 'challenge']);
+
+        $pet = mfPinLogin($pin);
+        expect($pet->plan)->toBe(PetPlan::Free)->and($pet->trial_ends_at)->toBeNull();
     });
 
     it('ignores the plan when joining a pet or re-logging in', function () {
@@ -202,13 +220,6 @@ describe('M5-F02 plan payload: a mutt is shown as free', function () {
         expect(mfDashboardPlan($parent, $pet)['display_type'])->toBe('challenge');
     });
 
-    it('keeps an unpaid mutt challenge (created before M5-F03) on its trial', function () {
-        [$parent, $pet] = mfFamilyPet(fn ($f) => $f->mutt()->trial());
-
-        $plan = mfDashboardPlan($parent, $pet);
-        expect($plan['status'])->toBe('trial')->and($plan['display_type'])->toBe('challenge');
-    });
-
     it('sends display_type in the child state and the broadcast too', function () {
         [, $pet] = mfFamilyPet(fn ($f) => $f->mutt());
         $child = $pet->caretakers()->first();
@@ -219,5 +230,123 @@ describe('M5-F02 plan payload: a mutt is shown as free', function () {
 
         expect(PetUpdated::fromPet($pet->fresh(), 'test')->broadcastWith()['plan']['display_type'])->toBe('free')
             ->and(PetPlanPayload::for($pet->fresh())->toArray())->toHaveKey('display_type', 'free');
+    });
+});
+
+// ─────────────────────────────────────────────────────────────────────────
+describe('M5-F02 data migration: unpaid mutt challenges become the free plan (P4)', function () {
+    function mfConvert(Pet $pet): bool
+    {
+        return app(ChallengeService::class)->convertUnpaidMuttToFree($pet->id, now());
+    }
+
+    it('converts a mutt on its trial; it can never be locked afterwards', function () {
+        [$parent, $pet] = mfFamilyPet(fn ($f) => $f->mutt()->trial());
+        expect($pet->challengeStatus())->toBe(ChallengeStatus::Trial);
+
+        expect(mfConvert($pet))->toBeTrue();
+        $pet->refresh();
+        expect($pet->plan)->toBe(PetPlan::Free)
+            ->and($pet->trial_ends_at)->toBeNull()
+            ->and($pet->challengeStatus())->toBeNull()
+            ->and($pet->converted_to_free_at)->not->toBeNull();
+
+        $plan = mfDashboardPlan($parent, $pet);
+        expect($plan)->toMatchArray(['type' => 'free', 'status' => null, 'display_type' => 'free']);
+
+        // Weeks later: no lock, no payment status.
+        Carbon::setTestNow(Carbon::parse('2026-10-20 10:00:00', 'UTC'));
+        $this->artisan('pets:process-decay')->assertSuccessful();
+        expect($pet->fresh()->isPaymentLocked())->toBeFalse()->and($pet->fresh()->actionLockReason())->toBeNull();
+        // Nothing to buy for it.
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+        postJson("/api/parent/pets/{$pet->id}/challenge/activate")->assertStatus(422)->assertJsonPath('reason', 'free_plan');
+    });
+
+    it('makes a payment-locked mutt playable again; the lock period is closed and stays out of the program clock', function () {
+        [, $pet] = mfFamilyPet(fn ($f) => $f->mutt()->trial());
+        $child = $pet->caretakers()->first();
+
+        // Trial over (2026-10-14 10:00 UTC), the tick locks it.
+        Carbon::setTestNow(Carbon::parse('2026-10-14 10:00:00', 'UTC'));
+        $this->artisan('pets:process-decay')->assertSuccessful();
+        $pet->refresh();
+        expect($pet->isPaymentLocked())->toBeTrue()->and($pet->frozen_at)->not->toBeNull();
+
+        // Two days locked; neglect clock running since before the lock.
+        Pet::whereKey($pet->id)->update(['hunger_zero_since' => '2026-10-14 09:00:00']);
+        Carbon::setTestNow(Carbon::parse('2026-10-16 10:00:00', 'UTC'));
+        $programBefore = $pet->fresh()->programSecondsAt(now());
+
+        expect(mfConvert($pet))->toBeTrue();
+        $pet->refresh();
+
+        expect($pet->plan)->toBe(PetPlan::Free)
+            ->and($pet->payment_locked_at)->toBeNull()
+            ->and($pet->frozen_at)->toBeNull()
+            ->and($pet->last_decay_at->toIso8601String())->toBe('2026-10-16T10:00:00+00:00')
+            // Thawed like a payment: the neglect clock moved forward by the 2 locked days.
+            ->and($pet->hunger_zero_since->toIso8601String())->toBe('2026-10-16T09:00:00+00:00');
+
+        $period = PetStatusPeriod::where('pet_id', $pet->id)->where('kind', 'payment_lock')->sole();
+        expect($period->started_at->toIso8601String())->toBe('2026-10-14T10:00:00+00:00')
+            ->and($period->ended_at?->toIso8601String())->toBe('2026-10-16T10:00:00+00:00');
+
+        // The locked days are still not program time (dog age / life stage).
+        expect($pet->programSecondsAt(now()))->toBe($programBefore);
+        Carbon::setTestNow(Carbon::parse('2026-10-17 10:00:00', 'UTC'));
+        expect($pet->fresh()->programSecondsAt(now()))->toBe($programBefore + 86400);
+
+        // The child can play again.
+        disableHygieneEvents($pet->fresh());
+        app('auth')->forgetGuards();
+        actingAsRole($child);
+        getJson('/api/child/pet')->assertOk()->assertJsonPath('pet.plan.type', 'free');
+        postJson('/api/child/pet/water')->assertOk();
+    });
+
+    it('converts an unborn mutt challenge', function () {
+        [, $pet] = mfFamilyPet(fn ($f) => $f->mutt()->trial()->unborn());
+
+        expect(mfConvert($pet))->toBeTrue()
+            ->and($pet->fresh()->plan)->toBe(PetPlan::Free)
+            ->and($pet->fresh()->born_at)->toBeNull();
+    });
+
+    it('never touches paid mutts, premium breeds or free pets, and is idempotent', function () {
+        [, $grandfathered] = mfFamilyPet(fn ($f) => $f->mutt());
+        [, $purchased] = mfFamilyPet(fn ($f) => $f->mutt()->purchased());
+        [, $admin] = mfFamilyPet(fn ($f) => $f->mutt(), ['challenge_paid_source' => 'admin']);
+        [, $collie] = mfFamilyPet(fn ($f) => $f->borderCollie()->trial());
+        [, $free] = mfFamilyPet(fn ($f) => $f->mutt()->freePlan());
+
+        foreach ([$grandfathered, $purchased, $admin, $collie, $free] as $pet) {
+            $before = $pet->fresh()->only(['plan', 'trial_ends_at', 'challenge_paid_at', 'challenge_paid_source', 'payment_locked_at']);
+            expect(mfConvert($pet))->toBeFalse()
+                ->and($pet->fresh()->only(array_keys($before)))->toEqual($before)
+                ->and($pet->fresh()->converted_to_free_at)->toBeNull();
+        }
+
+        [, $trial] = mfFamilyPet(fn ($f) => $f->mutt()->trial());
+        expect(mfConvert($trial))->toBeTrue()->and(mfConvert($trial))->toBeFalse();
+    });
+
+    it('the migration converts exactly the unpaid mutt challenges', function () {
+        [, $trial] = mfFamilyPet(fn ($f) => $f->mutt()->trial());
+        [, $unborn] = mfFamilyPet(fn ($f) => $f->mutt()->trial()->unborn());
+        [, $grandfathered] = mfFamilyPet(fn ($f) => $f->mutt());
+        [, $collie] = mfFamilyPet(fn ($f) => $f->borderCollie()->trial());
+
+        $migration = require database_path('migrations/2026_10_21_120000_convert_unpaid_mutt_challenges_to_free.php');
+        $migration->down();
+        $migration->up();
+
+        expect($trial->fresh()->plan)->toBe(PetPlan::Free)
+            ->and($unborn->fresh()->plan)->toBe(PetPlan::Free)
+            ->and($grandfathered->fresh()->plan)->toBe(PetPlan::Challenge)
+            ->and($grandfathered->fresh()->challenge_paid_source)->toBe(ChallengePaidSource::Grandfathered)
+            ->and($collie->fresh()->plan)->toBe(PetPlan::Challenge)
+            ->and($collie->fresh()->challengeStatus())->toBe(ChallengeStatus::Trial);
     });
 });

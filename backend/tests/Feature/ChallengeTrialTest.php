@@ -545,9 +545,9 @@ describe('generate-pin plan', function () {
         ctPin($parent, ['plan' => 'gold'])->assertUnprocessable()->assertJsonValidationErrors('plan');
     });
 
-    it('a PIN without plan (old build, no profile) still makes a challenge pet; joining never changes the plan', function () {
+    it('a PIN without plan (old build) makes a challenge pet for a paid breed (the mutt is free — M5-F03); joining never changes the plan', function () {
         $parent = User::factory()->parent()->create();
-        $pin = ctPin($parent, [])->assertOk()->assertJsonPath('plan', 'challenge')->json('pin');
+        $pin = ctPin($parent, ['breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()->assertJsonPath('plan', 'challenge')->json('pin');
         $pet = Pet::findOrFail(ctPinLogin($pin)->assertSuccessful()->json('pet.id'));
         expect($pet->plan)->toBe(PetPlan::Challenge);
 
@@ -791,7 +791,7 @@ describe('P7 — one free trial per child; game over is not unlocked by a purcha
         app('auth')->forgetGuards();
         actingAsRole($parent);
 
-        postJson('/api/parent/generate-pin', ['child_id' => $fresh->id])->assertOk()
+        postJson('/api/parent/generate-pin', ['child_id' => $fresh->id, 'breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()
             ->assertJsonPath('plan', 'challenge')->assertJsonPath('trial_available', true);
         postJson('/api/parent/generate-pin', ['child_id' => $fresh->id, 'plan' => 'free'])->assertOk()
             ->assertJsonPath('plan', 'free')->assertJsonPath('trial_available', null);

@@ -48,6 +48,9 @@ class ChallengeService
 
     public const EVENT_REFUNDED = 'challenge_refunded';
 
+    /** M5-F02: an unpaid mutt challenge became the free mutt (data migration). */
+    public const EVENT_FREE_PLAN = 'plan_free';
+
     /** The parent's reminder goes out this long before the trial ends ("tomorrow"). */
     public const REMINDER_HOURS_BEFORE = 24;
 
@@ -235,6 +238,44 @@ class ChallengeService
         }
 
         return true;
+    }
+
+    /**
+     * M5-F02 / M5-F03 (PAYMENTS_SPEC P4: the mutt is free forever): an UNPAID
+     * challenge of a breed without premium (the mutt — trial, payment
+     * required or not born yet) becomes the free plan, so it can never be
+     * bought or locked. Paid challenges (purchase, grandfathered, admin) are
+     * never touched (`plan.display_type` shows them as free).
+     *
+     * Under the row lock with a non-quiet save, so the Pet hooks treat a
+     * lifted payment lock exactly like a payment (M3-11b): the open
+     * `payment_lock` status period is closed now (the locked time stays
+     * excluded from the program clock — `converted_to_free_at` keeps
+     * Pet::paymentLockSpans() reading the periods), applyThaw() shifts the
+     * neglect clocks, the decay clock restarts. No media change, no push.
+     * One PetUpdated after commit. Returns false when nothing was converted.
+     */
+    public function convertUnpaidMuttToFree(int $petId, CarbonInterface $now): bool
+    {
+        return DB::transaction(function () use ($petId, $now): bool {
+            $pet = Pet::whereKey($petId)->lockForUpdate()->first();
+            if ($pet === null || $pet->plan !== PetPlan::Challenge || $pet->challenge_paid_at !== null
+                || $pet->breed_type->isPremium()) {
+                return false;
+            }
+
+            $pet->forceFill([
+                'plan' => PetPlan::Free,
+                'trial_ends_at' => null,
+                'payment_locked_at' => null,
+                'converted_to_free_at' => $now,
+            ])->save();
+
+            PetUpdated::afterCommit($pet, self::EVENT_FREE_PLAN);
+            Log::info('Challenge: unpaid mutt challenge converted to the free plan', ['pet_id' => $pet->id]);
+
+            return true;
+        });
     }
 
     /**

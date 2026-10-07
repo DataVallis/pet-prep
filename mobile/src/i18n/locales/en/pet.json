@@ -107,6 +107,7 @@
     "quietHoursNote": "A meal that falls entirely within quiet hours (school, sleep) is given by a parent.",
     "missing": "Choose an origin and an age.",
     "breedMissing": "Choose a breed.",
+    "noPaidBreed": "No paid breed can be chosen right now. Choose “Free mixed breed”, or try again later.",
     "confirm": "Create code",
     "back": "Back",
     "noTrial": "{{name}} has already had a free trial. The challenge for this dog starts with a purchase: after the contract is signed, unlock it in the app."

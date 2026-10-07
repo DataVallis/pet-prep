@@ -258,6 +258,16 @@ class PairingService
         }
     }
 
+    /**
+     * The plan of a new pet when the app sent none (builds before M3-09):
+     * the challenge for a paid breed, the free plan for the mutt
+     * (PAYMENTS_SPEC P4 — a mutt is never a lockable challenge).
+     */
+    public static function defaultPlanFor(BreedType $breed): PetPlan
+    {
+        return $breed->isPremium() ? PetPlan::Challenge : PetPlan::Free;
+    }
+
     private function createPet(Family $family, User $child, ?PetProfileChoice $profile, PetPlan $plan): Pet
     {
         // Pet DNA is generated offline. The reference image is produced
@@ -274,6 +284,11 @@ class PairingService
         $breed = $profile?->breed ?? BreedType::Mutt;
         if (! self::breedAllowed($breed, $plan)) {
             $breed = BreedType::Mutt;
+        }
+        // PAYMENTS_SPEC P4 / M5-F03: a mutt is never a (lockable) challenge — also
+        // for PINs stored before M5-F03 and the deprecated /child/pair flow.
+        if ($plan === PetPlan::Challenge && ! $breed->isPremium()) {
+            $plan = PetPlan::Free;
         }
         $arrivalAge = $profile !== null ? $this->lifeStages->arrivalAgeFor($breed->slug(), $profile->ageStage) : null;
         $stage = $arrivalAge !== null ? $this->lifeStages->stageForAge($breed->slug(), $arrivalAge) : null;

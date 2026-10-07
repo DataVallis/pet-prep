@@ -59,8 +59,9 @@ class GeneratePinRequest extends FormRequest
             'features.*' => ['string', 'max:64'],
             // M3-11 (PAYMENTS_SPEC): plan of the new pet — `free` (mutt only,
             // 422 breed_locked for a premium breed) or `challenge` (7-day trial
-            // from birth, Border Collie allowed). Omitted → `challenge` (old
-            // app builds). Ignored when joining a pet / re-login.
+            // from birth, paid breed only — M5-F03). Omitted (old app builds) →
+            // `challenge` for a paid breed, `free` for the mutt (P4). Ignored when
+            // joining a pet / re-login.
             'plan' => ['sometimes', 'nullable', Rule::enum(PetPlan::class)],
         ];
     }
@@ -74,7 +75,8 @@ class GeneratePinRequest extends FormRequest
 
     /**
      * M5-F03: the parent chose a plan explicitly (new app builds). Only then
-     * is `challenge` + mutt refused; an omitted plan keeps the old default.
+     * is `challenge` + mutt refused (422); an omitted plan picks the default
+     * per breed (PairingService::defaultPlanFor — the mutt is free).
      */
     public function planChosen(): bool
     {

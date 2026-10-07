@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Enums\BreedType;
 use App\Enums\FamilyRole;
 use App\Enums\PetPlan;
 use App\Enums\TokenAbility;
@@ -119,6 +120,11 @@ class ChildPinLoginService
             // M5-F03: an explicitly chosen challenge needs a paid breed (no profile → mutt).
             if ($mode === self::MODE_NEW_PET && $planChosen) {
                 $this->pairing->assertPlanAllowed($profile, $plan);
+            }
+            // PAYMENTS_SPEC P4: no plan sent (builds before M3-09) → the challenge only for a
+            // paid breed; the mutt is the free plan (never a lockable challenge).
+            if (! $planChosen) {
+                $plan = PairingService::defaultPlanFor($profile?->breed ?? BreedType::Mutt);
             }
 
             // One open PIN per child: a new one replaces the previous.
