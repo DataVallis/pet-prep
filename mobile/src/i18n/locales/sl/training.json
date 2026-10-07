@@ -54,8 +54,10 @@
       "praised_without_obeying": "ni ubogal"
     },
     "result": {
-      "titleGood": "Bravo!",
-      "titleLearning": "Kuža se uči!",
+      "titleExcellent": "Odlično!",
+      "titleGood": "Dobro!",
+      "titlePractice": "Še malo vaje — jutri bo bolje",
+      "titleNone": "Tokrat ni šlo, poskusi jutri",
       "noObey": "Kuža tokrat ni ubogal.",
       "successes": "Pravočasne pohvale: {{successes}} od {{obeyed}}.",
       "gain": "{{name}}: {{before}} % → {{after}} %",

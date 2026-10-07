@@ -187,7 +187,7 @@ describe('ChildHudScreen — training (M5-R03)', () => {
     expect(screen.getByTestId('training-result')).toBeTruthy();
     expect(screen.getByTestId('training-result-gain').props.children).toBe('Sedi: 40 % → 43 %');
     expect(screen.getByTestId('training-result-successes').props.children).toBe('Pravočasne pohvale: 3 od 5.');
-    expect(screen.getByText(S.result.titleGood)).toBeTruthy();
+    expect(screen.getByText(S.result.titlePractice)).toBeTruthy();
     // The HUD chip (hidden from a11y under the modal overlay) now shows today as done.
     expect(screen.getByTestId('hud-training-done', { includeHiddenElements: true })).toBeTruthy();
     fireEvent.press(screen.getByTestId('training-done'));
@@ -251,7 +251,7 @@ describe('ChildHudScreen — training (M5-R03)', () => {
     await flush();
     await flush(50_200);
     await flush();
-    expect(screen.getByText(S.result.titleLearning)).toBeTruthy();
+    expect(screen.getByText(S.result.titleNone)).toBeTruthy();
     expect(screen.getByTestId('training-result-gain').props.children).toBe(S.result.noGain);
     expect(screen.queryByTestId('training-result-learned')).toBeNull();
 

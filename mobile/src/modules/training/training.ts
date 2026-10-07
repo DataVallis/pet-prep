@@ -368,6 +368,33 @@ export function readFinishResponse(raw: unknown): FinishTrainingResponse | null 
   return s !== null && result !== null && state !== null ? { status: s, result, state } : null;
 }
 
+// ── Result title (M5-F04) ─────────────────────────────────────
+
+/**
+ * How the session went, for the result title (M5-F04, thresholds confirmed by David
+ * 2026-10-07 21:35). Never false praise: a weak session never says "Great job".
+ * - `excellent` — every command praised on time ("Odlično!")
+ * - `good` — more than half ("Dobro!")
+ * - `practice` — at least one, but half or fewer ("Še malo vaje — jutri bo bolje")
+ * - `none` — no praise on time ("Tokrat ni šlo, poskusi jutri")
+ */
+export type TrainingResultBucket = 'excellent' | 'good' | 'practice' | 'none';
+
+/**
+ * ratio = praises on time (`successes`, scored by the server) / all commands of the session
+ * (`trials.length`). 1 → excellent; > 0.5 → good; > 0 → practice; 0 → none. **Exactly half
+ * is `practice`** ("more than half" is good). No commands (malformed / empty result) → none.
+ * Pure: integer comparisons only (no float rounding at the boundaries).
+ */
+export function trainingResultBucket(result: Pick<TrainingResult, 'successes' | 'trials'>): TrainingResultBucket {
+  const total = result.trials.length;
+  if (total <= 0) return 'none';
+  const onTime = Math.min(Math.max(0, Math.floor(result.successes)), total);
+  if (onTime === 0) return 'none';
+  if (onTime === total) return 'excellent';
+  return onTime * 2 > total ? 'good' : 'practice';
+}
+
 // ── Questions the UI asks ─────────────────────────────────────
 
 /** The HUD shows the "Šola" entry. */
