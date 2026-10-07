@@ -72,6 +72,15 @@ class GeneratePinRequest extends FormRequest
         return $plan === null ? PetPlan::Challenge : PetPlan::from((string) $plan);
     }
 
+    /**
+     * M5-F03: the parent chose a plan explicitly (new app builds). Only then
+     * is `challenge` + mutt refused; an omitted plan keeps the old default.
+     */
+    public function planChosen(): bool
+    {
+        return $this->validated('plan') !== null;
+    }
+
     public function childId(): ?int
     {
         $childId = $this->validated('child_id');

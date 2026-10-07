@@ -369,6 +369,15 @@ function PetOption({ icon, title, hint, onPress, testID }: PetOptionProps) {
   );
 }
 
+/** Picker choices the server refused (back to the picker with an explanation). */
+type ProfileRejection = 'breed_locked' | 'invalid_profile' | 'challenge_requires_paid_breed';
+
+const PROFILE_REJECTIONS: readonly ProfileRejection[] = ['breed_locked', 'invalid_profile', 'challenge_requires_paid_breed'];
+
+function profileRejectionOf(kind: string | undefined): ProfileRejection | null {
+  return PROFILE_REJECTIONS.find((k) => k === kind) ?? null;
+}
+
 // ── Step 3: PIN with countdown, polling until the child is connected ──
 interface PinStepProps {
   target: TargetChild;
@@ -376,7 +385,7 @@ interface PinStepProps {
   /** New pet (M5-R04): the full picker choice; null when joining a pet or re-logging in. */
   profile: NewPetProfile | null;
   /** The server refused the picker choice → let the parent choose again. */
-  onProfileRejected: (kind: 'breed_locked' | 'invalid_profile') => void;
+  onProfileRejected: (kind: ProfileRejection) => void;
   /** New pet only: back to the picker before the child connects ("Spremeni kužka"). */
   onChangeDog: () => void;
   /** Last PIN issued in this flow (kept by the parent screen across picker round trips). */
@@ -448,10 +457,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
 
   // The free mutt refused as locked = our misconfiguration: explain, never send the parent round in circles.
   const muttLocked = pinError?.kind === 'breed_locked' && profile?.breed === 'mutt';
-  const profileRejected =
-    (pin === null || isForPreviousChoice) && !muttLocked && (pinError?.kind === 'breed_locked' || pinError?.kind === 'invalid_profile')
-      ? pinError.kind
-      : null;
+  const profileRejected = (pin === null || isForPreviousChoice) && !muttLocked ? profileRejectionOf(pinError?.kind) : null;
 
   const isCoolingDown = cooldown > 0;
   const canRequest = !generate.isPending && !isCoolingDown;

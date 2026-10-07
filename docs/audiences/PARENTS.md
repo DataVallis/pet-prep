@@ -27,7 +27,7 @@ Preden kupite psa, naj ga otrok 12 tednov "vzgaja" v aplikaciji: hrani ga, mu me
 
 ## Izberite kužka: izvor in starost *(od 5. 10. 2026 na strežniku; zaslon "Izberi kužka" v aplikaciji od 5. 10. 2026 — še ni v trgovini)*
 **Kako izberete (v aplikaciji):** *Dodaj otroka* → vzdevek → **Nov pes** → zaslon **Izberi kužka**. Izberete tri stvari:
-1. **Plan** — *brezplačni mešanček* (za vedno, brez 12-tedenskega programa) ali *12-tedenski izziv* (7 dni brezplačno, nato 49,99 € za tega psa, brez naročnine in brez samodejnega plačila). **Pasma** — na brezplačnem planu vedno mešanček; na izzivu tudi Border Collie *(v aplikaciji od 7. 10. 2026 — še ni v trgovini)*.
+1. **Plan** — *brezplačni mešanček* (za vedno, brez 12-tedenskega programa) ali *12-tedenski izziv* (7 dni brezplačno, nato 49,99 € za tega psa, brez naročnine in brez samodejnega plačila). **Pasma** — na brezplačnem planu vedno mešanček; izziv je s plačljivo pasmo (Border Collie), mešanček je takrat siv *(v aplikaciji od 7. 10. 2026 — še ni v trgovini)*.
 2. **Od kod pride** — *Kupljen (vzreditelj)* ali *Posvojen (zavetišče)*. Izvor se zdaj pokaže na profilu psa; vpliv izvora na vedenje (npr. plašnost posvojenega psa v prvih tednih) pride kmalu.
 3. **Starost ob prihodu** — ob vsaki je ena vrstica s številkami za izbrano pasmo (mešanček): *mladiček* (pride star 2 meseca; 4 obroki na dan, nato 3, od 6. meseca 2; sprehod 2.000 korakov na dan, vsak teden več do 6.000; nezgode v hiši pridejo kmalu), *mlad pes* (2 obroka, 6.000 korakov kot odrasel), *odrasel* (2 obroka, 6.000 korakov), *starejši* (2 obroka, 4.500 korakov). Za Border Collieja (plačljivo): mladiček 2.000 → 12.000, mlad pes 9.000 → 12.000, odrasel 12.000, starejši 9.000 korakov.
 

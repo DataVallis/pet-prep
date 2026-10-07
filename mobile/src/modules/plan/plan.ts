@@ -7,6 +7,7 @@
  * - `challenge` — `status` null before birth → `trial` (until `trial_ends_at`) →
  *   `payment_required` (server lock, like a hard stop) → `paid`.
  * - A payload without `plan` (server before M3-11) reads as challenge / paid: nothing locked.
+ * - `display_type` (M5-F02): what the parent sees — `free` for a grandfathered mutt too.
  */
 
 import type { BillingPet, ChallengeStatus, PetPlan, PetPlanType } from '@/api/client';
@@ -38,16 +39,19 @@ export function readPetPlan(raw: unknown): PetPlan {
   if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return LEGACY_PLAN;
   const o = raw as Record<string, unknown>;
   const type = PLAN_TYPES.find((p) => p === o.type) ?? 'challenge';
+  // M5-F02: what the parent sees (a grandfathered mutt reads as free); missing → the real type.
+  const display_type: PetPlanType = type === 'free' ? 'free' : (PLAN_TYPES.find((p) => p === o.display_type) ?? type);
   // Kill switch on the server (`payments_enforced: false`): nobody is locked after the
   // trial yet → no countdown, no banner — just "Preizkus" until purchases are live.
   if (type === 'challenge' && o.payments_enforced === false && o.status !== 'paid') {
-    return { type, status: 'trial', trial_ends_at: null, paid_at: null };
+    return { type, status: 'trial', trial_ends_at: null, paid_at: null, display_type };
   }
   return {
     type,
     status: type === 'free' ? null : readStatus(o.status),
     trial_ends_at: type === 'free' ? null : strOrNull(o.trial_ends_at),
     paid_at: type === 'free' ? null : strOrNull(o.paid_at),
+    display_type,
   };
 }
 
@@ -58,6 +62,14 @@ export function planOfBillingPet(pet: BillingPet): PetPlan {
 
 export function isFreePlan(plan: PetPlan): boolean {
   return plan.type === 'free';
+}
+
+/**
+ * M5-F02 (David 2026-10-07): the parent sees this pet as free — a free-plan pet, or a mutt
+ * whose challenge nobody bought (server `display_type: free`). A mutt is never "Plačano".
+ */
+export function shownAsFree(plan: PetPlan): boolean {
+  return plan.type === 'free' || plan.display_type === 'free';
 }
 
 /** The server locks the game until a parent buys (PAYMENTS_SPEC P3). */
@@ -100,10 +112,11 @@ export interface PlanBadge {
 
 /**
  * "Brezplačno" · "Preizkus: še N dni" · "Preizkus: zadnji dan" · "Čaka na nakup" · "Plačano".
+ * A mutt the family never bought a challenge for (grandfathered) is "Brezplačno" (M5-F02).
  * A trial whose end has passed but the server hasn't flipped yet reads as the last day.
  */
 export function planBadge(plan: PetPlan, now: number = Date.now()): PlanBadge {
-  if (plan.type === 'free') return { tone: 'neutral', label: t('paywall:plan.badge.free') };
+  if (shownAsFree(plan)) return { tone: 'neutral', label: t('paywall:plan.badge.free') };
   switch (plan.status) {
     case 'paid':
       return { tone: 'ok', label: t('paywall:plan.badge.paid') };

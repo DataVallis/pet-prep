@@ -84,19 +84,22 @@ class ChildPinLoginService
      * null = no profile chosen (old app builds) → the PIN creates a
      * legacy-profile pet on the pre-M5 rules. `$plan` (M3-11) is the new
      * pet's plan, kept on the PIN the same way (free → mutt only).
+     * `$planChosen` (M5-F03): the parent sent `plan` explicitly — then a
+     * challenge with the mutt (or no breed → mutt) is refused.
      *
      * @return array{pin: string, expires_at: Carbon, child_id: int, pet_id: int|null, mode: string, pet_profile: array{breed: string, origin: string, age_stage: string, features: list<string>}|null, plan: string|null, trial_available: bool|null}
      *
      * @throws FamilyException child_not_found (404), pet_not_joinable (422),
-     *                         already_paired (422), breed_locked (422)
+     *                         already_paired (422), breed_locked (422),
+     *                         challenge_requires_paid_breed (422)
      */
-    public function generatePin(User $parent, int $childId, ?int $joinPetId, ?PetProfileChoice $profile = null, PetPlan $plan = PetPlan::Challenge): array
+    public function generatePin(User $parent, int $childId, ?int $joinPetId, ?PetProfileChoice $profile = null, PetPlan $plan = PetPlan::Challenge, bool $planChosen = false): array
     {
         if (! $parent->isParent()) {
             throw new FamilyException('not_a_parent', 'Only a parent can generate a PIN.', 403);
         }
 
-        return DB::transaction(function () use ($parent, $childId, $joinPetId, $profile, $plan): array {
+        return DB::transaction(function () use ($parent, $childId, $joinPetId, $profile, $plan, $planChosen): array {
             // Lock order: parent user row → child user row → family row.
             User::whereKey($parent->id)->lockForUpdate()->first();
 
@@ -112,6 +115,10 @@ class ChildPinLoginService
             $mode = $this->resolveMode($family, $child, $joinPetId, forGeneration: true);
             if ($mode === self::MODE_NEW_PET && $profile !== null) {
                 $this->pairing->assertProfileAllowed($profile, $plan);
+            }
+            // M5-F03: an explicitly chosen challenge needs a paid breed (no profile → mutt).
+            if ($mode === self::MODE_NEW_PET && $planChosen) {
+                $this->pairing->assertPlanAllowed($profile, $plan);
             }
 
             // One open PIN per child: a new one replaces the previous.

@@ -108,6 +108,7 @@
       "pet_not_joinable": "Temu psu se ni več mogoče pridružiti. Izberite drugega ali novega psa.",
       "already_paired": "Otrok že skrbi za psa — lahko dobi samo kodo za prijavo na novi napravi.",
       "breed_locked": "Ta pasma je del plačljivega izziva in se odklene samo z nakupom. Izberite drugo pasmo.",
+      "challenge_requires_paid_breed": "12-tedenski izziv potrebuje plačljivo pasmo. Mešanček je pes brezplačnega načina — izberite drugo pasmo ali brezplačni način.",
       "invalid_profile": "Izbire kužka ni bilo mogoče shraniti. Izberite znova.",
       "offline": "Ni povezave s strežnikom. Preverite internet in poskusite znova.",
       "server": "Kode trenutno ni bilo mogoče ustvariti. Poskusite znova."

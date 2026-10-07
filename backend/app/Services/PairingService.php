@@ -242,6 +242,22 @@ class PairingService
         }
     }
 
+    /**
+     * M5-F03 (David 2026-10-07): the 12-week challenge needs a paid breed —
+     * the mutt (also the default when no breed / no profile is sent) is the
+     * free plan's dog only. Called for a new pet when the parent explicitly
+     * chose `plan: challenge` (an omitted plan keeps the old-build default).
+     *
+     * @throws FamilyException challenge_requires_paid_breed (422)
+     */
+    public function assertPlanAllowed(?PetProfileChoice $profile, PetPlan $plan): void
+    {
+        $breed = $profile?->breed ?? BreedType::Mutt;
+        if ($plan === PetPlan::Challenge && ! $breed->isPremium()) {
+            throw new FamilyException('challenge_requires_paid_breed', 'The 12-week challenge needs a paid breed; the mixed breed is the free plan.');
+        }
+    }
+
     private function createPet(Family $family, User $child, ?PetProfileChoice $profile, PetPlan $plan): Pet
     {
         // Pet DNA is generated offline. The reference image is produced

@@ -33,7 +33,9 @@ class PairingController extends Controller
      * child joins that shared pet), `relogin` (already paired child, new
      * device). A new PIN for the child replaces their previous one.
      * 404 `child_not_found`, 422 `pet_not_joinable` | `already_paired` |
-     * `breed_locked`.
+     * `breed_locked` | `challenge_requires_paid_breed` (M5-F03: explicit
+     * `plan: challenge` for a new pet with the mutt — also when no breed /
+     * no profile is sent, the mutt being the default).
      *
      * New pet profile (M5-R01, only without `pet_id`), all or nothing:
      * `origin` bought | adopted and `age_stage` puppy | young | adult |
@@ -66,7 +68,7 @@ class PairingController extends Controller
 
         try {
             if ($childId !== null) {
-                $result = $this->childLogins->generatePin($request->user(), $childId, $request->joinPetId(), $request->petProfile(), $request->plan());
+                $result = $this->childLogins->generatePin($request->user(), $childId, $request->joinPetId(), $request->petProfile(), $request->plan(), $request->planChosen());
 
                 return response()->json([
                     'pin' => $result['pin'],

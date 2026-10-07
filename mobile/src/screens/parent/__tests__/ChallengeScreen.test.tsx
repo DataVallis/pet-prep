@@ -9,7 +9,7 @@ import { i18n } from '@/i18n';
 import ChallengeBanner from '@/components/parent/ChallengeBanner';
 import PlanBadge from '@/components/parent/PlanBadge';
 import { familyFromDashboard } from '@/modules/family/family';
-import { planBadge, planBanner, readPetPlan, trialDaysLeft } from '@/modules/plan/plan';
+import { needsPurchase, planBadge, planBanner, readPetPlan, shownAsFree, trialDaysLeft } from '@/modules/plan/plan';
 import ChallengeScreen from '@/screens/parent/ChallengeScreen';
 import { challengePackage } from '@/modules/purchases';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
@@ -92,7 +92,36 @@ afterEach(async () => {
 describe('plan helpers', () => {
   it('reads plans safely; an old server (no plan) is a paid challenge — nothing locked', () => {
     expect(readPetPlan(undefined)).toEqual({ type: 'challenge', status: 'paid', trial_ends_at: null, paid_at: null });
-    expect(readPetPlan({ type: 'free', status: 'trial', trial_ends_at: 'x' })).toEqual({ type: 'free', status: null, trial_ends_at: null, paid_at: null });
+    expect(readPetPlan({ type: 'free', status: 'trial', trial_ends_at: 'x' })).toEqual({
+      type: 'free',
+      status: null,
+      trial_ends_at: null,
+      paid_at: null,
+      display_type: 'free',
+    });
+  });
+
+  it('M5-F02: a grandfathered mutt (display_type free) is "Brezplačno", never "Plačano"; its real plan stays', () => {
+    const grandfathered = readPetPlan({ type: 'challenge', status: 'paid', paid_at: '2026-10-01T10:00:00+02:00', display_type: 'free' });
+    expect(grandfathered).toMatchObject({ type: 'challenge', status: 'paid', display_type: 'free' });
+    expect(shownAsFree(grandfathered)).toBe(true);
+    expect(planBadge(grandfathered, NOW)).toEqual({ tone: 'neutral', label: 'Brezplačno' });
+    // Nothing to buy: not a purchase candidate, no banner.
+    expect(needsPurchase(grandfathered)).toBe(false);
+    expect(planBanner(grandfathered, NOW)).toBeNull();
+
+    // A purchased (or premium) challenge stays "Plačano"; an older server without display_type too.
+    expect(planBadge(readPetPlan({ type: 'challenge', status: 'paid', display_type: 'challenge' }), NOW).label).toBe('Plačano');
+    expect(planBadge(readPetPlan({ type: 'challenge', status: 'paid' }), NOW).label).toBe('Plačano');
+    // Unknown display_type → the real type.
+    expect(readPetPlan({ type: 'challenge', status: 'paid', display_type: 'gold' }).display_type).toBe('challenge');
+    // A free pet is always shown free.
+    expect(readPetPlan({ type: 'free', display_type: 'challenge' }).display_type).toBe('free');
+  });
+
+  it('M5-F02: the badge of a grandfathered mutt reads "Brezplačno" with its accessible label', () => {
+    render(<PlanBadge plan={readPetPlan({ type: 'challenge', status: 'paid', display_type: 'free' })} testID="badge" />);
+    expect(screen.getByTestId('badge').props.accessibilityLabel).toBe('Načrt: Brezplačno');
   });
 
   it('badges and banners follow the trial clock', () => {
@@ -107,7 +136,7 @@ describe('plan helpers', () => {
 
   it('kill switch: with payments not enforced an unpaid challenge shows no countdown or banner', () => {
     const plan = readPetPlan({ ...trialPlan(-5), payments_enforced: false });
-    expect(plan).toEqual({ type: 'challenge', status: 'trial', trial_ends_at: null, paid_at: null });
+    expect(plan).toEqual({ type: 'challenge', status: 'trial', trial_ends_at: null, paid_at: null, display_type: 'challenge' });
     expect(planBanner(plan, NOW)).toBeNull();
     expect(planBadge(plan, NOW).label).toBe('Preizkus');
   });

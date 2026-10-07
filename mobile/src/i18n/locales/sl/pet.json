@@ -69,17 +69,19 @@
     },
     "planMissing": "Izberite način.",
     "breedFreeNote": "V brezplačnem načrtu je pes vedno mešanček. Border Collie je del 12-tedenskega izziva.",
+    "breedChallengeNote": "12-tedenski izziv je s plačljivo pasmo (Border collie). Mešanček je pes brezplačnega načina — zanj izberite »Brezplačni mešanček«.",
     "breedTitle": "Pasma",
     "breeds": {
       "mutt": "Mešanček",
       "border_collie": "Border collie"
     },
     "breedHints": {
-      "mutt": "Brezplačen v vseh kombinacijah.",
+      "mutt": "Pes brezplačnega načina. Ni del 12-tedenskega izziva.",
       "border_collie": "Del 12-tedenskega izziva (tudi med brezplačnim preizkusom)."
     },
     "breedLockedNote": "Te pasme zdaj ni mogoče izbrati. Izberite mešančka ali poskusite pozneje.",
     "lockedA11y": "{{breed}}, zaklenjeno — del plačljivega izziva",
+    "lockedFreeOnlyA11y": "{{breed}}, ni na voljo — samo v brezplačnem načinu",
     "originTitle": "Od kod pride",
     "origins": {
       "bought": "Kupljen (vzreditelj)",
@@ -112,6 +114,7 @@
     },
     "quietHoursNote": "Obrok, ki pade v celoti v tihe ure (šola, spanje), nahrani starš.",
     "missing": "Izberite izvor in starost.",
+    "breedMissing": "Izberite pasmo.",
     "confirm": "Ustvari kodo",
     "back": "Nazaj",
     "noTrial": "{{name}} je brezplačni preizkus že imel(a). Izziv za tega psa se začne z nakupom: po podpisu pogodbe ga odklenete v aplikaciji."
