@@ -8,6 +8,7 @@ import * as SecureStore from 'expo-secure-store';
 
 import { api, clearAuthToken } from '@/api/client';
 import { clearLiveSteps } from '@/modules/steps/stepCounter';
+import { unregisterStepSyncTask } from '@/modules/steps/backgroundSteps';
 import { unregisterFromPush } from '@/modules/push/pushRegistration';
 import { resetPurchasesIdentity } from '@/modules/purchases/purchases';
 import { queryClient } from '@/api/queryClient';
@@ -56,6 +57,8 @@ export async function logout({ revoke = true }: LogoutOptions = {}): Promise<voi
   }
   // Android live step total of this child: the next child on this phone starts at 0.
   await clearLiveSteps(userId, SecureStore);
+  // M3-06: no background step sync for a signed-out phone (never throws).
+  await unregisterStepSyncTask();
   await forgetFamilyTimezone(SecureStore);
   // The next user starts with a fresh fetch budget (the server limit is per user).
   childPetFetchGate.reset();

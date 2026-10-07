@@ -22,6 +22,20 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 💼 Investitorji: »Pravila igre in obvestila izhajajo iz enega mesta v kodi. Tako sistem otroka nikoli ne prosi za nemogoče, kar pomeni manj frustracije in manj odhodov.«
 - 📣 Omrežja: »Pravi pes ne čaka do 17:00. Tudi naš ne. Ampak zamuda je še vedno zamuda.«
 - 🛠 Tehnično: »`CareScheduleService::feedCheck/waterCheck` odloča za akcijo (pravilo »zamujen obrok«: zadnje končano okno brez obroka), `ChildPetStateResource` (`feed_mode`, `emergency_threshold` ali null) in čas pošiljanja pusha (`wait` / `clean_first` / `not_actionable`). Ledger je ostal nespremenjen, ker je nujni obrok izven vseh oken.«
+## 2026-10-07 — Pravi koraki iz Apple Zdravje in Health Connect (M3-04 – M3-06)
+
+**Kaj se je zgodilo:** Kuža zdaj dobi korake tudi, ko je aplikacija zaprta. Otrok v oknu »Sprehod« prebere kratko razlago (»Kužku gre samo današnje število korakov — nič drugega«), tapne **Poveži** in dovoli samo branje korakov iz **Apple Zdravje** (iPhone) ali **Health Connect** (Android). Ob odprtju aplikacija pošlje ves današnji seštevek — tudi korake z ure. iPhone jih občasno pošlje že v ozadju. Če otrok dostop zavrne ali ga telefon nima, šteje senzor gibanja kot doslej.
+
+**Zakaj je pomembno:** Do zdaj je Android štel samo, ko je bila aplikacija odprta — otrok, ki je šel s psom ven s telefonom v žepu, ni dobil koraka. To je bila največja luknja v »pravem sprehodu«. Obenem ostajamo pri minimumu podatkov: dovoljenje samo za korake, na strežnik gre ena številka.
+
+**Številke:** 1 vrsta podatkov (koraki, samo branje); 2 vira na telefonu, šteje večji (nikoli vsota — en sprehod ne šteje dvakrat); sync največ 1× na minuto samodejno, vsakih 5 min in ob »Osveži«; v ozadju iPhone približno na 15 min ali redkeje (odloča iOS); anti-cheat ostaja 200 korakov na minuto. Testi: 1.355 v aplikaciji (62 novih), 1.264 na strežniku (2 nova). **Še ni na telefonu — potreben je nov native build.**
+
+**Kako povedati:**
+- 🧒 Otroci: "Poveži Zdravje in kuža dobi tudi korake, ko je aplikacija zaprta!"
+- 👩 Starši: "PetPrep iz aplikacije Zdravje / Health Connect bere samo današnje število korakov — nič drugega in ničesar ne zapisuje. Dovoljenje lahko kadarkoli prekličete."
+- 📣 Omrežja: "Pravi sprehod šteje — tudi s telefonom v žepu. 🐾"
+- 💼 Investitorji: "Integracija z Apple Health in Health Connect: zanesljivo merjenje gibanja, ki deluje v ozadju, z minimalnim dostopom do zdravstvenih podatkov."
+- 🛠 Tehnično: "Adapter nad `@kingstinct/react-native-healthkit` (Nitro) in `react-native-health-connect`; zdravje + CoreMotion / live števec, merge = max; `expo-background-task` na iOS; strežniški anti-cheat od zadnjega synca dovoli dohitevanje."
 ## 2026-10-07 — Ura izziva stoji, dokler pes čaka na plačilo (M3-11b)
 
 **Kaj se je zgodilo:** David je odločil, da čas, ko pes po preizkusu čaka zaklenjen na nakup, **ne šteje v 12 tednov**. Strežnik zdaj iz zgodovine zaklepov izračuna »čas programa«: med zaklepom kuža ne stara, »Teden N od 12« in napredek otroka stojita, po plačilu pa se vse nadaljuje točno tam, kjer je obstalo. Več zaklepov (npr. po vračilu) se sešteje; pavza starša (hard stop) in bolezen se štejeta kot doslej. Isti dan je David sprejel tudi tveganje vračil: AI videi, ustvarjeni po nakupu, ostanejo tudi po vračilu (brez 48-urnega zamika).

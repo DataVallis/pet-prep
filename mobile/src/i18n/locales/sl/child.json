@@ -142,6 +142,23 @@
     "refresh": "Osveži korake",
     "syncing": "Shranjujem …",
     "androidNote": "Koraki se štejejo, ko je aplikacija odprta.",
-    "close": "Zapri"
+    "close": "Zapri",
+    "health": {
+      "title": {
+        "ios": "Štej korake z aplikacijo Zdravje",
+        "android": "Štej korake s Health Connect"
+      },
+      "body": "Potem se koraki štejejo, tudi ko je PetPrep zaprt. Kužku gre samo današnje število korakov — nič drugega.",
+      "connect": "Poveži",
+      "connected": {
+        "ios": "Koraki iz aplikacije Zdravje",
+        "android": "Koraki iz Health Connect"
+      },
+      "iosHelp": "Ni korakov? Starš lahko preveri Nastavitve → Zdravje → Dostop do podatkov in naprave → PetPrep.",
+      "denied": "Health Connect še ne deli korakov. Prosi starša, da v Health Connect dovoli »Koraki« za PetPrep.",
+      "openSettings": "Odpri Health Connect",
+      "needsUpdate": "Najprej je treba namestiti ali posodobiti Health Connect. Prosi starša za pomoč.",
+      "openStore": "Odpri Google Play"
+    }
   }
 }

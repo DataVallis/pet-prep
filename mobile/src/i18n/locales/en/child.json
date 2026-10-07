@@ -142,6 +142,23 @@
     "refresh": "Refresh steps",
     "syncing": "Saving …",
     "androidNote": "Steps are counted while the app is open.",
-    "close": "Close"
+    "close": "Close",
+    "health": {
+      "title": {
+        "ios": "Count steps with Apple Health",
+        "android": "Count steps with Health Connect"
+      },
+      "body": "Then your steps count even when PetPrep is closed. Only today's number of steps goes to your pup — nothing else.",
+      "connect": "Connect",
+      "connected": {
+        "ios": "Steps from Apple Health",
+        "android": "Steps from Health Connect"
+      },
+      "iosHelp": "Steps missing? A parent can check Settings → Health → Data Access & Devices → PetPrep.",
+      "denied": "Health Connect can't share steps yet. Ask a parent to allow \"Steps\" for PetPrep in Health Connect.",
+      "openSettings": "Open Health Connect",
+      "needsUpdate": "Health Connect needs to be installed or updated first. Ask a parent to help.",
+      "openStore": "Open Google Play"
+    }
   }
 }
