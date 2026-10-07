@@ -23,9 +23,9 @@ final readonly class FeedingStatus
         public ?CarbonImmutable $nextEnd,
         public ?CarbonImmutable $lastFedAt,
         /**
-         * M3-12 rule A: the most recent window that has already ended started
-         * after the birth, is not parent-covered, and nothing was fed since its
-         * start. No ended window since the birth = not missed (a newborn starts
+         * M3-12 rule A: the most recent CHILD window (parent-covered skipped)
+         * that has already ended started after the birth, and nothing (child or
+         * parent meal) was fed since its start. No ended window since the birth = not missed (a newborn starts
          * at 100 % and reaches its first window long before 20 %).
          */
         public bool $missedMeal = false,

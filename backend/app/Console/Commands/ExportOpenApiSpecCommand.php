@@ -3,7 +3,6 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 
 class ExportOpenApiSpecCommand extends Command
@@ -24,11 +23,11 @@ class ExportOpenApiSpecCommand extends Command
     public function handle(): int
     {
         // Fetch the OpenAPI spec from the Scramble docs endpoint
-        $response = Http::get(config('app.url').'/docs/api.json');
+        $response = \Illuminate\Support\Facades\Http::get(config('app.url') . '/docs/api.json');
 
         if (! $response->successful()) {
             $this->error('Failed to fetch OpenAPI spec from /docs/api.json');
-            $this->error('Status: '.$response->status());
+            $this->error('Status: ' . $response->status());
 
             return self::FAILURE;
         }

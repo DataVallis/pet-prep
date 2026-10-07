@@ -79,7 +79,8 @@ class CareScheduleService
         $now = CarbonImmutable::instance($now)->setTimezone($tz);
         $windows = $this->windowsOn($pet, $config, $now->toDateString());
 
-        $quiet = $pet->quietHours();
+        // Legacy pets have no parent-covered windows: no quiet-hours query.
+        $quiet = $pet->isLegacyProfile() ? null : $pet->quietHours();
         $current = null;
         $upcoming = null;
         $lastEnded = null;
@@ -92,7 +93,13 @@ class CareScheduleService
                 && ! $this->isParentCoveredFor($pet, $quiet, $start, $end)) {
                 $upcoming = [$start, $end];
             }
-            if ($end->lessThanOrEqualTo($now) && ($lastEnded === null || $end->greaterThan($lastEnded[1]))) {
+            // Rule A looks at the last ended CHILD window: a parent-covered one is
+            // skipped (if the parent tick skipped it — hard stop / vet — it must
+            // not hide the child's missed meal; a real parent meal still counts
+            // through "nothing fed since", parent_fed_pet is in FED_TYPES).
+            if ($end->lessThanOrEqualTo($now)
+                && ($lastEnded === null || $end->greaterThan($lastEnded[1]))
+                && ! $this->isParentCoveredFor($pet, $quiet, $start, $end)) {
                 $lastEnded = [$start, $end];
             }
         }
@@ -112,14 +119,14 @@ class CareScheduleService
         // it is unused, otherwise the next child window that starts later.
         $next = $current !== null && ! $fedInCurrent ? $current : $upcoming;
 
-        // M3-12 rule A (David 2026-10-07 20:15): the most recent window that has
-        // already ended was missed — it started after the birth, the parent does
-        // not cover it, and nothing was fed since its start (neither inside it
-        // nor after it ended).
+        // M3-12 rule A (David 2026-10-07 20:15): the most recent ended child
+        // window was missed — it started after the birth and nothing (child or
+        // parent meal) was fed since its start. A child window that ended during
+        // a hard stop / vet / payment lock counts as missed (kind to the dog —
+        // Claude, čaka Davida).
         $missedMeal = $lastEnded !== null
             && $pet->born_at !== null
             && $lastEnded[0]->greaterThanOrEqualTo(CarbonImmutable::instance($pet->born_at))
-            && ! $this->isParentCoveredFor($pet, $quiet, $lastEnded[0], $lastEnded[1])
             && ($lastFedAt === null || $lastFedAt->lessThan($lastEnded[0]));
 
         return new FeedingStatus(

@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Otrok se uči odgovornosti, ne frustracije. Nemogoča zahteva uči samo, da obvestila lažejo. Zdaj ima vsak opomnik dejanje, ki ga otrok res lahko naredi, ocena pa ostane poštena (zamuda se ne izbriše).
 
-**Številke:** prag 20 % (prikazana vrednost; 20,4 → 20 še velja, 20,5 → 21 ne), en vir resnice za gumb, stanje in obvestila. Testi: strežnik 1.297 zelenih (35 novih, med njimi Davidov primer 12:11, otrok, ki je hranil pravočasno, in preizkus vseh 24 ur dneva za 6 vrednosti lakote), aplikacija 1.313 zelenih (19 novih). Novi testi padejo, če pravilo odstranimo. **Na telefonu še ni preizkušeno.**
+**Številke:** prag 20 % (prikazana vrednost; 20,4 → 20 še velja, 20,5 → 21 ne), en vir resnice za gumb, stanje in obvestila. Testi: strežnik 1.304 zelenih (42 novih, med njimi Davidov primer 12:11, otrok, ki je hranil pravočasno, in preizkus vseh 24 ur dneva za 6 vrednosti lakote), aplikacija 1.313 zelenih (19 novih). Novi testi padejo, če pravilo odstranimo. **Na telefonu še ni preizkušeno.**
 
 **Kako povedati:**
 - 👩 Starši: »Če otrok zamudi obrok in je kuža zelo lačen, ga lahko nahrani takoj — kdor hrani pravočasno, tega ne potrebuje. Ocena pa pove resnico: zamujen obrok ostane zamujen.«
