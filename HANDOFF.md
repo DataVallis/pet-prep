@@ -5,7 +5,7 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-07 (Claude, orchestrator — M1-18 i18n complete on PR #65, **waiting for David to merge**; next: M3 payments, then HealthKit / Health Connect — David's order).
+- **Last updated:** 2026-10-07 midday (Claude — M1-18 on PR #65 **waiting for David to merge**; M3 payments decided + partly built on stacked branches, WIP; next: finish M3-11/M3-09, then HealthKit / Health Connect).
 - **Production:** `https://api.petprep.si` live (Hetzner CX23, Docker Compose + Caddy). Merge to `main` → CI (`CI OK`) → automatic deploy when backend / deployment / scripts / workflow changed (DEPLOYMENT.md D16). Website `petprep.si` is served from the separate repo `DataVallis/pet-prep-website` (D15). Last verified deploy: `98eabfb` (M5-R03 training backend), 2026-10-06.
 - **App:** TestFlight build 1.24.4 has the push-registration loop (fixed on `main`, PR #45/#48). **David must ship a new TestFlight build from `main`** (he owns app version — commit `58551b1` "mobile version change" is his). Nothing from M5-R02 / M5-R03 UI and nothing of the **CGP v2 rebrand** has been checked on a device yet. The rebrand adds native modules (`expo-font`, `expo-splash-screen`) and new icons / splash → needs a **new native EAS build** (an OTA update is not enough).
 - **PR #59 (M5-R03b) merged and deployed 2026-10-07** (`b3246ef`; GitHub Actions billing was blocking the `CI OK` job on 2026-10-06 — David fixed it). Small fix PR `fix/legacy-pet-age-label` (mobile only).
@@ -62,6 +62,17 @@
 5. **David:** M5-R03b — only the minimum-one-session rule (≥ 7 trainers) is still open (the rest confirmed 2026-10-07). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-07 midday (cloud, orchestrator) — M3 payments started, stopped at the usage limit
+- **David's payment decisions (2026-10-07):** one purchase = **one 12-week challenge for one pet** (consumable `petprep_challenge_12w`, 49,99 €); the 7-day trial starts at the pet's **birth**; after the trial without a purchase the **game pauses** (new lock `payment_required`, like hard stop); the free/paid split of BUSINESS_MODEL §7 is confirmed (mutt free forever as a sandbox). Full spec: `docs/product/PAYMENTS_SPEC.md` (on `feat/M3-11-challenge-trial`).
+- Branches (all stacked on PR #65, none reviewed, no PRs yet):
+  - `feat/M3-07-revenuecat-sdk` (0f98781) — mobile RevenueCat SDK infra, parent-only, done + tested (Jest 1292).
+  - `feat/M3-08-revenuecat-ledger` (3783d3d) — backend ledger + fail-closed webhook, done + tested (Pest 1247) **but built as family entitlements** → must be reworked to per-pet credits (spec).
+  - `feat/M3-11-challenge-trial` (9635def, **WIP**) — backend rework: enums, plan/trial migration, push copy started. Unfinished, untested.
+  - `feat/M3-09-paywall` (d93cea8, **WIP**) — mobile plan picker / billing module started. Unfinished, untested.
+- Subagents hit the weekly usage limit (resets 2026-10-11 21:00). Next session: finish M3-11 backend per spec → M3-09 app → QA → PRs. Then M3-04/05/06 HealthKit / Health Connect.
+- **David found (device, 12:11):** legacy mutt at hunger 0 % at noon, feed button says "ob 17:00", push says it will get sick in 30 min — the rules make the push ask for an impossible action (missed 06–10 window, −8 %/h, next window 17:00, illness after 6 h at 0 %). Proposal awaiting David: emergency feeding outside a window when hunger is ≤ 20 % (counts as a late/missed routine in the score) and pushes never ask for an action that is currently refused. His screenshot was an old build ("STAROST: 0 MESECEV").
+- **David's request:** play and cuddling with the pet (new needs) — not in the roadmap yet; needs a spec (proposed as M5-R05).
 
 ### 2026-10-07 (cloud, orchestrator) — M1-18 i18n (English default + Slovenian)
 - David's order for today: 1. English, 2. payments (49,99 € challenge, 7-day trial, Apple + Google), 3. real steps (HealthKit / Health Connect).
