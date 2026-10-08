@@ -205,6 +205,8 @@ export function makeChildState(
     behaviour: { take_out: null, active_events: [], scene: null, can_take_out: false, can_resolve_chewing: false },
     // M5-R03 training: off (pet created by an app without the `training` feature).
     training: makeTrainingState(),
+    // M5-R05 play & cuddle: none (a mutt / legacy-like pet has no play).
+    play: null,
   };
 }
 
@@ -409,6 +411,8 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     behaviour: { take_out: null, active_events: [], scene: null },
     // M5-R03 training: off.
     training: { enabled: false, commands: [], today_done: false, session_active: false },
+    // M5-R05 play & cuddle: none (mutt).
+    play_today: null,
     media: makeMedia(),
     traffic_light: { color: 'green', reasons: [] },
     care_score: { score: null, done: 0, expected: 0, illnesses: 0, since: '2026-10-01T08:00:00+00:00' },
