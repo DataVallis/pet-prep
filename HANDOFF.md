@@ -55,6 +55,8 @@
 
 ## 5. Next steps (priority queue)
 
+**Start here (new session after 2026-10-08 evening):** M5-R06 cat — R06-01 (#91, deployed 66ea77a after #92/#93 backup fixes) and R06-02 (#94, mobile picker, merged 05deb0a) are done. **Next: M5-R06-03** (cat data + life stages from `docs/research/cat-data/data.json`, new StageParamKeys + CHECK, replace cat breed_configs placeholders via data migration — the seeder is insert-only), then R06-04 … R06-09 per `docs/engineering/M5-R06_PLAN.md`. David 2026-10-08: cats must be finished before demo users get the app (so the species step will always be visible then); cat picker copy approved. Open debt: `mobile/CLAUDE.md` "Current reality" still mentions `DogPickerStep` / old `CLIENT_FEATURES`; dog-only parent strings ("Spremeni kužka", `muttLocked`) → R06-08c.
+
 **Start here (new session, after 2026-10-08 midday):**
 0. **D17 / M5-09 production reset** — PR `chore/reset-game-data`: QA review, merge (deploys), then **David runs `bash scripts/reset-game-data.sh` (dry run) and `--execute` on the server** (`docs/PRODUCTION_DEPLOYMENT.md` §6a) before inviting testers; afterwards fix `admin@petprep.io` (M0-15).
 1. **M5-R05 app part** — built on `feat/M5-R05-play-cuddle-app` (PR open, see session log 2026-10-08 afternoon): QA review, merge (mobile only → no deploy), then David checks it on a device (new build). Open (D) for David: Q2 legacy pets (proposed no), numbers in `backend/config/play.php`. QA follow-up m1: isolation test should also compare metrics/zero_since step by step.
