@@ -8,6 +8,19 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-08 — Pravila za muco potrjena (M5-R06, *načrt*)
+
+**Kaj se je zgodilo:** David je potrdil vseh 10 odločitev o skrbi za mačko (`CAT_SPEC.md`). Namesto sprehoda se otrok z muco igra s **palico s peresom** (odrasla 2×, mucek 3× na dan), namesto kakca **počisti pesek** v 4 urah, muca je **notranja**, za praskanje kavča jo otrok **odnese na praskalnik in pohvali** — nikoli kazen. Domača mačka bo brezplačna, **Maine Coon** pa plačljiva pasma za izziv (ista cena 49,99 €). Koraki s telefona ostanejo samo pri psu.
+
+**Zakaj je pomembno:** Druga vrsta živali odpre PetPrep družinam, ki razmišljajo o mački. Pravila temeljijo na virih (AAHA/AAFP, FIFe, VetCompass), otrok pa nikoli ne kaznuje živali.
+
+**Številke:** 10 odločitev, 2 pasmi (1 brezplačna, 1 plačljiva), 0 vrstic kode — vse je še *načrt*.
+
+**Kako povedati:**
+- 👩 Starši: »Kmalu (*načrt*) tudi muca: igra, pesek, sveža voda — in nikoli kazen.«
+- 💼 Investitorji: »Druga vrsta na istem pogonu pravil in istem izdelku za 49,99 €.«
+- 🧒 Otroci: še nič — ko bo muca res v aplikaciji.
+
 ## 2026-10-08 — Igra in crkljanje v aplikaciji (M5-R05)
 
 **Kaj se je zgodilo:** Otrok ima nad gumbi nov gumb **»Igra«** (ob »Šola«). Izbere **žogo** — povleče jo s prstom navzgor in spusti, kuža steče ponjo in jo prinese (3 meti) — ali **crkljanje** — 5-krat pogladi kužka s prstom, ob vsakem potegu se pokaže srček. Ko kuža sam povabi (»Kuža ti prinaša žogo. Se igrava?«), se namesto gumba pokaže prijazna kartica brez odštevanja in z »Mogoče kasneje«. Po igri aplikacija takoj pokaže veselega kužka: pol ure napis »Kuža je vesel« in video igranja — pes brez tega videa dobi mehke srčke, narisane v aplikaciji. Starš vidi na kartici psa »Danes: 3× igra z žogo, 2× crkljanje« in v časovnici »Igra z žogo ×3 · {vzdevek}« s srčkom. Ko igra ni mogoča, je gumb siv in pove zakaj (»Kuža spi. Igrata se, ko se zbudi.«).

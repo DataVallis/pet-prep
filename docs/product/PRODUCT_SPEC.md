@@ -32,7 +32,7 @@
 
 **Vključeno:** dvojni profil starš–otrok, PIN pairing, samo pes (mešanček brezplačno + Border Collie premium), 4 metrike, koraki iz zdravstvenih API-jev, push obvestila in eskalacija, starševska nadzorna plošča s semaforjem, tihe ure, hard stop, bolezen in game over, AI video psa, IAP prek RevenueCat.
 
-**Izključeno (ne gradimo v MVP):** AR, GPS sledenje in zemljevidi, vremenski API, LLM / vision veterinar, B2B QR kuponi, naročnina Pro skrbnik. *(Mačke: David 2026-10-07 — v obseg skupaj s psi, izbira vrste → pasme (ROADMAP M5-R06); pravila skrbi za mačko še niso določena.)*
+**Izključeno (ne gradimo v MVP):** AR, GPS sledenje in zemljevidi, vremenski API, LLM / vision veterinar, B2B QR kuponi, naročnina Pro skrbnik. *(Mačke: David 2026-10-07 — v obseg skupaj s psi, izbira vrste → pasme (ROADMAP M5-R06); pravila skrbi za mačko potrdil David 2026-10-08 13:47 — §13, *načrt*, še ni zgrajeno.)*
 
 ## 3. Profili in onboarding
 
@@ -254,3 +254,15 @@ Zaključeni dnevi se zapišejo (strežnik) in se pozneje ne preračunajo: spreme
 ## 12. Faza 2 (po MVP) — Real-World AI asistent
 
 Gumb "Kupili smo pravo žival" → aplikacija postane asistent za pravega psa: IoT ovratnice (Tractive), AI veterinarski triage (vision), rast in prehrana, AI inštruktor (3,99 €/mes), affiliate trgovina, zavarovanja, booking veterinarjev in pasjih šol. Tehnično: LLM + RAG (pgvector). Cilj: LTV iz 3 mesecev na 10–15 let. **Podrobna specifikacija: [`PHASE2_SPEC.md`](PHASE2_SPEC.md)** (David, 4. 10. 2026).
+
+## 13. Mačka — pravila skrbi (*načrt*, M5-R06)
+
+> **Status: *načrt* — nič od tega še ni zgrajeno.** Pravila je potrdil David 8. 10. 2026 13:47 (CAT_SPEC §0, Q1–Q10). Podrobnosti, viri [Cn] in še odprti manjši predlogi (D): [`CAT_SPEC.md`](CAT_SPEC.md). Vse, kar tu ni drugače zapisano, velja kot pri psu (§4–§11).
+
+- **Vrsti in pasme:** starš najprej izbere vrsto (pes · mačka), nato pasmo. **Domača mačka (mešanka) je brezplačna** kot mešanček; **Maine Coon** je plačljiva pasma za 12-tedenski izziv (British Shorthair kasneje). Izziv za mačko: **ista cena 49,99 €, isti izdelek** `petprep_challenge_12w`, ista pravila (PAYMENTS_SPEC). Muca je **notranja (stanovanjska)** mačka.
+- **Faze (AAHA/AAFP 2021):** mucek < 12 mesecev · mlada mačka 1–6 let · zrela mačka 7–10 let · starejša mačka od 10 let (120 mesecev). Starost ob prihodu: mucek **2 meseca** (domača mačka) / **3 mesece** (Maine Coon); mlada 12, zrela 84, starejša 120 mesecev. 1 teden programa = 1 mesec (kot §4).
+- **Hrana in voda:** okna hranjenja po fazi (CAT_SPEC §3). **Sveža voda 2× na dan**, razmik ≥ 4 h. Lakota in žeja upadata **−8 %/h** za obe pasmi (abstrakcija igre).
+- **Igra namesto sprehoda:** mini-igra s **palico s peresom** — odrasla muca **2× na dan**, mucek **3× na dan**; ena mini-igra velja za eno pravo igro. **Koraki s telefona ostanejo samo za psa** (mačja družina ne potrebuje Apple Zdravje / Health Connect). Dan brez igre **ne povzroči bolezni**: rutina »Igra« je zamujena (Care Score), naslednji dan pa muca **»opraska kavč«**.
+- **Praskanje namesto šolanja:** mačka nima šolanja z ukazi. Dogodek »opraskala je kavč« otrok razreši z akcijo **»Odnesi na praskalnik in pohvali«** (pohvala v 3 s); **nikoli kazen**.
+- **Pesek namesto kakca:** vsaka uporaba peska (odrasla **2/dan**, mucek **3/dan**) je rutina »Počisti pesek« z rokom **4 ure izven tihih ur**. Če rok poteče, muca naredi **nered zraven peska** in velja obstoječa lestvica (§6: alarm, bolezen po 6 h izven tihih ur, game over po 24 h). **Tedenska menjava vsega peska** je ena rutina na teden programa.
+- **Česanje (samo Maine Coon):** rutina **3× na teden**; 2 zamujeni zapored → **»vozel v dlaki«**, brez bolezni.

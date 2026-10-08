@@ -1,26 +1,40 @@
 # PetPrep — Mačka: specifikacija skrbi (M5-R06)
 
-> **Status:** osnutek specifikacije, 8. 10. 2026 (Claude). **Odločil David 7. 10. 2026:** na začetku sta vrsti **pes in mačka**. Izbira gre najprej po **vrsti**, nato po **pasmi** (seznam z iskanjem, skalabilno). Pred gradnjo je potreben spec skrbi za mačko, z viri kot v [`REALISM_SPEC.md`](REALISM_SPEC.md). Vse drugo v tem dokumentu je **Claudov predlog**.
+> **Status:** spec **potrjen**, 8. 10. 2026. **Odločil David 7. 10. 2026:** na začetku sta vrsti **pes in mačka**. Izbira gre najprej po **vrsti**, nato po **pasmi** (seznam z iskanjem, skalabilno). Pred gradnjo je potreben spec skrbi za mačko, z viri kot v [`REALISM_SPEC.md`](REALISM_SPEC.md). **David 8. 10. 2026 13:47:** potrdil priporočene odgovore na vsa vprašanja Q1–Q10 (§0). Kar je še označeno z **(D)**, je Claudov predlog, ki čaka potrditev (seznam na koncu §0). **Nič od tega še ni zgrajeno.**
 > **Oznake:** številka z oznako **[Cn]** ima vir v [`docs/research/cat-data/sources.md`](../research/cat-data/sources.md). **(D)** pomeni predlog brez vira ali še neodločeno, kar čaka Davidovo potrditev. Kar je (D), se staršem in otrokom ne sme prikazati kot dejstvo.
 > **Temeljno pravilo (kot pri psu):** številk o mačkah si ne izmišljujemo. Pravila igre (odstotki, ure, upadanje) so abstrakcija igre in so vedno označena kot odločitev, ne kot literatura.
-> **Pred gradnjo:** David potrdi odgovore na spodnja vprašanja. Nato sledijo `docs/research/cat-data/data.json` (vsaka vrednost z virom, kot pri psu), prenos pravil v `PRODUCT_SPEC.md` in naloge v `ROADMAP.md`. Šele nato pride na vrsto koda.
+> **Naslednji korak:** odgovori na Q1–Q10 so potrjeni in prenešeni v `PRODUCT_SPEC.md` §13 (*načrt*). Sledita **izvedbeni načrt** (naloge v `ROADMAP.md` M5-R06) in `docs/research/cat-data/data.json` (vsaka vrednost z virom, kot pri psu). Šele nato pride na vrsto koda.
 
-## 0. Odprta vprašanja za Davida
+## 0. Vprašanja za Davida — odločeno
 
-| # | Vprašanje | Priporočilo (Claude) |
+Vsa vprašanja Q1–Q10: ✅ **David 8. 10. 2026 13:47** — potrdil priporočeni odgovor (spodaj).
+
+| # | Vprašanje | Odločitev |
 |---|---|---|
-| Q1 | **Kaj pri mački nadomesti sprehod (korake)?** | **Dnevna igra s palico s peresom** (mini-igra, ~60 s): odrasla muca **2× na dan**, mucek **3× na dan** (viri: 2–3 igre na dan, mladiči več [C10]; več kratkih iger čez dan [C11]). Ena mini-igra v aplikaciji velja za eno pravo igro (prava traja 10–15 min [C10], to otroku tudi povemo) **(D)**. **Koraki s telefona ostanejo samo za psa.** Mačja družina zato ne potrebuje dovoljenja za Apple Zdravje / Health Connect. |
-| Q2 | **Kaj se zgodi, če otrok cel dan ni igral z muco?** Pes po dnevu brez sprehoda zboli. | **Muca ne zboli.** Ni vira, da bi en dan brez igre povzročil bolezen. Namesto tega: zamujena rutina (Care Score) in naslednji dan dogodek **»opraskala je kavč«** (glej Q10) **(D)**. Tako je posledica realna (dolgčas → neželeno vedenje [C8, C22]), a ne pretirana. |
-| Q3 | **Mačje stranišče (pesek):** kako deluje? | Vsaka **uporaba peska** je rutina **»Počisti pesek«** z rokom **4 ure izven tihih ur** (D). Odrasla muca ima **2 uporabi na dan**, mucek **3** (D; viri: odrasla lula 2–4× in kaka 1–2× na dan, mladiči pogosteje [C6]; čistiti vsaj 1–2× na dan [C5, C6, C7]). Če pesek ni počiščen, muca naredi **nered zraven peska**. Takrat čistoča pade na 0 % in velja **obstoječa lestvica** (alarm po 1 h, bolezen po 6 h izven tihih ur, game over po 24 h). **Tedenska menjava vsega peska** je ena rutina na teden programa [C5, C6, C7]. |
-| Q4 | **Življenjske faze in starost ob prihodu** | Po smernicah AAHA/AAFP 2021 [C1]: **mucek < 12 mesecev**, **mlada mačka 1–6 let**, **zrela mačka 7–10 let**, **starejša mačka od 10 let**. Ob prihodu: mucek **2 meseca** (domača mačka, ≥ 8 tednov [C13]) oz. **3 mesece** (Maine Coon, rodovniški mucki gredo od doma pri 12–13 tednih [C13]). Mlada mačka **12**, zrela **84**, starejša **120** mesecev (prvi mesec faze, kot pri psu). Pri 12-tedenskem izzivu z muckom ta v 11. (Maine Coon v 10.) tednu postane mlada mačka. |
-| Q5 | **Plačljiva pasma za izziv** | **Maine Coon.** Je najbolj registrirana pasma v FIFe 2024 (23.775, 1. mesto [C19]). Ima dolgo dlako, ki jo je treba redno česati [C17, C18], torej pravo dodatno obveznost (kot Border Collie z gibanjem). Je velika, pozno dozori (3–5 let [C17]) in je vizualno prepoznavna za AI (čopki na ušesih, ovratnik, dolg rep [C16]). **British Shorthair** (2. mesto [C19]) ostane kandidat za drugo plačljivo pasmo, ker je za »izziv« premalo zahteven. |
-| Q6 | **Cena izziva za mačko** | **Ista: 49,99 €**, isti izdelek `petprep_challenge_12w`, ista pravila (PAYMENTS_SPEC P1–P11). **Domača mačka (mešanka) je brezplačna** kot mešanček, izziv pa je samo s plačljivo pasmo (M5-F03) **(D)**. |
-| Q7 | **Notranja ali zunanja mačka?** | V simulaciji je muca **notranja (stanovanjska)** **(D)**. Igra ne more simulirati zunanjih nevarnosti, vse otrokove naloge pa so v hiši. AAFP 2024 zahteva, da notranji mački zagotovimo igro, lov in vertikalni prostor [C22], ASPCA pa priporoča notranjo mačko [C5]. Staršu ob izbiri razložimo, da je zunanja mačka v resnici pogosta odločitev družine. |
-| Q8 | **Česanje** (samo Maine Coon) | Rutina **»Počeši muco«** **3× na teden**, z razmikom vsaj 1 dan (D). Viri dajejo razpon: TICA pri gosti dlaki vsak dan, CFA »vsaj nekajkrat na teden« [C17], Vetstreet enkrat na teden [C18]. Kratka mini-igra drgnjenja (kot čiščenje). Brez bolezni: če otrok česanje zamudi 2× zapored, nastane **»vozel v dlaki«**, ki ga razreši daljše česanje (D). Domača kratkodlaka muca te rutine nima. |
-| Q9 | **Voda in hitrosti upadanja** | Sveža voda **2× na dan** (zjutraj in zvečer), razmik ≥ 4 h (D). Vir pravi, da posodo vsak dan pomijemo in napolnimo, voda pa je na voljo ves čas [C2, C5]. Pes ima 3×. Lakota **−8 %/h** in žeja **−8 %/h** za obe pasmi (D, abstrakcija igre). Dodatni napor Maine Coona je česanje (Q8), ne hitrejša lakota (ni vira). |
-| Q10 | **Šolanje (ukazi) in praskanje** | Mačka v prvi različici **nima šolanja z ukazi** (D). Namesto tega dobi dogodek **»opraskala je kavč«** (analogija psovega grizenja). Otrok ga razreši z akcijo **»Odnesi na praskalnik in pohvali«**, pri kateri mora pohvaliti v 3 sekundah, kot svetuje AAFP [C23]. Nikoli kazen [C23]. Dogodek se zgodi samo dan po zamujeni igri (Q2), ne naključno pri mucku (za pogostost ni vira). |
+| Q1 | **Kaj pri mački nadomesti sprehod (korake)?** | ✅ **David 8. 10. 13:47:** **Dnevna igra s palico s peresom** (mini-igra, ~60 s): odrasla muca **2× na dan**, mucek **3× na dan** (viri: 2–3 igre na dan, mladiči več [C10]; več kratkih iger čez dan [C11]). Ena mini-igra v aplikaciji velja za eno pravo igro (prava traja 10–15 min [C10], to otroku tudi povemo). **Koraki s telefona ostanejo samo za psa.** Mačja družina zato ne potrebuje dovoljenja za Apple Zdravje / Health Connect. |
+| Q2 | **Kaj se zgodi, če otrok cel dan ni igral z muco?** Pes po dnevu brez sprehoda zboli. | ✅ **David 8. 10. 13:47:** **Muca ne zboli.** Ni vira, da bi en dan brez igre povzročil bolezen. Namesto tega: zamujena rutina (Care Score) in naslednji dan dogodek **»opraskala je kavč«** (glej Q10). Tako je posledica realna (dolgčas → neželeno vedenje [C8, C22]), a ne pretirana. |
+| Q3 | **Mačje stranišče (pesek):** kako deluje? | ✅ **David 8. 10. 13:47:** Vsaka **uporaba peska** je rutina **»Počisti pesek«** z rokom **4 ure izven tihih ur**. Odrasla muca ima **2 uporabi na dan**, mucek **3** (viri: odrasla lula 2–4× in kaka 1–2× na dan, mladiči pogosteje [C6]; čistiti vsaj 1–2× na dan [C5, C6, C7]). Če pesek ni počiščen, muca naredi **nered zraven peska**. Takrat čistoča pade na 0 % in velja **obstoječa lestvica** (alarm po 1 h, bolezen po 6 h izven tihih ur, game over po 24 h). **Tedenska menjava vsega peska** je ena rutina na teden programa [C5, C6, C7]. |
+| Q4 | **Življenjske faze in starost ob prihodu** | ✅ **David 8. 10. 13:47:** Po smernicah AAHA/AAFP 2021 [C1]: **mucek < 12 mesecev**, **mlada mačka 1–6 let**, **zrela mačka 7–10 let**, **starejša mačka od 10 let**. Ob prihodu: mucek **2 meseca** (domača mačka, ≥ 8 tednov [C13]) oz. **3 mesece** (Maine Coon, rodovniški mucki gredo od doma pri 12–13 tednih [C13]). Mlada mačka **12**, zrela **84**, starejša **120** mesecev (prvi mesec faze, kot pri psu). Pri 12-tedenskem izzivu z muckom ta v 11. (Maine Coon v 10.) tednu postane mlada mačka. |
+| Q5 | **Plačljiva pasma za izziv** | ✅ **David 8. 10. 13:47:** **Maine Coon.** Je najbolj registrirana pasma v FIFe 2024 (23.775, 1. mesto [C19]). Ima dolgo dlako, ki jo je treba redno česati [C17, C18], torej pravo dodatno obveznost (kot Border Collie z gibanjem). Je velika, pozno dozori (3–5 let [C17]) in je vizualno prepoznavna za AI (čopki na ušesih, ovratnik, dolg rep [C16]). **British Shorthair** (2. mesto [C19]) ostane kandidat za drugo plačljivo pasmo, ker je za »izziv« premalo zahteven. |
+| Q6 | **Cena izziva za mačko** | ✅ **David 8. 10. 13:47:** **Ista: 49,99 €**, isti izdelek `petprep_challenge_12w`, ista pravila (PAYMENTS_SPEC P1–P11). **Domača mačka (mešanka) je brezplačna** kot mešanček, izziv pa je samo s plačljivo pasmo (M5-F03). |
+| Q7 | **Notranja ali zunanja mačka?** | ✅ **David 8. 10. 13:47:** V simulaciji je muca **notranja (stanovanjska)**. Igra ne more simulirati zunanjih nevarnosti, vse otrokove naloge pa so v hiši. AAFP 2024 zahteva, da notranji mački zagotovimo igro, lov in vertikalni prostor [C22], ASPCA pa priporoča notranjo mačko [C5]. Staršu ob izbiri razložimo, da je zunanja mačka v resnici pogosta odločitev družine. |
+| Q8 | **Česanje** (samo Maine Coon) | ✅ **David 8. 10. 13:47:** Rutina **»Počeši muco«** **3× na teden**, z razmikom vsaj 1 dan. Viri dajejo razpon: TICA pri gosti dlaki vsak dan, CFA »vsaj nekajkrat na teden« [C17], Vetstreet enkrat na teden [C18]. Kratka mini-igra drgnjenja (kot čiščenje). Brez bolezni: če otrok česanje zamudi 2× zapored, nastane **»vozel v dlaki«**, ki ga razreši daljše česanje. Domača kratkodlaka muca te rutine nima. |
+| Q9 | **Voda in hitrosti upadanja** | ✅ **David 8. 10. 13:47:** Sveža voda **2× na dan** (zjutraj in zvečer), razmik ≥ 4 h. Vir pravi, da posodo vsak dan pomijemo in napolnimo, voda pa je na voljo ves čas [C2, C5]. Pes ima 3×. Lakota **−8 %/h** in žeja **−8 %/h** za obe pasmi (abstrakcija igre, odločitev, ne literatura). Dodatni napor Maine Coona je česanje (Q8), ne hitrejša lakota (ni vira). |
+| Q10 | **Šolanje (ukazi) in praskanje** | ✅ **David 8. 10. 13:47:** Mačka v prvi različici **nima šolanja z ukazi**. Namesto tega dobi dogodek **»opraskala je kavč«** (analogija psovega grizenja). Otrok ga razreši z akcijo **»Odnesi na praskalnik in pohvali«**, pri kateri mora pohvaliti v 3 sekundah, kot svetuje AAFP [C23]. Nikoli kazen [C23]. Dogodek se zgodi samo dan po zamujeni igri (Q2), ne naključno pri mucku (za pogostost ni vira). |
 
-**Drugi odprti predlogi (D), ki ne potrebujejo posebnega vprašanja:** imena faz (»mucek«, »mlada / zrela / starejša mačka«), otroški samostalnik **»muca«** (§9), mehanika »prva pomoč« pri dolgotrajni lakoti (samo izobraževalno besedilo [C24]), obvestila (§6), igra in crkljanje (M5-R05) pri mački (§5.5).
+**Še odprto (D) — manjši predlogi, ki jih odločitve Q1–Q10 ne pokrivajo (čakajo Davida):**
+- imena faz (»mucek«, »mlada / zrela / starejša mačka«) (§2, §9);
+- otroški samostalnik **»muca«** / »mucek« (§9) in besedilo pogodbe (§9);
+- psova **igra z žogo pri mački odpade**, crkljanje ostane (§5.5, M5-R05);
+- podrobnosti mini-igre s palico: ~60 s, konec z »ulovom«, ≥ 2 h med igrama (§5.2);
+- odrasla mačka 2 obroka na dan kot poenostavitev igre (§3);
+- zamujena tedenska menjava peska → rok za čiščenje 2 h namesto 4 h (§4);
+- mucek ob prihodu že navajen na pesek, brez »luže« (§4);
+- izvor »podarjena od znancev« = posvojena (§1);
+- iskreno besedilo za starše o igri v aplikaciji (§5.4);
+- besedila obvestil (§6) in »prva pomoč« pri dolgotrajni lakoti (samo izobraževalno besedilo [C24]);
+- AI videz domače mačke, faze v promptu in videi stanj (§8);
+- podrobnosti izbirnika (sinonimi v iskanju, filtri pri > 8 pasmah) (§10).
 
 ## 1. Kaj starš izbere (pred PIN-om otroka)
 
@@ -35,7 +49,7 @@
 ## 2. Starost, faze in življenjska doba
 
 - **Čas:** enako kot pri psu, **1 teden programa = 1 mesec** starosti (PRODUCT_SPEC §4). Čas zaklepa do plačila se ne šteje.
-- **Faze (AAHA/AAFP 2021 [C1]):** mucek od rojstva do 1 leta · mlada mačka (*young adult*) 1–6 let · zrela mačka (*mature adult*) 7–10 let · starejša mačka 10+ let. Smernice se pri 10 letih prekrivajo, zato predlagamo, da starejša mačka velja **od 120 mesecev** (D).
+- **Faze (AAHA/AAFP 2021 [C1]):** mucek od rojstva do 1 leta · mlada mačka (*young adult*) 1–6 let · zrela mačka (*mature adult*) 7–10 let · starejša mačka 10+ let. Smernice se pri 10 letih prekrivajo, zato starejša mačka velja **od 120 mesecev** (Q4).
   - Za razliko od psa meja starejše faze **ni** 0,75 × življenjske dobe. Za mačke ima smernica svojo izrecno mejo, in ta ima prednost.
   - Obstoječa tabela faz (`puppy`, `young`, `adult`, `senior`) se preslika takole: `puppy` → mucek, `young` → mlada, `adult` → zrela, `senior` → starejša (§11).
 - **Starost ob prihodu (Q4):** domača mačka 2 meseca (≥ 8 tednov [C13]), Maine Coon 3 mesece (12–13 tednov [C13]), mlada 12, zrela 84, starejša 120 mesecev.
@@ -55,14 +69,14 @@
 
 - **Zakaj ne več majhnih obrokov:** mačke v naravi jedo veliko majhnih obrokov in polovico dneva namenijo iskanju hrane. Smernice svetujejo razdelitev na več majhnih obrokov in igrače z ugankami za hrano [C8, C9]. Za otroka bi bilo to preveč oken, zato je 2× na dan **poenostavitev igre** (D). To staršu povemo v razlagi. Igrača s hrano (»uganka za hrano«) je kandidat za kasnejšo nadgradnjo, ne za prvo različico.
 - **Vsa ostala pravila hranjenja ostanejo kot pri psu:** okno, nujni obrok pri ≤ 20 % (M3-12), obrok v tihih urah opravi starš, »najprej počisti« (samo pri neredu zraven peska, §4).
-- **Voda:** potreba 55–70 ml/kg na dan [C4]. Sveža voda mora biti na voljo ves čas, posodo vsak dan pomijemo in napolnimo [C2, C5]. Voda naj bo vsaj 50 cm od hrane in peska [C4], stranišče pa daleč od hrane in vode [C3, C7, C8] (besedilo za otroka). **V igri: »Sveža voda« 2× na dan, razmik ≥ 4 h** (Q9, D).
+- **Voda:** potreba 55–70 ml/kg na dan [C4]. Sveža voda mora biti na voljo ves čas, posodo vsak dan pomijemo in napolnimo [C2, C5]. Voda naj bo vsaj 50 cm od hrane in peska [C4], stranišče pa daleč od hrane in vode [C3, C7, C8] (besedilo za otroka). **V igri: »Sveža voda« 2× na dan, razmik ≥ 4 h** (Q9).
 - **Lakota je pri mački resna:** mačka, ki nekaj dni ne je, je v nevarnosti zamaščenih jeter (hepatična lipidoza), ki so lahko smrtna [C24, C25]. To je razlog, da lestvica za lakoto ostane enako stroga kot pri psu. Za otroka in starša je to **samo izobraževalno besedilo**, brez števila dni.
 
 ## 4. Mačje stranišče (pesek) — nadomesti »kakca«
 
 **Iz virov:** odrasla mačka lula 2–4× in kaka 1–2× na dan, mladi mucki kakajo 1–6× na dan, starejši mucki 1–3× [C6]. Pesek čistimo **vsaj enkrat** [C5] oz. **dvakrat na dan** [C6, C7], **ves pesek pa zamenjamo enkrat na teden** [C5, C6, C7]. Običajno priporočilo je en pladenj na mačko in še enega, vendar ni podprto z dokazi [C7].
 
-**V igri (Q3, D):**
+**V igri (Q3, David 8. 10. 2026):**
 1. **Uporaba peska:** za vsak lokalni dan vnaprej izžrebamo čase uporabe izven tihih ur, enakomerno po delih dneva (kot čase kakca). Odrasla muca ima **2**, mucek **3** uporabe. Muca je pravilno uporabila pesek, zato to **ni nered** in čistoča ostane. Hrana in voda nista zaklenjeni.
 2. **Rutina »Počisti pesek«** (mini-igra z lopatko, kot drgnjenje) z rokom **4 ure, šteto samo izven tihih ur**. Pravočasno: rutina opravljena.
 3. **Rok poteče:** muca naredi **nered zraven peska**. Od tu naprej je vse **enako kot kakec pri psu**: čistoča 0 %, »najprej počisti«, faze 1–3, bolezen po 6 h izven tihih ur in game over po 24 h. Nered počisti običajna igra čiščenja, ki hkrati očisti tudi pesek.
@@ -75,7 +89,7 @@
 ### 5.1 Zakaj igra
 Igra in lov sta ena od petih temeljnih potreb mačke [C8]. Notranja mačka mora imeti možnost »lova«, igre in vertikalnega prostora [C22]. Viri svetujejo **2–3 igre na dan po 10–15 minut**, mladiči več [C10], ter **več kratkih iger čez dan** [C11]. Najboljša igrača je **palica s peresom**, ki se premika **stran od mačke**, kot plen, in ne tik pred njenim obrazom (mačke na manj kot 25 cm slabo vidijo [C11]). Igrače menjamo, da se muca ne naveliča [C8].
 
-### 5.2 Mini-igra »Palica s peresom« (D)
+### 5.2 Mini-igra »Palica s peresom« (Q1; podrobnosti (D))
 - Otrok s prstom vleče pero po zaslonu. Muca se plazi, preži in skoči. Pero, ki beži **stran** od muce, je zanjo zanimivo, mahanje tik pred njenim nosom pa ne [C11]. Muca torej nagradi pravo tehniko.
 - Igra se konča z **»ulovom«** (muca ujame pero), kar je naravni zaključek lova (D, vir ni bil najden). Ena igra traja **~60 s** (D).
 - **Dnevni cilj** je število iger: mucek **3**, mlada / zrela / starejša **2** (Q1; [C10] 2–3, mladiči več). Med dvema igrama mora miniti **vsaj 2 h** (D), da so razporejene čez dan kot v resnici.
@@ -112,12 +126,12 @@ Pri psu sprehod otroka spravi ven. Igra z muco pa je v aplikaciji in zahteva zas
 | Rutina | Koliko | Opravljena | Zamujena |
 |---|---|---|---|
 | Hrana | okna po fazi (§3) | hranjenje v oknu | okno brez hranjenja |
-| Voda | 2 na dan (Q9, D) | vsako dolivanje | manjkajoče ob koncu dneva |
-| Počisti pesek | vsaka uporaba (2 ali 3 na dan) | v 4 h izven tihih ur (D) | rok potekel → nered zraven peska |
+| Voda | 2 na dan (Q9) | vsako dolivanje | manjkajoče ob koncu dneva |
+| Počisti pesek | vsaka uporaba (2 ali 3 na dan) | v 4 h izven tihih ur (Q3) | rok potekel → nered zraven peska |
 | Čiščenje | vsak nered (zraven peska, opraskan kavč) | v 2 h izven tihih ur (kot pes) | ni rešeno |
 | Menjava peska | 1 na teden programa | kadarkoli v tednu | teden mine brez menjave |
 | Igra | 3 (mucek) / 2 na dan | cilj iger dosežen | dan se konča pod ciljem |
-| Česanje (samo Maine Coon) | 3 na teden (Q8, D) | opravljena mini-igra | — (šteje se na koncu tedna) |
+| Česanje (samo Maine Coon) | 3 na teden (Q8) | opravljena mini-igra | — (šteje se na koncu tedna) |
 
 Formula Care Score, pošten delež, semafor in pravila »rutina se ne pričakuje« ostanejo nespremenjeni (PRODUCT_SPEC §9, §11).
 
@@ -162,7 +176,7 @@ Velike kartice za vsako pasmo ne zadoščajo, ker bo pasem in vrst veliko (David
 
 ## 11. Technical impact (English, no code)
 
-Impact list only; nothing is built before David approves this spec.
+Impact list only. David approved Q1–Q10 on 2026-10-08 13:47; nothing is built yet — next step is the implementation plan (ROADMAP M5-R06).
 
 **Data model**
 - New `Species` enum (`dog`, `cat`) and a non-null `pets.species` column. Existing rows are backfilled to `dog`, so legacy dogs are unaffected.
@@ -229,5 +243,5 @@ Impact list only; nothing is built before David approves this spec.
 **Docs (in the same PRs)**
 - PRODUCT_SPEC (cat rules), REALISM_SPEC §1 (species), PAYMENTS_SPEC (cat challenge), PLAY_CUDDLE_SPEC (§5.5), ARCHITECTURE, DIAGRAMS, FEATURES, audiences (parents / kids), BUILD_LOG, DECISIONS.
 
-## 12. Kaj ni v prvi različici (predlog)
+## 12. Kaj ni v prvi različici
 Mačka zunaj hiše, več mačk na družino z deljenim peskom (pravilo n + 1 pladnjev [C7]), igrače z ugankami za hrano [C9], striženje krempljev [C23] in veterinarski obiski kot del igre. Veterinarske osnove so samo izobraževalno besedilo za starša: cepljenje od 6–8 tednov na 2–4 tedne do ≥ 16 tednov [C21], kastracija pri 4 mesecih [C20, C3] oz. do 5 mesecev [C5], letni pregled [C5]. Kandidati za kasneje: izobraževalne kartice »Pravi mucek potrebuje …« za starša (vir pri vsaki), British Shorthair kot druga plačljiva pasma, zvoki (M5-R07).
