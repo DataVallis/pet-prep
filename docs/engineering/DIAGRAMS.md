@@ -669,6 +669,61 @@ flowchart TD
   LOW["meter ≤ 30 % outside quiet hours"] --> PUSH["play_reminder · once a day · not before night end + 2 h<br/>held while a sibling plays / the gap runs · dropped if the cat played (play_done) or a start is refused without an end today (not_actionable)"]
 ```
 
+### 5h. Cat litter, scratching and grooming (M5-R06-05, David 2026-10-08)
+
+Cats only (hidden behind `PETPREP_CATS_ENABLED`). A litter use is **not** a mess; only an unscooped tray becomes one. Numbers: `litter_uses_per_day` 3 / 2, `litter_scoop_deadline_hours` 4, `litter_full_change_days` 7, `grooming_sessions_per_week` 3 (Maine Coon) from `breed_stage_params`; overdue 2 h, scratching 2 h and "matted after ≥ 2 missed" are game constants traced to `cat-data/data.json`; mini-game mechanics in `config/cat_care.php`.
+
+```mermaid
+flowchart TD
+  U([Litter use at a random minute outside quiet hours<br/>kitten 3 · cat 2 a day]) --> D["tick: due_at = 4 h outside quiet hours<br/>2 h while last week's change was missed and not done since"]
+  D --> Q{"Scooped before due_at?<br/>POST /pet/litter/scoop · weekly change · cleaning the accident"}
+  Q -- yes --> OK["litter_scoop routine done (actor = child)"]
+  Q -- no --> F{"Deadline passed in a normal tick?<br/>(not frozen, no outage)"}
+  F -- no --> SKIP["escalated_at · no accident · routine missed / excused"]
+  F -- yes --> ACC["litter_accident at due_at · hygiene 0 · pet_litter_accident row"]
+  ACC --> LADDER["dog ladder: phases · alarm after 1 h · illness after 6 h outside quiet · game over after 24 h"]
+  ACC --> CLEAN["POST /pet/clean → hygiene 100 % + tray scooped"]
+  W([Program week: weekly birthday → next]) --> CH{"litter_change session completed in the week?"}
+  CH -- yes --> CHD["litter_change routine done (on the day the week ends)"]
+  CH -- no --> CHM["missed → next week's uses get 2 h until changed"]
+```
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant C as Child app
+  participant API as ChildPetController
+  participant S as ScratchingService
+  participant DB as PostgreSQL
+  participant R as Reverb
+  Note over S: midnight close: play routine missed → play_missed_on = yesterday<br/>→ one scratching at a random minute outside quiet hours (max 1/day)
+  Note over S: tick applies it like chewing: hygiene 0 · pet_scratched · scene "scratching" · 2 h deadline outside quiet
+  C->>API: POST /api/child/pet/scratching/start
+  API->>S: start (lock, decay catch-up)
+  S->>DB: pet_care_sessions (scratching, land_at_ms 800–2000, praise window 3000 ms)
+  API-->>C: 200 {session {id, land_at_ms, praise_window_ms, min_reaction_ms}}
+  C->>API: POST /api/child/pet/scratching/finish {session_id, praise_ms}
+  alt land + 150 ms ≤ praise ≤ land + 3 s
+    S->>DB: scratching cleaned · hygiene 100 % (no other mess) · resolved_scratching (actor child)
+    API-->>R: PetUpdated resolved_scratching
+  else too early / too late / no praise
+    API-->>C: 200 rejected — no penalty, try again
+    API-->>R: PetUpdated scratching_finished
+  end
+```
+
+```mermaid
+flowchart TD
+  G([Maine Coon grooming — POST /pet/grooming/start + finish]) --> R{"Refused?"}
+  R -- "week done (3) · today done · quiet hours · another child · mess open" --> NO["422 + next_allowed_at"]
+  R -- no --> S["30 s comb strokes (60 s while matted)"]
+  S --> OKG["groomed_pet → a grooming slot of the week · matted coat cleared"]
+  WE([Weekly birthday — tick closeGroomingWeek]) --> M{"≥ 2 of the week's 3 slots missed?"}
+  M -- yes --> MAT["coat_matted_at + pet_coat_matted row<br/>visible only: no illness, no metric / mood effect"]
+  M -- no --> FINE["nothing"]
+  MAT --> S
+```
+
 ## 6. Data model (core)
 
 Family model (M2-01, ADR-012): `families` own pets and quiet hours; `family_user` puts parents and children in a family; `pet_caretakers` links children to pets (shared pet = several rows). `users.parent_id` and `pets.user_id` are deprecated mirrors.
@@ -693,7 +748,7 @@ erDiagram
   PETS ||--o{ ACTIVITIES_LOG : logs
   PETS ||--o{ PET_MEDIA : "image + state video slots (M4-03)"
   PET_MEDIA ||--o{ AI_SPEND_LEDGER : "estimated cost per call"
-  PETS ||--o{ PET_HYGIENE_EVENTS : "messes: poop, puppy accident, chewing"
+  PETS ||--o{ PET_HYGIENE_EVENTS : "messes: poop, puppy accident, chewing; cat: litter uses, litter accident, scratching"
   PETS ||--o{ PET_PLAY_EVENTS : "play invitations + finished plays (mood only, M5-R05)"
   PETS ||--o{ PET_DAILY_WALKS : "closed days"
   PETS ||--o{ PET_CONTRACTS : "one per caretaker"
@@ -812,11 +867,13 @@ erDiagram
     string label_key "i18n breed name"
   }
   PET_HYGIENE_EVENTS {
-    string kind "poop accident chewing (M5-R02)"
+    string kind "poop accident chewing (M5-R02) litter_use litter_accident scratching (M5-R06-05)"
     date local_date
     timestamp scheduled_at
     string status "pending applied skipped"
-    timestamp cleaned_at
+    timestamp cleaned_at "cleaned or scooped"
+    timestamp due_at "litter use: scoop deadline (M5-R06-05)"
+    timestamp escalated_at "litter use: deadline handled"
   }
   PET_PLAY_EVENTS {
     string kind "play cuddle (M5-R05)"
