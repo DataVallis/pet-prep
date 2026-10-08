@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\RoutineType;
+use App\Models\BreedConfig;
 use App\Models\BreedStageParam;
 use App\Models\BreedStageParamChange;
 use App\Models\Pet;
@@ -171,7 +172,7 @@ describe('data migration for the rows PR #37 seeded', function () {
             // Open proposal: M5-R02's teething chewing chance (Claude, waiting for David;
             // the training numbers and effects were confirmed in M5-R03b). Dogs only —
             // the cat rows (M5-R06-03) are checked in CatLifeStageDataTest.
-            ->and(BreedStageParam::whereIn('breed_slug', ['mutt', 'border-collie'])->where('verified', false)->pluck('key')->unique()->values()->all())->toEqualCanonicalizing([
+            ->and(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false)->pluck('key')->unique()->values()->all())->toEqualCanonicalizing([
                 'chewing_chance_per_day',
             ]);
 

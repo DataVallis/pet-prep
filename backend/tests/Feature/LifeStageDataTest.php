@@ -3,6 +3,7 @@
 use App\Enums\StageParamKey;
 use App\Filament\Resources\BreedStageParamResource\Pages\EditBreedStageParam;
 use App\Filament\Resources\BreedStageParamResource\Pages\ListBreedStageParams;
+use App\Models\BreedConfig;
 use App\Models\BreedStageParam;
 use App\Models\BreedStageParamChange;
 use App\Models\Pet;
@@ -156,7 +157,7 @@ describe('import provenance', function () {
         // (minutes, progress, decay), the starting progress and the two training
         // effects (David 2026-10-07) are David's decisions (verified).
         // M5-R06-03: dog breeds only — the cat rowset is checked in its own describe below.
-        expect(BreedStageParam::whereIn('breed_slug', ['mutt', 'border-collie'])->where('verified', false)->pluck('key')->unique()->values()->all())
+        expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false)->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
             ]);

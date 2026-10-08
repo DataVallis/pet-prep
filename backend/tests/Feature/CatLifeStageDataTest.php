@@ -11,14 +11,18 @@ use App\Models\BreedConfig;
 use App\Models\BreedStageParam;
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\ChildProfileService;
 use App\Services\LifeStageService;
 use Database\Seeders\BreedConfigsSeeder;
 use Database\Seeders\BreedStageParamsSeeder;
+use Illuminate\Database\QueryException;
+use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Livewire\Livewire;
 
 use function Pest\Laravel\actingAs;
+use function Pest\Laravel\postJson;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,6 +81,25 @@ function clCat(BreedType $breed, int $arrivalAge): Pet
         ->create(['user_id' => User::factory()->child()->create()->id, 'arrival_age_months' => $arrivalAge]);
 }
 
+/** Parent PIN with a profile → child pin-login (both apps declare every feature) → the created pet. */
+function clPairedPet(array $profile): Pet
+{
+    config(['petprep.cats_enabled' => true]);
+    test()->withoutMiddleware([ThrottleRequests::class]);
+    $features = ['species_cat', 'behaviour_events', 'training'];
+    $parent = User::factory()->parent()->create();
+    $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
+    app('auth')->forgetGuards();
+    actingAsRole($parent);
+    $pin = postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id, 'features' => $features], $profile))
+        ->assertOk()->json('pin');
+    app('auth')->forgetGuards();
+    test()->withHeaders(['Authorization' => '']);
+
+    return Pet::findOrFail(postJson('/api/child/pin-login', ['pin' => $pin, 'device_name' => 'Tablet', 'features' => $features])
+        ->assertOk()->json('pet.id'));
+}
+
 describe('cat import provenance (cat-data/data.json)', function () {
     it('takes every cat value from cat-data/data.json with a listed C source; UNSOURCED (D) stays unverified', function () {
         $known = clSourceIds();
@@ -101,6 +124,7 @@ describe('cat import provenance (cat-data/data.json)', function () {
             // times are the dogs' window rule, not literature): no source, low.
             if ($row['key'] === StageParamKey::FeedWindows->value) {
                 expect($row['source_id'])->toBeNull()->and($row['confidence'])->toBe('low')
+                    ->and($row['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_CAT, "{$label}: windows decision = CAT_SPEC approval")
                     ->and($row['value'])->toBe(clWindowsFromNote((string) $entry['notes']), $label);
             } elseif ($row['source_id'] !== null) {
                 // A cited source is the one data.json names for the value.
@@ -117,7 +141,7 @@ describe('cat import provenance (cat-data/data.json)', function () {
                     ->and($row['decision'])->toBeNull()
                     ->and((string) $row['notes'])->toContain('UNSOURCED — proposal (D)');
             }
-            if ($row['decision'] !== null && $row['decision'] !== BreedStageParamsSeeder::CONFIRMED) {
+            if ($row['decision'] !== null && $row['key'] !== StageParamKey::FeedWindows->value) {
                 // David's cat decisions are recorded in data.json (CAT_SPEC Q1–Q10 / plan answers).
                 expect((string) ($entry['decision'] ?? ''))->toStartWith($row['decision'], "{$label}: data.json has no such decision");
             }
@@ -371,6 +395,59 @@ describe('Filament life-stage data for cats', function () {
     });
 });
 
+describe('pairing a cat with a profile (QA M1)', function () {
+    it('creates kittens with the sourced arrival age and stage, without dog training or dog behaviour events; dogs unchanged', function () {
+        seedLifeStageData();
+
+        $kitten = clPairedPet(['species' => 'cat', 'breed' => 'domestic_cat', 'origin' => 'adopted', 'age_stage' => 'puppy', 'plan' => 'free']);
+        expect($kitten->breed_type)->toBe(BreedType::DomesticCat)
+            ->and($kitten->arrival_age_months)->toBe(2)
+            ->and($kitten->life_stage)->toBe(LifeStage::Puppy)
+            ->and($kitten->training_enabled)->toBeFalse()
+            ->and($kitten->behaviour_events_enabled)->toBeFalse();
+
+        $coon = clPairedPet(['species' => 'cat', 'breed' => 'maine_coon', 'origin' => 'bought', 'age_stage' => 'puppy', 'plan' => 'challenge']);
+        expect($coon->breed_type)->toBe(BreedType::MaineCoon)
+            ->and($coon->arrival_age_months)->toBe(3)
+            ->and($coon->life_stage)->toBe(LifeStage::Puppy)
+            ->and($coon->training_enabled)->toBeFalse()
+            ->and($coon->behaviour_events_enabled)->toBeFalse();
+
+        $grown = clPairedPet(['species' => 'cat', 'breed' => 'domestic_cat', 'origin' => 'adopted', 'age_stage' => 'adult', 'plan' => 'free']);
+        expect($grown->arrival_age_months)->toBe(84)->and($grown->life_stage)->toBe(LifeStage::Adult)
+            ->and($grown->training_enabled)->toBeFalse();
+
+        // Dogs: same profile + features → training and behaviour events stay on.
+        $puppy = clPairedPet(['species' => 'dog', 'breed' => 'mutt', 'origin' => 'bought', 'age_stage' => 'puppy', 'plan' => 'free']);
+        expect($puppy->arrival_age_months)->toBe(2)
+            ->and($puppy->life_stage)->toBe(LifeStage::Puppy)
+            ->and($puppy->training_enabled)->toBeTrue()
+            ->and($puppy->behaviour_events_enabled)->toBeTrue();
+    });
+});
+
+describe('migration 2026_10_25_120000_add_cat_stage_param_keys', function () {
+    it('down() removes only the rows of the new keys and restores the old check; up() again lets the seeder re-add them', function () {
+        seedLifeStageData();
+        $migration = require database_path('migrations/2026_10_25_120000_add_cat_stage_param_keys.php');
+        $newKeys = ['play_sessions_per_day', 'play_min_gap_minutes', 'litter_uses_per_day', 'litter_scoop_deadline_hours',
+            'litter_full_change_days', 'grooming_sessions_per_week', 'scratching_after_missed_play'];
+        $others = DB::table('breed_stage_params')->whereNotIn('key', $newKeys)->orderBy('id')->get()->map(fn ($r) => (array) $r)->all();
+        expect(DB::table('breed_stage_params')->whereIn('key', $newKeys)->count())->toBeGreaterThan(0);
+
+        $migration->down();
+        // savepoint: the refused insert must not abort the test transaction
+        expect(DB::table('breed_stage_params')->whereIn('key', $newKeys)->count())->toBe(0)
+            ->and(DB::table('breed_stage_params')->orderBy('id')->get()->map(fn ($r) => (array) $r)->all())->toBe($others)
+            ->and(fn () => DB::transaction(fn () => DB::table('breed_stage_params')->insert(['breed_slug' => 'domestic-cat', 'stage' => 'all', 'age_from_months' => 0,
+                'key' => 'litter_full_change_days', 'value' => '7', 'confidence' => 'low', 'verified' => false])))->toThrow(QueryException::class);
+
+        $migration->up();
+        (new BreedStageParamsSeeder)->run();
+        expect(BreedStageParam::count())->toBe(count(BreedStageParamsSeeder::allRows()));
+    });
+});
+
 describe('regression: dogs unchanged by M5-R06-03', function () {
     it('keeps the dog rowset, the dog breed configs and the cat breed configs identical to main (9a81fc1)', function () {
         $hash = fn (mixed $v): string => hash('sha256', json_encode($v, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
@@ -386,7 +463,7 @@ describe('regression: dogs unchanged by M5-R06-03', function () {
     it('seeds exactly the dog rows main seeded and gives dogs the same stage rules', function () {
         seedLifeStageData();
 
-        $stored = DB::table('breed_stage_params')->whereIn('breed_slug', ['mutt', 'border-collie'])
+        $stored = DB::table('breed_stage_params')->whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))
             ->orderBy('id')->get(['breed_slug', 'stage', 'age_from_months', 'key', 'value', 'unit', 'source_id', 'confidence', 'verified', 'quote', 'notes', 'data_ref'])
             ->map(fn ($r) => array_merge((array) $r, ['value' => json_decode((string) $r->value, true)]))->all();
         $expected = array_map(fn (array $row): array => array_merge(

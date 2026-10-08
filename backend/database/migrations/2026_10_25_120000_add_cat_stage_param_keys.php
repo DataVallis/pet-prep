@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\DB;
  * row and no breed_configs row is touched.
  *
  * down() deletes the rows of the new keys and restores the previous check.
+ * The cat rows of the OLD keys (stages, arrival ages, meals, windows, sleep,
+ * lifespan) stay — harmless while cats are hidden (PETPREP_CATS_ENABLED);
+ * delete them by hand (breed_slug domestic-cat / maine-coon) if needed.
  */
 return new class extends Migration
 {

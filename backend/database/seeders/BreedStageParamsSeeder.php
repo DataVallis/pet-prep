@@ -501,12 +501,12 @@ class BreedStageParamsSeeder extends Seeder
                 'quote' => 'should maintain the same feeding regimen',
             ]);
 
-            // ── Feed window clock times (dog rule, David 2026-10-05) ─────────
+            // ── Feed window clock times (CAT_SPEC §3, dog clock rule) ────────
             // The windows are listed in the notes of the meal entries of data.json.
             $windowsMeta = fn (string $ref): array => [
                 'unit' => 'HH:MM family-local [start, end)', 'verified' => true,
-                'ref' => 'general.meals_per_day.'.$ref, 'decision' => self::CONFIRMED,
-                'notes' => 'Game clock times (no literature number; the meal COUNT is sourced, C3 / C2). Same rule as for dogs (first window 07:00, last 19:00, equal spacing, 2 h each); CAT_SPEC §3 approved 2026-10-08. A window entirely inside quiet hours is done by the parent.',
+                'ref' => 'general.meals_per_day.'.$ref, 'decision' => self::CONFIRMED_CAT,
+                'notes' => 'Game clock times (no literature number; the meal COUNT is sourced, C3 / C2). CAT_SPEC §3 (approved by David 2026-10-08 13:47) lists these windows — the dog clock rule of 2026-10-05 (first window 07:00, last 19:00, equal spacing, 2 h each). A window entirely inside quiet hours is done by the parent.',
             ];
             $add('puppy', 0, StageParamKey::FeedWindows, self::PUPPY_4_MEAL_WINDOWS, $windowsMeta('kitten_6_12_weeks'));
             $add('puppy', 3, StageParamKey::FeedWindows, self::PUPPY_3_MEAL_WINDOWS, $windowsMeta('kitten_3_6_months'));
