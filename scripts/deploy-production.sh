@@ -502,10 +502,20 @@ fi
 enter_maintenance
 
 # ---- 5. Pre-migration database backup --------------------------------------------
-if [ -x "${SCRIPTS_DIR}/backup-production-db.sh" ] \
+# The backup script of the release being deployed wins over the installed copy
+# (${SCRIPTS_DIR} is refreshed only after the code switch below), so a fix to the
+# backup script takes effect in the same deploy (2026-10-08: the installed copy
+# failed on backups/pre-reset/ and blocked the deploy that shipped its fix).
+BACKUP_CMD=()
+if [ -f "${BUILD_DIR}/scripts/backup-production-db.sh" ]; then
+    BACKUP_CMD=(bash "${BUILD_DIR}/scripts/backup-production-db.sh")
+elif [ -x "${SCRIPTS_DIR}/backup-production-db.sh" ]; then
+    BACKUP_CMD=("${SCRIPTS_DIR}/backup-production-db.sh")
+fi
+if [ "${#BACKUP_CMD[@]}" -gt 0 ] \
     && [ -n "$(dc ps -q --status running postgres 2>/dev/null || true)" ]; then
-    log "Creating pre-deployment database backup..."
-    if ! "${SCRIPTS_DIR}/backup-production-db.sh"; then
+    log "Creating pre-deployment database backup (${BACKUP_CMD[*]: -1})..."
+    if ! "${BACKUP_CMD[@]}"; then
         if [ "${DEPLOY_ALLOW_NO_BACKUP:-0}" = "1" ]; then
             warn "backup failed — continuing because DEPLOY_ALLOW_NO_BACKUP=1."
         else
