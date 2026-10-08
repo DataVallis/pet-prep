@@ -8,6 +8,19 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-08 — Šola pove po pravici, kako je šlo (M5-F04)
+
+**Kaj se je zgodilo:** David je v šoli za kužka ob pravem času pohvalil samo enkrat (ostalo prezgodaj ali ko kuža sploh ni ubogal), aplikacija pa je napisala »Great job!«. Zjutraj 8. 10. je potrdil pravilo: šteje samo ukaz, pri katerem je kuža ubogal. Vsi pohvaljeni ob pravem času in nobene pohvale, ko ni ubogal → »Odlično!«; več kot polovica → »Dobro!«; vsaj ena (tudi natanko polovica) → »Še malo vaje — jutri bo bolje«; nobena → »Tokrat ni šlo, poskusi jutri«. Davidov primer (1 od 3 uboganih) zdaj pokaže »Še malo vaje — jutri bo bolje«. Naslov in vrstica »Pravočasne pohvale: X od Y« se računata iz istih podatkov. Testi za vsako mejo. **Na telefonu še ni preizkušeno.**
+
+**Zakaj je pomembno:** Lažna pohvala otroka nauči, da se trud ne pozna. Počakati, ko pes ne uboga, pa je prav — zato tega ne kaznujemo. Tako kot pri pravem psu: nagrada ob pravem trenutku, ne vedno.
+
+**Kako povedati:**
+- 👩 Starši: »Aplikacija otroka ne hvali na prazno — pove po pravici in vedno prijazno, kako je šlo.«
+- 🧒 Otroci: »Pohvali kužka takrat, ko uboga, in počakaj, ko ne — pa boš videl(a) ›Odlično!‹«
+- 📣 Omrežja: »Pri nas ni ›Bravo!‹ za vse. Je pa vedno ›jutri bo bolje‹.«
+
+---
+
 ## 2026-10-07 — Mešanček je brezplačen pes, izziv je s plačljivo pasmo (M5-F02, M5-F03)
 
 **Kaj se je zgodilo:** David je na TestFlightu videl dve neskladji. (1) Pri starem mešančku je značka kazala »Plačano«, čeprav ga ni nihče kupil — ob uvedbi plačil so bili vsi obstoječi psi označeni kot odklenjen izziv (da se nikomur nič ne zaklene). (2) V »Izberi kužka« je bil mešanček izbirljiv tudi pri 12-tedenskem izzivu (»Brezplačen v vseh kombinacijah«). Zdaj: mešanček se staršu vedno pokaže kot **»Brezplačno«**; pri izbiri izziva je mešanček **siv** z razlago (»izziv je s plačljivo pasmo, mešanček je pes brezplačnega načrta«), preklop na izziv sam izbere Border Collieja, strežnik pa takšno kombinacijo zavrne.

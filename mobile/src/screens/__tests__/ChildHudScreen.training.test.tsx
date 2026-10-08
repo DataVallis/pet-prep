@@ -21,6 +21,7 @@ import {
   makeRunningSession,
   makeTrainingResult,
   makeTrainingSessionPayload,
+  TRAINING_OBEYS,
 } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import type { PetUpdatedBroadcast } from '@/types';
@@ -187,7 +188,7 @@ describe('ChildHudScreen — training (M5-R03)', () => {
     expect(screen.getByTestId('training-result')).toBeTruthy();
     expect(screen.getByTestId('training-result-gain').props.children).toBe('Sedi: 40 % → 43 %');
     expect(screen.getByTestId('training-result-successes').props.children).toBe('Pravočasne pohvale: 3 od 5.');
-    expect(screen.getByText(S.result.titlePractice)).toBeTruthy();
+    expect(screen.getByText(S.result.titleGood)).toBeTruthy();
     // The HUD chip (hidden from a11y under the modal overlay) now shows today as done.
     expect(screen.getByTestId('hud-training-done', { includeHiddenElements: true })).toBeTruthy();
     fireEvent.press(screen.getByTestId('training-done'));
@@ -242,7 +243,7 @@ describe('ChildHudScreen — training (M5-R03)', () => {
     startTraining.mockResolvedValue({ status: 'accepted', session: makeTrainingSessionPayload(), state: withTraining() });
     finishTraining.mockResolvedValueOnce({
       status: 'accepted',
-      result: makeTrainingResult({ successes: 0, progress_before: 40, progress_after: 40, progress_gain: 0 }),
+      result: makeTrainingResult({ successes: 0, trials: TRAINING_OBEYS.map((obeys, index) => ({ index, obeys, outcome: obeys ? 'too_late' : 'waited', tap_ms: null })), progress_before: 40, progress_after: 40, progress_gain: 0 }),
       state: withTraining(makeEnabledTraining({ today_done: true })),
     });
     await renderHud(withTraining());

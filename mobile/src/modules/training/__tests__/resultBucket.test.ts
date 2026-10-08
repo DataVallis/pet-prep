@@ -1,72 +1,77 @@
 /**
- * M5-F04 — honest dog-school result title (David 2026-10-07 21:35): ratio of praises on
- * time to all commands of the session. 1 → "Odlično!"; > ½ → "Dobro!"; > 0 (incl. exactly
- * ½) → "Še malo vaje — jutri bo bolje"; 0 → "Tokrat ni šlo, poskusi jutri".
+ * M5-F04 — honest dog-school result title (David 2026-10-08 07:43): only the commands the
+ * dog OBEYED count. All of them praised on time and no praise when it didn't obey →
+ * "Odlično!"; > ½ → "Dobro!"; ≥ 1 (exactly ½ included) → "Še malo vaje — jutri bo bolje";
+ * 0 (or the dog never obeyed) → "Tokrat ni šlo, poskusi jutri".
  */
 import { i18n } from '@/i18n';
 import { resultTitle } from '@/modules/training/TrainingOverlay';
-import { readTrainingResult, trainingResultBucket, type TrialOutcome, type TrialResult } from '@/modules/training/training';
+import {
+  readTrainingResult,
+  trainingResultBucket,
+  trainingResultCounts,
+  type TrialOutcome,
+  type TrialResult,
+} from '@/modules/training/training';
 import { makeTrainingResult } from '@/test-utils/fixtures';
 
+const NOT_OBEYED: ReadonlySet<TrialOutcome> = new Set(['waited', 'praised_without_obeying']);
+
 function trials(outcomes: TrialOutcome[]): TrialResult[] {
-  return outcomes.map((outcome, index) => ({
-    index,
-    obeys: outcome !== 'waited' && outcome !== 'praised_without_obeying',
-    outcome,
-    tap_ms: null,
-  }));
+  return outcomes.map((outcome, index) => ({ index, obeys: !NOT_OBEYED.has(outcome), outcome, tap_ms: null }));
 }
 
-/** A result with `onTime` in-time praises out of `total` commands (the rest too late). */
-function result(onTime: number, total: number) {
-  const outcomes: TrialOutcome[] = Array.from({ length: total }, (_, i) => (i < onTime ? 'in_time' : 'too_late'));
-  return { successes: onTime, trials: trials(outcomes) };
-}
+const r = (outcomes: TrialOutcome[]) => ({ trials: trials(outcomes) });
+const W: TrialOutcome = 'waited';
+const P: TrialOutcome = 'praised_without_obeying';
+const OK: TrialOutcome = 'in_time';
+const LATE: TrialOutcome = 'too_late';
+const EARLY: TrialOutcome = 'too_early';
 
-describe('trainingResultBucket (M5-F04)', () => {
+describe('trainingResultBucket (M5-F04, David 2026-10-08)', () => {
   it.each([
-    ['all on time (8/8)', 8, 8, 'excellent'],
-    ['all on time (1/1)', 1, 1, 'excellent'],
-    ['more than half (5/8)', 5, 8, 'good'],
-    ['more than half (7/8)', 7, 8, 'good'],
-    ['more than half, odd total (2/3)', 2, 3, 'good'],
-    ['exactly half (4/8) → practice', 4, 8, 'practice'],
-    ['exactly half (1/2) → practice', 1, 2, 'practice'],
-    ['less than half (3/8)', 3, 8, 'practice'],
-    ['one (1/8)', 1, 8, 'practice'],
-    ['zero (0/8)', 0, 8, 'none'],
-  ] as const)('%s', (_label, onTime, total, bucket) => {
-    expect(trainingResultBucket(result(onTime, total))).toBe(bucket);
+    ['4/4 on time with correct waits → excellent', [OK, W, OK, OK, W, OK, W, W], 'excellent'],
+    ['1/1 on time → excellent', [OK, W, W], 'excellent'],
+    ['4/4 on time + one praise without obeying → good (not excellent)', [OK, P, OK, OK, W, OK], 'good'],
+    ['3/5 → good', [OK, W, OK, OK, W, LATE, EARLY, W], 'good'],
+    ['2/3 → good', [OK, OK, LATE, W], 'good'],
+    ['exactly half 2/4 → practice', [OK, W, OK, LATE, W, 'no_praise'], 'practice'],
+    ['exactly half 1/2 → practice', [OK, LATE, W], 'practice'],
+    ['one of five → practice', [OK, LATE, EARLY, 'no_praise', LATE, W], 'practice'],
+    ['zero on time → none', [LATE, W, EARLY, 'no_praise', W], 'none'],
+    ['dog never obeyed (obeyed 0) → none, even when the child waited perfectly', [W, W, W], 'none'],
+    ['obeyed 0 with praises → none', [P, W, P], 'none'],
+    ['no trials → none', [], 'none'],
+  ] as const)('%s', (_label, outcomes, bucket) => {
+    expect(trainingResultBucket(r([...outcomes]))).toBe(bucket);
   });
 
-  it('no commands at all (total 0) → none, even with a stray success count', () => {
-    expect(trainingResultBucket({ successes: 0, trials: [] })).toBe('none');
-    expect(trainingResultBucket({ successes: 3, trials: [] })).toBe('none');
-  });
-
-  it('more successes than commands (malformed) is capped at all → excellent, never above', () => {
-    expect(trainingResultBucket({ successes: 9, trials: trials(['in_time', 'in_time']) })).toBe('excellent');
-    expect(trainingResultBucket({ successes: -2, trials: trials(['too_early']) })).toBe('none');
-  });
-
-  it("David's device case: 1 on time, 3× didn't obey, 2× too early → practice, not \"Great job\"", () => {
-    const device = {
-      successes: 1,
-      trials: trials(['in_time', 'praised_without_obeying', 'too_early', 'praised_without_obeying', 'too_early', 'praised_without_obeying']),
-    };
+  it("David's device case: 1 on time, 3× praised without obeying, 2× too early → practice (1 of 3 obeyed)", () => {
+    const device = r([OK, P, EARLY, P, EARLY, P]);
+    expect(trainingResultCounts(device)).toEqual({ onTime: 1, obeyed: 3, praisedWithoutObeying: 3 });
     expect(trainingResultBucket(device)).toBe('practice');
   });
 
-  it('commands the dog did not obey count in the total (waiting is right, but it is not a praise on time)', () => {
-    // 5 obeyed and praised on time + 3 correctly waited = 5 / 8 → good, not excellent.
-    const r = { successes: 5, trials: trials(['in_time', 'waited', 'in_time', 'in_time', 'waited', 'in_time', 'in_time', 'waited']) };
-    expect(trainingResultBucket(r)).toBe('good');
+  it('counts come from the parsed trials: inflated server totals and unknown trials are ignored', () => {
+    const parsed = readTrainingResult(
+      makeTrainingResult({
+        successes: 8,
+        obeyed: 8,
+        trials: [
+          { index: 0, obeys: true, outcome: 'in_time', tap_ms: 2_000 },
+          { index: 1, obeys: true, outcome: 'too_late', tap_ms: 9_000 },
+          { index: 2, obeys: true, outcome: 'bogus', tap_ms: 1 },
+          { index: 'x', obeys: true, outcome: 'in_time', tap_ms: 1 },
+        ],
+      }),
+    );
+    expect(parsed).not.toBeNull();
+    expect(trainingResultCounts(parsed!)).toEqual({ onTime: 1, obeyed: 2, praisedWithoutObeying: 0 });
+    expect(trainingResultBucket(parsed!)).toBe('practice');
   });
 
-  it('reads the server payload (fixture: 3 on time of 8 commands → practice)', () => {
-    const parsed = readTrainingResult(makeTrainingResult());
-    expect(parsed).not.toBeNull();
-    expect(trainingResultBucket(parsed!)).toBe('practice');
+  it('the default fixture (3 on time of 5 obeyed, 3 waits) → good', () => {
+    expect(trainingResultBucket(readTrainingResult(makeTrainingResult())!)).toBe('good');
   });
 });
 

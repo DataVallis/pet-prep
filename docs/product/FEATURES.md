@@ -102,12 +102,12 @@ Velja samo za nove pse, ustvarjene z različico aplikacije, ki vedenje zna prika
 
 ## 5. Šolanje (dresura)
 
-Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7. 10. 2026 (TestFlight 3.0.0, David): deluje; napaka — slab rezultat je pokazal »Great job!« (popravljeno v aplikaciji 7. 10., M5-F04; na telefonu še ni preverjeno).**
+Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7. 10. 2026 (TestFlight 3.0.0, David): deluje; napaka — slab rezultat je pokazal »Great job!« (popravljeno v aplikaciji 8. 10., M5-F04; na telefonu še ni preverjeno).**
 
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID | Od kdaj |
 |---|---|---|---|---|---|
 | »Šola« — mini-igra »Pohvali ob pravem trenutku« | 50-sekundna vaja, 8 ukazov; ko kuža uboga, ima otrok 1,5 s za »Pohvali«. Takojšen prijazen odziv, aplikacija nikoli ne graja. Urnik izbere in pritiske oceni strežnik. | otrok | ✅ | M5-R03 | 2026-10-06 |
-| Pošten rezultat vaje | Naslov po deležu pravočasnih pohval med vsemi 8 ukazi: vse → »Odlično!«, več kot polovica → »Dobro!«, vsaj ena (tudi natanko polovica) → »Še malo vaje — jutri bo bolje«, nobena → »Tokrat ni šlo, poskusi jutri«. Vedno prijazno, nikoli lažna pohvala. Meje potrdil David. | otrok | ✅ | M5-F04 | 2026-10-07 |
+| Pošten rezultat vaje | Šteje samo ukaz, pri katerem je kuža ubogal: vsi pohvaljeni ob pravem času in nobene pohvale, ko ni ubogal → »Odlično!«; več kot polovica → »Dobro!«; vsaj ena (tudi natanko polovica) → »Še malo vaje — jutri bo bolje«; nobena → »Tokrat ni šlo, poskusi jutri«. Naslov in »Pravočasne pohvale: X od Y« se vedno ujemata. Vedno prijazno, nikoli lažna pohvala. Pravilo potrdil David (8. 10.). | otrok | ✅ | M5-F04 | 2026-10-08 |
 | 4 ukazi | Sedi, pridi, prostor, lulat zunaj; napredek 0–100 %, pri 100 % »Kuža zna ukaz«. | otrok | ✅ | M5-R03 | 2026-10-06 |
 | Učljivost | Border Collie 💶 se uči 2× hitreje (Coren); vsak mešanček 🆓 ±20 % (enkrat izžrebano). Odločitev PetPrep na podlagi virov. | otrok | ✅ | M5-R03 | 2026-10-06 |
 | Dnevni čas in pošten delež | Največ 5 minut vaje na psa na dan; pri več otrocih enako razdeljeno (2 otroka po 3 vaje), vsak vsaj eno vajo. Otrok vidi, koliko vaj mu še ostane. | otrok | ✅ | M5-R03b | 2026-10-07 |

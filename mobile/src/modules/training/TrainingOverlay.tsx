@@ -42,6 +42,7 @@ import {
   sessionsLeftToday,
   startBlock,
   trainingResultBucket,
+  trainingResultCounts,
   TRAINING_STRINGS,
   type CommandProgress,
   type TrainingResult,
@@ -205,7 +206,9 @@ function ResultView({
   canStartAgain: boolean;
 }) {
   const name = S.commands[result.command].name;
+  // Title and facts line from the same parsed trials (M5-F04): they always agree.
   const bucket = trainingResultBucket(result);
+  const counts = trainingResultCounts(result);
   const stored = status === 'unchanged';
   const learned = result.progress_after >= 100;
   let gainLine: string;
@@ -219,7 +222,7 @@ function ResultView({
       </Text>
       {stored && <Text style={styles.muted}>{S.result.stored}</Text>}
       <Text style={styles.body} testID="training-result-successes">
-        {S.result.successes(result.successes, result.obeyed)}
+        {S.result.successes(counts.onTime, counts.obeyed)}
       </Text>
       <Text style={styles.bodyStrong} testID="training-result-gain">
         {gainLine}
