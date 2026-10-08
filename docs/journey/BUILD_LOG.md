@@ -8,6 +8,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-08 — Muca se igra namesto sprehoda (M5-R06-04, skrito)
+
+**Kaj se je zgodilo:** Strežnik zna mačjo dnevno igro: mini-igro **»palica s peresom«**. Igra traja približno minuto in se konča, ko muca ujame pero. Strežnik igro začne in jo na koncu oceni — šteje samo, če je otrok res sodeloval: pero je moralo večkrat »bežati stran« od muce, kot pravi plen, in to čez vso minuto. Mucek potrebuje 3 igre na dan, odrasla muca 2, med dvema uspešnima igrama pa morata miniti vsaj 2 uri (David, 8. 10. zvečer). Merilnik »Igra« se ob polnoči izprazni, enkrat na dan pride opomnik, zamujen dan pa se zapiše (iz tega bo naslednji korak naredil »opraskan kavč«). Muca nima korakov s telefona in zaradi neigranja nikoli ne zboli.
+
+**Zakaj je pomembno:** Pes otroka spravi na sprehod, muca pa ne hodi na povodcu — zato je njena rutina igra, kot svetujejo viri (2–3 igre na dan, mladiči več). Prekinjena igra nima kazni: otrok lahko takoj poskusi znova. Za pse se ni spremenilo nič — to preverja nov test, ki 2,5 dneva življenja dveh psov (tudi čez premik ure 25. 10.) primerja s posnetkom, narejenim pred spremembo.
+
+**Številke:** 1 nova tabela za mačje mini-igre (pripravljena tudi za česanje in menjavo peska), 2 novi končni točki, 24 novih testov za mačko + 1 regresijski test psa; testi strežnika 1501 → 1526. Mačke ostajajo skrite.
+
+**Kako povedati:**
+- 👩 Starši (*načrt*): »Muca v PetPrepu potrebuje igro — v aplikaciji ena minuta s palico s peresom, v resnici 10–15 minut, 2–3-krat na dan.«
+- 🧒 Otroci (*načrt*): »Pero naj beži stran od muce, kot miška — takrat ga muca najraje lovi!«
+- 💼 Investitorji: »Druga vrsta živali dobiva svoje rutine na istem motorju pravil; za pse je sprememba dokazano nevidna.«
+- 🛠 Tehnično: »Strežniško vodena seja (`pet_care_sessions`), ocena premikov na strežniku, merilnik prek obstoječega stolpca energije, rutina s poštenim deležem ⌈cilj / n⌉, regresijski posnetek psa pred spremembo.«
+
+---
+
 ## 2026-10-08 — Muca dobi življenjske faze z viri (M5-R06-03, skrito)
 
 **Kaj se je zgodilo:** Strežnik ima zdaj podatke o mački po fazah življenja — **mucek** (do 12 mesecev), **mlada mačka** (od 1 leta), **zrela mačka** (od 7 let) in **starejša mačka** (od 10 let), po smernicah AAHA/AAFP 2021. Domača muca pride k družini stara 2 meseca, Maine Coon 3 mesece (rodovniški mucki gredo od doma pozneje). Mucek je 4-krat na dan, nato 3-krat, od 6. meseca 2-krat; odrasla muca 2-krat. Zapisano je tudi, koliko iger s palico (mucek 3, odrasla 2), koliko uporab peska (3 / 2), kolikokrat na teden Maine Coona počešemo (3) in da se pesek v celoti zamenja enkrat na teden.
