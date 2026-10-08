@@ -1,7 +1,8 @@
 /**
- * Dashboard banner for the challenge (M3-09, PAYMENTS_SPEC P3): the game is paused for a
- * dog whose trial ended unpaid, or a trial ends within 24 h. One banner (paused wins),
- * naming the children who care for those dogs; the button opens the paywall.
+ * Dashboard banner for the challenge (M3-09, PAYMENTS_SPEC P3; M3-13 — no free trial, the
+ * challenge starts with a purchase): a dog is waiting for the purchase (born and paused, or
+ * not born yet), or a dog that still runs a pre-M3-13 trial pauses within 24 h. One banner
+ * (waiting wins), naming the children who care for those dogs; the button opens the paywall.
  */
 
 import { Pressable, StyleSheet, View } from 'react-native';
@@ -19,7 +20,7 @@ export default function ChallengeBanner({ family, onOpen }: { family: FamilyOver
   // M5-F01 QA: the shared rule — a mutt / game-over pet is never offered a purchase.
   const offered = family.pets.filter((p) => p.is_active && isOfferablePet(p));
   const paused = offered.filter((p) => planBanner(p.plan) === 'payment_required');
-  const ending = offered.filter((p) => planBanner(p.plan) === 'trial_last_day');
+  const ending = offered.filter((p) => planBanner(p.plan) === 'pause_soon');
   const pets = paused.length > 0 ? paused : ending;
   if (pets.length === 0) return null;
   const isPaused = paused.length > 0;
@@ -27,15 +28,15 @@ export default function ChallengeBanner({ family, onOpen }: { family: FamilyOver
 
   return (
     <View style={[styles.box, isPaused ? styles.paused : styles.ending]} testID={isPaused ? 'challenge-banner-paused' : 'challenge-banner-ending'}>
-      <Text style={styles.title}>{t(isPaused ? 'paywall:banner.paymentRequiredTitle' : 'paywall:banner.trialLastDayTitle')}</Text>
-      <Text style={styles.body}>{t(isPaused ? 'paywall:banner.paymentRequired' : 'paywall:banner.trialLastDay', { names })}</Text>
+      <Text style={styles.title}>{t(isPaused ? 'paywall:banner.paymentRequiredTitle' : 'paywall:banner.pauseSoonTitle')}</Text>
+      <Text style={styles.body}>{t(isPaused ? 'paywall:banner.paymentRequired' : 'paywall:banner.pauseSoon', { names })}</Text>
       <Pressable
         style={({ pressed }) => [styles.button, pressed && styles.pressed]}
         onPress={onOpen}
         accessibilityRole="button"
         testID="challenge-banner-open"
       >
-        <Text style={styles.buttonText}>{t(isPaused ? 'paywall:banner.open' : 'paywall:banner.openTrial')}</Text>
+        <Text style={styles.buttonText}>{t(isPaused ? 'paywall:banner.open' : 'paywall:banner.openSoon')}</Text>
       </Pressable>
     </View>
   );

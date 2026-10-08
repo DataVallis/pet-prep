@@ -34,7 +34,7 @@ export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'
  * union-typed `traffic_light` replaced by real types (M2-05).
  */
 export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today' | 'behaviour' | 'training' | 'plan'> & {
-  /** M3-11: free mutt sandbox or the challenge (trial / payment_required / paid); legacy → paid. */
+  /** M3-11 / M3-13: free mutt sandbox or the challenge (payment_required / paid; trial = a pre-M3-13 trial); legacy → paid. */
   plan: PetPlan;
   traffic_light: TrafficLight;
   care_score: CareScore;

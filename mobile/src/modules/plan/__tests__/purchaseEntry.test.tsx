@@ -24,7 +24,9 @@ type RawPlan = ReturnType<typeof makeFamilyPet>['plan'];
 const TRIAL: RawPlan = { type: 'challenge', status: 'trial', trial_ends_at: '2026-10-12T10:00:00+02:00', paid_at: null, payments_enforced: true, display_type: 'challenge' };
 const LOCKED: RawPlan = { type: 'challenge', status: 'payment_required', trial_ends_at: '2026-10-05T10:00:00+02:00', paid_at: null, payments_enforced: true, display_type: 'challenge' };
 const PAID: RawPlan = { type: 'challenge', status: 'paid', trial_ends_at: null, paid_at: '2026-10-01T10:00:00+02:00', payments_enforced: true, display_type: 'challenge' };
-/** What the server really sends for an unborn challenge dog: `trial` without an end (starts at signing). */
+/** What the server sends for an unborn challenge dog since M3-13: `payment_required`, no end (buy first). */
+const UNBORN_WAITING: RawPlan = { type: 'challenge', status: 'payment_required', trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'challenge' };
+/** What a pre-M3-13 server sent for an unborn challenge dog: `trial` without an end. */
 const UNBORN_TRIAL: RawPlan = { type: 'challenge', status: 'trial', trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'challenge' };
 const FREE: RawPlan = { type: 'free', status: null, trial_ends_at: null, paid_at: null, payments_enforced: true, display_type: 'free' };
 
@@ -42,12 +44,17 @@ describe('canBuyChallenge (M5-F01)', () => {
     expect(canBuyChallenge(pet(LOCKED))).toBe(true);
   });
 
-  it('paid / grandfathered, not started yet, free plan → no buy', () => {
+  it('paid / grandfathered, free plan → no buy', () => {
     expect(canBuyChallenge(pet(PAID))).toBe(false);
-    expect(canBuyChallenge(pet(UNBORN_TRIAL, { born_at: null }))).toBe(false);
-    // Same payload once born (kill switch / unknown end) → buyable.
-    expect(canBuyChallenge(pet(UNBORN_TRIAL))).toBe(true);
+    expect(canBuyChallenge(pet(PAID, { born_at: null }))).toBe(false);
     expect(canBuyChallenge(pet(FREE))).toBe(false);
+  });
+
+  it('M3-13: an unborn challenge dog gets the buy button — the challenge starts with a purchase', () => {
+    expect(canBuyChallenge(pet(UNBORN_WAITING, { born_at: null }))).toBe(true);
+    // An older server still sent `trial` for it: buyable as well.
+    expect(canBuyChallenge(pet(UNBORN_TRIAL, { born_at: null }))).toBe(true);
+    expect(canBuyChallenge(pet(UNBORN_WAITING, { born_at: null, breed_type: 'mutt' }))).toBe(false);
   });
 
   it('a mutt never gets a buy button, even with an old challenge payload', () => {
@@ -73,8 +80,8 @@ describe('Nadzor row (M5-F01)', () => {
   it('lists only purchasable pets and hides for a mutt-only family', () => {
     const f = family([pet(TRIAL, { id: 1 }), pet(PAID, { id: 2 }), pet(LOCKED, { id: 3 })]);
     expect(petsAwaitingPurchase(f).map((p) => p.id)).toEqual([1, 3]);
-    // An unborn dog is not counted (its trial starts at the contract).
-    expect(petsAwaitingPurchase(family([pet(UNBORN_TRIAL, { id: 4, born_at: null })]))).toEqual([]);
+    // M3-13: an unborn dog waits for the purchase too (buy before the contract).
+    expect(petsAwaitingPurchase(family([pet(UNBORN_WAITING, { id: 4, born_at: null })])).map((p) => p.id)).toEqual([4]);
     expect(showPurchasesRow(f)).toBe(true);
     expect(showPurchasesRow(family([pet(FREE, { breed_type: 'mutt' })]))).toBe(false);
     expect(showPurchasesRow(family([pet(PAID)]))).toBe(true);
@@ -124,6 +131,23 @@ describe('ChildOverviewCard buy button (M5-F01)', () => {
     expect(screen.getByTestId(`child-plan-${id}`)).toBeTruthy();
     expect(screen.getByText('12-tedenski izziv — kupi')).toBeTruthy();
     fireEvent.press(screen.getByTestId(`child-buy-${id}`));
+    expect(onOpenChallenge).toHaveBeenCalledTimes(1);
+  });
+
+  it('unborn challenge dog (M3-13): the buy button shows before the contract', () => {
+    const child = makeScoredChild();
+    const onOpenChallenge = jest.fn();
+    render(
+      <ChildOverviewCard
+        child={child}
+        pet={pet(UNBORN_WAITING, { born_at: null })}
+        timezone="Europe/Ljubljana"
+        onOpen={jest.fn()}
+        onChildPin={jest.fn()}
+        onOpenChallenge={onOpenChallenge}
+      />,
+    );
+    fireEvent.press(screen.getByTestId(`child-buy-${child.id}`));
     expect(onOpenChallenge).toHaveBeenCalledTimes(1);
   });
 

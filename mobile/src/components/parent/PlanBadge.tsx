@@ -1,6 +1,7 @@
 /**
- * Plan badge of a dog in the parent app (M3-09): "Brezplačno" · "Preizkus: še N dni" ·
- * "Preizkus: zadnji dan" · "Čaka na nakup" · "Plačano". Status tokens only, never prices.
+ * Plan badge of a dog in the parent app (M3-09; M3-13 — no trial wording): "Brezplačno" ·
+ * "Čaka na nakup" · "Plačano" (and for a pre-M3-13 trial "Ni kupljeno: ustavi se čez N dni").
+ * Status tokens only, never prices.
  */
 
 import { Pressable, StyleSheet, View } from 'react-native';
