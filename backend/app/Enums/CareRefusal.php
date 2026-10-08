@@ -79,4 +79,44 @@ enum CareRefusal: string
      * mess waits to be cleaned.
      */
     case PlayNotAvailable = 'play_not_available';
+
+    /**
+     * M5-R06-04: phone steps are dog-only (CAT_SPEC Q1, §5.3) — a cat's daily
+     * exercise is the wand play, so a step sync for a cat is refused.
+     */
+    case StepsNotApplicable = 'steps_not_applicable';
+
+    /**
+     * M5-R06-04: the wand game is the cat's play (CAT_SPEC Q1) — not for a
+     * dog, a cat without life-stage data, or a cat whose stage has no play goal.
+     */
+    case WandNotAvailable = 'wand_not_available';
+
+    /**
+     * Less than `play_min_gap_minutes` (120, David 2026-10-08) since the
+     * cat's last SUCCESSFUL wand session (next_allowed_at = when the gap ends).
+     * Unfinished / failed sessions do not start the gap.
+     */
+    case WandTooSoon = 'wand_too_soon';
+
+    /** Another child's wand session is running on this cat (next_allowed_at = its expiry). */
+    case WandSessionActive = 'wand_session_active';
+
+    /** The session + its finish TTL would run past the family-local midnight (next_allowed_at = midnight). */
+    case WandDayEnding = 'wand_day_ending';
+
+    /** Unknown session, another child's session, or a session of another pet / kind. */
+    case WandSessionInvalid = 'wand_session_invalid';
+
+    /** Finished before the ~60 s game could have run (start + duration − tolerance). */
+    case WandSessionNotOver = 'wand_session_not_over';
+
+    /** Finished after the session's TTL, or the session was replaced by a newer one. */
+    case WandSessionExpired = 'wand_session_expired';
+
+    /** A lock (hard stop, vet, game over, payment) began during the session: it does not count. */
+    case WandSessionInterrupted = 'wand_session_interrupted';
+
+    /** A move lies outside the session (impossible offset). */
+    case WandInvalidMoves = 'wand_invalid_moves';
 }

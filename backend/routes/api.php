@@ -190,6 +190,9 @@ Route::middleware(['auth:sanctum', 'ability:child', 'throttle:api'])
             Route::post('pet/training/finish', [ChildPetController::class, 'finishTraining']);
             // M5-R05 play & cuddle: mood / video only, no score.
             Route::post('pet/play', [ChildPetController::class, 'play']);
+            // M5-R06-04 cat wand play: server-generated session, server-judged finish.
+            Route::post('pet/wand/start', [ChildPetController::class, 'startWand']);
+            Route::post('pet/wand/finish', [ChildPetController::class, 'finishWand']);
             Route::post('pet/steps', [ChildPetController::class, 'steps']);
             Route::post('contract', [ChildContractController::class, 'store']);
         });

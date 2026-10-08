@@ -44,6 +44,11 @@ use Random\Randomizer;
  *   above 30 % (D). Completed by the first child who plays that kind while
  *   it is shown (shared pet, David Q8). Ignored → it expires, nothing else.
  *
+ * Cats (M5-R06-04, David 2026-10-08, CAT_SPEC §5.5): the ball game is
+ * dog-only (a cat's play is the wand game, its care routine) — kindsFor();
+ * cuddles stay, with one cuddle invitation a day, shown once the cat's
+ * play goal of the day is reached (the cat's counterpart of the walk, Q4).
+ *
  * Callers that write hold the pet's row lock (backend/CLAUDE.md); pet
  * attributes are set on $pet and saved by the caller.
  */
@@ -55,6 +60,7 @@ class PlayService
     public function __construct(
         private readonly LifeStageService $lifeStages,
         private readonly DailyWalkService $walks,
+        private readonly WandPlayService $wand,
         private ?string $seedSalt = null,
     ) {
         $this->seedSalt ??= (string) config('app.key');
@@ -126,6 +132,22 @@ class PlayService
     private function sleepsNow(Pet $pet, CarbonInterface $now, ?QuietHours $quiet = null): bool
     {
         return ! config('play.free_play_in_quiet_hours', false) && ($quiet ?? $pet->quietHours())->isQuietNow($now);
+    }
+
+    /**
+     * The kinds this pet can play (M5-R06-04): a dog ball + cuddle, a cat
+     * only cuddle (David 2026-10-08: no ball game for cats).
+     *
+     * @return list<PlayKind>
+     */
+    public function kindsFor(Pet $pet): array
+    {
+        return $pet->isCat() ? [PlayKind::Cuddle] : PlayKind::cases();
+    }
+
+    public function kindAvailable(Pet $pet, PlayKind $kind): bool
+    {
+        return in_array($kind, $this->kindsFor($pet), true);
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -216,7 +238,8 @@ class PlayService
     public function planDay(Pet $pet, string $localDate, QuietHours $quiet): array
     {
         $rng = $this->randomizerFor($pet, $localDate);
-        $kinds = $rng->shuffleArray(PlayKind::cases());
+        // A cat gets only the cuddle invitation (M5-R06-04); a dog's draw is unchanged.
+        $kinds = $rng->shuffleArray($this->kindsFor($pet));
         $count = max(0, min((int) config('play.invitations_per_day', 2), count($kinds)));
 
         $minutes = $this->openMinutesOfBand($pet, $localDate, $quiet);
@@ -407,6 +430,14 @@ class PlayService
      */
     public function walkGoalReached(Pet $pet, CarbonInterface $now): bool
     {
+        // M5-R06-04: a cat is "cared for" once today's wand play goal is reached.
+        if ($pet->isCat()) {
+            $today = $pet->localDate($now);
+            $goal = $this->wand->goalOn($pet, $today);
+
+            return $goal <= 0 || $this->wand->successfulOn($pet, $today) >= $goal;
+        }
+
         $config = $pet->breedConfig();
         if ($config === null) {
             return false;

@@ -11,7 +11,6 @@ use App\Models\PushNotification;
 use App\Models\User;
 use App\Services\CareScoreService;
 use App\Services\RoutineLedgerService;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Queue;
@@ -39,8 +38,6 @@ use Illuminate\Support\Facades\Queue;
 | and the collie is legacy (no play invitations), training finishes without
 | taps (no progress, the routine still counts).
 */
-
-uses(RefreshDatabase::class);
 
 const DRS_FIXTURE = __DIR__.'/../Fixtures/dog_regression_snapshot.json';
 

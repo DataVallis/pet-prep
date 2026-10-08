@@ -264,6 +264,8 @@ class Pet extends Model
         // M5-R05 bookkeeping (the apps get PlayPayload instead).
         'happy_until',
         'play_scheduled_through',
+        // M5-R06-04 bookkeeping: last missed cat play day (the apps get WandPayload).
+        'play_missed_on',
     ];
 
     /**
@@ -563,6 +565,15 @@ class Pet extends Model
         return $this->hasMany(PetPlayEvent::class);
     }
 
+    /**
+     * Server-driven cat care sessions (M5-R06-04: wand play; M5-R06-05:
+     * grooming, litter change).
+     */
+    public function careSessions(): HasMany
+    {
+        return $this->hasMany(PetCareSession::class);
+    }
+
     // ──────────────────────────────────────────────────────────────
     //  Virtual Age (Time Asymmetry: 1 program week = 1 virtual month)
     // ──────────────────────────────────────────────────────────────
@@ -599,7 +610,21 @@ class Pet extends Model
      */
     public function trainingEnabled(): bool
     {
-        return (bool) $this->training_enabled && ! $this->isLegacyProfile();
+        // M5-R06-04: dog-only by species at runtime, not only by the stored flag
+        // (CAT_SPEC Q10 — a cat has no training with commands in v1).
+        return (bool) $this->training_enabled && ! $this->isLegacyProfile() && $this->isDog();
+    }
+
+    /** M5-R06: the dog rules (walk / steps, training, ball play) apply. */
+    public function isDog(): bool
+    {
+        return $this->speciesValue() === Species::Dog;
+    }
+
+    /** M5-R06: the cat rules (wand play instead of steps, …) apply. */
+    public function isCat(): bool
+    {
+        return $this->speciesValue() === Species::Cat;
     }
 
     /**
@@ -996,6 +1021,8 @@ class Pet extends Model
             // M5-R05: play invitations are decided from the birth day on.
             'play_scheduled_through' => null,
             'happy_until' => null,
+            // M5-R06-04: no missed cat play day before the birth.
+            'play_missed_on' => null,
             'frozen_at' => null,
             // M3-13 (David 2026-10-08): no free trial — a challenge's "trial" ends at
             // birth, so an unpaid challenge is payment_required from the contract on.

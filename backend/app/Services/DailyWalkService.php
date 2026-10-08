@@ -30,6 +30,11 @@ use Illuminate\Support\Facades\Log;
  * or when more than one midnight passed since the last close (the finished
  * day is not "yesterday", e.g. after a long scheduler outage).
  *
+ * Cats (M5-R06-04, CAT_SPEC Q1 / Q2): no steps, no walk row and never a walk
+ * illness — the same midnight resets the play meter (energy) to 0 and
+ * WandPlayService::closeDay() remembers a missed play day
+ * (`pets.play_missed_on`, for M5-R06-05's scratching).
+ *
  * The caller holds the pet's row lock (decay tick, step sync) and saves the
  * pet attributes; the walk row is written here.
  */
@@ -41,7 +46,10 @@ class DailyWalkService
      */
     private const MAX_QUIET_HOPS = 8;
 
-    public function __construct(private readonly LifeStageService $lifeStages) {}
+    public function __construct(
+        private readonly LifeStageService $lifeStages,
+        private readonly WandPlayService $wand,
+    ) {}
 
     /**
      * Close the finished local day if `$now` is on a later local date than
@@ -66,6 +74,15 @@ class DailyWalkService
         $today = $pet->localDate($now);
         if ($closedDate === $today) {
             return false;
+        }
+
+        // M5-R06-04: a cat's day is its play, not a walk — no walk row, no
+        // illness; the meter (energy) goes back to 0 like the dog's.
+        if ($pet->isCat()) {
+            $this->wand->closeDay($pet, $closedDate, $now);
+            $pet->resetDailyStepsIfNewDay($now);
+
+            return true;
         }
 
         $timezone = $pet->familyTimezone();

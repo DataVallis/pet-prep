@@ -75,6 +75,7 @@ class NotificationService
         private readonly PushDeviceService $devices,
         private readonly CareScheduleService $schedule,
         private readonly HygieneEventService $hygieneEvents,
+        private readonly WandPlayService $wand,
     ) {}
 
     /**
@@ -164,6 +165,28 @@ class NotificationService
             ->exists();
 
         return $decidedToday ? null : $this->escalation($pet, PushType::WalkReminder, 'energy');
+    }
+
+    /**
+     * The cat's daily play reminder (M5-R06-04, CAT_SPEC §5.2): the walk
+     * reminder's twin — called by EscalationService for a cat whose play
+     * meter (energy) shows ≤ 30 % outside quiet hours; one decision per
+     * family-local day, same timing (walk-reminder floor). Only for a cat the
+     * wand rules apply to.
+     */
+    public function playReminder(Pet $pet): ?PushNotification
+    {
+        if (! config('push.enabled') || ! $this->wand->appliesTo($pet)) {
+            return null;
+        }
+
+        $dayStart = now()->setTimezone($pet->familyTimezone())->startOfDay()->utc();
+        $decidedToday = PushNotification::where('pet_id', $pet->id)
+            ->where('type', PushType::PlayReminder->value)
+            ->where('created_at', '>=', $dayStart)
+            ->exists();
+
+        return $decidedToday ? null : $this->escalation($pet, PushType::PlayReminder, 'play');
     }
 
     /**
@@ -265,6 +288,12 @@ class NotificationService
         }
         if ($type === PushType::WalkReminder && $pet->displayMetric('energy_level') > EscalationService::SOFT_WARNING_THRESHOLD) {
             $this->markSuppressed($notification, 'walk_done');
+
+            return;
+        }
+        // M5-R06-04: the cat already played enough since the decision.
+        if ($type === PushType::PlayReminder && $pet->displayMetric('energy_level') > EscalationService::SOFT_WARNING_THRESHOLD) {
+            $this->markSuppressed($notification, 'play_done');
 
             return;
         }
@@ -411,7 +440,7 @@ class NotificationService
             ->map(fn (User $u): array => ['user_id' => $u->id, 'audience' => PushNotification::AUDIENCE_PARENT]);
 
         $list = match ($type) {
-            PushType::SoftWarning, PushType::CriticalAlert, PushType::WalkReminder => $children(),
+            PushType::SoftWarning, PushType::CriticalAlert, PushType::WalkReminder, PushType::PlayReminder => $children(),
             PushType::ParentAlarm => $parents(),
             PushType::Illness, PushType::GameOver, PushType::PaymentRequired => $parents()->concat($children()),
             // M3-11: billing is the parent's business.
@@ -427,21 +456,22 @@ class NotificationService
      */
     private function isDuplicate(Pet $pet, PushType $type, CarbonInterface $now): bool
     {
-        $since = $type === PushType::WalkReminder
+        $since = $type->isDailyReminder()
             ? Carbon::instance($now)->setTimezone($pet->familyTimezone())->startOfDay()->utc()
             : Carbon::instance($now)->subMinutes((int) config('push.dedupe_minutes', 30));
 
         return PushNotification::where('pet_id', $pet->id)
             ->where('type', $type->value)
             ->whereIn('status', [PushNotification::STATUS_SCHEDULED, PushNotification::STATUS_QUEUED, PushNotification::STATUS_SENT])
-            ->where('created_at', $type === PushType::WalkReminder ? '>=' : '>', $since)
+            ->where('created_at', $type->isDailyReminder() ? '>=' : '>', $since)
             ->exists();
     }
 
     /**
      * When may this push go out (family-local clock)?
-     *  - walk reminder: not before PushTiming::walkReminderEarliest(); dropped
-     *    when that is no longer the day it was decided on;
+     *  - walk reminder (and the cat's play reminder, M5-R06-04): not before
+     *    PushTiming::walkReminderEarliest(); dropped when that is no longer
+     *    the day it was decided on;
      *  - quiet hours: illness / game over held until the stretch ends, the
      *    rest dropped.
      *
@@ -453,7 +483,7 @@ class NotificationService
         $quietHours = $pet->quietHours();
         $timezone = $pet->familyTimezone();
 
-        if ($type === PushType::WalkReminder) {
+        if ($type->isDailyReminder()) {
             $earliest = PushTiming::walkReminderEarliest($quietHours, $now, $timezone);
             $day = Carbon::instance($decidedAt)->setTimezone($timezone)->toDateString();
             if ($earliest->copy()->setTimezone($timezone)->toDateString() !== $day) {
@@ -513,6 +543,10 @@ class NotificationService
     {
         $plain = ['variant' => null, 'replace' => []];
         $metric = $notification->metric;
+        // M5-R06-04 (M3-12): the play reminder only when the wand game can start now.
+        if ($notification->type === PushType::PlayReminder) {
+            return $this->wand->startRefusal($pet, null, now()) === null ? $plain : null;
+        }
         if (! in_array($notification->type, [PushType::SoftWarning, PushType::CriticalAlert], true)) {
             return $plain;
         }

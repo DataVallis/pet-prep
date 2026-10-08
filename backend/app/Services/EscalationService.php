@@ -190,8 +190,13 @@ class EscalationService
         // Energy = the daily walk, outside the ladder (PR #35 re-review): a
         // separate, at most daily walk reminder; no level, no log row, no
         // broadcast (the HUD shows low_energy from the metric itself).
+        // M5-R06-04: for a cat energy is the play meter → the daily play reminder.
         if (! $isQuiet && $pet->displayMetric('energy_level') <= self::SOFT_WARNING_THRESHOLD) {
-            $this->notifications()->walkReminder($pet);
+            if ($pet->isCat()) {
+                $this->notifications()->playReminder($pet);
+            } else {
+                $this->notifications()->walkReminder($pet);
+            }
         }
 
         return $escalated;

@@ -2,8 +2,10 @@
 
 namespace App\Services;
 
+use App\Enums\ActivityType;
 use App\Enums\PetStatusPeriodKind;
 use App\Enums\RoutineType;
+use App\Models\ActivityLog;
 use App\Models\Pet;
 use App\Models\PetCaretaker;
 use App\Models\PetContract;
@@ -27,9 +29,11 @@ use Illuminate\Support\Collection;
  *        clamped 0–100. done_by_child = routines that child performed
  *        (activities_log.actor_user_id); a walk counts for a child when the
  *        pet reached its goal AND that child walked ≥ goal / n steps
- *        (Claude's interpretation of "fair share", pending David). One
- *        caretaker = the pet formula. Pending routines (deadline ahead) are
- *        not scored yet.
+ *        (Claude's interpretation of "fair share", pending David). The cat's
+ *        play routine (M5-R06-04, CAT_SPEC §5.2, David 2026-10-08) counts for
+ *        a child when the cat reached its goal AND that child had at least
+ *        ⌈goal / n⌉ successful wand sessions that day. One caretaker = the
+ *        pet formula. Pending routines (deadline ahead) are not scored yet.
  * Light: RED = game over, phase-3 alarm active (a metric shown 0 % > 1 h)
  *        or the pet fell ill today; else YELLOW = more than 2 routines
  *        missed today — of today's date or with a deadline today (per
@@ -121,6 +125,23 @@ class CareScoreService
             $steps[$row->pet_id][$row->user_id][substr((string) $row->local_date, 0, 10)] = (int) $row->steps;
         }
 
+        // M5-R06-04: successful cat wand sessions per child and family-local day
+        // (fair share of the play routine). No query for a family without cats.
+        $plays = [];
+        $catIds = $pets->filter(fn (Pet $p) => $p->isCat() && ! $p->isUnborn())->pluck('id');
+        if ($catIds->isNotEmpty()) {
+            $fromUtc = CarbonImmutable::parse($from, $timezone)->startOfDay()->utc();
+            foreach (ActivityLog::whereIn('pet_id', $catIds)
+                ->where('activity_type', ActivityType::PlayedWand->value)
+                ->where('created_at', '>=', $fromUtc)
+                ->whereNotNull('actor_user_id')
+                ->toBase()
+                ->get(['pet_id', 'actor_user_id', 'created_at']) as $row) {
+                $date = CarbonImmutable::parse((string) $row->created_at, 'UTC')->setTimezone($timezone)->toDateString();
+                $plays[(int) $row->pet_id][(int) $row->actor_user_id][$date] = ($plays[(int) $row->pet_id][(int) $row->actor_user_id][$date] ?? 0) + 1;
+            }
+        }
+
         return [
             'now' => $now,
             'timezone' => $timezone,
@@ -135,6 +156,7 @@ class CareScoreService
             'ends' => $ends,
             'illnesses' => $illnesses->map(fn ($rows) => $rows->map(fn ($r) => CarbonImmutable::instance($r->started_at)->utc())->values()->all())->all(),
             'steps' => $steps,
+            'plays' => $plays,
         ];
     }
 
@@ -513,12 +535,19 @@ class CareScoreService
             return false;
         }
 
-        if ($r->type !== RoutineType::Walk) {
+        if ($r->type !== RoutineType::Walk && $r->type !== RoutineType::Play) {
             return $r->actorUserId === $childId;
         }
 
         if ($n <= 1) {
             return true;
+        }
+
+        if ($r->type === RoutineType::Play) {
+            // M5-R06-04: at least ⌈goal / n⌉ of the day's successful sessions are this child's.
+            $mine = (int) ($board['plays'][$pet->id][$childId][$r->localDate] ?? 0);
+
+            return $mine >= (int) ceil((int) $r->goal / $n);
         }
 
         $mine = (int) ($board['steps'][$pet->id][$childId][$r->localDate] ?? 0);

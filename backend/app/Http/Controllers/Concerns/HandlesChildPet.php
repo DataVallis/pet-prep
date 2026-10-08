@@ -109,6 +109,16 @@ trait HandlesChildPet
             CareRefusal::TrainingDayEnding => 'The day is ending — train again after midnight.',
             CareRefusal::TrainingSessionInterrupted => 'The training session was interrupted.',
             CareRefusal::PlayNotAvailable => 'Playing is not possible right now.',
+            CareRefusal::StepsNotApplicable => 'Steps are only counted for dogs.',
+            CareRefusal::WandNotAvailable => 'The wand game is not available for this pet.',
+            CareRefusal::WandTooSoon => 'The cat needs a rest after the last game.',
+            CareRefusal::WandSessionActive => 'Someone is already playing with the cat.',
+            CareRefusal::WandDayEnding => 'The day is ending — play again after midnight.',
+            CareRefusal::WandSessionInvalid => 'Unknown wand session.',
+            CareRefusal::WandSessionNotOver => 'The wand game is not over yet.',
+            CareRefusal::WandSessionExpired => 'The wand game has expired.',
+            CareRefusal::WandSessionInterrupted => 'The wand game was interrupted.',
+            CareRefusal::WandInvalidMoves => 'A move lies outside the wand game.',
             default => 'Action not allowed right now.',
         };
     }

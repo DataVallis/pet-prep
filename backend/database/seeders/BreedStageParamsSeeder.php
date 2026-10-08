@@ -91,6 +91,9 @@ class BreedStageParamsSeeder extends Seeder
     /** David's later answers on the M5-R06 plan, 2026-10-08 (data.json `decision`). */
     public const CONFIRMED_CAT_PLAN = 'potrdil David 2026-10-08 (načrt M5-R06)';
 
+    /** David's answers for the cat play rules (M5-R06-04), 2026-10-08 ~20:40 (data.json `decision`). */
+    public const CONFIRMED_CAT_PLAY = 'potrdil David 2026-10-08 20:40';
+
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
 
@@ -400,8 +403,9 @@ class BreedStageParamsSeeder extends Seeder
      * Cat life-stage data (M5-R06-03): every value from
      * docs/research/cat-data/data.json (`ref` = self::CAT_REF + JSON path).
      * `verified` = true when the entry has a source (C-id) or a recorded David
-     * decision (CAT_SPEC Q1–Q10 13:47, or the M5-R06 plan answers); the one
-     * "UNSOURCED — proposal (D)" value (play_min_gap_minutes) stays false.
+     * decision (CAT_SPEC Q1–Q10 13:47, the M5-R06 plan answers, or the play
+     * answers of 20:40 — play_min_gap_minutes, which R06-03 seeded as an
+     * unverified proposal; 2026_10_26_130000 flips the existing rows).
      * Only values data.json gives are seeded: no exercise / step keys (cats
      * have no steps), no senior sleep hours (no entry), no grooming row for
      * the domestic cat (no grooming routine, CAT_SPEC Q8).
@@ -538,9 +542,9 @@ class BreedStageParamsSeeder extends Seeder
                 ]);
             }
             $add('all', 0, StageParamKey::PlayMinGapMinutes, 120, [
-                'unit' => 'minutes between two play sessions', 'confidence' => 'low', 'verified' => false,
-                'ref' => 'general.play.game_min_gap',
-                'notes' => 'UNSOURCED — proposal (D), CAT_SPEC §5.2, waiting for David: spread the sessions over the day.',
+                'unit' => 'minutes between two play sessions', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'general.play.game_min_gap', 'decision' => self::CONFIRMED_CAT_PLAY,
+                'notes' => 'Game value (no literature number), CAT_SPEC §5.2: at least 2 h between two successful wand sessions, measured from the last successful one, so the sessions spread over the day (C11: several short sessions through the day).',
             ]);
             $add('all', 0, StageParamKey::ScratchingAfterMissedPlay, true, [
                 'unit' => 'bool: a missed play day → "scratched the sofa" the next day (max 1/day)', 'source_id' => 'C8,C22', 'confidence' => 'low', 'verified' => true,

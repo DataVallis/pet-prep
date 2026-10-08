@@ -334,7 +334,8 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED — proposal (D). Spread over the day."
+        "notes": "Game value (no literature number): spread the sessions over the day (C11: several short sessions). Measured from the last SUCCESSFUL session.",
+        "decision": "potrdil David 2026-10-08 20:40: 2 h between two successful sessions, measured from the last successful one"
       },
       "game_session_seconds": {
         "value": 60,
@@ -342,7 +343,8 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED — proposal (D). Ends with a 'catch'."
+        "notes": "Game value: one ~60 s mini-game that ends with the cat catching the feather. Server-scored participation (duration window + 'feather runs away' moves, config/wand.php).",
+        "decision": "potrdil David 2026-10-08 20:40: ~60 s, ends with the cat catching the feather; counts only if the child really took part (server check); an aborted / unfinished session does not count, no penalty, can restart at once"
       },
       "missed_play_illness": {
         "value": false,

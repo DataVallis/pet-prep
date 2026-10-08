@@ -9,6 +9,7 @@ use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
 use App\Services\PlayPayload;
 use App\Services\TrainingPayload;
+use App\Services\WandPayload;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
@@ -173,6 +174,8 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'training' => TrainingPayload::summaryFor($pet)->summary(),
             // M5-R05: play / cuddle possible now (pet level), the dog's invitation, the happy scene; null without play.
             'play' => PlayPayload::for($pet)?->toArray(),
+            // M5-R06-04: the cat's wand play (goal, sessions today, gap, running game); null for a dog.
+            'wand' => WandPayload::for($pet)?->toArray(),
             // AI media (M4-05): signed URLs (≤ 90 min) to our copies — the channel is
             // private to the pet's caretakers and family parents; legacy fields mirror it.
             'current_video_url' => $media->currentVideoUrl,

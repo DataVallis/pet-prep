@@ -137,7 +137,7 @@ class AccountExportService
         }
 
         $rows = 0;
-        foreach (['activities_log', 'pet_daily_steps', 'pet_daily_walks', 'pet_daily_routines', 'pet_status_periods', 'pet_hygiene_events', 'pet_training_sessions'] as $table) {
+        foreach (['activities_log', 'pet_daily_steps', 'pet_daily_walks', 'pet_daily_routines', 'pet_status_periods', 'pet_hygiene_events', 'pet_training_sessions', 'pet_care_sessions'] as $table) {
             $rows += DB::table($table)->whereIn('pet_id', $petIds)->count();
         }
         // M5-R05: free plays are exported as daily counts — only invitations are rows.
@@ -246,6 +246,8 @@ class AccountExportService
         // M5-R03 training: progress per command and every session (who, when, how well).
         $skills = $byPet('pet_training_skills', ['command', 'progress', 'last_practised_at', 'sessions_completed']);
         $sessions = $byPet('pet_training_sessions', ['user_id', 'command', 'local_date', 'started_at', 'status', 'finished_at', 'taps', 'result', 'progress_gain'], 'started_at');
+        // M5-R06-04: cat care sessions (wand play; grooming / litter change later) — who, when, verdict.
+        $careSessions = $byPet('pet_care_sessions', ['user_id', 'kind', 'local_date', 'started_at', 'status', 'finished_at', 'result'], 'started_at');
         // M5-R05: invitations as rows (≤ 2 a day); free plays — unlimited — as one
         // count per day, child and kind, so play can never make the export too large.
         $plays = DB::table('pet_play_events')->whereIn('pet_id', $petIds)->where('source', 'invitation')
@@ -258,7 +260,7 @@ class AccountExportService
             ->get()->groupBy('pet_id');
         $expires = $this->media->urlExpiry();
 
-        return $pets->map(function (Pet $pet) use ($caretakers, $contracts, $activities, $steps, $walks, $routines, $periods, $hygiene, $skills, $sessions, $plays, $freePlays, $expires): array {
+        return $pets->map(function (Pet $pet) use ($caretakers, $contracts, $activities, $steps, $walks, $routines, $periods, $hygiene, $skills, $sessions, $careSessions, $plays, $freePlays, $expires): array {
             $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
             $rows = fn (Collection $group) => $group->get($pet->id, collect());
             $album = $this->growth->albumFor($pet, $expires)->toArray()['growth'];
@@ -351,6 +353,17 @@ class AccountExportService
                     'taps' => is_string($r->taps) ? json_decode($r->taps, true) : $r->taps,
                     'result' => is_string($r->result) ? json_decode($r->result, true) : $r->result,
                     'progress_gain' => $r->progress_gain === null ? null : round((float) $r->progress_gain, 2),
+                ])->values()->all(),
+                // M5-R06-04: the cat's care sessions (wand play) with the server's verdict.
+                'care_sessions' => $rows($careSessions)->map(fn ($r) => [
+                    // null = a deleted child.
+                    'child_id' => $r->user_id === null ? null : (int) $r->user_id,
+                    'kind' => $r->kind,
+                    'local_date' => $this->date($r->local_date),
+                    'started_at' => $this->iso($r->started_at),
+                    'status' => $r->status,
+                    'finished_at' => $this->iso($r->finished_at),
+                    'result' => is_string($r->result) ? json_decode($r->result, true) : $r->result,
                 ])->values()->all(),
                 // M5-R05: the dog's play invitations (who took them, when) …
                 'play_invitations' => $rows($plays)->map(fn ($r) => [

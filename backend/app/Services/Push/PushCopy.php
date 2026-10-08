@@ -93,6 +93,8 @@ final class PushCopy
             PushType::SoftWarning => self::line("soft.{$phaseMetric}", $locale),
             PushType::CriticalAlert => self::line("critical.{$phaseMetric}", $locale),
             PushType::WalkReminder => self::line('walk_reminder', $locale),
+            // M5-R06-04: the cat's daily play reminder (final cat texts: M5-R06-06).
+            PushType::PlayReminder => self::line('play_reminder', $locale),
             PushType::ParentAlarm => trim(self::line('parent_alarm', $locale).' '.(in_array($metric, self::METRICS, true)
                 ? self::line("parent_alarm_detail.{$metric}", $locale)
                 : '')),

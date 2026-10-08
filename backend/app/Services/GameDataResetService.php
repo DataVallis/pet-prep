@@ -73,6 +73,7 @@ class GameDataResetService
         'media_lab_runs',
         // everything that hangs off a pet
         'activities_log',
+        'pet_care_sessions',
         'pet_caretakers',
         'pet_contracts',
         'pet_daily_routines',
