@@ -9,7 +9,6 @@ use App\Models\Pet;
 use App\Models\PetContract;
 use App\Models\PetDailyWalk;
 use App\Models\PetHygieneEvent;
-use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\EscalationService;
 use App\Services\PairingService;
@@ -67,7 +66,9 @@ function cbUnborn(string $nowUtc = '2026-10-04 06:00:00', array $pet = [], array
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
     if ($quietHours !== []) {
-        QuietHours::create(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+        setQuietHours(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+    } else {
+        withoutQuietHours($parent); // none = switched off (default night 21–07 since 2026-10-08)
     }
     $created = Pet::factory()->unborn()->create(array_merge(['user_id' => $child->id], $pet));
 

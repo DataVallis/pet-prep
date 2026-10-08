@@ -92,7 +92,7 @@ function adFamily(string $email = 'mama@example.com'): array
     ActivityLog::create(['pet_id' => $pet->id, 'actor_user_id' => $child->id, 'activity_type' => 'fed_pet', 'value' => 40]);
     ActivityLog::create(['pet_id' => $pet->id, 'actor_user_id' => null, 'activity_type' => 'ignored_warning', 'value' => 30]);
     PetDailyStep::create(['pet_id' => $pet->id, 'user_id' => $child->id, 'local_date' => now()->toDateString(), 'steps' => 1200]);
-    QuietHours::create(['parent_id' => $parent->id, 'school_start' => '08:00', 'school_end' => '14:00', 'bedtime_start' => '21:00', 'bedtime_end' => '07:00', 'is_active' => true]);
+    setQuietHours(['parent_id' => $parent->id, 'school_start' => '08:00', 'school_end' => '14:00', 'bedtime_start' => '21:00', 'bedtime_end' => '07:00', 'is_active' => true]);
     $invite = FamilyInvite::create(['family_id' => $family->id, 'created_by' => $parent->id, 'code' => strtoupper(Str::random(8)), 'expires_at' => now()->addDay()]);
     ChildLoginPin::create(['family_id' => $family->id, 'child_user_id' => $child->id, 'created_by' => $parent->id, 'pin_hash' => hash_hmac('sha256', '123456', 'k'.$child->id), 'expires_at' => now()->addMinutes(15)]);
     $parent->createToken('iPhone', ['parent']);
@@ -755,7 +755,7 @@ function adScoreFamily(string $bornUtc = '2026-10-11 22:30:00'): array
     Carbon::setTestNow(Carbon::parse($bornUtc, 'UTC'));
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $maja = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Maja']);
-    QuietHours::create([
+    setQuietHours([
         'parent_id' => $parent->id,
         'school_start' => '08:00', 'school_end' => '13:00',
         'bedtime_start' => '22:00', 'bedtime_end' => '06:00',

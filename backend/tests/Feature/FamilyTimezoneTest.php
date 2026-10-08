@@ -36,7 +36,9 @@ function tzFamily(array $quietHours = [], string $timezone = TZ_LJUBLJANA, array
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
 
     if ($quietHours !== []) {
-        QuietHours::create(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+        setQuietHours(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+    } else {
+        withoutQuietHours($parent); // none = switched off (default night 21–07 since 2026-10-08)
     }
 
     $pet = Pet::factory()->mutt()->create(array_merge(['user_id' => $child->id], $pet));
@@ -84,7 +86,10 @@ describe('Family timezone resolution', function () {
         expect($parent->familyTimezone())->toBe('America/New_York');
         expect($child->fresh()->familyTimezone())->toBe('America/New_York');
         expect($pet->fresh()->familyTimezone())->toBe('America/New_York');
-        expect($pet->fresh()->quietHours())->toBeNull();
+        // Every family has quiet hours (default 21:00–07:00, 2026-10-08),
+        // read in the family timezone.
+        expect($pet->fresh()->quietHours()->bedtime_start)->toStartWith(QuietHours::DEFAULTS['bedtime_start'])
+            ->and($pet->fresh()->quietHours()->timezone())->toBe('America/New_York');
     });
 });
 
@@ -339,12 +344,21 @@ describe('PUT /api/parent/quiet-hours with timezone', function () {
         actingAs($parent, 'sanctum');
 
         putJson('/api/parent/quiet-hours', [
-            'bedtime_start' => '21:00',
-            'bedtime_end' => '07:00',
+            'school_start' => '08:00',
+            'school_end' => '13:00',
+            'bedtime_start' => '22:30',
+            'bedtime_end' => '06:30',
+            'is_active' => false,
             'timezone' => 'Ljubljana',
         ])->assertStatus(422)->assertJsonValidationErrors('timezone');
 
-        expect($parent->quietHours()->exists())->toBeFalse();
+        // Only the default row the family got at registration, still the defaults.
+        $row = $parent->quietHours()->sole();
+        expect($row->bedtime_start)->toStartWith('21:00')
+            ->and($row->bedtime_end)->toStartWith('07:00')
+            ->and($row->school_start)->toBeNull()
+            ->and($row->school_end)->toBeNull()
+            ->and($row->is_active)->toBeTrue();
         expect($parent->fresh()->timezone)->toBe(TZ_LJUBLJANA);
     });
 });

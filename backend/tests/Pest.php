@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\FamilyMember;
 use App\Models\Pet;
+use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\BehaviourEventService;
 use App\Services\HygieneEventService;
@@ -110,6 +112,46 @@ function disableHygieneEvents(Pet $pet): Pet
     ]);
 
     return $pet->refresh();
+}
+
+/**
+ * Set a family's quiet hours exactly to $attributes (fields left out are
+ * null, is_active defaults to true) — what `QuietHours::create()` did before
+ * every family got a default row (fix/quiet-hours-default, 2026-10-08).
+ * Pass `parent_id` and/or `family_id` like the old create() call.
+ */
+function setQuietHours(array $attributes): QuietHours
+{
+    $familyId = $attributes['family_id']
+        ?? (isset($attributes['parent_id']) ? FamilyMember::where('user_id', $attributes['parent_id'])->value('family_id') : null);
+    $values = array_merge(
+        ['school_start' => null, 'school_end' => null, 'bedtime_start' => null, 'bedtime_end' => null, 'is_active' => true],
+        $attributes,
+    );
+
+    $row = ($familyId !== null ? QuietHours::where('family_id', $familyId)->first() : null)
+        ?? (isset($attributes['parent_id']) ? QuietHours::where('parent_id', $attributes['parent_id'])->first() : null);
+    if ($row === null) {
+        return QuietHours::create($values);
+    }
+
+    $row->update(array_merge($values, $familyId !== null ? ['family_id' => $familyId] : []));
+
+    return $row->refresh();
+}
+
+/**
+ * A family whose parent switched quiet hours off (is_active = false): no
+ * quiet time at all — tests written before every family had night quiet
+ * hours (2026-10-08). Accepts the pet or any family member.
+ */
+function withoutQuietHours(Pet|User $subject): void
+{
+    $familyId = $subject instanceof Pet
+        ? $subject->family_id
+        : FamilyMember::where('user_id', $subject->id)->value('family_id');
+
+    QuietHours::where('family_id', $familyId)->update(['is_active' => false]);
 }
 
 /**

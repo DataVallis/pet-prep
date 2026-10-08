@@ -4,7 +4,6 @@ use App\Enums\ActivityType;
 use App\Models\ActivityLog;
 use App\Models\BreedConfig;
 use App\Models\Pet;
-use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\PetDecayService;
 use App\Services\PetProfilePayload;
@@ -38,7 +37,7 @@ function fwFamily(array $attributes = []): array
     Carbon::setTestNow(Carbon::parse('2026-10-05 04:30:00', 'UTC'));
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $child = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Maja']);
-    QuietHours::create([
+    setQuietHours([
         'parent_id' => $parent->id,
         'school_start' => '08:00', 'school_end' => '13:00',
         'bedtime_start' => '22:00', 'bedtime_end' => '06:00',

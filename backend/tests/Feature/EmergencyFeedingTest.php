@@ -12,7 +12,6 @@ use App\Models\DevicePushToken;
 use App\Models\Pet;
 use App\Models\PetHygieneEvent;
 use App\Models\PushNotification;
-use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\CareScheduleService;
 use App\Services\EscalationService;
@@ -59,7 +58,7 @@ function efAt(string $utc): void
 }
 
 /**
- * A child with a legacy mutt (windows 06–10 / 17–21, no quiet hours) born
+ * A child with a legacy mutt (windows 06–10 / 17–21, quiet hours switched off) born
  * the day before, acting as that child.
  *
  * @param  array<string, mixed>  $pet
@@ -70,6 +69,7 @@ function efChild(string $nowUtc = EF_DAVID_NOW, array $pet = []): array
     efAt($nowUtc);
 
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+    withoutQuietHours($parent);
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
     $created = disableHygieneEvents(Pet::factory()->create(array_merge([
         'user_id' => $child->id,
@@ -252,7 +252,7 @@ describe('emergency meal (feed outside a window at ≤ 20 %)', function () {
         seedStageParams();
         // 2-month puppy: 07–09, 11–13, 15–17, 19–21; school 10–13 covers 11–13.
         [, $pet, $parent] = efChild('2026-10-07 11:30:00', ['arrival_age_months' => 2]); // 13:30
-        QuietHours::create([
+        setQuietHours([
             'parent_id' => $parent->id,
             'school_start' => '10:00', 'school_end' => '13:00',
             'bedtime_start' => '22:00', 'bedtime_end' => '06:00',
@@ -288,7 +288,7 @@ describe('emergency meal (feed outside a window at ≤ 20 %)', function () {
             'illness_until' => Carbon::parse('2026-10-07 11:20:00', 'UTC'), // 13:20 local — over
             'frozen_at' => Carbon::parse('2026-10-07 07:30:00', 'UTC'),
         ]);
-        QuietHours::create([
+        setQuietHours([
             'parent_id' => $parent->id,
             'school_start' => '10:00', 'school_end' => '13:00',
             'bedtime_start' => '22:00', 'bedtime_end' => '06:00',
@@ -413,7 +413,7 @@ describe('emergency meal (feed outside a window at ≤ 20 %)', function () {
 
     it('allows it during quiet hours like every other feed (child actions are not blocked by quiet hours)', function () {
         [, $pet, $parent] = efChild();
-        QuietHours::create([
+        setQuietHours([
             'parent_id' => $parent->id,
             'school_start' => '10:00', 'school_end' => '15:00',
             'bedtime_start' => '22:00', 'bedtime_end' => '06:00',
@@ -642,7 +642,7 @@ describe('pushes never ask for a refused action', function () {
     it('a "wait" hunger push names the next CHILD window, skipping a parent-covered one', function () {
         seedStageParams();
         [$child, $pet, $parent] = efChild('2026-10-07 07:30:00', ['arrival_age_months' => 2, 'hunger_level' => 28]); // 09:30
-        QuietHours::create([
+        setQuietHours([
             'parent_id' => $parent->id,
             'school_start' => '10:00', 'school_end' => '13:00',
             'bedtime_start' => '22:00', 'bedtime_end' => '06:00',

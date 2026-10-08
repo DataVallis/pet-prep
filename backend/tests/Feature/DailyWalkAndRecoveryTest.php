@@ -6,7 +6,6 @@ use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\Pet;
 use App\Models\PetDailyWalk;
-use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\EscalationService;
 use App\Services\PetActivityService;
@@ -42,7 +41,9 @@ function dwPet(array $quietHours = DW_BEDTIME, array $pet = [], string $breed = 
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
     if ($quietHours !== []) {
-        QuietHours::create(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+        setQuietHours(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+    } else {
+        withoutQuietHours($parent); // none = switched off (default night 21–07 since 2026-10-08)
     }
 
     // Born days ago (no birth-day grace) unless the test says otherwise.

@@ -206,6 +206,7 @@
   "quietHours": {
     "title": "Quiet hours",
     "hint": "During quiet hours the dog hardly gets hungry, makes no mess and sends no notifications. Times follow the family's time zone.",
+    "defaultsApply": "Default times apply — tap Save to confirm or change them.",
     "active": "On",
     "school": "School",
     "bedtime": "Bedtime",

@@ -1160,15 +1160,21 @@ class Pet extends Model
 
     /**
      * The family's quiet hours (M2-01: one configuration per family, any
-     * parent edits it).
+     * parent edits it). Never null: a family without a row (no parent to
+     * own one, or a row lost to old code) gets QuietHours::DEFAULTS, so no
+     * pet is ever without night quiet (fix/quiet-hours-default, 2026-10-08).
+     * A parent who switched them off has a row with is_active = false.
      */
-    public function quietHours(): ?QuietHours
+    public function quietHours(): QuietHours
     {
         $quietHours = QuietHours::where('family_id', $this->family_id)->first();
+        if ($quietHours === null) {
+            return QuietHours::defaultFor($this->family);
+        }
 
         // QuietHours evaluates its windows in the family timezone; hand it
         // the family we already have.
-        if ($quietHours !== null && $this->family !== null) {
+        if ($this->family !== null) {
             $quietHours->setRelation('family', $this->family);
         }
 

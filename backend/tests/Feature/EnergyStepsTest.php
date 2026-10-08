@@ -5,7 +5,6 @@ use App\Enums\PetStateEnum;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\Pet;
-use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\EscalationService;
 use App\Services\PetActivityService;
@@ -35,7 +34,9 @@ function stepsPet(string $breed = 'mutt', array $quietHours = [], array $pet = [
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
     if ($quietHours !== []) {
-        QuietHours::create(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+        setQuietHours(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+    } else {
+        withoutQuietHours($parent); // none = switched off (default night 21–07 since 2026-10-08)
     }
 
     return disableHygieneEvents(Pet::factory()->create(array_merge([

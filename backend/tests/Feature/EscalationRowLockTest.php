@@ -35,6 +35,7 @@ afterEach(function () {
 function erlPet(array $attributes): Pet
 {
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+    withoutQuietHours($parent); // row locks, not quiet hours (default night 21–07 since 2026-10-08)
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
 
     return disableHygieneEvents(Pet::factory()->create(array_merge(['user_id' => $child->id], $attributes)));
