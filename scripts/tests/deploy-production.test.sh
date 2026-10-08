@@ -385,12 +385,27 @@ check "no artisan up (never went down)" not_called 'artisan up'
 finish
 
 start backup_fail "backup fails while postgres runs → abort before code switch"
-new_root dir; printf '#!/usr/bin/env bash\nexit 3\n' > "$ROOT/scripts/backup-production-db.sh"
+new_root dir; printf '#!/usr/bin/env bash\nexit 3\n' > "$ROOT/incoming/scripts/backup-production-db.sh"
 run_deploy -- --from "$ROOT/incoming" sha-v2
 check "exit != 0" rc_nonzero
 check "code never switched" eq "$(code_on_disk)" v1
 check "images built but not promoted" not_called ' tag '
 check "artisan up" called 'artisan up \[code=v1\]'
+finish
+
+start backup_release_copy "the release's backup script wins over a broken installed copy"
+new_root dir; printf '#!/usr/bin/env bash\nexit 3\n' > "$ROOT/scripts/backup-production-db.sh"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "release copy ran" out_has "backup (v2)"
+check "code switched" eq "$(code_on_disk)" v2
+finish
+
+start backup_installed_fallback "no backup script in the release → installed copy runs"
+new_root dir; rm -f "$ROOT/incoming/scripts/backup-production-db.sh"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "installed copy ran" out_has "backup ran"
 finish
 
 start git_success "git mode: success"
