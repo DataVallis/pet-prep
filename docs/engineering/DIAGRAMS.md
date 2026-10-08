@@ -295,7 +295,7 @@ flowchart TD
   D --> MN{"New family-local day?"}
   MN -- yes --> RS["Close yesterday: pet_daily_walks row<br/>energy showed 0 % → walk_illness_due_at<br/>= end of the night's quiet hours<br/>Steps → 0, energy → 0 %"]
   MN -- no --> HS
-  RS --> HS["Schedule today's hygiene events<br/>(poops_per_day, outside quiet hours)<br/>+ M5-R02: decide today's chewing<br/>(walk missed yesterday · teething roll)"]
+  RS --> HS["Schedule today's hygiene events<br/>(poops_per_day, outside quiet hours)<br/>+ M5-R02: decide today's chewing<br/>(walk missed yesterday · teething roll)<br/>+ M5-R05: decide today's play invitations,<br/>expire old ones (mood only, §5f)"]
   HS --> HA{"Pending poop / chewing in<br/>(last_decay_at, now]?"}
   HA -- yes --> H0["Hygiene → 0 %<br/>zero_since = event time"]
   HA -- "no / skipped" --> AC
@@ -572,6 +572,44 @@ flowchart TD
   PL["place progress"] --> CHW["teething chewing chance × (1 − 0.5 × progress)<br/>(proposal, S33) · chewing after a missed walk unchanged"]
 ```
 
+### 5f. Play & cuddle (M5-R05, David 2026-10-07 / 2026-10-08)
+
+Mood and video only — nothing here reaches a metric, routine, Care Score, report or certificate. Numbers marked (D) are in `config/play.php`.
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant Tick as Decay tick (every minute)
+  participant P as PlayService
+  participant DB as PostgreSQL
+  participant C as Child app
+  participant API as Laravel API
+  participant R as Reverb (private-pet.{id})
+  Note over P: play only for a challenge in trial or paid (not a mutt shown as free),<br/>not waiting for payment, with a profile (legacy: no — D), born, active
+  Tick->>P: ensureInvitationsScheduled (once per family-local day)
+  P->>DB: pet_play_events: 1 ball + 1 cuddle invitation, random order,<br/>whole minutes in 07:00–20:00 outside quiet hours, ≥ 3 h apart, open 2 h (D)
+  Tick->>P: expireDue (pending past expires_at → expired) · frozen: skipWhileFrozen
+  Tick->>P: offeredInvitationId before / after the tick
+  alt invitation appears or ends (and no metric change)
+    Tick-->>R: PetUpdated play {play.invitation}
+  end
+  Note over P: invitation shown only while today's walk goal is reached (David Q4),<br/>hunger and thirst > 30 % (D), no mess, not quiet hours, not locked
+  C->>API: POST /api/child/pet/play {kind: play | cuddle} (mini-game finished)
+  API->>P: lock pet · 423 locks · decay catch-up · canPlayNow? else 422 play_not_available
+  alt same child + kind within 10 s (D)
+    API-->>C: 200 unchanged (no row, no broadcast)
+  else shown invitation of that kind
+    P->>DB: invitation → done (completed_by = first child, Q8)
+  else
+    P->>DB: free row (done)
+  end
+  P->>DB: pets.happy_until = now + 30 min (Q5)
+  P->>DB: activities_log played_with_pet / cuddled_pet (1 row per child + kind per hour, D; else value + 1)
+  API-->>C: 200 {play {kind, source}, state.play {can_play, invitation, mood {happy_until, scene: playing}}}
+  API-->>R: PetUpdated play (after commit)
+  Note over R: parent dashboard: timeline row + play_today {play, cuddle} — no push, no score
+```
+
 ## 6. Data model (core)
 
 Family model (M2-01, ADR-012): `families` own pets and quiet hours; `family_user` puts parents and children in a family; `pet_caretakers` links children to pets (shared pet = several rows). `users.parent_id` and `pets.user_id` are deprecated mirrors.
@@ -597,6 +635,7 @@ erDiagram
   PETS ||--o{ PET_MEDIA : "image + state video slots (M4-03)"
   PET_MEDIA ||--o{ AI_SPEND_LEDGER : "estimated cost per call"
   PETS ||--o{ PET_HYGIENE_EVENTS : "messes: poop, puppy accident, chewing"
+  PETS ||--o{ PET_PLAY_EVENTS : "play invitations + finished plays (mood only, M5-R05)"
   PETS ||--o{ PET_DAILY_WALKS : "closed days"
   PETS ||--o{ PET_CONTRACTS : "one per caretaker"
   PETS ||--o{ PET_STATUS_PERIODS : "hard stop / illness / inactive (M2-06)"
@@ -713,6 +752,16 @@ erDiagram
     timestamp scheduled_at
     string status "pending applied skipped"
     timestamp cleaned_at
+  }
+  PET_PLAY_EVENTS {
+    string kind "play cuddle (M5-R05)"
+    string source "invitation free"
+    date local_date
+    timestamp scheduled_at "invitations only"
+    timestamp expires_at "invitations only"
+    string status "pending done expired skipped"
+    bigint completed_by FK "child, null on delete"
+    timestamp completed_at
   }
   PET_DAILY_WALKS {
     date local_date

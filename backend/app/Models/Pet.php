@@ -234,6 +234,9 @@ class Pet extends Model
         'trial_reminder_sent_at',
         // M5-F02: when an unpaid mutt challenge became the free plan (program clock bookkeeping).
         'converted_to_free_at',
+        // M5-R05 bookkeeping (the apps get PlayPayload instead).
+        'happy_until',
+        'play_scheduled_through',
     ];
 
     /**
@@ -280,6 +283,7 @@ class Pet extends Model
             'payment_locked_at' => 'datetime',
             'trial_reminder_sent_at' => 'datetime',
             'converted_to_free_at' => 'datetime',
+            'happy_until' => 'datetime',
         ];
     }
 
@@ -518,6 +522,11 @@ class Pet extends Model
     /**
      * Training mini-game sessions (M5-R03).
      */
+    public function playEvents(): HasMany
+    {
+        return $this->hasMany(PetPlayEvent::class);
+    }
+
     public function trainingSessions(): HasMany
     {
         return $this->hasMany(PetTrainingSession::class);
@@ -933,6 +942,9 @@ class Pet extends Model
             'behaviour_scheduled_through' => null,
             // M5-R03: "no practice → decay" is evaluated from the birth day on.
             'training_decayed_through' => null,
+            // M5-R05: play invitations are decided from the birth day on.
+            'play_scheduled_through' => null,
+            'happy_until' => null,
             'frozen_at' => null,
             // M3-11 (PAYMENTS_SPEC P2): the 7-day trial of a challenge starts at birth.
             'trial_ends_at' => $this->plan === PetPlan::Free ? null : $this->trialEndFor($at),

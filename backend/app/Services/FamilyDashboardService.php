@@ -51,6 +51,7 @@ class FamilyDashboardService
     public function __construct(
         private readonly CareScoreService $scores,
         private readonly PetMediaService $media,
+        private readonly PlayService $play,
     ) {}
 
     private const CHILD_ACTIONS = [
@@ -112,6 +113,8 @@ class FamilyDashboardService
         // Routines, Care Score, traffic light (M2-06): one board for the family.
         $board = $this->scores->board($pets, $tz, $caretakers, $contracts);
         $timelines = $this->timelines($pets, $children->pluck('name', 'id')->all());
+        // M5-R05: today's ball games / cuddles per pet (all children, one query).
+        $playToday = $this->play->todayCounts($pets);
 
         $from = now()->setTimezone($tz)->startOfDay()->subDays(self::STATS_DAYS - 1);
         $fromUtc = $from->copy()->utc();
@@ -183,6 +186,13 @@ class FamilyDashboardService
                 ];
             })->values()->all(),
             'pets' => $pets->map(fn (Pet $pet) => array_merge([
+                /**
+                 * M5-R05: completed ball games / cuddles of today's family-local day
+                 * (all children together); null for a pet without play (free, legacy).
+                 *
+                 * @var array{play: int, cuddle: int}|null
+                 */
+                'play_today' => $playToday[$pet->id] ?? null,
                 'id' => $pet->id,
                 'breed_type' => $pet->breed_type->value,
                 'born_at' => $pet->born_at?->toIso8601String(),

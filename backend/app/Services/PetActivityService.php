@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\ActivityType;
 use App\Enums\CareRefusal;
 use App\Enums\PetLockReason;
+use App\Enums\PlayKind;
 use App\Enums\TrainingCommand;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
@@ -60,6 +61,7 @@ class PetActivityService
         private BehaviourEventService $behaviour,
         private TrainingService $training,
         private ChallengeService $challenges,
+        private PlayService $play,
     ) {}
 
     /**
@@ -347,6 +349,50 @@ class PetActivityService
             $this->logActivity($locked, ActivityType::TrainedPet, (int) ($session->result['successes'] ?? 0), $child->id);
 
             return $this->result(ActionResult::ACCEPTED, $locked, extra: $extra);
+        });
+    }
+
+    /**
+     * Play & cuddle (M5-R05, PLAY_CUDDLE_SPEC §12.5): the child finished a
+     * ball game or a cuddle. Locks first (423, incl. this child's contract),
+     * then 422 play_not_available (no play for this pet, quiet hours —
+     * next_allowed_at = their end — or a mess to clean). Completes the shown
+     * invitation of that kind or records a free play; the dog is happy for
+     * `play.happy_minutes`; one timeline row per child + kind per merge
+     * window. A repeat by the same child and kind within `play.repeat_seconds`
+     * → unchanged. Never touches a metric, routine or score. One
+     * `PetUpdated('play')` after commit. `extra.play` = what was recorded.
+     */
+    public function play(Pet $pet, User $child, PlayKind $kind): ActionResult
+    {
+        return $this->withLockedPet($pet, 'play', function (Pet $locked) use ($child, $kind): ActionResult {
+            $now = now()->startOfSecond();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+
+            // Due messes / the midnight happen first (same as every action).
+            $this->decay->catchUpLocked($locked);
+
+            if (! $this->play->canPlayNow($locked, $now)) {
+                return $this->refused($locked, CareRefusal::PlayNotAvailable, $this->play->nextPlayAt($locked, $now));
+            }
+
+            $event = $this->play->complete($locked, $child, $kind, $now);
+            if ($event === null) {
+                return $this->unchanged(ActionResult::UNCHANGED, $locked);
+            }
+
+            $locked->saveQuietly();
+            $this->play->recordTimeline($locked, $child, $kind, $now);
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: [
+                'play' => [
+                    'kind' => $event->kind->value,
+                    'source' => $event->source->value,
+                ],
+            ]);
         });
     }
 

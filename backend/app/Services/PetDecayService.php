@@ -78,6 +78,7 @@ class PetDecayService
         private CareScheduleService $schedule,
         private BehaviourEventService $behaviour,
         private TrainingService $training,
+        private PlayService $play,
     ) {}
 
     /**
@@ -145,16 +146,23 @@ class PetDecayService
         $work = function () use ($petId): array {
             $locked = Pet::whereKey($petId)->lockForUpdate()->first();
             if (! $locked) {
-                return [null, false];
+                return [null, false, false];
             }
 
-            return [$locked, $this->decayLockedPet($locked)];
+            // M5-R05: the dog's play invitation as the apps last saw it (at the
+            // previous tick, with the metrics before this one) …
+            $offeredBefore = $this->play->offeredInvitationId($locked, $locked->last_decay_at ?? now()->startOfSecond());
+            $changed = $this->decayLockedPet($locked);
+            // … and now: a flip (shown / gone) is broadcast once.
+            $playFlipped = $offeredBefore !== $this->play->offeredInvitationId($locked, now()->startOfSecond());
+
+            return [$locked, $changed, $playFlipped];
         };
 
         // The scheduler calls this outside any transaction → own transaction.
         // If a caller already opened one, the row lock lives in that
         // transaction until it commits; a nested savepoint would add nothing.
-        [$locked, $changed] = DB::transactionLevel() > 0 ? $work() : DB::transaction($work);
+        [$locked, $changed, $playFlipped] = DB::transactionLevel() > 0 ? $work() : DB::transaction($work);
 
         if (! $locked) {
             return null;
@@ -166,8 +174,12 @@ class PetDecayService
 
         // Broadcast after commit (no external I/O inside a transaction) and
         // only when something the parent sees changed: one per pet per tick.
+        // A play invitation appearing / ending alone is `play` (its payload
+        // rides along with any metric_changed anyway — one event per tick).
         if ($changed && $locked->is_active) {
             PetUpdated::afterCommit($locked, 'metric_changed');
+        } elseif ($playFlipped && $locked->is_active) {
+            PetUpdated::afterCommit($locked, 'play');
         }
 
         return $changed;
@@ -278,6 +290,8 @@ class PetDecayService
 
                 // M5-R02: the puppy's bladder clock does not run while frozen.
                 $this->behaviour->holdClockWhileFrozen($pet, $now);
+                // M5-R05: an invitation whose time comes during a freeze is dropped.
+                $this->play->skipWhileFrozen($pet, $now);
             }
             $this->advanceClock($pet, $now);
 
@@ -361,6 +375,10 @@ class PetDecayService
         // bladder clock. The earliest mess starts the neglect clock.
         $this->hygieneEvents->ensureScheduled($pet, $from, $now, $quietHours, $breedConfig);
         $this->behaviour->ensureChewingScheduled($pet, $from, $now, $quietHours);
+        // Play & cuddle (M5-R05): decide today's invitations, end the old ones.
+        // Mood only — nothing here touches a metric.
+        $this->play->ensureInvitationsScheduled($pet, $from, $now, $quietHours);
+        $this->play->expireDue($pet, $now);
         $messAt = $this->hygieneEvents->applyDue($pet, $from, $now, $quietHours);
         $accidentAt = $this->behaviour->applyDueAccidents($pet, $from, $now, $quietHours);
         if ($accidentAt !== null && ($messAt === null || $accidentAt->lessThan($messAt))) {

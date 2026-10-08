@@ -177,6 +177,8 @@ Route::middleware(['auth:sanctum', 'ability:child', 'throttle:api'])
             // M5-R03 training mini-game: server-generated schedule, server-scored taps.
             Route::post('pet/training/start', [ChildPetController::class, 'startTraining']);
             Route::post('pet/training/finish', [ChildPetController::class, 'finishTraining']);
+            // M5-R05 play & cuddle: mood / video only, no score.
+            Route::post('pet/play', [ChildPetController::class, 'play']);
             Route::post('pet/steps', [ChildPetController::class, 'steps']);
             Route::post('contract', [ChildContractController::class, 'store']);
         });
