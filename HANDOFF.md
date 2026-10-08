@@ -5,7 +5,7 @@
 
 ## 1. Executive summary
 
-- **Last updated:** 2026-10-08 early (Claude — M5-F device fixes: PR #77 F07, #75 F01/F05/F06, #78 F02/F03 merged; #78 deployed `a0eb4d0` (Deploy to Hetzner: success). **PR #76 (F04 school result) open — waits for David's denominator decision.** Next: M5-R05, M5-R06. Payments sandbox test by David on 2026-10-08 — needs a new native build from `main`.)
+- **Last updated:** 2026-10-08 midday (Claude — merged + deployed: #75–#78 (M5-F01–F03, F05–F07), #76 (F04), #80 (M5-F08 quiet-hours default), #82 (M5-R05 play backend), #83 (M3-13 no trial). Production restarted with `PAYMENTS_ENFORCED=true`. Next: M5-R05 app, then M5-R06, M5-R07 spike.)
 - **Production:** `https://api.petprep.si` live (Hetzner CX23, Docker Compose + Caddy). Merge to `main` → CI (`CI OK`) → automatic deploy when backend / deployment / scripts / workflow changed (DEPLOYMENT.md D16). Website `petprep.si` is served from the separate repo `DataVallis/pet-prep-website` (D15). Last verified deploy: `98eabfb` (M5-R03 training backend), 2026-10-06.
 - **App:** TestFlight build 1.24.4 has the push-registration loop (fixed on `main`, PR #45/#48). **David must ship a new TestFlight build from `main`** (he owns app version — commit `58551b1` "mobile version change" is his). Nothing from M5-R02 / M5-R03 UI and nothing of the **CGP v2 rebrand** has been checked on a device yet. The rebrand adds native modules (`expo-font`, `expo-splash-screen`) and new icons / splash → needs a **new native EAS build** (an OTA update is not enough).
 - **PR #59 (M5-R03b) merged and deployed 2026-10-07** (`b3246ef`; GitHub Actions billing was blocking the `CI OK` job on 2026-10-06 — David fixed it). Small fix PR `fix/legacy-pet-age-label` (mobile only).
@@ -55,14 +55,14 @@
 
 ## 5. Next steps (priority queue)
 
-**Start here (new session, after 2026-10-08 early):**
-0. **PR #76 (M5-F04)** — David confirmed the 4 titles (21:35) but QA found the denominator "all commands" makes "Odlično!" unreachable (server always schedules ≥ 1 ignored command). Proposed to David: count only obeyed commands; excellent = all obeyed praised on time AND no praise when the dog did not obey. After his answer: update `trainingResultBucket` + tests + DECISIONS/PRODUCT_SPEC on the PR branch, rebase (docs conflicts), CI, merge.
-1. **David (2026-10-08):** payments sandbox test on a new native build from `main` (child card → "12-tedenski izziv — kupi" (since M3-13 also before the contract) → "Kupi" → Apple sandbox → "Plačano"; US sandbox Apple ID shows $44.99 — use a Slovenian sandbox tester for 49,99 €). The same build carries health steps (needs new native modules + HealthKit capability, minSdk 26) — device checklist in `docs/engineering/HEALTH_STEPS.md`; also check emergency meal, dock time lines at 375 pt and the album posters.
-2. **M5-F01–F07** — done except F04 (PR #76, see 0.).
-3. **M5-R05** play & cuddle — decisions recorded, write a short spec, then build.
-4. **M5-R06** species → breed picker (dog + cat) — cat care spec first.
-5. **Optional (David asked 19:32):** language switch also in the child app (today: device language → saved choice; switch on the start screen and parent Nadzor → Jezik).
-6. Before Play release: Health Connect privacy-policy rationale screen + Play Console health declaration; App Review may ask about unused `UIBackgroundModes: fetch` (added by `expo-task-manager`).
+**Start here (new session, after 2026-10-08 midday):**
+1. **M5-R05 app part** — backend merged + deployed (PR #82: `POST /api/child/pet/play`, `state.play`, `play_today`, timeline types). Build the mobile part per `docs/product/PLAY_CUDDLE_SPEC.md` (Igra entry above the dock, ball mini-game, cuddle swipe with accessible alternative, invitation chip, happy mood 30 min, parent timeline + "Danes: N× igra, M× crkljanje"). Then QA, merge. Open (D) for David: Q2 legacy pets (proposed no), numbers in `backend/config/play.php`. QA follow-up m1: isolation test should also compare metrics/zero_since step by step.
+2. **M5-R06** species → breed picker (dog + cat) — cat care spec first, David approves before code.
+3. **M5-R07 (new, David 2026-10-08):** research spike (1–2 days) for an interactive "2.5D" pet (Talking-Tom feel): touch zones on the real video (head, belly, back) → short reaction clips (tail wag, roll over, lick) + sounds (bark, whine, pant; small vs large dogs). Cost ~3–4 short clips per pet per life stage (~0.5 $ each) → fits AI-media tokens (M4-09). Real 3D (image→3D + rigging) judged too costly and less faithful. Decide after the spike.
+4. **Beta (~20 testers, sandbox payments, David 2026-10-08):** production has `PAYMENTS_ENFORCED=true` + `REVENUECAT_ACCEPT_SANDBOX=true` (restarted via "Run workflow" on `main` 10:3x, green). No free trial any more (M3-13, PR #83): challenge dog locked at birth until purchase. **David needs a new TestFlight build from `main`** (3.0.0 still shows trial copy; contains F01–F08, M3-13, quiet-hours card). Tell testers: buy the challenge before or right after the contract.
+5. **Outside this repo (David):** remove the 7-day trial from the website (`DataVallis/pet-prep-website`: `src/lib/site.ts:45`, `src/lib/llms.ts:62`, `src/content/en.ts` + `sl.ts` lines 23, 87, 98, 391, 395, 405, 503, 677, 678), App Store / Play listing texts, in-app product description of `petprep_challenge_12w`, RevenueCat metadata. Claude can do the website repo on request.
+6. Optional: language switch in the child app; Health Connect rationale screen + Play health declaration before Play release.
+7. **Session hygiene:** this session (2026-10-07 21:30 → 10-08) is very long → start a new session from this HANDOFF.
 
 Older queue (still valid where not done):
 1. **David:** new TestFlight / Android build from `main` (fixes the push loop; contains M5-R02 + M5-R03 UI and the CGP v2 rebrand). Rebrand checks: home-screen icon (iOS + Android adaptive / themed), splash on fog, fonts render (Instrument Sans body, Bricolage headings, Slovenian č/š/ž), status-bar text dark on light screens and light in the child app, mint "due" care button. Then device checks: one `POST /api/devices` per login in the Caddy log; "Šola" chip at 375 pt; "Pohvali" responsiveness; kill app mid-training and reopen; TalkBack / VoiceOver.
