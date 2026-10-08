@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-08 — Pred beto s čisto mizo: varna ponastavitev produkcije (M5-09)
+
+**Kaj se je zgodilo:** David se je odločil (8. 10. ob 13:50), da beta z ~20 testerji začne s **prazno igro**: do zdaj je na produkciji testiral samo on. Namesto ročnega brisanja po bazi je nastalo orodje, ki to naredi varno: najprej **suhi tek** (samo pokaže, koliko vrstic v kateri tabeli bi izbrisal in koliko slik / videov psov — brez e-pošt in brez podatkov otrok), nato pa ob potrditvi z vpisom imena strežnika: vzdrževalni način → ustavljeni delavci → **sveža kopija baze in vseh medijev** → izbris v eni transakciji → nazaj na splet. **Ostanejo** samo skrbniški računi in podatki o pasmah (z zgodovino urejanj).
+
+**Zakaj je pomembno:** Testerji začnejo vsi enako, brez starih »legacy« psov iz časa pred izbiro kužka — zato tudi odprto vprašanje o igri za legacy pse ni več potrebno. Orodje noče teči, če v bazi obstaja tabela, za katero nihče ni odločil, ali se ohrani ali izbriše, zato nobena prihodnja tabela ne more biti pozabljena.
+
+**Številke:** 40 tabel v bazi, od tega 4 ohranjene, 2 delno (skrbniki in njihovi žetoni), 34 v celoti izbrisanih; 8 novih testov strežnika in 39 preverjanj skripte; 0 sprememb na produkciji, dokler je David sam ne zažene.
+
+**Kako povedati:**
+- 👩 Starši (testerji): »Za beto smo začeli znova — prosimo, aplikacijo na novo namestite in se ponovno registrirajte. Vaši stari testni podatki so izbrisani.«
+- 💼 Investitorji: »Beta začne s čistimi podatki; brisanje je ponovljivo, z obvezno kopijo in revizijsko sledjo.«
+- 🛠 Tehnično: »Ponastavitev = Laravel ukaz s suhim tekom + gostiteljska skripta (maintenance → stop workers → pg_dump + tar medijev → DELETE v vrstnem redu FK v eni transakciji). Test našteje vse tabele sheme in pade, če nova tabela ni razvrščena.«
+
+---
+
 ## 2026-10-08 — Pravila za muco potrjena (M5-R06, *načrt*)
 
 **Kaj se je zgodilo:** David je potrdil vseh 10 odločitev o skrbi za mačko (`CAT_SPEC.md`). Namesto sprehoda se otrok z muco igra s **palico s peresom** (odrasla 2×, mucek 3× na dan), namesto kakca **počisti pesek** v 4 urah, muca je **notranja**, za praskanje kavča jo otrok **odnese na praskalnik in pohvali** — nikoli kazen. Domača mačka bo brezplačna, **Maine Coon** pa plačljiva pasma za izziv (ista cena 49,99 €). Koraki s telefona ostanejo samo pri psu.

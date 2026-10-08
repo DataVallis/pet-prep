@@ -9,7 +9,7 @@
 | # | Vprašanje | Odgovor / priporočilo |
 |---|---|---|
 | Q1 | Velja »samo v plačanem izzivu« tudi med **7-dnevnim preizkusom**? | ✅ **David 8. 10.: da** — izziv v preizkusu in plačan (nakup, grandfathered, odklep admina); **ne** brezplačni mešanček in **ne** med zaklepom do plačila. *M3-13 (David 8. 10. 2026, 10:28): novi psi preizkusa nimajo več — »v preizkusu« velja le še za pse iz časa pred M3-13 do konca njihovega preizkusa; `challengeStatus() = trial` ostane zato v pogoju.* |
-| Q2 | Ali dobijo igro tudi **legacy psi**? *Razlaga: legacy psi so psi, ustvarjeni pred izbiro kužka (M5-R04) — zanje ne vemo starosti ne izvora, zato zanje veljajo stara pravila (brez vedenja in šolanja).* | ✅ **Rešeno z resetom baze** (David 8. 10. 2026: produkcijski podatki se ponastavijo, zato legacy psov v produkciji ni več). ~~Priporočilo: **ne** (kot vedenje in šolanje).~~ |
+| Q2 | Ali dobijo igro tudi **legacy psi**? *Razlaga: legacy psi so psi, ustvarjeni pred izbiro kužka (M5-R04) — zanje ne vemo starosti ne izvora, zato zanje veljajo stara pravila (brez vedenja in šolanja).* | ✅ **Brezpredmetno — rešeno z resetom baze** (David 8. 10. 2026 13:50, DEPLOYMENT.md D17): po resetu baze legacy psov v produkciji ni več. Pravilo »legacy pes se ne igra« (`! isLegacyProfile()`) ostane v kodi kot varovalka. ~~Priporočilo: **ne** (kot vedenje in šolanje).~~ |
 | Q3 | Pogostost | ✅ **David 8. 10.: otrok se lahko igra in crklja kadarkoli sam** (vedno mora biti kaj za početi). Vabila ostanejo kot spodbuda: **2 na dan na psa — 1 igra + 1 crkljanje** **(D)**, čakajo 2 h **(D)**. Prosta igra brez omejitve števila, brez točk. |
 | Q4 | Kdaj je kuža »preskrbljen« (za vabilo)? | ✅ **David 8. 10.: tudi današnji sprehod mora biti opravljen.** Uporabimo obstoječi prag rutine »Sprehod« (PRODUCT_SPEC §11.1): **današnji koraki ≥ dnevni cilj** (energija kaže 100 %). Poleg tega **(D)**: ni nereda, lakota in žeja > 30 %, ni zaklepa, niso tihe ure. |
 | Q5 | Razpoloženje | ✅ **David 8. 10.: kot predlagano** — 30 min »vesel«, brez številke in merilnika. |
@@ -31,7 +31,7 @@
 | 12-tedenski izziv v **preizkusu** (samo psi iz časa pred M3-13) | ✅ (David 8. 10., Q1) |
 | izziv, ki **čaka na plačilo** (zaklep) | ❌ (zaklep ustavi vse, PAYMENTS_SPEC P3) |
 | **brezplačni mešanček** | ❌ (David 7. 10.: samo izziv) |
-| **legacy** pes (ustvarjen pred izbiro kužka) | ❌ (Q2 — rešeno z resetom baze; v produkciji jih ni več) |
+| **legacy** pes (ustvarjen pred izbiro kužka) | ❌ (Q2 — brezpredmetno po resetu baze 8. 10. 2026: legacy psov v produkciji ni več; pravilo ostane kot varovalka) |
 
 Brez zastavice `features` iz aplikacije: igra nima posledic, zato stara različica aplikacije vabila preprosto ne pokaže in to se tiho izteče **(D)**, glej §9.
 
@@ -135,7 +135,7 @@ Brez besedil za zamujeno / prezrto (namenoma). Brez imen otrok v otroški aplika
 > Decided: mood / video only, paid challenge (Q1; plus a running pre-M3-13 trial / payments kill switch off — M3-13), free play any time (Q3), invitations only after today's walk goal (Q4), 30-minute happy scene (Q5), parent timeline + daily count, no push (Q7), shared pet: free play for all, invitation completed by the first child (Q8). Items marked (D) above are proposals.
 
 ### 12.1 Eligibility
-`PlayService::eligible(Pet $pet): bool` = `plan = challenge` ∧ `challengeStatus() ∈ {trial, paid}` (`trial` since M3-13 = a running pre-M3-13 trial or the payments kill switch off) ∧ `! awaitsPayment()` ∧ `! isLegacyProfile()` (Q2, D) ∧ `! isUnborn()` ∧ not game over / inactive.
+`PlayService::eligible(Pet $pet): bool` = `plan = challenge` ∧ `challengeStatus() ∈ {trial, paid}` (`trial` since M3-13 = a running pre-M3-13 trial or the payments kill switch off) ∧ `! awaitsPayment()` ∧ `! isLegacyProfile()` (Q2 — brezpredmetno po resetu baze D17, ostane kot varovalka) ∧ `! isUnborn()` ∧ not game over / inactive.
 `PlayService::canPlayNow(Pet $pet, $now)` = `eligible` ∧ not frozen (hard stop, illness) ∧ not quiet now (D) ∧ no open hygiene event (existing "clean first" rule).
 No `features` flag: the feature has no consequences, so pets of any app build are scheduled; an old build ignores the payload.
 
