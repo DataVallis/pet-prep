@@ -17,8 +17,8 @@ final class PushTiming
 
     /**
      * Earliest family-local time for the walk reminder when the family has
-     * no night window to derive it from (fix/quiet-hours-default, 2026-10-08,
-     * Claude — pending David).
+     * no night window to derive it from (fix/quiet-hours-default; confirmed by
+     * David 2026-10-08 08:54).
      */
     public const WALK_FLOOR_FALLBACK = '09:00';
 
@@ -103,7 +103,7 @@ final class PushTiming
      * one whose end + 2 h would fall on the next day). A night window is a
      * bedtime that wraps midnight (21:00–07:00 → 09:00) or one that starts
      * at or after midnight up to NIGHT_START_LATEST (00:00–06:00 → 08:00).
-     * Returned in the family timezone. (Claude, pending David.)
+     * Returned in the family timezone. (Confirmed by David 2026-10-08 08:54.)
      */
     public static function walkReminderFloor(?QuietHours $quietHours, CarbonInterface $now, string $timezone): Carbon
     {

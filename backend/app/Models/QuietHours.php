@@ -14,7 +14,7 @@ class QuietHours extends Model
 {
     /**
      * The quiet hours every family has until a parent saves its own
-     * (fix/quiet-hours-default, 2026-10-08 — PRODUCT_SPEC §5): night 21:00–07:00
+     * (fix/quiet-hours-default, confirmed by David 2026-10-08 08:54 — PRODUCT_SPEC §5): night 21:00–07:00
      * family-local, no school window, active. The single source for the
      * row FamilyService creates with a family, the data migration that
      * backfilled families without a row, and the in-code fallback when no
