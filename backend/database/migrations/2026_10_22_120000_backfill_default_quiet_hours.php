@@ -1,15 +1,15 @@
 <?php
 
-use App\Enums\FamilyRole;
-use App\Models\QuietHours;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 
 /**
  * fix/quiet-hours-default (2026-10-08, production bug: pushes at 00:00 and
  * ~03:30 for a family whose parent app showed quiet hours that the server
- * never had): every family gets QuietHours::DEFAULTS (night 21:00–07:00
- * family-local, no school window, active) unless it already has a row.
+ * never had): every family gets the defaults (night 21:00–07:00
+ * family-local, no school window, active — the values of QuietHours::DEFAULTS
+ * on 2026-10-08, inlined so this migration never changes with app code)
+ * unless it already has a row.
  *
  *  - Insert only: existing rows (also is_active = false — the parent's
  *    explicit choice) are never touched.
@@ -39,7 +39,7 @@ return new class extends Migration
         foreach ($families as $familyId) {
             $parentId = DB::table('family_user')
                 ->where('family_id', $familyId)
-                ->where('role', FamilyRole::Parent->value)
+                ->where('role', 'parent')
                 ->whereNotExists(fn ($q) => $q->select(DB::raw(1))->from('quiet_hours')->whereColumn('quiet_hours.parent_id', 'family_user.user_id'))
                 ->orderBy('id')
                 ->value('user_id');
@@ -48,12 +48,17 @@ return new class extends Migration
                 continue;
             }
 
-            DB::table('quiet_hours')->insertOrIgnore(array_merge(QuietHours::DEFAULTS, [
+            DB::table('quiet_hours')->insertOrIgnore([
                 'parent_id' => $parentId,
                 'family_id' => $familyId,
+                'school_start' => null,
+                'school_end' => null,
+                'bedtime_start' => '21:00',
+                'bedtime_end' => '07:00',
+                'is_active' => true,
                 'created_at' => $now,
                 'updated_at' => $now,
-            ]));
+            ]);
         }
     }
 

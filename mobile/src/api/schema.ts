@@ -1390,21 +1390,6 @@ export interface components {
              */
             features?: string[] | null;
         };
-        /** QuietHours */
-        QuietHours: {
-            id: number;
-            parent_id: number;
-            school_start: string | null;
-            school_end: string | null;
-            bedtime_start: string | null;
-            bedtime_end: string | null;
-            is_active: boolean;
-            /** Format: date-time */
-            created_at: string | null;
-            /** Format: date-time */
-            updated_at: string | null;
-            family_id: number | null;
-        };
         /**
          * RegisterDeviceRequest
          * @description POST /api/devices (M3-02): register this app install for pushes. Parent or
@@ -5936,6 +5921,8 @@ export interface operations {
                             bedtime_start: string | null;
                             bedtime_end: string | null;
                             is_active: boolean;
+                            /** @description false = QuietHours::DEFAULTS apply, no stored row yet. */
+                            saved: boolean;
                         } | null;
                         recent_activities: {
                             id: string;
@@ -6180,7 +6167,21 @@ export interface operations {
                         pet: null;
                         /** @constant */
                         traffic_light: "green";
-                        quiet_hours: components["schemas"]["QuietHours"] | null;
+                        quiet_hours: {
+                            id: number;
+                            parent_id: number;
+                            school_start: string | null;
+                            school_end: string | null;
+                            bedtime_start: string | null;
+                            bedtime_end: string | null;
+                            is_active: boolean;
+                            /** Format: date-time */
+                            created_at: string | null;
+                            /** Format: date-time */
+                            updated_at: string | null;
+                            family_id: number | null;
+                            saved: boolean;
+                        } | null;
                         recent_activities: string[];
                         family: {
                             id: number;
@@ -6759,18 +6760,17 @@ export interface operations {
                 content: {
                     "application/json": {
                         quiet_hours: {
-                            id: number;
+                            /** @description null (with saved = false) while the family has no stored row. */
+                            id: number | null;
                             school_start: string | null;
                             school_end: string | null;
                             bedtime_start: string | null;
                             bedtime_end: string | null;
                             is_active: boolean;
+                            /** @description false = the defaults apply but no parent has saved them yet. */
+                            saved: boolean;
                         };
                         timezone: string;
-                    } | {
-                        /** @constant */
-                        message: "No quiet hours configured.";
-                        quiet_hours: null;
                     };
                 };
             };
@@ -6810,12 +6810,15 @@ export interface operations {
                         /** @constant */
                         message: "Quiet hours updated successfully.";
                         quiet_hours: {
-                            id: number;
+                            /** @description null (with saved = false) while the family has no stored row. */
+                            id: number | null;
                             school_start: string | null;
                             school_end: string | null;
                             bedtime_start: string | null;
                             bedtime_end: string | null;
                             is_active: boolean;
+                            /** @description false = the defaults apply but no parent has saved them yet. */
+                            saved: boolean;
                         };
                         timezone: string;
                     };

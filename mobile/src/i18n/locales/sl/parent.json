@@ -210,8 +210,7 @@
   "quietHours": {
     "title": "Tihe ure",
     "hint": "V tihih urah kuža skoraj ne lakoti, ni neredov in ni obvestil. Ure veljajo po času družine.",
-    "notSavedTitle": "Še ni shranjeno",
-    "notSavedText": "To so predlagani časi. Tihe ure začnejo veljati šele, ko tapnete Shrani.",
+    "defaultsApply": "Veljajo privzeti časi — tapnite Shrani, da jih potrdite ali spremenite.",
     "active": "Vklopljeno",
     "school": "Šola",
     "bedtime": "Spanje",

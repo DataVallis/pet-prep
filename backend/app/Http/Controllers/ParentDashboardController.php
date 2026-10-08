@@ -69,7 +69,8 @@ class ParentDashboardController extends Controller
         }
 
         $familyData = $this->dashboard->family($family, $parent);
-        $quietHours = QuietHours::where('family_id', $family->id)->first();
+        // What the server applies: the stored row, else the defaults (saved: false).
+        $quietHours = QuietHours::where('family_id', $family->id)->first() ?? QuietHours::defaultFor($family);
         $pet = $this->dashboard->legacyPet($family);
 
         if ($pet === null) {
@@ -80,7 +81,9 @@ class ParentDashboardController extends Controller
                 'timezone' => $family->timezone,
                 'pet' => null,
                 'traffic_light' => 'green',
-                'quiet_hours' => $hasChildren ? $quietHours : null,
+                'quiet_hours' => $hasChildren
+                    ? array_merge($quietHours->withoutRelations()->toArray(), ['saved' => (bool) $quietHours->exists])
+                    : null,
                 'recent_activities' => [],
                 'family' => $familyData,
             ], 200);
@@ -283,6 +286,8 @@ class ParentDashboardController extends Controller
             'bedtime_start' => $quietHours->bedtime_start,
             'bedtime_end' => $quietHours->bedtime_end,
             'is_active' => $quietHours->is_active,
+            // false = QuietHours::DEFAULTS apply, no stored row yet.
+            'saved' => (bool) $quietHours->exists,
         ] : null;
     }
 

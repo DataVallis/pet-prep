@@ -30,16 +30,12 @@ class QuietHoursController extends Controller
             return response()->json(['message' => 'Only parent profiles can manage quiet hours.'], 403);
         }
 
-        // GET never writes (no family created on read).
+        // GET never writes (no family created on read). Shows what the
+        // server applies: without a row that is QuietHours::DEFAULTS, marked
+        // `saved: false` (fix/quiet-hours-default, QA PR #80 m2).
         $family = $this->families->familyOf($parent);
-        $quietHours = $family !== null ? QuietHours::where('family_id', $family->id)->first() : null;
-
-        if (! $quietHours) {
-            return response()->json([
-                'message' => 'No quiet hours configured.',
-                'quiet_hours' => null,
-            ], 200);
-        }
+        $quietHours = ($family !== null ? QuietHours::where('family_id', $family->id)->first() : null)
+            ?? QuietHours::defaultFor($family);
 
         return response()->json([
             'quiet_hours' => $this->formatQuietHours($quietHours),
@@ -107,12 +103,15 @@ class QuietHoursController extends Controller
     private function formatQuietHours(QuietHours $quietHours): array
     {
         return [
-            'id' => $quietHours->id,
+            // null (with saved = false) while the family has no stored row.
+            'id' => $quietHours->exists ? $quietHours->id : null,
             'school_start' => $quietHours->school_start ? substr($quietHours->school_start, 0, 5) : null,
             'school_end' => $quietHours->school_end ? substr($quietHours->school_end, 0, 5) : null,
             'bedtime_start' => $quietHours->bedtime_start ? substr($quietHours->bedtime_start, 0, 5) : null,
             'bedtime_end' => $quietHours->bedtime_end ? substr($quietHours->bedtime_end, 0, 5) : null,
             'is_active' => $quietHours->is_active,
+            // false = the defaults apply but no parent has saved them yet.
+            'saved' => (bool) $quietHours->exists,
         ];
     }
 }

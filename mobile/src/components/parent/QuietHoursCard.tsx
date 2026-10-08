@@ -4,10 +4,11 @@
  * light parent theme with M2-05.
  *
  * Shows server truth (fix/quiet-hours-default, 2026-10-08): the server creates
- * every family's quiet hours (night 21:00–07:00, active). If it still answers
- * `quiet_hours: null` (older server, edge case) the form is pre-filled with the
- * same defaults but clearly marked "not saved yet" — before, it silently looked
- * configured while the server had nothing and sent pushes at night.
+ * every family's quiet hours (night 21:00–07:00, active) and answers with what
+ * it applies. `saved: false` (defaults, no stored row) or `quiet_hours: null`
+ * (older server) → the form shows the defaults with "Default times apply — tap
+ * Save to confirm or change them". Before, the card silently looked configured
+ * while the server had nothing and sent pushes at night.
  */
 
 import { useEffect, useState } from 'react';
@@ -66,8 +67,8 @@ export default function QuietHoursCard() {
   const query = useQuietHours();
   const update = useUpdateQuietHours();
   const [times, setTimes] = useState<Times>(DEFAULT_TIMES);
-  // Loaded, and the server has no quiet hours for this family: nothing is in force yet.
-  const notSaved = query.isSuccess && query.data === null;
+  // Loaded, and no parent has saved quiet hours yet (server defaults, or an older server's null).
+  const notSaved = query.isSuccess && (query.data === null || query.data.saved === false);
   // Message as a thunk: translated at render, so it follows a language switch (M1-18 review).
   const [message, setMessage] = useState<{ text: () => string; isError: boolean } | null>(null);
 
@@ -129,8 +130,7 @@ export default function QuietHoursCard() {
 
       {notSaved && (
         <View style={styles.notSaved} testID="qh-not-saved" accessibilityRole="alert">
-          <Text style={styles.notSavedTitle}>{S.notSavedTitle}</Text>
-          <Text style={styles.notSavedText}>{S.notSavedText}</Text>
+          <Text style={styles.notSavedText}>{S.defaultsApply}</Text>
         </View>
       )}
 
@@ -184,9 +184,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: C.text,
   },
-  notSaved: { borderRadius: 12, padding: 12, gap: 2, backgroundColor: C.yellowSoft },
-  notSavedTitle: { fontSize: 14, fontWeight: '700', color: C.text },
-  notSavedText: { fontSize: 13, color: C.text, lineHeight: 18 },
+  notSaved: { borderRadius: 12, padding: 12, backgroundColor: C.yellowSoft },
+  notSavedText: { fontSize: 13, fontWeight: '600', color: C.text, lineHeight: 18 },
   message: { fontSize: 13, color: C.greenText },
   messageError: { color: C.redText },
   save: {

@@ -344,14 +344,21 @@ describe('PUT /api/parent/quiet-hours with timezone', function () {
         actingAs($parent, 'sanctum');
 
         putJson('/api/parent/quiet-hours', [
-            'bedtime_start' => '21:00',
-            'bedtime_end' => '07:00',
+            'school_start' => '08:00',
+            'school_end' => '13:00',
+            'bedtime_start' => '22:30',
+            'bedtime_end' => '06:30',
+            'is_active' => false,
             'timezone' => 'Ljubljana',
         ])->assertStatus(422)->assertJsonValidationErrors('timezone');
 
-        // Only the default row the family got at registration, untouched.
-        expect($parent->quietHours()->count())->toBe(1)
-            ->and($parent->quietHours()->first()->updated_at->equalTo($parent->quietHours()->first()->created_at))->toBeTrue();
+        // Only the default row the family got at registration, still the defaults.
+        $row = $parent->quietHours()->sole();
+        expect($row->bedtime_start)->toStartWith('21:00')
+            ->and($row->bedtime_end)->toStartWith('07:00')
+            ->and($row->school_start)->toBeNull()
+            ->and($row->school_end)->toBeNull()
+            ->and($row->is_active)->toBeTrue();
         expect($parent->fresh()->timezone)->toBe(TZ_LJUBLJANA);
     });
 });

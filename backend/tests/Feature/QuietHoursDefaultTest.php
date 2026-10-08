@@ -20,6 +20,7 @@ use Illuminate\Support\Str;
 use function Pest\Laravel\artisan;
 use function Pest\Laravel\getJson;
 use function Pest\Laravel\postJson;
+use function Pest\Laravel\putJson;
 
 /*
 |--------------------------------------------------------------------------
@@ -220,7 +221,33 @@ describe('every family has quiet hours from its creation', function () {
             ->assertJsonPath('quiet_hours.bedtime_start', '21:00')
             ->assertJsonPath('quiet_hours.bedtime_end', '07:00')
             ->assertJsonPath('quiet_hours.school_start', null)
-            ->assertJsonPath('quiet_hours.is_active', true);
+            ->assertJsonPath('quiet_hours.is_active', true)
+            ->assertJsonPath('quiet_hours.saved', true);
+    });
+
+    it('shows the applied defaults with saved=false when the family has no row, saved=true after PUT', function () {
+        [$parent] = qdFamily('none');
+        actingAsRole($parent);
+
+        getJson('/api/parent/quiet-hours')->assertOk()
+            ->assertJsonPath('quiet_hours.id', null)
+            ->assertJsonPath('quiet_hours.saved', false)
+            ->assertJsonPath('quiet_hours.bedtime_start', '21:00')
+            ->assertJsonPath('quiet_hours.bedtime_end', '07:00')
+            ->assertJsonPath('quiet_hours.school_start', null)
+            ->assertJsonPath('quiet_hours.is_active', true)
+            ->assertJsonPath('timezone', 'Europe/Ljubljana');
+        getJson('/api/parent/dashboard')->assertOk()
+            ->assertJsonPath('quiet_hours.saved', false)
+            ->assertJsonPath('quiet_hours.bedtime_start', '21:00');
+        expect(QuietHours::count())->toBe(0); // GET never writes
+
+        putJson('/api/parent/quiet-hours', ['bedtime_start' => '21:00', 'bedtime_end' => '07:00', 'is_active' => true])
+            ->assertOk()->assertJsonPath('quiet_hours.saved', true);
+        getJson('/api/parent/quiet-hours')->assertOk()
+            ->assertJsonPath('quiet_hours.saved', true)
+            ->assertJsonPath('quiet_hours.id', QuietHours::sole()->id);
+        getJson('/api/parent/dashboard')->assertOk()->assertJsonPath('quiet_hours.saved', true);
     });
 
     it('keeps one row per family when a second parent joins, and never overwrites a saved choice', function () {
@@ -341,6 +368,9 @@ describe('PushTiming::walkReminderFloor', function () {
         ['21:00', '07:00', '09:00'],
         ['22:00', '05:30', '07:30'],
         [null, null, '09:00'],
+        ['00:00', '06:00', '08:00'],   // night that starts at midnight (QA PR #80 m1)
+        ['04:00', '06:00', '08:00'],   // latest start that still counts as night
+        ['04:30', '06:00', '09:00'],   // not a night window
         ['13:00', '15:00', '09:00'],   // not a night window
         ['23:59', '23:00', '09:00'],   // end + 2 h falls on the next day
     ]);

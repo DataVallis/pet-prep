@@ -78,6 +78,12 @@ class QuietHours extends Model
     /**
      * Quiet hours belong to the family (M2-01); parent_id is the parent who
      * created them. Code that sets only parent_id gets that parent's family.
+     *
+     * Trap (2026-10-08): since every family gets a default row when its first
+     * parent joins (FamilyService::ensureDefaultQuietHours), a plain
+     * QuietHours::create(['parent_id' => …]) for an existing parent now hits
+     * the unique keys (parent_id, family_id). Update the family's row instead
+     * (QuietHoursController::update; tests: setQuietHours()).
      */
     protected static function booted(): void
     {

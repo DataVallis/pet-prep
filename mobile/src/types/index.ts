@@ -132,10 +132,13 @@ export interface PetUpdatedBroadcast {
 
 /** Quiet hours configuration. */
 export interface QuietHours {
-  id: number;
+  /** null while the family has no stored row (the server's defaults apply, `saved: false`). */
+  id: number | null;
   school_start: string | null;
   school_end: string | null;
   bedtime_start: string | null;
   bedtime_end: string | null;
   is_active: boolean;
+  /** false = the server applies its defaults, no parent saved them yet; absent on older servers. */
+  saved?: boolean;
 }

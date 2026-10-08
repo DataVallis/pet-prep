@@ -899,7 +899,11 @@ describe('deploy window and input hardening', function () {
         actingAsRole($parent->fresh());
         getJson('/api/parent/dashboard')->assertOk()
             ->assertJsonPath('pet', null)->assertJsonPath('family', null);
-        getJson('/api/parent/quiet-hours')->assertOk()->assertJsonPath('quiet_hours', null);
+        // What would apply: the defaults, not saved (and nothing created).
+        getJson('/api/parent/quiet-hours')->assertOk()
+            ->assertJsonPath('quiet_hours.saved', false)
+            ->assertJsonPath('quiet_hours.id', null)
+            ->assertJsonPath('quiet_hours.bedtime_start', '21:00');
         getJson('/api/parent/activities')->assertOk()->assertJsonPath('meta.total', 0);
         getJson('/api/parent/activities?pet_id=5')->assertNotFound();
 
