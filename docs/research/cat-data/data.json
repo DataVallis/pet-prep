@@ -264,7 +264,7 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "While the weekly change is overdue the scoop deadline shortens to 2 h (CAT_SPEC §0 open D).",
+        "notes": "While the weekly change is overdue (the previous program week's change routine was missed) the scoop deadline of every new litter use is 2 h instead of 4 h, until the litter is changed. Runtime: LitterService::OVERDUE_SCOOP_DEADLINE_HOURS (a game rule for every cat breed, like the 2 h cleaning deadline — not a breed_stage_params key; M5-R06-05).",
         "decision": "potrdil David 2026-10-08 (načrt M5-R06): overdue weekly change → 2 h scoop deadline"
       },
       "kitten_litter_trained_on_arrival": {
@@ -398,7 +398,8 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED — proposal (D). Same as dog chewing (cleaning routine)."
+        "notes": "Exactly the dog's chewing / mess deadline: 2 h counted outside quiet hours (RoutineLedgerService::CLEAN_WITHIN_SECONDS, M5-R06-05); unresolved → the existing ladder (alarm, illness after 6 h outside quiet hours, game over after 24 h).",
+        "decision": "potrdil David 2026-10-08 22:20: 2 h outside quiet hours, exactly like dog chewing; if not resolved → the existing mess ladder"
       }
     },
     "sleep": {
@@ -568,12 +569,12 @@
       },
       "game_matted_after_missed": {
         "value": 2,
-        "unit": "missed sessions in a row",
+        "unit": "missed groomings of a program week (of 3)",
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "Matted coat event, resolved by a longer combing; no illness.",
-        "decision": "potrdil David 2026-10-08 13:47: matted coat after 2 missed"
+        "notes": "Weekly counter: at the end of each program week (weekly birthday) ≥ 2 of the week's 3 groomings missed → matted coat. No penalty: it stays visible, the next grooming lasts ~2× and resolves it; only the missed routines count in Care Score; no illness, no mood / score effect. Runtime: CatChoreService::MATTED_AFTER_MISSED (M5-R06-05).",
+        "decision": "potrdil David 2026-10-08 13:47 + 22:20: matted coat when ≥ 2 of the program week's 3 groomings are missed (counted at the weekly birthday); no penalty — visible, the next grooming ~2× longer resolves it, only the missed routine counts in Care Score"
       }
     },
     "appearance": {

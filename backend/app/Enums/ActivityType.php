@@ -37,6 +37,20 @@ enum ActivityType: string
     // session; the day's rows make the cat's play routine. Value = the
     // session's number of the day (1, 2, 3 …).
     case PlayedWand = 'played_wand';
+    // M5-R06-05 (CAT_SPEC Q3 / Q8 / Q10) child actions: scooped the litter
+    // (every open use; the `litter_scoop` routines), completed the weekly full
+    // litter change, completed a grooming session (Maine Coon; value = the
+    // session's number of the program week), carried the cat to the scratcher
+    // and praised it in time (resolves the scratching mess).
+    case ScoopedLitter = 'scooped_litter';
+    case ChangedLitter = 'changed_litter';
+    case GroomedPet = 'groomed_pet';
+    case ResolvedScratching = 'resolved_scratching';
+    // M5-R06-05 system rows (actor null, parent timeline): the cat scratched
+    // the sofa, made a mess next to an unscooped tray, its coat got matted.
+    case PetScratched = 'pet_scratched';
+    case PetLitterAccident = 'pet_litter_accident';
+    case PetCoatMatted = 'pet_coat_matted';
 
     /**
      * Rows that describe something that happened to the dog, not a care
@@ -44,6 +58,7 @@ enum ActivityType: string
      */
     public function isNegativeEvent(): bool
     {
-        return in_array($this, [self::IgnoredWarning, self::PetAccident, self::PetChewed], true);
+        return in_array($this, [self::IgnoredWarning, self::PetAccident, self::PetChewed,
+            self::PetScratched, self::PetLitterAccident, self::PetCoatMatted], true);
     }
 }

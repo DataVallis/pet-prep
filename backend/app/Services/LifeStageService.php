@@ -176,6 +176,57 @@ class LifeStageService
         return CarbonImmutable::createFromFormat('Y-m-d H:i:s', $date.' '.$bornLocal->format('H:i:s'), $tz);
     }
 
+    /**
+     * M5-R06-05: the program period of $days family-local days that contains
+     * $at — index (0 = from birth), start and end (UTC). Periods start at the
+     * birth's wall-clock time every $days local days (a 7-day period = the
+     * program week from one weekly birthday to the next: the cat's weekly
+     * litter change and grooming, CAT_SPEC Q3 / Q8). Payment-lock time is
+     * not program time (M3-11b): the bounds come from Pet::programBirthAt($at)
+     * — a lock that starts later inside the period moves its real end, which
+     * is only known once the lock is over. Null when unborn.
+     *
+     * @return array{index: int, start: CarbonImmutable, end: CarbonImmutable}|null
+     */
+    public function programPeriodAt(Pet $pet, CarbonInterface $at, int $days = 7): ?array
+    {
+        if ($pet->born_at === null) {
+            return null;
+        }
+
+        $days = max(1, $days);
+        $tz = $pet->familyTimezone();
+        $born = $pet->programBirthAt($at)->setTimezone($tz);
+        $t = $pet->programInstantAt($at)->setTimezone($tz);
+        $index = 0;
+        if ($t->greaterThan($born)) {
+            $elapsed = (int) CarbonImmutable::parse($born->toDateString(), 'UTC')
+                ->diffInDays(CarbonImmutable::parse($t->toDateString(), 'UTC'), false);
+            $index = intdiv(max(0, $elapsed), $days);
+            while ($index > 0 && $t->lessThan($this->periodStart($born, $index * $days, $tz))) {
+                $index--;
+            }
+        }
+
+        // While $at lies inside a payment lock the program clock stands still:
+        // the real end is pushed back by the part of the lock up to $at.
+        $shift = max(0, CarbonImmutable::instance($at)->getTimestamp() - $pet->programInstantAt($at)->getTimestamp());
+
+        return [
+            'index' => $index,
+            'start' => $this->periodStart($born, $index * $days, $tz)->utc(),
+            'end' => $this->periodStart($born, ($index + 1) * $days, $tz)->utc()->addSeconds($shift),
+        ];
+    }
+
+    /** $offsetDays family-local days after the (program) birth, at its wall-clock time. */
+    private function periodStart(CarbonImmutable $bornLocal, int $offsetDays, string $tz): CarbonImmutable
+    {
+        $date = CarbonImmutable::parse($bornLocal->toDateString(), 'UTC')->addDays($offsetDays)->toDateString();
+
+        return CarbonImmutable::createFromFormat('Y-m-d H:i:s', $date.' '.$bornLocal->format('H:i:s'), $tz);
+    }
+
     // ──────────────────────────────────────────────────────────────
     //  Stage
     // ──────────────────────────────────────────────────────────────

@@ -25,7 +25,9 @@ use App\Support\RequestLocale;
  *   15:30") or `clean_first` (hygiene 0 % blocks food and water); when the
  *   action is not possible again today the reminder is not sent at all.
  *   Hygiene reminders say `tidy` / `clean_and_tidy` while a chewed item is
- *   open (it is tidied up with a toy, not scrubbed).
+ *   open (it is tidied up with a toy, not scrubbed), and (cat, M5-R06-05)
+ *   `scratcher` / `clean_and_scratcher` while a scratching is open (carried
+ *   to the scratcher + praise).
  *
  * Metric keys: hunger | thirst | hygiene (walk reminder: energy); illness uses
  * hygiene | walk (its reason); game over has none.
@@ -48,7 +50,12 @@ final class PushCopy
 
     public const VARIANT_CLEAN_AND_TIDY = 'clean_and_tidy';
 
-    private const HYGIENE_VARIANTS = [self::VARIANT_TIDY, self::VARIANT_CLEAN_AND_TIDY];
+    /** M5-R06-05 hygiene variants while the cat's scratching is open (resolved at the scratcher, not cleaned). */
+    public const VARIANT_SCRATCHER = 'scratcher';
+
+    public const VARIANT_CLEAN_AND_SCRATCHER = 'clean_and_scratcher';
+
+    private const HYGIENE_VARIANTS = [self::VARIANT_TIDY, self::VARIANT_CLEAN_AND_TIDY, self::VARIANT_SCRATCHER, self::VARIANT_CLEAN_AND_SCRATCHER];
 
     /** Cleaning is never refused (outside locks), so only food and water have variants. */
     private const VARIANT_METRICS = ['hunger', 'thirst'];
@@ -95,6 +102,8 @@ final class PushCopy
             PushType::WalkReminder => self::line('walk_reminder', $locale),
             // M5-R06-04: the cat's daily play reminder (final cat texts: M5-R06-06).
             PushType::PlayReminder => self::line('play_reminder', $locale),
+            // M5-R06-05: an open litter use is due within the hour (draft; final cat texts: M5-R06-06).
+            PushType::LitterReminder => self::line('litter_reminder', $locale),
             PushType::ParentAlarm => trim(self::line('parent_alarm', $locale).' '.(in_array($metric, self::METRICS, true)
                 ? self::line("parent_alarm_detail.{$metric}", $locale)
                 : '')),

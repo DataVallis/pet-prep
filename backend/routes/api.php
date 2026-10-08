@@ -193,6 +193,14 @@ Route::middleware(['auth:sanctum', 'ability:child', 'throttle:api'])
             // M5-R06-04 cat wand play: server-generated session, server-judged finish.
             Route::post('pet/wand/start', [ChildPetController::class, 'startWand']);
             Route::post('pet/wand/finish', [ChildPetController::class, 'finishWand']);
+            // M5-R06-05 cat litter (scoop, weekly change), Maine Coon grooming, scratching resolve.
+            Route::post('pet/litter/scoop', [ChildPetController::class, 'scoopLitter']);
+            Route::post('pet/litter-change/start', [ChildPetController::class, 'startLitterChange']);
+            Route::post('pet/litter-change/finish', [ChildPetController::class, 'finishLitterChange']);
+            Route::post('pet/grooming/start', [ChildPetController::class, 'startGrooming']);
+            Route::post('pet/grooming/finish', [ChildPetController::class, 'finishGrooming']);
+            Route::post('pet/scratching/start', [ChildPetController::class, 'startScratching']);
+            Route::post('pet/scratching/finish', [ChildPetController::class, 'finishScratching']);
             Route::post('pet/steps', [ChildPetController::class, 'steps']);
             Route::post('contract', [ChildContractController::class, 'store']);
         });

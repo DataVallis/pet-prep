@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Enums\BreedType;
 use App\Enums\ChallengePaidSource;
 use App\Enums\ChallengeStatus;
+use App\Enums\HygieneEventKind;
 use App\Enums\HygieneEventStatus;
 use App\Enums\LifeStage;
 use App\Enums\PetLockReason;
@@ -266,6 +267,9 @@ class Pet extends Model
         'play_scheduled_through',
         // M5-R06-04 bookkeeping: last missed cat play day (the apps get WandPayload).
         'play_missed_on',
+        // M5-R06-05 bookkeeping (the apps get GroomingPayload instead).
+        'coat_matted_at',
+        'grooming_weeks_checked',
     ];
 
     /**
@@ -314,6 +318,8 @@ class Pet extends Model
             'trial_reminder_sent_at' => 'datetime',
             'converted_to_free_at' => 'datetime',
             'happy_until' => 'datetime',
+            'coat_matted_at' => 'datetime',
+            'grooming_weeks_checked' => 'integer',
         ];
     }
 
@@ -1209,6 +1215,9 @@ class Pet extends Model
             PetHygieneEvent::query()
                 ->where('pet_id', $this->id)
                 ->where('status', HygieneEventStatus::Applied->value)
+                // M5-R06-05: messes only — a cat's litter use is not a mess (its
+                // scoop routine is excused by the illness, not done by the vet).
+                ->whereIn('kind', HygieneEventKind::messes())
                 ->whereNull('cleaned_at')
                 ->where('scheduled_at', '<=', $at)
                 ->update(['cleaned_at' => $at, 'updated_at' => now()]);

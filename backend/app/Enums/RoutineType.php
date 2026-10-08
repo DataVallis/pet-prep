@@ -34,4 +34,25 @@ enum RoutineType: string
      * `goal` = the day's goal). Only for cats with life-stage data.
      */
     case Play = 'play';
+
+    /**
+     * M5-R06-05 (cats, CAT_SPEC Q3 / §7): one per litter use — scooped
+     * before its deadline (`pet_hygiene_events.due_at`: 4 h outside quiet
+     * hours, 2 h while the weekly change is overdue).
+     */
+    case LitterScoop = 'litter_scoop';
+
+    /**
+     * M5-R06-05: the weekly full litter change — one per program week
+     * (`litter_full_change_days`), on the family-local day the week ends;
+     * done by a completed `changed_litter` inside the week.
+     */
+    case LitterChange = 'litter_change';
+
+    /**
+     * M5-R06-05 (Maine Coon, CAT_SPEC Q8): `grooming_sessions_per_week`
+     * slots per program week, on the day the week ends; slot i is done by
+     * the week's i-th completed grooming. Counted at the end of the week.
+     */
+    case Grooming = 'grooming';
 }

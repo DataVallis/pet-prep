@@ -61,6 +61,20 @@ use Throwable;
  *    quiet hours leave room for fewer games than the goal (no play in quiet
  *    hours, David 2026-10-08 — WandPlayService::feasibleSessions); excused
  *    like the walk.
+ *  - litter_scoop (M5-R06-05, cats — CAT_SPEC Q3 / §7): one per litter use
+ *    (`litter_use` event, not a mess); done = scooped (`cleaned_at`) by its
+ *    `due_at` (4 h outside quiet hours, 2 h while the weekly change is
+ *    overdue — fixed by LitterService when the use happens); missed after.
+ *    The cat's `litter_accident` and `scratching` are `clean` routines like
+ *    the dog's messes (2 h; scratching = chewing, David 2026-10-08 ~22:20).
+ *  - litter_change / grooming (M5-R06-05, cats): WEEKLY routines of the
+ *    program period (LifeStageService::programPeriodAt — 7 days from the
+ *    birth's wall-clock time; `litter_full_change_days`) that ENDS on the
+ *    family-local date: one litter change (`changed_litter` inside the
+ *    period) and, for a Maine Coon, `grooming_sessions_per_week` grooming
+ *    slots (slot i = the period's i-th `groomed_pet`). Not expected when
+ *    hard stop / vet / game over cover ≥ 50 % of the period's non-quiet
+ *    time (like the walk). A weekly routine is never pending past its day.
  *
  * Not expected at all: before birth (an unborn pet has none), before
  * FIRST_LEDGER_DATE, and — unless it was done anyway — any routine whose
@@ -116,7 +130,18 @@ class RoutineLedgerService
         ActivityType::TrainedPet,
         // M5-R06-04: a successful cat wand session (the play routine).
         ActivityType::PlayedWand,
+        // M5-R06-05 (cats): scoop / weekly change / grooming / scratching resolved.
+        ActivityType::ScoopedLitter,
+        ActivityType::ChangedLitter,
+        ActivityType::GroomedPet,
+        ActivityType::ResolvedScratching,
     ];
+
+    /** M5-R06-05: who scooped a litter use — the scoop itself, a cleaning of the accident, the weekly change. */
+    private const SCOOP_ACTIVITIES = [ActivityType::ScoopedLitter, ActivityType::CleanedPoop, ActivityType::ChangedLitter];
+
+    /** M5-R06-05: weekly cat routines look back one period (+ margin) for their activities / freezes. */
+    private const WEEKLY_LOOKBACK_DAYS = 9;
 
     public function __construct(
         private readonly CareScheduleService $schedule,
@@ -432,6 +457,7 @@ class RoutineLedgerService
         // Clean: one routine per hygiene event that happened today.
         $hygienePending = false;
         $slot = 0;
+        $litterUses = [];
         foreach ($in['hygiene'] as $event) {
             if ($event['at']->lessThan($dayStartUtc) || $event['at']->greaterThanOrEqualTo($dayEndUtc)) {
                 continue;
@@ -450,6 +476,12 @@ class RoutineLedgerService
             if ($event['status'] !== HygieneEventStatus::Applied->value || $event['at']->lessThan($born)) {
                 continue;
             }
+            // M5-R06-05: a litter use is not a mess — its own `litter_scoop` routine below.
+            if ($event['kind'] === HygieneEventKind::LitterUse) {
+                $litterUses[] = $event;
+
+                continue;
+            }
             $due = $this->addSecondsOutsideQuiet($quiet, $event['at'], self::CLEAN_WITHIN_SECONDS);
             $cleaned = $event['cleaned_at'];
             // M5-R02: a poop / accident is cleaned (cleaned_poop), chewing is tidied up (resolved_chewing).
@@ -462,6 +494,16 @@ class RoutineLedgerService
                 $routines[] = $routine;
                 $slot++;
             }
+        }
+
+        // Litter scoop (M5-R06-05, cats): one per litter use, done when scooped by its deadline.
+        foreach ($litterUses as $i => $event) {
+            $due = $event['due_at'] ?? $this->fallbackScoopDue($pet, $quiet, $event['at']);
+            $cleaned = $event['cleaned_at'];
+            $done = $cleaned !== null && $cleaned->lessThanOrEqualTo($due)
+                ? ['at' => $cleaned, 'actor' => $this->cleanActorOf($in['activities'], $cleaned, self::SCOOP_ACTIVITIES)]
+                : null;
+            $routines[] = $this->resolve($pet, $date, RoutineType::LitterScoop, $i, $event['at'], $due, $done, $blocks, $now);
         }
 
         // Whole-day routines (walk, training) are excused only if the freeze
@@ -529,6 +571,11 @@ class RoutineLedgerService
             }
         }
 
+        // Weekly cat routines (M5-R06-05): the program period that ends today.
+        if ($pet->isCat() && ! $pet->isLegacyProfile()) {
+            array_push($routines, ...$this->weeklyCatRoutines($pet, $in, $date, $dayStartUtc, $dayEndUtc, $born, $useNormal, $now));
+        }
+
         $routines = array_values(array_filter($routines));
         $pending = array_filter($routines, fn (Routine $r) => $r->isPending());
         $settles = $dayEndUtc;
@@ -581,6 +628,88 @@ class RoutineLedgerService
             goal: $goal,
             eventKind: $eventKind,
         );
+    }
+
+    /**
+     * M5-R06-05: the cat's weekly routines whose program period ends on
+     * $date — the full litter change (1 slot) and the Maine Coon's grooming
+     * (`grooming_sessions_per_week` slots). Opens at the period start, due
+     * at its end (the next weekly birthday); excused when freezes cover ≥
+     * 50 % of the period's non-quiet time.
+     *
+     * @param  array<string, mixed>  $in
+     * @return list<Routine>
+     */
+    private function weeklyCatRoutines(Pet $pet, array $in, string $date, CarbonImmutable $dayStart, CarbonImmutable $dayEnd, CarbonImmutable $born, bool $useNormal, CarbonImmutable $now): array
+    {
+        $quiet = $in['quiet'];
+        $blocks = $in['blocks'];
+        $changeDays = $this->lifeStages->stageValueOn($pet, $date, StageParamKey::LitterFullChangeDays)['value'] ?? 0;
+        $routines = [];
+
+        foreach ([
+            [RoutineType::LitterChange, is_int($changeDays) ? $changeDays : 0, ActivityType::ChangedLitter],
+            [RoutineType::Grooming, 7, ActivityType::GroomedPet],
+        ] as [$type, $days, $activity]) {
+            if ($days <= 0) {
+                continue;
+            }
+            $ending = $this->lifeStages->programPeriodAt($pet, $dayEnd->subSecond(), $days);
+            if ($ending === null || $ending['index'] < 1 || $ending['start']->lessThan($dayStart) || $ending['start']->greaterThanOrEqualTo($dayEnd)) {
+                continue;
+            }
+            $period = $this->lifeStages->programPeriodAt($pet, $ending['start']->subSecond(), $days);
+            if ($period === null) {
+                continue;
+            }
+            $opens = $period['start']->lessThan($born) ? $born : $period['start'];
+            $due = $ending['start'];
+            $goal = 1;
+            if ($type === RoutineType::Grooming) {
+                $value = $this->lifeStages->stageValueOn($pet, $pet->localDate($opens), StageParamKey::GroomingSessionsPerWeek)['value'] ?? 0;
+                $goal = is_int($value) ? $value : 0;
+            }
+            if ($goal <= 0 || ! $opens->lessThan($due)) {
+                continue;
+            }
+
+            // Excused like the walk: freezes cover ≥ 50 % of the period's (non-quiet) time.
+            $playable = 0.0;
+            $split = QuietHours::splitSecondsBetween($quiet, $opens, $due);
+            $total = $useNormal ? $split['normal'] : $split['normal'] + $split['quiet'];
+            foreach ($this->subtract($opens, $due, $blocks) as [$a, $b]) {
+                $part = QuietHours::splitSecondsBetween($quiet, $a, $b);
+                $playable += $useNormal ? $part['normal'] : $part['normal'] + $part['quiet'];
+            }
+            $excused = ($total > 0 ? 1 - $playable / $total : 1.0) >= self::WHOLE_DAY_EXCUSE_SHARE - 1e-9;
+
+            $rows = array_values(array_filter(
+                $in['activities'],
+                fn ($a) => $a['type'] === $activity->value && $a['at']->greaterThanOrEqualTo($opens) && $a['at']->lessThan($due),
+            ));
+            for ($slot = 0; $slot < $goal; $slot++) {
+                $row = $rows[$slot] ?? null;
+                $routines[] = $this->resolve(
+                    $pet, $date, $type, $slot, $opens, $due,
+                    $row !== null ? ['at' => $row['at'], 'actor' => $row['actor']] : null,
+                    $blocks, $now, excused: $excused,
+                );
+            }
+        }
+
+        return array_values(array_filter($routines));
+    }
+
+    /**
+     * A litter use without a stored deadline yet (the tick fixes it right
+     * after applying): `litter_scoop_deadline_hours` (4 h) outside quiet hours.
+     */
+    private function fallbackScoopDue(Pet $pet, ?QuietHours $quiet, CarbonImmutable $at): CarbonImmutable
+    {
+        $value = $this->lifeStages->stageValueOn($pet, $pet->localDate($at), StageParamKey::LitterScoopDeadlineHours)['value'] ?? 4;
+        $hours = is_int($value) || is_float($value) ? (float) $value : 4.0;
+
+        return $this->addSecondsOutsideQuiet($quiet, $at, (int) round(max(0.0, $hours) * 3600));
     }
 
     /**
@@ -645,9 +774,13 @@ class RoutineLedgerService
         $dateFrom = CarbonImmutable::parse($fromDate, 'UTC')->subDay()->toDateString();
         $dateTo = CarbonImmutable::parse($toDate, 'UTC')->addDay()->toDateString();
 
+        // M5-R06-05: weekly cat routines need the whole period before the day.
+        $hasCats = $pets->contains(fn (Pet $p) => $p->isCat());
+        $lookbackUtc = $hasCats ? CarbonImmutable::parse($fromDate, 'UTC')->subDays(self::WEEKLY_LOOKBACK_DAYS) : $fromUtc;
+
         $activities = ActivityLog::whereIn('pet_id', $ids)
             ->whereIn('activity_type', array_map(fn (ActivityType $t) => $t->value, self::ACTIVITY_TYPES))
-            ->where('created_at', '>=', $fromUtc)
+            ->where('created_at', '>=', $lookbackUtc)
             ->where('created_at', '<', $toUtc)
             ->orderBy('created_at')
             ->orderBy('id')
@@ -661,7 +794,7 @@ class RoutineLedgerService
             ->where('scheduled_at', '<', $toUtc)
             ->orderBy('scheduled_at')
             ->toBase()
-            ->get(['pet_id', 'kind', 'scheduled_at', 'status', 'cleaned_at'])
+            ->get(['pet_id', 'kind', 'scheduled_at', 'status', 'cleaned_at', 'due_at'])
             ->groupBy('pet_id');
 
         $walks = PetDailyWalk::whereIn('pet_id', $ids)
@@ -680,7 +813,7 @@ class RoutineLedgerService
 
         $periods = PetStatusPeriod::whereIn('pet_id', $ids)
             ->where('started_at', '<', $toUtc)
-            ->where(fn ($q) => $q->whereNull('ended_at')->orWhere('ended_at', '>', $fromUtc))
+            ->where(fn ($q) => $q->whereNull('ended_at')->orWhere('ended_at', '>', $lookbackUtc))
             ->toBase()
             ->get(['pet_id', 'started_at', 'ended_at'])
             ->groupBy('pet_id');
@@ -711,6 +844,8 @@ class RoutineLedgerService
                     'at' => $this->utc($r->scheduled_at),
                     'status' => $r->status,
                     'cleaned_at' => $r->cleaned_at !== null ? $this->utc($r->cleaned_at) : null,
+                    // M5-R06-05: the scoop deadline of a litter use (null for messes).
+                    'due_at' => $r->due_at !== null ? $this->utc($r->due_at) : null,
                 ])->all(),
                 'walks' => $walks->get($pet->id, collect())->mapWithKeys(fn ($r) => [
                     substr((string) $r->local_date, 0, 10) => ['steps' => (int) $r->steps, 'goal' => (int) $r->goal],
@@ -856,6 +991,31 @@ class RoutineLedgerService
                 continue;
             }
             $diff = abs($a['at']->getTimestamp() - $cleanedAt->getTimestamp());
+            if ($diff < $bestDiff) {
+                $best = $a['actor'];
+                $bestDiff = $diff;
+            }
+        }
+
+        return $best;
+    }
+
+    /**
+     * Who did it among several resolving activity types (closest row within 5 s).
+     *
+     * @param  list<array{type: string, actor: int|null, at: CarbonImmutable}>  $activities
+     * @param  list<ActivityType>  $types
+     */
+    private function cleanActorOf(array $activities, CarbonImmutable $at, array $types): ?int
+    {
+        $values = array_map(fn (ActivityType $t) => $t->value, $types);
+        $best = null;
+        $bestDiff = 6;
+        foreach ($activities as $a) {
+            if (! in_array($a['type'], $values, true)) {
+                continue;
+            }
+            $diff = abs($a['at']->getTimestamp() - $at->getTimestamp());
             if ($diff < $bestDiff) {
                 $best = $a['actor'];
                 $bestDiff = $diff;

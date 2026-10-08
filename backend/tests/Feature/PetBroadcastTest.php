@@ -213,6 +213,8 @@ describe('PetUpdated event shape', function () {
             'play',
             // M5-R06-04 cat wand play (additive; null for a dog)
             'wand',
+            // M5-R06-05 cat litter / grooming / scratching (additive; null for a dog)
+            'litter', 'grooming', 'scratching',
         ]);
         expect(array_keys($payload['behaviour']))->toBe(['take_out', 'active_events', 'scene'])
             ->and(array_keys($payload['training']))->toBe(['enabled', 'commands', 'today_done', 'session_active']);

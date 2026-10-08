@@ -8,6 +8,7 @@ use App\Enums\PushType;
 use App\Jobs\SendPushNotification;
 use App\Models\DevicePushToken;
 use App\Models\Pet;
+use App\Models\PetHygieneEvent;
 use App\Models\PushNotification;
 use App\Models\PushTicket;
 use App\Models\User;
@@ -76,6 +77,7 @@ class NotificationService
         private readonly CareScheduleService $schedule,
         private readonly HygieneEventService $hygieneEvents,
         private readonly WandPlayService $wand,
+        private readonly LitterService $litter,
     ) {}
 
     /**
@@ -198,6 +200,49 @@ class NotificationService
     }
 
     /**
+     * The cat's litter reminder (M5-R06-05, CAT_SPEC Q3): called by
+     * EscalationService outside quiet hours for a cat whose oldest unscooped
+     * litter use (deadline still ahead) is due within LITTER_REMINDER_MINUTES.
+     * Once per litter use (no reminder decided since that use happened);
+     * caretaker children; dropped at send time when the tray was scooped
+     * (`scooped`). Scooping is never refused outside locks, so the text
+     * always asks for something the app allows (M3-12).
+     */
+    public function litterReminder(Pet $pet): ?PushNotification
+    {
+        if (! config('push.enabled') || ! $this->litter->appliesTo($pet)) {
+            return null;
+        }
+        $use = $this->dueSoonLitterUse($pet);
+        if ($use === null) {
+            return null;
+        }
+        $decided = PushNotification::where('pet_id', $pet->id)
+            ->where('type', PushType::LitterReminder->value)
+            ->where('created_at', '>=', $use->scheduled_at)
+            ->exists();
+
+        return $decided ? null : $this->escalation($pet, PushType::LitterReminder, 'litter');
+    }
+
+    /** Minutes before a scoop deadline the litter reminder is decided. */
+    public const LITTER_REMINDER_MINUTES = 60;
+
+    /** The oldest unscooped litter use whose deadline lies within the reminder window (still ahead). */
+    private function dueSoonLitterUse(Pet $pet): ?PetHygieneEvent
+    {
+        $now = now();
+        foreach ($this->litter->openUses($pet) as $use) {
+            if ($use->due_at !== null && $use->escalated_at === null && $use->due_at->greaterThan($now)
+                && $use->due_at->lessThanOrEqualTo($now->copy()->addMinutes(self::LITTER_REMINDER_MINUTES))) {
+                return $use;
+            }
+        }
+
+        return null;
+    }
+
+    /**
      * `push:dispatch-scheduled`: queue held rows whose time has come, and
      * re-queue rows stuck in `queued` that no job ever picked up (no attempt
      * for STUCK_MINUTES — lost job, queue flushed). The job re-checks
@@ -302,6 +347,13 @@ class NotificationService
         // M5-R06-04: the cat already played enough since the decision.
         if ($type === PushType::PlayReminder && $pet->displayMetric('energy_level') > EscalationService::SOFT_WARNING_THRESHOLD) {
             $this->markSuppressed($notification, 'play_done');
+
+            return;
+        }
+        // M5-R06-05: the tray was scooped (or its deadline passed) since the decision.
+        if ($type === PushType::LitterReminder && $this->litter->openUses($pet)
+            ->filter(fn (PetHygieneEvent $u) => $u->escalated_at === null && $u->due_at !== null && $u->due_at->greaterThan(now()))->isEmpty()) {
+            $this->markSuppressed($notification, 'scooped');
 
             return;
         }
@@ -461,7 +513,7 @@ class NotificationService
             ->map(fn (User $u): array => ['user_id' => $u->id, 'audience' => PushNotification::AUDIENCE_PARENT]);
 
         $list = match ($type) {
-            PushType::SoftWarning, PushType::CriticalAlert, PushType::WalkReminder, PushType::PlayReminder => $children(),
+            PushType::SoftWarning, PushType::CriticalAlert, PushType::WalkReminder, PushType::PlayReminder, PushType::LitterReminder => $children(),
             PushType::ParentAlarm => $parents(),
             PushType::Illness, PushType::GameOver, PushType::PaymentRequired => $parents()->concat($children()),
             // M3-11: billing is the parent's business.
@@ -614,6 +666,10 @@ class NotificationService
         $kinds = $this->hygieneEvents->openEvents($pet)
             ->map(fn ($event): string => $event->kind instanceof HygieneEventKind ? $event->kind->value : (string) $event->kind)
             ->unique();
+        // M5-R06-05: the cat's scratching is resolved at the scratcher, not cleaned.
+        if ($kinds->contains(HygieneEventKind::Scratching->value)) {
+            return $kinds->count() > 1 ? PushCopy::VARIANT_CLEAN_AND_SCRATCHER : PushCopy::VARIANT_SCRATCHER;
+        }
         if (! $kinds->contains(HygieneEventKind::Chewing->value)) {
             return null;
         }

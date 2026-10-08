@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Enums\ActivityType;
 use App\Enums\CareRefusal;
+use App\Enums\CareSessionKind;
 use App\Enums\PetLockReason;
 use App\Enums\PlayKind;
 use App\Enums\TrainingCommand;
@@ -65,6 +66,9 @@ class PetActivityService
         private PlayService $play,
         private ChallengeCreditService $credits,
         private WandPlayService $wand,
+        private LitterService $litter,
+        private CatChoreService $chores,
+        private ScratchingService $scratching,
     ) {}
 
     /**
@@ -203,6 +207,11 @@ class PetActivityService
 
             if ($handled === 0 && ((float) $locked->hygiene_level >= 100.0 || $stillOpen)) {
                 return $this->unchanged(ActionResult::UNCHANGED, $locked);
+            }
+
+            // M5-R06-05: cleaning the mess next to the tray also scoops the tray (CAT_SPEC §4).
+            if ($handled > 0 && $locked->isCat()) {
+                $this->litter->scoop($locked, $now);
             }
 
             $this->restoreHygieneIfResolved($locked, $stillOpen, $now);
@@ -509,6 +518,217 @@ class PetActivityService
 
             return $this->result(ActionResult::ACCEPTED, $locked, extra: $extra);
         });
+    }
+
+    // ──────────────────────────────────────────────────────────────
+    //  M5-R06-05 — cat litter, grooming, scratching
+    // ──────────────────────────────────────────────────────────────
+
+    /**
+     * "Počisti pesek" (CAT_SPEC Q3): scoop every open litter use now (the
+     * scoop mini-game runs in the app, like cleaning). Due uses / an expired
+     * deadline happen first (decay catch-up). A scoop after a use's deadline
+     * still empties the tray but its routine stays missed. Nothing to scoop
+     * → unchanged; not a cat with litter rules → 422 litter_not_available.
+     * Allowed while a mess is open (it is a different job) and in quiet hours.
+     * Activity `scooped_litter` (value = uses scooped).
+     */
+    public function scoopLitter(Pet $pet, User $child): ActionResult
+    {
+        return $this->withLockedPet($pet, ActivityType::ScoopedLitter, function (Pet $locked) use ($child): ActionResult {
+            $now = now()->startOfSecond();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+            $this->decay->catchUpLocked($locked);
+
+            if (! $this->litter->appliesTo($locked)) {
+                return $this->refused($locked, CareRefusal::LitterNotAvailable);
+            }
+            $scooped = $this->litter->scoop($locked, $now);
+            if ($scooped === 0) {
+                return $this->unchanged(ActionResult::UNCHANGED, $locked);
+            }
+            if ($locked->isDirty()) {
+                $locked->saveQuietly();
+            }
+            $this->logActivity($locked, ActivityType::ScoopedLitter, $scooped, $child->id);
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: ['scooped' => $scooped]);
+        });
+    }
+
+    /**
+     * Start the weekly full litter change / a Maine Coon grooming (server-led
+     * stroke mini-game, CatChoreService). Locks first (423); refusals 422
+     * (`next_allowed_at` where it ends). One `PetUpdated('{kind}_started')`.
+     */
+    public function startChore(Pet $pet, User $child, CareSessionKind $kind): ActionResult
+    {
+        return $this->withLockedPet($pet, $kind->value.'_started', function (Pet $locked) use ($child, $kind): ActionResult {
+            $now = now();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+            $this->decay->catchUpLocked($locked);
+
+            $started = $this->chores->start($locked, $child, $kind, $now);
+            if ($started['refusal'] !== null) {
+                return $this->refused($locked, $started['refusal'], $started['next_allowed_at']);
+            }
+            if ($locked->isDirty()) {
+                $locked->saveQuietly();
+            }
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: [
+                'session' => CareSessionPayload::chore($started['session'], $locked->familyTimezone()),
+            ]);
+        });
+    }
+
+    /**
+     * Finish a litter change / grooming with the strokes the app saw ({t}).
+     * Success → `accepted`: litter change → `changed_litter` (the week's
+     * routine) and every open litter use scooped; grooming → `groomed_pet`
+     * (value = its number in the program week) and a matted coat resolved.
+     * Not enough → `rejected` (200, nothing counts, start again at once; one
+     * `PetUpdated('{kind}_finished')`). A repeat → `unchanged`. 422
+     * litter_not_available / grooming_not_available / care_session_*.
+     *
+     * @param  list<array{t: int}>  $strokes
+     */
+    public function finishChore(Pet $pet, User $child, CareSessionKind $kind, string $sessionId, array $strokes): ActionResult
+    {
+        $activity = $kind === CareSessionKind::LitterChange ? ActivityType::ChangedLitter : ActivityType::GroomedPet;
+
+        return $this->withLockedPet($pet, $activity, function (Pet $locked) use ($child, $kind, $sessionId, $strokes, $activity): ActionResult {
+            $now = now();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+            $this->decay->catchUpLocked($locked);
+
+            $finished = $this->chores->finish($locked, $child, $kind, $sessionId, $strokes, $now);
+            if ($finished['refusal'] !== null) {
+                return $this->refused($locked, $finished['refusal']);
+            }
+            /** @var PetCareSession $session */
+            $session = $finished['session'];
+            $extra = ['result' => CareSessionPayload::choreResult($session)];
+            if ($finished['repeat']) {
+                return $this->unchanged(ActionResult::UNCHANGED, $locked, $extra);
+            }
+            if (! $finished['counted']) {
+                return $this->rejectedSession($locked, $extra, $kind->value.'_finished');
+            }
+
+            $number = $this->chores->applySuccess($locked, $session, $now->copy()->startOfSecond());
+            $locked->pet_state = $this->decay->derivePetState($locked, $now);
+            $locked->saveQuietly();
+            $this->logActivity($locked, $activity, $number, $child->id);
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: $extra);
+        });
+    }
+
+    /**
+     * "Odnesi na praskalnik" (CAT_SPEC Q10): the child carries the cat to the
+     * scratcher — the server's schedule says when it lands. 422
+     * scratching_not_needed (no open scratching mess) /
+     * scratching_session_active; 423 while locked. One
+     * `PetUpdated('scratching_started')`.
+     */
+    public function startScratching(Pet $pet, User $child): ActionResult
+    {
+        return $this->withLockedPet($pet, 'scratching_started', function (Pet $locked) use ($child): ActionResult {
+            $now = now();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+            $this->decay->catchUpLocked($locked);
+
+            $started = $this->scratching->start($locked, $child, $now);
+            if ($started['refusal'] !== null) {
+                return $this->refused($locked, $started['refusal'], $started['next_allowed_at']);
+            }
+            if ($locked->isDirty()) {
+                $locked->saveQuietly();
+            }
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: [
+                'session' => CareSessionPayload::scratching($started['session'], $locked->familyTimezone()),
+            ]);
+        });
+    }
+
+    /**
+     * "… in pohvali" — the praise (`praise_ms` since the start, null = none).
+     * In time (≥ min reaction, ≤ 3 s after the landing) → `accepted`: every
+     * open scratching mess is resolved, hygiene back to 100 % unless another
+     * mess is open, one `resolved_scratching` row. Otherwise → `rejected`
+     * (200, no penalty, try again; never a punishment — C23). A repeat →
+     * `unchanged`. 422 care_session_*; 423 while locked.
+     */
+    public function finishScratching(Pet $pet, User $child, string $sessionId, ?int $praiseMs): ActionResult
+    {
+        return $this->withLockedPet($pet, ActivityType::ResolvedScratching, function (Pet $locked) use ($child, $sessionId, $praiseMs): ActionResult {
+            $now = now();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+            $this->decay->catchUpLocked($locked);
+
+            $finished = $this->scratching->finish($locked, $child, $sessionId, $praiseMs, $now);
+            if ($finished['refusal'] !== null) {
+                return $this->refused($locked, $finished['refusal']);
+            }
+            /** @var PetCareSession $session */
+            $session = $finished['session'];
+            $extra = ['result' => CareSessionPayload::scratchingResult($session)];
+            if ($finished['repeat']) {
+                return $this->unchanged(ActionResult::UNCHANGED, $locked, $extra);
+            }
+            if (! $finished['counted']) {
+                return $this->rejectedSession($locked, $extra, 'scratching_finished');
+            }
+
+            $at = $now->copy()->startOfSecond();
+            if ($this->scratching->resolve($locked, $at) === 0) {
+                // Resolved meanwhile (a sibling, the vet): nothing left to do.
+                return $this->unchanged(ActionResult::UNCHANGED, $locked, $extra);
+            }
+            $this->restoreHygieneIfResolved($locked, $this->hygieneEvents->openEvents($locked)->isNotEmpty(), $at);
+            $this->logActivity($locked, ActivityType::ResolvedScratching, null, $child->id);
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: $extra);
+        });
+    }
+
+    /**
+     * A session finished without counting: nothing changes, but the running
+     * game ended → one broadcast so no app keeps showing it.
+     *
+     * @param  array<string, mixed>  $extra
+     */
+    private function rejectedSession(Pet $locked, array $extra, string $broadcastAs): ActionResult
+    {
+        if ($locked->isDirty()) {
+            $locked->saveQuietly();
+        }
+
+        return new ActionResult(
+            status: ActionResult::REJECTED,
+            dailyStepCount: (int) $locked->daily_step_count,
+            energyLevel: $locked->displayMetric('energy_level'),
+            hygieneLevel: $locked->displayMetric('hygiene_level'),
+            extra: $extra,
+            broadcastAs: $broadcastAs,
+        );
     }
 
     /**

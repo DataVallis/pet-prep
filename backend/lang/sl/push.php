@@ -45,10 +45,25 @@ return [
         'critical' => 'Počisti nered, pospravi pregrizeno in kužku daj igračo čim prej, sicer bo zbolel.',
     ],
 
+    // M5-R06-05 osnutek (končna mačja besedila v M5-R06-06): muca je opraskala kavč —
+    // razreši se z odnosom na praskalnik in pohvalo, ne s čiščenjem.
+    'scratcher' => [
+        'soft' => 'Tvoja muca je opraskala kavč. Odnesi jo na praskalnik in jo pohvali.',
+        'critical' => 'Muca je opraskala kavč! Čim prej jo odnesi na praskalnik in jo pohvali, sicer bo zbolela.',
+    ],
+
+    'clean_and_scratcher' => [
+        'soft' => 'Tvoja muca te čaka: počisti nered, nato jo odnesi na praskalnik in jo pohvali.',
+        'critical' => 'Čim prej počisti nered in muco odnesi na praskalnik, sicer bo zbolela.',
+    ],
+
     'walk_reminder' => 'Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?',
 
     // M5-R06-04 placeholder (draft): the cat's daily play reminder — final cat texts in M5-R06-06.
     'play_reminder' => 'Tvoja muca se danes še ni igrala in te čaka s palico s peresom. Se greva igrat?',
+
+    // M5-R06-05 osnutek: pesek je treba počistiti v naslednji uri — končna mačja besedila v M5-R06-06.
+    'litter_reminder' => 'Tvoja muca je uporabila pesek. Počisti ga čim prej, preden začne smrdeti.',
 
     'parent_alarm' => 'Tvoj otrok danes ni poskrbel za psa.',
 

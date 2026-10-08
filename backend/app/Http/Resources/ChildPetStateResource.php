@@ -7,11 +7,14 @@ use App\Models\Pet;
 use App\Models\User;
 use App\Services\BehaviourPayload;
 use App\Services\CareScheduleService;
+use App\Services\GroomingPayload;
+use App\Services\LitterPayload;
 use App\Services\Media\PetMediaPayload;
 use App\Services\Media\PetMediaService;
 use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
 use App\Services\PlayPayload;
+use App\Services\ScratchingPayload;
 use App\Services\TrainingPayload;
 use App\Services\TrainingService;
 use App\Services\WandPayload;
@@ -56,6 +59,10 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * sessions, the 2 h gap, the running game, whether a start is possible —
  * {@see WandPayload}; null for a dog. A cat's `pet.energy_level` /
  * `steps.energy_level` is its play meter (plan T5).
+ * `litter` / `grooming` / `scratching` (M5-R06-05, cats): the litter tray
+ * (uses, scoop deadlines, weekly change), the Maine Coon's grooming (week,
+ * matted coat) and the scratching resolve — {@see LitterPayload},
+ * {@see GroomingPayload}, {@see ScratchingPayload}; null for a dog.
  *
  * `pet.media` (M4-05): status + signed URLs of the stored reference image and
  * state videos ({@see PetMediaService::mediaFor()}); `current_video_url` is
@@ -215,7 +222,7 @@ class ChildPetStateResource extends JsonResource
             'behaviour' => [
                 'take_out' => $behaviour->takeOut,
                 'active_events' => $behaviour->activeEvents,
-                /** @var 'accident'|'chewing'|null */
+                /** @var 'accident'|'chewing'|'scratching'|null */
                 'scene' => $behaviour->scene,
                 /**
                  * POST /api/child/pet/take-out would be accepted (puppy, not locked).
@@ -251,6 +258,12 @@ class ChildPetStateResource extends JsonResource
             'play' => PlayPayload::for($pet, $actor, $now)?->toArray(),
             // M5-R06-04 cat wand play (the cat's daily play routine); null for a dog.
             'wand' => WandPayload::for($pet, $actor, $now)?->toArray(),
+            // M5-R06-05 cat litter tray (uses, scoop deadlines, weekly change); null for a dog.
+            'litter' => LitterPayload::for($pet, $actor, $now)?->toArray(),
+            // M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet.
+            'grooming' => GroomingPayload::for($pet, $actor, $now)?->toArray(),
+            // M5-R06-05 cat scratching (open mess, redirect + praise session); null for a dog.
+            'scratching' => ScratchingPayload::for($pet, $actor, $now)?->toArray(),
         ];
     }
 }

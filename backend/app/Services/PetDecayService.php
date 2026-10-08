@@ -3,6 +3,8 @@
 namespace App\Services;
 
 use App\Enums\ActivityType;
+use App\Enums\HygieneEventKind;
+use App\Enums\HygieneEventStatus;
 use App\Enums\LifeStage;
 use App\Enums\PetStateEnum;
 use App\Events\PetUpdated;
@@ -80,6 +82,9 @@ class PetDecayService
         private TrainingService $training,
         private WandPlayService $wand,
         private PlayService $play,
+        private LitterService $litter,
+        private ScratchingService $scratching,
+        private CatChoreService $chores,
     ) {}
 
     /**
@@ -166,14 +171,16 @@ class PetDecayService
             // M5-R06-04 (QA): a cat's wand game that ran out (TTL) or was hit by a
             // lock ends here — broadcast so no app keeps showing it as running.
             $wandEnded = $locked->isCat() && $this->wand->expireStale($locked, now()->startOfSecond()) > 0;
+            // M5-R06-05: the same for a grooming / litter change / scratching session.
+            $careEnded = $locked->isCat() && $this->chores->expireStale($locked, now()->startOfSecond()) > 0;
 
-            return [$locked, $changed, $playFlipped, $wandEnded];
+            return [$locked, $changed, $playFlipped, $wandEnded, $careEnded];
         };
 
         // The scheduler calls this outside any transaction → own transaction.
         // If a caller already opened one, the row lock lives in that
         // transaction until it commits; a nested savepoint would add nothing.
-        [$locked, $changed, $playFlipped, $wandEnded] = DB::transactionLevel() > 0 ? $work() : DB::transaction($work);
+        [$locked, $changed, $playFlipped, $wandEnded, $careEnded] = DB::transactionLevel() > 0 ? $work() : DB::transaction($work);
 
         if (! $locked) {
             return null;
@@ -193,6 +200,8 @@ class PetDecayService
             PetUpdated::afterCommit($locked, 'play');
         } elseif ($wandEnded && $locked->is_active) {
             PetUpdated::afterCommit($locked, 'wand_ended');
+        } elseif ($careEnded && $locked->is_active) {
+            PetUpdated::afterCommit($locked, 'care_session_ended');
         }
 
         return $changed;
@@ -379,6 +388,10 @@ class PetDecayService
         // costs every command some progress (once per day, pointer on the pet).
         $this->training->applyDecay($pet, $now);
 
+        // M5-R06-05 (Maine Coon): the end of a program week with ≥ 2 of its 3
+        // groomings missed → matted coat (state only, no metric effect).
+        $matted = $pet->isCat() && $this->chores->closeGroomingWeek($pet, $now);
+
         // Hygiene (M1-05): no gradual decay; scheduled random events that
         // fall into this interval drop it to 0. The neglect clock starts at
         // the event time, also when the tick runs late.
@@ -388,6 +401,15 @@ class PetDecayService
         // bladder clock. The earliest mess starts the neglect clock.
         $this->hygieneEvents->ensureScheduled($pet, $from, $now, $quietHours, $breedConfig);
         $this->behaviour->ensureChewingScheduled($pet, $from, $now, $quietHours);
+        // M5-R06-05: the cat scratches the sofa the day after a missed play (decided once a day).
+        $this->scratching->ensureScheduled($pet, $from, $now, $quietHours);
+        // M5-R06-05: a litter use happening in this interval (not a mess) is still news for the apps.
+        $litterUsed = $pet->isCat() && $pet->hygieneEvents()
+            ->where('kind', HygieneEventKind::LitterUse->value)
+            ->where('status', HygieneEventStatus::Pending->value)
+            ->where('scheduled_at', '>', $from)
+            ->where('scheduled_at', '<=', $now)
+            ->exists();
         // Play & cuddle (M5-R05): decide today's invitations, end the old ones.
         // Mood only — nothing here touches a metric.
         $this->play->ensureInvitationsScheduled($pet, $from, $now, $quietHours);
@@ -396,6 +418,11 @@ class PetDecayService
         $accidentAt = $this->behaviour->applyDueAccidents($pet, $from, $now, $quietHours);
         if ($accidentAt !== null && ($messAt === null || $accidentAt->lessThan($messAt))) {
             $messAt = $accidentAt;
+        }
+        // M5-R06-05: the cat's scoop deadlines — an unscooped tray becomes a mess next to it.
+        $litterAt = $pet->isCat() ? $this->litter->escalateDue($pet, $from, $now, $quietHours) : null;
+        if ($litterAt !== null && ($messAt === null || $litterAt->lessThan($messAt))) {
+            $messAt = $litterAt;
         }
         $newHygiene = (float) $pet->hygiene_level;
         if ($messAt !== null) {
@@ -429,6 +456,8 @@ class PetDecayService
 
         $displayChanged = $recovered
             || $staged
+            || $matted
+            || $litterUsed
             || $certificateEligible !== $pet->certificate_eligible
             || $newPetState !== $pet->pet_state;
         foreach ($newMetrics as $metric => $value) {

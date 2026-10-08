@@ -13,6 +13,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * See HygieneEventService (scheduling, application, cleaning) and
  * BehaviourEventService (accidents, chewing). `cleaned_at` = resolved
  * (cleaned / tidied up by a child, or by the vet at the end of an illness).
+ *
+ * M5-R06-05 (cats): `litter_use` rows are not messes — `cleaned_at` = the
+ * tray was scooped, `due_at` = the scoop deadline (fixed when the use
+ * happens), `escalated_at` = the tick handled it after the deadline (wrote
+ * the `litter_accident`, or skipped it after a freeze / outage). See
+ * LitterService.
  */
 class PetHygieneEvent extends Model
 {
@@ -27,6 +33,9 @@ class PetHygieneEvent extends Model
         'status',
         'resolved_at',
         'cleaned_at',
+        // M5-R06-05 litter use: scoop deadline; when the tick handled it after the deadline.
+        'due_at',
+        'escalated_at',
     ];
 
     /**
@@ -39,6 +48,8 @@ class PetHygieneEvent extends Model
             'scheduled_at' => 'datetime',
             'resolved_at' => 'datetime',
             'cleaned_at' => 'datetime',
+            'due_at' => 'datetime',
+            'escalated_at' => 'datetime',
             'status' => HygieneEventStatus::class,
             'kind' => HygieneEventKind::class,
         ];

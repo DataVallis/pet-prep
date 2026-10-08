@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\ActivityType;
 use App\Enums\HygieneEventKind;
 use App\Enums\HygieneEventStatus;
+use App\Enums\StageParamKey;
 use App\Models\ActivityLog;
 use App\Models\BreedConfig;
 use App\Models\Pet;
@@ -39,6 +40,13 @@ use Random\Randomizer;
  * After a scheduler gap every missed event is applied exactly once (each row
  * flips from pending once).
  *
+ * Cats (M5-R06-05, CAT_SPEC Q3): `poops_per_day` is 0; instead every
+ * family-local day gets `litter_uses_per_day` (kitten 3, grown cat 2)
+ * `litter_use` rows drawn the same way (own RNG stream). A litter use is NOT
+ * a mess — applying it leaves hygiene alone; its scoop deadline and the
+ * `litter_accident` after it are LitterService's. A `scratching` event (the
+ * day after a missed play, ScratchingService) is a mess like chewing.
+ *
  * All callers hold the pet's row lock (backend/CLAUDE.md).
  */
 class HygieneEventService
@@ -49,7 +57,7 @@ class HygieneEventService
      */
     public const MAX_CATCH_UP_DAYS = 7;
 
-    public function __construct(private ?string $seedSalt = null)
+    public function __construct(private ?string $seedSalt = null, private ?LifeStageService $lifeStages = null)
     {
         $this->seedSalt ??= (string) config('app.key');
     }
@@ -101,6 +109,21 @@ class HygieneEventService
                     'updated_at' => $stamp,
                 ];
             }
+            // M5-R06-05: the cat's litter uses of the day (not messes).
+            $uses = $this->litterUsesOn($pet, $date);
+            if ($uses > 0) {
+                foreach ($this->scheduleDay($pet, $date, $quietHours, $uses, $this->randomizerFor($pet, 'litter|'.$date)) as $at) {
+                    $rows[] = [
+                        'pet_id' => $pet->id,
+                        'kind' => HygieneEventKind::LitterUse->value,
+                        'local_date' => $date,
+                        'scheduled_at' => $at,
+                        'status' => HygieneEventStatus::Pending->value,
+                        'created_at' => $stamp,
+                        'updated_at' => $stamp,
+                    ];
+                }
+            }
         }
 
         if ($rows !== []) {
@@ -108,6 +131,21 @@ class HygieneEventService
         }
 
         $pet->hygiene_scheduled_through = $today->toDateString();
+    }
+
+    /**
+     * Litter uses a cat has on a family-local date (`litter_uses_per_day` of
+     * that day's life stage); 0 for a dog or a cat without life-stage data.
+     */
+    public function litterUsesOn(Pet $pet, string $localDate): int
+    {
+        if (! $pet->isCat() || $pet->isLegacyProfile()) {
+            return 0;
+        }
+        $this->lifeStages ??= app(LifeStageService::class);
+        $value = $this->lifeStages->stageValueOn($pet, $localDate, StageParamKey::LitterUsesPerDay)['value'] ?? null;
+
+        return is_int($value) && $value > 0 ? $value : 0;
     }
 
     /**
@@ -187,10 +225,13 @@ class HygieneEventService
         $outage = BehaviourEventService::isOutage($from, $now);
 
         foreach ($this->duePending($pet, $now) as $event) {
+            // Like a poop, a litter use (M5-R06-05) is applied late after an
+            // outage — LitterService then decides its deadline (no accident made up).
+            $lateOk = in_array($event->kind, [HygieneEventKind::Poop, HygieneEventKind::LitterUse], true);
             $happens = $event->scheduled_at->greaterThan($from)
                 && ! ($quietHours?->isQuietNow($event->scheduled_at) ?? false)
-                && ! ($outage && $event->kind !== HygieneEventKind::Poop);
-            if ($outage && $event->kind !== HygieneEventKind::Poop) {
+                && ! ($outage && ! $lateOk);
+            if ($outage && ! $lateOk) {
                 BehaviourEventService::warnOutage($pet, $from, $now);
             }
 
@@ -200,7 +241,10 @@ class HygieneEventService
             ])->save();
 
             if ($happens) {
-                $first ??= $event->scheduled_at->copy();
+                // M5-R06-05: a litter use is not a mess — hygiene stays.
+                if ($event->kind->isMess()) {
+                    $first ??= $event->scheduled_at->copy();
+                }
                 Log::info('HygieneEventService: hygiene event happened', [
                     'pet_id' => $pet->id,
                     'kind' => $event->kind->value,
@@ -208,9 +252,7 @@ class HygieneEventService
                 ]);
 
                 // M5-R02: the parent timeline shows behaviour events (system row, no actor).
-                if ($event->kind === HygieneEventKind::Chewing) {
-                    self::logSystemEvent($pet, ActivityType::PetChewed, $event->scheduled_at);
-                }
+                self::logBehaviourEvent($pet, $event);
             }
         }
 
@@ -221,8 +263,9 @@ class HygieneEventService
      * Cleaning (PetActivityService::clean): settle events that are already
      * due but not yet processed by a tick — they happened and are cleaned by
      * this action, so the next tick doesn't dirty the pet again — and mark
-     * every uncleaned event the cleaning game resolves (poop, puppy accident;
-     * not chewing, M5-R02) as cleaned.
+     * every uncleaned event the cleaning game resolves (poop, puppy accident,
+     * the cat's litter accident; not chewing / scratching, M5-R02 / R06-05)
+     * as cleaned.
      *
      * @return int Number of events this clean took care of.
      */
@@ -255,8 +298,26 @@ class HygieneEventService
     }
 
     /**
-     * Messes that happened and are not resolved yet (any kind), oldest first.
-     * Hygiene shows 0 % exactly while one is open (M5-R02).
+     * "Odnesi na praskalnik in pohvali" (M5-R06-05, ScratchingService): like
+     * settleChewing, for the cat's scratching events only.
+     *
+     * @return int Number of scratching events resolved.
+     */
+    public function settleScratching(Pet $pet, CarbonInterface $now, ?QuietHours $quietHours): int
+    {
+        $this->settleDuePending($pet, $now, $quietHours);
+
+        return $pet->hygieneEvents()
+            ->where('status', HygieneEventStatus::Applied->value)
+            ->where('kind', HygieneEventKind::Scratching->value)
+            ->whereNull('cleaned_at')
+            ->update(['cleaned_at' => $now, 'updated_at' => $now]);
+    }
+
+    /**
+     * Messes that happened and are not resolved yet (any mess kind — not the
+     * cat's litter uses, M5-R06-05), oldest first. Hygiene shows 0 % exactly
+     * while one is open (M5-R02).
      *
      * @return Collection<int, PetHygieneEvent>
      */
@@ -264,6 +325,7 @@ class HygieneEventService
     {
         return $pet->hygieneEvents()
             ->where('status', HygieneEventStatus::Applied->value)
+            ->whereIn('kind', HygieneEventKind::messes())
             ->whereNull('cleaned_at')
             ->orderBy('scheduled_at')
             ->orderBy('id')
@@ -287,6 +349,22 @@ class HygieneEventService
     }
 
     /**
+     * The parent-timeline system row of an applied behaviour event: chewing
+     * (M5-R02), the cat's scratching (M5-R06-05). Nothing for other kinds.
+     */
+    private static function logBehaviourEvent(Pet $pet, PetHygieneEvent $event): void
+    {
+        $type = match ($event->kind) {
+            HygieneEventKind::Chewing => ActivityType::PetChewed,
+            HygieneEventKind::Scratching => ActivityType::PetScratched,
+            default => null,
+        };
+        if ($type !== null) {
+            self::logSystemEvent($pet, $type, $event->scheduled_at);
+        }
+    }
+
+    /**
      * Events already due but not yet processed by a tick: they happened (or
      * were skipped) — decided the same way the tick decides.
      */
@@ -303,8 +381,8 @@ class HygieneEventService
                 'resolved_at' => $now,
             ])->save();
 
-            if ($happens && $event->kind === HygieneEventKind::Chewing) {
-                self::logSystemEvent($pet, ActivityType::PetChewed, $event->scheduled_at);
+            if ($happens) {
+                self::logBehaviourEvent($pet, $event);
             }
         }
     }
