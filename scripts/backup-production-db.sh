@@ -4,9 +4,10 @@
 
 set -Eeuo pipefail
 
-BACKUP_DIR="/opt/petprep/backups"
-ENV_FILE="/opt/petprep/.env"
-COMPOSE_FILE="/opt/petprep/repo/backend/compose.production.yaml"
+# Overridable only for the test harness (scripts/tests/backup-production-db.test.sh).
+BACKUP_DIR="${PETPREP_BACKUP_DIR:-/opt/petprep/backups}"
+ENV_FILE="${PETPREP_ENV_FILE:-/opt/petprep/.env}"
+COMPOSE_FILE="${PETPREP_COMPOSE_FILE:-/opt/petprep/repo/backend/compose.production.yaml}"
 RETENTION_DAYS=7
 
 mkdir -p "$BACKUP_DIR"
@@ -46,6 +47,12 @@ echo "SUCCESS: Database backup created at $BACKUP_FILE (Size: $BACKUP_SIZE)"
 
 # Clean up backups older than RETENTION_DAYS
 echo "Applying retention policy: deleting backups older than ${RETENTION_DAYS} days..."
-find "$BACKUP_DIR" -type f -name "petprep_*.sql.gz" -mtime +"$RETENTION_DAYS" -exec rm -v {} \;
+# Top level only: subfolders are not ours to prune (backups/pre-reset/ is written by
+# reset-game-data.sh as root with umask 077 — recursing into it made `find` fail with
+# "Permission denied" for the deploy user and aborted the 2026-10-08 deploy of #91).
+# The backup above already succeeded, so a retention problem only warns.
+if ! find "$BACKUP_DIR" -maxdepth 1 -type f -name "petprep_*.sql.gz" -mtime +"$RETENTION_DAYS" -exec rm -v {} \;; then
+    echo "WARNING: retention cleanup in ${BACKUP_DIR} failed — the new backup is fine; check old files manually." >&2
+fi
 
 echo "=== Backup completed successfully ==="
