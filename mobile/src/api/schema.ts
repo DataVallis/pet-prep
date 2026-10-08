@@ -230,6 +230,39 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/breeds": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * The species and breeds this app build may choose for a new pet
+         * @description `species` lists the available species (`dog` always; `cat` only while
+         *     the server flag `PETPREP_CATS_ENABLED` is on AND the query carries
+         *     `features[]=species_cat` — cats are hidden until M5-R06-09).
+         *     `breeds`: per species (dog first) the free breed first (mutt / domestic
+         *     cat), then the paid breeds by `sort_order`. Optional `species` filters
+         *     one species; an unavailable species returns an empty `breeds` list
+         *     (indistinguishable from a species without breeds).
+         *
+         *     Free / paid = `breed_configs.premium_unlock` (the same rule
+         *     generate-pin applies: `plan: free` → `free_plan_allowed`, `plan:
+         *     challenge` → `challenge_allowed`, else 422 `breed_locked` /
+         *     `challenge_requires_paid_breed`).
+         *
+         *     GET /api/breeds
+         */
+        get: operations["breed.index"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/broadcasting/auth": {
         parameters: {
             query?: never;
@@ -267,7 +300,9 @@ export interface paths {
          *
          *     422 `invalid_pin` (wrong, expired or used — same answer for all),
          *     422 `pin_not_usable` (the family changed since the PIN was issued),
-         *     429 `too_many_attempts` (`retry_after` seconds).
+         *     429 `too_many_attempts` (`retry_after` seconds),
+         *     422 `app_update_required` (M5-R06-01: the pet is a cat and this build
+         *     did not send `features: ["species_cat"]`; the PIN stays usable).
          *
          *     Optional `features` (M5-R02, PR #42): this child app build's UI
          *     features (`behaviour_events`, `training`; unknown values ignored, ≤ 10
@@ -762,8 +797,16 @@ export interface paths {
          *     device). A new PIN for the child replaces their previous one.
          *     404 `child_not_found`, 422 `pet_not_joinable` | `already_paired` |
          *     `breed_locked` | `challenge_requires_paid_breed` (M5-F03: explicit
-         *     `plan: challenge` for a new pet with the mutt — also when no breed /
-         *     no profile is sent, the mutt being the default).
+         *     `plan: challenge` for a new pet with a free breed — the mutt / domestic
+         *     cat; also when no breed / no profile is sent, the mutt being the default)
+         *     | `breed_species_mismatch` | `species_unavailable` (M5-R06-01).
+         *
+         *     Optional `species` (M5-R06-01): `dog` (default — old app builds) | `cat`.
+         *     The breed must belong to it; without `breed` the species' free breed
+         *     (mutt / domestic cat). Free / paid comes from `breed_configs.premium_unlock`
+         *     (GET /api/breeds lists it). Cats are hidden: available only while the
+         *     server flag `PETPREP_CATS_ENABLED` is on AND `features` contains
+         *     `species_cat`; a cat always needs `origin` + `age_stage`.
          *
          *     New pet profile (M5-R01, only without `pet_id`), all or nothing:
          *     `origin` bought | adopted and `age_stage` puppy | young | adult |
@@ -1054,11 +1097,36 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
+        /** BreedCatalogResource */
+        BreedCatalogResource: {
+            /**
+             * @description Enum value sent as `breed` to POST /api/parent/generate-pin.
+             * @enum {string}
+             */
+            breed: "mutt" | "border_collie" | "domestic_cat" | "maine_coon";
+            /** @description breed_configs slug (admin / analytics key). */
+            slug: string;
+            /** @enum {string} */
+            species: "dog" | "cat";
+            /** @description Paid breed (12-week challenge); breed_configs.premium_unlock. */
+            premium: boolean;
+            /** @description `plan: free` accepts this breed (a free breed). */
+            free_plan_allowed: boolean;
+            /** @description `plan: challenge` accepts this breed (a paid breed, M5-F03). */
+            challenge_allowed: boolean;
+            /** @description i18n key of the breed name, e.g. `breeds.maine_coon`. */
+            label_key: string;
+            /** @description Search synonyms (lower case; the app also folds diacritics). */
+            search_keywords: string[];
+            /** @description Picker order inside free / paid of a species. */
+            sort_order: number;
+        };
         /**
          * BreedType
+         * @description Breeds (M5-R06_PLAN T1, T9): the enum stays (it is used in payments and ~20 files), the free / paid rule is data — `breed_configs.premium_unlock` is the single source of truth (read through BreedCatalogService, cached). Every new case needs: slug(), species(), defaultPremium(), the `pets_breed_type_check` / `pets_species_breed_check` constraints and a BreedConfigsSeeder row.
          * @enum {string}
          */
-        BreedType: "mutt" | "border_collie";
+        BreedType: "mutt" | "border_collie" | "domestic_cat" | "maine_coon";
         /**
          * ChallengePaidSource
          * @description Why a challenge pet counts as paid (pets.challenge_paid_source, M3-11). Mirrored by the pets_challenge_paid_check constraint.
@@ -1157,6 +1225,7 @@ export interface components {
              *     the family = the child will share it (shared custody).
              */
             pet_id?: number | null;
+            species?: components["schemas"]["Species"] | null;
             breed?: components["schemas"]["BreedType"] | null;
             origin?: components["schemas"]["PetOrigin"] | null;
             age_stage?: components["schemas"]["LifeStage"] | null;
@@ -1208,6 +1277,11 @@ export interface components {
         PairedPetResource: {
             id: number;
             breed_type: string;
+            /**
+             * @description M5-R06-01: the pet's species.
+             * @enum {string}
+             */
+            species: "dog" | "cat";
             hunger_level: number;
             thirst_level: number;
             energy_level: number;
@@ -1383,6 +1457,7 @@ export interface components {
             challenge_paid_source: components["schemas"]["ChallengePaidSource"] | null;
             /** Format: date-time */
             payment_locked_at: string | null;
+            species: components["schemas"]["Species"];
         };
         /**
          * PetOrigin
@@ -1534,6 +1609,12 @@ export interface components {
             signature_format: "svg_path" | "png";
             signature: string;
         };
+        /**
+         * Species
+         * @description Animal species (M5-R06, CAT_SPEC §1, M5-R06_PLAN T2). Care rules branch by species, not by breed. Mirrored in the CHECK constraints `pets_species_check` and `breed_configs_species_check`. Cats are "dark" until M5-R06-09 (T4): see SpeciesAvailability.
+         * @enum {string}
+         */
+        Species: "dog" | "cat";
         /**
          * StartTrainingRequest
          * @description POST /api/child/pet/training/start (M5-R03): the command to train.
@@ -1974,6 +2055,35 @@ export interface operations {
             422: components["responses"]["ValidationException"];
         };
     };
+    "breed.index": {
+        parameters: {
+            query?: {
+                /** @description Only this species' breeds; omitted = every available species. */
+                species?: components["schemas"]["Species"] | null;
+                "features[]"?: string[];
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        species: ("dog" | "cat")[];
+                        breeds: components["schemas"]["BreedCatalogResource"][];
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+        };
+    };
     "broadcast.authenticate": {
         parameters: {
             query?: never;
@@ -2075,6 +2185,8 @@ export interface operations {
                             pet: {
                                 id: number;
                                 breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -2410,6 +2522,8 @@ export interface operations {
                         pet: {
                             id: number;
                             breed_type: string;
+                            /** @description M5-R06-01: dog | cat. */
+                            species: string;
                             /** @description null until the first contract is signed (unborn, M1-07b). */
                             born_at: string | null;
                             /**
@@ -2765,6 +2879,8 @@ export interface operations {
                             pet: {
                                 id: number;
                                 breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -3118,6 +3234,8 @@ export interface operations {
                             pet: {
                                 id: number;
                                 breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -3471,6 +3589,8 @@ export interface operations {
                             pet: {
                                 id: number;
                                 breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -3824,6 +3944,8 @@ export interface operations {
                             pet: {
                                 id: number;
                                 breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -4177,6 +4299,8 @@ export interface operations {
                             pet: {
                                 id: number;
                                 breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -4534,6 +4658,8 @@ export interface operations {
                             pet: {
                                 id: number;
                                 breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -4891,6 +5017,8 @@ export interface operations {
                             pet: {
                                 id: number;
                                 breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -5248,6 +5376,8 @@ export interface operations {
                             pet: {
                                 id: number;
                                 breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -5605,6 +5735,8 @@ export interface operations {
                             pet: {
                                 id: number;
                                 breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -6351,16 +6483,19 @@ export interface operations {
                         mode: "join_pet" | "new_pet" | "relogin";
                         /**
                          * @description M5-R01: the new pet's profile the PIN will create (mode new_pet with a profile);
-                         *     null = join / re-login, or no profile sent (→ legacy pet, pre-M5 rules). `features` (M5-R02 / M5-R03): the app features stored for the new pet (behaviour_events, training).
+                         *     null = join / re-login, or no profile sent (→ legacy pet, pre-M5 rules). `features` (M5-R02 / M5-R03): the app features stored for the new pet (behaviour_events, training, species_cat).
+                         *     `species` (M5-R06-01): dog | cat.
                          */
                         pet_profile: {
                             /** @enum {string} */
-                            breed: "mutt" | "border_collie";
+                            breed: "mutt" | "border_collie" | "domestic_cat" | "maine_coon";
                             /** @enum {string} */
                             origin: "bought" | "adopted";
                             /** @enum {string} */
                             age_stage: "puppy" | "young" | "adult" | "senior";
-                            features: ("behaviour_events" | "training")[];
+                            features: ("behaviour_events" | "training" | "species_cat")[];
+                            /** @enum {string} */
+                            species: "dog" | "cat";
                         } | null;
                         /**
                          * @description M3-11: the new pet's plan (mode new_pet; null for join / re-login).
@@ -6435,6 +6570,8 @@ export interface operations {
                         pet: {
                             id: number;
                             breed_type: string;
+                            /** @description M5-R06-01: dog | cat. */
+                            species: string;
                             /**
                              * @description Contract before birth (M1-07b): until the first contract,
                              *     born_at is null and awaiting_contract true (metrics 100,
@@ -6610,6 +6747,8 @@ export interface operations {
                                 } | null;
                                 id: number;
                                 breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
                                 born_at: string | null;
                                 awaiting_contract: boolean;
                                 is_active: boolean;
@@ -6862,6 +7001,8 @@ export interface operations {
                                 } | null;
                                 id: number;
                                 breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
                                 born_at: string | null;
                                 awaiting_contract: boolean;
                                 is_active: boolean;

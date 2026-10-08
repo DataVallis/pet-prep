@@ -266,6 +266,7 @@ class AccountExportService
             return [
                 'id' => $pet->id,
                 'breed_type' => $pet->breed_type->value,
+                'species' => $pet->speciesValue()->value,
                 'created_at' => $this->iso($pet->created_at),
                 'born_at' => $this->iso($pet->born_at),
                 'is_active' => (bool) $pet->is_active,

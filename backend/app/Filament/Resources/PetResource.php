@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Enums\BreedType;
 use App\Enums\PetPlan;
 use App\Enums\PetStateEnum;
+use App\Enums\Species;
 use App\Filament\Resources\PetResource\Pages;
 use App\Filament\Resources\PetResource\RelationManagers;
 use App\Models\Pet;
@@ -82,7 +83,10 @@ class PetResource extends Resource
                             ->required(),
                         Forms\Components\Select::make('breed_type')
                             ->label('Breed')
-                            ->options(BreedType::class)
+                            // M5-R06-01: an existing pet keeps its species (only breeds of
+                            // that species); pets.species follows the breed (Pet::saving).
+                            ->options(fn (?Pet $record): array => collect($record === null ? BreedType::cases() : BreedType::forSpecies($record->speciesValue()))
+                                ->mapWithKeys(fn (BreedType $b): array => [$b->value => $b->name])->all())
                             ->required(),
                         Forms\Components\Select::make('pet_state')
                             ->label('State')
@@ -180,6 +184,11 @@ class PetResource extends Resource
                     ->label('Caretakers')
                     ->badge()
                     ->placeholder('—'),
+                Tables\Columns\TextColumn::make('species')
+                    ->label('Species')
+                    ->badge()
+                    ->formatStateUsing(fn ($state): string => $state instanceof Species ? $state->value : (string) $state)
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('breed_type')
                     ->label('Breed')
                     ->badge()
@@ -238,6 +247,9 @@ class PetResource extends Resource
                     ->toggleable(),
             ])
             ->filters([
+                Tables\Filters\SelectFilter::make('species')
+                    ->label('Species')
+                    ->options(collect(Species::cases())->mapWithKeys(fn (Species $s): array => [$s->value => ucfirst($s->value)])->all()),
                 Tables\Filters\SelectFilter::make('breed_type')
                     ->label('Breed')
                     ->options(BreedType::class),

@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-08 — Temelj za muco: strežnik pozna vrsto živali (M5-R06-01, skrito)
+
+**Kaj se je zgodilo:** Strežnik zdaj pri vsakem ljubljenčku ve, ali je **pes ali mačka**. Dobil je dve mačji pasmi — **domačo mačko** (brezplačno, kot mešanček) in **Maine Coona** (samo z 12-tedenskim izzivom) — ter katalog pasem, iz katerega bo aplikacija gradila izbirnik »vrsta → pasma« (`GET /api/breeds`). Pravilo »kaj je brezplačno in kaj plačljivo« je bilo prej zapisano v kodi na ~10 mestih (»mešanček je brezplačen«); zdaj ima **en sam vir**: nastavitev pasme v bazi, ki jo admin vidi in ureja.
+
+**Zakaj je pomembno:** Nova pasma ali nova vrsta je odslej vrstica v bazi, ne nova različica aplikacije. Mačke so **skrite** (stikalo na strežniku + nova aplikacija mora povedati, da mačko zna prikazati), zato lahko vsak naslednji korak gre na produkcijo, ne da bi testerji kaj opazili. Pri psih se ni spremenilo nič: vsi obstoječi testi so ostali zeleni brez spremembe pričakovanih pasjih vrednosti.
+
+**Številke:** 4 pasme (2 psa, 2 mački); mačja voda 2× na dan z ≥ 4 h razmika, lakota in žeja −8 %/h (Davidova odločitev 8. 10.); 41 novih testov strežnika (tudi matrika pes / mačka × brezplačno / izziv × stara / nova aplikacija), skupaj 1482 zelenih.
+
+**Kako povedati:**
+- 👩 Starši: *načrt* — »Kmalu boste lahko izbrali tudi muco. Domača muca bo brezplačna, Maine Coon bo del 12-tedenskega izziva.« (Še ni na voljo.)
+- 💼 Investitorji: »Katalog živali je podatkovno voden: nova pasma ali vrsta ne potrebuje nove različice aplikacije; brezplačni in plačljivi del se določata na enem mestu.«
+- 🛠 Tehnično: »`pets.species` s CHECK, da se pasma ujema z vrsto; `breed_configs.premium_unlock` kot edini vir free/paid (predpomnjen katalog); funkcije se skrijejo z zastavico na strežniku IN deklaracijo funkcije v aplikaciji (`species_cat`), da stara aplikacija nikoli ne dobi mačke.«
+
+---
+
 ## 2026-10-08 — Pred beto s čisto mizo: varna ponastavitev produkcije (M5-09)
 
 **Kaj se je zgodilo:** David se je odločil (8. 10. ob 13:50), da beta z ~20 testerji začne s **prazno igro**: do zdaj je na produkciji testiral samo on. Namesto ročnega brisanja po bazi je nastalo orodje, ki to naredi varno: najprej **suhi tek** (samo pokaže, koliko vrstic v kateri tabeli bi izbrisal in koliko slik / videov psov — brez e-pošt in brez podatkov otrok), nato pa ob potrditvi z vpisom imena strežnika: vzdrževalni način → ustavljeni delavci → **sveža kopija baze in vseh medijev** → izbris v eni transakciji → nazaj na splet. **Ostanejo** samo skrbniški računi in podatki o pasmah (z zgodovino urejanj).

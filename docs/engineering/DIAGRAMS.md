@@ -175,8 +175,9 @@ sequenceDiagram
   Parent->>API: POST /api/parent/children {display_name, birth_year?}<br/>(token ability parent)
   API->>DB: users row: role child, nickname, birth_year,<br/>email NULL, password NULL; family_user (child)
   API-->>Parent: 201 {child {id, …}}
-  Parent->>API: POST /api/parent/generate-pin {child_id, pet_id?}
-  API->>DB: lock parent → child → family; mode = new_pet | join_pet | relogin;<br/>revoke the child's open PIN; insert child_login_pins<br/>(HMAC-SHA256 of the PIN, 15 min)
+  Parent->>API: GET /api/breeds?features[]=… (M5-R06-01 catalogue:<br/>cats only with PETPREP_CATS_ENABLED + species_cat)
+  Parent->>API: POST /api/parent/generate-pin {child_id, pet_id?,<br/>species?, breed?, origin?, age_stage?, plan?, features?}
+  API->>DB: lock parent → child → family; mode = new_pet | join_pet | relogin;<br/>new pet: breed ∈ species (422 breed_species_mismatch), cat available<br/>(422 species_unavailable), free / paid from breed_configs.premium_unlock;<br/>revoke the child's open PIN; insert child_login_pins<br/>(HMAC-SHA256 of the PIN, 15 min)
   API-->>Parent: {pin "734 912", expires_at, mode}
   Note over Parent,Child: parent tells the child the PIN
   Child->>API: POST /api/child/pin-login {pin, device_name}<br/>(unauthenticated, 10/min per IP)
@@ -187,6 +188,9 @@ sequenceDiagram
     API-->>Child: 422 invalid_pin (same body for wrong / expired / used)
   else match
     API->>DB: transaction: lock parent → child → family → PIN row, re-check
+    opt the pet is a cat and the child app lacks species_cat (M5-R06-01)
+      API-->>Child: 422 app_update_required (PIN stays usable)
+    end
     alt child never paired
       API->>DB: new_pet: create UNBORN pet + caretaker<br/>join_pet: caretaker of the shared pet (requires_contract)
     else child already a caretaker
@@ -718,7 +722,8 @@ erDiagram
     bigint id
     bigint family_id
     bigint user_id "deprecated"
-    string breed_type
+    string breed_type "mutt border_collie domestic_cat maine_coon"
+    string species "dog or cat, follows breed (M5-R06-01)"
     double hunger_level
     double thirst_level
     double energy_level
@@ -745,6 +750,11 @@ erDiagram
     jsonb feed_windows
     smallint water_times_per_day
     smallint water_min_gap_minutes
+    boolean premium_unlock "only free or paid source (M5-R06-01)"
+    string species "dog or cat"
+    int sort_order "picker order"
+    jsonb search_keywords "picker synonyms"
+    string label_key "i18n breed name"
   }
   PET_HYGIENE_EVENTS {
     string kind "poop accident chewing (M5-R02)"

@@ -47,6 +47,7 @@ function pinLoginResponse(overrides: Partial<PinLoginResponse> = {}): PinLoginRe
     pet: {
       id: 7,
       breed_type: 'mutt',
+      species: 'dog',
       hunger_level: 100,
       thirst_level: 100,
       energy_level: 100,

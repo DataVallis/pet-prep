@@ -28,7 +28,9 @@ class ChildAuthController extends Controller
      *
      * 422 `invalid_pin` (wrong, expired or used — same answer for all),
      * 422 `pin_not_usable` (the family changed since the PIN was issued),
-     * 429 `too_many_attempts` (`retry_after` seconds).
+     * 429 `too_many_attempts` (`retry_after` seconds),
+     * 422 `app_update_required` (M5-R06-01: the pet is a cat and this build
+     * did not send `features: ["species_cat"]`; the PIN stays usable).
      *
      * Optional `features` (M5-R02, PR #42): this child app build's UI
      * features (`behaviour_events`, `training`; unknown values ignored, ≤ 10

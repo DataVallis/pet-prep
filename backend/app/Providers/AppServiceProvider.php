@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\BreedCatalogService;
 use App\Support\ClientIp;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
@@ -38,7 +39,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // M5-R06-01: one breed catalogue (memo) per request / queued job.
+        $this->app->scoped(BreedCatalogService::class);
     }
 
     /**

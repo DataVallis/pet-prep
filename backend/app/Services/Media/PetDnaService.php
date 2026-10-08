@@ -138,6 +138,17 @@ class PetDnaService
     }
 
     /**
+     * M5-R06-01: the breed has appearance data (config/breed_appearance.php).
+     * Cats have none until M5-R06-07 — they get no DNA and no AI media.
+     */
+    public static function hasAppearance(string $breedKey): bool
+    {
+        $traits = config("breed_appearance.{$breedKey}.traits");
+
+        return is_array($traits) && $traits !== [];
+    }
+
+    /**
      * @return list<string> breed keys with appearance data
      */
     public function breeds(): array

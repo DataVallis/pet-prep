@@ -7,6 +7,7 @@ use App\Enums\ClientFeature;
 use App\Enums\LifeStage;
 use App\Enums\PetOrigin;
 use App\Enums\PetPlan;
+use App\Enums\Species;
 use App\Models\User;
 use App\Services\Results\PetProfileChoice;
 use Illuminate\Contracts\Validation\ValidationRule;
@@ -46,9 +47,15 @@ class GeneratePinRequest extends FormRequest
             // builds); ANY of them → origin AND age_stage are required,
             // breed defaults to the mutt. Premium breeds need the purchase
             // (422 breed_locked); every origin / age is free.
+            // M5-R06-01: species of the new pet, dog (default when omitted — old app
+            // builds) | cat. A cat always needs a profile (origin + age_stage): there
+            // are no legacy-profile cats. The breed must belong to it (422
+            // breed_species_mismatch); no breed → the species' free breed. A cat
+            // needs the server flag + `features: ["species_cat"]` (422 species_unavailable).
+            'species' => ['sometimes', 'nullable', Rule::enum(Species::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
             'breed' => ['sometimes', 'nullable', Rule::enum(BreedType::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
-            'origin' => ['nullable', 'required_with:breed,age_stage', Rule::enum(PetOrigin::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
-            'age_stage' => ['nullable', 'required_with:breed,origin', Rule::enum(LifeStage::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
+            'origin' => ['nullable', 'required_with:breed,age_stage', 'required_if:species,cat', Rule::enum(PetOrigin::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
+            'age_stage' => ['nullable', 'required_with:breed,origin', 'required_if:species,cat', Rule::enum(LifeStage::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
             // M5-R02 (PR #42 B1): what this app build can show for the new pet,
             // e.g. ["behaviour_events", "training"]. An array of ≤ 10 strings; values this
             // server doesn't know (newer apps) are dropped, not refused
@@ -100,7 +107,8 @@ class GeneratePinRequest extends FormRequest
     /**
      * The new pet's profile (M5-R01), or null when none of breed / origin /
      * age_stage was sent (→ legacy-profile pet, pre-M5 rules). Validation
-     * guarantees origin + age_stage when any field is sent; breed → mutt.
+     * guarantees origin + age_stage when any field is sent (and for a cat);
+     * breed → the free breed of `species` (default dog → mutt).
      */
     public function petProfile(): ?PetProfileChoice
     {
@@ -109,6 +117,7 @@ class GeneratePinRequest extends FormRequest
         }
 
         return PetProfileChoice::fromArray([
+            'species' => $this->validated('species'),
             'breed' => $this->validated('breed'),
             'origin' => $this->validated('origin'),
             'age_stage' => $this->validated('age_stage'),

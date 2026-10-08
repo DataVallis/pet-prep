@@ -180,7 +180,10 @@ export type CreateChildResponse =
   operations['childProfile.store']['responses'][201]['content']['application/json'];
 
 /** Breed / origin / age at arrival of a new pet (M5-R01 contract, M5-R04 picker). */
-export type PetBreed = components['schemas']['BreedType'];
+// Dog breeds of today's picker. The API also knows cat breeds since M5-R06-01
+// (hidden behind PETPREP_CATS_ENABLED + `species_cat`); the species → breed
+// picker (M5-R06-02) will take its list from GET /api/breeds instead.
+export type PetBreed = Extract<components['schemas']['BreedType'], 'mutt' | 'border_collie'>;
 export type PetOrigin = components['schemas']['PetOrigin'];
 export type LifeStage = components['schemas']['LifeStage'];
 

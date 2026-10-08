@@ -105,6 +105,16 @@ class PetMediaService
      */
     public function generateReferenceImage(Pet $pet): bool
     {
+        // M5-R06-01: no appearance data for the breed (cats until M5-R06-07) → no
+        // media at all (never a dog prompt); the pet stays playable without media.
+        if (! PetDnaService::hasAppearance($pet->breed_type->value)) {
+            if ($pet->media_status !== 'ready') {
+                $pet->updateQuietly(['media_status' => 'disabled']);
+            }
+
+            return true;
+        }
+
         if (! $this->fal->isEnabled()) {
             if ($pet->media_status !== 'ready') {
                 $pet->updateQuietly(['media_status' => 'disabled']);

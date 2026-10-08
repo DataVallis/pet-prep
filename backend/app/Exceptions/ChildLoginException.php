@@ -10,7 +10,9 @@ use RuntimeException;
  *    same answer for all three (no enumeration);
  *  - pin_not_usable (422): the PIN matched, but the family changed since it
  *    was issued (e.g. the shared pet ended); the PIN is now revoked;
- *  - too_many_attempts (429): per-IP or global failed-attempt lockout.
+ *  - too_many_attempts (429): per-IP or global failed-attempt lockout;
+ *  - app_update_required (422, M5-R06-01): the PIN's pet is a cat and this
+ *    child app build did not declare `species_cat`; the PIN stays usable.
  */
 class ChildLoginException extends RuntimeException
 {

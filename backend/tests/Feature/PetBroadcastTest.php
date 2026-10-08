@@ -201,6 +201,8 @@ describe('PetUpdated event shape', function () {
             'reference_image_url', 'media', 'event_type', 'updated_at', 'emitted_at',
             // M3-11 plan + payment status
             'plan',
+            // M5-R06-01 species (additive)
+            'species',
             // M5-R01 profile brief
             'age_months', 'origin', 'life_stage',
             // M5-R02 behaviour events

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillingController;
+use App\Http\Controllers\BreedController;
 use App\Http\Controllers\ChildAuthController;
 use App\Http\Controllers\ChildContractController;
 use App\Http\Controllers\ChildPetController;
@@ -147,6 +148,16 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         Route::get('billing', [BillingController::class, 'index']);
         Route::post('pets/{pet}/challenge/activate', [BillingController::class, 'activate']);
     });
+
+/*
+|--------------------------------------------------------------------------
+| Breed catalogue (M5-R06-01) — parent picker before the child PIN
+|--------------------------------------------------------------------------
+| GET /api/breeds?species=dog|cat&features[]=species_cat — the plan's path is
+| top level (not /parent/…), but only parent tokens may read it.
+*/
+Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
+    ->get('breeds', [BreedController::class, 'index']);
 
 /*
 |--------------------------------------------------------------------------

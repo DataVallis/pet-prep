@@ -6,6 +6,7 @@ use App\Enums\BreedType;
 use App\Enums\ClientFeature;
 use App\Enums\LifeStage;
 use App\Enums\PetOrigin;
+use App\Enums\Species;
 
 /**
  * The parent's choice for a NEW pet (M5-R01, David 2026-10-05): breed,
@@ -17,6 +18,11 @@ use App\Enums\PetOrigin;
  * `features` (M5-R02, PR #42 B1): what the parent's app build can show
  * (ClientFeature values); unknown values are dropped. An old PIN without
  * the key → [] (behaviour events off).
+ *
+ * `species` (M5-R06-01): dog | cat; the breed always belongs to it (the
+ * request refuses a mismatch with 422 `breed_species_mismatch`). A PIN
+ * stored before M5-R06-01 has no `species` → the breed's species (a dog). No
+ * breed → the free breed of the species (mutt / domestic cat).
  */
 final readonly class PetProfileChoice
 {
@@ -28,6 +34,7 @@ final readonly class PetProfileChoice
         public PetOrigin $origin = PetOrigin::Bought,
         public LifeStage $ageStage = LifeStage::Puppy,
         public array $features = [],
+        public Species $species = Species::Dog,
     ) {}
 
     public static function default(): self
@@ -45,11 +52,15 @@ final readonly class PetProfileChoice
             fn (mixed $f): bool => is_string($f) && ClientFeature::tryFrom($f) !== null,
         )));
 
+        $breed = BreedType::tryFrom((string) ($data['breed'] ?? ''));
+        $species = Species::tryFrom((string) ($data['species'] ?? '')) ?? $breed?->species() ?? Species::Dog;
+
         return new self(
-            BreedType::tryFrom((string) ($data['breed'] ?? '')) ?? BreedType::Mutt,
+            $breed ?? $species->freeBreed(),
             PetOrigin::tryFrom((string) ($data['origin'] ?? '')) ?? PetOrigin::Bought,
             LifeStage::tryFrom((string) ($data['age_stage'] ?? '')) ?? LifeStage::Puppy,
             $features,
+            $species,
         );
     }
 
@@ -61,7 +72,7 @@ final readonly class PetProfileChoice
      */
     public function withOnlyFeatures(array $features): self
     {
-        return new self($this->breed, $this->origin, $this->ageStage, array_values(array_intersect($this->features, $features)));
+        return new self($this->breed, $this->origin, $this->ageStage, array_values(array_intersect($this->features, $features)), $this->species);
     }
 
     public function supports(ClientFeature $feature): bool
@@ -70,7 +81,7 @@ final readonly class PetProfileChoice
     }
 
     /**
-     * @return array{breed: string, origin: string, age_stage: string, features: list<string>}
+     * @return array{breed: string, origin: string, age_stage: string, features: list<string>, species: string}
      */
     public function toArray(): array
     {
@@ -79,6 +90,8 @@ final readonly class PetProfileChoice
             'origin' => $this->origin->value,
             'age_stage' => $this->ageStage->value,
             'features' => $this->features,
+            // M5-R06-01 (additive, last key).
+            'species' => $this->species->value,
         ];
     }
 }

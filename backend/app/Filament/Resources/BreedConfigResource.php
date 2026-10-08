@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\Species;
 use App\Filament\Resources\BreedConfigResource\Pages;
 use App\Models\BreedConfig;
 use Closure;
@@ -169,7 +170,29 @@ class BreedConfigResource extends Resource
                     ->helperText('Minimum minutes between two water refills (M1-07).'),
 
                 Forms\Components\Toggle::make('premium_unlock')
-                    ->helperText('Whether this breed requires a premium/paid unlock.'),
+                    ->helperText('Paid breed (12-week challenge). Since M5-R06-01 the ONLY source of free / paid: free plan = breeds without it, challenge = breeds with it. Every species needs exactly one free breed. Applies to new pets; existing pets keep their plan.'),
+
+                // M5-R06-01 picker catalogue (GET /api/breeds).
+                Forms\Components\Select::make('species')
+                    ->options(collect(Species::cases())->mapWithKeys(fn (Species $s): array => [$s->value => ucfirst($s->value)])->all())
+                    ->default(Species::Dog->value)
+                    ->required()
+                    ->helperText('Dog / cat. For a breed the app knows (mutt, border-collie, domestic-cat, maine-coon) the species is fixed by the code and this value is ignored.'),
+
+                Forms\Components\TextInput::make('sort_order')
+                    ->integer()
+                    ->default(0)
+                    ->required()
+                    ->helperText('Picker order: free breed first, then paid breeds by this number.'),
+
+                Forms\Components\TextInput::make('label_key')
+                    ->maxLength(64)
+                    ->nullable()
+                    ->helperText('i18n key of the breed name in the apps (e.g. breeds.maine_coon). Empty = breeds.<breed>.'),
+
+                Forms\Components\TagsInput::make('search_keywords')
+                    ->default([])
+                    ->helperText('Search synonyms in the picker (lower case, with and without č/š/ž).'),
             ]);
     }
 
@@ -184,12 +207,24 @@ class BreedConfigResource extends Resource
                 Tables\Columns\TextColumn::make('breed_slug')
                     ->badge()
                     ->colors([
-                        'primary' => 'mutt',
-                        'warning' => 'border-collie',
-                        'success' => fn ($state): bool => ! in_array($state, ['mutt', 'border-collie'], true),
+                        // Free breeds primary, paid (challenge) breeds warning (M5-R06-01).
+                        'primary' => fn ($state): bool => in_array($state, ['mutt', 'domestic-cat'], true),
+                        'warning' => fn ($state): bool => in_array($state, ['border-collie', 'maine-coon'], true),
+                        'success' => fn ($state): bool => ! in_array($state, ['mutt', 'border-collie', 'domestic-cat', 'maine-coon'], true),
                     ])
                     ->searchable()
                     ->sortable(),
+
+                Tables\Columns\TextColumn::make('species')
+                    ->badge()
+                    ->formatStateUsing(fn ($state): string => $state instanceof Species ? $state->value : (string) $state)
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('sort_order')
+                    ->label('Order')
+                    ->numeric()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
 
                 Tables\Columns\TextColumn::make('daily_steps_required')
                     ->numeric()
@@ -240,7 +275,8 @@ class BreedConfigResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('species')
+                    ->options(collect(Species::cases())->mapWithKeys(fn (Species $s): array => [$s->value => ucfirst($s->value)])->all()),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
