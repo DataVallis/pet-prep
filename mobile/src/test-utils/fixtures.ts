@@ -210,6 +210,10 @@ export function makeChildState(
     play: null,
     // M5-R06-04 cat wand play: null for a dog.
     wand: null,
+    // M5-R06-05 cat litter / Maine Coon grooming / scratching: null for a dog.
+    litter: null,
+    grooming: null,
+    scratching: null,
   };
 }
 
@@ -482,7 +486,8 @@ export function makeTakeOut(overrides: Partial<NonNullable<RawState['behaviour']
 /** An open mess (M5-R02) with its 2-hour deadline (Ljubljana offset). */
 export function makeBehaviourEvent(
   kind: 'poop' | 'accident' | 'chewing',
-  overrides: Partial<RawState['behaviour']['active_events'][number]> = {},
+  // M5-R06-05: the server's kind union also has the cat's litter_accident / scratching — dog fixtures keep their own.
+  overrides: Partial<Omit<RawState['behaviour']['active_events'][number], 'kind'>> = {},
 ) {
   return {
     id: 1,
