@@ -35,7 +35,16 @@ echo "Source File: $BACKUP_FILE"
 echo "This operation will overwrite existing database data."
 echo "======================="
 
+# RESTORE_STRICT=1 (D17, pre-reset restore): stop at the first error and apply the
+# dump in ONE transaction — all or nothing. Default (unchanged): psql continues
+# past errors, as before.
+PSQL_STRICT=()
+if [ "${RESTORE_STRICT:-0}" = "1" ]; then
+    PSQL_STRICT=(-v ON_ERROR_STOP=1 --single-transaction)
+    echo "Strict mode: ON_ERROR_STOP=1, single transaction."
+fi
+
 # Stream gunzip into psql inside the container
-gunzip -c "$BACKUP_FILE" | docker compose -f "$COMPOSE_FILE" exec -T postgres psql -U "$DB_USER" -d "$DB_NAME"
+gunzip -c "$BACKUP_FILE" | docker compose -f "$COMPOSE_FILE" exec -T postgres psql ${PSQL_STRICT[@]+"${PSQL_STRICT[@]}"} -U "$DB_USER" -d "$DB_NAME"
 
 echo "SUCCESS: Database restored from $BACKUP_FILE"

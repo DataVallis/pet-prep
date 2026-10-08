@@ -20,7 +20,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [x] M0-08 CI popravek: obstoječi `deploy-production.yml` testira na sqlite (`.env.example`) → dodaj `postgres:18` service; dodaj mobile job (tsc, Jest); **deploy samo z ročno odobritvijo** (GitHub Environment reviewers) — glej DEPLOYMENT.md D1–D2
 - [ ] M0-09 Izbrisati podvojeni `mobile/src/components/WalkTrackerOverlay.tsx`, odstraniti `expo-av`
 - [x] M0-10 Gumbi za hitro prijavo s testnimi gesli so vidni samo v development buildih (`__DEV__`); EAS preview/production jih ne prikažeta (test v `ParentLoginScreen.devLogins.test.tsx`, prej `PairingScreen.devLogins.test.tsx`)
-- [ ] M0-15 **Pred javno beto:** v produkcijski bazi obstajata `parent@test.com` / `child@test.com` z geslom `password` (potrjeno 2026-10-03) — zamenjati gesla ali izbrisati, preveriti `admin@petprep.io`
+- [ ] M0-15 **Pred javno beto:** v produkcijski bazi obstajata `parent@test.com` / `child@test.com` z geslom `password` (potrjeno 2026-10-03) — zamenjati gesla ali izbrisati, preveriti `admin@petprep.io` — *2026-10-08: ponastavitev M5-09 izbriše testna računa (nista superadmina); **`admin@petprep.io` je superadmin in ostane** → po ponastavitvi zamenjati geslo ali odstraniti superadmin.*
 - [ ] M0-11 Poenotiti verzijo PHP (dev Sail 8.5, prod + CI 8.3) — predlog 8.4 povsod
 - [x] M0-13 Mobilni Jest + tsc delujeta po sveži namestitvi (`@react-native/jest-preset` 0.86.3, `@types/jest` 29, TS 6 `types`) — 72/72 testov, 0 tsc napak
 - [x] M0-14 Otroški HUD vizualno preverjen (David, 2026-10-03)
@@ -138,6 +138,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M5-05 Sentry (Laravel + RN), uptime monitoring, Laravel Pulse / Horizon
 - [ ] M5-06 Politika zasebnosti, pogoji, privolitev staršev, App Store "Kids" / Family policy pregled
 - [ ] M5-07 TestFlight + Google Play Internal testing; 20–50 beta družin (waitlist)
+- [~] M5-09 **Ponastavitev produkcijske baze pred beto** (David 8. 10. 2026 13:50) — *2026-10-08, `chore/reset-game-data`: ukaz `petprep:reset-game-data` (privzeto suhi tek) + `scripts/reset-game-data.sh` (vzdrževalni način, ustavljeni delavci, kopija baze + medijev, nato izbris); ostanejo superadmini in podatki o pasmah. Navodila: `docs/PRODUCTION_DEPLOYMENT.md` §6a, DEPLOYMENT.md D17. **Odprto: izvede David na strežniku**, nato testerji ponovno registrirajo.*
 - [ ] M5-08 Analitika produkta (PostHog EU): aktivacija, D1 / D7, dokončanje dneva, konverzija paywalla
 
 ## M5-R — Realistična simulacija (David, 5. 10. 2026; spec `docs/product/REALISM_SPEC.md`)

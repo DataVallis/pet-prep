@@ -201,6 +201,64 @@ ls -lh /opt/petprep/backups/
 - **Location:** `/opt/petprep/backups/petprep_petprep_production_YYYY-MM-DD_HHMMSS.sql.gz`
 - **Retention:** Automatically deletes backups older than 7 days to preserve disk space on the 40 GB SSD.
 
+### 6a. One-off: reset all game data before the beta (DEPLOYMENT.md D17)
+
+David decided on 2026-10-08 13:50 to start the ~20-tester beta from an empty game: every family, parent, child, pet, purchase, AI spend / AI Lab row and pet media file goes; **superadmin accounts (Filament) and the breed reference data stay**. The work is done by `php artisan petprep:reset-game-data` (dry run by default) through the host wrapper `scripts/reset-game-data.sh`, which takes the backups first. Run it only after the PR that adds it is deployed (`cat /opt/petprep/repo/.deployed-sha`).
+
+**Before you start:**
+- **No merges to `main` and no running deploy** during the reset: check GitHub → Actions → "CI & Deploy" (nothing running). The wrapper and `deploy-production.sh` share the lock `/opt/petprep/.ops.lock`: the reset refuses while a deploy runs; a deploy that starts during the reset waits up to 15 min (`DEPLOY_LOCK_WAIT`) and then fails without changing anything (re-run it afterwards with "Run workflow").
+- **Run it inside `tmux` (or `screen`)** so a dropped SSH connection can't kill it halfway: `tmux new -s reset` (reattach with `tmux attach -t reset`).
+- The wrapper checks free disk first: free space in `/opt/petprep/backups` must be ≥ 1.2 × (database size + pet media size) + 100 MB.
+
+```bash
+ssh -i ~/.ssh/petprep_deploy_key deploy@138.199.172.97
+tmux new -s reset
+cd /opt/petprep/repo
+
+# 1. Dry run — changes nothing; prints rows per table to delete / keep,
+#    the superadmin ids that stay, the pet media root, file count + size.
+#    It refuses (exit 1) on an unclassified table or an unexpected media root.
+bash scripts/reset-game-data.sh
+
+# 2. Execute — takes the ops lock, asks you to type the host (api.petprep.si), checks disk,
+#    then: artisan down → stop queue / queue-broadcasts / scheduler → DB backup + media tar
+#    → reset (one transaction, then media files, queues, cache) → workers up → artisan up.
+bash scripts/reset-game-data.sh --execute
+#    (without a terminal: bash scripts/reset-game-data.sh --execute --confirm-host=api.petprep.si)
+
+# 3. Check
+bash scripts/reset-game-data.sh          # every DELETE row count is 0, media 0 files
+curl -fsS https://api.petprep.si/up
+```
+
+**If it fails**, the last lines say which case it is (the app always comes back up):
+- *"RESET ABORTED during …"* / *"RESET FAILED BEFORE THE COMMIT"* (exit 1) — **nothing was deleted** (refusal, backup / disk problem, or the DB transaction rolled back). Fix the cause and run step 2 again.
+- *"DB RESET IS COMMITTED … cleanup failed"* (exit 2) — the game data **is** deleted, but deleting media files / clearing queues / cache failed. Run step 2 again: it is idempotent (deletes no more rows) and finishes the cleanup; it takes a new (small) backup, the pre-reset backups stay.
+
+Backups of this run (owner-only files, kept outside the 7-day retention — delete them by hand once the beta is stable):
+`/opt/petprep/backups/pre-reset/pre-reset_db_<UTC>.sql.gz` (hard link of the normal dump) and `/opt/petprep/backups/pre-reset/pre-reset_media_<UTC>.tar.gz`.
+
+**Undo (restore the state before the reset)** — no deploy running, app in maintenance, workers stopped:
+```bash
+cd /opt/petprep/repo/backend
+docker compose -f compose.production.yaml exec -T --user 1000:1000 app php artisan down
+docker compose -f compose.production.yaml stop queue queue-broadcasts scheduler
+# RESTORE_STRICT=1: ON_ERROR_STOP + one transaction — the restore is all or nothing
+RESTORE_STRICT=1 bash /opt/petprep/repo/scripts/restore-production-db.sh /opt/petprep/backups/pre-reset/pre-reset_db_<UTC>.sql.gz
+docker compose -f compose.production.yaml exec -T --user 1000:1000 app \
+  tar -xzf - -C /var/www/html/storage/app < /opt/petprep/backups/pre-reset/pre-reset_media_<UTC>.tar.gz
+docker compose -f compose.production.yaml up -d queue queue-broadcasts scheduler
+docker compose -f compose.production.yaml exec -T --user 1000:1000 app php artisan up
+# Post-restore check: the dry run must show the old row counts again (pets > 0, media files > 0)
+bash /opt/petprep/repo/scripts/reset-game-data.sh
+```
+(The dump is `pg_dump --clean --if-exists`, so it replaces every table. If the strict restore stops with an error, nothing was changed — read the error before retrying; without `RESTORE_STRICT` psql would continue past errors. Redis queues and the cache are not restored — nothing in them is needed.)
+
+**After the reset:**
+1. **Filament → Users:** only the superadmins remain (ids from the dry run). **The seeded `admin@petprep.io` uses the password from the repository (`SuperadminSeeder`) — if it is in the list, change its password now, or remove its superadmin flag** (ROADMAP M0-15). Admins log in to `/admin` again (sessions were deleted).
+2. **Testers (and David's own phones):** the old login no longer exists — the app gets 401. Delete and reinstall the app (or log out), register the parent account again (the same e-mail works), create the child profile and the dog from scratch. Purchases made in the sandbox before the reset are gone from our ledger — buy the challenge again (sandbox).
+3. The AI spend counter for the month restarted at 0 (the ledger was deleted).
+
 ---
 
 ## 7. Rollback Procedure
