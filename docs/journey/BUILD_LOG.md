@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-08 — Muca dobi življenjske faze z viri (M5-R06-03, skrito)
+
+**Kaj se je zgodilo:** Strežnik ima zdaj podatke o mački po fazah življenja — **mucek** (do 12 mesecev), **mlada mačka** (od 1 leta), **zrela mačka** (od 7 let) in **starejša mačka** (od 10 let), po smernicah AAHA/AAFP 2021. Domača muca pride k družini stara 2 meseca, Maine Coon 3 mesece (rodovniški mucki gredo od doma pozneje). Mucek je 4-krat na dan, nato 3-krat, od 6. meseca 2-krat; odrasla muca 2-krat. Zapisano je tudi, koliko iger s palico (mucek 3, odrasla 2), koliko uporab peska (3 / 2), kolikokrat na teden Maine Coona počešemo (3) in da se pesek v celoti zamenja enkrat na teden.
+
+**Zakaj je pomembno:** Vsaka mačja številka ima vir (25 virov, od veterinarskih smernic do Cornella in Cats Protection) ali zapisano Davidovo odločitev. Edina številka brez vira (2 uri med igrama) je v administraciji jasno označena kot predlog. Pri psih se ni spremenilo nič — test to preveri s »prstnim odtisom« vseh pasjih podatkov. Pravila igre za muco (igra, pesek, praskanje) pridejo v naslednjih korakih; mačke so še skrite.
+
+**Številke:** 65 mačjih vrednosti (32 domača mačka, 33 Maine Coon), 7 novih vrst podatkov, 1 vrednost (D); testi strežnika 1488 → 1499.
+
+**Kako povedati:**
+- 👩 Starši (*načrt*): »Muca v PetPrepu raste kot prava: mucek dobi hrano pogosteje, kasneje dvakrat na dan — po veterinarskih smernicah.«
+- 💼 Investitorji: »Druga vrsta živali stoji na istem podatkovnem modelu z viri kot pes — dodajanje vrste je delo s podatki, ne prepis igre.«
+- 🛠 Tehnično: »Ločen nabor vrstic za mačke v `breed_stage_params`, vsaka vrstica preverjena proti `cat-data/data.json` in `sources.md`; pasji nabor zaklenjen s SHA-256 odtisom.«
+
+---
+
 ## 2026-10-08 — Izbirnik »vrsta → pasma« v aplikaciji (M5-R06-02, mačke še skrite)
 
 **Kaj se je zgodilo:** Zaslon, kjer starš izbere ljubljenčka, zdaj seznam pasem dobi s strežnika. Najprej izbere **vrsto** (velike ploščice »Pes« / »Mačka«), nato načrt, pasmo s seznama z **iskanjem** (»mesancek« najde Mešančka, »mejnkun« Maine Coona), izvor in starost; pred kodo vidi **povzetek**. Ker so mačke še skrite, starš psa vidi isti izbirnik kot prej — korak vrste se preskoči, novo so iskalno polje, oznaki *Brezplačno* / *Izziv* in povzetek.
