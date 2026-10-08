@@ -41,6 +41,13 @@ use InvalidArgumentException;
  *
  * tests/Feature/LifeStageDataTest cross-checks every row against data.json.
  *
+ * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
+ * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
+ * ids C1–C25 of docs/research/cat-data/sources.md). rows() stays the dog
+ * rowset exactly as before; run() seeds allRows(). The existing stage values
+ * are reused (puppy = kitten, young = young adult, adult = mature adult,
+ * senior = senior — CAT_SPEC §2).
+ *
  * Feed window times (David 2026-10-05): N meals → the first window at
  * 07:00, the last at 19:00, equal spacing (12 h / (N − 1)), each window
  * 2 hours long: 4 meals = 07–09, 11–13, 15–17, 19–21; 3 meals = 07–09,
@@ -77,6 +84,15 @@ class BreedStageParamsSeeder extends Seeder
 
     /** M5-R03b: starting progress of a dog arriving young, adult or senior — David 2026-10-06. */
     public const GROWN_STARTING_PROGRESS = ['sit' => 50, 'come' => 30, 'place' => 0, 'potty' => 70];
+
+    /** CAT_SPEC Q1–Q10, David 2026-10-08 13:47 (data.json `decision`). */
+    public const CONFIRMED_CAT = 'potrdil David 2026-10-08 13:47';
+
+    /** David's later answers on the M5-R06 plan, 2026-10-08 (data.json `decision`). */
+    public const CONFIRMED_CAT_PLAN = 'potrdil David 2026-10-08 (načrt M5-R06)';
+
+    /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
+    public const CAT_REF = 'cat-data:';
 
     /** @var list<array{0: string, 1: string}> */
     public const PUPPY_4_MEAL_WINDOWS = [['07:00', '09:00'], ['11:00', '13:00'], ['15:00', '17:00'], ['19:00', '21:00']];
@@ -371,6 +387,211 @@ class BreedStageParamsSeeder extends Seeder
     }
 
     /**
+     * Dog rows (rows()) followed by the cat rows (catRows()) — what run() seeds.
+     *
+     * @return list<array<string, mixed>>
+     */
+    public static function allRows(): array
+    {
+        return array_merge(self::rows(), self::catRows());
+    }
+
+    /**
+     * Cat life-stage data (M5-R06-03): every value from
+     * docs/research/cat-data/data.json (`ref` = self::CAT_REF + JSON path).
+     * `verified` = true when the entry has a source (C-id) or a recorded David
+     * decision (CAT_SPEC Q1–Q10 13:47, or the M5-R06 plan answers); the one
+     * "UNSOURCED — proposal (D)" value (play_min_gap_minutes) stays false.
+     * Only values data.json gives are seeded: no exercise / step keys (cats
+     * have no steps), no senior sleep hours (no entry), no grooming row for
+     * the domestic cat (no grooming routine, CAT_SPEC Q8).
+     *
+     * @return list<array<string, mixed>>
+     */
+    public static function catRows(): array
+    {
+        $rows = [];
+
+        foreach ([BreedType::DomesticCat, BreedType::MaineCoon] as $breed) {
+            $mc = $breed === BreedType::MaineCoon;
+            $slug = $breed->slug();
+            $add = function (string $stage, int $from, StageParamKey $key, mixed $value, array $meta) use (&$rows, $slug): void {
+                $rows[] = array_merge([
+                    'breed_slug' => $slug,
+                    'stage' => $stage,
+                    'age_from_months' => $from,
+                    'key' => $key->value,
+                    'value' => $value,
+                    'unit' => null,
+                    'source_id' => null,
+                    'confidence' => 'low',
+                    'verified' => false,
+                    'quote' => null,
+                    'notes' => null,
+                    'ref' => null,
+                    'decision' => null,
+                ], $meta, ['ref' => isset($meta['ref']) ? self::CAT_REF.$meta['ref'] : null]);
+            };
+
+            // ── Stage boundaries (AAHA/AAFP 2021 feline life stages, C1) ──
+            $add('puppy', 0, StageParamKey::StartsAtMonths, 0, [
+                'unit' => 'months', 'source_id' => 'C1', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'general.life_stages.kitten',
+                'quote' => 'kitten, from birth up to 1 year old',
+                'notes' => 'Kitten (CAT_SPEC §2); stored as stage puppy.',
+            ]);
+            foreach ([
+                ['young', 12, 'young_adult', 'young adult, 1-6 years old', 'Young cat; stored as stage young.'],
+                ['adult', 84, 'mature_adult', 'mature adult, 7-10 years old', 'Mature cat; stored as stage adult.'],
+                ['senior', 120, 'senior', 'senior, 10 years old and up', 'Senior cat. The guideline ranges overlap at 10 years; unlike dogs the boundary is NOT 0.75 × lifespan.'],
+            ] as [$stage, $month, $ref, $quote, $note]) {
+                $add($stage, 0, StageParamKey::StartsAtMonths, $month, [
+                    'unit' => 'months', 'source_id' => 'C1', 'confidence' => 'high', 'verified' => true,
+                    'ref' => 'general.life_stages.'.$ref, 'decision' => self::CONFIRMED_CAT,
+                    'quote' => $quote, 'notes' => $note,
+                ]);
+            }
+
+            // ── Age at arrival (CAT_SPEC Q4) ─────────────────────────────────
+            $add('puppy', 0, StageParamKey::ArrivalAgeMonths, $mc ? 3 : 2, $mc ? [
+                'unit' => 'months', 'source_id' => 'C13', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'maine_coon.arrival_age_kitten', 'decision' => self::CONFIRMED_CAT,
+                'quote' => 'Pedigree kittens are usually rehomed over 12-13 weeks old',
+            ] : [
+                'unit' => 'months', 'source_id' => 'C13', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'general.arrival_age.kitten_min', 'decision' => self::CONFIRMED_CAT,
+                'quote' => 'Kittens shouldn\'t be rehomed until they\'re at least 8 weeks old',
+            ]);
+            foreach (['young' => 12, 'adult' => 84, 'senior' => 120] as $stage => $age) {
+                $add($stage, 0, StageParamKey::ArrivalAgeMonths, $age, [
+                    'unit' => 'months', 'verified' => true,
+                    'ref' => 'general.arrival_age.'.$stage, 'decision' => self::CONFIRMED_CAT,
+                    'notes' => 'Game value (no literature number): first month of the stage, as for dogs.',
+                ]);
+            }
+
+            // ── Meals per day (counts sourced, C2 / C3) ──────────────────────
+            $add('puppy', 0, StageParamKey::MealsPerDay, 4, [
+                'unit' => 'meals/day', 'source_id' => 'C3', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'general.meals_per_day.kitten_6_12_weeks',
+                'quote' => '6-12 weeks old - 4 meals per day',
+            ]);
+            $add('puppy', 3, StageParamKey::MealsPerDay, 3, [
+                'unit' => 'meals/day', 'source_id' => 'C2,C3', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'general.meals_per_day.kitten_3_6_months',
+                'quote' => 'Until they are six months old, kittens will usually do best when fed three meals a day / 3-6 months old - 2-3 meals per day',
+            ]);
+            $add('puppy', 6, StageParamKey::MealsPerDay, 2, [
+                'unit' => 'meals/day', 'source_id' => 'C2,C3', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'general.meals_per_day.kitten_6_12_months',
+                'quote' => 'twice daily feeding is generally best / 6-9 months old - 2 meals per day',
+                'notes' => 'Two meals: no feed_windows row — the breed_configs windows 06–10 / 17–21 apply (the data.json windows of this band).',
+            ]);
+            foreach (['young', 'adult'] as $stage) {
+                $add($stage, 0, StageParamKey::MealsPerDay, 2, [
+                    'unit' => 'meals/day', 'source_id' => 'C2', 'confidence' => 'medium', 'verified' => true,
+                    'ref' => 'general.meals_per_day.adult', 'decision' => self::CONFIRMED_CAT_PLAN,
+                    'quote' => 'feeding once or twice a day is appropriate in most cases',
+                    'notes' => 'Game simplification: the upper end; guidelines also favour many small meals (C8, C9).',
+                ]);
+            }
+            $add('senior', 0, StageParamKey::MealsPerDay, 2, [
+                'unit' => 'meals/day', 'source_id' => 'C2', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'general.meals_per_day.senior',
+                'quote' => 'should maintain the same feeding regimen',
+            ]);
+
+            // ── Feed window clock times (CAT_SPEC §3, dog clock rule) ────────
+            // The windows are listed in the notes of the meal entries of data.json.
+            $windowsMeta = fn (string $ref): array => [
+                'unit' => 'HH:MM family-local [start, end)', 'verified' => true,
+                'ref' => 'general.meals_per_day.'.$ref, 'decision' => self::CONFIRMED_CAT,
+                'notes' => 'Game clock times (no literature number; the meal COUNT is sourced, C3 / C2). CAT_SPEC §3 (approved by David 2026-10-08 13:47) lists these windows — the dog clock rule of 2026-10-05 (first window 07:00, last 19:00, equal spacing, 2 h each). A window entirely inside quiet hours is done by the parent.',
+            ];
+            $add('puppy', 0, StageParamKey::FeedWindows, self::PUPPY_4_MEAL_WINDOWS, $windowsMeta('kitten_6_12_weeks'));
+            $add('puppy', 3, StageParamKey::FeedWindows, self::PUPPY_3_MEAL_WINDOWS, $windowsMeta('kitten_3_6_months'));
+
+            // ── Sleep (videos / behaviour only, not a rule; C12) ─────────────
+            $add('puppy', 0, StageParamKey::SleepHours, null, [
+                'unit' => 'hours/day', 'source_id' => 'C12', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'general.sleep.kitten', 'quote' => 'up to 20 hours',
+                'notes' => 'Source gives only a maximum ("up to 20 h"), no [min, max] range → null.',
+            ]);
+            foreach (['young', 'adult'] as $stage) {
+                $add($stage, 0, StageParamKey::SleepHours, [12, 16], [
+                    'unit' => 'hours/day', 'source_id' => 'C12', 'confidence' => 'medium', 'verified' => true,
+                    'ref' => 'general.sleep.adult', 'quote' => 'Cats sleep between 12–16 hours a day',
+                ]);
+            }
+
+            // ── Play (replaces the walk; rules in M5-R06-04) ─────────────────
+            $add('puppy', 0, StageParamKey::PlaySessionsPerDay, 3, [
+                'unit' => 'wand play sessions/day', 'source_id' => 'C10', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'general.play.game_sessions_kitten', 'decision' => self::CONFIRMED_CAT,
+                'notes' => 'C10: 2–3 sessions of 10–15 min a day, kittens more. One ~60 s mini-game counts as one real session.',
+            ]);
+            foreach (['young', 'adult', 'senior'] as $stage) {
+                $add($stage, 0, StageParamKey::PlaySessionsPerDay, 2, [
+                    'unit' => 'wand play sessions/day', 'source_id' => 'C10', 'confidence' => 'low', 'verified' => true,
+                    'ref' => 'general.play.game_sessions_adult', 'decision' => self::CONFIRMED_CAT,
+                    'notes' => 'C10: 2–3 sessions of 10–15 min a day. One ~60 s mini-game counts as one real session.',
+                ]);
+            }
+            $add('all', 0, StageParamKey::PlayMinGapMinutes, 120, [
+                'unit' => 'minutes between two play sessions', 'confidence' => 'low', 'verified' => false,
+                'ref' => 'general.play.game_min_gap',
+                'notes' => 'UNSOURCED — proposal (D), CAT_SPEC §5.2, waiting for David: spread the sessions over the day.',
+            ]);
+            $add('all', 0, StageParamKey::ScratchingAfterMissedPlay, true, [
+                'unit' => 'bool: a missed play day → "scratched the sofa" the next day (max 1/day)', 'source_id' => 'C8,C22', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'general.scratching.game_trigger', 'decision' => self::CONFIRMED_CAT,
+                'notes' => 'No frequency source (boredom → unwanted behaviour, C8 / C22). Only after a missed play routine, never random for kittens; no illness from missed play (general.play.missed_play_illness).',
+            ]);
+
+            // ── Litter (replaces poop events; rules in M5-R06-05) ────────────
+            $add('puppy', 0, StageParamKey::LitterUsesPerDay, 3, [
+                'unit' => 'litter uses/day outside quiet hours', 'source_id' => 'C6', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'general.litter.game_uses_per_day_kitten', 'decision' => self::CONFIRMED_CAT,
+                'notes' => 'C6: kittens poo 1–6 (young) / 1–3 (older) times a day. Each use = one "scoop the litter" routine; a use is not a mess.',
+            ]);
+            foreach (['young', 'adult', 'senior'] as $stage) {
+                $add($stage, 0, StageParamKey::LitterUsesPerDay, 2, [
+                    'unit' => 'litter uses/day outside quiet hours', 'source_id' => 'C6', 'confidence' => 'low', 'verified' => true,
+                    'ref' => 'general.litter.game_uses_per_day_adult', 'decision' => self::CONFIRMED_CAT,
+                    'notes' => 'C6: adults pee 2–4 and poo 1–2 times a day. Each use = one "scoop the litter" routine; a use is not a mess.',
+                ]);
+            }
+            $add('all', 0, StageParamKey::LitterScoopDeadlineHours, 4, [
+                'unit' => 'hours outside quiet hours', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'general.litter.game_scoop_deadline', 'decision' => self::CONFIRMED_CAT,
+                'notes' => 'Game value (no literature number — sources give only the scooping frequency, C5–C7). On expiry: a mess next to the tray → the dog hygiene ladder. (While the weekly change is overdue the deadline is 2 h — general.litter.game_overdue_change_deadline, rule in M5-R06-05.)',
+            ]);
+            $add('all', 0, StageParamKey::LitterFullChangeDays, 7, [
+                'unit' => 'days (one full change per program week)', 'source_id' => 'C5,C6,C7', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'general.litter.full_change', 'decision' => self::CONFIRMED_CAT,
+                'quote' => 'Dump everything, wash with a mild detergent and refill at least once a week',
+            ]);
+
+            // ── Breed level ─────────────────────────────────────────────────
+            if ($mc) {
+                $add('all', 0, StageParamKey::GroomingSessionsPerWeek, 3, [
+                    'unit' => 'combing sessions/week (≥ 1 day apart)', 'source_id' => 'C17', 'confidence' => 'low', 'verified' => true,
+                    'ref' => 'maine_coon.grooming.game_sessions_per_week', 'decision' => self::CONFIRMED_CAT,
+                    'notes' => 'Sources disagree: TICA daily for thick coats, CFA a couple of times a week (C17), Vetstreet weekly (C18). Matted coat after 2 missed sessions (maine_coon.grooming.game_matted_after_missed, rule in M5-R06-05).',
+                ]);
+            }
+            $add('all', 0, StageParamKey::LifespanYears, $mc ? 9.71 : 11.89, [
+                'unit' => 'years (life expectancy at birth, UK)', 'source_id' => 'C14', 'confidence' => 'high', 'verified' => true,
+                'ref' => ($mc ? 'maine_coon' : 'domestic_cat').'.lifespan.expectancy_at_birth',
+                'quote' => $mc ? 'Maine Coon 9.71 y (8.42–11.00)' : 'crossbred 11.89 y (11.76–12.03)',
+                'notes' => 'Background for parents and appearance only; the senior boundary comes from C1, not from the lifespan.',
+            ]);
+        }
+
+        return $rows;
+    }
+
+    /**
      * Run the database seeds (insert-only).
      */
     public function run(): void
@@ -379,7 +600,7 @@ class BreedStageParamsSeeder extends Seeder
         $breeds = DB::table('breed_configs')->pluck('breed_slug')->all();
         $touched = self::touchedTuples();
 
-        foreach (self::rows() as $row) {
+        foreach (self::allRows() as $row) {
             if (! in_array($row['breed_slug'], $breeds, true)) {
                 continue;
             }

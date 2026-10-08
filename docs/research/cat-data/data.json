@@ -3,7 +3,7 @@
     "task": "M5-R06 — sourced cat data for realism",
     "compiled": "2026-10-08",
     "compiled_by": "Claude (orchestrator)",
-    "status": "Not imported yet. Written after David approved CAT_SPEC Q1–Q10 (2026-10-08 13:47). Import into breed_stage_params is task M5-R06-03 (seeder reads this file per species).",
+    "status": "Imported into breed_stage_params by M5-R06-03 (2026-10-08, BreedStageParamsSeeder::catRows(), data_ref = \"cat-data:\" + JSON path; CatLifeStageDataTest checks every row against this file). Written after David approved CAT_SPEC Q1–Q10 (2026-10-08 13:47).",
     "sources": "docs/research/cat-data/sources.md",
     "spec": "docs/product/CAT_SPEC.md",
     "conventions": {

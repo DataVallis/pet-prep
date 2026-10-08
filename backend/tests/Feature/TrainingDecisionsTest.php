@@ -3,6 +3,7 @@
 use App\Enums\StageParamKey;
 use App\Enums\TrainingCommand;
 use App\Events\PetUpdated;
+use App\Models\BreedConfig;
 use App\Models\BreedStageParam;
 use App\Models\BreedStageParamChange;
 use App\Models\Pet;
@@ -267,7 +268,8 @@ describe('confirmed numbers (5 min, +1, −2)', function () {
                 ->and($stored->notes)->toBe(BreedStageParamsSeeder::columns($row)['notes'])
                 ->and((float) $stored->value)->toBe((float) $row['value']);
         }
-        expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
+        expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false) // dogs; cats: CatLifeStageDataTest
+            ->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
 
         $changes = BreedStageParamChange::orderBy('id')->get();
         expect($changes)->toHaveCount(6)
@@ -363,7 +365,8 @@ describe('confirmed effects (potty 0.75, place 0.5)', function () {
             expect($data['proposed_game_parameters'][$entry]['decision'])->toStartWith('potrdil David 2026-10-07');
         }
         // The only open proposal left is M5-R02's teething chewing chance.
-        expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
+        expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false) // dogs; cats: CatLifeStageDataTest
+            ->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
     });
 
     it('freezes exactly the seeder\'s 4 effect rows (tuple + columns) in the migration', function () {
@@ -396,7 +399,8 @@ describe('confirmed effects (potty 0.75, place 0.5)', function () {
                 ->and($stored->notes)->toBe(BreedStageParamsSeeder::columns($row)['notes'])
                 ->and((float) $stored->value)->toBe((float) $row['value']);
         }
-        expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
+        expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false) // dogs; cats: CatLifeStageDataTest
+            ->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
 
         $changes = BreedStageParamChange::orderBy('id')->get();
         expect($changes)->toHaveCount(4)

@@ -324,6 +324,10 @@ class PairingService
         }
         $arrivalAge = $profile !== null ? $this->lifeStages->arrivalAgeFor($breed->slug(), $profile->ageStage) : null;
         $stage = $arrivalAge !== null ? $this->lifeStages->stageForAge($breed->slug(), $arrivalAge) : null;
+        // M5-R06-03 QA M1: cats have no command training (CAT_SPEC Q10) and no dog
+        // behaviour events (puppy accidents / chewing); cat behaviour (scratching,
+        // litter) comes with M5-R06-05 and gets its own gate then.
+        $isDog = $breed->species() === Species::Dog;
         $dnaVersion = (int) config('media.pet_dna_version', PetDnaService::VERSION);
         // M5-R06-01: a breed without appearance data (cats until M5-R06-07) gets no
         // DNA and no AI media — never a dog prompt, never the legacy DNA v1.
@@ -359,10 +363,10 @@ class PairingService
             // M5-R02 (PR #42 B1): behaviour events only when the creating app
             // build can show them (generate-pin `features`) and the pet has a
             // profile; never changed later (a joining caretaker keeps it).
-            'behaviour_events_enabled' => $arrivalAge !== null && $profile?->supports(ClientFeature::BehaviourEvents) === true,
+            'behaviour_events_enabled' => $isDog && $arrivalAge !== null && $profile?->supports(ClientFeature::BehaviourEvents) === true,
             // M5-R03: training (mini-game + daily training routine) the same way —
             // profile + `training` declared by the parent's PIN and the child's device.
-            'training_enabled' => $arrivalAge !== null && $profile?->supports(ClientFeature::Training) === true,
+            'training_enabled' => $isDog && $arrivalAge !== null && $profile?->supports(ClientFeature::Training) === true,
         ]);
 
         if ($petDna === null && $hasAppearance) {
