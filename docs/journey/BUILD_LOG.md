@@ -21,6 +21,8 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 💼 Investitorji: »Druga vrsta na istem pogonu pravil in istem izdelku za 49,99 €.«
 - 🧒 Otroci: še nič — ko bo muca res v aplikaciji.
 
+---
+
 ## 2026-10-08 — Igra in crkljanje v aplikaciji (M5-R05)
 
 **Kaj se je zgodilo:** Otrok ima nad gumbi nov gumb **»Igra«** (ob »Šola«). Izbere **žogo** — povleče jo s prstom navzgor in spusti, kuža steče ponjo in jo prinese (3 meti) — ali **crkljanje** — 5-krat pogladi kužka s prstom, ob vsakem potegu se pokaže srček. Ko kuža sam povabi (»Kuža ti prinaša žogo. Se igrava?«), se namesto gumba pokaže prijazna kartica brez odštevanja in z »Mogoče kasneje«. Po igri aplikacija takoj pokaže veselega kužka: pol ure napis »Kuža je vesel« in video igranja — pes brez tega videa dobi mehke srčke, narisane v aplikaciji. Starš vidi na kartici psa »Danes: 3× igra z žogo, 2× crkljanje« in v časovnici »Igra z žogo ×3 · {vzdevek}« s srčkom. Ko igra ni mogoča, je gumb siv in pove zakaj (»Kuža spi. Igrata se, ko se zbudi.«).
