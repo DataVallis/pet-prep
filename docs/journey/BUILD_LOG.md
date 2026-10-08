@@ -16,7 +16,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Ko je za kužka vse narejeno, ima otrok še vedno kaj početi — in to je nagrada, ne naloga: brez točk, brez kazni, brez opomnikov.
 
-**Številke:** 55 novih testov aplikacije (skupaj 1.520, vsi zeleni; TypeScript brez napak); igra traja manj kot pol minute; 0 novih AI stroškov.
+**Številke:** 60 testov aplikacije v 5 novih sklopih za igro (vseh 1.533 testov aplikacije zelenih; TypeScript brez napak); ni preizkušeno na telefonu; igra traja manj kot pol minute; 0 novih AI stroškov.
 
 **Kako povedati:**
 - 🧒 Otroci: »Vrzi kužku žogo ali ga pobožaj s prstom — potem je pol ure ves vesel.«

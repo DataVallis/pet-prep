@@ -24,7 +24,7 @@ import {
   type PlayInvitation,
   type PlayKind,
 } from '@/modules/play/play';
-import { alpha, palette } from '@/theme';
+import { MIN_TOUCH, alpha, palette } from '@/theme';
 
 export interface PlayChipProps {
   block: PlayBlock | null;
@@ -52,10 +52,10 @@ export function PlayChip({ block, onPress }: PlayChipProps) {
 }
 
 /** Why "Igra" is off ("Kuža spi …", "Najprej počisti …"); shown under the chip row. */
-export function PlayBlockedNote({ block }: { block: PlayBlock }) {
+export function PlayBlockedNote({ text }: { text: string }) {
   return (
     <Text style={styles.note} testID="hud-play-blocked">
-      {PLAY_BLOCK_STRINGS[block]}
+      {text}
     </Text>
   );
 }
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
   cardRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   cardText: { flexShrink: 1, color: palette.white, fontSize: 14, fontWeight: '700' },
   acceptButton: {
-    minHeight: 44,
+    minHeight: MIN_TOUCH,
     paddingHorizontal: 18,
     borderRadius: 22,
     backgroundColor: palette.mint,
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   acceptText: { color: palette.graphite, fontSize: 14, fontWeight: '800' },
-  dismissButton: { minHeight: 44, paddingHorizontal: 8, justifyContent: 'center' },
+  dismissButton: { minHeight: MIN_TOUCH, paddingHorizontal: 8, justifyContent: 'center' },
   dismissText: { color: palette.n300, fontSize: 13, fontWeight: '600' },
   happy: {
     flexDirection: 'row',

@@ -98,7 +98,7 @@ import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { HappyBadge, PlayBlockedNote, PlayChip, PlayInvitationCard } from '@/modules/play/PlayChip';
 import HeartsLayer from '@/modules/play/HeartsLayer';
 import PlayOverlay from '@/modules/play/PlayOverlay';
-import { moodSceneAt, playEntry, playRefusalMessage, type PlayKind } from '@/modules/play/play';
+import { moodSceneAt, playBlockText, playEntry, playRefusalMessage, type PlayKind } from '@/modules/play/play';
 import { usePlayClock } from '@/modules/play/usePlayClock';
 import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
 import { alpha, palette, radius } from '@/theme';
@@ -298,6 +298,8 @@ export default function ChildHudScreen() {
   const dismissInvitation = useCallback((id: number) => {
     setDismissedInvitations((current) => new Set([...current, id]));
   }, []);
+  // End of quiet hours as a 422 named it (the child state doesn't carry it) → "Kuža spi do 07:00.".
+  const [playSleepsUntil, setPlaySleepsUntil] = useState<string | null>(null);
   // M5-R03 / PR #53: the child's own session is still running (e.g. the app was restarted
   // mid-game) → open "Šola" so the game resumes / is saved. Once per session: closing the
   // overlay never reopens it for the same session.
@@ -402,7 +404,8 @@ export default function ChildHudScreen() {
           const current = queryClient.getQueryData<ChildPetView>(childPetKey) ?? null;
           if (failure.kind === 'refused') {
             setPlayOverlay(null);
-            showToast({ tone: 'info', message: playRefusalMessage(failure.nextAllowedAt, current?.timezone ?? null) });
+            if (failure.nextAllowedAt) setPlaySleepsUntil(failure.nextAllowedAt);
+            showToast({ tone: 'info', message: playRefusalMessage(failure.nextAllowedAt, current?.timezone ?? null, current) });
             return;
           }
           // A lock closes the layer through the lock effect; the rest gets the usual text.
@@ -754,7 +757,7 @@ export default function ChildHudScreen() {
                       {entry.kind === 'button' && <PlayChip block={entry.block} onPress={() => setPlayOverlay('pick')} />}
                     </View>
                   )}
-                  {entry.kind === 'button' && entry.block !== null && <PlayBlockedNote block={entry.block} />}
+                  {entry.kind === 'button' && entry.block !== null && <PlayBlockedNote text={playBlockText(entry.block, playSleepsUntil, view.timezone, playNow)} />}
                 </>
               ) : null
             }

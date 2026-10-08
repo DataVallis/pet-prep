@@ -36,7 +36,7 @@
     "sleeping": "Kuža spi. Igrata se, ko se zbudi.",
     "dirty": "Najprej počisti, potem se igrata.",
     "other": "Zdaj se ne moreta igrati.",
-    "sleepingUntil": "Kuža spi. Igrata se lahko ob {{clock}}."
+    "sleepingUntil": "Kuža spi do {{clock}}. Potem se igrata."
   },
   "parent": {
     "timeline": {

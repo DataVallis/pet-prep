@@ -75,6 +75,21 @@ describe('usePlay', () => {
     expect(cached()?.play?.mood.happy_until).toBe('2026-10-04T12:30:00+02:00');
   });
 
+  it('"unchanged" (a repeat within 10 s) is a success: the server state lands, no retry', async () => {
+    const serverState = makeLiveChildState({
+      play: makePlayState({ mood: { happy_until: '2026-10-04T12:29:50+02:00', scene: 'playing' } }),
+    });
+    playWithPet.mockResolvedValueOnce({ status: 'unchanged', state: serverState });
+    const { wrapper, cached } = setup();
+    const { result } = renderHook(() => usePlay(), { wrapper });
+    act(() => result.current.mutate('play'));
+    await waitFor(() => expect(result.current.isSuccess).toBe(true));
+    expect(result.current.data?.status).toBe('unchanged');
+    expect(result.current.data?.play).toBeNull();
+    expect(cached()?.play?.mood.happy_until).toBe('2026-10-04T12:29:50+02:00');
+    expect(playWithPet).toHaveBeenCalledTimes(1);
+  });
+
   it('422 play_not_available: the refusal state replaces the optimistic one', async () => {
     const refusedState = makeLiveChildState({ play: makePlayState({ can_play: false }), pet: { pet_state: 'sleeping' } });
     playWithPet.mockRejectedValueOnce(

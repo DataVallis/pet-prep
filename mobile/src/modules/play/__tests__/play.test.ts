@@ -25,6 +25,7 @@ import {
   nextPlayChangeMs,
   optimisticPlay,
   playBlock,
+  playBlockText,
   playEntry,
   playRefusalMessage,
   playTimelineText,
@@ -207,8 +208,32 @@ describe('API result handling', () => {
   });
 
   it('422 text names the end of quiet hours when given', () => {
-    expect(playRefusalMessage('2026-10-05T07:00:00+02:00', 'Europe/Ljubljana')).toBe('Kuža spi. Igrata se lahko ob 07:00.');
+    expect(playRefusalMessage('2026-10-05T07:00:00+02:00', 'Europe/Ljubljana')).toBe('Kuža spi do 07:00. Potem se igrata.');
     expect(playRefusalMessage(null, 'Europe/Ljubljana')).toBe('Zdaj se ne moreta igrati.');
+  });
+
+  it('422 without a time takes the reason from the state that came with it', () => {
+    const dirty = viewWith(makePlayState({ can_play: false }), { hygiene_level: 0, needs_cleaning: true });
+    expect(playRefusalMessage(null, 'Europe/Ljubljana', dirty)).toBe('Najprej počisti, potem se igrata.');
+    expect(playRefusalMessage(null, 'Europe/Ljubljana', viewWith(makePlayState()))).toBe('Zdaj se ne moreta igrati.');
+  });
+});
+
+describe('playBlockText (note under a disabled "Igra")', () => {
+  const tz = 'Europe/Ljubljana';
+  it('sleeping + a known end of quiet hours still ahead → "Kuža spi do …"', () => {
+    expect(playBlockText('sleeping', '2026-10-04T14:00:00+02:00', tz, NOW)).toBe('Kuža spi do 14:00. Potem se igrata.');
+  });
+
+  it('a past or missing time → the timeless text', () => {
+    expect(playBlockText('sleeping', '2026-10-04T11:00:00+02:00', tz, NOW)).toBe('Kuža spi. Igrata se, ko se zbudi.');
+    expect(playBlockText('sleeping', null, tz, NOW)).toBe('Kuža spi. Igrata se, ko se zbudi.');
+    expect(playBlockText('sleeping', 'nonsense', tz, NOW)).toBe('Kuža spi. Igrata se, ko se zbudi.');
+  });
+
+  it('other reasons ignore the time', () => {
+    expect(playBlockText('dirty', '2026-10-04T14:00:00+02:00', tz, NOW)).toBe('Najprej počisti, potem se igrata.');
+    expect(playBlockText('other', null, tz, NOW)).toBe('Zdaj se ne moreta igrati.');
   });
 });
 

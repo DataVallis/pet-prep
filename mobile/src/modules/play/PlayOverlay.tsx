@@ -48,7 +48,7 @@ import {
   type PlayKind,
 } from '@/modules/play/play';
 import type { PlayOverlayMode } from '@/store/appStore';
-import { alpha, fonts, palette, radius, tightTracking } from '@/theme';
+import { MIN_TOUCH, alpha, fonts, palette, radius, tightTracking } from '@/theme';
 
 export interface PlayOverlayProps {
   view: ChildPetView;
@@ -460,8 +460,8 @@ const styles = StyleSheet.create({
   titleRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   title: { color: palette.white, fontSize: 22, letterSpacing: tightTracking(22), fontFamily: fonts.display },
   closeButton: {
-    width: 44,
-    height: 44,
+    width: MIN_TOUCH,
+    height: MIN_TOUCH,
     borderRadius: 12,
     backgroundColor: alpha(palette.white, 0.08),
     alignItems: 'center',

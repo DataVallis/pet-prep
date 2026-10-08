@@ -340,10 +340,30 @@ export function doneText(kind: PlayKind): string {
   return kind === 'play' ? PLAY_STRINGS.done : CUDDLE_STRINGS.done;
 }
 
-/** Text for a 422 of the play endpoint: "Kuža spi. Igrata se lahko ob 07:00." when the server names the time. */
-export function playRefusalMessage(nextAllowedAt: string | null, timezone: string | null): string {
+/**
+ * Text for a 422 of the play endpoint: "Kuža spi do 07:00. …" when the server names the
+ * time (quiet hours), else the reason read from the server state that came with it
+ * ("Najprej počisti …"), else the neutral "Zdaj se ne moreta igrati.".
+ */
+export function playRefusalMessage(nextAllowedAt: string | null, timezone: string | null, view: ChildPetView | null = null): string {
   const clock = familyClock(nextAllowedAt, timezone);
-  return clock ? PLAY_BLOCK_STRINGS.sleepingUntil(clock) : PLAY_BLOCK_STRINGS.other;
+  if (clock) return PLAY_BLOCK_STRINGS.sleepingUntil(clock);
+  const block = view ? playBlock(view) : null;
+  return block !== null ? PLAY_BLOCK_STRINGS[block] : PLAY_BLOCK_STRINGS.other;
+}
+
+/**
+ * The note under a disabled "Igra". The child state carries no end of quiet hours, so the
+ * time ("Kuža spi do 07:00.") is shown only when a 422 of this session named it
+ * (`sleepsUntil` = its `next_allowed_at`) and it is still ahead; otherwise the timeless text.
+ */
+export function playBlockText(block: PlayBlock, sleepsUntil: string | null, timezone: string | null, serverNowMs: number): string {
+  if (block === 'sleeping' && sleepsUntil !== null) {
+    const until = Date.parse(sleepsUntil);
+    const clock = Number.isFinite(until) && until > serverNowMs ? familyClock(sleepsUntil, timezone) : null;
+    if (clock) return PLAY_BLOCK_STRINGS.sleepingUntil(clock);
+  }
+  return PLAY_BLOCK_STRINGS[block];
 }
 
 // ── Parent (`play:parent`) ────────────────────────────────────

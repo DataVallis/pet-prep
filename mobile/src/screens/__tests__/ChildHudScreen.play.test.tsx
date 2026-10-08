@@ -215,8 +215,10 @@ describe('ChildHudScreen — play & cuddle (M5-R05)', () => {
     await flush();
     expect(playWithPet).toHaveBeenCalledWith('cuddle');
     expect(screen.queryByTestId('play-overlay')).toBeNull();
-    expect(screen.getByTestId('hud-toast').props.children.props.children).toBe('Kuža spi. Igrata se lahko ob 20:00.');
+    expect(screen.getByTestId('hud-toast').props.children.props.children).toBe('Kuža spi do 20:00. Potem se igrata.');
     expect(isDisabled('hud-play-open')).toBe(true);
+    // The disabled chip now knows when the dog wakes up.
+    expect(screen.getByTestId('hud-play-blocked').props.children).toBe('Kuža spi do 20:00. Potem se igrata.');
   });
 
   it('a lock closes the layer', async () => {
