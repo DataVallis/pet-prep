@@ -99,6 +99,7 @@ Velja samo za nove pse, ustvarjene z različico aplikacije, ki vedenje zna prika
 | Prikaz luže in copata | 🆓 risba v aplikaciji · 💶 AI video (enkrat na življenjsko obdobje, ne ob vsakem dogodku). | otrok | ✅ | M5-R02 | 2026-10-06 |
 | Starš vidi nerede | Do kdaj mora mladiček ven, odprti neredi z rokom, kolikokrat ga je otrok v 7 dneh peljal ven, vrsta zamujenega čiščenja, vnosi v časovnici. | starš | ✅ | M5-R02 | 2026-10-06 |
 | Nered in plašnost posvojenega odraslega psa | — | otrok | 🗓 (čaka Davida) | — | — |
+| Igra z žogo in crkljanje 💶 | Občasno (predlog: 2× na dan) si preskrbljen kuža želi igre z žogo ali crkljanja; kratka mini-igra, brez točk in brez kazni, če jo otrok prezre — vpliva samo na razpoloženje in video. Samo v 12-tedenskem izzivu. Spec: `PLAY_CUDDLE_SPEC.md` (čaka Davida). | otrok, starš | 🗓 | M5-R05 | — |
 
 ## 5. Šolanje (dresura)
 
