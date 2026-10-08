@@ -151,10 +151,17 @@ class PetDecayService
 
             // M5-R05: the dog's play invitation as the apps last saw it (at the
             // previous tick, with the metrics before this one) …
-            $offeredBefore = $this->play->offeredInvitationId($locked, $locked->last_decay_at ?? now()->startOfSecond());
+            // Pets that never had invitations (free, legacy, …) cost no query.
+            $quiet = $this->play->hasInvitations($locked) ? $locked->quietHours() : null;
+            $offeredBefore = $quiet !== null
+                ? $this->play->offeredInvitationId($locked, $locked->last_decay_at ?? now()->startOfSecond(), $quiet)
+                : null;
             $changed = $this->decayLockedPet($locked);
-            // … and now: a flip (shown / gone) is broadcast once.
-            $playFlipped = $offeredBefore !== $this->play->offeredInvitationId($locked, now()->startOfSecond());
+            // … and now: a flip (shown / gone) is broadcast once. A pet whose first
+            // day was just decided has no shown invitation yet (decided ≤ now → skipped).
+            $quiet ??= $this->play->hasInvitations($locked) ? $locked->quietHours() : null;
+            $playFlipped = $quiet !== null
+                && $offeredBefore !== $this->play->offeredInvitationId($locked, now()->startOfSecond(), $quiet);
 
             return [$locked, $changed, $playFlipped];
         };

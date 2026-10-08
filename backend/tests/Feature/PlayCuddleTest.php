@@ -164,6 +164,87 @@ function plSibling(User $parent, Pet $pet, bool $signed = true): User
     return $child;
 }
 
+/**
+ * Scoring isolation (§12.6, QA PR #82 M1): two identical dogs over three
+ * family-local days; one child plays every 40 minutes from 07:00 to 20:40
+ * local (21 plays a day, alternating kinds), the other dog only gets a tick
+ * at the same instants. Then both tick once more and the ledger closes the
+ * days. `$mutate` makes every play also write a `fed_pet` row — the proof
+ * that the comparison would catch play leaking into scoring.
+ *
+ * @return array<string, mixed>
+ */
+function plIsolationRun(bool $mutate): array
+{
+    [, $playChild, $playPet] = plFamily();
+    [, $idleChild, $idlePet] = plFamily();
+    $activities = app(PetActivityService::class);
+    $decay = app(PetDecayService::class);
+    $plays = 0;
+
+    foreach (['2026-10-07', '2026-10-08', '2026-10-09'] as $day) {
+        $at = Carbon::parse("{$day} 07:00:00", 'Europe/Ljubljana')->utc();
+        for ($i = 0; $i < 21; $i++, $at->addMinutes(40)) {
+            plAt($at->toDateTimeString());
+            $decay->processPetDecay($idlePet);
+            $result = $activities->play($playPet, $playChild, $i % 2 === 0 ? PlayKind::Play : PlayKind::Cuddle);
+            expect($result->status)->toBe('accepted');
+            $plays++;
+            if ($mutate) {
+                ActivityLog::withoutEvents(fn () => ActivityLog::create([
+                    'pet_id' => $playPet->id, 'actor_user_id' => $playChild->id, 'activity_type' => 'fed_pet', 'value' => 50,
+                ]));
+            }
+        }
+    }
+
+    plAt('2026-10-10 10:00:00');
+    $decay->processPetDecay($playPet);
+    $decay->processPetDecay($idlePet);
+    app(RoutineLedgerService::class)->closeDueDays(now());
+
+    $ledger = app(RoutineLedgerService::class);
+    $scores = app(CareScoreService::class);
+    $snapshot = function (Pet $pet, User $child) use ($ledger, $scores): array {
+        $pet->refresh();
+        $board = $scores->board(collect([$pet]), 'Europe/Ljubljana');
+        $s = $scores->childScore($board, $child->id, $pet);
+
+        return [
+            // Everything in activities_log except the two play timeline types
+            // (system rows like parent_fed_pet happen to both dogs alike).
+            'otherActivities' => DB::table('activities_log')->where('pet_id', $pet->id)
+                ->whereNotIn('activity_type', ['played_with_pet', 'cuddled_pet'])
+                ->orderBy('created_at')->orderBy('id')
+                ->get(['activity_type', 'value', 'created_at', 'actor_user_id'])
+                ->map(fn ($r) => [$r->activity_type, $r->value, $r->created_at, $r->actor_user_id !== null])->all(),
+            'routineRows' => DB::table('pet_daily_routines')->where('pet_id', $pet->id)
+                ->orderBy('local_date')->orderBy('routine_type')->orderBy('slot')
+                ->get(['local_date', 'routine_type', 'slot', 'status', 'opens_at', 'due_at', 'done_at', 'steps', 'goal', 'event_kind', 'actor_user_id'])
+                ->map(fn ($r) => array_merge((array) $r, ['actor_user_id' => $r->actor_user_id !== null]))->all(),
+            'periods' => DB::table('pet_status_periods')->where('pet_id', $pet->id)->orderBy('started_at')
+                ->get(['kind', 'started_at', 'ended_at'])->map(fn ($r) => (array) $r)->all(),
+            'ledger' => array_map(
+                fn (Routine $r) => [$r->localDate, $r->type->value, $r->slot, $r->status->value],
+                $ledger->routinesFor(collect([$pet]), '2026-10-06', '2026-10-10', now())[$pet->id] ?? [],
+            ),
+            'score' => [$s['score'], $s['done'], $s['expected'], $scores->childLight($board, $child->id, $pet)],
+            'metrics' => [$pet->displayMetrics(), $pet->pet_state?->value, (int) $pet->escalation_level, $pet->illness_until?->toIso8601String()],
+        ];
+    };
+
+    return [
+        'plays' => $plays,
+        // Activity types the play dog has that the idle dog does not.
+        'playTypes' => array_values(array_diff(
+            DB::table('activities_log')->where('pet_id', $playPet->id)->distinct()->pluck('activity_type')->all(),
+            DB::table('activities_log')->where('pet_id', $idlePet->id)->distinct()->pluck('activity_type')->all(),
+        )),
+        'play' => $snapshot($playPet, $playChild),
+        'idle' => $snapshot($idlePet, $idleChild),
+    ];
+}
+
 describe('eligibility (§2, §3.1)', function () {
     it('lets a child play in the trial and on a paid challenge', function (string $plan) {
         [, $child, $pet] = plFamily($plan);
@@ -436,16 +517,109 @@ describe('invitations: scheduling (§3.2, §12.2)', function () {
     });
 
     it('skips invitations before the birth', function () {
-        [, , $pet] = plFamily('trial', [], '2026-10-08 10:00:00'); // born 12:00 local
-        Pet::whereKey($pet->id)->update(['play_scheduled_through' => null]);
-        plNow($pet, '2026-10-08 10:01:00');
+        // Plan the dog's day first (seed per pet + date), then let it be born
+        // one minute after the first invitation's time.
+        [, , $pet] = plFamily();
+        $plan = app(PlayService::class)->planDay($pet, '2026-10-08', $pet->quietHours());
+        expect($plan)->toHaveCount(2);
+        $born = $plan[0][1]->addMinutes(1);
+        Pet::whereKey($pet->id)->update(['born_at' => $born, 'play_scheduled_through' => null]);
+        plNow($pet, $born->toDateTimeString());
         $pet->refresh();
 
         app(PlayService::class)->ensureInvitationsScheduled($pet, now()->subMinute(), now(), $pet->quietHours());
 
-        foreach (PetPlayEvent::where('pet_id', $pet->id)->get() as $row) {
-            expect($row->status)->toBe($row->scheduled_at->lessThanOrEqualTo($pet->born_at) ? PlayStatus::Skipped : PlayStatus::Pending);
+        $rows = PetPlayEvent::where('pet_id', $pet->id)->orderBy('scheduled_at')->get();
+        expect($rows)->toHaveCount(2)
+            ->and($rows[0]->status)->toBe(PlayStatus::Skipped)   // before the birth
+            ->and($rows[1]->status)->toBe(PlayStatus::Pending);
+    });
+
+    it('does not make up invitations after a hard stop across midnight (QA M2)', function () {
+        [, , $pet] = plFamily();
+        $plan = app(PlayService::class)->planDay($pet, '2026-10-08', $pet->quietHours());
+        expect($plan)->toHaveCount(2);
+
+        // Hard stop from the evening before; the 10-08 day is not decided while frozen.
+        plNow($pet, '2026-10-07 18:00:00');
+        Pet::whereKey($pet->id)->update(['play_scheduled_through' => '2026-10-07']);
+        $pet->refresh()->update(['is_hard_stopped' => true]);
+        plAt('2026-10-07 22:01:00');
+        app(PetDecayService::class)->processPetDecay($pet);
+        expect(PetPlayEvent::where('pet_id', $pet->id)->count())->toBe(0);
+
+        // Thaw one minute after the first invitation's time, then a tick.
+        $thaw = $plan[0][1]->addMinute();
+        plAt($thaw->toDateTimeString());
+        app(PetDecayService::class)->processPetDecay($pet);
+        $pet->refresh()->update(['is_hard_stopped' => false]);
+        plAt($thaw->addMinute()->toDateTimeString());
+        app(PetDecayService::class)->processPetDecay($pet);
+
+        $rows = PetPlayEvent::where('pet_id', $pet->id)->orderBy('scheduled_at')->get();
+        expect($rows)->toHaveCount(2)
+            ->and($rows[0]->scheduled_at->equalTo($plan[0][1]))->toBeTrue()
+            ->and($rows[0]->status)->toBe(PlayStatus::Skipped)
+            ->and($rows[1]->status)->toBe(PlayStatus::Pending);
+    });
+
+    it('does not make up invitations after a payment lock across midnight, once paid (QA M2)', function () {
+        [, , $pet] = plFamily('trial', [
+            'trial_ends_at' => Carbon::parse('2026-10-06 19:00:00', 'UTC'),
+            'payment_locked_at' => Carbon::parse('2026-10-06 19:00:00', 'UTC'),
+        ]);
+        $plan = app(PlayService::class)->planDay($pet, '2026-10-08', $pet->quietHours());
+        Pet::whereKey($pet->id)->update(['play_scheduled_through' => '2026-10-07']);
+        plNow($pet, '2026-10-07 22:00:00');
+        plAt('2026-10-07 22:01:00');
+        app(PetDecayService::class)->processPetDecay($pet);
+        expect(PetPlayEvent::where('pet_id', $pet->id)->count())->toBe(0);
+
+        // The parent pays after the first invitation's time.
+        $paid = $plan[0][1]->addMinute();
+        plAt($paid->toDateTimeString());
+        $pet->refresh()->forceFill(['challenge_paid_at' => now(), 'challenge_paid_source' => 'admin', 'payment_locked_at' => null])->save();
+        plAt($paid->addMinute()->toDateTimeString());
+        app(PetDecayService::class)->processPetDecay($pet);
+
+        $rows = PetPlayEvent::where('pet_id', $pet->id)->orderBy('scheduled_at')->get();
+        expect($rows)->toHaveCount(2)
+            ->and($rows[0]->status)->toBe(PlayStatus::Skipped)
+            ->and($rows[1]->status)->toBe(PlayStatus::Pending);
+    });
+
+    it('drops pending invitations at game over and deactivation (QA m3)', function (string $change) {
+        [, , $pet] = plFamily();
+        $invite = plInvite($pet, 'play', '2026-10-07 14:00:00');
+        plNow($pet, '2026-10-07 08:00:00');
+
+        $pet->refresh()->update($change === 'game_over' ? ['is_game_over' => true] : ['is_active' => false]);
+
+        expect($invite->fresh()->status)->toBe(PlayStatus::Skipped);
+    })->with(['game_over', 'inactive']);
+
+    it('keeps the band and the quiet-hours cut on the DST day (25 h, 2026-10-25)', function () {
+        [, , $pet] = plFamily('paid');
+        Pet::whereKey($pet->id)->update(['play_scheduled_through' => '2026-10-24']);
+        plNow($pet, '2026-10-24 22:00:00'); // 00:00 local, CEST
+        plAt('2026-10-24 22:01:00');
+        $pet->refresh();
+
+        app(PlayService::class)->ensureInvitationsScheduled($pet, Carbon::parse('2026-10-24 22:00:00', 'UTC'), now(), $pet->quietHours());
+
+        $rows = PetPlayEvent::where('pet_id', $pet->id)->orderBy('scheduled_at')->get();
+        expect($rows)->toHaveCount(2);
+        foreach ($rows as $row) {
+            $local = $row->scheduled_at->copy()->setTimezone('Europe/Ljubljana');
+            expect($row->local_date)->toBe('2026-10-25')
+                ->and($local->format('H:i') >= '07:00' && $local->format('H:i') < '20:00')->toBeTrue()
+                ->and($local->offsetHours)->toBe(1) // CET after the change
+                ->and($row->status)->toBe(PlayStatus::Pending);
         }
+
+        // 19:30 CET + 2 h is cut at bedtime 21:00 CET (20:00 UTC).
+        $end = app(PlayService::class)->expiresAt(Carbon::parse('2026-10-25 18:30:00', 'UTC'), $pet->quietHours());
+        expect($end->toIso8601String())->toBe('2026-10-25T20:00:00+00:00');
     });
 
     it('after a scheduler outage decides only today and skips the invitations already past', function () {
@@ -646,47 +820,27 @@ describe('parent (§7, Q7)', function () {
 });
 
 describe('isolation from scoring (§12.6)', function () {
-    it('a dog that plays 20× a day has the same routines, Care Score and metrics as one that never plays', function () {
-        [, $playChild, $playPet] = plFamily();
-        [, $idleChild, $idlePet] = plFamily();
-        $activities = app(PetActivityService::class);
+    it('a dog that plays all day has the same routines, Care Score, periods and metrics as one that never plays', function () {
+        $run = plIsolationRun(mutate: false);
 
-        foreach (['2026-10-07', '2026-10-08', '2026-10-09'] as $day) {
-            for ($i = 0; $i < 20; $i++) {
-                plAt(Carbon::parse("{$day} 08:00:00", 'UTC')->addSeconds(15 * $i)->toDateTimeString());
-                // Same timeline for both dogs: the idle one gets a tick at the same instant.
-                app(PetDecayService::class)->processPetDecay($idlePet);
-                $result = $activities->play($playPet, $playChild, $i % 2 === 0 ? PlayKind::Play : PlayKind::Cuddle);
-                expect($result->status)->toBe('accepted');
-            }
-        }
+        // Play added nothing but its two timeline types; every other row is identical.
+        expect($run['playTypes'])->toEqualCanonicalizing(['played_with_pet', 'cuddled_pet'])
+            ->and($run['plays'])->toBe(3 * 21)
+            ->and($run['play']['otherActivities'])->toBe($run['idle']['otherActivities']);
 
-        plAt('2026-10-10 10:00:00');
-        app(PetDecayService::class)->processPetDecay($playPet);
-        app(PetDecayService::class)->processPetDecay($idlePet);
-        $playPet->refresh();
-        $idlePet->refresh();
+        expect($run['play']['routineRows'])->toBe($run['idle']['routineRows'])->not->toBe([])
+            ->and($run['play']['periods'])->toBe($run['idle']['periods'])
+            ->and($run['play']['ledger'])->toBe($run['idle']['ledger'])->not->toBe([])
+            ->and($run['play']['score'])->toBe($run['idle']['score'])
+            ->and($run['play']['metrics'])->toBe($run['idle']['metrics']);
+    });
 
-        expect(PetPlayEvent::where('pet_id', $playPet->id)->count())->toBe(60)
-            ->and($playPet->displayMetrics())->toBe($idlePet->displayMetrics())
-            ->and($playPet->pet_state)->toBe($idlePet->pet_state)
-            ->and((int) $playPet->escalation_level)->toBe((int) $idlePet->escalation_level);
+    it('the isolation check is sensitive: if play also wrote fed_pet, the dogs would differ', function () {
+        $run = plIsolationRun(mutate: true);
 
-        $ledger = app(RoutineLedgerService::class);
-        $shape = fn (Pet $pet) => array_map(
-            fn (Routine $r) => [$r->localDate, $r->type->value, $r->slot, $r->status->value],
-            $ledger->routinesFor(collect([$pet]), '2026-10-06', '2026-10-10', now())[$pet->id] ?? [],
-        );
-        expect($shape($playPet))->toBe($shape($idlePet))->not->toBe([]);
-
-        $scores = app(CareScoreService::class);
-        $score = function (Pet $pet, User $child) use ($scores): array {
-            $board = $scores->board(collect([$pet]), 'Europe/Ljubljana');
-            $s = $scores->childScore($board, $child->id, $pet);
-
-            return [$s['score'], $s['done'], $s['expected'], $scores->childLight($board, $child->id, $pet)];
-        };
-        expect($score($playPet, $playChild))->toBe($score($idlePet, $idleChild));
+        expect($run['playTypes'])->toContain('fed_pet')
+            ->and($run['play']['routineRows'])->not->toBe($run['idle']['routineRows'])
+            ->and($run['play']['score'])->not->toBe($run['idle']['score']);
     });
 
     it('play activity types are not routine inputs', function () {
@@ -703,11 +857,22 @@ describe('data (§11, §12.4)', function () {
     it('exports play events and deletes them with the pet', function () {
         [$parent, $child, $pet] = plFamily();
         plNow($pet, '2026-10-07 08:00:00');
-        plPlay($child)->assertOk();
+        plWalk($pet);
+        $invite = plInvite($pet, 'cuddle', '2026-10-07 07:30:00');
+        plPlay($child, 'cuddle')->assertOk()->assertJsonPath('play.source', 'invitation');
+        // Many free plays are one count per day, child and kind (QA m2: no export blow-up).
+        foreach (['08:00:00', '08:00:20', '08:00:40'] as $t) {
+            plAt("2026-10-07 {$t}");
+            plPlay($child)->assertOk();
+        }
 
         $export = app(AccountExportService::class)->exportFor($parent);
-        expect($export['pets'][0]['play_events'])->toHaveCount(1)
-            ->and($export['pets'][0]['play_events'][0])->toMatchArray(['kind' => 'play', 'source' => 'free', 'status' => 'done', 'child_id' => $child->id]);
+        expect($export['pets'][0]['play_invitations'])->toHaveCount(1)
+            ->and($export['pets'][0]['play_invitations'][0])->toMatchArray(['kind' => 'cuddle', 'status' => 'done', 'child_id' => $child->id])
+            ->and($export['pets'][0]['free_plays_per_day'])->toBe([
+                ['local_date' => '2026-10-07', 'kind' => 'play', 'child_id' => $child->id, 'count' => 3],
+            ]);
+        expect($invite->fresh()->status)->toBe(PlayStatus::Done);
 
         $pet->delete();
         expect(PetPlayEvent::count())->toBe(0);

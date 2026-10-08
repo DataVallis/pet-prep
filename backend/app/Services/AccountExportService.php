@@ -137,9 +137,11 @@ class AccountExportService
         }
 
         $rows = 0;
-        foreach (['activities_log', 'pet_daily_steps', 'pet_daily_walks', 'pet_daily_routines', 'pet_status_periods', 'pet_hygiene_events', 'pet_training_sessions', 'pet_play_events'] as $table) {
+        foreach (['activities_log', 'pet_daily_steps', 'pet_daily_walks', 'pet_daily_routines', 'pet_status_periods', 'pet_hygiene_events', 'pet_training_sessions'] as $table) {
             $rows += DB::table($table)->whereIn('pet_id', $petIds)->count();
         }
+        // M5-R05: free plays are exported as daily counts — only invitations are rows.
+        $rows += DB::table('pet_play_events')->whereIn('pet_id', $petIds)->where('source', 'invitation')->count();
 
         if ($rows > (int) config('privacy.export_max_rows', 50000)) {
             throw new AccountDeletionException('export_too_large', 'The export is too large to build right now. Please contact support.', 413);
@@ -244,10 +246,19 @@ class AccountExportService
         // M5-R03 training: progress per command and every session (who, when, how well).
         $skills = $byPet('pet_training_skills', ['command', 'progress', 'last_practised_at', 'sessions_completed']);
         $sessions = $byPet('pet_training_sessions', ['user_id', 'command', 'local_date', 'started_at', 'status', 'finished_at', 'taps', 'result', 'progress_gain'], 'started_at');
-        $plays = $byPet('pet_play_events', ['kind', 'source', 'local_date', 'scheduled_at', 'status', 'completed_by', 'completed_at'], 'local_date');
+        // M5-R05: invitations as rows (≤ 2 a day); free plays — unlimited — as one
+        // count per day, child and kind, so play can never make the export too large.
+        $plays = DB::table('pet_play_events')->whereIn('pet_id', $petIds)->where('source', 'invitation')
+            ->orderBy('local_date')->orderBy('id')
+            ->get(['pet_id', 'kind', 'source', 'local_date', 'scheduled_at', 'status', 'completed_by', 'completed_at'])->groupBy('pet_id');
+        $freePlays = DB::table('pet_play_events')->whereIn('pet_id', $petIds)->where('source', 'free')
+            ->selectRaw('pet_id, local_date, completed_by, kind, count(*) as n')
+            ->groupBy('pet_id', 'local_date', 'completed_by', 'kind')
+            ->orderBy('local_date')->orderBy('kind')
+            ->get()->groupBy('pet_id');
         $expires = $this->media->urlExpiry();
 
-        return $pets->map(function (Pet $pet) use ($caretakers, $contracts, $activities, $steps, $walks, $routines, $periods, $hygiene, $skills, $sessions, $plays, $expires): array {
+        return $pets->map(function (Pet $pet) use ($caretakers, $contracts, $activities, $steps, $walks, $routines, $periods, $hygiene, $skills, $sessions, $plays, $freePlays, $expires): array {
             $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
             $rows = fn (Collection $group) => $group->get($pet->id, collect());
             $album = $this->growth->albumFor($pet, $expires)->toArray()['growth'];
@@ -340,16 +351,22 @@ class AccountExportService
                     'result' => is_string($r->result) ? json_decode($r->result, true) : $r->result,
                     'progress_gain' => $r->progress_gain === null ? null : round((float) $r->progress_gain, 2),
                 ])->values()->all(),
-                // M5-R05: the dog's play invitations and every finished ball game / cuddle.
-                'play_events' => $rows($plays)->map(fn ($r) => [
+                // M5-R05: the dog's play invitations (who took them, when) …
+                'play_invitations' => $rows($plays)->map(fn ($r) => [
                     'kind' => $r->kind,
-                    'source' => $r->source,
                     'local_date' => $this->date($r->local_date),
                     'scheduled_at' => $this->iso($r->scheduled_at),
                     'status' => $r->status,
                     // null = not completed, or a deleted child.
                     'child_id' => $r->completed_by === null ? null : (int) $r->completed_by,
                     'completed_at' => $this->iso($r->completed_at),
+                ])->values()->all(),
+                // … and the child's own ball games / cuddles, counted per day.
+                'free_plays_per_day' => $rows($freePlays)->map(fn ($r) => [
+                    'local_date' => $this->date($r->local_date),
+                    'kind' => $r->kind,
+                    'child_id' => $r->completed_by === null ? null : (int) $r->completed_by,
+                    'count' => (int) $r->n,
                 ])->values()->all(),
                 // Stored AI media as signed, expiring URLs (our copies, never fal's).
                 'media' => $pet->media

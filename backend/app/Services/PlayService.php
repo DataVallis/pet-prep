@@ -89,10 +89,11 @@ class PlayService
             return false;
         }
 
+        // Both evaluated at $now (QA nit: awaitsPayment() reads the wall clock).
         $status = $pet->challengeStatus($now);
 
         return ($status === ChallengeStatus::Trial || $status === ChallengeStatus::Paid)
-            && ! $pet->awaitsPayment();
+            && ! $pet->isPaymentLocked();
     }
 
     /**
@@ -101,12 +102,12 @@ class PlayService
      * hours (D) and no open mess (hygiene shows 0 % — "clean first",
      * PRODUCT_SPEC §8).
      */
-    public function canPlayNow(Pet $pet, CarbonInterface $now): bool
+    public function canPlayNow(Pet $pet, CarbonInterface $now, ?QuietHours $quiet = null): bool
     {
         return $this->eligible($pet, $now)
             && ! $pet->isFrozen()
-            && ! $this->sleepsNow($pet, $now)
-            && $pet->displayMetric('hygiene_level') > 0;
+            && $pet->displayMetric('hygiene_level') > 0
+            && ! $this->sleepsNow($pet, $now, $quiet);
     }
 
     /**
@@ -122,9 +123,9 @@ class PlayService
         return $this->walks->endOfQuietStretch($pet->quietHours(), $now);
     }
 
-    private function sleepsNow(Pet $pet, CarbonInterface $now): bool
+    private function sleepsNow(Pet $pet, CarbonInterface $now, ?QuietHours $quiet = null): bool
     {
-        return ! config('play.free_play_in_quiet_hours', false) && $pet->quietHours()->isQuietNow($now);
+        return ! config('play.free_play_in_quiet_hours', false) && ($quiet ?? $pet->quietHours())->isQuietNow($now);
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -135,9 +136,13 @@ class PlayService
      * Decide the invitations of every family-local day from the day of
      * $from to the day of $now not decided yet (`pets.play_scheduled_through`;
      * attribute on $pet, the caller saves). Same outage rule as chewing:
-     * after a scheduler gap only today is decided and invitations whose time
-     * has passed are written as `skipped`; an invitation before the birth is
-     * `skipped` too.
+     * after a scheduler gap only today is decided.
+     *
+     * Nothing is made up (QA PR #82 M2): a day is normally decided by the
+     * first tick after its midnight; when it is decided late — after a
+     * freeze across midnight (the frozen tick schedules nothing), a payment
+     * lock, an outage or the birth — every planned instant at or before now
+     * is written as `skipped`, so it is never offered after the thaw.
      */
     public function ensureInvitationsScheduled(Pet $pet, CarbonInterface $from, CarbonInterface $now, QuietHours $quiet): void
     {
@@ -176,7 +181,7 @@ class PlayService
         for (; $day->lessThanOrEqualTo($today); $day->addDay()) {
             $date = $day->toDateString();
             foreach ($this->planDay($pet, $date, $quiet) as [$kind, $at]) {
-                $skip = $at->lessThanOrEqualTo($born) || ($outage && $at->lessThanOrEqualTo($nowUtc));
+                $skip = $at->lessThanOrEqualTo($born) || $at->lessThanOrEqualTo($nowUtc);
                 $rows[] = [
                     'pet_id' => $pet->id,
                     'kind' => $kind->value,
@@ -297,7 +302,7 @@ class PlayService
      */
     public function expireDue(Pet $pet, CarbonInterface $now): int
     {
-        if (! $this->appliesTo($pet)) {
+        if (! $this->hasInvitations($pet)) {
             return 0;
         }
 
@@ -314,7 +319,7 @@ class PlayService
      */
     public function skipWhileFrozen(Pet $pet, CarbonInterface $now): int
     {
-        if (! $this->appliesTo($pet)) {
+        if (! $this->hasInvitations($pet)) {
             return 0;
         }
 
@@ -322,6 +327,28 @@ class PlayService
             ->where('status', PlayStatus::Pending->value)
             ->where('scheduled_at', '<=', $now)
             ->update(['status' => PlayStatus::Skipped->value, 'updated_at' => now()]);
+    }
+
+    /**
+     * The pet ended (game over, deactivated — Pet `updated` hook, QA PR #82
+     * m3): every pending invitation is dropped; the tick never processes
+     * such a pet again.
+     */
+    public function skipPending(Pet $pet): int
+    {
+        return PetPlayEvent::where('pet_id', $pet->id)
+            ->where('status', PlayStatus::Pending->value)
+            ->update(['status' => PlayStatus::Skipped->value, 'updated_at' => now()]);
+    }
+
+    /**
+     * Cheap guard for the per-minute tick (QA PR #82 m1): only a pet whose
+     * invitations were ever decided can have a pending one — no query for
+     * free, legacy or never-scheduled pets.
+     */
+    public function hasInvitations(Pet $pet): bool
+    {
+        return $pet->play_scheduled_through !== null && $this->appliesTo($pet);
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -334,9 +361,14 @@ class PlayService
      * the child can play, hunger and thirst show more than the threshold
      * and today's walk goal is reached. Evaluated on read.
      */
-    public function offeredInvitation(Pet $pet, CarbonInterface $now, ?PlayKind $kind = null): ?PetPlayEvent
+    public function offeredInvitation(Pet $pet, CarbonInterface $now, ?PlayKind $kind = null, ?QuietHours $quiet = null): ?PetPlayEvent
     {
-        if (! $this->canPlayNow($pet, $now)
+        // Cheapest first (QA PR #82 m1): attributes, then one indexed query for a
+        // pending row in its window, then quiet hours and the step goal.
+        if (! $this->hasInvitations($pet)
+            || ! $this->eligible($pet, $now)
+            || $pet->isFrozen()
+            || $pet->displayMetric('hygiene_level') <= 0
             || $pet->displayMetric('hunger_level') <= (int) config('play.offer_min_hunger', 30)
             || $pet->displayMetric('thirst_level') <= (int) config('play.offer_min_thirst', 30)) {
             return null;
@@ -352,7 +384,7 @@ class PlayService
             ->orderBy('id')
             ->first();
 
-        if ($invitation === null || ! $this->walkGoalReached($pet, $now)) {
+        if ($invitation === null || $this->sleepsNow($pet, $now, $quiet) || ! $this->walkGoalReached($pet, $now)) {
             return null;
         }
 
@@ -361,15 +393,11 @@ class PlayService
 
     /**
      * Id of the shown invitation (null = none) — the tick compares it before
-     * and after to broadcast a flip once.
+     * and after to broadcast a flip once (quiet hours passed in: one read per tick).
      */
-    public function offeredInvitationId(Pet $pet, CarbonInterface $now): ?int
+    public function offeredInvitationId(Pet $pet, CarbonInterface $now, ?QuietHours $quiet = null): ?int
     {
-        if (! $this->appliesTo($pet)) {
-            return null;
-        }
-
-        return $this->offeredInvitation($pet, $now)?->id;
+        return $this->offeredInvitation($pet, $now, null, $quiet)?->id;
     }
 
     /**
