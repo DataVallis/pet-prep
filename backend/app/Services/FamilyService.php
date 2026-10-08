@@ -8,9 +8,11 @@ use App\Models\Family;
 use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\PetCaretaker;
+use App\Models\QuietHours;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\UniqueConstraintViolationException;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Family model (M2-01, ADR-012): membership, caretakers, recipients.
@@ -86,7 +88,35 @@ class FamilyService
         ]);
         $user->unsetRelation('family');
 
+        if ($role === FamilyRole::Parent) {
+            $this->ensureDefaultQuietHours($family, $user);
+        }
+
         return $member;
+    }
+
+    /**
+     * Every family has quiet hours (fix/quiet-hours-default, 2026-10-08):
+     * the first parent who joins a family without a row creates
+     * QuietHours::DEFAULTS (night 21:00–07:00, active). Insert only — an
+     * existing family row (or a legacy row of this parent, parent_id is
+     * unique) is never touched. ON CONFLICT DO NOTHING keeps a concurrent
+     * insert from aborting the caller's transaction. A family without any
+     * parent has no row and reads the same defaults (Pet::quietHours()).
+     */
+    public function ensureDefaultQuietHours(Family $family, User $parent): void
+    {
+        if (QuietHours::where('family_id', $family->id)->orWhere('parent_id', $parent->id)->exists()) {
+            return;
+        }
+
+        $now = now();
+        DB::table('quiet_hours')->insertOrIgnore(array_merge(QuietHours::DEFAULTS, [
+            'parent_id' => $parent->id,
+            'family_id' => $family->id,
+            'created_at' => $now,
+            'updated_at' => $now,
+        ]));
     }
 
     /**

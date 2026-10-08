@@ -48,7 +48,7 @@ function pnToken(string $suffix = ''): string
 }
 
 /**
- * Parent "Mama Ana" + child "Maja" caring for a born pet (no quiet hours),
+ * Parent "Mama Ana" + child "Maja" caring for a born pet (quiet hours switched off),
  * at a fixed weekday noon in Ljubljana.
  *
  * @return array{0: User, 1: User, 2: Pet}
@@ -58,6 +58,7 @@ function pnFamily(array $petAttributes = []): array
     config(['push.enabled' => true]);
 
     $parent = User::factory()->parent()->create(['name' => 'Mama Ana', 'timezone' => 'Europe/Ljubljana']);
+    withoutQuietHours($parent);
     $child = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Maja']);
     $pet = Pet::factory()->create(array_merge([
         'user_id' => $child->id,
@@ -467,7 +468,7 @@ describe('Escalation pushes — recipients and copy', function () {
 describe('Escalation pushes — quiet hours and duplicate guard', function () {
     it('suppresses every push during the family quiet hours (local clock)', function () {
         [$parent, $child, $pet] = pnFamily(['hunger_level' => 0, 'hunger_zero_since' => now()->subHours(2)]);
-        QuietHours::create([
+        setQuietHours([
             'parent_id' => $parent->id,
             'school_start' => '08:00', 'school_end' => '13:00', // 12:00 local now
             'bedtime_start' => '21:00', 'bedtime_end' => '07:00',
@@ -486,7 +487,7 @@ describe('Escalation pushes — quiet hours and duplicate guard', function () {
 
     it('sends outside the quiet hours of the same family', function () {
         [$parent, $child, $pet] = pnFamily(['hunger_level' => 30]);
-        QuietHours::create([
+        setQuietHours([
             'parent_id' => $parent->id,
             'school_start' => '08:00', 'school_end' => '11:30', // 12:00 local: outside
             'bedtime_start' => '21:00', 'bedtime_end' => '07:00',
@@ -509,7 +510,7 @@ describe('Escalation pushes — quiet hours and duplicate guard', function () {
         expect($row->status)->toBe('queued');
         Queue::assertPushedOn('notifications', SendPushNotification::class);
 
-        QuietHours::create([
+        setQuietHours([
             'parent_id' => $parent->id,
             'school_start' => '08:00', 'school_end' => '13:00',
             'bedtime_start' => '21:00', 'bedtime_end' => '07:00',
@@ -723,7 +724,7 @@ describe('Expo delivery — tickets, receipts, retries', function () {
 /** Family quiet hours: school + bedtime (family-local "HH:MM"). */
 function pnQuiet(User $parent, string $schoolStart = '08:00', string $schoolEnd = '13:00', string $bedStart = '22:00', string $bedEnd = '06:00'): QuietHours
 {
-    return QuietHours::create([
+    return setQuietHours([
         'parent_id' => $parent->id,
         'school_start' => $schoolStart, 'school_end' => $schoolEnd,
         'bedtime_start' => $bedStart, 'bedtime_end' => $bedEnd,

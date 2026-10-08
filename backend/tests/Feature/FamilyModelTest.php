@@ -149,7 +149,7 @@ describe('legacy columns land in the family model', function () {
     it('puts quiet hours created with parent_id into the family', function () {
         [$parent, , $pet] = fmFamily();
 
-        $qh = QuietHours::create(['parent_id' => $parent->id, 'bedtime_start' => '22:00', 'bedtime_end' => '06:00', 'is_active' => true]);
+        $qh = setQuietHours(['parent_id' => $parent->id, 'bedtime_start' => '22:00', 'bedtime_end' => '06:00', 'is_active' => true]);
 
         expect($qh->family_id)->toBe($parent->family->id)
             ->and($pet->fresh()->quietHours()?->id)->toBe($qh->id);
@@ -852,7 +852,7 @@ describe('family deletion never takes child data with it', function () {
 describe('deploy window and input hardening', function () {
     it('adopts a quiet-hours row the parent created without a family instead of failing', function () {
         [$parent] = fmFamily();
-        $row = QuietHours::create(['parent_id' => $parent->id, 'bedtime_start' => '22:00', 'bedtime_end' => '06:00', 'is_active' => true]);
+        $row = setQuietHours(['parent_id' => $parent->id, 'bedtime_start' => '22:00', 'bedtime_end' => '06:00', 'is_active' => true]);
         DB::table('quiet_hours')->where('id', $row->id)->update(['family_id' => null]); // written by old code
 
         actingAsRole($parent);
@@ -892,6 +892,7 @@ describe('deploy window and input hardening', function () {
         $parent = User::factory()->parent()->create();
         $familyId = $parent->family->id;
         FamilyMember::where('user_id', $parent->id)->delete();
+        QuietHours::where('family_id', $familyId)->delete();
         Family::whereKey($familyId)->delete();
         $families = Family::count();
 

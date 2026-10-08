@@ -13,6 +13,38 @@ use Illuminate\Support\Carbon;
 class QuietHours extends Model
 {
     /**
+     * The quiet hours every family has until a parent saves its own
+     * (fix/quiet-hours-default, 2026-10-08 — PRODUCT_SPEC §5): night 21:00–07:00
+     * family-local, no school window, active. The single source for the
+     * row FamilyService creates with a family, the data migration that
+     * backfilled families without a row, and the in-code fallback when no
+     * row can exist (family without a parent). The parent app shows the same
+     * values. Change it here only, together with PRODUCT_SPEC §5.
+     */
+    public const DEFAULTS = [
+        'school_start' => null,
+        'school_end' => null,
+        'bedtime_start' => '21:00',
+        'bedtime_end' => '07:00',
+        'is_active' => true,
+    ];
+
+    /**
+     * Fallback when a family has no row at all: the defaults, unsaved, read
+     * in the family timezone. Never saved from here (a row needs a parent_id).
+     */
+    public static function defaultFor(?Family $family): self
+    {
+        $quietHours = new self(self::DEFAULTS);
+        if ($family !== null) {
+            $quietHours->family_id = $family->id;
+            $quietHours->setRelation('family', $family);
+        }
+
+        return $quietHours;
+    }
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var list<string>

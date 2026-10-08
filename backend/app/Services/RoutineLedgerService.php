@@ -642,8 +642,11 @@ class RoutineLedgerService
 
         $inputs = [];
         foreach ($pets as $pet) {
+            // Same rule as Pet::quietHours(): no row → QuietHours::DEFAULTS.
             $q = $quiet->get($pet->family_id);
-            if ($q !== null && $pet->family !== null) {
+            if ($q === null) {
+                $q = QuietHours::defaultFor($pet->family);
+            } elseif ($pet->family !== null) {
                 $q->setRelation('family', $pet->family);
             }
 

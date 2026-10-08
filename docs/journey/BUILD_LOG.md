@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-08 — Tihe ure ima vsaka družina; ponoči ni več obvestil (M5-F08)
+
+**Kaj se je zgodilo:** David je ponoči na iPhone dobil dve obvestili: ob 00:00 »Tvoj kuža danes še ni bil na sprehodu« in okoli 3:30 »kuža je zbolel, 12 ur pri veterinarju«, čeprav je imel v aplikaciji »nastavljene« tihe ure. Vzrok: strežnik zanj tihih ur sploh ni imel shranjenih. Aplikacija je ob praznem odgovoru tiho pokazala predlagane čase (21:00–7:00, vklopljeno) in izgledalo je, kot da so nastavljene. Brez tihih ur je ura bolezni tekla vso noč, ob polnoči pa se energija (dnevni sprehod) ponastavi na 0 % in opomnik je šel takoj. Popravek: vsaka družina ima zdaj tihe ure od trenutka, ko nastane (spanje 21:00–7:00, brez šole, vklopljeno); obstoječe družine brez nastavitve so jih dobile samodejno, nastavitve staršev (tudi izklopljene) ostanejo nedotaknjene. Opomnik za sprehod nikoli ne gre takoj po polnoči — najprej 2 uri po koncu nočnega spanja (privzeto ob 9:00), tudi če starš tihe ure izklopi. Kartica »Tihe ure« zdaj kaže resnico: če strežnik nastavitve nima, jasno piše »Še ni shranjeno«.
+
+**Zakaj je pomembno:** Otrok in starš ne smeta dobivati obvestil sredi noči — to je obljuba izdelka. In aplikacija ne sme kazati nečesa, česar strežnik ne ve.
+
+**Številke:** napaka ponovljena s testom (na starem kodu test pade: opomnik ob 00:00, bolezen ob 01:00); 17 novih testov strežnika (privzete tihe ure ob registraciji, migracija samo dodaja, izklop velja, opomnik po polnoči počaka do 9:00 / 8:00); strežnik 1.366 zelenih testov; aplikacija 3 novi testi, 1.442 zelenih.
+
+**Kako povedati:**
+- 👩 Starši: »Tihe ure so vklopljene že od začetka (spanje 21:00–7:00). Ponoči vas in otroka nič ne zbudi — tudi opomnik za sprehod počaka do jutra.«
+- 🧒 Otroci: »Ponoči tvoj kuža spi in ti ne piše. Zjutraj ti pove, če gresta na sprehod.«
+- 🛠 Tehnično: »Manjkajoča privzeta vrednost je bila prava napaka, ne logika obvestil: zdaj ima vsaka družina vrstico `quiet_hours` (ob nastanku + podatkovna migracija samo za manjkajoče), `Pet::quietHours()` nikoli ne vrne null, aplikacija pa prazen odgovor pokaže kot ›ni shranjeno‹.«
+
+---
+
 ## 2026-10-08 — Šola pove po pravici, kako je šlo (M5-F04)
 
 **Kaj se je zgodilo:** David je v šoli za kužka ob pravem času pohvalil samo enkrat (ostalo prezgodaj ali ko kuža sploh ni ubogal), aplikacija pa je napisala »Great job!«. Zjutraj 8. 10. je potrdil pravilo: šteje samo ukaz, pri katerem je kuža ubogal. Vsi pohvaljeni ob pravem času in nobene pohvale, ko ni ubogal → »Odlično!«; več kot polovica → »Dobro!«; vsaj ena (tudi natanko polovica) → »Še malo vaje — jutri bo bolje«; nobena → »Tokrat ni šlo, poskusi jutri«. Davidov primer (1 od 3 uboganih) zdaj pokaže »Še malo vaje — jutri bo bolje«. Naslov in vrstica »Pravočasne pohvale: X od Y« se računata iz istih podatkov. Testi za vsako mejo. **Na telefonu še ni preizkušeno.**

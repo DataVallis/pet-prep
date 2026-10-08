@@ -288,6 +288,62 @@ describe('ControlsScreen — quiet hours', () => {
   });
 });
 
+describe('ControlsScreen — quiet hours show server truth (fix/quiet-hours-default)', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('marks the suggested defaults as "not saved yet" when the server has none, until Save', async () => {
+    (api.getQuietHours as jest.Mock).mockResolvedValue({ quiet_hours: null });
+    updateQuietHours.mockResolvedValueOnce({
+      message: 'ok',
+      quiet_hours: { id: 5, school_start: null, school_end: null, bedtime_start: '21:00', bedtime_end: '07:00', is_active: true },
+    });
+    renderControls();
+    await flush();
+
+    expect(screen.getByTestId('qh-not-saved')).toHaveTextContent(QUIET_HOURS_STRINGS.notSavedTitle, { exact: false });
+    expect(screen.getByTestId('qh-not-saved')).toHaveTextContent(QUIET_HOURS_STRINGS.notSavedText, { exact: false });
+    // Pre-filled with the server default: night 21:00–07:00, no school window.
+    expect(screen.getByTestId('qh-bed-start').props.value).toBe('21:00');
+    expect(screen.getByTestId('qh-bed-end').props.value).toBe('07:00');
+    expect(screen.getByTestId('qh-school-start').props.value).toBe('');
+    expect(screen.getByTestId('qh-school-end').props.value).toBe('');
+
+    fireEvent.press(screen.getByTestId('qh-save'));
+    await flush();
+    expect(updateQuietHours).toHaveBeenCalledWith({
+      school_start: null,
+      school_end: null,
+      bedtime_start: '21:00',
+      bedtime_end: '07:00',
+      is_active: true,
+    });
+    expect(screen.queryByTestId('qh-not-saved')).toBeNull();
+    expect(screen.getByTestId('qh-message')).toHaveTextContent(QUIET_HOURS_STRINGS.saved);
+  });
+
+  it('shows no "not saved" notice for stored quiet hours — also when they are switched off', async () => {
+    (api.getQuietHours as jest.Mock).mockResolvedValue({
+      quiet_hours: { id: 1, school_start: null, school_end: null, bedtime_start: '22:00', bedtime_end: '06:00', is_active: false },
+      timezone: 'Europe/Ljubljana',
+    });
+    renderControls();
+    await flush();
+
+    expect(screen.queryByTestId('qh-not-saved')).toBeNull();
+    expect(screen.getByTestId('qh-bed-start').props.value).toBe('22:00');
+  });
+
+  it('shows no "not saved" notice while loading or after a load error', async () => {
+    (api.getQuietHours as jest.Mock).mockRejectedValue(new Error('offline'));
+    renderControls();
+    expect(screen.queryByTestId('qh-not-saved')).toBeNull();
+    await flush();
+    expect(screen.queryByTestId('qh-not-saved')).toBeNull();
+  });
+});
+
 describe('ControlsScreen — family (invite / join)', () => {
   beforeEach(() => {
     jest.clearAllMocks();

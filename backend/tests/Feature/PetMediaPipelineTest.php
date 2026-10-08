@@ -138,6 +138,7 @@ describe('pipeline at birth', function () {
         Event::fake([PetUpdated::class]);
 
         $parent = createParentUser();
+        withoutQuietHours($parent); // wall clock: at night the pet would show `sleeping`
         $child = createChildUser();
         $pin = app(PairingService::class)->generatePin($parent)['pin'];
         $this->actingAs($child)->postJson('/api/child/pair', ['pin' => $pin])->assertCreated();

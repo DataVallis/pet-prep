@@ -2,7 +2,6 @@
 
 use App\Models\ActivityLog;
 use App\Models\Pet;
-use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\EscalationService;
 use App\Services\PetDecayService;
@@ -139,7 +138,10 @@ describe('EscalationService - 3-tier escalation matrix', function () {
 
 describe('EscalationService - illness state', function () {
     it('triggers illness when hygiene is at 0% for >6 hours', function () {
-        $user = User::factory()->child()->create();
+        // Wall clock: quiet hours off, so the 7 h all count (default night 21–07).
+        $parent = User::factory()->parent()->create();
+        withoutQuietHours($parent);
+        $user = User::factory()->child()->create(['parent_id' => $parent->id]);
         $pet = Pet::factory()->create([
             'user_id' => $user->id,
             'hunger_level' => 100,
@@ -201,7 +203,7 @@ describe('EscalationService - illness state', function () {
         $parent = User::factory()->parent()->create();
         $child = User::factory()->child()->create(['parent_id' => $parent->id]);
 
-        QuietHours::create([
+        setQuietHours([
             'parent_id' => $parent->id,
             'school_start' => '00:00',
             'school_end' => '23:59',

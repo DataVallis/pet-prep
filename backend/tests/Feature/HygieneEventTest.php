@@ -6,7 +6,6 @@ use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\Pet;
 use App\Models\PetHygieneEvent;
-use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\EscalationService;
 use App\Services\HygieneEventService;
@@ -40,7 +39,9 @@ function hyPet(string $breed = 'mutt', array $quietHours = [], array $pet = []):
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
     if ($quietHours !== []) {
-        QuietHours::create(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+        setQuietHours(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+    } else {
+        withoutQuietHours($parent); // [] = no quiet time at all (default night 21–07 since 2026-10-08)
     }
 
     return Pet::factory()->create(array_merge(['user_id' => $child->id, 'breed_type' => $breed], $pet));
@@ -277,7 +278,7 @@ describe('Application in the game loop', function () {
         hyTick($pet, '2026-10-04 22:01:00'); // schedules the day
 
         $local = $at->copy()->setTimezone('Europe/Ljubljana');
-        QuietHours::create([
+        setQuietHours([
             'parent_id' => $pet->user->parent_id, 'is_active' => true,
             'school_start' => $local->copy()->subMinutes(30)->format('H:i'),
             'school_end' => $local->copy()->addMinutes(30)->format('H:i'),

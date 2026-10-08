@@ -36,7 +36,9 @@ function tzFamily(array $quietHours = [], string $timezone = TZ_LJUBLJANA, array
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
 
     if ($quietHours !== []) {
-        QuietHours::create(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+        setQuietHours(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+    } else {
+        withoutQuietHours($parent); // none = switched off (default night 21–07 since 2026-10-08)
     }
 
     $pet = Pet::factory()->mutt()->create(array_merge(['user_id' => $child->id], $pet));
@@ -84,7 +86,10 @@ describe('Family timezone resolution', function () {
         expect($parent->familyTimezone())->toBe('America/New_York');
         expect($child->fresh()->familyTimezone())->toBe('America/New_York');
         expect($pet->fresh()->familyTimezone())->toBe('America/New_York');
-        expect($pet->fresh()->quietHours())->toBeNull();
+        // Every family has quiet hours (default 21:00–07:00, 2026-10-08),
+        // read in the family timezone.
+        expect($pet->fresh()->quietHours()->bedtime_start)->toStartWith(QuietHours::DEFAULTS['bedtime_start'])
+            ->and($pet->fresh()->quietHours()->timezone())->toBe('America/New_York');
     });
 });
 
@@ -344,7 +349,9 @@ describe('PUT /api/parent/quiet-hours with timezone', function () {
             'timezone' => 'Ljubljana',
         ])->assertStatus(422)->assertJsonValidationErrors('timezone');
 
-        expect($parent->quietHours()->exists())->toBeFalse();
+        // Only the default row the family got at registration, untouched.
+        expect($parent->quietHours()->count())->toBe(1)
+            ->and($parent->quietHours()->first()->updated_at->equalTo($parent->quietHours()->first()->created_at))->toBeTrue();
         expect($parent->fresh()->timezone)->toBe(TZ_LJUBLJANA);
     });
 });

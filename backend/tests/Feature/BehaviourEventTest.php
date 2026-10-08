@@ -14,7 +14,6 @@ use App\Models\Pet;
 use App\Models\PetDailyRoutine;
 use App\Models\PetHygieneEvent;
 use App\Models\PetMedia;
-use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\BehaviourEventService;
 use App\Services\BehaviourPayload;
@@ -74,12 +73,14 @@ function beFamily(string $bornUtc, int $arrivalMonths = 2, bool $quiet = true, a
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $child = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Maja']);
     if ($quiet) {
-        QuietHours::create([
+        setQuietHours([
             'parent_id' => $parent->id,
             'school_start' => '08:00', 'school_end' => '13:00',
             'bedtime_start' => '22:00', 'bedtime_end' => '06:00',
             'is_active' => true,
         ]);
+    } else {
+        withoutQuietHours($parent); // none = switched off (default night 21–07 since 2026-10-08)
     }
     $pet = Pet::factory()->mutt()->create(array_merge([
         'user_id' => $child->id,

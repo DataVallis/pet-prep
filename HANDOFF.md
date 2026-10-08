@@ -73,6 +73,12 @@ Older queue (still valid where not done):
 
 ## 6. Session log
 
+### 2026-10-08 morning (cloud, backend-engineer) — M5-F08 quiet hours default
+- **Bug (David, production iPhone):** `walk_reminder` at 00:00 local + hygiene `illness_triggered` ~03:30 although the app showed quiet hours. **Root cause (confirmed by Pest on the old code):** the family had no `quiet_hours` row; `QuietHoursCard` silently showed form defaults (21–07, on) when GET returned `null`.
+- **Fix (branch `fix/quiet-hours-default`, not merged):** `QuietHours::DEFAULTS` (bedtime 21:00–07:00, no school, active) created by `FamilyService::addMember()` for the first parent of a family; data migration `2026_10_22_120000` inserts it for families without a row (insert-only, first parent without a row, idempotent, `down()` no-op); `Pet::quietHours()` never null (code fallback for parentless families, same in `RoutineLedgerService`). Walk reminder floor `PushTiming::walkReminderFloor()` (stored night end + 2 h, else 09:00) also with quiet hours off. App: "Not saved yet — tap Save" notice on `null` (EN + SL); `DEFAULT_TIMES` no longer suggests a school window.
+- **Tests:** the change first broke 212 tests (187 = `QuietHours::create()` on a parent that now already has a row, 25 = implicit "no quiet hours") → new helpers `setQuietHours()` (replaces `QuietHours::create()` in tests) and `withoutQuietHours()` in `tests/Pest.php`; wall-clock tests checked with a temporary forced `setTestNow` at 01:30 / 21:30 / 07:30 local (no new time-of-day flakiness).
+- **Debt:** parentless families can't store a row (`quiet_hours.parent_id` NOT NULL) — code fallback only; on deploy day today's live routines / running hygiene & potty clocks use the new night (closed days untouched); `pint --test` on the whole backend still fails on 7 untouched legacy files.
+
 ### 2026-10-08 early (cloud, orchestrator) — M5-F device fixes
 - **PR #77 M5-F07 (merged):** root cause = dashboard `contract_signed` meant "contract row exists"; grandfathered caretakers (`requires_contract` false) have none → parent saw "waits for contract" next to real alarms. Now = pet born AND (row OR not required). Data was fine.
 - **PR #75 M5-F01/F05/F06 (merged, mobile):** buy button on child card / detail + Nadzor row "Nakupi / izziv" (one rule `isOfferablePet`: never mutt, game over; card button not for unborn), paywall Android back, HUD header → `PetProfileSheet`, "getting ready" notice above the dock (overlay under locks).

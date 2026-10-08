@@ -40,6 +40,7 @@ function broadcastFamily(array $petAttributes = []): array
     seedBreedConfigs();
 
     $parent = User::factory()->parent()->create(['timezone' => 'UTC']);
+    withoutQuietHours($parent); // runs on the wall clock: no default night quiet hours
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
     $pet = Pet::factory()->mutt()->create(array_merge([
         'user_id' => $child->id,

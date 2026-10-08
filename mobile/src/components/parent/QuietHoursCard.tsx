@@ -2,6 +2,12 @@
  * Family quiet hours (school + bedtime, family-local "HH:MM"; one configuration per
  * family, any parent may edit — M1-03 / M2-01). Moved to TanStack Query and the
  * light parent theme with M2-05.
+ *
+ * Shows server truth (fix/quiet-hours-default, 2026-10-08): the server creates
+ * every family's quiet hours (night 21:00–07:00, active). If it still answers
+ * `quiet_hours: null` (older server, edge case) the form is pre-filled with the
+ * same defaults but clearly marked "not saved yet" — before, it silently looked
+ * configured while the server had nothing and sent pushes at night.
  */
 
 import { useEffect, useState } from 'react';
@@ -23,9 +29,10 @@ const S = QUIET_HOURS_STRINGS;
 
 type Times = Pick<QuietHours, 'school_start' | 'school_end' | 'bedtime_start' | 'bedtime_end' | 'is_active'>;
 
-const DEFAULT_TIMES: Times = {
-  school_start: '08:00',
-  school_end: '13:00',
+/** Same values as the server default (`QuietHours::DEFAULTS`): night only, active. */
+export const DEFAULT_TIMES: Times = {
+  school_start: null,
+  school_end: null,
   bedtime_start: '21:00',
   bedtime_end: '07:00',
   is_active: true,
@@ -59,6 +66,8 @@ export default function QuietHoursCard() {
   const query = useQuietHours();
   const update = useUpdateQuietHours();
   const [times, setTimes] = useState<Times>(DEFAULT_TIMES);
+  // Loaded, and the server has no quiet hours for this family: nothing is in force yet.
+  const notSaved = query.isSuccess && query.data === null;
   // Message as a thunk: translated at render, so it follows a language switch (M1-18 review).
   const [message, setMessage] = useState<{ text: () => string; isError: boolean } | null>(null);
 
@@ -118,6 +127,13 @@ export default function QuietHoursCard() {
       </SectionTitle>
       <Text style={styles.muted}>{S.hint}</Text>
 
+      {notSaved && (
+        <View style={styles.notSaved} testID="qh-not-saved" accessibilityRole="alert">
+          <Text style={styles.notSavedTitle}>{S.notSavedTitle}</Text>
+          <Text style={styles.notSavedText}>{S.notSavedText}</Text>
+        </View>
+      )}
+
       {query.isError && !query.data && (
         <ErrorBanner text={S.loadError} retryLabel={S.retry} onRetry={() => void query.refetch()} />
       )}
@@ -168,6 +184,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: C.text,
   },
+  notSaved: { borderRadius: 12, padding: 12, gap: 2, backgroundColor: C.yellowSoft },
+  notSavedTitle: { fontSize: 14, fontWeight: '700', color: C.text },
+  notSavedText: { fontSize: 13, color: C.text, lineHeight: 18 },
   message: { fontSize: 13, color: C.greenText },
   messageError: { color: C.redText },
   save: {

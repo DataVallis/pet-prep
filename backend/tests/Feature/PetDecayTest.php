@@ -38,7 +38,14 @@ const DECAY_SIM_START = '2026-10-05 07:00:00';
  */
 function decayPet(array $attributes = [], ?User $child = null, bool $hygieneEvents = false): Pet
 {
-    $child ??= User::factory()->child()->create();
+    // Without a given child: a family whose parent switched quiet hours off,
+    // so the spec rates read straight off the clock (every family has
+    // night quiet hours by default since 2026-10-08).
+    if ($child === null) {
+        $parent = User::factory()->parent()->create();
+        withoutQuietHours($parent);
+        $child = User::factory()->child()->create(['parent_id' => $parent->id]);
+    }
     $pet = Pet::factory()->create(array_merge(['user_id' => $child->id], $attributes));
 
     return $hygieneEvents ? $pet : disableHygieneEvents($pet);
@@ -50,7 +57,7 @@ function decayChildWithQuietHours(array $quietHours, string $timezone = 'UTC'): 
     // directly off DECAY_SIM_START; family-timezone behaviour (M1-03) is
     // covered in FamilyTimezoneTest.
     $parent = User::factory()->parent()->create(['timezone' => $timezone]);
-    QuietHours::create(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
+    setQuietHours(array_merge(['parent_id' => $parent->id, 'is_active' => true], $quietHours));
 
     return User::factory()->child()->create(['parent_id' => $parent->id]);
 }
@@ -846,7 +853,7 @@ describe('Quiet Hours API', function () {
 
     it('allows parent to get their quiet hours', function () {
         $parent = User::factory()->parent()->create();
-        QuietHours::create([
+        setQuietHours([
             'parent_id' => $parent->id,
             'school_start' => '08:00',
             'school_end' => '13:00',
