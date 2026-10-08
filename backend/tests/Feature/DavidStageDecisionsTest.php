@@ -169,8 +169,9 @@ describe('data migration for the rows PR #37 seeded', function () {
         expect(dsdParam('mutt', 'puppy', 0, 'feed_windows')->value)->toBe(BreedStageParamsSeeder::PUPPY_4_MEAL_WINDOWS)
             ->and(dsdParam('border-collie', 'puppy', 3, 'feed_windows')->value)->toBe(BreedStageParamsSeeder::PUPPY_3_MEAL_WINDOWS)
             // Open proposal: M5-R02's teething chewing chance (Claude, waiting for David;
-            // the training numbers and effects were confirmed in M5-R03b).
-            ->and(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())->toEqualCanonicalizing([
+            // the training numbers and effects were confirmed in M5-R03b). Dogs only —
+            // the cat rows (M5-R06-03) are checked in CatLifeStageDataTest.
+            ->and(BreedStageParam::whereIn('breed_slug', ['mutt', 'border-collie'])->where('verified', false)->pluck('key')->unique()->values()->all())->toEqualCanonicalizing([
                 'chewing_chance_per_day',
             ]);
 

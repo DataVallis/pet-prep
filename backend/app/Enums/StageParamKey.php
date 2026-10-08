@@ -4,7 +4,8 @@ namespace App\Enums;
 
 /**
  * Keys of `breed_stage_params` (M5-R01). Each row holds ONE value with its
- * provenance (source id from docs/research/dog-data/sources.md, confidence,
+ * provenance (source id from docs/research/dog-data/sources.md S1–S47 for
+ * dogs, docs/research/cat-data/sources.md C1–C25 for cats, confidence,
  * verified). Mirrored in the breed_stage_params_key_check constraint.
  *
  * Scope:
@@ -19,6 +20,12 @@ namespace App\Enums;
  *    keys (learning multiplier, individual variation, minutes per day,
  *    progress per success, decay per missed day, and the effects of potty /
  *    place training on accidents / chewing).
+ *  - M5-R06-03 cat keys (values only — the rules that read them are
+ *    M5-R06-04 / 05): stage keys PLAY_SESSIONS_PER_DAY and
+ *    LITTER_USES_PER_DAY (kitten vs. grown cat), breed keys
+ *    PLAY_MIN_GAP_MINUTES, LITTER_SCOOP_DEADLINE_HOURS,
+ *    LITTER_FULL_CHANGE_DAYS, GROOMING_SESSIONS_PER_WEEK (Maine Coon only;
+ *    no row = no grooming routine) and SCRATCHING_AFTER_MISSED_PLAY (bool).
  */
 enum StageParamKey: string
 {
@@ -35,6 +42,9 @@ enum StageParamKey: string
     case ChewingChancePerDay = 'chewing_chance_per_day';
     // M5-R03b training (stage key): starting progress per command of a dog arriving in this stage
     case TrainingStartingProgress = 'training_starting_progress';
+    // M5-R06-03 cat (stage keys): kitten 3 / grown cat 2 (CAT_SPEC Q1, Q3)
+    case PlaySessionsPerDay = 'play_sessions_per_day';
+    case LitterUsesPerDay = 'litter_uses_per_day';
 
     // Breed keys (stage = all)
     case StepsPerExerciseMinute = 'steps_per_exercise_minute';
@@ -52,6 +62,12 @@ enum StageParamKey: string
     case TrainingDecayPerMissedDay = 'training_decay_per_missed_day';
     case PottyTrainingAccidentReduction = 'potty_training_accident_reduction';
     case PlaceTrainingChewingReduction = 'place_training_chewing_reduction';
+    // M5-R06-03 cat (breed keys)
+    case PlayMinGapMinutes = 'play_min_gap_minutes';
+    case LitterScoopDeadlineHours = 'litter_scoop_deadline_hours';
+    case LitterFullChangeDays = 'litter_full_change_days';
+    case GroomingSessionsPerWeek = 'grooming_sessions_per_week';
+    case ScratchingAfterMissedPlay = 'scratching_after_missed_play';
 
     public function isBreedLevel(): bool
     {
@@ -61,6 +77,8 @@ enum StageParamKey: string
             self::TrainingLearningMultiplier, self::TrainingIndividualVariation, self::TrainingMinutesPerDay,
             self::TrainingProgressPerSuccess, self::TrainingDecayPerMissedDay,
             self::PottyTrainingAccidentReduction, self::PlaceTrainingChewingReduction,
+            self::PlayMinGapMinutes, self::LitterScoopDeadlineHours, self::LitterFullChangeDays,
+            self::GroomingSessionsPerWeek, self::ScratchingAfterMissedPlay,
         ], true);
     }
 
@@ -101,6 +119,18 @@ enum StageParamKey: string
             self::TrainingProgressPerSuccess, self::TrainingDecayPerMissedDay => $isNumber($value) && $value <= 100
                 ? null : 'Expected percentage points 0–100.',
             self::TrainingStartingProgress => $this->validateStartingProgress($value),
+            self::PlaySessionsPerDay, self::LitterUsesPerDay => is_int($value) && $value >= 0 && $value <= 12
+                ? null : 'Expected a whole number per day, 0–12.',
+            self::PlayMinGapMinutes => is_int($value) && $value >= 0 && $value <= 1440
+                ? null : 'Expected whole minutes, 0–1440.',
+            self::LitterScoopDeadlineHours => $isNumber($value) && $value > 0 && $value <= 24
+                ? null : 'Expected hours > 0 and ≤ 24.',
+            self::LitterFullChangeDays => is_int($value) && $value >= 1 && $value <= 60
+                ? null : 'Expected whole days, 1–60.',
+            self::GroomingSessionsPerWeek => is_int($value) && $value >= 0 && $value <= 7
+                ? null : 'Expected whole sessions per week, 0–7.',
+            self::ScratchingAfterMissedPlay => is_bool($value)
+                ? null : 'Expected true or false.',
         };
     }
 

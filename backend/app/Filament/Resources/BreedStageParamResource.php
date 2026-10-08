@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Enums\LifeStage;
+use App\Enums\Species;
 use App\Enums\StageParamKey;
 use App\Filament\Resources\BreedStageParamResource\Pages;
 use App\Filament\Resources\BreedStageParamResource\RelationManagers\ChangesRelationManager;
@@ -15,13 +16,16 @@ use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 /**
  * Sourced life-stage data (M5-R01, `breed_stage_params`). One row = one value
- * with its source id (docs/research/dog-data/sources.md), confidence and
+ * with its source id (docs/research/dog-data/sources.md S…, cats:
+ * docs/research/cat-data/sources.md C… — M5-R06-03), confidence and
  * `verified` flag — unverified rows are UNSOURCED proposals and are shown
  * as such. Edits are allowed and audited (who, old → new) in the "Changes"
- * panel; the deploy seeder never overwrites an existing row.
+ * panel; the deploy seeder never overwrites an existing row. Species filter
+ * (M5-R06-03): rows whose breed has that species in breed_configs.
  */
 class BreedStageParamResource extends Resource
 {
@@ -34,6 +38,9 @@ class BreedStageParamResource extends Resource
     protected static ?string $navigationGroup = 'Configuration';
 
     protected static ?string $modelLabel = 'life-stage value';
+
+    /** Source ids: S1… (dog-data) or C1… (cat-data, M5-R06-03). */
+    public const SOURCE_ID_PATTERN = '/^[SC]\d+(,[SC]\d+)*$/';
 
     /**
      * JSON text of a value for the form.
@@ -102,8 +109,8 @@ class BreedStageParamResource extends Resource
                 ->schema([
                     Forms\Components\TextInput::make('source_id')
                         ->label('Source id(s)')
-                        ->helperText('From docs/research/dog-data/sources.md, e.g. S18 or S11,S15. Empty = unsourced.')
-                        ->regex('/^S\d+(,S\d+)*$/')
+                        ->helperText('Dogs: docs/research/dog-data/sources.md (e.g. S18 or S11,S15). Cats: docs/research/cat-data/sources.md (e.g. C1 or C2,C3). Empty = unsourced.')
+                        ->regex(self::SOURCE_ID_PATTERN)
                         ->maxLength(255),
                     Forms\Components\Select::make('confidence')
                         ->options(['high' => 'high', 'medium' => 'medium', 'low' => 'low'])
@@ -154,6 +161,13 @@ class BreedStageParamResource extends Resource
                 Tables\Columns\TextColumn::make('updated_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
+                // M5-R06-03 (R06-01 debt): the table has no species column — filter
+                // through the breed's catalogue row.
+                Tables\Filters\SelectFilter::make('species')
+                    ->options(collect(Species::cases())->mapWithKeys(fn (Species $s): array => [$s->value => ucfirst($s->value)])->all())
+                    ->query(fn (Builder $query, array $data): Builder => blank($data['value'] ?? null)
+                        ? $query
+                        : $query->whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', $data['value']))),
                 Tables\Filters\SelectFilter::make('breed_slug')
                     ->label('Breed')
                     ->options(fn (): array => BreedConfig::query()->pluck('breed_slug', 'breed_slug')->all()),

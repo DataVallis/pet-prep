@@ -124,7 +124,8 @@ describe('import provenance', function () {
     it('imports insert-only: an existing (edited) row is never overwritten, never-touched missing rows are added', function () {
         seedLifeStageData();
         $count = BreedStageParam::count();
-        expect($count)->toBe(count(BreedStageParamsSeeder::rows()));
+        // M5-R06-03: the seeder writes the dog rows and the cat rows (allRows()).
+        expect($count)->toBe(count(BreedStageParamsSeeder::allRows()));
 
         BreedStageParam::where(['breed_slug' => 'mutt', 'stage' => 'adult', 'key' => 'exercise_minutes_per_day'])->update(['value' => json_encode(75)]);
         // Removed without an audit row (= a value the seeder adds for the first time, e.g. a new key).
@@ -154,7 +155,8 @@ describe('import provenance', function () {
         // The training multiplier, the individual variation, the M5-R03b numbers
         // (minutes, progress, decay), the starting progress and the two training
         // effects (David 2026-10-07) are David's decisions (verified).
-        expect(BreedStageParam::where('verified', false)->pluck('key')->unique()->values()->all())
+        // M5-R06-03: dog breeds only — the cat rowset is checked in its own describe below.
+        expect(BreedStageParam::whereIn('breed_slug', ['mutt', 'border-collie'])->where('verified', false)->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
             ]);

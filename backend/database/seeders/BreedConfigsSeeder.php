@@ -18,6 +18,16 @@ use Illuminate\Support\Facades\DB;
 class BreedConfigsSeeder extends Seeder
 {
     /**
+     * Two-meal windows of a cat (M5-R06-03): docs/research/cat-data/data.json
+     * general.meals_per_day.kitten_6_12_months notes "Windows 06–10 and
+     * 17–21" — the same times as the dog default, now named as cat data.
+     * Kittens' 4 / 3 meals have their own breed_stage_params rows.
+     *
+     * @var list<array{0: string, 1: string}>
+     */
+    public const CAT_FEED_WINDOWS = [['06:00', '10:00'], ['17:00', '21:00']];
+
+    /**
      * @return list<array<string, mixed>>
      */
     public static function configs(): array
@@ -59,13 +69,18 @@ class BreedConfigsSeeder extends Seeder
             // thirst −8 %/h for both breeds (general.game_decay). No poop events
             // (litter uses come in M5-R06-05) and no steps (play replaces the walk in
             // M5-R06-04; 0 = energyForSteps() is always 100 %, so no walk illness).
+            // M5-R06-03: every value checked against data.json (LifeStageDataTest);
+            // the two-meal windows are the cat data (CAT_FEED_WINDOWS, identical to
+            // the R06-01 rows, so production needs no data migration). poops_per_day
+            // stays 0 for good: a litter use is not a mess (CAT_SPEC §4) — its count
+            // is breed_stage_params litter_uses_per_day.
             [
                 'breed_slug' => BreedType::DomesticCat->slug(),
                 'daily_steps_required' => 0,
                 'hunger_decay_rate' => 8.0,
                 'thirst_decay_rate' => 8.0,
                 'poops_per_day' => 0,
-                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'feed_windows' => self::CAT_FEED_WINDOWS,
                 'water_times_per_day' => 2,
                 'water_min_gap_minutes' => 240,
                 'premium_unlock' => false,
@@ -80,7 +95,7 @@ class BreedConfigsSeeder extends Seeder
                 'hunger_decay_rate' => 8.0,
                 'thirst_decay_rate' => 8.0,
                 'poops_per_day' => 0,
-                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'feed_windows' => self::CAT_FEED_WINDOWS,
                 'water_times_per_day' => 2,
                 'water_min_gap_minutes' => 240,
                 'premium_unlock' => true,

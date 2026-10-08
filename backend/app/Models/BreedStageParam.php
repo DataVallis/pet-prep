@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Auth;
 /**
  * One sourced life-stage value of a breed (M5-R01, `breed_stage_params`).
  *
- * Provenance per value: `source_id` (docs/research/dog-data/sources.md),
+ * Provenance per value: `source_id` (docs/research/dog-data/sources.md S…;
+ * cats since M5-R06-03: docs/research/cat-data/sources.md C…, `data_ref`
+ * prefixed "cat-data:"),
  * `confidence`, `verified` (false = UNSOURCED proposal — shown as such in
  * Filament, never presented to parents / children as fact). Read through
  * LifeStageService (cached per breed); every create / update / delete made
