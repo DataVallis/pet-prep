@@ -7,6 +7,7 @@ use App\Enums\HygieneEventKind;
 use App\Enums\HygieneEventStatus;
 use App\Enums\RoutineStatus;
 use App\Enums\RoutineType;
+use App\Enums\StageParamKey;
 use App\Models\ActivityLog;
 use App\Models\BreedConfig;
 use App\Models\Pet;
@@ -52,6 +53,14 @@ use Throwable;
  *    per day (`trained_pet` row, actor = the child) for a pet with training
  *    enabled (never a legacy-profile pet); missed at day end. Not expected on
  *    the birth day; excused like the walk (whole-day routine).
+ *  - play (M5-R06-04, cats only — CAT_SPEC §5.2 / §7): the cat's wand play;
+ *    done when the day's successful sessions (`played_wand` rows) reach
+ *    `play_sessions_per_day` of that day's life stage (done at the row that
+ *    reached it, actor = its child); missed at day end. `steps` = sessions,
+ *    `goal` = the goal. Not expected on the birth day, nor on a day whose
+ *    quiet hours leave room for fewer games than the goal (no play in quiet
+ *    hours, David 2026-10-08 — WandPlayService::feasibleSessions); excused
+ *    like the walk.
  *
  * Not expected at all: before birth (an unborn pet has none), before
  * FIRST_LEDGER_DATE, and — unless it was done anyway — any routine whose
@@ -105,6 +114,8 @@ class RoutineLedgerService
         ActivityType::WalkedPet,
         ActivityType::ResolvedChewing,
         ActivityType::TrainedPet,
+        // M5-R06-04: a successful cat wand session (the play routine).
+        ActivityType::PlayedWand,
     ];
 
     public function __construct(
@@ -492,6 +503,32 @@ class RoutineLedgerService
             }
         }
 
+        // Play (M5-R06-04, cats): the day's successful wand sessions reach the goal (not on the birth day).
+        if ($pet->isCat() && ! $pet->isLegacyProfile() && $date !== $pet->localDate($born)) {
+            $goal = $this->playGoal($pet, $date);
+            // Derived rule (David 2026-10-08): no play in quiet hours — a day whose
+            // quiet hours leave no room for the goal (with the 2 h gap) is not expected.
+            $gap = $this->lifeStages->stageValueOn($pet, $date, StageParamKey::PlayMinGapMinutes)['value'] ?? 0;
+            if ($goal > 0 && WandPlayService::feasibleSessions($quiet, $dayStartUtc, $dayEndUtc, is_int($gap) ? $gap : 0, $goal) < $goal) {
+                $goal = 0;
+            }
+            if ($goal > 0) {
+                $sessions = array_values(array_filter(
+                    $in['activities'],
+                    fn ($a) => $a['type'] === ActivityType::PlayedWand->value && $a['at']->greaterThanOrEqualTo($dayStartUtc) && $a['at']->lessThan($dayEndUtc),
+                ));
+                $reached = $sessions[$goal - 1] ?? null;
+                $routine = $this->resolve(
+                    $pet, $date, RoutineType::Play, 0, $dayStartUtc, $dayEndUtc,
+                    $reached !== null ? ['at' => $reached['at'], 'actor' => $reached['actor']] : null,
+                    $blocks, $now, count($sessions), $goal, excused: $wholeDayExcused,
+                );
+                if ($routine !== null) {
+                    $routines[] = $routine;
+                }
+            }
+        }
+
         $routines = array_values(array_filter($routines));
         $pending = array_filter($routines, fn (Routine $r) => $r->isPending());
         $settles = $dayEndUtc;
@@ -544,6 +581,17 @@ class RoutineLedgerService
             goal: $goal,
             eventKind: $eventKind,
         );
+    }
+
+    /**
+     * The cat's play goal of a family-local date: `play_sessions_per_day` of
+     * that day's life stage (0 = no play routine).
+     */
+    private function playGoal(Pet $pet, string $date): int
+    {
+        $value = $this->lifeStages->stageValueOn($pet, $date, StageParamKey::PlaySessionsPerDay)['value'] ?? null;
+
+        return is_int($value) && $value > 0 ? $value : 0;
     }
 
     /**

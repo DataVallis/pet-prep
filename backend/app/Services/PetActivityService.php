@@ -11,6 +11,7 @@ use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\BreedConfig;
 use App\Models\Pet;
+use App\Models\PetCareSession;
 use App\Models\PetContract;
 use App\Models\PetDailyStep;
 use App\Models\PetTrainingSession;
@@ -63,6 +64,7 @@ class PetActivityService
         private ChallengeService $challenges,
         private PlayService $play,
         private ChallengeCreditService $credits,
+        private WandPlayService $wand,
     ) {}
 
     /**
@@ -97,6 +99,11 @@ class PetActivityService
 
             if ($reason = $locked->actionLockReasonFor($actor)) {
                 return $this->locked($locked, $reason);
+            }
+
+            // M5-R06-04 (CAT_SPEC Q1, §5.3): phone steps are dog-only — the cat plays instead.
+            if ($locked->isCat()) {
+                return $this->refused($locked, CareRefusal::StepsNotApplicable);
             }
 
             $actorId = $actor?->id ?? $locked->user_id;
@@ -376,6 +383,12 @@ class PetActivityService
             // Due messes / the midnight happen first (same as every action).
             $this->decay->catchUpLocked($locked);
 
+            // M5-R06-04 (David 2026-10-08): the ball game is dog-only — a cat's play
+            // is the wand game (its care routine); cuddles stay for both.
+            if (! $this->play->kindAvailable($locked, $kind)) {
+                return $this->refused($locked, CareRefusal::PlayNotAvailable);
+            }
+
             if (! $this->play->canPlayNow($locked, $now)) {
                 return $this->refused($locked, CareRefusal::PlayNotAvailable, $this->play->nextPlayAt($locked, $now));
             }
@@ -395,6 +408,157 @@ class PetActivityService
                 ],
             ]);
         });
+    }
+
+    /**
+     * Cat wand play (M5-R06-04, CAT_SPEC §5.2): start a ~60 s session — the
+     * server's schedule (pounces, the catch at the end) in `extra.session`.
+     * Locks first (423), then 422 wand_not_available (a dog, no play data) /
+     * needs_cleaning / wand_too_soon (next_allowed_at = end of the 2 h gap
+     * after the last SUCCESSFUL session) / wand_session_active (another
+     * child's game; next_allowed_at = its TTL) / wand_day_ending. The same
+     * child's unfinished game is replaced (no penalty). One
+     * `PetUpdated('wand_started')`; no activity row (the routine is the
+     * successful session).
+     */
+    public function startWand(Pet $pet, User $child): ActionResult
+    {
+        return $this->withLockedPet($pet, 'wand_started', function (Pet $locked) use ($child): ActionResult {
+            $now = now();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+
+            // Due messes / the midnight (meter → 0) happen first.
+            $this->decay->catchUpLocked($locked);
+
+            $started = $this->wand->start($locked, $child, $now);
+            if ($started['refusal'] !== null) {
+                return $this->refused($locked, $started['refusal'], $started['next_allowed_at']);
+            }
+
+            if ($locked->isDirty()) {
+                $locked->saveQuietly();
+            }
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: [
+                'session' => self::wandSessionPayload($started['session'], $locked->familyTimezone()),
+            ]);
+        });
+    }
+
+    /**
+     * Finish a wand session with the feather moves the app saw
+     * ({t: ms since start, away: bool}). The server judges participation
+     * (WandPlayService::score): success → the session counts — play meter,
+     * one `played_wand` row (the play routine, value = the session's number
+     * of the day), the 2 h gap starts — status `accepted`; not enough →
+     * `rejected` (200, nothing counts, no penalty, start again at once;
+     * one `PetUpdated('wand_finished')` — the game ended).
+     * `extra.result` = the verdict. A repeat → `unchanged` with the stored
+     * result. 422 wand_not_available / wand_session_invalid /
+     * wand_session_expired / wand_session_not_over / wand_invalid_moves /
+     * wand_session_interrupted; 423 while locked.
+     *
+     * @param  list<array{t: int, away: bool}>  $moves
+     */
+    public function finishWand(Pet $pet, User $child, string $sessionId, array $moves): ActionResult
+    {
+        return $this->withLockedPet($pet, ActivityType::PlayedWand, function (Pet $locked) use ($child, $sessionId, $moves): ActionResult {
+            $now = now();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+
+            $this->decay->catchUpLocked($locked);
+
+            $finished = $this->wand->finish($locked, $child, $sessionId, $moves, $now);
+            if ($finished['refusal'] !== null) {
+                return $this->refused($locked, $finished['refusal']);
+            }
+
+            /** @var PetCareSession $session */
+            $session = $finished['session'];
+            $extra = ['result' => self::wandResultPayload($session)];
+            if ($finished['repeat']) {
+                return $this->unchanged(ActionResult::UNCHANGED, $locked, $extra);
+            }
+            if (! $finished['counted']) {
+                // Nothing counts, but the running game ended (QA: siblings / parents
+                // must not keep seeing session_running) → one `wand_finished`.
+                if ($locked->isDirty()) {
+                    $locked->saveQuietly();
+                }
+
+                return new ActionResult(
+                    status: ActionResult::REJECTED,
+                    dailyStepCount: (int) $locked->daily_step_count,
+                    energyLevel: $locked->displayMetric('energy_level'),
+                    hygieneLevel: $locked->displayMetric('hygiene_level'),
+                    extra: $extra,
+                    broadcastAs: 'wand_finished',
+                );
+            }
+
+            $number = $this->wand->applySuccess($locked, $session);
+            $locked->pet_state = $this->decay->derivePetState($locked, $now);
+            $locked->saveQuietly();
+            $this->logActivity($locked, ActivityType::PlayedWand, $number, $child->id);
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: $extra);
+        });
+    }
+
+    /**
+     * The wand session as the app gets it on start (instants in the family tz).
+     *
+     * @return array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int, pounce_window_ms: int}
+     */
+    public static function wandSessionPayload(PetCareSession $session, string $tz): array
+    {
+        $schedule = $session->schedule;
+
+        return [
+            'id' => $session->public_id,
+            'started_at' => $session->started_at->copy()->setTimezone($tz)->toIso8601String(),
+            // The catch: the game has run its course; finish from here on.
+            'ends_at' => $session->ends_at->copy()->setTimezone($tz)->toIso8601String(),
+            // Last moment a finish is accepted (TTL).
+            'expires_at' => $session->expires_at->copy()->setTimezone($tz)->toIso8601String(),
+            'duration_ms' => $session->duration_ms,
+            'catch_at_ms' => (int) ($schedule['catch_at_ms'] ?? $session->duration_ms),
+            'pounces_ms' => array_map('intval', array_values($schedule['pounces_ms'] ?? [])),
+            // What the server checks at finish (the app may show progress).
+            'min_away_moves' => (int) ($schedule['min_away_moves'] ?? 0),
+            'segments' => (int) ($schedule['segments'] ?? 1),
+            'min_move_interval_ms' => (int) ($schedule['min_move_interval_ms'] ?? 0),
+            // An "away" move must follow each pounce within this window (QA M5-R06-04).
+            'pounce_window_ms' => (int) ($schedule['pounce_window_ms'] ?? 0),
+        ];
+    }
+
+    /**
+     * The server's verdict on finish.
+     *
+     * @return array{session_id: string, success: bool, reason: 'too_few_moves'|'not_spread'|'wrong_technique'|'missed_pounces'|'too_uniform'|null, away_moves: int, toward_moves: int, segments_hit: int, segments: int, pounces_hit: int, pounces: int}
+     */
+    public static function wandResultPayload(PetCareSession $session): array
+    {
+        $r = $session->result ?? [];
+
+        return [
+            'session_id' => $session->public_id,
+            'success' => (bool) ($r['success'] ?? false),
+            'reason' => $r['reason'] ?? null,
+            'away_moves' => (int) ($r['away_moves'] ?? 0),
+            'toward_moves' => (int) ($r['toward_moves'] ?? 0),
+            'segments_hit' => (int) ($r['segments_hit'] ?? 0),
+            'segments' => (int) ($r['segments'] ?? 0),
+            'pounces_hit' => (int) ($r['pounces_hit'] ?? 0),
+            'pounces' => (int) ($r['pounces'] ?? 0),
+        ];
     }
 
     /**
@@ -668,6 +832,8 @@ class PetActivityService
         // the action applied.
         if ($result->changed()) {
             PetUpdated::afterCommit($locked, $eventType);
+        } elseif ($result->broadcastAs !== null) {
+            PetUpdated::afterCommit($locked, $result->broadcastAs);
         } elseif ($bookkeeping) {
             PetUpdated::afterCommit($locked, 'metric_changed');
         }

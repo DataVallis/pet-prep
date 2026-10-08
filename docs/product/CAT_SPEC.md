@@ -1,9 +1,9 @@
 # PetPrep — Mačka: specifikacija skrbi (M5-R06)
 
-> **Status:** spec **potrjen**, 8. 10. 2026. **Odločil David 7. 10. 2026:** na začetku sta vrsti **pes in mačka**. Izbira gre najprej po **vrsti**, nato po **pasmi** (seznam z iskanjem, skalabilno). Pred gradnjo je potreben spec skrbi za mačko, z viri kot v [`REALISM_SPEC.md`](REALISM_SPEC.md). **David 8. 10. 2026 13:47:** potrdil priporočene odgovore na vsa vprašanja Q1–Q10 (§0). Kar je še označeno z **(D)**, je Claudov predlog, ki čaka potrditev (seznam na koncu §0). **Zgrajeno (skrito, `PETPREP_CATS_ENABLED=false`):** temelj vrste na strežniku (M5-R06-01), izbirnik v aplikaciji (M5-R06-02) in **samo podatki** o mački po fazah z viri (M5-R06-03). Pravila skrbi (igra, pesek, praskanje, česanje), besedila in AI videz še niso zgrajeni.
+> **Status:** spec **potrjen**, 8. 10. 2026. **Odločil David 7. 10. 2026:** na začetku sta vrsti **pes in mačka**. Izbira gre najprej po **vrsti**, nato po **pasmi** (seznam z iskanjem, skalabilno). Pred gradnjo je potreben spec skrbi za mačko, z viri kot v [`REALISM_SPEC.md`](REALISM_SPEC.md). **David 8. 10. 2026 13:47:** potrdil priporočene odgovore na vsa vprašanja Q1–Q10 (§0). Kar je še označeno z **(D)**, je Claudov predlog, ki čaka potrditev (seznam na koncu §0). **Zgrajeno (skrito, `PETPREP_CATS_ENABLED=false`):** temelj vrste na strežniku (M5-R06-01), izbirnik v aplikaciji (M5-R06-02), podatki o mački po fazah z viri (M5-R06-03) in **igra namesto korakov na strežniku** (M5-R06-04: igra s palico, merilnik »Igra«, rutina, opomnik, brez korakov in bolezni zaradi sprehoda). Pesek, praskanje, česanje, besedila, AI videz in mačji zasloni v aplikaciji še niso zgrajeni.
 > **Oznake:** številka z oznako **[Cn]** ima vir v [`docs/research/cat-data/sources.md`](../research/cat-data/sources.md). **(D)** pomeni predlog brez vira ali še neodločeno, kar čaka Davidovo potrditev. Kar je (D), se staršem in otrokom ne sme prikazati kot dejstvo.
 > **Temeljno pravilo (kot pri psu):** številk o mačkah si ne izmišljujemo. Pravila igre (odstotki, ure, upadanje) so abstrakcija igre in so vedno označena kot odločitev, ne kot literatura.
-> **Naslednji korak:** odgovori na Q1–Q10 so potrjeni in prenešeni v `PRODUCT_SPEC.md` §13 (*načrt*). Izvedbeni načrt je v [`docs/engineering/M5-R06_PLAN.md`](../engineering/M5-R06_PLAN.md), vrednosti z viri v [`docs/research/cat-data/data.json`](../research/cat-data/data.json) (8. 10. 2026). David je načrt potrdil 8. 10. 2026; gradnja poteka po nalogah M5-R06-01 … 09 (R06-01 … 03 zgrajeni, mačke skrite).
+> **Naslednji korak:** odgovori na Q1–Q10 so potrjeni in prenešeni v `PRODUCT_SPEC.md` §13 (*načrt*). Izvedbeni načrt je v [`docs/engineering/M5-R06_PLAN.md`](../engineering/M5-R06_PLAN.md), vrednosti z viri v [`docs/research/cat-data/data.json`](../research/cat-data/data.json) (8. 10. 2026). David je načrt potrdil 8. 10. 2026; gradnja poteka po nalogah M5-R06-01 … 09 (R06-01 … 04 zgrajeni, mačke skrite).
 
 ## 0. Vprašanja za Davida — odločeno
 
@@ -26,7 +26,7 @@ Vsa vprašanja Q1–Q10: ✅ **David 8. 10. 2026 13:47** — potrdil priporočen
 - ~~imena faz (»mucek«, »mlada / zrela / starejša mačka«) (§2, §9)~~ ✅ David 8. 10. 2026 (PR #94);
 - ~~otroški samostalnik »muca« / »mucek« (§9)~~ ✅ David 8. 10. 2026; besedilo pogodbe (§9) še odprto;
 - ~~psova igra z žogo pri mački odpade, crkljanje ostane (§5.5, M5-R05)~~ ✅ David 8. 10. 2026 (načrt M5-R06);
-- podrobnosti mini-igre s palico: ~60 s, konec z »ulovom«, ≥ 2 h med igrama (§5.2);
+- ~~podrobnosti mini-igre s palico: ~60 s, konec z »ulovom«, ≥ 2 h med igrama (§5.2)~~ ✅ David 8. 10. 2026 ~20:40: ~60 s z »ulovom«, šteje samo, če je otrok res sodeloval (preveri strežnik), razmik 2 h od zadnje **uspešne** igre, prekinjena igra ne šteje in nima kazni (M5-R06-04);
 - ~~odrasla mačka 2 obroka na dan kot poenostavitev igre (§3)~~ ✅ David 8. 10. 2026;
 - ~~zamujena tedenska menjava peska → rok za čiščenje 2 h namesto 4 h (§4)~~ ✅ David 8. 10. 2026;
 - ~~mucek ob prihodu že navajen na pesek, brez »luže« (§4)~~ ✅ David 8. 10. 2026;
@@ -89,16 +89,19 @@ Vsa vprašanja Q1–Q10: ✅ **David 8. 10. 2026 13:47** — potrdil priporočen
 ### 5.1 Zakaj igra
 Igra in lov sta ena od petih temeljnih potreb mačke [C8]. Notranja mačka mora imeti možnost »lova«, igre in vertikalnega prostora [C22]. Viri svetujejo **2–3 igre na dan po 10–15 minut**, mladiči več [C10], ter **več kratkih iger čez dan** [C11]. Najboljša igrača je **palica s peresom**, ki se premika **stran od mačke**, kot plen, in ne tik pred njenim obrazom (mačke na manj kot 25 cm slabo vidijo [C11]). Igrače menjamo, da se muca ne naveliča [C8].
 
-### 5.2 Mini-igra »Palica s peresom« (Q1; podrobnosti (D))
+### 5.2 Mini-igra »Palica s peresom« (Q1; podrobnosti: David 8. 10. 2026 ~20:40; strežnik zgrajen M5-R06-04)
 - Otrok s prstom vleče pero po zaslonu. Muca se plazi, preži in skoči. Pero, ki beži **stran** od muce, je zanjo zanimivo, mahanje tik pred njenim nosom pa ne [C11]. Muca torej nagradi pravo tehniko.
-- Igra se konča z **»ulovom«** (muca ujame pero), kar je naravni zaključek lova (D, vir ni bil najden). Ena igra traja **~60 s** (D).
-- **Dnevni cilj** je število iger: mucek **3**, mlada / zrela / starejša **2** (Q1; [C10] 2–3, mladiči več). Med dvema igrama mora miniti **vsaj 2 h** (D), da so razporejene čez dan kot v resnici.
+- Igra se konča z **»ulovom«** (muca ujame pero), kar je naravni zaključek lova. Ena igra traja **~60 s**. ✅ **David 8. 10. 2026 ~20:40** (vir za »ulov« ni bil najden — odločitev igre).
+- **Šteje samo, če je otrok res sodeloval** (✅ David 8. 10. 2026 ~20:40): strežnik začne igro in jo na koncu oceni, kot pri šoli. Aplikacija pošlje samo premike peresa (čas in ali se je pero umaknilo **stran** od muce). Igra šteje, če je bilo dovolj premikov »stran« (vsaj 8), razporejenih čez vso minuto (v vsaki četrtini vsaj eden), če je bilo premikov »stran« vsaj polovica (pravilna tehnika [C11]), če je otrok po vsakem skoku muce v 2 s umaknil pero in če premiki niso strojno enakomerni (zaščita pred skripto). Številke so mehanika mini-igre (`config/wand.php`, Claude), ne podatki o mačkah.
+- **Prekinjena, nedokončana ali neuspešna igra ne šteje, nima kazni, otrok lahko takoj začne znova** (✅ David 8. 10. 2026 ~20:40).
+- **V tihih urah ni igre — muca spi** (✅ David 8. 10. 2026 ~21:5x, kot prosta igra psa): igra, ki bi segla v tihe ure, se ne začne; opomnik počaka do konca tihih ur. Če tihe ure družine ne pustijo prostora za dnevni cilj (z razmikom 2 h), se rutina »Igra« tisti dan ne pričakuje (izpeljano pravilo). Hkrati se z muco igra en otrok; pragove sodelovanja (8 premikov, odziv na skok v 2 s, preverjanje enakomernosti) je potrdil David 8. 10. 2026.
+- **Dnevni cilj** je število iger: mucek **3**, mlada / zrela / starejša **2** (Q1; [C10] 2–3, mladiči več). Med dvema **uspešnima** igrama mora miniti **vsaj 2 h** (✅ David 8. 10. 2026 ~20:40, merjeno od konca zadnje uspešne igre), da so razporejene čez dan kot v resnici.
 - **Merilnik »Igra«** nadomesti merilnik »Gibanje«: opravljene igre / cilj. Ob lokalni polnoči se ponastavi na 0 %, enako kot energija psa. Ni na lestvici faz 1–3 in **ni bolezni** (Q2). Opomnik pride enkrat na dan, po istem pravilu kot opomnik za sprehod (ne prej kot 2 h po koncu nočnega okna).
 - **Rutina »Igra«** (§7) šteje v Care Score kot sprehod. Pri skupni muci je cilj skupen: igre vseh otrok se seštejejo, vsak otrok pa mora za »pošten delež« opraviti vsaj cilj / n iger (zaokroženo navzgor).
 - **Igra je za vse načrte**, tudi za brezplačno domačo mačko, ker je osnovna skrb (kot sprehod).
 
 ### 5.3 Koraki
-**Koraki s telefona ostanejo samo pri psu.** Mačja družina ne vidi kartice za Apple Zdravje / Health Connect in aplikacija ne prosi za dovoljenje. Strežnik sync korakov za mačko zavrne (§11). Zasebnost je s tem boljša, ker zbiramo manj podatkov o otroku.
+**Koraki s telefona ostanejo samo pri psu.** Mačja družina ne vidi kartice za Apple Zdravje / Health Connect in aplikacija ne prosi za dovoljenje. Strežnik sync korakov za mačko zavrne z 422 `steps_not_applicable` (zgrajeno M5-R06-04). Zasebnost je s tem boljša, ker zbiramo manj podatkov o otroku.
 
 ### 5.4 Iskreno do staršev (D)
 Pri psu sprehod otroka spravi ven. Igra z muco pa je v aplikaciji in zahteva zaslon. To staršem povemo odkrito: **»Igra v aplikaciji traja eno minuto, prava igra z muco pa 10–15 minut, 2–3-krat na dan«** [C10]. Kasneje (po MVP) je mogoča nadgradnja z »resničnimi nalogami« (npr. naredi igračo iz kartona), ki jih potrdi starš.
@@ -106,6 +109,7 @@ Pri psu sprehod otroka spravi ven. Igra z muco pa je v aplikaciji in zahteva zas
 ### 5.5 Igra in crkljanje (M5-R05) pri mački (D)
 - Psova **igra z žogo** (samo razpoloženje, plačan izziv) pri mački **odpade**, ker je igra s palico že rutina skrbi.
 - **Crkljanje** (božanje) ostane enako kot pri psu: samo razpoloženje, samo plačan izziv. Mnoge mačke imajo raje pogost, a nežen in kratek stik [C8], zato je crkljanje kratko. Vabilo »crkljanje« ostane (1 na dan).
+- *Zgrajeno na strežniku (M5-R06-04):* žoga za mačko vrne 422 `play_not_available`, crkljanje deluje; mačka dobi samo vabilo za crkljanje (1 na dan), ki se pokaže, ko je današnji cilj iger dosežen (mačja različica pravila »sprehod opravljen« — potrdil David 8. 10. 2026).
 
 ## 6. Zanemarjanje → obstoječa lestvica
 
@@ -177,7 +181,7 @@ Velike kartice za vsako pasmo ne zadoščajo, ker bo pasem in vrst veliko (David
 
 ## 11. Technical impact (English, no code)
 
-Impact list only. David approved Q1–Q10 on 2026-10-08 13:47. Built so far (hidden behind `PETPREP_CATS_ENABLED`): species foundation (M5-R06-01), app picker (M5-R06-02) and the cat life-stage **data** with the seven new keys (M5-R06-03, values only). Rules, texts and media follow in M5-R06-04 … 09 (`docs/engineering/M5-R06_PLAN.md`).
+Impact list only. David approved Q1–Q10 on 2026-10-08 13:47. Built so far (hidden behind `PETPREP_CATS_ENABLED`): species foundation (M5-R06-01), app picker (M5-R06-02), the cat life-stage **data** with the seven new keys (M5-R06-03) and **play instead of steps on the server** (M5-R06-04: `pet_care_sessions`, `POST /api/child/pet/wand/start|finish`, play meter on `energy_level`, `play` routine with fair share, `play_reminder`, `pets.play_missed_on`; steps → 422 `steps_not_applicable`, training / ball dog-only). Litter, scratching, grooming, texts and media follow in M5-R06-05 … 09 (`docs/engineering/M5-R06_PLAN.md`).
 
 **Data model**
 - New `Species` enum (`dog`, `cat`) and a non-null `pets.species` column. Existing rows are backfilled to `dog`, so legacy dogs are unaffected.

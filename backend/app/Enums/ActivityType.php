@@ -32,6 +32,11 @@ enum ActivityType: string
     // merged into this row, PlayService::TIMELINE merge window).
     case PlayedWithPet = 'played_with_pet';
     case CuddledPet = 'cuddled_pet';
+    // M5-R06-04 (David 2026-10-08): a child finished a wand play session with
+    // the cat that the server judged successful (CAT_SPEC §5.2) — one row per
+    // session; the day's rows make the cat's play routine. Value = the
+    // session's number of the day (1, 2, 3 …).
+    case PlayedWand = 'played_wand';
 
     /**
      * Rows that describe something that happened to the dog, not a care

@@ -101,7 +101,7 @@ function clPairedPet(array $profile): Pet
 }
 
 describe('cat import provenance (cat-data/data.json)', function () {
-    it('takes every cat value from cat-data/data.json with a listed C source; UNSOURCED (D) stays unverified', function () {
+    it('takes every cat value from cat-data/data.json with a listed C source or a David decision; UNSOURCED (D) would stay unverified', function () {
         $known = clSourceIds();
         expect($known)->toHaveCount(25)->toContain('C1', 'C13', 'C25');
 
@@ -246,12 +246,15 @@ describe('cat import provenance (cat-data/data.json)', function () {
             ->and(StageParamKey::PlayMinGapMinutes->validate(-1))->not->toBeNull();
     });
 
-    it('seeds the cat rows into the database with provenance; only the (D) play gap is unverified', function () {
+    it('seeds the cat rows into the database with provenance; every cat row is verified since David confirmed the play gap (M5-R06-04)', function () {
         seedLifeStageData();
 
         $cats = BreedStageParam::whereIn('breed_slug', ['domestic-cat', 'maine-coon']);
         expect((clone $cats)->count())->toBe(count(BreedStageParamsSeeder::catRows()))
-            ->and((clone $cats)->where('verified', false)->pluck('key')->unique()->values()->all())->toBe([StageParamKey::PlayMinGapMinutes->value]);
+            ->and((clone $cats)->where('verified', false)->pluck('key')->unique()->values()->all())->toBe([]);
+        $gap = BreedStageParam::where(['breed_slug' => 'maine-coon', 'key' => StageParamKey::PlayMinGapMinutes->value])->sole();
+        expect($gap->value)->toBe(120)->and($gap->verified)->toBeTrue()
+            ->and($gap->notes)->toStartWith('Decision: '.BreedStageParamsSeeder::CONFIRMED_CAT_PLAY.'.');
 
         $young = BreedStageParam::where(['breed_slug' => 'maine-coon', 'stage' => 'young', 'key' => 'starts_at_months'])->sole();
         expect($young->value)->toBe(12)

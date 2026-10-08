@@ -47,6 +47,9 @@ return [
 
     'walk_reminder' => 'Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?',
 
+    // M5-R06-04 placeholder (draft): the cat's daily play reminder — final cat texts in M5-R06-06.
+    'play_reminder' => 'Tvoja muca se danes še ni igrala in te čaka s palico s peresom. Se greva igrat?',
+
     'parent_alarm' => 'Tvoj otrok danes ni poskrbel za psa.',
 
     'parent_alarm_detail' => [

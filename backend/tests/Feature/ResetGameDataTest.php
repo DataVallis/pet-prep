@@ -130,6 +130,12 @@ function rgSeed(): array
         'started_at' => $now, 'ends_at' => $now->copy()->addMinute(), 'expires_at' => $now->copy()->addMinutes(2), 'duration_ms' => 60000,
         'schedule' => json_encode([]),
     ]);
+    // M5-R06-04: cat care sessions (wand play) go with the game data too.
+    rgInsert('pet_care_sessions', [
+        'public_id' => (string) Str::uuid(), 'pet_id' => $pet->id, 'user_id' => $child->id, 'kind' => 'wand_play', 'local_date' => $today,
+        'started_at' => $now, 'ends_at' => $now->copy()->addMinute(), 'expires_at' => $now->copy()->addMinutes(2), 'duration_ms' => 60000,
+        'schedule' => json_encode([]),
+    ]);
 
     setQuietHours(['parent_id' => $parent->id, 'bedtime_start' => '21:00', 'bedtime_end' => '07:00', 'is_active' => true]);
     FamilyInvite::create(['family_id' => $family->id, 'created_by' => $parent->id, 'code' => strtoupper(Str::random(8)), 'expires_at' => $now->copy()->addDay()]);

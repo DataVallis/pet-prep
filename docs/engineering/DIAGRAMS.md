@@ -614,6 +614,61 @@ sequenceDiagram
   Note over R: parent dashboard: timeline row + play_today {play, cuddle} — no push, no score
 ```
 
+### 5g. Cat wand play instead of the walk (M5-R06-04, David 2026-10-08)
+
+Cats only (hidden behind `PETPREP_CATS_ENABLED`). The server starts the ~60 s game and judges the finish; only a **successful** session counts (meter, routine, 2 h gap). Numbers: goal and gap from `breed_stage_params` (`play_sessions_per_day` kitten 3 / cat 2, `play_min_gap_minutes` 120 — David), game mechanics in `config/wand.php`.
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant C as Child app
+  participant API as Laravel API
+  participant W as WandPlayService
+  participant DB as PostgreSQL
+  participant R as Reverb (private-pet.{id})
+  Note over W: cat with a profile only (a dog → 422 wand_not_available) · locks (423) first
+  C->>API: POST /api/child/pet/wand/start
+  API->>W: lock pet · decay catch-up (midnight → meter 0) · expire / interrupt stale sessions
+  W->>DB: goal today > 0? mess open? quiet hours now or before the game + TTL ends (cat sleeps)?<br/>last SUCCESSFUL finish + 120 min > now?<br/>another child's game running? game + TTL past local midnight?
+  alt refused
+    API-->>C: 422 needs_cleaning / wand_quiet_hours (next = end of quiet) / wand_too_soon (next = gap end) / wand_session_active (next = its TTL) / wand_day_ending (next = midnight)
+  else ok
+    W->>DB: same child's active game → aborted (no penalty)
+    W->>DB: pet_care_sessions (wand_play, active, 60 s, schedule: pounces, catch_at_ms)
+    API-->>C: 200 {session {id, ends_at, expires_at, catch_at_ms, pounces_ms, min_away_moves, segments}, state.wand}
+    API-->>R: PetUpdated wand_started
+  end
+  Note over C: child drags the feather ~60 s; the cat pounces and catches it at the end;<br/>app records each move {t ms, away: moved away from the cat?}
+  C->>API: POST /api/child/pet/wand/finish {session_id, moves[]}
+  API->>W: same child? ends_at − 5 s ≤ now < expires_at? lock began during the game? every t ≤ 60 000?
+  W->>W: score(): ≥ 8 away moves (< 300 ms apart count once) · one in each 15 s quarter · away ≥ 50 %<br/>· an away move ≤ 2 s after every pounce · gaps not machine-regular
+  alt took part
+    W->>DB: session completed · pets.energy_level = sessions today / goal × 100 (never lowered)
+    W->>DB: activities_log played_wand (actor child, value = n-th of the day) = the play routine
+    API-->>C: 200 accepted {result {success: true, away_moves, segments_hit}, state}
+    API-->>R: PetUpdated played_wand
+  else not enough
+    W->>DB: session failed (no meter, no gap, no penalty)
+    API-->>C: 200 rejected {result {success: false, reason: too_few_moves | not_spread | wrong_technique | missed_pounces | too_uniform}} — start again at once
+    API-->>R: PetUpdated wand_finished (the game ended)
+  end
+```
+
+The cat's day (no walk, no walk illness):
+
+```mermaid
+flowchart TD
+  D([Family-local day of a cat]) --> S["Successful wand sessions<br/>(played_wand rows)"]
+  S --> G{"≥ play_sessions_per_day?<br/>(kitten 3 · cat 2)"}
+  G -- yes --> DONE["play routine done · meter 100 %<br/>child credited with ≥ ⌈goal / n⌉ own sessions (fair share)"]
+  G -- no --> EX{"Birth day, hard stop / vet / game over ≥ 50 % of the non-quiet time,<br/>or quiet hours leave room for fewer games than the goal?"}
+  EX -- yes --> NONE["not expected"]
+  EX -- no --> MISS["missed at midnight → Care Score"]
+  MISS --> FACT["midnight close: pets.play_missed_on = that day<br/>(M5-R06-05: 'scratched the sofa' next day)"]
+  M([Family-local midnight]) --> RESET["meter (energy) → 0 · no pet_daily_walks row · never walk illness"]
+  LOW["meter ≤ 30 % outside quiet hours"] --> PUSH["play_reminder · once a day · not before night end + 2 h<br/>held while a sibling plays / the gap runs · dropped if the cat played (play_done) or a start is refused without an end today (not_actionable)"]
+```
+
 ## 6. Data model (core)
 
 Family model (M2-01, ADR-012): `families` own pets and quiet hours; `family_user` puts parents and children in a family; `pet_caretakers` links children to pets (shared pet = several rows). `users.parent_id` and `pets.user_id` are deprecated mirrors.

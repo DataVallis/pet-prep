@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Concerns\HandlesChildPet;
 use App\Http\Requests\ChildPetRequest;
 use App\Http\Requests\FinishTrainingRequest;
+use App\Http\Requests\FinishWandRequest;
 use App\Http\Requests\PlayRequest;
 use App\Http\Requests\StartTrainingRequest;
+use App\Http\Requests\StartWandRequest;
 use App\Http\Requests\SyncStepsRequest;
 use App\Http\Resources\ChildPetStateResource;
 use App\Services\PetActivityService;
@@ -145,8 +147,9 @@ class ChildPetController extends Controller
      * routine or metric changes. The response carries `play` {kind, source:
      * invitation | free}. A repeat by the same child and kind within 10 s →
      * `unchanged`. 422 play_not_available (no play for this pet — free mutt,
-     * legacy pet —, quiet hours: next_allowed_at = their end, or a mess to
-     * clean first); 423 while locked (incl. contract_required, payment_required).
+     * legacy pet, the ball game for a cat — M5-R06-04 —, quiet hours:
+     * next_allowed_at = their end, or a mess to clean first); 423 while
+     * locked (incl. contract_required, payment_required).
      *
      * POST /api/child/pet/play
      */
@@ -158,8 +161,49 @@ class ChildPetController extends Controller
     }
 
     /**
+     * Cat wand play (M5-R06-04, CAT_SPEC §5.2): start the ~60 s "Palica s
+     * peresom" game. The response carries `session` — the server's schedule
+     * (length, the cat's pounces, `catch_at_ms` = the catch at the end, what
+     * the finish is checked against). The same child's unfinished game is
+     * replaced (no penalty). 422 wand_not_available (a dog, no play data) |
+     * needs_cleaning | wand_too_soon (next_allowed_at = end of the 2 h gap
+     * after the last successful session) | wand_session_active (another
+     * child's game; next_allowed_at = its expiry) | wand_day_ending
+     * (next_allowed_at = local midnight); 423 while locked.
+     *
+     * POST /api/child/pet/wand/start
+     */
+    public function startWand(StartWandRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->startWand($pet, $request->user()), $pet, $request);
+    }
+
+    /**
+     * Cat wand play (M5-R06-04): finish the game with the feather moves the
+     * app saw (`t` ms since start, `away` = moved away from the cat). The
+     * server judges whether the child took part and returns `result`
+     * {success, reason: too_few_moves | not_spread | wrong_technique | null,
+     * counts}. `accepted` = it counts (play meter, routine, the 2 h gap);
+     * `rejected` = it does not (no penalty — start again at once); a repeat
+     * → `unchanged` with the same result. 422 wand_not_available |
+     * wand_session_invalid | wand_session_expired | wand_session_not_over |
+     * wand_invalid_moves | wand_session_interrupted; 423 while locked.
+     *
+     * POST /api/child/pet/wand/finish
+     */
+    public function finishWand(FinishWandRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->finishWand($pet, $request->user(), $request->sessionId(), $request->moves()), $pet, $request);
+    }
+
+    /**
      * Step sync: today's cumulative count from HealthKit / Health Connect.
      * status: accepted | capped (anti-cheat kept part) | rejected | unchanged | stale.
+     * 422 steps_not_applicable for a cat (M5-R06-04: steps are dog-only).
      *
      * POST /api/child/pet/steps
      */

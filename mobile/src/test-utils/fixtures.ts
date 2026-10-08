@@ -208,6 +208,8 @@ export function makeChildState(
     training: makeTrainingState(),
     // M5-R05 play & cuddle: none (a mutt / legacy-like pet has no play).
     play: null,
+    // M5-R06-04 cat wand play: null for a dog.
+    wand: null,
   };
 }
 

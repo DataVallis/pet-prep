@@ -14,6 +14,7 @@ use App\Services\PetProfilePayload;
 use App\Services\PlayPayload;
 use App\Services\TrainingPayload;
 use App\Services\TrainingService;
+use App\Services\WandPayload;
 use Carbon\CarbonInterface;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -50,6 +51,11 @@ use Illuminate\Http\Resources\Json\JsonResource;
  *
  * `play` (M5-R05): whether the child can play / cuddle now, the dog's
  * invitation and the happy scene — {@see PlayPayload}; null without play.
+ *
+ * `wand` (M5-R06-04, cats): the daily wand play — goal, today's successful
+ * sessions, the 2 h gap, the running game, whether a start is possible —
+ * {@see WandPayload}; null for a dog. A cat's `pet.energy_level` /
+ * `steps.energy_level` is its play meter (plan T5).
  *
  * `pet.media` (M4-05): status + signed URLs of the stored reference image and
  * state videos ({@see PetMediaService::mediaFor()}); `current_video_url` is
@@ -243,6 +249,8 @@ class ChildPetStateResource extends JsonResource
             // M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
             // the 30-minute happy scene. Null for a pet without play (free mutt, legacy, unpaid).
             'play' => PlayPayload::for($pet, $actor, $now)?->toArray(),
+            // M5-R06-04 cat wand play (the cat's daily play routine); null for a dog.
+            'wand' => WandPayload::for($pet, $actor, $now)?->toArray(),
         ];
     }
 }

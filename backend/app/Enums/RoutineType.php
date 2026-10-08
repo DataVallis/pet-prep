@@ -26,4 +26,12 @@ enum RoutineType: string
      * training enabled.
      */
     case Training = 'training';
+
+    /**
+     * The cat's daily wand play (M5-R06-04, CAT_SPEC §5.2 / §7): done when
+     * the day's successful sessions reach `play_sessions_per_day` (kitten 3,
+     * grown cat 2) — a whole-day routine like the walk (`steps` = sessions,
+     * `goal` = the day's goal). Only for cats with life-stage data.
+     */
+    case Play = 'play';
 }

@@ -47,6 +47,9 @@ return [
 
     'walk_reminder' => 'Your dog hasn’t been for a walk today and is waiting for you with the lead. Shall we go out?',
 
+    // M5-R06-04 placeholder (draft): the cat's daily play reminder — final cat texts in M5-R06-06.
+    'play_reminder' => 'Your cat hasn’t played today and is waiting for the feather wand. Shall we play?',
+
     'parent_alarm' => 'Your child hasn’t looked after the dog today.',
 
     'parent_alarm_detail' => [

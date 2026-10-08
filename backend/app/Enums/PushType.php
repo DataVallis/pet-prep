@@ -24,6 +24,14 @@ enum PushType: string
      */
     case WalkReminder = 'walk_reminder';
 
+    /**
+     * M5-R06-04: the cat's counterpart of the walk reminder — the play meter
+     * (energy column, CAT_SPEC §5.2) shows ≤ 30 %. Same rules: normal
+     * priority, at most one per family-local day, not before the walk
+     * reminder floor; dropped when the wand game cannot start now (M3-12).
+     */
+    case PlayReminder = 'play_reminder';
+
     /** Phase 3 — parent alarm (all parents of the family). */
     case ParentAlarm = 'parent_intervention_alarm';
 
@@ -50,7 +58,7 @@ enum PushType: string
     /** Phase 2 and above (not the walk reminder, not billing news): high priority, Android channel "alarm". */
     public function isUrgent(): bool
     {
-        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::TrialEnding, self::PaymentRequired], true);
+        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::TrialEnding, self::PaymentRequired], true);
     }
 
     /**
@@ -70,7 +78,17 @@ enum PushType: string
      */
     public function asksChildToAct(): bool
     {
-        return in_array($this, [self::SoftWarning, self::CriticalAlert, self::WalkReminder], true);
+        return in_array($this, [self::SoftWarning, self::CriticalAlert, self::WalkReminder, self::PlayReminder], true);
+    }
+
+    /**
+     * The once-a-day reminders outside the phase ladder: the dog's walk and
+     * (M5-R06-04) the cat's play — one per family-local day, not before the
+     * walk-reminder floor, dropped once the day is over.
+     */
+    public function isDailyReminder(): bool
+    {
+        return $this === self::WalkReminder || $this === self::PlayReminder;
     }
 
     /** Android notification channel (created by the app, M3-02). */
@@ -86,7 +104,7 @@ enum PushType: string
     public function ttlSeconds(): int
     {
         return match ($this) {
-            self::SoftWarning, self::CriticalAlert, self::WalkReminder => 3600,
+            self::SoftWarning, self::CriticalAlert, self::WalkReminder, self::PlayReminder => 3600,
             self::ParentAlarm => 3 * 3600,
             self::Illness, self::GameOver, self::TrialEnding, self::PaymentRequired => 12 * 3600,
         };
