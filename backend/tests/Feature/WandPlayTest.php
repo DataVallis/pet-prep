@@ -309,7 +309,8 @@ describe('wand session (server-driven, CAT_SPEC §5.2)', function () {
     });
 
     it('refuses a start whose game would run past the family-local midnight (wand_day_ending)', function () {
-        [, $child] = wpFamily();
+        [, $child, $cat] = wpFamily();
+        withoutQuietHours($cat); // else the night quiet hours refuse first
         wpAt('2026-10-21 23:58:30');
         wpStart($child)->assertStatus(422)
             ->assertJsonPath('reason', 'wand_day_ending')
@@ -343,12 +344,63 @@ describe('wand session (server-driven, CAT_SPEC §5.2)', function () {
             ->and($cat->fresh()->life_stage?->value)->toBe('puppy');
     });
 
-    it('allows the wand game during quiet hours like the walk, and is not gated by the cats flag once a cat exists', function () {
+    it('refuses the game in quiet hours — the cat sleeps (David 2026-10-08): now, or before the game would end', function () {
+        [, $child, $cat] = wpFamily(); // bedtime 21:00–07:00
+        wpAt('2026-10-21 22:00');
+        $res = wpStart($child)->assertStatus(422)
+            ->assertJsonPath('reason', 'wand_quiet_hours')
+            ->assertJsonPath('next_allowed_at', '2026-10-22T07:00:00+02:00');
+        expect($res->json('state.wand.blocked_reason'))->toBe('wand_quiet_hours')
+            ->and($res->json('state.wand.can_start'))->toBeFalse();
+
+        // 20:59: the game + its TTL would run into the night → refused like wand_day_ending.
+        wpAt('2026-10-21 20:59:00');
+        wpStart($child)->assertStatus(422)->assertJsonPath('reason', 'wand_quiet_hours')
+            ->assertJsonPath('next_allowed_at', '2026-10-22T07:00:00+02:00');
+        // 20:57:59 still fits (60 s game + 60 s TTL end before 21:00).
+        wpAt('2026-10-21 20:57:59');
+        wpStart($child)->assertOk();
+
+        // School quiet hours too: next = end of school.
+        setQuietHours(['family_id' => $cat->family_id, 'school_start' => '08:00', 'school_end' => '13:00', 'bedtime_start' => '21:00', 'bedtime_end' => '07:00']);
+        wpAt('2026-10-22 10:00');
+        wpStart($child)->assertStatus(422)->assertJsonPath('next_allowed_at', '2026-10-22T13:00:00+02:00');
+        expect(PetCareSession::where('pet_id', $cat->id)->where('local_date', '2026-10-22')->count())->toBe(0);
+    });
+
+    it('is not gated by the cats flag once a cat exists', function () {
         [, $child] = wpFamily();
         config(['petprep.cats_enabled' => false]);
-        wpAt('2026-10-21 22:00'); // bedtime 21–07
+        wpAt('2026-10-21 10:00');
 
         wpPlay($child)->assertOk()->assertJsonPath('status', 'accepted');
+    });
+
+    it('fits a kitten\'s 3 games (2 h gap) into a school + night day; an impossible day is excused, not missed (derived rule)', function () {
+        $day = fn (string $d) => [Carbon::parse($d, 'Europe/Ljubljana')->startOfDay()->utc(), Carbon::parse($d, 'Europe/Ljubljana')->addDay()->startOfDay()->utc()];
+
+        // Realistic: night 21–07, school 08–13 (or 08–15): 07:00, 13:00 / 15:00, 15:01 / 17:01 → ≥ 3.
+        [, , $cat] = wpFamily('2026-10-20 08:00', BreedType::MaineCoon, 3);
+        setQuietHours(['family_id' => $cat->family_id, 'school_start' => '08:00', 'school_end' => '13:00', 'bedtime_start' => '21:00', 'bedtime_end' => '07:00']);
+        [$a, $b] = $day('2026-10-21');
+        expect(WandPlayService::feasibleSessions($cat->fresh()->quietHours(), $a, $b, 120))->toBeGreaterThanOrEqual(3);
+        setQuietHours(['family_id' => $cat->family_id, 'school_start' => '08:00', 'school_end' => '15:00', 'bedtime_start' => '21:00', 'bedtime_end' => '07:00']);
+        expect(WandPlayService::feasibleSessions($cat->fresh()->quietHours(), $a, $b, 120))->toBeGreaterThanOrEqual(3);
+        // DST day (25 h) with the same quiet hours.
+        [$a, $b] = $day('2026-10-25');
+        expect(WandPlayService::feasibleSessions($cat->fresh()->quietHours(), $a, $b, 120))->toBeGreaterThanOrEqual(3);
+
+        // Impossible: night 20–07 + school 08–19 → only 07:00 and 19:00 fit (2 < 3).
+        setQuietHours(['family_id' => $cat->family_id, 'school_start' => '08:00', 'school_end' => '19:00', 'bedtime_start' => '20:00', 'bedtime_end' => '07:00']);
+        [$a, $b] = $day('2026-10-21');
+        expect(WandPlayService::feasibleSessions($cat->fresh()->quietHours(), $a, $b, 120))->toBe(2);
+
+        // The kitten never plays on 21 Oct: the play routine is not expected, nothing is recorded.
+        wpAt('2026-10-22 00:05');
+        wpTick();
+        $types = collect(app(RoutineLedgerService::class)->routinesFor(collect([$cat->fresh()]), '2026-10-21', '2026-10-21')[$cat->id])->pluck('type');
+        expect($types->contains(RoutineType::Play))->toBeFalse()
+            ->and($cat->fresh()->play_missed_on)->toBeNull();
     });
 });
 
@@ -447,6 +499,7 @@ describe('midnight, missed play and DST (family timezone)', function () {
 
     it('counts across the DST change of 25 Oct: the gap is 2 real hours, the day closes at local midnight (CET)', function () {
         [, $child, $cat] = wpFamily('2026-10-23 08:00');
+        withoutQuietHours($cat); // the clock change lies in the night quiet hours (no play then)
 
         // 01:29 CEST on 25 Oct, finished 01:30 CEST (= 23:30 UTC on 24 Oct).
         wpAt('2026-10-25 01:29');

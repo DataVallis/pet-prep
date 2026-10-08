@@ -11,6 +11,7 @@ use App\Enums\RoutineType;
 use App\Enums\StageParamKey;
 use App\Models\Pet;
 use App\Models\PetCareSession;
+use App\Models\QuietHours;
 use App\Models\User;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
@@ -201,6 +202,11 @@ class WandPlayService
         if (($gapEnd = $this->gapEndsAt($pet, $now)) !== null) {
             return $refuse(CareRefusal::WandTooSoon, $gapEnd);
         }
+        // David 2026-10-08 ~21:5x: the cat sleeps in quiet hours — no game now,
+        // and none that would still run (TTL included) when they begin.
+        if (($quietEnd = $this->quietBlocksUntil($pet, $now)) !== null) {
+            return $refuse(CareRefusal::WandQuietHours, $quietEnd);
+        }
         $live = $this->liveSession($pet, $now);
         if ($live !== null && ($child === null || (int) $live->user_id !== $child->id)) {
             return $refuse(CareRefusal::WandSessionActive, CarbonImmutable::instance($live->expires_at)->utc());
@@ -212,13 +218,90 @@ class WandPlayService
         return null;
     }
 
+    /**
+     * When quiet hours forbid a game started at $now: the end of the quiet
+     * stretch that is on now, or of the one the game (duration + TTL) would
+     * run into. Null = the game fits outside quiet hours.
+     */
+    public function quietBlocksUntil(Pet $pet, CarbonInterface $now): ?CarbonImmutable
+    {
+        $quiet = $pet->quietHours();
+        if (! $quiet->is_active) {
+            return null;
+        }
+        $start = CarbonImmutable::instance($now)->utc()->startOfSecond();
+        $end = $start->addMilliseconds(self::sessionDurationMs())->addSeconds(self::graceSeconds());
+        foreach (QuietHours::segmentsBetween($quiet, $start, $end) as [$segStart, , $isQuiet]) {
+            if ($isQuiet) {
+                return $this->endOfQuiet($quiet, CarbonImmutable::instance($segStart)->utc());
+            }
+        }
+
+        return null;
+    }
+
+    /** The first non-quiet instant at or after $from (bounded hops; DST-safe via QuietHours). */
+    private function endOfQuiet(QuietHours $quiet, CarbonImmutable $from): CarbonImmutable
+    {
+        $at = $from;
+        for ($hop = 0; $hop < 8 && $quiet->isQuietNow($at); $hop++) {
+            $next = $quiet->nextBoundaryAfter($at);
+            if ($next === null) {
+                break;
+            }
+            $at = CarbonImmutable::instance($next)->utc();
+        }
+
+        return $at;
+    }
+
+    /**
+     * Derived rule (David 2026-10-08 ~21:5x, DECISIONS): how many successful
+     * games fit into a family-local day [$dayStart, $dayEnd) outside quiet
+     * hours — greedy from the earliest moment: a game needs duration + TTL
+     * fully outside quiet hours and before midnight; the next may start
+     * $gapMinutes after the previous finish. A day whose quiet hours leave
+     * room for fewer games than the goal is not expected (like the birth
+     * day) — the ledger excuses it. Pure apart from QuietHours.
+     */
+    public static function feasibleSessions(?QuietHours $quiet, CarbonInterface $dayStart, CarbonInterface $dayEnd, int $gapMinutes, int $cap = 24): int
+    {
+        $durationS = intdiv(self::sessionDurationMs() + 999, 1000);
+        $need = $durationS + self::graceSeconds();
+        $start = CarbonImmutable::instance($dayStart)->utc();
+        $end = CarbonImmutable::instance($dayEnd)->utc();
+        $segments = $quiet === null || ! $quiet->is_active
+            ? [[$start, $end, false]]
+            : QuietHours::segmentsBetween($quiet, $start, $end);
+
+        $count = 0;
+        $t = $start;
+        foreach ($segments as [$a, $b, $isQuiet]) {
+            if ($isQuiet) {
+                continue;
+            }
+            $a = CarbonImmutable::instance($a)->utc();
+            $b = CarbonImmutable::instance($b)->utc();
+            if ($t->lessThan($a)) {
+                $t = $a;
+            }
+            while ($count < $cap && $t->addSeconds($need)->lessThanOrEqualTo($b)) {
+                $count++;
+                $t = $t->addSeconds($durationS)->addMinutes(max(0, $gapMinutes));
+            }
+        }
+
+        return $count;
+    }
+
     // ──────────────────────────────────────────────────────────────
     //  Start / finish (caller holds the pet lock)
     // ──────────────────────────────────────────────────────────────
 
     /**
      * Start a wand session. Refusals: wand_not_available, needs_cleaning,
-     * wand_too_soon (next_allowed = end of the 2 h gap), wand_session_active
+     * wand_quiet_hours (the cat sleeps — now, or before the game would end;
+     * next_allowed_at = end of that quiet stretch), wand_too_soon (next_allowed = end of the 2 h gap), wand_session_active
      * (another child's game; next_allowed = its TTL), wand_day_ending
      * (next_allowed = local midnight). The same child's own running session
      * is replaced (status `aborted`): "can restart immediately".

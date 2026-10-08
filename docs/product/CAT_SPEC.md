@@ -94,6 +94,7 @@ Igra in lov sta ena od petih temeljnih potreb mačke [C8]. Notranja mačka mora 
 - Igra se konča z **»ulovom«** (muca ujame pero), kar je naravni zaključek lova. Ena igra traja **~60 s**. ✅ **David 8. 10. 2026 ~20:40** (vir za »ulov« ni bil najden — odločitev igre).
 - **Šteje samo, če je otrok res sodeloval** (✅ David 8. 10. 2026 ~20:40): strežnik začne igro in jo na koncu oceni, kot pri šoli. Aplikacija pošlje samo premike peresa (čas in ali se je pero umaknilo **stran** od muce). Igra šteje, če je bilo dovolj premikov »stran« (vsaj 8), razporejenih čez vso minuto (v vsaki četrtini vsaj eden), če je bilo premikov »stran« vsaj polovica (pravilna tehnika [C11]), če je otrok po vsakem skoku muce v 2 s umaknil pero in če premiki niso strojno enakomerni (zaščita pred skripto). Številke so mehanika mini-igre (`config/wand.php`, Claude), ne podatki o mačkah.
 - **Prekinjena, nedokončana ali neuspešna igra ne šteje, nima kazni, otrok lahko takoj začne znova** (✅ David 8. 10. 2026 ~20:40).
+- **V tihih urah ni igre — muca spi** (✅ David 8. 10. 2026 ~21:5x, kot prosta igra psa): igra, ki bi segla v tihe ure, se ne začne; opomnik počaka do konca tihih ur. Če tihe ure družine ne pustijo prostora za dnevni cilj (z razmikom 2 h), se rutina »Igra« tisti dan ne pričakuje (izpeljano pravilo). Hkrati se z muco igra en otrok; pragove sodelovanja (8 premikov, odziv na skok v 2 s, preverjanje enakomernosti) je potrdil David 8. 10. 2026.
 - **Dnevni cilj** je število iger: mucek **3**, mlada / zrela / starejša **2** (Q1; [C10] 2–3, mladiči več). Med dvema **uspešnima** igrama mora miniti **vsaj 2 h** (✅ David 8. 10. 2026 ~20:40, merjeno od konca zadnje uspešne igre), da so razporejene čez dan kot v resnici.
 - **Merilnik »Igra«** nadomesti merilnik »Gibanje«: opravljene igre / cilj. Ob lokalni polnoči se ponastavi na 0 %, enako kot energija psa. Ni na lestvici faz 1–3 in **ni bolezni** (Q2). Opomnik pride enkrat na dan, po istem pravilu kot opomnik za sprehod (ne prej kot 2 h po koncu nočnega okna).
 - **Rutina »Igra«** (§7) šteje v Care Score kot sprehod. Pri skupni muci je cilj skupen: igre vseh otrok se seštejejo, vsak otrok pa mora za »pošten delež« opraviti vsaj cilj / n iger (zaokroženo navzgor).
@@ -108,7 +109,7 @@ Pri psu sprehod otroka spravi ven. Igra z muco pa je v aplikaciji in zahteva zas
 ### 5.5 Igra in crkljanje (M5-R05) pri mački (D)
 - Psova **igra z žogo** (samo razpoloženje, plačan izziv) pri mački **odpade**, ker je igra s palico že rutina skrbi.
 - **Crkljanje** (božanje) ostane enako kot pri psu: samo razpoloženje, samo plačan izziv. Mnoge mačke imajo raje pogost, a nežen in kratek stik [C8], zato je crkljanje kratko. Vabilo »crkljanje« ostane (1 na dan).
-- *Zgrajeno na strežniku (M5-R06-04):* žoga za mačko vrne 422 `play_not_available`, crkljanje deluje; mačka dobi samo vabilo za crkljanje (1 na dan), ki se pokaže, ko je današnji cilj iger dosežen (mačja različica pravila »sprehod opravljen« — Claude, konzervativno, čaka Davida).
+- *Zgrajeno na strežniku (M5-R06-04):* žoga za mačko vrne 422 `play_not_available`, crkljanje deluje; mačka dobi samo vabilo za crkljanje (1 na dan), ki se pokaže, ko je današnji cilj iger dosežen (mačja različica pravila »sprehod opravljen« — potrdil David 8. 10. 2026).
 
 ## 6. Zanemarjanje → obstoječa lestvica
 

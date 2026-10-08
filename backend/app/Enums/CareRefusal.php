@@ -105,6 +105,14 @@ enum CareRefusal: string
     /** The session + its finish TTL would run past the family-local midnight (next_allowed_at = midnight). */
     case WandDayEnding = 'wand_day_ending';
 
+    /**
+     * David 2026-10-08 ~21:5x: no wand play in quiet hours — the cat sleeps
+     * (as free play, PLAY_CUDDLE_SPEC §3.1). Also when the game + its TTL
+     * would run into the next quiet hours. next_allowed_at = the end of that
+     * quiet stretch.
+     */
+    case WandQuietHours = 'wand_quiet_hours';
+
     /** Unknown session, another child's session, or a session of another pet / kind. */
     case WandSessionInvalid = 'wand_session_invalid';
 

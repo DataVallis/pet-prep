@@ -114,6 +114,7 @@ trait HandlesChildPet
             CareRefusal::WandTooSoon => 'The cat needs a rest after the last game.',
             CareRefusal::WandSessionActive => 'Someone is already playing with the cat.',
             CareRefusal::WandDayEnding => 'The day is ending — play again after midnight.',
+            CareRefusal::WandQuietHours => 'The cat is sleeping — play again after quiet hours.',
             CareRefusal::WandSessionInvalid => 'Unknown wand session.',
             CareRefusal::WandSessionNotOver => 'The wand game is not over yet.',
             CareRefusal::WandSessionExpired => 'The wand game has expired.',

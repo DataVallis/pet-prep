@@ -17,7 +17,7 @@
 | Q7 | Starš in push | ✅ **David 8. 10.: kot predlagano** — vrstica v časovnici, na kartici psa **dnevno število** iger in crkljanj (ne »1 / 2«), **brez pusha**, brez točk. |
 | Q8 | Skupni pes | ✅ **David 8. 10.:** vsak otrok se lahko igra in crklja prosto; vabila so **psova**, opravi jih **prvi** otrok. |
 
-**Mačka (M5-R06-04, David 8. 10. 2026, CAT_SPEC §5.5) — zgrajeno na strežniku, skrito:** igra z žogo je **samo za psa** (mačka → 422 `play_not_available`; mačja igra je igra s palico, ki je rutina skrbi). **Crkljanje ostane** za mačko z istimi pravili; mačka dobi samo vabilo za crkljanje (1 na dan), ki se pokaže, ko je dosežen današnji cilj iger s palico (mačja različica pravila Q4 — Claude, čaka Davida).
+**Mačka (M5-R06-04, David 8. 10. 2026, CAT_SPEC §5.5) — zgrajeno na strežniku, skrito:** igra z žogo je **samo za psa** (mačka → 422 `play_not_available`; mačja igra je igra s palico, ki je rutina skrbi). **Crkljanje ostane** za mačko z istimi pravili; mačka dobi samo vabilo za crkljanje (1 na dan), ki se pokaže, ko je dosežen današnji cilj iger s palico (mačja različica pravila Q4 — potrdil David 8. 10. 2026). Tudi igra s palico je v tihih urah nemogoča (muca spi, David 8. 10. 2026) — enako kot §3.1.
 
 **Še odprti predlogi (D):** število vabil (2 / dan) in njihovo trajanje (2 h); dnevni pas 07–20; prosta igra ni dovoljena med tihimi urami (§3.1); združevanje vrstic v časovnici (§7); ponovljen pritisk v 10 s = ena igra (§12.5).
 
