@@ -31,10 +31,6 @@
     "retry": "Poskusi znova",
     "logout": "Odjava",
     "stale": "Ni povezave — prikazujem zadnje stanje.",
-    "breeds": {
-      "mutt": "Mešanček",
-      "border_collie": "Border collie"
-    },
     "moods": {
       "idle": "Srečen in igriv",
       "playing": "Igriv",

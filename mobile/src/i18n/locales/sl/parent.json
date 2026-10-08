@@ -62,6 +62,8 @@
     "petTitle": "Za katerega psa bo skrbel(a) {{name}}?",
     "newPet": "Nov pes",
     "newPetHint": "Otrok dobi svojega kužka. Rodi se, ko otrok podpiše Pogodbo o odgovornosti.",
+    "newPetAny": "Nov ljubljenček",
+    "newPetAnyHint": "Otrok dobi svojega ljubljenčka — psa ali muco. Rodi se, ko otrok podpiše Pogodbo o odgovornosti.",
     "joinPet": "Pridruži se psu: {{label}}",
     "joinPetHintNames": "Zanj že skrbi: {{names}}. Skupni pes, vsak otrok ima svojo oceno.",
     "joinPetHint": "Skupni pes, vsak otrok ima svojo oceno.",
@@ -111,13 +113,16 @@
       "challenge_requires_paid_breed": "12-tedenski izziv potrebuje plačljivo pasmo. Mešanček je pes brezplačnega načrta — izberite drugo pasmo ali brezplačni načrt.",
       "invalid_profile": "Izbire kužka ni bilo mogoče shraniti. Izberite znova.",
       "offline": "Ni povezave s strežnikom. Preverite internet in poskusite znova.",
-      "server": "Kode trenutno ni bilo mogoče ustvariti. Poskusite znova."
+      "server": "Kode trenutno ni bilo mogoče ustvariti. Poskusite znova.",
+      "breed_species_mismatch": "Pasma ne spada k izbrani vrsti. Izberite znova.",
+      "species_unavailable": "Ta vrsta še ni na voljo. Izberite drugo vrsto."
     },
     "changeDog": "Izberi drugega kužka",
     "editDog": "Spremeni kužka",
     "editDogHint": "Nova izbira ustvari novo kodo; ta koda takrat preneha veljati.",
     "previousChoicePin": "Ta koda še velja za prejšnjo izbiro kužka. Za novo izbiro ustvarite novo kodo.",
     "muttLocked": "Mešanček je brezplačen, a strežnik ga je zavrnil. To je napaka pri nas — pišite nam na podporo.",
+    "freeCatLocked": "Domača mačka je brezplačna, a strežnik jo je zavrnil. To je napaka pri nas — pišite nam na podporo.",
     "rateLimitedNoWait": "Preveč novih kod v kratkem času. Poskusite znova.",
     "retry": "Poskusi znova"
   },

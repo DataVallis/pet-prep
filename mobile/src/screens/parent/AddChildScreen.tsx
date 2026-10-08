@@ -2,9 +2,10 @@
  * AddChildScreen — parent "Dodaj otroka" and "Nova koda za prijavo" (M2-02).
  *
  * New child:   nickname (+ optional birth year) → `POST /api/parent/children`
- *              → "Nov pes" → "Izberi kužka" (breed, origin, age — M5-R04)
+ *              → "Nov pes" / "Nov ljubljenček" → picker (M5-R04, species-aware since
+ *                M5-R06-02: species → plan → breed → origin → age → summary)
  *                or "Pridruži se psu …" (active pets of the family; no picker)
- *              → `POST /api/parent/generate-pin {child_id, pet_id? | breed, origin, age_stage}` → PIN.
+ *              → `POST /api/parent/generate-pin {child_id, pet_id? | species, breed, origin, age_stage, plan}` → PIN.
  * Existing child without a pet: starts at the pet choice.
  * Paired child: starts at the PIN (mode `relogin` — a new device, same pet).
  *
@@ -20,7 +21,10 @@ import { Text, TextInput } from '@/components/ui/Text';
 import { CheckCircle, ChevronLeft, ChevronRight, Dog, KeyRound, Lock, PawPrint, RefreshCw, Smartphone } from 'lucide-react-native';
 
 import type { ChildPinResponse, NewPetProfile, PetBreed, PinLoginMode } from '@/api/client';
-import DogPickerStep from '@/components/parent/DogPickerStep';
+import { useQueryClient } from '@tanstack/react-query';
+
+import PetPickerStep from '@/components/parent/PetPickerStep';
+import { breedCatalogueKey, useBreedCatalogue } from '@/hooks/queries/useBreedCatalogue';
 import { INITIAL_PICKER_CHOICE, type PickerChoice } from '@/modules/petProfile/picker';
 import { challengePackage, useOfferings } from '@/modules/purchases';
 import { useCreateChild } from '@/hooks/queries/useFamilyMutations';
@@ -108,7 +112,7 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
   const [step, setStep] = useState<Step>(child ? (child.pet_id === null ? 'pet' : 'pin') : 'form');
   /** pet_id for the PIN request: null = new pet (or re-login). */
   const [joinPetId, setJoinPetId] = useState<number | null>(null);
-  /** M5-R04: the "Izberi kužka" choice of a new pet (null = join / re-login → no profile). */
+  /** M5-R04 / M5-R06-02: the picker choice of a new pet (null = join / re-login → no profile). */
   const [newPetProfile, setNewPetProfile] = useState<NewPetProfile | null>(null);
   const [pickerChoice, setPickerChoice] = useState<PickerChoice>(INITIAL_PICKER_CHOICE);
   /** Breeds the server refused for the current choice (422 `breed_locked`); plan rules live in the picker. */
@@ -120,6 +124,10 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
   // PIN stays valid until a new one succeeds — so it is shown again (or reused for the same choice).
   const [issuedPin, setIssuedPin] = useState<IssuedPin | null>(null);
   const isRelogin = child !== undefined && child.pet_id !== null;
+  // M5-R06-02: the picker catalogue (`GET /api/breeds`) — loaded early (already on the pet
+  // choice) so the picker opens without a spinner; falls back to today's dogs on failure.
+  const breedCatalogue = useBreedCatalogue({ enabled: step === 'pet' || step === 'dog' });
+  const queryClient = useQueryClient();
 
   return (
     <View style={styles.root}>
@@ -141,6 +149,7 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
       {step === 'pet' && target && (
         <PetStep
           childName={target.name}
+          severalSpecies={(breedCatalogue.catalogue?.species.length ?? 1) > 1}
           onChoose={(petId) => {
             setJoinPetId(petId);
             // A new pet first gets the picker; joining a shared pet never shows it.
@@ -150,8 +159,9 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
         />
       )}
       {step === 'dog' && target && (
-        <DogPickerStep
+        <PetPickerStep
           childName={target.name}
+          catalogue={breedCatalogue.catalogue}
           initial={pickerChoice}
           serverLockedBreeds={lockedBreeds}
           challengePrice={challengePrice}
@@ -182,11 +192,16 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
           }}
           onProfileRejected={(kind) => {
             // The server refused the choice (premium breed / validation): back to the picker.
-            // The free mutt is never locked (PRODUCT_SPEC §3) — only a paid breed is added
-            // (M3-11: premium breeds need the challenge plan; the picker already enforces it).
-            if (kind === 'breed_locked' && newPetProfile && newPetProfile.breed !== 'mutt') {
+            // A species' free breed is never locked (PRODUCT_SPEC §3) — only a paid breed is
+            // added (M3-11: premium breeds need the challenge plan; the picker enforces it).
+            if (kind === 'breed_locked' && newPetProfile && newPetProfile.plan !== 'free') {
               const refused = newPetProfile.breed;
               setLockedBreeds((current) => (current.includes(refused) ? current : [...current, refused]));
+            }
+            if (kind === 'species_unavailable') {
+              // M5-R06-01: the species was switched off meanwhile — reload what is offered and choose again.
+              void queryClient.invalidateQueries({ queryKey: breedCatalogueKey() });
+              setPickerChoice((c) => ({ ...c, species: null, breed: null }));
             }
             setPickerNotice(S.errors[kind]);
             setStep('dog');
@@ -303,7 +318,16 @@ function ProfileStep({ onCreated }: { onCreated: (child: { id: number; name: str
 }
 
 // ── Step 2: new pet or join an active pet of the family ─────────
-function PetStep({ childName, onChoose }: { childName: string; onChoose: (petId: number | null) => void }) {
+function PetStep({
+  childName,
+  severalSpecies,
+  onChoose,
+}: {
+  childName: string;
+  /** M5-R06-02: the catalogue offers more than one species → "Nov ljubljenček" instead of "Nov pes". */
+  severalSpecies: boolean;
+  onChoose: (petId: number | null) => void;
+}) {
   const dashboard = useParentDashboard();
   const family = familyFromDashboard(dashboard.data);
   const pets = joinablePets(family);
@@ -314,8 +338,8 @@ function PetStep({ childName, onChoose }: { childName: string; onChoose: (petId:
 
       <PetOption
         icon={<PawPrint color={palette.graphite} size={22} />}
-        title={S.newPet}
-        hint={S.newPetHint}
+        title={severalSpecies ? S.newPetAny : S.newPet}
+        hint={severalSpecies ? S.newPetAnyHint : S.newPetHint}
         onPress={() => onChoose(null)}
         testID="pet-option-new"
       />
@@ -331,7 +355,7 @@ function PetStep({ childName, onChoose }: { childName: string; onChoose: (petId:
           <PetOption
             key={pet.id}
             icon={<Dog color={palette.graphite} size={22} />}
-            title={S.joinPet(breedLabel(pet.breed_type))}
+            title={S.joinPet(breedLabel(pet.breed_type, pet.species))}
             hint={S.joinPetHint(caretakerNames(pet, family))}
             onPress={() => onChoose(pet.id)}
             testID={`pet-option-${pet.id}`}
@@ -370,9 +394,20 @@ function PetOption({ icon, title, hint, onPress, testID }: PetOptionProps) {
 }
 
 /** Picker choices the server refused (back to the picker with an explanation). */
-type ProfileRejection = 'breed_locked' | 'invalid_profile' | 'challenge_requires_paid_breed';
+type ProfileRejection =
+  | 'breed_locked'
+  | 'invalid_profile'
+  | 'challenge_requires_paid_breed'
+  | 'breed_species_mismatch'
+  | 'species_unavailable';
 
-const PROFILE_REJECTIONS: readonly ProfileRejection[] = ['breed_locked', 'invalid_profile', 'challenge_requires_paid_breed'];
+const PROFILE_REJECTIONS: readonly ProfileRejection[] = [
+  'breed_locked',
+  'invalid_profile',
+  'challenge_requires_paid_breed',
+  'breed_species_mismatch',
+  'species_unavailable',
+];
 
 function profileRejectionOf(kind: string | undefined): ProfileRejection | null {
   return PROFILE_REJECTIONS.find((k) => k === kind) ?? null;
@@ -455,9 +490,10 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
     });
   }, [isConnected, mode]);
 
-  // The free mutt refused as locked = our misconfiguration: explain, never send the parent round in circles.
-  const muttLocked = pinError?.kind === 'breed_locked' && profile?.breed === 'mutt';
-  const profileRejected = (pin === null || isForPreviousChoice) && !muttLocked ? profileRejectionOf(pinError?.kind) : null;
+  // The free breed (mutt / domestic cat) refused as locked = our misconfiguration: explain,
+  // never send the parent round in circles.
+  const freeBreedLocked = pinError?.kind === 'breed_locked' && profile?.plan === 'free';
+  const profileRejected = (pin === null || isForPreviousChoice) && !freeBreedLocked ? profileRejectionOf(pinError?.kind) : null;
 
   const isCoolingDown = cooldown > 0;
   const canRequest = !generate.isPending && !isCoolingDown;
@@ -467,7 +503,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
 
   const errorText = (() => {
     if (!pinError) return null;
-    if (muttLocked) return S.muttLocked;
+    if (freeBreedLocked) return profile?.species === 'cat' ? S.freeCatLocked : S.muttLocked;
     if (pinError.kind === 'rate_limited') {
       if (pinError.retryAfterSeconds === null) return S.rateLimitedNoWait;
       if (cooldownUntil !== null && !isCoolingDown) return null; // wait is over — "Nova koda" works again

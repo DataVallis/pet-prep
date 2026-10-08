@@ -5,14 +5,10 @@
  */
 
 import type { ChildPetState } from '@/api/client';
-import type { BreedType, Pet, PetDna, PetState } from '@/types';
+import { readBreed, readSpecies } from '@/modules/species/species';
+import type { Pet, PetDna, PetState } from '@/types';
 
-const BREEDS: readonly BreedType[] = ['mutt', 'border_collie'];
 const PET_STATES: readonly PetState[] = ['idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing'];
-
-function isBreed(value: string): value is BreedType {
-  return (BREEDS as readonly string[]).includes(value);
-}
 
 function isPetState(value: string): value is PetState {
   return (PET_STATES as readonly string[]).includes(value);
@@ -27,10 +23,13 @@ export interface PetContext {
 
 export function petFromChildState(state: ChildPetState, context: PetContext): Pet {
   const p = state.pet;
+  // M5-R06-02: an unknown breed stays `unknown` (never the mutt).
+  const breed = readBreed(p.breed_type);
   return {
     id: p.id,
     user_id: context.userId,
-    breed_type: isBreed(p.breed_type) ? p.breed_type : 'mutt',
+    breed_type: breed,
+    species: readSpecies(p.species, breed),
     pet_dna: context.petDna,
     current_video_url: p.current_video_url,
     hunger_level: p.hunger_level,

@@ -14,7 +14,8 @@
 
 import { isPaymentRequired, readPetPlan, type PetPlan } from '@/modules/plan/plan';
 import type { ChildPetState } from '@/api/client';
-import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
+import { readBreed, readSpecies } from '@/modules/species/species';
+import type { PetState, PetUpdatedBroadcast, ShownBreed, Species } from '@/types';
 import type { LockState } from '@/store/appStore';
 import { familyCalendar } from '@/modules/childPet/familyTime';
 import { normalizePetMedia, type PetMediaInfo } from '@/modules/petMedia/petMedia';
@@ -56,7 +57,10 @@ export type FeedMode = 'window' | 'emergency';
 export interface ChildPetView {
   pet: {
     id: number;
-    breed_type: BreedType;
+    /** M5-R06-02: a breed this build doesn't know stays `unknown` (never the mutt). */
+    breed_type: ShownBreed;
+    /** M5-R06-01: dog | cat; null only for an unknown breed from a server without `species`. */
+    species: Species | null;
     born_at: string | null;
     /** This child must sign before acting (per child — M2-01). */
     awaiting_contract: boolean;
@@ -149,7 +153,6 @@ export interface ChildPetView {
   clockSkewMs: number;
 }
 
-const BREEDS: readonly BreedType[] = ['mutt', 'border_collie'];
 const PET_STATES: readonly PetState[] = ['idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing'];
 const LOCK_REASONS: readonly LockReason[] = ['game_over', 'inactive', 'hard_stopped', 'payment_required', 'contract_required', 'ill'];
 
@@ -220,10 +223,6 @@ function lockReason(value: unknown): LockReason | null {
     : null;
 }
 
-function breed(value: string): BreedType {
-  return (BREEDS as readonly string[]).includes(value) ? (value as BreedType) : 'mutt';
-}
-
 function petState(value: string): PetState {
   return (PET_STATES as readonly string[]).includes(value) ? (value as PetState) : 'idle';
 }
@@ -247,7 +246,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
   return {
     pet: {
       id: p.id,
-      breed_type: breed(p.breed_type),
+      breed_type: readBreed(p.breed_type),
+      species: readSpecies(p.species, readBreed(p.breed_type)),
       born_at: p.born_at,
       awaiting_contract: bool(p.awaiting_contract),
       caretakers_count: num(p.caretakers_count),
@@ -388,7 +388,8 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
 
   const pet: ChildPetView['pet'] = {
     ...view.pet,
-    breed_type: breed(b.breed_type),
+    breed_type: readBreed(b.breed_type),
+    species: readSpecies(b.species, readBreed(b.breed_type)) ?? view.pet.species,
     hunger_level: b.hunger_level,
     thirst_level: b.thirst_level,
     energy_level: b.energy_level,

@@ -96,7 +96,18 @@
   },
   "breeds": {
     "mutt": "Mixed breed",
-    "border_collie": "Border Collie"
+    "border_collie": "Border Collie",
+    "domestic_cat": "Domestic cat",
+    "maine_coon": "Maine Coon"
+  },
+  "species": {
+    "dog": "Dog",
+    "cat": "Cat"
+  },
+  "breedUnknown": {
+    "dog": "Dog",
+    "cat": "Cat",
+    "any": "Pet"
   },
   "devices_one": "{{count}} device",
   "devices_other": "{{count}} devices",

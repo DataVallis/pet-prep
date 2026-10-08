@@ -31,10 +31,6 @@
     "retry": "Try again",
     "logout": "Sign out",
     "stale": "No connection — showing the last update.",
-    "breeds": {
-      "mutt": "Mixed breed",
-      "border_collie": "Border Collie"
-    },
     "moods": {
       "idle": "Happy and playful",
       "playing": "Playful",

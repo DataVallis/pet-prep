@@ -35,7 +35,8 @@ describe('normalizeChildState', () => {
       lock: { is_locked: true, reason: 'nonsense', until: null },
       water: { ...raw.water, remaining_today: '2', can_water: 'true', next_allowed_at: '' },
     } as ChildPetState);
-    expect(view.pet.breed_type).toBe('mutt');
+    // M5-R06-02: an unknown breed stays unknown (never the mutt).
+    expect(view.pet.breed_type).toBe('unknown');
     expect(view.pet.pet_state).toBe('idle');
     expect(view.lock.reason).toBeNull();
     expect(view.water.remaining_today).toBe(2);

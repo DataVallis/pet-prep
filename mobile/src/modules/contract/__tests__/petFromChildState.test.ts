@@ -18,6 +18,7 @@ describe('petFromChildState', () => {
       id: 7,
       user_id: 2,
       breed_type: 'mutt',
+      species: 'dog',
       pet_dna: dna,
       current_video_url: null,
       hunger_level: 99,
@@ -38,7 +39,8 @@ describe('petFromChildState', () => {
 
   it('falls back for unknown enum values', () => {
     const pet = petFromChildState(makeChildState({ breed_type: 'poodle', pet_state: 'dancing' }), { userId: 2, petDna: null });
-    expect(pet.breed_type).toBe('mutt');
+    // M5-R06-02: an unknown breed stays unknown (never the mutt).
+    expect(pet.breed_type).toBe('unknown');
     expect(pet.pet_state).toBe('idle');
   });
 });

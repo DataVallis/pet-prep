@@ -45,7 +45,8 @@ import {
   type VideoState,
 } from '@/modules/petMedia/petMedia';
 import type { BehaviourScene } from '@/modules/behaviour/behaviour';
-import type { BreedType, PetState } from '@/types';
+import type { PetState, ShownBreed, Species } from '@/types';
+import { breedName } from '@/modules/species/species';
 import { alpha, palette } from '@/theme';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
@@ -93,7 +94,10 @@ export interface PetMediaViewProps {
    * important shows — between the behaviour scene and `petState`; free tier falls back to idle.
    */
   mood?: 'playing' | null;
-  breed: BreedType;
+  /** M5-R06-02: `unknown` = a breed newer than this build (neutral label, never "mutt"). */
+  breed: ShownBreed;
+  /** Species for the neutral label of an unknown breed ("Pes" / "Mačka"). */
+  species?: Species | null;
   /** false = screen not focused / covered → pause every player. */
   active?: boolean;
   /** false = never play a video, show the still image (parent view of a locked pet). */
@@ -181,13 +185,13 @@ const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, onReady
   );
 });
 
-function DefaultPlaceholder({ breed, variant }: { breed: BreedType; variant: 'hud' | 'card' }) {
+function DefaultPlaceholder({ label, variant }: { label: string; variant: 'hud' | 'card' }) {
   const dark = variant === 'hud';
   return (
     <View style={[styles.placeholder, dark ? styles.placeholderDark : styles.placeholderLight]}>
       <PawPrint color={dark ? palette.mintBorder : palette.graphite} size={variant === 'hud' ? 56 : 28} />
       <Text style={[styles.placeholderText, dark ? styles.placeholderTextDark : styles.placeholderTextLight]}>
-        {PET_MEDIA_STRINGS.breeds[breed]}
+        {label}
       </Text>
     </View>
   );
@@ -208,6 +212,7 @@ export default function PetMediaView({
   scene = null,
   mood = null,
   breed,
+  species = null,
   active = true,
   videoEnabled = true,
   onMediaExpired,
@@ -389,7 +394,7 @@ export default function PetMediaView({
       testID={testID}
       accessible
       accessibilityRole="image"
-      accessibilityLabel={PET_MEDIA_STRINGS.a11y(PET_MEDIA_STRINGS.breeds[breed])}
+      accessibilityLabel={PET_MEDIA_STRINGS.a11y(breedName(breed, species))}
     >
       {showImage ? (
         <Image
@@ -401,7 +406,7 @@ export default function PetMediaView({
         />
       ) : (
         <View style={StyleSheet.absoluteFill} testID={`${testID}-placeholder`}>
-          {placeholder ?? <DefaultPlaceholder breed={breed} variant={variant} />}
+          {placeholder ?? <DefaultPlaceholder label={breedName(breed, species)} variant={variant} />}
         </View>
       )}
 

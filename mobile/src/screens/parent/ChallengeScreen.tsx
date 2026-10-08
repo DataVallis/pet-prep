@@ -246,7 +246,7 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
               const paused = pet.status === 'payment_required' && familyPet?.born_at !== null;
               return (
                 <Card key={pet.pet_id} testID={`challenge-pet-${pet.pet_id}`}>
-                  <Text style={styles.petTitle}>{S.petLine(breedLabel(familyPet?.breed_type ?? 'mutt'), names)}</Text>
+                  <Text style={styles.petTitle}>{S.petLine(breedLabel(familyPet?.breed_type ?? 'unknown', familyPet?.species), names)}</Text>
                   <Text style={[styles.body, paused && styles.pausedText]}>
                     {unborn
                       ? S.unborn

@@ -100,7 +100,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
     if (child.pet_id === null) return S.noPet;
     const pet = family.pets.find((p) => p.id === child.pet_id);
     if (!pet) return S.noPet;
-    const label = breedLabel(pet.breed_type);
+    const label = breedLabel(pet.breed_type, pet.species);
     if (pet.is_game_over) return `${label} · ${S.gameOver}`;
     if (!child.contract_signed) return `${label} · ${S.awaitingContract}`;
     return label;

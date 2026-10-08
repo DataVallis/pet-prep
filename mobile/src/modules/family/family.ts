@@ -26,6 +26,7 @@ import { readPetTraining, type PetTrainingSummary } from '@/modules/training/tra
 import { readPlayToday, type PlayToday } from '@/modules/play/play';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
+import { breedName, isSpecies } from '@/modules/species/species';
 
 /** One pet of the family as the generated schema types it (raw API). */
 export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'][number];
@@ -218,11 +219,13 @@ export function joinablePets(family: FamilyOverview | null): FamilyPet[] {
   return family ? family.pets.filter((p) => p.is_active && !p.is_game_over) : [];
 }
 
-const BREED_LABELS = strings('family', 'breeds') as Readonly<Record<string, string | undefined>>;
-
-/** "Mešanček" / "Mixed breed"; an unknown breed code is shown as is. */
-export function breedLabel(breed: string): string {
-  return BREED_LABELS[breed] ?? breed;
+/**
+ * "Mešanček" / "Mixed breed" / "Maine Coon". M5-R06-02: one source for breed names
+ * (`family:breeds`); an unknown breed reads as its species ("Pes" / "Mačka") or
+ * "Ljubljenček" — never as a raw code or a mutt.
+ */
+export function breedLabel(breed: string, species?: string | null): string {
+  return breedName(breed, isSpecies(species) ? species : null);
 }
 
 /** Nicknames of the children caring for a pet ("Maja, Luka"). */

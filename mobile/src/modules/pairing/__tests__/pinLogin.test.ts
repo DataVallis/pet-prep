@@ -51,6 +51,8 @@ describe('classifyPinLoginError', () => {
     [new ApiError('x', 422, { reason: 'invalid_pin' }), 'invalid'],
     [new ApiError('x', 422, { reason: 'pin_not_usable' }), 'invalid'],
     [new ApiError('x', 422, { errors: { pin: ['x'] } }), 'invalid'],
+    // M5-R06-01: a cat on a build without `species_cat` — the PIN is fine, the app is too old.
+    [new ApiError('x', 422, { reason: 'app_update_required' }), 'update_required'],
     [new ApiError('x', 500), 'server'],
     [new ApiError('x', 404), 'server'],
     [new TypeError('Network request failed'), 'offline'],
@@ -105,7 +107,10 @@ describe('sessionFromPinLogin', () => {
       escalation_level: 0,
       illness_until: null,
     });
-    expect(petFromPairedPet({ ...response.pet, breed_type: 'poodle' }, 9).breed_type).toBe('mutt');
+    // M5-R06-02: an unknown breed is never coerced into the mutt (a cat must never look like a free dog).
+    expect(petFromPairedPet({ ...response.pet, breed_type: 'poodle' }, 9).breed_type).toBe('unknown');
+    expect(petFromPairedPet({ ...response.pet, breed_type: 'maine_coon', species: 'cat' }, 9)).toMatchObject({ breed_type: 'maine_coon', species: 'cat' });
+    expect(petFromPairedPet({ ...response.pet, breed_type: 'sphynx', species: 'cat' }, 9)).toMatchObject({ breed_type: 'unknown', species: 'cat' });
   });
 });
 

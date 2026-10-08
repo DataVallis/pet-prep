@@ -6,14 +6,19 @@
 import { ApiError, api, getAuthToken, saveAuthToken, type PairedPet, type PinLoginErrorBody, type PinLoginResponse } from '@/api/client';
 import { logout } from '@/modules/session/logout';
 import type { SignInPayload } from '@/store/appStore';
-import type { BreedType, Pet } from '@/types';
+import { readBreed, readSpecies } from '@/modules/species/species';
+import type { Pet } from '@/types';
 
 export const PIN_LENGTH = 6;
 
 /** Fallback wait when a 429 carries neither Retry-After nor `retry_after`. */
 export const DEFAULT_LOCKOUT_SECONDS = 60;
 
-export type PinLoginErrorKind = 'invalid' | 'rate_limited' | 'offline' | 'server';
+/**
+ * `update_required` (M5-R06-01, 422 `app_update_required`): the PIN is valid, but the pet is
+ * a species this build can't show (a cat without `species_cat`) — the child must update.
+ */
+export type PinLoginErrorKind = 'invalid' | 'update_required' | 'rate_limited' | 'offline' | 'server';
 
 export interface PinLoginError {
   kind: PinLoginErrorKind;
@@ -27,9 +32,16 @@ function retryAfterFromBody(data: unknown): number | null {
   return typeof value === 'number' && Number.isFinite(value) && value > 0 ? Math.ceil(value) : null;
 }
 
+function reasonFromBody(data: unknown): string | null {
+  if (typeof data !== 'object' || data === null || !('reason' in data)) return null;
+  const { reason } = data as { reason: unknown };
+  return typeof reason === 'string' ? reason : null;
+}
+
 /**
  * Map a pin-login failure to what the child sees. Every 422 (wrong, expired, used,
- * `pin_not_usable`, malformed) is the same "invalid" — no hint which part was wrong.
+ * `pin_not_usable`, malformed) is the same "invalid" — no hint which part was wrong — except
+ * `app_update_required` (M5-R06-01): the code is fine, only this app is too old for the pet.
  */
 export function classifyPinLoginError(error: unknown): PinLoginError {
   if (error instanceof ApiError) {
@@ -37,25 +49,28 @@ export function classifyPinLoginError(error: unknown): PinLoginError {
       const seconds = error.retryAfterSeconds ?? retryAfterFromBody(error.data) ?? DEFAULT_LOCKOUT_SECONDS;
       return { kind: 'rate_limited', retryAfterSeconds: Math.max(1, seconds) };
     }
-    if (error.status === 422) return { kind: 'invalid', retryAfterSeconds: null };
+    if (error.status === 422) {
+      const kind = reasonFromBody(error.data) === 'app_update_required' ? 'update_required' : 'invalid';
+      return { kind, retryAfterSeconds: null };
+    }
     return { kind: 'server', retryAfterSeconds: null };
   }
   // fetch() rejects with a TypeError when there is no connection.
   return { kind: 'offline', retryAfterSeconds: null };
 }
 
-const BREEDS: readonly BreedType[] = ['mutt', 'border_collie'];
-
 /**
  * Minimal `Pet` from the pin-login payload — used only when `GET /api/user` can't be
  * read right after the login (the full raw pet has escalation, illness, steps …).
  */
 export function petFromPairedPet(pet: PairedPet, childId: number): Pet {
-  const breed = BREEDS.find((b) => b === pet.breed_type) ?? 'mutt';
+  // M5-R06-02: an unknown breed stays `unknown` (never the mutt).
+  const breed = readBreed(pet.breed_type);
   return {
     id: pet.id,
     user_id: childId,
     breed_type: breed,
+    species: readSpecies(pet.species, breed),
     pet_dna: null,
     current_video_url: pet.current_video_url,
     hunger_level: pet.hunger_level,
