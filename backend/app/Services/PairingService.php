@@ -160,6 +160,14 @@ class PairingService
             ])->saveQuietly();
             $this->families->addMember($family, $child, FamilyRole::Child);
 
+            // Deprecated flow = old app builds only, which can't show a cat (M5-R06-01,
+            // QA PR #91 m2): joining a cat is refused (uniform `pairing_refused` — no
+            // PIN oracle). A new pet here never has a profile → always a dog.
+            if ($parent->pairing_pet_id !== null
+                && Pet::find($parent->pairing_pet_id)?->speciesValue() === Species::Cat) {
+                throw new PairingException('The deprecated pairing flow is dog-only.');
+            }
+
             ['pet' => $pet, 'joined_existing' => $joined] = $this->attachChildToPet($family, $child, $parent->pairing_pet_id);
 
             // Consume the PIN so it cannot be reused

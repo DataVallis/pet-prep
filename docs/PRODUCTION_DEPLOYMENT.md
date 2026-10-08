@@ -329,6 +329,14 @@ docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app 
 docker image ls 'petprep-*'
 ```
 
+**Breed catalogue cache (M5-R06-01).** Free / paid and the picker catalogue are read from `breed_configs` through a cache (`breed-catalog:v1`, 5 min). Filament edits and the deploy seeder clear it automatically. After a **manual SQL edit** of `breed_configs` clear it yourself, otherwise the old values apply for up to 5 minutes:
+
+```bash
+docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan cache:forget breed-catalog:v1
+```
+
+Never use raw SQL to change `premium_unlock`: the model refuses any change that leaves a species without exactly one free breed (existing pets read it live for refunds and plan display) — raw SQL bypasses that check. A cache outage never blocks the game: the catalogue then reads the table directly (logged as a warning).
+
 ---
 
 ## 9. DNS & Domain Configuration

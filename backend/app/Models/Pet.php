@@ -152,8 +152,10 @@ class Pet extends Model
         // These hooks work even when no scheduler tick ran during the freeze.
         // M5-R06-01 (plan T2): the species always follows the breed
         // (pets_species_breed_check) — also when an admin changes the breed.
+        // Only on insert or a breed change (QA PR #91 m1): a model loaded without
+        // the column (older migrations, select lists) must not write it.
         static::saving(function (Pet $pet): void {
-            if ($pet->breed_type instanceof BreedType && ($pet->species === null || $pet->isDirty('breed_type'))) {
+            if ($pet->breed_type instanceof BreedType && (! $pet->exists || $pet->isDirty('breed_type'))) {
                 $pet->species = $pet->breed_type->species();
             }
         });

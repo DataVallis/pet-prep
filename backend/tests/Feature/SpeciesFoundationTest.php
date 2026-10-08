@@ -5,8 +5,10 @@ use App\Enums\ChallengeStatus;
 use App\Enums\PetPlan;
 use App\Enums\Species;
 use App\Events\PetUpdated;
+use App\Exceptions\BreedCatalogException;
 use App\Filament\Resources\BreedConfigResource\Pages\EditBreedConfig;
 use App\Filament\Resources\BreedConfigResource\Pages\ListBreedConfigs;
+use App\Filament\Resources\PetResource\Pages\CreatePet;
 use App\Filament\Resources\PetResource\Pages\ListPets;
 use App\Models\BreedConfig;
 use App\Models\ChildLoginPin;
@@ -15,12 +17,16 @@ use App\Models\User;
 use App\Services\BreedCatalogService;
 use App\Services\ChildProfileService;
 use App\Services\FalAiService;
+use App\Services\FamilyService;
 use App\Services\PairingService;
 use App\Services\PetPlanPayload;
 use Database\Seeders\BreedConfigsSeeder;
+use Filament\Actions\DeleteAction;
+use Filament\Tables\Actions\DeleteBulkAction;
 use Illuminate\Database\QueryException;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Testing\TestResponse;
 use Livewire\Livewire;
@@ -185,17 +191,57 @@ describe('breed configs: cat rows and the single free / paid source', function (
             ->and(Species::Cat->freeBreed())->toBe(BreedType::DomesticCat);
     });
 
-    it('reads premium from breed_configs (an admin change applies at once)', function () {
+    it('reads premium from breed_configs, not from code', function () {
         expect(BreedType::Mutt->isPremium())->toBeFalse()
             ->and(BreedType::BorderCollie->isPremium())->toBeTrue()
             ->and(BreedType::DomesticCat->isPremium())->toBeFalse()
             ->and(BreedType::MaineCoon->isPremium())->toBeTrue();
 
-        BreedConfig::where('breed_slug', 'border-collie')->firstOrFail()->update(['premium_unlock' => false]);
+        // Raw SQL (bypasses the model guard) + the documented cache:forget.
+        DB::table('breed_configs')->where('breed_slug', 'border-collie')->update(['premium_unlock' => false]);
+        BreedCatalogService::forget();
 
         expect(BreedType::BorderCollie->isPremium())->toBeFalse()
             ->and(PairingService::defaultPlanFor(BreedType::BorderCollie))->toBe(PetPlan::Free)
             ->and(PairingService::breedAllowed(BreedType::BorderCollie, PetPlan::Free))->toBeTrue();
+    });
+
+    it('refuses any model change that leaves a species without exactly one free breed (QA #91 M1)', function () {
+        $mutt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail();
+        $collie = BreedConfig::where('breed_slug', 'border-collie')->firstOrFail();
+        $cat = BreedConfig::where('breed_slug', 'domestic-cat')->firstOrFail();
+
+        expect(fn () => $mutt->fresh()->update(['premium_unlock' => true]))->toThrow(BreedCatalogException::class, 'dog would have 0')
+            ->and(fn () => $collie->fresh()->update(['premium_unlock' => false]))->toThrow(BreedCatalogException::class, 'dog would have 2')
+            ->and(fn () => $cat->fresh()->update(['premium_unlock' => true]))->toThrow(BreedCatalogException::class, 'cat would have 0')
+            ->and(fn () => $mutt->fresh()->delete())->toThrow(BreedCatalogException::class)
+            ->and(fn () => $mutt->fresh()->update(['breed_slug' => 'mutt-renamed']))->toThrow(BreedCatalogException::class);
+        $mutt->refresh();
+        $collie->refresh();
+
+        expect(BreedConfig::where('breed_slug', 'mutt')->value('premium_unlock'))->toBeFalse()
+            ->and(BreedType::Mutt->isPremium())->toBeFalse()
+            ->and(BreedType::BorderCollie->isPremium())->toBeTrue();
+
+        // Fine: other fields of the free breed, a paid breed removed, a slug the app doesn't know.
+        $mutt->update(['sort_order' => 3, 'hunger_decay_rate' => 8]);
+        $collie->delete();
+        BreedConfig::create(['breed_slug' => 'labrador', 'daily_steps_required' => 8000, 'hunger_decay_rate' => 8, 'premium_unlock' => false]);
+        expect(BreedConfig::where('breed_slug', 'border-collie')->exists())->toBeFalse();
+    });
+
+    it('falls back to a direct read when the cache is down (QA #91 m3)', function () {
+        app()->forgetScopedInstances();
+        Cache::shouldReceive('get')->andThrow(new RuntimeException('redis down'));
+        Cache::shouldReceive('put')->andThrow(new RuntimeException('redis down'));
+        Cache::shouldReceive('forget')->andThrow(new RuntimeException('redis down'));
+
+        BreedCatalogService::forget(); // never throws
+        $catalogue = app(BreedCatalogService::class);
+
+        expect($catalogue->isPremium(BreedType::BorderCollie))->toBeTrue()
+            ->and($catalogue->isPremium(BreedType::Mutt))->toBeFalse()
+            ->and($catalogue->freeBreedFor(Species::Cat))->toBe(BreedType::DomesticCat);
     });
 
     it('falls back to the enum defaults without breed configs', function () {
@@ -436,16 +482,19 @@ describe('GET /api/breeds', function () {
             ->and($cats->json('breeds.1'))->toMatchArray(['premium' => true, 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.maine_coon', 'search_keywords' => ['maine coon', 'mejnkun', 'mainska']]);
     });
 
-    it('orders paid breeds by sort_order and follows admin edits; ignores slugs the app does not know', function () {
+    it('follows admin edits (order, label, keywords) and ignores slugs the app does not know', function () {
         BreedConfig::create(['breed_slug' => 'labrador', 'daily_steps_required' => 8000, 'hunger_decay_rate' => 8, 'premium_unlock' => true, 'sort_order' => 1]);
-        BreedConfig::where('breed_slug', 'border-collie')->firstOrFail()->update(['premium_unlock' => false, 'sort_order' => 5]);
+        // A high sort_order never moves the free breed off the top.
+        BreedConfig::where('breed_slug', 'mutt')->firstOrFail()->update(['sort_order' => 50]);
+        BreedConfig::where('breed_slug', 'border-collie')->firstOrFail()->update(['label_key' => 'breeds.collie', 'search_keywords' => ['bc']]);
         $parent = User::factory()->parent()->create();
 
         $breeds = spCatalogue($parent, ['species' => 'dog'])->assertOk()->json('breeds');
 
         expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie'])
-            ->and($breeds[1]['premium'])->toBeFalse()
-            ->and($breeds[1]['free_plan_allowed'])->toBeTrue();
+            ->and($breeds[0]['sort_order'])->toBe(50)
+            ->and($breeds[1]['label_key'])->toBe('breeds.collie')
+            ->and($breeds[1]['search_keywords'])->toBe(['bc']);
     });
 
     it('is for parents only and validates the query', function () {
@@ -514,6 +563,37 @@ describe('Filament: species filters', function () {
             ->assertCanNotSeeTableRecords([$dog]);
     });
 
+    it('refuses a premium toggle or delete that breaks the free breed (QA #91 M1)', function () {
+        $mutt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail();
+
+        Livewire::test(EditBreedConfig::class, ['record' => $mutt->getRouteKey()])
+            ->fillForm(['premium_unlock' => true])
+            ->call('save')
+            ->assertHasFormErrors(['premium_unlock']);
+
+        Livewire::test(EditBreedConfig::class, ['record' => $mutt->getRouteKey()])
+            ->callAction(DeleteAction::class);
+
+        Livewire::test(ListBreedConfigs::class)
+            ->callTableBulkAction(DeleteBulkAction::class, [$mutt]);
+
+        expect($mutt->fresh())->not->toBeNull()
+            ->and($mutt->fresh()->premium_unlock)->toBeFalse();
+    });
+
+    it('offers cat breeds for a new pet only while cats are enabled (QA #91 m2)', function () {
+        Livewire::test(CreatePet::class)
+            ->fillForm(['breed_type' => 'maine_coon'])
+            ->call('create')
+            ->assertHasFormErrors(['breed_type']);
+
+        spCatsOn();
+        Livewire::test(CreatePet::class)
+            ->fillForm(['breed_type' => 'maine_coon'])
+            ->call('create')
+            ->assertHasNoFormErrors(['breed_type']);
+    });
+
     it('keeps an enum breed\'s species when an admin saves the catalogue fields', function () {
         $coon = BreedConfig::where('breed_slug', 'maine-coon')->firstOrFail();
 
@@ -527,5 +607,34 @@ describe('Filament: species filters', function () {
         expect($coon->species)->toBe(Species::Cat)
             ->and($coon->sort_order)->toBe(20)
             ->and($coon->search_keywords)->toBe(['maine coon', 'mejn kun']);
+    });
+});
+
+// ─────────────────────────────────────────────────────────────────────────
+describe('QA #91 follow-ups', function () {
+    it('never writes species when an update does not change the breed (m1)', function () {
+        $pet = Pet::factory()->create(['user_id' => User::factory()->child()->create()->id]);
+        $partial = Pet::query()->select(['id', 'is_active'])->findOrFail($pet->id);
+
+        DB::enableQueryLog();
+        $partial->update(['is_active' => false]);
+        $updates = collect(DB::getQueryLog())->pluck('query')->filter(fn (string $q): bool => str_starts_with($q, 'update "pets"'));
+
+        expect($updates)->not->toBeEmpty()
+            ->and($updates->filter(fn (string $q): bool => str_contains($q, 'species'))->all())->toBe([]);
+    });
+
+    it('refuses joining a cat through the deprecated /child/pair flow (m2)', function () {
+        $cat = Pet::factory()->create(['user_id' => User::factory()->child()->create()->id, 'breed_type' => 'domestic_cat']);
+        $parent = User::factory()->parent()->create();
+        $cat->forceFill(['family_id' => app(FamilyService::class)->ensureFamilyFor($parent)->id])->save();
+        $pin = app(PairingService::class)->generatePin($parent, $cat->id)['pin'];
+        $child = User::factory()->child()->create(['parent_id' => null]);
+
+        app('auth')->forgetGuards();
+        actingAsRole($child);
+        postJson('/api/child/pair', ['pin' => $pin])->assertStatus(422)->assertJsonPath('reason', 'pairing_refused');
+
+        expect($cat->caretakers()->where('users.id', $child->id)->exists())->toBeFalse();
     });
 });

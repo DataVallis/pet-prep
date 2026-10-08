@@ -13,7 +13,8 @@ class EditBreedConfig extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
-            Actions\DeleteAction::make(),
+            Actions\DeleteAction::make()
+                ->before(fn (Actions\DeleteAction $action) => BreedConfigResource::refuseBreakingDelete($action, [$this->getRecord()->getKey()])),
         ];
     }
 

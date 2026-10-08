@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\BreedType;
 use App\Enums\Species;
+use App\Exceptions\BreedCatalogException;
 use App\Services\BreedCatalogService;
 use Illuminate\Database\Eloquent\Model;
 
@@ -68,6 +69,20 @@ class BreedConfig extends Model
             $breed = BreedType::fromSlug((string) $config->breed_slug);
             if ($breed !== null) {
                 $config->species = $breed->species();
+            }
+
+            // QA PR #91 M1: exactly one free breed per species (BreedCatalogService).
+            if (! $config->exists || $config->isDirty(['premium_unlock', 'breed_slug'])) {
+                $violation = app(BreedCatalogService::class)->freeBreedViolation($config);
+                if ($violation !== null) {
+                    throw new BreedCatalogException($violation);
+                }
+            }
+        });
+        static::deleting(function (BreedConfig $config): void {
+            $violation = app(BreedCatalogService::class)->freeBreedViolation(null, [$config->id]);
+            if ($violation !== null) {
+                throw new BreedCatalogException($violation);
             }
         });
         static::saved(fn () => BreedCatalogService::forget());

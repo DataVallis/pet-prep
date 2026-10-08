@@ -6,6 +6,8 @@ use App\Enums\BreedType;
 use App\Enums\Species;
 use App\Models\BreedConfig;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
+use Throwable;
 
 /**
  * The breed catalogue (M5-R06-01, M5-R06_PLAN T1 / T3): one cached read of
@@ -22,8 +24,18 @@ use Illuminate\Support\Facades\Cache;
  *
  * Cache: CACHE_SECONDS in the app cache + a per-instance memo (the service is
  * scoped: one per request / queued job). BreedConfig saved / deleted and
- * BreedConfigsSeeder call forget(). An empty table is never cached, so a
- * database seeded after the first read is seen at once.
+ * BreedConfigsSeeder call forget(); a manual SQL edit needs
+ * `php artisan cache:forget breed-catalog:v1` (PRODUCTION_DEPLOYMENT.md). An
+ * empty table is never cached, so a database seeded after the first read is
+ * seen at once. A cache outage (Redis / database store down) never breaks a
+ * caller: every cache error falls back to a direct read (QA PR #91 m3).
+ *
+ * Invariant (QA PR #91 M1): every species with configured enum breeds has
+ * EXACTLY ONE free breed (`premium_unlock` false). premium_unlock is read live
+ * for existing pets (refunds, Free / Paid display, default plans), so a second
+ * free dog or no free dog would change payments of existing pets.
+ * BreedConfig::saving / deleting refuse such a change (freeBreedViolation()),
+ * the Filament form shows the same message. Raw SQL bypasses it — don't.
  */
 class BreedCatalogService
 {
@@ -36,7 +48,11 @@ class BreedCatalogService
 
     public static function forget(): void
     {
-        Cache::forget(self::CACHE_KEY);
+        try {
+            Cache::forget(self::CACHE_KEY);
+        } catch (Throwable $e) {
+            Log::warning('BreedCatalogService: cache forget failed', ['error' => $e->getMessage()]);
+        }
         if (app()->resolved(self::class)) {
             app(self::class)->memo = null;
         }
@@ -54,14 +70,23 @@ class BreedCatalogService
             return $this->memo;
         }
 
-        $cached = Cache::get(self::CACHE_KEY);
+        try {
+            $cached = Cache::get(self::CACHE_KEY);
+        } catch (Throwable $e) {
+            Log::warning('BreedCatalogService: cache read failed, reading breed_configs directly', ['error' => $e->getMessage()]);
+            $cached = null;
+        }
         if (is_array($cached) && $cached !== []) {
             return $this->memo = $cached;
         }
 
         $entries = $this->load();
         if ($entries !== []) {
-            Cache::put(self::CACHE_KEY, $entries, self::CACHE_SECONDS);
+            try {
+                Cache::put(self::CACHE_KEY, $entries, self::CACHE_SECONDS);
+            } catch (Throwable $e) {
+                Log::warning('BreedCatalogService: cache write failed', ['error' => $e->getMessage()]);
+            }
             $this->memo = $entries;
         }
 
@@ -129,6 +154,64 @@ class BreedCatalogService
         }
 
         return $rows;
+    }
+
+    /**
+     * Why this change would break "exactly one free breed per species", or
+     * null when it is fine (QA PR #91 M1). Reads the table directly (never the
+     * cache). Only enum breeds count (the catalogue ignores other slugs); only
+     * the species of the changed / deleted rows are checked; a species
+     * without any enum row is fine (not seeded yet).
+     *
+     * @param  BreedConfig|null  $changed  a row about to be created / updated (its new attributes)
+     * @param  list<int>  $deletedIds  rows about to be deleted
+     */
+    public function freeBreedViolation(?BreedConfig $changed = null, array $deletedIds = []): ?string
+    {
+        $rows = [];
+        $touched = [];
+
+        foreach (BreedConfig::query()->get(['id', 'breed_slug', 'premium_unlock']) as $row) {
+            $breed = BreedType::fromSlug((string) $row->breed_slug);
+            if (in_array($row->id, $deletedIds, true)) {
+                if ($breed !== null) {
+                    $touched[$breed->species()->value] = true;
+                }
+
+                continue;
+            }
+            if ($changed !== null && $changed->exists && $row->id === $changed->id) {
+                // The old slug's species is affected too (slug edit).
+                if ($breed !== null) {
+                    $touched[$breed->species()->value] = true;
+                }
+
+                continue;
+            }
+            $rows[] = [$breed, (bool) $row->premium_unlock];
+        }
+
+        if ($changed !== null) {
+            $breed = BreedType::fromSlug((string) $changed->breed_slug);
+            $rows[] = [$breed, (bool) $changed->premium_unlock];
+            if ($breed !== null) {
+                $touched[$breed->species()->value] = true;
+            }
+        }
+
+        foreach (array_keys($touched) as $species) {
+            $enumRows = array_filter($rows, fn (array $r): bool => $r[0] !== null && $r[0]->species()->value === $species);
+            if ($enumRows === []) {
+                continue;
+            }
+            $free = count(array_filter($enumRows, fn (array $r): bool => ! $r[1]));
+            if ($free !== 1) {
+                return "Every species needs exactly one free breed (premium off): {$species} would have {$free}. "
+                    .'Existing pets read it live (refunds, plan defaults, Free / Paid), so it cannot change while breeds are enum-based.';
+            }
+        }
+
+        return null;
     }
 
     /**

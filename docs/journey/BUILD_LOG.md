@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Nova pasma ali nova vrsta je odslej vrstica v bazi, ne nova različica aplikacije. Mačke so **skrite** (stikalo na strežniku + nova aplikacija mora povedati, da mačko zna prikazati), zato lahko vsak naslednji korak gre na produkcijo, ne da bi testerji kaj opazili. Pri psih se ni spremenilo nič: vsi obstoječi testi so ostali zeleni brez spremembe pričakovanih pasjih vrednosti.
 
-**Številke:** 4 pasme (2 psa, 2 mački); mačja voda 2× na dan z ≥ 4 h razmika, lakota in žeja −8 %/h (Davidova odločitev 8. 10.); 41 novih testov strežnika (tudi matrika pes / mačka × brezplačno / izziv × stara / nova aplikacija), skupaj 1482 zelenih.
+**Številke:** 4 pasme (2 psa, 2 mački); mačja voda 2× na dan z ≥ 4 h razmika, lakota in žeja −8 %/h (Davidova odločitev 8. 10.); 47 novih testov strežnika (tudi matrika pes / mačka × brezplačno / izziv × stara / nova aplikacija in zaščita, da ima vsaka vrsta natanko eno brezplačno pasmo), skupaj 1488 zelenih.
 
 **Kako povedati:**
 - 👩 Starši: *načrt* — »Kmalu boste lahko izbrali tudi muco. Domača muca bo brezplačna, Maine Coon bo del 12-tedenskega izziva.« (Še ni na voljo.)
