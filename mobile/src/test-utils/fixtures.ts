@@ -240,6 +240,8 @@ export interface LiveStateOverrides {
   behaviour?: Partial<Record<keyof RawState['behaviour'], unknown>> | null;
   /** M5-R03 `training` (raw); `null` drops the key (older server). */
   training?: Partial<Record<keyof RawState['training'], unknown>> | null;
+  /** M5-R05 `play` (raw); default null (no play), `'absent'` drops the key (older server). */
+  play?: unknown;
   timezone?: string;
   server_time?: string;
 }
@@ -283,8 +285,28 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
     steps: { steps_today: 1250, my_steps_today: 1250, goal: 4000, energy_level: 30, ...o.steps },
     behaviour: o.behaviour === null ? undefined : { ...base.behaviour, ...o.behaviour },
     training: o.training === null ? undefined : { ...base.training, ...o.training },
+    play: o.play === 'absent' ? undefined : o.play === undefined ? base.play : o.play,
   };
   return raw as unknown as ChildPetState;
+}
+
+/**
+ * M5-R05 `play` as the backend sends it: play possible now, no invitation, not happy.
+ * `invitation` / `mood` replace the defaults.
+ */
+export function makePlayState(
+  overrides: {
+    can_play?: boolean;
+    invitation?: { id: number; kind: 'play' | 'cuddle'; expires_at: string } | null;
+    mood?: { happy_until: string | null; scene: 'playing' | null };
+  } = {},
+) {
+  return {
+    can_play: true,
+    invitation: null,
+    mood: { happy_until: null, scene: null },
+    ...overrides,
+  };
 }
 
 /** A child of `family.children` in `GET /api/parent/dashboard` (M2-01 / M2-02). */

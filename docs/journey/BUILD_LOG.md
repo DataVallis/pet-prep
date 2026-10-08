@@ -8,6 +8,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-08 — Igra in crkljanje v aplikaciji (M5-R05)
+
+**Kaj se je zgodilo:** Otrok ima nad gumbi nov gumb **»Igra«** (ob »Šola«). Izbere **žogo** — povleče jo s prstom navzgor in spusti, kuža steče ponjo in jo prinese (3 meti) — ali **crkljanje** — 5-krat pogladi kužka s prstom, ob vsakem potegu se pokaže srček. Ko kuža sam povabi (»Kuža ti prinaša žogo. Se igrava?«), se namesto gumba pokaže prijazna kartica brez odštevanja in z »Mogoče kasneje«. Po igri aplikacija takoj pokaže veselega kužka: pol ure napis »Kuža je vesel« in video igranja — pes brez tega videa dobi mehke srčke, narisane v aplikaciji. Starš vidi na kartici psa »Danes: 3× igra z žogo, 2× crkljanje« in v časovnici »Igra z žogo ×3 · {vzdevek}« s srčkom. Ko igra ni mogoča, je gumb siv in pove zakaj (»Kuža spi. Igrata se, ko se zbudi.«).
+
+**Dostopnost:** vsak potez ima gumb (»Vrzi žogo«, »Drži in pobožaj« 3 s), bralnik zaslona crklja z enim dejanjem, pri vklopljenem »zmanjšaj gibanje« žoga in srčki ne letijo po zaslonu. Brez novih nativnih modulov (potezi z vgrajenim `PanResponder`), zato ni potreben nov build zaradi knjižnic.
+
+**Zakaj je pomembno:** Ko je za kužka vse narejeno, ima otrok še vedno kaj početi — in to je nagrada, ne naloga: brez točk, brez kazni, brez opomnikov.
+
+**Številke:** 55 novih testov aplikacije (skupaj 1.520, vsi zeleni; TypeScript brez napak); igra traja manj kot pol minute; 0 novih AI stroškov.
+
+**Kako povedati:**
+- 🧒 Otroci: »Vrzi kužku žogo ali ga pobožaj s prstom — potem je pol ure ves vesel.«
+- 👩 Starši: »Igra je čas s kužkom, ne točke. Na kartici vidite, kolikokrat se je otrok danes igral in crkljal.«
+- 📣 Omrežja: »Ko je vse narejeno, kuža prinese žogo. 🎾«
+- 🛠 Tehnično: »Mini-igri sta ločena plast nad HUD-om (pozneje jo lahko zamenja interaktivni 3D pes brez spremembe API-ja); optimistično stanje, nato vedno resnica strežnika; potezi s `PanResponder`, brez gesture-handlerja.«
+
+---
+
 ## 2026-10-08 — Izziv brez »7 dni brezplačno«: brezplačen je mešanček, izziv se začne z nakupom (M3-13)
 
 **Kaj se je zgodilo:** David je ob 10:28 odločil, da 12-tedenski izziv nima več 7-dnevnega brezplačnega preizkusa. Brezplačni preizkus PetPrepa je mešanček (brezplačen za vedno); izziv (49,99 € na psa, enkratno) se začne z nakupom. Pes na izzivu, ki ga starš še ni kupil, po podpisu pogodbe varno počaka (nič ne upada, nič se ne izgubi), 12 tednov pa začne teči šele ob nakupu. Starš lahko kupi že prej — takoj po kodi za otroka. Psi testerjev, ki so preizkus že začeli, ga obdržijo do konca. V aplikaciji (slovensko in angleško) besede »preizkus« ni več nikjer; gumb »12-tedenski izziv — kupi« je viden tudi za kužka, ki se še ni rodil. Produkcija že teče z vklopljenimi plačili (beta, ~20 testerjev plačuje v sandboxu trgovine).

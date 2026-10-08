@@ -10,6 +10,7 @@
 
 import { familyClock, localParts } from '@/modules/childPet/familyTime';
 import { PARENT_BEHAVIOUR_STRINGS, type BehaviourKind } from '@/modules/behaviour/behaviour';
+import { playTimelineText } from '@/modules/play/play';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -457,8 +458,13 @@ const ACTIVITY_LABELS = strings('family', 'activities') as Readonly<Record<strin
 /** System rows ("Opozorilo ni bilo upoštevano"), keyed by `activity_type`. */
 const SYSTEM_ACTIVITY_LABELS = strings('family', 'systemActivities') as Readonly<Record<string, string | undefined>>;
 
-/** "Maja nahranil(a) kužka", "Opozorilo ni bilo upoštevano"; an unknown type shows its code. */
-export function activityText(entry: Pick<TimelineEntry, 'activity_type' | 'actor_nickname'>): string {
+/**
+ * "Maja nahranil(a) kužka", "Opozorilo ni bilo upoštevano"; an unknown type shows its code.
+ * M5-R05: "Igra z žogo ×3 · Maja" / "Crkljanje · Maja" (`value` = plays merged into the row).
+ */
+export function activityText(entry: Pick<TimelineEntry, 'activity_type' | 'actor_nickname'> & { value?: number | null }): string {
+  const play = playTimelineText(entry.activity_type, entry.actor_nickname, entry.value ?? null);
+  if (play !== null) return play;
   const system = SYSTEM_ACTIVITY_LABELS[entry.activity_type];
   if (system) return system;
   const label = ACTIVITY_LABELS[entry.activity_type] ?? entry.activity_type;

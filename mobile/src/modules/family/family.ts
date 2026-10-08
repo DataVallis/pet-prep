@@ -23,6 +23,7 @@ import {
 } from '@/modules/family/scoring';
 import { readPetBehaviour, type PetBehaviour } from '@/modules/behaviour/behaviour';
 import { readPetTraining, type PetTrainingSummary } from '@/modules/training/training';
+import { readPlayToday, type PlayToday } from '@/modules/play/play';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -33,7 +34,7 @@ export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'
  * One pet of the family after normalisation: the schema's loose `timeline` and
  * union-typed `traffic_light` replaced by real types (M2-05).
  */
-export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today' | 'behaviour' | 'training' | 'plan'> & {
+export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today' | 'behaviour' | 'training' | 'plan' | 'play_today'> & {
   /** M3-11 / M3-13: free mutt sandbox or the challenge (payment_required / paid; trial = a pre-M3-13 trial); legacy → paid. */
   plan: PetPlan;
   traffic_light: TrafficLight;
@@ -44,6 +45,8 @@ export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_
   behaviour: PetBehaviour;
   /** M5-R03: "Kuža zna …", today's training; disabled for a legacy pet / older server. */
   training: PetTrainingSummary;
+  /** M5-R05: today's ball games / cuddles (all children); null without play (free, legacy) / older server. */
+  play_today: PlayToday | null;
 };
 
 export interface FamilyChildStats {
@@ -164,6 +167,7 @@ export function normalizePet(raw: FamilyPetRaw): FamilyPet {
     timeline: readTimeline(p.timeline),
     behaviour: readPetBehaviour(p.behaviour),
     training: readPetTraining(p.training),
+    play_today: readPlayToday(p.play_today),
     plan: readPetPlan(p.plan),
   };
 }

@@ -147,11 +147,14 @@ export function sameMedia(a: string | null, b: string | null): boolean {
  *   a happy loop behind "the dog was taken" would be wrong)
  * - M5-R02: an open accident / chewing (`behaviour.scene`) without a lock → that scene;
  *   `selectMediaSource` falls back to the `pet_state` chain when it isn't stored (free tier).
+ * - M5-R05: the happy mood (`play.mood.scene`, already filtered by `moodSceneAt`) sits
+ *   between the behaviour scene and the pet state: `playing`, whose chain ends in `idle`.
  */
 export function videoStateFor(
   petState: PetState,
   lockReason: LockReason | null = null,
   scene: BehaviourScene | null = null,
+  mood: 'playing' | null = null,
 ): VideoState | null {
   switch (lockReason) {
     case 'game_over':
@@ -163,7 +166,7 @@ export function videoStateFor(
     case 'hard_stopped':
       return 'sleeping';
     default:
-      return scene ?? petState;
+      return scene ?? mood ?? petState;
   }
 }
 

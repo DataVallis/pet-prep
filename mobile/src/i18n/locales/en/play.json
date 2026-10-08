@@ -1,0 +1,54 @@
+{
+  "play": {
+    "chip": "Play",
+    "chipA11y": "Play with your pup",
+    "pickBall": "Ball",
+    "pickCuddle": "Cuddles",
+    "invite": "Your pup brought you a ball. Want to play?",
+    "start": "Play",
+    "hint": "Swipe the ball up to throw it.",
+    "throwButton": "Throw the ball",
+    "throwA11y": "Throw the ball for your pup",
+    "progress": "Throw {{n}} of 3",
+    "fetching": "Your pup runs after the ball …",
+    "done": "Thanks for playing! Your pup is so happy."
+  },
+  "cuddle": {
+    "invite": "Your pup snuggles up to you. Give them a cuddle?",
+    "start": "Cuddle",
+    "hint": "Gently stroke your pup with your finger.",
+    "holdButton": "Hold to cuddle",
+    "areaA11y": "Your pup. Stroke it with your finger, or use the button below.",
+    "progress": "Stroke {{n}} of 5",
+    "done": "Your pup loves it. Thanks for the cuddles!"
+  },
+  "mood": {
+    "happy": "Your pup is happy"
+  },
+  "moment": {
+    "dismiss": "Maybe later",
+    "title": "Play time",
+    "pickTitle": "What would you like to do?",
+    "close": "Close",
+    "finish": "Done"
+  },
+  "unavailable": {
+    "sleeping": "Your pup is asleep. Play when it wakes up.",
+    "dirty": "Clean up first, then play.",
+    "other": "You can't play right now.",
+    "sleepingUntil": "Your pup is asleep. Play again at {{clock}}."
+  },
+  "parent": {
+    "timeline": {
+      "play": "Ball game · {{child}}",
+      "cuddle": "Cuddles · {{child}}",
+      "playCount": "Ball game ×{{n}} · {{child}}",
+      "cuddleCount": "Cuddles ×{{n}} · {{child}}",
+      "playAnon": "Ball game",
+      "cuddleAnon": "Cuddles",
+      "playAnonCount": "Ball game ×{{n}}",
+      "cuddleAnonCount": "Cuddles ×{{n}}"
+    },
+    "today": "Today: {{play}}× ball game, {{cuddle}}× cuddles"
+  }
+}

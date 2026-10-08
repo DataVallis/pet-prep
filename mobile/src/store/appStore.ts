@@ -44,6 +44,9 @@ export interface LockDetails {
  */
 export type BootStatus = 'restoring' | 'offline' | 'ready';
 
+/** M5-R05: what the "Igra" overlay shows — the choice, the ball game or cuddles. */
+export type PlayOverlayMode = 'pick' | 'play' | 'cuddle';
+
 export interface SignInPayload {
   token: string;
   user: AppUser;
@@ -160,6 +163,12 @@ interface AppStore {
   isTrainingVisible: boolean;
   setTrainingVisible: (visible: boolean) => void;
   /**
+   * M5-R05 "Igra" overlay over the HUD: `pick` (Žoga / Crkljanje), or one mini-game;
+   * null = closed. The HUD video pauses while it is open.
+   */
+  playOverlay: PlayOverlayMode | null;
+  setPlayOverlay: (mode: PlayOverlayMode | null) => void;
+  /**
    * Parent: a tapped push (M3-02) asks the dashboard to open the detail of the child
    * caring for this pet; the dashboard clears it once handled.
    */
@@ -261,6 +270,8 @@ export const useAppStore = create<AppStore>((set) => ({
   setAlbumVisible: (isAlbumVisible) => set({ isAlbumVisible }),
   isTrainingVisible: false,
   setTrainingVisible: (isTrainingVisible) => set({ isTrainingVisible }),
+  playOverlay: null,
+  setPlayOverlay: (playOverlay) => set({ playOverlay }),
   pushTarget: null,
   setPushTarget: (pushTarget) => set({ pushTarget }),
 
@@ -281,6 +292,7 @@ export const useAppStore = create<AppStore>((set) => ({
       isCleaningOverlayVisible: false,
       isAlbumVisible: false,
       isTrainingVisible: false,
+      playOverlay: null,
       pushTarget: null,
     }),
 }));

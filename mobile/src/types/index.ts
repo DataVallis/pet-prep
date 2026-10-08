@@ -124,6 +124,11 @@ export interface PetUpdatedBroadcast {
    * missing in broadcasts from servers before M5-R03. Read via `readPetTraining`.
    */
   training?: PetTrainingRaw;
+  /**
+   * M5-R05 play & cuddle (pet level: `can_play`, the dog's invitation, the happy scene);
+   * null for a pet without play, missing from servers before M5-R05. Read via `broadcastPlay`.
+   */
+  play?: unknown;
   event_type: string | null;
   updated_at: string | null;
   /** When the server emitted this snapshot (ms precision); newer wins. */

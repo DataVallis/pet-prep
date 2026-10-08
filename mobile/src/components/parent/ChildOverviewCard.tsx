@@ -8,6 +8,8 @@
  * (luža / pregrizen copat), the pet block lists the puppy's bladder clock and open
  * messes, and the 7-day take-outs / tidied slippers. M5-F01: "12-week challenge — buy"
  * under the header while the dog's challenge can be bought (`canBuyChallenge`).
+ * M5-R05: "Danes: 3× igra z žogo, 2× crkljanje" in the pet block (dogs with play only;
+ * a count, never a score).
  */
 
 import { Pressable, StyleSheet, View } from 'react-native';
@@ -45,6 +47,7 @@ import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
 import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
+import { playTodayLine } from '@/modules/play/play';
 import { fonts, palette, tightTracking } from '@/theme';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
@@ -99,6 +102,7 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
   const progress = progressText(child.progress);
   const behaviourLines = pet ? parentBehaviourLines(pet.behaviour, timezone) : [];
   const behaviourStats = PARENT_BEHAVIOUR_STRINGS.stats(child.stats.taken_out, child.stats.chewing_resolved);
+  const playToday = pet ? playTodayLine(pet.play_today) : null;
 
   return (
     <Card testID={`child-card-${id}`}>
@@ -270,6 +274,11 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
                 </Text>
               ))}
             </View>
+          )}
+          {playToday !== null && (
+            <Text style={styles.behaviourLine} testID={`child-pet-play-today-${id}`}>
+              ♥ {playToday}
+            </Text>
           )}
         </View>
       )}
