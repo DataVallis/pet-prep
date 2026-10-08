@@ -368,6 +368,61 @@ export function readFinishResponse(raw: unknown): FinishTrainingResponse | null 
   return s !== null && result !== null && state !== null ? { status: s, result, state } : null;
 }
 
+// ── Result title (M5-F04) ─────────────────────────────────────
+
+/**
+ * How the session went, for the result title (M5-F04, rule confirmed by David
+ * 2026-10-08 07:43). Never false praise: a weak session never says "Great job".
+ * Only the commands the dog OBEYED count (waiting when it didn't obey is right, not a miss):
+ * - `excellent` — every obeyed command praised on time AND no praise when the dog didn't obey ("Odlično!")
+ * - `good` — more than half of the obeyed commands praised on time ("Dobro!")
+ * - `practice` — at least one, but half or fewer ("Še malo vaje — jutri bo bolje")
+ * - `none` — no praise on time, or the dog never obeyed ("Tokrat ni šlo, poskusi jutri")
+ */
+export type TrainingResultBucket = 'excellent' | 'good' | 'practice' | 'none';
+
+/** Outcomes of a command the dog obeyed (the server scorer's `obeys` branch). */
+const OBEYED_OUTCOMES: ReadonlySet<TrialOutcome> = new Set(['in_time', 'too_early', 'too_late', 'no_praise']);
+
+export interface TrainingResultCounts {
+  /** Obeyed commands praised on time. */
+  onTime: number;
+  /** Commands the dog obeyed. */
+  obeyed: number;
+  /** Praises while the dog did not obey. */
+  praisedWithoutObeying: number;
+}
+
+/**
+ * Counts from the parsed per-command trials (QA PR #76 m3): `readTrainingResult` drops
+ * malformed / unknown trials, so title and facts line come from the same, checked list —
+ * the server's summary `successes` / `obeyed` can't inflate the ratio. A result without
+ * trials counts as 0 / 0 (the server always sends them).
+ */
+export function trainingResultCounts(result: Pick<TrainingResult, 'trials'>): TrainingResultCounts {
+  let onTime = 0;
+  let obeyed = 0;
+  let praisedWithoutObeying = 0;
+  for (const trial of result.trials) {
+    if (OBEYED_OUTCOMES.has(trial.outcome)) obeyed += 1;
+    if (trial.outcome === 'in_time') onTime += 1;
+    if (trial.outcome === 'praised_without_obeying') praisedWithoutObeying += 1;
+  }
+  return { onTime, obeyed, praisedWithoutObeying };
+}
+
+/**
+ * ratio = on time / obeyed (integer comparisons, no float boundaries): all + no praise
+ * without obeying → excellent; all but with a praise without obeying, or > ½ → good;
+ * > 0 (**exactly half included**) → practice; 0 (also obeyed = 0) → none.
+ */
+export function trainingResultBucket(result: Pick<TrainingResult, 'trials'>): TrainingResultBucket {
+  const { onTime, obeyed, praisedWithoutObeying } = trainingResultCounts(result);
+  if (obeyed === 0 || onTime === 0) return 'none';
+  if (onTime === obeyed && praisedWithoutObeying === 0) return 'excellent';
+  return onTime * 2 > obeyed ? 'good' : 'practice';
+}
+
 // ── Questions the UI asks ─────────────────────────────────────
 
 /** The HUD shows the "Šola" entry. */

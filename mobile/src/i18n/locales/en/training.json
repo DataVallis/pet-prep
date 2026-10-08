@@ -52,8 +52,10 @@
       "praised_without_obeying": "didn't obey"
     },
     "result": {
-      "titleGood": "Great job!",
-      "titleLearning": "Your pup is learning!",
+      "titleExcellent": "Excellent!",
+      "titleGood": "Good job!",
+      "titlePractice": "A bit more practice — tomorrow will be better",
+      "titleNone": "It didn't work this time — try again tomorrow",
       "noObey": "Your pup didn't obey this time.",
       "successes": "Praise on time: {{successes}} of {{obeyed}}.",
       "gain": "{{name}}: {{before}}% → {{after}}%",

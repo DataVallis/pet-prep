@@ -10,7 +10,9 @@
  *    (free tier: an animated illustration + a line of text; premium: the pet's own
  *    idle / playing video — no new media), a big "Pohvali" button and an immediate,
  *    kind verdict per cue (bravo / prezgodaj / prepozno / počakal(a) si).
- * 3. The server's result: progress gain, "Kuža zna …" at 100 %, never shaming.
+ * 3. The server's result: progress gain, "Kuža zna …" at 100 %, never shaming. M5-F04: the
+ *    title follows the outcome (`trainingResultBucket`: Odlično / Dobro / Še malo vaje /
+ *    Tokrat ni šlo) — never false praise; a repeated finish keeps the neutral "already saved".
  * The overlay can't be closed while a session runs or is being saved.
  */
 
@@ -39,9 +41,12 @@ import {
   isTimeShared,
   sessionsLeftToday,
   startBlock,
+  trainingResultBucket,
+  trainingResultCounts,
   TRAINING_STRINGS,
   type CommandProgress,
   type TrainingResult,
+  type TrainingResultBucket,
   type TrainingSession,
   type TrialOutcome,
 } from '@/modules/training/training';
@@ -172,6 +177,20 @@ function TrialDots({
   );
 }
 
+/** Result title per outcome (M5-F04), read at render (follows a language switch). */
+export function resultTitle(bucket: TrainingResultBucket): string {
+  switch (bucket) {
+    case 'excellent':
+      return S.result.titleExcellent;
+    case 'good':
+      return S.result.titleGood;
+    case 'practice':
+      return S.result.titlePractice;
+    case 'none':
+      return S.result.titleNone;
+  }
+}
+
 function ResultView({
   result,
   status,
@@ -187,7 +206,9 @@ function ResultView({
   canStartAgain: boolean;
 }) {
   const name = S.commands[result.command].name;
-  const good = result.successes > 0;
+  // Title and facts line from the same parsed trials (M5-F04): they always agree.
+  const bucket = trainingResultBucket(result);
+  const counts = trainingResultCounts(result);
   const stored = status === 'unchanged';
   const learned = result.progress_after >= 100;
   let gainLine: string;
@@ -196,12 +217,12 @@ function ResultView({
   else gainLine = S.result.noGain;
   return (
     <View style={styles.resultBox} testID="training-result">
-      <Text style={styles.resultTitle} testID="training-result-title">
-        {stored ? S.result.titleStored : good ? S.result.titleGood : S.result.titleLearning}
+      <Text style={styles.resultTitle} testID="training-result-title" accessibilityRole="header">
+        {stored ? S.result.titleStored : resultTitle(bucket)}
       </Text>
       {stored && <Text style={styles.muted}>{S.result.stored}</Text>}
       <Text style={styles.body} testID="training-result-successes">
-        {S.result.successes(result.successes, result.obeyed)}
+        {S.result.successes(counts.onTime, counts.obeyed)}
       </Text>
       <Text style={styles.bodyStrong} testID="training-result-gain">
         {gainLine}
