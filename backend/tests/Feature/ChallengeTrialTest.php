@@ -17,7 +17,6 @@ use App\Models\PetStatusPeriod;
 use App\Models\PushNotification;
 use App\Models\User;
 use App\Services\ChallengeCreditService;
-use App\Services\ChallengeService;
 use App\Services\ChildProfileService;
 use App\Services\FamilyInviteService;
 use App\Services\Media\MediaEntitlementService;
@@ -41,8 +40,10 @@ use function Pest\Laravel\postJson;
 
 /*
 |--------------------------------------------------------------------------
-| M3-11 — plan per pet, 7-day trial, payment lock, challenge credits
-| (docs/product/PAYMENTS_SPEC.md, David 2026-10-07 P1–P4)
+| M3-11 — plan per pet, payment lock, challenge credits
+| (docs/product/PAYMENTS_SPEC.md, David 2026-10-07 P1–P4). M3-13 (David
+| 2026-10-08): no free trial — new challenge pets are locked at birth; the
+| "trial" tests below cover pets that still run a pre-M3-13 trial.
 |--------------------------------------------------------------------------
 */
 
@@ -66,7 +67,9 @@ function ctAt(string $utc): void
 }
 
 /**
- * Parent + child + a pet born now (unpaid challenge by default).
+ * Parent + child + a pet born now. Default: an unpaid challenge that still
+ * runs a pre-M3-13 7-day trial (`legacyTrial`) — the trial-end paths below
+ * keep working for those pets. `unpaid` = born without a trial (M3-13).
  *
  * @param  array<string, mixed>  $attributes
  * @return array{0: User, 1: User, 2: Pet}
@@ -77,7 +80,8 @@ function ctFamily(array $attributes = [], string $state = 'trial'): array
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
     // M5-F03: a challenge on trial is a paid breed (an unpaid mutt challenge is the free plan).
     $factory = match ($state) {
-        'trial' => Pet::factory()->borderCollie()->trial(),
+        'trial' => Pet::factory()->borderCollie()->legacyTrial(),
+        'unpaid' => Pet::factory()->borderCollie()->trial(),
         'free' => Pet::factory()->mutt()->freePlan(),
         default => Pet::factory()->mutt(),
     };
@@ -86,12 +90,30 @@ function ctFamily(array $attributes = [], string $state = 'trial'): array
     return [$parent, $child, disableHygieneEvents($pet)];
 }
 
-/** Another child + unpaid challenge pet in the same family. */
+/** Another child + unpaid challenge pet (pre-M3-13 trial) in the same family. */
 function ctSecondPet(User $parent): Pet
 {
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
 
-    return disableHygieneEvents(Pet::factory()->borderCollie()->trial()->create(['user_id' => $child->id]));
+    return disableHygieneEvents(Pet::factory()->borderCollie()->legacyTrial()->create(['user_id' => $child->id]));
+}
+
+/** Parent + child + an UNBORN unpaid challenge pet (paired, contract not signed). */
+function ctUnbornFamily(): array
+{
+    $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+    $child = User::factory()->child()->create(['parent_id' => $parent->id]);
+    $pet = Pet::factory()->borderCollie()->trial()->unborn()->create(['user_id' => $child->id]);
+
+    return [$parent, $child, $pet];
+}
+
+function ctSign(User $child): TestResponse
+{
+    app('auth')->forgetGuards();
+    actingAsRole($child);
+
+    return postJson('/api/child/contract', ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20']);
 }
 
 function ctTick(): void
@@ -192,21 +214,13 @@ describe('status derivation and the trial clock', function () {
             ->assertJsonPath('pet.plan.paid_at', '2026-10-14T14:00:00+02:00');
     });
 
-    it('starts the trial at birth (the contract), 7 family-local days later across the DST change', function () {
-        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
-        $child = User::factory()->child()->create(['parent_id' => $parent->id]);
-        $pet = Pet::factory()->borderCollie()->trial()->unborn()->create(['user_id' => $child->id]);
-
-        expect($pet->trial_ends_at)->toBeNull()
-            ->and($pet->challengeStatus())->toBe(ChallengeStatus::Trial);
-
+    it('a pre-M3-13 trial ends 7 family-local days after birth across the DST change', function () {
         // Born 2026-10-20 12:00 CEST; DST ends 2026-10-25 → 12:00 CET = 11:00 UTC.
         ctAt('2026-10-20 10:00:00');
-        actingAsRole($child);
-        postJson('/api/child/contract', ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20'])->assertCreated()
-            ->assertJsonPath('state.pet.plan.trial_ends_at', '2026-10-27T12:00:00+01:00');
+        [, , $pet] = ctFamily();
 
-        expect($pet->fresh()->trial_ends_at->toIso8601String())->toBe('2026-10-27T11:00:00+00:00');
+        expect($pet->trial_ends_at->toIso8601String())->toBe('2026-10-27T11:00:00+00:00')
+            ->and($pet->challengeStatus())->toBe(ChallengeStatus::Trial);
     });
 
     it('never locks a free pet nor a grandfathered one; a free pet has no status', function () {
@@ -220,14 +234,17 @@ describe('status derivation and the trial clock', function () {
             ->and($old->fresh())->challengeStatus()->toBe(ChallengeStatus::Paid)->payment_locked_at->toBeNull();
     });
 
-    it('does not lock an unborn challenge pet (the trial has not started)', function () {
-        [, , $pet] = ctFamily(['born_at' => null, 'last_decay_at' => null, 'last_step_reset_at' => null]);
+    it('never locks an unborn challenge pet: payment_required, but the child can still sign (M3-13)', function () {
+        [, , $pet] = ctUnbornFamily();
 
         ctAt('2026-11-07 10:00:00');
         ctTick();
 
-        expect($pet->fresh())->payment_locked_at->toBeNull()
-            ->and($pet->fresh()->challengeStatus())->toBe(ChallengeStatus::Trial);
+        $fresh = $pet->fresh();
+        expect($fresh->payment_locked_at)->toBeNull()
+            ->and($fresh->challengeStatus())->toBe(ChallengeStatus::PaymentRequired)
+            ->and($fresh->awaitsPayment())->toBeFalse()
+            ->and($fresh->actionLockReason())->toBe(PetLockReason::ContractRequired);
     });
 });
 
@@ -299,7 +316,7 @@ describe('the payment lock pauses the game like a hard stop', function () {
 
 // ─────────────────────────────────────────────────────────────────────────
 describe('pushes (en / sl, once)', function () {
-    it('sends the parent one "trial ends tomorrow" on trial day 6 and parent + child one lock push', function () {
+    it('sends no "trial ends tomorrow" any more (M3-13); parent + child get one lock push when a pre-M3-13 trial ends', function () {
         config(['push.enabled' => true]);
         Queue::fake([SendPushNotification::class]);
         [$parent, $child, $pet] = ctFamily();
@@ -308,19 +325,13 @@ describe('pushes (en / sl, once)', function () {
 
         $billing = fn () => PushNotification::whereIn('type', ['trial_ending', 'payment_required']);
 
-        ctAt('2026-10-13 09:59:00'); // > 24 h before the end: nothing yet
-        ctTick();
-        expect($billing()->count())->toBe(0);
-
-        ctAt('2026-10-13 10:00:00');
-        ctTick();
-        ctAt('2026-10-13 10:05:00');
-        ctTick();
-
-        $reminder = PushNotification::where('type', PushType::TrialEnding->value)->sole();
-        expect(collect($reminder->recipients)->pluck('audience')->unique()->all())->toBe(['parent'])
-            ->and(collect($reminder->recipients)->pluck('user_id')->sort()->values()->all())->toBe(collect([$parent->id, $second->id])->sort()->values()->all())
-            ->and($pet->fresh()->trial_reminder_sent_at)->not->toBeNull();
+        // Trial day 6 (< 24 h before the end): formerly the reminder — now nothing.
+        foreach (['2026-10-13 09:59:00', '2026-10-13 10:00:00', '2026-10-13 10:05:00'] as $at) {
+            ctAt($at);
+            ctTick();
+        }
+        expect($billing()->count())->toBe(0)
+            ->and($pet->fresh()->trial_reminder_sent_at)->toBeNull();
 
         ctAt('2026-10-14 10:00:00');
         ctTick();
@@ -330,7 +341,8 @@ describe('pushes (en / sl, once)', function () {
         $lock = PushNotification::where('type', PushType::PaymentRequired->value)->sole();
         expect(collect($lock->recipients)->pluck('audience')->sort()->values()->all())->toBe(['child', 'parent', 'parent'])
             ->and($lock->status)->toBe(PushNotification::STATUS_QUEUED)
-            ->and($billing()->count())->toBe(2);
+            ->and($lock->metric)->toBeNull() // the pet had a trial: "the free trial has ended" copy
+            ->and($billing()->count())->toBe(1);
     });
 
     it('renders the copy in the device language (en / sl), kind to the child', function () {
@@ -540,8 +552,10 @@ describe('generate-pin plan', function () {
         $pin = ctPin($parent, ['breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])
             ->assertOk()->assertJsonPath('plan', 'challenge')->json('pin');
         $pet = Pet::findOrFail(ctPinLogin($pin)->assertSuccessful()->json('pet.id'));
+        // M3-13: no trial — unpaid from creation on (unborn until the contract).
         expect($pet->plan)->toBe(PetPlan::Challenge)->and($pet->breed_type->value)->toBe('border_collie')
-            ->and($pet->challengeStatus())->toBe(ChallengeStatus::Trial);
+            ->and($pet->challengeStatus())->toBe(ChallengeStatus::PaymentRequired)
+            ->and($pet->trial_ends_at)->toBeNull();
 
         ctPin($parent, ['plan' => 'gold'])->assertUnprocessable()->assertJsonValidationErrors('plan');
     });
@@ -735,57 +749,210 @@ describe('P6 — full AI media only for a purchased challenge', function () {
 });
 
 // ─────────────────────────────────────────────────────────────────────────
-describe('P7 — one free trial per child; game over is not unlocked by a purchase', function () {
-    it('starts a second challenge pet of the same child as payment_required at birth', function () {
+describe('M3-13 — no free trial: the challenge starts with a purchase (David 2026-10-08)', function () {
+    it('locks a new challenge pet at birth: payment_required, lock period from birth, one broadcast, one push', function () {
         config(['push.enabled' => true]);
         Queue::fake([SendPushNotification::class]);
-        [$parent, $child, $first] = ctFamily();
-        // The first challenge ended in game over during its trial.
-        Pet::whereKey($first->id)->update(['is_game_over' => true, 'is_active' => false]);
-
-        // Activating the game-over pet is refused; the purchase waits.
-        ctPurchase($parent);
-        ctActivate($parent, $first)->assertStatus(422)->assertJsonPath('reason', 'pet_not_active');
-
-        // (A paired child's PIN is a re-login, so generate-pin answers trial_available
-        // null here; the next pet is created directly — see the open question in the report.)
-        expect(app(ChallengeService::class)->childHadTrial($child))->toBeTrue();
-
-        $second = Pet::factory()->borderCollie()->trial()->unborn()->create(['user_id' => $child->id]);
-        ctBilling($parent)->assertJsonPath('pets.0.pet_id', $second->id)->assertJsonPath('pets.0.trial_available', false);
+        Event::fake([PetUpdated::class]);
+        [$parent, $child, $pet] = ctUnbornFamily();
 
         ctAt('2026-10-08 10:00:00');
-        app('auth')->forgetGuards();
-        actingAsRole($child);
-        postJson('/api/child/contract', ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20'])->assertCreated()
+        ctSign($child)->assertCreated()
             ->assertJsonPath('state.lock.reason', 'payment_required')
             ->assertJsonPath('state.pet.plan.status', 'payment_required')
             ->assertJsonPath('state.pet.plan.trial_ends_at', '2026-10-08T12:00:00+02:00');
 
-        ctTick();
-        expect($second->fresh()->isPaymentLocked())->toBeTrue()
-            ->and(PushNotification::where('type', 'payment_required')->sole()->metric)->toBe('no_trial')
+        $born = $pet->fresh();
+        expect($born->born_at->toIso8601String())->toBe('2026-10-08T10:00:00+00:00')
+            ->and($born->trial_ends_at->toIso8601String())->toBe('2026-10-08T10:00:00+00:00')
+            ->and($born->isPaymentLocked())->toBeTrue()
+            ->and($born->payment_locked_at->toIso8601String())->toBe('2026-10-08T10:00:00+00:00')
+            ->and($born->frozen_at)->not->toBeNull()
+            ->and(PetStatusPeriod::where('pet_id', $pet->id)->where('kind', 'payment_lock')->sole()->started_at->toIso8601String())->toBe('2026-10-08T10:00:00+00:00');
+        // One state change → one broadcast (the contract's), carrying the locked plan.
+        Event::assertDispatchedTimes(PetUpdated::class, 1);
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id && $e->eventType === 'signed_contract'
+            && $e->payload['plan']['status'] === 'payment_required');
+
+        // Parents get the copy without "trial"; the child the kind copy. No trial reminder.
+        $push = PushNotification::sole();
+        expect($push->type)->toBe(PushType::PaymentRequired)
+            ->and($push->metric)->toBe('no_trial')
+            ->and(collect($push->recipients)->pluck('audience')->sort()->values()->all())->toBe(['child', 'parent'])
             ->and(PushCopy::body(PushType::PaymentRequired, 'no_trial', 'parent', 'en'))->toBe('The dog is waiting safely until you unlock the 12-week challenge in the app.')
+            ->and(PushCopy::body(PushType::PaymentRequired, 'no_trial', 'parent', 'sl'))->toBe('Kuža varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.')
             ->and(PushCopy::body(PushType::PaymentRequired, 'no_trial', 'child', 'sl'))->toBe('Igra počaka na starša. Tvoj kuža je na varnem in počiva.');
 
-        // The waiting credit pays the new pet.
-        ctActivate($parent, $second)->assertOk()->assertJsonPath('status', 'activated');
-        expect($second->fresh()->isPaymentLocked())->toBeFalse();
+        // The child waits; the tick neither re-locks nor pushes again; the dog does not age.
+        postJson('/api/child/pet/water')->assertStatus(423)->assertJsonPath('reason', 'payment_required');
+        ctAt('2026-10-11 10:00:00');
+        ctTick();
+        $later = $pet->fresh();
+        expect(PushNotification::count())->toBe(1)
+            ->and($later->programSecondsAt(now()))->toBe(0)
+            ->and($later->hunger_level)->toBe(100.0);
+        ctBilling($parent)->assertJsonPath('pets.0.status', 'payment_required')->assertJsonPath('pets.0.trial_available', false);
     });
 
-    it('keeps the trial for a child whose earlier pet was grandfathered', function () {
-        [, $child, $old] = ctFamily([], 'grandfathered');
-        Pet::whereKey($old->id)->update(['is_game_over' => true, 'is_active' => false]);
-        $next = Pet::factory()->borderCollie()->trial()->unborn()->create(['user_id' => $child->id]);
+    it('starts the 12-week clock at the purchase, not at the birth', function () {
+        [$parent, $child, $pet] = ctUnbornFamily();
+        ctAt('2026-10-08 10:00:00');
+        ctSign($child)->assertCreated();
 
+        // Three days locked, then the parent buys (auto-assigned: the only unpaid pet).
+        ctAt('2026-10-11 10:00:00');
+        ctPurchase($parent)->assertOk()->assertJsonPath('outcome', 'granted');
+        $paid = $pet->fresh();
+        expect($paid->challengeStatus())->toBe(ChallengeStatus::Paid)
+            ->and($paid->isPaymentLocked())->toBeFalse()
+            ->and($paid->frozen_at)->toBeNull()
+            ->and($paid->last_decay_at->toIso8601String())->toBe('2026-10-11T10:00:00+00:00')
+            ->and(PetStatusPeriod::where('pet_id', $pet->id)->where('kind', 'payment_lock')->sole()->ended_at->toIso8601String())->toBe('2026-10-11T10:00:00+00:00')
+            ->and($paid->programSecondsAt(now()))->toBe(0)
+            ->and($paid->programBirthAt(now())->toIso8601String())->toBe('2026-10-11T10:00:00+00:00');
+
+        // One sim week after the purchase = one dog month; the 3 locked days never count.
+        ctAt('2026-10-18 10:00:00');
+        expect($pet->fresh()->programSecondsAt(now()))->toBe(7 * 86400)
+            ->and($pet->fresh()->virtualAgeInMonths())->toBe(1);
+
+        app('auth')->forgetGuards();
         actingAsRole($child);
-        postJson('/api/child/contract', ['signature_format' => 'svg_path', 'signature' => 'M10 10 L20 20'])->assertCreated()
-            ->assertJsonPath('state.pet.plan.status', 'trial')
-            ->assertJsonPath('state.pet.plan.trial_ends_at', '2026-10-14T12:00:00+02:00');
-        expect(app(ChallengeService::class)->childHadTrial($child, $next->id))->toBeFalse();
+        getJson('/api/child/pet')->assertOk()->assertJsonPath('lock.reason', null)->assertJsonPath('pet.plan.status', 'paid');
     });
 
-    it('tells the parent at PIN time whether the new challenge pet gets the free trial', function () {
+    it('lets the parent buy before birth (paywall activate on the unborn pet); the dog is born unlocked', function () {
+        config(['push.enabled' => true]);
+        Queue::fake([SendPushNotification::class]);
+        [$parent, $child, $pet] = ctUnbornFamily();
+        ctFamily([], 'unpaid'); // another family: irrelevant
+        $other = ctSecondPet($parent); // a second unpaid pet → the webhook does not auto-assign
+
+        ctPurchase($parent)->assertJsonPath('outcome', 'granted');
+        expect(ChallengeCredit::sole()->pet_id)->toBeNull();
+        ctBilling($parent)->assertJsonPath('pets.0.pet_id', $pet->id)->assertJsonPath('pets.0.status', 'payment_required');
+
+        ctActivate($parent, $pet)->assertOk()->assertJsonPath('status', 'activated')->assertJsonPath('plan.status', 'paid');
+
+        ctSign($child)->assertCreated()->assertJsonPath('state.lock.reason', null)->assertJsonPath('state.pet.plan.status', 'paid');
+        expect($pet->fresh()->isPaymentLocked())->toBeFalse()
+            ->and(PushNotification::count())->toBe(0)
+            ->and($other->fresh()->challengeStatus())->toBe(ChallengeStatus::Trial);
+    });
+
+    it('auto-assigns a purchase to an unborn pet that is the only unpaid one (bought before the contract)', function () {
+        [$parent, $child, $pet] = ctUnbornFamily();
+        ctPurchase($parent)->assertJsonPath('outcome', 'granted');
+        expect(ChallengeCredit::sole())->pet_id->toBe($pet->id)->assigned_via->toBe('webhook');
+
+        ctSign($child)->assertCreated()->assertJsonPath('state.pet.plan.status', 'paid');
+        expect($pet->fresh()->isPaymentLocked())->toBeFalse();
+    });
+
+    it('assigns a credit the family already holds at birth when the pet is the only unpaid one', function () {
+        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        // Bought while the family had no unpaid challenge pet → unassigned.
+        ctPurchase($parent)->assertJsonPath('outcome', 'granted');
+        expect(ChallengeCredit::sole()->pet_id)->toBeNull();
+
+        $child = User::factory()->child()->create(['parent_id' => $parent->id]);
+        $pet = Pet::factory()->borderCollie()->trial()->unborn()->create(['user_id' => $child->id]);
+
+        Event::fake([PetUpdated::class]);
+        ctSign($child)->assertCreated()->assertJsonPath('state.lock.reason', null)->assertJsonPath('state.pet.plan.status', 'paid');
+
+        $credit = ChallengeCredit::sole();
+        expect($credit->pet_id)->toBe($pet->id)
+            ->and($credit->assigned_via)->toBe('birth')
+            ->and($pet->fresh()->challenge_paid_source)->toBe(ChallengePaidSource::Purchase)
+            ->and($pet->fresh()->isPaymentLocked())->toBeFalse()
+            ->and(PetStatusPeriod::where('pet_id', $pet->id)->where('kind', 'payment_lock')->exists())->toBeFalse();
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'challenge_paid');
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'signed_contract');
+    });
+
+    it('does not pick a pet for a held credit at birth when several pets are unpaid (the parent chooses)', function () {
+        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        ctPurchase($parent);
+        $child = User::factory()->child()->create(['parent_id' => $parent->id]);
+        $pet = Pet::factory()->borderCollie()->trial()->unborn()->create(['user_id' => $child->id]);
+        ctSecondPet($parent);
+
+        ctSign($child)->assertCreated()->assertJsonPath('state.lock.reason', 'payment_required');
+        expect(ChallengeCredit::sole()->pet_id)->toBeNull()
+            ->and($pet->fresh()->isPaymentLocked())->toBeTrue();
+
+        ctActivate($parent, $pet)->assertOk()->assertJsonPath('status', 'activated');
+        expect($pet->fresh()->isPaymentLocked())->toBeFalse();
+    });
+
+    it('with payments not enforced a new challenge pet is born playable: no lock, no push, status trial', function () {
+        config(['payments.enforced' => false, 'push.enabled' => true]);
+        Queue::fake([SendPushNotification::class]);
+        [$parent, $child, $pet] = ctUnbornFamily();
+        expect($pet->challengeStatus())->toBe(ChallengeStatus::Trial);
+
+        ctAt('2026-10-08 10:00:00');
+        ctSign($child)->assertCreated()->assertJsonPath('state.lock.reason', null)
+            ->assertJsonPath('state.pet.plan.status', 'trial')
+            ->assertJsonPath('state.pet.plan.payments_enforced', false);
+
+        ctAt('2026-10-15 10:00:00');
+        // A week of play (cared for: needs topped up before the tick).
+        Pet::whereKey($pet->id)->update(['hunger_level' => 100, 'thirst_level' => 100, 'last_decay_at' => now()]);
+        ctTick();
+        $fresh = $pet->fresh();
+        expect($fresh->isPaymentLocked())->toBeFalse()
+            ->and(PushNotification::whereIn('type', ['trial_ending', 'payment_required'])->count())->toBe(0)
+            ->and($fresh->programSecondsAt(now()))->toBe(7 * 86400);
+
+        // Turning enforcement on later locks it from that tick on — the days it
+        // played stay program time (no retroactive lock back to the birth).
+        config(['payments.enforced' => true]);
+        ctAt('2026-10-15 10:01:00');
+        ctTick();
+        $locked = $pet->fresh();
+        expect($locked->isPaymentLocked())->toBeTrue()
+            ->and($locked->payment_locked_at->toIso8601String())->toBe('2026-10-15T10:01:00+00:00')
+            ->and($locked->programSecondsAt(now()))->toBe(7 * 86400 + 60);
+    });
+
+    it('keeps a running pre-M3-13 trial until its end: playable, no lock, no push', function () {
+        config(['push.enabled' => true]);
+        Queue::fake([SendPushNotification::class]);
+        [, $child, $pet] = ctFamily(); // born 2026-10-07 10:00 with a 7-day trial
+
+        // Day 7, one hour before the end (cared for: needs topped up before the tick).
+        ctAt('2026-10-14 09:00:00');
+        Pet::whereKey($pet->id)->update(['hunger_level' => 100, 'thirst_level' => 100, 'last_decay_at' => now()]);
+        ctTick();
+        expect($pet->fresh()->challengeStatus())->toBe(ChallengeStatus::Trial)
+            ->and($pet->fresh()->isPaymentLocked())->toBeFalse()
+            ->and(PushNotification::whereIn('type', ['trial_ending', 'payment_required'])->count())->toBe(0);
+        app('auth')->forgetGuards();
+        actingAsRole($child);
+        getJson('/api/child/pet')->assertOk()->assertJsonPath('lock.reason', null)->assertJsonPath('pet.plan.status', 'trial');
+
+        ctAt('2026-10-14 10:00:00');
+        ctTick();
+        expect($pet->fresh()->isPaymentLocked())->toBeTrue()
+            ->and($pet->fresh()->payment_locked_at->toIso8601String())->toBe('2026-10-14T10:00:00+00:00');
+    });
+
+    it('a game-over pet is not unlocked by a purchase; the next challenge pet also starts with a purchase', function () {
+        [$parent, $child, $first] = ctFamily();
+        Pet::whereKey($first->id)->update(['is_game_over' => true, 'is_active' => false]);
+
+        ctPurchase($parent);
+        ctActivate($parent, $first)->assertStatus(422)->assertJsonPath('reason', 'pet_not_active');
+
+        // The next pet: the waiting credit pays it at birth (only unpaid pet).
+        $second = Pet::factory()->borderCollie()->trial()->unborn()->create(['user_id' => $child->id]);
+        ctBilling($parent)->assertJsonPath('pets.0.pet_id', $second->id)->assertJsonPath('pets.0.trial_available', false);
+        ctSign($child)->assertCreated()->assertJsonPath('state.pet.plan.status', 'paid');
+    });
+
+    it('tells the parent at PIN time that a new challenge pet has no free trial (deprecated field)', function () {
         seedLifeStageData();
         $parent = User::factory()->parent()->create();
         $fresh = app(ChildProfileService::class)->createChild($parent, 'Nova', null);
@@ -793,9 +960,20 @@ describe('P7 — one free trial per child; game over is not unlocked by a purcha
         actingAsRole($parent);
 
         postJson('/api/parent/generate-pin', ['child_id' => $fresh->id, 'breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()
-            ->assertJsonPath('plan', 'challenge')->assertJsonPath('trial_available', true);
+            ->assertJsonPath('plan', 'challenge')->assertJsonPath('trial_available', false);
         postJson('/api/parent/generate-pin', ['child_id' => $fresh->id, 'plan' => 'free'])->assertOk()
             ->assertJsonPath('plan', 'free')->assertJsonPath('trial_available', null);
+    });
+
+    it('locks an admin-created born challenge pet at the next tick, from that tick', function () {
+        [, , $pet] = ctFamily([], 'unpaid'); // born at creation, no trial
+        expect($pet->trial_ends_at->equalTo($pet->born_at))->toBeTrue()
+            ->and($pet->challengeStatus())->toBe(ChallengeStatus::PaymentRequired)
+            ->and($pet->actionLockReason())->toBe(PetLockReason::PaymentRequired);
+
+        ctAt('2026-10-07 10:01:00');
+        ctTick();
+        expect($pet->fresh()->payment_locked_at->toIso8601String())->toBe('2026-10-07T10:01:00+00:00');
     });
 });
 

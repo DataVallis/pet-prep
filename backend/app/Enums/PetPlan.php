@@ -12,6 +12,6 @@ enum PetPlan: string
     /** Free mutt "sandbox", forever: no 12-week program, 7-day history, basic media. */
     case Free = 'free';
 
-    /** The 12-week challenge (7-day trial from birth, then one purchase per pet). */
+    /** The 12-week challenge: one purchase per pet, before play starts (no free trial since M3-13). */
     case Challenge = 'challenge';
 }

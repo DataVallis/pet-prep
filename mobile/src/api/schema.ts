@@ -188,8 +188,11 @@ export interface paths {
         };
         /**
          * Unused challenge purchases of the family and the payment status of
-         *     every active pet. `status` null = free plan; `trial_ends_at` null =
-         *     free plan or not born yet (trial starts at birth)
+         *     every active pet. `status` null = free plan; an unpaid challenge is
+         *     `payment_required` (also before birth — buy first, M3-13) or `trial`
+         *     (a pre-M3-13 trial still running, or payments not enforced).
+         *     `trial_ends_at` null = free plan or not born yet; `trial_available` is
+         *     deprecated (no free trial since M3-13)
          * @description GET /api/parent/billing
          */
         get: operations["billing.index"];
@@ -1393,7 +1396,7 @@ export interface components {
          *     | |
          *     |---|
          *     | `free` <br/> Free mutt "sandbox", forever: no 12-week program, 7-day history, basic media. |
-         *     | `challenge` <br/> The 12-week challenge (7-day trial from birth, then one purchase per pet). |
+         *     | `challenge` <br/> The 12-week challenge: one purchase per pet, before play starts (no free trial since M3-13). |
          * @enum {string}
          */
         PetPlan: "free" | "challenge";
@@ -2169,7 +2172,7 @@ export interface operations {
                                 illness_until: string | null;
                                 is_game_over: boolean;
                                 certificate_eligible: boolean;
-                                /** @description M3-11: free | challenge, trial / payment_required / paid (null for free). */
+                                /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
                                     type: string;
                                     /** @enum {string|null} */
@@ -2504,7 +2507,7 @@ export interface operations {
                             illness_until: string | null;
                             is_game_over: boolean;
                             certificate_eligible: boolean;
-                            /** @description M3-11: free | challenge, trial / payment_required / paid (null for free). */
+                            /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                             plan: {
                                 type: string;
                                 /** @enum {string|null} */
@@ -2859,7 +2862,7 @@ export interface operations {
                                 illness_until: string | null;
                                 is_game_over: boolean;
                                 certificate_eligible: boolean;
-                                /** @description M3-11: free | challenge, trial / payment_required / paid (null for free). */
+                                /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
                                     type: string;
                                     /** @enum {string|null} */
@@ -3212,7 +3215,7 @@ export interface operations {
                                 illness_until: string | null;
                                 is_game_over: boolean;
                                 certificate_eligible: boolean;
-                                /** @description M3-11: free | challenge, trial / payment_required / paid (null for free). */
+                                /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
                                     type: string;
                                     /** @enum {string|null} */
@@ -3565,7 +3568,7 @@ export interface operations {
                                 illness_until: string | null;
                                 is_game_over: boolean;
                                 certificate_eligible: boolean;
-                                /** @description M3-11: free | challenge, trial / payment_required / paid (null for free). */
+                                /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
                                     type: string;
                                     /** @enum {string|null} */
@@ -3918,7 +3921,7 @@ export interface operations {
                                 illness_until: string | null;
                                 is_game_over: boolean;
                                 certificate_eligible: boolean;
-                                /** @description M3-11: free | challenge, trial / payment_required / paid (null for free). */
+                                /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
                                     type: string;
                                     /** @enum {string|null} */
@@ -4271,7 +4274,7 @@ export interface operations {
                                 illness_until: string | null;
                                 is_game_over: boolean;
                                 certificate_eligible: boolean;
-                                /** @description M3-11: free | challenge, trial / payment_required / paid (null for free). */
+                                /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
                                     type: string;
                                     /** @enum {string|null} */
@@ -4628,7 +4631,7 @@ export interface operations {
                                 illness_until: string | null;
                                 is_game_over: boolean;
                                 certificate_eligible: boolean;
-                                /** @description M3-11: free | challenge, trial / payment_required / paid (null for free). */
+                                /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
                                     type: string;
                                     /** @enum {string|null} */
@@ -4985,7 +4988,7 @@ export interface operations {
                                 illness_until: string | null;
                                 is_game_over: boolean;
                                 certificate_eligible: boolean;
-                                /** @description M3-11: free | challenge, trial / payment_required / paid (null for free). */
+                                /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
                                     type: string;
                                     /** @enum {string|null} */
@@ -5699,7 +5702,7 @@ export interface operations {
                                 illness_until: string | null;
                                 is_game_over: boolean;
                                 certificate_eligible: boolean;
-                                /** @description M3-11: free | challenge, trial / payment_required / paid (null for free). */
+                                /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
                                     type: string;
                                     /** @enum {string|null} */
@@ -6366,9 +6369,11 @@ export interface operations {
                          */
                         plan: "free" | "challenge" | null;
                         /**
-                         * @description M3-11 P7: the new challenge pet gets the 7-day free trial (one per child,
-                         *     ever); false = payment_required from birth; null = no challenge pet. M3-11 P7: whether the new challenge pet gets the 7-day free trial
-                         *     (one per child, ever); null when no challenge pet is created.
+                         * @description Deprecated (M3-13, David 2026-10-08: no free trial any more): always
+                         *     false for a new challenge pet (payment_required from birth); null = no
+                         *     challenge pet. Kept for old app builds. M3-13 (David 2026-10-08): no free trial any more — a new challenge
+                         *     pet is payment_required from birth (false); null = no challenge pet.
+                         *     Kept for old app builds.
                          */
                         trial_available: boolean | null;
                     };

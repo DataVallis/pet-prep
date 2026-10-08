@@ -217,8 +217,9 @@ class PairingService
     /**
      * Breeds a new pet of this plan may have (M5-R01, M3-11 PAYMENTS_SPEC):
      * a breed needs a config; a premium breed (`breed_configs.premium_unlock`,
-     * the Border Collie) only on the `challenge` plan — also during the trial
-     * (no purchase needed up front). The free plan is the mutt only.
+     * the Border Collie) only on the `challenge` plan (the pet may be created
+     * before the purchase; it is payment_required until bought — M3-13). The
+     * free plan is the mutt only.
      */
     public static function breedAllowed(BreedType $breed, PetPlan $plan): bool
     {
@@ -313,7 +314,7 @@ class PairingService
             'hygiene_level' => 100,
             'born_at' => null,
             'is_active' => true,
-            // M3-11: fixed for life; the challenge trial starts at birth (contract).
+            // M3-11: fixed for life. M3-13: an unpaid challenge is payment-locked at birth (contract).
             'plan' => $plan->value,
             // Legacy profile (null arrival age) without a choice or without
             // life-stage data for the breed: the pre-M5 rules.

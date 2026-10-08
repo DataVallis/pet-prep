@@ -8,26 +8,28 @@ use App\Enums\PetPlan;
 use App\Enums\PushType;
 use App\Events\PetUpdated;
 use App\Models\Pet;
-use App\Models\PetCaretaker;
-use App\Models\User;
 use App\Services\Media\PetMediaService;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 /**
- * The pet side of the 12-week challenge (M3-11, PAYMENTS_SPEC P2/P3).
+ * The pet side of the 12-week challenge (M3-11, PAYMENTS_SPEC; M3-13 — no
+ * free trial any more, David 2026-10-08 10:28).
  *
  * Status is derived in one place, Pet::challengeStatus() (free → null;
- * challenge: paid › trial › payment_required). This service owns the
- * writes:
+ * challenge: paid › trial (only a pre-M3-13 trial still running) ›
+ * payment_required). This service owns the writes:
  *
- *  - processTrials() — first step of every `pets:process-decay` tick:
- *      · trial day 6 (≥ 24 h before `trial_ends_at`): one `trial_ending`
- *        push to the parents, once per pet (`trial_reminder_sent_at`);
- *      · trial over and unpaid: lock (`payment_locked_at`). The lock runs
- *        BEFORE decay, so a late tick never charges decay for time after
- *        the trial ended (kinder to the child; a normal tick is ≤ 1 min).
+ *  - lockAtBirth() — PetActivityService::signContract: an unpaid challenge
+ *    is payment-locked at the moment it is born (the challenge starts with
+ *    a purchase; the free mutt is the free try-out).
+ *  - processTrials() — first step of every `pets:process-decay` tick: locks
+ *    every born, unpaid challenge that is payment_required but not locked
+ *    yet (a pre-M3-13 trial that just ended; a pet born while payments were
+ *    not enforced, once they are; admin-created pets). The lock runs BEFORE
+ *    decay, so a late tick never charges decay for time after the trial.
+ *    No "trial ends tomorrow" reminder any more (M3-13).
  *  - markPaid() / markRefunded() — called by ChallengeCreditService under
  *    the family + pet row locks.
  *
@@ -51,8 +53,8 @@ class ChallengeService
     /** M5-F02: an unpaid mutt challenge became the free mutt (data migration). */
     public const EVENT_FREE_PLAN = 'plan_free';
 
-    /** The parent's reminder goes out this long before the trial ends ("tomorrow"). */
-    public const REMINDER_HOURS_BEFORE = 24;
+    /** Push metric of a lock without a preceding free trial (parent copy without "the trial has ended"). */
+    public const PUSH_NO_TRIAL = 'no_trial';
 
     public function __construct(
         private readonly NotificationService $notifications,
@@ -63,78 +65,64 @@ class ChallengeService
         return $pet->challengeStatus($now);
     }
 
-    /**
-     * P7 (David 2026-10-07; "one free trial per child, ever" is Claude's
-     * interpretation, DECISIONS): did this child already have a free trial —
-     * is / was it a caretaker (ended rows included) of another born challenge
-     * pet that was not grandfathered? Trial ended in game over, still running,
-     * or paid during or after it: all count.
-     */
-    public function childHadTrial(User $child, ?int $exceptPetId = null): bool
-    {
-        return Pet::query()
-            ->whereIn('id', PetCaretaker::query()->where('user_id', $child->id)->select('pet_id'))
-            ->when($exceptPetId !== null, fn ($q) => $q->where('id', '!=', $exceptPetId))
-            ->where('plan', PetPlan::Challenge->value)
-            ->whereNotNull('born_at')
-            ->whereNotNull('trial_ends_at')
-            ->where(fn ($q) => $q->whereNull('challenge_paid_source')
-                ->orWhere('challenge_paid_source', '!=', ChallengePaidSource::Grandfathered->value))
-            ->exists();
-    }
-
-    /**
-     * Trial end for a challenge pet born now with $child's contract: birth +
-     * 7 family-local days, or the birth itself (no trial → payment_required
-     * from birth) when the child already had a trial. Null for a free pet.
-     */
-    public function trialEndAtBirth(Pet $pet, User $child, CarbonInterface $birth): ?CarbonInterface
-    {
-        if ($pet->plan !== PetPlan::Challenge) {
-            return null;
-        }
-
-        return $this->childHadTrial($child, $pet->id) ? $birth->copy()->utc() : $pet->trialEndFor($birth);
-    }
-
-    /** True when the pet's challenge started without a free trial (P7). */
+    /** True when the pet's challenge started without a free trial (every birth since M3-13). */
     public static function startedWithoutTrial(Pet $pet): bool
     {
         return $pet->born_at !== null && $pet->trial_ends_at !== null && $pet->trial_ends_at->lessThanOrEqualTo($pet->born_at);
     }
 
     /**
-     * Trial reminders and payment locks due now (one transaction per pet).
+     * M3-13: a challenge pet just born (contract signed) that nobody has paid
+     * for is payment-locked at once — the lock, and with it the `payment_lock`
+     * status period (program clock, M3-11b), starts at the birth. Caller holds
+     * the pet row lock, has saved the birth and broadcasts the contract (that
+     * one PetUpdated carries the locked state — no second broadcast here).
+     * Parents + caretakers get the lock push (parent copy without "trial").
+     * No-op with payments not enforced and for a free / paid pet. Returns
+     * true when it locked.
+     */
+    public function lockAtBirth(Pet $pet, CarbonInterface $now): bool
+    {
+        if ($pet->isUnborn() || $pet->isPaymentLocked() || ! $pet->is_active || $pet->is_game_over
+            || $pet->challengeStatus($now) !== ChallengeStatus::PaymentRequired) {
+            return false;
+        }
+
+        $this->lock($pet, $now, $pet->born_at, broadcast: false);
+
+        return true;
+    }
+
+    /**
+     * Payment locks due now (one transaction per pet). No "trial ends
+     * tomorrow" reminder any more (M3-13).
      *
-     * @return array{reminded: int, locked: int}
+     * @return array{locked: int}
      */
     public function processTrials(?CarbonInterface $now = null): array
     {
         $now = ($now ?? now())->copy()->startOfSecond();
-        // Kill switch: no locks and no "trial ends tomorrow" pushes before purchases are live.
+        // Kill switch: no locks before purchases are live.
         if (! Pet::paymentsEnforced()) {
-            return ['reminded' => 0, 'locked' => 0];
+            return ['locked' => 0];
         }
-        $base = fn () => Pet::born()
+
+        $due = Pet::born()
             ->where('plan', PetPlan::Challenge->value)
             ->whereNull('challenge_paid_at')
             ->where('is_active', true)
-            ->where('is_game_over', false);
+            ->where('is_game_over', false)
+            ->whereNull('payment_locked_at')
+            ->where('trial_ends_at', '<=', $now)
+            ->orderBy('id')
+            ->pluck('id');
 
         $locked = 0;
-        foreach ($base()->whereNull('payment_locked_at')->where('trial_ends_at', '<=', $now)->orderBy('id')->pluck('id') as $id) {
+        foreach ($due as $id) {
             $locked += $this->lockIfDue((int) $id, $now) ? 1 : 0;
         }
 
-        $reminded = 0;
-        $reminderEdge = $now->copy()->addHours(self::REMINDER_HOURS_BEFORE);
-        foreach ($base()->whereNull('trial_reminder_sent_at')->whereNull('payment_locked_at')
-            ->where('trial_ends_at', '>', $now)->where('trial_ends_at', '<=', $reminderEdge)
-            ->orderBy('id')->pluck('id') as $id) {
-            $reminded += $this->remindIfDue((int) $id, $now) ? 1 : 0;
-        }
-
-        return ['reminded' => $reminded, 'locked' => $locked];
+        return ['locked' => $locked];
     }
 
     private function lockIfDue(int $petId, CarbonInterface $now): bool
@@ -146,27 +134,12 @@ class ChallengeService
                 return false;
             }
 
-            // M3-11b: the lock is due since the trial end (birth for a pet without a
-            // trial) — a late tick or a scheduler outage is not program time.
-            $due = $pet->trial_ends_at->greaterThan($pet->born_at) ? $pet->trial_ends_at : $pet->born_at;
+            // M3-11b: an expired pre-M3-13 trial is locked since its end — a late
+            // tick or a scheduler outage is not program time. A pet without a
+            // trial that reaches the tick unlocked (born while payments were not
+            // enforced, created born by an admin) has been playing: locked from now.
+            $due = $pet->trial_ends_at->greaterThan($pet->born_at) ? $pet->trial_ends_at : $now;
             $this->lock($pet, $now, $due);
-
-            return true;
-        });
-    }
-
-    private function remindIfDue(int $petId, CarbonInterface $now): bool
-    {
-        return DB::transaction(function () use ($petId, $now): bool {
-            $pet = Pet::whereKey($petId)->lockForUpdate()->first();
-            if ($pet === null || $pet->trial_reminder_sent_at !== null
-                || $pet->challengeStatus($now) !== ChallengeStatus::Trial || $pet->trial_ends_at === null) {
-                return false;
-            }
-
-            // Decided once, whether or not a device gets it (push disabled, no devices).
-            $pet->forceFill(['trial_reminder_sent_at' => $now])->saveQuietly();
-            $this->notifications->escalation($pet, PushType::TrialEnding);
 
             return true;
         });
@@ -177,25 +150,30 @@ class ChallengeService
      * hooks freeze + status period). Parents + caretakers get one push.
      *
      * `payment_locked_at` = $since, the instant the lock became due (≤ $now):
-     * the trial end for an expired trial, $now for a refund re-lock (the pet
-     * was paid — and playing — until the refund). The `payment_lock` status
-     * period starts there, so the program clock (M3-11b) excludes the gap
-     * between the trial end and the tick. Needs are unaffected: the freeze
-     * (`frozen_at`) starts now, and decay before the tick was never charged
-     * (the lock runs before decay in the same tick).
+     * the trial end for an expired pre-M3-13 trial, the birth for a lock at
+     * birth (M3-13), $now for a refund re-lock (the pet was paid — and
+     * playing — until the refund). The `payment_lock` status period starts
+     * there, so the program clock (M3-11b) excludes the gap between the trial
+     * end and the tick. Needs are unaffected: the freeze (`frozen_at`) starts
+     * now, and decay before the tick was never charged (the lock runs before
+     * decay in the same tick). `$broadcast` false: the caller emits the one
+     * PetUpdated of this change (lockAtBirth → the contract's broadcast).
      */
-    private function lock(Pet $pet, CarbonInterface $now, ?CarbonInterface $since = null): void
+    private function lock(Pet $pet, CarbonInterface $now, ?CarbonInterface $since = null, bool $broadcast = true): void
     {
         $since = $since !== null && $since->lessThan($now) ? $since->copy()->startOfSecond() : $now;
         $pet->forceFill([
             'payment_locked_at' => $since,
-            // A reminder a late tick never sent is not sent after the lock.
+            // Pre-M3-13 rows: the old "trial ends tomorrow" reminder is never sent after a lock.
             'trial_reminder_sent_at' => $pet->trial_reminder_sent_at ?? $now,
         ])->save();
 
-        PetUpdated::afterCommit($pet, self::EVENT_LOCKED);
-        // P7: a challenge without a free trial gets its own parent copy (no "trial ended").
-        $this->notifications->escalation($pet, PushType::PaymentRequired, self::startedWithoutTrial($pet) ? 'no_trial' : null);
+        if ($broadcast) {
+            PetUpdated::afterCommit($pet, self::EVENT_LOCKED);
+        }
+        // A challenge without a free trial (every birth since M3-13) gets the parent
+        // copy without "the free trial has ended".
+        $this->notifications->escalation($pet, PushType::PaymentRequired, self::startedWithoutTrial($pet) ? self::PUSH_NO_TRIAL : null);
 
         Log::info('Challenge: payment lock', ['pet_id' => $pet->id]);
     }
@@ -280,9 +258,9 @@ class ChallengeService
 
     /**
      * The pet's credit was refunded (PAYMENTS_SPEC §2): unless the 12-week
-     * challenge is already finished, the pet is unpaid again — back in its
-     * trial if still inside the 7 days, otherwise locked at once (with the
-     * lock pushes). A mutt becomes the free plan instead (P4 — never locked).
+     * challenge is already finished, the pet is unpaid again — locked at once
+     * (with the lock pushes); only a pre-M3-13 pet still inside its old 7-day
+     * trial goes back to that trial. A mutt becomes the free plan instead (P4 — never locked).
      * Caller holds the pet row lock. Returns true if changed.
      */
     public function markRefunded(Pet $pet, CarbonInterface $now): bool

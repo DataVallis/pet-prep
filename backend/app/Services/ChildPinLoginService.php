@@ -70,7 +70,6 @@ class ChildPinLoginService
         private readonly FamilyService $families,
         private readonly PairingService $pairing,
         private readonly ChildProfileService $profiles,
-        private readonly ChallengeService $challenges,
     ) {}
 
     public static function hashPin(string $pin): string
@@ -144,9 +143,10 @@ class ChildPinLoginService
                 'mode' => $mode,
                 'pet_profile' => $options,
                 'plan' => $newPetPlan?->value,
-                // M3-11 P7: whether the new challenge pet gets the 7-day free trial
-                // (one per child, ever); null when no challenge pet is created.
-                'trial_available' => $newPetPlan === PetPlan::Challenge ? ! $this->challenges->childHadTrial($child) : null,
+                // M3-13 (David 2026-10-08): no free trial any more — a new challenge
+                // pet is payment_required from birth (false); null = no challenge pet.
+                // Kept for old app builds.
+                'trial_available' => $newPetPlan === PetPlan::Challenge ? false : null,
             ];
         });
     }

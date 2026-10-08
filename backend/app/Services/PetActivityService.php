@@ -62,6 +62,7 @@ class PetActivityService
         private TrainingService $training,
         private ChallengeService $challenges,
         private PlayService $play,
+        private ChallengeCreditService $credits,
     ) {}
 
     /**
@@ -557,6 +558,13 @@ class PetActivityService
      */
     public function signContract(Pet $pet, User $child, string $format, string $signature): ActionResult
     {
+        // M3-13: a purchase made before the birth that is still unassigned pays
+        // this pet first (own transaction, lock order family → pet → credit), so
+        // the birth below is not locked. Unborn pets only — no-op otherwise.
+        if ($pet->isUnborn()) {
+            $this->credits->assignAvailableBeforeBirth($pet);
+        }
+
         return $this->withLockedPet($pet, ActivityType::SignedContract, function (Pet $locked) use ($child, $format, $signature): ActionResult {
             $lockReason = $locked->actionLockReasonFor($child);
             if ($lockReason !== null && $lockReason !== PetLockReason::ContractRequired) {
@@ -578,12 +586,13 @@ class PetActivityService
             ]);
 
             if ($locked->isUnborn()) {
+                // M3-13: no free trial — giveBirth() sets trial_ends_at = birth.
                 $locked->giveBirth($now);
-                // M3-11 P7: one free trial per child — a child who already had one
-                // starts this challenge as payment_required (trial_ends_at = birth).
-                $locked->trial_ends_at = $this->challenges->trialEndAtBirth($locked, $child, $now);
                 $locked->pet_state = $this->decay->derivePetState($locked, $now);
                 $locked->saveQuietly();
+                // M3-13 (David 2026-10-08): an unpaid challenge waits for the purchase
+                // from birth on — locked now, so the program clock never runs unpaid.
+                $this->challenges->lockAtBirth($locked, $now);
 
                 // State videos start at birth (M4-03, 2026-10-05): queued after the commit,
                 // once the reference image is stored (else StorePetMedia queues them later).

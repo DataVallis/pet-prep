@@ -35,14 +35,15 @@ enum PushType: string
 
     /**
      * M3-11: trial day 6 of an unpaid challenge — "the trial ends tomorrow",
-     * parents only, once per pet (ChallengeService::processTrials).
+     * parents only. **No longer sent since M3-13** (no free trial, David
+     * 2026-10-08); kept for stored rows and the DB CHECK.
      */
     case TrialEnding = 'trial_ending';
 
     /**
-     * M3-11: the trial is over and the pet waits for the parent (lock reason
-     * `payment_required`) — parents + caretakers (kind child copy), once per
-     * lock start.
+     * M3-11 / M3-13: the pet waits for the parent (lock reason
+     * `payment_required` — at birth, or when a pre-M3-13 trial ends) —
+     * parents + caretakers (kind child copy), once per lock start.
      */
     case PaymentRequired = 'payment_required';
 

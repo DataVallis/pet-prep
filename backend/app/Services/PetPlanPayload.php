@@ -19,10 +19,13 @@ use Carbon\CarbonInterface;
  * the M3-11 backfill, or an `admin` unlock); otherwise = `type`. Display
  * only — `type` / `status` stay the pet's real plan, so the program clock,
  * history, certificate and locks of existing pets are unchanged.
- * `payments_enforced` false (kill switch) = no lock after the trial; the app shows no
- * trial countdown or payment banner.
- * `status` is null for a free pet; `trial_ends_at` is null before birth and
- * for a free pet. Instants ISO 8601 (in `$timezone` when given).
+ * `payments_enforced` false (kill switch) = nobody is locked; an unpaid
+ * challenge reads `trial` (= "unpaid, playable") and the app shows no payment banner.
+ * M3-13 (no free trial): an unpaid challenge is `payment_required` from
+ * creation (unborn) on; `trial` remains only for a pre-M3-13 trial still
+ * running. `trial_ends_at` = the birth for every pet born since M3-13
+ * (a past pre-M3-13 trial end otherwise); null before birth and for a free
+ * pet. `status` is null for a free pet. Instants ISO 8601 (in `$timezone` when given).
  */
 final class PetPlanPayload
 {

@@ -10,9 +10,7 @@ use App\Exceptions\ChallengeException;
 use App\Models\ChallengeCredit;
 use App\Models\Family;
 use App\Models\Pet;
-use App\Models\PetCaretaker;
 use App\Models\PurchaseEvent;
-use App\Models\User;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -26,13 +24,15 @@ use Illuminate\Support\Facades\DB;
  * activate()). Writes that touch a pet go through ChallengeService.
  *
  *  - create() (webhook): new credit; auto-assigned when the family has
- *    exactly one active unpaid challenge pet (status trial or
- *    payment_required, unborn pets count as trial).
+ *    exactly one active unpaid challenge pet (status trial — a pre-M3-13
+ *    trial — or payment_required, unborn pets included).
+ *  - assignAvailableBeforeBirth() (contract, M3-13): the same rule at birth
+ *    for a credit the family already holds.
  *  - activate() (POST /api/parent/pets/{pet}/challenge/activate): the oldest
  *    available credit → the pet. Idempotent: a pet already paid by a
  *    purchase answers `already_active` without using another credit.
  *  - revokeForRefund() (webhook): the purchase's credit is revoked; its pet
- *    goes back to trial / payment_required (ChallengeService::markRefunded).
+ *    goes back to payment_required (ChallengeService::markRefunded).
  *  - transferUnassigned() (webhook TRANSFER): only unassigned credits move.
  */
 class ChallengeCreditService
@@ -68,12 +68,44 @@ class ChallengeCreditService
     }
 
     /**
-     * Assign the family's oldest available credit to $pet (parent action).
-     *
-     * @return array{status: 'activated'|'already_active', pet: Pet, credit: ChallengeCredit|null}
-     *
-     * @throws ChallengeException free_plan / already_paid / pet_not_active (422), no_credit (409)
+     * M3-13 (no free trial — the challenge starts with a purchase): right
+     * before an unborn challenge pet is born (PetActivityService::signContract),
+     * a credit the family already holds pays it — mirroring the webhook rule:
+     * only when this pet is the family's ONLY active unpaid challenge pet
+     * (with several, the parent chooses via activate()). Oldest credit first.
+     * Lock order family → pet → credit. Returns true when it assigned.
      */
+    public function assignAvailableBeforeBirth(Pet $pet): bool
+    {
+        return DB::transaction(function () use ($pet): bool {
+            $family = Family::whereKey($pet->family_id)->lockForUpdate()->first();
+            $locked = Pet::whereKey($pet->id)->lockForUpdate()->first();
+            if ($family === null || $locked === null || ! $locked->isUnborn() || $locked->plan !== PetPlan::Challenge
+                || $locked->challenge_paid_at !== null || ! $locked->is_active || $locked->is_game_over) {
+                return false;
+            }
+
+            $unpaid = $this->unpaidPets($family);
+            if ($unpaid->count() !== 1 || $unpaid->first()->id !== $locked->id) {
+                return false;
+            }
+
+            $credit = ChallengeCredit::where('family_id', $family->id)
+                ->available()
+                ->orderBy('purchased_at')
+                ->orderBy('id')
+                ->lockForUpdate()
+                ->first();
+            if ($credit === null) {
+                return false;
+            }
+
+            $this->assign($credit, $locked, ChallengeCredit::VIA_BIRTH);
+
+            return true;
+        });
+    }
+
     /**
      * Superadmin unlock in Filament (QA PR #67 B1c): the challenge counts as paid
      * without a store purchase (`challenge_paid_source = admin`) — support cases,
@@ -95,6 +127,14 @@ class ChallengeCreditService
         });
     }
 
+    /**
+     * Assign the family's oldest available credit to $pet (parent action).
+     * Works for an unborn pet too (M3-13: the parent buys before the contract).
+     *
+     * @return array{status: 'activated'|'already_active', pet: Pet, credit: ChallengeCredit|null}
+     *
+     * @throws ChallengeException free_plan / already_paid / pet_not_active (422), no_credit (409)
+     */
     public function activate(Pet $pet): array
     {
         return DB::transaction(function () use ($pet): array {
@@ -212,7 +252,8 @@ class ChallengeCreditService
                 'status' => $pet->challengeStatus()?->value,
                 'trial_ends_at' => $pet->trial_ends_at?->copy()->setTimezone($tz)->toIso8601String(),
                 'paid_at' => $pet->challenge_paid_at?->copy()->setTimezone($tz)->toIso8601String(),
-                // P7: the pet has / gets the 7-day free trial (null for a free pet).
+                // M3-13: no free trial any more — true only for a pre-M3-13 pet whose
+                // 7-day trial ran (null for a free pet). Kept for old app builds.
                 'trial_available' => $this->trialAvailable($pet),
                 // P5: deleting the pet (or its only child) throws the purchase away.
                 'deletion_loses_purchase' => $pet->deletionLosesPurchase(),
@@ -221,27 +262,22 @@ class ChallengeCreditService
     }
 
     /**
-     * P7: born → whether its trial ran (trial_ends_at after birth); unborn →
-     * whether its first caretaker still has the one free trial per child.
+     * M3-13 (the free trial is gone; "one trial per child" P7 retired): born →
+     * whether a pre-M3-13 trial ran (trial_ends_at after birth); unborn →
+     * false (it will be payment_required at birth). Null for a free pet.
      */
     private function trialAvailable(Pet $pet): ?bool
     {
         if ($pet->plan !== PetPlan::Challenge) {
             return null;
         }
-        if ($pet->born_at !== null) {
-            return ! ChallengeService::startedWithoutTrial($pet);
-        }
 
-        $childId = PetCaretaker::where('pet_id', $pet->id)->orderBy('id')->value('user_id');
-        $child = $childId !== null ? User::find($childId) : null;
-
-        return $child === null || ! $this->challenges->childHadTrial($child, $pet->id);
+        return $pet->born_at !== null && ! ChallengeService::startedWithoutTrial($pet);
     }
 
     /**
-     * Active challenge pets of the family that are not paid (trial — also
-     * unborn — or payment_required).
+     * Active challenge pets of the family that are not paid (payment_required —
+     * also unborn — or a pre-M3-13 trial; `trial` too while payments are not enforced).
      *
      * @return Collection<int, Pet>
      */

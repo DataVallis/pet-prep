@@ -39,6 +39,9 @@ class ChallengeCredit extends Model
 
     public const VIA_WEBHOOK = 'webhook';
 
+    /** M3-13: a credit the family already held paid a challenge pet at its birth (contract). */
+    public const VIA_BIRTH = 'birth';
+
     /**
      * @var list<string>
      */

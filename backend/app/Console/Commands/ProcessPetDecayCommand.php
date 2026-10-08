@@ -25,10 +25,10 @@ class ProcessPetDecayCommand extends Command
      */
     public function handle(PetDecayService $decayService, EscalationService $escalationService, RoutineLedgerService $ledger, ChallengeService $challenges): int
     {
-        // M3-11: trial reminders and payment locks first, so a pet whose
-        // trial just ended is frozen before this tick's decay / escalation.
+        // M3-11 / M3-13: payment locks first, so a pet that has to wait for a
+        // purchase is frozen before this tick's decay / escalation.
         $trials = $challenges->processTrials();
-        $this->info("Trials: reminded {$trials['reminded']}, locked {$trials['locked']}.");
+        $this->info("Payment locks: {$trials['locked']}.");
 
         $this->info('Processing pet metric decay...');
 

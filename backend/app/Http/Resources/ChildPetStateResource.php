@@ -127,7 +127,7 @@ class ChildPetStateResource extends JsonResource
                 'illness_until' => $pet->isIll() ? $iso($pet->illness_until) : null,
                 'is_game_over' => (bool) $pet->is_game_over,
                 'certificate_eligible' => (bool) $pet->certificate_eligible,
-                // M3-11: free | challenge, trial / payment_required / paid (null for free).
+                // M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free).
                 'plan' => PetPlanPayload::for($pet, $tz, $now)->toArray(),
                 // Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs.
                 'current_video_url' => $media->currentVideoUrl,
