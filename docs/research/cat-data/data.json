@@ -133,7 +133,8 @@
         "source_id": "C2",
         "quote": "feeding once or twice a day is appropriate in most cases",
         "confidence": "medium",
-        "notes": "Game picks the upper end. Guidelines also favour many small meals (C8, C9) — 2 is a game simplification (CAT_SPEC §3, open D)."
+        "notes": "Game picks the upper end. Guidelines also favour many small meals (C8, C9) — 2 is a game simplification (CAT_SPEC §3, open D).",
+        "decision": "potrdil David 2026-10-08 (načrt M5-R06): adult cat 2 meals per day (game simplification)"
       },
       "senior": {
         "value": 2,
@@ -263,7 +264,8 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED — proposal (D). While the weekly change is overdue the scoop deadline shortens to 2 h (CAT_SPEC §0 open D)."
+        "notes": "While the weekly change is overdue the scoop deadline shortens to 2 h (CAT_SPEC §0 open D).",
+        "decision": "potrdil David 2026-10-08 (načrt M5-R06): overdue weekly change → 2 h scoop deadline"
       },
       "kitten_litter_trained_on_arrival": {
         "value": true,
@@ -271,7 +273,8 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED — proposal (D). Not researched; kittens assumed litter-trained, so no 'puddle' event for cats."
+        "notes": "Not researched; kittens assumed litter-trained, so no 'puddle' event for cats.",
+        "decision": "potrdil David 2026-10-08 (načrt M5-R06): kitten litter-trained on arrival, no puddle event"
       }
     },
     "play": {
@@ -349,6 +352,15 @@
         "confidence": "low",
         "notes": "No source that one day without play causes illness.",
         "decision": "potrdil David 2026-10-08 13:47: no illness; next day 'scratched the sofa' instead"
+      },
+      "ball_game": {
+        "value": false,
+        "unit": "bool",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dog ball game (M5-R05) is not offered for cats; cuddle stays (mood only, paid challenge, 1 invitation/day).",
+        "decision": "potrdil David 2026-10-08 (načrt M5-R06): no ball game for cats"
       }
     },
     "scratching": {

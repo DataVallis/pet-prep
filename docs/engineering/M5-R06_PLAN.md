@@ -1,6 +1,6 @@
 # M5-R06 — Izvedbeni načrt: vrsta živali → pasma (pes + mačka)
 
-> **Status:** osnutek načrta, 8. 10. 2026 (Claude). Spec: [`docs/product/CAT_SPEC.md`](../product/CAT_SPEC.md) (David je Q1–Q10 potrdil 8. 10. 2026 ob 13:47). Viri in vrednosti: [`docs/research/cat-data/data.json`](../research/cat-data/data.json) (62 vrednosti z virom [Cn] ali z Davidovo odločitvijo; predlogi (D) so označeni `UNSOURCED`).
+> **Status:** načrt **potrdil David 8. 10. 2026** (Claude ga je napisal isti dan). Spec: [`docs/product/CAT_SPEC.md`](../product/CAT_SPEC.md) (David je Q1–Q10 potrdil 8. 10. 2026 ob 13:47). Viri in vrednosti: [`docs/research/cat-data/data.json`](../research/cat-data/data.json) (62 vrednosti z virom [Cn] ali z Davidovo odločitvijo; predlogi (D) so označeni `UNSOURCED`).
 > **Nič od tega še ni zgrajeno.** Vsaka naloga je en PR po pravilih iz `CLAUDE.md` (testi, dokumenti, FEATURES, BUILD_LOG).
 > **Merilo regresije:** pri obstoječih psih se ne spremeni nič. Vsi obstoječi Pest in Jest testi ostanejo zeleni brez sprememb pričakovanih vrednosti.
 
@@ -51,4 +51,7 @@ Odvisnosti: R06-01 → (R06-02, R06-03) → R06-04 → R06-05 → R06-06; R06-07
 
 ## 5. Še odprto (D) — ne blokira R06-01 do R06-03
 
-Seznam iz CAT_SPEC §0 (imena faz, »muca / mucek«, besedilo pogodbe, žoga odpade, 2 obroka, rok 2 h ob zamujeni menjavi, mucek brez luže, »podarjena« = posvojena, besedilo o igri v aplikaciji, besedila obvestil, AI videz, sinonimi v iskanju). Potrebni so najpozneje pred R06-04 (pravila) oz. R06-06 / R06-08 (besedila).
+Potrjeno 8. 10. 2026: žoga pri mački odpade, odrasla muca 2 obroka, mucek brez luže, zamujena menjava → rok 2 h.
+
+
+Seznam iz CAT_SPEC §0 (imena faz, »muca / mucek«, besedilo pogodbe, »podarjena« = posvojena, besedilo o igri v aplikaciji, besedila obvestil, AI videz, sinonimi v iskanju). Potrebni so najpozneje pred R06-04 (pravila) oz. R06-06 / R06-08 (besedila).

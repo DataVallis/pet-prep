@@ -25,11 +25,11 @@ Vsa vprašanja Q1–Q10: ✅ **David 8. 10. 2026 13:47** — potrdil priporočen
 **Še odprto (D) — manjši predlogi, ki jih odločitve Q1–Q10 ne pokrivajo (čakajo Davida):**
 - imena faz (»mucek«, »mlada / zrela / starejša mačka«) (§2, §9);
 - otroški samostalnik **»muca«** / »mucek« (§9) in besedilo pogodbe (§9);
-- psova **igra z žogo pri mački odpade**, crkljanje ostane (§5.5, M5-R05);
+- ~~psova igra z žogo pri mački odpade, crkljanje ostane (§5.5, M5-R05)~~ ✅ David 8. 10. 2026 (načrt M5-R06);
 - podrobnosti mini-igre s palico: ~60 s, konec z »ulovom«, ≥ 2 h med igrama (§5.2);
-- odrasla mačka 2 obroka na dan kot poenostavitev igre (§3);
-- zamujena tedenska menjava peska → rok za čiščenje 2 h namesto 4 h (§4);
-- mucek ob prihodu že navajen na pesek, brez »luže« (§4);
+- ~~odrasla mačka 2 obroka na dan kot poenostavitev igre (§3)~~ ✅ David 8. 10. 2026;
+- ~~zamujena tedenska menjava peska → rok za čiščenje 2 h namesto 4 h (§4)~~ ✅ David 8. 10. 2026;
+- ~~mucek ob prihodu že navajen na pesek, brez »luže« (§4)~~ ✅ David 8. 10. 2026;
 - izvor »podarjena od znancev« = posvojena (§1);
 - iskreno besedilo za starše o igri v aplikaciji (§5.4);
 - besedila obvestil (§6) in »prva pomoč« pri dolgotrajni lakoti (samo izobraževalno besedilo [C24]);
