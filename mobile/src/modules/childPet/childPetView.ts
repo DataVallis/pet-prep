@@ -80,7 +80,7 @@ export interface ChildPetView {
     media: PetMediaInfo;
     /** M5-R01 profile (stage, age, origin, next stage); null for a legacy pet. */
     profile: PetProfileInfo | null;
-    /** M3-11: free mutt sandbox or the challenge (trial / payment_required / paid); legacy → paid. */
+    /** M3-11 / M3-13: free mutt sandbox or the challenge (payment_required / paid; trial = a pre-M3-13 trial); legacy → paid. */
     plan: PetPlan;
   };
   lock: { is_locked: boolean; reason: LockReason | null; until: string | null };

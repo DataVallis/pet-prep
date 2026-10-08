@@ -1,6 +1,6 @@
 /**
- * "Izberi kužka" (M5-R04): plan (M3-09: free mutt sandbox or the 12-week challenge with a
- * 7-day trial — PAYMENTS_SPEC), breed, origin and age at arrival of a new pet, before the
+ * "Izberi kužka" (M5-R04): plan (M3-09: free mutt sandbox or the 12-week challenge, which
+ * starts with a purchase — no free trial since M3-13, PAYMENTS_SPEC), breed, origin and age at arrival of a new pet, before the
  * child's PIN (REALISM_SPEC §1). Premium breeds need the challenge plan (server 422
  * `breed_locked` otherwise); the challenge needs a premium breed — the mutt is greyed out
  * while it is chosen (M5-F03, server 422 `challenge_requires_paid_breed`). Plan, origin and age have no default — the parent reads the

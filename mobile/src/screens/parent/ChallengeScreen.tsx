@@ -1,9 +1,11 @@
 /**
- * ChallengeScreen — the parent paywall (M3-09, PAYMENTS_SPEC P1–P7): the 12-week challenge
- * for one dog, 49,99 € (consumable `petprep_challenge_12w`), after a 7-day trial from birth.
+ * ChallengeScreen — the parent paywall (M3-09, PAYMENTS_SPEC P1–P6): the 12-week challenge
+ * for one dog, 49,99 € (consumable `petprep_challenge_12w`). M3-13 (David 2026-10-08): no
+ * free trial — the challenge starts with a purchase (also before the dog is born).
  *
  * - Lists the family's dogs that can (or must) be bought now (`GET /api/parent/billing`:
- *   status `trial` / `payment_required`), with the trial end or "the game is paused".
+ *   status `payment_required`, or `trial` for a dog that still runs a pre-M3-13 trial), with
+ *   "the game is paused", "starts once bought" (not born yet) or when the game will pause.
  * - "Kupi za …" buys with the store price from the RevenueCat offering; the purchase is
  *   assigned to that dog (webhook auto-assign or `activateChallenge`). "Uporabi kupljen
  *   izziv" spends an unassigned credit without buying. "Obnovi nakupe" re-reads the store.
@@ -43,7 +45,7 @@ import { fonts, palette, tightTracking } from '@/theme';
 
 export const CHALLENGE_STRINGS = strings('paywall', 'challenge', {
   petLine: (breed: string, names: string) => t('paywall:challenge.petLine', { breed, names }),
-  trialEnds: (when: string) => t('paywall:challenge.trialEnds', { when }),
+  pausesAt: (when: string) => t('paywall:challenge.pausesAt', { when }),
   honest: (price: string) => t('paywall:challenge.honest', { price }),
   buy: (price: string) => t('paywall:challenge.buy', { price }),
   credits: (count: number) => t('paywall:challenge.credits', { count }),
@@ -238,18 +240,21 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
             {waiting.map((pet) => {
               const familyPet = family?.pets.find((p) => p.id === pet.pet_id);
               const names = familyPet && family ? caretakerNames(familyPet, family) : '';
-              const paused = pet.status === 'payment_required';
+              // M3-13: an unborn dog is bought first; it starts playing once the contract is signed.
+              // With the server's kill switch off (status `trial`) nothing waits, so no "buy first" copy.
+              const unborn = familyPet?.born_at === null && pet.status === 'payment_required';
+              const paused = pet.status === 'payment_required' && familyPet?.born_at !== null;
               return (
                 <Card key={pet.pet_id} testID={`challenge-pet-${pet.pet_id}`}>
                   <Text style={styles.petTitle}>{S.petLine(breedLabel(familyPet?.breed_type ?? 'mutt'), names)}</Text>
                   <Text style={[styles.body, paused && styles.pausedText]}>
-                    {paused
-                      ? S.paused
-                      : pet.trial_available === false
-                        ? S.noTrial
+                    {unborn
+                      ? S.unborn
+                      : paused
+                        ? S.paused
                         : pet.trial_ends_at
-                          ? S.trialEnds(formatTrialEnd(pet.trial_ends_at, timezone))
-                          : S.trialEndsUnknown}
+                          ? S.pausesAt(formatTrialEnd(pet.trial_ends_at, timezone))
+                          : S.notBought}
                   </Text>
                   {credits > 0 ? (
                     <Pressable

@@ -7,9 +7,10 @@
  * offered a purchase, even if an old payload still carries a challenge (M5-F02/F03 and the
  * backend migration move every unpaid mutt challenge to the free plan).
  *
- * The buy button additionally follows the pet's `plan` (`needsPurchase`: a challenge on trial
- * or locked for payment) and needs a born pet: an unborn challenge dog is sent as `trial`
- * with `trial_ends_at` null — its trial only starts when the child signs the contract.
+ * The buy button additionally follows the pet's `plan` (`needsPurchase`: an unpaid challenge).
+ * M3-13 (David 2026-10-08, no free trial): an unborn challenge dog gets the button too — the
+ * challenge starts with a purchase, so the parent buys first (the server sends it as
+ * `payment_required`; an older server sent `trial`, also covered by `needsPurchase`).
  */
 
 import type { BillingPet } from '@/api/client';
@@ -17,17 +18,16 @@ import type { FamilyOverview, FamilyPet } from '@/modules/family/family';
 import { needsPurchase, planOfBillingPet } from '@/modules/plan/plan';
 
 type OfferablePet = Pick<FamilyPet, 'is_game_over' | 'breed_type'>;
-type PurchasablePet = Pick<FamilyPet, 'plan' | 'is_game_over' | 'breed_type' | 'born_at'>;
+type PurchasablePet = Pick<FamilyPet, 'plan' | 'is_game_over' | 'breed_type'>;
 
 /** Shared exclusion for every purchase surface: never a mutt, never a game-over pet. */
 export function isOfferablePet(pet: OfferablePet | null | undefined): boolean {
   return !!pet && !pet.is_game_over && pet.breed_type !== 'mutt';
 }
 
-/** Show the "buy" button for this pet (overview card, child detail, Nadzor count). */
+/** Show the "buy" button for this pet (overview card, child detail, Nadzor count) — born or not. */
 export function canBuyChallenge(pet: PurchasablePet | null | undefined): boolean {
   if (!pet || !isOfferablePet(pet)) return false;
-  if (pet.born_at === null) return false;
   return needsPurchase(pet.plan);
 }
 

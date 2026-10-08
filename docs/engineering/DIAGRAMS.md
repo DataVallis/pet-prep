@@ -1344,23 +1344,19 @@ sequenceDiagram
     end
 ```
 
-Challenge status of a pet (M3-11, derived only by `Pet::challengeStatus()`; a `free` pet has none):
+Challenge status of a pet (M3-11; **M3-13, David 2026-10-08: no free trial** — derived only by `Pet::challengeStatus()`; a `free` pet has none). `LegacyTrial` exists only for pets born before M3-13 (kept until `trial_ends_at`) and as the kill-switch status (`payments.enforced` false):
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Unborn: PIN with plan challenge (default)
-    Unborn --> Trial: contract signed = birth, trial_ends_at = birth + 7 family-local days
-    Unborn --> PaymentRequired: birth, child already had its one free trial (P7) → trial_ends_at = born_at
-    Unborn --> Paid: credit assigned before birth
-    Trial --> Paid: credit assigned (webhook auto-assign or activate) — clock keeps running from birth
-    Trial --> PaymentRequired: now ≥ trial_ends_at (child actions 423 at once)
-    PaymentRequired --> Locked: tick (pets:process-decay, before decay): payment_locked_at, frozen_at, status period payment_lock, PetUpdated + push parents + child
-    Locked --> Paid: credit assigned → lock lifted, applyThaw shifts *_zero_since by the pause
-    Paid --> Trial: refund inside the 7 days
-    Paid --> Locked: refund after the trial (unless 12 weeks done → stays Paid)
-    note right of Trial: day 6 (≥ 24 h before the end): one trial_ending push to parents
+    [*] --> UnbornUnpaid: PIN with plan challenge (status payment_required — buy first, lock reason stays contract_required)
+    UnbornUnpaid --> Paid: credit assigned before birth (activate · webhook auto-assign · held credit at the contract when it is the only unpaid pet)
+    UnbornUnpaid --> Locked: contract signed = birth, trial_ends_at = born_at, lockAtBirth (payment_locked_at = birth, status period from birth, push parents + child, one PetUpdated signed_contract)
+    Locked --> Paid: credit assigned → lock lifted, applyThaw, the 12 weeks start now (lock time is not program time)
+    LegacyTrial --> Paid: credit assigned
+    LegacyTrial --> Locked: tick at trial_ends_at (locked from trial_ends_at), push parents + child
+    Paid --> Locked: refund (unless 12 weeks done → stays Paid, a pre-M3-13 pet inside its old trial → LegacyTrial)
     note right of Locked: like a hard stop: no decay, escalation, illness, game over, walk illness, behaviour, training decay
-    Trial --> GameOver: 24 h neglect (game over is never unlocked by a purchase, P7)
+    LegacyTrial --> GameOver: 24 h neglect (game over is never unlocked by a purchase, P7)
     Paid --> GameOver: 24 h neglect
     GameOver --> [*]
 ```
@@ -1370,10 +1366,10 @@ Credit lifecycle:
 ```mermaid
 stateDiagram-v2
     [*] --> Available: INITIAL_PURCHASE / NON_RENEWING_PURCHASE of the consumable
-    Available --> Assigned: activate (oldest first) · webhook auto-assign (exactly one unpaid pet)
+    Available --> Assigned: activate (oldest first) · webhook auto-assign (exactly one unpaid pet) · at birth (M3-13, assigned_via birth: the born pet is the only unpaid one)
     Available --> Available: TRANSFER → moves to the receiver family
     Assigned --> Assigned: TRANSFER (recorded, stays with its pet) · pet deleted (pet_id null, still used — P5: deletion of a paid, unfinished pet needs acknowledge_paid_challenge)
     Available --> Revoked: refund (CANCELLATION without expiration / REFUND, matched by transaction_id)
-    Assigned --> Revoked: refund → pet back to Trial / Locked
+    Assigned --> Revoked: refund → pet Locked (a pre-M3-13 pet inside its old trial → LegacyTrial)
     Revoked --> [*]
 ```

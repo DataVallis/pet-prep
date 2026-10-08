@@ -3,7 +3,7 @@
  * The server — not the RevenueCat SDK — decides what is paid: the RevenueCat webhook
  * (M3-08) turns each store purchase into one **challenge credit** for the family, the app
  * assigns it to a pet (`POST /api/parent/pets/{pet}/challenge/activate`), the server runs
- * the 7-day trial clock. `GET /api/parent/billing` returns the unassigned credits and the
+ * the payment lock (no free trial since M3-13). `GET /api/parent/billing` returns the unassigned credits and the
  * plan + status of every family pet. The SDK's `customerInfo` is only a hint that
  * something changed (→ invalidate this query).
  */

@@ -51,9 +51,10 @@ class PetFactory extends Factory
     }
 
     /**
-     * M3-11: an unpaid challenge pet — the 7-day trial runs from birth
-     * (trial_ends_at is set at creation for a born pet, at the contract for
-     * an unborn one).
+     * M3-11 / M3-13: an unpaid challenge pet. Since M3-13 there is no free
+     * trial: a born pet gets trial_ends_at = born_at (payment_required; the
+     * tick locks it), an unborn one is locked at the contract. Use
+     * ->legacyTrial() for a pet that still runs a pre-M3-13 7-day trial.
      */
     public function trial(): static
     {
@@ -62,6 +63,24 @@ class PetFactory extends Factory
             'challenge_paid_at' => null,
             'challenge_paid_source' => null,
         ]);
+    }
+
+    /**
+     * A pet born before M3-13 whose 7-day free trial is still recorded:
+     * trial_ends_at = birth + 7 family-local days (Pet::trialEndFor). Born
+     * pets only (an unborn pet never gets a trial any more). An explicit
+     * `trial_ends_at` other than the birth is kept.
+     */
+    public function legacyTrial(): static
+    {
+        return $this->trial()->afterCreating(function (Pet $pet): void {
+            if ($pet->born_at === null
+                || ($pet->trial_ends_at !== null && ! $pet->trial_ends_at->equalTo($pet->born_at))) {
+                return;
+            }
+            DB::table('pets')->where('id', $pet->id)->update(['trial_ends_at' => $pet->trialEndFor($pet->born_at)]);
+            $pet->refresh();
+        });
     }
 
     /**

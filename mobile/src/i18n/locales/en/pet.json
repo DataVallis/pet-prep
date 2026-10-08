@@ -55,8 +55,8 @@
         "hint": "Free forever. All the care and game rules, without the 12-week programme or a certificate; history of the last 7 days. The dog is always a mixed breed."
       },
       "challenge": {
-        "title": "12-week challenge — 7 days free, then {{price}}",
-        "hint": "The programme that shows whether your child is ready for a dog, with the Border Collie, a certificate and the full history. The trial starts when your child signs the contract. No automatic charge: after 7 days the game pauses until you buy the challenge for this dog. If your child already had a free trial, the challenge starts with a purchase."
+        "title": "12-week challenge — {{price}}",
+        "hint": "The programme that shows whether your child is ready for a dog, with the Border Collie, a certificate and the full history. The challenge starts with a purchase: the dog waits until you buy it for this dog (also possible before the contract is signed). One-time payment, no subscription. Want to try first? Choose the free mixed breed."
       }
     },
     "planMissing": "Choose a plan.",
@@ -69,7 +69,7 @@
     },
     "breedHints": {
       "mutt": "The free plan's dog. Not part of the 12-week challenge.",
-      "border_collie": "Part of the 12-week challenge (also during the free trial)."
+      "border_collie": "Part of the 12-week challenge."
     },
     "breedLockedNote": "This breed can't be chosen right now. Choose a mixed breed or try again later.",
     "lockedA11y": "{{breed}}, locked — part of the paid challenge",
@@ -110,7 +110,7 @@
     "noPaidBreed": "No paid breed can be chosen right now. Choose “Free mixed breed”, or try again later.",
     "confirm": "Create code",
     "back": "Back",
-    "noTrial": "{{name}} has already had a free trial. The challenge for this dog starts with a purchase: after the contract is signed, unlock it in the app."
+    "buyFirst": "The 12-week challenge starts with a purchase: buy it under “Purchases / challenge” — before or after {{name}} signs the contract. Until then the dog waits."
   },
   "media": {
     "pending": "Your pup is getting ready…",

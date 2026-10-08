@@ -27,8 +27,11 @@ class BillingController extends Controller
 
     /**
      * Unused challenge purchases of the family and the payment status of
-     * every active pet. `status` null = free plan; `trial_ends_at` null =
-     * free plan or not born yet (trial starts at birth).
+     * every active pet. `status` null = free plan; an unpaid challenge is
+     * `payment_required` (also before birth — buy first, M3-13) or `trial`
+     * (a pre-M3-13 trial still running, or payments not enforced).
+     * `trial_ends_at` null = free plan or not born yet; `trial_available` is
+     * deprecated (no free trial since M3-13).
      *
      * GET /api/parent/billing
      */
@@ -42,7 +45,7 @@ class BillingController extends Controller
         return response()->json([
             /** @var int */
             'credits_available' => $billing['credits_available'],
-            // Kill switch (config/payments.php): false = nobody is locked after the trial yet.
+            // Kill switch (config/payments.php): false = nobody is payment-locked yet.
             /** @var bool */
             'payments_enforced' => $billing['payments_enforced'],
             /** @var list<array{pet_id: int, plan: 'free'|'challenge', status: 'trial'|'payment_required'|'paid'|null, trial_ends_at: string|null, paid_at: string|null, trial_available: bool|null, deletion_loses_purchase: bool}> */

@@ -522,10 +522,10 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
                 {S.validFor(formatCountdown(remaining))}
               </Text>
             )}
-            {/* P7: one free trial per child — this child already had theirs. */}
-            {(pin as { trial_available?: boolean | null }).trial_available === false && (
-              <Text style={styles.muted} testID="pin-no-trial">
-                {t('pet:picker.noTrial', { name: target.name })}
+            {/* M3-13 (David 2026-10-08): no free trial — the challenge starts with a purchase. */}
+            {(pin as { plan?: string | null }).plan === 'challenge' && (
+              <Text style={styles.muted} testID="pin-buy-first">
+                {t('pet:picker.buyFirst', { name: target.name })}
               </Text>
             )}
           </>

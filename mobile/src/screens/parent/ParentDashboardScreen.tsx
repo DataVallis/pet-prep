@@ -6,7 +6,7 @@
  * days, pet mini status). Live: one private Reverb channel per pet patches / refetches
  * the cache; without a subscribed socket the query polls every 30 s. Tapping a child
  * opens the report (`ChildDetailScreen`). "Nadzor": children + devices, hard stop per
- * pet, quiet hours, parents + invite / join. M3-09: a banner (trial ending / game paused)
+ * pet, quiet hours, parents + invite / join. M3-09: a banner (waiting for the purchase / game pauses soon)
  * opens the challenge paywall (`ChallengeScreen`); the simulated "Pasme" tab is gone.
  * M5-F01: "12-week challenge — buy" on the child card and detail, and the "Purchases /
  * challenge" row in Nadzor open the same paywall (it lists every dog that can be bought).

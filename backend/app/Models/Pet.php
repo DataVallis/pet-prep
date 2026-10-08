@@ -84,9 +84,11 @@ class Pet extends Model
                 return;
             }
 
-            // Born at creation (factories, admin): the trial starts now.
+            // Born at creation (factories, admin). M3-13 (David 2026-10-08): no free
+            // trial any more — an unpaid challenge awaits payment from birth
+            // (trial_ends_at = born_at; the tick locks it).
             if ($pet->plan === PetPlan::Challenge && $pet->trial_ends_at === null) {
-                $pet->trial_ends_at = $pet->trialEndFor($pet->born_at);
+                $pet->trial_ends_at = $pet->born_at;
             }
 
             $pet->last_decay_at ??= now();
@@ -791,7 +793,11 @@ class Pet extends Model
     //  Plan / trial / payment (M3-11, PAYMENTS_SPEC)
     // ──────────────────────────────────────────────────────────────
 
-    /** Trial length from birth (PAYMENTS_SPEC P2), family-local calendar days. */
+    /**
+     * Length of the former free trial (M3-11 P2, removed by M3-13 — David
+     * 2026-10-08). Only pets born before M3-13 still carry such a trial
+     * (`trial_ends_at` after `born_at`); kept for those and for tests.
+     */
     public const TRIAL_DAYS = 7;
 
     public function isFreePlan(): bool
@@ -800,8 +806,9 @@ class Pet extends Model
     }
 
     /**
-     * End of the 7-day trial for a birth at $birth: the same family-local
-     * wall-clock time 7 days later (DST-safe), stored as UTC.
+     * End of a pre-M3-13 7-day trial for a birth at $birth: the same
+     * family-local wall-clock time 7 days later (DST-safe), stored as UTC.
+     * New births never get one (giveBirth: trial_ends_at = born_at).
      */
     public function trialEndFor(CarbonInterface $birth): CarbonInterface
     {
@@ -809,9 +816,14 @@ class Pet extends Model
     }
 
     /**
-     * Payment status of the pet — THE single derivation (M3-11). Free plan →
-     * null. Challenge: paid (credit or grandfathered) › trial (unborn = the
-     * trial has not started, or before `trial_ends_at`) › payment_required.
+     * Payment status of the pet — THE single derivation (M3-11, M3-13). Free
+     * plan → null. Challenge: paid (credit, grandfathered or admin) › trial
+     * (only a pre-M3-13 trial still running: now < `trial_ends_at`) ›
+     * payment_required (also unborn: since M3-13 the challenge starts with a
+     * purchase, so the parent can buy before the contract).
+     *
+     * Kill switch (`payments.enforced` false): nothing unpaid is ever
+     * payment_required — the status stays `trial` (= "unpaid, playable").
      */
     public function challengeStatus(?CarbonInterface $now = null): ?ChallengeStatus
     {
@@ -821,12 +833,19 @@ class Pet extends Model
         if ($this->challenge_paid_at !== null) {
             return ChallengeStatus::Paid;
         }
-        if ($this->trial_ends_at === null || $this->trial_ends_at->greaterThan($now ?? now())) {
+        // A running pre-M3-13 trial keeps going until its end (no retroactive lock).
+        if ($this->trial_ends_at !== null && $this->trial_ends_at->greaterThan($now ?? now())) {
+            return ChallengeStatus::Trial;
+        }
+        // A born pet without `trial_ends_at` was written outside the model (raw
+        // insert, old migration paths — no code path births one): never locked by
+        // the tick, so it is not asked to pay either (pre-M3-13 behaviour kept).
+        if ($this->trial_ends_at === null && ! $this->isUnborn()) {
             return ChallengeStatus::Trial;
         }
 
         // Kill switch (config/payments.php): until purchases are live nobody is
-        // asked to pay — an expired trial simply keeps playing.
+        // asked to pay — an unpaid challenge simply keeps playing.
         if (! self::paymentsEnforced()) {
             return ChallengeStatus::Trial;
         }
@@ -863,12 +882,15 @@ class Pet extends Model
     }
 
     /**
-     * Child actions wait for the parent: the lock is on, or the trial just
-     * ended and the tick has not locked the pet yet.
+     * Child actions wait for the parent: the lock is on, or the pet is born,
+     * unpaid and payment_required but the tick has not locked it yet. An
+     * unborn pet never waits here — the child must still be able to sign the
+     * contract (M3-13: the lock starts at birth, PetActivityService::signContract).
      */
     public function awaitsPayment(): bool
     {
-        return $this->isPaymentLocked() || $this->challengeStatus() === ChallengeStatus::PaymentRequired;
+        return $this->isPaymentLocked()
+            || (! $this->isUnborn() && $this->challengeStatus() === ChallengeStatus::PaymentRequired);
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -956,8 +978,9 @@ class Pet extends Model
             'play_scheduled_through' => null,
             'happy_until' => null,
             'frozen_at' => null,
-            // M3-11 (PAYMENTS_SPEC P2): the 7-day trial of a challenge starts at birth.
-            'trial_ends_at' => $this->plan === PetPlan::Free ? null : $this->trialEndFor($at),
+            // M3-13 (David 2026-10-08): no free trial — a challenge's "trial" ends at
+            // birth, so an unpaid challenge is payment_required from the contract on.
+            'trial_ends_at' => $this->plan === PetPlan::Free ? null : $at,
         ]);
     }
 
@@ -975,7 +998,8 @@ class Pet extends Model
      * Priority when several apply: game over › inactive › hard stop ›
      * payment required (M3-11) › contract required › illness (the parent's
      * pause wins over the contract screen and the vet screen; an unborn pet
-     * can't be ill or game over, and its trial has not started).
+     * can't be ill or game over, and is never payment-locked — the child
+     * signs first, the lock starts at birth, M3-13).
      */
     public function actionLockReason(): ?PetLockReason
     {

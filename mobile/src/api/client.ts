@@ -193,7 +193,7 @@ export interface NewPetProfile {
   origin: PetOrigin;
   age_stage: LifeStage;
   /**
-   * M3-09: free mutt sandbox or the 12-week challenge (7-day trial). Free → breed is
+   * M3-09: free mutt sandbox or the 12-week challenge (starts with a purchase, M3-13). Free → breed is
    * always `mutt` (the server refuses anything else). Sent with the profile only.
    */
   plan: PetPlanType;
@@ -337,8 +337,9 @@ export interface PetActivitiesResponse {
  * `components['schemas'][…]` after `npm run generate-api-types`. Read every payload
  * through `readPetPlan` / `readBilling`, never directly.
  * - `free` — the mutt sandbox, free forever (no 12-week programme).
- * - `challenge` — the 12-week challenge: `trial` (born, unpaid, 7 days) →
- *   `payment_required` (lock) → `paid`; null before birth (trial not started).
+ * - `challenge` — the 12-week challenge, which starts with a purchase (M3-13, no free trial):
+ *   `payment_required` (unborn: buy first; born: lock) → `paid`. `trial` only for a dog that
+ *   still runs a pre-M3-13 7-day trial, or while the server's kill switch is off.
  */
 export type PetPlanType = 'free' | 'challenge';
 export type ChallengeStatus = 'trial' | 'payment_required' | 'paid';
@@ -365,7 +366,7 @@ export interface BillingPet {
   status: ChallengeStatus | null;
   trial_ends_at: string | null;
   paid_at: string | null;
-  /** P7: the pet has / will get the free trial (one per child); null for a free pet. */
+  /** Deprecated (M3-13): true only for a dog whose pre-M3-13 trial ran; null for a free pet. Not shown. */
   trial_available: boolean | null;
   /** P5: deleting this pet loses a purchased, unfinished challenge. */
   deletion_loses_purchase: boolean;
@@ -778,7 +779,7 @@ export const api = {
   /**
    * GET /api/parent/billing (M3-09 / M3-11, parent only) — unassigned challenge credits and
    * the plan + challenge status of every family pet; the server is the source of truth
-   * (RevenueCat webhook, trial clock, admin grants). Untyped until `schema.ts` is
+   * (RevenueCat webhook, payment lock, admin grants). Untyped until `schema.ts` is
    * regenerated → read with `readBilling`.
    */
   getBilling: () => apiRequest<unknown>('/api/parent/billing'),

@@ -39,7 +39,10 @@ const NOW = new Date('2026-10-03T10:00:00Z');
 /** A paired child (pet 7, signed in on one device) — "Nova koda za prijavo". */
 const PAIRED_CHILD = makeFamilyChild({ id: 2, name: 'Luka', pet_id: 7, devices: 1, contract_signed: true });
 
-function pinResponse(pin: string, extra: { child_id?: number; pet_id?: number | null; mode?: string; minutes?: number } = {}) {
+function pinResponse(
+  pin: string,
+  extra: { child_id?: number; pet_id?: number | null; mode?: string; minutes?: number; plan?: 'free' | 'challenge' | null } = {},
+) {
   return {
     pin,
     expires_at: new Date(Date.now() + (extra.minutes ?? 15) * 60_000).toISOString(),
@@ -47,6 +50,7 @@ function pinResponse(pin: string, extra: { child_id?: number; pet_id?: number | 
     child_id: extra.child_id ?? 2,
     pet_id: extra.pet_id ?? null,
     mode: extra.mode ?? 'relogin',
+    ...(extra.plan !== undefined ? { plan: extra.plan } : {}),
   };
 }
 
@@ -138,6 +142,23 @@ describe('AddChildScreen', () => {
       expect(screen.getByText('734 912')).toBeTruthy();
       expect(screen.getByText(S.pinFor('Maja Mala'))).toBeTruthy();
       expect(screen.getByText(S.steps.new_pet[2])).toBeTruthy();
+      expect(screen.queryByTestId('pin-buy-first')).toBeNull(); // free plan: nothing to buy
+    });
+
+    it('M3-13: a challenge PIN says the challenge starts with a purchase (no trial wording)', async () => {
+      createChild.mockResolvedValueOnce({ child: { id: 5, display_name: 'Maja', birth_year: null, family_id: 1, pet_id: null, devices: 0 } });
+      generatePin.mockResolvedValueOnce(pinResponse('734912', { child_id: 5, mode: 'new_pet', plan: 'challenge' }));
+      renderWithQuery(<AddChildScreen onBack={jest.fn()} />);
+
+      fireEvent.changeText(screen.getByTestId('child-nickname'), 'Maja');
+      fireEvent.press(screen.getByText(S.next));
+      await flush();
+      fireEvent.press(screen.getByTestId('pet-option-new'));
+      await flush();
+      await pickDog();
+
+      expect(screen.getByTestId('pin-buy-first')).toHaveTextContent(/začne z nakupom/);
+      expect(screen.getByTestId('pin-buy-first')).not.toHaveTextContent(/preizkus/i);
     });
 
     it('join pet: lists only active pets with their caretakers and sends pet_id', async () => {

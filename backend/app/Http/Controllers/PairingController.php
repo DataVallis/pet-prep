@@ -95,8 +95,9 @@ class PairingController extends Controller
                      */
                     'plan' => $result['plan'],
                     /**
-                     * M3-11 P7: the new challenge pet gets the 7-day free trial (one per child,
-                     * ever); false = payment_required from birth; null = no challenge pet.
+                     * Deprecated (M3-13, David 2026-10-08: no free trial any more): always
+                     * null (a new challenge pet is payment_required from birth). Kept in the
+                     * shape for old app builds.
                      *
                      * @var bool|null
                      */

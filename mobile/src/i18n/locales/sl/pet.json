@@ -63,8 +63,8 @@
         "hint": "Za vedno brezplačno. Vse nege in pravila igre, brez 12-tedenskega programa in certifikata; zgodovina zadnjih 7 dni. Pes je vedno mešanček."
       },
       "challenge": {
-        "title": "12-tedenski izziv — 7 dni brezplačno, nato {{price}}",
-        "hint": "Program, ki pokaže, ali je otrok pripravljen na psa, z Border Colliejem, certifikatom in celotno zgodovino. Preizkus se začne, ko otrok podpiše pogodbo. Ni samodejnega plačila: po 7 dneh se igra ustavi, dokler izziva za tega psa ne kupite. Če je otrok brezplačni preizkus že imel, se izziv začne z nakupom."
+        "title": "12-tedenski izziv — {{price}}",
+        "hint": "Program, ki pokaže, ali je otrok pripravljen na psa, z Border Colliejem, certifikatom in celotno zgodovino. Izziv se začne z nakupom: pes čaka, dokler izziva za tega psa ne kupite (lahko tudi pred podpisom pogodbe). Enkratno plačilo, brez naročnine. Bi najprej poskusili? Izberite brezplačnega mešančka."
       }
     },
     "planMissing": "Izberite načrt.",
@@ -77,7 +77,7 @@
     },
     "breedHints": {
       "mutt": "Pes brezplačnega načrta. Ni del 12-tedenskega izziva.",
-      "border_collie": "Del 12-tedenskega izziva (tudi med brezplačnim preizkusom)."
+      "border_collie": "Del 12-tedenskega izziva."
     },
     "breedLockedNote": "Te pasme zdaj ni mogoče izbrati. Izberite mešančka ali poskusite pozneje.",
     "lockedA11y": "{{breed}}, zaklenjeno — del plačljivega izziva",
@@ -118,7 +118,7 @@
     "noPaidBreed": "Plačljive pasme zdaj ni mogoče izbrati. Izberite »Brezplačni mešanček« ali poskusite pozneje.",
     "confirm": "Ustvari kodo",
     "back": "Nazaj",
-    "noTrial": "{{name}} je brezplačni preizkus že imel(a). Izziv za tega psa se začne z nakupom: po podpisu pogodbe ga odklenete v aplikaciji."
+    "buyFirst": "12-tedenski izziv se začne z nakupom: kupite ga v »Nakupi / izziv« — pred ali po tem, ko {{name}} podpiše pogodbo. Do takrat pes čaka."
   },
   "media": {
     "pending": "Kuža se pripravlja…",

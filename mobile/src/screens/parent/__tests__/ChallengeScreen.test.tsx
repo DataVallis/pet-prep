@@ -62,10 +62,10 @@ const billingPet = (status: 'trial' | 'payment_required' | 'paid', extra: Record
   ...extra,
 });
 
-function family(plan: Record<string, unknown>) {
+function family(plan: Record<string, unknown>, petExtra: Record<string, unknown> = {}) {
   const dashboard = makeScoredDashboard(
     [makeScoredChild()],
-    [makeFamilyPet({ id: 7, breed_type: 'border_collie', caretakers: [{ child_id: 2, contract_signed: true }], plan } as never)],
+    [makeFamilyPet({ id: 7, breed_type: 'border_collie', caretakers: [{ child_id: 2, contract_signed: true }], plan, ...petExtra } as never)],
   );
   return familyFromDashboard(dashboard as unknown as ParentDashboardResponse);
 }
@@ -124,21 +124,50 @@ describe('plan helpers', () => {
     expect(screen.getByTestId('badge').props.accessibilityLabel).toBe('Načrt: Brezplačno');
   });
 
-  it('badges and banners follow the trial clock', () => {
+  it('a dog that still runs a pre-M3-13 trial: countdown to the pause, never the word "preizkus" (M3-13)', () => {
     const plan = readPetPlan(trialPlan(3 * 24 + 1));
     expect(trialDaysLeft(plan, NOW)).toBe(4);
-    expect(planBadge(plan, NOW)).toEqual({ tone: 'info', label: 'Preizkus: še 4 dni' });
+    expect(planBadge(plan, NOW)).toEqual({ tone: 'info', label: 'Ni kupljeno: ustavi se čez 4 dni' });
     expect(planBanner(plan, NOW)).toBeNull();
-    expect(planBanner(readPetPlan(trialPlan(5)), NOW)).toBe('trial_last_day');
-    expect(planBanner(readPetPlan({ type: 'challenge', status: 'payment_required' }), NOW)).toBe('payment_required');
+    expect(planBanner(readPetPlan(trialPlan(5)), NOW)).toBe('pause_soon');
+    expect(planBadge(readPetPlan(trialPlan(5)), NOW)).toEqual({ tone: 'warn', label: 'Ni kupljeno: ustavi se v 24 urah' });
     expect(planBadge(readPetPlan({ type: 'free' }), NOW).label).toBe('Brezplačno');
+  });
+
+  it('a new challenge dog waits for the purchase from the start (born or not)', () => {
+    const waiting = readPetPlan({ type: 'challenge', status: 'payment_required', trial_ends_at: null });
+    expect(needsPurchase(waiting)).toBe(true);
+    expect(planBanner(waiting, NOW)).toBe('payment_required');
+    expect(planBadge(waiting, NOW)).toEqual({ tone: 'danger', label: 'Čaka na nakup' });
+  });
+
+  it('no badge or banner text mentions a trial, in Slovenian or English', async () => {
+    const plans = [trialPlan(80), trialPlan(5), { type: 'challenge', status: 'payment_required' }, { type: 'challenge', status: null }];
+    for (const lang of ['sl', 'en']) {
+      await i18n.changeLanguage(lang);
+      for (const raw of plans) {
+        expect(planBadge(readPetPlan(raw), NOW).label).not.toMatch(/preizkus|trial/i);
+      }
+      const bannerTexts = [
+        i18n.t('paywall:banner.paymentRequiredTitle'),
+        i18n.t('paywall:banner.paymentRequired', { names: 'Luka' }),
+        i18n.t('paywall:banner.pauseSoonTitle'),
+        i18n.t('paywall:banner.pauseSoon', { names: 'Luka' }),
+      ];
+      for (const text of bannerTexts) {
+        expect(text).not.toMatch(/preizkus|trial/i);
+      }
+      expect(i18n.t('paywall:challenge.honest', { price: '49,99 €' })).not.toMatch(/preizkus|trial|7/i);
+      expect(i18n.t('pet:picker.plans.challenge.title', { price: '49,99 €' })).not.toMatch(/preizkus|trial|7 d/i);
+      expect(i18n.t('pet:picker.plans.challenge.hint')).not.toMatch(/preizkus|trial|7 d/i);
+    }
   });
 
   it('kill switch: with payments not enforced an unpaid challenge shows no countdown or banner', () => {
     const plan = readPetPlan({ ...trialPlan(-5), payments_enforced: false });
     expect(plan).toEqual({ type: 'challenge', status: 'trial', trial_ends_at: null, paid_at: null, display_type: 'challenge' });
     expect(planBanner(plan, NOW)).toBeNull();
-    expect(planBadge(plan, NOW).label).toBe('Preizkus');
+    expect(planBadge(plan, NOW).label).toBe('Izziv še ni kupljen');
   });
 
   it('only the exact challenge product is ever bought (never another package)', () => {
@@ -167,6 +196,14 @@ describe('ChallengeBanner', () => {
     expect(screen.getByTestId('challenge-banner-paused')).toHaveTextContent(/Luka/);
     fireEvent.press(screen.getByTestId('challenge-banner-open'));
     expect(onOpen).toHaveBeenCalled();
+  });
+
+  it('an unborn challenge dog waiting for the purchase gets the "waiting" banner (M3-13)', () => {
+    render(
+      <ChallengeBanner family={family({ type: 'challenge', status: 'payment_required' }, { born_at: null })} onOpen={jest.fn()} />,
+    );
+    expect(screen.getByTestId('challenge-banner-paused')).toHaveTextContent(/Čaka na nakup/);
+    expect(screen.getByTestId('challenge-banner-paused')).not.toHaveTextContent(/preizkus/i);
   });
 
   it('nothing for a paid or free dog', () => {
@@ -218,11 +255,31 @@ describe('ChallengeScreen', () => {
     expect(screen.getByTestId('challenge-message')).toBeTruthy();
   });
 
-  it('a dog without a free trial (P7) says so instead of a trial end', async () => {
-    getBilling.mockResolvedValue({ credits_available: 0, pets: [billingPet('trial', { trial_ends_at: null, trial_available: false })] });
-    renderWithQuery(<ChallengeScreen family={family({ type: 'challenge', status: 'trial' })} onBack={jest.fn()} />);
+  it('M3-13: an unborn dog is listed to buy first — it starts once the contract is signed', async () => {
+    getBilling.mockResolvedValue({ credits_available: 0, pets: [billingPet('payment_required', { trial_ends_at: null, trial_available: false })] });
+    renderWithQuery(
+      <ChallengeScreen family={family({ type: 'challenge', status: 'payment_required' }, { born_at: null })} onBack={jest.fn()} />,
+    );
     await flush();
-    expect(screen.getByTestId('challenge-pet-7')).toHaveTextContent(/ni brezplačnega preizkusa/);
+    expect(screen.getByTestId('challenge-pet-7')).toHaveTextContent(/Še ni rojen/);
+    expect(screen.getByTestId('challenge-pet-7')).not.toHaveTextContent(/ustavljena|preizkus/);
+    expect(screen.getByTestId('challenge-buy-7')).toBeTruthy();
+  });
+
+  it('kill switch off: an unborn unpaid dog (status trial) just reads "not bought yet"', async () => {
+    getBilling.mockResolvedValue({ credits_available: 0, pets: [billingPet('trial', { trial_ends_at: null, trial_available: null })] });
+    renderWithQuery(<ChallengeScreen family={family({ type: 'challenge', status: 'trial' }, { born_at: null })} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('challenge-pet-7')).toHaveTextContent(/Izziv še ni kupljen/);
+    expect(screen.getByTestId('challenge-pet-7')).not.toHaveTextContent(/Še ni rojen|ustavljena/);
+  });
+
+  it('a dog that still runs a pre-M3-13 trial shows when the game pauses (no "preizkus")', async () => {
+    getBilling.mockResolvedValue({ credits_available: 0, pets: [billingPet('trial')] });
+    renderWithQuery(<ChallengeScreen family={family(trialPlan(48))} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('challenge-pet-7')).toHaveTextContent(/Brez nakupa se igra ustavi/);
+    expect(screen.getByTestId('challenge-pet-7')).not.toHaveTextContent(/preizkus/i);
   });
 
   it('restore never assigns a credit by itself; the parent chooses the dog', async () => {

@@ -2,23 +2,22 @@
   "plan": {
     "badge": {
       "free": "Free",
-      "trialDays_one": "Trial: {{count}} day left",
-      "trialDays_other": "Trial: {{count}} days left",
-      "trial": "Trial",
-      "trialLastDay": "Trial: last day",
-      "trialNotStarted": "Challenge: trial starts at signing",
+      "pausesInDays_one": "Not bought: pauses in {{count}} day",
+      "pausesInDays_other": "Not bought: pauses in {{count}} days",
+      "pausesToday": "Not bought: pauses within 24 h",
+      "notBought": "Challenge not bought yet",
       "paymentRequired": "Waiting for purchase",
       "paid": "Paid"
     },
     "badgeA11y": "Plan: {{label}}"
   },
   "banner": {
-    "paymentRequiredTitle": "The game is paused",
-    "paymentRequired": "The free trial has ended ({{names}}). The dog is safe: its needs don't drop and progress is kept until you buy the challenge.",
-    "trialLastDayTitle": "The trial is ending",
-    "trialLastDay": "The free trial ({{names}}) ends in less than 24 hours. After that the game pauses until you buy the challenge. Nothing is charged automatically.",
+    "paymentRequiredTitle": "Waiting for the purchase",
+    "paymentRequired": "The 12-week challenge ({{names}}) starts when you buy it. Until then the dog waits safely: its needs don't drop and nothing is lost.",
+    "pauseSoonTitle": "The game pauses soon",
+    "pauseSoon": "The game ({{names}}) pauses in less than 24 hours until you buy the challenge. Nothing is charged automatically.",
     "open": "Unlock the challenge",
-    "openTrial": "See the challenge"
+    "openSoon": "See the challenge"
   },
   "entry": {
     "buy": "12-week challenge — buy",
@@ -41,12 +40,13 @@
       "history": "The full history (free plan: last 7 days)",
       "media": "A personalised AI dog with a video for every state"
     },
-    "honest": "One-time purchase of {{price}} for one dog. No subscription and no automatic charge: after the 7-day trial the game pauses until you buy the challenge.",
+    "honest": "One-time purchase of {{price}} for one dog. No subscription and no automatic charge: the challenge starts once you buy it. Want to try first? The free mixed breed is free forever.",
     "priceEstimate": "The store shows the final price before you pay.",
-    "petsTitle": "Dogs on trial",
+    "petsTitle": "Dogs waiting for the challenge",
     "petLine": "{{breed}} · {{names}}",
-    "trialEnds": "The trial ends {{when}}.",
-    "trialEndsUnknown": "The trial is running.",
+    "pausesAt": "Without a purchase the game pauses {{when}}.",
+    "notBought": "The challenge has not been bought yet.",
+    "unborn": "Not born yet. Buy the challenge now and the dog starts as soon as the contract is signed.",
     "paused": "The game is paused. The dog is safe and progress is kept.",
     "buy": "Buy for {{price}}",
     "buyNoPrice": "Buy the challenge",
@@ -65,8 +65,7 @@
     "retry": "Try again",
     "offeringMissing": "The challenge can't be loaded from the store right now. Please try again later.",
     "retryStore": "Reload the price",
-    "busy": "Please wait …",
-    "noTrial": "No free trial for this dog (the child already had one) — the challenge starts with a purchase."
+    "busy": "Please wait …"
   },
   "result": {
     "unlocked": "Thank you! The challenge is unlocked and the game continues.",

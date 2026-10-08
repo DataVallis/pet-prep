@@ -51,7 +51,7 @@ function pcFamily(string $state = 'trial', ?User $parent = null): array
     $child = User::factory()->child()->create(['parent_id' => $parent->id]);
     // M5-F03: a challenge on trial is a paid breed (an unpaid mutt challenge is the free plan).
     $factory = match ($state) {
-        'trial' => Pet::factory()->borderCollie()->trial(),
+        'trial' => Pet::factory()->borderCollie()->legacyTrial(), // a pre-M3-13 7-day trial
         'free' => Pet::factory()->mutt()->freePlan(),
         default => Pet::factory()->mutt(),
     };

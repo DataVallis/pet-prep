@@ -60,7 +60,7 @@ export interface PickerChoice {
 export const INITIAL_PICKER_CHOICE: PickerChoice = { plan: null, breed: 'mutt', origin: null, age_stage: null };
 
 /**
- * Premium breeds are part of the 12-week challenge (M3-11: also during its trial); on the
+ * Premium breeds are part of the 12-week challenge (bought per dog — M3-13: no free trial); on the
  * free plan — or before a plan is chosen — only the mutt. The challenge is only with a
  * paid breed (M5-F03, David 2026-10-07): the mutt is the free plan's dog, so it is locked
  * when the challenge is chosen (server 422 `challenge_requires_paid_breed`). `serverLocked`

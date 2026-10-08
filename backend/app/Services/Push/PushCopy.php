@@ -98,9 +98,10 @@ final class PushCopy
                 : '')),
             PushType::Illness => self::line('illness.'.$audience.'.'.(in_array($metric, self::ILLNESS_REASONS, true) ? $metric : 'other'), $locale),
             PushType::GameOver => self::line("game_over.{$audience}", $locale),
-            // M3-11: only parents get the trial reminder.
+            // M3-11: only parents got the trial reminder (not sent since M3-13; stored rows still render).
             PushType::TrialEnding => self::line('trial_ending', $locale),
-            // P7: `no_trial` = the child already had its free trial — parents get no "trial ended".
+            // `no_trial` = the challenge started without a free trial (every birth since
+            // M3-13) — parents get no "the free trial has ended".
             PushType::PaymentRequired => self::line('payment_required.'.$audience.($metric === 'no_trial' && $audience === PushNotification::AUDIENCE_PARENT ? '_no_trial' : ''), $locale),
         };
     }

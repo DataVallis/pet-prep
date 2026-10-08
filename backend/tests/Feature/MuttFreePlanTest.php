@@ -124,7 +124,7 @@ describe('M5-F03 generate-pin: the challenge needs a paid breed', function () {
         expect(mfPinLogin($old)->plan)->toBe(PetPlan::Free);
     });
 
-    it('creates a Border Collie challenge on the trial', function () {
+    it('creates a Border Collie challenge that waits for a purchase (no trial since M3-13)', function () {
         $parent = User::factory()->parent()->create();
         $pin = mfPin($parent, ['plan' => 'challenge', 'breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])
             ->assertOk()->assertJsonPath('plan', 'challenge')->json('pin');
@@ -132,7 +132,7 @@ describe('M5-F03 generate-pin: the challenge needs a paid breed', function () {
 
         expect($pet->plan)->toBe(PetPlan::Challenge)
             ->and($pet->breed_type->value)->toBe('border_collie')
-            ->and($pet->challengeStatus())->toBe(ChallengeStatus::Trial);
+            ->and($pet->challengeStatus())->toBe(ChallengeStatus::PaymentRequired);
     });
 
     it('creates a free mutt from plan free', function () {
@@ -351,7 +351,7 @@ describe('M5-F02 data migration: unpaid mutt challenges become the free plan (P4
             ->and($grandfathered->fresh()->plan)->toBe(PetPlan::Challenge)
             ->and($grandfathered->fresh()->challenge_paid_source)->toBe(ChallengePaidSource::Grandfathered)
             ->and($collie->fresh()->plan)->toBe(PetPlan::Challenge)
-            ->and($collie->fresh()->challengeStatus())->toBe(ChallengeStatus::Trial);
+            ->and($collie->fresh()->challengeStatus())->toBe(ChallengeStatus::PaymentRequired);
     });
 });
 
@@ -368,7 +368,9 @@ describe('M5-F02 QA: no path creates or re-locks an unpaid mutt challenge', func
         expect($mutt->plan)->toBe(PetPlan::Free)->and($mutt->trial_ends_at)->toBeNull()->and($mutt->challengeStatus())->toBeNull();
 
         $collie = Pet::create($base + ['user_id' => $childB->id, 'breed_type' => 'border_collie']);
-        expect($collie->plan)->toBe(PetPlan::Challenge)->and($collie->challengeStatus())->toBe(ChallengeStatus::Trial);
+        // M3-13: no free trial — an unpaid challenge awaits payment from birth.
+        expect($collie->plan)->toBe(PetPlan::Challenge)->and($collie->challengeStatus())->toBe(ChallengeStatus::PaymentRequired)
+            ->and($collie->trial_ends_at->equalTo($collie->born_at))->toBeTrue();
 
         // An explicit unpaid mutt challenge is coerced.
         [, $coerced] = mfFamilyPet(fn ($f) => $f->mutt()->trial());

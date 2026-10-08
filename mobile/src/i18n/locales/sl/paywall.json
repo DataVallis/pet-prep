@@ -2,25 +2,24 @@
   "plan": {
     "badge": {
       "free": "Brezplačno",
-      "trialDays_one": "Preizkus: še {{count}} dan",
-      "trialDays_two": "Preizkus: še {{count}} dneva",
-      "trialDays_few": "Preizkus: še {{count}} dni",
-      "trialDays_other": "Preizkus: še {{count}} dni",
-      "trial": "Preizkus",
-      "trialLastDay": "Preizkus: zadnji dan",
-      "trialNotStarted": "Izziv: preizkus se začne ob podpisu",
+      "pausesInDays_one": "Ni kupljeno: ustavi se čez {{count}} dan",
+      "pausesInDays_two": "Ni kupljeno: ustavi se čez {{count}} dneva",
+      "pausesInDays_few": "Ni kupljeno: ustavi se čez {{count}} dni",
+      "pausesInDays_other": "Ni kupljeno: ustavi se čez {{count}} dni",
+      "pausesToday": "Ni kupljeno: ustavi se v 24 urah",
+      "notBought": "Izziv še ni kupljen",
       "paymentRequired": "Čaka na nakup",
       "paid": "Plačano"
     },
     "badgeA11y": "Načrt: {{label}}"
   },
   "banner": {
-    "paymentRequiredTitle": "Igra je ustavljena",
-    "paymentRequired": "Brezplačni preizkus je potekel ({{names}}). Pes čaka na varnem: potrebe ne padajo in napredek ostane, dokler izziva ne kupite.",
-    "trialLastDayTitle": "Preizkus se izteka",
-    "trialLastDay": "Brezplačni preizkus ({{names}}) se izteče v manj kot 24 urah. Nato se igra ustavi, dokler izziva ne kupite. Nič se ne zaračuna samodejno.",
+    "paymentRequiredTitle": "Čaka na nakup",
+    "paymentRequired": "12-tedenski izziv ({{names}}) se začne, ko ga kupite. Do takrat pes čaka na varnem: potrebe ne padajo in nič se ne izgubi.",
+    "pauseSoonTitle": "Igra se kmalu ustavi",
+    "pauseSoon": "Igra ({{names}}) se v manj kot 24 urah ustavi, dokler izziva ne kupite. Nič se ne zaračuna samodejno.",
     "open": "Odkleni izziv",
-    "openTrial": "Poglej izziv"
+    "openSoon": "Poglej izziv"
   },
   "entry": {
     "buy": "12-tedenski izziv — kupi",
@@ -45,12 +44,13 @@
       "history": "Celotna zgodovina (brezplačno: zadnjih 7 dni)",
       "media": "Personaliziran AI pes z videom za vsa stanja"
     },
-    "honest": "Enkratni nakup {{price}} za enega psa. Brez naročnine in brez samodejnega plačila: po 7-dnevnem preizkusu se igra ustavi, dokler izziva ne kupite.",
+    "honest": "Enkratni nakup {{price}} za enega psa. Brez naročnine in brez samodejnega plačila: izziv se začne, ko ga kupite. Bi najprej poskusili? Brezplačni mešanček je brezplačen za vedno.",
     "priceEstimate": "Končno ceno pokaže trgovina pred plačilom.",
-    "petsTitle": "Psi na preizkusu",
+    "petsTitle": "Psi, ki čakajo na izziv",
     "petLine": "{{breed}} · {{names}}",
-    "trialEnds": "Preizkus se izteče {{when}}.",
-    "trialEndsUnknown": "Preizkus še teče.",
+    "pausesAt": "Brez nakupa se igra ustavi {{when}}.",
+    "notBought": "Izziv še ni kupljen.",
+    "unborn": "Še ni rojen. Kupite izziv zdaj in pes zaživi takoj, ko otrok podpiše pogodbo.",
     "paused": "Igra je ustavljena. Pes čaka na varnem, napredek ostane.",
     "buy": "Kupi za {{price}}",
     "buyNoPrice": "Kupi izziv",
@@ -71,8 +71,7 @@
     "retry": "Poskusi znova",
     "offeringMissing": "Izziva iz trgovine trenutno ni mogoče naložiti. Poskusite znova kasneje.",
     "retryStore": "Znova naloži ceno",
-    "busy": "Počakajte …",
-    "noTrial": "Za tega psa ni brezplačnega preizkusa (otrok ga je že imel) — izziv se začne z nakupom."
+    "busy": "Počakajte …"
   },
   "result": {
     "unlocked": "Hvala! Izziv je odklenjen, igra se nadaljuje.",
