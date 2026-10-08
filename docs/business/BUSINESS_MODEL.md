@@ -67,9 +67,9 @@ Ne prodajamo "igrice", ampak **orodje za oceno zrelosti in zavarovalno polico pr
 
 | # | Odločitev |
 |---|---|
-| B1 | **Kanonski model: 12-tedenski PetPrep izziv za 49,99 €** s **7-dnevnim brezplačnim preizkusom**. |
+| B1 | **Kanonski model: 12-tedenski PetPrep izziv za 49,99 €** ~~s 7-dnevnim brezplačnim preizkusom~~ — *preizkus odstranjen 8. 10. 2026 (M3-13, glej P11).* |
 | B1a | **Mešanček ostane vedno brezplačen** (free tier za vedno). Plačljiv izziv je nadgradnja, ne edini način uporabe. |
-| B3 | Preizkus traja 7 dni in sovpada s "Puppy Promoter" momentom → paywall na 7. dan. |
+| ~~B3~~ | ~~Preizkus traja 7 dni in sovpada s "Puppy Promoter" momentom → paywall na 7. dan.~~ **Nadomeščeno z P11 (8. 10. 2026):** paywall je pred začetkom izziva; Puppy Promoter značka (7. dan) ostane del plačanega izziva. |
 | L1 | Jezik aplikacije: **angleščina (privzeto) + slovenščina**; ostali jeziki kasneje. |
 
 ### Sprejete (David, 7. 10. 2026 — podrobno [`PAYMENTS_SPEC.md`](../product/PAYMENTS_SPEC.md))
@@ -77,13 +77,19 @@ Ne prodajamo "igrice", ampak **orodje za oceno zrelosti in zavarovalno polico pr
 | # | Odločitev |
 |---|---|
 | P1 | **Nakup = en 12-tedenski izziv za enega psa**, vsak nov izziv (nov otrok ali nov pes) znova 49,99 €. V trgovinah **consumable** `petprep_challenge_12w` (RevenueCat); strežnik vodi, kateremu psu pripada. **B7 rešen.** |
-| P2 | 7-dnevni brezplačni preizkus se začne **ob rojstvu psa** (podpis pogodbe), samo za pse na izzivu. |
-| P3 | Po preizkusu brez nakupa se igra **ustavi** (pes čaka zaklenjen kot pri hard stopu, napredek ostane), dokler starš ne kupi. |
+| ~~P2~~ | ~~7-dnevni brezplačni preizkus se začne **ob rojstvu psa** (podpis pogodbe), samo za pse na izzivu.~~ **Nadomeščeno z P11.** |
+| P3 | Brez nakupa se igra **ustavi** (pes čaka zaklenjen kot pri hard stopu, napredek ostane), dokler starš ne kupi — od P11 že ob rojstvu. |
 | P4 | **Razmejitev spodaj potrjena**: mešanček brezplačen za vedno (peskovnik brez 12-tedenskega programa); izziv = program, Border Collie, certifikat, celotna zgodovina, personaliziran AI pes. |
+
+### Sprejete (David, 8. 10. 2026, 10:28 — M3-13)
+
+| # | Odločitev |
+|---|---|
+| P11 | **7-dnevnega brezplačnega preizkusa izziva ni več.** Brezplačni mešanček je brezplačni preizkus PetPrepa; **12-tedenski izziv se začne z nakupom** (49,99 € na psa, enkratno, brez naročnine). Pes na izzivu čaka zaklenjen od rojstva (podpis pogodbe), dokler starš ne kupi; kupi lahko tudi prej. 12 tednov začne teči ob nakupu. V produkciji velja od 8. 10. 2026 (beta, ~20 testerjev plačuje v sandboxu). **Posledica za trženje:** spletna stran, opisi v trgovinah in vsi materiali, ki obljubljajo »7 dni brezplačno«, se morajo popraviti (seznam v `HANDOFF.md`). |
 
 ### Razmejitev brezplačno / plačljivo (potrdil David 7. 10. 2026, P4)
 
-| | Mešanček (free, za vedno) | 12-tedenski izziv (49,99 €, 7 dni brezplačno) |
+| | Mešanček (free, za vedno — brezplačni preizkus) | 12-tedenski izziv (49,99 €, začne se z nakupom) |
 |---|---|---|
 | Simulacija psa, 4 metrike, akcije, koraki | ✓ | ✓ |
 | Eskalacija, bolezen, game over, hard stop, tihe ure | ✓ | ✓ |
@@ -96,7 +102,7 @@ Ne prodajamo "igrice", ampak **orodje za oceno zrelosti in zavarovalno polico pr
 | Breed Downgrade reset | ✓ | ✓ |
 | Second Chance reset (19,99 €) | – | po MVP |
 
-Tehnično (RevenueCat, **odločeno 7. 10. 2026, P1**): produkt **consumable** `petprep_challenge_12w` (49,99 €) — vsak nakup postane »kredit izziva« družine na strežniku, ki se dodeli enemu psu (`challenge_credits`, M3-11); 7-dnevni preizkus je stanje na strežniku (`pets.trial_ends_at` = rojstvo + 7 dni), ker IAP brez naročnine nima vgrajenega triala. Naročnina ni izbrana.
+Tehnično (RevenueCat, **odločeno 7. 10. 2026, P1**): produkt **consumable** `petprep_challenge_12w` (49,99 €) — vsak nakup postane »kredit izziva« družine na strežniku, ki se dodeli enemu psu (`challenge_credits`, M3-11). Brezplačnega preizkusa izziva od 8. 10. 2026 ni (P11; prej strežniški `pets.trial_ends_at` = rojstvo + 7 dni, zdaj = rojstvo). Naročnina ni izbrana.
 
 ### Še odprte
 
@@ -106,7 +112,7 @@ Tehnično (RevenueCat, **odločeno 7. 10. 2026, P1**): produkt **consumable** `p
 | B4 | Prvi trg | Slovenija + Hrvaška za validacijo (nizek CPM), nato DE / AT / UK |
 | B5 | Garancija 100 € | Obdržati v copyju, pogoje pravno preveriti |
 | B6 | Mr. Pet partnerstvo | Pogovor po prvih 50 certifikatih |
-| ~~B7~~ | ~~Non-consumable + strežniški trial vs. naročnina z IAP trialom~~ | **Rešeno 7. 10. 2026 (P1):** consumable na psa + strežniški trial |
+| ~~B7~~ | ~~Non-consumable + strežniški trial vs. naročnina z IAP trialom~~ | **Rešeno 7. 10. 2026 (P1):** consumable na psa + strežniški trial (trial odstranjen 8. 10. 2026, P11) |
 
 ## 8. Prihodnji materiali (orkestrator lahko pripravi)
 

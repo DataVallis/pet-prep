@@ -8,7 +8,7 @@
 
 | # | Vprašanje | Odgovor / priporočilo |
 |---|---|---|
-| Q1 | Velja »samo v plačanem izzivu« tudi med **7-dnevnim preizkusom**? | ✅ **David 8. 10.: da** — izziv v preizkusu in plačan (nakup, grandfathered, odklep admina); **ne** brezplačni mešanček in **ne** med zaklepom do plačila. |
+| Q1 | Velja »samo v plačanem izzivu« tudi med **7-dnevnim preizkusom**? | ✅ **David 8. 10.: da** — izziv v preizkusu in plačan (nakup, grandfathered, odklep admina); **ne** brezplačni mešanček in **ne** med zaklepom do plačila. *M3-13 (David 8. 10. 2026, 10:28): novi psi preizkusa nimajo več — »v preizkusu« velja le še za pse iz časa pred M3-13 do konca njihovega preizkusa; `challengeStatus() = trial` ostane zato v pogoju.* |
 | Q2 | Ali dobijo igro tudi **legacy psi**? *Razlaga: legacy psi so psi, ustvarjeni pred izbiro kužka (M5-R04) — zanje ne vemo starosti ne izvora, zato zanje veljajo stara pravila (brez vedenja in šolanja).* | ⏳ **odprto (D).** Priporočilo: **ne** (kot vedenje in šolanje); za preizkus na telefonu zadošča nov pes na izzivu v preizkusu (Q1). Ker igra nima posledic, bi bil »da« tudi varen — vprašanje je le doslednost. |
 | Q3 | Pogostost | ✅ **David 8. 10.: otrok se lahko igra in crklja kadarkoli sam** (vedno mora biti kaj za početi). Vabila ostanejo kot spodbuda: **2 na dan na psa — 1 igra + 1 crkljanje** **(D)**, čakajo 2 h **(D)**. Prosta igra brez omejitve števila, brez točk. |
 | Q4 | Kdaj je kuža »preskrbljen« (za vabilo)? | ✅ **David 8. 10.: tudi današnji sprehod mora biti opravljen.** Uporabimo obstoječi prag rutine »Sprehod« (PRODUCT_SPEC §11.1): **današnji koraki ≥ dnevni cilj** (energija kaže 100 %). Poleg tega **(D)**: ni nereda, lakota in žeja > 30 %, ni zaklepa, niso tihe ure. |
@@ -28,7 +28,7 @@
 | Pes | Igra in crkljanje |
 |---|---|
 | 12-tedenski izziv, **plačan** (nakup, grandfathered, admin) | ✅ (David 7. 10.) |
-| 12-tedenski izziv v **preizkusu** | ✅ (David 8. 10., Q1) |
+| 12-tedenski izziv v **preizkusu** (samo psi iz časa pred M3-13) | ✅ (David 8. 10., Q1) |
 | izziv, ki **čaka na plačilo** (zaklep) | ❌ (zaklep ustavi vse, PAYMENTS_SPEC P3) |
 | **brezplačni mešanček** | ❌ (David 7. 10.: samo izziv) |
 | **legacy** pes (ustvarjen pred izbiro kužka) | ❌ **(D)** Q2 |

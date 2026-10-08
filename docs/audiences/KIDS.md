@@ -43,6 +43,8 @@ Starši izberejo, ali je tvoj kuža **mladiček**, **mlad pes**, **odrasel** ali
 
 **Če starši ustavijo igro**, vidiš "Starš je ustavil igro" in počakaš, da jo spet vklopijo. Ko je kuža pri veterinarju, ti aplikacija pove, do kdaj (npr. "do 18:30"), kužka pa vidiš skozi sivo zaveso, ko počiva. Tudi ko starši ustavijo igro, ga vidiš skozi sivo zaveso.
 
+**Če kuža čaka na starše**, vidiš »Igra počaka na starša« — kuža je na varnem in počiva, nič se ne pokvari. To se zgodi pri 12-tedenskem izzivu, dokler ga starši ne kupijo: včasih že takoj, ko podpišeš pogodbo, zato starše prosi, da izziv kupijo (lahko tudi prej). Brezplačni mešanček nikoli ne čaka. *(od 8. 10. 2026)*
+
 Na desni strani zaslona vidiš štiri stolpce. **Zelena** = kuža je vesel. **Rumena** = pazi. **Rdeča** = kuža te zelo potrebuje!
 
 ## Ko si v šoli ali spiš

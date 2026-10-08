@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-08 — Izziv brez »7 dni brezplačno«: brezplačen je mešanček, izziv se začne z nakupom (M3-13)
+
+**Kaj se je zgodilo:** David je ob 10:28 odločil, da 12-tedenski izziv nima več 7-dnevnega brezplačnega preizkusa. Brezplačni preizkus PetPrepa je mešanček (brezplačen za vedno); izziv (49,99 € na psa, enkratno) se začne z nakupom. Pes na izzivu, ki ga starš še ni kupil, po podpisu pogodbe varno počaka (nič ne upada, nič se ne izgubi), 12 tednov pa začne teči šele ob nakupu. Starš lahko kupi že prej — takoj po kodi za otroka. Psi testerjev, ki so preizkus že začeli, ga obdržijo do konca. V aplikaciji (slovensko in angleško) besede »preizkus« ni več nikjer; gumb »12-tedenski izziv — kupi« je viden tudi za kužka, ki se še ni rodil. Produkcija že teče z vklopljenimi plačili (beta, ~20 testerjev plačuje v sandboxu trgovine).
+
+**Zakaj je pomembno:** Dva brezplačna vstopa (mešanček + 7 dni izziva) sta ponudbo zameglila. Zdaj je jasno: hočeš poskusiti — mešanček; hočeš program s certifikatom — kupiš izziv in teden 1 se začne. Ura programa se ne porabi, dokler pes čaka na nakup.
+
+**Številke:** 11 novih testov strežnika (zaklep ob rojstvu, nakup pred rojstvom, samodejna dodelitev že kupljenega izziva, 12 tednov od nakupa, stari preizkusi do konca, brez zaklepa ob izklopljenih plačilih …); vseh 1378 testov strežnika zelenih; vseh 1467 testov aplikacije zelenih (nova preverjanja, da nobeno besedilo ne omenja preizkusa). Ni preizkušeno na telefonu.
+
+**Kako povedati:**
+- 👩 Starši: »PetPrep lahko preizkusite brezplačno z mešančkom — za vedno. Ko ste pripravljeni na pravi 12-tedenski izziv (49,99 € enkratno, brez naročnine), ga kupite in teden 1 se začne. Kupite ga lahko še preden otrok podpiše pogodbo.«
+- 🧒 Otroci: »Če tvoj kuža čaka na starše, je na varnem in počiva. Ko starši kupijo izziv, se tvojih 12 tednov začne.«
+- 💼 Investitorji: »Ena brezplačna pot (mešanček za vedno) in ena plačljiva (izziv 49,99 € na psa). Plačilo pred začetkom programa; čas čakanja ne porabi programa.«
+- 🛠 Tehnično: »Zaklep `payment_required` ob rojstvu v isti transakciji kot podpis pogodbe; obdobje zaklepa se odšteje od ure programa, zato 12 tednov teče od nakupa. Brez destruktivne migracije: `trial_ends_at` ostane (= rojstvo), `trial_available` je zastarel, API je združljiv nazaj.«
+- ⚠️ Za popravek zunaj repozitorija: spletna stran in opisi v trgovinah še obljubljajo »7 dni brezplačno« (seznam v `HANDOFF.md`).
+
+---
+
 ## 2026-10-08 — Igra in crkljanje: strežnik pripravljen (M5-R05)
 
 **Kaj se je zgodilo:** Strežnik zna igro z žogo in crkljanje. Otrok lahko igro konča kadarkoli (ni tihih ur, ni nereda, pes ni zaklenjen); kuža je nato 30 minut »vesel«. Vsak dan kuža sam pripravi dve vabili (eno za žogo, eno za crkljanje) ob naključni uri med 7:00 in 20:00 izven tihih ur, vsaj 3 ure narazen; vabilo se pokaže le, ko je današnji sprehod opravljen ter hrana in voda nad 30 %. Starš vidi vrstico v časovnici in koliko iger je bilo danes. Mini-igri v aplikaciji še ni (*načrt*, naslednji korak).

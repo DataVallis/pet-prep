@@ -23,7 +23,7 @@
 
 ## 2. Decisions (2026-10-02)
 
-- **Business model:** 12-week PetPrep Challenge **49.99 €** with a **7-day free trial**; **Mutt stays free forever**. Proposed free/paid split in `docs/business/BUSINESS_MODEL.md` §7 (awaiting David's confirmation of the split).
+- **Business model:** 12-week PetPrep Challenge **49.99 €** ~~with a 7-day free trial~~ — **no free trial since 2026-10-08 10:28 (David, M3-13): the free mutt is the try-out, the challenge starts with a purchase**; **Mutt stays free forever**. Proposed free/paid split in `docs/business/BUSINESS_MODEL.md` §7 (awaiting David's confirmation of the split).
 - **Child login:** PIN only, no child email (M2-02) — backend + app built 2026-10-04 (`feat/M2-02-pin-only-child`).
 - **Monorepo:** `pet-prep-mobile` merged into `pet-prep/mobile` — done.
 - **Languages:** English (default) + Slovenian, more later (M1-18).
@@ -57,7 +57,7 @@
 
 **Start here (new session, after 2026-10-08 early):**
 0. **PR #76 (M5-F04)** — David confirmed the 4 titles (21:35) but QA found the denominator "all commands" makes "Odlično!" unreachable (server always schedules ≥ 1 ignored command). Proposed to David: count only obeyed commands; excellent = all obeyed praised on time AND no praise when the dog did not obey. After his answer: update `trainingResultBucket` + tests + DECISIONS/PRODUCT_SPEC on the PR branch, rebase (docs conflicts), CI, merge.
-1. **David (2026-10-08):** payments sandbox test on a new native build from `main` (child card → "Preizkus" → "Kupi" → Apple sandbox → "Plačano"; US sandbox Apple ID shows $44.99 — use a Slovenian sandbox tester for 49,99 €). The same build carries health steps (needs new native modules + HealthKit capability, minSdk 26) — device checklist in `docs/engineering/HEALTH_STEPS.md`; also check emergency meal, dock time lines at 375 pt and the album posters.
+1. **David (2026-10-08):** payments sandbox test on a new native build from `main` (child card → "12-tedenski izziv — kupi" (since M3-13 also before the contract) → "Kupi" → Apple sandbox → "Plačano"; US sandbox Apple ID shows $44.99 — use a Slovenian sandbox tester for 49,99 €). The same build carries health steps (needs new native modules + HealthKit capability, minSdk 26) — device checklist in `docs/engineering/HEALTH_STEPS.md`; also check emergency meal, dock time lines at 375 pt and the album posters.
 2. **M5-F01–F07** — done except F04 (PR #76, see 0.).
 3. **M5-R05** play & cuddle — decisions recorded, write a short spec, then build.
 4. **M5-R06** species → breed picker (dog + cat) — cat care spec first.
@@ -72,6 +72,41 @@ Older queue (still valid where not done):
 5. **David:** M5-R03b — only the minimum-one-session rule (≥ 7 trainers) is still open (the rest confirmed 2026-10-07). Then the answer the open "čaka Davida" questions (start with the 7 behaviour ones and training m3/m4), then M1-18 i18n, M3 payments (RevenueCat).
 
 ## 6. Session log
+
+### 2026-10-08 late morning (cloud, backend-engineer) — M3-13 no free trial
+- **David decided 10:28:** the 7-day free trial of the 12-week challenge is removed; the free mutt is the free try-out; the challenge starts with a purchase. Production already runs `PAYMENTS_ENFORCED=true` + `REVENUECAT_ACCEPT_SANDBOX=true` (beta, ~20 testers pay in sandbox).
+- **PR `feat/M3-13-no-trial` (not merged):** backend — `Pet::giveBirth` sets `trial_ends_at = born_at`; `PetActivityService::signContract` first assigns a held credit when the unborn pet is the family's only unpaid challenge pet (`ChallengeCreditService::assignAvailableBeforeBirth`, `assigned_via = birth`, expand-only migration `2026_10_23_130000`), then births and `ChallengeService::lockAtBirth` (lock + `payment_lock` period from birth → the 12 weeks run from the purchase; one `PetUpdated('signed_contract')`; push `payment_required` / `no_trial`). Unborn unpaid challenge = status `payment_required` but lock reason stays `contract_required` (`Pet::awaitsPayment` ignores unborn). Running pre-M3-13 trials keep their end; no `trial_ending` pushes; P7 `childHadTrial` / `trialEndAtBirth` removed; `trial_available` deprecated (`generate-pin` false; billing true only for a born pet whose old trial ran). Kill switch off → no lock at birth, status `trial`; enforcement switched on later locks such pets from that tick. Factory: `->trial()` = unpaid without trial, new `->legacyTrial()`. Mobile — no "preizkus"/"trial" wording anywhere (EN + SL), `canBuyChallenge` also for unborn dogs, paywall line "Še ni rojen. Kupite izziv zdaj …", PIN screen "izziv se začne z nakupom". `schema.ts` regenerated (descriptions only).
+- **Docs:** DECISIONS (David 10:28 + Claude's transition choices), PAYMENTS_SPEC P11, BUSINESS_MODEL P11 (B1/B3/P2 struck), PRODUCT_SPEC §2/§7, ARCHITECTURE, DIAGRAMS, FEATURES, PARENTS/INVESTORS/KIDS, PLAY_CUDDLE_SPEC (Q1 note), DEPLOYMENT D7a, PRODUCTION_ENV, ROADMAP M3-13, BUILD_LOG.
+- **Debt:** old app builds (TestFlight 3.0.0) still show trial wording; for an unborn challenge dog (now `payment_required`) they show the "game paused / free trial has ended" banner and badge "Čaka na nakup", and no card buy button (the paywall lists it) — fixed with the next build; `trial_reminder_sent_at` / `TrialEnding` / `Pet::TRIAL_DAYS` kept only for pre-M3-13 rows (remove once no running trial is left, ≥ 2026-10-15); `PushType::TrialEnding` still in the CHECK; claude.ai Project copies (`petprep/*.md`) to sync after merge. **Not verified on a device.**
+
+#### Kje še popraviti (izven tega repozitorija)
+Preizkus izziva je odstranjen (David 2026-10-08 10:28); te strani in besedila ga še obljubljajo:
+- **Spletna stran `DataVallis/pet-prep-website`** (pregledano read-only, `main` @ `642c7f5`, 2026-10-06):
+  - `src/lib/site.ts:45` — `price: { …, trialDays: 7, … }` (odstraniti `trialDays`)
+  - `src/lib/llms.ts:62` — llms.txt: »… per pet with a ${site.price.trialDays}-day free trial«
+  - `src/content/en.ts:23` — CTA »Start the 7-day free trial«
+  - `src/content/en.ts:87` — cenovna kartica, značka »7 days free«
+  - `src/content/en.ts:98` — CTA »Start the free trial«
+  - `src/content/en.ts:391` — »… costs €49.99 per pet with a 7-day free trial …«
+  - `src/content/en.ts:395` — »… the first 7 days are free.«
+  - `src/content/en.ts:405` — FAQ »How do I pay?«: »The 7-day trial and any cancellation are handled by your store account.«
+  - `src/content/en.ts:503` — tabela: »€49.99 per pet, 7-day free trial«
+  - `src/content/en.ts:677` — pogoji: »… includes a 7-day free trial …«
+  - `src/content/en.ts:678` — pogoji: »Purchases, trials, refunds and cancellations …«
+  - `src/content/sl.ts:23` — CTA »Začni 7-dnevni brezplačni preizkus«
+  - `src/content/sl.ts:87` — značka »7 dni brezplačno«
+  - `src/content/sl.ts:98` — CTA »Začni brezplačni preizkus«
+  - `src/content/sl.ts:391` — »… 49,99 € na žival s 7-dnevnim brezplačnim preizkusom …«
+  - `src/content/sl.ts:395` — »… prvih 7 dni je brezplačnih.«
+  - `src/content/sl.ts:405` — FAQ »Kako plačam?«: »Preizkus in morebitno preklicanje …«
+  - `src/content/sl.ts:503` — tabela: »49,99 € na žival, 7 dni brezplačno«
+  - `src/content/sl.ts:677` — pogoji: »… vključuje 7-dnevni brezplačni preizkus …«
+  - `src/content/sl.ts:678` — pogoji: »Nakupe, preizkuse, vračila in preklice …«
+  - (`sl.ts:105` »… ki preizkusijo PetPrep« pomeni »test«, ne trial — lahko ostane.)
+- **App Store Connect / Google Play Console:** opis aplikacije, promocijsko besedilo, posnetki zaslona in opis in-app izdelka `petprep_challenge_12w` (EN + SL) — nobenega »7 days free« / »7 dni brezplačno«; izdelek je enkraten nakup, brez preizkusa. (V repozitoriju ni kopije teh besedil — preveri David v obeh konzolah.)
+- **RevenueCat:** paywall/offering metadata, če kje omenja preizkus.
+- **Gradiva v tem repozitoriju, ki ostanejo zgodovinska:** `docs/source/*` (izvorni dokumenti), `docs/engineering/AUDIT-2026-10-02.md:176` (»7-dnevni preizkus → paywall na 7. dan«), `docs/engineering/handoff-archive.md`, starejši vnosi v `BUILD_LOG.md` in `DECISIONS.md` (označeni) — ne uporabljaj jih za nova besedila.
+- **claude.ai Project** (`petprep/PAYMENTS_SPEC.md` ni v projektu; `petprep/BUSINESS_MODEL.md`, `PRODUCT_SPEC.md`, `FEATURES.md`, `DECISIONS.md`, `ROADMAP.md`, `BUILD_LOG.md`, `ARCHITECTURE.md`, `DIAGRAMS.md`, `audiences/*`) — sinhroniziraj po združitvi.
 
 ### 2026-10-08 (cloud, backend-engineer) — M5-R05 play & cuddle backend (PR #82, not merged)
 - **Built (PLAY_CUDDLE_SPEC §12):** `pet_play_events` (+ `pets.happy_until`, `play_scheduled_through`), `PlayService` (eligibility, free play, seeded daily invitations in the tick, offer after the walk goal + hunger / thirst > 30 %, completion, timeline merge, daily counts), `POST /api/child/pet/play {kind}`, `state.play` / `PetUpdated.play`, `family.pets[].play_today`, activity types `played_with_pet` / `cuddled_pet`, export (`play_invitations` rows + `free_plays_per_day` counts). Mood only — the isolation test (3 days, 21 plays a day vs none) compares activities, `pet_daily_routines`, `pet_status_periods`, the live ledger, Care Score / light and metrics, and a mutation run (play also writing `fed_pet`) proves it would catch a leak.
