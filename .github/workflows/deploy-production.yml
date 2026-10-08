@@ -196,7 +196,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Shellcheck
-        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh
+        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh
 
       # Stubbed docker/git/curl in a temp dir; needs only bash, git and rsync.
       - name: Harness (deploy-production.sh)
@@ -209,6 +209,10 @@ jobs:
       # Stubbed docker + backup script (D17 production reset wrapper).
       - name: Harness (reset-game-data.sh)
         run: bash scripts/tests/reset-game-data.test.sh
+
+      # Stubbed docker; retention must stay top-level and never fail the backup.
+      - name: Harness (backup-production-db.sh)
+        run: bash scripts/tests/backup-production-db.test.sh
 
       - name: Record green tree
         id: green
