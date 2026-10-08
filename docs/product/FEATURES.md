@@ -235,7 +235,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7
 | Zaprta beta (TestFlight + Google Play, 20–50 družin) | — | — | 🗓 | M5-07 |
 | Breed Matchmaker | Primerna pasma iz 12-tedenskih podatkov otroka. | starš | ⏸ | backlog |
 | Faza 2: asistent za pravega psa | Gumb »Kupili smo pravo žival«: ovratnice, AI prvi stik z napotitvijo k veterinarju, rast in prehrana. | lastnik | ⏸ | backlog, `PHASE2_SPEC.md` |
-| Mačka in druge živali | David 7. 10. 2026: na začetku **pes in mačka**, izbira vrste → pasme. Pravila skrbi za mačko še niso določena. Podoba je že pripravljena (znak ni pes). | starš, otrok | 🗓 | M5-R06 | 2026-10-07 |
+| Mačka in druge živali | David 7. 10. 2026: na začetku **pes in mačka**, izbira vrste → pasme. Pravila skrbi za mačko so *predlog* v `CAT_SPEC.md` (8. 10. 2026, čaka Davida) — nič od tega še ni zgrajeno. Podoba je že pripravljena (znak ni pes). | starš, otrok | 🗓 | M5-R06 | 2026-10-08 |
 | AR, GPS zemljevidi, vremenski API, LLM veterinar | Izključeno iz MVP. | — | ⏸ | scope guard |
 
 ---
