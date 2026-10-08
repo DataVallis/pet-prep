@@ -3,7 +3,7 @@
 > **Status:** spec **potrjen**, 8. 10. 2026. **Odločil David 7. 10. 2026:** na začetku sta vrsti **pes in mačka**. Izbira gre najprej po **vrsti**, nato po **pasmi** (seznam z iskanjem, skalabilno). Pred gradnjo je potreben spec skrbi za mačko, z viri kot v [`REALISM_SPEC.md`](REALISM_SPEC.md). **David 8. 10. 2026 13:47:** potrdil priporočene odgovore na vsa vprašanja Q1–Q10 (§0). Kar je še označeno z **(D)**, je Claudov predlog, ki čaka potrditev (seznam na koncu §0). **Nič od tega še ni zgrajeno.**
 > **Oznake:** številka z oznako **[Cn]** ima vir v [`docs/research/cat-data/sources.md`](../research/cat-data/sources.md). **(D)** pomeni predlog brez vira ali še neodločeno, kar čaka Davidovo potrditev. Kar je (D), se staršem in otrokom ne sme prikazati kot dejstvo.
 > **Temeljno pravilo (kot pri psu):** številk o mačkah si ne izmišljujemo. Pravila igre (odstotki, ure, upadanje) so abstrakcija igre in so vedno označena kot odločitev, ne kot literatura.
-> **Naslednji korak:** odgovori na Q1–Q10 so potrjeni in prenešeni v `PRODUCT_SPEC.md` §13 (*načrt*). Sledita **izvedbeni načrt** (naloge v `ROADMAP.md` M5-R06) in `docs/research/cat-data/data.json` (vsaka vrednost z virom, kot pri psu). Šele nato pride na vrsto koda.
+> **Naslednji korak:** odgovori na Q1–Q10 so potrjeni in prenešeni v `PRODUCT_SPEC.md` §13 (*načrt*). Izvedbeni načrt je v [`docs/engineering/M5-R06_PLAN.md`](../engineering/M5-R06_PLAN.md), vrednosti z viri v [`docs/research/cat-data/data.json`](../research/cat-data/data.json) (8. 10. 2026). Koda pride na vrsto, ko David potrdi načrt.
 
 ## 0. Vprašanja za Davida — odločeno
 
@@ -25,11 +25,11 @@ Vsa vprašanja Q1–Q10: ✅ **David 8. 10. 2026 13:47** — potrdil priporočen
 **Še odprto (D) — manjši predlogi, ki jih odločitve Q1–Q10 ne pokrivajo (čakajo Davida):**
 - imena faz (»mucek«, »mlada / zrela / starejša mačka«) (§2, §9);
 - otroški samostalnik **»muca«** / »mucek« (§9) in besedilo pogodbe (§9);
-- psova **igra z žogo pri mački odpade**, crkljanje ostane (§5.5, M5-R05);
+- ~~psova igra z žogo pri mački odpade, crkljanje ostane (§5.5, M5-R05)~~ ✅ David 8. 10. 2026 (načrt M5-R06);
 - podrobnosti mini-igre s palico: ~60 s, konec z »ulovom«, ≥ 2 h med igrama (§5.2);
-- odrasla mačka 2 obroka na dan kot poenostavitev igre (§3);
-- zamujena tedenska menjava peska → rok za čiščenje 2 h namesto 4 h (§4);
-- mucek ob prihodu že navajen na pesek, brez »luže« (§4);
+- ~~odrasla mačka 2 obroka na dan kot poenostavitev igre (§3)~~ ✅ David 8. 10. 2026;
+- ~~zamujena tedenska menjava peska → rok za čiščenje 2 h namesto 4 h (§4)~~ ✅ David 8. 10. 2026;
+- ~~mucek ob prihodu že navajen na pesek, brez »luže« (§4)~~ ✅ David 8. 10. 2026;
 - izvor »podarjena od znancev« = posvojena (§1);
 - iskreno besedilo za starše o igri v aplikaciji (§5.4);
 - besedila obvestil (§6) in »prva pomoč« pri dolgotrajni lakoti (samo izobraževalno besedilo [C24]);

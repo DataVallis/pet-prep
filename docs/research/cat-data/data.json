@@ -1,0 +1,595 @@
+{
+  "meta": {
+    "task": "M5-R06 — sourced cat data for realism",
+    "compiled": "2026-10-08",
+    "compiled_by": "Claude (orchestrator)",
+    "status": "Not imported yet. Written after David approved CAT_SPEC Q1–Q10 (2026-10-08 13:47). Import into breed_stage_params is task M5-R06-03 (seeder reads this file per species).",
+    "sources": "docs/research/cat-data/sources.md",
+    "spec": "docs/product/CAT_SPEC.md",
+    "conventions": {
+      "value_object": "{value, unit, source_id, quote, confidence, notes[, decision]}",
+      "confidence": "Same scale as dog-data: high = guideline / standard / peer-reviewed and consistent; medium = single reputable source or small disagreement; low = secondary source, strong disagreement, or derived/proposal",
+      "unsourced": "source_id null and no decision → 'UNSOURCED — proposal (D)'; must not be shown to parents/children as fact.",
+      "decision": "\"potrdil David 2026-10-08 13:47: …\" = a game value David confirmed (CAT_SPEC §0 Q1–Q10). It is a product decision, NOT literature; source_id stays the underlying evidence (null where the literature gives no number).",
+      "quotes": "As returned by the web-fetch tool on 2026-10-08 (see sources.md). Spot-check C1, C14, C16, C17 against the URL before import.",
+      "game_time": "1 real week = 1 month of cat age (CAT_SPEC §2, same as dogs).",
+      "stage_mapping": "Existing LifeStage values are reused: puppy = kitten, young = young adult, adult = mature adult, senior = senior (CAT_SPEC §2).",
+      "breed_keys": "BreedType value (domestic_cat, maine_coon) vs breed_configs slug (domestic-cat, maine-coon), same split as border_collie / border-collie."
+    }
+  },
+  "general": {
+    "life_stages": {
+      "kitten": {
+        "value": "birth → 12 months",
+        "unit": "age",
+        "source_id": "C1",
+        "quote": "kitten, from birth up to 1 year old",
+        "confidence": "high",
+        "notes": "Maps to LifeStage puppy."
+      },
+      "young_adult": {
+        "value": "1–6 years",
+        "unit": "age",
+        "source_id": "C1",
+        "quote": "young adult, 1-6 years old",
+        "confidence": "high",
+        "notes": "Maps to LifeStage young.",
+        "decision": "potrdil David 2026-10-08 13:47: young stage starts at 12 months"
+      },
+      "mature_adult": {
+        "value": "7–10 years",
+        "unit": "age",
+        "source_id": "C1",
+        "quote": "mature adult, 7-10 years old",
+        "confidence": "high",
+        "notes": "Maps to LifeStage adult.",
+        "decision": "potrdil David 2026-10-08 13:47: adult stage starts at 84 months"
+      },
+      "senior": {
+        "value": "10 years and up",
+        "unit": "age",
+        "source_id": "C1",
+        "quote": "senior, 10 years old and up",
+        "confidence": "high",
+        "notes": "Guideline ranges overlap at 10 y; unlike dogs the boundary is NOT 0.75 × lifespan. Maps to LifeStage senior.",
+        "decision": "potrdil David 2026-10-08 13:47: senior stage starts at 120 months"
+      }
+    },
+    "arrival_age": {
+      "kitten_min": {
+        "value": 2,
+        "unit": "months",
+        "source_id": "C13",
+        "quote": "Kittens shouldn't be rehomed until they're at least 8 weeks old",
+        "confidence": "high",
+        "notes": "",
+        "decision": "potrdil David 2026-10-08 13:47: domestic cat kitten arrives at 2 months"
+      },
+      "pedigree_kitten": {
+        "value": 3,
+        "unit": "months",
+        "source_id": "C13",
+        "quote": "Pedigree kittens are usually rehomed over 12-13 weeks old",
+        "confidence": "high",
+        "notes": "",
+        "decision": "potrdil David 2026-10-08 13:47: Maine Coon kitten arrives at 3 months"
+      },
+      "young": {
+        "value": 12,
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of the stage, as for dogs.",
+        "decision": "potrdil David 2026-10-08 13:47: young cat arrives at 12 months"
+      },
+      "adult": {
+        "value": 84,
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of the stage.",
+        "decision": "potrdil David 2026-10-08 13:47: mature cat arrives at 84 months"
+      },
+      "senior": {
+        "value": 120,
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of the stage.",
+        "decision": "potrdil David 2026-10-08 13:47: senior cat arrives at 120 months"
+      }
+    },
+    "meals_per_day": {
+      "kitten_6_12_weeks": {
+        "value": 4,
+        "unit": "meals/day",
+        "source_id": "C3",
+        "quote": "6-12 weeks old - 4 meals per day",
+        "confidence": "high",
+        "notes": "Windows 07–09, 11–13, 15–17, 19–21 (same as puppy)."
+      },
+      "kitten_3_6_months": {
+        "value": 3,
+        "unit": "meals/day",
+        "source_id": "C2,C3",
+        "quote": "Until they are six months old, kittens will usually do best when fed three meals a day / 3-6 months old - 2-3 meals per day",
+        "confidence": "high",
+        "notes": "Windows 07–09, 13–15, 19–21."
+      },
+      "kitten_6_12_months": {
+        "value": 2,
+        "unit": "meals/day",
+        "source_id": "C2,C3",
+        "quote": "twice daily feeding is generally best / 6-9 months old - 2 meals per day",
+        "confidence": "high",
+        "notes": "Windows 06–10 and 17–21."
+      },
+      "adult": {
+        "value": 2,
+        "unit": "meals/day",
+        "source_id": "C2",
+        "quote": "feeding once or twice a day is appropriate in most cases",
+        "confidence": "medium",
+        "notes": "Game picks the upper end. Guidelines also favour many small meals (C8, C9) — 2 is a game simplification (CAT_SPEC §3, open D).",
+        "decision": "potrdil David 2026-10-08 (načrt M5-R06): adult cat 2 meals per day (game simplification)"
+      },
+      "senior": {
+        "value": 2,
+        "unit": "meals/day",
+        "source_id": "C2",
+        "quote": "should maintain the same feeding regimen",
+        "confidence": "high",
+        "notes": ""
+      }
+    },
+    "water": {
+      "need": {
+        "value": "55–70",
+        "unit": "mL/kg/day",
+        "source_id": "C4",
+        "quote": "Water needs for cats vary from 55 to 70 mL/kg BW/day",
+        "confidence": "high",
+        "notes": "Education text only."
+      },
+      "fresh_daily": {
+        "value": "fresh water at all times; wash and refill daily",
+        "unit": "rule",
+        "source_id": "C2,C5",
+        "quote": "all cats should be provided with plenty of fresh water at all times / wash and refill your cat's water bowls daily",
+        "confidence": "high",
+        "notes": ""
+      },
+      "game_times_per_day": {
+        "value": 2,
+        "unit": "times/day",
+        "source_id": "C2,C5",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Morning and evening.",
+        "decision": "potrdil David 2026-10-08 13:47: fresh water 2× per day"
+      },
+      "game_min_gap": {
+        "value": 240,
+        "unit": "minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "",
+        "decision": "potrdil David 2026-10-08 13:47: ≥ 4 h between refills"
+      },
+      "bowl_placement": {
+        "value": "≥ 50 cm from food and litter",
+        "unit": "distance",
+        "source_id": "C4",
+        "quote": "at least 50 cm away from the food bowl and the litter",
+        "confidence": "medium",
+        "notes": "Education text for the child."
+      }
+    },
+    "litter": {
+      "adult_pee": {
+        "value": "2–4",
+        "unit": "times/day",
+        "source_id": "C6",
+        "quote": "pee two to four times a day",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "adult_poo": {
+        "value": "1–2",
+        "unit": "times/day",
+        "source_id": "C6",
+        "quote": "poo once or twice a day",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "kitten_poo": {
+        "value": "1–6 (young) / 1–3 (older)",
+        "unit": "times/day",
+        "source_id": "C6",
+        "quote": "between one to six times a day … one to three times a day",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "scoop_frequency": {
+        "value": "1–2",
+        "unit": "times/day",
+        "source_id": "C5,C6,C7",
+        "quote": "scoop solid wastes out of the box at least once a day / at least twice a day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "full_change": {
+        "value": 7,
+        "unit": "days",
+        "source_id": "C5,C6,C7",
+        "quote": "Dump everything, wash with a mild detergent and refill at least once a week",
+        "confidence": "high",
+        "notes": "",
+        "decision": "potrdil David 2026-10-08 13:47: one full litter change per program week"
+      },
+      "game_uses_per_day_adult": {
+        "value": 2,
+        "unit": "uses/day",
+        "source_id": "C6",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Each use = one 'scoop litter' routine; uses are scheduled outside quiet hours like dog poops.",
+        "decision": "potrdil David 2026-10-08 13:47: adult 2 uses per day"
+      },
+      "game_uses_per_day_kitten": {
+        "value": 3,
+        "unit": "uses/day",
+        "source_id": "C6",
+        "quote": null,
+        "confidence": "low",
+        "notes": "",
+        "decision": "potrdil David 2026-10-08 13:47: kitten 3 uses per day"
+      },
+      "game_scoop_deadline": {
+        "value": 4,
+        "unit": "hours outside quiet hours",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No source says how long is too long (sources.md gaps). On expiry: mess next to the tray → existing dog hygiene ladder.",
+        "decision": "potrdil David 2026-10-08 13:47: 4 h deadline"
+      },
+      "game_overdue_change_deadline": {
+        "value": 2,
+        "unit": "hours outside quiet hours",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "While the weekly change is overdue the scoop deadline shortens to 2 h (CAT_SPEC §0 open D).",
+        "decision": "potrdil David 2026-10-08 (načrt M5-R06): overdue weekly change → 2 h scoop deadline"
+      },
+      "kitten_litter_trained_on_arrival": {
+        "value": true,
+        "unit": "bool",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not researched; kittens assumed litter-trained, so no 'puddle' event for cats.",
+        "decision": "potrdil David 2026-10-08 (načrt M5-R06): kitten litter-trained on arrival, no puddle event"
+      }
+    },
+    "play": {
+      "sessions": {
+        "value": "2–3 × 10–15 min",
+        "unit": "per day",
+        "source_id": "C10",
+        "quote": "two or three 10- to 15-minute play sessions a day, depending on their age and energy level",
+        "confidence": "medium",
+        "notes": "Only numeric source; guidelines (C8, C22) say play is a need."
+      },
+      "kittens_more": {
+        "value": "more frequent",
+        "unit": "rule",
+        "source_id": "C10",
+        "quote": "require more frequent and intense play sessions",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "short_sessions": {
+        "value": "multiple short sessions",
+        "unit": "rule",
+        "source_id": "C11",
+        "quote": "Indoor cats should have multiple short play sessions throughout the day",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "wand_technique": {
+        "value": "move the toy away from the cat; not in front of its face",
+        "unit": "rule",
+        "source_id": "C11",
+        "quote": "Avoid dangling it in front of your cat's face … moving away from the cat, similar to how prey would move",
+        "confidence": "medium",
+        "notes": "Drives the wand mini-game scoring."
+      },
+      "game_sessions_adult": {
+        "value": 2,
+        "unit": "sessions/day",
+        "source_id": "C10",
+        "quote": null,
+        "confidence": "low",
+        "notes": "One ~60 s mini-game counts as one real session.",
+        "decision": "potrdil David 2026-10-08 13:47: adult 2 per day"
+      },
+      "game_sessions_kitten": {
+        "value": 3,
+        "unit": "sessions/day",
+        "source_id": "C10",
+        "quote": null,
+        "confidence": "low",
+        "notes": "",
+        "decision": "potrdil David 2026-10-08 13:47: kitten 3 per day"
+      },
+      "game_min_gap": {
+        "value": 120,
+        "unit": "minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal (D). Spread over the day."
+      },
+      "game_session_seconds": {
+        "value": 60,
+        "unit": "seconds",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal (D). Ends with a 'catch'."
+      },
+      "missed_play_illness": {
+        "value": false,
+        "unit": "bool",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No source that one day without play causes illness.",
+        "decision": "potrdil David 2026-10-08 13:47: no illness; next day 'scratched the sofa' instead"
+      },
+      "ball_game": {
+        "value": false,
+        "unit": "bool",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dog ball game (M5-R05) is not offered for cats; cuddle stays (mood only, paid challenge, 1 invitation/day).",
+        "decision": "potrdil David 2026-10-08 (načrt M5-R06): no ball game for cats"
+      }
+    },
+    "scratching": {
+      "natural": {
+        "value": "natural, normal, necessary; never punish",
+        "unit": "rule",
+        "source_id": "C23",
+        "quote": "Scratching is a natural, normal, and necessary behavior … never punished",
+        "confidence": "high",
+        "notes": ""
+      },
+      "redirect": {
+        "value": "take to scratcher, reward immediately (≤ 3 s)",
+        "unit": "rule",
+        "source_id": "C23",
+        "quote": "pick them up, take them to the scratcher, and then provide a reward",
+        "confidence": "medium",
+        "notes": "3 s window from the toolkit's 'immediately'.",
+        "decision": "potrdil David 2026-10-08 13:47: resolve = carry to scratcher + praise within 3 s"
+      },
+      "game_trigger": {
+        "value": "day after a missed play routine, max 1/day",
+        "unit": "rule",
+        "source_id": "C8,C22",
+        "quote": null,
+        "confidence": "low",
+        "notes": "No frequency source.",
+        "decision": "potrdil David 2026-10-08 13:47: only after missed play, not random for kittens"
+      },
+      "game_resolve_deadline": {
+        "value": 2,
+        "unit": "hours outside quiet hours",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal (D). Same as dog chewing (cleaning routine)."
+      }
+    },
+    "sleep": {
+      "adult": {
+        "value": "12–16",
+        "unit": "hours/day",
+        "source_id": "C12",
+        "quote": "Cats sleep between 12–16 hours a day",
+        "confidence": "medium",
+        "notes": "Videos / behaviour only, not a rule."
+      },
+      "kitten": {
+        "value": "up to 20",
+        "unit": "hours/day",
+        "source_id": "C12",
+        "quote": "up to 20 hours",
+        "confidence": "medium",
+        "notes": ""
+      }
+    },
+    "indoor": {
+      "value": "indoor cat in the simulation",
+      "unit": "rule",
+      "source_id": "C5,C22",
+      "quote": "Please keep your cat indoors / significant effort must be made to meet all of the environmental needs of the indoor-only cat",
+      "confidence": "high",
+      "notes": "Parents are told outdoor access is a real family choice.",
+      "decision": "potrdil David 2026-10-08 13:47: cat is indoor"
+    },
+    "hunger_education": {
+      "value": "a cat that stops eating for a few days risks hepatic lipidosis",
+      "unit": "education",
+      "source_id": "C24,C25",
+      "quote": "for a few days in a row … likely to be fatal if not treated promptly",
+      "confidence": "medium",
+      "notes": "Why hunger stays as strict as for dogs. Education text only, no day count."
+    },
+    "game_decay": {
+      "hunger": {
+        "value": 8,
+        "unit": "%/hour",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game abstraction, not literature. Both cat breeds.",
+        "decision": "potrdil David 2026-10-08 13:47: hunger −8 %/h"
+      },
+      "thirst": {
+        "value": 8,
+        "unit": "%/hour",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game abstraction.",
+        "decision": "potrdil David 2026-10-08 13:47: thirst −8 %/h"
+      }
+    }
+  },
+  "domestic_cat": {
+    "identity": {
+      "value": {
+        "slug": "domestic-cat",
+        "enum": "domestic_cat",
+        "premium": false
+      },
+      "unit": "",
+      "source_id": "C15",
+      "quote": null,
+      "confidence": "medium",
+      "notes": "Random-bred / moggy; the free cat (like the mutt).",
+      "decision": "potrdil David 2026-10-08 13:47: free forever (Q6)"
+    },
+    "lifespan": {
+      "expectancy_at_birth": {
+        "value": 11.89,
+        "unit": "years",
+        "source_id": "C14",
+        "quote": "crossbred 11.89 y (11.76–12.03)",
+        "confidence": "high",
+        "notes": ""
+      },
+      "median_moggy": {
+        "value": 13.09,
+        "unit": "years",
+        "source_id": "C15",
+        "quote": "median lifespan moggies 13.09 y",
+        "confidence": "high",
+        "notes": "Background."
+      }
+    },
+    "appearance": {
+      "value": "short coat (rarely semi-long); tabby, solid, bicolour, tortoiseshell, calico; eyes green / yellow-amber / copper, blue only with white",
+      "unit": "traits",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "notes": "UNSOURCED — proposal (D). No source for colour frequencies (sources.md gaps) → config/breed_appearance.php entry verified:false, like the mutt."
+    }
+  },
+  "maine_coon": {
+    "identity": {
+      "value": {
+        "slug": "maine-coon",
+        "enum": "maine_coon",
+        "premium": true
+      },
+      "unit": "",
+      "source_id": "C19",
+      "quote": "Maine Coon 23,775 (1st)",
+      "confidence": "high",
+      "notes": "Most-registered FIFe breed in 2024.",
+      "decision": "potrdil David 2026-10-08 13:47: paid challenge breed (Q5), price 49,99 € (Q6)"
+    },
+    "lifespan": {
+      "expectancy_at_birth": {
+        "value": 9.71,
+        "unit": "years",
+        "source_id": "C14",
+        "quote": "Maine Coon 9.71 y (8.42–11.00)",
+        "confidence": "high",
+        "notes": "Stage boundaries still come from C1, not lifespan."
+      }
+    },
+    "adult_weight": {
+      "tica_male": {
+        "value": "5.9–8.2",
+        "unit": "kg",
+        "source_id": "C17",
+        "quote": "males 13–18 lb",
+        "confidence": "low",
+        "notes": "Secondary summary of TICA — verify on tica.org."
+      },
+      "tica_female": {
+        "value": "4.1–5.9",
+        "unit": "kg",
+        "source_id": "C17",
+        "quote": "females 9–13 lb",
+        "confidence": "low",
+        "notes": "Verify on tica.org."
+      }
+    },
+    "growth_end": {
+      "value": "36–60",
+      "unit": "months",
+      "source_id": "C17",
+      "quote": "full maturity may take three to five years",
+      "confidence": "low",
+      "notes": "Young-adult Maine Coon still looks not fully grown (prompt cue)."
+    },
+    "grooming": {
+      "range": {
+        "value": "daily (TICA, thick coat) … a couple of times a week (CFA) … weekly (Vetstreet)",
+        "unit": "rule",
+        "source_id": "C17,C18",
+        "quote": "a thicker coat can require daily combing / at least a couple of times a week / weekly combing is all that's needed",
+        "confidence": "low",
+        "notes": "Sources disagree."
+      },
+      "game_sessions_per_week": {
+        "value": 3,
+        "unit": "sessions/week",
+        "source_id": "C17",
+        "quote": null,
+        "confidence": "low",
+        "notes": "≥ 1 day between sessions.",
+        "decision": "potrdil David 2026-10-08 13:47: 3× per week"
+      },
+      "game_matted_after_missed": {
+        "value": 2,
+        "unit": "missed sessions in a row",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Matted coat event, resolved by a longer combing; no illness.",
+        "decision": "potrdil David 2026-10-08 13:47: matted coat after 2 missed"
+      }
+    },
+    "appearance": {
+      "value": "large frame, square head outline, large ears, lynx tufts desirable, silky coat short on head/shoulders and longer on back/sides, frill, tail ≥ body length; all colours except pointed, chocolate, lilac, cinnamon, fawn; all eye colours except blue (blue only with white)",
+      "unit": "traits",
+      "source_id": "C16",
+      "quote": "Lynx-tufts are desirable … A frill is expected … All eye colours, except blue",
+      "confidence": "high",
+      "notes": "FIFe standard 01.01.2026."
+    },
+    "arrival_age_kitten": {
+      "value": 3,
+      "unit": "months",
+      "source_id": "C13",
+      "quote": "Pedigree kittens are usually rehomed over 12-13 weeks old",
+      "confidence": "high",
+      "notes": "",
+      "decision": "potrdil David 2026-10-08 13:47: Maine Coon kitten arrives at 3 months"
+    }
+  }
+}
