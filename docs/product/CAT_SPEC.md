@@ -3,7 +3,7 @@
 > **Status:** spec **potrjen**, 8. 10. 2026. **Odločil David 7. 10. 2026:** na začetku sta vrsti **pes in mačka**. Izbira gre najprej po **vrsti**, nato po **pasmi** (seznam z iskanjem, skalabilno). Pred gradnjo je potreben spec skrbi za mačko, z viri kot v [`REALISM_SPEC.md`](REALISM_SPEC.md). **David 8. 10. 2026 13:47:** potrdil priporočene odgovore na vsa vprašanja Q1–Q10 (§0). Kar je še označeno z **(D)**, je Claudov predlog, ki čaka potrditev (seznam na koncu §0). **Nič od tega še ni zgrajeno.**
 > **Oznake:** številka z oznako **[Cn]** ima vir v [`docs/research/cat-data/sources.md`](../research/cat-data/sources.md). **(D)** pomeni predlog brez vira ali še neodločeno, kar čaka Davidovo potrditev. Kar je (D), se staršem in otrokom ne sme prikazati kot dejstvo.
 > **Temeljno pravilo (kot pri psu):** številk o mačkah si ne izmišljujemo. Pravila igre (odstotki, ure, upadanje) so abstrakcija igre in so vedno označena kot odločitev, ne kot literatura.
-> **Naslednji korak:** odgovori na Q1–Q10 so potrjeni in prenešeni v `PRODUCT_SPEC.md` §13 (*načrt*). Sledita **izvedbeni načrt** (naloge v `ROADMAP.md` M5-R06) in `docs/research/cat-data/data.json` (vsaka vrednost z virom, kot pri psu). Šele nato pride na vrsto koda.
+> **Naslednji korak:** odgovori na Q1–Q10 so potrjeni in prenešeni v `PRODUCT_SPEC.md` §13 (*načrt*). Izvedbeni načrt je v [`docs/engineering/M5-R06_PLAN.md`](../engineering/M5-R06_PLAN.md), vrednosti z viri v [`docs/research/cat-data/data.json`](../research/cat-data/data.json) (8. 10. 2026). Koda pride na vrsto, ko David potrdi načrt.
 
 ## 0. Vprašanja za Davida — odločeno
 

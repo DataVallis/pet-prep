@@ -1,0 +1,54 @@
+# M5-R06 — Izvedbeni načrt: vrsta živali → pasma (pes + mačka)
+
+> **Status:** osnutek načrta, 8. 10. 2026 (Claude). Spec: [`docs/product/CAT_SPEC.md`](../product/CAT_SPEC.md) (David je Q1–Q10 potrdil 8. 10. 2026 ob 13:47). Viri in vrednosti: [`docs/research/cat-data/data.json`](../research/cat-data/data.json) (62 vrednosti z virom [Cn] ali z Davidovo odločitvijo; predlogi (D) so označeni `UNSOURCED`).
+> **Nič od tega še ni zgrajeno.** Vsaka naloga je en PR po pravilih iz `CLAUDE.md` (testi, dokumenti, FEATURES, BUILD_LOG).
+> **Merilo regresije:** pri obstoječih psih se ne spremeni nič. Vsi obstoječi Pest in Jest testi ostanejo zeleni brez sprememb pričakovanih vrednosti.
+
+## 1. Ključne tehnične odločitve (Claude, brez vpliva na pravila igre)
+
+| # | Odločitev | Zakaj |
+|---|---|---|
+| T1 | **`BreedType` ostane enum** in dobi `domestic_cat`, `maine_coon` ter metodo `species()`. Vrednost `premium` se bere iz `breed_configs.premium_unlock` (en vir resnice), `isPremium()` postane ovoj okoli tega. Popolnoma podatkovno vodene pasme (brez enuma) so naslednji korak, ko bo pasem več kot ~5. | Enum se uporablja v 20 datotekah in v plačilni logiki. Popolna predelava bi bila tvegana sredi bete; katalog za izbirnik je kljub temu podatkovno voden (T3). |
+| T2 | **Nov stolpec `pets.species`** (`dog` / `cat`, NOT NULL, obstoječe vrstice = `dog`) + CHECK, da se pasma ujema z vrsto. | Pravila se razvejajo po vrsti, ne po pasmi. |
+| T3 | **`GET /api/breeds?species=`** vrne katalog (vrsta, pasma, brezplačno / izziv, zaklep, ključ za prevod, iskalne besede, vrstni red). Aplikacija ne vsebuje več seznama `PICKER_BREEDS` / `PREMIUM_BREEDS`. | Nova pasma = nova vrstica v bazi, brez nove različice aplikacije (CAT_SPEC §10). |
+| T4 | **Mačke so »temne«, dokler niso končane:** strežniška nastavitev `PETPREP_CATS_ENABLED` (privzeto `false`) in nova `ClientFeature` `species_cat`, ki jo pošljeta starševska in otroška aplikacija. Brez obojega katalog mačk ne pokaže, `generate-pin` z `species=cat` pa vrne 422. | Beta teče na produkciji. Starejša aplikacija mačke ne zna prikazati (danes vsako neznano pasmo pokaže kot mešančka). |
+| T5 | **Merilnik »Igra« uporabi obstoječi stolpec energije** (`energy_level` = opravljene igre / cilj × 100, ponastavitev ob polnoči). | Merilnik, lestvica »brez faz« in polnočni ritem so pri psu že zgrajeni. Razlikuje se le napis, ki ga določa `species`. |
+| T6 | **Ena nova tabela `pet_care_sessions`** (`kind`: `wand_play` / `grooming` / `litter_change`, otrok, začetek, konec, rezultat). Igro s palico, česanje in menjavo peska vodi strežnik (start / finish, kot šola). | Trije podobni tokovi, en vzorec in en zapis za pošten delež. |
+| T7 | **Pesek je del obstoječih higienskih dogodkov:** nove vrste `litter_use` (ni nered, je rutina z rokom 4 h), `litter_accident` (nered → obstoječa lestvica) in `scratching` (kot grizenje). | Lestvica, roki izven tihih ur in čiščenje že delujejo za psa. |
+| T8 | **Prevodi:** pasje ključe pustimo, kot so. Novi ključi samo tam, kjer se besedilo razlikuje po vrsti (samostalnik, spol, dejanje), v podimenskem prostoru `cat`. Pomožna funkcija izbere besedilo po vrsti. Test preveri, da ima vsak pasji ključ z besedo »kuža / dog« mačjo različico ali je izrecno označen kot samo pasji. | ~200 ključev na jezik vsebuje pasji samostalnik. Preimenovanje vseh bi bil velik PR brez koristi za psa. |
+| T9 | **Ključ pasme:** enum `domestic_cat` / `maine_coon`, slug v bazi `domestic-cat` / `maine-coon` (isti vzorec kot `border_collie` / `border-collie`). | Doslednost z obstoječo kodo. |
+| T10 | **Sejalnik podatkov po vrstah:** `BreedStageParamsSeeder` dobi ločen nabor vrstic za mačke z `data_ref` v `cat-data/data.json`. Test `LifeStageDataTest` preveri vsako vrstico proti datoteki svoje vrste in vire proti `cat-data/sources.md`. | Enako pravilo kot pri psu: vsaka številka ima vir ali zapisano odločitev. |
+
+## 2. Naloge (vsaka = en PR)
+
+Odvisnosti: R06-01 → (R06-02, R06-03) → R06-04 → R06-05 → R06-06; R06-07 in R06-08 tečeta vzporedno po R06-03; R06-09 je zadnji.
+
+| ID | Naloga | Obseg | Vidno uporabniku? |
+|---|---|---|---|
+| **M5-R06-01** | **Temelj vrste (strežnik).** `Species` enum, `pets.species` + backfill `dog`, `BreedType` + `species()`, `premium_unlock` kot edini vir za brezplačno / plačljivo (`PairingService`, `ChallengeService`, `PetPlanPayload`, `Pet::creating`, `ChildPinLoginService` — namesto `=== Mutt` pravilo »brezplačna pasma vrste«), CHECK-i, `generate-pin` sprejme `species` (422 `breed_species_mismatch`, 422 `species_unavailable`), `ClientFeature species_cat`, nastavitev `PETPREP_CATS_ENABLED`, `GET /api/breeds`, `species` v vseh payloadih in v `PetUpdated`. Vrstice `breed_configs` za mačke (voda 2 / 240 min, lakota in žeja 8 %/h, uporabe peska). Filament: filter po vrsti. | strežnik, srednje | ne (mačke skrite) |
+| **M5-R06-02** | **Izbirnik vrsta → pasma (aplikacija).** Korak »Pes / Mačka«, nato načrt, nato seznam pasem s strežnika z iskanjem (brez šumnikov, sinonimi), značke Brezplačno / Izziv, zaklenjene sive (kot M5-F03), povzetek pred PIN-om. Odstrani vsa mesta, kjer neznana pasma postane `'mutt'` (4 moduli) in `purchaseEntry` (`!== 'mutt'` → plan s strežnika). Za psa se izbira ne spremeni, razen novega prvega koraka. | aplikacija, srednje | da (pes: nov 1. korak; mačka skrita, dokler je stikalo izklopljeno) |
+| **M5-R06-03** | **Podatki o mački + življenjske faze.** Sejalnik iz `cat-data/data.json` (faze 12 / 84 / 120 mes., prihod 2 / 3 / 12 / 84 / 120, obroki po fazi in okna, spanje), novi ključi `StageParamKey` + CHECK (`play_sessions_per_day`, `play_min_gap_minutes`, `litter_uses_per_day`, `litter_scoop_deadline_hours`, `litter_full_change_days`, `grooming_sessions_per_week`, `scratching_after_missed_play`), `LifeStageDataTest` po vrstah, `LifeStage` napisi in `promptCue()` po vrsti. | strežnik, srednje | ne |
+| **M5-R06-04** | **Pravila mačke, del 1: igra in brez korakov.** Koraki za mačko → 422 `steps_not_applicable`, brez sprehoda in brez bolezni zaradi sprehoda. `pet_care_sessions` + `POST /api/child/pet/wand/start|finish` (strežnik oceni »pero beži stran«), merilnik Igra (T5), cilj 2 / 3, razmik 2 h, polnoč, en opomnik na dan, rutina `play` v Care Score s poštenim deležem (cilj / n, navzgor). Igra z žogo samo pes; crkljanje ostane. Šolanje: `training_not_available`. | strežnik, veliko | ne |
+| **M5-R06-05** | **Pravila mačke, del 2: pesek, praskanje, česanje.** `litter_use` po urniku (2 / 3 na dan, izven tihih ur), rutina »Počisti pesek« (rok 4 h izven tihih ur) → `litter_accident` (nered, obstoječa lestvica: alarm, bolezen po 6 h, game over po 24 h), tedenska menjava (rutina; zamujena → rok 2 h), `scratching` dan po zamujeni igri + razrešitev »odnesi na praskalnik in pohvali v 3 s«, česanje Maine Coona 3× na teden + »vozel v dlaki« po 2 zamujenih. Nove rutine v `RoutineLedgerService` / `CareScoreService`, nove vrste dejavnosti v časovnici. | strežnik, veliko | ne |
+| **M5-R06-06** | **Obvestila in besedila strežnika po vrsti.** `push.php` EN + SL za mačko (ločeni ključi, spol), opomnik za igro namesto sprehoda, besedila pogodbe po vrsti, izvoz podatkov. Pravilo M3-12 ostane: obvestilo nikoli ne zahteva nemogočega. | strežnik, srednje | ne |
+| **M5-R06-07** | **AI videz mačke.** `PetAppearancePrompt` brez besede »dog« (predloge po vrsti), `breed_appearance.php` (domača mačka `verified: false`, Maine Coon po FIFe C16), video stanja po vrsti (`low_energy` = »dolgčas«), nov video `scratching`, brez `accident`, AI Lab za mačke, stari DNA v1 (`FalAiService`) zavrne mačko. Strošek preverimo v AI Labu pred vklopom. | strežnik, srednje | samo admin |
+| **M5-R06-08** | **Otroški HUD in starš za mačko (aplikacija).** Gumbi: hrana, voda, »Pesek« (mini-igra z lopatko), »Igra« (palica s peresom, ~60 s), čiščenje nereda, »Na praskalnik« (pohvala v 3 s), »Počeši« (Maine Coon), tedenska menjava. Brez sprehoda, kartice Zdravje in dovoljenj za korake. Pogodba po vrsti. Starš: oznake rutin, časovnica, poročilo (igre namesto korakov). Prevodi po T8 + test pokritosti. | aplikacija, zelo veliko (razdelimo na 08a mini-igre, 08b HUD + starš, 08c prevodi) | ne, dokler je stikalo izklopljeno |
+| **M5-R06-09** | **Vklop in dokumenti.** Davidov preizkus na telefonu (dev build) → `PETPREP_CATS_ENABLED=true`. FEATURES, občinstva (starši, otroci), PRODUCT_SPEC §13 iz *načrt* v *zgrajeno*, PAYMENTS_SPEC (izziv za mačko), PLAY_CUDDLE_SPEC §5.5, spletna stran in opisi v trgovinah (seznam za Davida). | dokumenti + nastavitev | da |
+
+**Ocena:** ~9–11 PR-jev. Strežnik (R06-01, 03, 04, 05, 06, 07) najprej, ker aplikacija potrebuje API. Ker so mačke skrite (T4), lahko vsak PR gre v `main` in na produkcijo brez vpliva na testerje.
+
+## 3. Testi (definicija opravljenega, povzetek CAT_SPEC §11)
+
+- **Pest:** ujemanje vrste in pasme (422); mačke skrite brez stikala ali brez `species_cat`; mačka nima korakov ne bolezni zaradi sprehoda; rok peska → nered po 4 h izven tihih ur; zamujena menjava → rok 2 h; cilj iger, polnoč, opomnik, zamujena igra → praskanje naslednji dan; razrešitev praskanja v 3 s; česanje in vozel; Care Score z novimi rutinami in poštenim deležem; šolanje ni na voljo; katalog; **regresija: obstoječi psi in »legacy« psi nespremenjeni** (posnetek stanja psa čez 3 dni pred in po spremembi). Vsa časovna pravila s `Carbon::setTestNow()` v časovnem pasu družine, tudi čez premik ure 25. 10.
+- **Jest:** korak vrste in iskanje (šumniki, sinonimi), nobena pasma ne postane `'mutt'` po pomoti, HUD po vrsti, mini-igre, pokritost prevodov za obe vrsti.
+
+## 4. Tveganja
+
+1. **Plačila:** pravilo »brezplačno = mešanček« je danes na ~10 mestih. R06-01 ga zamenja s »brezplačna pasma vrste« — ločen sklop testov za vse kombinacije (pes / mačka × brezplačno / izziv × stara / nova aplikacija).
+2. **Stare aplikacije:** dokler testerji nimajo nove različice, ne smejo nikoli dobiti mačke (T4). Test: aplikacija brez `species_cat` nikoli ne vidi mačke v katalogu, PIN ali prijava z mačko pa vrneta jasno napako.
+3. **Velikost HUD-a** (`ChildHudScreen` ima 1.107 vrstic): mačji gumbi gredo v ločen modul (`modules/cat/…`), ne v isto datoteko.
+4. **Prevodi:** ~200 pasjih ključev na jezik. Mačja besedila pišemo ločeno (spol), angleščino pa David prebere pred vklopom.
+
+## 5. Še odprto (D) — ne blokira R06-01 do R06-03
+
+Seznam iz CAT_SPEC §0 (imena faz, »muca / mucek«, besedilo pogodbe, žoga odpade, 2 obroka, rok 2 h ob zamujeni menjavi, mucek brez luže, »podarjena« = posvojena, besedilo o igri v aplikaciji, besedila obvestil, AI videz, sinonimi v iskanju). Potrebni so najpozneje pred R06-04 (pravila) oz. R06-06 / R06-08 (besedila).
