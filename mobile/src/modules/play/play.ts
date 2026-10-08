@@ -235,7 +235,8 @@ export function isHappyAt(play: ChildPlay | null, serverNowMs: number): boolean 
 export function moodSceneAt(view: ChildPetView, serverNowMs: number): MoodScene | null {
   const play = view.play;
   if (play === null || play.mood.scene !== 'playing' || !isHappyAt(play, serverNowMs)) return null;
-  if (view.lock.is_locked || view.behaviour.scene !== null) return null;
+  // An open mess (QA PR #86 M1): the dirty screen wins, never a happy dog over it.
+  if (view.lock.is_locked || view.behaviour.scene !== null || view.pet.needs_cleaning) return null;
   return view.pet.pet_state === 'idle' || view.pet.pet_state === 'playing' ? 'playing' : null;
 }
 
@@ -299,7 +300,11 @@ export function nextPlayChangeMs(view: ChildPetView, serverNowMs: number): numbe
 export function optimisticPlay(view: ChildPetView, kind: PlayKind, serverNowMs: number): ChildPetView {
   if (view.play === null) return view;
   const happyUntil = new Date(serverNowMs + HAPPY_MINUTES * 60_000).toISOString();
-  const calm = !view.lock.is_locked && view.behaviour.scene === null && (view.pet.pet_state === 'idle' || view.pet.pet_state === 'playing');
+  const calm =
+    !view.lock.is_locked &&
+    view.behaviour.scene === null &&
+    !view.pet.needs_cleaning &&
+    (view.pet.pet_state === 'idle' || view.pet.pet_state === 'playing');
   return {
     ...view,
     play: {
@@ -367,8 +372,6 @@ export function playBlockText(block: PlayBlock, sleepsUntil: string | null, time
 }
 
 // ── Parent (`play:parent`) ────────────────────────────────────
-
-export const PLAY_ACTIVITY_TYPES = { played_with_pet: 'play', cuddled_pet: 'cuddle' } as const satisfies Record<string, PlayKind>;
 
 export function playKindOfActivity(type: string): PlayKind | null {
   return type === 'played_with_pet' ? 'play' : type === 'cuddled_pet' ? 'cuddle' : null;

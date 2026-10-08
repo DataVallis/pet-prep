@@ -151,6 +151,60 @@ describe('ChildHudScreen — play & cuddle (M5-R05)', () => {
     expect(screen.queryByTestId('hud-happy')).toBeNull();
   });
 
+  it('an open mess wins over the happy mood: no badge, no hearts (QA PR #86 M1)', async () => {
+    await renderHud(
+      makeLiveChildState({
+        play: makePlayState({ can_play: false, mood: { happy_until: HAPPY_UNTIL, scene: 'playing' } }),
+        pet: { needs_cleaning: true, hygiene_level: 0 },
+      }),
+    );
+    expect(screen.queryByTestId('hud-happy', { includeHiddenElements: true })).toBeNull();
+    expect(screen.queryByTestId('hud-hearts', { includeHiddenElements: true })).toBeNull();
+    expect(useAppStore.getState().hudVideoState).not.toBe('playing');
+  });
+
+  it('another layer (walk / album) closes the play layer; it does not come back (QA PR #86 m1)', async () => {
+    await renderHud(makeLiveChildState({ play: makePlayState() }));
+    fireEvent.press(screen.getByTestId('hud-play-open'));
+    expect(screen.getByTestId('play-overlay')).toBeTruthy();
+    act(() => useAppStore.getState().setWalkModalVisible(true));
+    await flush();
+    expect(useAppStore.getState().playOverlay).toBeNull();
+    act(() => useAppStore.getState().setWalkModalVisible(false));
+    await flush();
+    expect(screen.queryByTestId('play-overlay')).toBeNull();
+
+    fireEvent.press(screen.getByTestId('hud-play-open'));
+    act(() => useAppStore.getState().setAlbumVisible(true));
+    await flush();
+    expect(useAppStore.getState().playOverlay).toBeNull();
+  });
+
+  it('no answer from the server (offline): the layer closes, no thank-you card stays (QA PR #86 m3)', async () => {
+    playWithPet.mockRejectedValue(new TypeError('Network request failed'));
+    await renderHud(makeLiveChildState({ play: makePlayState() }));
+    fireEvent.press(screen.getByTestId('hud-play-open'));
+    fireEvent.press(screen.getByTestId('play-pick-cuddle'));
+    fireEvent(screen.getByTestId('play-hold'), 'accessibilityAction', { nativeEvent: { actionName: 'activate' } });
+    await flush(1_000);
+    await flush(10_000);
+    expect(screen.queryByTestId('play-overlay')).toBeNull();
+    expect(screen.queryByTestId('hud-happy')).toBeNull();
+  });
+
+  it('"Mogoče kasneje" is remembered for the session (HUD remount) and cleared on sign-out (QA PR #86 m6)', async () => {
+    const state = makeLiveChildState({ play: makePlayState({ invitation: INVITE }) });
+    const { unmount } = await renderHud(state);
+    fireEvent.press(screen.getByTestId('hud-play-invitation-dismiss'));
+    expect(useAppStore.getState().dismissedPlayInvitations).toEqual([INVITE.id]);
+    unmount();
+    await renderHud(state);
+    expect(screen.queryByTestId('hud-play-invitation-play')).toBeNull();
+    expect(screen.getByTestId('hud-play-open')).toBeTruthy();
+    act(() => useAppStore.getState().reset());
+    expect(useAppStore.getState().dismissedPlayInvitations).toEqual([]);
+  });
+
   it('invitation: card instead of the chip; accept opens the ball game; no countdown', async () => {
     await renderHud(makeLiveChildState({ play: makePlayState({ invitation: INVITE }) }));
     expect(screen.getByTestId('hud-play-invitation-play')).toBeTruthy();
@@ -169,7 +223,7 @@ describe('ChildHudScreen — play & cuddle (M5-R05)', () => {
     unmount();
 
     // The client hides it by its own clock (even if a refetch still carried it).
-    const expiring = makePlayState({ invitation: { ...INVITE, expires_at: '2026-10-04T12:10:00+02:00' } });
+    const expiring = makePlayState({ invitation: { ...INVITE, id: 13, expires_at: '2026-10-04T12:10:00+02:00' } });
     getChildPet.mockImplementation(() =>
       Promise.resolve(makeLiveChildState({ play: expiring, server_time: new Date().toISOString() })),
     );

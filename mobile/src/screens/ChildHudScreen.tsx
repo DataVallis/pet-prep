@@ -294,10 +294,17 @@ export default function ChildHudScreen() {
   const playNow = usePlayClock(view);
   const reduceMotion = useReduceMotion();
   const play = usePlay();
-  const [dismissedInvitations, setDismissedInvitations] = useState<ReadonlySet<number>>(() => new Set());
-  const dismissInvitation = useCallback((id: number) => {
-    setDismissedInvitations((current) => new Set([...current, id]));
-  }, []);
+  // "Mogoče kasneje" lives in the session store (survives the HUD remounting).
+  const dismissedIds = useAppStore((s) => s.dismissedPlayInvitations);
+  const dismissInvitation = useAppStore((s) => s.dismissPlayInvitation);
+  const dismissedInvitations = useMemo<ReadonlySet<number>>(() => new Set(dismissedIds), [dismissedIds]);
+  // Another layer (walk, cleaning, album, training) or a mess to scrub closes the play layer
+  // (like a lock does) — otherwise it would reappear when that layer closes.
+  const messToScrub = view ? needsScrubbing(view.pet.needs_cleaning, view.behaviour) : false;
+  const otherLayerOpen = isWalkModalVisible || isCleaningOverlayVisible || isAlbumVisible || isTrainingVisible || messToScrub;
+  useEffect(() => {
+    if (otherLayerOpen) setPlayOverlay(null);
+  }, [otherLayerOpen, setPlayOverlay]);
   // End of quiet hours as a 422 named it (the child state doesn't carry it) → "Kuža spi do 07:00.".
   const [playSleepsUntil, setPlaySleepsUntil] = useState<string | null>(null);
   // M5-R03 / PR #53: the child's own session is still running (e.g. the app was restarted
@@ -402,8 +409,9 @@ export default function ChildHudScreen() {
         onError: (error) => {
           const failure = classifyActionError(error);
           const current = queryClient.getQueryData<ChildPetView>(childPetKey) ?? null;
+          // m3 (QA PR #86): no thank-you card for a play the server never got.
+          setPlayOverlay(null);
           if (failure.kind === 'refused') {
-            setPlayOverlay(null);
             if (failure.nextAllowedAt) setPlaySleepsUntil(failure.nextAllowedAt);
             showToast({ tone: 'info', message: playRefusalMessage(failure.nextAllowedAt, current?.timezone ?? null, current) });
             return;
@@ -797,6 +805,7 @@ export default function ChildHudScreen() {
           onPick={(kind) => setPlayOverlay(kind)}
           onFinished={handlePlayFinished}
           onClose={() => setPlayOverlay(null)}
+          onMediaExpired={onMediaExpired}
           reduceMotion={reduceMotion}
         />
       )}

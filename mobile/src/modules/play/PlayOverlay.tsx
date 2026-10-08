@@ -18,7 +18,17 @@
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import { Animated, PanResponder, Pressable, StyleSheet, View, type AccessibilityActionEvent } from 'react-native';
+import {
+  AccessibilityInfo,
+  Animated,
+  BackHandler,
+  PanResponder,
+  Platform,
+  Pressable,
+  StyleSheet,
+  View,
+  type AccessibilityActionEvent,
+} from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { CircleDot, HandHeart, Heart, X } from 'lucide-react-native';
 
@@ -59,7 +69,24 @@ export interface PlayOverlayProps {
   onFinished: (kind: PlayKind) => void;
   onClose: () => void;
   reduceMotion: boolean;
+  /** Signed media URL expired → the HUD refetches the state (same as its own video). */
+  onMediaExpired?: () => void;
   testID?: string;
+}
+
+/**
+ * iOS VoiceOver doesn't read `accessibilityLiveRegion` (Android only): announce a changed
+ * status line ("Met 2 od 3", "Hvala za igro! …") — not the first one (the hint is on screen).
+ */
+function useAnnounce(text: string) {
+  const first = useRef(true);
+  useEffect(() => {
+    if (first.current) {
+      first.current = false;
+      return;
+    }
+    if (Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(text);
+  }, [text]);
 }
 
 /** Stage: the pet's own video (`playing`, else `idle`) when stored, else a calm illustration. */
@@ -93,7 +120,14 @@ function DogEmoji({ offset }: { offset: Animated.Value | Animated.AnimatedInterp
 
 // ── Ball game ─────────────────────────────────────────────────
 
-function BallGame({ view, reduceMotion, onDone }: { view: ChildPetView; reduceMotion: boolean; onDone: () => void }) {
+interface GameProps {
+  view: ChildPetView;
+  reduceMotion: boolean;
+  onDone: () => void;
+  onMediaExpired?: () => void;
+}
+
+function BallGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
   const [ball, setBall] = useState<BallState>(BALL_START);
   const ballRef = useRef(ball);
   ballRef.current = ball;
@@ -172,10 +206,11 @@ function BallGame({ view, reduceMotion, onDone }: { view: ChildPetView; reduceMo
       };
   const dogRun = reduceMotion ? 0 : flight.interpolate({ inputRange: [0, 1], outputRange: [0, -40] });
   const status = ball.fetching ? PLAY_STRINGS.fetching : ball.throws === 0 ? PLAY_STRINGS.hint : PLAY_STRINGS.progress(ball.throws);
+  useAnnounce(status);
 
   return (
     <View style={styles.game} testID="play-ball">
-      <Stage view={view}>{!hasVideo && <DogEmoji offset={dogRun} />}</Stage>
+      <Stage view={view} onMediaExpired={onMediaExpired}>{!hasVideo && <DogEmoji offset={dogRun} />}</Stage>
       <Text style={styles.status} testID="play-ball-status" accessibilityLiveRegion="polite">
         {status}
       </Text>
@@ -218,7 +253,7 @@ interface FloatingHeart {
 
 const HEART_MS = 900;
 
-function CuddleGame({ view, reduceMotion, onDone }: { view: ChildPetView; reduceMotion: boolean; onDone: () => void }) {
+function CuddleGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
   const [strokes, setStrokes] = useState(0);
   const [hearts, setHearts] = useState<FloatingHeart[]>([]);
   const tracker = useRef(STROKE_START);
@@ -293,25 +328,36 @@ function CuddleGame({ view, reduceMotion, onDone }: { view: ChildPetView; reduce
     [],
   );
 
+  // "Drži in pobožaj" fills up over the 3 s (QA PR #86 m5); with reduce motion it is a
+  // static tint while held (no moving bar).
+  const holdFill = useRef(new Animated.Value(0)).current;
+  const [holding, setHolding] = useState(false);
   const startHold = () => {
     if (finished.current) return;
     if (holdTimer.current) clearTimeout(holdTimer.current);
     holdTimer.current = setTimeout(finish, HOLD_MS);
+    setHolding(true);
+    holdFill.setValue(0);
+    if (!reduceMotion) Animated.timing(holdFill, { toValue: 1, duration: HOLD_MS, useNativeDriver: true }).start();
   };
   const endHold = () => {
     if (holdTimer.current) clearTimeout(holdTimer.current);
     holdTimer.current = null;
+    setHolding(false);
+    holdFill.stopAnimation();
+    holdFill.setValue(0);
   };
   const onA11yAction = (event: AccessibilityActionEvent) => {
     if (event.nativeEvent.actionName === 'activate' || event.nativeEvent.actionName === 'cuddle') finish();
   };
 
   const status = strokes === 0 ? CUDDLE_STRINGS.hint : CUDDLE_STRINGS.progress(Math.min(strokes, CUDDLE_STROKES));
+  useAnnounce(status);
 
   return (
     <View style={styles.game} testID="play-cuddle">
       <View style={styles.cuddleArea} {...responder.panHandlers} testID="play-cuddle-area" accessible accessibilityLabel={CUDDLE_STRINGS.areaA11y}>
-        <Stage view={view}>{!hasVideo && <DogEmoji offset={0} />}</Stage>
+        <Stage view={view} onMediaExpired={onMediaExpired}>{!hasVideo && <DogEmoji offset={0} />}</Stage>
         {hearts.map((h) => (
           <CuddleHeart key={h.id} x={h.x} y={h.y} reduceMotion={reduceMotion} />
         ))}
@@ -327,8 +373,15 @@ function CuddleGame({ view, reduceMotion, onDone }: { view: ChildPetView; reduce
         onAccessibilityAction={onA11yAction}
         onPressIn={startHold}
         onPressOut={endHold}
-        style={({ pressed }) => [styles.secondaryButton, pressed && styles.holding]}
+        style={styles.secondaryButton}
       >
+        {holding && (
+          <Animated.View
+            pointerEvents="none"
+            testID={reduceMotion ? 'play-hold-fill-static' : 'play-hold-fill'}
+            style={[styles.holdFill, reduceMotion ? styles.holdFillStatic : { transform: [{ scaleX: holdFill }] }]}
+          />
+        )}
         <HandHeart color={palette.mint} size={18} />
         <Text style={styles.secondaryText}>{CUDDLE_STRINGS.holdButton}</Text>
       </Pressable>
@@ -352,7 +405,16 @@ function CuddleHeart({ x, y, reduceMotion }: { x: number; y: number; reduceMotio
 
 // ── Overlay ───────────────────────────────────────────────────
 
-export default function PlayOverlay({ view, mode, onPick, onFinished, onClose, reduceMotion, testID = 'play-overlay' }: PlayOverlayProps) {
+export default function PlayOverlay({
+  view,
+  mode,
+  onPick,
+  onFinished,
+  onClose,
+  reduceMotion,
+  onMediaExpired,
+  testID = 'play-overlay',
+}: PlayOverlayProps) {
   const [doneKind, setDoneKind] = useState<PlayKind | null>(null);
   const reported = useRef<PlayKind | null>(null);
   const finishedRef = useRef(onFinished);
@@ -374,6 +436,20 @@ export default function PlayOverlay({ view, mode, onPick, onFinished, onClose, r
   }, []);
   const finishBall = useCallback(() => finish('play'), [finish]);
   const finishCuddle = useCallback(() => finish('cuddle'), [finish]);
+
+  // Android back closes the layer (like × — an unfinished game reports nothing).
+  useEffect(() => {
+    const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+      closeRef.current();
+      return true;
+    });
+    return () => sub.remove();
+  }, []);
+
+  // VoiceOver: read the thank-you line.
+  useEffect(() => {
+    if (doneKind !== null && Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(doneText(doneKind));
+  }, [doneKind]);
 
   // The "thank you" card closes by itself.
   useEffect(() => {
@@ -439,9 +515,9 @@ export default function PlayOverlay({ view, mode, onPick, onFinished, onClose, r
           </Pressable>
         </View>
       ) : mode === 'play' ? (
-        <BallGame view={view} reduceMotion={reduceMotion} onDone={finishBall} />
+        <BallGame view={view} reduceMotion={reduceMotion} onDone={finishBall} onMediaExpired={onMediaExpired} />
       ) : (
-        <CuddleGame view={view} reduceMotion={reduceMotion} onDone={finishCuddle} />
+        <CuddleGame view={view} reduceMotion={reduceMotion} onDone={finishCuddle} onMediaExpired={onMediaExpired} />
       )}
     </View>
   );
@@ -520,6 +596,7 @@ const styles = StyleSheet.create({
   cuddleArea: { flex: 1 },
   cuddleHeart: { position: 'absolute' },
   secondaryButton: {
+    overflow: 'hidden',
     minHeight: 52,
     paddingHorizontal: 18,
     borderRadius: radius.button,
@@ -532,7 +609,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   secondaryText: { color: palette.white, fontSize: 16, fontWeight: '700' },
-  holding: { backgroundColor: alpha(palette.mint, 0.25) },
+  holdFill: {
+    ...StyleSheet.absoluteFill,
+    backgroundColor: alpha(palette.mint, 0.3),
+    transformOrigin: 'left',
+  },
+  holdFillStatic: { backgroundColor: alpha(palette.mint, 0.25) },
   primaryButton: {
     minHeight: 48,
     paddingHorizontal: 28,

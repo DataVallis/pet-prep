@@ -169,6 +169,13 @@ interface AppStore {
   playOverlay: PlayOverlayMode | null;
   setPlayOverlay: (mode: PlayOverlayMode | null) => void;
   /**
+   * M5-R05 invitations hidden with "Mogoče kasneje" (ids) — session UI state: survives the
+   * HUD remounting, cleared on sign-out; never sent to the server (an ignored invitation
+   * has no consequence).
+   */
+  dismissedPlayInvitations: readonly number[];
+  dismissPlayInvitation: (id: number) => void;
+  /**
    * Parent: a tapped push (M3-02) asks the dashboard to open the detail of the child
    * caring for this pet; the dashboard clears it once handled.
    */
@@ -272,6 +279,14 @@ export const useAppStore = create<AppStore>((set) => ({
   setTrainingVisible: (isTrainingVisible) => set({ isTrainingVisible }),
   playOverlay: null,
   setPlayOverlay: (playOverlay) => set({ playOverlay }),
+  dismissedPlayInvitations: [],
+  dismissPlayInvitation: (id) =>
+    set((state) =>
+      state.dismissedPlayInvitations.includes(id)
+        ? state
+        // Bounded: an invitation id is only shown for up to 2 h; keep the newest few.
+        : { dismissedPlayInvitations: [...state.dismissedPlayInvitations, id].slice(-20) },
+    ),
   pushTarget: null,
   setPushTarget: (pushTarget) => set({ pushTarget }),
 
@@ -293,6 +308,7 @@ export const useAppStore = create<AppStore>((set) => ({
       isAlbumVisible: false,
       isTrainingVisible: false,
       playOverlay: null,
+      dismissedPlayInvitations: [],
       pushTarget: null,
     }),
 }));

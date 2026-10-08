@@ -8,7 +8,7 @@ import { act, renderHook, waitFor } from '@testing-library/react-native';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { ApiError, api } from '@/api/client';
-import { PLAY_RETRIES, PlayResponseError, shouldRetryPlay, usePlay } from '@/hooks/queries/usePlay';
+import { PLAY_RETRIES, PLAY_RETRY_DELAY_MS, PLAY_RETRY_WINDOW_MS, PlayResponseError, shouldRetryPlay, usePlay } from '@/hooks/queries/usePlay';
 import { childPetKey, writeChildState } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { useAppStore } from '@/store/appStore';
@@ -129,6 +129,32 @@ describe('usePlay', () => {
       expect(playWithPet).toHaveBeenCalledTimes(1 + PLAY_RETRIES);
       expect(result.current.isError).toBe(true);
       expect(cached()?.play).toEqual(before);
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
+  it('no retry once it could land outside the server\'s 10 s "same play" window (QA PR #86 m2)', () => {
+    const offline = new TypeError('offline');
+    expect(shouldRetryPlay(0, offline, PLAY_RETRY_WINDOW_MS - PLAY_RETRY_DELAY_MS)).toBe(true);
+    expect(shouldRetryPlay(0, offline, PLAY_RETRY_WINDOW_MS - PLAY_RETRY_DELAY_MS + 1)).toBe(false);
+    expect(shouldRetryPlay(0, offline, Number.NaN)).toBe(false);
+  });
+
+  it('a slow failed request (7 s) is not retried', async () => {
+    jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });
+    try {
+      playWithPet.mockImplementation(
+        () => new Promise((_resolve, reject) => setTimeout(() => reject(new TypeError('Network request failed')), 7_000)),
+      );
+      const { wrapper } = setup();
+      const { result } = renderHook(() => usePlay(), { wrapper });
+      act(() => result.current.mutate('cuddle'));
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(30_000);
+      });
+      expect(playWithPet).toHaveBeenCalledTimes(1);
+      expect(result.current.isError).toBe(true);
     } finally {
       jest.useRealTimers();
     }

@@ -166,6 +166,18 @@ describe('mood timer (30 min happy)', () => {
   });
 });
 
+describe('an open mess hides the happy mood (QA PR #86 M1)', () => {
+  it('moodSceneAt: null while needs_cleaning', () => {
+    expect(moodSceneAt(viewWith(makePlayState({ mood: HAPPY }), { needs_cleaning: true }), NOW)).toBeNull();
+  });
+
+  it('optimisticPlay: happy_until set, but no scene over a mess', () => {
+    const next = optimisticPlay(viewWith(makePlayState(), { needs_cleaning: true }), 'cuddle', NOW);
+    expect(next.play?.mood.happy_until).not.toBeNull();
+    expect(next.play?.mood.scene).toBeNull();
+  });
+});
+
 describe('optimisticPlay', () => {
   it('30 min happy with the scene, the invitation of that kind done', () => {
     const next = optimisticPlay(viewWith(makePlayState({ invitation: INVITE })), 'play', NOW);

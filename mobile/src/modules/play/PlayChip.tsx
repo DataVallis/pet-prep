@@ -42,7 +42,6 @@ export function PlayChip({ block, onPress }: PlayChipProps) {
       accessibilityState={{ disabled }}
       disabled={disabled}
       onPress={onPress}
-      hitSlop={6}
       style={({ pressed }) => [styles.chip, pressed && styles.pressed, disabled && styles.disabled]}
     >
       <HandHeart color={palette.mint} size={16} />
@@ -134,7 +133,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    minHeight: 40,
+    minHeight: MIN_TOUCH,
     paddingHorizontal: 14,
     borderRadius: 20,
     backgroundColor: alpha(palette.graphite, 0.85),

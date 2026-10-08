@@ -5,11 +5,12 @@
  * Optimistic: the dog is happy at once (`optimisticPlay` — 30 min, the `playing` scene only
  * when nothing more important shows, the invitation of that kind done); then the cache is
  * ALWAYS replaced by the server's `state` (200, 422 `play_not_available`, 423 lock). A lost
- * connection is retried twice (one request per finished game; the server treats a repeat
- * within 10 s as the same play). Without any server answer the optimistic `play` is undone
+ * connection is retried at most twice and only within 8 s of the first attempt (one request
+ * per finished game; the server treats a repeat within 10 s as the same play). Without any server answer the optimistic `play` is undone
  * and the state refetched. Answers that arrive after the session changed are ignored.
  */
 
+import { useRef } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import { api, type ChildPetState } from '@/api/client';
@@ -35,8 +36,16 @@ interface PlayContext extends SessionContext {
 export const PLAY_RETRIES = 2;
 export const PLAY_RETRY_DELAY_MS = 1_500;
 
-export function shouldRetryPlay(failureCount: number, error: unknown): boolean {
+/**
+ * A retry must reach the server within this long of the first attempt, so it stays inside
+ * the server's 10 s "same play" window (a later one would count a second play) — QA PR #86 m2.
+ */
+export const PLAY_RETRY_WINDOW_MS = 8_000;
+
+/** `elapsedMs` = time since the first attempt started; the retry fires `PLAY_RETRY_DELAY_MS` later. */
+export function shouldRetryPlay(failureCount: number, error: unknown, elapsedMs = 0): boolean {
   if (error instanceof PlayResponseError) return false;
+  if (!Number.isFinite(elapsedMs) || elapsedMs + PLAY_RETRY_DELAY_MS > PLAY_RETRY_WINDOW_MS) return false;
   return failureCount < PLAY_RETRIES && classifyActionError(error).kind === 'offline';
 }
 
@@ -48,6 +57,8 @@ function stateOfBody(raw: unknown): ChildPetState | null {
 
 export function usePlay() {
   const client = useQueryClient();
+  // Start of the current report (one game at a time) for the retry window.
+  const startedAt = useRef(0);
 
   /** No server state to show: undo only the optimistic `play` on top of the cache, then refetch. */
   const revert = (context: PlayContext | undefined) => {
@@ -64,9 +75,10 @@ export function usePlay() {
     mutationKey: ['child', 'pet', 'play'],
     // A finished game is reported now; a paused request that fires an hour later would confuse.
     networkMode: 'always',
-    retry: shouldRetryPlay,
+    retry: (failureCount, error) => shouldRetryPlay(failureCount, error, Date.now() - startedAt.current),
     retryDelay: PLAY_RETRY_DELAY_MS,
     onMutate: async (kind) => {
+      startedAt.current = Date.now();
       await client.cancelQueries({ queryKey: childPetKey });
       const previous = client.getQueryData<ChildPetView>(childPetKey);
       if (previous) {
