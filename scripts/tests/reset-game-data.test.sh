@@ -7,7 +7,11 @@
 #   FAIL_MATCH   ERE over the docker args → exit 1
 #   APP_RUNNING  0 → `ps -q --status running app` prints nothing
 #   BACKUP_FAIL  1 → the backup stub fails
-# `exec … tar -czf -` prints a real (tiny) gzip so `gzip -t` passes.
+#   RESET_RC     exit code of `artisan petprep:reset-game-data --execute` (default 0)
+#   DRY_RC       exit code of the dry run (default 0)
+# `exec … tar -czf -` prints a real (tiny) gzip so `gzip -t` passes; `du -sb` prints
+# MEDIA_BYTES (default 1000), psql prints DB_BYTES (default 5000).
+# `df` shim prints DF_AVAIL bytes free (default 10^12).
 #
 # Run: bash scripts/tests/reset-game-data.test.sh
 set -Eeuo pipefail
@@ -33,10 +37,20 @@ if [ -n "${FAIL_MATCH:-}" ] && [[ "$args" =~ $FAIL_MATCH ]]; then exit 1; fi
 case "$args" in
     *"ps -q --status running app"*) [ "${APP_RUNNING:-1}" = "1" ] && echo "c0ffee" ;;
     *"tar -czf -"*) printf 'media' | gzip -c ;;
+    *"du -sb "*) printf '%s\t/var/www/html/storage/app/pet-media\n' "${MEDIA_BYTES:-1000}" ;;
+    *"pg_database_size"*) echo "${DB_BYTES:-5000}" ;;
+    *"petprep:reset-game-data --execute"*) exit "${RESET_RC:-0}" ;;
+    *"petprep:reset-game-data") exit "${DRY_RC:-0}" ;;
 esac
 exit 0
 EOF
 chmod +x "${SHIMS}/docker"
+cat > "${SHIMS}/df" <<'EOF'
+#!/usr/bin/env bash
+echo "Filesystem 1-blocks Used Available Capacity Mounted"
+echo "/dev/test 2000000000000 1 ${DF_AVAIL:-1000000000000} 1% /"
+EOF
+chmod +x "${SHIMS}/df"
 
 # setup <case>: fresh root; sets ROOT and CALL_LOG.
 setup() {
@@ -67,6 +81,10 @@ not_called() { ! grep -qE -- "$1" "$CALL_LOG"; }
 line_of()    { grep -nE -- "$1" "$CALL_LOG" | head -n1 | cut -d: -f1; }
 before()     { local a b; a=$(line_of "$1"); b=$(line_of "$2"); [ -n "$a" ] && [ -n "$b" ] && [ "$a" -lt "$b" ]; }
 no_secret()  { ! grep -q "$SECRET" <<< "$OUT"; }
+out_has()    { grep -qF -- "$1" <<< "$OUT"; }
+out_lacks()  { ! grep -qF -- "$1" <<< "$OUT"; }
+perms_are()  { local want=$1 f; shift; for f in "$@"; do [ "$(stat -c %a "$f")" = "$want" ] || return 1; done; }
+links_are()  { local want=$1 f; shift; for f in "$@"; do [ "$(stat -c %h "$f")" = "$want" ] || return 1; done; }
 
 echo "case: dry run (default)"
 setup dry; run
@@ -103,6 +121,13 @@ check "reset gets the long flag, the backup file and --no-interaction" \
     called "artisan petprep:reset-game-data --execute --i-understand-this-deletes-all-game-data --backup-done=${ROOT}/backups/pre-reset/pre-reset_db_[0-9_-]+\.sql\.gz --no-interaction"
 check "workers started after the reset" before "--execute" "up -d queue queue-broadcasts scheduler"
 check "artisan up last" before "up -d queue queue-broadcasts scheduler" "artisan up$"
+check "disk measured before maintenance" before "pg_database_size" "artisan down"
+check "media measured before maintenance" before "du -sb /var/www/html/storage/app/pet-media" "artisan down"
+check "backups are owner-only (umask 077)" perms_are 600 "${ROOT}"/backups/pre-reset/pre-reset_media_*.tar.gz "${ROOT}"/backups/pre-reset/pre-reset_db_*.sql.gz
+check "pre-reset DB copy is a hard link of the dump" links_are 2 "${ROOT}"/backups/pre-reset/pre-reset_db_*.sql.gz
+check "restore hint uses strict mode" grep -q "RESTORE_STRICT=1 bash" <<< "$OUT"
+check "reminds to fix admin@petprep.io" grep -q "admin@petprep.io" <<< "$OUT"
+check "lock released after the run" flock -n "${ROOT}/.ops.lock" true
 check "pre-reset DB copy exists (outside the retention pattern)" bash -c "ls '${ROOT}'/backups/pre-reset/pre-reset_db_*.sql.gz"
 check "pre-reset media archive is a gzip" bash -c "gzip -t '${ROOT}'/backups/pre-reset/pre-reset_media_*.tar.gz"
 check "prints the restore commands" grep -q "restore-production-db.sh ${ROOT}/backups/pre-reset/pre-reset_db_" <<< "$OUT"
@@ -126,14 +151,61 @@ check "no half-written media archive left" bash -c "! ls '${ROOT}'/backups/pre-r
 echo "case: artisan down fails"
 setup nodown; FAIL_MATCH="artisan down" run --execute --confirm-host=api.petprep.si
 check "exit != 0" [ "$RC" -ne 0 ]
-check "no reset, workers untouched, no artisan up" bash -c "! grep -qE -- '--execute|stop |up -d|artisan up' '$CALL_LOG'"
+check "no reset, workers untouched" bash -c "! grep -qE -- '--execute|stop |up -d' '$CALL_LOG'"
+check "artisan up attempted anyway (maintenance flag set before down)" called "artisan up$"
 
-echo "case: the reset command fails"
-setup resetfail; FAIL_MATCH="petprep:reset-game-data --execute" run --execute --confirm-host=api.petprep.si
-check "exit != 0" [ "$RC" -ne 0 ]
+echo "case: the reset command fails before the commit (exit 1)"
+setup resetfail; RESET_RC=1 run --execute --confirm-host=api.petprep.si
+check "exit 1" [ "$RC" -eq 1 ]
 check "workers started again" called "up -d queue queue-broadcasts scheduler"
 check "artisan up" called "artisan up$"
-check "loud failure with the backup path" grep -q "RESET FAILED" <<< "$OUT"
+check "says nothing was deleted" out_has "RESET FAILED BEFORE THE COMMIT"
+check "not reported as committed" out_lacks "IS COMMITTED"
+
+echo "case: the DB reset committed but the cleanup failed (exit 2)"
+setup postcommit; RESET_RC=2 run --execute --confirm-host=api.petprep.si
+check "exit 2" [ "$RC" -eq 2 ]
+check "workers started again" called "up -d queue queue-broadcasts scheduler"
+check "artisan up" called "artisan up$"
+check "says the DB reset is committed" out_has "DB RESET IS COMMITTED"
+check "says to rerun" out_has "reset-game-data.sh --execute"
+check "no success banner" out_lacks "GAME DATA RESET DONE"
+
+echo "case: the dry run refuses (unclassified table / media root)"
+setup dryrefuse; DRY_RC=1 run --execute --confirm-host=api.petprep.si
+check "exit 1" [ "$RC" -eq 1 ]
+check "nothing after the dry run" bash -c "! grep -qE 'artisan down|backup-stub|--execute|du -sb' '$CALL_LOG'"
+
+echo "case: not enough free disk"
+setup nodisk; DF_AVAIL=1000 run --execute --confirm-host=api.petprep.si
+check "exit 1" [ "$RC" -eq 1 ]
+check "explains" out_has "not enough free disk"
+check "no maintenance, no backup" bash -c "! grep -qE 'artisan down|backup-stub|stop ' '$CALL_LOG'"
+
+echo "case: sizes cannot be measured"
+setup nomeasure; DB_BYTES=oops run --execute --confirm-host=api.petprep.si
+check "exit 1" [ "$RC" -eq 1 ]
+check "no maintenance" not_called "artisan down"
+
+echo "case: a deploy holds the ops lock"
+setup locked
+flock "${ROOT}/.ops.lock" sleep 30 &
+HOLDER=$!
+sleep 0.3
+run --execute --confirm-host=api.petprep.si
+kill "$HOLDER" 2>/dev/null || true; wait "$HOLDER" 2>/dev/null || true
+check "exit 1" [ "$RC" -eq 1 ]
+check "explains the lock" out_has "a deploy (or another reset) is running"
+check "no docker call at all" bash -c "[ ! -s '$CALL_LOG' ]"
+
+echo "case: the dry run does not need the lock"
+setup dryunlocked
+flock "${ROOT}/.ops.lock" sleep 30 &
+HOLDER=$!
+sleep 0.3
+run
+kill "$HOLDER" 2>/dev/null || true; wait "$HOLDER" 2>/dev/null || true
+check "exit 0" [ "$RC" -eq 0 ]
 
 echo
 echo "reset-game-data.sh harness: ${PASS} passed, ${FAIL} failed"

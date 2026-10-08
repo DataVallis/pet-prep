@@ -68,6 +68,10 @@ return [
     'storage' => [
         // Private local disk (config/filesystems.php → storage/app/pet-media, Docker volume app_storage).
         'disk' => env('PET_MEDIA_DISK', 'pet_media'),
+        // petprep:reset-game-data (D17) empties the disk only when its root is
+        // this directory (what scripts/reset-game-data.sh archives first).
+        // null = storage_path('app/pet-media'); tests point it at the fake disk.
+        'reset_expected_root' => null,
         'max_image_bytes' => (int) env('PET_MEDIA_MAX_IMAGE_MB', 25) * 1024 * 1024,
         'max_video_bytes' => (int) env('PET_MEDIA_MAX_VIDEO_MB', 60) * 1024 * 1024,
         // Must stay below the queue's retry_after (90 s) — StorePetMedia::$timeout is 85.

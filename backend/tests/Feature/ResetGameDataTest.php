@@ -12,6 +12,8 @@ use App\Models\PetMedia;
 use App\Models\User;
 use App\Services\FamilyService;
 use App\Services\GameDataResetService;
+use App\Services\Media\PetMediaService;
+use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Contracts\Foundation\MaintenanceMode;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
@@ -40,7 +42,7 @@ const RG_FLAGS = [
 beforeEach(function () {
     Http::preventStrayRequests();
     Storage::fake('pet_media');
-    config(['app.url' => 'https://api.petprep.si']);
+    config(['app.url' => 'https://api.petprep.si', 'media.storage.reset_expected_root' => Storage::disk('pet_media')->path('')]);
     seedBreedConfigs();
     seedStageParams();
 });
@@ -58,6 +60,7 @@ function rgSeed(): array
 {
     // Superadmin who also uses the app as a parent (has a family + child + pet).
     $admin = User::factory()->parent()->create(['is_superadmin' => true, 'email' => 'admin@example.com']);
+    DB::table('users')->where('id', $admin->id)->update(['pairing_pin' => '123456', 'pin_expires_at' => now()->addHour()]);
     $adminChild = User::factory()->pinOnlyChild()->create(['parent_id' => $admin->id, 'name' => 'Nika']);
     $adminPet = Pet::factory()->purchased()->create(['user_id' => $adminChild->id]);
 
@@ -356,6 +359,7 @@ it('deletes all game data and media, keeps admins, their tokens and breed data; 
     // Admins stay — without family, parent link or pairing — and keep their own token.
     expect(User::orderBy('id')->pluck('id')->all())->toBe($adminIds)
         ->and(User::whereIn('id', $adminIds)->whereNotNull('parent_id')->count())->toBe(0)
+        ->and(User::whereIn('id', $adminIds)->where(fn ($q) => $q->whereNotNull('pairing_pin')->orWhereNotNull('pin_expires_at'))->count())->toBe(0)
         ->and(User::where('id', $s['admin']->id)->value('email'))->toBe('admin@example.com')
         ->and(PersonalAccessToken::pluck('id')->all())->toBe([$adminToken->id]);
 
@@ -400,4 +404,79 @@ it('lets an admin start a new family after the reset', function () {
 
 it('keeps the long flag name in sync with the runbook', function () {
     expect(ResetGameDataCommand::LONG_FLAG)->toBe('i-understand-this-deletes-all-game-data');
+});
+
+it('rolls the whole DB step back when a DELETE fails mid-way (nothing deleted, media untouched)', function () {
+    rgSeed();
+    $before = rgCounts();
+    $files = Storage::disk('pet_media')->allFiles();
+
+    // `pets` comes after ~20 tables in DELETE_ORDER: those deletes must be undone too.
+    DB::unprepared(<<<'SQL'
+        CREATE OR REPLACE FUNCTION rg_block_delete() RETURNS trigger LANGUAGE plpgsql AS $$
+        BEGIN RAISE EXCEPTION 'rg blocked delete'; END $$;
+        CREATE TRIGGER rg_block_delete BEFORE DELETE ON pets FOR EACH ROW EXECUTE FUNCTION rg_block_delete();
+        SQL);
+
+    $this->artisan('petprep:reset-game-data', RG_FLAGS + ['--no-interaction' => true])
+        ->expectsOutputToContain('nothing was deleted')
+        ->assertExitCode(1);
+
+    expect(rgCounts())->toBe($before)
+        ->and(Storage::disk('pet_media')->allFiles())->toBe($files);
+});
+
+it('reports a failure after the commit separately (exit 2) and a rerun finishes the cleanup', function () {
+    rgSeed();
+    $root = Storage::disk('pet_media')->path('');
+    $broken = Mockery::mock(Filesystem::class);
+    $broken->shouldReceive('path')->andReturn($root);
+    $broken->shouldReceive('allFiles')->andReturn(['1/reference-g1.jpg']);
+    $broken->shouldReceive('size')->andReturn(68);
+    $broken->shouldReceive('directories')->andReturn(['1']);
+    $broken->shouldReceive('files')->andReturn([]);
+    $broken->shouldReceive('deleteDirectory')->andThrow(new RuntimeException('disk is read-only'));
+    $this->mock(PetMediaService::class, fn ($m) => $m->shouldReceive('disk')->andReturn($broken));
+
+    $this->artisan('petprep:reset-game-data', RG_FLAGS + ['--no-interaction' => true])
+        ->expectsOutputToContain('The DB reset is COMMITTED')
+        ->expectsOutputToContain('Rerun the same --execute command')
+        ->assertExitCode(ResetGameDataCommand::EXIT_POST_COMMIT_FAILED);
+
+    expect(DB::table('pets')->count())->toBe(0)
+        ->and(Storage::disk('pet_media')->allFiles())->not->toBe([]); // the broken disk deleted nothing
+
+    // Disk works again: the rerun deletes no rows and empties the media disk.
+    $this->app->forgetInstance(PetMediaService::class);
+    $this->app->offsetUnset(PetMediaService::class);
+    $this->artisan('petprep:reset-game-data', RG_FLAGS + ['--no-interaction' => true])->assertExitCode(0);
+    expect(Storage::disk('pet_media')->allFiles())->toBe([]);
+});
+
+it('refuses when the media disk is not the directory the wrapper archives', function () {
+    rgSeed();
+    $before = rgCounts();
+
+    config(['media.storage.reset_expected_root' => '/var/www/html/storage/app/pet-media']);
+    $this->artisan('petprep:reset-game-data')
+        ->expectsOutputToContain('expected /var/www/html/storage/app/pet-media')
+        ->assertFailed();
+    $this->artisan('petprep:reset-game-data', RG_FLAGS + ['--no-interaction' => true])->assertFailed();
+    expect(fn () => app(GameDataResetService::class)->execute())->toThrow(RuntimeException::class, 'Media disk root');
+
+    config(['media.storage.reset_expected_root' => Storage::disk('pet_media')->path(''), 'filesystems.disks.pet_media.driver' => 's3']);
+    $this->artisan('petprep:reset-game-data', RG_FLAGS + ['--no-interaction' => true])
+        ->expectsOutputToContain('is not a local disk')
+        ->assertFailed();
+
+    expect(rgCounts())->toBe($before);
+});
+
+it('prints the media root in the dry run', function () {
+    rgSeed();
+    $root = rtrim(Storage::disk('pet_media')->path(''), '/');
+
+    $this->artisan('petprep:reset-game-data')
+        ->expectsOutputToContain("in {$root}.")
+        ->assertSuccessful();
 });

@@ -142,6 +142,8 @@ class GameDataResetService
      *     admin_ids: list<int>,
      *     orphaned_breed_edits: int,
      *     media: array{files: int, bytes: int},
+     *     media_root: string,
+     *     media_root_problem: ?string,
      *     unclassified: list<string>
      * }
      */
@@ -170,6 +172,8 @@ class GameDataResetService
             'admin_ids' => $adminIds,
             'orphaned_breed_edits' => $this->orphanedBreedEdits($adminIds),
             'media' => $this->mediaUsage(),
+            'media_root' => $this->mediaRoot(),
+            'media_root_problem' => $this->mediaRootProblem(),
             'unclassified' => array_values(array_diff($tables, array_merge(self::KEEP, self::PARTIAL, self::DELETE_ORDER))),
         ];
     }
@@ -178,15 +182,26 @@ class GameDataResetService
      * Delete everything (one transaction), then the media files, the queues and
      * the cache. The caller has checked the guards (flags, backup, confirmation).
      *
-     * @return array{deleted: array<string, int>, admin_ids: list<int>, media: array{files: int, bytes: int}, queues_cleared: int, cache_cleared: bool}
+     * Everything after the commit (media files, queues, cache) never throws:
+     * a failure there is returned in `post_commit_errors` — the DB is already
+     * reset and a rerun (idempotent) finishes the cleanup.
      *
-     * @throws \RuntimeException unclassified tables or no superadmin to keep
+     * @return array{deleted: array<string, int>, admin_ids: list<int>, media: array{files: int, bytes: int}, queues_cleared: int, cache_cleared: bool, post_commit_errors: list<string>}
+     *
+     * @throws \RuntimeException before anything is deleted: unclassified tables,
+     *                           unexpected media root, no superadmin to keep
+     * @throws Throwable a failing DELETE — the transaction is rolled back
      */
     public function execute(): array
     {
         $unclassified = $this->unclassifiedTables();
         if ($unclassified !== []) {
             throw new \RuntimeException('Unclassified tables: '.implode(', ', $unclassified).' — classify them in GameDataResetService first.');
+        }
+
+        $rootProblem = $this->mediaRootProblem();
+        if ($rootProblem !== null) {
+            throw new \RuntimeException($rootProblem);
         }
 
         $deleted = DB::transaction(function (): array {
@@ -201,7 +216,10 @@ class GameDataResetService
             // Kept users must not hang off a deleted row: users.parent_id
             // CASCADEs (an admin whose parent_id points at a deleted parent
             // would be deleted with them); pairing_pet_id is SET NULL anyway.
-            DB::table('users')->whereIn('id', $adminIds)->update(['parent_id' => null, 'pairing_pet_id' => null]);
+            // The legacy pairing PIN of a kept admin is game data too.
+            DB::table('users')->whereIn('id', $adminIds)->update([
+                'parent_id' => null, 'pairing_pet_id' => null, 'pairing_pin' => null, 'pin_expires_at' => null,
+            ]);
 
             $counts = [];
             foreach (self::DELETE_ORDER as $table) {
@@ -211,14 +229,30 @@ class GameDataResetService
             return $counts;
         });
 
-        $media = $this->deleteAllMediaFiles();
-        $queues = $this->clearQueues();
+        // ---- committed: from here on nothing may throw (see the docblock) ----
+        $errors = [];
+        $media = ['files' => 0, 'bytes' => 0];
+        try {
+            $media = $this->deleteAllMediaFiles();
+        } catch (Throwable $e) {
+            $errors[] = 'media files: '.$e->getMessage();
+        }
+        $queues = 0;
+        try {
+            $queues = $this->clearQueues();
+        } catch (Throwable $e) {
+            $errors[] = 'queues: '.$e->getMessage();
+        }
         $cache = $this->clearCache();
+        if (! $cache) {
+            $errors[] = 'cache: cache:clear failed';
+        }
 
         Log::warning('Game data reset executed', [
             'deleted' => $deleted,
             'kept_admins' => count($this->keptUserIds()),
             'media_files' => $media['files'],
+            'post_commit_errors' => $errors,
             'at' => now()->utc()->toIso8601String(),
         ]);
 
@@ -228,6 +262,7 @@ class GameDataResetService
             'media' => $media,
             'queues_cleared' => $queues,
             'cache_cleared' => $cache,
+            'post_commit_errors' => $errors,
         ];
     }
 
@@ -262,6 +297,33 @@ class GameDataResetService
 
         return DB::table('breed_stage_param_changes')->whereNotNull('user_id')->whereNotIn('user_id', $ids)->count()
             + DB::table('breed_stage_params')->whereNotNull('updated_by')->whereNotIn('updated_by', $ids)->count();
+    }
+
+    /** Absolute root of the pet media disk (what the wrapper archives). */
+    public function mediaRoot(): string
+    {
+        return rtrim($this->media->disk()->path(''), '/');
+    }
+
+    /**
+     * Why the media disk must not be emptied, or null. The wrapper script
+     * archives storage/app/pet-media from the app container — the reset may
+     * only delete files from exactly that directory on a local disk.
+     */
+    public function mediaRootProblem(): ?string
+    {
+        $disk = (string) config('media.storage.disk', 'pet_media');
+        if (config("filesystems.disks.{$disk}.driver") !== 'local') {
+            return "Media disk '{$disk}' is not a local disk — the wrapper's archive would not contain its files; refusing.";
+        }
+
+        $expected = rtrim((string) (config('media.storage.reset_expected_root') ?: storage_path('app/pet-media')), '/');
+        $actual = $this->mediaRoot();
+        if ($actual !== $expected) {
+            return "Media disk root is {$actual}, expected {$expected} (the directory the wrapper archives); refusing.";
+        }
+
+        return null;
     }
 
     /** @return array{files: int, bytes: int} */

@@ -196,7 +196,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Shellcheck
-        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh
+        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh
 
       # Stubbed docker/git/curl in a temp dir; needs only bash, git and rsync.
       - name: Harness (deploy-production.sh)

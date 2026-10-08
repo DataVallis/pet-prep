@@ -477,6 +477,26 @@ check "previous release recorded as sha-v2" out_has "Previous release: sha-v2"
 check "code v2" eq "$(code_on_disk)" v2
 finish
 
+start ops-lock "a running game-data reset holds the ops lock (D17)"
+new_root dir
+flock "$ROOT/.ops.lock" sleep 30 &
+HOLDER=$!
+for _ in 1 2 3 4 5 6 7 8 9 10; do [ -f "$ROOT/.ops.lock" ] && break; sleep 0.1; done
+sleep 0.3
+run_deploy DEPLOY_LOCK_WAIT=1 -- --from "$ROOT/incoming" sha-v2
+kill "$HOLDER" 2>/dev/null || true; wait "$HOLDER" 2>/dev/null || true
+check "exit != 0" rc_nonzero
+check "explains the lock" out_has "is still held after 1 s"
+check "no docker call at all" eq "$(wc -l < "$CALL_LOG" | tr -d ' ')" 0
+check "code untouched" eq "$(code_on_disk)" v1
+finish
+
+start ops-lock-free "the lock is free again after a reset"
+new_root dir; run_deploy DEPLOY_LOCK_WAIT=1 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "lock acquired" out_has "Ops lock acquired."
+finish
+
 echo
 echo "passed: ${PASS}, failed: ${FAIL}"
 [ "$FAIL" -eq 0 ]

@@ -20,10 +20,17 @@ use Throwable;
  *   production: the app must be in maintenance mode (the wrapper script does it)
  *   a typed confirmation of the app host (APP_URL), unless --no-interaction.
  * Normal entry point on the server: scripts/reset-game-data.sh.
+ *
+ * Exit codes: 0 done (or dry run), 1 refused or failed BEFORE the commit
+ * (nothing deleted), 2 the DB reset is COMMITTED but a later step (media
+ * files, queues, cache) failed — rerun --execute (idempotent) to finish.
  */
 class ResetGameDataCommand extends Command
 {
     public const LONG_FLAG = 'i-understand-this-deletes-all-game-data';
+
+    /** DB reset committed, a post-commit step failed. */
+    public const EXIT_POST_COMMIT_FAILED = 2;
 
     protected $signature = 'petprep:reset-game-data
         {--execute : Actually delete (default is a dry run)}
@@ -39,6 +46,12 @@ class ResetGameDataCommand extends Command
 
         if ($plan['unclassified'] !== []) {
             $this->error('Unclassified tables: '.implode(', ', $plan['unclassified']).'. Classify them in GameDataResetService (KEEP / PARTIAL / DELETE_ORDER) — refusing.');
+
+            return self::FAILURE;
+        }
+
+        if ($plan['media_root_problem'] !== null) {
+            $this->error($plan['media_root_problem']);
 
             return self::FAILURE;
         }
@@ -89,7 +102,7 @@ class ResetGameDataCommand extends Command
         try {
             $result = $reset->execute();
         } catch (Throwable $e) {
-            $this->error('Reset failed: '.$e->getMessage());
+            $this->error('Reset failed BEFORE the commit — nothing was deleted (transaction rolled back): '.$e->getMessage());
 
             return self::FAILURE;
         }
@@ -101,11 +114,18 @@ class ResetGameDataCommand extends Command
         $this->line("Queued jobs cleared: {$result['queues_cleared']}.");
         $this->line('Cache cleared: '.($result['cache_cleared'] ? 'yes.' : 'NO — run php artisan cache:clear.'));
 
+        if ($result['post_commit_errors'] !== []) {
+            $this->error('The DB reset is COMMITTED (game data deleted), but a later step failed: '.implode('; ', $result['post_commit_errors']));
+            $this->error('Rerun the same --execute command — it is idempotent and finishes the cleanup.');
+
+            return self::EXIT_POST_COMMIT_FAILED;
+        }
+
         return self::SUCCESS;
     }
 
     /**
-     * @param  array{delete: array<string, int>, keep: array<string, int>, admin_ids: list<int>, orphaned_breed_edits: int, media: array{files: int, bytes: int}, unclassified: list<string>}  $plan
+     * @param  array{delete: array<string, int>, keep: array<string, int>, admin_ids: list<int>, orphaned_breed_edits: int, media: array{files: int, bytes: int}, media_root: string, media_root_problem: ?string, unclassified: list<string>}  $plan
      */
     private function printPlan(array $plan): void
     {
@@ -122,7 +142,7 @@ class ResetGameDataCommand extends Command
         if ($plan['orphaned_breed_edits'] > 0) {
             $this->line("Breed edits by non-admin users: {$plan['orphaned_breed_edits']} (kept; author becomes null).");
         }
-        $this->line(sprintf('Pet media files to delete: %d (%s).', $plan['media']['files'], $this->humanBytes($plan['media']['bytes'])));
+        $this->line(sprintf('Pet media files to delete: %d (%s) in %s.', $plan['media']['files'], $this->humanBytes($plan['media']['bytes']), $plan['media_root']));
     }
 
     private function expectedHost(): string

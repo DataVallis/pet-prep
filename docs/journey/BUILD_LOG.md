@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Testerji začnejo vsi enako, brez starih »legacy« psov iz časa pred izbiro kužka — zato tudi odprto vprašanje o igri za legacy pse ni več potrebno. Orodje noče teči, če v bazi obstaja tabela, za katero nihče ni odločil, ali se ohrani ali izbriše, zato nobena prihodnja tabela ne more biti pozabljena.
 
-**Številke:** 40 tabel v bazi, od tega 4 ohranjene, 2 delno (skrbniki in njihovi žetoni), 34 v celoti izbrisanih; 8 novih testov strežnika in 39 preverjanj skripte; 0 sprememb na produkciji, dokler je David sam ne zažene.
+**Številke:** 40 tabel v bazi, od tega 4 ohranjene, 2 delno (skrbniki in njihovi žetoni), 34 v celoti izbrisanih; 12 novih testov strežnika (tudi: neuspel izbris na pol poti vse povrne) in 65 preverjanj skripte; ponastavitev in deploy si delita ključavnico, da ne tečeta hkrati; 0 sprememb na produkciji, dokler je David sam ne zažene.
 
 **Kako povedati:**
 - 👩 Starši (testerji): »Za beto smo začeli znova — prosimo, aplikacijo na novo namestite in se ponovno registrirajte. Vaši stari testni podatki so izbrisani.«
