@@ -135,6 +135,7 @@ trait HandlesChildPet
             CareRefusal::CareSessionExpired => 'The session has expired.',
             CareRefusal::CareSessionInterrupted => 'The session was interrupted.',
             CareRefusal::CareSessionInvalidInput => 'A reported time lies outside the session.',
+            CareRefusal::CareSessionActive => 'Someone is already doing something else with the cat.',
             default => 'Action not allowed right now.',
         };
     }

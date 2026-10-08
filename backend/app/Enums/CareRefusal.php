@@ -177,4 +177,12 @@ enum CareRefusal: string
 
     /** A stroke / praise offset lies outside the session. */
     case CareSessionInvalidInput = 'care_session_invalid_input';
+
+    /**
+     * QA M5-R06-05: one game with the cat at a time — another child's game of
+     * another kind (wand, grooming, litter change, scratching) is running
+     * (next_allowed_at = its expiry). The child's own unfinished game of
+     * another kind is ended instead (no penalty).
+     */
+    case CareSessionActive = 'care_session_active';
 }

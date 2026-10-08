@@ -239,6 +239,9 @@ class LitterService
                 BehaviourEventService::warnOutage($pet, $from, $now);
             }
             if ($live) {
+                // Once per use: `escalated_at` under the pet's row lock. insertOrIgnore
+                // only folds two uses whose deadlines fall on the same instant (unique
+                // pet_id + kind + scheduled_at, M5-R02) into one mess next to the tray.
                 PetHygieneEvent::insertOrIgnore([[
                     'pet_id' => $pet->id,
                     'kind' => HygieneEventKind::LitterAccident->value,

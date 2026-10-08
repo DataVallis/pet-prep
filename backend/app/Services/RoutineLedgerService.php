@@ -140,7 +140,7 @@ class RoutineLedgerService
     /** M5-R06-05: who scooped a litter use — the scoop itself, a cleaning of the accident, the weekly change. */
     private const SCOOP_ACTIVITIES = [ActivityType::ScoopedLitter, ActivityType::CleanedPoop, ActivityType::ChangedLitter];
 
-    /** M5-R06-05: weekly cat routines look back one period (+ margin) for their activities / freezes. */
+    /** M5-R06-05: weekly cat routines look back at least one period (+ margin; longer when a payment lock lies inside — loadInputs). */
     private const WEEKLY_LOOKBACK_DAYS = 9;
 
     public function __construct(
@@ -777,6 +777,18 @@ class RoutineLedgerService
         // M5-R06-05: weekly cat routines need the whole period before the day.
         $hasCats = $pets->contains(fn (Pet $p) => $p->isCat());
         $lookbackUtc = $hasCats ? CarbonImmutable::parse($fromDate, 'UTC')->subDays(self::WEEKLY_LOOKBACK_DAYS) : $fromUtc;
+        // QA M1: a program week with a payment lock inside lasts longer than 7 real
+        // days — reach back to the start of the period that ends on $fromDate.
+        foreach ($pets->filter(fn (Pet $p) => $p->isCat() && ! $p->isUnborn()) as $cat) {
+            $before = CarbonImmutable::parse($fromDate, $cat->familyTimezone())->startOfDay()->subSecond();
+            $changeDays = $this->lifeStages->stageValueOn($cat, $fromDate, StageParamKey::LitterFullChangeDays)['value'] ?? 0;
+            foreach (array_unique([7, is_int($changeDays) && $changeDays > 0 ? $changeDays : 7]) as $days) {
+                $period = $this->lifeStages->programPeriodAt($cat, $before, $days);
+                if ($period !== null && $period['start']->subDay()->lessThan($lookbackUtc)) {
+                    $lookbackUtc = $period['start']->subDay();
+                }
+            }
+        }
 
         $activities = ActivityLog::whereIn('pet_id', $ids)
             ->whereIn('activity_type', array_map(fn (ActivityType $t) => $t->value, self::ACTIVITY_TYPES))

@@ -160,6 +160,9 @@ class ScratchingService
         if (! $pet->isCat() || $this->openEvent($pet) === null) {
             return ['refusal' => CareRefusal::ScratchingNotNeeded, 'next_allowed_at' => null];
         }
+        if (($other = CatChoreService::otherLiveRefusal($pet, CareSessionKind::Scratching, $child, $now)) !== null) {
+            return $other;
+        }
         $live = $this->liveSession($pet, $now);
         if ($live !== null && ($child === null || (int) $live->user_id !== $child->id)) {
             return ['refusal' => CareRefusal::ScratchingSessionActive, 'next_allowed_at' => CarbonImmutable::instance($live->expires_at)->utc()];
@@ -202,6 +205,7 @@ class ScratchingService
             ->where('kind', CareSessionKind::Scratching->value)
             ->where('status', CareSessionStatus::Active->value)
             ->update(['status' => CareSessionStatus::Aborted->value, 'updated_at' => $now]);
+        CatChoreService::abortOwnOtherKinds($pet, CareSessionKind::Scratching, $child, $now);
 
         $rng ??= new Randomizer;
         $min = max(0, (int) config('cat_care.scratching.land_at_min_ms', 800));
@@ -266,6 +270,14 @@ class ScratchingService
             }
 
             return $refuse(CareRefusal::CareSessionExpired, $session);
+        }
+
+        // QA m4: resolved meanwhile (a sibling, the vet's recovery): nothing to praise
+        // for — the session ends without counting (never `completed`).
+        if ($this->openEvent($pet) === null) {
+            $session->forceFill(['status' => CareSessionStatus::Aborted])->save();
+
+            return $refuse(CareRefusal::ScratchingNotNeeded, $session);
         }
 
         $land = (int) ($session->schedule['land_at_ms'] ?? 0);

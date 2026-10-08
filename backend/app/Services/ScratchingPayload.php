@@ -72,7 +72,7 @@ final class ScratchingPayload
     }
 
     /**
-     * @return array{active: array{id: int, started_at: string, due_at: string}|null, blocked_reason: 'scratching_not_needed'|'scratching_session_active'|null, can_start: bool, session: array{id: string, started_at: string, ends_at: string, expires_at: string, land_at_ms: int, praise_window_ms: int, min_reaction_ms: int}|null, session_running: bool}
+     * @return array{active: array{id: int, started_at: string, due_at: string}|null, blocked_reason: 'scratching_not_needed'|'scratching_session_active'|'care_session_active'|null, can_start: bool, session: array{id: string, started_at: string, ends_at: string, expires_at: string, land_at_ms: int, praise_window_ms: int, min_reaction_ms: int}|null, session_running: bool}
      */
     public function toArray(): array
     {

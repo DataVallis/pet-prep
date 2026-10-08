@@ -82,7 +82,7 @@ final class GroomingPayload
     }
 
     /**
-     * @return array{goal_per_week: int, done_this_week: int, week_started_at: string, week_ends_at: string, matted: bool, matted_since: string|null, session_seconds: int, next_allowed_at: string|null, blocked_reason: 'grooming_not_available'|'needs_cleaning'|'grooming_week_done'|'grooming_done_today'|'grooming_session_active'|'grooming_quiet_hours'|null, can_start: bool, session: array{id: string, kind: 'grooming'|'litter_change', started_at: string, ends_at: string, expires_at: string, duration_ms: int, min_strokes: int, segments: int, min_stroke_interval_ms: int, matted: bool}|null, session_running: bool}
+     * @return array{goal_per_week: int, done_this_week: int, week_started_at: string, week_ends_at: string, matted: bool, matted_since: string|null, session_seconds: int, next_allowed_at: string|null, blocked_reason: 'grooming_not_available'|'needs_cleaning'|'grooming_week_done'|'grooming_done_today'|'grooming_session_active'|'care_session_active'|'grooming_quiet_hours'|null, can_start: bool, session: array{id: string, kind: 'grooming'|'litter_change', started_at: string, ends_at: string, expires_at: string, duration_ms: int, min_strokes: int, segments: int, min_stroke_interval_ms: int, matted: bool}|null, session_running: bool}
      */
     public function toArray(): array
     {

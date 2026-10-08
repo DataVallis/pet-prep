@@ -576,7 +576,8 @@ describe('Maine Coon grooming (CAT_SPEC Q8) and the matted coat (David 2026-10-0
         ccChore($child, 'grooming')->assertOk()->assertJsonPath('status', 'accepted')
             ->assertJsonPath('state.grooming.done_this_week', 1)
             ->assertJsonPath('state.grooming.blocked_reason', 'grooming_done_today')
-            ->assertJsonPath('state.grooming.next_allowed_at', '2026-10-22T00:00:00+02:00');
+            // QA n1: the next possible start is after the night's quiet hours, not at midnight.
+            ->assertJsonPath('state.grooming.next_allowed_at', '2026-10-22T07:00:00+02:00');
         $groomed = ActivityLog::where('pet_id', $cat->id)->where('activity_type', 'groomed_pet')->sole();
         expect((int) $groomed->value)->toBe(1)->and($groomed->actor_user_id)->toBe($child->id);
 
@@ -665,7 +666,7 @@ describe('push: the litter reminder (M3-12 — only what the app allows)', funct
         ccTick('2026-10-21 13:01');
         ccTick('2026-10-21 13:20');
         $push = PushNotification::where('pet_id', $cat->id)->where('type', PushType::LitterReminder->value)->sole();
-        expect($push->metric)->toBe('litter')
+        expect($push->metric)->toBe('litter:'.PetHygieneEvent::where('pet_id', $cat->id)->where('kind', 'litter_use')->sole()->id)
             ->and(collect($push->recipients)->pluck('user_id')->all())->toBe([$child->id])
             ->and(PushCopy::body(PushType::LitterReminder, 'litter', 'child', 'sl'))->toContain('pesek');
 
@@ -750,5 +751,140 @@ describe('migration 2026_10_27_120000_add_cat_litter_scratching_grooming', funct
         $migration->up();
         ccUse($cat, '2026-10-21 14:00');
         expect(DB::table('pet_hygiene_events')->where('pet_id', $cat->id)->count())->toBe(2);
+    });
+});
+
+describe('QA round 1 (M5-R06-05)', function () {
+    function ccLock(Pet $pet, string $kind, string $fromLocal, string $toLocal): void
+    {
+        DB::table('pet_status_periods')->insert([
+            'pet_id' => $pet->id, 'kind' => $kind,
+            'started_at' => Carbon::parse($fromLocal, 'Europe/Ljubljana')->utc(),
+            'ended_at' => Carbon::parse($toLocal, 'Europe/Ljubljana')->utc(),
+            'created_at' => now(), 'updated_at' => now(),
+        ]);
+    }
+
+    it('M1: a payment lock inside a program week lengthens it — no second change, no wrong missed / overdue / matted', function () {
+        [, $child, $cat] = ccFamily('2026-10-20 08:00', BreedType::MaineCoon);
+        ccAt('2026-10-20 18:00');
+        ccChore($child, 'litter-change')->assertOk()->assertJsonPath('status', 'accepted');
+        ccAt('2026-10-21 10:00');
+        ccChore($child, 'grooming')->assertOk()->assertJsonPath('status', 'accepted');
+        ccLock($cat, 'payment_lock', '2026-10-22 08:00', '2026-10-23 08:00');
+
+        ccAt('2026-10-23 12:00');
+        $period = app(LitterService::class)->changePeriodAt($cat->fresh(), now());
+        expect($period['index'])->toBe(0)
+            ->and($period['start']->toIso8601String())->toBe('2026-10-20T06:00:00+00:00')
+            // 7 program days + the 24 h lock; DST keeps 08:00 local.
+            ->and($period['end']->toIso8601String())->toBe('2026-10-28T07:00:00+00:00');
+        ccPost($child, '/api/child/pet/litter-change/start')->assertStatus(422)
+            ->assertJsonPath('reason', 'litter_change_done')
+            ->assertJsonPath('next_allowed_at', '2026-10-28T08:00:00+01:00');
+        ccChore($child, 'grooming')->assertOk()->assertJsonPath('state.grooming.done_this_week', 2);
+        ccAt('2026-10-24 10:00');
+        ccChore($child, 'grooming')->assertOk()->assertJsonPath('state.grooming.done_this_week', 3);
+
+        ccTickHourly('2026-10-26 22:00', '2026-10-28 09:00');
+        expect(ccRoutines($cat, '2026-10-20', '2026-10-28', [RoutineType::LitterChange, RoutineType::Grooming]))->toBe([
+            ['2026-10-28', 'grooming', 0, 'done', $child->id],
+            ['2026-10-28', 'grooming', 1, 'done', $child->id],
+            ['2026-10-28', 'grooming', 2, 'done', $child->id],
+            ['2026-10-28', 'litter_change', 0, 'done', $child->id],
+        ])->and($cat->fresh()->coat_matted_at)->toBeNull()
+            ->and(app(LitterService::class)->changeOverdueAt($cat->fresh(), Carbon::parse('2026-10-28 10:00', 'Europe/Ljubljana')))->toBeFalse();
+    });
+
+    it('M1: a missed week with a lock inside ends at the lengthened end — 4 h before it, 2 h and matted after it', function () {
+        [, $child, $cat] = ccFamily('2026-10-20 08:00', BreedType::MaineCoon);
+        ccTick('2026-10-20 09:00');
+        ccAt('2026-10-21 10:00');
+        ccChore($child, 'grooming')->assertOk();
+        ccLock($cat, 'payment_lock', '2026-10-22 08:00', '2026-10-23 08:00');
+
+        ccTickHourly('2026-10-26 22:00', '2026-10-27 09:00');
+        expect($cat->fresh()->coat_matted_at)->toBeNull();
+        $early = ccUse($cat, '2026-10-27 10:00');
+        ccTickAround('2026-10-27 10:00');
+        expect($early->fresh()->due_at->copy()->setTimezone('Europe/Ljubljana')->format('H:i'))->toBe('14:00');
+        ccAt('2026-10-27 11:00');
+        ccPost($child, '/api/child/pet/litter/scoop')->assertOk();
+
+        ccTickHourly('2026-10-27 12:00', '2026-10-28 07:00');
+        ccTick('2026-10-28 08:01');
+        expect($cat->fresh()->coat_matted_at?->copy()->setTimezone('Europe/Ljubljana')->format('Y-m-d H:i'))->toBe('2026-10-28 08:00')
+            ->and(ccRoutines($cat, '2026-10-28', '2026-10-28', [RoutineType::LitterChange]))->toBe([['2026-10-28', 'litter_change', 0, 'missed', null]]);
+        $late = ccUse($cat, '2026-10-28 10:00');
+        ccTickAround('2026-10-28 10:00');
+        expect($late->fresh()->due_at->copy()->setTimezone('Europe/Ljubljana')->format('H:i'))->toBe('12:00');
+    });
+
+    it('M1: a week mostly hard-stopped (≥ 50 %) is excused — no weekly routines, no overdue, no matted coat', function () {
+        [, , $cat] = ccFamily('2026-10-20 08:00', BreedType::MaineCoon);
+        ccTick('2026-10-20 09:00');
+        ccLock($cat, 'hard_stop', '2026-10-21 08:00', '2026-10-25 08:00');
+
+        ccTickHourly('2026-10-26 22:00', '2026-10-27 09:00');
+        expect(ccRoutines($cat, '2026-10-27', '2026-10-27', [RoutineType::LitterChange, RoutineType::Grooming]))->toBe([])
+            ->and($cat->fresh()->coat_matted_at)->toBeNull();
+        $use = ccUse($cat, '2026-10-27 10:00');
+        ccTickAround('2026-10-27 10:00');
+        expect($use->fresh()->due_at->copy()->setTimezone('Europe/Ljubljana')->format('H:i'))->toBe('14:00');
+    });
+
+    it('m1: one game with the cat at a time — another child gets care_session_active; the own other game ends', function () {
+        [$parent, $child, $cat] = ccFamily('2026-10-20 08:00', BreedType::MaineCoon);
+        $sibling = ccSibling($parent, $cat);
+        ccAt('2026-10-21 10:00');
+        $grooming = ccPost($child, '/api/child/pet/grooming/start')->assertOk()->json('session.id');
+
+        foreach (['wand/start', 'litter-change/start'] as $uri) {
+            ccPost($sibling, '/api/child/pet/'.$uri)->assertStatus(422)->assertJsonPath('reason', 'care_session_active');
+        }
+        expect(ccState($sibling)['wand']['blocked_reason'])->toBe('care_session_active');
+
+        // The child who grooms switches to the litter change: the grooming ends (no penalty).
+        ccPost($child, '/api/child/pet/litter-change/start')->assertOk();
+        expect(PetCareSession::where('public_id', $grooming)->sole()->status)->toBe(CareSessionStatus::Aborted);
+        ccPost($sibling, '/api/child/pet/grooming/start')->assertStatus(422)->assertJsonPath('reason', 'care_session_active');
+    });
+
+    it('m2: a deadline moved past the night is reminded in the last hour before quiet hours; one reminder per use', function () {
+        config(['push.enabled' => true]);
+        Queue::fake();
+        [, , $cat] = ccFamily();
+        $evening = ccUse($cat, '2026-10-21 17:00');
+        ccTickAround('2026-10-21 17:00');
+        expect($evening->fresh()->due_at->copy()->setTimezone('Europe/Ljubljana')->format('Y-m-d H:i'))->toBe('2026-10-22 07:00');
+        ccTick('2026-10-21 19:30');
+        expect(PushNotification::where('pet_id', $cat->id)->where('type', 'litter_reminder')->count())->toBe(0);
+        ccTick('2026-10-21 20:01');
+        expect(PushNotification::where('pet_id', $cat->id)->where('type', 'litter_reminder')->pluck('metric')->all())->toBe(['litter:'.$evening->id]);
+
+        // Two uses 20 min apart → two reminders (not folded by the 30-min type dedupe).
+        [, , $other] = ccFamily();
+        $a = ccUse($other, '2026-10-21 10:00');
+        $b = ccUse($other, '2026-10-21 10:20');
+        ccTickAround('2026-10-21 10:00');
+        ccTickAround('2026-10-21 10:20');
+        ccTick('2026-10-21 13:01');
+        ccTick('2026-10-21 13:21');
+        ccTick('2026-10-21 13:30');
+        expect(PushNotification::where('pet_id', $other->id)->where('type', 'litter_reminder')->orderBy('id')->pluck('metric')->all())
+            ->toBe(['litter:'.$a->id, 'litter:'.$b->id]);
+    });
+
+    it('m4: a praise for a scratching already resolved (vet, sibling) does not count as completed', function () {
+        [, $child, $cat] = ccScratchedCat();
+        ccAt('2026-10-22 10:30');
+        $session = ccPost($child, '/api/child/pet/scratching/start')->assertOk()->json('session');
+        PetHygieneEvent::where('pet_id', $cat->id)->where('kind', 'scratching')->update(['cleaned_at' => now()]);
+        Carbon::setTestNow(now()->addMilliseconds($session['land_at_ms'] + 1500));
+
+        ccPost($child, '/api/child/pet/scratching/finish', ['session_id' => $session['id'], 'praise_ms' => $session['land_at_ms'] + 1000])
+            ->assertStatus(422)->assertJsonPath('reason', 'scratching_not_needed');
+        expect(PetCareSession::where('public_id', $session['id'])->sole()->status)->toBe(CareSessionStatus::Aborted)
+            ->and(ActivityLog::where('pet_id', $cat->id)->where('activity_type', 'resolved_scratching')->count())->toBe(0);
     });
 });

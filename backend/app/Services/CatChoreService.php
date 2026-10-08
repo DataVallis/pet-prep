@@ -141,6 +141,45 @@ class CatChoreService
     }
 
     /**
+     * QA m1: one game with the cat at a time. The live session of ANOTHER
+     * kind (wand, grooming, litter change, scratching) that blocks a start of
+     * $kind — by another child (or anyone when $child is null: pet level).
+     */
+    public static function otherLiveSession(Pet $pet, CareSessionKind $kind, ?User $child, CarbonInterface $now): ?PetCareSession
+    {
+        return PetCareSession::where('pet_id', $pet->id)
+            ->where('kind', '!=', $kind->value)
+            ->where('status', CareSessionStatus::Active->value)
+            ->where('expires_at', '>', $now)
+            ->whereNot(fn ($q) => self::whereInterrupted($q, $now))
+            ->when($child !== null, fn ($q) => $q->where(fn ($q) => $q->whereNull('user_id')->orWhere('user_id', '!=', $child->id)))
+            ->orderByDesc('expires_at')
+            ->first();
+    }
+
+    /**
+     * The refusal for otherLiveSession(), or null.
+     *
+     * @return array{refusal: CareRefusal, next_allowed_at: CarbonImmutable|null}|null
+     */
+    public static function otherLiveRefusal(Pet $pet, CareSessionKind $kind, ?User $child, CarbonInterface $now): ?array
+    {
+        $other = self::otherLiveSession($pet, $kind, $child, $now);
+
+        return $other === null ? null : ['refusal' => CareRefusal::CareSessionActive, 'next_allowed_at' => CarbonImmutable::instance($other->expires_at)->utc()];
+    }
+
+    /** The child's own unfinished games of other kinds end (aborted, no penalty) when they start $kind. */
+    public static function abortOwnOtherKinds(Pet $pet, CareSessionKind $kind, User $child, CarbonInterface $now): void
+    {
+        PetCareSession::where('pet_id', $pet->id)
+            ->where('kind', '!=', $kind->value)
+            ->where('status', CareSessionStatus::Active->value)
+            ->where('user_id', $child->id)
+            ->update(['status' => CareSessionStatus::Aborted->value, 'updated_at' => $now]);
+    }
+
+    /**
      * Would a start of $kind by $child be refused now, and until when? Null
      * = it may start. The caller adds the locks (423). Shared by start(),
      * the payloads (`can_start`) and the litter reminder (M3-12).
@@ -163,6 +202,9 @@ class CatChoreService
             if ($this->litter->changedBetween($pet, $period['start'], $now)) {
                 return $refuse(CareRefusal::LitterChangeDone, $period['end']);
             }
+            if (($other = self::otherLiveRefusal($pet, $kind, $child, $now)) !== null) {
+                return $other;
+            }
             $live = $this->liveSession($pet, $kind, $now);
             if ($live !== null && ($child === null || (int) $live->user_id !== $child->id)) {
                 return $refuse(CareRefusal::LitterChangeSessionActive, CarbonImmutable::instance($live->expires_at)->utc());
@@ -180,19 +222,25 @@ class CatChoreService
             return $refuse(CareRefusal::NeedsCleaning);
         }
         $goal = $this->groomingGoalOn($pet, $pet->localDate($now));
+        $seconds = $this->sessionSeconds($pet, $kind) + self::graceSeconds($kind);
+        // QA n1: the next possible start — not inside the quiet hours that follow.
+        $awake = fn (CarbonImmutable $at): CarbonImmutable => $this->quietBlocksUntil($pet, $at, $seconds) ?? $at;
         if (! $this->isMatted($pet) && $this->groomingsBetween($pet, $period['start'], $now->addSecond()) >= $goal) {
-            return $refuse(CareRefusal::GroomingWeekDone, $period['end']);
+            return $refuse(CareRefusal::GroomingWeekDone, $awake($period['end']));
         }
         $dayStart = CarbonImmutable::parse($pet->localDate($now), $pet->familyTimezone())->startOfDay()->utc();
         $dayEnd = CarbonImmutable::parse($pet->localDate($now), $pet->familyTimezone())->addDay()->startOfDay()->utc();
         if ($this->groomingsBetween($pet, $dayStart, $now->addSecond()) > 0) {
-            return $refuse(CareRefusal::GroomingDoneToday, $dayEnd);
+            return $refuse(CareRefusal::GroomingDoneToday, $awake($dayEnd));
+        }
+        if (($other = self::otherLiveRefusal($pet, $kind, $child, $now)) !== null) {
+            return $other;
         }
         $live = $this->liveSession($pet, $kind, $now);
         if ($live !== null && ($child === null || (int) $live->user_id !== $child->id)) {
             return $refuse(CareRefusal::GroomingSessionActive, CarbonImmutable::instance($live->expires_at)->utc());
         }
-        if (($quietEnd = $this->quietBlocksUntil($pet, $now, $this->sessionSeconds($pet, $kind) + self::graceSeconds($kind))) !== null) {
+        if (($quietEnd = $this->quietBlocksUntil($pet, $now, $seconds)) !== null) {
             return $refuse(CareRefusal::GroomingQuietHours, $quietEnd);
         }
 
@@ -252,6 +300,7 @@ class CatChoreService
             ->where('kind', $kind->value)
             ->where('status', CareSessionStatus::Active->value)
             ->update(['status' => CareSessionStatus::Aborted->value, 'updated_at' => $now]);
+        self::abortOwnOtherKinds($pet, $kind, $child, $now);
 
         $matted = $kind === CareSessionKind::Grooming && $this->isMatted($pet);
         $durationMs = $this->sessionSeconds($pet, $kind) * 1000;

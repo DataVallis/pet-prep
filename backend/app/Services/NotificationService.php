@@ -11,6 +11,7 @@ use App\Models\Pet;
 use App\Models\PetHygieneEvent;
 use App\Models\PushNotification;
 use App\Models\PushTicket;
+use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\Push\ExpoMixedProjectsException;
 use App\Services\Push\ExpoPushClient;
@@ -201,12 +202,14 @@ class NotificationService
 
     /**
      * The cat's litter reminder (M5-R06-05, CAT_SPEC Q3): called by
-     * EscalationService outside quiet hours for a cat whose oldest unscooped
-     * litter use (deadline still ahead) is due within LITTER_REMINDER_MINUTES.
-     * Once per litter use (no reminder decided since that use happened);
-     * caretaker children; dropped at send time when the tray was scooped
-     * (`scooped`). Scooping is never refused outside locks, so the text
-     * always asks for something the app allows (M3-12).
+     * EscalationService outside quiet hours for a cat with an unscooped
+     * litter use whose deadline lies ahead and of which at most
+     * LITTER_REMINDER_MINUTES of the outside-quiet budget are left — so a
+     * deadline moved past the night (17:00 use → 07:00) is reminded in the
+     * last hour before quiet hours start (QA m2). Once per litter use (the
+     * row's metric is `litter:{use id}`, no 30-min type dedupe); caretaker
+     * children; dropped at send time when that use was scooped (`scooped`).
+     * Scooping is never refused outside locks (M3-12).
      */
     public function litterReminder(Pet $pet): ?PushNotification
     {
@@ -214,32 +217,53 @@ class NotificationService
             return null;
         }
         $use = $this->dueSoonLitterUse($pet);
-        if ($use === null) {
-            return null;
-        }
-        $decided = PushNotification::where('pet_id', $pet->id)
-            ->where('type', PushType::LitterReminder->value)
-            ->where('created_at', '>=', $use->scheduled_at)
-            ->exists();
 
-        return $decided ? null : $this->escalation($pet, PushType::LitterReminder, 'litter');
+        return $use === null ? null : $this->escalation($pet, PushType::LitterReminder, self::litterMetric($use->id));
     }
 
-    /** Minutes before a scoop deadline the litter reminder is decided. */
+    /** Minutes of outside-quiet time before a scoop deadline when the litter reminder is decided. */
     public const LITTER_REMINDER_MINUTES = 60;
 
-    /** The oldest unscooped litter use whose deadline lies within the reminder window (still ahead). */
+    /** The push row's metric for one litter use (≤ 20 chars). */
+    public static function litterMetric(int $useId): string
+    {
+        return 'litter:'.$useId;
+    }
+
+    /** The oldest unscooped litter use inside its reminder window that has no reminder yet. */
     private function dueSoonLitterUse(Pet $pet): ?PetHygieneEvent
     {
         $now = now();
+        $quiet = $pet->quietHours();
         foreach ($this->litter->openUses($pet) as $use) {
-            if ($use->due_at !== null && $use->escalated_at === null && $use->due_at->greaterThan($now)
-                && $use->due_at->lessThanOrEqualTo($now->copy()->addMinutes(self::LITTER_REMINDER_MINUTES))) {
+            if ($use->due_at === null || $use->escalated_at !== null || ! $use->due_at->greaterThan($now)) {
+                continue;
+            }
+            $left = QuietHours::splitSecondsBetween($quiet, $now, $use->due_at)['normal'];
+            if ($left > self::LITTER_REMINDER_MINUTES * 60) {
+                continue;
+            }
+            $decided = PushNotification::where('pet_id', $pet->id)
+                ->where('type', PushType::LitterReminder->value)
+                ->where('metric', self::litterMetric($use->id))
+                ->exists();
+            if (! $decided) {
                 return $use;
             }
         }
 
         return null;
+    }
+
+    /** The litter use a reminder is about is still waiting (not scooped, deadline ahead). */
+    private function litterStillOpen(Pet $pet, ?string $metric): bool
+    {
+        $id = is_string($metric) && str_starts_with($metric, 'litter:') ? (int) substr($metric, 7) : null;
+
+        return $this->litter->openUses($pet)
+            ->filter(fn (PetHygieneEvent $u) => ($id === null || $u->id === $id)
+                && $u->escalated_at === null && $u->due_at !== null && $u->due_at->greaterThan(now()))
+            ->isNotEmpty();
     }
 
     /**
@@ -351,8 +375,7 @@ class NotificationService
             return;
         }
         // M5-R06-05: the tray was scooped (or its deadline passed) since the decision.
-        if ($type === PushType::LitterReminder && $this->litter->openUses($pet)
-            ->filter(fn (PetHygieneEvent $u) => $u->escalated_at === null && $u->due_at !== null && $u->due_at->greaterThan(now()))->isEmpty()) {
+        if ($type === PushType::LitterReminder && ! $this->litterStillOpen($pet, $notification->metric)) {
             $this->markSuppressed($notification, 'scooped');
 
             return;
@@ -529,6 +552,11 @@ class NotificationService
      */
     private function isDuplicate(Pet $pet, PushType $type, CarbonInterface $now): bool
     {
+        // QA M5-R06-05 m2: the litter reminder is once per litter use (litterReminder), not per type.
+        if ($type === PushType::LitterReminder) {
+            return false;
+        }
+
         $since = $type->isDailyReminder()
             ? Carbon::instance($now)->setTimezone($pet->familyTimezone())->startOfDay()->utc()
             : Carbon::instance($now)->subMinutes((int) config('push.dedupe_minutes', 30));

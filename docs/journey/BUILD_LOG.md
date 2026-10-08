@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** To so prava opravila lastnika mačke, ki jih navajajo viri (pesek čistiti vsak dan, menjati enkrat na teden; praskanje je naravno in se ga nikoli ne kaznuje, mačko se preusmeri in nagradi takoj; dolgodlake mačke potrebujejo redno česanje). Posledice so realne, a prijazne: nobena zamujena naloga ne pomeni takojšnje bolezni, razen nereda, ki ga otrok pusti dolgo — natanko kot pri psu. David je 8. 10. ob ~22:20 odločil zadnja tri odprta vprašanja (rok za praskanje, tedenski vozel, brez kazni pri vozlu).
 
-**Številke:** 3 nove vrste dogodkov (uporaba peska, nered zraven peska, praskanje), 3 nove rutine v Care Score (čiščenje peska, tedenska menjava, česanje), 7 novih končnih točk, 1 nov opomnik (pesek je treba počistiti v naslednji uri); testi strežnika **1533 → 1556** (23 novih za mačko), regresijski posnetek psa ostal nespremenjen. Mačke so še skrite.
+**Številke:** 3 nove vrste dogodkov (uporaba peska, nered zraven peska, praskanje), 3 nove rutine v Care Score (čiščenje peska, tedenska menjava, česanje), 7 novih končnih točk, 1 nov opomnik (pesek je treba počistiti v naslednji uri); testi strežnika **1533 → 1562** (29 novih za mačko, vključno s popravki po neodvisnem pregledu), regresijski posnetek psa ostal nespremenjen. Mačke so še skrite.
 
 **Kako povedati:**
 - 👩 Starši (*načrt*): »Muca v PetPrepu nauči, da je pesek vsakodnevna naloga, ne enkrat na teden — in da se praskanja ne kaznuje, ampak preusmeri.«

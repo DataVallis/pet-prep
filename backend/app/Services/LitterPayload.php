@@ -102,7 +102,7 @@ final class LitterPayload
     }
 
     /**
-     * @return array{uses_per_day: int, open_uses: list<array{id: int, used_at: string, due_at: string|null, expired: bool}>, next_due_at: string|null, scoop_deadline_hours: float, can_scoop: bool, change: array{week_started_at: string, due_at: string, done: bool, overdue: bool, blocked_reason: 'litter_not_available'|'needs_cleaning'|'litter_change_done'|'litter_change_session_active'|null, can_start: bool, session: array{id: string, kind: 'grooming'|'litter_change', started_at: string, ends_at: string, expires_at: string, duration_ms: int, min_strokes: int, segments: int, min_stroke_interval_ms: int, matted: bool}|null, session_running: bool}|null}
+     * @return array{uses_per_day: int, open_uses: list<array{id: int, used_at: string, due_at: string|null, expired: bool}>, next_due_at: string|null, scoop_deadline_hours: float, can_scoop: bool, change: array{week_started_at: string, due_at: string, done: bool, overdue: bool, blocked_reason: 'litter_not_available'|'needs_cleaning'|'litter_change_done'|'litter_change_session_active'|'care_session_active'|null, can_start: bool, session: array{id: string, kind: 'grooming'|'litter_change', started_at: string, ends_at: string, expires_at: string, duration_ms: int, min_strokes: int, segments: int, min_stroke_interval_ms: int, matted: bool}|null, session_running: bool}|null}
      */
     public function toArray(): array
     {
