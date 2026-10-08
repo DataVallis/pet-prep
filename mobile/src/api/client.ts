@@ -716,6 +716,19 @@ export const api = {
       body: { session_id: sessionId, taps: [...taps] } satisfies components['schemas']['FinishTrainingRequest'],
     }),
 
+  /**
+   * POST /api/child/pet/play {kind} (M5-R05) — the child finished a ball game (`play`) or a
+   * cuddle (`cuddle`), free or from the dog's invitation. Mood only (30 min happy). 200
+   * `accepted` {play: {kind, source}, state} / `unchanged` (repeat within 10 s); untyped in
+   * `schema.ts` → read with `readPlayResponse`. 422 `play_not_available` (+ `next_allowed_at`
+   * = end of quiet hours), 423 locked; refusals carry `state`.
+   */
+  playWithPet: (kind: components['schemas']['PlayRequest']['kind']) =>
+    apiRequest<unknown>('/api/child/pet/play', {
+      method: 'POST',
+      body: { kind } satisfies components['schemas']['PlayRequest'],
+    }),
+
   /** POST /api/child/pet/steps — today's cumulative steps of this device (max wins on the server). */
   syncSteps: (body: SyncStepsRequest) =>
     apiRequest<SyncStepsResponse>('/api/child/pet/steps', {

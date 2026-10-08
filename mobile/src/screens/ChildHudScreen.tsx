@@ -18,6 +18,11 @@
  * M5-F05: the header is one short line; tapping it opens `PetProfileSheet` (breed, stage,
  * age, origin, next stage, meals per day). M5-F06: "Kuža se pripravlja …" sits at the top
  * of the above-dock column (never under the meals row or the dock).
+ * M5-R05: a pet with play gets "Igra" next to "Šola" (disabled with its reason while the
+ * server says no), the dog's invitation card instead of it while one is offered, the play
+ * layer (`modules/play/PlayOverlay`: ball game / cuddles) and the 30-minute happy mood —
+ * the `playing` video when stored, else the usual video with soft hearts — plus
+ * "Kuža je vesel". Mood only: nothing here changes metrics or points.
  */
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
@@ -88,6 +93,13 @@ import PetProfileSheet from '@/components/PetProfileSheet';
 import TrainingChip from '@/modules/training/TrainingChip';
 import TrainingOverlay from '@/modules/training/TrainingOverlay';
 import { showTrainingDot, showTrainingEntry } from '@/modules/training/training';
+import { usePlay } from '@/hooks/queries/usePlay';
+import { useReduceMotion } from '@/hooks/useReduceMotion';
+import { HappyBadge, PlayBlockedNote, PlayChip, PlayInvitationCard } from '@/modules/play/PlayChip';
+import HeartsLayer from '@/modules/play/HeartsLayer';
+import PlayOverlay from '@/modules/play/PlayOverlay';
+import { moodSceneAt, playBlockText, playEntry, playRefusalMessage, type PlayKind } from '@/modules/play/play';
+import { usePlayClock } from '@/modules/play/usePlayClock';
 import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
 import { alpha, palette, radius } from '@/theme';
 import { t } from '@/i18n';
@@ -223,6 +235,8 @@ export default function ChildHudScreen() {
   const setAlbumVisible = useAppStore((s) => s.setAlbumVisible);
   const isTrainingVisible = useAppStore((s) => s.isTrainingVisible);
   const setTrainingVisible = useAppStore((s) => s.setTrainingVisible);
+  const playOverlay = useAppStore((s) => s.playOverlay);
+  const setPlayOverlay = useAppStore((s) => s.setPlayOverlay);
   const setHudVideoState = useAppStore((s) => s.setHudVideoState);
   const hudVideoState = useAppStore((s) => s.hudVideoState);
   // No HUD → no video under the lock veil.
@@ -263,15 +277,36 @@ export default function ChildHudScreen() {
       setAlbumVisible(false);
       // A lock ends a running training session on this screen (the server refuses it anyway).
       setTrainingVisible(false);
+      // M5-R05: and a game (nothing is reported; the lock screen explains).
+      setPlayOverlay(null);
     }
-  }, [lockedNow, setAlbumVisible, setTrainingVisible]);
+  }, [lockedNow, setAlbumVisible, setTrainingVisible, setPlayOverlay]);
   useEffect(
     () => () => {
       setAlbumVisible(false);
       setTrainingVisible(false);
+      setPlayOverlay(null);
     },
-    [setAlbumVisible, setTrainingVisible],
+    [setAlbumVisible, setTrainingVisible, setPlayOverlay],
   );
+
+  // M5-R05 play & cuddle: the clock of the happy scene / invitation, "Mogoče kasneje".
+  const playNow = usePlayClock(view);
+  const reduceMotion = useReduceMotion();
+  const play = usePlay();
+  // "Mogoče kasneje" lives in the session store (survives the HUD remounting).
+  const dismissedIds = useAppStore((s) => s.dismissedPlayInvitations);
+  const dismissInvitation = useAppStore((s) => s.dismissPlayInvitation);
+  const dismissedInvitations = useMemo<ReadonlySet<number>>(() => new Set(dismissedIds), [dismissedIds]);
+  // Another layer (walk, cleaning, album, training) or a mess to scrub closes the play layer
+  // (like a lock does) — otherwise it would reappear when that layer closes.
+  const messToScrub = view ? needsScrubbing(view.pet.needs_cleaning, view.behaviour) : false;
+  const otherLayerOpen = isWalkModalVisible || isCleaningOverlayVisible || isAlbumVisible || isTrainingVisible || messToScrub;
+  useEffect(() => {
+    if (otherLayerOpen) setPlayOverlay(null);
+  }, [otherLayerOpen, setPlayOverlay]);
+  // End of quiet hours as a 422 named it (the child state doesn't carry it) → "Kuža spi do 07:00.".
+  const [playSleepsUntil, setPlaySleepsUntil] = useState<string | null>(null);
   // M5-R03 / PR #53: the child's own session is still running (e.g. the app was restarted
   // mid-game) → open "Šola" so the game resumes / is saved. Once per session: closing the
   // overlay never reopens it for the same session.
@@ -367,6 +402,29 @@ export default function ChildHudScreen() {
     });
   }, [clean, queryClient, setCleaningOverlayVisible, showToast]);
 
+  // M5-R05: a finished mini-game → one request; optimistic happy dog, then the server's state.
+  const handlePlayFinished = useCallback(
+    (kind: PlayKind) => {
+      play.mutate(kind, {
+        onError: (error) => {
+          const failure = classifyActionError(error);
+          const current = queryClient.getQueryData<ChildPetView>(childPetKey) ?? null;
+          // m3 (QA PR #86): no thank-you card for a play the server never got.
+          setPlayOverlay(null);
+          if (failure.kind === 'refused') {
+            if (failure.nextAllowedAt) setPlaySleepsUntil(failure.nextAllowedAt);
+            showToast({ tone: 'info', message: playRefusalMessage(failure.nextAllowedAt, current?.timezone ?? null, current) });
+            return;
+          }
+          // A lock closes the layer through the lock effect; the rest gets the usual text.
+          const message = failureMessage(failure, current);
+          if (message) showToast({ tone: 'info', message });
+        },
+      });
+    },
+    [play, queryClient, setPlayOverlay, showToast],
+  );
+
   const handleLogout = () => {
     void logout();
   };
@@ -442,8 +500,15 @@ export default function ChildHudScreen() {
   // Profiled pets only (a legacy pet keeps the pre-M5 HUD).
   const mealWindows = pet.profile ? buildMealWindows(view) : [];
   const showTraining = isTrainingVisible && !locked && hasTraining && !showAlbum;
+  // M5-R05: the play layer (never together with the album / training / a mess to scrub).
+  const showPlay = playOverlay !== null && !locked && view.play !== null && !showAlbum && !showTraining && !showCleaning;
+  const coveredByOverlay = isWalkModalVisible || showCleaning || showTraining || showAlbum || showPlay;
+  const entry = coveredByOverlay ? ({ kind: 'hidden' } as const) : playEntry(view, playNow, dismissedInvitations);
+  const moodScene = moodSceneAt(view, playNow);
+  // The free tier has no `playing` video: the usual one plays and the app draws hearts.
+  const showHearts = moodScene !== null && hudVideoState !== 'playing' && !coveredByOverlay;
   // Android: TalkBack must not reach the HUD under the album / training game (iOS: accessibilityViewIsModal).
-  const hiddenUnderAlbum = showAlbum || showTraining
+  const hiddenUnderAlbum = showAlbum || showTraining || showPlay
     ? ({ importantForAccessibility: 'no-hide-descendants', accessibilityElementsHidden: true } as const)
     : ({ importantForAccessibility: 'auto', accessibilityElementsHidden: false } as const);
 
@@ -456,11 +521,12 @@ export default function ChildHudScreen() {
           petState={pet.pet_state}
           lockReason={view.lock.reason}
           scene={view.behaviour.scene}
+          mood={moodScene}
           breed={pet.breed_type}
           // Vet visit / hard stop: the sick / sleeping video keeps playing under the
           // translucent grey lock (PRODUCT_SPEC §7). Paused under the opaque game-over /
           // inactive screen, the walk tracker, the album (one player at a time) and in the background.
-          active={!opaqueLock && !isWalkModalVisible && !showAlbum && !showTraining}
+          active={!opaqueLock && !isWalkModalVisible && !showAlbum && !showTraining && !showPlay}
           onMediaExpired={onMediaExpired}
           // The vet veil darkens when a substitute (sleeping / idle) stands in for `sick`.
           onVideoStateChange={setHudVideoState}
@@ -488,6 +554,8 @@ export default function ChildHudScreen() {
             </View>
           }
         />
+
+        {showHearts && <HeartsLayer reduceMotion={reduceMotion} />}
 
         {/* Glassmorphism top status bar */}
         <View style={[styles.topBar, { top: layout.headerTop }]} onLayout={onHeaderLayout} testID="hud-header">
@@ -675,11 +743,30 @@ export default function ChildHudScreen() {
             right={METRICS_RESERVED_RIGHT}
             notice={mediaPending ? <MediaPendingNotice testID="hud-pet-media-pending" /> : null}
             footer={
-              hasTraining ? (
-                <TrainingChip
-                  todayDone={view.training.today_done}
-                  pending={showTrainingDot(view.training)}
-                  onPress={() => setTrainingVisible(true)} />
+              hasTraining || entry.kind !== 'hidden' || moodScene !== null ? (
+                <>
+                  {moodScene !== null && <HappyBadge />}
+                  {entry.kind === 'invitation' && (
+                    <PlayInvitationCard
+                      invitation={entry.invitation}
+                      onAccept={(kind) => setPlayOverlay(kind)}
+                      onDismiss={dismissInvitation}
+                      reduceMotion={reduceMotion}
+                    />
+                  )}
+                  {(hasTraining || entry.kind === 'button') && (
+                    <View style={styles.chipRow}>
+                      {hasTraining && (
+                        <TrainingChip
+                          todayDone={view.training.today_done}
+                          pending={showTrainingDot(view.training)}
+                          onPress={() => setTrainingVisible(true)} />
+                      )}
+                      {entry.kind === 'button' && <PlayChip block={entry.block} onPress={() => setPlayOverlay('pick')} />}
+                    </View>
+                  )}
+                  {entry.kind === 'button' && entry.block !== null && <PlayBlockedNote text={playBlockText(entry.block, playSleepsUntil, view.timezone, playNow)} />}
+                </>
               ) : null
             }
             // Hidden by the panel while a scene card is open; one line on smaller screens.
@@ -711,6 +798,17 @@ export default function ChildHudScreen() {
       </View>
       {/* Outside hud-content, so hiding the HUD from TalkBack never hides the game. */}
       {showTraining && <TrainingOverlay view={view} onClose={closeTraining} />}
+      {showPlay && playOverlay !== null && (
+        <PlayOverlay
+          view={view}
+          mode={playOverlay}
+          onPick={(kind) => setPlayOverlay(kind)}
+          onFinished={handlePlayFinished}
+          onClose={() => setPlayOverlay(null)}
+          onMediaExpired={onMediaExpired}
+          reduceMotion={reduceMotion}
+        />
+      )}
       <PetProfileSheet visible={isProfileVisible && profileRows.length > 0} rows={profileRows} onClose={() => setProfileVisible(false)} />
       {showAlbum && (
         <PetAlbum
@@ -936,6 +1034,13 @@ const styles = StyleSheet.create({
   },
   pressed: {
     opacity: 0.7,
+  },
+  /** "Šola" + "Igra" side by side above the dock (M5-R05). */
+  chipRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: 8,
   },
   centered: {
     alignItems: 'center',

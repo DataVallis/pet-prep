@@ -17,7 +17,7 @@ import { useCallback, useMemo, useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
-import { Check, ChevronLeft, X } from 'lucide-react-native';
+import { Check, ChevronLeft, Heart, X } from 'lucide-react-native';
 
 import { ApiError } from '@/api/client';
 import { useChildReport, usePetActivities } from '@/hooks/queries/useParentQueries';
@@ -60,6 +60,7 @@ import { localParts } from '@/modules/childPet/familyTime';
 import { mealsLine, nextStageLine, originLine, readPetProfile, stageLine } from '@/modules/petProfile/petProfile';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 import { PARENT_TRAINING_STRINGS, parentTrainingLines } from '@/modules/training/training';
+import { playKindOfActivity } from '@/modules/play/play';
 import { fonts, palette, tightTracking } from '@/theme';
 import { t } from '@/i18n';
 import { formatThousands } from '@/i18n/format';
@@ -119,9 +120,18 @@ function Timeline({ petId, family }: { petId: number; family: FamilyOverview }) 
           return (
             <View key={item.id} style={styles.timelineRow} testID={`timeline-item-${item.id}`}>
               <View style={[styles.timelineBadge, { backgroundColor: item.is_positive ? C.green : C.red }]}>
-                {item.is_positive ? <Check color={palette.white} size={12} /> : <X color={palette.white} size={12} />}
+                {/* M5-R05: play / cuddles get a heart (no points — not a care tick). */}
+                {playKindOfActivity(item.activity_type) !== null ? (
+                  <Heart color={palette.white} fill={palette.white} size={11} />
+                ) : item.is_positive ? (
+                  <Check color={palette.white} size={12} />
+                ) : (
+                  <X color={palette.white} size={12} />
+                )}
               </View>
-              <Text style={styles.timelineText}>{activityText({ activity_type: item.activity_type, actor_nickname: nickname })}</Text>
+              <Text style={styles.timelineText}>
+                {activityText({ activity_type: item.activity_type, actor_nickname: nickname, value: item.value })}
+              </Text>
               <Text style={styles.muted}>{activityWhenText(item.created_at, family.timezone, today)}</Text>
             </View>
           );

@@ -88,6 +88,11 @@ export interface PetMediaViewProps {
    * otherwise the `petState` chain plays and the HUD draws the scene graphic.
    */
   scene?: BehaviourScene | null;
+  /**
+   * M5-R05 happy mood (`moodSceneAt`): `playing` while the dog is happy and nothing more
+   * important shows — between the behaviour scene and `petState`; free tier falls back to idle.
+   */
+  mood?: 'playing' | null;
   breed: BreedType;
   /** false = screen not focused / covered → pause every player. */
   active?: boolean;
@@ -201,6 +206,7 @@ export default function PetMediaView({
   petState,
   lockReason = null,
   scene = null,
+  mood = null,
   breed,
   active = true,
   videoEnabled = true,
@@ -229,7 +235,7 @@ export default function PetMediaView({
     return () => clearTimeout(timer);
   }, [errors, clock]);
 
-  const wanted = videoEnabled ? videoStateFor(petState, lockReason, scene) : null;
+  const wanted = videoEnabled ? videoStateFor(petState, lockReason, scene, mood) : null;
   const target = useMemo(() => {
     const now = Math.max(clock, Date.now());
     return selectMediaSource(media, wanted, {

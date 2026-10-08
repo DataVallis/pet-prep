@@ -1,0 +1,54 @@
+{
+  "play": {
+    "chip": "Igra",
+    "chipA11y": "Igraj se s kužkom",
+    "pickBall": "Žoga",
+    "pickCuddle": "Crkljanje",
+    "invite": "Kuža ti prinaša žogo. Se igrava?",
+    "start": "Igraj se",
+    "hint": "Povleci žogo navzgor, da jo vržeš.",
+    "throwButton": "Vrzi žogo",
+    "throwA11y": "Vrzi žogo kužku",
+    "progress": "Met {{n}} od 3",
+    "fetching": "Kuža teče po žogo …",
+    "done": "Hvala za igro! Kuža je ves vesel."
+  },
+  "cuddle": {
+    "invite": "Kuža se stisne k tebi. Ga pobožaš?",
+    "start": "Pobožaj",
+    "hint": "S prstom nežno pobožaj kužka.",
+    "holdButton": "Drži in pobožaj",
+    "areaA11y": "Tvoj kuža. Pobožaj ga s prstom ali uporabi gumb spodaj.",
+    "progress": "Poteg {{n}} od 5",
+    "done": "Kuža uživa. Hvala za crkljanje!"
+  },
+  "mood": {
+    "happy": "Kuža je vesel"
+  },
+  "moment": {
+    "dismiss": "Mogoče kasneje",
+    "title": "Čas za igro",
+    "pickTitle": "Kaj bosta počela?",
+    "close": "Zapri",
+    "finish": "Končano"
+  },
+  "unavailable": {
+    "sleeping": "Kuža spi. Igrata se, ko se zbudi.",
+    "dirty": "Najprej počisti, potem se igrata.",
+    "other": "Zdaj se ne moreta igrati.",
+    "sleepingUntil": "Kuža spi do {{clock}}. Potem se igrata."
+  },
+  "parent": {
+    "timeline": {
+      "play": "Igra z žogo · {{child}}",
+      "cuddle": "Crkljanje · {{child}}",
+      "playCount": "Igra z žogo ×{{n}} · {{child}}",
+      "cuddleCount": "Crkljanje ×{{n}} · {{child}}",
+      "playAnon": "Igra z žogo",
+      "cuddleAnon": "Crkljanje",
+      "playAnonCount": "Igra z žogo ×{{n}}",
+      "cuddleAnonCount": "Crkljanje ×{{n}}"
+    },
+    "today": "Danes: {{play}}× igra z žogo, {{cuddle}}× crkljanje"
+  }
+}

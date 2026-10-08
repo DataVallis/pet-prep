@@ -29,6 +29,7 @@ import {
   type ChildBehaviour,
 } from '@/modules/behaviour/behaviour';
 import { readChildTraining, readPetTraining, type ChildTraining } from '@/modules/training/training';
+import { broadcastPlay, readChildPlay, type ChildPlay } from '@/modules/play/play';
 
 export type LockReason = 'game_over' | 'inactive' | 'hard_stopped' | 'payment_required' | 'contract_required' | 'ill';
 
@@ -132,6 +133,11 @@ export interface ChildPetView {
    * budget, `can_start`. `EMPTY_TRAINING` for a legacy pet / older app / older server.
    */
   training: ChildTraining;
+  /**
+   * M5-R05 play & cuddle: can the child play now, the dog's invitation, the 30-minute happy
+   * scene. null for a pet without play (free mutt, legacy, unpaid) and from an older server.
+   */
+  play: ChildPlay | null;
   /** ms of `server_time` (whole seconds). */
   snapshotAtMs: number;
   /** ms of the newest applied broadcast `emitted_at`; 0 if none. */
@@ -308,6 +314,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     behaviour: readChildBehaviour((raw as { behaviour?: unknown }).behaviour),
     // Older servers send no `training` (typed as required by the current schema).
     training: readChildTraining((raw as { training?: unknown }).training),
+    // Older servers send no `play` → null (no "Igra").
+    play: readChildPlay((raw as { play?: unknown }).play),
     snapshotAtMs: msOf(raw.server_time),
     lastEmittedMs,
     clockSkewMs: msOf(raw.server_time) > 0 ? msOf(raw.server_time) - receivedAtMs : 0,
@@ -409,6 +417,8 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
   const blocked = lock.is_locked || pet.needs_cleaning;
   const behaviour = broadcastBehaviour(view.behaviour, b.behaviour, lock.is_locked);
   const training = broadcastTraining(view.training, b.training, lock.is_locked);
+  // M5-R05: pet-level `can_play`; a lock (incl. this child's own contract) turns it off.
+  const play = broadcastPlay(view.play, b.play, lock.is_locked);
 
   const next: ChildPetView = {
     ...view,
@@ -419,6 +429,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     steps: { ...view.steps, energy_level: b.energy_level },
     behaviour,
     training,
+    play,
     lastEmittedMs: emittedMs,
   };
 
@@ -589,7 +600,9 @@ export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): numbe
   // M5-R03: a running training session (a sibling's, or one this device lost) blocks
   // "Začni vajo" until it expires — fetch the state that frees it.
   const trainingEnd = at(view.training.session?.expires_at);
-  const future = [nextWindow, windowEnd, water, accident, illnessEnd, trainingEnd].filter((ms) => Number.isFinite(ms) && ms > serverNow);
+  // M5-R05: the dog's invitation ends (the HUD hides it by the clock too; this fetches the truth).
+  const invitationEnd = at(view.play?.invitation?.expires_at);
+  const future = [nextWindow, windowEnd, water, accident, illnessEnd, trainingEnd, invitationEnd].filter((ms) => Number.isFinite(ms) && ms > serverNow);
   future.push(familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
   let delay = Math.min(...future) - serverNow;
 
