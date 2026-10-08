@@ -11,6 +11,7 @@ use App\Services\Media\PetMediaPayload;
 use App\Services\Media\PetMediaService;
 use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
+use App\Services\PlayPayload;
 use App\Services\TrainingPayload;
 use App\Services\TrainingService;
 use Carbon\CarbonInterface;
@@ -46,6 +47,9 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * `training` (M5-R03): progress per command, today's routine, the running
  * session, the dog's daily mini-game budget and whether a session can start
  * now — {@see TrainingPayload}.
+ *
+ * `play` (M5-R05): whether the child can play / cuddle now, the dog's
+ * invitation and the happy scene — {@see PlayPayload}; null without play.
  *
  * `pet.media` (M4-05): status + signed URLs of the stored reference image and
  * state videos ({@see PetMediaService::mediaFor()}); `current_video_url` is
@@ -234,6 +238,9 @@ class ChildPetStateResource extends JsonResource
                     && $training->mySecondsLeft >= TrainingPayload::sessionSeconds()
                     && ! app(TrainingService::class)->dayEndingAt($pet, $now)),
             ]),
+            // M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
+            // the 30-minute happy scene. Null for a pet without play (free mutt, legacy, unpaid).
+            'play' => PlayPayload::for($pet, $actor, $now)?->toArray(),
         ];
     }
 }

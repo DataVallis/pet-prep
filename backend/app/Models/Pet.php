@@ -17,6 +17,7 @@ use App\Services\FamilyService;
 use App\Services\LifeStageService;
 use App\Services\PairingService;
 use App\Services\PetStatusPeriodService;
+use App\Services\PlayService;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
@@ -121,6 +122,12 @@ class Pet extends Model
         // routine ledger (M2-06). Runs inside the writer's transaction.
         static::updated(function (Pet $pet): void {
             app(PetStatusPeriodService::class)->recordUpdated($pet);
+            // M5-R05: a pet that ends (game over, deactivated) drops its open
+            // play invitations — the tick no longer processes it.
+            if (($pet->wasChanged('is_game_over') && $pet->is_game_over)
+                || ($pet->wasChanged('is_active') && ! $pet->is_active)) {
+                app(PlayService::class)->skipPending($pet);
+            }
             // A payment lock / payment just opened or closed a period (M3-11b).
             $pet->forgetProgramPauses();
         });
@@ -234,6 +241,9 @@ class Pet extends Model
         'trial_reminder_sent_at',
         // M5-F02: when an unpaid mutt challenge became the free plan (program clock bookkeeping).
         'converted_to_free_at',
+        // M5-R05 bookkeeping (the apps get PlayPayload instead).
+        'happy_until',
+        'play_scheduled_through',
     ];
 
     /**
@@ -280,6 +290,7 @@ class Pet extends Model
             'payment_locked_at' => 'datetime',
             'trial_reminder_sent_at' => 'datetime',
             'converted_to_free_at' => 'datetime',
+            'happy_until' => 'datetime',
         ];
     }
 
@@ -521,6 +532,14 @@ class Pet extends Model
     public function trainingSessions(): HasMany
     {
         return $this->hasMany(PetTrainingSession::class);
+    }
+
+    /**
+     * Play invitations and finished plays / cuddles (M5-R05, mood only).
+     */
+    public function playEvents(): HasMany
+    {
+        return $this->hasMany(PetPlayEvent::class);
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -933,6 +952,9 @@ class Pet extends Model
             'behaviour_scheduled_through' => null,
             // M5-R03: "no practice → decay" is evaluated from the birth day on.
             'training_decayed_through' => null,
+            // M5-R05: play invitations are decided from the birth day on.
+            'play_scheduled_through' => null,
+            'happy_until' => null,
             'frozen_at' => null,
             // M3-11 (PAYMENTS_SPEC P2): the 7-day trial of a challenge starts at birth.
             'trial_ends_at' => $this->plan === PetPlan::Free ? null : $this->trialEndFor($at),

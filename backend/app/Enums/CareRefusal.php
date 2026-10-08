@@ -72,4 +72,11 @@ enum CareRefusal: string
 
     /** A tap offset lies outside the session (impossible value). */
     case TrainingInvalidTaps = 'training_invalid_taps';
+
+    /**
+     * Play & cuddle (M5-R05) is not possible now: the pet has no play (free
+     * mutt, legacy pet), it is quiet hours (next_allowed_at = their end) or a
+     * mess waits to be cleaned.
+     */
+    case PlayNotAvailable = 'play_not_available';
 }

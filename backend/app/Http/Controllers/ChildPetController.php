@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Concerns\HandlesChildPet;
 use App\Http\Requests\ChildPetRequest;
 use App\Http\Requests\FinishTrainingRequest;
+use App\Http\Requests\PlayRequest;
 use App\Http\Requests\StartTrainingRequest;
 use App\Http\Requests\SyncStepsRequest;
 use App\Http\Resources\ChildPetStateResource;
@@ -135,6 +136,25 @@ class ChildPetController extends Controller
         $pet = $this->childPet($request);
 
         return $this->actionResponse($this->activities->finishTraining($pet, $request->user(), $request->sessionId(), $request->taps()), $pet, $request);
+    }
+
+    /**
+     * Play & cuddle (M5-R05): the child finished a ball game (`play`) or a
+     * cuddle (`cuddle`) — free or from the dog's invitation. Mood / video
+     * only: the dog is happy for 30 minutes (`state.play.mood`); no score,
+     * routine or metric changes. The response carries `play` {kind, source:
+     * invitation | free}. A repeat by the same child and kind within 10 s →
+     * `unchanged`. 422 play_not_available (no play for this pet — free mutt,
+     * legacy pet —, quiet hours: next_allowed_at = their end, or a mess to
+     * clean first); 423 while locked (incl. contract_required, payment_required).
+     *
+     * POST /api/child/pet/play
+     */
+    public function play(PlayRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->play($pet, $request->user(), $request->kind()), $pet, $request);
     }
 
     /**

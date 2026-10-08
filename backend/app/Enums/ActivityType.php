@@ -27,6 +27,11 @@ enum ActivityType: string
     // M5-R03 (David 2026-10-06): child completed a training session (the
     // day's training routine); value = correctly timed praises.
     case TrainedPet = 'trained_pet';
+    // M5-R05 (David 2026-10-07/08): a child finished a ball game / a cuddle.
+    // Parent timeline only — never a routine, score or stat (value = plays
+    // merged into this row, PlayService::TIMELINE merge window).
+    case PlayedWithPet = 'played_with_pet';
+    case CuddledPet = 'cuddled_pet';
 
     /**
      * Rows that describe something that happened to the dog, not a care

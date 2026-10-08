@@ -8,6 +8,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-08 — Igra in crkljanje: strežnik pripravljen (M5-R05)
+
+**Kaj se je zgodilo:** Strežnik zna igro z žogo in crkljanje. Otrok lahko igro konča kadarkoli (ni tihih ur, ni nereda, pes ni zaklenjen); kuža je nato 30 minut »vesel«. Vsak dan kuža sam pripravi dve vabili (eno za žogo, eno za crkljanje) ob naključni uri med 7:00 in 20:00 izven tihih ur, vsaj 3 ure narazen; vabilo se pokaže le, ko je današnji sprehod opravljen ter hrana in voda nad 30 %. Starš vidi vrstico v časovnici in koliko iger je bilo danes. Mini-igri v aplikaciji še ni (*načrt*, naslednji korak).
+
+**Odločitev:** pravila je določil David 7. in 8. 10. (samo izziv, tudi v preizkusu; prosto kadarkoli; vabilo po sprehodu; 30 min veselja; starš brez pusha; skupni pes). Številke, ki jih David še ni potrdil (2 vabili, 2 uri, 7–20, brez igre v tihih urah, legacy psi brez igre), so *predlog* in na enem mestu (`config/play.php`).
+
+**Zakaj je pomembno:** Ko je vse narejeno, mora biti s kužkom še vedno kaj za početi — in to brez kazni. Igra je nagrada: če je otrok prezre, se ne zgodi nič.
+
+**Številke:** 42 novih testov strežnika; test, ki 3 dni primerja kužka, ki se igra 20× na dan, s kužkom, ki se ne igra nikoli: rutine, Care Score, semafor in merilniki so enaki. Brez novih AI stroškov (obstoječi video `playing`).
+
+**Kako povedati:**
+- 👩 Starši: »Igra s kužkom ne prinaša točk in ne kaznuje. Vidite pa, kolikokrat se je otrok danes igral in crkljal.«
+- 🧒 Otroci: »Ko si za kužka vse naredil in sta bila na sprehodu, te včasih povabi k igri. Igraš se lahko tudi sam, kadar hočeš.«
+- 💼 Investitorji: »Pozitivna zanka brez stroškov AI: več časa v aplikaciji, ne da bi igra postala seznam opravil.«
+- 🛠 Tehnično: »Ločena tabela `pet_play_events` (ne higiena, ki je rutina), vabila deterministično iz semena na psa in dan, eksplicitni seznami tipov v ocenjevanju — test dokaže, da igra ne vpliva na točke.«
+
 ## 2026-10-08 — Tihe ure ima vsaka družina; ponoči ni več obvestil (M5-F08)
 
 **Kaj se je zgodilo:** David je ponoči na iPhone dobil dve obvestili: ob 00:00 »Tvoj kuža danes še ni bil na sprehodu« in okoli 3:30 »kuža je zbolel, 12 ur pri veterinarju«, čeprav je imel v aplikaciji »nastavljene« tihe ure. Vzrok: strežnik zanj tihih ur sploh ni imel shranjenih. Aplikacija je ob praznem odgovoru tiho pokazala predlagane čase (21:00–7:00, vklopljeno) in izgledalo je, kot da so nastavljene. Brez tihih ur je ura bolezni tekla vso noč, ob polnoči pa se energija (dnevni sprehod) ponastavi na 0 % in opomnik je šel takoj. Popravek: vsaka družina ima zdaj tihe ure od trenutka, ko nastane (spanje 21:00–7:00, brez šole, vklopljeno); obstoječe družine brez nastavitve so jih dobile samodejno, nastavitve staršev (tudi izklopljene) ostanejo nedotaknjene. Opomnik za sprehod nikoli ne gre takoj po polnoči — najprej 2 uri po koncu nočnega spanja (privzeto ob 9:00), tudi če starš tihe ure izklopi. Kartica »Tihe ure« zdaj kaže resnico: strežnik vedno pove, kateri časi veljajo, in dokler jih starš ne shrani, kartica piše »Veljajo privzeti časi — tapnite Shrani, da jih potrdite ali spremenite«.

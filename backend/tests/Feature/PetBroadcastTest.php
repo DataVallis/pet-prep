@@ -207,6 +207,8 @@ describe('PetUpdated event shape', function () {
             'behaviour',
             // M5-R03 training summary
             'training',
+            // M5-R05 play & cuddle (null without play)
+            'play',
         ]);
         expect(array_keys($payload['behaviour']))->toBe(['take_out', 'active_events', 'scene'])
             ->and(array_keys($payload['training']))->toBe(['enabled', 'commands', 'today_done', 'session_active']);

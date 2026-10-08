@@ -1,6 +1,6 @@
 # PetPrep — Katalog funkcij (kaj izdelek zna danes)
 
-> **Stanje na dan 2026-10-07.**
+> **Stanje na dan 2026-10-08.**
 > **Namen:** en pregled vsega, kar PetPrep zna (in česa še ne), po področjih. Vir za spletno stran (petprep.si), opise v App Store / Google Play, vodiče za starše in otroke, gradiva za investitorje in partnerje.
 > **Pravila:** samo dejstva iz `docs/journey/BUILD_LOG.md`, `docs/engineering/ROADMAP.md`, `docs/product/PRODUCT_SPEC.md`, `HANDOFF.md`, `docs/business/BUSINESS_MODEL.md` in kode · številke samo z virom · brez osebnih podatkov otrok · česar ni na telefonu, ne opisujemo, kot da je · kar čaka Davidovo potrditev, je označeno *predlog*.
 > **Vzdrževanje:** posodobi **v istem PR kot funkcijo** — dodaj vrstico, spremeni stanje, poveži roadmap ID (in datum). Ko David funkcijo preveri na telefonu, dodaj 📱 z datumom in buildom.
@@ -99,7 +99,7 @@ Velja samo za nove pse, ustvarjene z različico aplikacije, ki vedenje zna prika
 | Prikaz luže in copata | 🆓 risba v aplikaciji · 💶 AI video (enkrat na življenjsko obdobje, ne ob vsakem dogodku). | otrok | ✅ | M5-R02 | 2026-10-06 |
 | Starš vidi nerede | Do kdaj mora mladiček ven, odprti neredi z rokom, kolikokrat ga je otrok v 7 dneh peljal ven, vrsta zamujenega čiščenja, vnosi v časovnici. | starš | ✅ | M5-R02 | 2026-10-06 |
 | Nered in plašnost posvojenega odraslega psa | — | otrok | 🗓 (čaka Davida) | — | — |
-| Igra z žogo in crkljanje 💶 | Otrok se lahko s kužkom kadarkoli igra z žogo (kratka mini-igra) ali ga crklja (božanje s prstom); kuža ga občasno tudi povabi, ko je preskrbljen in sprehojen. Brez točk in brez kazni — po igri je kuža pol ure vesel (video / srčki). Samo 12-tedenski izziv (tudi v preizkusu). Starš vidi, kolikokrat danes. Spec: `PLAY_CUDDLE_SPEC.md`. | otrok, starš | 🗓 | M5-R05 | — |
+| Igra z žogo in crkljanje 💶 | Otrok se lahko s kužkom kadarkoli igra z žogo (kratka mini-igra) ali ga crklja (božanje s prstom); kuža ga občasno tudi povabi, ko je preskrbljen in sprehojen. Brez točk in brez kazni — po igri je kuža pol ure vesel (video / srčki). Samo 12-tedenski izziv (tudi v preizkusu). Starš vidi, kolikokrat danes. Spec: `PLAY_CUDDLE_SPEC.md`. **Strežnik (8. 10.):** `POST /api/child/pet/play`, 2 vabili na dan (07–20, izven tihih ur, *predlog*), 30 min »vesel«, vrstica v časovnici staršev + dnevno število; brez točk (preverjeno s testom). Mini-igri v aplikaciji še ni. | otrok, starš | 🛠 | M5-R05 | 2026-10-08 (strežnik) |
 
 ## 5. Šolanje (dresura)
 
