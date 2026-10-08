@@ -641,7 +641,7 @@ sequenceDiagram
   Note over C: child drags the feather ~60 s; the cat pounces and catches it at the end;<br/>app records each move {t ms, away: moved away from the cat?}
   C->>API: POST /api/child/pet/wand/finish {session_id, moves[]}
   API->>W: same child? ends_at − 5 s ≤ now < expires_at? lock began during the game? every t ≤ 60 000?
-  W->>W: score(): ≥ 8 away moves (< 300 ms apart count once) · one in each 15 s quarter · away ≥ 50 %
+  W->>W: score(): ≥ 8 away moves (< 300 ms apart count once) · one in each 15 s quarter · away ≥ 50 %<br/>· an away move ≤ 2 s after every pounce · gaps not machine-regular
   alt took part
     W->>DB: session completed · pets.energy_level = sessions today / goal × 100 (never lowered)
     W->>DB: activities_log played_wand (actor child, value = n-th of the day) = the play routine
@@ -649,7 +649,8 @@ sequenceDiagram
     API-->>R: PetUpdated played_wand
   else not enough
     W->>DB: session failed (no meter, no gap, no penalty)
-    API-->>C: 200 rejected {result {success: false, reason: too_few_moves | not_spread | wrong_technique}} — start again at once
+    API-->>C: 200 rejected {result {success: false, reason: too_few_moves | not_spread | wrong_technique | missed_pounces | too_uniform}} — start again at once
+    API-->>R: PetUpdated wand_finished (the game ended)
   end
 ```
 
@@ -665,7 +666,7 @@ flowchart TD
   EX -- no --> MISS["missed at midnight → Care Score"]
   MISS --> FACT["midnight close: pets.play_missed_on = that day<br/>(M5-R06-05: 'scratched the sofa' next day)"]
   M([Family-local midnight]) --> RESET["meter (energy) → 0 · no pet_daily_walks row · never walk illness"]
-  LOW["meter ≤ 30 % outside quiet hours"] --> PUSH["play_reminder · once a day · not before night end + 2 h<br/>dropped if the cat played (play_done) or a start is refused now (not_actionable)"]
+  LOW["meter ≤ 30 % outside quiet hours"] --> PUSH["play_reminder · once a day · not before night end + 2 h<br/>held while a sibling plays / the gap runs · dropped if the cat played (play_done) or a start is refused without an end today (not_actionable)"]
 ```
 
 ## 6. Data model (core)

@@ -78,6 +78,7 @@ class PetDecayService
         private CareScheduleService $schedule,
         private BehaviourEventService $behaviour,
         private TrainingService $training,
+        private WandPlayService $wand,
         private PlayService $play,
     ) {}
 
@@ -146,7 +147,7 @@ class PetDecayService
         $work = function () use ($petId): array {
             $locked = Pet::whereKey($petId)->lockForUpdate()->first();
             if (! $locked) {
-                return [null, false, false];
+                return [null, false, false, false];
             }
 
             // M5-R05: the dog's play invitation as the apps last saw it (at the
@@ -162,14 +163,17 @@ class PetDecayService
             $quiet ??= $this->play->hasInvitations($locked) ? $locked->quietHours() : null;
             $playFlipped = $quiet !== null
                 && $offeredBefore !== $this->play->offeredInvitationId($locked, now()->startOfSecond(), $quiet);
+            // M5-R06-04 (QA): a cat's wand game that ran out (TTL) or was hit by a
+            // lock ends here — broadcast so no app keeps showing it as running.
+            $wandEnded = $locked->isCat() && $this->wand->expireStale($locked, now()->startOfSecond()) > 0;
 
-            return [$locked, $changed, $playFlipped];
+            return [$locked, $changed, $playFlipped, $wandEnded];
         };
 
         // The scheduler calls this outside any transaction → own transaction.
         // If a caller already opened one, the row lock lives in that
         // transaction until it commits; a nested savepoint would add nothing.
-        [$locked, $changed, $playFlipped] = DB::transactionLevel() > 0 ? $work() : DB::transaction($work);
+        [$locked, $changed, $playFlipped, $wandEnded] = DB::transactionLevel() > 0 ? $work() : DB::transaction($work);
 
         if (! $locked) {
             return null;
@@ -187,6 +191,8 @@ class PetDecayService
             PetUpdated::afterCommit($locked, 'metric_changed');
         } elseif ($playFlipped && $locked->is_active) {
             PetUpdated::afterCommit($locked, 'play');
+        } elseif ($wandEnded && $locked->is_active) {
+            PetUpdated::afterCommit($locked, 'wand_ended');
         }
 
         return $changed;

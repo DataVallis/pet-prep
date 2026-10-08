@@ -173,10 +173,17 @@ class NotificationService
      * meter (energy) shows ≤ 30 % outside quiet hours; one decision per
      * family-local day, same timing (walk-reminder floor). Only for a cat the
      * wand rules apply to.
+     *
+     * QA PR M5-R06-04: the reminder must not be lost for the day because the
+     * game was briefly impossible (a sibling's game, the 2 h gap): it is only
+     * decided while a start would be accepted, a row dropped at send time as
+     * `not_actionable` does not count as "decided today", and deliver() holds
+     * it until the refusal ends when that is later today.
      */
     public function playReminder(Pet $pet): ?PushNotification
     {
-        if (! config('push.enabled') || ! $this->wand->appliesTo($pet)) {
+        if (! config('push.enabled') || ! $this->wand->appliesTo($pet)
+            || $this->wand->startRefusal($pet, null, now()) !== null) {
             return null;
         }
 
@@ -184,6 +191,7 @@ class NotificationService
         $decidedToday = PushNotification::where('pet_id', $pet->id)
             ->where('type', PushType::PlayReminder->value)
             ->where('created_at', '>=', $dayStart)
+            ->where(fn ($q) => $q->whereNull('suppressed_reason')->orWhere('suppressed_reason', '!=', 'not_actionable'))
             ->exists();
 
         return $decidedToday ? null : $this->escalation($pet, PushType::PlayReminder, 'play');
@@ -315,6 +323,19 @@ class NotificationService
             $notification->forceFill(['status' => PushNotification::STATUS_SCHEDULED, 'send_after' => $at])->save();
 
             return;
+        }
+
+        // M5-R06-04 (QA): a play reminder whose game is refused only for now (a
+        // sibling's game, the 2 h gap) waits until it may start — same day only.
+        if ($type === PushType::PlayReminder) {
+            $refusal = $this->wand->startRefusal($pet, null, now());
+            $next = $refusal['next_allowed_at'] ?? null;
+            $tz = $pet->familyTimezone();
+            if ($next !== null && $next->copy()->setTimezone($tz)->toDateString() === now()->setTimezone($tz)->toDateString()) {
+                $notification->forceFill(['status' => PushNotification::STATUS_SCHEDULED, 'send_after' => $next->copy()->utc()])->save();
+
+                return;
+            }
         }
 
         // M3-12: never ask for an action the app refuses right now (decided at

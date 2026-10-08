@@ -50,6 +50,12 @@ final readonly class ActionResult
          * @var array<string, mixed>
          */
         public array $extra = [],
+        /**
+         * M5-R06-04 (QA): broadcast this PetUpdated event type although
+         * nothing counted (e.g. a rejected wand finish ends a running game
+         * the siblings / parents see). Null = the normal rule (changed()).
+         */
+        public ?string $broadcastAs = null,
     ) {}
 
     public function changed(): bool

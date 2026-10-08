@@ -19,8 +19,11 @@
 |     `min_move_interval_ms` count once — no tap spamming),
 |   - in every one of `segments` equal parts of the game (spread over the
 |     whole minute, not one burst),
-|   - and at least `min_away_share` of all moves were "away" (the right
-|     technique, C11).
+|   - at least `min_away_share` of all moves were "away" (the right
+|     technique, C11),
+|   - an "away" move within `pounce_window_ms` after every pounce cue of the
+|     schedule (the child reacts to the cat),
+|   - and the gaps between moves are not machine-regular (`uniform_*`).
 | A failed / aborted / expired session has no consequence: no penalty and
 | the child can start again at once.
 |
@@ -47,6 +50,20 @@ return [
     'segments' => 4,
     'min_move_interval_ms' => 300,
     'min_away_share' => 0.5,
+
+    // QA M5-R06-04: the child must react to the cat. After every pounce cue of
+    // the server schedule at least one "away" move must follow within this
+    // window (the feather escapes the pounce) — a script that does not read
+    // the schedule fails.
+    'pounce_window_ms' => 2000,
+
+    // QA M5-R06-04 (like TrainingService's "too uniform" check, but refusing):
+    // with at least `uniform_min_gaps` gaps between counted moves, gaps that
+    // all lie within `uniform_max_spread_ms` of each other look scripted → the
+    // game does not count. The app sends ONE move per finger stroke (not a
+    // sampled stream), so human gaps vary by far more.
+    'uniform_min_gaps' => 6,
+    'uniform_max_spread_ms' => 60,
 
     // Validation upper bound for one finish request.
     'max_moves' => 600,

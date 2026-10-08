@@ -36,7 +36,7 @@ use Carbon\CarbonInterface;
 final class WandPayload
 {
     /**
-     * @param  array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int}|null  $session
+     * @param  array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int, pounce_window_ms: int}|null  $session
      */
     public function __construct(
         public readonly int $goal,
@@ -84,7 +84,7 @@ final class WandPayload
     }
 
     /**
-     * @return array{goal: int, sessions_today: int, my_sessions_today: int|null, min_gap_minutes: int, next_allowed_at: string|null, blocked_reason: 'wand_not_available'|'needs_cleaning'|'wand_too_soon'|'wand_session_active'|'wand_day_ending'|null, can_start: bool, session: array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int}|null, session_running: bool, missed_yesterday: bool}
+     * @return array{goal: int, sessions_today: int, my_sessions_today: int|null, min_gap_minutes: int, next_allowed_at: string|null, blocked_reason: 'wand_not_available'|'needs_cleaning'|'wand_too_soon'|'wand_session_active'|'wand_day_ending'|null, can_start: bool, session: array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int, pounce_window_ms: int}|null, session_running: bool, missed_yesterday: bool}
      */
     public function toArray(): array
     {

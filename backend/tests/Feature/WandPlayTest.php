@@ -5,6 +5,7 @@ use App\Enums\CareSessionStatus;
 use App\Enums\PushType;
 use App\Enums\RoutineStatus;
 use App\Enums\RoutineType;
+use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\BreedStageParam;
 use App\Models\Pet;
@@ -24,7 +25,9 @@ use Database\Seeders\BreedStageParamsSeeder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Queue;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,12 +83,20 @@ function wpSibling(User $parent, Pet $pet, string $name = 'Tim'): User
     return $child;
 }
 
-/** 20 "away" moves spread over the whole minute — a child who really played. */
-function wpGoodMoves(int $durationMs = 60000): array
+/**
+ * A child who really played: ~22 "away" strokes over the whole minute with
+ * human (irregular) gaps, plus a reaction right after every pounce cue.
+ *
+ * @param  list<int>  $pounces
+ */
+function wpGoodMoves(array $pounces = [], int $durationMs = 60000): array
 {
     $moves = [];
-    for ($t = 500; $t < $durationMs; $t += 3000) {
+    for ($i = 0; ($t = 500 + 2700 * $i + ($i * 389) % 500) < $durationMs; $i++) {
         $moves[] = ['t' => $t, 'away' => true];
+    }
+    foreach ($pounces as $p) {
+        $moves[] = ['t' => min($durationMs, $p + 400), 'away' => true];
     }
 
     return $moves;
@@ -107,7 +118,9 @@ function wpStart(User $child)
 
 function wpFinish(User $child, string $sessionId, ?array $moves = null)
 {
-    return wpPost($child, '/api/child/pet/wand/finish', ['session_id' => $sessionId, 'moves' => $moves ?? wpGoodMoves()]);
+    $pounces = PetCareSession::where('public_id', $sessionId)->first()?->schedule['pounces_ms'] ?? [];
+
+    return wpPost($child, '/api/child/pet/wand/finish', ['session_id' => $sessionId, 'moves' => $moves ?? wpGoodMoves($pounces)]);
 }
 
 /** Start now, finish 60 s later with good moves; returns the finish response. */
@@ -179,8 +192,10 @@ describe('wand session (server-driven, CAT_SPEC §5.2)', function () {
             ->assertJsonPath('status', 'accepted')
             ->assertJsonPath('result.success', true)
             ->assertJsonPath('result.reason', null)
-            ->assertJsonPath('result.away_moves', 20)
             ->assertJsonPath('result.segments_hit', 4);
+        expect($finish->json('result.away_moves'))->toBeGreaterThanOrEqual(8)
+            ->and($finish->json('result.pounces_hit'))->toBe(count($session['pounces_ms']))
+            ->and($session['pounce_window_ms'])->toBe(2000);
 
         // Goal 2 (young cat): 1 / 2 → 50 %.
         expect($finish->json('state.pet.energy_level'))->toBe(50)
@@ -339,31 +354,57 @@ describe('wand session (server-driven, CAT_SPEC §5.2)', function () {
 
 describe('participation check (pure scoring)', function () {
     it('needs enough away moves, spread over the minute, mostly away from the cat', function () {
-        $score = fn (array $moves) => WandPlayService::score($moves, 60000);
+        $score = fn (array $moves, array $pounces = []) => WandPlayService::score($moves, 60000, $pounces);
 
         expect($score(wpGoodMoves()))->success->toBeTrue()->reason->toBeNull();
         expect($score([]))->success->toBeFalse()->reason->toBe('too_few_moves');
 
         // 10 away moves, all in the first 15 s → not spread.
-        $burst = array_map(fn ($i) => ['t' => 1000 + $i * 1000, 'away' => true], range(0, 9));
+        $burst = array_map(fn ($i) => ['t' => 1000 + $i * 1100 + $i * 37, 'away' => true], range(0, 9));
         expect($score($burst))->reason->toBe('not_spread')->segments_hit->toBe(1);
 
         // Waving in front of the face (toward) more than away → wrong technique (C11).
         $teasing = wpGoodMoves();
         foreach (wpGoodMoves() as $m) {
-            $teasing[] = ['t' => $m['t'] + 1000, 'away' => false];
-            $teasing[] = ['t' => $m['t'] + 2000, 'away' => false];
+            $teasing[] = ['t' => $m['t'] + 900, 'away' => false];
+            $teasing[] = ['t' => $m['t'] + 1700, 'away' => false];
         }
-        expect($score($teasing))->reason->toBe('wrong_technique')->toward_moves->toBe(40);
+        expect($score($teasing))->reason->toBe('wrong_technique');
 
-        // Tap spam: moves closer than 300 ms count once.
-        $spam = [];
-        for ($t = 0; $t < 60000; $t += 100) {
-            $spam[] = ['t' => $t, 'away' => true];
-        }
-        expect($score($spam))->away_moves->toBe(200)->success->toBeTrue();
+        // Moves closer than 300 ms count once.
         $spamOneSecond = array_map(fn ($i) => ['t' => 30000 + $i * 10, 'away' => true], range(0, 99));
         expect($score($spamOneSecond))->away_moves->toBe(4)->reason->toBe('too_few_moves');
+    });
+
+    it('requires a reaction after every pounce cue and rejects machine-regular moves (QA)', function () {
+        $score = fn (array $moves, array $pounces = []) => WandPlayService::score($moves, 60000, $pounces);
+        $pounces = [12000, 31000, 47500];
+
+        // A human game that reacts to every pounce → counts.
+        expect($score(wpGoodMoves($pounces), $pounces))->success->toBeTrue()->pounces_hit->toBe(3)->pounces->toBe(3);
+
+        // Ignoring the cat: no away move within 2 s after the 31 s pounce.
+        $ignoring = array_values(array_filter(wpGoodMoves($pounces), fn ($m) => $m['t'] < 31000 || $m['t'] > 33000));
+        expect($score($ignoring, $pounces))->reason->toBe('missed_pounces')->pounces_hit->toBe(2);
+
+        // A script: 8 evenly spaced away moves (one every 7.5 s) → too uniform, even without pounces.
+        $script = array_map(fn ($i) => ['t' => 1000 + $i * 7500, 'away' => true], range(0, 7));
+        expect($score($script))->reason->toBe('too_uniform');
+        // A 100 ms stream counts every 300 ms → also machine-regular.
+        $stream = array_map(fn ($i) => ['t' => $i * 100, 'away' => true], range(0, 599));
+        expect($score($stream))->reason->toBe('too_uniform');
+    });
+
+    it('refuses a scripted finish over HTTP (evenly spaced moves after 55 s) — nothing counts', function () {
+        [, $child, $cat] = wpFamily();
+        wpAt('2026-10-21 09:00');
+        $id = wpStart($child)->json('session.id');
+        wpAt('2026-10-21 09:00:56');
+        $script = array_map(fn ($i) => ['t' => 1000 + $i * 7500, 'away' => true], range(0, 7));
+
+        wpFinish($child, $id, $script)->assertOk()->assertJsonPath('status', 'rejected')
+            ->assertJsonPath('result.success', false);
+        expect(ActivityLog::where('pet_id', $cat->id)->where('activity_type', 'played_wand')->count())->toBe(0);
     });
 });
 
@@ -495,18 +536,93 @@ describe('daily play reminder (one a day, M3-12)', function () {
         expect($push->fresh())->status->toBe(PushNotification::STATUS_SUPPRESSED)->suppressed_reason->toBe('play_done');
     });
 
-    it('suppresses a queued play reminder whose game would be refused now (not_actionable, M3-12)', function () {
+    it('suppresses a queued play reminder whose game is refused without an end today (not_actionable, M3-12)', function () {
+        [, , $cat] = wpFamily('2026-10-20 08:00');
+        wpAt('2026-10-21 09:30');
+        wpTick();
+        $push = PushNotification::where('pet_id', $cat->id)->where('type', PushType::PlayReminder->value)->sole();
+
+        // An open mess (hygiene 0 %): the game waits for the clean-up — no time to hold the push for.
+        Pet::whereKey($cat->id)->update(['hygiene_level' => 0]);
+        $push->forceFill(['status' => PushNotification::STATUS_QUEUED, 'send_after' => null])->save();
+        app(NotificationService::class)->deliver($push->id, app(ExpoPushClient::class));
+
+        expect($push->fresh())->status->toBe(PushNotification::STATUS_SUPPRESSED)->suppressed_reason->toBe('not_actionable');
+    });
+});
+
+describe('play reminder is not lost for the day (QA)', function () {
+    beforeEach(function () {
+        config(['push.enabled' => true]);
+        Queue::fake();
+    });
+
+    it('holds a reminder while a sibling plays and sends it once the game may start', function () {
         [$parent, , $cat] = wpFamily('2026-10-20 08:00');
         wpAt('2026-10-21 09:30');
         wpTick();
         $push = PushNotification::where('pet_id', $cat->id)->where('type', PushType::PlayReminder->value)->sole();
 
         $sibling = wpSibling($parent, $cat);
-        wpStart($sibling)->assertOk(); // a game runs: a start would be refused (wand_session_active)
+        wpStart($sibling)->assertOk(); // TTL 09:32
         $push->forceFill(['status' => PushNotification::STATUS_QUEUED, 'send_after' => null])->save();
         app(NotificationService::class)->deliver($push->id, app(ExpoPushClient::class));
 
-        expect($push->fresh())->status->toBe(PushNotification::STATUS_SUPPRESSED)->suppressed_reason->toBe('not_actionable');
+        expect($push->fresh())->status->toBe(PushNotification::STATUS_SCHEDULED)
+            ->and($push->fresh()->send_after->toIso8601String())->toBe('2026-10-21T07:32:00+00:00')
+            ->and($push->fresh()->suppressed_reason)->toBeNull();
+    });
+
+    it('decides again after a not_actionable drop, and never while the game cannot start', function () {
+        [$parent, , $cat] = wpFamily('2026-10-20 08:00');
+        $sibling = wpSibling($parent, $cat);
+
+        // A game runs at the first chance → no decision at all (nothing lost).
+        wpAt('2026-10-21 09:30');
+        wpStart($sibling)->assertOk();
+        wpTick();
+        expect(PushNotification::where('pet_id', $cat->id)->where('type', PushType::PlayReminder->value)->count())->toBe(0);
+
+        // An older row dropped as not_actionable does not count as "decided today".
+        PushNotification::create([
+            'idempotency_key' => (string) Str::uuid(), 'pet_id' => $cat->id, 'type' => PushType::PlayReminder,
+            'metric' => 'play', 'recipients' => [], 'status' => PushNotification::STATUS_SUPPRESSED, 'suppressed_reason' => 'not_actionable',
+        ]);
+        wpAt('2026-10-21 09:40'); // the sibling's game expired
+        wpTick();
+        expect(PushNotification::where('pet_id', $cat->id)->where('type', PushType::PlayReminder->value)
+            ->whereIn('status', [PushNotification::STATUS_QUEUED, PushNotification::STATUS_SCHEDULED])->count())->toBe(1);
+        wpAt('2026-10-21 10:00');
+        wpTick();
+        expect(PushNotification::where('pet_id', $cat->id)->where('type', PushType::PlayReminder->value)->count())->toBe(2);
+    });
+});
+
+describe('a game that ends without counting is broadcast (QA)', function () {
+    it('broadcasts wand_finished on a rejected finish and wand_ended when the tick expires a game', function () {
+        [$parent, $child, $cat] = wpFamily();
+        $sibling = wpSibling($parent, $cat);
+        wpAt('2026-10-21 09:00');
+        $id = wpStart($child)->json('session.id');
+
+        Event::fake([PetUpdated::class]);
+        wpAt('2026-10-21 09:01');
+        wpFinish($child, $id, [])->assertJsonPath('status', 'rejected');
+        Event::assertDispatched(PetUpdated::class, fn ($e) => $e->eventType === 'wand_finished');
+        expect(PetUpdated::payloadFor($cat->fresh())['wand']['session_running'])->toBeFalse();
+
+        // A sibling's game nobody finishes: the tick after its TTL ends it once.
+        wpAt('2026-10-21 09:02');
+        wpStart($sibling)->assertOk();
+        wpAt('2026-10-21 09:04:30');
+        wpTick();
+        Event::assertDispatched(PetUpdated::class, fn ($e) => $e->eventType === 'wand_ended');
+        expect(PetCareSession::where('user_id', $sibling->id)->sole()->status)->toBe(CareSessionStatus::Expired);
+        $count = fn () => collect(Event::dispatched(PetUpdated::class))->filter(fn ($e) => $e[0]->eventType === 'wand_ended')->count();
+        $before = $count();
+        wpAt('2026-10-21 09:05:30');
+        wpTick();
+        expect($count())->toBe($before);
     });
 });
 

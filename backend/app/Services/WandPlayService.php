@@ -15,6 +15,7 @@ use App\Models\User;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Random\Randomizer;
 
@@ -314,7 +315,11 @@ class WandPlayService
             }
         }
 
-        $result = self::score($moves, $session->duration_ms);
+        $result = self::score($moves, $session->duration_ms, array_map('intval', array_values($session->schedule['pounces_ms'] ?? [])));
+        if ($result['reason'] === 'too_uniform') {
+            // Like training's scripted-latency log (pet id only, no child data).
+            Log::warning('WandPlayService: wand session with machine-regular moves', ['pet_id' => $pet->id]);
+        }
         $session->forceFill([
             'status' => $result['success'] ? CareSessionStatus::Completed : CareSessionStatus::Failed,
             'finished_at' => $now,
@@ -345,18 +350,25 @@ class WandPlayService
      * Judge the reported feather moves (pure — no I/O). Moves closer than
      * `min_move_interval_ms` to the previous counted move count once. A
      * session counts when there are ≥ `min_away_moves` "away" moves, at
-     * least one in each of `segments` equal parts of the game, and "away"
-     * moves are ≥ `min_away_share` of all counted moves.
+     * least one in each of `segments` equal parts of the game, "away" moves
+     * are ≥ `min_away_share` of all counted moves, an "away" move follows
+     * every pounce cue within `pounce_window_ms` (QA: the child reacts to the
+     * cat), and the gaps between counted moves are not machine-regular
+     * (≥ `uniform_min_gaps` gaps all within `uniform_max_spread_ms` → scripted).
      *
      * @param  list<array{t: int, away: bool}>  $moves
-     * @return array{success: bool, reason: 'too_few_moves'|'not_spread'|'wrong_technique'|null, away_moves: int, toward_moves: int, segments_hit: int, segments: int, min_away_moves: int}
+     * @param  list<int>  $pounces  pounce cues of the schedule (ms since start)
+     * @return array{success: bool, reason: 'too_few_moves'|'not_spread'|'wrong_technique'|'missed_pounces'|'too_uniform'|null, away_moves: int, toward_moves: int, segments_hit: int, segments: int, min_away_moves: int, pounces_hit: int, pounces: int}
      */
-    public static function score(array $moves, int $durationMs): array
+    public static function score(array $moves, int $durationMs, array $pounces = []): array
     {
         $minAway = max(1, (int) config('wand.min_away_moves', 8));
         $segments = max(1, (int) config('wand.segments', 4));
         $interval = max(0, (int) config('wand.min_move_interval_ms', 300));
         $minShare = max(0.0, min(1.0, (float) config('wand.min_away_share', 0.5)));
+        $window = max(0, (int) config('wand.pounce_window_ms', 2000));
+        $uniformGaps = max(2, (int) config('wand.uniform_min_gaps', 6));
+        $uniformSpread = max(0, (int) config('wand.uniform_max_spread_ms', 60));
 
         usort($moves, fn (array $a, array $b): int => $a['t'] <=> $b['t']);
 
@@ -364,23 +376,42 @@ class WandPlayService
         $toward = 0;
         $hit = [];
         $last = null;
+        $awayTimes = [];
+        $gaps = [];
         foreach ($moves as $move) {
             if ($last !== null && $interval > $move['t'] - $last) {
                 continue;
             }
+            if ($last !== null) {
+                $gaps[] = $move['t'] - $last;
+            }
             $last = $move['t'];
             if ($move['away']) {
                 $away++;
+                $awayTimes[] = $move['t'];
                 $hit[min($segments - 1, intdiv($move['t'] * $segments, max(1, $durationMs)))] = true;
             } else {
                 $toward++;
             }
         }
 
+        $pouncesHit = 0;
+        foreach ($pounces as $p) {
+            foreach ($awayTimes as $t) {
+                if ($t >= $p && $t <= $p + $window) {
+                    $pouncesHit++;
+                    break;
+                }
+            }
+        }
+        $uniform = count($gaps) >= $uniformGaps && max($gaps) - min($gaps) <= $uniformSpread;
+
         $reason = match (true) {
             $away < $minAway => 'too_few_moves',
             count($hit) < $segments => 'not_spread',
             $away < $minShare * ($away + $toward) => 'wrong_technique',
+            $pouncesHit < count($pounces) => 'missed_pounces',
+            $uniform => 'too_uniform',
             default => null,
         };
 
@@ -392,6 +423,8 @@ class WandPlayService
             'segments_hit' => count($hit),
             'segments' => $segments,
             'min_away_moves' => $minAway,
+            'pounces_hit' => $pouncesHit,
+            'pounces' => count($pounces),
         ];
     }
 
@@ -399,7 +432,7 @@ class WandPlayService
      * A new schedule: the cat pounces a few times (animation cues) and
      * catches the feather at the end (`catch_at_ms` = the duration).
      *
-     * @return array{catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int}
+     * @return array{catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int, pounce_window_ms: int}
      */
     public function schedule(int $durationMs, Randomizer $rng): array
     {
@@ -421,25 +454,27 @@ class WandPlayService
             'min_away_moves' => max(1, (int) config('wand.min_away_moves', 8)),
             'segments' => max(1, (int) config('wand.segments', 4)),
             'min_move_interval_ms' => max(0, (int) config('wand.min_move_interval_ms', 300)),
+            'pounce_window_ms' => max(0, (int) config('wand.pounce_window_ms', 2000)),
         ];
     }
 
     /**
      * Settle active sessions: one during which a lock began → `interrupted`;
-     * one past its TTL → `expired`. Frees the one-active slot.
+     * one past its TTL → `expired`. Frees the one-active slot. Returns the
+     * number of sessions settled (the tick broadcasts `wand_ended` then).
      */
-    public function expireStale(Pet $pet, CarbonInterface $now): void
+    public function expireStale(Pet $pet, CarbonInterface $now): int
     {
-        PetCareSession::where('pet_id', $pet->id)
+        return PetCareSession::where('pet_id', $pet->id)
             ->where('kind', CareSessionKind::WandPlay->value)
             ->where('status', CareSessionStatus::Active->value)
             ->where(fn ($q) => $this->whereInterrupted($q, $now))
-            ->update(['status' => CareSessionStatus::Interrupted->value, 'updated_at' => $now]);
-        PetCareSession::where('pet_id', $pet->id)
-            ->where('kind', CareSessionKind::WandPlay->value)
-            ->where('status', CareSessionStatus::Active->value)
-            ->where('expires_at', '<=', $now)
-            ->update(['status' => CareSessionStatus::Expired->value, 'updated_at' => $now]);
+            ->update(['status' => CareSessionStatus::Interrupted->value, 'updated_at' => $now])
+            + PetCareSession::where('pet_id', $pet->id)
+                ->where('kind', CareSessionKind::WandPlay->value)
+                ->where('status', CareSessionStatus::Active->value)
+                ->where('expires_at', '<=', $now)
+                ->update(['status' => CareSessionStatus::Expired->value, 'updated_at' => $now]);
     }
 
     /**

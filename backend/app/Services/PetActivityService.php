@@ -454,7 +454,8 @@ class PetActivityService
      * (WandPlayService::score): success → the session counts — play meter,
      * one `played_wand` row (the play routine, value = the session's number
      * of the day), the 2 h gap starts — status `accepted`; not enough →
-     * `rejected` (200, nothing counts, no penalty, start again at once).
+     * `rejected` (200, nothing counts, no penalty, start again at once;
+     * one `PetUpdated('wand_finished')` — the game ended).
      * `extra.result` = the verdict. A repeat → `unchanged` with the stored
      * result. 422 wand_not_available / wand_session_invalid /
      * wand_session_expired / wand_session_not_over / wand_invalid_moves /
@@ -485,7 +486,20 @@ class PetActivityService
                 return $this->unchanged(ActionResult::UNCHANGED, $locked, $extra);
             }
             if (! $finished['counted']) {
-                return $this->unchanged(ActionResult::REJECTED, $locked, $extra);
+                // Nothing counts, but the running game ended (QA: siblings / parents
+                // must not keep seeing session_running) → one `wand_finished`.
+                if ($locked->isDirty()) {
+                    $locked->saveQuietly();
+                }
+
+                return new ActionResult(
+                    status: ActionResult::REJECTED,
+                    dailyStepCount: (int) $locked->daily_step_count,
+                    energyLevel: $locked->displayMetric('energy_level'),
+                    hygieneLevel: $locked->displayMetric('hygiene_level'),
+                    extra: $extra,
+                    broadcastAs: 'wand_finished',
+                );
             }
 
             $number = $this->wand->applySuccess($locked, $session);
@@ -500,7 +514,7 @@ class PetActivityService
     /**
      * The wand session as the app gets it on start (instants in the family tz).
      *
-     * @return array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int}
+     * @return array{id: string, started_at: string, ends_at: string, expires_at: string, duration_ms: int, catch_at_ms: int, pounces_ms: list<int>, min_away_moves: int, segments: int, min_move_interval_ms: int, pounce_window_ms: int}
      */
     public static function wandSessionPayload(PetCareSession $session, string $tz): array
     {
@@ -520,13 +534,15 @@ class PetActivityService
             'min_away_moves' => (int) ($schedule['min_away_moves'] ?? 0),
             'segments' => (int) ($schedule['segments'] ?? 1),
             'min_move_interval_ms' => (int) ($schedule['min_move_interval_ms'] ?? 0),
+            // An "away" move must follow each pounce within this window (QA M5-R06-04).
+            'pounce_window_ms' => (int) ($schedule['pounce_window_ms'] ?? 0),
         ];
     }
 
     /**
      * The server's verdict on finish.
      *
-     * @return array{session_id: string, success: bool, reason: 'too_few_moves'|'not_spread'|'wrong_technique'|null, away_moves: int, toward_moves: int, segments_hit: int, segments: int}
+     * @return array{session_id: string, success: bool, reason: 'too_few_moves'|'not_spread'|'wrong_technique'|'missed_pounces'|'too_uniform'|null, away_moves: int, toward_moves: int, segments_hit: int, segments: int, pounces_hit: int, pounces: int}
      */
     public static function wandResultPayload(PetCareSession $session): array
     {
@@ -540,6 +556,8 @@ class PetActivityService
             'toward_moves' => (int) ($r['toward_moves'] ?? 0),
             'segments_hit' => (int) ($r['segments_hit'] ?? 0),
             'segments' => (int) ($r['segments'] ?? 0),
+            'pounces_hit' => (int) ($r['pounces_hit'] ?? 0),
+            'pounces' => (int) ($r['pounces'] ?? 0),
         ];
     }
 
@@ -814,6 +832,8 @@ class PetActivityService
         // the action applied.
         if ($result->changed()) {
             PetUpdated::afterCommit($locked, $eventType);
+        } elseif ($result->broadcastAs !== null) {
+            PetUpdated::afterCommit($locked, $result->broadcastAs);
         } elseif ($bookkeeping) {
             PetUpdated::afterCommit($locked, 'metric_changed');
         }
