@@ -33,8 +33,9 @@ use function Pest\Laravel\postJson;
 | M5-R05 — play & cuddle (David 2026-10-07 / 2026-10-08, PLAY_CUDDLE_SPEC)
 |--------------------------------------------------------------------------
 | Mood and video only: a finished ball game / cuddle makes the dog happy for
-| 30 minutes and shows on the parent timeline + daily count. Challenge in
-| trial or paid only; free play any time the pet is not locked, not in quiet
+| 30 minutes and shows on the parent timeline + daily count. Paid challenge
+| only (plus a running pre-M3-13 trial, and any unpaid challenge while the
+| payments kill switch is off — M3-13: no new trials); free play any time the pet is not locked, not in quiet
 | hours (D) and has no mess; the dog's invitations (2 / day, 07–20, ≥ 3 h
 | apart, open 2 h) show only after today's walk goal with hunger / thirst
 | > 30 %. Never a score, routine or metric.
@@ -53,21 +54,21 @@ function plAt(string $utc): void
 }
 
 /**
- * A born Border Collie challenge with a profile (trial unless $plan says
- * otherwise), random messes off, invitations off (tests about scheduling
+ * A born Border Collie challenge with a profile (a running pre-M3-13 trial
+ * unless $plan says otherwise — M3-13: new pets have no trial), random messes off, invitations off (tests about scheduling
  * clear `play_scheduled_through` themselves).
  *
- * @param  'trial'|'paid'  $plan
+ * @param  'legacy_trial'|'paid'  $plan
  * @param  array<string, mixed>  $attributes
  * @return array{0: User, 1: User, 2: Pet}
  */
-function plFamily(string $plan = 'trial', array $attributes = [], string $bornUtc = '2026-10-06 18:00:00'): array
+function plFamily(string $plan = 'legacy_trial', array $attributes = [], string $bornUtc = '2026-10-06 18:00:00'): array
 {
     plAt($bornUtc);
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $child = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Maja']);
     $factory = Pet::factory()->borderCollie();
-    $factory = $plan === 'paid' ? $factory->purchased() : $factory->trial();
+    $factory = $plan === 'paid' ? $factory->purchased() : $factory->legacyTrial();
     $pet = $factory->create(array_merge([
         'user_id' => $child->id,
         'born_at' => Carbon::parse($bornUtc, 'UTC'),
@@ -246,7 +247,7 @@ function plIsolationRun(bool $mutate): array
 }
 
 describe('eligibility (§2, §3.1)', function () {
-    it('lets a child play in the trial and on a paid challenge', function (string $plan) {
+    it('lets a child play on a paid challenge and during a running pre-M3-13 trial', function (string $plan) {
         [, $child, $pet] = plFamily($plan);
         plNow($pet, '2026-10-07 08:00:00'); // 10:00 local
 
@@ -255,7 +256,19 @@ describe('eligibility (§2, §3.1)', function () {
             ->assertJsonPath('play.kind', 'play')
             ->assertJsonPath('play.source', 'free')
             ->assertJsonPath('state.play.can_play', true);
-    })->with(['trial', 'paid']);
+    })->with(['legacy_trial', 'paid']);
+
+    it('M3-13: an unpaid challenge plays while the payments kill switch is off, and is locked when it is on', function () {
+        config(['payments.enforced' => false]);
+        [, $child, $pet] = plFamily();
+        Pet::whereKey($pet->id)->update(['trial_ends_at' => '2026-10-06 18:00:00']); // born without a trial (M3-13)
+        $pet->refresh();
+        plNow($pet, '2026-10-07 08:00:00');
+        plPlay($child)->assertOk()->assertJsonPath('status', 'accepted');
+
+        config(['payments.enforced' => true]);
+        plPlay($child)->assertStatus(423)->assertJsonPath('reason', 'payment_required');
+    });
 
     it('has no play for a free mutt, a mutt shown as free or a legacy pet (422, play null)', function (string $case) {
         plAt('2026-10-06 18:00:00');
@@ -266,7 +279,7 @@ describe('eligibility (§2, §3.1)', function () {
             // Grandfathered mutt challenge: the parent sees "Free" (M5-F02).
             'grandfathered_mutt' => Pet::factory()->mutt()->create(['user_id' => $child->id, 'arrival_age_months' => 4]),
             // (D) Q2: legacy pets get no play.
-            'legacy' => Pet::factory()->borderCollie()->trial()->create(['user_id' => $child->id, 'arrival_age_months' => null]),
+            'legacy' => Pet::factory()->borderCollie()->purchased()->create(['user_id' => $child->id, 'arrival_age_months' => null]),
         };
         disableHygieneEvents($pet);
         plNow($pet, '2026-10-07 08:00:00');
@@ -278,7 +291,7 @@ describe('eligibility (§2, §3.1)', function () {
     })->with(['free_mutt', 'grandfathered_mutt', 'legacy']);
 
     it('is locked while the challenge waits for payment (423, play null)', function () {
-        [, $child, $pet] = plFamily('trial', [
+        [, $child, $pet] = plFamily('legacy_trial', [
             'trial_ends_at' => Carbon::parse('2026-10-06 19:00:00', 'UTC'),
             'payment_locked_at' => Carbon::parse('2026-10-06 19:00:00', 'UTC'),
         ]);
@@ -564,7 +577,7 @@ describe('invitations: scheduling (§3.2, §12.2)', function () {
     });
 
     it('does not make up invitations after a payment lock across midnight, once paid (QA M2)', function () {
-        [, , $pet] = plFamily('trial', [
+        [, , $pet] = plFamily('legacy_trial', [
             'trial_ends_at' => Carbon::parse('2026-10-06 19:00:00', 'UTC'),
             'payment_locked_at' => Carbon::parse('2026-10-06 19:00:00', 'UTC'),
         ]);

@@ -560,9 +560,16 @@ class PetActivityService
     {
         // M3-13: a purchase made before the birth that is still unassigned pays
         // this pet first (own transaction, lock order family → pet → credit), so
-        // the birth below is not locked. Unborn pets only — no-op otherwise.
-        if ($pet->isUnborn()) {
-            $this->credits->assignAvailableBeforeBirth($pet);
+        // the birth below is not locked. Only when this contract will proceed
+        // (QA PR #83 m2): an unborn pet whose only lock for this child is the
+        // contract itself, and no contract of this child yet. A race between
+        // this pre-check and the locked birth only means the credit pays a pet
+        // that is the family's only unpaid one anyway.
+        $fresh = $pet->fresh();
+        if ($fresh !== null && $fresh->isUnborn()
+            && $fresh->actionLockReasonFor($child) === PetLockReason::ContractRequired
+            && ! PetContract::where('pet_id', $fresh->id)->where('user_id', $child->id)->exists()) {
+            $this->credits->assignAvailableBeforeBirth($fresh);
         }
 
         return $this->withLockedPet($pet, ActivityType::SignedContract, function (Pet $locked) use ($child, $format, $signature): ActionResult {

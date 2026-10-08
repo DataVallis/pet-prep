@@ -241,8 +241,9 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
               const familyPet = family?.pets.find((p) => p.id === pet.pet_id);
               const names = familyPet && family ? caretakerNames(familyPet, family) : '';
               // M3-13: an unborn dog is bought first; it starts playing once the contract is signed.
-              const unborn = familyPet?.born_at === null;
-              const paused = pet.status === 'payment_required' && !unborn;
+              // With the server's kill switch off (status `trial`) nothing waits, so no "buy first" copy.
+              const unborn = familyPet?.born_at === null && pet.status === 'payment_required';
+              const paused = pet.status === 'payment_required' && familyPet?.born_at !== null;
               return (
                 <Card key={pet.pet_id} testID={`challenge-pet-${pet.pet_id}`}>
                   <Text style={styles.petTitle}>{S.petLine(breedLabel(familyPet?.breed_type ?? 'mutt'), names)}</Text>

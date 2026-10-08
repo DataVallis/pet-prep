@@ -68,12 +68,14 @@ class PetFactory extends Factory
     /**
      * A pet born before M3-13 whose 7-day free trial is still recorded:
      * trial_ends_at = birth + 7 family-local days (Pet::trialEndFor). Born
-     * pets only (an unborn pet never gets a trial any more).
+     * pets only (an unborn pet never gets a trial any more). An explicit
+     * `trial_ends_at` other than the birth is kept.
      */
     public function legacyTrial(): static
     {
         return $this->trial()->afterCreating(function (Pet $pet): void {
-            if ($pet->born_at === null) {
+            if ($pet->born_at === null
+                || ($pet->trial_ends_at !== null && ! $pet->trial_ends_at->equalTo($pet->born_at))) {
                 return;
             }
             DB::table('pets')->where('id', $pet->id)->update(['trial_ends_at' => $pet->trialEndFor($pet->born_at)]);

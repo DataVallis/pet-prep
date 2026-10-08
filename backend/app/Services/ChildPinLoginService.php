@@ -143,10 +143,10 @@ class ChildPinLoginService
                 'mode' => $mode,
                 'pet_profile' => $options,
                 'plan' => $newPetPlan?->value,
-                // M3-13 (David 2026-10-08): no free trial any more — a new challenge
-                // pet is payment_required from birth (false); null = no challenge pet.
-                // Kept for old app builds.
-                'trial_available' => $newPetPlan === PetPlan::Challenge ? false : null,
+                // M3-13 (David 2026-10-08): no free trial any more. Deprecated, always
+                // null — `false` would make TestFlight 3.0.0 say "already had a free
+                // trial" (QA PR #83 m1). Kept in the shape for old app builds.
+                'trial_available' => null,
             ];
         });
     }

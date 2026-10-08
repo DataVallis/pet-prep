@@ -266,6 +266,14 @@ describe('ChallengeScreen', () => {
     expect(screen.getByTestId('challenge-buy-7')).toBeTruthy();
   });
 
+  it('kill switch off: an unborn unpaid dog (status trial) just reads "not bought yet"', async () => {
+    getBilling.mockResolvedValue({ credits_available: 0, pets: [billingPet('trial', { trial_ends_at: null, trial_available: null })] });
+    renderWithQuery(<ChallengeScreen family={family({ type: 'challenge', status: 'trial' }, { born_at: null })} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('challenge-pet-7')).toHaveTextContent(/Izziv še ni kupljen/);
+    expect(screen.getByTestId('challenge-pet-7')).not.toHaveTextContent(/Še ni rojen|ustavljena/);
+  });
+
   it('a dog that still runs a pre-M3-13 trial shows when the game pauses (no "preizkus")', async () => {
     getBilling.mockResolvedValue({ credits_available: 0, pets: [billingPet('trial')] });
     renderWithQuery(<ChallengeScreen family={family(trialPlan(48))} onBack={jest.fn()} />);

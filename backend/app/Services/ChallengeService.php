@@ -290,7 +290,10 @@ class ChallengeService
 
         $pet->forceFill(['challenge_paid_at' => null, 'challenge_paid_source' => null])->save();
 
-        if ($pet->is_active && ! $pet->is_game_over && $pet->challengeStatus($now) === ChallengeStatus::PaymentRequired) {
+        // An unborn pet is never payment-locked (QA PR #83 M1): the child must
+        // still be able to sign — the lock comes at birth (lockAtBirth).
+        if ($pet->is_active && ! $pet->is_game_over && ! $pet->isUnborn()
+            && $pet->challengeStatus($now) === ChallengeStatus::PaymentRequired) {
             $this->lock($pet, $now);
         } else {
             PetUpdated::afterCommit($pet, self::EVENT_REFUNDED);

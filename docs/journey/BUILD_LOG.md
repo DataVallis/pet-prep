@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Dva brezplačna vstopa (mešanček + 7 dni izziva) sta ponudbo zameglila. Zdaj je jasno: hočeš poskusiti — mešanček; hočeš program s certifikatom — kupiš izziv in teden 1 se začne. Ura programa se ne porabi, dokler pes čaka na nakup.
 
-**Številke:** 11 novih testov strežnika (zaklep ob rojstvu, nakup pred rojstvom, samodejna dodelitev že kupljenega izziva, 12 tednov od nakupa, stari preizkusi do konca, brez zaklepa ob izklopljenih plačilih …); vseh 1378 testov strežnika zelenih; vseh 1467 testov aplikacije zelenih (nova preverjanja, da nobeno besedilo ne omenja preizkusa). Ni preizkušeno na telefonu.
+**Številke:** 14 novih testov strežnika (zaklep ob rojstvu, nakup pred rojstvom, samodejna dodelitev že kupljenega izziva, 12 tednov od nakupa, stari preizkusi do konca, vračilo pred rojstvom ne zaklene, brez zaklepa in z igro ob izklopljenih plačilih …); vseh 1429 testov strežnika zelenih (skupaj z igro M5-R05); vseh 1468 testov aplikacije zelenih (nova preverjanja, da nobeno besedilo ne omenja preizkusa). Ni preizkušeno na telefonu.
 
 **Kako povedati:**
 - 👩 Starši: »PetPrep lahko preizkusite brezplačno z mešančkom — za vedno. Ko ste pripravljeni na pravi 12-tedenski izziv (49,99 € enkratno, brez naročnine), ga kupite in teden 1 se začne. Kupite ga lahko še preden otrok podpiše pogodbo.«
@@ -29,7 +29,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Kaj se je zgodilo:** Strežnik zna igro z žogo in crkljanje. Otrok lahko igro konča kadarkoli (ni tihih ur, ni nereda, pes ni zaklenjen); kuža je nato 30 minut »vesel«. Vsak dan kuža sam pripravi dve vabili (eno za žogo, eno za crkljanje) ob naključni uri med 7:00 in 20:00 izven tihih ur, vsaj 3 ure narazen; vabilo se pokaže le, ko je današnji sprehod opravljen ter hrana in voda nad 30 %. Starš vidi vrstico v časovnici in koliko iger je bilo danes. Mini-igri v aplikaciji še ni (*načrt*, naslednji korak).
 
-**Odločitev:** pravila je določil David 7. in 8. 10. (samo izziv, tudi v preizkusu; prosto kadarkoli; vabilo po sprehodu; 30 min veselja; starš brez pusha; skupni pes). Številke, ki jih David še ni potrdil (2 vabili, 2 uri, 7–20, brez igre v tihih urah, legacy psi brez igre), so *predlog* in na enem mestu (`config/play.php`).
+**Odločitev:** pravila je določil David 7. in 8. 10. (samo izziv — plačan, ali tekoči stari preizkus / ko je stikalo plačil izklopljeno, saj preizkusa od M3-13 ni več; prosto kadarkoli; vabilo po sprehodu; 30 min veselja; starš brez pusha; skupni pes). Številke, ki jih David še ni potrdil (2 vabili, 2 uri, 7–20, brez igre v tihih urah, legacy psi brez igre), so *predlog* in na enem mestu (`config/play.php`).
 
 **Zakaj je pomembno:** Ko je vse narejeno, mora biti s kužkom še vedno kaj za početi — in to brez kazni. Igra je nagrada: če je otrok prezre, se ne zgodi nič.
 

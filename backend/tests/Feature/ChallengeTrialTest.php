@@ -791,7 +791,7 @@ describe('M3-13 — no free trial: the challenge starts with a purchase (David 2
         expect(PushNotification::count())->toBe(1)
             ->and($later->programSecondsAt(now()))->toBe(0)
             ->and($later->hunger_level)->toBe(100.0);
-        ctBilling($parent)->assertJsonPath('pets.0.status', 'payment_required')->assertJsonPath('pets.0.trial_available', false);
+        ctBilling($parent)->assertJsonPath('pets.0.status', 'payment_required')->assertJsonPath('pets.0.trial_available', null);
     });
 
     it('starts the 12-week clock at the purchase, not at the birth', function () {
@@ -838,6 +838,42 @@ describe('M3-13 — no free trial: the challenge starts with a purchase (David 2
         expect($pet->fresh()->isPaymentLocked())->toBeFalse()
             ->and(PushNotification::count())->toBe(0)
             ->and($other->fresh()->challengeStatus())->toBe(ChallengeStatus::Trial);
+    });
+
+    it('a refund before birth never locks the unborn pet: the child signs, the lock comes at birth (QA PR #83 M1)', function () {
+        Event::fake([PetUpdated::class]);
+        [$parent, $child, $pet] = ctUnbornFamily();
+        ctPurchase($parent, ['transaction_id' => 'tx-u'])->assertJsonPath('outcome', 'granted'); // auto-assigned to the unborn pet
+        expect($pet->fresh()->challengeStatus())->toBe(ChallengeStatus::Paid);
+
+        ctPurchase($parent, ['type' => 'CANCELLATION', 'transaction_id' => 'tx-u'])->assertJsonPath('outcome', 'revoked');
+        $refunded = $pet->fresh();
+        expect($refunded->isPaymentLocked())->toBeFalse()
+            ->and($refunded->challengeStatus())->toBe(ChallengeStatus::PaymentRequired)
+            ->and($refunded->actionLockReason())->toBe(PetLockReason::ContractRequired)
+            ->and(PetStatusPeriod::where('pet_id', $pet->id)->exists())->toBeFalse();
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id && $e->eventType === 'challenge_refunded');
+
+        ctAt('2026-10-08 10:00:00');
+        ctSign($child)->assertCreated()->assertJsonPath('state.lock.reason', 'payment_required');
+        expect($pet->fresh()->isPaymentLocked())->toBeTrue()
+            ->and($pet->fresh()->payment_locked_at->toIso8601String())->toBe('2026-10-08T10:00:00+00:00');
+    });
+
+    it('assigns no held credit when the contract will not proceed (hard stop) (QA PR #83 m2)', function () {
+        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        ctPurchase($parent);
+        $child = User::factory()->child()->create(['parent_id' => $parent->id]);
+        $pet = Pet::factory()->borderCollie()->trial()->unborn()->create(['user_id' => $child->id]);
+        Pet::whereKey($pet->id)->update(['is_hard_stopped' => true]);
+
+        ctSign($child)->assertStatus(423)->assertJsonPath('reason', 'hard_stopped');
+        expect(ChallengeCredit::sole()->pet_id)->toBeNull()
+            ->and($pet->fresh()->challenge_paid_at)->toBeNull();
+
+        Pet::whereKey($pet->id)->update(['is_hard_stopped' => false]);
+        ctSign($child)->assertCreated()->assertJsonPath('state.pet.plan.status', 'paid');
+        expect(ChallengeCredit::sole()->assigned_via)->toBe('birth');
     });
 
     it('auto-assigns a purchase to an unborn pet that is the only unpaid one (bought before the contract)', function () {
@@ -948,11 +984,11 @@ describe('M3-13 — no free trial: the challenge starts with a purchase (David 2
 
         // The next pet: the waiting credit pays it at birth (only unpaid pet).
         $second = Pet::factory()->borderCollie()->trial()->unborn()->create(['user_id' => $child->id]);
-        ctBilling($parent)->assertJsonPath('pets.0.pet_id', $second->id)->assertJsonPath('pets.0.trial_available', false);
+        ctBilling($parent)->assertJsonPath('pets.0.pet_id', $second->id)->assertJsonPath('pets.0.trial_available', null);
         ctSign($child)->assertCreated()->assertJsonPath('state.pet.plan.status', 'paid');
     });
 
-    it('tells the parent at PIN time that a new challenge pet has no free trial (deprecated field)', function () {
+    it('answers trial_available null at PIN time (deprecated; false would show old builds a "no free trial" note)', function () {
         seedLifeStageData();
         $parent = User::factory()->parent()->create();
         $fresh = app(ChildProfileService::class)->createChild($parent, 'Nova', null);
@@ -960,7 +996,7 @@ describe('M3-13 — no free trial: the challenge starts with a purchase (David 2
         actingAsRole($parent);
 
         postJson('/api/parent/generate-pin', ['child_id' => $fresh->id, 'breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy'])->assertOk()
-            ->assertJsonPath('plan', 'challenge')->assertJsonPath('trial_available', false);
+            ->assertJsonPath('plan', 'challenge')->assertJsonPath('trial_available', null);
         postJson('/api/parent/generate-pin', ['child_id' => $fresh->id, 'plan' => 'free'])->assertOk()
             ->assertJsonPath('plan', 'free')->assertJsonPath('trial_available', null);
     });

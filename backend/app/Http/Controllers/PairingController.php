@@ -96,8 +96,8 @@ class PairingController extends Controller
                     'plan' => $result['plan'],
                     /**
                      * Deprecated (M3-13, David 2026-10-08: no free trial any more): always
-                     * false for a new challenge pet (payment_required from birth); null = no
-                     * challenge pet. Kept for old app builds.
+                     * null (a new challenge pet is payment_required from birth). Kept in the
+                     * shape for old app builds.
                      *
                      * @var bool|null
                      */

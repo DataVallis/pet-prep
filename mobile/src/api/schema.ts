@@ -5345,7 +5345,7 @@ export interface operations {
                                 illness_until: string | null;
                                 is_game_over: boolean;
                                 certificate_eligible: boolean;
-                                /** @description M3-11: free | challenge, trial / payment_required / paid (null for free). */
+                                /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
                                 plan: {
                                     type: string;
                                     /** @enum {string|null} */
@@ -6370,10 +6370,10 @@ export interface operations {
                         plan: "free" | "challenge" | null;
                         /**
                          * @description Deprecated (M3-13, David 2026-10-08: no free trial any more): always
-                         *     false for a new challenge pet (payment_required from birth); null = no
-                         *     challenge pet. Kept for old app builds. M3-13 (David 2026-10-08): no free trial any more — a new challenge
-                         *     pet is payment_required from birth (false); null = no challenge pet.
-                         *     Kept for old app builds.
+                         *     null (a new challenge pet is payment_required from birth). Kept in the
+                         *     shape for old app builds. M3-13 (David 2026-10-08): no free trial any more. Deprecated, always
+                         *     null — `false` would make TestFlight 3.0.0 say "already had a free
+                         *      trial" (QA PR #83 m1). Kept in the shape for old app builds.
                          */
                         trial_available: boolean | null;
                     };

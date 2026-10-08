@@ -244,7 +244,7 @@ class ChallengeCreditService
 
         return [
             'credits_available' => ChallengeCredit::where('family_id', $family->id)->available()->count(),
-            // Kill switch (config/payments.php): false = nobody is locked after the trial yet.
+            // Kill switch (config/payments.php): false = nobody is payment-locked yet.
             'payments_enforced' => Pet::paymentsEnforced(),
             'pets' => $pets->map(fn (Pet $pet): array => [
                 'pet_id' => $pet->id,
@@ -262,17 +262,18 @@ class ChallengeCreditService
     }
 
     /**
-     * M3-13 (the free trial is gone; "one trial per child" P7 retired): born →
-     * whether a pre-M3-13 trial ran (trial_ends_at after birth); unborn →
-     * false (it will be payment_required at birth). Null for a free pet.
+     * M3-13 (the free trial is gone; "one trial per child" P7 retired):
+     * true only for a born pet whose pre-M3-13 trial ran (trial_ends_at
+     * after birth); null otherwise — never `false`, which TestFlight 3.0.0
+     * renders as "no free trial, the child already had one" (QA PR #83 m1).
      */
     private function trialAvailable(Pet $pet): ?bool
     {
-        if ($pet->plan !== PetPlan::Challenge) {
+        if ($pet->plan !== PetPlan::Challenge || $pet->born_at === null || ChallengeService::startedWithoutTrial($pet)) {
             return null;
         }
 
-        return $pet->born_at !== null && ! ChallengeService::startedWithoutTrial($pet);
+        return true;
     }
 
     /**

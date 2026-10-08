@@ -1,6 +1,6 @@
 # PetPrep — Igra in crkljanje (M5-R05)
 
-> **Status:** spec, 8. 10. 2026. **Odločil David 7. 10. 2026:** igra in crkljanje vplivata **samo na razpoloženje in video** (nikoli na točke, Care Score, rutine, bolezen ali game over); **samo v plačanem izzivu**; **igra = kratka mini-igra metanja žoge**, **crkljanje = božanje kužka s prstom**. **David 8. 10. 2026 09:19 (odgovori na vprašanja Q1–Q8):** tudi v preizkusu izziva (Q1); **otrok se lahko igra in crklja kadarkoli sam** — vabila so le spodbuda (Q3); vabilo samo, ko je opravljen današnji sprehod (Q4); razpoloženje = 30 min »vesel« (Q5); starš vidi časovnico in dnevno število, brez pusha in brez točk (Q7); pri skupnem psu se vsak otrok igra prosto, vabilo opravi prvi (Q8).
+> **Status:** spec, 8. 10. 2026. **Odločil David 7. 10. 2026:** igra in crkljanje vplivata **samo na razpoloženje in video** (nikoli na točke, Care Score, rutine, bolezen ali game over); **samo v plačanem izzivu**; **igra = kratka mini-igra metanja žoge**, **crkljanje = božanje kužka s prstom**. **David 8. 10. 2026 09:19 (odgovori na vprašanja Q1–Q8):** tudi v preizkusu izziva (Q1; od M3-13, 10:28, preizkusa ni več — velja: plačan izziv ali tekoči stari preizkus / ko je stikalo plačil izklopljeno); **otrok se lahko igra in crklja kadarkoli sam** — vabila so le spodbuda (Q3); vabilo samo, ko je opravljen današnji sprehod (Q4); razpoloženje = 30 min »vesel« (Q5); starš vidi časovnico in dnevno število, brez pusha in brez točk (Q7); pri skupnem psu se vsak otrok igra prosto, vabilo opravi prvi (Q8).
 > Kar ni Davidova odločitev, je **Claudov predlog**, označen z **(D)** = čaka Davidovo potrditev. Odločena pravila so tudi v `PRODUCT_SPEC.md` §5 in §8.
 > **Temeljno pravilo:** igra je **nagrada brez kazni**. Če otrok vabilo prezre ali se ne igra, se ne zgodi nič slabega — nobenega opomnika, nobene krivde, nobene številke, ki pade.
 
@@ -78,7 +78,7 @@ Nič. Vabilo po 2 urah tiho izgine. Brez besedila »zamudil si«, brez opomnika,
 - Brez merilnika, brez številke, brez zgodovine razpoloženja. Ne vpliva na točke, Care Score, rutine, upadanje, bolezen ali game over.
 
 ## 6. Mediji in strošek
-- **Brez novih generacij AI.** Video `playing` je že v polnem naboru (`config/media.php` → `video_states.full`), ki ga dobi izziv, plačan z nakupom (PAYMENTS_SPEC P6). Pes v preizkusu ali grandfathered ima osnovni nabor (`idle`, `sleeping`) — aplikacija uporabi `idle` + animacijo v aplikaciji (žoga, srčki); obstoječa veriga nadomestkov (`videoChain`: `playing` → `idle`) to že zna.
+- **Brez novih generacij AI.** Video `playing` je že v polnem naboru (`config/media.php` → `video_states.full`), ki ga dobi izziv, plačan z nakupom (PAYMENTS_SPEC P6). Neplačan pes (tekoči stari preizkus, stikalo izklopljeno) ali grandfathered ima osnovni nabor (`idle`, `sleeping`) — aplikacija uporabi `idle` + animacijo v aplikaciji (žoga, srčki); obstoječa veriga nadomestkov (`videoChain`: `playing` → `idle`) to že zna.
 - Možen kasneje: video `cuddle` (≈ 0,56 $ na psa na življenjsko obdobje — Kling 3.0 Pro, 5 s × 0,112 $/s; mladiček Border Collie v izzivu ≈ 1,12 $), šele z žetoni (M4-09).
 
 ### 6.1 Faza 2 / raziskava: interaktivni 3D kuža
@@ -132,10 +132,10 @@ Brez besedil za zamujeno / prezrto (namenoma). Brez imen otrok v otroški aplika
 
 ## 12. Technical design (English)
 
-> Decided: mood / video only, paid challenge incl. trial (Q1), free play any time (Q3), invitations only after today's walk goal (Q4), 30-minute happy scene (Q5), parent timeline + daily count, no push (Q7), shared pet: free play for all, invitation completed by the first child (Q8). Items marked (D) above are proposals.
+> Decided: mood / video only, paid challenge (Q1; plus a running pre-M3-13 trial / payments kill switch off — M3-13), free play any time (Q3), invitations only after today's walk goal (Q4), 30-minute happy scene (Q5), parent timeline + daily count, no push (Q7), shared pet: free play for all, invitation completed by the first child (Q8). Items marked (D) above are proposals.
 
 ### 12.1 Eligibility
-`PlayService::eligible(Pet $pet): bool` = `plan = challenge` ∧ `challengeStatus() ∈ {trial, paid}` ∧ `! awaitsPayment()` ∧ `! isLegacyProfile()` (Q2, D) ∧ `! isUnborn()` ∧ not game over / inactive.
+`PlayService::eligible(Pet $pet): bool` = `plan = challenge` ∧ `challengeStatus() ∈ {trial, paid}` (`trial` since M3-13 = a running pre-M3-13 trial or the payments kill switch off) ∧ `! awaitsPayment()` ∧ `! isLegacyProfile()` (Q2, D) ∧ `! isUnborn()` ∧ not game over / inactive.
 `PlayService::canPlayNow(Pet $pet, $now)` = `eligible` ∧ not frozen (hard stop, illness) ∧ not quiet now (D) ∧ no open hygiene event (existing "clean first" rule).
 No `features` flag: the feature has no consequences, so pets of any app build are scheduled; an old build ignores the payload.
 
