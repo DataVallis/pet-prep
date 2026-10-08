@@ -8,6 +8,7 @@ import { ApiError, api } from '@/api/client';
 import AddChildScreen, { ADD_CHILD_STRINGS as S } from '@/screens/parent/AddChildScreen';
 import { PICKER_STRINGS as PICKER } from '@/modules/petProfile/picker';
 import { breedName } from '@/modules/species/species';
+import * as features from '@/config/features';
 import { useAppStore } from '@/store/appStore';
 import { makeFamilyChild, makeFamilyDashboard, makeFamilyPet, makePet } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
@@ -748,6 +749,12 @@ describe('AddChildScreen', () => {
 
     beforeEach(() => {
       generatePin.mockResolvedValue(pinResponse('734912', { child_id: 5, mode: 'new_pet' }));
+      // These flows need a build that can show cats (CAT_UI_READY on); the real build can't (QA #94 m3).
+      jest.spyOn(features, 'showableSpecies').mockReturnValue(['dog', 'cat']);
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
     });
 
     async function openNewPet() {
@@ -826,6 +833,68 @@ describe('AddChildScreen', () => {
       // Only dogs left → straight to the dog picker, origin and age kept.
       expect(screen.queryByTestId('breed-option-domestic_cat')).toBeNull();
       expect(screen.getByTestId('origin-option-bought').props.accessibilityState.checked).toBe(true);
+    });
+
+    it('QA #94 m3: this build (no cat UI) never offers cats, even if the server sends them', async () => {
+      jest.restoreAllMocks(); // the real showableSpecies(): dogs only
+      getBreedCatalogue.mockResolvedValue(CATS_ON);
+      renderWithQuery(<AddChildScreen onBack={jest.fn()} child={NEW_CHILD} />);
+      await flush();
+      expect(screen.getByText(S.newPet)).toBeTruthy();
+      fireEvent.press(screen.getByTestId('pet-option-new'));
+      await flush();
+      expect(screen.queryByTestId('species-picker')).toBeNull();
+      expect(screen.queryByTestId('breed-option-domestic_cat')).toBeNull();
+      expect(screen.getByTestId('breed-option-mutt')).toBeTruthy();
+    });
+
+    it('QA #94 m1: a hung catalogue request → after 5 s the fallback dogs, never an endless spinner', async () => {
+      getBreedCatalogue.mockReset();
+      getBreedCatalogue.mockImplementation(() => new Promise(() => {})); // never answers
+      await openNewPet();
+      expect(screen.getByTestId('pet-picker-loading')).toBeTruthy();
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(4_000);
+      });
+      expect(screen.getByTestId('pet-picker-loading')).toBeTruthy();
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(1_100);
+      });
+      expect(screen.queryByTestId('pet-picker-loading')).toBeNull();
+      expect(screen.getByTestId('breed-option-mutt')).toBeTruthy();
+      await pickDog('bought', 'adult');
+      expect(generatePin).toHaveBeenCalledWith(
+        expect.objectContaining({ profile: { species: 'dog', breed: 'mutt', origin: 'bought', age_stage: 'adult', plan: 'free' } }),
+      );
+    });
+
+    it('QA #94 m4: after species_unavailable the stale cat catalogue never shows again while reloading', async () => {
+      getBreedCatalogue.mockResolvedValue(CATS_ON);
+      generatePin.mockRejectedValueOnce(new ApiError('x', 422, { reason: 'species_unavailable' }));
+      await openNewPet();
+      fireEvent.press(screen.getByTestId('species-option-cat'));
+      fireEvent.press(screen.getByTestId('plan-option-free'));
+      fireEvent.press(screen.getByTestId('origin-option-bought'));
+      fireEvent.press(screen.getByTestId('age-option-puppy'));
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      await flush();
+
+      let answer: (body: unknown) => void = () => undefined;
+      getBreedCatalogue.mockImplementation(() => new Promise((resolve) => (answer = resolve)));
+      fireEvent.press(screen.getByTestId('pin-change-dog'));
+      await flush();
+      // Reset, not invalidate: no cached cat data — a spinner until the new answer.
+      expect(screen.getByTestId('pet-picker-loading')).toBeTruthy();
+      expect(screen.queryByTestId('species-picker')).toBeNull();
+      expect(screen.queryByTestId('species-option-cat')).toBeNull();
+
+      await act(async () => {
+        answer(DOG_CATALOGUE);
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(screen.queryByTestId('pet-picker-loading')).toBeNull();
+      expect(screen.queryByTestId('breed-option-domestic_cat')).toBeNull();
+      expect(screen.getByTestId('breed-option-mutt')).toBeTruthy();
     });
 
     it('422 breed_species_mismatch → explained, back to the picker', async () => {

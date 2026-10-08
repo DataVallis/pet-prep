@@ -2,6 +2,7 @@
  * M5-R06-02: the server-driven picker catalogue (`GET /api/breeds`), search and the
  * species-aware choice rules.
  */
+import { showableSpecies } from '@/config/features';
 import { i18n } from '@/i18n';
 import {
   breedsOf,
@@ -42,8 +43,11 @@ const BOTH_RAW = {
   ],
 };
 
+/** A build that can show cats (`CAT_UI_READY` on). */
+const CATS_SHOWABLE = ['dog', 'cat'] as const;
+
 function both(): BreedCatalogue {
-  const catalogue = readBreedCatalogue(BOTH_RAW);
+  const catalogue = readBreedCatalogue(BOTH_RAW, CATS_SHOWABLE);
   if (!catalogue) throw new Error('catalogue');
   return catalogue;
 }
@@ -67,12 +71,24 @@ describe('readBreedCatalogue', () => {
     const catalogue = readBreedCatalogue({
       species: ['dog', 'cat', 'fish'],
       breeds: [entry('mutt', 'dog', false), entry('sphynx', 'cat', true), entry('maine_coon', 'dog', true), 'nonsense'],
-    });
+    }, CATS_SHOWABLE);
     expect(catalogue).toEqual({ species: ['dog'], breeds: [expect.objectContaining({ breed: 'mutt' })] });
     expect(readBreedCatalogue({ species: [], breeds: [] })).toBeNull();
-    expect(readBreedCatalogue({ species: ['cat'], breeds: [entry('mutt', 'dog', false)] })).toBeNull();
+    expect(readBreedCatalogue({ species: ['cat'], breeds: [entry('mutt', 'dog', false)] }, CATS_SHOWABLE)).toBeNull();
     expect(readBreedCatalogue(null)).toBeNull();
     expect(readBreedCatalogue('<html>')).toBeNull();
+  });
+
+  it('QA #94 m3: a build without the cat UI drops cats even if the server sends them (misconfiguration)', () => {
+    // Default = this build (CAT_UI_READY false) → dogs only.
+    const catalogue = readBreedCatalogue(BOTH_RAW);
+    expect(catalogue?.species).toEqual(['dog']);
+    expect(catalogue?.breeds.map((b) => b.breed)).toEqual(['mutt', 'border_collie']);
+    expect(readBreedCatalogue(BOTH_RAW, ['dog'])?.species).toEqual(['dog']);
+    // Cats only → nothing this build can show → fallback (null).
+    expect(readBreedCatalogue({ species: ['cat'], breeds: BOTH_RAW.breeds })).toBeNull();
+    expect(showableSpecies(false)).toEqual(['dog']);
+    expect(showableSpecies(true)).toEqual(['dog', 'cat']);
   });
 
   it('a breed listed for a species that is not offered is ignored (never a hidden cat)', () => {

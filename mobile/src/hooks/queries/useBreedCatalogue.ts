@@ -6,9 +6,12 @@
  * - Cached for an hour (the catalogue changes only when an admin edits `breed_configs`);
  *   one retry, then {@link FALLBACK_CATALOGUE} — dog onboarding never breaks when the
  *   catalogue is unreachable or malformed.
- * - `catalogue` is null only while the first request is still running.
+ * - `catalogue` is null only while the first request is still running, and at most
+ *   {@link CATALOGUE_LOADING_LIMIT_MS}: a hung request (no answer, no error) then shows the
+ *   fallback too, so the picker never spins forever (QA PR #94 m1). A late answer replaces it.
  */
 
+import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 import { api, CLIENT_FEATURES, type ClientFeature } from '@/api/client';
@@ -17,6 +20,9 @@ import { FALLBACK_CATALOGUE, readBreedCatalogue, type BreedCatalogue } from '@/m
 
 export const breedCatalogueKey = (features: readonly ClientFeature[] = CLIENT_FEATURES) =>
   ['parent', 'breeds', [...features].sort().join(',')] as const;
+
+/** Longest the picker shows a spinner before it falls back to today's dogs. */
+export const CATALOGUE_LOADING_LIMIT_MS = 5_000;
 
 export interface BreedCatalogueState {
   /** The catalogue to show: the server's, or the fallback dogs after a failure; null while loading. */
@@ -39,7 +45,17 @@ export function useBreedCatalogue(
     retry: (failureCount, error) => failureCount < 1 && shouldRetry(failureCount, error),
   });
   const fromServer = query.data ?? null;
-  const failed = query.isError || (query.isSuccess && fromServer === null);
+  const waiting = enabled && fromServer === null && query.isPending;
+  const [timedOut, setTimedOut] = useState(false);
+  useEffect(() => {
+    if (!waiting) {
+      setTimedOut(false);
+      return undefined;
+    }
+    const timer = setTimeout(() => setTimedOut(true), CATALOGUE_LOADING_LIMIT_MS);
+    return () => clearTimeout(timer);
+  }, [waiting]);
+  const failed = query.isError || (query.isSuccess && fromServer === null) || (waiting && timedOut);
   return {
     catalogue: fromServer ?? (failed ? FALLBACK_CATALOGUE : null),
     isFallback: fromServer === null && failed,

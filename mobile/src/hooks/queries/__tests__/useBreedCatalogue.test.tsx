@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 
 import { ApiError, api } from '@/api/client';
-import { breedCatalogueKey, useBreedCatalogue } from '@/hooks/queries/useBreedCatalogue';
+import { breedCatalogueKey, CATALOGUE_LOADING_LIMIT_MS, useBreedCatalogue } from '@/hooks/queries/useBreedCatalogue';
 import { FALLBACK_CATALOGUE } from '@/modules/petProfile/picker';
 
 jest.mock('@/api/client', () => {
@@ -43,7 +43,8 @@ describe('useBreedCatalogue', () => {
     getBreedCatalogue.mockResolvedValue(CATS_ON);
     const { result } = setup();
     expect(result.current.catalogue).toBeNull();
-    await waitFor(() => expect(result.current.catalogue?.species).toEqual(['dog', 'cat']));
+    // The server offers cats, but this build can't show them (CAT_UI_READY false, QA #94 m3).
+    await waitFor(() => expect(result.current.catalogue?.species).toEqual(['dog']));
     expect(result.current.isFallback).toBe(false);
     // This build's features (no species_cat while CAT_UI_READY is false).
     expect(getBreedCatalogue).toHaveBeenCalledWith(['behaviour_events', 'training'], expect.anything());
@@ -73,6 +74,32 @@ describe('useBreedCatalogue', () => {
     const second = setup();
     await waitFor(() => expect(second.result.current.catalogue).toBe(FALLBACK_CATALOGUE));
     expect(second.result.current.isFallback).toBe(true);
+  });
+
+  it('QA #94 m1: a hung request shows the fallback after 5 s; a late answer still replaces it', async () => {
+    jest.useFakeTimers();
+    try {
+      let answer: (body: unknown) => void = () => undefined;
+      getBreedCatalogue.mockImplementation(() => new Promise((resolve) => (answer = resolve)));
+      const { result } = setup();
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(CATALOGUE_LOADING_LIMIT_MS - 100);
+      });
+      expect(result.current.catalogue).toBeNull();
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(200);
+      });
+      expect(result.current.catalogue).toBe(FALLBACK_CATALOGUE);
+      expect(result.current.isFallback).toBe(true);
+      await act(async () => {
+        answer(CATS_ON);
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(result.current.isFallback).toBe(false);
+      expect(result.current.catalogue?.species).toEqual(['dog']); // this build shows no cats (m3)
+    } finally {
+      jest.useRealTimers();
+    }
   });
 
   it('disabled → no request', async () => {

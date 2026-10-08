@@ -1,3 +1,5 @@
+import type { Species } from '@/types';
+
 /**
  * Build-time product switches of the app (complement the server switches in
  * `config/petprep.php`).
@@ -11,3 +13,8 @@
  * device test (R06-09).
  */
 export const CAT_UI_READY: boolean = false;
+
+/** The species this build can show (QA PR #94 m3): the picker drops any other species the server sends. */
+export function showableSpecies(catUiReady: boolean = CAT_UI_READY): readonly Species[] {
+  return catUiReady ? ['dog', 'cat'] : ['dog'];
+}

@@ -36,7 +36,7 @@ const BOTH = readBreedCatalogue({
     entry('domestic_cat', 'cat', false, 0, ['domača mačka', 'mešanka']),
     entry('maine_coon', 'cat', true, 10, ['maine coon', 'mejnkun']),
   ],
-}) as BreedCatalogue;
+}, ['dog', 'cat']) as BreedCatalogue; // a build with the cat UI (CAT_UI_READY on)
 
 function renderPicker(catalogue: BreedCatalogue | null, onConfirm = jest.fn(), onBack = jest.fn()) {
   render(

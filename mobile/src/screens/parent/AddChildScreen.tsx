@@ -199,8 +199,10 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
               setLockedBreeds((current) => (current.includes(refused) ? current : [...current, refused]));
             }
             if (kind === 'species_unavailable') {
-              // M5-R06-01: the species was switched off meanwhile — reload what is offered and choose again.
-              void queryClient.invalidateQueries({ queryKey: breedCatalogueKey() });
+              // M5-R06-01: the species was switched off meanwhile — reload what is offered and choose
+              // again. Reset (not invalidate): the stale catalogue with that species must never show
+              // again while the new one loads (QA PR #94 m4).
+              void queryClient.resetQueries({ queryKey: breedCatalogueKey() });
               setPickerChoice((c) => ({ ...c, species: null, breed: null }));
             }
             setPickerNotice(S.errors[kind]);

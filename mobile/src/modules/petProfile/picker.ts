@@ -17,6 +17,7 @@
 import type { LifeStage, NewPetProfile, PetBreed, PetOrigin, PetPlanType, PetSpecies } from '@/api/client';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
+import { showableSpecies } from '@/config/features';
 import { BREED_SPECIES, breedName, foldForSearch, isKnownBreed, isSpecies } from '@/modules/species/species';
 
 /**
@@ -101,9 +102,6 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
   ],
 };
 
-/** The fallback dogs (default breed list of the pure helpers below). */
-const FALLBACK_DOGS = FALLBACK_CATALOGUE.breeds;
-
 function readEntry(raw: unknown): CatalogueBreed | null {
   if (typeof raw !== 'object' || raw === null) return null;
   const o = raw as Record<string, unknown>;
@@ -126,13 +124,16 @@ function readEntry(raw: unknown): CatalogueBreed | null {
 /**
  * Loose `GET /api/breeds` body → typed catalogue: species in the server's order (dog
  * first), a species without a single known breed dropped; per species the free breed
- * first, then the paid ones by `sort_order` (ties by breed key). Null when nothing usable
+ * first, then the paid ones by `sort_order` (ties by breed key). Species this build can't
+ * show (`showableSpecies()`, cats only with `CAT_UI_READY`) are dropped. Null when nothing usable
  * is left — the caller then uses {@link FALLBACK_CATALOGUE}.
  */
-export function readBreedCatalogue(raw: unknown): BreedCatalogue | null {
+export function readBreedCatalogue(raw: unknown, showable: readonly PetSpecies[] = showableSpecies()): BreedCatalogue | null {
   if (typeof raw !== 'object' || raw === null) return null;
   const o = raw as Record<string, unknown>;
-  const listed = Array.isArray(o.species) ? o.species.filter(isSpecies) : [];
+  // QA PR #94 m3: never offer a species this build can't show (a cat while `CAT_UI_READY`
+  // is false), even if the server sends it by mistake.
+  const listed = Array.isArray(o.species) ? o.species.filter(isSpecies).filter((sp) => showable.includes(sp)) : [];
   const entries = (Array.isArray(o.breeds) ? o.breeds : [])
     .map(readEntry)
     .filter((e): e is CatalogueBreed => e !== null && listed.includes(e.species));
@@ -194,8 +195,8 @@ export const INITIAL_PICKER_CHOICE: PickerChoice = { species: null, plan: null, 
  */
 export function lockedBreedsFor(
   plan: PetPlanType | null,
-  serverLocked: readonly PetBreed[] = [],
-  breeds: readonly CatalogueBreed[] = FALLBACK_DOGS,
+  serverLocked: readonly PetBreed[],
+  breeds: readonly CatalogueBreed[],
 ): PetBreed[] {
   const base = breeds.filter((b) => (plan === 'challenge' ? !b.challenge_allowed : !b.free_plan_allowed)).map((b) => b.breed);
   return [...new Set([...base, ...serverLocked])];
@@ -211,8 +212,8 @@ export type BreedLockReason = 'free_only' | 'challenge_only' | 'server';
 export function breedLockReason(
   breed: PetBreed,
   plan: PetPlanType | null,
-  serverLocked: readonly PetBreed[] = [],
-  breeds: readonly CatalogueBreed[] = FALLBACK_DOGS,
+  serverLocked: readonly PetBreed[],
+  breeds: readonly CatalogueBreed[],
 ): BreedLockReason | null {
   const entry = breeds.find((b) => b.breed === breed);
   if (!entry) return 'server';
@@ -221,7 +222,7 @@ export function breedLockReason(
   return serverLocked.includes(breed) ? 'server' : null;
 }
 
-export function isBreedLocked(breed: PetBreed | null, locked: readonly PetBreed[] = lockedBreedsFor(null)): boolean {
+export function isBreedLocked(breed: PetBreed | null, locked: readonly PetBreed[]): boolean {
   return breed === null || locked.includes(breed);
 }
 
@@ -234,8 +235,8 @@ export function isBreedLocked(breed: PetBreed | null, locked: readonly PetBreed[
 export function choiceWithPlan(
   choice: PickerChoice,
   plan: PetPlanType,
-  serverLocked: readonly PetBreed[] = [],
-  breeds: readonly CatalogueBreed[] = FALLBACK_DOGS,
+  serverLocked: readonly PetBreed[],
+  breeds: readonly CatalogueBreed[],
 ): PickerChoice {
   if (plan === 'free') return { ...choice, plan, breed: freeBreedOf(breeds) ?? choice.breed };
   const locked = lockedBreedsFor(plan, serverLocked, breeds);
@@ -251,8 +252,8 @@ export function choiceWithPlan(
 export function choiceWithSpecies(
   choice: PickerChoice,
   species: PetSpecies,
-  serverLocked: readonly PetBreed[] = [],
-  breeds: readonly CatalogueBreed[] = FALLBACK_DOGS,
+  serverLocked: readonly PetBreed[],
+  breeds: readonly CatalogueBreed[],
 ): PickerChoice {
   if (choice.species === species && choice.breed !== null && breeds.some((b) => b.breed === choice.breed)) return choice;
   const fresh: PickerChoice = { ...choice, species, breed: freeBreedOf(breeds) };
@@ -265,8 +266,8 @@ export function choiceWithSpecies(
  */
 export function completeChoice(
   choice: PickerChoice,
-  serverLocked: readonly PetBreed[] = [],
-  breeds: readonly CatalogueBreed[] = FALLBACK_DOGS,
+  serverLocked: readonly PetBreed[],
+  breeds: readonly CatalogueBreed[],
 ): NewPetProfile | null {
   if (choice.species === null || choice.plan === null || choice.origin === null || choice.age_stage === null) return null;
   const ofSpecies = breeds.filter((b) => b.species === choice.species);
