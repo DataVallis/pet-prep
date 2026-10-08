@@ -3,6 +3,9 @@
 namespace App\Models;
 
 use App\Enums\BreedType;
+use App\Enums\Species;
+use App\Exceptions\BreedCatalogException;
+use App\Services\BreedCatalogService;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -17,6 +20,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $water_times_per_day Max water refills per family-local day (M1-07).
  * @property int $water_min_gap_minutes Minimum gap between refills (M1-07).
  * @property int|null $daily_steps_cap Optional cap on the stage-derived step goal (M5-R01; null = none, David 2026-10-05).
+ * @property bool $premium_unlock Paid breed (12-week challenge). Since M5-R06-01 the ONLY source of the
+ *                                free / paid rule (BreedType::isPremium(), BreedCatalogService).
+ * @property Species $species Catalogue species (M5-R06-01); for an enum breed always BreedType::species().
+ * @property int $sort_order Picker order inside "free" / "paid" of a species (M5-R06-01).
+ * @property list<string> $search_keywords Picker search synonyms (M5-R06-01, CAT_SPEC §10).
+ * @property string|null $label_key i18n key of the breed name in the apps, e.g. `breeds.domestic_cat`.
  *
  * Since M5-R01 meals / feed windows / the step goal depend on the pet's life
  * stage (`breed_stage_params`, LifeStageService). `feed_windows` stay the
@@ -46,7 +55,39 @@ class BreedConfig extends Model
         'water_min_gap_minutes',
         'premium_unlock',
         'daily_steps_cap',
+        'species',
+        'sort_order',
+        'search_keywords',
+        'label_key',
     ];
+
+    protected static function booted(): void
+    {
+        // An enum breed's species is fixed by the enum (pets_species_breed_check);
+        // the catalogue column follows it whatever the admin form sent.
+        static::saving(function (BreedConfig $config): void {
+            $breed = BreedType::fromSlug((string) $config->breed_slug);
+            if ($breed !== null) {
+                $config->species = $breed->species();
+            }
+
+            // QA PR #91 M1: exactly one free breed per species (BreedCatalogService).
+            if (! $config->exists || $config->isDirty(['premium_unlock', 'breed_slug'])) {
+                $violation = app(BreedCatalogService::class)->freeBreedViolation($config);
+                if ($violation !== null) {
+                    throw new BreedCatalogException($violation);
+                }
+            }
+        });
+        static::deleting(function (BreedConfig $config): void {
+            $violation = app(BreedCatalogService::class)->freeBreedViolation(null, [$config->id]);
+            if ($violation !== null) {
+                throw new BreedCatalogException($violation);
+            }
+        });
+        static::saved(fn () => BreedCatalogService::forget());
+        static::deleted(fn () => BreedCatalogService::forget());
+    }
 
     /**
      * The attributes that should be cast.
@@ -65,6 +106,9 @@ class BreedConfig extends Model
             'water_min_gap_minutes' => 'integer',
             'premium_unlock' => 'boolean',
             'daily_steps_cap' => 'integer',
+            'species' => Species::class,
+            'sort_order' => 'integer',
+            'search_keywords' => 'array',
         ];
     }
 

@@ -6,11 +6,11 @@ use App\Enums\BreedType;
 use App\Enums\ClientFeature;
 use App\Enums\FamilyRole;
 use App\Enums\PetPlan;
+use App\Enums\Species;
 use App\Enums\UserRole;
 use App\Exceptions\FamilyException;
 use App\Exceptions\PairingException;
 use App\Jobs\GeneratePetReferenceImage;
-use App\Models\BreedConfig;
 use App\Models\Family;
 use App\Models\FamilyMember;
 use App\Models\Pet;
@@ -160,6 +160,14 @@ class PairingService
             ])->saveQuietly();
             $this->families->addMember($family, $child, FamilyRole::Child);
 
+            // Deprecated flow = old app builds only, which can't show a cat (M5-R06-01,
+            // QA PR #91 m2): joining a cat is refused (uniform `pairing_refused` — no
+            // PIN oracle). A new pet here never has a profile → always a dog.
+            if ($parent->pairing_pet_id !== null
+                && Pet::find($parent->pairing_pet_id)?->speciesValue() === Species::Cat) {
+                throw new PairingException('The deprecated pairing flow is dog-only.');
+            }
+
             ['pet' => $pet, 'joined_existing' => $joined] = $this->attachChildToPet($family, $child, $parent->pairing_pet_id);
 
             // Consume the PIN so it cannot be reused
@@ -217,18 +225,37 @@ class PairingService
     /**
      * Breeds a new pet of this plan may have (M5-R01, M3-11 PAYMENTS_SPEC):
      * a breed needs a config; a premium breed (`breed_configs.premium_unlock`,
-     * the Border Collie) only on the `challenge` plan (the pet may be created
-     * before the purchase; it is payment_required until bought — M3-13). The
-     * free plan is the mutt only.
+     * e.g. the Border Collie / Maine Coon) only on the `challenge` plan (the pet
+     * may be created before the purchase; it is payment_required until bought —
+     * M3-13). The free plan takes only a breed without premium — the free breed
+     * of its species (mutt, domestic cat). M5-R06-01: premium comes only from the
+     * breed config (no "=== mutt" rule any more).
      */
     public static function breedAllowed(BreedType $breed, PetPlan $plan): bool
     {
-        $config = BreedConfig::forBreed($breed);
-        if ($config === null) {
+        $catalogue = app(BreedCatalogService::class);
+        if (! $catalogue->hasConfig($breed)) {
             return false;
         }
 
-        return $plan === PetPlan::Challenge || $breed === BreedType::Mutt;
+        return $plan === PetPlan::Challenge || ! $catalogue->isPremium($breed);
+    }
+
+    /**
+     * M5-R06-01: the breed belongs to the chosen species, and the species is
+     * available to this app build (cats: server flag + `species_cat`, plan T4).
+     *
+     * @throws FamilyException breed_species_mismatch (422), species_unavailable (422)
+     */
+    public function assertSpeciesAllowed(PetProfileChoice $profile): void
+    {
+        if ($profile->breed->species() !== $profile->species) {
+            throw new FamilyException('breed_species_mismatch', 'This breed does not belong to the chosen species.');
+        }
+
+        if (! app(SpeciesAvailability::class)->isAvailable($profile->species, $profile->features)) {
+            throw new FamilyException('species_unavailable', 'This animal is not available yet.');
+        }
     }
 
     /**
@@ -245,15 +272,16 @@ class PairingService
 
     /**
      * M5-F03 (David 2026-10-07): the 12-week challenge needs a paid breed —
-     * the mutt (also the default when no breed / no profile is sent) is the
-     * free plan's dog only. Called for a new pet when the parent explicitly
-     * chose `plan: challenge` (an omitted plan keeps the old-build default).
+     * the free breed of the species (also the default when no breed / no
+     * profile is sent: the mutt; a cat profile → the domestic cat) is the free
+     * plan's pet only. Called for a new pet when the parent explicitly chose
+     * `plan: challenge` (an omitted plan keeps the old-build default).
      *
      * @throws FamilyException challenge_requires_paid_breed (422)
      */
     public function assertPlanAllowed(?PetProfileChoice $profile, PetPlan $plan): void
     {
-        $breed = $profile?->breed ?? BreedType::Mutt;
+        $breed = $profile?->breed ?? Species::Dog->freeBreed();
         if ($plan === PetPlan::Challenge && ! $breed->isPremium()) {
             throw new FamilyException('challenge_requires_paid_breed', 'The 12-week challenge needs a paid breed; the mixed breed is the free plan.');
         }
@@ -261,8 +289,8 @@ class PairingService
 
     /**
      * The plan of a new pet when the app sent none (builds before M3-09):
-     * the challenge for a paid breed, the free plan for the mutt
-     * (PAYMENTS_SPEC P4 — a mutt is never a lockable challenge).
+     * the challenge for a paid breed, the free plan for a free breed
+     * (PAYMENTS_SPEC P4 — the free breed is never a lockable challenge).
      */
     public static function defaultPlanFor(BreedType $breed): PetPlan
     {
@@ -281,12 +309,15 @@ class PairingService
         // a bought mutt puppy). A breed the plan does not allow (or without a
         // config) falls back to the mutt (M3-11). Without a profile (old PIN,
         // deprecated /child/pair) → a legacy-profile mutt (pre-M5 rules).
+        // M5-R06-01: the fallback is the free breed of the chosen species (dog:
+        // the mutt) — never a breed of another species.
         $familyId = $family->id;
-        $breed = $profile?->breed ?? BreedType::Mutt;
-        if (! self::breedAllowed($breed, $plan)) {
-            $breed = BreedType::Mutt;
+        $species = $profile?->species ?? Species::Dog;
+        $breed = $profile?->breed ?? $species->freeBreed();
+        if ($breed->species() !== $species || ! self::breedAllowed($breed, $plan)) {
+            $breed = $species->freeBreed();
         }
-        // PAYMENTS_SPEC P4 / M5-F03: a mutt is never a (lockable) challenge — also
+        // PAYMENTS_SPEC P4 / M5-F03: a free breed is never a (lockable) challenge — also
         // for PINs stored before M5-F03 and the deprecated /child/pair flow.
         if ($plan === PetPlan::Challenge && ! $breed->isPremium()) {
             $plan = PetPlan::Free;
@@ -294,8 +325,11 @@ class PairingService
         $arrivalAge = $profile !== null ? $this->lifeStages->arrivalAgeFor($breed->slug(), $profile->ageStage) : null;
         $stage = $arrivalAge !== null ? $this->lifeStages->stageForAge($breed->slug(), $arrivalAge) : null;
         $dnaVersion = (int) config('media.pet_dna_version', PetDnaService::VERSION);
-        $petDna = $dnaVersion === PetDnaService::VERSION ? null : $this->falAiService->generateInitialPetDna($breed);
-        $mediaEnabled = $this->falAiService->isEnabled();
+        // M5-R06-01: a breed without appearance data (cats until M5-R06-07) gets no
+        // DNA and no AI media — never a dog prompt, never the legacy DNA v1.
+        $hasAppearance = PetDnaService::hasAppearance($breed->value);
+        $petDna = ! $hasAppearance || $dnaVersion === PetDnaService::VERSION ? null : $this->falAiService->generateInitialPetDna($breed);
+        $mediaEnabled = $hasAppearance && $this->falAiService->isEnabled();
 
         // Contract before birth (David 2026-10-04, PRODUCT_SPEC §3,
         // M1-07b): the pet exists from now on (DNA, reference image) but
@@ -306,6 +340,7 @@ class PairingService
             'user_id' => $child->id, // primary caretaker (deprecated mirror)
             'family_id' => $familyId,
             'breed_type' => $breed->value,
+            'species' => $breed->species()->value,
             'pet_dna' => $petDna,
             'media_status' => $mediaEnabled ? 'pending' : 'disabled',
             'hunger_level' => 100,
@@ -330,7 +365,7 @@ class PairingService
             'training_enabled' => $arrivalAge !== null && $profile?->supports(ClientFeature::Training) === true,
         ]);
 
-        if ($petDna === null) {
+        if ($petDna === null && $hasAppearance) {
             $pet->forceFill(['pet_dna' => $this->petDna->forNewPet($pet)])->saveQuietly();
         }
 

@@ -167,6 +167,7 @@ Velike kartice za vsako pasmo ne zadoščajo, ker bo pasem in vrst veliko (David
 3. **Pasma: seznam z iskanjem.**
    - Iskalno polje na vrhu išče brez šumnikov in brez razlike med velikimi in malimi črkami (»mesanka« najde »mešanka«) ter po sinonimih (»Maine Coon«, »mejnkun«; D).
    - Na vrhu je brezplačna izbira (Mešanček / Domača mačka) z značko **Brezplačno**, nato plačljive pasme po abecedi z značko **Izziv**.
+   - *Zgrajeno (M5-R06-01, Claude):* vrstni red plačljivih pasem določa `breed_configs.sort_order`, ki ga ureja admin (ne samodejna abeceda); ob enakem `sort_order` odloči slug pasme. Abecedo dobimo tako, da admin nastavi `sort_order` po abecedi.
    - Vrstica ima majhno sliko, ime in eno vrstico lastnosti (npr. »Dolga dlaka · česanje 3× na teden«).
    - Zaklenjena pasma je siva, s pojasnilom ob tapu (kot M5-F03).
    - Seznam pride s **strežnika** (katalog pasem po vrsti, z zaklepom in besedili), ne iz kode aplikacije. Nova pasma tako ne potrebuje nove različice aplikacije.

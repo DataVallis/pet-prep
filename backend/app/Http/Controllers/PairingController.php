@@ -34,8 +34,16 @@ class PairingController extends Controller
      * device). A new PIN for the child replaces their previous one.
      * 404 `child_not_found`, 422 `pet_not_joinable` | `already_paired` |
      * `breed_locked` | `challenge_requires_paid_breed` (M5-F03: explicit
-     * `plan: challenge` for a new pet with the mutt — also when no breed /
-     * no profile is sent, the mutt being the default).
+     * `plan: challenge` for a new pet with a free breed — the mutt / domestic
+     * cat; also when no breed / no profile is sent, the mutt being the default)
+     * | `breed_species_mismatch` | `species_unavailable` (M5-R06-01).
+     *
+     * Optional `species` (M5-R06-01): `dog` (default — old app builds) | `cat`.
+     * The breed must belong to it; without `breed` the species' free breed
+     * (mutt / domestic cat). Free / paid comes from `breed_configs.premium_unlock`
+     * (GET /api/breeds lists it). Cats are hidden: available only while the
+     * server flag `PETPREP_CATS_ENABLED` is on AND `features` contains
+     * `species_cat`; a cat always needs `origin` + `age_stage`.
      *
      * New pet profile (M5-R01, only without `pet_id`), all or nothing:
      * `origin` bought | adopted and `age_stage` puppy | young | adult |
@@ -82,9 +90,10 @@ class PairingController extends Controller
                      * M5-R01: the new pet's profile the PIN will create (mode new_pet with a profile);
                      * null = join / re-login, or no profile sent (→ legacy pet, pre-M5 rules).
                      *
-                     * `features` (M5-R02 / M5-R03): the app features stored for the new pet (behaviour_events, training).
+                     * `features` (M5-R02 / M5-R03): the app features stored for the new pet (behaviour_events, training, species_cat).
+                     * `species` (M5-R06-01): dog | cat.
                      *
-                     * @var array{breed: 'mutt'|'border_collie', origin: 'bought'|'adopted', age_stage: 'puppy'|'young'|'adult'|'senior', features: list<'behaviour_events'|'training'>}|null
+                     * @var array{breed: 'mutt'|'border_collie'|'domestic_cat'|'maine_coon', origin: 'bought'|'adopted', age_stage: 'puppy'|'young'|'adult'|'senior', features: list<'behaviour_events'|'training'|'species_cat'>, species: 'dog'|'cat'}|null
                      */
                     'pet_profile' => $result['pet_profile'],
                     /**

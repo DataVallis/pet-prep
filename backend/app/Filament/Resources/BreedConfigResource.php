@@ -2,14 +2,22 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\BreedType;
+use App\Enums\Species;
 use App\Filament\Resources\BreedConfigResource\Pages;
 use App\Models\BreedConfig;
+use App\Services\BreedCatalogService;
 use Closure;
+use Filament\Actions\Action;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
+use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\BulkAction;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Collection;
 
 class BreedConfigResource extends Resource
 {
@@ -169,7 +177,40 @@ class BreedConfigResource extends Resource
                     ->helperText('Minimum minutes between two water refills (M1-07).'),
 
                 Forms\Components\Toggle::make('premium_unlock')
-                    ->helperText('Whether this breed requires a premium/paid unlock.'),
+                    // QA PR #91 M1: same rule as BreedConfig::saving (exactly one free breed per species).
+                    ->rules([
+                        fn (Get $get, ?BreedConfig $record): Closure => function (string $attribute, mixed $value, Closure $fail) use ($get, $record): void {
+                            $candidate = $record !== null ? clone $record : new BreedConfig;
+                            $candidate->breed_slug = (string) $get('breed_slug');
+                            $candidate->premium_unlock = (bool) $value;
+                            if (($violation = app(BreedCatalogService::class)->freeBreedViolation($candidate)) !== null) {
+                                $fail($violation);
+                            }
+                        },
+                    ])
+                    ->helperText('Paid breed (12-week challenge). Since M5-R06-01 the ONLY source of free / paid, read LIVE for every pet of this breed — existing pets too (plan default, refunds, Free / Paid display). Each species must keep exactly one free breed, so the free breed cannot be switched while breeds are enum-based (a change that breaks it is refused).'),
+
+                // M5-R06-01 picker catalogue (GET /api/breeds).
+                Forms\Components\Select::make('species')
+                    ->options(collect(Species::cases())->mapWithKeys(fn (Species $s): array => [$s->value => ucfirst($s->value)])->all())
+                    ->default(Species::Dog->value)
+                    ->required()
+                    ->helperText('Dog / cat. For a breed the app knows (mutt, border-collie, domestic-cat, maine-coon) the species is fixed by the code and this value is ignored.'),
+
+                Forms\Components\TextInput::make('sort_order')
+                    ->integer()
+                    ->default(0)
+                    ->required()
+                    ->helperText('Picker order: free breed first, then paid breeds by this number.'),
+
+                Forms\Components\TextInput::make('label_key')
+                    ->maxLength(64)
+                    ->nullable()
+                    ->helperText('i18n key of the breed name in the apps (e.g. breeds.maine_coon). Empty = breeds.<breed>.'),
+
+                Forms\Components\TagsInput::make('search_keywords')
+                    ->default([])
+                    ->helperText('Search synonyms in the picker (lower case, with and without č/š/ž).'),
             ]);
     }
 
@@ -183,13 +224,26 @@ class BreedConfigResource extends Resource
 
                 Tables\Columns\TextColumn::make('breed_slug')
                     ->badge()
-                    ->colors([
-                        'primary' => 'mutt',
-                        'warning' => 'border-collie',
-                        'success' => fn ($state): bool => ! in_array($state, ['mutt', 'border-collie'], true),
-                    ])
+                    // Free breed primary, paid (challenge) breed warning — from premium_unlock;
+                    // a slug the app does not know (not in the catalogue) success (M5-R06-01).
+                    ->color(fn (BreedConfig $record): string => match (true) {
+                        BreedType::fromSlug((string) $record->breed_slug) === null => 'success',
+                        (bool) $record->premium_unlock => 'warning',
+                        default => 'primary',
+                    })
                     ->searchable()
                     ->sortable(),
+
+                Tables\Columns\TextColumn::make('species')
+                    ->badge()
+                    ->formatStateUsing(fn ($state): string => $state instanceof Species ? $state->value : (string) $state)
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('sort_order')
+                    ->label('Order')
+                    ->numeric()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
 
                 Tables\Columns\TextColumn::make('daily_steps_required')
                     ->numeric()
@@ -240,16 +294,38 @@ class BreedConfigResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('species')
+                    ->options(collect(Species::cases())->mapWithKeys(fn (Species $s): array => [$s->value => ucfirst($s->value)])->all()),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\DeleteBulkAction::make()
+                        ->before(function (Tables\Actions\DeleteBulkAction $action, Collection $records): void {
+                            self::refuseBreakingDelete($action, $records->modelKeys());
+                        }),
                 ]),
             ]);
+    }
+
+    /**
+     * QA PR #91 M1: a delete that would leave a species without exactly one
+     * free breed is cancelled with a notification (BreedConfig::deleting
+     * refuses it anyway).
+     *
+     * @param  list<int|string>  $ids
+     */
+    public static function refuseBreakingDelete(Action|BulkAction $action, array $ids): void
+    {
+        $violation = app(BreedCatalogService::class)->freeBreedViolation(null, array_map('intval', $ids));
+        if ($violation === null) {
+            return;
+        }
+
+        Notification::make()->danger()->title('Not deleted')->body($violation)->send();
+        $action->cancel();
     }
 
     public static function getRelations(): array

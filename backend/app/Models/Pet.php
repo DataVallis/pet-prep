@@ -12,6 +12,7 @@ use App\Enums\PetOrigin;
 use App\Enums\PetPlan;
 use App\Enums\PetStateEnum;
 use App\Enums\PetStatusPeriodKind;
+use App\Enums\Species;
 use App\Jobs\DeletePetMediaFiles;
 use App\Services\FamilyService;
 use App\Services\LifeStageService;
@@ -68,13 +69,19 @@ class Pet extends Model
                     : Family::create([])->id;
             }
 
+            // M5-R06-01: no breed → the free dog breed (the mutt).
+            $pet->breed_type ??= Species::Dog->freeBreed();
+            $pet->species = $pet->breed_type->species();
+
             // M3-11: a pet's plan is fixed at creation; only a challenge has a trial.
             // PAYMENTS_SPEC P4 / M5-F03: the default follows the breed, and an unpaid
-            // challenge of a breed without premium (the mutt) is the free plan — no
-            // creation path (admin, seeders, legacy pairing) makes a lockable mutt.
-            $pet->plan ??= PairingService::defaultPlanFor($pet->breed_type ?? BreedType::Mutt);
+            // challenge of a breed without premium (`breed_configs.premium_unlock` —
+            // the free breed of its species: mutt, domestic cat; M5-R06-01) is the
+            // free plan — no creation path (admin, seeders, legacy pairing) makes a
+            // lockable free-breed challenge.
+            $pet->plan ??= PairingService::defaultPlanFor($pet->breed_type);
             if ($pet->plan === PetPlan::Challenge && $pet->challenge_paid_at === null
-                && ! ($pet->breed_type ?? BreedType::Mutt)->isPremium()) {
+                && ! $pet->breed_type->isPremium()) {
                 $pet->plan = PetPlan::Free;
                 $pet->trial_ends_at = null;
                 $pet->payment_locked_at = null;
@@ -143,6 +150,16 @@ class Pet extends Model
         //    David 2026-10-03): hygiene 100 %, neglect clocks restart.
         // Re-activating a pet (or undoing game over) restarts the decay clock.
         // These hooks work even when no scheduler tick ran during the freeze.
+        // M5-R06-01 (plan T2): the species always follows the breed
+        // (pets_species_breed_check) — also when an admin changes the breed.
+        // Only on insert or a breed change (QA PR #91 m1): a model loaded without
+        // the column (older migrations, select lists) must not write it.
+        static::saving(function (Pet $pet): void {
+            if ($pet->breed_type instanceof BreedType && (! $pet->exists || $pet->isDirty('breed_type'))) {
+                $pet->species = $pet->breed_type->species();
+            }
+        });
+
         static::updating(function (Pet $pet): void {
             $now = now();
 
@@ -183,6 +200,7 @@ class Pet extends Model
         'user_id',
         'family_id',
         'breed_type',
+        'species',
         'pet_dna',
         'current_video_url',
         'media_status',
@@ -257,6 +275,7 @@ class Pet extends Model
     {
         return [
             'breed_type' => BreedType::class,
+            'species' => Species::class,
             'pet_state' => PetStateEnum::class,
             'pet_dna' => 'array',
             'born_at' => 'datetime',
@@ -1194,6 +1213,17 @@ class Pet extends Model
     public function isGameOver(): bool
     {
         return $this->is_game_over;
+    }
+
+    /**
+     * The pet's species (M5-R06-01) — the column, or the breed's species when
+     * the column was not selected (always equal: pets_species_breed_check).
+     */
+    public function speciesValue(): Species
+    {
+        $species = $this->getAttribute('species');
+
+        return $species instanceof Species ? $species : $this->breed_type->species();
     }
 
     /**

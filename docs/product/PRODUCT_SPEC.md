@@ -257,7 +257,8 @@ Gumb "Kupili smo pravo žival" → aplikacija postane asistent za pravega psa: I
 
 ## 13. Mačka — pravila skrbi (*načrt*, M5-R06)
 
-> **Status: *načrt* — nič od tega še ni zgrajeno.** Pravila je potrdil David 8. 10. 2026 13:47 (CAT_SPEC §0, Q1–Q10). Podrobnosti, viri [Cn] in še odprti manjši predlogi (D): [`CAT_SPEC.md`](CAT_SPEC.md). Vse, kar tu ni drugače zapisano, velja kot pri psu (§4–§11).
+> **Status: *načrt* — pravila mačke še niso zgrajena.** Pravila je potrdil David 8. 10. 2026 13:47 (CAT_SPEC §0, Q1–Q10).
+> **Zgrajeno (M5-R06-01, 8. 10. 2026, skrito):** samo temelj — vrsta (`pets.species`), pasmi `domestic_cat` / `maine_coon`, brezplačno / plačljivo iz `breed_configs.premium_unlock` (domača mačka brezplačna, Maine Coon samo z izzivom — isto pravilo in iste kode 422 kot pri psu), mačje vrednosti v `breed_configs` (voda 2× / ≥ 4 h, lakota in žeja −8 %/h), katalog `GET /api/breeds`. Mačke so skrite (`PETPREP_CATS_ENABLED` + funkcija aplikacije `species_cat`); faze, igra, pesek, praskanje, česanje, besedila in videz pridejo v R06-03 … R06-08. Podrobnosti, viri [Cn] in še odprti manjši predlogi (D): [`CAT_SPEC.md`](CAT_SPEC.md). Vse, kar tu ni drugače zapisano, velja kot pri psu (§4–§11).
 
 - **Vrsti in pasme:** starš najprej izbere vrsto (pes · mačka), nato pasmo. **Domača mačka (mešanka) je brezplačna** kot mešanček; **Maine Coon** je plačljiva pasma za 12-tedenski izziv (British Shorthair kasneje). Izziv za mačko: **ista cena 49,99 €, isti izdelek** `petprep_challenge_12w`, ista pravila (PAYMENTS_SPEC). Muca je **notranja (stanovanjska)** mačka.
 - **Faze (AAHA/AAFP 2021):** mucek < 12 mesecev · mlada mačka 1–6 let · zrela mačka 7–10 let · starejša mačka od 10 let (120 mesecev). Starost ob prihodu: mucek **2 meseca** (domača mačka) / **3 mesece** (Maine Coon); mlada 12, zrela 84, starejša 120 mesecev. 1 teden programa = 1 mesec (kot §4).

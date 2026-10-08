@@ -34,6 +34,12 @@ class PairedPetResource extends JsonResource
         return [
             'id' => $pet->id,
             'breed_type' => $pet->breed_type->value,
+            /**
+             * M5-R06-01: the pet's species.
+             *
+             * @var 'dog'|'cat'
+             */
+            'species' => $pet->speciesValue()->value,
             'hunger_level' => $pet->displayMetric('hunger_level'),
             'thirst_level' => $pet->displayMetric('thirst_level'),
             'energy_level' => $pet->displayMetric('energy_level'),

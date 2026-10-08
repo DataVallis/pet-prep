@@ -2,9 +2,9 @@
 
 namespace App\Services;
 
-use App\Enums\BreedType;
 use App\Enums\FamilyRole;
 use App\Enums\PetPlan;
+use App\Enums\Species;
 use App\Enums\TokenAbility;
 use App\Exceptions\ChildLoginException;
 use App\Exceptions\FamilyException;
@@ -114,6 +114,8 @@ class ChildPinLoginService
 
             $mode = $this->resolveMode($family, $child, $joinPetId, forGeneration: true);
             if ($mode === self::MODE_NEW_PET && $profile !== null) {
+                // M5-R06-01: breed ↔ species, cats only when available (flag + `species_cat`).
+                $this->pairing->assertSpeciesAllowed($profile);
                 $this->pairing->assertProfileAllowed($profile, $plan);
             }
             // M5-F03: an explicitly chosen challenge needs a paid breed (no profile → mutt).
@@ -121,9 +123,10 @@ class ChildPinLoginService
                 $this->pairing->assertPlanAllowed($profile, $plan);
             }
             // PAYMENTS_SPEC P4: no plan sent (builds before M3-09) → the challenge only for a
-            // paid breed; the mutt is the free plan (never a lockable challenge).
+            // paid breed; a free breed (no profile → the mutt) is the free plan (never a
+            // lockable challenge). M5-R06-01: "free" = `breed_configs.premium_unlock` false.
             if (! $planChosen) {
-                $plan = PairingService::defaultPlanFor($profile?->breed ?? BreedType::Mutt);
+                $plan = PairingService::defaultPlanFor($profile?->breed ?? Species::Dog->freeBreed());
             }
 
             // One open PIN per child: a new one replaces the previous.
@@ -200,6 +203,7 @@ class ChildPinLoginService
                 }
 
                 $mode = $this->resolveMode($family, $child, $locked->pet_id, forGeneration: false);
+                $this->assertDeviceCanShowPet($mode, $child, $locked, $clientFeatures);
 
                 $joined = false;
                 if ($mode === self::MODE_RELOGIN) {
@@ -246,6 +250,36 @@ class ChildPinLoginService
             Log::info('Child PIN login refused after a match', ['pin_id' => $candidate->id, 'reason' => $e->getMessage()]);
 
             throw new ChildLoginException('pin_not_usable', 'This code can no longer be used. Ask your parent for a new code.');
+        }
+    }
+
+    /**
+     * M5-R06-01 (plan T4): a child app build without `species_cat` can't show a
+     * cat — signing in to a cat (new, shared or re-login) → 422
+     * `app_update_required`; the PIN stays usable (update the app, try again).
+     * A NEW cat additionally needs the server flag at login time: switched off
+     * since the PIN was issued → the PIN is revoked (`pin_not_usable`).
+     *
+     * @param  list<string>  $clientFeatures
+     *
+     * @throws ChildLoginException|PairingException
+     */
+    private function assertDeviceCanShowPet(string $mode, User $child, ChildLoginPin $pin, array $clientFeatures): void
+    {
+        $species = match ($mode) {
+            self::MODE_NEW_PET => $pin->pet_options !== null ? PetProfileChoice::fromArray($pin->pet_options)->species : Species::Dog,
+            self::MODE_JOIN_PET => Pet::whereKey($pin->pet_id)->value('species'),
+            default => ($pin->pet_id !== null ? Pet::whereKey($pin->pet_id)->value('species') : null)
+                ?? $child->currentPet()?->species,
+        };
+        $species = $species instanceof Species ? $species : (Species::tryFrom((string) $species) ?? Species::Dog);
+
+        if (! SpeciesAvailability::appSupports($species, $clientFeatures)) {
+            throw new ChildLoginException('app_update_required', 'Update the app to look after this pet.');
+        }
+
+        if ($mode === self::MODE_NEW_PET && $species === Species::Cat && ! SpeciesAvailability::catsEnabled()) {
+            throw new PairingException('Cats are not available any more.');
         }
     }
 

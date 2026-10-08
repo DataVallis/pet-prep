@@ -66,7 +66,8 @@ describe('BreedConfigsSeeder', function () {
         Carbon::setTestNow('2026-10-06 07:00:00');
         (new BreedConfigsSeeder)->run();
 
-        expect(BreedConfig::count())->toBe(2);
+        // 2 dogs + 2 cats (M5-R06-01).
+        expect(BreedConfig::count())->toBe(4);
         $mutt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail();
         expect($mutt->thirst_decay_rate)->toBe(99.0);
         expect(BreedConfig::where('breed_slug', 'border-collie')->firstOrFail()->thirst_decay_rate)->toBe(15.0);

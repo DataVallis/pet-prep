@@ -98,6 +98,8 @@ class ChildPetStateResource extends JsonResource
             'pet' => [
                 'id' => $pet->id,
                 'breed_type' => $pet->breed_type->value,
+                // M5-R06-01: dog | cat.
+                'species' => $pet->speciesValue()->value,
                 // null until the first contract is signed (unborn, M1-07b).
                 'born_at' => $pet->born_at?->copy()->setTimezone($tz)->toIso8601String(),
                 // This child must sign before acting (pet unborn, or this

@@ -26,6 +26,16 @@ enum ClientFeature: string
     case Training = 'training';
 
     /**
+     * Cats (M5-R06-01, plan T4): the build can show a cat (species step,
+     * cat HUD). Unlike the features above it does not switch a game rule on
+     * for a pet — it GATES cats: the parent needs it to see / choose a cat
+     * (`GET /api/breeds`, `generate-pin`), the child to sign in to a cat
+     * (`pin-login` → 422 `app_update_required`). Also needs the server flag
+     * `petprep.cats_enabled` (SpeciesAvailability).
+     */
+    case SpeciesCat = 'species_cat';
+
+    /**
      * @return list<string>
      */
     public static function values(): array

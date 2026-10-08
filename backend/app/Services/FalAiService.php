@@ -6,6 +6,7 @@ use App\Enums\AiCallFailure;
 use App\Enums\AiSpendPurpose;
 use App\Enums\BreedType;
 use App\Enums\PetStateEnum;
+use App\Enums\Species;
 use App\Models\Pet;
 use App\Services\Media\AiCallException;
 use App\Services\Media\FalGateway;
@@ -55,6 +56,12 @@ class FalAiService
      */
     public function generateInitialPetDna(BreedType $breed): array
     {
+        // Legacy DNA v1 has dog prompts only (M5-R06-01): a cat never gets one
+        // (PairingService skips it; cat media is M5-R06-07, DNA v2 only).
+        if ($breed->species() !== Species::Dog) {
+            throw new \InvalidArgumentException("Legacy pet DNA v1 has no prompts for {$breed->value}.");
+        }
+
         $seed = random_int(1, 4294967295);
 
         return [
@@ -75,6 +82,9 @@ class FalAiService
             BreedType::BorderCollie => 'A beautiful Border Collie dog with classic black and white markings, '
                 .'medium-length double coat, bright intelligent brown eyes, erect expressive ears, '
                 .'white blaze on face, photorealistic, studio quality, natural lighting',
+
+            // Unreachable: generateInitialPetDna() refuses non-dogs.
+            BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
     }
 
@@ -114,6 +124,8 @@ class FalAiService
                     2 => 'merle patches on body',
                 },
             ],
+            // Unreachable: generateInitialPetDna() refuses non-dogs.
+            BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
         };
     }
 
