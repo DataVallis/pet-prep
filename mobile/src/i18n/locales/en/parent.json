@@ -58,6 +58,8 @@
     "petTitle": "Which dog will {{name}} care for?",
     "newPet": "New dog",
     "newPetHint": "Your child gets their own puppy. It is born when your child signs the Responsibility Contract.",
+    "newPetAny": "New pet",
+    "newPetAnyHint": "Your child gets their own pet — a dog or a cat. It is born when your child signs the Responsibility Contract.",
     "joinPet": "Join a dog: {{label}}",
     "joinPetHintNames": "Already cared for by {{names}}. A shared dog — each child has their own score.",
     "joinPetHint": "A shared dog — each child has their own score.",
@@ -107,13 +109,16 @@
       "challenge_requires_paid_breed": "The 12-week challenge needs a paid breed. The mixed breed is the free plan's dog — choose another breed or the free plan.",
       "invalid_profile": "The dog choice couldn't be saved. Please choose again.",
       "offline": "Can't reach the server. Check your internet connection and try again.",
-      "server": "The code couldn't be created right now. Please try again."
+      "server": "The code couldn't be created right now. Please try again.",
+      "breed_species_mismatch": "This breed doesn’t belong to the chosen species. Please choose again.",
+      "species_unavailable": "This species isn’t available yet. Please choose another one."
     },
     "changeDog": "Choose another dog",
     "editDog": "Change the dog",
     "editDogHint": "A new choice creates a new code; this code then stops working.",
     "previousChoicePin": "This code still works for the previous dog choice. Create a new code for the new choice.",
     "muttLocked": "The mixed breed is free, but the server refused it. This is our mistake — please contact support.",
+    "freeCatLocked": "The domestic cat is free, but the server refused it. This is our mistake — please contact support.",
     "rateLimitedNoWait": "Too many new codes in a short time. Please try again.",
     "retry": "Try again"
   },

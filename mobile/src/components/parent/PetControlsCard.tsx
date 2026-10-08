@@ -62,7 +62,7 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
   const names = caretakerNames(pet, family);
   const status = petStatus(pet);
   const stopped = pet.is_hard_stopped;
-  const petName = breedLabel(pet.breed_type);
+  const petName = breedLabel(pet.breed_type, pet.species);
   const canControl = pet.is_active && !pet.is_game_over;
 
   // The pet reached the intended state by other means → nothing left to send.

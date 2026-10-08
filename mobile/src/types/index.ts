@@ -5,7 +5,17 @@
 
 import type { components, operations } from '@/api/schema';
 
-export type BreedType = 'mutt' | 'border_collie';
+/** Every breed this build knows (schema `BreedType`: dogs + cats since M5-R06-01). */
+export type BreedType = components['schemas']['BreedType'];
+
+/** Animal species (M5-R06, CAT_SPEC §1). */
+export type Species = components['schemas']['Species'];
+
+/**
+ * A pet's breed as read from a loose payload (M5-R06-02): a known breed, or `unknown` — a
+ * breed newer than this build. Never coerced to the mutt (`modules/species/species.ts`).
+ */
+export type ShownBreed = BreedType | 'unknown';
 
 export type PetState = 'idle' | 'sleeping' | 'low_energy' | 'hungry' | 'sick' | 'playing';
 
@@ -38,7 +48,10 @@ export interface PetDna {
 export interface Pet {
   id: number;
   user_id: number;
-  breed_type: BreedType;
+  /** M5-R06-02: an unknown breed stays `unknown` (never the mutt). */
+  breed_type: ShownBreed;
+  /** M5-R06-01: dog | cat; missing on payloads from an older server. */
+  species?: Species | null;
   pet_dna: PetDna | null;
   current_video_url: string | null;
   hunger_level: number;
@@ -89,6 +102,8 @@ export type PetTrainingRaw = NonNullable<
 export interface PetUpdatedBroadcast {
   pet_id: number;
   breed_type: BreedType;
+  /** M5-R06-01; missing from an older server. */
+  species?: Species;
   hunger_level: number;
   thirst_level: number;
   energy_level: number;

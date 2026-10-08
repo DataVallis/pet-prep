@@ -163,7 +163,19 @@ describe('source selection', () => {
     renderMedia({ media: { ...EMPTY_PET_MEDIA, status: 'disabled' }, breed: 'border_collie' });
     expect(mockVideoPlayers).toHaveLength(0);
     expect(screen.getByTestId('pet-media-placeholder')).toBeTruthy();
-    expect(screen.getByText(PET_MEDIA_STRINGS.breeds.border_collie)).toBeTruthy();
+    expect(screen.getByText('Border collie')).toBeTruthy();
+  });
+
+  it('M5-R06-02: an unknown breed is never shown as a mutt — neutral species label', () => {
+    renderMedia({ media: { ...EMPTY_PET_MEDIA, status: 'disabled' }, breed: 'unknown', species: 'cat' });
+    expect(screen.getByText('Mačka')).toBeTruthy();
+    expect(screen.queryByText('Mešanček')).toBeNull();
+    expect(screen.getByLabelText(PET_MEDIA_STRINGS.a11y('Mačka'))).toBeTruthy();
+  });
+
+  it('M5-R06-02: cat breeds have names (one source: family:breeds)', () => {
+    renderMedia({ media: { ...EMPTY_PET_MEDIA, status: 'disabled' }, breed: 'maine_coon', species: 'cat' });
+    expect(screen.getByText('Maine Coon')).toBeTruthy();
   });
 
   it('game over → no video, only the image', () => {

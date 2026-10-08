@@ -274,6 +274,8 @@ it('pending hint and breed narrowing', () => {
   expect(isMediaPending(info({ status: 'pending' }))).toBe(true);
   expect(isMediaPending(info({ status: 'failed' }))).toBe(false);
   expect(toBreedType('border_collie')).toBe('border_collie');
-  expect(toBreedType('poodle')).toBe('mutt');
-  expect(toBreedType(null)).toBe('mutt');
+  // M5-R06-02: never coerced into the mutt.
+  expect(toBreedType('maine_coon')).toBe('maine_coon');
+  expect(toBreedType('poodle')).toBe('unknown');
+  expect(toBreedType(null)).toBe('unknown');
 });

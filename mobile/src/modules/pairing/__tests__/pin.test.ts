@@ -94,4 +94,19 @@ describe('pinRequestKey', () => {
     expect(pinRequestKey(null, puppy)).not.toBe(pinRequestKey(null, null));
     expect(pinRequestKey(7, null)).not.toBe(pinRequestKey(8, null));
   });
+
+  it('M5-R06-02: the species is part of the choice', () => {
+    expect(pinRequestKey(null, { ...puppy, species: 'dog' })).not.toBe(pinRequestKey(null, { ...puppy, species: 'cat' }));
+  });
+});
+
+describe('classifyPinError — M5-R06-01 species reasons', () => {
+  it.each(['breed_species_mismatch', 'species_unavailable'] as const)('422 %s is explained on its own', (reason) => {
+    expect(classifyPinError(new ApiError('x', 422, { reason }))).toEqual({ kind: reason, retryAfterSeconds: null });
+  });
+
+  it('a species validation error is an invalid profile; an unknown reason stays a server error', () => {
+    expect(classifyPinError(new ApiError('x', 422, { message: 'x', errors: { species: ['x'] } })).kind).toBe('invalid_profile');
+    expect(classifyPinError(new ApiError('x', 422, { reason: 'something_new' })).kind).toBe('server');
+  });
 });

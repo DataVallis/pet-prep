@@ -413,6 +413,7 @@ function RunningView({
             media={view.pet.media}
             petState={frame.dog === 'obeying' ? 'playing' : 'idle'}
             breed={view.pet.breed_type}
+            species={view.pet.species}
             onMediaExpired={onMediaExpired}
             variant="card"
             style={styles.video}

@@ -7,6 +7,8 @@ import { act, fireEvent, screen } from '@testing-library/react-native';
 import { ApiError, api } from '@/api/client';
 import AddChildScreen, { ADD_CHILD_STRINGS as S } from '@/screens/parent/AddChildScreen';
 import { PICKER_STRINGS as PICKER } from '@/modules/petProfile/picker';
+import { breedName } from '@/modules/species/species';
+import * as features from '@/config/features';
 import { useAppStore } from '@/store/appStore';
 import { makeFamilyChild, makeFamilyDashboard, makeFamilyPet, makePet } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
@@ -20,6 +22,7 @@ jest.mock('@/api/client', () => {
       ...actual.api,
       createChild: jest.fn(),
       generatePin: jest.fn(),
+      getBreedCatalogue: jest.fn(),
       getParentDashboard: jest.fn(),
       getUser: jest.fn(),
     },
@@ -33,6 +36,16 @@ const createChild = api.createChild as jest.Mock;
 const generatePin = api.generatePin as jest.Mock;
 const getParentDashboard = api.getParentDashboard as jest.Mock;
 const getUser = api.getUser as jest.Mock;
+const getBreedCatalogue = api.getBreedCatalogue as jest.Mock;
+
+/** `GET /api/breeds` as production answers today (cats hidden): dogs only. */
+const DOG_CATALOGUE = {
+  species: ['dog'],
+  breeds: [
+    { breed: 'mutt', slug: 'mutt', species: 'dog', premium: false, free_plan_allowed: true, challenge_allowed: false, label_key: 'breeds.mutt', search_keywords: ['mešanček', 'mesancek'], sort_order: 0 },
+    { breed: 'border_collie', slug: 'border-collie', species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, label_key: 'breeds.border_collie', search_keywords: ['border collie', 'koli'], sort_order: 10 },
+  ],
+};
 
 const NOW = new Date('2026-10-03T10:00:00Z');
 
@@ -82,7 +95,8 @@ describe('AddChildScreen', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     // Drop queued mock*Once values too, so a failing test can't leak into the next one.
-    [createChild, generatePin, getParentDashboard, getUser].forEach((m) => m.mockReset());
+    [createChild, generatePin, getParentDashboard, getUser, getBreedCatalogue].forEach((m) => m.mockReset());
+    getBreedCatalogue.mockResolvedValue(DOG_CATALOGUE);
     jest.useFakeTimers();
     jest.setSystemTime(NOW);
     getParentDashboard.mockResolvedValue(makeFamilyDashboard([PAIRED_CHILD], [makeFamilyPet({ caretakers: [{ child_id: 2, contract_signed: true }] })]));
@@ -137,7 +151,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'adopted', age_stage: 'young', plan: 'free' },
+        profile: { species: 'dog', breed: 'mutt', origin: 'adopted', age_stage: 'young', plan: 'free' },
       });
       expect(screen.getByText('734 912')).toBeTruthy();
       expect(screen.getByText(S.pinFor('Maja Mala'))).toBeTruthy();
@@ -442,7 +456,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'bought', age_stage: 'senior', plan: 'free' },
+        profile: { species: 'dog', breed: 'mutt', origin: 'bought', age_stage: 'senior', plan: 'free' },
       });
     });
 
@@ -460,7 +474,7 @@ describe('AddChildScreen', () => {
       fireEvent.press(screen.getByTestId('age-option-puppy'));
       fireEvent.press(screen.getByTestId('dog-picker-confirm'));
       await flush();
-      expect(generatePin).toHaveBeenCalledWith(expect.objectContaining({ profile: { breed: 'mutt', origin: 'bought', age_stage: 'puppy', plan: 'free' } }));
+      expect(generatePin).toHaveBeenCalledWith(expect.objectContaining({ profile: { species: 'dog', breed: 'mutt', origin: 'bought', age_stage: 'puppy', plan: 'free' } }));
     });
 
     it('challenge plan (M3-09): the Border Collie can be chosen (also during the trial)', async () => {
@@ -477,7 +491,7 @@ describe('AddChildScreen', () => {
       fireEvent.press(screen.getByTestId('dog-picker-confirm'));
       await flush();
       expect(generatePin).toHaveBeenCalledWith(
-        expect.objectContaining({ profile: { breed: 'border_collie', origin: 'bought', age_stage: 'puppy', plan: 'challenge' } }),
+        expect.objectContaining({ profile: { species: 'dog', breed: 'border_collie', origin: 'bought', age_stage: 'puppy', plan: 'challenge' } }),
       );
     });
 
@@ -486,7 +500,7 @@ describe('AddChildScreen', () => {
       fireEvent.press(screen.getByTestId('plan-option-challenge'));
       const mutt = screen.getByTestId('breed-option-mutt');
       expect(mutt.props.accessibilityState).toEqual({ checked: false, disabled: true });
-      expect(mutt.props.accessibilityLabel).toBe(PICKER.lockedFreeOnlyA11y(PICKER.breeds.mutt));
+      expect(mutt.props.accessibilityLabel).toBe(PICKER.lockedFreeOnlyA11y(breedName('mutt')));
       expect(screen.getByText(PICKER.breedHints.mutt)).toBeTruthy();
 
       fireEvent.press(mutt);
@@ -574,7 +588,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenLastCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'adopted', age_stage: 'adult', plan: 'free' },
+        profile: { species: 'dog', breed: 'mutt', origin: 'adopted', age_stage: 'adult', plan: 'free' },
       });
       expect(screen.getByText('555 666')).toBeTruthy();
     });
@@ -593,7 +607,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenLastCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'bought', age_stage: 'adult', plan: 'free' },
+        profile: { species: 'dog', breed: 'mutt', origin: 'bought', age_stage: 'adult', plan: 'free' },
       });
       expect(screen.getByText('777 888')).toBeTruthy();
     });
@@ -606,7 +620,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'adopted', age_stage: 'puppy', plan: 'free' },
+        profile: { species: 'dog', breed: 'mutt', origin: 'adopted', age_stage: 'puppy', plan: 'free' },
       });
     });
 
@@ -624,7 +638,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenLastCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'bought', age_stage: 'senior', plan: 'free' },
+        profile: { species: 'dog', breed: 'mutt', origin: 'bought', age_stage: 'senior', plan: 'free' },
       });
     });
 
@@ -669,7 +683,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenLastCalledWith({
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'bought', age_stage: 'adult', plan: 'free' },
+        profile: { species: 'dog', breed: 'mutt', origin: 'bought', age_stage: 'adult', plan: 'free' },
       });
       expect(screen.getByText('888 999')).toBeTruthy();
       expect(screen.queryByTestId('pin-previous-choice')).toBeNull();
@@ -708,7 +722,7 @@ describe('AddChildScreen', () => {
       expect(generatePin).toHaveBeenNthCalledWith(2, {
         child_id: 5,
         pet_id: null,
-        profile: { breed: 'mutt', origin: 'bought', age_stage: 'young', plan: 'free' },
+        profile: { species: 'dog', breed: 'mutt', origin: 'bought', age_stage: 'young', plan: 'free' },
       });
     });
 
@@ -718,6 +732,193 @@ describe('AddChildScreen', () => {
       await flush();
       expect(screen.queryByTestId('dog-picker')).toBeNull();
       expect(generatePin).toHaveBeenCalledWith({ child_id: 2, pet_id: null });
+      expect(getBreedCatalogue).not.toHaveBeenCalled(); // no catalogue request for a re-login
+    });
+  });
+
+  describe('species → breed picker (M5-R06-02)', () => {
+    const NEW_CHILD = makeFamilyChild({ id: 5, name: 'Maja' });
+    const CATS_ON = {
+      species: ['dog', 'cat'],
+      breeds: [
+        ...DOG_CATALOGUE.breeds,
+        { breed: 'domestic_cat', slug: 'domestic-cat', species: 'cat', premium: false, free_plan_allowed: true, challenge_allowed: false, label_key: 'breeds.domestic_cat', search_keywords: ['domača mačka'], sort_order: 0 },
+        { breed: 'maine_coon', slug: 'maine-coon', species: 'cat', premium: true, free_plan_allowed: false, challenge_allowed: true, label_key: 'breeds.maine_coon', search_keywords: ['maine coon', 'mejnkun'], sort_order: 10 },
+      ],
+    };
+
+    beforeEach(() => {
+      generatePin.mockResolvedValue(pinResponse('734912', { child_id: 5, mode: 'new_pet' }));
+      // These flows need a build that can show cats (CAT_UI_READY on); the real build can't (QA #94 m3).
+      jest.spyOn(features, 'showableSpecies').mockReturnValue(['dog', 'cat']);
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
+
+    async function openNewPet() {
+      renderWithQuery(<AddChildScreen onBack={jest.fn()} child={NEW_CHILD} />);
+      await flush();
+      fireEvent.press(screen.getByTestId('pet-option-new'));
+      await flush();
+    }
+
+    it('dogs only (cats hidden): "Nov pes", no species step, catalogue asked once with this build\'s features', async () => {
+      await openNewPet();
+      expect(screen.queryByTestId('species-picker')).toBeNull();
+      expect(screen.getByTestId('dog-picker')).toBeTruthy();
+      expect(getBreedCatalogue).toHaveBeenCalledTimes(1);
+      expect(getBreedCatalogue.mock.calls[0][0]).toEqual(['behaviour_events', 'training']);
+    });
+
+    it('the catalogue fails → the fallback dogs, dog onboarding still works end to end', async () => {
+      getBreedCatalogue.mockReset();
+      getBreedCatalogue.mockRejectedValue(new TypeError('Network request failed'));
+      await openNewPet();
+      // One retry (offline / 5xx), then the fallback list.
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(10_000);
+      });
+      expect(screen.getByTestId('breed-option-mutt')).toBeTruthy();
+      expect(screen.getByTestId('breed-option-border_collie')).toBeTruthy();
+      await pickDog('adopted', 'puppy');
+      expect(generatePin).toHaveBeenCalledWith({
+        child_id: 5,
+        pet_id: null,
+        profile: { species: 'dog', breed: 'mutt', origin: 'adopted', age_stage: 'puppy', plan: 'free' },
+      });
+    });
+
+    it('cats on: "Nov ljubljenček" → species tiles → a free cat is the domestic cat (never a mutt)', async () => {
+      getBreedCatalogue.mockResolvedValue(CATS_ON);
+      renderWithQuery(<AddChildScreen onBack={jest.fn()} child={NEW_CHILD} />);
+      await flush();
+      expect(screen.getByText(S.newPetAny)).toBeTruthy();
+      fireEvent.press(screen.getByTestId('pet-option-new'));
+      await flush();
+      expect(screen.getByTestId('species-picker')).toBeTruthy();
+      fireEvent.press(screen.getByTestId('species-option-cat'));
+      fireEvent.press(screen.getByTestId('plan-option-free'));
+      fireEvent.press(screen.getByTestId('origin-option-adopted'));
+      fireEvent.press(screen.getByTestId('age-option-young'));
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      await flush();
+      expect(generatePin).toHaveBeenCalledWith({
+        child_id: 5,
+        pet_id: null,
+        profile: { species: 'cat', breed: 'domestic_cat', origin: 'adopted', age_stage: 'young', plan: 'free' },
+      });
+    });
+
+    it('422 species_unavailable → "Ta vrsta še ni na voljo", catalogue reloaded, species chosen again', async () => {
+      getBreedCatalogue.mockResolvedValue(CATS_ON);
+      generatePin.mockRejectedValueOnce(new ApiError('x', 422, { reason: 'species_unavailable' }));
+      await openNewPet();
+      fireEvent.press(screen.getByTestId('species-option-cat'));
+      fireEvent.press(screen.getByTestId('plan-option-free'));
+      fireEvent.press(screen.getByTestId('origin-option-bought'));
+      fireEvent.press(screen.getByTestId('age-option-puppy'));
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      await flush();
+      expect(screen.getByTestId('pin-error')).toHaveTextContent(S.errors.species_unavailable);
+      expect(S.errors.species_unavailable).toMatch(/^Ta vrsta še ni na voljo/);
+
+      // Meanwhile cats were switched off on the server.
+      getBreedCatalogue.mockResolvedValue(DOG_CATALOGUE);
+      fireEvent.press(screen.getByTestId('pin-change-dog'));
+      await flush();
+      expect(getBreedCatalogue.mock.calls.length).toBeGreaterThanOrEqual(2);
+      expect(screen.getByTestId('dog-picker-notice')).toHaveTextContent(S.errors.species_unavailable);
+      // Only dogs left → straight to the dog picker, origin and age kept.
+      expect(screen.queryByTestId('breed-option-domestic_cat')).toBeNull();
+      expect(screen.getByTestId('origin-option-bought').props.accessibilityState.checked).toBe(true);
+    });
+
+    it('QA #94 m3: this build (no cat UI) never offers cats, even if the server sends them', async () => {
+      jest.restoreAllMocks(); // the real showableSpecies(): dogs only
+      getBreedCatalogue.mockResolvedValue(CATS_ON);
+      renderWithQuery(<AddChildScreen onBack={jest.fn()} child={NEW_CHILD} />);
+      await flush();
+      expect(screen.getByText(S.newPet)).toBeTruthy();
+      fireEvent.press(screen.getByTestId('pet-option-new'));
+      await flush();
+      expect(screen.queryByTestId('species-picker')).toBeNull();
+      expect(screen.queryByTestId('breed-option-domestic_cat')).toBeNull();
+      expect(screen.getByTestId('breed-option-mutt')).toBeTruthy();
+    });
+
+    it('QA #94 m1: a hung catalogue request → after 5 s the fallback dogs, never an endless spinner', async () => {
+      getBreedCatalogue.mockReset();
+      getBreedCatalogue.mockImplementation(() => new Promise(() => {})); // never answers
+      await openNewPet();
+      expect(screen.getByTestId('pet-picker-loading')).toBeTruthy();
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(4_000);
+      });
+      expect(screen.getByTestId('pet-picker-loading')).toBeTruthy();
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(1_100);
+      });
+      expect(screen.queryByTestId('pet-picker-loading')).toBeNull();
+      expect(screen.getByTestId('breed-option-mutt')).toBeTruthy();
+      await pickDog('bought', 'adult');
+      expect(generatePin).toHaveBeenCalledWith(
+        expect.objectContaining({ profile: { species: 'dog', breed: 'mutt', origin: 'bought', age_stage: 'adult', plan: 'free' } }),
+      );
+    });
+
+    it('QA #94 m4: after species_unavailable the stale cat catalogue never shows again while reloading', async () => {
+      getBreedCatalogue.mockResolvedValue(CATS_ON);
+      generatePin.mockRejectedValueOnce(new ApiError('x', 422, { reason: 'species_unavailable' }));
+      await openNewPet();
+      fireEvent.press(screen.getByTestId('species-option-cat'));
+      fireEvent.press(screen.getByTestId('plan-option-free'));
+      fireEvent.press(screen.getByTestId('origin-option-bought'));
+      fireEvent.press(screen.getByTestId('age-option-puppy'));
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      await flush();
+
+      let answer: (body: unknown) => void = () => undefined;
+      getBreedCatalogue.mockImplementation(() => new Promise((resolve) => (answer = resolve)));
+      fireEvent.press(screen.getByTestId('pin-change-dog'));
+      await flush();
+      // Reset, not invalidate: no cached cat data — a spinner until the new answer.
+      expect(screen.getByTestId('pet-picker-loading')).toBeTruthy();
+      expect(screen.queryByTestId('species-picker')).toBeNull();
+      expect(screen.queryByTestId('species-option-cat')).toBeNull();
+
+      await act(async () => {
+        answer(DOG_CATALOGUE);
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(screen.queryByTestId('pet-picker-loading')).toBeNull();
+      expect(screen.queryByTestId('breed-option-domestic_cat')).toBeNull();
+      expect(screen.getByTestId('breed-option-mutt')).toBeTruthy();
+    });
+
+    it('422 breed_species_mismatch → explained, back to the picker', async () => {
+      generatePin.mockRejectedValueOnce(new ApiError('x', 422, { reason: 'breed_species_mismatch' }));
+      await openNewPet();
+      await pickDog('bought', 'adult');
+      expect(screen.getByTestId('pin-error')).toHaveTextContent(S.errors.breed_species_mismatch);
+      fireEvent.press(screen.getByTestId('pin-change-dog'));
+      await flush();
+      expect(screen.getByTestId('dog-picker-notice')).toHaveTextContent(S.errors.breed_species_mismatch);
+    });
+
+    it('free cat refused as breed_locked = our misconfiguration: support message, no loop', async () => {
+      getBreedCatalogue.mockResolvedValue(CATS_ON);
+      generatePin.mockRejectedValueOnce(new ApiError('locked', 422, { reason: 'breed_locked' }));
+      await openNewPet();
+      fireEvent.press(screen.getByTestId('species-option-cat'));
+      fireEvent.press(screen.getByTestId('plan-option-free'));
+      fireEvent.press(screen.getByTestId('origin-option-bought'));
+      fireEvent.press(screen.getByTestId('age-option-puppy'));
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      await flush();
+      expect(screen.getByTestId('pin-error')).toHaveTextContent(S.freeCatLocked);
+      expect(screen.queryByTestId('pin-change-dog')).toBeNull();
     });
   });
 });

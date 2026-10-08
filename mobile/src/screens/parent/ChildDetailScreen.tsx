@@ -34,6 +34,7 @@ import {
 import { nicknameOf, petOfChild, type FamilyChild, type FamilyOverview } from '@/modules/family/family';
 import { parentDashboardKey } from '@/modules/family/live';
 import { normalizePetMedia, toBreedType } from '@/modules/petMedia/petMedia';
+import { isSpecies } from '@/modules/species/species';
 import PetMediaView from '@/components/PetMediaView';
 import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
 import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
@@ -217,6 +218,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
               // A locked pet (vet, hard stop, game over, inactive) is shown as a still image.
               videoEnabled={pet.is_active && !pet.is_ill && !pet.is_hard_stopped && !pet.is_game_over}
               breed={toBreedType(pet.breed_type)}
+              species={isSpecies(pet.species) ? pet.species : null}
               onMediaExpired={onMediaExpired}
               variant="card"
               style={styles.petMedia}

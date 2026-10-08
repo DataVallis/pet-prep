@@ -49,7 +49,12 @@ describe('family helpers', () => {
     expect(caretakerNames(pet, family!)).toBe('Maja, Luka');
     expect(breedLabel('mutt')).toBe('Mešanček');
     expect(breedLabel('border_collie')).toBe('Border collie');
-    expect(breedLabel('husky')).toBe('husky');
+    expect(breedLabel('maine_coon')).toBe('Maine Coon');
+    expect(breedLabel('domestic_cat')).toBe('Domača mačka');
+    // M5-R06-02: an unknown breed reads as its species, or "Ljubljenček" — never a raw code or a mutt.
+    expect(breedLabel('husky')).toBe('Ljubljenček');
+    expect(breedLabel('husky', 'dog')).toBe('Pes');
+    expect(breedLabel('sphynx', 'cat')).toBe('Mačka');
   });
 
   it.each([

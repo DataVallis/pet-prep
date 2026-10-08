@@ -17,7 +17,8 @@
 
 import type { LockReason } from '@/modules/childPet/childPetView';
 import { isBehaviourScene, type BehaviourScene } from '@/modules/behaviour/behaviour';
-import type { BreedType, PetMedia, PetState } from '@/types';
+import { readBreed } from '@/modules/species/species';
+import type { PetMedia, PetState, ShownBreed } from '@/types';
 
 /**
  * A stored video: one of the six pet states, or a M5-R02 behaviour scene (`accident`,
@@ -236,9 +237,12 @@ export function selectMediaSource(media: PetMediaInfo, wanted: VideoState | null
   return { kind: 'placeholder' };
 }
 
-/** Loose breed string (dashboard payloads) → `BreedType`; unknown → mutt. */
-export function toBreedType(value: string | null | undefined): BreedType {
-  return value === 'border_collie' ? 'border_collie' : 'mutt';
+/**
+ * Loose breed string (dashboard payloads) → typed. M5-R06-02: a breed this build doesn't
+ * know stays `unknown` (generic placeholder, neutral label) — never the mutt.
+ */
+export function toBreedType(value: string | null | undefined): ShownBreed {
+  return readBreed(value);
 }
 
 /** "The dog is still being prepared" — show the gentle pending hint. */

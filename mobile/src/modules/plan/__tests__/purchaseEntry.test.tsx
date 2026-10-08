@@ -178,6 +178,23 @@ describe('shared purchase rule — paywall list and banner (M5-F01 QA)', () => {
     expect(isOfferablePet(null)).toBe(false);
   });
 
+  it('M5-R06-02: the plan decides — a free cat is never offered a purchase, a Maine Coon challenge is', () => {
+    const freeCat = pet(FREE, { breed_type: 'domestic_cat', species: 'cat' });
+    expect(isOfferablePet(freeCat)).toBe(false);
+    expect(canBuyChallenge(freeCat)).toBe(false);
+    // Even an inconsistent old payload: the species' free breed is never offered.
+    expect(isOfferablePet(pet(LOCKED, { breed_type: 'domestic_cat', species: 'cat' }))).toBe(false);
+    const coon = pet(LOCKED, { breed_type: 'maine_coon', species: 'cat' });
+    expect(isOfferablePet(coon)).toBe(true);
+    expect(canBuyChallenge(coon)).toBe(true);
+    // A free-plan pet of a breed this build doesn't know: free (plan), not offered.
+    expect(isOfferablePet(pet(FREE, { breed_type: 'sphynx', species: 'cat' }))).toBe(false);
+    // A grandfathered dog the server shows as free (display_type) is not offered either.
+    expect(isOfferablePet(pet({ ...TRIAL, display_type: 'free' }))).toBe(false);
+    expect(showPurchasesRow(family([freeCat]))).toBe(false);
+    expect(showPurchasesRow(family([freeCat, coon]))).toBe(true);
+  });
+
   it('paywall lists a challenge dog but never a mutt, a game-over pet or one missing from the family', () => {
     const f = family([pet(TRIAL, { id: 1 }), pet(LOCKED, { id: 2, breed_type: 'mutt' }), pet(LOCKED, { id: 3, is_game_over: true })]);
     expect(isBillingPetPurchasable(billing(1, 'trial'), f)).toBe(true);

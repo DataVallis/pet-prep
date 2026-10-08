@@ -104,7 +104,18 @@
   },
   "breeds": {
     "mutt": "Mešanček",
-    "border_collie": "Border collie"
+    "border_collie": "Border collie",
+    "domestic_cat": "Domača mačka",
+    "maine_coon": "Maine Coon"
+  },
+  "species": {
+    "dog": "Pes",
+    "cat": "Mačka"
+  },
+  "breedUnknown": {
+    "dog": "Pes",
+    "cat": "Mačka",
+    "any": "Ljubljenček"
   },
   "devices_one": "{{count}} naprava",
   "devices_two": "{{count}} napravi",

@@ -161,7 +161,7 @@ flowchart TD
   OUT --> START
 ```
 
-Parent side of §2c in the app: `FamilyChildrenCard` / "Dodaj otroka" → `AddChildScreen`: nickname + optional birth year → `POST /api/parent/children` → "Nov pes" → **"Izberi kužka"** (`DogPickerStep`, M5-R04: breed — premium shown locked —, origin, age at arrival) / "Pridruži se psu …" (no picker) → `POST /api/parent/generate-pin {child_id, pet_id? | breed, origin, age_stage}` (profile all or nothing; 422 `breed_locked` → back to the picker) → PIN + countdown; dashboard polled every 5 s until the child has a pet or one more device → "Otrok je povezan!".
+Parent side of §2c in the app: `FamilyChildrenCard` / "Dodaj otroka" → `AddChildScreen`: nickname + optional birth year → `POST /api/parent/children` → "Nov pes" ("Nov ljubljenček" when the catalogue offers > 1 species) → **picker** (`PetPickerStep`, M5-R04 → M5-R06-02: species tiles (skipped with one species) → plan → breed list from `GET /api/breeds` with search — paid shown locked on the free plan —, origin, age at arrival → summary; catalogue failure → today's two dogs) / "Pridruži se psu …" (no picker) → `POST /api/parent/generate-pin {child_id, pet_id? | species, breed, origin, age_stage, plan, features}` (profile all or nothing; 422 `breed_locked` / `breed_species_mismatch` / `species_unavailable` → back to the picker) → PIN + countdown; dashboard polled every 5 s until the child has a pet or one more device → "Otrok je povezan!".
 
 ## 2c. PIN-only child login (M2-02 / M2-03)
 
@@ -1226,7 +1226,7 @@ sequenceDiagram
   participant API as Laravel API
   participant DB as PostgreSQL
   participant C as Child app
-  P->>API: POST /api/parent/generate-pin {child_id, breed?, origin?, age_stage?}
+  P->>API: POST /api/parent/generate-pin {child_id, species?, breed?, origin?, age_stage?, plan?, features?}
   API->>API: GeneratePinRequest (enums; profile not with pet_id)<br/>premium breed → 422 breed_locked
   API->>DB: child_login_pins (+ pet_options {breed, origin, age_stage})
   API-->>P: {pin, mode: new_pet, pet_profile}
@@ -1235,6 +1235,26 @@ sequenceDiagram
   API->>DB: pets (unborn, origin, arrival_age_months, life_stage)
   API-->>C: pet {…, profile}
   C->>API: POST /api/child/contract → birth (age clock starts)
+```
+
+### 12a2. Species → breed picker in the app (M5-R06-02, 2026-10-08)
+
+```mermaid
+flowchart TD
+  N["Dodaj otroka → Nov pes / Nov ljubljenček"] --> Q["useBreedCatalogue<br/>GET /api/breeds?features[]=behaviour_events&features[]=training<br/>(+ species_cat only with CAT_UI_READY)"]
+  Q -->|"200 + usable"| R["readBreedCatalogue: species in server order,<br/>free breed first, then sort_order"]
+  Q -->|"error after 1 retry / malformed"| F["FALLBACK_CATALOGUE: mutt 🆓 + Border Collie 💶"]
+  R --> S{"> 1 species?"}
+  F --> S
+  S -- "no (today: cats hidden)" --> P["plan (free / challenge)"]
+  S -- yes --> T["tiles Pes / Mačka (no default)"] --> P
+  P --> B["breed list + search (no diacritics, synonyms)<br/>badge Brezplačno / Izziv, locked greyed + note"]
+  B --> O["origin + age at arrival (texts per species)"]
+  O --> SUM["summary: species · breed · origin · age · plan"]
+  SUM --> G["POST /api/parent/generate-pin<br/>{child_id, species, breed, origin, age_stage, plan, features}"]
+  G -->|"422 breed_locked / challenge_requires_paid_breed /<br/>breed_species_mismatch / invalid_profile"| B
+  G -->|"422 species_unavailable"| INV["invalidate catalogue, clear species"] --> S
+  G -->|"200"| PIN["PIN + countdown"]
 ```
 
 ### 12b. Rules of a day (LifeStageService::rulesOn)

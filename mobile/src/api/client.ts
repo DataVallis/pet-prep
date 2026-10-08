@@ -8,6 +8,7 @@ import { ENV } from '@/config/env';
 import { currentLanguageTag } from '@/i18n';
 import type { components, operations } from '@/api/schema';
 import type { Pet, QuietHours } from '@/types';
+import { CAT_UI_READY } from '@/config/features';
 
 /**
  * Authenticated user as returned (flat, no `data` wrapper) by `GET /api/user`
@@ -170,7 +171,7 @@ export interface PinLoginResponse {
  */
 export interface PinLoginErrorBody {
   message: string;
-  reason?: 'invalid_pin' | 'pin_not_usable' | 'too_many_attempts';
+  reason?: 'invalid_pin' | 'pin_not_usable' | 'too_many_attempts' | 'app_update_required';
   retry_after?: number;
 }
 
@@ -180,24 +181,26 @@ export type CreateChildResponse =
   operations['childProfile.store']['responses'][201]['content']['application/json'];
 
 /** Breed / origin / age at arrival of a new pet (M5-R01 contract, M5-R04 picker). */
-// Dog breeds of today's picker. The API also knows cat breeds since M5-R06-01
-// (hidden behind PETPREP_CATS_ENABLED + `species_cat`); the species → breed
-// picker (M5-R06-02) will take its list from GET /api/breeds instead.
-export type PetBreed = Extract<components['schemas']['BreedType'], 'mutt' | 'border_collie'>;
+/** Every breed the API knows (dogs + cats since M5-R06-01); the picker lists what `GET /api/breeds` returns. */
+export type PetBreed = components['schemas']['BreedType'];
+export type PetSpecies = components['schemas']['Species'];
 export type PetOrigin = components['schemas']['PetOrigin'];
 export type LifeStage = components['schemas']['LifeStage'];
 
 /**
- * The parent's "Izberi kužka" choice for a new pet. The server contract is
- * **all or nothing**: either the full set is sent or none of it (legacy pet).
+ * The parent's picker choice for a new pet. The server contract is **all or nothing**:
+ * either the full set is sent or none of it (legacy pet).
  */
 export interface NewPetProfile {
+  /** M5-R06-02: dog | cat. The breed must belong to it (server 422 `breed_species_mismatch`). */
+  species: PetSpecies;
+  /** On the free plan: the species' free breed from the catalogue (mutt / domestic cat). */
   breed: PetBreed;
   origin: PetOrigin;
   age_stage: LifeStage;
   /**
-   * M3-09: free mutt sandbox or the 12-week challenge (starts with a purchase, M3-13). Free → breed is
-   * always `mutt` (the server refuses anything else). Sent with the profile only.
+   * M3-09: free plan or the 12-week challenge (starts with a purchase, M3-13). Free → the
+   * species' free breed (the server refuses a paid one). Sent with the profile only.
    */
   plan: PetPlanType;
 }
@@ -215,30 +218,51 @@ export interface GenerateChildPinRequest {
  * A UI feature this app build can show for a new pet (backend `ClientFeature`; the schema
  * types it as `string` because unknown values are dropped server-side, not refused).
  */
-export type ClientFeature = 'behaviour_events' | 'training';
+export type ClientFeature = 'behaviour_events' | 'training' | 'species_cat';
 
 /**
- * What this build declares: it can show the behaviour events ("Pelji ven", luža,
- * pregrizen copat — M5-R02, PR #42) and the training mini-game ("Šola" — M5-R03). A new
- * pet gets a feature only when BOTH the parent's generate-pin and the child's pin-login
- * sent it — an older build on either phone never gets something it can't show.
+ * What a build declares: the behaviour events ("Pelji ven", luža, pregrizen copat — M5-R02,
+ * PR #42), the training mini-game ("Šola" — M5-R03) and — only once the cat HUD exists
+ * (`CAT_UI_READY`, M5-R06-02 / T4) — cats (`species_cat`). A new pet gets a feature only
+ * when BOTH the parent's generate-pin and the child's pin-login sent it — an older build on
+ * either phone never gets something it can't show.
  */
-export const CLIENT_FEATURES: readonly ClientFeature[] = ['behaviour_events', 'training'];
+export function clientFeatures(catUiReady: boolean = CAT_UI_READY): readonly ClientFeature[] {
+  return catUiReady ? ['behaviour_events', 'training', 'species_cat'] : ['behaviour_events', 'training'];
+}
+
+/** This build's features (see {@link clientFeatures}). */
+export const CLIENT_FEATURES: readonly ClientFeature[] = clientFeatures();
 
 /**
- * The JSON body of a generate-pin request: profile fields only for a new pet, always all
- * three plus the plan (M3-09), together with `features` (never with `pet_id`, never
- * without the profile).
+ * The JSON body of a generate-pin request: profile fields only for a new pet, always the
+ * full set plus the plan (M3-09) and the species (M5-R06-02), together with `features`
+ * (never with `pet_id`, never without the profile). The breed is sent as chosen — the
+ * picker already put the species' free breed on the free plan (no hard-coded mutt).
  */
-export function generatePinBody(body: GenerateChildPinRequest): Record<string, number | string | ClientFeature[]> {
+export function generatePinBody(
+  body: GenerateChildPinRequest,
+  features: readonly ClientFeature[] = CLIENT_FEATURES,
+): Record<string, number | string | ClientFeature[]> {
   if (body.pet_id != null) return { child_id: body.child_id, pet_id: body.pet_id };
   if (body.profile) {
-    const { origin, age_stage, plan } = body.profile;
-    // A free pet is always the mutt (PAYMENTS_SPEC §2) — never send a premium breed with it.
-    const breed = plan === 'free' ? 'mutt' : body.profile.breed;
-    return { child_id: body.child_id, breed, origin, age_stage, plan, features: [...CLIENT_FEATURES] };
+    const { species, breed, origin, age_stage, plan } = body.profile;
+    return { child_id: body.child_id, species, breed, origin, age_stage, plan, features: [...features] };
   }
   return { child_id: body.child_id };
+}
+
+/** `GET /api/breeds` 200 body (M5-R06-01 picker catalogue) — read it through `readBreedCatalogue`. */
+export type BreedCatalogueResponse =
+  operations['breed.index']['responses'][200]['content']['application/json'];
+
+/** Query string of `GET /api/breeds` (`features[]` repeated). */
+export function breedCataloguePath(features: readonly ClientFeature[] = CLIENT_FEATURES, species?: PetSpecies): string {
+  const params = [
+    ...(species ? [`species=${encodeURIComponent(species)}`] : []),
+    ...features.map((f) => `features[]=${encodeURIComponent(f)}`),
+  ];
+  return params.length > 0 ? `/api/breeds?${params.join('&')}` : '/api/breeds';
 }
 
 /** `POST /api/parent/generate-pin` 200 body for a request with `child_id`. */
@@ -596,6 +620,8 @@ export const api = {
    * POST /api/child/pin-login (M2-02, public) — the child's only way in: PIN from the
    * parent → child token. 422 `invalid_pin` / `pin_not_usable`, 429 with Retry-After.
    * Always declares this build's `features` (M5-R02: the child's device must show them too).
+   * M5-R06-01: 422 `app_update_required` — the pet is a cat and this build can't show one
+   * (no `species_cat`, see `CAT_UI_READY`); the PIN stays usable.
    */
   pinLogin: (pin: string, deviceName: string) =>
     apiRequest<PinLoginResponse>('/api/child/pin-login', {
@@ -622,6 +648,14 @@ export const api = {
       method: 'POST',
       body: generatePinBody(body),
     }),
+
+  /**
+   * GET /api/breeds (M5-R06-01, parent token) — the picker catalogue: available species and
+   * their breeds (free first, then paid by `sort_order`). Cats only appear while the server
+   * switch is on AND this build declares `species_cat` (`CAT_UI_READY`).
+   */
+  getBreedCatalogue: (features: readonly ClientFeature[] = CLIENT_FEATURES, signal?: AbortSignal) =>
+    apiRequest<BreedCatalogueResponse>(breedCataloguePath(features), { signal }),
 
   /** DELETE /api/parent/children/{child}/tokens — sign the child out on every device. */
   revokeChildTokens: (childId: number) =>

@@ -99,6 +99,7 @@ function Stage({ view, children, onMediaExpired }: { view: ChildPetView; childre
           media={view.pet.media}
           petState="playing"
           breed={view.pet.breed_type}
+          species={view.pet.species}
           onMediaExpired={onMediaExpired}
           variant="card"
           style={styles.video}

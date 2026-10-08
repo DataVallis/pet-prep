@@ -3,8 +3,11 @@
  * 2026-10-07: the small "Trial" badge alone was overlooked). Pure, parent app only.
  *
  * One shared rule for every purchase surface (buy button, Nadzor row, paywall list, banner):
- * `isOfferablePet` — a mixed breed (free forever) and a finished (game over) pet are never
- * offered a purchase, even if an old payload still carries a challenge (M5-F02/F03 and the
+ * `isOfferablePet` — a pet the parent sees as free (the server's `plan` / `display_type`:
+ * a free-plan pet of any species, a grandfathered mutt) and a finished (game over) pet are
+ * never offered a purchase (M5-R06-02: the plan decides, not `breed_type !== 'mutt'`, so a
+ * free cat is never offered one). A species' free breed (mutt / domestic cat) stays excluded
+ * as a safety net, even if an old payload still carries a challenge (M5-F02/F03 and the
  * backend migration move every unpaid mutt challenge to the free plan).
  *
  * The buy button additionally follows the pet's `plan` (`needsPurchase`: an unpaid challenge).
@@ -15,14 +18,15 @@
 
 import type { BillingPet } from '@/api/client';
 import type { FamilyOverview, FamilyPet } from '@/modules/family/family';
-import { needsPurchase, planOfBillingPet } from '@/modules/plan/plan';
+import { needsPurchase, planOfBillingPet, shownAsFree } from '@/modules/plan/plan';
+import { isDefaultFreeBreed } from '@/modules/species/species';
 
-type OfferablePet = Pick<FamilyPet, 'is_game_over' | 'breed_type'>;
-type PurchasablePet = Pick<FamilyPet, 'plan' | 'is_game_over' | 'breed_type'>;
+type OfferablePet = Pick<FamilyPet, 'plan' | 'is_game_over' | 'breed_type'>;
+type PurchasablePet = OfferablePet;
 
-/** Shared exclusion for every purchase surface: never a mutt, never a game-over pet. */
+/** Shared exclusion for every purchase surface: never a free pet (plan or free breed), never a game-over pet. */
 export function isOfferablePet(pet: OfferablePet | null | undefined): boolean {
-  return !!pet && !pet.is_game_over && pet.breed_type !== 'mutt';
+  return !!pet && !pet.is_game_over && !shownAsFree(pet.plan) && !isDefaultFreeBreed(pet.breed_type);
 }
 
 /** Show the "buy" button for this pet (overview card, child detail, Nadzor count) — born or not. */

@@ -1,4 +1,4 @@
-import { PICKER_AGES, PICKER_BREEDS, PICKER_STRINGS } from '@/modules/petProfile/picker';
+import { PICKER_AGES, PICKER_STRINGS } from '@/modules/petProfile/picker';
 import type { LifeStage, PetBreed } from '@/api/client';
 
 /**
@@ -7,12 +7,14 @@ import type { LifeStage, PetBreed } from '@/api/client';
  * steps = minutes × 100; puppy / young 10 min × age in months up to the adult goal;
  * adult mutt 60 min, Border Collie 120 min; senior 75 % of adult; arrival puppy 2, young 9 months.
  */
-const ADULT_MINUTES: Record<PetBreed, number> = { mutt: 60, border_collie: 120 };
+type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie'>;
+const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie'];
+const ADULT_MINUTES: Record<DogBreed, number> = { mutt: 60, border_collie: 120 };
 const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 };
 
 const fmt = (n: number) => n.toLocaleString('de-DE'); // 6000 → "6.000" (Slovenian thousands separator)
 
-function expectedSteps(breed: PetBreed, stage: LifeStage): { start: number; adult: number } {
+function expectedSteps(breed: DogBreed, stage: LifeStage): { start: number; adult: number } {
   const adult = ADULT_MINUTES[breed] * 100;
   if (stage === 'adult') return { start: adult, adult };
   if (stage === 'senior') return { start: adult * 0.75, adult };
@@ -21,7 +23,7 @@ function expectedSteps(breed: PetBreed, stage: LifeStage): { start: number; adul
 }
 
 describe('PICKER_STRINGS.ageHints', () => {
-  it.each(PICKER_BREEDS.flatMap((breed) => PICKER_AGES.map((age) => [breed, age] as const)))(
+  it.each(DOG_BREEDS.flatMap((breed) => PICKER_AGES.map((age) => [breed, age] as const)))(
     '%s / %s quotes the confirmed step goal',
     (breed, age) => {
       const hint = PICKER_STRINGS.ageHints[breed][age];
@@ -35,7 +37,7 @@ describe('PICKER_STRINGS.ageHints', () => {
   );
 
   it('meals: puppy 4 → 3 → 2, every other stage 2', () => {
-    for (const breed of PICKER_BREEDS) {
+    for (const breed of DOG_BREEDS) {
       expect(PICKER_STRINGS.ageHints[breed].puppy).toMatch(/4 obroki na dan \(nato 3, od 6\. meseca 2\)/);
       for (const age of ['young', 'adult', 'senior'] as const) {
         expect(PICKER_STRINGS.ageHints[breed][age]).toMatch(/^2 obroka na dan/);

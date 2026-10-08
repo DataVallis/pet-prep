@@ -112,7 +112,7 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
         </View>
         <View style={styles.flex}>
           <Text style={styles.name}>{child.name}</Text>
-          {pet && <Text style={styles.muted}>{breedLabel(pet.breed_type)}</Text>}
+          {pet && <Text style={styles.muted}>{breedLabel(pet.breed_type, pet.species)}</Text>}
           {pet && !pet.is_game_over && (
             <PlanBadge
               plan={pet.plan}

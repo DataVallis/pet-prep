@@ -185,6 +185,17 @@ describe('Start screen + child PIN login', () => {
     expect(screen.getByTestId('pin-login-error')).toHaveTextContent(S.invalid);
   });
 
+  it('M5-R06-01 app_update_required (a cat on a build without species_cat): asks to update the app, no session', async () => {
+    pinLogin.mockRejectedValueOnce(new ApiError('x', 422, { reason: 'app_update_required' }));
+    await openChildPath();
+    typePin('111111');
+    await flush();
+    expect(screen.getByTestId('pin-login-error')).toHaveTextContent(S.updateRequired);
+    expect(S.updateRequired).toBe('Posodobi aplikacijo, da lahko skrbiš za tega ljubljenčka.');
+    expect(screen.queryAllByTestId('pin-slot-filled')).toHaveLength(0);
+    expect(useAppStore.getState().authToken).toBeNull();
+  });
+
   it('429: counts down from Retry-After with the keypad locked, then lets the child try again', async () => {
     pinLogin.mockRejectedValueOnce(new ApiError('Too many attempts.', 429, { reason: 'too_many_attempts', retry_after: 90 }, 90));
     await openChildPath();

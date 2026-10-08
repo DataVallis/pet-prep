@@ -66,7 +66,7 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
       onError: (err) => {
         const classified = classifyPinLoginError(err);
         setError(classified);
-        if (classified.kind === 'invalid') setDigits('');
+        if (classified.kind === 'invalid' || classified.kind === 'update_required') setDigits('');
         if (classified.kind === 'rate_limited') {
           setDigits('');
           const seconds = classified.retryAfterSeconds ?? 0;
@@ -97,6 +97,9 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
     switch (error.kind) {
       case 'invalid':
         return S.invalid;
+      case 'update_required':
+        // M5-R06-01: the code is fine, this app is too old for the pet (e.g. a cat).
+        return S.updateRequired;
       case 'rate_limited':
         return isLockedOut
           ? S.rateLimited(formatCountdown(lockRemaining > 0 ? lockRemaining : error.retryAfterSeconds ?? 0))

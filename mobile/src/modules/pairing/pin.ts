@@ -36,6 +36,10 @@ export type PinErrorKind =
   | 'breed_locked'
   /** M5-F03: the 12-week challenge was picked with the mutt (the free plan's dog). */
   | 'challenge_requires_paid_breed'
+  /** M5-R06-01: the breed belongs to another species than the one sent. */
+  | 'breed_species_mismatch'
+  /** M5-R06-01: the species isn't offered (cats hidden on the server, or this build lacks `species_cat`). */
+  | 'species_unavailable'
   /** M5-R04: the server rejected the profile choice (422 validation without a reason). */
   | 'invalid_profile'
   | 'offline'
@@ -51,7 +55,21 @@ export function reasonOf(error: ApiError): string | null {
   return null;
 }
 
-const PROFILE_FIELDS = ['breed', 'origin', 'age_stage'] as const;
+const PROFILE_FIELDS = ['breed', 'origin', 'age_stage', 'species'] as const;
+
+/** 422 reasons the screen explains one by one. */
+const KNOWN_422_REASONS = [
+  'pet_not_joinable',
+  'already_paired',
+  'breed_locked',
+  'challenge_requires_paid_breed',
+  'breed_species_mismatch',
+  'species_unavailable',
+] as const satisfies readonly PinErrorKind[];
+
+function known422Reason(reason: string | null): (typeof KNOWN_422_REASONS)[number] | null {
+  return KNOWN_422_REASONS.find((r) => r === reason) ?? null;
+}
 
 /** A Laravel validation body (`{message, errors: {field: [...]}}`) about a picker field. */
 function hasProfileValidationErrors(data: unknown): boolean {
@@ -83,13 +101,8 @@ export function classifyPinError(error: unknown): PinError {
     if (error.status === 403) return { kind: 'forbidden', retryAfterSeconds: null };
     if (error.status === 401) return { kind: 'unauthorized', retryAfterSeconds: null };
     if (error.status === 404) return { kind: 'child_not_found', retryAfterSeconds: null };
-    const reason = reasonOf(error);
-    if (
-      error.status === 422 &&
-      (reason === 'pet_not_joinable' || reason === 'already_paired' || reason === 'breed_locked' || reason === 'challenge_requires_paid_breed')
-    ) {
-      return { kind: reason, retryAfterSeconds: null };
-    }
+    const reason = error.status === 422 ? known422Reason(reasonOf(error)) : null;
+    if (reason !== null) return { kind: reason, retryAfterSeconds: null };
     if (error.status === 422 && hasProfileValidationErrors(error.data)) {
       return { kind: 'invalid_profile', retryAfterSeconds: null };
     }
@@ -106,8 +119,16 @@ export function classifyPinError(error: unknown): PinError {
  */
 export function pinRequestKey(
   petId: number | null,
-  profile: { breed: string; origin: string; age_stage: string; plan?: string } | null,
+  profile: { species?: string; breed: string; origin: string; age_stage: string; plan?: string } | null,
 ): string {
   // M3-09: the plan is part of the choice — a PIN issued for a free pet is never reused for a challenge.
-  return JSON.stringify([petId, profile?.breed ?? null, profile?.origin ?? null, profile?.age_stage ?? null, profile?.plan ?? null]);
+  // M5-R06-02: so is the species.
+  return JSON.stringify([
+    petId,
+    profile?.breed ?? null,
+    profile?.origin ?? null,
+    profile?.age_stage ?? null,
+    profile?.plan ?? null,
+    profile?.species ?? null,
+  ]);
 }

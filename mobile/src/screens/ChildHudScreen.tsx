@@ -100,7 +100,8 @@ import HeartsLayer from '@/modules/play/HeartsLayer';
 import PlayOverlay from '@/modules/play/PlayOverlay';
 import { moodSceneAt, playBlockText, playEntry, playRefusalMessage, type PlayKind } from '@/modules/play/play';
 import { usePlayClock } from '@/modules/play/usePlayClock';
-import type { BreedType, PetState, PetUpdatedBroadcast } from '@/types';
+import type { PetState, PetUpdatedBroadcast } from '@/types';
+import { breedName } from '@/modules/species/species';
 import { alpha, palette, radius } from '@/theme';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
@@ -117,8 +118,8 @@ export const HUD_STRINGS = strings('child', 'hud', {
   ws: WS_BADGE_STRINGS,
 });
 
-/** Every breed and mood has a label (compile-time check). */
-const _hudTexts: { breeds: Record<BreedType, string>; moods: Record<PetState, string> } = HUD_STRINGS;
+/** Every mood has a label (compile-time check). Breed names: `breedName()` (`family:breeds`, M5-R06-02). */
+const _hudTexts: { moods: Record<PetState, string> } = HUD_STRINGS;
 void _hudTexts;
 
 const CHALLENGE_WEEKS = 12;
@@ -467,7 +468,7 @@ export default function ChildHudScreen() {
 
   const { pet } = view;
   const profileSub = pet.profile ? profileSubline(pet.profile) : null;
-  const profileRows = pet.profile ? profileSheetRows(HUD_STRINGS.breeds[pet.breed_type], pet.profile) : [];
+  const profileRows = pet.profile ? profileSheetRows(breedName(pet.breed_type, pet.species), pet.profile) : [];
   const locked = view.lock.is_locked;
   const opaqueLock = view.lock.reason === 'game_over' || view.lock.reason === 'inactive';
   const feedDisabled = !view.feeding.can_feed;
@@ -523,6 +524,7 @@ export default function ChildHudScreen() {
           scene={view.behaviour.scene}
           mood={moodScene}
           breed={pet.breed_type}
+          species={pet.species}
           // Vet visit / hard stop: the sick / sleeping video keeps playing under the
           // translucent grey lock (PRODUCT_SPEC §7). Paused under the opaque game-over /
           // inactive screen, the walk tracker, the album (one player at a time) and in the background.
@@ -573,7 +575,7 @@ export default function ChildHudScreen() {
             </View>
             <View style={styles.petInfoText}>
               <Text style={styles.petBreedName} numberOfLines={pet.profile ? 1 : 2}>
-                {HUD_STRINGS.breeds[pet.breed_type]}
+                {breedName(pet.breed_type, pet.species)}
               </Text>
               {pet.profile ? (
                 <>

@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-08 — Izbirnik »vrsta → pasma« v aplikaciji (M5-R06-02, mačke še skrite)
+
+**Kaj se je zgodilo:** Zaslon, kjer starš izbere ljubljenčka, zdaj seznam pasem dobi s strežnika. Najprej izbere **vrsto** (velike ploščice »Pes« / »Mačka«), nato načrt, pasmo s seznama z **iskanjem** (»mesancek« najde Mešančka, »mejnkun« Maine Coona), izvor in starost; pred kodo vidi **povzetek**. Ker so mačke še skrite, starš psa vidi isti izbirnik kot prej — korak vrste se preskoči, novo so iskalno polje, oznaki *Brezplačno* / *Izziv* in povzetek.
+
+**Zakaj je pomembno:** Nova pasma je odslej vrstica v bazi, ne nova aplikacija. Aplikacija nikoli več ne pokaže neznane živali kot »mešančka« — brezplačna muca tako nikoli ne dobi ponudbe za nakup. Če seznama ni mogoče naložiti, izbirnik pokaže današnja psa, zato ustvarjanje psa nikoli ne odpove.
+
+**Številke:** 4 pasme v katalogu (2 psa, 2 mački); 46 novih testov aplikacije (skupaj 1596); 3 podvojeni prevodi imen pasem združeni v enega.
+
+**Kako povedati:**
+- 👩 Starši: »Pasmo zdaj najdete z iskanjem, pred kodo pa vidite povzetek izbire.« Mačka: *načrt*.
+- 💼 Investitorji: »Izbirnik je podatkovno voden — nova pasma ali vrsta ne potrebuje nove različice aplikacije.«
+- 🛠 Tehnično: »Katalog prek TanStack Query z rezervnim seznamom; mačke se odklenejo samo, ko sta vklopljena strežniško stikalo in zastavica v aplikaciji (`species_cat`).«
+
+---
+
 ## 2026-10-08 — Temelj za muco: strežnik pozna vrsto živali (M5-R06-01, skrito)
 
 **Kaj se je zgodilo:** Strežnik zdaj pri vsakem ljubljenčku ve, ali je **pes ali mačka**. Dobil je dve mačji pasmi — **domačo mačko** (brezplačno, kot mešanček) in **Maine Coona** (samo z 12-tedenskim izzivom) — ter katalog pasem, iz katerega bo aplikacija gradila izbirnik »vrsta → pasma« (`GET /api/breeds`). Pravilo »kaj je brezplačno in kaj plačljivo« je bilo prej zapisano v kodi na ~10 mestih (»mešanček je brezplačen«); zdaj ima **en sam vir**: nastavitev pasme v bazi, ki jo admin vidi in ureja.
