@@ -4,6 +4,7 @@
  * the parent's cards (child card, Nadzor pet card) with and without a name.
  */
 import { act, fireEvent, render, screen } from '@testing-library/react-native';
+import { Modal } from 'react-native';
 
 import { ApiError, api, type ParentDashboardResponse } from '@/api/client';
 import ChildOverviewCard from '@/components/parent/ChildOverviewCard';
@@ -23,6 +24,8 @@ jest.mock('@/api/client', () => {
 const setPetName = api.setPetName as jest.Mock;
 
 const ID = 'pet-name-7';
+/** A name inside a label is wrapped in FSI … PDI (bidi isolation). */
+const iso = (name: string) => `\u2068${name}\u2069`;
 
 function dashboard(name: string | null = null) {
   return makeScoredDashboard([makeScoredChild({ pet_id: 7 })], [makeFamilyPet({ id: 7, breed_type: 'border_collie', name })]) as unknown as ParentDashboardResponse;
@@ -58,14 +61,23 @@ describe('PetNameRow — the "Ime" row', () => {
     renderRow();
     expect(screen.getByTestId(`${ID}-value`)).toHaveTextContent('Še brez imena');
     expect(screen.getByText('Dodaj ime')).toBeTruthy();
-    expect(screen.getByLabelText('Spremeni ime: Border collie')).toBeTruthy();
+    expect(screen.getByTestId(`${ID}-edit`).props.accessibilityLabel).toBe('Dodaj ime: Border collie');
   });
 
   it('with a name: the name and "Spremeni"', () => {
     renderRow('Luna');
     expect(screen.getByTestId(`${ID}-value`)).toHaveTextContent('Luna');
     expect(screen.getByText('Spremeni')).toBeTruthy();
-    expect(screen.getByLabelText('Spremeni ime: Luna · Border collie')).toBeTruthy();
+    expect(screen.getByTestId(`${ID}-edit`).props.accessibilityLabel).toBe(`Spremeni ime: ${iso('Luna')} · Border collie`);
+  });
+
+  it('"Prekliči" closes the sheet without a request', () => {
+    renderRow('Luna');
+    fireEvent.changeText(openSheet(), 'Bela');
+    expect(screen.getByTestId(`${ID}-sheet-cancel`)).toHaveTextContent('Prekliči');
+    fireEvent.press(screen.getByTestId(`${ID}-sheet-cancel`));
+    expect(screen.queryByTestId(`${ID}-sheet`)).toBeNull();
+    expect(setPetName).not.toHaveBeenCalled();
   });
 
   it('the sheet suggests choosing the name together with the child; no "Odstrani ime" without a name', () => {
@@ -129,6 +141,52 @@ describe('PetNameRow — save and remove', () => {
     expect(client.getQueryState(parentDashboardKey)?.isInvalidated).toBe(true);
   });
 
+  it('a named pet: optimistic new name while saving, the previous name back after a rejection', async () => {
+    let fail: (e: unknown) => void = () => undefined;
+    setPetName.mockReturnValue(new Promise((_resolve, reject) => (fail = reject)));
+    const { client } = renderRow('Luna');
+    fireEvent.changeText(openSheet(), 'Bela');
+    fireEvent.press(screen.getByTestId(`${ID}-sheet-save`));
+    await settle();
+
+    expect(setPetName).toHaveBeenCalledWith(7, 'Bela');
+    expect(client.getQueryData<ParentDashboardResponse>(parentDashboardKey)?.family?.pets[0].name).toBe('Bela');
+    expect(screen.getByTestId(`${ID}-sheet-save`).props.accessibilityState).toEqual(expect.objectContaining({ busy: true }));
+
+    await act(async () => fail(new ApiError('x', 500)));
+    await settle();
+    expect(client.getQueryData<ParentDashboardResponse>(parentDashboardKey)?.family?.pets[0].name).toBe('Luna');
+    expect(screen.getByTestId(`${ID}-sheet-error`)).toHaveTextContent('Imena ni bilo mogoče shraniti. Poskusite pozneje.');
+  });
+
+  it('while saving, the back button / backdrop / ✕ / Prekliči do not close the sheet', async () => {
+    let answer: (v: { pet_id: number; name: string | null }) => void = () => undefined;
+    setPetName.mockReturnValue(new Promise((resolve) => (answer = resolve)));
+    renderRow();
+    fireEvent.changeText(openSheet(), 'Luna');
+    fireEvent.press(screen.getByTestId(`${ID}-sheet-save`));
+    await settle();
+
+    act(() => {
+      screen.UNSAFE_getByType(Modal).props.onRequestClose();
+    });
+    fireEvent.press(screen.getByTestId(`${ID}-sheet-backdrop`, { includeHiddenElements: true }));
+    fireEvent.press(screen.getByTestId(`${ID}-sheet-close`));
+    fireEvent.press(screen.getByTestId(`${ID}-sheet-cancel`));
+    expect(screen.getByTestId(`${ID}-sheet`)).toBeTruthy();
+
+    await act(async () => answer({ pet_id: 7, name: 'Luna' }));
+    await settle();
+    expect(screen.queryByTestId(`${ID}-sheet`)).toBeNull();
+
+    // Idle again: the back button closes it.
+    openSheet();
+    act(() => {
+      screen.UNSAFE_getByType(Modal).props.onRequestClose();
+    });
+    expect(screen.queryByTestId(`${ID}-sheet`)).toBeNull();
+  });
+
   it('"Odstrani ime" clears it (null)', async () => {
     setPetName.mockResolvedValue({ pet_id: 7, name: null });
     const { client } = renderRow('Luna');
@@ -179,7 +237,9 @@ describe('PetNameRow — save and remove', () => {
     setPetName.mockRejectedValue(new ApiError('x', 422, { codes: { name: 'name_not_allowed' }, reason: 'name_not_allowed' }));
     renderRow();
     expect(screen.getByText('Add a name')).toBeTruthy();
+    expect(screen.getByTestId(`${ID}-edit`).props.accessibilityLabel).toBe('Add a name: Border Collie');
     fireEvent.changeText(openSheet(), 'Luna');
+    expect(screen.getByTestId(`${ID}-sheet-cancel`)).toHaveTextContent('Cancel');
     expect(screen.getByText('Pick the name together with your child.')).toBeTruthy();
     fireEvent.press(screen.getByTestId(`${ID}-sheet-save`));
     await settle();
@@ -199,7 +259,7 @@ describe('parent cards — the label with / without a name', () => {
 
     const named = normalizePet(makeFamilyPet({ id: 7, breed_type: 'border_collie', name: 'Luna' }));
     rerender(<ChildOverviewCard child={child} pet={named} timezone={TZ} onOpen={jest.fn()} onChildPin={jest.fn()} />);
-    expect(screen.getByTestId(`child-pet-label-${child.id}`)).toHaveTextContent('Luna · Border collie');
+    expect(screen.getByTestId(`child-pet-label-${child.id}`).props.children).toBe(`${iso('Luna')} · Border collie`);
   });
 
   it('Nadzor pet card: title + the "Ime" row, for a cat as well', () => {
@@ -217,7 +277,7 @@ describe('parent cards — the label with / without a name', () => {
     );
     expect(screen.getByTestId('pet-title-7').props.children).toBe('Border collie');
     expect(screen.getByTestId('pet-name-7-value')).toHaveTextContent('Še brez imena');
-    expect(screen.getByTestId('pet-title-8').props.children).toBe('Muri · Domača mačka');
+    expect(screen.getByTestId('pet-title-8').props.children).toBe(`${iso('Muri')} · Domača mačka`);
     expect(screen.getByTestId('pet-name-8-value')).toHaveTextContent('Muri');
   });
 });

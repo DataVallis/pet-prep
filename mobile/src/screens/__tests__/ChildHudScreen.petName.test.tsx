@@ -75,6 +75,8 @@ async function renderHud(state: ReturnType<typeof makeLiveChildState>) {
 }
 
 const headerText = () => screen.getByTestId('hud-profile-open');
+/** The name in the title is wrapped in FSI … PDI (bidi isolation). */
+const iso = (name: string) => `\u2068${name}\u2069`;
 
 describe('ChildHudScreen — pet name (M5-R08)', () => {
   beforeEach(() => {
@@ -118,7 +120,7 @@ describe('ChildHudScreen — pet name (M5-R08)', () => {
 
   it('a named dog: the name is the title, the breed stays beside it; screen reader starts with the name', async () => {
     await renderHud(dogState({ pet: { name: 'Luna' } }));
-    expect(screen.getByTestId('hud-pet-name')).toHaveTextContent('Luna · Border collie');
+    expect(screen.getByTestId('hud-pet-name')).toHaveTextContent(`${iso('Luna')} · Border collie`);
     expect(headerText().props.accessibilityLabel).toMatch(/^Luna, Border collie, /);
   });
 
@@ -130,7 +132,7 @@ describe('ChildHudScreen — pet name (M5-R08)', () => {
       awaitingContract: false,
     });
     await renderHud(catState({ pet: { name: 'Muri' } }));
-    expect(screen.getByTestId('hud-pet-name')).toHaveTextContent('Muri · Domača mačka');
+    expect(screen.getByTestId('hud-pet-name')).toHaveTextContent(`${iso('Muri')} · Domača mačka`);
   });
 
   it('the album is titled with the name', async () => {
@@ -153,11 +155,11 @@ describe('ChildHudScreen — pet name (M5-R08)', () => {
       mockSocket.handler?.(makeBroadcast({ breed_type: 'border_collie', event_type: 'pet_renamed', name: 'Luna', emitted_at: '2026-10-04T10:00:08.000+00:00' }));
     });
     await flush();
-    expect(screen.getByTestId('hud-pet-name')).toHaveTextContent('Luna · Border collie');
+    expect(screen.getByTestId('hud-pet-name')).toHaveTextContent(`${iso('Luna')} · Border collie`);
     // … and the server's state agrees.
     await act(async () => answer(dogState({ pet: { name: 'Luna' } })));
     await flush();
-    expect(screen.getByTestId('hud-pet-name')).toHaveTextContent('Luna · Border collie');
+    expect(screen.getByTestId('hud-pet-name')).toHaveTextContent(`${iso('Luna')} · Border collie`);
 
     getChildPet.mockResolvedValue(dogState());
     await act(async () => {

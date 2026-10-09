@@ -256,6 +256,7 @@
     "saved": "Name saved.",
     "removed": "Name removed.",
     "editA11y": "Change the name: {{pet}}",
+    "addA11y": "Add a name: {{pet}}",
     "errors": {
       "name_too_long": "The name can be at most 20 characters long.",
       "name_invalid": "Use only letters, spaces, hyphens (-) and apostrophes (').",

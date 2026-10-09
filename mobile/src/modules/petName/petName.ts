@@ -8,9 +8,11 @@
  * before (breed / species) — the helpers below return the old label unchanged then.
  *
  * Client-side validation mirrors the server (`PetNameService`): trimmed, inner whitespace
- * collapsed, ’ → ', NFC; 1–20 characters (code points); letters (any script, incl. č š ž),
- * space, hyphen, apostrophe; at least one letter. The word filter stays on the server
- * (`name_not_allowed`) — the server is the authority.
+ * collapsed, ’ → ', NFKC (fullwidth / math-bold / modifier look-alikes become plain letters);
+ * 1–20 characters (code points); letters (any script, incl. č š ž), space, hyphen,
+ * apostrophe; at least one letter; no invisible Hangul fillers, enclosing marks or runs of
+ * 3+ combining marks (Zalgo). The word filter stays on the server (`name_not_allowed`) — the
+ * server is the authority.
  */
 
 import { ApiError, type PetNameErrorCode } from '@/api/client';
@@ -30,21 +32,40 @@ export type PetNameErrorKind = PetNameErrorCode | 'not_found' | 'forbidden' | 'o
 export const PET_NAME_STRINGS = strings('parent', 'petName', {
   counter: (count: number) => t('parent:petName.counter', { count, max: PET_NAME_MAX_LENGTH }),
   editA11y: (pet: string) => t('parent:petName.editA11y', { pet }),
+  addA11y: (pet: string) => t('parent:petName.addA11y', { pet }),
 });
 
 const ALLOWED = /^[\p{L}\p{M}' -]+$/u;
 const LETTER = /\p{L}/u;
+/** Letters that render as nothing (Hangul fillers), enclosing marks, 3+ stacked marks (Zalgo). */
+const INVISIBLE_OR_STACKED = /[\u115F\u1160\u3164\uFFA0]|\p{Me}|\p{M}{3,}/u;
+/**
+ * PHP's `[\s\p{Z}]` (PCRE, UTF + UCP): ASCII whitespace, NEL, U+180E and every separator.
+ * Not JS `\s` — that also matches U+FEFF (BOM), which the server rejects as invalid.
+ */
+const WHITESPACE = /[\t\n\v\f\r\u0085\u180E\p{Z}]+/gu;
+
+/** First strong isolate … pop directional isolate: a name never reorders the text around it. */
+const FSI = '\u2068';
+const PDI = '\u2069';
+
+/** The name wrapped in Unicode isolates (FSI … PDI) for a label next to other text. */
+export function isolatePetName(name: string): string {
+  return `${FSI}${name}${PDI}`;
+}
 
 /** Canonical form like the server's; null = no name (empty / only whitespace). */
 export function normalizePetName(input: string): string | null {
   let name = input.replace(/\u2019/g, "'");
   try {
-    name = name.normalize('NFC');
+    name = name.normalize('NFKC');
   } catch {
-    // No normalize() in this engine: the server normalises anyway.
+    // No normalize() in this engine: the server normalises anyway (and is the authority).
   }
-  // JS `\s` covers the Unicode spaces (NBSP, U+2000–U+200A, U+3000 …) like PHP's [\s\p{Z}].
-  name = name.replace(/\s+/g, ' ').trim();
+  name = name.replace(WHITESPACE, ' ');
+  // Only the single spaces left by the collapse are trimmed (not BOM & co. — JS trim() would).
+  if (name.startsWith(' ')) name = name.slice(1);
+  if (name.endsWith(' ')) name = name.slice(0, -1);
   return name === '' ? null : name;
 }
 
@@ -62,7 +83,7 @@ export function validatePetName(input: string): PetNameValidation {
   const name = normalizePetName(input);
   if (name === null) return { ok: true, name: null };
   if (petNameLength(name) > PET_NAME_MAX_LENGTH) return { ok: false, code: 'name_too_long' };
-  if (!ALLOWED.test(name) || !LETTER.test(name)) return { ok: false, code: 'name_invalid' };
+  if (!ALLOWED.test(name) || !LETTER.test(name) || INVISIBLE_OR_STACKED.test(name)) return { ok: false, code: 'name_invalid' };
   return { ok: true, name };
 }
 
@@ -98,11 +119,12 @@ export function petNameErrorText(kind: PetNameErrorKind): string {
 }
 
 /**
- * A pet's label for cards and lists: "Luna · Border Collie" with a name, otherwise the
- * breed label exactly as before ("Mešanček", "Maine Coon").
+ * A pet's label for cards and lists: "Luna · Border Collie" with a name (the name wrapped in
+ * FSI … PDI so a right-to-left name cannot reorder the breed), otherwise the breed label
+ * exactly as before ("Mešanček", "Maine Coon").
  */
 export function petLabel(pet: { name?: unknown; breed_type: string; species?: string | null }): string {
   const breed = breedLabel(pet.breed_type, pet.species);
   const name = readPetName(pet.name);
-  return name === null ? breed : `${name} · ${breed}`;
+  return name === null ? breed : `${isolatePetName(name)} · ${breed}`;
 }

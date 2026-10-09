@@ -1,7 +1,7 @@
 /**
  * M5-R08 — "Ime" row of a family pet for the parent (child detail + Nadzor pet card):
  * the current name (or "Še brez imena") and an action that opens a small sheet with a text
- * input, "Shrani" and "Odstrani ime". Only parents see it (the parent app); the server is
+ * input, "Shrani", "Odstrani ime" and "Prekliči". Only parents see it (the parent app); the server is
  * the authority (word filter, normalisation) — the sheet mirrors its length / character
  * rules so most mistakes are explained before a request. Light parent theme (ADR-007).
  */
@@ -38,18 +38,21 @@ export interface PetNameTarget {
   species?: string | null;
 }
 
+type SetPetNameMutation = ReturnType<typeof useSetPetName>;
+
 interface PetNameSheetProps {
   pet: PetNameTarget;
+  /** Owned by the row, so the modal's back button knows a save is running. */
+  setName: SetPetNameMutation;
   onClose: () => void;
   onDone: (outcome: 'saved' | 'removed') => void;
   testID: string;
 }
 
-function PetNameSheet({ pet, onClose, onDone, testID }: PetNameSheetProps) {
+function PetNameSheet({ pet, setName, onClose, onDone, testID }: PetNameSheetProps) {
   const current = readPetName(pet.name);
   const [value, setValue] = useState(current ?? '');
   const [error, setError] = useState<PetNameErrorKind | null>(null);
-  const setName = useSetPetName();
   const bottomInset = useContext(SafeAreaInsetsContext)?.bottom ?? 0;
   const busy = setName.isPending;
   const length = petNameLength(normalizePetName(value) ?? '');
@@ -161,6 +164,16 @@ function PetNameSheet({ pet, onClose, onDone, testID }: PetNameSheetProps) {
             <Text style={styles.secondaryText}>{S.remove}</Text>
           </Pressable>
         )}
+        <Pressable
+          style={({ pressed }) => [styles.tertiary, busy && styles.disabled, pressed && styles.pressed]}
+          onPress={onClose}
+          disabled={busy}
+          accessibilityRole="button"
+          accessibilityState={{ disabled: busy }}
+          testID={`${testID}-cancel`}
+        >
+          <Text style={styles.tertiaryText}>{S.cancel}</Text>
+        </Pressable>
       </View>
     </KeyboardAvoidingView>
   );
@@ -174,7 +187,12 @@ interface PetNameRowProps {
 export default function PetNameRow({ pet, testID = `pet-name-${pet.id}` }: PetNameRowProps) {
   const [open, setOpen] = useState(false);
   const [outcome, setOutcome] = useState<'saved' | 'removed' | null>(null);
+  const setName = useSetPetName();
   const name = readPetName(pet.name);
+  // Never closed while a save runs (backdrop, ✕, Cancel and the Android back button alike).
+  const close = () => {
+    if (!setName.isPending) setOpen(false);
+  };
 
   return (
     <View testID={testID}>
@@ -192,7 +210,7 @@ export default function PetNameRow({ pet, testID = `pet-name-${pet.id}` }: PetNa
             setOpen(true);
           }}
           accessibilityRole="button"
-          accessibilityLabel={S.editA11y(petLabel(pet))}
+          accessibilityLabel={name === null ? S.addA11y(petLabel(pet)) : S.editA11y(petLabel(pet))}
           testID={`${testID}-edit`}
         >
           <Pencil color={C.accent} size={16} />
@@ -204,11 +222,12 @@ export default function PetNameRow({ pet, testID = `pet-name-${pet.id}` }: PetNa
           {outcome === 'saved' ? S.saved : S.removed}
         </Text>
       )}
-      <Modal visible={open} transparent animationType="slide" onRequestClose={() => setOpen(false)} statusBarTranslucent>
+      <Modal visible={open} transparent animationType="slide" onRequestClose={close} statusBarTranslucent>
         {open && (
           <PetNameSheet
             pet={pet}
-            onClose={() => setOpen(false)}
+            setName={setName}
+            onClose={close}
             onDone={(o) => {
               setOpen(false);
               setOutcome(o);
@@ -287,6 +306,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   secondaryText: { fontSize: 15, fontWeight: '700', color: C.redText },
+  tertiary: { minHeight: MIN_TOUCH, alignItems: 'center', justifyContent: 'center' },
+  tertiaryText: { fontSize: 15, fontWeight: '600', color: C.muted },
   disabled: { opacity: 0.5 },
   pressed: { opacity: 0.85 },
 });

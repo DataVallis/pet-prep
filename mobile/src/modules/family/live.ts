@@ -8,6 +8,7 @@
  * refreshes every 3 min (feed windows / deadlines pass without any event).
  */
 
+import { readPetName } from '@/modules/petName/petName';
 import { readPetTraining } from '@/modules/training/training';
 import type { QueryClient } from '@tanstack/react-query';
 
@@ -63,7 +64,7 @@ export function patchDashboardPet(
     // M5-R02: bladder clock / open messes — an accident arrives with a plain decay tick.
     behaviour: event.behaviour ?? pet.behaviour,
     // M5-R08: `pet_renamed` (and every current broadcast) carries the name; an older server's doesn't.
-    name: event.name !== undefined ? event.name : pet.name,
+    name: event.name !== undefined ? readPetName(event.name) : pet.name,
     // M5-R03: training progress / today's session / a session running — normalised like the
     // dashboard read (a malformed / partial broadcast never lands in the cache raw).
     training: event.training !== undefined && event.training !== null ? readPetTraining(event.training) : pet.training,

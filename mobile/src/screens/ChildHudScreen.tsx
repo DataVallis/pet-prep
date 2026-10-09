@@ -128,6 +128,7 @@ import { breedName } from '@/modules/species/species';
 import { alpha, palette, radius } from '@/theme';
 import { setTextSpecies, t } from '@/i18n';
 import { strings } from '@/i18n/strings';
+import { isolatePetName } from '@/modules/petName/petName';
 import { useTranslation } from 'react-i18next';
 
 /**
@@ -655,8 +656,8 @@ export default function ChildHudScreen() {
             <View style={styles.petInfoText}>
               {pet.name !== null ? (
                 // M5-R08: the parent's name is the title (a label only), the breed stays beside it.
-                <Text style={[styles.petBreedName, styles.petNameTitle]} numberOfLines={1} testID="hud-pet-name">
-                  {pet.name}
+                <Text style={[styles.petBreedName, styles.petNameTitle]} numberOfLines={pet.profile ? 1 : 2} testID="hud-pet-name">
+                  {isolatePetName(pet.name)}
                   <Text style={styles.petNameBreed}>{` · ${breedName(pet.breed_type, pet.species)}`}</Text>
                 </Text>
               ) : (

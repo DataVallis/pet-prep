@@ -260,6 +260,7 @@
     "saved": "Ime je shranjeno.",
     "removed": "Ime je odstranjeno.",
     "editA11y": "Spremeni ime: {{pet}}",
+    "addA11y": "Dodaj ime: {{pet}}",
     "errors": {
       "name_too_long": "Ime je lahko dolgo največ 20 znakov.",
       "name_invalid": "Uporabite samo črke, presledek, vezaj (-) in opuščaj (').",

@@ -9,6 +9,7 @@ import { patchDashboardPet, setDashboardPetName } from '@/modules/family/live';
 import {
   PET_NAME_MAX_LENGTH,
   classifyPetNameError,
+  isolatePetName,
   normalizePetName,
   petLabel,
   petNameErrorText,
@@ -56,6 +57,52 @@ describe('normalizePetName / validatePetName', () => {
   it('length is checked before the characters (the server order)', () => {
     expect(validatePetName('1'.repeat(21))).toEqual({ ok: false, code: 'name_too_long' });
   });
+
+  it('NFKC: compatibility look-alikes become plain letters (the server filters those)', () => {
+    expect(normalizePetName('ｆｕｃｋ')).toBe('fuck');
+    expect(normalizePetName('𝐟𝐮𝐜𝐤')).toBe('fuck');
+    expect(normalizePetName('ᶠᵘᶜᵏ')).toBe('fuck');
+    expect(validatePetName('Ｌｕｎａ')).toEqual({ ok: true, name: 'Luna' });
+    expect(normalizePetName('C\u030Crni')).toBe('Črni');
+  });
+
+  it('counts after normalisation: 20 decomposed letters (40 code points) pass, 21 do not', () => {
+    const decomposed = 'z\u030C'.repeat(20);
+    expect(Array.from(decomposed)).toHaveLength(40);
+    expect(validatePetName(decomposed)).toEqual({ ok: true, name: 'ž'.repeat(20) });
+    expect(validatePetName('z\u030C'.repeat(21))).toEqual({ ok: false, code: 'name_too_long' });
+  });
+
+  it('whitespace like PHP [\\s\\p{Z}]: NBSP / ideographic space / line separator collapse; BOM is no space', () => {
+    expect(normalizePetName('Mala\u00A0\u3000Luna\u2028')).toBe('Mala Luna');
+    expect(normalizePetName('\tLuna\n')).toBe('Luna');
+    expect(normalizePetName('\uFEFFLuna')).toBe('\uFEFFLuna');
+    expect(normalizePetName('\uFEFF')).toBe('\uFEFF');
+  });
+
+  it.each([
+    ['zero-width space', 'Lu\u200Bna'],
+    ['zero-width joiner', 'Lu\u200Dna'],
+    ['byte order mark', '\uFEFFLuna'],
+    ['only a byte order mark', '\uFEFF'],
+    ['right-to-left override', '\u202ELuna'],
+    ['left-to-right mark', 'Luna\u200E'],
+    ['only a combining mark', '\u0301'],
+    ['only combining marks', '\u0301\u0308'],
+    ['hangul choseong filler', 'Lu\u115Fna'],
+    ['hangul jungseong filler', '\u1160'],
+    ['hangul filler', 'Luna\u3164'],
+    ['halfwidth hangul filler', '\uFFA0'],
+    ['zalgo (3 stacked marks)', 'Lx\u0301\u0302\u0303na'],
+    ['zalgo (4 stacked marks, ú + 3 after NFKC)', 'Lu\u0301\u0302\u0303\u0304na'],
+    ['enclosing circle', 'Luna\u20DD'],
+  ])('%s is invalid (name_invalid, like the server)', (_label, name) => {
+    expect(validatePetName(name)).toEqual({ ok: false, code: 'name_invalid' });
+  });
+
+  it('two stacked combining marks are fine (decomposed Vietnamese ệ)', () => {
+    expect(validatePetName('Ne\u0323\u0302n')).toEqual({ ok: true, name: 'Nện' });
+  });
 });
 
 describe('readPetName', () => {
@@ -97,10 +144,18 @@ describe('classifyPetNameError / petNameErrorText', () => {
 });
 
 describe('petLabel', () => {
-  it('the breed alone without a name (unchanged), "Name · Breed" with one', () => {
+  it('the breed alone without a name (byte-identical), "Name · Breed" with one — the name isolated', () => {
     expect(petLabel({ name: null, breed_type: 'mutt', species: 'dog' })).toBe('Mešanček');
     expect(petLabel({ breed_type: 'domestic_cat', species: 'cat' })).toBe('Domača mačka');
-    expect(petLabel({ name: 'Luna', breed_type: 'border_collie', species: 'dog' })).toBe('Luna · Border collie');
+    expect(petLabel({ name: '  ', breed_type: 'mutt', species: 'dog' })).toBe('Mešanček');
+    expect(petLabel({ name: 'Luna', breed_type: 'border_collie', species: 'dog' })).toBe('\u2068Luna\u2069 · Border collie');
+    expect(isolatePetName('Luna')).toBe('\u2068Luna\u2069');
+  });
+
+  it('a right-to-left name stays inside its isolate', () => {
+    const label = petLabel({ name: 'שלום', breed_type: 'mutt', species: 'dog' });
+    expect(label).toBe('\u2068שלום\u2069 · Mešanček');
+    expect(label.endsWith(' · Mešanček')).toBe(true);
   });
 });
 
@@ -135,6 +190,13 @@ describe('parent live path (dashboard cache)', () => {
     expect(next?.family?.pets.map((p) => p.name)).toEqual(['Luna', null]);
     const old = patchDashboardPet(next, makeBroadcast({ pet_id: 7 }));
     expect(old?.family?.pets[0].name).toBe('Luna');
+  });
+
+  it('a broadcast name goes through readPetName (blank → null, trimmed)', () => {
+    const named = patchDashboardPet(dashboard(), makeBroadcast({ pet_id: 7, event_type: 'pet_renamed', name: ' Luna ' }));
+    expect(named?.family?.pets[0].name).toBe('Luna');
+    const blank = patchDashboardPet(named, makeBroadcast({ pet_id: 7, event_type: 'pet_renamed', name: '   ' }));
+    expect(blank?.family?.pets[0].name).toBeNull();
   });
 
   it('setDashboardPetName sets / clears one pet', () => {
