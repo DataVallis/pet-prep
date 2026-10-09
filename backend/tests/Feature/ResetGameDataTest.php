@@ -92,6 +92,14 @@ function rgSeed(): array
 
     ]);
 
+    // M4-10: a shared look of the free-pet pool (game data too) with its stored image.
+    $lookId = rgInsert('pet_looks', ['breed_type' => 'mutt', 'pool_index' => 1, 'trait_fingerprint' => str_repeat('a', 64), 'dna' => json_encode(['version' => 2])]);
+    Storage::disk('pet_media')->put("looks/{$lookId}/reference-puppy-g1.jpg", "\xFF\xD8\xFF\xE0".str_repeat("\x00", 16));
+    PetMedia::create([
+        'pet_look_id' => $lookId, 'kind' => 'image', 'life_stage' => 'puppy', 'status' => 'ready', 'generation' => 1,
+        'storage_path' => "looks/{$lookId}/reference-puppy-g1.jpg", 'mime' => 'image/jpeg', 'bytes' => 20,
+    ]);
+
     $image = PetMedia::where('pet_id', $pet->id)->firstOrFail();
     $runId = rgInsert('media_lab_runs', [
         'kind' => 'image', 'profiles' => json_encode(['nano_banana_pro']), 'user_id' => $admin->id,
@@ -281,7 +289,7 @@ it('dry run prints counts but changes nothing and prints no personal data', func
 
     $this->artisan('petprep:reset-game-data')
         ->expectsOutputToContain('Dry run — nothing was changed')
-        ->expectsOutputToContain('Pet media files to delete: 5')
+        ->expectsOutputToContain('Pet media files to delete: 6')
         ->expectsOutputToContain("Superadmins kept: 2 (ids {$s['admin']->id}, {$s['admin2']->id})")
         ->expectsOutputToContain('Breed edits by non-admin users: 1')
         ->doesntExpectOutputToContain('@example.com')
@@ -353,7 +361,7 @@ it('deletes all game data and media, keeps admins, their tokens and breed data; 
     $this->artisan('petprep:reset-game-data', RG_FLAGS)
         ->expectsQuestion('This deletes ALL game data on api.petprep.si (env: testing). Type the host to confirm', 'api.petprep.si')
         ->expectsOutputToContain('Done. Kept 2 superadmin(s)')
-        ->expectsOutputToContain('Media files deleted: 5')
+        ->expectsOutputToContain('Media files deleted: 6')
         ->assertSuccessful();
 
     foreach (GameDataResetService::DELETE_ORDER as $table) {

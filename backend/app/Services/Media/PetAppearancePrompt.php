@@ -152,6 +152,18 @@ class PetAppearancePrompt
     public function stageEditPrompt(Pet $pet, LifeStage $stage): string
     {
         [$breedKey, $traits] = $this->dnaOf($pet);
+
+        return $this->stageEditPromptFor($breedKey, $traits, $stage, $this->originOf($pet));
+    }
+
+    /**
+     * stageEditPrompt() from breed + traits + origin (a shared look of the
+     * free-pet pool has no origin, M4-10).
+     *
+     * @param  array<string, string>  $traits
+     */
+    public function stageEditPromptFor(string $breedKey, array $traits, LifeStage $stage, ?PetOrigin $origin = null): string
+    {
         $species = self::speciesOf($breedKey);
         $this->refuseCatWithoutTraits($species, $traits);
         $subject = $traits !== [] ? $this->describe($breedKey, $traits, $stage) : $this->displayName($breedKey);
@@ -161,7 +173,7 @@ class PetAppearancePrompt
                 'The same cat as in the reference image ('.$subject.'), shown at a later age: now '.$stage->promptCue($species).'.',
                 $this->stageNote($breedKey, $stage),
                 self::CAT_EDIT_KEEP,
-                $this->originOf($pet) === PetOrigin::Adopted ? self::CAT_ADOPTED_AVOID : null,
+                $origin === PetOrigin::Adopted ? self::CAT_ADOPTED_AVOID : null,
                 self::CAT_STYLE,
             ])));
         }
@@ -169,7 +181,7 @@ class PetAppearancePrompt
         return trim(implode(' ', array_filter([
             'The same dog as in the reference image ('.$subject.'), shown at a later age: now '.$stage->promptCue().'.',
             self::EDIT_KEEP,
-            $this->originOf($pet) === PetOrigin::Adopted ? self::ADOPTED_AVOID : null,
+            $origin === PetOrigin::Adopted ? self::ADOPTED_AVOID : null,
             self::STYLE,
         ])));
     }

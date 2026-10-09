@@ -22,8 +22,17 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * generation is pending (regenerate keeps the old video until the new one is
  * stored). The apps only ever get our signed URLs, never `source_url`.
  *
+ * Shared looks (M4-10): a row with `pet_look_id` (and no pet) is the media of
+ * a look of the free-pet pool, one per (kind, state, life_stage); it runs
+ * through the same pipeline. A pool pet's own slot points at the look row it
+ * shows (`look_media_id`) and carries a copy of its `storage_path` — the file
+ * exists once, under `looks/{look_id}/`, and is never deleted with a pet.
+ *
  * @property int $id
- * @property int $pet_id
+ * @property int|null $pet_id
+ * @property int|null $pet_look_id
+ * @property int|null $look_media_id
+ * @property string|null $life_stage
  * @property string $kind
  * @property string|null $state
  * @property string|null $profile
@@ -62,6 +71,9 @@ class PetMedia extends Model
      */
     protected $fillable = [
         'pet_id',
+        // M4-10: a look row (no pet) / the look row a pool pet's slot shows.
+        'pet_look_id',
+        'look_media_id',
         'kind',
         'state',
         'profile',
@@ -102,6 +114,23 @@ class PetMedia extends Model
     public function pet(): BelongsTo
     {
         return $this->belongsTo(Pet::class);
+    }
+
+    public function look(): BelongsTo
+    {
+        return $this->belongsTo(PetLook::class, 'pet_look_id');
+    }
+
+    /** The look row this pet slot shows (M4-10; null for a pet with unique media). */
+    public function lookMedia(): BelongsTo
+    {
+        return $this->belongsTo(self::class, 'look_media_id');
+    }
+
+    /** A media row of a shared look (M4-10), not of a pet. */
+    public function isLookMedia(): bool
+    {
+        return $this->pet_look_id !== null;
     }
 
     public function isImage(): bool

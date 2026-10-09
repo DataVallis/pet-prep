@@ -88,6 +88,8 @@ class GameDataResetService
         'pet_training_skills',
         'child_login_pins',
         'pets',
+        // M4-10 shared look pool of free pets (after pets / pet_media, which reference it)
+        'pet_looks',
         // family model
         'family_invites',
         'family_user',

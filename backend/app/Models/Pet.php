@@ -203,6 +203,8 @@ class Pet extends Model
         'breed_type',
         'species',
         'pet_dna',
+        // M4-10: the shared look of a free pool pet (null = unique DNA).
+        'pet_look_id',
         'current_video_url',
         'media_status',
         'media_error',
@@ -545,6 +547,19 @@ class Pet extends Model
     public function media(): HasMany
     {
         return $this->hasMany(PetMedia::class);
+    }
+
+    /**
+     * The shared look of a free pool pet (M4-10); null for a pet with its own DNA.
+     */
+    public function look(): BelongsTo
+    {
+        return $this->belongsTo(PetLook::class, 'pet_look_id');
+    }
+
+    public function usesLookPool(): bool
+    {
+        return $this->pet_look_id !== null;
     }
 
     /**

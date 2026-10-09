@@ -2,6 +2,7 @@
 
 namespace App\Filament\Pages;
 
+use App\Enums\BreedType;
 use App\Enums\LifeStage;
 use App\Enums\PetStateEnum;
 use App\Enums\Species;
@@ -16,6 +17,7 @@ use App\Services\Media\MediaProfiles;
 use App\Services\Media\ModelProfile;
 use App\Services\Media\PetAppearancePrompt;
 use App\Services\Media\PetDnaService;
+use App\Services\Media\PetLookPoolService;
 use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Section;
@@ -140,6 +142,9 @@ class AiLab extends Page implements HasForms
                         Placeholder::make('per_pet_cost')
                             ->label('Per-pet cost per life stage (production models, list price)')
                             ->content(fn () => $this->perPetCostLabel()),
+                        Placeholder::make('look_pool')
+                            ->label('Free-pet look pool (M4-10)')
+                            ->content(fn () => $this->lookPoolLabel()),
                     ])->columns(2),
             ])
             ->statePath('imageData');
@@ -316,6 +321,43 @@ class AiLab extends Page implements HasForms
             ! $state->appliesTo(Species::Dog) => ' (cats only)',
             default => '',
         };
+    }
+
+    /**
+     * M4-10: looks per free breed + what a free pet costs with the pool.
+     */
+    private function lookPoolLabel(): string
+    {
+        try {
+            $pool = app(PetLookPoolService::class);
+            $lab = app(MediaLabService::class);
+            $counts = $pool->counts();
+            $lines = [];
+
+            foreach (BreedType::cases() as $breed) {
+                if ($breed->isPremium() || ! PetDnaService::hasAppearance($breed->value)) {
+                    continue;
+                }
+
+                $fill = $lab->lookPoolFillCostUsd($breed->species());
+                $lines[] = sprintf(
+                    '%s: %d / %d looks · fill once up to %d × %d stages × ~$%.2f ≈ $%.2f',
+                    $breed->value,
+                    $counts[$breed->value] ?? 0,
+                    $pool->size(),
+                    $fill['looks'],
+                    $fill['stages'],
+                    $fill['per_stage_usd'],
+                    $fill['usd'],
+                );
+            }
+
+            $state = $pool->enabled() ? 'on' : 'OFF (new free pets get a unique look)';
+
+            return "Pool {$state}. A free pet whose look already has its stage's media costs ~\$0. ".implode(' | ', $lines);
+        } catch (InvalidArgumentException) {
+            return '—';
+        }
     }
 
     private function perPetCostLabel(): string

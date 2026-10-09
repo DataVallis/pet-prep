@@ -204,6 +204,8 @@ class ReferenceImageRetryService
             && $pet->media_status === 'failed'
             && ! PetMedia::query()->where('pet_id', $pet->id)->images()->whereNotNull('storage_path')
                 ->whereNotExists(fn ($q) => $q->selectRaw('1')->from('pet_media_history as h')
+                    // Per pet (M4-10): pets of one shared look archive the same look file.
+                    ->whereColumn('h.pet_id', 'pet_media.pet_id')
                     ->whereColumn('h.storage_path', 'pet_media.storage_path'))
                 ->exists();
     }

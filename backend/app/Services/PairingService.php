@@ -16,6 +16,7 @@ use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\User;
 use App\Services\Media\PetDnaService;
+use App\Services\Media\PetLookPoolService;
 use App\Services\Results\PetProfileChoice;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -37,6 +38,7 @@ class PairingService
         private readonly PetDnaService $petDna,
         private readonly LifeStageService $lifeStages,
         private readonly TrainingService $training,
+        private readonly PetLookPoolService $lookPool,
     ) {}
 
     /**
@@ -371,7 +373,14 @@ class PairingService
         ]);
 
         if ($petDna === null && $hasAppearance) {
-            $pet->forceFill(['pet_dna' => $this->petDna->forNewPet($pet)])->saveQuietly();
+            // M4-10 (David 2026-10-09): a profiled pet of a free breed takes its
+            // look from the breed's shared pool (media reused, no new AI cost
+            // once the look has it); paid breeds keep a unique DNA v2.
+            if ($this->lookPool->appliesTo($breed, $arrivalAge)) {
+                $this->lookPool->assignTo($pet);
+            } else {
+                $pet->forceFill(['pet_dna' => $this->petDna->forNewPet($pet)])->saveQuietly();
+            }
         }
 
         // Pet::created already added the caretaker row; this is a no-op
