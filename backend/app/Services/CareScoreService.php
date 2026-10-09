@@ -386,6 +386,11 @@ class CareScoreService
             'walk_goal' => null,
             'walk_done' => null,
         ];
+        // M5-R06-08b: a cat's day carries its wand play (all children together; null
+        // while no play routine exists that day) — dogs' rows stay byte-identical.
+        if ($pet !== null && $pet->isCat()) {
+            $row += ['play_sessions' => null, 'play_goal' => null, 'play_done' => null];
+        }
         if ($pet === null || ($board['starts'][$pet->id][$childId] ?? null) === null) {
             return $row;
         }
@@ -395,6 +400,11 @@ class CareScoreService
             if ($r->type === RoutineType::Walk) {
                 $row['walk_goal'] = $r->goal;
                 $row['walk_done'] = $r->isDone();
+            }
+            if ($r->type === RoutineType::Play) {
+                $row['play_sessions'] = (int) $r->steps;
+                $row['play_goal'] = $r->goal;
+                $row['play_done'] = $r->isDone();
             }
             $n = $this->sharers($board, $pet, $r, $childId);
             if ($n === 0) {

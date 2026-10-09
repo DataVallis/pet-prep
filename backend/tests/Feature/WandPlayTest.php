@@ -725,6 +725,29 @@ describe('dog-only features for a cat', function () {
 });
 
 describe('state, export, data', function () {
+    it('shows the day\'s wand play in the parent report rows of a cat; a dog\'s rows keep their shape (M5-R06-08b)', function () {
+        [$parent, $child] = wpFamily();
+        wpAt('2026-10-21 09:00');
+        wpPlay($child)->assertJsonPath('status', 'accepted');
+
+        test()->actingAs($parent, 'sanctum');
+        $daily = collect(test()->getJson("/api/parent/children/{$child->id}/report?days=7")->assertOk()->json('daily'))->keyBy('date');
+        app('auth')->forgetGuards();
+        expect($daily['2026-10-21'])->play_sessions->toBe(1)->play_goal->toBe(2)->play_done->toBeFalse()
+            ->walk_goal->toBeNull()->walk_steps->toBe(0)
+            // The birth day has no play routine (not expected) → nulls, still a cat row.
+            ->and($daily['2026-10-20'])->toHaveKey('play_sessions')
+            ->and($daily['2026-10-20']['play_goal'])->toBeNull();
+
+        // A dog's report rows carry no play keys (byte-identical to before).
+        $dogParent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        $dogChild = User::factory()->child()->create(['parent_id' => $dogParent->id]);
+        Pet::factory()->mutt()->create(['user_id' => $dogChild->id, 'arrival_age_months' => 2]);
+        test()->actingAs($dogParent, 'sanctum');
+        $dogRow = test()->getJson("/api/parent/children/{$dogChild->id}/report?days=7")->assertOk()->json('daily.0');
+        expect($dogRow)->not->toHaveKey('play_sessions')->toHaveKey('walk_steps');
+    });
+
     it('names the end of every timed blocked_reason in wand.next_allowed_at (QA M5-R06-08a m5)', function () {
         [$parent, $child, $cat] = wpFamily(); // bedtime 21:00–07:00
         $tim = wpSibling($parent, $cat);
