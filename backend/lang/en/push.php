@@ -42,8 +42,8 @@ return [
     ],
 
     'clean_and_tidy_first' => [
-        'hunger' => 'Your dog is hungry, but first clean up the mess, tidy away what it chewed and give it a toy. Then you can feed it.',
-        'thirst' => 'Your dog is thirsty, but first clean up the mess, tidy away what it chewed and give it a toy. Then you can give it water.',
+        'hunger' => 'Your dog is hungry, but first clean up the mess, tidy up what it chewed and give it a toy. Then you can feed it.',
+        'thirst' => 'Your dog is thirsty, but first clean up the mess, tidy up what it chewed and give it a toy. Then you can give it water.',
     ],
 
     // M5-R06-06b (David 2026-10-09, M3-12): the same first step, but the meal / water stays
@@ -59,8 +59,8 @@ return [
     ],
 
     'clean_and_tidy_first_wait' => [
-        'hunger' => 'Your dog is hungry, but first clean up the mess, tidy away what it chewed and give it a toy. The next meal is at :time.',
-        'thirst' => 'Your dog is thirsty, but first clean up the mess, tidy away what it chewed and give it a toy. You can give it water again at :time.',
+        'hunger' => 'Your dog is hungry, but first clean up the mess, tidy up what it chewed and give it a toy. The next meal is at :time.',
+        'thirst' => 'Your dog is thirsty, but first clean up the mess, tidy up what it chewed and give it a toy. You can give it water again at :time.',
     ],
 
     // M3-12: a chewed item is not scrubbed away — it is tidied up and swapped for a toy.

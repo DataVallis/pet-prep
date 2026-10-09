@@ -37,13 +37,13 @@ return [
     // M5-R06-06b (David 9. 10. 2026): hrana in voda sta zavrnjeni, dokler je odprt pregrizen
     // predmet, a čiščenje ga ne razreši — pospravi se z igračo (»najprej pospravi«).
     'tidy_first' => [
-        'hunger' => 'Tvoj kuža je lačen, a najprej pospravi pregrizeno in mu daj igračo. Potem ga lahko nahraniš.',
-        'thirst' => 'Tvoj kuža je žejen, a najprej pospravi pregrizeno in mu daj igračo. Potem mu lahko daš vodo.',
+        'hunger' => 'Tvoj kuža je lačen, a najprej pospravi, kar je pregriznil, in mu daj igračo. Potem ga lahko nahraniš.',
+        'thirst' => 'Tvoj kuža je žejen, a najprej pospravi, kar je pregriznil, in mu daj igračo. Potem mu lahko daš vodo.',
     ],
 
     'clean_and_tidy_first' => [
-        'hunger' => 'Tvoj kuža je lačen, a najprej počisti nered, pospravi pregrizeno in mu daj igračo. Potem ga lahko nahraniš.',
-        'thirst' => 'Tvoj kuža je žejen, a najprej počisti nered, pospravi pregrizeno in mu daj igračo. Potem mu lahko daš vodo.',
+        'hunger' => 'Tvoj kuža je lačen, a najprej počisti nered, pospravi, kar je pregriznil, in mu daj igračo. Potem ga lahko nahraniš.',
+        'thirst' => 'Tvoj kuža je žejen, a najprej počisti nered, pospravi, kar je pregriznil, in mu daj igračo. Potem mu lahko daš vodo.',
     ],
 
     // M5-R06-06b (David 9. 10. 2026, M3-12): isti prvi korak, a hrana / voda je tudi po čiščenju
@@ -54,13 +54,13 @@ return [
     ],
 
     'tidy_first_wait' => [
-        'hunger' => 'Tvoj kuža je lačen, a najprej pospravi pregrizeno in mu daj igračo. Naslednji obrok je ob :time.',
-        'thirst' => 'Tvoj kuža je žejen, a najprej pospravi pregrizeno in mu daj igračo. Vodo mu lahko spet daš ob :time.',
+        'hunger' => 'Tvoj kuža je lačen, a najprej pospravi, kar je pregriznil, in mu daj igračo. Naslednji obrok je ob :time.',
+        'thirst' => 'Tvoj kuža je žejen, a najprej pospravi, kar je pregriznil, in mu daj igračo. Vodo mu lahko spet daš ob :time.',
     ],
 
     'clean_and_tidy_first_wait' => [
-        'hunger' => 'Tvoj kuža je lačen, a najprej počisti nered, pospravi pregrizeno in mu daj igračo. Naslednji obrok je ob :time.',
-        'thirst' => 'Tvoj kuža je žejen, a najprej počisti nered, pospravi pregrizeno in mu daj igračo. Vodo mu lahko spet daš ob :time.',
+        'hunger' => 'Tvoj kuža je lačen, a najprej počisti nered, pospravi, kar je pregriznil, in mu daj igračo. Naslednji obrok je ob :time.',
+        'thirst' => 'Tvoj kuža je žejen, a najprej počisti nered, pospravi, kar je pregriznil, in mu daj igračo. Vodo mu lahko spet daš ob :time.',
     ],
 
     // M3-12: odprt pregrizen predmet se ne počisti z drgnjenjem, ampak pospravi z igračo.

@@ -416,7 +416,7 @@ describe('M3-12 for a cat: food / water / hygiene reminders never ask for what t
             ->toBe(['variant' => PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST_WAIT, 'replace' => ['time' => '17:00']]);
     });
 
-    it('QA m1: a mess open after the last meal of the day — no food reminder at all (nothing possible today)', function () {
+    it('QA m1 / B1: a mess open after the last meal of the day — the mess reminder instead of a food reminder', function () {
         [, $child, $cat] = cptCatFamily(local: '2026-10-21 07:00');
         cptFed($cat, $child, '2026-10-21 07:00');
         cptFed($cat, $child, '2026-10-21 18:00');
@@ -424,7 +424,7 @@ describe('M3-12 for a cat: food / water / hygiene reminders never ask for what t
         Pet::whereKey($cat->id)->update(['hunger_level' => 30]);
         $cat = cptOpen($cat->fresh(), [HygieneEventKind::LitterAccident]);
 
-        expect(cptActionCopy($cat, PushType::SoftWarning, 'hunger'))->toBeNull();
+        expect(cptActionCopy($cat, PushType::SoftWarning, 'hunger'))->toBe(['variant' => null, 'replace' => [], 'metric' => 'hygiene']);
     });
 });
 

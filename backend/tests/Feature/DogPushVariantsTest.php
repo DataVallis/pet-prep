@@ -102,13 +102,13 @@ it('chewing open, feeding possible: "tidy first", never "clean first" (EN + SL)'
 })->with([
     'chewing only' => [[HygieneEventKind::Chewing], PushCopy::VARIANT_TIDY_FIRST,
         'Your dog is hungry, but first tidy up what it chewed and give it a toy. Then you can feed it.',
-        'Tvoj kuža je lačen, a najprej pospravi pregrizeno in mu daj igračo. Potem ga lahko nahraniš.'],
+        'Tvoj kuža je lačen, a najprej pospravi, kar je pregriznil, in mu daj igračo. Potem ga lahko nahraniš.'],
     'chewing + poop' => [[HygieneEventKind::Chewing, HygieneEventKind::Poop], PushCopy::VARIANT_CLEAN_AND_TIDY_FIRST,
-        'Your dog is hungry, but first clean up the mess, tidy away what it chewed and give it a toy. Then you can feed it.',
-        'Tvoj kuža je lačen, a najprej počisti nered, pospravi pregrizeno in mu daj igračo. Potem ga lahko nahraniš.'],
+        'Your dog is hungry, but first clean up the mess, tidy up what it chewed and give it a toy. Then you can feed it.',
+        'Tvoj kuža je lačen, a najprej počisti nered, pospravi, kar je pregriznil, in mu daj igračo. Potem ga lahko nahraniš.'],
     'chewing + accident' => [[HygieneEventKind::Chewing, HygieneEventKind::Accident], PushCopy::VARIANT_CLEAN_AND_TIDY_FIRST,
-        'Your dog is hungry, but first clean up the mess, tidy away what it chewed and give it a toy. Then you can feed it.',
-        'Tvoj kuža je lačen, a najprej počisti nered, pospravi pregrizeno in mu daj igračo. Potem ga lahko nahraniš.'],
+        'Your dog is hungry, but first clean up the mess, tidy up what it chewed and give it a toy. Then you can feed it.',
+        'Tvoj kuža je lačen, a najprej počisti nered, pospravi, kar je pregriznil, in mu daj igračo. Potem ga lahko nahraniš.'],
     'poop only (unchanged)' => [[HygieneEventKind::Poop], PushCopy::VARIANT_CLEAN_FIRST,
         'Your dog is hungry, but the mess has to be cleaned up first. Then you can feed it.',
         'Tvoj kuža je lačen, a najprej je treba počistiti nered. Potem ga lahko nahraniš.'],
@@ -121,7 +121,7 @@ it('water while chewing is open: "tidy first, then you can give it water"', func
     $copy = dpvCopy($dog, PushType::CriticalAlert, 'thirst');
     expect($copy)->toBe(['variant' => PushCopy::VARIANT_TIDY_FIRST, 'replace' => []])
         ->and(PushCopy::body(PushType::CriticalAlert, 'thirst', 'child', 'sl', $copy['variant']))
-        ->toBe('Tvoj kuža je žejen, a najprej pospravi pregrizeno in mu daj igračo. Potem mu lahko daš vodo.');
+        ->toBe('Tvoj kuža je žejen, a najprej pospravi, kar je pregriznil, in mu daj igračo. Potem mu lahko daš vodo.');
 });
 
 it('fed at 07:00, hungry at 15:45 with a mess: the next meal time, never "then you can feed it"', function (array $kinds, string $variant, string $en, string $sl) {
@@ -141,13 +141,13 @@ it('fed at 07:00, hungry at 15:45 with a mess: the next meal time, never "then y
         'Tvoj kuža je lačen, a najprej je treba počistiti nered. Naslednji obrok je ob 17:00.'],
     'chewing' => [[HygieneEventKind::Chewing], PushCopy::VARIANT_TIDY_FIRST_WAIT,
         'Your dog is hungry, but first tidy up what it chewed and give it a toy. The next meal is at 17:00.',
-        'Tvoj kuža je lačen, a najprej pospravi pregrizeno in mu daj igračo. Naslednji obrok je ob 17:00.'],
+        'Tvoj kuža je lačen, a najprej pospravi, kar je pregriznil, in mu daj igračo. Naslednji obrok je ob 17:00.'],
     'chewing + poop' => [[HygieneEventKind::Chewing, HygieneEventKind::Poop], PushCopy::VARIANT_CLEAN_AND_TIDY_FIRST_WAIT,
-        'Your dog is hungry, but first clean up the mess, tidy away what it chewed and give it a toy. The next meal is at 17:00.',
-        'Tvoj kuža je lačen, a najprej počisti nered, pospravi pregrizeno in mu daj igračo. Naslednji obrok je ob 17:00.'],
+        'Your dog is hungry, but first clean up the mess, tidy up what it chewed and give it a toy. The next meal is at 17:00.',
+        'Tvoj kuža je lačen, a najprej počisti nered, pospravi, kar je pregriznil, in mu daj igračo. Naslednji obrok je ob 17:00.'],
 ]);
 
-it('a mess after the last meal of the day: no food reminder at all', function () {
+it('a mess after the last meal of the day: the mess reminder instead (QA B1)', function () {
     [, $child, $dog] = dpvFamily('2026-10-21 07:00');
     dpvFed($dog, $child, '2026-10-21 07:00');
     dpvFed($dog, $child, '2026-10-21 18:00');
@@ -155,7 +155,7 @@ it('a mess after the last meal of the day: no food reminder at all', function ()
     Pet::whereKey($dog->id)->update(['hunger_level' => 30]);
     $dog = dpvOpen($dog->fresh(), [HygieneEventKind::Poop]);
 
-    expect(dpvCopy($dog, PushType::SoftWarning, 'hunger'))->toBeNull();
+    expect(dpvCopy($dog, PushType::SoftWarning, 'hunger'))->toBe(['variant' => null, 'replace' => [], 'metric' => 'hygiene']);
 });
 
 it('sends parents the Slovenian alarm formally ("Vaš otrok"); English and the children\'s texts are unchanged', function () {

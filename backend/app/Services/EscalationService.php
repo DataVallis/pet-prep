@@ -593,7 +593,9 @@ class EscalationService
 
     /**
      * Push copy key of the lowest displayed ladder metric (ties: hunger,
-     * thirst, hygiene).
+     * thirst, hygiene). M5-R06-06b (QA B1, David 2026-10-09): while a mess is
+     * open, hygiene wins a tie — the mess is what the child can (and must) act
+     * on first; food / water wait for it anyway.
      */
     private function lowestMetricKey(Pet $pet): string
     {
@@ -603,7 +605,11 @@ class EscalationService
             'thirst' => $shown['thirst_level'],
             'hygiene' => $shown['hygiene_level'],
         ];
+        $lowest = min($candidates);
+        if ($candidates['hygiene'] === $lowest && app(HygieneEventService::class)->openEvents($pet)->isNotEmpty()) {
+            return 'hygiene';
+        }
 
-        return (string) array_search(min($candidates), $candidates, true);
+        return (string) array_search($lowest, $candidates, true);
     }
 }

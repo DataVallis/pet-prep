@@ -127,11 +127,14 @@ final class PushCopy
     }
 
     /**
-     * @param  string|null  $variant  M3-12, phase 1 / 2 hunger / thirst only: `wait` (the action is
-     *                                refused now — "next meal at :time") or `clean_first` (hygiene 0 %
-     *                                blocks feeding / water) or, for a cat, `scratcher_first` /
-     *                                `clean_and_scratcher_first` (an open scratching blocks them);
-     *                                null = the plain "feed / water now" text.
+     * @param  string|null  $variant  M3-12, phase 1 / 2 only. Hunger / thirst: `wait` (refused now —
+     *                                "next meal at :time"); while a mess blocks them (hygiene 0 %)
+     *                                `clean_first`, dog chewing `tidy_first` / `clean_and_tidy_first`,
+     *                                cat scratching `scratcher_first` / `clean_and_scratcher_first`,
+     *                                each also as `<variant>_wait` (+ :time) when the action stays
+     *                                refused until later today once the mess is resolved. Hygiene:
+     *                                `tidy` / `clean_and_tidy` (dog chewing), `scratcher` /
+     *                                `clean_and_scratcher` (cat scratching). Null = the plain text.
      * @param  array<string, string>  $replace  e.g. ['time' => '17:00'] for `wait`.
      * @param  Species  $species  M5-R06-06: the pet's species (cat texts under `push.cat`).
      */
