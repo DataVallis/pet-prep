@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Kodo lahko otrok zdaj prilepi
+
+**Kaj se je zgodilo:** David je opazil, da otrok na zaslonu »Vpiši svojo kodo« kode ne more prilepiti — zaslon ima veliko tipkovnico brez besedilnega polja, zato sistemski »Prilepi« ni na voljo. Zdaj je pod polji gumb **»Prilepi kodo«** (deluje tudi dolg pritisk na polja): aplikacija iz odložišča vzame samo številke (»734 912« ali »73-49-12« → 734912); če je točno 6 številk, se otrok takoj prijavi, sicer dobi prijazno sporočilo »V odložišču ni 6-mestne kode.«
+
+**Zakaj je pomembno:** Starš kodo pogosto pošlje po sporočilu (npr. na otrokov telefon ali tablico). Prepisovanje 6 številk med dvema aplikacijama je za mlajšega otroka težko; lepljenje je en dotik. Vsebina odložišča se nikjer ne shrani ali prikaže.
+
+**Številke:** Jest 1780 → 1811 testov (vsi zeleni); nov izvorni modul `expo-clipboard` 57.0.2 → **potrebna je nova gradnja** (ni OTA).
+
+**Kako povedati:**
+- 👩 Starši: »Kodo za prijavo otroka lahko pošljete po sporočilu — otrok jo samo prilepi.«
+- 🧒 Otroci: »Ti je starš poslal kodo? Kopiraj jo in tapni ›Prilepi kodo‹.«
+- 🛠 Tehnično: »Tipkovnica brez TextInput + gumb za odložišče; izvorni modul se naloži leno, zato starejša gradnja ne pade, gumb se le skrije.«
+
+---
+
 ## 2026-10-09 — PetPrep tudi za odrasle: »Je ta pasma res zame?«
 
 **Kaj se je zgodilo:** David je odločil, da je PetPrep tudi za odrasle, ki si želijo točno določeno pasmo in jo hočejo pred nakupom ali posvojitvijo preizkusiti. Aplikacije ni bilo treba spreminjati: odrasel ustvari račun starša, doda sebe kot profil skrbnika in se prijavi s kodo — na istem ali drugem telefonu. Kasneje lahko doda partnerja ali otroke. Spletna stran je dobila razdelek »Za odrasle«, vrstico v ceniku in novo vprašanje v FAQ.
