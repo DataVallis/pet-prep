@@ -167,6 +167,8 @@ pr_case "breed registry export: scripts tests only" "$S_SCRIPTS" scripts/export-
 pr_case "breed registry output: scripts tests only" "$S_SCRIPTS" docs/research/breed-registry.json
 pr_case "breed suitability config: backend + scripts" "$S_BSCRIPTS" backend/config/breed_suitability.php
 pr_case "app pet strings: mobile + scripts" "backend=false mobile=true scripts=true image=false " mobile/src/i18n/locales/sl/pet.json
+pr_case "app breed names: mobile + scripts" "backend=false mobile=true scripts=true image=false " mobile/src/i18n/locales/en/family.json
+pr_case "cat research data: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/cat-data/data.json
 pr_case "other research docs" "$S_NONE" docs/research/DOG_DATA_SOURCES.md
 pr_case "backend code" "$S_BACKEND" backend/app/A.php
 pr_case "new backend file" "$S_BACKEND" backend/database/migrations/x.php

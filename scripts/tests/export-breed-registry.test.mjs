@@ -1,4 +1,4 @@
-// Tests for scripts/export-breed-registry.mjs (M5-R11).
+// Tests for scripts/export-breed-registry.mjs (M5-R11, schema 2: species → breeds).
 // Run: node --test scripts/tests/export-breed-registry.test.mjs
 // PHP cross-checks run when `php` is on PATH (and, for the seeded game numbers,
 // when backend/vendor/autoload.php exists); otherwise they are skipped.
@@ -10,19 +10,31 @@ import { test } from 'node:test';
 import {
   DEFAULT_OUT,
   INPUTS,
+  RESERVED_SLUGS,
   ROOT,
   buildRegistry,
   parsePhpReturn,
   parseSourcesTable,
   readInputs,
   renderRegistry,
+  slugify,
 } from '../export-breed-registry.mjs';
 
 const hasPhp = spawnSync('php', ['-v']).status === 0;
 const hasVendor = existsSync(resolve(ROOT, 'backend/vendor/autoload.php'));
 const registry = JSON.parse(renderRegistry());
+const data = {
+  '': JSON.parse(readFileSync(resolve(ROOT, INPUTS.dog_data), 'utf8')),
+  'cat-data:': JSON.parse(readFileSync(resolve(ROOT, INPUTS.cat_data), 'utf8')),
+};
+/** A data.json entry by an exported ref ("x.y" dog, "cat-data:x.y" cat; "a + b" = both). */
+const entries = (ref) =>
+  ref.split(' + ').map((r) => {
+    const prefix = r.startsWith('cat-data:') ? 'cat-data:' : '';
+    return r.slice(prefix.length).split('.').reduce((n, k) => n[k], data[prefix]);
+  });
 
-/** Every object below `node` that cites sources (facts, health, tags, game values). */
+/** Every object below `node` that cites sources. */
 function cited(node, path = '$', out = []) {
   if (Array.isArray(node)) node.forEach((x, i) => cited(x, `${path}[${i}]`, out));
   else if (node && typeof node === 'object') {
@@ -34,43 +46,65 @@ function cited(node, path = '$', out = []) {
 
 test('export is deterministic and the committed file is up to date', () => {
   const a = renderRegistry();
-  const b = renderRegistry();
-  assert.equal(a, b);
+  assert.equal(a, renderRegistry());
   assert.doesNotMatch(a, /generated_at|"timestamp"/);
-  const committed = readFileSync(resolve(ROOT, DEFAULT_OUT), 'utf8');
-  assert.equal(committed, a, `${DEFAULT_OUT} is stale — run: node scripts/export-breed-registry.mjs`);
+  assert.equal(readFileSync(resolve(ROOT, DEFAULT_OUT), 'utf8'), a, `${DEFAULT_OUT} is stale — run: node scripts/export-breed-registry.mjs`);
 });
 
-test('every fact, health item and tag has a known source with a URL', () => {
+test('species → breeds model: slugs, availability, groups', () => {
+  assert.deepEqual(registry.species.map((s) => s.id), ['dog', 'cat']);
+  for (const sp of registry.species) {
+    const breeds = registry.breeds.filter((b) => b.species === sp.id);
+    assert.equal(sp.breed_count, breeds.length);
+    for (const l of ['en', 'sl']) {
+      assert.match(sp.slug[l], /^[a-z0-9-]+$/);
+      const slugs = breeds.map((b) => b.slug[l]);
+      assert.equal(new Set(slugs).size, slugs.length, `${sp.id} ${l} slugs unique`);
+      for (const s of slugs) assert.ok(!RESERVED_SLUGS.includes(s));
+    }
+    for (const b of breeds) {
+      assert.ok(['in_app', 'coming_soon', 'info_only'].includes(b.availability));
+      for (const f of b.facts) assert.ok(sp.fact_groups.includes(f.group), `${b.id} ${f.field} group`);
+      for (const k of Object.keys(b.facets)) assert.ok(sp.facets.includes(k), `${b.id} facet ${k}`);
+    }
+  }
+  const byId = Object.fromEntries(registry.breeds.map((b) => [b.id, b]));
+  assert.equal(byId.border_collie.availability, 'in_app');
+  assert.equal(byId.labrador_retriever.slug.sl, 'labradorec');
+  assert.equal(byId.golden_retriever.slug.sl, 'zlati-prinasalec');
+  assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
+  assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
+});
+
+test('every fact, health item and tag has a known source; facts come from sourced entries', () => {
   const sources = new Map(registry.sources.map((s) => [s.id, s]));
   for (const s of registry.sources) {
     assert.match(s.url, /^https?:\/\//, `${s.id} url`);
     assert.ok(s.publisher && s.title, `${s.id} publisher/title`);
   }
-  const data = JSON.parse(readFileSync(resolve(ROOT, INPUTS.data), 'utf8'));
-  const at = (p) => p.split('.').reduce((n, k) => n[k], data);
-  for (const breed of registry.breeds) {
-    const facts = cited({ facts: breed.facts, health: breed.health, suitability: breed.suitability });
-    assert.ok(facts.length > 10, `${breed.id} has facts`);
-    for (const { path, node } of facts) {
-      assert.ok(Array.isArray(node.source_ids) && node.source_ids.length > 0, `${breed.id} ${path} has source_ids`);
-      for (const id of node.source_ids) assert.ok(sources.has(id), `${breed.id} ${path} cites ${id}, which is not in sources[]`);
-      if (node.ref) {
-        // A fact's ref points at a sourced data.json entry (never UNSOURCED).
-        const entry = at(node.ref);
-        assert.equal(typeof entry.source_id, 'string', `${node.ref} is sourced`);
-        assert.doesNotMatch(String(entry.notes ?? ''), /^UNSOURCED/, `${node.ref} is not an UNSOURCED proposal`);
-      }
+  const factLists = [
+    ...registry.breeds.map((b) => ({ id: b.id, items: [...b.facts, ...b.health], tags: [...b.suitability.suits, ...b.suitability.consider], all: b })),
+    ...registry.species.map((s) => ({ id: s.id, items: s.general_facts, tags: [], all: null })),
+  ];
+  for (const { id, items, tags } of factLists) {
+    for (const item of [...items, ...tags]) {
+      assert.ok(item.source_ids.length > 0, `${id} ${item.field ?? item.key ?? item.tag} has sources`);
+      for (const s of item.source_ids) assert.ok(sources.has(s), `${id} cites ${s}, not in sources[]`);
     }
-    // The page's source list covers everything it cites.
-    for (const { node } of cited(breed)) {
-      for (const id of [...(node.source_ids ?? []), ...(node.basis_source_ids ?? [])]) {
-        assert.ok(breed.source_ids.includes(id), `${breed.id} source_ids misses ${id}`);
+    for (const item of items) {
+      for (const e of entries(item.ref)) {
+        assert.equal(typeof e.source_id, 'string', `${item.ref} is sourced`);
+        assert.doesNotMatch(String(e.notes ?? ''), /^UNSOURCED/, `${item.ref} is not an UNSOURCED proposal`);
       }
     }
   }
-  for (const { path, node } of cited(registry.general)) {
-    assert.ok(node.source_ids.length > 0, `general ${path} has sources`);
+  for (const b of registry.breeds) {
+    for (const { node } of cited(b)) {
+      for (const s of [...(node.source_ids ?? []), ...(node.basis_source_ids ?? [])]) assert.ok(b.source_ids.includes(s), `${b.id} source_ids misses ${s}`);
+    }
+    for (const s of cited(registry.species.find((x) => x.id === b.species).general_facts).flatMap(({ node }) => node.source_ids)) {
+      assert.ok(b.source_ids.includes(s), `${b.id} source_ids misses species fact source ${s}`);
+    }
   }
 });
 
@@ -78,43 +112,38 @@ test('no quotes, no hypoallergenic, no statistics in health items', () => {
   const json = JSON.stringify(registry);
   assert.doesNotMatch(json, /"quote"/);
   assert.doesNotMatch(json.toLowerCase(), /hypoallergen/);
-  for (const breed of registry.breeds) {
-    for (const h of breed.health) {
-      assert.deepEqual(Object.keys(h).sort(), ['confidence', 'key', 'ref', 'source_ids']);
-    }
-  }
+  for (const b of registry.breeds) for (const h of b.health) assert.deepEqual(Object.keys(h).sort(), ['confidence', 'key', 'ref', 'source_ids']);
 });
 
-test('game values carry a decision or a source; step goals = minutes × steps per minute', () => {
-  const spm = registry.game_general.steps_per_exercise_minute.value;
-  assert.equal(spm, 100);
+test('game values carry a decision or a source; dog step goals = minutes × 100', () => {
   const expected = {
     border_collie: { adult: 12000, senior: 9000, seniorFrom: 118, learning: 2 },
     labrador_retriever: { adult: 9000, senior: 6800, seniorFrom: 118, learning: 1.8 },
     golden_retriever: { adult: 12000, senior: 9000, seniorFrom: 119, learning: 1.9 },
   };
-  for (const breed of registry.breeds) {
-    const g = breed.game;
-    for (const v of [g.adult_exercise_minutes, g.senior_exercise_minutes, g.senior_from_months, g.learning_multiplier]) {
-      assert.ok(v.decision || v.basis_source_ids.length > 0, `${breed.id} ${v.ref}`);
-    }
-    assert.equal(g.adult_step_goal, g.adult_exercise_minutes.value * spm);
-    assert.equal(g.senior_step_goal, g.senior_exercise_minutes.value * spm);
-    assert.equal(g.adult_step_goal, expected[breed.id].adult);
-    assert.equal(g.senior_step_goal, expected[breed.id].senior);
-    assert.equal(g.senior_from_months.value, expected[breed.id].seniorFrom);
-    assert.equal(g.learning_multiplier.value, expected[breed.id].learning);
-    assert.equal(g.growing_step_goal_by_age_months.at(-1).steps, g.adult_step_goal);
+  for (const b of registry.breeds) {
+    const g = b.game;
+    assert.ok(g, `${b.id} has game rules`);
+    for (const v of g.values) assert.ok(v.decision || v.basis_source_ids.length > 0, `${b.id} ${v.ref}`);
+    assert.deepEqual(g.stages.map((s) => s.stage), ['puppy', 'young', 'adult', 'senior']);
+    const e = expected[b.id];
+    if (!e) continue;
+    assert.deepEqual(g.adult_activity, { kind: 'steps', value: e.adult });
+    assert.equal(g.stages[3].activity.value, e.senior);
+    assert.equal(g.stages[3].starts.month, e.seniorFrom);
+    assert.equal(g.rules.find((r) => r.key === 'learning').params.multiplier, e.learning);
+    assert.equal(g.stages[0].activity.cap, e.adult);
   }
-  assert.equal(registry.mixed_breed.game.adult_step_goal, 6000);
-  assert.equal(registry.mixed_breed.game.learning_multiplier.value, 1);
+  const mc = registry.breeds.find((b) => b.id === 'maine_coon').game;
+  assert.deepEqual(mc.adult_activity, { kind: 'play_sessions', value: 2 });
+  assert.equal(mc.stages[0].starts.arrival_months, 3);
+  assert.equal(mc.rules.find((r) => r.key === 'grooming_rule').params.per_week, 3);
+  assert.deepEqual(registry.species[0].free_plan.adult_activity, { kind: 'steps', value: 6000 });
 });
 
 test('every suitability tag has the app wording in EN and SL', () => {
   for (const locale of ['en', 'sl']) {
-    for (const tag of Object.keys(registry.suitability_vocabulary)) {
-      assert.ok(registry.suitability_labels[locale].tags[tag], `${locale} ${tag}`);
-    }
+    for (const tag of Object.keys(registry.suitability_vocabulary)) assert.ok(registry.suitability_labels[locale].tags[tag], `${locale} ${tag}`);
   }
   assert.equal(registry.suitability_labels.sl.suits_title, 'Primerno za:');
   assert.equal(registry.suitability_labels.sl.consider_title, 'Upoštevajte:');
@@ -135,18 +164,22 @@ test('PHP literal parser: comments, nesting, lists and refusal of non-literals',
   assert.throws(() => parsePhpReturn("<?php return ['a' => 1, 2];"), /mixed/);
 });
 
-test('sources table parser reads every row of sources.md', () => {
-  const md = readFileSync(resolve(ROOT, INPUTS.sources), 'utf8');
-  const parsed = parseSourcesTable(md);
-  const ids = [...md.matchAll(/^\| (S\d+) \|/gm)].map((m) => m[1]);
-  assert.deepEqual(Object.keys(parsed), ids);
+test('sources table parser reads every row of both sources.md files', () => {
+  for (const key of ['dog_sources', 'cat_sources']) {
+    const md = readFileSync(resolve(ROOT, INPUTS[key]), 'utf8');
+    const ids = [...md.matchAll(/^\| ([A-Z]\d+) \|/gm)].map((m) => m[1]);
+    assert.deepEqual(Object.keys(parseSourcesTable(md)), ids);
+  }
 });
 
 test('an UNSOURCED value can never become a fact', () => {
   const texts = readInputs();
-  const data = JSON.parse(texts.data);
-  data.labrador_retriever.size_class.source_id = null;
-  assert.throws(() => buildRegistry({ ...texts, data: JSON.stringify(data) }), /UNSOURCED/);
+  const dog = JSON.parse(texts.dog_data);
+  dog.labrador_retriever.size_class.source_id = null;
+  assert.throws(() => buildRegistry({ ...texts, dog_data: JSON.stringify(dog) }), /UNSOURCED/);
+  const cat = JSON.parse(texts.cat_data);
+  cat.maine_coon.lifespan.expectancy_at_birth.source_id = null;
+  assert.throws(() => buildRegistry({ ...texts, cat_data: JSON.stringify(cat) }), /UNSOURCED/);
 });
 
 test('JS parse of breed_suitability.php equals PHP itself', { skip: !hasPhp && 'php not installed' }, () => {
@@ -156,34 +189,45 @@ test('JS parse of breed_suitability.php equals PHP itself', { skip: !hasPhp && '
 });
 
 test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp && hasVendor) && 'php or backend/vendor missing' }, () => {
-  const code = `require $argv[1]; echo json_encode(Database\\Seeders\\BreedStageParamsSeeder::rows());`;
-  const rows = JSON.parse(
-    execFileSync('php', ['-r', code, resolve(ROOT, 'backend/vendor/autoload.php')], { encoding: 'utf8', cwd: resolve(ROOT, 'backend') }),
-  );
-  const slug = { border_collie: 'border-collie', labrador_retriever: 'labrador-retriever', golden_retriever: 'golden-retriever', medium_mixed_breed: 'mutt' };
-  const row = (breed, stage, key, from = 0) => {
-    const r = rows.find((x) => x.breed_slug === slug[breed] && x.stage === stage && x.key === key && x.age_from_months === from);
-    assert.ok(r, `seeded row ${breed} ${stage} ${key} ${from}`);
+  const code = `require $argv[1]; echo json_encode(Database\\Seeders\\BreedStageParamsSeeder::allRows());`;
+  const rows = JSON.parse(execFileSync('php', ['-r', code, resolve(ROOT, 'backend/vendor/autoload.php')], { encoding: 'utf8', cwd: resolve(ROOT, 'backend') }));
+  const row = (id, stage, key, from = 0) => {
+    const slug = id.replaceAll('_', '-');
+    const r = rows.find((x) => x.breed_slug === slug && x.stage === stage && x.key === key && x.age_from_months === from);
+    assert.ok(r, `seeded row ${slug} ${stage} ${key} ${from}`);
     return r.value;
   };
-  const gg = registry.game_general;
-  for (const g of [...registry.breeds, registry.mixed_breed]) {
-    const id = g.id;
-    assert.equal(row(id, 'adult', 'exercise_minutes_per_day'), g.game.adult_exercise_minutes.value, `${id} adult minutes`);
-    assert.equal(row(id, 'senior', 'exercise_minutes_per_day'), g.game.senior_exercise_minutes.value, `${id} senior minutes`);
-    assert.equal(row(id, 'senior', 'starts_at_months'), g.game.senior_from_months.value, `${id} senior from`);
-    assert.equal(row(id, 'all', 'training_learning_multiplier'), g.game.learning_multiplier.value, `${id} learning`);
-    assert.equal(row(id, 'young', 'starts_at_months'), gg.young_from_months.value);
-    assert.equal(row(id, 'adult', 'starts_at_months'), gg.adult_from_months.value);
-    assert.equal(row(id, 'all', 'steps_per_exercise_minute'), gg.steps_per_exercise_minute.value);
-    assert.equal(row(id, 'puppy', 'exercise_minutes_per_age_month'), gg.puppy_exercise_minutes_per_age_month.value);
-    assert.equal(row(id, 'puppy', 'arrival_age_months'), gg.puppy_arrival_age_months.value);
-    const meals = gg.meals_per_day.value;
-    assert.equal(row(id, 'puppy', 'meals_per_day', 0), meals[0].meals);
-    assert.equal(row(id, 'puppy', 'meals_per_day', 3), meals[1].meals);
-    assert.equal(row(id, 'puppy', 'meals_per_day', 6), meals[2].meals);
-    assert.equal(row(id, 'young', 'meals_per_day'), meals[3].meals);
-    assert.equal(row(id, 'adult', 'meals_per_day'), meals[4].meals);
-    assert.equal(row(id, 'senior', 'meals_per_day'), meals[5].meals);
+  for (const b of registry.breeds) {
+    const g = b.game;
+    const [puppy, young, adult, senior] = g.stages;
+    assert.equal(row(b.id, 'puppy', 'arrival_age_months'), puppy.starts.arrival_months, `${b.id} arrival`);
+    assert.equal(row(b.id, 'young', 'starts_at_months'), young.starts.month, `${b.id} young`);
+    assert.equal(row(b.id, 'adult', 'starts_at_months'), adult.starts.month, `${b.id} adult`);
+    assert.equal(row(b.id, 'senior', 'starts_at_months'), senior.starts.month, `${b.id} senior`);
+    assert.equal(row(b.id, 'young', 'meals_per_day'), young.meals[0].meals);
+    assert.equal(row(b.id, 'adult', 'meals_per_day'), adult.meals[0].meals);
+    assert.equal(row(b.id, 'senior', 'meals_per_day'), senior.meals[0].meals);
+    for (const m of puppy.meals.slice(1)) assert.equal(row(b.id, 'puppy', 'meals_per_day', m.from_months), m.meals);
+    if (b.species === 'dog') {
+      assert.equal(row(b.id, 'adult', 'exercise_minutes_per_day') * row(b.id, 'all', 'steps_per_exercise_minute'), g.adult_activity.value, `${b.id} adult steps`);
+      assert.equal(row(b.id, 'senior', 'exercise_minutes_per_day') * 100, senior.activity.value, `${b.id} senior steps`);
+      assert.equal(row(b.id, 'all', 'training_learning_multiplier'), g.rules.find((r) => r.key === 'learning').params.multiplier);
+      assert.equal(row(b.id, 'puppy', 'exercise_minutes_per_age_month') * 100, puppy.activity.per_month);
+    } else {
+      assert.equal(row(b.id, 'puppy', 'play_sessions_per_day'), puppy.activity.value);
+      assert.equal(row(b.id, 'adult', 'play_sessions_per_day'), adult.activity.value);
+      const litter = g.rules.find((r) => r.key === 'litter_rule').params;
+      assert.equal(row(b.id, 'adult', 'litter_uses_per_day'), litter.uses);
+      assert.equal(row(b.id, 'all', 'litter_scoop_deadline_hours'), litter.scoop_hours);
+      assert.equal(row(b.id, 'all', 'litter_full_change_days'), litter.change_days);
+      assert.equal(row(b.id, 'all', 'play_min_gap_minutes'), g.rules.find((r) => r.key === 'play_instead_of_steps').params.gap_minutes);
+      const groom = g.rules.find((r) => r.key === 'grooming_rule');
+      if (groom) assert.equal(row(b.id, 'all', 'grooming_sessions_per_week'), groom.params.per_week);
+    }
   }
+  // Free plans (no page, but their numbers are shown).
+  const mutt = rows.find((x) => x.breed_slug === 'mutt' && x.stage === 'adult' && x.key === 'exercise_minutes_per_day');
+  assert.equal(mutt.value * 100, registry.species[0].free_plan.adult_activity.value);
+  const cat = rows.find((x) => x.breed_slug === 'domestic-cat' && x.stage === 'adult' && x.key === 'play_sessions_per_day');
+  assert.equal(cat.value, registry.species[1].free_plan.adult_activity.value);
 });
