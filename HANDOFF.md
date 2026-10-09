@@ -55,7 +55,7 @@
 
 ## 5. Next steps (priority queue)
 
-**Update 2026-10-10 (M5-R11-04 AI breed portraits, David; branch `feat/M5-R11-breed-portraits`, PR open, not merged):** tool `php artisan breeds:portraits` (`Media\BreedPortraitService`) makes one AI illustration per register breed (Border Collie, Labrador — yellow, Golden, Maine Coon) on the **AI Lab budget** (~$0.15 each, $0.60 total), square WebP + `manifest.json`; the export adds `portrait` per breed and can copy the files into the website. The FAL key exists only on David's machine and the server, so **no image exists yet**. **David's steps** (Sail running, `FAL_AI_API_KEY` in `backend/.env`):
+**Update 2026-10-10 (M5-R11-04 AI breed portraits, David; branch `feat/M5-R11-breed-portraits`, PR #125 open, not merged):** tool `php artisan breeds:portraits` (`Media\BreedPortraitService`) makes one AI illustration per register breed (Border Collie, Labrador — yellow, Golden, Maine Coon) on the **AI Lab budget** (~$0.15 each, $0.60 total), square WebP + `manifest.json`; the export adds `portrait` per breed and can copy the files into the website. The FAL key exists only on David's machine and the server, so **no image exists yet**. **David's steps** (Sail running, `FAL_AI_API_KEY` in `backend/.env`):
 ```bash
 cd backend && ./vendor/bin/sail artisan breeds:portraits --dry-run          # prompts + estimate, no fal call
 ./vendor/bin/sail artisan breeds:portraits --out=storage/app/breed-portraits # Sail mounts only backend/ → write there
