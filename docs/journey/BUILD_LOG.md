@@ -18,9 +18,9 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Kako povedati:**
 - 👩 Starši: »Zlati prinašalec je čudovit družinski pes — a potrebuje vsaj dve uri gibanja na dan in česanje večkrat na teden. Preizkusite 12 tednov, preden se odločite.« (*ko bo nova različica v trgovini*)
-- 🧒 Otroci: »Nov kuža v PetPrep: zlati prinašalec! Rad prinaša žogico, rad je in rad ima dolge sprehode.«
-- 💼 Investitorji: »Tretja plačljiva pasma v istem dnevu kot druga — ponovljiv postopek z viri; 17 pasem je še v načrtu (M5-R10).«
-- 📣 Omrežja: »Ste vedeli, da PDSA za zlatega prinašalca priporoča najmanj dve uri gibanja na dan? To je 12.000 korakov v PetPrep.«
+- 🧒 Otroci: »Nov kuža v PetPrep: zlati prinašalec! Rad prinaša žogico, rad je in rad ima dolge sprehode.« (*ko bo nova različica v trgovini*)
+- 💼 Investitorji: »Tretja plačljiva pasma v istem dnevu kot druga — ponovljiv postopek z viri; 16 od 18 novih pasem je še v načrtu (M5-R10).«
+- 📣 Omrežja: »Ste vedeli, da PDSA za zlatega prinašalca priporoča najmanj dve uri gibanja na dan? To je 12.000 korakov v PetPrep.« (*ko bo nova različica v trgovini*)
 - 🛠 Tehnično: »Nova oznaka v zaprtem besednjaku = konfiguracija + unija v API tipu (Scramble → `schema.ts`) + prevoda EN / SL; testi preverijo vir in citat za vsako oznako.«
 
 ---
