@@ -748,6 +748,9 @@ erDiagram
   PETS ||--o{ ACTIVITIES_LOG : logs
   PETS ||--o{ PET_MEDIA : "image + state video slots (M4-03)"
   PET_MEDIA ||--o{ AI_SPEND_LEDGER : "estimated cost per call"
+  PET_LOOKS ||--o{ PETS : "shared look of a free pet (M4-10)"
+  PET_LOOKS ||--o{ PET_MEDIA : "look rows: one per kind/state/stage (M4-10)"
+  PET_MEDIA ||--o{ PET_MEDIA : "look_media_id: pet slot shows a look row"
   PETS ||--o{ PET_HYGIENE_EVENTS : "messes: poop, puppy accident, chewing; cat: litter uses, litter accident, scratching"
   PETS ||--o{ PET_PLAY_EVENTS : "play invitations + finished plays (mood only, M5-R05)"
   PETS ||--o{ PET_DAILY_WALKS : "closed days"
@@ -1237,6 +1240,52 @@ flowchart TD
   UN -->|"refetch once per media, again after 5 min"| RF["onMediaExpired → refetch state"]
   X["1 min before media.expiresAt (album open)"] --> RF
   RF -->|"re-signed URLs"| VW
+```
+
+## 10d. Shared look pool for free pets (M4-10, David 2026-10-09)
+
+A new profiled pet of a free breed (mutt, domestic cat) gets one of 20 looks per breed; a look's media are generated once and every later pet of the look links the stored files (0 $). Paid breeds, legacy-profile pets and DNA v1 keep a unique DNA.
+
+```mermaid
+flowchart TD
+  P[PairingService::createPet<br/>family row locked] --> A{free breed + profile<br/>+ pool enabled?}
+  A -- no --> U[PetDnaService::forNewPet<br/>unique DNA v2]
+  A -- yes --> C{breed has &lt; 20 looks?}
+  C -- yes --> N[create next look<br/>insert-or-ignore pool_index<br/>traits not in pool / family]
+  N -- lost the race --> C
+  C -- no --> F{looks the family<br/>does not show?}
+  F -- yes --> R1[random unused look]
+  F -- no --> R2[random look]
+  N --> D[pets.pet_look_id + pet_dna = look DNA]
+  R1 --> D
+  R2 --> D
+```
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant J as Job (GeneratePetReferenceImage /<br/>SubmitPetStateVideo of pet X)
+  participant S as PetMediaService
+  participant L as pet_media look row<br/>(look, kind, state, stage)
+  participant F as fal.ai (FalGateway)
+  participant D as StorePetMedia
+  J->>S: media for pet X (stage of X)
+  S->>L: lookSlot() (insert-or-ignore)
+  alt look row READY
+    S-->>J: link: copy storage_path to X's slot,<br/>one broadcast, no HTTP (0 $)
+  else not stored yet
+    S->>S: X's slot running + look_media_id (waiting)
+    S->>L: claim pending|failed → running
+    alt claim won
+      S->>F: image (edit of earlier look stage / text-to-image)<br/>or video submit (webhook) — budget + ledger (pet_id null)
+      F-->>D: result URL (sync / signed webhook)
+      D->>L: store looks/{id}/…-{stage}-g{n} → READY
+      D->>S: fan-out: link every waiting pet slot
+    else another worker has it
+      S-->>J: return (the fan-out links X)
+    end
+  end
+  Note over L: failure → fan-out failure (reason copied);<br/>daily retry re-runs the pets, which re-claims the row
 ```
 
 ## 11. Push notifications (M3-02, 2026-10-05)

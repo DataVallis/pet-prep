@@ -8,6 +8,20 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Brezplačne živali si delijo 20 videzov na pasmo (M4-10, strežnik)
+
+**Kaj se je zgodilo:** Doslej je vsak brezplačni mešanček dobil svojo AI sliko in dva AI videa — **1,27 $ na življenjsko obdobje** (0,15 $ slika + 2 × 0,56 $ video), brez prihodka. David je 9. 10. odločil: brezplačne živali dobijo videz iz **skupnega nabora 20 videzov na pasmo** (mešanček; domača mačka, ko bodo mačke vklopljene). Nabor se polni sproti — prvih 20 brezplačnih živali pasme ustvari vsaka svoj videz, vsaka naslednja dobi enega od obstoječih. Kar je za videz enkrat ustvarjeno (slika in videi obdobja, slika rasti, kasneje tudi videi po morebitnem nakupu in vedenjski videi), dobi vsaka naslednja žival s tem videzom **brez novega klica AI**. V isti družini dve brezplačni živali nimata istega videza, dokler je kakšen prost. Plačljive pasme (Border Collie, Maine Coon) ostanejo unikatne.
+
+**Zakaj je pomembno:** Brezplačni ljubljenček je vstopna točka za družine — zdaj ne stane nič več, ko je nabor poln. Strošek AI ostane vezan na prihodek (plačljive pasme), brezplačna ponudba pa se lahko neomejeno širi.
+
+**Številke:** pred M4-10 ≈ 1,27 $ na brezplačno žival na obdobje (*ocena po ceniku fal*); po M4-10 ≈ 0 $ za vsako žival po prvih 20 na pasmo; enkraten strošek polnjenja nabora največ 20 videzov × 4 obdobja × 1,27 $ ≈ **101,60 $ na brezplačno pasmo** (obdobje, ki ga noben videz ne doseže, se ne ustvari). 17 novih avtomatskih testov (1710 skupaj), med njimi: nobenega klica AI, ko videz že ima medije; dve živali hkrati sprožita en sam klic; izbris družine ne izbriše skupnih datotek.
+
+**Kako povedati:**
+- 💼 Investitorji: »Brezplačni ljubljenček ima mejni strošek AI ≈ 0 $: 20 videzov na pasmo se ustvari enkrat (≤ ~100 $), nato se samo ponovno uporabljajo. Personaliziran, unikaten videz ostane del plačljivega izziva.«
+- 🛠 Tehnično: »Mediji videza so vrstice v istem cevovodu (zaklep, proračun, webhook, prenos) — datoteka na disku enkrat, vsaka žival ima svojo podpisano povezavo; izbris družine ne seže v skupne datoteke.«
+- 👩 Starši: brez spremembe za uporabnika — brezplačni kuža je še vedno fotorealističen in v družini se ne ponovi.
+- 📣 Omrežja: (*interno; ni za objavo kot funkcija*)
+
 ## 2026-10-09 — Muca dobi svoj AI videz (M5-R06-07, skrito)
 
 **Kaj se je zgodilo:** Strežnik zna narisati muco. Vsaka muca ob rojstvu izžreba svoj videz — domača mačka iz barv in vzorcev (progasta, marmorirana, »smoking«, želvovinasta, tribarvna …), Maine Coon po uradnem standardu FIFe (velik, z ovratnikom, čopki na ušesih in dolgim kosmatim repom). Opis za AI ima svojo mačjo predlogo in nikoli ne vsebuje besede »pes«. Videi stanj so mačji: ko muca nima dovolj igre, ji je **dolgčas** in gleda skozi okno (pes je utrujen), igra se s peresom, ki visi od zgoraj, spi zvita v klopčič. Nov video **»praska kavč«** se prikaže, ko muca dan po zamujeni igri opraska kavč; videa luže pri muci ni. Mucek Maine Coona je na sliki že večji od drugih muckov, mlada Maine Coon pa še ni dorasla (polno velikost doseže pri 3–5 letih). V AI laboratoriju lahko admin mačke preizkusi in vidi ceno ene muce, preden mačke vklopimo.
