@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Zlati prinašalec: druga nova pasma (M5-R10-02)
+
+**Kaj se je zgodilo:** PetPrep ima tretjo plačljivo pasmo psa — **zlatega prinašalca** (Golden Retriever). Raziskava: **13 novih virov (S63–S75)** — standard FCI 111, The Royal Kennel Club (stran pasme in standard), AKC standard, PDSA, Woodgreen, Guide Dogs UK, plakat VetCompass (mediana 12,48 leta) in povzetek raziskave McMillan 2024 pri Dogs Trust (13,2 leta). David je isti večer (9. 10. ~22:40) potrdil številke igre: odrasel zlati prinašalec potrebuje **120 minut gibanja = 12.000 korakov** na dan (PDSA »najmanj dve uri«, RKC »več kot 2 uri«), starejši **9.000**; starejši postane pri **119 mesecih** (0,75 × 13,2 leta); uči se **1,9× hitreje** od mešančka (Coren: 4. mesto — med Border Colliejem in labradorcem); hrana, voda in čiščenje kot pri Border Collieju. Izbirnik pokaže oznake z viri: »Primerno za: aktivno družino, družinsko življenje, družino z otroki, začetnike, veliko hišo z vrtom, dom z drugimi ljubljenčki« in »Upoštevajte: vsak dan potrebuje veliko gibanja, izpada mu dlaka, rad je — pazite na težo, **potrebuje česanje večkrat na teden**« (nova oznaka). Statistik o raku v aplikaciji namenoma ni.
+
+**Zakaj je pomembno:** Postopek »vir → pravilo igre → besedilo« se je ponovil v enem večeru — dokaz, da se razširitev na 20 pasem da izpeljati pasmo za pasmo. Zlati prinašalec je prva pasma z oznako »družino z otroki« (iz izjave PDSA, z opozorilom o nadzoru v raziskavi) in prva z oznako o česanju, ki ga loči od labradorca.
+
+**Številke:** 13 novih virov (S63–S75), 46 vrstic `breed_stage_params`, 10 oznak (6 + 4), 1 nova oznaka v besednjaku (`frequent_grooming`), 1 nova migracija; Pest **1867** testov, Jest **1903** testi (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Zlati prinašalec je čudovit družinski pes — a potrebuje vsaj dve uri gibanja na dan in česanje večkrat na teden. Preizkusite 12 tednov, preden se odločite.« (*ko bo nova različica v trgovini*)
+- 🧒 Otroci: »Nov kuža v PetPrep: zlati prinašalec! Rad prinaša žogico, rad je in rad ima dolge sprehode.«
+- 💼 Investitorji: »Tretja plačljiva pasma v istem dnevu kot druga — ponovljiv postopek z viri; 17 pasem je še v načrtu (M5-R10).«
+- 📣 Omrežja: »Ste vedeli, da PDSA za zlatega prinašalca priporoča najmanj dve uri gibanja na dan? To je 12.000 korakov v PetPrep.«
+- 🛠 Tehnično: »Nova oznaka v zaprtem besednjaku = konfiguracija + unija v API tipu (Scramble → `schema.ts`) + prevoda EN / SL; testi preverijo vir in citat za vsako oznako.«
+
+---
+
 ## 2026-10-09 — Labradorec: prva nova pasma iz razširitve na 20 pasem (M5-R10-01)
 
 **Kaj se je zgodilo:** PetPrep ima drugo plačljivo pasmo psa — **labradorca** (Labrador Retriever). Najprej raziskava: **15 novih virov (S48–S62)** — med njimi The Royal Kennel Club, AKC standard pasme, PDSA, Guide Dogs UK, Woodgreen in raziskava življenjske dobe McMillan 2024 (mediana 13,1 leta). Iz njih in Davidovih odločitev (9. 10. 2026) so pravila igre: odrasel labradorec potrebuje **90 minut gibanja na dan → 9.000 korakov** (Border Collie 12.000, mešanček 6.000), starejši **68 minut → 6.800 korakov**, obdobja mladiček / mlad pes / odrasel / starejši pri **9 / 36 / 118 mesecih**, uči se **1,8-krat hitreje** od mešančka (Border Collie 2-krat), hrana, voda in čiščenje kot pri Border Collieju (lakota −12 %/h, žeja −15 %/h, 2 kakca na dan, voda 3× na dan). V bazi je **46 vrstic pravil po obdobjih**, vsaka z virom ali zapisano odločitvijo. Novo je tudi, da izbirnik pri pasmi pokaže, **za koga je primerna** — vsaka oznaka ima vir: labradorec »Primerno za: aktivno družino, družinsko življenje, veliko hišo z vrtom, dom z drugimi ljubljenčki« in »Upoštevajte: izpada mu dlaka, vsak dan potrebuje veliko gibanja, rad je — pazite na težo«. Po neodvisnem pregledu (QA) je David oznako »Družine z otroki« zamenjal z »Družinski pes« (`family_pet`): PDSA piše »odlični družinski psi, ob pravi socializaciji«, nobeden od virov pa labradorca izrecno ne ocenjuje z otroki — zato tega ne trdimo.

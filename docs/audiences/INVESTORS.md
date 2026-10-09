@@ -21,7 +21,7 @@ PetPrep is a 12-week AI dog simulator that gives parents **objective proof** whe
 - **Who:** adults who want a specific breed and want to try it first — "is this breed really for me?" — before buying or adopting.
 - **How (no app change, works today):** the adult creates the parent account, adds themselves as the carer profile and logs in with the 6-digit code (same or another phone). Later they can add a partner or children, because it will be a family dog.
 - **What they test:** the breed's real daily needs from the same sourced rules — meals in time windows, a daily step goal from sourced exercise minutes (adult Border Collie 12,000 vs. mixed breed 6,000), training, puppy accidents — over 12 weeks against their own working life.
-- **Pricing:** the same — mixed breed free forever, 12-week challenge €49.99 per pet. Breeds today: mixed breed (free), Border Collie and Labrador Retriever (paid; the Labrador was built 2026-10-09 — first of the planned 20-breed expansion, not yet verified on a device or in the stores).
+- **Pricing:** the same — mixed breed free forever, 12-week challenge €49.99 per pet. Breeds today: mixed breed (free), Border Collie, Labrador Retriever and Golden Retriever (paid; the Labrador and the Golden Retriever were built 2026-10-09 — the first two of the planned 20-breed expansion, not yet verified on a device or in the stores).
 - **Not yet known:** segment size, conversion and channels are **not measured**; dedicated acquisition for this segment (e.g. breed communities, breeders) is *planned*. The parent-and-child flow remains the primary positioning.
 
 ## Business model (decided 2026-10-02)
