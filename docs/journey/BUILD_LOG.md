@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Starš kodo pogosto pošlje po sporočilu (npr. na otrokov telefon ali tablico). Prepisovanje 6 številk med dvema aplikacijama je za mlajšega otroka težko; lepljenje je en dotik. Vsebina odložišča se nikjer ne shrani ali prikaže.
 
-**Številke:** Jest 1780 → 1804 testov (vsi zeleni); nov izvorni modul `expo-clipboard` 57.0.2 → **potrebna je nova gradnja** (ni OTA).
+**Številke:** Jest 1780 → 1811 testov (vsi zeleni); nov izvorni modul `expo-clipboard` 57.0.2 → **potrebna je nova gradnja** (ni OTA).
 
 **Kako povedati:**
 - 👩 Starši: »Kodo za prijavo otroka lahko pošljete po sporočilu — otrok jo samo prilepi.«

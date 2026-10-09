@@ -8,6 +8,7 @@ import {
 } from '@/modules/pairing/pinClipboard';
 
 const getString = Clipboard.getStringAsync as jest.Mock;
+const hasString = Clipboard.hasStringAsync as jest.Mock;
 
 describe('extractPin', () => {
   it.each([
@@ -16,11 +17,13 @@ describe('extractPin', () => {
     ['12-34-56', '123456'],
     [' 123456\n', '123456'],
     ['Koda: 734 912', '734912'],
+    ['Koda 734 912 velja do 15:30', '734912'],
+    ['Koda: 734-912 (15 min)', '734912'],
   ])('%j → %s', (text, pin) => {
     expect(extractPin(text)).toBe(pin);
   });
 
-  it.each(['12345', '1234567', 'abc', '', '   ', '12 34 5'])('%j → null', (text) => {
+  it.each(['12345', '1234567', 'abc', '', '   ', '12 34 5', 'Koda 734 912 ali 123 456', '734 912 345 do 15:30'])('%j → null', (text) => {
     expect(extractPin(text)).toBeNull();
   });
 });
@@ -29,6 +32,8 @@ describe('readPinFromClipboard', () => {
   beforeEach(() => {
     getString.mockReset();
     getString.mockResolvedValue('');
+    hasString.mockReset();
+    hasString.mockResolvedValue(true);
     setClipboardProbeForTests(() => true);
   });
 
@@ -41,6 +46,12 @@ describe('readPinFromClipboard', () => {
 
   it('no_pin for an empty clipboard (also what iOS returns after a denied paste prompt)', async () => {
     await expect(readPinFromClipboard()).resolves.toEqual({ kind: 'no_pin' });
+  });
+
+  it('nothing on the clipboard: the text is not read at all', async () => {
+    hasString.mockResolvedValueOnce(false);
+    await expect(readPinFromClipboard()).resolves.toEqual({ kind: 'no_pin' });
+    expect(getString).not.toHaveBeenCalled();
   });
 
   it('no_pin for the wrong number of digits', async () => {

@@ -269,12 +269,14 @@ describe('Start screen + child PIN login', () => {
 
 describe('Child PIN login: paste the code (David 2026-10-09)', () => {
   const getString = Clipboard.getStringAsync as jest.Mock;
+  const hasString = Clipboard.hasStringAsync as jest.Mock;
 
   beforeEach(() => {
     jest.clearAllMocks();
-    [pinLogin, getUser, getString].forEach((m) => m.mockReset());
+    [pinLogin, getUser, getString, hasString].forEach((m) => m.mockReset());
     getItem.mockResolvedValue(null);
     getString.mockResolvedValue('');
+    hasString.mockResolvedValue(true);
     setClipboardProbeForTests(() => true);
     jest.useFakeTimers();
     jest.setSystemTime(NOW);
@@ -366,6 +368,39 @@ describe('Child PIN login: paste the code (David 2026-10-09)', () => {
     typePin('734912');
     expect(screen.getByTestId('pin-login-loading')).toBeTruthy();
     expect(screen.getByLabelText(S.paste)).toBeDisabled();
+  });
+
+  it('the keypad waits while a paste reads the clipboard: typing the 6th digit → still one request', async () => {
+    let resolveClipboard: (text: string) => void = () => undefined;
+    getString.mockReturnValueOnce(new Promise<string>((resolve) => { resolveClipboard = resolve; }));
+    pinLogin.mockReturnValue(new Promise(() => undefined));
+    await openChildPath();
+    typePin('11111');
+
+    fireEvent.press(screen.getByLabelText(S.paste));
+    await flush(); // hasStringAsync resolved, getStringAsync pending
+    typePin('1'); // 6th digit during the paste
+    fireEvent.press(screen.getByLabelText(S.paste)); // double tap
+    expect(pinLogin).not.toHaveBeenCalled();
+
+    await act(async () => {
+      resolveClipboard('734 912');
+      await jest.advanceTimersByTimeAsync(0);
+    });
+    expect(pinLogin).toHaveBeenCalledTimes(1);
+    expect(pinLogin).toHaveBeenCalledWith('734912', 'samsung SM-A515F');
+    expect(getString).toHaveBeenCalledTimes(1);
+  });
+
+  it('the slots row never announces "disabled"; long press is an accessibility action', async () => {
+    await openChildPath();
+    const slots = screen.getByTestId('pin-slots');
+    expect(slots.props.accessibilityState).toEqual({ disabled: false });
+    expect(slots.props.accessibilityActions).toEqual([{ name: 'longpress', label: S.paste }]);
+    getString.mockResolvedValueOnce('12');
+    fireEvent(slots, 'accessibilityAction', { nativeEvent: { actionName: 'longpress' } });
+    await flush();
+    expect(screen.getByTestId('pin-paste-message')).toHaveTextContent(S.pasteNoCode);
   });
 
   it('a binary without expo-clipboard has no paste button', async () => {

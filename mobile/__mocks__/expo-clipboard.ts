@@ -5,4 +5,4 @@
  */
 export const getStringAsync = jest.fn((): Promise<string> => Promise.resolve(''));
 export const setStringAsync = jest.fn((): Promise<boolean> => Promise.resolve(true));
-export const hasStringAsync = jest.fn((): Promise<boolean> => Promise.resolve(false));
+export const hasStringAsync = jest.fn((): Promise<boolean> => Promise.resolve(true));

@@ -11,9 +11,9 @@
  * like the 6th typed digit, anything else → a friendly hint, the typed digits stay.
  */
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { AccessibilityInfo, ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { ChevronLeft, ClipboardPaste, Delete, RotateCcw } from 'lucide-react-native';
 
@@ -58,21 +58,37 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
   // Wall clock as well: right after a 429 the countdown state hasn't ticked yet.
   const isLockedOut = lockedUntil !== null && (lockRemaining > 0 || secondsUntil(lockedUntil) > 0);
   const isBusy = login.isPending;
-  const keypadDisabled = isBusy || isLockedOut;
-  const pasteDisabled = keypadDisabled || isPasting;
+  // While a paste reads the clipboard the keypad waits too — one code at a time.
+  const keypadDisabled = isBusy || isLockedOut || isPasting;
+  const pasteDisabled = keypadDisabled;
+
+  // Synchronous guards: render state is stale inside the async paste and between a
+  // `mutate()` call and the re-render that shows `isPending`.
+  const loginInFlightRef = useRef(false);
+  const pastingRef = useRef(false);
+  const lockedUntilRef = useRef<string | null>(null);
+  const lockedNow = () => lockedUntilRef.current !== null && secondsUntil(lockedUntilRef.current) > 0;
+  const lockUntil = (iso: string | null) => {
+    lockedUntilRef.current = iso;
+    setLockedUntil(iso);
+  };
 
   // The lockout is over → drop its message so the child can try again.
   useEffect(() => {
     if (lockedUntil !== null && lockRemaining <= 0 && secondsUntil(lockedUntil) <= 0) {
-      setLockedUntil(null);
+      lockUntil(null);
       setError(null);
     }
   }, [lockedUntil, lockRemaining]);
 
   const submit = (pin: string) => {
-    if (pin.length !== PIN_LENGTH || isBusy || isLockedOut) return;
+    if (pin.length !== PIN_LENGTH || loginInFlightRef.current || lockedNow()) return;
+    loginInFlightRef.current = true;
     setError(null);
     login.mutate(pin, {
+      onSettled: () => {
+        loginInFlightRef.current = false;
+      },
       onSuccess: (session) => signIn(session),
       onError: (err) => {
         const classified = classifyPinLoginError(err);
@@ -81,14 +97,14 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
         if (classified.kind === 'rate_limited') {
           setDigits('');
           const seconds = classified.retryAfterSeconds ?? 0;
-          setLockedUntil(new Date(Date.now() + seconds * 1000).toISOString());
+          lockUntil(new Date(Date.now() + seconds * 1000).toISOString());
         }
       },
     });
   };
 
   const press = (digit: string) => {
-    if (keypadDisabled || digits.length >= PIN_LENGTH) return;
+    if (keypadDisabled || pastingRef.current || digits.length >= PIN_LENGTH) return;
     const next = digits + digit;
     setDigits(next);
     setPasteFailed(false);
@@ -98,22 +114,32 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
   };
 
   const removeDigit = () => {
-    if (keypadDisabled) return;
+    if (keypadDisabled || pastingRef.current) return;
     setDigits((d) => d.slice(0, -1));
     setPasteFailed(false);
     if (error && error.kind !== 'rate_limited') setError(null);
   };
 
   const paste = async () => {
-    if (!canPaste || pasteDisabled) return;
+    if (!canPaste || pastingRef.current || loginInFlightRef.current || lockedNow()) return;
+    pastingRef.current = true;
     setIsPasting(true);
-    // The clipboard text stays inside readPinFromClipboard — only a 6-digit code comes back.
-    const result = await readPinFromClipboard();
-    setIsPasting(false);
+    let result: Awaited<ReturnType<typeof readPinFromClipboard>>;
+    try {
+      // The clipboard text stays inside readPinFromClipboard — only a 6-digit code comes back.
+      result = await readPinFromClipboard();
+    } finally {
+      pastingRef.current = false;
+      setIsPasting(false);
+    }
+    // Re-check after the await: a request or a lockout may have started meanwhile.
+    if (loginInFlightRef.current || lockedNow()) return;
     if (result.kind !== 'pin') {
       // Same as typing: an old "wrong code" message gives way to the paste hint.
-      if (error && error.kind !== 'rate_limited') setError(null);
+      setError((prev) => (prev && prev.kind !== 'rate_limited' ? null : prev));
       setPasteFailed(true);
+      // Android reads the live region; iOS needs an explicit announcement.
+      if (Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(S.pasteNoCode);
       return;
     }
     setPasteFailed(false);
@@ -165,13 +191,12 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
           <Text style={styles.hint}>{S.hint}</Text>
         </View>
 
-        <Pressable
-          style={styles.slotsRow}
-          testID="pin-slots"
-          accessible
-          accessibilityLabel={S.digitsEntered(digits.length)}
-          onLongPress={canPaste ? () => void paste() : undefined}
-          disabled={!canPaste || pasteDisabled}
+        <SlotsRow
+          canPaste={canPaste}
+          pasteDisabled={pasteDisabled}
+          label={S.digitsEntered(digits.length)}
+          pasteLabel={S.paste}
+          onPaste={() => void paste()}
         >
           {Array.from({ length: PIN_LENGTH }, (_, i) => {
             const filled = i < digits.length;
@@ -185,7 +210,7 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
               </View>
             );
           })}
-        </Pressable>
+        </SlotsRow>
 
         {canPaste && (
           <Pressable
@@ -250,6 +275,45 @@ export default function ChildPinLoginScreen({ onBack }: ChildPinLoginScreenProps
         </View>
       </ScrollView>
     </View>
+  );
+}
+
+interface SlotsRowProps {
+  canPaste: boolean;
+  pasteDisabled: boolean;
+  label: string;
+  pasteLabel: string;
+  onPaste: () => void;
+  children: ReactNode;
+}
+
+/**
+ * The code slots. With a clipboard a long press pastes (also as the "long press"
+ * accessibility action); the row itself never announces "disabled" — it isn't a button.
+ */
+function SlotsRow({ canPaste, pasteDisabled, label, pasteLabel, onPaste, children }: SlotsRowProps) {
+  if (!canPaste) {
+    return (
+      <View style={styles.slotsRow} testID="pin-slots" accessible accessibilityLabel={label}>
+        {children}
+      </View>
+    );
+  }
+  return (
+    <Pressable
+      style={styles.slotsRow}
+      testID="pin-slots"
+      accessible
+      accessibilityLabel={label}
+      accessibilityState={{ disabled: false }}
+      accessibilityActions={[{ name: 'longpress', label: pasteLabel }]}
+      onAccessibilityAction={(event) => {
+        if (event.nativeEvent.actionName === 'longpress' && !pasteDisabled) onPaste();
+      }}
+      onLongPress={pasteDisabled ? undefined : onPaste}
+    >
+      {children}
+    </Pressable>
   );
 }
 

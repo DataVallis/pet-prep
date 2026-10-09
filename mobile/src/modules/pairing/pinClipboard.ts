@@ -20,10 +20,23 @@ import type * as ClipboardModule from 'expo-clipboard';
 
 import { PIN_LENGTH } from './pinLogin';
 
-/** Digits only; a PIN only when exactly `PIN_LENGTH` digits remain ("123 456", "12-34-56"). */
+/** Runs of digits joined by single spaces / dashes ("734 912", "15", "12-34-56-78"). */
+const DIGIT_RUN = /[0-9]+(?:[ -][0-9]+)*/g;
+/** A run that is exactly one PIN: "734912", "734 912", "734-912". */
+const PIN_SHAPE = /^[0-9]{3}[ -]?[0-9]{3}$/;
+
+/**
+ * The PIN in a piece of copied text, or null.
+ * 1. All digits joined, when exactly `PIN_LENGTH` ("123 456", "12-34-56", "Koda: 734 912").
+ * 2. Otherwise exactly one stand-alone 6-digit group ("Koda 734 912 velja do 15:30");
+ *    two or more candidates are ambiguous → null.
+ */
 export function extractPin(text: string): string | null {
   const digits = text.replace(/[^0-9]/g, '');
-  return digits.length === PIN_LENGTH ? digits : null;
+  if (digits.length === PIN_LENGTH) return digits;
+  // Whole runs, so "734 912 345" (9 digits) is not mistaken for a PIN.
+  const groups = (text.match(DIGIT_RUN) ?? []).filter((run) => PIN_SHAPE.test(run));
+  return groups.length === 1 ? groups[0].replace(/[^0-9]/g, '') : null;
 }
 
 export type ClipboardPinResult =
@@ -33,7 +46,7 @@ export type ClipboardPinResult =
   /** No clipboard module in this binary. */
   | { kind: 'unavailable' };
 
-type ClipboardApi = Pick<typeof ClipboardModule, 'getStringAsync'>;
+type ClipboardApi = Pick<typeof ClipboardModule, 'getStringAsync' | 'hasStringAsync'>;
 type NativeProbe = () => boolean;
 
 const defaultProbe: NativeProbe = () => requireOptionalNativeModule('ExpoClipboard') != null;
@@ -61,6 +74,8 @@ export async function readPinFromClipboard(): Promise<ClipboardPinResult> {
   const clipboard = loadClipboard();
   if (!clipboard) return { kind: 'unavailable' };
   try {
+    // No text on the clipboard → don't read it at all (no iOS paste prompt for nothing).
+    if (!(await clipboard.hasStringAsync())) return { kind: 'no_pin' };
     const pin = extractPin(await clipboard.getStringAsync());
     return pin ? { kind: 'pin', pin } : { kind: 'no_pin' };
   } catch {
