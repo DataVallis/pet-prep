@@ -18,7 +18,7 @@ import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
 import { palette } from '@/theme';
 import { useDarkStatusBar } from '@/components/ui/useDarkStatusBar';
 import { useTranslation } from 'react-i18next';
-import { t } from '@/i18n';
+import { setTextSpecies, t } from '@/i18n';
 
 const LOCKED_STATES: LockState[] = ['game_over', 'hard_stop', 'payment_required', 'illness', 'inactive'];
 
@@ -101,6 +101,10 @@ export default function AppNavigator() {
 
   const isLocked = LOCKED_STATES.includes(lockState);
   const isAuthenticated = authToken !== null && user !== null;
+  // M5-R06-08b: child texts follow the child's pet ("muca" for a cat) — the contract and
+  // the lock screen before / above the HUD too. Never on the parent side (a family may have
+  // a dog and a cat; parent helpers take the species explicitly).
+  setTextSpecies(isAuthenticated && user.role !== 'parent' ? (pet?.species ?? null) : null);
 
   return (
     <ErrorBoundary>

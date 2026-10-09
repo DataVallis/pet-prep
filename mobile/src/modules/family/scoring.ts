@@ -9,7 +9,7 @@
  */
 
 import { familyClock, localParts } from '@/modules/childPet/familyTime';
-import { PARENT_BEHAVIOUR_STRINGS, type BehaviourKind } from '@/modules/behaviour/behaviour';
+import { BEHAVIOUR_KINDS, PARENT_BEHAVIOUR_STRINGS, type BehaviourKind } from '@/modules/behaviour/behaviour';
 import { playTimelineText } from '@/modules/play/play';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
@@ -18,10 +18,17 @@ import { strings } from '@/i18n/strings';
 
 export type LightColor = 'green' | 'yellow' | 'red';
 export type LightReason = 'game_over' | 'phase3_alarm' | 'fell_ill_today' | 'missed_routines';
-/** `training` (M5-R03): one completed training session per day, only for a pet with training. */
-export type RoutineType = 'feed' | 'water' | 'clean' | 'walk' | 'training';
+/**
+ * `training` (M5-R03): one completed training session per day, only for a pet with training.
+ * M5-R06-04 / 05 (cats): `play` (the day's wand games), `litter_scoop` (one per litter use),
+ * `litter_change` (weekly), `grooming` (Maine Coon, weekly slots).
+ */
+export type RoutineType = 'feed' | 'water' | 'clean' | 'walk' | 'training' | 'play' | 'litter_scoop' | 'litter_change' | 'grooming';
 
-export const ROUTINE_TYPES: readonly RoutineType[] = ['feed', 'water', 'clean', 'walk', 'training'];
+export const ROUTINE_TYPES: readonly RoutineType[] = ['feed', 'water', 'clean', 'walk', 'training', 'play', 'litter_scoop', 'litter_change', 'grooming'];
+
+/** The cat-only routine types (a dog's report never shows them unless the server counted one). */
+export const CAT_ROUTINE_TYPES: readonly RoutineType[] = ['play', 'litter_scoop', 'litter_change', 'grooming'];
 
 export interface TrafficLight {
   color: LightColor;
@@ -73,6 +80,10 @@ export interface DayRow {
   walk_steps: number;
   walk_goal: number | null;
   walk_done: boolean | null;
+  /** M5-R06-08b: a cat's wand games of the day (all children); null for a dog / no play routine / older server. */
+  play_sessions: number | null;
+  play_goal: number | null;
+  play_done: boolean | null;
 }
 
 export interface ChallengeProgress {
@@ -190,8 +201,6 @@ function isRoutineType(value: unknown): value is RoutineType {
   return ROUTINE_TYPES.some((t) => t === value);
 }
 
-const BEHAVIOUR_KINDS: readonly BehaviourKind[] = ['poop', 'accident', 'chewing'];
-
 function readKind(value: unknown): BehaviourKind | null {
   return BEHAVIOUR_KINDS.find((k) => k === value) ?? null;
 }
@@ -244,6 +253,9 @@ export function readDayRows(value: unknown): DayRow[] {
         walk_steps: num(item.walk_steps),
         walk_goal: numOrNull(item.walk_goal),
         walk_done: boolOrNull(item.walk_done),
+        play_sessions: numOrNull(item.play_sessions),
+        play_goal: numOrNull(item.play_goal),
+        play_done: boolOrNull(item.play_done),
       },
     ];
   });
@@ -261,7 +273,15 @@ export function readProgress(value: unknown): ChallengeProgress | null {
 }
 
 /** System rows that are bad news (fallback when a payload has no `is_positive`). */
-const NEGATIVE_ACTIVITIES: readonly string[] = ['ignored_warning', 'pet_accident', 'pet_chewed'];
+const NEGATIVE_ACTIVITIES: readonly string[] = [
+  'ignored_warning',
+  'pet_accident',
+  'pet_chewed',
+  // M5-R06-05 (cats)
+  'pet_scratched',
+  'pet_litter_accident',
+  'pet_coat_matted',
+];
 
 export function readTimeline(value: unknown): TimelineEntry[] {
   return arr(value).flatMap((item) => {
@@ -311,14 +331,9 @@ export function readChildReport(value: unknown): ChildReport | null {
     care_score: readCareScore(value.care_score),
     period_score: readCareScore(value.period_score),
     progress: readProgress(value.progress),
-    by_type: {
-      feed: readTypeTotals(byTypeRaw.feed),
-      water: readTypeTotals(byTypeRaw.water),
-      clean: readTypeTotals(byTypeRaw.clean),
-      walk: readTypeTotals(byTypeRaw.walk),
-      // Older servers send no `training` → zeros (the detail hides an all-zero training row).
-      training: readTypeTotals(byTypeRaw.training),
-    },
+    // Older servers send no `training` / cat types → zeros (the detail hides all-zero rows of
+    // types the pet doesn't have).
+    by_type: Object.fromEntries(ROUTINE_TYPES.map((type) => [type, readTypeTotals(byTypeRaw[type])])) as Record<RoutineType, TypeTotals>,
     daily: readDayRows(value.daily),
     missed: readMissed(value.missed),
     illnesses: arr(value.illnesses).flatMap((item) =>
@@ -337,6 +352,33 @@ export const LIGHT_LABELS: Readonly<Record<LightColor, string>> = strings('famil
 export const ROUTINE_LABELS: Readonly<Record<RoutineType, string>> = strings('family', 'routines');
 
 const DATE = strings('family', 'date');
+
+function hasTotals(t: TypeTotals): boolean {
+  return t.expected > 0 || t.done > 0 || t.missed > 0 || t.pending > 0;
+}
+
+/**
+ * The routine rows of the report, per species (M5-R06-08b): a dog keeps food, water,
+ * cleaning, walk and — with training — "Šola"; a cat shows food, water, cleaning, litter,
+ * play, the weekly litter change and — Maine Coon — brushing (walk / training only if the
+ * server counted one). Any type the server counted in the period is always shown.
+ */
+export function reportRoutineTypes(
+  species: string | null | undefined,
+  breed: string | null | undefined,
+  byType: Record<RoutineType, TypeTotals>,
+  trainingEnabled: boolean,
+): RoutineType[] {
+  const cat = species === 'cat';
+  return ROUTINE_TYPES.filter((type) => {
+    if (hasTotals(byType[type])) return true;
+    if (type === 'training') return !cat && trainingEnabled;
+    if (type === 'walk') return !cat;
+    if (type === 'grooming') return cat && breed === 'maine_coon';
+    if (CAT_ROUTINE_TYPES.includes(type)) return cat;
+    return true;
+  });
+}
 
 /**
  * Label of a missed routine: a missed `clean` names its mess (M5-R02) — "Luža",
@@ -443,7 +485,13 @@ export function missedWhenText(item: MissedRoutine, timezone: string | null, tod
       when = t('family:missedWhen.window', { opens: opens ?? '?', due: due ?? '?' });
       break;
     case 'clean':
+    case 'litter_scoop':
       when = t('family:missedWhen.deadline', { due: due ?? '?' });
+      break;
+    // M5-R06-05: weekly cat routines are due at the end of the program week.
+    case 'litter_change':
+    case 'grooming':
+      when = t('family:missedWhen.endOfWeek');
       break;
     default:
       when = t('family:missedWhen.endOfDay');
@@ -455,19 +503,27 @@ export function missedWhenText(item: MissedRoutine, timezone: string | null, tod
 
 /** Child actions in the timeline ("nahranil(a) kužka"), keyed by `activity_type`. */
 const ACTIVITY_LABELS = strings('family', 'activities') as Readonly<Record<string, string | undefined>>;
+/** A cat's wording where it differs ("nahranil(a) muco", M5-R06-08b). */
+const CAT_ACTIVITY_LABELS = strings('family', 'activitiesCat') as Readonly<Record<string, string | undefined>>;
 /** System rows ("Opozorilo ni bilo upoštevano"), keyed by `activity_type`. */
 const SYSTEM_ACTIVITY_LABELS = strings('family', 'systemActivities') as Readonly<Record<string, string | undefined>>;
 
 /**
  * "Maja nahranil(a) kužka", "Opozorilo ni bilo upoštevano"; an unknown type shows its code.
  * M5-R05: "Igra z žogo ×3 · Maja" / "Crkljanje · Maja" (`value` = plays merged into the row).
+ * M5-R06-08b: the cat's rows ("se je igral(a) s palico s peresom", "počistil(a) pesek",
+ * "Muca je opraskala kavč" …) and, for a cat (`species`), "nahranil(a) muco".
  */
-export function activityText(entry: Pick<TimelineEntry, 'activity_type' | 'actor_nickname'> & { value?: number | null }): string {
+export function activityText(
+  entry: Pick<TimelineEntry, 'activity_type' | 'actor_nickname'> & { value?: number | null },
+  species: string | null = null,
+): string {
   const play = playTimelineText(entry.activity_type, entry.actor_nickname, entry.value ?? null);
   if (play !== null) return play;
   const system = SYSTEM_ACTIVITY_LABELS[entry.activity_type];
   if (system) return system;
-  const label = ACTIVITY_LABELS[entry.activity_type] ?? entry.activity_type;
+  const label =
+    (species === 'cat' ? CAT_ACTIVITY_LABELS[entry.activity_type] : undefined) ?? ACTIVITY_LABELS[entry.activity_type] ?? entry.activity_type;
   return entry.actor_nickname ? `${entry.actor_nickname} ${label}` : label.charAt(0).toUpperCase() + label.slice(1);
 }
 

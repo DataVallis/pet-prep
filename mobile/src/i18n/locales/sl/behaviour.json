@@ -32,7 +32,9 @@
     "kinds": {
       "poop": "Kakec",
       "accident": "Luža",
-      "chewing": "Pregrizen copat"
+      "chewing": "Pregrizen copat",
+      "litter_accident": "Nered zraven peska",
+      "scratching": "Opraskan kavč"
     },
     "openEvent": "{{label}} — počistiti do {{due}}",
     "takeOut": "Mladiček mora ven {{when}} (zdrži ~{{hold}} h)",

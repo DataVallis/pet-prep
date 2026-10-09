@@ -11,12 +11,14 @@
  * small phone the scene card + meals + chip would crowd the dog.
  * M5-F06: `notice` ("Your pup is getting ready…" while the AI media is pending) sits on top
  * of the column, so it is stacked above the meals row and the dock instead of under them.
+ * M5-R06-08b: the cat's scratched sofa gets "Na praskalnik" (`scratcher`) — it opens the
+ * scratching mini-game; cleaning never resolves it.
  */
 
 import type { ReactNode } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
-import { DoorOpen, ToyBrick } from 'lucide-react-native';
+import { Cat, DoorOpen, ToyBrick } from 'lucide-react-native';
 
 import { SceneGraphic } from '@/components/BehaviourGraphics';
 import {
@@ -47,6 +49,11 @@ export interface BehaviourPanelProps {
   meals?: ReactNode;
   /** M5-F06: a short notice at the top of the column (media "getting ready"); always shown. */
   notice?: ReactNode;
+  /**
+   * M5-R06-08b: "Na praskalnik" on the scratched-sofa card (a cat with an open scratching);
+   * null = no button. `disabled` while the server refuses a carry (another child's game).
+   */
+  scratcher?: { label: string; a11y: string; disabled: boolean; onPress: () => void } | null;
 }
 
 export default function BehaviourPanel({
@@ -60,11 +67,12 @@ export default function BehaviourPanel({
   footer = null,
   meals = null,
   notice = null,
+  scratcher = null,
 }: BehaviourPanelProps) {
   const scene = panelScene(behaviour);
   const chewing = hasOpenChewing(behaviour) || behaviour.can_resolve_chewing;
   // A slipper can be tidied up whatever scene is shown (e.g. a newer accident on top).
-  const cardScene = scene ?? (chewing ? 'chewing' : null);
+  const cardScene = scene ?? (chewing ? 'chewing' : scratcher !== null ? 'scratching' : null);
   const shownMeals = cardScene === null ? meals : null;
   if (notice === null && countdown === null && cardScene === null && footer === null && shownMeals === null) return null;
 
@@ -96,6 +104,24 @@ export default function BehaviourPanel({
             >
               <ToyBrick color={palette.graphite} size={16} />
               <Text style={styles.resolveText}>{BEHAVIOUR_STRINGS.resolveChewing}</Text>
+            </Pressable>
+          )}
+          {scratcher !== null && (
+            <Pressable
+              testID="action-scratcher"
+              accessibilityRole="button"
+              accessibilityLabel={scratcher.a11y}
+              accessibilityState={{ disabled: scratcher.disabled }}
+              disabled={scratcher.disabled}
+              onPress={scratcher.onPress}
+              style={({ pressed }) => [
+                styles.resolveButton,
+                scratcher.disabled && styles.resolveDisabled,
+                pressed && !scratcher.disabled && styles.pressed,
+              ]}
+            >
+              <Cat color={palette.graphite} size={16} />
+              <Text style={styles.resolveText}>{scratcher.label}</Text>
             </Pressable>
           )}
         </View>

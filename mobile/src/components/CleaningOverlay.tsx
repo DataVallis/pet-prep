@@ -13,8 +13,11 @@ export const CLEANING_STRINGS = strings('child', 'cleaning', {
   progress: (done: number, total: number) => t('child:cleaning.progress', { done, total }),
 });
 
-/** What is being cleaned: dirt (poop) or a puppy's puddle (M5-R02 accident). */
-export type CleaningMess = 'poop' | 'accident';
+/** Texts of the cat's mess next to the litter tray (`cat:hud.litterMess`, M5-R06-08b). */
+const LITTER_MESS_STRINGS = strings('cat', 'hud').litterMess;
+
+/** What is being cleaned: dirt (poop), a puppy's puddle (M5-R02 accident) or the cat's mess next to the tray (M5-R06-08b). */
+export type CleaningMess = 'poop' | 'accident' | 'litter';
 
 interface DirtSpot {
   id: number;
@@ -45,8 +48,9 @@ export interface CleaningOverlayProps {
  */
 export default function CleaningOverlay({ onCleaned, onClose, mess = 'poop' }: CleaningOverlayProps) {
   const puddle = mess === 'accident';
-  const title = puddle ? CLEANING_STRINGS.accident.title : CLEANING_STRINGS.title;
-  const hint = puddle ? CLEANING_STRINGS.accident.hint : CLEANING_STRINGS.hint;
+  const litter = mess === 'litter';
+  const title = puddle ? CLEANING_STRINGS.accident.title : litter ? LITTER_MESS_STRINGS.title : CLEANING_STRINGS.title;
+  const hint = puddle ? CLEANING_STRINGS.accident.hint : litter ? LITTER_MESS_STRINGS.hint : CLEANING_STRINGS.hint;
   const spotLabel = puddle ? CLEANING_STRINGS.accident.spot : CLEANING_STRINGS.spot;
   const [spots, setSpots] = useState<DirtSpot[]>([]);
   const reportedRef = useRef(false);

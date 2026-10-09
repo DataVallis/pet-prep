@@ -32,7 +32,9 @@
     "kinds": {
       "poop": "Poop",
       "accident": "Puddle",
-      "chewing": "Chewed slipper"
+      "chewing": "Chewed slipper",
+      "litter_accident": "Mess next to the litter box",
+      "scratching": "Scratched sofa"
     },
     "openEvent": "{{label}} — clean up by {{due}}",
     "takeOut": "The puppy needs to go out {{when}} (can hold it ~{{hold}} h)",

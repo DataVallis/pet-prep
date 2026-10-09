@@ -20,7 +20,7 @@
  * subscribe themselves (`useTranslation()`) or depend on `i18n.language`.
  */
 
-import { i18n } from './index';
+import { t } from './index';
 import { resources, type Namespace, type Resources } from './resources';
 
 type Tree = { readonly [key: string]: string | Tree };
@@ -51,8 +51,9 @@ function isPlainObject(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && Object.getPrototypeOf(value) === Object.prototype;
 }
 
-/** Untyped lookup (keys are checked by the `View` type, not here). */
-const translate = (key: string): string => (i18n.t as unknown as (k: string) => string)(key);
+// Keys are checked by the `View` type, not here.
+/** Untyped, species-aware lookup (`t` picks a cat override, M5-R06-08b). */
+const translate = (key: string): string => (t as unknown as (k: string) => string)(key);
 
 function makeView(ns: string, path: string, node: Tree, extras: Record<string, unknown>): object {
   const keys = (): string[] => [...new Set([...Object.keys(node), ...Object.keys(extras)])];

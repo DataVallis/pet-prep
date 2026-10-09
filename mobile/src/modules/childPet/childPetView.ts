@@ -15,7 +15,7 @@
 import { isPaymentRequired, readPetPlan, type PetPlan } from '@/modules/plan/plan';
 import type { ChildPetState } from '@/api/client';
 import { readBreed, readSpecies } from '@/modules/species/species';
-import { readChildCatCare, type ChildCatCare } from '@/modules/catCare/catCare';
+import { broadcastCatCare, readChildCatCare, type ChildCatCare } from '@/modules/catCare/catCare';
 import type { PetState, PetUpdatedBroadcast, ShownBreed, Species } from '@/types';
 import type { LockState } from '@/store/appStore';
 import { familyCalendar } from '@/modules/childPet/familyTime';
@@ -429,6 +429,8 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
   const training = broadcastTraining(view.training, b.training, lock.is_locked);
   // M5-R05: pet-level `can_play`; a lock (incl. this child's own contract) turns it off.
   const play = broadcastPlay(view.play, b.play, lock.is_locked);
+  // M5-R06-08b: the cat's wand / litter / grooming / scratching (null blocks for a dog).
+  const cat = broadcastCatCare(view.cat, b, lock.is_locked);
 
   const next: ChildPetView = {
     ...view,
@@ -440,6 +442,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     behaviour,
     training,
     play,
+    cat,
     lastEmittedMs: emittedMs,
   };
 
@@ -612,7 +615,13 @@ export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): numbe
   const trainingEnd = at(view.training.session?.expires_at);
   // M5-R05: the dog's invitation ends (the HUD hides it by the clock too; this fetches the truth).
   const invitationEnd = at(view.play?.invitation?.expires_at);
-  const future = [nextWindow, windowEnd, water, accident, illnessEnd, trainingEnd, invitationEnd].filter((ms) => Number.isFinite(ms) && ms > serverNow);
+  // M5-R06-08b: a cat's game becomes possible again (2 h gap, quiet hours, another child's
+  // game) and the grooming block ends — no broadcast marks these moments.
+  const wandAt = view.lock.is_locked ? Number.NaN : at(view.cat.wand?.next_allowed_at);
+  const groomingAt = view.lock.is_locked ? Number.NaN : at(view.cat.grooming?.next_allowed_at);
+  const future = [nextWindow, windowEnd, water, accident, illnessEnd, trainingEnd, invitationEnd, wandAt, groomingAt].filter(
+    (ms) => Number.isFinite(ms) && ms > serverNow,
+  );
   future.push(familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
   let delay = Math.min(...future) - serverNow;
 
@@ -622,7 +631,8 @@ export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): numbe
     (Number.isFinite(water) && water <= serverNow && !view.water.can_water && !blocked) ||
     (Number.isFinite(accident) && accident <= serverNow) ||
     (Number.isFinite(illnessEnd) && illnessEnd <= serverNow) ||
-    (Number.isFinite(trainingEnd) && trainingEnd <= serverNow);
+    (Number.isFinite(trainingEnd) && trainingEnd <= serverNow) ||
+    (Number.isFinite(wandAt) && wandAt <= serverNow && view.cat.wand !== null && !view.cat.wand.can_start && !blocked);
   if (stale) delay = Math.min(delay, BOUNDARY_RETRY_MS);
 
   return Number.isFinite(delay) ? Math.max(0, delay) : null;

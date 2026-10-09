@@ -111,10 +111,11 @@ function Stage({ view, children, onMediaExpired }: { view: ChildPetView; childre
   );
 }
 
-function DogEmoji({ offset }: { offset: Animated.Value | Animated.AnimatedInterpolation<number> | number }) {
+/** Fallback illustration without a video: the dog, or the cat (M5-R06-08b, cuddles only). */
+function DogEmoji({ offset, cat = false }: { offset: Animated.Value | Animated.AnimatedInterpolation<number> | number; cat?: boolean }) {
   return (
     <Animated.View style={[styles.dogCircle, { transform: [{ translateY: offset }] }]} testID="play-dog-illustration">
-      <Text style={styles.dogEmoji}>🐕</Text>
+      <Text style={styles.dogEmoji}>{cat ? '🐈' : '🐕'}</Text>
     </Animated.View>
   );
 }
@@ -358,7 +359,7 @@ function CuddleGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
   return (
     <View style={styles.game} testID="play-cuddle">
       <View style={styles.cuddleArea} {...responder.panHandlers} testID="play-cuddle-area" accessible accessibilityLabel={CUDDLE_STRINGS.areaA11y}>
-        <Stage view={view} onMediaExpired={onMediaExpired}>{!hasVideo && <DogEmoji offset={0} />}</Stage>
+        <Stage view={view} onMediaExpired={onMediaExpired}>{!hasVideo && <DogEmoji offset={0} cat={view.pet.species === 'cat'} />}</Stage>
         {hearts.map((h) => (
           <CuddleHeart key={h.id} x={h.x} y={h.y} reduceMotion={reduceMotion} />
         ))}

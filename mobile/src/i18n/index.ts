@@ -57,9 +57,45 @@ void i18n.use(initReactI18next).init({
   react: { useSuspense: false },
 });
 
-/** Translate outside React (helpers, error mappers). Bound to the shared instance. */
-export const t = ((...args: unknown[]) =>
-  (i18n.t as unknown as (...a: unknown[]) => string)(...args)) as unknown as typeof i18n.t;
+// ── Species texts (M5-R06-08b, M5-R06_PLAN T8) ──────────────────
+//
+// The dog texts stay where they are; a cat's differing child texts live in
+// `cat:override.<namespace>.<key>` (the cat is "muca", feminine). While the child app
+// shows a cat (`setTextSpecies('cat')`, set by the child screens from the pet's
+// `species`), `t('child:hud.loading')` reads `cat:override.child.hud.loading` when that
+// key exists, otherwise the dog text (species-neutral texts need no override). Never set
+// on the parent side — a family may have a dog and a cat; parent helpers take the species.
+
+/** Namespaces whose keys a cat may override (child-facing only). */
+const SPECIES_NAMESPACES: ReadonlySet<string> = new Set(['child', 'behaviour', 'play', 'contract', 'pet', 'push']);
+
+let textSpecies: 'cat' | null = null;
+
+/** The child app's pet species for texts: `'cat'` switches on the cat overrides; anything else = dog texts. */
+export function setTextSpecies(species: string | null | undefined): void {
+  textSpecies = species === 'cat' ? 'cat' : null;
+}
+
+export function getTextSpecies(): 'cat' | null {
+  return textSpecies;
+}
+
+/** The key to read for the current text species (the cat override when it exists). */
+export function speciesKey(key: string, options?: unknown): string {
+  if (textSpecies !== 'cat') return key;
+  const colon = key.indexOf(':');
+  if (colon <= 0 || !SPECIES_NAMESPACES.has(key.slice(0, colon))) return key;
+  const override = `cat:override.${key.slice(0, colon)}.${key.slice(colon + 1)}`;
+  const exists = i18n.exists as unknown as (k: string, o?: unknown) => boolean;
+  return exists(override, options) ? override : key;
+}
+
+/** Translate outside React (helpers, error mappers). Bound to the shared instance; species-aware (above). */
+export const t = ((...args: unknown[]) => {
+  const [key, ...rest] = args;
+  const resolved = typeof key === 'string' ? speciesKey(key, rest[0]) : key;
+  return (i18n.t as unknown as (...a: unknown[]) => string)(resolved, ...rest);
+}) as unknown as typeof i18n.t;
 
 export function currentLanguage(): Language {
   const language = i18n.resolvedLanguage ?? i18n.language;

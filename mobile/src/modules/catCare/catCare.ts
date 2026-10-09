@@ -511,6 +511,92 @@ export function readChildCatCare(raw: unknown): ChildCatCare {
   return care.wand === null && care.litter === null && care.grooming === null && care.scratching === null ? EMPTY_CAT_CARE : care;
 }
 
+// ── Realtime (`pet.updated`, M5-R06-08b) ──────────────────────
+
+/** The cat blocks of a `PetUpdated` (pet level: no viewer → no own `session`, `my_sessions_today` null). */
+export interface CatBroadcastBlocks {
+  wand?: unknown;
+  litter?: unknown;
+  grooming?: unknown;
+  scratching?: unknown;
+}
+
+interface SessionGate<S> {
+  blocked_reason: string | null;
+  can_start: boolean;
+  session: S | null;
+  session_running: boolean;
+}
+
+/**
+ * Pet-level start gate → this child's. The broadcast has no viewer: it never carries the
+ * child's own running `session`, and while that session runs it reports the pet as busy
+ * (`*_session_active`). So while a game of this child runs (kept from the view, the server
+ * still says one runs) the child's own gate stays; otherwise the broadcast's, off while locked.
+ */
+function gateFor<S, T extends SessionGate<S>>(next: T, current: T | null, locked: boolean): T {
+  const own = current !== null && current.session !== null && next.session_running ? current.session : null;
+  if (own !== null && current !== null) {
+    return { ...next, session: own, blocked_reason: current.blocked_reason, can_start: current.can_start && !locked };
+  }
+  return { ...next, session: null, can_start: next.can_start && !locked };
+}
+
+/**
+ * `view.cat` after a `PetUpdated` (wand play, litter, grooming, scratching events of any
+ * child or the tick). A missing key (older server) keeps the block (`can_*` off while
+ * locked); null = the pet has no such block. Counters, deadlines, `blocked_reason` and
+ * `next_allowed_at` come from the broadcast; the child's own session / count stay.
+ */
+export function broadcastCatCare(current: ChildCatCare, b: CatBroadcastBlocks, locked: boolean): ChildCatCare {
+  const keep = <T extends object>(block: T | null, off: (x: T) => T): T | null => (block !== null && locked ? off(block) : block);
+
+  let wand: ChildWand | null;
+  if (b.wand === undefined) wand = keep(current.wand, (w) => ({ ...w, can_start: false }));
+  else {
+    const next = readChildWand(b.wand);
+    if (next === null) wand = null;
+    else {
+      const prev = current.wand;
+      // A lower count than shown = a new family day: the child's own count starts at 0 too.
+      const mine = prev === null ? null : next.sessions_today < prev.sessions_today ? 0 : prev.my_sessions_today;
+      wand = { ...gateFor<WandSession, ChildWand>(next, prev, locked), my_sessions_today: mine };
+    }
+  }
+
+  let litter: ChildLitter | null;
+  if (b.litter === undefined) {
+    litter = keep(current.litter, (l) => ({ ...l, can_scoop: false, change: l.change !== null ? { ...l.change, can_start: false } : null }));
+  } else {
+    const next = readChildLitter(b.litter);
+    litter =
+      next === null
+        ? null
+        : {
+            ...next,
+            can_scoop: next.can_scoop && !locked,
+            change: next.change !== null ? gateFor<ChoreSession, LitterChange>(next.change, current.litter?.change ?? null, locked) : null,
+          };
+  }
+
+  let grooming: ChildGrooming | null;
+  if (b.grooming === undefined) grooming = keep(current.grooming, (g) => ({ ...g, can_start: false }));
+  else {
+    const next = readChildGrooming(b.grooming);
+    grooming = next === null ? null : gateFor<ChoreSession, ChildGrooming>(next, current.grooming, locked);
+  }
+
+  let scratching: ChildScratching | null;
+  if (b.scratching === undefined) scratching = keep(current.scratching, (x) => ({ ...x, can_start: false }));
+  else {
+    const next = readChildScratching(b.scratching);
+    scratching = next === null ? null : gateFor<ScratchingSession, ChildScratching>(next, current.scratching, locked);
+  }
+
+  const care: ChildCatCare = { wand, litter, grooming, scratching };
+  return care.wand === null && care.litter === null && care.grooming === null && care.scratching === null ? EMPTY_CAT_CARE : care;
+}
+
 // ── Questions the UI asks ─────────────────────────────────────
 
 /** The child's own running session of a game kind (to resume after an app restart). */

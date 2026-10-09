@@ -12,7 +12,11 @@
     "water": "Water",
     "clean": "Cleaning",
     "walk": "Walk",
-    "training": "Training"
+    "training": "Training",
+    "play": "Play",
+    "litter_scoop": "Litter",
+    "litter_change": "Litter change",
+    "grooming": "Brushing"
   },
   "score": {
     "routinesOf_one": "{{done}} of {{expected}} routine",
@@ -68,7 +72,8 @@
     "window": "window {{opens}}–{{due}}",
     "deadline": "due {{due}}",
     "endOfDay": "by the end of the day",
-    "withDay": "{{day}} · {{when}}"
+    "withDay": "{{day}} · {{when}}",
+    "endOfWeek": "by the end of the week"
   },
   "activities": {
     "fed_pet": "fed the dog",
@@ -79,13 +84,24 @@
     "took_out_pet": "took the dog out",
     "resolved_chewing": "tidied up the slipper and gave a toy",
     "trained_pet": "finished a training session",
-    "training_started": "started a training session"
+    "training_started": "started a training session",
+    "played_wand": "played with the feather wand",
+    "scooped_litter": "cleaned the litter box",
+    "changed_litter": "changed all the litter",
+    "groomed_pet": "brushed the cat",
+    "resolved_scratching": "carried the cat to the scratching post and praised her"
+  },
+  "activitiesCat": {
+    "fed_pet": "fed the cat"
   },
   "systemActivities": {
     "ignored_warning": "A warning was ignored",
     "parent_fed_pet": "Meal during quiet hours (fed by a parent)",
     "pet_accident": "The puppy had an accident",
-    "pet_chewed": "The dog chewed a slipper"
+    "pet_chewed": "The dog chewed a slipper",
+    "pet_scratched": "The cat scratched the sofa",
+    "pet_litter_accident": "The cat made a mess next to the litter box",
+    "pet_coat_matted": "The cat's fur got knotted"
   },
   "petStatus": {
     "game_over": "Game over — the dog was taken away",

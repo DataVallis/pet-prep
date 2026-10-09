@@ -370,6 +370,10 @@ export function makeDayRow(date: string, overrides: Partial<FamilyChild['last_7_
     walk_steps: 4200,
     walk_goal: 4000,
     walk_done: true,
+    // M5-R06-08b: a cat's play of the day (null for a dog).
+    play_sessions: null,
+    play_goal: null,
+    play_done: null,
     ...overrides,
   };
 }
@@ -494,8 +498,8 @@ export function makeTakeOut(overrides: Partial<NonNullable<RawState['behaviour']
 
 /** An open mess (M5-R02) with its 2-hour deadline (Ljubljana offset). */
 export function makeBehaviourEvent(
-  kind: 'poop' | 'accident' | 'chewing',
-  // M5-R06-05: the server's kind union also has the cat's litter_accident / scratching — dog fixtures keep their own.
+  // M5-R06-08b: the cat's litter_accident / scratching too (the server's kind union).
+  kind: 'poop' | 'accident' | 'chewing' | 'litter_accident' | 'scratching',
   overrides: Partial<Omit<RawState['behaviour']['active_events'][number], 'kind'>> = {},
 ) {
   return {

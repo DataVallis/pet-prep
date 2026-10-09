@@ -23,6 +23,12 @@
  * layer (`modules/play/PlayOverlay`: ball game / cuddles) and the 30-minute happy mood —
  * the `playing` video when stored, else the usual video with soft hearts — plus
  * "Kuža je vesel". Mood only: nothing here changes metrics or points.
+ * M5-R06-08b: a cat (`pet.species`) gets its own dock (`modules/catCare/catHud#dockKinds`: food,
+ * water, "Pesek", "Igra" with the feather wand, clean — no walk, no steps, no Health card, no
+ * "Šola"), the meter "Igra", chips "Počeši" (Maine Coon) / "Menjava peska" / "Crkljanje", "Na
+ * praskalnik" on the scratched-sofa card, the "first aid" note while hungry (C24) and the cat
+ * mini-games (`CatCareOverlay`, opened with `openCatGame`). Child texts switch to the cat's
+ * (`setTextSpecies`). A dog's HUD is unchanged.
  */
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
@@ -33,7 +39,9 @@ import {
   Beef,
   DoorOpen,
   Droplet,
+  Feather,
   Footprints,
+  Shovel,
   Heart,
   ChevronDown,
   Images,
@@ -50,6 +58,20 @@ import { rememberFamilyTimezone } from '@/modules/session/familyTimezone';
 import { usePetWebSocket } from '@/hooks/usePetWebSocket';
 import { applyBroadcastToCache, childPetKey, isRecoverableError, useChildPet } from '@/hooks/queries/useChildPet';
 import { useClean, useFeed, useResolveChewing, useTakeOut, useWater } from '@/hooks/queries/useChildActions';
+import CatCareOverlay from '@/modules/catCare/CatCareOverlay';
+import { CatHudChip, CatHudNote, FirstAidNote } from '@/modules/catCare/CatHudChips';
+import {
+  CAT_HUD_STRINGS,
+  catChips,
+  dockKinds,
+  isCatView,
+  scoopDock,
+  showFirstAid,
+  ownCatGame,
+  showScratcherButton,
+  wandDock,
+  type DockKind,
+} from '@/modules/catCare/catHud';
 import { childPetGrowthKey, useChildPetGrowth, useGrowthRefresh } from '@/hooks/queries/usePetGrowth';
 import { useServerNow } from '@/hooks/useServerNow';
 import {
@@ -101,9 +123,10 @@ import PlayOverlay from '@/modules/play/PlayOverlay';
 import { moodSceneAt, playBlockText, playEntry, playRefusalMessage, type PlayKind } from '@/modules/play/play';
 import { usePlayClock } from '@/modules/play/usePlayClock';
 import type { PetState, PetUpdatedBroadcast } from '@/types';
+import type { CatGameKind } from '@/modules/catCare/catCare';
 import { breedName } from '@/modules/species/species';
 import { alpha, palette, radius } from '@/theme';
-import { t } from '@/i18n';
+import { setTextSpecies, t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { useTranslation } from 'react-i18next';
 
@@ -238,6 +261,11 @@ export default function ChildHudScreen() {
   const setTrainingVisible = useAppStore((s) => s.setTrainingVisible);
   const playOverlay = useAppStore((s) => s.playOverlay);
   const setPlayOverlay = useAppStore((s) => s.setPlayOverlay);
+  // M5-R06-08b: the cat mini-game open over the HUD (one at a time).
+  const catOverlay = useAppStore((s) => s.catOverlay);
+  const openCatGame = useAppStore((s) => s.openCatGame);
+  const closeCatGame = useAppStore((s) => s.closeCatGame);
+  const abandonedCatSessions = useAppStore((s) => s.abandonedCatSessions);
   const setHudVideoState = useAppStore((s) => s.setHudVideoState);
   const hudVideoState = useAppStore((s) => s.hudVideoState);
   // No HUD → no video under the lock veil.
@@ -247,6 +275,10 @@ export default function ChildHudScreen() {
   const { layout, onHeaderLayout, onDockLayout } = useHudLayout();
   const petQuery = useChildPet();
   const view = petQuery.data;
+  // M5-R06-08b: child texts follow the pet's species ("muca" for a cat). Set while rendering
+  // (idempotent), so this very render already reads the cat's texts; else the session pet's.
+  setTextSpecies(view?.pet.species ?? sessionPet?.species ?? null);
+  const cat = view !== undefined && isCatView(view);
   // No view → PetMediaView is not mounted; don't keep a stale veil hint.
   useEffect(() => {
     if (!view) setHudVideoState(null);
@@ -280,15 +312,18 @@ export default function ChildHudScreen() {
       setTrainingVisible(false);
       // M5-R05: and a game (nothing is reported; the lock screen explains).
       setPlayOverlay(null);
+      // M5-R06-08b: and a cat game (the server refuses it while locked; no penalty).
+      closeCatGame();
     }
-  }, [lockedNow, setAlbumVisible, setTrainingVisible, setPlayOverlay]);
+  }, [lockedNow, setAlbumVisible, setTrainingVisible, setPlayOverlay, closeCatGame]);
   useEffect(
     () => () => {
       setAlbumVisible(false);
       setTrainingVisible(false);
       setPlayOverlay(null);
+      closeCatGame();
     },
-    [setAlbumVisible, setTrainingVisible, setPlayOverlay],
+    [setAlbumVisible, setTrainingVisible, setPlayOverlay, closeCatGame],
   );
 
   // M5-R05 play & cuddle: the clock of the happy scene / invitation, "Mogoče kasneje".
@@ -302,7 +337,8 @@ export default function ChildHudScreen() {
   // Another layer (walk, cleaning, album, training) or a mess to scrub closes the play layer
   // (like a lock does) — otherwise it would reappear when that layer closes.
   const messToScrub = view ? needsScrubbing(view.pet.needs_cleaning, view.behaviour) : false;
-  const otherLayerOpen = isWalkModalVisible || isCleaningOverlayVisible || isAlbumVisible || isTrainingVisible || messToScrub;
+  const otherLayerOpen =
+    isWalkModalVisible || isCleaningOverlayVisible || isAlbumVisible || isTrainingVisible || catOverlay !== null || messToScrub;
   useEffect(() => {
     if (otherLayerOpen) setPlayOverlay(null);
   }, [otherLayerOpen, setPlayOverlay]);
@@ -321,9 +357,23 @@ export default function ChildHudScreen() {
     if (ownSessionId !== null) dismissedSessions.current.add(ownSessionId);
     setTrainingVisible(false);
   }, [ownSessionId, setTrainingVisible]);
+  // M5-R06-08b: the same for the child's own running cat game (once per session; a game the
+  // child stopped — `abandonedCatSessions` — never reopens).
+  const ownCat = view ? ownCatGame(view) : null;
+  const ownCatKind = ownCat?.kind ?? null;
+  const ownCatId = ownCat?.id ?? null;
+  const resumedCatSessions = useRef<Set<string>>(new Set());
+  useEffect(() => {
+    if (ownCatKind === null || ownCatId === null || lockedNow) return;
+    if (resumedCatSessions.current.has(ownCatId) || abandonedCatSessions.includes(ownCatId)) return;
+    resumedCatSessions.current.add(ownCatId);
+    openCatGame(ownCatKind);
+  }, [ownCatKind, ownCatId, lockedNow, abandonedCatSessions, openCatGame]);
 
   const stepSync = useStepSync({
-    enabled: view !== undefined && !view.lock.is_locked,
+    // M5-R06-08b: a cat has no steps (the server refuses them, CAT_SPEC §5.3) — never ask
+    // for the step permission or sync.
+    enabled: view !== undefined && !view.lock.is_locked && !cat,
     myStepsToday: view?.steps.my_steps_today ?? 0,
     serverTime: view?.server_time ?? null,
     timezone: view?.timezone ?? null,
@@ -476,40 +526,64 @@ export default function ChildHudScreen() {
   const walkDisabled = locked;
   const alreadyClean = pet.hygiene_level >= 100 && !pet.needs_cleaning;
   // M5-R02: a chewed slipper is tidied up with its own button — never scrubbed.
+  // M5-R06-08b: nor the cat's scratched sofa ("Na praskalnik").
   const needsScrub = needsScrubbing(pet.needs_cleaning, view.behaviour);
+  const nothingToScrub = pet.needs_cleaning && !needsScrub;
   const chewingOnly = pet.needs_cleaning && onlyChewingOpen(view.behaviour);
-  const cleanDisabled = locked || alreadyClean || chewingOnly;
-  // A mess that appears during a training session waits until the game is closed.
-  const showCleaning = !locked && !(isTrainingVisible && showTrainingEntry(view.training)) && (needsScrub || (isCleaningOverlayVisible && !chewingOnly));
+  const cleanDisabled = locked || alreadyClean || chewingOnly || nothingToScrub;
+  const catGameOpen = catOverlay !== null && !locked;
+  // A mess that appears during a training session / cat game waits until the game is closed.
+  const showCleaning =
+    !locked &&
+    !(isTrainingVisible && showTrainingEntry(view.training)) &&
+    !catGameOpen &&
+    (needsScrub || (isCleaningOverlayVisible && !chewingOnly && !nothingToScrub));
   const takeOutClock = view.behaviour.take_out;
   const countdown = !locked && takeOutClock !== null ? takeOutCountdown(takeOutClock, serverNow, view.timezone) : null;
   const takeOutDisabled = !view.behaviour.can_take_out;
+  // M5-R06-08b: the dock per species (a dog's is unchanged; a cat's has "Pesek" + "Igra").
+  const dock = dockKinds(view);
+  const compactDock = dock.length >= 5;
+  const scoop = cat ? scoopDock(view) : null;
+  const wand = cat ? wandDock(view) : null;
   // CGP v2: the care that is due right now is the ONE solid-mint button —
-  // priority: puppy must go out > a mess to scrub > food.
+  // priority: puppy must go out > a mess to scrub > the cat's litter > food.
   const takeOutDue = !takeOutDisabled && countdown?.due === true;
   const cleanDue = !takeOutDue && !cleanDisabled && needsScrub;
-  const feedDue = !takeOutDue && !cleanDue && !locked && view.feeding.can_feed;
+  const scoopDue = !takeOutDue && !cleanDue && scoop !== null && scoop.due && !scoop.disabled;
+  const feedDue = !takeOutDue && !cleanDue && !scoopDue && !locked && view.feeding.can_feed;
   const dockIcon = (due: boolean) => (due ? palette.graphite : palette.white);
-  const iconSize = hasTakeOut ? 20 : 24;
+  const iconSize = compactDock ? 20 : 24;
   const stale = petQuery.isError;
   const albumAvailable = hasAlbum(pet.media);
   const mediaPending = isMediaPending(pet.media);
   const showAlbum = isAlbumVisible && !locked && albumAvailable;
   // M5-R03: "Šola" only for a pet with training (legacy / older app / older server: nothing).
-  const hasTraining = showTrainingEntry(view.training);
+  // A cat never has dog school (CAT_SPEC Q10).
+  const hasTraining = !cat && showTrainingEntry(view.training);
   // M5-R04: today's feed windows ("nahrani starš" for quiet hours) near the feed button.
   // Profiled pets only (a legacy pet keeps the pre-M5 HUD).
   const mealWindows = pet.profile ? buildMealWindows(view) : [];
   const showTraining = isTrainingVisible && !locked && hasTraining && !showAlbum;
-  // M5-R05: the play layer (never together with the album / training / a mess to scrub).
-  const showPlay = playOverlay !== null && !locked && view.play !== null && !showAlbum && !showTraining && !showCleaning;
-  const coveredByOverlay = isWalkModalVisible || showCleaning || showTraining || showAlbum || showPlay;
+  // M5-R05: the play layer (never together with the album / training / a mess to scrub / a cat game).
+  const showPlay = playOverlay !== null && !locked && view.play !== null && !showAlbum && !showTraining && !showCleaning && !catGameOpen;
+  // M5-R06-08b: a cat game covers the HUD (the album closes it from the dock side — never both).
+  const showCatGame = catGameOpen && !showAlbum && !showTraining;
+  const coveredByOverlay = isWalkModalVisible || showCleaning || showTraining || showAlbum || showPlay || showCatGame;
+  // Cat chips (Počeši / Menjava peska), the "Na praskalnik" button and the first-aid note.
+  const chips = catChips(view);
+  const chipNotes = chips.map((c) => c.note).filter((n): n is string => n !== null);
+  const scratcherShown = !coveredByOverlay && showScratcherButton(view);
+  const firstAid = showFirstAid(view);
+  const openCat = (kind: CatGameKind) => {
+    openCatGame(kind);
+  };
   const entry = coveredByOverlay ? ({ kind: 'hidden' } as const) : playEntry(view, playNow, dismissedInvitations);
   const moodScene = moodSceneAt(view, playNow);
   // The free tier has no `playing` video: the usual one plays and the app draws hearts.
   const showHearts = moodScene !== null && hudVideoState !== 'playing' && !coveredByOverlay;
   // Android: TalkBack must not reach the HUD under the album / training game (iOS: accessibilityViewIsModal).
-  const hiddenUnderAlbum = showAlbum || showTraining || showPlay
+  const hiddenUnderAlbum = showAlbum || showTraining || showPlay || showCatGame
     ? ({ importantForAccessibility: 'no-hide-descendants', accessibilityElementsHidden: true } as const)
     : ({ importantForAccessibility: 'auto', accessibilityElementsHidden: false } as const);
 
@@ -528,7 +602,7 @@ export default function ChildHudScreen() {
           // Vet visit / hard stop: the sick / sleeping video keeps playing under the
           // translucent grey lock (PRODUCT_SPEC §7). Paused under the opaque game-over /
           // inactive screen, the walk tracker, the album (one player at a time) and in the background.
-          active={!opaqueLock && !isWalkModalVisible && !showAlbum && !showTraining && !showPlay}
+          active={!opaqueLock && !isWalkModalVisible && !showAlbum && !showTraining && !showPlay && !showCatGame}
           onMediaExpired={onMediaExpired}
           // The vet veil darkens when a substitute (sleeping / idle) stands in for `sick`.
           onVideoStateChange={setHudVideoState}
@@ -542,7 +616,7 @@ export default function ChildHudScreen() {
 
               <Animated.View style={[styles.petAvatarWrapper, { transform: [{ translateY: bounceAnim }] }]}>
                 <View style={styles.petAvatarCircle}>
-                  <Text style={styles.petEmoji}>🐕</Text>
+                  <Text style={styles.petEmoji}>{cat ? '🐈' : '🐕'}</Text>
                   <View style={styles.petHeartBadge}>
                     <Heart color={palette.raspberry} fill={palette.raspberry} size={16} />
                   </View>
@@ -661,7 +735,13 @@ export default function ChildHudScreen() {
               level={pet.energy_level}
               label={HUD_STRINGS.metrics.energy}
               sizing={layout.metric}
-              icon={<Footprints color={palette.white} size={layout.metric.iconSize} />}
+              icon={
+                cat ? (
+                  <Feather color={palette.white} size={layout.metric.iconSize} />
+                ) : (
+                  <Footprints color={palette.white} size={layout.metric.iconSize} />
+                )
+              }
             />
             <MetricBar
               testID="metric-hygiene"
@@ -675,62 +755,114 @@ export default function ChildHudScreen() {
 
         {/* Bottom floating control dock */}
         <View style={[styles.bottomDock, { bottom: layout.dockBottom }]} onLayout={onDockLayout} testID="hud-dock">
-          <ActionButton
-            testID="action-feed"
-            icon={<Beef color={dockIcon(feedDue)} size={iconSize} />}
-            label={feedLabel(view)}
-            onPress={() => runAction('feed')}
-            disabled={feedDisabled}
-            due={feedDue}
-            busy={feed.isPending}
-            hint={feedDockHint(view)}
-            compact={hasTakeOut}
-          />
-          <ActionButton
-            testID="action-water"
-            icon={<Droplet color={palette.white} size={iconSize} />}
-            label={HUD_STRINGS.water}
-            onPress={() => runAction('water')}
-            disabled={waterDisabled}
-            busy={water.isPending}
-            hint={waterDockHint(view)}
-            compact={hasTakeOut}
-          />
-          {hasTakeOut && (
-            <ActionButton
-              testID="action-take-out"
-              icon={<DoorOpen color={dockIcon(takeOutDue)} size={iconSize} />}
-              label={HUD_STRINGS.takeOut}
-              onPress={() => runAction('take_out')}
-              disabled={takeOutDisabled}
-              due={takeOutDue}
-              busy={takeOut.isPending}
-              hint={countdown?.hint ?? null}
-              accessibilityHint={countdown?.line}
-              compact
-            />
-          )}
-          <ActionButton
-            testID="action-walk"
-            icon={<Footprints color={palette.white} size={iconSize} />}
-            label={HUD_STRINGS.walk}
-            onPress={() => setWalkModalVisible(true)}
-            disabled={walkDisabled}
-            hint={`${formatSteps(view.steps.steps_today)}/${formatSteps(view.steps.goal)}`}
-            hintSingleLine
-            compact={hasTakeOut}
-          />
-          <ActionButton
-            testID="action-clean"
-            icon={<Sparkles color={dockIcon(cleanDue)} size={iconSize} />}
-            label={HUD_STRINGS.clean}
-            onPress={() => setCleaningOverlayVisible(true)}
-            disabled={cleanDisabled}
-            due={cleanDue}
-            busy={clean.isPending}
-            hint={cleanHint(view)}
-            compact={hasTakeOut}
-          />
+          {dock.map((kind: DockKind) => {
+            switch (kind) {
+              case 'feed':
+                return (
+                  <ActionButton
+                    key={kind}
+                    testID="action-feed"
+                    icon={<Beef color={dockIcon(feedDue)} size={iconSize} />}
+                    label={feedLabel(view)}
+                    onPress={() => runAction('feed')}
+                    disabled={feedDisabled}
+                    due={feedDue}
+                    busy={feed.isPending}
+                    hint={feedDockHint(view)}
+                    compact={compactDock}
+                  />
+                );
+              case 'water':
+                return (
+                  <ActionButton
+                    key={kind}
+                    testID="action-water"
+                    icon={<Droplet color={palette.white} size={iconSize} />}
+                    label={HUD_STRINGS.water}
+                    onPress={() => runAction('water')}
+                    disabled={waterDisabled}
+                    busy={water.isPending}
+                    hint={waterDockHint(view)}
+                    compact={compactDock}
+                  />
+                );
+              case 'take_out':
+                return (
+                  <ActionButton
+                    key={kind}
+                    testID="action-take-out"
+                    icon={<DoorOpen color={dockIcon(takeOutDue)} size={iconSize} />}
+                    label={HUD_STRINGS.takeOut}
+                    onPress={() => runAction('take_out')}
+                    disabled={takeOutDisabled}
+                    due={takeOutDue}
+                    busy={takeOut.isPending}
+                    hint={countdown?.hint ?? null}
+                    accessibilityHint={countdown?.line}
+                    compact
+                  />
+                );
+              case 'walk':
+                return (
+                  <ActionButton
+                    key={kind}
+                    testID="action-walk"
+                    icon={<Footprints color={palette.white} size={iconSize} />}
+                    label={HUD_STRINGS.walk}
+                    onPress={() => setWalkModalVisible(true)}
+                    disabled={walkDisabled}
+                    hint={`${formatSteps(view.steps.steps_today)}/${formatSteps(view.steps.goal)}`}
+                    hintSingleLine
+                    compact={compactDock}
+                  />
+                );
+              case 'scoop':
+                return (
+                  <ActionButton
+                    key={kind}
+                    testID="action-scoop"
+                    icon={<Shovel color={dockIcon(scoopDue)} size={iconSize} />}
+                    label={CAT_HUD_STRINGS.scoop}
+                    accessibilityHint={CAT_HUD_STRINGS.scoopA11y}
+                    onPress={() => openCat('scoop')}
+                    disabled={scoop?.disabled ?? true}
+                    due={scoopDue}
+                    hint={scoop?.hint ?? null}
+                    compact={compactDock}
+                  />
+                );
+              case 'wand':
+                return (
+                  <ActionButton
+                    key={kind}
+                    testID="action-wand"
+                    icon={<Feather color={palette.white} size={iconSize} />}
+                    label={CAT_HUD_STRINGS.wand}
+                    accessibilityHint={CAT_HUD_STRINGS.wandA11y}
+                    onPress={() => openCat('wand')}
+                    disabled={wand?.disabled ?? true}
+                    hint={wand?.hint ?? null}
+                    hintSingleLine
+                    compact={compactDock}
+                  />
+                );
+              case 'clean':
+                return (
+                  <ActionButton
+                    key={kind}
+                    testID="action-clean"
+                    icon={<Sparkles color={dockIcon(cleanDue)} size={iconSize} />}
+                    label={HUD_STRINGS.clean}
+                    onPress={() => setCleaningOverlayVisible(true)}
+                    disabled={cleanDisabled}
+                    due={cleanDue}
+                    busy={clean.isPending}
+                    hint={cleanHint(view)}
+                    compact={compactDock}
+                  />
+                );
+            }
+          })}
         </View>
 
         {/* M5-R02: puppy countdown and the scene of an open accident / chewed slipper, above the dock */}
@@ -744,9 +876,21 @@ export default function ChildHudScreen() {
             bottom={layout.aboveDock}
             right={METRICS_RESERVED_RIGHT}
             notice={mediaPending ? <MediaPendingNotice testID="hud-pet-media-pending" /> : null}
+            scratcher={
+              scratcherShown
+                ? {
+                    label: CAT_HUD_STRINGS.scratcher,
+                    a11y: CAT_HUD_STRINGS.scratcherA11y,
+                    // Locked never reaches here; another child's carry → the game screen explains.
+                    disabled: false,
+                    onPress: () => openCat('scratching'),
+                  }
+                : null
+            }
             footer={
-              hasTraining || entry.kind !== 'hidden' || moodScene !== null ? (
+              hasTraining || entry.kind !== 'hidden' || moodScene !== null || chips.length > 0 || firstAid ? (
                 <>
+                  {firstAid && <FirstAidNote />}
                   {moodScene !== null && <HappyBadge />}
                   {entry.kind === 'invitation' && (
                     <PlayInvitationCard
@@ -756,7 +900,7 @@ export default function ChildHudScreen() {
                       reduceMotion={reduceMotion}
                     />
                   )}
-                  {(hasTraining || entry.kind === 'button') && (
+                  {(hasTraining || entry.kind === 'button' || chips.length > 0) && (
                     <View style={styles.chipRow}>
                       {hasTraining && (
                         <TrainingChip
@@ -764,9 +908,26 @@ export default function ChildHudScreen() {
                           pending={showTrainingDot(view.training)}
                           onPress={() => setTrainingVisible(true)} />
                       )}
-                      {entry.kind === 'button' && <PlayChip block={entry.block} onPress={() => setPlayOverlay('pick')} />}
+                      {chips.map((chip) => (
+                        <CatHudChip key={chip.kind} chip={chip} onPress={() => openCat(chip.kind)} />
+                      ))}
+                      {entry.kind === 'button' &&
+                        (cat ? (
+                          // A cat only cuddles (CAT_SPEC §5.5): straight to the cuddle, no ball.
+                          <PlayChip
+                            block={entry.block}
+                            label={CAT_HUD_STRINGS.chips.cuddle}
+                            accessibilityLabel={CAT_HUD_STRINGS.chips.cuddleA11y}
+                            onPress={() => setPlayOverlay('cuddle')}
+                          />
+                        ) : (
+                          <PlayChip block={entry.block} onPress={() => setPlayOverlay('pick')} />
+                        ))}
                     </View>
                   )}
+                  {chipNotes.map((note) => (
+                    <CatHudNote key={note} text={note} testID="hud-cat-note" />
+                  ))}
                   {entry.kind === 'button' && entry.block !== null && <PlayBlockedNote text={playBlockText(entry.block, playSleepsUntil, view.timezone, playNow)} />}
                 </>
               ) : null
@@ -779,7 +940,7 @@ export default function ChildHudScreen() {
         )}
 
         {/* Conditional overlays (the lock overlay is rendered by AppNavigator above this screen) */}
-        {isWalkModalVisible && !locked && (
+        {isWalkModalVisible && !locked && !cat && (
           <WalkTrackerOverlay
             view={view}
             stepSync={stepSync}
@@ -800,6 +961,8 @@ export default function ChildHudScreen() {
       </View>
       {/* Outside hud-content, so hiding the HUD from TalkBack never hides the game. */}
       {showTraining && <TrainingOverlay view={view} onClose={closeTraining} />}
+      {/* M5-R06-08b: the cat mini-games (wand, scoop, litter change, grooming, scratcher). */}
+      {showCatGame && <CatCareOverlay view={view} />}
       {showPlay && playOverlay !== null && (
         <PlayOverlay
           view={view}

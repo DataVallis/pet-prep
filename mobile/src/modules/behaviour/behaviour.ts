@@ -21,7 +21,12 @@ import { dockWhen, type DockHint } from '@/modules/childPet/dockHint';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
-export type BehaviourKind = 'poop' | 'accident' | 'chewing';
+/**
+ * Open mess kinds. M5-R06-08b: the cat's `litter_accident` (mess next to an unscooped tray —
+ * cleaned with the cleaning game, like poop) and `scratching` (the scratched sofa — resolved
+ * "Na praskalnik", never by cleaning, like the dog's chewing).
+ */
+export type BehaviourKind = 'poop' | 'accident' | 'chewing' | 'litter_accident' | 'scratching';
 /**
  * Behaviour video / graphic shown over the pet (newest open accident or chewing; for a cat
  * the scratched sofa — M5-R06-05 server `scene`, read since M5-R06-08a so the cat's
@@ -30,7 +35,10 @@ export type BehaviourKind = 'poop' | 'accident' | 'chewing';
 export type BehaviourScene = 'accident' | 'chewing' | 'scratching';
 
 export const BEHAVIOUR_SCENES: readonly BehaviourScene[] = ['accident', 'chewing', 'scratching'];
-const KINDS: readonly BehaviourKind[] = ['poop', 'accident', 'chewing'];
+export const BEHAVIOUR_KINDS: readonly BehaviourKind[] = ['poop', 'accident', 'chewing', 'litter_accident', 'scratching'];
+const KINDS = BEHAVIOUR_KINDS;
+/** Kinds the cleaning game doesn't resolve (a toy for the slipper, the scratcher for the sofa). */
+const NOT_SCRUBBED: readonly BehaviourKind[] = ['chewing', 'scratching'];
 
 /** The puppy's bladder clock; null when the pet has none (legacy, unborn, past the puppy stage). */
 export interface TakeOutClock {
@@ -141,14 +149,14 @@ export function hasOpenChewing(b: Pick<PetBehaviour, 'active_events'>): boolean 
 
 /**
  * The scrub mini-game is the right tool: hygiene is 0 and something other than a chewed
- * slipper is open. Only chewing open → no scrubbing (the child tidies up with
- * "Pospravi in daj igračo"). A dirty dog without any event info (older server) → scrub
- * as before.
+ * slipper / scratched sofa is open. Only chewing open → no scrubbing (the child tidies up
+ * with "Pospravi in daj igračo"); only a scratching open (cat, M5-R06-08b) → "Na
+ * praskalnik". A dirty pet without any event info (older server) → scrub as before.
  */
 export function needsScrubbing(needsCleaning: boolean, b: Pick<PetBehaviour, 'active_events'>): boolean {
   if (!needsCleaning) return false;
   if (b.active_events.length === 0) return true;
-  return b.active_events.some((e) => e.kind !== 'chewing');
+  return b.active_events.some((e) => !NOT_SCRUBBED.includes(e.kind));
 }
 
 /** Only a chewed item is open: the scrub button has nothing to do. */
@@ -156,13 +164,25 @@ export function onlyChewingOpen(b: Pick<PetBehaviour, 'active_events'>): boolean
   return b.active_events.length > 0 && b.active_events.every((e) => e.kind === 'chewing');
 }
 
+/** Only the cat's scratched sofa is open (M5-R06-08b): cleaning has nothing to do — "Na praskalnik" first. */
+export function onlyScratchingEventsOpen(b: Pick<PetBehaviour, 'active_events'>): boolean {
+  return b.active_events.length > 0 && b.active_events.every((e) => e.kind === 'scratching');
+}
+
+export function hasOpenScratching(b: Pick<PetBehaviour, 'active_events'>): boolean {
+  return b.active_events.some((e) => e.kind === 'scratching');
+}
+
 /**
  * Which cleaning game to show: puddles when every scrub-able mess is a puppy accident,
+ * the cat's mess next to the tray when every one is a `litter_accident` (M5-R06-08b),
  * dirt otherwise (poop, a mix, or no event info from an older server).
  */
-export function cleaningMess(b: Pick<PetBehaviour, 'active_events'>): 'poop' | 'accident' {
-  const scrub = b.active_events.filter((e) => e.kind !== 'chewing');
-  return scrub.length > 0 && scrub.every((e) => e.kind === 'accident') ? 'accident' : 'poop';
+export function cleaningMess(b: Pick<PetBehaviour, 'active_events'>): 'poop' | 'accident' | 'litter' {
+  const scrub = b.active_events.filter((e) => !NOT_SCRUBBED.includes(e.kind));
+  if (scrub.length > 0 && scrub.every((e) => e.kind === 'accident')) return 'accident';
+  if (scrub.length > 0 && scrub.every((e) => e.kind === 'litter_accident')) return 'litter';
+  return 'poop';
 }
 
 /**
@@ -203,9 +223,9 @@ function withEvents(b: ChildBehaviour, events: BehaviourEvent[]): ChildBehaviour
   return { ...b, active_events: events, scene: sceneOf(events), can_resolve_chewing: b.can_resolve_chewing && hasOpenChewing({ active_events: events }) };
 }
 
-/** Cleaning game done: every poop / accident is gone, a chewed slipper stays. */
+/** Cleaning game done: every poop / accident / litter mess is gone, a chewed slipper or scratched sofa stays. */
 export function afterClean(b: ChildBehaviour): ChildBehaviour {
-  return withEvents(b, b.active_events.filter((e) => e.kind === 'chewing'));
+  return withEvents(b, b.active_events.filter((e) => NOT_SCRUBBED.includes(e.kind)));
 }
 
 /** "Pospravi in daj igračo": every chewing event is gone, poop / accident stay. */

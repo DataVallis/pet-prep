@@ -72,7 +72,8 @@
       "waterTooSoon": "Posoda je še polna. Novo vodo lahko daš {{when}}.",
       "waterTooSoonNoTime": "Posoda je še polna.",
       "needsCleaning": "Najprej pospravi za kužkom!",
-      "other": "Tega zdaj ne gre. Poskusi malo kasneje."
+      "other": "Tega zdaj ne gre. Poskusi malo kasneje.",
+      "needsTidying": "Najprej pospravi copat in daj kužku igračo!"
     },
     "locked": {
       "hard_stopped": "Starš je ustavil igro.",
@@ -89,7 +90,8 @@
   "hints": {
     "cleanFirst": "Najprej pospravi",
     "tomorrow": "jutri",
-    "clean": "Čisto"
+    "clean": "Čisto",
+    "tidyFirst": "Najprej pospravi"
   },
   "meals": {
     "title": "Obroki danes",

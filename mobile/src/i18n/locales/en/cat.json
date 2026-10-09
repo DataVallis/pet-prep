@@ -209,5 +209,164 @@
     "ill": "Your kitty is at the vet until {{until}}.",
     "illNoTime": "Your kitty is at the vet.",
     "game_over": "Your kitty has gone to the shelter. Talk to your parents."
+  },
+  "hud": {
+    "scoop": "Litter",
+    "wand": "Play",
+    "scoopA11y": "Clean the litter box",
+    "wandA11y": "Play with the feather wand",
+    "hints": {
+      "litterClean": "Clean",
+      "wandCount": "{{done}}/{{goal}}",
+      "wandDone": "Done ✓",
+      "scratcherFirst": "Scratcher first",
+      "asleep": "Asleep"
+    },
+    "scratcher": "To the scratching post",
+    "scratcherA11y": "Carry your kitty to the scratching post and praise her",
+    "chips": {
+      "grooming": "Brush",
+      "groomingA11y": "Brush your kitty. This week: {{done}} of {{goal}}.",
+      "groomingMatted": "Her fur has a knot — brush her.",
+      "litterChange": "Change litter",
+      "litterChangeA11y": "Change all the litter (once a week)",
+      "litterChangeOverdue": "The litter box smells — change all the litter.",
+      "cuddle": "Cuddles",
+      "cuddleA11y": "Cuddle your kitty"
+    },
+    "litterMess": {
+      "title": "Oops, a mess next to the litter box! Clean it up.",
+      "hint": "Tap the spots to clean them up."
+    },
+    "firstAid": {
+      "title": "Good to know",
+      "body": "A real cat must never go without food for long. If a cat stops eating, she needs to see a vet soon."
+    }
+  },
+  "contract": {
+    "bodyMaineCoon": "I promise to take good care of my virtual kitty, every single day:\n\n• I will feed her at the right time.\n• I will give her fresh water every day.\n• I will clean her litter box every day and change all the litter once a week.\n• I will play with her every day so she stays healthy and happy.\n• I will brush her regularly so her fur doesn't get knotted.\n• I will act on warnings before she gets sick or has to go to the virtual shelter.\n\nDo you accept this responsibility?"
+  },
+  "parent": {
+    "playDay": "Play {{done}}/{{goal}}",
+    "playDayNone": "No play routine",
+    "firstAid": {
+      "title": "Good to know",
+      "body": "For a real cat, not eating is serious: a cat that stops eating can develop a dangerous liver disease (hepatic lipidosis). If a cat stops eating, contact a vet promptly — don't wait."
+    }
+  },
+  "override": {
+    "child": {
+      "hud": {
+        "metrics": {
+          "energy": "Play"
+        },
+        "profileSheet": {
+          "title": "About your kitty",
+          "openHint": "Shows everything about your kitty"
+        },
+        "loading": "Fetching your kitty …",
+        "loadFailed": "We couldn't load your kitty.",
+        "moods": {
+          "idle": "Happy and playful",
+          "playing": "Playful",
+          "hungry": "Hungry kitty",
+          "sleeping": "Resting",
+          "low_energy": "Bored",
+          "sick": "Not feeling well"
+        }
+      },
+      "actions": {
+        "success": {
+          "feed": "Yum! Your kitty is full.",
+          "water": "Fresh water! Your kitty isn't thirsty anymore."
+        },
+        "unchanged": {
+          "feed": "Your kitty is already full.",
+          "water": "The water bowl is already full."
+        },
+        "emergencyFeed": "Yum! Your kitty is full. The meal was missed, so it doesn't count as on time — the next meal is {{when}}.",
+        "emergencyFeedNoTime": "Yum! Your kitty is full. The meal was missed, so it doesn't count as on time.",
+        "refused": {
+          "alreadyFed": "Your kitty has already eaten. You can feed her again {{when}}.",
+          "alreadyFedNoTime": "Your kitty has already eaten.",
+          "waterDailyLimit": "Your kitty has had enough fresh water today. More tomorrow!",
+          "needsCleaning": "Clean up after your kitty first!"
+        },
+        "locked": {
+          "ill": "Your kitty is at the vet until {{until}}.",
+          "illNoTime": "Your kitty is at the vet.",
+          "game_over": "Your kitty has gone to the shelter. Talk to your parents."
+        }
+      },
+      "locked": {
+        "illness": {
+          "title": "Your kitty is at the vet",
+          "body": "Your kitty is at the vet until {{until}}. She needs some rest.",
+          "bodyNoTime": "Your kitty needs some rest. She'll be back soon."
+        },
+        "game_over": {
+          "title": "Your kitty is at the shelter",
+          "body": "Your kitty has gone to a pretend shelter. Talk to your parents about starting again."
+        },
+        "payment_required": {
+          "body": "The game waits until a parent unlocks it. Your kitty is safe."
+        }
+      },
+      "cleaning": {
+        "title": "Clean up after your kitty!"
+      },
+      "hudError": {
+        "body": "Your kitty is fine. Try again."
+      }
+    },
+    "play": {
+      "cuddle": {
+        "invite": "Your kitty rubs against you. Give her a cuddle?",
+        "hint": "Gently stroke your kitty with your finger — short and soft.",
+        "areaA11y": "Your kitty. Stroke her with your finger, or use the button below.",
+        "done": "Your kitty is purring. Thanks for the cuddles!"
+      },
+      "mood": {
+        "happy": "Your kitty is happy"
+      },
+      "unavailable": {
+        "sleeping": "Your kitty is asleep. Cuddle her when she wakes up.",
+        "dirty": "Clean up first, then cuddle.",
+        "other": "You can't cuddle right now.",
+        "sleepingUntil": "Your kitty is asleep until {{clock}}. Cuddle her then!"
+      }
+    },
+    "contract": {
+      "screen": {
+        "body": "I promise to take good care of my virtual kitty, every single day:\n\n• I will feed her at the right time.\n• I will give her fresh water every day.\n• I will clean her litter box every day and change all the litter once a week.\n• I will play with her every day so she stays healthy and happy.\n• I will act on warnings before she gets sick or has to go to the virtual shelter.\n\nDo you accept this responsibility?",
+        "locked": {
+          "inactive": "Your kitty isn't active right now. Ask your parent to check the settings.",
+          "ill": "Your kitty is at the vet. Please try again later."
+        }
+      }
+    },
+    "pet": {
+      "media": {
+        "pending": "Your kitty is getting ready…",
+        "a11y": "Your kitty ({{breed}})"
+      },
+      "album": {
+        "title": "My kitty",
+        "empty": "Your kitty is still getting ready. Her photos and videos will be here soon."
+      },
+      "growth": {
+        "section": "How your kitty grew"
+      }
+    },
+    "push": {
+      "push": {
+        "prePrompt": {
+          "child": {
+            "title": "Can your kitty call you?",
+            "message": "When your kitty is hungry, thirsty, needs her litter cleaned or wants to play, we'll send you a notification. Nothing is sent during school and sleep (quiet hours)."
+          }
+        }
+      }
+    }
   }
 }

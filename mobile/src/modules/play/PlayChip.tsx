@@ -29,15 +29,18 @@ import { MIN_TOUCH, alpha, palette } from '@/theme';
 export interface PlayChipProps {
   block: PlayBlock | null;
   onPress: () => void;
+  /** M5-R06-08b: a cat's chip reads "Crkljanje" (a cat only cuddles); default "Igra". */
+  label?: string;
+  accessibilityLabel?: string;
 }
 
-export function PlayChip({ block, onPress }: PlayChipProps) {
+export function PlayChip({ block, onPress, label, accessibilityLabel }: PlayChipProps) {
   const disabled = block !== null;
   return (
     <Pressable
       testID="hud-play-open"
       accessibilityRole="button"
-      accessibilityLabel={PLAY_STRINGS.chipA11y}
+      accessibilityLabel={accessibilityLabel ?? PLAY_STRINGS.chipA11y}
       accessibilityHint={block !== null ? PLAY_BLOCK_STRINGS[block] : undefined}
       accessibilityState={{ disabled }}
       disabled={disabled}
@@ -45,7 +48,7 @@ export function PlayChip({ block, onPress }: PlayChipProps) {
       style={({ pressed }) => [styles.chip, pressed && styles.pressed, disabled && styles.disabled]}
     >
       <HandHeart color={palette.mint} size={16} />
-      <Text style={styles.chipText}>{PLAY_STRINGS.chip}</Text>
+      <Text style={styles.chipText}>{label ?? PLAY_STRINGS.chip}</Text>
     </Pressable>
   );
 }
