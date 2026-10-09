@@ -1,0 +1,1824 @@
+{
+  "schema_version": 1,
+  "generator": "scripts/export-breed-registry.mjs (DataVallis/pet-prep)",
+  "note": "Facts carry source_ids (sources[]); game.* values are PetPrep game rules (David decisions), not veterinary advice. Health items are for information only, not vet-reviewed. Do not edit by hand — re-run the export.",
+  "data_compiled": "2026-10-05",
+  "inputs": {
+    "data": {
+      "path": "docs/research/dog-data/data.json",
+      "sha256": "bc36b2959a89c18e43b448397d6a747bccd9b01476889573590c23c200d1b1c8"
+    },
+    "sources": {
+      "path": "docs/research/dog-data/sources.md",
+      "sha256": "20df0352a732b1cd19e4f4b4d4da428db14110ffd074844dc312ee37ea7cb31d"
+    },
+    "suitability": {
+      "path": "backend/config/breed_suitability.php",
+      "sha256": "64c37a56e168911794af138e1c890cca25580da7f31ea93c7374721f71ba7d18"
+    },
+    "labels_en": {
+      "path": "mobile/src/i18n/locales/en/pet.json",
+      "sha256": "2e589f1c3fa414da592c7c5096f728abaa64d162b05883c8f97d308620b556b2"
+    },
+    "labels_sl": {
+      "path": "mobile/src/i18n/locales/sl/pet.json",
+      "sha256": "e721dfa828458631d6f17a34a3f04dab9d76dbdabc511504f01c16fb60c40ec1"
+    }
+  },
+  "suitability_vocabulary": {
+    "active_family": "suits",
+    "apartment": "suits",
+    "chews_when_bored": "consider",
+    "children": "suits",
+    "family_pet": "suits",
+    "first_time_owner": "suits",
+    "food_motivated_weight": "consider",
+    "frequent_grooming": "consider",
+    "large_home": "suits",
+    "long_daily_exercise": "consider",
+    "low_shedding": "suits",
+    "may_herd_children": "consider",
+    "needs_mental_stimulation": "consider",
+    "often_alone": "suits",
+    "older_owners": "suits",
+    "other_pets": "suits",
+    "sheds": "consider",
+    "small_children": "suits"
+  },
+  "suitability_labels": {
+    "en": {
+      "suits_title": "Good for:",
+      "consider_title": "Keep in mind:",
+      "tags": {
+        "active_family": "an active family",
+        "apartment": "apartment living",
+        "chews_when_bored": "chews things when bored",
+        "children": "families with children",
+        "family_pet": "family life",
+        "first_time_owner": "first-time owners",
+        "food_motivated_weight": "loves food — watch the weight",
+        "frequent_grooming": "needs brushing several times a week",
+        "large_home": "a large house and garden",
+        "long_daily_exercise": "needs lots of exercise every day",
+        "low_shedding": "homes that prefer less shedding",
+        "may_herd_children": "may “herd” children at play",
+        "needs_mental_stimulation": "needs mental challenges",
+        "often_alone": "families who are out for a few hours",
+        "older_owners": "older owners",
+        "other_pets": "homes with other pets",
+        "sheds": "sheds",
+        "small_children": "families with small children"
+      }
+    },
+    "sl": {
+      "suits_title": "Primerno za:",
+      "consider_title": "Upoštevajte:",
+      "tags": {
+        "active_family": "aktivno družino",
+        "apartment": "življenje v stanovanju",
+        "chews_when_bored": "ko se dolgočasi, grize stvari",
+        "children": "družino z otroki",
+        "family_pet": "družinsko življenje",
+        "first_time_owner": "začetnike",
+        "food_motivated_weight": "rad je — pazite na težo",
+        "frequent_grooming": "potrebuje česanje večkrat na teden",
+        "large_home": "veliko hišo z vrtom",
+        "long_daily_exercise": "vsak dan potrebuje veliko gibanja",
+        "low_shedding": "dom, kjer želite manj dlak",
+        "may_herd_children": "pri igri lahko »pase« otroke",
+        "needs_mental_stimulation": "potrebuje miselne izzive",
+        "often_alone": "družino, ki je nekaj ur zdoma",
+        "older_owners": "starejše lastnike",
+        "other_pets": "dom z drugimi ljubljenčki",
+        "sheds": "izpada mu dlaka",
+        "small_children": "družino z majhnimi otroki"
+      }
+    }
+  },
+  "general": {
+    "meals_per_day": [
+      {
+        "ref": "general_by_size.feeding_meals_per_day.8_12_weeks",
+        "source_ids": [
+          "S18"
+        ],
+        "confidence": "high",
+        "stage": "puppy_8_12_weeks",
+        "kind": "exact",
+        "value": [
+          4,
+          4
+        ]
+      },
+      {
+        "ref": "general_by_size.feeding_meals_per_day.3_6_months",
+        "source_ids": [
+          "S18"
+        ],
+        "confidence": "medium",
+        "stage": "puppy_3_6_months",
+        "kind": "exact",
+        "value": [
+          3,
+          3
+        ]
+      },
+      {
+        "ref": "general_by_size.feeding_meals_per_day.6_12_months",
+        "source_ids": [
+          "S18"
+        ],
+        "confidence": "high",
+        "stage": "puppy_6_12_months",
+        "kind": "exact",
+        "value": [
+          2,
+          2
+        ]
+      },
+      {
+        "ref": "general_by_size.feeding_meals_per_day.adult",
+        "source_ids": [
+          "S19"
+        ],
+        "confidence": "medium",
+        "stage": "adult",
+        "kind": "at_least",
+        "value": [
+          2,
+          2
+        ]
+      },
+      {
+        "ref": "general_by_size.feeding_meals_per_day.senior",
+        "source_ids": [
+          "S14"
+        ],
+        "confidence": "medium",
+        "stage": "senior",
+        "kind": "smaller_meals",
+        "value": [
+          2,
+          3
+        ]
+      }
+    ],
+    "life_stages": {
+      "puppy_until_months": {
+        "ref": "general_by_size.life_stages.puppy",
+        "source_ids": [
+          "S11"
+        ],
+        "confidence": "high",
+        "value": [
+          6,
+          9
+        ]
+      },
+      "young_adult_until_years": {
+        "ref": "general_by_size.life_stages.young_adult",
+        "source_ids": [
+          "S11"
+        ],
+        "confidence": "high",
+        "value": [
+          3,
+          4
+        ]
+      },
+      "senior_last_share_of_lifespan": {
+        "ref": "general_by_size.life_stages.senior",
+        "source_ids": [
+          "S11"
+        ],
+        "confidence": "high",
+        "value": 0.25
+      }
+    }
+  },
+  "game_general": {
+    "real_weeks_per_dog_month": {
+      "value": 1,
+      "ref": "meta.conventions.game_time",
+      "basis_source_ids": [],
+      "decision": null
+    },
+    "steps_per_exercise_minute": {
+      "value": 100,
+      "ref": "general_by_size.exercise.steps_conversion",
+      "basis_source_ids": [
+        "S45"
+      ],
+      "decision": null
+    },
+    "puppy_exercise_minutes_per_age_month": {
+      "value": 10,
+      "ref": "proposed_game_parameters.walk_minutes_puppy",
+      "basis_source_ids": [
+        "S24"
+      ],
+      "decision": "potrdil David 2026-10-05: 10 min × age in months"
+    },
+    "meals_per_day": {
+      "value": [
+        {
+          "stage": "puppy",
+          "from_months": 2,
+          "until_months": 3,
+          "meals": 4
+        },
+        {
+          "stage": "puppy",
+          "from_months": 3,
+          "until_months": 6,
+          "meals": 3
+        },
+        {
+          "stage": "puppy",
+          "from_months": 6,
+          "until_months": null,
+          "meals": 2
+        },
+        {
+          "stage": "young",
+          "from_months": null,
+          "until_months": null,
+          "meals": 2
+        },
+        {
+          "stage": "adult",
+          "from_months": null,
+          "until_months": null,
+          "meals": 2
+        },
+        {
+          "stage": "senior",
+          "from_months": null,
+          "until_months": null,
+          "meals": 2
+        }
+      ],
+      "ref": "proposed_game_parameters.feed_windows",
+      "basis_source_ids": [
+        "S14",
+        "S18",
+        "S19",
+        "S21"
+      ],
+      "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+    },
+    "puppy_arrival_age_months": {
+      "value": 2,
+      "ref": "proposed_game_parameters.arrival_age_months",
+      "basis_source_ids": [],
+      "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+    },
+    "young_from_months": {
+      "value": 9,
+      "ref": "proposed_game_parameters.arrival_age_months",
+      "basis_source_ids": [],
+      "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+    },
+    "adult_from_months": {
+      "value": 36,
+      "ref": "proposed_game_parameters.arrival_age_months",
+      "basis_source_ids": [],
+      "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+    }
+  },
+  "breeds": [
+    {
+      "id": "border_collie",
+      "species": "dog",
+      "facts": {
+        "identity": {
+          "ref": "border_collie.identity",
+          "source_ids": [
+            "S2"
+          ],
+          "confidence": "high",
+          "fci_number": 297,
+          "fci_group": 1,
+          "fci_section": 1,
+          "origin": "GB"
+        },
+        "size_class": {
+          "ref": "border_collie.size_class",
+          "source_ids": [
+            "S5"
+          ],
+          "confidence": "high",
+          "value": "medium"
+        },
+        "height_cm": [
+          {
+            "ref": "border_collie.height.fci_ideal",
+            "source_ids": [
+              "S1"
+            ],
+            "confidence": "high",
+            "male": [
+              53,
+              53
+            ],
+            "female": null,
+            "female_note": "slightly less"
+          },
+          {
+            "ref": "border_collie.height.akc_range",
+            "source_ids": [
+              "S3"
+            ],
+            "confidence": "high",
+            "male": [
+              48.3,
+              55.9
+            ],
+            "female": [
+              45.7,
+              53.3
+            ]
+          }
+        ],
+        "weight_kg": [
+          {
+            "ref": "border_collie.adult_weight.akc",
+            "source_ids": [
+              "S4"
+            ],
+            "confidence": "medium",
+            "kind": "range",
+            "all": [
+              13.6,
+              24.9
+            ]
+          },
+          {
+            "ref": "border_collie.adult_weight.pdsa",
+            "source_ids": [
+              "S7"
+            ],
+            "confidence": "low",
+            "kind": "range",
+            "all": [
+              25,
+              30
+            ]
+          }
+        ],
+        "growth_end_months": {
+          "ref": "border_collie.growth.adult_weight_reached",
+          "source_ids": [
+            "S10"
+          ],
+          "confidence": "medium",
+          "value": [
+            12,
+            15
+          ]
+        },
+        "lifespan_years": [
+          {
+            "ref": "border_collie.lifespan.median_uk",
+            "source_ids": [
+              "S15"
+            ],
+            "confidence": "high",
+            "kind": "median",
+            "value": 13.1
+          },
+          {
+            "ref": "border_collie.lifespan.rkc",
+            "source_ids": [
+              "S5"
+            ],
+            "confidence": "high",
+            "kind": "more_than",
+            "value": 12
+          }
+        ],
+        "exercise_minutes_per_day": [
+          {
+            "ref": "border_collie.exercise.adult",
+            "source_ids": [
+              "S5"
+            ],
+            "confidence": "high",
+            "kind": "more_than",
+            "value": 120
+          }
+        ],
+        "coat": [
+          {
+            "ref": "border_collie.appearance.coat_varieties",
+            "source_ids": [
+              "S1"
+            ],
+            "confidence": "high",
+            "value": [
+              "moderately long",
+              "smooth"
+            ]
+          }
+        ],
+        "grooming": [],
+        "shedding": [],
+        "food_motivated": null,
+        "coren_rank": {
+          "ref": "border_collie.trainability.coren_rank",
+          "source_ids": [
+            "S34"
+          ],
+          "confidence": "high",
+          "value": 1
+        }
+      },
+      "health": [],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S4",
+              "S5"
+            ],
+            "refs": [
+              "border_collie.exercise.adult",
+              "border_collie.exercise.energy"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S5",
+              "S7"
+            ],
+            "refs": [
+              "border_collie.exercise.adult"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S4"
+            ],
+            "refs": [
+              "border_collie.behaviour.mental_stimulation"
+            ]
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S4",
+              "S7"
+            ],
+            "refs": [
+              "border_collie.behaviour.herding_children"
+            ]
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S7"
+            ],
+            "refs": [
+              "border_collie.behaviour.boredom_chewing"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "adult_exercise_minutes": {
+          "value": 120,
+          "ref": "border_collie.exercise.adult",
+          "basis_source_ids": [
+            "S5"
+          ],
+          "decision": null
+        },
+        "senior_exercise_minutes": {
+          "value": 90,
+          "ref": "proposed_game_parameters.senior_exercise_minutes",
+          "basis_source_ids": [],
+          "decision": "potrdil David 2026-10-05: senior = 75 % of the adult minutes"
+        },
+        "adult_step_goal": 12000,
+        "senior_step_goal": 9000,
+        "growing_step_goal_by_age_months": [
+          {
+            "age_months": 2,
+            "steps": 2000
+          },
+          {
+            "age_months": 3,
+            "steps": 3000
+          },
+          {
+            "age_months": 4,
+            "steps": 4000
+          },
+          {
+            "age_months": 5,
+            "steps": 5000
+          },
+          {
+            "age_months": 6,
+            "steps": 6000
+          },
+          {
+            "age_months": 7,
+            "steps": 7000
+          },
+          {
+            "age_months": 8,
+            "steps": 8000
+          },
+          {
+            "age_months": 9,
+            "steps": 9000
+          },
+          {
+            "age_months": 10,
+            "steps": 10000
+          },
+          {
+            "age_months": 11,
+            "steps": 11000
+          },
+          {
+            "age_months": 12,
+            "steps": 12000
+          }
+        ],
+        "senior_from_months": {
+          "value": 118,
+          "ref": "proposed_game_parameters.arrival_age_months",
+          "basis_source_ids": [],
+          "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+        },
+        "learning_multiplier": {
+          "value": 2,
+          "ref": "border_collie.trainability.learning_multiplier",
+          "basis_source_ids": [
+            "S34",
+            "S35"
+          ],
+          "decision": "potrdil David 2026-10-06: Border Collie learns ~2× faster than the mixed-breed baseline (M5-R03)"
+        }
+      },
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S7",
+        "S10",
+        "S11",
+        "S14",
+        "S15",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S34",
+        "S35",
+        "S45"
+      ]
+    },
+    {
+      "id": "labrador_retriever",
+      "species": "dog",
+      "facts": {
+        "identity": {
+          "ref": "labrador_retriever.identity",
+          "source_ids": [
+            "S49"
+          ],
+          "confidence": "high",
+          "fci_number": 122,
+          "fci_group": 8,
+          "fci_section": 1,
+          "origin": "GB"
+        },
+        "size_class": {
+          "ref": "labrador_retriever.size_class",
+          "source_ids": [
+            "S50"
+          ],
+          "confidence": "high",
+          "value": "large"
+        },
+        "height_cm": [
+          {
+            "ref": "labrador_retriever.height.fci_ideal",
+            "source_ids": [
+              "S48"
+            ],
+            "confidence": "high",
+            "male": [
+              56,
+              57
+            ],
+            "female": [
+              54,
+              56
+            ]
+          },
+          {
+            "ref": "labrador_retriever.height.rkc_ideal",
+            "source_ids": [
+              "S51"
+            ],
+            "confidence": "high",
+            "male": [
+              56,
+              57
+            ],
+            "female": [
+              55,
+              56
+            ]
+          },
+          {
+            "ref": "labrador_retriever.height.akc_range",
+            "source_ids": [
+              "S52"
+            ],
+            "confidence": "high",
+            "male": [
+              57.2,
+              62.2
+            ],
+            "female": [
+              54.6,
+              59.7
+            ]
+          }
+        ],
+        "weight_kg": [
+          {
+            "ref": "labrador_retriever.adult_weight.akc",
+            "source_ids": [
+              "S52"
+            ],
+            "confidence": "high",
+            "kind": "range",
+            "male": [
+              29.5,
+              36.3
+            ],
+            "female": [
+              24.9,
+              31.8
+            ]
+          },
+          {
+            "ref": "labrador_retriever.adult_weight.pdsa",
+            "source_ids": [
+              "S53"
+            ],
+            "confidence": "medium",
+            "kind": "range",
+            "all": [
+              25,
+              35
+            ]
+          },
+          {
+            "ref": "labrador_retriever.adult_weight.uk_measured_mean",
+            "source_ids": [
+              "S55"
+            ],
+            "confidence": "high",
+            "kind": "mean",
+            "male": [
+              35.2,
+              35.2
+            ],
+            "female": [
+              30.4,
+              30.4
+            ]
+          }
+        ],
+        "growth_end_months": {
+          "ref": "labrador_retriever.growth.adult_weight_reached",
+          "source_ids": [
+            "S10"
+          ],
+          "confidence": "medium",
+          "value": [
+            15,
+            18
+          ]
+        },
+        "lifespan_years": [
+          {
+            "ref": "labrador_retriever.lifespan.median_uk",
+            "source_ids": [
+              "S54"
+            ],
+            "confidence": "high",
+            "kind": "median",
+            "value": 13.1
+          },
+          {
+            "ref": "labrador_retriever.lifespan.median_uk_vetcompass_2018",
+            "source_ids": [
+              "S55"
+            ],
+            "confidence": "high",
+            "kind": "median",
+            "value": 12
+          },
+          {
+            "ref": "labrador_retriever.lifespan.rkc",
+            "source_ids": [
+              "S50"
+            ],
+            "confidence": "high",
+            "kind": "more_than",
+            "value": 10
+          }
+        ],
+        "exercise_minutes_per_day": [
+          {
+            "ref": "labrador_retriever.exercise.adult",
+            "source_ids": [
+              "S50"
+            ],
+            "confidence": "medium",
+            "kind": "more_than",
+            "value": 120
+          },
+          {
+            "ref": "proposed_game_parameters.labrador_retriever.exercise_minutes_adult",
+            "source_ids": [
+              "S59"
+            ],
+            "confidence": "medium",
+            "kind": "at_least",
+            "value": 90
+          }
+        ],
+        "coat": [
+          {
+            "ref": "labrador_retriever.suitability.rkc_coat_length",
+            "source_ids": [
+              "S50"
+            ],
+            "confidence": "high",
+            "value": [
+              "short"
+            ]
+          }
+        ],
+        "grooming": [
+          {
+            "ref": "labrador_retriever.suitability.rkc_grooming",
+            "source_ids": [
+              "S50"
+            ],
+            "confidence": "high",
+            "value": "once a week"
+          },
+          {
+            "ref": "labrador_retriever.suitability.woodgreen_grooming",
+            "source_ids": [
+              "S60"
+            ],
+            "confidence": "medium",
+            "value": "moderate"
+          }
+        ],
+        "shedding": [
+          {
+            "ref": "labrador_retriever.suitability.rkc_shedding",
+            "source_ids": [
+              "S50"
+            ],
+            "confidence": "high",
+            "value": "yes"
+          }
+        ],
+        "food_motivated": {
+          "ref": "labrador_retriever.behaviour.food_motivation",
+          "source_ids": [
+            "S59"
+          ],
+          "confidence": "high"
+        },
+        "coren_rank": {
+          "ref": "labrador_retriever.trainability.coren_rank",
+          "source_ids": [
+            "S35"
+          ],
+          "confidence": "medium",
+          "value": 7
+        }
+      },
+      "health": [
+        {
+          "key": "weight_gain",
+          "ref": "labrador_retriever.behaviour.obesity_tendency",
+          "source_ids": [
+            "S53"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S50",
+              "S59"
+            ],
+            "refs": [
+              "labrador_retriever.exercise.adult",
+              "labrador_retriever.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S53"
+            ],
+            "refs": [
+              "labrador_retriever.suitability.pdsa_family",
+              "labrador_retriever.behaviour.family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S50"
+            ],
+            "refs": [
+              "labrador_retriever.suitability.rkc_size_of_home",
+              "labrador_retriever.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S60"
+            ],
+            "refs": [
+              "labrador_retriever.suitability.woodgreen_sociable_with_pets"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S50"
+            ],
+            "refs": [
+              "labrador_retriever.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S50",
+              "S59"
+            ],
+            "refs": [
+              "labrador_retriever.exercise.adult"
+            ]
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S53",
+              "S59"
+            ],
+            "refs": [
+              "labrador_retriever.behaviour.obesity_tendency",
+              "labrador_retriever.behaviour.food_motivation"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "adult_exercise_minutes": {
+          "value": 90,
+          "ref": "proposed_game_parameters.labrador_retriever.exercise_minutes_adult",
+          "basis_source_ids": [
+            "S59"
+          ],
+          "decision": "potrdil David 2026-10-09: 90 min/day (RKC '>2 h' S50 and Woodgreen 60–90 min S60 recorded as alternatives)"
+        },
+        "senior_exercise_minutes": {
+          "value": 68,
+          "ref": "proposed_game_parameters.labrador_retriever.exercise_minutes_senior",
+          "basis_source_ids": [],
+          "decision": "potrdil David 2026-10-09: 68 min → 6,800 steps (75 % of 90 = 67.5, rounded to whole minutes)"
+        },
+        "adult_step_goal": 9000,
+        "senior_step_goal": 6800,
+        "growing_step_goal_by_age_months": [
+          {
+            "age_months": 2,
+            "steps": 2000
+          },
+          {
+            "age_months": 3,
+            "steps": 3000
+          },
+          {
+            "age_months": 4,
+            "steps": 4000
+          },
+          {
+            "age_months": 5,
+            "steps": 5000
+          },
+          {
+            "age_months": 6,
+            "steps": 6000
+          },
+          {
+            "age_months": 7,
+            "steps": 7000
+          },
+          {
+            "age_months": 8,
+            "steps": 8000
+          },
+          {
+            "age_months": 9,
+            "steps": 9000
+          }
+        ],
+        "senior_from_months": {
+          "value": 118,
+          "ref": "proposed_game_parameters.labrador_retriever.stage_boundaries_months",
+          "basis_source_ids": [
+            "S8",
+            "S10",
+            "S11",
+            "S54"
+          ],
+          "decision": "potrdil David 2026-10-09: young 9, adult 36, senior 118 (0.75 × McMillan 2024 median 13.1 y, S54)"
+        },
+        "learning_multiplier": {
+          "value": 1.8,
+          "ref": "proposed_game_parameters.labrador_retriever.learning_multiplier",
+          "basis_source_ids": [
+            "S35",
+            "S42"
+          ],
+          "decision": "potrdil David 2026-10-09: 1.8 — same Coren 'brightest' tier as the Border Collie (2.0), BC stays visibly fastest"
+        }
+      },
+      "source_ids": [
+        "S8",
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S42",
+        "S45",
+        "S48",
+        "S49",
+        "S50",
+        "S51",
+        "S52",
+        "S53",
+        "S54",
+        "S55",
+        "S59",
+        "S60"
+      ]
+    },
+    {
+      "id": "golden_retriever",
+      "species": "dog",
+      "facts": {
+        "identity": {
+          "ref": "golden_retriever.identity",
+          "source_ids": [
+            "S64"
+          ],
+          "confidence": "high",
+          "fci_number": 111,
+          "fci_group": 8,
+          "fci_section": 1,
+          "origin": "GB"
+        },
+        "size_class": {
+          "ref": "golden_retriever.size_class",
+          "source_ids": [
+            "S65"
+          ],
+          "confidence": "high",
+          "value": "large"
+        },
+        "height_cm": [
+          {
+            "ref": "golden_retriever.height.fci_range",
+            "source_ids": [
+              "S63"
+            ],
+            "confidence": "high",
+            "male": [
+              56,
+              61
+            ],
+            "female": [
+              51,
+              56
+            ]
+          },
+          {
+            "ref": "golden_retriever.height.rkc_range",
+            "source_ids": [
+              "S66"
+            ],
+            "confidence": "high",
+            "male": [
+              56,
+              61
+            ],
+            "female": [
+              51,
+              56
+            ]
+          },
+          {
+            "ref": "golden_retriever.height.akc_range",
+            "source_ids": [
+              "S67"
+            ],
+            "confidence": "high",
+            "male": [
+              58.4,
+              61
+            ],
+            "female": [
+              54.6,
+              57.2
+            ]
+          }
+        ],
+        "weight_kg": [
+          {
+            "ref": "golden_retriever.adult_weight.akc",
+            "source_ids": [
+              "S67"
+            ],
+            "confidence": "high",
+            "kind": "range",
+            "male": [
+              29.5,
+              34
+            ],
+            "female": [
+              24.9,
+              29.5
+            ]
+          },
+          {
+            "ref": "golden_retriever.adult_weight.pdsa",
+            "source_ids": [
+              "S68"
+            ],
+            "confidence": "medium",
+            "kind": "range",
+            "all": [
+              25,
+              34
+            ]
+          }
+        ],
+        "growth_end_months": {
+          "ref": "golden_retriever.growth.adult_weight_reached",
+          "source_ids": [
+            "S10"
+          ],
+          "confidence": "medium",
+          "value": [
+            15,
+            18
+          ]
+        },
+        "lifespan_years": [
+          {
+            "ref": "golden_retriever.lifespan.median_uk",
+            "source_ids": [
+              "S15"
+            ],
+            "confidence": "medium",
+            "kind": "median",
+            "value": 13.2
+          },
+          {
+            "ref": "golden_retriever.lifespan.median_uk_vetcompass_2012",
+            "source_ids": [
+              "S71"
+            ],
+            "confidence": "medium",
+            "kind": "median",
+            "value": 12.48
+          },
+          {
+            "ref": "golden_retriever.lifespan.rkc",
+            "source_ids": [
+              "S65"
+            ],
+            "confidence": "high",
+            "kind": "more_than",
+            "value": 10
+          }
+        ],
+        "exercise_minutes_per_day": [
+          {
+            "ref": "golden_retriever.exercise.adult",
+            "source_ids": [
+              "S65"
+            ],
+            "confidence": "medium",
+            "kind": "more_than",
+            "value": 120
+          },
+          {
+            "ref": "proposed_game_parameters.golden_retriever.exercise_minutes_adult",
+            "source_ids": [
+              "S68"
+            ],
+            "confidence": "medium",
+            "kind": "at_least",
+            "value": 120
+          }
+        ],
+        "coat": [
+          {
+            "ref": "golden_retriever.suitability.rkc_coat_length",
+            "source_ids": [
+              "S65"
+            ],
+            "confidence": "high",
+            "value": [
+              "medium"
+            ]
+          }
+        ],
+        "grooming": [
+          {
+            "ref": "golden_retriever.suitability.rkc_grooming",
+            "source_ids": [
+              "S65"
+            ],
+            "confidence": "high",
+            "value": "more than once a week"
+          },
+          {
+            "ref": "golden_retriever.suitability.woodgreen_grooming",
+            "source_ids": [
+              "S69"
+            ],
+            "confidence": "medium",
+            "value": "high"
+          }
+        ],
+        "shedding": [
+          {
+            "ref": "golden_retriever.suitability.rkc_shedding",
+            "source_ids": [
+              "S65"
+            ],
+            "confidence": "high",
+            "value": "yes"
+          },
+          {
+            "ref": "golden_retriever.suitability.woodgreen_shedding",
+            "source_ids": [
+              "S69"
+            ],
+            "confidence": "medium",
+            "value": "high"
+          }
+        ],
+        "food_motivated": {
+          "ref": "golden_retriever.behaviour.food_motivation",
+          "source_ids": [
+            "S70"
+          ],
+          "confidence": "high"
+        },
+        "coren_rank": {
+          "ref": "golden_retriever.trainability.coren_rank",
+          "source_ids": [
+            "S34"
+          ],
+          "confidence": "medium",
+          "value": 4
+        }
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia_eye_conditions",
+          "ref": "golden_retriever.health.joints_eyes",
+          "source_ids": [
+            "S69"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "key": "cancer_risk",
+          "ref": "golden_retriever.health.cancer",
+          "source_ids": [
+            "S73"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "key": "weight_gain",
+          "ref": "golden_retriever.behaviour.obesity_tendency",
+          "source_ids": [
+            "S68"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S65",
+              "S68"
+            ],
+            "refs": [
+              "golden_retriever.exercise.adult",
+              "golden_retriever.suitability.pdsa_family"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S68",
+              "S70"
+            ],
+            "refs": [
+              "golden_retriever.suitability.pdsa_family",
+              "golden_retriever.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S68"
+            ],
+            "refs": [
+              "golden_retriever.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "first_time_owner",
+            "source_ids": [
+              "S68"
+            ],
+            "refs": [
+              "golden_retriever.suitability.pdsa_first_time_owner"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S65"
+            ],
+            "refs": [
+              "golden_retriever.suitability.rkc_size_of_home",
+              "golden_retriever.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S69"
+            ],
+            "refs": [
+              "golden_retriever.suitability.woodgreen_sociable_with_pets"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S65",
+              "S68"
+            ],
+            "refs": [
+              "golden_retriever.exercise.adult"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S65",
+              "S68",
+              "S69"
+            ],
+            "refs": [
+              "golden_retriever.suitability.rkc_shedding",
+              "golden_retriever.suitability.woodgreen_shedding"
+            ]
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S68",
+              "S70"
+            ],
+            "refs": [
+              "golden_retriever.behaviour.food_motivation",
+              "golden_retriever.behaviour.obesity_tendency"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S65",
+              "S68",
+              "S69"
+            ],
+            "refs": [
+              "golden_retriever.suitability.rkc_grooming",
+              "golden_retriever.suitability.woodgreen_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "adult_exercise_minutes": {
+          "value": 120,
+          "ref": "proposed_game_parameters.golden_retriever.exercise_minutes_adult",
+          "basis_source_ids": [
+            "S68"
+          ],
+          "decision": "potrdil David 2026-10-09: 120 min/day (Woodgreen 60–90 min S69 recorded as alternative)"
+        },
+        "senior_exercise_minutes": {
+          "value": 90,
+          "ref": "proposed_game_parameters.golden_retriever.exercise_minutes_senior",
+          "basis_source_ids": [],
+          "decision": "potrdil David 2026-10-09: 90 min → 9,000 steps (75 % of 120)"
+        },
+        "adult_step_goal": 12000,
+        "senior_step_goal": 9000,
+        "growing_step_goal_by_age_months": [
+          {
+            "age_months": 2,
+            "steps": 2000
+          },
+          {
+            "age_months": 3,
+            "steps": 3000
+          },
+          {
+            "age_months": 4,
+            "steps": 4000
+          },
+          {
+            "age_months": 5,
+            "steps": 5000
+          },
+          {
+            "age_months": 6,
+            "steps": 6000
+          },
+          {
+            "age_months": 7,
+            "steps": 7000
+          },
+          {
+            "age_months": 8,
+            "steps": 8000
+          },
+          {
+            "age_months": 9,
+            "steps": 9000
+          },
+          {
+            "age_months": 10,
+            "steps": 10000
+          },
+          {
+            "age_months": 11,
+            "steps": 11000
+          },
+          {
+            "age_months": 12,
+            "steps": 12000
+          }
+        ],
+        "senior_from_months": {
+          "value": 119,
+          "ref": "proposed_game_parameters.golden_retriever.stage_boundaries_months",
+          "basis_source_ids": [
+            "S8",
+            "S10",
+            "S11",
+            "S15"
+          ],
+          "decision": "potrdil David 2026-10-09: young 9, adult 36, senior 119 (0.75 × 13.2 y, S15 Dogs Trust summary of McMillan 2024)"
+        },
+        "learning_multiplier": {
+          "value": 1.9,
+          "ref": "proposed_game_parameters.golden_retriever.learning_multiplier",
+          "basis_source_ids": [
+            "S34",
+            "S35"
+          ],
+          "decision": "potrdil David 2026-10-09: 1.9 (Coren rank 4, S34) — between the Border Collie (2.0) and the Labrador (1.8)"
+        }
+      },
+      "source_ids": [
+        "S8",
+        "S10",
+        "S11",
+        "S14",
+        "S15",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S34",
+        "S35",
+        "S45",
+        "S63",
+        "S64",
+        "S65",
+        "S66",
+        "S67",
+        "S68",
+        "S69",
+        "S70",
+        "S71",
+        "S73"
+      ]
+    }
+  ],
+  "mixed_breed": {
+    "id": "medium_mixed_breed",
+    "game": {
+      "adult_exercise_minutes": {
+        "value": 60,
+        "ref": "medium_mixed_breed.exercise.adult_game_target",
+        "basis_source_ids": [],
+        "decision": "potrdil David 2026-10-05: mixed-breed adult = 60 min/day"
+      },
+      "senior_exercise_minutes": {
+        "value": 45,
+        "ref": "proposed_game_parameters.senior_exercise_minutes",
+        "basis_source_ids": [],
+        "decision": "potrdil David 2026-10-05: senior = 75 % of the adult minutes"
+      },
+      "adult_step_goal": 6000,
+      "senior_step_goal": 4500,
+      "growing_step_goal_by_age_months": [
+        {
+          "age_months": 2,
+          "steps": 2000
+        },
+        {
+          "age_months": 3,
+          "steps": 3000
+        },
+        {
+          "age_months": 4,
+          "steps": 4000
+        },
+        {
+          "age_months": 5,
+          "steps": 5000
+        },
+        {
+          "age_months": 6,
+          "steps": 6000
+        }
+      ],
+      "senior_from_months": {
+        "value": 108,
+        "ref": "proposed_game_parameters.arrival_age_months",
+        "basis_source_ids": [],
+        "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+      },
+      "learning_multiplier": {
+        "value": 1,
+        "ref": "medium_mixed_breed.trainability.learning_multiplier",
+        "basis_source_ids": [
+          "S35",
+          "S42"
+        ],
+        "decision": "potrdil David 2026-10-06: the mixed breed is the baseline (1.0) (M5-R03)"
+      },
+      "individual_learning_variation": {
+        "value": 0.2,
+        "ref": "medium_mixed_breed.trainability.individual_variation",
+        "basis_source_ids": [
+          "S42"
+        ],
+        "decision": "potrdil David 2026-10-06: mixed breed = baseline with a per-pet random factor ±20 % (M5-R03)"
+      }
+    },
+    "source_ids": [
+      "S14",
+      "S18",
+      "S19",
+      "S21",
+      "S24",
+      "S35",
+      "S42",
+      "S45"
+    ]
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "tier": "A",
+      "publisher": "FCI (Fédération Cynologique Internationale)",
+      "title": "FCI-Standard N° 297 — Border Collie (valid standard 24.06.1987, EN version)",
+      "url": "https://www.fci.be/Nomenclature/Standards/297g01-en.pdf"
+    },
+    {
+      "id": "S2",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — Border Collie (297)",
+      "url": "https://www.fci.be/EN/nomenclature/BORDER-COLLIE-297.html"
+    },
+    {
+      "id": "S3",
+      "tier": "A (secondary host)",
+      "publisher": "AKC standard, hosted by the Border Collie Society of America",
+      "title": "AKC Standard for the Border Collie (approved April 21, 2015)",
+      "url": "https://www.bordercolliesociety.com/breed-info"
+    },
+    {
+      "id": "S4",
+      "tier": "B",
+      "publisher": "American Kennel Club (akc.org) — M. Erickson, 2026-08-18",
+      "title": "Is a Border Collie Right for You?",
+      "url": "https://www.akc.org/expert-advice/dog-breeds/border-collie-right-for-you/"
+    },
+    {
+      "id": "S5",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: Border Collie",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/border-collie"
+    },
+    {
+      "id": "S7",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Border Collie breed information",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie"
+    },
+    {
+      "id": "S8",
+      "tier": "A",
+      "publisher": "PLOS ONE",
+      "title": "Salt C. et al. (2017) Growth standard charts for monitoring bodyweight in dogs of different sizes. doi:10.1371/journal.pone.0182064",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5584974/"
+    },
+    {
+      "id": "S10",
+      "tier": "B",
+      "publisher": "PetMD — S. C. Mitchell, DVM, DABVP, 2025-05-20",
+      "title": "When Do Dogs Stop Growing?",
+      "url": "https://www.petmd.com/dog/general-health/when-do-dogs-stop-growing"
+    },
+    {
+      "id": "S11",
+      "tier": "A",
+      "publisher": "AAHA",
+      "title": "2019 AAHA Canine Life Stage Guidelines — Canine life stage definitions",
+      "url": "https://www.aaha.org/resources/life-stage-canine-2019/canine-life-stage-definitions/"
+    },
+    {
+      "id": "S14",
+      "tier": "B",
+      "publisher": "Dogs Trust (UK)",
+      "title": "Caring for an older dog",
+      "url": "https://www.dogstrust.org.uk/dog-advice/life-with-your-dog/at-home/looking-after-an-older-dog"
+    },
+    {
+      "id": "S15",
+      "tier": "B (summary of A)",
+      "publisher": "Dogs Trust (UK)",
+      "title": "Longevity of UK dog breeds — research (summary of McMillan et al. 2024, Sci Rep, doi:10.1038/s41598-023-50458-w)",
+      "url": "https://www.dogstrust.org.uk/about-us/research-expertise/longevity-dog-breeds"
+    },
+    {
+      "id": "S18",
+      "tier": "B",
+      "publisher": "ASPCA",
+      "title": "General Dog Care",
+      "url": "https://www.aspca.org/pet-care/dog-care/general-dog-care"
+    },
+    {
+      "id": "S19",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (2025-02-21)",
+      "title": "Feeding Times and Frequency for Your Dog",
+      "url": "https://vcahospitals.com/pets-first/know-your-pet/feeding-times-and-frequency-for-your-dog"
+    },
+    {
+      "id": "S21",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Puppy feeding tips",
+      "url": "https://www.royalkennelclub.com/health-and-dog-care/health-dog-care/health/health-and-care/a-z-of-health-and-care-issues/puppy-feeding-tips"
+    },
+    {
+      "id": "S24",
+      "tier": "B",
+      "publisher": "Purdue University Canine Welfare Science (content: Pet Leadership Council 2019, bedogsmart.com)",
+      "title": "Dog Fitness and Exercise (PDF)",
+      "url": "https://caninewelfare.centers.purdue.edu/wp-content/uploads/2022/12/Dog-Fitness-and-Exercise.pdf"
+    },
+    {
+      "id": "S34",
+      "tier": "B (author of A)",
+      "publisher": "Psychology Today — Stanley Coren, 2009-07-15",
+      "title": "Canine Intelligence — Breed Does Matter",
+      "url": "https://www.psychologytoday.com/us/blog/canine-corner/200907/canine-intelligence-breed-does-matter"
+    },
+    {
+      "id": "S35",
+      "tier": "C",
+      "publisher": "Wikipedia",
+      "title": "The Intelligence of Dogs",
+      "url": "https://en.wikipedia.org/wiki/The_Intelligence_of_Dogs"
+    },
+    {
+      "id": "S42",
+      "tier": "A",
+      "publisher": "Science (2022)",
+      "title": "Morrill K. et al. Ancestry-inclusive dog genomics challenges popular breed stereotypes. doi:10.1126/science.abk0639",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9675396"
+    },
+    {
+      "id": "S45",
+      "tier": "A",
+      "publisher": "British Journal of Sports Medicine (2018)",
+      "title": "Tudor-Locke C. et al. How fast is fast enough? Walking cadence (steps/min) as a practical estimate of intensity in adults. doi:10.1136/bjsports-2017-097628",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6029645"
+    },
+    {
+      "id": "S48",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 122 — Labrador Retriever (EN, dated 06.10.2026; official valid standard published 08.09.2026)",
+      "url": "https://www.fci.be/Nomenclature/Standards/122g08-en.pdf"
+    },
+    {
+      "id": "S49",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — Labrador Retriever (122)",
+      "url": "https://www.fci.be/EN/nomenclature/LABRADOR-RETRIEVER-122.html"
+    },
+    {
+      "id": "S50",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: Retriever (Labrador)",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-labrador"
+    },
+    {
+      "id": "S51",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed standard: Retriever (Labrador) (last updated 1 April 2025)",
+      "url": "https://www.royalkennelclub.com/breed-standards/gundog/retriever-labrador"
+    },
+    {
+      "id": "S52",
+      "tier": "A",
+      "publisher": "American Kennel Club",
+      "title": "Official Standard of the Labrador Retriever (approved 12 Feb 1994, effective 31 Mar 1994) (PDF)",
+      "url": "https://images.akc.org/pdf/breeds/standards/LabradorRetriever.pdf"
+    },
+    {
+      "id": "S53",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Labrador Retriever breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/labrador-retriever"
+    },
+    {
+      "id": "S54",
+      "tier": "A",
+      "publisher": "Scientific Reports (LJMU repository copy)",
+      "title": "Author Correction: Longevity of companion dog breeds: those at risk from early death (McMillan et al. 2024, doi:10.1038/s41598-023-50458-w) (PDF)",
+      "url": "https://researchonline.ljmu.ac.uk/id/eprint/22506/8/Author%20Correction%20Longevity.pdf"
+    },
+    {
+      "id": "S55",
+      "tier": "A",
+      "publisher": "Canine Genetics and Epidemiology 5:8 (2018) (RVC repository copy)",
+      "title": "McGreevy P. D., Wilson B. J., Mansfield C. S., Brodbelt D. C., Church D. B., Dhand N., Soares Magalhães R. J., O'Neill D. G. Labrador retrievers under primary veterinary care in the UK: demography, mortality and disorders. doi:10.1186/s40575-018-0064-x",
+      "url": "https://rvc-repository.worktribe.com/OutputFile/1385522"
+    },
+    {
+      "id": "S59",
+      "tier": "B",
+      "publisher": "Guide Dogs (UK charity)",
+      "title": "Our breeds: Labrador Retriever",
+      "url": "https://www.guidedogs.org.uk/getting-support/guide-dogs/our-breeds/labrador-retriever/"
+    },
+    {
+      "id": "S60",
+      "tier": "B",
+      "publisher": "Woodgreen Pets Charity (UK) — Ask Woodgreen pet explorer (2025-01-31)",
+      "title": "Labrador Retriever",
+      "url": "https://ask.woodgreen.org.uk/pet-explorer/results/labrador-retriever"
+    },
+    {
+      "id": "S63",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 111 — Golden Retriever (EN, dated 06.10.2026; official valid standard published 08.09.2026)",
+      "url": "https://www.fci.be/Nomenclature/Standards/111g08-en.pdf"
+    },
+    {
+      "id": "S64",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — Golden Retriever (111)",
+      "url": "https://www.fci.be/EN/nomenclature/GOLDEN-RETRIEVER-111.html"
+    },
+    {
+      "id": "S65",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: Retriever (Golden)",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/retriever-golden"
+    },
+    {
+      "id": "S66",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed standard: Retriever (Golden) (last updated 1 April 2025)",
+      "url": "https://www.royalkennelclub.com/breed-standards/gundog/retriever-golden"
+    },
+    {
+      "id": "S67",
+      "tier": "A",
+      "publisher": "American Kennel Club",
+      "title": "Official Standard of the Golden Retriever (approved 13 Oct 1981, reformatted 18 Aug 1990) (PDF)",
+      "url": "https://images.akc.org/pdf/breeds/standards/GoldenRetriever.pdf"
+    },
+    {
+      "id": "S68",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Golden Retriever breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/golden-retriever"
+    },
+    {
+      "id": "S69",
+      "tier": "B",
+      "publisher": "Woodgreen Pets Charity (UK) — Ask Woodgreen pet explorer (2025-01-31)",
+      "title": "Golden Retriever",
+      "url": "https://ask.woodgreen.org.uk/pet-explorer/results/golden-retriever"
+    },
+    {
+      "id": "S70",
+      "tier": "B",
+      "publisher": "Guide Dogs (UK charity)",
+      "title": "Our breeds: Golden Retriever",
+      "url": "https://www.guidedogs.org.uk/getting-support/guide-dogs/our-breeds/golden-retriever/"
+    },
+    {
+      "id": "S71",
+      "tier": "A (conference poster)",
+      "publisher": "Royal Veterinary College — VetCompass (O'Neill D. G. et al., SVEPM 2012 poster)",
+      "title": "Longevity and mortality of dogs in England (poster; preliminary data of O'Neill et al. 2013, Vet J — see S17) (PDF)",
+      "url": "https://www.rvc.ac.uk/Media/Default/VetCompass/Documents/Poster_SVEPM_2012_DONeill.pdf"
+    },
+    {
+      "id": "S73",
+      "tier": "B",
+      "publisher": "Golden Retriever Club of America (AKC parent club)",
+      "title": "Golden Retriever Lifetime Study — info for puppy buyers",
+      "url": "https://grca.org/about-the-breed/health-research/golden-retriever-lifetime-study-info-for-puppy-buyers"
+    }
+  ]
+}

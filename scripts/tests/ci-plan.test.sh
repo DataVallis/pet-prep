@@ -144,7 +144,8 @@ S_ALL="backend=true mobile=true scripts=true image=true "
 S_BACKEND="backend=true mobile=false scripts=false image=true "
 S_MOBILE="backend=false mobile=true scripts=false image=false "
 S_BSCRIPTS="backend=true mobile=false scripts=true image=true "
-S_BTESTS="backend=true mobile=false scripts=false image=false "
+S_BTSCRIPTS="backend=true mobile=false scripts=true image=false "
+S_SCRIPTS="backend=false mobile=false scripts=true image=false "
 
 echo "== pull_request: path filter =="
 pr_case() { # pr_case DESC EXPECTED_SUITES FILE...
@@ -160,8 +161,12 @@ pr_case "docs only" "$S_NONE" docs/X.md README.md
 pr_case "backend/CLAUDE.md only" "$S_NONE" backend/CLAUDE.md
 pr_case "backend/README.md only" "$S_NONE" backend/README.md
 pr_case "other .md under backend counts" "$S_BACKEND" backend/resources/views/mail/x.md
-pr_case "dog research data: backend tests only" "$S_BTESTS" docs/research/dog-data/data.json
-pr_case "dog research sources: backend tests only" "$S_BTESTS" docs/research/dog-data/sources.md
+pr_case "dog research data: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/dog-data/data.json
+pr_case "dog research sources: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/dog-data/sources.md
+pr_case "breed registry export: scripts tests only" "$S_SCRIPTS" scripts/export-breed-registry.mjs scripts/tests/export-breed-registry.test.mjs
+pr_case "breed registry output: scripts tests only" "$S_SCRIPTS" docs/research/breed-registry.json
+pr_case "breed suitability config: backend + scripts" "$S_BSCRIPTS" backend/config/breed_suitability.php
+pr_case "app pet strings: mobile + scripts" "backend=false mobile=true scripts=true image=false " mobile/src/i18n/locales/sl/pet.json
 pr_case "other research docs" "$S_NONE" docs/research/DOG_DATA_SOURCES.md
 pr_case "backend code" "$S_BACKEND" backend/app/A.php
 pr_case "new backend file" "$S_BACKEND" backend/database/migrations/x.php
@@ -209,11 +214,15 @@ check "Caddyfile merge: deploy" true "$o_deploy"; check "Caddyfile merge: suites
 
 new_repo; base="$(sha)"; commit docs/research/dog-data/data.json; green_runs "$base"
 plan push refs/heads/main
-check "dog-data merge: backend tests" "$S_BTESTS" "$o_suites"; check "dog-data merge: no deploy" false "$o_deploy"
+check "dog-data merge: backend + scripts tests" "$S_BTSCRIPTS" "$o_suites"; check "dog-data merge: no deploy" false "$o_deploy"
+
+new_repo; base="$(sha)"; commit scripts/export-breed-registry.mjs; green_runs "$base"
+plan push refs/heads/main
+check "registry export merge: scripts tests" "$S_SCRIPTS" "$o_suites"; check "registry export merge: no deploy" false "$o_deploy"
 
 new_repo; base="$(sha)"; commit docs/research/dog-data/data.json backend/app/A.php; green_runs "$base"
 plan push refs/heads/main
-check "dog-data + backend merge: deploy" true "$o_deploy"; check "dog-data + backend merge: suites" "$S_BACKEND" "$o_suites"
+check "dog-data + backend merge: deploy" true "$o_deploy"; check "dog-data + backend merge: suites" "$S_BSCRIPTS" "$o_suites"
 
 echo "== push to main: base = last run that really deployed (2026-10-06 incident) =="
 # A (deployed) → B (workflow + scripts merged; green, deploy SKIPPED) → C (docs only).

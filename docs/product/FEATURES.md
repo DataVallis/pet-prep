@@ -212,6 +212,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7
 |---|---|---|---|---|---|
 | Dvojezična stran (EN, SL) | Domača stran, kako deluje, za starše, po posvojitvi, cenik, pogosta vprašanja, partnerji, vlagatelji, kontakt, zasebnost, pogoji, varnost otrok. Ločen repo in deploy. | starši, partnerji, vlagatelji | ✅ | — | 2026-10-06 |
 | Pripravljena za iskalnike in AI asistente | Strukturirani podatki, zemljevid strani, `llms.txt`. | — | ✅ | — | 2026-10-06 |
+| Register pasem (»Register pasem« / »Breed register«) | Pregledna stran `/sl/pasme` (`/breeds`) s filtrom po oznakah »Primerno za« in primerjavo (gibanje, velikost, teža, nega, dlaka, življenjska doba, cilj korakov v igri) ter stran za vsako pasmo: border collie (»v aplikaciji«), labradorec in zlati prinašalec (»kmalu v aplikaciji«). Potrebe iz virov, oznake z besedilom iz aplikacije, »Kako to simulira PetPrep« (pravila igre), zdravje z opombo »Informativno, ni veterinarsko preverjeno«, vsi viri s povezavami. Podatki iz izvoza `scripts/export-breed-registry.mjs`. Mešanček (brezplačni plan) samo opomba; mačk še ni. | starši, odrasli, ki izbirajo pasmo | 🗓 (PR odprt, čaka merge) | M5-R11 | 2026-10-09 |
 | Pravna besedila | Strani obstajajo; čakajo pregled pravnika. | starš | 🗓 | M5-06 | — |
 | Lead magnet »Pet Promise Reality Check«, kalkulator »Real Cost of a Dog«, waitlist | — | starši | 🗓 / ⏸ | BUSINESS_MODEL §4, backlog | — |
 

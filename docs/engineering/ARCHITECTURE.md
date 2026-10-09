@@ -42,7 +42,7 @@ PetPrep/                         git: DataVallis/pet-prep
 │       ├── screens/             StartScreen, ParentLoginScreen, ChildPinLoginScreen, ContractScreen, ChildHudScreen, LockedScreen, SplashScreen, parent/{Dashboard,ChildDetail,Controls,AddChild,BreedPaywall}
 │       ├── store/appStore.ts    Zustand (session/UI only): token, session pet (routing), ws status, lock state + details, overlays
 │       └── utils/metrics.ts     colours, step formatting, virtual age, action disabling
-├── scripts/                     generate-api-types.mjs, deploy/backup/restore-production*.sh
+├── scripts/                     generate-api-types.mjs, export-breed-registry.mjs (M5-R11: website breed registry → docs/research/breed-registry.json), deploy/backup/restore-production*.sh
 ├── deployment/Caddyfile         TLS, Reverb /app/*, php_fastcgi → app:9000, static public/, pet media via X-Accel-Redirect (M4-05b)
 ├── backend/docker/production/   production image (M4-05b): Dockerfile (targets app = php-fpm, web = Caddy + public/), php.ini, php-fpm.conf, entrypoint.sh, php-fpm-ping.sh
 ├── .github/workflows/           deploy-production.yml (tests + production image build → rsync to /opt/petprep/incoming → deploy script on push to main)
