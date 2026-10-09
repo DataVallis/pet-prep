@@ -20,10 +20,10 @@ const LANGS: readonly Lang[] = ['en', 'sl'];
 
 /** Dog nouns (sl declensions too), whole words, any case. "pesek" (litter) is not a dog. */
 const DOG_WORD =
-  /(?<![\p{L}\p{N}_])(kuža|kužek|kužka|kužku|kužkom|kužki|kužkov|kužke|kužko|kužo|pes|psa|psu|psom|psi|psov|psoma|psih|pse|mladiček|mladička|mladičku|mladičkom|pup|pups|puppy|puppies|dog|dogs|doggy)(?![\p{L}\p{N}_])/iu;
+  /(?<![\p{L}\p{N}_])(kuža|kužek|kužka|kužku|kužkom|kužki|kužkov|kužke|kužko|kužo|pes|psa|psu|psom|psi|psov|psoma|psih|pse|mladiček|mladička|mladičku|mladičkom|mladiči|mladičev|kuži|kuže|kužu|kužkih|kužkoma|pup|pups|puppy|puppies|dog|dogs|doggy)(?![\p{L}\p{N}_])/iu;
 
-/** Child-facing namespaces (all keys) and the parent namespaces a cat family also sees. */
-const CHECKED = ['child', 'behaviour', 'play', 'contract', 'pet', 'push', 'training', 'family', 'parent', 'account', 'paywall'] as const;
+/** Every namespace except `cat` itself (child-facing and parent texts alike, QA 08c n1). */
+const CHECKED = NAMESPACES.filter((ns) => ns !== 'cat');
 
 /**
  * Dog texts a cat never gets, or that name no single pet — with the reason. A key matches an
@@ -67,13 +67,20 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'family:children.deletePets': '(D) family-level deletion summary — 08c debt',
   'family:children.keptPets': '(D) family-level deletion summary — 08c debt',
   'family:children.deleteErrors.paid_challenge': '(D) payments for a cat — R06-09 (PAYMENTS_SPEC)',
-  'family:join': '(D) family-level ("children or dogs") — 08c debt',
+  'family:join.hint': '(D) family-level ("children or dogs") — 08c debt',
+  'family:join.errors.family_not_empty': '(D) family-level ("children or dogs") — 08c debt',
   'family:parents.inviteHint': '(D) family-level ("children and dogs") — 08c debt',
   'parent:controls.pets': '(D) section title over every pet of the family — 08c debt',
   'parent:quietHours.hint': '(D) family setting for every pet — 08c debt',
-  'parent:notifications.status': '(D) family-level notification status — 08c debt',
-  'push:push.prePrompt.parent': '(D) asked once per parent phone for every pet — needs David',
-  'account:card': '(D) family-level account / export / deletion texts — 08c debt',
+  'parent:notifications.status.on': '(D) family-level notification status — 08c debt',
+  'parent:notifications.status.off': '(D) family-level notification status — 08c debt',
+  'push:push.prePrompt.parent.title': '(D) asked once per parent phone for every pet — needs David',
+  'push:push.prePrompt.parent.message': '(D) asked once per parent phone for every pet — needs David',
+  'account:card.exportHint': '(D) family-level export text — 08c debt',
+  'account:card.lastParentLines.records': '(D) family-level account deletion — 08c debt',
+  'account:card.otherParentStaysLines.family': '(D) family-level account deletion — 08c debt',
+  'account:card.deleteErrors.paid_challenge': '(D) payments for a cat — R06-09 (PAYMENTS_SPEC)',
+  'parent:addChild.errors.already_paired': "(D) about the child's existing pet, not the new choice — dog text kept (QA 08c m6)",
   'account:deletionForm.paidWarning': '(D) payments for a cat — R06-09 (PAYMENTS_SPEC)',
   paywall: '(D) the challenge for a cat — R06-09 (PAYMENTS_SPEC "izziv za mačko")',
 };

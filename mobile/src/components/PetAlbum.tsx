@@ -377,7 +377,7 @@ function GrowthStrip({
   return (
     <View style={styles.growthSection} testID="album-growth">
       <Text style={styles.sectionTitle} accessibilityRole="header">
-        {species === 'cat' ? tSpecies('pet:growth.section', species) : GROWTH_STRINGS.section}
+        {species !== null ? tSpecies('pet:growth.section', species) : GROWTH_STRINGS.section}
       </Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.growthStrip} testID="album-growth-strip">
         {items.map((item) => {

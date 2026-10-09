@@ -443,7 +443,6 @@
         },
         "errors": {
           "pet_not_joinable": "Tej muci se ni več mogoče pridružiti. Izberite drugega ali novega ljubljenčka.",
-          "already_paired": "Otrok že skrbi za muco — lahko dobi samo kodo za prijavo na novi napravi.",
           "invalid_profile": "Izbire muce ni bilo mogoče shraniti. Izberite znova.",
           "challenge_requires_paid_breed": "12-tedenski izziv potrebuje plačljivo pasmo. Domača mačka je muca brezplačnega načrta — izberite drugo pasmo ali brezplačni načrt."
         },

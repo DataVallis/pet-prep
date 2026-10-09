@@ -1,6 +1,6 @@
 # Mačja besedila — pregled za Davida (M5-R06-06)
 
-> **Status:** ✅ **David je 9. 10. 2026 potrdil vsa besedila v tabeli (brez popravkov)** in prej istega dne odločil štiri vprašanja (spodaj). Pregled je potekal v dokumentu claude.ai »PetPrep – pregled mačjih besedil«. Besedilo `payment_required.parent` (omenja brezplačni preizkus) muca nikoli ne dobi: od odstranitve preizkusa vsako rojstvo dobi `parent_no_trial` (`ChallengeService::PUSH_NO_TRIAL`). Mačke so skrite (`PETPREP_CATS_ENABLED=false`), zato teh besedil zdaj ne vidi nihče.
+> **Status:** ✅ **Tabela obvestil (M5-R06-06): David je 9. 10. 2026 potrdil vsa besedila (brez popravkov)** in prej istega dne odločil štiri vprašanja (spodaj). Pregled je potekal v dokumentu claude.ai »PetPrep – pregled mačjih besedil«. Besedilo `payment_required.parent` (omenja brezplačni preizkus) muca nikoli ne dobi: od odstranitve preizkusa vsako rojstvo dobi `parent_no_trial` (`ChallengeService::PUSH_NO_TRIAL`). Mačke so skrite (`PETPREP_CATS_ENABLED=false`), zato teh besedil zdaj ne vidi nihče. **Besedila v aplikaciji (§ M5-R06-08c spodaj) so osnutek Claude in čakajo Davida.**
 > **Kako pregledati:** en prehod po tabeli. Če je vrstica v redu, nič ne naredi; popravke napiši v stolpec ali v klepet (ključ + novo besedilo). Pasja besedila (2. stolpec) so za primerjavo; spreminjajo se samo z Davidovo odločitvijo (test `DogPushTextSnapshotTest` — 9. 10. 2026 namenoma: vikanje v alarmu staršem, nove različice »najprej pospravi« in čas obroka).
 > **Vir resnice:** `backend/lang/en/push.php` in `backend/lang/sl/push.php` (podimenski prostor `cat`), `backend/lang/*/account.php`. Tabela je ustvarjena iz teh datotek; po popravku jo ustvari znova.
 
@@ -75,6 +75,8 @@
 
 > **Kaj je to:** vsa mačja besedila v aplikaciji, ki jih je 08c spremenil ali dodal (otrok in starš). Vir resnice: `mobile/src/i18n/locales/{en,sl}/cat.json` (`override.<imenski prostor>.<ključ>` zamenja pasje besedilo pri muci) in nekaj ključev v `pet.json` / `parent.json` / `behaviour.json` / `family.json`. Pasja besedila (stolpca »pes«) so za primerjavo in so **nespremenjena** (test `speciesCoverage.test.ts`).
 > **Pravila (David 9. 10. 2026):** »muca« za vse starosti, ženski spol; angleščina *it*; staršem vikamo. **Nova predloga (D):** otroški angleški samostalnik ostane »kitty« (kot »pup« pri psu), starš bere »the cat«; oznake faz kot v izbirniku (»Mucek«, »Mlada mačka« …).
+> **Vprašanje (D):** oznaka faze **»Mucek«** (in »Mlada / Zrela / Starejša mačka«) v profilu in albumu — kot v izbirniku — ali to krši pravilo »muca za vse starosti«? Predlog: »Mucek« ostane kot **oznaka faze** (kot »Mladiček« pri psu), v stavkih vedno »muca«. Alternativa: »Mlada muca« ipd.
+> **Ostane pasje:** `parent:addChild.errors.already_paired` (»Otrok že skrbi za psa …«) govori o otrokovem obstoječem ljubljenčku, ne o novi izbiri — ostane pasje besedilo (dolg na ravni družine, QA 08c m6).
 > **Kako pregledati:** en prehod; popravke napiši v klepet (ključ + novo besedilo). 🆕 = novo besedilo, ostalo = popravek (angleški zaimek, slovnica). Vprašanja so v DECISIONS (»Mačja besedila (M5-R06-08c)«).
 
 | Ključ | EN pes | EN mačka | SL pes | SL mačka |
@@ -145,6 +147,8 @@
 | `family:petStatus.inactive` 🆕 | The dog is not active | The cat is not active | Kuža ni aktiven | Muca ni aktivna |
 | `family:petStatus.ill` 🆕 | The dog is at the vet | The cat is at the vet | Kuža je pri veterinarju | Muca je pri veterinarju |
 | `parent:dashboard.counts.dogs_one` 🆕 | {{count}} dog | {{count}} cat | {{count}} kuža | {{count}} muca |
+| `parent:dashboard.counts.dogs_two` 🆕 (samo SL) | — | — | {{count}} kužka | {{count}} muci (»2 muci«) |
+| `parent:dashboard.counts.dogs_few` 🆕 (samo SL) | — | — | {{count}} kužki | {{count}} muce (»3 muce«) |
 | `parent:dashboard.counts.dogs_other` 🆕 | {{count}} dogs | {{count}} cats | {{count}} kužkov | {{count}} muc |
 | `parent:addChild.joinPet` 🆕 | Join a dog: {{label}} | Join a cat: {{label}} | Pridruži se psu: {{label}} | Pridruži se muci: {{label}} |
 | `parent:addChild.joinPetHintNames` 🆕 | Already cared for by {{names}}. A shared dog — each child has their own score. | Already cared for by {{names}}. A shared cat — each child has their own score. | Zanj že skrbi: {{names}}. Skupni pes, vsak otrok ima svojo oceno. | Zanjo že skrbi: {{names}}. Skupna muca, vsak otrok ima svojo oceno. |
@@ -156,7 +160,6 @@
 | `parent:addChild.pairedBody.join_pet` 🆕 | {{name}} can now sign their own Responsibility Contract and then care for the dog. | {{name}} can now sign their own Responsibility Contract and then care for the cat. | {{name}} naj zdaj podpiše svojo Pogodbo o odgovornosti, nato lahko skrbi za psa. | {{name}} naj zdaj podpiše svojo Pogodbo o odgovornosti, nato lahko skrbi za muco. |
 | `parent:addChild.pairedBody.relogin` 🆕 | {{name}} is signed in on the new device. The dog is still the same. | {{name}} is signed in on the new device. The cat is still the same. | {{name}} je prijavljen(a) na novi napravi. Kuža je ostal isti. | {{name}} je prijavljen(a) na novi napravi. Muca je ostala ista. |
 | `parent:addChild.errors.pet_not_joinable` 🆕 | This dog can't be joined any more. Choose another dog or a new one. | This cat can't be joined any more. Choose another pet or a new one. | Temu psu se ni več mogoče pridružiti. Izberite drugega ali novega psa. | Tej muci se ni več mogoče pridružiti. Izberite drugega ali novega ljubljenčka. |
-| `parent:addChild.errors.already_paired` 🆕 | This child already cares for a dog — they can only get a code to sign in on a new device. | This child already cares for a cat — they can only get a code to sign in on a new device. | Otrok že skrbi za psa — lahko dobi samo kodo za prijavo na novi napravi. | Otrok že skrbi za muco — lahko dobi samo kodo za prijavo na novi napravi. |
 | `parent:addChild.errors.invalid_profile` 🆕 | The dog choice couldn't be saved. Please choose again. | The cat choice couldn't be saved. Please choose again. | Izbire kužka ni bilo mogoče shraniti. Izberite znova. | Izbire muce ni bilo mogoče shraniti. Izberite znova. |
 | `parent:addChild.errors.challenge_requires_paid_breed` 🆕 | The 12-week challenge needs a paid breed. The mixed breed is the free plan's dog — choose another breed or the free plan. | The 12-week challenge needs a paid breed. The domestic cat is the free plan's cat — choose another breed or the free plan. | 12-tedenski izziv potrebuje plačljivo pasmo. Mešanček je pes brezplačnega načrta — izberite drugo pasmo ali brezplačni načrt. | 12-tedenski izziv potrebuje plačljivo pasmo. Domača mačka je muca brezplačnega načrta — izberite drugo pasmo ali brezplačni načrt. |
 | `parent:addChild.changeDog` 🆕 | Choose another dog | Choose another cat | Izberi drugega kužka | Izberi drugo muco |
@@ -171,6 +174,8 @@
 | `parent:petControls.confirmResume` 🆕 | Resume the game? The dog unfreezes and your child can care for it again. | Resume the game? The cat unfreezes and your child can care for it again. | Nadaljevati igro? Kuža se odmrzne in otrok lahko spet skrbi zanj. | Nadaljevati igro? Muca se odmrzne in otrok lahko spet skrbi zanjo. |
 | `parent:petControls.errors.not_found` 🆕 | This dog is no longer one of the family's active dogs. | This cat is no longer one of the family's active pets. | Tega psa ni več med aktivnimi psi družine. | Te muce ni več med aktivnimi ljubljenčki družine. |
 | `account:counts.dogs_one` 🆕 | {{count}} dog | {{count}} cat | {{count}} pes | {{count}} muca |
+| `account:counts.dogs_two` 🆕 (samo SL) | — | — | {{count}} psa | {{count}} muci (»2 muci«) |
+| `account:counts.dogs_few` 🆕 (samo SL) | — | — | {{count}} psi | {{count}} muce (»3 muce«) |
 | `account:counts.dogs_other` 🆕 | {{count}} dogs | {{count}} cats | {{count}} psov | {{count}} muc |
 | `cat:account.whatMixed` 🆕 | — | your account, {{children}}, {{dogs}} and {{cats}}, | — | vaš račun, {{children}}, {{dogs}} in {{cats}}, |
 | `behaviour:child.scene.scratching` | — | Your kitty scratched the sofa. Cats need to scratch — show it the scratching post. | — | Muca je opraskala kavč. Mačke morajo praskati — pokaži ji praskalnik. *(nespremenjeno)* |

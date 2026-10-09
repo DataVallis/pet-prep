@@ -58,10 +58,11 @@ export const PET_MEDIA_STRINGS = strings('pet', 'media', {
 
 /**
  * M5-R06-08c: a cat's texts also on a parent screen (the parent never sets the child's text
- * species) — `species` is the shown pet's; any other species keeps exactly the dog text.
+ * species) — `species` is the shown pet's (a known species never reads the child's switch);
+ * only without a species the child's text species applies.
  */
 function mediaText(key: 'pending' | 'a11y', species: Species | null, breed: string): string {
-  if (species === 'cat') return tSpecies(`pet:media.${key}`, species, key === 'a11y' ? { breed } : undefined);
+  if (species !== null) return tSpecies(`pet:media.${key}`, species, key === 'a11y' ? { breed } : undefined);
   return key === 'a11y' ? PET_MEDIA_STRINGS.a11y(breed) : PET_MEDIA_STRINGS.pending;
 }
 

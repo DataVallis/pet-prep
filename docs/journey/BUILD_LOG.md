@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Družina z mačko ne sme brati »kuža« na nobenem zaslonu, ki govori o njeni muci. Nov test (T8) to varuje za naprej: vsak ključ, ki omenja psa, mora imeti mačjo različico ali zapisan razlog, zakaj je samo pasji (sprehod, šola, igra z žogo …). Pasja besedila so ostala bajt za bajt enaka.
 
-**Številke:** mačjih prepisov 51 → 100 (EN in SL enako), 8 imenskih prostorov (prej 5); seznam »samo pes« ima 42 vnosov z razlogom; Jest 1747 → 1774 testov (137 → 140 kompletov). Nekaj besedil na ravni družine (tihe ure, obvestila staršu, plačilni zaslon) še govori o psih — vprašanje za Davida.
+**Številke:** mačjih prepisov 51 → 100 (EN in SL enako), 8 imenskih prostorov (prej 5); seznam »samo pes« ima 49 vnosov z razlogom; test preveri vse imenske prostore; Jest 1747 → 1776 testov (137 → 140 kompletov). Nekaj besedil na ravni družine (tihe ure, obvestila staršu, plačilni zaslon) še govori o psih — vprašanje za Davida.
 
 **Kako povedati:**
 - 👩 Starši: »Če imate psa in muco, aplikacija pri vsakem ljubljenčku govori o pravi živali — ›Muca je pri veterinarju‹, ›Kuža čaka na podpis pogodbe‹.« (*ko bodo mačke vklopljene*)

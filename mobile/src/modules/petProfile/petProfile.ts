@@ -128,7 +128,8 @@ export function formatProfileDate(isoDate: string): string {
  * passes the shown pet's `species`; without it the child's text species applies (`t`).
  */
 export function stageText(stage: LifeStage, species: string | null = null, lower = false): string {
-  if (species === 'cat') return tSpecies(`pet:profile.${lower ? 'stagesLower' : 'stages'}.${stage}`, species);
+  // A known species (parent screen) never reads the child's global switch (QA 08c m1).
+  if (species !== null) return tSpecies(`pet:profile.${lower ? 'stagesLower' : 'stages'}.${stage}`, species);
   return (lower ? PET_PROFILE_STRINGS.stagesLower : PET_PROFILE_STRINGS.stages)[stage];
 }
 
@@ -141,7 +142,7 @@ export function stageLine(info: PetProfileInfo, species: string | null = null): 
 /** "Kupljen pri vzreditelju" / "Posvojen iz zavetišča" ("Kupljena …" for a cat); null when unknown. */
 export function originLine(info: PetProfileInfo, species: string | null = null): string | null {
   if (!info.origin) return null;
-  return species === 'cat' ? tSpecies(`pet:profile.origins.${info.origin}`, species) : PET_PROFILE_STRINGS.origins[info.origin];
+  return species !== null ? tSpecies(`pet:profile.origins.${info.origin}`, species) : PET_PROFILE_STRINGS.origins[info.origin];
 }
 
 /** Parent: "Od 24. 11. 2026 mlad pes"; child: "24. 11. 2026 postane mlad pes". */

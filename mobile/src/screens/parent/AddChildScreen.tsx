@@ -18,7 +18,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { ActivityIndicator, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Text, TextInput } from '@/components/ui/Text';
-import { CheckCircle, ChevronLeft, ChevronRight, Dog, KeyRound, Lock, PawPrint, RefreshCw, Smartphone } from 'lucide-react-native';
+import { Cat, CheckCircle, ChevronLeft, ChevronRight, Dog, KeyRound, Lock, PawPrint, RefreshCw, Smartphone } from 'lucide-react-native';
 
 import type { ChildPinResponse, NewPetProfile, PetBreed, PinLoginMode } from '@/api/client';
 import { useQueryClient } from '@tanstack/react-query';
@@ -365,7 +365,7 @@ function PetStep({
         pets.map((pet) => (
           <PetOption
             key={pet.id}
-            icon={<Dog color={palette.graphite} size={22} />}
+            icon={pet.species === 'cat' ? <Cat color={palette.graphite} size={22} /> : <Dog color={palette.graphite} size={22} />}
             title={tSpecies('parent:addChild.joinPet', pet.species, { label: breedLabel(pet.breed_type, pet.species) })}
             hint={joinPetHintText(caretakerNames(pet, family), pet.species ?? null)}
             onPress={() => onChoose(pet.id)}
@@ -525,7 +525,8 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
       if (cooldownUntil !== null && !isCoolingDown) return null; // wait is over — "Nova koda" works again
       return S.errors.rate_limited(isCoolingDown ? cooldown : pinError.retryAfterSeconds);
     }
-    return species === 'cat' ? pinText(`errors.${pinError.kind}`) : S.errors[pinError.kind];
+    // `already_paired` is about the child's existing pet, not this choice → the dog text as before (QA 08c m6).
+    return species === 'cat' && pinError.kind !== 'already_paired' ? pinText(`errors.${pinError.kind}`) : S.errors[pinError.kind];
   })();
 
   if (isConnected) {

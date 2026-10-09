@@ -122,6 +122,23 @@ describe('Slovenian parent texts per species', () => {
     expect(growthViewerItems(album, TZ).map((i) => i.stageLabel)).toEqual(['Mladiček', 'Mlad pes']);
   });
 
+  it('a known species never reads the child\'s global switch (QA 08c m1)', () => {
+    setTextSpecies('cat');
+    try {
+      expect(stageLine(profile, 'dog')).toBe('Mladiček · 3 mesece');
+      expect(originLine(profile, 'dog')).toBe('Posvojen iz zavetišča');
+      expect(nextStageLine(profile, 'parent', 'dog')).toBe('Od 24. 11. 2026 mlad pes');
+      const album: GrowthAlbum = {
+        petId: 1,
+        entries: [{ generation: 1, stage: 'puppy', ageMonths: 2, takenAt: null, url: 'https://x/1.jpg', isCurrent: true }],
+        expiresAt: null,
+      };
+      expect(growthViewerItems(album, TZ, 'dog').map((i) => i.stageLabel)).toEqual(['Mladiček']);
+    } finally {
+      setTextSpecies(null);
+    }
+  });
+
   it('the child app reads the profile stages of a cat through its text species', () => {
     setTextSpecies('cat');
     expect(stageLine(profile)).toBe('Mucek · 3 mesece');

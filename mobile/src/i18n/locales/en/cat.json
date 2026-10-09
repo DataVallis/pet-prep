@@ -439,7 +439,6 @@
         },
         "errors": {
           "pet_not_joinable": "This cat can't be joined any more. Choose another pet or a new one.",
-          "already_paired": "This child already cares for a cat — they can only get a code to sign in on a new device.",
           "invalid_profile": "The cat choice couldn't be saved. Please choose again.",
           "challenge_requires_paid_breed": "The 12-week challenge needs a paid breed. The domestic cat is the free plan's cat — choose another breed or the free plan."
         },
