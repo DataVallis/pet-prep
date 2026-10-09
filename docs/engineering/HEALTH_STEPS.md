@@ -19,13 +19,13 @@ Steps from **Apple Health (HealthKit)** on iOS and **Health Connect** on Android
 | `expo-background-task` + `expo-task-manager` | ~57.0.18 | iOS background sync. |
 
 ## Native config (in `mobile/app.json`)
-- Plugin `@kingstinct/react-native-healthkit` with `NSHealthUpdateUsageDescription: false`, `background: false` → entitlement `com.apple.developer.healthkit` only (no background-delivery), no write text.
+- Plugin `@kingstinct/react-native-healthkit` with `NSHealthUpdateUsageDescription` set to a purpose string (EN in `app.json`, SL in `locales/sl.json` — App Store Connect ITMS-90683 rejected build 3.0.1 (15) without it on 2026-10-09, because the library references HealthKit write APIs; the app still never requests write access), `background: false` → entitlement `com.apple.developer.healthkit` only (no background-delivery), no write text.
 - `ios.infoPlist.NSHealthShareUsageDescription` (en) + `locales/sl.json` (sl): read-only wording.
 - Plugin `react-native-health-connect` → `ACTION_SHOW_PERMISSIONS_RATIONALE` intent filter on `MainActivity` + Android 14 `ViewPermissionUsageActivity` alias.
 - `android.permissions` + `android.permission.health.READ_STEPS`.
 - Plugins `expo-build-properties` (minSdk 26), `expo-background-task` (adds `UIBackgroundModes: processing` + `BGTaskSchedulerPermittedIdentifiers`).
 - Old binaries / dev clients without the task modules don't crash: `backgroundSteps.ts` loads `expo-background-task` / `expo-task-manager` lazily only after `requireOptionalNativeModule('ExpoBackgroundTask' | 'ExpoTaskManager')` finds both; otherwise define / register / unregister are no-ops (tested with an absent-module probe). The health adapters are likewise required lazily in try/catch.
-- `npx expo config --type public` resolves (checked 2026-10-07); introspection shows the HealthKit entitlement, no `NSHealthUpdateUsageDescription`, BG modes `fetch` + `processing`.
+- `npx expo config --type public` resolves (checked 2026-10-07); introspection shows the HealthKit entitlement, `NSHealthUpdateUsageDescription` present (since 2026-10-09, ITMS-90683), BG modes `fetch` + `processing`.
 
 ## Before the build (David)
 1. **New native EAS build is required** (iOS and Android) — new native modules + entitlement + manifest. An old binary keeps working on the sensor path (the adapter returns null without the native module).
