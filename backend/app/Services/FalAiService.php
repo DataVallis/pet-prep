@@ -90,6 +90,14 @@ class FalAiService
                 .'short dense coat, kind brown eyes, ears hanging close to the head, thick tapering otter tail, '
                 .'strongly built with a broad head and deep chest, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-02: FCI 111 (S63) — gold or cream (neither red nor mahogany),
+            // flat or wavy feathered coat, dense water-resisting undercoat, dark brown
+            // eyes, level tail (docs/research/dog-data golden_retriever.appearance).
+            BreedType::GoldenRetriever => 'A friendly Golden Retriever dog with a golden coat, '
+                .'flat or wavy medium-length coat with good feathering and a dense water-resisting undercoat, '
+                .'kind dark brown eyes, moderate-sized hanging ears, feathered tail carried level with the back, '
+                .'symmetrical and powerful build, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -144,6 +152,22 @@ class FalAiService
                 'markings' => match ($variantIndex) {
                     0 => 'no markings',
                     1 => 'a small white spot on the chest',
+                    2 => 'no markings',
+                },
+            ],
+            // M5-R10-02: FCI 111 (S63) any shade of gold or cream, neither red nor
+            // mahogany; RKC (S66) a few white hairs on the chest only, permissible.
+            BreedType::GoldenRetriever => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'rich gold',
+                    1 => 'light gold',
+                    2 => 'cream',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'flat or wavy feathered coat with a dense water-resisting undercoat',
+                'markings' => match ($variantIndex) {
+                    0 => 'no markings',
+                    1 => 'a few white hairs on the chest',
                     2 => 'no markings',
                 },
             ],

@@ -44,6 +44,12 @@
 | colours, coat, ears, eyes and the otter tail follow FCI 122 (S48) / RKC (S51) /
 | AKC (S52) — solid colours only; colour weights are unsourced → `verified => false`.
 |
+| Golden Retriever (M5-R10-02, docs/research/dog-data golden_retriever.appearance):
+| colours ("any shade of gold or cream, neither red nor mahogany"), the flat or
+| wavy feathered coat with a dense water-resisting undercoat, ears, eyes and the
+| level tail follow FCI 111 (S63) / RKC (S66) / AKC (S67); shade names and
+| weights are unsourced → `verified => false`.
+|
 */
 
 return [
@@ -189,6 +195,52 @@ return [
                 ['value' => 'hazel', 'only_with' => ['coat_color' => ['chocolate brown', 'light liver brown']]],
             ],
             'tail' => ['thick, tapering "otter"'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-02 (docs/research/dog-data/data.json golden_retriever.appearance).
+    'golden_retriever' => [
+        'display_name' => 'Golden Retriever',
+        // Shade names / frequencies are in no source (golden_retriever.appearance.colour_weights UNSOURCED) → all weights are a draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 111 (S63, https://www.fci.be/Nomenclature/Standards/111g08-en.pdf), Royal Kennel Club standard (S66), AKC standard 1981/1990 (S67), RKC breed page (S65) — for the traits listed in `sources`. Shade names and weights are unsourced.',
+        'sources' => [
+            'size' => 'S65 "Size: Large"; PDSA S68, Woodgreen S69 the same',
+            'build' => 'S63 "Symmetrical, balanced, active, powerful, level mover; sound with kindly expression."',
+            'coat_length' => 'S63 "Flat or wavy with good feathering, dense water-resisting undercoat."; S65 "Coat length: Medium"',
+            'coat_color' => 'S63 "Any shade of gold or cream, neither red nor mahogany." (shade names and weights unsourced)',
+            'coat_pattern' => 'S66 "A few white hairs on chest only, permissible."',
+            'ear_carriage' => 'S63 "Moderate size, set on approximate level with eyes." (one ear type)',
+            'eye_color' => 'S63 "Dark brown, set well apart, dark rims."; S67 "Color preferably dark brown; medium brown acceptable."',
+            'tail' => 'S63 "Set on and carried level with back, reaching to hocks, without curl at tip."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'symmetrical, powerful', 'weight' => 3], 'balanced, well-muscled'],
+            // Flat or wavy (S63), both feathered with a water-resisting undercoat.
+            'coat_length' => [
+                ['value' => 'flat, feathered, water-resistant medium-length', 'weight' => 3],
+                'wavy, feathered, water-resistant medium-length',
+            ],
+            // Gold or cream shades only — never red or mahogany (S63).
+            'coat_color' => [
+                ['value' => 'rich gold', 'weight' => 3],
+                ['value' => 'light gold', 'weight' => 2],
+                ['value' => 'deep gold', 'weight' => 2],
+                'cream',
+                'pale cream',
+            ],
+            'coat_pattern' => [
+                ['value' => 'solid', 'weight' => 4],
+                'with a few white hairs on the chest',
+            ],
+            'ear_carriage' => ['moderate-sized hanging'],
+            'eye_color' => [
+                ['value' => 'dark brown', 'weight' => 4],
+                'medium brown',
+            ],
+            'tail' => ['feathered, level-carried, reaching to the hocks, without a curl'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
     ],

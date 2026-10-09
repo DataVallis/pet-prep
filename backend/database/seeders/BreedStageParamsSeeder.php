@@ -46,8 +46,9 @@ use InvalidArgumentException;
  * boundaries, arrival ages, exercise minutes, weight, growth, Coren rank,
  * learning multiplier, individual variation, lifespan) come from
  * dogProfile(). A new dog breed = an enum case in DOG_BREEDS + a profile;
- * the mutt / Border Collie rows stay byte-identical (LabradorBreedTest
- * cross-checks the Labrador rows against data.json).
+ * the mutt / Border Collie rows stay byte-identical (LabradorBreedTest /
+ * GoldenRetrieverBreedTest cross-check the Labrador / Golden rows against
+ * data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
  * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
@@ -108,11 +109,15 @@ class BreedStageParamsSeeder extends Seeder
      * exercise 90 min, senior 68 min (75 % of 90 rounded up, 6,800 steps),
      * stages 9 / 36 / 118, arrival 2 / 9 / 36 / 118, learning multiplier 1.8;
      * hunger / thirst / poops / water the same as the Border Collie.
+     * M5-R10-02 Golden Retriever (same day, ~22:40, data.json
+     * proposed_game_parameters.golden_retriever.*.decision): exercise 120 min,
+     * senior 90 min, stages 9 / 36 / 119, arrival 2 / 9 / 36 / 119, learning
+     * multiplier 1.9; care rates the Border Collie's.
      */
     public const CONFIRMED_R10 = 'potrdil David 2026-10-09';
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -484,6 +489,10 @@ class BreedStageParamsSeeder extends Seeder
             // David's decisions 2026-10-09 in proposed_game_parameters.labrador_retriever).
             BreedType::LabradorRetriever => self::labradorProfile(),
 
+            // M5-R10-02 (docs/research/dog-data/data.json golden_retriever, S63–S75;
+            // David's decisions 2026-10-09 in proposed_game_parameters.golden_retriever).
+            BreedType::GoldenRetriever => self::goldenProfile(),
+
             BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
     }
@@ -561,6 +570,79 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'labrador_retriever.lifespan.median_uk',
                 'quote' => 'Labrador Retriever (orange, x̃= 13.1)',
                 'notes' => 'McMillan et al. 2024 (S54); VetCompass 2018 gives 12.0 y (S55).',
+            ]],
+        ];
+    }
+
+    /**
+     * Golden Retriever (M5-R10-02). Stage boundaries, arrival ages, exercise
+     * minutes and the learning multiplier are David's decisions of 2026-10-09
+     * (CONFIRMED_R10); weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function goldenProfile(): array
+    {
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S8,S15', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.golden_retriever.stage_boundaries_months', 'decision' => self::CONFIRMED_R10,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of RAPID growth (~6–9 months, S11), not the end of growth — a large dog still grows until 15–18 months (S10, up to 24 months S8), which ends inside the young stage. Same 9 as the other dogs (alternative 12 not chosen).')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [119, $boundary('Derived game boundary: last 25 % of lifespan (S11) × 13.2 y (Dogs Trust summary of McMillan 2024, S15) = 9.9 y = 118.8 → 119 months. Not chosen: 112 months (VetCompass poster median 12.48 y, S71) and 118 (= Labrador / Border Collie).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 119],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.golden_retriever.arrival_age_months', 'decision' => self::CONFIRMED_R10,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months (9 months → 90 min, from 12 months the adult 120).',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S68,S65', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.golden_retriever.exercise_minutes_adult', 'decision' => self::CONFIRMED_R10,
+                'quote' => 'Your Golden Retriever will need a minimum of two hours of good exercise per day.',
+                'notes' => 'PDSA "a minimum of two hours" (S68) and RKC "Exercise: More than 2 hours per day" (S65) → lower bound 120 min = 12,000 steps. Woodgreen 60–90 min (S69) not chosen.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.golden_retriever.exercise_minutes_senior', 'decision' => self::CONFIRMED_R10,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[24.9, 34.0], [
+                'unit' => 'kg', 'source_id' => 'S67', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'golden_retriever.adult_weight.akc',
+                'quote' => 'Weight for dogs 65 to 75 pounds; bitches 55 to 65 pounds.',
+                'notes' => 'AKC standard, bitches 24.9–29.5 kg and dogs 29.5–34.0 kg → overall range (PDSA S68 / Woodgreen S69: 25–34 kg).',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'golden_retriever.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value (Large), not breed-specific; lighter bitches straddle Medium (12–15 months).',
+            ]],
+            'coren_rank' => [4, [
+                'unit' => 'rank', 'source_id' => 'S34', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'golden_retriever.trainability.coren_rank',
+                'quote' => 'Golden Retriever',
+                'notes' => 'Coren\'s top-10 list (S34, list entry no. 4); Wikipedia (S35) "| 4 | Golden Retriever |". "Brightest" tier like the Border Collie and the Labrador.',
+            ]],
+            'learning_multiplier' => [1.9, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S34,S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.golden_retriever.learning_multiplier', 'decision' => self::CONFIRMED_R10,
+                'notes' => 'Game value (no literature factor): Coren rank 4 between the Border Collie (rank 1 → 2.0) and the Labrador (rank 7 → 1.8), linear by rank → 1.9. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the Border Collie and the Labrador: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [13.2, [
+                'unit' => 'years', 'source_id' => 'S15', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'golden_retriever.lifespan.median_uk',
+                'quote' => 'Golden Retriever (13.2 years)',
+                'notes' => 'Dogs Trust summary of McMillan et al. 2024 (S15); VetCompass poster 2012 gives a median of 12.48 y (S71).',
             ]],
         ];
     }
