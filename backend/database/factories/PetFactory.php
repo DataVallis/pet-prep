@@ -159,6 +159,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Labrador Retriever (paid breed, M5-R10).
+     */
+    public function labradorRetriever(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::LabradorRetriever->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static

@@ -84,6 +84,12 @@ class FalAiService
                 .'medium-length double coat, bright intelligent brown eyes, erect expressive ears, '
                 .'white blaze on face, photorealistic, studio quality, natural lighting',
 
+            // M5-R10: FCI 122 (S48) — solid colour, short dense coat, otter tail,
+            // hanging ears, brown or hazel eyes (docs/research/dog-data labrador_retriever.appearance).
+            BreedType::LabradorRetriever => 'A friendly Labrador Retriever dog with a solid yellow coat, '
+                .'short dense coat, kind brown eyes, ears hanging close to the head, thick tapering otter tail, '
+                .'strongly built with a broad head and deep chest, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -123,6 +129,22 @@ class FalAiService
                     0 => 'white blaze on face and white collar',
                     1 => 'full white chest and white socks',
                     2 => 'merle patches on body',
+                },
+            ],
+            // M5-R10: FCI 122 (S48) colours black / yellow / liver-chocolate only; a
+            // small white chest spot is permissible; no other markings.
+            BreedType::LabradorRetriever => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'solid yellow',
+                    1 => 'solid black',
+                    2 => 'solid chocolate',
+                },
+                'eye_color' => 'brown',
+                'fur_texture' => 'short dense coat with a weather-resistant undercoat',
+                'markings' => match ($variantIndex) {
+                    0 => 'no markings',
+                    1 => 'a small white spot on the chest',
+                    2 => 'no markings',
                 },
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.

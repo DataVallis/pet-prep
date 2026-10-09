@@ -9,7 +9,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * One breed of the picker catalogue (GET /api/breeds, M5-R06-01). Breed
  * names are not sent as text: the app translates `label_key` (i18n).
  *
- * @property array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int} $resource
+ * @property array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int, suitability: array{suits: list<string>, consider: list<string>}} $resource
  */
 class BreedCatalogResource extends JsonResource
 {
@@ -24,7 +24,7 @@ class BreedCatalogResource extends JsonResource
             /**
              * Enum value sent as `breed` to POST /api/parent/generate-pin.
              *
-             * @var 'mutt'|'border_collie'|'domestic_cat'|'maine_coon'
+             * @var 'mutt'|'border_collie'|'labrador_retriever'|'domestic_cat'|'maine_coon'
              */
             'breed' => $entry['breed'],
             /**
@@ -71,6 +71,16 @@ class BreedCatalogResource extends JsonResource
              * @var int
              */
             'sort_order' => $entry['sort_order'],
+            /**
+             * "Za koga je primerna" (M5-R10): sourced tag keys from
+             * config/breed_suitability.php — `suits` = the breed fits this
+             * family / home, `consider` = what a family must be ready for.
+             * The app translates each key (`breedSuitability.<tag>`). Empty
+             * lists = no sourced tags yet (mutt, cats). Never "hypoallergenic".
+             *
+             * @var array{suits: list<'active_family'|'children'|'small_children'|'first_time_owner'|'apartment'|'house_with_garden'|'other_pets'|'older_owners'|'often_alone'|'low_shedding'>, consider: list<'long_daily_exercise'|'needs_mental_stimulation'|'may_herd_children'|'chews_when_bored'|'sheds'|'food_motivated_weight'>}
+             */
+            'suitability' => $entry['suitability'],
         ];
     }
 }

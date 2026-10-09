@@ -41,6 +41,14 @@ use InvalidArgumentException;
  *
  * tests/Feature/LifeStageDataTest cross-checks every row against data.json.
  *
+ * DOG BREEDS (M5-R10): rows() loops DOG_BREEDS; the shared general_by_size
+ * rows are written once in rows(), the breed-specific values (stage
+ * boundaries, arrival ages, exercise minutes, weight, growth, Coren rank,
+ * learning multiplier, individual variation, lifespan) come from
+ * dogProfile(). A new dog breed = an enum case in DOG_BREEDS + a profile;
+ * the mutt / Border Collie rows stay byte-identical (LabradorBreedTest
+ * cross-checks the Labrador rows against data.json).
+ *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
  * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
  * ids C1–C25 of docs/research/cat-data/sources.md). rows() stays the dog
@@ -94,6 +102,17 @@ class BreedStageParamsSeeder extends Seeder
     /** David's answers for the cat play rules (M5-R06-04), 2026-10-08 ~20:40 (data.json `decision`). */
     public const CONFIRMED_CAT_PLAY = 'potrdil David 2026-10-08 20:40';
 
+    /**
+     * David's M5-R10 decisions for the Labrador Retriever (2026-10-09,
+     * data.json proposed_game_parameters.labrador_retriever.*.decision):
+     * exercise 90 min, senior 75 %, stages 9 / 36 / 118, arrival 2 / 9 / 36 /
+     * 118, learning multiplier 1.8.
+     */
+    public const CONFIRMED_R10 = 'potrdil David 2026-10-09';
+
+    /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever];
+
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
 
@@ -110,8 +129,8 @@ class BreedStageParamsSeeder extends Seeder
     {
         $rows = [];
 
-        foreach ([BreedType::Mutt, BreedType::BorderCollie] as $breed) {
-            $bc = $breed === BreedType::BorderCollie;
+        foreach (self::DOG_BREEDS as $breed) {
+            $p = self::dogProfile($breed);
             $slug = $breed->slug();
             $add = function (string $stage, int $from, StageParamKey $key, mixed $value, array $meta) use (&$rows, $slug): void {
                 $rows[] = array_merge([
@@ -137,26 +156,10 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'general_by_size.life_stages.puppy',
                 'quote' => 'From birth to cessation of rapid growth (~6–9 months, varying with breed and size)',
             ]);
-            $add('young', 0, StageParamKey::StartsAtMonths, 9, [
-                'unit' => 'months', 'source_id' => 'S11', 'confidence' => 'medium', 'verified' => true,
-                'ref' => 'general_by_size.life_stages.young_adult', 'decision' => self::CONFIRMED,
-                'quote' => 'From cessation of rapid growth to completion of physical and social maturation',
-                'notes' => 'Game boundary inside the sourced range (no exact month in the literature). AAHA: puppy ends ~6–9 months; 9 = upper end for medium dogs (still 72 % of adult weight at 6 months, S9 logistic proposal).',
-            ]);
-            $add('adult', 0, StageParamKey::StartsAtMonths, 36, [
-                'unit' => 'months', 'source_id' => 'S11', 'confidence' => 'medium', 'verified' => true,
-                'ref' => 'general_by_size.life_stages.mature_adult', 'decision' => self::CONFIRMED,
-                'quote' => 'From completion of physical and social maturation until the last 25% of estimated lifespan',
-                'notes' => 'Game boundary inside the sourced range (no exact month in the literature). Maturation completes at 3–4 years (S11); 36 months = lower end.',
-            ]);
-            $add('senior', 0, StageParamKey::StartsAtMonths, $bc ? 118 : 108, [
-                'unit' => 'months', 'source_id' => 'S11,S15', 'confidence' => 'medium', 'verified' => true,
-                'ref' => $bc ? 'border_collie.lifespan.senior_from' : 'medium_mixed_breed.lifespan.senior_from',
-                'decision' => self::CONFIRMED,
-                'notes' => $bc
-                    ? 'Derived game boundary: last 25 % of lifespan (S11) × median 13.1 y (S15) = 9.8 y = 118 months. Dogs Trust rule of thumb: > 7 y (S14).'
-                    : 'Derived game boundary: last 25 % of lifespan (S11) × median 12.0 y for crossbreeds (S15) = 9.0 y = 108 months. Dogs Trust rule of thumb: > 7 y (S14).',
-            ]);
+            foreach (['young', 'adult', 'senior'] as $stage) {
+                [$month, $meta] = $p['starts_at'][$stage];
+                $add($stage, 0, StageParamKey::StartsAtMonths, $month, $meta);
+            }
 
             // ── Age at arrival (parent's choice → pets.arrival_age_months) ──
             $add('puppy', 0, StageParamKey::ArrivalAgeMonths, 2, [
@@ -165,12 +168,8 @@ class BreedStageParamsSeeder extends Seeder
                 'quote' => 'Puppies can begin very simple training starting as soon as they come home, usually around 8 weeks old.',
                 'notes' => 'Game value backed by S36 ("home at ~8 weeks").',
             ]);
-            foreach (['young' => 9, 'adult' => 36, 'senior' => $bc ? 118 : 108] as $stage => $age) {
-                $add($stage, 0, StageParamKey::ArrivalAgeMonths, $age, [
-                    'unit' => 'months', 'verified' => true,
-                    'ref' => 'proposed_game_parameters.arrival_age_months', 'decision' => self::CONFIRMED,
-                    'notes' => 'Game value (no literature number): representative age = first month of the stage, so the dog stays in this stage for the 12-week challenge.',
-                ]);
+            foreach ($p['arrival'] as $stage => $age) {
+                $add($stage, 0, StageParamKey::ArrivalAgeMonths, $age, $p['arrival_meta']);
             }
 
             // ── Meals per day (counts sourced) ──────────────────────────────
@@ -229,25 +228,12 @@ class BreedStageParamsSeeder extends Seeder
                 'unit' => 'minutes/day per month of age', 'source_id' => 'S24', 'confidence' => 'low', 'verified' => true,
                 'ref' => 'general_by_size.exercise.puppy_rule_of_thumb', 'decision' => self::CONFIRMED,
                 'quote' => 'five minutes of exercise per month of age, twice a day, until the puppy is full-grown',
-                'notes' => 'Game rule; applies "until full-grown" (12–15 months, S10); capped at the adult minutes, so from ~12 months it equals the adult value.',
+                'notes' => $p['young_per_age_notes'],
             ]);
             foreach (['young', 'adult'] as $stage) {
-                $add($stage, 0, StageParamKey::ExerciseMinutesPerDay, $bc ? 120 : 60, $bc ? [
-                    'unit' => 'minutes/day', 'source_id' => 'S5', 'confidence' => 'high', 'verified' => true,
-                    'ref' => 'border_collie.exercise.adult',
-                    'quote' => 'Exercise: More than 2 hours per day',
-                    'notes' => '"More than 2 hours" → 120 minutes (lower bound).',
-                ] : [
-                    'unit' => 'minutes/day', 'verified' => true,
-                    'ref' => 'medium_mixed_breed.exercise.adult_game_target', 'decision' => self::CONFIRMED,
-                    'notes' => 'Game value (no literature number): 60 min inside the sourced 30–120 min adult range (S24) → ≈ 6,000 steps.',
-                ]);
+                $add($stage, 0, StageParamKey::ExerciseMinutesPerDay, ...$p['adult_minutes']);
             }
-            $add('senior', 0, StageParamKey::ExerciseMinutesPerDay, $bc ? 90 : 45, [
-                'unit' => 'minutes/day', 'verified' => true,
-                'ref' => 'proposed_game_parameters.senior_exercise_minutes', 'decision' => self::CONFIRMED,
-                'notes' => 'Game value (no literature number): 75 % of the adult minutes. Sources only say "frequent short walks instead of one long one" (S14) and that energy needs fall with age (S13).',
-            ]);
+            $add('senior', 0, StageParamKey::ExerciseMinutesPerDay, ...$p['senior_minutes']);
             $add('all', 0, StageParamKey::StepsPerExerciseMinute, 100, [
                 'unit' => 'child steps per walking minute', 'source_id' => 'S45', 'confidence' => 'low', 'verified' => true,
                 'ref' => 'general_by_size.exercise.steps_conversion',
@@ -287,20 +273,8 @@ class BreedStageParamsSeeder extends Seeder
             ]);
 
             // ── Breed level ─────────────────────────────────────────────────
-            $add('all', 0, StageParamKey::AdultWeightKg, $bc ? [13.6, 24.9] : [15, 30], $bc ? [
-                'unit' => 'kg', 'source_id' => 'S4', 'confidence' => 'medium', 'verified' => true,
-                'ref' => 'border_collie.adult_weight.akc', 'quote' => 'weigh between 30 and 55 pounds',
-            ] : [
-                'unit' => 'kg', 'source_id' => 'S8', 'confidence' => 'medium', 'verified' => true,
-                'ref' => 'medium_mixed_breed.assumed_adult_weight', 'decision' => self::DECISION,
-                'quote' => 'Category IV: 15 to <30 kg',
-                'notes' => 'David 2026-10-05: the game\'s mutt is a medium mixed breed = Salt size category IV (S8).',
-            ]);
-            $add('all', 0, StageParamKey::GrowthEndMonths, [12, 15], [
-                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
-                'ref' => $bc ? 'border_collie.growth.adult_weight_reached' : 'medium_mixed_breed.growth.adult_weight_reached',
-                'quote' => 'Medium (24–59 pounds): 12–15 months',
-            ]);
+            $add('all', 0, StageParamKey::AdultWeightKg, ...$p['adult_weight']);
+            $add('all', 0, StageParamKey::GrowthEndMonths, ...$p['growth_end']);
             $add('all', 0, StageParamKey::HouseTrainedByMonths, [4, 6], [
                 'unit' => 'months', 'source_id' => 'S31', 'confidence' => 'medium', 'verified' => true,
                 'ref' => 'general_by_size.house_training.fully_trained',
@@ -312,33 +286,12 @@ class BreedStageParamsSeeder extends Seeder
                 'quote' => 'your puppy\'s baby teeth start to shed (Weeks 12-16)',
                 'notes' => 'Baby teeth shed from 12–16 weeks; adult teeth in and intense chewing over by ~6 months (S32, S33).',
             ]);
-            $add('all', 0, StageParamKey::CorenRank, $bc ? 1 : null, $bc ? [
-                'unit' => 'rank', 'source_id' => 'S34', 'confidence' => 'high', 'verified' => true,
-                'ref' => 'border_collie.trainability.coren_rank',
-                'quote' => '190 of the 199 judges ranked the Border Collie in the top 10',
-            ] : [
-                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
-                'ref' => 'medium_mixed_breed.trainability.coren',
-                'quote' => 'Non-AKC/CKC recognized breeds like Jack Russell Terriers were excluded from rankings',
-                'notes' => 'Mixed breeds are not ranked; the game models them as average + individual randomness (proposal, M5 training).',
-            ]);
+            $add('all', 0, StageParamKey::CorenRank, ...$p['coren_rank']);
             // ── Training (M5-R03, David 2026-10-06) ─────────────────────────
-            $add('all', 0, StageParamKey::TrainingLearningMultiplier, $bc ? 2.0 : 1.0, $bc ? [
-                'unit' => '× mixed-breed learning speed', 'source_id' => 'S34,S35', 'confidence' => 'low', 'verified' => true,
-                'ref' => 'border_collie.trainability.learning_multiplier', 'decision' => self::CONFIRMED_R03,
-                'notes' => 'Game value (no literature factor): Coren rank #1 (S34), "brightest" tier < 5 repetitions vs 25–40 for average dogs (S35, secondary source). Multiplies the progress per correctly timed praise.',
-            ] : [
-                'unit' => '× baseline learning speed', 'source_id' => 'S35,S42', 'confidence' => 'low', 'verified' => true,
-                'ref' => 'medium_mixed_breed.trainability.learning_multiplier', 'decision' => self::CONFIRMED_R03,
-                'notes' => 'Game baseline: mixed breeds have no Coren rank (S35); breed explains ~9 % of individual behaviour (S42).',
-            ]);
-            if (! $bc) {
-                // No row for the Border Collie = no individual variation.
-                $add('all', 0, StageParamKey::TrainingIndividualVariation, 0.2, [
-                    'unit' => '± share of the learning speed, drawn once per dog', 'source_id' => 'S42', 'confidence' => 'low', 'verified' => true,
-                    'ref' => 'medium_mixed_breed.trainability.individual_variation', 'decision' => self::CONFIRMED_R03,
-                    'notes' => 'Game value: uniform factor in [0.8, 1.2], seeded per pet and stored (pets.training_learning_factor). S42: individuals vary much more than breeds.',
-                ]);
+            $add('all', 0, StageParamKey::TrainingLearningMultiplier, ...$p['learning_multiplier']);
+            if ($p['individual_variation'] !== null) {
+                // No row (Border Collie, Labrador) = no individual variation.
+                $add('all', 0, StageParamKey::TrainingIndividualVariation, ...$p['individual_variation']);
             }
             // M5-R03b: David confirmed the three numbers on 2026-10-06 and the two
             // effects on 2026-10-07 (verified, decision in notes).
@@ -379,14 +332,236 @@ class BreedStageParamsSeeder extends Seeder
                     ]);
             }
 
-            $add('all', 0, StageParamKey::LifespanYears, $bc ? 13.1 : 12.0, [
-                'unit' => 'years', 'source_id' => 'S15', 'confidence' => $bc ? 'high' : 'medium', 'verified' => true,
-                'ref' => $bc ? 'border_collie.lifespan.median_uk' : 'medium_mixed_breed.lifespan.median_uk_crossbreeds',
-                'quote' => $bc ? 'Border Collie (13.1 years)' : 'This was slightly shorter for crossbred dogs at 12.0 years.',
-            ]);
+            $add('all', 0, StageParamKey::LifespanYears, ...$p['lifespan']);
         }
 
         return $rows;
+    }
+
+    /**
+     * The breed-specific dog values of rows() (M5-R10): everything else in
+     * rows() is general_by_size data shared by every dog breed. Each entry is
+     * [value, meta] (meta as in rows()'s $add); `starts_at` is per stage
+     * young / adult / senior, `arrival` the non-puppy arrival ages (stage →
+     * months) with one shared `arrival_meta`; `individual_variation` null =
+     * no row (no per-dog random factor).
+     *
+     * The mutt and Border Collie profiles are the values rows() had inline
+     * before M5-R10 — their rows must stay byte-identical (DogRegressionSnapshotTest,
+     * LifeStageDataTest).
+     *
+     * @return array{starts_at: array<string, array{0: int, 1: array<string, mixed>}>, arrival: array<string, int>, arrival_meta: array<string, mixed>, young_per_age_notes: string, adult_minutes: array{0: int, 1: array<string, mixed>}, senior_minutes: array{0: int, 1: array<string, mixed>}, adult_weight: array{0: list<float|int>, 1: array<string, mixed>}, growth_end: array{0: list<int>, 1: array<string, mixed>}, coren_rank: array{0: int|null, 1: array<string, mixed>}, learning_multiplier: array{0: float, 1: array<string, mixed>}, individual_variation: array{0: float, 1: array<string, mixed>}|null, lifespan: array{0: float, 1: array<string, mixed>}}
+     */
+    public static function dogProfile(BreedType $breed): array
+    {
+        // Shared by the mutt and the Border Collie (M5-R01, David 2026-10-05).
+        $young = [9, [
+            'unit' => 'months', 'source_id' => 'S11', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'general_by_size.life_stages.young_adult', 'decision' => self::CONFIRMED,
+            'quote' => 'From cessation of rapid growth to completion of physical and social maturation',
+            'notes' => 'Game boundary inside the sourced range (no exact month in the literature). AAHA: puppy ends ~6–9 months; 9 = upper end for medium dogs (still 72 % of adult weight at 6 months, S9 logistic proposal).',
+        ]];
+        $adult = [36, [
+            'unit' => 'months', 'source_id' => 'S11', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'general_by_size.life_stages.mature_adult', 'decision' => self::CONFIRMED,
+            'quote' => 'From completion of physical and social maturation until the last 25% of estimated lifespan',
+            'notes' => 'Game boundary inside the sourced range (no exact month in the literature). Maturation completes at 3–4 years (S11); 36 months = lower end.',
+        ]];
+        $arrivalMeta = [
+            'unit' => 'months', 'verified' => true,
+            'ref' => 'proposed_game_parameters.arrival_age_months', 'decision' => self::CONFIRMED,
+            'notes' => 'Game value (no literature number): representative age = first month of the stage, so the dog stays in this stage for the 12-week challenge.',
+        ];
+        $youngPerAgeNotes = 'Game rule; applies "until full-grown" (12–15 months, S10); capped at the adult minutes, so from ~12 months it equals the adult value.';
+        $seniorMinutesMeta = [
+            'unit' => 'minutes/day', 'verified' => true,
+            'ref' => 'proposed_game_parameters.senior_exercise_minutes', 'decision' => self::CONFIRMED,
+            'notes' => 'Game value (no literature number): 75 % of the adult minutes. Sources only say "frequent short walks instead of one long one" (S14) and that energy needs fall with age (S13).',
+        ];
+        $mediumGrowth = fn (string $ref): array => [[12, 15], [
+            'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+            'ref' => $ref,
+            'quote' => 'Medium (24–59 pounds): 12–15 months',
+        ]];
+
+        return match ($breed) {
+            BreedType::Mutt => [
+                'starts_at' => [
+                    'young' => $young,
+                    'adult' => $adult,
+                    'senior' => [108, [
+                        'unit' => 'months', 'source_id' => 'S11,S15', 'confidence' => 'medium', 'verified' => true,
+                        'ref' => 'medium_mixed_breed.lifespan.senior_from',
+                        'decision' => self::CONFIRMED,
+                        'notes' => 'Derived game boundary: last 25 % of lifespan (S11) × median 12.0 y for crossbreeds (S15) = 9.0 y = 108 months. Dogs Trust rule of thumb: > 7 y (S14).',
+                    ]],
+                ],
+                'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+                'arrival_meta' => $arrivalMeta,
+                'young_per_age_notes' => $youngPerAgeNotes,
+                'adult_minutes' => [60, [
+                    'unit' => 'minutes/day', 'verified' => true,
+                    'ref' => 'medium_mixed_breed.exercise.adult_game_target', 'decision' => self::CONFIRMED,
+                    'notes' => 'Game value (no literature number): 60 min inside the sourced 30–120 min adult range (S24) → ≈ 6,000 steps.',
+                ]],
+                'senior_minutes' => [45, $seniorMinutesMeta],
+                'adult_weight' => [[15, 30], [
+                    'unit' => 'kg', 'source_id' => 'S8', 'confidence' => 'medium', 'verified' => true,
+                    'ref' => 'medium_mixed_breed.assumed_adult_weight', 'decision' => self::DECISION,
+                    'quote' => 'Category IV: 15 to <30 kg',
+                    'notes' => 'David 2026-10-05: the game\'s mutt is a medium mixed breed = Salt size category IV (S8).',
+                ]],
+                'growth_end' => $mediumGrowth('medium_mixed_breed.growth.adult_weight_reached'),
+                'coren_rank' => [null, [
+                    'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                    'ref' => 'medium_mixed_breed.trainability.coren',
+                    'quote' => 'Non-AKC/CKC recognized breeds like Jack Russell Terriers were excluded from rankings',
+                    'notes' => 'Mixed breeds are not ranked; the game models them as average + individual randomness (proposal, M5 training).',
+                ]],
+                'learning_multiplier' => [1.0, [
+                    'unit' => '× baseline learning speed', 'source_id' => 'S35,S42', 'confidence' => 'low', 'verified' => true,
+                    'ref' => 'medium_mixed_breed.trainability.learning_multiplier', 'decision' => self::CONFIRMED_R03,
+                    'notes' => 'Game baseline: mixed breeds have no Coren rank (S35); breed explains ~9 % of individual behaviour (S42).',
+                ]],
+                'individual_variation' => [0.2, [
+                    'unit' => '± share of the learning speed, drawn once per dog', 'source_id' => 'S42', 'confidence' => 'low', 'verified' => true,
+                    'ref' => 'medium_mixed_breed.trainability.individual_variation', 'decision' => self::CONFIRMED_R03,
+                    'notes' => 'Game value: uniform factor in [0.8, 1.2], seeded per pet and stored (pets.training_learning_factor). S42: individuals vary much more than breeds.',
+                ]],
+                'lifespan' => [12.0, [
+                    'unit' => 'years', 'source_id' => 'S15', 'confidence' => 'medium', 'verified' => true,
+                    'ref' => 'medium_mixed_breed.lifespan.median_uk_crossbreeds',
+                    'quote' => 'This was slightly shorter for crossbred dogs at 12.0 years.',
+                ]],
+            ],
+
+            BreedType::BorderCollie => [
+                'starts_at' => [
+                    'young' => $young,
+                    'adult' => $adult,
+                    'senior' => [118, [
+                        'unit' => 'months', 'source_id' => 'S11,S15', 'confidence' => 'medium', 'verified' => true,
+                        'ref' => 'border_collie.lifespan.senior_from',
+                        'decision' => self::CONFIRMED,
+                        'notes' => 'Derived game boundary: last 25 % of lifespan (S11) × median 13.1 y (S15) = 9.8 y = 118 months. Dogs Trust rule of thumb: > 7 y (S14).',
+                    ]],
+                ],
+                'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 118],
+                'arrival_meta' => $arrivalMeta,
+                'young_per_age_notes' => $youngPerAgeNotes,
+                'adult_minutes' => [120, [
+                    'unit' => 'minutes/day', 'source_id' => 'S5', 'confidence' => 'high', 'verified' => true,
+                    'ref' => 'border_collie.exercise.adult',
+                    'quote' => 'Exercise: More than 2 hours per day',
+                    'notes' => '"More than 2 hours" → 120 minutes (lower bound).',
+                ]],
+                'senior_minutes' => [90, $seniorMinutesMeta],
+                'adult_weight' => [[13.6, 24.9], [
+                    'unit' => 'kg', 'source_id' => 'S4', 'confidence' => 'medium', 'verified' => true,
+                    'ref' => 'border_collie.adult_weight.akc', 'quote' => 'weigh between 30 and 55 pounds',
+                ]],
+                'growth_end' => $mediumGrowth('border_collie.growth.adult_weight_reached'),
+                'coren_rank' => [1, [
+                    'unit' => 'rank', 'source_id' => 'S34', 'confidence' => 'high', 'verified' => true,
+                    'ref' => 'border_collie.trainability.coren_rank',
+                    'quote' => '190 of the 199 judges ranked the Border Collie in the top 10',
+                ]],
+                'learning_multiplier' => [2.0, [
+                    'unit' => '× mixed-breed learning speed', 'source_id' => 'S34,S35', 'confidence' => 'low', 'verified' => true,
+                    'ref' => 'border_collie.trainability.learning_multiplier', 'decision' => self::CONFIRMED_R03,
+                    'notes' => 'Game value (no literature factor): Coren rank #1 (S34), "brightest" tier < 5 repetitions vs 25–40 for average dogs (S35, secondary source). Multiplies the progress per correctly timed praise.',
+                ]],
+                'individual_variation' => null,
+                'lifespan' => [13.1, [
+                    'unit' => 'years', 'source_id' => 'S15', 'confidence' => 'high', 'verified' => true,
+                    'ref' => 'border_collie.lifespan.median_uk',
+                    'quote' => 'Border Collie (13.1 years)',
+                ]],
+            ],
+
+            // M5-R10 (docs/research/dog-data/data.json labrador_retriever, S48–S62;
+            // David's decisions 2026-10-09 in proposed_game_parameters.labrador_retriever).
+            BreedType::LabradorRetriever => self::labradorProfile(),
+
+            BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
+        };
+    }
+
+    /**
+     * Labrador Retriever (M5-R10). Stage boundaries, arrival ages, exercise
+     * minutes and the learning multiplier are David's decisions of 2026-10-09
+     * (CONFIRMED_R10); weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function labradorProfile(): array
+    {
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S8,S54', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.labrador_retriever.stage_boundaries_months', 'decision' => self::CONFIRMED_R10,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of RAPID growth (~6–9 months, S11), not the end of growth — a large dog still grows until 15–18 months (S10, up to 24 months S8), which ends inside the young stage. Same 9 as the other dogs (alternative 12 not chosen).')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [118, $boundary('Derived game boundary: last 25 % of lifespan (S11) × median 13.1 y (McMillan 2024, S54) = 9.8 y = 118 months. The VetCompass median 12.0 y (S55) would give 108 months (not chosen).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 118],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.labrador_retriever.arrival_age_months', 'decision' => self::CONFIRMED_R10,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 90 minutes, which 10 × 9 months already reaches, so the whole young stage walks the adult minutes.',
+            'adult_minutes' => [90, [
+                'unit' => 'minutes/day', 'source_id' => 'S59', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.labrador_retriever.exercise_minutes_adult', 'decision' => self::CONFIRMED_R10,
+                'quote' => 'Labrador retrievers generally need at least 90 minutes of exercise daily as adults.',
+                'notes' => 'Guide Dogs UK lower bound (S59) → 9,000 steps. Sources disagree: RKC "More than 2 hours per day" (S50), Woodgreen 60–90 min (S60).',
+            ]],
+            // David 2026-10-09: 75 % of 90 = 67.5 min ≈ 6,750 steps. Minutes are whole
+            // numbers (StageParamKey::validate, StageRules, API exercise_minutes int) —
+            // 68 is data.json's value; 68 × 100 = 6,800 steps (open question to David).
+            'senior_minutes' => [68, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.labrador_retriever.exercise_minutes_senior', 'decision' => self::CONFIRMED_R10,
+                'notes' => 'Game value (no literature number): 75 % of the adult 90 minutes = 67.5, stored as whole minutes (68 → 6,800 steps; 67.5 → 6,750 needs fractional minutes). Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[24.9, 36.3], [
+                'unit' => 'kg', 'source_id' => 'S52', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'labrador_retriever.adult_weight.akc',
+                'quote' => 'Approximate weight of dogs and bitches in working condition: dogs 65 to 80 pounds; bitches 55 to 70 pounds.',
+                'notes' => 'AKC standard, bitches 24.9–31.8 kg and dogs 29.5–36.3 kg → overall range.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'labrador_retriever.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value (Large), not breed-specific; lighter bitches straddle Medium (12–15 months).',
+            ]],
+            'coren_rank' => [7, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'labrador_retriever.trainability.coren_rank',
+                'quote' => '| 7 | Labrador Retriever |',
+                'notes' => 'Coren\'s list as reproduced on Wikipedia (S35); "brightest" tier like the Border Collie.',
+            ]],
+            'learning_multiplier' => [1.8, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35,S42', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.labrador_retriever.learning_multiplier', 'decision' => self::CONFIRMED_R10,
+                'notes' => 'Game value (no literature factor): same Coren "brightest" tier as the Border Collie (S35, 2.0); 1.8 keeps the Border Collie visibly fastest. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the Border Collie: no individual variation row (data.json notes
+            // S42 would allow ±20 %, but David decided only the multiplier).
+            'individual_variation' => null,
+            'lifespan' => [13.1, [
+                'unit' => 'years', 'source_id' => 'S54', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'labrador_retriever.lifespan.median_uk',
+                'quote' => 'Labrador Retriever (orange, x̃= 13.1)',
+                'notes' => 'McMillan et al. 2024 (S54); VetCompass 2018 gives 12.0 y (S55).',
+            ]],
+        ];
     }
 
     /**

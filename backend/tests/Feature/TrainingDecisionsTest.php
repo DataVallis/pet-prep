@@ -77,7 +77,8 @@ function tdMigrateEffects(): void
 /** @return list<array<string, mixed>> */
 function tdEffectRows(): array
 {
-    return array_values(array_filter(BreedStageParamsSeeder::rows(), fn (array $r) => $r['stage'] === 'all' && in_array($r['key'], TD_EFFECT_KEYS, true)));
+    // The data migration covered the breeds of that time (M5-R10 Labrador rows are seeded verified).
+    return array_values(array_filter(BreedStageParamsSeeder::rows(), fn (array $r) => in_array($r['breed_slug'], ['mutt', 'border-collie'], true) && $r['stage'] === 'all' && in_array($r['key'], TD_EFFECT_KEYS, true)));
 }
 
 /** The production state after PR #59: the two effects seeded as unverified proposals. */
@@ -88,7 +89,8 @@ function tdRevertEffectsToPr59(): void
         'place_training_chewing_reduction' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): guidance teaches a puppy to chew its toys (S33); the size of the effect is ours. Chewing after a missed walk stays certain.',
     ];
     foreach ($notes as $key => $note) {
-        DB::table('breed_stage_params')->where(['stage' => 'all', 'key' => $key])->update(['verified' => false, 'notes' => $note]);
+        // Production at that time had only the mutt and the Border Collie (M5-R10 added the Labrador).
+        DB::table('breed_stage_params')->whereIn('breed_slug', ['mutt', 'border-collie'])->where(['stage' => 'all', 'key' => $key])->update(['verified' => false, 'notes' => $note]);
     }
     LifeStageService::forgetBreed('mutt');
     LifeStageService::forgetBreed('border-collie');
@@ -97,7 +99,8 @@ function tdRevertEffectsToPr59(): void
 /** @return list<array<string, mixed>> */
 function tdConfirmedRows(): array
 {
-    return array_values(array_filter(BreedStageParamsSeeder::rows(), fn (array $r) => $r['stage'] === 'all' && in_array($r['key'], TD_CONFIRMED_KEYS, true)));
+    // The data migration covered the breeds of that time (M5-R10 Labrador rows are seeded verified).
+    return array_values(array_filter(BreedStageParamsSeeder::rows(), fn (array $r) => in_array($r['breed_slug'], ['mutt', 'border-collie'], true) && $r['stage'] === 'all' && in_array($r['key'], TD_CONFIRMED_KEYS, true)));
 }
 
 /** The production state after PR #53: the three numbers seeded as unverified proposals. */
@@ -109,7 +112,8 @@ function tdRevertToPr53(): void
         'training_decay_per_missed_day' => 'UNSOURCED proposal (Claude, M5-R03, waiting for David): no source gives a forgetting rate.',
     ];
     foreach ($notes as $key => $note) {
-        DB::table('breed_stage_params')->where(['stage' => 'all', 'key' => $key])->update(['verified' => false, 'notes' => $note]);
+        // Production at that time had only the mutt and the Border Collie (M5-R10 added the Labrador).
+        DB::table('breed_stage_params')->whereIn('breed_slug', ['mutt', 'border-collie'])->where(['stage' => 'all', 'key' => $key])->update(['verified' => false, 'notes' => $note]);
     }
     LifeStageService::forgetBreed('mutt');
     LifeStageService::forgetBreed('border-collie');
