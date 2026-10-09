@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Družina ima ljubljenčke, ne samo pse (M5-R06-08d)
+
+**Kaj se je zgodilo:** David je odgovoril na štiri vprašanja o mačjih besedilih. Otroku v angleščini muca ostane »kitty« (*it*), oznaka faze »Mucek« ostane. Besedila, ki veljajo za celo družino, zdaj govorijo o **ljubljenčkih** namesto o psih — tudi v družini samo s psi: »Še brez ljubljenčka«, naslov »Ljubljenčki« v Nadzoru, tihe ure, obvestila, izbris in izvoz, povabilo drugega starša. Kanal obvestil na Androidu se na telefonu starša imenuje »Opomniki za ljubljenčke«; otrokov telefon ima enega ljubljenčka in obdrži »Opomniki za kužo« ali »Opomniki za muco«.
+
+**Zakaj je pomembno:** Družina ima lahko psa in muco. Besedilo, ki ne govori o enem ljubljenčku, ne sme izbrati vrste — staršu z muco ne sme pisati »Psi«.
+
+**Številke:** 19 pasjih besedil (EN + SL) prestavljenih na nevtralno »ljubljenček / pet«; seznam »samo pes« v testu pokritosti 49 → 31 vnosov; Jest 1776 → 1780 testov. Plačilni zaslon pride na vrsto z vklopom mačk (R06-09).
+
+**Kako povedati:**
+- 👩 Starši: »Aplikacija govori o vaših ljubljenčkih — psu, muci ali obeh.« (*mačke še niso vklopljene*)
+- 🛠 Tehnično: »Kanal obvestil na Androidu preimenujemo brez novega id-ja: ponovno ustvarjanje kanala z istim id-jem samo spremeni ime.«
+- 📣 Omrežja: (*interno, dokler mačke niso vklopljene*)
+
+---
+
 ## 2026-10-09 — Muca je povsod muca: pregled besedil in test pokritosti (M5-R06-08c, skrito)
 
 **Kaj se je zgodilo:** Pregledali smo vsa mačja besedila v aplikaciji v angleščini in slovenščini. Angleščina za muco zdaj dosledno uporablja *it* (Davidovo pravilo), slovenščina ima popravljeno slovnico (npr. »hepatično lipidozo«). Starš zdaj tudi na svojih zaslonih bere o muci, kadar gleda muco — **vrsta pride iz ljubljenčka na zaslonu**, ker ima družina lahko psa in muco: »1 kuža · 1 muca«, »Muca je pri veterinarju«, »Muca čaka, da Maja podpiše pogodbo«, »Spremeni muco«, »Kako je muca rasla«, »Mucek · 3 mesece«, »Opraskan kavč — na praskalnik do 13:30«. Na otrokovem telefonu z muco se kanal obvestil imenuje »Opomniki za muco«.
