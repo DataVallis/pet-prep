@@ -5,6 +5,7 @@
 import { fireEvent, render, screen } from '@testing-library/react-native';
 
 import PetPickerStep from '@/components/parent/PetPickerStep';
+import { i18n } from '@/i18n';
 import {
   FALLBACK_CATALOGUE,
   INITIAL_PICKER_CHOICE,
@@ -37,6 +38,25 @@ const BOTH = readBreedCatalogue({
     entry('maine_coon', 'cat', true, 10, ['maine coon', 'mejnkun']),
   ],
 }, ['dog', 'cat']) as BreedCatalogue; // a build with the cat UI (CAT_UI_READY on)
+
+/** The server's dog catalogue since M5-R10 (two paid dogs with suitability tags). */
+const DOGS_R10 = readBreedCatalogue({
+  species: ['dog'],
+  breeds: [
+    { ...entry('mutt', 'dog', false, 0, ['mešanček']), suitability: { suits: [], consider: [] } },
+    {
+      ...entry('labrador_retriever', 'dog', true, 20, ['labradorec', 'prinašalec']),
+      suitability: {
+        suits: ['active_family', 'family_pet', 'large_home', 'other_pets', 'future_tag'],
+        consider: ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
+      },
+    },
+    {
+      ...entry('border_collie', 'dog', true, 10, ['koli']),
+      suitability: { suits: ['active_family'], consider: ['long_daily_exercise', 'needs_mental_stimulation', 'may_herd_children', 'chews_when_bored'] },
+    },
+  ],
+}) as BreedCatalogue;
 
 function renderPicker(catalogue: BreedCatalogue | null, onConfirm = jest.fn(), onBack = jest.fn()) {
   render(
@@ -139,6 +159,81 @@ describe('PetPickerStep', () => {
       { species: 'cat', breed: 'domestic_cat', origin: 'adopted', age_stage: 'puppy', plan: 'free' },
       expect.objectContaining({ species: 'cat' }),
     );
+  });
+
+  it('M5-R10: the Labrador is listed after the collie with the "Izziv" badge and its suitability chips', () => {
+    renderPicker(DOGS_R10);
+    const lab = screen.getByTestId('breed-option-labrador_retriever');
+    expect(lab).toHaveTextContent(/Labradorec/);
+    expect(lab).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(lab).toHaveTextContent(/Del 12-tedenskega izziva\./);
+
+    const suits = screen.getByTestId('breed-suitability-labrador_retriever-suits');
+    expect(suits).toHaveTextContent('Primerno za:aktivno družinodružinsko življenjeveliko hišo z vrtomdom z drugimi ljubljenčki');
+    const consider = screen.getByTestId('breed-suitability-labrador_retriever-consider');
+    expect(consider).toHaveTextContent('Upoštevajte:izpada mu dlakavsak dan potrebuje veliko gibanjarad je — pazite na težo');
+    // The unknown tag from a newer server is never shown.
+    expect(screen.queryByText(/future_tag/)).toBeNull();
+    // Screen readers get the same tags as one sentence.
+    expect(lab.props.accessibilityHint).toBe(
+      'Primerno za: aktivno družino, družinsko življenje, veliko hišo z vrtom, dom z drugimi ljubljenčki. Upoštevajte: izpada mu dlaka, vsak dan potrebuje veliko gibanja, rad je — pazite na težo.',
+    );
+    // The collie shows its own tags; the mutt has none (no sourced tags).
+    expect(screen.getByTestId('breed-suitability-border_collie-consider')).toHaveTextContent(/pri igri lahko »pase« otroke/);
+    expect(screen.queryByTestId('breed-suitability-mutt')).toBeNull();
+    expect(screen.getByTestId('breed-option-mutt').props.accessibilityHint).toBeUndefined();
+
+    // Order: free first, then paid by sort_order (collie 10, Labrador 20).
+    const order = screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID);
+    expect(order).toEqual(['breed-option-mutt', 'breed-option-border_collie', 'breed-option-labrador_retriever']);
+  });
+
+  it('M5-R10: free plan locks the Labrador with a breed-neutral note; the challenge picks it and sends it', () => {
+    const { onConfirm } = renderPicker(DOGS_R10);
+    fireEvent.press(screen.getByTestId('plan-option-free'));
+    const lab = screen.getByTestId('breed-option-labrador_retriever');
+    expect(lab.props.accessibilityState).toEqual({ checked: false, disabled: true });
+    expect(lab.props.accessibilityLabel).toBe(PICKER.lockedA11y('Labradorec'));
+    fireEvent.press(lab);
+    expect(screen.getByTestId('breed-locked-note')).toHaveTextContent(
+      'V brezplačnem načrtu je pes vedno mešanček. Plačljive pasme so del 12-tedenskega izziva.',
+    );
+
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-labrador_retriever'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    fireEvent.press(screen.getByTestId('age-option-senior'));
+    // Age hints follow the chosen breed.
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/6\.800 korakov/);
+    expect(screen.getByTestId('picker-summary')).toHaveTextContent(/Labradorec/);
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'labrador_retriever', origin: 'bought', age_stage: 'senior', plan: 'challenge' },
+      expect.objectContaining({ breed: 'labrador_retriever' }),
+    );
+  });
+
+  it('M5-R10: search finds the Labrador by its Slovenian synonym; the fallback lists it too', () => {
+    renderPicker(FALLBACK_CATALOGUE);
+    expect(screen.getByTestId('breed-suitability-labrador_retriever')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'prinasalec');
+    expect(screen.getByTestId('breed-option-labrador_retriever')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-border_collie')).toBeNull();
+  });
+
+  it('M5-R10: suitability chips in English', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(DOGS_R10);
+      expect(screen.getByTestId('breed-suitability-labrador_retriever-suits')).toHaveTextContent(
+        'Good for:an active familyfamily lifea large house and gardenhomes with other pets',
+      );
+      expect(screen.getByTestId('breed-suitability-labrador_retriever-consider')).toHaveTextContent(
+        'Keep in mind:shedsneeds lots of exercise every dayloves food — watch the weight',
+      );
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
   });
 
   it('while the catalogue loads: a spinner, and "Nazaj" still works', () => {

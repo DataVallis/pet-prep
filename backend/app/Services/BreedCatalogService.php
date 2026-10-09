@@ -46,6 +46,8 @@ class BreedCatalogService
     /** @var array<string, array{breed: string, slug: string, species: string, premium: bool, label_key: string, search_keywords: list<string>, sort_order: int}>|null */
     private ?array $memo = null;
 
+    public function __construct(private readonly BreedSuitability $suitability) {}
+
     public static function forget(): void
     {
         try {
@@ -127,10 +129,12 @@ class BreedCatalogService
 
     /**
      * The picker catalogue for GET /api/breeds: only species in
-     * $availableSpecies, optionally one species.
+     * $availableSpecies, optionally one species. `suitability` (M5-R10) comes
+     * from config/breed_suitability.php (code, not breed_configs), so it is
+     * added here and never cached.
      *
      * @param  list<Species>  $availableSpecies
-     * @return list<array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int}>
+     * @return list<array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int, suitability: array{suits: list<string>, consider: list<string>}}>
      */
     public function catalogue(array $availableSpecies, ?Species $species = null): array
     {
@@ -150,6 +154,7 @@ class BreedCatalogService
                 // 12-week challenge only a paid one (M5-F03, assertPlanAllowed).
                 'free_plan_allowed' => ! $entry['premium'],
                 'challenge_allowed' => $entry['premium'],
+                'suitability' => $this->suitability->for(BreedType::from($entry['breed'])),
             ];
         }
 

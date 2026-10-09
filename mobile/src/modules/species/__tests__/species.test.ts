@@ -13,8 +13,20 @@ import {
 
 describe('readBreed / readSpecies', () => {
   it('keeps every known breed, dogs and cats', () => {
-    for (const breed of ['mutt', 'border_collie', 'domestic_cat', 'maine_coon'] as const) {
+    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'domestic_cat', 'maine_coon'] as const) {
       expect(readBreed(breed)).toBe(breed);
+    }
+  });
+
+  it('M5-R10: the Labrador Retriever is a paid dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('labrador_retriever'))).toBe('dog');
+    expect(isDefaultFreeBreed('labrador_retriever')).toBe(false);
+    expect(breedName('labrador_retriever')).toBe('Labradorec');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('labrador_retriever')).toBe('Labrador Retriever');
+    } finally {
+      await i18n.changeLanguage('sl');
     }
   });
 

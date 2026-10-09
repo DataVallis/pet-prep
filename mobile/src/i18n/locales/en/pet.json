@@ -64,21 +64,22 @@
       },
       "challenge": {
         "title": "12-week challenge — {{price}}",
-        "hint": "The programme that shows whether your child is ready for a dog, with the Border Collie, a certificate and the full history. The challenge starts with a purchase: the dog waits until you buy it for this dog (also possible before the contract is signed). One-time payment, no subscription. Want to try first? Choose the free mixed breed."
+        "hint": "The programme that shows whether your child is ready for a dog, with a paid breed of your choice, a certificate and the full history. The challenge starts with a purchase: the dog waits until you buy it for this dog (also possible before the contract is signed). One-time payment, no subscription. Want to try first? Choose the free mixed breed."
       }
     },
     "planMissing": "Choose a plan.",
-    "breedFreeNote": "On the free plan the dog is always a mixed breed. The Border Collie is part of the 12-week challenge.",
-    "breedChallengeNote": "The 12-week challenge is with a paid breed (Border Collie). The mixed breed is the free plan's dog — choose “Free mixed breed” for it.",
+    "breedFreeNote": "On the free plan the dog is always a mixed breed. Paid breeds are part of the 12-week challenge.",
+    "breedChallengeNote": "The 12-week challenge is with a paid breed. The mixed breed is the free plan's dog — choose “Free mixed breed” for it.",
     "breedTitle": "Breed",
     "searchLabel": "Search breeds",
-    "searchPlaceholder": "Search breeds (e.g. collie)",
+    "searchPlaceholder": "Search by breed name",
     "searchEmpty": "No breed matches “{{query}}”.",
     "badgeFree": "Free",
     "badgeChallenge": "Challenge",
     "breedHints": {
       "mutt": "The free plan's dog. Not part of the 12-week challenge.",
       "border_collie": "Part of the 12-week challenge.",
+      "labrador_retriever": "Part of the 12-week challenge.",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week"
     },
@@ -113,6 +114,12 @@
         "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
         "adult": "2 meals a day; walks of 12,000 steps a day.",
         "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      },
+      "labrador_retriever": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 9,000 at 9 months. Accidents in the house are coming soon.",
+        "young": "2 meals a day; walks of 9,000 steps a day (like an adult dog).",
+        "adult": "2 meals a day; walks of 9,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 6,800 steps a day."
       },
       "domestic_cat": {
         "puppy": "Arrives as a 2-month-old kitten.",
@@ -177,6 +184,31 @@
         "senior": "Senior cat"
       },
       "buyFirst": "The 12-week challenge starts with a purchase: buy it under “Purchases / challenge” — before or after {{name}} signs the contract. Until then the cat waits."
+    }
+  },
+  "breedSuitability": {
+    "suitsTitle": "Good for:",
+    "considerTitle": "Keep in mind:",
+    "suits": {
+      "active_family": "an active family",
+      "family_pet": "family life",
+      "children": "families with children",
+      "small_children": "families with small children",
+      "first_time_owner": "first-time owners",
+      "apartment": "apartment living",
+      "large_home": "a large house and garden",
+      "other_pets": "homes with other pets",
+      "older_owners": "older owners",
+      "often_alone": "families who are out for a few hours",
+      "low_shedding": "homes that prefer less shedding"
+    },
+    "consider": {
+      "long_daily_exercise": "needs lots of exercise every day",
+      "needs_mental_stimulation": "needs mental challenges",
+      "may_herd_children": "may “herd” children at play",
+      "chews_when_bored": "chews things when bored",
+      "sheds": "sheds",
+      "food_motivated_weight": "loves food — watch the weight"
     }
   },
   "media": {

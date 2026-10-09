@@ -82,7 +82,9 @@ function dsdMigrate(): void
 /** The confirmed seeder rows (David 2026-10-05). */
 function dsdConfirmedRows(): array
 {
-    return array_values(array_filter(BreedStageParamsSeeder::rows(), fn (array $r) => $r['decision'] === BreedStageParamsSeeder::CONFIRMED));
+    // The data migration covered the breeds of that time (M5-R10: the Labrador reuses some
+    // CONFIRMED general rows, but it is seeded with them — never migrated).
+    return array_values(array_filter(BreedStageParamsSeeder::rows(), fn (array $r) => in_array($r['breed_slug'], ['mutt', 'border-collie'], true) && $r['decision'] === BreedStageParamsSeeder::CONFIRMED));
 }
 
 /**

@@ -459,14 +459,18 @@ describe('GET /api/breeds', function () {
                 'breed' => 'mutt', 'slug' => 'mutt', 'species' => 'dog', 'premium' => false,
                 'free_plan_allowed' => true, 'challenge_allowed' => false, 'label_key' => 'breeds.mutt',
                 'search_keywords' => ['mešanček', 'mesancek', 'mutt', 'mixed'], 'sort_order' => 0,
+                // M5-R10: no sourced suitability tags for the mutt yet.
+                'suitability' => ['suits' => [], 'consider' => []],
             ])
             ->assertJsonPath('breeds.1.breed', 'border_collie')
             ->assertJsonPath('breeds.1.premium', true)
             ->assertJsonPath('breeds.1.challenge_allowed', true)
-            ->assertJsonCount(2, 'breeds');
+            // M5-R10: the Labrador Retriever (paid, sort_order 20).
+            ->assertJsonPath('breeds.2.breed', 'labrador_retriever')
+            ->assertJsonCount(3, 'breeds');
 
         // Flag off: the cat feature alone changes nothing.
-        spCatalogue($parent, ['features' => ['species_cat']])->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(2, 'breeds');
+        spCatalogue($parent, ['features' => ['species_cat']])->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(3, 'breeds');
         spCatalogue($parent, ['species' => 'cat', 'features' => ['species_cat']])->assertOk()->assertJsonCount(0, 'breeds');
     });
 
@@ -474,11 +478,11 @@ describe('GET /api/breeds', function () {
         spCatsOn();
         $parent = User::factory()->parent()->create();
 
-        spCatalogue($parent)->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(2, 'breeds');
+        spCatalogue($parent)->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(3, 'breeds');
 
         $all = spCatalogue($parent, ['features' => ['species_cat', 'unknown_future']])->assertOk()
             ->assertJsonPath('species', ['dog', 'cat']);
-        expect(array_column($all->json('breeds'), 'breed'))->toBe(['mutt', 'border_collie', 'domestic_cat', 'maine_coon']);
+        expect(array_column($all->json('breeds'), 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'domestic_cat', 'maine_coon']);
 
         $cats = spCatalogue($parent, ['species' => 'cat', 'features' => ['species_cat']])->assertOk();
         expect(array_column($cats->json('breeds'), 'breed'))->toBe(['domestic_cat', 'maine_coon'])
@@ -494,7 +498,7 @@ describe('GET /api/breeds', function () {
 
         $breeds = spCatalogue($parent, ['species' => 'dog'])->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie'])
+        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever'])
             ->and($breeds[0]['sort_order'])->toBe(50)
             ->and($breeds[1]['label_key'])->toBe('breeds.collie')
             ->and($breeds[1]['search_keywords'])->toBe(['bc']);

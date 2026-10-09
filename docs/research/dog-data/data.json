@@ -939,6 +939,506 @@
       }
     }
   },
+  "labrador_retriever": {
+    "_note": "Added 2026-10-09 (M5-R10-01). Quotes as returned by the web-fetch tool on 2026-10-09; spot-check before import (sources.md S48–S62).",
+    "identity": {
+      "value": "FCI No. 122, Group 8 Section 1 (Retrievers), Great Britain",
+      "unit": "—",
+      "source_id": "S49",
+      "quote": "Standard number: 122; Group n°8 - Chiens rapporteurs de gibier - Chiens leveurs de gibier - Chiens d'eau; Section: Rapporteurs de gibier; Country of origin: GRANDE-BRETAGNE",
+      "confidence": "high",
+      "notes": "FCI standard (S48): 'Group 8 Retrievers, Flushing dogs, Water dogs. Section 1 Retrievers.' 'UTILIZATION: Retriever.' Definitive FCI acceptance 24/12/1954 (S49). NOTE: both S48 and S49 give 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 08.09.2026' (EN version dated 06.10.2026) — a very recent revision; verify on fci.be."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S50",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "PDSA (S53): 'Size: Large'. Woodgreen (S60): 'Size: Large'. AKC breed page (S62) calls it a 'medium-to-large dog'."
+    },
+    "height": {
+      "fci_ideal": {
+        "value": {
+          "male": [
+            56,
+            57
+          ],
+          "female": [
+            54,
+            56
+          ]
+        },
+        "unit": "cm at withers",
+        "source_id": "S48",
+        "quote": "Ideal height at the withers: Males: 56 – 57 cm. Females: 54 – 56 cm.",
+        "confidence": "high",
+        "notes": "RKC standard (S51) differs for bitches: 'Ideal height at withers: dogs: 56-57 cms (22-22½ ins); bitches: 55-56 cms (21½-22 ins).' PDSA (S53): 'Height: 55-57 cm'."
+      },
+      "rkc_ideal": {
+        "value": {
+          "male": [
+            56,
+            57
+          ],
+          "female": [
+            55,
+            56
+          ]
+        },
+        "unit": "cm at withers",
+        "source_id": "S51",
+        "quote": "Ideal height at withers: dogs: 56-57 cms (22-22½ ins); bitches: 55-56 cms (21½-22 ins).",
+        "confidence": "high",
+        "notes": "Bitch lower limit 55 cm vs FCI 54 cm (S48)."
+      },
+      "akc_range": {
+        "value": {
+          "male": [
+            57.2,
+            62.2
+          ],
+          "female": [
+            54.6,
+            59.7
+          ]
+        },
+        "unit": "cm (converted from 22½–24½ in / 21½–23½ in)",
+        "source_id": "S52",
+        "quote": "The height at the withers for a dog is 22½ to 24½ inches; for a bitch is 21½ to 23½ inches.",
+        "confidence": "high",
+        "notes": "AKC allows taller dogs than FCI/RKC (up to 62.2 cm vs 57 cm)."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            29.5,
+            36.3
+          ],
+          "female": [
+            24.9,
+            31.8
+          ]
+        },
+        "unit": "kg (converted from dogs 65–80 lb, bitches 55–70 lb)",
+        "source_id": "S52",
+        "quote": "Approximate weight of dogs and bitches in working condition: dogs 65 to 80 pounds; bitches 55 to 70 pounds.",
+        "confidence": "high",
+        "notes": "From the AKC breed standard (approved 1994). Overall 24.9–36.3 kg. FCI (S48) and RKC (S51) standards give no weight."
+      },
+      "pdsa": {
+        "value": [
+          25,
+          35
+        ],
+        "unit": "kg",
+        "source_id": "S53",
+        "quote": "Weight: 25-35 kg",
+        "confidence": "medium",
+        "notes": "Woodgreen (S60): 'Weight: 25-36 kg'. Consistent with AKC."
+      },
+      "uk_measured_mean": {
+        "value": {
+          "male": 35.2,
+          "female": 30.4
+        },
+        "unit": "kg (mean adult bodyweight, SD 5.9 / 5.2)",
+        "source_id": "S55",
+        "quote": "The mean adult bodyweight of males (35.2 kg, SD 5.9 kg) was higher than for females (30.4 kg, SD 5.2 kg) (P < 0.001).",
+        "confidence": "high",
+        "notes": "Measured in UK primary-care Labradors (VetCompass, McGreevy et al. 2018). Males average at the top of the AKC range; note 8.8 % were recorded overweight/obese."
+      },
+      "salt_category": {
+        "value": "V (30–<40 kg) by measured UK means; AKC range spans IV/V",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": "Category IV: 15 to <30 kg; Category V: 30 to <40 kg",
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours; whether Salt 2017 listed the Labrador in a category could not be checked (PMC not reachable 2026-10-09)."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value, not breed-specific. Labrador AKC males 65–80 lb are 'Large'; bitches 55–70 lb straddle Medium (24–59 lb: 12–15 months) and Large. Salt (S8): 'larger breeds requiring up to 24 months to reach adult body weight'. Quote is a table row on the page (Large (59–99 pounds) | 15–18 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. Not derived: the existing logistic shape (general_by_size.growth.logistic_model) is a MEDIUM-breed curve (≈99 % at 57 weeks) and would contradict the large-breed 15–18 months (S10). A large-breed curve needs a source (S9 has no large breed; Salt 2017 raw data not downloadable). Open question for David."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.1,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": "Labrador Retriever (orange, x̃= 13.1)",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep), corrected Figure 3 legend (author correction, same document as S16, read from the LJMU repository copy because PMC was not reachable). The Dogs Trust summary page (S15) does not list the Labrador. Conflicts with S55 (12.0 y)."
+      },
+      "median_uk_vetcompass_2018": {
+        "value": 12.0,
+        "unit": "years",
+        "source_id": "S55",
+        "quote": "The median longevity of Labrador retrievers overall was 12.0 years (IQR 9.9–13.8, range 0.0–16.0).",
+        "confidence": "high",
+        "notes": "McGreevy, Wilson, …, O'Neill (2018) — VetCompass, 33,320 Labradors under care in 2013; longevity from the deaths in a random sample. Colour effect: 'The median longevity of non-chocolate coloured dogs (n = 139, 12.1 years…' vs '…chocolate coloured animals (n = 34, 10.7 years…' (S55; press summary S56)."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S50",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "PDSA (S53): 'Over 10 years'. Woodgreen (S60): 'Life expectancy: 10-12 years'."
+      },
+      "senior_from": {
+        "value": 9.8,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25% of lifespan (S11) × median 13.1 y (S54) → 0.75 × 13.1 = 9.8 y = 118 months (same as Border Collie). With the VetCompass median 12.0 y (S55): 0.75 × 12.0 = 9.0 y = 108 months. Dogs Trust rule of thumb > 7 y (S14).",
+        "derived_from": [
+          "S11",
+          "S54"
+        ],
+        "months": 118,
+        "alternative": {
+          "value_years": 9.0,
+          "months": 108,
+          "derived_from": [
+            "S11",
+            "S55"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S50",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "medium",
+        "notes": "Sources disagree: Guide Dogs UK (S59): 'Labrador retrievers generally need at least 90 minutes of exercise daily as adults.'; Woodgreen (S60): 'Exercise needs: 60-90 mins'; PDSA (S53) gives no minutes: 'Full of energy, Labradors need a lot of exercise and mental enrichment each day to keep them physically fit'. Confidence lowered to medium for the conflict."
+      },
+      "energy": {
+        "value": "full of energy, very active",
+        "unit": "—",
+        "source_id": "S53",
+        "quote": "Full of energy, Labradors need a lot of exercise and mental enrichment each day to keep them physically fit",
+        "confidence": "high",
+        "notes": "FCI (S48): 'Strongly built, short-coupled, very active'."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "good-tempered, very agile; intelligent, keen and biddable, strong will to please; kindly, no aggression or undue shyness; adaptable, devoted companion",
+        "unit": "—",
+        "source_id": "S48",
+        "quote": "Good-tempered, very agile. Excellent nose, soft mouth; keen lover of water. Adaptable, devoted companion. Intelligent, keen and biddable, with a strong will to please. Kindly nature, with no trace of aggression or undue shyness.",
+        "confidence": "high",
+        "notes": "Returned by the tool in three consecutive fragments; RKC (S51) same wording ('keen love of water'). AKC (S52): 'The ideal disposition is one of a kindly, outgoing, tractable nature;' 'eager to please and non-aggressive towards man or animal.'"
+      },
+      "food_motivation": {
+        "value": "highly food motivated",
+        "unit": "—",
+        "source_id": "S59",
+        "quote": "They're generally described as intelligent, enjoy learning, and highly food motivated",
+        "confidence": "high",
+        "notes": "Cambridge (S58): 'People who live with Labradors often say they are obsessed by food.' S55: 'They are often of stocky build with a tendency to eat beyond their physiological needs...'. Genetic basis: S57."
+      },
+      "pomc_deletion": {
+        "value": "POMC gene deletion associated with higher body weight and greater food motivation; ~23 % of Labradors carry ≥1 copy",
+        "unit": "—",
+        "source_id": "S57",
+        "quote": "The deletion … associated with body weight (per allele effect of 0.33 SD) … greater food motivation; allele frequency of 12%",
+        "confidence": "high",
+        "notes": "Raffan et al. 2016, Cell Metab 23:893–900 (abstract fragments as returned; ellipses ours). Press release (S58): 'Around one in four (23%) Labradors is thought to carry at least one copy of the variant.' and 'for each copy of the gene carried, the dog was on average 1.9kg heavier.'"
+      },
+      "obesity_tendency": {
+        "value": "prone to obesity; 8.8 % recorded overweight/obese in UK primary care",
+        "unit": "—",
+        "source_id": "S53",
+        "quote": "Prone to obesity.",
+        "confidence": "high",
+        "notes": "S55: 'overweight/obesity (183, 8.8%, 95% CI: 7.6–10.1)' — 2nd most common disorder after otitis externa (10.4 %). S56: 'We found that 8.8 percent of UK Labradors are overweight or obese.'"
+      },
+      "chewing": {
+        "value": "retrievers chew a lot through adolescence (to ~2 years)",
+        "unit": "—",
+        "source_id": "S61",
+        "quote": "Retrievers, especially, are known for their love of chewing throughout their adolescence",
+        "confidence": "low",
+        "notes": "Single tier-C source (vet column, 2012); the saying 'Chew till they're two; shed till they're dead.' is folklore, not data. Same page attributes it to the retrieving instinct and too little exercise. No tier A/B Labrador-specific chewing source found."
+      },
+      "family": {
+        "value": "bonds with the whole family; good family pet with socialisation",
+        "unit": "—",
+        "source_id": "S53",
+        "quote": "They usually bond well with the whole family and are affectionate and loving.",
+        "confidence": "medium",
+        "notes": "PDSA (S53): 'Labradors make perfect family pets, given the right socialisation, as with all breeds.'"
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 7,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 7 | Labrador Retriever |",
+        "confidence": "medium",
+        "notes": "Rank 7 in Coren's list as reproduced on Wikipedia (table row). Coren's own article (S34) could not be fetched on 2026-10-09 — verify in the book. Top 10: Border Collie, Poodle, German Shepherd, Golden Retriever, Doberman, Shetland Sheepdog, Labrador, Papillon, Rottweiler, Australian Cattle Dog."
+      },
+      "coren_tier": {
+        "value": "brightest: <5 repetitions, obeys first command ≥95%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: fewer than 5 repetitions.; Obey first command: 95% of the time or better.;",
+        "confidence": "low",
+        "notes": "Same tier as the Border Collie (ranks 1–10). Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "obedient, quick to learn, eager to please; treats work well",
+        "unit": "—",
+        "source_id": "S53",
+        "quote": "They're obedient, quick to learn and eager to please.",
+        "confidence": "high",
+        "notes": "Guide Dogs UK (S59): 'With their known famed love of food, Labradors may enjoy treats as part of training and food-based games and puzzles.' Woodgreen (S60): 'Training: Moderately easy'."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal — see proposed_game_parameters.labrador_retriever.learning_multiplier (needs David's decision).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "strongly built, short-coupled, very active; broad skull; broad, deep chest",
+        "unit": "—",
+        "source_id": "S48",
+        "quote": "Strongly built, short-coupled, very active; broad in skull; broad and deep through chest and ribs; broad and strong over loins and hindquarters.",
+        "confidence": "high",
+        "notes": "RKC (S51) adds that agility 'precludes excessive body weight or excessive substance'."
+      },
+      "colours": {
+        "value": [
+          "black",
+          "yellow (light cream to fox red)",
+          "liver/chocolate (light to dark)"
+        ],
+        "unit": "list",
+        "source_id": "S48",
+        "quote": "Wholly black, yellow or liver/chocolate. Yellows range from light cream to fox red, livers/chocolates range from light to dark.",
+        "confidence": "high",
+        "notes": "Solid colours only: 'Small white spot on chest and the rear of pasterns permissible.' 'Any other colour or combination of colours unacceptable.' RKC (S51): 'The only correct colours are wholly black, yellow and liver/chocolate.' AKC (S52): 'The Labrador Retriever coat colors are black, yellow and chocolate.' Colour frequencies: not sourced."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. No source gives colour frequencies. Note for game: chocolate Labradors had a shorter median life (10.7 vs 12.1 y, S55) — do not model unless David wants it."
+      },
+      "coat": {
+        "value": "short, dense, no wave or feathering, fairly hard to the touch; weather-resistant undercoat",
+        "unit": "—",
+        "source_id": "S48",
+        "quote": "Distinctive feature, short, dense, without wave or feathering, giving fairly hard feel to the touch; weather-resistant undercoat.",
+        "confidence": "high",
+        "notes": "AKC (S52): 'It should be short, straight and very dense, giving a fairly hard feeling to the hand.' RKC (S50): 'Coat length: Short'."
+      },
+      "tail": {
+        "value": "'otter' tail: very thick at base, tapering, medium length, no feathering; not curled over back",
+        "unit": "—",
+        "source_id": "S48",
+        "quote": "Distinctive feature, very thick towards base, gradually tapering towards tip, medium length, free from feathering, but clothed thickly all round with short, thick, dense coat, thus giving \"rounded\" appearance described as \"Otter\" tail. May be carried gaily, but should not curl over back.",
+        "confidence": "high",
+        "notes": "Returned in four consecutive fragments; RKC (S51) identical."
+      },
+      "ears": {
+        "value": "hanging, not large or heavy, close to head, set rather far back",
+        "unit": "—",
+        "source_id": "S48",
+        "quote": "Not large or heavy, hanging close to head and set rather far back.",
+        "confidence": "high",
+        "notes": "RKC (S51) identical. Only one ear type → no variation in game."
+      },
+      "eyes": {
+        "value": "brown or hazel (AKC: brown in black and yellow; brown or hazel in chocolate)",
+        "unit": "—",
+        "source_id": "S48",
+        "quote": "Medium size, expressing intelligence and good temper; brown or hazel.",
+        "confidence": "high",
+        "notes": "AKC (S52): 'Eye color should be brown in black and yellow Labradors, and brown or hazel in chocolates.'"
+      }
+    },
+    "suitability": {
+      "_note": "AKC breed-trait ratings (1–5) were NOT reachable: akc.org/dog-breeds/labrador-retriever/ returned only intro text (ratings load dynamically). Fallback = RKC breed-page fields (S50), plus PDSA (S53) and Woodgreen (S60).",
+      "akc_traits": {
+        "value": null,
+        "unit": "1–5",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not reachable 2026-10-09 — see sources.md 'Looked for but not found'."
+      },
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S50",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S50",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S50",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S50",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S50",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "PDSA (S53): 'a weekly brush usually enough'."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S50",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S50",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "Woodgreen (S60): 'Shedding: Moderate'."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S50",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S50",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-09)."
+      },
+      "pdsa_family": {
+        "value": "perfect family pets given socialisation; affectionate with the whole family",
+        "unit": "—",
+        "source_id": "S53",
+        "quote": "Labradors make perfect family pets, given the right socialisation, as with all breeds.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_first_time_owner": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not covered on the PDSA page (as returned)."
+      },
+      "pdsa_time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not covered on the PDSA page; Woodgreen (S60) lists 'Ability to stay home alone' but shows no rating."
+      },
+      "woodgreen_sociable_with_pets": {
+        "value": "High",
+        "unit": "—",
+        "source_id": "S60",
+        "quote": "Sociable with pets: High",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "woodgreen_training": {
+        "value": "Moderately easy",
+        "unit": "—",
+        "source_id": "S60",
+        "quote": "Training: Moderately easy",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "woodgreen_grooming": {
+        "value": "Moderate",
+        "unit": "—",
+        "source_id": "S60",
+        "quote": "Grooming needs: Moderate",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_monthly_cost": {
+        "value": 105,
+        "unit": "GBP/month (minimum)",
+        "source_id": "S53",
+        "quote": "Minimum cost (per month): £105",
+        "confidence": "medium",
+        "notes": "UK prices; may be useful for parent-facing info."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -1490,6 +1990,124 @@
       "confidence": "low",
       "notes": "UNSOURCED — Claude proposal (M5-R03b): a dog that arrives grown has usually learnt some basics in its previous home or shelter; no source gives numbers. Applied once at pet creation, only for pets with training; not a session.",
       "decision": "potrdil David 2026-10-06: young, adult and senior arrivals start with sit 50 %, potty 70 %, come 30 %, place 0 %; a puppy (also bought) starts at 0 %"
+    },
+    "labrador_retriever": {
+      "step_goal_adult": {
+        "value": 9000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature step count). 90 min (Guide Dogs UK 'at least 90 minutes of exercise daily', S59) × 100 steps/min (S45, adult heuristic) — same method as the Border Collie. Alternatives recorded, not chosen: RKC 'More than 2 hours per day' (S50) → 12,000 (= Border Collie); Woodgreen 60–90 min (S60) → 6,000–9,000.",
+        "derived_from": [
+          "S59",
+          "S45"
+        ],
+        "alternatives": {
+          "rkc_more_than_2_hours": 12000,
+          "woodgreen_60_90_min": [
+            6000,
+            9000
+          ]
+        },
+        "decision": "potrdil David 2026-10-09: 90 min (Guide Dogs UK ≥ 90 min, S59) × 100 steps/min → 9,000 steps; keeps the Labrador apart from the Border Collie (12,000)"
+      },
+      "exercise_minutes_adult": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": "S59",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Game value = Guide Dogs UK lower bound (S59; see labrador_retriever.exercise for the exact quote). RKC (S50) says more than 2 hours, Woodgreen (S60) 60–90 min.",
+        "decision": "potrdil David 2026-10-09: 90 min/day (RKC '>2 h' S50 and Woodgreen 60–90 min S60 recorded as alternatives)"
+      },
+      "exercise_minutes_senior": {
+        "value": 68,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 75 % of the adult 90 min (senior rule David confirmed for other breeds 2026-10-05) = 67.5 min; minutes are whole numbers (StageParamKey::validate, API exercise_minutes int) → 68 min = 6,800 steps.",
+        "steps": 6800,
+        "decision": "potrdil David 2026-10-09: 68 min → 6,800 steps (75 % of 90 = 67.5, rounded to whole minutes)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 118
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game boundaries (no exact month in the literature). young 9: AAHA 'cessation of rapid growth (~6–9 months, varying with breed and size)' (S11) — same as the other dogs. Large-breed evidence: growth ends 15–18 months (S10 'Large (59–99 pounds): 15–18 months'), up to 24 months (S8); AAHA's young-adult boundary is cessation of RAPID growth, not end of growth, so 9 months still fits (alternative 12 not chosen). adult 36: AAHA 3–4 years (S11), same as other breeds. senior 118 = 0.75 × 13.1 y (S11 + S54); 108 if the VetCompass median 12.0 y (S55) were used (not chosen).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S8",
+          "S54"
+        ],
+        "alternatives": {
+          "young": 12,
+          "senior_vetcompass": 108
+        },
+        "decision": "potrdil David 2026-10-09: young 9, adult 36, senior 118 (0.75 × McMillan 2024 median 13.1 y, S54)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 118
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). First month of each stage (rule David confirmed 2026-10-05), so the dog stays in its stage for the 12-week challenge.",
+        "decision": "potrdil David 2026-10-09: first month of each stage (2 / 9 / 36 / 118)"
+      },
+      "learning_multiplier": {
+        "value": 1.8,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature factor). Coren rank 7 is in the same 'brightest' tier as the Border Collie (<5 repetitions, ≥95 % first-command obedience; S35, tier C); the tier is Coren's only quantitative statement, so the evidence alone would give 2.0 — David chose 1.8 so the Border Collie stays visibly fastest. No individual variation (like the Border Collie; S42 says breed explains only ~9 % of individual behaviour — not used). Food motivation (S59, S57) could later justify a treat-training bonus.",
+        "derived_from": [
+          "S35",
+          "S42"
+        ],
+        "alternatives": [
+          1.8
+        ],
+        "decision": "potrdil David 2026-10-09: 1.8 — same Coren 'brightest' tier as the Border Collie (2.0), BC stays visibly fastest"
+      },
+      "obesity_mechanic": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED idea, not built (post-MVP backlog; no decision asked). Labradors are prone to obesity (S53; 8.8 % overweight/obese, S55) and highly food motivated (S59, S57). Idea: extra treats/overfeeding raise a weight score faster than for other breeds; no number sourced."
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game values (no breed-specific number in the sources) — identical to the Border Collie breed_configs row (BreedConfigsSeeder).",
+        "decision": "potrdil David 2026-10-09: same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      }
     }
   }
 }

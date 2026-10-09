@@ -7,6 +7,9 @@ import { i18n } from '@/i18n';
 import {
   breedsOf,
   choiceWithPlan,
+  considerLabel,
+  CONSIDER_TAGS,
+  hasSuitability,
   choiceWithSpecies,
   completeChoice,
   FALLBACK_CATALOGUE,
@@ -14,7 +17,11 @@ import {
   INITIAL_PICKER_CHOICE,
   lockedBreedsFor,
   readBreedCatalogue,
+  readSuitability,
   searchBreeds,
+  suitabilityA11y,
+  suitsLabel,
+  SUITS_TAGS,
   type BreedCatalogue,
 } from '@/modules/petProfile/picker';
 
@@ -96,10 +103,78 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s two dogs, never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
-    expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual(['mutt', 'border_collie']);
+    expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual(['mutt', 'border_collie', 'labrador_retriever']);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
+    const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
+    expect(lab).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 20 }),
+    );
+    expect(lab?.search_keywords).toEqual(expect.arrayContaining(['labradorec', 'labrador retriever', 'prinasalec']));
+    // Mirrors config/breed_suitability.php.
+    expect(lab?.suitability).toEqual({
+      suits: ['active_family', 'family_pet', 'large_home', 'other_pets'],
+      consider: ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
+    });
+    expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
+    // The fallback is already in picker order.
+    expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual(['mutt', 'border_collie', 'labrador_retriever']);
+  });
+});
+
+describe('suitability tags (M5-R10)', () => {
+  const withSuitability = (suitability: unknown) =>
+    readBreedCatalogue({ species: ['dog'], breeds: [entry('mutt', 'dog', false), { ...entry('labrador_retriever', 'dog', true, 20), suitability }] })
+      ?.breeds[1].suitability;
+
+  it('reads the known tags in the server order', () => {
+    expect(withSuitability({ suits: ['children', 'active_family'], consider: ['sheds'] })).toEqual({
+      suits: ['children', 'active_family'],
+      consider: ['sheds'],
+    });
+  });
+
+  it('drops unknown keys, wrong kinds, non-strings and duplicates', () => {
+    expect(
+      withSuitability({
+        suits: ['active_family', 'hypoallergenic', 'sheds', 42, null, 'active_family'],
+        consider: ['long_daily_exercise', 'children', 'brand_new_tag'],
+      }),
+    ).toEqual({ suits: ['active_family'], consider: ['long_daily_exercise'] });
+    expect(readSuitability({ suits: ['hypoallergenic'], consider: [] })).toEqual({ suits: [], consider: [] });
+  });
+
+  it('missing or malformed → no tags (older server, mutt, cats)', () => {
+    expect(withSuitability(undefined)).toEqual({ suits: [], consider: [] });
+    expect(withSuitability(null)).toEqual({ suits: [], consider: [] });
+    expect(withSuitability('active_family')).toEqual({ suits: [], consider: [] });
+    expect(withSuitability({ suits: 'active_family' })).toEqual({ suits: [], consider: [] });
+    expect(hasSuitability(readSuitability(undefined))).toBe(false);
+    expect(hasSuitability(readSuitability({ consider: ['sheds'] }))).toBe(true);
+  });
+
+  it('every tag of the vocabulary has a label in both languages, never "hypoallergenic"', async () => {
+    try {
+      for (const lang of ['sl', 'en']) {
+        await i18n.changeLanguage(lang);
+        for (const tag of SUITS_TAGS) expect(suitsLabel(tag)).not.toMatch(/^pet:|hipoaler|hypoaller/i);
+        for (const tag of CONSIDER_TAGS) expect(considerLabel(tag)).not.toMatch(/^pet:|hipoaler|hypoaller/i);
+      }
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+    expect(SUITS_TAGS).toHaveLength(11);
+    expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
+    expect(SUITS_TAGS).not.toContain('house_with_garden');
+    expect(CONSIDER_TAGS).toHaveLength(6);
+  });
+
+  it('one a11y sentence with both headings', () => {
+    expect(suitabilityA11y({ suits: ['active_family', 'large_home'], consider: ['sheds'] })).toBe(
+      'Primerno za: aktivno družino, veliko hišo z vrtom. Upoštevajte: izpada mu dlaka.',
+    );
+    expect(suitabilityA11y({ suits: [], consider: [] })).toBe('');
   });
 });
 
@@ -120,6 +195,14 @@ describe('breed search', () => {
     expect(names('mejnkun', 'cat')).toEqual(['maine_coon']);
     expect(names('Mejnkun ', 'cat')).toEqual(['maine_coon']);
     expect(names('koli', 'dog')).toEqual(['border_collie']);
+  });
+
+  it('M5-R10: finds the Labrador by its name and the server synonyms', () => {
+    const lab = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(lab('labradorec')).toEqual(['labrador_retriever']);
+    expect(lab('Labradorski prinašalec')).toEqual(['labrador_retriever']);
+    expect(lab('retriever')).toEqual(['labrador_retriever']);
+    expect(lab('koli')).toEqual(['border_collie']);
   });
 
   it('empty query lists everything; no match → empty', () => {

@@ -22,6 +22,7 @@ export const SPECIES: readonly Species[] = ['dog', 'cat'];
 export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   mutt: 'dog',
   border_collie: 'dog',
+  labrador_retriever: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
 } satisfies Record<components['schemas']['BreedType'], Species>;

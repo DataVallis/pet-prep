@@ -40,6 +40,10 @@
 | follow the FIFe standard (C16); colour names / weights are unsourced.
 | Both `verified => false` (same rule as the dog breeds).
 |
+| Labrador Retriever (M5-R10, docs/research/dog-data labrador_retriever.appearance):
+| colours, coat, ears, eyes and the otter tail follow FCI 122 (S48) / RKC (S51) /
+| AKC (S52) — solid colours only; colour weights are unsourced → `verified => false`.
+|
 */
 
 return [
@@ -144,6 +148,49 @@ return [
             'tail' => ['moderately long, low-set with an upward swirl at the tip'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'markings', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10 (docs/research/dog-data/data.json labrador_retriever.appearance).
+    'labrador_retriever' => [
+        'display_name' => 'Labrador Retriever',
+        // Colour frequencies are in no source (labrador_retriever.appearance.colour_weights UNSOURCED) → all weights are a draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 122 (S48, https://www.fci.be/Nomenclature/Standards/122g08-en.pdf), Royal Kennel Club standard (S51), AKC standard 1994 (S52), RKC breed page (S50) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S50 "Size: Large"; PDSA S53, Woodgreen S60 the same',
+            'build' => 'S48 "Strongly built, short-coupled, very active; broad in skull; broad and deep through chest and ribs"',
+            'coat_length' => 'S48 "short, dense, without wave or feathering … weather-resistant undercoat"; S52 "short, straight and very dense"',
+            'coat_color' => 'S48 "Wholly black, yellow or liver/chocolate. Yellows range from light cream to fox red, livers/chocolates range from light to dark." (weights unsourced)',
+            'coat_pattern' => 'S48 "Small white spot on chest and the rear of pasterns permissible." "Any other colour or combination of colours unacceptable."',
+            'ear_carriage' => 'S48 "Not large or heavy, hanging close to head and set rather far back." (one ear type)',
+            'eye_color' => 'S48 "brown or hazel"; S52 "brown in black and yellow Labradors, and brown or hazel in chocolates" (the stricter AKC rule is used)',
+            'tail' => 'S48 "very thick towards base, gradually tapering towards tip … described as "Otter" tail"',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'strongly built, broad-chested', 'weight' => 3], 'sturdy, short-coupled'],
+            'coat_length' => ['short, dense'],
+            // Solid colours only (S48, S51, S52); shades inside the standard's ranges.
+            'coat_color' => [
+                ['value' => 'black', 'weight' => 3],
+                ['value' => 'yellow', 'weight' => 3],
+                'light cream yellow',
+                'fox red yellow',
+                ['value' => 'chocolate brown', 'weight' => 2],
+                'light liver brown',
+            ],
+            'coat_pattern' => [
+                ['value' => 'solid', 'weight' => 4],
+                'with a small white spot on the chest',
+            ],
+            'ear_carriage' => ['close-hanging'],
+            'eye_color' => [
+                ['value' => 'brown', 'weight' => 4],
+                ['value' => 'hazel', 'only_with' => ['coat_color' => ['chocolate brown', 'light liver brown']]],
+            ],
+            'tail' => ['thick, tapering "otter"'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

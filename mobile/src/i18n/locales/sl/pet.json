@@ -72,21 +72,22 @@
       },
       "challenge": {
         "title": "12-tedenski izziv — {{price}}",
-        "hint": "Program, ki pokaže, ali je otrok pripravljen na psa, z Border Colliejem, certifikatom in celotno zgodovino. Izziv se začne z nakupom: pes čaka, dokler izziva za tega psa ne kupite (lahko tudi pred podpisom pogodbe). Enkratno plačilo, brez naročnine. Bi najprej poskusili? Izberite brezplačnega mešančka."
+        "hint": "Program, ki pokaže, ali je otrok pripravljen na psa, s plačljivo pasmo po izbiri, certifikatom in celotno zgodovino. Izziv se začne z nakupom: pes čaka, dokler izziva za tega psa ne kupite (lahko tudi pred podpisom pogodbe). Enkratno plačilo, brez naročnine. Bi najprej poskusili? Izberite brezplačnega mešančka."
       }
     },
     "planMissing": "Izberite načrt.",
-    "breedFreeNote": "V brezplačnem načrtu je pes vedno mešanček. Border Collie je del 12-tedenskega izziva.",
-    "breedChallengeNote": "12-tedenski izziv je s plačljivo pasmo (Border collie). Mešanček je pes brezplačnega načrta — zanj izberite »Brezplačni mešanček«.",
+    "breedFreeNote": "V brezplačnem načrtu je pes vedno mešanček. Plačljive pasme so del 12-tedenskega izziva.",
+    "breedChallengeNote": "12-tedenski izziv je s plačljivo pasmo. Mešanček je pes brezplačnega načrta — zanj izberite »Brezplačni mešanček«.",
     "breedTitle": "Pasma",
     "searchLabel": "Išči pasmo",
-    "searchPlaceholder": "Išči pasmo (npr. koli)",
+    "searchPlaceholder": "Išči po imenu pasme",
     "searchEmpty": "Nobena pasma se ne ujema z »{{query}}«.",
     "badgeFree": "Brezplačno",
     "badgeChallenge": "Izziv",
     "breedHints": {
       "mutt": "Pes brezplačnega načrta. Ni del 12-tedenskega izziva.",
       "border_collie": "Del 12-tedenskega izziva.",
+      "labrador_retriever": "Del 12-tedenskega izziva.",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden"
     },
@@ -121,6 +122,12 @@
         "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
         "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
+      },
+      "labrador_retriever": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 9.000 pri 9 mesecih. Nezgode v hiši pridejo kmalu.",
+        "young": "2 obroka na dan; sprehod 9.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 9.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 6.800 korakov na dan."
       },
       "domestic_cat": {
         "puppy": "Pride kot mucek, star 2 meseca.",
@@ -185,6 +192,31 @@
         "senior": "Starejša mačka"
       },
       "buyFirst": "12-tedenski izziv se začne z nakupom: kupite ga v »Nakupi / izziv« — pred ali po tem, ko {{name}} podpiše pogodbo. Do takrat muca čaka."
+    }
+  },
+  "breedSuitability": {
+    "suitsTitle": "Primerno za:",
+    "considerTitle": "Upoštevajte:",
+    "suits": {
+      "active_family": "aktivno družino",
+      "family_pet": "družinsko življenje",
+      "children": "družino z otroki",
+      "small_children": "družino z majhnimi otroki",
+      "first_time_owner": "začetnike",
+      "apartment": "življenje v stanovanju",
+      "large_home": "veliko hišo z vrtom",
+      "other_pets": "dom z drugimi ljubljenčki",
+      "older_owners": "starejše lastnike",
+      "often_alone": "družino, ki je nekaj ur zdoma",
+      "low_shedding": "dom, kjer želite manj dlak"
+    },
+    "consider": {
+      "long_daily_exercise": "vsak dan potrebuje veliko gibanja",
+      "needs_mental_stimulation": "potrebuje miselne izzive",
+      "may_herd_children": "pri igri lahko »pase« otroke",
+      "chews_when_bored": "ko se dolgočasi, grize stvari",
+      "sheds": "izpada mu dlaka",
+      "food_motivated_weight": "rad je — pazite na težo"
     }
   },
   "media": {

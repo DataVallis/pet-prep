@@ -456,9 +456,12 @@ describe('regression: dogs unchanged by M5-R06-03', function () {
         $hash = fn (mixed $v): string => hash('sha256', json_encode($v, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
         $configs = collect(BreedConfigsSeeder::configs());
 
-        // Fingerprints computed from main's seeders before this change.
-        expect($hash(BreedStageParamsSeeder::rows()))->toBe('28d500305a87d3ce98d4c3de9dc470d49ef60c7773a1c934daf081d2143ef199')
-            ->and($hash($configs->where('species', 'dog')->values()->all()))->toBe('e159cb38c1e2127ea7b4b2f35ce3ba9f93601b190d20af8a0266ea2180b66450')
+        // Fingerprints computed from main's seeders before this change. M5-R10 added
+        // the Labrador: the fingerprint covers the two dog breeds of that time
+        // (same order → the same hash), so mutt / Border Collie stay byte-identical.
+        $oldDogs = ['mutt', 'border-collie'];
+        expect($hash(array_values(array_filter(BreedStageParamsSeeder::rows(), fn (array $r) => in_array($r['breed_slug'], $oldDogs, true)))))->toBe('28d500305a87d3ce98d4c3de9dc470d49ef60c7773a1c934daf081d2143ef199')
+            ->and($hash($configs->where('species', 'dog')->whereIn('breed_slug', $oldDogs)->values()->all()))->toBe('e159cb38c1e2127ea7b4b2f35ce3ba9f93601b190d20af8a0266ea2180b66450')
             ->and($hash($configs->where('species', 'cat')->values()->all()))->toBe('4470d9b9e1f44d9ce4db857683834f71b2a100d37df70bac30039e3a19f48d72')
             ->and(collect(BreedStageParamsSeeder::catRows())->pluck('breed_slug')->unique()->values()->all())->toBe(['domestic-cat', 'maine-coon']);
     });
