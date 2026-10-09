@@ -10,7 +10,7 @@
 - Otrok: »ti«, kratko, toplo, nikoli strašljivo ali sramotilno. **Starš: vikanje** (»Vaš otrok …«, brand/README — David 9. 10. 2026, za obe vrsti).
 - Slovenščina: **»muca« je ženskega spola** (»muca je lačna«, »bo zbolela«, »jo / ji«). **En samostalnik »muca« za vse starosti** (David 9. 10. 2026; brez ločenih besedil za mucka).
 - Angleščina: *cat*, **zaimek *it*** (kot *dog … it*; David 9. 10. 2026).
-- M3-12: obvestilo nikoli ne zahteva dejanja, ki ga aplikacija zavrne. Ko je odprto samo praskanje, hrana in voda čakata na **praskalnik** (čiščenje praskanja ne razreši) — vrstici `scratcher_first`. Če bi bila hrana / voda tudi po razrešitvi mogoča šele kasneje danes, obvestilo ne reče »potem jo lahko nahraniš«, ampak pove čas (vrstice `*_wait`); če danes ni več mogoča, obvestila o hrani ni. Od 9. 10. 2026 enako pri psu (David).
+- M3-12: obvestilo nikoli ne zahteva dejanja, ki ga aplikacija zavrne. Ko je odprto samo praskanje, hrana in voda čakata na **praskalnik** (čiščenje praskanja ne razreši) — vrstici `scratcher_first`. Če bi bila hrana / voda tudi po razrešitvi mogoča šele kasneje danes, obvestilo ne reče »potem jo lahko nahraniš«, ampak pove čas (vrstice `*_wait`); če danes ni več mogoča, gre namesto tega **opomnik za nered** (vrstice `soft/critical.hygiene`, `scratcher*`) — David 9. 10. 2026 (QA B1). Od 9. 10. 2026 enako pri psu (David).
 - Po neodvisnem QA (9. 10. 2026) popravljeno besedilo: »prazni posodi za hrano«, »Če muce ne nahraniš / Če muci ne daš vode«, »je bila na pesku«, pohvala tudi pri »počisti nered in na praskalnik«.
 
 ## Tabela
@@ -67,6 +67,6 @@
 1. ✅ **Mucek / muca:** »muca« za vse starosti, brez ločenih besedil za mucka.
 2. ✅ **Angleški zaimek:** *it*.
 3. ✅ **Starši:** slovenska obvestila staršem vikajo (»Vaš otrok danes ni poskrbel za psa / muco.«) — za obe vrsti; otroška besedila ostanejo »ti«. Zgrajeno (M5-R06-06b).
-4. ✅ **Pasji napaki popravljeni (M5-R06-06b):** (a) pri odprtem grizenju obvestilo o hrani / vodi reče »najprej pospravi pregrizeno in mu daj igračo« (`tidy_first`, z drugim neredom `clean_and_tidy_first`), ne »najprej počisti«; (b) če bi bilo hranjenje / voda tudi po razrešitvi mogoče šele kasneje danes, pasje obvestilo pove čas (`*_first_wait`), ne »Potem ga lahko nahraniš«; če danes ni več mogoče, ga ni.
+4. ✅ **Pasji napaki popravljeni (M5-R06-06b):** (a) pri odprtem grizenju obvestilo o hrani / vodi reče »najprej pospravi, kar je pregriznil, in mu daj igračo« (`tidy_first`, z drugim neredom `clean_and_tidy_first`), ne »najprej počisti«; (b) če bi bilo hranjenje / voda tudi po razrešitvi mogoče šele kasneje danes, pasje obvestilo pove čas (`*_first_wait`), ne »Potem ga lahko nahraniš«; če danes ni več mogoče, gre opomnik za nered (QA B1).
 
 Še odprto: **pregled besedil v tabeli** (David, pred R06-09).

@@ -10,7 +10,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ## 2026-10-09 — Obvestila staršem vikajo, kuža ne zahteva nemogočega (M5-R06-06b)
 
-**Kaj se je zgodilo:** David je odločil štiri vprašanja o besedilih obvestil. Slovenski alarm staršem zdaj vika (»Vaš otrok danes ni poskrbel za psa.«), pri psu in pri muci. Pri psu sta popravljeni dve napaki pravila »obvestilo nikoli ne zahteva nemogočega«: ko kuža nekaj pregrize, obvestilo o hrani reče »najprej pospravi pregrizeno in mu daj igračo« (ne »najprej počisti«), in ko bi bil obrok tudi po čiščenju mogoč šele zvečer, obvestilo pove uro (»Naslednji obrok je ob 17:00.«), namesto da obljubi »Potem ga lahko nahraniš«. Muca obdrži »muca« za vse starosti in angleški *it*.
+**Kaj se je zgodilo:** David je odločil štiri vprašanja o besedilih obvestil. Slovenski alarm staršem zdaj vika (»Vaš otrok danes ni poskrbel za psa.«), pri psu in pri muci. Pri psu sta popravljeni dve napaki pravila »obvestilo nikoli ne zahteva nemogočega«: ko kuža nekaj pregrize, obvestilo o hrani reče »najprej pospravi, kar je pregriznil, in mu daj igračo« (ne »najprej počisti«), in ko bi bil obrok tudi po čiščenju mogoč šele zvečer, obvestilo pove uro (»Naslednji obrok je ob 17:00.«), namesto da obljubi »Potem ga lahko nahraniš«. Če hranjenje tisti dan ni več mogoče, otrok dobi opomnik za nered — nered ne ostane neopažen do bolezni (popravek po neodvisnem pregledu QA). Muca obdrži »muca« za vse starosti in angleški *it*.
 
 **Zakaj je pomembno:** Starši dobijo obvestila v istem spoštljivem tonu kot v aplikaciji; otrok ne dobi navodila, ki ga gumb nato zavrne.
 

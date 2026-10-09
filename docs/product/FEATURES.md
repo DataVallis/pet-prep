@@ -159,7 +159,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7
 | Funkcija | Kaj naredi | Za koga | Stanje | Roadmap ID | Od kdaj |
 |---|---|---|---|---|---|
 | Opomnik otroku (30 %) in nujno (10 %) | Blag opomnik, nato nujen z zvokom; besedilo po tem, kar manjka (hrana, voda, nered). **Nikoli ne zahteva nemogočega** (M3-12): če hranjenje / voda zdaj ni mogoča, pove, kdaj bo (»Naslednji obrok je ob 17:00«) ali »najprej počisti nered« (pri pregriznjenem copatu »pospravi in mu daj igračo«); naslednji obrok je otrokov (okno staršev v tihih urah se preskoči); če danes ni več mogoče, opomnika ni. Otrok, ki še ni podpisal pogodbe, opomnikov za nego ne dobi. | otrok | ✅ | M3-02, M3-12 | 2026-10-05 (M3-12 2026-10-07) |
-| Alarm staršem | Ko pes več kot uro nima hrane, vode ali čistoče: »Tvoj otrok danes ni poskrbel za psa.« Vsem staršem družine. | starš | ✅ | M3-02 | 2026-10-05 |
+| Alarm staršem | Ko pes več kot uro nima hrane, vode ali čistoče: »Vaš otrok danes ni poskrbel za psa.« (staršem vikamo od 9. 10. 2026, M5-R06-06b) Vsem staršem družine. | starš | ✅ | M3-02, M5-R06-06b | 2026-10-09 |
 | Bolezen in zavetišče | Obvestilo staršem in otroku. | starš, otrok | ✅ | M3-02 | 2026-10-05 |
 | Opomnik za sprehod | Največ enkrat na dan, najprej 2 uri po koncu tihih ur, brez groženj; **nikoli takoj po polnoči** — najprej 2 uri po koncu nočnega okna (privzeto ob 9:00), tudi če so tihe ure izklopljene (David 2026-10-08 08:54; »2 uri po tihih urah« ostaja *predlog*). | otrok | ✅ | M3-02, M5-F08 | 2026-10-08 |
 | Tihe ure in mir | V tihih urah nič; isto obvestilo največ enkrat na 30 min; novica o bolezni počaka do jutra (*predlog*). | starš, otrok | ✅ | M3-02 | 2026-10-05 |
