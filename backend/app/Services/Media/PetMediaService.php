@@ -105,9 +105,12 @@ class PetMediaService
      */
     public function generateReferenceImage(Pet $pet): bool
     {
-        // M5-R06-01: no appearance data for the breed (cats until M5-R06-07) → no
-        // media at all (never a dog prompt); the pet stays playable without media.
-        if (! PetDnaService::hasAppearance($pet->breed_type->value)) {
+        // M5-R06-01: no appearance data for the breed → no media at all (never a
+        // dog prompt); the pet stays playable without media. M5-R06-07: a cat
+        // without DNA v2 (created before cats had appearance data) likewise —
+        // the legacy v1 prompt path is for dogs only; never rewrite its DNA.
+        $dnaVersion = is_array($pet->pet_dna) ? (int) ($pet->pet_dna['version'] ?? 1) : 0;
+        if (! PetDnaService::hasAppearance($pet->breed_type->value) || ($pet->isCat() && $dnaVersion < PetDnaService::VERSION)) {
             if ($pet->media_status !== 'ready') {
                 $pet->updateQuietly(['media_status' => 'disabled']);
             }
@@ -794,7 +797,8 @@ class PetMediaService
             // puppy's `accident` after puppy → young) is kept but not served.
             // M3-11 P6: judged by whether the event can happen, not by the tier, so a
             // pet whose tier dropped (grandfathered → basic) keeps serving what it has.
-            if (in_array($state, [PetStateEnum::Accident, PetStateEnum::Chewing], true) && ! $this->entitlements->behaviourApplies($pet, $state)) {
+            // M5-R06-07: the same for the cat's `scratching` (behaviourApplies is per species).
+            if ($state->isBehaviour() && ! $this->entitlements->behaviourApplies($pet, $state)) {
                 continue;
             }
             $slot = $slots->first(fn (PetMedia $m) => $m->isVideo() && $m->state === $state->value);

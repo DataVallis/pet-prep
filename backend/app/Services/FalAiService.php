@@ -56,8 +56,8 @@ class FalAiService
      */
     public function generateInitialPetDna(BreedType $breed): array
     {
-        // Legacy DNA v1 has dog prompts only (M5-R06-01): a cat never gets one
-        // (PairingService skips it; cat media is M5-R06-07, DNA v2 only).
+        // Legacy DNA v1 has dog prompts only (M5-R06-01 / M5-R06-07): a cat never
+        // gets one — PairingService builds DNA v2 for every cat.
         if ($breed->species() !== Species::Dog) {
             throw new \InvalidArgumentException("Legacy pet DNA v1 has no prompts for {$breed->value}.");
         }
@@ -249,10 +249,12 @@ class FalAiService
         $breedKey = (string) ($dna['breed'] ?? $pet->breed_type->value);
         // DNA v2 traits describe the dog; v1 pets rely on the start image alone.
         $traits = (int) ($dna['version'] ?? 1) >= 2 && is_array($dna['traits'] ?? null) ? $dna['traits'] : [];
+        // M5-R06-07: cat templates for a cat (videoPrompt throws for a state the species never has).
+        $species = PetAppearancePrompt::speciesOf($breedKey);
 
         $submitted = $this->gateway->submit(
             $profile,
-            $profile->videoInput($startImageUrl, $this->prompts->videoPrompt($breedKey, $state, $traits), $this->prompts->videoNegativePrompt()),
+            $profile->videoInput($startImageUrl, $this->prompts->videoPrompt($breedKey, $state, $traits), $this->prompts->videoNegativePrompt($species)),
             AiSpendPurpose::StateVideo,
             $this->webhookUrl(),
             petId: $pet->id,

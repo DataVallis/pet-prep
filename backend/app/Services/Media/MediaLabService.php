@@ -5,7 +5,9 @@ namespace App\Services\Media;
 use App\Enums\AiCallFailure;
 use App\Enums\AiSpendPurpose;
 use App\Enums\BreedType;
+use App\Enums\LifeStage;
 use App\Enums\PetStateEnum;
+use App\Enums\Species;
 use App\Jobs\PollMediaLabResult;
 use App\Jobs\RunMediaLabImage;
 use App\Jobs\SubmitMediaLabVideo;
@@ -26,6 +28,12 @@ use InvalidArgumentException;
  * Image run: N samples (1–4) × M image profiles. Every sample has ONE trait
  * set + seed rendered by every chosen profile (a fair side-by-side).
  * Video run: one completed lab image × M video profiles × one pet state.
+ *
+ * Cats (M5-R06-07): the breed decides the species templates; an image run
+ * may add a life-stage cue (kitten look, young Maine Coon); a video run
+ * refuses a state the species never has. perPetCostUsd() shows what one
+ * pet's media would cost with the production profiles, so the cat cost is
+ * checked here before cats are switched on (CAT_SPEC §8).
  */
 class MediaLabService
 {
@@ -65,13 +73,17 @@ class MediaLabService
      *
      * @throws AiCallException when the run would exceed the per-run / daily / monthly cap
      */
-    public function startImageRun(User $admin, string $breedKey, array $fixedTraits, int $samples, array $profileKeys): MediaLabRun
+    public function startImageRun(User $admin, string $breedKey, array $fixedTraits, int $samples, array $profileKeys, ?LifeStage $stage = null): MediaLabRun
     {
         $this->assertAdmin($admin);
 
-        if (BreedType::tryFrom($breedKey) === null) {
+        $breed = BreedType::tryFrom($breedKey);
+
+        if ($breed === null) {
             throw new InvalidArgumentException("Unknown breed {$breedKey}.");
         }
+
+        $negative = $this->prompts->negativePrompt($breed->species());
 
         if ($samples < 1 || $samples > (int) config('media.lab.max_samples', 4)) {
             throw new InvalidArgumentException('Samples must be between 1 and '.config('media.lab.max_samples', 4).'.');
@@ -89,10 +101,14 @@ class MediaLabService
             $seed = random_int(1, 4_294_967_295);
             $sample = $this->dna->sample($breedKey, $seed, $fixed, $fingerprints);
             $fingerprints[] = $sample['fingerprint'];
-            $drawn[] = ['seed' => $seed, 'traits' => $sample['traits'], 'prompt' => $this->prompts->imagePrompt($breedKey, $sample['traits'])];
+            // No stage = the DNA v2 prompt exactly as a new pet stores it (imagePrompt).
+            $prompt = $stage === null
+                ? $this->prompts->imagePrompt($breedKey, $sample['traits'])
+                : $this->prompts->stagedImagePrompt($breedKey, $sample['traits'], $stage);
+            $drawn[] = ['seed' => $seed, 'traits' => $sample['traits'], 'prompt' => $prompt];
         }
 
-        $run = DB::transaction(function () use ($admin, $breedKey, $fixed, $samples, $profiles, $estimate, $drawn) {
+        $run = DB::transaction(function () use ($admin, $breedKey, $fixed, $samples, $profiles, $estimate, $drawn, $negative) {
             $run = MediaLabRun::create([
                 'user_id' => $admin->id,
                 'kind' => MediaLabRun::KIND_IMAGE,
@@ -113,8 +129,8 @@ class MediaLabService
                         'seed' => $sample['seed'],
                         'traits' => $sample['traits'],
                         'prompt' => $sample['prompt'],
-                        'negative_prompt' => $profile->supportsNegativePrompt ? $this->prompts->negativePrompt() : null,
-                        'params' => $profile->imageInput($sample['prompt'], $sample['seed'], $this->prompts->negativePrompt()),
+                        'negative_prompt' => $profile->supportsNegativePrompt ? $negative : null,
+                        'params' => $profile->imageInput($sample['prompt'], $sample['seed'], $negative),
                         'status' => MediaLabResult::STATUS_QUEUED,
                     ]);
 
@@ -153,9 +169,17 @@ class MediaLabService
         $this->assertAffordable($estimate);
 
         $breedKey = (string) $source->run->breed;
-        $prompt = $this->prompts->videoPrompt($breedKey, $state, is_array($source->traits) ? $source->traits : []);
+        $species = PetAppearancePrompt::speciesOf($breedKey);
 
-        return DB::transaction(function () use ($admin, $source, $profiles, $estimate, $state, $prompt, $breedKey) {
+        // M5-R06-07: a cat has no accident / chewing video, a dog no scratching.
+        if (! $state->appliesTo($species)) {
+            throw new InvalidArgumentException("A {$species->value} has no '{$state->value}' video — pick another state.");
+        }
+
+        $prompt = $this->prompts->videoPrompt($breedKey, $state, is_array($source->traits) ? $source->traits : []);
+        $negative = $this->prompts->videoNegativePrompt($species);
+
+        return DB::transaction(function () use ($admin, $source, $profiles, $estimate, $state, $prompt, $breedKey, $negative) {
             $run = MediaLabRun::create([
                 'user_id' => $admin->id,
                 'kind' => MediaLabRun::KIND_VIDEO,
@@ -175,8 +199,8 @@ class MediaLabService
                     'sample_index' => 0,
                     'traits' => $source->traits,
                     'prompt' => $prompt,
-                    'negative_prompt' => $profile->supportsNegativePrompt ? $this->prompts->videoNegativePrompt() : null,
-                    'params' => $profile->videoInput((string) $source->result_url, $prompt, $this->prompts->videoNegativePrompt()),
+                    'negative_prompt' => $profile->supportsNegativePrompt ? $negative : null,
+                    'params' => $profile->videoInput((string) $source->result_url, $prompt, $negative),
                     'source_image_url' => $source->result_url,
                     'status' => MediaLabResult::STATUS_QUEUED,
                 ]);
@@ -186,6 +210,27 @@ class MediaLabService
 
             return $run;
         });
+    }
+
+    /**
+     * What one pet's media costs per life stage with the PRODUCTION profiles
+     * (reference image + the tier's state videos the species can get) — list
+     * price, no fal call. Dogs: `full` counts the puppy accident and chewing
+     * (the maximum); cats: `full` = six classic states + scratching. A stage
+     * change regenerates the image and the videos (M5-R01).
+     *
+     * @return array{images: int, videos: int, usd: float}
+     */
+    public function perPetCostUsd(Species $species, string $tier): array
+    {
+        $states = array_values(array_filter(
+            MediaEntitlementService::statesOfTier($tier),
+            fn (PetStateEnum $state): bool => $state->appliesTo($species),
+        ));
+        $usd = $this->profiles->referenceImage()->estimatedCostUsd()
+            + count($states) * $this->profiles->stateVideo()->estimatedCostUsd();
+
+        return ['images' => 1, 'videos' => count($states), 'usd' => round($usd, 4)];
     }
 
     /**

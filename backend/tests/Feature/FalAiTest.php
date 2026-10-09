@@ -2,6 +2,7 @@
 
 use App\Enums\BreedType;
 use App\Enums\PetStateEnum;
+use App\Enums\Species;
 use App\Events\PetUpdated;
 use App\Jobs\GeneratePetReferenceImage;
 use App\Jobs\StorePetMedia;
@@ -91,8 +92,9 @@ describe('FalAiService (disabled in test environment)', function () {
 
 describe('PetStateEnum', function () {
     it('has all required pet states', function () {
-        // Six classic states + the M5-R02 behaviour videos (accident, chewing).
-        expect(PetStateEnum::cases())->toHaveCount(8);
+        // Six classic states + the M5-R02 behaviour videos (accident, chewing) + the cat's scratching (M5-R06-07).
+        expect(PetStateEnum::cases())->toHaveCount(9);
+        expect(PetStateEnum::Scratching->value)->toBe('scratching');
         expect(PetStateEnum::Accident->value)->toBe('accident');
         expect(PetStateEnum::Chewing->value)->toBe('chewing');
         expect(PetStateEnum::Idle->value)->toBe('idle');
@@ -105,8 +107,12 @@ describe('PetStateEnum', function () {
 
     it('provides prompt modifiers for each state', function () {
         foreach (PetStateEnum::cases() as $state) {
-            expect($state->promptModifier())->toBeString();
-            expect($state->promptModifier())->not->toBeEmpty();
+            // M5-R06-07: per species — a dog has no scratching, a cat no accident / chewing.
+            foreach (Species::cases() as $species) {
+                if ($state->appliesTo($species)) {
+                    expect($state->promptModifier($species))->toBeString()->not->toBeEmpty();
+                }
+            }
         }
     });
 });

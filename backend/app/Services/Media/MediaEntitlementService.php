@@ -22,7 +22,10 @@ use App\Models\Pet;
  * rule, waiting for David): `accident` for a pet with behaviour events
  * (`Pet::behaviourEventsEnabled`, PR #42) in the puppy stage, `chewing` for
  * any pet with behaviour events. Other pets never have these events, so
- * they never get these videos. The free set is unchanged. A stored
+ * they never get these videos. Cats (M5-R06-07, CAT_SPEC §8): the same
+ * six classic states with cat prompts, and `scratching` instead of
+ * `accident` / `chewing` in the full set (any profiled cat — every cat
+ * can scratch after a missed play). The free set is unchanged. A stored
  * behaviour video the pet is no longer entitled to (accident after
  * puppy → young) is not served (PetMediaService::mediaFor).
  *
@@ -85,14 +88,23 @@ class MediaEntitlementService
     }
 
     /**
-     * A behaviour video only where its event can happen (M5-R02); every
-     * other state always applies.
+     * A behaviour video only where its event can happen (M5-R02, cats
+     * M5-R06-07); every other state always applies.
      */
     public function behaviourApplies(Pet $pet, PetStateEnum $state): bool
     {
+        // M5-R06-07: behaviour videos are per species — a cat never gets
+        // `accident` / `chewing`, a dog never gets `scratching`.
+        if (! $state->appliesTo($pet->speciesValue())) {
+            return false;
+        }
+
         return match ($state) {
             PetStateEnum::Accident => $pet->behaviourEventsEnabled() && $pet->life_stage === LifeStage::Puppy,
             PetStateEnum::Chewing => $pet->behaviourEventsEnabled(),
+            // The cat's scratching (M5-R06-05) needs no behaviour opt-in: every
+            // profiled cat can scratch after a missed play (ScratchingService::appliesOn).
+            PetStateEnum::Scratching => ! $pet->isLegacyProfile(),
             default => true,
         };
     }

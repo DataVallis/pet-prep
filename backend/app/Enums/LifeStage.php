@@ -46,8 +46,8 @@ enum LifeStage: string
     /**
      * Visual cue for the AI reference image (PetAppearancePrompt). Pet-only
      * description; never a name or other personal data. Cat cues are a draft
-     * (CAT_SPEC §8 "faze v promptu", still (D)) — used once M5-R06-07 gives
-     * cats media.
+     * (CAT_SPEC §8 "faze v promptu", still (D)), used by the cat prompts since
+     * M5-R06-07 (+ the breed's `stage_notes`, e.g. Maine Coon).
      */
     public function promptCue(Species $species = Species::Dog): string
     {

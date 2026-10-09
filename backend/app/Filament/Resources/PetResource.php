@@ -98,7 +98,9 @@ class PetResource extends Resource
                             ->required(),
                         Forms\Components\Select::make('pet_state')
                             ->label('State')
-                            ->options(PetStateEnum::class)
+                            // Only values pets.pet_state can hold — behaviour states
+                            // (accident / chewing / scratching) are video slots only.
+                            ->options(collect(PetStateEnum::petStates())->mapWithKeys(fn (PetStateEnum $s): array => [$s->value => $s->name])->all())
                             ->required(),
                     ])
                     ->columns(3),
@@ -263,7 +265,7 @@ class PetResource extends Resource
                     ->options(BreedType::class),
                 Tables\Filters\SelectFilter::make('pet_state')
                     ->label('State')
-                    ->options(PetStateEnum::class),
+                    ->options(collect(PetStateEnum::petStates())->mapWithKeys(fn (PetStateEnum $s): array => [$s->value => $s->name])->all()),
                 Tables\Filters\TernaryFilter::make('is_active')
                     ->label('Active'),
                 Tables\Filters\TernaryFilter::make('is_game_over')

@@ -74,7 +74,7 @@ class PetDnaService
             'trait_fingerprint' => $sample['fingerprint'],
             'appearance_verified' => (bool) config("breed_appearance.{$breedKey}.verified", false),
             'prompt' => $prompt,
-            'negative_prompt' => $this->prompts->negativePrompt(),
+            'negative_prompt' => $this->prompts->negativePrompt(PetAppearancePrompt::speciesOf($breedKey)),
             // v1-compatible keys read by GeneratePetReferenceImage, FalAiService and the API resources.
             'prompt_anchor' => $prompt,
             'visual_traits' => $sample['traits'],
@@ -139,7 +139,8 @@ class PetDnaService
 
     /**
      * M5-R06-01: the breed has appearance data (config/breed_appearance.php).
-     * Cats have none until M5-R06-07 — they get no DNA and no AI media.
+     * A breed without it gets no DNA and no AI media. Cats have it since
+     * M5-R06-07 (DNA v2 only — never the legacy v1 DNA).
      */
     public static function hasAppearance(string $breedKey): bool
     {

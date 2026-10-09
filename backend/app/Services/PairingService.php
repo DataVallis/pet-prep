@@ -329,10 +329,11 @@ class PairingService
         // litter) comes with M5-R06-05 and gets its own gate then.
         $isDog = $breed->species() === Species::Dog;
         $dnaVersion = (int) config('media.pet_dna_version', PetDnaService::VERSION);
-        // M5-R06-01: a breed without appearance data (cats until M5-R06-07) gets no
-        // DNA and no AI media — never a dog prompt, never the legacy DNA v1.
+        // M5-R06-01: a breed without appearance data gets no DNA and no AI media.
+        // M5-R06-07: cats have appearance data and always get DNA v2 — the legacy
+        // DNA v1 (AI_PET_DNA_VERSION=1) has dog prompts only and refuses a cat.
         $hasAppearance = PetDnaService::hasAppearance($breed->value);
-        $petDna = ! $hasAppearance || $dnaVersion === PetDnaService::VERSION ? null : $this->falAiService->generateInitialPetDna($breed);
+        $petDna = ! $hasAppearance || $dnaVersion === PetDnaService::VERSION || ! $isDog ? null : $this->falAiService->generateInitialPetDna($breed);
         $mediaEnabled = $hasAppearance && $this->falAiService->isEnabled();
 
         // Contract before birth (David 2026-10-04, PRODUCT_SPEC §3,

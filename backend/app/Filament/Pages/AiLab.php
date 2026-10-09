@@ -2,15 +2,19 @@
 
 namespace App\Filament\Pages;
 
+use App\Enums\LifeStage;
 use App\Enums\PetStateEnum;
+use App\Enums\Species;
 use App\Filament\Widgets\AiSpendOverview;
 use App\Models\MediaLabResult;
 use App\Models\MediaLabRun;
 use App\Models\User;
 use App\Services\Media\AiCallException;
+use App\Services\Media\MediaEntitlementService;
 use App\Services\Media\MediaLabService;
 use App\Services\Media\MediaProfiles;
 use App\Services\Media\ModelProfile;
+use App\Services\Media\PetAppearancePrompt;
 use App\Services\Media\PetDnaService;
 use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\Placeholder;
@@ -29,6 +33,11 @@ use InvalidArgumentException;
 /**
  * AI Lab (M4-02, superadmin only): compare fal.ai image / video model profiles
  * on DNA v2 prompts. Every call passes the spend caps (M4-07). No child data.
+ * Cats (M5-R06-07): the cat breeds come from config/breed_appearance.php,
+ * an optional life stage tries the stage look (kitten, young Maine Coon),
+ * the video states say which species has them, and "Per-pet cost" shows a
+ * pet's media cost per species with the production models (checked before
+ * cats are switched on).
  *
  * @property Form $imageForm
  * @property Form $videoForm
@@ -117,6 +126,10 @@ class AiLab extends Page implements HasForms
                             ->options($this->profileOptions(ModelProfile::KIND_IMAGE))
                             ->required()
                             ->live(),
+                        Select::make('stage')
+                            ->label('Life stage (optional)')
+                            ->placeholder('none — the prompt a new pet stores')
+                            ->options(fn (Get $get) => $this->stageOptions((string) ($get('breed') ?: 'mutt'))),
                         Section::make('Fixed traits (optional)')->schema($traitFields)->columns(3)->collapsed(),
                         Placeholder::make('estimate')
                             ->label('Estimated cost')
@@ -124,6 +137,9 @@ class AiLab extends Page implements HasForms
                                 array_values((array) $get('profiles')),
                                 (int) $get('samples'),
                             ))),
+                        Placeholder::make('per_pet_cost')
+                            ->label('Per-pet cost per life stage (production models, list price)')
+                            ->content(fn () => $this->perPetCostLabel()),
                     ])->columns(2),
             ])
             ->statePath('imageData');
@@ -142,7 +158,7 @@ class AiLab extends Page implements HasForms
                             ->searchable()
                             ->required(),
                         Select::make('state')
-                            ->options(collect(PetStateEnum::cases())->mapWithKeys(fn (PetStateEnum $s) => [$s->value => $s->value.' — '.$s->description()])->all())
+                            ->options(collect(PetStateEnum::cases())->mapWithKeys(fn (PetStateEnum $s) => [$s->value => $s->value.' — '.$s->description().$this->speciesSuffix($s)])->all())
                             ->required(),
                         CheckboxList::make('profiles')
                             ->label('Video models')
@@ -169,6 +185,7 @@ class AiLab extends Page implements HasForms
             (array) ($data['fixed'] ?? []),
             (int) $data['samples'],
             array_values((array) $data['profiles']),
+            LifeStage::tryFrom((string) ($data['stage'] ?? '')),
         ), 'Image run queued');
     }
 
@@ -275,6 +292,55 @@ class AiLab extends Page implements HasForms
         }
 
         return sprintf('~$%.3f (lab limit per run $%.2f)', $usd, (float) config('media.lab.max_run_usd', 3));
+    }
+
+    /**
+     * Life stages with the species' names (dog: puppy … senior, cat: kitten …).
+     *
+     * @return array<string, string>
+     */
+    private function stageOptions(string $breedKey): array
+    {
+        $species = PetAppearancePrompt::speciesOf($breedKey);
+
+        return collect(LifeStage::ordered())
+            ->mapWithKeys(fn (LifeStage $stage) => [$stage->value => $stage->value.' — '.$stage->label($species, 'en')])
+            ->all();
+    }
+
+    /** " (dogs only)" / " (cats only)" for the behaviour states. */
+    private function speciesSuffix(PetStateEnum $state): string
+    {
+        return match (true) {
+            ! $state->appliesTo(Species::Cat) => ' (dogs only)',
+            ! $state->appliesTo(Species::Dog) => ' (cats only)',
+            default => '',
+        };
+    }
+
+    private function perPetCostLabel(): string
+    {
+        try {
+            $lab = app(MediaLabService::class);
+            $lines = [];
+
+            foreach (Species::cases() as $species) {
+                $basic = $lab->perPetCostUsd($species, MediaEntitlementService::TIER_BASIC);
+                $full = $lab->perPetCostUsd($species, MediaEntitlementService::TIER_FULL);
+                $lines[] = sprintf(
+                    '%s: free set 1 image + %d videos ~$%.2f · challenge set 1 image + up to %d videos ~$%.2f',
+                    ucfirst($species->value),
+                    $basic['videos'],
+                    $basic['usd'],
+                    $full['videos'],
+                    $full['usd'],
+                );
+            }
+
+            return implode(' | ', $lines);
+        } catch (InvalidArgumentException) {
+            return '—';
+        }
     }
 
     /**
