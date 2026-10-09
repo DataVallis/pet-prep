@@ -343,7 +343,11 @@ export function parentBehaviourLines(
   }
   for (const e of b.active_events) {
     const due = familyClock(e.due_at, timezone);
-    lines.push(PARENT_BEHAVIOUR_STRINGS.openEvent(PARENT_BEHAVIOUR_STRINGS.kinds[e.kind], due));
+    const label = PARENT_BEHAVIOUR_STRINGS.kinds[e.kind];
+    // M5-R06-08c: a scratched sofa is resolved at the scratching post, not cleaned up.
+    lines.push(
+      e.kind === 'scratching' && due ? t('cat:parent.openScratching', { label, due }) : PARENT_BEHAVIOUR_STRINGS.openEvent(label, due),
+    );
   }
   return lines;
 }

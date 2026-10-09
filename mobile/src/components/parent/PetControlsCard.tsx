@@ -22,15 +22,15 @@ import { useSetHardStop } from '@/hooks/queries/useParentQueries';
 import { parentDashboardKey } from '@/modules/family/live';
 import { Card, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import {
-  PET_STATUS_LABELS,
   breedLabel,
   caretakerNames,
   petStatus,
+  petStatusText,
   type FamilyOverview,
   type FamilyPet,
 } from '@/modules/family/family';
 import { palette } from '@/theme';
-import { t } from '@/i18n';
+import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
 
@@ -39,15 +39,19 @@ export const PET_CONTROLS_STRINGS = strings('parent', 'petControls', {
   caretakers: (names: string) => t('parent:petControls.caretakers', { names }),
   a11y: (action: string, pet: string, names: string) =>
     names ? t('parent:petControls.a11yNames', { action, pet, names }) : t('parent:petControls.a11y', { action, pet }),
-  confirmStop: (names: string) =>
-    names ? t('parent:petControls.confirmStopFor', { names }) : t('parent:petControls.confirmStop'),
+  /** M5-R06-08c: texts follow the species of the pet ("Muca se zamrzne …"). */
+  confirmStop: (names: string, species: string | null = null) =>
+    names
+      ? tSpecies('parent:petControls.confirmStopFor', species, { names })
+      : tSpecies('parent:petControls.confirmStop', species),
+  confirmResumeFor: (species: string | null) => tSpecies('parent:petControls.confirmResume', species),
 });
 
 const S = PET_CONTROLS_STRINGS;
 
-function errorText(error: unknown): string {
+function errorText(error: unknown, species: string | null): string {
   if (!(error instanceof ApiError)) return S.errors.offline;
-  return error.status === 404 ? S.errors.not_found : S.errors.server;
+  return error.status === 404 ? tSpecies('parent:petControls.errors.not_found', species) : S.errors.server;
 }
 
 export default function PetControlsCard({ pet, family }: { pet: FamilyPet; family: FamilyOverview }) {
@@ -63,6 +67,7 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
   const status = petStatus(pet);
   const stopped = pet.is_hard_stopped;
   const petName = breedLabel(pet.breed_type, pet.species);
+  const species = pet.species ?? null;
   const canControl = pet.is_active && !pet.is_game_over;
 
   // The pet reached the intended state by other means → nothing left to send.
@@ -96,7 +101,7 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
           setResult({ text: () => res.is_hard_stopped ? S.stopped : S.resumed, isError: false });
         },
         onError: (err) => {
-          setResult({ text: () => errorText(err), isError: true });
+          setResult({ text: () => errorText(err, species), isError: true });
           if (!(err instanceof ApiError)) {
             // The request may have landed (lost response): show the real state before a retry.
             setRefreshing(true);
@@ -122,14 +127,14 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
           {names ? S.caretakers(names) : S.noCaretakers}
         </Text>
         <Text style={[styles.status, stopped && styles.statusStopped]} testID={`pet-status-${pet.id}`}>
-          {status ? PET_STATUS_LABELS[status] : S.playing}
+          {status ? petStatusText(status, species) : S.playing}
         </Text>
       </View>
 
       {canControl &&
         (intent !== null ? (
           <View style={[styles.confirmBox, intent && styles.confirmDanger]} testID={`hard-stop-confirm-${pet.id}`}>
-            <Text style={styles.confirmText}>{intent ? S.confirmStop(names) : S.confirmResume}</Text>
+            <Text style={styles.confirmText}>{intent ? S.confirmStop(names, species) : S.confirmResumeFor(species)}</Text>
             {refreshing && <Text style={styles.muted}>{S.checking}</Text>}
             <View style={styles.row}>
               <Pressable

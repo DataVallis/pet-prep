@@ -24,7 +24,7 @@ import {
 import { readPetBehaviour, type PetBehaviour } from '@/modules/behaviour/behaviour';
 import { readPetTraining, type PetTrainingSummary } from '@/modules/training/training';
 import { readPlayToday, type PlayToday } from '@/modules/play/play';
-import { t } from '@/i18n';
+import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { breedName, isSpecies } from '@/modules/species/species';
 
@@ -213,6 +213,11 @@ export function petStatus(pet: FamilyPet): PetStatus | null {
 
 /** "Kuža je pri veterinarju" … — a live view (i18n `family:petStatus`): read it when rendering. */
 export const PET_STATUS_LABELS: Readonly<Record<PetStatus, string>> = strings('family', 'petStatus');
+
+/** The status line of the pet shown ("Muca je pri veterinarju" for a cat, M5-R06-08c). */
+export function petStatusText(status: PetStatus, species: string | null | undefined): string {
+  return species === 'cat' ? tSpecies(`family:petStatus.${status}`, species) : PET_STATUS_LABELS[status];
+}
 
 /** Pets a new child may join: alive and active (the backend refuses others with `pet_not_joinable`). */
 export function joinablePets(family: FamilyOverview | null): FamilyPet[] {

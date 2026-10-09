@@ -14,7 +14,7 @@
 import type { LifeStage } from '@/api/client';
 import { localParts } from '@/modules/childPet/familyTime';
 import { mediaKey } from '@/modules/petMedia/petMedia';
-import { formatDogAge, formatProfileDate, LIFE_STAGES, PET_PROFILE_STRINGS } from '@/modules/petProfile/petProfile';
+import { formatDogAge, formatProfileDate, LIFE_STAGES, stageText } from '@/modules/petProfile/petProfile';
 import { strings } from '@/i18n/strings';
 
 /** User-visible strings (`pet:growth`, M1-18). `photo` = viewer title of a legacy picture (no stage, no age). */
@@ -98,9 +98,9 @@ export function hasGrowthSection(album: GrowthAlbum | null | undefined): album i
 }
 
 /** "Mladiček · 2 meseca", "Odrasel", "3 mesece"; null for a legacy picture (no stage, no age). */
-export function growthTitle(entry: GrowthEntry): string | null {
+export function growthTitle(entry: GrowthEntry, species: string | null = null): string | null {
   const parts = [
-    entry.stage ? PET_PROFILE_STRINGS.stages[entry.stage] : null,
+    entry.stage ? stageText(entry.stage, species) : null,
     entry.ageMonths !== null ? formatDogAge(entry.ageMonths) : null,
   ].filter((x): x is string => x !== null);
   return parts.length > 0 ? parts.join(' · ') : null;
@@ -113,16 +113,17 @@ export function growthDate(entry: GrowthEntry, timeZone: string | null): string 
   return parts ? formatProfileDate(parts.date) : null;
 }
 
-export function growthViewerItems(album: GrowthAlbum, timeZone: string | null): GrowthViewerItem[] {
+/** `species`: the parent's album passes the pet's species (M5-R06-08c); the child's follows its text species. */
+export function growthViewerItems(album: GrowthAlbum, timeZone: string | null, species: string | null = null): GrowthViewerItem[] {
   return album.entries.map((entry) => {
     const date = growthDate(entry, timeZone);
     const detail = [date, entry.isCurrent ? GROWTH_STRINGS.current : null].filter((x): x is string => x !== null).join(' · ');
     return {
       kind: 'photo',
       id: `growth-${entry.generation}`,
-      label: growthTitle(entry) ?? GROWTH_STRINGS.photo,
+      label: growthTitle(entry, species) ?? GROWTH_STRINGS.photo,
       detail: detail.length > 0 ? detail : null,
-      stageLabel: entry.stage ? PET_PROFILE_STRINGS.stages[entry.stage] : null,
+      stageLabel: entry.stage ? stageText(entry.stage, species) : null,
       ageLabel: entry.ageMonths !== null ? formatDogAge(entry.ageMonths) : null,
       dateLabel: date,
       url: entry.url,

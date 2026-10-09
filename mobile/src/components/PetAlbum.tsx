@@ -33,6 +33,7 @@
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { tSpecies } from '@/i18n';
 import {
   ActivityIndicator,
   BackHandler,
@@ -80,6 +81,11 @@ export interface PetAlbumProps {
   timeZone?: string | null;
   /** A growth URL failed (likely expired) or is about to expire — refetch the growth album. */
   onGrowthExpired?: () => void;
+  /**
+   * M5-R06-08c: the parent's album passes the pet's species (growth title and stage labels:
+   * "Kako je muca rasla", "Mucek"). The child's album leaves it out (its text species applies).
+   */
+  species?: string | null;
   testID?: string;
 }
 
@@ -359,17 +365,19 @@ function Tile({
 /** "Kako je kuža rasel": horizontal strip of growth pictures, oldest first, current last. */
 function GrowthStrip({
   items,
+  species,
   onOpen,
   onExpired,
 }: {
   items: GrowthViewerItem[];
+  species: string | null;
   onOpen: (id: string) => void;
   onExpired: (url: string) => void;
 }) {
   return (
     <View style={styles.growthSection} testID="album-growth">
       <Text style={styles.sectionTitle} accessibilityRole="header">
-        {GROWTH_STRINGS.section}
+        {species !== null ? tSpecies('pet:growth.section', species) : GROWTH_STRINGS.section}
       </Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.growthStrip} testID="album-growth-strip">
         {items.map((item) => {
@@ -426,6 +434,7 @@ export default function PetAlbum({
   growth = null,
   timeZone = null,
   onGrowthExpired,
+  species = null,
   testID = 'pet-album',
 }: PetAlbumProps) {
   const insets = useContext(SafeAreaInsetsContext) ?? ZERO_INSETS;
@@ -435,8 +444,8 @@ export default function PetAlbum({
   const items = useMemo(() => buildAlbumItems(media), [media, language]);
   const playable = useMemo(() => items.filter(isPlayable), [items]);
   const growthItems = useMemo(
-    () => (hasGrowthSection(growth) ? growthViewerItems(growth, timeZone) : []),
-    [growth, timeZone, language],
+    () => (hasGrowthSection(growth) ? growthViewerItems(growth, timeZone, species) : []),
+    [growth, timeZone, language, species],
   );
   const [selection, setSelection] = useState<{ list: ViewerList; id: string } | null>(null);
   const [muted, setMuted] = useState(true);
@@ -586,7 +595,7 @@ export default function PetAlbum({
       ) : (
         <ScrollView contentContainerStyle={[styles.scrollContent, { paddingBottom: Math.max(insets.bottom, 16) + 16 }]} testID="album-grid">
           {growthItems.length > 0 && (
-            <GrowthStrip items={growthItems} onExpired={reportGrowthExpired} onOpen={(id) => setSelection({ list: 'growth', id })} />
+            <GrowthStrip items={growthItems} species={species} onExpired={reportGrowthExpired} onOpen={(id) => setSelection({ list: 'growth', id })} />
           )}
           <View style={styles.grid} onLayout={onGridLayout} testID="album-tiles">
             {items.map((item) => (

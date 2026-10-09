@@ -11,7 +11,7 @@
  */
 
 import type { LifeStage, PetOrigin } from '@/api/client';
-import { t } from '@/i18n';
+import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
 export const LIFE_STAGES: readonly LifeStage[] = ['puppy', 'young', 'adult', 'senior'];
@@ -123,21 +123,36 @@ export function formatProfileDate(isoDate: string): string {
   return t('pet:date.format', { day: d, month, year: y });
 }
 
-/** "Mladiček · 3 mesece" (or only the age for a breed without stage data). */
-export function stageLine(info: PetProfileInfo): string {
-  const age = formatDogAge(info.ageMonths);
-  return info.stage ? `${PET_PROFILE_STRINGS.stages[info.stage]} · ${age}` : age;
+/**
+ * "Mladiček" / "Mucek" (`lower`: "mlad pes" / "mlada mačka"). M5-R06-08c: a parent screen
+ * passes the shown pet's `species`; without it the child's text species applies (`t`).
+ */
+export function stageText(stage: LifeStage, species: string | null = null, lower = false): string {
+  // A known species (parent screen) never reads the child's global switch (QA 08c m1).
+  if (species !== null) return tSpecies(`pet:profile.${lower ? 'stagesLower' : 'stages'}.${stage}`, species);
+  return (lower ? PET_PROFILE_STRINGS.stagesLower : PET_PROFILE_STRINGS.stages)[stage];
 }
 
-/** "Kupljen pri vzreditelju" / "Posvojen iz zavetišča"; null when unknown. */
-export function originLine(info: PetProfileInfo): string | null {
-  return info.origin ? PET_PROFILE_STRINGS.origins[info.origin] : null;
+/** "Mladiček · 3 mesece" (or only the age for a breed without stage data). */
+export function stageLine(info: PetProfileInfo, species: string | null = null): string {
+  const age = formatDogAge(info.ageMonths);
+  return info.stage ? `${stageText(info.stage, species)} · ${age}` : age;
+}
+
+/** "Kupljen pri vzreditelju" / "Posvojen iz zavetišča" ("Kupljena …" for a cat); null when unknown. */
+export function originLine(info: PetProfileInfo, species: string | null = null): string | null {
+  if (!info.origin) return null;
+  return species !== null ? tSpecies(`pet:profile.origins.${info.origin}`, species) : PET_PROFILE_STRINGS.origins[info.origin];
 }
 
 /** Parent: "Od 24. 11. 2026 mlad pes"; child: "24. 11. 2026 postane mlad pes". */
-export function nextStageLine(info: PetProfileInfo, audience: 'parent' | 'child' = 'parent'): string | null {
+export function nextStageLine(
+  info: PetProfileInfo,
+  audience: 'parent' | 'child' = 'parent',
+  species: string | null = null,
+): string | null {
   if (!info.nextStage) return null;
-  const stage = PET_PROFILE_STRINGS.stagesLower[info.nextStage.stage];
+  const stage = stageText(info.nextStage.stage, species, true);
   const date = formatProfileDate(info.nextStage.fromDate);
   return audience === 'child' ? PET_PROFILE_STRINGS.nextStageChild(stage, date) : PET_PROFILE_STRINGS.nextStage(stage, date);
 }

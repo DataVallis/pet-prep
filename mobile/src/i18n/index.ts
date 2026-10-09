@@ -90,6 +90,28 @@ export function speciesKey(key: string, options?: unknown): string {
   return exists(override, options) ? override : key;
 }
 
+/** `child:hud.loading` → `cat:override.child.hud.loading` (null for a key without a namespace). */
+export function catOverrideKey(key: string): string | null {
+  const colon = key.indexOf(':');
+  return colon > 0 ? `cat:override.${key.slice(0, colon)}.${key.slice(colon + 1)}` : null;
+}
+
+/**
+ * Parent-side species texts (M5-R06-08c): the species comes from the pet being shown
+ * (a family may have a dog and a cat), never from the child's global switch. For a cat,
+ * reads `cat:override.<ns>.<key>` when it exists (any namespace, e.g. `family:petStatus.ill`),
+ * otherwise the dog text; for any other species exactly the dog text.
+ */
+export function tSpecies(key: string, species: string | null | undefined, options?: Record<string, unknown>): string {
+  const translate = i18n.t as unknown as (k: string, o?: unknown) => string;
+  if (species === 'cat') {
+    const override = catOverrideKey(key);
+    const exists = i18n.exists as unknown as (k: string, o?: unknown) => boolean;
+    if (override !== null && exists(override, options)) return translate(override, options);
+  }
+  return translate(key, options);
+}
+
 /** Translate outside React (helpers, error mappers). Bound to the shared instance; species-aware (above). */
 export const t = ((...args: unknown[]) => {
   const [key, ...rest] = args;

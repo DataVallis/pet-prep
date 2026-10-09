@@ -48,13 +48,23 @@ import type { BehaviourScene } from '@/modules/behaviour/behaviour';
 import type { PetState, ShownBreed, Species } from '@/types';
 import { breedName } from '@/modules/species/species';
 import { alpha, palette } from '@/theme';
-import { t } from '@/i18n';
+import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
 /** User-visible strings (`pet:media`, M1-18). */
 export const PET_MEDIA_STRINGS = strings('pet', 'media', {
   a11y: (breed: string) => t('pet:media.a11y', { breed }),
 });
+
+/**
+ * M5-R06-08c: a cat's texts also on a parent screen (the parent never sets the child's text
+ * species) — `species` is the shown pet's (a known species never reads the child's switch);
+ * only without a species the child's text species applies.
+ */
+function mediaText(key: 'pending' | 'a11y', species: Species | null, breed: string): string {
+  if (species !== null) return tSpecies(`pet:media.${key}`, species, key === 'a11y' ? { breed } : undefined);
+  return key === 'a11y' ? PET_MEDIA_STRINGS.a11y(breed) : PET_MEDIA_STRINGS.pending;
+}
 
 /** Crossfade duration between two state videos (ms). */
 export const CROSSFADE_MS = 300;
@@ -394,7 +404,7 @@ export default function PetMediaView({
       testID={testID}
       accessible
       accessibilityRole="image"
-      accessibilityLabel={PET_MEDIA_STRINGS.a11y(breedName(breed, species))}
+      accessibilityLabel={mediaText('a11y', species, breedName(breed, species))}
     >
       {showImage ? (
         <Image
@@ -428,7 +438,7 @@ export default function PetMediaView({
 
       {pending && pendingNotice === 'overlay' && (
         <View pointerEvents="none" style={[styles.pendingPill, hud ? styles.pendingHud : styles.pendingCard]} testID={`${testID}-pending`}>
-          <Text style={[styles.pendingText, !hud && styles.pendingTextCard]}>{PET_MEDIA_STRINGS.pending}</Text>
+          <Text style={[styles.pendingText, !hud && styles.pendingTextCard]}>{mediaText('pending', species, '')}</Text>
         </View>
       )}
     </View>

@@ -36,15 +36,16 @@ import ChallengeBanner from '@/components/parent/ChallengeBanner';
 import AddChildScreen from '@/screens/parent/AddChildScreen';
 import ChildDetailScreen from '@/screens/parent/ChildDetailScreen';
 import { t } from '@/i18n';
+import { catCount, petCountText } from '@/modules/species/species';
 import { strings } from '@/i18n/strings';
 
 /** User-visible strings (`parent:dashboard`, M1-18). */
 export const DASHBOARD_STRINGS = strings('parent', 'dashboard', {
-  /** "2 otroka · 1 kuža" / "2 children · 1 dog". */
-  familySubtitle: (children: number, pets: number) =>
+  /** "2 otroka · 1 kuža" / "2 children · 1 dog"; with cats (`cats` of `pets`) "1 muca" / "1 kuža · 1 muca". */
+  familySubtitle: (children: number, pets: number, cats = 0) =>
     t('parent:dashboard.familySubtitle', {
       children: t('parent:dashboard.counts.children', { count: children }),
-      pets: t('parent:dashboard.counts.dogs', { count: pets }),
+      pets: petCountText('parent:dashboard.counts.dogs', pets, cats),
     }),
 });
 
@@ -193,7 +194,7 @@ export default function ParentDashboardScreen() {
     const offline = dashboard.isError && !(dashboard.error instanceof ApiError);
     const subtitle =
       family && children.length > 0
-        ? DASHBOARD_STRINGS.familySubtitle(children.length, family.pets.length)
+        ? DASHBOARD_STRINGS.familySubtitle(children.length, family.pets.length, catCount(family.pets))
         : dashboard.data
           ? DASHBOARD_STRINGS.noChildSubtitle
           : '';

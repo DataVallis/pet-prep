@@ -175,6 +175,27 @@ describe('AddChildScreen', () => {
       expect(screen.getByTestId('pin-buy-first')).not.toHaveTextContent(/preizkus/i);
     });
 
+    it('mixed family: each join option speaks about its own pet (M5-R06-08c)', async () => {
+      getParentDashboard.mockResolvedValue(
+        makeFamilyDashboard(
+          [PAIRED_CHILD],
+          [
+            makeFamilyPet({ id: 7, caretakers: [{ child_id: 2, contract_signed: true }] }),
+            makeFamilyPet({ id: 9, species: 'cat', breed_type: 'domestic_cat', caretakers: [{ child_id: 2, contract_signed: true }] }),
+          ],
+        ),
+      );
+      createChild.mockResolvedValueOnce({ child: { id: 5, display_name: 'Maja', birth_year: null, family_id: 1, pet_id: null, devices: 0 } });
+      renderWithQuery(<AddChildScreen onBack={jest.fn()} />);
+      fireEvent.changeText(screen.getByTestId('child-nickname'), 'Maja');
+      fireEvent.press(screen.getByText(S.next));
+      await flush();
+      expect(await screen.findByText('Pridruži se psu: Mešanček')).toBeTruthy();
+      expect(screen.getByText('Pridruži se muci: Domača mačka')).toBeTruthy();
+      expect(screen.getByText('Zanj že skrbi: Luka. Skupni pes, vsak otrok ima svojo oceno.')).toBeTruthy();
+      expect(screen.getByText('Zanjo že skrbi: Luka. Skupna muca, vsak otrok ima svojo oceno.')).toBeTruthy();
+    });
+
     it('join pet: lists only active pets with their caretakers and sends pet_id', async () => {
       getParentDashboard.mockResolvedValue(
         makeFamilyDashboard(
@@ -809,6 +830,17 @@ describe('AddChildScreen', () => {
         pet_id: null,
         profile: { species: 'cat', breed: 'domestic_cat', origin: 'adopted', age_stage: 'young', plan: 'free' },
       });
+      // M5-R06-08c: the PIN step speaks about the cat (no "kužek").
+      expect(screen.getByText('Spremeni muco')).toBeTruthy();
+      expect(screen.getByText('Otrok podpiše Pogodbo o odgovornosti in muca se rodi.')).toBeTruthy();
+      expect(screen.queryByText(S.editDog)).toBeNull();
+    });
+
+    it('cats on: the pet question is about a pet, not a dog (M5-R06-08c)', async () => {
+      getBreedCatalogue.mockResolvedValue(CATS_ON);
+      renderWithQuery(<AddChildScreen onBack={jest.fn()} child={NEW_CHILD} />);
+      await flush();
+      expect(screen.getByText('Za katerega ljubljenčka bo skrbel(a) Maja?')).toBeTruthy();
     });
 
     it('422 species_unavailable → "Ta vrsta še ni na voljo", catalogue reloaded, species chosen again', async () => {

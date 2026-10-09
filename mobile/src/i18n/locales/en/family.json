@@ -89,10 +89,7 @@
     "scooped_litter": "cleaned the litter box",
     "changed_litter": "changed all the litter",
     "groomed_pet": "brushed the cat",
-    "resolved_scratching": "carried the cat to the scratching post and praised her"
-  },
-  "activitiesCat": {
-    "fed_pet": "fed the cat"
+    "resolved_scratching": "carried the cat to the scratching post and praised it"
   },
   "systemActivities": {
     "ignored_warning": "A warning was ignored",

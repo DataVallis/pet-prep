@@ -99,9 +99,6 @@
     "groomed_pet": "počesal(a) muco",
     "resolved_scratching": "odnesel(a) muco na praskalnik in jo pohvalil(a)"
   },
-  "activitiesCat": {
-    "fed_pet": "nahranil(a) muco"
-  },
   "systemActivities": {
     "ignored_warning": "Opozorilo ni bilo upoštevano",
     "parent_fed_pet": "Obrok med tihimi urami (nahrani starš)",

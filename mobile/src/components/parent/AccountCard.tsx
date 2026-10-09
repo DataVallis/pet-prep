@@ -26,18 +26,26 @@ import {
 import { useBilling } from '@/modules/purchases';
 import type { FamilyOverview } from '@/modules/family/family';
 import { palette } from '@/theme';
-import { t } from '@/i18n';
+import { t, tSpecies } from '@/i18n';
+import { catCount, petCountText } from '@/modules/species/species';
 import { strings } from '@/i18n/strings';
 
 /** All user-visible strings of the "Račun" section (`account:card`, M1-18). */
 export const ACCOUNT_STRINGS = strings('account', 'card', {
   /** Last parent: what the whole-family deletion takes ("vaš račun, 2 otroška profila in 3 psi"). */
-  lastParent: (children: number, pets: number): string[] => [
+  /** M5-R06-08c: `cats` of `pets` are cats ("3 muce"; with dogs "… 2 psa in 1 muca"). */
+  lastParent: (children: number, pets: number, cats = 0): string[] => [
     t('account:card.lastParentLines.intro'),
-    t('account:card.lastParentLines.what', {
-      children: t('account:counts.childProfiles', { count: children }),
-      pets: t('account:counts.dogs', { count: pets }),
-    }),
+    cats > 0 && cats < pets
+      ? t('cat:account.whatMixed', {
+          children: t('account:counts.childProfiles', { count: children }),
+          dogs: t('account:counts.dogs', { count: pets - cats }),
+          cats: tSpecies('account:counts.dogs', 'cat', { count: cats }),
+        })
+      : t('account:card.lastParentLines.what', {
+          children: t('account:counts.childProfiles', { count: children }),
+          pets: petCountText('account:counts.dogs', pets, cats),
+        }),
     t('account:card.lastParentLines.records'),
     t('account:card.lastParentLines.devices'),
   ],
@@ -61,7 +69,7 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
   const billing = useBilling();
   const [paidRequired, setPaidRequired] = useState(false);
   const consequences = impact.lastParent
-    ? [...S.lastParent(impact.children, impact.pets), S.exportFirst]
+    ? [...S.lastParent(impact.children, impact.pets, catCount(family?.pets ?? [])), S.exportFirst]
     : [...S.otherParentStays, S.exportFirst];
 
   const runExport = async () => {

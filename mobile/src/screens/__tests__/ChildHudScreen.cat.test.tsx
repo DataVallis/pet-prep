@@ -210,7 +210,7 @@ describe('ChildHudScreen — cat (M5-R06-08b)', () => {
     expect(screen.getByTestId('hud-cat-chip-grooming')).toBeTruthy();
     expect(screen.getByTestId('hud-cat-chip-grooming-badge')).toBeTruthy();
     expect(screen.getByTestId('hud-cat-chip-litter_change')).toBeTruthy();
-    expect(screen.getByTestId('hud-cat-note-grooming').props.children).toBe('Dlaka ima vozel — počeši jo.');
+    expect(screen.getByTestId('hud-cat-note-grooming').props.children).toBe('V dlaki ima vozel — počeši jo.');
     expect(screen.getByTestId('hud-cat-note-litter_change').props.children).toBe('Pesek smrdi — zamenjaj ves pesek.');
     fireEvent.press(screen.getByTestId('hud-cat-chip-grooming'));
     expect(useAppStore.getState().catOverlay).toBe('grooming');

@@ -18,7 +18,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { ActivityIndicator, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Text, TextInput } from '@/components/ui/Text';
-import { CheckCircle, ChevronLeft, ChevronRight, Dog, KeyRound, Lock, PawPrint, RefreshCw, Smartphone } from 'lucide-react-native';
+import { Cat, CheckCircle, ChevronLeft, ChevronRight, Dog, KeyRound, Lock, PawPrint, RefreshCw, Smartphone } from 'lucide-react-native';
 
 import type { ChildPinResponse, NewPetProfile, PetBreed, PinLoginMode } from '@/api/client';
 import { useQueryClient } from '@tanstack/react-query';
@@ -50,7 +50,8 @@ import { classifyPinError, formatCountdown, formatPin, pinRequestKey, secondsUnt
 import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { refreshSessionPet } from '@/modules/session/logout';
 import { fonts, palette, tightTracking } from '@/theme';
-import { t } from '@/i18n';
+import { t, tSpecies } from '@/i18n';
+import { readBreed, readSpecies } from '@/modules/species/species';
 import { strings } from '@/i18n/strings';
 
 const STEP_LINES = ['open', 'code', 'finish'] as const;
@@ -84,6 +85,13 @@ export const ADD_CHILD_STRINGS = strings('parent', 'addChild', {
 
 const S = ADD_CHILD_STRINGS;
 const PAIRING_POLL_MS = 5_000;
+
+/** "Skupni pes …" / "Skupna muca …" — the joined pet's species (M5-R06-08c). */
+function joinPetHintText(names: string, species: string | null): string {
+  return names
+    ? tSpecies('parent:addChild.joinPetHintNames', species, { names })
+    : tSpecies('parent:addChild.joinPetHint', species);
+}
 
 type Step = 'form' | 'pet' | 'dog' | 'pin';
 
@@ -205,7 +213,7 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
               void queryClient.resetQueries({ queryKey: breedCatalogueKey() });
               setPickerChoice((c) => ({ ...c, species: null, breed: null }));
             }
-            setPickerNotice(S.errors[kind]);
+            setPickerNotice(tSpecies(`parent:addChild.errors.${kind}`, newPetProfile?.species));
             setStep('dog');
           }}
           onDone={onBack}
@@ -336,7 +344,8 @@ function PetStep({
 
   return (
     <ScrollView contentContainerStyle={styles.content}>
-      <Text style={styles.stepTitle}>{S.petTitle(childName)}</Text>
+      {/* M5-R06-08c: with cats on offer the question is about a pet, not a dog. */}
+      <Text style={styles.stepTitle}>{severalSpecies ? t('parent:addChild.petTitleAny', { name: childName }) : S.petTitle(childName)}</Text>
 
       <PetOption
         icon={<PawPrint color={palette.graphite} size={22} />}
@@ -349,16 +358,16 @@ function PetStep({
       {dashboard.isPending ? (
         <View style={styles.waitingRow}>
           <ActivityIndicator size="small" color={palette.n500} />
-          <Text style={styles.muted}>{S.petsLoading}</Text>
+          <Text style={styles.muted}>{severalSpecies ? S.petsLoadingAny : S.petsLoading}</Text>
         </View>
       ) : (
         family &&
         pets.map((pet) => (
           <PetOption
             key={pet.id}
-            icon={<Dog color={palette.graphite} size={22} />}
-            title={S.joinPet(breedLabel(pet.breed_type, pet.species))}
-            hint={S.joinPetHint(caretakerNames(pet, family))}
+            icon={pet.species === 'cat' ? <Cat color={palette.graphite} size={22} /> : <Dog color={palette.graphite} size={22} />}
+            title={tSpecies('parent:addChild.joinPet', pet.species, { label: breedLabel(pet.breed_type, pet.species) })}
+            hint={joinPetHintText(caretakerNames(pet, family), pet.species ?? null)}
             onPress={() => onChoose(pet.id)}
             testID={`pet-option-${pet.id}`}
           />
@@ -455,6 +464,11 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
     refetchInterval: (data) => (pin !== null && !isExpired && !connectedIn(data) ? PAIRING_POLL_MS : false),
   });
   const isConnected = pin !== null && connectedIn(dashboard.data);
+  // M5-R06-08c: texts follow the species of the pet this PIN is for (new choice, joined or own pet).
+  const shownPetId = joinPetId ?? target.pet_id;
+  const shownPet = shownPetId === null ? null : (familyFromDashboard(dashboard.data)?.pets.find((p) => p.id === shownPetId) ?? null);
+  const species = profile?.species ?? (shownPet ? readSpecies(shownPet.species, readBreed(shownPet.breed_type)) : null);
+  const pinText = (key: string, options?: Record<string, unknown>) => tSpecies(`parent:addChild.${key}`, species, options);
   const mode: PinLoginMode = pin?.mode ?? (target.pet_id !== null ? 'relogin' : joinPetId !== null ? 'join_pet' : 'new_pet');
 
   const pinError = useMemo(
@@ -511,7 +525,8 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
       if (cooldownUntil !== null && !isCoolingDown) return null; // wait is over — "Nova koda" works again
       return S.errors.rate_limited(isCoolingDown ? cooldown : pinError.retryAfterSeconds);
     }
-    return S.errors[pinError.kind];
+    // `already_paired` is about the child's existing pet, not this choice → the dog text as before (QA 08c m6).
+    return species === 'cat' && pinError.kind !== 'already_paired' ? pinText(`errors.${pinError.kind}`) : S.errors[pinError.kind];
   })();
 
   if (isConnected) {
@@ -520,7 +535,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
         <View style={styles.card} testID="add-child-paired">
           <CheckCircle color={palette.ok} size={44} />
           <Text style={styles.pairedTitle}>{S.pairedTitle}</Text>
-          <Text style={styles.bodyCentered}>{S.pairedBody[mode](target.name)}</Text>
+          <Text style={styles.bodyCentered}>{pinText(`pairedBody.${mode}`, { name: target.name })}</Text>
           <Pressable style={({ pressed }) => [styles.primaryButton, pressed && styles.pressed]} onPress={onDone}>
             <Text style={styles.primaryButtonText}>{S.toDashboard}</Text>
           </Pressable>
@@ -563,7 +578,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
             {/* M3-13 (David 2026-10-08): no free trial — the challenge starts with a purchase. */}
             {(pin as { plan?: string | null }).plan === 'challenge' && (
               <Text style={styles.muted} testID="pin-buy-first">
-                {t('pet:picker.buyFirst', { name: target.name })}
+                {t(species === 'cat' ? 'pet:picker.cat.buyFirst' : 'pet:picker.buyFirst', { name: target.name })}
               </Text>
             )}
           </>
@@ -571,7 +586,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
 
         {isForPreviousChoice && !isExpired && (
           <Text style={styles.note} testID="pin-previous-choice">
-            {S.previousChoicePin}
+            {pinText('previousChoicePin')}
           </Text>
         )}
         {errorText && (
@@ -586,7 +601,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
             accessibilityRole="button"
             testID="pin-change-dog"
           >
-            <Text style={styles.secondaryButtonText}>{S.changeDog}</Text>
+            <Text style={styles.secondaryButtonText}>{pinText('changeDog')}</Text>
           </Pressable>
         )}
 
@@ -622,7 +637,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
           <Smartphone color={palette.graphite} size={20} />
           <Text style={styles.body}>{S.instructions}</Text>
         </View>
-        {S.steps[mode].map((text, index) => (
+        {STEP_LINES.map((line) => pinText(`stepLines.${mode}.${line}`)).map((text, index) => (
           <View key={text} style={styles.stepRow}>
             <Text style={styles.stepNumber}>{index + 1}</Text>
             <Text style={styles.stepText}>{text}</Text>
@@ -638,7 +653,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
             style={({ pressed }) => [styles.linkButton, pressed && styles.pressed]}
             testID="pin-edit-dog"
           >
-            <Text style={styles.linkText}>{S.editDog}</Text>
+            <Text style={styles.linkText}>{pinText('editDog')}</Text>
           </Pressable>
         )}
         <Text style={styles.note}>{S.oneTime}</Text>
