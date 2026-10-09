@@ -43,6 +43,7 @@ import {
   CatOverlayFrame,
   CatStage,
   FailedView,
+  PounceCue,
   PrimaryButton,
   SecondaryButton,
   SegmentDots,
@@ -324,13 +325,15 @@ function WandRunning({
           testID={`${testID}-stage`}
           illustration={
             <Animated.View
-              style={[{ transform: [{ translateY: leapY }] }, reduceMotion && frame.cat === 'pouncing' && { borderRadius: 60, borderWidth: 2, borderColor: palette.mint }]}
+              style={{ transform: [{ translateY: leapY }] }}
               testID={`${testID}-cat-${frame.cat}`}
             >
               <CatFigure pose={poseOf(frame.cat)} size={120} />
             </Animated.View>
           }
         >
+          {/* QA m2: the pounce cue shows in both tiers (video or drawing) while an answer counts. */}
+          {frame.pounceOpen !== null && <PounceCue reduceMotion={reduceMotion} testID={`${testID}-pounce-cue`} />}
           <Animated.View
             pointerEvents="none"
             style={{ position: 'absolute', transform: feather.getTranslateTransform() }}

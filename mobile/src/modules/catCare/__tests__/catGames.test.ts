@@ -7,6 +7,9 @@
 import {
   addStroke,
   addWandMove,
+  canChoreStillCount,
+  canScratchingStillCount,
+  canWandStillCount,
   beginRub,
   beginWandStroke,
   CATCH_LEAD_MS,
@@ -148,6 +151,26 @@ describe('wand moves', () => {
     const sweep = drag(line({ x: 150, y: 390 }, { x: 150, y: -10 }, 40), 0);
     expect(sweep.length).toBeGreaterThanOrEqual(2);
     expect(sweep.every((m) => m.away)).toBe(true);
+  });
+});
+
+describe('QA M1: can a resumed session still count?', () => {
+  it('wand: first quarter and no closed pounce window; stroke games: first segment; scratching: a praise could still be in time', () => {
+    expect(canWandStillCount(WAND, 14_000)).toBe(true);
+    expect(canWandStillCount(WAND, 15_000)).toBe(false);
+    expect(canWandStillCount({ ...WAND, pounces_ms: [8_000, 30_000] }, 10_001)).toBe(false);
+    expect(canWandStillCount({ ...WAND, pounces_ms: [8_000, 30_000] }, 9_000)).toBe(true);
+    const groom = { duration_ms: 30_000, min_strokes: 10, segments: 3, min_stroke_interval_ms: 150 };
+    expect(canChoreStillCount(groom, 9_999)).toBe(true);
+    expect(canChoreStillCount(groom, 10_000)).toBe(false);
+    const r = { land_at_ms: 1_200, praise_window_ms: 3_000, min_reaction_ms: 150 };
+    expect(canScratchingStillCount(r, 4_000)).toBe(true);
+    expect(canScratchingStillCount(r, 4_100)).toBe(false);
+  });
+
+  it('choreStepAt follows the server segments (6 segments → still three labelled steps)', () => {
+    const six = { duration_ms: 30_000, min_strokes: 10, segments: 6, min_stroke_interval_ms: 150 };
+    expect([0, 5_000, 10_000, 15_000, 20_000, 29_000].map((t) => choreStepAt(six, t))).toEqual([1, 1, 2, 2, 3, 3]);
   });
 });
 

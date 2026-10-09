@@ -31,7 +31,7 @@
   },
   "wand": {
     "title": "Palica s peresom",
-    "intro": "Vleci pero po zaslonu. Povleci ga stran od muce, kot miško, ki beži — za tem muca najraje teče.",
+    "intro": "Vleci pero po zaslonu. Povleci ga stran od muce, kot miško, ki beži — za takim plenom muca najraje teče.",
     "tip": "Ne mahaj ji z njim tik pred nosom. Ko skoči, hitro umakni pero!",
     "today": "Igre danes: {{done}} od {{goal}}",
     "todayDone": "Današnje igre so opravljene ✓",
@@ -62,7 +62,10 @@
         "too_uniform": "Pero premikaj po svoje — malo hitreje, malo počasneje, tako je igra zabavna.",
         "unknown": "Poskusiva znova."
       },
-      "escapes": "Pero je zbežalo {{away}}-krat.",
+      "escapes_one": "Pero je zbežalo {{count}}-krat.",
+      "escapes_two": "Pero je zbežalo {{count}}-krat.",
+      "escapes_few": "Pero je zbežalo {{count}}-krat.",
+      "escapes_other": "Pero je zbežalo {{count}}-krat.",
       "again": "Igraj znova",
       "done": "Končano"
     }
@@ -147,7 +150,7 @@
     "landed": "Praska praskalnik — zdaj jo pohvali!",
     "praise": "Pohvali",
     "praiseA11y": "Pohvali muco",
-    "waitHint": "Počakaj, da začne praskati praskalnik, potem jo pohvali.",
+    "waitHint": "Malo prezgodaj — tokrat ne bo štelo, poskusi znova.",
     "result": {
       "successTitle": "Bravo!",
       "success": "Praskalnik ji je všeč. Kavč je zdaj na varnem.",

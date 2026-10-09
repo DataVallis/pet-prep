@@ -16,9 +16,11 @@
  *   (`expires_at`, compared in server time via the state's clock skew), else say it expired
  *   (no request, the state is refetched).
  * - Resume after an app restart: the child state carries the child's own running session.
- *   Still running → the game continues from the server's `started_at` (inputs before the
- *   restart are lost); its time is over but the TTL isn't → finished at once with an empty
- *   input (no penalty — the server only says "didn't count"); past the TTL → the expiry text.
+ *   Still running AND it can still count (`canStillCount`: inputs before the restart are
+ *   lost) → the game continues from the server's `started_at`; still running but it can't
+ *   count any more → the intro stays (a new start aborts it on the server); its time is over
+ *   but the TTL isn't → closed at once with an empty input (frees the cat for siblings) and
+ *   the expiry text is shown; past the TTL → the expiry text, no request.
  *   A session the child stopped (`stop`, listed in `abandoned`) is never resumed.
  * - "Stop" while running (wand / stroke games): nothing is sent, nothing counts and there is
  *   no penalty (CAT_SPEC §5.2 "prekinjena igra ne šteje in nima kazni"); the server lets
@@ -106,6 +108,11 @@ export interface CatSessionGameOptions<S extends CatSessionBase, I, R extends { 
   emptyInput: I;
   /** ms on the game clock at which the game is over and finishes by itself. */
   finishAtMs: (session: S, input: I) => number;
+  /**
+   * QA M1: a session resumed at `elapsedMs` (inputs before the restart are lost) can still
+   * count. When not, the intro stays (a new start by the same child aborts it server-side).
+   */
+  canStillCount?: (session: S, elapsedMs: number) => boolean;
   startMutate: (variables: void, callbacks: MutateCallbacks<CatStartResponse<S>>) => void;
   finishMutate: (variables: { session: S; input: I }, callbacks: MutateCallbacks<CatFinishResponse<R>>) => void;
 }
@@ -171,6 +178,7 @@ export function useCatSessionGame<S extends CatSessionBase, I, R extends { succe
   onAbandon,
   emptyInput,
   finishAtMs,
+  canStillCount,
   startMutate,
   finishMutate,
 }: CatSessionGameOptions<S, I, R>): CatSessionGame<S, I, R> {
@@ -203,6 +211,8 @@ export function useCatSessionGame<S extends CatSessionBase, I, R extends { succe
   emptyRef.current = emptyInput;
   const abandonRef = useRef(onAbandon);
   abandonRef.current = onAbandon;
+  const canCountRef = useRef(canStillCount);
+  canCountRef.current = canStillCount;
 
   useEffect(() => {
     mounted.current = true;
@@ -217,7 +227,7 @@ export function useCatSessionGame<S extends CatSessionBase, I, R extends { succe
   }, []);
 
   const sendFinish = useCallback(
-    (session: S, input: I, resumedAtMs: number | null = null) => {
+    (session: S, input: I, resumedAtMs: number | null = null, quiet = false) => {
       // A retry after a lost answer: the server may already have saved the first attempt.
       const isRetry = finishedRef.current.has(session.id);
       const serverNow = clockSourcesRef.current.wall() + skewRef.current;
@@ -234,12 +244,21 @@ export function useCatSessionGame<S extends CatSessionBase, I, R extends { succe
         { session, input },
         {
           onSuccess: (response) => {
+            if (quiet) {
+              // Closed only to free the cat for siblings: it was over while the app was away.
+              setPhase({ kind: 'failed', message: CAT_COMMON_STRINGS.expiredWhileAway, retry: null });
+              return;
+            }
             // `unchanged` after a retry = our own first attempt arrived: show it like a fresh verdict.
             let status: CatFinishStatus = response.status;
             if (isRetry && status === 'unchanged') status = response.result.success ? 'accepted' : 'rejected';
             setPhase({ kind: 'result', result: response.result, status });
           },
           onError: (error) => {
+            if (quiet) {
+              setPhase({ kind: 'failed', message: CAT_COMMON_STRINGS.expiredWhileAway, retry: null });
+              return;
+            }
             const retry = canRetryCatFinish(error) && canStillFinish(session, clockSourcesRef.current.wall() + skewRef.current);
             setPhase({ kind: 'failed', message: catFailureText(error, refusalRef.current), retry: retry ? { session, input, resumedAtMs } : null });
           },
@@ -313,14 +332,17 @@ export function useCatSessionGame<S extends CatSessionBase, I, R extends { succe
     const serverNow = clockSourcesRef.current.wall() + skewRef.current;
     const elapsed = Number.isNaN(started) ? session.duration_ms : Math.max(0, serverNow - started);
     if (elapsed < finishAtRef.current(session, emptyRef.current)) {
+      // QA M1: a game that can no longer count isn't resumed — the child starts a new one.
+      if (canCountRef.current && !canCountRef.current(session, elapsed)) return;
       clockRef.current = new SessionClock(clockSourcesRef.current, elapsed);
       touchMapper.current = new TouchTimeMapper();
       if (mounted.current) setElapsedMs(elapsed);
       setPhase({ kind: 'running', session, input: emptyRef.current, resumedAtMs: elapsed });
       return;
     }
-    // Its time ran out while the app was closed: close it now if the server still takes it.
-    sendFinish(session, emptyRef.current);
+    // Its time ran out while the app was closed: close it now if the server still takes it
+    // (frees the cat for siblings), and say it ran out — not the server's "didn't count".
+    sendFinish(session, emptyRef.current, null, true);
   }, [resumeId, sendFinish, setPhase]);
 
   const msAt = useCallback((touchTimestamp?: number | null) => {

@@ -265,22 +265,52 @@ describe('useWandGame', () => {
     expect(result.current.phase).toMatchObject({ kind: 'failed', retry: null, message: expect.stringContaining('aplikacija zaprta') });
   });
 
-  it('resumes the own running game after a restart (no moves from before); a stopped one never', async () => {
-    // Started 20 s ago on the server.
-    const running = makeWandSession({ started_at: '2026-10-04T11:59:40+02:00', ends_at: '2026-10-04T12:00:40+02:00', expires_at: '2026-10-04T12:01:40+02:00' });
+  /** The child's own wand session as the state carries it, started `agoMs` before now. */
+  function ownRunning(agoMs: number, id = 'resume-1') {
+    const start = T0 - agoMs;
+    const iso = (ms: number) => new Date(ms).toISOString();
+    return makeWandSession({ id, started_at: iso(start), ends_at: iso(start + 60_000), expires_at: iso(start + 120_000) });
+  }
+
+  it('resumes the own running game while it can still count (first quarter, no pounce missed); a stopped one never', async () => {
+    const running = ownRunning(5_000);
     const client = newClient(catState({ wand: makeWandState({ can_start: false, session: running, session_running: true }) }));
     finishWand.mockResolvedValue(wandFinish('rejected', false));
     const { result } = renderHook(() => useWandGame(viewOf(client), { clock }), { wrapper: wrapperFor(client) });
-    expect(result.current.phase).toMatchObject({ kind: 'running', resumedAtMs: 20_000 });
-    await advance(40_200);
+    expect(result.current.phase).toMatchObject({ kind: 'running', resumedAtMs: 5_000 });
+    await advance(55_200);
     expect(finishWand).toHaveBeenCalledWith(running.id, []);
 
     // Another restart: the child had stopped this session → stays in the intro.
     act(() => useAppStore.getState().abandonCatSession('stopped-1'));
-    const stopped = { ...running, id: 'stopped-1' };
+    const stopped = ownRunning(5_000, 'stopped-1');
     const client2 = newClient(catState({ wand: makeWandState({ session: stopped, session_running: true }) }));
     const second = renderHook(() => useWandGame(viewOf(client2), { clock }), { wrapper: wrapperFor(client2) });
     expect(second.result.current.phase.kind).toBe('intro');
+  });
+
+  it('QA M1: a game that can no longer count (past the first quarter / a pounce missed) is not resumed', async () => {
+    for (const ago of [16_000, 12_000]) {
+      // 16 s: past the first quarter; 12 s with a pounce at 8 s: its 2 s window closed at 10 s.
+      const running = { ...ownRunning(ago, `late-${ago}`), pounces_ms: ago === 12_000 ? [8_000, 30_000] : [20_000, 40_000] };
+      const client = newClient(catState({ wand: makeWandState({ can_start: true, session: running, session_running: true }) }));
+      const { result, unmount } = renderHook(() => useWandGame(viewOf(client), { clock }), { wrapper: wrapperFor(client) });
+      expect(result.current.phase.kind).toBe('intro');
+      await advance(120_000);
+      expect(finishWand).not.toHaveBeenCalled();
+      unmount();
+      jest.setSystemTime(T0);
+    }
+  });
+
+  it('QA M1: time over but TTL left → the empty finish is sent (frees siblings), the text says it ran out', async () => {
+    finishWand.mockResolvedValue(wandFinish('rejected', false));
+    const running = ownRunning(70_000);
+    const client = newClient(catState({ wand: makeWandState({ session: running, session_running: true }) }));
+    const { result } = renderHook(() => useWandGame(viewOf(client), { clock }), { wrapper: wrapperFor(client) });
+    await flush();
+    expect(finishWand).toHaveBeenCalledWith(running.id, []);
+    expect(result.current.phase).toMatchObject({ kind: 'failed', retry: null, message: expect.stringContaining('aplikacija zaprta') });
   });
 
   it('"Ustavi" sends nothing, marks the session stopped and goes back to the intro', async () => {

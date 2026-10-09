@@ -7,6 +7,8 @@
  * for grooming, an older server) renders nothing.
  */
 
+import { useEffect } from 'react';
+
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import type { CatGameKind, ChildCatCare } from '@/modules/catCare/catCare';
 import ChoreOverlay from '@/modules/catCare/ChoreOverlay';
@@ -46,7 +48,12 @@ export default function CatCareOverlay({ view, clock, reduceMotion }: CatCareOve
   const close = useAppStore((s) => s.closeCatGame);
   const systemReduceMotion = useReduceMotion();
   const reduced = reduceMotion ?? systemReduceMotion;
-  if (kind === null || !catGameAvailable(view.cat, kind)) return null;
+  const available = kind !== null && catGameAvailable(view.cat, kind);
+  // QA m3: a game this pet can't play (a dog, a domestic cat for grooming) never stays "open".
+  useEffect(() => {
+    if (kind !== null && !available) close();
+  }, [available, close, kind]);
+  if (kind === null || !available) return null;
   switch (kind) {
     case 'wand':
       return <WandOverlay view={view} onClose={close} reduceMotion={reduced} clock={clock} />;

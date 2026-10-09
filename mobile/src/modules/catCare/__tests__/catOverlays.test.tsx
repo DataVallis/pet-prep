@@ -90,18 +90,19 @@ describe('CatCareOverlay host', () => {
   it('renders nothing for a dog or while closed; one game at a time', async () => {
     const dog = viewOf(makeLiveChildState());
     useAppStore.getState().openCatGame('wand');
-    renderWithQuery(<CatCareOverlay view={dog} reduceMotion />);
+    const { unmount } = renderWithQuery(<CatCareOverlay view={dog} reduceMotion />);
     await advance(0);
     expect(screen.queryByTestId('cat-wand')).toBeNull();
+    // QA m3: a dog can't play it → closed again.
+    expect(useAppStore.getState().catOverlay).toBeNull();
 
+    unmount();
+    // One game at a time.
+    useAppStore.getState().openCatGame('wand');
     expect(useAppStore.getState().openCatGame('grooming')).toBe(false);
     expect(useAppStore.getState().catOverlay).toBe('wand');
-    act(() => useAppStore.getState().closeCatGame());
-    let opened = false;
-    act(() => {
-      opened = useAppStore.getState().openCatGame('grooming');
-    });
-    expect(opened).toBe(true);
+    useAppStore.getState().closeCatGame();
+    expect(useAppStore.getState().openCatGame('grooming')).toBe(true);
   });
 
   it('opens the game the store names, closes through the store', async () => {
@@ -118,6 +119,8 @@ describe('CatCareOverlay host', () => {
     renderWithQuery(<CatCareOverlay view={viewOf(makeLiveChildState({ wand: makeWandState(), grooming: null }))} reduceMotion />);
     await advance(0);
     expect(screen.queryByTestId('cat-grooming')).toBeNull();
+    // QA m3: the store doesn't keep an unplayable game "open".
+    expect(useAppStore.getState().catOverlay).toBeNull();
   });
 });
 
@@ -180,9 +183,12 @@ describe('WandOverlay', () => {
       config.onPanResponderRelease?.(at(150, 250), gesture({ dy: -120 }));
     });
     expect(screen.getByTestId('cat-wand-feedback').props.children).toBe('Super — pero je ušlo!');
+    expect(screen.queryByTestId('cat-wand-pounce-cue', { includeHiddenElements: true })).toBeNull();
 
     await advance(12_200);
     expect(screen.getByText('Skok! Umakni pero!')).toBeTruthy();
+    // QA m2: the pounce cue shows while an answer counts (free drawing here).
+    expect(screen.getByTestId('cat-wand-pounce-cue', { includeHiddenElements: true })).toBeTruthy();
     fireEvent.press(screen.getByLabelText('Umakni pero stran od muce'));
     expect(screen.getByTestId('cat-wand-feedback').props.children).toBe('Odličen umik!');
     expect(screen.getByTestId('cat-wand-stop')).toBeTruthy();
@@ -256,6 +262,12 @@ describe('ChoreOverlay', () => {
     expect(screen.getByText('Menjava peska ta teden je opravljena ✓')).toBeTruthy();
     expect(screen.getByTestId('cat-litter_change-blocked').props.children).toBe('Pesek je ta teden že zamenjan. Naslednja menjava je v četrtek ob 09:30.');
     expect(screen.getByTestId('cat-litter_change-start').props.accessibilityState?.disabled).toBe(true);
+  });
+
+  it('QA m1: another child changing the litter — no week-end time in that text', () => {
+    const busy = viewOf(catState({ litter: makeLitterState({}, { can_start: false, blocked_reason: 'litter_change_session_active', session_running: true }) }));
+    renderWithQuery(<ChoreOverlay kind="litter_change" view={busy} onClose={jest.fn()} reduceMotion />);
+    expect(screen.getByTestId('cat-litter_change-blocked').props.children).toBe('Pesek zdaj menja nekdo drug. Poskusi čez minuto.');
   });
 });
 

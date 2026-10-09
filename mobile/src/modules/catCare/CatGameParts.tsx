@@ -6,7 +6,7 @@
  */
 
 import { useEffect, useMemo, useRef, type ReactNode } from 'react';
-import { AccessibilityInfo, ActivityIndicator, Platform, Pressable, StyleSheet, View } from 'react-native';
+import { AccessibilityInfo, ActivityIndicator, Animated, Platform, Pressable, StyleSheet, View } from 'react-native';
 import { X } from 'lucide-react-native';
 
 import PetMediaView from '@/components/PetMediaView';
@@ -125,6 +125,29 @@ export function CatStage({ view, petState, scene = null, illustration, onMediaEx
       {children}
     </View>
   );
+}
+
+/**
+ * QA m2: the pounce cue — a mint ring around the stage while a pounce can be answered
+ * (premium video and free drawing alike). It pulses; with "reduce motion" it is steady.
+ */
+export function PounceCue({ reduceMotion, testID }: { reduceMotion: boolean; testID: string }) {
+  const pulse = useRef(new Animated.Value(1)).current;
+  useEffect(() => {
+    if (reduceMotion) {
+      pulse.setValue(1);
+      return;
+    }
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(pulse, { toValue: 0.35, duration: 300, useNativeDriver: true }),
+        Animated.timing(pulse, { toValue: 1, duration: 300, useNativeDriver: true }),
+      ]),
+    );
+    loop.start();
+    return () => loop.stop();
+  }, [pulse, reduceMotion]);
+  return <Animated.View pointerEvents="none" style={[styles.pounceCue, { opacity: pulse }]} testID={testID} importantForAccessibility="no" accessibilityElementsHidden />;
 }
 
 export function Busy({ text, testID }: { text: string; testID: string }) {
@@ -314,6 +337,7 @@ export const styles = StyleSheet.create({
     borderColor: alpha(palette.white, 0.12),
   },
   video: { ...StyleSheet.absoluteFill },
+  pounceCue: { ...StyleSheet.absoluteFill, borderRadius: 24, borderWidth: 4, borderColor: palette.mint },
   illustration: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'flex-end', paddingBottom: 12 },
   statusLine: { color: palette.white, fontSize: 17, fontWeight: '700', textAlign: 'center' },
   feedbackSlot: { minHeight: 40, justifyContent: 'center' },

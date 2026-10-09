@@ -656,7 +656,7 @@ export const WAND_STRINGS = strings('cat', 'wand', {
   length: (seconds: number) => t('cat:wand.length', { seconds }),
   quarterA11y: (n: number) => t('cat:wand.quarterA11y', { n }),
   result: {
-    escapes: (away: number) => t('cat:wand.result.escapes', { away }),
+    escapes: (away: number) => t('cat:wand.result.escapes', { count: away }),
   },
 });
 

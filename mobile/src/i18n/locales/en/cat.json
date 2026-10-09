@@ -62,7 +62,8 @@
         "too_uniform": "Move the feather your own way — little stops and starts make the game fun.",
         "unknown": "Let's try again."
       },
-      "escapes": "The feather ran away {{away}} times.",
+      "escapes_one": "The feather ran away {{count}} time.",
+      "escapes_other": "The feather ran away {{count}} times.",
       "again": "Play again",
       "done": "Done"
     }
@@ -147,7 +148,7 @@
     "landed": "She's scratching the post — praise her now!",
     "praise": "Praise",
     "praiseA11y": "Praise your kitty",
-    "waitHint": "Wait until she scratches the post, then praise her.",
+    "waitHint": "A little early — this time it won't count, try again.",
     "result": {
       "successTitle": "Well done!",
       "success": "She loves her scratching post. The sofa is safe now.",

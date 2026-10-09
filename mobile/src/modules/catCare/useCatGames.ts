@@ -20,7 +20,7 @@ import {
   type WandResult,
   type WandSession,
 } from '@/modules/catCare/catCare';
-import { scratchingFinishAt, type WandMove } from '@/modules/catCare/catGames';
+import { canChoreStillCount, canScratchingStillCount, canWandStillCount, scratchingFinishAt, type WandMove } from '@/modules/catCare/catGames';
 import { useCatSessionGame, type CatSessionGame } from '@/modules/catCare/useCatSessionGame';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import type { ClockSources } from '@/modules/training/game';
@@ -63,6 +63,7 @@ export function useWandGame(view: ChildPetView, { clock }: CatGameHookOptions = 
     ...useAbandoned(),
     emptyInput: NO_MOVES,
     finishAtMs: (session) => session.duration_ms,
+    canStillCount: canWandStillCount,
     startMutate,
     finishMutate,
   });
@@ -87,6 +88,7 @@ export function useChoreGame(kind: ChoreKind, view: ChildPetView, { clock }: Cat
     ...useAbandoned(),
     emptyInput: NO_STROKES,
     finishAtMs: (session) => session.duration_ms,
+    canStillCount: canChoreStillCount,
     startMutate,
     finishMutate,
   });
@@ -114,6 +116,7 @@ export function useScratchingGame(view: ChildPetView, { clock }: CatGameHookOpti
     ...useAbandoned(),
     emptyInput: null,
     finishAtMs: (session, praise) => scratchingFinishAt(session, praise),
+    canStillCount: canScratchingStillCount,
     startMutate,
     finishMutate,
   });

@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Mačka ni »pes z drugo sliko«: igra mora posnemati lov (pero beži stran od muce, kot svetuje vir C11), praskanje se nikoli ne kaznuje, ampak preusmeri in pohvali takoj (AAFP, C23). To so prva otroška opravila, ki niso prevzeta od psa.
 
-**Številke:** 5 mini-iger, 27 razlogov zavrnitve strežnika s prijaznim besedilom v 2 jezikih; Jest 1601 → 1682 testov (134 kompletov), ocenjevalniki v aplikaciji preverjeni na istih podatkih kot strežnik.
+**Številke:** 5 mini-iger, 27 razlogov zavrnitve strežnika s prijaznim besedilom v 2 jezikih; Jest 1601 → 1687 testov (134 kompletov), ocenjevalniki v aplikaciji preverjeni na istih podatkih kot strežnik.
 
 **Kako povedati:**
 - 👩 Starši: »Muca se ne sprehaja — z njo se igraš: vsak dan nekaj minut lova s palico s peresom, čiščenje peska in pohvala na praskalniku namesto kreganja.« (*ko bodo mačke vklopljene*)

@@ -230,6 +230,16 @@ export function endWandStroke(tracker: WandTracker, p: Point | null, t: number, 
   return last.move ?? closeAt(last.tracker);
 }
 
+/**
+ * QA M1: can a wand game resumed at `elapsedMs` (no moves from before the restart) still
+ * count? Only inside its first segment (every segment needs an away move) and before any
+ * pounce window has closed (every pounce needs an answer).
+ */
+export function canWandStillCount(session: WandRules, elapsedMs: number): boolean {
+  if (elapsedMs >= session.duration_ms / Math.max(1, session.segments)) return false;
+  return !session.pounces_ms.some((p) => p + session.pounce_window_ms < elapsedMs);
+}
+
 /** What the cat does on screen at `elapsedMs`. */
 export type CatAction = 'stalking' | 'crouching' | 'pouncing' | 'catching' | 'caught';
 
@@ -400,10 +410,20 @@ export function endRub(tracker: RubTracker, t: number): number | null {
   return tracker.far.d >= CHORE_STROKE_MIN_PT || tracker.path >= CHORE_STROKE_MIN_PT ? t : null;
 }
 
-/** Step 1…3 of the stroke game at `elapsedMs` (the server's thirds). */
+/** QA M1: a stroke game resumed at `elapsedMs` can still count only inside its first segment. */
+export function canChoreStillCount(rules: ChoreRules, elapsedMs: number): boolean {
+  return elapsedMs < rules.duration_ms / Math.max(1, rules.segments);
+}
+
+/**
+ * Step 1…3 of the stroke game at `elapsedMs` — the server's segments (3 today); more
+ * segments are mapped proportionally onto the three labelled steps.
+ */
 export function choreStepAt(rules: ChoreRules, elapsedMs: number): 1 | 2 | 3 {
-  const s = segmentOf(Math.min(elapsedMs, rules.duration_ms - 1), rules.duration_ms, 3);
-  return s === 0 ? 1 : s === 1 ? 2 : 3;
+  const segments = Math.max(1, rules.segments);
+  const seg = segmentOf(Math.min(elapsedMs, rules.duration_ms - 1), rules.duration_ms, segments);
+  const step = Math.min(2, Math.floor((seg * 3) / segments));
+  return step === 0 ? 1 : step === 1 ? 2 : 3;
 }
 
 // ── Scratching ("Na praskalnik" + praise in 3 s) ──────────────
@@ -428,6 +448,11 @@ export function scoreScratching(praiseMs: number | null, rules: ScratchingRules)
   else if (delay < rules.min_reaction_ms) reason = 'too_early';
   else if (delay > rules.praise_window_ms) reason = 'too_late';
   return { success: reason === null, reason, delay_ms: delay };
+}
+
+/** QA M1: a resumed carry can still count while a praise could still be in time. */
+export function canScratchingStillCount(rules: ScratchingRules, elapsedMs: number): boolean {
+  return elapsedMs < rules.land_at_ms + rules.praise_window_ms - rules.min_reaction_ms;
 }
 
 export type ScratchingPhase = 'carrying' | 'landed' | 'over';

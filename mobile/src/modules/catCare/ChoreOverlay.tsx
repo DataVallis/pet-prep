@@ -66,8 +66,10 @@ function introFor(kind: ChoreKind, view: ChildPetView): { lines: { text: string;
   const when = catWhen(change.due_at, ctx.nowIso, ctx.timezone);
   const lines = [{ text: change.done ? S.litter_change.weekDone : when !== null ? S.litter_change.weekOpen(when) : '', strong: true, done: change.done }];
   if (change.overdue && !change.done) lines.push({ text: S.litter_change.overdue, strong: false, done: false });
-  // `litter_change_done` names the next week: the end of this one.
-  return { lines: lines.filter((l) => l.text !== ''), canStart: change.can_start, blocked: change.can_start ? null : change.blocked_reason, blockedAt: change.due_at };
+  // QA m1: only `litter_change_done` names a time — the next week (= the end of this one);
+  // the payload has no time for the other reasons (→ their `_no_time` text).
+  const blocked = change.can_start ? null : change.blocked_reason;
+  return { lines: lines.filter((l) => l.text !== ''), canStart: change.can_start, blocked, blockedAt: blocked === 'litter_change_done' ? change.due_at : null };
 }
 
 export default function ChoreOverlay({ kind, view, onClose, reduceMotion, clock, testID = `cat-${kind}` }: ChoreOverlayProps) {
