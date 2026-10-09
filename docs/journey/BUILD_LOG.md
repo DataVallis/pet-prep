@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Otrok, ki ljubljenčku da ime, ga čuti kot svojega — to je prvi korak k odgovornosti. Ime je namenoma samo oznaka: nikoli ga ne vstavimo v stavek (slovensko sklanjanje »Lunin«, »z Luno« bi hitro šlo narobe), v obvestila ali na otrokov zaslon za prijavo s kodo. Brez imena je vse natanko tako kot prej (pasma / vrsta), za pse in muce.
 
-**Številke:** pravila imena: 1–20 znakov, 3 kode napak (`name_too_long`, `name_invalid`, `name_not_allowed`); Jest 140 → 143 zbirk, 1780 → 1820 testov (vsi zeleni), `tsc` brez napak; brez imena obstoječi testi zaslonov psa in muce nespremenjeni.
+**Številke:** pravila imena: 1–20 znakov, 3 kode napak (`name_too_long`, `name_invalid`, `name_not_allowed`); Jest 140 → 143 zbirk, 1780 → 1844 testov (1820 pred QA popravki; vsi zeleni), Pest 1785 → 1812 (QA popravki: okrasne črke ｆｕｃｋ / 𝐟𝐮𝐜𝐤, nevidni znaki, Zalgo, seznam izjem Shitzu; PetNameTest 70 → 97), `tsc` brez napak; brez imena obstoječi testi zaslonov psa in muce nespremenjeni.
 
 **Kako povedati:**
 - 👩 Starši: »Izberite ime skupaj z otrokom — vpišete ga vi, otrok ga vidi na svojem zaslonu. Spremenite ali odstranite ga lahko kadarkoli.«
