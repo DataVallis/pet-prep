@@ -686,25 +686,21 @@ class NotificationService
             // the first step + the time; not again today → the mess reminder instead (QA B1,
             // David 2026-10-09: the child must still hear about the mess — otherwise the ladder
             // has already moved on and the pet gets sick unannounced).
-            $probe = clone $pet;
-            $probe->hygiene_level = 100.0;
-            $after = $metric === 'hunger'
-                ? $this->schedule->feedCheck($probe, $config, $now)
-                : $this->schedule->waterCheck($probe, $config, $now);
+            // EscalationService::lowestMetricKey names food / water on a tie with an open mess
+            // only in the first two cases (M5-R06-06c, QA m1, David 2026-10-09).
+            $after = $this->schedule->checkAfterCleaning($pet, $config, $metric, $now);
             if ($after->allowed) {
                 return ['variant' => $variant, 'replace' => []];
             }
-            $next = $after->nextAllowedAt?->setTimezone($tz);
-            if ($next !== null && $next->toDateString() === $now->copy()->setTimezone($tz)->toDateString()) {
-                return ['variant' => $variant.PushCopy::WAIT_SUFFIX, 'replace' => ['time' => $next->format('H:i')]];
+            if ($this->schedule->allowedToday($after, $pet, $now)) {
+                return ['variant' => $variant.PushCopy::WAIT_SUFFIX, 'replace' => ['time' => $after->nextAllowedAt->copy()->setTimezone($tz)->format('H:i')]];
             }
 
             return ['variant' => $this->hygieneVariant($pet), 'replace' => [], 'metric' => 'hygiene'];
         }
 
-        $next = $check->nextAllowedAt?->setTimezone($tz);
-        if ($next !== null && $next->toDateString() === $now->copy()->setTimezone($tz)->toDateString()) {
-            return ['variant' => PushCopy::VARIANT_WAIT, 'replace' => ['time' => $next->format('H:i')]];
+        if ($this->schedule->allowedToday($check, $pet, $now)) {
+            return ['variant' => PushCopy::VARIANT_WAIT, 'replace' => ['time' => $check->nextAllowedAt->copy()->setTimezone($tz)->format('H:i')]];
         }
 
         return null;

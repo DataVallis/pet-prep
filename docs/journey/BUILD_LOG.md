@@ -8,6 +8,17 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — »Najprej počisti, potem nahrani«, kadar je obrok še mogoč (M5-R06-06c)
+
+**Kaj se je zgodilo:** Ko sta hkrati prazna skleda in nered (oboje 0 %), je kuža ali muca doslej otroku vedno poslala samo opomnik za nered. David je odločil, da to velja samo, ko obroka (ali vode) tisti dan ni več mogoče dati. Če bi bil obrok po čiščenju še mogoč — takoj ali kasneje danes —, otrok dobi »Tvoj kuža je lačen, a najprej je treba počistiti nered. Potem ga lahko nahraniš.« (ali uro naslednjega obroka). Pri psu in pri muci; besedila so ista, spremenila se je samo izbira. David je hkrati potrdil še sedem izvedbenih izbir pri mačjem pesku, praskanju in česanju (vse kot zgrajeno).
+
+**Zakaj je pomembno:** Otrok izve oboje — kaj mora narediti najprej in da bo potem lahko nahranil. Obvestilo ne zamolči dejanja, ki je še mogoče.
+
+**Številke:** 19 novih testov (pes in mačka, vse vrste nereda); 1668 testov zelenih; 0 spremenjenih besedil.
+
+**Kako povedati:**
+- 👩 Starši: »Ko je treba hkrati počistiti in nahraniti, opomnik otroku pove pravi vrstni red.«
+
 ## 2026-10-09 — Obvestila staršem vikajo, kuža ne zahteva nemogočega (M5-R06-06b)
 
 **Kaj se je zgodilo:** David je odločil štiri vprašanja o besedilih obvestil. Slovenski alarm staršem zdaj vika (»Vaš otrok danes ni poskrbel za psa.«), pri psu in pri muci. Pri psu sta popravljeni dve napaki pravila »obvestilo nikoli ne zahteva nemogočega«: ko kuža nekaj pregrize, obvestilo o hrani reče »najprej pospravi, kar je pregriznil, in mu daj igračo« (ne »najprej počisti«), in ko bi bil obrok tudi po čiščenju mogoč šele zvečer, obvestilo pove uro (»Naslednji obrok je ob 17:00.«), namesto da obljubi »Potem ga lahko nahraniš«. Če hranjenje tisti dan ni več mogoče, otrok dobi opomnik za nered — nered ne ostane neopažen do bolezni (popravek po neodvisnem pregledu QA). Muca obdrži »muca« za vse starosti in angleški *it*.
