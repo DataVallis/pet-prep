@@ -279,6 +279,7 @@ describe('family-level texts are species-neutral (M5-R06-08d, David 2026-10-09)'
       expect(i18n.t('family:children.keptPets', { count: 2 })).toMatch(/^Skupna ljubljenčka \(2\) ostaneta/);
       expect(i18n.t('family:children.keptPets', { count: 3 })).toMatch(/^Skupni ljubljenčki \(3\) ostanejo/);
       expect(i18n.t('push:push.channels.shared')).toBe('Opomniki za ljubljenčke');
+      expect(i18n.t('parent:quietHours.hint')).toMatch(/^V tihih urah ljubljenčki skoraj ne postanejo lačni, ni neredov in ni obvestil\./);
     } finally {
       await i18n.changeLanguage('en');
     }

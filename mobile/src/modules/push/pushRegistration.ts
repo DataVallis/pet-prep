@@ -71,8 +71,10 @@ export function isPushAllowed(permissions: Notifications.NotificationPermissions
  * Name of the reminder channel (M5-R06-08d, David 2026-10-09): a child's phone has one pet,
  * so it names that pet's species ("Dog reminders", or "Cat reminders" through the cat
  * override while the child's text species is a cat); a parent's phone gets every pet of
- * the family on the same channel, so it — and a signed-out phone — gets the neutral
- * "Pet reminders". Same channel id either way: re-saving it only renames it.
+ * the family on the same channel, so it gets the neutral "Pet reminders". With no user
+ * (signed out) the neutral name is used too, but only when the channels are next saved
+ * (a language switch, the next sign-in) — logout itself does not rename the channel.
+ * Same channel id either way: re-saving it only renames it.
  */
 export function reminderChannelName(): string {
   return useAppStore.getState().user?.role === 'child' ? PUSH_STRINGS.channels.default : PUSH_STRINGS.channels.shared;

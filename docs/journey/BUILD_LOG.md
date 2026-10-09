@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Družina ima lahko psa in muco. Besedilo, ki ne govori o enem ljubljenčku, ne sme izbrati vrste — staršu z muco ne sme pisati »Psi«.
 
-**Številke:** 19 pasjih besedil (EN + SL) prestavljenih na nevtralno »ljubljenček / pet«; seznam »samo pes« v testu pokritosti 49 → 31 vnosov; Jest 1776 → 1780 testov. Plačilni zaslon pride na vrsto z vklopom mačk (R06-09).
+**Številke:** 18 pasjih besedil (EN + SL) prestavljenih na nevtralno »ljubljenček / pet« + nov nevtralni kanal obvestil za starša; seznam »samo pes« v testu pokritosti 49 → 31 vnosov; Jest 1776 → 1780 testov. Plačilni zaslon pride na vrsto z vklopom mačk (R06-09).
 
 **Kako povedati:**
 - 👩 Starši: »Aplikacija govori o vaših ljubljenčkih — psu, muci ali obeh.« (*mačke še niso vklopljene*)

@@ -212,7 +212,7 @@
   },
   "quietHours": {
     "title": "Quiet hours",
-    "hint": "During quiet hours the pets hardly get hungry, make no mess and no notifications are sent. Times follow the family's time zone.",
+    "hint": "During quiet hours the pets hardly get hungry or make a mess, and no notifications are sent. Times follow the family's time zone.",
     "defaultsApply": "Default times apply — tap Save to confirm or change them.",
     "active": "On",
     "school": "School",
