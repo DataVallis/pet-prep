@@ -8,6 +8,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Muca dobi svoje mini-igre v aplikaciji (M5-R06-08a, skrito)
+
+**Kaj se je zgodilo:** Aplikacija ima zdaj pet mačjih opravil kot kratke igre: **palica s peresom** (~60 s — otrok vleče pero *stran* od muce kot miško, muca se plazi, skoči in na koncu ujame pero), **počisti pesek** (z lopatko poberi grudice), **tedenska menjava peska** in **česanje Maine Coona** (30 s potez s prstom v treh korakih, z vozlom v dlaki 60 s) ter **»na praskalnik«** (muco odneseš s kavča na praskalnik in jo pohvališ v 3 sekundah). Kaj šteje, odloči strežnik; aplikacija pošlje samo, kar je otrok res naredil. Neuspela ali ustavljena igra nima kazni. Starši in otroci tega še ne vidijo — gumbi na glavnem zaslonu pridejo v naslednjem koraku (R06-08b).
+
+**Zakaj je pomembno:** Mačka ni »pes z drugo sliko«: igra mora posnemati lov (pero beži stran od muce, kot svetuje vir C11), praskanje se nikoli ne kaznuje, ampak preusmeri in pohvali takoj (AAFP, C23). To so prva otroška opravila, ki niso prevzeta od psa.
+
+**Številke:** 5 mini-iger, 27 razlogov zavrnitve strežnika s prijaznim besedilom v 2 jezikih; Jest 1601 → 1687 testov (134 kompletov), ocenjevalniki v aplikaciji preverjeni na istih podatkih kot strežnik.
+
+**Kako povedati:**
+- 👩 Starši: »Muca se ne sprehaja — z njo se igraš: vsak dan nekaj minut lova s palico s peresom, čiščenje peska in pohvala na praskalniku namesto kreganja.« (*ko bodo mačke vklopljene*)
+- 🧒 Otroci: »Pero mora bežati kot miška — ko muca skoči, ga hitro umakni!«
+- 🛠 Tehnično: »Strežnik ustvari urnik in oceni igro; aplikacija pošlje le poteze z milisekundami od svojega začetka, zato zamik omrežja ne vpliva na oceno.«
+- 📣 Omrežja: (*interno, dokler mačke niso vklopljene*)
+
+---
+
 ## 2026-10-09 — Brezplačne živali si delijo 20 videzov na pasmo (M4-10, strežnik)
 
 **Kaj se je zgodilo:** Doslej je vsak brezplačni mešanček dobil svojo AI sliko in dva AI videa — **1,27 $ na življenjsko obdobje** (0,15 $ slika + 2 × 0,56 $ video), brez prihodka. David je 9. 10. odločil: brezplačne živali dobijo videz iz **skupnega nabora 20 videzov na pasmo** (mešanček; domača mačka, ko bodo mačke vklopljene). Nabor se polni sproti — prvih 20 brezplačnih živali pasme ustvari vsaka svoj videz, vsaka naslednja dobi enega od obstoječih. Kar je za videz enkrat ustvarjeno (slika in videi obdobja, slika rasti, kasneje tudi videi po morebitnem nakupu in vedenjski videi), dobi vsaka naslednja žival s tem videzom **brez novega klica AI**. V isti družini dve brezplačni živali nimata istega videza, dokler je kakšen prost. Plačljive pasme (Border Collie, Maine Coon) ostanejo unikatne.

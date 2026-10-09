@@ -1,6 +1,7 @@
 /**
  * Free-tier behaviour scenes (M5-R02, David 2026-10-06: free = icons / graphics only,
- * premium = AI video): a puddle (puppy accident) and a chewed slipper, drawn in-app with
+ * premium = AI video): a puddle (puppy accident), a chewed slipper and (cat, M5-R06-08a) a
+ * scratched sofa, drawn in-app with
  * react-native-svg — no bundled bitmaps, no emoji, crisp at any size. Soft, friendly
  * colours on the dark glass HUD: a mess to tidy up, never something scary or gross.
  */
@@ -60,6 +61,36 @@ export function ChewedSlipperGraphic({ size = 88, testID = 'scene-graphic-chewin
   );
 }
 
+/**
+ * A soft sofa cushion (fog grey) with three light claw lines and a few fluff bits — the cat's
+ * "scratched the sofa" (M5-R06-05 / 08a). Friendly, never destructive-looking. viewBox 120 × 80.
+ */
+export function ScratchedSofaGraphic({ size = 88, testID = 'scene-graphic-scratching' }: SceneGraphicProps) {
+  return (
+    <Svg width={size} height={(size * 80) / 120} viewBox="0 0 120 80" testID={testID}>
+      {/* Arm rests and seat. */}
+      <Path d="M10 30 C10 22 22 22 22 30 L22 64 L10 64 Z" fill={palette.n300} stroke={palette.n400} strokeWidth={2} strokeLinejoin="round" />
+      <Path d="M98 30 C98 22 110 22 110 30 L110 64 L98 64 Z" fill={palette.n300} stroke={palette.n400} strokeWidth={2} strokeLinejoin="round" />
+      <Path d="M20 26 C20 18 100 18 100 26 L100 60 L20 60 Z" fill={palette.n200} stroke={palette.n400} strokeWidth={2} strokeLinejoin="round" />
+      {/* Three claw lines. */}
+      <Path d="M48 30 L56 50" stroke={palette.mintDeep} strokeWidth={3} strokeLinecap="round" />
+      <Path d="M58 28 L66 48" stroke={palette.mintDeep} strokeWidth={3} strokeLinecap="round" />
+      <Path d="M68 30 L76 50" stroke={palette.mintDeep} strokeWidth={3} strokeLinecap="round" />
+      {/* Fluff bits. */}
+      <Circle cx={84} cy={66} r={2.5} fill={palette.n200} />
+      <Circle cx={92} cy={72} r={2} fill={palette.n200} />
+      <Circle cx={40} cy={70} r={2} fill={palette.n200} />
+    </Svg>
+  );
+}
+
 export function SceneGraphic({ scene, size, testID }: SceneGraphicProps & { scene: BehaviourScene }) {
-  return scene === 'accident' ? <PuddleGraphic size={size} testID={testID} /> : <ChewedSlipperGraphic size={size} testID={testID} />;
+  switch (scene) {
+    case 'accident':
+      return <PuddleGraphic size={size} testID={testID} />;
+    case 'chewing':
+      return <ChewedSlipperGraphic size={size} testID={testID} />;
+    case 'scratching':
+      return <ScratchedSofaGraphic size={size} testID={testID} />;
+  }
 }

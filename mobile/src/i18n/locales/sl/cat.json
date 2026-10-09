@@ -1,0 +1,215 @@
+{
+  "common": {
+    "close": "Zapri",
+    "stop": "Ustavi",
+    "stopA11y": "Ustavi igro. Ne bo štela, ampak nič hudega — lahko začneš znova kadarkoli.",
+    "retry": "Poskusi znova",
+    "done": "Končano",
+    "back": "Nazaj",
+    "starting": "Muca se pripravlja …",
+    "finishing": "Shranjujem …",
+    "secondsLeft": "Še {{seconds}} s",
+    "resumed": "Dokončajmo igro od prej.",
+    "badResponse": "Nekaj je šlo narobe. Poskusi znova.",
+    "expiredWhileAway": "Igra se je iztekla, medtem ko je bila aplikacija zaprta, zato tokrat ne šteje. Začni novo.",
+    "noPenalty": "Nič hudega — nič slabega se ne zgodi. Lahko takoj poskusiš znova.",
+    "stored": "Ta igra je že shranjena. Takole je šlo."
+  },
+  "time": {
+    "at": "ob {{time}}",
+    "tomorrowAt": "jutri ob {{time}}",
+    "weekdayAt": "{{weekday}} ob {{time}}",
+    "weekdays": {
+      "sun": "v nedeljo",
+      "mon": "v ponedeljek",
+      "tue": "v torek",
+      "wed": "v sredo",
+      "thu": "v četrtek",
+      "fri": "v petek",
+      "sat": "v soboto"
+    }
+  },
+  "wand": {
+    "title": "Palica s peresom",
+    "intro": "Vleci pero po zaslonu. Povleci ga stran od muce, kot miško, ki beži — za takim plenom muca najraje teče.",
+    "tip": "Ne mahaj ji z njim tik pred nosom. Ko skoči, hitro umakni pero!",
+    "today": "Igre danes: {{done}} od {{goal}}",
+    "todayDone": "Današnje igre so opravljene ✓",
+    "length": "Igra traja {{seconds}} s.",
+    "start": "Začni igro",
+    "stalking": "Muca opazuje pero …",
+    "crouching": "Pripravlja se na skok …",
+    "pouncing": "Skok! Umakni pero!",
+    "catching": "Zdaj ga bo ujela …",
+    "caught": "Ujela ga je! Muca je ulovila pero.",
+    "feedbackAway": "Super — pero je ušlo!",
+    "feedbackToward": "Povleci ga stran od nje, ne proti njenemu nosku.",
+    "feedbackPounce": "Odličen umik!",
+    "pullAway": "Umakni pero",
+    "pullAwayA11y": "Umakni pero stran od muce",
+    "stageA11y": "Prostor za igro: muca in pero na palici. Vleci pero stran od nje.",
+    "quarterA11y": "{{n}}. četrtina igre",
+    "result": {
+      "successTitle": "Kakšen lov!",
+      "success": "Muca se je igrala in ujela pero. Ta igra šteje za danes.",
+      "failTitle": "Ta igra ni štela",
+      "storedTitle": "Ta igra je že shranjena",
+      "reasons": {
+        "too_few_moves": "Pero mora večkrat zbežati — med igro ga večkrat povleci stran.",
+        "not_spread": "Pero premikaj celo minuto, ne samo del igre.",
+        "wrong_technique": "Pero vleci stran od muce, kot miško, ki beži — ne proti njenemu nosku.",
+        "missed_pounces": "Ko muca skoči, hitro umakni pero.",
+        "too_uniform": "Pero premikaj po svoje — malo hitreje, malo počasneje, tako je igra zabavna.",
+        "unknown": "Poskusiva znova."
+      },
+      "escapes_one": "Pero je zbežalo {{count}}-krat.",
+      "escapes_two": "Pero je zbežalo {{count}}-krat.",
+      "escapes_few": "Pero je zbežalo {{count}}-krat.",
+      "escapes_other": "Pero je zbežalo {{count}}-krat.",
+      "again": "Igraj znova",
+      "done": "Končano"
+    }
+  },
+  "scoop": {
+    "title": "Počisti pesek",
+    "intro": "Muca je uporabila pesek. Z lopatko poberi vse grudice, da ostane čist zanjo.",
+    "clumpA11y": "Poberi grudico",
+    "progress": "Pobrano: {{done}} od {{total}}",
+    "nothing": "Pesek je čist — zdaj ni kaj pobrati.",
+    "dueAt": "Počisti ga najkasneje {{when}}.",
+    "messNearby": "Zraven peska je tudi nered. Počisti ga z gumbom za čiščenje.",
+    "saving": "Shranjujem …",
+    "success": "Bravo! Pesek je čist.",
+    "unchanged": "Pesek je bil že čist.",
+    "done": "Končano"
+  },
+  "chore": {
+    "grooming": {
+      "title": "Počeši muco",
+      "intro": "S prstom nežno češi njeno dolgo dlako, potezo za potezo, od glave do repa.",
+      "matted": "V dlaki ima vozel. To česanje traja malo dlje ({{seconds}} s) in vozel razreši.",
+      "week": "Česanje ta teden: {{done}} od {{goal}}",
+      "weekDone": "Vsa česanja ta teden so opravljena ✓",
+      "start": "Začni česati",
+      "stroke": "Počeši enkrat",
+      "strokeA11y": "Enkrat počeši muco",
+      "stageA11y": "Tvoja muca. Pobožaj jo s prstom, da ji počešeš dlako.",
+      "steps": {
+        "1": "Glava in vrat",
+        "2": "Hrbet",
+        "3": "Boki in rep"
+      },
+      "result": {
+        "successTitle": "Mehka in svetleča!",
+        "success": "Muca je počesana. To česanje šteje za ta teden.",
+        "failTitle": "To česanje ni štelo"
+      }
+    },
+    "litter_change": {
+      "title": "Zamenjaj ves pesek",
+      "intro": "Enkrat na teden gre ves pesek ven: izprazni stranišče, ga umij in napolni s svežim peskom. Drgni s prstom.",
+      "weekDone": "Menjava peska ta teden je opravljena ✓",
+      "weekOpen": "Pesek zamenjaj najkasneje {{when}}.",
+      "overdue": "Prejšnji teden menjava ni bila opravljena, zato pesek smrdi — hitro ga čisti, dokler ga ne zamenjaš.",
+      "start": "Začni menjavo",
+      "stroke": "Podrgni enkrat",
+      "strokeA11y": "Enkrat podrgni stranišče",
+      "stageA11y": "Mačje stranišče. Podrgni ga s prstom.",
+      "steps": {
+        "1": "Izprazni stranišče",
+        "2": "Umij ga",
+        "3": "Napolni svež pesek"
+      },
+      "result": {
+        "successTitle": "Sveže in čisto!",
+        "success": "Ves pesek je svež. Menjava za ta teden je opravljena.",
+        "failTitle": "Menjava ni štela"
+      }
+    },
+    "mattedFixed": "Vozla ni več!",
+    "progress": "Poteze: {{done}} od {{min}}",
+    "stepA11y": "{{n}}. korak od 3",
+    "reasons": {
+      "too_few_strokes": "Naslednjič še nekaj potez — nadaljuj, dokler se čas ne izteče.",
+      "not_spread": "Nadaljuj skozi vse tri korake, čisto do konca.",
+      "too_uniform": "Potezaj po svoje — malo hitreje, malo počasneje.",
+      "unknown": "Poskusiva znova."
+    },
+    "count": "Poteze: {{strokes}}.",
+    "again": "Poskusi znova",
+    "done": "Končano"
+  },
+  "scratching": {
+    "title": "Na praskalnik",
+    "intro": "Muca je opraskala kavč. Ni poredna — mačke morajo praskati. Odnesi jo na praskalnik in jo pohvali takoj, ko ga začne praskati.",
+    "never": "Nikoli ne vpij in je ne kaznuj — samo pokaži ji pravo mesto in jo pohvali.",
+    "nothing": "Muca ni ničesar opraskala. Vse je v redu!",
+    "dueAt": "Na praskalnik jo odnesi najkasneje {{when}}.",
+    "start": "Odnesi jo na praskalnik",
+    "carrying": "Neseš jo na praskalnik …",
+    "landed": "Praska praskalnik — zdaj jo pohvali!",
+    "praise": "Pohvali",
+    "praiseA11y": "Pohvali muco",
+    "waitHint": "Malo prezgodaj — tokrat ne bo štelo, poskusi znova.",
+    "result": {
+      "successTitle": "Bravo!",
+      "success": "Praskalnik ji je všeč. Kavč je zdaj na varnem.",
+      "failTitle": "Poskusiva še enkrat",
+      "reasons": {
+        "too_early": "Malo prezgodaj — pohvali jo, ko praska praskalnik.",
+        "too_late": "Malo prepozno — pohvali jo takoj, ko začne praskati praskalnik.",
+        "no_praise": "Praskala je praskalnik — naslednjič jo pohvali!",
+        "unknown": "Poskusiva znova."
+      },
+      "again": "Poskusi znova",
+      "done": "Končano"
+    }
+  },
+  "errors": {
+    "needs_cleaning": "Najprej počisti nered, potem lahko to narediš.",
+    "needs_scratcher_first": "Najprej odnesi muco na praskalnik in jo pohvali.",
+    "wand_not_available": "Palica s peresom za tega ljubljenčka ni na voljo.",
+    "wand_quiet_hours": "Muca zdaj spi. Igrata se lahko spet {{when}}.",
+    "wand_quiet_hours_no_time": "Muca zdaj spi. Igrata se lahko po tihih urah.",
+    "wand_too_soon": "Muca po zadnji igri počiva. Igrata se lahko spet {{when}}.",
+    "wand_too_soon_no_time": "Muca po zadnji igri počiva. Igrata se malo kasneje.",
+    "wand_session_active": "Z muco se zdaj igra nekdo drug. Poskusi znova {{when}}.",
+    "wand_session_active_no_time": "Z muco se zdaj igra nekdo drug. Poskusi čez minuto.",
+    "wand_day_ending": "Dan se izteka — muca gre spat. Igrata se jutri!",
+    "wand_session_invalid": "Te igre ni več. Začni novo.",
+    "wand_session_not_over": "Igra še ni čisto končana. Poskusi znova.",
+    "wand_session_expired": "Igra se je iztekla, preden smo jo shranili, zato ni štela. Začni novo.",
+    "wand_session_interrupted": "Igra je bila ustavljena, zato ni štela. Začni novo malo kasneje.",
+    "wand_invalid_moves": "Pri štetju je šlo nekaj narobe. Začni novo igro.",
+    "litter_not_available": "Ta ljubljenček nima mačjega stranišča.",
+    "litter_change_done": "Pesek je ta teden že zamenjan. Naslednja menjava je {{when}}.",
+    "litter_change_done_no_time": "Pesek je ta teden že zamenjan. Bravo!",
+    "litter_change_session_active": "Pesek zdaj menja nekdo drug. Poskusi znova {{when}}.",
+    "litter_change_session_active_no_time": "Pesek zdaj menja nekdo drug. Poskusi čez minuto.",
+    "grooming_not_available": "Te muce ni treba česati.",
+    "grooming_done_today": "Muca je danes že počesana. Spet jo počeši {{when}}.",
+    "grooming_done_today_no_time": "Muca je danes že počesana. Spet jo počeši jutri.",
+    "grooming_week_done": "Vsa česanja ta teden so opravljena. Naslednje česanje {{when}}.",
+    "grooming_week_done_no_time": "Vsa česanja ta teden so opravljena. Bravo!",
+    "grooming_quiet_hours": "Muca zdaj spi. Počeši jo {{when}}.",
+    "grooming_quiet_hours_no_time": "Muca zdaj spi. Počeši jo po tihih urah.",
+    "grooming_session_active": "Muco zdaj češe nekdo drug. Poskusi znova {{when}}.",
+    "grooming_session_active_no_time": "Muco zdaj češe nekdo drug. Poskusi čez minuto.",
+    "scratching_not_needed": "Muca ni ničesar opraskala. Vse je v redu!",
+    "scratching_session_active": "Muco zdaj na praskalnik nese nekdo drug. Poskusi znova {{when}}.",
+    "scratching_session_active_no_time": "Muco zdaj na praskalnik nese nekdo drug. Poskusi čez minuto.",
+    "care_session_active": "Nekdo drug zdaj nekaj počne z muco. Poskusi znova {{when}}.",
+    "care_session_active_no_time": "Nekdo drug zdaj nekaj počne z muco. Poskusi čez minuto.",
+    "care_session_invalid": "Te igre ni več. Začni novo.",
+    "care_session_not_over": "Še ni čisto končano. Poskusi znova.",
+    "care_session_expired": "Čas se je iztekel, preden smo shranili, zato ni štelo. Začni znova.",
+    "care_session_interrupted": "Igra je bila ustavljena, zato ni štela. Začni znova malo kasneje.",
+    "care_session_invalid_input": "Pri štetju je šlo nekaj narobe. Začni znova.",
+    "unknown": "Tega zdaj ni mogoče narediti. Poskusi kasneje."
+  },
+  "locked": {
+    "ill": "Muca je pri veterinarju do {{until}}.",
+    "illNoTime": "Muca je pri veterinarju.",
+    "game_over": "Muca je odšla v zavetišče. Pogovori se s starši."
+  }
+}

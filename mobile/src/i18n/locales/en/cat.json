@@ -1,0 +1,213 @@
+{
+  "common": {
+    "close": "Close",
+    "stop": "Stop",
+    "stopA11y": "Stop the game. It doesn't count, and that's fine — you can start again any time.",
+    "retry": "Try again",
+    "done": "Done",
+    "back": "Back",
+    "starting": "Your kitty is getting ready …",
+    "finishing": "Saving …",
+    "secondsLeft": "{{seconds}} s left",
+    "resumed": "Let's finish the game you started earlier.",
+    "badResponse": "Something went wrong. Try again.",
+    "expiredWhileAway": "The game ran out while the app was closed, so it didn't count this time. Start a new one.",
+    "noPenalty": "No problem — nothing bad happens. You can try again right away.",
+    "stored": "This game is already saved. Here's how it went."
+  },
+  "time": {
+    "at": "at {{time}}",
+    "tomorrowAt": "tomorrow at {{time}}",
+    "weekdayAt": "on {{weekday}} at {{time}}",
+    "weekdays": {
+      "sun": "Sunday",
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday"
+    }
+  },
+  "wand": {
+    "title": "Feather wand",
+    "intro": "Drag the feather around the screen. Pull it away from your kitty, like a little mouse running off — that's what she loves to chase.",
+    "tip": "Don't wave it right in front of her face. When she pounces, pull the feather away quickly!",
+    "today": "Games today: {{done}} of {{goal}}",
+    "todayDone": "Today's play goal is done ✓",
+    "length": "A game lasts {{seconds}} s.",
+    "start": "Start the game",
+    "stalking": "Your kitty is watching the feather …",
+    "crouching": "She's getting ready to pounce …",
+    "pouncing": "Pounce! Pull the feather away!",
+    "catching": "She's about to catch it …",
+    "caught": "Got it! Your kitty caught the feather.",
+    "feedbackAway": "Nice — the feather ran away!",
+    "feedbackToward": "Pull it away from her, not towards her face.",
+    "feedbackPounce": "Great dodge!",
+    "pullAway": "Pull the feather away",
+    "pullAwayA11y": "Pull the feather away from your kitty",
+    "stageA11y": "Play area: your kitty and a feather on a wand. Drag the feather away from her.",
+    "quarterA11y": "Quarter {{n}} of the game",
+    "result": {
+      "successTitle": "What a hunt!",
+      "success": "Your kitty played and caught the feather. This game counts for today.",
+      "failTitle": "This game didn't count",
+      "storedTitle": "This game is already saved",
+      "reasons": {
+        "too_few_moves": "The feather needs to run away more often — pull it away many times during the minute.",
+        "not_spread": "Keep the feather moving the whole minute, not just for a part of it.",
+        "wrong_technique": "Pull the feather away from your kitty, like a mouse running off — not into her face.",
+        "missed_pounces": "When your kitty pounces, pull the feather away quickly.",
+        "too_uniform": "Move the feather your own way — little stops and starts make the game fun.",
+        "unknown": "Let's try again."
+      },
+      "escapes_one": "The feather ran away {{count}} time.",
+      "escapes_other": "The feather ran away {{count}} times.",
+      "again": "Play again",
+      "done": "Done"
+    }
+  },
+  "scoop": {
+    "title": "Clean the litter",
+    "intro": "Your kitty used her litter box. Scoop out every clump so it stays clean for her.",
+    "clumpA11y": "Scoop out a clump",
+    "progress": "Scooped: {{done}} of {{total}}",
+    "nothing": "The litter box is clean — there's nothing to scoop right now.",
+    "dueAt": "Scoop it {{when}} at the latest.",
+    "messNearby": "There's also a mess next to the box. Clean that up with the clean button.",
+    "saving": "Saving …",
+    "success": "Great job! The litter box is clean.",
+    "unchanged": "The litter box was already clean.",
+    "done": "Done"
+  },
+  "chore": {
+    "grooming": {
+      "title": "Brush your kitty",
+      "intro": "Brush her long fur gently with your finger, stroke after stroke, from head to tail.",
+      "matted": "Her fur has a knot. This brushing takes a bit longer ({{seconds}} s) and gets the knot out.",
+      "week": "Brushing this week: {{done}} of {{goal}}",
+      "weekDone": "All of this week's brushing is done ✓",
+      "start": "Start brushing",
+      "stroke": "Brush once",
+      "strokeA11y": "Brush your kitty once",
+      "stageA11y": "Your kitty. Stroke her with your finger to brush her fur.",
+      "steps": {
+        "1": "Head and neck",
+        "2": "Back",
+        "3": "Sides and tail"
+      },
+      "result": {
+        "successTitle": "Soft and shiny!",
+        "success": "Your kitty's fur is brushed. This brushing counts for the week.",
+        "failTitle": "This brushing didn't count"
+      }
+    },
+    "litter_change": {
+      "title": "Change all the litter",
+      "intro": "Once a week all the litter goes out: empty the box, wash it and fill it with fresh litter. Scrub with your finger.",
+      "weekDone": "This week's litter change is done ✓",
+      "weekOpen": "Change the litter {{when}} at the latest.",
+      "overdue": "Last week's change was missed, so the box smells — scoop quickly until you change it.",
+      "start": "Start the change",
+      "stroke": "Scrub once",
+      "strokeA11y": "Scrub the litter box once",
+      "stageA11y": "The litter box. Scrub it with your finger.",
+      "steps": {
+        "1": "Empty the box",
+        "2": "Wash it",
+        "3": "Fill fresh litter"
+      },
+      "result": {
+        "successTitle": "Fresh and clean!",
+        "success": "All the litter is fresh. This week's change is done.",
+        "failTitle": "The change didn't count"
+      }
+    },
+    "mattedFixed": "The knot is gone!",
+    "progress": "Strokes: {{done}} of {{min}}",
+    "stepA11y": "Step {{n}} of 3",
+    "reasons": {
+      "too_few_strokes": "A few more strokes next time — keep going until the time is up.",
+      "not_spread": "Keep going through all three steps, right to the end.",
+      "too_uniform": "Stroke your own way — a little faster, a little slower.",
+      "unknown": "Let's try again."
+    },
+    "count": "Strokes: {{strokes}}.",
+    "again": "Try again",
+    "done": "Done"
+  },
+  "scratching": {
+    "title": "To the scratching post",
+    "intro": "Your kitty scratched the sofa. She isn't naughty — cats need to scratch. Carry her to her scratching post and praise her right away when she scratches it.",
+    "never": "Never shout or punish — just show her the right place and praise her.",
+    "nothing": "Your kitty hasn't scratched anything. All good!",
+    "dueAt": "Show her the scratching post {{when}} at the latest.",
+    "start": "Carry her to the scratching post",
+    "carrying": "You're carrying her to the scratching post …",
+    "landed": "She's scratching the post — praise her now!",
+    "praise": "Praise",
+    "praiseA11y": "Praise your kitty",
+    "waitHint": "A little early — this time it won't count, try again.",
+    "result": {
+      "successTitle": "Well done!",
+      "success": "She loves her scratching post. The sofa is safe now.",
+      "failTitle": "Let's try once more",
+      "reasons": {
+        "too_early": "A little early — praise her when she's scratching the post.",
+        "too_late": "A little late — praise her right when she scratches the post.",
+        "no_praise": "She scratched the post — praise her next time!",
+        "unknown": "Let's try again."
+      },
+      "again": "Try again",
+      "done": "Done"
+    }
+  },
+  "errors": {
+    "needs_cleaning": "Clean up the mess first, then you can do this.",
+    "needs_scratcher_first": "First carry your kitty to the scratching post and praise her.",
+    "wand_not_available": "The feather wand isn't available for this pet.",
+    "wand_quiet_hours": "Your kitty is sleeping now. You can play again {{when}}.",
+    "wand_quiet_hours_no_time": "Your kitty is sleeping now. Play again after quiet hours.",
+    "wand_too_soon": "Your kitty is resting after the last game. Play again {{when}}.",
+    "wand_too_soon_no_time": "Your kitty is resting after the last game. Play again a bit later.",
+    "wand_session_active": "Someone else is playing with your kitty. Try again {{when}}.",
+    "wand_session_active_no_time": "Someone else is playing with your kitty. Try again in a minute.",
+    "wand_day_ending": "The day is almost over — your kitty is going to sleep. Play again tomorrow!",
+    "wand_session_invalid": "This game is gone. Start a new one.",
+    "wand_session_not_over": "The game isn't quite over yet. Try again.",
+    "wand_session_expired": "The game ran out before we could save it, so it didn't count. Start a new one.",
+    "wand_session_interrupted": "The game was paused, so it didn't count. Start a new one later.",
+    "wand_invalid_moves": "Something went wrong while counting. Start a new game.",
+    "litter_not_available": "This pet doesn't have a litter box.",
+    "litter_change_done": "You already changed the litter this week. The next change is {{when}}.",
+    "litter_change_done_no_time": "You already changed the litter this week. Well done!",
+    "litter_change_session_active": "Someone else is changing the litter. Try again {{when}}.",
+    "litter_change_session_active_no_time": "Someone else is changing the litter. Try again in a minute.",
+    "grooming_not_available": "This kitty doesn't need brushing.",
+    "grooming_done_today": "Your kitty was already brushed today. Brush her again {{when}}.",
+    "grooming_done_today_no_time": "Your kitty was already brushed today. Brush her again tomorrow.",
+    "grooming_week_done": "All of this week's brushing is done. Next brushing {{when}}.",
+    "grooming_week_done_no_time": "All of this week's brushing is done. Well done!",
+    "grooming_quiet_hours": "Your kitty is sleeping now. Brush her {{when}}.",
+    "grooming_quiet_hours_no_time": "Your kitty is sleeping now. Brush her after quiet hours.",
+    "grooming_session_active": "Someone else is brushing your kitty. Try again {{when}}.",
+    "grooming_session_active_no_time": "Someone else is brushing your kitty. Try again in a minute.",
+    "scratching_not_needed": "Your kitty hasn't scratched anything. All good!",
+    "scratching_session_active": "Someone else is carrying your kitty to the scratching post. Try again {{when}}.",
+    "scratching_session_active_no_time": "Someone else is carrying your kitty to the scratching post. Try again in a minute.",
+    "care_session_active": "Someone else is doing something with your kitty right now. Try again {{when}}.",
+    "care_session_active_no_time": "Someone else is doing something with your kitty right now. Try again in a minute.",
+    "care_session_invalid": "This game is gone. Start a new one.",
+    "care_session_not_over": "It isn't quite over yet. Try again.",
+    "care_session_expired": "The time ran out before we could save it, so it didn't count. Start again.",
+    "care_session_interrupted": "The game was paused, so it didn't count. Start again later.",
+    "care_session_invalid_input": "Something went wrong while counting. Start again.",
+    "unknown": "That's not possible right now. Try again later."
+  },
+  "locked": {
+    "ill": "Your kitty is at the vet until {{until}}.",
+    "illNoTime": "Your kitty is at the vet.",
+    "game_over": "Your kitty has gone to the shelter. Talk to your parents."
+  }
+}

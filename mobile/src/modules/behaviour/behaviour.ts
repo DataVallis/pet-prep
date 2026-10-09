@@ -22,10 +22,14 @@ import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
 export type BehaviourKind = 'poop' | 'accident' | 'chewing';
-/** Behaviour video / graphic shown over the dog (newest open accident or chewing). */
-export type BehaviourScene = 'accident' | 'chewing';
+/**
+ * Behaviour video / graphic shown over the pet (newest open accident or chewing; for a cat
+ * the scratched sofa — M5-R06-05 server `scene`, read since M5-R06-08a so the cat's
+ * `scratching` video can play; the cat HUD panel follows in R06-08b).
+ */
+export type BehaviourScene = 'accident' | 'chewing' | 'scratching';
 
-export const BEHAVIOUR_SCENES: readonly BehaviourScene[] = ['accident', 'chewing'];
+export const BEHAVIOUR_SCENES: readonly BehaviourScene[] = ['accident', 'chewing', 'scratching'];
 const KINDS: readonly BehaviourKind[] = ['poop', 'accident', 'chewing'];
 
 /** The puppy's bladder clock; null when the pet has none (legacy, unborn, past the puppy stage). */

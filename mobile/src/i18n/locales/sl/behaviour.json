@@ -17,11 +17,13 @@
     "hintNow": "zdaj",
     "scene": {
       "accident": "Ups, luža! Kuža je bil premajhen, da bi zdržal.",
-      "chewing": "Kuža je pregrizel copat. Dolgčas mu je."
+      "chewing": "Kuža je pregrizel copat. Dolgčas mu je.",
+      "scratching": "Muca je opraskala kavč. Mačke morajo praskati — pokaži ji praskalnik."
     },
     "sceneA11y": {
       "accident": "Luža na tleh",
-      "chewing": "Pregrizen copat"
+      "chewing": "Pregrizen copat",
+      "scratching": "Opraskan kavč"
     },
     "cleanChewing": "Pospravi copat"
   },
