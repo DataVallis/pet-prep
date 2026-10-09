@@ -249,6 +249,11 @@ export interface LiveStateOverrides {
   training?: Partial<Record<keyof RawState['training'], unknown>> | null;
   /** M5-R05 `play` (raw); default null (no play), `'absent'` drops the key (older server). */
   play?: unknown;
+  /** M5-R06-08a cat blocks (raw); omitted = absent (a dog / older server). */
+  wand?: unknown;
+  litter?: unknown;
+  grooming?: unknown;
+  scratching?: unknown;
   timezone?: string;
   server_time?: string;
 }
@@ -293,6 +298,10 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
     behaviour: o.behaviour === null ? undefined : { ...base.behaviour, ...o.behaviour },
     training: o.training === null ? undefined : { ...base.training, ...o.training },
     play: o.play === 'absent' ? undefined : o.play === undefined ? base.play : o.play,
+    ...(o.wand !== undefined ? { wand: o.wand } : {}),
+    ...(o.litter !== undefined ? { litter: o.litter } : {}),
+    ...(o.grooming !== undefined ? { grooming: o.grooming } : {}),
+    ...(o.scratching !== undefined ? { scratching: o.scratching } : {}),
   };
   return raw as unknown as ChildPetState;
 }
@@ -630,4 +639,129 @@ export function makeTwoStageGrowth(expiresAt: string | null = '2026-10-04T10:00:
     ],
     expiresAt,
   );
+}
+
+// ── M5-R06-08a cat care (raw payloads as the backend sends them) ──
+
+/** `wand/start` `session`: 60 s, pounces at 15 / 30 / 45 s, Ljubljana 12:00. */
+export function makeWandSession(overrides: Record<string, unknown> = {}) {
+  return {
+    id: '7d1c5c0e-1111-4a5b-9c2d-000000000001',
+    started_at: '2026-10-04T12:00:00+02:00',
+    ends_at: '2026-10-04T12:01:00+02:00',
+    expires_at: '2026-10-04T12:02:00+02:00',
+    duration_ms: 60_000,
+    catch_at_ms: 60_000,
+    pounces_ms: [15_000, 30_000, 45_000],
+    min_away_moves: 8,
+    segments: 4,
+    min_move_interval_ms: 300,
+    pounce_window_ms: 2_000,
+    ...overrides,
+  };
+}
+
+/** Child state `wand`: goal 2, none today, may start. */
+export function makeWandState(overrides: Record<string, unknown> = {}) {
+  return {
+    goal: 2,
+    sessions_today: 0,
+    my_sessions_today: 0,
+    min_gap_minutes: 120,
+    next_allowed_at: null,
+    blocked_reason: null,
+    can_start: true,
+    session: null,
+    session_running: false,
+    missed_yesterday: false,
+    ...overrides,
+  };
+}
+
+/** `grooming/start` / `litter-change/start` `session`: 30 s, 10 strokes in thirds. */
+export function makeChoreSession(kind: 'grooming' | 'litter_change' = 'grooming', overrides: Record<string, unknown> = {}) {
+  return {
+    id: `7d1c5c0e-2222-4a5b-9c2d-00000000000${kind === 'grooming' ? '2' : '3'}`,
+    kind,
+    started_at: '2026-10-04T12:00:00+02:00',
+    ends_at: '2026-10-04T12:00:30+02:00',
+    expires_at: '2026-10-04T12:01:30+02:00',
+    duration_ms: 30_000,
+    min_strokes: 10,
+    segments: 3,
+    min_stroke_interval_ms: 150,
+    matted: false,
+    ...overrides,
+  };
+}
+
+/** Child state `litter`: one open use due at 15:00, weekly change open. */
+export function makeLitterState(overrides: Record<string, unknown> = {}, change: Record<string, unknown> | null = {}) {
+  return {
+    uses_per_day: 2,
+    open_uses: [{ id: 11, used_at: '2026-10-04T11:00:00+02:00', due_at: '2026-10-04T15:00:00+02:00', expired: false }],
+    next_due_at: '2026-10-04T15:00:00+02:00',
+    scoop_deadline_hours: 4,
+    can_scoop: true,
+    change:
+      change === null
+        ? null
+        : {
+            week_started_at: '2026-10-01T09:30:00+02:00',
+            due_at: '2026-10-08T09:30:00+02:00',
+            done: false,
+            overdue: false,
+            blocked_reason: null,
+            can_start: true,
+            session: null,
+            session_running: false,
+            ...change,
+          },
+    ...overrides,
+  };
+}
+
+/** Child state `grooming` (Maine Coon): 1 of 3 this week, may start. */
+export function makeGroomingState(overrides: Record<string, unknown> = {}) {
+  return {
+    goal_per_week: 3,
+    done_this_week: 1,
+    week_started_at: '2026-10-01T09:30:00+02:00',
+    week_ends_at: '2026-10-08T09:30:00+02:00',
+    matted: false,
+    matted_since: null,
+    session_seconds: 30,
+    next_allowed_at: null,
+    blocked_reason: null,
+    can_start: true,
+    session: null,
+    session_running: false,
+    ...overrides,
+  };
+}
+
+/** `scratching/start` `session`: lands at 1.2 s, 3 s window, 150 ms floor. */
+export function makeScratchingSession(overrides: Record<string, unknown> = {}) {
+  return {
+    id: '7d1c5c0e-4444-4a5b-9c2d-000000000004',
+    started_at: '2026-10-04T12:00:00+02:00',
+    ends_at: '2026-10-04T12:00:04.200+02:00',
+    expires_at: '2026-10-04T12:00:34+02:00',
+    land_at_ms: 1_200,
+    praise_window_ms: 3_000,
+    min_reaction_ms: 150,
+    ...overrides,
+  };
+}
+
+/** Child state `scratching`: an open scratched sofa (due 14:00), may start. */
+export function makeScratchingState(overrides: Record<string, unknown> = {}) {
+  return {
+    active: { id: 21, started_at: '2026-10-04T11:30:00+02:00', due_at: '2026-10-04T14:00:00+02:00' },
+    blocked_reason: null,
+    can_start: true,
+    session: null,
+    session_running: false,
+    ...overrides,
+  };
 }

@@ -18,6 +18,7 @@ import en_push from './locales/en/push.json';
 import en_paywall from './locales/en/paywall.json';
 import en_purchases from './locales/en/purchases.json';
 import en_play from './locales/en/play.json';
+import en_cat from './locales/en/cat.json';
 import sl_common from './locales/sl/common.json';
 import sl_auth from './locales/sl/auth.json';
 import sl_child from './locales/sl/child.json';
@@ -32,8 +33,9 @@ import sl_push from './locales/sl/push.json';
 import sl_paywall from './locales/sl/paywall.json';
 import sl_purchases from './locales/sl/purchases.json';
 import sl_play from './locales/sl/play.json';
+import sl_cat from './locales/sl/cat.json';
 
-export const NAMESPACES = ['common', 'auth', 'child', 'behaviour', 'training', 'contract', 'parent', 'family', 'account', 'pet', 'push', 'paywall', 'purchases', 'play'] as const;
+export const NAMESPACES = ['common', 'auth', 'child', 'behaviour', 'training', 'contract', 'parent', 'family', 'account', 'pet', 'push', 'paywall', 'purchases', 'play', 'cat'] as const;
 export type Namespace = (typeof NAMESPACES)[number];
 
 export const en = {
@@ -51,6 +53,7 @@ export const en = {
   paywall: en_paywall,
   purchases: en_purchases,
   play: en_play,
+  cat: en_cat,
 } as const;
 
 /** Plural suffixes differ per language (sl: _one/_two/_few/_other), so key parity is a test, not a type. */
@@ -69,6 +72,7 @@ const sl = {
   paywall: sl_paywall,
   purchases: sl_purchases,
   play: sl_play,
+  cat: sl_cat,
 };
 
 export const resources = { en, sl } as const;

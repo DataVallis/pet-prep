@@ -766,6 +766,57 @@ export const api = {
       body: { kind } satisfies components['schemas']['PlayRequest'],
     }),
 
+  // ── M5-R06-08a cat care (server M5-R06-04 / 05). 200 bodies are untyped in `schema.ts`
+  //    (the session shapes are mis-inferred) → read with `modules/catCare/catCare.ts`.
+  //    Refusals 422 carry `reason` + `next_allowed_at` + `state`; locks 423 carry `state`.
+
+  /**
+   * POST /api/child/pet/wand/start — the cat's ~60 s feather wand game: `session` = the
+   * server's schedule (pounces, catch). 422 `wand_not_available` / `needs_cleaning` /
+   * `wand_quiet_hours` / `wand_too_soon` / `wand_session_active` / `care_session_active` /
+   * `wand_day_ending`, 423 locked.
+   */
+  startWand: () => apiRequest<unknown>('/api/child/pet/wand/start', { method: 'POST' }),
+
+  /**
+   * POST /api/child/pet/wand/finish {session_id, moves[{t, away}]} — the feather moves the
+   * app saw (ms since its local start). 200 `accepted` (counts) / `rejected` (didn't, no
+   * penalty) / `unchanged` (repeat) with `result`. 422 `wand_session_*` / `wand_invalid_moves`.
+   */
+  finishWand: (sessionId: string, moves: readonly { t: number; away: boolean }[]) =>
+    apiRequest<unknown>('/api/child/pet/wand/finish', {
+      method: 'POST',
+      body: { session_id: sessionId, moves: moves.map((m) => ({ t: m.t, away: m.away })) } satisfies components['schemas']['FinishWandRequest'],
+    }),
+
+  /** POST /api/child/pet/litter/scoop — scoop every open litter use. `unchanged` when nothing to scoop; 422 `litter_not_available`. */
+  scoopLitter: () => apiRequest<unknown>('/api/child/pet/litter/scoop', { method: 'POST' }),
+
+  /**
+   * POST /api/child/pet/{litter-change|grooming}/start — the 30 s stroke game (grooming 60 s
+   * while matted). 422 `needs_cleaning`, `litter_change_done` / `litter_change_session_active`,
+   * `grooming_*`, `care_session_active` (+ `next_allowed_at`), 423 locked.
+   */
+  startCareChore: (kind: 'grooming' | 'litter_change') =>
+    apiRequest<unknown>(kind === 'grooming' ? '/api/child/pet/grooming/start' : '/api/child/pet/litter-change/start', { method: 'POST' }),
+
+  /** POST /api/child/pet/{litter-change|grooming}/finish {session_id, strokes[{t}]}. 422 `care_session_*`. */
+  finishCareChore: (kind: 'grooming' | 'litter_change', sessionId: string, strokes: readonly number[]) =>
+    apiRequest<unknown>(kind === 'grooming' ? '/api/child/pet/grooming/finish' : '/api/child/pet/litter-change/finish', {
+      method: 'POST',
+      body: { session_id: sessionId, strokes: strokes.map((t) => ({ t })) } satisfies components['schemas']['FinishCareChoreRequest'],
+    }),
+
+  /** POST /api/child/pet/scratching/start — carry the cat to the scratcher (`land_at_ms`). 422 `scratching_not_needed` / `scratching_session_active` / `care_session_active`. */
+  startScratching: () => apiRequest<unknown>('/api/child/pet/scratching/start', { method: 'POST' }),
+
+  /** POST /api/child/pet/scratching/finish {session_id, praise_ms|null} — the praise (ms since the local start). 422 `care_session_*` / `scratching_not_needed`. */
+  finishScratching: (sessionId: string, praiseMs: number | null) =>
+    apiRequest<unknown>('/api/child/pet/scratching/finish', {
+      method: 'POST',
+      body: { session_id: sessionId, praise_ms: praiseMs } satisfies components['schemas']['FinishScratchingRequest'],
+    }),
+
   /** POST /api/child/pet/steps — today's cumulative steps of this device (max wins on the server). */
   syncSteps: (body: SyncStepsRequest) =>
     apiRequest<SyncStepsResponse>('/api/child/pet/steps', {

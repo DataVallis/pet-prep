@@ -17,11 +17,13 @@
     "hintNow": "now",
     "scene": {
       "accident": "Oops, a puddle! Your pup was too little to hold it.",
-      "chewing": "Your pup chewed a slipper. It was bored."
+      "chewing": "Your pup chewed a slipper. It was bored.",
+      "scratching": "Your kitty scratched the sofa. Cats need to scratch — show her the scratching post."
     },
     "sceneA11y": {
       "accident": "Puddle on the floor",
-      "chewing": "Chewed slipper"
+      "chewing": "Chewed slipper",
+      "scratching": "Scratched sofa"
     },
     "cleanChewing": "Tidy the slipper"
   },

@@ -15,6 +15,7 @@
 import { isPaymentRequired, readPetPlan, type PetPlan } from '@/modules/plan/plan';
 import type { ChildPetState } from '@/api/client';
 import { readBreed, readSpecies } from '@/modules/species/species';
+import { readChildCatCare, type ChildCatCare } from '@/modules/catCare/catCare';
 import type { PetState, PetUpdatedBroadcast, ShownBreed, Species } from '@/types';
 import type { LockState } from '@/store/appStore';
 import { familyCalendar } from '@/modules/childPet/familyTime';
@@ -142,6 +143,12 @@ export interface ChildPetView {
    * scene. null for a pet without play (free mutt, legacy, unpaid) and from an older server.
    */
   play: ChildPlay | null;
+  /**
+   * M5-R06-08a cat care: wand play, litter tray (scoop + weekly change), Maine Coon
+   * grooming, scratching — each block null for a dog; `EMPTY_CAT_CARE` for a dog / an
+   * older server. Read with `readChildCatCare` (`modules/catCare/catCare.ts`).
+   */
+  cat: ChildCatCare;
   /** ms of `server_time` (whole seconds). */
   snapshotAtMs: number;
   /** ms of the newest applied broadcast `emitted_at`; 0 if none. */
@@ -316,6 +323,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     training: readChildTraining((raw as { training?: unknown }).training),
     // Older servers send no `play` → null (no "Igra").
     play: readChildPlay((raw as { play?: unknown }).play),
+    // M5-R06-08a: the four cat blocks (null / missing for a dog and an older server).
+    cat: readChildCatCare(raw),
     snapshotAtMs: msOf(raw.server_time),
     lastEmittedMs,
     clockSkewMs: msOf(raw.server_time) > 0 ? msOf(raw.server_time) - receivedAtMs : 0,

@@ -9,6 +9,7 @@ import { isPaymentRequired, readPetPlan } from '@/modules/plan/plan';
 import { create } from 'zustand';
 import type { Pet, PetUpdatedBroadcast } from '@/types';
 import type { VideoState } from '@/modules/petMedia/petMedia';
+import type { CatGameKind } from '@/modules/catCare/catCare';
 
 export interface AppUser {
   id: number;
@@ -181,12 +182,24 @@ interface AppStore {
    */
   pushTarget: PushTarget | null;
   setPushTarget: (target: PushTarget | null) => void;
+  /**
+   * M5-R06-08a: the cat mini-game overlay over the HUD (wand, scoop, weekly litter change,
+   * grooming, scratching); null = closed. One game at a time: `openCatGame` refuses while
+   * another one is open.
+   */
+  catOverlay: CatGameKind | null;
+  /** Open a cat game; false (nothing changes) while a different one is open. */
+  openCatGame: (kind: CatGameKind) => boolean;
+  closeCatGame: () => void;
+  /** Session ids of cat games the child stopped (never resumed; session UI state, cleared on sign-out). */
+  abandonedCatSessions: readonly string[];
+  abandonCatSession: (id: string) => void;
 
   // Logout / reset
   reset: () => void;
 }
 
-export const useAppStore = create<AppStore>((set) => ({
+export const useAppStore = create<AppStore>((set, get) => ({
   // Auth & pairing
   authToken: null,
   user: null,
@@ -289,6 +302,22 @@ export const useAppStore = create<AppStore>((set) => ({
     ),
   pushTarget: null,
   setPushTarget: (pushTarget) => set({ pushTarget }),
+  catOverlay: null,
+  openCatGame: (kind) => {
+    const open = get().catOverlay;
+    if (open !== null && open !== kind) return false;
+    if (open !== kind) set({ catOverlay: kind });
+    return true;
+  },
+  closeCatGame: () => set({ catOverlay: null }),
+  abandonedCatSessions: [],
+  abandonCatSession: (id) =>
+    set((state) =>
+      state.abandonedCatSessions.includes(id)
+        ? state
+        // Bounded: a session lives ≤ ~2 min; keep the newest few.
+        : { abandonedCatSessions: [...state.abandonedCatSessions, id].slice(-20) },
+    ),
 
   // Logout / reset — leaves the app on the login screen (bootStatus 'ready').
   reset: () =>
@@ -310,5 +339,7 @@ export const useAppStore = create<AppStore>((set) => ({
       playOverlay: null,
       dismissedPlayInvitations: [],
       pushTarget: null,
+      catOverlay: null,
+      abandonedCatSessions: [],
     }),
 }));
