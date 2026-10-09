@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Otrok izve oboje — kaj mora narediti najprej in da bo potem lahko nahranil. Obvestilo ne zamolči dejanja, ki je še mogoče.
 
-**Številke:** 15 novih testov (pes in mačka, vse vrste nereda); 1664 testov zelenih; 0 spremenjenih besedil.
+**Številke:** 19 novih testov (pes in mačka, vse vrste nereda); 1668 testov zelenih; 0 spremenjenih besedil.
 
 **Kako povedati:**
 - 👩 Starši: »Ko je treba hkrati počistiti in nahraniti, opomnik otroku pove pravi vrstni red.«

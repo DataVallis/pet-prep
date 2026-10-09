@@ -692,17 +692,15 @@ class NotificationService
             if ($after->allowed) {
                 return ['variant' => $variant, 'replace' => []];
             }
-            $next = $after->nextAllowedAt?->setTimezone($tz);
-            if ($next !== null && $next->toDateString() === $now->copy()->setTimezone($tz)->toDateString()) {
-                return ['variant' => $variant.PushCopy::WAIT_SUFFIX, 'replace' => ['time' => $next->format('H:i')]];
+            if ($this->schedule->allowedToday($after, $pet, $now)) {
+                return ['variant' => $variant.PushCopy::WAIT_SUFFIX, 'replace' => ['time' => $after->nextAllowedAt->copy()->setTimezone($tz)->format('H:i')]];
             }
 
             return ['variant' => $this->hygieneVariant($pet), 'replace' => [], 'metric' => 'hygiene'];
         }
 
-        $next = $check->nextAllowedAt?->setTimezone($tz);
-        if ($next !== null && $next->toDateString() === $now->copy()->setTimezone($tz)->toDateString()) {
-            return ['variant' => PushCopy::VARIANT_WAIT, 'replace' => ['time' => $next->format('H:i')]];
+        if ($this->schedule->allowedToday($check, $pet, $now)) {
+            return ['variant' => PushCopy::VARIANT_WAIT, 'replace' => ['time' => $check->nextAllowedAt->copy()->setTimezone($tz)->format('H:i')]];
         }
 
         return null;

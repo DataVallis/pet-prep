@@ -6,6 +6,7 @@ use App\Enums\HygieneEventKind;
 use App\Enums\HygieneEventStatus;
 use App\Enums\PushType;
 use App\Models\ActivityLog;
+use App\Models\BreedConfig;
 use App\Models\DevicePushToken;
 use App\Models\Pet;
 use App\Models\PetHygieneEvent;
@@ -318,6 +319,40 @@ describe('M5-R06-06c (QA m1, David 2026-10-09): a tie with an open mess names th
         'dog' => ['dog', 'Your dog is thirsty, but the mess has to be cleaned up first. Then you can give it water.'],
         'cat' => ['cat', 'Your cat is thirsty, but the mess has to be cleaned up first. Then you can give it water.'],
     ]);
+
+    it('water possible later today only because of the minimum gap: the first step + the time (water `*_first_wait`)', function (string $species, string $wateredAt, string $body) {
+        [, $child, $pet] = pmpFamily($species);
+        pmpLog($pet, $child, ActivityType::WateredPet, $wateredAt);
+        pmpAt('2026-10-21 15:00');
+
+        [$row, $bodies] = pmpTie($pet, ['thirst'], [$species === 'cat' ? HygieneEventKind::LitterAccident : HygieneEventKind::Poop]);
+
+        expect($row->metric)->toBe('thirst')
+            ->and($bodies)->toBe([$body]);
+    })->with([
+        'dog (gap 180 min)' => ['dog', '2026-10-21 14:00', 'Your dog is thirsty, but the mess has to be cleaned up first. You can give it water again at 17:00.'],
+        'cat (gap 240 min)' => ['cat', '2026-10-21 12:00', 'Your cat is thirsty, but the mess has to be cleaned up first. You can give it water again at 16:00.'],
+    ]);
+
+    it('day boundary: next water at 00:30 local (still the same UTC date) is not "today" → the mess text', function () {
+        [, $child, $dog] = pmpFamily('dog');
+        pmpLog($dog, $child, ActivityType::WateredPet, '2026-10-21 21:30'); // gap 180 min → 00:30 local = 22:30 UTC on the 21st
+        pmpAt('2026-10-21 23:30'); // 21:30 UTC
+
+        [$row, $bodies] = pmpTie($dog, ['thirst'], [HygieneEventKind::Poop]);
+
+        expect($row->metric)->toBe('hygiene')
+            ->and($bodies)->toBe(['Your dog made a mess! Clean it up as soon as you can, or it will get sick.']);
+    });
+
+    it('no breed config: the tie stays on the mess', function () {
+        [, , $dog] = pmpFamily('dog', '2026-10-21 07:30'); // feedable now if a config existed
+        BreedConfig::query()->where('breed_slug', $dog->breed_type->slug())->delete();
+
+        [$row] = pmpTie($dog, ['hunger'], [HygieneEventKind::Poop]);
+
+        expect($row->metric)->toBe('hygiene');
+    });
 
     it('food and water possible: hunger keeps its place before thirst', function () {
         [, , $dog] = pmpFamily('dog', '2026-10-21 07:30');

@@ -273,7 +273,12 @@ class CareScheduleService
         return $this->allowedToday($this->checkAfterCleaning($pet, $config, $metric, $now), $pet, $now);
     }
 
-    /** Allowed now, or refused only until a later time on the family-local date of $now. */
+    /**
+     * Allowed now, or refused only until a later time on the family-local
+     * date of $now (the push copy's "next meal is at …" case). A refusal
+     * without nextAllowedAt (e.g. needs_cleaning, nothing more today) or with
+     * a time on a later family-local date counts as NOT today.
+     */
     public function allowedToday(CareCheck $check, Pet $pet, CarbonInterface $now): bool
     {
         if ($check->allowed) {
