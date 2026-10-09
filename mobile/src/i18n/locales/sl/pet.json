@@ -183,7 +183,8 @@
         "young": "Mlada mačka",
         "adult": "Zrela mačka",
         "senior": "Starejša mačka"
-      }
+      },
+      "buyFirst": "12-tedenski izziv se začne z nakupom: kupite ga v »Nakupi / izziv« — pred ali po tem, ko {{name}} podpiše pogodbo. Do takrat muca čaka."
     }
   },
   "media": {

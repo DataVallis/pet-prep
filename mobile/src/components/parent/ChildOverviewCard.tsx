@@ -24,9 +24,9 @@ import {
   TrafficLightBadge,
 } from '@/components/parent/ParentUi';
 import {
-  PET_STATUS_LABELS,
   breedLabel,
   petStatus,
+  petStatusText,
   type FamilyChild,
   type FamilyPet,
 } from '@/modules/family/family';
@@ -49,7 +49,7 @@ import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 import { playTodayLine } from '@/modules/play/play';
 import { fonts, palette, tightTracking } from '@/theme';
-import { t } from '@/i18n';
+import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
 /** All user-visible strings of the card (`parent:childCard`, M1-18). */
@@ -59,7 +59,10 @@ export const CHILD_CARD_STRINGS = strings('parent', 'childCard', {
   todayOwn: (name: string, n: number) => t('parent:childCard.todayOwn', { name, n }),
   todayPending: (n: number) => t('parent:childCard.todayPending', { n }),
   todayMissed: (n: number) => t('parent:childCard.todayMissed', { n }),
-  awaitingContract: (name: string) => t('parent:childCard.awaitingContract', { name }),
+  /** M5-R06-08c: the species of the pet shown ("Muca čaka, da …"). */
+  awaitingContract: (name: string, species: string | null = null) => tSpecies('parent:childCard.awaitingContract', species, { name }),
+  petLabel: (species: string | null) => tSpecies('parent:childCard.pet', species),
+  energyLabel: (species: string | null) => tSpecies('parent:childCard.metrics.energy', species),
   detailsA11y: (name: string) => t('parent:childCard.detailsA11y', { name }),
   behaviourStats: (days: number, text: string) => `${PARENT_BEHAVIOUR_STRINGS.lastDays(days)}: ${text}`,
 });
@@ -96,6 +99,8 @@ function WeekBars({ days }: { days: DayRow[] }) {
 export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChildPin, onOpenChallenge }: ChildOverviewCardProps) {
   const id = child.id;
   const status = pet ? petStatus(pet) : null;
+  /** M5-R06-08c: texts follow the species of the pet shown (a family may have a dog and a cat). */
+  const species = pet?.species ?? null;
   const waitsForContract = pet !== null && (pet.awaiting_contract || !child.contract_signed);
   const score = child.care_score;
   const today = child.today;
@@ -133,7 +138,7 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
         <View style={styles.reasons}>
           {child.traffic_light.reasons.map((r) => (
             <Text key={r} style={styles.reason} testID={`child-reason-${id}-${r}`}>
-              • {reasonText(r, today.missed_count)}
+              • {reasonText(r, today.missed_count, species)}
             </Text>
           ))}
         </View>
@@ -156,7 +161,7 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
         </View>
       ) : waitsForContract && !pet.is_game_over ? (
         <Text style={styles.muted} testID={`child-awaiting-${id}`}>
-          {S.awaitingContract(child.name)}
+          {S.awaitingContract(child.name, species)}
         </Text>
       ) : (
         <>
@@ -252,19 +257,19 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
       {pet !== null && (
         <View style={styles.block} testID={`child-pet-${id}`}>
           <View style={styles.petHeader}>
-            <PetThumbnail media={normalizePetMedia(pet.media)} size={56} testID={`child-pet-thumb-${id}`} />
+            <PetThumbnail media={normalizePetMedia(pet.media)} size={56} species={species} testID={`child-pet-thumb-${id}`} />
             <View style={styles.flex}>
-              <Text style={styles.label}>{S.pet}</Text>
+              <Text style={styles.label}>{S.petLabel(species)}</Text>
               {status && (
                 <Text style={[styles.status, status === 'game_over' && styles.statusRed]} testID={`child-pet-status-${id}`}>
-                  {PET_STATUS_LABELS[status]}
+                  {petStatusText(status, species)}
                 </Text>
               )}
             </View>
           </View>
           <MetricRow label={S.metrics.hunger} value={pet.metrics.hunger} />
           <MetricRow label={S.metrics.thirst} value={pet.metrics.thirst} />
-          <MetricRow label={S.metrics.energy} value={pet.metrics.energy} />
+          <MetricRow label={S.energyLabel(species)} value={pet.metrics.energy} />
           <MetricRow label={S.metrics.hygiene} value={pet.metrics.hygiene} testID={`child-pet-hygiene-${id}`} />
           {behaviourLines.length > 0 && (
             <View style={styles.behaviour} testID={`child-pet-behaviour-${id}`}>

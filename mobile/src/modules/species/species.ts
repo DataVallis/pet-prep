@@ -11,7 +11,7 @@
  */
 
 import type { components } from '@/api/schema';
-import { t } from '@/i18n';
+import { t, tSpecies } from '@/i18n';
 import type { BreedType, ShownBreed, Species } from '@/types';
 
 export type { BreedType, ShownBreed, Species };
@@ -59,6 +59,23 @@ export function readBreed(value: unknown): ShownBreed {
 export function readSpecies(value: unknown, breed?: ShownBreed | null): Species | null {
   if (isSpecies(value)) return value;
   return breed && breed !== 'unknown' ? BREED_SPECIES[breed] : null;
+}
+
+/** Cats among the pets (M5-R06-08c); a pet without a known species counts as a dog (the old default). */
+export function catCount(pets: readonly { species?: unknown; breed_type?: unknown }[]): number {
+  return pets.filter((p) => readSpecies(p.species, readBreed(p.breed_type)) === 'cat').length;
+}
+
+/**
+ * A pet count per species (M5-R06-08c): `key` is the dog plural key ("1 kuža"); cats read
+ * its cat override ("2 muci"); dogs and cats together → "1 kuža · 1 muca" (`cat:parent.petsMixed`).
+ * With no cat the text is exactly the dog text.
+ */
+export function petCountText(key: 'parent:dashboard.counts.dogs' | 'account:counts.dogs', pets: number, cats: number): string {
+  const dogs = Math.max(0, pets - cats);
+  if (cats <= 0) return t(key, { count: pets });
+  const catText = tSpecies(key, 'cat', { count: cats });
+  return dogs === 0 ? catText : t('cat:parent.petsMixed', { dogs: t(key, { count: dogs }), cats: catText });
 }
 
 /** "Pes" / "Mačka" — read at render time. */

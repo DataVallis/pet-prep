@@ -37,7 +37,7 @@ export function CatHudChip({ chip, onPress }: CatHudChipProps) {
   );
 }
 
-/** One calm line under the chips ("Dlaka ima vozel — počeši jo."). */
+/** One calm line under the chips ("V dlaki ima vozel — počeši jo."). */
 export function CatHudNote({ text, testID }: { text: string; testID?: string }) {
   return (
     <Text style={styles.note} testID={testID}>

@@ -175,7 +175,8 @@
         "young": "Young cat",
         "adult": "Mature cat",
         "senior": "Senior cat"
-      }
+      },
+      "buyFirst": "The 12-week challenge starts with a purchase: buy it under “Purchases / challenge” — before or after {{name}} signs the contract. Until then the cat waits."
     }
   },
   "media": {

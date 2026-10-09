@@ -182,7 +182,7 @@ describe('refusal texts', () => {
 
   it('names the family-local time when the server sends one (Slovenian, feminine "muca")', () => {
     expect(catRefusalMessage('wand_too_soon', NEXT, ctx)).toBe('Muca po zadnji igri počiva. Igrata se lahko spet ob 16:20.');
-    expect(catRefusalMessage('wand_too_soon', null, ctx)).toBe('Muca po zadnji igri počiva. Igrata se malo kasneje.');
+    expect(catRefusalMessage('wand_too_soon', null, ctx)).toBe('Muca po zadnji igri počiva. Igrata se lahko malo kasneje.');
     expect(catRefusalMessage('wand_quiet_hours', '2026-10-05T07:00:00+02:00', ctx)).toBe('Muca zdaj spi. Igrata se lahko spet jutri ob 07:00.');
     expect(catRefusalMessage('grooming_week_done', '2026-10-08T09:30:00+02:00', ctx)).toBe(
       'Vsa česanja ta teden so opravljena. Naslednje česanje v četrtek ob 09:30.',

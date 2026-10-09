@@ -124,7 +124,9 @@
     "muttLocked": "Mešanček je brezplačen, a strežnik ga je zavrnil. To je napaka pri nas — pišite nam na podporo.",
     "freeCatLocked": "Domača mačka je brezplačna, a strežnik jo je zavrnil. To je napaka pri nas — pišite nam na podporo.",
     "rateLimitedNoWait": "Preveč novih kod v kratkem času. Poskusite znova.",
-    "retry": "Poskusi znova"
+    "retry": "Poskusi znova",
+    "petTitleAny": "Za katerega ljubljenčka bo skrbel(a) {{name}}?",
+    "petsLoadingAny": "Nalagam ljubljenčke v družini …"
   },
   "childDetail": {
     "back": "Nazaj",

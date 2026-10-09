@@ -809,6 +809,17 @@ describe('AddChildScreen', () => {
         pet_id: null,
         profile: { species: 'cat', breed: 'domestic_cat', origin: 'adopted', age_stage: 'young', plan: 'free' },
       });
+      // M5-R06-08c: the PIN step speaks about the cat (no "kužek").
+      expect(screen.getByText('Spremeni muco')).toBeTruthy();
+      expect(screen.getByText('Otrok podpiše Pogodbo o odgovornosti in muca se rodi.')).toBeTruthy();
+      expect(screen.queryByText(S.editDog)).toBeNull();
+    });
+
+    it('cats on: the pet question is about a pet, not a dog (M5-R06-08c)', async () => {
+      getBreedCatalogue.mockResolvedValue(CATS_ON);
+      renderWithQuery(<AddChildScreen onBack={jest.fn()} child={NEW_CHILD} />);
+      await flush();
+      expect(screen.getByText('Za katerega ljubljenčka bo skrbel(a) Maja?')).toBeTruthy();
     });
 
     it('422 species_unavailable → "Ta vrsta še ni na voljo", catalogue reloaded, species chosen again', async () => {

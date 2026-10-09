@@ -43,7 +43,7 @@ import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
 import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
 import { parentPetGrowthKey, useGrowthRefresh, useParentPetGrowth } from '@/hooks/queries/usePetGrowth';
 import PetAlbum from '@/components/PetAlbum';
-import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
+import { hasAlbum } from '@/modules/petMedia/album';
 import {
   REPORT_PERIODS,
   ROUTINE_LABELS,
@@ -67,7 +67,7 @@ import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behavi
 import { PARENT_TRAINING_STRINGS, parentTrainingLines } from '@/modules/training/training';
 import { playKindOfActivity } from '@/modules/play/play';
 import { fonts, palette, tightTracking } from '@/theme';
-import { t } from '@/i18n';
+import { t, tSpecies } from '@/i18n';
 import { formatThousands } from '@/i18n/format';
 import { strings } from '@/i18n/strings';
 
@@ -247,16 +247,16 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
               testID="detail-album-open"
               style={({ pressed }) => [styles.moreButton, pressed && styles.pressed]}
             >
-              <Text style={styles.moreText}>{S.album}</Text>
+              <Text style={styles.moreText}>{tSpecies('parent:childDetail.album', species)}</Text>
             </Pressable>
           )}
 
           {profile !== null && (
             <Card testID="detail-pet-profile">
               <Text style={styles.strong} testID="detail-pet-stage">
-                {stageLine(profile)}
+                {stageLine(profile, species)}
               </Text>
-              {[originLine(profile), nextStageLine(profile), mealsLine(profile)]
+              {[originLine(profile, species), nextStageLine(profile, 'parent', species), mealsLine(profile)]
                 .filter((line): line is string => line !== null)
                 .map((line) => (
                   <Text key={line} style={styles.muted}>
@@ -331,7 +331,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
               <Card testID={`report-${data.days}`}>
                 {data.traffic_light.reasons.map((r) => (
                   <Text key={r} style={styles.body}>
-                    • {reasonText(r, child.today.missed_count)}
+                    • {reasonText(r, child.today.missed_count, species)}
                   </Text>
                 ))}
                 <Text style={styles.label}>{S.periodScore}</Text>
@@ -435,7 +435,8 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
       {showAlbum && media !== null && (
         <PetAlbum
           media={media}
-          title={ALBUM_STRINGS.parentTitle}
+          title={tSpecies('pet:album.parentTitle', species)}
+          species={species}
           onClose={() => setAlbumOpen(false)}
           onMediaExpired={onMediaExpired}
           growth={growth}

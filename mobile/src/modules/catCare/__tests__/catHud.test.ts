@@ -134,7 +134,7 @@ describe('chips, scratcher, first aid, resume', () => {
       catView({ pet: { breed_type: 'maine_coon' }, grooming: makeGroomingState({ matted: true }), litter: makeLitterState({}, { overdue: true }) }),
     );
     expect(chips.map((c) => [c.kind, c.pending, c.note])).toEqual([
-      ['grooming', true, 'Dlaka ima vozel — počeši jo.'],
+      ['grooming', true, 'V dlaki ima vozel — počeši jo.'],
       ['litter_change', true, 'Pesek smrdi — zamenjaj ves pesek.'],
     ]);
     // The amber dot is read out too (QA n2).

@@ -31,7 +31,7 @@
   },
   "wand": {
     "title": "Palica s peresom",
-    "intro": "Vleci pero po zaslonu. Povleci ga stran od muce, kot miško, ki beži — za takim plenom muca najraje teče.",
+    "intro": "Vleci pero po zaslonu. Povleci ga stran od muce, kot miško, ki beži — takšen plen muca najraje lovi.",
     "tip": "Ne mahaj ji z njim tik pred nosom. Ko skoči, hitro umakni pero!",
     "today": "Igre danes: {{done}} od {{goal}}",
     "todayDone": "Današnje igre so opravljene ✓",
@@ -172,7 +172,7 @@
     "wand_quiet_hours": "Muca zdaj spi. Igrata se lahko spet {{when}}.",
     "wand_quiet_hours_no_time": "Muca zdaj spi. Igrata se lahko po tihih urah.",
     "wand_too_soon": "Muca po zadnji igri počiva. Igrata se lahko spet {{when}}.",
-    "wand_too_soon_no_time": "Muca po zadnji igri počiva. Igrata se malo kasneje.",
+    "wand_too_soon_no_time": "Muca po zadnji igri počiva. Igrata se lahko malo kasneje.",
     "wand_session_active": "Z muco se zdaj igra nekdo drug. Poskusi znova {{when}}.",
     "wand_session_active_no_time": "Z muco se zdaj igra nekdo drug. Poskusi čez minuto.",
     "wand_day_ending": "Dan se izteka — muca gre spat. Igrata se jutri!",
@@ -229,7 +229,7 @@
     "chips": {
       "grooming": "Počeši",
       "groomingA11y": "Počeši muco. Ta teden: {{done}} od {{goal}}.",
-      "groomingMatted": "Dlaka ima vozel — počeši jo.",
+      "groomingMatted": "V dlaki ima vozel — počeši jo.",
       "litterChange": "Menjava peska",
       "litterChangeA11y": "Zamenjaj ves pesek (enkrat na teden)",
       "litterChangeOverdue": "Pesek smrdi — zamenjaj ves pesek.",
@@ -254,8 +254,10 @@
     "playDayNone": "Brez rutine igre",
     "firstAid": {
       "title": "Dobro je vedeti",
-      "body": "Pri pravi mački je to, da ne je, resno: mačka, ki neha jesti, lahko dobi nevarno bolezen jeter (hepatična lipidoza). Če mačka neha jesti, se čim prej posvetujte z veterinarjem — ne čakajte."
-    }
+      "body": "Pri pravi mački je to, da ne je, resno: mačka, ki neha jesti, lahko zboli za nevarno boleznijo jeter (hepatično lipidozo). Če mačka neha jesti, se čim prej posvetujte z veterinarjem — ne čakajte."
+    },
+    "petsMixed": "{{dogs}} · {{cats}}",
+    "openScratching": "{{label}} — na praskalnik do {{due}}"
   },
   "override": {
     "child": {
@@ -351,14 +353,34 @@
     "pet": {
       "media": {
         "pending": "Muca se pripravlja…",
-        "a11y": "Tvoja muca ({{breed}})"
+        "a11y": "Tvoja muca ({{breed}})",
+        "pendingParent": "Muca se pripravlja…"
       },
       "album": {
         "title": "Moja muca",
-        "empty": "Muca se še pripravlja. Kmalu bodo tu njene slike in posnetki."
+        "empty": "Muca se še pripravlja. Kmalu bodo tu njene slike in posnetki.",
+        "parentTitle": "Posnetki muce"
       },
       "growth": {
         "section": "Kako je muca rasla"
+      },
+      "profile": {
+        "stages": {
+          "puppy": "Mucek",
+          "young": "Mlada mačka",
+          "adult": "Zrela mačka",
+          "senior": "Starejša mačka"
+        },
+        "stagesLower": {
+          "puppy": "mucek",
+          "young": "mlada mačka",
+          "adult": "zrela mačka",
+          "senior": "starejša mačka"
+        },
+        "origins": {
+          "bought": "Kupljena pri vzreditelju",
+          "adopted": "Posvojena iz zavetišča ali od znancev"
+        }
       }
     },
     "push": {
@@ -366,10 +388,98 @@
         "prePrompt": {
           "child": {
             "title": "Naj te muca pokliče?",
-            "message": "Ko bo tvoja muca lačna, žejna, bo treba počistiti pesek ali se bo hotela igrati, ti pošljemo obvestilo. Med šolo in spanjem (tihe ure) ne pošiljamo ničesar."
+            "message": "Ko bo tvoja muca lačna ali žejna, ko bo treba počistiti pesek ali ko se bo hotela igrati, ti pošljemo obvestilo. Med šolo in spanjem (tihe ure) ne pošiljamo ničesar."
           }
+        },
+        "channels": {
+          "default": "Opomniki za muco"
         }
       }
+    },
+    "family": {
+      "activities": {
+        "fed_pet": "nahranil(a) muco"
+      },
+      "reasons": {
+        "game_over": "Muca je bila odvzeta — igra je končana.",
+        "phase3_alarm": "Muca že več kot uro nima hrane, vode ali čistoče.",
+        "fell_ill_today": "Muca je danes zbolela in je pri veterinarju."
+      },
+      "petStatus": {
+        "game_over": "Igra končana — muca je bila odvzeta",
+        "awaiting_contract": "Muca čaka na podpis pogodbe",
+        "inactive": "Muca ni aktivna",
+        "ill": "Muca je pri veterinarju"
+      }
+    },
+    "parent": {
+      "dashboard": {
+        "counts": {
+          "dogs_one": "{{count}} muca",
+          "dogs_two": "{{count}} muci",
+          "dogs_few": "{{count}} muce",
+          "dogs_other": "{{count}} muc"
+        }
+      },
+      "addChild": {
+        "joinPet": "Pridruži se muci: {{label}}",
+        "joinPetHintNames": "Zanjo že skrbi: {{names}}. Skupna muca, vsak otrok ima svojo oceno.",
+        "joinPetHint": "Skupna muca, vsak otrok ima svojo oceno.",
+        "stepLines": {
+          "new_pet": {
+            "finish": "Otrok podpiše Pogodbo o odgovornosti in muca se rodi."
+          },
+          "join_pet": {
+            "finish": "Otrok podpiše svojo Pogodbo o odgovornosti, nato lahko skrbi za muco."
+          },
+          "relogin": {
+            "finish": "Muca in napredek ostaneta ista."
+          }
+        },
+        "pairedBody": {
+          "new_pet": "{{name}} naj zdaj na svojem telefonu podpiše Pogodbo o odgovornosti — takrat se muca rodi.",
+          "join_pet": "{{name}} naj zdaj podpiše svojo Pogodbo o odgovornosti, nato lahko skrbi za muco.",
+          "relogin": "{{name}} je prijavljen(a) na novi napravi. Muca je ostala ista."
+        },
+        "errors": {
+          "pet_not_joinable": "Tej muci se ni več mogoče pridružiti. Izberite drugega ali novega ljubljenčka.",
+          "already_paired": "Otrok že skrbi za muco — lahko dobi samo kodo za prijavo na novi napravi.",
+          "invalid_profile": "Izbire muce ni bilo mogoče shraniti. Izberite znova.",
+          "challenge_requires_paid_breed": "12-tedenski izziv potrebuje plačljivo pasmo. Domača mačka je muca brezplačnega načrta — izberite drugo pasmo ali brezplačni načrt."
+        },
+        "changeDog": "Izberi drugo muco",
+        "editDog": "Spremeni muco",
+        "previousChoicePin": "Ta koda še velja za prejšnjo izbiro muce. Za novo izbiro ustvarite novo kodo."
+      },
+      "childDetail": {
+        "album": "Vsi posnetki muce"
+      },
+      "childCard": {
+        "pet": "Muca",
+        "awaitingContract": "Muca čaka, da {{name}} podpiše pogodbo o odgovornosti.",
+        "metrics": {
+          "energy": "Igra"
+        }
+      },
+      "petControls": {
+        "confirmStop": "Ustaviti igro? Muca se zamrzne in otrok ne more ničesar narediti, dokler igre ne nadaljujete.",
+        "confirmStopFor": "Ustaviti igro za {{names}}? Muca se zamrzne in otrok ne more ničesar narediti, dokler igre ne nadaljujete.",
+        "confirmResume": "Nadaljevati igro? Muca se odmrzne in otrok lahko spet skrbi zanjo.",
+        "errors": {
+          "not_found": "Te muce ni več med aktivnimi ljubljenčki družine."
+        }
+      }
+    },
+    "account": {
+      "counts": {
+        "dogs_one": "{{count}} muca",
+        "dogs_two": "{{count}} muci",
+        "dogs_few": "{{count}} muce",
+        "dogs_other": "{{count}} muc"
+      }
     }
+  },
+  "account": {
+    "whatMixed": "vaš račun, {{children}}, {{dogs}} in {{cats}},"
   }
 }

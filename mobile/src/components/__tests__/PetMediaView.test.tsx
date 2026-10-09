@@ -170,7 +170,8 @@ describe('source selection', () => {
     renderMedia({ media: { ...EMPTY_PET_MEDIA, status: 'disabled' }, breed: 'unknown', species: 'cat' });
     expect(screen.getByText('Mačka')).toBeTruthy();
     expect(screen.queryByText('Mešanček')).toBeNull();
-    expect(screen.getByLabelText(PET_MEDIA_STRINGS.a11y('Mačka'))).toBeTruthy();
+    // M5-R06-08c: a cat's label is the cat's ("Tvoja muca (Mačka)"), also outside the child's text species.
+    expect(screen.getByLabelText('Tvoja muca (Mačka)')).toBeTruthy();
   });
 
   it('M5-R06-02: cat breeds have names (one source: family:breeds)', () => {

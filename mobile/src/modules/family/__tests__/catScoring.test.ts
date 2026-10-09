@@ -155,6 +155,6 @@ describe('behaviour: the cat\'s messes', () => {
 
   it('the parent sees the cat\'s open messes', () => {
     const lines = parentBehaviourLines({ take_out: null, active_events: [ev('scratching', { due_at: '2026-10-04T13:30:00+02:00' })], scene: 'scratching' }, 'Europe/Ljubljana', '2026-10-04T10:00:00Z');
-    expect(lines).toEqual(['Opraskan kavč — počistiti do 13:30']);
+    expect(lines).toEqual(['Opraskan kavč — na praskalnik do 13:30']);
   });
 });

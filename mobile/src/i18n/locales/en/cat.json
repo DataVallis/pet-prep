@@ -31,23 +31,23 @@
   },
   "wand": {
     "title": "Feather wand",
-    "intro": "Drag the feather around the screen. Pull it away from your kitty, like a little mouse running off — that's what she loves to chase.",
-    "tip": "Don't wave it right in front of her face. When she pounces, pull the feather away quickly!",
+    "intro": "Drag the feather around the screen. Pull it away from your kitty, like a little mouse running off — that's what cats love to chase.",
+    "tip": "Don't wave it right in front of your kitty's face. When it pounces, pull the feather away quickly!",
     "today": "Games today: {{done}} of {{goal}}",
     "todayDone": "Today's play goal is done ✓",
     "length": "A game lasts {{seconds}} s.",
     "start": "Start the game",
     "stalking": "Your kitty is watching the feather …",
-    "crouching": "She's getting ready to pounce …",
+    "crouching": "Your kitty is getting ready to pounce …",
     "pouncing": "Pounce! Pull the feather away!",
-    "catching": "She's about to catch it …",
+    "catching": "It's about to catch the feather …",
     "caught": "Got it! Your kitty caught the feather.",
     "feedbackAway": "Nice — the feather ran away!",
-    "feedbackToward": "Pull it away from her, not towards her face.",
+    "feedbackToward": "Pull it away from your kitty, not towards its face.",
     "feedbackPounce": "Great dodge!",
     "pullAway": "Pull the feather away",
     "pullAwayA11y": "Pull the feather away from your kitty",
-    "stageA11y": "Play area: your kitty and a feather on a wand. Drag the feather away from her.",
+    "stageA11y": "Play area: your kitty and a feather on a wand. Drag the feather away from it.",
     "quarterA11y": "Quarter {{n}} of the game",
     "result": {
       "successTitle": "What a hunt!",
@@ -57,7 +57,7 @@
       "reasons": {
         "too_few_moves": "The feather needs to run away more often — pull it away many times during the minute.",
         "not_spread": "Keep the feather moving the whole minute, not just for a part of it.",
-        "wrong_technique": "Pull the feather away from your kitty, like a mouse running off — not into her face.",
+        "wrong_technique": "Pull the feather away from your kitty, like a mouse running off — not into its face.",
         "missed_pounces": "When your kitty pounces, pull the feather away quickly.",
         "too_uniform": "Move the feather your own way — little stops and starts make the game fun.",
         "unknown": "Let's try again."
@@ -70,7 +70,7 @@
   },
   "scoop": {
     "title": "Clean the litter",
-    "intro": "Your kitty used her litter box. Scoop out every clump so it stays clean for her.",
+    "intro": "Your kitty used its litter box. Scoop out every clump so the box stays clean.",
     "clumpA11y": "Scoop out a clump",
     "progress": "Scooped: {{done}} of {{total}}",
     "nothing": "The litter box is clean — there's nothing to scoop right now.",
@@ -84,14 +84,14 @@
   "chore": {
     "grooming": {
       "title": "Brush your kitty",
-      "intro": "Brush her long fur gently with your finger, stroke after stroke, from head to tail.",
-      "matted": "Her fur has a knot. This brushing takes a bit longer ({{seconds}} s) and gets the knot out.",
+      "intro": "Brush its long fur gently with your finger, stroke after stroke, from head to tail.",
+      "matted": "Its fur has a knot. This brushing takes a bit longer ({{seconds}} s) and gets the knot out.",
       "week": "Brushing this week: {{done}} of {{goal}}",
       "weekDone": "All of this week's brushing is done ✓",
       "start": "Start brushing",
       "stroke": "Brush once",
       "strokeA11y": "Brush your kitty once",
-      "stageA11y": "Your kitty. Stroke her with your finger to brush her fur.",
+      "stageA11y": "Your kitty. Stroke it with your finger to brush its fur.",
       "steps": {
         "1": "Head and neck",
         "2": "Back",
@@ -139,24 +139,24 @@
   },
   "scratching": {
     "title": "To the scratching post",
-    "intro": "Your kitty scratched the sofa. She isn't naughty — cats need to scratch. Carry her to her scratching post and praise her right away when she scratches it.",
-    "never": "Never shout or punish — just show her the right place and praise her.",
+    "intro": "Your kitty scratched the sofa. It isn't naughty — cats need to scratch. Carry it to its scratching post and praise it right away when it scratches the post.",
+    "never": "Never shout or punish — just show it the right place and praise it.",
     "nothing": "Your kitty hasn't scratched anything. All good!",
-    "dueAt": "Show her the scratching post {{when}} at the latest.",
-    "start": "Carry her to the scratching post",
-    "carrying": "You're carrying her to the scratching post …",
-    "landed": "She's scratching the post — praise her now!",
+    "dueAt": "Show it the scratching post {{when}} at the latest.",
+    "start": "Carry it to the scratching post",
+    "carrying": "You're carrying it to the scratching post …",
+    "landed": "It's scratching the post — praise it now!",
     "praise": "Praise",
     "praiseA11y": "Praise your kitty",
     "waitHint": "A little early — this time it won't count, try again.",
     "result": {
       "successTitle": "Well done!",
-      "success": "She loves her scratching post. The sofa is safe now.",
+      "success": "It loves its scratching post. The sofa is safe now.",
       "failTitle": "Let's try once more",
       "reasons": {
-        "too_early": "A little early — praise her when she's scratching the post.",
-        "too_late": "A little late — praise her right when she scratches the post.",
-        "no_praise": "She scratched the post — praise her next time!",
+        "too_early": "A little early — praise it when it's scratching the post.",
+        "too_late": "A little late — praise it right when it scratches the post.",
+        "no_praise": "It scratched the post — praise it next time!",
         "unknown": "Let's try again."
       },
       "again": "Try again",
@@ -165,7 +165,7 @@
   },
   "errors": {
     "needs_cleaning": "Clean up the mess first, then you can do this.",
-    "needs_scratcher_first": "First carry your kitty to the scratching post and praise her.",
+    "needs_scratcher_first": "First carry your kitty to the scratching post and praise it.",
     "wand_not_available": "The feather wand isn't available for this pet.",
     "wand_quiet_hours": "Your kitty is sleeping now. You can play again {{when}}.",
     "wand_quiet_hours_no_time": "Your kitty is sleeping now. Play again after quiet hours.",
@@ -185,12 +185,12 @@
     "litter_change_session_active": "Someone else is changing the litter. Try again {{when}}.",
     "litter_change_session_active_no_time": "Someone else is changing the litter. Try again in a minute.",
     "grooming_not_available": "This kitty doesn't need brushing.",
-    "grooming_done_today": "Your kitty was already brushed today. Brush her again {{when}}.",
-    "grooming_done_today_no_time": "Your kitty was already brushed today. Brush her again tomorrow.",
+    "grooming_done_today": "Your kitty was already brushed today. Brush it again {{when}}.",
+    "grooming_done_today_no_time": "Your kitty was already brushed today. Brush it again tomorrow.",
     "grooming_week_done": "All of this week's brushing is done. Next brushing {{when}}.",
     "grooming_week_done_no_time": "All of this week's brushing is done. Well done!",
-    "grooming_quiet_hours": "Your kitty is sleeping now. Brush her {{when}}.",
-    "grooming_quiet_hours_no_time": "Your kitty is sleeping now. Brush her after quiet hours.",
+    "grooming_quiet_hours": "Your kitty is sleeping now. Brush it {{when}}.",
+    "grooming_quiet_hours_no_time": "Your kitty is sleeping now. Brush it after quiet hours.",
     "grooming_session_active": "Someone else is brushing your kitty. Try again {{when}}.",
     "grooming_session_active_no_time": "Someone else is brushing your kitty. Try again in a minute.",
     "scratching_not_needed": "Your kitty hasn't scratched anything. All good!",
@@ -223,11 +223,11 @@
       "asleep": "Asleep"
     },
     "scratcher": "To the scratching post",
-    "scratcherA11y": "Carry your kitty to the scratching post and praise her",
+    "scratcherA11y": "Carry your kitty to the scratching post and praise it",
     "chips": {
       "grooming": "Brush",
       "groomingA11y": "Brush your kitty. This week: {{done}} of {{goal}}.",
-      "groomingMatted": "Her fur has a knot — brush her.",
+      "groomingMatted": "Its fur has a knot — brush it.",
       "litterChange": "Change litter",
       "litterChangeA11y": "Change all the litter (once a week)",
       "litterChangeOverdue": "The litter box smells — change all the litter.",
@@ -241,11 +241,11 @@
     },
     "firstAid": {
       "title": "Good to know",
-      "body": "A real cat must never go without food for long. If a cat stops eating, she needs to see a vet soon."
+      "body": "A real cat must never go without food for long. If a cat stops eating, it needs to see a vet soon."
     }
   },
   "contract": {
-    "bodyMaineCoon": "I promise to take good care of my virtual kitty, every single day:\n\n• I will feed her at the right time.\n• I will give her fresh water every day.\n• I will clean her litter box every day and change all the litter once a week.\n• I will play with her every day so she stays healthy and happy.\n• I will brush her regularly so her fur doesn't get knotted.\n• I will act on warnings before she gets sick or has to go to the virtual shelter.\n\nDo you accept this responsibility?"
+    "bodyMaineCoon": "I promise to take good care of my virtual kitty, every single day:\n\n• I will feed it at the right time.\n• I will give it fresh water every day.\n• I will clean its litter box every day and change all the litter once a week.\n• I will play with it every day so it stays healthy and happy.\n• I will brush it regularly so its fur doesn't get knotted.\n• I will act on warnings before it gets sick or has to go to the virtual shelter.\n\nDo you accept this responsibility?"
   },
   "parent": {
     "playDay": "Play {{done}}/{{goal}}",
@@ -253,7 +253,9 @@
     "firstAid": {
       "title": "Good to know",
       "body": "For a real cat, not eating is serious: a cat that stops eating can develop a dangerous liver disease (hepatic lipidosis). If a cat stops eating, contact a vet promptly — don't wait."
-    }
+    },
+    "petsMixed": "{{dogs}} · {{cats}}",
+    "openScratching": "{{label}} — to the scratching post by {{due}}"
   },
   "override": {
     "child": {
@@ -288,7 +290,7 @@
         "emergencyFeed": "Yum! Your kitty is full. The meal was missed, so it doesn't count as on time — the next meal is {{when}}.",
         "emergencyFeedNoTime": "Yum! Your kitty is full. The meal was missed, so it doesn't count as on time.",
         "refused": {
-          "alreadyFed": "Your kitty has already eaten. You can feed her again {{when}}.",
+          "alreadyFed": "Your kitty has already eaten. You can feed it again {{when}}.",
           "alreadyFedNoTime": "Your kitty has already eaten.",
           "waterDailyLimit": "Your kitty has had enough fresh water today. More tomorrow!",
           "needsCleaning": "Clean up after your kitty first!"
@@ -302,8 +304,8 @@
       "locked": {
         "illness": {
           "title": "Your kitty is at the vet",
-          "body": "Your kitty is at the vet until {{until}}. She needs some rest.",
-          "bodyNoTime": "Your kitty needs some rest. She'll be back soon."
+          "body": "Your kitty is at the vet until {{until}}. It needs some rest.",
+          "bodyNoTime": "Your kitty needs some rest. It'll be back soon."
         },
         "game_over": {
           "title": "Your kitty is at the shelter",
@@ -322,24 +324,24 @@
     },
     "play": {
       "cuddle": {
-        "invite": "Your kitty rubs against you. Give her a cuddle?",
+        "invite": "Your kitty rubs against you. Give it a cuddle?",
         "hint": "Gently stroke your kitty with your finger — short and soft.",
-        "areaA11y": "Your kitty. Stroke her with your finger, or use the button below.",
+        "areaA11y": "Your kitty. Stroke it with your finger, or use the button below.",
         "done": "Your kitty is purring. Thanks for the cuddles!"
       },
       "mood": {
         "happy": "Your kitty is happy"
       },
       "unavailable": {
-        "sleeping": "Your kitty is asleep. Cuddle her when she wakes up.",
+        "sleeping": "Your kitty is asleep. Cuddle it when it wakes up.",
         "dirty": "Clean up first, then cuddle.",
         "other": "You can't cuddle right now.",
-        "sleepingUntil": "Your kitty is asleep until {{clock}}. Cuddle her then!"
+        "sleepingUntil": "Your kitty is asleep until {{clock}}. Cuddle it then!"
       }
     },
     "contract": {
       "screen": {
-        "body": "I promise to take good care of my virtual kitty, every single day:\n\n• I will feed her at the right time.\n• I will give her fresh water every day.\n• I will clean her litter box every day and change all the litter once a week.\n• I will play with her every day so she stays healthy and happy.\n• I will act on warnings before she gets sick or has to go to the virtual shelter.\n\nDo you accept this responsibility?",
+        "body": "I promise to take good care of my virtual kitty, every single day:\n\n• I will feed it at the right time.\n• I will give it fresh water every day.\n• I will clean its litter box every day and change all the litter once a week.\n• I will play with it every day so it stays healthy and happy.\n• I will act on warnings before it gets sick or has to go to the virtual shelter.\n\nDo you accept this responsibility?",
         "locked": {
           "inactive": "Your kitty isn't active right now. Ask your parent to check the settings.",
           "ill": "Your kitty is at the vet. Please try again later."
@@ -349,14 +351,34 @@
     "pet": {
       "media": {
         "pending": "Your kitty is getting ready…",
-        "a11y": "Your kitty ({{breed}})"
+        "a11y": "Your kitty ({{breed}})",
+        "pendingParent": "The cat is getting ready…"
       },
       "album": {
         "title": "My kitty",
-        "empty": "Your kitty is still getting ready. Her photos and videos will be here soon."
+        "empty": "Your kitty is still getting ready. Its photos and videos will be here soon.",
+        "parentTitle": "Cat's photos and videos"
       },
       "growth": {
         "section": "How your kitty grew"
+      },
+      "profile": {
+        "stages": {
+          "puppy": "Kitten",
+          "young": "Young cat",
+          "adult": "Mature cat",
+          "senior": "Senior cat"
+        },
+        "stagesLower": {
+          "puppy": "a kitten",
+          "young": "a young cat",
+          "adult": "a mature cat",
+          "senior": "a senior cat"
+        },
+        "origins": {
+          "bought": "Bought from a breeder",
+          "adopted": "Adopted from a shelter or friends"
+        }
       }
     },
     "push": {
@@ -364,10 +386,94 @@
         "prePrompt": {
           "child": {
             "title": "Can your kitty call you?",
-            "message": "When your kitty is hungry, thirsty, needs her litter cleaned or wants to play, we'll send you a notification. Nothing is sent during school and sleep (quiet hours)."
+            "message": "When your kitty is hungry, thirsty, needs its litter cleaned or wants to play, we'll send you a notification. We never send anything during school or sleep (quiet hours)."
           }
+        },
+        "channels": {
+          "default": "Cat reminders"
         }
       }
+    },
+    "family": {
+      "activities": {
+        "fed_pet": "fed the cat"
+      },
+      "reasons": {
+        "game_over": "The cat was taken away — the game is over.",
+        "phase3_alarm": "The cat has had no food, water or cleaning for over an hour.",
+        "fell_ill_today": "The cat got sick today and is at the vet."
+      },
+      "petStatus": {
+        "game_over": "Game over — the cat was taken away",
+        "awaiting_contract": "The cat is waiting for the contract to be signed",
+        "inactive": "The cat is not active",
+        "ill": "The cat is at the vet"
+      }
+    },
+    "parent": {
+      "dashboard": {
+        "counts": {
+          "dogs_one": "{{count}} cat",
+          "dogs_other": "{{count}} cats"
+        }
+      },
+      "addChild": {
+        "joinPet": "Join a cat: {{label}}",
+        "joinPetHintNames": "Already cared for by {{names}}. A shared cat — each child has their own score.",
+        "joinPetHint": "A shared cat — each child has their own score.",
+        "stepLines": {
+          "new_pet": {
+            "finish": "Your child signs the Responsibility Contract and the cat is born."
+          },
+          "join_pet": {
+            "finish": "Your child signs their own Responsibility Contract and can then care for the cat."
+          },
+          "relogin": {
+            "finish": "The cat and the progress stay the same."
+          }
+        },
+        "pairedBody": {
+          "new_pet": "{{name}} can now sign the Responsibility Contract on their phone — that's when the cat is born.",
+          "join_pet": "{{name}} can now sign their own Responsibility Contract and then care for the cat.",
+          "relogin": "{{name}} is signed in on the new device. The cat is still the same."
+        },
+        "errors": {
+          "pet_not_joinable": "This cat can't be joined any more. Choose another pet or a new one.",
+          "already_paired": "This child already cares for a cat — they can only get a code to sign in on a new device.",
+          "invalid_profile": "The cat choice couldn't be saved. Please choose again.",
+          "challenge_requires_paid_breed": "The 12-week challenge needs a paid breed. The domestic cat is the free plan's cat — choose another breed or the free plan."
+        },
+        "changeDog": "Choose another cat",
+        "editDog": "Change the cat",
+        "previousChoicePin": "This code still works for the previous cat choice. Create a new code for the new choice."
+      },
+      "childDetail": {
+        "album": "All of the cat's videos"
+      },
+      "childCard": {
+        "pet": "Cat",
+        "awaitingContract": "The cat is waiting for {{name}} to sign the Responsibility Contract.",
+        "metrics": {
+          "energy": "Play"
+        }
+      },
+      "petControls": {
+        "confirmStop": "Pause the game? The cat freezes and your child can't do anything until you resume the game.",
+        "confirmStopFor": "Pause the game for {{names}}? The cat freezes and your child can't do anything until you resume the game.",
+        "confirmResume": "Resume the game? The cat unfreezes and your child can care for it again.",
+        "errors": {
+          "not_found": "This cat is no longer one of the family's active pets."
+        }
+      }
+    },
+    "account": {
+      "counts": {
+        "dogs_one": "{{count}} cat",
+        "dogs_other": "{{count}} cats"
+      }
     }
+  },
+  "account": {
+    "whatMixed": "your account, {{children}}, {{dogs}} and {{cats}},"
   }
 }

@@ -11,7 +11,7 @@
 import { familyClock, localParts } from '@/modules/childPet/familyTime';
 import { BEHAVIOUR_KINDS, PARENT_BEHAVIOUR_STRINGS, type BehaviourKind } from '@/modules/behaviour/behaviour';
 import { playTimelineText } from '@/modules/play/play';
-import { t } from '@/i18n';
+import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
 // ── Types ─────────────────────────────────────────────────────
@@ -418,13 +418,13 @@ export function illnessesText(count: number): string {
   return t('family:score.illnesses', { count });
 }
 
-/** Friendly reason text for the parent. */
-export function reasonText(reason: LightReason, missedToday = 0): string {
+/** Friendly reason text for the parent; `species` of the pet shown ("Muca je danes zbolela …", M5-R06-08c). */
+export function reasonText(reason: LightReason, missedToday = 0, species: string | null = null): string {
   switch (reason) {
     case 'game_over':
     case 'phase3_alarm':
     case 'fell_ill_today':
-      return t(`family:reasons.${reason}`);
+      return tSpecies(`family:reasons.${reason}`, species);
     case 'missed_routines':
       return missedToday > 2 ? t('family:reasons.missedMany', { count: missedToday }) : t('family:reasons.missedSome');
   }
@@ -503,8 +503,6 @@ export function missedWhenText(item: MissedRoutine, timezone: string | null, tod
 
 /** Child actions in the timeline ("nahranil(a) kužka"), keyed by `activity_type`. */
 const ACTIVITY_LABELS = strings('family', 'activities') as Readonly<Record<string, string | undefined>>;
-/** A cat's wording where it differs ("nahranil(a) muco", M5-R06-08b). */
-const CAT_ACTIVITY_LABELS = strings('family', 'activitiesCat') as Readonly<Record<string, string | undefined>>;
 /** System rows ("Opozorilo ni bilo upoštevano"), keyed by `activity_type`. */
 const SYSTEM_ACTIVITY_LABELS = strings('family', 'systemActivities') as Readonly<Record<string, string | undefined>>;
 
@@ -522,8 +520,9 @@ export function activityText(
   if (play !== null) return play;
   const system = SYSTEM_ACTIVITY_LABELS[entry.activity_type];
   if (system) return system;
+  // A cat's wording where it differs ("nahranil(a) muco") is `cat:override.family.activities.*` (M5-R06-08c).
   const label =
-    (species === 'cat' ? CAT_ACTIVITY_LABELS[entry.activity_type] : undefined) ?? ACTIVITY_LABELS[entry.activity_type] ?? entry.activity_type;
+    ACTIVITY_LABELS[entry.activity_type] !== undefined ? tSpecies(`family:activities.${entry.activity_type}`, species) : entry.activity_type;
   return entry.actor_nickname ? `${entry.actor_nickname} ${label}` : label.charAt(0).toUpperCase() + label.slice(1);
 }
 
