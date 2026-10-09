@@ -24,7 +24,8 @@
 | modifier-letter look-alikes (ｆｕｃｋ, 𝐟𝐮𝐜𝐤, ᶠᵘᶜᵏ) are plain letters here.
 | Entries are written in the folded form (lower case, no diacritics).
 | Keep the list modest; it is a guard rail for a family app, not a moderation
-| system. Draft — David reviews the list (DECISIONS.md 2026-10-09).
+| system. David decided "peder" / "scat" stay blocked (2026-10-09); the rest
+| of the list is still a draft he reviews (DECISIONS.md 2026-10-09).
 */
 
 return [
@@ -40,7 +41,8 @@ return [
         // Slovenian
         'debil', 'drek', 'fafati', 'fukat', 'fuk', 'jebem', 'jebi', 'jebiga',
         'jebo', 'joski', 'kreten', 'kurac', 'kurba', 'kurc', 'kurcek', 'lulek', 'nacist',
-        'picka', 'pizda', 'prasica', 'scanje', 'seks', 'srat', 'sranje',
+        // "peder" and "scat": blocked by David 2026-10-09 (whole word only).
+        'peder', 'picka', 'pizda', 'prasica', 'scat', 'scanje', 'seks', 'srat', 'sranje',
         'zajebat',
     ],
 

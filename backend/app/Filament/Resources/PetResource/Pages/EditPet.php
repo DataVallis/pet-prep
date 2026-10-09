@@ -17,6 +17,7 @@ class EditPet extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
+            PetResource::configureClearNameAction(Actions\Action::make('clearName')),
             Actions\DeleteAction::make(),
         ];
     }

@@ -209,6 +209,8 @@ describe('PATCH /api/parent/pets/{pet}/name — parent', function () {
         'sl diacritics stripped' => 'Picka',
         'sl ščanje' => 'Ščanje',
         'sl fragment' => 'Kurbica',
+        'sl peder (David 2026-10-09)' => 'Peder',
+        'en scat (David 2026-10-09)' => 'Scat',
         'spaced letters' => 'F u c k',
         'hyphenated letters' => 'S-h-i-t',
         'apostrophes' => "K'u'r'a'c",
@@ -234,7 +236,7 @@ describe('PATCH /api/parent/pets/{pet}/name — parent', function () {
         actingAsRole($parent);
 
         pnmPatch($pet, $name)->assertOk()->assertJsonPath('name', $name);
-    })->with(['Bassett', 'Cocker', 'Dickens', 'Sexton', 'Classy', 'Pikica', 'Piškotek', 'Srček', 'Kurt', 'Shitzu', 'Shih-Tzu', 'Shitsu', 'Scat', 'Peder']);
+    })->with(['Bassett', 'Cocker', 'Dickens', 'Sexton', 'Classy', 'Pikica', 'Piškotek', 'Srček', 'Kurt', 'Shitzu', 'Shih-Tzu', 'Shitsu']);
 
     it('names any pet of the family: cat, free mutt, paid, paused, ended, unborn', function (array $attributes) {
         [$parent, , $pet] = pnmFamily($attributes);

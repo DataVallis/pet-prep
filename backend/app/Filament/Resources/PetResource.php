@@ -11,13 +11,16 @@ use App\Filament\Resources\PetResource\RelationManagers;
 use App\Models\Pet;
 use App\Services\ChallengeCreditService;
 use App\Services\Media\ReferenceImageRetryService;
+use App\Services\PetNameService;
 use App\Services\SpeciesAvailability;
+use Filament\Actions\Action as PageAction;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\HtmlString;
 
 class PetResource extends Resource
@@ -59,6 +62,45 @@ class PetResource extends Resource
             ->sortable();
     }
 
+    /**
+     * "Clear name" (M5-R08, David 2026-10-09): the name is set only by a
+     * parent (PATCH /api/parent/pets/{pet}/name) and is read-only here; an
+     * admin can only remove an inappropriate one. Goes through
+     * PetNameService::rename() — row lock + one `pet_renamed` PetUpdated after
+     * commit, exactly like a parent clearing it. Superadmin only (the panel is
+     * superadmin-only too; hidden actions cannot be called). One log line with
+     * the admin id and pet id — never the old name.
+     */
+    public static function configureClearNameAction(Tables\Actions\Action|PageAction $action): Tables\Actions\Action|PageAction
+    {
+        return $action
+            ->label('Clear name')
+            ->icon('heroicon-o-x-circle')
+            ->color('danger')
+            ->requiresConfirmation()
+            ->modalHeading('Clear the pet\'s name?')
+            ->modalDescription('Removes the name the parent gave this pet. The apps show the pet without a name until a parent sets a new one.')
+            ->modalSubmitActionLabel('Clear name')
+            ->authorize(fn (): bool => auth()->user()?->is_superadmin === true)
+            ->visible(fn (Pet $record): bool => $record->name !== null)
+            ->action(function (Pet $record, $livewire): void {
+                $pet = app(PetNameService::class)->rename($record, null);
+                $record->setRawAttributes($pet->getAttributes(), true);
+                if (method_exists($livewire, 'refreshFormData')) {
+                    $livewire->refreshFormData(['name']); // EditPet: show the cleared field
+                }
+
+                Log::info('Admin cleared a pet name', [
+                    'event' => 'admin_pet_name_cleared',
+                    'pet_id' => $pet->id,
+                    'admin_user_id' => auth()->id(),
+                    'at' => now()->utc()->toIso8601String(),
+                ]);
+
+                Notification::make()->title('Name cleared')->success()->send();
+            });
+    }
+
     protected static ?string $navigationIcon = 'heroicon-o-heart';
 
     protected static ?string $navigationLabel = 'Pets';
@@ -71,6 +113,14 @@ class PetResource extends Resource
             ->schema([
                 Forms\Components\Section::make('Ownership')
                     ->schema([
+                        // M5-R08: set by a parent in the app; read-only here (never
+                        // saved by this form) — "Clear name" action removes it.
+                        Forms\Components\TextInput::make('name')
+                            ->label('Name (set by a parent)')
+                            ->placeholder('—')
+                            ->disabled()
+                            ->dehydrated(false)
+                            ->visibleOn('edit'),
                         Forms\Components\Placeholder::make('family_caretakers')
                             ->label('Family / caretakers')
                             ->content(fn (?Pet $record): string => $record === null
@@ -184,6 +234,10 @@ class PetResource extends Resource
                 Tables\Columns\TextColumn::make('id')
                     ->label('ID')
                     ->sortable(),
+                Tables\Columns\TextColumn::make('name')
+                    ->label('Name')
+                    ->placeholder('—')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('user.name')
                     ->label('Owner')
                     ->searchable()
@@ -275,6 +329,7 @@ class PetResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                self::configureClearNameAction(Tables\Actions\Action::make('clearName')),
                 // PR #22 review: re-queue a reference image that failed (budget, fal balance, errors).
                 Tables\Actions\Action::make('retryMedia')
                     ->label('Retry image')
