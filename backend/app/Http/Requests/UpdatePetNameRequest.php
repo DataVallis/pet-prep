@@ -18,11 +18,14 @@ use Illuminate\Validation\Validator;
  * family's pet looks exactly like a missing one (404).
  *
  * Normalized before validation (PetNameService::normalize): trimmed, inner
- * whitespace collapsed, ’ → ', NFC. 422 body = Laravel's validation body +
+ * whitespace collapsed, ’ → ', NFKC. 422 body = Laravel's validation body +
  * `codes` {name: code} (like POST /api/register) + `reason` (the same code):
  *  - `name_too_long`   — more than 20 characters (code points, not bytes);
  *  - `name_invalid`    — not a string / missing field, characters other than
- *                        letters, space, hyphen, apostrophe, or no letter;
+ *                        letters, space, hyphen, apostrophe (zero-width,
+ *                        BOM, bidi controls …), no letter, invisible Hangul
+ *                        fillers, enclosing marks or 3+ stacked combining
+ *                        marks;
  *  - `name_not_allowed`— on the EN / SL filter list (config/pet_names.php).
  */
 class UpdatePetNameRequest extends FormRequest

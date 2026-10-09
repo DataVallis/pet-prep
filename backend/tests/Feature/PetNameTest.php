@@ -96,8 +96,17 @@ describe('PATCH /api/parent/pets/{pet}/name — parent', function () {
         pnmPatch($pet, "  Gospod \t  Muc  ")->assertOk()->assertJsonPath('name', 'Gospod Muc');
         pnmPatch($pet, 'D’Artagnan')->assertOk()->assertJsonPath('name', "D'Artagnan");
         pnmPatch($pet, "O'Malley-Brown")->assertOk()->assertJsonPath('name', "O'Malley-Brown");
-        // Decomposed č (c + combining caron) is stored composed (NFC).
+        // Decomposed č (c + combining caron) is stored composed (NFKC).
         pnmPatch($pet, "C\u{030C}rni")->assertOk()->assertJsonPath('name', 'Črni');
+        // Compatibility forms are stored as plain letters (NFKC).
+        pnmPatch($pet, 'Ｌｕｎａ')->assertOk()->assertJsonPath('name', 'Luna');
+        pnmPatch($pet, '𝐁𝐞𝐥𝐚')->assertOk()->assertJsonPath('name', 'Bela');
+        expect($pet->fresh()->name)->toBe('Bela');
+    });
+
+    it('needs ext-intl (Normalizer) — there is no silent fallback without it', function () {
+        expect(extension_loaded('intl'))->toBeTrue()
+            ->and(class_exists(Normalizer::class))->toBeTrue();
     });
 
     it('accepts letters of other alphabets and diacritics', function (string $name) {
@@ -122,6 +131,16 @@ describe('PATCH /api/parent/pets/{pet}/name — parent', function () {
         expect($pet->fresh()->name)->toBe('Abcdefghij Abcdefghi');
     });
 
+    it('counts after normalization: 20 decomposed letters (40 code points) pass', function () {
+        [$parent, , $pet] = pnmFamily();
+        actingAsRole($parent);
+
+        $decomposed = str_repeat("z\u{030C}", 20);
+        expect(mb_strlen($decomposed, 'UTF-8'))->toBe(40);
+        pnmPatch($pet, $decomposed)->assertOk()->assertJsonPath('name', str_repeat('ž', 20));
+        pnmPatch($pet, str_repeat("z\u{030C}", 21))->assertStatus(422)->assertJsonPath('reason', 'name_too_long');
+    });
+
     it('rejects digits, emoji, symbols and names without a letter (name_invalid)', function (mixed $name) {
         [$parent, , $pet] = pnmFamily();
         actingAsRole($parent);
@@ -144,6 +163,22 @@ describe('PATCH /api/parent/pets/{pet}/name — parent', function () {
         'html' => '<b>Rex</b>',
         'only hyphen' => '-',
         'only apostrophes' => "''",
+        'zero-width space' => "Lu\u{200B}na",
+        'zero-width joiner' => "Lu\u{200D}na",
+        'byte order mark' => "\u{FEFF}Luna",
+        'right-to-left override' => "\u{202E}Luna",
+        'left-to-right mark' => "Luna\u{200E}",
+        'only a combining mark' => "\u{0301}",
+        'only combining marks' => "\u{0301}\u{0308}",
+        'hangul choseong filler' => "Lu\u{115F}na",
+        'hangul jungseong filler' => "\u{1160}",
+        'hangul filler' => "Luna\u{3164}",
+        'halfwidth hangul filler' => "\u{FFA0}",
+        // Counted after NFKC: x + 3 marks (none composes with x) …
+        'zalgo (3 stacked marks)' => "Lx\u{0301}\u{0302}\u{0303}na",
+        // … u + 4 marks → ú + 3 marks.
+        'zalgo (4 stacked marks)' => "Lu\u{0301}\u{0302}\u{0303}\u{0304}na",
+        'enclosing circle' => "Luna\u{20DD}",
         'array' => [['Rex']],
         'number' => 42,
         'bool' => true,
@@ -180,14 +215,26 @@ describe('PATCH /api/parent/pets/{pet}/name — parent', function () {
         'typographic apostrophe' => 'Ku’rac',
         'split word' => 'pi zda',
         'accented trick' => 'Fück',
+        'fullwidth' => 'ｆｕｃｋ',
+        'math bold' => '𝐟𝐮𝐜𝐤',
+        'modifier letters' => 'ᶠᵘᶜᵏ',
+        'allowlist never overrides a word' => 'Moby Dick',
+        'allowlisted name hiding a fragment' => 'Shitzushit',
     ]);
+
+    it('accepts two stacked combining marks (Vietnamese ệ written decomposed)', function () {
+        [$parent, , $pet] = pnmFamily();
+        actingAsRole($parent);
+
+        pnmPatch($pet, "Ne\u{0323}\u{0302}n")->assertOk()->assertJsonPath('name', 'Nện');
+    });
 
     it('does not block ordinary names that only contain a blocked short word', function (string $name) {
         [$parent, , $pet] = pnmFamily();
         actingAsRole($parent);
 
         pnmPatch($pet, $name)->assertOk()->assertJsonPath('name', $name);
-    })->with(['Bassett', 'Cocker', 'Dickens', 'Sexton', 'Classy', 'Pikica', 'Piškotek', 'Srček', 'Kurt']);
+    })->with(['Bassett', 'Cocker', 'Dickens', 'Sexton', 'Classy', 'Pikica', 'Piškotek', 'Srček', 'Kurt', 'Shitzu', 'Shih-Tzu', 'Shitsu', 'Scat', 'Peder']);
 
     it('names any pet of the family: cat, free mutt, paid, paused, ended, unborn', function (array $attributes) {
         [$parent, , $pet] = pnmFamily($attributes);

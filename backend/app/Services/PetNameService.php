@@ -6,6 +6,7 @@ use App\Events\PetUpdated;
 use App\Models\Pet;
 use Illuminate\Support\Facades\DB;
 use Normalizer;
+use RuntimeException;
 
 /**
  * Optional pet name (M5-R08, David 2026-10-09). Set, changed or cleared only
@@ -15,9 +16,14 @@ use Normalizer;
  * prompts (Slovenian declension, minimum data about the child's world).
  *
  * Rules: trimmed, inner whitespace collapsed, typographic apostrophe ’ → ',
- * NFC; 1–20 characters (code points after NFC); letters (\p{L} + combining
- * marks), space, hyphen and apostrophe; at least one letter; not on the short
- * EN / SL filter list in config/pet_names.php. Empty / null = no name.
+ * NFKC (compatibility forms — fullwidth, math-bold, modifier letters,
+ * ligatures — are stored as plain letters, so they cannot dodge the filter);
+ * 1–20 characters (code points after NFKC); letters (\p{L} + combining
+ * marks), space, hyphen and apostrophe; at least one letter; no invisible
+ * Hangul fillers, no enclosing marks, no run of 3+ combining marks (Zalgo);
+ * not on the short EN / SL filter list in config/pet_names.php (with its
+ * allowlist). Empty / null = no name. Requires ext-intl (Normalizer) — there
+ * is deliberately no fallback without it.
  */
 class PetNameService
 {
@@ -28,6 +34,13 @@ class PetNameService
 
     /** Separators removed for the "spacing tricks" check (F-u-c-k, pi zda). */
     private const SEPARATORS = "/[ '\\-]+/u";
+
+    /**
+     * Letters that render as nothing (Hangul fillers U+115F, U+1160, U+3164,
+     * U+FFA0), enclosing marks (U+20DD …) and runs of 3+ combining marks
+     * (Zalgo) are refused although they are \p{L} / \p{M}.
+     */
+    private const INVISIBLE_OR_STACKED = '/[\x{115F}\x{1160}\x{3164}\x{FFA0}]|\p{Me}|\p{M}{3,}/u';
 
     public static function maxLength(): int
     {
@@ -48,9 +61,9 @@ class PetNameService
             return $value;
         }
 
-        $name = str_replace("\u{2019}", "'", $value);
-        if (class_exists(Normalizer::class)) {
-            $name = Normalizer::normalize($name, Normalizer::FORM_C) ?: $name;
+        $name = self::compatibilityNormalize(str_replace("\u{2019}", "'", $value), decompose: false);
+        if ($name === false) {
+            return $value; // not valid UTF-8 — left as is so validation rejects it
         }
         $name = trim((string) preg_replace('/[\s\p{Z}]+/u', ' ', $name));
 
@@ -62,14 +75,16 @@ class PetNameService
      */
     public static function hasValidCharacters(string $name): bool
     {
-        return preg_match(self::PATTERN, $name) === 1 && preg_match('/\p{L}/u', $name) === 1;
+        return preg_match(self::PATTERN, $name) === 1
+            && preg_match('/\p{L}/u', $name) === 1
+            && preg_match(self::INVISIBLE_OR_STACKED, $name) === 0;
     }
 
     /**
      * False when the name hits the filter list (config/pet_names.php):
      * case- and diacritic-insensitive, on whole words, on the name with
      * spaces / hyphens / apostrophes removed, and — for `fragments` — inside
-     * that joined name.
+     * that joined name once the `allowed` names (Shitzu …) are cut out of it.
      */
     public function isAllowed(string $name): bool
     {
@@ -84,6 +99,13 @@ class PetNameService
             }
         }
 
+        // Allowlisted names are removed before the fragment check (not
+        // replaced by a separator, so "fu<allowed>ck" still reads "fuck").
+        $allowed = array_values(array_filter(array_map(self::foldForFilter(...), (array) config('pet_names.allowed', [])), fn (string $a): bool => $a !== ''));
+        if ($allowed !== []) {
+            $joined = str_replace($allowed, '', $joined);
+        }
+
         foreach ((array) config('pet_names.fragments', []) as $fragment) {
             $fragment = self::foldForFilter((string) $fragment);
             if ($fragment !== '' && str_contains($joined, $fragment)) {
@@ -95,18 +117,31 @@ class PetNameService
     }
 
     /**
-     * Lower case without diacritics: NFD, combining marks dropped, then the
-     * letters NFD does not decompose (đ, ł, ø, ß …) mapped by hand.
+     * Lower case without diacritics: NFKD (compatibility forms → plain
+     * letters), lower case, combining marks dropped, then the letters NFKD
+     * does not decompose (đ, ł, ø, ß …) mapped by hand.
      */
     public static function foldForFilter(string $text): string
     {
+        $text = self::compatibilityNormalize($text, decompose: true) ?: $text;
         $text = mb_strtolower($text, 'UTF-8');
-        if (class_exists(Normalizer::class)) {
-            $text = Normalizer::normalize($text, Normalizer::FORM_D) ?: $text;
-        }
         $text = (string) preg_replace('/\p{M}+/u', '', $text);
 
         return strtr($text, ['đ' => 'd', 'ł' => 'l', 'ø' => 'o', 'ß' => 'ss', 'æ' => 'ae', 'œ' => 'oe', 'ı' => 'i']);
+    }
+
+    /**
+     * NFKC (or NFKD with $decompose); false for invalid UTF-8. Throws without
+     * ext-intl: the compatibility / diacritic folding — and so the filter —
+     * would otherwise weaken silently.
+     */
+    private static function compatibilityNormalize(string $text, bool $decompose): string|false
+    {
+        if (! class_exists(Normalizer::class)) {
+            throw new RuntimeException('Pet names need the PHP intl extension (Normalizer).');
+        }
+
+        return Normalizer::normalize($text, $decompose ? Normalizer::FORM_KD : Normalizer::FORM_KC);
     }
 
     /**

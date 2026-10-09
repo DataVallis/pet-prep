@@ -16,10 +16,15 @@
 |    ("F-u-c-k", "pi zda");
 |  - `fragments`: contained anywhere in the name with the separators removed
 |    — only unambiguous roots go here (no short strings that occur inside
-|    ordinary names).
+|    ordinary names);
+|  - `allowed`: ordinary names that contain a fragment (the Shih Tzu
+|    spellings); they are cut out of the joined name before the fragment
+|    check — they never override `words` ("Moby Dick" stays blocked).
+| The name itself is NFKC-normalized first, so fullwidth / math-bold /
+| modifier-letter look-alikes (ｆｕｃｋ, 𝐟𝐮𝐜𝐤, ᶠᵘᶜᵏ) are plain letters here.
 | Entries are written in the folded form (lower case, no diacritics).
 | Keep the list modest; it is a guard rail for a family app, not a moderation
-| system.
+| system. Draft — David reviews the list (DECISIONS.md 2026-10-09).
 */
 
 return [
@@ -35,12 +40,17 @@ return [
         // Slovenian
         'debil', 'drek', 'fafati', 'fukat', 'fuk', 'jebem', 'jebi', 'jebiga',
         'jebo', 'joski', 'kreten', 'kurac', 'kurba', 'kurc', 'kurcek', 'lulek', 'nacist',
-        'peder', 'picka', 'pizda', 'prasica', 'scat', 'scanje', 'seks', 'srat', 'sranje',
+        'picka', 'pizda', 'prasica', 'scanje', 'seks', 'srat', 'sranje',
         'zajebat',
     ],
 
     'fragments' => [
         'fuck', 'shit', 'cunt', 'bitch', 'whore', 'nigg', 'fagg', 'hitler', 'porn',
         'pizd', 'kurac', 'kurb', 'sranj', 'jebem', 'jebig', 'zajeb',
+    ],
+
+    // Names that contain a fragment but are fine (folded form).
+    'allowed' => [
+        'shitzu', 'shihtzu', 'shitsu',
     ],
 ];
