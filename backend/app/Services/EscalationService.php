@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Log;
  *   channel "alarm") to every caretaker child
  *
  * Phase 3 (Parent Intervention at 0% for >1 hour): Reverb event + push to
- *   every parent: "Tvoj otrok danes ni poskrbel za psa."
+ *   every parent: "Vaš otrok danes ni poskrbel za psa."
  *
  * Pushes (M3-02) go through NotificationService::escalation() — one call per
  * escalation step, inside this per-pet transaction; it applies quiet hours
@@ -593,7 +593,9 @@ class EscalationService
 
     /**
      * Push copy key of the lowest displayed ladder metric (ties: hunger,
-     * thirst, hygiene).
+     * thirst, hygiene). M5-R06-06b (QA B1, David 2026-10-09): while a mess is
+     * open, hygiene wins a tie — the mess is what the child can (and must) act
+     * on first; food / water wait for it anyway.
      */
     private function lowestMetricKey(Pet $pet): string
     {
@@ -603,7 +605,11 @@ class EscalationService
             'thirst' => $shown['thirst_level'],
             'hygiene' => $shown['hygiene_level'],
         ];
+        $lowest = min($candidates);
+        if ($candidates['hygiene'] === $lowest && app(HygieneEventService::class)->openEvents($pet)->isNotEmpty()) {
+            return 'hygiene';
+        }
 
-        return (string) array_search(min($candidates), $candidates, true);
+        return (string) array_search($lowest, $candidates, true);
     }
 }

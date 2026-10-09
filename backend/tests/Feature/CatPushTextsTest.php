@@ -46,6 +46,9 @@ const CPT_DOG_ONLY = [
     'walk_reminder',
     'tidy.soft', 'tidy.critical',
     'clean_and_tidy.soft', 'clean_and_tidy.critical',
+    // M5-R06-06b (David 2026-10-09): food / water wait for a chewed item to be tidied up.
+    'tidy_first.hunger', 'tidy_first.thirst', 'clean_and_tidy_first.hunger', 'clean_and_tidy_first.thirst',
+    'tidy_first_wait.hunger', 'tidy_first_wait.thirst', 'clean_and_tidy_first_wait.hunger', 'clean_and_tidy_first_wait.thirst',
     'illness.child.walk', 'illness.parent.walk',
 ];
 
@@ -293,9 +296,9 @@ describe('rendering per species (EN + SL)', function () {
         'clean + scratcher critical' => [PushType::CriticalAlert, 'hygiene', 'child', PushCopy::VARIANT_CLEAN_AND_SCRATCHER, 'Clean up the mess, carry your cat to the scratching post and praise it as soon as you can, or it will get sick.', 'Čim prej počisti nered, muco odnesi na praskalnik in jo pohvali, sicer bo zbolela.'],
         'play reminder' => [PushType::PlayReminder, 'energy', 'child', null, 'Your cat hasn’t played today and is waiting for the feather wand. Shall we play?', 'Tvoja muca se danes še ni igrala in čaka na palico s peresom. Se greva igrat?'],
         'litter reminder' => [PushType::LitterReminder, 'litter:1', 'child', null, 'Your cat has used the litter tray. Scoop the tray soon, before it starts to smell.', 'Tvoja muca je bila na pesku. Počisti ga čim prej, preden začne smrdeti.'],
-        'parent alarm hunger' => [PushType::ParentAlarm, 'hunger', 'parent', null, 'Your child hasn’t looked after the cat today. The cat has had no food for over an hour.', 'Tvoj otrok danes ni poskrbel za muco. Muca je že več kot uro brez hrane.'],
-        'parent alarm thirst' => [PushType::ParentAlarm, 'thirst', 'parent', null, 'Your child hasn’t looked after the cat today. The cat has had no water for over an hour.', 'Tvoj otrok danes ni poskrbel za muco. Muca je že več kot uro brez vode.'],
-        'parent alarm hygiene' => [PushType::ParentAlarm, 'hygiene', 'parent', null, 'Your child hasn’t looked after the cat today. A mess has not been taken care of for over an hour.', 'Tvoj otrok danes ni poskrbel za muco. Za nered že več kot uro ni nihče poskrbel.'],
+        'parent alarm hunger' => [PushType::ParentAlarm, 'hunger', 'parent', null, 'Your child hasn’t looked after the cat today. The cat has had no food for over an hour.', 'Vaš otrok danes ni poskrbel za muco. Muca je že več kot uro brez hrane.'],
+        'parent alarm thirst' => [PushType::ParentAlarm, 'thirst', 'parent', null, 'Your child hasn’t looked after the cat today. The cat has had no water for over an hour.', 'Vaš otrok danes ni poskrbel za muco. Muca je že več kot uro brez vode.'],
+        'parent alarm hygiene' => [PushType::ParentAlarm, 'hygiene', 'parent', null, 'Your child hasn’t looked after the cat today. A mess has not been taken care of for over an hour.', 'Vaš otrok danes ni poskrbel za muco. Za nered že več kot uro ni nihče poskrbel.'],
         'illness child hygiene' => [PushType::Illness, 'hygiene', 'child', null, 'Your cat lived in a mess for too long and got sick. It will stay at the vet for 12 hours of observation.', 'Muca je predolgo živela v neredu in je zbolela. 12 ur bo na opazovanju pri veterinarju.'],
         'illness child other' => [PushType::Illness, null, 'child', null, 'Your cat got sick. It will stay at the vet for 12 hours of observation.', 'Muca je zbolela. 12 ur bo na opazovanju pri veterinarju.'],
         'illness parent hygiene' => [PushType::Illness, 'hygiene', 'parent', null, 'The cat got sick because a mess wasn’t taken care of. It will stay at the vet for 12 hours of observation.', 'Muca je zbolela, ker za nered ni nihče poskrbel. 12 ur bo na opazovanju pri veterinarju.'],
@@ -413,7 +416,7 @@ describe('M3-12 for a cat: food / water / hygiene reminders never ask for what t
             ->toBe(['variant' => PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST_WAIT, 'replace' => ['time' => '17:00']]);
     });
 
-    it('QA m1: a mess open after the last meal of the day — no food reminder at all (nothing possible today)', function () {
+    it('QA m1 / B1: a mess open after the last meal of the day — the mess reminder instead of a food reminder', function () {
         [, $child, $cat] = cptCatFamily(local: '2026-10-21 07:00');
         cptFed($cat, $child, '2026-10-21 07:00');
         cptFed($cat, $child, '2026-10-21 18:00');
@@ -421,21 +424,7 @@ describe('M3-12 for a cat: food / water / hygiene reminders never ask for what t
         Pet::whereKey($cat->id)->update(['hunger_level' => 30]);
         $cat = cptOpen($cat->fresh(), [HygieneEventKind::LitterAccident]);
 
-        expect(cptActionCopy($cat, PushType::SoftWarning, 'hunger'))->toBeNull();
-    });
-
-    it('leaves the dog unchanged: an open chewing still blocks food with the dog\'s "clean first"', function () {
-        config(['push.enabled' => true]);
-        seedBreedConfigs();
-        cptAt('2026-10-21 12:00');
-        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
-        withoutQuietHours($parent);
-        $child = User::factory()->child()->create(['parent_id' => $parent->id]);
-        $dog = disableHygieneEvents(Pet::factory()->create(['user_id' => $child->id]));
-        $dog = cptOpen($dog, [HygieneEventKind::Chewing]);
-
-        expect(cptActionCopy($dog, PushType::SoftWarning, 'hunger'))->toBe(['variant' => PushCopy::VARIANT_CLEAN_FIRST, 'replace' => []])
-            ->and(cptActionCopy($dog, PushType::SoftWarning, 'hygiene'))->toBe(['variant' => PushCopy::VARIANT_TIDY, 'replace' => []]);
+        expect(cptActionCopy($cat, PushType::SoftWarning, 'hunger'))->toBe(['variant' => null, 'replace' => [], 'metric' => 'hygiene']);
     });
 });
 
@@ -461,23 +450,7 @@ describe('delivery: the device gets the cat text in its own language', function 
         cptDevice($parent, 'sl');
         Pet::whereKey($cat->id)->update(['thirst_level' => 0]);
         expect(cptDeliver($cat->fresh(), PushType::ParentAlarm, 'thirst'))
-            ->toBe(['sl' => 'Tvoj otrok danes ni poskrbel za muco. Muca je že več kot uro brez vode.']);
-    });
-
-    it('sends a dog the unchanged dog text through the same path', function () {
-        config(['push.enabled' => true]);
-        seedBreedConfigs();
-        cptAt('2026-10-21 12:00');
-        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
-        withoutQuietHours($parent);
-        $child = User::factory()->child()->create(['parent_id' => $parent->id]);
-        $dog = disableHygieneEvents(Pet::factory()->create(['user_id' => $child->id, 'hunger_level' => 100, 'hygiene_level' => 100]));
-        cptDevice($child, 'sl');
-        $dog = cptOpen($dog, [HygieneEventKind::Poop]);
-        Pet::whereKey($dog->id)->update(['hunger_level' => 25]);
-
-        expect(cptDeliver($dog->fresh(), PushType::SoftWarning, 'hunger'))
-            ->toBe(['sl' => 'Tvoj kuža je lačen, a najprej je treba počistiti nered. Potem ga lahko nahraniš.']);
+            ->toBe(['sl' => 'Vaš otrok danes ni poskrbel za muco. Muca je že več kot uro brez vode.']);
     });
 });
 

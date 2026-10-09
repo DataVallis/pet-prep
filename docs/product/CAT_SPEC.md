@@ -32,7 +32,7 @@ Vsa vprašanja Q1–Q10: ✅ **David 8. 10. 2026 13:47** — potrdil priporočen
 - ~~mucek ob prihodu že navajen na pesek, brez »luže« (§4)~~ ✅ David 8. 10. 2026;
 - ~~izvor »podarjena od znancev« = posvojena (§1)~~ ✅ David 8. 10. 2026;
 - iskreno besedilo za starše o igri v aplikaciji (§5.4);
-- besedila obvestil (§6) — *zgrajeno kot osnutek (M5-R06-06, 9. 10. 2026), čaka Davidov pregled:* [`CAT_TEXTS_REVIEW.md`](CAT_TEXTS_REVIEW.md) (tam tudi 4 odprta vprašanja: mucek / muca, angleški zaimek, »Tvoj otrok«, pasje grizenje); »prva pomoč« pri dolgotrajni lakoti (samo izobraževalno besedilo [C24]) še odprto — strežnik za psa nima takega besedila, sodi v aplikacijo (R06-08);
+- besedila obvestil (§6) — *zgrajeno kot osnutek (M5-R06-06, 9. 10. 2026), čaka Davidov pregled:* [`CAT_TEXTS_REVIEW.md`](CAT_TEXTS_REVIEW.md) (4 vprašanja o besedilih je David odločil 9. 10. 2026: »muca« za vse starosti, *it*, staršem vikamo, pasji vrzeli popravljeni — M5-R06-06b; pregled besedil še čaka); »prva pomoč« pri dolgotrajni lakoti (samo izobraževalno besedilo [C24]) še odprto — strežnik za psa nima takega besedila, sodi v aplikacijo (R06-08);
 - AI videz domače mačke, faze v promptu in videi stanj (§8);
 - podrobnosti izbirnika (sinonimi v iskanju, filtri pri > 8 pasmah) (§10).
 

@@ -641,7 +641,10 @@ class NotificationService
      * is open (hygieneVariant). Every other push (walk, parent alarm, illness,
      * game over, billing) asks for nothing the app refuses → the normal text.
      *
-     * @return array{variant: string|null, replace: array<string, string>}|null
+     * `metric` (optional) overrides the notification's metric for the text (QA B1: the
+     * mess text when food / water are not possible again today but a mess is open).
+     *
+     * @return array{variant: string|null, replace: array<string, string>, metric?: string}|null
      */
     private function actionCopy(PushNotification $notification, Pet $pet): ?array
     {
@@ -677,11 +680,12 @@ class NotificationService
         $tz = $pet->familyTimezone();
         if ($check->refusal === CareRefusal::NeedsCleaning) {
             $variant = $this->messFirstVariant($pet);
-            if (! $pet->isCat()) {
-                return ['variant' => $variant, 'replace' => []]; // dog: unchanged (QA R06-06 m1 gap, (D) čaka Davida)
-            }
-            // M5-R06-06 (QA m1): would the meal / water be possible once the mess is gone? Same
-            // rules on an in-memory copy with hygiene 100 % (never saved).
+            // M5-R06-06 (QA m1, cats) / M5-R06-06b (dogs, David 2026-10-09): would the meal / water
+            // be possible once the mess is gone? Same rules on an in-memory copy with hygiene
+            // 100 % (never saved): yes → the first step + "then you can feed it"; later today →
+            // the first step + the time; not again today → the mess reminder instead (QA B1,
+            // David 2026-10-09: the child must still hear about the mess — otherwise the ladder
+            // has already moved on and the pet gets sick unannounced).
             $probe = clone $pet;
             $probe->hygiene_level = 100.0;
             $after = $metric === 'hunger'
@@ -695,7 +699,7 @@ class NotificationService
                 return ['variant' => $variant.PushCopy::WAIT_SUFFIX, 'replace' => ['time' => $next->format('H:i')]];
             }
 
-            return null;
+            return ['variant' => $this->hygieneVariant($pet), 'replace' => [], 'metric' => 'hygiene'];
         }
 
         $next = $check->nextAllowedAt?->setTimezone($tz);
@@ -707,20 +711,23 @@ class NotificationService
     }
 
     /**
-     * M3-12 / M5-R06-06 (QA m3 of R06-05): what food / water wait for while hygiene
-     * shows 0 %. Cleaning does not resolve a cat's scratching (POST /pet/clean leaves
-     * it; only the scratcher does) → `scratcher_first`, or `clean_and_scratcher_first`
-     * when a mess next to the tray is open too; otherwise `clean_first` (dogs: always,
-     * byte-identical to before).
+     * M3-12: what food / water wait for while hygiene shows 0 %. Cleaning resolves
+     * neither a cat's scratching (only the scratcher does — M5-R06-06, QA m3 of R06-05)
+     * nor a dog's chewed item (tidied up with a toy — M5-R06-06b, David 2026-10-09):
+     * scratching → `scratcher_first` / with another mess `clean_and_scratcher_first`;
+     * chewing → `tidy_first` / with another mess `clean_and_tidy_first`; else `clean_first`.
      */
     private function messFirstVariant(Pet $pet): string
     {
         $kinds = $this->openMessKinds($pet);
-        if (! $kinds->contains(HygieneEventKind::Scratching->value)) {
-            return PushCopy::VARIANT_CLEAN_FIRST;
+        if ($kinds->contains(HygieneEventKind::Scratching->value)) {
+            return $kinds->count() > 1 ? PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST : PushCopy::VARIANT_SCRATCHER_FIRST;
+        }
+        if ($kinds->contains(HygieneEventKind::Chewing->value)) {
+            return $kinds->count() > 1 ? PushCopy::VARIANT_CLEAN_AND_TIDY_FIRST : PushCopy::VARIANT_TIDY_FIRST;
         }
 
-        return $kinds->count() > 1 ? PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST : PushCopy::VARIANT_SCRATCHER_FIRST;
+        return PushCopy::VARIANT_CLEAN_FIRST;
     }
 
     /**
@@ -797,7 +804,7 @@ class NotificationService
      *
      * @param  Collection<int, DevicePushToken>  $chunk
      * @param  Collection<int, string>  $audience  user id → audience
-     * @param  array{variant: string|null, replace: array<string, string>, species: Species}  $copy
+     * @param  array{variant: string|null, replace: array<string, string>, species: Species, metric?: string}  $copy
      */
     private function sendChunk(PushNotification $notification, Collection $chunk, Collection $audience, ExpoPushClient $client, array $copy): void
     {
@@ -839,7 +846,7 @@ class NotificationService
     /**
      * One Expo message. data = {type, pet_id} only (third parties).
      *
-     * @param  array{variant: string|null, replace: array<string, string>, species: Species}  $copy
+     * @param  array{variant: string|null, replace: array<string, string>, species: Species, metric?: string}  $copy
      * @return array<string, mixed>
      */
     private function message(PushNotification $notification, DevicePushToken $device, string $audience, array $copy): array
@@ -850,7 +857,7 @@ class NotificationService
             'to' => $device->expo_push_token,
             // M1-18: in this install's language (null → default).
             'title' => PushCopy::title($device->locale),
-            'body' => PushCopy::body($type, $notification->metric, $audience, $device->locale, $copy['variant'], $copy['replace'], $copy['species']),
+            'body' => PushCopy::body($type, $copy['metric'] ?? $notification->metric, $audience, $device->locale, $copy['variant'], $copy['replace'], $copy['species']),
             'data' => [
                 'type' => $type->value,
                 'pet_id' => $notification->pet_id,

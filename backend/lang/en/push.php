@@ -34,6 +34,35 @@ return [
         'thirst' => 'Your dog is thirsty, but the mess has to be cleaned up first. Then you can give it water.',
     ],
 
+    // M5-R06-06b (David 2026-10-09): food / water are refused while a chewed item is open, but
+    // cleaning does not resolve it — it is tidied up with a toy ("tidy first").
+    'tidy_first' => [
+        'hunger' => 'Your dog is hungry, but first tidy up what it chewed and give it a toy. Then you can feed it.',
+        'thirst' => 'Your dog is thirsty, but first tidy up what it chewed and give it a toy. Then you can give it water.',
+    ],
+
+    'clean_and_tidy_first' => [
+        'hunger' => 'Your dog is hungry, but first clean up the mess, tidy up what it chewed and give it a toy. Then you can feed it.',
+        'thirst' => 'Your dog is thirsty, but first clean up the mess, tidy up what it chewed and give it a toy. Then you can give it water.',
+    ],
+
+    // M5-R06-06b (David 2026-10-09, M3-12): the same first step, but the meal / water stays
+    // refused until later today even once the mess is gone — the time, not "then you can feed it".
+    'clean_first_wait' => [
+        'hunger' => 'Your dog is hungry, but the mess has to be cleaned up first. The next meal is at :time.',
+        'thirst' => 'Your dog is thirsty, but the mess has to be cleaned up first. You can give it water again at :time.',
+    ],
+
+    'tidy_first_wait' => [
+        'hunger' => 'Your dog is hungry, but first tidy up what it chewed and give it a toy. The next meal is at :time.',
+        'thirst' => 'Your dog is thirsty, but first tidy up what it chewed and give it a toy. You can give it water again at :time.',
+    ],
+
+    'clean_and_tidy_first_wait' => [
+        'hunger' => 'Your dog is hungry, but first clean up the mess, tidy up what it chewed and give it a toy. The next meal is at :time.',
+        'thirst' => 'Your dog is thirsty, but first clean up the mess, tidy up what it chewed and give it a toy. You can give it water again at :time.',
+    ],
+
     // M3-12: a chewed item is not scrubbed away — it is tidied up and swapped for a toy.
     'tidy' => [
         'soft' => 'Your dog has chewed something. Tidy it up and give it a toy.',
