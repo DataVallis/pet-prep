@@ -1,6 +1,6 @@
 # Mačja besedila — pregled za Davida (M5-R06-06)
 
-> **Status:** osnutek **Claude, 9. 10. 2026**. **David je 9. 10. 2026 (~06:xx) odločil vsa štiri vprašanja** (spodaj); **pregled samih besedil v tabeli še čaka Davida** pred vklopom mačk (M5-R06-09; CAT_SPEC: David prebere angleščino pred vklopom). Mačke so skrite (`PETPREP_CATS_ENABLED=false`), zato teh besedil zdaj ne vidi nihče.
+> **Status:** ✅ **David je 9. 10. 2026 potrdil vsa besedila v tabeli (brez popravkov)** in prej istega dne odločil štiri vprašanja (spodaj). Pregled je potekal v dokumentu claude.ai »PetPrep – pregled mačjih besedil«. Besedilo `payment_required.parent` (omenja brezplačni preizkus) muca nikoli ne dobi: od odstranitve preizkusa vsako rojstvo dobi `parent_no_trial` (`ChallengeService::PUSH_NO_TRIAL`). Mačke so skrite (`PETPREP_CATS_ENABLED=false`), zato teh besedil zdaj ne vidi nihče.
 > **Kako pregledati:** en prehod po tabeli. Če je vrstica v redu, nič ne naredi; popravke napiši v stolpec ali v klepet (ključ + novo besedilo). Pasja besedila (2. stolpec) so za primerjavo; spreminjajo se samo z Davidovo odločitvijo (test `DogPushTextSnapshotTest` — 9. 10. 2026 namenoma: vikanje v alarmu staršem, nove različice »najprej pospravi« in čas obroka).
 > **Vir resnice:** `backend/lang/en/push.php` in `backend/lang/sl/push.php` (podimenski prostor `cat`), `backend/lang/*/account.php`. Tabela je ustvarjena iz teh datotek; po popravku jo ustvari znova.
 
@@ -69,4 +69,4 @@
 3. ✅ **Starši:** slovenska obvestila staršem vikajo (»Vaš otrok danes ni poskrbel za psa / muco.«) — za obe vrsti; otroška besedila ostanejo »ti«. Zgrajeno (M5-R06-06b).
 4. ✅ **Pasji napaki popravljeni (M5-R06-06b):** (a) pri odprtem grizenju obvestilo o hrani / vodi reče »najprej pospravi, kar je pregriznil, in mu daj igračo« (`tidy_first`, z drugim neredom `clean_and_tidy_first`), ne »najprej počisti«; (b) če bi bilo hranjenje / voda tudi po razrešitvi mogoče šele kasneje danes, pasje obvestilo pove čas (`*_first_wait`), ne »Potem ga lahko nahraniš«; če danes ni več mogoče, gre opomnik za nered (QA B1).
 
-Še odprto: **pregled besedil v tabeli** (David, pred R06-09).
+✅ Pregled besedil v tabeli: David 9. 10. 2026 — vse v redu.

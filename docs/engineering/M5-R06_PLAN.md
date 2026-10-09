@@ -1,7 +1,7 @@
 # M5-R06 — Izvedbeni načrt: vrsta živali → pasma (pes + mačka)
 
 > **Status:** načrt **potrdil David 8. 10. 2026** (Claude ga je napisal isti dan). Spec: [`docs/product/CAT_SPEC.md`](../product/CAT_SPEC.md) (David je Q1–Q10 potrdil 8. 10. 2026 ob 13:47). Viri in vrednosti: [`docs/research/cat-data/data.json`](../research/cat-data/data.json) (62 vrednosti z virom [Cn] ali z Davidovo odločitvijo; predlogi (D) so označeni `UNSOURCED`).
-> **Stanje (9. 10. 2026):** R06-01 … R06-05 združeni (R06-04 = PR #99, R06-05 = PR #100, nameščen 9. 10. 2026); **R06-06 + R06-06b združena** (mačja besedila so osnutek, ki čaka Davida — [`CAT_TEXTS_REVIEW.md`](../product/CAT_TEXTS_REVIEW.md)); **R06-07 zgrajen 9. 10. 2026** (PR #105, združen 9. 10. 2026; videz in videi so (D) — pregled v AI Labu); R06-08 … R06-09 še niso zgrajeni. Vsaka naloga je en PR po pravilih iz `CLAUDE.md` (testi, dokumenti, FEATURES, BUILD_LOG).
+> **Stanje (9. 10. 2026):** R06-01 … R06-05 združeni (R06-04 = PR #99, R06-05 = PR #100, nameščen 9. 10. 2026); **R06-06 + R06-06b združena** (mačja besedila je David potrdil 9. 10. 2026 — [`CAT_TEXTS_REVIEW.md`](../product/CAT_TEXTS_REVIEW.md)); **R06-07 zgrajen 9. 10. 2026** (PR #105, združen 9. 10. 2026; videz in videi so (D) — pregled v AI Labu); R06-08 … R06-09 še niso zgrajeni. Vsaka naloga je en PR po pravilih iz `CLAUDE.md` (testi, dokumenti, FEATURES, BUILD_LOG).
 > **Merilo regresije:** pri obstoječih psih se ne spremeni nič. Vsi obstoječi Pest in Jest testi ostanejo zeleni brez sprememb pričakovanih vrednosti.
 
 ## 1. Ključne tehnične odločitve (Claude, brez vpliva na pravila igre)
