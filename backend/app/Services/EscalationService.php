@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Log;
  *   channel "alarm") to every caretaker child
  *
  * Phase 3 (Parent Intervention at 0% for >1 hour): Reverb event + push to
- *   every parent: "Tvoj otrok danes ni poskrbel za psa."
+ *   every parent: "Vaš otrok danes ni poskrbel za psa."
  *
  * Pushes (M3-02) go through NotificationService::escalation() — one call per
  * escalation step, inside this per-pet transaction; it applies quiet hours

@@ -677,11 +677,10 @@ class NotificationService
         $tz = $pet->familyTimezone();
         if ($check->refusal === CareRefusal::NeedsCleaning) {
             $variant = $this->messFirstVariant($pet);
-            if (! $pet->isCat()) {
-                return ['variant' => $variant, 'replace' => []]; // dog: unchanged (QA R06-06 m1 gap, (D) čaka Davida)
-            }
-            // M5-R06-06 (QA m1): would the meal / water be possible once the mess is gone? Same
-            // rules on an in-memory copy with hygiene 100 % (never saved).
+            // M5-R06-06 (QA m1, cats) / M5-R06-06b (dogs, David 2026-10-09): would the meal / water
+            // be possible once the mess is gone? Same rules on an in-memory copy with hygiene
+            // 100 % (never saved): yes → the first step + "then you can feed it"; later today →
+            // the first step + the time; not again today → no reminder.
             $probe = clone $pet;
             $probe->hygiene_level = 100.0;
             $after = $metric === 'hunger'
@@ -707,20 +706,23 @@ class NotificationService
     }
 
     /**
-     * M3-12 / M5-R06-06 (QA m3 of R06-05): what food / water wait for while hygiene
-     * shows 0 %. Cleaning does not resolve a cat's scratching (POST /pet/clean leaves
-     * it; only the scratcher does) → `scratcher_first`, or `clean_and_scratcher_first`
-     * when a mess next to the tray is open too; otherwise `clean_first` (dogs: always,
-     * byte-identical to before).
+     * M3-12: what food / water wait for while hygiene shows 0 %. Cleaning resolves
+     * neither a cat's scratching (only the scratcher does — M5-R06-06, QA m3 of R06-05)
+     * nor a dog's chewed item (tidied up with a toy — M5-R06-06b, David 2026-10-09):
+     * scratching → `scratcher_first` / with another mess `clean_and_scratcher_first`;
+     * chewing → `tidy_first` / with another mess `clean_and_tidy_first`; else `clean_first`.
      */
     private function messFirstVariant(Pet $pet): string
     {
         $kinds = $this->openMessKinds($pet);
-        if (! $kinds->contains(HygieneEventKind::Scratching->value)) {
-            return PushCopy::VARIANT_CLEAN_FIRST;
+        if ($kinds->contains(HygieneEventKind::Scratching->value)) {
+            return $kinds->count() > 1 ? PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST : PushCopy::VARIANT_SCRATCHER_FIRST;
+        }
+        if ($kinds->contains(HygieneEventKind::Chewing->value)) {
+            return $kinds->count() > 1 ? PushCopy::VARIANT_CLEAN_AND_TIDY_FIRST : PushCopy::VARIANT_TIDY_FIRST;
         }
 
-        return $kinds->count() > 1 ? PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST : PushCopy::VARIANT_SCRATCHER_FIRST;
+        return PushCopy::VARIANT_CLEAN_FIRST;
     }
 
     /**

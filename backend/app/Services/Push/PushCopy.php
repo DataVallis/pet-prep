@@ -65,8 +65,17 @@ final class PushCopy
     public const VARIANT_CLEAN_AND_SCRATCHER_FIRST = 'clean_and_scratcher_first';
 
     /**
-     * M5-R06-06 (QA m1): cat only — the same first step, but the meal / water stays refused
-     * until :time even once the mess is gone (no "then you can feed it").
+     * M5-R06-06b (David 2026-10-09): food / water are refused while a dog's chewed item is
+     * open, but cleaning does not resolve it — "tidy first" (+ "clean and tidy first").
+     */
+    public const VARIANT_TIDY_FIRST = 'tidy_first';
+
+    public const VARIANT_CLEAN_AND_TIDY_FIRST = 'clean_and_tidy_first';
+
+    /**
+     * M5-R06-06 (QA m1, cats) / M5-R06-06b (dogs, David 2026-10-09): the same first step, but
+     * the meal / water stays refused until :time even once the mess is gone (no "then you
+     * can feed it"). Variant = first-step variant + WAIT_SUFFIX.
      */
     public const WAIT_SUFFIX = '_wait';
 
@@ -76,9 +85,14 @@ final class PushCopy
 
     public const VARIANT_CLEAN_AND_SCRATCHER_FIRST_WAIT = 'clean_and_scratcher_first_wait';
 
+    public const VARIANT_TIDY_FIRST_WAIT = 'tidy_first_wait';
+
+    public const VARIANT_CLEAN_AND_TIDY_FIRST_WAIT = 'clean_and_tidy_first_wait';
+
     private const VARIANTS = [
         self::VARIANT_WAIT, self::VARIANT_CLEAN_FIRST, self::VARIANT_SCRATCHER_FIRST, self::VARIANT_CLEAN_AND_SCRATCHER_FIRST,
         self::VARIANT_CLEAN_FIRST_WAIT, self::VARIANT_SCRATCHER_FIRST_WAIT, self::VARIANT_CLEAN_AND_SCRATCHER_FIRST_WAIT,
+        self::VARIANT_TIDY_FIRST, self::VARIANT_CLEAN_AND_TIDY_FIRST, self::VARIANT_TIDY_FIRST_WAIT, self::VARIANT_CLEAN_AND_TIDY_FIRST_WAIT,
     ];
 
     /** M3-12 hygiene variants while a chewed item is open (only chewing / chewing + another mess). */
@@ -99,7 +113,7 @@ final class PushCopy
     /** Top-level groups that exist only under `push.cat` (the cat's own pushes and variants). */
     public const CAT_ONLY_GROUPS = [
         'play_reminder', 'litter_reminder', 'scratcher', 'clean_and_scratcher', 'scratcher_first', 'clean_and_scratcher_first',
-        'clean_first_wait', 'scratcher_first_wait', 'clean_and_scratcher_first_wait',
+        'scratcher_first_wait', 'clean_and_scratcher_first_wait',
     ];
 
     public static function locale(?string $locale): string

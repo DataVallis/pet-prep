@@ -381,7 +381,7 @@ describe('Escalation pushes — recipients and copy', function () {
 
         expect($pet->refresh()->escalation_level)->toBe(3)
             ->and(pnRecipientsOf($sent))->toBe(collect([$d1->expo_push_token, $d2->expo_push_token])->sort()->values()->all())
-            ->and($sent[0]['body'])->toStartWith('Tvoj otrok danes ni poskrbel za psa.')
+            ->and($sent[0]['body'])->toStartWith('Vaš otrok danes ni poskrbel za psa.')
             ->and($sent[0]['body'])->toContain('brez hrane')
             ->and($sent[0]['priority'])->toBe('high')
             ->and($sent[0]['data'])->toBe(['type' => 'parent_intervention_alarm', 'pet_id' => $pet->id]);
@@ -1281,10 +1281,10 @@ describe('PushCopy languages (M1-18)', function () {
         [PushType::CriticalAlert, 'thirst', 'child', 'Če mu ne daš vode v 30 minutah, bo zbolel.'],
         [PushType::CriticalAlert, 'hygiene', 'child', 'Kuža je naredil nered! Počisti ga čim prej, sicer bo zbolel.'],
         [PushType::WalkReminder, 'energy', 'child', 'Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?'],
-        [PushType::ParentAlarm, 'hunger', 'parent', 'Tvoj otrok danes ni poskrbel za psa. Kuža je že več kot uro brez hrane.'],
-        [PushType::ParentAlarm, 'thirst', 'parent', 'Tvoj otrok danes ni poskrbel za psa. Kuža je že več kot uro brez vode.'],
-        [PushType::ParentAlarm, 'hygiene', 'parent', 'Tvoj otrok danes ni poskrbel za psa. Nered že več kot uro ni počiščen.'],
-        [PushType::ParentAlarm, null, 'parent', 'Tvoj otrok danes ni poskrbel za psa.'],
+        [PushType::ParentAlarm, 'hunger', 'parent', 'Vaš otrok danes ni poskrbel za psa. Kuža je že več kot uro brez hrane.'],
+        [PushType::ParentAlarm, 'thirst', 'parent', 'Vaš otrok danes ni poskrbel za psa. Kuža je že več kot uro brez vode.'],
+        [PushType::ParentAlarm, 'hygiene', 'parent', 'Vaš otrok danes ni poskrbel za psa. Nered že več kot uro ni počiščen.'],
+        [PushType::ParentAlarm, null, 'parent', 'Vaš otrok danes ni poskrbel za psa.'],
         [PushType::Illness, 'hygiene', 'child', 'Kuža je predolgo živel v neredu in je zbolel. 12 ur bo na opazovanju pri veterinarju.'],
         [PushType::Illness, 'walk', 'child', 'Kuža včeraj ni bil na sprehodu in je zbolel. 12 ur bo na opazovanju pri veterinarju.'],
         [PushType::Illness, null, 'child', 'Kuža je zbolel. 12 ur bo na opazovanju pri veterinarju.'],

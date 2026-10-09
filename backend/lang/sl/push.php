@@ -34,6 +34,35 @@ return [
         'thirst' => 'Tvoj kuža je žejen, a najprej je treba počistiti nered. Potem mu lahko daš vodo.',
     ],
 
+    // M5-R06-06b (David 9. 10. 2026): hrana in voda sta zavrnjeni, dokler je odprt pregrizen
+    // predmet, a čiščenje ga ne razreši — pospravi se z igračo (»najprej pospravi«).
+    'tidy_first' => [
+        'hunger' => 'Tvoj kuža je lačen, a najprej pospravi pregrizeno in mu daj igračo. Potem ga lahko nahraniš.',
+        'thirst' => 'Tvoj kuža je žejen, a najprej pospravi pregrizeno in mu daj igračo. Potem mu lahko daš vodo.',
+    ],
+
+    'clean_and_tidy_first' => [
+        'hunger' => 'Tvoj kuža je lačen, a najprej počisti nered, pospravi pregrizeno in mu daj igračo. Potem ga lahko nahraniš.',
+        'thirst' => 'Tvoj kuža je žejen, a najprej počisti nered, pospravi pregrizeno in mu daj igračo. Potem mu lahko daš vodo.',
+    ],
+
+    // M5-R06-06b (David 9. 10. 2026, M3-12): isti prvi korak, a hrana / voda je tudi po čiščenju
+    // mogoča šele kasneje danes — čas namesto »potem ga lahko nahraniš«.
+    'clean_first_wait' => [
+        'hunger' => 'Tvoj kuža je lačen, a najprej je treba počistiti nered. Naslednji obrok je ob :time.',
+        'thirst' => 'Tvoj kuža je žejen, a najprej je treba počistiti nered. Vodo mu lahko spet daš ob :time.',
+    ],
+
+    'tidy_first_wait' => [
+        'hunger' => 'Tvoj kuža je lačen, a najprej pospravi pregrizeno in mu daj igračo. Naslednji obrok je ob :time.',
+        'thirst' => 'Tvoj kuža je žejen, a najprej pospravi pregrizeno in mu daj igračo. Vodo mu lahko spet daš ob :time.',
+    ],
+
+    'clean_and_tidy_first_wait' => [
+        'hunger' => 'Tvoj kuža je lačen, a najprej počisti nered, pospravi pregrizeno in mu daj igračo. Naslednji obrok je ob :time.',
+        'thirst' => 'Tvoj kuža je žejen, a najprej počisti nered, pospravi pregrizeno in mu daj igračo. Vodo mu lahko spet daš ob :time.',
+    ],
+
     // M3-12: odprt pregrizen predmet se ne počisti z drgnjenjem, ampak pospravi z igračo.
     'tidy' => [
         'soft' => 'Tvoj kuža je nekaj pregriznil. Pospravi in mu daj igračo.',
@@ -47,7 +76,8 @@ return [
 
     'walk_reminder' => 'Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?',
 
-    'parent_alarm' => 'Tvoj otrok danes ni poskrbel za psa.',
+    // David 9. 10. 2026: staršem vikamo (brand/README, glas) — pri obeh vrstah.
+    'parent_alarm' => 'Vaš otrok danes ni poskrbel za psa.',
 
     'parent_alarm_detail' => [
         'hunger' => 'Kuža je že več kot uro brez hrane.',
@@ -160,7 +190,7 @@ return [
         // M5-R06-05: pesek je treba počistiti v naslednji uri.
         'litter_reminder' => 'Tvoja muca je bila na pesku. Počisti ga čim prej, preden začne smrdeti.',
 
-        'parent_alarm' => 'Tvoj otrok danes ni poskrbel za muco.',
+        'parent_alarm' => 'Vaš otrok danes ni poskrbel za muco.',
 
         'parent_alarm_detail' => [
             'hunger' => 'Muca je že več kot uro brez hrane.',
