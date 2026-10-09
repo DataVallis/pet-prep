@@ -8,6 +8,7 @@
  * 3. **Breed** — the server's list (`GET /api/breeds`) with search (case- and
  *    diacritic-insensitive, synonyms), free breed first with a "Brezplačno" badge, paid
  *    breeds with "Izziv"; a breed the plan doesn't take is greyed and explained on tap (M5-F03).
+ *    Each breed with sourced tags shows "Primerno za:" / "Pomisli:" chips (M5-R10).
  * 4. **Origin** and **age at arrival**, as before (texts per species, T8).
  * 5. **Summary** (species, breed, origin, age, plan) above "Ustvari kodo".
  *
@@ -34,7 +35,9 @@ import {
   choiceWithPlan,
   choiceWithSpecies,
   completeChoice,
+  considerLabel,
   freeBreedOf,
+  hasSuitability,
   isBreedLocked,
   lockedBreedsFor,
   PICKER_AGES,
@@ -43,8 +46,12 @@ import {
   PICKER_STRINGS as S,
   pickerText,
   searchBreeds,
+  SUITABILITY_STRINGS,
+  suitabilityA11y,
+  suitsLabel,
   type BreedCatalogue,
   type BreedLockReason,
+  type BreedSuitability,
   type CatalogueBreed,
   type PickerChoice,
   type PickerText,
@@ -389,6 +396,7 @@ function BreedRow({ entry, locked, lockReason, selected, onPress }: BreedRowProp
   const checked = !locked && selected;
   const a11y = !locked ? name : lockReason === 'free_only' ? S.lockedFreeOnlyA11y(name) : S.lockedA11y(name);
   const free = entry.free_plan_allowed && !entry.premium;
+  const tagged = hasSuitability(entry.suitability);
   return (
     <Pressable
       onPress={() => onPress(locked)}
@@ -396,6 +404,7 @@ function BreedRow({ entry, locked, lockReason, selected, onPress }: BreedRowProp
       accessibilityRole="radio"
       accessibilityState={{ checked, disabled: locked }}
       accessibilityLabel={a11y}
+      accessibilityHint={tagged ? suitabilityA11y(entry.suitability) : undefined}
       testID={`breed-option-${entry.breed}`}
     >
       <View style={[styles.breedIcon, locked && styles.breedIconLocked]}>
@@ -411,11 +420,41 @@ function BreedRow({ entry, locked, lockReason, selected, onPress }: BreedRowProp
           </View>
         </View>
         <Text style={styles.optionHint}>{breedHint(entry.breed)}</Text>
+        {tagged && <SuitabilityTags breed={entry.breed} suitability={entry.suitability} />}
       </View>
       <View style={[styles.radio, checked && styles.radioSelected]}>
         {locked ? <Lock color={C.faint} size={12} /> : checked ? <Check color={palette.white} size={12} /> : null}
       </View>
     </Pressable>
+  );
+}
+
+// ── "Za koga je primerna" chips (M5-R10) ──────────────────────────
+/**
+ * Sourced suitability tags as small chips under the breed hint. The row is one accessible
+ * element (its label overrides the children), so its a11y hint reads the same tags as one
+ * sentence ({@link suitabilityA11y}).
+ */
+function SuitabilityTags({ breed, suitability }: { breed: PetBreed; suitability: BreedSuitability }) {
+  const groups: Array<{ kind: 'suits' | 'consider'; title: string; labels: string[] }> = [
+    { kind: 'suits', title: SUITABILITY_STRINGS.suitsTitle, labels: suitability.suits.map(suitsLabel) },
+    { kind: 'consider', title: SUITABILITY_STRINGS.considerTitle, labels: suitability.consider.map(considerLabel) },
+  ];
+  return (
+    <View style={styles.tags} testID={`breed-suitability-${breed}`}>
+      {groups
+        .filter((g) => g.labels.length > 0)
+        .map((g) => (
+          <View key={g.kind} style={styles.tagGroup} testID={`breed-suitability-${breed}-${g.kind}`}>
+            <Text style={styles.tagTitle}>{g.title}</Text>
+            {g.labels.map((label) => (
+              <View key={label} style={[styles.chip, g.kind === 'suits' ? styles.chipSuits : styles.chipConsider]}>
+                <Text style={[styles.chipText, g.kind === 'consider' && styles.chipConsiderText]}>{label}</Text>
+              </View>
+            ))}
+          </View>
+        ))}
+    </View>
   );
 }
 
@@ -547,6 +586,14 @@ const styles = StyleSheet.create({
   badgeText: { fontSize: 11, fontWeight: '700' },
   badgeFreeText: { color: C.greenText },
   badgeChallengeText: { color: C.yellowText },
+  tags: { marginTop: 8, gap: 6 },
+  tagGroup: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 6 },
+  tagTitle: { fontSize: 12, fontWeight: '700', color: C.muted },
+  chip: { maxWidth: '100%', paddingHorizontal: 8, paddingVertical: 3, borderRadius: 999, borderWidth: 1, backgroundColor: C.card },
+  chipSuits: { borderColor: C.accentBorder },
+  chipConsider: { borderColor: C.border },
+  chipText: { fontSize: 12, lineHeight: 16, fontWeight: '600', color: C.text },
+  chipConsiderText: { color: C.muted },
   searchBox: {
     flexDirection: 'row',
     alignItems: 'center',

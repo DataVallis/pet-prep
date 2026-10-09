@@ -150,16 +150,21 @@ describe('picker choice', () => {
     expect(choiceWithPlan(INITIAL_PICKER_CHOICE, 'challenge', [], D).breed).toBe('border_collie');
     // A pickable breed is kept.
     expect(choiceWithPlan(challenge, 'challenge', [], D)).toEqual(challenge);
+    // M5-R10: the server refused the collie → the next paid breed (the Labrador).
+    expect(choiceWithPlan(muttFree, 'challenge', ['border_collie'], D).breed).toBe('labrador_retriever');
     // Every paid breed refused by the server: nothing pickable → the choice stays incomplete.
-    const stuck = choiceWithPlan(muttFree, 'challenge', ['border_collie'], D);
+    const refused = ['border_collie', 'labrador_retriever'] as const;
+    const stuck = choiceWithPlan(muttFree, 'challenge', refused, D);
     expect(stuck.plan).toBe('challenge');
-    expect(completeChoice(stuck, ['border_collie'], D)).toBeNull();
+    expect(completeChoice(stuck, refused, D)).toBeNull();
   });
 
   it('premium breeds need the challenge plan; the free plan is always the free breed', () => {
-    expect(lockedBreedsFor('free', [], D)).toEqual(['border_collie']);
-    expect(lockedBreedsFor(null, [], D)).toEqual(['border_collie']);
+    expect(lockedBreedsFor('free', [], D)).toEqual(['border_collie', 'labrador_retriever']);
+    expect(lockedBreedsFor(null, [], D)).toEqual(['border_collie', 'labrador_retriever']);
     expect(lockedBreedsFor('challenge', ['border_collie'], D)).toEqual(['mutt', 'border_collie']);
+    expect(breedLockReason('labrador_retriever', 'free', [], D)).toBe('challenge_only');
+    expect(breedLockReason('labrador_retriever', 'challenge', [], D)).toBeNull();
     expect(isBreedLocked('mutt', lockedBreedsFor(null, [], D))).toBe(false);
     expect(isBreedLocked(null, [])).toBe(true);
     expect(completeChoice({ ...dog, plan: 'challenge', breed: 'border_collie', origin: 'bought', age_stage: 'young' }, [], D)).toEqual({

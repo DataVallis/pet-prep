@@ -1355,7 +1355,7 @@ export interface components {
              * @description Enum value sent as `breed` to POST /api/parent/generate-pin.
              * @enum {string}
              */
-            breed: "mutt" | "border_collie" | "domestic_cat" | "maine_coon";
+            breed: "mutt" | "border_collie" | "labrador_retriever" | "domestic_cat" | "maine_coon";
             /** @description breed_configs slug (admin / analytics key). */
             slug: string;
             /** @enum {string} */
@@ -1372,13 +1372,24 @@ export interface components {
             search_keywords: string[];
             /** @description Picker order inside free / paid of a species. */
             sort_order: number;
+            /**
+             * @description "Za koga je primerna" (M5-R10): sourced tag keys from
+             *     config/breed_suitability.php — `suits` = the breed fits this
+             *     family / home, `consider` = what a family must be ready for.
+             *     The app translates each key (`breedSuitability.<tag>`). Empty
+             *     lists = no sourced tags yet (mutt, cats). Never "hypoallergenic".
+             */
+            suitability: {
+                suits: ("active_family" | "children" | "small_children" | "first_time_owner" | "apartment" | "house_with_garden" | "other_pets" | "older_owners" | "often_alone" | "low_shedding")[];
+                consider: ("long_daily_exercise" | "needs_mental_stimulation" | "may_herd_children" | "chews_when_bored" | "sheds" | "food_motivated_weight")[];
+            };
         };
         /**
          * BreedType
          * @description Breeds (M5-R06_PLAN T1, T9): the enum stays (it is used in payments and ~20 files), the free / paid rule is data — `breed_configs.premium_unlock` is the single source of truth (read through BreedCatalogService, cached). Every new case needs: slug(), species(), defaultPremium(), the `pets_breed_type_check` / `pets_species_breed_check` constraints and a BreedConfigsSeeder row.
          * @enum {string}
          */
-        BreedType: "mutt" | "border_collie" | "domestic_cat" | "maine_coon";
+        BreedType: "mutt" | "border_collie" | "labrador_retriever" | "domestic_cat" | "maine_coon";
         /**
          * ChallengePaidSource
          * @description Why a challenge pet counts as paid (pets.challenge_paid_source, M3-11). Mirrored by the pets_challenge_paid_check constraint.
@@ -1990,11 +2001,14 @@ export interface components {
          *     family's pet looks exactly like a missing one (404).
          *
          *     Normalized before validation (PetNameService::normalize): trimmed, inner
-         *     whitespace collapsed, ’ → ', NFC. 422 body = Laravel's validation body +
+         *     whitespace collapsed, ’ → ', NFKC. 422 body = Laravel's validation body +
          *     `codes` {name: code} (like POST /api/register) + `reason` (the same code):
          *      - `name_too_long`   — more than 20 characters (code points, not bytes);
          *      - `name_invalid`    — not a string / missing field, characters other than
-         *                            letters, space, hyphen, apostrophe, or no letter;
+         *                            letters, space, hyphen, apostrophe (zero-width,
+         *                            BOM, bidi controls …), no letter, invisible Hangul
+         *                            fillers, enclosing marks or 3+ stacked combining
+         *                            marks;
          *      - `name_not_allowed`— on the EN / SL filter list (config/pet_names.php).
          */
         UpdatePetNameRequest: {
@@ -12965,7 +12979,7 @@ export interface operations {
                          */
                         pet_profile: {
                             /** @enum {string} */
-                            breed: "mutt" | "border_collie" | "domestic_cat" | "maine_coon";
+                            breed: "mutt" | "border_collie" | "labrador_retriever" | "domestic_cat" | "maine_coon";
                             /** @enum {string} */
                             origin: "bought" | "adopted";
                             /** @enum {string} */
