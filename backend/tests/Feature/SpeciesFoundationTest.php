@@ -412,9 +412,12 @@ describe('pin-login: the child app must show cats', function () {
             ->assertJsonPath('pet.media_status', 'disabled');
         $pet = Pet::findOrFail($login->json('pet.id'));
 
-        // No cat media / DNA before M5-R06-07 (never a dog prompt).
+        // M5-R06-07: a cat gets DNA v2 with a cat prompt (never a dog prompt); media
+        // stay disabled here because the test has no fal key.
         expect($pet->species)->toBe(Species::Cat)
-            ->and($pet->pet_dna)->toBeNull()
+            ->and($pet->pet_dna['version'])->toBe(2)
+            ->and($pet->pet_dna['breed'])->toBe('domestic_cat')
+            ->and($pet->pet_dna['prompt'])->toContain('cat')->not->toContain('dog')
             ->and($pet->plan)->toBe(PetPlan::Free);
     });
 

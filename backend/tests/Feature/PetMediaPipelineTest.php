@@ -268,8 +268,9 @@ describe('pipeline at birth', function () {
         config(['media.video_states.basic' => ['sleeping', 'nonsense']]);
 
         expect(MediaEntitlementService::statesOfTier('basic'))->toBe([PetStateEnum::Idle, PetStateEnum::Sleeping])
-            // Six classic states + the M5-R02 behaviour videos (filtered per pet by MediaEntitlementService).
-            ->and(MediaEntitlementService::statesOfTier('full'))->toHaveCount(8);
+            // Six classic states + the M5-R02 behaviour videos + the cat's scratching (M5-R06-07),
+            // filtered per pet (and species) by MediaEntitlementService.
+            ->and(MediaEntitlementService::statesOfTier('full'))->toHaveCount(9);
     });
 
     it('builds per-state video prompts from the DNA: same dog, subtle motion, static camera, no people or text', function () {

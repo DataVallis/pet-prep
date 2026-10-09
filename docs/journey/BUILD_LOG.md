@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Muca dobi svoj AI videz (M5-R06-07, skrito)
+
+**Kaj se je zgodilo:** Strežnik zna narisati muco. Vsaka muca ob rojstvu izžreba svoj videz — domača mačka iz barv in vzorcev (progasta, marmorirana, »smoking«, želvovinasta, tribarvna …), Maine Coon po uradnem standardu FIFe (velik, z ovratnikom, čopki na ušesih in dolgim kosmatim repom). Opis za AI ima svojo mačjo predlogo in nikoli ne vsebuje besede »pes«. Videi stanj so mačji: ko muca nima dovolj igre, ji je **dolgčas** in gleda skozi okno (pes je utrujen), igra se s peresom, ki visi od zgoraj, spi zvita v klopčič. Nov video **»praska kavč«** se prikaže, ko muca dan po zamujeni igri opraska kavč; videa luže pri muci ni. Mucek Maine Coona je na sliki že večji od drugih muckov, mlada Maine Coon pa še ni dorasla (polno velikost doseže pri 3–5 letih). V AI laboratoriju lahko admin mačke preizkusi in vidi ceno ene muce, preden mačke vklopimo.
+
+**Zakaj je pomembno:** Otrok, ki izbere muco, mora videti muco, ki je res njegova in se vede kot muca — ne psa z mačjimi besedami. Hkrati se pri psih ni spremenilo nič: posnetek vseh 359 pasjih AI opisov, narejen pred spremembo, je ostal bajt za bajt enak.
+
+**Številke:** 972 različnih videzov domače mačke, 312 Maine Coona (seznami so osnutek — za deleže barv domačih mačk ni vira); 7 mačjih videov stanj (6 + praskanje); strošek ene muce na življenjsko obdobje ≈ 1,27 $ (brezplačna, slika + 2 videa) oz. ≈ 4,07 $ (izziv, slika + 7 videov) po ceniku fal (*ocena*); pes z izzivom do ≈ 4,63 $. 22 novih testov strežnika (brez enega pravega klica AI storitve).
+
+**Kako povedati:**
+- 📣 Omrežja: »Vsaka muca v PetPrep je unikatna — od progaste mešanke do Maine Coona s čopki na ušesih. Ko se ji ne posvetiš, ti opraska kavč.« (*ko bodo mačke vklopljene*)
+- 👩 Starši: »Muca v aplikaciji se vede kot prava muca: dolgčas jo vodi k praskanju, ne k bolezni.« (*načrt — mačke še niso vklopljene*)
+- 🧒 Otroci: »Tvoja muca ima svoj videz, ki ga nima nobena druga.« (*načrt*)
+- 💼 Investitorji: »Nova vrsta živali brez novih stroškov na enoto: isti AI modeli, ista cena na ljubljenčka kot pri psu.«
+- 🛠 Tehnično: »Predloge za AI po vrsti; posnetek vseh pasjih promptov pred spremembo varuje obstoječe pse.«
+
 ## 2026-10-09 — »Najprej počisti, potem nahrani«, kadar je obrok še mogoč (M5-R06-06c)
 
 **Kaj se je zgodilo:** Ko sta hkrati prazna skleda in nered (oboje 0 %), je kuža ali muca doslej otroku vedno poslala samo opomnik za nered. David je odločil, da to velja samo, ko obroka (ali vode) tisti dan ni več mogoče dati. Če bi bil obrok po čiščenju še mogoč — takoj ali kasneje danes —, otrok dobi »Tvoj kuža je lačen, a najprej je treba počistiti nered. Potem ga lahko nahraniš.« (ali uro naslednjega obroka). Pri psu in pri muci; besedila so ista, spremenila se je samo izbira. David je hkrati potrdil še sedem izvedbenih izbir pri mačjem pesku, praskanju in česanju (vse kot zgrajeno).

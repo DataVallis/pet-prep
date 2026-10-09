@@ -57,9 +57,10 @@ final class PetMediaPayload
             'current_video_url' => $this->currentVideoUrl,
             /**
              * Video states this pet is entitled to (basic: idle + sleeping; full: all six +
-             * M5-R02 behaviour videos accident (non-legacy puppy) / chewing (non-legacy dog)).
+             * M5-R02 behaviour videos accident (non-legacy puppy) / chewing (non-legacy dog);
+             * M5-R06-07: a cat's full set has scratching (non-legacy cat), never accident / chewing).
              *
-             * @var list<'idle'|'sleeping'|'low_energy'|'hungry'|'sick'|'playing'|'accident'|'chewing'>
+             * @var list<'idle'|'sleeping'|'low_energy'|'hungry'|'sick'|'playing'|'accident'|'chewing'|'scratching'>
              */
             'states' => $this->states,
             // When the URLs above stop working (ISO 8601); fetch the state again before.

@@ -57,7 +57,8 @@ return [
         // M5-R02 (David 2026-10-06): + behaviour videos `accident` and `chewing` —
         // MediaEntitlementService keeps them only where the event can happen
         // (accident: non-legacy puppy; chewing: non-legacy dog).
-        'full' => ['idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing', 'accident', 'chewing'],
+        // M5-R06-07: + `scratching` (cats only; dogs never get it, cats never get accident / chewing).
+        'full' => ['idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing', 'accident', 'chewing', 'scratching'],
     ],
 
     /*

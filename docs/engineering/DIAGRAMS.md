@@ -1088,17 +1088,18 @@ sequenceDiagram
 ```mermaid
 flowchart TD
   subgraph Birth["Pairing (one DB transaction, family row locked)"]
-    P[PairingService::createPet] --> D{AI_PET_DNA_VERSION}
-    D -- 2 --> V2["PetDnaService::forNewPet<br/>seed = crc32(pet id + salt)<br/>traits from config/breed_appearance.php<br/>unique trait combo per family + breed"]
-    D -- 1 --> V1[FalAiService::generateInitialPetDna]
-    V2 --> PR["prompt = breed + traits + photo style<br/>(no names, no personal data)"]
+    P[PairingService::createPet] --> D{"AI_PET_DNA_VERSION<br/>(a cat: always 2, M5-R06-07)"}
+    D -- "2 or cat" --> V2["PetDnaService::forNewPet<br/>seed = crc32(pet id + salt)<br/>traits from config/breed_appearance.php<br/>unique trait combo per family + breed"]
+    D -- "1 (dogs only)" --> V1[FalAiService::generateInitialPetDna<br/>refuses a cat]
+    V2 --> PR["prompt = breed + traits + photo style<br/>species template: dog or cat (no 'dog' in a cat prompt)<br/>(no names, no personal data)"]
     PR --> J[[GeneratePetReferenceImage<br/>dispatched after commit]]
     V1 --> J
   end
 
   subgraph Lab["Filament /admin/ai-lab (superadmin)"]
-    L1["Image run: breed, fixed traits,<br/>1-4 samples x image profiles"] --> LE{"estimate within AI_LAB_MAX_RUN_USD<br/>and remaining budget?"}
-    L2["Video run: lab image x video profiles x state"] --> LE
+    L1["Image run: breed (dogs + cats), fixed traits,<br/>optional life stage (M5-R06-07),<br/>1-4 samples x image profiles"] --> LE{"estimate within AI_LAB_MAX_RUN_USD<br/>and remaining budget?"}
+    L2["Video run: lab image x video profiles x state<br/>(state must exist for the species)"] --> LE
+    L3["Per-pet cost per species<br/>(production profiles, no fal call)"]
     LE -- no --> LR[notification: not started]
     LE -- yes --> LJ[["RunMediaLabImage / SubmitMediaLabVideo<br/>one job per call"]]
   end
@@ -1143,7 +1144,7 @@ sequenceDiagram
   Q->>DB: slot ready, pets.media_status = ready
   Q-->>App: PetUpdated reference_image_ready (media.reference_image_url signed)
   Note over Pair,Q: videos only once the pet is born:<br/>first contract → signContract → queueStateVideos (after commit)<br/>(image stored first? then StorePetMedia queues them)
-  Q->>DB: queueStateVideos: slots per MediaEntitlementService<br/>(basic: idle + sleeping · challenge paid by a purchase, M3-11 P6: all 6)
+  Q->>DB: queueStateVideos: slots per MediaEntitlementService<br/>(basic: idle + sleeping · challenge paid by a purchase, M3-11 P6: all 6<br/>+ behaviour per species — dog accident / chewing, cat scratching, M5-R06-07)
   loop each entitled state
     Q->>DB: SubmitPetStateVideo: claim slot
     Q->>FAL: queue.fal.run kling-video/v3/pro/image-to-video<br/>start_image_url = our signed URL (6 h), 5 s, no audio, fal_webhook
