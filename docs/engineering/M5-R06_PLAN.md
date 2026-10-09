@@ -1,7 +1,7 @@
 # M5-R06 — Izvedbeni načrt: vrsta živali → pasma (pes + mačka)
 
 > **Status:** načrt **potrdil David 8. 10. 2026** (Claude ga je napisal isti dan). Spec: [`docs/product/CAT_SPEC.md`](../product/CAT_SPEC.md) (David je Q1–Q10 potrdil 8. 10. 2026 ob 13:47). Viri in vrednosti: [`docs/research/cat-data/data.json`](../research/cat-data/data.json) (62 vrednosti z virom [Cn] ali z Davidovo odločitvijo; predlogi (D) so označeni `UNSOURCED`).
-> **Stanje (8. 10. 2026, pozno zvečer):** R06-01 … R06-04 združeni (R06-04 = PR #99); **R06-05 zgrajen** (`feat/M5-R06-05-litter-scratching-grooming`, lokalni commiti, PR še ni odprt); R06-06 … R06-09 še niso zgrajeni. Vsaka naloga je en PR po pravilih iz `CLAUDE.md` (testi, dokumenti, FEATURES, BUILD_LOG).
+> **Stanje (8. 10. 2026, pozno zvečer):** R06-01 … R06-04 združeni (R06-04 = PR #99); **R06-05 zgrajen** (PR #100, združen in nameščen 9. 10. 2026); R06-06 … R06-09 še niso zgrajeni. Vsaka naloga je en PR po pravilih iz `CLAUDE.md` (testi, dokumenti, FEATURES, BUILD_LOG).
 > **Merilo regresije:** pri obstoječih psih se ne spremeni nič. Vsi obstoječi Pest in Jest testi ostanejo zeleni brez sprememb pričakovanih vrednosti.
 
 ## 1. Ključne tehnične odločitve (Claude, brez vpliva na pravila igre)
