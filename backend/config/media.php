@@ -95,6 +95,20 @@ return [
         'fal_fetch_ttl_minutes' => 360,
     ],
 
+    /*
+    | Shared look pool for free pets (M4-10, David 2026-10-09). A new profiled
+    | pet of a free breed (premium_unlock = false: mutt, domestic cat) gets one
+    | of `size` looks per breed instead of a unique DNA; a look's media are
+    | generated once and reused by every pet of the look (0 $ per later pet).
+    | The pool fills lazily (a new look per new free pet until it is full).
+    | Off → every new pet gets a unique DNA v2 again (existing pool pets keep
+    | their look).
+    */
+    'look_pool' => [
+        'enabled' => filter_var(env('AI_LOOK_POOL_ENABLED', true), FILTER_VALIDATE_BOOL),
+        'size' => max(1, (int) env('AI_LOOK_POOL_SIZE', 20)),
+    ],
+
     // Pet DNA version for NEW pets: 2 = unique trait sampling (M4-08), 1 = pre-M4 fixed anchors.
     // Existing pets keep the DNA they were born with.
     'pet_dna_version' => (int) env('AI_PET_DNA_VERSION', 2),

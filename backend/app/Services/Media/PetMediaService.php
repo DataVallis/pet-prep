@@ -12,6 +12,7 @@ use App\Jobs\StorePetMedia;
 use App\Jobs\SubmitPetStateVideo;
 use App\Models\AiSpendLedger;
 use App\Models\Pet;
+use App\Models\PetLook;
 use App\Models\PetMedia;
 use App\Models\PetMediaHistory;
 use App\Services\FalAiService;
@@ -38,6 +39,18 @@ use Illuminate\Support\Facades\URL;
  * (atomic status claims, request_id matching, unique slot index); fal calls
  * only happen in queued jobs through FalGateway (budget caps, ledger).
  * Apps only ever see our signed URLs ({@see payloadFor()}), never fal URLs.
+ *
+ * Shared looks (M4-10, David 2026-10-09): a free pool pet (`pets.pet_look_id`)
+ * never generates media of its own. Its slots point at the LOOK rows
+ * (`pet_media` with `pet_look_id`, one per kind / state / life stage) and
+ * copy their file path once the look row is stored ("link"). A look row is
+ * generated through the same claims, budget, ledger, webhook and download as
+ * a pet slot — once: a pet whose look row is already stored links it with no
+ * fal call; a pet whose look row is in flight waits (its slot `running` with
+ * `look_media_id`) and is linked by the fan-out when the file is stored (or
+ * failed with the look row's reason). Look files live under `looks/{id}/`,
+ * are never replaced or deleted by the pipeline, and survive every pet /
+ * family deletion. See the "Shared looks" section.
  */
 class PetMediaService
 {
@@ -135,6 +148,11 @@ class PetMediaService
             return true;
         }
 
+        // M4-10: a pool pet shows its look's image of its stage (generated once per look).
+        if ($pet->usesLookPool()) {
+            return $this->referenceImageFromLook($pet, $slot);
+        }
+
         // Pets from before M4-05 already have a fal URL: download it, no new cost.
         $legacyUrl = $pet->pet_dna['reference_image_url'] ?? null;
 
@@ -152,7 +170,7 @@ class PetMediaService
         // the edit profile is off (then text-to-image, same seed + DNA + stage).
         $growFrom = $slot->storage_path !== null
             && $pet->life_stage !== null
-            && PetMediaHistory::where('storage_path', $slot->storage_path)->exists();
+            && PetMediaHistory::where('pet_id', $pet->id)->where('storage_path', $slot->storage_path)->exists();
 
         if (! $this->claim($slot, [PetMedia::STATUS_PENDING, PetMedia::STATUS_FAILED], ['source_url' => null, 'life_stage' => $pet->life_stage?->value])) {
             return true; // another worker has it
@@ -269,6 +287,16 @@ class PetMediaService
     public function submitVideo(int $slotId): bool
     {
         $slot = PetMedia::find($slotId);
+
+        // M4-10: a look row (sweep reclaim) / a pool pet's slot go through the look.
+        if ($slot !== null && $slot->isVideo() && $slot->isLookMedia()) {
+            return $this->submitLookVideo($slot);
+        }
+
+        if ($slot !== null && $slot->isVideo() && $slot->pet?->usesLookPool()) {
+            return $this->videoFromLook($slot->pet, $slot);
+        }
+
         // A stale `running` claim = a worker died; its submit may already have been
         // accepted (and paid) by fal before the request id reached the slot.
         $deadClaimSince = $slot?->status === PetMedia::STATUS_RUNNING ? $slot->updated_at : null;
@@ -357,7 +385,11 @@ class PetMediaService
             return false;
         }
 
-        $image = $slot->pet !== null ? $this->imageSlot($slot->pet) : null;
+        $image = match (true) {
+            $slot->isLookMedia() => $this->lookImageRow($slot),
+            $slot->pet !== null => $this->imageSlot($slot->pet),
+            default => null,
+        };
         $slot->update([
             'request_id' => $ledger->request_id,
             'profile' => $ledger->profile,
@@ -442,7 +474,10 @@ class PetMediaService
             return true;
         }
 
-        $path = sprintf('%d/%s-g%d.%s', $slot->pet_id, $image ? 'reference' : $slot->state, $slot->generation, MediaDownloader::extensionFor($file['mime']));
+        $path = $slot->isLookMedia()
+            // M4-10: one file per look, stage and generation — shared by every pet of the look.
+            ? sprintf('looks/%d/%s-%s-g%d.%s', $slot->pet_look_id, $image ? 'reference' : $slot->state, $slot->life_stage, $slot->generation, MediaDownloader::extensionFor($file['mime']))
+            : sprintf('%d/%s-g%d.%s', $slot->pet_id, $image ? 'reference' : $slot->state, $slot->generation, MediaDownloader::extensionFor($file['mime']));
 
         try {
             $this->disk()->putFileAs(dirname($path), new File($file['path']), basename($path));
@@ -489,9 +524,17 @@ class PetMediaService
 
             // The pet was deleted while we downloaded (M2-08): its directory may
             // already be gone or hold only this file — leave nothing behind.
-            if (! Pet::whereKey($slot->pet_id)->exists()) {
+            if ($slot->pet_id !== null && ! Pet::whereKey($slot->pet_id)->exists()) {
                 $this->deleteFilesOf($slot->pet_id);
             }
+
+            return true;
+        }
+
+        // M4-10: a look file is never replaced (pets of the look point at it);
+        // the waiting pets get the new file.
+        if ($slot->isLookMedia()) {
+            $this->fanOutReady((int) $slot->id);
 
             return true;
         }
@@ -637,7 +680,8 @@ class PetMediaService
     {
         $pet = $slot->pet;
 
-        if ($pet === null || ! $pet->is_active || ! $this->fal->isEnabled() || $slot->isInFlight()) {
+        // M4-10: a pool pet's media belong to its shared look (other pets show them) — no per-pet regenerate.
+        if ($pet === null || ! $pet->is_active || ! $this->fal->isEnabled() || $slot->isInFlight() || $pet->usesLookPool()) {
             return false;
         }
 
@@ -724,12 +768,16 @@ class PetMediaService
             }
         }
 
-        $cost = match ($imageAction) {
-            'generate' => $this->profiles->referenceImage()->estimatedCostUsd(),
-            'stage' => $this->stageImageCostUsd(),
-            default => 0.0,
+        if ($pet->usesLookPool()) {
+            // M4-10: only what the shared look does not have yet costs anything.
+            $cost = $this->lookPlanCostUsd($pet, $imageAction, $videos);
+        } else {
+            $cost = match ($imageAction) {
+                'generate' => $this->profiles->referenceImage()->estimatedCostUsd(),
+                'stage' => $this->stageImageCostUsd(),
+                default => 0.0,
+            } + count($videos) * $this->profiles->stateVideo()->estimatedCostUsd();
         }
-        + count($videos) * $this->profiles->stateVideo()->estimatedCostUsd();
 
         return ['image' => $imageAction, 'videos' => $videos, 'cost_usd' => round($cost, 4)];
     }
@@ -966,6 +1014,11 @@ class PetMediaService
             ->whereNull('source_url')
             ->where('updated_at', '<', now()->subMinutes(self::STALE_CLAIM_MINUTES))
             ->each(function (PetMedia $slot) use (&$reclaimed): void {
+                // M4-10: a look image has no job of its own — the waiting pets' slots
+                // (reclaimed here too) run it again; the next pet needing it reclaims it.
+                if ($slot->isLookMedia() && $slot->isImage()) {
+                    return;
+                }
                 $slot->isImage() ? GeneratePetReferenceImage::dispatch($slot->pet_id) : SubmitPetStateVideo::dispatch($slot->id);
                 $reclaimed++;
             });
@@ -995,6 +1048,449 @@ class PetMediaService
     public function deleteFilesOf(int $petId): void
     {
         $this->disk()->deleteDirectory((string) $petId);
+    }
+
+    // ──────────────────────────────────────────────────────────────
+    //  Shared looks (M4-10, free-pet pool)
+    // ──────────────────────────────────────────────────────────────
+
+    /**
+     * The look row of (look, kind, state, stage), created as `pending` if
+     * missing (race-safe: insert-or-ignore on pet_media_look_slot_unique).
+     */
+    public function lookSlot(PetLook $look, string $kind, ?PetStateEnum $state, LifeStage $stage): PetMedia
+    {
+        $query = PetMedia::query()->where('pet_look_id', $look->id)->where('kind', $kind)->where('life_stage', $stage->value)
+            ->when($state === null, fn ($q) => $q->whereNull('state'), fn ($q) => $q->where('state', $state->value));
+
+        $existing = (clone $query)->first();
+
+        if ($existing !== null) {
+            return $existing;
+        }
+
+        PetMedia::query()->insertOrIgnore([
+            'pet_id' => null,
+            'pet_look_id' => $look->id,
+            'kind' => $kind,
+            'state' => $state?->value,
+            'life_stage' => $stage->value,
+            'status' => PetMedia::STATUS_PENDING,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        return $query->firstOrFail();
+    }
+
+    /** The look's stored image of the stage a look video row is made for (start frame). */
+    public function lookImageRow(PetMedia $row): ?PetMedia
+    {
+        return PetMedia::query()->where('pet_look_id', $row->pet_look_id)->images()
+            ->where('life_stage', $row->life_stage)->first();
+    }
+
+    /**
+     * A pool pet's reference image: link the look's image of the pet's stage,
+     * or wait for it (and generate it if nobody does). Returns false when the
+     * queue should retry (transient fal failure).
+     */
+    private function referenceImageFromLook(Pet $pet, PetMedia $slot): bool
+    {
+        $look = $pet->look;
+        $stage = $pet->life_stage;
+
+        if ($look === null || $stage === null) {
+            // Not reachable for a pool pet (a profile is required); never a unique image instead.
+            Log::error('PetMediaService: pool pet without look / life stage', ['pet_id' => $pet->id]);
+
+            return true;
+        }
+
+        $row = $this->lookSlot($look, PetMedia::KIND_IMAGE, null, $stage);
+
+        if ($this->linkToLook($slot, $row)) {
+            return true; // 0 $: the look already has this stage's image
+        }
+
+        $this->awaitLook($slot, $row, ['life_stage' => $stage->value]);
+
+        if ($pet->media_status !== 'ready') {
+            $pet->updateQuietly(['media_status' => 'pending', 'media_error' => null]); // a stage change keeps showing the old image
+        }
+
+        // Stored between the read and the wait (its fan-out did not see us yet).
+        if ($this->linkToLook($slot, $row->refresh())) {
+            return true;
+        }
+
+        return $this->generateLookImage($row, $look);
+    }
+
+    /**
+     * Generate a look's reference image of one stage (once: the row claim).
+     * An earlier stage's stored image of the same look is EDITED (same
+     * animal, older); otherwise text-to-image with the look's seed and
+     * traits. No origin cue — the look is shared by bought and adopted pets.
+     * The ledger row links the look row (no pet).
+     */
+    private function generateLookImage(PetMedia $row, PetLook $look): bool
+    {
+        if (! $this->claim($row, [PetMedia::STATUS_PENDING, PetMedia::STATUS_FAILED], ['source_url' => null])) {
+            return true; // another worker generates it; the fan-out links the waiting pets
+        }
+
+        $stage = LifeStage::from((string) $row->life_stage);
+        $breedKey = $look->breed_type->value;
+        $traits = $look->traits();
+        $growFrom = PetMedia::query()->where('pet_look_id', $look->id)->images()
+            ->where('status', PetMedia::STATUS_READY)->whereNotNull('storage_path')
+            ->whereIn('life_stage', array_map(fn (LifeStage $s) => $s->value, array_slice(LifeStage::ordered(), 0, self::stageRank($stage->value))))
+            ->get()
+            ->sortByDesc(fn (PetMedia $m) => self::stageRank($m->life_stage))
+            ->first();
+
+        try {
+            $result = $growFrom !== null && $this->profiles->stageEdit() !== null
+                ? $this->fal->editReferenceImage(
+                    $this->prompts->stageEditPromptFor($breedKey, $traits, $stage),
+                    $this->falFetchUrl($growFrom),
+                    $look->seed(),
+                    null,
+                    $row->id,
+                )
+                : $this->fal->generateReferenceImage(
+                    $this->prompts->stagedImagePrompt($breedKey, $traits, $stage),
+                    $look->seed(),
+                    null,
+                    isset($look->dna['negative_prompt']) ? (string) $look->dna['negative_prompt'] : null,
+                    $row->id,
+                );
+        } catch (AiCallException $e) {
+            $this->fail($row, $e->reason, $e->getMessage()); // fails the waiting pets too
+            Log::warning('PetMediaService: look image not generated', ['pet_look_id' => $look->id, 'life_stage' => $stage->value, 'reason' => $e->reason->value]);
+
+            return true;
+        }
+
+        $this->syncCost($row);
+
+        if ($result === null) {
+            $row->update(['status' => PetMedia::STATUS_PENDING]);
+
+            return false;
+        }
+
+        $row->update(['source_url' => $result['url'], 'profile' => $result['profile']]);
+        StorePetMedia::dispatch($row->id);
+
+        return true;
+    }
+
+    /**
+     * A pool pet's state video: link the look's video of (state, stage of the
+     * pet's current image), or wait for it (and submit it if nobody has).
+     */
+    private function videoFromLook(Pet $pet, PetMedia $slot): bool
+    {
+        $state = $slot->petState();
+
+        if (! $pet->is_active || $state === null || ! $state->appliesTo($pet->speciesValue())) {
+            if ($slot->status !== PetMedia::STATUS_READY) {
+                $this->fail($slot, null, 'Pet inactive or state not available for the species — not generated.');
+            }
+
+            return true;
+        }
+
+        $image = $this->imageSlot($pet);
+
+        if ($image->status !== PetMedia::STATUS_READY || $image->look_media_id === null || $image->life_stage === null || $pet->look === null) {
+            // queueStateVideos() runs again once the pet's (look) image is stored.
+            if ($slot->status !== PetMedia::STATUS_READY) {
+                $slot->update(['status' => PetMedia::STATUS_PENDING, 'request_id' => null]);
+            }
+
+            return true;
+        }
+
+        $row = $this->lookSlot($pet->look, PetMedia::KIND_VIDEO, $state, LifeStage::from($image->life_stage));
+
+        if ($this->linkToLook($slot, $row, $image->generation)) {
+            return true; // 0 $: the look already has this video
+        }
+
+        if ($slot->status === PetMedia::STATUS_READY && $slot->look_media_id === $row->id) {
+            return true;
+        }
+
+        $this->awaitLook($slot, $row, ['source_generation' => $image->generation]);
+
+        if ($this->linkToLook($slot, $row->refresh(), $image->generation)) {
+            return true;
+        }
+
+        return $this->submitLookVideo($row);
+    }
+
+    /**
+     * Submit a look's state video to fal (once: the row claim). Same failure
+     * handling as a pet slot (submitVideo()); the webhook finds the look row
+     * by its request id and StorePetMedia fans the file out.
+     */
+    private function submitLookVideo(PetMedia $row): bool
+    {
+        if ($row->status === PetMedia::STATUS_READY) {
+            $this->fanOutReady((int) $row->id);
+
+            return true;
+        }
+
+        if ($row->status === PetMedia::STATUS_FAILED
+            && ! $this->resetForNewGeneration($row, bump: $row->request_id !== null || $row->isServable())) {
+            return true; // another worker moved it meanwhile
+        }
+
+        $deadClaimSince = $row->status === PetMedia::STATUS_RUNNING ? $row->updated_at : null;
+
+        if (! $this->claim($row, [PetMedia::STATUS_PENDING], [], requireNoRequest: true)) {
+            return true; // submitted / being submitted by another worker
+        }
+
+        if ($deadClaimSince !== null && $this->adoptAcceptedRequest($row, $deadClaimSince)) {
+            return true;
+        }
+
+        $look = $row->look;
+        $state = $row->petState();
+
+        if ($look === null || $state === null || ! $state->appliesTo($look->breed_type->species())) {
+            $this->fail($row, null, 'Look video state not available for the species — not generated.');
+
+            return true;
+        }
+
+        $image = $this->lookImageRow($row);
+
+        if ($image === null || ! $image->isServable()) {
+            $row->update(['status' => PetMedia::STATUS_PENDING]);
+
+            return true;
+        }
+
+        try {
+            $submitted = $this->fal->submitStateVideoFor(
+                $look->breed_type->value,
+                $look->traits(),
+                LifeStage::from((string) $row->life_stage),
+                $state,
+                $this->falFetchUrl($image),
+                null,
+                $row->id,
+            );
+        } catch (AiCallException $e) {
+            $this->syncCost($row);
+
+            if ($e->retryable() && ! $e->outcomeUnknown) {
+                $row->update(['status' => PetMedia::STATUS_PENDING]);
+
+                return false;
+            }
+
+            $this->fail($row, $e->reason, $e->getMessage());
+
+            return true;
+        }
+
+        $row->update([
+            'request_id' => $submitted['request_id'],
+            'profile' => $submitted['profile'],
+            'duration_seconds' => $submitted['duration_seconds'],
+            'source_generation' => $image->generation,
+        ]);
+        $this->syncCost($row);
+
+        return true;
+    }
+
+    /**
+     * Mark a pool pet's slot as waiting for a look row (`running`, no request of
+     * its own). A stale wait is re-run by the sweep like a dead claim.
+     *
+     * @param  array<string, mixed>  $extra
+     */
+    private function awaitLook(PetMedia $slot, PetMedia $row, array $extra = []): void
+    {
+        PetMedia::query()->whereKey($slot->id)
+            ->where('status', '!=', PetMedia::STATUS_READY)
+            ->update(array_merge([
+                'status' => PetMedia::STATUS_RUNNING,
+                'look_media_id' => $row->id,
+                'request_id' => null,
+                'source_url' => null,
+                'error_reason' => null,
+                'error' => null,
+                'attempts' => DB::raw('attempts + 1'),
+                'updated_at' => now(),
+            ], $extra));
+
+        $slot->refresh();
+    }
+
+    /**
+     * Point a pool pet's slot at a STORED look row (copy of its file path —
+     * no new file, no fal call) and tell the apps once. Returns false when the
+     * look row has no stored file yet. Idempotent (an already linked slot is
+     * left alone, no second broadcast).
+     */
+    private function linkToLook(PetMedia $slot, PetMedia $row, ?int $sourceGeneration = null): bool
+    {
+        if ($row->status !== PetMedia::STATUS_READY || ! $row->isServable()) {
+            return false;
+        }
+
+        $linkedPet = DB::transaction(function () use ($slot, $row, $sourceGeneration): ?Pet {
+            $locked = PetMedia::whereKey($slot->id)->lockForUpdate()->first();
+
+            if ($locked === null || $locked->pet_id === null
+                || ($locked->status === PetMedia::STATUS_READY && $locked->look_media_id === $row->id && $locked->storage_path === $row->storage_path)) {
+                return null;
+            }
+
+            $locked->update([
+                'status' => PetMedia::STATUS_READY,
+                'look_media_id' => $row->id,
+                'storage_path' => $row->storage_path,
+                'bytes' => $row->bytes,
+                'mime' => $row->mime,
+                'profile' => $row->profile,
+                'duration_seconds' => $row->duration_seconds,
+                'life_stage' => $row->life_stage,
+                'source_generation' => $locked->isVideo() ? $sourceGeneration : null,
+                'request_id' => null,
+                'source_url' => null,
+                'error_reason' => null,
+                'error' => null,
+                'completed_at' => now(),
+            ]);
+
+            $pet = Pet::find($locked->pet_id);
+
+            if ($pet !== null) {
+                if ($locked->isImage()) {
+                    $pet->updateQuietly(['media_status' => 'ready', 'media_error' => null]);
+                }
+
+                PetUpdated::afterCommit($pet, $locked->isImage() ? 'reference_image_ready' : 'video_ready');
+            }
+
+            return $pet;
+        });
+
+        $slot->refresh();
+
+        if ($linkedPet !== null && $slot->isImage()) {
+            $this->queueStateVideos($linkedPet->fresh());
+        }
+
+        return true;
+    }
+
+    /**
+     * A look row was stored: link every pet slot waiting for it — and every
+     * slot the look row failed earlier (a late successful webhook after the
+     * sweep's `timed_out`, QA M4-10 m1).
+     */
+    private function fanOutReady(int $rowId): void
+    {
+        $row = PetMedia::find($rowId);
+
+        if ($row === null || $row->status !== PetMedia::STATUS_READY) {
+            return;
+        }
+
+        PetMedia::query()->where('look_media_id', $row->id)
+            ->whereIn('status', [PetMedia::STATUS_RUNNING, PetMedia::STATUS_FAILED])->orderBy('id')
+            ->each(function (PetMedia $waiting) use ($row): void {
+                if ($waiting->isImage()) {
+                    $this->linkToLook($waiting, $row);
+
+                    return;
+                }
+
+                $pet = $waiting->pet;
+                $image = $pet !== null ? $this->imageSlot($pet) : null;
+
+                if ($image !== null && $image->status === PetMedia::STATUS_READY && $image->life_stage === $row->life_stage) {
+                    $this->linkToLook($waiting, $row, $image->generation);
+
+                    return;
+                }
+
+                // The pet moved to another stage meanwhile: queueStateVideos() re-queues it from its new image.
+                $waiting->update(['status' => PetMedia::STATUS_PENDING, 'look_media_id' => null]);
+            });
+    }
+
+    /** A look row failed: the pet slots waiting for it fail with the same reason. */
+    private function fanOutFailure(PetMedia $row): void
+    {
+        PetMedia::query()->where('look_media_id', $row->id)->where('status', PetMedia::STATUS_RUNNING)->orderBy('id')
+            ->each(function (PetMedia $waiting) use ($row): void {
+                $waiting->update([
+                    'status' => PetMedia::STATUS_FAILED,
+                    'error_reason' => $row->error_reason,
+                    'error' => $row->error,
+                    'completed_at' => now(),
+                ]);
+
+                $pet = $waiting->isImage() ? $waiting->pet : null;
+
+                if ($pet !== null) {
+                    $pet->updateQuietly(['media_status' => 'failed', 'media_error' => $row->error_reason ?? AiCallFailure::GenerationFailed->value]);
+                    PetUpdated::afterCommit($pet->fresh(), 'reference_image_failed');
+                }
+            });
+    }
+
+    /**
+     * planMissing() cost of a pool pet: only look media of the pet's stage
+     * that are not stored yet (a stored look row is reused for 0 $).
+     *
+     * @param  list<string>  $videos
+     */
+    private function lookPlanCostUsd(Pet $pet, string $imageAction, array $videos): float
+    {
+        $look = $pet->look;
+        $stage = $pet->life_stage;
+
+        if ($look === null || $stage === null) {
+            return 0.0;
+        }
+
+        // Stored rows are reused for free; a row being generated right now (claimed,
+        // `running`) is already paid by the pet that claimed it (QA M4-10 n1).
+        $covered = PetMedia::query()->where('pet_look_id', $look->id)->where('life_stage', $stage->value)
+            ->whereIn('status', [PetMedia::STATUS_READY, PetMedia::STATUS_RUNNING])->get();
+        $has = fn (string $kind, ?string $state) => $covered->contains(fn (PetMedia $m) => $m->kind === $kind && $m->state === $state);
+
+        // An image of a later stage is an edit of the look's earlier stage (stageImageCostUsd).
+        $growsFromEarlier = PetMedia::query()->where('pet_look_id', $look->id)->images()
+            ->where('status', PetMedia::STATUS_READY)
+            ->whereIn('life_stage', array_map(fn (LifeStage $s) => $s->value, array_slice(LifeStage::ordered(), 0, self::stageRank($stage->value))))
+            ->exists();
+
+        $cost = in_array($imageAction, ['generate', 'stage', 'download'], true) && ! $has(PetMedia::KIND_IMAGE, null)
+            ? ($growsFromEarlier ? $this->stageImageCostUsd() : $this->profiles->referenceImage()->estimatedCostUsd())
+            : 0.0;
+
+        foreach ($videos as $state) {
+            if (! $has(PetMedia::KIND_VIDEO, $state)) {
+                $cost += $this->profiles->stateVideo()->estimatedCostUsd();
+            }
+        }
+
+        return $cost;
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -1042,6 +1538,12 @@ class PetMediaService
             'error' => $message !== null ? mb_substr($message, 0, 2000) : $reason?->label(),
             'completed_at' => now(),
         ]);
+
+        // M4-10: the pets waiting for this look row fail with it (the daily retry /
+        // backfill re-runs them, which re-claims the look row).
+        if ($slot->isLookMedia()) {
+            $this->fanOutFailure($slot);
+        }
     }
 
     /** pet_media.cost_usd = estimated spend that counted for this slot (all generations). */

@@ -35,8 +35,12 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class PetMediaController extends Controller
 {
-    /** `{pet_id}/{name}.{ext}` as PetMediaService writes it; `D`: `$` must not match before a trailing newline. */
-    public const SAFE_RELATIVE_PATH = '#^[0-9]+/[A-Za-z0-9_-]+(\.[A-Za-z0-9]+)?$#D';
+    /**
+     * `{pet_id}/{name}.{ext}` or, for a shared look of the free-pet pool (M4-10),
+     * `looks/{look_id}/{name}.{ext}` as PetMediaService writes it; `D`: `$` must
+     * not match before a trailing newline.
+     */
+    public const SAFE_RELATIVE_PATH = '#^(looks/)?[0-9]+/[A-Za-z0-9_-]+(\.[A-Za-z0-9]+)?$#D';
 
     public const ACCEL_HEADER = 'X-Accel-Redirect';
 

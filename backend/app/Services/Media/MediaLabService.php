@@ -234,6 +234,24 @@ class MediaLabService
     }
 
     /**
+     * M4-10: the one-off cost of filling a free breed's shared look pool with
+     * the basic set at list price — pool size × 4 life stages × (image + the
+     * basic videos). Upper bound: a stage nobody's pet reaches is never
+     * generated, and a later stage image is an edit (same price today).
+     * Once a look has a stage's media, every further free pet costs 0 $.
+     *
+     * @return array{looks: int, stages: int, per_stage_usd: float, usd: float}
+     */
+    public function lookPoolFillCostUsd(Species $species): array
+    {
+        $perStage = $this->perPetCostUsd($species, MediaEntitlementService::TIER_BASIC)['usd'];
+        $looks = max(1, (int) config('media.look_pool.size', 20));
+        $stages = count(LifeStage::ordered());
+
+        return ['looks' => $looks, 'stages' => $stages, 'per_stage_usd' => $perStage, 'usd' => round($looks * $stages * $perStage, 2)];
+    }
+
+    /**
      * Queue a status poll for every running video of a run (fallback when the
      * signed webhook cannot reach this server, e.g. local dev).
      */

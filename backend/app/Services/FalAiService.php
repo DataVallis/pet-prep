@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\AiCallFailure;
 use App\Enums\AiSpendPurpose;
 use App\Enums\BreedType;
+use App\Enums\LifeStage;
 use App\Enums\PetStateEnum;
 use App\Enums\Species;
 use App\Models\Pet;
@@ -244,20 +245,36 @@ class FalAiService
      */
     public function submitStateVideo(Pet $pet, PetStateEnum $state, string $startImageUrl, ?int $petMediaId = null): array
     {
-        $profile = $this->profiles->stateVideo();
         $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
         $breedKey = (string) ($dna['breed'] ?? $pet->breed_type->value);
         // DNA v2 traits describe the dog; v1 pets rely on the start image alone.
         $traits = (int) ($dna['version'] ?? 1) >= 2 && is_array($dna['traits'] ?? null) ? $dna['traits'] : [];
+
+        return $this->submitStateVideoFor($breedKey, $traits, $pet->life_stage, $state, $startImageUrl, $pet->id, $petMediaId);
+    }
+
+    /**
+     * submitStateVideo() from breed + traits + stage — also for a shared look
+     * of the free-pet pool (M4-10: no pet, the ledger row links the look's
+     * pet_media row).
+     *
+     * @param  array<string, string>  $traits
+     * @return array{request_id: string, profile: string, duration_seconds: int}
+     *
+     * @throws AiCallException
+     */
+    public function submitStateVideoFor(string $breedKey, array $traits, ?LifeStage $stage, PetStateEnum $state, string $startImageUrl, ?int $petId = null, ?int $petMediaId = null): array
+    {
+        $profile = $this->profiles->stateVideo();
         // M5-R06-07: cat templates for a cat (videoPrompt throws for a state the species never has).
         $species = PetAppearancePrompt::speciesOf($breedKey);
 
         $submitted = $this->gateway->submit(
             $profile,
-            $profile->videoInput($startImageUrl, $this->prompts->videoPrompt($breedKey, $state, $traits, $pet->life_stage), $this->prompts->videoNegativePrompt($species)),
+            $profile->videoInput($startImageUrl, $this->prompts->videoPrompt($breedKey, $state, $traits, $stage), $this->prompts->videoNegativePrompt($species)),
             AiSpendPurpose::StateVideo,
             $this->webhookUrl(),
-            petId: $pet->id,
+            petId: $petId,
             petMediaId: $petMediaId,
         );
 

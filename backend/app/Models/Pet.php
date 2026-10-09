@@ -548,6 +548,19 @@ class Pet extends Model
     }
 
     /**
+     * The shared look of a free pool pet (M4-10); null for a pet with its own DNA.
+     */
+    public function look(): BelongsTo
+    {
+        return $this->belongsTo(PetLook::class, 'pet_look_id');
+    }
+
+    public function usesLookPool(): bool
+    {
+        return $this->pet_look_id !== null;
+    }
+
+    /**
      * Training progress per command (M5-R03).
      */
     public function trainingSkills(): HasMany

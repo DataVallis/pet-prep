@@ -42,6 +42,10 @@ use App\Models\Pet;
  * purchase queues the missing full-set videos (ChallengeService::markPaid).
  * More media for other pets: AI-media tokens (M4-09, planned — also for the
  * free mutt).
+ *
+ * M4-10: the tier decides WHICH states a pet gets, never WHERE they come
+ * from — a free pool pet's media are its shared look's (PetMediaService,
+ * "Shared looks"), generated once per look and reused.
  */
 class MediaEntitlementService
 {
