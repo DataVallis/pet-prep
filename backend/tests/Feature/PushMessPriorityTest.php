@@ -6,6 +6,7 @@ use App\Enums\HygieneEventKind;
 use App\Enums\HygieneEventStatus;
 use App\Enums\PushType;
 use App\Models\ActivityLog;
+use App\Models\BreedConfig;
 use App\Models\DevicePushToken;
 use App\Models\Pet;
 use App\Models\PetHygieneEvent;
@@ -232,5 +233,132 @@ describe('QA m1: the remaining M3-12 combinations', function () {
         app(EscalationService::class)->processPetEscalation($dog->fresh());
 
         expect(PushNotification::where('pet_id', $dog->id)->sole()->metric)->toBe('hunger');
+    });
+});
+
+describe('M5-R06-06c (QA m1, David 2026-10-09): a tie with an open mess names the mess only when food / water is over for today', function () {
+    /** Escalate a pet whose $zeroMetric and hygiene both show 0 % (mess open) and return [row, bodies]. */
+    function pmpTie(Pet $pet, array $zeroMetrics, array $messes): array
+    {
+        // Level 1: hygiene shows 0 % with the mess, so a tie is always at 0 % → the critical alert.
+        $update = ['escalation_level' => 1];
+        foreach ($zeroMetrics as $metric) {
+            $update += [$metric.'_level' => 0, $metric.'_zero_since' => now()->subMinutes(10)];
+        }
+        Pet::whereKey($pet->id)->update($update);
+        $pet = pmpOpen($pet->fresh(), $messes);
+        $sent = pmpFakeExpo();
+
+        app(EscalationService::class)->processPetEscalation($pet);
+
+        return [PushNotification::where('pet_id', $pet->id)->sole(), collect($sent->getArrayCopy())->pluck('body')->all()];
+    }
+
+    it('feeding / water possible right after cleaning: the "clean first, then feed" text', function (string $species, string $metric, HygieneEventKind $mess, string $body) {
+        [, , $pet] = pmpFamily($species, '2026-10-21 07:30'); // inside the 06–10 window, nothing fed / watered yet
+
+        [$row, $bodies] = pmpTie($pet, [$metric], [$mess]);
+
+        expect($row->type)->toBe(PushType::CriticalAlert)
+            ->and($row->metric)->toBe($metric)
+            ->and($row->status)->toBe(PushNotification::STATUS_SENT)
+            ->and($bodies)->toBe([$body]);
+    })->with([
+        'dog, hunger + poop' => ['dog', 'hunger', HygieneEventKind::Poop, 'Your dog is hungry, but the mess has to be cleaned up first. Then you can feed it.'],
+        'dog, thirst + chewing' => ['dog', 'thirst', HygieneEventKind::Chewing, 'Your dog is thirsty, but first tidy up what it chewed and give it a toy. Then you can give it water.'],
+        'cat, hunger + litter accident' => ['cat', 'hunger', HygieneEventKind::LitterAccident, 'Your cat is hungry, but the mess has to be cleaned up first. Then you can feed it.'],
+        'cat, thirst + scratching' => ['cat', 'thirst', HygieneEventKind::Scratching, 'Your cat is thirsty, but first carry it to the scratching post and praise it. Then you can give it water.'],
+    ]);
+
+    it('feeding possible later today after cleaning: the first step + the time (`*_first_wait`)', function (string $species, array $messes, string $body) {
+        [, $child, $pet] = pmpFamily($species);
+        pmpLog($pet, $child, ActivityType::FedPet, '2026-10-21 07:00');
+        pmpAt('2026-10-21 15:45');
+
+        [$row, $bodies] = pmpTie($pet, ['hunger'], $messes);
+
+        expect($row->type)->toBe(PushType::CriticalAlert)
+            ->and($row->metric)->toBe('hunger')
+            ->and($bodies)->toBe([$body]);
+    })->with([
+        'dog, chewing' => ['dog', [HygieneEventKind::Chewing], 'Your dog is hungry, but first tidy up what it chewed and give it a toy. The next meal is at 17:00.'],
+        'dog, poop + chewing' => ['dog', [HygieneEventKind::Poop, HygieneEventKind::Chewing], 'Your dog is hungry, but first clean up the mess, tidy up what it chewed and give it a toy. The next meal is at 17:00.'],
+        'cat, litter accident' => ['cat', [HygieneEventKind::LitterAccident], 'Your cat is hungry, but the mess has to be cleaned up first. The next meal is at 17:00.'],
+        'cat, scratching + litter accident' => ['cat', [HygieneEventKind::Scratching, HygieneEventKind::LitterAccident], 'Your cat is hungry, but first clean up the mess, then carry it to the scratching post and praise it. The next meal is at 17:00.'],
+    ]);
+
+    it('feeding not possible again today: the plain mess text', function (string $species, HygieneEventKind $mess, string $body) {
+        [, $child, $pet] = pmpFamily($species);
+        pmpDayUsedUp($pet, $child, $species === 'cat' ? 2 : 3);
+        pmpAt('2026-10-21 21:30');
+
+        [$row, $bodies] = pmpTie($pet, ['hunger'], [$mess]);
+
+        expect($row->type)->toBe(PushType::CriticalAlert)
+            ->and($row->metric)->toBe('hygiene')
+            ->and($bodies)->toBe([$body]);
+    })->with([
+        'dog, poop' => ['dog', HygieneEventKind::Poop, 'Your dog made a mess! Clean it up as soon as you can, or it will get sick.'],
+        'dog, chewing' => ['dog', HygieneEventKind::Chewing, 'Your dog chewed a slipper! Tidy it up and give it a toy as soon as you can, or it will get sick.'],
+        'cat, litter accident' => ['cat', HygieneEventKind::LitterAccident, 'Your cat made a mess next to the litter tray! Clean it up as soon as you can, or it will get sick.'],
+        'cat, scratching' => ['cat', HygieneEventKind::Scratching, 'Your cat scratched the sofa! Carry it to the scratching post and praise it as soon as you can, or it will get sick.'],
+    ]);
+
+    it('hunger, thirst and hygiene all at 0: the first metric that is still possible today (food over → water)', function (string $species, string $body) {
+        [, $child, $pet] = pmpFamily($species);
+        pmpLog($pet, $child, ActivityType::FedPet, '2026-10-21 07:00');
+        pmpLog($pet, $child, ActivityType::FedPet, '2026-10-21 18:00');
+        pmpLog($pet, $child, ActivityType::WateredPet, '2026-10-21 07:05');
+        pmpAt('2026-10-21 21:30');
+
+        [$row, $bodies] = pmpTie($pet, ['hunger', 'thirst'], [$species === 'cat' ? HygieneEventKind::LitterAccident : HygieneEventKind::Poop]);
+
+        expect($row->metric)->toBe('thirst')
+            ->and($bodies)->toBe([$body]);
+    })->with([
+        'dog' => ['dog', 'Your dog is thirsty, but the mess has to be cleaned up first. Then you can give it water.'],
+        'cat' => ['cat', 'Your cat is thirsty, but the mess has to be cleaned up first. Then you can give it water.'],
+    ]);
+
+    it('water possible later today only because of the minimum gap: the first step + the time (water `*_first_wait`)', function (string $species, string $wateredAt, string $body) {
+        [, $child, $pet] = pmpFamily($species);
+        pmpLog($pet, $child, ActivityType::WateredPet, $wateredAt);
+        pmpAt('2026-10-21 15:00');
+
+        [$row, $bodies] = pmpTie($pet, ['thirst'], [$species === 'cat' ? HygieneEventKind::LitterAccident : HygieneEventKind::Poop]);
+
+        expect($row->metric)->toBe('thirst')
+            ->and($bodies)->toBe([$body]);
+    })->with([
+        'dog (gap 180 min)' => ['dog', '2026-10-21 14:00', 'Your dog is thirsty, but the mess has to be cleaned up first. You can give it water again at 17:00.'],
+        'cat (gap 240 min)' => ['cat', '2026-10-21 12:00', 'Your cat is thirsty, but the mess has to be cleaned up first. You can give it water again at 16:00.'],
+    ]);
+
+    it('day boundary: next water at 00:30 local (still the same UTC date) is not "today" → the mess text', function () {
+        [, $child, $dog] = pmpFamily('dog');
+        pmpLog($dog, $child, ActivityType::WateredPet, '2026-10-21 21:30'); // gap 180 min → 00:30 local = 22:30 UTC on the 21st
+        pmpAt('2026-10-21 23:30'); // 21:30 UTC
+
+        [$row, $bodies] = pmpTie($dog, ['thirst'], [HygieneEventKind::Poop]);
+
+        expect($row->metric)->toBe('hygiene')
+            ->and($bodies)->toBe(['Your dog made a mess! Clean it up as soon as you can, or it will get sick.']);
+    });
+
+    it('no breed config: the tie stays on the mess', function () {
+        [, , $dog] = pmpFamily('dog', '2026-10-21 07:30'); // feedable now if a config existed
+        BreedConfig::query()->where('breed_slug', $dog->breed_type->slug())->delete();
+
+        [$row] = pmpTie($dog, ['hunger'], [HygieneEventKind::Poop]);
+
+        expect($row->metric)->toBe('hygiene');
+    });
+
+    it('food and water possible: hunger keeps its place before thirst', function () {
+        [, , $dog] = pmpFamily('dog', '2026-10-21 07:30');
+
+        [$row] = pmpTie($dog, ['hunger', 'thirst'], [HygieneEventKind::Poop]);
+
+        expect($row->metric)->toBe('hunger');
     });
 });

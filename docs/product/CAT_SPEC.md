@@ -31,6 +31,7 @@ Vsa vprašanja Q1–Q10: ✅ **David 8. 10. 2026 13:47** — potrdil priporočen
 - ~~zamujena tedenska menjava peska → rok za čiščenje 2 h namesto 4 h (§4)~~ ✅ David 8. 10. 2026;
 - ~~mucek ob prihodu že navajen na pesek, brez »luže« (§4)~~ ✅ David 8. 10. 2026;
 - ~~izvor »podarjena od znancev« = posvojena (§1)~~ ✅ David 8. 10. 2026;
+- ~~izvedbene izbire M5-R06-05 (česanje 1× na dan in ne v tihih urah, pesek tudi v tihih urah, seja praskanja, mini-igri česanja / menjave, opomnik za pesek)~~ ✅ David 9. 10. 2026 (vse kot zgrajeno, DECISIONS);
 - iskreno besedilo za starše o igri v aplikaciji (§5.4);
 - besedila obvestil (§6) — *zgrajeno kot osnutek (M5-R06-06, 9. 10. 2026), čaka Davidov pregled:* [`CAT_TEXTS_REVIEW.md`](CAT_TEXTS_REVIEW.md) (4 vprašanja o besedilih je David odločil 9. 10. 2026: »muca« za vse starosti, *it*, staršem vikamo, pasji vrzeli popravljeni — M5-R06-06b; pregled besedil še čaka); »prva pomoč« pri dolgotrajni lakoti (samo izobraževalno besedilo [C24]) še odprto — strežnik za psa nima takega besedila, sodi v aplikacijo (R06-08);
 - AI videz domače mačke, faze v promptu in videi stanj (§8) — *zgrajeno kot osnutek (M5-R06-07, 9. 10. 2026), čaka Davidov pregled v AI Labu* (DECISIONS 2026-10-09);

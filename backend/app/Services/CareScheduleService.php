@@ -249,6 +249,48 @@ class CareScheduleService
     }
 
     /**
+     * M3-12 push texts (M5-R06-06 QA m1, M5-R06-06b / 06c, David 2026-10-09): the
+     * feed ($metric `hunger`) or water (`thirst`) check as if no mess were open —
+     * the same rules on an in-memory copy with hygiene 100 % (never saved).
+     */
+    public function checkAfterCleaning(Pet $pet, BreedConfig $config, string $metric, CarbonInterface $now): CareCheck
+    {
+        $probe = clone $pet;
+        $probe->hygiene_level = 100.0;
+
+        return $metric === 'hunger'
+            ? $this->feedCheck($probe, $config, $now)
+            : $this->waterCheck($probe, $config, $now);
+    }
+
+    /**
+     * Would feeding / water be possible again today (now or later on the
+     * family-local date of $now) once the mess is gone? Decides between the
+     * "clean first, then feed" texts and the plain mess text (M5-R06-06c).
+     */
+    public function possibleTodayAfterCleaning(Pet $pet, BreedConfig $config, string $metric, CarbonInterface $now): bool
+    {
+        return $this->allowedToday($this->checkAfterCleaning($pet, $config, $metric, $now), $pet, $now);
+    }
+
+    /**
+     * Allowed now, or refused only until a later time on the family-local
+     * date of $now (the push copy's "next meal is at …" case). A refusal
+     * without nextAllowedAt (e.g. needs_cleaning, nothing more today) or with
+     * a time on a later family-local date counts as NOT today.
+     */
+    public function allowedToday(CareCheck $check, Pet $pet, CarbonInterface $now): bool
+    {
+        if ($check->allowed) {
+            return true;
+        }
+        $tz = $pet->familyTimezone();
+        $next = $check->nextAllowedAt?->copy()->setTimezone($tz);
+
+        return $next !== null && $next->toDateString() === $now->copy()->setTimezone($tz)->toDateString();
+    }
+
+    /**
      * The feed-window instances that START on the family-local date $date,
      * sorted by start (routine ledger, M2-06: one feed routine per window).
      * Same rules as feeding(): [start, end), an end ≤ start runs over
