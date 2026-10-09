@@ -144,7 +144,6 @@ S_ALL="backend=true mobile=true scripts=true image=true "
 S_BACKEND="backend=true mobile=false scripts=false image=true "
 S_MOBILE="backend=false mobile=true scripts=false image=false "
 S_BSCRIPTS="backend=true mobile=false scripts=true image=true "
-S_BTESTS="backend=true mobile=false scripts=false image=false "
 S_BTSCRIPTS="backend=true mobile=false scripts=true image=false "
 S_SCRIPTS="backend=false mobile=false scripts=true image=false "
 
