@@ -1,4 +1,5 @@
 {
   "NSHealthShareUsageDescription": "PetPrep iz aplikacije Zdravje bere samo današnje število korakov, da tvoj virtualni kuža dobi dnevni sprehod. Nič drugega ne bere in nič ne zapisuje.",
-  "NSMotionUsageDescription": "PetPrep šteje tvoje korake, da tvoj virtualni kuža dobi svoj dnevni sprehod."
+  "NSMotionUsageDescription": "PetPrep šteje tvoje korake, da tvoj virtualni kuža dobi svoj dnevni sprehod.",
+  "NSHealthUpdateUsageDescription": "PetPrep v aplikacijo Zdravje nikoli ne zapisuje. Bere samo današnje število korakov, da tvoja virtualna žival dobi dnevni sprehod; tega dovoljenja aplikacija nikoli ne zahteva."
 }
