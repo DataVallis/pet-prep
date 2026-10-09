@@ -3,10 +3,12 @@
  * end to end through AppNavigator: PIN → token in SecureStore → contract or HUD.
  */
 import { act, fireEvent, screen } from '@testing-library/react-native';
+import * as Clipboard from 'expo-clipboard';
 import * as SecureStore from 'expo-secure-store';
 
 import { ApiError, api, type PinLoginResponse } from '@/api/client';
 import AppNavigator from '@/navigation/AppNavigator';
+import { setClipboardProbeForTests } from '@/modules/pairing/pinClipboard';
 import { CHILD_PIN_STRINGS as S } from '@/screens/ChildPinLoginScreen';
 import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
 import { PARENT_LOGIN_STRINGS } from '@/screens/ParentLoginScreen';
@@ -262,5 +264,116 @@ describe('Start screen + child PIN login', () => {
     fireEvent.press(screen.getByTestId('pin-key-delete'));
     expect(screen.queryAllByTestId('pin-slot-filled')).toHaveLength(2);
     expect(screen.getByLabelText(S.digitsEntered(2))).toBeTruthy();
+  });
+});
+
+describe('Child PIN login: paste the code (David 2026-10-09)', () => {
+  const getString = Clipboard.getStringAsync as jest.Mock;
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    [pinLogin, getUser, getString].forEach((m) => m.mockReset());
+    getItem.mockResolvedValue(null);
+    getString.mockResolvedValue('');
+    setClipboardProbeForTests(() => true);
+    jest.useFakeTimers();
+    jest.setSystemTime(NOW);
+    useAppStore.setState(useAppStore.getInitialState(), true);
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+    setClipboardProbeForTests(null);
+  });
+
+  async function pressPaste() {
+    fireEvent.press(screen.getByLabelText(S.paste));
+    await flush();
+  }
+
+  it('a copied 6-digit code (with a space) fills the slots and logs in right away', async () => {
+    getString.mockResolvedValueOnce(' 734 912\n');
+    pinLogin.mockResolvedValueOnce(pinLoginResponse());
+    getUser.mockResolvedValueOnce({ id: 9, name: 'Maja', email: null, role: 'child', pet: makePet({ id: 7, born_at: null, user_id: 9 }) });
+    await openChildPath();
+    typePin('11'); // already typed digits are replaced by the pasted code
+
+    await pressPaste();
+    await flush();
+
+    expect(pinLogin).toHaveBeenCalledTimes(1);
+    expect(pinLogin).toHaveBeenCalledWith('734912', 'samsung SM-A515F');
+    expect(screen.getByText(CONTRACT_STRINGS.padHint)).toBeTruthy();
+    expect(useAppStore.getState().authToken).toBe('child-token');
+  });
+
+  it('no 6-digit code on the clipboard: friendly hint, typed digits stay, no request', async () => {
+    getString.mockResolvedValueOnce('12345');
+    await openChildPath();
+    typePin('98');
+
+    await pressPaste();
+
+    expect(screen.getByTestId('pin-paste-message')).toHaveTextContent(S.pasteNoCode);
+    expect(S.pasteNoCode).toBe('V odložišču ni 6-mestne kode.');
+    expect(screen.queryAllByTestId('pin-slot-filled')).toHaveLength(2);
+    expect(pinLogin).not.toHaveBeenCalled();
+
+    typePin('7'); // typing again hides the hint
+    expect(screen.queryByTestId('pin-paste-message')).toBeNull();
+  });
+
+  it('an empty clipboard (or a denied iOS paste prompt) shows the same hint', async () => {
+    await openChildPath();
+    await pressPaste();
+    expect(screen.getByTestId('pin-paste-message')).toHaveTextContent(S.pasteNoCode);
+    expect(pinLogin).not.toHaveBeenCalled();
+  });
+
+  it('long press on the slots pastes too', async () => {
+    getString.mockResolvedValueOnce('12-34-56');
+    pinLogin.mockRejectedValueOnce(new ApiError('x', 422, { reason: 'invalid_pin' }));
+    await openChildPath();
+
+    fireEvent(screen.getByTestId('pin-slots'), 'longPress');
+    await flush();
+    await flush();
+
+    expect(pinLogin).toHaveBeenCalledWith('123456', 'samsung SM-A515F');
+    expect(screen.getByTestId('pin-login-error')).toHaveTextContent(S.invalid);
+  });
+
+  it('disabled during a 429 lockout: the clipboard is not read', async () => {
+    pinLogin.mockRejectedValueOnce(new ApiError('Too many attempts.', 429, { reason: 'too_many_attempts', retry_after: 90 }, 90));
+    await openChildPath();
+    typePin('111111');
+    await flush();
+    expect(screen.getByTestId('pin-login-error')).toHaveTextContent(S.rateLimited('1:30'));
+
+    const button = screen.getByLabelText(S.paste);
+    expect(button).toBeDisabled();
+    getString.mockResolvedValueOnce('734912');
+    await pressPaste();
+    fireEvent(screen.getByTestId('pin-slots'), 'longPress');
+    await flush();
+    expect(getString).not.toHaveBeenCalled();
+    expect(pinLogin).toHaveBeenCalledTimes(1);
+  });
+
+  it('disabled while the code is being checked', async () => {
+    pinLogin.mockReturnValueOnce(new Promise(() => undefined));
+    await openChildPath();
+    typePin('734912');
+    expect(screen.getByTestId('pin-login-loading')).toBeTruthy();
+    expect(screen.getByLabelText(S.paste)).toBeDisabled();
+  });
+
+  it('a binary without expo-clipboard has no paste button', async () => {
+    setClipboardProbeForTests(() => false);
+    await openChildPath();
+    expect(screen.queryByLabelText(S.paste)).toBeNull();
+    fireEvent(screen.getByTestId('pin-slots'), 'longPress');
+    await flush();
+    expect(getString).not.toHaveBeenCalled();
   });
 });

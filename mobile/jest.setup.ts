@@ -26,6 +26,10 @@ jest.mock('expo-notifications');
 // react-native-purchases (M3-07): manual mock in __mocks__/react-native-purchases.ts.
 jest.mock('react-native-purchases');
 
+// expo-clipboard (child PIN paste): manual mock in __mocks__/expo-clipboard.ts. The paste
+// button only shows after `setClipboardProbeForTests(() => true)` (pinClipboard.ts).
+jest.mock('expo-clipboard');
+
 // Health step stores (M3-04 / M3-05): manual mock in
 // src/modules/steps/health/__mocks__/healthAdapter.ts — no health store unless a test
 // injects one (`deps.health`), so the native libraries are never loaded in Jest.
