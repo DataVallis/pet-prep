@@ -17,6 +17,7 @@ enum BreedType: string
     case Mutt = 'mutt';
     case BorderCollie = 'border_collie';
     case LabradorRetriever = 'labrador_retriever';
+    case GoldenRetriever = 'golden_retriever';
     case DomesticCat = 'domestic_cat';
     case MaineCoon = 'maine_coon';
 
@@ -29,6 +30,7 @@ enum BreedType: string
             self::Mutt => 'mutt',
             self::BorderCollie => 'border-collie',
             self::LabradorRetriever => 'labrador-retriever',
+            self::GoldenRetriever => 'golden-retriever',
             self::DomesticCat => 'domestic-cat',
             self::MaineCoon => 'maine-coon',
         };
@@ -48,7 +50,7 @@ enum BreedType: string
     public function species(): Species
     {
         return match ($this) {
-            self::Mutt, self::BorderCollie, self::LabradorRetriever => Species::Dog,
+            self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever => Species::Dog,
             self::DomesticCat, self::MaineCoon => Species::Cat,
         };
     }
@@ -74,7 +76,7 @@ enum BreedType: string
     {
         return match ($this) {
             self::Mutt, self::DomesticCat => false,
-            self::BorderCollie, self::LabradorRetriever, self::MaineCoon => true,
+            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::MaineCoon => true,
         };
     }
 

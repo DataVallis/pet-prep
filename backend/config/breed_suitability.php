@@ -35,7 +35,8 @@ return [
         'active_family' => 'suits',
         // PDSA-style "family pet" statement (David 2026-10-09: chip "Družinski pes").
         'family_pet' => 'suits',
-        // Only for a breed with a sourced child rating (none yet — kept for later breeds).
+        // Only for a breed with a sourced child rating or an explicit statement
+        // (Golden Retriever: PDSA S68 "can be fantastic with children", David 2026-10-09).
         'children' => 'suits',
         'small_children' => 'suits',
         'first_time_owner' => 'suits',
@@ -53,6 +54,9 @@ return [
         'chews_when_bored' => 'consider',
         'sheds' => 'consider',
         'food_motivated_weight' => 'consider',
+        // M5-R10-02 (David 2026-10-09): brushing clearly more than once a week
+        // (Golden Retriever: RKC "More than once a week", PDSA ≥ 3× a week, Woodgreen "High").
+        'frequent_grooming' => 'consider',
     ],
 
     'breeds' => [
@@ -97,6 +101,39 @@ return [
                 ['tag' => 'long_daily_exercise', 'source_ids' => ['S59', 'S50'], 'refs' => ['labrador_retriever.exercise.adult']],
                 // S53 "Prone to obesity."; S59 "highly food motivated".
                 ['tag' => 'food_motivated_weight', 'source_ids' => ['S53', 'S59'], 'refs' => ['labrador_retriever.behaviour.obesity_tendency', 'labrador_retriever.behaviour.food_motivation']],
+            ],
+        ],
+
+        // M5-R10-02: golden_retriever.* (S63–S75), potrdil David 2026-10-09
+        // (data.json proposed_game_parameters.golden_retriever.suitability_tags).
+        // AKC trait ratings were not reachable (S75) → RKC (S65), PDSA (S68),
+        // Woodgreen (S69), Guide Dogs (S70). Not `mouthy` (no such tag), not
+        // `small_children` (PDSA / Guide Dogs: supervise with young children).
+        'golden_retriever' => [
+            'suits' => [
+                // S65 "Exercise: More than 2 hours per day"; S68 "a great family dog for an active family".
+                ['tag' => 'active_family', 'source_ids' => ['S65', 'S68'], 'refs' => ['golden_retriever.exercise.adult', 'golden_retriever.suitability.pdsa_family']],
+                // S68 "can be a great family dog"; S70 "often make much-loved family dogs".
+                ['tag' => 'family_pet', 'source_ids' => ['S68', 'S70'], 'refs' => ['golden_retriever.suitability.pdsa_family', 'golden_retriever.behaviour.family']],
+                // S68 "If you have a young family then Golden Retrievers can be fantastic with children."
+                // A statement, not a rating; PDSA adds "always supervise" (caveat kept in data.json).
+                ['tag' => 'children', 'source_ids' => ['S68'], 'refs' => ['golden_retriever.suitability.pdsa_children']],
+                // S68 "can make good first dogs for new dog owners" (long_daily_exercise shown next to it).
+                ['tag' => 'first_time_owner', 'source_ids' => ['S68'], 'refs' => ['golden_retriever.suitability.pdsa_first_time_owner']],
+                // S65 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S65'], 'refs' => ['golden_retriever.suitability.rkc_size_of_home', 'golden_retriever.suitability.rkc_size_of_garden']],
+                // S69 "Sociable with pets: High".
+                ['tag' => 'other_pets', 'source_ids' => ['S69'], 'refs' => ['golden_retriever.suitability.woodgreen_sociable_with_pets']],
+            ],
+            'consider' => [
+                // S65 "More than 2 hours per day"; S68 "a minimum of two hours of good exercise per day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S65', 'S68'], 'refs' => ['golden_retriever.exercise.adult']],
+                // S65 "Sheds: Yes"; S68 "generally do shed a lot"; S69 "Shedding: High".
+                ['tag' => 'sheds', 'source_ids' => ['S65', 'S68', 'S69'], 'refs' => ['golden_retriever.suitability.rkc_shedding', 'golden_retriever.suitability.woodgreen_shedding']],
+                // S70 "motivated by food and play"; S68 "they can easily become overweight".
+                ['tag' => 'food_motivated_weight', 'source_ids' => ['S70', 'S68'], 'refs' => ['golden_retriever.behaviour.food_motivation', 'golden_retriever.behaviour.obesity_tendency']],
+                // S65 "Grooming: More than once a week"; S68 brush "three times a week at a minimum"; S69 "Grooming needs: High".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S65', 'S68', 'S69'], 'refs' => ['golden_retriever.suitability.rkc_grooming', 'golden_retriever.suitability.woodgreen_grooming']],
             ],
         ],
     ],

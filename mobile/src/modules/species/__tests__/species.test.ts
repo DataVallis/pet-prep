@@ -13,7 +13,7 @@ import {
 
 describe('readBreed / readSpecies', () => {
   it('keeps every known breed, dogs and cats', () => {
-    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'domestic_cat', 'maine_coon'] as const) {
+    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'domestic_cat', 'maine_coon'] as const) {
       expect(readBreed(breed)).toBe(breed);
     }
   });
@@ -25,6 +25,18 @@ describe('readBreed / readSpecies', () => {
     await i18n.changeLanguage('en');
     try {
       expect(breedName('labrador_retriever')).toBe('Labrador Retriever');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-02: the Golden Retriever is a paid dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('golden_retriever'))).toBe('dog');
+    expect(isDefaultFreeBreed('golden_retriever')).toBe(false);
+    expect(breedName('golden_retriever')).toBe('Zlati prinašalec');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('golden_retriever')).toBe('Golden Retriever');
     } finally {
       await i18n.changeLanguage('sl');
     }

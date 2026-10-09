@@ -175,7 +175,8 @@ describe('life-stage data against data.json', function () {
 
         // Every R10 decision row cites the data.json entry that records it.
         foreach (BreedStageParamsSeeder::rows() as $row) {
-            if ($row['decision'] === BreedStageParamsSeeder::CONFIRMED_R10) {
+            // M5-R10-02: the Golden Retriever rows share the constant (same day) — GoldenRetrieverBreedTest.
+            if ($row['decision'] === BreedStageParamsSeeder::CONFIRMED_R10 && $row['breed_slug'] !== 'golden-retriever') {
                 expect($row['breed_slug'])->toBe('labrador-retriever')
                     ->and($row['verified'])->toBeTrue()
                     ->and((string) labData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-09');
@@ -322,7 +323,7 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever'])
+        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever'])
             ->and($breeds[2])->toBe([
                 'breed' => 'labrador_retriever', 'slug' => 'labrador-retriever', 'species' => 'dog', 'premium' => true,
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.labrador_retriever',

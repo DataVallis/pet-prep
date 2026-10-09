@@ -102,7 +102,7 @@ class BreedConfigResource extends Resource
                     ->unique(ignoreRecord: true)
                     ->maxLength(255)
                     ->alphaDash()
-                    ->helperText('Unique slug identifying the breed (e.g., mutt, border-collie, labrador-retriever).'),
+                    ->helperText('Unique slug identifying the breed (e.g., mutt, border-collie, labrador-retriever, golden-retriever).'),
 
                 Forms\Components\TextInput::make('daily_steps_required')
                     ->required()
@@ -195,7 +195,7 @@ class BreedConfigResource extends Resource
                     ->options(collect(Species::cases())->mapWithKeys(fn (Species $s): array => [$s->value => ucfirst($s->value)])->all())
                     ->default(Species::Dog->value)
                     ->required()
-                    ->helperText('Dog / cat. For a breed the app knows (mutt, border-collie, labrador-retriever, domestic-cat, maine-coon) the species is fixed by the code and this value is ignored.'),
+                    ->helperText('Dog / cat. For a breed the app knows (mutt, border-collie, labrador-retriever, golden-retriever, domestic-cat, maine-coon) the species is fixed by the code and this value is ignored.'),
 
                 Forms\Components\TextInput::make('sort_order')
                     ->integer()

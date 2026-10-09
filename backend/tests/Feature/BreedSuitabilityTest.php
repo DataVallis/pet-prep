@@ -52,7 +52,7 @@ it('has a fixed vocabulary of two kinds and never a "hypoallergenic" tag', funct
 it('backs every breed tag with listed sources and data.json entries that cite them', function () {
     $vocabulary = BreedSuitability::vocabulary();
     $known = bsSourceIds();
-    expect($known)->toContain('S4', 'S50', 'S60');
+    expect($known)->toContain('S4', 'S50', 'S60', 'S65', 'S68', 'S69', 'S70');
 
     foreach ((array) config('breed_suitability.breeds') as $breedKey => $kinds) {
         $breed = BreedType::tryFrom((string) $breedKey);
@@ -95,6 +95,10 @@ it('returns tag keys per kind; breeds without sourced tags get empty lists', fun
         'suits' => ['active_family', 'family_pet', 'large_home', 'other_pets'],
         'consider' => ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
     ])
+        ->and($suitability->for(BreedType::GoldenRetriever))->toBe([
+            'suits' => ['active_family', 'family_pet', 'children', 'first_time_owner', 'large_home', 'other_pets'],
+            'consider' => ['long_daily_exercise', 'sheds', 'food_motivated_weight', 'frequent_grooming'],
+        ])
         ->and($suitability->for(BreedType::BorderCollie))->toBe([
             'suits' => ['active_family'],
             'consider' => ['long_daily_exercise', 'needs_mental_stimulation', 'may_herd_children', 'chews_when_bored'],
@@ -125,6 +129,22 @@ it('keeps child tags for later breeds but gives the Labrador the sourced family_
     expect($lab)->toContain('family_pet', 'large_home')
         ->not->toContain('children')
         ->not->toContain('small_children');
+});
+
+it('gives the Golden Retriever `children` (PDSA statement) but never `small_children`, and the new frequent_grooming tag (David 2026-10-09)', function () {
+    $vocabulary = BreedSuitability::vocabulary();
+    expect($vocabulary)->toMatchArray(['frequent_grooming' => BreedSuitability::CONSIDER])
+        ->and($vocabulary)->not->toHaveKey('mouthy');
+
+    $golden = app(BreedSuitability::class)->for(BreedType::GoldenRetriever);
+    expect($golden['suits'])->toContain('children', 'first_time_owner')->not->toContain('small_children')
+        ->and($golden['consider'])->toContain('frequent_grooming');
+
+    // Only the Golden needs frequent grooming so far (Labrador RKC "Once a week", S50).
+    expect(app(BreedSuitability::class)->for(BreedType::LabradorRetriever)['consider'])->not->toContain('frequent_grooming');
+
+    // The caveat is recorded with the source: PDSA advises supervising dogs with children.
+    expect(bsEntry('golden_retriever.suitability.pdsa_children')['notes'])->toContain('supervis');
 });
 
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {

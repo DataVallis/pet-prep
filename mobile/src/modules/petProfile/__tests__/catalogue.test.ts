@@ -103,9 +103,9 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20), never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
-    expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual(['mutt', 'border_collie', 'labrador_retriever']);
+    expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever']);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
     expect(lab).toEqual(
@@ -117,9 +117,24 @@ describe('readBreedCatalogue', () => {
       suits: ['active_family', 'family_pet', 'large_home', 'other_pets'],
       consider: ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
     });
+    const golden = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'golden_retriever');
+    expect(golden).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 30 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php.
+    expect(golden?.search_keywords).toEqual(['golden', 'golden retriever', 'zlati prinašalec', 'zlati prinasalec', 'retriever']);
+    expect(golden?.suitability).toEqual({
+      suits: ['active_family', 'family_pet', 'children', 'first_time_owner', 'large_home', 'other_pets'],
+      consider: ['long_daily_exercise', 'sheds', 'food_motivated_weight', 'frequent_grooming'],
+    });
     expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
     // The fallback is already in picker order.
-    expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual(['mutt', 'border_collie', 'labrador_retriever']);
+    expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual([
+      'mutt',
+      'border_collie',
+      'labrador_retriever',
+      'golden_retriever',
+    ]);
   });
 });
 
@@ -167,7 +182,10 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(6);
+    expect(CONSIDER_TAGS).toHaveLength(7);
+    // M5-R10-02 (David 2026-10-09): brushing several times a week; no "mouthy" tag.
+    expect(CONSIDER_TAGS).toContain('frequent_grooming');
+    expect(CONSIDER_TAGS).not.toContain('mouthy' as never);
   });
 
   it('one a11y sentence with both headings', () => {
@@ -201,8 +219,15 @@ describe('breed search', () => {
     const lab = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(lab('labradorec')).toEqual(['labrador_retriever']);
     expect(lab('Labradorski prinašalec')).toEqual(['labrador_retriever']);
-    expect(lab('retriever')).toEqual(['labrador_retriever']);
     expect(lab('koli')).toEqual(['border_collie']);
+  });
+
+  it('M5-R10-02: finds the Golden Retriever by its name and the server synonyms; "retriever" finds both', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('zlati prinasalec')).toEqual(['golden_retriever']);
+    expect(find('Zlati')).toEqual(['golden_retriever']);
+    expect(find('golden')).toEqual(['golden_retriever']);
+    expect(find('retriever')).toEqual(['labrador_retriever', 'golden_retriever']);
   });
 
   it('empty query lists everything; no match → empty', () => {

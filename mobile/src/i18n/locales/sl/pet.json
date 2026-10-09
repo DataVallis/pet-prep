@@ -88,6 +88,7 @@
       "mutt": "Pes brezplačnega načrta. Ni del 12-tedenskega izziva.",
       "border_collie": "Del 12-tedenskega izziva.",
       "labrador_retriever": "Del 12-tedenskega izziva.",
+      "golden_retriever": "Del 12-tedenskega izziva.",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden"
     },
@@ -112,22 +113,28 @@
     },
     "ageHints": {
       "mutt": {
-        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000. Nezgode v hiši pridejo kmalu.",
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000.",
         "young": "2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).",
         "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
       },
       "border_collie": {
-        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih. Nezgode v hiši pridejo kmalu.",
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
         "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
         "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
       },
       "labrador_retriever": {
-        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 9.000 pri 9 mesecih. Nezgode v hiši pridejo kmalu.",
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 9.000 pri 9 mesecih.",
         "young": "2 obroka na dan; sprehod 9.000 korakov na dan (kot odrasel pes).",
         "adult": "2 obroka na dan; sprehod 9.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 6.800 korakov na dan."
+      },
+      "golden_retriever": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
       },
       "domestic_cat": {
         "puppy": "Pride kot mucek, star 2 meseca.",
@@ -216,7 +223,8 @@
       "may_herd_children": "pri igri lahko »pase« otroke",
       "chews_when_bored": "ko se dolgočasi, grize stvari",
       "sheds": "izpada mu dlaka",
-      "food_motivated_weight": "rad je — pazite na težo"
+      "food_motivated_weight": "rad je — pazite na težo",
+      "frequent_grooming": "potrebuje česanje večkrat na teden"
     }
   },
   "media": {

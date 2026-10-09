@@ -1439,6 +1439,546 @@
       }
     }
   },
+  "golden_retriever": {
+    "_note": "Added 2026-10-09 (M5-R10-02). Quotes as returned by the web-fetch tool on 2026-10-09; spot-check before import (sources.md S63–S75, reused S8, S10, S11, S15, S34, S35, S54).",
+    "identity": {
+      "value": "FCI No. 111, Group 8 Section 1 (Retrievers), Great Britain",
+      "unit": "—",
+      "source_id": "S64",
+      "quote": "Standard number: 111; Group n°8 - Chiens rapporteurs de gibier - Chiens leveurs de gibier - Chiens d'eau; Section: Rapporteurs de gibier; Country of origin: GRANDE-BRETAGNE",
+      "confidence": "high",
+      "notes": "FCI standard (S63): 'Group 8 Retrievers, Flushing Dogs, Water Dogs' / 'Section 1 Retrievers'; 'UTILIZATION: Gundog.' Definitive FCI acceptance 02/12/1954 (S64). NOTE: as for the Labrador, both S63 and S64 give 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 08.09.2026' (EN version 06.10.2026) — very recent revision; verify on fci.be."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S65",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "PDSA (S68): 'Size: Large'. Woodgreen (S69): 'Size: Large'."
+    },
+    "height": {
+      "fci_range": {
+        "value": {
+          "male": [
+            56,
+            61
+          ],
+          "female": [
+            51,
+            56
+          ]
+        },
+        "unit": "cm at withers",
+        "source_id": "S63",
+        "quote": "Males 56 - 61 cm … Females 51 - 56 cm",
+        "confidence": "high",
+        "notes": "Returned as two fragments ('Males 56 - 61 cm', 'Females 51 - 56 cm'). RKC standard (S66) identical: 'Height at withers: dogs: 56-61 cms (22-24 ins); bitches: 51-56 cms (20-22 ins).' PDSA (S68): 'Height: 51-61 cm'. Unlike the Labrador, FCI/RKC give a range, not an ideal."
+      },
+      "rkc_range": {
+        "value": {
+          "male": [
+            56,
+            61
+          ],
+          "female": [
+            51,
+            56
+          ]
+        },
+        "unit": "cm at withers",
+        "source_id": "S66",
+        "quote": "Height at withers: dogs: 56-61 cms (22-24 ins); bitches: 51-56 cms (20-22 ins).",
+        "confidence": "high",
+        "notes": "Same as FCI (S63)."
+      },
+      "akc_range": {
+        "value": {
+          "male": [
+            58.4,
+            61.0
+          ],
+          "female": [
+            54.6,
+            57.2
+          ]
+        },
+        "unit": "cm (converted from 23–24 in / 21½–22½ in)",
+        "source_id": "S67",
+        "quote": "Males 23 to 24 inches in height at withers; females 21½ to 22½ inches.",
+        "confidence": "high",
+        "notes": "AKC range is narrower and sits in the upper half of the FCI/RKC range."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            29.5,
+            34.0
+          ],
+          "female": [
+            24.9,
+            29.5
+          ]
+        },
+        "unit": "kg (converted from dogs 65–75 lb, bitches 55–65 lb)",
+        "source_id": "S67",
+        "quote": "Weight for dogs 65 to 75 pounds; bitches 55 to 65 pounds.",
+        "confidence": "high",
+        "notes": "AKC standard (approved 13 Oct 1981, reformatted 18 Aug 1990). Overall 24.9–34.0 kg. FCI (S63) and RKC (S66) standards give no weight."
+      },
+      "pdsa": {
+        "value": [
+          25,
+          34
+        ],
+        "unit": "kg",
+        "source_id": "S68",
+        "quote": "Weight: 25-34 kg",
+        "confidence": "medium",
+        "notes": "Key-facts box ('Average'). Woodgreen (S69): 'Weight: 25-34 kg'. Consistent with AKC."
+      },
+      "uk_measured_mean": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not found: no Golden Retriever VetCompass paper with measured bodyweight was reachable (see sources.md 'Looked for but not found')."
+      },
+      "salt_category": {
+        "value": "IV/V boundary (AKC 24.9–34.0 kg spans Category IV 15–<30 and V 30–<40)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": "Category IV: 15 to <30 kg; Category V: 30 to <40 kg",
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (same method as the Labrador); Salt 2017 breed list not checked (PMC not reachable)."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value, not breed-specific. AKC males 65–75 lb are 'Large'; bitches 55–65 lb straddle Medium (24–59 lb: 12–15 months) and Large. Salt (S8): 'larger breeds requiring up to 24 months to reach adult body weight'. Same as the Labrador."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. Not derived, same reason as the Labrador: the existing logistic curve is a medium-breed curve and would contradict the large-breed 15–18 months (S10). Open question for David (shared with the Labrador)."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.2,
+        "unit": "years",
+        "source_id": "S15",
+        "quote": "Golden Retriever (13.2 years)",
+        "confidence": "medium",
+        "notes": "Dogs Trust summary of McMillan et al. 2024 (S15): 'dogs with typical shaped faces e.g., Border Collie (13.1 years) or Golden Retriever (13.2 years)'. The page does not label the value 'median' (it uses 'median' only for all purebreds, 12.7 y); the Border Collie 13.1 in the same sentence equals the corrected Fig. 3 median (S16/S54), so it is very likely the median. The Golden is NOT in the corrected Fig. 3 legend (S54 checked 2026-10-09); the full paper (nature.com) was not reachable — verify the 13.2 in its supplementary table. Conflicts with S71 (12.48 y)."
+      },
+      "median_uk_vetcompass_2012": {
+        "value": 12.48,
+        "unit": "years",
+        "source_id": "S71",
+        "quote": "Golden Retriever 117 12.48 10.99-13.98",
+        "confidence": "medium",
+        "notes": "O'Neill et al. VetCompass conference poster (SVEPM 2012), Table 1 row: breed, n deaths = 117, median 12.48 y, IQR 10.99–13.98. 'From a cohort of 111,293 dogs on the VetCompass database, 4,728 deaths were identified.' (92 UK practices, 2007–2011). Poster = preliminary data of the O'Neill 2013 Vet J paper (S17); small n → medium."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S65",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "PDSA (S68): 'Over 10 years'. Woodgreen (S69): 'Life expectancy: 10-12 years'."
+      },
+      "senior_from": {
+        "value": 9.9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25% of lifespan (S11) × 13.2 y (S15) → 0.75 × 13.2 = 9.9 y = 118.8 → 119 months. With the VetCompass median 12.48 y (S71): 0.75 × 12.48 = 9.36 y = 112 months. Dogs Trust rule of thumb > 7 y (S14).",
+        "derived_from": [
+          "S11",
+          "S15"
+        ],
+        "months": 119,
+        "alternative": {
+          "value_years": 9.36,
+          "months": 112,
+          "derived_from": [
+            "S11",
+            "S71"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S65",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "medium",
+        "notes": "PDSA (S68) agrees: 'Your Golden Retriever will need a minimum of two hours of good exercise per day.' Woodgreen (S69) lower: 'Exercise needs: 60-90 mins'. Guide Dogs UK (S70) gives no minutes: 'Golden retrievers are active, large dogs who need daily exercise as adults.' (it advises spreading activity across the day). Two tier-B sources ≥ 2 h vs one 60–90 min → medium."
+      },
+      "energy": {
+        "value": "high energy; active",
+        "unit": "—",
+        "source_id": "S68",
+        "quote": "Golden Retrievers can be a great family dog for an active family due to their high energy levels...",
+        "confidence": "high",
+        "notes": "Sentence truncated by the tool after 'levels'. FCI (S63) / RKC (S66): 'Symmetrical, balanced, active, powerful, level mover'."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "biddable, intelligent, natural working ability; kindly, friendly and confident",
+        "unit": "—",
+        "source_id": "S66",
+        "quote": "Characteristics: Biddable, intelligent and possessing natural working ability. Temperament: Kindly, friendly and confident.",
+        "confidence": "high",
+        "notes": "FCI (S63) same wording under 'BEHAVIOUR / TEMPERAMENT'. AKC (S67): 'Friendly, reliable, and trustworthy.' Guide Dogs (S70): 'They're also known to be calm, outgoing and sociable in nature.' Woodgreen (S69): 'a Golden is usually a calm friendly and affectionate breed.'"
+      },
+      "food_motivation": {
+        "value": "motivated by food and play",
+        "unit": "—",
+        "source_id": "S70",
+        "quote": "Golden retrievers are known to be motivated by food and play, making them easy to train.",
+        "confidence": "high",
+        "notes": "Guide Dogs advises taking training treats from the daily food allowance to avoid weight gain (paraphrase of the page). No genetic study like the Labrador POMC deletion (S57) was looked up for the Golden."
+      },
+      "obesity_tendency": {
+        "value": "can easily become overweight",
+        "unit": "—",
+        "source_id": "S68",
+        "quote": "It’s also really important to keep your Retriever in shape, as they can easily become overweight.",
+        "confidence": "medium",
+        "notes": "No prevalence figure found (no reachable Golden VetCompass paper)."
+      },
+      "mouthy_retrieving": {
+        "value": "mouthy as puppies (nip, play-bite); like to carry things; bred to retrieve",
+        "unit": "—",
+        "source_id": "S68",
+        "quote": "As puppies, it’s normal for Retrievers to be ‘mouthy’, which means they have a tendency to nip and play bite.",
+        "confidence": "high",
+        "notes": "PDSA (S68): 'As their name suggests, retrieving is what they were bred for, so nearly all Golden Retrievers love a good game of fetch!' Woodgreen (S69): 'Golden Retrievers like to have things in their mouth' and 'Some Golden’s have been known to take a person's hand or wrist in their mouth and lead them around.'"
+      },
+      "chewing": {
+        "value": "like to chew (like all dogs)",
+        "unit": "—",
+        "source_id": "S68",
+        "quote": "Like all dogs, Golden Retrievers like to chew,...",
+        "confidence": "low",
+        "notes": "Sentence truncated by the tool; PDSA frames it as normal dog behaviour, NOT a breed trait and not tied to boredom → not used for chews_when_bored. S61 (Labrador column) speaks of 'Retrievers' in general — tier C, not reused."
+      },
+      "family": {
+        "value": "great family dog for an active family; can be fantastic with children (supervise)",
+        "unit": "—",
+        "source_id": "S68",
+        "quote": "If you have a young family then Golden Retrievers can be fantastic with children.",
+        "confidence": "medium",
+        "notes": "PDSA also: 'Golden Retrievers can be a great family dog for an active family…' and advises always supervising dogs with children (paraphrase). Guide Dogs (S70): 'With friendly faces and happy wagging tails, golden retrievers often make much-loved family dogs.' (also says supervise around young children). RKC gundog-group text (S65, not breed-specific): 'They make good companions, their temperament making them ideal all-round family dogs.'"
+      },
+      "time_alone": {
+        "value": "≤ 4 h (generic PDSA rule for all dogs)",
+        "unit": "—",
+        "source_id": "S68",
+        "quote": "Remember, it’s recommended that you never leave your dog alone for more than four hours.",
+        "confidence": "medium",
+        "notes": "Generic advice, not breed-specific → no often_alone tag. Woodgreen (S69) lists 'Ability to stay home alone' without a value."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only; not proposed as a game mechanic (child audience). No cancer statistic is shown anywhere in the app (David 2026-10-09).",
+      "cancer": {
+        "value": "high cancer risk; ~60 % estimated to die of cancer (US estimate)",
+        "unit": "—",
+        "source_id": "S73",
+        "quote": "It is estimated that about 60 percent of Golden Retrievers die from cancer.",
+        "confidence": "medium",
+        "notes": "Golden Retriever Club of America (parent club) letter on the Morris Animal Foundation Golden Retriever Lifetime Study (S73). MAF report (S72): 'Higher incidence of cancer (up to 60 percent estimated)'; 'Full Enrollment Reached in 2015 with 3,044 dogs'; 'Cancer* 28 deaths' of 69 deaths by 31 Dec 2017 (early, young cohort — not a lifetime rate). Woodgreen (S69): 'Sadly, Retrievers are also prone to a few different cancers.' The 60 % is an estimate quoted by the funder/parent club, not a peer-reviewed figure found here; PDSA (S68) does not mention cancer."
+      },
+      "joints_eyes": {
+        "value": "hip and elbow dysplasia; several inherited eye conditions",
+        "unit": "—",
+        "source_id": "S69",
+        "quote": "Golden Retrievers can be prone to both hip and elbow dysplasia",
+        "confidence": "medium",
+        "notes": "Woodgreen (S69): 'Goldens are also at risk of a few different eye conditions that can result in blindness.' PDSA (S68) lists hip/elbow dysplasia, eye problems (cataracts, multifocal retinal dysplasia, PRA, RPED, glaucoma) and ichthyosis (list as summarised by the tool — not a verbatim quote)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 4,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S34",
+        "quote": "Golden Retriever",
+        "confidence": "medium",
+        "notes": "Coren's own article (S34, reachable 2026-10-09) lists the top 10 with 'Golden Retriever' as no. 4 (list item; the quote is the list entry). Wikipedia (S35): '| 4 | Golden Retriever |'. Same 'brightest' tier as the Border Collie (1) and Labrador (7). S34 also: 'Golden Retrievers earned 1,284' AKC obedience degrees in one year. Verify in the book."
+      },
+      "coren_tier": {
+        "value": "brightest: <5 repetitions, obeys first command ≥95%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: fewer than 5 repetitions.; Obey first command: 95% of the time or better.;",
+        "confidence": "low",
+        "notes": "Same tier as Border Collie and Labrador (ranks 1–10). Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "thrives on training, very intelligent; easy to train",
+        "unit": "—",
+        "source_id": "S68",
+        "quote": "Golden Retrievers thrive off training and are very intelligent dogs.",
+        "confidence": "high",
+        "notes": "PDSA key fact: 'Easy to train'; PDSA: 'They can be easy dogs to train and can make good first dogs for new dog owners,…'. Guide Dogs (S70): 'motivated by food and play, making them easy to train'. Woodgreen (S69): 'Training: Moderately easy' (same as the Labrador)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.golden_retriever.learning_multiplier (1.9, potrdil David 2026-10-09).",
+        "derived_from": [
+          "S34",
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "symmetrical, balanced, active, powerful, level mover; kindly expression",
+        "unit": "—",
+        "source_id": "S63",
+        "quote": "Symmetrical, balanced, active, powerful, level mover; sound with kindly expression.",
+        "confidence": "high",
+        "notes": "RKC (S66) identical."
+      },
+      "colours": {
+        "value": [
+          "any shade of gold",
+          "cream"
+        ],
+        "unit": "list",
+        "source_id": "S63",
+        "quote": "Any shade of gold or cream, neither red nor mahogany.",
+        "confidence": "high",
+        "notes": "RKC (S66) adds: 'A few white hairs on chest only, permissible.' RKC breed page (S65) lists standard colours 'Cream, Gold, Golden'. AKC (S67): 'Rich, lustrous golden of various shades.' (AKC does not list cream). Colour frequencies: not sourced."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. No source gives colour frequencies. Game could vary shade continuously from cream to dark gold, excluding red/mahogany (S63)."
+      },
+      "coat": {
+        "value": "flat or wavy with good feathering; dense water-resisting undercoat",
+        "unit": "—",
+        "source_id": "S63",
+        "quote": "Flat or wavy with good feathering, dense water-resisting undercoat.",
+        "confidence": "high",
+        "notes": "RKC (S66) identical. AKC (S67): 'Dense and water-repellent with good undercoat.' 'Outer coat firm and resilient, neither coarse nor silky, lying close to body; may be straight or wavy.' RKC breed page (S65): 'Coat length: Medium'; PDSA (S68): 'medium to long coats'."
+      },
+      "tail": {
+        "value": "level with back, reaching to hocks, no curl at tip",
+        "unit": "—",
+        "source_id": "S63",
+        "quote": "Set on and carried level with back, reaching to hocks, without curl at tip.",
+        "confidence": "high",
+        "notes": "RKC (S66) identical."
+      },
+      "ears": {
+        "value": "moderate size, set about level with the eyes (drop ears)",
+        "unit": "—",
+        "source_id": "S63",
+        "quote": "Moderate size, set on approximate level with eyes.",
+        "confidence": "high",
+        "notes": "RKC (S66) identical. Only one ear type → no variation in game."
+      },
+      "eyes": {
+        "value": "dark brown, dark rims (AKC: medium brown acceptable)",
+        "unit": "—",
+        "source_id": "S63",
+        "quote": "Dark brown, set well apart, dark rims.",
+        "confidence": "high",
+        "notes": "RKC (S66) identical. AKC (S67): 'Color preferably dark brown; medium brown acceptable.'"
+      }
+    },
+    "suitability": {
+      "_note": "AKC breed-trait ratings (1–5) were NOT reachable: akc.org/dog-breeds/golden-retriever/ returned only intro text (S75). Fallback = RKC breed-page fields (S65), plus PDSA (S68), Woodgreen (S69) and Guide Dogs (S70) — same approach as the Labrador.",
+      "akc_traits": {
+        "value": null,
+        "unit": "1–5",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not reachable 2026-10-09 — see sources.md 'Looked for but not found'."
+      },
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S65",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S65",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S65",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S65",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S65",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "Labrador: 'Once a week' (S50). PDSA (S68): 'Ideally, they should be brushed or combed three times a week at a minimum.' (daily during coat changes)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S65",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S65",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S68): 'Golden Retrievers have medium to long coats and generally do shed a lot.' Woodgreen (S69): 'Shedding: High' (Labrador: Moderate)."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S65",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S65",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-09)."
+      },
+      "pdsa_family": {
+        "value": "great family dog for an active family",
+        "unit": "—",
+        "source_id": "S68",
+        "quote": "Golden Retrievers can be a great family dog for an active family due to their high energy levels...",
+        "confidence": "medium",
+        "notes": "Truncated by the tool after 'levels'."
+      },
+      "pdsa_children": {
+        "value": "can be fantastic with children (always supervise)",
+        "unit": "—",
+        "source_id": "S68",
+        "quote": "If you have a young family then Golden Retrievers can be fantastic with children.",
+        "confidence": "medium",
+        "notes": "Not a rating — a PDSA statement with a supervision caveat (PDSA advises always supervising dogs with children; Guide Dogs S70 also says supervise around young children). David accepted the `children` tag on this statement (2026-10-09); the supervision caveat stays recorded here and `small_children` is not used."
+      },
+      "pdsa_first_time_owner": {
+        "value": "can make good first dogs",
+        "unit": "—",
+        "source_id": "S68",
+        "quote": "They can be easy dogs to train and can make good first dogs for new dog owners,...",
+        "confidence": "medium",
+        "notes": "Truncated by the tool after 'owners,'. The Labrador's PDSA page had no such statement."
+      },
+      "pdsa_time_alone": {
+        "value": "never more than 4 h (generic)",
+        "unit": "—",
+        "source_id": "S68",
+        "quote": "Remember, it’s recommended that you never leave your dog alone for more than four hours.",
+        "confidence": "medium",
+        "notes": "Generic for all dogs, not a breed rating."
+      },
+      "woodgreen_sociable_with_pets": {
+        "value": "High",
+        "unit": "—",
+        "source_id": "S69",
+        "quote": "Sociable with pets: High",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "woodgreen_training": {
+        "value": "Moderately easy",
+        "unit": "—",
+        "source_id": "S69",
+        "quote": "Training: Moderately easy",
+        "confidence": "medium",
+        "notes": "PDSA (S68) key fact: 'Easy to train'."
+      },
+      "woodgreen_grooming": {
+        "value": "High",
+        "unit": "—",
+        "source_id": "S69",
+        "quote": "Grooming needs: High",
+        "confidence": "medium",
+        "notes": "Labrador: Moderate (S60)."
+      },
+      "woodgreen_shedding": {
+        "value": "High",
+        "unit": "—",
+        "source_id": "S69",
+        "quote": "Shedding: High",
+        "confidence": "medium",
+        "notes": "Labrador: Moderate (S60)."
+      },
+      "pdsa_monthly_cost": {
+        "value": 105,
+        "unit": "GBP/month (minimum)",
+        "source_id": "S68",
+        "quote": "Minimum cost (per month): £105",
+        "confidence": "medium",
+        "notes": "Value as returned ('a minimum of £105 per month'); the key-fact label wording is assumed identical to the Labrador page (S53) — verify. UK prices."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -2107,6 +2647,280 @@
         "confidence": "low",
         "notes": "Game values (no breed-specific number in the sources) — identical to the Border Collie breed_configs row (BreedConfigsSeeder).",
         "decision": "potrdil David 2026-10-09: same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      }
+    },
+    "golden_retriever": {
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature step count). 120 min (RKC 'More than 2 hours per day', S65; PDSA 'a minimum of two hours of good exercise per day', S68) × 100 steps/min (S45, adult heuristic) — same method as the Border Collie / Labrador. Unlike the Labrador (PDSA gave no minutes, Guide Dogs gave ≥ 90), two tier-B sources agree on ≥ 2 h and Guide Dogs (S70) gives no number. Alternatives recorded, not chosen: 90 min → 9,000 (= Labrador; Woodgreen upper bound S69); Woodgreen 60–90 min → 6,000–9,000.",
+        "derived_from": [
+          "S65",
+          "S68",
+          "S45"
+        ],
+        "alternatives": {
+          "same_as_labrador_90_min": 9000,
+          "woodgreen_60_90_min": [
+            6000,
+            9000
+          ]
+        },
+        "decision": "potrdil David 2026-10-09: 120 min (RKC S65 '> 2 h' + PDSA S68 'minimum of two hours') × 100 steps/min → 12,000 steps (= Border Collie)"
+      },
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S68",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Game value = PDSA 'minimum of two hours' (S68) = RKC '> 2 h' (S65) lower bound. Woodgreen 60–90 min (S69) recorded as alternative (90), not chosen.",
+        "alternatives": [
+          90
+        ],
+        "decision": "potrdil David 2026-10-09: 120 min/day (Woodgreen 60–90 min S69 recorded as alternative)"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 75 % of the adult 120 min (senior rule David confirmed 2026-10-05) = 90 min exactly → 9,000 steps (= Border Collie senior).",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-09: 90 min → 9,000 steps (75 % of 120)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 119
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game boundaries (no exact month in the literature). young 9 / adult 36: AAHA (S11), same reasoning as the Labrador (large-breed growth ends 15–18 months, S10, but AAHA's young-adult boundary is cessation of RAPID growth; alternative young 12 not chosen). senior 119 = 0.75 × 13.2 y × 12 = 118.8 → 119 (S11 + S15, Dogs Trust summary of McMillan 2024). Alternatives not chosen: 112 = 0.75 × 12.48 y (VetCompass poster, S71); 118 (= Labrador / Border Collie). 119 is 1 month later than the Labrador / Border Collie (118).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S8",
+          "S15"
+        ],
+        "alternatives": {
+          "young": 12,
+          "senior_vetcompass": 112,
+          "senior_same_as_labrador": 118
+        },
+        "decision": "potrdil David 2026-10-09: young 9, adult 36, senior 119 (0.75 × 13.2 y, S15 Dogs Trust summary of McMillan 2024)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 119
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). First month of each stage (rule David confirmed 2026-10-05), so the dog stays in its stage for the 12-week challenge.",
+        "decision": "potrdil David 2026-10-09: first month of each stage (2 / 9 / 36 / 119)"
+      },
+      "learning_multiplier": {
+        "value": 1.9,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature factor). Coren rank 4 (S34, S35) — same 'brightest' tier as the Border Collie (rank 1 → 2.0) and the Labrador (rank 7 → 1.8). Linear between them by rank: 2.0 − (4−1)/(7−1) × 0.2 = 1.9 → keeps the Border Collie fastest and the order of Coren's list. PDSA 'Easy to train' (S68), Guide Dogs 'motivated by food and play, making them easy to train' (S70); Woodgreen 'Moderately easy' (S69, same as the Labrador). No individual variation (like the Border Collie and the Labrador). Alternatives not chosen: 1.8 (= Labrador), 2.0 (= tier only).",
+        "derived_from": [
+          "S34",
+          "S35"
+        ],
+        "alternatives": [
+          1.8,
+          2.0
+        ],
+        "decision": "potrdil David 2026-10-09: 1.9 (Coren rank 4, S34) — between the Border Collie (2.0) and the Labrador (1.8)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game values (no breed-specific number in the sources) — identical to the Border Collie / Labrador breed_configs row (BreedConfigsSeeder).",
+        "decision": "potrdil David 2026-10-09: same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming_mechanic": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED idea, not built (post-MVP backlog; no decision asked). Golden needs clearly more grooming than the Labrador: PDSA 'brushed or combed three times a week at a minimum' (S68), RKC 'More than once a week' (S65; Labrador 'Once a week', S50), Woodgreen grooming/shedding 'High' (S69). Idea: a brushing action ~3×/week; no number beyond the PDSA minimum sourced."
+      },
+      "mouthy_puppy_event": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED idea, not built (post-MVP backlog; no decision asked). Puppies 'mouthy' — nip and play-bite (S68); like carrying things in the mouth (S69); love fetch (S68). Could reuse the existing chewing/teething events with a retrieve/fetch play option; no frequency sourced."
+      },
+      "obesity_mechanic": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED idea, not built (post-MVP backlog; no decision asked) — same as the Labrador idea; Golden 'can easily become overweight' (S68), 'motivated by food' (S70). No prevalence number found for the Golden."
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-02); refs = JSON paths in this file. `frequent_grooming` is a new consider key (vocabulary + BreedCatalogResource union + mobile i18n).",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S65",
+              "S68"
+            ],
+            "refs": [
+              "golden_retriever.exercise.adult",
+              "golden_retriever.suitability.pdsa_family"
+            ],
+            "quote": "S65 'Exercise: More than 2 hours per day'; S68 'Golden Retrievers can be a great family dog for an active family due to their high energy levels...'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S68",
+              "S70"
+            ],
+            "refs": [
+              "golden_retriever.suitability.pdsa_family",
+              "golden_retriever.behaviour.family"
+            ],
+            "quote": "S68 'Golden Retrievers can be a great family dog for an active family…'; S70 'golden retrievers often make much-loved family dogs.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S68"
+            ],
+            "refs": [
+              "golden_retriever.suitability.pdsa_children"
+            ],
+            "quote": "S68 'If you have a young family then Golden Retrievers can be fantastic with children.'",
+            "note": "Accepted by David 2026-10-09 on the explicit PDSA statement (S68). Caveat kept: PDSA and Guide Dogs (S70) advise supervising dogs with (young) children — therefore NOT small_children."
+          },
+          {
+            "tag": "first_time_owner",
+            "source_ids": [
+              "S68"
+            ],
+            "refs": [
+              "golden_retriever.suitability.pdsa_first_time_owner"
+            ],
+            "quote": "S68 'They can be easy dogs to train and can make good first dogs for new dog owners,...'",
+            "note": "Single source (PDSA); the 2 h exercise need is a counterweight — long_daily_exercise is shown next to it. Accepted by David 2026-10-09."
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S65"
+            ],
+            "refs": [
+              "golden_retriever.suitability.rkc_size_of_home",
+              "golden_retriever.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S65 'Size of home: Large house' / 'Size of garden: Large garden'"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S69"
+            ],
+            "refs": [
+              "golden_retriever.suitability.woodgreen_sociable_with_pets"
+            ],
+            "quote": "S69 'Sociable with pets: High'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S65",
+              "S68"
+            ],
+            "refs": [
+              "golden_retriever.exercise.adult"
+            ],
+            "quote": "S65 'Exercise: More than 2 hours per day'; S68 'a minimum of two hours of good exercise per day'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S65",
+              "S68",
+              "S69"
+            ],
+            "refs": [
+              "golden_retriever.suitability.rkc_shedding",
+              "golden_retriever.suitability.woodgreen_shedding"
+            ],
+            "quote": "S65 'Sheds: Yes'; S68 'generally do shed a lot'; S69 'Shedding: High'"
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S70",
+              "S68"
+            ],
+            "refs": [
+              "golden_retriever.behaviour.food_motivation",
+              "golden_retriever.behaviour.obesity_tendency"
+            ],
+            "quote": "S70 'motivated by food and play'; S68 'they can easily become overweight.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S68",
+              "S65",
+              "S69"
+            ],
+            "refs": [
+              "golden_retriever.suitability.rkc_grooming",
+              "golden_retriever.suitability.woodgreen_grooming"
+            ],
+            "quote": "S68 'Ideally, they should be brushed or combed three times a week at a minimum.'; S65 'Grooming: More than once a week'; S69 'Grooming needs: High'",
+            "note": "NEW consider key (David 2026-10-09). Distinguishes the Golden from the Labrador ('Once a week', S50)."
+          }
+        ],
+        "not_proposed": {
+          "small_children": "S68/S70 advise supervision with (young) children; no source says 'suits small children'.",
+          "often_alone": "Only the generic PDSA 4-hour rule (S68); Woodgreen shows no value.",
+          "apartment": "RKC 'Large house' (S65).",
+          "chews_when_bored": "PDSA 'Like all dogs, Golden Retrievers like to chew' (S68) — generic, not tied to boredom.",
+          "needs_mental_stimulation": "No Golden-specific quote found (Guide Dogs mentions problem solving only, paraphrased).",
+          "low_shedding": "Contradicted (S65, S68, S69).",
+          "mouthy": "Not used (David 2026-10-09): PDSA frames puppy mouthiness as normal for Retrievers (S68, S69 'like to have things in their mouth'); as a chip it could read as alarming to parents."
+        },
+        "decision": "potrdil David 2026-10-09: suits active_family, family_pet, children, first_time_owner, large_home, other_pets; consider long_daily_exercise, sheds, food_motivated_weight, frequent_grooming (new tag). Not mouthy. No cancer statistics anywhere in the app."
       }
     }
   }
