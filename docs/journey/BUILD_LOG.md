@@ -8,6 +8,20 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Muca dobi svoj glas v obvestilih (M5-R06-06, skrito)
+
+**Kaj se je zgodilo:** Vsako obvestilo, ki ga strežnik lahko pošlje za muco, ima zdaj svoje besedilo v angleščini in slovenščini — od »Tvoja muca te milo gleda in sedi ob posodi s hrano« do »Muca je odšla v zavetišče …« za starše. Slovenščina ni zamenjava ene besede: »kuža je lačen« postane »muca je lačna«, »bo zbolel« postane »bo zbolela«, »ga / mu« postane »jo / ji«. Popravljena je tudi napaka iz prejšnjega koraka: ko je muca opraskala kavč in je lačna, obvestilo ne reče več »najprej počisti nered« (čiščenje praskanja ne razreši), ampak »najprej jo odnesi na praskalnik in jo pohvali«. Besedila so osnutek, ki ga David prebere pred vklopom mačk (ena tabela za pregled v enem prehodu).
+
+**Zakaj je pomembno:** Obvestilo je pogosto prvi stik otroka z ljubljenčkom v dnevu. Če reče »kuža«, ko ima otrok muco, ali zahteva nekaj, kar aplikacija zavrne, otrok izgubi zaupanje. Pasja obvestila so ostala natanko enaka — preverjeno s posnetkom vseh 450 pasjih besedil, narejenim pred spremembo.
+
+**Številke:** 33 mačjih besedil obvestil na jezik (66 skupaj) + 1 besedilo izvoza podatkov; 450 pasjih besedil preverjenih bajt za bajt; 7 kombinacij odprtih neredov (praskanje / nered zraven peska / drug nered) preverjenih za pravilo »obvestilo nikoli ne zahteva nemogočega«; testi strežnika **1562 → 1620**.
+
+**Kako povedati:**
+- 👩 Starši (*načrt*): »Obvestila za muco so napisana posebej za muco — v pravem spolu, brez imen otrok ali živali in nikoli z zahtevo, ki je otrok ne more izpolniti.«
+- 🧒 Otroci (*načrt*): »Ko ti telefon reče, da je muca lačna, ti tudi pove, kaj narediti najprej.«
+- 💼 Investitorji: »Nova vrsta živali dobi lastna besedila, ne da bi se spremenila ena sama beseda pri psu — prevodi so ločeni po vrsti in jih test preverja.«
+- 🛠 Tehnično: »Besedila po vrsti v podimenskem prostoru `cat` z izrecnim seznamom ključev samo za psa; test pokritosti ujame vsako pasjo besedo (in slovenski moški spol) v mačjem besedilu; posnetek pasjih besedil pred spremembo.«
+
 ## 2026-10-08 — Pesek, praskalnik in česanje: muca dobi vsakdanja opravila (M5-R06-05, skrito)
 
 **Kaj se je zgodilo:** Strežnik zna tri mačja opravila. **Pesek:** muca vsak dan uporabi pesek (mucek 3-krat, odrasla muca 2-krat, nikoli ponoči ali med šolo) — to ni nered, je pa naloga: pesek je treba počistiti v **4 urah** (šteje se samo čas izven tihih ur). Če ga otrok ne počisti, muca naredi nered zraven peska in od tam naprej velja ista lestvica kot pri psu. Enkrat na teden je treba zamenjati ves pesek; če otrok to zamudi, ima naslednji teden za čiščenje samo **2 uri**, dokler peska ne zamenja (»pesek smrdi«). **Praskalnik:** če otrok cel dan ni igral z muco, muca naslednji dan **opraska kavč**. Otrok jo odnese na praskalnik in jo pohvali v **3 sekundah** po tem, ko pristane — prepozna pohvala ni kazen, otrok preprosto poskusi znova. **Česanje:** Maine Coon ima dolgo dlako in ga je treba počesati 3-krat na teden (največ enkrat na dan). Če ob koncu tedna manjkata vsaj dve česanji, dobi **vozel v dlaki** — brez bolezni in brez kazni, le naslednje česanje traja dlje.
