@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Muca dobi svoj AI videz (M5-R06-07, skrito)
+
+**Kaj se je zgodilo:** Strežnik zna narisati muco. Vsaka muca ob rojstvu izžreba svoj videz — domača mačka iz barv in vzorcev (progasta, marmorirana, »smoking«, želvovinasta, tribarvna …), Maine Coon po uradnem standardu FIFe (velik, z ovratnikom, čopki na ušesih in dolgim kosmatim repom). Opis za AI ima svojo mačjo predlogo in nikoli ne vsebuje besede »pes«. Videi stanj so mačji: ko muca nima dovolj igre, ji je **dolgčas** in gleda skozi okno (pes je utrujen), igra se s peresom, ki visi od zgoraj, spi zvita v klopčič. Nov video **»praska kavč«** se prikaže, ko muca dan po zamujeni igri opraska kavč; videa luže pri muci ni. Mucek Maine Coona je na sliki že večji od drugih muckov, mlada Maine Coon pa še ni dorasla (polno velikost doseže pri 3–5 letih). V AI laboratoriju lahko admin mačke preizkusi in vidi ceno ene muce, preden mačke vklopimo.
+
+**Zakaj je pomembno:** Otrok, ki izbere muco, mora videti muco, ki je res njegova in se vede kot muca — ne psa z mačjimi besedami. Hkrati se pri psih ni spremenilo nič: posnetek vseh 359 pasjih AI opisov, narejen pred spremembo, je ostal bajt za bajt enak.
+
+**Številke:** 972 različnih videzov domače mačke, 312 Maine Coona (seznami so osnutek — za deleže barv domačih mačk ni vira); 7 mačjih videov stanj (6 + praskanje); strošek ene muce na življenjsko obdobje ≈ 1,27 $ (brezplačna, slika + 2 videa) oz. ≈ 4,07 $ (izziv, slika + 7 videov) po ceniku fal (*ocena*); pes z izzivom do ≈ 4,63 $. 22 novih testov strežnika (brez enega pravega klica AI storitve).
+
+**Kako povedati:**
+- 📣 Omrežja: »Vsaka muca v PetPrep je unikatna — od progaste mešanke do Maine Coona s čopki na ušesih. Ko se ji ne posvetiš, ti opraska kavč.« (*ko bodo mačke vklopljene*)
+- 👩 Starši: »Muca v aplikaciji se vede kot prava muca: dolgčas jo vodi k praskanju, ne k bolezni.« (*načrt — mačke še niso vklopljene*)
+- 🧒 Otroci: »Tvoja muca ima svoj videz, ki ga nima nobena druga.« (*načrt*)
+- 💼 Investitorji: »Nova vrsta živali brez novih stroškov na enoto: isti AI modeli, ista cena na ljubljenčka kot pri psu.«
+- 🛠 Tehnično: »Predloge za AI po vrsti; posnetek vseh pasjih promptov pred spremembo varuje obstoječe pse.«
+
 ## 2026-10-09 — Obvestila staršem vikajo, kuža ne zahteva nemogočega (M5-R06-06b)
 
 **Kaj se je zgodilo:** David je odločil štiri vprašanja o besedilih obvestil. Slovenski alarm staršem zdaj vika (»Vaš otrok danes ni poskrbel za psa.«), pri psu in pri muci. Pri psu sta popravljeni dve napaki pravila »obvestilo nikoli ne zahteva nemogočega«: ko kuža nekaj pregrize, obvestilo o hrani reče »najprej pospravi, kar je pregriznil, in mu daj igračo« (ne »najprej počisti«), in ko bi bil obrok tudi po čiščenju mogoč šele zvečer, obvestilo pove uro (»Naslednji obrok je ob 17:00.«), namesto da obljubi »Potem ga lahko nahraniš«. Če hranjenje tisti dan ni več mogoče, otrok dobi opomnik za nered — nered ne ostane neopažen do bolezni (popravek po neodvisnem pregledu QA). Muca obdrži »muca« za vse starosti in angleški *it*.
