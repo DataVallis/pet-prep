@@ -3,7 +3,7 @@
  * "Na praskalnik", first aid, resume; the `needs_cleaning` refusal mapping per species;
  * the cat blocks after a `PetUpdated`; the species-aware texts and the contract.
  */
-import { applyBroadcast, normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
+import { applyBroadcast, isNewFamilyDay, normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import {
   catChips,
   dockKinds,
@@ -104,6 +104,15 @@ describe('"Igra" (feather wand)', () => {
     expect(wandDock(night).hint).toEqual({ day: 'jutri', text: '07:00', a11y: 'jutri ob 07:00' });
   });
 
+  it('only a timed reason names a time (QA m2): needs_cleaning with a stray next_allowed_at → the count', () => {
+    const view = catView({ wand: makeWandState({ can_start: false, blocked_reason: 'needs_cleaning', next_allowed_at: '2026-10-04T14:00:00+02:00' }) });
+    expect(wandDock(view).hint?.text).toBe('0/2');
+    for (const reason of ['wand_session_active', 'care_session_active', 'wand_day_ending']) {
+      const timed = catView({ wand: makeWandState({ can_start: false, blocked_reason: reason, next_allowed_at: '2026-10-04T12:02:00+02:00' }) });
+      expect(wandDock(timed).hint?.text).toBe('ob 12:02');
+    }
+  });
+
   it('quiet hours without a time (older server): "Spi"', () => {
     const view = catView({ wand: makeWandState({ can_start: false, blocked_reason: 'wand_quiet_hours', next_allowed_at: null }) });
     expect(wandDock(view).hint?.text).toBe('Spi');
@@ -128,7 +137,10 @@ describe('chips, scratcher, first aid, resume', () => {
       ['grooming', true, 'Dlaka ima vozel — počeši jo.'],
       ['litter_change', true, 'Pesek smrdi — zamenjaj ves pesek.'],
     ]);
-    expect(chips[0].a11y).toBe('Počeši muco. Ta teden: 1 od 3.');
+    // The amber dot is read out too (QA n2).
+    expect(chips[0].a11y).toBe('Počeši muco. Ta teden: 1 od 3. Zdaj lahko.');
+    const blocked = catChips(catView({ grooming: makeGroomingState({ can_start: false, blocked_reason: 'grooming_done_today' }), litter: makeLitterState({}, null) }));
+    expect(blocked[0].a11y).toBe('Počeši muco. Ta teden: 1 od 3.');
   });
 
   it('this week\'s brushing done → no chip; locked → no chips; a dog → none', () => {
@@ -224,9 +236,25 @@ describe('broadcastCatCare — cat blocks after a PetUpdated', () => {
     expect(next.scratching?.active?.id).toBe(21);
   });
 
-  it('a new family day (lower count) resets the child\'s own count', () => {
-    const next = broadcastCatCare(current(), { wand: makeWandState({ sessions_today: 0, my_sessions_today: null }) }, false);
-    expect(next.wand?.my_sessions_today).toBe(0);
+  it('a lower count or a new family day: the child\'s own count is unknown until the next fetch (QA m3)', () => {
+    const lower = broadcastCatCare(current(), { wand: makeWandState({ sessions_today: 0, my_sessions_today: null }) }, false);
+    expect(lower.wand?.my_sessions_today).toBeNull();
+    // After midnight a sibling's first game: same count as yesterday's 1, but a new day.
+    const newDay = broadcastCatCare(current(), { wand: makeWandState({ sessions_today: 1, my_sessions_today: null }) }, false, true);
+    expect(newDay.wand?.my_sessions_today).toBeNull();
+    const sameDay = broadcastCatCare(current(), { wand: makeWandState({ sessions_today: 1, my_sessions_today: null }) }, false, false);
+    expect(sameDay.wand?.my_sessions_today).toBe(1);
+  });
+
+  it('applyBroadcast detects the family-local day change (view 12:00 → broadcast after midnight)', () => {
+    const view = catView({ wand: makeWandState({ sessions_today: 1, my_sessions_today: 1 }) });
+    expect(isNewFamilyDay(view, '2026-10-04T21:59:00.000+00:00')).toBe(false);
+    expect(isNewFamilyDay(view, '2026-10-04T22:00:30.000+00:00')).toBe(true);
+    const result = applyBroadcast(
+      view,
+      makeBroadcast({ breed_type: 'domestic_cat', species: 'cat', emitted_at: '2026-10-04T22:30:00.000+00:00', wand: makeWandState({ sessions_today: 1, my_sessions_today: null }) }),
+    );
+    expect(result?.view.cat.wand?.my_sessions_today).toBeNull();
   });
 
   it('the child\'s own running game survives (the broadcast has no viewer and calls the pet busy)', () => {

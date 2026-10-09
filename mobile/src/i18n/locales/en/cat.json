@@ -232,7 +232,8 @@
       "litterChangeA11y": "Change all the litter (once a week)",
       "litterChangeOverdue": "The litter box smells — change all the litter.",
       "cuddle": "Cuddles",
-      "cuddleA11y": "Cuddle your kitty"
+      "cuddleA11y": "Cuddle your kitty",
+      "pendingA11y": "Can be done now."
     },
     "litterMess": {
       "title": "Oops, a mess next to the litter box! Clean it up.",

@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Družina z mačko ne dobi »psa z drugo sliko«: ne prosimo za dovoljenje za korake (manj podatkov o otroku), praskanje se rešuje s pohvalo na praskalniku, ne s čiščenjem, in otrok izve resnično dejstvo o mačkah (lakota je pri mački nevarna). Pes je ostal popolnoma enak — vsi obstoječi testi so zeleni brez sprememb.
 
-**Številke:** 5 gumbov in 3 čipi za muco, 6 imenskih prostorov besedil s mačjo različico (EN + SL); Jest 1687 → 1744 testov (134 → 137 kompletov); Pest 1713 → 1715 (WandPlayTest 31 → 33). Pasje dnevne vrstice poročila bajt za bajt enake (posnetek psa).
+**Številke:** 5 gumbov in 3 čipi za muco, 6 imenskih prostorov besedil s mačjo različico (EN + SL); Jest 1687 → 1747 testov (134 → 137 kompletov); Pest 1713 → 1715 (WandPlayTest 31 → 33). Pasje dnevne vrstice poročila bajt za bajt enake (posnetek psa).
 
 **Kako povedati:**
 - 👩 Starši: »Če izberete muco, otrok ne bo hodil po korake — vsak dan se bo z njo igral s palico, čistil pesek in jo pohvalil na praskalniku. V poročilu vidite, koliko iger je bilo vsak dan.« (*ko bodo mačke vklopljene*)

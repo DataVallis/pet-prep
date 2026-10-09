@@ -18,7 +18,7 @@ import { readBreed, readSpecies } from '@/modules/species/species';
 import { broadcastCatCare, readChildCatCare, type ChildCatCare } from '@/modules/catCare/catCare';
 import type { PetState, PetUpdatedBroadcast, ShownBreed, Species } from '@/types';
 import type { LockState } from '@/store/appStore';
-import { familyCalendar } from '@/modules/childPet/familyTime';
+import { familyCalendar, localParts } from '@/modules/childPet/familyTime';
 import { normalizePetMedia, type PetMediaInfo } from '@/modules/petMedia/petMedia';
 import { readPetProfile, type PetProfileInfo } from '@/modules/petProfile/petProfile';
 import {
@@ -430,7 +430,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
   // M5-R05: pet-level `can_play`; a lock (incl. this child's own contract) turns it off.
   const play = broadcastPlay(view.play, b.play, lock.is_locked);
   // M5-R06-08b: the cat's wand / litter / grooming / scratching (null blocks for a dog).
-  const cat = broadcastCatCare(view.cat, b, lock.is_locked);
+  const cat = broadcastCatCare(view.cat, b, lock.is_locked, isNewFamilyDay(view, b.emitted_at));
 
   const next: ChildPetView = {
     ...view,
@@ -454,6 +454,16 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     (b.event_type !== null && b.event_type !== 'metric_changed');
 
   return { view: next, refetch };
+}
+
+/**
+ * The broadcast is from a later family-local day than the view's HTTP snapshot (midnight
+ * passed since the last fetch) — per-child daily counts the broadcast can't carry are stale.
+ */
+export function isNewFamilyDay(view: Pick<ChildPetView, 'server_time' | 'timezone'>, emittedAt: string): boolean {
+  const shown = localParts(view.server_time, view.timezone)?.date ?? null;
+  const now = localParts(emittedAt, view.timezone)?.date ?? null;
+  return shown !== null && now !== null && now > shown;
 }
 
 /**

@@ -177,6 +177,17 @@ describe('ChildHudScreen — cat (M5-R06-08b)', () => {
     expect(useAppStore.getState().catOverlay).toBe('scratching');
   });
 
+  it('"Na praskalnik" is off while another child carries her (QA n1)', async () => {
+    await renderHud(
+      catState({
+        pet: { hygiene_level: 0, needs_cleaning: true },
+        behaviour: { active_events: [makeBehaviourEvent('scratching', { id: 21 })], scene: 'scratching' },
+        scratching: makeScratchingState({ can_start: false, blocked_reason: 'scratching_session_active', session_running: true }),
+      }),
+    );
+    expect(isDisabled('action-scratcher')).toBe(true);
+  });
+
   it('a mess next to the tray forces the cleaning game with the litter title', async () => {
     await renderHud(
       catState({
@@ -199,8 +210,8 @@ describe('ChildHudScreen — cat (M5-R06-08b)', () => {
     expect(screen.getByTestId('hud-cat-chip-grooming')).toBeTruthy();
     expect(screen.getByTestId('hud-cat-chip-grooming-badge')).toBeTruthy();
     expect(screen.getByTestId('hud-cat-chip-litter_change')).toBeTruthy();
-    expect(screen.getByText('Dlaka ima vozel — počeši jo.')).toBeTruthy();
-    expect(screen.getByText('Pesek smrdi — zamenjaj ves pesek.')).toBeTruthy();
+    expect(screen.getByTestId('hud-cat-note-grooming').props.children).toBe('Dlaka ima vozel — počeši jo.');
+    expect(screen.getByTestId('hud-cat-note-litter_change').props.children).toBe('Pesek smrdi — zamenjaj ves pesek.');
     fireEvent.press(screen.getByTestId('hud-cat-chip-grooming'));
     expect(useAppStore.getState().catOverlay).toBe('grooming');
     act(() => useAppStore.getState().closeCatGame());

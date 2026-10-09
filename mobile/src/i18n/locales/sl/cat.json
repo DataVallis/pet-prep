@@ -234,7 +234,8 @@
       "litterChangeA11y": "Zamenjaj ves pesek (enkrat na teden)",
       "litterChangeOverdue": "Pesek smrdi — zamenjaj ves pesek.",
       "cuddle": "Crkljanje",
-      "cuddleA11y": "Pocrkljaj muco"
+      "cuddleA11y": "Pocrkljaj muco",
+      "pendingA11y": "Zdaj lahko."
     },
     "litterMess": {
       "title": "Ups, nered zraven peska! Počisti ga.",

@@ -75,6 +75,9 @@ export function scoopDock(view: ChildPetView): CatDockState {
   return { disabled: false, due: true, hint: dockWhen(litter.next_due_at, view.server_time, view.timezone) };
 }
 
+/** `blocked_reason`s whose `next_allowed_at` is the end of the block (server `WandPayload`). */
+export const TIMED_WAND_REASONS: readonly string[] = ['wand_too_soon', 'wand_quiet_hours', 'wand_session_active', 'care_session_active', 'wand_day_ending'];
+
 /**
  * "Igra" (feather wand): enabled unless locked or not available — the game screen explains a
  * block with its time (the server sends `next_allowed_at` for every timed reason, QA 08a m5).
@@ -88,7 +91,8 @@ export function wandDock(view: ChildPetView): CatDockState {
   const hints = CAT_HUD_STRINGS.hints;
   if (wand.goal > 0 && wand.sessions_today >= wand.goal) return { disabled, due: false, hint: dockText(hints.wandDone) };
   if (!wand.can_start && wand.session === null && wand.blocked_reason !== null) {
-    const at = dockWhen(wand.next_allowed_at, view.server_time, view.timezone);
+    // Only a timed reason names a time (QA 08b m2) — e.g. never for `needs_cleaning`.
+    const at = TIMED_WAND_REASONS.includes(wand.blocked_reason) ? dockWhen(wand.next_allowed_at, view.server_time, view.timezone) : null;
     if (at !== null) return { disabled, due: false, hint: at };
     if (wand.blocked_reason === 'wand_quiet_hours') return { disabled, due: false, hint: dockText(hints.asleep) };
   }
@@ -119,6 +123,11 @@ export interface CatChip {
   note: string | null;
 }
 
+/** The amber dot is read out too (QA 08b n2). */
+function withPending(a11y: string, pending: boolean): string {
+  return pending ? `${a11y} ${CAT_HUD_STRINGS.chips.pendingA11y}` : a11y;
+}
+
 function groomingChip(g: ChildGrooming): CatChip | null {
   const open = g.done_this_week < g.goal_per_week || g.matted;
   if (!open && g.session === null) return null;
@@ -126,7 +135,7 @@ function groomingChip(g: ChildGrooming): CatChip | null {
   return {
     kind: 'grooming',
     label: c.grooming,
-    a11y: c.groomingA11y(g.done_this_week, g.goal_per_week),
+    a11y: withPending(c.groomingA11y(g.done_this_week, g.goal_per_week), g.can_start || g.session !== null),
     pending: g.can_start || g.session !== null,
     note: g.matted ? c.groomingMatted : null,
   };
@@ -138,7 +147,7 @@ function litterChangeChip(change: LitterChange): CatChip | null {
   return {
     kind: 'litter_change',
     label: c.litterChange,
-    a11y: c.litterChangeA11y,
+    a11y: withPending(c.litterChangeA11y, change.can_start || change.session !== null),
     pending: change.can_start || change.session !== null,
     note: change.overdue ? c.litterChangeOverdue : null,
   };

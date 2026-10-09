@@ -546,9 +546,10 @@ function gateFor<S, T extends SessionGate<S>>(next: T, current: T | null, locked
  * `view.cat` after a `PetUpdated` (wand play, litter, grooming, scratching events of any
  * child or the tick). A missing key (older server) keeps the block (`can_*` off while
  * locked); null = the pet has no such block. Counters, deadlines, `blocked_reason` and
- * `next_allowed_at` come from the broadcast; the child's own session / count stay.
+ * `next_allowed_at` come from the broadcast; the child's own session / count stay (the count
+ * becomes null on a new family day — `newDay` — until the next fetch).
  */
-export function broadcastCatCare(current: ChildCatCare, b: CatBroadcastBlocks, locked: boolean): ChildCatCare {
+export function broadcastCatCare(current: ChildCatCare, b: CatBroadcastBlocks, locked: boolean, newDay = false): ChildCatCare {
   const keep = <T extends object>(block: T | null, off: (x: T) => T): T | null => (block !== null && locked ? off(block) : block);
 
   let wand: ChildWand | null;
@@ -558,8 +559,9 @@ export function broadcastCatCare(current: ChildCatCare, b: CatBroadcastBlocks, l
     if (next === null) wand = null;
     else {
       const prev = current.wand;
-      // A lower count than shown = a new family day: the child's own count starts at 0 too.
-      const mine = prev === null ? null : next.sessions_today < prev.sessions_today ? 0 : prev.my_sessions_today;
+      // A new family day (the broadcast's local date is after the view's) or a lower count:
+      // the child's own count is unknown until the next fetch (QA 08b m3) — never yesterday's.
+      const mine = prev === null || newDay || next.sessions_today < prev.sessions_today ? null : prev.my_sessions_today;
       wand = { ...gateFor<WandSession, ChildWand>(next, prev, locked), my_sessions_today: mine };
     }
   }

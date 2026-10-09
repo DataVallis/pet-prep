@@ -572,7 +572,7 @@ export default function ChildHudScreen() {
   const coveredByOverlay = isWalkModalVisible || showCleaning || showTraining || showAlbum || showPlay || showCatGame;
   // Cat chips (Počeši / Menjava peska), the "Na praskalnik" button and the first-aid note.
   const chips = catChips(view);
-  const chipNotes = chips.map((c) => c.note).filter((n): n is string => n !== null);
+  const chipNotes = chips.flatMap((c) => (c.note !== null ? [{ kind: c.kind, text: c.note }] : []));
   const scratcherShown = !coveredByOverlay && showScratcherButton(view);
   const firstAid = showFirstAid(view);
   const openCat = (kind: CatGameKind) => {
@@ -881,8 +881,9 @@ export default function ChildHudScreen() {
                 ? {
                     label: CAT_HUD_STRINGS.scratcher,
                     a11y: CAT_HUD_STRINGS.scratcherA11y,
-                    // Locked never reaches here; another child's carry → the game screen explains.
-                    disabled: false,
+                    // Locked never reaches here; off while the server refuses a carry (another
+                    // child's game) unless it is this child's own running carry (resumable).
+                    disabled: view.cat.scratching !== null && !view.cat.scratching.can_start && view.cat.scratching.session === null,
                     onPress: () => openCat('scratching'),
                   }
                 : null
@@ -926,7 +927,7 @@ export default function ChildHudScreen() {
                     </View>
                   )}
                   {chipNotes.map((note) => (
-                    <CatHudNote key={note} text={note} testID="hud-cat-note" />
+                    <CatHudNote key={note.kind} text={note.text} testID={`hud-cat-note-${note.kind}`} />
                   ))}
                   {entry.kind === 'button' && entry.block !== null && <PlayBlockedNote text={playBlockText(entry.block, playSleepsUntil, view.timezone, playNow)} />}
                 </>
