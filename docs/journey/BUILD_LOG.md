@@ -8,6 +8,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Muca je povsod muca: pregled besedil in test pokritosti (M5-R06-08c, skrito)
+
+**Kaj se je zgodilo:** Pregledali smo vsa mačja besedila v aplikaciji v angleščini in slovenščini. Angleščina za muco zdaj dosledno uporablja *it* (Davidovo pravilo), slovenščina ima popravljeno slovnico (npr. »hepatično lipidozo«). Starš zdaj tudi na svojih zaslonih bere o muci, kadar gleda muco — **vrsta pride iz ljubljenčka na zaslonu**, ker ima družina lahko psa in muco: »1 kuža · 1 muca«, »Muca je pri veterinarju«, »Muca čaka, da Maja podpiše pogodbo«, »Spremeni muco«, »Kako je muca rasla«, »Mucek · 3 mesece«, »Opraskan kavč — na praskalnik do 13:30«. Na otrokovem telefonu z muco se kanal obvestil imenuje »Opomniki za muco«.
+
+**Zakaj je pomembno:** Družina z mačko ne sme brati »kuža« na nobenem zaslonu, ki govori o njeni muci. Nov test (T8) to varuje za naprej: vsak ključ, ki omenja psa, mora imeti mačjo različico ali zapisan razlog, zakaj je samo pasji (sprehod, šola, igra z žogo …). Pasja besedila so ostala bajt za bajt enaka.
+
+**Številke:** mačjih prepisov 51 → 100 (EN in SL enako), 8 imenskih prostorov (prej 5); seznam »samo pes« ima 42 vnosov z razlogom; Jest 1747 → 1774 testov (137 → 140 kompletov). Nekaj besedil na ravni družine (tihe ure, obvestila staršu, plačilni zaslon) še govori o psih — vprašanje za Davida.
+
+**Kako povedati:**
+- 👩 Starši: »Če imate psa in muco, aplikacija pri vsakem ljubljenčku govori o pravi živali — ›Muca je pri veterinarju‹, ›Kuža čaka na podpis pogodbe‹.« (*ko bodo mačke vklopljene*)
+- 🧒 Otroci: »Tvoja muca je muca — tudi v obvestilih in albumu.«
+- 🛠 Tehnično: »Ena funkcija `tSpecies(ključ, vrsta)` in en test pokritosti: vsak ključ z besedo ›dog / kuža‹ ima mačjo različico ali razlog, mačja besedila ne smejo omenjati psa, ključi EN in SL se ujemajo.«
+- 📣 Omrežja: (*interno, dokler mačke niso vklopljene*)
+
+---
+
 ## 2026-10-09 — Muca dobi svoj glavni zaslon, starši njen pregled (M5-R06-08b, skrito)
 
 **Kaj se je zgodilo:** Ko je ljubljenček muca, ima otrok zdaj svoj glavni zaslon: spodaj **hrana, voda, »Pesek«, »Igra«** (palica s peresom) in **čiščenje** — brez sprehoda, štetja korakov in prošnje za dovoljenje, brez »Šole«. Merilnik »Energija« postane »Igra«. Nad gumbi so **»Počeši«** (Maine Coon), **»Menjava peska«** in **»Crkljanje«**, ob opraskanem kavču pa gumb **»Na praskalnik«**. Ko je muca lačna, otrok prebere kratko »Dobro je vedeti: prava muca, ki neha jesti, mora čim prej k veterinarju« (samo izobraževalno, brez števila dni). Vsa otroška besedila govorijo o muci (»Njam! Muca je sita.«), tudi pogodba o odgovornosti. Starši v pregledu vidijo mačje rutine (igra, pesek, menjava, česanje), v poročilu **igre dneva namesto korakov** in mačja opravila v časovnici. Na strežniku: igra s palico zdaj vedno pove, *kdaj* bo spet mogoča (konec tihih ur, igre drugega otroka, polnoč). Mačke so še vedno skrite — vklop je R06-09 po preizkusu na telefonu.
