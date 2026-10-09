@@ -196,7 +196,7 @@
   },
   "breedSuitability": {
     "suitsTitle": "Primerno za:",
-    "considerTitle": "Pomisli:",
+    "considerTitle": "Pomislite:",
     "suits": {
       "active_family": "Aktivna družina",
       "children": "Družine z otroki",
@@ -215,7 +215,7 @@
       "may_herd_children": "Pri igri lahko »pase« otroke",
       "chews_when_bored": "Ko se dolgočasi, grize stvari",
       "sheds": "Izpada mu dlaka",
-      "food_motivated_weight": "Rad je — pazi na težo"
+      "food_motivated_weight": "Rad je — pazite na težo"
     }
   },
   "media": {

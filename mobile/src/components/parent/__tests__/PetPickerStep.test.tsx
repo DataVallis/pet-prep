@@ -171,12 +171,12 @@ describe('PetPickerStep', () => {
     const suits = screen.getByTestId('breed-suitability-labrador_retriever-suits');
     expect(suits).toHaveTextContent('Primerno za:Aktivna družinaDružine z otrokiHiša z vrtomDrugi ljubljenčki');
     const consider = screen.getByTestId('breed-suitability-labrador_retriever-consider');
-    expect(consider).toHaveTextContent('Pomisli:Izpada mu dlakaPotrebuje veliko gibanja vsak danRad je — pazi na težo');
+    expect(consider).toHaveTextContent('Pomislite:Izpada mu dlakaPotrebuje veliko gibanja vsak danRad je — pazite na težo');
     // The unknown tag from a newer server is never shown.
     expect(screen.queryByText(/future_tag/)).toBeNull();
     // Screen readers get the same tags as one sentence.
     expect(lab.props.accessibilityHint).toBe(
-      'Primerno za: Aktivna družina, Družine z otroki, Hiša z vrtom, Drugi ljubljenčki. Pomisli: Izpada mu dlaka, Potrebuje veliko gibanja vsak dan, Rad je — pazi na težo.',
+      'Primerno za: Aktivna družina, Družine z otroki, Hiša z vrtom, Drugi ljubljenčki. Pomislite: Izpada mu dlaka, Potrebuje veliko gibanja vsak dan, Rad je — pazite na težo.',
     );
     // The collie shows its own tags; the mutt has none (no sourced tags).
     expect(screen.getByTestId('breed-suitability-border_collie-consider')).toHaveTextContent(/Pri igri lahko »pase« otroke/);

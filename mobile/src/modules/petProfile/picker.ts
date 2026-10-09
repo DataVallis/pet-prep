@@ -120,7 +120,7 @@ export function considerLabel(tag: ConsiderTag): string {
   return SUITABILITY_STRINGS.consider[tag];
 }
 
-/** One sentence for screen readers: "Primerno za: Aktivna družina, Hiša z vrtom. Pomisli: Izpada mu dlaka." */
+/** One sentence for screen readers: "Primerno za: Aktivna družina, Hiša z vrtom. Pomislite: Izpada mu dlaka." */
 export function suitabilityA11y(s: BreedSuitability): string {
   const parts: string[] = [];
   const S = SUITABILITY_STRINGS;

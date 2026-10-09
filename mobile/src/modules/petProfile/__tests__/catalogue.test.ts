@@ -170,7 +170,7 @@ describe('suitability tags (M5-R10)', () => {
 
   it('one a11y sentence with both headings', () => {
     expect(suitabilityA11y({ suits: ['active_family', 'house_with_garden'], consider: ['sheds'] })).toBe(
-      'Primerno za: Aktivna družina, Hiša z vrtom. Pomisli: Izpada mu dlaka.',
+      'Primerno za: Aktivna družina, Hiša z vrtom. Pomislite: Izpada mu dlaka.',
     );
     expect(suitabilityA11y({ suits: [], consider: [] })).toBe('');
   });
