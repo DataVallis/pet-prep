@@ -596,6 +596,13 @@ class EscalationService
      * thirst, hygiene). M5-R06-06b (QA B1, David 2026-10-09): while a mess is
      * open, hygiene wins a tie — the mess is what the child can (and must) act
      * on first; food / water wait for it anyway.
+     *
+     * M5-R06-06c (QA m1, David 2026-10-09): only when the tied food / water
+     * could NOT be given again today after cleaning. If it could (now or later
+     * today — CareScheduleService::possibleTodayAfterCleaning), the tie names
+     * that metric (hunger before thirst), so the push says "clean first, then
+     * feed" (`clean_first`, `tidy_first`, `scratcher_first`, `clean_and_*_first`
+     * or their `*_first_wait` with the time — NotificationService::actionCopy).
      */
     private function lowestMetricKey(Pet $pet): string
     {
@@ -607,6 +614,17 @@ class EscalationService
         ];
         $lowest = min($candidates);
         if ($candidates['hygiene'] === $lowest && app(HygieneEventService::class)->openEvents($pet)->isNotEmpty()) {
+            $config = $pet->breedConfig();
+            if ($config !== null) {
+                $schedule = app(CareScheduleService::class);
+                $now = now();
+                foreach (['hunger', 'thirst'] as $metric) {
+                    if ($candidates[$metric] === $lowest && $schedule->possibleTodayAfterCleaning($pet, $config, $metric, $now)) {
+                        return $metric;
+                    }
+                }
+            }
+
             return 'hygiene';
         }
 
