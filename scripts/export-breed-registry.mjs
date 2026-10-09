@@ -1,56 +1,58 @@
 #!/usr/bin/env node
 /**
- * Breed registry export (M5-R11, David 2026-10-09) — build-time data for the
- * "Register pasem" pages of the marketing website (repo DataVallis/pet-prep-website).
+ * Animal & breed registry export (M5-R11, David 2026-10-09 / 2026-10-10) — build-time data for
+ * the register on the marketing website (repo DataVallis/pet-prep-website: /animals,
+ * /animals/<species>, /animals/<species>/<breed>; SL /zivali/…).
  *
- * ONE source of truth: this script only READS the research and the game config
- * and writes a stable JSON file; nothing is typed in twice.
+ * ONE source of truth: this script only READS research, game config and app strings and writes
+ * one stable JSON file; nothing is typed in twice.
  *
- *   docs/research/dog-data/data.json        facts (only entries with a source_id) and
- *                                           the game numbers David confirmed (`decision`)
- *   docs/research/dog-data/sources.md       the source table (id, tier, publisher, title, URL)
- *   backend/config/breed_suitability.php    "Primerno za" / "Upoštevajte" tags per breed
- *   mobile/src/i18n/locales/{en,sl}/pet.json the app's wording of those tags (breedSuitability)
+ *   docs/research/dog-data/data.json, sources.md   dog facts (S…) + David's game decisions
+ *   docs/research/cat-data/data.json, sources.md   cat facts (C…) + David's game decisions
+ *   backend/config/breed_suitability.php           "Primerno za" / "Upoštevajte" tags
+ *   mobile/src/i18n/locales/{en,sl}/pet.json       the app's wording of those tags
+ *   mobile/src/i18n/locales/{en,sl}/family.json    the app's breed names (→ names + URL slugs)
  *
- * Usage:
- *   node scripts/export-breed-registry.mjs            write docs/research/breed-registry.json
- *   node scripts/export-breed-registry.mjs --out F    write F instead
- *   node scripts/export-breed-registry.mjs --check    exit 1 when the committed file is stale
- *   node scripts/export-breed-registry.mjs --stdout   print the JSON
+ * Model (schema 2, David 2026-10-10: "the register must scale to ~300 breeds and many species"):
+ *   species[]  id, URL slug + names (EN/SL), status, free plan, which fact groups / filters /
+ *              comparison rows it has, species-wide facts (meals, life stages, litter …)
+ *   breeds[]   species, availability (in_app | coming_soon | info_only), names, slugs,
+ *              synonyms, facets (filters), facts[] (generic items), compare map, health,
+ *              suitability tags, game rules, source ids
+ *   sources[]  every cited source (S… dogs, C… cats) with publisher, title and URL
+ *
+ * `availability` lives HERE (SPECIES[].breeds below), next to the list of breeds in the register,
+ * because membership and app status change together in this repo (a breed ships with a backend
+ * enum + seeder; info_only breeds exist only as research). The website only renders it.
+ *
+ * Fact items are generic so the website can render any species without species-specific layout:
+ *   { group, field, kind: quantity | category | statement, value, unit?, qualifier?, context?,
+ *     note?, source_ids, ref, confidence }
  *
  * Rules (enforced here and in scripts/tests/export-breed-registry.test.mjs):
- *  - a FACT is exported only from a data.json entry with a non-null `source_id`
- *    (UNSOURCED proposals never become facts) — exportFact() throws otherwise;
+ *  - a FACT comes only from a data.json entry with a non-null source_id (UNSOURCED never);
  *  - quotes are never exported (breed standards are copyrighted; the site paraphrases);
  *  - health items carry a key + source, never the value text (no cancer percentages);
- *  - GAME values (section `game`) are PetPrep rules: each comes from a recorded David
- *    decision (`decision`) or a sourced value, with its ref; step goals are derived
- *    (minutes × steps per minute) and checked against the step goals in data.json;
- *  - deterministic output: fixed key order, no timestamps; `inputs` holds the SHA-256
- *    of every input file, so a stale copy on the website is easy to spot.
+ *  - GAME values come from a recorded David decision (`decision`) or a sourced value; dog step
+ *    goals are minutes × steps per minute and checked against data.json; the test compares
+ *    every game number with BreedStageParamsSeeder::rows() / catRows() when PHP is available;
+ *  - deterministic output: fixed order, no timestamps; `inputs` holds SHA-256 of every input.
  *
- * Where each game number comes from (data.json paths; seeded by BreedStageParamsSeeder):
- *  - steps per exercise minute ........ general_by_size.exercise.steps_conversion (S45)
- *  - puppy / young minutes per month .. proposed_game_parameters.walk_minutes_puppy (decision)
- *  - meals per day by stage ........... proposed_game_parameters.feed_windows (decision)
- *  - young / adult stage start ........ proposed_game_parameters.arrival_age_months (decision:
- *                                       arrival = first month of the stage)
- *  - Border Collie .................... border_collie.exercise.adult (S5, "> 120" → 120),
- *                                       proposed_game_parameters.senior_exercise_minutes,
- *                                       proposed_game_parameters.arrival_age_months (senior),
- *                                       border_collie.trainability.learning_multiplier
- *  - Labrador / Golden ................ proposed_game_parameters.<breed>.{exercise_minutes_adult,
- *                                       exercise_minutes_senior, stage_boundaries_months,
- *                                       learning_multiplier}
- *  - mixed breed (free plan) .......... medium_mixed_breed.exercise.adult_game_target,
- *                                       proposed_game_parameters.senior_exercise_minutes,
- *                                       proposed_game_parameters.arrival_age_months (senior),
- *                                       medium_mixed_breed.trainability.{learning_multiplier,
- *                                       individual_variation}
+ * Where each game number comes from (data.json paths):
+ *  dogs  steps per minute ......... dog general_by_size.exercise.steps_conversion (S45)
+ *        puppy minutes per month .. dog proposed_game_parameters.walk_minutes_puppy (decision)
+ *        meals by stage ........... dog proposed_game_parameters.feed_windows (decision)
+ *        stage starts / arrival ... dog proposed_game_parameters.arrival_age_months (+ per breed)
+ *        per breed ................ see DOG_GAME below
+ *  cats  stage starts / arrival ... cat general.arrival_age.* (+ maine_coon.arrival_age_kitten)
+ *        meals by stage ........... cat general.meals_per_day.*
+ *        play sessions ............ cat general.play.game_sessions_{kitten,adult}, game_min_gap
+ *        litter ................... cat general.litter.game_uses_per_day_*, game_scoop_deadline,
+ *                                   full_change
+ *        grooming (Maine Coon) .... cat maine_coon.grooming.game_sessions_per_week
  *
- * No dependencies (Node ≥ 20). The PHP config is read by a small parser for PHP
- * literals (parsePhpReturn) that throws on anything that is not a literal; the test
- * cross-checks it against `php -r` and the seeded rows when PHP is available.
+ * Usage: node scripts/export-breed-registry.mjs [--out F | --check | --stdout]
+ * No dependencies (Node ≥ 20).
  */
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -58,15 +60,23 @@ import { dirname, isAbsolute, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-export const SCHEMA_VERSION = 1;
+export const SCHEMA_VERSION = 2;
 export const DEFAULT_OUT = 'docs/research/breed-registry.json';
 export const INPUTS = {
-  data: 'docs/research/dog-data/data.json',
-  sources: 'docs/research/dog-data/sources.md',
+  dog_data: 'docs/research/dog-data/data.json',
+  dog_sources: 'docs/research/dog-data/sources.md',
+  cat_data: 'docs/research/cat-data/data.json',
+  cat_sources: 'docs/research/cat-data/sources.md',
   suitability: 'backend/config/breed_suitability.php',
   labels_en: 'mobile/src/i18n/locales/en/pet.json',
   labels_sl: 'mobile/src/i18n/locales/sl/pet.json',
+  family_en: 'mobile/src/i18n/locales/en/family.json',
+  family_sl: 'mobile/src/i18n/locales/sl/family.json',
 };
+
+/** URL words that a breed slug may never take (the comparison page lives next to the breeds). */
+export const RESERVED_SLUGS = ['compare', 'primerjava'];
+
 
 // ─── PHP literal parser ──────────────────────────────────────────────────────
 
@@ -201,28 +211,29 @@ export function parsePhpReturn(source) {
 
 // ─── sources.md ──────────────────────────────────────────────────────────────
 
-/** Rows `| S1 | A | Publisher | Title | URL | Notes |` → { S1: {id, tier, publisher, title, url} }. */
+/** Rows `| S1 | A | Publisher | Title | URL … | Notes |` → { S1: {id, tier, publisher, title, url} }. */
 export function parseSourcesTable(markdown) {
   const out = {};
   for (const line of markdown.split('\n')) {
-    if (!/^\| S\d+ \|/.test(line)) continue;
+    if (!/^\| [A-Z]\d+ \|/.test(line)) continue;
     const cells = line.split('|').slice(1, -1).map((c) => c.trim());
     if (cells.length !== 6) throw new Error(`sources.md: expected 6 columns, got ${cells.length}: ${line.slice(0, 60)}`);
-    const [id, tier, publisher, title, url] = cells;
-    if (!/^https?:\/\/\S+$/.test(url)) throw new Error(`sources.md: ${id} has no URL`);
+    const [id, tier, publisher, title, urlCell] = cells;
+    const url = /https?:\/\/[^\s)]+/.exec(urlCell)?.[0];
+    if (!url) throw new Error(`sources.md: ${id} has no URL`);
     if (out[id]) throw new Error(`sources.md: duplicate ${id}`);
     out[id] = { id, tier, publisher, title, url };
   }
   return out;
 }
 
-// ─── data.json helpers ───────────────────────────────────────────────────────
+// ─── helpers ─────────────────────────────────────────────────────────────────
 
-function at(data, path) {
+function at(data, path, file) {
   let node = data;
   for (const seg of path.split('.')) {
     if (node === null || typeof node !== 'object' || !Object.hasOwn(node, seg)) {
-      throw new Error(`data.json: missing ${path}`);
+      throw new Error(`${file}: missing ${path}`);
     }
     node = node[seg];
   }
@@ -231,63 +242,126 @@ function at(data, path) {
 
 const splitIds = (s) => s.split(',').map((x) => x.trim()).filter(Boolean);
 
-/** A sourced entry → {ref, source_ids, confidence, value}. Throws on UNSOURCED. */
-function sourced(data, ref) {
-  const e = at(data, ref);
-  if (typeof e?.source_id !== 'string' || e.source_id === '') {
-    throw new Error(`data.json: ${ref} has no source_id — an UNSOURCED value is never a fact`);
-  }
-  if (e.value === null || e.value === undefined) throw new Error(`data.json: ${ref} has no value`);
-  return { ref, source_ids: splitIds(e.source_id), confidence: e.confidence ?? null, value: e.value };
-}
+/** S2 < S10 < C1: dogs (S) first, then cats (C), numeric inside a prefix. */
+export const bySourceId = (a, b) => {
+  const pa = a[0] === 'S' ? 0 : 1;
+  const pb = b[0] === 'S' ? 0 : 1;
+  return pa - pb || Number(a.slice(1)) - Number(b.slice(1));
+};
 
-/** A game value: the entry must carry David's decision or a source. */
-function gameEntry(data, ref) {
-  const e = at(data, ref);
-  const decision = typeof e?.decision === 'string' ? e.decision : null;
-  const sourceIds = typeof e?.source_id === 'string' ? splitIds(e.source_id) : [];
-  if (!decision && sourceIds.length === 0) throw new Error(`data.json: game value ${ref} has neither a decision nor a source`);
-  const basis = [...new Set([...sourceIds, ...(Array.isArray(e.derived_from) ? e.derived_from : [])])].sort(bySourceId);
-  return { entry: e, meta: { ref, basis_source_ids: basis, decision } };
-}
-
-const bySourceId = (a, b) => Number(a.slice(1)) - Number(b.slice(1));
-
-/** "12–15 months" → [12, 15]; "> 120" → 120; "2–3" → [2, 3]. */
+/** "12–15 months" → [12, 15]. */
 function parseRange(text, ref) {
   const m = /(\d+(?:\.\d+)?)\s*[–-]\s*(\d+(?:\.\d+)?)/.exec(String(text));
-  if (!m) throw new Error(`data.json: cannot read a range from ${ref}: ${text}`);
+  if (!m) throw new Error(`cannot read a range from ${ref}: ${text}`);
   return [Number(m[1]), Number(m[2])];
 }
+/** "> 120" → 120. */
 function parseMoreThan(text, ref) {
   const m = /^>\s*(\d+(?:\.\d+)?)$/.exec(String(text).trim());
-  if (!m) throw new Error(`data.json: expected "> N" in ${ref}: ${text}`);
+  if (!m) throw new Error(`expected "> N" in ${ref}: ${text}`);
   return Number(m[1]);
 }
-const lc = (s) => String(s).trim().toLowerCase();
+const code = (s) => String(s).trim().toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
 
-const fact = (s, extra) => ({ ref: s.ref, source_ids: s.source_ids, confidence: s.confidence, ...extra });
+/** "Zlati prinašalec" → "zlati-prinasalec". */
+export function slugify(name) {
+  return name
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
 
-function normalizeSexRange(value, ref) {
-  if (Array.isArray(value)) return { all: value };
-  const sex = (v) => (Array.isArray(v) ? v : typeof v === 'number' ? [v, v] : null);
-  const out = { male: sex(value.male), female: sex(value.female) };
-  if (!out.male) throw new Error(`data.json: ${ref} has no male range`);
-  if (out.female === null && typeof value.female === 'string') out.female_note = lc(value.female);
+/**
+ * Reader for one species' data.json: `fact()` turns a SOURCED entry into a generic fact item
+ * (throws on UNSOURCED), `game()` reads a game value that has a decision or a source.
+ */
+function reader(data, file, prefix) {
+  const entry = (ref) => at(data, ref, file);
+  const sourced = (ref) => {
+    const e = entry(ref);
+    if (typeof e?.source_id !== 'string' || e.source_id === '') {
+      throw new Error(`${file}: ${ref} has no source_id — an UNSOURCED value is never a fact`);
+    }
+    if (e.value === null || e.value === undefined) throw new Error(`${file}: ${ref} has no value`);
+    return e;
+  };
+  const fact = (ref, item, transform = (v) => v) => {
+    const e = sourced(ref);
+    return {
+      ...item,
+      value: transform(e.value, ref),
+      source_ids: splitIds(e.source_id),
+      ref: `${prefix}${ref}`,
+      confidence: e.confidence ?? null,
+    };
+  };
+  const game = (ref, read = (e) => e.value) => {
+    const e = entry(ref);
+    const decision = typeof e?.decision === 'string' ? e.decision : null;
+    const ids = typeof e?.source_id === 'string' ? splitIds(e.source_id) : [];
+    if (!decision && ids.length === 0) throw new Error(`${file}: game value ${ref} has neither a decision nor a source`);
+    const value = read(e, ref);
+    const basis = [...new Set([...ids, ...(Array.isArray(e.derived_from) ? e.derived_from : [])])].sort(bySourceId);
+    return { value, meta: { ref: `${prefix}${ref}`, basis_source_ids: basis, decision } };
+  };
+  return { entry, sourced, fact, game };
+}
+
+/** {male:[a,b], female:[c,d]} / [a,b] / {male:53, female:"slightly less"} → quantity value. */
+function sexValue(v, ref) {
+  if (Array.isArray(v)) return v;
+  const r = (x) => (Array.isArray(x) ? x : typeof x === 'number' ? [x, x] : null);
+  const out = { male: r(v.male), female: r(v.female) };
+  if (!out.male) throw new Error(`${ref}: no male value`);
   return out;
 }
 
-// ─── breed specs ─────────────────────────────────────────────────────────────
+// ─── species and breeds in the register ──────────────────────────────────────
 
 /**
- * What is exported per breed. Only refs listed here are read, so a new data.json
- * field never appears on the website by accident. Order = BreedConfigsSeeder sort_order.
+ * The register. Order of `breeds` = PetPrep's order (the breeds of the app first, then the
+ * rollout order of ROADMAP M5-R10). `availability`:
+ *   in_app      playable in the store release of the app
+ *   coming_soon built in the app, not in a store release yet (or hidden behind a flag)
+ *   info_only   in the register with sourced facts, not playable in the app
  */
-const BREEDS = [
+const SPECIES = [
   {
-    id: 'border_collie',
+    id: 'dog',
+    slug: { en: 'dogs', sl: 'psi' },
+    name: { en: { one: 'Dog', many: 'Dogs' }, sl: { one: 'Pes', many: 'Psi' } },
+    free_plan: 'mutt',
+    fact_groups: ['exercise', 'grooming', 'feeding', 'lifespan', 'stages', 'size', 'training'],
+    facets: ['size', 'exercise', 'grooming'],
+    compare_fields: ['size', 'weight', 'exercise', 'grooming_frequency', 'shedding', 'lifespan', 'game_activity'],
+    breeds: [
+      { id: 'border_collie', availability: 'in_app', synonyms: { en: [], sl: [] } },
+      { id: 'labrador_retriever', availability: 'coming_soon', synonyms: { en: ['Labrador', 'Lab'], sl: ['labradorski prinašalec', 'labrador'] } },
+      { id: 'golden_retriever', availability: 'coming_soon', synonyms: { en: ['Golden'], sl: ['golden', 'golden retriver'] } },
+    ],
+  },
+  {
+    id: 'cat',
+    slug: { en: 'cats', sl: 'macke' },
+    name: { en: { one: 'Cat', many: 'Cats' }, sl: { one: 'Mačka', many: 'Mačke' } },
+    free_plan: 'domestic_cat',
+    fact_groups: ['play', 'litter', 'scratching', 'grooming', 'feeding', 'water', 'lifespan', 'stages', 'size'],
+    facets: [],
+    compare_fields: ['weight', 'grooming_sources_differ', 'lifespan', 'game_activity'],
+    // Cats are hidden in the app (PETPREP_CATS_ENABLED=false) → coming soon.
+    breeds: [{ id: 'maine_coon', availability: 'coming_soon', synonyms: { en: [], sl: [] } }],
+  },
+];
+
+// ─── dogs ────────────────────────────────────────────────────────────────────
+
+/** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
+const DOG_FACTS = {
+  border_collie: {
     height: ['height.fci_ideal', 'height.akc_range'],
-    weight: [['adult_weight.akc', 'range'], ['adult_weight.pdsa', 'range']],
+    weight: [['adult_weight.akc', null], ['adult_weight.pdsa', null]],
     lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
     exercise: [['exercise.adult', 'more_than']],
     coat: ['appearance.coat_varieties'],
@@ -296,26 +370,24 @@ const BREEDS = [
     food_motivation: null,
     health: [],
   },
-  {
-    id: 'labrador_retriever',
+  labrador_retriever: {
     height: ['height.fci_ideal', 'height.rkc_ideal', 'height.akc_range'],
-    weight: [['adult_weight.akc', 'range'], ['adult_weight.pdsa', 'range'], ['adult_weight.uk_measured_mean', 'mean']],
+    weight: [['adult_weight.akc', null], ['adult_weight.pdsa', null], ['adult_weight.uk_measured_mean', 'mean']],
     lifespan: [['lifespan.median_uk', 'median'], ['lifespan.median_uk_vetcompass_2018', 'median'], ['lifespan.rkc', 'more_than']],
     exercise: [['exercise.adult', 'more_than'], ['@proposed_game_parameters.labrador_retriever.exercise_minutes_adult', 'at_least']],
     coat: ['suitability.rkc_coat_length'],
-    grooming: ['suitability.rkc_grooming', 'suitability.woodgreen_grooming'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency'], ['suitability.woodgreen_grooming', 'grooming_level']],
     shedding: ['suitability.rkc_shedding'],
     food_motivation: 'behaviour.food_motivation',
     health: [['weight_gain', 'behaviour.obesity_tendency']],
   },
-  {
-    id: 'golden_retriever',
+  golden_retriever: {
     height: ['height.fci_range', 'height.rkc_range', 'height.akc_range'],
-    weight: [['adult_weight.akc', 'range'], ['adult_weight.pdsa', 'range']],
+    weight: [['adult_weight.akc', null], ['adult_weight.pdsa', null]],
     lifespan: [['lifespan.median_uk', 'median'], ['lifespan.median_uk_vetcompass_2012', 'median'], ['lifespan.rkc', 'more_than']],
     exercise: [['exercise.adult', 'more_than'], ['@proposed_game_parameters.golden_retriever.exercise_minutes_adult', 'at_least']],
     coat: ['suitability.rkc_coat_length'],
-    grooming: ['suitability.rkc_grooming', 'suitability.woodgreen_grooming'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency'], ['suitability.woodgreen_grooming', 'grooming_level']],
     shedding: ['suitability.rkc_shedding', 'suitability.woodgreen_shedding'],
     food_motivation: 'behaviour.food_motivation',
     health: [
@@ -324,43 +396,315 @@ const BREEDS = [
       ['weight_gain', 'behaviour.obesity_tendency'],
     ],
   },
-];
+};
 
-/** Game refs per breed (see the header for the rationale). */
-const GAME = {
+/** Per-breed game refs (dog data.json). */
+const DOG_GAME = {
   border_collie: {
-    adult_minutes: { ref: 'border_collie.exercise.adult', read: (e, ref) => parseMoreThan(e.value, ref) },
-    senior_minutes: { ref: 'proposed_game_parameters.senior_exercise_minutes', read: (e) => e.value.border_collie },
-    senior_from: { ref: 'proposed_game_parameters.arrival_age_months', read: (e) => e.value.senior.border_collie },
-    learning: { ref: 'border_collie.trainability.learning_multiplier', read: (e) => e.value },
+    adult_minutes: ['border_collie.exercise.adult', (e, ref) => parseMoreThan(e.value, ref)],
+    senior_minutes: ['proposed_game_parameters.senior_exercise_minutes', (e) => e.value.border_collie],
+    senior_from: ['proposed_game_parameters.arrival_age_months', (e) => e.value.senior.border_collie],
+    learning: ['border_collie.trainability.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.step_goal_border_collie_adult',
   },
   labrador_retriever: {
-    adult_minutes: { ref: 'proposed_game_parameters.labrador_retriever.exercise_minutes_adult', read: (e) => e.value },
-    senior_minutes: { ref: 'proposed_game_parameters.labrador_retriever.exercise_minutes_senior', read: (e) => e.value },
-    senior_from: { ref: 'proposed_game_parameters.labrador_retriever.stage_boundaries_months', read: (e) => e.value.senior },
-    learning: { ref: 'proposed_game_parameters.labrador_retriever.learning_multiplier', read: (e) => e.value },
+    adult_minutes: ['proposed_game_parameters.labrador_retriever.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.labrador_retriever.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.labrador_retriever.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.labrador_retriever.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.labrador_retriever.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.labrador_retriever.exercise_minutes_senior',
   },
   golden_retriever: {
-    adult_minutes: { ref: 'proposed_game_parameters.golden_retriever.exercise_minutes_adult', read: (e) => e.value },
-    senior_minutes: { ref: 'proposed_game_parameters.golden_retriever.exercise_minutes_senior', read: (e) => e.value },
-    senior_from: { ref: 'proposed_game_parameters.golden_retriever.stage_boundaries_months', read: (e) => e.value.senior },
-    learning: { ref: 'proposed_game_parameters.golden_retriever.learning_multiplier', read: (e) => e.value },
+    adult_minutes: ['proposed_game_parameters.golden_retriever.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.golden_retriever.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.golden_retriever.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.golden_retriever.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.golden_retriever.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.golden_retriever.exercise_minutes_senior',
   },
-  medium_mixed_breed: {
-    adult_minutes: { ref: 'medium_mixed_breed.exercise.adult_game_target', read: (e) => e.value },
-    senior_minutes: { ref: 'proposed_game_parameters.senior_exercise_minutes', read: (e) => e.value.medium_mixed_breed },
-    senior_from: { ref: 'proposed_game_parameters.arrival_age_months', read: (e) => e.value.senior.medium_mixed_breed },
-    learning: { ref: 'medium_mixed_breed.trainability.learning_multiplier', read: (e) => e.value },
+  mutt: {
+    adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],
+    senior_minutes: ['proposed_game_parameters.senior_exercise_minutes', (e) => e.value.medium_mixed_breed],
+    senior_from: ['proposed_game_parameters.arrival_age_months', (e) => e.value.senior.medium_mixed_breed],
+    learning: ['medium_mixed_breed.trainability.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.step_goal_mixed_adult',
   },
 };
 
-// ─── build ───────────────────────────────────────────────────────────────────
+function dogBreedFacts(R, id) {
+  const spec = DOG_FACTS[id];
+  if (!spec) throw new Error(`no DOG_FACTS for ${id}`);
+  const p = (rel) => (rel.startsWith('@') ? rel.slice(1) : `${id}.${rel}`);
+  const facts = [];
+
+  facts.push(R.fact(p('size_class'), { group: 'size', field: 'size', kind: 'category' }, (v) => code(v)));
+  for (const rel of spec.height) facts.push(R.fact(p(rel), { group: 'size', field: 'height', kind: 'quantity', unit: 'cm' }, sexValue));
+  for (const [rel, q] of spec.weight) {
+    facts.push(R.fact(p(rel), { group: 'size', field: 'weight', kind: 'quantity', unit: 'kg', ...(q ? { qualifier: q } : {}) }, (v, ref) => (typeof v.male === 'number' ? { male: [v.male, v.male], female: [v.female, v.female] } : sexValue(v, ref))));
+  }
+  facts.push(R.fact(p('growth.adult_weight_reached'), { group: 'stages', field: 'growth_end', kind: 'quantity', unit: 'months', qualifier: 'about', note: 'size_class_guidance' }, parseRange));
+  for (const [rel, q] of spec.lifespan) {
+    facts.push(R.fact(p(rel), { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : Number(v))));
+  }
+  for (const [rel, q] of spec.exercise) {
+    facts.push(R.fact(p(rel), { group: 'exercise', field: 'exercise', kind: 'quantity', unit: 'min_per_day', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : Number(v))));
+  }
+  for (const rel of spec.coat) {
+    facts.push(R.fact(p(rel), { group: 'grooming', field: 'coat', kind: 'category' }, (v) => (Array.isArray(v) ? v : [v]).map(code)));
+  }
+  for (const [rel, field] of spec.grooming) facts.push(R.fact(p(rel), { group: 'grooming', field, kind: 'category' }, code));
+  for (const rel of spec.shedding) facts.push(R.fact(p(rel), { group: 'grooming', field: 'shedding', kind: 'category' }, code));
+  if (spec.food_motivation) facts.push(R.fact(p(spec.food_motivation), { group: 'feeding', field: 'food_motivated', kind: 'statement' }, () => true));
+  facts.push(R.fact(p('trainability.coren_rank'), { group: 'training', field: 'coren_rank', kind: 'statement' }, Number));
+  facts.push(
+    R.fact(p('identity'), { group: 'training', field: 'fci_standard', kind: 'statement' }, (v, ref) => {
+      const s = String(v);
+      const num = (re) => {
+        const m = re.exec(s);
+        if (!m) throw new Error(`cannot read ${re} from ${ref}`);
+        return Number(m[1]);
+      };
+      if (!/Great Britain/.test(s)) throw new Error(`unknown origin in ${ref}`);
+      return { number: num(/FCI No\. (\d+)/), group: num(/Group (\d+)/), section: num(/Section (\d+)/), origin: 'GB' };
+    }),
+  );
+  const health = spec.health.map(([key, rel]) => {
+    const f = R.fact(p(rel), { key }, () => null);
+    delete f.value;
+    return f;
+  });
+  return { facts, health };
+}
+
+/** Species-wide dog facts (shown on every dog page in their group). */
+function dogGeneralFacts(R) {
+  const meals = [
+    ['8_12_weeks', 'puppy_8_12_weeks', 'exact'],
+    ['3_6_months', 'puppy_3_6_months', 'exact'],
+    ['6_12_months', 'puppy_6_12_months', 'exact'],
+    ['adult', 'adult', 'at_least'],
+    ['senior', 'senior', 'smaller_meals'],
+  ].map(([key, context, qualifier]) =>
+    R.fact(`general_by_size.feeding_meals_per_day.${key}`, { group: 'feeding', field: 'meals', kind: 'quantity', unit: 'meals_per_day', qualifier, context }, (v, ref) => (typeof v === 'number' ? v : parseRange(v, ref))),
+  );
+  const stages = [
+    R.fact('general_by_size.life_stages.puppy', { group: 'stages', field: 'stage', kind: 'quantity', unit: 'months', qualifier: 'until_about', context: 'puppy' }, parseRange),
+    R.fact('general_by_size.life_stages.young_adult', { group: 'stages', field: 'stage', kind: 'quantity', unit: 'years', qualifier: 'until', context: 'young_adult' }, (v, ref) => {
+      const m = /(\d+)\s*[–-]\s*(\d+)\s*years/.exec(String(v));
+      if (!m) throw new Error(`cannot read the young-adult end from ${ref}`);
+      return [Number(m[1]), Number(m[2])];
+    }),
+    R.fact('general_by_size.life_stages.senior', { group: 'stages', field: 'stage', kind: 'quantity', unit: 'share_of_lifespan', qualifier: 'last', context: 'senior' }, (v, ref) => {
+      const m = /last (\d+)%/.exec(String(v));
+      if (!m) throw new Error(`cannot read the senior share from ${ref}`);
+      return Number(m[1]) / 100;
+    }),
+  ];
+  return [...meals, ...stages];
+}
+
+/** Meal steps of the game from the arrival month on: [{from_months|null, meals}]. */
+function mealSteps(table, arrival) {
+  const sorted = [...table].sort((a, b) => a.from - b.from);
+  let active = sorted.filter((t) => t.from <= arrival).at(-1);
+  if (!active) throw new Error(`no meal rule at arrival month ${arrival}`);
+  const out = [{ from_months: null, meals: active.meals }];
+  for (const t of sorted) if (t.from > arrival && t.meals !== out.at(-1).meals) out.push({ from_months: t.from, meals: t.meals });
+  return out;
+}
+
+function dogGame(R) {
+  const conv = String(R.entry('meta.conventions.game_time'));
+  if (!/^1 real week = 1 month of dog age/.test(conv)) throw new Error('dog data.json: game_time convention changed');
+  const spm = R.game('general_by_size.exercise.steps_conversion');
+  if (!Number.isInteger(spm.value)) throw new Error('steps_conversion is not an integer');
+  const walk = R.game('proposed_game_parameters.walk_minutes_puppy');
+  const perMonth = [...new Set(Object.entries(walk.value).map(([m, min]) => min / Number(m)))];
+  if (perMonth.length !== 1 || !Number.isInteger(perMonth[0])) throw new Error('walk_minutes_puppy is not "N minutes × age in months"');
+  const feed = R.game('proposed_game_parameters.feed_windows');
+  const arrival = R.game('proposed_game_parameters.arrival_age_months');
+  const fv = feed.value;
+  const general = {
+    steps_per_exercise_minute: { value: spm.value, ...spm.meta },
+    puppy_exercise_minutes_per_age_month: { value: perMonth[0], ...walk.meta },
+    meals: { value: { puppy: [{ from: 0, meals: fv['2_3_months'] }, { from: 3, meals: fv['3_6_months'] }, { from: 6, meals: fv['6_plus_months'] }], young: fv['6_plus_months'], adult: fv['6_plus_months'], senior: fv.senior }, ...feed.meta },
+    arrival: { value: { puppy: arrival.value.puppy, young: arrival.value.young, adult: arrival.value.adult }, ...arrival.meta },
+  };
+  for (const v of [general.meals.value.puppy.map((x) => x.meals), general.meals.value.young, general.meals.value.senior].flat()) {
+    if (!Number.isInteger(v)) throw new Error('feed_windows: meal count missing');
+  }
+
+  const forBreed = (id) => {
+    const g = DOG_GAME[id];
+    const read = ([ref, fn]) => {
+      const r = R.game(ref, fn);
+      if (typeof r.value !== 'number' || !Number.isFinite(r.value)) throw new Error(`game value ${ref} for ${id} is not a number`);
+      return r;
+    };
+    const adult = read(g.adult_minutes);
+    const senior = read(g.senior_minutes);
+    const seniorFrom = read(g.senior_from);
+    const learning = read(g.learning);
+    const adultSteps = adult.value * spm.value;
+    const seniorSteps = senior.value * spm.value;
+    const goal = R.entry(g.step_goal_check).value;
+    if (goal !== adultSteps) throw new Error(`${g.step_goal_check} = ${goal}, but ${adult.value} min × ${spm.value} = ${adultSteps}`);
+    if (g.senior_steps_check && R.entry(g.senior_steps_check).steps !== seniorSteps) throw new Error(`${g.senior_steps_check}.steps ≠ ${seniorSteps}`);
+    const stepsPerMonth = perMonth[0] * spm.value;
+    const capMonth = Math.ceil(adult.value / perMonth[0]);
+    const a = general.arrival.value;
+    const youngSteps = Math.min(a.young * stepsPerMonth, adultSteps);
+    const values = [general.steps_per_exercise_minute, general.puppy_exercise_minutes_per_age_month, general.meals, general.arrival].map(({ value, ...m }) => m);
+    values.push(adult.meta, senior.meta, seniorFrom.meta, learning.meta);
+    return {
+      stages: [
+        { stage: 'puppy', starts: { arrival_months: a.puppy }, meals: mealSteps(general.meals.value.puppy, a.puppy), activity: { kind: 'steps_growing', per_month: stepsPerMonth, first: Math.min(a.puppy * stepsPerMonth, adultSteps), cap: adultSteps, cap_month: capMonth } },
+        { stage: 'young', starts: { month: a.young }, meals: [{ from_months: null, meals: general.meals.value.young }], activity: youngSteps === adultSteps ? { kind: 'steps', value: adultSteps } : { kind: 'steps_range', from: youngSteps, to: adultSteps } },
+        { stage: 'adult', starts: { month: a.adult }, meals: [{ from_months: null, meals: general.meals.value.adult }], activity: { kind: 'steps', value: adultSteps } },
+        { stage: 'senior', starts: { month: seniorFrom.value }, meals: [{ from_months: null, meals: general.meals.value.senior }], activity: { kind: 'steps', value: seniorSteps } },
+      ],
+      adult_activity: { kind: 'steps', value: adultSteps },
+      rules: [
+        { key: 'steps_rule', params: { minutes: adult.value, steps: adultSteps, per_minute: spm.value } },
+        { key: 'learning', params: { multiplier: learning.value } },
+        { key: 'senior_share', params: { months: seniorFrom.value } },
+        { key: 'walk_sensor', params: {} },
+      ],
+      values,
+      basis_source_ids: [...new Set(values.flatMap((v) => v.basis_source_ids))].sort(bySourceId),
+    };
+  };
+  return { forBreed };
+}
+
+function dogFacets(facts) {
+  const first = (field) => facts.find((f) => f.field === field);
+  const facets = {};
+  const size = first('size');
+  if (size) facets.size = size.value;
+  const ex = first('exercise');
+  if (ex) facets.exercise = ex.value >= 120 ? 'over_2h' : ex.value >= 60 ? 'h1_2' : 'under_1h';
+  const gr = first('grooming_frequency');
+  if (gr) facets.grooming = { once_a_week: 'weekly', more_than_once_a_week: 'several_weekly', daily: 'daily' }[gr.value] ?? 'other';
+  return facets;
+}
+
+// ─── cats ────────────────────────────────────────────────────────────────────
+
+function catGeneralFacts(R) {
+  const meals = [
+    ['kitten_6_12_weeks', 'kitten_6_12_weeks'],
+    ['kitten_3_6_months', 'kitten_3_6_months'],
+    ['kitten_6_12_months', 'kitten_6_12_months'],
+    ['adult', 'adult'],
+    ['senior', 'senior'],
+  ].map(([key, context]) => R.fact(`general.meals_per_day.${key}`, { group: 'feeding', field: 'meals', kind: 'quantity', unit: 'meals_per_day', qualifier: 'exact', context }, Number));
+  const stage = (key, context, unit, qualifier, fn) => R.fact(`general.life_stages.${key}`, { group: 'stages', field: 'stage', kind: 'quantity', unit, qualifier, context }, fn);
+  return [
+    R.fact('general.play.sessions', { group: 'play', field: 'play_sessions', kind: 'statement' }, (v, ref) => {
+      const m = /(\d+)\s*[–-]\s*(\d+)\s*×\s*(\d+)\s*[–-]\s*(\d+)\s*min/.exec(String(v));
+      if (!m) throw new Error(`cannot read play sessions from ${ref}`);
+      return { sessions: [Number(m[1]), Number(m[2])], minutes: [Number(m[3]), Number(m[4])] };
+    }),
+    R.fact('general.play.kittens_more', { group: 'play', field: 'kittens_play_more', kind: 'statement' }, () => true),
+    R.fact('general.litter.scoop_frequency', { group: 'litter', field: 'litter_scoop', kind: 'quantity', unit: 'times_per_day' }, parseRange),
+    R.fact('general.litter.full_change', { group: 'litter', field: 'litter_full_change', kind: 'quantity', unit: 'days', qualifier: 'every' }, Number),
+    R.fact('general.litter.adult_pee', { group: 'litter', field: 'litter_pee', kind: 'quantity', unit: 'times_per_day', context: 'adult' }, parseRange),
+    R.fact('general.litter.adult_poo', { group: 'litter', field: 'litter_poo', kind: 'quantity', unit: 'times_per_day', context: 'adult' }, parseRange),
+    R.fact('general.scratching.natural', { group: 'scratching', field: 'scratching_natural', kind: 'statement' }, () => true),
+    R.fact('general.water.fresh_daily', { group: 'water', field: 'water_fresh', kind: 'statement' }, () => true),
+    R.fact('general.water.need', { group: 'water', field: 'water_need', kind: 'quantity', unit: 'ml_per_kg_day' }, parseRange),
+    ...meals,
+    stage('kitten', 'kitten', 'months', 'until', (v, ref) => {
+      const m = /(\d+)\s*months/.exec(String(v));
+      if (!m) throw new Error(`cannot read ${ref}`);
+      return Number(m[1]);
+    }),
+    stage('young_adult', 'young_adult', 'years', 'span', parseRange),
+    stage('mature_adult', 'mature_adult', 'years', 'span', parseRange),
+    stage('senior', 'senior', 'years', 'from', (v, ref) => {
+      const m = /^(\d+)\s*years/.exec(String(v));
+      if (!m) throw new Error(`cannot read ${ref}`);
+      return Number(m[1]);
+    }),
+    R.fact('general.sleep.adult', { group: 'stages', field: 'sleep', kind: 'quantity', unit: 'hours_per_day', context: 'adult' }, parseRange),
+  ];
+}
+
+function catBreedFacts(R, id) {
+  if (id !== 'maine_coon') throw new Error(`no cat fact spec for ${id}`);
+  const male = R.fact('maine_coon.adult_weight.tica_male', {}, parseRange);
+  const female = R.fact('maine_coon.adult_weight.tica_female', {}, parseRange);
+  if (male.source_ids.join() !== female.source_ids.join()) throw new Error('Maine Coon weights cite different sources');
+  return {
+    facts: [
+      { group: 'size', field: 'weight', kind: 'quantity', unit: 'kg', value: { male: male.value, female: female.value }, source_ids: male.source_ids, ref: `${male.ref} + ${female.ref}`, confidence: male.confidence },
+      R.fact('maine_coon.growth_end', { group: 'stages', field: 'growth_end', kind: 'quantity', unit: 'months', qualifier: 'about' }, parseRange),
+      R.fact('maine_coon.lifespan.expectancy_at_birth', { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: 'expectancy' }, Number),
+      R.fact('maine_coon.grooming.range', { group: 'grooming', field: 'grooming_sources_differ', kind: 'statement' }, () => ({ from: 'daily', to: 'weekly' })),
+    ],
+    health: [],
+  };
+}
+
+function catGame(R) {
+  const conv = String(R.entry('meta.conventions.game_time'));
+  if (!/^1 real week = 1 month of cat age/.test(conv)) throw new Error('cat data.json: game_time convention changed');
+  const n = (ref) => {
+    const r = R.game(ref);
+    if (typeof r.value !== 'number') throw new Error(`cat game value ${ref} is not a number`);
+    return r;
+  };
+  const meal = (k) => n(`general.meals_per_day.${k}`);
+  const m4 = meal('kitten_6_12_weeks');
+  const m3 = meal('kitten_3_6_months');
+  const m2 = meal('kitten_6_12_months');
+  const mA = meal('adult');
+  const mS = meal('senior');
+  const young = n('general.arrival_age.young');
+  const adult = n('general.arrival_age.adult');
+  const senior = n('general.arrival_age.senior');
+  const playK = n('general.play.game_sessions_kitten');
+  const playA = n('general.play.game_sessions_adult');
+  const gap = n('general.play.game_min_gap');
+  const usesA = n('general.litter.game_uses_per_day_adult');
+  const scoop = n('general.litter.game_scoop_deadline');
+  const change = n('general.litter.full_change');
+  const kittenTable = [{ from: 0, meals: m4.value }, { from: 3, meals: m3.value }, { from: 6, meals: m2.value }];
+  const shared = [m4, m3, m2, mA, mS, young, adult, senior, playK, playA, gap, usesA, scoop, change];
+
+  const forBreed = (id) => {
+    const arrival = id === 'maine_coon' ? n('maine_coon.arrival_age_kitten') : n('general.arrival_age.kitten_min');
+    const extra = [];
+    const rules = [
+      { key: 'play_instead_of_steps', params: { sessions: playA.value, gap_minutes: gap.value } },
+      { key: 'litter_rule', params: { uses: usesA.value, scoop_hours: scoop.value, change_days: change.value } },
+      { key: 'scratching_after_missed_play', params: {} },
+    ];
+    if (id === 'maine_coon') {
+      const groom = n('maine_coon.grooming.game_sessions_per_week');
+      extra.push(groom);
+      rules.push({ key: 'grooming_rule', params: { per_week: groom.value } });
+    }
+    const values = [...shared, arrival, ...extra].map((r) => r.meta);
+    return {
+      stages: [
+        { stage: 'puppy', starts: { arrival_months: arrival.value }, meals: mealSteps(kittenTable, arrival.value), activity: { kind: 'play_sessions', value: playK.value } },
+        { stage: 'young', starts: { month: young.value }, meals: [{ from_months: null, meals: mA.value }], activity: { kind: 'play_sessions', value: playA.value } },
+        { stage: 'adult', starts: { month: adult.value }, meals: [{ from_months: null, meals: mA.value }], activity: { kind: 'play_sessions', value: playA.value } },
+        { stage: 'senior', starts: { month: senior.value }, meals: [{ from_months: null, meals: mS.value }], activity: { kind: 'play_sessions', value: playA.value } },
+      ],
+      adult_activity: { kind: 'play_sessions', value: playA.value },
+      rules,
+      values,
+      basis_source_ids: [...new Set(values.flatMap((v) => v.basis_source_ids))].sort(bySourceId),
+    };
+  };
+  return { forBreed };
+}
+
+// ─── shared parts ────────────────────────────────────────────────────────────
 
 function readInput(root, rel) {
   return readFileSync(resolve(root, rel), 'utf8');
@@ -370,177 +714,7 @@ function sha256(text) {
   return createHash('sha256').update(text).digest('hex');
 }
 
-function exportFacts(data, spec) {
-  const p = (rel) => (rel.startsWith('@') ? rel.slice(1) : `${spec.id}.${rel}`);
-  const identity = sourced(data, p('identity'));
-  const id = String(identity.value);
-  const num = (re) => {
-    const m = re.exec(id);
-    if (!m) throw new Error(`data.json: cannot read ${re} from ${spec.id}.identity`);
-    return Number(m[1]);
-  };
-
-  const size = sourced(data, p('size_class'));
-  const growth = sourced(data, p('growth.adult_weight_reached'));
-  const coren = sourced(data, p('trainability.coren_rank'));
-
-  return {
-    identity: fact(identity, {
-      fci_number: num(/FCI No\. (\d+)/),
-      fci_group: num(/Group (\d+)/),
-      fci_section: num(/Section (\d+)/),
-      origin: /Great Britain/.test(id) ? 'GB' : (() => { throw new Error(`unknown origin in ${spec.id}.identity`); })(),
-    }),
-    size_class: fact(size, { value: lc(size.value) }),
-    height_cm: spec.height.map((rel) => {
-      const s = sourced(data, p(rel));
-      return fact(s, normalizeSexRange(s.value, s.ref));
-    }),
-    weight_kg: spec.weight.map(([rel, kind]) => {
-      const s = sourced(data, p(rel));
-      return fact(s, { kind, ...normalizeSexRange(s.value, s.ref) });
-    }),
-    growth_end_months: fact(growth, { value: parseRange(growth.value, growth.ref) }),
-    lifespan_years: spec.lifespan.map(([rel, kind]) => {
-      const s = sourced(data, p(rel));
-      const value = kind === 'more_than' ? parseMoreThan(s.value, s.ref) : Number(s.value);
-      if (!Number.isFinite(value)) throw new Error(`data.json: ${s.ref} is not a number`);
-      return fact(s, { kind, value });
-    }),
-    exercise_minutes_per_day: spec.exercise.map(([rel, kind]) => {
-      const s = sourced(data, p(rel));
-      const value = kind === 'more_than' ? parseMoreThan(s.value, s.ref) : Number(s.value);
-      if (!Number.isFinite(value)) throw new Error(`data.json: ${s.ref} is not a number`);
-      return fact(s, { kind, value });
-    }),
-    coat: spec.coat.map((rel) => {
-      const s = sourced(data, p(rel));
-      return fact(s, { value: (Array.isArray(s.value) ? s.value : [s.value]).map(lc) });
-    }),
-    grooming: spec.grooming.map((rel) => {
-      const s = sourced(data, p(rel));
-      return fact(s, { value: lc(s.value) });
-    }),
-    shedding: spec.shedding.map((rel) => {
-      const s = sourced(data, p(rel));
-      return fact(s, { value: lc(s.value) });
-    }),
-    food_motivated: spec.food_motivation ? fact(sourced(data, p(spec.food_motivation)), {}) : null,
-    coren_rank: fact(coren, { value: Number(coren.value) }),
-  };
-}
-
-function exportGeneral(data) {
-  const meals = [
-    ['8_12_weeks', 'puppy_8_12_weeks', 'exact'],
-    ['3_6_months', 'puppy_3_6_months', 'exact'],
-    ['6_12_months', 'puppy_6_12_months', 'exact'],
-    ['adult', 'adult', 'at_least'],
-    ['senior', 'senior', 'smaller_meals'],
-  ].map(([key, stage, kind]) => {
-    const s = sourced(data, `general_by_size.feeding_meals_per_day.${key}`);
-    const value = typeof s.value === 'number' ? [s.value, s.value] : parseRange(s.value, s.ref);
-    return fact(s, { stage, kind, value });
-  });
-
-  const puppy = sourced(data, 'general_by_size.life_stages.puppy');
-  const young = sourced(data, 'general_by_size.life_stages.young_adult');
-  const senior = sourced(data, 'general_by_size.life_stages.senior');
-  const seniorShare = /last (\d+)%/.exec(String(senior.value));
-  if (!seniorShare) throw new Error('data.json: cannot read the senior share');
-  const youngYears = /(\d+)\s*[–-]\s*(\d+)\s*years/.exec(String(young.value));
-  if (!youngYears) throw new Error('data.json: cannot read the young-adult end');
-
-  return {
-    meals_per_day: meals,
-    life_stages: {
-      puppy_until_months: fact(puppy, { value: parseRange(puppy.value, puppy.ref) }),
-      young_adult_until_years: fact(young, { value: [Number(youngYears[1]), Number(youngYears[2])] }),
-      senior_last_share_of_lifespan: fact(senior, { value: Number(seniorShare[1]) / 100 }),
-    },
-  };
-}
-
-function exportGame(data) {
-  const conv = String(at(data, 'meta.conventions.game_time'));
-  if (!/^1 real week = 1 month of dog age/.test(conv)) throw new Error('data.json: game_time convention changed');
-
-  const spm = gameEntry(data, 'general_by_size.exercise.steps_conversion');
-  const stepsPerMinute = spm.entry.value;
-  if (!Number.isInteger(stepsPerMinute)) throw new Error('steps_conversion is not an integer');
-
-  const walk = gameEntry(data, 'proposed_game_parameters.walk_minutes_puppy');
-  const perMonth = [...new Set(Object.entries(walk.entry.value).map(([m, min]) => min / Number(m)))];
-  if (perMonth.length !== 1 || !Number.isInteger(perMonth[0])) throw new Error('walk_minutes_puppy is not "N minutes × age in months"');
-
-  const feed = gameEntry(data, 'proposed_game_parameters.feed_windows');
-  const fv = feed.entry.value;
-  const arrival = gameEntry(data, 'proposed_game_parameters.arrival_age_months');
-
-  const general = {
-    real_weeks_per_dog_month: { value: 1, ref: 'meta.conventions.game_time', basis_source_ids: [], decision: null },
-    steps_per_exercise_minute: { value: stepsPerMinute, ...spm.meta },
-    puppy_exercise_minutes_per_age_month: { value: perMonth[0], ...walk.meta },
-    meals_per_day: {
-      value: [
-        { stage: 'puppy', from_months: 2, until_months: 3, meals: fv['2_3_months'] },
-        { stage: 'puppy', from_months: 3, until_months: 6, meals: fv['3_6_months'] },
-        { stage: 'puppy', from_months: 6, until_months: null, meals: fv['6_plus_months'] },
-        { stage: 'young', from_months: null, until_months: null, meals: fv['6_plus_months'] },
-        { stage: 'adult', from_months: null, until_months: null, meals: fv['6_plus_months'] },
-        { stage: 'senior', from_months: null, until_months: null, meals: fv.senior },
-      ],
-      ...feed.meta,
-    },
-    puppy_arrival_age_months: { value: arrival.entry.value.puppy, ...arrival.meta },
-    young_from_months: { value: arrival.entry.value.young, ...arrival.meta },
-    adult_from_months: { value: arrival.entry.value.adult, ...arrival.meta },
-  };
-  for (const [k, v] of Object.entries(general.meals_per_day.value)) {
-    if (!Number.isInteger(v.meals)) throw new Error(`feed_windows: meals missing for row ${k}`);
-  }
-
-  const perBreed = {};
-  for (const [breed, g] of Object.entries(GAME)) {
-    const read = (spec) => {
-      const { entry, meta } = gameEntry(data, spec.ref);
-      const value = spec.read(entry, spec.ref);
-      if (typeof value !== 'number' || !Number.isFinite(value)) throw new Error(`game value ${spec.ref} for ${breed} is not a number`);
-      return { value, ...meta };
-    };
-    const adult = read(g.adult_minutes);
-    const senior = read(g.senior_minutes);
-    const adultSteps = adult.value * stepsPerMinute;
-    const seniorSteps = senior.value * stepsPerMinute;
-    // Consistency with the step goals recorded in data.json.
-    const goal = at(data, g.step_goal_check).value;
-    if (goal !== adultSteps) throw new Error(`${g.step_goal_check} = ${goal}, but ${adult.value} min × ${stepsPerMinute} = ${adultSteps}`);
-    if (g.senior_steps_check) {
-      const s = at(data, g.senior_steps_check).steps;
-      if (s !== seniorSteps) throw new Error(`${g.senior_steps_check}.steps = ${s}, expected ${seniorSteps}`);
-    }
-    const capMonth = Math.ceil(adult.value / perMonth[0]);
-    const puppySteps = [];
-    for (let m = general.puppy_arrival_age_months.value; m <= capMonth; m++) {
-      puppySteps.push({ age_months: m, steps: Math.min(m * perMonth[0], adult.value) * stepsPerMinute });
-    }
-    perBreed[breed] = {
-      adult_exercise_minutes: adult,
-      senior_exercise_minutes: senior,
-      adult_step_goal: adultSteps,
-      senior_step_goal: seniorSteps,
-      growing_step_goal_by_age_months: puppySteps,
-      senior_from_months: read(g.senior_from),
-      learning_multiplier: read(g.learning),
-    };
-  }
-  const variation = gameEntry(data, 'medium_mixed_breed.trainability.individual_variation');
-  perBreed.medium_mixed_breed.individual_learning_variation = { value: variation.entry.value, ...variation.meta };
-
-  return { general, breeds: perBreed };
-}
-
-function exportSuitability(php, data, sources) {
+function exportSuitability(php, readers, sources, breedIds) {
   if (!php || typeof php.vocabulary !== 'object' || typeof php.breeds !== 'object') {
     throw new Error('breed_suitability.php: expected vocabulary + breeds');
   }
@@ -551,7 +725,7 @@ function exportSuitability(php, data, sources) {
     vocabulary[tag] = kind;
   }
   const perBreed = {};
-  for (const { id } of BREEDS) {
+  for (const id of breedIds) {
     const b = php.breeds[id] ?? { suits: [], consider: [] };
     const out = {};
     for (const kind of ['suits', 'consider']) {
@@ -560,8 +734,7 @@ function exportSuitability(php, data, sources) {
         const ids = [...t.source_ids].sort(bySourceId);
         for (const s of ids) if (!sources[s]) throw new Error(`breed_suitability.php: ${id} ${t.tag} cites unknown ${s}`);
         for (const ref of t.refs) {
-          const e = at(data, ref);
-          if (typeof e?.source_id !== 'string') throw new Error(`breed_suitability.php: ${id} ${t.tag} ref ${ref} is unsourced`);
+          if (typeof readers.dog.entry(ref)?.source_id !== 'string') throw new Error(`breed_suitability.php: ${id} ${t.tag} ref ${ref} is unsourced`);
         }
         return { tag: t.tag, source_ids: ids, refs: [...t.refs] };
       });
@@ -598,35 +771,81 @@ function collectSourceIds(node, into = new Set()) {
 
 /** Builds the registry object from the input texts (pure; used by the test). */
 export function buildRegistry(texts) {
-  const data = JSON.parse(texts.data);
-  const sources = parseSourcesTable(texts.sources);
-  const php = parsePhpReturn(texts.suitability);
-  const suitability = exportSuitability(php, data, sources);
-  const general = exportGeneral(data);
-  const game = exportGame(data);
+  const dogData = JSON.parse(texts.dog_data);
+  const catData = JSON.parse(texts.cat_data);
+  const readers = { dog: reader(dogData, 'dog-data/data.json', ''), cat: reader(catData, 'cat-data/data.json', 'cat-data:') };
+  const dogSources = parseSourcesTable(texts.dog_sources);
+  const catSources = parseSourcesTable(texts.cat_sources);
+  for (const id of Object.keys(catSources)) if (dogSources[id]) throw new Error(`source id ${id} in both tables`);
+  const sources = { ...dogSources, ...catSources };
+  const names = { en: JSON.parse(texts.family_en).breeds, sl: JSON.parse(texts.family_sl).breeds };
+  const allBreedIds = SPECIES.flatMap((s) => s.breeds.map((b) => b.id));
+  const suitability = exportSuitability(parsePhpReturn(texts.suitability), readers, sources, allBreedIds);
+  const game = { dog: dogGame(readers.dog), cat: catGame(readers.cat) };
+  const general = { dog: dogGeneralFacts(readers.dog), cat: catGeneralFacts(readers.cat) };
 
-  const breeds = BREEDS.map((spec) => {
-    const facts = exportFacts(data, spec);
-    const health = spec.health.map(([key, rel]) => {
-      const s = sourced(data, `${spec.id}.${rel}`);
-      return { key, ref: s.ref, source_ids: s.source_ids, confidence: s.confidence };
+  const nameOf = (id) => {
+    const n = { en: names.en?.[id], sl: names.sl?.[id] };
+    if (!n.en || !n.sl) throw new Error(`family.json: no breed name for ${id} (en/sl)`);
+    return n;
+  };
+
+  const breeds = [];
+  const species = SPECIES.map((sp) => {
+    const seen = { en: new Set(), sl: new Set() };
+    sp.breeds.forEach((spec, order) => {
+      const { facts, health } = sp.id === 'dog' ? dogBreedFacts(readers.dog, spec.id) : catBreedFacts(readers.cat, spec.id);
+      for (const f of facts) if (!sp.fact_groups.includes(f.group)) throw new Error(`${spec.id}: fact group ${f.group} is not a ${sp.id} group`);
+      const name = nameOf(spec.id);
+      const slug = { en: slugify(name.en), sl: slugify(name.sl) };
+      for (const l of ['en', 'sl']) {
+        if (seen[l].has(slug[l]) || RESERVED_SLUGS.includes(slug[l])) throw new Error(`${spec.id}: slug "${slug[l]}" (${l}) is taken or reserved`);
+        seen[l].add(slug[l]);
+      }
+      if (!['in_app', 'coming_soon', 'info_only'].includes(spec.availability)) throw new Error(`${spec.id}: bad availability`);
+      const compare = {};
+      for (const field of sp.compare_fields) {
+        if (field === 'game_activity') continue;
+        const f = facts.find((x) => x.field === field);
+        if (f) compare[field] = facts.indexOf(f);
+      }
+      const g = spec.availability === 'info_only' ? null : game[sp.id].forBreed(spec.id);
+      const entry = {
+        id: spec.id,
+        species: sp.id,
+        order,
+        availability: spec.availability,
+        name,
+        slug,
+        synonyms: spec.synonyms,
+        facets: sp.id === 'dog' ? dogFacets(facts) : {},
+        facts,
+        compare,
+        health,
+        suitability: suitability.breeds[spec.id],
+        game: g,
+      };
+      entry.source_ids = [...collectSourceIds([entry, general[sp.id]])].sort(bySourceId);
+      breeds.push(entry);
     });
-    const entry = {
-      id: spec.id,
-      species: 'dog',
-      facts,
-      health,
-      suitability: suitability.breeds[spec.id],
-      game: game.breeds[spec.id],
+    const ours = breeds.filter((b) => b.species === sp.id);
+    const status = ours.some((b) => b.availability === 'in_app') ? 'available' : ours.some((b) => b.availability === 'coming_soon') ? 'coming_soon' : 'info_only';
+    const free = game[sp.id].forBreed(sp.free_plan);
+    return {
+      id: sp.id,
+      slug: sp.slug,
+      name: sp.name,
+      status,
+      breed_count: ours.length,
+      fact_groups: sp.fact_groups,
+      facets: sp.facets,
+      compare_fields: sp.compare_fields,
+      general_facts: general[sp.id],
+      free_plan: { id: sp.free_plan, name: nameOf(sp.free_plan), adult_activity: free.adult_activity, basis_source_ids: free.basis_source_ids },
     };
-    entry.source_ids = [...collectSourceIds([entry, general, game.general])].sort(bySourceId);
-    return entry;
   });
 
-  const mixed = { id: 'medium_mixed_breed', game: game.breeds.medium_mixed_breed };
-  mixed.source_ids = [...collectSourceIds([mixed, game.general])].sort(bySourceId);
-
-  const used = [...collectSourceIds([breeds, mixed, general, game.general])].sort(bySourceId);
+  const used = [...collectSourceIds([breeds, species])].sort(bySourceId);
   const sourceList = used.map((id) => {
     if (!sources[id]) throw new Error(`unknown source ${id}`);
     return sources[id];
@@ -639,17 +858,15 @@ export function buildRegistry(texts) {
     schema_version: SCHEMA_VERSION,
     generator: 'scripts/export-breed-registry.mjs (DataVallis/pet-prep)',
     note: 'Facts carry source_ids (sources[]); game.* values are PetPrep game rules (David decisions), not veterinary advice. Health items are for information only, not vet-reviewed. Do not edit by hand — re-run the export.',
-    data_compiled: data.meta.compiled,
+    data_compiled: { dog: dogData.meta.compiled, cat: catData.meta.compiled },
     inputs,
     suitability_vocabulary: suitability.vocabulary,
     suitability_labels: {
       en: exportLabels(JSON.parse(texts.labels_en), 'en', suitability.vocabulary),
       sl: exportLabels(JSON.parse(texts.labels_sl), 'sl', suitability.vocabulary),
     },
-    general,
-    game_general: game.general,
+    species,
     breeds,
-    mixed_breed: mixed,
     sources: sourceList,
   };
 }
@@ -692,7 +909,7 @@ function main(argv) {
   }
   writeFileSync(out, json);
   const reg = JSON.parse(json);
-  console.log(`export-breed-registry: wrote ${outRel} (${reg.breeds.length} breeds, ${reg.sources.length} sources)`);
+  console.log(`export-breed-registry: wrote ${outRel} (${reg.species.length} species, ${reg.breeds.length} breeds, ${reg.sources.length} sources)`);
   return 0;
 }
 

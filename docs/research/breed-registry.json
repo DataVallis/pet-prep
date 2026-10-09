@@ -1,16 +1,27 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "generator": "scripts/export-breed-registry.mjs (DataVallis/pet-prep)",
   "note": "Facts carry source_ids (sources[]); game.* values are PetPrep game rules (David decisions), not veterinary advice. Health items are for information only, not vet-reviewed. Do not edit by hand — re-run the export.",
-  "data_compiled": "2026-10-05",
+  "data_compiled": {
+    "dog": "2026-10-05",
+    "cat": "2026-10-08"
+  },
   "inputs": {
-    "data": {
+    "dog_data": {
       "path": "docs/research/dog-data/data.json",
       "sha256": "bc36b2959a89c18e43b448397d6a747bccd9b01476889573590c23c200d1b1c8"
     },
-    "sources": {
+    "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
       "sha256": "20df0352a732b1cd19e4f4b4d4da428db14110ffd074844dc312ee37ea7cb31d"
+    },
+    "cat_data": {
+      "path": "docs/research/cat-data/data.json",
+      "sha256": "6655cdaad99021db71e6c724f4cf6bac4e4dd9139a96c5cdbf6583b0713dcdd7"
+    },
+    "cat_sources": {
+      "path": "docs/research/cat-data/sources.md",
+      "sha256": "14f18b36ea5aca1b3a299510756ff91a036239a94fa041551b5594709307fc0f"
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
@@ -23,6 +34,14 @@
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
       "sha256": "e721dfa828458631d6f17a34a3f04dab9d76dbdabc511504f01c16fb60c40ec1"
+    },
+    "family_en": {
+      "path": "mobile/src/i18n/locales/en/family.json",
+      "sha256": "6ad2e5bf17d283be3a429f96cd2aa01c0e18dbcf61ac75c5a675ebe91504da7c"
+    },
+    "family_sl": {
+      "path": "mobile/src/i18n/locales/sl/family.json",
+      "sha256": "d88f4882705943ea96323bf110eeb45207c847ad16b1a9af2fc0f0910b608d11"
     }
   },
   "suitability_vocabulary": {
@@ -95,241 +114,594 @@
       }
     }
   },
-  "general": {
-    "meals_per_day": [
-      {
-        "ref": "general_by_size.feeding_meals_per_day.8_12_weeks",
-        "source_ids": [
-          "S18"
-        ],
-        "confidence": "high",
-        "stage": "puppy_8_12_weeks",
-        "kind": "exact",
-        "value": [
-          4,
-          4
-        ]
+  "species": [
+    {
+      "id": "dog",
+      "slug": {
+        "en": "dogs",
+        "sl": "psi"
       },
-      {
-        "ref": "general_by_size.feeding_meals_per_day.3_6_months",
-        "source_ids": [
-          "S18"
-        ],
-        "confidence": "medium",
-        "stage": "puppy_3_6_months",
-        "kind": "exact",
-        "value": [
-          3,
-          3
-        ]
+      "name": {
+        "en": {
+          "one": "Dog",
+          "many": "Dogs"
+        },
+        "sl": {
+          "one": "Pes",
+          "many": "Psi"
+        }
       },
-      {
-        "ref": "general_by_size.feeding_meals_per_day.6_12_months",
-        "source_ids": [
-          "S18"
-        ],
-        "confidence": "high",
-        "stage": "puppy_6_12_months",
-        "kind": "exact",
-        "value": [
-          2,
-          2
-        ]
-      },
-      {
-        "ref": "general_by_size.feeding_meals_per_day.adult",
-        "source_ids": [
-          "S19"
-        ],
-        "confidence": "medium",
-        "stage": "adult",
-        "kind": "at_least",
-        "value": [
-          2,
-          2
-        ]
-      },
-      {
-        "ref": "general_by_size.feeding_meals_per_day.senior",
-        "source_ids": [
-          "S14"
-        ],
-        "confidence": "medium",
-        "stage": "senior",
-        "kind": "smaller_meals",
-        "value": [
-          2,
-          3
-        ]
-      }
-    ],
-    "life_stages": {
-      "puppy_until_months": {
-        "ref": "general_by_size.life_stages.puppy",
-        "source_ids": [
-          "S11"
-        ],
-        "confidence": "high",
-        "value": [
-          6,
-          9
-        ]
-      },
-      "young_adult_until_years": {
-        "ref": "general_by_size.life_stages.young_adult",
-        "source_ids": [
-          "S11"
-        ],
-        "confidence": "high",
-        "value": [
-          3,
-          4
-        ]
-      },
-      "senior_last_share_of_lifespan": {
-        "ref": "general_by_size.life_stages.senior",
-        "source_ids": [
-          "S11"
-        ],
-        "confidence": "high",
-        "value": 0.25
-      }
-    }
-  },
-  "game_general": {
-    "real_weeks_per_dog_month": {
-      "value": 1,
-      "ref": "meta.conventions.game_time",
-      "basis_source_ids": [],
-      "decision": null
-    },
-    "steps_per_exercise_minute": {
-      "value": 100,
-      "ref": "general_by_size.exercise.steps_conversion",
-      "basis_source_ids": [
-        "S45"
+      "status": "available",
+      "breed_count": 3,
+      "fact_groups": [
+        "exercise",
+        "grooming",
+        "feeding",
+        "lifespan",
+        "stages",
+        "size",
+        "training"
       ],
-      "decision": null
-    },
-    "puppy_exercise_minutes_per_age_month": {
-      "value": 10,
-      "ref": "proposed_game_parameters.walk_minutes_puppy",
-      "basis_source_ids": [
-        "S24"
+      "facets": [
+        "size",
+        "exercise",
+        "grooming"
       ],
-      "decision": "potrdil David 2026-10-05: 10 min × age in months"
-    },
-    "meals_per_day": {
-      "value": [
+      "compare_fields": [
+        "size",
+        "weight",
+        "exercise",
+        "grooming_frequency",
+        "shedding",
+        "lifespan",
+        "game_activity"
+      ],
+      "general_facts": [
         {
-          "stage": "puppy",
-          "from_months": 2,
-          "until_months": 3,
-          "meals": 4
+          "group": "feeding",
+          "field": "meals",
+          "kind": "quantity",
+          "unit": "meals_per_day",
+          "qualifier": "exact",
+          "context": "puppy_8_12_weeks",
+          "value": 4,
+          "source_ids": [
+            "S18"
+          ],
+          "ref": "general_by_size.feeding_meals_per_day.8_12_weeks",
+          "confidence": "high"
         },
         {
-          "stage": "puppy",
-          "from_months": 3,
-          "until_months": 6,
-          "meals": 3
+          "group": "feeding",
+          "field": "meals",
+          "kind": "quantity",
+          "unit": "meals_per_day",
+          "qualifier": "exact",
+          "context": "puppy_3_6_months",
+          "value": 3,
+          "source_ids": [
+            "S18"
+          ],
+          "ref": "general_by_size.feeding_meals_per_day.3_6_months",
+          "confidence": "medium"
         },
         {
-          "stage": "puppy",
-          "from_months": 6,
-          "until_months": null,
-          "meals": 2
+          "group": "feeding",
+          "field": "meals",
+          "kind": "quantity",
+          "unit": "meals_per_day",
+          "qualifier": "exact",
+          "context": "puppy_6_12_months",
+          "value": 2,
+          "source_ids": [
+            "S18"
+          ],
+          "ref": "general_by_size.feeding_meals_per_day.6_12_months",
+          "confidence": "high"
         },
         {
-          "stage": "young",
-          "from_months": null,
-          "until_months": null,
-          "meals": 2
+          "group": "feeding",
+          "field": "meals",
+          "kind": "quantity",
+          "unit": "meals_per_day",
+          "qualifier": "at_least",
+          "context": "adult",
+          "value": 2,
+          "source_ids": [
+            "S19"
+          ],
+          "ref": "general_by_size.feeding_meals_per_day.adult",
+          "confidence": "medium"
         },
         {
-          "stage": "adult",
-          "from_months": null,
-          "until_months": null,
-          "meals": 2
+          "group": "feeding",
+          "field": "meals",
+          "kind": "quantity",
+          "unit": "meals_per_day",
+          "qualifier": "smaller_meals",
+          "context": "senior",
+          "value": [
+            2,
+            3
+          ],
+          "source_ids": [
+            "S14"
+          ],
+          "ref": "general_by_size.feeding_meals_per_day.senior",
+          "confidence": "medium"
         },
         {
-          "stage": "senior",
-          "from_months": null,
-          "until_months": null,
-          "meals": 2
+          "group": "stages",
+          "field": "stage",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "until_about",
+          "context": "puppy",
+          "value": [
+            6,
+            9
+          ],
+          "source_ids": [
+            "S11"
+          ],
+          "ref": "general_by_size.life_stages.puppy",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "stage",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "until",
+          "context": "young_adult",
+          "value": [
+            3,
+            4
+          ],
+          "source_ids": [
+            "S11"
+          ],
+          "ref": "general_by_size.life_stages.young_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "stage",
+          "kind": "quantity",
+          "unit": "share_of_lifespan",
+          "qualifier": "last",
+          "context": "senior",
+          "value": 0.25,
+          "source_ids": [
+            "S11"
+          ],
+          "ref": "general_by_size.life_stages.senior",
+          "confidence": "high"
         }
       ],
-      "ref": "proposed_game_parameters.feed_windows",
-      "basis_source_ids": [
-        "S14",
-        "S18",
-        "S19",
-        "S21"
+      "free_plan": {
+        "id": "mutt",
+        "name": {
+          "en": "Mixed breed",
+          "sl": "Mešanček"
+        },
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "basis_source_ids": [
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S42",
+          "S45"
+        ]
+      }
+    },
+    {
+      "id": "cat",
+      "slug": {
+        "en": "cats",
+        "sl": "macke"
+      },
+      "name": {
+        "en": {
+          "one": "Cat",
+          "many": "Cats"
+        },
+        "sl": {
+          "one": "Mačka",
+          "many": "Mačke"
+        }
+      },
+      "status": "coming_soon",
+      "breed_count": 1,
+      "fact_groups": [
+        "play",
+        "litter",
+        "scratching",
+        "grooming",
+        "feeding",
+        "water",
+        "lifespan",
+        "stages",
+        "size"
       ],
-      "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
-    },
-    "puppy_arrival_age_months": {
-      "value": 2,
-      "ref": "proposed_game_parameters.arrival_age_months",
-      "basis_source_ids": [],
-      "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
-    },
-    "young_from_months": {
-      "value": 9,
-      "ref": "proposed_game_parameters.arrival_age_months",
-      "basis_source_ids": [],
-      "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
-    },
-    "adult_from_months": {
-      "value": 36,
-      "ref": "proposed_game_parameters.arrival_age_months",
-      "basis_source_ids": [],
-      "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+      "facets": [],
+      "compare_fields": [
+        "weight",
+        "grooming_sources_differ",
+        "lifespan",
+        "game_activity"
+      ],
+      "general_facts": [
+        {
+          "group": "play",
+          "field": "play_sessions",
+          "kind": "statement",
+          "value": {
+            "sessions": [
+              2,
+              3
+            ],
+            "minutes": [
+              10,
+              15
+            ]
+          },
+          "source_ids": [
+            "C10"
+          ],
+          "ref": "cat-data:general.play.sessions",
+          "confidence": "medium"
+        },
+        {
+          "group": "play",
+          "field": "kittens_play_more",
+          "kind": "statement",
+          "value": true,
+          "source_ids": [
+            "C10"
+          ],
+          "ref": "cat-data:general.play.kittens_more",
+          "confidence": "medium"
+        },
+        {
+          "group": "litter",
+          "field": "litter_scoop",
+          "kind": "quantity",
+          "unit": "times_per_day",
+          "value": [
+            1,
+            2
+          ],
+          "source_ids": [
+            "C5",
+            "C6",
+            "C7"
+          ],
+          "ref": "cat-data:general.litter.scoop_frequency",
+          "confidence": "high"
+        },
+        {
+          "group": "litter",
+          "field": "litter_full_change",
+          "kind": "quantity",
+          "unit": "days",
+          "qualifier": "every",
+          "value": 7,
+          "source_ids": [
+            "C5",
+            "C6",
+            "C7"
+          ],
+          "ref": "cat-data:general.litter.full_change",
+          "confidence": "high"
+        },
+        {
+          "group": "litter",
+          "field": "litter_pee",
+          "kind": "quantity",
+          "unit": "times_per_day",
+          "context": "adult",
+          "value": [
+            2,
+            4
+          ],
+          "source_ids": [
+            "C6"
+          ],
+          "ref": "cat-data:general.litter.adult_pee",
+          "confidence": "medium"
+        },
+        {
+          "group": "litter",
+          "field": "litter_poo",
+          "kind": "quantity",
+          "unit": "times_per_day",
+          "context": "adult",
+          "value": [
+            1,
+            2
+          ],
+          "source_ids": [
+            "C6"
+          ],
+          "ref": "cat-data:general.litter.adult_poo",
+          "confidence": "medium"
+        },
+        {
+          "group": "scratching",
+          "field": "scratching_natural",
+          "kind": "statement",
+          "value": true,
+          "source_ids": [
+            "C23"
+          ],
+          "ref": "cat-data:general.scratching.natural",
+          "confidence": "high"
+        },
+        {
+          "group": "water",
+          "field": "water_fresh",
+          "kind": "statement",
+          "value": true,
+          "source_ids": [
+            "C2",
+            "C5"
+          ],
+          "ref": "cat-data:general.water.fresh_daily",
+          "confidence": "high"
+        },
+        {
+          "group": "water",
+          "field": "water_need",
+          "kind": "quantity",
+          "unit": "ml_per_kg_day",
+          "value": [
+            55,
+            70
+          ],
+          "source_ids": [
+            "C4"
+          ],
+          "ref": "cat-data:general.water.need",
+          "confidence": "high"
+        },
+        {
+          "group": "feeding",
+          "field": "meals",
+          "kind": "quantity",
+          "unit": "meals_per_day",
+          "qualifier": "exact",
+          "context": "kitten_6_12_weeks",
+          "value": 4,
+          "source_ids": [
+            "C3"
+          ],
+          "ref": "cat-data:general.meals_per_day.kitten_6_12_weeks",
+          "confidence": "high"
+        },
+        {
+          "group": "feeding",
+          "field": "meals",
+          "kind": "quantity",
+          "unit": "meals_per_day",
+          "qualifier": "exact",
+          "context": "kitten_3_6_months",
+          "value": 3,
+          "source_ids": [
+            "C2",
+            "C3"
+          ],
+          "ref": "cat-data:general.meals_per_day.kitten_3_6_months",
+          "confidence": "high"
+        },
+        {
+          "group": "feeding",
+          "field": "meals",
+          "kind": "quantity",
+          "unit": "meals_per_day",
+          "qualifier": "exact",
+          "context": "kitten_6_12_months",
+          "value": 2,
+          "source_ids": [
+            "C2",
+            "C3"
+          ],
+          "ref": "cat-data:general.meals_per_day.kitten_6_12_months",
+          "confidence": "high"
+        },
+        {
+          "group": "feeding",
+          "field": "meals",
+          "kind": "quantity",
+          "unit": "meals_per_day",
+          "qualifier": "exact",
+          "context": "adult",
+          "value": 2,
+          "source_ids": [
+            "C2"
+          ],
+          "ref": "cat-data:general.meals_per_day.adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "feeding",
+          "field": "meals",
+          "kind": "quantity",
+          "unit": "meals_per_day",
+          "qualifier": "exact",
+          "context": "senior",
+          "value": 2,
+          "source_ids": [
+            "C2"
+          ],
+          "ref": "cat-data:general.meals_per_day.senior",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "stage",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "until",
+          "context": "kitten",
+          "value": 12,
+          "source_ids": [
+            "C1"
+          ],
+          "ref": "cat-data:general.life_stages.kitten",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "stage",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "context": "young_adult",
+          "value": [
+            1,
+            6
+          ],
+          "source_ids": [
+            "C1"
+          ],
+          "ref": "cat-data:general.life_stages.young_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "stage",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "context": "mature_adult",
+          "value": [
+            7,
+            10
+          ],
+          "source_ids": [
+            "C1"
+          ],
+          "ref": "cat-data:general.life_stages.mature_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "stage",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "from",
+          "context": "senior",
+          "value": 10,
+          "source_ids": [
+            "C1"
+          ],
+          "ref": "cat-data:general.life_stages.senior",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "sleep",
+          "kind": "quantity",
+          "unit": "hours_per_day",
+          "context": "adult",
+          "value": [
+            12,
+            16
+          ],
+          "source_ids": [
+            "C12"
+          ],
+          "ref": "cat-data:general.sleep.adult",
+          "confidence": "medium"
+        }
+      ],
+      "free_plan": {
+        "id": "domestic_cat",
+        "name": {
+          "en": "Domestic cat",
+          "sl": "Domača mačka"
+        },
+        "adult_activity": {
+          "kind": "play_sessions",
+          "value": 2
+        },
+        "basis_source_ids": [
+          "C2",
+          "C3",
+          "C5",
+          "C6",
+          "C7",
+          "C10",
+          "C13"
+        ]
+      }
     }
-  },
+  ],
   "breeds": [
     {
       "id": "border_collie",
       "species": "dog",
-      "facts": {
-        "identity": {
-          "ref": "border_collie.identity",
-          "source_ids": [
-            "S2"
-          ],
-          "confidence": "high",
-          "fci_number": 297,
-          "fci_group": 1,
-          "fci_section": 1,
-          "origin": "GB"
-        },
-        "size_class": {
-          "ref": "border_collie.size_class",
+      "order": 0,
+      "availability": "in_app",
+      "name": {
+        "en": "Border Collie",
+        "sl": "Border collie"
+      },
+      "slug": {
+        "en": "border-collie",
+        "sl": "border-collie"
+      },
+      "synonyms": {
+        "en": [],
+        "sl": []
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "over_2h"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
           "source_ids": [
             "S5"
           ],
-          "confidence": "high",
-          "value": "medium"
+          "ref": "border_collie.size_class",
+          "confidence": "high"
         },
-        "height_cm": [
-          {
-            "ref": "border_collie.height.fci_ideal",
-            "source_ids": [
-              "S1"
-            ],
-            "confidence": "high",
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
             "male": [
               53,
               53
             ],
-            "female": null,
-            "female_note": "slightly less"
+            "female": null
           },
-          {
-            "ref": "border_collie.height.akc_range",
-            "source_ids": [
-              "S3"
-            ],
-            "confidence": "high",
+          "source_ids": [
+            "S1"
+          ],
+          "ref": "border_collie.height.fci_ideal",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
             "male": [
               48.3,
               55.9
@@ -338,100 +710,146 @@
               45.7,
               53.3
             ]
-          }
-        ],
-        "weight_kg": [
-          {
-            "ref": "border_collie.adult_weight.akc",
-            "source_ids": [
-              "S4"
-            ],
-            "confidence": "medium",
-            "kind": "range",
-            "all": [
-              13.6,
-              24.9
-            ]
           },
-          {
-            "ref": "border_collie.adult_weight.pdsa",
-            "source_ids": [
-              "S7"
-            ],
-            "confidence": "low",
-            "kind": "range",
-            "all": [
-              25,
-              30
-            ]
-          }
-        ],
-        "growth_end_months": {
-          "ref": "border_collie.growth.adult_weight_reached",
           "source_ids": [
-            "S10"
+            "S3"
           ],
-          "confidence": "medium",
+          "ref": "border_collie.height.akc_range",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            13.6,
+            24.9
+          ],
+          "source_ids": [
+            "S4"
+          ],
+          "ref": "border_collie.adult_weight.akc",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            25,
+            30
+          ],
+          "source_ids": [
+            "S7"
+          ],
+          "ref": "border_collie.adult_weight.pdsa",
+          "confidence": "low"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
           "value": [
             12,
             15
-          ]
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "border_collie.growth.adult_weight_reached",
+          "confidence": "medium"
         },
-        "lifespan_years": [
-          {
-            "ref": "border_collie.lifespan.median_uk",
-            "source_ids": [
-              "S15"
-            ],
-            "confidence": "high",
-            "kind": "median",
-            "value": 13.1
-          },
-          {
-            "ref": "border_collie.lifespan.rkc",
-            "source_ids": [
-              "S5"
-            ],
-            "confidence": "high",
-            "kind": "more_than",
-            "value": 12
-          }
-        ],
-        "exercise_minutes_per_day": [
-          {
-            "ref": "border_collie.exercise.adult",
-            "source_ids": [
-              "S5"
-            ],
-            "confidence": "high",
-            "kind": "more_than",
-            "value": 120
-          }
-        ],
-        "coat": [
-          {
-            "ref": "border_collie.appearance.coat_varieties",
-            "source_ids": [
-              "S1"
-            ],
-            "confidence": "high",
-            "value": [
-              "moderately long",
-              "smooth"
-            ]
-          }
-        ],
-        "grooming": [],
-        "shedding": [],
-        "food_motivated": null,
-        "coren_rank": {
-          "ref": "border_collie.trainability.coren_rank",
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.1,
+          "source_ids": [
+            "S15"
+          ],
+          "ref": "border_collie.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S5"
+          ],
+          "ref": "border_collie.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S5"
+          ],
+          "ref": "border_collie.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "moderately_long",
+            "smooth"
+          ],
+          "source_ids": [
+            "S1"
+          ],
+          "ref": "border_collie.appearance.coat_varieties",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 1,
           "source_ids": [
             "S34"
           ],
-          "confidence": "high",
-          "value": 1
+          "ref": "border_collie.trainability.coren_rank",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 297,
+            "group": 1,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S2"
+          ],
+          "ref": "border_collie.identity",
+          "confidence": "high"
         }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 3,
+        "exercise": 8,
+        "lifespan": 6
       },
       "health": [],
       "suitability": {
@@ -490,83 +908,181 @@
         ]
       },
       "game": {
-        "adult_exercise_minutes": {
-          "value": 120,
-          "ref": "border_collie.exercise.adult",
-          "basis_source_ids": [
-            "S5"
-          ],
-          "decision": null
-        },
-        "senior_exercise_minutes": {
-          "value": 90,
-          "ref": "proposed_game_parameters.senior_exercise_minutes",
-          "basis_source_ids": [],
-          "decision": "potrdil David 2026-10-05: senior = 75 % of the adult minutes"
-        },
-        "adult_step_goal": 12000,
-        "senior_step_goal": 9000,
-        "growing_step_goal_by_age_months": [
+        "stages": [
           {
-            "age_months": 2,
-            "steps": 2000
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
           },
           {
-            "age_months": 3,
-            "steps": 3000
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
           },
           {
-            "age_months": 4,
-            "steps": 4000
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
           },
           {
-            "age_months": 5,
-            "steps": 5000
-          },
-          {
-            "age_months": 6,
-            "steps": 6000
-          },
-          {
-            "age_months": 7,
-            "steps": 7000
-          },
-          {
-            "age_months": 8,
-            "steps": 8000
-          },
-          {
-            "age_months": 9,
-            "steps": 9000
-          },
-          {
-            "age_months": 10,
-            "steps": 10000
-          },
-          {
-            "age_months": 11,
-            "steps": 11000
-          },
-          {
-            "age_months": 12,
-            "steps": 12000
+            "stage": "senior",
+            "starts": {
+              "month": 118
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
           }
         ],
-        "senior_from_months": {
-          "value": 118,
-          "ref": "proposed_game_parameters.arrival_age_months",
-          "basis_source_ids": [],
-          "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
         },
-        "learning_multiplier": {
-          "value": 2,
-          "ref": "border_collie.trainability.learning_multiplier",
-          "basis_source_ids": [
-            "S34",
-            "S35"
-          ],
-          "decision": "potrdil David 2026-10-06: Border Collie learns ~2× faster than the mixed-breed baseline (M5-R03)"
-        }
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 118
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "border_collie.exercise.adult",
+            "basis_source_ids": [
+              "S5"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.senior_exercise_minutes",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: senior = 75 % of the adult minutes"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "border_collie.trainability.learning_multiplier",
+            "basis_source_ids": [
+              "S34",
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-06: Border Collie learns ~2× faster than the mixed-breed baseline (M5-R03)"
+          }
+        ],
+        "basis_source_ids": [
+          "S5",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S34",
+          "S35",
+          "S45"
+        ]
       },
       "source_ids": [
         "S1",
@@ -591,33 +1107,49 @@
     {
       "id": "labrador_retriever",
       "species": "dog",
-      "facts": {
-        "identity": {
-          "ref": "labrador_retriever.identity",
-          "source_ids": [
-            "S49"
-          ],
-          "confidence": "high",
-          "fci_number": 122,
-          "fci_group": 8,
-          "fci_section": 1,
-          "origin": "GB"
-        },
-        "size_class": {
-          "ref": "labrador_retriever.size_class",
+      "order": 1,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Labrador Retriever",
+        "sl": "Labradorec"
+      },
+      "slug": {
+        "en": "labrador-retriever",
+        "sl": "labradorec"
+      },
+      "synonyms": {
+        "en": [
+          "Labrador",
+          "Lab"
+        ],
+        "sl": [
+          "labradorski prinašalec",
+          "labrador"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
           "source_ids": [
             "S50"
           ],
-          "confidence": "high",
-          "value": "large"
+          "ref": "labrador_retriever.size_class",
+          "confidence": "high"
         },
-        "height_cm": [
-          {
-            "ref": "labrador_retriever.height.fci_ideal",
-            "source_ids": [
-              "S48"
-            ],
-            "confidence": "high",
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
             "male": [
               56,
               57
@@ -627,12 +1159,18 @@
               56
             ]
           },
-          {
-            "ref": "labrador_retriever.height.rkc_ideal",
-            "source_ids": [
-              "S51"
-            ],
-            "confidence": "high",
+          "source_ids": [
+            "S48"
+          ],
+          "ref": "labrador_retriever.height.fci_ideal",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
             "male": [
               56,
               57
@@ -642,12 +1180,18 @@
               56
             ]
           },
-          {
-            "ref": "labrador_retriever.height.akc_range",
-            "source_ids": [
-              "S52"
-            ],
-            "confidence": "high",
+          "source_ids": [
+            "S51"
+          ],
+          "ref": "labrador_retriever.height.rkc_ideal",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
             "male": [
               57.2,
               62.2
@@ -656,16 +1200,19 @@
               54.6,
               59.7
             ]
-          }
-        ],
-        "weight_kg": [
-          {
-            "ref": "labrador_retriever.adult_weight.akc",
-            "source_ids": [
-              "S52"
-            ],
-            "confidence": "high",
-            "kind": "range",
+          },
+          "source_ids": [
+            "S52"
+          ],
+          "ref": "labrador_retriever.height.akc_range",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
             "male": [
               29.5,
               36.3
@@ -675,25 +1222,34 @@
               31.8
             ]
           },
-          {
-            "ref": "labrador_retriever.adult_weight.pdsa",
-            "source_ids": [
-              "S53"
-            ],
-            "confidence": "medium",
-            "kind": "range",
-            "all": [
-              25,
-              35
-            ]
-          },
-          {
-            "ref": "labrador_retriever.adult_weight.uk_measured_mean",
-            "source_ids": [
-              "S55"
-            ],
-            "confidence": "high",
-            "kind": "mean",
+          "source_ids": [
+            "S52"
+          ],
+          "ref": "labrador_retriever.adult_weight.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            25,
+            35
+          ],
+          "source_ids": [
+            "S53"
+          ],
+          "ref": "labrador_retriever.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "qualifier": "mean",
+          "value": {
             "male": [
               35.2,
               35.2
@@ -702,131 +1258,195 @@
               30.4,
               30.4
             ]
-          }
-        ],
-        "growth_end_months": {
-          "ref": "labrador_retriever.growth.adult_weight_reached",
+          },
           "source_ids": [
-            "S10"
+            "S55"
           ],
-          "confidence": "medium",
+          "ref": "labrador_retriever.adult_weight.uk_measured_mean",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
           "value": [
             15,
             18
-          ]
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "labrador_retriever.growth.adult_weight_reached",
+          "confidence": "medium"
         },
-        "lifespan_years": [
-          {
-            "ref": "labrador_retriever.lifespan.median_uk",
-            "source_ids": [
-              "S54"
-            ],
-            "confidence": "high",
-            "kind": "median",
-            "value": 13.1
-          },
-          {
-            "ref": "labrador_retriever.lifespan.median_uk_vetcompass_2018",
-            "source_ids": [
-              "S55"
-            ],
-            "confidence": "high",
-            "kind": "median",
-            "value": 12
-          },
-          {
-            "ref": "labrador_retriever.lifespan.rkc",
-            "source_ids": [
-              "S50"
-            ],
-            "confidence": "high",
-            "kind": "more_than",
-            "value": 10
-          }
-        ],
-        "exercise_minutes_per_day": [
-          {
-            "ref": "labrador_retriever.exercise.adult",
-            "source_ids": [
-              "S50"
-            ],
-            "confidence": "medium",
-            "kind": "more_than",
-            "value": 120
-          },
-          {
-            "ref": "proposed_game_parameters.labrador_retriever.exercise_minutes_adult",
-            "source_ids": [
-              "S59"
-            ],
-            "confidence": "medium",
-            "kind": "at_least",
-            "value": 90
-          }
-        ],
-        "coat": [
-          {
-            "ref": "labrador_retriever.suitability.rkc_coat_length",
-            "source_ids": [
-              "S50"
-            ],
-            "confidence": "high",
-            "value": [
-              "short"
-            ]
-          }
-        ],
-        "grooming": [
-          {
-            "ref": "labrador_retriever.suitability.rkc_grooming",
-            "source_ids": [
-              "S50"
-            ],
-            "confidence": "high",
-            "value": "once a week"
-          },
-          {
-            "ref": "labrador_retriever.suitability.woodgreen_grooming",
-            "source_ids": [
-              "S60"
-            ],
-            "confidence": "medium",
-            "value": "moderate"
-          }
-        ],
-        "shedding": [
-          {
-            "ref": "labrador_retriever.suitability.rkc_shedding",
-            "source_ids": [
-              "S50"
-            ],
-            "confidence": "high",
-            "value": "yes"
-          }
-        ],
-        "food_motivated": {
-          "ref": "labrador_retriever.behaviour.food_motivation",
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.1,
+          "source_ids": [
+            "S54"
+          ],
+          "ref": "labrador_retriever.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 12,
+          "source_ids": [
+            "S55"
+          ],
+          "ref": "labrador_retriever.lifespan.median_uk_vetcompass_2018",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S50"
+          ],
+          "ref": "labrador_retriever.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S50"
+          ],
+          "ref": "labrador_retriever.exercise.adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 90,
           "source_ids": [
             "S59"
           ],
+          "ref": "proposed_game_parameters.labrador_retriever.exercise_minutes_adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S50"
+          ],
+          "ref": "labrador_retriever.suitability.rkc_coat_length",
           "confidence": "high"
         },
-        "coren_rank": {
-          "ref": "labrador_retriever.trainability.coren_rank",
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S50"
+          ],
+          "ref": "labrador_retriever.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_level",
+          "kind": "category",
+          "value": "moderate",
+          "source_ids": [
+            "S60"
+          ],
+          "ref": "labrador_retriever.suitability.woodgreen_grooming",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S50"
+          ],
+          "ref": "labrador_retriever.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "feeding",
+          "field": "food_motivated",
+          "kind": "statement",
+          "value": true,
+          "source_ids": [
+            "S59"
+          ],
+          "ref": "labrador_retriever.behaviour.food_motivation",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 7,
           "source_ids": [
             "S35"
           ],
-          "confidence": "medium",
-          "value": 7
+          "ref": "labrador_retriever.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 122,
+            "group": 8,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S49"
+          ],
+          "ref": "labrador_retriever.identity",
+          "confidence": "high"
         }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 4,
+        "exercise": 11,
+        "grooming_frequency": 14,
+        "shedding": 16,
+        "lifespan": 8
       },
       "health": [
         {
           "key": "weight_gain",
-          "ref": "labrador_retriever.behaviour.obesity_tendency",
           "source_ids": [
             "S53"
           ],
+          "ref": "labrador_retriever.behaviour.obesity_tendency",
           "confidence": "high"
         }
       ],
@@ -907,76 +1527,189 @@
         ]
       },
       "game": {
-        "adult_exercise_minutes": {
-          "value": 90,
-          "ref": "proposed_game_parameters.labrador_retriever.exercise_minutes_adult",
-          "basis_source_ids": [
-            "S59"
-          ],
-          "decision": "potrdil David 2026-10-09: 90 min/day (RKC '>2 h' S50 and Woodgreen 60–90 min S60 recorded as alternatives)"
-        },
-        "senior_exercise_minutes": {
-          "value": 68,
-          "ref": "proposed_game_parameters.labrador_retriever.exercise_minutes_senior",
-          "basis_source_ids": [],
-          "decision": "potrdil David 2026-10-09: 68 min → 6,800 steps (75 % of 90 = 67.5, rounded to whole minutes)"
-        },
-        "adult_step_goal": 9000,
-        "senior_step_goal": 6800,
-        "growing_step_goal_by_age_months": [
+        "stages": [
           {
-            "age_months": 2,
-            "steps": 2000
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 9000,
+              "cap_month": 9
+            }
           },
           {
-            "age_months": 3,
-            "steps": 3000
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
           },
           {
-            "age_months": 4,
-            "steps": 4000
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
           },
           {
-            "age_months": 5,
-            "steps": 5000
-          },
-          {
-            "age_months": 6,
-            "steps": 6000
-          },
-          {
-            "age_months": 7,
-            "steps": 7000
-          },
-          {
-            "age_months": 8,
-            "steps": 8000
-          },
-          {
-            "age_months": 9,
-            "steps": 9000
+            "stage": "senior",
+            "starts": {
+              "month": 118
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6800
+            }
           }
         ],
-        "senior_from_months": {
-          "value": 118,
-          "ref": "proposed_game_parameters.labrador_retriever.stage_boundaries_months",
-          "basis_source_ids": [
-            "S8",
-            "S10",
-            "S11",
-            "S54"
-          ],
-          "decision": "potrdil David 2026-10-09: young 9, adult 36, senior 118 (0.75 × McMillan 2024 median 13.1 y, S54)"
+        "adult_activity": {
+          "kind": "steps",
+          "value": 9000
         },
-        "learning_multiplier": {
-          "value": 1.8,
-          "ref": "proposed_game_parameters.labrador_retriever.learning_multiplier",
-          "basis_source_ids": [
-            "S35",
-            "S42"
-          ],
-          "decision": "potrdil David 2026-10-09: 1.8 — same Coren 'brightest' tier as the Border Collie (2.0), BC stays visibly fastest"
-        }
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 90,
+              "steps": 9000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.8
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 118
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.labrador_retriever.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S59"
+            ],
+            "decision": "potrdil David 2026-10-09: 90 min/day (RKC '>2 h' S50 and Woodgreen 60–90 min S60 recorded as alternatives)"
+          },
+          {
+            "ref": "proposed_game_parameters.labrador_retriever.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-09: 68 min → 6,800 steps (75 % of 90 = 67.5, rounded to whole minutes)"
+          },
+          {
+            "ref": "proposed_game_parameters.labrador_retriever.stage_boundaries_months",
+            "basis_source_ids": [
+              "S8",
+              "S10",
+              "S11",
+              "S54"
+            ],
+            "decision": "potrdil David 2026-10-09: young 9, adult 36, senior 118 (0.75 × McMillan 2024 median 13.1 y, S54)"
+          },
+          {
+            "ref": "proposed_game_parameters.labrador_retriever.learning_multiplier",
+            "basis_source_ids": [
+              "S35",
+              "S42"
+            ],
+            "decision": "potrdil David 2026-10-09: 1.8 — same Coren 'brightest' tier as the Border Collie (2.0), BC stays visibly fastest"
+          }
+        ],
+        "basis_source_ids": [
+          "S8",
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S42",
+          "S45",
+          "S54",
+          "S59"
+        ]
       },
       "source_ids": [
         "S8",
@@ -1005,33 +1738,48 @@
     {
       "id": "golden_retriever",
       "species": "dog",
-      "facts": {
-        "identity": {
-          "ref": "golden_retriever.identity",
-          "source_ids": [
-            "S64"
-          ],
-          "confidence": "high",
-          "fci_number": 111,
-          "fci_group": 8,
-          "fci_section": 1,
-          "origin": "GB"
-        },
-        "size_class": {
-          "ref": "golden_retriever.size_class",
+      "order": 2,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Golden Retriever",
+        "sl": "Zlati prinašalec"
+      },
+      "slug": {
+        "en": "golden-retriever",
+        "sl": "zlati-prinasalec"
+      },
+      "synonyms": {
+        "en": [
+          "Golden"
+        ],
+        "sl": [
+          "golden",
+          "golden retriver"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
           "source_ids": [
             "S65"
           ],
-          "confidence": "high",
-          "value": "large"
+          "ref": "golden_retriever.size_class",
+          "confidence": "high"
         },
-        "height_cm": [
-          {
-            "ref": "golden_retriever.height.fci_range",
-            "source_ids": [
-              "S63"
-            ],
-            "confidence": "high",
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
             "male": [
               56,
               61
@@ -1041,12 +1789,18 @@
               56
             ]
           },
-          {
-            "ref": "golden_retriever.height.rkc_range",
-            "source_ids": [
-              "S66"
-            ],
-            "confidence": "high",
+          "source_ids": [
+            "S63"
+          ],
+          "ref": "golden_retriever.height.fci_range",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
             "male": [
               56,
               61
@@ -1056,12 +1810,18 @@
               56
             ]
           },
-          {
-            "ref": "golden_retriever.height.akc_range",
-            "source_ids": [
-              "S67"
-            ],
-            "confidence": "high",
+          "source_ids": [
+            "S66"
+          ],
+          "ref": "golden_retriever.height.rkc_range",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
             "male": [
               58.4,
               61
@@ -1070,16 +1830,19 @@
               54.6,
               57.2
             ]
-          }
-        ],
-        "weight_kg": [
-          {
-            "ref": "golden_retriever.adult_weight.akc",
-            "source_ids": [
-              "S67"
-            ],
-            "confidence": "high",
-            "kind": "range",
+          },
+          "source_ids": [
+            "S67"
+          ],
+          "ref": "golden_retriever.height.akc_range",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
             "male": [
               29.5,
               34
@@ -1089,166 +1852,236 @@
               29.5
             ]
           },
-          {
-            "ref": "golden_retriever.adult_weight.pdsa",
-            "source_ids": [
-              "S68"
-            ],
-            "confidence": "medium",
-            "kind": "range",
-            "all": [
-              25,
-              34
-            ]
-          }
-        ],
-        "growth_end_months": {
-          "ref": "golden_retriever.growth.adult_weight_reached",
           "source_ids": [
-            "S10"
+            "S67"
           ],
-          "confidence": "medium",
+          "ref": "golden_retriever.adult_weight.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            25,
+            34
+          ],
+          "source_ids": [
+            "S68"
+          ],
+          "ref": "golden_retriever.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
           "value": [
             15,
             18
-          ]
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "golden_retriever.growth.adult_weight_reached",
+          "confidence": "medium"
         },
-        "lifespan_years": [
-          {
-            "ref": "golden_retriever.lifespan.median_uk",
-            "source_ids": [
-              "S15"
-            ],
-            "confidence": "medium",
-            "kind": "median",
-            "value": 13.2
-          },
-          {
-            "ref": "golden_retriever.lifespan.median_uk_vetcompass_2012",
-            "source_ids": [
-              "S71"
-            ],
-            "confidence": "medium",
-            "kind": "median",
-            "value": 12.48
-          },
-          {
-            "ref": "golden_retriever.lifespan.rkc",
-            "source_ids": [
-              "S65"
-            ],
-            "confidence": "high",
-            "kind": "more_than",
-            "value": 10
-          }
-        ],
-        "exercise_minutes_per_day": [
-          {
-            "ref": "golden_retriever.exercise.adult",
-            "source_ids": [
-              "S65"
-            ],
-            "confidence": "medium",
-            "kind": "more_than",
-            "value": 120
-          },
-          {
-            "ref": "proposed_game_parameters.golden_retriever.exercise_minutes_adult",
-            "source_ids": [
-              "S68"
-            ],
-            "confidence": "medium",
-            "kind": "at_least",
-            "value": 120
-          }
-        ],
-        "coat": [
-          {
-            "ref": "golden_retriever.suitability.rkc_coat_length",
-            "source_ids": [
-              "S65"
-            ],
-            "confidence": "high",
-            "value": [
-              "medium"
-            ]
-          }
-        ],
-        "grooming": [
-          {
-            "ref": "golden_retriever.suitability.rkc_grooming",
-            "source_ids": [
-              "S65"
-            ],
-            "confidence": "high",
-            "value": "more than once a week"
-          },
-          {
-            "ref": "golden_retriever.suitability.woodgreen_grooming",
-            "source_ids": [
-              "S69"
-            ],
-            "confidence": "medium",
-            "value": "high"
-          }
-        ],
-        "shedding": [
-          {
-            "ref": "golden_retriever.suitability.rkc_shedding",
-            "source_ids": [
-              "S65"
-            ],
-            "confidence": "high",
-            "value": "yes"
-          },
-          {
-            "ref": "golden_retriever.suitability.woodgreen_shedding",
-            "source_ids": [
-              "S69"
-            ],
-            "confidence": "medium",
-            "value": "high"
-          }
-        ],
-        "food_motivated": {
-          "ref": "golden_retriever.behaviour.food_motivation",
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.2,
+          "source_ids": [
+            "S15"
+          ],
+          "ref": "golden_retriever.lifespan.median_uk",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 12.48,
+          "source_ids": [
+            "S71"
+          ],
+          "ref": "golden_retriever.lifespan.median_uk_vetcompass_2012",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S65"
+          ],
+          "ref": "golden_retriever.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S65"
+          ],
+          "ref": "golden_retriever.exercise.adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 120,
+          "source_ids": [
+            "S68"
+          ],
+          "ref": "proposed_game_parameters.golden_retriever.exercise_minutes_adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S65"
+          ],
+          "ref": "golden_retriever.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S65"
+          ],
+          "ref": "golden_retriever.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_level",
+          "kind": "category",
+          "value": "high",
+          "source_ids": [
+            "S69"
+          ],
+          "ref": "golden_retriever.suitability.woodgreen_grooming",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S65"
+          ],
+          "ref": "golden_retriever.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "high",
+          "source_ids": [
+            "S69"
+          ],
+          "ref": "golden_retriever.suitability.woodgreen_shedding",
+          "confidence": "medium"
+        },
+        {
+          "group": "feeding",
+          "field": "food_motivated",
+          "kind": "statement",
+          "value": true,
           "source_ids": [
             "S70"
           ],
+          "ref": "golden_retriever.behaviour.food_motivation",
           "confidence": "high"
         },
-        "coren_rank": {
-          "ref": "golden_retriever.trainability.coren_rank",
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 4,
           "source_ids": [
             "S34"
           ],
-          "confidence": "medium",
-          "value": 4
+          "ref": "golden_retriever.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 111,
+            "group": 8,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S64"
+          ],
+          "ref": "golden_retriever.identity",
+          "confidence": "high"
         }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 4,
+        "exercise": 10,
+        "grooming_frequency": 13,
+        "shedding": 15,
+        "lifespan": 7
       },
       "health": [
         {
           "key": "hip_elbow_dysplasia_eye_conditions",
-          "ref": "golden_retriever.health.joints_eyes",
           "source_ids": [
             "S69"
           ],
+          "ref": "golden_retriever.health.joints_eyes",
           "confidence": "medium"
         },
         {
           "key": "cancer_risk",
-          "ref": "golden_retriever.health.cancer",
           "source_ids": [
             "S73"
           ],
+          "ref": "golden_retriever.health.cancer",
           "confidence": "medium"
         },
         {
           "key": "weight_gain",
-          "ref": "golden_retriever.behaviour.obesity_tendency",
           "source_ids": [
             "S68"
           ],
+          "ref": "golden_retriever.behaviour.obesity_tendency",
           "confidence": "medium"
         }
       ],
@@ -1363,88 +2196,190 @@
         ]
       },
       "game": {
-        "adult_exercise_minutes": {
-          "value": 120,
-          "ref": "proposed_game_parameters.golden_retriever.exercise_minutes_adult",
-          "basis_source_ids": [
-            "S68"
-          ],
-          "decision": "potrdil David 2026-10-09: 120 min/day (Woodgreen 60–90 min S69 recorded as alternative)"
-        },
-        "senior_exercise_minutes": {
-          "value": 90,
-          "ref": "proposed_game_parameters.golden_retriever.exercise_minutes_senior",
-          "basis_source_ids": [],
-          "decision": "potrdil David 2026-10-09: 90 min → 9,000 steps (75 % of 120)"
-        },
-        "adult_step_goal": 12000,
-        "senior_step_goal": 9000,
-        "growing_step_goal_by_age_months": [
+        "stages": [
           {
-            "age_months": 2,
-            "steps": 2000
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
           },
           {
-            "age_months": 3,
-            "steps": 3000
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
           },
           {
-            "age_months": 4,
-            "steps": 4000
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
           },
           {
-            "age_months": 5,
-            "steps": 5000
-          },
-          {
-            "age_months": 6,
-            "steps": 6000
-          },
-          {
-            "age_months": 7,
-            "steps": 7000
-          },
-          {
-            "age_months": 8,
-            "steps": 8000
-          },
-          {
-            "age_months": 9,
-            "steps": 9000
-          },
-          {
-            "age_months": 10,
-            "steps": 10000
-          },
-          {
-            "age_months": 11,
-            "steps": 11000
-          },
-          {
-            "age_months": 12,
-            "steps": 12000
+            "stage": "senior",
+            "starts": {
+              "month": 119
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
           }
         ],
-        "senior_from_months": {
-          "value": 119,
-          "ref": "proposed_game_parameters.golden_retriever.stage_boundaries_months",
-          "basis_source_ids": [
-            "S8",
-            "S10",
-            "S11",
-            "S15"
-          ],
-          "decision": "potrdil David 2026-10-09: young 9, adult 36, senior 119 (0.75 × 13.2 y, S15 Dogs Trust summary of McMillan 2024)"
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
         },
-        "learning_multiplier": {
-          "value": 1.9,
-          "ref": "proposed_game_parameters.golden_retriever.learning_multiplier",
-          "basis_source_ids": [
-            "S34",
-            "S35"
-          ],
-          "decision": "potrdil David 2026-10-09: 1.9 (Coren rank 4, S34) — between the Border Collie (2.0) and the Labrador (1.8)"
-        }
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.9
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 119
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.golden_retriever.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S68"
+            ],
+            "decision": "potrdil David 2026-10-09: 120 min/day (Woodgreen 60–90 min S69 recorded as alternative)"
+          },
+          {
+            "ref": "proposed_game_parameters.golden_retriever.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-09: 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.golden_retriever.stage_boundaries_months",
+            "basis_source_ids": [
+              "S8",
+              "S10",
+              "S11",
+              "S15"
+            ],
+            "decision": "potrdil David 2026-10-09: young 9, adult 36, senior 119 (0.75 × 13.2 y, S15 Dogs Trust summary of McMillan 2024)"
+          },
+          {
+            "ref": "proposed_game_parameters.golden_retriever.learning_multiplier",
+            "basis_source_ids": [
+              "S34",
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-09: 1.9 (Coren rank 4, S34) — between the Border Collie (2.0) and the Labrador (1.8)"
+          }
+        ],
+        "basis_source_ids": [
+          "S8",
+          "S10",
+          "S11",
+          "S14",
+          "S15",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S34",
+          "S35",
+          "S45",
+          "S68"
+        ]
       },
       "source_ids": [
         "S8",
@@ -1470,82 +2405,341 @@
         "S71",
         "S73"
       ]
-    }
-  ],
-  "mixed_breed": {
-    "id": "medium_mixed_breed",
-    "game": {
-      "adult_exercise_minutes": {
-        "value": 60,
-        "ref": "medium_mixed_breed.exercise.adult_game_target",
-        "basis_source_ids": [],
-        "decision": "potrdil David 2026-10-05: mixed-breed adult = 60 min/day"
+    },
+    {
+      "id": "maine_coon",
+      "species": "cat",
+      "order": 0,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Maine Coon",
+        "sl": "Maine Coon"
       },
-      "senior_exercise_minutes": {
-        "value": 45,
-        "ref": "proposed_game_parameters.senior_exercise_minutes",
-        "basis_source_ids": [],
-        "decision": "potrdil David 2026-10-05: senior = 75 % of the adult minutes"
+      "slug": {
+        "en": "maine-coon",
+        "sl": "maine-coon"
       },
-      "adult_step_goal": 6000,
-      "senior_step_goal": 4500,
-      "growing_step_goal_by_age_months": [
+      "synonyms": {
+        "en": [],
+        "sl": []
+      },
+      "facets": {},
+      "facts": [
         {
-          "age_months": 2,
-          "steps": 2000
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              5.9,
+              8.2
+            ],
+            "female": [
+              4.1,
+              5.9
+            ]
+          },
+          "source_ids": [
+            "C17"
+          ],
+          "ref": "cat-data:maine_coon.adult_weight.tica_male + cat-data:maine_coon.adult_weight.tica_female",
+          "confidence": "low"
         },
         {
-          "age_months": 3,
-          "steps": 3000
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "value": [
+            36,
+            60
+          ],
+          "source_ids": [
+            "C17"
+          ],
+          "ref": "cat-data:maine_coon.growth_end",
+          "confidence": "low"
         },
         {
-          "age_months": 4,
-          "steps": 4000
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "expectancy",
+          "value": 9.71,
+          "source_ids": [
+            "C14"
+          ],
+          "ref": "cat-data:maine_coon.lifespan.expectancy_at_birth",
+          "confidence": "high"
         },
         {
-          "age_months": 5,
-          "steps": 5000
-        },
-        {
-          "age_months": 6,
-          "steps": 6000
+          "group": "grooming",
+          "field": "grooming_sources_differ",
+          "kind": "statement",
+          "value": {
+            "from": "daily",
+            "to": "weekly"
+          },
+          "source_ids": [
+            "C17",
+            "C18"
+          ],
+          "ref": "cat-data:maine_coon.grooming.range",
+          "confidence": "low"
         }
       ],
-      "senior_from_months": {
-        "value": 108,
-        "ref": "proposed_game_parameters.arrival_age_months",
-        "basis_source_ids": [],
-        "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+      "compare": {
+        "weight": 0,
+        "grooming_sources_differ": 3,
+        "lifespan": 2
       },
-      "learning_multiplier": {
-        "value": 1,
-        "ref": "medium_mixed_breed.trainability.learning_multiplier",
-        "basis_source_ids": [
-          "S35",
-          "S42"
-        ],
-        "decision": "potrdil David 2026-10-06: the mixed breed is the baseline (1.0) (M5-R03)"
+      "health": [],
+      "suitability": {
+        "suits": [],
+        "consider": []
       },
-      "individual_learning_variation": {
-        "value": 0.2,
-        "ref": "medium_mixed_breed.trainability.individual_variation",
-        "basis_source_ids": [
-          "S42"
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 3
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 12
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 84
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 120
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          }
         ],
-        "decision": "potrdil David 2026-10-06: mixed breed = baseline with a per-pet random factor ±20 % (M5-R03)"
-      }
-    },
-    "source_ids": [
-      "S14",
-      "S18",
-      "S19",
-      "S21",
-      "S24",
-      "S35",
-      "S42",
-      "S45"
-    ]
-  },
+        "adult_activity": {
+          "kind": "play_sessions",
+          "value": 2
+        },
+        "rules": [
+          {
+            "key": "play_instead_of_steps",
+            "params": {
+              "sessions": 2,
+              "gap_minutes": 120
+            }
+          },
+          {
+            "key": "litter_rule",
+            "params": {
+              "uses": 2,
+              "scoop_hours": 4,
+              "change_days": 7
+            }
+          },
+          {
+            "key": "scratching_after_missed_play",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 3
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_6_12_weeks",
+            "basis_source_ids": [
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_3_6_months",
+            "basis_source_ids": [
+              "C2",
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_6_12_months",
+            "basis_source_ids": [
+              "C2",
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.adult",
+            "basis_source_ids": [
+              "C2"
+            ],
+            "decision": "potrdil David 2026-10-08 (načrt M5-R06): adult cat 2 meals per day (game simplification)"
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.senior",
+            "basis_source_ids": [
+              "C2"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.arrival_age.young",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: young cat arrives at 12 months"
+          },
+          {
+            "ref": "cat-data:general.arrival_age.adult",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: mature cat arrives at 84 months"
+          },
+          {
+            "ref": "cat-data:general.arrival_age.senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: senior cat arrives at 120 months"
+          },
+          {
+            "ref": "cat-data:general.play.game_sessions_kitten",
+            "basis_source_ids": [
+              "C10"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: kitten 3 per day"
+          },
+          {
+            "ref": "cat-data:general.play.game_sessions_adult",
+            "basis_source_ids": [
+              "C10"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: adult 2 per day"
+          },
+          {
+            "ref": "cat-data:general.play.game_min_gap",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 20:40: 2 h between two successful sessions, measured from the last successful one"
+          },
+          {
+            "ref": "cat-data:general.litter.game_uses_per_day_adult",
+            "basis_source_ids": [
+              "C6"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: adult 2 uses per day"
+          },
+          {
+            "ref": "cat-data:general.litter.game_scoop_deadline",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: 4 h deadline"
+          },
+          {
+            "ref": "cat-data:general.litter.full_change",
+            "basis_source_ids": [
+              "C5",
+              "C6",
+              "C7"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: one full litter change per program week"
+          },
+          {
+            "ref": "cat-data:maine_coon.arrival_age_kitten",
+            "basis_source_ids": [
+              "C13"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: Maine Coon kitten arrives at 3 months"
+          },
+          {
+            "ref": "cat-data:maine_coon.grooming.game_sessions_per_week",
+            "basis_source_ids": [
+              "C17"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: 3× per week"
+          }
+        ],
+        "basis_source_ids": [
+          "C2",
+          "C3",
+          "C5",
+          "C6",
+          "C7",
+          "C10",
+          "C13",
+          "C17"
+        ]
+      },
+      "source_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C10",
+        "C12",
+        "C13",
+        "C14",
+        "C17",
+        "C18",
+        "C23"
+      ]
+    }
+  ],
   "sources": [
     {
       "id": "S1",
@@ -1819,6 +3013,104 @@
       "publisher": "Golden Retriever Club of America (AKC parent club)",
       "title": "Golden Retriever Lifetime Study — info for puppy buyers",
       "url": "https://grca.org/about-the-breed/health-research/golden-retriever-lifetime-study-info-for-puppy-buyers"
+    },
+    {
+      "id": "C1",
+      "tier": "A (via B summary)",
+      "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
+      "title": "2021 AAHA/AAFP Feline Life Stage Guidelines",
+      "url": "https://www.avma.org/javma-news/2021-04-15/aaha-aafp-update-feline-life-stage-guidelines"
+    },
+    {
+      "id": "C2",
+      "tier": "B",
+      "publisher": "Cornell Feline Health Center (Cornell University CVM), edited 2024",
+      "title": "How Often Should You Feed Your Cat?",
+      "url": "https://vet.cornell.edu/departments/cornell-feline-health-center/health-information/feline-health-topics/how-often-should-you-feed-your-cat"
+    },
+    {
+      "id": "C3",
+      "tier": "B",
+      "publisher": "Royal Veterinary College — Beaumont Sainsbury Animal Hospital (London)",
+      "title": "Kitten care",
+      "url": "https://www.rvc.ac.uk/beaumont-sainsbury-animal-hospital/kitten-care"
+    },
+    {
+      "id": "C4",
+      "tier": "A (textbook)",
+      "publisher": "IVIS — Horwitz D. F., Soulard Y., Junien-Castagna A. (2010), in *Encyclopedia of Feline Clinical Nutrition* (Pibot P. et al., eds.)",
+      "title": "Water drinking in cats",
+      "url": "https://www.ivis.org/library/encyclopedia-of-feline-clinical-nutrition/water-drinking-cats"
+    },
+    {
+      "id": "C5",
+      "tier": "B",
+      "publisher": "ASPCA",
+      "title": "General Cat Care",
+      "url": "https://www.aspca.org/pet-care/cat-care/general-cat-care"
+    },
+    {
+      "id": "C6",
+      "tier": "B",
+      "publisher": "Cats Protection (UK), blog, 2025-01-16",
+      "title": "How often should cats poo and pee?",
+      "url": "https://www.cats.org.uk/cats-blog/how-often-should-cats-poo-and-pee"
+    },
+    {
+      "id": "C7",
+      "tier": "B",
+      "publisher": "Cats Protection — *The Cat* magazine, Autumn 2013, pp. 24–25 (Vicky Halls)",
+      "title": "To pee or not to pee",
+      "url": "https://www.cats.org.uk/uploads/documents/Behaviour_-_To_pee_or_not_to_pee.pdf"
+    },
+    {
+      "id": "C10",
+      "tier": "B",
+      "publisher": "PetMD — Nicole Zittritsch, LVT; reviewed by Veronica Higgs, DVM; updated 2024-05-08",
+      "title": "How Long Should You Play With Your Cat Each Day?",
+      "url": "https://www.petmd.com/cat/care/how-long-should-you-play-your-cats-each-day"
+    },
+    {
+      "id": "C12",
+      "tier": "B",
+      "publisher": "PetMD — Nicole Zittritsch, LVT; updated 2026-03-25",
+      "title": "Why Do Cats Sleep So Much?",
+      "url": "https://www.petmd.com/cat/behavior/evr_ct_why_do_cats_sleep_so_much"
+    },
+    {
+      "id": "C13",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Things to think about before getting a kitten",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/kittens-cats/things-to-think-about-before-getting-a-kitten"
+    },
+    {
+      "id": "C14",
+      "tier": "A",
+      "publisher": "*J Feline Med Surg* 2024 — Teng K. T., Brodbelt D. C., Church D. B., O'Neill D. G. (VetCompass, RVC), doi:10.1177/1098612X241234556",
+      "title": "Life tables of annual life expectancy and risk factors for mortality in cats in the UK",
+      "url": "https://rvc-repository.worktribe.com/output/1760672/life-tables-of-annual-life-expectancy-and-risk-factors-for-mortality-in-cats-in-the-uk"
+    },
+    {
+      "id": "C17",
+      "tier": "C (summary of TICA / CFA)",
+      "publisher": "USA TODAY Network (P. Mueller), via Reuters Connect; reprinted by *The Galveston County Daily News*; undated",
+      "title": "Maine coon cats: what to know about the big, fluffy breed",
+      "url": "https://www.galvnews.com/news_reuters/nation/maine-coon-cats-what-to-know-about-the-big-fluffy-breed/article_9ef510e5-47d3-5843-a884-41e6e37095ed.html"
+    },
+    {
+      "id": "C18",
+      "tier": "C",
+      "publisher": "Vetstreet Team (published 2011, modified 2026-05-26)",
+      "title": "Maine Coon",
+      "url": "https://www.vetstreet.com/cats/maine-coon"
+    },
+    {
+      "id": "C23",
+      "tier": "A/B",
+      "publisher": "AAFP — Claw Friendly educational toolkit, client resources (2024)",
+      "title": "Claw Friendly client resources",
+      "url": "https://catvets.com/wp-content/uploads/2024/01/ClawFriendlyEducationalToolkit_ClientResources-upd.pdf"
     }
   ]
 }
