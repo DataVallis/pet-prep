@@ -164,7 +164,8 @@ pr_case "other .md under backend counts" "$S_BACKEND" backend/resources/views/ma
 pr_case "dog research data: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/dog-data/data.json
 pr_case "dog research sources: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/dog-data/sources.md
 pr_case "breed registry export: scripts tests only" "$S_SCRIPTS" scripts/export-breed-registry.mjs scripts/tests/export-breed-registry.test.mjs
-pr_case "breed registry output: scripts tests only" "$S_SCRIPTS" docs/research/breed-registry.json
+pr_case "breed registry output: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/breed-registry.json
+pr_case "breed portraits: scripts tests only" "$S_SCRIPTS" docs/research/breed-portraits/manifest.json docs/research/breed-portraits/dog/border-collie.webp
 pr_case "breed suitability config: backend + scripts" "$S_BSCRIPTS" backend/config/breed_suitability.php
 pr_case "app pet strings: mobile + scripts" "backend=false mobile=true scripts=true image=false " mobile/src/i18n/locales/sl/pet.json
 pr_case "app breed names: mobile + scripts" "backend=false mobile=true scripts=true image=false " mobile/src/i18n/locales/en/family.json

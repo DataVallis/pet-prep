@@ -30,8 +30,9 @@
 #        scripts            scripts/**, deployment/**, the workflow,
 #                           backend/config/breed_suitability.php, mobile/src/i18n/locales/*/{pet,family}.json,
 #                           docs/research/cat-data/** (also backend tests)
-#                           and docs/research/breed-registry.json (inputs / output of
-#                           scripts/export-breed-registry.mjs, M5-R11)
+#                           docs/research/breed-portraits/** and docs/research/breed-registry.json
+#                           (inputs / output of scripts/export-breed-registry.mjs, M5-R11;
+#                           breed-registry.json also runs the backend tests — BreedPortraitTest)
 #        scripts only       scripts/export-breed-registry.mjs + its test (build-time export
 #                           for the website; nothing ships → no image, no deploy)
 #   3. Tested tree (push to main only): a needed suite is skipped when a pull_request
@@ -136,7 +137,8 @@ classify() {
       backend/*) need_backend=true need_deploy=true ;;
       docs/research/dog-data/*) need_backend=true need_scripts=true ;; # test fixtures + export input, nothing ships
       docs/research/cat-data/*) need_backend=true need_scripts=true ;; # cat test fixtures + export input, nothing ships
-      docs/research/breed-registry.json) need_scripts=true ;; # export output, checked by its test
+      docs/research/breed-registry.json) need_backend=true need_scripts=true ;; # export output: its test + BreedPortraitTest (register breeds), nothing ships
+      docs/research/breed-portraits/*) need_scripts=true ;; # AI breed portraits + manifest (export input, M5-R11-04), nothing ships
       deployment/*) need_backend=true need_deploy=true need_scripts=true ;;
       scripts/generate-api-types.mjs) need_mobile=true ;;
       scripts/export-breed-registry.mjs|scripts/tests/export-breed-registry.test.mjs) need_scripts=true ;; # website export, nothing ships

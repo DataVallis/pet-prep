@@ -4,18 +4,23 @@
 // when backend/vendor/autoload.php exists); otherwise they are skipped.
 import assert from 'node:assert/strict';
 import { execFileSync, spawnSync } from 'node:child_process';
-import { existsSync, readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join, resolve } from 'node:path';
 import { test } from 'node:test';
 import {
   DEFAULT_OUT,
   INPUTS,
+  PORTRAIT_MANIFEST,
+  PORTRAITS_DIR,
   RESERVED_SLUGS,
   ROOT,
   buildRegistry,
   parsePhpReturn,
   parseSourcesTable,
+  portraitCopies,
   readInputs,
+  readPortraitManifest,
   renderRegistry,
   slugify,
 } from '../export-breed-registry.mjs';
@@ -230,4 +235,84 @@ test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp &
   assert.equal(mutt.value * 100, registry.species[0].free_plan.adult_activity.value);
   const cat = rows.find((x) => x.breed_slug === 'domestic-cat' && x.stage === 'adult' && x.key === 'play_sessions_per_day');
   assert.equal(cat.value, registry.species[1].free_plan.adult_activity.value);
+});
+
+// ─── breed portraits (M5-R11, David 2026-10-10: AI illustrations, labelled) ───
+
+const manifestOf = (portraits) => JSON.stringify({ schema_version: 1, label: 'AI-generated illustration', portraits });
+const portraitEntry = (over = {}) => ({
+  breed: 'labrador_retriever',
+  species: 'dog',
+  file: 'dog/labrador-retriever.webp',
+  width: 1024,
+  height: 1024,
+  kind: 'ai_illustration',
+  profile: 'nano_banana_pro',
+  prompt_hash: 'sha256:abc',
+  generated_at: '2026-10-10T12:00:00+00:00',
+  cost_usd: 0.15,
+  ...over,
+});
+
+test('portraits: every breed has a portrait key; the committed manifest (if any) points at existing files', () => {
+  for (const b of registry.breeds) assert.ok('portrait' in b, `${b.id} has portrait`);
+  const manifest = resolve(ROOT, PORTRAIT_MANIFEST);
+  assert.equal(registry.inputs.portraits.path, PORTRAIT_MANIFEST);
+  if (!existsSync(manifest)) {
+    assert.equal(registry.inputs.portraits.sha256, null);
+    for (const b of registry.breeds) assert.equal(b.portrait, null);
+    return;
+  }
+  for (const [, p] of readPortraitManifest(readFileSync(manifest, 'utf8'))) {
+    assert.ok(existsSync(resolve(ROOT, PORTRAITS_DIR, p.file)), `${p.file} exists`);
+  }
+});
+
+test('portraits: manifest entries become { file, width, height, kind }, missing ones stay null', () => {
+  const texts = readInputs();
+  const reg = buildRegistry({ ...texts, portraits: manifestOf([portraitEntry(), portraitEntry({ breed: 'maine_coon', species: 'cat', file: 'cat/maine-coon.webp', width: 1200, height: 1200 })]) });
+  const byId = Object.fromEntries(reg.breeds.map((b) => [b.id, b]));
+  assert.deepEqual(byId.labrador_retriever.portrait, { file: 'labrador-retriever.webp', width: 1024, height: 1024, kind: 'ai_illustration' });
+  assert.deepEqual(byId.maine_coon.portrait, { file: 'maine-coon.webp', width: 1200, height: 1200, kind: 'ai_illustration' });
+  assert.equal(byId.border_collie.portrait, null);
+  assert.match(reg.inputs.portraits.sha256, /^[0-9a-f]{64}$/);
+  // Deterministic: no generated_at / prompt hash / cost leaks into the export.
+  assert.doesNotMatch(JSON.stringify(reg.breeds), /generated_at|prompt_hash|cost_usd/);
+
+  const copies = portraitCopies(reg, '/site/public');
+  assert.deepEqual(copies.map((c) => [c.breed, c.from, c.to]), [
+    ['labrador_retriever', resolve(ROOT, PORTRAITS_DIR, 'dog/labrador-retriever.webp'), '/site/public/animals/dogs/labrador-retriever.webp'],
+    ['maine_coon', resolve(ROOT, PORTRAITS_DIR, 'cat/maine-coon.webp'), '/site/public/animals/cats/maine-coon.webp'],
+  ]);
+});
+
+test('portraits: a wrong manifest fails loudly', () => {
+  const texts = readInputs();
+  const build = (entries) => () => buildRegistry({ ...texts, portraits: manifestOf(entries) });
+  assert.throws(build([portraitEntry({ species: 'cat' })]), /species cat, expected dog/);
+  assert.throws(build([portraitEntry({ file: 'dog/labrador.webp' })]), /file must be dog\/labrador-retriever/);
+  assert.throws(build([portraitEntry({ file: 'cat/labrador-retriever.webp' })]), /file must be/);
+  assert.throws(build([portraitEntry({ kind: 'photo' })]), /unknown kind photo/);
+  assert.throws(build([portraitEntry({ width: 0 })]), /width must be a positive integer/);
+  assert.throws(build([portraitEntry({ breed: 'poodle' })]), /poodle is not a breed of the register/);
+  assert.throws(build([portraitEntry(), portraitEntry()]), /duplicate/);
+  assert.throws(() => buildRegistry({ ...texts, portraits: '{"portraits": []}' }), /schema_version 1/);
+});
+
+test('portraits: --copy-portraits writes the registry and copies into <dir>/animals/<species slug>/', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'portraits-'));
+  try {
+    const out = join(dir, 'registry.json');
+    const res = spawnSync(process.execPath, [resolve(ROOT, 'scripts/export-breed-registry.mjs'), '--out', out, '--copy-portraits', dir], { encoding: 'utf8' });
+    assert.equal(res.status, 0, res.stderr);
+    assert.equal(readFileSync(out, 'utf8'), renderRegistry());
+    const n = registry.breeds.filter((b) => b.portrait).length;
+    assert.match(res.stdout, new RegExp(`${n} portrait\\(s\\) copied`));
+    for (const c of portraitCopies(registry, dir)) assert.ok(existsSync(c.to), `${c.to} copied`);
+    const missing = spawnSync(process.execPath, [resolve(ROOT, 'scripts/export-breed-registry.mjs'), '--out', out, '--copy-portraits', join(dir, 'nope')], { encoding: 'utf8' });
+    assert.equal(missing.status, 1);
+    assert.match(missing.stderr, /does not exist/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });
