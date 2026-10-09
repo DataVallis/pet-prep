@@ -23,11 +23,16 @@
 #        backend + image    backend/**, deployment/**, scripts/** (except
 #        + deploy (main)    generate-api-types.mjs), the workflow; backend/README.md and
 #                           backend/CLAUDE.md ignored
-#        backend only       docs/research/dog-data/** (LifeStageDataTest reads data.json /
+#        backend + scripts  docs/research/dog-data/** (LifeStageDataTest reads data.json /
 #                           sources.md; the seeder embeds the values, nothing ships → no
-#                           image, no deploy)
+#                           image, no deploy; the breed registry export test reads them too)
 #        mobile             mobile/**, scripts/generate-api-types.mjs, the workflow
-#        scripts            scripts/**, deployment/**, the workflow
+#        scripts            scripts/**, deployment/**, the workflow,
+#                           backend/config/breed_suitability.php, mobile/src/i18n/locales/*/pet.json
+#                           and docs/research/breed-registry.json (inputs / output of
+#                           scripts/export-breed-registry.mjs, M5-R11)
+#        scripts only       scripts/export-breed-registry.mjs + its test (build-time export
+#                           for the website; nothing ships → no image, no deploy)
 #   3. Tested tree (push to main only): a needed suite is skipped when a pull_request
 #      run of THIS workflow, from this repository (no forks), with conclusion success,
 #      ran that suite on the identical git tree — marker artifact
@@ -126,11 +131,15 @@ classify() {
     case "$f" in
       "$WORKFLOW_PATH") need_backend=true need_deploy=true need_mobile=true need_scripts=true ;;
       backend/README.md|backend/CLAUDE.md) ;; # docs next to the code
+      backend/config/breed_suitability.php) need_backend=true need_deploy=true need_scripts=true ;; # + breed registry export
       backend/*) need_backend=true need_deploy=true ;;
-      docs/research/dog-data/*) need_backend=true ;; # test fixtures only, nothing ships
+      docs/research/dog-data/*) need_backend=true need_scripts=true ;; # test fixtures + export input, nothing ships
+      docs/research/breed-registry.json) need_scripts=true ;; # export output, checked by its test
       deployment/*) need_backend=true need_deploy=true need_scripts=true ;;
       scripts/generate-api-types.mjs) need_mobile=true ;;
+      scripts/export-breed-registry.mjs|scripts/tests/export-breed-registry.test.mjs) need_scripts=true ;; # website export, nothing ships
       scripts/*) need_backend=true need_deploy=true need_scripts=true ;;
+      mobile/src/i18n/locales/*/pet.json) need_mobile=true need_scripts=true ;; # + breed registry labels
       mobile/*) need_mobile=true ;;
     esac
   done

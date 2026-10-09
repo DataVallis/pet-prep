@@ -214,6 +214,11 @@ jobs:
       - name: Harness (backup-production-db.sh)
         run: bash scripts/tests/backup-production-db.test.sh
 
+      # M5-R11: breed registry export for the website (deterministic, every fact sourced,
+      # committed docs/research/breed-registry.json up to date; PHP cross-check when php exists).
+      - name: Breed registry export (node --test)
+        run: node --test scripts/tests/export-breed-registry.test.mjs
+
       - name: Record green tree
         id: green
         if: github.event_name == 'pull_request'

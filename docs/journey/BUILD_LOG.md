@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Register pasem na spletni strani (M5-R11)
+
+**Kaj se je zgodilo:** Na petprep.si nastaja **register pasem**: pregledna stran (`/sl/pasme`, `/breeds`) s filtrom po oznakah »Primerno za« in primerjavo pasem ter stran za border collieja, labradorca in zlatega prinašalca — potrebe (gibanje, nega, obroki, življenjska doba, obdobja, velikost in teža), oznake z enakim besedilom kot v aplikaciji, razdelek »Kako to simulira PetPrep« (pravila igre, jasno označena), zdravje z opombo »Informativno, ni veterinarsko preverjeno« in vsi viri s povezavami. Podatki niso prepisani ročno: nova skripta `scripts/export-breed-registry.mjs` ob gradnji izvozi isti `data.json`, oznake iz strežnika in številke igre, ki jih uporablja aplikacija.
+
+**Zakaj je pomembno:** Starši in odrasli, ki izbirajo pasmo, vidijo preverljiva dejstva z viri — in točno ta pravila, po katerih jih bo preizkusil PetPrep. En vir resnice pomeni, da spletna stran in aplikacija ne moreta povedati različnih številk.
+
+**Številke:** 3 pasme, 39 virov v izvozu (vsako dejstvo z virom), 18 oznak v besednjaku (11 »Primerno za«, 7 »Upoštevajte«), 10 testov izvoza (deterministično, vir za vsako dejstvo, primerjava s PHP konfiguracijo in z vrsticami, ki jih seje strežnik). Spletna stran: 2 pregledni + 6 strani pasem (EN + SL). PR odprt, še ni objavljeno.
+
+**Kako povedati:**
+- 👩 Starši: »Preden izberete pasmo: koliko gibanja, nege in obrokov res potrebuje — z viri, ki jih lahko preverite sami.« (*ko bo stran objavljena*)
+- 💼 Investitorji: »Register pasem je SEO vstop v izdelek: vsaka pasma ima stran z viri in povezavo na 12-tedenski preizkus te pasme.«
+- 🤝 Partnerji (vzreditelji, zavetišča, veterinarji): »Pošteni podatki o pasmi z viri, brez »hipoalergenih« obljub.«
+- 📣 Omrežja: »Labradorec: več kot 2 uri gibanja na dan po RKC, vsaj 90 minut po Guide Dogs UK. V PetPrep: 9.000 korakov.« (*ko bo stran objavljena*)
+- 🛠 Tehnično: »Izvoz brez odvisnosti: Node bere JSON, Markdown tabelo virov in PHP konfiguracijo (lasten razčlenjevalnik literalov, preverjen proti `php`), izhod je determinističen JSON.«
+
+---
+
 ## 2026-10-09 — Zlati prinašalec: druga nova pasma (M5-R10-02)
 
 **Kaj se je zgodilo:** PetPrep ima tretjo plačljivo pasmo psa — **zlatega prinašalca** (Golden Retriever). Raziskava: **13 novih virov (S63–S75)** — standard FCI 111, The Royal Kennel Club (stran pasme in standard), AKC standard, PDSA, Woodgreen, Guide Dogs UK, plakat VetCompass (mediana 12,48 leta) in povzetek raziskave McMillan 2024 pri Dogs Trust (13,2 leta). David je isti večer (9. 10. ~22:40) potrdil številke igre: odrasel zlati prinašalec potrebuje **120 minut gibanja = 12.000 korakov** na dan (PDSA »najmanj dve uri«, RKC »več kot 2 uri«), starejši **9.000**; starejši postane pri **119 mesecih** (0,75 × 13,2 leta); uči se **1,9× hitreje** od mešančka (Coren: 4. mesto — med Border Colliejem in labradorcem); hrana, voda in čiščenje kot pri Border Collieju. Izbirnik pokaže oznake z viri: »Primerno za: aktivno družino, družinsko življenje, družino z otroki, začetnike, veliko hišo z vrtom, dom z drugimi ljubljenčki« in »Upoštevajte: vsak dan potrebuje veliko gibanja, izpada mu dlaka, rad je — pazite na težo, **potrebuje česanje večkrat na teden**« (nova oznaka). Statistik o raku v aplikaciji namenoma ni.
