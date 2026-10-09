@@ -8,6 +8,18 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Obvestila staršem vikajo, kuža ne zahteva nemogočega (M5-R06-06b)
+
+**Kaj se je zgodilo:** David je odločil štiri vprašanja o besedilih obvestil. Slovenski alarm staršem zdaj vika (»Vaš otrok danes ni poskrbel za psa.«), pri psu in pri muci. Pri psu sta popravljeni dve napaki pravila »obvestilo nikoli ne zahteva nemogočega«: ko kuža nekaj pregrize, obvestilo o hrani reče »najprej pospravi pregrizeno in mu daj igračo« (ne »najprej počisti«), in ko bi bil obrok tudi po čiščenju mogoč šele zvečer, obvestilo pove uro (»Naslednji obrok je ob 17:00.«), namesto da obljubi »Potem ga lahko nahraniš«. Muca obdrži »muca« za vse starosti in angleški *it*.
+
+**Zakaj je pomembno:** Starši dobijo obvestila v istem spoštljivem tonu kot v aplikaciji; otrok ne dobi navodila, ki ga gumb nato zavrne.
+
+**Številke:** 14 pasjih besedil spremenjenih (alarm staršem v slovenščini), 10 novih pasjih besedil na jezik; vse ostale pasje besedila nespremenjena (preverjeno s posnetkom).
+
+**Kako povedati:**
+- 👩 Starši: »Obvestila vas nagovarjajo z »vi« in otroku vedno povedo, kaj lahko naredi zdaj — ali ob kateri uri.«
+- 🛠 Tehnično: »Pred obvestilom strežnik preveri isto pravilo kot gumb, tudi za stanje po čiščenju; posnetek vseh pasjih besedil ujame vsako nenamerno spremembo.«
+
 ## 2026-10-09 — Muca dobi svoj glas v obvestilih (M5-R06-06, skrito)
 
 **Kaj se je zgodilo:** Vsako obvestilo, ki ga strežnik lahko pošlje za muco, ima zdaj svoje besedilo v angleščini in slovenščini — od »Tvoja muca te milo gleda in sedi ob posodi s hrano« do »Muca je odšla v zavetišče …« za starše. Slovenščina ni zamenjava ene besede: »kuža je lačen« postane »muca je lačna«, »bo zbolel« postane »bo zbolela«, »ga / mu« postane »jo / ji«. Popravljena je tudi napaka iz prejšnjega koraka: ko je muca opraskala kavč in je lačna, obvestilo ne reče več »najprej počisti nered« (čiščenje praskanja ne razreši), ampak »najprej jo odnesi na praskalnik in jo pohvali«. Besedila so osnutek, ki ga David prebere pred vklopom mačk (ena tabela za pregled v enem prehodu).

@@ -1,16 +1,16 @@
 # Mačja besedila — pregled za Davida (M5-R06-06)
 
-> **Status:** osnutek **Claude, 9. 10. 2026 — čaka Davidov pregled** pred vklopom mačk (M5-R06-09; CAT_SPEC: David prebere angleščino pred vklopom). Mačke so skrite (`PETPREP_CATS_ENABLED=false`), zato teh besedil zdaj ne vidi nihče.
-> **Kako pregledati:** en prehod po tabeli. Če je vrstica v redu, nič ne naredi; popravke napiši v stolpec ali v klepet (ključ + novo besedilo). Pasja besedila (2. stolpec) so samo za primerjavo in se **ne spreminjajo** (test `DogPushTextSnapshotTest`).
+> **Status:** osnutek **Claude, 9. 10. 2026**. **David je 9. 10. 2026 (~06:xx) odločil vsa štiri vprašanja** (spodaj); **pregled samih besedil v tabeli še čaka Davida** pred vklopom mačk (M5-R06-09; CAT_SPEC: David prebere angleščino pred vklopom). Mačke so skrite (`PETPREP_CATS_ENABLED=false`), zato teh besedil zdaj ne vidi nihče.
+> **Kako pregledati:** en prehod po tabeli. Če je vrstica v redu, nič ne naredi; popravke napiši v stolpec ali v klepet (ključ + novo besedilo). Pasja besedila (2. stolpec) so za primerjavo; spreminjajo se samo z Davidovo odločitvijo (test `DogPushTextSnapshotTest` — 9. 10. 2026 namenoma: vikanje v alarmu staršem, nove različice »najprej pospravi« in čas obroka).
 > **Vir resnice:** `backend/lang/en/push.php` in `backend/lang/sl/push.php` (podimenski prostor `cat`), `backend/lang/*/account.php`. Tabela je ustvarjena iz teh datotek; po popravku jo ustvari znova.
 
 ## Pravila, ki veljajo za vsa besedila
 
 - Brez imen otrok in živali (zaklenjen zaslon je javen, Expo / Apple / Google so tretje osebe). Edina spremenljivka je `:time`.
-- Otrok: »ti«, kratko, toplo, nikoli strašljivo ali sramotilno. Starš: dejstva (pasja besedila za starše uporabljajo »Tvoj otrok …« iz PRODUCT_SPEC §6 — mačja sledijo istemu vzorcu).
-- Slovenščina: **»muca« je ženskega spola** (»muca je lačna«, »bo zbolela«, »jo / ji«). En samostalnik za vse starosti, kot pri psu (pasja obvestila mladička ne ločijo) — glej odprto vprašanje 1.
-- Angleščina: *cat*, zaimek *it* (kot *dog … it*) — glej odprto vprašanje 2.
-- M3-12: obvestilo nikoli ne zahteva dejanja, ki ga aplikacija zavrne. Ko je odprto samo praskanje, hrana in voda čakata na **praskalnik** (čiščenje praskanja ne razreši) — vrstici `scratcher_first`. Če bi bila hrana / voda tudi po čiščenju mogoča šele kasneje danes, obvestilo ne reče »potem jo lahko nahraniš«, ampak pove čas (vrstice `*_wait`, popravek po QA); če danes ni več mogoča, obvestila o hrani ni.
+- Otrok: »ti«, kratko, toplo, nikoli strašljivo ali sramotilno. **Starš: vikanje** (»Vaš otrok …«, brand/README — David 9. 10. 2026, za obe vrsti).
+- Slovenščina: **»muca« je ženskega spola** (»muca je lačna«, »bo zbolela«, »jo / ji«). **En samostalnik »muca« za vse starosti** (David 9. 10. 2026; brez ločenih besedil za mucka).
+- Angleščina: *cat*, **zaimek *it*** (kot *dog … it*; David 9. 10. 2026).
+- M3-12: obvestilo nikoli ne zahteva dejanja, ki ga aplikacija zavrne. Ko je odprto samo praskanje, hrana in voda čakata na **praskalnik** (čiščenje praskanja ne razreši) — vrstici `scratcher_first`. Če bi bila hrana / voda tudi po razrešitvi mogoča šele kasneje danes, obvestilo ne reče »potem jo lahko nahraniš«, ampak pove čas (vrstice `*_wait`); če danes ni več mogoča, obvestila o hrani ni. Od 9. 10. 2026 enako pri psu (David).
 - Po neodvisnem QA (9. 10. 2026) popravljeno besedilo: »prazni posodi za hrano«, »Če muce ne nahraniš / Če muci ne daš vode«, »je bila na pesku«, pohvala tudi pri »počisti nered in na praskalnik«.
 
 ## Tabela
@@ -31,8 +31,8 @@
 | `push.cat.scratcher_first.thirst` | — (samo mačka) | Your cat is thirsty, but first carry it to the scratching post and praise it. Then you can give it water. | Tvoja muca je žejna, a najprej jo odnesi na praskalnik in jo pohvali. Potem ji lahko daš vodo. |
 | `push.cat.clean_and_scratcher_first.hunger` | — (samo mačka) | Your cat is hungry, but first clean up the mess, then carry it to the scratching post and praise it. Then you can feed it. | Tvoja muca je lačna, a najprej počisti nered, nato jo odnesi na praskalnik in jo pohvali. Potem jo lahko nahraniš. |
 | `push.cat.clean_and_scratcher_first.thirst` | — (samo mačka) | Your cat is thirsty, but first clean up the mess, then carry it to the scratching post and praise it. Then you can give it water. | Tvoja muca je žejna, a najprej počisti nered, nato jo odnesi na praskalnik in jo pohvali. Potem ji lahko daš vodo. |
-| `push.cat.clean_first_wait.hunger` | — (samo mačka) | Your cat is hungry, but the mess has to be cleaned up first. The next meal is at :time. | Tvoja muca je lačna, a najprej je treba počistiti nered. Naslednji obrok je ob :time. |
-| `push.cat.clean_first_wait.thirst` | — (samo mačka) | Your cat is thirsty, but the mess has to be cleaned up first. You can give it water again at :time. | Tvoja muca je žejna, a najprej je treba počistiti nered. Vodo ji lahko spet daš ob :time. |
+| `push.cat.clean_first_wait.hunger` | Your dog is hungry, but the mess has to be cleaned up first. The next meal is at :time. | Your cat is hungry, but the mess has to be cleaned up first. The next meal is at :time. | Tvoja muca je lačna, a najprej je treba počistiti nered. Naslednji obrok je ob :time. |
+| `push.cat.clean_first_wait.thirst` | Your dog is thirsty, but the mess has to be cleaned up first. You can give it water again at :time. | Your cat is thirsty, but the mess has to be cleaned up first. You can give it water again at :time. | Tvoja muca je žejna, a najprej je treba počistiti nered. Vodo ji lahko spet daš ob :time. |
 | `push.cat.scratcher_first_wait.hunger` | — (samo mačka) | Your cat is hungry, but first carry it to the scratching post and praise it. The next meal is at :time. | Tvoja muca je lačna, a najprej jo odnesi na praskalnik in jo pohvali. Naslednji obrok je ob :time. |
 | `push.cat.scratcher_first_wait.thirst` | — (samo mačka) | Your cat is thirsty, but first carry it to the scratching post and praise it. You can give it water again at :time. | Tvoja muca je žejna, a najprej jo odnesi na praskalnik in jo pohvali. Vodo ji lahko spet daš ob :time. |
 | `push.cat.clean_and_scratcher_first_wait.hunger` | — (samo mačka) | Your cat is hungry, but first clean up the mess, then carry it to the scratching post and praise it. The next meal is at :time. | Tvoja muca je lačna, a najprej počisti nered, nato jo odnesi na praskalnik in jo pohvali. Naslednji obrok je ob :time. |
@@ -43,7 +43,7 @@
 | `push.cat.clean_and_scratcher.critical` | — (samo mačka) | Clean up the mess, carry your cat to the scratching post and praise it as soon as you can, or it will get sick. | Čim prej počisti nered, muco odnesi na praskalnik in jo pohvali, sicer bo zbolela. |
 | `push.cat.play_reminder` | — (samo mačka) | Your cat hasn’t played today and is waiting for the feather wand. Shall we play? | Tvoja muca se danes še ni igrala in čaka na palico s peresom. Se greva igrat? |
 | `push.cat.litter_reminder` | — (samo mačka) | Your cat has used the litter tray. Scoop the tray soon, before it starts to smell. | Tvoja muca je bila na pesku. Počisti ga čim prej, preden začne smrdeti. |
-| `push.cat.parent_alarm` | Your child hasn’t looked after the dog today. | Your child hasn’t looked after the cat today. | Tvoj otrok danes ni poskrbel za muco. |
+| `push.cat.parent_alarm` | Your child hasn’t looked after the dog today. | Your child hasn’t looked after the cat today. | Vaš otrok danes ni poskrbel za muco. |
 | `push.cat.parent_alarm_detail.hunger` | The dog has had no food for over an hour. | The cat has had no food for over an hour. | Muca je že več kot uro brez hrane. |
 | `push.cat.parent_alarm_detail.thirst` | The dog has had no water for over an hour. | The cat has had no water for over an hour. | Muca je že več kot uro brez vode. |
 | `push.cat.parent_alarm_detail.hygiene` | A mess has not been cleaned up for over an hour. | A mess has not been taken care of for over an hour. | Za nered že več kot uro ni nihče poskrbel. |
@@ -58,13 +58,15 @@
 | `push.cat.payment_required.parent_no_trial` | The dog is waiting safely until you unlock the 12-week challenge in the app. | The cat is waiting safely until you unlock the 12-week challenge in the app. | Muca varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva. |
 | `account.export.about_pets` | Family data export from the PetPrep app (GDPR Art. 15 and 20). Times are in UTC (ISO 8601), dates (local_date) in the family’s time zone. Links to the dogs’ images and videos are valid for a limited time (media[].expires_at, growth[] until growth_expires_at). | Family data export from the PetPrep app (GDPR Art. 15 and 20). Times are in UTC (ISO 8601), dates (local_date) in the family’s time zone. Links to the pets’ images and videos are valid for a limited time (media[].expires_at, growth[] until growth_expires_at). | Izvoz podatkov družine iz aplikacije PetPrep (GDPR čl. 15 in 20). Časi so v UTC (ISO 8601), datumi (local_date) v časovnem pasu družine. Povezave do slik in videov ljubljenčkov veljajo omejen čas (media[].expires_at, growth[] do growth_expires_at). |
 
-**Samo pes (mačka jih nikoli ne dobi, zato brez mačje različice):** `push.walk_reminder` (sprehod — muca ima `play_reminder`), `push.tidy.*` in `push.clean_and_tidy.*` (grizenje — muca ima praskanje), `push.illness.*.walk` (muca zaradi zamujene igre ne zboli, CAT_SPEC Q2). Brez živali v besedilu (skupno): `push.title`, `push.trial_ending`.
+**Samo pes (mačka jih nikoli ne dobi, zato brez mačje različice):** `push.walk_reminder` (sprehod — muca ima `play_reminder`), `push.tidy.*`, `push.clean_and_tidy.*`, `push.tidy_first*`, `push.clean_and_tidy_first*` (grizenje — muca ima praskanje), `push.illness.*.walk` (muca zaradi zamujene igre ne zboli, CAT_SPEC Q2). Brez živali v besedilu (skupno): `push.title`, `push.trial_ending`.
 
 **Besedila sporočil API (samo angleško, za razvijalce, aplikacija jih ne prikaže):** ob mački »This cat is on the free plan.« / »This cat's challenge is already unlocked.« / »This cat is no longer in play.«; izbris računa: »This deletes a pet whose …«, ko je med psi muca. Admin (Filament): »Marks this cat's 12-week challenge …«.
 
-## Odprta vprašanja za Davida
+## Vprašanja — odločeno (David, 9. 10. 2026 ~06:xx)
 
-1. **Mucek / muca:** CAT_SPEC §9 pravi »mucek« za mladiča. Pasja obvestila mladička ne ločijo (»kuža« za vse starosti), zato tudi mačja uporabljajo »muca« za vse starosti. Želiš ločena besedila za mucka (»Tvoj mucek je lačen«, »bo zbolel« — moški spol, ~30 dodatnih vrstic na jezik)?
-2. **Angleški zaimek:** *it* (kot pri psu) ali *she / her* (kot slovenska »muca«)?
-3. **»Tvoj otrok …« za starša:** pasja besedila staršu rečejo »Tvoj otrok« (PRODUCT_SPEC §6), drugje pa staršu vikamo. Mačja so zaradi doslednosti enaka; če želiš »Vaš otrok«, bi spremenili oboje (pas in mačka) — to bi bila sprememba pasjih besedil.
-4. **Enaki napaki pri psu (najdeno ob QA):** (a) pri psu s hrano, ki je tudi po čiščenju mogoča šele kasneje (npr. nahranjen ob 07:00, ob 15:45 lačen in nered, naslednje okno 17:00), obvestilo reče »Potem ga lahko nahraniš« — pri muci popravljeno (`*_wait`), pri psu ne (pasja besedila zamrznjena); (b) ko je pri psu odprto samo grizenje, obvestilo o hrani / vodi reče »najprej je treba počistiti nered«, čeprav grizenje razreši »Pospravi in daj igračo« (čiščenje ga ne). Ker se pasja besedila v tej nalogi ne smejo spremeniti, je ostalo, kot je. Predlog: pasja različica »najprej pospravi in mu daj igračo« (`tidy_first`) v ločenem PR.
+1. ✅ **Mucek / muca:** »muca« za vse starosti, brez ločenih besedil za mucka.
+2. ✅ **Angleški zaimek:** *it*.
+3. ✅ **Starši:** slovenska obvestila staršem vikajo (»Vaš otrok danes ni poskrbel za psa / muco.«) — za obe vrsti; otroška besedila ostanejo »ti«. Zgrajeno (M5-R06-06b).
+4. ✅ **Pasji napaki popravljeni (M5-R06-06b):** (a) pri odprtem grizenju obvestilo o hrani / vodi reče »najprej pospravi pregrizeno in mu daj igračo« (`tidy_first`, z drugim neredom `clean_and_tidy_first`), ne »najprej počisti«; (b) če bi bilo hranjenje / voda tudi po razrešitvi mogoče šele kasneje danes, pasje obvestilo pove čas (`*_first_wait`), ne »Potem ga lahko nahraniš«; če danes ni več mogoče, ga ni.
+
+Še odprto: **pregled besedil v tabeli** (David, pred R06-09).
