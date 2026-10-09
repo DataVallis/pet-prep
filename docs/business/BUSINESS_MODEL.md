@@ -6,6 +6,15 @@
 
 Ne prodajamo "igrice", ampak **orodje za oceno zrelosti in zavarovalno polico proti slabi odločitvi o živali**. Kategorija: starševski nadzor + ocena pripravljenosti. Sporočilo staršem: "Ne kupujte otroku psa, dokler ne opravi tega preizkusa." Sporočilo investitorjem: "risk-reversal platforma za pet industrijo".
 
+## 1a. Segmenti
+
+| Segment | Kdo | Vprašanje, na katerega odgovori PetPrep | Od kdaj |
+|---|---|---|---|
+| Družine (glavni) | Starši otrok ~7–12 (do 16), ki jih otrok prosi za žival | »Je otrok res pripravljen?« | od začetka |
+| Odrasli, ki izbirajo pasmo (dodatni) | Odrasel, ki si želi točno določeno pasmo in jo hoče preizkusiti pred nakupom ali posvojitvijo | »Je ta pasma res zame — za moje delo in življenje?« | David, 9. 10. 2026 |
+
+Odrasli uporabljajo isti izdelek brez spremembe aplikacije: račun starša → doda sebe kot profil skrbnika → prijava s kodo (isti ali drug telefon); kasneje lahko doda partnerja ali otroke. **Ista cena** (mešanček brezplačen, izziv 49,99 € na žival). Danes sta na voljo mešanček in border collie. Velikost segmenta in konverzija **nista izmerjeni**; kanali za ta segment (npr. skupine ljubiteljev pasem, vzreditelji) so *načrt*.
+
 ## 2. Ponudba (Grand Slam Offer)
 
 **Cena: 49,99 € na psa** — 12-tedenski PetPrep izziv; dostop za vse starše in vse otroke, ki skrbijo za tega psa (skupni pes = ena cena). Drugi pes v družini = nov izziv. Mešanček brezplačen (David, 4. 10. 2026).
