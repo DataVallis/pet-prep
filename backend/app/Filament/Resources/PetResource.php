@@ -293,7 +293,7 @@ class PetResource extends Resource
                     ->icon('heroicon-o-lock-open')
                     ->color('warning')
                     ->requiresConfirmation()
-                    ->modalDescription('Marks this dog\'s 12-week challenge as paid by an admin (no store purchase, no credit used). A payment lock is lifted.')
+                    ->modalDescription(fn (Pet $record): string => 'Marks this '.$record->speciesValue()->value.'\'s 12-week challenge as paid by an admin (no store purchase, no credit used). A payment lock is lifted.')
                     ->visible(fn (Pet $record): bool => auth()->user()?->is_superadmin === true
                         && $record->plan === PetPlan::Challenge
                         && $record->challenge_paid_at === null
@@ -302,7 +302,7 @@ class PetResource extends Resource
                         $granted = app(ChallengeCreditService::class)->grantByAdmin($record);
 
                         Notification::make()
-                            ->title($granted ? 'Challenge unlocked' : 'Nothing to unlock for this dog')
+                            ->title($granted ? 'Challenge unlocked' : 'Nothing to unlock for this '.$record->speciesValue()->value)
                             ->status($granted ? 'success' : 'warning')
                             ->send();
                     }),

@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\CareRefusal;
 use App\Enums\HygieneEventKind;
 use App\Enums\PushType;
+use App\Enums\Species;
 use App\Jobs\SendPushNotification;
 use App\Models\DevicePushToken;
 use App\Models\Pet;
@@ -421,6 +422,8 @@ class NotificationService
 
             return;
         }
+        // M5-R06-06: the texts follow the pet's species (cat: push.cat.*).
+        $copy['species'] = $pet->speciesValue();
 
         $audience = collect($notification->recipients)
             ->mapWithKeys(fn (array $r): array => [(int) $r['user_id'] => (string) $r['audience']]);
@@ -672,7 +675,7 @@ class NotificationService
             return $plain;
         }
         if ($check->refusal === CareRefusal::NeedsCleaning) {
-            return ['variant' => PushCopy::VARIANT_CLEAN_FIRST, 'replace' => []];
+            return ['variant' => $this->messFirstVariant($pet), 'replace' => []];
         }
 
         $tz = $pet->familyTimezone();
@@ -685,15 +688,43 @@ class NotificationService
     }
 
     /**
+     * M3-12 / M5-R06-06 (QA m3 of R06-05): what food / water wait for while hygiene
+     * shows 0 %. Cleaning does not resolve a cat's scratching (POST /pet/clean leaves
+     * it; only the scratcher does) → `scratcher_first`, or `clean_and_scratcher_first`
+     * when a mess next to the tray is open too; otherwise `clean_first` (dogs: always,
+     * byte-identical to before).
+     */
+    private function messFirstVariant(Pet $pet): string
+    {
+        $kinds = $this->openMessKinds($pet);
+        if (! $kinds->contains(HygieneEventKind::Scratching->value)) {
+            return PushCopy::VARIANT_CLEAN_FIRST;
+        }
+
+        return $kinds->count() > 1 ? PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST : PushCopy::VARIANT_SCRATCHER_FIRST;
+    }
+
+    /**
+     * Kinds of the pet's open messes (distinct values).
+     *
+     * @return Collection<int, string>
+     */
+    private function openMessKinds(Pet $pet): Collection
+    {
+        return $this->hygieneEvents->openEvents($pet)
+            ->map(fn ($event): string => $event->kind instanceof HygieneEventKind ? $event->kind->value : (string) $event->kind)
+            ->unique()
+            ->values();
+    }
+
+    /**
      * M3-12: a chewed item is not scrubbed away — it is tidied up with "Pospravi
      * in daj igračo" (resolve-chewing). Only chewing open → `tidy`; chewing plus
      * a poop / accident → `clean_and_tidy`; otherwise the plain mess text.
      */
     private function hygieneVariant(Pet $pet): ?string
     {
-        $kinds = $this->hygieneEvents->openEvents($pet)
-            ->map(fn ($event): string => $event->kind instanceof HygieneEventKind ? $event->kind->value : (string) $event->kind)
-            ->unique();
+        $kinds = $this->openMessKinds($pet);
         // M5-R06-05: the cat's scratching is resolved at the scratcher, not cleaned.
         if ($kinds->contains(HygieneEventKind::Scratching->value)) {
             return $kinds->count() > 1 ? PushCopy::VARIANT_CLEAN_AND_SCRATCHER : PushCopy::VARIANT_SCRATCHER;
@@ -747,7 +778,7 @@ class NotificationService
      *
      * @param  Collection<int, DevicePushToken>  $chunk
      * @param  Collection<int, string>  $audience  user id → audience
-     * @param  array{variant: string|null, replace: array<string, string>}  $copy
+     * @param  array{variant: string|null, replace: array<string, string>, species: Species}  $copy
      */
     private function sendChunk(PushNotification $notification, Collection $chunk, Collection $audience, ExpoPushClient $client, array $copy): void
     {
@@ -789,7 +820,7 @@ class NotificationService
     /**
      * One Expo message. data = {type, pet_id} only (third parties).
      *
-     * @param  array{variant: string|null, replace: array<string, string>}  $copy
+     * @param  array{variant: string|null, replace: array<string, string>, species: Species}  $copy
      * @return array<string, mixed>
      */
     private function message(PushNotification $notification, DevicePushToken $device, string $audience, array $copy): array
@@ -800,7 +831,7 @@ class NotificationService
             'to' => $device->expo_push_token,
             // M1-18: in this install's language (null → default).
             'title' => PushCopy::title($device->locale),
-            'body' => PushCopy::body($type, $notification->metric, $audience, $device->locale, $copy['variant'], $copy['replace']),
+            'body' => PushCopy::body($type, $notification->metric, $audience, $device->locale, $copy['variant'], $copy['replace'], $copy['species']),
             'data' => [
                 'type' => $type->value,
                 'pet_id' => $notification->pet_id,

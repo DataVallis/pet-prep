@@ -142,7 +142,7 @@ class ChallengeCreditService
             $locked = Pet::whereKey($pet->id)->lockForUpdate()->firstOrFail();
 
             if ($locked->plan !== PetPlan::Challenge) {
-                throw new ChallengeException('free_plan', 'This dog is on the free plan.');
+                throw new ChallengeException('free_plan', 'This '.$locked->speciesValue()->value.' is on the free plan.');
             }
             if ($locked->challenge_paid_at !== null) {
                 if ($locked->challenge_paid_source === ChallengePaidSource::Purchase) {
@@ -153,10 +153,10 @@ class ChallengeCreditService
                     ];
                 }
 
-                throw new ChallengeException('already_paid', 'This dog\'s challenge is already unlocked.');
+                throw new ChallengeException('already_paid', 'This '.$locked->speciesValue()->value.'\'s challenge is already unlocked.');
             }
             if (! $locked->is_active || $locked->is_game_over) {
-                throw new ChallengeException('pet_not_active', 'This dog is no longer in play.');
+                throw new ChallengeException('pet_not_active', 'This '.$locked->speciesValue()->value.' is no longer in play.');
             }
 
             $credit = ChallengeCredit::where('family_id', $locked->family_id)

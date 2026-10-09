@@ -17,6 +17,10 @@ return [
         'about' => 'Family data export from the PetPrep app (GDPR Art. 15 and 20). '
             .'Times are in UTC (ISO 8601), dates (local_date) in the family’s time zone. '
             .'Links to the dogs’ images and videos are valid for a limited time (media[].expires_at, growth[] until growth_expires_at).',
+        // M5-R06-06: the same text for a family with a cat ("pets" instead of "dogs"; Claude's draft, awaiting David).
+        'about_pets' => 'Family data export from the PetPrep app (GDPR Art. 15 and 20). '
+            .'Times are in UTC (ISO 8601), dates (local_date) in the family’s time zone. '
+            .'Links to the pets’ images and videos are valid for a limited time (media[].expires_at, growth[] until growth_expires_at).',
         // Download file name: <prefix>-<family-local date>.json (ASCII only).
         'filename_prefix' => 'petprep-export',
     ],

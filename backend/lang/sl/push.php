@@ -45,25 +45,7 @@ return [
         'critical' => 'Počisti nered, pospravi pregrizeno in kužku daj igračo čim prej, sicer bo zbolel.',
     ],
 
-    // M5-R06-05 osnutek (končna mačja besedila v M5-R06-06): muca je opraskala kavč —
-    // razreši se z odnosom na praskalnik in pohvalo, ne s čiščenjem.
-    'scratcher' => [
-        'soft' => 'Tvoja muca je opraskala kavč. Odnesi jo na praskalnik in jo pohvali.',
-        'critical' => 'Muca je opraskala kavč! Čim prej jo odnesi na praskalnik in jo pohvali, sicer bo zbolela.',
-    ],
-
-    'clean_and_scratcher' => [
-        'soft' => 'Tvoja muca te čaka: počisti nered, nato jo odnesi na praskalnik in jo pohvali.',
-        'critical' => 'Čim prej počisti nered in muco odnesi na praskalnik, sicer bo zbolela.',
-    ],
-
     'walk_reminder' => 'Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?',
-
-    // M5-R06-04 placeholder (draft): the cat's daily play reminder — final cat texts in M5-R06-06.
-    'play_reminder' => 'Tvoja muca se danes še ni igrala in te čaka s palico s peresom. Se greva igrat?',
-
-    // M5-R06-05 osnutek: pesek je treba počistiti v naslednji uri — končna mačja besedila v M5-R06-06.
-    'litter_reminder' => 'Tvoja muca je uporabila pesek. Počisti ga čim prej, preden začne smrdeti.',
 
     'parent_alarm' => 'Tvoj otrok danes ni poskrbel za psa.',
 
@@ -98,5 +80,98 @@ return [
         'child' => 'Igra počaka na starša. Tvoj kuža je na varnem in počiva.',
         'parent' => 'Brezplačni preizkus je končan. Kuža varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
         'parent_no_trial' => 'Kuža varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
+    ],
+
+    /*
+     * M5-R06-06 (načrt T8, CAT_SPEC §6 / §9): mačja besedila. »Muca« je ženskega spola
+     * (»muca je lačna«, »bo zbolela«, »jo / ji«) — zato ločeni ključi, ne zamenjava besede.
+     * PushCopy za mačko izbere `cat.<ključ>`, na pasji ključ pade le pri ključih samo za psa
+     * (sprehod, grizenje). Osnutek Claude, čaka Davidov pregled pred vklopom mačk (R06-09) —
+     * docs/product/CAT_TEXTS_REVIEW.md. En samostalnik za vse faze, kot pri psu.
+     */
+    'cat' => [
+        'soft' => [
+            'hunger' => 'Tvoja muca te milo gleda in sedi ob posodi s hrano.',
+            'thirst' => 'Tvoja muca te milo gleda in sedi ob prazni posodi za vodo.',
+            'hygiene' => 'Tvoja muca te milo gleda — zraven peska je nered, ki ga je treba počistiti.',
+        ],
+
+        'critical' => [
+            'hunger' => 'Če je ne nahraniš v 30 minutah, bo zbolela.',
+            'thirst' => 'Če ji ne daš vode v 30 minutah, bo zbolela.',
+            'hygiene' => 'Muca je naredila nered zraven peska! Počisti ga čim prej, sicer bo zbolela.',
+        ],
+
+        // M3-12: naslednji obrok / voda je mogoča kasneje danes.
+        'wait' => [
+            'hunger' => 'Tvoja muca postaja lačna. Naslednji obrok je ob :time — ne pozabi nanj.',
+            'thirst' => 'Tvoja muca je žejna. Vodo ji lahko spet daš ob :time — ne pozabi nanjo.',
+        ],
+
+        // M3-12: hrana in voda sta zavrnjeni, dokler je zraven peska odprt nered.
+        'clean_first' => [
+            'hunger' => 'Tvoja muca je lačna, a najprej je treba počistiti nered. Potem jo lahko nahraniš.',
+            'thirst' => 'Tvoja muca je žejna, a najprej je treba počistiti nered. Potem ji lahko daš vodo.',
+        ],
+
+        // M3-12 (QA m3, R06-05): odprto je samo praskanje — čiščenje ga ne razreši, praskalnik ga.
+        'scratcher_first' => [
+            'hunger' => 'Tvoja muca je lačna, a najprej jo odnesi na praskalnik in jo pohvali. Potem jo lahko nahraniš.',
+            'thirst' => 'Tvoja muca je žejna, a najprej jo odnesi na praskalnik in jo pohvali. Potem ji lahko daš vodo.',
+        ],
+
+        // M3-12: praskanje in nered zraven peska.
+        'clean_and_scratcher_first' => [
+            'hunger' => 'Tvoja muca je lačna, a najprej počisti nered in jo odnesi na praskalnik. Potem jo lahko nahraniš.',
+            'thirst' => 'Tvoja muca je žejna, a najprej počisti nered in jo odnesi na praskalnik. Potem ji lahko daš vodo.',
+        ],
+
+        // M5-R06-05: muca je opraskala kavč — razreši se z odnosom na praskalnik in pohvalo, ne s čiščenjem.
+        'scratcher' => [
+            'soft' => 'Tvoja muca je opraskala kavč. Odnesi jo na praskalnik in jo pohvali.',
+            'critical' => 'Muca je opraskala kavč! Čim prej jo odnesi na praskalnik in jo pohvali, sicer bo zbolela.',
+        ],
+
+        'clean_and_scratcher' => [
+            'soft' => 'Tvoja muca te čaka: počisti nered, nato jo odnesi na praskalnik in jo pohvali.',
+            'critical' => 'Čim prej počisti nered in muco odnesi na praskalnik, sicer bo zbolela.',
+        ],
+
+        // M5-R06-04: dnevni opomnik za igro (namesto sprehoda).
+        'play_reminder' => 'Tvoja muca se danes še ni igrala in čaka na palico s peresom. Se greva igrat?',
+
+        // M5-R06-05: pesek je treba počistiti v naslednji uri.
+        'litter_reminder' => 'Tvoja muca je uporabila pesek. Počisti ga čim prej, preden začne smrdeti.',
+
+        'parent_alarm' => 'Tvoj otrok danes ni poskrbel za muco.',
+
+        'parent_alarm_detail' => [
+            'hunger' => 'Muca je že več kot uro brez hrane.',
+            'thirst' => 'Muca je že več kot uro brez vode.',
+            'hygiene' => 'Za nered že več kot uro ni nihče poskrbel.',
+        ],
+
+        // Muca zaradi zamujenega sprehoda nikoli ne zboli (CAT_SPEC Q2) — razloga `walk` ni.
+        'illness' => [
+            'child' => [
+                'hygiene' => 'Muca je predolgo živela v neredu in je zbolela. 12 ur bo na opazovanju pri veterinarju.',
+                'other' => 'Muca je zbolela. 12 ur bo na opazovanju pri veterinarju.',
+            ],
+            'parent' => [
+                'hygiene' => 'Muca je zbolela, ker za nered ni nihče poskrbel. 12 ur bo na opazovanju pri veterinarju.',
+                'other' => 'Muca je zbolela. 12 ur bo na opazovanju pri veterinarju.',
+            ],
+        ],
+
+        'game_over' => [
+            'child' => 'Muca je odšla v zavetišče, ker zanjo predolgo ni nihče poskrbel. Pogovori se s starši.',
+            'parent' => 'Muca je odšla v zavetišče, ker 24 ur ni dobila nujne skrbi. V aplikaciji izberite, kako naprej.',
+        ],
+
+        'payment_required' => [
+            'child' => 'Igra počaka na starša. Tvoja muca je na varnem in počiva.',
+            'parent' => 'Brezplačni preizkus je končan. Muca varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
+            'parent_no_trial' => 'Muca varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
+        ],
     ],
 ];

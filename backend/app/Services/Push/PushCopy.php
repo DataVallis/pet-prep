@@ -3,8 +3,10 @@
 namespace App\Services\Push;
 
 use App\Enums\PushType;
+use App\Enums\Species;
 use App\Models\PushNotification;
 use App\Support\RequestLocale;
+use Illuminate\Support\Facades\Lang;
 
 /**
  * Push texts (M3-02, PRODUCT_SPEC §6/§7, DECISIONS 2026-10-05), per language
@@ -31,6 +33,13 @@ use App\Support\RequestLocale;
  *
  * Metric keys: hunger | thirst | hygiene (walk reminder: energy); illness uses
  * hygiene | walk (its reason); game over has none.
+ *
+ * Species (M5-R06-06, plan T8): a cat gets `push.cat.<key>` (EN + SL, the
+ * Slovenian "muca" is feminine, so separate texts — not a swapped noun). A key
+ * without a cat text is dog-only (walk, chewing — a cat never gets those) and
+ * falls back to the dog text; `PushTextCoverageTest` keeps that list explicit.
+ * The cat-only keys (play / litter reminders, scratcher variants) live only
+ * under `cat`. Dog output is byte-identical to before (DogPushTextSnapshotTest).
  */
 final class PushCopy
 {
@@ -43,7 +52,16 @@ final class PushCopy
 
     public const VARIANT_CLEAN_FIRST = 'clean_first';
 
-    private const VARIANTS = [self::VARIANT_WAIT, self::VARIANT_CLEAN_FIRST];
+    /**
+     * M5-R06-06 (QA m3 of R06-05): food / water are refused while a cat's scratching is
+     * open, but cleaning does not resolve it (POST /pet/clean leaves it) — "first carry
+     * it to the scratcher"; with a mess next to the tray as well, "clean and scratcher".
+     */
+    public const VARIANT_SCRATCHER_FIRST = 'scratcher_first';
+
+    public const VARIANT_CLEAN_AND_SCRATCHER_FIRST = 'clean_and_scratcher_first';
+
+    private const VARIANTS = [self::VARIANT_WAIT, self::VARIANT_CLEAN_FIRST, self::VARIANT_SCRATCHER_FIRST, self::VARIANT_CLEAN_AND_SCRATCHER_FIRST];
 
     /** M3-12 hygiene variants while a chewed item is open (only chewing / chewing + another mess). */
     public const VARIANT_TIDY = 'tidy';
@@ -60,6 +78,9 @@ final class PushCopy
     /** Cleaning is never refused (outside locks), so only food and water have variants. */
     private const VARIANT_METRICS = ['hunger', 'thirst'];
 
+    /** Top-level groups that exist only under `push.cat` (the cat's own pushes and variants). */
+    public const CAT_ONLY_GROUPS = ['play_reminder', 'litter_reminder', 'scratcher', 'clean_and_scratcher', 'scratcher_first', 'clean_and_scratcher_first'];
+
     public static function locale(?string $locale): string
     {
         return RequestLocale::isSupported($locale) ? (string) $locale : RequestLocale::default();
@@ -73,12 +94,16 @@ final class PushCopy
     /**
      * @param  string|null  $variant  M3-12, phase 1 / 2 hunger / thirst only: `wait` (the action is
      *                                refused now — "next meal at :time") or `clean_first` (hygiene 0 %
-     *                                blocks feeding / water); null = the plain "feed / water now" text.
+     *                                blocks feeding / water) or, for a cat, `scratcher_first` /
+     *                                `clean_and_scratcher_first` (an open scratching blocks them);
+     *                                null = the plain "feed / water now" text.
      * @param  array<string, string>  $replace  e.g. ['time' => '17:00'] for `wait`.
+     * @param  Species  $species  M5-R06-06: the pet's species (cat texts under `push.cat`).
      */
-    public static function body(PushType $type, ?string $metric, string $audience, ?string $locale = null, ?string $variant = null, array $replace = []): string
+    public static function body(PushType $type, ?string $metric, string $audience, ?string $locale = null, ?string $variant = null, array $replace = [], Species $species = Species::Dog): string
     {
         $locale = self::locale($locale);
+        $line = fn (string $key, array $with = []): string => self::line($key, $locale, $with, $species);
         $audience = $audience === PushNotification::AUDIENCE_PARENT
             ? PushNotification::AUDIENCE_PARENT
             : PushNotification::AUDIENCE_CHILD;
@@ -88,40 +113,48 @@ final class PushCopy
         if (in_array($type, [PushType::SoftWarning, PushType::CriticalAlert], true)
             && in_array($variant, self::VARIANTS, true)
             && in_array($phaseMetric, self::VARIANT_METRICS, true)) {
-            return self::line("{$variant}.{$phaseMetric}", $locale, $replace);
+            return $line("{$variant}.{$phaseMetric}", $replace);
         }
         if (in_array($type, [PushType::SoftWarning, PushType::CriticalAlert], true)
             && $phaseMetric === 'hygiene'
             && in_array($variant, self::HYGIENE_VARIANTS, true)) {
-            return self::line($variant.'.'.($type === PushType::SoftWarning ? 'soft' : 'critical'), $locale);
+            return $line($variant.'.'.($type === PushType::SoftWarning ? 'soft' : 'critical'));
         }
 
         return match ($type) {
-            PushType::SoftWarning => self::line("soft.{$phaseMetric}", $locale),
-            PushType::CriticalAlert => self::line("critical.{$phaseMetric}", $locale),
-            PushType::WalkReminder => self::line('walk_reminder', $locale),
-            // M5-R06-04: the cat's daily play reminder (final cat texts: M5-R06-06).
-            PushType::PlayReminder => self::line('play_reminder', $locale),
-            // M5-R06-05: an open litter use is due within the hour (draft; final cat texts: M5-R06-06).
-            PushType::LitterReminder => self::line('litter_reminder', $locale),
-            PushType::ParentAlarm => trim(self::line('parent_alarm', $locale).' '.(in_array($metric, self::METRICS, true)
-                ? self::line("parent_alarm_detail.{$metric}", $locale)
+            PushType::SoftWarning => $line("soft.{$phaseMetric}"),
+            PushType::CriticalAlert => $line("critical.{$phaseMetric}"),
+            PushType::WalkReminder => $line('walk_reminder'),
+            // M5-R06-04: the cat's daily play reminder (push.cat.play_reminder).
+            PushType::PlayReminder => $line('play_reminder'),
+            // M5-R06-05: an open litter use is due within the hour (push.cat.litter_reminder).
+            PushType::LitterReminder => $line('litter_reminder'),
+            PushType::ParentAlarm => trim($line('parent_alarm').' '.(in_array($metric, self::METRICS, true)
+                ? $line("parent_alarm_detail.{$metric}")
                 : '')),
-            PushType::Illness => self::line('illness.'.$audience.'.'.(in_array($metric, self::ILLNESS_REASONS, true) ? $metric : 'other'), $locale),
-            PushType::GameOver => self::line("game_over.{$audience}", $locale),
+            // A cat is never sick from a missed walk (CAT_SPEC Q2): a stray `walk` reason reads as `other`.
+            PushType::Illness => $line('illness.'.$audience.'.'.(in_array($metric, self::ILLNESS_REASONS, true) && ! ($species === Species::Cat && $metric === 'walk') ? $metric : 'other')),
+            PushType::GameOver => $line("game_over.{$audience}"),
             // M3-11: only parents got the trial reminder (not sent since M3-13; stored rows still render).
-            PushType::TrialEnding => self::line('trial_ending', $locale),
+            PushType::TrialEnding => $line('trial_ending'),
             // `no_trial` = the challenge started without a free trial (every birth since
             // M3-13) — parents get no "the free trial has ended".
-            PushType::PaymentRequired => self::line('payment_required.'.$audience.($metric === 'no_trial' && $audience === PushNotification::AUDIENCE_PARENT ? '_no_trial' : ''), $locale),
+            PushType::PaymentRequired => $line('payment_required.'.$audience.($metric === 'no_trial' && $audience === PushNotification::AUDIENCE_PARENT ? '_no_trial' : '')),
         };
     }
 
     /**
+     * The text for $key: a cat's own `push.cat.<key>` when it exists in that language
+     * (cat-only groups always resolve there), else the dog key (dog-only keys).
+     *
      * @param  array<string, string>  $replace
      */
-    private static function line(string $key, string $locale, array $replace = []): string
+    private static function line(string $key, string $locale, array $replace = [], Species $species = Species::Dog): string
     {
+        $catOnly = in_array(explode('.', $key)[0], self::CAT_ONLY_GROUPS, true);
+        if (($species === Species::Cat || $catOnly) && Lang::has("push.cat.{$key}", $locale, false)) {
+            $key = "cat.{$key}";
+        }
         $line = trans("push.{$key}", $replace, $locale);
 
         return is_string($line) ? $line : '';

@@ -18,6 +18,10 @@ return [
         'about' => 'Izvoz podatkov družine iz aplikacije PetPrep (GDPR čl. 15 in 20). '
             .'Časi so v UTC (ISO 8601), datumi (local_date) v časovnem pasu družine. '
             .'Povezave do slik in videov psov veljajo omejen čas (media[].expires_at, growth[] do growth_expires_at).',
+        // M5-R06-06: isto besedilo za družino z mačko (»ljubljenčkov« namesto »psov«; osnutek Claude, čaka Davida).
+        'about_pets' => 'Izvoz podatkov družine iz aplikacije PetPrep (GDPR čl. 15 in 20). '
+            .'Časi so v UTC (ISO 8601), datumi (local_date) v časovnem pasu družine. '
+            .'Povezave do slik in videov ljubljenčkov veljajo omejen čas (media[].expires_at, growth[] do growth_expires_at).',
         // Download file name: <prefix>-<family-local date>.json (ASCII only).
         'filename_prefix' => 'petprep-izvoz',
     ],

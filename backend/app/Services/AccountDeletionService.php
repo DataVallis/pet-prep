@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\FamilyRole;
+use App\Enums\Species;
 use App\Enums\UserRole;
 use App\Events\PetUpdated;
 use App\Exceptions\AccountDeletionException;
@@ -312,16 +313,19 @@ class AccountDeletionService
             return;
         }
 
-        $losing = Pet::whereIn('id', $petIds)->orderBy('id')->get()
-            ->filter(fn (Pet $pet): bool => $pet->deletionLosesPurchase())
+        $losingPets = Pet::whereIn('id', $petIds)->orderBy('id')->get()
+            ->filter(fn (Pet $pet): bool => $pet->deletionLosesPurchase());
+        $losing = $losingPets
             ->map(fn (Pet $pet): array => ['pet_id' => $pet->id, 'breed_type' => $pet->breed_type->value])
             ->values()
             ->all();
 
         if ($losing !== []) {
+            // M5-R06-06: names the animal; "pet" once a cat is among them (dog wording unchanged).
+            $noun = $losingPets->every(fn (Pet $pet): bool => $pet->speciesValue() === Species::Dog) ? 'dog' : 'pet';
             throw new AccountDeletionException(
                 'paid_challenge_ack_required',
-                'This deletes a dog whose paid 12-week challenge is not finished. The purchase stays used. Send acknowledge_paid_challenge: true to continue.',
+                'This deletes a '.$noun.' whose paid 12-week challenge is not finished. The purchase stays used. Send acknowledge_paid_challenge: true to continue.',
                 422,
                 extra: ['pets' => $losing],
             );
