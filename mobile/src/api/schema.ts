@@ -1730,6 +1730,7 @@ export interface components {
             /** Format: date-time */
             payment_locked_at: string | null;
             species: components["schemas"]["Species"];
+            pet_look_id: number | null;
         };
         /**
          * PetOrigin
@@ -2780,7 +2781,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -3262,7 +3263,7 @@ export interface operations {
                             /** @description The viewing child's own successful sessions today (null in the broadcast). */
                             my_sessions_today: number | null;
                             min_gap_minutes: number;
-                            /** @description End of the gap after the last successful session; null when none runs. */
+                            /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                             next_allowed_at: string | null;
                             /** @description Why a start would be refused now (not the lock); null = it may start. */
                             blocked_reason: string | null;
@@ -3764,7 +3765,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -4264,7 +4265,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -4764,7 +4765,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -5264,7 +5265,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -5764,7 +5765,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -6268,7 +6269,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -6772,7 +6773,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -7276,7 +7277,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -7776,7 +7777,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -8280,7 +8281,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -8780,7 +8781,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -9280,7 +9281,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -9784,7 +9785,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -10284,7 +10285,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -10788,7 +10789,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -11288,7 +11289,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -11792,7 +11793,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -12296,7 +12297,7 @@ export interface operations {
                                 /** @description The viewing child's own successful sessions today (null in the broadcast). */
                                 my_sessions_today: number | null;
                                 min_gap_minutes: number;
-                                /** @description End of the gap after the last successful session; null when none runs. */
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
                                 next_allowed_at: string | null;
                                 /** @description Why a start would be refused now (not the lock); null = it may start. */
                                 blocked_reason: string | null;
@@ -12732,7 +12733,7 @@ export interface operations {
                     } | {
                         /** @constant */
                         message: "Video recorded; storing.";
-                        pet_id: number;
+                        pet_id: number | null;
                     };
                 };
             };

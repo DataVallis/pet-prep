@@ -725,6 +725,50 @@ describe('dog-only features for a cat', function () {
 });
 
 describe('state, export, data', function () {
+    it('names the end of every timed blocked_reason in wand.next_allowed_at (QA M5-R06-08a m5)', function () {
+        [$parent, $child, $cat] = wpFamily(); // bedtime 21:00–07:00
+        $tim = wpSibling($parent, $cat);
+        $wand = function (User $viewer): array {
+            test()->actingAs($viewer, 'sanctum');
+            $state = test()->getJson('/api/child/pet')->assertOk()->json('wand');
+            app('auth')->forgetGuards();
+
+            return $state;
+        };
+
+        // Quiet hours: the end of the night (was null before — only the 2 h gap had a time).
+        wpAt('2026-10-21 22:00');
+        expect($wand($child))->blocked_reason->toBe('wand_quiet_hours')
+            ->next_allowed_at->toBe('2026-10-22T07:00:00+02:00');
+
+        // Another child's game: its TTL end (the 422 says the same).
+        wpAt('2026-10-22 09:00');
+        $expires = wpStart($tim)->assertOk()->json('session.expires_at');
+        $blocked = $wand($child);
+        expect($blocked['blocked_reason'])->toBe('wand_session_active')
+            ->and(Carbon::parse($blocked['next_allowed_at'])->equalTo(Carbon::parse($expires)))->toBeTrue();
+        expect(wpStart($child)->assertStatus(422)->json('next_allowed_at'))->toBe($blocked['next_allowed_at']);
+        // Tim's own view: his running game is no refusal.
+        expect($wand($tim))->blocked_reason->toBeNull()->next_allowed_at->toBeNull();
+
+        // The day ending: the family-local midnight.
+        withoutQuietHours($cat);
+        wpAt('2026-10-22 23:58:30');
+        expect($wand($child))->blocked_reason->toBe('wand_day_ending')
+            ->next_allowed_at->toBe('2026-10-23T00:00:00+02:00');
+
+        // No refusal and no gap → null (unchanged).
+        wpAt('2026-10-23 10:00');
+        expect($wand($child))->blocked_reason->toBeNull()->next_allowed_at->toBeNull();
+
+        // The broadcast (no viewer) carries the pet-level time too.
+        wpAt('2026-10-23 22:30');
+        setQuietHours(['family_id' => $cat->family_id, 'bedtime_start' => '21:00', 'bedtime_end' => '07:00']);
+        $payload = PetUpdated::payloadFor($cat->fresh());
+        expect($payload['wand']['blocked_reason'])->toBe('wand_quiet_hours')
+            ->and($payload['wand']['next_allowed_at'])->toBe('2026-10-24T07:00:00+02:00');
+    });
+
     it('gives the child state a wand object for a cat (and the meter in energy_level)', function () {
         [, $child] = wpFamily();
         wpAt('2026-10-21 09:00');

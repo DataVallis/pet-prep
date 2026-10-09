@@ -19,8 +19,12 @@ use Carbon\CarbonInterface;
  *   it "Igra" for a cat (`pet.species`).
  * - `my_sessions_today`: the viewing child's own successful sessions (fair
  *   share: ⌈goal / n⌉; null in the broadcast).
- * - `min_gap_minutes` / `next_allowed_at`: the 2 h gap after the last
- *   SUCCESSFUL session (null when no gap runs).
+ * - `min_gap_minutes`: the 2 h gap after the last SUCCESSFUL session.
+ * - `next_allowed_at`: when the refusal in `blocked_reason` ends (gap end,
+ *   end of quiet hours, expiry of another child's / another kind of game,
+ *   the family-local midnight for wand_day_ending); without a timed
+ *   refusal the end of a running gap; null when nothing timed blocks
+ *   (QA M5-R06-08a m5).
  * - `blocked_reason`: why a start would be refused now (null = it may start;
  *   lock reasons are in `lock`) — wand_not_available | needs_cleaning |
  *   wand_quiet_hours (the cat sleeps) |
@@ -75,7 +79,9 @@ final class WandPayload
             sessionsToday: $service->successfulOn($pet, $today),
             mySessionsToday: $viewer !== null ? $service->successfulOn($pet, $today, $viewer) : null,
             minGapMinutes: $service->minGapMinutes($pet, $today),
-            nextAllowedAt: $iso($service->gapEndsAt($pet, $now)),
+            // QA 08a m5: the end of whatever blocks the start (gap, quiet hours, another
+            // game's TTL, the day ending) so the app can name a time; else the gap's end.
+            nextAllowedAt: $iso($refusal['next_allowed_at'] ?? $service->gapEndsAt($pet, $now)),
             blockedReason: $refusal['refusal']->value ?? null,
             canStart: $refusal === null && $pet->actionLockReasonFor($viewer) === null,
             session: $mine !== null ? PetActivityService::wandSessionPayload($mine, $tz) : null,
@@ -97,7 +103,7 @@ final class WandPayload
             // The viewing child's own successful sessions today (null in the broadcast).
             'my_sessions_today' => $this->mySessionsToday,
             'min_gap_minutes' => $this->minGapMinutes,
-            // End of the gap after the last successful session; null when none runs.
+            // When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none.
             'next_allowed_at' => $this->nextAllowedAt,
             // Why a start would be refused now (not the lock); null = it may start.
             'blocked_reason' => $this->blockedReason,
