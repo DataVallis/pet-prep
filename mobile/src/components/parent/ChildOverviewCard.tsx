@@ -24,7 +24,6 @@ import {
   TrafficLightBadge,
 } from '@/components/parent/ParentUi';
 import {
-  breedLabel,
   petStatus,
   petStatusText,
   type FamilyChild,
@@ -51,6 +50,7 @@ import { playTodayLine } from '@/modules/play/play';
 import { fonts, palette, tightTracking } from '@/theme';
 import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
+import { petLabel } from '@/modules/petName/petName';
 
 /** All user-visible strings of the card (`parent:childCard`, M1-18). */
 export const CHILD_CARD_STRINGS = strings('parent', 'childCard', {
@@ -117,7 +117,7 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
         </View>
         <View style={styles.flex}>
           <Text style={styles.name}>{child.name}</Text>
-          {pet && <Text style={styles.muted}>{breedLabel(pet.breed_type, pet.species)}</Text>}
+          {pet && <Text style={styles.muted} testID={`child-pet-label-${id}`}>{petLabel(pet)}</Text>}
           {pet && !pet.is_game_over && (
             <PlanBadge
               plan={pet.plan}

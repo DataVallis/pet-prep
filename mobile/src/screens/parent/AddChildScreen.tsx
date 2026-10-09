@@ -32,7 +32,6 @@ import { useGeneratePin } from '@/hooks/queries/useGeneratePin';
 import { useParentDashboard } from '@/hooks/queries/useParentDashboard';
 import { useCountdown } from '@/hooks/useCountdown';
 import {
-  breedLabel,
   caretakerNames,
   classifyCreateChildError,
   familyFromDashboard,
@@ -53,6 +52,7 @@ import { fonts, palette, tightTracking } from '@/theme';
 import { t, tSpecies } from '@/i18n';
 import { readBreed, readSpecies } from '@/modules/species/species';
 import { strings } from '@/i18n/strings';
+import { petLabel } from '@/modules/petName/petName';
 
 const STEP_LINES = ['open', 'code', 'finish'] as const;
 
@@ -366,7 +366,7 @@ function PetStep({
           <PetOption
             key={pet.id}
             icon={pet.species === 'cat' ? <Cat color={palette.graphite} size={22} /> : <Dog color={palette.graphite} size={22} />}
-            title={tSpecies('parent:addChild.joinPet', pet.species, { label: breedLabel(pet.breed_type, pet.species) })}
+            title={tSpecies('parent:addChild.joinPet', pet.species, { label: petLabel(pet) })}
             hint={joinPetHintText(caretakerNames(pet, family), pet.species ?? null)}
             onPress={() => onChoose(pet.id)}
             testID={`pet-option-${pet.id}`}

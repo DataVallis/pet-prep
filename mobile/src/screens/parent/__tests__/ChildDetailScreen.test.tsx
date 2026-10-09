@@ -110,6 +110,22 @@ describe('ChildDetailScreen', () => {
     expect(screen.getByTestId('report-illnesses')).toHaveTextContent(/čet 1\. 10\. 10:00 – čet 1\. 10\. 22:00/);
   });
 
+  it('M5-R08: the "Ime" row of the child\'s pet — empty, then the parent\'s name', async () => {
+    const { unmount } = renderWithQuery(<ChildDetailScreen child={LUKA} family={FAMILY} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('detail-pet-name-row-value')).toHaveTextContent('Še brez imena');
+    expect(screen.getByTestId('detail-pet-name-row-edit')).toHaveTextContent('Dodaj ime');
+    unmount();
+
+    const named = familyFromDashboard(
+      makeScoredDashboard([LUKA], [makeFamilyPet({ id: 7, name: 'Luna', caretakers: [{ child_id: 2, contract_signed: true }] })]) as never,
+    ) as FamilyOverview;
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={named} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('detail-pet-name-row-value')).toHaveTextContent('Luna');
+    expect(screen.getByTestId('detail-pet-name-row-edit')).toHaveTextContent('Spremeni');
+  });
+
   it('M5-R04: the dog card shows stage · age, origin, next stage and today\'s meals', async () => {
     renderWithQuery(<ChildDetailScreen child={LUKA} family={FAMILY} onBack={jest.fn()} />);
     await flush();

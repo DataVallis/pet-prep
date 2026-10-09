@@ -42,6 +42,7 @@ import {
   type RestoreOutcome,
 } from '@/modules/purchases';
 import { fonts, palette, tightTracking } from '@/theme';
+import { petLabel } from '@/modules/petName/petName';
 
 export const CHALLENGE_STRINGS = strings('paywall', 'challenge', {
   petLine: (breed: string, names: string) => t('paywall:challenge.petLine', { breed, names }),
@@ -246,7 +247,7 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
               const paused = pet.status === 'payment_required' && familyPet?.born_at !== null;
               return (
                 <Card key={pet.pet_id} testID={`challenge-pet-${pet.pet_id}`}>
-                  <Text style={styles.petTitle}>{S.petLine(breedLabel(familyPet?.breed_type ?? 'unknown', familyPet?.species), names)}</Text>
+                  <Text style={styles.petTitle}>{S.petLine(familyPet ? petLabel(familyPet) : breedLabel('unknown', null), names)}</Text>
                   <Text style={[styles.body, paused && styles.pausedText]}>
                     {unborn
                       ? S.unborn

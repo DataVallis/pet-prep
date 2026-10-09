@@ -23,7 +23,6 @@ import {
 } from '@/modules/account/account';
 import { useBilling } from '@/modules/purchases';
 import {
-  breedLabel,
   classifyRevokeError,
   devicesLabel,
   type FamilyChild,
@@ -33,6 +32,7 @@ import {
 import { fonts, palette, tightTracking } from '@/theme';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
+import { petLabel } from '@/modules/petName/petName';
 
 
 /** All user-visible strings (`family:children`, M1-18). */
@@ -100,7 +100,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
     if (child.pet_id === null) return S.noPet;
     const pet = family.pets.find((p) => p.id === child.pet_id);
     if (!pet) return S.noPet;
-    const label = breedLabel(pet.breed_type, pet.species);
+    const label = petLabel(pet);
     if (pet.is_game_over) return `${label} · ${S.gameOver}`;
     if (!child.contract_signed) return `${label} · ${S.awaitingContract}`;
     return label;

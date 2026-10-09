@@ -43,6 +43,8 @@ import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
 import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
 import { parentPetGrowthKey, useGrowthRefresh, useParentPetGrowth } from '@/hooks/queries/usePetGrowth';
 import PetAlbum from '@/components/PetAlbum';
+import PetNameRow from '@/components/parent/PetNameRow';
+import { readPetName } from '@/modules/petName/petName';
 import { hasAlbum } from '@/modules/petMedia/album';
 import {
   REPORT_PERIODS,
@@ -251,6 +253,13 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
             </Pressable>
           )}
 
+          {/* M5-R08: the parent sets / changes / removes the pet's name here (a label only). */}
+          {pet !== null && (
+            <Card testID="detail-pet-name">
+              <PetNameRow pet={pet} testID="detail-pet-name-row" />
+            </Card>
+          )}
+
           {profile !== null && (
             <Card testID="detail-pet-profile">
               <Text style={styles.strong} testID="detail-pet-stage">
@@ -435,7 +444,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
       {showAlbum && media !== null && (
         <PetAlbum
           media={media}
-          title={tSpecies('pet:album.parentTitle', species)}
+          title={readPetName(pet?.name) ?? tSpecies('pet:album.parentTitle', species)}
           species={species}
           onClose={() => setAlbumOpen(false)}
           onMediaExpired={onMediaExpired}

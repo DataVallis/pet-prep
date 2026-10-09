@@ -237,5 +237,33 @@
     "quietHours": "Nothing is sent during quiet hours. Notifications never include children's names.",
     "enable": "Turn on notifications",
     "openSettings": "Open settings"
+  },
+  "petName": {
+    "label": "Name",
+    "none": "No name yet",
+    "add": "Add a name",
+    "edit": "Change",
+    "title": "Pet's name",
+    "hint": "Pick the name together with your child.",
+    "rules": "Up to 20 characters: letters, spaces, hyphens and apostrophes.",
+    "placeholder": "e.g. Luna",
+    "inputLabel": "Pet's name",
+    "counter": "{{count}}/{{max}}",
+    "save": "Save",
+    "remove": "Remove name",
+    "cancel": "Cancel",
+    "close": "Close",
+    "saved": "Name saved.",
+    "removed": "Name removed.",
+    "editA11y": "Change the name: {{pet}}",
+    "errors": {
+      "name_too_long": "The name can be at most 20 characters long.",
+      "name_invalid": "Use only letters, spaces, hyphens (-) and apostrophes (').",
+      "name_not_allowed": "Please choose a different name.",
+      "not_found": "This pet is no longer in your family.",
+      "forbidden": "Only a parent can change the name.",
+      "offline": "No connection. Try again.",
+      "server": "The name could not be saved. Try again later."
+    }
   }
 }

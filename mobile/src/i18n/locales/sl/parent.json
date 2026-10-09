@@ -241,5 +241,33 @@
     "quietHours": "Med tihimi urami ne pošiljamo ničesar. Obvestila ne vsebujejo imen otrok.",
     "enable": "Vklopi obvestila",
     "openSettings": "Odpri nastavitve"
+  },
+  "petName": {
+    "label": "Ime",
+    "none": "Še brez imena",
+    "add": "Dodaj ime",
+    "edit": "Spremeni",
+    "title": "Ime ljubljenčka",
+    "hint": "Ime izberita skupaj z otrokom.",
+    "rules": "Največ 20 znakov: črke, presledek, vezaj in opuščaj.",
+    "placeholder": "npr. Luna",
+    "inputLabel": "Ime ljubljenčka",
+    "counter": "{{count}}/{{max}}",
+    "save": "Shrani",
+    "remove": "Odstrani ime",
+    "cancel": "Prekliči",
+    "close": "Zapri",
+    "saved": "Ime je shranjeno.",
+    "removed": "Ime je odstranjeno.",
+    "editA11y": "Spremeni ime: {{pet}}",
+    "errors": {
+      "name_too_long": "Ime je lahko dolgo največ 20 znakov.",
+      "name_invalid": "Uporabite samo črke, presledek, vezaj (-) in opuščaj (').",
+      "name_not_allowed": "Prosimo, izberite drugo ime.",
+      "not_found": "Tega ljubljenčka ni več v vaši družini.",
+      "forbidden": "Ime lahko spremeni samo starš.",
+      "offline": "Ni povezave. Poskusite znova.",
+      "server": "Imena ni bilo mogoče shraniti. Poskusite pozneje."
+    }
   }
 }

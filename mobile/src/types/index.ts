@@ -104,6 +104,11 @@ export interface PetUpdatedBroadcast {
   breed_type: BreedType;
   /** M5-R06-01; missing from an older server. */
   species?: Species;
+  /**
+   * M5-R08: optional name set by a parent (null = none) — a label only. Every broadcast of a
+   * current server carries it (`event_type: pet_renamed` after a change); missing from an older one.
+   */
+  name?: string | null;
   hunger_level: number;
   thirst_level: number;
   energy_level: number;
