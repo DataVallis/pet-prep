@@ -17,6 +17,10 @@ use App\Services\Push\PushCopy;
 | scratcher variants are left out — a dog never scratches). Every value must
 | stay byte-identical, both with the default species and with Species::Dog
 | passed explicitly.
+|
+| Re-recorded once on purpose (M5-R06-06b, David 2026-10-09): the Slovenian
+| parent alarm is formal ("Vaš otrok …") and the new tidy-first / *_first_wait
+| variants were added. Every other value is unchanged from the first recording.
 */
 
 const DPT_FIXTURE = __DIR__.'/../Fixtures/dog_push_texts_snapshot.json';
@@ -26,7 +30,10 @@ function dptRender(?Species $species): array
 {
     $types = array_values(array_filter(PushType::cases(), fn (PushType $t): bool => ! in_array($t, [PushType::PlayReminder, PushType::LitterReminder], true)));
     $metrics = [null, 'hunger', 'thirst', 'hygiene', 'energy', 'walk', 'no_trial'];
-    $variants = [null, PushCopy::VARIANT_WAIT, PushCopy::VARIANT_CLEAN_FIRST, PushCopy::VARIANT_TIDY, PushCopy::VARIANT_CLEAN_AND_TIDY];
+    $variants = [null, PushCopy::VARIANT_WAIT, PushCopy::VARIANT_CLEAN_FIRST, PushCopy::VARIANT_TIDY, PushCopy::VARIANT_CLEAN_AND_TIDY,
+        // M5-R06-06b (David 2026-10-09): tidy first + the *_first_wait variants.
+        PushCopy::VARIANT_TIDY_FIRST, PushCopy::VARIANT_CLEAN_AND_TIDY_FIRST,
+        PushCopy::VARIANT_CLEAN_FIRST_WAIT, PushCopy::VARIANT_TIDY_FIRST_WAIT, PushCopy::VARIANT_CLEAN_AND_TIDY_FIRST_WAIT];
 
     $out = [];
     foreach ($types as $type) {
@@ -64,7 +71,7 @@ it('keeps every dog push text byte-identical (M5-R06-06)', function () {
 
     // Not a vacuous snapshot: the spec sentences are in it.
     expect($expected['soft_warning|hunger|child|sl|-'])->toBe('Tvoj kuža te milo gleda in kaže na posodo s hrano.')
-        ->and($expected['parent_intervention_alarm|hunger|parent|sl|-'])->toStartWith('Tvoj otrok danes ni poskrbel za psa.')
+        ->and($expected['parent_intervention_alarm|hunger|parent|sl|-'])->toStartWith('Vaš otrok danes ni poskrbel za psa.')
         ->and(count($expected))->toBeGreaterThan(400);
 
     expect($actual)->toBe($expected);
