@@ -55,7 +55,8 @@ enum LifeStage: string
             return match ($this) {
                 self::Puppy => 'a young kitten with clear kitten proportions: large ears and a head that are large for the body, '
                     .'short legs and a soft, fluffy kitten coat',
-                self::Young => 'a young adult cat, lean and agile, with its full adult coat',
+                // No "full adult coat": a young Maine Coon is not fully grown (C17, QA M5-R06-07).
+                self::Young => 'a young adult cat, lean and agile',
                 self::Adult => 'a fully grown adult cat in its prime, in good healthy condition',
                 self::Senior => 'a healthy senior cat, slightly leaner, with a slightly less glossy coat '
                     .'and a calm, relaxed posture',

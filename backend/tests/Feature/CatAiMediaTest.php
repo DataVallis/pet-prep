@@ -6,6 +6,7 @@ use App\Enums\PetOrigin;
 use App\Enums\PetStateEnum;
 use App\Enums\Species;
 use App\Filament\Pages\AiLab;
+use App\Filament\Resources\PetResource\Pages\EditPet;
 use App\Jobs\RunMediaLabImage;
 use App\Jobs\StorePetMedia;
 use App\Jobs\SubmitPetStateVideo;
@@ -189,23 +190,41 @@ describe('cat prompts (species templates)', function () {
         $kitten = camCat('maine_coon', 'puppy');
         $young = camCat('maine_coon', 'young');
 
-        expect($prompts->imagePromptForPet($kitten))
+        // Adult: the FIFe features in full.
+        expect($prompts->imagePromptForPet(camCat('maine_coon', 'adult')))
             ->toContain('large ')
             ->toContain('Maine Coon cat')
             ->toContain('a full frill around the neck and chest')
             ->toContain('tufted ears')
             ->toContain('very long, flowing, fully furred tail')
-            ->toContain('The cat is a young kitten')
-            ->toContain('As a Maine Coon kitten it is already noticeably bigger');
+            ->not->toContain('As a');
 
+        // QA M5-R06-07: a growing Maine Coon gets the stage note and never the "full" adult wording.
+        expect($prompts->imagePromptForPet($kitten))
+            ->toContain('Maine Coon cat')
+            ->toContain('tufted ears')
+            ->toContain('a long, fluffy tail')
+            ->toContain('The cat is a young kitten')
+            ->toContain('As a Maine Coon kitten it is already noticeably bigger')
+            ->not->toContain('full frill')
+            ->not->toContain('very long');
+
+        foreach ([$prompts->imagePromptForPet($young), $prompts->stageEditPrompt($young, LifeStage::Young),
+            $prompts->videoPrompt('maine_coon', PetStateEnum::Idle, $young->pet_dna['traits'], LifeStage::Young)] as $text) {
+            expect($text)->not->toContain('full frill')
+                ->not->toContain('full adult coat')
+                ->not->toContain('very long')
+                ->toContain('a frill that is still filling out');
+        }
         expect($prompts->imagePromptForPet($young))->toContain('As a young Maine Coon it is not fully grown yet')
             ->and($prompts->stageEditPrompt($young, LifeStage::Young))
             ->toStartWith('The same cat as in the reference image (')
             ->toContain('As a young Maine Coon it is not fully grown yet')
             ->toContain(PetAppearancePrompt::CAT_EDIT_KEEP);
 
-        // Adult / senior and the domestic cat have no stage note.
-        expect($prompts->imagePromptForPet(camCat('maine_coon', 'adult')))->not->toContain('As a')
+        // Every stage with a note has overrides; the domestic cat has no stage note.
+        expect(array_keys((array) config('breed_appearance.maine_coon.stage_overrides')))
+            ->toBe(array_keys((array) config('breed_appearance.maine_coon.stage_notes')))
             ->and($prompts->imagePromptForPet(camCat('domestic_cat', 'young')))->not->toContain('As a');
     });
 
@@ -513,6 +532,38 @@ describe('AI Lab for cats', function () {
 
         expect(MediaLabRun::sole()->breed)->toBe('maine_coon')
             ->and(MediaLabResult::sole()->prompt)->toContain('As a young Maine Coon');
+    });
+});
+
+describe('QA M5-R06-07', function () {
+    it('fails a video slot whose state the species never has, without calling fal', function () {
+        $cat = camCat('maine_coon');
+        camStoredImage($cat);
+        $chewing = PetMedia::create(['pet_id' => $cat->id, 'kind' => 'video', 'state' => 'chewing', 'status' => 'pending', 'generation' => 0]);
+
+        expect(app(PetMediaService::class)->submitVideo($chewing->id))->toBeTrue()
+            ->and($chewing->fresh()->status)->toBe('failed')
+            ->and($chewing->fresh()->request_id)->toBeNull();
+        Http::assertNothingSent();
+    });
+
+    it('lets an admin set only the six storable states on a pet (no scratching / chewing)', function () {
+        actingAs(camSuperadmin());
+        $cat = camCat('domestic_cat');
+
+        foreach (['scratching', 'chewing'] as $state) {
+            Livewire::test(EditPet::class, ['record' => $cat->getRouteKey()])
+                ->fillForm(['pet_state' => $state])
+                ->call('save')
+                ->assertHasFormErrors(['pet_state']);
+        }
+        expect($cat->fresh()->pet_state)->toBe(PetStateEnum::Idle);
+
+        Livewire::test(EditPet::class, ['record' => $cat->getRouteKey()])
+            ->fillForm(['pet_state' => 'sick'])
+            ->call('save')
+            ->assertHasNoFormErrors();
+        expect($cat->fresh()->pet_state)->toBe(PetStateEnum::Sick);
     });
 });
 

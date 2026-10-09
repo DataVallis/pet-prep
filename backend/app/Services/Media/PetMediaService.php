@@ -290,6 +290,15 @@ class PetMediaService
             return true;
         }
 
+        // M5-R06-07 (QA): a state the species never has (a cat's accident / chewing,
+        // a dog's scratching — e.g. a slot from an admin regenerate) — fail it
+        // cleanly instead of throwing in the prompt builder; nothing reaches fal.
+        if (! $state->appliesTo($pet->speciesValue())) {
+            $this->fail($slot, null, "A {$pet->speciesValue()->value} has no '{$state->value}' video — not generated.");
+
+            return true;
+        }
+
         $image = $this->imageSlot($pet);
 
         if (! $image->isServable()) {

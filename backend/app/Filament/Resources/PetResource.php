@@ -101,6 +101,8 @@ class PetResource extends Resource
                             // Only values pets.pet_state can hold — behaviour states
                             // (accident / chewing / scratching) are video slots only.
                             ->options(collect(PetStateEnum::petStates())->mapWithKeys(fn (PetStateEnum $s): array => [$s->value => $s->name])->all())
+                            // The server refuses a value outside the offered options (QA M5-R06-07).
+                            ->in(fn (Forms\Components\Select $component): array => array_keys($component->getOptions()))
                             ->required(),
                     ])
                     ->columns(3),

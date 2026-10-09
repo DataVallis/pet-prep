@@ -28,10 +28,12 @@
 | `prompt_order` decides how the traits are woven into the natural-language
 | description (App\Services\Media\PetAppearancePrompt).
 |
-| Cats (M5-R06-07, CAT_SPEC §8, docs/research/cat-data): two optional keys
+| Cats (M5-R06-07, CAT_SPEC §8, docs/research/cat-data): three optional keys
 | that dog breeds do not use — `features` (fixed breed features every pet of
-| the breed has, appended to the description) and `stage_notes` (an extra
-| sentence per life stage after the species stage cue). The species comes
+| the breed has, appended to the description), `stage_notes` (an extra
+| sentence per life stage after the species stage cue) and `stage_overrides`
+| (per stage: trait values / `features` that replace the adult wording while
+| the cat is growing — every `stage_notes` stage has one). The species comes
 | from BreedType::species(); cat prompts never contain the word "dog".
 | Domestic cat: no source for colour frequencies (data.json `appearance`
 | UNSOURCED) → everything is a draft. Maine Coon: the traits in `sources`
@@ -255,6 +257,18 @@ return [
         'stage_notes' => [
             'puppy' => 'As a Maine Coon kitten it is already noticeably bigger than other kittens of its age, very fluffy, with small tufts on the ear tips',
             'young' => 'As a young Maine Coon it is not fully grown yet: a little lanky, with the frill and tail fur not yet full (the breed reaches full size at three to five years)',
+        ],
+        // A growing Maine Coon (QA M5-R06-07): no "full frill" / "very long" tail in the
+        // same prompt as the stage note — these replace the adult features / tail.
+        'stage_overrides' => [
+            'puppy' => [
+                'tail' => 'long, fluffy',
+                'features' => ['a square outline of the head', 'soft kitten fur that is already a little longer on the back and sides'],
+            ],
+            'young' => [
+                'tail' => 'long, bushy',
+                'features' => ['a square outline of the head', 'a frill that is still filling out', 'fur that is short on the head and shoulders and longer down the back and sides'],
+            ],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
     ],

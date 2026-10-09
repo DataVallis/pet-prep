@@ -112,7 +112,7 @@ class PetAppearancePrompt
     {
         $species = self::speciesOf($breedKey);
         $this->refuseCatWithoutTraits($species, $traits);
-        $subject = $traits !== [] ? $this->describe($breedKey, $traits) : $this->displayName($breedKey);
+        $subject = $traits !== [] ? $this->describe($breedKey, $traits, $stage) : $this->displayName($breedKey);
 
         return trim(implode(' ', array_filter([
             'A photorealistic photograph of a single '.$subject.'.',
@@ -154,7 +154,7 @@ class PetAppearancePrompt
         [$breedKey, $traits] = $this->dnaOf($pet);
         $species = self::speciesOf($breedKey);
         $this->refuseCatWithoutTraits($species, $traits);
-        $subject = $traits !== [] ? $this->describe($breedKey, $traits) : $this->displayName($breedKey);
+        $subject = $traits !== [] ? $this->describe($breedKey, $traits, $stage) : $this->displayName($breedKey);
 
         if ($species === Species::Cat) {
             return trim(implode(' ', array_filter([
@@ -252,11 +252,27 @@ class PetAppearancePrompt
     /**
      * "medium sturdy mixed-breed dog with a short coat in … and …" — breed + traits only.
      *
+     * A growing cat stage (M5-R06-07 QA): when the breed has `stage_overrides`
+     * for $stage (e.g. the Maine Coon kitten / young cat, whose `stage_notes`
+     * say "not fully grown"), those trait values and `features` replace the
+     * adult ones, so the prompt never claims a full frill or a very long tail
+     * for a kitten. Dog breeds have no overrides — their output is unchanged.
+     *
      * @param  array<string, string>  $traits
      */
-    public function describe(string $breedKey, array $traits): string
+    public function describe(string $breedKey, array $traits, ?LifeStage $stage = null): string
     {
         $breed = (array) config("breed_appearance.{$breedKey}", []);
+        $override = $stage !== null ? (array) ($breed['stage_overrides'][$stage->value] ?? []) : [];
+        if ($override !== []) {
+            foreach ($override as $key => $value) {
+                if ($key === 'features') {
+                    $breed['features'] = (array) $value;
+                } elseif (isset($traits[$key]) && is_string($value)) {
+                    $traits[$key] = $value;
+                }
+            }
+        }
         $displayName = (string) ($breed['display_name'] ?? $this->displayName($breedKey));
         $order = (array) ($breed['prompt_order'] ?? array_keys($traits));
 
@@ -343,13 +359,14 @@ class PetAppearancePrompt
      *
      * @param  array<string, string>  $traits  DNA v2 traits; empty for v1 pets / unknown
      */
-    public function videoPrompt(string $breedKey, PetStateEnum $state, array $traits = []): string
+    public function videoPrompt(string $breedKey, PetStateEnum $state, array $traits = [], ?LifeStage $stage = null): string
     {
         $species = self::speciesOf($breedKey);
 
         if ($species === Species::Cat) {
+            // The video starts from the current stage image: describe that stage (kitten tail, …).
             $subject = $traits !== []
-                ? $this->describe($breedKey, $traits)
+                ? $this->describe($breedKey, $traits, $stage)
                 : (string) config("breed_appearance.{$breedKey}.display_name", 'cat');
 
             return 'The same '.$subject.' as in the image, '.$state->promptModifier($species).'. '.self::CAT_VIDEO_STYLE;

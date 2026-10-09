@@ -254,7 +254,7 @@ class FalAiService
 
         $submitted = $this->gateway->submit(
             $profile,
-            $profile->videoInput($startImageUrl, $this->prompts->videoPrompt($breedKey, $state, $traits), $this->prompts->videoNegativePrompt($species)),
+            $profile->videoInput($startImageUrl, $this->prompts->videoPrompt($breedKey, $state, $traits, $pet->life_stage), $this->prompts->videoNegativePrompt($species)),
             AiSpendPurpose::StateVideo,
             $this->webhookUrl(),
             petId: $pet->id,
