@@ -99,6 +99,8 @@ class ParentDashboardController extends Controller
                 'breed_type' => $pet->breed_type->value,
                 // M5-R06-01: dog | cat.
                 'species' => $pet->speciesValue()->value,
+                // M5-R08: optional name set by a parent (null = none) — a label only.
+                'name' => $pet->name,
                 // Contract before birth (M1-07b): until the first contract,
                 // born_at is null and awaiting_contract true (metrics 100,
                 // nothing decays, no alerts).

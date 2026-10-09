@@ -860,6 +860,7 @@ erDiagram
     bigint user_id "deprecated"
     string breed_type "mutt border_collie domestic_cat maine_coon"
     string species "dog or cat, follows breed (M5-R06-01)"
+    string name "optional label set by a parent, null = none (M5-R08)"
     double hunger_level
     double thirst_level
     double energy_level
@@ -999,7 +1000,7 @@ sequenceDiagram
     API-->>App: 403 / 401 (app falls back to polling)
   end
 
-  Svc->>Svc: DB transaction + row lock, write
+  Svc->>Svc: DB transaction + row lock, write<br/>(also a parent renaming the pet → event_type pet_renamed, M5-R08)
   Svc->>Svc: PetUpdated::afterCommit(pet, event_type)
   Note over Svc: commit → snapshot payload (no PII)<br/>rollback → nothing sent
   Svc->>Redis: push BroadcastEvent (failure logged, tick continues)

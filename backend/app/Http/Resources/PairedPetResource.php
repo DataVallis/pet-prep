@@ -40,6 +40,12 @@ class PairedPetResource extends JsonResource
              * @var 'dog'|'cat'
              */
             'species' => $pet->speciesValue()->value,
+            /**
+             * M5-R08: optional name set by a parent (null = none) — a label only.
+             *
+             * @var string|null
+             */
+            'name' => $pet->name,
             'hunger_level' => $pet->displayMetric('hunger_level'),
             'thirst_level' => $pet->displayMetric('thirst_level'),
             'energy_level' => $pet->displayMetric('energy_level'),
