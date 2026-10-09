@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\FamilyRole;
+use App\Enums\Species;
 use App\Exceptions\AccountDeletionException;
 use App\Models\DevicePushToken;
 use App\Models\Family;
@@ -51,6 +52,18 @@ class AccountExportService
     ) {}
 
     /**
+     * The export's explanation. M5-R06-06: it names the animals — "dogs" while
+     * the family has only dogs (unchanged), "pets" once a cat is among them.
+     */
+    private function about(?Family $family): string
+    {
+        $hasCat = $family !== null
+            && Pet::where('family_id', $family->id)->where('species', Species::Cat->value)->exists();
+
+        return __($hasCat ? 'account.export.about_pets' : 'account.export.about');
+    }
+
+    /**
      * @return array<string, mixed>
      *
      * @throws AccountDeletionException export_too_large (413)
@@ -66,7 +79,7 @@ class AccountExportService
             'generated_at' => $generatedAt->toIso8601String(),
             'requested_by' => ['id' => $parent->id],
             // M1-18: in the request language (lang/<locale>/account.php).
-            'about' => __('account.export.about'),
+            'about' => $this->about($family),
         ];
 
         if ($family === null) {

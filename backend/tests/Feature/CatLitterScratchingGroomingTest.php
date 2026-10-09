@@ -668,7 +668,7 @@ describe('push: the litter reminder (M3-12 — only what the app allows)', funct
         $push = PushNotification::where('pet_id', $cat->id)->where('type', PushType::LitterReminder->value)->sole();
         expect($push->metric)->toBe('litter:'.PetHygieneEvent::where('pet_id', $cat->id)->where('kind', 'litter_use')->sole()->id)
             ->and(collect($push->recipients)->pluck('user_id')->all())->toBe([$child->id])
-            ->and(PushCopy::body(PushType::LitterReminder, 'litter', 'child', 'sl'))->toContain('pesek');
+            ->and(PushCopy::body(PushType::LitterReminder, 'litter', 'child', 'sl'))->toContain('pesku');
 
         ccAt('2026-10-21 13:30');
         ccPost($child, '/api/child/pet/litter/scoop')->assertOk();
