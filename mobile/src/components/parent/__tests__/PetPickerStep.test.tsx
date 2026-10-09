@@ -221,6 +221,51 @@ describe('PetPickerStep', () => {
     expect(screen.queryByTestId('breed-option-border_collie')).toBeNull();
   });
 
+  it('M5-R10-02: the Golden Retriever (fallback) shows its chips incl. brushing, is found as "zlati" and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const golden = screen.getByTestId('breed-option-golden_retriever');
+    expect(golden).toHaveTextContent(/Zlati prinašalec/);
+    expect(golden).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-golden_retriever-suits')).toHaveTextContent(
+      'Primerno za:aktivno družinodružinsko življenjedružino z otrokizačetnikeveliko hišo z vrtomdom z drugimi ljubljenčki',
+    );
+    expect(screen.getByTestId('breed-suitability-golden_retriever-consider')).toHaveTextContent(
+      'Upoštevajte:vsak dan potrebuje veliko gibanjaizpada mu dlakarad je — pazite na težopotrebuje česanje večkrat na teden',
+    );
+    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30).
+    expect(screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID)).toEqual([
+      'breed-option-mutt',
+      'breed-option-border_collie',
+      'breed-option-labrador_retriever',
+      'breed-option-golden_retriever',
+    ]);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
+    expect(screen.queryByTestId('breed-option-labrador_retriever')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-golden_retriever'));
+    fireEvent.press(screen.getByTestId('origin-option-adopted'));
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-adult'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'golden_retriever', origin: 'adopted', age_stage: 'adult', plan: 'challenge' },
+      expect.objectContaining({ breed: 'golden_retriever' }),
+    );
+  });
+
+  it('M5-R10-02: the brushing chip in English', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      expect(screen.getByTestId('breed-suitability-golden_retriever-consider')).toHaveTextContent(/needs brushing several times a week/);
+      expect(screen.getByTestId('breed-suitability-golden_retriever-suits')).toHaveTextContent(/families with childrenfirst-time owners/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
   it('M5-R10: suitability chips in English', async () => {
     await i18n.changeLanguage('en');
     try {

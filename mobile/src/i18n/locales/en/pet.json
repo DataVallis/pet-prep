@@ -80,6 +80,7 @@
       "mutt": "The free plan's dog. Not part of the 12-week challenge.",
       "border_collie": "Part of the 12-week challenge.",
       "labrador_retriever": "Part of the 12-week challenge.",
+      "golden_retriever": "Part of the 12-week challenge.",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week"
     },
@@ -120,6 +121,12 @@
         "young": "2 meals a day; walks of 9,000 steps a day (like an adult dog).",
         "adult": "2 meals a day; walks of 9,000 steps a day.",
         "senior": "2 meals a day; shorter walks — 6,800 steps a day."
+      },
+      "golden_retriever": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months. Accidents in the house are coming soon.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
       },
       "domestic_cat": {
         "puppy": "Arrives as a 2-month-old kitten.",
@@ -208,7 +215,8 @@
       "may_herd_children": "may “herd” children at play",
       "chews_when_bored": "chews things when bored",
       "sheds": "sheds",
-      "food_motivated_weight": "loves food — watch the weight"
+      "food_motivated_weight": "loves food — watch the weight",
+      "frequent_grooming": "needs brushing several times a week"
     }
   },
   "media": {

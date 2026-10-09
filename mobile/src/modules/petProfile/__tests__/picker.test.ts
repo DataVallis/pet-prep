@@ -6,13 +6,14 @@ import { i18n } from '@/i18n';
  * The age hints quote numbers to the parent, so they are recomputed here from the rules
  * David confirmed on 2026-10-05 (PRODUCT_SPEC §4 / §5, PR #38):
  * steps = minutes × 100; puppy / young 10 min × age in months up to the adult goal;
- * adult mutt 60 min, Border Collie 120 min, Labrador 90 min (M5-R10, S59); senior 75 % of
- * adult in whole minutes (Labrador 67.5 → 68, BreedStageParamsSeeder::labradorProfile);
+ * adult mutt 60 min, Border Collie 120 min, Labrador 90 min (M5-R10, S59), Golden Retriever
+ * 120 min (M5-R10-02, S65 / S68); senior 75 % of adult in whole minutes (Labrador 67.5 → 68,
+ * BreedStageParamsSeeder::labradorProfile; Golden 90, goldenProfile);
  * arrival puppy 2, young 9 months.
  */
-type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever'>;
-const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever'];
-const ADULT_MINUTES: Record<DogBreed, number> = { mutt: 60, border_collie: 120, labrador_retriever: 90 };
+type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever'>;
+const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever'];
+const ADULT_MINUTES: Record<DogBreed, number> = { mutt: 60, border_collie: 120, labrador_retriever: 90, golden_retriever: 120 };
 const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 };
 
 const fmt = (n: number) => n.toLocaleString('de-DE'); // 6000 → "6.000" (Slovenian thousands separator)
@@ -77,9 +78,32 @@ describe('PICKER_STRINGS.ageHints', () => {
     }
   });
 
+  it('M5-R10-02 Golden Retriever: 2.000 → 12.000 (reached at 12 months), young 9.000 → 12.000, adult 12.000, senior 9.000', () => {
+    const G = PICKER_STRINGS.ageHints.golden_retriever;
+    expect(G.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 12\.000 pri 12 mesecih/);
+    expect(G.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
+    expect(G.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
+    expect(G.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.golden_retriever).toBe('Del 12-tedenskega izziva.');
+  });
+
+  it('M5-R10-02 Golden Retriever hints in English', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      const G = PICKER_STRINGS.ageHints.golden_retriever;
+      expect(G.puppy).toContain('2,000 steps a day, more each week up to 12,000 at 12 months');
+      expect(G.young).toContain('9,000 steps a day, more each week up to 12,000 at 12 months');
+      expect(G.adult).toContain('12,000 steps');
+      expect(G.senior).toContain('9,000 steps');
+      expect(PICKER_STRINGS.breedHints.golden_retriever).toBe('Part of the 12-week challenge.');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
   it('no picker note names one paid breed as the only one (two paid dogs since M5-R10)', () => {
     for (const text of [PICKER_STRINGS.breedFreeNote, PICKER_STRINGS.breedChallengeNote, PICKER_STRINGS.searchPlaceholder, PICKER_STRINGS.plans.challenge.hint]) {
-      expect(text).not.toMatch(/collie|koli|labrador/i);
+      expect(text).not.toMatch(/collie|koli|labrador|golden|zlati/i);
     }
   });
 });
