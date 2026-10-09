@@ -35,6 +35,7 @@ import { getBuildInfo } from '@/config/buildInfo';
 import { currentLanguage } from '@/i18n';
 import { createFetchGate, errorStatus, retryAfterMs, type FetchGate } from '@/modules/childPet/refetchGovernor';
 import { ALARM_VIBRATION, PUSH_CHANNELS, PUSH_STORAGE_KEYS, PUSH_STRINGS } from '@/modules/push/pushConfig';
+import { useAppStore } from '@/store/appStore';
 
 export type PushRegistrationResult =
   | { status: 'registered'; token: string }
@@ -67,13 +68,28 @@ export function isPushAllowed(permissions: Notifications.NotificationPermissions
 }
 
 /**
+ * Name of the reminder channel (M5-R06-08d, David 2026-10-09): a child's phone has one pet,
+ * so it names that pet's species ("Dog reminders", or "Cat reminders" through the cat
+ * override while the child's text species is a cat); a parent's phone gets every pet of
+ * the family on the same channel, so it gets the neutral "Pet reminders". With no user
+ * (signed out) the neutral name is used too, but only when the channels are next saved
+ * (a language switch, the next sign-in) — logout itself does not rename the channel.
+ * Same channel id either way: re-saving it only renames it.
+ */
+export function reminderChannelName(): string {
+  return useAppStore.getState().user?.role === 'child' ? PUSH_STRINGS.channels.default : PUSH_STRINGS.channels.shared;
+}
+
+/**
  * Android channels. Created right before the permission request / token (Android 13+
- * needs a channel for the system prompt); harmless to repeat.
+ * needs a channel for the system prompt); harmless to repeat. Re-creating a channel with
+ * the same id updates its name in the system settings (importance can't be raised), so a
+ * new wording or language reaches existing installs without a new id.
  */
 export async function ensureAndroidChannels(): Promise<void> {
   if (Platform.OS !== 'android') return;
   await Notifications.setNotificationChannelAsync(PUSH_CHANNELS.default, {
-    name: PUSH_STRINGS.channels.default,
+    name: reminderChannelName(),
     importance: Notifications.AndroidImportance.DEFAULT,
   });
   await Notifications.setNotificationChannelAsync(PUSH_CHANNELS.alarm, {

@@ -11,19 +11,19 @@
   "card": {
     "title": "Account",
     "exportButton": "Export my data",
-    "exportHint": "All of your family's data in a JSON file (children, dogs, log, contracts, scores). Links to pictures and videos work for about an hour.",
+    "exportHint": "All of your family's data in a JSON file (children, pets, log, contracts, scores). Links to pictures and videos work for about an hour.",
     "exportDone": "Your export is ready.",
     "deleteButton": "Delete account",
     "deleteSubmit": "Delete for good",
     "lastParentLines": {
       "intro": "You're the only parent in the family, so the WHOLE family will be deleted:",
       "what": "your account, {{children}} and {{pets}},",
-      "records": "with all contracts (signatures), the care log, scores, and the dogs' pictures and videos,",
+      "records": "with all contracts (signatures), the care log, scores, and the pets' pictures and videos,",
       "devices": "and every device (the children's too) will be signed out."
     },
     "otherParentStaysLines": {
       "account": "Only your account will be deleted and your devices signed out.",
-      "family": "The family, the children and the dogs stay with the other parent."
+      "family": "The family, the children and the pets stay with the other parent."
     },
     "exportFirst": "Tip: export your data before deleting.",
     "deleteErrors": {

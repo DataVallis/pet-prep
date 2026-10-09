@@ -38,7 +38,7 @@ describe('usePushNotifications — channel names follow the language', () => {
     setPlatform(originalOS as 'ios' | 'android');
   });
 
-  it('renames both channels after a switch when notifications are allowed', async () => {
+  it('renames both channels after a switch when notifications are allowed (signed out → neutral name, M5-R06-08d)', async () => {
     getPermissions.mockResolvedValue(granted);
     renderHook(() => usePushNotifications());
     expect(setChannel).not.toHaveBeenCalled();
@@ -46,7 +46,7 @@ describe('usePushNotifications — channel names follow the language', () => {
     await switchTo('en');
 
     expect(setChannel).toHaveBeenCalledTimes(2);
-    expect(setChannel).toHaveBeenCalledWith('default', expect.objectContaining({ name: 'Dog reminders' }));
+    expect(setChannel).toHaveBeenCalledWith('default', expect.objectContaining({ name: 'Pet reminders' }));
     expect(setChannel).toHaveBeenCalledWith('alarm', expect.objectContaining({ name: 'Urgent alerts' }));
   });
 

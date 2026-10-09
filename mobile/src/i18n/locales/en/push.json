@@ -2,6 +2,7 @@
   "push": {
     "channels": {
       "default": "Dog reminders",
+      "shared": "Pet reminders",
       "alarm": "Urgent alerts"
     },
     "prePrompt": {
@@ -12,8 +13,8 @@
         "later": "Not now"
       },
       "parent": {
-        "title": "Dog care notifications",
-        "message": "We'll let you know when your child hasn't looked after the dog for over an hour, or when the dog gets sick or goes to the shelter. We never send anything during quiet hours. Notifications never include children's names.",
+        "title": "Pet care notifications",
+        "message": "We'll let you know when your child hasn't looked after their pet for over an hour, or when a pet gets sick or goes to the shelter. We never send anything during quiet hours. Notifications never include children's names.",
         "allow": "Allow notifications",
         "later": "Not now"
       }

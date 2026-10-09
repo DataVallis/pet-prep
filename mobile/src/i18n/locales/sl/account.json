@@ -15,19 +15,19 @@
   "card": {
     "title": "Račun",
     "exportButton": "Izvozi moje podatke",
-    "exportHint": "Vsi podatki družine v datoteki JSON (otroci, psi, dnevnik, pogodbe, ocene). Povezave do slik in videov veljajo približno eno uro.",
+    "exportHint": "Vsi podatki družine v datoteki JSON (otroci, ljubljenčki, dnevnik, pogodbe, ocene). Povezave do slik in videov veljajo približno eno uro.",
     "exportDone": "Izvoz je pripravljen.",
     "deleteButton": "Izbriši račun",
     "deleteSubmit": "Izbriši za vedno",
     "lastParentLines": {
       "intro": "Ste edini starš v družini, zato se izbriše CELOTNA družina:",
       "what": "vaš račun, {{children}} in {{pets}},",
-      "records": "z vsemi pogodbami (podpisi), dnevnikom skrbi, ocenami, slikami in videi psov,",
+      "records": "z vsemi pogodbami (podpisi), dnevnikom skrbi, ocenami, slikami in videi ljubljenčkov,",
       "devices": "vse naprave (tudi otroške) bodo odjavljene."
     },
     "otherParentStaysLines": {
       "account": "Izbriše se samo vaš račun in vaše naprave se odjavijo.",
-      "family": "Družina, otroci in psi ostanejo drugemu staršu."
+      "family": "Družina, otroci in ljubljenčki ostanejo drugemu staršu."
     },
     "exportFirst": "Nasvet: pred brisanjem izvozite svoje podatke.",
     "deleteErrors": {

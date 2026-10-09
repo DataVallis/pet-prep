@@ -2,6 +2,7 @@
   "push": {
     "channels": {
       "default": "Opomniki za kužo",
+      "shared": "Opomniki za ljubljenčke",
       "alarm": "Nujna opozorila"
     },
     "prePrompt": {
@@ -12,8 +13,8 @@
         "later": "Ne zdaj"
       },
       "parent": {
-        "title": "Obvestila o skrbi za kužo",
-        "message": "Obvestimo vas, ko otrok več kot uro ne poskrbi za kužo, ko kuža zboli ali odide v zavetišče. Med tihimi urami ne pošiljamo ničesar. Obvestila ne vsebujejo imen otrok.",
+        "title": "Obvestila o skrbi za ljubljenčke",
+        "message": "Obvestimo vas, ko otrok več kot uro ne poskrbi za ljubljenčka, ko ljubljenček zboli ali odide v zavetišče. Med tihimi urami ne pošiljamo ničesar. Obvestila ne vsebujejo imen otrok.",
         "allow": "Dovoli obvestila",
         "later": "Ne zdaj"
       }

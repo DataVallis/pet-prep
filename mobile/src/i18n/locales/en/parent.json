@@ -24,7 +24,7 @@
   "controls": {
     "title": "Controls and family",
     "back": "Back to the overview",
-    "pets": "Dogs",
+    "pets": "Pets",
     "closeNotice": "Close",
     "about": "About the app"
   },
@@ -104,7 +104,7 @@
       "unauthorized": "Your session has expired. Please sign in again.",
       "child_not_found": "This child is no longer in your family.",
       "pet_not_joinable": "This dog can't be joined any more. Choose another dog or a new one.",
-      "already_paired": "This child already cares for a dog — they can only get a code to sign in on a new device.",
+      "already_paired": "This child already cares for a pet — they can only get a code to sign in on a new device.",
       "breed_locked": "This breed is part of a paid challenge and is unlocked only with a purchase. Choose another breed.",
       "challenge_requires_paid_breed": "The 12-week challenge needs a paid breed. The mixed breed is the free plan's dog — choose another breed or the free plan.",
       "invalid_profile": "The dog choice couldn't be saved. Please choose again.",
@@ -157,7 +157,7 @@
     "timelineEmpty": "No activity yet.",
     "timelineError": "The timeline couldn't be loaded.",
     "loadMore": "Load more",
-    "noPet": "This child doesn't have a dog yet — the report will be available once the contract is signed."
+    "noPet": "This child doesn't have a pet yet — the report will be available once the contract is signed."
   },
   "childCard": {
     "scoreTitle": "Care Score",
@@ -180,7 +180,7 @@
       "energy": "Exercise",
       "hygiene": "Cleanliness"
     },
-    "noPet": "No dog yet. Create a code — your child types it in and gets a puppy.",
+    "noPet": "No pet yet. Create a code — your child types it in and gets their own pet.",
     "createPin": "Create a code",
     "awaitingContract": "The dog is waiting for {{name}} to sign the Responsibility Contract.",
     "details": "Details",
@@ -212,7 +212,7 @@
   },
   "quietHours": {
     "title": "Quiet hours",
-    "hint": "During quiet hours the dog hardly gets hungry, makes no mess and sends no notifications. Times follow the family's time zone.",
+    "hint": "During quiet hours the pets hardly get hungry or make a mess, and no notifications are sent. Times follow the family's time zone.",
     "defaultsApply": "Default times apply — tap Save to confirm or change them.",
     "active": "On",
     "school": "School",
@@ -230,8 +230,8 @@
   "notifications": {
     "title": "Notifications",
     "status": {
-      "on": "On — this phone gets an alarm when your child hasn't cared for the dog for over an hour, and news about illness or the shelter.",
-      "off": "Off — you'll only find out about a neglected dog when you open the app.",
+      "on": "On — this phone gets an alarm when your child hasn't cared for their pet for over an hour, and news about illness or the shelter.",
+      "off": "Off — you'll only find out about a neglected pet when you open the app.",
       "blocked": "Turned off in the phone's settings."
     },
     "quietHours": "Nothing is sent during quiet hours. Notifications never include children's names.",
