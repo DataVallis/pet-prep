@@ -148,6 +148,8 @@ export function makeChildState(
       id: 7,
       breed_type: 'mutt',
       species: 'dog',
+      // M5-R08: no name (the pre-M5-R08 label).
+      name: null,
       born_at: '2026-10-04T09:00:00+00:00',
       awaiting_contract: false,
       caretakers_count: 1,
@@ -436,6 +438,8 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     id: 7,
     breed_type: 'mutt',
     species: 'dog',
+    // M5-R08: no name (the pre-M5-R08 label).
+    name: null,
     born_at: '2026-10-01T08:00:00+00:00',
     awaiting_contract: false,
     is_active: true,

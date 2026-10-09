@@ -83,6 +83,22 @@ export type RegisterErrorCode =
   | 'timezone_invalid'
   | 'device_name_invalid';
 
+/**
+ * M5-R08: machine-readable reason of a `PATCH /api/parent/pets/{pet}/name` 422
+ * (`codes.name` and `reason`): more than 20 characters / characters other than letters,
+ * space, hyphen, apostrophe (or no letter) / on the server's word filter.
+ */
+export type PetNameErrorCode = 'name_too_long' | 'name_invalid' | 'name_not_allowed';
+
+/** `PATCH /api/parent/pets/{pet}/name` 422 body. */
+export interface PetNameErrorBody extends ValidationErrorBody {
+  codes?: { name?: PetNameErrorCode };
+  reason?: PetNameErrorCode;
+}
+
+/** `PATCH /api/parent/pets/{pet}/name` 200 body: the name as stored (null = none). */
+export type PetNameResponse = operations['petName.update']['responses'][200]['content']['application/json'];
+
 /** `POST /api/register` 422 body: validation errors + `codes` {field: code}. */
 export interface RegisterErrorBody extends ValidationErrorBody {
   codes?: Partial<Record<string, RegisterErrorCode>>;
@@ -503,7 +519,7 @@ function confirmBody(password: string, confirmWord?: string, acknowledgePaidChal
 async function apiRequest<T>(
   path: string,
   options: {
-    method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
+    method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
     body?: Record<string, unknown>;
     signal?: AbortSignal;
     /** Send no Bearer token (public endpoints such as the child PIN login). */
@@ -859,6 +875,18 @@ export const api = {
     apiRequest<HardStopResponse>('/api/parent/hard-stop', {
       method: 'POST',
       body: { pet_id: petId, active },
+    }),
+
+  /**
+   * PATCH /api/parent/pets/{pet}/name (M5-R08, parent only) — set (`"Luna"`) or clear
+   * (`null`) the optional name of a family pet. The server normalises it (trim, collapsed
+   * spaces, ’ → ', NFC) and answers `{pet_id, name}` as stored; 422 `PetNameErrorBody`,
+   * 404 `pet_not_found` for a pet outside the family.
+   */
+  setPetName: (petId: number, name: string | null) =>
+    apiRequest<PetNameResponse>(`/api/parent/pets/${petId}/name`, {
+      method: 'PATCH',
+      body: { name } satisfies components['schemas']['UpdatePetNameRequest'],
     }),
 
   /**

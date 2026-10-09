@@ -203,6 +203,8 @@ describe('PetUpdated event shape', function () {
             'plan',
             // M5-R06-01 species (additive)
             'species',
+            // M5-R08 optional pet name (additive, null = none)
+            'name',
             // M5-R01 profile brief
             'age_months', 'origin', 'life_stage',
             // M5-R02 behaviour events

@@ -21,8 +21,9 @@ import { ApiError } from '@/api/client';
 import { useSetHardStop } from '@/hooks/queries/useParentQueries';
 import { parentDashboardKey } from '@/modules/family/live';
 import { Card, PARENT_COLORS as C } from '@/components/parent/ParentUi';
+import PetNameRow from '@/components/parent/PetNameRow';
+import { petLabel } from '@/modules/petName/petName';
 import {
-  breedLabel,
   caretakerNames,
   petStatus,
   petStatusText,
@@ -66,7 +67,8 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
   const names = caretakerNames(pet, family);
   const status = petStatus(pet);
   const stopped = pet.is_hard_stopped;
-  const petName = breedLabel(pet.breed_type, pet.species);
+  // M5-R08: "Luna · Border Collie" with a name, the breed alone without one (as before).
+  const petName = petLabel(pet);
   const species = pet.species ?? null;
   const canControl = pet.is_active && !pet.is_game_over;
 
@@ -122,13 +124,17 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
   return (
     <Card testID={`pet-controls-${pet.id}`}>
       <View>
-        <Text style={styles.title}>{petName}</Text>
+        <Text style={styles.title} testID={`pet-title-${pet.id}`}>{petName}</Text>
         <Text style={styles.muted} testID={`pet-caretakers-${pet.id}`}>
           {names ? S.caretakers(names) : S.noCaretakers}
         </Text>
         <Text style={[styles.status, stopped && styles.statusStopped]} testID={`pet-status-${pet.id}`}>
           {status ? petStatusText(status, species) : S.playing}
         </Text>
+      </View>
+
+      <View style={styles.nameRow}>
+        <PetNameRow pet={pet} testID={`pet-name-${pet.id}`} />
       </View>
 
       {canControl &&
@@ -192,6 +198,7 @@ export default function PetControlsCard({ pet, family }: { pet: FamilyPet; famil
 
 const styles = StyleSheet.create({
   flex: { flex: 1 },
+  nameRow: { paddingTop: 10, borderTopWidth: 1, borderTopColor: C.divider },
   row: { flexDirection: 'row', gap: 8 },
   title: { fontSize: 16, fontWeight: '800', color: C.text },
   muted: { fontSize: 13, color: C.muted, marginTop: 2 },

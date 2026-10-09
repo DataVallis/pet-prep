@@ -197,6 +197,8 @@ class FamilyDashboardService
                 'breed_type' => $pet->breed_type->value,
                 // M5-R06-01: dog | cat.
                 'species' => $pet->speciesValue()->value,
+                // M5-R08: optional name set by a parent (null = none) — a label only.
+                'name' => $pet->name,
                 'born_at' => $pet->born_at?->toIso8601String(),
                 'awaiting_contract' => $pet->isUnborn(),
                 'is_active' => (bool) $pet->is_active,

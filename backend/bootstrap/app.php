@@ -40,6 +40,14 @@ return Application::configure(basePath: dirname(__DIR__))
         // (also /api/broadcasting/auth, which uses the `api` group).
         $middleware->api(prepend: [SetRequestLocale::class]);
 
+        // M5-R08: the pet name has its own trimming (PetNameService::normalize).
+        // Laravel's TrimStrings would silently strip a leading / trailing BOM,
+        // bidi mark or Hangul filler that the name rules reject (name_invalid),
+        // like the app does.
+        $middleware->trimStrings(except: [
+            fn (Request $request) => $request->is('api/parent/pets/*/name'),
+        ]);
+
         // API guests get a JSON 401 (see withExceptions), not a redirect to a
         // `login` route this app doesn't have. Filament has its own login.
         $middleware->redirectGuestsTo(

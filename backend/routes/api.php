@@ -17,6 +17,7 @@ use App\Http\Controllers\ParentDashboardController;
 use App\Http\Controllers\ParentSettingsController;
 use App\Http\Controllers\PetGrowthController;
 use App\Http\Controllers\PetMediaController;
+use App\Http\Controllers\PetNameController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
 use App\Http\Middleware\VerifyRevenueCatWebhook;
@@ -115,6 +116,8 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         Route::get('children/{child}/report', [ChildReportController::class, 'show']);
         // Growth album of one pet of the family (M5-R04): pictures across life stages.
         Route::get('pets/{pet}/growth', [PetGrowthController::class, 'parent']);
+        // Optional pet name (M5-R08): set / change / clear, any parent of the family.
+        Route::patch('pets/{pet}/name', [PetNameController::class, 'update']);
 
         // Generate a 6-digit one-time child PIN (throttled more aggressively).
         // child_id (M2-02) = PIN login for that child profile; without it the

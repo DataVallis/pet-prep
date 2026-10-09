@@ -18,12 +18,14 @@ import {
   type InviteParentResponse,
   type JoinFamilyResponse,
   type PetActivitiesResponse,
+  type PetNameResponse,
 } from '@/api/client';
 import {
   childReportKey,
   parentActivitiesKey,
   parentDashboardKey,
   setDashboardHardStop,
+  setDashboardPetName,
 } from '@/modules/family/live';
 import { readChildReport, type ChildReport, type ReportDays } from '@/modules/family/scoring';
 import type { ParentDashboardResponse } from '@/api/client';
@@ -80,6 +82,38 @@ export function useSetHardStop() {
       queryClient.setQueryData<ParentDashboardResponse>(parentDashboardKey, (old) =>
         setDashboardHardStop(old, res.pet_id, res.is_hard_stopped),
       );
+    },
+    onSettled: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),
+  });
+}
+
+export interface PetNameVariables {
+  petId: number;
+  /** Normalised name, or null to remove it. */
+  name: string | null;
+}
+
+/**
+ * M5-R08: set / change / clear a pet's name (parent only). Optimistic: the dashboard shows
+ * the new name at once; on an error the previous dashboard comes back; on success the
+ * server's stored form replaces it; either way the dashboard is refetched afterwards.
+ */
+export function useSetPetName() {
+  const queryClient = useQueryClient();
+  return useMutation<PetNameResponse, unknown, PetNameVariables, { previous: ParentDashboardResponse | undefined }>({
+    mutationFn: ({ petId, name }) => api.setPetName(petId, name),
+    retry: false,
+    onMutate: async ({ petId, name }) => {
+      await queryClient.cancelQueries({ queryKey: parentDashboardKey });
+      const previous = queryClient.getQueryData<ParentDashboardResponse>(parentDashboardKey);
+      queryClient.setQueryData<ParentDashboardResponse>(parentDashboardKey, (old) => setDashboardPetName(old, petId, name));
+      return { previous };
+    },
+    onError: (_err, _vars, context) => {
+      if (context?.previous !== undefined) queryClient.setQueryData(parentDashboardKey, context.previous);
+    },
+    onSuccess: (res) => {
+      queryClient.setQueryData<ParentDashboardResponse>(parentDashboardKey, (old) => setDashboardPetName(old, res.pet_id, res.name));
     },
     onSettled: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),
   });

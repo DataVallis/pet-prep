@@ -25,6 +25,8 @@ Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova p
 
 **Vse o tvojem kužku** 🐶 Tapni zgoraj na ime pasme in odpre se list z vsem o njem: pasma, koliko je star, od kod je, kdaj bo zrasel v naslednje obdobje in koliko obrokov dobi na dan. Zapreš ga z »Zapri«. *(v naslednji različici aplikacije)*
 
+**Ime tvojega kužka** 🏷 Skupaj s starši lahko kužku izbereta ime — vpišejo ga starši. Potem ga vidiš zgoraj na zaslonu, npr. »Luna · Border collie«, in na vrhu albuma. Če si premislita, ga starši lahko spremenijo. *(v naslednji različici aplikacije)*
+
 **Obroki danes** 🍽 Nad gumbi vidiš, kdaj je danes čas za hrano. Kljukica ✓ pomeni, da je kuža že jedel. Kjer piše »nahrani starš«, si v šoli in kužka nahrani mami ali ati.
 
 ## Tvoj kuža raste 🐕 *(kmalu v aplikaciji)*

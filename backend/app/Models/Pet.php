@@ -202,6 +202,8 @@ class Pet extends Model
         'family_id',
         'breed_type',
         'species',
+        // M5-R08: optional label set by a parent (PetNameService) — never in pushes / sentences / AI prompts.
+        'name',
         'pet_dna',
         'current_video_url',
         'media_status',

@@ -8,6 +8,20 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Ljubljenček ima lahko ime (M5-R08, aplikacija)
+
+**Kaj se je zgodilo:** Starš lahko v aplikaciji ljubljenčku da ime, ga spremeni ali odstrani: vrstica »Ime« v podrobnostih otroka in na kartici ljubljenčka v zavihku Nadzor odpre majhno okno z vnosom, »Shrani« in »Odstrani ime« ter namigom »Ime izberita skupaj z otrokom.«. Aplikacija pravila (do 20 znakov; črke s šumniki, presledek, vezaj, opuščaj) preveri že pred pošiljanjem, strežnik pa ima zadnjo besedo (tudi filter neprimernih besed) — vse tri napake dobijo prijazno besedilo v slovenščini in angleščini. Ime se pokaže kot naslov na otrokovem glavnem zaslonu (»Luna · Border collie«), na vrhu albuma, na kartici otroka in ljubljenčka pri staršu ter pri izbiri ljubljenčka (»Pridruži se«). Ko starš ime spremeni, se otroku naslov osveži v živo.
+
+**Zakaj je pomembno:** Otrok, ki ljubljenčku da ime, ga čuti kot svojega — to je prvi korak k odgovornosti. Ime je namenoma samo oznaka: nikoli ga ne vstavimo v stavek (slovensko sklanjanje »Lunin«, »z Luno« bi hitro šlo narobe), v obvestila ali na otrokov zaslon za prijavo s kodo. Brez imena je vse natanko tako kot prej (pasma / vrsta), za pse in muce.
+
+**Številke:** pravila imena: 1–20 znakov, 3 kode napak (`name_too_long`, `name_invalid`, `name_not_allowed`); Jest 140 → 143 zbirk, 1780 → 1844 testov (1820 pred QA popravki; vsi zeleni), Pest 1785 → 1812 (QA popravki: okrasne črke ｆｕｃｋ / 𝐟𝐮𝐜𝐤, nevidni znaki, Zalgo, seznam izjem Shitzu; PetNameTest 70 → 97), `tsc` brez napak; brez imena obstoječi testi zaslonov psa in muce nespremenjeni.
+
+**Kako povedati:**
+- 👩 Starši: »Izberite ime skupaj z otrokom — vpišete ga vi, otrok ga vidi na svojem zaslonu. Spremenite ali odstranite ga lahko kadarkoli.«
+- 🧒 Otroci: »Tvoj kuža ima lahko ime! Izberi ga s starši.«
+- 📣 Omrežja: »Luna, Pika, Rex … Kako bi poimenovali svojega prvega kužka? V PetPrep ga lahko.« (*ko bo nova različica v trgovini*)
+- 🛠 Tehnično: »Ime je samo oznaka: nikoli v stavkih, potisnih obvestilih ali AI pozivih — tako se izognemo sklanjanju in ne širimo podatkov iz otrokovega sveta. Spremembo pošlje en dogodek `pet_renamed` po obstoječem kanalu v živo.«
+
 ## 2026-10-09 — Kodo lahko otrok zdaj prilepi
 
 **Kaj se je zgodilo:** David je opazil, da otrok na zaslonu »Vpiši svojo kodo« kode ne more prilepiti — zaslon ima veliko tipkovnico brez besedilnega polja, zato sistemski »Prilepi« ni na voljo. Zdaj je pod polji gumb **»Prilepi kodo«** (deluje tudi dolg pritisk na polja): aplikacija iz odložišča vzame samo številke (»734 912« ali »73-49-12« → 734912); če je točno 6 številk, se otrok takoj prijavi, sicer dobi prijazno sporočilo »V odložišču ni 6-mestne kode.«

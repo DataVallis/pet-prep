@@ -1265,6 +1265,32 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/parent/pets/{pet}/name": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        /**
+         * Set (`{"name": "Luna"}`) or clear (`{"name": null}` / `""`) the pet's
+         *     name. 200 `{pet_id, name}` — `name` as stored (trimmed, whitespace
+         *     collapsed, ’ → '). A change broadcasts one `PetUpdated` with
+         *     `event_type: pet_renamed`; the same name again changes nothing.
+         *     422 `name_invalid` / `name_too_long` / `name_not_allowed` (body
+         *     `codes.name` + `reason`). Child token → 403. Another family's pet (or an
+         *     unknown id) → 404 `pet_not_found`
+         * @description PATCH /api/parent/pets/{pet}/name
+         */
+        patch: operations["petName.update"];
+        trace?: never;
+    };
     "/parent/quiet-hours": {
         parameters: {
             query?: never;
@@ -1553,6 +1579,8 @@ export interface components {
              * @enum {string}
              */
             species: "dog" | "cat";
+            /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+            name: string | null;
             hunger_level: number;
             thirst_level: number;
             energy_level: number;
@@ -1731,6 +1759,7 @@ export interface components {
             payment_locked_at: string | null;
             species: components["schemas"]["Species"];
             pet_look_id: number | null;
+            name: string | null;
         };
         /**
          * PetOrigin
@@ -1950,6 +1979,30 @@ export interface components {
         UpdateParentSettingsRequest: {
             /** @description IANA identifier, case-sensitive (e.g. "Europe/Ljubljana"). */
             timezone: string;
+        };
+        /**
+         * UpdatePetNameRequest
+         * @description PATCH /api/parent/pets/{pet}/name (M5-R08, David 2026-10-09). Body
+         *     `{"name": "Luna"}`; `null` or `""` clears the name. Parents only
+         *     (UserPolicy::manageFamily → 403 for a child; the route group also needs
+         *     the `parent` token ability); whether the pet belongs to the parent's
+         *     family is checked in the controller (PetPolicy::rename) so another
+         *     family's pet looks exactly like a missing one (404).
+         *
+         *     Normalized before validation (PetNameService::normalize): trimmed, inner
+         *     whitespace collapsed, ’ → ', NFC. 422 body = Laravel's validation body +
+         *     `codes` {name: code} (like POST /api/register) + `reason` (the same code):
+         *      - `name_too_long`   — more than 20 characters (code points, not bytes);
+         *      - `name_invalid`    — not a string / missing field, characters other than
+         *                            letters, space, hyphen, apostrophe, or no letter;
+         *      - `name_not_allowed`— on the EN / SL filter list (config/pet_names.php).
+         */
+        UpdatePetNameRequest: {
+            /**
+             * @description Letters (any script, incl. č š ž ä ñ), space, hyphen, apostrophe;
+             *     1–20 characters; null / "" = no name.
+             */
+            name: string | null;
         };
         /** UpdateQuietHoursRequest */
         UpdateQuietHoursRequest: {
@@ -2460,6 +2513,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -2942,6 +2997,8 @@ export interface operations {
                             breed_type: string;
                             /** @description M5-R06-01: dog | cat. */
                             species: string;
+                            /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                            name: string | null;
                             /** @description null until the first contract is signed (unborn, M1-07b). */
                             born_at: string | null;
                             /**
@@ -3444,6 +3501,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -3944,6 +4003,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -4444,6 +4505,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -4944,6 +5007,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -5444,6 +5509,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -5948,6 +6015,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -6452,6 +6521,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -6956,6 +7027,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -7456,6 +7529,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -7960,6 +8035,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -8460,6 +8537,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -8960,6 +9039,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -9464,6 +9545,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -9964,6 +10047,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -10468,6 +10553,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -10968,6 +11055,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -11472,6 +11561,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -11976,6 +12067,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 /** @description null until the first contract is signed (unborn, M1-07b). */
                                 born_at: string | null;
                                 /**
@@ -12956,6 +13049,8 @@ export interface operations {
                             breed_type: string;
                             /** @description M5-R06-01: dog | cat. */
                             species: string;
+                            /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                            name: string | null;
                             /**
                              * @description Contract before birth (M1-07b): until the first contract,
                              *     born_at is null and awaiting_contract true (metrics 100,
@@ -13134,6 +13229,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 born_at: string | null;
                                 awaiting_contract: boolean;
                                 is_active: boolean;
@@ -13392,6 +13489,8 @@ export interface operations {
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
                                 born_at: string | null;
                                 awaiting_contract: boolean;
                                 is_active: boolean;
@@ -13947,6 +14046,51 @@ export interface operations {
                 };
             };
             404: components["responses"]["ModelNotFoundException"];
+        };
+    };
+    "petName.update": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                pet: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["UpdatePetNameRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        pet_id: number;
+                        /** @description The pet's name (M5-R08); null = no name (the apps show breed / species). */
+                        name: string | null;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "No such pet in your family.";
+                        /** @constant */
+                        reason: "pet_not_found";
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
         };
     };
     "quietHours.show": {

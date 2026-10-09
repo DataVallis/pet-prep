@@ -674,7 +674,7 @@ describe('P5 — deleting a pet with a paid, unfinished challenge', function () 
         ctDeleteChild($parent, $child)->assertStatus(422)->assertExactJson([
             'message' => 'This deletes a dog whose paid 12-week challenge is not finished. The purchase stays used. Send acknowledge_paid_challenge: true to continue.',
             'reason' => 'paid_challenge_ack_required',
-            'pets' => [['pet_id' => $pet->id, 'breed_type' => 'border_collie']],
+            'pets' => [['pet_id' => $pet->id, 'breed_type' => 'border_collie', 'name' => null]],
         ]);
         expect(Pet::find($pet->id))->not->toBeNull()->and(User::find($child->id))->not->toBeNull();
 

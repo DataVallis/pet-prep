@@ -15,6 +15,7 @@
 import { isPaymentRequired, readPetPlan, type PetPlan } from '@/modules/plan/plan';
 import type { ChildPetState } from '@/api/client';
 import { readBreed, readSpecies } from '@/modules/species/species';
+import { readPetName } from '@/modules/petName/petName';
 import { broadcastCatCare, readChildCatCare, type ChildCatCare } from '@/modules/catCare/catCare';
 import type { PetState, PetUpdatedBroadcast, ShownBreed, Species } from '@/types';
 import type { LockState } from '@/store/appStore';
@@ -62,6 +63,8 @@ export interface ChildPetView {
     breed_type: ShownBreed;
     /** M5-R06-01: dog | cat; null only for an unknown breed from a server without `species`. */
     species: Species | null;
+    /** M5-R08: optional name set by a parent (null = none). A label only — never in a sentence. */
+    name: string | null;
     born_at: string | null;
     /** This child must sign before acting (per child — M2-01). */
     awaiting_contract: boolean;
@@ -255,6 +258,7 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       id: p.id,
       breed_type: readBreed(p.breed_type),
       species: readSpecies(p.species, readBreed(p.breed_type)),
+      name: readPetName(p.name),
       born_at: p.born_at,
       awaiting_contract: bool(p.awaiting_contract),
       caretakers_count: num(p.caretakers_count),
@@ -399,6 +403,8 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     ...view.pet,
     breed_type: readBreed(b.breed_type),
     species: readSpecies(b.species, readBreed(b.breed_type)) ?? view.pet.species,
+    // M5-R08: every current broadcast carries the name (null = cleared); an older server's doesn't.
+    name: b.name !== undefined ? readPetName(b.name) : view.pet.name,
     hunger_level: b.hunger_level,
     thirst_level: b.thirst_level,
     energy_level: b.energy_level,

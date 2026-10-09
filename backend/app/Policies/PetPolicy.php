@@ -52,4 +52,14 @@ class PetPolicy
         return $user->isParent()
             && (Family::find($pet->family_id)?->hasParent($user) ?? false);
     }
+
+    /**
+     * Name the pet (M5-R08): set, change or clear its optional name — any
+     * parent of the pet's family, any time (free / paid / paused / ended
+     * pets, every species). Children never.
+     */
+    public function rename(User $user, Pet $pet): bool
+    {
+        return $this->manage($user, $pet);
+    }
 }

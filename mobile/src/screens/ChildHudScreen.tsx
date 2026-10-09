@@ -128,6 +128,7 @@ import { breedName } from '@/modules/species/species';
 import { alpha, palette, radius } from '@/theme';
 import { setTextSpecies, t } from '@/i18n';
 import { strings } from '@/i18n/strings';
+import { isolatePetName } from '@/modules/petName/petName';
 import { useTranslation } from 'react-i18next';
 
 /**
@@ -156,6 +157,11 @@ const CHALLENGE_WEEKS = 12;
 export function formatChallengeWeek(weeksSinceBirth: number): string {
   const week = Math.min(CHALLENGE_WEEKS, Math.max(0, Math.floor(weeksSinceBirth)) + 1);
   return t('child:hud.challengeWeek', { week, total: CHALLENGE_WEEKS });
+}
+
+/** M5-R08: the header's screen-reader label starts with the pet's name (unchanged without one). */
+function headerA11y(name: string | null, profile: string): string {
+  return name === null ? profile : `${name}, ${profile}`;
 }
 
 /** HUD second line of a profiled pet: "Posvojen iz zavetišča · 24. 11. 2026 postane mlad pes". */
@@ -640,7 +646,7 @@ export default function ChildHudScreen() {
             onPress={pet.profile ? () => setProfileVisible(true) : undefined}
             disabled={!pet.profile}
             accessibilityRole={pet.profile ? 'button' : undefined}
-            accessibilityLabel={pet.profile ? profileHeaderA11y(profileRows) : undefined}
+            accessibilityLabel={pet.profile ? headerA11y(pet.name, profileHeaderA11y(profileRows)) : undefined}
             accessibilityHint={pet.profile ? t('child:hud.profileSheet.openHint') : undefined}
             testID="hud-profile-open"
           >
@@ -648,9 +654,17 @@ export default function ChildHudScreen() {
               <PawPrint color={palette.mint} size={20} />
             </View>
             <View style={styles.petInfoText}>
-              <Text style={styles.petBreedName} numberOfLines={pet.profile ? 1 : 2}>
-                {breedName(pet.breed_type, pet.species)}
-              </Text>
+              {pet.name !== null ? (
+                // M5-R08: the parent's name is the title (a label only), the breed stays beside it.
+                <Text style={[styles.petBreedName, styles.petNameTitle]} numberOfLines={pet.profile ? 1 : 2} testID="hud-pet-name">
+                  {isolatePetName(pet.name)}
+                  <Text style={styles.petNameBreed}>{` · ${breedName(pet.breed_type, pet.species)}`}</Text>
+                </Text>
+              ) : (
+                <Text style={styles.petBreedName} numberOfLines={pet.profile ? 1 : 2}>
+                  {breedName(pet.breed_type, pet.species)}
+                </Text>
+              )}
               {pet.profile ? (
                 <>
                   <Text style={styles.petAgeText} numberOfLines={1} testID="hud-stage">
@@ -979,6 +993,8 @@ export default function ChildHudScreen() {
       {showAlbum && (
         <PetAlbum
           media={pet.media}
+          // M5-R08: the pet's name as the album title; without one the default ("Moj kuža").
+          title={pet.name ?? undefined}
           onClose={() => setAlbumVisible(false)}
           onMediaExpired={onMediaExpired}
           growth={growth}
@@ -1093,6 +1109,9 @@ const styles = StyleSheet.create({
     textTransform: 'capitalize',
     color: palette.white,
   },
+  /** M5-R08: a name is shown as typed (no capitalize — "de Luna"). */
+  petNameTitle: { textTransform: 'none' },
+  petNameBreed: { fontSize: 13, fontWeight: '600', textTransform: 'capitalize', color: alpha(palette.white, 0.7) },
   petInfoText: { flex: 1, minWidth: 0 },
   petProfileText: {
     marginTop: 2,

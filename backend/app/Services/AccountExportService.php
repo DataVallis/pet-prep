@@ -282,6 +282,8 @@ class AccountExportService
                 'id' => $pet->id,
                 'breed_type' => $pet->breed_type->value,
                 'species' => $pet->speciesValue()->value,
+                // M5-R08: the pet's name (null = none).
+                'name' => $pet->name,
                 'created_at' => $this->iso($pet->created_at),
                 'born_at' => $this->iso($pet->born_at),
                 'is_active' => (bool) $pet->is_active,

@@ -101,6 +101,8 @@ Kot v resnici: dva psa iste pasme nista enaka. Ob rojstvu vsak kuža dobi svojo 
 - **Žive vrednosti** lakote, žeje, gibanja in higiene — posodobijo se v trenutku, ko otrok nekaj naredi.
 - **Časovnico** (zadnjih 20 dejanj z vzdevkom otroka, ki jih je naredil), **zadnjih 7 dni** in **poročilo za 7, 30 ali 84 dni** (tapnite "Podrobnosti" pri otroku: ocena obdobja, hrana / voda / čiščenje / sprehod, vsak dan s koraki in ciljem, zamujene rutine, bolezni, časovnica z "Naloži več"). *(v aplikaciji od 4. 10. 2026 — demo podatkov ni več)*
 
+- **Ime ljubljenčka** *(v aplikaciji od 9. 10. 2026 — še ni v trgovini; še ni preverjeno na telefonu)*: v podrobnostih otroka ali na kartici ljubljenčka v **Nadzor** tapnite **»Dodaj ime«** / **»Spremeni«**. Ime je neobvezno, dolgo do 20 znakov (črke s šumniki, presledek, vezaj, opuščaj) in ga lahko kadarkoli spremenite ali odstranite (»Odstrani ime«); priporočamo, da ga izberete skupaj z otrokom. Neprimerna imena aplikacija zavrne. Ime nastavi samo starš — otrok ga vidi kot naslov na svojem zaslonu (»Luna · Border collie«) in v albumu, vi pa na kartici otroka in ljubljenčka. V obvestilih ga nikoli ne uporabimo. Brez imena aplikacija pokaže pasmo, kot doslej. Za vse pse in muce, brezplačne in plačljive.
+
 ## Kako nastane ocena (Care Score)
 Vsak dan ima kuža **rutine** — po vašem lokalnem času:
 | Rutina | Koliko na dan (mešanček) | Opravljena, če … |

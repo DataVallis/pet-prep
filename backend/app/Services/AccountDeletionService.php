@@ -316,7 +316,7 @@ class AccountDeletionService
         $losingPets = Pet::whereIn('id', $petIds)->orderBy('id')->get()
             ->filter(fn (Pet $pet): bool => $pet->deletionLosesPurchase());
         $losing = $losingPets
-            ->map(fn (Pet $pet): array => ['pet_id' => $pet->id, 'breed_type' => $pet->breed_type->value])
+            ->map(fn (Pet $pet): array => ['pet_id' => $pet->id, 'breed_type' => $pet->breed_type->value, 'name' => $pet->name])
             ->values()
             ->all();
 

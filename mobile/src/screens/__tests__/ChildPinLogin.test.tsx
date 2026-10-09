@@ -50,6 +50,7 @@ function pinLoginResponse(overrides: Partial<PinLoginResponse> = {}): PinLoginRe
       id: 7,
       breed_type: 'mutt',
       species: 'dog',
+      name: null,
       hunger_level: 100,
       thirst_level: 100,
       energy_level: 100,
@@ -410,5 +411,39 @@ describe('Child PIN login: paste the code (David 2026-10-09)', () => {
     fireEvent(screen.getByTestId('pin-slots'), 'longPress');
     await flush();
     expect(getString).not.toHaveBeenCalled();
+  });
+});
+
+describe('M5-R08: the pet name is never on the child PIN login screen', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    [pinLogin, getUser].forEach((m) => m.mockReset());
+    getItem.mockResolvedValue(null);
+    jest.useFakeTimers();
+    jest.setSystemTime(NOW);
+    useAppStore.setState(useAppStore.getInitialState(), true);
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  it('a named pet: not while signing in, nor on the contract step after it', async () => {
+    let resolveLogin: (value: PinLoginResponse) => void = () => undefined;
+    pinLogin.mockReturnValueOnce(new Promise<PinLoginResponse>((resolve) => (resolveLogin = resolve)));
+    getUser.mockResolvedValueOnce({ id: 9, name: 'Maja', email: null, role: 'child', pet: makePet({ id: 7, born_at: null, user_id: 9 }) });
+    await openChildPath();
+    expect(screen.queryByText(/Luna/)).toBeNull();
+
+    typePin('734912');
+    expect(screen.getByTestId('pin-login-loading')).toBeTruthy();
+    expect(screen.queryByText(/Luna/)).toBeNull();
+
+    await act(async () => {
+      resolveLogin(pinLoginResponse({ pet: { ...pinLoginResponse().pet, name: 'Luna' } }));
+    });
+    await flush();
+    expect(screen.getByText(CONTRACT_STRINGS.padHint)).toBeTruthy();
+    expect(screen.queryByText(/Luna/)).toBeNull();
   });
 });

@@ -31,6 +31,7 @@ const response: PinLoginResponse = {
     id: 7,
     breed_type: 'mutt',
     species: 'dog',
+    name: null,
     hunger_level: 80,
     thirst_level: 70,
     energy_level: 60,

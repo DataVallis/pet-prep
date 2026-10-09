@@ -8,6 +8,7 @@
  * refreshes every 3 min (feed windows / deadlines pass without any event).
  */
 
+import { readPetName } from '@/modules/petName/petName';
 import { readPetTraining } from '@/modules/training/training';
 import type { QueryClient } from '@tanstack/react-query';
 
@@ -62,6 +63,8 @@ export function patchDashboardPet(
     media: event.media ?? pet.media,
     // M5-R02: bladder clock / open messes — an accident arrives with a plain decay tick.
     behaviour: event.behaviour ?? pet.behaviour,
+    // M5-R08: `pet_renamed` (and every current broadcast) carries the name; an older server's doesn't.
+    name: event.name !== undefined ? readPetName(event.name) : pet.name,
     // M5-R03: training progress / today's session / a session running — normalised like the
     // dashboard read (a malformed / partial broadcast never lands in the cache raw).
     training: event.training !== undefined && event.training !== null ? readPetTraining(event.training) : pet.training,
@@ -80,6 +83,20 @@ export function setDashboardHardStop(
   if (!data || !data.family) return data;
   const pets = data.family.pets.map((p) => (p.id === petId ? { ...p, is_hard_stopped: isHardStopped } : p));
   return { ...data, family: { ...data.family, pets } } as ParentDashboardResponse;
+}
+
+/** M5-R08: set one pet's name in the cached dashboard (`family.pets` and the legacy top-level `pet`). */
+export function setDashboardPetName(
+  data: ParentDashboardResponse | undefined,
+  petId: number,
+  name: string | null,
+): ParentDashboardResponse | undefined {
+  if (!data) return data;
+  const top = data.pet && data.pet.id === petId ? { ...data.pet, name } : data.pet;
+  const family = data.family
+    ? { ...data.family, pets: data.family.pets.map((p) => (p.id === petId ? { ...p, name } : p)) }
+    : data.family;
+  return { ...data, pet: top, family } as ParentDashboardResponse;
 }
 
 /** A plain decay tick only moves metrics — everything else changes routines / light / timeline. */

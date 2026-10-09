@@ -152,6 +152,8 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'breed_type' => $pet->breed_type->value,
             // M5-R06-01: dog | cat.
             'species' => $pet->speciesValue()->value,
+            // M5-R08: optional name set by a parent (null = none) — a label only.
+            'name' => $pet->name,
             'hunger_level' => $pet->displayMetric('hunger_level'),
             'thirst_level' => $pet->displayMetric('thirst_level'),
             'energy_level' => $pet->displayMetric('energy_level'),
