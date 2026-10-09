@@ -60,27 +60,10 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'parent:addChild.newPetHint': 'dog-only catalogue; with cats → `newPetAnyHint`',
   'parent:addChild.petTitle': 'dog-only catalogue; with cats → `petTitleAny`',
   'parent:addChild.petsLoading': 'dog-only catalogue; with cats → `petsLoadingAny`',
-  // ── Family-level (no single pet to take the species from) — neutral wording is a (D) question ──
-  'family:children.noPet': '(D) child without a pet yet — neutral wording needs David (08c debt)',
-  'parent:childCard.noPet': '(D) child without a pet yet — neutral wording needs David (08c debt)',
-  'parent:childDetail.noPet': '(D) child without a pet yet — neutral wording needs David (08c debt)',
-  'family:children.deletePets': '(D) family-level deletion summary — 08c debt',
-  'family:children.keptPets': '(D) family-level deletion summary — 08c debt',
+  // ── Payments for a cat (the paywall and the paid-challenge texts) — R06-09 (PAYMENTS_SPEC) ──
+  // The other family-level texts are neutral ("pet" / "ljubljenček") since M5-R06-08d (David 2026-10-09).
   'family:children.deleteErrors.paid_challenge': '(D) payments for a cat — R06-09 (PAYMENTS_SPEC)',
-  'family:join.hint': '(D) family-level ("children or dogs") — 08c debt',
-  'family:join.errors.family_not_empty': '(D) family-level ("children or dogs") — 08c debt',
-  'family:parents.inviteHint': '(D) family-level ("children and dogs") — 08c debt',
-  'parent:controls.pets': '(D) section title over every pet of the family — 08c debt',
-  'parent:quietHours.hint': '(D) family setting for every pet — 08c debt',
-  'parent:notifications.status.on': '(D) family-level notification status — 08c debt',
-  'parent:notifications.status.off': '(D) family-level notification status — 08c debt',
-  'push:push.prePrompt.parent.title': '(D) asked once per parent phone for every pet — needs David',
-  'push:push.prePrompt.parent.message': '(D) asked once per parent phone for every pet — needs David',
-  'account:card.exportHint': '(D) family-level export text — 08c debt',
-  'account:card.lastParentLines.records': '(D) family-level account deletion — 08c debt',
-  'account:card.otherParentStaysLines.family': '(D) family-level account deletion — 08c debt',
   'account:card.deleteErrors.paid_challenge': '(D) payments for a cat — R06-09 (PAYMENTS_SPEC)',
-  'parent:addChild.errors.already_paired': "(D) about the child's existing pet, not the new choice — dog text kept (QA 08c m6)",
   'account:deletionForm.paidWarning': '(D) payments for a cat — R06-09 (PAYMENTS_SPEC)',
   paywall: '(D) the challenge for a cat — R06-09 (PAYMENTS_SPEC "izziv za mačko")',
 };
@@ -249,6 +232,55 @@ describe('T8 species coverage (M5-R06-08c)', () => {
       const ns = rest.slice(0, dot);
       const b = base(rest.slice(dot + 1));
       expect({ key: b, forms: forms(catFlat[lang], `override.${ns}.`, b) }).toEqual({ key: b, forms: forms(flat(lang, ns), '', b) });
+    }
+  });
+});
+
+describe('family-level texts are species-neutral (M5-R06-08d, David 2026-10-09)', () => {
+  const NEUTRAL = [
+    'family:children.noPet',
+    'parent:childCard.noPet',
+    'parent:childDetail.noPet',
+    'family:children.deletePets',
+    'family:children.keptPets',
+    'family:join.hint',
+    'family:join.errors.family_not_empty',
+    'family:parents.inviteHint',
+    'parent:controls.pets',
+    'parent:quietHours.hint',
+    'parent:notifications.status.on',
+    'parent:notifications.status.off',
+    'push:push.prePrompt.parent.title',
+    'push:push.prePrompt.parent.message',
+    'push:push.channels.shared',
+    'account:card.exportHint',
+    'account:card.lastParentLines.records',
+    'account:card.otherParentStaysLines.family',
+    'parent:addChild.errors.already_paired',
+  ];
+
+  it.each(LANGS)('names no dog and needs no cat override (%s)', (lang) => {
+    for (const key of NEUTRAL) {
+      const [ns, rest] = key.split(':');
+      const texts = [...flat(lang, ns)].filter(([k]) => base(k) === rest).map(([, v]) => v);
+      expect({ key, found: texts.length > 0 }).toEqual({ key, found: true });
+      for (const text of texts) expect({ key, text, dog: namesDog(text) }).toEqual({ key, text, dog: false });
+      expect({ key, override: overrideKeys(lang).has(key) }).toEqual({ key, override: false });
+    }
+  });
+
+  it('uses the Slovenian forms of "ljubljenček"', async () => {
+    await i18n.changeLanguage('sl');
+    try {
+      expect(i18n.t('family:children.noPet')).toBe('Še brez ljubljenčka');
+      expect(i18n.t('parent:controls.pets')).toBe('Ljubljenčki');
+      expect(i18n.t('family:children.deletePets', { count: 1 })).toMatch(/^Ljubljenček, za katerega/);
+      expect(i18n.t('family:children.deletePets', { count: 2 })).toMatch(/^Ljubljenčka, za katera skrbi sam \(2\), se izbrišeta/);
+      expect(i18n.t('family:children.keptPets', { count: 2 })).toMatch(/^Skupna ljubljenčka \(2\) ostaneta/);
+      expect(i18n.t('family:children.keptPets', { count: 3 })).toMatch(/^Skupni ljubljenčki \(3\) ostanejo/);
+      expect(i18n.t('push:push.channels.shared')).toBe('Opomniki za ljubljenčke');
+    } finally {
+      await i18n.changeLanguage('en');
     }
   });
 });

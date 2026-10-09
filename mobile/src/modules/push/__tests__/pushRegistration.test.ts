@@ -9,6 +9,7 @@ import { api } from '@/api/client';
 import { PUSH_CHANNELS, PUSH_STORAGE_KEYS } from '@/modules/push/pushConfig';
 import {
   easProjectId,
+  ensureAndroidChannels,
   registerForLanguageChange,
   registerForPush,
   resetPushRegistration,
@@ -16,7 +17,7 @@ import {
 } from '@/modules/push/pushRegistration';
 import { logout, REVOKE_TIMEOUT_MS, UNREGISTER_TIMEOUT_MS } from '@/modules/session/logout';
 import { useAppStore } from '@/store/appStore';
-import { i18n } from '@/i18n';
+import { i18n, setTextSpecies } from '@/i18n';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -86,6 +87,36 @@ describe('registerForPush', () => {
       expect.objectContaining({ importance: Notifications.AndroidImportance.HIGH, enableVibrate: true }),
     );
     expect(registerDevice).toHaveBeenCalledWith(expect.objectContaining({ platform: 'android' }));
+  });
+
+  it('names the reminder channel neutrally on a parent phone and by species on a child phone (M5-R06-08d)', async () => {
+    setPlatform('android');
+    const signIn = (role: 'parent' | 'child') =>
+      useAppStore.getState().signIn({ token: `tok-${role}`, user: { id: role === 'parent' ? 1 : 2, name: 'X', email: null, role }, pet: null });
+    try {
+      // Same channel id every time: re-saving only renames it (no new channel needed).
+      signIn('parent');
+      await ensureAndroidChannels();
+      expect(setChannel).toHaveBeenCalledWith(PUSH_CHANNELS.default, expect.objectContaining({ name: 'Opomniki za ljubljenčke' }));
+
+      setChannel.mockClear();
+      signIn('child');
+      await ensureAndroidChannels();
+      expect(setChannel).toHaveBeenCalledWith(PUSH_CHANNELS.default, expect.objectContaining({ name: 'Opomniki za kužo' }));
+
+      setChannel.mockClear();
+      setTextSpecies('cat');
+      await ensureAndroidChannels();
+      expect(setChannel).toHaveBeenCalledWith(PUSH_CHANNELS.default, expect.objectContaining({ name: 'Opomniki za muco' }));
+
+      setChannel.mockClear();
+      useAppStore.setState(useAppStore.getInitialState(), true);
+      await ensureAndroidChannels();
+      expect(setChannel).toHaveBeenCalledWith(PUSH_CHANNELS.default, expect.objectContaining({ name: 'Opomniki za ljubljenčke' }));
+    } finally {
+      setTextSpecies(null);
+      useAppStore.setState(useAppStore.getInitialState(), true);
+    }
   });
 
   it('never prompts and never registers without permission', async () => {

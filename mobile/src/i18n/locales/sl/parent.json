@@ -28,7 +28,7 @@
   "controls": {
     "title": "Nadzor in družina",
     "back": "Nazaj na pregled",
-    "pets": "Psi",
+    "pets": "Ljubljenčki",
     "closeNotice": "Zapri",
     "about": "O aplikaciji"
   },
@@ -108,7 +108,7 @@
       "unauthorized": "Seja je potekla. Prijavite se znova.",
       "child_not_found": "Tega otroka ni več v vaši družini.",
       "pet_not_joinable": "Temu psu se ni več mogoče pridružiti. Izberite drugega ali novega psa.",
-      "already_paired": "Otrok že skrbi za psa — lahko dobi samo kodo za prijavo na novi napravi.",
+      "already_paired": "Otrok že skrbi za ljubljenčka — lahko dobi samo kodo za prijavo na novi napravi.",
       "breed_locked": "Ta pasma je del plačljivega izziva in se odklene samo z nakupom. Izberite drugo pasmo.",
       "challenge_requires_paid_breed": "12-tedenski izziv potrebuje plačljivo pasmo. Mešanček je pes brezplačnega načrta — izberite drugo pasmo ali brezplačni načrt.",
       "invalid_profile": "Izbire kužka ni bilo mogoče shraniti. Izberite znova.",
@@ -161,7 +161,7 @@
     "timelineEmpty": "Še ni dejavnosti.",
     "timelineError": "Časovnice ni bilo mogoče naložiti.",
     "loadMore": "Naloži več",
-    "noPet": "Otrok še nima psa — poročilo bo na voljo po podpisu pogodbe."
+    "noPet": "Otrok še nima ljubljenčka — poročilo bo na voljo po podpisu pogodbe."
   },
   "childCard": {
     "scoreTitle": "Care Score",
@@ -184,7 +184,7 @@
       "energy": "Gibanje",
       "hygiene": "Čistoča"
     },
-    "noPet": "Še brez psa. Ustvarite kodo — otrok jo vtipka in dobi kužka.",
+    "noPet": "Še brez ljubljenčka. Ustvarite kodo — otrok jo vtipka in dobi svojega ljubljenčka.",
     "createPin": "Ustvari kodo",
     "awaitingContract": "Kuža čaka, da {{name}} podpiše pogodbo o odgovornosti.",
     "details": "Podrobnosti",
@@ -216,7 +216,7 @@
   },
   "quietHours": {
     "title": "Tihe ure",
-    "hint": "V tihih urah kuža skoraj ne lakoti, ni neredov in ni obvestil. Ure veljajo po času družine.",
+    "hint": "V tihih urah ljubljenčki skoraj ne lakotijo, ni neredov in ni obvestil. Ure veljajo po času družine.",
     "defaultsApply": "Veljajo privzeti časi — tapnite Shrani, da jih potrdite ali spremenite.",
     "active": "Vklopljeno",
     "school": "Šola",
@@ -234,8 +234,8 @@
   "notifications": {
     "title": "Obvestila",
     "status": {
-      "on": "Vklopljena — ta telefon prejme alarm, ko otrok več kot uro ne poskrbi za kužo, in novico o bolezni ali zavetišču.",
-      "off": "Izklopljena — o zanemarjenem kužu boste izvedeli šele, ko odprete aplikacijo.",
+      "on": "Vklopljena — ta telefon prejme alarm, ko otrok več kot uro ne poskrbi za ljubljenčka, in novico o bolezni ali zavetišču.",
+      "off": "Izklopljena — o zanemarjenem ljubljenčku boste izvedeli šele, ko odprete aplikacijo.",
       "blocked": "Izklopljena v nastavitvah telefona."
     },
     "quietHours": "Med tihimi urami ne pošiljamo ničesar. Obvestila ne vsebujejo imen otrok.",

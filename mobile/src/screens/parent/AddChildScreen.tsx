@@ -525,7 +525,7 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
       if (cooldownUntil !== null && !isCoolingDown) return null; // wait is over — "Nova koda" works again
       return S.errors.rate_limited(isCoolingDown ? cooldown : pinError.retryAfterSeconds);
     }
-    // `already_paired` is about the child's existing pet, not this choice → the dog text as before (QA 08c m6).
+    // `already_paired` is about the child's existing pet, not this choice → its neutral "pet" text (QA 08c m6, M5-R06-08d).
     return species === 'cat' && pinError.kind !== 'already_paired' ? pinText(`errors.${pinError.kind}`) : S.errors[pinError.kind];
   })();
 
