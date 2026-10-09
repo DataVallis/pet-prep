@@ -8,6 +8,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Muca dobi svoj glavni zaslon, starši njen pregled (M5-R06-08b, skrito)
+
+**Kaj se je zgodilo:** Ko je ljubljenček muca, ima otrok zdaj svoj glavni zaslon: spodaj **hrana, voda, »Pesek«, »Igra«** (palica s peresom) in **čiščenje** — brez sprehoda, štetja korakov in prošnje za dovoljenje, brez »Šole«. Merilnik »Energija« postane »Igra«. Nad gumbi so **»Počeši«** (Maine Coon), **»Menjava peska«** in **»Crkljanje«**, ob opraskanem kavču pa gumb **»Na praskalnik«**. Ko je muca lačna, otrok prebere kratko »Dobro je vedeti: prava muca, ki neha jesti, mora čim prej k veterinarju« (samo izobraževalno, brez števila dni). Vsa otroška besedila govorijo o muci (»Njam! Muca je sita.«), tudi pogodba o odgovornosti. Starši v pregledu vidijo mačje rutine (igra, pesek, menjava, česanje), v poročilu **igre dneva namesto korakov** in mačja opravila v časovnici. Na strežniku: igra s palico zdaj vedno pove, *kdaj* bo spet mogoča (konec tihih ur, igre drugega otroka, polnoč). Mačke so še vedno skrite — vklop je R06-09 po preizkusu na telefonu.
+
+**Zakaj je pomembno:** Družina z mačko ne dobi »psa z drugo sliko«: ne prosimo za dovoljenje za korake (manj podatkov o otroku), praskanje se rešuje s pohvalo na praskalniku, ne s čiščenjem, in otrok izve resnično dejstvo o mačkah (lakota je pri mački nevarna). Pes je ostal popolnoma enak — vsi obstoječi testi so zeleni brez sprememb.
+
+**Številke:** 5 gumbov in 3 čipi za muco, 6 imenskih prostorov besedil s mačjo različico (EN + SL); Jest 1687 → 1744 testov (134 → 137 kompletov); Pest 1713 → 1715 (WandPlayTest 31 → 33). Pasje dnevne vrstice poročila bajt za bajt enake (posnetek psa).
+
+**Kako povedati:**
+- 👩 Starši: »Če izberete muco, otrok ne bo hodil po korake — vsak dan se bo z njo igral s palico, čistil pesek in jo pohvalil na praskalniku. V poročilu vidite, koliko iger je bilo vsak dan.« (*ko bodo mačke vklopljene*)
+- 🧒 Otroci: »Tvoja muca ima svoj zaslon: Pesek, Igra in Crkljanje!«
+- 🛠 Tehnično: »Ena funkcija `t()` izbere mačje besedilo, kadar otroška aplikacija kaže muco — ~200 pasjih ključev je ostalo nedotaknjenih, test preveri, da ima vsak mačji prepis svoj pasji ključ.«
+- 📣 Omrežja: (*interno, dokler mačke niso vklopljene*)
+
+---
+
 ## 2026-10-09 — Muca dobi svoje mini-igre v aplikaciji (M5-R06-08a, skrito)
 
 **Kaj se je zgodilo:** Aplikacija ima zdaj pet mačjih opravil kot kratke igre: **palica s peresom** (~60 s — otrok vleče pero *stran* od muce kot miško, muca se plazi, skoči in na koncu ujame pero), **počisti pesek** (z lopatko poberi grudice), **tedenska menjava peska** in **česanje Maine Coona** (30 s potez s prstom v treh korakih, z vozlom v dlaki 60 s) ter **»na praskalnik«** (muco odneseš s kavča na praskalnik in jo pohvališ v 3 sekundah). Kaj šteje, odloči strežnik; aplikacija pošlje samo, kar je otrok res naredil. Neuspela ali ustavljena igra nima kazni. Starši in otroci tega še ne vidijo — gumbi na glavnem zaslonu pridejo v naslednjem koraku (R06-08b).

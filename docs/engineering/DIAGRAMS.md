@@ -724,6 +724,29 @@ flowchart TD
   MAT --> S
 ```
 
+### 5i. Cat HUD in the app (M5-R06-08b, 2026-10-09)
+
+Hidden until R06-09 (`CAT_UI_READY` false). The dock and chips only open the mini-games; the server judges every game. Broadcasts update the cat blocks at once; texts switch to the cat's while the child app shows a cat.
+
+```mermaid
+flowchart TD
+  V["ChildPetView (GET /api/child/pet)<br/>pet.species = cat"] --> K{"dockKinds(view)"}
+  K -->|dog| DD["Hrani · Voda · (Pelji ven) · Sprehod · Očisti<br/>(unchanged)"]
+  K -->|cat| CD["Hrani · Voda · Pesek · Igra · Očisti<br/>no walk / steps / Šola"]
+  CD -->|Pesek| O1["openCatGame('scoop')"]
+  CD -->|Igra| O2["openCatGame('wand')"]
+  CH["Chips: Počeši (Maine Coon) · Menjava peska · Crkljanje"] -->|tap| O3["openCatGame('grooming' / 'litter_change')<br/>or PlayOverlay 'cuddle'"]
+  SC["Scratched-sofa card: Na praskalnik"] --> O4["openCatGame('scratching')"]
+  O1 & O2 & O3 & O4 --> OV["CatCareOverlay → start / finish (server judges)"]
+  OV --> ST["state from the 200 / 422 → cache"]
+  B["PetUpdated (pet level, no viewer)"] --> BC["applyBroadcast → broadcastCatCare<br/>counters · deadlines · blocked_reason · next_allowed_at<br/>own session + own count kept"]
+  BC --> V
+  R["422 needs_cleaning"] --> M{"cleanFirstKind"}
+  M -->|only scratching| T1["Najprej odnesi muco na praskalnik …"]
+  M -->|dog, only chewing| T2["Najprej pospravi copat …"]
+  M -->|else| T3["Najprej pospravi / počisti …"]
+```
+
 ## 6. Data model (core)
 
 Family model (M2-01, ADR-012): `families` own pets and quiet hours; `family_user` puts parents and children in a family; `pet_caretakers` links children to pets (shared pet = several rows). `users.parent_id` and `pets.user_id` are deprecated mirrors.
