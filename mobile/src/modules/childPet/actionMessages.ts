@@ -10,7 +10,8 @@ import type { ChildPetState } from '@/api/client';
 import type { CareAction, ChildPetView, LockReason } from '@/modules/childPet/childPetView';
 import { familyClock, isLaterDay, whenText } from '@/modules/childPet/familyTime';
 import { dockText, dockWhen, type DockHint } from '@/modules/childPet/dockHint';
-import { BEHAVIOUR_STRINGS, onlyChewingOpen } from '@/modules/behaviour/behaviour';
+import { BEHAVIOUR_STRINGS, onlyChewingOpen, onlyScratchingEventsOpen } from '@/modules/behaviour/behaviour';
+import { onlyScratchingOpen } from '@/modules/catCare/catCare';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -142,11 +143,52 @@ export function refusalMessage(reason: string | null, nextAllowedAt: string | nu
       return when ? s.waterTooSoon(when) : s.waterTooSoonNoTime;
     }
     case 'needs_cleaning':
-      return s.needsCleaning;
+      return needsCleaningMessage(view);
     case 'take_out_not_needed':
       return s.takeOutNotNeeded;
     default:
       return s.other;
+  }
+}
+
+/**
+ * What blocks the action when the server says `needs_cleaning` (its `message` always reads
+ * "Clean up the mess first."), from the state the refusal came with:
+ * - `scratcher`: only the cat's scratched sofa is open — cleaning doesn't resolve it, the
+ *   child carries her to the scratching post first (M5-R06-08b);
+ * - `tidy`: only the dog's chewed slipper is open — tidy up and give a toy first;
+ * - `clean`: a mess to clean (poop, puddle, the cat's mess next to the tray), or unknown.
+ */
+export type CleanFirst = 'clean' | 'tidy' | 'scratcher';
+
+export function cleanFirstKind(view: ChildPetView | null): CleanFirst {
+  if (view === null || !view.pet.needs_cleaning) return 'clean';
+  if (onlyScratchingOpen(view.cat) || onlyScratchingEventsOpen(view.behaviour)) return 'scratcher';
+  if (onlyChewingOpen(view.behaviour)) return 'tidy';
+  return 'clean';
+}
+
+/** Toast for a `needs_cleaning` refusal (see {@link cleanFirstKind}). */
+export function needsCleaningMessage(view: ChildPetView | null): string {
+  switch (cleanFirstKind(view)) {
+    case 'scratcher':
+      return t('cat:errors.needs_scratcher_first');
+    case 'tidy':
+      return CHILD_ACTION_STRINGS.refused.needsTidying;
+    case 'clean':
+      return CHILD_ACTION_STRINGS.refused.needsCleaning;
+  }
+}
+
+/** Short dock hint while food / water wait for a mess: "Najprej pospravi" / "Najprej praskalnik". */
+export function cleanFirstHint(view: ChildPetView): DockHint {
+  switch (cleanFirstKind(view)) {
+    case 'scratcher':
+      return dockText(t('cat:hud.hints.scratcherFirst'));
+    case 'tidy':
+      return dockText(HUD_HINTS.tidyFirst);
+    case 'clean':
+      return dockText(HUD_HINTS.cleanFirst);
   }
 }
 
@@ -200,9 +242,13 @@ export const HUD_HINTS = strings('child', 'hints', {
   },
 });
 
-/** Hint under "Očisti": "Čisto", or "Pospravi copat" when only a chewed slipper is open (M5-R02). */
+/**
+ * Hint under "Očisti": "Čisto", "Pospravi copat" when only a chewed slipper is open (M5-R02),
+ * "Najprej praskalnik" when only the cat's scratched sofa is (M5-R06-08b).
+ */
 export function cleanHint(view: ChildPetView): string | null {
   if (view.lock.is_locked) return null;
+  if (cleanFirstKind(view) === 'scratcher') return t('cat:hud.hints.scratcherFirst');
   if (view.pet.needs_cleaning && onlyChewingOpen(view.behaviour)) return HUD_HINTS.cleanChewing;
   if (view.pet.hygiene_level >= 100 && !view.pet.needs_cleaning) return HUD_HINTS.clean;
   return null;
@@ -214,7 +260,7 @@ export function cleanHint(view: ChildPetView): string | null {
  */
 export function feedDockHint(view: ChildPetView): DockHint | null {
   if (view.feeding.can_feed || view.lock.is_locked) return null;
-  if (view.pet.needs_cleaning) return dockText(HUD_HINTS.cleanFirst);
+  if (view.pet.needs_cleaning) return cleanFirstHint(view);
   const next = view.feeding.next_feed_window?.start ?? null;
   // The current, unused window can still be closed for the moment (e.g. a lock just ended).
   return dockWhen(next, view.server_time, view.timezone);
@@ -228,7 +274,7 @@ export function feedHint(view: ChildPetView): string | null {
 /** Dock hint under a disabled "Voda": "ob 15:30", "jutri" (daily limit), "Najprej pospravi". */
 export function waterDockHint(view: ChildPetView): DockHint | null {
   if (view.water.can_water || view.lock.is_locked) return null;
-  if (view.pet.needs_cleaning) return dockText(HUD_HINTS.cleanFirst);
+  if (view.pet.needs_cleaning) return cleanFirstHint(view);
   const next = view.water.next_allowed_at;
   if (!next || isLaterDay(next, view.server_time, view.timezone)) return dockText(HUD_HINTS.tomorrow);
   return dockWhen(next, view.server_time, view.timezone);

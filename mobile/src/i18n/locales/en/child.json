@@ -72,7 +72,8 @@
       "waterTooSoon": "The bowl is still full. You can give fresh water {{when}}.",
       "waterTooSoonNoTime": "The bowl is still full.",
       "needsCleaning": "Clean up after your pup first!",
-      "other": "You can't do that right now. Try again a bit later."
+      "other": "You can't do that right now. Try again a bit later.",
+      "needsTidying": "Tidy up the slipper and give your pup a toy first!"
     },
     "locked": {
       "hard_stopped": "A parent has paused the game.",
@@ -89,7 +90,8 @@
   "hints": {
     "cleanFirst": "Clean up first",
     "tomorrow": "tomorrow",
-    "clean": "All clean"
+    "clean": "All clean",
+    "tidyFirst": "Tidy up first"
   },
   "meals": {
     "title": "Meals today",

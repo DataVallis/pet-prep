@@ -144,6 +144,14 @@ export interface PetUpdatedBroadcast {
    * null for a pet without play, missing from servers before M5-R05. Read via `broadcastPlay`.
    */
   play?: unknown;
+  /**
+   * M5-R06-04 / 05 cat blocks (pet level: no own session, `my_sessions_today` null); null for
+   * a dog, missing from older servers. Read via `broadcastCatCare` (`modules/catCare`).
+   */
+  wand?: unknown;
+  litter?: unknown;
+  grooming?: unknown;
+  scratching?: unknown;
   event_type: string | null;
   updated_at: string | null;
   /** When the server emitted this snapshot (ms precision); newer wins. */

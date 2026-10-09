@@ -725,6 +725,73 @@ describe('dog-only features for a cat', function () {
 });
 
 describe('state, export, data', function () {
+    it('shows the day\'s wand play in the parent report rows of a cat; a dog\'s rows keep their shape (M5-R06-08b)', function () {
+        [$parent, $child] = wpFamily();
+        wpAt('2026-10-21 09:00');
+        wpPlay($child)->assertJsonPath('status', 'accepted');
+
+        test()->actingAs($parent, 'sanctum');
+        $daily = collect(test()->getJson("/api/parent/children/{$child->id}/report?days=7")->assertOk()->json('daily'))->keyBy('date');
+        app('auth')->forgetGuards();
+        expect($daily['2026-10-21'])->play_sessions->toBe(1)->play_goal->toBe(2)->play_done->toBeFalse()
+            ->walk_goal->toBeNull()->walk_steps->toBe(0)
+            // The birth day has no play routine (not expected) → nulls, still a cat row.
+            ->and($daily['2026-10-20'])->toHaveKey('play_sessions')
+            ->and($daily['2026-10-20']['play_goal'])->toBeNull();
+
+        // A dog's report rows carry no play keys (byte-identical to before).
+        $dogParent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        $dogChild = User::factory()->child()->create(['parent_id' => $dogParent->id]);
+        Pet::factory()->mutt()->create(['user_id' => $dogChild->id, 'arrival_age_months' => 2]);
+        test()->actingAs($dogParent, 'sanctum');
+        $dogRow = test()->getJson("/api/parent/children/{$dogChild->id}/report?days=7")->assertOk()->json('daily.0');
+        expect(array_keys($dogRow))->toBe(['date', 'expected', 'fair_expected', 'done', 'done_by_child', 'missed', 'pending', 'walk_steps', 'walk_goal', 'walk_done']);
+    });
+
+    it('names the end of every timed blocked_reason in wand.next_allowed_at (QA M5-R06-08a m5)', function () {
+        [$parent, $child, $cat] = wpFamily(); // bedtime 21:00–07:00
+        $tim = wpSibling($parent, $cat);
+        $wand = function (User $viewer): array {
+            test()->actingAs($viewer, 'sanctum');
+            $state = test()->getJson('/api/child/pet')->assertOk()->json('wand');
+            app('auth')->forgetGuards();
+
+            return $state;
+        };
+
+        // Quiet hours: the end of the night (was null before — only the 2 h gap had a time).
+        wpAt('2026-10-21 22:00');
+        expect($wand($child))->blocked_reason->toBe('wand_quiet_hours')
+            ->next_allowed_at->toBe('2026-10-22T07:00:00+02:00');
+
+        // Another child's game: its TTL end (the 422 says the same).
+        wpAt('2026-10-22 09:00');
+        $expires = wpStart($tim)->assertOk()->json('session.expires_at');
+        $blocked = $wand($child);
+        expect($blocked['blocked_reason'])->toBe('wand_session_active')
+            ->and(Carbon::parse($blocked['next_allowed_at'])->equalTo(Carbon::parse($expires)))->toBeTrue();
+        expect(wpStart($child)->assertStatus(422)->json('next_allowed_at'))->toBe($blocked['next_allowed_at']);
+        // Tim's own view: his running game is no refusal.
+        expect($wand($tim))->blocked_reason->toBeNull()->next_allowed_at->toBeNull();
+
+        // The day ending: the family-local midnight.
+        withoutQuietHours($cat);
+        wpAt('2026-10-22 23:58:30');
+        expect($wand($child))->blocked_reason->toBe('wand_day_ending')
+            ->next_allowed_at->toBe('2026-10-23T00:00:00+02:00');
+
+        // No refusal and no gap → null (unchanged).
+        wpAt('2026-10-23 10:00');
+        expect($wand($child))->blocked_reason->toBeNull()->next_allowed_at->toBeNull();
+
+        // The broadcast (no viewer) carries the pet-level time too.
+        wpAt('2026-10-23 22:30');
+        setQuietHours(['family_id' => $cat->family_id, 'bedtime_start' => '21:00', 'bedtime_end' => '07:00']);
+        $payload = PetUpdated::payloadFor($cat->fresh());
+        expect($payload['wand']['blocked_reason'])->toBe('wand_quiet_hours')
+            ->and($payload['wand']['next_allowed_at'])->toBe('2026-10-24T07:00:00+02:00');
+    });
+
     it('gives the child state a wand object for a cat (and the meter in energy_level)', function () {
         [, $child] = wpFamily();
         wpAt('2026-10-21 09:00');

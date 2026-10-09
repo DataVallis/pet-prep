@@ -11,6 +11,9 @@
  * "Kuža zna: sedi ✓, pridi 60 % …", whether today's session is done, the training routine
  * in the totals (only for a pet with training). M5-F01: "12-week challenge — buy" on top
  * while the dog's challenge can be bought. Light parent theme (ADR-007).
+ * M5-R06-08b: for a cat the routine rows are food, water, cleaning, litter, play, the weekly
+ * litter change and (Maine Coon) brushing; a day shows its wand games instead of steps; the
+ * timeline names the cat's actions; a "good to know" card about cats that stop eating (C24).
  */
 
 import { useCallback, useMemo, useState } from 'react';
@@ -44,8 +47,8 @@ import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
 import {
   REPORT_PERIODS,
   ROUTINE_LABELS,
-  ROUTINE_TYPES,
   missedLabel,
+  reportRoutineTypes,
   activityText,
   activityWhenText,
   dayLabel,
@@ -55,6 +58,7 @@ import {
   readTimeline,
   reasonText,
   scoreRoutinesText,
+  type DayRow,
   type ReportDays,
 } from '@/modules/family/scoring';
 import { localParts } from '@/modules/childPet/familyTime';
@@ -76,6 +80,8 @@ export const CHILD_DETAIL_STRINGS = strings('parent', 'childDetail', {
   typePending: (n: number) => t('parent:childDetail.typePending', { n }),
   walk: (steps: string, goal: string | null) =>
     goal ? t('parent:childDetail.walkGoal', { steps, goal }) : t('parent:childDetail.walk', { steps }),
+  /** M5-R06-08b: "Igra 1/2" — the cat's wand games of the day. */
+  playDay: (done: number, goal: number) => t('cat:parent.playDay', { done, goal }),
   illnessRow: (from: string, to: string | null) =>
     to ? t('parent:childDetail.illnessRange', { from, to }) : t('parent:childDetail.illnessOngoing', { from }),
 });
@@ -101,7 +107,13 @@ function instantText(iso: string | null, timezone: string): string {
   return p ? t('family:date.dateTime', { date: dayLabel(p.date), time: p.time }) : iso;
 }
 
-function Timeline({ petId, family }: { petId: number; family: FamilyOverview }) {
+/** A cat's day: "Igra 1/2" (null without a play routine that day). */
+export function dayPlayText(day: Pick<DayRow, 'play_sessions' | 'play_goal'>): string | null {
+  if (day.play_goal === null || day.play_goal <= 0) return null;
+  return S.playDay(day.play_sessions ?? 0, day.play_goal);
+}
+
+function Timeline({ petId, family, species }: { petId: number; family: FamilyOverview; species: string | null }) {
   const activities = usePetActivities(petId);
   const items = (activities.data?.pages ?? []).flatMap((page) => readTimeline(page.data));
   const today = localParts(new Date().toISOString(), family.timezone)?.date ?? null;
@@ -131,7 +143,7 @@ function Timeline({ petId, family }: { petId: number; family: FamilyOverview }) 
                 )}
               </View>
               <Text style={styles.timelineText}>
-                {activityText({ activity_type: item.activity_type, actor_nickname: nickname, value: item.value })}
+                {activityText({ activity_type: item.activity_type, actor_nickname: nickname, value: item.value }, species)}
               </Text>
               <Text style={styles.muted}>{activityWhenText(item.created_at, family.timezone, today)}</Text>
             </View>
@@ -178,6 +190,9 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
   const behaviourLines = pet ? parentBehaviourLines(pet.behaviour, family.timezone) : [];
   const trainingLines = pet ? parentTrainingLines(pet.training) : [];
   const trainingEnabled = pet?.training.enabled ?? false;
+  // M5-R06-08b: species-specific report rows and texts.
+  const species = pet !== null && isSpecies(pet.species) ? pet.species : null;
+  const isCat = species === 'cat';
   // A signed media URL failed (likely expired): refresh the dashboard once for new URLs.
   const onMediaExpired = useCallback(() => {
     void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
@@ -248,6 +263,13 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
                     {line}
                   </Text>
                 ))}
+            </Card>
+          )}
+
+          {isCat && (
+            <Card testID="detail-cat-first-aid">
+              <SectionTitle>{t('cat:parent.firstAid.title')}</SectionTitle>
+              <Text style={styles.body}>{t('cat:parent.firstAid.body')}</Text>
             </Card>
           )}
 
@@ -333,10 +355,10 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
 
               <Card>
                 <SectionTitle>{S.byType}</SectionTitle>
-                {ROUTINE_TYPES.map((type) => {
+                {reportRoutineTypes(species, pet?.breed_type, data.by_type, trainingEnabled).map((type) => {
+                  // Training (M5-R03) only for a pet that has it, cat rows only for a cat (M5-R06-08b)
+                  // — or a period in which the server counted one.
                   const totals = data.by_type[type];
-                  // Training (M5-R03) only for a pet that has it — or a period in which it counted.
-                  if (type === 'training' && !trainingEnabled && totals.expected === 0 && totals.done === 0) return null;
                   return (
                     <View key={type} style={styles.typeRow} testID={`report-type-${type}`}>
                       <RoutineIcon type={type} />
@@ -360,10 +382,17 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
                     <Text style={[styles.strong, styles.dayCount]}>
                       {d.expected === 0 ? S.noRoutines : `${d.done}/${d.expected}`}
                     </Text>
-                    <Text style={[styles.muted, styles.flex, styles.right]}>
-                      {S.walk(formatSteps(d.walk_steps), d.walk_goal === null ? null : formatSteps(d.walk_goal))}
-                    </Text>
-                    {d.walk_done === true && <Check color={C.green} size={14} />}
+                    {isCat ? (
+                      // M5-R06-08b: a cat has no steps — its wand games of the day instead.
+                      <Text style={[styles.muted, styles.flex, styles.right]} testID={`report-day-play-${d.date}`}>
+                        {dayPlayText(d) ?? ''}
+                      </Text>
+                    ) : (
+                      <Text style={[styles.muted, styles.flex, styles.right]}>
+                        {S.walk(formatSteps(d.walk_steps), d.walk_goal === null ? null : formatSteps(d.walk_goal))}
+                      </Text>
+                    )}
+                    {(isCat ? d.play_done : d.walk_done) === true && <Check color={C.green} size={14} />}
                   </View>
                 ))}
               </Card>
@@ -398,7 +427,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
             </>
           )}
 
-          {petId !== null && <Timeline petId={petId} family={family} />}
+          {petId !== null && <Timeline petId={petId} family={family} species={species} />}
         </ScrollView>
       </View>
 

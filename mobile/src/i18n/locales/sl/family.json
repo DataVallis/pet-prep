@@ -12,7 +12,11 @@
     "water": "Voda",
     "clean": "Čiščenje",
     "walk": "Sprehod",
-    "training": "Šola"
+    "training": "Šola",
+    "play": "Igra",
+    "litter_scoop": "Pesek",
+    "litter_change": "Menjava peska",
+    "grooming": "Česanje"
   },
   "score": {
     "routinesOf_one": "{{done}} od {{expected}} rutine",
@@ -76,7 +80,8 @@
     "window": "okno {{opens}}–{{due}}",
     "deadline": "rok {{due}}",
     "endOfDay": "do konca dneva",
-    "withDay": "{{day}} · {{when}}"
+    "withDay": "{{day}} · {{when}}",
+    "endOfWeek": "do konca tedna"
   },
   "activities": {
     "fed_pet": "nahranil(a) kužka",
@@ -87,13 +92,24 @@
     "took_out_pet": "peljal(a) kužka ven",
     "resolved_chewing": "pospravil(a) copat in dal(a) igračo",
     "trained_pet": "opravil(a) vajo v šoli",
-    "training_started": "začel(a) vajo v šoli"
+    "training_started": "začel(a) vajo v šoli",
+    "played_wand": "se je igral(a) s palico s peresom",
+    "scooped_litter": "počistil(a) pesek",
+    "changed_litter": "zamenjal(a) ves pesek",
+    "groomed_pet": "počesal(a) muco",
+    "resolved_scratching": "odnesel(a) muco na praskalnik in jo pohvalil(a)"
+  },
+  "activitiesCat": {
+    "fed_pet": "nahranil(a) muco"
   },
   "systemActivities": {
     "ignored_warning": "Opozorilo ni bilo upoštevano",
     "parent_fed_pet": "Obrok med tihimi urami (nahrani starš)",
     "pet_accident": "Mladiček je naredil lužo",
-    "pet_chewed": "Kuža je pregrizel copat"
+    "pet_chewed": "Kuža je pregrizel copat",
+    "pet_scratched": "Muca je opraskala kavč",
+    "pet_litter_accident": "Muca je naredila nered zraven peska",
+    "pet_coat_matted": "Muci se je zavozlala dlaka"
   },
   "petStatus": {
     "game_over": "Igra končana — kuža je bil odvzet",

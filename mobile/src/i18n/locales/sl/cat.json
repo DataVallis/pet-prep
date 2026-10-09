@@ -211,5 +211,165 @@
     "ill": "Muca je pri veterinarju do {{until}}.",
     "illNoTime": "Muca je pri veterinarju.",
     "game_over": "Muca je odšla v zavetišče. Pogovori se s starši."
+  },
+  "hud": {
+    "scoop": "Pesek",
+    "wand": "Igra",
+    "scoopA11y": "Počisti pesek",
+    "wandA11y": "Igraj se s palico s peresom",
+    "hints": {
+      "litterClean": "Čist",
+      "wandCount": "{{done}}/{{goal}}",
+      "wandDone": "Opravljeno ✓",
+      "scratcherFirst": "Najprej praskalnik",
+      "asleep": "Spi"
+    },
+    "scratcher": "Na praskalnik",
+    "scratcherA11y": "Odnesi muco na praskalnik in jo pohvali",
+    "chips": {
+      "grooming": "Počeši",
+      "groomingA11y": "Počeši muco. Ta teden: {{done}} od {{goal}}.",
+      "groomingMatted": "Dlaka ima vozel — počeši jo.",
+      "litterChange": "Menjava peska",
+      "litterChangeA11y": "Zamenjaj ves pesek (enkrat na teden)",
+      "litterChangeOverdue": "Pesek smrdi — zamenjaj ves pesek.",
+      "cuddle": "Crkljanje",
+      "cuddleA11y": "Pocrkljaj muco",
+      "pendingA11y": "Zdaj lahko."
+    },
+    "litterMess": {
+      "title": "Ups, nered zraven peska! Počisti ga.",
+      "hint": "Tapni madeže, da jih počistiš."
+    },
+    "firstAid": {
+      "title": "Dobro je vedeti",
+      "body": "Prava muca ne sme dolgo ostati brez hrane. Če muca neha jesti, mora čim prej k veterinarju."
+    }
+  },
+  "contract": {
+    "bodyMaineCoon": "Zavezujem se, da bom vsak dan odgovorno skrbel za svojo virtualno muco:\n\n• Hranil jo bom ob pravem času.\n• Vsak dan ji bom dal svežo vodo.\n• Vsak dan bom počistil njen pesek in ga enkrat na teden zamenjal.\n• Vsak dan se bom igral z njo, da bo zdrava in vesela.\n• Redno jo bom česal, da se ji dlaka ne bo zavozlala.\n• Odzval se bom na opozorila, preden pride do bolezni ali virtualnega zavetišča.\n\nAli sprejemaš to odgovornost?"
+  },
+  "parent": {
+    "playDay": "Igra {{done}}/{{goal}}",
+    "playDayNone": "Brez rutine igre",
+    "firstAid": {
+      "title": "Dobro je vedeti",
+      "body": "Pri pravi mački je to, da ne je, resno: mačka, ki neha jesti, lahko dobi nevarno bolezen jeter (hepatična lipidoza). Če mačka neha jesti, se čim prej posvetujte z veterinarjem — ne čakajte."
+    }
+  },
+  "override": {
+    "child": {
+      "hud": {
+        "metrics": {
+          "energy": "Igra"
+        },
+        "profileSheet": {
+          "title": "O tvoji muci",
+          "openHint": "Pokaže vse o tvoji muci"
+        },
+        "loading": "Nalagam muco …",
+        "loadFailed": "Muce ni bilo mogoče naložiti.",
+        "moods": {
+          "idle": "Srečna in igriva",
+          "playing": "Igriva",
+          "hungry": "Lačna muca",
+          "sleeping": "Počiva",
+          "low_energy": "Dolgčas ji je",
+          "sick": "Bolna"
+        }
+      },
+      "actions": {
+        "success": {
+          "feed": "Njam! Muca je sita.",
+          "water": "Sveža voda! Muca je odžejana."
+        },
+        "unchanged": {
+          "feed": "Muca je že sita.",
+          "water": "Muca ima že polno posodo."
+        },
+        "emergencyFeed": "Njam! Muca je sita. Obrok je bil zamujen, zato ne šteje kot pravočasen — naslednji obrok je {{when}}.",
+        "emergencyFeedNoTime": "Njam! Muca je sita. Obrok je bil zamujen, zato ne šteje kot pravočasen.",
+        "refused": {
+          "alreadyFed": "Muca je že jedla. Spet jo nahraniš {{when}}.",
+          "alreadyFedNoTime": "Muca je že jedla.",
+          "waterDailyLimit": "Danes je muca dobila dovolj sveže vode. Nova voda jutri.",
+          "needsCleaning": "Najprej počisti za muco!"
+        },
+        "locked": {
+          "ill": "Muca je pri veterinarju do {{until}}.",
+          "illNoTime": "Muca je pri veterinarju.",
+          "game_over": "Muca je odšla v zavetišče. Pogovori se s starši."
+        }
+      },
+      "locked": {
+        "illness": {
+          "title": "Muca je pri veterinarju",
+          "body": "Muca je pri veterinarju do {{until}}. Potrebuje počitek.",
+          "bodyNoTime": "Muca potrebuje počitek. Kmalu se vrne."
+        },
+        "game_over": {
+          "title": "Muca je v zavetišču",
+          "body": "Muca je odšla v virtualno zavetišče. Pogovori se s starši o novem začetku."
+        },
+        "payment_required": {
+          "body": "Igra počaka, da jo starš odklene. Muca je na varnem."
+        }
+      },
+      "cleaning": {
+        "title": "Počisti za muco!"
+      },
+      "hudError": {
+        "body": "Muca je v redu. Poskusi znova."
+      }
+    },
+    "play": {
+      "cuddle": {
+        "invite": "Muca se drgne ob tebe. Jo pocrkljaš?",
+        "hint": "S prstom nežno pobožaj muco — na kratko in mehko.",
+        "areaA11y": "Tvoja muca. Pobožaj jo s prstom ali uporabi gumb spodaj.",
+        "done": "Muca prede. Hvala za crkljanje!"
+      },
+      "mood": {
+        "happy": "Muca je vesela"
+      },
+      "unavailable": {
+        "sleeping": "Muca spi. Pocrkljaš jo, ko se zbudi.",
+        "dirty": "Najprej počisti, potem jo pocrkljaj.",
+        "other": "Zdaj je ne moreš pocrkljati.",
+        "sleepingUntil": "Muca spi do {{clock}}. Takrat jo pocrkljaj!"
+      }
+    },
+    "contract": {
+      "screen": {
+        "body": "Zavezujem se, da bom vsak dan odgovorno skrbel za svojo virtualno muco:\n\n• Hranil jo bom ob pravem času.\n• Vsak dan ji bom dal svežo vodo.\n• Vsak dan bom počistil njen pesek in ga enkrat na teden zamenjal.\n• Vsak dan se bom igral z njo, da bo zdrava in vesela.\n• Odzval se bom na opozorila, preden pride do bolezni ali virtualnega zavetišča.\n\nAli sprejemaš to odgovornost?",
+        "locked": {
+          "inactive": "Muca trenutno ni aktivna. Prosi starša, da preveri nastavitve.",
+          "ill": "Muca je pri veterinarju. Poskusi znova kasneje."
+        }
+      }
+    },
+    "pet": {
+      "media": {
+        "pending": "Muca se pripravlja…",
+        "a11y": "Tvoja muca ({{breed}})"
+      },
+      "album": {
+        "title": "Moja muca",
+        "empty": "Muca se še pripravlja. Kmalu bodo tu njene slike in posnetki."
+      },
+      "growth": {
+        "section": "Kako je muca rasla"
+      }
+    },
+    "push": {
+      "push": {
+        "prePrompt": {
+          "child": {
+            "title": "Naj te muca pokliče?",
+            "message": "Ko bo tvoja muca lačna, žejna, bo treba počistiti pesek ali se bo hotela igrati, ti pošljemo obvestilo. Med šolo in spanjem (tihe ure) ne pošiljamo ničesar."
+          }
+        }
+      }
+    }
   }
 }

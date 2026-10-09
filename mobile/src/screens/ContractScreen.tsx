@@ -21,6 +21,7 @@ import { submitSignature } from '@/modules/contract/signContract';
 import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { logout } from '@/modules/session/logout';
 import { lockStateFromPet, useAppStore } from '@/store/appStore';
+import { contractBody } from '@/modules/contract/contractText';
 import { alpha, palette, radius } from '@/theme';
 import { strings } from '@/i18n/strings';
 
@@ -114,7 +115,7 @@ export default function ContractScreen() {
             </View>
 
             <ScrollView style={styles.contractScroll}>
-              <Text style={styles.contractBody}>{CONTRACT_STRINGS.body}</Text>
+              <Text style={styles.contractBody}>{contractBody(sessionPet?.species, sessionPet?.breed_type)}</Text>
             </ScrollView>
 
             <Text style={styles.padHint}>{CONTRACT_STRINGS.padHint}</Text>
