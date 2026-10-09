@@ -1380,7 +1380,7 @@ export interface components {
              *     lists = no sourced tags yet (mutt, cats). Never "hypoallergenic".
              */
             suitability: {
-                suits: ("active_family" | "children" | "small_children" | "first_time_owner" | "apartment" | "house_with_garden" | "other_pets" | "older_owners" | "often_alone" | "low_shedding")[];
+                suits: ("active_family" | "family_pet" | "children" | "small_children" | "first_time_owner" | "apartment" | "large_home" | "other_pets" | "older_owners" | "often_alone" | "low_shedding")[];
                 consider: ("long_daily_exercise" | "needs_mental_stimulation" | "may_herd_children" | "chews_when_bored" | "sheds" | "food_motivated_weight")[];
             };
         };

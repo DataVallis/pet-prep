@@ -328,7 +328,7 @@ describe('GET /api/breeds', function () {
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.labrador_retriever',
                 'search_keywords' => BreedConfigsSeeder::configs()[2]['search_keywords'], 'sort_order' => 20,
                 'suitability' => [
-                    'suits' => ['active_family', 'children', 'house_with_garden', 'other_pets'],
+                    'suits' => ['active_family', 'family_pet', 'large_home', 'other_pets'],
                     'consider' => ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
                 ],
             ])

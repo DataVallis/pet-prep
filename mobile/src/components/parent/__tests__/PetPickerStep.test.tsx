@@ -47,7 +47,7 @@ const DOGS_R10 = readBreedCatalogue({
     {
       ...entry('labrador_retriever', 'dog', true, 20, ['labradorec', 'prinašalec']),
       suitability: {
-        suits: ['active_family', 'children', 'house_with_garden', 'other_pets', 'future_tag'],
+        suits: ['active_family', 'family_pet', 'large_home', 'other_pets', 'future_tag'],
         consider: ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
       },
     },
@@ -169,17 +169,17 @@ describe('PetPickerStep', () => {
     expect(lab).toHaveTextContent(/Del 12-tedenskega izziva\./);
 
     const suits = screen.getByTestId('breed-suitability-labrador_retriever-suits');
-    expect(suits).toHaveTextContent('Primerno za:Aktivna družinaDružine z otrokiHiša z vrtomDrugi ljubljenčki');
+    expect(suits).toHaveTextContent('Primerno za:aktivno družinodružinsko življenjeveliko hišo z vrtomdom z drugimi ljubljenčki');
     const consider = screen.getByTestId('breed-suitability-labrador_retriever-consider');
-    expect(consider).toHaveTextContent('Pomislite:Izpada mu dlakaPotrebuje veliko gibanja vsak danRad je — pazite na težo');
+    expect(consider).toHaveTextContent('Upoštevajte:izpada mu dlakavsak dan potrebuje veliko gibanjarad je — pazite na težo');
     // The unknown tag from a newer server is never shown.
     expect(screen.queryByText(/future_tag/)).toBeNull();
     // Screen readers get the same tags as one sentence.
     expect(lab.props.accessibilityHint).toBe(
-      'Primerno za: Aktivna družina, Družine z otroki, Hiša z vrtom, Drugi ljubljenčki. Pomislite: Izpada mu dlaka, Potrebuje veliko gibanja vsak dan, Rad je — pazite na težo.',
+      'Primerno za: aktivno družino, družinsko življenje, veliko hišo z vrtom, dom z drugimi ljubljenčki. Upoštevajte: izpada mu dlaka, vsak dan potrebuje veliko gibanja, rad je — pazite na težo.',
     );
     // The collie shows its own tags; the mutt has none (no sourced tags).
-    expect(screen.getByTestId('breed-suitability-border_collie-consider')).toHaveTextContent(/Pri igri lahko »pase« otroke/);
+    expect(screen.getByTestId('breed-suitability-border_collie-consider')).toHaveTextContent(/pri igri lahko »pase« otroke/);
     expect(screen.queryByTestId('breed-suitability-mutt')).toBeNull();
     expect(screen.getByTestId('breed-option-mutt').props.accessibilityHint).toBeUndefined();
 
@@ -226,10 +226,10 @@ describe('PetPickerStep', () => {
     try {
       renderPicker(DOGS_R10);
       expect(screen.getByTestId('breed-suitability-labrador_retriever-suits')).toHaveTextContent(
-        'Good for:Active familyFamilies with childrenHouse with a gardenOther pets',
+        'Good for:an active familyfamily lifea large house and gardenhomes with other pets',
       );
       expect(screen.getByTestId('breed-suitability-labrador_retriever-consider')).toHaveTextContent(
-        'Consider:ShedsNeeds lots of exercise every dayLoves food — watch the weight',
+        'Keep in mind:shedsneeds lots of exercise every dayloves food — watch the weight',
       );
     } finally {
       await i18n.changeLanguage('sl');

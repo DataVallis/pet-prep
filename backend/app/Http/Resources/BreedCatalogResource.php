@@ -78,7 +78,7 @@ class BreedCatalogResource extends JsonResource
              * The app translates each key (`breedSuitability.<tag>`). Empty
              * lists = no sourced tags yet (mutt, cats). Never "hypoallergenic".
              *
-             * @var array{suits: list<'active_family'|'children'|'small_children'|'first_time_owner'|'apartment'|'house_with_garden'|'other_pets'|'older_owners'|'often_alone'|'low_shedding'>, consider: list<'long_daily_exercise'|'needs_mental_stimulation'|'may_herd_children'|'chews_when_bored'|'sheds'|'food_motivated_weight'>}
+             * @var array{suits: list<'active_family'|'family_pet'|'children'|'small_children'|'first_time_owner'|'apartment'|'large_home'|'other_pets'|'older_owners'|'often_alone'|'low_shedding'>, consider: list<'long_daily_exercise'|'needs_mental_stimulation'|'may_herd_children'|'chews_when_bored'|'sheds'|'food_motivated_weight'>}
              */
             'suitability' => $entry['suitability'],
         ];

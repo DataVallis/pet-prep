@@ -92,7 +92,7 @@ it('returns tag keys per kind; breeds without sourced tags get empty lists', fun
     $suitability = app(BreedSuitability::class);
 
     expect($suitability->for(BreedType::LabradorRetriever))->toBe([
-        'suits' => ['active_family', 'children', 'house_with_garden', 'other_pets'],
+        'suits' => ['active_family', 'family_pet', 'large_home', 'other_pets'],
         'consider' => ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
     ])
         ->and($suitability->for(BreedType::BorderCollie))->toBe([
@@ -109,6 +109,22 @@ it('returns tag keys per kind; breeds without sourced tags get empty lists', fun
         'consider' => [['tag' => 'children'], ['tag' => 'sheds']],
     ]]);
     expect($suitability->for(BreedType::Mutt))->toBe(['suits' => ['children'], 'consider' => ['sheds']]);
+});
+
+it('keeps child tags for later breeds but gives the Labrador the sourced family_pet / large_home tags (David 2026-10-09)', function () {
+    $vocabulary = BreedSuitability::vocabulary();
+
+    expect($vocabulary)->toMatchArray([
+        'family_pet' => BreedSuitability::SUITS,
+        'large_home' => BreedSuitability::SUITS,
+        'children' => BreedSuitability::SUITS,
+        'small_children' => BreedSuitability::SUITS,
+    ])->and($vocabulary)->not->toHaveKey('house_with_garden');
+
+    $lab = app(BreedSuitability::class)->for(BreedType::LabradorRetriever)['suits'];
+    expect($lab)->toContain('family_pet', 'large_home')
+        ->not->toContain('children')
+        ->not->toContain('small_children');
 });
 
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {

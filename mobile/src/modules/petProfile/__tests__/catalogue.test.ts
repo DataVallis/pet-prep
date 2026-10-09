@@ -114,7 +114,7 @@ describe('readBreedCatalogue', () => {
     expect(lab?.search_keywords).toEqual(expect.arrayContaining(['labradorec', 'labrador retriever', 'prinasalec']));
     // Mirrors config/breed_suitability.php.
     expect(lab?.suitability).toEqual({
-      suits: ['active_family', 'children', 'house_with_garden', 'other_pets'],
+      suits: ['active_family', 'family_pet', 'large_home', 'other_pets'],
       consider: ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
     });
     expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
@@ -164,13 +164,15 @@ describe('suitability tags (M5-R10)', () => {
     } finally {
       await i18n.changeLanguage('sl');
     }
-    expect(SUITS_TAGS).toHaveLength(10);
+    expect(SUITS_TAGS).toHaveLength(11);
+    expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
+    expect(SUITS_TAGS).not.toContain('house_with_garden');
     expect(CONSIDER_TAGS).toHaveLength(6);
   });
 
   it('one a11y sentence with both headings', () => {
-    expect(suitabilityA11y({ suits: ['active_family', 'house_with_garden'], consider: ['sheds'] })).toBe(
-      'Primerno za: Aktivna družina, Hiša z vrtom. Pomislite: Izpada mu dlaka.',
+    expect(suitabilityA11y({ suits: ['active_family', 'large_home'], consider: ['sheds'] })).toBe(
+      'Primerno za: aktivno družino, veliko hišo z vrtom. Upoštevajte: izpada mu dlaka.',
     );
     expect(suitabilityA11y({ suits: [], consider: [] })).toBe('');
   });

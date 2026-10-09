@@ -33,11 +33,15 @@ return [
     'vocabulary' => [
         // suits
         'active_family' => 'suits',
+        // PDSA-style "family pet" statement (David 2026-10-09: chip "Družinski pes").
+        'family_pet' => 'suits',
+        // Only for a breed with a sourced child rating (none yet — kept for later breeds).
         'children' => 'suits',
         'small_children' => 'suits',
         'first_time_owner' => 'suits',
         'apartment' => 'suits',
-        'house_with_garden' => 'suits',
+        // RKC "Size of home: Large house" + "Size of garden: Large garden".
+        'large_home' => 'suits',
         'other_pets' => 'suits',
         'older_owners' => 'suits',
         'often_alone' => 'suits',
@@ -78,9 +82,11 @@ return [
                 // S59 "at least 90 minutes of exercise daily"; S50 "Exercise: More than 2 hours per day".
                 ['tag' => 'active_family', 'source_ids' => ['S59', 'S50'], 'refs' => ['labrador_retriever.exercise.adult', 'labrador_retriever.suitability.rkc_exercise']],
                 // S53 "Labradors make perfect family pets, given the right socialisation, as with all breeds."
-                ['tag' => 'children', 'source_ids' => ['S53'], 'refs' => ['labrador_retriever.suitability.pdsa_family', 'labrador_retriever.behaviour.family']],
+                // No source rates the Labrador with children explicitly (RKC shows no such field) →
+                // `family_pet`, not `children` (David 2026-10-09).
+                ['tag' => 'family_pet', 'source_ids' => ['S53'], 'refs' => ['labrador_retriever.suitability.pdsa_family', 'labrador_retriever.behaviour.family']],
                 // S50 "Size of home: Large house" / "Size of garden: Large garden".
-                ['tag' => 'house_with_garden', 'source_ids' => ['S50'], 'refs' => ['labrador_retriever.suitability.rkc_size_of_home', 'labrador_retriever.suitability.rkc_size_of_garden']],
+                ['tag' => 'large_home', 'source_ids' => ['S50'], 'refs' => ['labrador_retriever.suitability.rkc_size_of_home', 'labrador_retriever.suitability.rkc_size_of_garden']],
                 // S60 "Sociable with pets: High".
                 ['tag' => 'other_pets', 'source_ids' => ['S60'], 'refs' => ['labrador_retriever.suitability.woodgreen_sociable_with_pets']],
             ],

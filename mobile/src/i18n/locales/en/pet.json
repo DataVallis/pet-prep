@@ -188,26 +188,27 @@
   },
   "breedSuitability": {
     "suitsTitle": "Good for:",
-    "considerTitle": "Consider:",
+    "considerTitle": "Keep in mind:",
     "suits": {
-      "active_family": "Active family",
-      "children": "Families with children",
-      "small_children": "Families with small children",
-      "first_time_owner": "A first pet",
-      "apartment": "Apartment living",
-      "house_with_garden": "House with a garden",
-      "other_pets": "Other pets",
-      "older_owners": "Older owners",
-      "often_alone": "Copes with a few hours alone",
-      "low_shedding": "Sheds little"
+      "active_family": "an active family",
+      "family_pet": "family life",
+      "children": "families with children",
+      "small_children": "families with small children",
+      "first_time_owner": "first-time owners",
+      "apartment": "apartment living",
+      "large_home": "a large house and garden",
+      "other_pets": "homes with other pets",
+      "older_owners": "older owners",
+      "often_alone": "families who are out for a few hours",
+      "low_shedding": "homes that prefer less shedding"
     },
     "consider": {
-      "long_daily_exercise": "Needs lots of exercise every day",
-      "needs_mental_stimulation": "Needs mental challenges",
-      "may_herd_children": "May “herd” children at play",
-      "chews_when_bored": "Chews things when bored",
-      "sheds": "Sheds",
-      "food_motivated_weight": "Loves food — watch the weight"
+      "long_daily_exercise": "needs lots of exercise every day",
+      "needs_mental_stimulation": "needs mental challenges",
+      "may_herd_children": "may “herd” children at play",
+      "chews_when_bored": "chews things when bored",
+      "sheds": "sheds",
+      "food_motivated_weight": "loves food — watch the weight"
     }
   },
   "media": {

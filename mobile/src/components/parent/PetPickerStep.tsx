@@ -8,7 +8,7 @@
  * 3. **Breed** — the server's list (`GET /api/breeds`) with search (case- and
  *    diacritic-insensitive, synonyms), free breed first with a "Brezplačno" badge, paid
  *    breeds with "Izziv"; a breed the plan doesn't take is greyed and explained on tap (M5-F03).
- *    Each breed with sourced tags shows "Primerno za:" / "Pomislite:" chips (M5-R10).
+ *    Each breed with sourced tags shows "Primerno za:" / "Upoštevajte:" chips (M5-R10).
  * 4. **Origin** and **age at arrival**, as before (texts per species, T8).
  * 5. **Summary** (species, breed, origin, age, plan) above "Ustvari kodo".
  *

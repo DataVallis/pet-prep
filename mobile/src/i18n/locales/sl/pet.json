@@ -196,26 +196,27 @@
   },
   "breedSuitability": {
     "suitsTitle": "Primerno za:",
-    "considerTitle": "Pomislite:",
+    "considerTitle": "Upoštevajte:",
     "suits": {
-      "active_family": "Aktivna družina",
-      "children": "Družine z otroki",
-      "small_children": "Družine z majhnimi otroki",
-      "first_time_owner": "Prvi ljubljenček",
-      "apartment": "Življenje v stanovanju",
-      "house_with_garden": "Hiša z vrtom",
-      "other_pets": "Drugi ljubljenčki",
-      "older_owners": "Starejši lastniki",
-      "often_alone": "Prenese nekaj ur samote",
-      "low_shedding": "Izpada mu malo dlake"
+      "active_family": "aktivno družino",
+      "family_pet": "družinsko življenje",
+      "children": "družino z otroki",
+      "small_children": "družino z majhnimi otroki",
+      "first_time_owner": "začetnike",
+      "apartment": "življenje v stanovanju",
+      "large_home": "veliko hišo z vrtom",
+      "other_pets": "dom z drugimi ljubljenčki",
+      "older_owners": "starejše lastnike",
+      "often_alone": "družino, ki je nekaj ur zdoma",
+      "low_shedding": "dom, kjer želite manj dlak"
     },
     "consider": {
-      "long_daily_exercise": "Potrebuje veliko gibanja vsak dan",
-      "needs_mental_stimulation": "Potrebuje miselne izzive",
-      "may_herd_children": "Pri igri lahko »pase« otroke",
-      "chews_when_bored": "Ko se dolgočasi, grize stvari",
-      "sheds": "Izpada mu dlaka",
-      "food_motivated_weight": "Rad je — pazite na težo"
+      "long_daily_exercise": "vsak dan potrebuje veliko gibanja",
+      "needs_mental_stimulation": "potrebuje miselne izzive",
+      "may_herd_children": "pri igri lahko »pase« otroke",
+      "chews_when_bored": "ko se dolgočasi, grize stvari",
+      "sheds": "izpada mu dlaka",
+      "food_motivated_weight": "rad je — pazite na težo"
     }
   },
   "media": {

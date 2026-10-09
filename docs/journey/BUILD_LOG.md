@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — Labradorec: prva nova pasma iz razširitve na 20 pasem (M5-R10-01)
+
+**Kaj se je zgodilo:** PetPrep ima drugo plačljivo pasmo psa — **labradorca** (Labrador Retriever). Najprej raziskava: **15 novih virov (S48–S62)** — med njimi The Royal Kennel Club, AKC standard pasme, PDSA, Guide Dogs UK, Woodgreen in raziskava življenjske dobe McMillan 2024 (mediana 13,1 leta). Iz njih in Davidovih odločitev (9. 10. 2026) so pravila igre: odrasel labradorec potrebuje **90 minut gibanja na dan → 9.000 korakov** (Border Collie 12.000, mešanček 6.000), starejši **68 minut → 6.800 korakov**, obdobja mladiček / mlad pes / odrasel / starejši pri **9 / 36 / 118 mesecih**, uči se **1,8-krat hitreje** od mešančka (Border Collie 2-krat), hrana, voda in čiščenje kot pri Border Collieju (lakota −12 %/h, žeja −15 %/h, 2 kakca na dan, voda 3× na dan). V bazi je **46 vrstic pravil po obdobjih**, vsaka z virom ali zapisano odločitvijo. Novo je tudi, da izbirnik pri pasmi pokaže, **za koga je primerna** — vsaka oznaka ima vir: labradorec »Primerno za: aktivno družino, družinsko življenje, veliko hišo z vrtom, dom z drugimi ljubljenčki« in »Upoštevajte: izpada mu dlaka, vsak dan potrebuje veliko gibanja, rad je — pazite na težo«. Po neodvisnem pregledu (QA) je David oznako »Družine z otroki« zamenjal z »Družinski pes« (`family_pet`): PDSA piše »odlični družinski psi, ob pravi socializaciji«, nobeden od virov pa labradorca izrecno ne ocenjuje z otroki — zato tega ne trdimo.
+
+**Zakaj je pomembno:** To je prvi korak razširitve na 20 pasem in prvi preizkus, da se postopek »vir → pravilo igre → besedilo« ponovi za vsako pasmo. Oznake »za koga je primerna« staršem in odraslim, ki izbirajo pasmo, povedo resnico, tudi neprijetno (dlaka, teža), in nikoli ne obljubijo »hipoalergenega« psa.
+
+**Številke:** 15 novih virov (S48–S62), 46 vrstic `breed_stage_params`, 7 oznak za labradorca (4 + 3), 1 nova migracija; Pest **1842** testov, Jest **1893** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje (izdelki in ključi RevenueCat manjkajo).
+
+**Kako povedati:**
+- 👩 Starši: »Razmišljate o labradorcu? Preizkusite 12 tednov z njim: 9.000 korakov na dan, dva obroka, voda in čiščenje — in poglejte, ali gre z vašim tednom.« (*ko bo nova različica v trgovini*)
+- 🧒 Otroci: »Nov kuža v PetPrep: labradorec! Rad teče, rad je — in rad ima vso družino.«
+- 💼 Investitorji: »Druga plačljiva pasma, zgrajena po ponovljivem postopku z viri; 18 pasem je še v načrtu (M5-R10).«
+- 📣 Omrežja: »Ste vedeli, da odrasel labradorec potrebuje vsaj uro in pol gibanja na dan (Guide Dogs UK)? Preizkusite, ali to zmore vaš teden.«
+- 🛠 Tehnično: »Oznake so ključi iz zaprtega besednjaka; test preveri, da ima vsaka oznaka vir in citat v `data.json`. Aplikacija jih prevede in neznane izpusti.«
+
+---
+
 ## 2026-10-09 — Ljubljenček ima lahko ime (M5-R08, aplikacija)
 
 **Kaj se je zgodilo:** Starš lahko v aplikaciji ljubljenčku da ime, ga spremeni ali odstrani: vrstica »Ime« v podrobnostih otroka in na kartici ljubljenčka v zavihku Nadzor odpre majhno okno z vnosom, »Shrani« in »Odstrani ime« ter namigom »Ime izberita skupaj z otrokom.«. Aplikacija pravila (do 20 znakov; črke s šumniki, presledek, vezaj, opuščaj) preveri že pred pošiljanjem, strežnik pa ima zadnjo besedo (tudi filter neprimernih besed) — vse tri napake dobijo prijazno besedilo v slovenščini in angleščini. Ime se pokaže kot naslov na otrokovem glavnem zaslonu (»Luna · Border collie«), na vrhu albuma, na kartici otroka in ljubljenčka pri staršu ter pri izbiri ljubljenčka (»Pridruži se«). Ko starš ime spremeni, se otroku naslov osveži v živo.

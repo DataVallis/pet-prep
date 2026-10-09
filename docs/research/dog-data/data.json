@@ -1998,13 +1998,13 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED — proposal (Claude, M5-R10-01, waiting for David). 120 min (RKC 'More than 2 hours per day', S50) × 100 steps/min (S45, adult heuristic) — same method as the Border Collie. Alternatives: Guide Dogs UK ≥90 min (S59) → 9,000; Woodgreen 60–90 min (S60) → 6,000–9,000.",
+        "notes": "Game value (no literature step count). 90 min (Guide Dogs UK 'at least 90 minutes of exercise daily', S59) × 100 steps/min (S45, adult heuristic) — same method as the Border Collie. Alternatives recorded, not chosen: RKC 'More than 2 hours per day' (S50) → 12,000 (= Border Collie); Woodgreen 60–90 min (S60) → 6,000–9,000.",
         "derived_from": [
-          "S50",
+          "S59",
           "S45"
         ],
         "alternatives": {
-          "guide_dogs_90_min": 9000,
+          "rkc_more_than_2_hours": 12000,
           "woodgreen_60_90_min": [
             6000,
             9000
@@ -2027,9 +2027,9 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED — proposal (Claude, M5-R10-01, waiting for David). 75 % of adult minutes (rule David confirmed for other breeds 2026-10-05) → 90 min → 9,000 steps.",
-        "steps": 6750,
-        "decision": "potrdil David 2026-10-09: 75 % of the adult 90 min → 67.5 min ≈ 6,750 steps"
+        "notes": "Game value (no literature number). 75 % of the adult 90 min (senior rule David confirmed for other breeds 2026-10-05) = 67.5 min; minutes are whole numbers (StageParamKey::validate, API exercise_minutes int) → 68 min = 6,800 steps.",
+        "steps": 6800,
+        "decision": "potrdil David 2026-10-09: 68 min → 6,800 steps (75 % of 90 = 67.5, rounded to whole minutes)"
       },
       "stage_boundaries_months": {
         "value": {
@@ -2042,7 +2042,7 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED — proposal (Claude, M5-R10-01, waiting for David). young 9: AAHA 'cessation of rapid growth (~6–9 months, varying with breed and size)' (S11) — David chose 9 for other breeds. Large-breed evidence: growth ends 15–18 months (S10 'Large (59–99 pounds): 15–18 months'), up to 24 months (S8). AAHA's young-adult boundary is cessation of RAPID growth, not end of growth, so 9 months still fits; alternative 12. adult 36: AAHA 3–4 years (S11), same as other breeds. senior 118 = 0.75 × 13.1 y (S11 + S54); 108 if the VetCompass median 12.0 y (S55) is used.",
+        "notes": "Game boundaries (no exact month in the literature). young 9: AAHA 'cessation of rapid growth (~6–9 months, varying with breed and size)' (S11) — same as the other dogs. Large-breed evidence: growth ends 15–18 months (S10 'Large (59–99 pounds): 15–18 months'), up to 24 months (S8); AAHA's young-adult boundary is cessation of RAPID growth, not end of growth, so 9 months still fits (alternative 12 not chosen). adult 36: AAHA 3–4 years (S11), same as other breeds. senior 118 = 0.75 × 13.1 y (S11 + S54); 108 if the VetCompass median 12.0 y (S55) were used (not chosen).",
         "derived_from": [
           "S11",
           "S10",
@@ -2066,7 +2066,7 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED — proposal (Claude, M5-R10-01, waiting for David). First month of each stage (rule David confirmed 2026-10-05).",
+        "notes": "Game value (no literature number). First month of each stage (rule David confirmed 2026-10-05), so the dog stays in its stage for the 12-week challenge.",
         "decision": "potrdil David 2026-10-09: first month of each stage (2 / 9 / 36 / 118)"
       },
       "learning_multiplier": {
@@ -2075,7 +2075,7 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED — proposal (Claude, M5-R10-01, waiting for David) — NEEDS DAVID'S DECISION. Coren rank 7 is in the same 'brightest' tier as the Border Collie (<5 repetitions, ≥95 % first-command obedience; S35, tier C), and the tier is the only quantitative statement Coren gives — so the sourced evidence does not distinguish rank 1 from rank 7 → 2.0. If David wants the rank order visible in the game, 1.8 is a defensible UNSOURCED alternative (keeps BC fastest). S42: breed explains only ~9 % of individual behaviour, so the individual_variation ±20 % should also apply. Food motivation (S59, S57) could justify a treat-training bonus instead of a higher multiplier.",
+        "notes": "Game value (no literature factor). Coren rank 7 is in the same 'brightest' tier as the Border Collie (<5 repetitions, ≥95 % first-command obedience; S35, tier C); the tier is Coren's only quantitative statement, so the evidence alone would give 2.0 — David chose 1.8 so the Border Collie stays visibly fastest. No individual variation (like the Border Collie; S42 says breed explains only ~9 % of individual behaviour — not used). Food motivation (S59, S57) could later justify a treat-training bonus.",
         "derived_from": [
           "S35",
           "S42"
@@ -2091,7 +2091,22 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED — proposal (Claude, M5-R10-01, waiting for David). Labradors are prone to obesity (S53; 8.8 % overweight/obese, S55) and highly food motivated (S59, S57). Idea: extra treats/overfeeding raise a weight score faster than for other breeds; no number sourced."
+        "notes": "UNSOURCED idea, not built (post-MVP backlog; no decision asked). Labradors are prone to obesity (S53; 8.8 % overweight/obese, S55) and highly food motivated (S59, S57). Idea: extra treats/overfeeding raise a weight score faster than for other breeds; no number sourced."
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game values (no breed-specific number in the sources) — identical to the Border Collie breed_configs row (BreedConfigsSeeder).",
+        "decision": "potrdil David 2026-10-09: same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
       }
     }
   }

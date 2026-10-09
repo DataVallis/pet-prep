@@ -62,11 +62,12 @@ export type ConsiderTag = Suitability['consider'][number];
 /** The whole vocabulary — a key outside it (a newer server) is dropped, never shown raw. */
 export const SUITS_TAGS: readonly SuitsTag[] = [
   'active_family',
+  'family_pet',
   'children',
   'small_children',
   'first_time_owner',
   'apartment',
-  'house_with_garden',
+  'large_home',
   'other_pets',
   'older_owners',
   'often_alone',
@@ -120,7 +121,10 @@ export function considerLabel(tag: ConsiderTag): string {
   return SUITABILITY_STRINGS.consider[tag];
 }
 
-/** One sentence for screen readers: "Primerno za: Aktivna družina, Hiša z vrtom. Pomislite: Izpada mu dlaka." */
+/**
+ * One sentence for screen readers: "Primerno za: aktivno družino, veliko hišo z vrtom. Upoštevajte: izpada mu dlaka."
+ * The labels are written to follow their heading (SL `suits` in the accusative, lower-case).
+ */
 export function suitabilityA11y(s: BreedSuitability): string {
   const parts: string[] = [];
   const S = SUITABILITY_STRINGS;
@@ -203,7 +207,7 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       ],
       sort_order: 20,
       suitability: {
-        suits: ['active_family', 'children', 'house_with_garden', 'other_pets'],
+        suits: ['active_family', 'family_pet', 'large_home', 'other_pets'],
         consider: ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
       },
     },

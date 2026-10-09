@@ -105,8 +105,9 @@ class BreedStageParamsSeeder extends Seeder
     /**
      * David's M5-R10 decisions for the Labrador Retriever (2026-10-09,
      * data.json proposed_game_parameters.labrador_retriever.*.decision):
-     * exercise 90 min, senior 75 %, stages 9 / 36 / 118, arrival 2 / 9 / 36 /
-     * 118, learning multiplier 1.8.
+     * exercise 90 min, senior 68 min (75 % of 90 rounded up, 6,800 steps),
+     * stages 9 / 36 / 118, arrival 2 / 9 / 36 / 118, learning multiplier 1.8;
+     * hunger / thirst / poops / water the same as the Border Collie.
      */
     public const CONFIRMED_R10 = 'potrdil David 2026-10-09';
 
@@ -521,13 +522,13 @@ class BreedStageParamsSeeder extends Seeder
                 'quote' => 'Labrador retrievers generally need at least 90 minutes of exercise daily as adults.',
                 'notes' => 'Guide Dogs UK lower bound (S59) → 9,000 steps. Sources disagree: RKC "More than 2 hours per day" (S50), Woodgreen 60–90 min (S60).',
             ]],
-            // David 2026-10-09: 75 % of 90 = 67.5 min ≈ 6,750 steps. Minutes are whole
-            // numbers (StageParamKey::validate, StageRules, API exercise_minutes int) —
-            // 68 is data.json's value; 68 × 100 = 6,800 steps (open question to David).
+            // David 2026-10-09: 75 % of 90 = 67.5 min, stored as whole minutes
+            // (StageParamKey::validate, StageRules, API exercise_minutes int) →
+            // 68 min = 6,800 steps (confirmed by David 2026-10-09 ~21:00).
             'senior_minutes' => [68, [
                 'unit' => 'minutes/day', 'verified' => true,
                 'ref' => 'proposed_game_parameters.labrador_retriever.exercise_minutes_senior', 'decision' => self::CONFIRMED_R10,
-                'notes' => 'Game value (no literature number): 75 % of the adult 90 minutes = 67.5, stored as whole minutes (68 → 6,800 steps; 67.5 → 6,750 needs fractional minutes). Sources only say "frequent short walks instead of one long one" (S14).',
+                'notes' => 'Game value (no literature number): 75 % of the adult 90 minutes = 67.5, rounded to whole minutes → 68 min = 6,800 steps (David confirmed 68, 2026-10-09). Sources only say "frequent short walks instead of one long one" (S14).',
             ]],
             'adult_weight' => [[24.9, 36.3], [
                 'unit' => 'kg', 'source_id' => 'S52', 'confidence' => 'high', 'verified' => true,

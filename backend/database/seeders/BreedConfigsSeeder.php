@@ -69,9 +69,10 @@ class BreedConfigsSeeder extends Seeder
             // (proposed_game_parameters.labrador_retriever.step_goal_adult: 90 min ×
             // 100 steps/min) — only the legacy-profile fallback; profiled pets take
             // the goal from breed_stage_params. Hunger / thirst decay, poops and
-            // water are the Border Collie's: the research has no per-breed number
-            // for them (they are game balance, PRODUCT_SPEC §5), so the Labrador
-            // gets the same paid-breed rhythm.
+            // water are the Border Collie's (confirmed by David 2026-10-09:
+            // −12 %/h, −15 %/h, 2 poops/day, water 3× ≥ 180 min apart; data.json
+            // proposed_game_parameters.labrador_retriever.care_rates): the research
+            // has no per-breed number for them (game balance, PRODUCT_SPEC §5).
             [
                 'breed_slug' => BreedType::LabradorRetriever->slug(),
                 'daily_steps_required' => 9000,
