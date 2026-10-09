@@ -32,6 +32,14 @@ enum PushType: string
      */
     case PlayReminder = 'play_reminder';
 
+    /**
+     * M5-R06-05: the cat's litter is waiting — an open litter use whose scoop
+     * deadline is less than an hour away (outside quiet hours). Caretaker
+     * children, normal priority, once per litter use; dropped when the tray
+     * was scooped meanwhile (the app can always scoop outside locks — M3-12).
+     */
+    case LitterReminder = 'litter_reminder';
+
     /** Phase 3 — parent alarm (all parents of the family). */
     case ParentAlarm = 'parent_intervention_alarm';
 
@@ -58,7 +66,7 @@ enum PushType: string
     /** Phase 2 and above (not the walk reminder, not billing news): high priority, Android channel "alarm". */
     public function isUrgent(): bool
     {
-        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::TrialEnding, self::PaymentRequired], true);
+        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired], true);
     }
 
     /**
@@ -78,7 +86,7 @@ enum PushType: string
      */
     public function asksChildToAct(): bool
     {
-        return in_array($this, [self::SoftWarning, self::CriticalAlert, self::WalkReminder, self::PlayReminder], true);
+        return in_array($this, [self::SoftWarning, self::CriticalAlert, self::WalkReminder, self::PlayReminder, self::LitterReminder], true);
     }
 
     /**
@@ -104,7 +112,7 @@ enum PushType: string
     public function ttlSeconds(): int
     {
         return match ($this) {
-            self::SoftWarning, self::CriticalAlert, self::WalkReminder, self::PlayReminder => 3600,
+            self::SoftWarning, self::CriticalAlert, self::WalkReminder, self::PlayReminder, self::LitterReminder => 3600,
             self::ParentAlarm => 3 * 3600,
             self::Illness, self::GameOver, self::TrialEnding, self::PaymentRequired => 12 * 3600,
         };

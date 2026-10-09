@@ -207,6 +207,10 @@ class WandPlayService
         if (($quietEnd = $this->quietBlocksUntil($pet, $now)) !== null) {
             return $refuse(CareRefusal::WandQuietHours, $quietEnd);
         }
+        // QA M5-R06-05 m1: one game with the cat at a time (grooming, litter change, scratching).
+        if (($other = CatChoreService::otherLiveRefusal($pet, CareSessionKind::WandPlay, $child, $now)) !== null) {
+            return $other;
+        }
         $live = $this->liveSession($pet, $now);
         if ($live !== null && ($child === null || (int) $live->user_id !== $child->id)) {
             return $refuse(CareRefusal::WandSessionActive, CarbonImmutable::instance($live->expires_at)->utc());
@@ -323,6 +327,7 @@ class WandPlayService
             ->where('kind', CareSessionKind::WandPlay->value)
             ->where('status', CareSessionStatus::Active->value)
             ->update(['status' => CareSessionStatus::Aborted->value, 'updated_at' => $now]);
+        CatChoreService::abortOwnOtherKinds($pet, CareSessionKind::WandPlay, $child, $now);
 
         $durationMs = self::sessionDurationMs();
         $endsAt = $now->addMilliseconds($durationMs);

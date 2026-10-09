@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\CareSessionKind;
 use App\Http\Controllers\Concerns\HandlesChildPet;
 use App\Http\Requests\ChildPetRequest;
+use App\Http\Requests\FinishCareChoreRequest;
+use App\Http\Requests\FinishScratchingRequest;
 use App\Http\Requests\FinishTrainingRequest;
 use App\Http\Requests\FinishWandRequest;
 use App\Http\Requests\PlayRequest;
@@ -198,6 +201,118 @@ class ChildPetController extends Controller
         $pet = $this->childPet($request);
 
         return $this->actionResponse($this->activities->finishWand($pet, $request->user(), $request->sessionId(), $request->moves()), $pet, $request);
+    }
+
+    /**
+     * Cat litter (M5-R06-05, CAT_SPEC Q3): scoop the tray — every open
+     * litter use is scooped now (`scooped` = how many). Scooped before its
+     * deadline (4 h outside quiet hours; 2 h while the weekly change is
+     * overdue) the use's `litter_scoop` routine is done. Nothing to scoop →
+     * `unchanged`. 422 litter_not_available (not a cat with litter rules);
+     * 423 while locked.
+     *
+     * POST /api/child/pet/litter/scoop
+     */
+    public function scoopLitter(ChildPetRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->scoopLitter($pet, $request->user()), $pet, $request);
+    }
+
+    /**
+     * Cat litter (M5-R06-05): start the weekly full change (dump, wash,
+     * refill — a short stroke mini-game). `session` = the server's schedule.
+     * 422 litter_not_available | needs_cleaning | litter_change_done
+     * (next_allowed_at = the next program week) | litter_change_session_active;
+     * 423 while locked.
+     *
+     * POST /api/child/pet/litter-change/start
+     */
+    public function startLitterChange(ChildPetRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->startChore($pet, $request->user(), CareSessionKind::LitterChange), $pet, $request);
+    }
+
+    /**
+     * Cat litter (M5-R06-05): finish the weekly change with the strokes the
+     * app saw (`t` ms since start). `accepted` = the week's change is done
+     * (and every open litter use scooped); `rejected` = not enough (no
+     * penalty, start again). `result` = the verdict. 422
+     * litter_not_available | care_session_invalid | care_session_expired |
+     * care_session_not_over | care_session_invalid_input |
+     * care_session_interrupted; 423 while locked.
+     *
+     * POST /api/child/pet/litter-change/finish
+     */
+    public function finishLitterChange(FinishCareChoreRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->finishChore($pet, $request->user(), CareSessionKind::LitterChange, $request->sessionId(), $request->strokes()), $pet, $request);
+    }
+
+    /**
+     * Maine Coon grooming (M5-R06-05, CAT_SPEC Q8): start a combing session
+     * (~30 s; ~60 s while the coat is matted — `session.matted`). 422
+     * grooming_not_available | needs_cleaning | grooming_week_done |
+     * grooming_done_today | grooming_session_active | grooming_quiet_hours
+     * (next_allowed_at where the refusal ends); 423 while locked.
+     *
+     * POST /api/child/pet/grooming/start
+     */
+    public function startGrooming(ChildPetRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->startChore($pet, $request->user(), CareSessionKind::Grooming), $pet, $request);
+    }
+
+    /**
+     * Maine Coon grooming (M5-R06-05): finish with the comb strokes.
+     * `accepted` = one of the week's groomings (and a matted coat resolved);
+     * `rejected` = not enough (no penalty). 422 grooming_not_available |
+     * care_session_*; 423 while locked.
+     *
+     * POST /api/child/pet/grooming/finish
+     */
+    public function finishGrooming(FinishCareChoreRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->finishChore($pet, $request->user(), CareSessionKind::Grooming, $request->sessionId(), $request->strokes()), $pet, $request);
+    }
+
+    /**
+     * Cat scratching (M5-R06-05, CAT_SPEC Q10): "Odnesi na praskalnik" —
+     * the child carries the cat to the scratcher. `session.land_at_ms` =
+     * when it lands; praise within `praise_window_ms` (3 s) after that.
+     * 422 scratching_not_needed | scratching_session_active; 423 while locked.
+     *
+     * POST /api/child/pet/scratching/start
+     */
+    public function startScratching(ChildPetRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->startScratching($pet, $request->user()), $pet, $request);
+    }
+
+    /**
+     * Cat scratching (M5-R06-05): "… in pohvali" — `praise_ms` since the
+     * start (null = no praise). `accepted` = in time: the scratching is
+     * resolved; `rejected` = too early / too late / no praise (never a
+     * punishment — try again). 422 care_session_*; 423 while locked.
+     *
+     * POST /api/child/pet/scratching/finish
+     */
+    public function finishScratching(FinishScratchingRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->finishScratching($pet, $request->user(), $request->sessionId(), $request->praiseMs()), $pet, $request);
     }
 
     /**

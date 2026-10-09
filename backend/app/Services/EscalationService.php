@@ -198,6 +198,10 @@ class EscalationService
                 $this->notifications()->walkReminder($pet);
             }
         }
+        // M5-R06-05: the cat's tray is due to be scooped within the hour.
+        if (! $isQuiet && $pet->isCat()) {
+            $this->notifications()->litterReminder($pet);
+        }
 
         return $escalated;
     }

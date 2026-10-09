@@ -176,6 +176,71 @@ class LifeStageService
         return CarbonImmutable::createFromFormat('Y-m-d H:i:s', $date.' '.$bornLocal->format('H:i:s'), $tz);
     }
 
+    /**
+     * M5-R06-05: the program period of $days family-local days that contains
+     * $at — index (0 = from birth), start and end (UTC). Periods are counted
+     * on the PROGRAM clock (M3-11b: payment-lock time is not program time):
+     * period k starts at the real instant where the program clock reaches
+     * the birth's wall-clock time + k × $days local days — i.e. that
+     * anniversary shifted by every lock that began before it. A 7-day period
+     * = the program week from one weekly birthday to the next (the cat's
+     * weekly litter change and grooming, CAT_SPEC Q3 / Q8); a week with a
+     * lock inside lasts 7 days + the lock in real time. DST keeps the
+     * wall-clock hour (anniversaries are local). A lock still open at $at
+     * counts until $at (its real end is not known yet). Null when unborn.
+     *
+     * @return array{index: int, start: CarbonImmutable, end: CarbonImmutable}|null
+     */
+    public function programPeriodAt(Pet $pet, CarbonInterface $at, int $days = 7): ?array
+    {
+        if ($pet->born_at === null) {
+            return null;
+        }
+
+        $days = max(1, $days);
+        $tz = $pet->familyTimezone();
+        $born = CarbonImmutable::instance($pet->born_at)->setTimezone($tz);
+        $atTs = CarbonImmutable::instance($at)->getTimestamp();
+        // Where the program clock stands at $at, as an instant on the lock-free timeline.
+        $virtual = CarbonImmutable::createFromTimestampUTC($born->getTimestamp() + $pet->programSecondsAt($at))->setTimezone($tz);
+
+        $index = 0;
+        if ($virtual->greaterThan($born)) {
+            $elapsed = (int) CarbonImmutable::parse($born->toDateString(), 'UTC')
+                ->diffInDays(CarbonImmutable::parse($virtual->toDateString(), 'UTC'), false);
+            $index = intdiv(max(0, $elapsed), $days);
+            while ($index > 0 && $virtual->lessThan($this->periodStart($born, $index * $days, $tz))) {
+                $index--;
+            }
+        }
+
+        $spans = $pet->paymentLockSpans();
+        $real = function (CarbonImmutable $anniversary) use ($spans, $atTs): CarbonImmutable {
+            $t = $anniversary->getTimestamp();
+            foreach ($spans as [$start, $end]) {
+                if ($start < $t) {
+                    $t += ($end ?? max($atTs, $start)) - $start;
+                }
+            }
+
+            return CarbonImmutable::createFromTimestampUTC($t);
+        };
+
+        return [
+            'index' => $index,
+            'start' => $real($this->periodStart($born, $index * $days, $tz)),
+            'end' => $real($this->periodStart($born, ($index + 1) * $days, $tz)),
+        ];
+    }
+
+    /** $offsetDays family-local days after the (program) birth, at its wall-clock time. */
+    private function periodStart(CarbonImmutable $bornLocal, int $offsetDays, string $tz): CarbonImmutable
+    {
+        $date = CarbonImmutable::parse($bornLocal->toDateString(), 'UTC')->addDays($offsetDays)->toDateString();
+
+        return CarbonImmutable::createFromFormat('Y-m-d H:i:s', $date.' '.$bornLocal->format('H:i:s'), $tz);
+    }
+
     // ──────────────────────────────────────────────────────────────
     //  Stage
     // ──────────────────────────────────────────────────────────────

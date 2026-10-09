@@ -25,7 +25,7 @@ use Illuminate\Support\Carbon;
  * @property int|null $actor_user_id
  * @property int|null $steps Walk only: the pet's steps that day.
  * @property int|null $goal Walk only: the breed goal that day.
- * @property HygieneEventKind|null $event_kind Clean only (M5-R02): poop | accident | chewing (null on rows closed before M5-R02 = poop).
+ * @property HygieneEventKind|null $event_kind Clean only (M5-R02): poop | accident | chewing, M5-R06-05 cats: litter_accident | scratching (null on rows closed before M5-R02 = poop).
  */
 class PetDailyRoutine extends Model
 {

@@ -127,4 +127,62 @@ enum CareRefusal: string
 
     /** A move lies outside the session (impossible offset). */
     case WandInvalidMoves = 'wand_invalid_moves';
+
+    // ── M5-R06-05: litter, grooming, scratching (cats) ──────────────────
+
+    /** Litter rules apply only to a cat with life-stage data (a dog has poops, not a tray). */
+    case LitterNotAvailable = 'litter_not_available';
+
+    /** The weekly full litter change was already done in this program week (next_allowed_at = the next week). */
+    case LitterChangeDone = 'litter_change_done';
+
+    /** Another child's litter change is running (next_allowed_at = its expiry). */
+    case LitterChangeSessionActive = 'litter_change_session_active';
+
+    /** Grooming is the Maine Coon's routine (CAT_SPEC Q8) — not for other breeds / species / legacy pets. */
+    case GroomingNotAvailable = 'grooming_not_available';
+
+    /**
+     * At least one day between two groomings (CAT_SPEC Q8): already groomed
+     * on this family-local day (next_allowed_at = the next local midnight).
+     */
+    case GroomingDoneToday = 'grooming_done_today';
+
+    /** All of this program week's groomings are done (next_allowed_at = the next week). */
+    case GroomingWeekDone = 'grooming_week_done';
+
+    /** The cat sleeps in quiet hours — no grooming (like the wand game; next_allowed_at = their end). */
+    case GroomingQuietHours = 'grooming_quiet_hours';
+
+    /** Another child is grooming the cat (next_allowed_at = its expiry). */
+    case GroomingSessionActive = 'grooming_session_active';
+
+    /** No scratching mess is open — nothing to redirect. */
+    case ScratchingNotNeeded = 'scratching_not_needed';
+
+    /** Another child is carrying the cat to the scratcher (next_allowed_at = its expiry). */
+    case ScratchingSessionActive = 'scratching_session_active';
+
+    /** Litter change / grooming / scratching finish: unknown session, another child's, or another pet / kind. */
+    case CareSessionInvalid = 'care_session_invalid';
+
+    /** Finished before the session could have run its course. */
+    case CareSessionNotOver = 'care_session_not_over';
+
+    /** Finished after the session's TTL, or the session was replaced by a newer one. */
+    case CareSessionExpired = 'care_session_expired';
+
+    /** A lock (hard stop, vet, game over, payment) began during the session: it does not count. */
+    case CareSessionInterrupted = 'care_session_interrupted';
+
+    /** A stroke / praise offset lies outside the session. */
+    case CareSessionInvalidInput = 'care_session_invalid_input';
+
+    /**
+     * QA M5-R06-05: one game with the cat at a time — another child's game of
+     * another kind (wand, grooming, litter change, scratching) is running
+     * (next_allowed_at = its expiry). The child's own unfinished game of
+     * another kind is ended instead (no penalty).
+     */
+    case CareSessionActive = 'care_session_active';
 }

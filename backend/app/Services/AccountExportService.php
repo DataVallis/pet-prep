@@ -242,11 +242,11 @@ class AccountExportService
         $walks = $byPet('pet_daily_walks', ['local_date', 'steps', 'goal', 'achieved', 'illness_started_at'], 'local_date');
         $routines = $byPet('pet_daily_routines', ['local_date', 'routine_type', 'slot', 'status', 'opens_at', 'due_at', 'done_at', 'actor_user_id'], 'local_date');
         $periods = $byPet('pet_status_periods', ['kind', 'started_at', 'ended_at'], 'started_at');
-        $hygiene = $byPet('pet_hygiene_events', ['local_date', 'scheduled_at', 'status', 'cleaned_at'], 'scheduled_at');
+        $hygiene = $byPet('pet_hygiene_events', ['local_date', 'scheduled_at', 'status', 'cleaned_at', 'kind', 'due_at'], 'scheduled_at');
         // M5-R03 training: progress per command and every session (who, when, how well).
         $skills = $byPet('pet_training_skills', ['command', 'progress', 'last_practised_at', 'sessions_completed']);
         $sessions = $byPet('pet_training_sessions', ['user_id', 'command', 'local_date', 'started_at', 'status', 'finished_at', 'taps', 'result', 'progress_gain'], 'started_at');
-        // M5-R06-04: cat care sessions (wand play; grooming / litter change later) — who, when, verdict.
+        // M5-R06-04 / 05: cat care sessions (wand play, grooming, litter change, scratching) — who, when, verdict.
         $careSessions = $byPet('pet_care_sessions', ['user_id', 'kind', 'local_date', 'started_at', 'status', 'finished_at', 'result'], 'started_at');
         // M5-R05: invitations as rows (≤ 2 a day); free plays — unlimited — as one
         // count per day, child and kind, so play can never make the export too large.
@@ -280,6 +280,8 @@ class AccountExportService
                 'certificate_eligible' => (bool) $pet->certificate_eligible,
                 'metrics' => $pet->displayMetrics(),
                 'daily_step_count' => (int) $pet->daily_step_count,
+                // M5-R06-05: the Maine Coon's matted coat (null = not matted).
+                'coat_matted_at' => $this->iso($pet->coat_matted_at),
                 // Appearance traits only (never the fal prompt / seed / URL).
                 'appearance' => $dna['traits'] ?? $dna['visual_traits'] ?? null,
                 // child_id null + ended_at = a deleted child's history row (M2-08).
@@ -335,6 +337,10 @@ class AccountExportService
                     'scheduled_at' => $this->iso($r->scheduled_at),
                     'status' => $r->status,
                     'cleaned_at' => $this->iso($r->cleaned_at),
+                    // M5-R02 / M5-R06-05: poop | accident | chewing | litter_use | litter_accident | scratching.
+                    'kind' => $r->kind,
+                    // M5-R06-05: a litter use's scoop deadline (null for messes).
+                    'due_at' => $this->iso($r->due_at),
                 ])->values()->all(),
                 'training_skills' => $rows($skills)->map(fn ($r) => [
                     'command' => $r->command,
@@ -354,7 +360,7 @@ class AccountExportService
                     'result' => is_string($r->result) ? json_decode($r->result, true) : $r->result,
                     'progress_gain' => $r->progress_gain === null ? null : round((float) $r->progress_gain, 2),
                 ])->values()->all(),
-                // M5-R06-04: the cat's care sessions (wand play) with the server's verdict.
+                // M5-R06-04 / 05: the cat's care sessions (wand, grooming, litter change, scratching) with the verdict.
                 'care_sessions' => $rows($careSessions)->map(fn ($r) => [
                     // null = a deleted child.
                     'child_id' => $r->user_id === null ? null : (int) $r->user_id,

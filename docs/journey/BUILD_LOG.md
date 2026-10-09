@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-08 — Pesek, praskalnik in česanje: muca dobi vsakdanja opravila (M5-R06-05, skrito)
+
+**Kaj se je zgodilo:** Strežnik zna tri mačja opravila. **Pesek:** muca vsak dan uporabi pesek (mucek 3-krat, odrasla muca 2-krat, nikoli ponoči ali med šolo) — to ni nered, je pa naloga: pesek je treba počistiti v **4 urah** (šteje se samo čas izven tihih ur). Če ga otrok ne počisti, muca naredi nered zraven peska in od tam naprej velja ista lestvica kot pri psu. Enkrat na teden je treba zamenjati ves pesek; če otrok to zamudi, ima naslednji teden za čiščenje samo **2 uri**, dokler peska ne zamenja (»pesek smrdi«). **Praskalnik:** če otrok cel dan ni igral z muco, muca naslednji dan **opraska kavč**. Otrok jo odnese na praskalnik in jo pohvali v **3 sekundah** po tem, ko pristane — prepozna pohvala ni kazen, otrok preprosto poskusi znova. **Česanje:** Maine Coon ima dolgo dlako in ga je treba počesati 3-krat na teden (največ enkrat na dan). Če ob koncu tedna manjkata vsaj dve česanji, dobi **vozel v dlaki** — brez bolezni in brez kazni, le naslednje česanje traja dlje.
+
+**Zakaj je pomembno:** To so prava opravila lastnika mačke, ki jih navajajo viri (pesek čistiti vsak dan, menjati enkrat na teden; praskanje je naravno in se ga nikoli ne kaznuje, mačko se preusmeri in nagradi takoj; dolgodlake mačke potrebujejo redno česanje). Posledice so realne, a prijazne: nobena zamujena naloga ne pomeni takojšnje bolezni, razen nereda, ki ga otrok pusti dolgo — natanko kot pri psu. David je 8. 10. ob ~22:20 odločil zadnja tri odprta vprašanja (rok za praskanje, tedenski vozel, brez kazni pri vozlu).
+
+**Številke:** 3 nove vrste dogodkov (uporaba peska, nered zraven peska, praskanje), 3 nove rutine v Care Score (čiščenje peska, tedenska menjava, česanje), 7 novih končnih točk, 1 nov opomnik (pesek je treba počistiti v naslednji uri); testi strežnika **1533 → 1562** (29 novih za mačko, vključno s popravki po neodvisnem pregledu), regresijski posnetek psa ostal nespremenjen. Mačke so še skrite.
+
+**Kako povedati:**
+- 👩 Starši (*načrt*): »Muca v PetPrepu nauči, da je pesek vsakodnevna naloga, ne enkrat na teden — in da se praskanja ne kaznuje, ampak preusmeri.«
+- 🧒 Otroci (*načrt*): »Ko muca opraska kavč, je ne kregaj: odnesi jo na praskalnik in jo hitro pohvali!«
+- 🤝 Partnerji (zavetišča, veterinarji): »Pravila za pesek, praskanje in česanje so iz smernic (AAFP, ASPCA, rejska združenja), z zapisanim virom za vsako številko.«
+- 💼 Investitorji: »Druga vrsta živali dobi tri nove rutine na istem motorju pravil, brez ene same spremembe pri psih.«
+- 🛠 Tehnično: »Uporaba peska je dogodek, ki ni nered, z rokom, ki se določi ob uporabi; tedenske rutine na koledarju tedna programa (tudi čez premik ure); preusmeritev praskanja kot strežniško ocenjena seja s 3-s oknom.«
+
+---
+
 ## 2026-10-08 — Muca se igra namesto sprehoda (M5-R06-04, skrito)
 
 **Kaj se je zgodilo:** Strežnik zna mačjo dnevno igro: mini-igro **»palica s peresom«**. Igra traja približno minuto in se konča, ko muca ujame pero. Strežnik igro začne in jo na koncu oceni — šteje samo, če je otrok res sodeloval: pero je moralo večkrat »bežati stran« od muce, kot pravi plen, in to čez vso minuto. Mucek potrebuje 3 igre na dan, odrasla muca 2, med dvema uspešnima igrama pa morata miniti vsaj 2 uri (David, 8. 10. zvečer). Merilnik »Igra« se ob polnoči izprazni, enkrat na dan pride opomnik, zamujen dan pa se zapiše (iz tega bo naslednji korak naredil »opraskan kavč«). Muca nima korakov s telefona in zaradi neigranja nikoli ne zboli.

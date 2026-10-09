@@ -19,8 +19,9 @@ use Carbon\CarbonInterface;
  * - `active_events`: every open mess (poop, puppy accident, chewing) with
  *   its 2-hour deadline (counted outside quiet hours); empty while hygiene
  *   shows more than 0 %.
- * - `scene`: the behaviour video to show now — the newest open accident
- *   or chewing event; null otherwise. `pet_state` stays the six classic
+ * - `scene`: the behaviour video to show now — the newest open accident,
+ *   chewing or (cat, M5-R06-05) scratching event; null otherwise (a cat's
+ *   litter accident has no video). `pet_state` stays the six classic
  *   states (a dirty dog is `sick`), so old app builds are unaffected; the
  *   app plays `media.videos[scene]` when it exists and falls back to the
  *   `pet_state` video (free mutt: icons only).
@@ -31,7 +32,7 @@ final class BehaviourPayload
 {
     /**
      * @param  array{hold_hours: int, clock_started_at: string, next_due_at: string, last_taken_out_at: string|null}|null  $takeOut
-     * @param  list<array{id: int, kind: 'poop'|'accident'|'chewing', started_at: string, due_at: string}>  $activeEvents
+     * @param  list<array{id: int, kind: 'poop'|'accident'|'chewing'|'litter_accident'|'scratching', started_at: string, due_at: string}>  $activeEvents
      */
     public function __construct(
         public readonly ?array $takeOut,
@@ -79,7 +80,8 @@ final class BehaviourPayload
                     'started_at' => $iso($started),
                     'due_at' => $iso($ledger->addSecondsOutsideQuiet($quiet, $started, RoutineLedgerService::CLEAN_WITHIN_SECONDS)),
                 ];
-                if ($event->kind !== HygieneEventKind::Poop) {
+                // M5-R06-05: the cat's litter accident has no video (the app shows an icon).
+                if (! in_array($event->kind, [HygieneEventKind::Poop, HygieneEventKind::LitterAccident], true)) {
                     $scene = $event->kind->value; // the newest wins (ordered oldest first)
                 }
             }
@@ -89,7 +91,7 @@ final class BehaviourPayload
     }
 
     /**
-     * @return array{take_out: array{hold_hours: int, clock_started_at: string, next_due_at: string, last_taken_out_at: string|null}|null, active_events: list<array{id: int, kind: 'poop'|'accident'|'chewing', started_at: string, due_at: string}>, scene: 'accident'|'chewing'|null}
+     * @return array{take_out: array{hold_hours: int, clock_started_at: string, next_due_at: string, last_taken_out_at: string|null}|null, active_events: list<array{id: int, kind: 'poop'|'accident'|'chewing'|'litter_accident'|'scratching', started_at: string, due_at: string}>, scene: 'accident'|'chewing'|'scratching'|null}
      */
     public function toArray(): array
     {
@@ -97,15 +99,16 @@ final class BehaviourPayload
             // Puppy bladder clock ("Pelji ven"); null when the pet has none.
             'take_out' => $this->takeOut,
             /**
-             * Open messes, oldest first. kind: poop | accident | chewing.
+             * Open messes, oldest first. kind: poop | accident | chewing (dog);
+             * litter_accident | scratching (cat, M5-R06-05).
              *
-             * @var list<array{id: int, kind: 'poop'|'accident'|'chewing', started_at: string, due_at: string}>
+             * @var list<array{id: int, kind: 'poop'|'accident'|'chewing'|'litter_accident'|'scratching', started_at: string, due_at: string}>
              */
             'active_events' => $this->activeEvents,
             /**
              * Behaviour video to show now (newest open accident / chewing), else null.
              *
-             * @var 'accident'|'chewing'|null
+             * @var 'accident'|'chewing'|'scratching'|null
              */
             'scene' => $this->scene,
         ];

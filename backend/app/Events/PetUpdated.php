@@ -4,10 +4,13 @@ namespace App\Events;
 
 use App\Models\Pet;
 use App\Services\BehaviourPayload;
+use App\Services\GroomingPayload;
+use App\Services\LitterPayload;
 use App\Services\Media\PetMediaPayload;
 use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
 use App\Services\PlayPayload;
+use App\Services\ScratchingPayload;
 use App\Services\TrainingPayload;
 use App\Services\WandPayload;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -176,6 +179,10 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'play' => PlayPayload::for($pet)?->toArray(),
             // M5-R06-04: the cat's wand play (goal, sessions today, gap, running game); null for a dog.
             'wand' => WandPayload::for($pet)?->toArray(),
+            // M5-R06-05: the cat's litter tray, the Maine Coon's grooming, the scratching resolve; null for a dog.
+            'litter' => LitterPayload::for($pet)?->toArray(),
+            'grooming' => GroomingPayload::for($pet)?->toArray(),
+            'scratching' => ScratchingPayload::for($pet)?->toArray(),
             // AI media (M4-05): signed URLs (≤ 90 min) to our copies — the channel is
             // private to the pet's caretakers and family parents; legacy fields mirror it.
             'current_video_url' => $media->currentVideoUrl,

@@ -45,10 +45,25 @@ return [
         'critical' => 'Clean up the mess, tidy away what it chewed and give your dog a toy as soon as you can, or it will get sick.',
     ],
 
+    // M5-R06-05 placeholders (draft, final cat texts in M5-R06-06): the cat scratched the sofa —
+    // it is resolved by carrying it to the scratcher and praising it, not by cleaning.
+    'scratcher' => [
+        'soft' => 'Your cat has scratched the sofa. Carry it to the scratching post and praise it.',
+        'critical' => 'Your cat scratched the sofa! Carry it to the scratching post and praise it as soon as you can, or it will get sick.',
+    ],
+
+    'clean_and_scratcher' => [
+        'soft' => 'Your cat is waiting: clean up the mess, then carry it to the scratching post and praise it.',
+        'critical' => 'Clean up the mess and carry your cat to the scratching post as soon as you can, or it will get sick.',
+    ],
+
     'walk_reminder' => 'Your dog hasn’t been for a walk today and is waiting for you with the lead. Shall we go out?',
 
     // M5-R06-04 placeholder (draft): the cat's daily play reminder — final cat texts in M5-R06-06.
     'play_reminder' => 'Your cat hasn’t played today and is waiting for the feather wand. Shall we play?',
+
+    // M5-R06-05 placeholder (draft): an open litter use is due within the hour — final cat texts in M5-R06-06.
+    'litter_reminder' => 'Your cat has used the litter tray. Scoop it soon, before it starts to smell.',
 
     'parent_alarm' => 'Your child hasn’t looked after the dog today.',
 

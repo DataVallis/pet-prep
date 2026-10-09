@@ -8,8 +8,10 @@ use App\Enums\PushType;
 use App\Jobs\SendPushNotification;
 use App\Models\DevicePushToken;
 use App\Models\Pet;
+use App\Models\PetHygieneEvent;
 use App\Models\PushNotification;
 use App\Models\PushTicket;
+use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\Push\ExpoMixedProjectsException;
 use App\Services\Push\ExpoPushClient;
@@ -76,6 +78,7 @@ class NotificationService
         private readonly CareScheduleService $schedule,
         private readonly HygieneEventService $hygieneEvents,
         private readonly WandPlayService $wand,
+        private readonly LitterService $litter,
     ) {}
 
     /**
@@ -198,6 +201,72 @@ class NotificationService
     }
 
     /**
+     * The cat's litter reminder (M5-R06-05, CAT_SPEC Q3): called by
+     * EscalationService outside quiet hours for a cat with an unscooped
+     * litter use whose deadline lies ahead and of which at most
+     * LITTER_REMINDER_MINUTES of the outside-quiet budget are left — so a
+     * deadline moved past the night (17:00 use → 07:00) is reminded in the
+     * last hour before quiet hours start (QA m2). Once per litter use (the
+     * row's metric is `litter:{use id}`, no 30-min type dedupe); caretaker
+     * children; dropped at send time when that use was scooped (`scooped`).
+     * Scooping is never refused outside locks (M3-12).
+     */
+    public function litterReminder(Pet $pet): ?PushNotification
+    {
+        if (! config('push.enabled') || ! $this->litter->appliesTo($pet)) {
+            return null;
+        }
+        $use = $this->dueSoonLitterUse($pet);
+
+        return $use === null ? null : $this->escalation($pet, PushType::LitterReminder, self::litterMetric($use->id));
+    }
+
+    /** Minutes of outside-quiet time before a scoop deadline when the litter reminder is decided. */
+    public const LITTER_REMINDER_MINUTES = 60;
+
+    /** The push row's metric for one litter use (≤ 20 chars). */
+    public static function litterMetric(int $useId): string
+    {
+        return 'litter:'.$useId;
+    }
+
+    /** The oldest unscooped litter use inside its reminder window that has no reminder yet. */
+    private function dueSoonLitterUse(Pet $pet): ?PetHygieneEvent
+    {
+        $now = now();
+        $quiet = $pet->quietHours();
+        foreach ($this->litter->openUses($pet) as $use) {
+            if ($use->due_at === null || $use->escalated_at !== null || ! $use->due_at->greaterThan($now)) {
+                continue;
+            }
+            $left = QuietHours::splitSecondsBetween($quiet, $now, $use->due_at)['normal'];
+            if ($left > self::LITTER_REMINDER_MINUTES * 60) {
+                continue;
+            }
+            $decided = PushNotification::where('pet_id', $pet->id)
+                ->where('type', PushType::LitterReminder->value)
+                ->where('metric', self::litterMetric($use->id))
+                ->exists();
+            if (! $decided) {
+                return $use;
+            }
+        }
+
+        return null;
+    }
+
+    /** The litter use a reminder is about is still waiting (not scooped, deadline ahead). */
+    private function litterStillOpen(Pet $pet, ?string $metric): bool
+    {
+        $id = is_string($metric) && str_starts_with($metric, 'litter:') ? (int) substr($metric, 7) : null;
+
+        return $this->litter->openUses($pet)
+            ->filter(fn (PetHygieneEvent $u) => ($id === null || $u->id === $id)
+                && $u->escalated_at === null && $u->due_at !== null && $u->due_at->greaterThan(now()))
+            ->isNotEmpty();
+    }
+
+    /**
      * `push:dispatch-scheduled`: queue held rows whose time has come, and
      * re-queue rows stuck in `queued` that no job ever picked up (no attempt
      * for STUCK_MINUTES — lost job, queue flushed). The job re-checks
@@ -302,6 +371,12 @@ class NotificationService
         // M5-R06-04: the cat already played enough since the decision.
         if ($type === PushType::PlayReminder && $pet->displayMetric('energy_level') > EscalationService::SOFT_WARNING_THRESHOLD) {
             $this->markSuppressed($notification, 'play_done');
+
+            return;
+        }
+        // M5-R06-05: the tray was scooped (or its deadline passed) since the decision.
+        if ($type === PushType::LitterReminder && ! $this->litterStillOpen($pet, $notification->metric)) {
+            $this->markSuppressed($notification, 'scooped');
 
             return;
         }
@@ -461,7 +536,7 @@ class NotificationService
             ->map(fn (User $u): array => ['user_id' => $u->id, 'audience' => PushNotification::AUDIENCE_PARENT]);
 
         $list = match ($type) {
-            PushType::SoftWarning, PushType::CriticalAlert, PushType::WalkReminder, PushType::PlayReminder => $children(),
+            PushType::SoftWarning, PushType::CriticalAlert, PushType::WalkReminder, PushType::PlayReminder, PushType::LitterReminder => $children(),
             PushType::ParentAlarm => $parents(),
             PushType::Illness, PushType::GameOver, PushType::PaymentRequired => $parents()->concat($children()),
             // M3-11: billing is the parent's business.
@@ -477,6 +552,11 @@ class NotificationService
      */
     private function isDuplicate(Pet $pet, PushType $type, CarbonInterface $now): bool
     {
+        // QA M5-R06-05 m2: the litter reminder is once per litter use (litterReminder), not per type.
+        if ($type === PushType::LitterReminder) {
+            return false;
+        }
+
         $since = $type->isDailyReminder()
             ? Carbon::instance($now)->setTimezone($pet->familyTimezone())->startOfDay()->utc()
             : Carbon::instance($now)->subMinutes((int) config('push.dedupe_minutes', 30));
@@ -614,6 +694,10 @@ class NotificationService
         $kinds = $this->hygieneEvents->openEvents($pet)
             ->map(fn ($event): string => $event->kind instanceof HygieneEventKind ? $event->kind->value : (string) $event->kind)
             ->unique();
+        // M5-R06-05: the cat's scratching is resolved at the scratcher, not cleaned.
+        if ($kinds->contains(HygieneEventKind::Scratching->value)) {
+            return $kinds->count() > 1 ? PushCopy::VARIANT_CLEAN_AND_SCRATCHER : PushCopy::VARIANT_SCRATCHER;
+        }
         if (! $kinds->contains(HygieneEventKind::Chewing->value)) {
             return null;
         }
