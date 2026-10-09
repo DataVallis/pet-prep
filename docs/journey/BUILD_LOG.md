@@ -8,6 +8,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-09 — PetPrep tudi za odrasle: »Je ta pasma res zame?«
+
+**Kaj se je zgodilo:** David je odločil, da je PetPrep tudi za odrasle, ki si želijo točno določeno pasmo in jo hočejo pred nakupom ali posvojitvijo preizkusiti. Aplikacije ni bilo treba spreminjati: odrasel ustvari račun starša, doda sebe kot profil skrbnika in se prijavi s kodo — na istem ali drugem telefonu. Kasneje lahko doda partnerja ali otroke. Spletna stran je dobila razdelek »Za odrasle«, vrstico v ceniku in novo vprašanje v FAQ.
+
+**Zakaj je pomembno:** Isti izdelek, nova publika. Pravila, ki so podprta z viri, veljajo tudi za odraslega: odrasel border collie potrebuje 12.000 korakov na dan, mešanček 6.000, mladiček mora ven približno vsako uro na mesec starosti. 12 tednov pokaže, ali pasma gre skupaj z delovnikom.
+
+**Številke:** cena enaka (mešanček brezplačen, izziv 49,99 € na žival); danes 2 pasmi (mešanček, border collie). Velikost segmenta ni izmerjena.
+
+**Kako povedati:**
+- 📣 Omrežja: »Si želite border collieja? Najprej 12 tednov po 12.000 korakov na dan.«
+- 👩 Starši: »Tudi vi lahko najprej preizkusite pasmo sami — potem dodate še otroke.«
+- 💼 Investitorji: »Dodaten segment brez nove kode: odrasli, ki izbirajo pasmo.« (*velikost ni izmerjena*)
+- 🤝 Partnerji (vzreditelji, zavetišča): »Preizkus pred nakupom pomeni manj impulzivnih odločitev.« (*načrt*)
+
+---
+
 ## 2026-10-09 — Družina ima ljubljenčke, ne samo pse (M5-R06-08d)
 
 **Kaj se je zgodilo:** David je odgovoril na štiri vprašanja o mačjih besedilih. Otroku v angleščini muca ostane »kitty« (*it*), oznaka faze »Mucek« ostane. Besedila, ki veljajo za celo družino, zdaj govorijo o **ljubljenčkih** namesto o psih — tudi v družini samo s psi: »Še brez ljubljenčka«, naslov »Ljubljenčki« v Nadzoru, tihe ure, obvestila, izbris in izvoz, povabilo drugega starša. Kanal obvestil na Androidu se na telefonu starša imenuje »Opomniki za ljubljenčke«; otrokov telefon ima enega ljubljenčka in obdrži »Opomniki za kužo« ali »Opomniki za muco«.
