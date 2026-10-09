@@ -250,7 +250,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7
 | **46 virov** (S1–S46) | podlaga za pravila po starosti; vsaka vrednost v bazi z virom ali označeno odločitvijo. Z M5-R03 dodan S47 (VCA) | BUILD_LOG 2026-10-05, 2026-10-06; `docs/research/dog-data/` |
 | **1.100** strežniških testov zelenih | stanje 2026-10-07 | HANDOFF §6 (2026-10-07) |
 | **1.081** testov aplikacije zelenih | stanje 2026-10-07 | HANDOFF §6 (2026-10-07) |
-| **≈ 1,27 $** na brezplačnega psa | AI mediji ob rojstvu: slika 0,15 $ + 2 videa × 0,56 $ (*ocena po ceniku fal*) — **od M4-10 samo za prvih 20 brezplačnih živali pasme na obdobje; vsaka naslednja ≈ 0 $** | PRODUCT_SPEC §10 |
+| **≈ 1,27 $** na brezplačnega psa | AI mediji ob rojstvu: slika 0,15 $ + 2 videa × 0,56 $ (*ocena po ceniku fal*) — **od M4-10 samo za prvih 20 brezplačnih živali pasme na obdobje; vsaka naslednja ≈ 0 $, ko ima njen videz za to obdobje že medije** | PRODUCT_SPEC §10 |
 | **≈ 101,60 $** enkratno na brezplačno pasmo | največ 20 videzov × 4 obdobja × 1,27 $ (*ocena po ceniku fal*; obdobje, ki ga noben videz ne doseže, se ne ustvari) | PRODUCT_SPEC §10, M4-10 |
 | **≈ 3,51 $** na plačljivo pasmo | slika + 6 videov; mladiček plačljive pasme z videi vedenja ≈ 4,63 $, starejši pes ≈ 4,07 $ (*ocene*) | PRODUCT_SPEC §10 |
 | **5 $ / dan, 50 $ / mesec** | meji porabe AI; laboratorij ima ločenih 3 $ na dan | BUILD_LOG 2026-10-04 |

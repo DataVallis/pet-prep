@@ -187,6 +187,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 
 ## Po MVP (backlog)
 
+- **Nadgradnja brezplačne živali v 12-tedenski izziv** (David 9. 10. 2026: *ne zdaj, kasneje*): danes izziv samo s plačljivo pasmo (M5-F03). Strežnik je pripravljen (M4-10): ob nakupu žival ohrani videz iz skupnega nabora, manjkajoči videi polnega nabora se shranijo na videz in so za naslednji nakup istega videza brezplačni (`FreePetLookPoolTest`). Manjka: pravilo izdelka (cena, program, certifikat za mešančka), API za nadgradnjo, aplikacija.
 - **Lestvica opomnikov na ljubljenčka (QA M5-R06-06b, M1):** `escalation_level` je ena stopnja za psa / muco, ne za vsako metriko. Če je opomnik faze 2 za žejo zadržan (dnevna meja vode porabljena → `not_actionable`), kasnejši nered ob isti stopnji otroku ne prinese novega opomnika (lestvica se ne vrne na 1 / 2). Rešitev: stopnja ali zadnji poslani opomnik po metriki. Ne velja za primer B1 (popravljen v M5-R06-06b).
 - Šolanje: razkrivanje vsakega ukaza v živo (strežniški čas pritiskov prek Reverb), da prirejena aplikacija ne more ponarediti pohval — David 6. 10. 2026: ni prioriteta, goljufanje v igri sprejmemo
 - Certifikat odgovornosti (PDF) + fizična licenca po pošti

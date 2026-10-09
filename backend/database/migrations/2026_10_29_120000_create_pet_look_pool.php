@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * M4-10 (David 2026-10-09): free pets take their appearance from a shared
@@ -26,12 +27,20 @@ use Illuminate\Support\Facades\Schema;
  *  - `pet_media_history.storage_path` is unique per pet now (was global):
  *    two pets of one look archive the same look file at a stage change.
  *
- * Additive; existing rows untouched. down() removes the look rows first.
+ * Additive; existing rows untouched. down() first gives every pool pet its
+ * own copy of the look files it shows (current slots and growth-album
+ * history move to `{pet_id}/…`), then removes the look rows — pets keep
+ * playing their media after a rollback. Copied pets have no `pet_look_id`
+ * any more (unique DNA rules again); the `looks/` directory is left on the
+ * disk (unreferenced) for manual cleanup.
  */
 return new class extends Migration
 {
     public function up(): void
     {
+        // Never queue behind a long-running transaction on pets / pet_media (QA n4).
+        DB::statement("SET LOCAL lock_timeout = '5s'");
+
         Schema::create('pet_looks', function (Blueprint $table) {
             $table->id();
             $table->string('breed_type');                 // BreedType value (a free breed)
@@ -76,6 +85,10 @@ return new class extends Migration
 
     public function down(): void
     {
+        DB::statement("SET LOCAL lock_timeout = '5s'");
+
+        $this->copyLookFilesToPets();
+
         // History rows of pool pets point at look files; the global unique index cannot come back with duplicates.
         DB::statement('DELETE FROM pet_media_history h USING pet_media_history o WHERE h.storage_path = o.storage_path AND h.id > o.id');
         Schema::table('pet_media_history', function (Blueprint $table) {
@@ -104,5 +117,33 @@ return new class extends Migration
         });
 
         Schema::dropIfExists('pet_looks');
+    }
+
+    /**
+     * Copy every look file a pet shows (pet slot or history row) into the
+     * pet's own directory and point the row there (QA M4-10 m2).
+     */
+    private function copyLookFilesToPets(): void
+    {
+        $disk = Storage::disk((string) config('media.storage.disk', 'pet_media'));
+        $copy = function (int $petId, string $path) use ($disk): string {
+            $target = $petId.'/'.basename($path);
+
+            if ($disk->exists($path) && ! $disk->exists($target)) {
+                $disk->copy($path, $target);
+            }
+
+            return $target;
+        };
+
+        foreach (DB::table('pet_media')->whereNotNull('pet_id')->where('storage_path', 'like', 'looks/%')->get(['id', 'pet_id', 'storage_path']) as $row) {
+            DB::table('pet_media')->where('id', $row->id)->update(['storage_path' => $copy((int) $row->pet_id, (string) $row->storage_path), 'look_media_id' => null]);
+        }
+
+        foreach (DB::table('pet_media_history')->where('storage_path', 'like', 'looks/%')->get(['id', 'pet_id', 'storage_path']) as $row) {
+            DB::table('pet_media_history')->where('id', $row->id)->update(['storage_path' => $copy((int) $row->pet_id, (string) $row->storage_path)]);
+        }
+
+        DB::table('pets')->whereNotNull('pet_look_id')->update(['pet_look_id' => null]);
     }
 };

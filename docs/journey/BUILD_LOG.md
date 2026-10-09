@@ -14,10 +14,10 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Brezplačni ljubljenček je vstopna točka za družine — zdaj ne stane nič več, ko je nabor poln. Strošek AI ostane vezan na prihodek (plačljive pasme), brezplačna ponudba pa se lahko neomejeno širi.
 
-**Številke:** pred M4-10 ≈ 1,27 $ na brezplačno žival na obdobje (*ocena po ceniku fal*); po M4-10 ≈ 0 $ za vsako žival po prvih 20 na pasmo; enkraten strošek polnjenja nabora največ 20 videzov × 4 obdobja × 1,27 $ ≈ **101,60 $ na brezplačno pasmo** (obdobje, ki ga noben videz ne doseže, se ne ustvari). 17 novih avtomatskih testov (1710 skupaj), med njimi: nobenega klica AI, ko videz že ima medije; dve živali hkrati sprožita en sam klic; izbris družine ne izbriše skupnih datotek.
+**Številke:** pred M4-10 ≈ 1,27 $ na brezplačno žival na obdobje (*ocena po ceniku fal*); po M4-10 ≈ 0 $ za vsako žival, katere videz ima za to obdobje že medije (po prvih 20 na pasmo skoraj vedno); enkraten strošek polnjenja nabora največ 20 videzov × 4 obdobja × 1,27 $ ≈ **101,60 $ na brezplačno pasmo** (obdobje, ki ga noben videz ne doseže, se ne ustvari). 17 novih avtomatskih testov (1710 skupaj), med njimi: nobenega klica AI, ko videz že ima medije; dve živali hkrati sprožita en sam klic; izbris družine ne izbriše skupnih datotek.
 
 **Kako povedati:**
-- 💼 Investitorji: »Brezplačni ljubljenček ima mejni strošek AI ≈ 0 $: 20 videzov na pasmo se ustvari enkrat (≤ ~100 $), nato se samo ponovno uporabljajo. Personaliziran, unikaten videz ostane del plačljivega izziva.«
+- 💼 Investitorji: »Brezplačni ljubljenček ima mejni strošek AI ≈ 0 $, ko ima njegov videz za to obdobje že medije: 20 videzov na pasmo se ustvari enkrat (≤ ~100 $), nato se samo ponovno uporabljajo. Personaliziran, unikaten videz ostane del plačljivega izziva.«
 - 🛠 Tehnično: »Mediji videza so vrstice v istem cevovodu (zaklep, proračun, webhook, prenos) — datoteka na disku enkrat, vsaka žival ima svojo podpisano povezavo; izbris družine ne seže v skupne datoteke.«
 - 👩 Starši: brez spremembe za uporabnika — brezplačni kuža je še vedno fotorealističen in v družini se ne ponovi.
 - 📣 Omrežja: (*interno; ni za objavo kot funkcija*)

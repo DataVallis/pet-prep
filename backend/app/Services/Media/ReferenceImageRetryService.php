@@ -132,14 +132,20 @@ class ReferenceImageRetryService
         $stages = 0;
         $videos = 0;
 
+        // M4-10 (QA n2): pool pets waiting for one look row cost that row once.
+        $seenLookRows = [];
+
         foreach ($this->autoRetryCandidates()->limit($limit)->get() as $pet) {
+            $lookRowId = PetMedia::query()->where('pet_id', $pet->id)->images()->value('look_media_id');
+            $cost = $this->sharedLookCovered($lookRowId === null ? null : (int) $lookRowId, $seenLookRows) ? 0.0 : $imageCost;
+
             // Leave room for everything queued in this sweep (reserve() is still the real gate).
-            if ($this->guard->refusalFor($planned + $imageCost, AiSpendPurpose::ReferenceImage) !== null) {
+            if ($cost > 0 && $this->guard->refusalFor($planned + $cost, AiSpendPurpose::ReferenceImage) !== null) {
                 break;
             }
 
             if ($this->retry($pet)) {
-                $planned += $imageCost;
+                $planned += $cost;
                 $images++;
             }
         }
@@ -158,13 +164,15 @@ class ReferenceImageRetryService
         }
 
         foreach ($this->videoRetryCandidates()->limit(max(0, $limit - $images - $stages))->get() as $slot) {
-            if ($this->guard->refusalFor($planned + $videoCost, AiSpendPurpose::StateVideo) !== null) {
+            $cost = $this->sharedLookCovered($slot->look_media_id, $seenLookRows) ? 0.0 : $videoCost;
+
+            if ($cost > 0 && $this->guard->refusalFor($planned + $cost, AiSpendPurpose::StateVideo) !== null) {
                 break;
             }
 
             $slot->update(['status' => PetMedia::STATUS_PENDING, 'request_id' => null, 'error_reason' => null, 'error' => null]);
             SubmitPetStateVideo::dispatch($slot->id);
-            $planned += $videoCost;
+            $planned += $cost;
             $videos++;
         }
 
@@ -173,6 +181,28 @@ class ReferenceImageRetryService
         }
 
         return ['images' => $images, 'stages' => $stages, 'videos' => $videos];
+    }
+
+    /**
+     * M4-10: a pool pet's retry costs nothing extra when its look row is
+     * already stored / being generated, or another retry of this sweep
+     * already budgeted it.
+     *
+     * @param  array<int, true>  $seen
+     */
+    private function sharedLookCovered(?int $lookRowId, array &$seen): bool
+    {
+        if ($lookRowId === null) {
+            return false;
+        }
+
+        if (isset($seen[$lookRowId])) {
+            return true;
+        }
+
+        $seen[$lookRowId] = true;
+
+        return in_array(PetMedia::query()->whereKey($lookRowId)->value('status'), [PetMedia::STATUS_READY, PetMedia::STATUS_RUNNING], true);
     }
 
     /**

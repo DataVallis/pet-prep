@@ -203,8 +203,6 @@ class Pet extends Model
         'breed_type',
         'species',
         'pet_dna',
-        // M4-10: the shared look of a free pool pet (null = unique DNA).
-        'pet_look_id',
         'current_video_url',
         'media_status',
         'media_error',

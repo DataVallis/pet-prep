@@ -28,6 +28,7 @@ use App\Services\Media\PetAppearancePrompt;
 use App\Services\Media\PetGrowthService;
 use App\Services\Media\PetLookPoolService;
 use App\Services\Media\PetMediaService;
+use App\Services\Media\ReferenceImageRetryService;
 use App\Services\PairingService;
 use App\Services\Results\PetProfileChoice;
 use Illuminate\Http\Client\Request;
@@ -513,6 +514,88 @@ describe('concurrency', function () {
         expect(lpFalCalls())->toBe(1)
             ->and($a->fresh()->media_status)->toBe('ready')
             ->and($b->fresh()->media_status)->toBe('ready');
+    });
+});
+
+describe('qa fixes', function () {
+    it('links pet slots the look row failed (sweep timeout) when its late successful webhook arrives', function () {
+        lpFakeFal();
+        config(['media.look_pool.size' => 1]);
+        $a = lpBirth(lpPet());
+        $b = lpBirth(lpPet());
+
+        Queue::fake([SubmitPetStateVideo::class]);
+        $media = app(PetMediaService::class);
+        $media->queueStateVideos($a);
+        $media->queueStateVideos($b);
+        $aIdle = PetMedia::where('pet_id', $a->id)->videos()->where('state', 'idle')->sole();
+        $bIdle = PetMedia::where('pet_id', $b->id)->videos()->where('state', 'idle')->sole();
+        $media->submitVideo($aIdle->id);
+        $media->submitVideo($bIdle->id);
+        $row = PetMedia::findOrFail($aIdle->fresh()->look_media_id);
+
+        $this->travel(PetMediaService::WEBHOOK_TIMEOUT_MINUTES + 1)->minutes();
+        $media->sweepStale();
+
+        expect($row->fresh()->status)->toBe('failed')
+            ->and($aIdle->fresh()->status)->toBe('failed')
+            ->and($bIdle->fresh()->error_reason)->toBe('timed_out');
+
+        sendFalWebhook([
+            'request_id' => $row->request_id,
+            'status' => 'OK',
+            'payload' => ['video' => ['url' => "https://v3.fal.media/files/look/{$row->request_id}.mp4"]],
+        ])->assertOk();
+
+        expect($row->fresh()->status)->toBe('ready')
+            ->and($aIdle->fresh()->status)->toBe('ready')
+            ->and($bIdle->fresh()->status)->toBe('ready')
+            ->and($bIdle->fresh()->storage_path)->toBe($row->fresh()->storage_path);
+    });
+
+    it('budgets one look row once in the daily retry, however many pets wait for it', function () {
+        lpFakeFal();
+        Queue::fake([GeneratePetReferenceImage::class]);
+        config(['media.look_pool.size' => 1, 'media.budget.daily_usd' => 0.01]);
+        $a = lpPet();
+        $b = lpPet();
+        $media = app(PetMediaService::class);
+        $media->generateReferenceImage($b);
+        $media->generateReferenceImage($a); // refused → both pets failed (budget_daily)
+
+        config(['media.budget.daily_usd' => 0.2]); // room for ONE image
+        $queued = app(ReferenceImageRetryService::class)->retryDueWithVideos();
+
+        // Without the grouping the second pet would not fit (2 × 0.15 > 0.20).
+        expect($queued['images'])->toBe(2)
+            ->and($a->fresh()->media_status)->toBe('pending')
+            ->and($b->fresh()->media_status)->toBe('pending');
+    });
+
+    it('gives every pool pet its own copy of the look files when the migration is rolled back', function () {
+        lpFakeFal();
+        config(['media.look_pool.size' => 1]);
+        $a = lpPetWithBasicSet();
+        $b = lpBirth(lpPet());
+        app(PetMediaService::class)->queueStateVideos($b);
+        $b->forceFill(['life_stage' => LifeStage::Young])->saveQuietly();
+        app(PetMediaService::class)->startStageTransition($b->fresh()); // B: history row → look puppy file
+        lpCompleteLookVideos();
+
+        $migration = require database_path('migrations/2026_10_29_120000_create_pet_look_pool.php');
+        $migration->down();
+
+        foreach ([$a, $b] as $pet) {
+            $paths = DB::table('pet_media')->where('pet_id', $pet->id)->pluck('storage_path')
+                ->merge(DB::table('pet_media_history')->where('pet_id', $pet->id)->pluck('storage_path'))->filter();
+            expect($paths)->not->toBeEmpty();
+            foreach ($paths as $path) {
+                expect($path)->toStartWith("{$pet->id}/")
+                    ->and(Storage::disk('pet_media')->exists($path))->toBeTrue()
+                    ->and(preg_match(PetMediaController::SAFE_RELATIVE_PATH, $path))->toBe(1);
+            }
+        }
+        expect(DB::table('pet_media')->whereNull('pet_id')->count())->toBe(0);
     });
 });
 

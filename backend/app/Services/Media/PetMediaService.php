@@ -1396,7 +1396,11 @@ class PetMediaService
         return true;
     }
 
-    /** A look row was stored: link every pet slot waiting for it. */
+    /**
+     * A look row was stored: link every pet slot waiting for it — and every
+     * slot the look row failed earlier (a late successful webhook after the
+     * sweep's `timed_out`, QA M4-10 m1).
+     */
     private function fanOutReady(int $rowId): void
     {
         $row = PetMedia::find($rowId);
@@ -1405,7 +1409,8 @@ class PetMediaService
             return;
         }
 
-        PetMedia::query()->where('look_media_id', $row->id)->where('status', PetMedia::STATUS_RUNNING)->orderBy('id')
+        PetMedia::query()->where('look_media_id', $row->id)
+            ->whereIn('status', [PetMedia::STATUS_RUNNING, PetMedia::STATUS_FAILED])->orderBy('id')
             ->each(function (PetMedia $waiting) use ($row): void {
                 if ($waiting->isImage()) {
                     $this->linkToLook($waiting, $row);
@@ -1463,12 +1468,20 @@ class PetMediaService
             return 0.0;
         }
 
-        $stored = PetMedia::query()->where('pet_look_id', $look->id)->where('life_stage', $stage->value)
-            ->where('status', PetMedia::STATUS_READY)->get();
-        $has = fn (string $kind, ?string $state) => $stored->contains(fn (PetMedia $m) => $m->kind === $kind && $m->state === $state);
+        // Stored rows are reused for free; a row being generated right now (claimed,
+        // `running`) is already paid by the pet that claimed it (QA M4-10 n1).
+        $covered = PetMedia::query()->where('pet_look_id', $look->id)->where('life_stage', $stage->value)
+            ->whereIn('status', [PetMedia::STATUS_READY, PetMedia::STATUS_RUNNING])->get();
+        $has = fn (string $kind, ?string $state) => $covered->contains(fn (PetMedia $m) => $m->kind === $kind && $m->state === $state);
+
+        // An image of a later stage is an edit of the look's earlier stage (stageImageCostUsd).
+        $growsFromEarlier = PetMedia::query()->where('pet_look_id', $look->id)->images()
+            ->where('status', PetMedia::STATUS_READY)
+            ->whereIn('life_stage', array_map(fn (LifeStage $s) => $s->value, array_slice(LifeStage::ordered(), 0, self::stageRank($stage->value))))
+            ->exists();
 
         $cost = in_array($imageAction, ['generate', 'stage', 'download'], true) && ! $has(PetMedia::KIND_IMAGE, null)
-            ? $this->profiles->referenceImage()->estimatedCostUsd()
+            ? ($growsFromEarlier ? $this->stageImageCostUsd() : $this->profiles->referenceImage()->estimatedCostUsd())
             : 0.0;
 
         foreach ($videos as $state) {
