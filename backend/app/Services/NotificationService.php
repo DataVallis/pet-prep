@@ -674,11 +674,30 @@ class NotificationService
         if ($check->allowed) {
             return $plain;
         }
+        $tz = $pet->familyTimezone();
         if ($check->refusal === CareRefusal::NeedsCleaning) {
-            return ['variant' => $this->messFirstVariant($pet), 'replace' => []];
+            $variant = $this->messFirstVariant($pet);
+            if (! $pet->isCat()) {
+                return ['variant' => $variant, 'replace' => []]; // dog: unchanged (QA R06-06 m1 gap, (D) čaka Davida)
+            }
+            // M5-R06-06 (QA m1): would the meal / water be possible once the mess is gone? Same
+            // rules on an in-memory copy with hygiene 100 % (never saved).
+            $probe = clone $pet;
+            $probe->hygiene_level = 100.0;
+            $after = $metric === 'hunger'
+                ? $this->schedule->feedCheck($probe, $config, $now)
+                : $this->schedule->waterCheck($probe, $config, $now);
+            if ($after->allowed) {
+                return ['variant' => $variant, 'replace' => []];
+            }
+            $next = $after->nextAllowedAt?->setTimezone($tz);
+            if ($next !== null && $next->toDateString() === $now->copy()->setTimezone($tz)->toDateString()) {
+                return ['variant' => $variant.PushCopy::WAIT_SUFFIX, 'replace' => ['time' => $next->format('H:i')]];
+            }
+
+            return null;
         }
 
-        $tz = $pet->familyTimezone();
         $next = $check->nextAllowedAt?->setTimezone($tz);
         if ($next !== null && $next->toDateString() === $now->copy()->setTimezone($tz)->toDateString()) {
             return ['variant' => PushCopy::VARIANT_WAIT, 'replace' => ['time' => $next->format('H:i')]];

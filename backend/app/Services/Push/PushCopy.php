@@ -7,6 +7,7 @@ use App\Enums\Species;
 use App\Models\PushNotification;
 use App\Support\RequestLocale;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Log;
 
 /**
  * Push texts (M3-02, PRODUCT_SPEC §6/§7, DECISIONS 2026-10-05), per language
@@ -37,7 +38,9 @@ use Illuminate\Support\Facades\Lang;
  * Species (M5-R06-06, plan T8): a cat gets `push.cat.<key>` (EN + SL, the
  * Slovenian "muca" is feminine, so separate texts — not a swapped noun). A key
  * without a cat text is dog-only (walk, chewing — a cat never gets those) and
- * falls back to the dog text; `PushTextCoverageTest` keeps that list explicit.
+ * falls back to the dog text; `CatPushTextsTest` keeps that list explicit. A cat
+ * key missing in a language falls back to the cat key of the default language
+ * (logged), never to a dog text.
  * The cat-only keys (play / litter reminders, scratcher variants) live only
  * under `cat`. Dog output is byte-identical to before (DogPushTextSnapshotTest).
  */
@@ -61,7 +64,22 @@ final class PushCopy
 
     public const VARIANT_CLEAN_AND_SCRATCHER_FIRST = 'clean_and_scratcher_first';
 
-    private const VARIANTS = [self::VARIANT_WAIT, self::VARIANT_CLEAN_FIRST, self::VARIANT_SCRATCHER_FIRST, self::VARIANT_CLEAN_AND_SCRATCHER_FIRST];
+    /**
+     * M5-R06-06 (QA m1): cat only — the same first step, but the meal / water stays refused
+     * until :time even once the mess is gone (no "then you can feed it").
+     */
+    public const WAIT_SUFFIX = '_wait';
+
+    public const VARIANT_CLEAN_FIRST_WAIT = 'clean_first_wait';
+
+    public const VARIANT_SCRATCHER_FIRST_WAIT = 'scratcher_first_wait';
+
+    public const VARIANT_CLEAN_AND_SCRATCHER_FIRST_WAIT = 'clean_and_scratcher_first_wait';
+
+    private const VARIANTS = [
+        self::VARIANT_WAIT, self::VARIANT_CLEAN_FIRST, self::VARIANT_SCRATCHER_FIRST, self::VARIANT_CLEAN_AND_SCRATCHER_FIRST,
+        self::VARIANT_CLEAN_FIRST_WAIT, self::VARIANT_SCRATCHER_FIRST_WAIT, self::VARIANT_CLEAN_AND_SCRATCHER_FIRST_WAIT,
+    ];
 
     /** M3-12 hygiene variants while a chewed item is open (only chewing / chewing + another mess). */
     public const VARIANT_TIDY = 'tidy';
@@ -79,7 +97,10 @@ final class PushCopy
     private const VARIANT_METRICS = ['hunger', 'thirst'];
 
     /** Top-level groups that exist only under `push.cat` (the cat's own pushes and variants). */
-    public const CAT_ONLY_GROUPS = ['play_reminder', 'litter_reminder', 'scratcher', 'clean_and_scratcher', 'scratcher_first', 'clean_and_scratcher_first'];
+    public const CAT_ONLY_GROUPS = [
+        'play_reminder', 'litter_reminder', 'scratcher', 'clean_and_scratcher', 'scratcher_first', 'clean_and_scratcher_first',
+        'clean_first_wait', 'scratcher_first_wait', 'clean_and_scratcher_first_wait',
+    ];
 
     public static function locale(?string $locale): string
     {
@@ -152,8 +173,15 @@ final class PushCopy
     private static function line(string $key, string $locale, array $replace = [], Species $species = Species::Dog): string
     {
         $catOnly = in_array(explode('.', $key)[0], self::CAT_ONLY_GROUPS, true);
-        if (($species === Species::Cat || $catOnly) && Lang::has("push.cat.{$key}", $locale, false)) {
-            $key = "cat.{$key}";
+        if ($species === Species::Cat || $catOnly) {
+            if (Lang::has("push.cat.{$key}", $locale, false)) {
+                $key = "cat.{$key}";
+            } elseif (($default = RequestLocale::default()) !== $locale && Lang::has("push.cat.{$key}", $default, false)) {
+                // A language without this cat text: the cat text in the default language, never a dog text.
+                Log::warning('Push: cat text missing in this language, using the default language', ['key' => $key, 'locale' => $locale]);
+                $key = "cat.{$key}";
+                $locale = $default;
+            }
         }
         $line = trans("push.{$key}", $replace, $locale);
 

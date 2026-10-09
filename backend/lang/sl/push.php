@@ -91,14 +91,14 @@ return [
      */
     'cat' => [
         'soft' => [
-            'hunger' => 'Tvoja muca te milo gleda in sedi ob posodi s hrano.',
+            'hunger' => 'Tvoja muca te milo gleda in sedi ob prazni posodi za hrano.',
             'thirst' => 'Tvoja muca te milo gleda in sedi ob prazni posodi za vodo.',
             'hygiene' => 'Tvoja muca te milo gleda — zraven peska je nered, ki ga je treba počistiti.',
         ],
 
         'critical' => [
-            'hunger' => 'Če je ne nahraniš v 30 minutah, bo zbolela.',
-            'thirst' => 'Če ji ne daš vode v 30 minutah, bo zbolela.',
+            'hunger' => 'Če muce ne nahraniš v 30 minutah, bo zbolela.',
+            'thirst' => 'Če muci ne daš vode v 30 minutah, bo zbolela.',
             'hygiene' => 'Muca je naredila nered zraven peska! Počisti ga čim prej, sicer bo zbolela.',
         ],
 
@@ -122,8 +122,25 @@ return [
 
         // M3-12: praskanje in nered zraven peska.
         'clean_and_scratcher_first' => [
-            'hunger' => 'Tvoja muca je lačna, a najprej počisti nered in jo odnesi na praskalnik. Potem jo lahko nahraniš.',
-            'thirst' => 'Tvoja muca je žejna, a najprej počisti nered in jo odnesi na praskalnik. Potem ji lahko daš vodo.',
+            'hunger' => 'Tvoja muca je lačna, a najprej počisti nered, nato jo odnesi na praskalnik in jo pohvali. Potem jo lahko nahraniš.',
+            'thirst' => 'Tvoja muca je žejna, a najprej počisti nered, nato jo odnesi na praskalnik in jo pohvali. Potem ji lahko daš vodo.',
+        ],
+
+        // M3-12 (QA R06-06 m1): isti prvi koraki, a hrana / voda je tudi po čiščenju mogoča šele
+        // kasneje danes — brez »potem jo lahko nahraniš«, namesto tega čas.
+        'clean_first_wait' => [
+            'hunger' => 'Tvoja muca je lačna, a najprej je treba počistiti nered. Naslednji obrok je ob :time.',
+            'thirst' => 'Tvoja muca je žejna, a najprej je treba počistiti nered. Vodo ji lahko spet daš ob :time.',
+        ],
+
+        'scratcher_first_wait' => [
+            'hunger' => 'Tvoja muca je lačna, a najprej jo odnesi na praskalnik in jo pohvali. Naslednji obrok je ob :time.',
+            'thirst' => 'Tvoja muca je žejna, a najprej jo odnesi na praskalnik in jo pohvali. Vodo ji lahko spet daš ob :time.',
+        ],
+
+        'clean_and_scratcher_first_wait' => [
+            'hunger' => 'Tvoja muca je lačna, a najprej počisti nered, nato jo odnesi na praskalnik in jo pohvali. Naslednji obrok je ob :time.',
+            'thirst' => 'Tvoja muca je žejna, a najprej počisti nered, nato jo odnesi na praskalnik in jo pohvali. Vodo ji lahko spet daš ob :time.',
         ],
 
         // M5-R06-05: muca je opraskala kavč — razreši se z odnosom na praskalnik in pohvalo, ne s čiščenjem.
@@ -134,14 +151,14 @@ return [
 
         'clean_and_scratcher' => [
             'soft' => 'Tvoja muca te čaka: počisti nered, nato jo odnesi na praskalnik in jo pohvali.',
-            'critical' => 'Čim prej počisti nered in muco odnesi na praskalnik, sicer bo zbolela.',
+            'critical' => 'Čim prej počisti nered, muco odnesi na praskalnik in jo pohvali, sicer bo zbolela.',
         ],
 
         // M5-R06-04: dnevni opomnik za igro (namesto sprehoda).
         'play_reminder' => 'Tvoja muca se danes še ni igrala in čaka na palico s peresom. Se greva igrat?',
 
         // M5-R06-05: pesek je treba počistiti v naslednji uri.
-        'litter_reminder' => 'Tvoja muca je uporabila pesek. Počisti ga čim prej, preden začne smrdeti.',
+        'litter_reminder' => 'Tvoja muca je bila na pesku. Počisti ga čim prej, preden začne smrdeti.',
 
         'parent_alarm' => 'Tvoj otrok danes ni poskrbel za muco.',
 

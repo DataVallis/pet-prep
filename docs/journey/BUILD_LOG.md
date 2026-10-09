@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Obvestilo je pogosto prvi stik otroka z ljubljenčkom v dnevu. Če reče »kuža«, ko ima otrok muco, ali zahteva nekaj, kar aplikacija zavrne, otrok izgubi zaupanje. Pasja obvestila so ostala natanko enaka — preverjeno s posnetkom vseh 450 pasjih besedil, narejenim pred spremembo.
 
-**Številke:** 33 mačjih besedil obvestil na jezik (66 skupaj) + 1 besedilo izvoza podatkov; 450 pasjih besedil preverjenih bajt za bajt; 7 kombinacij odprtih neredov (praskanje / nered zraven peska / drug nered) preverjenih za pravilo »obvestilo nikoli ne zahteva nemogočega«; testi strežnika **1562 → 1620**.
+**Številke:** 39 mačjih besedil obvestil na jezik (78 skupaj) + 1 besedilo izvoza podatkov; 450 pasjih besedil preverjenih bajt za bajt; 7 kombinacij odprtih neredov (praskanje / nered zraven peska / drug nered) preverjenih za pravilo »obvestilo nikoli ne zahteva nemogočega«; testi strežnika **1562 → 1629** (po neodvisnem pregledu QA tudi: obvestilo ne obljubi »potem jo lahko nahraniš«, če je naslednji obrok šele ob 17:00 — pove čas).
 
 **Kako povedati:**
 - 👩 Starši (*načrt*): »Obvestila za muco so napisana posebej za muco — v pravem spolu, brez imen otrok ali živali in nikoli z zahtevo, ki je otrok ne more izpolniti.«

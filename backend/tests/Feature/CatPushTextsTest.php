@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\ActivityType;
 use App\Enums\BreedType;
 use App\Enums\HygieneEventKind;
 use App\Enums\HygieneEventStatus;
@@ -7,6 +8,7 @@ use App\Enums\PushType;
 use App\Enums\Species;
 use App\Exceptions\ChallengeException;
 use App\Jobs\SendPushNotification;
+use App\Models\ActivityLog;
 use App\Models\DevicePushToken;
 use App\Models\Pet;
 use App\Models\PetHygieneEvent;
@@ -22,6 +24,7 @@ use Illuminate\Http\Client\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Str;
 
@@ -54,6 +57,12 @@ function cptDogWords(string $locale): string
         : '/\b(dog|dogs|puppy|puppies|pup|lead)\b|dog’s/i';
 }
 
+/** @return list<string> */
+function cptLocales(): array
+{
+    return config('locales.supported');
+}
+
 /** @return array<string, string> */
 function cptKeys(string $locale): array
 {
@@ -66,22 +75,23 @@ function cptAt(string $local): void
 }
 
 /**
- * A family with a born young domestic cat (no quiet hours), at a weekday noon.
+ * A family with a born young domestic cat (no quiet hours) at $local — by default
+ * 08:00, inside the 06–10 feed window with no meal yet (food and water allowed).
  *
  * @return array{0: User, 1: User, 2: Pet}
  */
-function cptCatFamily(BreedType $breed = BreedType::DomesticCat, array $attributes = []): array
+function cptCatFamily(BreedType $breed = BreedType::DomesticCat, array $attributes = [], string $local = '2026-10-21 08:00'): array
 {
     config(['push.enabled' => true]);
     seedLifeStageData();
-    cptAt('2026-10-21 12:00');
+    cptAt($local);
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     withoutQuietHours($parent);
     $child = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Mia']);
     $cat = disableHygieneEvents(Pet::factory()->create(array_merge([
         'breed_type' => $breed->value,
         'user_id' => $child->id,
-        'born_at' => now()->subDay(),
+        'born_at' => Carbon::parse('2026-10-20 08:00', 'Europe/Ljubljana')->utc(),
         'arrival_age_months' => 12,
         'origin' => 'adopted',
         'hunger_level' => 100,
@@ -105,6 +115,15 @@ function cptOpen(Pet $pet, array $kinds): Pet
     }
 
     return $pet->fresh();
+}
+
+/** A meal the child gave at a family-local time (fed_pet row — CareScheduleService's source of truth). */
+function cptFed(Pet $pet, User $child, string $local): void
+{
+    ActivityLog::withoutEvents(fn () => (new ActivityLog)->forceFill([
+        'pet_id' => $pet->id, 'actor_user_id' => $child->id, 'activity_type' => ActivityType::FedPet,
+        'value' => null, 'created_at' => Carbon::parse($local, 'Europe/Ljubljana')->utc(),
+    ])->save());
 }
 
 /** NotificationService::actionCopy (M3-12) for a phase reminder of $metric. */
@@ -167,7 +186,7 @@ afterEach(function () {
 
 describe('coverage: every push key that names the dog has a cat text or is dog-only (plan T8)', function () {
     it('gives every key with a dog noun (or Slovenian masculine agreement) a cat variant, unless dog-only', function () {
-        foreach (['en', 'sl'] as $locale) {
+        foreach (cptLocales() as $locale) {
             $keys = cptKeys($locale);
             $missing = [];
             foreach ($keys as $key => $text) {
@@ -183,7 +202,7 @@ describe('coverage: every push key that names the dog has a cat text or is dog-o
     });
 
     it('keeps the dog-only list honest: those keys really name the dog and have no cat text', function () {
-        foreach (['en', 'sl'] as $locale) {
+        foreach (cptLocales() as $locale) {
             $keys = cptKeys($locale);
             foreach (CPT_DOG_ONLY as $key) {
                 expect($keys)->toHaveKey($key)
@@ -194,7 +213,7 @@ describe('coverage: every push key that names the dog has a cat text or is dog-o
     });
 
     it('cat texts never name the dog or use Slovenian masculine agreement, and EN / SL have the same cat keys', function () {
-        foreach (['en', 'sl'] as $locale) {
+        foreach (cptLocales() as $locale) {
             foreach (cptKeys($locale) as $key => $text) {
                 if (! str_starts_with($key, 'cat.')) {
                     continue;
@@ -204,12 +223,15 @@ describe('coverage: every push key that names the dog has a cat text or is dog-o
             }
         }
         $catKeys = fn (string $l): array => array_values(array_filter(array_keys(cptKeys($l)), fn (string $k): bool => str_starts_with($k, 'cat.')));
-        expect($catKeys('sl'))->toBe($catKeys('en'))
+        foreach (cptLocales() as $locale) {
+            expect($catKeys($locale))->toBe($catKeys('en'));
+        }
+        expect($catKeys('en'))
             ->and(count($catKeys('en')))->toBeGreaterThan(30);
     });
 
     it('has no cat-only group left outside the cat namespace (R06-04 / R06-05 drafts replaced)', function () {
-        foreach (['en', 'sl'] as $locale) {
+        foreach (cptLocales() as $locale) {
             $top = array_keys(require lang_path("{$locale}/push.php"));
             foreach (PushCopy::CAT_ONLY_GROUPS as $group) {
                 expect($top)->not->toContain($group);
@@ -217,8 +239,19 @@ describe('coverage: every push key that names the dog has a cat text or is dog-o
         }
     });
 
+    it('QA m3: a language without a cat text falls back to the cat text of the default language, never to the dog text', function () {
+        config(['locales.supported' => ['en', 'sl', 'xx']]);
+        app('translator')->addLines(['push.soft.hunger' => 'XX dog text'], 'xx');
+        Log::spy();
+
+        expect(PushCopy::body(PushType::SoftWarning, 'hunger', 'child', 'xx', null, [], Species::Cat))
+            ->toBe('Your cat is giving you a gentle look and sitting by the empty food bowl.')
+            ->and(PushCopy::body(PushType::SoftWarning, 'hunger', 'child', 'xx'))->toBe('XX dog text');
+        Log::shouldHaveReceived('warning')->withArgs(fn (string $msg, array $ctx): bool => str_contains($msg, 'cat text missing') && $ctx['locale'] === 'xx')->once();
+    });
+
     it('never puts a name or the child into a cat text (no placeholders but :time)', function () {
-        foreach (['en', 'sl'] as $locale) {
+        foreach (cptLocales() as $locale) {
             foreach (cptKeys($locale) as $key => $text) {
                 if (str_starts_with($key, 'cat.')) {
                     preg_match_all('/:([a-z_]+)/', $text, $m);
@@ -234,11 +267,11 @@ describe('rendering per species (EN + SL)', function () {
         expect(PushCopy::body($type, $metric, $audience, 'en', $variant, ['time' => '17:00'], Species::Cat))->toBe($en)
             ->and(PushCopy::body($type, $metric, $audience, 'sl', $variant, ['time' => '17:00'], Species::Cat))->toBe($sl);
     })->with([
-        'soft hunger' => [PushType::SoftWarning, 'hunger', 'child', null, 'Your cat is giving you a gentle look and sitting by the food bowl.', 'Tvoja muca te milo gleda in sedi ob posodi s hrano.'],
+        'soft hunger' => [PushType::SoftWarning, 'hunger', 'child', null, 'Your cat is giving you a gentle look and sitting by the empty food bowl.', 'Tvoja muca te milo gleda in sedi ob prazni posodi za hrano.'],
         'soft thirst' => [PushType::SoftWarning, 'thirst', 'child', null, 'Your cat is giving you a gentle look and sitting by the empty water bowl.', 'Tvoja muca te milo gleda in sedi ob prazni posodi za vodo.'],
         'soft hygiene' => [PushType::SoftWarning, 'hygiene', 'child', null, 'Your cat is giving you a gentle look — there’s a mess next to the litter tray that needs cleaning up.', 'Tvoja muca te milo gleda — zraven peska je nered, ki ga je treba počistiti.'],
-        'critical hunger' => [PushType::CriticalAlert, 'hunger', 'child', null, 'If you don’t feed your cat within 30 minutes, it will get sick.', 'Če je ne nahraniš v 30 minutah, bo zbolela.'],
-        'critical thirst' => [PushType::CriticalAlert, 'thirst', 'child', null, 'If you don’t give your cat water within 30 minutes, it will get sick.', 'Če ji ne daš vode v 30 minutah, bo zbolela.'],
+        'critical hunger' => [PushType::CriticalAlert, 'hunger', 'child', null, 'If you don’t feed your cat within 30 minutes, it will get sick.', 'Če muce ne nahraniš v 30 minutah, bo zbolela.'],
+        'critical thirst' => [PushType::CriticalAlert, 'thirst', 'child', null, 'If you don’t give your cat water within 30 minutes, it will get sick.', 'Če muci ne daš vode v 30 minutah, bo zbolela.'],
         'critical hygiene' => [PushType::CriticalAlert, 'hygiene', 'child', null, 'Your cat made a mess next to the litter tray! Clean it up as soon as you can, or it will get sick.', 'Muca je naredila nered zraven peska! Počisti ga čim prej, sicer bo zbolela.'],
         'wait hunger' => [PushType::SoftWarning, 'hunger', 'child', PushCopy::VARIANT_WAIT, 'Your cat is getting hungry. The next meal is at 17:00 — don’t forget it.', 'Tvoja muca postaja lačna. Naslednji obrok je ob 17:00 — ne pozabi nanj.'],
         'wait thirst' => [PushType::CriticalAlert, 'thirst', 'child', PushCopy::VARIANT_WAIT, 'Your cat is thirsty. You can give it water again at 17:00 — don’t forget it.', 'Tvoja muca je žejna. Vodo ji lahko spet daš ob 17:00 — ne pozabi nanjo.'],
@@ -246,14 +279,20 @@ describe('rendering per species (EN + SL)', function () {
         'clean first thirst' => [PushType::SoftWarning, 'thirst', 'child', PushCopy::VARIANT_CLEAN_FIRST, 'Your cat is thirsty, but the mess has to be cleaned up first. Then you can give it water.', 'Tvoja muca je žejna, a najprej je treba počistiti nered. Potem ji lahko daš vodo.'],
         'scratcher first hunger' => [PushType::SoftWarning, 'hunger', 'child', PushCopy::VARIANT_SCRATCHER_FIRST, 'Your cat is hungry, but first carry it to the scratching post and praise it. Then you can feed it.', 'Tvoja muca je lačna, a najprej jo odnesi na praskalnik in jo pohvali. Potem jo lahko nahraniš.'],
         'scratcher first thirst' => [PushType::CriticalAlert, 'thirst', 'child', PushCopy::VARIANT_SCRATCHER_FIRST, 'Your cat is thirsty, but first carry it to the scratching post and praise it. Then you can give it water.', 'Tvoja muca je žejna, a najprej jo odnesi na praskalnik in jo pohvali. Potem ji lahko daš vodo.'],
-        'clean + scratcher first hunger' => [PushType::CriticalAlert, 'hunger', 'child', PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST, 'Your cat is hungry, but first clean up the mess and carry it to the scratching post. Then you can feed it.', 'Tvoja muca je lačna, a najprej počisti nered in jo odnesi na praskalnik. Potem jo lahko nahraniš.'],
-        'clean + scratcher first thirst' => [PushType::SoftWarning, 'thirst', 'child', PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST, 'Your cat is thirsty, but first clean up the mess and carry it to the scratching post. Then you can give it water.', 'Tvoja muca je žejna, a najprej počisti nered in jo odnesi na praskalnik. Potem ji lahko daš vodo.'],
+        'clean + scratcher first hunger' => [PushType::CriticalAlert, 'hunger', 'child', PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST, 'Your cat is hungry, but first clean up the mess, then carry it to the scratching post and praise it. Then you can feed it.', 'Tvoja muca je lačna, a najprej počisti nered, nato jo odnesi na praskalnik in jo pohvali. Potem jo lahko nahraniš.'],
+        'clean + scratcher first thirst' => [PushType::SoftWarning, 'thirst', 'child', PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST, 'Your cat is thirsty, but first clean up the mess, then carry it to the scratching post and praise it. Then you can give it water.', 'Tvoja muca je žejna, a najprej počisti nered, nato jo odnesi na praskalnik in jo pohvali. Potem ji lahko daš vodo.'],
+        'clean first, meal later' => [PushType::SoftWarning, 'hunger', 'child', PushCopy::VARIANT_CLEAN_FIRST_WAIT, 'Your cat is hungry, but the mess has to be cleaned up first. The next meal is at 17:00.', 'Tvoja muca je lačna, a najprej je treba počistiti nered. Naslednji obrok je ob 17:00.'],
+        'clean first, water later' => [PushType::SoftWarning, 'thirst', 'child', PushCopy::VARIANT_CLEAN_FIRST_WAIT, 'Your cat is thirsty, but the mess has to be cleaned up first. You can give it water again at 17:00.', 'Tvoja muca je žejna, a najprej je treba počistiti nered. Vodo ji lahko spet daš ob 17:00.'],
+        'scratcher first, meal later' => [PushType::CriticalAlert, 'hunger', 'child', PushCopy::VARIANT_SCRATCHER_FIRST_WAIT, 'Your cat is hungry, but first carry it to the scratching post and praise it. The next meal is at 17:00.', 'Tvoja muca je lačna, a najprej jo odnesi na praskalnik in jo pohvali. Naslednji obrok je ob 17:00.'],
+        'scratcher first, water later' => [PushType::SoftWarning, 'thirst', 'child', PushCopy::VARIANT_SCRATCHER_FIRST_WAIT, 'Your cat is thirsty, but first carry it to the scratching post and praise it. You can give it water again at 17:00.', 'Tvoja muca je žejna, a najprej jo odnesi na praskalnik in jo pohvali. Vodo ji lahko spet daš ob 17:00.'],
+        'clean + scratcher first, meal later' => [PushType::SoftWarning, 'hunger', 'child', PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST_WAIT, 'Your cat is hungry, but first clean up the mess, then carry it to the scratching post and praise it. The next meal is at 17:00.', 'Tvoja muca je lačna, a najprej počisti nered, nato jo odnesi na praskalnik in jo pohvali. Naslednji obrok je ob 17:00.'],
+        'clean + scratcher first, water later' => [PushType::CriticalAlert, 'thirst', 'child', PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST_WAIT, 'Your cat is thirsty, but first clean up the mess, then carry it to the scratching post and praise it. You can give it water again at 17:00.', 'Tvoja muca je žejna, a najprej počisti nered, nato jo odnesi na praskalnik in jo pohvali. Vodo ji lahko spet daš ob 17:00.'],
         'scratcher soft' => [PushType::SoftWarning, 'hygiene', 'child', PushCopy::VARIANT_SCRATCHER, 'Your cat has scratched the sofa. Carry it to the scratching post and praise it.', 'Tvoja muca je opraskala kavč. Odnesi jo na praskalnik in jo pohvali.'],
         'scratcher critical' => [PushType::CriticalAlert, 'hygiene', 'child', PushCopy::VARIANT_SCRATCHER, 'Your cat scratched the sofa! Carry it to the scratching post and praise it as soon as you can, or it will get sick.', 'Muca je opraskala kavč! Čim prej jo odnesi na praskalnik in jo pohvali, sicer bo zbolela.'],
         'clean + scratcher soft' => [PushType::SoftWarning, 'hygiene', 'child', PushCopy::VARIANT_CLEAN_AND_SCRATCHER, 'Your cat is waiting: clean up the mess, then carry it to the scratching post and praise it.', 'Tvoja muca te čaka: počisti nered, nato jo odnesi na praskalnik in jo pohvali.'],
-        'clean + scratcher critical' => [PushType::CriticalAlert, 'hygiene', 'child', PushCopy::VARIANT_CLEAN_AND_SCRATCHER, 'Clean up the mess and carry your cat to the scratching post as soon as you can, or it will get sick.', 'Čim prej počisti nered in muco odnesi na praskalnik, sicer bo zbolela.'],
+        'clean + scratcher critical' => [PushType::CriticalAlert, 'hygiene', 'child', PushCopy::VARIANT_CLEAN_AND_SCRATCHER, 'Clean up the mess, carry your cat to the scratching post and praise it as soon as you can, or it will get sick.', 'Čim prej počisti nered, muco odnesi na praskalnik in jo pohvali, sicer bo zbolela.'],
         'play reminder' => [PushType::PlayReminder, 'energy', 'child', null, 'Your cat hasn’t played today and is waiting for the feather wand. Shall we play?', 'Tvoja muca se danes še ni igrala in čaka na palico s peresom. Se greva igrat?'],
-        'litter reminder' => [PushType::LitterReminder, 'litter:1', 'child', null, 'Your cat has used the litter tray. Scoop it soon, before it starts to smell.', 'Tvoja muca je uporabila pesek. Počisti ga čim prej, preden začne smrdeti.'],
+        'litter reminder' => [PushType::LitterReminder, 'litter:1', 'child', null, 'Your cat has used the litter tray. Scoop the tray soon, before it starts to smell.', 'Tvoja muca je bila na pesku. Počisti ga čim prej, preden začne smrdeti.'],
         'parent alarm hunger' => [PushType::ParentAlarm, 'hunger', 'parent', null, 'Your child hasn’t looked after the cat today. The cat has had no food for over an hour.', 'Tvoj otrok danes ni poskrbel za muco. Muca je že več kot uro brez hrane.'],
         'parent alarm thirst' => [PushType::ParentAlarm, 'thirst', 'parent', null, 'Your child hasn’t looked after the cat today. The cat has had no water for over an hour.', 'Tvoj otrok danes ni poskrbel za muco. Muca je že več kot uro brez vode.'],
         'parent alarm hygiene' => [PushType::ParentAlarm, 'hygiene', 'parent', null, 'Your child hasn’t looked after the cat today. A mess has not been taken care of for over an hour.', 'Tvoj otrok danes ni poskrbel za muco. Za nered že več kot uro ni nihče poskrbel.'],
@@ -273,12 +312,13 @@ describe('rendering per species (EN + SL)', function () {
     it('never sends a cat a dog word, whatever the type, metric, audience, variant or language', function () {
         $types = array_values(array_filter(PushType::cases(), fn (PushType $t): bool => $t !== PushType::WalkReminder));
         $variants = [null, PushCopy::VARIANT_WAIT, PushCopy::VARIANT_CLEAN_FIRST, PushCopy::VARIANT_SCRATCHER_FIRST,
-            PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST, PushCopy::VARIANT_SCRATCHER, PushCopy::VARIANT_CLEAN_AND_SCRATCHER];
+            PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST, PushCopy::VARIANT_SCRATCHER, PushCopy::VARIANT_CLEAN_AND_SCRATCHER,
+            PushCopy::VARIANT_CLEAN_FIRST_WAIT, PushCopy::VARIANT_SCRATCHER_FIRST_WAIT, PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST_WAIT];
         $checked = 0;
         foreach ($types as $type) {
             foreach ([null, 'hunger', 'thirst', 'hygiene', 'energy', 'walk', 'no_trial'] as $metric) {
                 foreach (['child', 'parent'] as $audience) {
-                    foreach (['en', 'sl', null, 'de'] as $locale) {
+                    foreach ([...cptLocales(), null, 'de'] as $locale) {
                         foreach ($variants as $variant) {
                             $body = PushCopy::body($type, $metric, $audience, $locale, $variant, ['time' => '17:00'], Species::Cat);
                             expect($body)->not->toBe('')->not->toStartWith('push.')->not->toContain(':time');
@@ -294,7 +334,7 @@ describe('rendering per species (EN + SL)', function () {
 
     it('differs from the dog text for every type that names the animal', function () {
         foreach ([PushType::SoftWarning, PushType::CriticalAlert, PushType::ParentAlarm, PushType::Illness, PushType::GameOver, PushType::PaymentRequired] as $type) {
-            foreach (['en', 'sl'] as $locale) {
+            foreach (cptLocales() as $locale) {
                 $audience = $type === PushType::ParentAlarm ? 'parent' : 'child';
                 expect(PushCopy::body($type, 'hunger', $audience, $locale, null, [], Species::Cat))
                     ->not->toBe(PushCopy::body($type, 'hunger', $audience, $locale));
@@ -306,8 +346,8 @@ describe('rendering per species (EN + SL)', function () {
         $sl = fn (PushType $t, string $m, ?string $v = null): string => PushCopy::body($t, $m, 'child', 'sl', $v, ['time' => '17:00'], Species::Cat);
         expect($sl(PushType::SoftWarning, 'hunger', PushCopy::VARIANT_CLEAN_FIRST))->toContain('muca je lačna')
             ->and($sl(PushType::SoftWarning, 'thirst', PushCopy::VARIANT_WAIT))->toContain('muca je žejna')
-            ->and($sl(PushType::CriticalAlert, 'hunger'))->toContain('bo zbolela')
-            ->and($sl(PushType::CriticalAlert, 'thirst'))->toContain('ji ne daš')
+            ->and($sl(PushType::CriticalAlert, 'hunger'))->toBe('Če muce ne nahraniš v 30 minutah, bo zbolela.')
+            ->and($sl(PushType::CriticalAlert, 'thirst'))->toContain('muci ne daš')
             ->and($sl(PushType::Illness, 'hygiene'))->toContain('živela')->toContain('je zbolela');
     });
 });
@@ -350,6 +390,38 @@ describe('M3-12 for a cat: food / water / hygiene reminders never ask for what t
             expect($copy['variant'] ?? null)->not->toBeIn([PushCopy::VARIANT_CLEAN_FIRST, PushCopy::VARIANT_SCRATCHER_FIRST, PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST]);
         }
         expect(cptActionCopy($cat, PushType::SoftWarning, 'hygiene'))->toBe(['variant' => null, 'replace' => []]);
+    });
+
+    it('QA m1: fed at 07:00, hungry at 15:45 with a scratching open — "scratcher first, the next meal is at 17:00", never "then you can feed it"', function () {
+        [, $child, $cat] = cptCatFamily(local: '2026-10-21 07:00');
+        cptFed($cat, $child, '2026-10-21 07:00');
+        cptAt('2026-10-21 15:45');
+        Pet::whereKey($cat->id)->update(['hunger_level' => 30]);
+        $cat = cptOpen($cat->fresh(), [HygieneEventKind::Scratching]);
+
+        $copy = cptActionCopy($cat, PushType::SoftWarning, 'hunger');
+        expect($copy)->toBe(['variant' => PushCopy::VARIANT_SCRATCHER_FIRST_WAIT, 'replace' => ['time' => '17:00']]);
+        $en = PushCopy::body(PushType::SoftWarning, 'hunger', 'child', 'en', $copy['variant'], $copy['replace'], Species::Cat);
+        $sl = PushCopy::body(PushType::SoftWarning, 'hunger', 'child', 'sl', $copy['variant'], $copy['replace'], Species::Cat);
+        expect($en)->toBe('Your cat is hungry, but first carry it to the scratching post and praise it. The next meal is at 17:00.')
+            ->not->toContain('Then you can feed')
+            ->and($sl)->toBe('Tvoja muca je lačna, a najprej jo odnesi na praskalnik in jo pohvali. Naslednji obrok je ob 17:00.');
+
+        // With a mess next to the tray as well, and with only that mess.
+        $cat = cptOpen($cat, [HygieneEventKind::LitterAccident]);
+        expect(cptActionCopy($cat, PushType::CriticalAlert, 'hunger'))
+            ->toBe(['variant' => PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST_WAIT, 'replace' => ['time' => '17:00']]);
+    });
+
+    it('QA m1: a mess open after the last meal of the day — no food reminder at all (nothing possible today)', function () {
+        [, $child, $cat] = cptCatFamily(local: '2026-10-21 07:00');
+        cptFed($cat, $child, '2026-10-21 07:00');
+        cptFed($cat, $child, '2026-10-21 18:00');
+        cptAt('2026-10-21 21:30');
+        Pet::whereKey($cat->id)->update(['hunger_level' => 30]);
+        $cat = cptOpen($cat->fresh(), [HygieneEventKind::LitterAccident]);
+
+        expect(cptActionCopy($cat, PushType::SoftWarning, 'hunger'))->toBeNull();
     });
 
     it('leaves the dog unchanged: an open chewing still blocks food with the dog\'s "clean first"', function () {

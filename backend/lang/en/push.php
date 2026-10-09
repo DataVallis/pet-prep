@@ -91,7 +91,7 @@ return [
      */
     'cat' => [
         'soft' => [
-            'hunger' => 'Your cat is giving you a gentle look and sitting by the food bowl.',
+            'hunger' => 'Your cat is giving you a gentle look and sitting by the empty food bowl.',
             'thirst' => 'Your cat is giving you a gentle look and sitting by the empty water bowl.',
             'hygiene' => 'Your cat is giving you a gentle look — there’s a mess next to the litter tray that needs cleaning up.',
         ],
@@ -122,8 +122,25 @@ return [
 
         // M3-12: a scratching plus a mess next to the tray.
         'clean_and_scratcher_first' => [
-            'hunger' => 'Your cat is hungry, but first clean up the mess and carry it to the scratching post. Then you can feed it.',
-            'thirst' => 'Your cat is thirsty, but first clean up the mess and carry it to the scratching post. Then you can give it water.',
+            'hunger' => 'Your cat is hungry, but first clean up the mess, then carry it to the scratching post and praise it. Then you can feed it.',
+            'thirst' => 'Your cat is thirsty, but first clean up the mess, then carry it to the scratching post and praise it. Then you can give it water.',
+        ],
+
+        // M3-12 (QA R06-06 m1): the same first steps, but the meal / water is refused until later
+        // today even once the mess is gone — no "then you can feed it", the time instead.
+        'clean_first_wait' => [
+            'hunger' => 'Your cat is hungry, but the mess has to be cleaned up first. The next meal is at :time.',
+            'thirst' => 'Your cat is thirsty, but the mess has to be cleaned up first. You can give it water again at :time.',
+        ],
+
+        'scratcher_first_wait' => [
+            'hunger' => 'Your cat is hungry, but first carry it to the scratching post and praise it. The next meal is at :time.',
+            'thirst' => 'Your cat is thirsty, but first carry it to the scratching post and praise it. You can give it water again at :time.',
+        ],
+
+        'clean_and_scratcher_first_wait' => [
+            'hunger' => 'Your cat is hungry, but first clean up the mess, then carry it to the scratching post and praise it. The next meal is at :time.',
+            'thirst' => 'Your cat is thirsty, but first clean up the mess, then carry it to the scratching post and praise it. You can give it water again at :time.',
         ],
 
         // M5-R06-05: the cat scratched the sofa — resolved by carrying it to the scratcher and praising it, not by cleaning.
@@ -134,14 +151,14 @@ return [
 
         'clean_and_scratcher' => [
             'soft' => 'Your cat is waiting: clean up the mess, then carry it to the scratching post and praise it.',
-            'critical' => 'Clean up the mess and carry your cat to the scratching post as soon as you can, or it will get sick.',
+            'critical' => 'Clean up the mess, carry your cat to the scratching post and praise it as soon as you can, or it will get sick.',
         ],
 
         // M5-R06-04: the daily play reminder (instead of the walk).
         'play_reminder' => 'Your cat hasn’t played today and is waiting for the feather wand. Shall we play?',
 
         // M5-R06-05: an open litter use is due within the hour.
-        'litter_reminder' => 'Your cat has used the litter tray. Scoop it soon, before it starts to smell.',
+        'litter_reminder' => 'Your cat has used the litter tray. Scoop the tray soon, before it starts to smell.',
 
         'parent_alarm' => 'Your child hasn’t looked after the cat today.',
 
