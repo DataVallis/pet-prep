@@ -133,6 +133,17 @@
 | and a full coat, never red or bald patches. `verified => false` (single colour, but
 | the traits are an unchecked draft like the other breeds).
 |
+| Bernese Mountain Dog (M5-R10-12, docs/research/dog-data
+| bernese_mountain_dog.appearance): a longhaired, tricoloured, strong and agile working
+| dog of above medium size with sturdy limbs; jet black with rich tan on the cheeks,
+| above the eyes, on all four legs and on the chest, a symmetrical white blaze and
+| muzzle band and white on the throat and chest; long, shining, straight or slightly
+| wavy coat; medium triangular ears hanging flat; dark brown almond eyes; a bushy tail
+| hanging down at rest (FCI S150, RKC standard S153). Colour: tricolour only — "Any
+| other colour or combination of colours unacceptable." Not a conformation welfare
+| breed (RKC Breed Watch Category 1, S152): a natural, moderate build. `verified =>
+| false` (single colour, but the traits are an unchecked draft like the other breeds).
+|
 */
 
 return [
@@ -687,6 +698,37 @@ return [
             'tail' => ['straight tail of medium length carried jauntily, not over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_condition', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-12 (docs/research/dog-data/data.json bernese_mountain_dog.appearance;
+    // runbook rules 2026-10-10: standard colour only — tricolour).
+    'bernese_mountain_dog' => [
+        'display_name' => 'Bernese Mountain Dog',
+        // One standard colour; the trait list itself is an unchecked draft → false.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 45 (S150, https://www.fci.be/Nomenclature/Standards/045g02-en.pdf), RKC breed standard (S153), RKC breed page (S152) — for the traits listed in `sources`.',
+        'sources' => [
+            'size' => 'S152 "Size: Large"; S150 "Height at withers: for dogs: 64-70 cm," "for bitches: 58-66 cm,"',
+            'build' => 'S150 "Longhaired, tricoloured, strong and agile working dog, of above medium size, with sturdily built limbs;"',
+            'coat_length' => 'S150 "Long, shining, straight or slightly wavy."',
+            'coat_color' => 'S150 "Jet black main colour with rich tan markings on the cheeks, above the eyes, on all four legs and on the chest,"; S153 "Any other colour or combination of colours unacceptable."',
+            'ear_carriage' => 'S150 "Medium-sized, set high, triangular in shape, slightly rounded at the tips, in repose hanging flat and close to the head."',
+            'eye_color' => 'S150 "Dark brown, almond-shaped, with close fitting eyelids."',
+            'tail' => 'S150 "Bushy, reaching at least to the hocks; hanging straight down when at rest;"',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'strong, sturdy and agile, well-boned, balanced', 'weight' => 3], 'powerful but not heavy, harmonious'],
+            'coat_length' => [
+                ['value' => 'long, shining, straight coat', 'weight' => 3],
+                'long, shining, slightly wavy coat',
+            ],
+            // Tricolour is the only standard colour (S150, S153).
+            'coat_color' => ['tricolour: jet black with rich tan on the cheeks, above the eyes, on the legs and chest, a symmetrical white blaze, white muzzle band and white chest'],
+            'ear_carriage' => ['medium-sized triangular ears hanging flat'],
+            'eye_color' => ['dark brown, almond-shaped'],
+            'tail' => ['bushy tail hanging down, reaching the hocks'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

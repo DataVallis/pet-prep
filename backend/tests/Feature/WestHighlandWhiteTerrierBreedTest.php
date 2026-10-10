@@ -168,7 +168,7 @@ describe('breed, config and database', function () {
         $others = $rows->where('breed_slug', '!=', 'west-highland-white-terrier');
         $mine = $rows->where('breed_slug', 'west-highland-white-terrier');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'bernese-mountain-dog'])
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_WEST_HIGHLAND_WHITE_TERRIER)->all())->toBe([]);
         foreach ([BreedStageParamsSeeder::CONFIRMED_R10, BreedStageParamsSeeder::CONFIRMED_R10_CAVALIER, BreedStageParamsSeeder::CONFIRMED_R10_BEAGLE,
             BreedStageParamsSeeder::CONFIRMED_R10_STANDARD_POODLE, BreedStageParamsSeeder::CONFIRMED_R10_DACHSHUND,
@@ -370,7 +370,7 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier'])
+        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog'])
             ->and($breeds[12])->toBe([
                 'breed' => 'west_highland_white_terrier', 'slug' => 'west-highland-white-terrier', 'species' => 'dog', 'premium' => true,
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.west_highland_white_terrier',

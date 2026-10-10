@@ -174,9 +174,11 @@ describe('data migration for the rows PR #37 seeded', function () {
             // Open proposal: M5-R02's teething chewing chance (Claude, waiting for David;
             // the training numbers and effects were confirmed in M5-R03b). Dogs only —
             // the cat rows (M5-R06-03) are checked in CatLifeStageDataTest.
-            ->and(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false)->pluck('key')->unique()->values()->all())->toEqualCanonicalizing([
-                'chewing_chance_per_day',
-            ]);
+            ->and(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false)
+                // M5-R10-12: the Bernese senior boundary (76) is a separate open proposal — LifeStageDataTest / BerneseMountainDogBreedTest.
+                ->where('breed_slug', '!=', 'bernese-mountain-dog')->pluck('key')->unique()->values()->all())->toEqualCanonicalizing([
+                    'chewing_chance_per_day',
+                ]);
 
         // Every confirmed row now equals a fresh seed of the same tuple (value + provenance).
         foreach (dsdConfirmedRows() as $row) {

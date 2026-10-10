@@ -232,7 +232,7 @@ describe('PetPickerStep', () => {
     expect(screen.getByTestId('breed-suitability-golden_retriever-consider')).toHaveTextContent(
       'Upoštevajte:vsak dan potrebuje veliko gibanjaizpada mu dlakarad je — pazite na težopotrebuje česanje večkrat na teden',
     );
-    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50, Cavalier 60, Beagle 70, Standard Poodle 80, Dachshund 90, Australian Shepherd 100, Havanese 110, West Highland White Terrier 120).
+    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50, Cavalier 60, Beagle 70, Standard Poodle 80, Dachshund 90, Australian Shepherd 100, Havanese 110, West Highland White Terrier 120, Bernese Mountain Dog 130).
     expect(screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID)).toEqual([
       'breed-option-mutt',
       'breed-option-border_collie',
@@ -247,6 +247,7 @@ describe('PetPickerStep', () => {
       'breed-option-australian_shepherd',
       'breed-option-havanese',
       'breed-option-west_highland_white_terrier',
+      'breed-option-bernese_mountain_dog',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -443,6 +444,48 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/hypoallergenic|\d|%/i);
       expect(screen.getByTestId('breed-suitability-standard_poodle-consider')).toHaveTextContent(/needs brushing several times a week/);
       expect(screen.getByTestId('breed-option-standard_poodle')).toHaveTextContent(/Poodle \(Standard\)/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-12: the Bernese Mountain Dog (fallback) shows its chips, is found as "berner" and "bernski planšar", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const berner = screen.getByTestId('breed-option-bernese_mountain_dog');
+    expect(berner).toHaveTextContent(/Bernski planšarski pes/);
+    expect(berner).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-bernese_mountain_dog-suits')).toHaveTextContent(/družinsko življenjeveliko hišo z vrtom/);
+    expect(screen.getByTestId('breed-suitability-bernese_mountain_dog-consider')).toHaveTextContent(
+      /krajša življenjska dobaizpada mu dlakapotrebuje česanje večkrat na teden/,
+    );
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'berner');
+    expect(screen.getByTestId('breed-option-bernese_mountain_dog')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-havanese')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'bernski plansar');
+    expect(screen.getByTestId('breed-option-bernese_mountain_dog')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-bernese_mountain_dog'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'bernese_mountain_dog', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'bernese_mountain_dog' }),
+    );
+  });
+
+  it('M5-R10-12: the Bernese Mountain Dog chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-bernese_mountain_dog-consider');
+      expect(consider).toHaveTextContent(/shorter lifespan/);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-bernese_mountain_dog')).toHaveTextContent(/Bernese Mountain Dog/);
     } finally {
       await i18n.changeLanguage('sl');
     }

@@ -306,6 +306,29 @@ it('gives the West Highland White Terrier the new sensitive_skin tag (welfare ru
         ->and(bsEntry('west_highland_white_terrier.suitability.pdsa_children')['notes'])->toContain('not small_children');
 });
 
+it('gives the Bernese Mountain Dog the new shorter_lifespan tag, family_pet, large_home, sheds and grooming (runbook 2026-10-10)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray(['shorter_lifespan' => BreedSuitability::CONSIDER]);
+
+    $berner = app(BreedSuitability::class)->for(BreedType::BerneseMountainDog);
+    expect($berner['suits'])->toBe(['family_pet', 'large_home'])
+        // PDSA vs Woodgreen conflict on children → neither children nor small_children.
+        ->and($berner['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('apartment')->not->toContain('often_alone')->not->toContain('active_family')
+        ->and($berner['consider'])->toBe(['shorter_lifespan', 'sheds', 'frequent_grooming'])
+        // RKC Breed Watch Category 1: no conformation welfare chip.
+        ->and($berner['consider'])->not->toContain('hips_hind_legs')->not->toContain('long_daily_exercise')->not->toContain('chews_when_bored');
+
+    // Only the Bernese carries the new chip so far.
+    foreach (BreedType::cases() as $breed) {
+        if ($breed !== BreedType::BerneseMountainDog) {
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('shorter_lifespan');
+        }
+    }
+
+    expect(bsEntry('bernese_mountain_dog.health.shorter_lifespan')['quote'])->toBe('Lifespan: Under 10 years')
+        ->and(bsEntry('bernese_mountain_dog.suitability.pdsa_children')['quote'])->toBe('we wouldn’t recommend them for families with smaller children.')
+        ->and(bsEntry('bernese_mountain_dog.suitability.woodgreen_children')['notes'])->toContain('no children tag');
+});
+
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {
     $source = (string) file_get_contents(app_path('Http/Resources/BreedCatalogResource.php'));
     preg_match('/@var array\{suits: list<([^>]+)>, consider: list<([^>]+)>\}/', $source, $m);

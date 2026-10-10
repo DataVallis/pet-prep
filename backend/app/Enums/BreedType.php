@@ -27,6 +27,7 @@ enum BreedType: string
     case AustralianShepherd = 'australian_shepherd';
     case Havanese = 'havanese';
     case WestHighlandWhiteTerrier = 'west_highland_white_terrier';
+    case BerneseMountainDog = 'bernese_mountain_dog';
     case DomesticCat = 'domestic_cat';
     case MaineCoon = 'maine_coon';
 
@@ -49,6 +50,7 @@ enum BreedType: string
             self::AustralianShepherd => 'australian-shepherd',
             self::Havanese => 'havanese',
             self::WestHighlandWhiteTerrier => 'west-highland-white-terrier',
+            self::BerneseMountainDog => 'bernese-mountain-dog',
             self::DomesticCat => 'domestic-cat',
             self::MaineCoon => 'maine-coon',
         };
@@ -68,7 +70,7 @@ enum BreedType: string
     public function species(): Species
     {
         return match ($this) {
-            self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier => Species::Dog,
+            self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog => Species::Dog,
             self::DomesticCat, self::MaineCoon => Species::Cat,
         };
     }
@@ -94,7 +96,7 @@ enum BreedType: string
     {
         return match ($this) {
             self::Mutt, self::DomesticCat => false,
-            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::MaineCoon => true,
+            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::MaineCoon => true,
         };
     }
 

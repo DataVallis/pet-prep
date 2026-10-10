@@ -59,6 +59,8 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'pet:picker.ageHints.dachshund': 'the Dachshund is a dog breed (M5-R10-08)',
   'pet:picker.ageHints.havanese': 'the Havanese is a dog breed (M5-R10-10)',
   'pet:picker.ageHints.west_highland_white_terrier': 'the West Highland White Terrier is a dog breed (M5-R10-11)',
+  'pet:picker.ageHints.bernese_mountain_dog': 'the Bernese Mountain Dog is a dog breed (M5-R10-12)',
+  'family:breeds.bernese_mountain_dog': 'the breed name itself contains "Dog" / "pes" (M5-R10-12)',
   // ── Names the species on purpose ──
   'family:species.dog': 'the species name "Dog" / "Pes"',
   'family:breedUnknown.dog': 'the species name of an unknown dog breed',
