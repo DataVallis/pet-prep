@@ -15,8 +15,9 @@ use RuntimeException;
 /**
  * Breed portraits for the website animal register (M5-R11, David 2026-10-10).
  *
- * One AI-generated illustration per register breed, in one consistent PetPrep
- * style, shown on /animals/<species>/<breed> labelled "AI-generated illustration".
+ * One AI-generated photo per register breed (a realistic studio photograph, like
+ * the app's pets — David 2026-10-10), in one consistent PetPrep style, shown on
+ * /animals/<species>/<breed> labelled "AI-generated photo".
  * Run by hand (`artisan breeds:portraits`) — never on a schedule, never for a pet.
  *
  * Prompt = the breed's typical ADULT look (config/breed_appearance.php through
@@ -39,9 +40,9 @@ use RuntimeException;
  */
 class BreedPortraitService
 {
-    public const KIND = 'ai_illustration';
+    public const KIND = 'ai_photo';
 
-    public const LABEL = 'AI-generated illustration';
+    public const LABEL = 'AI-generated photo';
 
     public const MANIFEST = 'manifest.json';
 
@@ -51,15 +52,18 @@ class BreedPortraitService
     public const DEFAULT_OUT = '../docs/research/breed-portraits';
 
     /**
-     * Fixed style for every breed (brand/README.md CGP v2: fog background, graphite,
-     * a little mint). `{animal}` = "dog" / "cat" — a cat prompt never says "dog".
+     * Fixed style for every breed: a realistic studio photograph, the same
+     * photographic language as the app's pets (PetAppearancePrompt: "A photorealistic
+     * photograph … realistic 35mm photograph"), on the brand fog backdrop
+     * (brand/README.md CGP v2). David 2026-10-10: photos, not illustrations; no
+     * coloured glow (looks artificial in a photo). `{animal}` = "dog" / "cat" — a
+     * cat prompt never says "dog".
      */
     public const PORTRAIT_STYLE = 'Full body in frame, standing naturally, three-quarter side view at the {animal}\'s eye level, '
         .'natural breed-typical proportions, centred in a square composition with even space around it. '
-        .'Seamless soft studio background in light fog grey (#F3F5F2) with a soft graphite-grey (#121614) floor shadow '
-        .'and a faint mint-green (#7FE0B4) glow low behind the {animal}; soft even studio light. '
-        .'Clean photorealistic-illustrative style: detailed digital illustration with true-to-life fur texture and colours, '
-        .'the same consistent style for every breed. '
+        .'Seamless light fog-grey (#F3F5F2) studio backdrop with a soft natural floor shadow; soft diffused studio light. '
+        .'Realistic 35mm photograph, sharp focus on the {animal}, true-to-life fur texture and colours, shallow depth of field, '
+        .'the same consistent photographic style for every breed. '
         .'Only the {animal}: no people, no children, no hands, no other animals, no text, no letters, no logo, no watermark, '
         .'no collar, no name tag, no props.';
 
@@ -172,7 +176,7 @@ class BreedPortraitService
         $animal = $species === Species::Cat ? 'cat' : 'dog';
         $subject = $this->prompts->describe($breed->value, $this->portraitTraits($breed), LifeStage::Adult);
 
-        return 'A photorealistic-illustrative portrait of a single '.$subject.'. '
+        return 'A photorealistic photograph of a single '.$subject.'. '
             .'The '.$animal.' is '.LifeStage::Adult->promptCue($species).'. '
             .str_replace('{animal}', $animal, self::PORTRAIT_STYLE);
     }
@@ -414,7 +418,7 @@ class BreedPortraitService
             'schema_version' => self::MANIFEST_SCHEMA,
             'generator' => 'backend: php artisan breeds:portraits (M5-R11)',
             'label' => self::LABEL,
-            'note' => 'AI-generated breed illustrations for the website animal register. Show them only with the label "'
+            'note' => 'AI-generated breed photos for the website animal register. Show them only with the label "'
                 .self::LABEL.'". Prompts come from breed config only (config/breed_appearance.php) — no pet or child data.',
             'portraits' => array_values($entries),
         ];

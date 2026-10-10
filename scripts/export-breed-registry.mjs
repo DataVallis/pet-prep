@@ -53,9 +53,11 @@
  *
  * Breed portraits (M5-R11, David 2026-10-10 — optional input):
  *   docs/research/breed-portraits/manifest.json      written by `php artisan breeds:portraits`
- *   docs/research/breed-portraits/<species>/<slug>.webp   AI-generated illustrations
+ *   docs/research/breed-portraits/<species>/<slug>.webp   AI-generated photos
  * Each breed gets `portrait: { file, width, height, kind }` (null when the manifest has none).
- * `kind` is "ai_illustration": the website MUST label it "AI-generated illustration".
+ * `kind` is "ai_photo" (David 2026-10-10: realistic photos): the website MUST label it "AI-generated photo".
+ * The older "ai_illustration" (first portraits, same day) is still accepted and passed through; the
+ * website labels it "AI-generated illustration".
  * `file` is the basename; the website serves it from public/animals/<species.slug.en>/<file>
  * (e.g. public/animals/dogs/border-collie.webp). Copy the files there with
  *   node scripts/export-breed-registry.mjs --copy-portraits ../pet-prep-website/public
@@ -88,7 +90,8 @@ export const INPUTS = {
 /** Optional input: AI breed portraits (`php artisan breeds:portraits`); missing → every portrait null. */
 export const PORTRAITS_DIR = 'docs/research/breed-portraits';
 export const PORTRAIT_MANIFEST = `${PORTRAITS_DIR}/manifest.json`;
-export const PORTRAIT_KINDS = ['ai_illustration'];
+/** `ai_photo` = current; `ai_illustration` = older manifests, still read. */
+export const PORTRAIT_KINDS = ['ai_photo', 'ai_illustration'];
 
 /** URL words that a breed slug may never take (the comparison page lives next to the breeds). */
 export const RESERVED_SLUGS = ['compare', 'primerjava'];
@@ -1033,7 +1036,7 @@ function main(argv) {
       copyFileSync(c.from, c.to);
       console.log(`export-breed-registry: copied ${c.breed} → ${c.to}`);
     }
-    console.log(`export-breed-registry: ${copies.length} portrait(s) copied (label them "AI-generated illustration" on the site)`);
+    console.log(`export-breed-registry: ${copies.length} portrait(s) copied (label them "AI-generated photo" on the site)`);
   }
   return 0;
 }

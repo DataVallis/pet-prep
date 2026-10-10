@@ -2,7 +2,7 @@
 
 /*
 | M5-R11 breed portraits (David 2026-10-10): `artisan breeds:portraits` makes one
-| AI-generated illustration per register breed for the website, charged to the
+| AI-generated photo per register breed for the website, charged to the
 | AI Lab budget. No real fal.ai call: Http::preventStrayRequests() + fakes.
 */
 
@@ -108,16 +108,19 @@ describe('breeds and prompts', function () {
         $s = bpService();
         $lab = $s->prompt(BreedType::LabradorRetriever);
 
-        expect($lab)->toStartWith('A photorealistic-illustrative portrait of a single large strongly built, broad-chested Labrador Retriever')
+        expect($lab)->toStartWith('A photorealistic photograph of a single large strongly built, broad-chested Labrador Retriever')
             ->toContain('short, dense coat in yellow')
             ->toContain('"otter" tail')
             ->toContain('The dog is a fully grown adult dog in its prime')
             ->toContain(str_replace('{animal}', 'dog', BreedPortraitService::PORTRAIT_STYLE));
 
-        foreach (['#F3F5F2', '#121614', '#7FE0B4', 'three-quarter side view', 'standing', 'natural breed-typical proportions',
-            'no people', 'no text', 'no logo', 'no name tag', 'same consistent style for every breed'] as $needle) {
+        foreach (['#F3F5F2', 'studio backdrop', 'Realistic 35mm photograph', 'true-to-life fur', 'three-quarter side view', 'standing', 'natural breed-typical proportions',
+            'no people', 'no text', 'no logo', 'no name tag', 'same consistent photographic style for every breed'] as $needle) {
             expect($lab)->toContain($needle);
         }
+
+        // David 2026-10-10: realistic photos like the app's pets, not illustrations.
+        expect($lab)->not->toMatch('/illustrat/i')->not->toContain('#7FE0B4');
 
         expect($s->prompt(BreedType::BorderCollie))->toContain('Border Collie')->toContain('black and white with a white collar')
             ->and($s->prompt(BreedType::GoldenRetriever))->toContain('Golden Retriever')->toContain('rich gold');
@@ -208,14 +211,14 @@ describe('breeds:portraits command', function () {
 
         $manifest = bpManifest($this->out);
         expect($manifest['schema_version'])->toBe(1)
-            ->and($manifest['label'])->toBe('AI-generated illustration')
+            ->and($manifest['label'])->toBe('AI-generated photo')
             ->and(array_column($manifest['portraits'], 'breed'))->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'maine_coon']);
 
         $lab = $manifest['portraits'][1];
         expect(array_keys($lab))->toBe(['breed', 'species', 'file', 'width', 'height', 'kind', 'profile', 'prompt_hash', 'generated_at', 'cost_usd'])
             ->and($lab)->toMatchArray([
                 'breed' => 'labrador_retriever', 'species' => 'dog', 'file' => 'dog/labrador-retriever.webp',
-                'width' => 1024, 'height' => 1024, 'kind' => 'ai_illustration', 'profile' => 'nano_banana_pro',
+                'width' => 1024, 'height' => 1024, 'kind' => 'ai_photo', 'profile' => 'nano_banana_pro',
                 'prompt_hash' => BreedPortraitService::promptHash(bpService()->prompt(BreedType::LabradorRetriever)),
                 'cost_usd' => 0.15,
             ])

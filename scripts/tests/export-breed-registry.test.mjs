@@ -257,16 +257,16 @@ test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp &
   assert.equal(cat.value, registry.species[1].free_plan.adult_activity.value);
 });
 
-// ─── breed portraits (M5-R11, David 2026-10-10: AI illustrations, labelled) ───
+// ─── breed portraits (M5-R11, David 2026-10-10: AI photos, labelled) ───
 
-const manifestOf = (portraits) => JSON.stringify({ schema_version: 1, label: 'AI-generated illustration', portraits });
+const manifestOf = (portraits) => JSON.stringify({ schema_version: 1, label: 'AI-generated photo', portraits });
 const portraitEntry = (over = {}) => ({
   breed: 'labrador_retriever',
   species: 'dog',
   file: 'dog/labrador-retriever.webp',
   width: 1024,
   height: 1024,
-  kind: 'ai_illustration',
+  kind: 'ai_photo',
   profile: 'nano_banana_pro',
   prompt_hash: 'sha256:abc',
   generated_at: '2026-10-10T12:00:00+00:00',
@@ -292,8 +292,8 @@ test('portraits: manifest entries become { file, width, height, kind }, missing 
   const texts = readInputs();
   const reg = buildRegistry({ ...texts, portraits: manifestOf([portraitEntry(), portraitEntry({ breed: 'maine_coon', species: 'cat', file: 'cat/maine-coon.webp', width: 1200, height: 1200 })]) });
   const byId = Object.fromEntries(reg.breeds.map((b) => [b.id, b]));
-  assert.deepEqual(byId.labrador_retriever.portrait, { file: 'labrador-retriever.webp', width: 1024, height: 1024, kind: 'ai_illustration' });
-  assert.deepEqual(byId.maine_coon.portrait, { file: 'maine-coon.webp', width: 1200, height: 1200, kind: 'ai_illustration' });
+  assert.deepEqual(byId.labrador_retriever.portrait, { file: 'labrador-retriever.webp', width: 1024, height: 1024, kind: 'ai_photo' });
+  assert.deepEqual(byId.maine_coon.portrait, { file: 'maine-coon.webp', width: 1200, height: 1200, kind: 'ai_photo' });
   assert.equal(byId.border_collie.portrait, null);
   assert.match(reg.inputs.portraits.sha256, /^[0-9a-f]{64}$/);
   // Deterministic: no generated_at / prompt hash / cost leaks into the export.
@@ -304,6 +304,13 @@ test('portraits: manifest entries become { file, width, height, kind }, missing 
     ['labrador_retriever', resolve(ROOT, PORTRAITS_DIR, 'dog/labrador-retriever.webp'), '/site/public/animals/dogs/labrador-retriever.webp'],
     ['maine_coon', resolve(ROOT, PORTRAITS_DIR, 'cat/maine-coon.webp'), '/site/public/animals/cats/maine-coon.webp'],
   ]);
+});
+
+test('portraits: an older ai_illustration manifest entry is still read and passed through', () => {
+  const texts = readInputs();
+  const reg = buildRegistry({ ...texts, portraits: manifestOf([portraitEntry({ kind: 'ai_illustration' })]) });
+  const lab = reg.breeds.find((b) => b.id === 'labrador_retriever');
+  assert.equal(lab.portrait.kind, 'ai_illustration');
 });
 
 test('portraits: a wrong manifest fails loudly', () => {
