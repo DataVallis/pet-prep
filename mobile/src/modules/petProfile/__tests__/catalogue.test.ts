@@ -112,7 +112,7 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100; M5-R10-10: + Havanese, sort 110; M5-R10-11: + West Highland White Terrier, sort 120; M5-R10-12: + Bernese Mountain Dog, sort 130), never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100; M5-R10-10: + Havanese, sort 110; M5-R10-11: + West Highland White Terrier, sort 120; M5-R10-12: + Bernese Mountain Dog, sort 130; M5-R10-13: + Siberian Husky, sort 140), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
     expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
       'mutt',
@@ -129,6 +129,7 @@ describe('readBreedCatalogue', () => {
       'havanese',
       'west_highland_white_terrier',
       'bernese_mountain_dog',
+      'siberian_husky',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -233,6 +234,16 @@ describe('readBreedCatalogue', () => {
       suits: ['family_pet', 'large_home'],
       consider: ['shorter_lifespan', 'sheds', 'frequent_grooming'],
     });
+    const husky = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'siberian_husky');
+    expect(husky).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 140 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-13, runbook rules; new chip secure_fencing).
+    expect(husky?.search_keywords).toEqual(['siberian husky', 'husky', 'huskie', 'sibirski haski', 'haski', 'sibirski husky', 'sibirec']);
+    expect(husky?.suitability).toEqual({
+      suits: ['active_family', 'large_home'],
+      consider: ['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming'],
+    });
     expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
     // The fallback is already in picker order.
     expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual([
@@ -250,6 +261,7 @@ describe('readBreedCatalogue', () => {
       'havanese',
       'west_highland_white_terrier',
       'bernese_mountain_dog',
+      'siberian_husky',
     ]);
   });
 });
@@ -298,7 +310,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(13);
+    expect(CONSIDER_TAGS).toHaveLength(14);
+    // M5-R10-13 (runbook new-tag rule): escapes easily — needs a secure, high fence; no numbers.
+    expect(CONSIDER_TAGS).toContain('secure_fencing');
     // M5-R10-12 (runbook new-tag rule): shorter lifespan — a calm chip, no numbers.
     expect(CONSIDER_TAGS).toContain('shorter_lifespan');
     // M5-R10-11 (runbook welfare rule): sensitive skin — itching and inflammation; no numbers, no allergy claim.

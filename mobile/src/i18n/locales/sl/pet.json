@@ -99,6 +99,7 @@
       "havanese": "Del 12-tedenskega izziva.",
       "west_highland_white_terrier": "Del 12-tedenskega izziva.",
       "bernese_mountain_dog": "Del 12-tedenskega izziva.",
+      "siberian_husky": "Del 12-tedenskega izziva.",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden"
     },
@@ -206,6 +207,12 @@
         "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
       },
+      "siberian_husky": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
+      },
       "domestic_cat": {
         "puppy": "Pride kot mucek, star 2 meseca.",
         "young": "Pride kot mlada mačka, stara 1 leto.",
@@ -300,7 +307,8 @@
       "heart_and_spine": "srce in hrbtenjača — preverite zdravstvene teste",
       "back_spine": "dolg hrbet — težave s hrbtenico, brez skakanja",
       "sensitive_skin": "občutljiva koža — nagnjenost k srbenju in vnetjem",
-      "shorter_lifespan": "krajša življenjska doba"
+      "shorter_lifespan": "krajša življenjska doba",
+      "secure_fencing": "rad pobegne — potrebuje varno, visoko ograjo"
     }
   },
   "media": {
