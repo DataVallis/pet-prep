@@ -45,7 +45,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "66a9e32025ad6ec0bc342cfa296fdf889a7e2ed3287a45bbee2bda5721d36146"
+      "sha256": "9e2a18d1779d79f0eefc929b82786853969e17d76882e803aa8400de716a283a"
     }
   },
   "suitability_vocabulary": {
@@ -5059,7 +5059,12 @@
           "S120"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "poodle-standard.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "source_ids": [
         "S10",
         "S11",

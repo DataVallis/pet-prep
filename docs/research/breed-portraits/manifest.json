@@ -89,6 +89,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "standard_poodle",
+            "species": "dog",
+            "file": "dog/poodle-standard.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:7aa14f78678e3a4eabea876d2fd605ac796bc4ece8a2534dc45ef7d10b51243c",
+            "generated_at": "2026-10-10T11:57:37+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
