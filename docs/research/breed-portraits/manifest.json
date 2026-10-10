@@ -1,8 +1,8 @@
 {
     "schema_version": 1,
     "generator": "backend: php artisan breeds:portraits (M5-R11)",
-    "label": "AI-generated illustration",
-    "note": "AI-generated breed illustrations for the website animal register. Show them only with the label \"AI-generated illustration\". Prompts come from breed config only (config/breed_appearance.php) — no pet or child data.",
+    "label": "AI-generated photo",
+    "note": "AI-generated breed photos for the website animal register. Show them only with the label \"AI-generated photo\". Prompts come from breed config only (config/breed_appearance.php) — no pet or child data.",
     "portraits": [
         {
             "breed": "border_collie",
@@ -10,10 +10,10 @@
             "file": "dog/border-collie.webp",
             "width": 1024,
             "height": 1024,
-            "kind": "ai_illustration",
+            "kind": "ai_photo",
             "profile": "nano_banana_pro",
-            "prompt_hash": "sha256:b6da38556fa7eeccc4b0f177c917035fee59c3b4172614fae34f2d64583d3c7e",
-            "generated_at": "2026-10-10T03:25:45+00:00",
+            "prompt_hash": "sha256:f687df028c73cca352f7d1244129e22550b23047a29f0b0bdf87343fc1cef436",
+            "generated_at": "2026-10-10T05:47:02+00:00",
             "cost_usd": 0.15
         },
         {
@@ -22,10 +22,10 @@
             "file": "dog/labrador-retriever.webp",
             "width": 1024,
             "height": 1024,
-            "kind": "ai_illustration",
+            "kind": "ai_photo",
             "profile": "nano_banana_pro",
-            "prompt_hash": "sha256:36158c9b0e7419b9467685b0570da7587c18e14e50f0500a7598553df6068ef0",
-            "generated_at": "2026-10-10T03:26:02+00:00",
+            "prompt_hash": "sha256:b775a1b48d7073964cd089ace027151fbcf996769dba5b2294ffea224e9f9329",
+            "generated_at": "2026-10-10T05:47:20+00:00",
             "cost_usd": 0.15
         },
         {
@@ -34,10 +34,10 @@
             "file": "dog/golden-retriever.webp",
             "width": 1024,
             "height": 1024,
-            "kind": "ai_illustration",
+            "kind": "ai_photo",
             "profile": "nano_banana_pro",
-            "prompt_hash": "sha256:3edc2b41eee5ca1229162d13dbf48285f418c6572dd2d3bfa42e50cde61177c8",
-            "generated_at": "2026-10-10T03:26:20+00:00",
+            "prompt_hash": "sha256:6642548a000318f55d61beeb552f9716f4882b5cace2701f638831ce4464287d",
+            "generated_at": "2026-10-10T05:47:37+00:00",
             "cost_usd": 0.15
         },
         {
@@ -46,10 +46,10 @@
             "file": "dog/french-bulldog.webp",
             "width": 1024,
             "height": 1024,
-            "kind": "ai_illustration",
+            "kind": "ai_photo",
             "profile": "nano_banana_pro",
-            "prompt_hash": "sha256:10a180f5810ccbfc92ff461343b197713654d33a43533f5a085cbe07068c0759",
-            "generated_at": "2026-10-10T05:06:21+00:00",
+            "prompt_hash": "sha256:12fd27ca19ea68a64f8a29f5e8093594fddb50d305656a29571deee85cdaeb46",
+            "generated_at": "2026-10-10T05:47:54+00:00",
             "cost_usd": 0.15
         },
         {
@@ -58,10 +58,10 @@
             "file": "cat/maine-coon.webp",
             "width": 1024,
             "height": 1024,
-            "kind": "ai_illustration",
+            "kind": "ai_photo",
             "profile": "nano_banana_pro",
-            "prompt_hash": "sha256:3e88041085eabbe3d3803f6ebe70420e421abd86e7115305e22aaf0cff5366d2",
-            "generated_at": "2026-10-10T03:26:38+00:00",
+            "prompt_hash": "sha256:11b566c9c80a122528b3af3603ee640679290feac95382d783abae9b976436f2",
+            "generated_at": "2026-10-10T05:48:13+00:00",
             "cost_usd": 0.15
         }
     ]

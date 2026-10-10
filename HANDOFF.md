@@ -123,9 +123,10 @@ Older queue (still valid where not done):
 
 ## 6. Session log
 
-### 2026-10-10 (cloud) — M5-R11-05 realistic breed photos (branch `feat/M5-R11-05-realistic-portraits`)
+### 2026-10-10 (cloud) — M5-R11-05 realistic breed photos (PR #133 style, `feat/M5-R11-05-portrait-photos` images, website PR #14)
 - David: website breed portraits must be realistic photographs like the app's pets, not illustrations. `BreedPortraitService::PORTRAIT_STYLE` is now a 35mm studio photograph on the fog-grey #F3F5F2 backdrop (mint glow dropped — artificial in a photo); prompt opens "A photorealistic photograph of a single …" (same model `nano_banana_pro`). Manifest `kind: ai_photo`, label "AI-generated photo"; the export accepts `ai_photo` and still reads `ai_illustration`.
-- Next: dispatch `breed-portraits.yml` with `force=true` for all breeds, review every image, commit them + re-export, then the website (accept `ai_photo`, caption "Fotografija, ustvarjena z AI" / "AI-generated photo").
+- Done: style PR #133 merged + deployed; `breed-portraits.yml` force run 38028653659 (5 × $0.15 = $0.75, AI Lab) → all 5 photos reviewed OK (realistic, breed-typical, no text / people / collar; French Bulldog moderate face, open nostrils); images + manifest + re-export committed; website shows "Fotografija, ustvarjena z AI" / "AI-generated photo" (still accepts old `ai_illustration`).
+- Debt / note: the portrait seed is deterministic per breed — a `--force` re-run with an unchanged prompt returns (almost) the same image (Labrador re-run 38028791316, $0.15, identical; Labrador backdrop is a slightly cooler grey than the others). To get a different image, change the prompt or add a seed option. Review branches `portraits/run-38028653659` / `-38028791316` kept.
 
 ### 2026-10-10 (cloud) — M5-R10-03 French Bulldog (branch `feat/M5-R10-03-french-bulldog`)
 - **Research:** S76–S94 in `sources.md`, `data.json french_bulldog.*`; David's decisions (~06:20) as `decision` in `proposed_game_parameters.french_bulldog` (no "awaiting David" left); growth range widened to 9–15 months (FCI weights straddle small / medium); VetCompass 2013 median age at death (3.6 y) kept in research only, never exported.

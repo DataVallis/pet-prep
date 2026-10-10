@@ -8,6 +8,16 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Register živali: realistične fotografije namesto ilustracij (M5-R11-05)
+
+**Kaj se je zgodilo:** David je odločil, da so slike pasem na spletni strani realistične fotografije — enake vrste kot ljubljenčki v aplikaciji — in ne ilustracije. Isti model (`nano_banana_pro`), nov fotografski slog: cela postava, svetlo sivo studijsko ozadje, naravna senca, brez ljudi, napisov in ovratnice. Vseh 5 slik (border collie, labradorec, zlati prinašalec, francoski buldog, Maine Coon) je nastalo v enem zagonu na strežniku za **0,75 $** (5 × 0,15 $), vsako smo pregledali. Na spletu so označene »Fotografija, ustvarjena z AI«.
+
+**Zakaj je pomembno:** Starš na spletu vidi isto podobo živali kot otrok v aplikaciji — bolj verodostojno in usklajeno. Oznaka AI ostane, da nihče ne misli, da gre za fotografijo resničnega psa ali mačke. Francoski buldog je tudi na fotografiji z zmernim obrazom in odprtimi nosnicami.
+
+**Kako povedati:** 📣 »Pasme v našem registru so zdaj fotografije — ustvarjene z AI in jasno označene.« · 👩 Kar vidite na strani pasme, je enak slog kot ljubljenček v aplikaciji. · 🛠 En ukaz (`breeds:portraits --force`) in GitHub Actions zagon na strežniku zamenjata slike vseh pasem; izvoz registra jih kopira na spletno stran.
+
+---
+
 ## 2026-10-10 — Francoski buldog: tretja nova pasma, s skrbjo za dobrobit (M5-R10-03)
 
 **Kaj se je zgodilo:** PetPrep ima četrto plačljivo pasmo psa — **francoskega buldoga** (French Bulldog). Raziskava: **19 novih virov (S76–S94)** — standard FCI 101, The Royal Kennel Club (stran pasme in standard), AKC standard, PDSA, Woodgreen, tri raziskave VetCompass (O'Neill 2018 in 2021, Hall 2020 o toplotnem udaru), poročilo RKC o ocenjevanju dihanja, stališče British Veterinary Association, UK Brachycephalic Working Group in UFAW. David je zjutraj (10. 10. ~06:20) potrdil številke igre: odrasel francoski buldog potrebuje **60 minut gibanja = 6.000 korakov** na dan (RKC in PDSA »do 1 ure«), mladiček doseže ta cilj pri **6 mesecih**, starejši **4.500**; starejši postane pri **88 mesecih** (0,75 × 9,8 leta, McMillan 2024 — prej kot drugi psi); uči se **0,7× hitrosti** mešančka (Coren: 58. mesto). Izbirnik pokaže »Primerno za: življenje v stanovanju, družinsko življenje, družino z otroki« in »Upoštevajte: **kratek gobček — težave z dihanjem in vročino**« (nova oznaka, brez odstotkov). AI videz: zmeren obraz z odprtimi nosnicami, samo standardne barve, nikoli merle.
