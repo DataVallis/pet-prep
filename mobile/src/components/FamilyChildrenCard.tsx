@@ -18,6 +18,7 @@ import {
   childDeletionImpact,
   classifyDeletionError,
   deletionLosesPurchase,
+  paidDeletionGroup,
   petsDeletedWithChild,
   type DeletionErrorKind,
 } from '@/modules/account/account';
@@ -30,7 +31,7 @@ import {
   type RevokeErrorKind,
 } from '@/modules/family/family';
 import { fonts, palette, tightTracking } from '@/theme';
-import { t } from '@/i18n';
+import { t, tPets } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { petLabel } from '@/modules/petName/petName';
 
@@ -90,7 +91,10 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
         onError: (err) => {
           const kind = classifyDeletionError(err);
           if (kind === 'paid_challenge') setPaidRequired(child.id);
-          setDeleteError({ text: () => S.deleteErrors[kind] });
+          const group = paidDeletionGroup(petsDeletedWithChild(child, family), family, billing.data);
+          setDeleteError({
+            text: () => (kind === 'paid_challenge' ? tPets('family:children.deleteErrors.paid_challenge', group) : S.deleteErrors[kind]),
+          });
         },
       },
     );
@@ -167,6 +171,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
                   setDeleteError(null);
                 }}
                 paidChallenge={paidRequired === child.id || deletionLosesPurchase(petsDeletedWithChild(child, family), billing.data)}
+                paidPetGroup={paidDeletionGroup(petsDeletedWithChild(child, family), family, billing.data)}
                 onSubmit={(password, ack) => confirmDelete(child, password, ack)}
                 testID={`child-delete-form-${child.id}`}
               />

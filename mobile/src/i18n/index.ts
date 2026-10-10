@@ -112,6 +112,32 @@ export function tSpecies(key: string, species: string | null | undefined, option
   return translate(key, options);
 }
 
+/**
+ * The species of a GROUP of pets a text talks about (M5-R06-09: the paywall and the
+ * paid-challenge texts): only dogs (or none) → `dog`, only cats → `cat`, both → `mixed`.
+ */
+export type PetGroup = 'dog' | 'cat' | 'mixed';
+
+/** `paywall:entry.rowWaiting` → `cat:mixed.paywall.entry.rowWaiting` (null for a key without a namespace). */
+export function mixedKey(key: string): string | null {
+  const colon = key.indexOf(':');
+  return colon > 0 ? `cat:mixed.${key.slice(0, colon)}.${key.slice(colon + 1)}` : null;
+}
+
+/**
+ * Text about a group of pets (M5-R06-09): `dog` → exactly the dog text; `cat` → the cat
+ * override (as {@link tSpecies}); `mixed` (a family with dogs and cats) → the neutral
+ * "pet" / "ljubljenček" text in `cat:mixed.<ns>.<key>` when it exists, else the dog text.
+ */
+export function tPets(key: string, group: PetGroup | null | undefined, options?: Record<string, unknown>): string {
+  if (group === 'mixed') {
+    const mixed = mixedKey(key);
+    const exists = i18n.exists as unknown as (k: string, o?: unknown) => boolean;
+    if (mixed !== null && exists(mixed, options)) return (i18n.t as unknown as (k: string, o?: unknown) => string)(mixed, options);
+  }
+  return tSpecies(key, group === 'cat' ? 'cat' : null, options);
+}
+
 /** Translate outside React (helpers, error mappers). Bound to the shared instance; species-aware (above). */
 export const t = ((...args: unknown[]) => {
   const [key, ...rest] = args;

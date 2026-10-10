@@ -19,6 +19,7 @@ import {
   classifyExportError,
   deleteAccountAndLogout,
   deletionLosesPurchase,
+  paidDeletionGroup,
   shareFamilyExport,
   type DeletionErrorKind,
   type ExportErrorKind,
@@ -26,7 +27,7 @@ import {
 import { useBilling } from '@/modules/purchases';
 import type { FamilyOverview } from '@/modules/family/family';
 import { palette } from '@/theme';
-import { t, tSpecies } from '@/i18n';
+import { t, tPets, tSpecies } from '@/i18n';
 import { catCount, petCountText } from '@/modules/species/species';
 import { strings } from '@/i18n/strings';
 
@@ -68,6 +69,8 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
   // M3-11 P5: the last parent's deletion removes every dog — warn when a purchase is lost.
   const billing = useBilling();
   const [paidRequired, setPaidRequired] = useState(false);
+  // M5-R06-09: "this cat" / "this pet" in the paid-challenge texts (the last parent removes every pet).
+  const paidGroup = paidDeletionGroup((family?.pets ?? []).map((p) => p.id), family, billing.data);
   const consequences = impact.lastParent
     ? [...S.lastParent(impact.children, impact.pets, catCount(family?.pets ?? [])), S.exportFirst]
     : [...S.otherParentStays, S.exportFirst];
@@ -94,7 +97,7 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
     } catch (err) {
       const kind = classifyDeletionError(err);
       if (kind === 'paid_challenge') setPaidRequired(true);
-      setDeleteError({ text: () => S.deleteErrors[kind] });
+      setDeleteError({ text: () => (kind === 'paid_challenge' ? tPets('account:card.deleteErrors.paid_challenge', paidGroup) : S.deleteErrors[kind]) });
       setDeleting(false);
     }
   };
@@ -137,6 +140,7 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
             setDeleteError(null);
           }}
           paidChallenge={paidRequired || (impact.lastParent && deletionLosesPurchase((family?.pets ?? []).map((p) => p.id), billing.data))}
+          paidPetGroup={paidGroup}
           onSubmit={(password, ack) => void runDelete(password, ack)}
           testID="account-delete-form"
         />

@@ -19,7 +19,8 @@ import {
 } from '@/api/client';
 import type { FamilyChild, FamilyOverview } from '@/modules/family/family';
 import { logout } from '@/modules/session/logout';
-import { t } from '@/i18n';
+import { t, type PetGroup } from '@/i18n';
+import { petGroup } from '@/modules/species/species';
 
 /**
  * What the parent has to type before the red button unlocks, in the app language
@@ -69,6 +70,21 @@ export interface ChildDeletionImpact {
  */
 export function deletionLosesPurchase(petIds: readonly number[], billing: { pets: readonly { pet_id: number; deletion_loses_purchase?: boolean }[] } | undefined): boolean {
   return (billing?.pets ?? []).some((p) => p.deletion_loses_purchase === true && petIds.includes(p.pet_id));
+}
+
+/**
+ * M5-R06-09: the species of the paid-challenge warning — the removed pets whose purchase is
+ * lost (billing), else every removed pet (a server 422 with stale billing). Only dogs (or
+ * unknown) → `dog` (the old text), only cats → `cat`, both → `mixed`.
+ */
+export function paidDeletionGroup(
+  petIds: readonly number[],
+  family: FamilyOverview | null | undefined,
+  billing: { pets: readonly { pet_id: number; deletion_loses_purchase?: boolean }[] } | undefined,
+): PetGroup {
+  const removed = (family?.pets ?? []).filter((p) => petIds.includes(p.id));
+  const losing = removed.filter((p) => (billing?.pets ?? []).some((b) => b.pet_id === p.id && b.deletion_loses_purchase === true));
+  return petGroup(losing.length > 0 ? losing : removed);
 }
 
 /** Pets only this child cares for — the ones a child deletion removes. */

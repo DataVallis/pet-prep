@@ -131,7 +131,7 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
 
       {/* M5-F01: the badge alone was overlooked on a device — a clear entry until the challenge is paid. */}
       {onOpenChallenge && canBuyChallenge(pet) && (
-        <ChallengeBuyButton onPress={onOpenChallenge} childName={child.name} testID={`child-buy-${id}`} />
+        <ChallengeBuyButton onPress={onOpenChallenge} childName={child.name} species={species} testID={`child-buy-${id}`} />
       )}
 
       {child.traffic_light.reasons.length > 0 && (

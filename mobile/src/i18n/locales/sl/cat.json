@@ -410,6 +410,11 @@
         "awaiting_contract": "Muca čaka na podpis pogodbe",
         "inactive": "Muca ni aktivna",
         "ill": "Muca je pri veterinarju"
+      },
+      "children": {
+        "deleteErrors": {
+          "paid_challenge": "Ta izbris odstrani muco, za katero je bil kupljen 12-tedenski izziv. Odkljukajte potrditev, da je nakup porabljen."
+        }
       }
     },
     "parent": {
@@ -475,10 +480,89 @@
         "dogs_two": "{{count}} muci",
         "dogs_few": "{{count}} muce",
         "dogs_other": "{{count}} muc"
+      },
+      "card": {
+        "deleteErrors": {
+          "paid_challenge": "Ta izbris odstrani muco, za katero je bil kupljen 12-tedenski izziv. Odkljukajte potrditev, da je nakup porabljen."
+        }
+      },
+      "deletionForm": {
+        "paidWarning": "Za to muco je bil kupljen 12-tedenski izziv. Če jo izbrišete, je nakup porabljen — za novo muco boste morali izziv kupiti znova."
+      }
+    },
+    "paywall": {
+      "banner": {
+        "paymentRequired": "12-tedenski izziv ({{names}}) se začne, ko ga kupite. Do takrat muca čaka na varnem: potrebe ne padajo in nič se ne izgubi."
+      },
+      "entry": {
+        "buyA11y": "Kupite 12-tedenski izziv za muco, za katero skrbi {{name}}",
+        "rowWaiting_one": "{{count}} muca čaka na nakup",
+        "rowWaiting_two": "{{count}} muci čakata na nakup",
+        "rowWaiting_few": "{{count}} muce čakajo na nakup",
+        "rowWaiting_other": "{{count}} muc čaka na nakup",
+        "rowAllPaid": "Nobena muca ne čaka na nakup. Tukaj lahko obnovite tudi nakupe na novem telefonu."
+      },
+      "challenge": {
+        "intro": "Izziv v 12 tednih pokaže, ali je otrok pripravljen na pravo mačko. En nakup velja za eno muco.",
+        "includes": {
+          "media": "Personalizirana AI muca z videom za vsa stanja"
+        },
+        "honest": "Enkratni nakup {{price}} za eno muco. Brez naročnine in brez samodejnega plačila: izziv se začne, ko ga kupite. Bi najprej poskusili? Brezplačna domača mačka je brezplačna za vedno.",
+        "petsTitle": "Muce, ki čakajo na izziv",
+        "unborn": "Še ni rojena. Kupite izziv zdaj in muca zaživi takoj, ko otrok podpiše pogodbo.",
+        "paused": "Igra je ustavljena. Muca čaka na varnem, napredek ostane.",
+        "allPaid": "Nobena muca ne čaka na nakup. Vsi izzivi so odklenjeni."
+      },
+      "result": {
+        "restoredNoCredit": "Nakupi so obnovljeni, a ni neuporabljenega izziva. Vsak izziv velja za eno muco.",
+        "refused": "Ta muca izziva ne potrebuje (brezplačni načrt ali je že plačan)."
       }
     }
   },
   "account": {
     "whatMixed": "vaš račun, {{children}}, {{dogs}} in {{cats}},"
+  },
+  "mixed": {
+    "paywall": {
+      "banner": {
+        "paymentRequired": "12-tedenski izziv ({{names}}) se začne, ko ga kupite. Do takrat vsak ljubljenček čaka na varnem: potrebe ne padajo in nič se ne izgubi."
+      },
+      "entry": {
+        "rowWaiting_one": "{{count}} ljubljenček čaka na nakup",
+        "rowWaiting_two": "{{count}} ljubljenčka čakata na nakup",
+        "rowWaiting_few": "{{count}} ljubljenčki čakajo na nakup",
+        "rowWaiting_other": "{{count}} ljubljenčkov čaka na nakup",
+        "rowAllPaid": "Noben ljubljenček ne čaka na nakup. Tukaj lahko obnovite tudi nakupe na novem telefonu."
+      },
+      "challenge": {
+        "intro": "Izziv v 12 tednih pokaže, ali je otrok pripravljen na pravega ljubljenčka. En nakup velja za enega ljubljenčka.",
+        "includes": {
+          "media": "Personaliziran AI ljubljenček z videom za vsa stanja"
+        },
+        "honest": "Enkratni nakup {{price}} za enega ljubljenčka. Brez naročnine in brez samodejnega plačila: izziv se začne, ko ga kupite. Bi najprej poskusili? Brezplačni pasmi (mešanček in domača mačka) sta brezplačni za vedno.",
+        "petsTitle": "Ljubljenčki, ki čakajo na izziv",
+        "allPaid": "Noben ljubljenček ne čaka na nakup. Vsi izzivi so odklenjeni."
+      },
+      "result": {
+        "restoredNoCredit": "Nakupi so obnovljeni, a ni neuporabljenega izziva. Vsak izziv velja za enega ljubljenčka."
+      }
+    },
+    "family": {
+      "children": {
+        "deleteErrors": {
+          "paid_challenge": "Ta izbris odstrani ljubljenčka, za katerega je bil kupljen 12-tedenski izziv. Odkljukajte potrditev, da je nakup porabljen."
+        }
+      }
+    },
+    "account": {
+      "card": {
+        "deleteErrors": {
+          "paid_challenge": "Ta izbris odstrani ljubljenčka, za katerega je bil kupljen 12-tedenski izziv. Odkljukajte potrditev, da je nakup porabljen."
+        }
+      },
+      "deletionForm": {
+        "paidWarning": "Za tega ljubljenčka je bil kupljen 12-tedenski izziv. Če ga izbrišete, je nakup porabljen — za novega ljubljenčka boste morali izziv kupiti znova."
+      }
+    }
   }
 }
