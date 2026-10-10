@@ -367,6 +367,7 @@ const SPECIES = [
       { id: 'golden_retriever', availability: 'coming_soon', synonyms: { en: ['Golden'], sl: ['golden', 'golden retriver'] } },
       { id: 'french_bulldog', availability: 'coming_soon', synonyms: { en: ['Frenchie'], sl: ['frenchie', 'francoski buldog', 'french bulldog'] } },
       { id: 'german_shepherd', availability: 'coming_soon', synonyms: { en: ['Alsatian', 'GSD'], sl: ['nemški ovčar', 'nemski ovcar', 'german shepherd'] } },
+      { id: 'cavalier_king_charles_spaniel', availability: 'coming_soon', synonyms: { en: ['Cavalier', 'CKCS', 'Cavalier King Charles'], sl: ['kavalir king charles španjel', 'kavalir king charles spanjel', 'kavalir', 'cavalier'] } },
     ],
   },
   {
@@ -460,6 +461,23 @@ const DOG_FACTS = {
       ['degenerative_myelopathy', 'health.degenerative_myelopathy'],
     ],
   },
+  // M5-R10-05. Not exported: adult_weight.uk_measured_median (10.5 kg, no sex split — would read as a
+  // target weight), disorder percentages (Summers 2015, S109 — research only).
+  cavalier_king_charles_spaniel: {
+    height: ['height.pdsa_average'],
+    weight: [['adult_weight.fci', null], ['adult_weight.rkc', null], ['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['heart_valve_disease', 'health.heart_mvd'],
+      ['chiari_syringomyelia', 'health.syringomyelia'],
+      ['eye_conditions', 'health.eyes'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -502,6 +520,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.german_shepherd.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.german_shepherd.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.german_shepherd.exercise_minutes_senior',
+  },
+  cavalier_king_charles_spaniel: {
+    adult_minutes: ['proposed_game_parameters.cavalier_king_charles_spaniel.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.cavalier_king_charles_spaniel.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.cavalier_king_charles_spaniel.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.cavalier_king_charles_spaniel.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.cavalier_king_charles_spaniel.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.cavalier_king_charles_spaniel.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],

@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "362d22c59ebac3c6818dabad3d718d3810708a3220e95f09dbcc5e6fb09685bd"
+      "sha256": "e82102d5a01758d2eaea74d2b9dd1d4bbc7a71b54c4047c9493e2195fcd2d1f7"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "958a60a19f701a0db8d19281afe95120818bc427b2a818bd242bcd9d8486dd01"
+      "sha256": "aaf22180c9e45f3f41dafca4fb1be510950a155f23be1209317cca2daff0f364"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,23 +25,23 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "8b9aea909249b40cb3b5ce837e7aaa0119334a91bc689a2edb84e3c238cde4e3"
+      "sha256": "7670e3af28cd6aa5b84156dbfc36e284dc5d6371840d3fe695e143306457c5bd"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "e68e70c9a431d58a68ed60dc658bd3357708a686894e555d9f980af1a27ee734"
+      "sha256": "f986a178fe35b42962c9dbcdf7b0debba7e464526779be420d468aee7e1d6539"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "ab583651232f8a1896e8aadbcae7aea77469bb4aad99440c7a7d4c2eedd9ca15"
+      "sha256": "0c8392cb4ffc74935ef263925e1955810ef4ee1efd79ea0abf6dd851df978d04"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "66b8db7fffe7f141f346fcb27befff258dbe38bb9afd4a984d6ff62b0e29bb24"
+      "sha256": "66cc07949d607b277e49abfeb9a2d83a581d49aea04b217088ce3b27010b924f"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "fe2b6f92314d99060c0cea7d70271a106065de5bc03dd82f04f9cc9012e4e7be"
+      "sha256": "759865e375fc4ce467e3321c64ea8d95479d84e6463327417901801098b27e3d"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -58,6 +58,7 @@
     "first_time_owner": "suits",
     "food_motivated_weight": "consider",
     "frequent_grooming": "consider",
+    "heart_and_spine": "consider",
     "hips_hind_legs": "consider",
     "large_home": "suits",
     "long_daily_exercise": "consider",
@@ -84,6 +85,7 @@
         "first_time_owner": "first-time owners",
         "food_motivated_weight": "loves food — watch the weight",
         "frequent_grooming": "needs brushing several times a week",
+        "heart_and_spine": "heart and spine — check health tests",
         "hips_hind_legs": "hips and hind legs — check joint health",
         "large_home": "a large house and garden",
         "long_daily_exercise": "needs lots of exercise every day",
@@ -110,6 +112,7 @@
         "first_time_owner": "začetnike",
         "food_motivated_weight": "rad je — pazite na težo",
         "frequent_grooming": "potrebuje česanje večkrat na teden",
+        "heart_and_spine": "srce in hrbtenjača — preverite zdravstvene teste",
         "hips_hind_legs": "kolki in zadnje noge — preverite zdravje sklepov",
         "large_home": "veliko hišo z vrtom",
         "long_daily_exercise": "vsak dan potrebuje veliko gibanja",
@@ -142,7 +145,7 @@
         }
       },
       "status": "available",
-      "breed_count": 5,
+      "breed_count": 6,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -3600,6 +3603,533 @@
       ]
     },
     {
+      "id": "cavalier_king_charles_spaniel",
+      "species": "dog",
+      "order": 5,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Cavalier King Charles Spaniel",
+        "sl": "Kavalir King Charles španjel"
+      },
+      "slug": {
+        "en": "cavalier-king-charles-spaniel",
+        "sl": "kavalir-king-charles-spanjel"
+      },
+      "synonyms": {
+        "en": [
+          "Cavalier",
+          "CKCS",
+          "Cavalier King Charles"
+        ],
+        "sl": [
+          "kavalir king charles španjel",
+          "kavalir king charles spanjel",
+          "kavalir",
+          "cavalier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S105"
+          ],
+          "ref": "cavalier_king_charles_spaniel.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": [
+            30,
+            33
+          ],
+          "source_ids": [
+            "S108"
+          ],
+          "ref": "cavalier_king_charles_spaniel.height.pdsa_average",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            5.4,
+            8
+          ],
+          "source_ids": [
+            "S103"
+          ],
+          "ref": "cavalier_king_charles_spaniel.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            5.4,
+            8.2
+          ],
+          "source_ids": [
+            "S106"
+          ],
+          "ref": "cavalier_king_charles_spaniel.adult_weight.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            5.4,
+            8.2
+          ],
+          "source_ids": [
+            "S108"
+          ],
+          "ref": "cavalier_king_charles_spaniel.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "cavalier_king_charles_spaniel.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 9.99,
+          "source_ids": [
+            "S71"
+          ],
+          "ref": "cavalier_king_charles_spaniel.lifespan.median_uk",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S105"
+          ],
+          "ref": "cavalier_king_charles_spaniel.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S105"
+          ],
+          "ref": "cavalier_king_charles_spaniel.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S105"
+          ],
+          "ref": "cavalier_king_charles_spaniel.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S105"
+          ],
+          "ref": "cavalier_king_charles_spaniel.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S105"
+          ],
+          "ref": "cavalier_king_charles_spaniel.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 44,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "cavalier_king_charles_spaniel.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 136,
+            "group": 9,
+            "section": 7,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S104"
+          ],
+          "ref": "cavalier_king_charles_spaniel.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 8,
+        "grooming_frequency": 10,
+        "shedding": 11,
+        "lifespan": 6
+      },
+      "health": [
+        {
+          "key": "heart_valve_disease",
+          "source_ids": [
+            "S108"
+          ],
+          "ref": "cavalier_king_charles_spaniel.health.heart_mvd",
+          "confidence": "high"
+        },
+        {
+          "key": "chiari_syringomyelia",
+          "source_ids": [
+            "S108"
+          ],
+          "ref": "cavalier_king_charles_spaniel.health.syringomyelia",
+          "confidence": "high"
+        },
+        {
+          "key": "eye_conditions",
+          "source_ids": [
+            "S107"
+          ],
+          "ref": "cavalier_king_charles_spaniel.health.eyes",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S105"
+            ],
+            "refs": [
+              "cavalier_king_charles_spaniel.suitability.rkc_size_of_home",
+              "cavalier_king_charles_spaniel.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S108"
+            ],
+            "refs": [
+              "cavalier_king_charles_spaniel.suitability.pdsa_family",
+              "cavalier_king_charles_spaniel.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S108"
+            ],
+            "refs": [
+              "cavalier_king_charles_spaniel.suitability.pdsa_children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S105",
+              "S108"
+            ],
+            "refs": [
+              "cavalier_king_charles_spaniel.suitability.rkc_shedding",
+              "cavalier_king_charles_spaniel.suitability.pdsa_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S105",
+              "S108"
+            ],
+            "refs": [
+              "cavalier_king_charles_spaniel.suitability.rkc_grooming",
+              "cavalier_king_charles_spaniel.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "heart_and_spine",
+            "source_ids": [
+              "S105",
+              "S108",
+              "S110"
+            ],
+            "refs": [
+              "cavalier_king_charles_spaniel.health.heart_mvd",
+              "cavalier_king_charles_spaniel.health.syringomyelia"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.cavalier_king_charles_spaniel.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S105"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S105 'Up to 1 hour per day' = PDSA S108 'at least one hour')"
+          },
+          {
+            "ref": "proposed_game_parameters.cavalier_king_charles_spaniel.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.cavalier_king_charles_spaniel.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S71"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 9.99 y, VetCompass S71)"
+          },
+          {
+            "ref": "proposed_game_parameters.cavalier_king_charles_spaniel.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 44, S35 — Average tier)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S71",
+          "S105"
+        ]
+      },
+      "portrait": null,
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S71",
+        "S103",
+        "S104",
+        "S105",
+        "S106",
+        "S107",
+        "S108",
+        "S110"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -4317,6 +4847,55 @@
       "publisher": "Canine Genetics and Epidemiology 4:7 (2017) (RVC repository copy)",
       "title": "O'Neill D. G., Coulson N. R., Church D. B., Brodbelt D. C. Demography and disorders of German Shepherd Dogs under primary veterinary care in the UK. doi:10.1186/s40575-017-0046-4",
       "url": "https://rvc-repository.worktribe.com/OutputFile/1391082"
+    },
+    {
+      "id": "S103",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 136 — Cavalier King Charles Spaniel, EN (PDF)",
+      "url": "https://WWW.FCI.BE/Nomenclature/Standards/136g09-en.pdf"
+    },
+    {
+      "id": "S104",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — Cavalier King Charles Spaniel (136)",
+      "url": "https://www.fci.be/EN/nomenclature/CAVALIER-KING-CHARLES-SPANIEL-136.html"
+    },
+    {
+      "id": "S105",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: Cavalier King Charles Spaniel",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/cavalier-king-charles-spaniel/"
+    },
+    {
+      "id": "S106",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed standard: Cavalier King Charles Spaniel (last updated April 2025)",
+      "url": "https://www.royalkennelclub.com/breed-standards/toy/cavalier-king-charles-spaniel/"
+    },
+    {
+      "id": "S107",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed Watch — Cavalier King Charles Spaniel (Category 2)",
+      "url": "https://www.royalkennelclub.com/activities/heritage-sports/dog-showing/judging-dog-shows/breed-watch-health-and-welfare-of-show-dogs/cavalier-king-charles-spaniel-category-2/"
+    },
+    {
+      "id": "S108",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Cavalier King Charles Spaniel breed information",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/cavalier-king-charles-spaniel"
+    },
+    {
+      "id": "S110",
+      "tier": "B",
+      "publisher": "University of Bristol — news (6 August 2014)",
+      "title": "Skull shape risk factors could help in the welfare of toy dog breeds (on Mitchell T. J., Knowler S. P., van den Berg H., Sykes J., Rusbridge C. 2014, Canine Genetics and Epidemiology)",
+      "url": "https://www.bristol.ac.uk/news/2014/august/toy-dog-breeds-neurological-diseases.html"
     },
     {
       "id": "C1",
