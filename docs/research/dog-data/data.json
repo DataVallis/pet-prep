@@ -5282,10 +5282,10 @@
       "hip_elbow_dysplasia": {
         "value": "hip and elbow dysplasia — choose puppies from hip- and elbow-scored parents",
         "unit": "—",
-        "source_id": "S134",
-        "quote": "where the hip joint doesn’t fit together perfectly, which will eventually lead to arthritis.",
-        "confidence": "medium",
-        "notes": "PDSA health list (S134) 'Hip dysplasia' and 'Elbow dysplasia' ('where the elbow joint doesn’t fit together perfectly, which will eventually lead to arthritis.'). RKC best practice (S133): 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme', 'Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme'. Not a Breed Watch point → no hips_hind_legs tag (that chip is for a recognised conformation concern)."
+        "source_id": "S133",
+        "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+        "confidence": "high",
+        "notes": "RKC best practice (S133): 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme', 'Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme'. PDSA health list (S134) 'Hip dysplasia': 'where the hip joint doesn’t fit together perfectly, which will eventually lead to arthritis.' and 'Elbow dysplasia' ('where the elbow joint doesn’t fit together perfectly, which will eventually lead to arthritis.'). Not a Breed Watch point → no hips_hind_legs tag (that chip is for a recognised conformation concern)."
       },
       "eyes": {
         "value": "inherited eye disease: collie eye anomaly, hereditary cataracts, progressive retinal atrophy",

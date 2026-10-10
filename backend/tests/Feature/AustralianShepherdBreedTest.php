@@ -236,7 +236,7 @@ describe('life-stage data against data.json', function () {
             ->and(ausRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('australian_shepherd.lifespan.rkc')
             ->and(ausRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S133')
             ->and(ausRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(10.0)
-            // McMillan 2024 has no Australian Shepherd value (S135) — nothing unsourced at runtime.
+            // No McMillan 2024 value was reachable (not in the article text, S135) — nothing unsourced at runtime.
             ->and(ausData('australian_shepherd.lifespan.mcmillan_2024.value'))->toBeNull();
 
         // Like the other pedigree breeds: no individual variation row (factor 1.0).

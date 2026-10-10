@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "0e05b0f809042cab62436db419ec73d0daa8970b01905a70ed552256a6a20aaa"
+      "sha256": "c5a3f58bcbf0b7ed7fd4ce7f8e01db6a00b4422f6a92abf0edaaf673a8188e3f"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "2cad6417e03f330a7da5b0c5843de3410618633dbbdb354157d06d68cfbf19b7"
+      "sha256": "601156c112b844b7994e776355a728b6fb2527140a0b06a7e054908d882c0872"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -5729,10 +5729,10 @@
         {
           "key": "hip_elbow_dysplasia",
           "source_ids": [
-            "S134"
+            "S133"
           ],
           "ref": "australian_shepherd.health.hip_elbow_dysplasia",
-          "confidence": "medium"
+          "confidence": "high"
         },
         {
           "key": "inherited_eye_disease",
