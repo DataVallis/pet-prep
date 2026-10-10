@@ -45,7 +45,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "9e2a18d1779d79f0eefc929b82786853969e17d76882e803aa8400de716a283a"
+      "sha256": "c3524474771ca0a4426f3220c16aa9cba29ec3ec4f629ddca6dd90b5b6a11d63"
     }
   },
   "suitability_vocabulary": {
@@ -5511,7 +5511,12 @@
           "S125"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "dachshund.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "source_ids": [
         "S10",
         "S11",
