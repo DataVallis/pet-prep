@@ -65,6 +65,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "cavalier_king_charles_spaniel",
+            "species": "dog",
+            "file": "dog/cavalier-king-charles-spaniel.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:9d92e93152aaa2e25595ab085113ad1af210f0d29a268d001740164b6cb3c291",
+            "generated_at": "2026-10-10T08:36:03+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
