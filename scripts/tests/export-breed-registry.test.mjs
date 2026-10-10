@@ -85,6 +85,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.cavalier_king_charles_spaniel.availability, 'coming_soon');
   assert.deepEqual(byId.beagle.slug, { en: 'beagle', sl: 'bigl' });
   assert.equal(byId.beagle.availability, 'coming_soon');
+  assert.deepEqual(byId.standard_poodle.slug, { en: 'poodle-standard', sl: 'veliki-pudelj' });
+  assert.equal(byId.standard_poodle.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
@@ -137,6 +139,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     german_shepherd: { adult: 12000, senior: 9000, seniorFrom: 93, learning: 1.9 },
     cavalier_king_charles_spaniel: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1 },
     beagle: { adult: 6000, senior: 4500, seniorFrom: 102, learning: 0.5 },
+    standard_poodle: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 2 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -224,6 +227,25 @@ test('Beagle (M5-R10-06): up to 1 hour (RKC), PDSA weight, FCI group 6, no stati
   const json = JSON.stringify(bg);
   assert.doesNotMatch(json, /common_disorders|uk_measured_median|24\.27|17\.78|18\.19|19\.70/);
   assert.deepEqual(bg.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['median', 11.28], ['more_than', 12]]);
+});
+
+test('Standard Poodle (M5-R10-07): up to 1 hour, PDSA weight by sex, FCI group 9 France, no pooled lifespan, never hypoallergenic', () => {
+  const sp = registry.breeds.find((b) => b.id === 'standard_poodle');
+  const ex = sp.facts.filter((f) => f.field === 'exercise');
+  assert.deepEqual(ex.map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S120']]]);
+  assert.deepEqual(sp.facets, { size: 'medium', exercise: 'under_1h', grooming: 'daily' }); // RKC "Every day" → daily
+  assert.deepEqual(sp.facts.find((f) => f.field === 'fci_standard').value, { number: 172, group: 9, section: 2, origin: 'FR' });
+  assert.deepEqual(sp.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [30, 35], female: [21, 32] }, ['S122']]]);
+  assert.deepEqual(sp.facts.filter((f) => f.field === 'shedding').map((f) => f.value), ['no']);
+  assert.deepEqual(sp.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(sp.game.stages[3].activity, { kind: 'steps', value: 4500 });
+  assert.deepEqual(sp.suitability.suits.map((t) => t.tag), ['children', 'large_home', 'other_pets', 'low_shedding']);
+  assert.deepEqual(sp.suitability.consider.map((t) => t.tag), ['frequent_grooming']);
+  assert.deepEqual(sp.health.map((h) => h.key), ['pra_eye_disease', 'hip_dysplasia', 'bloat_gdv', 'epilepsy']);
+  // Only the RKC lower bound — the pooled "Poodle" 14.0 y (all varieties, S123) is research only.
+  assert.deepEqual(sp.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['more_than', 12]]);
+  const json = JSON.stringify(sp);
+  assert.doesNotMatch(json, /mcmillan_poodle_pooled|hypoallergenic/i);
 });
 
 test('every suitability tag has the app wording in EN and SL', () => {
