@@ -62,7 +62,10 @@ jobs:
           OUT="/tmp/breed-portraits-${RUN_ID}"
           # Remote: run the command in the app container (same compose project as
           # scripts/deploy-production.sh), then copy the result out of the storage volume.
-          ssh "${OPTS[@]}" "${SSH_USER}@${SSH_HOST}" bash -s -- "$OUT" $ARGS <<'REMOTE'
+          mkdir -p out
+          # Action logs can't be downloaded from every client, so the output also goes
+          # into the artifact (run.log) and into one annotation per line.
+          ssh "${OPTS[@]}" "${SSH_USER}@${SSH_HOST}" bash -s -- "$OUT" $ARGS <<'REMOTE' 2>&1 | tee out/run.log
           set -euo pipefail
           OUT="$1"; shift
           dc() { docker compose -p backend -f /opt/petprep/repo/backend/compose.production.yaml "$@"; }
@@ -73,7 +76,7 @@ jobs:
           fi
           find "$OUT" -type f | sort
           REMOTE
-          mkdir -p out
+          tail -n 40 out/run.log | while IFS= read -r line; do echo "::notice title=portraits::${line}"; done
           scp -r "${OPTS[@]}" "${SSH_USER}@${SSH_HOST}:${OUT}/." out/ || true
           ssh "${OPTS[@]}" "${SSH_USER}@${SSH_HOST}" "rm -rf '$OUT'"
           find out -type f | sort
