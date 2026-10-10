@@ -26,8 +26,9 @@ import { BREED_SPECIES, breedName, foldForSearch, isKnownBreed, isSpecies } from
  * confirmed meals + step goals (PRODUCT_SPEC §5; minutes × 100 steps; 1 week = 1 month).
  * Puppy / young: 10 min × age in months up to the adult goal (mutt 60 min, Border Collie
  * 120 min, Labrador 90 min — reached at 9 months, Golden Retriever 120 min — reached at
- * 12 months, French Bulldog 60 min — reached at 6 months); senior 75 % of adult (Labrador
- * 68 min, whole minutes on the server; Golden 90 min; French Bulldog 45 min). Arrival age: puppy 2, young 9 months (§4). Cat texts
+ * 12 months, French Bulldog 60 min — reached at 6 months, German Shepherd 120 min — reached at
+ * 12 months); senior 75 % of adult (Labrador 68 min, whole minutes on the server; Golden 90 min;
+ * French Bulldog 45 min; German Shepherd 90 min). Arrival age: puppy 2, young 9 months (§4). Cat texts
  * that differ by species live under `pet:picker.cat` (M5-R06_PLAN T8) — read them through
  * {@link pickerText}.
  */
@@ -83,6 +84,7 @@ export const CONSIDER_TAGS: readonly ConsiderTag[] = [
   'food_motivated_weight',
   'frequent_grooming',
   'brachycephalic_breathing',
+  'hips_hind_legs',
 ] satisfies readonly ConsiderTag[];
 
 /** A breed's suitability tags (empty lists = no sourced tags, e.g. the mutt). */
@@ -238,6 +240,19 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       suitability: {
         suits: ['apartment', 'family_pet', 'children'],
         consider: ['brachycephalic_breathing'],
+      },
+    },
+    {
+      breed: 'german_shepherd',
+      species: 'dog',
+      premium: true,
+      free_plan_allowed: false,
+      challenge_allowed: true,
+      search_keywords: ['german shepherd', 'german shepherd dog', 'gsd', 'alsatian', 'nemški ovčar', 'nemski ovcar', 'ovčar', 'ovcar'],
+      sort_order: 50,
+      suitability: {
+        suits: ['active_family', 'family_pet', 'large_home'],
+        consider: ['long_daily_exercise', 'sheds', 'frequent_grooming', 'chews_when_bored', 'hips_hind_legs'],
       },
     },
   ],
