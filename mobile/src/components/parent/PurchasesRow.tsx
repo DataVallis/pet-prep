@@ -10,9 +10,10 @@ import { ChevronRight, ShoppingBag } from 'lucide-react-native';
 
 import { Text } from '@/components/ui/Text';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
-import { t } from '@/i18n';
+import { t, tPets } from '@/i18n';
 import type { FamilyOverview } from '@/modules/family/family';
-import { petsAwaitingPurchase } from '@/modules/plan/purchaseEntry';
+import { challengePets, petsAwaitingPurchase } from '@/modules/plan/purchaseEntry';
+import { petGroup } from '@/modules/species/species';
 import { radius } from '@/theme';
 
 interface PurchasesRowProps {
@@ -20,10 +21,15 @@ interface PurchasesRowProps {
   onPress: () => void;
 }
 
-/** "1 dog is waiting for a purchase" · "All challenges are paid …". */
+/**
+ * "1 dog is waiting for a purchase" · "All challenges are paid …" — M5-R06-09: "1 cat …"
+ * when only cats are meant, neutral "pets" for dogs and cats together.
+ */
 export function purchasesRowSubtitle(family: FamilyOverview): string {
-  const waiting = petsAwaitingPurchase(family).length;
-  return waiting > 0 ? t('paywall:entry.rowWaiting', { count: waiting }) : t('paywall:entry.rowAllPaid');
+  const waiting = petsAwaitingPurchase(family);
+  return waiting.length > 0
+    ? tPets('paywall:entry.rowWaiting', petGroup(waiting), { count: waiting.length })
+    : tPets('paywall:entry.rowAllPaid', petGroup(challengePets(family)));
 }
 
 export default function PurchasesRow({ family, onPress }: PurchasesRowProps) {

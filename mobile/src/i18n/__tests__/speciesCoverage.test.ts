@@ -12,7 +12,7 @@
  *    key, with the same `{{placeholders}}` and the language's plural forms.
  */
 import { NAMESPACES, resources } from '@/i18n/resources';
-import i18n, { tSpecies } from '@/i18n';
+import i18n, { tPets, tSpecies } from '@/i18n';
 
 type Tree = { [key: string]: string | Tree };
 type Lang = 'en' | 'sl';
@@ -62,12 +62,8 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'parent:addChild.newPetHint': 'dog-only catalogue; with cats → `newPetAnyHint`',
   'parent:addChild.petTitle': 'dog-only catalogue; with cats → `petTitleAny`',
   'parent:addChild.petsLoading': 'dog-only catalogue; with cats → `petsLoadingAny`',
-  // ── Payments for a cat (the paywall and the paid-challenge texts) — R06-09 (PAYMENTS_SPEC) ──
+  // The paywall and the paid-challenge texts have cat overrides + neutral `cat:mixed.*` since M5-R06-09.
   // The other family-level texts are neutral ("pet" / "ljubljenček") since M5-R06-08d (David 2026-10-09).
-  'family:children.deleteErrors.paid_challenge': '(D) payments for a cat — R06-09 (PAYMENTS_SPEC)',
-  'account:card.deleteErrors.paid_challenge': '(D) payments for a cat — R06-09 (PAYMENTS_SPEC)',
-  'account:deletionForm.paidWarning': '(D) payments for a cat — R06-09 (PAYMENTS_SPEC)',
-  paywall: '(D) the challenge for a cat — R06-09 (PAYMENTS_SPEC "izziv za mačko")',
 };
 
 function flatten(tree: Tree, prefix = ''): Map<string, string> {
@@ -197,11 +193,12 @@ describe('T8 species coverage (M5-R06-08c)', () => {
     expect(keys('sl')).toEqual(keys('en'));
   });
 
-  it.each(LANGS)('every override replaces an existing dog key with the same placeholders (%s)', (lang) => {
+  it.each(LANGS)('every override / mixed text replaces an existing dog key with the same placeholders (%s)', (lang) => {
     const problems: string[] = [];
     for (const [key, value] of catFlat[lang]) {
-      if (!key.startsWith('override.')) continue;
-      const rest = key.slice('override.'.length);
+      const prefix = ['override.', 'mixed.'].find((p) => key.startsWith(p));
+      if (prefix === undefined) continue;
+      const rest = key.slice(prefix.length);
       const dot = rest.indexOf('.');
       const ns = rest.slice(0, dot);
       if (!(NAMESPACES as readonly string[]).includes(ns)) {
@@ -228,12 +225,13 @@ describe('T8 species coverage (M5-R06-08c)', () => {
     const forms = (map: Map<string, string>, prefix: string, b: string) =>
       [...map.keys()].filter((k) => k.startsWith(prefix) && base(k.slice(prefix.length)) === b).map((k) => k.slice(prefix.length)).sort();
     for (const key of catFlat[lang].keys()) {
-      if (!key.startsWith('override.') || !PLURAL.test(key)) continue;
-      const rest = key.slice('override.'.length);
+      const prefix = ['override.', 'mixed.'].find((p) => key.startsWith(p));
+      if (prefix === undefined || !PLURAL.test(key)) continue;
+      const rest = key.slice(prefix.length);
       const dot = rest.indexOf('.');
       const ns = rest.slice(0, dot);
       const b = base(rest.slice(dot + 1));
-      expect({ key: b, forms: forms(catFlat[lang], `override.${ns}.`, b) }).toEqual({ key: b, forms: forms(flat(lang, ns), '', b) });
+      expect({ key: b, forms: forms(catFlat[lang], `${prefix}${ns}.`, b) }).toEqual({ key: b, forms: forms(flat(lang, ns), '', b) });
     }
   });
 });
@@ -313,5 +311,93 @@ describe('tSpecies (parent texts by the shown pet, M5-R06-08c)', () => {
 
   it('falls back to the dog text when a cat has no override (species-neutral text)', () => {
     expect(tSpecies('family:petStatus.hard_stopped', 'cat')).toBe('Game paused (hard stop)');
+  });
+});
+
+describe('payments for a cat (M5-R06-09: paywall, purchase entry, deletion ack)', () => {
+  /** Texts about one pet: a cat variant. */
+  const PER_PET = ['paywall:entry.buyA11y', 'paywall:challenge.unborn', 'paywall:challenge.paused', 'paywall:result.refused'];
+  /** Texts about a group of pets: a cat variant AND a neutral `cat:mixed.*` for dogs + cats. */
+  const GROUP = [
+    'paywall:banner.paymentRequired',
+    'paywall:entry.rowWaiting',
+    'paywall:entry.rowAllPaid',
+    'paywall:challenge.intro',
+    'paywall:challenge.includes.media',
+    'paywall:challenge.honest',
+    'paywall:challenge.petsTitle',
+    'paywall:challenge.allPaid',
+    'paywall:result.restoredNoCredit',
+    'family:children.deleteErrors.paid_challenge',
+    'account:card.deleteErrors.paid_challenge',
+    'account:deletionForm.paidWarning',
+  ];
+  const mixedKeys = (lang: Lang) =>
+    new Set([...catFlat[lang].keys()].filter((k) => k.startsWith('mixed.')).map((k) => {
+      const rest = base(k.slice('mixed.'.length));
+      const dot = rest.indexOf('.');
+      return `${rest.slice(0, dot)}:${rest.slice(dot + 1)}`;
+    }));
+
+  it('no payment text is dog-only any more; every dog text of the paywall is listed here', () => {
+    const paywallDogKeys = [...dogKeys()].filter((k) => k.startsWith('paywall:')).sort();
+    expect(paywallDogKeys).toEqual([...PER_PET, ...GROUP].filter((k) => k.startsWith('paywall:')).sort());
+    for (const key of [...PER_PET, ...GROUP]) expect({ key, dogOnly: dogOnlyReason(key) }).toEqual({ key, dogOnly: undefined });
+  });
+
+  it.each(LANGS)('every payment text has a cat variant, every group text a neutral mixed variant (%s)', (lang) => {
+    for (const key of [...PER_PET, ...GROUP]) expect({ key, cat: hasCatVariant(lang, key) }).toEqual({ key, cat: true });
+    const mixed = mixedKeys(lang);
+    for (const key of GROUP) expect({ key, mixed: mixed.has(key) }).toEqual({ key, mixed: true });
+    // Mixed variants only for group texts (a single pet always has one species).
+    expect([...mixed].filter((k) => !GROUP.includes(k))).toEqual([]);
+  });
+
+  describe('tPets', () => {
+    afterEach(async () => {
+      await i18n.changeLanguage('en');
+    });
+
+    it('dog (or no cat) keeps the dog text byte for byte', async () => {
+      for (const lang of LANGS) {
+        await i18n.changeLanguage(lang);
+        for (const key of GROUP) {
+          for (const opts of [{ count: 1, names: 'Mia', price: '49,99 €' }, { count: 3, names: 'Mia', price: '49,99 €' }]) {
+            const dog = (i18n.t as unknown as (k: string, o: unknown) => string)(key, opts);
+            expect(tPets(key, 'dog', opts)).toBe(dog);
+            expect(tPets(key, null, opts)).toBe(dog);
+          }
+        }
+      }
+      await i18n.changeLanguage('sl');
+      expect(tPets('paywall:entry.rowWaiting', 'dog', { count: 2 })).toBe('2 psa čakata na nakup');
+    });
+
+    it('cat: "muca" / "cat" with the Slovenian plural forms; formal "vi" for parents', async () => {
+      await i18n.changeLanguage('sl');
+      expect(tPets('paywall:entry.rowWaiting', 'cat', { count: 1 })).toBe('1 muca čaka na nakup');
+      expect(tPets('paywall:entry.rowWaiting', 'cat', { count: 2 })).toBe('2 muci čakata na nakup');
+      expect(tPets('paywall:entry.rowWaiting', 'cat', { count: 3 })).toBe('3 muce čakajo na nakup');
+      expect(tPets('paywall:entry.rowWaiting', 'cat', { count: 5 })).toBe('5 muc čaka na nakup');
+      expect(tPets('paywall:challenge.honest', 'cat', { price: '49,99 €' })).toMatch(/^Enkratni nakup 49,99 € za eno muco\..*Brezplačna domača mačka je brezplačna za vedno\.$/);
+      expect(tPets('account:deletionForm.paidWarning', 'cat')).toMatch(/Če jo izbrišete/);
+      expect(tSpecies('paywall:challenge.unborn', 'cat')).toMatch(/^Še ni rojena\./);
+      await i18n.changeLanguage('en');
+      expect(tSpecies('paywall:entry.buyA11y', 'cat', { name: 'Mia' })).toBe("Buy the 12-week challenge for Mia's cat");
+      expect(tPets('paywall:challenge.petsTitle', 'cat')).toBe('Cats waiting for the challenge');
+    });
+
+    it('dogs and cats together: neutral "pet" / "ljubljenček"', async () => {
+      await i18n.changeLanguage('sl');
+      expect(tPets('paywall:entry.rowWaiting', 'mixed', { count: 2 })).toBe('2 ljubljenčka čakata na nakup');
+      expect(tPets('paywall:entry.rowWaiting', 'mixed', { count: 3 })).toBe('3 ljubljenčki čakajo na nakup');
+      expect(tPets('paywall:challenge.petsTitle', 'mixed')).toBe('Ljubljenčki, ki čakajo na izziv');
+      await i18n.changeLanguage('en');
+      expect(tPets('paywall:challenge.intro', 'mixed')).toBe(
+        'Over 12 weeks the challenge shows whether your child is ready for a real pet. One purchase covers one pet.',
+      );
+      // A text without a mixed variant (no dog word) stays the dog text.
+      expect(tPets('paywall:banner.pauseSoon', 'mixed', { names: 'Mia' })).toBe(i18n.t('paywall:banner.pauseSoon', { names: 'Mia' }));
+    });
   });
 });

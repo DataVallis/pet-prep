@@ -12,6 +12,9 @@
  * - Honest copy: one dog, no subscription, no automatic charge; the store shows the final
  *   price. Parent app only (password-protected = parental gate); never in a child session.
  * - Outcomes are kept as codes and translated at render (follow a language switch).
+ * - M5-R06-09: species-aware copy. A pet's own lines ("not born yet", "paused", "doesn't need a
+ *   challenge") follow its species; the screen-level copy follows the pets it is about
+ *   (`petGroup`: only dogs = the dog text, only cats = "cat" / "muca", both = neutral "pet").
  */
 
 import { useEffect, useRef, useState } from 'react';
@@ -23,12 +26,13 @@ import { ChevronLeft, Check } from 'lucide-react-native';
 import { ApiError, api } from '@/api/client';
 import { Text } from '@/components/ui/Text';
 import { Card, PARENT_COLORS as C } from '@/components/parent/ParentUi';
-import { currentLanguageTag, t } from '@/i18n';
+import { currentLanguageTag, t, tPets, tSpecies, type PetGroup } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { parentDashboardKey } from '@/hooks/queries/useParentDashboard';
 import { PRIVACY_URL, TERMS_URL } from '@/modules/auth/signup';
 import { breedLabel, caretakerNames, type FamilyOverview } from '@/modules/family/family';
-import { isBillingPetPurchasable } from '@/modules/plan/purchaseEntry';
+import { challengePets, isBillingPetPurchasable } from '@/modules/plan/purchaseEntry';
+import { petGroup } from '@/modules/species/species';
 import {
   BILLING_KEY,
   challengePackage,
@@ -47,7 +51,6 @@ import { petLabel } from '@/modules/petName/petName';
 export const CHALLENGE_STRINGS = strings('paywall', 'challenge', {
   petLine: (breed: string, names: string) => t('paywall:challenge.petLine', { breed, names }),
   pausesAt: (when: string) => t('paywall:challenge.pausesAt', { when }),
-  honest: (price: string) => t('paywall:challenge.honest', { price }),
   buy: (price: string) => t('paywall:challenge.buy', { price }),
   credits: (count: number) => t('paywall:challenge.credits', { count }),
 });
@@ -58,15 +61,16 @@ const LIST_PRICE = '49,99 €';
 type Message =
   | { kind: 'purchase'; outcome: PurchaseOutcome }
   | { kind: 'restore'; outcome: RestoreOutcome; activated: boolean | null }
-  | { kind: 'activate'; result: 'unlocked' | 'noCredit' | 'refused' | 'failed' };
+  | { kind: 'activate'; result: 'unlocked' | 'noCredit' | 'refused' | 'failed'; species: string | null };
 
-function messageText(m: Message): string {
+/** `group` = the pets the screen is about (restore); an activation names its own pet's species. */
+function messageText(m: Message, group: PetGroup): string {
   switch (m.kind) {
     case 'purchase':
       return m.outcome.status === 'success' && m.outcome.serverConfirmed ? RESULT.unlocked : purchaseOutcomeMessage(m.outcome);
     case 'restore':
       if (m.outcome.status === 'restored' && m.activated === true) return RESULT.restoredUnlocked;
-      if (m.outcome.status === 'restored' && m.activated === false) return RESULT.restoredNoCredit;
+      if (m.outcome.status === 'restored' && m.activated === false) return tPets('paywall:result.restoredNoCredit', group);
       return restoreOutcomeMessage(m.outcome);
     case 'activate':
       return m.result === 'unlocked'
@@ -74,7 +78,7 @@ function messageText(m: Message): string {
         : m.result === 'noCredit'
           ? RESULT.noCredit
           : m.result === 'refused'
-            ? RESULT.refused
+            ? tSpecies('paywall:result.refused', m.species)
             : RESULT.activateFailed;
   }
 }
@@ -138,6 +142,11 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
   const waiting = (billing.data?.pets ?? []).filter((p) => isBillingPetPurchasable(p, family));
   const credits = billing.data?.credits_available ?? 0;
   const timezone = family?.timezone ?? 'Europe/Ljubljana';
+  // M5-R06-09: the pets this screen talks about — the waiting ones, else the family's
+  // challenge pets, else every pet (no cat → exactly the dog texts).
+  const waitingPets = (family?.pets ?? []).filter((p) => waiting.some((w) => w.pet_id === p.id));
+  const offered = challengePets(family);
+  const group = petGroup(waitingPets.length > 0 ? waitingPets : offered.length > 0 ? offered : (family?.pets ?? []));
 
   const refresh = () => {
     void queryClient.invalidateQueries({ queryKey: BILLING_KEY });
@@ -146,13 +155,14 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
 
   const activate = async (petId: number): Promise<Message> => {
     setActivating(petId);
+    const species = family?.pets.find((p) => p.id === petId)?.species ?? null;
     try {
       await api.activateChallenge(petId);
-      return { kind: 'activate', result: 'unlocked' };
+      return { kind: 'activate', result: 'unlocked', species };
     } catch (error) {
-      if (error instanceof ApiError && error.status === 409) return { kind: 'activate', result: 'noCredit' };
-      if (error instanceof ApiError && error.status === 422) return { kind: 'activate', result: 'refused' };
-      return { kind: 'activate', result: 'failed' };
+      if (error instanceof ApiError && error.status === 409) return { kind: 'activate', result: 'noCredit', species };
+      if (error instanceof ApiError && error.status === 422) return { kind: 'activate', result: 'refused', species };
+      return { kind: 'activate', result: 'failed', species };
     } finally {
       setActivating(null);
       refresh();
@@ -198,23 +208,23 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
       </View>
 
       <ScrollView contentContainerStyle={styles.content}>
-        <Text style={styles.intro}>{S.intro}</Text>
+        <Text style={styles.intro}>{tPets('paywall:challenge.intro', group)}</Text>
 
         <Card>
           <Text style={styles.sectionTitle}>{S.includesTitle}</Text>
           {(['program', 'breed', 'certificate', 'history', 'media'] as const).map((key) => (
             <View key={key} style={styles.includeRow}>
               <Check color={C.accent} size={16} />
-              <Text style={styles.body}>{S.includes[key]}</Text>
+              <Text style={styles.body}>{key === 'media' ? tPets('paywall:challenge.includes.media', group) : S.includes[key]}</Text>
             </View>
           ))}
-          <Text style={styles.honest}>{S.honest(price ?? LIST_PRICE)}</Text>
+          <Text style={styles.honest}>{tPets('paywall:challenge.honest', group, { price: price ?? LIST_PRICE })}</Text>
           <Text style={styles.muted}>{S.priceEstimate}</Text>
         </Card>
 
         {message && (
           <View style={[styles.message, isGoodMessage(message) ? styles.messageOk : styles.messageWarn]} testID="challenge-message">
-            <Text style={styles.body}>{messageText(message)}</Text>
+            <Text style={styles.body}>{messageText(message, group)}</Text>
           </View>
         )}
 
@@ -232,11 +242,11 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
           </Card>
         ) : waiting.length === 0 ? (
           <Card testID="challenge-all-paid">
-            <Text style={styles.body}>{S.allPaid}</Text>
+            <Text style={styles.body}>{tPets('paywall:challenge.allPaid', group)}</Text>
           </Card>
         ) : (
           <>
-            <Text style={styles.sectionTitle}>{S.petsTitle}</Text>
+            <Text style={styles.sectionTitle}>{tPets('paywall:challenge.petsTitle', group)}</Text>
             {credits > 0 && <Text style={styles.body}>{S.credits(credits)}</Text>}
             {waiting.map((pet) => {
               const familyPet = family?.pets.find((p) => p.id === pet.pet_id);
@@ -250,9 +260,9 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
                   <Text style={styles.petTitle}>{S.petLine(familyPet ? petLabel(familyPet) : breedLabel('unknown', null), names)}</Text>
                   <Text style={[styles.body, paused && styles.pausedText]}>
                     {unborn
-                      ? S.unborn
+                      ? tSpecies('paywall:challenge.unborn', familyPet?.species)
                       : paused
-                        ? S.paused
+                        ? tSpecies('paywall:challenge.paused', familyPet?.species)
                         : pet.trial_ends_at
                           ? S.pausesAt(formatTrialEnd(pet.trial_ends_at, timezone))
                           : S.notBought}

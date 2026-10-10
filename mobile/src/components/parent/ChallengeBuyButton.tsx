@@ -10,23 +10,25 @@ import { ShoppingBag } from 'lucide-react-native';
 
 import { Text } from '@/components/ui/Text';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
-import { t } from '@/i18n';
+import { t, tSpecies } from '@/i18n';
 import { MIN_TOUCH, palette, radius } from '@/theme';
 
 interface ChallengeBuyButtonProps {
   onPress: () => void;
   /** Child nickname for the screen-reader label ("… for Mia's dog"); null → generic label. */
   childName?: string | null;
+  /** M5-R06-09: species of the pet the purchase is for ("… for Mia's cat"). */
+  species?: string | null;
   testID?: string;
 }
 
-export default function ChallengeBuyButton({ onPress, childName = null, testID }: ChallengeBuyButtonProps) {
+export default function ChallengeBuyButton({ onPress, childName = null, species = null, testID }: ChallengeBuyButtonProps) {
   return (
     <Pressable
       style={({ pressed }) => [styles.button, pressed && styles.pressed]}
       onPress={onPress}
       accessibilityRole="button"
-      accessibilityLabel={childName ? t('paywall:entry.buyA11y', { name: childName }) : t('paywall:entry.buy')}
+      accessibilityLabel={childName ? tSpecies('paywall:entry.buyA11y', species, { name: childName }) : t('paywall:entry.buy')}
       accessibilityHint={t('paywall:entry.buyHint')}
       testID={testID}
     >

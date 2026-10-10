@@ -12,7 +12,7 @@ import { Check } from 'lucide-react-native';
 
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { canSubmitDeletion, deleteConfirmWord } from '@/modules/account/account';
-import { t } from '@/i18n';
+import { t, tPets, type PetGroup } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { palette } from '@/theme';
 
@@ -42,6 +42,8 @@ interface DeletionConfirmFormProps {
    * warning and an extra checkbox the red button needs (accidental deletion made harder).
    */
   paidChallenge?: boolean;
+  /** M5-R06-09: species of the pets the paid-challenge warning is about ("this cat"); default dog. */
+  paidPetGroup?: PetGroup;
   /** Prefix for test ids (`${testID}-password`, `-confirm`, `-submit`, `-cancel`, `-error`). */
   testID: string;
 }
@@ -54,6 +56,7 @@ export default function DeletionConfirmForm({
   onCancel,
   onSubmit,
   paidChallenge = false,
+  paidPetGroup = 'dog',
   testID,
 }: DeletionConfirmFormProps) {
   const [password, setPassword] = useState('');
@@ -72,7 +75,7 @@ export default function DeletionConfirmForm({
       {paidChallenge && (
         <>
           <Text style={styles.paidWarning} testID={`${testID}-paid-warning`}>
-            {S.paidWarning}
+            {tPets('account:deletionForm.paidWarning', paidPetGroup)}
           </Text>
           <Pressable
             style={styles.ackRow}

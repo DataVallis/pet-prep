@@ -770,8 +770,7 @@ describe('AddChildScreen', () => {
 
     beforeEach(() => {
       generatePin.mockResolvedValue(pinResponse('734912', { child_id: 5, mode: 'new_pet' }));
-      // These flows need a build that can show cats (CAT_UI_READY on); the real build can't (QA #94 m3).
-      jest.spyOn(features, 'showableSpecies').mockReturnValue(['dog', 'cat']);
+      // M5-R06-09: the real build can show cats (CAT_UI_READY on); the server decides what is offered.
     });
 
     afterEach(() => {
@@ -785,12 +784,25 @@ describe('AddChildScreen', () => {
       await flush();
     }
 
-    it('dogs only (cats hidden): "Nov pes", no species step, catalogue asked once with this build\'s features', async () => {
-      await openNewPet();
+    it('server cats off (PETPREP_CATS_ENABLED=false): exactly today\'s dog flow — "Nov pes", no species step, species_cat declared', async () => {
+      renderWithQuery(<AddChildScreen onBack={jest.fn()} child={NEW_CHILD} />);
+      await flush();
+      expect(screen.getByText(S.newPet)).toBeTruthy();
+      expect(screen.queryByText(S.newPetAny)).toBeNull();
+      fireEvent.press(screen.getByTestId('pet-option-new'));
+      await flush();
       expect(screen.queryByTestId('species-picker')).toBeNull();
       expect(screen.getByTestId('dog-picker')).toBeTruthy();
+      expect(screen.queryByTestId('breed-option-domestic_cat')).toBeNull();
       expect(getBreedCatalogue).toHaveBeenCalledTimes(1);
-      expect(getBreedCatalogue.mock.calls[0][0]).toEqual(['behaviour_events', 'training']);
+      expect(getBreedCatalogue.mock.calls[0][0]).toEqual(['behaviour_events', 'training', 'species_cat']);
+      await pickDog('adopted', 'puppy');
+      expect(generatePin).toHaveBeenCalledWith({
+        child_id: 5,
+        pet_id: null,
+        profile: { species: 'dog', breed: 'mutt', origin: 'adopted', age_stage: 'puppy', plan: 'free' },
+      });
+      expect(screen.queryByTestId('pin-error')).toBeNull();
     });
 
     it('the catalogue fails → the fallback dogs, dog onboarding still works end to end', async () => {
@@ -867,8 +879,8 @@ describe('AddChildScreen', () => {
       expect(screen.getByTestId('origin-option-bought').props.accessibilityState.checked).toBe(true);
     });
 
-    it('QA #94 m3: this build (no cat UI) never offers cats, even if the server sends them', async () => {
-      jest.restoreAllMocks(); // the real showableSpecies(): dogs only
+    it('QA #94 m3: a build without the cat UI never offers cats, even if the server sends them', async () => {
+      jest.spyOn(features, 'showableSpecies').mockReturnValue(['dog']);
       getBreedCatalogue.mockResolvedValue(CATS_ON);
       renderWithQuery(<AddChildScreen onBack={jest.fn()} child={NEW_CHILD} />);
       await flush();
