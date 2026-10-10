@@ -87,15 +87,24 @@ describe('readBreedCatalogue', () => {
   });
 
   it('QA #94 m3: a build without the cat UI drops cats even if the server sends them (misconfiguration)', () => {
-    // Default = this build (CAT_UI_READY false) → dogs only.
-    const catalogue = readBreedCatalogue(BOTH_RAW);
+    const DOGS_ONLY = showableSpecies(false);
+    const catalogue = readBreedCatalogue(BOTH_RAW, DOGS_ONLY);
     expect(catalogue?.species).toEqual(['dog']);
     expect(catalogue?.breeds.map((b) => b.breed)).toEqual(['mutt', 'border_collie']);
-    expect(readBreedCatalogue(BOTH_RAW, ['dog'])?.species).toEqual(['dog']);
-    // Cats only → nothing this build can show → fallback (null).
-    expect(readBreedCatalogue({ species: ['cat'], breeds: BOTH_RAW.breeds })).toBeNull();
+    // Cats only → nothing such a build can show → fallback (null).
+    expect(readBreedCatalogue({ species: ['cat'], breeds: BOTH_RAW.breeds }, DOGS_ONLY)).toBeNull();
     expect(showableSpecies(false)).toEqual(['dog']);
     expect(showableSpecies(true)).toEqual(['dog', 'cat']);
+  });
+
+  it('M5-R06-09: this build shows cats (CAT_UI_READY on) — the server decides whether they are offered', () => {
+    expect(showableSpecies()).toEqual(['dog', 'cat']);
+    // Server flag on → dogs and cats.
+    expect(readBreedCatalogue(BOTH_RAW)?.species).toEqual(['dog', 'cat']);
+    // Server flag off (PETPREP_CATS_ENABLED=false): the server sends dogs only → exactly today's dog picker.
+    const dogsOnly = readBreedCatalogue({ species: ['dog'], breeds: BOTH_RAW.breeds.filter((b) => b.species === 'dog') });
+    expect(dogsOnly?.species).toEqual(['dog']);
+    expect(dogsOnly?.breeds.map((b) => b.breed)).toEqual(['mutt', 'border_collie']);
   });
 
   it('a breed listed for a species that is not offered is ignored (never a hidden cat)', () => {

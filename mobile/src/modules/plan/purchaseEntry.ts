@@ -56,5 +56,10 @@ export function isBillingPetPurchasable(pet: BillingPet, family: FamilyOverview 
  * mutt-only family.
  */
 export function showPurchasesRow(family: FamilyOverview | null): boolean {
-  return (family?.pets ?? []).some((pet) => pet.plan.type === 'challenge' && isOfferablePet(pet));
+  return challengePets(family).length > 0;
+}
+
+/** The family's challenge pets that may be offered (bought or not) — what the purchase surfaces talk about. */
+export function challengePets(family: FamilyOverview | null): FamilyPet[] {
+  return (family?.pets ?? []).filter((pet) => pet.plan.type === 'challenge' && isOfferablePet(pet));
 }

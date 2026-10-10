@@ -224,7 +224,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
 
         <ScrollView style={styles.flex} contentContainerStyle={styles.content}>
           {onOpenChallenge && canBuyChallenge(pet) && (
-            <ChallengeBuyButton onPress={onOpenChallenge} childName={child.name} testID="detail-buy-challenge" />
+            <ChallengeBuyButton onPress={onOpenChallenge} childName={child.name} species={pet?.species ?? null} testID="detail-buy-challenge" />
           )}
           {pet !== null && media !== null && (
             <PetMediaView

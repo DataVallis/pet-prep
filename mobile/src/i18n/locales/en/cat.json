@@ -408,6 +408,11 @@
         "awaiting_contract": "The cat is waiting for the contract to be signed",
         "inactive": "The cat is not active",
         "ill": "The cat is at the vet"
+      },
+      "children": {
+        "deleteErrors": {
+          "paid_challenge": "This deletion removes a cat whose 12-week challenge was purchased. Tick the box to confirm that the purchase is used up."
+        }
       }
     },
     "parent": {
@@ -469,10 +474,85 @@
       "counts": {
         "dogs_one": "{{count}} cat",
         "dogs_other": "{{count}} cats"
+      },
+      "card": {
+        "deleteErrors": {
+          "paid_challenge": "This deletion removes a cat whose 12-week challenge was purchased. Tick the box to confirm that the purchase is used up."
+        }
+      },
+      "deletionForm": {
+        "paidWarning": "A 12-week challenge was purchased for this cat. If you delete it, the purchase is used up — a new cat's challenge has to be bought again."
+      }
+    },
+    "paywall": {
+      "banner": {
+        "paymentRequired": "The 12-week challenge ({{names}}) starts when you buy it. Until then the cat waits safely: its needs don't drop and nothing is lost."
+      },
+      "entry": {
+        "buyA11y": "Buy the 12-week challenge for {{name}}'s cat",
+        "rowWaiting_one": "{{count}} cat is waiting for a purchase",
+        "rowWaiting_other": "{{count}} cats are waiting for a purchase",
+        "rowAllPaid": "No cat is waiting for a purchase. You can also restore purchases on a new phone here."
+      },
+      "challenge": {
+        "intro": "Over 12 weeks the challenge shows whether your child is ready for a real cat. One purchase covers one cat.",
+        "includes": {
+          "media": "A personalised AI cat with a video for every state"
+        },
+        "honest": "One-time purchase of {{price}} for one cat. No subscription and no automatic charge: the challenge starts once you buy it. Want to try first? The free domestic cat is free forever.",
+        "petsTitle": "Cats waiting for the challenge",
+        "unborn": "Not born yet. Buy the challenge now and the cat starts as soon as the contract is signed.",
+        "paused": "The game is paused. The cat is safe and progress is kept.",
+        "allPaid": "No cat is waiting for a purchase. All challenges are unlocked."
+      },
+      "result": {
+        "restoredNoCredit": "Your purchases have been restored, but there is no unused challenge. Each challenge covers one cat.",
+        "refused": "This cat doesn't need a challenge (free plan or already paid)."
       }
     }
   },
   "account": {
     "whatMixed": "your account, {{children}}, {{dogs}} and {{cats}},"
+  },
+  "mixed": {
+    "paywall": {
+      "banner": {
+        "paymentRequired": "The 12-week challenge ({{names}}) starts when you buy it. Until then every pet waits safely: its needs don't drop and nothing is lost."
+      },
+      "entry": {
+        "rowWaiting_one": "{{count}} pet is waiting for a purchase",
+        "rowWaiting_other": "{{count}} pets are waiting for a purchase",
+        "rowAllPaid": "No pet is waiting for a purchase. You can also restore purchases on a new phone here."
+      },
+      "challenge": {
+        "intro": "Over 12 weeks the challenge shows whether your child is ready for a real pet. One purchase covers one pet.",
+        "includes": {
+          "media": "A personalised AI pet with a video for every state"
+        },
+        "honest": "One-time purchase of {{price}} for one pet. No subscription and no automatic charge: the challenge starts once you buy it. Want to try first? The free breeds (mixed breed and domestic cat) are free forever.",
+        "petsTitle": "Pets waiting for the challenge",
+        "allPaid": "No pet is waiting for a purchase. All challenges are unlocked."
+      },
+      "result": {
+        "restoredNoCredit": "Your purchases have been restored, but there is no unused challenge. Each challenge covers one pet."
+      }
+    },
+    "family": {
+      "children": {
+        "deleteErrors": {
+          "paid_challenge": "This deletion removes a pet whose 12-week challenge was purchased. Tick the box to confirm that the purchase is used up."
+        }
+      }
+    },
+    "account": {
+      "card": {
+        "deleteErrors": {
+          "paid_challenge": "This deletion removes a pet whose 12-week challenge was purchased. Tick the box to confirm that the purchase is used up."
+        }
+      },
+      "deletionForm": {
+        "paidWarning": "A 12-week challenge was purchased for this pet. If you delete it, the purchase is used up — a new pet's challenge has to be bought again."
+      }
+    }
   }
 }

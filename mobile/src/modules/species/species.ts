@@ -11,10 +11,10 @@
  */
 
 import type { components } from '@/api/schema';
-import { t, tSpecies } from '@/i18n';
+import { t, tSpecies, type PetGroup } from '@/i18n';
 import type { BreedType, ShownBreed, Species } from '@/types';
 
-export type { BreedType, ShownBreed, Species };
+export type { BreedType, PetGroup, ShownBreed, Species };
 
 export const SPECIES: readonly Species[] = ['dog', 'cat'];
 
@@ -68,6 +68,16 @@ export function readSpecies(value: unknown, breed?: ShownBreed | null): Species 
 /** Cats among the pets (M5-R06-08c); a pet without a known species counts as a dog (the old default). */
 export function catCount(pets: readonly { species?: unknown; breed_type?: unknown }[]): number {
   return pets.filter((p) => readSpecies(p.species, readBreed(p.breed_type)) === 'cat').length;
+}
+
+/**
+ * The species of a group of pets (M5-R06-09, paywall / paid-challenge texts): no cat (or no
+ * pet) → `dog` (the old texts, byte-identical), only cats → `cat`, dogs and cats → `mixed`.
+ */
+export function petGroup(pets: readonly { species?: unknown; breed_type?: unknown }[]): PetGroup {
+  const cats = catCount(pets);
+  if (cats === 0) return 'dog';
+  return cats === pets.length ? 'cat' : 'mixed';
 }
 
 /**

@@ -25,6 +25,16 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Muca je v aplikaciji: vklop čaka samo še na stikalo na strežniku (M5-R06-09, del A)
+
+**Kaj se je zgodilo:** Aplikacija od danes ve, da zna prikazati muco (`CAT_UI_READY`): pri izbiri ljubljenčka, ustvarjanju kode in otrokovi prijavi strežniku sporoči, da zna mačko. Dokler David na strežniku ne vklopi `PETPREP_CATS_ENABLED`, strežnik ponudi samo pse in aplikacija deluje natanko kot doslej — to preverjajo testi za obe stanji. Hkrati smo dokončali zadnja pasja besedila: plačilni zaslon 12-tedenskega izziva, pasica, vrstica »Nakupi / izziv«, gumb za nakup (bralnik zaslona) in opozorilo ob izbrisu zdaj govorijo o muci, ko gre za muco (»Muce, ki čakajo na izziv«, »En nakup velja za eno muco«, »Brezplačna domača mačka je brezplačna za vedno«), v družini s psom in muco pa nevtralno o ljubljenčkih. Pasja besedila so ostala bajt za bajt enaka. Mobilni testi: **1.934 zelenih** (145 sklopov), test pokritosti prevodov nima več nobene izjeme za plačila.
+
+**Zakaj je pomembno:** Muca je nastajala skrita v več korakih (strežnik, podatki, pravila, obvestila, videz, zasloni, besedila). Zdaj sta do nje samo še dva Davidova koraka: nova gradnja aplikacije in eno stikalo na strežniku. Starejše aplikacije muce nikoli ne dobijo, zato testerji s staro gradnjo ne vidijo ničesar nepričakovanega.
+
+**Kako povedati:** 📣 *načrt:* »Muca prihaja v PetPrep — samo še zadnji preizkus na telefonu.« · 👩 Ko bodo mačke vklopljene, lahko otrok izbere domačo mačko (brezplačno) ali Maine Coona (12-tedenski izziv, 49,99 €) — in vse, kar vidite kot starš, govori o muci, ne o psu. · 💼 Ena koda, dve vrsti: vklop nove vrste je ena nastavitev na strežniku, brez nove različice v trgovini po izdaji gradnje. · 🛠 Dvojno stikalo (zmožnost aplikacije + strežniška nastavitev) in prevodi, ki izberejo besedilo po skupini ljubljenčkov (pes / muca / oboje).
+
+---
+
 ## 2026-10-10 — Register živali: realistične fotografije namesto ilustracij (M5-R11-05)
 
 **Kaj se je zgodilo:** David je odločil, da so slike pasem na spletni strani realistične fotografije — enake vrste kot ljubljenčki v aplikaciji — in ne ilustracije. Isti model (`nano_banana_pro`), nov fotografski slog: cela postava, svetlo sivo studijsko ozadje, naravna senca, brez ljudi, napisov in ovratnice. Vseh 5 slik (border collie, labradorec, zlati prinašalec, francoski buldog, Maine Coon) je nastalo v enem zagonu na strežniku za **0,75 $** (5 × 0,15 $), vsako smo pregledali. Na spletu so označene »Fotografija, ustvarjena z AI«.

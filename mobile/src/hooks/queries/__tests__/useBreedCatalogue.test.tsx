@@ -39,15 +39,23 @@ const CATS_ON = {
 describe('useBreedCatalogue', () => {
   beforeEach(() => getBreedCatalogue.mockReset());
 
-  it('loading → null, then the server catalogue', async () => {
+  it('loading → null, then the server catalogue (server cats on: dogs and cats)', async () => {
     getBreedCatalogue.mockResolvedValue(CATS_ON);
     const { result } = setup();
     expect(result.current.catalogue).toBeNull();
-    // The server offers cats, but this build can't show them (CAT_UI_READY false, QA #94 m3).
-    await waitFor(() => expect(result.current.catalogue?.species).toEqual(['dog']));
+    // M5-R06-09: this build can show cats (CAT_UI_READY on).
+    await waitFor(() => expect(result.current.catalogue?.species).toEqual(['dog', 'cat']));
     expect(result.current.isFallback).toBe(false);
-    // This build's features (no species_cat while CAT_UI_READY is false).
-    expect(getBreedCatalogue).toHaveBeenCalledWith(['behaviour_events', 'training'], expect.anything());
+    // This build's features: species_cat is declared.
+    expect(getBreedCatalogue).toHaveBeenCalledWith(['behaviour_events', 'training', 'species_cat'], expect.anything());
+  });
+
+  it('server cats off (PETPREP_CATS_ENABLED=false): dogs only, no fallback, no error', async () => {
+    getBreedCatalogue.mockResolvedValue({ species: ['dog'], breeds: CATS_ON.breeds.filter((b) => b.species === 'dog') });
+    const { result } = setup();
+    await waitFor(() => expect(result.current.catalogue?.species).toEqual(['dog']));
+    expect(result.current.catalogue?.breeds.map((b) => b.breed)).toEqual(['mutt']);
+    expect(result.current.isFallback).toBe(false);
   });
 
   it('server error → after one retry the fallback dogs, so dog onboarding never breaks', async () => {
@@ -96,7 +104,7 @@ describe('useBreedCatalogue', () => {
         await jest.advanceTimersByTimeAsync(0);
       });
       expect(result.current.isFallback).toBe(false);
-      expect(result.current.catalogue?.species).toEqual(['dog']); // this build shows no cats (m3)
+      expect(result.current.catalogue?.species).toEqual(['dog', 'cat']); // the late answer (server cats on) wins
     } finally {
       jest.useRealTimers();
     }
