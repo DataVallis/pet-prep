@@ -168,7 +168,7 @@ describe('breed, config and database', function () {
         $others = $rows->where('breed_slug', '!=', 'west-highland-white-terrier');
         $mine = $rows->where('breed_slug', 'west-highland-white-terrier');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'bernese-mountain-dog'])
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_WEST_HIGHLAND_WHITE_TERRIER)->all())->toBe([]);
         foreach ([BreedStageParamsSeeder::CONFIRMED_R10, BreedStageParamsSeeder::CONFIRMED_R10_CAVALIER, BreedStageParamsSeeder::CONFIRMED_R10_BEAGLE,
             BreedStageParamsSeeder::CONFIRMED_R10_STANDARD_POODLE, BreedStageParamsSeeder::CONFIRMED_R10_DACHSHUND,
