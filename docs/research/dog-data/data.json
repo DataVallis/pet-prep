@@ -2584,6 +2584,526 @@
       }
     }
   },
+  "german_shepherd": {
+    "_note": "Added 2026-10-10 (M5-R10-04, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S95–S102, reused S8, S10, S11, S14, S24, S34, S45). Pages were partly returned as paraphrase — only passages the tool returned in quotation marks are used as quotes. McMillan 2024 (S54) and the Dogs Trust summary (S15) were not reachable in this run (permission request withdrawn), so the lifespan is the VetCompass breed median (S101) per the runbook rule. Woodgreen and the AKC standard page could not be fetched.",
+    "identity": {
+      "value": "FCI No. 166, Group 1 Section 1 (Sheepdogs), Germany",
+      "unit": "—",
+      "source_id": "S96",
+      "quote": "Group: n°1 - Sheepdogs and Cattledogs (except Swiss Cattledogs); Section: Sheepdogs; Country of origin: GERMANY",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S96): standard number 166; 'Subject to a working trial according to the FCI Breeds Nomenclature'; definitive acceptance '1/1/1955'; publication of valid standard '8/11/2010' (the standard PDF S95 was returned as '11.08.2010' — same date, different notation); varieties 'a) Double coat' and 'b) Long and harsh outer coat'. Quote assembled from the nomenclature fields."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S97",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "PDSA (S100): 'Size: Large'. FCI (S95) calls the dog 'medium-size' in the general appearance, but its weights (♂ 30–40 kg, ♀ 22–32 kg) and the UK sources put it in the large class."
+    },
+    "height": {
+      "fci_range": {
+        "value": {
+          "male": [
+            60,
+            65
+          ],
+          "female": [
+            55,
+            60
+          ]
+        },
+        "unit": "cm at withers",
+        "source_id": "S95",
+        "quote": "Males: Height at the withers: 60 cm to 65 cm; Females: Height at the withers: 55 cm to 60 cm",
+        "confidence": "high",
+        "notes": "Returned as two fragments ('Height at the withers: 60 cm to 65 cm' for males, '55 cm to 60 cm' for females), assembled here."
+      },
+      "rkc_ideal": {
+        "value": {
+          "male": 63,
+          "female": 58
+        },
+        "unit": "cm",
+        "source_id": "S98",
+        "quote": "Ideal height (from withers and just touching elbows): dogs: 63 cms (25 ins); bitches: 58 cms (23 ins).",
+        "confidence": "high",
+        "notes": "RKC breed standard (last updated 1 August 2025). No weight in the RKC standard."
+      },
+      "pdsa_average": {
+        "value": [
+          58,
+          63
+        ],
+        "unit": "cm",
+        "source_id": "S100",
+        "quote": "Average height: 58-63 cm",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (label wording as returned by the tool)."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            30,
+            40
+          ],
+          "female": [
+            22,
+            32
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S95",
+        "quote": "Males: Weight: 30 kg to 40 kg; Females: Weight: 22 kg to 32 kg",
+        "confidence": "high",
+        "notes": "Returned as two fragments under the male / female size paragraphs, assembled here. RKC standard (S98) gives no weight; AKC standard not reachable."
+      },
+      "pdsa": {
+        "value": [
+          35,
+          43
+        ],
+        "unit": "kg",
+        "source_id": "S100",
+        "quote": "Average weight: 35-43 kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (label wording as returned by the tool). Heavier than the FCI range."
+      },
+      "uk_measured_median": {
+        "value": {
+          "male": 40.1,
+          "female": 34.8
+        },
+        "unit": "kg (median adult bodyweight)",
+        "source_id": "S101",
+        "quote": "The median adult bodyweight of males (40.1 kg",
+        "confidence": "high",
+        "notes": "O'Neill et al. 2017 (S101), VetCompass UK primary-care records; females '(34.8 kg, IQR 30.6–39.5, range 15.0–74.0)'. Both medians sit at or above the FCI upper bounds."
+      },
+      "salt_category": {
+        "value": "V (30–<40 kg) for males; females span IV/V",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (same method as the Labrador): FCI ♂ 30–40 kg = Category V, ♀ 22–32 kg = IV (15–<30) / V; band limits from general_by_size.size_classes.salt_2017_bands_kg (S8). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI males 30–40 kg (66–88 lb) are 'Large'; females 22–32 kg (48.5–70.5 lb) straddle Medium (24–59 lb: 12–15 months) and Large — same situation as the Labrador, so the same 15–18 months. Salt (S8): 'larger breeds requiring up to 24 months to reach adult body weight'."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no German Shepherd growth curve found; S9 has no large breed (open question shared with the Labrador/Golden)."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 10.3,
+        "unit": "years",
+        "source_id": "S101",
+        "quote": "The median longevity of GSDs overall was 10.3 years",
+        "confidence": "high",
+        "notes": "O'Neill et al. 2017 (S101): IQR 8.0–12.1, range 0.2–17.0, 12,146 GSDs in VetCompass. RVC news (S102): 'The median longevity of GSDs was 10.3 years (IQR 8.0–12.1).' McMillan 2024 (S54) / Dogs Trust (S15) not reachable in this run — runbook rule: else a VetCompass median. Shorter than the Border Collie / Labrador (13.1) and Golden (13.2), longer than the French Bulldog (9.8)."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S97",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA (S100): 'Average lifespan: over 10 years' (key-facts label as returned). Consistent with the 10.3 y median (S101)."
+      },
+      "senior_from": {
+        "value": 7.725,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10.3 y (S101) → 0.75 × 10.3 = 7.725 y = 92.7 → 93 months. With the breed-page 'over 10 years' (S97): 0.75 × 10 = 7.5 y = 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S101"
+        ],
+        "months": 93,
+        "alternative": {
+          "value_years": 7.5,
+          "months": 90,
+          "derived_from": [
+            "S11",
+            "S97"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S97",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "PDSA (S100): 'Your German Shepherd will need a minimum of two hours of exercise every day.' and 'Our vets recommend spreading exercise across the day rather than trying to do two hours all in one go.' (key-facts label 'Minimum exercise: 2 hours per day'). Sources agree: at least 2 h."
+      },
+      "energy": {
+        "value": "tireless working dog",
+        "unit": "—",
+        "source_id": "S98",
+        "quote": "Attentive, alert, resilient and tireless with keen scenting ability.",
+        "confidence": "medium",
+        "notes": "RKC standard characteristics (S98): 'Versatile working dog, balanced and free from exaggeration.' RKC breed page (S97): 'Versatile worker and service dog noted for bravery and intelligence'."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "steady, loyal, self-assured, courageous, tractable",
+        "unit": "—",
+        "source_id": "S98",
+        "quote": "Steady of nerve, loyal, self-assured, courageous and tractable. Never nervous, over-aggressive or shy.",
+        "confidence": "high",
+        "notes": "FCI (S95): the dog 'must be well-balanced (with strong nerves) in terms of character, self-assured, absolutely natural.' RKC Breed Watch (S99) lists 'Nervous temperament' as a point of concern. PDSA (S100): a strong guarding instinct means 'careful training and socialisation will be needed.'"
+      },
+      "family": {
+        "value": "some make great family pets with children of all ages; always supervise around young children; strong",
+        "unit": "—",
+        "source_id": "S100",
+        "quote": "Some can make great family pets in homes with children of all ages",
+        "confidence": "medium",
+        "notes": "PDSA (S100) also: 'dogs should always be supervised around young children' and they 'often don't know their own strength' (around young children or adults unfamiliar with the breed). Hedged ('some can') and with a supervision caveat → family_pet only, not children / small_children."
+      },
+      "time_alone": {
+        "value": "thrives on company; worries if left too long",
+        "unit": "—",
+        "source_id": "S100",
+        "quote": "thrive on company and will worry about you if you leave them too long",
+        "confidence": "medium",
+        "notes": "PDSA generic rule: 'You should never leave any dog alone for longer than four hours.' → no often_alone tag."
+      },
+      "other_pets": {
+        "value": "usually fine with pets they grew up with; may chase unfamiliar cats / small pets",
+        "unit": "—",
+        "source_id": "S100",
+        "quote": "usually fine with other family pets they have grown up with",
+        "confidence": "medium",
+        "notes": "PDSA: dogs that did not grow up with cats or small pets may chase them (paraphrase) → conditional, no other_pets tag."
+      },
+      "boredom_chewing": {
+        "value": "exercise prevents boredom barking and chewing furniture",
+        "unit": "—",
+        "source_id": "S100",
+        "quote": "out of boredom or having a nibble on the furniture",
+        "confidence": "medium",
+        "notes": "PDSA (S100): enough exercise stops dogs barking 'out of boredom or having a nibble on the furniture' (fragment as returned; lead-in paraphrased)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No German Shepherd-specific food-motivation statement found. PDSA (S100) only generic feeding advice ('We usually recommend splitting their daily allowance into two meals.'; treats ≤ 10 % of calories) → no food_motivated_weight tag."
+      },
+      "guarding": {
+        "value": "strong guarding instinct — careful training and socialisation",
+        "unit": "—",
+        "source_id": "S100",
+        "quote": "careful training and socialisation will be needed",
+        "confidence": "medium",
+        "notes": "PDSA (S100), context: a strong guarding instinct (paraphrase of the lead-in)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; percentages stay here and are never shown in the app, the register export or audience docs. The conformation concern (hind legs / hips) is the breed's welfare topic in UK sources — RKC Breed Watch (S99), RKC breed page (S97), PDSA (S100), VetCompass (S101).",
+      "hind_conformation": {
+        "value": "hind-leg conformation and rear movement are a recognised welfare concern in the breed",
+        "unit": "—",
+        "source_id": "S99",
+        "quote": "Incorrect hind conformation and/or poor rear movement",
+        "confidence": "high",
+        "notes": "RKC Breed Watch point of concern (S99; page heading 'Category 2', page title says 'Category 3' — as returned); second point 'Nervous temperament'. RKC breed page (S97): 'This breed can be affected by conformational concerns, more information can be found here.' RKC standard (S98): 'Any tendency towards over-angulation of hindquarters, weak hocks, cow hocks or sickle hocks, highly undesirable.' and 'Absolute soundness is essential.' PDSA (S100) says the Kennel Club classes the breed in 'Category Three' because of conformation changes, mostly 'the shape of their back legs and hips' (older wording than the RKC page). O'Neill 2017 (S101): show selection changed conformation toward features 'such as a sloping croup'; 'selective breeding towards lower hindquarters could also increase the probability' of osteoarthritic conditions."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia — RKC good-practice tests before breeding",
+        "unit": "—",
+        "source_id": "S97",
+        "quote": "Hip testing (for hip dysplasia)",
+        "confidence": "high",
+        "notes": "RKC breed page (S97) good-practice tests: 'Elbow testing (for elbow dysplasia)' and 'Hip testing (for hip dysplasia)' (BVA/KC schemes); best practice: DNA test for degenerative myelopathy, eye testing. PDSA (S100): hip dysplasia leads to arthritis; elbow dysplasia screening exists (paraphrase)."
+      },
+      "degenerative_myelopathy": {
+        "value": "degenerative myelopathy (DM) — DNA test available",
+        "unit": "—",
+        "source_id": "S100",
+        "quote": "weakness to back legs leading to paralysis",
+        "confidence": "high",
+        "notes": "PDSA (S100) on DM; RKC (S97) lists a DM DNA test under best practice."
+      },
+      "causes_of_death_2017": {
+        "value": {
+          "musculoskeletal_disorder_pct": 16.3,
+          "inability_to_stand_pct": 14.9
+        },
+        "unit": "% of recorded deaths (UK primary care)",
+        "source_id": "S101",
+        "quote": "The most common causes of death were musculoskeletal disorder (16.3%) and inability to stand (14.9%).",
+        "confidence": "high",
+        "notes": "O'Neill et al. 2017 (S101), same sentence on RVC news (S102). Research only — never shown in the app or register."
+      },
+      "common_disorders_2017": {
+        "value": "otitis externa, osteoarthritis, diarrhoea, overweight/obesity, aggression",
+        "unit": "—",
+        "source_id": "S102",
+        "quote": "The most prevalent disorders were otitis externa, osteoarthritis, diarrhoea, overweight/obesity and aggression.",
+        "confidence": "high",
+        "notes": "VetCompass news (S102, 11 Aug 2017 version). Paper (S101): overweight/obesity 5.18 %, aggression 4.76 % (males 6.75 % vs females 2.78 %) — percentages stay in research."
+      },
+      "other_conditions": {
+        "value": "anal furunculosis, inherited eye disease, epilepsy, pituitary dwarfism, haemophilia A and B",
+        "unit": "—",
+        "source_id": "S100",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S100) list (summarised by the tool, no verbatim quote); 'not exhaustive'."
+      },
+      "colour_white": {
+        "value": "white is not a standard colour (FCI disqualifying fault)",
+        "unit": "—",
+        "source_id": "S95",
+        "quote": "The colour white is not allowed.",
+        "confidence": "high",
+        "notes": "FCI disqualifying faults: 'White hair colour (also with dark eyes and nails)' and albinism. RKC breed page (S97) lists white, blue, liver and Isabella variants as non-breed-standard (NBS) colours; Colour Watch 'Category 3'. The game never draws a white, blue or liver German Shepherd."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 3,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S34",
+        "quote": "German Shepherd Dog",
+        "confidence": "medium",
+        "notes": "Coren's own top-10 list (S34, tier B, author of the book): 1 Border Collie, 2 Poodle, 3 'German Shepherd Dog', 4 Golden Retriever … (quote = the list entry as returned). Wikipedia (S35) shows the same top 10 (data.json labrador_retriever.trainability)."
+      },
+      "coren_tier": {
+        "value": "brightest",
+        "unit": "—",
+        "source_id": "S34",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Top 10 = 'Brightest' tier (ranks 1–10, S35 tier definitions)."
+      },
+      "training_notes": {
+        "value": "consistency; careful training and socialisation (guarding instinct)",
+        "unit": "—",
+        "source_id": "S100",
+        "quote": "As with all training – consistency is key!",
+        "confidence": "medium",
+        "notes": "PDSA (S100); RKC breed page (S97): used 'as a guide dog for the blind, as a tracking dog, and in obedience.'"
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.german_shepherd.learning_multiplier (1.9, runbook rule).",
+        "derived_from": [
+          "S34",
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium-size, slightly elongated, powerful, well-muscled",
+        "unit": "—",
+        "source_id": "S95",
+        "quote": "medium-size, slightly elongated, powerful and well-muscled",
+        "confidence": "high",
+        "notes": "FCI (S95) also 'dry bone and firm overall structure'; trunk length exceeds height 'by about 10 – 17 %'. RKC (S98): 'Slightly long in comparison to height; of powerful, well-muscled build with weather-resistant coat.' and 'balanced and free from exaggeration'."
+      },
+      "colours": {
+        "value": [
+          "black and tan / black and gold (saddle)",
+          "sable (grey / gold / dark)",
+          "solid black",
+          "bi-colour"
+        ],
+        "unit": "list",
+        "source_id": "S95",
+        "quote": "Colours are black with reddish-brown, brown and yellow to light grey markings.",
+        "confidence": "high",
+        "notes": "RKC breed page (S97) breed-standard colours: 'Bi-Colour', 'Black', 'Black & Gold', 'Black & Tan', 'Dark Sable', 'Gold Sable', 'Grey', 'Grey Sable', 'Sable'. RKC standard (S98): 'Colour in itself is of secondary importance'. Never white (FCI disqualification, S95), blue, liver or Isabella (RKC NBS, S97). Frequencies: not sourced."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). No colour frequencies. Draw over the standard colours black-and-tan (highest weight → portrait default), sable, solid black (FCI S95, RKC S97); never white / blue / liver."
+      },
+      "coat": {
+        "value": "double coat (short) or long double coat, both with undercoat",
+        "unit": "—",
+        "source_id": "S95",
+        "quote": "the hair varieties double coat and long double coat",
+        "confidence": "high",
+        "notes": "RKC (S98): 'Outer coat consisting of straight, hard, close-lying hair as dense as possible; thick undercoat.' RKC breed page (S97): 'Coat length: Short & long'."
+      },
+      "ears": {
+        "value": "erect, medium size, pointed",
+        "unit": "—",
+        "source_id": "S95",
+        "quote": "erect ears of medium size, which are carried upright and aligned",
+        "confidence": "high",
+        "notes": "RKC (S98): 'Medium-sized, firm in texture, broad at base, set high, carried erect, almost parallel'. Tipped / drooping ears are faults (S95). One ear type → no variation."
+      },
+      "eyes": {
+        "value": "dark, almond-shaped, medium size",
+        "unit": "—",
+        "source_id": "S98",
+        "quote": "Medium-sized, almond-shaped, never protruding.",
+        "confidence": "high",
+        "notes": "RKC: 'Dark brown preferred'; FCI (S95): 'The colour of the eyes should be as dark as possible.'"
+      },
+      "tail": {
+        "value": "bushy, reaches the hock, hangs in a gentle sabre curve",
+        "unit": "—",
+        "source_id": "S98",
+        "quote": "Bushy-haired, reaches at least to hock.",
+        "confidence": "high",
+        "notes": "RKC: 'At rest tail hangs in slight sabre-like curve'; FCI (S95): 'hanging downward in a gentle curve'."
+      },
+      "topline_hindquarters": {
+        "value": "straight topline, moderate (not over-angulated) hindquarters",
+        "unit": "—",
+        "source_id": "S98",
+        "quote": "Any tendency towards over-angulation of hindquarters, weak hocks, cow hocks or sickle hocks, highly undesirable.",
+        "confidence": "high",
+        "notes": "RKC standard (S98): 'The topline runs without any visible break from the set on of the neck.' For PetPrep art: a level back and moderate hind legs, never the exaggerated sloping show stance (welfare rule, health.hind_conformation)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S97) and PDSA (S100). Woodgreen page not reachable; AKC trait ratings not attempted (same as the earlier breeds).",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S97",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S97",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S97",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S97",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S97",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "PDSA (S100): brushing or combing a few times a week (paraphrase)."
+      },
+      "rkc_coat_length": {
+        "value": "Short & long",
+        "unit": "—",
+        "source_id": "S97",
+        "quote": "Coat length: Short & long",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S97",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S100): 'Be prepared for a lot of shedding because German Shepherds have such thick coats!' — sources agree."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S97",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "VetCompass median 10.3 y (S101)."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S97",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-10)."
+      },
+      "pdsa_family": {
+        "value": "some can make great family pets",
+        "unit": "—",
+        "source_id": "S100",
+        "quote": "Some can make great family pets in homes with children of all ages",
+        "confidence": "medium",
+        "notes": "Hedged ('some can'); PDSA adds 'dogs should always be supervised around young children' → family_pet, not children."
+      },
+      "pdsa_shedding": {
+        "value": "a lot of shedding",
+        "unit": "—",
+        "source_id": "S100",
+        "quote": "Be prepared for a lot of shedding because German Shepherds have such thick coats!",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_exercise": {
+        "value": "minimum 2 hours",
+        "unit": "—",
+        "source_id": "S100",
+        "quote": "Your German Shepherd will need a minimum of two hours of exercise every day.",
+        "confidence": "high",
+        "notes": ""
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -3763,6 +4283,253 @@
         "confidence": "high",
         "notes": "RKC standard (S79) 'No point exaggerated, balance essential.' and 'The only correct colours are: Brindle; Fawn; Pied;'; merle carries a hearing / sight risk (S78). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10: moderate face with open nostrils, bat ears, short smooth coat, fawn / brindle / pied only (portrait fawn), never merle"
+      }
+    },
+    "german_shepherd": {
+      "_note": "Unattended run M5-R10-04 (2026-10-10): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S97",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'More than 2 hours per day' (S97) = PDSA 'a minimum of two hours' (S100). Rule: one number N ('more than N', 'minimum N') → N = 120.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S97 'More than 2 hours per day' = PDSA S100 'a minimum of two hours')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000 (= Border Collie / Labrador / Golden). PDSA: spread across the day (S100).",
+        "derived_from": [
+          "S97",
+          "S100",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 93
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 93 = round(0.75 × 10.3 y × 12 = 92.7) (S11 + VetCompass median S101; McMillan 2024 not reachable this run). Alternatives: 90 (0.75 × 'over 10 years', S97); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S101"
+        ],
+        "alternatives": {
+          "senior_rkc_over_10_y": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 93 (0.75 × 10.3 y, VetCompass S101)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 93
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 93)"
+      },
+      "learning_multiplier": {
+        "value": 1.9,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 3 (S34; S35 same table), tier Brightest → max(1.8, round(2.0 − (3 − 1)/30, 1)) = round(1.933, 1) = 1.9 (= Golden Retriever r4). No individual variation (pedigree).",
+        "derived_from": [
+          "S34",
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.9 (Coren rank 3, S34 — Brightest tier)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA: two meals a day (S100) — matches the game's feed windows.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-04); refs = JSON paths in this file. `hips_hind_legs` is a new consider key (welfare rule: RKC names hind conformation as a point of concern, S99). SL 'kolki in zadnje noge — izberite preverjene starše', EN 'hips and hind legs — choose health-tested parents'. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S97",
+              "S100"
+            ],
+            "refs": [
+              "german_shepherd.exercise.adult",
+              "german_shepherd.suitability.pdsa_exercise"
+            ],
+            "quote": "S97 'Exercise: More than 2 hours per day'; S100 'a minimum of two hours of exercise every day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S100"
+            ],
+            "refs": [
+              "german_shepherd.suitability.pdsa_family",
+              "german_shepherd.behaviour.family"
+            ],
+            "quote": "S100 'Some can make great family pets in homes with children of all ages'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S97"
+            ],
+            "refs": [
+              "german_shepherd.suitability.rkc_size_of_home",
+              "german_shepherd.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S97 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S97",
+              "S100"
+            ],
+            "refs": [
+              "german_shepherd.exercise.adult"
+            ],
+            "quote": "S97 'More than 2 hours per day'; S100 'a minimum of two hours'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S97",
+              "S100"
+            ],
+            "refs": [
+              "german_shepherd.suitability.rkc_shedding",
+              "german_shepherd.suitability.pdsa_shedding"
+            ],
+            "quote": "S97 'Sheds: Yes'; S100 'Be prepared for a lot of shedding'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S97",
+              "S100"
+            ],
+            "refs": [
+              "german_shepherd.suitability.rkc_grooming"
+            ],
+            "quote": "S97 'Grooming: More than once a week'; PDSA a few times a week (paraphrase)"
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S100"
+            ],
+            "refs": [
+              "german_shepherd.behaviour.boredom_chewing"
+            ],
+            "quote": "S100 'out of boredom or having a nibble on the furniture'"
+          },
+          {
+            "tag": "hips_hind_legs",
+            "source_ids": [
+              "S99",
+              "S97",
+              "S100",
+              "S101"
+            ],
+            "refs": [
+              "german_shepherd.health.hind_conformation",
+              "german_shepherd.health.hip_elbow_dysplasia"
+            ],
+            "quote": "S99 'Incorrect hind conformation and/or poor rear movement'; S97 'Hip testing (for hip dysplasia)'",
+            "note": "NEW consider key (welfare rule §3). Calm chip, no statistics."
+          }
+        ],
+        "not_proposed": {
+          "children": "PDSA 'Some can make great family pets in homes with children of all ages' is hedged ('some can') and adds 'always be supervised around young children' and 'often don't know their own strength' (S100) → not an explicit statement.",
+          "small_children": "Supervision caveat (S100).",
+          "first_time_owner": "No source statement; PDSA: guarding instinct needs careful training and socialisation (S100).",
+          "other_pets": "Only pets they grew up with (S100) — conditional.",
+          "often_alone": "PDSA: worries if left too long (S100).",
+          "apartment": "RKC 'Large house' (S97).",
+          "low_shedding": "Sheds a lot (S97, S100).",
+          "needs_mental_stimulation": "No breed-specific quote captured.",
+          "food_motivated_weight": "No breed-specific source (overweight/obesity in the VetCompass list S102 is a disorder frequency, not a food-motivation statement).",
+          "may_herd_children": "No source.",
+          "older_owners": "No source."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, sheds, frequent_grooming, chews_when_bored, hips_hind_legs (new key, welfare rule)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S99",
+        "quote": "Incorrect hind conformation and/or poor rear movement",
+        "confidence": "high",
+        "notes": "Welfare-concern rule (runbook §3): the RKC names the breed for a conformation-related concern (Breed Watch S99, breed page S97 'can be affected by conformational concerns'; PDSA S100 'Category Three'). The German Shepherd is a normal breed in the app and the register, but is not used in PetPrep advertising, store screenshots, social posts or decks until David decides otherwise.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, NOT in marketing / store screenshots (RKC Breed Watch S99 — conformation concern)"
+      },
+      "ai_appearance": {
+        "value": "adult German Shepherd, black-and-tan saddle (default), sable or solid black; erect ears; level back and moderate, natural hind legs (never the sloping show stance); standard colours only; never white / blue / liver",
+        "unit": "—",
+        "source_id": "S98",
+        "quote": "Any tendency towards over-angulation of hindquarters, weak hocks, cow hocks or sickle hocks, highly undesirable.",
+        "confidence": "high",
+        "notes": "FCI colours (S95), RKC colours (S97); RKC 'balanced and free from exaggeration' (S98). Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black-and-tan portrait default, sable / black options, level back and moderate hind legs, never white"
       }
     }
   }
