@@ -5576,6 +5576,495 @@
       }
     }
   },
+  "havanese": {
+    "_note": "Added 2026-10-10 (M5-R10-10, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S136–S141, reused S10, S11, S14, S35, S45). Appearance from the FCI standard (S136) and the RKC breed standard (S139); suitability from the RKC breed page (S138) and PDSA (S140). Neither the FCI nor the RKC standard nor the AKC standard (S141) gives a weight → adult weight from PDSA (S140, tier B) only. Lifespan: McMillan 2024 names no Havanese value in the text reachable this run (Author Correction S54 checked; the Dogs Trust breed table S123 was not fetchable this run); no VetCompass Havanese median found → runbook rule: RKC lower bound 'Over 12 years' (S138; PDSA S140 the same). Not a welfare-concern breed: RKC Breed Watch Category 1 (S138). Not in Coren's ranking (S35) → unranked → learning 1.0 (runbook rule). Merle is not a standard colour (RKC S139: 'except merle which is unacceptable').",
+    "identity": {
+      "value": "FCI No. 250, Group 9 Section 1 (Bichons and related breeds), Cuba",
+      "unit": "—",
+      "source_id": "S137",
+      "quote": "Group: n°9 - Companion and Toy Dogs; Section: Bichons and related breeds; Country of origin: CUBA",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S137, fields as returned): 'BICHON HAVANAIS (English: HAVANESE)'; standard number 250; country of patronage FCI; country of development 'WESTERN MEDITERRANEAN BASIN'; not subject to a working trial; definitive acceptance 24/09/1963; valid standard 31/10/2016. FCI standard PDF (S136): 'ORIGIN: Cuba.' 'PATRONAGE: FCI.' 'FCI-CLASSIFICATION: Group 9 Companion and Toy Dogs.' 'Section 1 Bichons and related breeds.' 'Without working trial.' Quote assembled from the nomenclature fields."
+    },
+    "size_class": {
+      "value": "toy / small",
+      "unit": "—",
+      "source_id": "S138",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "PDSA (S140) key facts: size 'Small' — sources agree. RKC group: Toy (S138: 'The Toy breeds are small companion or lap dogs.', paraphrase of the group text). FCI height 23–27 cm (S136); PDSA weight 3–6 kg (S140) = PetMD 'Toy' weight class (S10)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            23,
+            27
+          ],
+          "female": [
+            23,
+            27
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S136",
+        "quote": "Height at the withers: From 23 to 27 cm.",
+        "confidence": "high",
+        "notes": "FCI (S136): 'Tolerance : from 21 to 29 cm.'; disqualifying 'Size over or under the indicated norms of the standard.' One range for both sexes."
+      },
+      "rkc_standard": {
+        "value": [
+          23,
+          28
+        ],
+        "unit": "cm",
+        "source_id": "S139",
+        "quote": "Ideal height 23-28 cms (9-11 ins).",
+        "confidence": "high",
+        "notes": "RKC breed standard (S139); no weight."
+      },
+      "akc_standard": {
+        "value": [
+          21.6,
+          29.2
+        ],
+        "unit": "cm",
+        "source_id": "S141",
+        "quote": "The ideal height is between 9 and 10½ inches, with an acceptable height range from 8½ to 11½ inches.",
+        "confidence": "medium",
+        "notes": "Hosted copy titled 'Official Standard of the Havanese' (approved August 9, 2011, effective September 28, 2011); publisher not named on the copy (S141). 8½–11½ in = 21.6–29.2 cm; ideal 9–10½ in. No weight."
+      },
+      "pdsa_average": {
+        "value": null,
+        "unit": "cm",
+        "source_id": "S140",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA key-facts box returned 'Average height: 23-28 kg' (unit as returned — evidently a page error); not used. FCI / RKC / AKC heights agree on roughly 23–28 cm."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": [
+          3,
+          6
+        ],
+        "unit": "kg",
+        "source_id": "S140",
+        "quote": "3-6 kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box ('Average weight: 3-6 kg' as returned), one range for both sexes. The FCI standard (S136), the RKC breed standard (S139) and the AKC standard (S141) give no weight; the RKC breed page (S138) gives none. Tier B — the only weight range found."
+      },
+      "salt_category": {
+        "value": "I",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 3–6 kg = the smallest band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 3–6 kg (S140) = 6.6–13.2 lb → the 'Toy (5–12 pounds)' class (the top touches 'Small (12–24 pounds): 9–12 months', which ends at the same 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Havanese growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S138",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "medium",
+        "notes": "RKC breed page (S138). PDSA key facts (S140): 'Over 12 years' — same."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: the Author Correction (S54) does not mention the Havanese (checked 2026-10-10); the Dogs Trust breed table (S123) and the 'shortest and longest' table PDF could not be fetched this run. UNSOURCED value — verify in McMillan 2024 Supplementary Table before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 9.0,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 12 y (S138; PDSA 'Over 12 years' agrees, S140) → 0.75 × 12 = 9 y = 108 months. Runbook order: McMillan 2024 (no value reachable) → VetCompass median (none found) → RKC lower bound. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until a McMillan / VetCompass median is checked.",
+        "derived_from": [
+          "S11",
+          "S138"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 30",
+        "unit": "minutes/day",
+        "source_id": "S138",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "PDSA (S140): 'The Havanese is a fairly energetic dog requiring around 30 minutes of exercise per day.' (key facts: minimum exercise per day '30 minutes') — sources agree on 30."
+      },
+      "energy": {
+        "value": "fairly energetic",
+        "unit": "—",
+        "source_id": "S140",
+        "quote": "The Havanese is a fairly energetic dog requiring around 30 minutes of exercise per day.",
+        "confidence": "medium",
+        "notes": "FCI (S136): 'Affectionate, of a happy nature, he is amiable, a charmer, playful and even a bit of a clown.'"
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "bright, affectionate, happy, amiable, playful, a bit of a clown",
+        "unit": "—",
+        "source_id": "S136",
+        "quote": "Affectionate, of a happy nature, he is amiable, a charmer, playful and even a bit of a clown.",
+        "confidence": "high",
+        "notes": "FCI (S136): 'Exceptionally bright he is easy to train as alarm dog.' RKC breed standard (S139): characteristics 'Lively, affectionate and intelligent.', temperament 'Friendly, outgoing.' Disqualifying (FCI): 'Aggressive or overly shy.'"
+      },
+      "family": {
+        "value": "loves children and plays endlessly with them; excellent family pet with the right socialisation",
+        "unit": "—",
+        "source_id": "S136",
+        "quote": "He loves children and plays endlessly with them.",
+        "confidence": "high",
+        "notes": "Breed-standard statement (FCI S136). PDSA (S140): 'They enjoy being in the centre of the family circle and make excellent family pets' 'given the right socialisation as puppies.' No 'small children' rating anywhere → children + family_pet, never small_children."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (PDSA S140 and RKC S138 checked) → no often_alone tag."
+      },
+      "other_pets": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (PDSA S140 checked) → no other_pets tag."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (PDSA S140 checked) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found. RKC breed page (S138), Toy group text: some toy breeds can be finicky eaters (paraphrase, group-level, not the Havanese) → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages for this breed were collected. Not a welfare-concern breed: RKC Breed Watch Category 1, 'Currently no points of concern specific to this breed have been identified for special attention by judges' (S138); Colour Watch Category 0. Main topics: kneecaps, eyes, liver shunt (PDSA S140), elbow and eye screening (RKC S138).",
+      "luxating_patella": {
+        "value": "luxating patellas — kneecaps slipping out of place",
+        "unit": "—",
+        "source_id": "S140",
+        "quote": "Luxating patellas - the kneecaps slipping temporarily out of place.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S140)."
+      },
+      "eyes": {
+        "value": "progressive retinal atrophy and distichiasis; eye screening before breeding",
+        "unit": "—",
+        "source_id": "S140",
+        "quote": "Progressive retinal atrophy – gradual deterioration of the retina of the eye.",
+        "confidence": "medium",
+        "notes": "PDSA (S140): 'Symptoms can start with night blindness and progress to total blindness.'; 'Distichiasis – a condition in which small eyelashes grow on the inner surface or the very edge of the eye,' 'which can then rub on the surface of the eye, causing irritation.' RKC good practice (S138): eye testing using the BVA/KC/ISDS Eye Scheme (as returned, paraphrase)."
+      },
+      "portosystemic_shunt": {
+        "value": "portosystemic (liver) shunt",
+        "unit": "—",
+        "source_id": "S140",
+        "quote": "Portosystemic shunt – abnormal blood circulation, with the blood effectively bypassing the liver",
+        "confidence": "medium",
+        "notes": "PDSA (S140): 'and entering general circulation.'"
+      },
+      "elbow": {
+        "value": "elbow screening before breeding",
+        "unit": "—",
+        "source_id": "S138",
+        "quote": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding.",
+        "confidence": "medium",
+        "notes": "RKC breed page (S138): good practice = eye testing (BVA/KC/ISDS Eye Scheme); best practice = elbow testing (BVA/KC Elbow Dysplasia Scheme) (paraphrase of the returned list); breed club health scheme (Havanese Club GB); 'We don't currently offer a breed-specific DNA testing package for this breed.' Not a Breed Watch point → no welfare chip."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35) lists neither 'Havanese' nor 'Bichon Havanais' (checked 2026-10-10; 79 ranks). Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "easy to train; reward-based training",
+        "unit": "—",
+        "source_id": "S140",
+        "quote": "They are easy to train;",
+        "confidence": "medium",
+        "notes": "PDSA (S140) points to reward-based training. FCI (S136): 'Exceptionally bright he is easy to train as alarm dog.' Not a first-time-owner statement → no first_time_owner tag."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.havanese.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "sturdy little dog, low on the legs, long abundant soft coat, preferably wavy; body slightly longer than tall",
+        "unit": "—",
+        "source_id": "S136",
+        "quote": "The Havanese is a sturdy little dog, low on his legs, with long abundant hair, soft and preferably wavy.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S139): 'Small, sturdy, slightly longer in body than height at withers. Profusely coated, tail carried in plume over back.' FCI proportions: body length to height 4/3 (paraphrase)."
+      },
+      "colours": {
+        "value": [
+          "fawn",
+          "black",
+          "havana brown",
+          "tobacco",
+          "reddish brown",
+          "white"
+        ],
+        "unit": "list (patches in these colours allowed; tan markings permitted)",
+        "source_id": "S136",
+        "quote": "Rarely completely pure white, fawn in its different shades (slight blackened overlay admitted),",
+        "confidence": "high",
+        "notes": "FCI (S136) continues: 'black, havana-brown, tobacco colour, reddish-brown.' 'Patches in mentioned colours allowed.' 'Tan markings in all nuances permitted.' RKC breed standard (S139): 'Any colour or combination of colours permissible, except merle which is unacceptable.' AKC (S141): 'All colors and marking patterns are permissible and are of equal merit.' The game uses the FCI list only; never merle (runbook §3)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). No standard ranks a colour (AKC S141 'of equal merit'); fawn is drawn highest (portrait default), then black and havana brown, then tobacco, reddish brown and (rare, FCI 'Rarely completely pure white') white; patches in these colours or tan markings; never merle."
+      },
+      "coat": {
+        "value": "very long (12–18 cm), soft, flat or wavy, may form curly strands; undercoat little or absent; not trimmed",
+        "unit": "—",
+        "source_id": "S136",
+        "quote": "The topcoat is very long (12-18 cm in an adult dog), soft, flat or wavy and may form curly strands.",
+        "confidence": "high",
+        "notes": "FCI (S136): 'Undercoat woolly and not very developed; it is often totally absent.' 'All grooming, the usage of scissors to even out the length of the coat and all trimming is forbidden.' RKC breed standard (S139): 'Soft, silky, wavy or slightly curled, full coated with an undercoat.' The game draws the natural long coat."
+      },
+      "ears": {
+        "value": "set relatively high, falling along the cheeks with a discreet fold",
+        "unit": "—",
+        "source_id": "S136",
+        "quote": "Set relatively high; they fall along the cheeks forming a discreet fold which raises them slightly.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S139): 'Moderately pointed and dropped, set on just above eye level, slightly raised, neither fly away nor framing the cheeks.'"
+      },
+      "eyes": {
+        "value": "quite big, almond shaped, brown as dark as possible; dark rims",
+        "unit": "—",
+        "source_id": "S136",
+        "quote": "Quite big, almond shape, of brown colour as dark as possible.",
+        "confidence": "high",
+        "notes": "FCI (S136): 'The eyes rims must be dark brown to black.' RKC (S139): 'Dark, large, almond shaped, gentle expression, eye rims black.' 'In brown shades eyes can be a slightly lighter colour, eye rims brown.'"
+      },
+      "nose": {
+        "value": "black or brown; muzzle as long as the skull, neither snipey nor truncated; moderate stop",
+        "unit": "—",
+        "source_id": "S136",
+        "quote": "Black or brown.",
+        "confidence": "high",
+        "notes": "FCI (S136): muzzle 'Narrowing progressively and slightly towards the nose but neither snipey nor truncated.'; 'The length of the muzzle (tip of nose to stop) is equal to the distance between the stop and the occipital protuberance.'; stop 'Moderately marked.' Not flat-faced."
+      },
+      "tail": {
+        "value": "carried high, curled or rolled over the back, feathered",
+        "unit": "—",
+        "source_id": "S136",
+        "quote": "Carried high, either in shape of a crozier or preferably rolled over the back;",
+        "confidence": "high",
+        "notes": "RKC breed standard (S139): 'Set high, carried over the back; profusely feathered with long silky hair.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S138) and PDSA (S140). The RKC page shows no 'Good with children' field (as returned 2026-10-10). Woodgreen and AKC trait ratings not attempted (same as the earlier breeds).",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S138",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "PDSA (S140): size 'Small'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 30 minutes per day",
+        "unit": "—",
+        "source_id": "S138",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S138",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "Basis of the apartment tag (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S138",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S138",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "PDSA (S140): 'requires daily grooming to prevent knots and tangles' → frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S138",
+        "quote": "Coat length: Long",
+        "confidence": "high",
+        "notes": "PDSA (S140): coat length 'Long'."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S138",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "PDSA (S140) says nothing about shedding (no conflict). Basis of low_shedding — never 'hypoallergenic'."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S138",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S138",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S138",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-10)."
+      },
+      "fci_children": {
+        "value": "loves children and plays endlessly with them",
+        "unit": "—",
+        "source_id": "S136",
+        "quote": "He loves children and plays endlessly with them.",
+        "confidence": "high",
+        "notes": "Breed-standard statement, not a rating → children tag; no small_children (no explicit rating). PDSA (S140): family pets 'given the right socialisation as puppies'."
+      },
+      "pdsa_family": {
+        "value": "excellent family pets, given the right socialisation",
+        "unit": "—",
+        "source_id": "S140",
+        "quote": "They enjoy being in the centre of the family circle and make excellent family pets",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_exercise": {
+        "value": "around 30 minutes per day",
+        "unit": "—",
+        "source_id": "S140",
+        "quote": "The Havanese is a fairly energetic dog requiring around 30 minutes of exercise per day.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "daily grooming",
+        "unit": "—",
+        "source_id": "S140",
+        "quote": "They have a long, soft coat which requires daily grooming to prevent knots and tangles.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_first_time_owner": {
+        "value": "easy to train",
+        "unit": "—",
+        "source_id": "S140",
+        "quote": "They are easy to train;",
+        "confidence": "medium",
+        "notes": "Not a first-time-owner statement → no tag."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -8104,6 +8593,217 @@
         "confidence": "high",
         "notes": "Colours from the FCI standard (S131) 'with no order of preference'; merle is standard for this breed (runbook §3). Colour weights are ours (unsourced). Natural long tail chosen (no docking).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue merle (white and tan markings) portrait default, black / red merle / red options, standard colours and white limits only, natural long tail"
+      }
+    },
+    "havanese": {
+      "_note": "Unattended run M5-R10-10 (2026-10-10): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry.",
+      "exercise_minutes_adult": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": "S138",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'Up to 30 minutes per day' (S138); PDSA 'around 30 minutes of exercise per day' (S140) agrees. Rule: one number N ('up to N') → N = 30.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S138 'Up to 30 minutes per day'; PDSA S140 'around 30 minutes')"
+      },
+      "step_goal_adult": {
+        "value": 3000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 30 min × 100 steps/min (S45) = 3,000 — the lowest goal of the catalogue.",
+        "derived_from": [
+          "S138",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min × 100 steps/min → 3,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 23,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 30) = 22.5 → 23 min (half up) → 2,300 steps.",
+        "steps": 2300,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30 = 22.5, half up)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 30 reached at 3 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 30 min (reached at 3 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + RKC lower bound 'Over 12 years', S138; PDSA S140 the same). No McMillan 2024 / VetCompass Havanese median reachable. Alternative: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 Supplementary Table / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S138"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S138)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's ranking (S35) → unranked → 1.0. PDSA 'They are easy to train' (S140) and FCI 'Exceptionally bright' (S136) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-10); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S138"
+            ],
+            "refs": [
+              "havanese.suitability.rkc_size_of_home",
+              "havanese.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S138 'Size of home: Flat/ Apartment' / 'Size of garden: Small/ medium garden'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S140"
+            ],
+            "refs": [
+              "havanese.suitability.pdsa_family",
+              "havanese.behaviour.family"
+            ],
+            "quote": "S140 'They enjoy being in the centre of the family circle and make excellent family pets'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S136"
+            ],
+            "refs": [
+              "havanese.suitability.fci_children",
+              "havanese.behaviour.family"
+            ],
+            "quote": "S136 'He loves children and plays endlessly with them.'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S138"
+            ],
+            "refs": [
+              "havanese.suitability.rkc_shedding"
+            ],
+            "quote": "S138 'Sheds: No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S138",
+              "S140"
+            ],
+            "refs": [
+              "havanese.suitability.rkc_grooming",
+              "havanese.suitability.pdsa_grooming"
+            ],
+            "quote": "S138 'Grooming: Every day'; S140 'requires daily grooming to prevent knots and tangles'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No explicit rating; the FCI statement (S136) is not a rating and PDSA asks for socialisation (S140).",
+          "first_time_owner": "PDSA 'easy to train' (S140) is not a first-time-owner statement.",
+          "large_home": "RKC 'Flat/ Apartment' (S138).",
+          "active_family": "RKC 'Up to 30 minutes per day' (S138).",
+          "long_daily_exercise": "30 min (S138, S140).",
+          "other_pets": "No source.",
+          "often_alone": "No source.",
+          "older_owners": "No source.",
+          "sheds": "RKC 'Sheds: No' (S138).",
+          "chews_when_bored": "No source.",
+          "needs_mental_stimulation": "No source.",
+          "food_motivated_weight": "No breed-specific statement.",
+          "brachycephalic_breathing": "Not flat-faced: muzzle as long as the skull, 'neither snipey nor truncated' (S136); RKC Breed Watch Category 1 (S138).",
+          "hips_hind_legs": "No source.",
+          "heart_and_spine": "No source.",
+          "back_spine": "No source."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, children, low_shedding; consider frequent_grooming (no new key)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare-concern breed)",
+        "unit": "—",
+        "source_id": "S138",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "Welfare-concern rule (runbook §3) does not apply: RKC Breed Watch Category 1 (S138); moderate standard (FCI S136: muzzle 'neither snipey nor truncated', sturdy). No veterinary advice against showing the breed in advertising found. Marketing never calls the breed 'hypoallergenic' (low_shedding only) and never promises health.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): not a welfare-concern breed — may appear in marketing"
+      },
+      "ai_appearance": {
+        "value": "adult Havanese, fawn (default), black, havana brown, tobacco, reddish brown or (rarely) white, with or without patches in these colours or tan markings; very long soft wavy natural coat, drop ears along the cheeks, large dark almond eyes, tail curled over the back; standard colours only, never merle",
+        "unit": "—",
+        "source_id": "S136",
+        "quote": "Rarely completely pure white, fawn in its different shades (slight blackened overlay admitted),",
+        "confidence": "high",
+        "notes": "Colours from the FCI standard (S136); RKC: 'except merle which is unacceptable' (S139). Colour weights are ours (unsourced). Natural untrimmed coat (FCI forbids trimming).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn portrait default; black / havana brown / tobacco / reddish brown / white options; FCI colours only, never merle; natural long coat"
       }
     }
   }
