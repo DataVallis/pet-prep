@@ -137,6 +137,28 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.french_bulldog',
                 'search_keywords' => ['french bulldog', 'frenchie', 'french', 'bulldog', 'francoski buldog', 'buldog'],
             ],
+            // M5-R10-04 German Shepherd Dog (docs/research/dog-data/data.json
+            // german_shepherd, sources S95–S102; runbook rules confirmed by David
+            // 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.german_shepherd.step_goal_adult: 120 min ×
+            // 100 steps/min — RKC S97 "More than 2 hours per day", PDSA S100 "a
+            // minimum of two hours") — only the legacy-profile fallback. Hunger /
+            // thirst decay, poops and water are the Border Collie's (no per-breed number).
+            [
+                'breed_slug' => BreedType::GermanShepherd->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 50,
+                'label_key' => 'breeds.german_shepherd',
+                'search_keywords' => ['german shepherd', 'german shepherd dog', 'gsd', 'alsatian', 'nemški ovčar', 'nemski ovcar', 'ovčar', 'ovcar'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

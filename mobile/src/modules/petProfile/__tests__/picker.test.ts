@@ -9,17 +9,19 @@ import { i18n } from '@/i18n';
  * adult mutt 60 min, Border Collie 120 min, Labrador 90 min (M5-R10, S59), Golden Retriever
  * 120 min (M5-R10-02, S65 / S68); senior 75 % of adult in whole minutes (Labrador 67.5 → 68,
  * BreedStageParamsSeeder::labradorProfile; Golden 90, goldenProfile); French Bulldog 60 min
- * (M5-R10-03, S78 / S81), senior 45 (frenchBulldogProfile);
+ * (M5-R10-03, S78 / S81), senior 45 (frenchBulldogProfile); German Shepherd 120 min (M5-R10-04,
+ * S97 / S100), senior 90 (germanShepherdProfile);
  * arrival puppy 2, young 9 months.
  */
-type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog'>;
-const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog'];
+type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd'>;
+const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd'];
 const ADULT_MINUTES: Record<DogBreed, number> = {
   mutt: 60,
   border_collie: 120,
   labrador_retriever: 90,
   golden_retriever: 120,
   french_bulldog: 60,
+  german_shepherd: 120,
 };
 const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 };
 
@@ -126,6 +128,24 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(F.adult).toContain('6,000 steps');
       expect(F.senior).toContain('4,500 steps');
       expect(PICKER_STRINGS.breedHints.french_bulldog).toBe('Part of the 12-week challenge.');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-04 German Shepherd: 2.000 → 12.000 (reached at 12 months), adult 12.000, senior 9.000 — SL and EN', async () => {
+    const G = PICKER_STRINGS.ageHints.german_shepherd;
+    expect(G.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 12\.000 pri 12 mesecih/);
+    expect(G.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
+    expect(G.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.german_shepherd).toBe('Del 12-tedenskega izziva.');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.german_shepherd;
+      expect(E.puppy).toContain('2,000 steps a day, more each week up to 12,000 at 12 months');
+      expect(E.adult).toContain('12,000 steps');
+      expect(E.senior).toContain('9,000 steps');
+      expect(PICKER_STRINGS.breedHints.german_shepherd).toBe('Part of the 12-week challenge.');
     } finally {
       await i18n.changeLanguage('sl');
     }

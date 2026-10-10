@@ -58,6 +58,15 @@
 | (RKC S79 "No point exaggerated" / "visibly open nostrils"); fawn weighted
 | highest (portrait default). Colour weights are unsourced → `verified => false`.
 |
+| German Shepherd Dog (M5-R10-04, docs/research/dog-data german_shepherd.appearance):
+| size, build, double coat, erect ears, dark eyes, bushy sabre tail and the
+| standard colours (black with tan / gold markings, sable, black — never white,
+| S95; never blue / liver, S97) follow FCI 166 (S95) / RKC standard (S98) / RKC
+| breed page (S97). Welfare rule (RKC Breed Watch S99 "Incorrect hind
+| conformation"): a level back and moderate, natural hind legs — the dog trait
+| `topline`; black-and-tan weighted highest (portrait default). Colour weights
+| are unsourced → `verified => false`.
+|
 */
 
 return [
@@ -294,6 +303,48 @@ return [
             'muzzle' => ['short but not exaggerated, with a black nose and visibly open nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-04 (docs/research/dog-data/data.json german_shepherd.appearance;
+    // runbook rules 2026-10-10: standard colours, level back, black-and-tan portrait).
+    'german_shepherd' => [
+        'display_name' => 'German Shepherd Dog',
+        // Colour frequencies are in no source (german_shepherd.appearance.colour_weights UNSOURCED) → all weights are a draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 166 (S95, https://www.fci.be/Nomenclature/Standards/166g01-en.pdf), Royal Kennel Club standard (S98), RKC breed page (S97), RKC Breed Watch (S99) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S97 "Size: Large"; PDSA S100 the same',
+            'build' => 'S95 "medium-size, slightly elongated, powerful and well-muscled"; S98 "balanced and free from exaggeration"',
+            'coat_length' => 'S95 "the hair varieties double coat and long double coat"; S98 "Outer coat consisting of straight, hard, close-lying hair as dense as possible; thick undercoat."',
+            'coat_color' => 'S95 "Colours are black with reddish-brown, brown and yellow to light grey markings." "The colour white is not allowed."; S97 standard colours Black & Tan, Black & Gold, Sable, Black … (weights unsourced; white / blue / liver never)',
+            'coat_pattern' => 'S97 standard colours "Black & Tan", "Black & Gold", "Sable", "Gold Sable", "Grey Sable", "Black", "Bi-Colour"',
+            'ear_carriage' => 'S95 "erect ears of medium size, which are carried upright and aligned"',
+            'eye_color' => 'S98 "Medium-sized, almond-shaped, never protruding." "Dark brown preferred"',
+            'tail' => 'S98 "Bushy-haired, reaches at least to hock." "At rest tail hangs in slight sabre-like curve"',
+            'topline' => 'S98 "The topline runs without any visible break from the set on of the neck." "Any tendency towards over-angulation of hindquarters … highly undesirable."; S99 "Incorrect hind conformation and/or poor rear movement" (welfare rule: never the sloping show stance)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'powerful, well-muscled, slightly longer than tall', 'weight' => 3], 'athletic, balanced'],
+            'coat_length' => [['value' => 'dense short double coat', 'weight' => 4], 'long double coat'],
+            // Standard colours only (S95 / S97); black-and-tan highest → the register portrait is black and tan.
+            'coat_color' => [
+                ['value' => 'black and tan', 'weight' => 5],
+                ['value' => 'black and gold', 'weight' => 2],
+                ['value' => 'sable', 'weight' => 2],
+                'solid black',
+            ],
+            'coat_pattern' => [
+                ['value' => 'black saddle with tan legs, chest and face', 'weight' => 4, 'only_with' => ['coat_color' => ['black and tan', 'black and gold']]],
+                ['value' => 'darker tips and a dark mask', 'only_with' => ['coat_color' => ['sable']]],
+                ['value' => 'solid', 'only_with' => ['coat_color' => ['solid black']]],
+            ],
+            'ear_carriage' => ['erect, pointed, medium-sized'],
+            'eye_color' => ['dark brown'],
+            'tail' => ['bushy, hanging in a gentle sabre curve'],
+            // Welfare rule (S99): never a sloping back or over-angulated hind legs.
+            'topline' => ['level back with moderate, natural hind legs, standing square'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'topline'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

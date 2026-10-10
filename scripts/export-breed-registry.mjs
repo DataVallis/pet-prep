@@ -366,6 +366,7 @@ const SPECIES = [
       { id: 'labrador_retriever', availability: 'coming_soon', synonyms: { en: ['Labrador', 'Lab'], sl: ['labradorski prinašalec', 'labrador'] } },
       { id: 'golden_retriever', availability: 'coming_soon', synonyms: { en: ['Golden'], sl: ['golden', 'golden retriver'] } },
       { id: 'french_bulldog', availability: 'coming_soon', synonyms: { en: ['Frenchie'], sl: ['frenchie', 'francoski buldog', 'french bulldog'] } },
+      { id: 'german_shepherd', availability: 'coming_soon', synonyms: { en: ['Alsatian', 'GSD'], sl: ['nemški ovčar', 'nemski ovcar', 'german shepherd'] } },
     ],
   },
   {
@@ -384,7 +385,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -443,6 +444,22 @@ const DOG_FACTS = {
       ['merle_colour_risk', 'health.merle_colour'],
     ],
   },
+  // M5-R10-04. Not exported: causes-of-death / disorder percentages (VetCompass S101 / S102 — research only).
+  german_shepherd: {
+    height: ['height.fci_range'],
+    weight: [['adult_weight.fci', null], ['adult_weight.pdsa', null], ['adult_weight.uk_measured_median', 'median']],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hind_leg_conformation', 'health.hind_conformation'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['degenerative_myelopathy', 'health.degenerative_myelopathy'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -477,6 +494,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.french_bulldog.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.french_bulldog.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.french_bulldog.exercise_minutes_senior',
+  },
+  german_shepherd: {
+    adult_minutes: ['proposed_game_parameters.german_shepherd.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.german_shepherd.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.german_shepherd.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.german_shepherd.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.german_shepherd.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.german_shepherd.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],

@@ -79,6 +79,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.golden_retriever.slug.sl, 'zlati-prinasalec');
   assert.deepEqual(byId.french_bulldog.slug, { en: 'french-bulldog', sl: 'francoski-buldog' });
   assert.equal(byId.french_bulldog.availability, 'coming_soon');
+  assert.deepEqual(byId.german_shepherd.slug, { en: 'german-shepherd-dog', sl: 'nemski-ovcar' }); // EN = RKC name
+  assert.equal(byId.german_shepherd.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
@@ -128,6 +130,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     labrador_retriever: { adult: 9000, senior: 6800, seniorFrom: 118, learning: 1.8 },
     golden_retriever: { adult: 12000, senior: 9000, seniorFrom: 119, learning: 1.9 },
     french_bulldog: { adult: 6000, senior: 4500, seniorFrom: 88, learning: 0.7 },
+    german_shepherd: { adult: 12000, senior: 9000, seniorFrom: 93, learning: 1.9 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -164,6 +167,22 @@ test('French Bulldog (M5-R10-03): "up to 1 hour", origin France, puppy cap at 6 
   const json = JSON.stringify(fb);
   assert.doesNotMatch(json, /vetcompass_2013_deaths|rfg_grades|boas_diagnosed_prevalence|30\.89|42\.14/);
   assert.deepEqual(fb.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['median', 9.8], ['more_than', 10]]);
+});
+
+test('German Shepherd (M5-R10-04): more than 2 hours, origin Germany, puppy cap at 12 months, no statistics', () => {
+  const gs = registry.breeds.find((b) => b.id === 'german_shepherd');
+  const ex = gs.facts.find((f) => f.field === 'exercise');
+  assert.deepEqual([ex.value, ex.qualifier, ex.source_ids], [120, 'more_than', ['S97']]);
+  assert.equal(gs.facets.exercise, 'over_2h');
+  assert.equal(gs.facets.size, 'large');
+  assert.deepEqual(gs.facts.find((f) => f.field === 'fci_standard').value, { number: 166, group: 1, section: 1, origin: 'DE' });
+  assert.deepEqual(gs.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 12000, cap_month: 12 });
+  assert.deepEqual(gs.game.stages[2].activity, { kind: 'steps', value: 12000 });
+  assert.ok(gs.suitability.consider.map((t) => t.tag).includes('hips_hind_legs'));
+  assert.deepEqual(gs.health.map((h) => h.key), ['hind_leg_conformation', 'hip_elbow_dysplasia', 'degenerative_myelopathy']);
+  const json = JSON.stringify(gs);
+  assert.doesNotMatch(json, /causes_of_death|common_disorders|16\.3|14\.9|5\.18|4\.76/);
+  assert.deepEqual(gs.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['median', 10.3], ['more_than', 10]]);
 });
 
 test('every suitability tag has the app wording in EN and SL', () => {
@@ -217,7 +236,8 @@ test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp &
   const code = `require $argv[1]; echo json_encode(Database\\Seeders\\BreedStageParamsSeeder::allRows());`;
   const rows = JSON.parse(execFileSync('php', ['-r', code, resolve(ROOT, 'backend/vendor/autoload.php')], { encoding: 'utf8', cwd: resolve(ROOT, 'backend') }));
   const row = (id, stage, key, from = 0) => {
-    const slug = id.replaceAll('_', '-');
+    // breed_configs slug = the register's EN slug (german_shepherd → german-shepherd-dog, M5-R10-04).
+    const slug = registry.breeds.find((b) => b.id === id)?.slug.en ?? id.replaceAll('_', '-');
     const r = rows.find((x) => x.breed_slug === slug && x.stage === stage && x.key === key && x.age_from_months === from);
     assert.ok(r, `seeded row ${slug} ${stage} ${key} ${from}`);
     return r.value;

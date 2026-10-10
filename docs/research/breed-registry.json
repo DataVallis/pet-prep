@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "3c7c9234547f3c9d51a52af91ca7ed932dba2e174e9c8a7555830b77a27db497"
+      "sha256": "362d22c59ebac3c6818dabad3d718d3810708a3220e95f09dbcc5e6fb09685bd"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "335ef198bca37aded60561433490998259df88078e08e9aaa9e1c28e047e7c04"
+      "sha256": "958a60a19f701a0db8d19281afe95120818bc427b2a818bd242bcd9d8486dd01"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,23 +25,23 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "fa3badcdeae7af51205c3f79e140635fd4f6212a3eed1b12c8b06b54f5679fa2"
+      "sha256": "8b9aea909249b40cb3b5ce837e7aaa0119334a91bc689a2edb84e3c238cde4e3"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "2f7560f6264c9fb882491fda18d3ab8262e05177db248a35ef948371cfba6c77"
+      "sha256": "e68e70c9a431d58a68ed60dc658bd3357708a686894e555d9f980af1a27ee734"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "08efb1ebf5b2ce844c0ba68141cd0eaf149a529964cdec879decae2890ae205b"
+      "sha256": "ab583651232f8a1896e8aadbcae7aea77469bb4aad99440c7a7d4c2eedd9ca15"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "a5d614ad917645f23e60f1a30ffa6664afa5788b2391c1f283891b4223931f91"
+      "sha256": "66b8db7fffe7f141f346fcb27befff258dbe38bb9afd4a984d6ff62b0e29bb24"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "06a7b8675f4bbfcff0ad2b30b45b47a82146836a98840e464b109e54285c9876"
+      "sha256": "fe2b6f92314d99060c0cea7d70271a106065de5bc03dd82f04f9cc9012e4e7be"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -58,6 +58,7 @@
     "first_time_owner": "suits",
     "food_motivated_weight": "consider",
     "frequent_grooming": "consider",
+    "hips_hind_legs": "consider",
     "large_home": "suits",
     "long_daily_exercise": "consider",
     "low_shedding": "suits",
@@ -83,6 +84,7 @@
         "first_time_owner": "first-time owners",
         "food_motivated_weight": "loves food — watch the weight",
         "frequent_grooming": "needs brushing several times a week",
+        "hips_hind_legs": "hips and hind legs — check joint health",
         "large_home": "a large house and garden",
         "long_daily_exercise": "needs lots of exercise every day",
         "low_shedding": "homes that prefer less shedding",
@@ -108,6 +110,7 @@
         "first_time_owner": "začetnike",
         "food_motivated_weight": "rad je — pazite na težo",
         "frequent_grooming": "potrebuje česanje večkrat na teden",
+        "hips_hind_legs": "kolki in zadnje noge — preverite zdravje sklepov",
         "large_home": "veliko hišo z vrtom",
         "long_daily_exercise": "vsak dan potrebuje veliko gibanja",
         "low_shedding": "dom, kjer želite manj dlak",
@@ -139,7 +142,7 @@
         }
       },
       "status": "available",
-      "breed_count": 4,
+      "breed_count": 5,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -3025,6 +3028,573 @@
       ]
     },
     {
+      "id": "german_shepherd",
+      "species": "dog",
+      "order": 4,
+      "availability": "coming_soon",
+      "name": {
+        "en": "German Shepherd Dog",
+        "sl": "Nemški ovčar"
+      },
+      "slug": {
+        "en": "german-shepherd-dog",
+        "sl": "nemski-ovcar"
+      },
+      "synonyms": {
+        "en": [
+          "Alsatian",
+          "GSD"
+        ],
+        "sl": [
+          "nemški ovčar",
+          "nemski ovcar",
+          "german shepherd"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S97"
+          ],
+          "ref": "german_shepherd.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              60,
+              65
+            ],
+            "female": [
+              55,
+              60
+            ]
+          },
+          "source_ids": [
+            "S95"
+          ],
+          "ref": "german_shepherd.height.fci_range",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              30,
+              40
+            ],
+            "female": [
+              22,
+              32
+            ]
+          },
+          "source_ids": [
+            "S95"
+          ],
+          "ref": "german_shepherd.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            35,
+            43
+          ],
+          "source_ids": [
+            "S100"
+          ],
+          "ref": "german_shepherd.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "qualifier": "median",
+          "value": {
+            "male": [
+              40.1,
+              40.1
+            ],
+            "female": [
+              34.8,
+              34.8
+            ]
+          },
+          "source_ids": [
+            "S101"
+          ],
+          "ref": "german_shepherd.adult_weight.uk_measured_median",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "german_shepherd.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 10.3,
+          "source_ids": [
+            "S101"
+          ],
+          "ref": "german_shepherd.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S97"
+          ],
+          "ref": "german_shepherd.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S97"
+          ],
+          "ref": "german_shepherd.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short_long"
+          ],
+          "source_ids": [
+            "S97"
+          ],
+          "ref": "german_shepherd.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S97"
+          ],
+          "ref": "german_shepherd.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S97"
+          ],
+          "ref": "german_shepherd.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 3,
+          "source_ids": [
+            "S34"
+          ],
+          "ref": "german_shepherd.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 166,
+            "group": 1,
+            "section": 1,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S96"
+          ],
+          "ref": "german_shepherd.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 8,
+        "grooming_frequency": 10,
+        "shedding": 11,
+        "lifespan": 6
+      },
+      "health": [
+        {
+          "key": "hind_leg_conformation",
+          "source_ids": [
+            "S99"
+          ],
+          "ref": "german_shepherd.health.hind_conformation",
+          "confidence": "high"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S97"
+          ],
+          "ref": "german_shepherd.health.hip_elbow_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "degenerative_myelopathy",
+          "source_ids": [
+            "S100"
+          ],
+          "ref": "german_shepherd.health.degenerative_myelopathy",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S97",
+              "S100"
+            ],
+            "refs": [
+              "german_shepherd.exercise.adult",
+              "german_shepherd.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S100"
+            ],
+            "refs": [
+              "german_shepherd.suitability.pdsa_family",
+              "german_shepherd.behaviour.family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S97"
+            ],
+            "refs": [
+              "german_shepherd.suitability.rkc_size_of_home",
+              "german_shepherd.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S97",
+              "S100"
+            ],
+            "refs": [
+              "german_shepherd.exercise.adult"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S97",
+              "S100"
+            ],
+            "refs": [
+              "german_shepherd.suitability.rkc_shedding",
+              "german_shepherd.suitability.pdsa_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S97",
+              "S100"
+            ],
+            "refs": [
+              "german_shepherd.suitability.rkc_grooming"
+            ]
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S100"
+            ],
+            "refs": [
+              "german_shepherd.behaviour.boredom_chewing"
+            ]
+          },
+          {
+            "tag": "hips_hind_legs",
+            "source_ids": [
+              "S97",
+              "S99",
+              "S100",
+              "S101"
+            ],
+            "refs": [
+              "german_shepherd.health.hind_conformation",
+              "german_shepherd.health.hip_elbow_dysplasia"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 93
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.9
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 93
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.german_shepherd.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S97"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S97 'More than 2 hours per day' = PDSA S100 'a minimum of two hours')"
+          },
+          {
+            "ref": "proposed_game_parameters.german_shepherd.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_shepherd.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S101"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 93 (0.75 × 10.3 y, VetCompass S101)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_shepherd.learning_multiplier",
+            "basis_source_ids": [
+              "S34",
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.9 (Coren rank 3, S34 — Brightest tier)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S34",
+          "S35",
+          "S45",
+          "S97",
+          "S101"
+        ]
+      },
+      "portrait": null,
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S34",
+        "S35",
+        "S45",
+        "S95",
+        "S96",
+        "S97",
+        "S99",
+        "S100",
+        "S101"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -3700,6 +4270,48 @@
       "publisher": "Scientific Reports 10:9128 (2020)",
       "title": "Hall E. J., Carter A. J., O'Neill D. G. Incidence and risk factors for heat-related illness (heatstroke) in UK dogs under primary veterinary care in 2016. doi:10.1038/s41598-020-66015-8",
       "url": "https://www.nature.com/articles/s41598-020-66015-8"
+    },
+    {
+      "id": "S95",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 166 — German Shepherd Dog (Deutscher Schäferhund), EN (PDF)",
+      "url": "https://www.fci.be/Nomenclature/Standards/166g01-en.pdf"
+    },
+    {
+      "id": "S96",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — German Shepherd Dog (166)",
+      "url": "https://www.fci.be/en/nomenclature/GERMAN-SHEPHERD-DOG-166.html"
+    },
+    {
+      "id": "S97",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: German Shepherd Dog",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/german-shepherd-dog"
+    },
+    {
+      "id": "S99",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed Watch — German Shepherd Dog (Category 2)",
+      "url": "https://www.royalkennelclub.com/activities/heritage-sports/dog-showing/judging-dog-shows/breed-watch-health-and-welfare-of-show-dogs/german-shepherd-dog-category-2/"
+    },
+    {
+      "id": "S100",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "German Shepherd breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/german-shepherd"
+    },
+    {
+      "id": "S101",
+      "tier": "A",
+      "publisher": "Canine Genetics and Epidemiology 4:7 (2017) (RVC repository copy)",
+      "title": "O'Neill D. G., Coulson N. R., Church D. B., Brodbelt D. C. Demography and disorders of German Shepherd Dogs under primary veterinary care in the UK. doi:10.1186/s40575-017-0046-4",
+      "url": "https://rvc-repository.worktribe.com/OutputFile/1391082"
     },
     {
       "id": "C1",

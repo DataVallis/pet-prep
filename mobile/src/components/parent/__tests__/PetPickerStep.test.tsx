@@ -232,13 +232,14 @@ describe('PetPickerStep', () => {
     expect(screen.getByTestId('breed-suitability-golden_retriever-consider')).toHaveTextContent(
       'Upoštevajte:vsak dan potrebuje veliko gibanjaizpada mu dlakarad je — pazite na težopotrebuje česanje večkrat na teden',
     );
-    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40).
+    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50).
     expect(screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID)).toEqual([
       'breed-option-mutt',
       'breed-option-border_collie',
       'breed-option-labrador_retriever',
       'breed-option-golden_retriever',
       'breed-option-french_bulldog',
+      'breed-option-german_shepherd',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -293,6 +294,46 @@ describe('PetPickerStep', () => {
       { species: 'dog', breed: 'french_bulldog', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
       expect.objectContaining({ breed: 'french_bulldog' }),
     );
+  });
+
+  it('M5-R10-04: the German Shepherd (fallback) shows the hips chip, is found as "ovčar" and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const shepherd = screen.getByTestId('breed-option-german_shepherd');
+    expect(shepherd).toHaveTextContent(/Nemški ovčar/);
+    expect(shepherd).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-german_shepherd-suits')).toHaveTextContent(
+      'Primerno za:aktivno družinodružinsko življenjeveliko hišo z vrtom',
+    );
+    expect(screen.getByTestId('breed-suitability-german_shepherd-consider')).toHaveTextContent(
+      /kolki in zadnje noge — preverite zdravje sklepov/,
+    );
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'ovčar');
+    expect(screen.queryByTestId('breed-option-french_bulldog')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-german_shepherd'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'german_shepherd', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'german_shepherd' }),
+    );
+  });
+
+  it('M5-R10-04: the hips chip in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-german_shepherd-consider');
+      expect(consider).toHaveTextContent(/hips and hind legs — check joint health/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
   });
 
   it('M5-R10-03: the breathing chip in English, without numbers', async () => {

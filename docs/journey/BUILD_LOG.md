@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Nemški ovčar: četrta nova pasma, prvič po stalnih pravilih (M5-R10-04)
+
+**Kaj se je zgodilo:** PetPrep ima peto plačljivo pasmo psa — **nemškega ovčarja** (German Shepherd Dog). Je prva pasma, dodana v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026: vsaka številka sledi vnaprej dogovorjenemu pravilu in je zapisana z virom. Raziskava: **8 novih virov (S95–S102)** — standard FCI 166 in nomenklatura FCI, The Royal Kennel Club (stran pasme, standard in Breed Watch), PDSA, raziskava VetCompass (O'Neill 2017) in novica RVC. Številke igre: odrasel nemški ovčar potrebuje **120 minut gibanja = 12.000 korakov** na dan (RKC »več kot 2 uri«, PDSA »vsaj dve uri«), mladiček doseže ta cilj pri **12 mesecih**, starejši **9.000**; starejši postane pri **93 mesecih** (0,75 × 10,3 leta, mediana VetCompass); uči se **1,9× hitreje** od mešančka (Coren: 3. mesto). Izbirnik pokaže »Primerno za: aktivno družino, družinsko življenje, veliko hišo z vrtom« in »Upoštevajte: vsak dan potrebuje veliko gibanja, izpada mu dlaka, potrebuje česanje večkrat na teden, ko se dolgočasi, grize stvari, **kolki in zadnje noge — preverite zdravje sklepov**« (nova oznaka, brez odstotkov). AI videz: samo standardne barve (privzeto črno-rjav), raven hrbet in naravne zadnje noge — nikoli nagnjena razstavna drža.
+
+**Zakaj je pomembno:** Nemški ovčar je ena najbolj znanih pasem, a The Royal Kennel Club pri njej opozarja na zgradbo zadnjih nog. PetPrep staršem mirno svetuje, naj izberejo vzreditelja z zdravstveno preverjenimi starši, in pasme po pravilu za dobrobit **ne uporablja v marketingu** (David lahko to odločitev spremeni). Hkrati to pokaže, da se nova pasma doda brez ročnega odločanja — z istimi pravili, viri in testi kot prej.
+
+**Številke:** 8 novih virov (S95–S102), 46 vrstic `breed_stage_params`, 8 oznak (3 + 5), 1 nova oznaka v besednjaku (`hips_hind_legs`), 1 nova migracija, 26 novih testov za pasmo; Pest **1941** testov, Jest **1942** (after merging main) testov, izvoz registra 18 testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje; fotografija in stran v registru živali sta naslednji korak (*načrt*).
+
+**Kako povedati:**
+- 👩 Starši: »Nemški ovčar je pameten delovni pes za aktivno družino z veliko prostora — potrebuje vsaj dve uri gibanja na dan. Pri nakupu vprašajte za zdravstveno preverjena starša psa (kolki in zadnje noge). V PetPrep to vidite, preden se odločite.« (*ko bo nova različica v trgovini; brez slik pasme — glej smernice za marketing*)
+- 💼 Investitorji: »Peta plačljiva pasma — prva, dodana samodejno po vnaprej potrjenih pravilih: raziskava z viri, številke igre, testi in dokumentacija brez ročnega odločanja.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri nemškem ovčarju sledi opozorilom The Royal Kennel Club — družine napoti k vzrediteljem s preverjenimi starši, brez strašenja.«
+- 📣 Omrežja: *ne* — nemški ovčar se v objavah ne pojavlja (pravilo za dobrobit, 10. 10. 2026; David lahko spremeni).
+- 🛠 Tehnično: »Nova lastnost `topline` v pozivu za AI (raven hrbet), nova država izvora v izvozu registra (Nemčija), migracija samo razširi CHECK in je povratna.«
+
+---
+
 ## 2026-10-10 — Muca je v aplikaciji: vklop čaka samo še na stikalo na strežniku (M5-R06-09, del A)
 
 **Kaj se je zgodilo:** Aplikacija od danes ve, da zna prikazati muco (`CAT_UI_READY`): pri izbiri ljubljenčka, ustvarjanju kode in otrokovi prijavi strežniku sporoči, da zna mačko. Dokler David na strežniku ne vklopi `PETPREP_CATS_ENABLED`, strežnik ponudi samo pse in aplikacija deluje natanko kot doslej — to preverjajo testi za obe stanji. Hkrati smo dokončali zadnja pasja besedila: plačilni zaslon 12-tedenskega izziva, pasica, vrstica »Nakupi / izziv«, gumb za nakup (bralnik zaslona) in opozorilo ob izbrisu zdaj govorijo o muci, ko gre za muco (»Muce, ki čakajo na izziv«, »En nakup velja za eno muco«, »Brezplačna domača mačka je brezplačna za vedno«), v družini s psom in muco pa nevtralno o ljubljenčkih. Pasja besedila so ostala bajt za bajt enaka. Mobilni testi: **1.934 zelenih** (145 sklopov), test pokritosti prevodov nima več nobene izjeme za plačila.

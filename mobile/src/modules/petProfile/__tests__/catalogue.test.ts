@@ -112,7 +112,7 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40), never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
     expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
       'mutt',
@@ -120,6 +120,7 @@ describe('readBreedCatalogue', () => {
       'labrador_retriever',
       'golden_retriever',
       'french_bulldog',
+      'german_shepherd',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -149,6 +150,16 @@ describe('readBreedCatalogue', () => {
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (David 2026-10-10).
     expect(frenchie?.search_keywords).toEqual(['french bulldog', 'frenchie', 'french', 'bulldog', 'francoski buldog', 'buldog']);
     expect(frenchie?.suitability).toEqual({ suits: ['apartment', 'family_pet', 'children'], consider: ['brachycephalic_breathing'] });
+    const shepherd = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'german_shepherd');
+    expect(shepherd).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 50 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-04, runbook rules).
+    expect(shepherd?.search_keywords).toEqual(['german shepherd', 'german shepherd dog', 'gsd', 'alsatian', 'nemški ovčar', 'nemski ovcar', 'ovčar', 'ovcar']);
+    expect(shepherd?.suitability).toEqual({
+      suits: ['active_family', 'family_pet', 'large_home'],
+      consider: ['long_daily_exercise', 'sheds', 'frequent_grooming', 'chews_when_bored', 'hips_hind_legs'],
+    });
     expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
     // The fallback is already in picker order.
     expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual([
@@ -157,6 +168,7 @@ describe('readBreedCatalogue', () => {
       'labrador_retriever',
       'golden_retriever',
       'french_bulldog',
+      'german_shepherd',
     ]);
   });
 });
@@ -205,7 +217,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(8);
+    expect(CONSIDER_TAGS).toHaveLength(9);
+    // M5-R10-04 (runbook welfare rule): hips and hind legs — health-tested parents; no numbers.
+    expect(CONSIDER_TAGS).toContain('hips_hind_legs');
     // M5-R10-03 (David 2026-10-10): flat face — breathing and heat; no percentage in the label.
     expect(CONSIDER_TAGS).toContain('brachycephalic_breathing');
     // M5-R10-02 (David 2026-10-09): brushing several times a week; no "mouthy" tag.
