@@ -45,7 +45,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "dd446756b869a0431d6bc7539a15c17be31d3f325eebed72d6f98b29037a8153"
+      "sha256": "67e03b638238275e94f1eced145ebdd5f51a5f349269432a503cb0a5b2e9f14c"
     }
   },
   "suitability_vocabulary": {
@@ -7020,7 +7020,12 @@
           "S148"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "west-highland-white-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "source_ids": [
         "S10",
         "S11",
