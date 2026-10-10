@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "46022e6c6589db4b183e83507a80f35707c7039fe88d9e68e57629522fd1b841"
+      "sha256": "2c7589b1efa6f9b943873b1b608f5d9ccdc1d7f5ee367a7b959908bb1c4fdfd1"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "dd4fa36a6798230eef72c418a096308a8d4221144e6911bd0408c889293c5912"
+      "sha256": "d452c96a5bb3ee4b114f6d0e1b1a56be72398865817027465ead7e8211312172"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,23 +25,23 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "cce95ab74ce4109296c0e7f421f834e67ca4c5740c48e39673539ee4f87aeb9e"
+      "sha256": "751d41ae650bfe62c601815ee95a5041a97854755c658eaa9fd8fcdb37098741"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "cf1b81e818a6ca9d2ecea8fa57e2e0cfa914bcf0565ba74df335e9be1351b0b7"
+      "sha256": "31881d86dfc742e51fa2c3200509f290cfc0068be673025ca2994c05e9bac62c"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "074c0cbf466c261363c311ee3304b9e3e1b1c1be3b5e1a33c34b53065e97a9eb"
+      "sha256": "3dc25e56014c6c20a642446b40308fb6c2d1cce69d0b94377e523e43f8022119"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "04a2f64a479b7772726713b5e170c817bc7ce4b6e767c85c5ec0ab34a0eeeacd"
+      "sha256": "1a450483b389fdfbed32b64ad14f3b724fd56d5d05e199b267058bbc50e50d1f"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "888c442b0c7ef4156a41a09847b173b08316fbbc55fbf44a928346980cfb3af7"
+      "sha256": "efae954092b1ebf774bc0fc65102f0f21dd3bb5490986cdd5396f1986f97065a"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -69,6 +69,7 @@
     "often_alone": "suits",
     "older_owners": "suits",
     "other_pets": "suits",
+    "secure_fencing": "consider",
     "sensitive_skin": "consider",
     "sheds": "consider",
     "shorter_lifespan": "consider",
@@ -99,6 +100,7 @@
         "often_alone": "families who are out for a few hours",
         "older_owners": "older owners",
         "other_pets": "homes with other pets",
+        "secure_fencing": "escapes easily — needs a secure, high fence",
         "sensitive_skin": "sensitive skin — prone to itching and inflammation",
         "sheds": "sheds",
         "shorter_lifespan": "shorter lifespan",
@@ -129,6 +131,7 @@
         "often_alone": "družino, ki je nekaj ur zdoma",
         "older_owners": "starejše lastnike",
         "other_pets": "dom z drugimi ljubljenčki",
+        "secure_fencing": "rad pobegne — potrebuje varno, visoko ograjo",
         "sensitive_skin": "občutljiva koža — nagnjenost k srbenju in vnetjem",
         "sheds": "izpada mu dlaka",
         "shorter_lifespan": "krajša življenjska doba",
@@ -154,7 +157,7 @@
         }
       },
       "status": "available",
-      "breed_count": 13,
+      "breed_count": 14,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -7541,6 +7544,506 @@
       ]
     },
     {
+      "id": "siberian_husky",
+      "species": "dog",
+      "order": 13,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Siberian Husky",
+        "sl": "Sibirski haski"
+      },
+      "slug": {
+        "en": "siberian-husky",
+        "sl": "sibirski-haski"
+      },
+      "synonyms": {
+        "en": [
+          "Husky",
+          "Huskie"
+        ],
+        "sl": [
+          "haski",
+          "sibirski husky",
+          "husky",
+          "sibirec"
+        ]
+      },
+      "facets": {
+        "size": "medium_large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium_large",
+          "source_ids": [
+            "S160"
+          ],
+          "ref": "siberian_husky.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              53.5,
+              60
+            ],
+            "female": [
+              50.5,
+              56
+            ]
+          },
+          "source_ids": [
+            "S158"
+          ],
+          "ref": "siberian_husky.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              20.5,
+              28
+            ],
+            "female": [
+              15.5,
+              23
+            ]
+          },
+          "source_ids": [
+            "S158"
+          ],
+          "ref": "siberian_husky.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "siberian_husky.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S160"
+          ],
+          "ref": "siberian_husky.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S160"
+          ],
+          "ref": "siberian_husky.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S160"
+          ],
+          "ref": "siberian_husky.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S160"
+          ],
+          "ref": "siberian_husky.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S160"
+          ],
+          "ref": "siberian_husky.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 45,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "siberian_husky.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 270,
+            "group": 5,
+            "section": 1,
+            "origin": "US"
+          },
+          "source_ids": [
+            "S159"
+          ],
+          "ref": "siberian_husky.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S162"
+          ],
+          "ref": "siberian_husky.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "inherited_eye_disease",
+          "source_ids": [
+            "S162"
+          ],
+          "ref": "siberian_husky.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S162"
+          ],
+          "ref": "siberian_husky.health.epilepsy",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S160",
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.exercise.adult",
+              "siberian_husky.exercise.energy"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S160"
+            ],
+            "refs": [
+              "siberian_husky.suitability.rkc_size_of_home",
+              "siberian_husky.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S160",
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.exercise.adult",
+              "siberian_husky.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.behaviour.escaping"
+            ]
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.behaviour.chewing"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S160",
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.suitability.rkc_shedding",
+              "siberian_husky.suitability.pdsa_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S160",
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.suitability.rkc_grooming",
+              "siberian_husky.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.siberian_husky.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S160"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S160 'More than 2 hours per day'; PDSA S162 the same)"
+          },
+          {
+            "ref": "proposed_game_parameters.siberian_husky.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.siberian_husky.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S160"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S160)"
+          },
+          {
+            "ref": "proposed_game_parameters.siberian_husky.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 45, S35 — Average tier)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S160"
+        ]
+      },
+      "portrait": null,
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S158",
+        "S159",
+        "S160",
+        "S162"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -8559,6 +9062,34 @@
       "publisher": "BMC Veterinary Research 12:153 (2016)",
       "title": "Klopfenstein M., Howard J., Rossetti M., Geissbühler U. Life expectancy and causes of death in Bernese mountain dogs in Switzerland. doi:10.1186/s12917-016-0782-9",
       "url": "https://boris.unibe.ch/88496"
+    },
+    {
+      "id": "S158",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 270 — Siberian Husky, EN (PDF)",
+      "url": "https://www.fci.be/Nomenclature/Standards/270g05-en.pdf"
+    },
+    {
+      "id": "S159",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — Siberian Husky (270)",
+      "url": "https://fci.be/en/nomenclature/SIBERIAN-HUSKY-270.html"
+    },
+    {
+      "id": "S160",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: Siberian Husky",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/siberian-husky/"
+    },
+    {
+      "id": "S162",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Siberian Husky breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/siberian-husky"
     },
     {
       "id": "C1",

@@ -97,6 +97,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.west_highland_white_terrier.availability, 'coming_soon');
   assert.deepEqual(byId.bernese_mountain_dog.slug, { en: 'bernese-mountain-dog', sl: 'bernski-plansarski-pes' });
   assert.equal(byId.bernese_mountain_dog.availability, 'coming_soon');
+  assert.deepEqual(byId.siberian_husky.slug, { en: 'siberian-husky', sl: 'sibirski-haski' });
+  assert.equal(byId.siberian_husky.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
@@ -155,6 +157,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     havanese: { adult: 3000, senior: 2300, seniorFrom: 108, learning: 1 },
     west_highland_white_terrier: { adult: 6000, senior: 4500, seniorFrom: 121, learning: 1 },
     bernese_mountain_dog: { adult: 6000, senior: 4500, seniorFrom: 76, learning: 1.5 },
+    siberian_husky: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -540,4 +543,26 @@ test('Bernese Mountain Dog (M5-R10-12): up to 1 hour, PDSA weight by sex, FCI gr
   const json = JSON.stringify(d);
   // No study percentages, no tier-C McMillan value, never "hypoallergenic".
   assert.doesNotMatch(json, /mcmillan_2024|median_ch|hypoallergenic|odds ratio|95% CI|58\.3|10\.1|8\.4/i);
+});
+
+test('Siberian Husky (M5-R10-13): more than 2 hours, FCI weight by sex, FCI group 5 US, RKC "over 10 years", Coren 45, medium-large, secure_fencing chip', () => {
+  const d = registry.breeds.find((b) => b.id === 'siberian_husky');
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S160']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 270, group: 5, section: 1, origin: 'US' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [20.5, 28], female: [15.5, 23] }, ['S158']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [53.5, 60], female: [50.5, 56] }, ['S158']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['more_than', 10, ['S160']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'growth_end').value, [12, 15]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 45);
+  // RKC "Size: Medium-Large" → a new size value.
+  assert.deepEqual(d.facets, { size: 'medium_large', exercise: 'over_2h', grooming: 'several_weekly' });
+  // 10 min × age reaches the 120-minute cap at 12 months; senior 90 min from 90 months.
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 12000, cap_month: 12 });
+  assert.deepEqual(d.game.stages[3].activity, { kind: 'steps', value: 9000 });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'large_home']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia', 'inherited_eye_disease', 'epilepsy']);
+  const json = JSON.stringify(d);
+  // No Finnish average, no screening percentages, never "hypoallergenic", never merle.
+  assert.doesNotMatch(json, /finland|9\.75|mcmillan_2024|hypoallergenic|odds ratio|merle|brindle|85-95/i);
 });
