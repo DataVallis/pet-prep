@@ -245,17 +245,18 @@ class PairingService
 
     /**
      * M5-R06-01: the breed belongs to the chosen species, and the species is
-     * available to this app build (cats: server flag + `species_cat`, plan T4).
+     * available to this app build and family (cats: admin switch for the
+     * family + `species_cat`, plan T4 / M5-R06-09).
      *
      * @throws FamilyException breed_species_mismatch (422), species_unavailable (422)
      */
-    public function assertSpeciesAllowed(PetProfileChoice $profile): void
+    public function assertSpeciesAllowed(PetProfileChoice $profile, ?Family $family): void
     {
         if ($profile->breed->species() !== $profile->species) {
             throw new FamilyException('breed_species_mismatch', 'This breed does not belong to the chosen species.');
         }
 
-        if (! app(SpeciesAvailability::class)->isAvailable($profile->species, $profile->features)) {
+        if (! app(SpeciesAvailability::class)->isAvailable($profile->species, $profile->features, $family)) {
             throw new FamilyException('species_unavailable', 'This animal is not available yet.');
         }
     }

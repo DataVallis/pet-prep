@@ -136,10 +136,10 @@ class PetResource extends Resource
                             ->label('Breed')
                             // M5-R06-01: an existing pet keeps its species (only breeds of
                             // that species); pets.species follows the breed (Pet::saving).
-                            // New pet: cat breeds only while cats are enabled (QA PR #91 m2).
+                            // New pet: cat breeds only while the cats switch is on for anyone (QA PR #91 m2, M5-R06-09).
                             ->options(fn (?Pet $record): array => collect(match (true) {
                                 $record !== null => BreedType::forSpecies($record->speciesValue()),
-                                SpeciesAvailability::catsEnabled() => BreedType::cases(),
+                                app(SpeciesAvailability::class)->catsSwitchedOn() => BreedType::cases(),
                                 default => BreedType::forSpecies(Species::Dog),
                             })
                                 ->mapWithKeys(fn (BreedType $b): array => [$b->value => $b->name])->all())
