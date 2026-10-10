@@ -1,6 +1,6 @@
 # Runbook — add one breed, unattended (M5-R10)
 
-Written 2026-10-10 from the French Bulldog run (M5-R10-03: pet-prep PR #130 + portrait PR, website PR #13).
+Written 2026-10-10 from the French Bulldog run (M5-R10-03: pet-prep PR #130 + portrait PR #131, website PR #13).
 Golden Retriever (PR #122) and Labrador (PR #121) are the older templates; the French Bulldog commits
 (`git log --oneline --grep "French Bulldog"`) are the most complete example of every touch point.
 

@@ -14,7 +14,7 @@ Status: `done` · `in-progress` · `blocked` (research could not source a requir
 | — | Maine Coon / Maine Coon | `maine_coon` | cat | done | M5-R06 (hidden with the cats) |
 | 01 | Labrador Retriever / Labradorec | `labrador_retriever` | dog | done | M5-R10-01, PR #121 |
 | 02 | Golden Retriever / Zlati prinašalec | `golden_retriever` | dog | done | M5-R10-02, PR #122 |
-| 03 | French Bulldog / Francoski buldog | `french_bulldog` | dog | done | M5-R10-03, PR #130 + portrait PR, website PR #13; welfare breed — not in marketing |
+| 03 | French Bulldog / Francoski buldog | `french_bulldog` | dog | done | M5-R10-03, PR #130 + portrait PR #131, website PR #13 (2026-10-10); welfare breed — not in marketing |
 | 04 | German Shepherd Dog / Nemški ovčar | `german_shepherd` | dog | todo | |
 | 05 | Cavalier King Charles Spaniel / Kavalir King Charles španjel | `cavalier_king_charles_spaniel` | dog | todo | check welfare-concern rule (§3) |
 | 06 | Beagle / Bigl | `beagle` | dog | todo | |
