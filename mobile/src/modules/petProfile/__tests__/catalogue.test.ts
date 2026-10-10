@@ -103,9 +103,15 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30), never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
-    expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever']);
+    expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
+      'mutt',
+      'border_collie',
+      'labrador_retriever',
+      'golden_retriever',
+      'french_bulldog',
+    ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
     expect(lab).toEqual(
@@ -127,6 +133,13 @@ describe('readBreedCatalogue', () => {
       suits: ['active_family', 'family_pet', 'children', 'first_time_owner', 'large_home', 'other_pets'],
       consider: ['long_daily_exercise', 'sheds', 'food_motivated_weight', 'frequent_grooming'],
     });
+    const frenchie = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'french_bulldog');
+    expect(frenchie).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 40 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (David 2026-10-10).
+    expect(frenchie?.search_keywords).toEqual(['french bulldog', 'frenchie', 'french', 'bulldog', 'francoski buldog', 'buldog']);
+    expect(frenchie?.suitability).toEqual({ suits: ['apartment', 'family_pet', 'children'], consider: ['brachycephalic_breathing'] });
     expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
     // The fallback is already in picker order.
     expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual([
@@ -134,6 +147,7 @@ describe('readBreedCatalogue', () => {
       'border_collie',
       'labrador_retriever',
       'golden_retriever',
+      'french_bulldog',
     ]);
   });
 });
@@ -182,7 +196,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(7);
+    expect(CONSIDER_TAGS).toHaveLength(8);
+    // M5-R10-03 (David 2026-10-10): flat face — breathing and heat; no percentage in the label.
+    expect(CONSIDER_TAGS).toContain('brachycephalic_breathing');
     // M5-R10-02 (David 2026-10-09): brushing several times a week; no "mouthy" tag.
     expect(CONSIDER_TAGS).toContain('frequent_grooming');
     expect(CONSIDER_TAGS).not.toContain('mouthy' as never);
@@ -228,6 +244,14 @@ describe('breed search', () => {
     expect(find('Zlati')).toEqual(['golden_retriever']);
     expect(find('golden')).toEqual(['golden_retriever']);
     expect(find('retriever')).toEqual(['labrador_retriever', 'golden_retriever']);
+  });
+
+  it('M5-R10-03: finds the French Bulldog by its SL / EN name and "frenchie"', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('francoski')).toEqual(['french_bulldog']);
+    expect(find('Francoski buldog')).toEqual(['french_bulldog']);
+    expect(find('frenchie')).toEqual(['french_bulldog']);
+    expect(find('buldog')).toEqual(['french_bulldog']);
   });
 
   it('empty query lists everything; no match → empty', () => {

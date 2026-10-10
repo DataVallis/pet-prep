@@ -13,7 +13,7 @@ import {
 
 describe('readBreed / readSpecies', () => {
   it('keeps every known breed, dogs and cats', () => {
-    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'domestic_cat', 'maine_coon'] as const) {
+    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'domestic_cat', 'maine_coon'] as const) {
       expect(readBreed(breed)).toBe(breed);
     }
   });
@@ -25,6 +25,18 @@ describe('readBreed / readSpecies', () => {
     await i18n.changeLanguage('en');
     try {
       expect(breedName('labrador_retriever')).toBe('Labrador Retriever');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-03: the French Bulldog is a paid dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('french_bulldog'))).toBe('dog');
+    expect(isDefaultFreeBreed('french_bulldog')).toBe(false);
+    expect(breedName('french_bulldog')).toBe('Francoski buldog');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('french_bulldog')).toBe('French Bulldog');
     } finally {
       await i18n.changeLanguage('sl');
     }

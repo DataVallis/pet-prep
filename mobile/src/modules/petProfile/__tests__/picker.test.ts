@@ -8,12 +8,19 @@ import { i18n } from '@/i18n';
  * steps = minutes × 100; puppy / young 10 min × age in months up to the adult goal;
  * adult mutt 60 min, Border Collie 120 min, Labrador 90 min (M5-R10, S59), Golden Retriever
  * 120 min (M5-R10-02, S65 / S68); senior 75 % of adult in whole minutes (Labrador 67.5 → 68,
- * BreedStageParamsSeeder::labradorProfile; Golden 90, goldenProfile);
+ * BreedStageParamsSeeder::labradorProfile; Golden 90, goldenProfile); French Bulldog 60 min
+ * (M5-R10-03, S78 / S81), senior 45 (frenchBulldogProfile);
  * arrival puppy 2, young 9 months.
  */
-type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever'>;
-const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever'];
-const ADULT_MINUTES: Record<DogBreed, number> = { mutt: 60, border_collie: 120, labrador_retriever: 90, golden_retriever: 120 };
+type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog'>;
+const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog'];
+const ADULT_MINUTES: Record<DogBreed, number> = {
+  mutt: 60,
+  border_collie: 120,
+  labrador_retriever: 90,
+  golden_retriever: 120,
+  french_bulldog: 60,
+};
 const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 };
 
 const fmt = (n: number) => n.toLocaleString('de-DE'); // 6000 → "6.000" (Slovenian thousands separator)
@@ -101,9 +108,32 @@ describe('PICKER_STRINGS.ageHints', () => {
     }
   });
 
+  it('M5-R10-03 French Bulldog: 2.000 → 6.000 (reached at 6 months), young / adult 6.000, senior 4.500', () => {
+    const F = PICKER_STRINGS.ageHints.french_bulldog;
+    expect(F.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 6\.000 pri 6 mesecih/);
+    expect(F.young).toBe('2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).');
+    expect(F.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
+    expect(F.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.french_bulldog).toBe('Del 12-tedenskega izziva.');
+  });
+
+  it('M5-R10-03 French Bulldog hints in English', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      const F = PICKER_STRINGS.ageHints.french_bulldog;
+      expect(F.puppy).toContain('2,000 steps a day, more each week up to 6,000 at 6 months');
+      expect(F.young).toContain('6,000 steps');
+      expect(F.adult).toContain('6,000 steps');
+      expect(F.senior).toContain('4,500 steps');
+      expect(PICKER_STRINGS.breedHints.french_bulldog).toBe('Part of the 12-week challenge.');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
   it('no picker note names one paid breed as the only one (two paid dogs since M5-R10)', () => {
     for (const text of [PICKER_STRINGS.breedFreeNote, PICKER_STRINGS.breedChallengeNote, PICKER_STRINGS.searchPlaceholder, PICKER_STRINGS.plans.challenge.hint]) {
-      expect(text).not.toMatch(/collie|koli|labrador|golden|zlati/i);
+      expect(text).not.toMatch(/collie|koli|labrador|golden|zlati|bulldog|buldog/i);
     }
   });
 });

@@ -232,12 +232,13 @@ describe('PetPickerStep', () => {
     expect(screen.getByTestId('breed-suitability-golden_retriever-consider')).toHaveTextContent(
       'Upoštevajte:vsak dan potrebuje veliko gibanjaizpada mu dlakarad je — pazite na težopotrebuje česanje večkrat na teden',
     );
-    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30).
+    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40).
     expect(screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID)).toEqual([
       'breed-option-mutt',
       'breed-option-border_collie',
       'breed-option-labrador_retriever',
       'breed-option-golden_retriever',
+      'breed-option-french_bulldog',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -261,6 +262,47 @@ describe('PetPickerStep', () => {
       renderPicker(FALLBACK_CATALOGUE);
       expect(screen.getByTestId('breed-suitability-golden_retriever-consider')).toHaveTextContent(/needs brushing several times a week/);
       expect(screen.getByTestId('breed-suitability-golden_retriever-suits')).toHaveTextContent(/families with childrenfirst-time owners/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-03: the French Bulldog (fallback) shows the flat / breathing chips, is found as "buldog" and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const frenchie = screen.getByTestId('breed-option-french_bulldog');
+    expect(frenchie).toHaveTextContent(/Francoski buldog/);
+    expect(frenchie).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-french_bulldog-suits')).toHaveTextContent(
+      'Primerno za:življenje v stanovanjudružinsko življenjedružino z otroki',
+    );
+    expect(screen.getByTestId('breed-suitability-french_bulldog-consider')).toHaveTextContent(
+      'Upoštevajte:kratek gobček — težave z dihanjem in vročino',
+    );
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'buldog');
+    expect(screen.queryByTestId('breed-option-golden_retriever')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-french_bulldog'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'french_bulldog', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'french_bulldog' }),
+    );
+  });
+
+  it('M5-R10-03: the breathing chip in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-french_bulldog-consider');
+      expect(consider).toHaveTextContent('Keep in mind:flat face — breathing and heat problems');
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-suitability-french_bulldog-suits')).toHaveTextContent(/apartment livingfamily lifefamilies with children/);
     } finally {
       await i18n.changeLanguage('sl');
     }
