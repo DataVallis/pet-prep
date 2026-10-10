@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "5096e07f00bfdce28b66b5028d14b883b51d2d975cf0339bc158ce93cd5fdf2a"
+      "sha256": "9bd4e31182a229386f9c04a84c9e60e0fe6239d932532e341357322de27475a4"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "3970f8eb5aedcfc79e3dd3158ce3f3bdd9f04d7bbe6de4bb0a1837baa22d0cce"
+      "sha256": "cae007bf865131b5a56a1ed5d044131aa39e42ab1eddfa02a21e237cd4b8f2fb"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,23 +25,23 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "59e94a79b72bed2cb432fb957f0d6256d2534ed706764243fa0f46f057d4a4ac"
+      "sha256": "4a50abc69de2784d8e0f16d30bc199157d88650f52cfd48383fe260e397daa2d"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "3216662473d5f3b117aac5776fd3d82d29742d79c805395eca73a62079685a07"
+      "sha256": "cf1b81e818a6ca9d2ecea8fa57e2e0cfa914bcf0565ba74df335e9be1351b0b7"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "8396cbfd4b70e2f6d1700f8f45e20b3af38ce339953002d885be6d141f3ab9ad"
+      "sha256": "074c0cbf466c261363c311ee3304b9e3e1b1c1be3b5e1a33c34b53065e97a9eb"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "c90e7cb0dd4a779362456c2176ba88d0f993e924bab5ac8f8de4b28af923c3be"
+      "sha256": "04a2f64a479b7772726713b5e170c817bc7ce4b6e767c85c5ec0ab34a0eeeacd"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "4a80f85f0ddb67570e15ac237368d33e65d5001cd35b98825f62466e785e7b52"
+      "sha256": "888c442b0c7ef4156a41a09847b173b08316fbbc55fbf44a928346980cfb3af7"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -71,6 +71,7 @@
     "other_pets": "suits",
     "sensitive_skin": "consider",
     "sheds": "consider",
+    "shorter_lifespan": "consider",
     "small_children": "suits"
   },
   "suitability_labels": {
@@ -100,6 +101,7 @@
         "other_pets": "homes with other pets",
         "sensitive_skin": "sensitive skin — prone to itching and inflammation",
         "sheds": "sheds",
+        "shorter_lifespan": "shorter lifespan",
         "small_children": "families with small children"
       }
     },
@@ -129,6 +131,7 @@
         "other_pets": "dom z drugimi ljubljenčki",
         "sensitive_skin": "občutljiva koža — nagnjenost k srbenju in vnetjem",
         "sheds": "izpada mu dlaka",
+        "shorter_lifespan": "krajša življenjska doba",
         "small_children": "družino z majhnimi otroki"
       }
     }
@@ -151,7 +154,7 @@
         }
       },
       "status": "available",
-      "breed_count": 12,
+      "breed_count": 13,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -7045,6 +7048,513 @@
       ]
     },
     {
+      "id": "bernese_mountain_dog",
+      "species": "dog",
+      "order": 12,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Bernese Mountain Dog",
+        "sl": "Bernski planšarski pes"
+      },
+      "slug": {
+        "en": "bernese-mountain-dog",
+        "sl": "bernski-plansarski-pes"
+      },
+      "synonyms": {
+        "en": [
+          "Berner",
+          "Berner Sennenhund"
+        ],
+        "sl": [
+          "bernski planšarski pes",
+          "bernski plansarski pes",
+          "bernski planšar",
+          "berner"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S152"
+          ],
+          "ref": "bernese_mountain_dog.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              64,
+              70
+            ],
+            "female": [
+              58,
+              66
+            ]
+          },
+          "source_ids": [
+            "S150"
+          ],
+          "ref": "bernese_mountain_dog.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              48,
+              63
+            ],
+            "female": [
+              42,
+              53
+            ]
+          },
+          "source_ids": [
+            "S154"
+          ],
+          "ref": "bernese_mountain_dog.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "bernese_mountain_dog.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 8.4,
+          "source_ids": [
+            "S156"
+          ],
+          "ref": "bernese_mountain_dog.lifespan.median_ch",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S152"
+          ],
+          "ref": "bernese_mountain_dog.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S152"
+          ],
+          "ref": "bernese_mountain_dog.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S152"
+          ],
+          "ref": "bernese_mountain_dog.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S152"
+          ],
+          "ref": "bernese_mountain_dog.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S152"
+          ],
+          "ref": "bernese_mountain_dog.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 22,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "bernese_mountain_dog.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 45,
+            "group": 2,
+            "section": 3,
+            "origin": "CH"
+          },
+          "source_ids": [
+            "S151"
+          ],
+          "ref": "bernese_mountain_dog.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "cancer_risk",
+          "source_ids": [
+            "S154"
+          ],
+          "ref": "bernese_mountain_dog.health.cancer",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S152"
+          ],
+          "ref": "bernese_mountain_dog.health.hip_elbow_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S154"
+          ],
+          "ref": "bernese_mountain_dog.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "degenerative_myelopathy",
+          "source_ids": [
+            "S154"
+          ],
+          "ref": "bernese_mountain_dog.health.degenerative_myelopathy",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S150",
+              "S153"
+            ],
+            "refs": [
+              "bernese_mountain_dog.suitability.rkc_family_dog",
+              "bernese_mountain_dog.behaviour.family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S152"
+            ],
+            "refs": [
+              "bernese_mountain_dog.suitability.rkc_size_of_home",
+              "bernese_mountain_dog.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S152",
+              "S154",
+              "S155"
+            ],
+            "refs": [
+              "bernese_mountain_dog.health.shorter_lifespan",
+              "bernese_mountain_dog.suitability.rkc_lifespan"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S152",
+              "S154"
+            ],
+            "refs": [
+              "bernese_mountain_dog.suitability.rkc_shedding",
+              "bernese_mountain_dog.suitability.pdsa_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S152",
+              "S154"
+            ],
+            "refs": [
+              "bernese_mountain_dog.suitability.rkc_grooming",
+              "bernese_mountain_dog.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 76
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 76
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.bernese_mountain_dog.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S152"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S152 'Up to 1 hour per day'; PDSA S154 'at least an hour'; Woodgreen S155 40 as alternative)"
+          },
+          {
+            "ref": "proposed_game_parameters.bernese_mountain_dog.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.bernese_mountain_dog.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S156"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 76 (0.75 × 8.4 y, peer-reviewed breed median S156 — closest rule row; provisional)"
+          },
+          {
+            "ref": "proposed_game_parameters.bernese_mountain_dog.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 22, Excellent tier, S35)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S152",
+          "S156"
+        ]
+      },
+      "portrait": null,
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S150",
+        "S151",
+        "S152",
+        "S153",
+        "S154",
+        "S155",
+        "S156"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -8014,6 +8524,55 @@
       "publisher": "Canine Genetics and Epidemiology 6:7 (2019)",
       "title": "O'Neill D. G. et al. West Highland White Terriers under primary veterinary care in the UK in 2016: demography, mortality and disorders. doi:10.1186/s40575-019-0075-2",
       "url": "https://link.springer.com/10.1186/s40575-019-0075-2"
+    },
+    {
+      "id": "S150",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 45 — Bernese Mountain Dog (Berner Sennenhund), EN (PDF)",
+      "url": "https://WWW.FCI.BE/Nomenclature/Standards/045g02-en.pdf"
+    },
+    {
+      "id": "S151",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — Berner Sennenhund (45)",
+      "url": "https://www.fci.be/EN/nomenclature/BOUVIER-BERNOIS-45.html"
+    },
+    {
+      "id": "S152",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: Bernese Mountain Dog",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/working/bernese-mountain-dog/"
+    },
+    {
+      "id": "S153",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed standard: Bernese Mountain Dog (last updated 1 April 2025)",
+      "url": "https://www.royalkennelclub.com/breed-standards/working/bernese-mountain-dog/"
+    },
+    {
+      "id": "S154",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Bernese Mountain Dog breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/bernese-mountain-dog"
+    },
+    {
+      "id": "S155",
+      "tier": "B",
+      "publisher": "Woodgreen Pets Charity (UK)",
+      "title": "Pet Explorer: Bernese Mountain Dog",
+      "url": "https://ask.woodgreen.org.uk/pet-explorer/results/bernese-mountain-dog"
+    },
+    {
+      "id": "S156",
+      "tier": "A",
+      "publisher": "BMC Veterinary Research 12:153 (2016)",
+      "title": "Klopfenstein M., Howard J., Rossetti M., Geissbühler U. Life expectancy and causes of death in Bernese mountain dogs in Switzerland. doi:10.1186/s12917-016-0782-9",
+      "url": "https://boris.unibe.ch/88496"
     },
     {
       "id": "C1",

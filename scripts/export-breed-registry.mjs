@@ -280,6 +280,12 @@ function parseUpTo(text, ref) {
   if (!m) throw new Error(`expected "≤ N" in ${ref}: ${text}`);
   return Number(m[1]);
 }
+/** "< 10" → 10 (an "under N" value, M5-R10-12 RKC "Under 10 years"). */
+function parseLessThan(text, ref) {
+  const m = /^<\s*(\d+(?:\.\d+)?)$/.exec(String(text).trim());
+  if (!m) throw new Error(`expected "< N" in ${ref}: ${text}`);
+  return Number(m[1]);
+}
 /** "> 120" → 120. */
 function parseMoreThan(text, ref) {
   const m = /^>\s*(\d+(?:\.\d+)?)$/.exec(String(text).trim());
@@ -374,6 +380,7 @@ const SPECIES = [
       { id: 'australian_shepherd', availability: 'coming_soon', synonyms: { en: ['Aussie'], sl: ['avstralski ovčar', 'avstralski ovcar', 'aussie'] } },
       { id: 'havanese', availability: 'coming_soon', synonyms: { en: ['Bichon Havanais'], sl: ['havanski bišon', 'havanski bison', 'havanez', 'bichon havanais'] } },
       { id: 'west_highland_white_terrier', availability: 'coming_soon', synonyms: { en: ['Westie', 'West Highland Terrier'], sl: ['zahodnoškotski beli terier', 'zahodnoskotski beli terier', 'westie', 'west highland terier'] } },
+      { id: 'bernese_mountain_dog', availability: 'coming_soon', synonyms: { en: ['Berner', 'Berner Sennenhund'], sl: ['bernski planšarski pes', 'bernski plansarski pes', 'bernski planšar', 'berner'] } },
     ],
   },
   {
@@ -392,7 +399,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -596,6 +603,26 @@ const DOG_FACTS = {
       ['dry_eye', 'health.eyes'],
     ],
   },
+  // M5-R10-12. Not exported: lifespan.mcmillan_2024 (tier C via Wikipedia — alternative only),
+  // lifespan.senior_from (derived), adult_weight.salt_category (our assignment), height.pdsa,
+  // health.other_conditions (research only), every Klopfenstein percentage (S156 — research
+  // only). The median is the Swiss breed study (S156); the RKC band is "Under 10 years" (less_than).
+  bernese_mountain_dog: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_ch', 'median'], ['lifespan.rkc', 'less_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['cancer_risk', 'health.cancer'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['bloat_gdv', 'health.gdv'],
+      ['degenerative_myelopathy', 'health.degenerative_myelopathy'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -695,6 +722,14 @@ const DOG_GAME = {
     step_goal_check: 'proposed_game_parameters.west_highland_white_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.west_highland_white_terrier.exercise_minutes_senior',
   },
+  bernese_mountain_dog: {
+    adult_minutes: ['proposed_game_parameters.bernese_mountain_dog.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.bernese_mountain_dog.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.bernese_mountain_dog.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.bernese_mountain_dog.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.bernese_mountain_dog.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.bernese_mountain_dog.exercise_minutes_senior',
+  },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],
     senior_minutes: ['proposed_game_parameters.senior_exercise_minutes', (e) => e.value.medium_mixed_breed],
@@ -717,7 +752,7 @@ function dogBreedFacts(R, id) {
   }
   facts.push(R.fact(p('growth.adult_weight_reached'), { group: 'stages', field: 'growth_end', kind: 'quantity', unit: 'months', qualifier: 'about', note: 'size_class_guidance' }, parseRange));
   for (const [rel, q] of spec.lifespan) {
-    facts.push(R.fact(p(rel), { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : Number(v))));
+    facts.push(R.fact(p(rel), { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : q === 'less_than' ? parseLessThan(v, ref) : Number(v))));
   }
   for (const [rel, q] of spec.exercise) {
     facts.push(R.fact(p(rel), { group: 'exercise', field: 'exercise', kind: 'quantity', unit: 'min_per_day', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : q === 'up_to' ? parseUpTo(v, ref) : Number(v))));
