@@ -6548,6 +6548,542 @@
       }
     }
   },
+  "bernese_mountain_dog": {
+    "_note": "Added 2026-10-10 (M5-R10-12, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S150–S157, reused S8, S10, S11, S14, S24, S35, S45). Appearance from the FCI standard (S150, valid standard 25.03.2003) and the RKC breed standard (S153); suitability from the RKC breed page (S152), PDSA (S154) and Woodgreen (S155). Neither the FCI nor the RKC standard gives a weight → adult weight from PDSA (S154, tier B). Lifespan: McMillan 2024 has a Bernese value only in its supplementary table (not reachable: the published text S135 names the breed only as a Fig. 5 tip label; the Author Correction S54 does not list it; the Dogs Trust table PDFs returned a fetch error), there is no VetCompass Bernese paper and the RKC band 'Under 10 years' (S152) has no lower bound → the senior boundary uses the peer-reviewed breed median of Klopfenstein et al. 2016 (8.4 y, Switzerland, S156), the closest equivalent of the runbook's 'VetCompass median' row; provisional, needs David's check. Wikipedia (S157, tier C) quotes McMillan 2024 as 10.1 y — recorded as an alternative only. Not a conformation welfare breed (RKC Breed Watch 'Category 1', S152). Coren rank 22 (S35, 'Excellent') → learning 1.5. Only colour: tricolour (FCI / RKC).",
+    "identity": {
+      "value": "FCI No. 45, Group 2 Section 3 (Swiss Mountain and Cattle Dogs), Switzerland",
+      "unit": "—",
+      "source_id": "S151",
+      "quote": "Group: n°2 - Chiens de type Pinscher et Schnauzer - Molossoïdes et chiens de montagne et de bouvier suisses; Section: Chiens de montagne et de bouvier suisses; Country of origin: SUISSE",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S151, French page as returned): 'BERNER SENNENHUND' (45); 'Non soumise à épreuve de travail selon la Nomenclature des races de la FCI' (no working trial); definitive acceptance 26/07/1954; valid standard 25/03/2003. FCI standard PDF (S150): 'ORIGIN: Switzerland.' and 'FCI-CLASSIFICATION: Group 2 Pinscher and Schnauzer type-Molossoid breedsSwiss Mountain and Cattle-Dogs.' (as returned). Section 3 per the FCI group structure (the section number line was not returned verbatim). Quote assembled from the nomenclature fields."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S152",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "PDSA (S154): size 'Large'. Woodgreen (S155): 'Giant'. PDSA weight 42–63 kg (S154) = 93–139 lb → mostly the PetMD 'Giant (over 100 pounds)' class (S10); the game keeps the RKC class 'large' for labels, the growth end uses the giant class."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            64,
+            70
+          ],
+          "female": [
+            58,
+            66
+          ]
+        },
+        "unit": "cm at withers",
+        "source_id": "S150",
+        "quote": "Height at withers: for dogs: 64-70 cm, … for bitches: 58-66 cm",
+        "confidence": "high",
+        "notes": "FCI (S150): ideal 'ideal size: 66-68 cm.' (dogs) and 'ideal size: 60-63 cm.' (bitches); fragments as returned, assembled here. RKC breed standard (S153): 'Height: dogs: 64-70 cms (25-271/2 ins); bitches: 58-66 cms (23-26 ins).' — the same."
+      },
+      "pdsa": {
+        "value": [
+          58,
+          70
+        ],
+        "unit": "cm",
+        "source_id": "S154",
+        "quote": "58-70 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S154), both sexes."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            48,
+            63
+          ],
+          "female": [
+            42,
+            53
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S154",
+        "quote": "42-53kg in females and 48-63kg in males",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S154). The FCI standard (S150) and the RKC breed standard (S153) give no weight. Tier B — the only weight range found from an A/B source. Wikipedia (S157, tier C) infobox: males 36–55 kg, females 34–45 kg — not used."
+      },
+      "salt_category": {
+        "value": "VI",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 42–63 kg = the band '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA males 48–63 kg (106–139 lb) are 'Giant'; females 42–53 kg (93–117 lb) straddle Large (59–99 lb: 15–18 months) and Giant. RKC breed standard (S153): 'Slow to mature.' Salt (S8): 'larger breeds requiring up to 24 months to reach adult body weight'."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Bernese Mountain Dog growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_ch": {
+        "value": 8.4,
+        "unit": "years",
+        "source_id": "S156",
+        "quote": "The median life expectancy of all dogs was 8.4 years (IQR, 6.9–9.7).",
+        "confidence": "medium",
+        "notes": "Klopfenstein M., Howard J., Rossetti M., Geissbühler U. (2016), BMC Veterinary Research 12:153 (S156): Swiss population, 389 dogs (table: 'All dogs | All | 389 | … | 8.40 |'); males 7.73 y (n 162), females 8.78 y (n 227) as returned from Table 1; 'the most frequent causes of death were neoplasia (222/381, 58.3 %)' (research only). Not a UK population — used because McMillan 2024 (S54 / S135) and a VetCompass median were not reachable and the RKC band has no lower bound. Consistent with the breed-page bands 'Under 10 years' (S152), 'Up to 10 years' (S154) and '7-10 years' (S155)."
+      },
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S152",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA (S154): 'Up to 10 years'. Woodgreen (S155): '7-10 years'."
+      },
+      "mcmillan_2024": {
+        "value": 10.1,
+        "unit": "years",
+        "source_id": "S157",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 (UK) as quoted by Wikipedia (S157, tier C): 'A 2024 UK study found a life expectancy of 10.1 years compared to 12 years for crossbreeds and 12.7 years for purebreds.' The paper's own text (S135) and the Author Correction (S54) give no Bernese value; the Dogs Trust table PDF returned a fetch error. Tier C → alternative only, not used. Verify in McMillan 2024 Supplementary Table."
+      },
+      "senior_from": {
+        "value": 6.3,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 8.4 y (S156) → 0.75 × 8.4 = 6.3 y = 75.6 → 76 months. With McMillan 2024 via Wikipedia (10.1 y, S157, tier C): 0.75 × 10.1 = 7.575 y = 90.9 → 91 months. With the Woodgreen lower bound 7 y (S155): 63 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S156"
+        ],
+        "months": 76,
+        "alternative": {
+          "value_years": 7.575,
+          "months": 91,
+          "derived_from": [
+            "S11",
+            "S157"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S152",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "PDSA (S154): 'Bernese Mountain Dogs need at least an hour of exercise every day.' → 60. Woodgreen (S155): '40-60 mins' → 40 (lower bound). Rule: RKC preferred → 60; the others recorded as alternatives."
+      },
+      "energy": {
+        "value": "strong, agile, active working dog",
+        "unit": "—",
+        "source_id": "S153",
+        "quote": "Strong, sturdy working dog, active, alert, well boned, of striking colour.",
+        "confidence": "medium",
+        "notes": "FCI (S150): 'Longhaired, tricoloured, strong and agile working dog, of above medium size, with sturdily built limbs;' RKC characteristics (S153): 'A multi-purpose farm dog capable of draught work.'"
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "self-confident, good-natured, friendly, fearless; placid towards strangers; docile",
+        "unit": "—",
+        "source_id": "S153",
+        "quote": "Self-confident, good-natured, friendly and fearless. Aggressiveness unacceptable.",
+        "confidence": "high",
+        "notes": "FCI (S150): 'Self-confident, attentive, vigilant, fearless in everyday situations;' 'good-natured and devoted to his own people, self-assured and placid towards strangers;' 'of medium temperament, docile.' FCI disqualifying: aggressive, overly shy or anxious (paraphrase)."
+      },
+      "family": {
+        "value": "a kind and devoted family dog; PDSA does not recommend the breed for families with smaller children (boisterous, may knock them over)",
+        "unit": "—",
+        "source_id": "S153",
+        "quote": "A kind and devoted family dog. Slow to mature.",
+        "confidence": "high",
+        "notes": "RKC breed standard characteristics (S153). PDSA (S154): 'we wouldn’t recommend them for families with smaller children.' (large, can be boisterous and knock small children over — paraphrase). Woodgreen (S155): 'calm nature can make them a safe choice for families with children of all ages'. Sources conflict on children → family_pet only, never children / small_children."
+      },
+      "time_alone": {
+        "value": "should not be left alone long; separation anxiety",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": "should never be left alone for more than four hours and even this may be too long.",
+        "confidence": "medium",
+        "notes": "PDSA (S154): can suffer separation anxiety (paraphrase). Woodgreen (S155): 'Berners don't like being left alone for long' → no often_alone tag."
+      },
+      "other_pets": {
+        "value": "not unsupervised with smaller pets; usually fine with other dogs if socialised",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": "we wouldn’t recommend leaving them unsupervised with smaller pets.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S155): 'Sociable with pets' 'Moderate' (as returned) → no other_pets tag."
+      },
+      "chewing": {
+        "value": "can be destructive when bored",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": "They can be destructive if they get bored,",
+        "confidence": "low",
+        "notes": "PDSA (S154) does not name chewing specifically (as returned) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found. PDSA (S154) gives feeding advice only: 'split their daily allowance into two meals' and 'Treats shouldn’t make up more than 10% of their calories.'; a gap between eating and exercise against GDV (paraphrase) → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; percentages (Klopfenstein 2016, S156) stay here only and are never shown in the app, the export or audience docs. Not a conformation welfare breed: RKC Breed Watch 'Category 1' — 'Currently no points of concern specific to this breed have been identified for special attention by judges' (S152). Main topics: a short life (RKC 'Under 10 years' S152, PDSA S154, Woodgreen S155, S156), cancers (PDSA 'Certain cancers.', neoplasia the most frequent cause of death in S156), hip and elbow dysplasia (RKC good-practice BVA/KC schemes S152, PDSA S154), GDV, degenerative myelopathy, PRA, cruciate disease, hot spots (PDSA S154).",
+      "shorter_lifespan": {
+        "value": "a shorter life than most breeds — usually under ten years",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA (S154): 'Up to 10 years'. Woodgreen (S155): '7-10 years'. Klopfenstein 2016 (S156): median 8.4 y (research only). Basis of the consider tag shorter_lifespan — a calm chip, no number."
+      },
+      "cancer": {
+        "value": "certain cancers; neoplasia is the most frequent cause of death in a Swiss study",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": "Certain cancers.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S154). Klopfenstein 2016 (S156): 'the most frequent causes of death were neoplasia (222/381, 58.3 %)' — percentage research only."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia — RKC good-practice tests before breeding",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+        "confidence": "high",
+        "notes": "RKC breed page (S152): 'Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme'; no breed-specific DNA package. PDSA (S154): 'Hip dysplasia', 'Elbow dysplasia'. Not the hips_hind_legs chip: no RKC / vet association names hind conformation as a concern (Breed Watch Category 1)."
+      },
+      "gdv": {
+        "value": "gastric dilatation volvulus (bloat)",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": "Gastric Dilatation Volvulus (GDV)",
+        "confidence": "medium",
+        "notes": "PDSA (S154): leave a gap between eating and exercise (paraphrase)."
+      },
+      "degenerative_myelopathy": {
+        "value": "degenerative myelopathy",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": "Degenerative Myelopathy (DM)",
+        "confidence": "medium",
+        "notes": "PDSA health list (S154)."
+      },
+      "other_conditions": {
+        "value": "hot spots, progressive retinal atrophy, cruciate disease",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA list (S154): 'Hot spots', 'Progressive retinal atrophy', 'Cruciate disease' (names as returned)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 22,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 22 | Belgian Malinois | … Bernese Mountain Dog",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35): rank 22 shared ('| 22 | Belgian Malinois |' with 'Bernese Mountain Dog' on the line beneath, as returned), tier 'Excellent Working Dogs' (ranks 11–26). Coren's own top / bottom-10 article (S34) does not list the breed."
+      },
+      "coren_tier": {
+        "value": "Excellent",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Ranks 11–26 (S35): 'Understanding of new commands: 5 to 15 repetitions.' 'Obey first command: 85% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "very intelligent, eager to please; reward-based training from early on (large and powerful)",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": "Bernese Mountain Dogs are very intelligent and eager to please their owners,",
+        "confidence": "medium",
+        "notes": "PDSA (S154): easy to train for experienced owners (paraphrase) → no first_time_owner tag. Woodgreen (S155): trainability 'Moderately easy'."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.bernese_mountain_dog.learning_multiplier (1.5, runbook rule: Excellent tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "longhaired, tricoloured, strong and agile working dog of above medium size; sturdy limbs; harmonious",
+        "unit": "—",
+        "source_id": "S150",
+        "quote": "Longhaired, tricoloured, strong and agile working dog, of above medium size, with sturdily built limbs;",
+        "confidence": "high",
+        "notes": "FCI (S150) continues 'harmonious and well balanced.'; body length to height about 9:10 (paraphrase). RKC (S153): 'Strong, sturdy working dog, active, alert, well boned, of striking colour.'"
+      },
+      "colours": {
+        "value": [
+          "tricolour: jet black with rich tan and symmetrical white markings"
+        ],
+        "unit": "list",
+        "source_id": "S150",
+        "quote": "Jet black main colour with rich tan markings on the cheeks, above the eyes, on all four legs and on the chest,",
+        "confidence": "high",
+        "notes": "FCI (S150): white blaze and muzzle band, white on throat and chest; white feet and tail tip desirable (paraphrase); disqualifying: any coat other than tricoloured, any main colour other than black (paraphrase). RKC (S153): 'Jet black, with rich reddish-brown on cheeks, over eyes, on all four legs and on chest.' 'Any other colour or combination of colours unacceptable.' RKC Colour Watch 'Category 0' (S152). The game draws the tricolour only."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). One standard colour: tricolour = weight 1 (portrait default)."
+      },
+      "coat": {
+        "value": "long, shining, straight or slightly wavy",
+        "unit": "—",
+        "source_id": "S150",
+        "quote": "Long, shining, straight or slightly wavy.",
+        "confidence": "high",
+        "notes": "RKC (S153): 'Soft, silky with bright natural sheen, long, slightly wavy but should not curl when mature.' FCI disqualifying: short coat or double coat (paraphrase)."
+      },
+      "ears": {
+        "value": "medium-sized, set high, triangular, slightly rounded tips, hanging flat",
+        "unit": "—",
+        "source_id": "S150",
+        "quote": "Medium-sized, set high, triangular in shape, slightly rounded at the tips, in repose hanging flat and close to the head.",
+        "confidence": "high",
+        "notes": "RKC (S153): 'Medium-sized; set high, triangular-shaped, lying flat in repose, when alert brought slightly forward and raised at base.'"
+      },
+      "eyes": {
+        "value": "dark brown, almond-shaped, close-fitting eyelids",
+        "unit": "—",
+        "source_id": "S150",
+        "quote": "Dark brown, almond-shaped, with close fitting eyelids.",
+        "confidence": "high",
+        "notes": "RKC (S153): 'Dark brown, almond-shaped, well-fitting eyelids.' FCI: loose eyelids are a fault; blue eyes disqualify (paraphrase)."
+      },
+      "nose": {
+        "value": "black; strong, medium-length muzzle with a straight nasal bridge — not flat-faced",
+        "unit": "—",
+        "source_id": "S150",
+        "quote": "Nose: Black.",
+        "confidence": "high",
+        "notes": "FCI (S150): muzzle strong, of medium length, straight nasal bridge (paraphrase). Not flat-faced."
+      },
+      "tail": {
+        "value": "bushy, reaching at least to the hocks; hangs straight at rest; carried level or slightly above the back when moving",
+        "unit": "—",
+        "source_id": "S150",
+        "quote": "Bushy, reaching at least to the hocks; hanging straight down when at rest;",
+        "confidence": "high",
+        "notes": "FCI (S150) continues 'carried level with back or slightly above when moving.' RKC (S153): 'Bushy, reaching just below hock. Raised when alert or moving but never curled or carried over back.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S152), PDSA (S154) and Woodgreen (S155). The RKC page shows no 'Good with children' field (as returned 2026-10-10). AKC trait ratings not attempted (same as the earlier breeds).",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "PDSA (S154): 'Large'; Woodgreen (S155): 'Giant'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of the large_home tag (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "PDSA (S154): 'Their coats are fairly high maintenance.' and brushing 'several times a week'; Woodgreen (S155): grooming 'High' → frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S154): 'be prepared for a lot of shedding!'; Woodgreen (S155): shedding 'High' — sources agree → sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "Basis of shorter_lifespan (with PDSA / Woodgreen)."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-10)."
+      },
+      "rkc_family_dog": {
+        "value": "a kind and devoted family dog",
+        "unit": "—",
+        "source_id": "S153",
+        "quote": "A kind and devoted family dog. Slow to mature.",
+        "confidence": "high",
+        "notes": "RKC breed standard characteristics (S153); FCI (S150): 'good-natured and devoted to his own people' → family_pet."
+      },
+      "pdsa_children": {
+        "value": "not recommended for families with smaller children",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": "we wouldn’t recommend them for families with smaller children.",
+        "confidence": "high",
+        "notes": "Conflicts with Woodgreen (S155) 'families with children of all ages' → neither children nor small_children."
+      },
+      "pdsa_shedding": {
+        "value": "a lot of shedding",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": "be prepared for a lot of shedding!",
+        "confidence": "medium",
+        "notes": "Most in spring and autumn (paraphrase)."
+      },
+      "pdsa_grooming": {
+        "value": "fairly high maintenance; brushing several times a week",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": "Their coats are fairly high maintenance.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_lifespan": {
+        "value": "up to 10 years",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": "Up to 10 years",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_exercise": {
+        "value": "at least an hour",
+        "unit": "—",
+        "source_id": "S154",
+        "quote": "Bernese Mountain Dogs need at least an hour of exercise every day.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "woodgreen_exercise": {
+        "value": "40-60 mins",
+        "unit": "minutes/day",
+        "source_id": "S155",
+        "quote": "40-60 mins",
+        "confidence": "medium",
+        "notes": "Lower bound 40 → alternative only (RKC preferred)."
+      },
+      "woodgreen_lifespan": {
+        "value": "7-10 years",
+        "unit": "—",
+        "source_id": "S155",
+        "quote": "7-10 years",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "woodgreen_children": {
+        "value": "safe choice for families with children of all ages",
+        "unit": "—",
+        "source_id": "S155",
+        "quote": "calm nature can make them a safe choice for families with children of all ages",
+        "confidence": "medium",
+        "notes": "Conflicts with PDSA (S154) → no children tag."
+      },
+      "woodgreen_sociable_with_pets": {
+        "value": "Moderate",
+        "unit": "—",
+        "source_id": "S155",
+        "quote": null,
+        "confidence": "low",
+        "notes": "'Sociable with pets' 'Moderate' (as returned, field label paraphrased) → no other_pets tag."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -9521,6 +10057,234 @@
         "confidence": "high",
         "notes": "Colour from the FCI / RKC standards (S142, S145: white only). Weight unsourced. Natural coat, healthy skin (no redness or bald patches — S146).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): white (the only standard colour) is the portrait default; natural harsh coat, healthy skin"
+      }
+    },
+    "bernese_mountain_dog": {
+      "_note": "Unattended run M5-R10-12 (2026-10-10): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry. The senior boundary applies the closest rule row (a peer-reviewed breed median in place of a VetCompass median — none exists for this breed) and is provisional until David checks it.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S152",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'Up to 1 hour per day' (S152); PDSA 'at least an hour' (S154) agrees. Rule: one number N ('up to N') → N = 60. Woodgreen '40-60 mins' (S155) → 40 recorded as an alternative.",
+        "alternatives": [
+          {
+            "value": 40,
+            "source_id": "S155",
+            "quote": "40-60 mins",
+            "why_not": "RKC preferred; Woodgreen lower bound"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S152 'Up to 1 hour per day'; PDSA S154 'at least an hour'; Woodgreen S155 40 as alternative)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S152",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 76
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 76 = round(0.75 × 8.4 y × 12) = round(75.6) (S11 + Klopfenstein 2016 breed median 8.4 y, S156 — no McMillan 2024 value reachable, no VetCompass Bernese paper, RKC 'Under 10 years' has no lower bound). Alternatives: 91 (McMillan 2024 10.1 y via Wikipedia S157, tier C), 84 (Dogs Trust > 7 y, S14), 63 (Woodgreen lower bound 7 y, S155). Provisional — David to check.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S156"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 91,
+          "senior_dogs_trust_7_y": 84,
+          "senior_woodgreen_lower_bound": 63
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 76 (0.75 × 8.4 y, peer-reviewed breed median S156 — closest rule row; provisional)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 76
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 76)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 22 (S35), tier 'Excellent' (11–26) → 1.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 22, Excellent tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA: two meals a day (S154) — matches the game's feed windows.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-12); refs = JSON paths in this file. New vocabulary key shorter_lifespan (consider): a sourced, important trait no existing key covers (RKC 'Under 10 years', PDSA 'Up to 10 years', Woodgreen '7-10 years'). SL 'krajša življenjska doba', EN 'shorter lifespan'. No numbers in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S153",
+              "S150"
+            ],
+            "refs": [
+              "bernese_mountain_dog.suitability.rkc_family_dog",
+              "bernese_mountain_dog.behaviour.family"
+            ],
+            "quote": "S153 'A kind and devoted family dog.'; S150 'good-natured and devoted to his own people'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S152"
+            ],
+            "refs": [
+              "bernese_mountain_dog.suitability.rkc_size_of_home",
+              "bernese_mountain_dog.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S152 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S152",
+              "S154",
+              "S155"
+            ],
+            "refs": [
+              "bernese_mountain_dog.health.shorter_lifespan",
+              "bernese_mountain_dog.suitability.rkc_lifespan"
+            ],
+            "quote": "S152 'Lifespan: Under 10 years'; S154 'Up to 10 years'; S155 '7-10 years'",
+            "note": "NEW consider key. Calm chip, no number."
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S152",
+              "S154"
+            ],
+            "refs": [
+              "bernese_mountain_dog.suitability.rkc_shedding",
+              "bernese_mountain_dog.suitability.pdsa_shedding"
+            ],
+            "quote": "S152 'Sheds: Yes'; S154 'be prepared for a lot of shedding!'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S152",
+              "S154"
+            ],
+            "refs": [
+              "bernese_mountain_dog.suitability.rkc_grooming",
+              "bernese_mountain_dog.suitability.pdsa_grooming"
+            ],
+            "quote": "S152 'Grooming: More than once a week'; S154 'Their coats are fairly high maintenance.'"
+          }
+        ],
+        "not_proposed": {
+          "children": "Sources conflict: PDSA 'we wouldn’t recommend them for families with smaller children.' (S154) vs Woodgreen 'families with children of all ages' (S155).",
+          "small_children": "PDSA advises against families with smaller children (S154).",
+          "first_time_owner": "PDSA: easy to train for experienced owners (S154, paraphrase).",
+          "apartment": "RKC 'Large house' (S152).",
+          "active_family": "RKC 'Up to 1 hour per day' (S152).",
+          "long_daily_exercise": "60 min (S152, S154).",
+          "other_pets": "Not unsupervised with smaller pets (S154); Woodgreen 'Moderate' (S155).",
+          "often_alone": "Never more than four hours (S154).",
+          "older_owners": "No source.",
+          "low_shedding": "Sheds a lot (S152, S154, S155).",
+          "needs_mental_stimulation": "No verbatim quote captured.",
+          "food_motivated_weight": "No breed-specific statement.",
+          "chews_when_bored": "PDSA 'destructive if they get bored' (S154) names no chewing.",
+          "brachycephalic_breathing": "Not flat-faced (S150: medium-length muzzle).",
+          "hips_hind_legs": "Hip / elbow tests are good practice (S152) and dysplasia is on the PDSA list (S154), but no RKC / vet association names hind conformation as a breed concern (Breed Watch Category 1, S152).",
+          "heart_and_spine": "No source.",
+          "back_spine": "No source.",
+          "sensitive_skin": "Only 'Hot spots' on the PDSA list (S154); no breed concern named."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, large_home; consider shorter_lifespan (new key — sourced important trait), sheds, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes (with the shorter_lifespan chip); in marketing: yes (not a conformation welfare breed; no veterinary advice against showing the breed in advertising)",
+        "unit": "—",
+        "source_id": "S152",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch 'Category 1' (S152). The only veterinary advice against advertising a breed type is for flat-faced breeds (S92). Marketing never promises the breed's health or a long life.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed)"
+      },
+      "ai_appearance": {
+        "value": "adult Bernese Mountain Dog, tricolour (jet black, rich tan on cheeks, above the eyes, legs and chest, symmetrical white blaze, muzzle band and chest), long shining straight or slightly wavy coat, medium triangular hanging ears, dark brown almond eyes, bushy tail hanging down; tricolour only",
+        "unit": "—",
+        "source_id": "S150",
+        "quote": "Jet black main colour with rich tan markings on the cheeks, above the eyes, on all four legs and on the chest,",
+        "confidence": "high",
+        "notes": "Colour from the FCI / RKC standards (S150, S153: tricolour only). Weight unsourced. Natural, moderate build (not exaggerated).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): tricolour (the only standard colour) is the portrait default; long natural coat, moderate build"
       }
     }
   }
