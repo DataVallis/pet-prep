@@ -369,6 +369,7 @@ const SPECIES = [
       { id: 'german_shepherd', availability: 'coming_soon', synonyms: { en: ['Alsatian', 'GSD'], sl: ['nemški ovčar', 'nemski ovcar', 'german shepherd'] } },
       { id: 'cavalier_king_charles_spaniel', availability: 'coming_soon', synonyms: { en: ['Cavalier', 'CKCS', 'Cavalier King Charles'], sl: ['kavalir king charles španjel', 'kavalir king charles spanjel', 'kavalir', 'cavalier'] } },
       { id: 'beagle', availability: 'coming_soon', synonyms: { en: [], sl: ['bigl', 'beagle'] } },
+      { id: 'standard_poodle', availability: 'coming_soon', synonyms: { en: ['Standard Poodle', 'Poodle'], sl: ['veliki pudelj', 'pudelj', 'standardni pudelj', 'poodle'] } },
     ],
   },
   {
@@ -497,6 +498,25 @@ const DOG_FACTS = {
       ['back_disc_disease', 'health.back_ivdd'],
     ],
   },
+  // M5-R10-07. Not exported: height.rkc (minimum only, "> 38"), lifespan.pdsa (a range),
+  // lifespan.mcmillan_poodle_pooled (14.0 y pools all Poodle varieties — would read as the
+  // Standard's median). Never "hypoallergenic": shedding is the RKC "Sheds: No" field.
+  standard_poodle: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['pra_eye_disease', 'health.eyes_pra'],
+      ['hip_dysplasia', 'health.hips'],
+      ['bloat_gdv', 'health.bloat_gdv'],
+      ['epilepsy', 'health.epilepsy'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -555,6 +575,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.beagle.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.beagle.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.beagle.exercise_minutes_senior',
+  },
+  standard_poodle: {
+    adult_minutes: ['proposed_game_parameters.standard_poodle.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.standard_poodle.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.standard_poodle.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.standard_poodle.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.standard_poodle.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.standard_poodle.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],
@@ -722,7 +750,7 @@ function dogFacets(facts) {
   const atOrAbove = (n) => (ex.qualifier === 'up_to' ? ex.value > n : ex.value >= n);
   if (ex) facets.exercise = atOrAbove(120) ? 'over_2h' : atOrAbove(60) ? 'h1_2' : 'under_1h';
   const gr = first('grooming_frequency');
-  if (gr) facets.grooming = { once_a_week: 'weekly', more_than_once_a_week: 'several_weekly', daily: 'daily' }[gr.value] ?? 'other';
+  if (gr) facets.grooming = { once_a_week: 'weekly', more_than_once_a_week: 'several_weekly', daily: 'daily', every_day: 'daily' }[gr.value] ?? 'other';
   return facets;
 }
 

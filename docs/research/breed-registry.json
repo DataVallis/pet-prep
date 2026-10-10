@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "05349e9a4692df3bad53779cc078987b57d9727813aecd4392a09d042e2d838e"
+      "sha256": "1e76b717e3f8c4b8d0cffcec378242c2f21edbebcdb09e1a07e9ca19da45bb4d"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "79f252047acdbfbd5fd443cb1f76f253c784ae7e44f20beb27a9d4435d0ad910"
+      "sha256": "52ea01fb5027c49b72b6902e4ffddba6c5ea76f2bf0b7f258c166c9559fa4ac1"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,23 +25,23 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "a39644c76277f543afcc235808489d73950cd1fdf53baddc2e6ef40c2b35f6fe"
+      "sha256": "fe6bc511aed0917f8e3b29413f81da0227b5e9f1c4486131d8ee0116d77ed1f0"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "1a82c8a6e253d1e9114fb9930b7c45fc601cefd7594227e8ca57c8ebea67d162"
+      "sha256": "b7093bc1f430258ebf9a0d7f67221dce4fd648845edca884a67ac854110ae1fa"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "7424ae3a00416976b7a26081b0d997ed0c4aa51168f68bbfa43977ce495dce8a"
+      "sha256": "067a8fa4b20cc3e419d94d473893b441e395832b58054eff15732b152e0c3518"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "1f5cfa24a3059da90335b19cb5fbb6560d0559b84d7df95cb12b43eee4ccf6c5"
+      "sha256": "35196f38c4e18d64c5562bb1fdd49efae5afe2815dfbac55a9eb2bf4ec1e5f85"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "e27bacc77435406657258ec7121f06af2847e5319dcccfcd16702987c56ef1a6"
+      "sha256": "cd13fd2839e36a4add781b9b04f4d62f255265c688fe788579af68427cb8149b"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -145,7 +145,7 @@
         }
       },
       "status": "available",
-      "breed_count": 7,
+      "breed_count": 8,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -4596,6 +4596,487 @@
       ]
     },
     {
+      "id": "standard_poodle",
+      "species": "dog",
+      "order": 7,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Poodle (Standard)",
+        "sl": "Veliki pudelj"
+      },
+      "slug": {
+        "en": "poodle-standard",
+        "sl": "veliki-pudelj"
+      },
+      "synonyms": {
+        "en": [
+          "Standard Poodle",
+          "Poodle"
+        ],
+        "sl": [
+          "veliki pudelj",
+          "pudelj",
+          "standardni pudelj",
+          "poodle"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S120"
+          ],
+          "ref": "standard_poodle.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": [
+            45,
+            60
+          ],
+          "source_ids": [
+            "S118"
+          ],
+          "ref": "standard_poodle.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              30,
+              35
+            ],
+            "female": [
+              21,
+              32
+            ]
+          },
+          "source_ids": [
+            "S122"
+          ],
+          "ref": "standard_poodle.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "standard_poodle.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S120"
+          ],
+          "ref": "standard_poodle.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S120"
+          ],
+          "ref": "standard_poodle.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S120"
+          ],
+          "ref": "standard_poodle.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S120"
+          ],
+          "ref": "standard_poodle.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S120"
+          ],
+          "ref": "standard_poodle.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 2,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "standard_poodle.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 172,
+            "group": 9,
+            "section": 2,
+            "origin": "FR"
+          },
+          "source_ids": [
+            "S118"
+          ],
+          "ref": "standard_poodle.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S122"
+          ],
+          "ref": "standard_poodle.health.eyes_pra",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S122"
+          ],
+          "ref": "standard_poodle.health.hips",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S122"
+          ],
+          "ref": "standard_poodle.health.bloat_gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S122"
+          ],
+          "ref": "standard_poodle.health.epilepsy",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S122"
+            ],
+            "refs": [
+              "standard_poodle.suitability.pdsa_children",
+              "standard_poodle.behaviour.family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S120"
+            ],
+            "refs": [
+              "standard_poodle.suitability.rkc_size_of_home",
+              "standard_poodle.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S122"
+            ],
+            "refs": [
+              "standard_poodle.suitability.pdsa_other_pets",
+              "standard_poodle.behaviour.other_pets"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S120",
+              "S121"
+            ],
+            "refs": [
+              "standard_poodle.suitability.rkc_shedding",
+              "standard_poodle.suitability.rkc_non_moulting_coat"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S120",
+              "S122"
+            ],
+            "refs": [
+              "standard_poodle.suitability.rkc_grooming",
+              "standard_poodle.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_poodle.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S120"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S120 'Up to 1 hour per day'; PDSA S122 'around an hour' agrees)"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_poodle.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_poodle.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S120"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S120)"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_poodle.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 2.0 (Coren rank 2, S35 — Brightest tier)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S120"
+        ]
+      },
+      "portrait": null,
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S118",
+        "S120",
+        "S121",
+        "S122"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -5397,6 +5878,34 @@
       "publisher": "Companion Animal Health and Genetics 12 (2025)",
       "title": "O'Neill D. G., Schiksnis M. R., Brodbelt D. C., Church D. B., Goldberg S., Engdahl K. S. Beagles kept as companion animals in the UK – demography, disorders and mortality. doi:10.1186/s40575-024-00140-9",
       "url": "https://link.springer.com/article/10.1186/s40575-024-00140-9"
+    },
+    {
+      "id": "S118",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 172 — Poodle, EN (PDF)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/172g09-en.pdf"
+    },
+    {
+      "id": "S120",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: Poodle (Standard)",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/poodle-standard/"
+    },
+    {
+      "id": "S121",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed standard: Poodle (Standard) (last updated April 2025)",
+      "url": "https://www.royalkennelclub.com/breed-standards/utility/poodle-standard/"
+    },
+    {
+      "id": "S122",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Poodle breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/poodle"
     },
     {
       "id": "C1",

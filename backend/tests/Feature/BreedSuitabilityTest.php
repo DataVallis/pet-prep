@@ -220,6 +220,20 @@ it('gives the Beagle family_pet / sheds, chews_when_bored and no new tag (runboo
         ->and(bsEntry('beagle.suitability.pdsa_children')['notes'])->toContain('no children');
 });
 
+it('gives the Standard Poodle children, large_home, other_pets, low_shedding / frequent_grooming and never hypoallergenic (runbook 2026-10-10)', function () {
+    $poodle = app(BreedSuitability::class)->for(BreedType::StandardPoodle);
+    expect($poodle['suits'])->toBe(['children', 'large_home', 'other_pets', 'low_shedding'])
+        // No family statement, no small-children rating, RKC "Large house" (S120).
+        ->and($poodle['suits'])->not->toContain('family_pet')->not->toContain('small_children')->not->toContain('apartment')
+        ->and($poodle['consider'])->toBe(['frequent_grooming'])
+        // RKC "Sheds: No" (S120) → not `sheds`; not a welfare breed.
+        ->and($poodle['consider'])->not->toContain('sheds')->not->toContain('brachycephalic_breathing')
+        ->and(config('breed_suitability.vocabulary'))->not->toHaveKey('hypoallergenic');
+
+    expect(bsEntry('standard_poodle.suitability.rkc_shedding')['quote'])->toBe('Sheds: No')
+        ->and(bsEntry('standard_poodle.suitability.pdsa_children')['notes'])->toContain('caveat');
+});
+
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {
     $source = (string) file_get_contents(app_path('Http/Resources/BreedCatalogResource.php'));
     preg_match('/@var array\{suits: list<([^>]+)>, consider: list<([^>]+)>\}/', $source, $m);

@@ -85,6 +85,15 @@
 | (portrait default); only a subset of the ten standard colours is drawn.
 | Colour weights are unsourced → `verified => false`.
 |
+| Standard Poodle (M5-R10-07, docs/research/dog-data standard_poodle.appearance):
+| elegant, well-balanced build, profuse curly coat, long wide low-set ears, dark
+| almond-shaped eyes, long fine head with straight muzzle, tail set rather high
+| and the five solid colours follow FCI 172 (S118) / RKC standard (S121) / RKC
+| breed page (S120). Not a welfare-concern breed (Breed Watch Category 1). Solid
+| black weighted highest (portrait default); never parti-colour or white marks
+| (FCI disqualification). Short even all-over trim (no show clip), natural tail.
+| Colour weights are unsourced → `verified => false`.
+|
 */
 
 return [
@@ -446,6 +455,44 @@ return [
             'eye_color' => [['value' => 'dark brown', 'weight' => 3], 'hazel'],
             'tail' => ['sturdy, moderately long, carried gaily, white tip'],
             'muzzle' => ['moderate muzzle, broad black nose with wide nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-07 (docs/research/dog-data/data.json standard_poodle.appearance; runbook rules
+    // 2026-10-10: standard solid colours only, black portrait, natural short trim).
+    'standard_poodle' => [
+        'display_name' => 'Standard Poodle',
+        // Colour frequencies are in no source (standard_poodle.appearance.colour_weights UNSOURCED) → all weights are a draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 172 (S118, https://www.fci.be/Nomenclature/Standards/172g09-en.pdf), Royal Kennel Club standard (S121), RKC breed page (S120) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S118 "Standard Poodles: Over 45 cm up to 60 cm with a tolerance of +2 cm."; S120 "Size: Medium" (PDSA S122 says "Large")',
+            'build' => 'S121 "Well balanced, elegant looking with very proud carriage."; S118 "Dog of medium proportions"',
+            'coat_length' => 'S118 "Profuse of fine, woolly texture, very frizzy, elastic and resistant to pressure of the hand."; S121 "All traditional trims permissible in the show ring" (the game uses a short even trim)',
+            'coat_color' => 'S118 "Solid colour: black, white, brown, grey, fawn."; S121 "All solid colours." (weights unsourced)',
+            'coat_pattern' => 'S118 disqualifying faults: "Subjects whose coat is not of solid colour." "All white marks on the body and/or feet for all subjects other than white."',
+            'ear_carriage' => 'S121 "Leathers long and wide, set low, hanging close to face."',
+            'eye_color' => 'S121 "Almond-shaped, dark, not set too close together, full of fire and intelligence."; S118 "Black or dark brown colour."',
+            'tail' => 'S121 (undocked) "Thick at root, set on rather high, carried away from the body and as straight as possible."',
+            'muzzle' => 'S118 muzzle "Upper profile is perfectly straight"; nose "open nostrils. Black nose in black, white and grey subjects"; S121 "Long and fine with slight peak."',
+        ],
+        'traits' => [
+            'size' => ['medium-large, tall'],
+            'build' => [['value' => 'elegant, well balanced, proud carriage', 'weight' => 3], 'elegant, athletic'],
+            'coat_length' => ['dense curly coat in a short, even all-over trim'],
+            // Standard solid colours only (S118); black highest → the register portrait is black.
+            'coat_color' => [
+                ['value' => 'solid black', 'weight' => 4],
+                ['value' => 'solid white', 'weight' => 3],
+                ['value' => 'solid brown', 'weight' => 2],
+                'solid grey',
+                'solid fawn',
+            ],
+            'coat_pattern' => ['one solid colour, no white marks'],
+            'ear_carriage' => ['long, wide, set low, hanging close to the face'],
+            'eye_color' => ['dark brown, almond-shaped'],
+            'tail' => ['natural undocked tail set rather high, carried away from the body'],
+            'muzzle' => ['long fine head, straight muzzle, black nose with open nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],

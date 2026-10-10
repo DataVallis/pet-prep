@@ -48,9 +48,9 @@ use InvalidArgumentException;
  * dogProfile(). A new dog breed = an enum case in DOG_BREEDS + a profile;
  * the mutt / Border Collie rows stay byte-identical (LabradorBreedTest /
  * GoldenRetrieverBreedTest / FrenchBulldogBreedTest / GermanShepherdBreedTest /
- * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest cross-check the
- * Labrador / Golden / French Bulldog / German Shepherd / Cavalier / Beagle rows
- * against data.json).
+ * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest
+ * cross-check the Labrador / Golden / French Bulldog / German Shepherd / Cavalier /
+ * Beagle / Standard Poodle rows against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
  * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
@@ -158,8 +158,17 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10_BEAGLE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-06)';
 
+    /**
+     * M5-R10-07 Standard Poodle (unattended run 2026-10-10, data.json
+     * proposed_game_parameters.standard_poodle.*.decision): every value follows a standing
+     * rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min, senior 45 min, puppy 10 min × age capped at 60, stages 9 / 36 / 108,
+     * arrival 2 / 9 / 36 / 108, learning multiplier 2.0; care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_STANDARD_POODLE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-07)';
+
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -550,6 +559,10 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-06 (docs/research/dog-data/data.json beagle, S111–S117; runbook
             // rules in proposed_game_parameters.beagle).
             BreedType::Beagle => self::beagleProfile(),
+
+            // M5-R10-07 (docs/research/dog-data/data.json standard_poodle, S118–S123; runbook
+            // rules in proposed_game_parameters.standard_poodle).
+            BreedType::StandardPoodle => self::standardPoodleProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -1000,6 +1013,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'beagle.lifespan.median_uk',
                 'quote' => 'The median age at death was 11.28 years (IQR 9.32–13.08) for 322 deaths recorded during the study period.',
                 'notes' => 'O\'Neill et al. 2025 (S116), VetCompass UK 2019 (the Conclusions say 11.70 y). McMillan 2024 (S54) gives no reachable Beagle value. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Standard Poodle (M5-R10-07). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_STANDARD_POODLE);
+     * weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function standardPoodleProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_STANDARD_POODLE;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S120', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.standard_poodle.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog finishes growing at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lifespan lower bound "Over 12 years" (S120; PDSA 12–14 y, S122) = 9 y = 108 months. McMillan 2024 has no Standard Poodle value (the Dogs Trust row "Poodle" pools all varieties, S123) and no VetCompass Standard Poodle median was found. Not chosen: 126 (0.75 × 14.0 y pooled, S123) and 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.standard_poodle.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 60 minutes, which 10 × age already reaches at 6 months, so the whole young stage walks the adult minutes.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S120', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.standard_poodle.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S120) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "around an hour of exercise daily" (S122) agrees.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.standard_poodle.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[21.0, 35.0], [
+                'unit' => 'kg', 'source_id' => 'S122', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'standard_poodle.adult_weight.pdsa',
+                'quote' => 'Male: 30kg-35kg. Female: 21kg-32kg',
+                'notes' => 'PDSA key facts (males 30–35 kg, females 21–32 kg; the page is "Poodle", size Large). The FCI (S118) and RKC (S121) standards give a height only (FCI 45–60 cm, RKC over 38 cm).',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'standard_poodle.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (21–35 kg = 46–77 lb; males in the Large class of S10, females straddle Medium 12–15 months).',
+            ]],
+            'coren_rank' => [2, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'standard_poodle.trainability.coren_rank',
+                'quote' => '| 2 | Poodle |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 2 (the breed "Poodle", varieties not separated), tier "Brightest" (ranks 1–10). Coren\'s own article (S34) was not reachable in this run.',
+            ]],
+            'learning_multiplier' => [2.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.standard_poodle.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 2 (S35) in the "Brightest" tier → max(1.8, round(2.0 − 1/30, 1)) = 2.0, twice the mixed breed\'s speed (PDSA S122: "very obedient and respond well to training"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S120', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'standard_poodle.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC breed page lower bound (S120; PDSA 12–14 y, S122). No variety-specific McMillan 2024 or VetCompass median (the pooled "Poodle" 14.0 y, S123, is not used). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
