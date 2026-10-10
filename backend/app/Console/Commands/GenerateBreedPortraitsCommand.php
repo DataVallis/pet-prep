@@ -14,7 +14,7 @@ use InvalidArgumentException;
 use Throwable;
 
 /**
- * Manual (never scheduled): AI-generated breed illustrations for the website
+ * Manual (never scheduled): AI-generated breed photos for the website
  * animal register (M5-R11, David 2026-10-10) — see BreedPortraitService.
  * Charged to the AI Lab budget. `--dry-run` prints prompts and the estimated
  * cost without calling fal.ai. Existing files are skipped unless --force.
@@ -34,7 +34,7 @@ class GenerateBreedPortraitsCommand extends Command
         {--out= : Output directory (absolute, or relative to backend/; default ../docs/research/breed-portraits)}
         {--profile= : Image profile from config/media.php (default: the reference-image profile)}';
 
-    protected $description = 'Generate AI breed illustrations for the website animal register (AI Lab budget)';
+    protected $description = 'Generate AI breed photos for the website animal register (AI Lab budget)';
 
     public function handle(BreedPortraitService $portraits, AiSpendGuard $guard): int
     {

@@ -186,7 +186,7 @@ git fetch origin "refs/heads/portraits/run-<id>:refs/remotes/origin/portraits/ru
 git show origin/portraits/run-<id>:docs/research/breed-portraits/dog/<slug>.webp > /tmp/p.webp
 php -r '$i=imagecreatefromwebp($argv[1]); imagepng($i,$argv[2]);' /tmp/p.webp /tmp/p.png   # then Read /tmp/p.png and look at it
 ```
-Verdict: one adult animal of the breed, standard colour = the portrait default, plain brand background, no text / people / props, natural proportions; welfare breeds: no extreme face (open nostrils, visible muzzle). Wrong → dispatch once more with `-F 'inputs[force]=true'`; still wrong → keep the better one, note it in the PR and the queue (`done`, "portrait needs David"). Then:
+Verdict: a realistic photograph (not an illustration — David 2026-10-10, M5-R11-05; manifest `kind: ai_photo`) of one adult animal of the breed, standard colour = the portrait default, plain fog-grey studio backdrop, no text / people / props, natural proportions; welfare breeds: no extreme face (open nostrils, visible muzzle). Wrong → dispatch once more with `-F 'inputs[force]=true'`; still wrong → keep the better one, note it in the PR and the queue (`done`, "portrait needs David"). Then:
 
 ```bash
 git checkout -b feat/M5-R10-NN-<slug>-portrait origin/main

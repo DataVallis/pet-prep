@@ -123,6 +123,10 @@ Older queue (still valid where not done):
 
 ## 6. Session log
 
+### 2026-10-10 (cloud) — M5-R11-05 realistic breed photos (branch `feat/M5-R11-05-realistic-portraits`)
+- David: website breed portraits must be realistic photographs like the app's pets, not illustrations. `BreedPortraitService::PORTRAIT_STYLE` is now a 35mm studio photograph on the fog-grey #F3F5F2 backdrop (mint glow dropped — artificial in a photo); prompt opens "A photorealistic photograph of a single …" (same model `nano_banana_pro`). Manifest `kind: ai_photo`, label "AI-generated photo"; the export accepts `ai_photo` and still reads `ai_illustration`.
+- Next: dispatch `breed-portraits.yml` with `force=true` for all breeds, review every image, commit them + re-export, then the website (accept `ai_photo`, caption "Fotografija, ustvarjena z AI" / "AI-generated photo").
+
 ### 2026-10-10 (cloud) — M5-R10-03 French Bulldog (branch `feat/M5-R10-03-french-bulldog`)
 - **Research:** S76–S94 in `sources.md`, `data.json french_bulldog.*`; David's decisions (~06:20) as `decision` in `proposed_game_parameters.french_bulldog` (no "awaiting David" left); growth range widened to 9–15 months (FCI weights straddle small / medium); VetCompass 2013 median age at death (3.6 y) kept in research only, never exported.
 - **Backend:** `BreedType::FrenchBulldog`, migration `2026_11_02_120000` (CHECK, reversible), `BreedConfigsSeeder` row (sort 40, 6,000 steps fallback, Border Collie care rates, keywords french bulldog / frenchie / french / bulldog / francoski buldog / buldog), `BreedStageParamsSeeder::frenchBulldogProfile()` (46 rows), `breed_appearance.php` (`muzzle` trait, fawn / brindle / light fawn, never merle), `FalAiService` v1, `PetFactory::frenchBulldog()`, `breed_suitability.php` (+ `brachycephalic_breathing`), `FrenchBulldogBreedTest`, counts in BreedConfigTest / SpeciesFoundationTest / LabradorBreedTest / GoldenRetrieverBreedTest / BreedSuitabilityTest / BreedPortraitTest.
