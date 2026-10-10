@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Zahodnoškotski beli terier: enajsta nova pasma in prva oznaka za kožo (M5-R10-11)
+
+**Kaj se je zgodilo:** PetPrep ima dvanajsto plačljivo pasmo psa — **zahodnoškotskega belega terierja** (westie). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **8 novih virov (S142–S149)** — standard in nomenklatura FCI, stran pasme, standard in Breed Watch The Royal Kennel Club, PDSA ter raziskava VetCompass (Royal Veterinary College). Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«, PDSA »ura na dan«), starejši 45 minut = 4.500, mladiček od 2.000 korakov do 6.000 pri 6 mesecih; starejši od **121 mesecev** (približno 10 let; iz mediane VetCompass 13,4 leta — začasno); uči se enako hitro kot mešanček (Coren: rang 47). Nova oznaka v izbirniku: **»občutljiva koža — nagnjenost k srbenju in vnetjem«**.
+
+**Zakaj je pomembno:** Prvič smo v aplikacijo prenesli skrb za dobrobit, ki ni povezana z obliko telesa, ampak s kožo: The Royal Kennel Club sodnikom naroča, naj bodo pri tej pasmi pozorni na znake vnetja kože. Starš to izve v izbirniku, preden izbere psa — mirno, brez številk. Oznaka namenoma ne govori o »alergijah«, da je nihče ne razume kot obljubo glede alergij ljudi.
+
+**Številke:** 8 novih virov (S142–S149), 7 oznak (3 + 4), 1 nova oznaka (`sensitive_skin`), 1 nova migracija; Pest **PEST_N** testov, Jest **JEST_N**, izvoz registra **26** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Westie je majhen, pogumen terier, ki potrebuje okoli uro gibanja na dan — in kožo, na katero morate paziti skupaj z veterinarjem.« (*ko bo nova različica v trgovini*)
+- 💼 Investitorji: »Dvanajsta plačljiva pasma, osma dodana samodejno — pravila za dobrobit zdaj pokrijejo tudi kožne težave, ne le obliko telesa.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep staršem pove, naj se o negi kože in šamponu posvetujejo z veterinarjem.«
+- 📣 Omrežja: »Bel, pogumen in poln samozavesti. Je westie pravi za vašo družino?« (*ko bo westie v trgovini*)
+- 🛠 Tehnično: »Varovalo besednjaka je zavrnilo ključ `skin_allergies` (beseda »allerg«) — oznaka je zato `sensitive_skin`.«
+
+---
+
 ## 2026-10-10 — Havanski bišon: deseta nova pasma in najkrajši sprehodi v katalogu (M5-R10-10)
 
 **Kaj se je zgodilo:** PetPrep ima enajsto plačljivo pasmo psa — **havanskega bišona**. Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **6 novih virov (S136–S141)** — standard in nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA in standard AKC. Pravila igre: odrasel **30 minut gibanja = 3.000 korakov** na dan (RKC »do 30 minut«, PDSA »okoli 30 minut«), starejši 23 minut = 2.300, mladiček od 2.000 korakov do 3.000 pri 3 mesecih; starejši od **108 mesecev** (9 let; spodnja meja RKC »več kot 12 let« — začasno); uči se enako hitro kot mešanček (v Corenovi lestvici ga ni).
