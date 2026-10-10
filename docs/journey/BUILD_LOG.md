@@ -29,15 +29,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Kaj se je zgodilo:** PetPrep ima šesto plačljivo pasmo psa — **kavalirja King Charles španjela** (Cavalier King Charles Spaniel). Dodana je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **8 novih virov (S103–S110)** — standard FCI 136 in nomenklatura FCI, stran pasme, standard in Breed Watch The Royal Kennel Club, PDSA, raziskava VetCompass (Summers 2015) in Univerza v Bristolu. Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«, PDSA »vsaj 1 uro«), starejši 4.500, mladiček od 2.000 do 6.000 (pri 6 mesecih); starejši je od 90. meseca (mediana VetCompass 9,99 leta); uči se enako hitro kot mešanček.
 
-**Zakaj je pomembno:** Kavalir je nežen, družinski pes, primeren tudi za stanovanje — a britanski veterinarski viri opozarjajo na bolezen srčne zaklopke in bolečo bolezen hrbtenjače, povezano z obliko lobanje. PetPrep staršem mirno svetuje, naj vprašajo za zdravstvene teste staršev mladička (srce, MRI), in pasme po pravilu za dobrobit **ne uporablja v marketingu** (David lahko to spremeni). Nova oznaka »srce in hrbtenjača — preverite zdravstvene teste« je brez odstotkov.
+**Zakaj je pomembno:** Kavalir je nežen, družinski pes, primeren tudi za stanovanje — a britanski veterinarski viri opozarjajo na bolezen srčne zaklopke in bolečo bolezen hrbtenjače, povezano z obliko lobanje. PetPrep staršem mirno svetuje, naj vprašajo za zdravstvene teste staršev mladička (srce, MRI), Pasma je v aplikaciji in **tudi v marketingu** (David 10. 10. 2026: kavalir ni izločen — v marketingu pa ne obljubljamo zdravja pasme in ne skrivamo oznake o srcu in hrbtenjači). Nova oznaka »srce in hrbtenjača — preverite zdravstvene teste« je brez odstotkov.
 
 **Številke:** 8 novih virov (S103–S110), 46 vrstic `breed_stage_params`, 6 oznak (3 + 3), 1 nova oznaka v besednjaku (`heart_and_spine`), 1 nova migracija; Pest **1967** testov, Jest **1950**, izvoz registra **19** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
 
 **Kako povedati:**
-- 👩 Starši: »Kavalir je ljubeč družinski pes, ki zadostuje z okoli eno uro gibanja na dan in se dobro znajde v stanovanju — a ne mara biti sam. Pri nakupu vprašajte za srčne preglede in MRI staršev mladička. V PetPrep to vidite, preden se odločite.« (*ko bo nova različica v trgovini; brez slik pasme — glej smernice za marketing*)
+- 👩 Starši: »Kavalir je ljubeč družinski pes, ki zadostuje z okoli eno uro gibanja na dan in se dobro znajde v stanovanju — a ne mara biti sam. Pri nakupu vprašajte za srčne preglede in MRI staršev mladička. V PetPrep to vidite, preden se odločite.« (*ko bo nova različica v trgovini*)
 - 💼 Investitorji: »Šesta plačljiva pasma, druga dodana samodejno po vnaprej potrjenih pravilih — raziskava z viri, številke igre, testi in dokumentacija v enem zagonu.«
 - 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri kavalirju sledi The Royal Kennel Club in PDSA — družine napoti k zdravstveno testiranim staršem (srčna shema, MRI), brez strašenja.«
-- 📣 Omrežja: *ne* — kavalir se v objavah ne pojavlja (pravilo za dobrobit, 10. 10. 2026; David lahko spremeni).
+- 📣 Omrežja: »Kavalir: nežen družinski pes za stanovanje, okoli 1 ura gibanja na dan, ne mara biti sam. Preden ga vzamete, preverite, ali sta starša mladička zdravstveno testirana (srce, MRI).« (David 10. 10. 2026: kavalir sme v marketing.)
 - 🛠 Tehnično: »Odločitvena konstanta seederja ima pripono pasme (`… (pravilo runbooka, M5-R10-05)`), da se odločitve dveh samodejnih zagonov ne pomešajo; migracija samo razširi CHECK in je povratna.«
 
 ---

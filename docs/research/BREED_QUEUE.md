@@ -16,7 +16,7 @@ Status: `done` · `in-progress` · `blocked` (research could not source a requir
 | 02 | Golden Retriever / Zlati prinašalec | `golden_retriever` | dog | done | M5-R10-02, PR #122 |
 | 03 | French Bulldog / Francoski buldog | `french_bulldog` | dog | done | M5-R10-03, PR #130 + portrait PR #131, website PR #13 (2026-10-10); welfare breed — not in marketing |
 | 04 | German Shepherd Dog / Nemški ovčar | `german_shepherd` | dog | done | M5-R10-04, PR #135 + portrait PR (this) + website PR #16 (2026-10-10); welfare rule → not in marketing (open point for David); senior 93 provisional until McMillan 2024 is checked |
-| 05 | Cavalier King Charles Spaniel / Kavalir King Charles španjel | `cavalier_king_charles_spaniel` | dog | done | M5-R10-05, PR #140 + portrait PR (this) + website PR #18 (2026-10-10); welfare rule → not in marketing (open point for David); senior 90 provisional (VetCompass 2012 poster S71) until McMillan 2024 is checked |
+| 05 | Cavalier King Charles Spaniel / Kavalir King Charles španjel | `cavalier_king_charles_spaniel` | dog | done | M5-R10-05, PR #140 + portrait PR (this) + website PR #18 (2026-10-10); in marketing (David 2026-10-10 overrode the welfare rule); senior 90 provisional (VetCompass 2012 poster S71) until McMillan 2024 is checked |
 | 06 | Beagle / Bigl | `beagle` | dog | in-progress | M5-R10-06 (2026-10-10, unattended run) |
 | 07 | Poodle (Standard) / Pudelj (veliki) | `standard_poodle` | dog | todo | never "hypoallergenic" |
 | 08 | Dachshund / Jazbečar | `dachshund` | dog | todo | check welfare-concern rule (§3) |

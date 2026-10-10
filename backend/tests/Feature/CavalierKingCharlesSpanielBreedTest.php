@@ -425,7 +425,7 @@ describe('AI appearance (runbook rules 2026-10-10: visible muzzle, standard colo
 });
 
 describe('no health statistics in the app (runbook §3)', function () {
-    it('keeps the percentages in the research only and records the marketing exclusion', function () {
+    it('keeps the percentages in the research only and records David\'s marketing decision', function () {
         $app = json_encode([
             config('breed_appearance.cavalier_king_charles_spaniel'),
             config('breed_suitability.breeds.cavalier_king_charles_spaniel'),
@@ -436,6 +436,6 @@ describe('no health statistics in the app (runbook §3)', function () {
             expect((string) $app)->not->toContain($statistic);
         }
         expect(ckData('cavalier_king_charles_spaniel.health._note'))->toContain('never shown in the app')
-            ->and(ckData('proposed_game_parameters.cavalier_king_charles_spaniel.marketing.decision'))->toContain('NOT in marketing');
+            ->and(ckData('proposed_game_parameters.cavalier_king_charles_spaniel.marketing.decision'))->toContain('in marketing YES');
     });
 });

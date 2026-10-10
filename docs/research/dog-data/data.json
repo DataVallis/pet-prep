@@ -5743,13 +5743,13 @@
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, children; consider sheds, frequent_grooming, heart_and_spine (new key, welfare rule)"
       },
       "marketing": {
-        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "value": "in the app: yes; in marketing / store screenshots / social: yes",
         "unit": "—",
         "source_id": "S105",
         "quote": "This breed can be affected by conformational concerns, more information can be found here",
         "confidence": "high",
-        "notes": "Welfare-concern rule (runbook §3): the RKC names the breed for conformational concerns (breed page S105; Breed Watch Category 2 S107: protruding eyes, eye irritation, hind conformation) and the University of Bristol links the breed's painful CM/SM to skull shape (S110). The Cavalier is a normal breed in the app and the register, but is not used in PetPrep advertising, store screenshots, social posts or decks until David decides otherwise.",
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, NOT in marketing / store screenshots (RKC conformational concerns S105 / Breed Watch S107, skull-shape CM/SM S110)"
+        "notes": "David 2026-10-10 overrode the runbook welfare-concern rule for this breed: the Cavalier is used in marketing like any other breed. The sources the rule rested on stay recorded: RKC breed page S105 ('can be affected by conformational concerns'), Breed Watch Category 2 S107, University of Bristol S110 (skull shape and CM/SM). Marketing never promises the breed's health; the heart_and_spine chip stays.",
+        "decision": "potrdil David 2026-10-10: in the app yes, in marketing YES (not excluded — overrides the runbook welfare rule)"
       },
       "ai_appearance": {
         "value": "adult Cavalier King Charles Spaniel, Blenheim (default), tricolour, ruby or black and tan; long feathered ears, silky coat; visible tapered muzzle, open nostrils, eyes not protruding; standard colours only; never chocolate",
