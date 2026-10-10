@@ -234,6 +234,29 @@ it('gives the Standard Poodle children, large_home, other_pets, low_shedding / f
         ->and(bsEntry('standard_poodle.suitability.pdsa_children')['notes'])->toContain('caveat');
 });
 
+it('gives the Dachshund the new back_spine tag (welfare rule), children, sheds and needs_mental_stimulation (runbook 2026-10-10)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray(['back_spine' => BreedSuitability::CONSIDER]);
+
+    $dachshund = app(BreedSuitability::class)->for(BreedType::Dachshund);
+    expect($dachshund['suits'])->toBe(['children'])
+        // Supervise (S127), not with smaller pets (S127), RKC "Small house" (S125), does not do well alone (S127).
+        ->and($dachshund['suits'])->not->toContain('small_children')->not->toContain('other_pets')->not->toContain('apartment')->not->toContain('large_home')->not->toContain('often_alone')
+        ->and($dachshund['consider'])->toBe(['back_spine', 'sheds', 'needs_mental_stimulation'])
+        // Long back, not a flat face; the Cavalier's heart / Chiari tag is a different problem.
+        ->and($dachshund['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('heart_and_spine')->not->toContain('hips_hind_legs');
+
+    // Only the Dachshund carries the back tag so far.
+    foreach (BreedType::cases() as $breed) {
+        if ($breed !== BreedType::Dachshund) {
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('back_spine');
+        }
+    }
+
+    // PDSA is the quoted source for the spine; the supervision caveat stays with the children entry.
+    expect(bsEntry('dachshund.health.back_ivdd')['quote'])->toBe('Certain breeds such as the Dachshund and French bulldog are prone to IVDD and slipped discs due to the shape of their spine.')
+        ->and(bsEntry('dachshund.suitability.pdsa_children')['notes'])->toContain('supervise');
+});
+
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {
     $source = (string) file_get_contents(app_path('Http/Resources/BreedCatalogResource.php'));
     preg_match('/@var array\{suits: list<([^>]+)>, consider: list<([^>]+)>\}/', $source, $m);

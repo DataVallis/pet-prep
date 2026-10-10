@@ -223,6 +223,27 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.standard_poodle',
                 'search_keywords' => ['poodle (standard)', 'standard poodle', 'poodle', 'veliki pudelj', 'pudelj', 'standardni pudelj'],
             ],
+            // M5-R10-08 Dachshund, standard size (docs/research/dog-data/data.json dachshund, sources
+            // S124–S130; runbook rules confirmed by David 2026-10-10: paid). daily_steps_required =
+            // the adult step goal (proposed_game_parameters.dachshund.step_goal_adult: 60 min ×
+            // 100 steps/min — RKC S125 "Up to 1 hour per day", PDSA S127 "a minimum of an hour") —
+            // only the legacy-profile fallback. Hunger / thirst decay, poops and water are the
+            // Border Collie's (no per-breed number).
+            [
+                'breed_slug' => BreedType::Dachshund->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 90,
+                'label_key' => 'breeds.dachshund',
+                'search_keywords' => ['dachshund', 'sausage dog', 'teckel', 'jazbečar', 'jazbecar'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

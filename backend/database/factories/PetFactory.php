@@ -229,6 +229,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Dachshund (paid breed, M5-R10-08).
+     */
+    public function dachshund(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::Dachshund->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static

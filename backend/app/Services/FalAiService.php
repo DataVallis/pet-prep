@@ -138,6 +138,13 @@ class FalAiService
                 .'dark almond-shaped eyes, long fine head with a straight muzzle and black nose, '
                 .'natural tail set rather high, well-balanced build with proud carriage, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-08: RKC standard (S126) — standard colours only, red first, never dapple;
+            // smooth coat; welfare rule (long back, IVDD): moderate body length, ground clearance.
+            BreedType::Dachshund => 'A Dachshund dog with a red, dense, short smooth coat, '
+                .'broad rounded ears set high, dark almond-shaped eyes, long head tapering to a black nose, '
+                .'moderately long muscular body with a level back and enough ground clearance, '
+                .'tail continuing the line of the back, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -286,6 +293,18 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'dense, curly, short even trim',
                 'markings' => 'no markings',
+            ],
+            // M5-R10-08: RKC standard (S126) colours — red, black or chocolate with tan
+            // markings; no white (small chest patch tolerated); never dapple (S125).
+            BreedType::Dachshund => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'red',
+                    1 => 'black and tan',
+                    2 => 'chocolate and tan',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'dense, short, smooth',
+                'markings' => 'tan points on black or chocolate, no white',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

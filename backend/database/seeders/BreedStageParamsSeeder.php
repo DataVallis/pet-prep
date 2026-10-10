@@ -48,9 +48,9 @@ use InvalidArgumentException;
  * dogProfile(). A new dog breed = an enum case in DOG_BREEDS + a profile;
  * the mutt / Border Collie rows stay byte-identical (LabradorBreedTest /
  * GoldenRetrieverBreedTest / FrenchBulldogBreedTest / GermanShepherdBreedTest /
- * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest
- * cross-check the Labrador / Golden / French Bulldog / German Shepherd / Cavalier /
- * Beagle / Standard Poodle rows against data.json).
+ * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
+ * DachshundBreedTest cross-check the Labrador / Golden / French Bulldog / German
+ * Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund rows against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
  * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
@@ -167,8 +167,17 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10_STANDARD_POODLE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-07)';
 
+    /**
+     * M5-R10-08 Dachshund, standard size (unattended run 2026-10-10, data.json
+     * proposed_game_parameters.dachshund.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min, senior 45 min, puppy 10 min × age capped at 60, stages 9 / 36 / 108,
+     * arrival 2 / 9 / 36 / 108, learning multiplier 1.0; care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_DACHSHUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-08)';
+
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -563,6 +572,10 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-07 (docs/research/dog-data/data.json standard_poodle, S118–S123; runbook
             // rules in proposed_game_parameters.standard_poodle).
             BreedType::StandardPoodle => self::standardPoodleProfile(),
+
+            // M5-R10-08 (docs/research/dog-data/data.json dachshund, S124–S130; runbook
+            // rules in proposed_game_parameters.dachshund).
+            BreedType::Dachshund => self::dachshundProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -1087,6 +1100,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'standard_poodle.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC breed page lower bound (S120; PDSA 12–14 y, S122). No variety-specific McMillan 2024 or VetCompass median (the pooled "Poodle" 14.0 y, S123, is not used). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Dachshund, standard size (M5-R10-08). Stage boundaries, arrival ages, exercise minutes
+     * and the learning multiplier follow the runbook's standing rules (CONFIRMED_R10_DACHSHUND);
+     * weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function dachshundProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_DACHSHUND;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S125', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.dachshund.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lifespan lower bound "Over 12 years" (S125; PDSA "Over 12 years", S127) = 9 y = 108 months. McMillan 2024 names only the Miniature Dachshund (14.0 y, S130) and no standard-size VetCompass median was found. Not chosen: 126 (0.75 × 14.0 y miniature, S130) and 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.dachshund.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age already reaches at 6 months, so the whole young stage walks the adult minutes. PDSA asks to take exercise easy while a Dachshund is growing (S127).',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S125', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.dachshund.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S125) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "a minimum of an hour exercise every day" for the standard size (S127) agrees.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.dachshund.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[9.0, 12.0], [
+                'unit' => 'kg', 'source_id' => 'S126', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'dachshund.adult_weight.rkc',
+                'quote' => 'Ideal weight: 9-12 kgs (20-26 lbs).',
+                'notes' => 'RKC breed standard, Dachshund (Smooth Haired), one range for both sexes; PDSA "Standard 9-12kg" (S127) agrees. Miniatures (under 5 kg, S125) are not this breed entry.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'dachshund.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (9–12 kg = 19.8–26.5 lb; midpoint ≈ 23 lb in the Small class of S10, the upper end touches Medium 12–15 months).',
+            ]],
+            'coren_rank' => [49, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'dachshund.trainability.coren_rank',
+                'quote' => '| 49 | Dachshund |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 49, tier "Average" (ranks 40–54). Coren\'s own article (S34) lists only the top / bottom 10.',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.dachshund.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 49 (S35) in the "Average" tier → 1.0, the mixed breed\'s speed (PDSA S127: "can be wilful when it comes to training"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S125', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'dachshund.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC breed page lower bound (S125; PDSA "Over 12 years", S127). No standard-size McMillan 2024 or VetCompass median (the Miniature Dachshund 14.0 y, S130, is not used). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
