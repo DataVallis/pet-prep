@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Jazbečar: osma nova pasma, prva z oznako za dolg hrbet (M5-R10-08)
+
+**Kaj se je zgodilo:** PetPrep ima deveto plačljivo pasmo psa — **jazbečarja** (standardna velikost, kratkodlaki). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **7 novih virov (S124–S130)** — nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA (pasma in stran o zdrsu diska), British Veterinary Association in poročilo o McMillan 2024. Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«, PDSA »vsaj 1 ura«), starejši 45 minut = 4.500, mladiček od 2.000 korakov do 6.000 pri 6 mesecih; starejši od **108 mesecev** (0,75 × spodnja meja RKC »več kot 12 let« — McMillan 2024 navaja le pritlikavega jazbečarja); uči se **enako hitro** kot mešanček (Coren: 49. mesto).
+
+**Zakaj je pomembno:** Jazbečar je pasma, pri kateri veterinarji opozarjajo na telesno zgradbo: dolg hrbet in kratke noge ga delajo nagnjenega k zdrsu diska. Aplikacija to pove mirno, brez številk — nova oznaka **»dolg hrbet — težave s hrbtenico, brez skakanja«** — in AI jazbečar je zmerne postave, ne pretirano dolg. Ker v preverjenih virih (BVA S128) nismo našli veterinarskega priporočila proti oglaševanju z jazbečarji, ostane v marketingu, a brez obljub o zdravju in brez prizorov skakanja.
+
+**Številke:** 7 novih virov (S124–S130), 4 oznake (1 + 3), 1 nova oznaka (`back_spine`), 1 nova migracija; Pest **2062** testov, Jest **1974**, izvoz registra **22** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Jazbečar ima rad ljudi in se z otroki praviloma dobro razume — a zaradi dolgega hrbta ne sme skakati, naj ostane vitek, in sam doma ne zdrži dobro. Pri vzreditelju vprašajte za pregled hrbtenice staršev.« (*ko bo nova različica v trgovini*)
+- 💼 Investitorji: »Deveta plačljiva pasma, peta dodana samodejno po vnaprej potrjenih pravilih; tretja, pri kateri je pravilo dobrobiti samo ustvarilo novo, z viri podprto opozorilo (po nemškem ovčarju in kavalirju) — prva za dolg hrbet.«
+- 🤝 Partnerji (veterinarji, zavetišča): »PetPrep pri jazbečarju ne skriva zdravja hrbtenice — oznaka in vodič za starše povesta, zakaj je pomemben pregled hrbtenice pri vzreditelju.«
+- 📣 Omrežja: »Kratke noge, dolg hrbet, veliko srce. In nobenih skokov s kavča.« (*ko bo jazbečar v trgovini*)
+- 🛠 Tehnično: »Prva pasma iz skupine FCI brez oštevilčene sekcije — izvoz registra zdaj pozna `section: null`.«
+
+---
+
 ## 2026-10-10 — Veliki koder: sedma nova pasma, četrtič po stalnih pravilih (M5-R10-07)
 
 **Kaj se je zgodilo:** PetPrep ima osmo plačljivo pasmo psa — **velikega kodra** (Poodle (Standard)). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **6 novih virov (S118–S123)** — standard FCI 172 in nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA in tabela pričakovane življenjske dobe Dogs Trust (podatki McMillan 2024). Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«, PDSA »okoli 1 ure«), starejši 45 minut = 4.500, mladiček od 2.000 korakov do 6.000 pri 6 mesecih; starejši od **108 mesecev** (0,75 × spodnja meja RKC »več kot 12 let« — tabela Dogs Trust ima le skupno vrednost za vse kodre, zato je nismo uporabili); uči se **2× hitreje** kot mešanček (Coren: 2. mesto).

@@ -87,6 +87,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.beagle.availability, 'coming_soon');
   assert.deepEqual(byId.standard_poodle.slug, { en: 'poodle-standard', sl: 'veliki-koder' });
   assert.equal(byId.standard_poodle.availability, 'coming_soon');
+  assert.deepEqual(byId.dachshund.slug, { en: 'dachshund', sl: 'jazbecar' });
+  assert.equal(byId.dachshund.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
@@ -140,6 +142,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     cavalier_king_charles_spaniel: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1 },
     beagle: { adult: 6000, senior: 4500, seniorFrom: 102, learning: 0.5 },
     standard_poodle: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 2 },
+    dachshund: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -425,4 +428,22 @@ test('portraits: --copy-portraits writes the registry and copies into <dir>/anim
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
+});
+
+test('Dachshund (M5-R10-08): up to 1 hour, RKC weight, FCI group 4 Germany without a section, back chip, no miniature lifespan', () => {
+  const d = registry.breeds.find((b) => b.id === 'dachshund');
+  const ex = d.facts.filter((f) => f.field === 'exercise');
+  assert.deepEqual(ex.map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S125']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 148, group: 4, section: null, origin: 'DE' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[[9, 12], ['S126']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'shedding').map((f) => f.value), ['yes']);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(d.game.stages[3].activity, { kind: 'steps', value: 4500 });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['children']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['back_spine', 'sheds', 'needs_mental_stimulation']);
+  assert.deepEqual(d.health.map((h) => h.key), ['back_disc_disease']);
+  // Only the RKC lower bound — the Miniature Dachshund's 14.0 y (S130) is research only.
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['more_than', 12]]);
+  const json = JSON.stringify(d);
+  assert.doesNotMatch(json, /mcmillan_miniature|10-12 times|hypoallergenic/i);
 });

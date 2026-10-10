@@ -72,6 +72,11 @@ return [
         // MRI, University of Bristol S110). A calm chip asking for health-tested
         // parents, never a percentage.
         'heart_and_spine' => 'consider',
+        // M5-R10-08 (runbook welfare rule, 2026-10-10): long back and short legs —
+        // intervertebral disc disease (Dachshund: PDSA S129 / S127, RKC IVDD screening
+        // scheme S125, BVA S128). A calm chip asking for spine-screened parents and a
+        // careful life (no jumping), never a percentage.
+        'back_spine' => 'consider',
     ],
 
     'breeds' => [
@@ -270,6 +275,25 @@ return [
             'consider' => [
                 // S120 "Grooming: Every day"; S122 "They need daily grooming" + professional clipping.
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S120', 'S122'], 'refs' => ['standard_poodle.suitability.rkc_grooming', 'standard_poodle.suitability.pdsa_grooming']],
+            ],
+        ],
+        // M5-R10-08: dachshund.* (S124–S130), runbook rules 2026-10-10
+        // (data.json proposed_game_parameters.dachshund.suitability_tags). Woodgreen not
+        // looked up → RKC (S125, S126), PDSA (S127, S129), BVA (S128). Not `small_children`
+        // (supervise), not `other_pets` (not with smaller pets), not `apartment` / `large_home`
+        // (RKC "Small house"), never `often_alone` (does not do well alone, S127).
+        'dachshund' => [
+            'suits' => [
+                // S127 "Dachshunds love people and attention so generally get along well with children of all ages."
+                ['tag' => 'children', 'source_ids' => ['S127'], 'refs' => ['dachshund.suitability.pdsa_children', 'dachshund.behaviour.family']],
+            ],
+            'consider' => [
+                // S129 "Certain breeds such as the Dachshund and French bulldog are prone to IVDD and slipped discs due to the shape of their spine."
+                ['tag' => 'back_spine', 'source_ids' => ['S129', 'S127', 'S125', 'S128'], 'refs' => ['dachshund.health.back_ivdd', 'dachshund.health.conformation_welfare']],
+                // S125 "Sheds: Yes"; S127 "they will shed throughout the year".
+                ['tag' => 'sheds', 'source_ids' => ['S125', 'S127'], 'refs' => ['dachshund.suitability.rkc_shedding', 'dachshund.suitability.pdsa_shedding']],
+                // S127 "give your Dachshund lots to keep their brain active to stop them getting bored."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S127'], 'refs' => ['dachshund.behaviour.mental_stimulation']],
             ],
         ],
     ],

@@ -94,6 +94,16 @@
 | (FCI disqualification). Short even all-over trim (no show clip), natural tail.
 | Colour weights are unsourced → `verified => false`.
 |
+| Dachshund, standard size (M5-R10-08, docs/research/dog-data dachshund.appearance):
+| smooth dense short coat, high-set broad rounded ears, dark almond-shaped eyes,
+| long conical head, tail continuing the spine and the colours red, black and
+| tan, chocolate and tan follow the RKC standard (S126) / RKC breed page (S125).
+| Welfare rule (long back → IVDD; BVA S128, RKC IVDD scheme S125): a moderately
+| long body "with no exaggeration" and enough ground clearance — the dog trait
+| `body`. Never dapple (RKC dapple-gene registration restriction, S125), white,
+| piebald or tricolour. Red weighted highest (portrait default). Colour weights
+| are unsourced → `verified => false`.
+|
 */
 
 return [
@@ -495,6 +505,42 @@ return [
             'muzzle' => ['long fine head, straight muzzle, black nose with open nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-08 (docs/research/dog-data/data.json dachshund.appearance; runbook rules
+    // 2026-10-10: standard colours only, never dapple, red portrait, moderate body length).
+    'dachshund' => [
+        'display_name' => 'Dachshund',
+        // Colour frequencies are in no source (dachshund.appearance.colour_weights UNSOURCED) → all weights are a draft.
+        'verified' => false,
+        'source' => 'Royal Kennel Club standard, Dachshund (Smooth Haired) (S126, https://www.royalkennelclub.com/breed-standards/hound/dachshund-smooth-haired/), RKC breed page (S125), PDSA (S127) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S126 "Ideal weight: 9-12 kgs (20-26 lbs)."; S125 "Size: Medium"; S127 "Standard 20-27cm"',
+            'build' => 'S126 "Moderately long in proportion to height, with no exaggeration."',
+            'coat_length' => 'S126 "Smooth Haired: Dense, short and smooth."',
+            'coat_color' => 'S126 colour section: red, black or chocolate with tan markings (dapple not drawn, S125 dapple-gene restriction; weights unsourced)',
+            'coat_pattern' => 'S126 "In all colours no white permissible, save for a small patch on chest which is permitted but not desirable."',
+            'ear_carriage' => 'S126 "Set high, and not too far forward. Broad, of moderate length, and well rounded (not pointed or folded)."',
+            'eye_color' => 'S126 "Medium size, almond-shaped, set obliquely. Dark except in chocolates, where they can be lighter."',
+            'tail' => 'S126 "Continues line of spine, but slightly curved, without kink or twist,"',
+            'body' => 'S126 "Moderately long and full muscled." "Sloping shoulders, back reasonably level"; welfare: S128 / S129 long back and IVDD → moderate length, enough ground clearance',
+        ],
+        'traits' => [
+            'size' => ['small, low to the ground'],
+            'build' => [['value' => 'muscular, moderately long, no exaggeration', 'weight' => 3], 'compact, muscular'],
+            'coat_length' => ['dense, short, smooth coat'],
+            // Standard colours only (S126); red highest → the register portrait is red. Never dapple.
+            'coat_color' => [
+                ['value' => 'red', 'weight' => 4],
+                ['value' => 'black and tan', 'weight' => 3],
+                'chocolate and tan',
+            ],
+            'coat_pattern' => ['no white markings'],
+            'ear_carriage' => ['set high, broad, rounded, hanging close to the cheeks'],
+            'eye_color' => ['dark, almond-shaped'],
+            'tail' => ['tail continuing the line of the back, slightly curved'],
+            'body' => ['moderately long body with a level back and enough ground clearance, sturdy legs'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'body'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

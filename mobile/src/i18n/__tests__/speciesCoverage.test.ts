@@ -56,6 +56,7 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'pet:picker.ageHints.cavalier_king_charles_spaniel': 'the Cavalier King Charles Spaniel is a dog breed (M5-R10-05)',
   'pet:picker.ageHints.beagle': 'the Beagle is a dog breed (M5-R10-06)',
   'pet:picker.ageHints.standard_poodle': 'the Standard Poodle is a dog breed (M5-R10-07)',
+  'pet:picker.ageHints.dachshund': 'the Dachshund is a dog breed (M5-R10-08)',
   // ── Names the species on purpose ──
   'family:species.dog': 'the species name "Dog" / "Pes"',
   'family:breedUnknown.dog': 'the species name of an unknown dog breed',

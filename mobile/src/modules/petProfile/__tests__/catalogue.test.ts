@@ -112,7 +112,7 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80), never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
     expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
       'mutt',
@@ -124,6 +124,7 @@ describe('readBreedCatalogue', () => {
       'cavalier_king_charles_spaniel',
       'beagle',
       'standard_poodle',
+      'dachshund',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -184,6 +185,13 @@ describe('readBreedCatalogue', () => {
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-07, runbook rules).
     expect(poodle?.search_keywords).toEqual(['poodle (standard)', 'standard poodle', 'poodle', 'veliki koder', 'koder', 'veliki pudelj', 'pudelj', 'standardni pudelj']);
     expect(poodle?.suitability).toEqual({ suits: ['children', 'large_home', 'other_pets', 'low_shedding'], consider: ['frequent_grooming'] });
+    const dachshund = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'dachshund');
+    expect(dachshund).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 90 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-08, runbook rules; back_spine = welfare rule).
+    expect(dachshund?.search_keywords).toEqual(['dachshund', 'sausage dog', 'teckel', 'jazbečar', 'jazbecar']);
+    expect(dachshund?.suitability).toEqual({ suits: ['children'], consider: ['back_spine', 'sheds', 'needs_mental_stimulation'] });
     expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
     // The fallback is already in picker order.
     expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual([
@@ -196,6 +204,7 @@ describe('readBreedCatalogue', () => {
       'cavalier_king_charles_spaniel',
       'beagle',
       'standard_poodle',
+      'dachshund',
     ]);
   });
 });
@@ -244,7 +253,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(10);
+    expect(CONSIDER_TAGS).toHaveLength(11);
+    // M5-R10-08 (runbook welfare rule): long back — spine problems, avoid jumping; no numbers.
+    expect(CONSIDER_TAGS).toContain('back_spine');
     // M5-R10-05 (runbook welfare rule): heart and spine — health tests; no numbers.
     expect(CONSIDER_TAGS).toContain('heart_and_spine');
     // M5-R10-04 (runbook welfare rule): hips and hind legs — health-tested parents; no numbers.

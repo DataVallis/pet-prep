@@ -370,6 +370,7 @@ const SPECIES = [
       { id: 'cavalier_king_charles_spaniel', availability: 'coming_soon', synonyms: { en: ['Cavalier', 'CKCS', 'Cavalier King Charles'], sl: ['kavalir king charles španjel', 'kavalir king charles spanjel', 'kavalir', 'cavalier'] } },
       { id: 'beagle', availability: 'coming_soon', synonyms: { en: [], sl: ['bigl', 'beagle'] } },
       { id: 'standard_poodle', availability: 'coming_soon', synonyms: { en: ['Standard Poodle', 'Poodle'], sl: ['koder', 'veliki pudelj', 'pudelj', 'standardni pudelj', 'poodle'] } },
+      { id: 'dachshund', availability: 'coming_soon', synonyms: { en: ['Sausage dog', 'Teckel', 'Standard Dachshund'], sl: ['jazbečar', 'jazbecar', 'dachshund', 'teckel'] } },
     ],
   },
   {
@@ -517,6 +518,22 @@ const DOG_FACTS = {
       ['epilepsy', 'health.epilepsy'],
     ],
   },
+  // M5-R10-08 (standard size). Not exported: lifespan.mcmillan_miniature (14.0 y is the
+  // Miniature Dachshund's — would read as the standard size's median), the BVA risk multiple /
+  // onset ages (S128 — research only), health.eyes (PRA / heart are miniature-linked).
+  dachshund: {
+    height: ['height.pdsa'],
+    weight: [['adult_weight.rkc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['back_disc_disease', 'health.back_ivdd'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -584,6 +601,14 @@ const DOG_GAME = {
     step_goal_check: 'proposed_game_parameters.standard_poodle.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.standard_poodle.exercise_minutes_senior',
   },
+  dachshund: {
+    adult_minutes: ['proposed_game_parameters.dachshund.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.dachshund.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.dachshund.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.dachshund.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.dachshund.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.dachshund.exercise_minutes_senior',
+  },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],
     senior_minutes: ['proposed_game_parameters.senior_exercise_minutes', (e) => e.value.medium_mixed_breed],
@@ -628,7 +653,9 @@ function dogBreedFacts(R, id) {
       };
       const origin = Object.entries(FCI_ORIGINS).find(([name]) => s.endsWith(`, ${name}`))?.[1];
       if (!origin) throw new Error(`unknown origin in ${ref} (add it to FCI_ORIGINS)`);
-      return { number: num(/FCI No\. (\d+)/), group: num(/Group (\d+)/), section: num(/Section (\d+)/), origin };
+      // FCI group 4 (Dachshunds, M5-R10-08) has no numbered section → section null.
+      const section = /Section \d/.test(s) ? num(/Section (\d+)/) : null;
+      return { number: num(/FCI No\. (\d+)/), group: num(/Group (\d+)/), section, origin };
     }),
   );
   const health = spec.health.map(([key, rel]) => {
