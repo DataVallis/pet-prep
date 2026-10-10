@@ -1,0 +1,56 @@
+{
+    "schema_version": 1,
+    "generator": "backend: php artisan breeds:portraits (M5-R11)",
+    "label": "AI-generated illustration",
+    "note": "AI-generated breed illustrations for the website animal register. Show them only with the label \"AI-generated illustration\". Prompts come from breed config only (config/breed_appearance.php) — no pet or child data.",
+    "portraits": [
+        {
+            "breed": "border_collie",
+            "species": "dog",
+            "file": "dog/border-collie.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_illustration",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:b6da38556fa7eeccc4b0f177c917035fee59c3b4172614fae34f2d64583d3c7e",
+            "generated_at": "2026-10-10T03:25:45+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "labrador_retriever",
+            "species": "dog",
+            "file": "dog/labrador-retriever.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_illustration",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:36158c9b0e7419b9467685b0570da7587c18e14e50f0500a7598553df6068ef0",
+            "generated_at": "2026-10-10T03:26:02+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "golden_retriever",
+            "species": "dog",
+            "file": "dog/golden-retriever.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_illustration",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:3edc2b41eee5ca1229162d13dbf48285f418c6572dd2d3bfa42e50cde61177c8",
+            "generated_at": "2026-10-10T03:26:20+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "maine_coon",
+            "species": "cat",
+            "file": "cat/maine-coon.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_illustration",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:3e88041085eabbe3d3803f6ebe70420e421abd86e7115305e22aaf0cff5366d2",
+            "generated_at": "2026-10-10T03:26:38+00:00",
+            "cost_usd": 0.15
+        }
+    ]
+}
