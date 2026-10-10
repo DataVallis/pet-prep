@@ -77,6 +77,12 @@ return [
         // scheme S125, BVA S128). A calm chip asking for spine-screened parents and a
         // careful life (no jumping), never a percentage.
         'back_spine' => 'consider',
+        // M5-R10-11 (runbook welfare rule, 2026-10-10): skin allergies / dermatitis are an
+        // RKC Breed Watch point of concern (West Highland White Terrier: RKC Breed Watch S146
+        // "Signs of dermatitis irritation …", PDSA S147 "Westies are known to suffer from skin
+        // allergies", VetCompass S148). A calm chip asking for a vet's advice on skin care,
+        // never a percentage.
+        'sensitive_skin' => 'consider',
     ],
 
     'breeds' => [
@@ -348,6 +354,33 @@ return [
             'consider' => [
                 // S138 "Grooming: Every day"; S140 "requires daily grooming to prevent knots and tangles".
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S138', 'S140'], 'refs' => ['havanese.suitability.rkc_grooming', 'havanese.suitability.pdsa_grooming']],
+            ],
+        ],
+        // M5-R10-11: west_highland_white_terrier.* (S142–S149), runbook rules 2026-10-10
+        // (data.json proposed_game_parameters.west_highland_white_terrier.suitability_tags).
+        // Woodgreen not looked up → RKC (S144, S146), PDSA (S147). Not `small_children`
+        // (PDSA: always supervise), not `other_pets` (high prey drive — no smaller pets), not
+        // `often_alone` (separation anxiety), not `first_time_owner` (classes recommended).
+        // Welfare rule: RKC Breed Watch Category 2 dermatitis (S146) → new `sensitive_skin`.
+        'west_highland_white_terrier' => [
+            'suits' => [
+                // S144 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S144'], 'refs' => ['west_highland_white_terrier.suitability.rkc_size_of_home', 'west_highland_white_terrier.suitability.rkc_size_of_garden']],
+                // S147 "Westies are good-natured and loving family pets who adapt well to both countryside and city living".
+                ['tag' => 'family_pet', 'source_ids' => ['S147'], 'refs' => ['west_highland_white_terrier.suitability.pdsa_family', 'west_highland_white_terrier.behaviour.family']],
+                // S147 "… ideal for families with children of any age." A statement, not a
+                // rating; PDSA adds "always supervise" (caveat kept in data.json).
+                ['tag' => 'children', 'source_ids' => ['S147'], 'refs' => ['west_highland_white_terrier.suitability.pdsa_children', 'west_highland_white_terrier.behaviour.family']],
+            ],
+            'consider' => [
+                // S147 "Westies are known to suffer from skin allergies …"; S146 dermatitis point of concern.
+                ['tag' => 'sensitive_skin', 'source_ids' => ['S147', 'S146'], 'refs' => ['west_highland_white_terrier.health.sensitive_skin']],
+                // S144 "Sheds: Yes"; S147 "they shed throughout the year".
+                ['tag' => 'sheds', 'source_ids' => ['S144', 'S147'], 'refs' => ['west_highland_white_terrier.suitability.rkc_shedding', 'west_highland_white_terrier.suitability.pdsa_shedding']],
+                // S144 "Grooming: More than once a week"; S147 brushing a few times a week + trims.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S144', 'S147'], 'refs' => ['west_highland_white_terrier.suitability.rkc_grooming', 'west_highland_white_terrier.suitability.pdsa_grooming']],
+                // S147 "If they are alone for too long, … could start chewing things around the home."
+                ['tag' => 'chews_when_bored', 'source_ids' => ['S147'], 'refs' => ['west_highland_white_terrier.behaviour.chewing']],
             ],
         ],
     ],

@@ -161,6 +161,14 @@ class FalAiService
                 .'large dark brown almond-shaped eyes, muzzle as long as the skull, tail carried high and curled over the back, '
                 .'sturdy little body low on the legs, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-11: FCI 85 (S142) — white is the only standard colour; harsh double coat
+            // about 5 cm, small erect pointed ears, dark eyes under heavy eyebrows, black nose,
+            // straight tail carried jauntily (never docked); healthy skin (RKC Breed Watch S146).
+            BreedType::WestHighlandWhiteTerrier => 'A confident West Highland White Terrier dog with a pure white coat, '
+                .'harsh straight double coat about 5 cm long with healthy skin, small erect pointed ears, '
+                .'dark eyes set wide apart under heavy eyebrows, black nose, straight tail carried jauntily, '
+                .'small strongly built body with a deep chest, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -354,6 +362,18 @@ class FalAiService
                     0, 2 => 'solid colour',
                     1 => 'small white patches on chest and paws',
                 },
+            ],
+            // M5-R10-11: FCI / RKC (S142, S145) — white only ("Any other colour or combination
+            // of colours unacceptable"); the variants differ in coat texture only.
+            BreedType::WestHighlandWhiteTerrier => [
+                'color_scheme' => 'pure white',
+                'eye_color' => 'dark brown',
+                'fur_texture' => match ($variantIndex) {
+                    0 => 'harsh, straight, about 5 cm, soft close undercoat',
+                    1 => 'harsh, straight, slightly fuller on the head',
+                    2 => 'harsh, straight, neatly tidied',
+                },
+                'markings' => 'none',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

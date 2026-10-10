@@ -284,6 +284,28 @@ it('gives the Havanese apartment / family_pet / children / low_shedding, the gro
         ->and(bsEntry('havanese.suitability.rkc_shedding')['notes'])->toContain('never \'hypoallergenic\'');
 });
 
+it('gives the West Highland White Terrier the new sensitive_skin tag (welfare rule), children, sheds, grooming and chewing (runbook 2026-10-10)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray(['sensitive_skin' => BreedSuitability::CONSIDER]);
+
+    $westie = app(BreedSuitability::class)->for(BreedType::WestHighlandWhiteTerrier);
+    expect($westie['suits'])->toBe(['apartment', 'family_pet', 'children'])
+        // PDSA: always supervise → no small_children; prey drive → no other_pets; separation anxiety → no often_alone.
+        ->and($westie['suits'])->not->toContain('small_children')->not->toContain('other_pets')->not->toContain('often_alone')->not->toContain('first_time_owner')->not->toContain('low_shedding')
+        ->and($westie['consider'])->toBe(['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored'])
+        ->and($westie['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('long_daily_exercise');
+
+    // Only the Westie carries the new chip so far.
+    foreach (BreedType::cases() as $breed) {
+        if ($breed !== BreedType::WestHighlandWhiteTerrier) {
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('sensitive_skin');
+        }
+    }
+
+    expect(bsEntry('west_highland_white_terrier.health.sensitive_skin')['quote'])->toBe('Westies are known to suffer from skin allergies, so speak to your vet before buying a shampoo.')
+        ->and(bsEntry('west_highland_white_terrier.health.sensitive_skin')['notes'])->toContain('Signs of dermatitis irritation')
+        ->and(bsEntry('west_highland_white_terrier.suitability.pdsa_children')['notes'])->toContain('not small_children');
+});
+
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {
     $source = (string) file_get_contents(app_path('Http/Resources/BreedCatalogResource.php'));
     preg_match('/@var array\{suits: list<([^>]+)>, consider: list<([^>]+)>\}/', $source, $m);
