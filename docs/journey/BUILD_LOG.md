@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Nemški ovčar je ena najbolj znanih pasem, a The Royal Kennel Club pri njej opozarja na zgradbo zadnjih nog. PetPrep staršem mirno svetuje, naj izberejo vzreditelja z zdravstveno preverjenimi starši, in pasme po pravilu za dobrobit **ne uporablja v marketingu** (David lahko to odločitev spremeni). Hkrati to pokaže, da se nova pasma doda brez ročnega odločanja — z istimi pravili, viri in testi kot prej.
 
-**Številke:** 8 novih virov (S95–S102), 46 vrstic `breed_stage_params`, 8 oznak (3 + 5), 1 nova oznaka v besednjaku (`hips_hind_legs`), 1 nova migracija, 26 novih testov za pasmo; Pest **1941** testov, Jest **1921** testov, izvoz registra 18 testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje; fotografija in stran v registru živali sta naslednji korak (*načrt*).
+**Številke:** 8 novih virov (S95–S102), 46 vrstic `breed_stage_params`, 8 oznak (3 + 5), 1 nova oznaka v besednjaku (`hips_hind_legs`), 1 nova migracija, 26 novih testov za pasmo; Pest **1941** testov, Jest **1942** (after merging main) testov, izvoz registra 18 testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje; fotografija in stran v registru živali sta naslednji korak (*načrt*).
 
 **Kako povedati:**
 - 👩 Starši: »Nemški ovčar je pameten delovni pes za aktivno družino z veliko prostora — potrebuje vsaj dve uri gibanja na dan. Pri nakupu vprašajte za zdravstveno preverjena starša psa (kolki in zadnje noge). V PetPrep to vidite, preden se odločite.« (*ko bo nova različica v trgovini; brez slik pasme — glej smernice za marketing*)

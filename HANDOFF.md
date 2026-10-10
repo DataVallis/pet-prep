@@ -160,7 +160,7 @@ Older queue (still valid where not done):
 - **Register export:** `german_shepherd` `coming_soon`; `FCI_ORIGINS` + DE (Germany), health keys `hind_leg_conformation`, `hip_elbow_dysplasia`, `degenerative_myelopathy` (no numbers); export test 18.
 - **Docs:** PRODUCT_SPEC, PARENTS, INVESTORS, audiences README (marketing rule), FEATURES, ROADMAP M5-R10-04, DECISIONS (5 rows), ARCHITECTURE, DIAGRAMS, BUILD_LOG.
 - **Not changed:** `app.json`, CLAUDE.md, production data.
-- **Tests:** Pest **1941**, Jest **1921**, export test 18.
+- **Tests:** Pest **1941**, Jest **1942** (after merging main), export test 18.
 - **Next:** portrait + website page (not done yet); open point for David: marketing exclusion of the German Shepherd (rule-based).
 
 ### 2026-10-10 (cloud, mobile-engineer) — M5-R06-09 part A: cats on in the app (branch `feat/M5-R06-09a-cat-ui-ready`)
