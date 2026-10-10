@@ -86,7 +86,9 @@ return [
         // M5-R10-12 (runbook "new tag" rule, 2026-10-10): a clearly shorter life than most
         // breeds (Bernese Mountain Dog: RKC breed page S152 "Lifespan: Under 10 years", PDSA
         // S154 "Up to 10 years", Woodgreen S155 "7-10 years"). A sourced, important trait no
-        // other key covers; a calm chip, never a number or a percentage.
+        // other key covers; a calm chip, never a number or a percentage. Criterion for later
+        // breeds: the RKC breed page says "Lifespan: Under 10 years" (or an A/B source gives an
+        // upper bound of 10 years or less).
         'shorter_lifespan' => 'consider',
     ],
 

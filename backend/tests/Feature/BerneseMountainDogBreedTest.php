@@ -37,7 +37,7 @@ use function Pest\Laravel\postJson;
 | (S150–S157) and the runbook's standing rules (confirmed by David 2026-10-10) in
 | `proposed_game_parameters.bernese_mountain_dog` (exercise 60 min, senior 45 min,
 | puppy 10 min × age capped at 60, stages 9 / 36 / 76 (senior from the Swiss breed
-| median 8.4 y, S156 — provisional), arrival 2 / 9 / 36 / 76, learning × 1.5 (Coren 22,
+| median 8.4 y, S156 — Claude's suggestion, verified=false until David decides), arrival 2 / 9 / 36 / 76, learning × 1.5 (Coren 22,
 | Excellent), paid breed, Border Collie care rates, suitability family_pet / large_home
 | + shorter_lifespan (new key) / sheds / frequent_grooming; tricolour is the only
 | standard colour → a tricolour portrait).
@@ -250,9 +250,17 @@ describe('life-stage data against data.json', function () {
         expect(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'bernese-mountain-dog')
             ->where('key', StageParamKey::TrainingIndividualVariation->value)->all())->toBe([]);
 
-        // The only open proposal is the general teething chewing chance (as for every dog).
-        expect(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'bernese-mountain-dog')->where('verified', false)->pluck('key')->all())
-            ->toBe([StageParamKey::ChewingChancePerDay->value]);
+        // Open proposals: the general teething chewing chance (as for every dog) and the senior
+        // boundary / senior arrival age (76 — Claude's suggestion, no runbook rule produced a value).
+        $open = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'bernese-mountain-dog')->where('verified', false);
+        expect($open->map(fn (array $r) => "{$r['stage']}.{$r['key']}")->values()->all())
+            ->toEqualCanonicalizing(['senior.'.StageParamKey::StartsAtMonths->value, 'senior.'.StageParamKey::ArrivalAgeMonths->value, 'puppy.'.StageParamKey::ChewingChancePerDay->value]);
+        foreach ($open->where('key', '!=', StageParamKey::ChewingChancePerDay->value) as $row) {
+            expect($row['decision'])->toBe(BreedStageParamsSeeder::PROPOSED_R10_BERNESE_SENIOR)
+                ->and($row['ref'])->toBe('proposed_game_parameters.bernese_mountain_dog.senior_boundary_months')
+                ->and($row['value'])->toBe(bmdData('proposed_game_parameters.bernese_mountain_dog.senior_boundary_months.value'))
+                ->and((string) bmdData($row['ref'])['decision'])->toStartWith('predlog Claude')->toContain('čaka Davida')->not->toContain('potrdil David');
+        }
     });
 
     it('shares the general dog rows with the Border Collie (only the breed profile differs)', function () {
@@ -277,8 +285,11 @@ describe('stage rules', function () {
         expect($rules->lifeStage)->toBe($stage)
             ->and($rules->exerciseMinutes)->toBe($minutes)
             ->and($rules->stepGoal)->toBe($steps)
-            ->and($rules->verified())->toBeTrue()
-            ->and($rules->unverifiedKeys())->toBe([]);
+            ->and($rules->verified())->toBe($stage !== LifeStage::Senior);
+        // The senior stage rests on the unconfirmed 76-month boundary (and arrival age).
+        expect($rules->unverifiedKeys())->toEqualCanonicalizing($stage === LifeStage::Senior
+            ? [StageParamKey::StartsAtMonths->value, StageParamKey::ArrivalAgeMonths->value]
+            : []);
     })->with([
         'puppy 2 months (10 min × age)' => [2, LifeStage::Puppy, 20, 2000],
         'puppy 6 months (reaches the cap)' => [6, LifeStage::Puppy, 60, 6000],

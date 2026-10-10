@@ -272,7 +272,9 @@ describe('confirmed numbers (5 min, +1, −2)', function () {
                 ->and($stored->notes)->toBe(BreedStageParamsSeeder::columns($row)['notes'])
                 ->and((float) $stored->value)->toBe((float) $row['value']);
         }
-        expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false) // dogs; cats: CatLifeStageDataTest
+        expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false)
+            // M5-R10-12: the Bernese senior boundary (76) is a separate open proposal — LifeStageDataTest / BerneseMountainDogBreedTest.
+            ->where('breed_slug', '!=', 'bernese-mountain-dog') // dogs; cats: CatLifeStageDataTest
             ->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
 
         $changes = BreedStageParamChange::orderBy('id')->get();
@@ -369,7 +371,9 @@ describe('confirmed effects (potty 0.75, place 0.5)', function () {
             expect($data['proposed_game_parameters'][$entry]['decision'])->toStartWith('potrdil David 2026-10-07');
         }
         // The only open proposal left is M5-R02's teething chewing chance.
-        expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false) // dogs; cats: CatLifeStageDataTest
+        expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false)
+            // M5-R10-12: the Bernese senior boundary (76) is a separate open proposal — LifeStageDataTest / BerneseMountainDogBreedTest.
+            ->where('breed_slug', '!=', 'bernese-mountain-dog') // dogs; cats: CatLifeStageDataTest
             ->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
     });
 
@@ -403,7 +407,9 @@ describe('confirmed effects (potty 0.75, place 0.5)', function () {
                 ->and($stored->notes)->toBe(BreedStageParamsSeeder::columns($row)['notes'])
                 ->and((float) $stored->value)->toBe((float) $row['value']);
         }
-        expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false) // dogs; cats: CatLifeStageDataTest
+        expect(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false)
+            // M5-R10-12: the Bernese senior boundary (76) is a separate open proposal — LifeStageDataTest / BerneseMountainDogBreedTest.
+            ->where('breed_slug', '!=', 'bernese-mountain-dog') // dogs; cats: CatLifeStageDataTest
             ->pluck('key')->unique()->values()->all())->toBe(['chewing_chance_per_day']);
 
         $changes = BreedStageParamChange::orderBy('id')->get();

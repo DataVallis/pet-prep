@@ -10,18 +10,18 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ## 2026-10-10 — Bernski planšarski pes: dvanajsta nova pasma in prva oznaka za krajše življenje (M5-R10-12)
 
-**Kaj se je zgodilo:** PetPrep ima trinajsto plačljivo pasmo psa — **bernskega planšarskega psa** (berner). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **8 novih virov (S150–S157)** — standard in nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA, Woodgreen, švicarska raziskava življenjske dobe (Klopfenstein idr. 2016) in Wikipedija (le kot alternativa). Pravila igre: odrasel **60 minut = 6.000 korakov**, starejši 45 minut = 4.500, mladiček doseže 6.000 pri 6 mesecih; uči se **1,5-krat** hitreje kot mešanček (Coren: rang 22); starejši je od **76 mesecev** — začasno, ker vrednosti McMillan 2024 in VetCompass nista bili dosegljivi.
+**Kaj se je zgodilo:** PetPrep ima trinajsto plačljivo pasmo psa — **bernskega planšarskega psa** (berner). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **8 novih virov (S150–S157)** — standard in nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA, Woodgreen, švicarska raziskava življenjske dobe (Klopfenstein idr. 2016) in Wikipedija (le kot alternativa). Pravila igre: odrasel **60 minut = 6.000 korakov**, starejši 45 minut = 4.500, mladiček doseže 6.000 pri 6 mesecih; uči se **1,5-krat** hitreje kot mešanček (Coren: rang 22); meja starejšega psa **76 mesecev** je le Claudov predlog (vrednosti McMillan 2024 in VetCompass nista bili dosegljivi) in čaka Davidovo potrditev.
 
-**Zakaj je pomembno:** Prvič starš v izbirniku vidi, da pasma običajno živi manj kot deset let — mirno, brez številk, z oznako »krajša življenjska doba«. Za družino, ki psa izbira z otrokom, je to eno najpomembnejših dejstev, ki ga mnogi izvedo prepozno.
+**Zakaj je pomembno:** Prvič starš v izbirniku vidi, da pasma običajno živi manj kot deset let — mirno, brez številk, z oznako »krajša življenjska doba«. Za družino, ki psa izbira z otrokom, je to dejstvo, ki ga je dobro vedeti vnaprej.
 
 **Številke:** 8 novih virov (S150–S157), 5 oznak (2 + 3), 1 nova oznaka (`shorter_lifespan`), 1 nova migracija; Pest **2168** testov, Jest **2006**, izvoz registra **27** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
 
 **Kako povedati:**
 - 👩 Starši: »Berner je velik, prijazen družinski pes, ki potrebuje okoli uro gibanja na dan, veliko prostora in veliko česanja — in običajno živi manj kot deset let.« (*ko bo nova različica v trgovini*)
 - 💼 Investitorji: »Trinajsta plačljiva pasma, deveta dodana samodejno — katalog zdaj pošteno pove tudi, kako dolgo pes živi.«
-- 🤝 Partnerji (vzreditelji, veterinarji): »PetPrep staršem pred izbiro pokaže oznako »krajša življenjska doba« in jih napoti k pregledu kolkov in komolcev pri starših.«
+- 🤝 Partnerji (vzreditelji, veterinarji): »PetPrep staršem pred izbiro pokaže oznako »krajša življenjska doba« ter da pes potrebuje veliko prostora in česanja.«
 - 📣 Omrežja: »Velik, mehak in vdan družini. Je berner pravi za vas?« (*ko bo berner v trgovini*)
-- 🛠 Tehnično: »Pravilo runbooka ni imelo vrstice za pasmo brez McMillan / VetCompass / spodnje meje RKC — uporabili smo najbližjo (recenzirana mediana pasme) in mejo označili za začasno.«
+- 🛠 Tehnično: »Pravilo runbooka ni imelo vrstice za pasmo brez McMillan / VetCompass / spodnje meje RKC — uporabili smo najbližjo (recenzirana mediana pasme), vrednost pa v bazi označili kot nepreverjeno (`verified = false`), dokler je David ne potrdi.«
 
 ---
 

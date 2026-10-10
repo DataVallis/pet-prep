@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "9bd4e31182a229386f9c04a84c9e60e0fe6239d932532e341357322de27475a4"
+      "sha256": "46022e6c6589db4b183e83507a80f35707c7039fe88d9e68e57629522fd1b841"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "cae007bf865131b5a56a1ed5d044131aa39e42ab1eddfa02a21e237cd4b8f2fb"
+      "sha256": "dd4fa36a6798230eef72c418a096308a8d4221144e6911bd0408c889293c5912"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "4a50abc69de2784d8e0f16d30bc199157d88650f52cfd48383fe260e397daa2d"
+      "sha256": "cce95ab74ce4109296c0e7f421f834e67ca4c5740c48e39673539ee4f87aeb9e"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -7063,12 +7063,14 @@
       "synonyms": {
         "en": [
           "Berner",
-          "Berner Sennenhund"
+          "Berner Sennenhund",
+          "Bernese"
         ],
         "sl": [
           "bernski planšarski pes",
           "bernski plansarski pes",
           "bernski planšar",
+          "bernski plansar",
           "berner"
         ]
       },
@@ -7146,19 +7148,6 @@
             "S10"
           ],
           "ref": "bernese_mountain_dog.growth.adult_weight_reached",
-          "confidence": "medium"
-        },
-        {
-          "group": "lifespan",
-          "field": "lifespan",
-          "kind": "quantity",
-          "unit": "years",
-          "qualifier": "median",
-          "value": 8.4,
-          "source_ids": [
-            "S156"
-          ],
-          "ref": "bernese_mountain_dog.lifespan.median_ch",
           "confidence": "medium"
         },
         {
@@ -7253,9 +7242,9 @@
       "compare": {
         "size": 0,
         "weight": 2,
-        "exercise": 6,
-        "grooming_frequency": 8,
-        "shedding": 9,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
         "lifespan": 4
       },
       "health": [
@@ -7281,14 +7270,6 @@
             "S154"
           ],
           "ref": "bernese_mountain_dog.health.gdv",
-          "confidence": "medium"
-        },
-        {
-          "key": "degenerative_myelopathy",
-          "source_ids": [
-            "S154"
-          ],
-          "ref": "bernese_mountain_dog.health.degenerative_myelopathy",
           "confidence": "medium"
         }
       ],
@@ -7510,7 +7491,7 @@
               "S11",
               "S156"
             ],
-            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 76 (0.75 × 8.4 y, peer-reviewed breed median S156 — closest rule row; provisional)"
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 76 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
           },
           {
             "ref": "proposed_game_parameters.bernese_mountain_dog.learning_multiplier",
@@ -8530,7 +8511,7 @@
       "tier": "A",
       "publisher": "FCI",
       "title": "FCI-Standard N° 45 — Bernese Mountain Dog (Berner Sennenhund), EN (PDF)",
-      "url": "https://WWW.FCI.BE/Nomenclature/Standards/045g02-en.pdf"
+      "url": "https://www.fci.be/Nomenclature/Standards/045g02-en.pdf"
     },
     {
       "id": "S151",

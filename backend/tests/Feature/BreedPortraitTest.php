@@ -201,7 +201,7 @@ describe('breeds:portraits command', function () {
             ->expectsOutputToContain('Generated 14, failed 0, estimated spend $2.1000 (AI Lab).')
             ->assertSuccessful();
 
-        foreach (['dog/border-collie.webp', 'dog/labrador-retriever.webp', 'dog/golden-retriever.webp', 'dog/french-bulldog.webp', 'dog/german-shepherd-dog.webp', 'dog/cavalier-king-charles-spaniel.webp', 'dog/beagle.webp', 'dog/poodle-standard.webp', 'dog/dachshund.webp', 'dog/australian-shepherd.webp', 'dog/havanese.webp', 'dog/west-highland-white-terrier.webp', 'cat/maine-coon.webp'] as $file) {
+        foreach (['dog/border-collie.webp', 'dog/labrador-retriever.webp', 'dog/golden-retriever.webp', 'dog/french-bulldog.webp', 'dog/german-shepherd-dog.webp', 'dog/cavalier-king-charles-spaniel.webp', 'dog/beagle.webp', 'dog/poodle-standard.webp', 'dog/dachshund.webp', 'dog/australian-shepherd.webp', 'dog/havanese.webp', 'dog/west-highland-white-terrier.webp', 'dog/bernese-mountain-dog.webp', 'cat/maine-coon.webp'] as $file) {
             $path = "{$this->out}/{$file}";
             expect(is_file($path))->toBeTrue()
                 ->and((new finfo(FILEINFO_MIME_TYPE))->file($path))->toBe('image/webp')

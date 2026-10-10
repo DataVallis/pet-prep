@@ -212,11 +212,20 @@ class BreedStageParamsSeeder extends Seeder
      * proposed_game_parameters.bernese_mountain_dog.*.decision): every value follows a
      * standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on
      * 2026-10-10 — exercise 60 min, senior 45 min, puppy 10 min × age capped at 60, stages
-     * 9 / 36 / 76, arrival 2 / 9 / 36 / 76, learning multiplier 1.5 (Coren 22, Excellent);
+     * young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.5 (Coren 22, Excellent);
      * care rates the Border Collie's. The senior boundary uses the closest rule row (a
-     * peer-reviewed breed median, S156, in place of a VetCompass median) — provisional.
+     * peer-reviewed breed median, S156, in place of a VetCompass median) and is NOT covered
+     * by the confirmation: see PROPOSED_R10_BERNESE_SENIOR.
      */
     public const CONFIRMED_R10_BERNESE_MOUNTAIN_DOG = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-12)';
+
+    /**
+     * M5-R10-12 Bernese Mountain Dog senior boundary / senior arrival (76 months): Claude's
+     * suggestion from the closest rule row (0.75 × Swiss breed median 8.4 y, S156) — no
+     * runbook rule produced a value, so the rows are verified=false until David decides
+     * (data.json proposed_game_parameters.bernese_mountain_dog.senior_boundary_months).
+     */
+    public const PROPOSED_R10_BERNESE_SENIOR = 'predlog Claude 2026-10-10 (najbližja vrstica pravila runbooka, M5-R10-12) — čaka Davida';
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
     public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog];
@@ -277,7 +286,9 @@ class BreedStageParamsSeeder extends Seeder
                 'notes' => 'Game value backed by S36 ("home at ~8 weeks").',
             ]);
             foreach ($p['arrival'] as $stage => $age) {
-                $add($stage, 0, StageParamKey::ArrivalAgeMonths, $age, $p['arrival_meta']);
+                // `arrival_meta_overrides` (optional, M5-R10-12): a stage whose arrival age is not covered
+                // by the shared provenance (an unconfirmed senior boundary) carries its own meta.
+                $add($stage, 0, StageParamKey::ArrivalAgeMonths, $age, $p['arrival_meta_overrides'][$stage] ?? $p['arrival_meta']);
             }
 
             // ── Meals per day (counts sourced) ──────────────────────────────
@@ -458,7 +469,7 @@ class BreedStageParamsSeeder extends Seeder
      * before M5-R10 — their rows must stay byte-identical (DogRegressionSnapshotTest,
      * LifeStageDataTest).
      *
-     * @return array{starts_at: array<string, array{0: int, 1: array<string, mixed>}>, arrival: array<string, int>, arrival_meta: array<string, mixed>, young_per_age_notes: string, adult_minutes: array{0: int, 1: array<string, mixed>}, senior_minutes: array{0: int, 1: array<string, mixed>}, adult_weight: array{0: list<float|int>, 1: array<string, mixed>}, growth_end: array{0: list<int>, 1: array<string, mixed>}, coren_rank: array{0: int|null, 1: array<string, mixed>}, learning_multiplier: array{0: float, 1: array<string, mixed>}, individual_variation: array{0: float, 1: array<string, mixed>}|null, lifespan: array{0: float, 1: array<string, mixed>}}
+     * @return array{starts_at: array<string, array{0: int, 1: array<string, mixed>}>, arrival: array<string, int>, arrival_meta: array<string, mixed>, arrival_meta_overrides?: array<string, array<string, mixed>>, young_per_age_notes: string, adult_minutes: array{0: int, 1: array<string, mixed>}, senior_minutes: array{0: int, 1: array<string, mixed>}, adult_weight: array{0: list<float|int>, 1: array<string, mixed>}, growth_end: array{0: list<int>, 1: array<string, mixed>}, coren_rank: array{0: int|null, 1: array<string, mixed>}, learning_multiplier: array{0: float, 1: array<string, mixed>}, individual_variation: array{0: float, 1: array<string, mixed>}|null, lifespan: array{0: float, 1: array<string, mixed>}}
      */
     public static function dogProfile(BreedType $breed): array
     {
@@ -1479,13 +1490,24 @@ class BreedStageParamsSeeder extends Seeder
             'starts_at' => [
                 'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog finishes growing at 18–24 months (S10). Same 9 as the other dogs.')],
                 'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
-                'senior' => [76, $boundary('Derived game boundary: last 25 % of lifespan (S11) × breed median life expectancy 8.4 y (Klopfenstein et al. 2016, Switzerland, S156) = 6.3 y = 75.6 → 76 months. No McMillan 2024 value and no VetCompass median were reachable; the RKC band "Under 10 years" (S152) has no lower bound. Not chosen: 91 (0.75 × 10.1 y, McMillan 2024 via Wikipedia S157, tier C), 84 (Dogs Trust > 7 y, S14), 63 (Woodgreen lower bound 7 y, S155). Provisional until David checks it.')],
+                'senior' => [76, [
+                    'unit' => 'months', 'source_id' => 'S11,S156', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.bernese_mountain_dog.senior_boundary_months', 'decision' => self::PROPOSED_R10_BERNESE_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × breed median life expectancy 8.4 y (Klopfenstein et al. 2016, Switzerland, S156) = 6.3 y = 75.6 → 76 months. No McMillan 2024 value and no VetCompass median were reachable; the RKC band "Under 10 years" (S152) has no lower bound. Not chosen: 91 (0.75 × 10.1 y, McMillan 2024 via Wikipedia S157, tier C), 84 (Dogs Trust > 7 y, S14), 63 (Woodgreen lower bound 7 y, S155).',
+                ]],
             ],
             'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 76],
             'arrival_meta' => [
                 'unit' => 'months', 'verified' => true,
                 'ref' => 'proposed_game_parameters.bernese_mountain_dog.arrival_age_months', 'decision' => $decided,
                 'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.bernese_mountain_dog.senior_boundary_months', 'decision' => self::PROPOSED_R10_BERNESE_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 76 months (0.75 × 8.4 y, S156).',
+                ],
             ],
             'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
             'adult_minutes' => [60, [

@@ -380,7 +380,7 @@ const SPECIES = [
       { id: 'australian_shepherd', availability: 'coming_soon', synonyms: { en: ['Aussie'], sl: ['avstralski ovčar', 'avstralski ovcar', 'aussie'] } },
       { id: 'havanese', availability: 'coming_soon', synonyms: { en: ['Bichon Havanais'], sl: ['havanski bišon', 'havanski bison', 'havanez', 'bichon havanais'] } },
       { id: 'west_highland_white_terrier', availability: 'coming_soon', synonyms: { en: ['Westie', 'West Highland Terrier'], sl: ['zahodnoškotski beli terier', 'zahodnoskotski beli terier', 'westie', 'west highland terier'] } },
-      { id: 'bernese_mountain_dog', availability: 'coming_soon', synonyms: { en: ['Berner', 'Berner Sennenhund'], sl: ['bernski planšarski pes', 'bernski plansarski pes', 'bernski planšar', 'berner'] } },
+      { id: 'bernese_mountain_dog', availability: 'coming_soon', synonyms: { en: ['Berner', 'Berner Sennenhund', 'Bernese'], sl: ['bernski planšarski pes', 'bernski plansarski pes', 'bernski planšar', 'bernski plansar', 'berner'] } },
     ],
   },
   {
@@ -603,14 +603,16 @@ const DOG_FACTS = {
       ['dry_eye', 'health.eyes'],
     ],
   },
-  // M5-R10-12. Not exported: lifespan.mcmillan_2024 (tier C via Wikipedia — alternative only),
-  // lifespan.senior_from (derived), adult_weight.salt_category (our assignment), height.pdsa,
-  // health.other_conditions (research only), every Klopfenstein percentage (S156 — research
-  // only). The median is the Swiss breed study (S156); the RKC band is "Under 10 years" (less_than).
+  // M5-R10-12. Not exported: lifespan.median_ch (a Swiss population median — next to the UK
+  // medians of the other breeds it would mislead), lifespan.mcmillan_2024 (tier C via Wikipedia —
+  // alternative only), lifespan.senior_from (derived), adult_weight.salt_category (our assignment),
+  // height.pdsa, health.degenerative_myelopathy (the website sentence promises a DNA test; the RKC
+  // page S152 lists no breed-specific package), health.other_conditions (research only), every
+  // Klopfenstein percentage (S156 — research only). Lifespan = the RKC band "Under 10 years" (less_than).
   bernese_mountain_dog: {
     height: ['height.fci'],
     weight: [['adult_weight.pdsa', null]],
-    lifespan: [['lifespan.median_ch', 'median'], ['lifespan.rkc', 'less_than']],
+    lifespan: [['lifespan.rkc', 'less_than']],
     exercise: [['exercise.adult', 'up_to']],
     coat: ['suitability.rkc_coat_length'],
     grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
@@ -620,7 +622,6 @@ const DOG_FACTS = {
       ['cancer_risk', 'health.cancer'],
       ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
       ['bloat_gdv', 'health.gdv'],
-      ['degenerative_myelopathy', 'health.degenerative_myelopathy'],
     ],
   },
 };

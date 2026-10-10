@@ -6549,14 +6549,14 @@
     }
   },
   "bernese_mountain_dog": {
-    "_note": "Added 2026-10-10 (M5-R10-12, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S150–S157, reused S8, S10, S11, S14, S24, S35, S45). Appearance from the FCI standard (S150, valid standard 25.03.2003) and the RKC breed standard (S153); suitability from the RKC breed page (S152), PDSA (S154) and Woodgreen (S155). Neither the FCI nor the RKC standard gives a weight → adult weight from PDSA (S154, tier B). Lifespan: McMillan 2024 has a Bernese value only in its supplementary table (not reachable: the published text S135 names the breed only as a Fig. 5 tip label; the Author Correction S54 does not list it; the Dogs Trust table PDFs returned a fetch error), there is no VetCompass Bernese paper and the RKC band 'Under 10 years' (S152) has no lower bound → the senior boundary uses the peer-reviewed breed median of Klopfenstein et al. 2016 (8.4 y, Switzerland, S156), the closest equivalent of the runbook's 'VetCompass median' row; provisional, needs David's check. Wikipedia (S157, tier C) quotes McMillan 2024 as 10.1 y — recorded as an alternative only. Not a conformation welfare breed (RKC Breed Watch 'Category 1', S152). Coren rank 22 (S35, 'Excellent') → learning 1.5. Only colour: tricolour (FCI / RKC).",
+    "_note": "Added 2026-10-10 (M5-R10-12, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S150–S157, reused S8, S10, S11, S14, S24, S35, S45). Appearance from the FCI standard (S150, valid standard 25.03.2003) and the RKC breed standard (S153); suitability from the RKC breed page (S152), PDSA (S154) and Woodgreen (S155). Neither the FCI nor the RKC standard gives a weight → adult weight from PDSA (S154, tier B). Lifespan: McMillan 2024 has a Bernese value only in its supplementary table (not reachable: the published text S135 names the breed only as a Fig. 5 tip label; the Author Correction S54 does not list it; the Dogs Trust table PDFs returned a fetch error), there is no VetCompass Bernese paper and the RKC band 'Under 10 years' (S152) has no lower bound → the senior boundary uses the peer-reviewed breed median of Klopfenstein et al. 2016 (8.4 y, Switzerland, S156), the closest equivalent of the runbook's 'VetCompass median' row; Claude's suggestion, seeded verified=false — waiting for David (proposed_game_parameters.bernese_mountain_dog.senior_boundary_months). Wikipedia (S157, tier C) quotes McMillan 2024 as 10.1 y — recorded as an alternative only. Not a conformation welfare breed (RKC Breed Watch 'Category 1', S152). Coren rank 22 (S35, 'Excellent') → learning 1.5. Only colour: tricolour (FCI / RKC).",
     "identity": {
       "value": "FCI No. 45, Group 2 Section 3 (Swiss Mountain and Cattle Dogs), Switzerland",
       "unit": "—",
       "source_id": "S151",
-      "quote": "Group: n°2 - Chiens de type Pinscher et Schnauzer - Molossoïdes et chiens de montagne et de bouvier suisses; Section: Chiens de montagne et de bouvier suisses; Country of origin: SUISSE",
+      "quote": "Chiens de montagne et de bouvier suisses",
       "confidence": "high",
-      "notes": "FCI nomenclature (S151, French page as returned): 'BERNER SENNENHUND' (45); 'Non soumise à épreuve de travail selon la Nomenclature des races de la FCI' (no working trial); definitive acceptance 26/07/1954; valid standard 25/03/2003. FCI standard PDF (S150): 'ORIGIN: Switzerland.' and 'FCI-CLASSIFICATION: Group 2 Pinscher and Schnauzer type-Molossoid breedsSwiss Mountain and Cattle-Dogs.' (as returned). Section 3 per the FCI group structure (the section number line was not returned verbatim). Quote assembled from the nomenclature fields."
+      "notes": "FCI nomenclature (S151, French page as returned): the quote is the section name exactly as returned. Fields as returned (assembled here, paraphrase): breed 'BERNER SENNENHUND' (45); group 'n°2 - Chiens de type Pinscher et Schnauzer - Molossoïdes et chiens de montagne et de bouvier suisses'; country of origin 'SUISSE'; 'Non soumise à épreuve de travail selon la Nomenclature des races de la FCI' (no working trial); definitive acceptance 26/07/1954; valid standard 25/03/2003. FCI standard PDF (S150): 'ORIGIN: Switzerland.' Section 3 per the FCI group structure (the section number was not returned verbatim — paraphrase)."
     },
     "size_class": {
       "value": "large",
@@ -10124,7 +10124,7 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 76 = round(0.75 × 8.4 y × 12) = round(75.6) (S11 + Klopfenstein 2016 breed median 8.4 y, S156 — no McMillan 2024 value reachable, no VetCompass Bernese paper, RKC 'Under 10 years' has no lower bound). Alternatives: 91 (McMillan 2024 10.1 y via Wikipedia S157, tier C), 84 (Dogs Trust > 7 y, S14), 63 (Woodgreen lower bound 7 y, S155). Provisional — David to check.",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 76 = round(0.75 × 8.4 y × 12) = round(75.6) (S11 + Klopfenstein 2016 breed median 8.4 y, S156 — no McMillan 2024 value reachable, no VetCompass Bernese paper, RKC 'Under 10 years' has no lower bound). Alternatives: 91 (McMillan 2024 10.1 y via Wikipedia S157, tier C), 84 (Dogs Trust > 7 y, S14), 63 (Woodgreen lower bound 7 y, S155). The senior value is Claude's suggestion — see senior_boundary_months.",
         "derived_from": [
           "S11",
           "S10",
@@ -10135,7 +10135,25 @@
           "senior_dogs_trust_7_y": 84,
           "senior_woodgreen_lower_bound": 63
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 76 (0.75 × 8.4 y, peer-reviewed breed median S156 — closest rule row; provisional)"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 76 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 76,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 8.4 y × 12) = round(75.6) = 76 (AAHA last 25 % of lifespan S11 × Klopfenstein 2016 Swiss breed median 8.4 y, S156). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value for this breed: McMillan 2024 has the Bernese only in its supplementary table, there is no VetCompass Bernese paper and the RKC band 'Under 10 years' (S152) has no lower bound. Closest rule row = a peer-reviewed breed median. Alternatives: 91 (McMillan 10.1 y via Wikipedia S157, tier C), 84 (Dogs Trust > 7 y, S14), 63 (Woodgreen lower bound 7 y, S155). Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit.",
+        "derived_from": [
+          "S11",
+          "S156"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 91,
+          "senior_dogs_trust_7_y": 84,
+          "senior_woodgreen_lower_bound": 63
+        },
+        "decision": "predlog Claude 2026-10-10 (najbližja vrstica pravila runbooka, M5-R10-12) — čaka Davida; ni potrjeno"
       },
       "arrival_age_months": {
         "value": {
@@ -10149,7 +10167,7 @@
         "quote": null,
         "confidence": "low",
         "notes": "First month of each stage.",
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 76)"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 76 follows the unconfirmed senior boundary (senior_boundary_months)"
       },
       "learning_multiplier": {
         "value": 1.5,
