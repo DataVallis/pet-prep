@@ -98,6 +98,14 @@ class FalAiService
                 .'kind dark brown eyes, moderate-sized hanging ears, feathered tail carried level with the back, '
                 .'symmetrical and powerful build, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-03: FCI 101 (S76) / RKC standard (S79) — small, compact, smooth
+            // coat; fawn, brindle or pied only (never merle, S78); bat ears; moderate
+            // face with visibly open nostrils, "no point exaggerated" (David 2026-10-10).
+            BreedType::FrenchBulldog => 'A friendly French Bulldog dog with a fawn coat, '
+                .'short smooth glossy coat, upright bat ears, dark round eyes, '
+                .'moderate muzzle with visibly open nostrils, short low-set tail, '
+                .'small, sturdy and compact build, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -169,6 +177,22 @@ class FalAiService
                     0 => 'no markings',
                     1 => 'a few white hairs on the chest',
                     2 => 'no markings',
+                },
+            ],
+            // M5-R10-03: RKC standard (S79) "The only correct colours are: Brindle;
+            // Fawn; Pied;" — never merle / blue (S78); smooth coat without undercoat (S76).
+            BreedType::FrenchBulldog => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn',
+                    1 => 'brindle',
+                    2 => 'pied (white with fawn patches)',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short smooth glossy coat',
+                'markings' => match ($variantIndex) {
+                    0 => 'no markings',
+                    1 => 'no markings',
+                    2 => 'white body with fawn patches',
                 },
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.

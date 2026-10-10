@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "bc36b2959a89c18e43b448397d6a747bccd9b01476889573590c23c200d1b1c8"
+      "sha256": "3c7c9234547f3c9d51a52af91ca7ed932dba2e174e9c8a7555830b77a27db497"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "20df0352a732b1cd19e4f4b4d4da428db14110ffd074844dc312ee37ea7cb31d"
+      "sha256": "335ef198bca37aded60561433490998259df88078e08e9aaa9e1c28e047e7c04"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,23 +25,23 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "64c37a56e168911794af138e1c890cca25580da7f31ea93c7374721f71ba7d18"
+      "sha256": "fa3badcdeae7af51205c3f79e140635fd4f6212a3eed1b12c8b06b54f5679fa2"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "2e589f1c3fa414da592c7c5096f728abaa64d162b05883c8f97d308620b556b2"
+      "sha256": "2f7560f6264c9fb882491fda18d3ab8262e05177db248a35ef948371cfba6c77"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "e721dfa828458631d6f17a34a3f04dab9d76dbdabc511504f01c16fb60c40ec1"
+      "sha256": "08efb1ebf5b2ce844c0ba68141cd0eaf149a529964cdec879decae2890ae205b"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "6ad2e5bf17d283be3a429f96cd2aa01c0e18dbcf61ac75c5a675ebe91504da7c"
+      "sha256": "a5d614ad917645f23e60f1a30ffa6664afa5788b2391c1f283891b4223931f91"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "d88f4882705943ea96323bf110eeb45207c847ad16b1a9af2fc0f0910b608d11"
+      "sha256": "06a7b8675f4bbfcff0ad2b30b45b47a82146836a98840e464b109e54285c9876"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -51,6 +51,7 @@
   "suitability_vocabulary": {
     "active_family": "suits",
     "apartment": "suits",
+    "brachycephalic_breathing": "consider",
     "chews_when_bored": "consider",
     "children": "suits",
     "family_pet": "suits",
@@ -75,6 +76,7 @@
       "tags": {
         "active_family": "an active family",
         "apartment": "apartment living",
+        "brachycephalic_breathing": "flat face — breathing and heat problems",
         "chews_when_bored": "chews things when bored",
         "children": "families with children",
         "family_pet": "family life",
@@ -99,6 +101,7 @@
       "tags": {
         "active_family": "aktivno družino",
         "apartment": "življenje v stanovanju",
+        "brachycephalic_breathing": "kratek gobček — težave z dihanjem in vročino",
         "chews_when_bored": "ko se dolgočasi, grize stvari",
         "children": "družino z otroki",
         "family_pet": "družinsko življenje",
@@ -136,7 +139,7 @@
         }
       },
       "status": "available",
-      "breed_count": 3,
+      "breed_count": 4,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -2429,6 +2432,594 @@
       ]
     },
     {
+      "id": "french_bulldog",
+      "species": "dog",
+      "order": 3,
+      "availability": "coming_soon",
+      "name": {
+        "en": "French Bulldog",
+        "sl": "Francoski buldog"
+      },
+      "slug": {
+        "en": "french-bulldog",
+        "sl": "francoski-buldog"
+      },
+      "synonyms": {
+        "en": [
+          "Frenchie"
+        ],
+        "sl": [
+          "frenchie",
+          "francoski buldog",
+          "french bulldog"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S78"
+          ],
+          "ref": "french_bulldog.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              27,
+              35
+            ],
+            "female": [
+              24,
+              32
+            ]
+          },
+          "source_ids": [
+            "S76"
+          ],
+          "ref": "french_bulldog.height.fci_range",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              9,
+              14
+            ],
+            "female": [
+              8,
+              13
+            ]
+          },
+          "source_ids": [
+            "S76"
+          ],
+          "ref": "french_bulldog.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "qualifier": "ideal",
+          "value": {
+            "male": [
+              12.5,
+              12.5
+            ],
+            "female": [
+              11,
+              11
+            ]
+          },
+          "source_ids": [
+            "S79"
+          ],
+          "ref": "french_bulldog.adult_weight.rkc_ideal",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            11,
+            12.5
+          ],
+          "source_ids": [
+            "S81"
+          ],
+          "ref": "french_bulldog.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "qualifier": "mean",
+          "value": {
+            "male": [
+              13.7,
+              13.7
+            ],
+            "female": [
+              11.5,
+              11.5
+            ]
+          },
+          "source_ids": [
+            "S83"
+          ],
+          "ref": "french_bulldog.adult_weight.uk_measured_mean",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "french_bulldog.growth.adult_weight_reached",
+          "confidence": "low"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 9.8,
+          "source_ids": [
+            "S54"
+          ],
+          "ref": "french_bulldog.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S78"
+          ],
+          "ref": "french_bulldog.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S78"
+          ],
+          "ref": "french_bulldog.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S78"
+          ],
+          "ref": "french_bulldog.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S78"
+          ],
+          "ref": "french_bulldog.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_level",
+          "kind": "category",
+          "value": "low",
+          "source_ids": [
+            "S82"
+          ],
+          "ref": "french_bulldog.suitability.woodgreen_grooming",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S78"
+          ],
+          "ref": "french_bulldog.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "minimal",
+          "source_ids": [
+            "S82"
+          ],
+          "ref": "french_bulldog.suitability.woodgreen_shedding",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 58,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "french_bulldog.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 101,
+            "group": 9,
+            "section": 11,
+            "origin": "FR"
+          },
+          "source_ids": [
+            "S77"
+          ],
+          "ref": "french_bulldog.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 9,
+        "grooming_frequency": 11,
+        "shedding": 13,
+        "lifespan": 7
+      },
+      "health": [
+        {
+          "key": "flat_face_breathing",
+          "source_ids": [
+            "S78"
+          ],
+          "ref": "french_bulldog.health.brachycephaly_boas",
+          "confidence": "high"
+        },
+        {
+          "key": "heat_stroke_risk",
+          "source_ids": [
+            "S86"
+          ],
+          "ref": "french_bulldog.health.heat_stroke",
+          "confidence": "high"
+        },
+        {
+          "key": "skin_fold_ear_problems",
+          "source_ids": [
+            "S83"
+          ],
+          "ref": "french_bulldog.health.other_conditions",
+          "confidence": "medium"
+        },
+        {
+          "key": "merle_colour_risk",
+          "source_ids": [
+            "S78"
+          ],
+          "ref": "french_bulldog.health.merle_colour",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S78"
+            ],
+            "refs": [
+              "french_bulldog.suitability.rkc_size_of_home",
+              "french_bulldog.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S81"
+            ],
+            "refs": [
+              "french_bulldog.suitability.pdsa_family",
+              "french_bulldog.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S81",
+              "S82"
+            ],
+            "refs": [
+              "french_bulldog.suitability.pdsa_children",
+              "french_bulldog.behaviour.family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S78",
+              "S81",
+              "S82",
+              "S84",
+              "S86"
+            ],
+            "refs": [
+              "french_bulldog.health.brachycephaly_boas",
+              "french_bulldog.health.boas_odds_vs_other_dogs",
+              "french_bulldog.health.heat_stroke",
+              "french_bulldog.exercise.heat_and_walk_timing"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 88
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 88
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.french_bulldog.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S78"
+            ],
+            "decision": "potrdil David 2026-10-10: 60 min/day (RKC S78 'Up to 1 hour per day' = PDSA S81; Woodgreen upper bound 90 min recorded as alternative)"
+          },
+          {
+            "ref": "proposed_game_parameters.french_bulldog.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10: 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.french_bulldog.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S15",
+              "S54"
+            ],
+            "decision": "potrdil David 2026-10-10: young 9, adult 36, senior 88 (0.75 × 9.8 y, McMillan 2024 S54 / Dogs Trust summary S15)"
+          },
+          {
+            "ref": "proposed_game_parameters.french_bulldog.learning_multiplier",
+            "basis_source_ids": [
+              "S35",
+              "S81",
+              "S82"
+            ],
+            "decision": "potrdil David 2026-10-10: 0.7 (Coren rank 58, S35 — 'Fair' tier, one tier below Average)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S15",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S54",
+          "S78",
+          "S81",
+          "S82"
+        ]
+      },
+      "portrait": null,
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S15",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S54",
+        "S76",
+        "S77",
+        "S78",
+        "S79",
+        "S81",
+        "S82",
+        "S83",
+        "S84",
+        "S86"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -3041,6 +3632,69 @@
       "publisher": "Golden Retriever Club of America (AKC parent club)",
       "title": "Golden Retriever Lifetime Study — info for puppy buyers",
       "url": "https://grca.org/about-the-breed/health-research/golden-retriever-lifetime-study-info-for-puppy-buyers"
+    },
+    {
+      "id": "S76",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 101 — French Bulldog (EN; official valid standard published 10.08.2023)",
+      "url": "https://www.fci.be/Nomenclature/Standards/101g09-en.pdf"
+    },
+    {
+      "id": "S77",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — French Bulldog (101)",
+      "url": "https://www.fci.be/EN/nomenclature/FRENCH-BULLDOG-101.html"
+    },
+    {
+      "id": "S78",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: French Bulldog",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/french-bulldog"
+    },
+    {
+      "id": "S79",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed standard: French Bulldog (last updated 1 August 2025)",
+      "url": "https://www.royalkennelclub.com/breed-standards/utility/french-bulldog"
+    },
+    {
+      "id": "S81",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "French Bulldog breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/french-bulldog"
+    },
+    {
+      "id": "S82",
+      "tier": "B",
+      "publisher": "Woodgreen Pets Charity (UK) — Ask Woodgreen pet explorer",
+      "title": "French Bulldog",
+      "url": "https://ask.woodgreen.org.uk/pet-explorer/results/french-bulldog"
+    },
+    {
+      "id": "S83",
+      "tier": "A",
+      "publisher": "Canine Genetics and Epidemiology 5:3 (2018) (RVC repository copy)",
+      "title": "O'Neill D. G., Baral L., Church D. B., Brodbelt D. C., Packer R. M. A. Demography and disorders of the French Bulldog population under primary veterinary care in the UK in 2013. doi:10.1186/s40575-018-0057-9",
+      "url": "https://rvc-repository.worktribe.com/OutputFile/1387400"
+    },
+    {
+      "id": "S84",
+      "tier": "A",
+      "publisher": "Canine Medicine and Genetics 8:13 (2021) (publisher page, link.springer.com)",
+      "title": "O'Neill D. G., Packer R. M. A., Francis P., Church D. B., Brodbelt D. C., Pegram C. French Bulldogs differ to other dogs in the UK in propensity for many common disorders: a VetCompass study. doi:10.1186/s40575-021-00112-3",
+      "url": "https://link.springer.com/article/10.1186/s40575-021-00112-3"
+    },
+    {
+      "id": "S86",
+      "tier": "A",
+      "publisher": "Scientific Reports 10:9128 (2020)",
+      "title": "Hall E. J., Carter A. J., O'Neill D. G. Incidence and risk factors for heat-related illness (heatstroke) in UK dogs under primary veterinary care in 2016. doi:10.1038/s41598-020-66015-8",
+      "url": "https://www.nature.com/articles/s41598-020-66015-8"
     },
     {
       "id": "C1",

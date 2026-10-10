@@ -24,7 +24,7 @@ class BreedCatalogResource extends JsonResource
             /**
              * Enum value sent as `breed` to POST /api/parent/generate-pin.
              *
-             * @var 'mutt'|'border_collie'|'labrador_retriever'|'golden_retriever'|'domestic_cat'|'maine_coon'
+             * @var 'mutt'|'border_collie'|'labrador_retriever'|'golden_retriever'|'french_bulldog'|'domestic_cat'|'maine_coon'
              */
             'breed' => $entry['breed'],
             /**
@@ -78,7 +78,7 @@ class BreedCatalogResource extends JsonResource
              * The app translates each key (`breedSuitability.<tag>`). Empty
              * lists = no sourced tags yet (mutt, cats). Never "hypoallergenic".
              *
-             * @var array{suits: list<'active_family'|'family_pet'|'children'|'small_children'|'first_time_owner'|'apartment'|'large_home'|'other_pets'|'older_owners'|'often_alone'|'low_shedding'>, consider: list<'long_daily_exercise'|'needs_mental_stimulation'|'may_herd_children'|'chews_when_bored'|'sheds'|'food_motivated_weight'|'frequent_grooming'>}
+             * @var array{suits: list<'active_family'|'family_pet'|'children'|'small_children'|'first_time_owner'|'apartment'|'large_home'|'other_pets'|'older_owners'|'often_alone'|'low_shedding'>, consider: list<'long_daily_exercise'|'needs_mental_stimulation'|'may_herd_children'|'chews_when_bored'|'sheds'|'food_motivated_weight'|'frequent_grooming'|'brachycephalic_breathing'>}
              */
             'suitability' => $entry['suitability'],
         ];

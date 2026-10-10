@@ -113,6 +113,30 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.golden_retriever',
                 'search_keywords' => ['golden', 'golden retriever', 'zlati prinašalec', 'zlati prinasalec', 'retriever'],
             ],
+            // M5-R10-03 French Bulldog (docs/research/dog-data/data.json
+            // french_bulldog, sources S76–S94; potrdil David 2026-10-10: paid like
+            // the Border Collie). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.french_bulldog.step_goal_adult: 60 min ×
+            // 100 steps/min — RKC S78 "Up to 1 hour per day", PDSA S81 "up to an
+            // hour") — only the legacy-profile fallback; profiled pets take the goal
+            // from breed_stage_params. Hunger / thirst decay, poops and water are the
+            // Border Collie's (David 2026-10-10, proposed_game_parameters
+            // .french_bulldog.care_rates): no per-breed number in the research.
+            [
+                'breed_slug' => BreedType::FrenchBulldog->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 40,
+                'label_key' => 'breeds.french_bulldog',
+                'search_keywords' => ['french bulldog', 'frenchie', 'french', 'bulldog', 'francoski buldog', 'buldog'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

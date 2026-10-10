@@ -50,6 +50,14 @@
 | level tail follow FCI 111 (S63) / RKC (S66) / AKC (S67); shade names and
 | weights are unsourced → `verified => false`.
 |
+| French Bulldog (M5-R10-03, docs/research/dog-data french_bulldog.appearance):
+| size, compact build, short smooth coat, bat ears, eyes, short low-set tail and
+| the standard colours (brindle, fawn, pied — never merle / blue / black-and-tan,
+| S78) follow FCI 101 (S76) / RKC standard (S79) / AKC (S80). David 2026-10-10:
+| a moderate (not extreme) face with visibly open nostrils — the `muzzle` trait
+| (RKC S79 "No point exaggerated" / "visibly open nostrils"); fawn weighted
+| highest (portrait default). Colour weights are unsourced → `verified => false`.
+|
 */
 
 return [
@@ -243,6 +251,49 @@ return [
             'tail' => ['feathered, level-carried, reaching to the hocks, without a curl'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-03 (docs/research/dog-data/data.json french_bulldog.appearance;
+    // David 2026-10-10: moderate face, open nostrils, standard colours, fawn portrait).
+    'french_bulldog' => [
+        'display_name' => 'French Bulldog',
+        // Colour frequencies are in no source (french_bulldog.appearance.colour_weights UNSOURCED) → all weights are a draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 101 (S76, https://www.fci.be/Nomenclature/Standards/101g09-en.pdf), Royal Kennel Club standard (S79), AKC standard 2018 (S80), RKC breed page (S78) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S78 "Size: Small"; PDSA S81 the same',
+            'build' => 'S76 "A powerful dog for its small size, short, stocky, compact in all its proportions, smooth-coated"; S79 "Sturdy, compact , solid, small dog with good bone"',
+            'coat_length' => 'S76 "Smooth coat, close, glossy and soft, without undercoat."; S79 "Texture fine, smooth, lustrous, short and close."',
+            'coat_color' => 'S79 "The only correct colours are: Brindle; Fawn; Pied;" "Any other colour or combination of colours unacceptable." (weights unsourced; merle / blue never, S78)',
+            'coat_pattern' => 'S76 "fawn, brindled or not, with or without white spotting."; S78 standard colours incl. "Fawn & White", "Brindle & White", "Fawn Pied", "Pied", "Fawn With Black Mask"',
+            'ear_carriage' => 'S79 "Bat ears, of medium size, wide at base, rounded at top; set high, carried upright and parallel" (quote marks around "Bat ears" dropped; one ear type)',
+            'eye_color' => 'S79 "Preferably dark and matching. Moderate size, round, neither sunken nor prominent"',
+            'tail' => 'S79 "Undocked, set low, thick at root, tapering quickly towards tip, preferably straight"',
+            'muzzle' => 'S79 "Nose black and wide, relatively short, with visibly open nostrils"; "No point exaggerated, balance essential." (David 2026-10-10: moderate, not extreme)',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'sturdy, compact', 'weight' => 3], 'muscular, stocky'],
+            'coat_length' => ['short, smooth, glossy'],
+            // Standard colours only (S79); fawn highest → the register portrait is fawn.
+            'coat_color' => [
+                ['value' => 'fawn', 'weight' => 4],
+                ['value' => 'brindle', 'weight' => 3],
+                'light fawn',
+            ],
+            'coat_pattern' => [
+                ['value' => 'solid', 'weight' => 4],
+                ['value' => 'with a dark mask', 'only_with' => ['coat_color' => ['fawn', 'light fawn']]],
+                'with white markings on the chest',
+                'pied — mostly white with large patches of that colour',
+            ],
+            'ear_carriage' => ['upright, rounded "bat"'],
+            'eye_color' => ['dark brown'],
+            'tail' => ['naturally short, low-set, straight'],
+            // David 2026-10-10: never an extreme face — moderate muzzle, open nostrils.
+            'muzzle' => ['short but not exaggerated, with a black nose and visibly open nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

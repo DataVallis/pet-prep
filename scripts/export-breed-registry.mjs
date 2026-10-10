@@ -271,6 +271,12 @@ function parseRange(text, ref) {
   if (!m) throw new Error(`cannot read a range from ${ref}: ${text}`);
   return [Number(m[1]), Number(m[2])];
 }
+/** "≤ 60" → 60 (an "up to" value). */
+function parseUpTo(text, ref) {
+  const m = /^≤\s*(\d+(?:\.\d+)?)$/.exec(String(text).trim());
+  if (!m) throw new Error(`expected "≤ N" in ${ref}: ${text}`);
+  return Number(m[1]);
+}
 /** "> 120" → 120. */
 function parseMoreThan(text, ref) {
   const m = /^>\s*(\d+(?:\.\d+)?)$/.exec(String(text).trim());
@@ -356,6 +362,7 @@ const SPECIES = [
       { id: 'border_collie', availability: 'in_app', synonyms: { en: [], sl: [] } },
       { id: 'labrador_retriever', availability: 'coming_soon', synonyms: { en: ['Labrador', 'Lab'], sl: ['labradorski prinašalec', 'labrador'] } },
       { id: 'golden_retriever', availability: 'coming_soon', synonyms: { en: ['Golden'], sl: ['golden', 'golden retriver'] } },
+      { id: 'french_bulldog', availability: 'coming_soon', synonyms: { en: ['Frenchie'], sl: ['frenchie', 'francoski buldog', 'french bulldog'] } },
     ],
   },
   {
@@ -372,6 +379,9 @@ const SPECIES = [
 ];
 
 // ─── dogs ────────────────────────────────────────────────────────────────────
+
+/** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -412,6 +422,24 @@ const DOG_FACTS = {
       ['weight_gain', 'behaviour.obesity_tendency'],
     ],
   },
+  // M5-R10-03. Not exported: lifespan.vetcompass_2013_deaths (median age at death of a very young
+  // population — not a life expectancy), any BOAS / heatstroke percentage or odds ratio (research only).
+  french_bulldog: {
+    height: ['height.fci_range'],
+    weight: [['adult_weight.fci', null], ['adult_weight.rkc_ideal', 'ideal'], ['adult_weight.pdsa', null], ['adult_weight.uk_measured_mean', 'mean']],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency'], ['suitability.woodgreen_grooming', 'grooming_level']],
+    shedding: ['suitability.rkc_shedding', 'suitability.woodgreen_shedding'],
+    food_motivation: null,
+    health: [
+      ['flat_face_breathing', 'health.brachycephaly_boas'],
+      ['heat_stroke_risk', 'health.heat_stroke'],
+      ['skin_fold_ear_problems', 'health.other_conditions'],
+      ['merle_colour_risk', 'health.merle_colour'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -439,6 +467,14 @@ const DOG_GAME = {
     step_goal_check: 'proposed_game_parameters.golden_retriever.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.golden_retriever.exercise_minutes_senior',
   },
+  french_bulldog: {
+    adult_minutes: ['proposed_game_parameters.french_bulldog.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.french_bulldog.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.french_bulldog.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.french_bulldog.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.french_bulldog.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.french_bulldog.exercise_minutes_senior',
+  },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],
     senior_minutes: ['proposed_game_parameters.senior_exercise_minutes', (e) => e.value.medium_mixed_breed],
@@ -464,7 +500,7 @@ function dogBreedFacts(R, id) {
     facts.push(R.fact(p(rel), { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : Number(v))));
   }
   for (const [rel, q] of spec.exercise) {
-    facts.push(R.fact(p(rel), { group: 'exercise', field: 'exercise', kind: 'quantity', unit: 'min_per_day', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : Number(v))));
+    facts.push(R.fact(p(rel), { group: 'exercise', field: 'exercise', kind: 'quantity', unit: 'min_per_day', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : q === 'up_to' ? parseUpTo(v, ref) : Number(v))));
   }
   for (const rel of spec.coat) {
     facts.push(R.fact(p(rel), { group: 'grooming', field: 'coat', kind: 'category' }, (v) => (Array.isArray(v) ? v : [v]).map(code)));
@@ -481,8 +517,9 @@ function dogBreedFacts(R, id) {
         if (!m) throw new Error(`cannot read ${re} from ${ref}`);
         return Number(m[1]);
       };
-      if (!/Great Britain/.test(s)) throw new Error(`unknown origin in ${ref}`);
-      return { number: num(/FCI No\. (\d+)/), group: num(/Group (\d+)/), section: num(/Section (\d+)/), origin: 'GB' };
+      const origin = Object.entries(FCI_ORIGINS).find(([name]) => s.endsWith(`, ${name}`))?.[1];
+      if (!origin) throw new Error(`unknown origin in ${ref} (add it to FCI_ORIGINS)`);
+      return { number: num(/FCI No\. (\d+)/), group: num(/Group (\d+)/), section: num(/Section (\d+)/), origin };
     }),
   );
   const health = spec.health.map(([key, rel]) => {
@@ -600,7 +637,9 @@ function dogFacets(facts) {
   const size = first('size');
   if (size) facets.size = size.value;
   const ex = first('exercise');
-  if (ex) facets.exercise = ex.value >= 120 ? 'over_2h' : ex.value >= 60 ? 'h1_2' : 'under_1h';
+  // "up to N" (≤ N) falls into the bucket below N: up to 1 hour → under_1h ("Up to 1 hour").
+  const atOrAbove = (n) => (ex.qualifier === 'up_to' ? ex.value > n : ex.value >= n);
+  if (ex) facets.exercise = atOrAbove(120) ? 'over_2h' : atOrAbove(60) ? 'h1_2' : 'under_1h';
   const gr = first('grooming_frequency');
   if (gr) facets.grooming = { once_a_week: 'weekly', more_than_once_a_week: 'several_weekly', daily: 'daily' }[gr.value] ?? 'other';
   return facets;
