@@ -77,6 +77,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.border_collie.availability, 'in_app');
   assert.equal(byId.labrador_retriever.slug.sl, 'labradorec');
   assert.equal(byId.golden_retriever.slug.sl, 'zlati-prinasalec');
+  assert.deepEqual(byId.french_bulldog.slug, { en: 'french-bulldog', sl: 'francoski-buldog' });
+  assert.equal(byId.french_bulldog.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
@@ -125,6 +127,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     border_collie: { adult: 12000, senior: 9000, seniorFrom: 118, learning: 2 },
     labrador_retriever: { adult: 9000, senior: 6800, seniorFrom: 118, learning: 1.8 },
     golden_retriever: { adult: 12000, senior: 9000, seniorFrom: 119, learning: 1.9 },
+    french_bulldog: { adult: 6000, senior: 4500, seniorFrom: 88, learning: 0.7 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -144,6 +147,23 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
   assert.equal(mc.stages[0].starts.arrival_months, 3);
   assert.equal(mc.rules.find((r) => r.key === 'grooming_rule').params.per_week, 3);
   assert.deepEqual(registry.species[0].free_plan.adult_activity, { kind: 'steps', value: 6000 });
+});
+
+test('French Bulldog (M5-R10-03): "up to 1 hour", origin France, puppy cap at 6 months, no statistics', () => {
+  const fb = registry.breeds.find((b) => b.id === 'french_bulldog');
+  const ex = fb.facts.find((f) => f.field === 'exercise');
+  assert.deepEqual([ex.value, ex.qualifier, ex.source_ids], [60, 'up_to', ['S78']]);
+  assert.equal(fb.facets.exercise, 'under_1h'); // "up to 1 hour" is not "1–2 hours"
+  assert.equal(fb.facets.size, 'small');
+  assert.deepEqual(fb.facts.find((f) => f.field === 'fci_standard').value, { number: 101, group: 9, section: 11, origin: 'FR' });
+  assert.deepEqual(fb.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(fb.game.stages[1].activity, { kind: 'steps', value: 6000 });
+  assert.deepEqual(fb.suitability.consider.map((t) => t.tag), ['brachycephalic_breathing']);
+  assert.deepEqual(fb.health.map((h) => h.key), ['flat_face_breathing', 'heat_stroke_risk', 'skin_fold_ear_problems', 'merle_colour_risk']);
+  // The median age at death of a very young 2013 population is not a lifespan; no odds ratio or % anywhere.
+  const json = JSON.stringify(fb);
+  assert.doesNotMatch(json, /vetcompass_2013_deaths|rfg_grades|boas_diagnosed_prevalence|30\.89|42\.14/);
+  assert.deepEqual(fb.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['median', 9.8], ['more_than', 10]]);
 });
 
 test('every suitability tag has the app wording in EN and SL', () => {
