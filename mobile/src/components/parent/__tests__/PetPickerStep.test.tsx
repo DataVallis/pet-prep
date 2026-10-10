@@ -232,7 +232,7 @@ describe('PetPickerStep', () => {
     expect(screen.getByTestId('breed-suitability-golden_retriever-consider')).toHaveTextContent(
       'Upoštevajte:vsak dan potrebuje veliko gibanjaizpada mu dlakarad je — pazite na težopotrebuje česanje večkrat na teden',
     );
-    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50).
+    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50, Cavalier 60).
     expect(screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID)).toEqual([
       'breed-option-mutt',
       'breed-option-border_collie',
@@ -240,6 +240,7 @@ describe('PetPickerStep', () => {
       'breed-option-golden_retriever',
       'breed-option-french_bulldog',
       'breed-option-german_shepherd',
+      'breed-option-cavalier_king_charles_spaniel',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -330,6 +331,43 @@ describe('PetPickerStep', () => {
       renderPicker(FALLBACK_CATALOGUE);
       const consider = screen.getByTestId('breed-suitability-german_shepherd-consider');
       expect(consider).toHaveTextContent(/hips and hind legs — check joint health/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-05: the Cavalier (fallback) shows the heart / spine chip, is found as "kavalir" and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const cavalier = screen.getByTestId('breed-option-cavalier_king_charles_spaniel');
+    expect(cavalier).toHaveTextContent(/Kavalir King Charles španjel/);
+    expect(cavalier).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-cavalier_king_charles_spaniel-consider')).toHaveTextContent(
+      /srce in hrbtenjača — preverite zdravstvene teste/,
+    );
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'kavalir');
+    expect(screen.queryByTestId('breed-option-german_shepherd')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-cavalier_king_charles_spaniel'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'cavalier_king_charles_spaniel', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'cavalier_king_charles_spaniel' }),
+    );
+  });
+
+  it('M5-R10-05: the heart / spine chip in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-cavalier_king_charles_spaniel-consider');
+      expect(consider).toHaveTextContent(/heart and spine — check health tests/);
       expect(consider).not.toHaveTextContent(/\d|%/);
     } finally {
       await i18n.changeLanguage('sl');

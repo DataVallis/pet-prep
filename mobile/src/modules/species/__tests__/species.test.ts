@@ -13,7 +13,7 @@ import {
 
 describe('readBreed / readSpecies', () => {
   it('keeps every known breed, dogs and cats', () => {
-    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'domestic_cat', 'maine_coon'] as const) {
+    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'domestic_cat', 'maine_coon'] as const) {
       expect(readBreed(breed)).toBe(breed);
     }
   });
@@ -25,6 +25,18 @@ describe('readBreed / readSpecies', () => {
     await i18n.changeLanguage('en');
     try {
       expect(breedName('labrador_retriever')).toBe('Labrador Retriever');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-05: the Cavalier King Charles Spaniel is a paid dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('cavalier_king_charles_spaniel'))).toBe('dog');
+    expect(isDefaultFreeBreed('cavalier_king_charles_spaniel')).toBe(false);
+    expect(breedName('cavalier_king_charles_spaniel')).toBe('Kavalir King Charles španjel');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('cavalier_king_charles_spaniel')).toBe('Cavalier King Charles Spaniel');
     } finally {
       await i18n.changeLanguage('sl');
     }
