@@ -8,7 +8,6 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
-<<<<<<< HEAD
 ## 2026-10-10 — Kavalir King Charles španjel: peta nova pasma, drugič po stalnih pravilih (M5-R10-05)
 
 **Kaj se je zgodilo:** PetPrep ima šesto plačljivo pasmo psa — **kavalirja King Charles španjela** (Cavalier King Charles Spaniel). Dodana je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **8 novih virov (S103–S110)** — standard FCI 136 in nomenklatura FCI, stran pasme, standard in Breed Watch The Royal Kennel Club, PDSA, raziskava VetCompass (Summers 2015) in Univerza v Bristolu. Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«, PDSA »vsaj 1 uro«), starejši 4.500, mladiček od 2.000 do 6.000 (pri 6 mesecih); starejši je od 90. meseca (mediana VetCompass 9,99 leta); uči se enako hitro kot mešanček.
@@ -24,7 +23,8 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 📣 Omrežja: *ne* — kavalir se v objavah ne pojavlja (pravilo za dobrobit, 10. 10. 2026; David lahko spremeni).
 - 🛠 Tehnično: »Odločitvena konstanta seederja ima pripono pasme (`… (pravilo runbooka, M5-R10-05)`), da se odločitve dveh samodejnih zagonov ne pomešajo; migracija samo razširi CHECK in je povratna.«
 
-=======
+---
+
 ## 2026-10-10 — Stikalo za mačke v administraciji: najprej ena družina, potem vsi (M5-R06-09b)
 
 **Kaj se je zgodilo:** Vklop mačk ni več vrstica v nastavitvah strežnika, ampak stran »Funkcije« v administraciji (samo superadmin). Trije načini: *Izklopljeno* (privzeto), *Samo testne družine* (izbereš starševske račune po e-pošti — vsa njihova družina dobi mačke) in *Vsi*. Sprememba velja v največ 1 minuti, brez SSH in ponovnega zagona; vsaka se zapiše (kdo, kdaj, prej → potem). Obstoječe muce delujejo v vsakem načinu — izklop ustavi samo nove. 16 novih avtomatskih testov (vsi trije načini × katalog, koda in prijava otroka, obstoječa muca po izklopu, predpomnilnik, dostop samo za superadmina, stari preglasitveni vklop).
@@ -32,7 +32,6 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 **Zakaj je pomembno:** Novo žival lahko zdaj preizkusimo na pravi produkciji samo v svoji družini, preden jo vidijo testerji — in jo z enim klikom spet skrijemo, ne da bi kateremu otroku vzeli že posvojeno muco. Isti vzorec bo služil za vsako naslednjo funkcijo, ki jo uvajamo postopoma.
 
 **Kako povedati:** 💼 »Funkcije uvajamo postopoma: najprej testna družina na produkciji, nato vsi — z revizijsko sledjo vsakega vklopa.« · 🛠 »Feature flag v bazi (JSON, predpomnjen 60 s, izbris ob shranjevanju), odločitev po družini zahtevka; obstoječe entitete niso nikoli zaklenjene; env ostane kot preglasitev za združljivost.« · 👩 *načrt:* ko bo preizkus končan, bodo mačke na voljo vsem družinam.
->>>>>>> origin/main
 ---
 
 ## 2026-10-10 — Nemški ovčar: četrta nova pasma, prvič po stalnih pravilih (M5-R10-04)
