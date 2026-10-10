@@ -169,7 +169,7 @@ Older queue (still valid where not done):
 - **Backend:** `BreedType::WestHighlandWhiteTerrier` (slug `west-highland-white-terrier`), migration `2026_11_12_120000`, `BreedConfigsSeeder` row (sort 120), `westHighlandWhiteTerrierProfile()`, `breed_appearance.php` (white only, `coat_condition`), `FalAiService` v1, `breed_suitability.php` (new key `sensitive_skin`), `BreedCatalogResource` union, `PetFactory`, `WestHighlandWhiteTerrierBreedTest` (helpers `whw*`) + shared counts.
 - **App:** `schema.ts` regenerated (additive: `west_highland_white_terrier`, `sensitive_skin`), `BREED_SPECIES`, names (EN West Highland White Terrier, SL Zahodnoškotski beli terier), hints, `sensitive_skin` labels, `CONSIDER_TAGS`, `FALLBACK_CATALOGUE`, tests.
 - **Register export:** `west_highland_white_terrier` `coming_soon`; health keys `skin_allergies`, `westie_lung`, `jaw_bone_disorder`, `kneecap_luxation` (exists), `dry_eye` (four new website sentences needed).
-- **Tests:** Pest **PEST_N**, Jest **JEST_N**, export test 26. Local runs need `APP_KEY` set (no `.env` in a fresh cloud clone — 49 Filament tests fail with MissingAppKeyException otherwise).
+- **Tests:** Pest **2142**, Jest **1998**, export test 26. Local runs need `APP_KEY` set (no `.env` in a fresh cloud clone — 49 Filament tests fail with MissingAppKeyException otherwise).
 - **Not changed:** `app.json`, CLAUDE.md, production data.
 
 ### 2026-10-10 (cloud, unattended) — M5-R10-10 Havanese (branch `feat/M5-R10-10-havanese`, PR #155)

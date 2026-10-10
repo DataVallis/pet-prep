@@ -14,12 +14,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Prvič smo v aplikacijo prenesli skrb za dobrobit, ki ni povezana z obliko telesa, ampak s kožo: The Royal Kennel Club sodnikom naroča, naj bodo pri tej pasmi pozorni na znake vnetja kože. Starš to izve v izbirniku, preden izbere psa — mirno, brez številk. Oznaka namenoma ne govori o »alergijah«, da je nihče ne razume kot obljubo glede alergij ljudi.
 
-**Številke:** 8 novih virov (S142–S149), 7 oznak (3 + 4), 1 nova oznaka (`sensitive_skin`), 1 nova migracija; Pest **PEST_N** testov, Jest **JEST_N**, izvoz registra **26** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+**Številke:** 8 novih virov (S142–S149), 7 oznak (3 + 4), 1 nova oznaka (`sensitive_skin`), 1 nova migracija; Pest **2142** testov, Jest **1998**, izvoz registra **26** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
 
 **Kako povedati:**
 - 👩 Starši: »Westie je majhen, pogumen terier, ki potrebuje okoli uro gibanja na dan — in kožo, na katero morate paziti skupaj z veterinarjem.« (*ko bo nova različica v trgovini*)
 - 💼 Investitorji: »Dvanajsta plačljiva pasma, osma dodana samodejno — pravila za dobrobit zdaj pokrijejo tudi kožne težave, ne le obliko telesa.«
-- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep staršem pove, naj se o negi kože in šamponu posvetujejo z veterinarjem.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep staršem že pred izbiro pokaže oznako »občutljiva koža«; v vodiču za starše jim svetujemo, naj se o negi kože posvetujejo z veterinarjem.«
 - 📣 Omrežja: »Bel, pogumen in poln samozavesti. Je westie pravi za vašo družino?« (*ko bo westie v trgovini*)
 - 🛠 Tehnično: »Varovalo besednjaka je zavrnilo ključ `skin_allergies` (beseda »allerg«) — oznaka je zato `sensitive_skin`.«
 
