@@ -45,7 +45,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "49b1daf4202a01c86f8eb08ea3d16e48a727d829d4f5ab8c09e28e4e790d01f4"
+      "sha256": "6f1478224c3556610788fe017beee4575209c4cdfa1a764fa09d8798488cb1dd"
     }
   },
   "suitability_vocabulary": {
@@ -2995,7 +2995,12 @@
           "S82"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "french-bulldog.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_illustration"
+      },
       "source_ids": [
         "S10",
         "S11",
