@@ -379,7 +379,7 @@ describe('payments for a cat (M5-R06-09: paywall, purchase entry, deletion ack)'
       expect(tPets('paywall:entry.rowWaiting', 'cat', { count: 2 })).toBe('2 muci čakata na nakup');
       expect(tPets('paywall:entry.rowWaiting', 'cat', { count: 3 })).toBe('3 muce čakajo na nakup');
       expect(tPets('paywall:entry.rowWaiting', 'cat', { count: 5 })).toBe('5 muc čaka na nakup');
-      expect(tPets('paywall:challenge.honest', 'cat', { price: '49,99 €' })).toMatch(/^Enkratni nakup 49,99 € za eno muco\..*Brezplačna domača mačka je brezplačna za vedno\.$/);
+      expect(tPets('paywall:challenge.honest', 'cat', { price: '49,99 €' })).toMatch(/^Enkratni nakup 49,99 € za eno muco\..*Domača mačka je brezplačna za vedno\.$/);
       expect(tPets('account:deletionForm.paidWarning', 'cat')).toMatch(/Če jo izbrišete/);
       expect(tSpecies('paywall:challenge.unborn', 'cat')).toMatch(/^Še ni rojena\./);
       await i18n.changeLanguage('en');

@@ -68,12 +68,12 @@
 2. **Server switch** (SSH to `138.199.172.97`): set `PETPREP_CATS_ENABLED=true` in `/opt/petprep/.env` (add the line if missing), then recreate the PHP containers so every one rebuilds its config cache on start (entrypoint `config:cache`):
    ```bash
    docker compose -p backend -f /opt/petprep/repo/backend/compose.production.yaml --env-file /opt/petprep/.env \
-     up -d --force-recreate app reverb queue queue-broadcasts scheduler
+     up -d --no-deps --force-recreate app reverb queue queue-broadcasts scheduler
    docker compose -p backend -f /opt/petprep/repo/backend/compose.production.yaml \
      exec -T --user 1000:1000 app php artisan config:show petprep.cats_enabled   # → true
    ```
    (Verified against `backend/compose.production.yaml` + `scripts/deploy-production.sh`: project `backend`, PHP services `app`, `reverb`, `queue`, `queue-broadcasts`, `scheduler` — the earlier draft `up -d app queue scheduler` would leave `reverb` / `queue-broadcasts` on the old cached config; `--force-recreate` guarantees the new value.) The flag survives later deploys (the deploy copies `/opt/petprep/.env`). **Undo:** set it to `false` and run the same command — existing cats keep working only on apps with `species_cat`; no new cat can be created.
-3. **Phone test checklist** (new build, SL and EN once):
+3. **Phone test checklist** (new build, SL and EN once). QA PR #137: `--no-deps` above keeps postgres running (it also reads `/opt/petprep/.env` and would otherwise be recreated); after the switch **force-quit the app** (the breed catalogue is cached 1 h in memory); **every phone in the test family must run the new build** (an old child build gets 422 `app_update_required` for a cat); David tests on production — keep the new build away from external testers until this list passes:
    - Parent → "Dodaj otroka": first step now **"Pes / Mačka"** tiles; dog flow unchanged.
    - Child A: **domestic cat (free)** → PIN on the child phone → contract talks about the cat → HUD: food, water, "Pesek", "Igra", cleaning; no walk / steps / Health / "Šola".
    - Child B: **Maine Coon (challenge)** → paywall: "Muce, ki čakajo na izziv", "En nakup velja za eno muco", banner "muca čaka na varnem", Nadzor row "1 muca čaka na nakup"; child sees the friendly lock; buy (or use a credit) → unlocks.
