@@ -135,8 +135,8 @@ return [
 
     /*
     | Breed portraits for the website animal register (M5-R11, David 2026-10-10):
-    | `artisan breeds:portraits` — one AI-generated illustration per register breed,
-    | labelled "AI-generated illustration" on the website. Charged to the AI Lab budget
+    | `artisan breeds:portraits` — one AI-generated photo per register breed,
+    | labelled "AI-generated photo" on the website. Charged to the AI Lab budget
     | (purpose = lab), never the production budget. No child or pet data in any prompt.
     |
     | `traits`: per breed, trait values that replace the automatic pick (the option with

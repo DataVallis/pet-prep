@@ -1,4 +1,4 @@
-# Generates the AI breed illustrations for the website animal register on the
+# Generates the AI breed photos (realistic, M5-R11-05) for the website animal register on the
 # production server (it has FAL_AI_API_KEY; laptops / cloud sessions don't) and
 # returns them as a workflow artifact. Manual only (David 2026-10-10). Uses the
 # AI Lab budget. Nothing is published: after a run, download the artifact, review
