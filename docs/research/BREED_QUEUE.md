@@ -18,7 +18,7 @@ Status: `done` · `in-progress` · `blocked` (research could not source a requir
 | 04 | German Shepherd Dog / Nemški ovčar | `german_shepherd` | dog | done | M5-R10-04, PR #135 + portrait PR (this) + website PR #16 (2026-10-10); welfare rule → not in marketing (open point for David); senior 93 provisional until McMillan 2024 is checked |
 | 05 | Cavalier King Charles Spaniel / Kavalir King Charles španjel | `cavalier_king_charles_spaniel` | dog | done | M5-R10-05, PR #140 + portrait PR (this) + website PR #18 (2026-10-10); in marketing (David 2026-10-10 overrode the welfare rule); senior 90 provisional (VetCompass 2012 poster S71) until McMillan 2024 is checked |
 | 06 | Beagle / Bigl | `beagle` | dog | done | M5-R10-06, PR #143 + portrait PR (this) + website PR #19 (2026-10-10, unattended run); not a welfare breed → may be used in marketing; senior 102 provisional (VetCompass 2025 S116) until McMillan 2024 is checked |
-| 07 | Poodle (Standard) / Pudelj (veliki) | `standard_poodle` | dog | todo | never "hypoallergenic" |
+| 07 | Poodle (Standard) / Pudelj (veliki) | `standard_poodle` | dog | in-progress | never "hypoallergenic"; unattended run 2026-10-10 |
 | 08 | Dachshund / Jazbečar | `dachshund` | dog | todo | check welfare-concern rule (§3) |
 | 09 | Australian Shepherd / Avstralski ovčar | `australian_shepherd` | dog | todo | merle is a standard colour here — follow the breed standard (§3 colour rule) |
 | 10 | Havanese / Havanski bišon | `havanese` | dog | todo | |
