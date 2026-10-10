@@ -11,6 +11,7 @@ PetPrep unattended breed run. Repos: DataVallis/pet-prep (and DataVallis/pet-pre
 1. Read CLAUDE.md, backend/CLAUDE.md, mobile/CLAUDE.md, HANDOFF.md §4, then
    docs/engineering/ADD_BREED_RUNBOOK.md and follow it exactly.
 2. Lock: if any OPEN pet-prep PR has a head branch starting with "feat/M5-R10-", stop and do nothing.
+   Otherwise take the lock at once: branch + queue row in-progress + DRAFT PR before any research.
 3. Take the FIRST row with status "todo" in docs/research/BREED_QUEUE.md (one breed per run).
 4. Research, build, test, review, PR, merge on green CI, deploy, portrait, website — per the runbook.
 5. Apply only the runbook's standing decision rules; never ask questions. On a stop condition mark the
@@ -25,7 +26,7 @@ website URLs, time per phase.
 | Rule | Detail |
 |---|---|
 | Lock | `gh api 'repos/DataVallis/pet-prep/pulls?state=open&per_page=100' --jq '.[].head.ref' \| grep '^feat/M5-R10-'` → any output = **exit without doing anything**. Every branch of a run starts with `feat/M5-R10-NN-<slug>` (also the portrait branch), so the lock holds for the whole run. |
-| One breed per run | The first `todo` row of `docs/research/BREED_QUEUE.md`. Set it to `in-progress` in the first commit of the run. |
+| One breed per run | The first `todo` row of `docs/research/BREED_QUEUE.md`. **Take the lock immediately (before any research):** create branch `feat/M5-R10-NN-<slug>`, commit only the queue row → `in-progress`, push, and open the PR as a **draft** right away (`gh api repos/DataVallis/pet-prep/pulls -f draft=true …`). Runs start every hour but take ~2 h, so without this early draft PR a second run would pick the same or the next breed in parallel. Mark it ready (`POST /repos/{owner}/{repo}/pulls/{n}/ccr/ready_for_review`) once the build is complete. On a research stop, convert that same PR into the docs PR described below. |
 | Stop: research | A **required field** (§2.2: adult weight, lifespan, adult exercise) has no A/B source → do not build; set the row to `blocked` with the reason (which field, which sources were tried); commit only `BREED_QUEUE.md` + the research you have (`docs(research): … [M5-R10]`) in a docs PR, merge on green CI, stop. |
 | Stop: code | CI fails twice for code reasons (not infra), or the review (§6) finds a blocker you cannot fix → leave the PR **open**, set the row to `needs-david` with the reason (in the PR branch), push, stop. |
 | Infra failure | Docker Hub 429, runner loss, network: wait 5 min, `gh api -X POST repos/DataVallis/pet-prep/actions/runs/<run_id>/rerun-failed-jobs` **once**. Still failing → `needs-david`. |
