@@ -93,6 +93,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.australian_shepherd.availability, 'coming_soon');
   assert.deepEqual(byId.havanese.slug, { en: 'havanese', sl: 'havanski-bison' });
   assert.equal(byId.havanese.availability, 'coming_soon');
+  assert.deepEqual(byId.west_highland_white_terrier.slug, { en: 'west-highland-white-terrier', sl: 'zahodnoskotski-beli-terier' });
+  assert.equal(byId.west_highland_white_terrier.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
@@ -149,6 +151,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     dachshund: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1 },
     australian_shepherd: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1 },
     havanese: { adult: 3000, senior: 2300, seniorFrom: 108, learning: 1 },
+    west_highland_white_terrier: { adult: 6000, senior: 4500, seniorFrom: 121, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -493,4 +496,23 @@ test('every dog breed has a Coren rank fact except the explicitly unranked Havan
     const has = b.facts.some((f) => f.field === 'coren_rank');
     assert.equal(has, b.id !== 'havanese', `${b.id} coren_rank fact`);
   }
+});
+
+test('West Highland White Terrier (M5-R10-11): up to 1 hour, PDSA weight, FCI group 3 GB, VetCompass median, Coren 47, sensitive_skin chip, white only', () => {
+  const d = registry.breeds.find((b) => b.id === 'west_highland_white_terrier');
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S144']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 85, group: 3, section: 2, origin: 'GB' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[[6, 9], ['S147']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[[28, 28], ['S142']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['median', 13.4, ['S148']], ['more_than', 12, ['S144']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 47);
+  // 10 min × age reaches the 60-minute cap at 6 months; senior 45 min from 121 months.
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(d.game.stages[3].activity, { kind: 'steps', value: 4500 });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'family_pet', 'children']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored']);
+  assert.deepEqual(d.health.map((h) => h.key), ['skin_allergies', 'westie_lung', 'jaw_bone_disorder', 'kneecap_luxation', 'dry_eye']);
+  const json = JSON.stringify(d);
+  // No VetCompass percentages / CIs, no McMillan placeholder, never "hypoallergenic".
+  assert.doesNotMatch(json, /mcmillan_2024|hypoallergenic|odds ratio|95% CI|legg_perthes|wheaten/i);
 });

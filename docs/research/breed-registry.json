@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "cce46f654fa8fe76464647f529eb282b8f536a7dfd8137459188196880f6db73"
+      "sha256": "22e6d494d8703c9f1b3a7e9f277f391ba17e4d7527acda2f028989f7d5bc1d23"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "2163028dcc374f1a480296e05709c4286f06f1dad38c97b381711ed33e777c8a"
+      "sha256": "3970f8eb5aedcfc79e3dd3158ce3f3bdd9f04d7bbe6de4bb0a1837baa22d0cce"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,23 +25,23 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "f0025be0a0b3ae1481b7b6af28b660347d8a9c75ed9bdca890a264462fb5036d"
+      "sha256": "59e94a79b72bed2cb432fb957f0d6256d2534ed706764243fa0f46f057d4a4ac"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "ddaa8f6c03c72d867224cc5582d89e83b84e0feca8dc0c05197e8b68a3cfb34d"
+      "sha256": "3216662473d5f3b117aac5776fd3d82d29742d79c805395eca73a62079685a07"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "6448eb9d262706779c0bd7efaca75b95466aab355ef23bc1703e3a8378cc81bf"
+      "sha256": "8396cbfd4b70e2f6d1700f8f45e20b3af38ce339953002d885be6d141f3ab9ad"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "75baac052818ab48976fcb774299746d27584d03fd8cf70b170c6dcfc2841df2"
+      "sha256": "c90e7cb0dd4a779362456c2176ba88d0f993e924bab5ac8f8de4b28af923c3be"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "0a1b097dc91ee0d4bab1289fa63373cba192ae7ef35efe5294a99041341fcc71"
+      "sha256": "4a80f85f0ddb67570e15ac237368d33e65d5001cd35b98825f62466e785e7b52"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -69,6 +69,7 @@
     "often_alone": "suits",
     "older_owners": "suits",
     "other_pets": "suits",
+    "sensitive_skin": "consider",
     "sheds": "consider",
     "small_children": "suits"
   },
@@ -97,6 +98,7 @@
         "often_alone": "families who are out for a few hours",
         "older_owners": "older owners",
         "other_pets": "homes with other pets",
+        "sensitive_skin": "sensitive skin — prone to itching and inflammation",
         "sheds": "sheds",
         "small_children": "families with small children"
       }
@@ -125,6 +127,7 @@
         "often_alone": "družino, ki je nekaj ur zdoma",
         "older_owners": "starejše lastnike",
         "other_pets": "dom z drugimi ljubljenčki",
+        "sensitive_skin": "občutljiva koža — nagnjenost k srbenju in vnetjem",
         "sheds": "izpada mu dlaka",
         "small_children": "družino z majhnimi otroki"
       }
@@ -148,7 +151,7 @@
         }
       },
       "status": "available",
-      "breed_count": 11,
+      "breed_count": 12,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -6519,6 +6522,524 @@
       ]
     },
     {
+      "id": "west_highland_white_terrier",
+      "species": "dog",
+      "order": 11,
+      "availability": "coming_soon",
+      "name": {
+        "en": "West Highland White Terrier",
+        "sl": "Zahodnoškotski beli terier"
+      },
+      "slug": {
+        "en": "west-highland-white-terrier",
+        "sl": "zahodnoskotski-beli-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Westie",
+          "West Highland Terrier"
+        ],
+        "sl": [
+          "zahodnoškotski beli terier",
+          "zahodnoskotski beli terier",
+          "westie",
+          "west highland terier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S144"
+          ],
+          "ref": "west_highland_white_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": [
+            28,
+            28
+          ],
+          "source_ids": [
+            "S142"
+          ],
+          "ref": "west_highland_white_terrier.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            6,
+            9
+          ],
+          "source_ids": [
+            "S147"
+          ],
+          "ref": "west_highland_white_terrier.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "west_highland_white_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.4,
+          "source_ids": [
+            "S148"
+          ],
+          "ref": "west_highland_white_terrier.lifespan.median_uk",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S144"
+          ],
+          "ref": "west_highland_white_terrier.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S144"
+          ],
+          "ref": "west_highland_white_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S144"
+          ],
+          "ref": "west_highland_white_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S144"
+          ],
+          "ref": "west_highland_white_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S144"
+          ],
+          "ref": "west_highland_white_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 47,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "west_highland_white_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 85,
+            "group": 3,
+            "section": 2,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S143"
+          ],
+          "ref": "west_highland_white_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "skin_allergies",
+          "source_ids": [
+            "S147"
+          ],
+          "ref": "west_highland_white_terrier.health.sensitive_skin",
+          "confidence": "high"
+        },
+        {
+          "key": "westie_lung",
+          "source_ids": [
+            "S147"
+          ],
+          "ref": "west_highland_white_terrier.health.westie_lung",
+          "confidence": "medium"
+        },
+        {
+          "key": "jaw_bone_disorder",
+          "source_ids": [
+            "S147"
+          ],
+          "ref": "west_highland_white_terrier.health.jaw_bone",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S147"
+          ],
+          "ref": "west_highland_white_terrier.health.luxating_patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "dry_eye",
+          "source_ids": [
+            "S147"
+          ],
+          "ref": "west_highland_white_terrier.health.eyes",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S144"
+            ],
+            "refs": [
+              "west_highland_white_terrier.suitability.rkc_size_of_home",
+              "west_highland_white_terrier.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.suitability.pdsa_family",
+              "west_highland_white_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.suitability.pdsa_children",
+              "west_highland_white_terrier.behaviour.family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S146",
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.health.sensitive_skin"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S144",
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.suitability.rkc_shedding",
+              "west_highland_white_terrier.suitability.pdsa_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S144",
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.suitability.rkc_grooming",
+              "west_highland_white_terrier.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.behaviour.chewing"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 121
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 121
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.west_highland_white_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S144"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S144 'Up to 1 hour per day'; PDSA S147 'an hour exercise every day')"
+          },
+          {
+            "ref": "proposed_game_parameters.west_highland_white_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.west_highland_white_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S148"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 121 (0.75 × 13.4 y, VetCompass median S148)"
+          },
+          {
+            "ref": "proposed_game_parameters.west_highland_white_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 47, Average tier, S35)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S144",
+          "S148"
+        ]
+      },
+      "portrait": null,
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S142",
+        "S143",
+        "S144",
+        "S146",
+        "S147",
+        "S148"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -7446,6 +7967,48 @@
       "publisher": "PDSA (UK veterinary charity)",
       "title": "Havanese breed information",
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/havanese"
+    },
+    {
+      "id": "S142",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 85 — West Highland White Terrier, EN (PDF)",
+      "url": "https://www.fci.be/Nomenclature/Standards/085g03-en.pdf"
+    },
+    {
+      "id": "S143",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — West Highland White Terrier (85)",
+      "url": "https://fci.be/en/nomenclature/WEST-HIGHLAND-WHITE-TERRIER-85.html"
+    },
+    {
+      "id": "S144",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: West Highland White Terrier",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/terrier/west-highland-white-terrier/"
+    },
+    {
+      "id": "S146",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed Watch — West Highland White Terrier, Category 2",
+      "url": "https://www.royalkennelclub.com/activities/heritage-sports/dog-showing/judging-dog-shows/breed-watch-health-and-welfare-of-show-dogs/west-highland-white-terrier-category-2/"
+    },
+    {
+      "id": "S147",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "West Highland White Terrier breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/west-highland-white-terrier"
+    },
+    {
+      "id": "S148",
+      "tier": "A",
+      "publisher": "Canine Genetics and Epidemiology 6:7 (2019)",
+      "title": "O'Neill D. G. et al. West Highland White Terriers under primary veterinary care in the UK in 2016: demography, mortality and disorders. doi:10.1186/s40575-019-0075-2",
+      "url": "https://link.springer.com/10.1186/s40575-019-0075-2"
     },
     {
       "id": "C1",
