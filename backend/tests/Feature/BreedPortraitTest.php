@@ -230,7 +230,7 @@ describe('breeds:portraits command', function () {
             ->and($rows->pluck('purpose')->unique()->all())->toBe([AiSpendPurpose::Lab->value])
             ->and($rows->pluck('status')->unique()->all())->toBe([AiSpendLedger::STATUS_COMMITTED])
             ->and($rows->pluck('pet_id')->filter()->all())->toBe([])
-            ->and((float) $rows->sum('cost_usd'))->toBe(1.35);
+            ->and(round((float) $rows->sum('cost_usd'), 2))->toBe(1.35);
 
         $calls = Http::recorded(fn (Request $r) => str_starts_with($r->url(), 'https://fal.run/'));
         expect($calls)->toHaveCount(9);

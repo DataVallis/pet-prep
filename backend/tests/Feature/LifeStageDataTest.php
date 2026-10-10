@@ -255,9 +255,9 @@ describe('edits', function () {
 
         Livewire::test(ListBreedStageParams::class)
             ->assertOk()
-            // One sleep_hours row per breed × stage (54 since M5-R10-06, more than a
-            // page): slugs Z–A, so the mutt rows come first and the planted mutt
-            // senior row stays on the first page.
+            // One sleep_hours row per breed × stage (more than a page since M5-R10-06):
+            // slugs Z–A, so only the poodle-standard rows (M5-R10-07) precede the mutt
+            // rows and the planted mutt senior row stays on the first page.
             ->set('tableRecordsPerPage', 50)
             ->sortTable('breed_slug', 'desc')
             ->searchTable('sleep_hours')

@@ -227,8 +227,9 @@ describe('life-stage data against data.json', function () {
             ->and(stpData('standard_poodle.growth.adult_weight_reached.value'))->toStartWith('15–18 months')
             ->and(stpRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(stpData('standard_poodle.trainability.coren_rank.value'))
             ->and(stpRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(2)
-            ->and(stpRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe((float) stpData('standard_poodle.lifespan.pdsa.value')[0])
             ->and(stpData('standard_poodle.lifespan.rkc.value'))->toBe('> 12')
+            ->and(stpRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe((float) ltrim((string) stpData('standard_poodle.lifespan.rkc.value'), '> '))
+            ->and(stpRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('standard_poodle.lifespan.rkc')
             ->and(stpRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S120')
             ->and(stpRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(12.0)
             // The pooled "Poodle" 14.0 y (all varieties, S123) is never a runtime number.
@@ -253,7 +254,7 @@ describe('life-stage data against data.json', function () {
             ->map(fn (array $r) => array_diff_key($r, ['breed_slug' => true]))
             ->values()->all();
 
-        expect($general('standard_poodle'))->toBe($general('border-collie'));
+        expect($general('poodle-standard'))->toBe($general('border-collie'));
     });
 });
 
@@ -432,7 +433,7 @@ describe('no health statistics and no "hypoallergenic" in the app (runbook §1, 
             collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'poodle-standard')->values()->all(),
         ], JSON_UNESCAPED_UNICODE);
 
-        foreach (['odds ratio', 'hypoallergenic', 'Hypoallergenic'] as $forbidden) {
+        foreach (['odds ratio', 'hypoallergenic', 'Hypoallergenic', '10%', '30%'] as $forbidden) {
             expect((string) $app)->not->toContain($forbidden);
         }
         expect(array_keys(config('breed_suitability.vocabulary')))->not->toContain('hypoallergenic')

@@ -160,6 +160,8 @@ describe('Filament BreedConfigResource', function () {
 
     it('lists the new tunables', function () {
         Livewire::test(ListBreedConfigs::class)
+            // 11 breeds since M5-R10-07 — more than the default page of 10.
+            ->set('tableRecordsPerPage', 25)
             ->assertCanSeeTableRecords(BreedConfig::all())
             ->assertSee('06:00–10:00, 17:00–21:00');
     });

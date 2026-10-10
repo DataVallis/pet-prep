@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "e6c390698c2c35eb8fa9369492ba3926553a71ec2e22b78d2cb6566482ae0364"
+      "sha256": "3569156b2f22c91dc25ca099b94b14c2856950ffbed34a79817dd0432ea7e3f2"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "63e50d6525d6b0af9f3192f4238fb910c02a25743c48fe02d94ac2fca241d0d6"
+      "sha256": "52ea01fb5027c49b72b6902e4ffddba6c5ea76f2bf0b7f258c166c9559fa4ac1"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -4614,6 +4614,7 @@
           "Poodle"
         ],
         "sl": [
+          "veliki pudelj",
           "pudelj",
           "standardni pudelj",
           "poodle"
