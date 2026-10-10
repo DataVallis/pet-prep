@@ -4400,7 +4400,7 @@
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
       },
       "suitability_tags": {
-        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-04); refs = JSON paths in this file. `hips_hind_legs` is a new consider key (welfare rule: RKC names hind conformation as a point of concern, S99). SL 'kolki in zadnje noge — izberite preverjene starše', EN 'hips and hind legs — choose health-tested parents'. No percentages in the app.",
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-04); refs = JSON paths in this file. `hips_hind_legs` is a new consider key (welfare rule: RKC names hind conformation as a point of concern, S99). SL 'kolki in zadnje noge — preverite zdravje sklepov', EN 'hips and hind legs — check joint health'. No percentages in the app.",
         "suits": [
           {
             "tag": "active_family",

@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "7b58a8386ac8f6cdee3b71ea300a09048c695db3c5ecf533051f12762c1f8677"
+      "sha256": "362d22c59ebac3c6818dabad3d718d3810708a3220e95f09dbcc5e6fb09685bd"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -29,11 +29,11 @@
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "6cedafa135019a5735e3d85ab68953620af3040e3c08a52a714c0db03e2312e6"
+      "sha256": "e68e70c9a431d58a68ed60dc658bd3357708a686894e555d9f980af1a27ee734"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "abaa26025419525138cc25933b7165deb6e7a96467ef1cd78eb0405c7eec9aaa"
+      "sha256": "ab583651232f8a1896e8aadbcae7aea77469bb4aad99440c7a7d4c2eedd9ca15"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
@@ -84,7 +84,7 @@
         "first_time_owner": "first-time owners",
         "food_motivated_weight": "loves food — watch the weight",
         "frequent_grooming": "needs brushing several times a week",
-        "hips_hind_legs": "hips and hind legs — choose health-tested parents",
+        "hips_hind_legs": "hips and hind legs — check joint health",
         "large_home": "a large house and garden",
         "long_daily_exercise": "needs lots of exercise every day",
         "low_shedding": "homes that prefer less shedding",
@@ -110,7 +110,7 @@
         "first_time_owner": "začetnike",
         "food_motivated_weight": "rad je — pazite na težo",
         "frequent_grooming": "potrebuje česanje večkrat na teden",
-        "hips_hind_legs": "kolki in zadnje noge — izberite preverjene starše",
+        "hips_hind_legs": "kolki in zadnje noge — preverite zdravje sklepov",
         "large_home": "veliko hišo z vrtom",
         "long_daily_exercise": "vsak dan potrebuje veliko gibanja",
         "low_shedding": "dom, kjer želite manj dlak",

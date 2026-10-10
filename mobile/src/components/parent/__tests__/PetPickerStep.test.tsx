@@ -305,7 +305,7 @@ describe('PetPickerStep', () => {
       'Primerno za:aktivno družinodružinsko življenjeveliko hišo z vrtom',
     );
     expect(screen.getByTestId('breed-suitability-german_shepherd-consider')).toHaveTextContent(
-      /kolki in zadnje noge — izberite preverjene starše/,
+      /kolki in zadnje noge — preverite zdravje sklepov/,
     );
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'ovčar');
@@ -329,7 +329,7 @@ describe('PetPickerStep', () => {
     try {
       renderPicker(FALLBACK_CATALOGUE);
       const consider = screen.getByTestId('breed-suitability-german_shepherd-consider');
-      expect(consider).toHaveTextContent(/hips and hind legs — choose health-tested parents/);
+      expect(consider).toHaveTextContent(/hips and hind legs — check joint health/);
       expect(consider).not.toHaveTextContent(/\d|%/);
     } finally {
       await i18n.changeLanguage('sl');
