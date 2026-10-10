@@ -14,11 +14,12 @@ import { i18n } from '@/i18n';
  * (M5-R10-05, S105 / S108), senior 45 (cavalierProfile); Beagle 60 min (M5-R10-06, S113),
  * senior 45 (beagleProfile); Standard Poodle 60 min (M5-R10-07, S120), senior 45 (standardPoodleProfile);
  * Dachshund 60 min (M5-R10-08, S125), senior 45 (dachshundProfile); Australian Shepherd 120 min
- * (M5-R10-09, S133 / S134), senior 90 (australianShepherdProfile);
+ * (M5-R10-09, S133 / S134), senior 90 (australianShepherdProfile); Havanese 30 min (M5-R10-10,
+ * S138 / S140), senior 23 (havaneseProfile);
  * arrival puppy 2, young 9 months.
  */
-type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd'>;
-const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd'];
+type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese'>;
+const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese'];
 const ADULT_MINUTES: Record<DogBreed, number> = {
   mutt: 60,
   border_collie: 120,
@@ -31,6 +32,7 @@ const ADULT_MINUTES: Record<DogBreed, number> = {
   standard_poodle: 60,
   dachshund: 60,
   australian_shepherd: 120,
+  havanese: 30,
 };
 const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 };
 
@@ -173,6 +175,25 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(E.adult).toContain('6,000 steps');
       expect(E.senior).toContain('4,500 steps');
       expect(PICKER_STRINGS.breedHints.standard_poodle).toBe('Part of the 12-week challenge.');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-10 Havanese: 2.000 → 3.000 (reached at 3 months), young 3.000, adult 3.000, senior 2.300 — SL and EN', async () => {
+    const P = PICKER_STRINGS.ageHints.havanese;
+    expect(P.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 3\.000 pri 3 mesecih/);
+    expect(P.young).toBe('2 obroka na dan; sprehod 3.000 korakov na dan (kot odrasel pes).');
+    expect(P.adult).toBe('2 obroka na dan; sprehod 3.000 korakov na dan.');
+    expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 2.300 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.havanese).toBe('Del 12-tedenskega izziva.');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.havanese;
+      expect(E.puppy).toContain('2,000 steps a day, more each week up to 3,000 at 3 months');
+      expect(E.adult).toContain('3,000 steps');
+      expect(E.senior).toContain('2,300 steps');
+      expect(PICKER_STRINGS.breedHints.havanese).toBe('Part of the 12-week challenge.');
     } finally {
       await i18n.changeLanguage('sl');
     }

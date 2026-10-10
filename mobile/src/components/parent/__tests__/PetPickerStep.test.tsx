@@ -232,7 +232,7 @@ describe('PetPickerStep', () => {
     expect(screen.getByTestId('breed-suitability-golden_retriever-consider')).toHaveTextContent(
       'Upoštevajte:vsak dan potrebuje veliko gibanjaizpada mu dlakarad je — pazite na težopotrebuje česanje večkrat na teden',
     );
-    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50, Cavalier 60, Beagle 70, Standard Poodle 80, Dachshund 90, Australian Shepherd 100).
+    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50, Cavalier 60, Beagle 70, Standard Poodle 80, Dachshund 90, Australian Shepherd 100, Havanese 110).
     expect(screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID)).toEqual([
       'breed-option-mutt',
       'breed-option-border_collie',
@@ -245,6 +245,7 @@ describe('PetPickerStep', () => {
       'breed-option-standard_poodle',
       'breed-option-dachshund',
       'breed-option-australian_shepherd',
+      'breed-option-havanese',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -441,6 +442,46 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/hypoallergenic|\d|%/i);
       expect(screen.getByTestId('breed-suitability-standard_poodle-consider')).toHaveTextContent(/needs brushing several times a week/);
       expect(screen.getByTestId('breed-option-standard_poodle')).toHaveTextContent(/Poodle \(Standard\)/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-10: the Havanese (fallback) shows its chips, is found as "havanski bišon" and quotes 3.000 / 2.300 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const havanese = screen.getByTestId('breed-option-havanese');
+    expect(havanese).toHaveTextContent(/Havanski bišon/);
+    expect(havanese).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-havanese-suits')).toHaveTextContent(
+      /življenje v stanovanjudružinsko življenjedružino z otrokidom, kjer želite manj dlak/,
+    );
+    expect(screen.getByTestId('breed-suitability-havanese-consider')).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'havanski bison');
+    expect(screen.getByTestId('breed-option-havanese')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-beagle')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-havanese'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 3\.000 pri 3 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/3\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/2\.300 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'havanese', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'havanese' }),
+    );
+  });
+
+  it('M5-R10-10: the Havanese chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-havanese-suits');
+      expect(suits).toHaveTextContent(/homes that prefer less shedding/);
+      expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-havanese')).toHaveTextContent(/Havanese/);
     } finally {
       await i18n.changeLanguage('sl');
     }
