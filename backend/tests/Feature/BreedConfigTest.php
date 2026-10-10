@@ -66,7 +66,7 @@ describe('BreedConfigsSeeder', function () {
         Carbon::setTestNow('2026-10-06 07:00:00');
         (new BreedConfigsSeeder)->run();
 
-        // 9 dogs (M5-R10 Labrador, M5-R10-02 Golden, M5-R10-03 French Bulldog, M5-R10-04 German Shepherd, M5-R10-05 Cavalier, M5-R10-06 Beagle, M5-R10-07 Standard Poodle, M5-R10-08 Dachshund, M5-R10-09 Australian Shepherd, M5-R10-10 Havanese) + 2 cats (M5-R06-01).
+        // 11 paid dogs + the mutt (M5-R10 Labrador, M5-R10-02 Golden, M5-R10-03 French Bulldog, M5-R10-04 German Shepherd, M5-R10-05 Cavalier, M5-R10-06 Beagle, M5-R10-07 Standard Poodle, M5-R10-08 Dachshund, M5-R10-09 Australian Shepherd, M5-R10-10 Havanese) + 2 cats (M5-R06-01).
         expect(BreedConfig::count())->toBe(14);
         $mutt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail();
         expect($mutt->thirst_decay_rate)->toBe(99.0);

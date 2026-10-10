@@ -634,7 +634,8 @@ return [
             ],
             'coat_pattern' => [
                 ['value' => 'solid colour', 'weight' => 3],
-                'with white patches',
+                // Never "white … with white patches".
+                ['value' => 'with white patches', 'only_with' => ['coat_color' => ['fawn', 'black', 'havana brown', 'tobacco', 'reddish brown']]],
                 'with tan markings',
             ],
             'ear_carriage' => ['drop ears falling along the cheeks with a slight fold'],

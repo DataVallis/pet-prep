@@ -567,6 +567,8 @@ const DOG_FACTS = {
     grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
     shedding: ['suitability.rkc_shedding'],
     food_motivation: null,
+    // Not ranked by Coren (S35): the only breed allowed to have no coren_rank fact.
+    coren_rank: false,
     health: [
       ['kneecap_luxation', 'health.luxating_patella'],
       ['pra_and_eyelashes', 'health.eyes'],
@@ -697,9 +699,12 @@ function dogBreedFacts(R, id) {
   for (const [rel, field] of spec.grooming) facts.push(R.fact(p(rel), { group: 'grooming', field, kind: 'category' }, code));
   for (const rel of spec.shedding) facts.push(R.fact(p(rel), { group: 'grooming', field: 'shedding', kind: 'category' }, code));
   if (spec.food_motivation) facts.push(R.fact(p(spec.food_motivation), { group: 'feeding', field: 'food_motivated', kind: 'statement' }, () => true));
-  // A breed Coren did not rank (Havanese, M5-R10-10: value null, S35) has no rank fact — never a 0 or a guess.
-  if (R.entry(p('trainability.coren_rank'))?.value != null) {
+  // A breed Coren did not rank opts out explicitly (`coren_rank: false` — Havanese, M5-R10-10, S35):
+  // no rank fact, never a 0 or a guess. Every other breed still fails loudly on a missing rank.
+  if (spec.coren_rank !== false) {
     facts.push(R.fact(p('trainability.coren_rank'), { group: 'training', field: 'coren_rank', kind: 'statement' }, Number));
+  } else if (R.entry(p('trainability.coren_rank'))?.value != null) {
+    throw new Error(`${id}: coren_rank: false in DOG_FACTS but data.json has a rank — remove the opt-out`);
   }
   facts.push(
     R.fact(p('identity'), { group: 'training', field: 'fci_standard', kind: 'statement' }, (v, ref) => {

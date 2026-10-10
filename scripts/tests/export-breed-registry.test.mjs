@@ -487,3 +487,10 @@ test('Havanese (M5-R10-10): up to 30 minutes, PDSA weight, FCI group 9 Cuba, low
   const json = JSON.stringify(d);
   assert.doesNotMatch(json, /merle|mcmillan_2024|hypoallergenic|odds ratio|23-28 kg/i);
 });
+
+test('every dog breed has a Coren rank fact except the explicitly unranked Havanese', () => {
+  for (const b of registry.breeds.filter((x) => x.species === 'dog')) {
+    const has = b.facts.some((f) => f.field === 'coren_rank');
+    assert.equal(has, b.id !== 'havanese', `${b.id} coren_rank fact`);
+  }
+});
