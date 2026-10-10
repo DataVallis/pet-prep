@@ -179,6 +179,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a French Bulldog (paid breed, M5-R10-03).
+     */
+    public function frenchBulldog(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::FrenchBulldog->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static

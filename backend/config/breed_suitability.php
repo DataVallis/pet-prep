@@ -57,6 +57,10 @@ return [
         // M5-R10-02 (David 2026-10-09): brushing clearly more than once a week
         // (Golden Retriever: RKC "More than once a week", PDSA ≥ 3× a week, Woodgreen "High").
         'frequent_grooming' => 'consider',
+        // M5-R10-03 (David 2026-10-10): flat-faced (brachycephalic) breed — breathing
+        // and heat problems (French Bulldog: RKC S78, PDSA S81, Woodgreen S82,
+        // VetCompass S84, heat illness S86). A calm chip, never a percentage.
+        'brachycephalic_breathing' => 'consider',
     ],
 
     'breeds' => [
@@ -134,6 +138,35 @@ return [
                 ['tag' => 'food_motivated_weight', 'source_ids' => ['S70', 'S68'], 'refs' => ['golden_retriever.behaviour.food_motivation', 'golden_retriever.behaviour.obesity_tendency']],
                 // S65 "Grooming: More than once a week"; S68 brush "three times a week at a minimum"; S69 "Grooming needs: High".
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S65', 'S68', 'S69'], 'refs' => ['golden_retriever.suitability.rkc_grooming', 'golden_retriever.suitability.woodgreen_grooming']],
+            ],
+        ],
+
+        // M5-R10-03: french_bulldog.* (S76–S94), potrdil David 2026-10-10
+        // (data.json proposed_game_parameters.french_bulldog.suitability_tags).
+        // AKC trait ratings not attempted → RKC (S78), PDSA (S81), Woodgreen (S82).
+        // Not `small_children` (PDSA: supervise play), not `other_pets`
+        // (Woodgreen "Sociable with pets: Low"), not `sheds` / `low_shedding`
+        // (RKC "Sheds: Yes" vs PDSA / Woodgreen "minimal").
+        'french_bulldog' => [
+            'suits' => [
+                // S78 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S78'], 'refs' => ['french_bulldog.suitability.rkc_size_of_home', 'french_bulldog.suitability.rkc_size_of_garden']],
+                // S81 "…they tend to get along well with children of all ages which makes them popular family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S81'], 'refs' => ['french_bulldog.suitability.pdsa_family', 'french_bulldog.behaviour.family']],
+                // S81 (same statement); S82 "are even tolerant of children". A statement,
+                // not a rating; PDSA advises supervising play (caveat kept in data.json).
+                ['tag' => 'children', 'source_ids' => ['S81', 'S82'], 'refs' => ['french_bulldog.suitability.pdsa_children', 'french_bulldog.behaviour.family']],
+            ],
+            'consider' => [
+                // S81 "As a flat-faced breed, French Bulldogs can overheat and struggle to breathe
+                // really quickly, especially in warmer weather."; S78 narrow nostrils / excess soft
+                // tissue; S82 breathing problems, heat stroke; S84 BOAS; S86 heat illness.
+                ['tag' => 'brachycephalic_breathing', 'source_ids' => ['S78', 'S81', 'S82', 'S84', 'S86'], 'refs' => [
+                    'french_bulldog.health.brachycephaly_boas',
+                    'french_bulldog.health.boas_odds_vs_other_dogs',
+                    'french_bulldog.health.heat_stroke',
+                    'french_bulldog.exercise.heat_and_walk_timing',
+                ]],
             ],
         ],
     ],

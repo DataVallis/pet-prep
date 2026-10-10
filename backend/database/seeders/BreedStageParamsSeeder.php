@@ -47,8 +47,8 @@ use InvalidArgumentException;
  * learning multiplier, individual variation, lifespan) come from
  * dogProfile(). A new dog breed = an enum case in DOG_BREEDS + a profile;
  * the mutt / Border Collie rows stay byte-identical (LabradorBreedTest /
- * GoldenRetrieverBreedTest cross-check the Labrador / Golden rows against
- * data.json).
+ * GoldenRetrieverBreedTest / FrenchBulldogBreedTest cross-check the Labrador /
+ * Golden / French Bulldog rows against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
  * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
@@ -116,8 +116,17 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10 = 'potrdil David 2026-10-09';
 
+    /**
+     * M5-R10-03 French Bulldog (David 2026-10-10 ~06:20, data.json
+     * proposed_game_parameters.french_bulldog.*.decision): exercise 60 min,
+     * senior 45 min, puppy 10 min × age capped at 60, stages 9 / 36 / 88,
+     * arrival 2 / 9 / 36 / 88, learning multiplier 0.7; care rates the
+     * Border Collie's.
+     */
+    public const CONFIRMED_R10_FRENCH_BULLDOG = 'potrdil David 2026-10-10';
+
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -493,6 +502,10 @@ class BreedStageParamsSeeder extends Seeder
             // David's decisions 2026-10-09 in proposed_game_parameters.golden_retriever).
             BreedType::GoldenRetriever => self::goldenProfile(),
 
+            // M5-R10-03 (docs/research/dog-data/data.json french_bulldog, S76–S94;
+            // David's decisions 2026-10-10 in proposed_game_parameters.french_bulldog).
+            BreedType::FrenchBulldog => self::frenchBulldogProfile(),
+
             BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
     }
@@ -643,6 +656,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'golden_retriever.lifespan.median_uk',
                 'quote' => 'Golden Retriever (13.2 years)',
                 'notes' => 'Dogs Trust summary of McMillan et al. 2024 (S15); VetCompass poster 2012 gives a median of 12.48 y (S71).',
+            ]],
+        ];
+    }
+
+    /**
+     * French Bulldog (M5-R10-03). Stage boundaries, arrival ages, exercise
+     * minutes and the learning multiplier are David's decisions of 2026-10-10
+     * (CONFIRMED_R10_FRENCH_BULLDOG); weight, growth, Coren rank and lifespan
+     * are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function frenchBulldogProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_FRENCH_BULLDOG;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S54,S15', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.french_bulldog.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small / medium dog finishes growing at 9–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [88, $boundary('Derived game boundary: last 25 % of lifespan (S11) × median 9.8 y (McMillan 2024, S54; Dogs Trust summary S15) = 7.35 y = 88.2 → 88 months. Not chosen: 90 (0.75 × RKC "over 10 years", S78) and 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 88],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.french_bulldog.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–15 months for a small / medium dog, S10); capped at the adult 60 minutes, which 10 × age already reaches at 6 months, so the whole young stage walks the adult minutes.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S78,S81', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.french_bulldog.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S78) = PDSA "up to an hour" (S81) → 60 min = 6,000 steps (also Woodgreen\'s lower bound of 60–90 min, S82; 90 not chosen given the breathing / heat advice).',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.french_bulldog.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[8.0, 14.0], [
+                'unit' => 'kg', 'source_id' => 'S76', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'french_bulldog.adult_weight.fci',
+                'quote' => 'Males: 9–14 kg. Females: 8–13 kg.',
+                'notes' => 'FCI standard, females 8–13 kg and males 9–14 kg → overall range (Woodgreen S82: 8–14 kg; RKC ideal 11 / 12.5 kg, S79).',
+            ]],
+            'growth_end' => [[9, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'french_bulldog.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class values, not breed-specific: the FCI weights straddle Small (9–12 months) and Medium (12–15 months) of S10.',
+            ]],
+            'coren_rank' => [58, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'french_bulldog.trainability.coren_rank',
+                'quote' => '| 58 | French Bulldog |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), tier "Fair" (ranks 55–69). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [0.7, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35,S81,S82', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.french_bulldog.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 58 (S35) is in the "Fair" tier, one tier below "Average" (mixed breed 1.0); ~0.3 per tier step → 0.7. PDSA (S81) "easy to train … strong-willed" and Woodgreen (S82) "Moderately easy" were the counterweight (alternative 0.8, not chosen). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [9.8, [
+                'unit' => 'years', 'source_id' => 'S54', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'french_bulldog.lifespan.median_uk',
+                'quote' => 'French Bulldog (red, x̃= 9.8)',
+                'notes' => 'McMillan et al. 2024 (S54); Dogs Trust summary (S15). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

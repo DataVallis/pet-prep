@@ -99,6 +99,10 @@ it('returns tag keys per kind; breeds without sourced tags get empty lists', fun
             'suits' => ['active_family', 'family_pet', 'children', 'first_time_owner', 'large_home', 'other_pets'],
             'consider' => ['long_daily_exercise', 'sheds', 'food_motivated_weight', 'frequent_grooming'],
         ])
+        ->and($suitability->for(BreedType::FrenchBulldog))->toBe([
+            'suits' => ['apartment', 'family_pet', 'children'],
+            'consider' => ['brachycephalic_breathing'],
+        ])
         ->and($suitability->for(BreedType::BorderCollie))->toBe([
             'suits' => ['active_family'],
             'consider' => ['long_daily_exercise', 'needs_mental_stimulation', 'may_herd_children', 'chews_when_bored'],
@@ -145,6 +149,25 @@ it('gives the Golden Retriever `children` (PDSA statement) but never `small_chil
 
     // The caveat is recorded with the source: PDSA advises supervising dogs with children.
     expect(bsEntry('golden_retriever.suitability.pdsa_children')['notes'])->toContain('supervis');
+});
+
+it('gives the French Bulldog the first sourced `apartment` tag and the new brachycephalic_breathing tag, never `small_children` (David 2026-10-10)', function () {
+    $vocabulary = BreedSuitability::vocabulary();
+    expect($vocabulary)->toMatchArray(['brachycephalic_breathing' => BreedSuitability::CONSIDER]);
+
+    $frenchie = app(BreedSuitability::class)->for(BreedType::FrenchBulldog);
+    expect($frenchie['suits'])->toContain('apartment', 'children')->not->toContain('small_children')->not->toContain('other_pets')
+        ->and($frenchie['consider'])->toBe(['brachycephalic_breathing']);
+
+    // Only the flat-faced breed gets the breathing tag; only it suits a flat so far.
+    foreach ([BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever] as $breed) {
+        $tags = app(BreedSuitability::class)->for($breed);
+        expect($tags['consider'])->not->toContain('brachycephalic_breathing')
+            ->and($tags['suits'])->not->toContain('apartment');
+    }
+
+    // The caveat is recorded with the source: PDSA advises supervising play.
+    expect(bsEntry('french_bulldog.behaviour.family')['notes'])->toContain('supervising');
 });
 
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {
