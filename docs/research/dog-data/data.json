@@ -3594,6 +3594,518 @@
       }
     }
   },
+  "beagle": {
+    "_note": "Added 2026-10-10 (M5-R10-06, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S111–S117, reused S10, S11, S14, S24, S35, S45). Pages were partly returned as paraphrase — only passages the tool returned in quotation marks are used as quotes. McMillan 2024 does not name the Beagle in its text or corrected Fig. 3 legend (S54 checked 2026-10-10), the Dogs Trust summary (S15) has no Beagle value in its text (the breed table is a separate PDF, not read) and the 2012 VetCompass poster (S71) has no Beagle row — so the lifespan is the VetCompass breed paper median (S116) per the runbook rule. Neither the FCI nor the RKC standard gives a weight; the only standard-type weight is PDSA (S115, tier B). Woodgreen and the AKC page were not found / not attempted.",
+    "identity": {
+      "value": "FCI No. 161, Group 6 Section 1.3 (Small-sized Hounds), Great Britain",
+      "unit": "—",
+      "source_id": "S112",
+      "quote": "Group: n°6 - Chiens courants, Chiens de recherche au sang et Races apparentées; Section: Chiens courants; Subsection: Chiens courant de petite taille; Country of origin: GRANDE-BRETAGNE",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S112, French-language fields as returned): standard number 161; definitive acceptance '26/04/1955'; 'Soumise à épreuve de travail' (with working trial). Valid-standard date returned as '08/09/2026' (the EN row '06/10/2026') — differs from the PDF (S111: 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 13.10.2010.'), verify. FCI standard PDF (S111): 'Group 6 Scent hounds and related breeds.' and 'Section 1.3 Small-sized Hounds. With working trial.' Quote assembled from the nomenclature fields."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S113",
+      "quote": "Size: Small",
+      "confidence": "medium",
+      "notes": "PDSA (S115) says 'Size: Medium' (key-facts box as returned) — conflict; RKC breed page preferred (runbook §2.2). FCI / RKC height 33–40 cm (S111, S114); PDSA weight 9–11 kg (S115) = PetMD small class upper edge (S10)."
+    },
+    "height": {
+      "fci": {
+        "value": [
+          33,
+          40
+        ],
+        "unit": "cm",
+        "source_id": "S111",
+        "quote": "Desirable minimum height at the withers 33 cms.",
+        "confidence": "high",
+        "notes": "FCI (S111): 'Desirable maximum height at the withers 40 cms.' One range for both sexes."
+      },
+      "rkc": {
+        "value": [
+          33,
+          40
+        ],
+        "unit": "cm",
+        "source_id": "S114",
+        "quote": "Desirable minimum height at withers: 33 cms (13 ins).",
+        "confidence": "high",
+        "notes": "RKC standard (S114, last updated 1 April 2025): 'Desirable maximum height at withers: 40 cms (16 ins).'"
+      },
+      "pdsa_average": {
+        "value": [
+          33,
+          40
+        ],
+        "unit": "cm",
+        "source_id": "S115",
+        "quote": "Average height: 33-40 cm",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (label wording as returned)."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": [
+          9,
+          11
+        ],
+        "unit": "kg",
+        "source_id": "S115",
+        "quote": "Average weight: 9-11 kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (label wording as returned), one range for both sexes. The FCI (S111) and RKC (S114) standards give no weight (height only); AKC standard not attempted. Tier B — the only weight range found."
+      },
+      "uk_measured_median": {
+        "value": 18.19,
+        "unit": "kg (median adult bodyweight, UK primary care 2019)",
+        "source_id": "S116",
+        "quote": "The median adult bodyweight was 18.19 kg (IQR 15.68–21.07).",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2025 (S116), VetCompass UK 2019. Results: 'Males (19.70 kg, IQR 17.26–22.44, range 8.11–46.25) were heavier than females' (sentence continues, females 16.59 kg as returned). Far above the PDSA range — measured pet dogs; the authors: 'High levels of obesity could offer another explanation for the heavier bodyweights in the wider population of Beagles'. Research only; not exported (would read as the breed's target weight)."
+      },
+      "salt_category": {
+        "value": "III (6.5–<9 kg) / IV",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours: 9–11 kg sits at the Salt 2017 band III / IV boundary (general_by_size.size_classes.salt_2017_bands_kg, S8). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 9–11 kg (S115) = 19.8–24.3 lb → the 'Small (12–24 pounds)' class (the upper edge touches 'Medium (24–59 pounds): 12–15 months')."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no pet-Beagle growth curve found (the S9 laboratory-Beagle logistic parameters are used only for the medium-size general curve, general_by_size)."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 11.28,
+        "unit": "years",
+        "source_id": "S116",
+        "quote": "The median age at death was 11.28 years (IQR 9.32–13.08) for 322 deaths recorded during the study period.",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2025 (S116), VetCompass UK 2019, 19,906 Beagles. The abstract Conclusions say 'Their median age at death of 11.70 years suggests reasonable overall health' — a discrepancy inside the paper; the Results value (with n and IQR, repeated in the full text S116 and RVC Clinical Connections S117) is used. McMillan 2024 (S54) and the Dogs Trust summary (S15) have no Beagle value reachable (see _note) — runbook rule: else a VetCompass median. Conflicts with the breed-page band 'Over 12 years' (S113, S115). Medium until McMillan 2024 Supplementary Table is checked."
+      },
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S113",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "medium",
+        "notes": "PDSA (S115): 'Average lifespan: Over 12 years' (key-facts label as returned). Generic band; conflicts with the VetCompass median 11.28 y (S116)."
+      },
+      "senior_from": {
+        "value": 8.46,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 11.28 y (S116) → 0.75 × 11.28 = 8.46 y = 101.52 → 102 months. With the Conclusions value 11.70 y: 105.3 → 105 months. With the breed-page 'over 12 years' (S113): 0.75 × 12 = 9 y = 108 months. Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S116"
+        ],
+        "months": 102,
+        "alternative": {
+          "value_years": 9,
+          "months": 108,
+          "derived_from": [
+            "S11",
+            "S113"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S113",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "PDSA conflicts: key-facts 'Minimum exercise (per day): 1 hour' but text 'Your Beagle will need at least an hour and a half of exercise a day.' (S115). Runbook rule: RKC preferred → 60; PDSA 90 recorded as alternative in proposed_game_parameters."
+      },
+      "energy": {
+        "value": "quite high energy; bold, with great activity and stamina",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "Beagles tend to be quite high energy and you'll find they enjoy being part of everything their owners do.",
+        "confidence": "medium",
+        "notes": "FCI (S111) / RKC (S114): 'Bold, with great activity, stamina and determination.'"
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "merry scent hound; amiable and alert, no aggression or timidity; sociable",
+        "unit": "—",
+        "source_id": "S114",
+        "quote": "Amiable and alert, showing no aggression or timidity.",
+        "confidence": "high",
+        "notes": "FCI (S111) / RKC (S114): 'A merry hound whose essential function is to hunt, primarily hare, by following a scent.' RKC breed page (S113): 'Historically developed to work in packs, the Beagle is sociable and generally good-tempered, thriving on companionship.' PDSA (S115): 'Beagles are loving and sociable dogs who enjoy nothing more than being involved in whatever is going on in the house.'; scent games 'Beagles are scent hounds, so they'll really enjoy playing scent games with you and getting the chance to use their keen sense of smell.'"
+      },
+      "family": {
+        "value": "suits family life when socialised young; popular family companion; supervise with children",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "Due to their loving and tolerant nature, if socialised correctly from a young age Beagles suit family life really well.",
+        "confidence": "medium",
+        "notes": "RKC breed page (S113): 'Its friendly, affectionate nature and manageable size have made it a popular family companion in modern times.' PDSA (S115): 'You should always supervise your Beagle with children in case playtime gets too boisterous.' No explicit 'good with children' statement → family_pet only, not children / small_children."
+      },
+      "time_alone": {
+        "value": "should not be left alone; distressed and bored when alone — barks, may chew",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "We wouldn't recommend leaving your Beagle alone if you can avoid it.",
+        "confidence": "medium",
+        "notes": "PDSA (S115): 'Try to avoid leaving them alone and if you have to make sure there is plenty to keep them occupied.'; 'Beagles can be a little more vocal than other dogs when left alone so you may not realise they bark a lot.' → no often_alone tag."
+      },
+      "other_pets": {
+        "value": "fine with other pets if socialised early; not alone with smaller pets",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "If your Beagle has been socialised with other pets from an early age, they will be fine with other pets in the home although we don't advise leaving them alone with smaller pets.",
+        "confidence": "medium",
+        "notes": "Conditional → no other_pets tag. Cats not mentioned."
+      },
+      "chewing": {
+        "value": "may chew things when left alone and bored",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "When left alone, Beagles can become distressed and bored which means they tend to bark a lot and may even chew things they shouldn't.",
+        "confidence": "medium",
+        "notes": "PDSA (S115). Basis of the chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No Beagle-specific food-motivation statement found. Obesity is the most common disorder in UK primary care and the authors advise 'special emphasis on care related to bodyweight control' (S116; health.obesity) — but the food_motivated_weight chip says 'loves food', which no source states → no tag. PDSA (S115): 'Treats shouldn't make up more than 10% of their calories or they can unbalance their diet.'"
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; percentages stay here and are never shown in the app, the register export or audience docs. Not a welfare-concern breed: RKC Breed Watch Category 1, 'Currently no points of concern specific to this breed have been identified for special attention by judges' (S113); Colour Watch Category 0. Main UK primary-care topics: bodyweight and teeth (S116).",
+      "obesity": {
+        "value": "obesity is the most common recorded disorder — weight control and dental care are priorities",
+        "unit": "—",
+        "source_id": "S116",
+        "quote": "should put special emphasis on care related to bodyweight control and dental hygiene in Beagles.",
+        "confidence": "high",
+        "notes": "O'Neill et al. 2025 (S116) Conclusions (sentence as returned, starts mid-sentence). Results: obesity 24.27 %, periodontal disease 17.78 % (research only). RVC Clinical Connections (S117) repeats it. PDSA (S115): 'You'll need to feed them a complete, balanced dog food to keep them slim and healthy.'"
+      },
+      "epilepsy": {
+        "value": "epilepsy (seizures)",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "Epilepsy – a brain disorder which can lead to seizures.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S115)."
+      },
+      "back_ivdd": {
+        "value": "intervertebral disc disease",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "Intervertebral disc disease – abnormality of the discs that provide cushioning between the vertebrae (back bones).",
+        "confidence": "medium",
+        "notes": "PDSA health list (S115)."
+      },
+      "ears": {
+        "value": "ear infections (otitis externa)",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "Otitis Externa - where the ear canal becomes inflamed/infected, causing pain and irritation.",
+        "confidence": "medium",
+        "notes": "PDSA (S115). O'Neill 2025 (S116): otitis externa among the five most common disorders (11.18 %, research only)."
+      },
+      "other_conditions": {
+        "value": "meningitis, hypothyroidism, certain cancers, eye conditions incl. cherry eye",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "Some eye conditions, including cherry eye.",
+        "confidence": "medium",
+        "notes": "PDSA health list headings (S115): 'Meningitis', 'Hypothyroidism', 'Certain cancers.', eye conditions. O'Neill 2025 (S116): most common cause of death at group level neoplasia (research only)."
+      },
+      "dna_tests": {
+        "value": "DNA tests before breeding: Lafora's, NCCD (good practice); FVIID, IGS-2, MLS (best practice)",
+        "unit": "—",
+        "source_id": "S113",
+        "quote": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+        "confidence": "high",
+        "notes": "RKC breed page (S113) health section (test names as returned)."
+      },
+      "common_disorders_2025": {
+        "value": "obesity, periodontal disease, overgrown nails, otitis externa, anal sac impaction",
+        "unit": "—",
+        "source_id": "S116",
+        "quote": null,
+        "confidence": "high",
+        "notes": "O'Neill et al. 2025 (S116): obesity 24.27 %, periodontal disease 17.78 %, overgrown nails 11.61 %, otitis externa 11.18 %, anal sac impaction 10.59 % (as summarised by the tool). Research only — never shown in the app or register."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 72,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "72 | Mastiff / Beagle",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C): rank 72, tied with the Mastiff, under 'Lowest Degree of Working/Obedience Intelligence'. Coren's own article (S34) could not be fetched in this run (not reachable through the fetch tool) — runbook: rank from S35. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "lowest: 80–100 repetitions or more, obeys first command ≤25%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 80 to 100 repetitions or more.; Obey first command: 25% of the time or worse.",
+        "confidence": "low",
+        "notes": "Tier 'Lowest Degree of Working/Obedience Intelligence' = ranks 70–79. Tier definitions from Wikipedia; verify in book. Coren ranks obedience to commands — a scent hound that follows its nose ranks low; not a measure of 'cleverness'."
+      },
+      "training_notes": {
+        "value": "mischievous — start positive, reward-based training early",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "Beagles can be mischievous characters so it's important to start positive, reward-based training as soon as possible.",
+        "confidence": "medium",
+        "notes": "PDSA (S115). FCI / RKC (S111, S114): 'Alert, intelligent and of even temperament.'"
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.beagle.learning_multiplier (0.5, runbook rule).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "sturdy, compactly built hound, quality without coarseness",
+        "unit": "—",
+        "source_id": "S114",
+        "quote": "A sturdy, compactly built hound, conveying the impression of quality without coarseness.",
+        "confidence": "high",
+        "notes": "FCI (S111): 'A sturdy, compactly-built hound, conveying the impression of quality without coarseness.'"
+      },
+      "colours": {
+        "value": [
+          "tricolour (black, tan and white)",
+          "blue, white and tan",
+          "badger pied",
+          "hare pied",
+          "lemon pied",
+          "lemon and white",
+          "red and white",
+          "tan and white",
+          "black and white",
+          "all white"
+        ],
+        "unit": "list",
+        "source_id": "S114",
+        "quote": "No other colours are permissible. Tip of stern white.",
+        "confidence": "high",
+        "notes": "RKC standard (S114) and FCI (S111): 'Tricolour (black, tan and white); blue, white and tan; badger pied; hare pied; lemon pied; lemon and white;' / 'red and white; tan and white; black and white; all white.' / 'With the exception of all white, all the above mentioned colours can be found as mottle.' RKC breed page (S113): Colour Watch 'Category 0: Breeds with no NBS colour registration options.' Frequencies: not sourced."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). No colour frequencies. Draw over a subset of the standard colours with tricolour highest (portrait default), then tan and white, lemon and white, red and white; all with the white tail tip (S114); never a non-standard colour."
+      },
+      "coat": {
+        "value": "short, dense and weatherproof",
+        "unit": "—",
+        "source_id": "S114",
+        "quote": "Short, dense and weatherproof.",
+        "confidence": "high",
+        "notes": "FCI (S111): 'Hair: Short, dense and weatherproof.' RKC breed page (S113): 'Coat length: Short'."
+      },
+      "ears": {
+        "value": "long, rounded tip, set low, hanging close to the cheeks",
+        "unit": "—",
+        "source_id": "S114",
+        "quote": "Long, with rounded tip, reaching nearly to end of nose when drawn out.",
+        "confidence": "high",
+        "notes": "RKC / FCI: 'Set on low, fine in texture and hanging gracefully close to cheeks.'"
+      },
+      "eyes": {
+        "value": "dark brown or hazel, fairly large, mild appealing expression",
+        "unit": "—",
+        "source_id": "S114",
+        "quote": "Dark brown or hazel, fairly large, not deep set or prominent, set well apart with mild, appealing expression.",
+        "confidence": "high",
+        "notes": "Same in FCI (S111)."
+      },
+      "nose": {
+        "value": "broad nose, preferably black, wide nostrils; muzzle not snipy; well-defined stop",
+        "unit": "—",
+        "source_id": "S114",
+        "quote": "Nose broad, preferably black, but less pigmentation permissible in lighter coloured hounds.",
+        "confidence": "high",
+        "notes": "RKC (S114): 'Nostrils wide.'; 'Muzzle not snipy, lips reasonably well flewed.'; 'Stop well defined and dividing length, between occiput and tip of nose, as equally as possible.'; skull 'slightly domed, moderately wide, with slight peak.'"
+      },
+      "tail": {
+        "value": "sturdy, moderately long, set high, carried gaily, white tip",
+        "unit": "—",
+        "source_id": "S114",
+        "quote": "Sturdy, moderately long. Set on high, carried gaily but not curled over back or inclined forward from root.",
+        "confidence": "high",
+        "notes": "RKC (S114): 'Well covered with hair, especially on underside.'; colour clause 'Tip of stern white.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S113) and PDSA (S115). Woodgreen page not found; AKC trait ratings not attempted (same as the earlier breeds).",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S113",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "PDSA (S115): 'Size: Medium' — conflict."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S113",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S113",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "Not 'Flat/ Apartment' → no apartment tag; not 'Large house' → no large_home tag."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S113",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S113",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "PDSA (S115): 'A weekly brush should be plenty to keep on top of dead hair and keep their coat looking in tip-top condition.' → no frequent_grooming tag."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S113",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S113",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S115): 'As with most dogs, you can expect a reasonable amount of shedding from your Beagle.' — sources agree."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S113",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "VetCompass median 11.28 y (S116)."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S113",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S113",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-10)."
+      },
+      "pdsa_family": {
+        "value": "suits family life really well when socialised young",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "Due to their loving and tolerant nature, if socialised correctly from a young age Beagles suit family life really well.",
+        "confidence": "medium",
+        "notes": "RKC breed page (S113): 'popular family companion in modern times'."
+      },
+      "pdsa_children": {
+        "value": "supervise with children",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "You should always supervise your Beagle with children in case playtime gets too boisterous.",
+        "confidence": "medium",
+        "notes": "Supervision advice only, no explicit 'good with children' rating → no children / small_children tag."
+      },
+      "pdsa_grooming": {
+        "value": "weekly brush",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "A weekly brush should be plenty to keep on top of dead hair and keep their coat looking in tip-top condition.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_shedding": {
+        "value": "reasonable amount of shedding",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "As with most dogs, you can expect a reasonable amount of shedding from your Beagle.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_exercise": {
+        "value": "at least 1.5 hours (text) / minimum 1 hour (key facts)",
+        "unit": "—",
+        "source_id": "S115",
+        "quote": "Your Beagle will need at least an hour and a half of exercise a day.",
+        "confidence": "medium",
+        "notes": "Key-facts box: 'Minimum exercise (per day): 1 hour' — internal conflict on the PDSA page."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -5247,6 +5759,206 @@
         "confidence": "high",
         "notes": "FCI muzzle 'about 1 1/2 ins. (3,8 cm). Well tapered.' (S103); RKC eyes 'round but not prominent' (S106) and 'avoid obvious conditions or exaggerations'; Breed Watch 'Protruding eyes' (S107). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): Blenheim portrait default, tricolour / ruby / black-and-tan options, visible muzzle and non-protruding eyes, never chocolate"
+      }
+    },
+    "beagle": {
+      "_note": "Unattended run M5-R10-06 (2026-10-10): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S113",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'Up to 1 hour per day' (S113). PDSA conflicts with itself: key facts 'Minimum exercise (per day): 1 hour', text 'at least an hour and a half' (S115). Rule: sources conflict → RKC value; one number N ('up to N') → N = 60.",
+        "alternatives": [
+          {
+            "value": 90,
+            "source_id": "S115",
+            "quote": "Your Beagle will need at least an hour and a half of exercise a day."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S113 'Up to 1 hour per day'; PDSA S115 90 min recorded as alternative)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000 (= French Bulldog, Cavalier).",
+        "derived_from": [
+          "S113",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 102
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 102 = round(0.75 × 11.28 y × 12 = 101.52) (S11 + VetCompass breed paper S116; McMillan 2024 has no Beagle value reachable). Alternatives: 105 (0.75 × 11.70 y, S116 Conclusions); 108 (0.75 × 'over 12 years', S113); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S116"
+        ],
+        "alternatives": {
+          "senior_conclusions_11_70_y": 105,
+          "senior_rkc_over_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 102 (0.75 × 11.28 y, VetCompass S116)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 102
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 102)"
+      },
+      "learning_multiplier": {
+        "value": 0.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 72 (S35), tier Lowest (ranks 70–79) → 0.5. PDSA 'mischievous characters … start positive, reward-based training as soon as possible' (S115) agrees. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 72, S35 — Lowest tier)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-06); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S115",
+              "S113"
+            ],
+            "refs": [
+              "beagle.suitability.pdsa_family",
+              "beagle.behaviour.family"
+            ],
+            "quote": "S115 'if socialised correctly from a young age Beagles suit family life really well'; S113 'popular family companion in modern times'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S113",
+              "S115"
+            ],
+            "refs": [
+              "beagle.suitability.rkc_shedding",
+              "beagle.suitability.pdsa_shedding"
+            ],
+            "quote": "S113 'Sheds: Yes'; S115 'you can expect a reasonable amount of shedding from your Beagle'"
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S115"
+            ],
+            "refs": [
+              "beagle.behaviour.chewing"
+            ],
+            "quote": "S115 'When left alone, Beagles can become distressed and bored which means they tend to bark a lot and may even chew things they shouldn't.'"
+          }
+        ],
+        "not_proposed": {
+          "children": "Only supervision advice (S115), no explicit 'good with children' statement.",
+          "small_children": "No explicit rating; supervision caveat (S115).",
+          "apartment": "RKC 'Small house' (S113), not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S113).",
+          "active_family": "RKC 'Up to 1 hour per day' (S113) — moderate (PDSA 1.5 h text is an alternative only).",
+          "long_daily_exercise": "≈ 1 h/day by the RKC (S113).",
+          "first_time_owner": "No source statement.",
+          "other_pets": "Conditional — socialised early, not alone with smaller pets (S115).",
+          "often_alone": "PDSA advises against leaving the Beagle alone (S115).",
+          "low_shedding": "Sheds (S113, S115).",
+          "frequent_grooming": "Weekly brush (S113, S115).",
+          "food_motivated_weight": "Obesity is the top recorded disorder and bodyweight control is advised (S116), but no source says the Beagle 'loves food' (the chip's wording) → not tagged; recorded under health.obesity.",
+          "needs_mental_stimulation": "Scent games suggested (S115) but no 'needs' statement.",
+          "brachycephalic_breathing": "Not flat-faced; RKC Breed Watch Category 1, no points of concern (S113).",
+          "hips_hind_legs": "No source.",
+          "heart_and_spine": "No source (IVDD listed by PDSA without a breed-level warning).",
+          "may_herd_children": "Not a herding breed; no source.",
+          "older_owners": "No source."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet; consider sheds, chews_when_bored (no new key)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare-concern breed)",
+        "unit": "—",
+        "source_id": "S113",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "Welfare-concern rule (runbook §3) does not apply: RKC Breed Watch Category 1 (S113), standard moderate head ('free from frown and wrinkle', 'Muzzle not snipy', 'Nostrils wide', S114). No BVA / Brachycephalic Working Group / UFAW / RVC source naming the Beagle for conformation-related welfare problems was found.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): not a welfare-concern breed — may appear in marketing"
+      },
+      "ai_appearance": {
+        "value": "adult Beagle, tricolour (default), tan and white, lemon and white or red and white, white tail tip; short dense coat, long low-set ears with rounded tips, broad nose with wide nostrils, moderate muzzle, sturdy compact body; standard colours only",
+        "unit": "—",
+        "source_id": "S114",
+        "quote": "A sturdy, compactly built hound, conveying the impression of quality without coarseness.",
+        "confidence": "high",
+        "notes": "Colours from the RKC / FCI standard (S114, S111); 'Tip of stern white.' Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): tricolour portrait default, tan-and-white / lemon-and-white / red-and-white options, white tail tip, standard colours only"
       }
     }
   }
