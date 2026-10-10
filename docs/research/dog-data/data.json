@@ -3104,6 +3104,496 @@
       }
     }
   },
+  "cavalier_king_charles_spaniel": {
+    "_note": "Added 2026-10-10 (M5-R10-05, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S103–S110, reused S10, S11, S14, S24, S35, S45, S71). Pages were partly returned as paraphrase — only passages the tool returned in quotation marks are used as quotes. McMillan 2024 does not name the Cavalier in its text or Fig. 3 legend (S54 / LJMU full text checked 2026-10-10; Supplementary Table 3 not reachable), PMC returned a reCAPTCHA and the Dogs Trust summary (S15) does not list the breed — so the lifespan is the VetCompass breed median (S71) per the runbook rule. Woodgreen and the AKC page were not found / not attempted.",
+    "identity": {
+      "value": "FCI No. 136, Group 9 Section 7 (English Toy Spaniels), Great Britain",
+      "unit": "—",
+      "source_id": "S104",
+      "quote": "Group: n°9 - Chiens d'agrément et de compagnie; Section: Epagneuls anglais d'agrément; Country of origin: GRANDE-BRETAGNE",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S104, French-language fields as returned): standard number 136; definitive acceptance '20/01/1955'; publication of valid standard '04/11/2008'; 'Non soumise à épreuve de travail' (no working trial). FCI standard PDF (S103): 'FCI-CLASSIFICATION: Group 9 Companion and Toy Dogs' and 'Section 7 English Toy Spaniels.'; the tool returned its publication date as '08.09.2026' — differs from the nomenclature page, verify on the PDF. Quote assembled from the nomenclature fields."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S105",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "PDSA (S108): 'Size: Small'. FCI / RKC weight 5.4–8(.2) kg (S103, S106) — toy group (RKC) but 'small' in the UK size fields."
+    },
+    "height": {
+      "pdsa_average": {
+        "value": [
+          30,
+          33
+        ],
+        "unit": "cm",
+        "source_id": "S108",
+        "quote": "Average height: 30-33 cm",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (label wording as returned by the tool). FCI (S103) and RKC (S106) standards give a weight only, no height; AKC standard not attempted."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": [
+          5.4,
+          8
+        ],
+        "unit": "kg",
+        "source_id": "S103",
+        "quote": "WEIGHT: 5,4 - 8 kg.",
+        "confidence": "high",
+        "notes": "FCI standard (S103): one range for both sexes; 'A small, well-balanced dog well within these weights desirable' (paraphrase as returned)."
+      },
+      "rkc": {
+        "value": [
+          5.4,
+          8.2
+        ],
+        "unit": "kg",
+        "source_id": "S106",
+        "quote": "Weight: 5.4-8.2 kgs (12-18 lbs).",
+        "confidence": "high",
+        "notes": "RKC standard (S106, last updated April 2025); prefers a small, well-balanced dog within the range (paraphrase)."
+      },
+      "pdsa": {
+        "value": [
+          5.4,
+          8.2
+        ],
+        "unit": "kg",
+        "source_id": "S108",
+        "quote": "Average weight: 5.4-8.2kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (label wording as returned)."
+      },
+      "uk_measured_median": {
+        "value": 10.5,
+        "unit": "kg (median of maximum recorded bodyweight, dogs ≥ 9 months)",
+        "source_id": "S109",
+        "quote": "median bodyweight was 10.5 kg (range 2.8-27.3 kg)",
+        "confidence": "medium",
+        "notes": "Summers et al. 2015 (S109), VetCompass England, n = 1,307 dogs with a weight. Above the standard range — measured pet dogs, includes overweight dogs and possibly cross-breeds recorded as Cavaliers. Research only; not exported (no sex split, would read as the breed's target weight)."
+      },
+      "salt_category": {
+        "value": "III (6.5–<9 kg) / II",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours: 5.4–8.2 kg spans Salt 2017 bands II / III (general_by_size.size_classes.salt_2017_bands_kg, S8). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI/RKC 5.4–8.2 kg = 11.9–18.1 lb → the 'Small (12–24 pounds)' class (the lower edge touches 'Toy (5–12 pounds): 8–12 months')."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Cavalier growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 9.99,
+        "unit": "years",
+        "source_id": "S71",
+        "quote": "Cavalier King Charles Spaniel 121 9.99 8.14-12.39",
+        "confidence": "medium",
+        "notes": "O'Neill et al. VetCompass conference poster (SVEPM 2012, S71), Table 1 row: breed, n deaths = 121, median longevity 9.99 y, IQR 8.14–12.39. McMillan 2024 (S54) not usable for this breed (see _note) — runbook rule: else a VetCompass median. Small n, preliminary data of O'Neill 2013 (S17) → medium. Conflicts with the breed-page band 'Over 12 years' (S105, S108). Shorter than the German Shepherd (10.3), longer than the French Bulldog (9.8)."
+      },
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S105",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "medium",
+        "notes": "PDSA (S108): 'Average lifespan: Over 12 years' (key-facts label as returned). Generic band; conflicts with the VetCompass median 9.99 y (S71)."
+      },
+      "senior_from": {
+        "value": 7.4925,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 9.99 y (S71) → 0.75 × 9.99 = 7.4925 y = 89.91 → 90 months. With the breed-page 'over 12 years' (S105): 0.75 × 12 = 9 y = 108 months. Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S71"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 9,
+          "months": 108,
+          "derived_from": [
+            "S11",
+            "S105"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S105",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "PDSA (S108): 'Your Cavalier will need at least one hour of exercise a day' (key-facts label 'Minimum exercise: 1 hour'). Sources agree on about 1 h (RKC 'up to', PDSA 'at least')."
+      },
+      "energy": {
+        "value": "quite energetic despite the small size",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "Despite their small size, Cavaliers are quite energetic dogs",
+        "confidence": "medium",
+        "notes": "RKC standard (S106): 'Sporting, affectionate, absolutely fearless.'; FCI (S103): 'Active, graceful and well balanced, with gentle expression.'"
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gay, friendly, non-aggressive, no tendency to nervousness",
+        "unit": "—",
+        "source_id": "S106",
+        "quote": "Gay, friendly, non aggressive; no tendency to nervousness.",
+        "confidence": "high",
+        "notes": "FCI (S103): 'Sporting, affectionate, absolutely fearless. Gay, friendly, non-aggressive; no tendency towards nervousness.' PDSA (S108): 'Cavaliers are kind, gentle and loyal dogs which is why they are so popular, but will need constant company'."
+      },
+      "family": {
+        "value": "known to be good around children; great family pets; supervise play",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "They're known to be good around children because they're so keen to please their owners and love the company of people.",
+        "confidence": "medium",
+        "notes": "PDSA (S108) also: 'Cavaliers are known for making really great family pets', 'Cavalier King Charles Spaniels are popular family dogs due to their small size and love of people.' and 'we would always recommend supervising your dog around children just in case playtime gets too rough'; the dog needs a place to rest away from children (S108). Explicit statement → children (supervision caveat kept here), not small_children."
+      },
+      "time_alone": {
+        "value": "needs constant company; can develop separation anxiety",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "Like all dogs, Cavaliers prefer company and don't cope very well when left on their own.",
+        "confidence": "medium",
+        "notes": "PDSA (S108): 'Cavaliers can develop separation anxiety if their owners leave them at all' (sentence continues — paraphrase: train them to cope, never more than four hours) → no often_alone tag."
+      },
+      "other_pets": {
+        "value": "tolerant, should get along with cats; prey drive with small pets",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "they are known for being tolerant and should get along with cats OK",
+        "confidence": "medium",
+        "notes": "PDSA (S108): 'Cavalier King Charles Spaniels can have a prey drive, so be careful of other small pets with your Cavalier' → conditional, no other_pets tag."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No Cavalier-specific chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No Cavalier-specific food-motivation statement found. PDSA (S108) generic feeding advice: 'it's usually recommended to split their daily allowance into two meals.'; 'Treats shouldn't make up more than 10% of their recommended daily calorie intake' → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; percentages stay here and are never shown in the app, the register export or audience docs. The breed's welfare topics in UK sources are the heart (mitral valve disease) and the skull-shape-related Chiari-like malformation / syringomyelia — RKC breed page (S105: 'can be affected by conformational concerns', heart scheme, MRI), RKC Breed Watch Category 2 (S107), PDSA (S108), University of Bristol (S110).",
+      "heart_mvd": {
+        "value": "heart disease (mitral valve disease) — a big problem for the breed; RKC heart scheme before breeding",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "Heart conditions (most often caused by mitral valve disease) – this is a big problem for this breed.",
+        "confidence": "high",
+        "notes": "PDSA (S108): 'It is where the heart's mitral valve weakens and doesn't work as effectively, this is often first noticed as a heart murmur.' RKC breed page (S105): 'All Cavalier King Charles Spaniels that are being bred from should first be graded under The Kennel Club heart scheme.' Summers et al. 2015 (S109): heart murmur was the most common disorder — 'heart murmur (541 study dogs; 30.9% of sample group)' (percentage research only)."
+      },
+      "syringomyelia": {
+        "value": "Chiari-like malformation and syringomyelia (CM/SM) — painful; linked to skull shape; MRI screening",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "a very painful condition where fluid-filled areas develop within the spinal cord near the brain",
+        "confidence": "high",
+        "notes": "PDSA (S108) heading 'Chiari malformation and Syringomyelia (CM/SM)'. RKC breed page (S105): 'Diagnosis for syringomyelia is by MRI scan.' University of Bristol (S110), on Mitchell et al. 2014 (Canine Genetics and Epidemiology): 'Syringomyelia (SM) is a painful condition in dogs and is more common in toy breeds.'; 'In these toy breeds, SM is usually secondary to a specific malformation of the skull'; 'The study suggests that brachycephaly, with resulting doming towards the front of the head, is associated with CM/SM.'"
+      },
+      "eyes": {
+        "value": "eye problems (inherited cataract, retinal dysplasia, curly coat / dry eye); protruding or irritated eyes are a Breed Watch concern",
+        "unit": "—",
+        "source_id": "S107",
+        "quote": "Protruding eyes",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 2 points of concern (S107): 'Signs of visible eye irritation or discomfort (including redness, discharge and tear staining)', 'Incorrect hind conformation and/or poor rear movement', 'Protruding eyes'. PDSA (S108): 'Eye problems – this includes inherited problems such as cataracts.' and 'Curly Coat/Dry Eye (CC/DE) – a condition that affects skin, coat, nails and eyes'. RKC breed page (S105): eye scheme; DNA tests for CC/DE and episodic falling. RKC standard (S106): 'Large, dark, round but not prominent'."
+      },
+      "other_conditions": {
+        "value": "luxating patella, ear problems, bad teeth (shorter muzzle), episodic falling",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "Bad teeth – this is a common problem in all breeds, but potentially more so in Cavaliers as they have a shorter muzzle.",
+        "confidence": "medium",
+        "notes": "PDSA (S108) health list headings: 'Luxating patellas', 'Ear problems', 'Bad teeth', 'Episodic Falling (EF)'. PDSA: 'If you want to minimise the risk of your dog getting problems due to exaggerated features' (sentence continues — read the guide to choosing a pedigree dog, paraphrase)."
+      },
+      "common_disorders_2015": {
+        "value": "heart murmur, diarrhoea, dental disease, otitis externa, conjunctivitis",
+        "unit": "—",
+        "source_id": "S109",
+        "quote": null,
+        "confidence": "high",
+        "notes": "Summers et al. 2015 (S109), VetCompass England, 1,749 dogs with clinical entries: heart murmur 30.9 %, diarrhoea of unspecified cause 11.0 %, dental disease 9.5 %, otitis externa 9.2 %, conjunctivitis 7.5 % (as summarised by the tool). Research only — never shown in the app or register."
+      },
+      "colour_nbs": {
+        "value": "chocolate & tan and chocolate tricolour are not standard colours",
+        "unit": "—",
+        "source_id": "S105",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC breed page (S105): non-breed-standard colours 'Chocolate & Tan', 'Chocolate Tricolour'; Colour Watch 'Category 1'. FCI / RKC standards: 'Any other colour or combination of colours unacceptable.' (S103, S106). The game never draws a chocolate Cavalier."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 44,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "44 | Cavalier King Charles Spaniel",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C), under 'Average Working/Obedience Intelligence'. Coren's own article (S34) lists only the top and bottom 10 — the Cavalier is in neither (runbook: rank from S35). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "average: 25–40 repetitions, obeys first command ≥50%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 25 to 40 repetitions.; Obey first command: 50% of the time or better.;",
+        "confidence": "low",
+        "notes": "Tier 'Average Working/Obedience Intelligence' = ranks 40–54. Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "incredibly eager to please — fairly easy to train",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "Cavaliers are incredibly eager to please, which makes them fairly easy to train.",
+        "confidence": "medium",
+        "notes": "PDSA (S108)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.cavalier_king_charles_spaniel.learning_multiplier (1.0, runbook rule).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small, active, graceful, well balanced, gentle expression",
+        "unit": "—",
+        "source_id": "S106",
+        "quote": "Active, graceful and well balanced, with gentle expression.",
+        "confidence": "high",
+        "notes": "Same wording in FCI (S103). RKC foreword (S106): 'Breeders and judges should at all times be careful to avoid obvious conditions or exaggerations'."
+      },
+      "colours": {
+        "value": [
+          "Blenheim (chestnut on pearly white)",
+          "ruby (whole rich red)",
+          "black and tan",
+          "tricolour (black and white with tan)"
+        ],
+        "unit": "list",
+        "source_id": "S106",
+        "quote": "Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "RKC standard (S106) and FCI (S103): Black and Tan — 'raven black with tan markings above the eyes, on cheeks, inside ears, on chest and legs and underside of tail.'; Ruby — 'whole coloured rich red.'; Blenheim — 'rich chestnut markings well broken up, on pearly white ground.'; Tricolour — black and white well broken up with tan markings. RKC breed page (S105): standard colours Black & Tan, Blenheim, Ruby, Tricolour; NBS Chocolate & Tan, Chocolate Tricolour. Frequencies: not sourced."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). No colour frequencies. Draw over the four standard colours with Blenheim highest (portrait default), then tricolour, ruby, black and tan; never chocolate (NBS, S105)."
+      },
+      "coat": {
+        "value": "long, silky, free from curl, plenty of feathering",
+        "unit": "—",
+        "source_id": "S106",
+        "quote": "Long, silky, free from curl. Slight wave permissible.",
+        "confidence": "high",
+        "notes": "FCI (S103): 'Long, silky, free from curl. Slight wave permissible. Plenty of feathering. Totally free from trimming.' RKC breed page (S105): 'Coat length: Medium'."
+      },
+      "ears": {
+        "value": "long, set high, plenty of feather",
+        "unit": "—",
+        "source_id": "S106",
+        "quote": "Long, set high, with plenty of feather.",
+        "confidence": "high",
+        "notes": "Same in FCI (S103)."
+      },
+      "eyes": {
+        "value": "large, dark, round but not prominent, well apart",
+        "unit": "—",
+        "source_id": "S106",
+        "quote": "Large, dark, round but not prominent; spaced well apart.",
+        "confidence": "high",
+        "notes": "Same in FCI (S103). 'Protruding eyes' is a Breed Watch concern (S107)."
+      },
+      "nose": {
+        "value": "black nose, well-developed nostrils; tapered muzzle about 3.8 cm",
+        "unit": "—",
+        "source_id": "S103",
+        "quote": "Nostrils black and well developed without flesh marks.",
+        "confidence": "high",
+        "notes": "FCI (S103): muzzle 'Length from base of stop to tip of nose about 1 1/2 ins. (3,8 cm). Well tapered.'; skull 'Almost flat between ears.'; stop 'Shallow.' RKC (S106): 'Skull almost flat between ears. Stop shallow.' For PetPrep art: a visible, tapered muzzle and open nostrils — never a flat face (welfare rule, health.syringomyelia)."
+      },
+      "tail": {
+        "value": "in balance with the body, carried happily, never much above the back",
+        "unit": "—",
+        "source_id": "S106",
+        "quote": "Length of tail in balance with body, well set on, carried happily but never much above the level of the back.",
+        "confidence": "high",
+        "notes": "Same in FCI (S103). Docking (formerly optional) is not shown."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S105) and PDSA (S108). Woodgreen page not found; AKC trait ratings not attempted (same as the earlier breeds).",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S105",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S105",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S105",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S105",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S105",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "PDSA (S108): 'you may find they need to be brushed daily' (sentence as returned, start)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S105",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S105",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S108): 'they shed and you'll find they need extra brushing in autumn and spring when they shed even more.' — sources agree."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S105",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "VetCompass median 9.99 y (S71)."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S105",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-10)."
+      },
+      "pdsa_family": {
+        "value": "known for making really great family pets",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "Cavaliers are known for making really great family pets",
+        "confidence": "medium",
+        "notes": "PDSA also: 'Cavaliers are great little dogs that suit family environments.'"
+      },
+      "pdsa_children": {
+        "value": "known to be good around children; supervise play",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "They're known to be good around children because they're so keen to please their owners and love the company of people.",
+        "confidence": "medium",
+        "notes": "PDSA: 'we would always recommend supervising your dog around children just in case playtime gets too rough' → children, not small_children."
+      },
+      "pdsa_grooming": {
+        "value": "fairly high maintenance coat; may need daily brushing; professional grooming",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "Cavalier King Charles Spaniels have fairly high maintenance coats and you may find they need to be brushed daily",
+        "confidence": "medium",
+        "notes": "PDSA: 'You may find you need to take your Cavalier to be groomed professionally' (a few times a year, paraphrase)."
+      },
+      "pdsa_shedding": {
+        "value": "sheds, more in autumn and spring",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "Like most dogs, they shed and you'll find they need extra brushing in autumn and spring when they shed even more.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_exercise": {
+        "value": "at least one hour",
+        "unit": "—",
+        "source_id": "S108",
+        "quote": "Your Cavalier will need at least one hour of exercise a day",
+        "confidence": "high",
+        "notes": ""
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -4530,6 +5020,233 @@
         "confidence": "high",
         "notes": "FCI colours (S95), RKC colours (S97); RKC 'balanced and free from exaggeration' (S98). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black-and-tan portrait default, sable / black options, level back and moderate hind legs, never white"
+      }
+    },
+    "cavalier_king_charles_spaniel": {
+      "_note": "Unattended run M5-R10-05 (2026-10-10): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S105",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'Up to 1 hour per day' (S105); PDSA 'at least one hour' (S108). Rule: one number N ('up to N', 'at least N') → N = 60; sources agree.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S105 'Up to 1 hour per day' = PDSA S108 'at least one hour')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000 (= French Bulldog).",
+        "derived_from": [
+          "S105",
+          "S108",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 9.99 y × 12 = 89.91) (S11 + VetCompass median S71; McMillan 2024 has no Cavalier value reachable). Alternatives: 108 (0.75 × 'over 12 years', S105); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S71"
+        ],
+        "alternatives": {
+          "senior_rkc_over_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 9.99 y, VetCompass S71)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 44 (S35), tier Average (ranks 40–54) → 1.0 (= mixed breed). PDSA 'fairly easy to train' (S108) agrees. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 44, S35 — Average tier)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA: two meals a day (S108) — matches the game's feed windows.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-05); refs = JSON paths in this file. `heart_and_spine` is a new consider key (welfare rule: RKC 'can be affected by conformational concerns' S105, heart scheme and MRI; PDSA heart / CM-SM S108; Bristol skull shape S110). SL 'srce in hrbtenjača — preverite zdravje staršev', EN 'heart and spine — check the parents' health'. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S105"
+            ],
+            "refs": [
+              "cavalier_king_charles_spaniel.suitability.rkc_size_of_home",
+              "cavalier_king_charles_spaniel.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S105 'Size of home: Flat/ Apartment' / 'Size of garden: Small/ medium garden'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S108"
+            ],
+            "refs": [
+              "cavalier_king_charles_spaniel.suitability.pdsa_family",
+              "cavalier_king_charles_spaniel.behaviour.family"
+            ],
+            "quote": "S108 'Cavaliers are known for making really great family pets'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S108"
+            ],
+            "refs": [
+              "cavalier_king_charles_spaniel.suitability.pdsa_children"
+            ],
+            "quote": "S108 'They're known to be good around children because they're so keen to please their owners and love the company of people.'",
+            "note": "Explicit PDSA statement (same basis as the Golden / French Bulldog); PDSA advises supervising play → not small_children."
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S105",
+              "S108"
+            ],
+            "refs": [
+              "cavalier_king_charles_spaniel.suitability.rkc_shedding",
+              "cavalier_king_charles_spaniel.suitability.pdsa_shedding"
+            ],
+            "quote": "S105 'Sheds: Yes'; S108 'they shed … when they shed even more'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S105",
+              "S108"
+            ],
+            "refs": [
+              "cavalier_king_charles_spaniel.suitability.rkc_grooming",
+              "cavalier_king_charles_spaniel.suitability.pdsa_grooming"
+            ],
+            "quote": "S105 'Grooming: More than once a week'; S108 'you may find they need to be brushed daily'"
+          },
+          {
+            "tag": "heart_and_spine",
+            "source_ids": [
+              "S108",
+              "S105",
+              "S110"
+            ],
+            "refs": [
+              "cavalier_king_charles_spaniel.health.heart_mvd",
+              "cavalier_king_charles_spaniel.health.syringomyelia"
+            ],
+            "quote": "S108 'Heart conditions (most often caused by mitral valve disease) – this is a big problem for this breed.'; S108 CM/SM 'a very painful condition …'; S105 heart scheme / 'Diagnosis for syringomyelia is by MRI scan.'; S110 skull shape",
+            "note": "NEW consider key (welfare rule §3). Calm chip, no statistics."
+          }
+        ],
+        "not_proposed": {
+          "small_children": "PDSA supervision caveat (S108).",
+          "first_time_owner": "No source statement; PDSA only 'fairly easy to train' (S108).",
+          "other_pets": "Cats OK but prey drive with small pets (S108) — conditional.",
+          "often_alone": "PDSA: needs constant company, can develop separation anxiety (S108).",
+          "active_family": "'Up to 1 hour per day' (S105) — moderate.",
+          "long_daily_exercise": "≈ 1 h/day (S105, S108).",
+          "large_home": "RKC 'Flat/ Apartment' (S105).",
+          "low_shedding": "Sheds (S105, S108).",
+          "chews_when_bored": "No source.",
+          "food_motivated_weight": "No breed-specific source (measured median weight above the standard, S109, is not a food-motivation statement).",
+          "needs_mental_stimulation": "No breed-specific quote.",
+          "brachycephalic_breathing": "No Cavalier breathing / heat source captured; the skull-shape concern is covered by heart_and_spine (CM/SM, S110).",
+          "may_herd_children": "No source.",
+          "older_owners": "No source."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, children; consider sheds, frequent_grooming, heart_and_spine (new key, welfare rule)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S105",
+        "quote": "This breed can be affected by conformational concerns, more information can be found here",
+        "confidence": "high",
+        "notes": "Welfare-concern rule (runbook §3): the RKC names the breed for conformational concerns (breed page S105; Breed Watch Category 2 S107: protruding eyes, eye irritation, hind conformation) and the University of Bristol links the breed's painful CM/SM to skull shape (S110). The Cavalier is a normal breed in the app and the register, but is not used in PetPrep advertising, store screenshots, social posts or decks until David decides otherwise.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, NOT in marketing / store screenshots (RKC conformational concerns S105 / Breed Watch S107, skull-shape CM/SM S110)"
+      },
+      "ai_appearance": {
+        "value": "adult Cavalier King Charles Spaniel, Blenheim (default), tricolour, ruby or black and tan; long feathered ears, silky coat; visible tapered muzzle, open nostrils, eyes not protruding; standard colours only; never chocolate",
+        "unit": "—",
+        "source_id": "S103",
+        "quote": "Nostrils black and well developed without flesh marks.",
+        "confidence": "high",
+        "notes": "FCI muzzle 'about 1 1/2 ins. (3,8 cm). Well tapered.' (S103); RKC eyes 'round but not prominent' (S106) and 'avoid obvious conditions or exaggerations'; Breed Watch 'Protruding eyes' (S107). Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): Blenheim portrait default, tricolour / ruby / black-and-tan options, visible muzzle and non-protruding eyes, never chocolate"
       }
     }
   }
