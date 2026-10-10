@@ -50,9 +50,9 @@ use InvalidArgumentException;
  * GoldenRetrieverBreedTest / FrenchBulldogBreedTest / GermanShepherdBreedTest /
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
- * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest cross-check the Labrador /
+ * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -227,8 +227,18 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const PROPOSED_R10_BERNESE_SENIOR = 'predlog Claude 2026-10-10 (najbližja vrstica pravila runbooka, M5-R10-12) — čaka Davida';
 
+    /**
+     * M5-R10-13 Siberian Husky (unattended run 2026-10-10, data.json
+     * proposed_game_parameters.siberian_husky.*.decision): every value follows a standing rule
+     * of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min, senior 90 min, puppy 10 min × age capped at 120, stages 9 / 36 / 90
+     * (senior from the RKC lower bound "Over 10 years"), arrival 2 / 9 / 36 / 90, learning
+     * multiplier 1.0 (Coren 45, Average); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_SIBERIAN_HUSKY = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-13)';
+
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -645,6 +655,10 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-12 (docs/research/dog-data/data.json bernese_mountain_dog,
             // S150–S157; runbook rules in proposed_game_parameters.bernese_mountain_dog).
             BreedType::BerneseMountainDog => self::berneseMountainDogProfile(),
+
+            // M5-R10-13 (docs/research/dog-data/data.json siberian_husky,
+            // S158–S165; runbook rules in proposed_game_parameters.siberian_husky).
+            BreedType::SiberianHusky => self::siberianHuskyProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -1551,6 +1565,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'bernese_mountain_dog.lifespan.median_ch',
                 'quote' => 'The median life expectancy of all dogs was 8.4 years (IQR, 6.9–9.7).',
                 'notes' => 'Klopfenstein et al. 2016 (S156), Swiss population, 389 dogs. McMillan 2024 (S54 / S135) gives no reachable value. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Siberian Husky (M5-R10-13). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_SIBERIAN_HUSKY);
+     * weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function siberianHuskyProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_SIBERIAN_HUSKY;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S160', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.siberian_husky.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lifespan lower bound "Over 10 years" (S160; PDSA "Over 10 years", S162) = 7.5 y = 90 months. McMillan 2024 has no reachable Siberian Husky value and no VetCompass median was found. Not chosen: 88 (Finnish average 9.75 y, S165), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.siberian_husky.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S160', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.siberian_husky.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S160) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA "Your Husky will need a minimum of two hours of exercise every day." (S162) agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.siberian_husky.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[15.5, 28.0], [
+                'unit' => 'kg', 'source_id' => 'S158', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'siberian_husky.adult_weight.fci',
+                'quote' => 'Dogs: 20,5 - 28 kg.',
+                'notes' => 'FCI standard (S158): dogs 20.5–28 kg, "Females: 15,5 - 23 kg." → overall range. RKC standard (S161) dogs 20–27 kg, bitches 16–23 kg; PDSA (S162) 16–27 kg.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'siberian_husky.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (15.5–28 kg = 34–62 lb, mostly the Medium class of S10; FCI "a medium-sized working dog", S158).',
+            ]],
+            'coren_rank' => [45, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'siberian_husky.trainability.coren_rank',
+                'quote' => '| 45 | Siberian Husky |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 45 (shared with the Bichon Frise and King Charles Spaniel), tier "Average" (ranks 40–54). Coren\'s own article (S34) lists only the top / bottom 10.',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.siberian_husky.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 45 (S35) in the "Average" tier → 1.0, the mixed breed\'s speed (PDSA S162: "very intelligent" but "independent thinkers"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S160', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'siberian_husky.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S160; PDSA "Over 10 years", S162). No reachable McMillan 2024 or VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

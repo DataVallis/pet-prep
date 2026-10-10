@@ -248,6 +248,7 @@ describe('PetPickerStep', () => {
       'breed-option-havanese',
       'breed-option-west_highland_white_terrier',
       'breed-option-bernese_mountain_dog',
+      'breed-option-siberian_husky',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -444,6 +445,48 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/hypoallergenic|\d|%/i);
       expect(screen.getByTestId('breed-suitability-standard_poodle-consider')).toHaveTextContent(/needs brushing several times a week/);
       expect(screen.getByTestId('breed-option-standard_poodle')).toHaveTextContent(/Poodle \(Standard\)/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-13: the Siberian Husky (fallback) shows its chips, is found as "husky" and "haski", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const husky = screen.getByTestId('breed-option-siberian_husky');
+    expect(husky).toHaveTextContent(/Sibirski haski/);
+    expect(husky).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-siberian_husky-suits')).toHaveTextContent(/aktivno družinoveliko hišo z vrtom/);
+    expect(screen.getByTestId('breed-suitability-siberian_husky-consider')).toHaveTextContent(
+      /vsak dan potrebuje veliko gibanjarad pobegne — potrebuje varno, visoko ograjoko se dolgočasi, grize stvariizpada mu dlakapotrebuje česanje večkrat na teden/,
+    );
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'husky');
+    expect(screen.getByTestId('breed-option-siberian_husky')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-bernese_mountain_dog')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'haski');
+    expect(screen.getByTestId('breed-option-siberian_husky')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-siberian_husky'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'siberian_husky', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'siberian_husky' }),
+    );
+  });
+
+  it('M5-R10-13: the Siberian Husky chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-siberian_husky-consider');
+      expect(consider).toHaveTextContent(/escapes easily — needs a secure, high fence/);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-siberian_husky')).toHaveTextContent(/Siberian Husky/);
     } finally {
       await i18n.changeLanguage('sl');
     }

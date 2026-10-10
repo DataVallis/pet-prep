@@ -7084,6 +7084,593 @@
       }
     }
   },
+  "siberian_husky": {
+    "_note": "Added 2026-10-10 (M5-R10-13, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S158–S165, reused S10, S11, S14, S24, S35, S45). The PDSA page (S162) was returned partly as paraphrase with quotes capped at ~120 characters — only passages the tool returned in quotation marks are used as quotes; longer sentences are cut where the tool cut them. Every S162 quote used (energy, children, exercise, escaping, chewing, shedding, grooming, hip dysplasia) was re-checked character for character on a second fetch (2026-10-10, review of PR #161) — all present verbatim, including the page's own typo 'The have heaps of energy'. McMillan et al. 2024 (S54 / S135) names no Siberian Husky in its text or legends; its Supplementary Table 3, the Dogs Trust breed table (S123) and the 'shortest and longest' PDF were not reachable (fetch error 2026-10-10); Teng et al. 2022 (UK life tables) mentions the 'Husky' only in its sample list and probability-of-death sentences, the Husky life table itself (Table 3) was not reachable; no VetCompass Siberian Husky median found — so the lifespan is the RKC lower bound 'Over 10 years' (S160) per the runbook rule. Woodgreen and the AKC breed page were not found / not attempted.",
+    "identity": {
+      "value": "FCI No. 270, Group 5 Section 1 (Nordic Sledge Dogs), USA",
+      "unit": "—",
+      "source_id": "S159",
+      "quote": "Group: n°5 - Spitz and primitive types; Section: Nordic Sledge Dogs; Country of origin: UNITED STATES OF AMERICA",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S159): standard number 270; definitive acceptance '9/8/1966'; valid standard '11/14/2022'; 'Not subject to a working trial'. FCI standard PDF (S158): 'Group 5 Spitz and primitive types.', Section 1 'Nordic Sledge Dogs.', origin 'U.S.A.', valid standard '14.11.2022.' Quote assembled from the nomenclature fields as returned."
+    },
+    "size_class": {
+      "value": "medium-large",
+      "unit": "—",
+      "source_id": "S160",
+      "quote": "Size: Medium-Large",
+      "confidence": "medium",
+      "notes": "PDSA (S162) key facts: 'Size: Large' — conflict; RKC breed page preferred (runbook §2.2). FCI (S158): 'a medium-sized working dog'. FCI height 50.5–60 cm, weight 15.5–28 kg (S158) → the game treats it as a medium dog for the growth class (S10)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            53.5,
+            60
+          ],
+          "female": [
+            50.5,
+            56
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S158",
+        "quote": "Dogs: 53,5 - 60 cm.",
+        "confidence": "high",
+        "notes": "FCI (S158): 'Females: 50,5 - 56 cm.' Disqualification: 'Dogs over 60 cm and bitches over 56 cm.'"
+      },
+      "rkc": {
+        "value": {
+          "male": [
+            53,
+            60
+          ],
+          "female": [
+            51,
+            56
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S161",
+        "quote": "Height: dogs: 53-60 cms (21-23½ ins) at withers; bitches: 51-56 cms (20-22 ins) at withers.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S161, last updated 1 April 2025)."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            53.3,
+            59.7
+          ],
+          "female": [
+            50.8,
+            55.9
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S163",
+        "quote": "Height - Dogs, 21 to 23½ inches at the withers. Bitches, 20 to 22 inches at the withers.",
+        "confidence": "high",
+        "notes": "AKC standard (S163, approved February 9, 2021); inches converted to cm (× 2.54) by us."
+      },
+      "pdsa_average": {
+        "value": [
+          51,
+          60
+        ],
+        "unit": "cm",
+        "source_id": "S162",
+        "quote": "Average height: 51-60 cm",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (label wording as returned)."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            20.5,
+            28
+          ],
+          "female": [
+            15.5,
+            23
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S158",
+        "quote": "Dogs: 20,5 - 28 kg.",
+        "confidence": "high",
+        "notes": "FCI (S158): 'Females: 15,5 - 23 kg.' Fault: 'Any appearance of excessive bone or weight should be penalized.' Game range 15.5–28 kg (both sexes)."
+      },
+      "rkc": {
+        "value": {
+          "male": [
+            20,
+            27
+          ],
+          "female": [
+            16,
+            23
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S161",
+        "quote": "Weight: dogs: 20.-27 kgs (45-60 lbs); bitches: 16-23 kgs (35-50 lbs).",
+        "confidence": "high",
+        "notes": "RKC breed standard (S161); the dog value is returned as '20.-27' (typo on the page; 45 lb = 20.4 kg)."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            20.4,
+            27.2
+          ],
+          "female": [
+            15.9,
+            22.7
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S163",
+        "quote": "Weight - Dogs, 45 to 60 pounds. Bitches, 35 to 50 pounds.",
+        "confidence": "high",
+        "notes": "AKC standard (S163); pounds converted to kg (× 0.4536) by us."
+      },
+      "pdsa": {
+        "value": [
+          16,
+          27
+        ],
+        "unit": "kg",
+        "source_id": "S162",
+        "quote": "Average weight: 16-27 kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box, one range for both sexes."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 15.5–28 kg (S158) = 34–62 lb → mostly the 'Medium' class (the top of the male range touches 'Large (59–99 pounds): 15–18 months'); FCI 'a medium-sized working dog' (S158) → 12–15 months, as for the Border Collie and the Australian Shepherd. Edge: the FCI male maximum 28 kg ≈ 62 lb sits in the 'Large (59–99 pounds): 15–18 months' class; the game is unaffected (the puppy cap of 120 min is reached at 12 months either way)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Siberian Husky growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S160",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page (S160). PDSA key facts (S162): 'Average lifespan: Over 10 years' — same."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S135",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 (S135 / S54) names no Siberian Husky in its text or legends (checked via the nature.com article 2026-10-10: 'neither Siberian Husky nor Husky appears'); Supplementary Table 3 and the Dogs Trust breed table (S123) not reachable this run. UNSOURCED value — verify before replacing the RKC lower bound."
+      },
+      "finland_average": {
+        "value": 9.75,
+        "unit": "years (average life expectancy, Finnish Kennel Club data 2012–2021)",
+        "source_id": "S165",
+        "quote": "The average life expectancy according to the Finnish statistics is 9 years 9 months.",
+        "confidence": "low",
+        "notes": "IPFD / DogWellNet 'Get a GRIHP!' (S165) citing Finnish Kennel Club mortality data; also 'Dogs that die because of old age usually reach the age of 13 years.' A Finnish average, not a UK median — recorded as an alternative only (0.75 × 9.75 y × 12 = 87.75 → 88 months); not used by the runbook rule."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S160; PDSA 'Over 10 years' agrees, S162) → 0.75 × 10 = 7.5 y = 90 months. Runbook order: McMillan 2024 (no value reachable) → VetCompass median (none found) → RKC lower bound. Alternatives: 88 (Finnish average 9.75 y, S165), 84 (Dogs Trust > 7 y, S14). Provisional until a McMillan / VetCompass median is checked.",
+        "derived_from": [
+          "S11",
+          "S160"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S160",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "PDSA (S162): 'Your Husky will need a minimum of two hours of exercise every day.' (key facts: minimum exercise '2 hours') — sources agree on 120."
+      },
+      "energy": {
+        "value": "heaps of energy; for active, adventure-loving owners",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "The have heaps of energy and are the perfect pet for active, adventure-loving owners.",
+        "confidence": "medium",
+        "notes": "Quote as returned (the page's own typo 'The'). FCI (S158): 'quick and light on his feet and free and graceful in action'; RKC breed page (S160): 'The lightest and fastest of the sled dogs.'"
+      },
+      "spread_and_vary": {
+        "value": "spread exercise across the day, vary routes; early mornings / evenings in warm weather",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "We’d recommend spreading this across the day and vary your walking routes so they don’t get bored.",
+        "confidence": "medium",
+        "notes": "PDSA (S162): 'Early mornings and evenings are probably the best times to go for long walks and runs.'"
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "friendly and gentle, alert and outgoing; intelligent but independent; very social; howls rather than barks",
+        "unit": "—",
+        "source_id": "S158",
+        "quote": "The characteristic temperament of the Siberian Husky is friendly and gentle, but also alert and outgoing.",
+        "confidence": "high",
+        "notes": "AKC (S163) the same sentence; RKC standard (S161): 'Friendly and gentle, alert and outgoing.' PDSA (S162): 'While they are very intelligent, they’re also independent thinkers'; 'Huskies really thrive off company because they are so social.'; 'they do have a reputation for howling and singing to their owners whenever the mood takes them.'"
+      },
+      "family": {
+        "value": "suits adult-only households or households with teenagers; not recommended with smaller children (may knock them over)",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "They suit adult-only households or households with teenagers.",
+        "confidence": "medium",
+        "notes": "PDSA (S162): 'we wouldn’t recommend getting a Husky if you have smaller children as they could knock them over accidentally.' → no family_pet / children / small_children tag."
+      },
+      "time_alone": {
+        "value": "does not cope well alone; known for separation anxiety",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "Huskies really don’t cope well on their own",
+        "confidence": "medium",
+        "notes": "PDSA (S162): 'The breed is known for suffering from separation anxiety' → no often_alone tag."
+      },
+      "other_pets": {
+        "value": "fine with other dogs if socialised young; not with smaller pets (high prey drive)",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "Huskies have such a high prey drive that we wouldn’t recommend keeping them with smaller pets",
+        "confidence": "medium",
+        "notes": "PDSA (S162): '…even if they have been introduced from a young age.'; 'Huskies love company so as long as they have been socialised from a young age, they should get along fine with other dogs.' Conditional → no other_pets tag. Cats not mentioned."
+      },
+      "chewing": {
+        "value": "destructive when stressed from being alone — may chew furniture",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "so you may find they chew furniture to let you know.",
+        "confidence": "medium",
+        "notes": "PDSA (S162): 'They are known for being destructive, especially when they get stressed from being alone,' — the chewing sentence ('so you may find they chew furniture to let you know.') follows it on the page. Like the West Highland White Terrier, the trigger is stress / boredom when left alone. Basis of the chews_when_bored tag."
+      },
+      "escaping": {
+        "value": "escape artists — dig under and get over fences; need a very secure garden with high fences",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "Owners need a very secure garden with high fences as Huskies are known for getting up to mischief",
+        "confidence": "medium",
+        "notes": "PDSA (S162), sentence cut by the tool; it continues '– including escape attempts!' (re-fetch 2026-10-10), and separately 'they’ll often dig holes to try and tunnel under fences.' Basis of the new consider tag secure_fencing."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No Siberian Husky food-motivation statement found. PDSA (S162): 'You should feed them a good quality, commercially available, complete dog food.' RKC Breed Watch points 'Too fat' / 'Too thin' (S164) concern show condition, not appetite → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages for this breed are stored for the app (the Finnish / Swedish screening shares in S165 stay out of the app, the export and audience docs). Not a conformation welfare-concern breed: RKC Breed Watch 'Category 2' (S164) lists only 'Too fat' and 'Too thin' — body condition at shows, not an exaggerated conformation; the FCI standard asks for a moderate dog ('Any appearance of excessive bone or weight should be penalized.', S158).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2 — points of concern: too fat, too thin",
+        "unit": "—",
+        "source_id": "S164",
+        "quote": "Too fat",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S164) heading 'Siberian Husky - Category 2'; points 'Too fat', 'Too thin'. Explanatory text: 'Particular points of concern for individual breeds may include features not specifically highlighted in the breed standard'. RKC breed page (S160): 'Breed Watch: Category 2'. Not conformation-related → the welfare-concern rule does not apply."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia — hip screening of breeding dogs",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "Hip dysplasia – where hip joint that doesn’t fit together perfectly, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S162, wording as returned). RKC breed page (S160): Best Practice 'Hip testing (for hip dysplasia) using the BVA/RKC Hip Dysplasia Scheme'. Not the hips_hind_legs chip: no RKC / vet association names hind conformation as a concern for this breed."
+      },
+      "eyes": {
+        "value": "eye problems: cataracts, glaucoma (eye screening of breeding dogs)",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "Cataracts – ‘clouding’ of the lens of the eye affecting vision.",
+        "confidence": "medium",
+        "notes": "PDSA (S162): 'Glaucoma – Increased pressure within the eye which can cause extreme pain and potentially eye loss.' RKC breed page (S160): Good Practice 'Eye testing (and gonioscopy for PLA) using the BVA/RKC/ISDS Eye Scheme'. IPFD (S165): 'Most common findings are hereditary cataracts (cortical and/or posterior polar)'."
+      },
+      "epilepsy": {
+        "value": "epilepsy",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "Epilepsy.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S162), heading only as returned."
+      },
+      "other_conditions": {
+        "value": "certain cancers",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA health list heading 'Certain cancers' (S162, paraphrase — no verbatim line returned)."
+      },
+      "heat": {
+        "value": "thick coat — can overheat in summer; avoid exercise in the hottest parts of the day",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "Be careful during the summer months as Huskies have such thick coats they can easily overheat.",
+        "confidence": "medium",
+        "notes": "PDSA (S162): 'Keep an eye on them for signs of heatstroke and try to avoid exercising during the hottest parts of the day.' Background (care advice); no chip."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 45,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 45 | Siberian Husky |",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C): rank 45, shared with the Bichon Frise and King Charles Spaniel, under 'Average Working/Obedience Intelligence' (row as returned). Coren's own article (S34) lists only the top / bottom 10 — runbook: rank from S35. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "average: 25–40 repetitions, obeys first command ≥50%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 25 to 40 repetitions.; Obey first command: 50% of the time or better.",
+        "confidence": "low",
+        "notes": "Tier 'Average' = ranks 40–54. Tier definitions from Wikipedia; verify in book. Coren ranks obedience to commands, not 'cleverness'."
+      },
+      "training_notes": {
+        "value": "very intelligent but independent thinkers; consistent reward-based training; first-time owners → accredited trainer",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "While they are very intelligent, they’re also independent thinkers",
+        "confidence": "medium",
+        "notes": "PDSA (S162): 'If you’re a first-time owner or don’t have much experience of the breed,' '…you may benefit from contacting an accredited trainer for guidance.' Not a first_time_owner statement → no tag."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.siberian_husky.learning_multiplier (1.0, runbook rule).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium-sized working sled dog, quick and light on his feet, free and graceful in action; moderately compact, well-furred body, erect ears, brush tail",
+        "unit": "—",
+        "source_id": "S158",
+        "quote": "The Siberian Husky is a medium-sized working dog, quick and light on his feet and free and graceful in action.",
+        "confidence": "high",
+        "notes": "RKC standard (S161): 'Medium-sized working sled-dog, quick and light on feet.' FCI fault (S158): 'Any appearance of excessive bone or weight should be penalized.'"
+      },
+      "colours": {
+        "value": [
+          "grey and white",
+          "black and white",
+          "red and white",
+          "agouti",
+          "sable",
+          "white"
+        ],
+        "unit": "list (all ranges of the allowed colours; markings and head masks vary)",
+        "source_id": "S158",
+        "quote": "All ranges of the allowable colours which are black, grey, agouti, sable, red and white.",
+        "confidence": "high",
+        "notes": "FCI (S158) / AKC (S163) the same list; disqualifying (FCI S158): 'Merle or Brindle patterns are not allowable and are to be disqualified.' RKC standard (S161): 'All colours and markings, including white, except merle which is unacceptable.' Never merle or brindle (runbook §3 colour rule)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). The standards rank no colour; grey and white with a face mask is drawn highest (portrait default), then black and white, red and white, agouti, sable and pure white; never merle or brindle."
+      },
+      "coat": {
+        "value": "double, medium length, well furred; never so long as to obscure the clean-cut outline",
+        "unit": "—",
+        "source_id": "S158",
+        "quote": "The coat of the Siberian Husky is double and medium in length,",
+        "confidence": "high",
+        "notes": "FCI (S158): 'giving a well furred appearance, but is never so long as to obscure the cleancut outline of the dog.' RKC breed page (S160): 'Coat length: Short'."
+      },
+      "ears": {
+        "value": "medium size, triangular, thick and well furred, set high, strongly erect with slightly rounded tips",
+        "unit": "—",
+        "source_id": "S158",
+        "quote": "They are thick, well furred, slightly arched at the back,",
+        "confidence": "high",
+        "notes": "FCI (S158): 'and strongly erect, with slightly rounded tips pointing straight up.' RKC (S161): 'Medium size, relatively close together, triangular in shape, the height slightly greater than width at base.'"
+      },
+      "eyes": {
+        "value": "almond-shaped, set obliquely; brown or blue, one of each or particoloured",
+        "unit": "—",
+        "source_id": "S158",
+        "quote": "Eyes may be brown or blue in colour; one of each or particoloured are acceptable.",
+        "confidence": "high",
+        "notes": "RKC (S161): 'Almond-shaped, moderately spaced and set obliquely.' AKC (S163) the same colour sentence."
+      },
+      "nose": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Nose pigment not captured from the standards this run (not needed for the portrait: a natural, moderate muzzle)."
+      },
+      "tail": {
+        "value": "well-furred fox-brush tail, carried over the back in a sickle curve at attention, trailing at rest",
+        "unit": "—",
+        "source_id": "S158",
+        "quote": "The well furred tail of fox-brush shape is set on just below the level of the topline,",
+        "confidence": "high",
+        "notes": "FCI (S158): 'usually carried over the back in a graceful sickle curve when the dog is at attention.' RKC (S161): 'A trailing tail is normal for dog when working or in repose.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S160) and PDSA (S162). The RKC page shows no 'Good with children' field (as returned 2026-10-10). Woodgreen and AKC trait ratings not found / not attempted.",
+      "rkc_size": {
+        "value": "Medium-Large",
+        "unit": "—",
+        "source_id": "S160",
+        "quote": "Size: Medium-Large",
+        "confidence": "high",
+        "notes": "PDSA (S162): 'Large'."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S160",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S160",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of the large_home tag (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S160",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S160",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "PDSA (S162): 'brush your Husky a few times a week' → frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S160",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "The FCI standard calls the coat 'double and medium in length' (S158)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S160",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S162): 'Be prepared – Huskies shed a lot!' — sources agree."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S160",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "Not the shorter_lifespan chip (criterion: 'Under 10 years')."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S160",
+        "quote": "Town or country: Country",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S160",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-10)."
+      },
+      "pdsa_children": {
+        "value": "not recommended with smaller children (may knock them over); adult-only or teenage households",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "we wouldn’t recommend getting a Husky if you have smaller children as they could knock them over accidentally.",
+        "confidence": "medium",
+        "notes": "PDSA (S162): 'They suit adult-only households or households with teenagers.' → no children / small_children / family_pet tag."
+      },
+      "pdsa_exercise": {
+        "value": "minimum two hours every day",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "Your Husky will need a minimum of two hours of exercise every day.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "brush a few times a week",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "You’ll need to brush your Husky a few times a week to keep their coat smooth and in good condition.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_shedding": {
+        "value": "sheds a lot",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "Be prepared – Huskies shed a lot!",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_first_time_owner": {
+        "value": "first-time owners → accredited trainer",
+        "unit": "—",
+        "source_id": "S162",
+        "quote": "If you’re a first-time owner or don’t have much experience of the breed,",
+        "confidence": "medium",
+        "notes": "Not a first_time_owner statement → no tag."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -10303,6 +10890,244 @@
         "confidence": "high",
         "notes": "Colour from the FCI / RKC standards (S150, S153: tricolour only). Weight unsourced. Natural, moderate build (not exaggerated).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): tricolour (the only standard colour) is the portrait default; long natural coat, moderate build"
+      }
+    },
+    "siberian_husky": {
+      "_note": "Unattended run M5-R10-13 (2026-10-10): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry. One new consider key (secure_fencing) by the runbook's 'new tag' rule.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S160",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'More than 2 hours per day' (S160); PDSA 'a minimum of two hours of exercise every day' (S162) agrees. Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S160 'More than 2 hours per day'; PDSA S162 the same)"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000 (= Border Collie, Labrador, Golden, German Shepherd, Australian Shepherd).",
+        "derived_from": [
+          "S160",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S160; PDSA S162 the same). McMillan 2024 has no reachable Siberian Husky value; no VetCompass median found. Alternatives: 88 (Finnish average 9.75 y, S165), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 Supplementary Table / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S160"
+        ],
+        "alternatives": {
+          "senior_finland_average": 88,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S160)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 45 (S35), tier Average (ranks 40–54) → 1.0. PDSA 'very intelligent' but 'independent thinkers' (S162) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 45, S35 — Average tier)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-13); refs = JSON paths in this file. New vocabulary key secure_fencing (consider). No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S160",
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.exercise.adult",
+              "siberian_husky.exercise.energy"
+            ],
+            "quote": "S160 'Exercise: More than 2 hours per day'; S162 'the perfect pet for active, adventure-loving owners'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S160"
+            ],
+            "refs": [
+              "siberian_husky.suitability.rkc_size_of_home",
+              "siberian_husky.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S160 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S160",
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.exercise.adult",
+              "siberian_husky.suitability.pdsa_exercise"
+            ],
+            "quote": "S160 'More than 2 hours per day'; S162 'a minimum of two hours of exercise every day'"
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.behaviour.escaping"
+            ],
+            "quote": "S162 'Owners need a very secure garden with high fences as Huskies are known for getting up to mischief'"
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.behaviour.chewing"
+            ],
+            "quote": "S162 'They are known for being destructive, especially when they get stressed from being alone,' 'so you may find they chew furniture to let you know.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S160",
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.suitability.rkc_shedding",
+              "siberian_husky.suitability.pdsa_shedding"
+            ],
+            "quote": "S160 'Sheds: Yes'; S162 'Be prepared – Huskies shed a lot!'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S160",
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.suitability.rkc_grooming",
+              "siberian_husky.suitability.pdsa_grooming"
+            ],
+            "quote": "S160 'Grooming: More than once a week'; S162 'brush your Husky a few times a week'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "PDSA: suits adult-only households or households with teenagers (S162) — no family-pet statement.",
+          "children": "PDSA does not recommend the breed with smaller children (S162).",
+          "small_children": "PDSA advises against it with smaller children — may knock them over (S162).",
+          "first_time_owner": "PDSA: first-time owners may need an accredited trainer (S162).",
+          "apartment": "RKC 'Large house' (S160).",
+          "other_pets": "Conditional — other dogs if socialised young; not with smaller pets (high prey drive, S162).",
+          "often_alone": "PDSA: does not cope well alone; separation anxiety (S162).",
+          "older_owners": "No source.",
+          "low_shedding": "Sheds (S160, S162).",
+          "food_motivated_weight": "No breed-specific appetite statement; Breed Watch 'Too fat' / 'Too thin' is show condition (S164).",
+          "needs_mental_stimulation": "PDSA only asks to vary walking routes so they don't get bored (S162) — no mental-stimulation statement.",
+          "may_herd_children": "Not a herding breed; the PDSA small-children caveat is about knocking them over (S162).",
+          "brachycephalic_breathing": "Not flat-faced.",
+          "hips_hind_legs": "Hip dysplasia listed (S162) and hip testing recommended (S160) as for many breeds, but no Breed Watch point about hind conformation (S164) → recorded under health.",
+          "heart_and_spine": "No source.",
+          "back_spine": "No source.",
+          "sensitive_skin": "No source.",
+          "shorter_lifespan": "RKC 'Over 10 years' (S160) — criterion is 'Under 10 years'."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, secure_fencing (new key), chews_when_bored, sheds, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a conformation welfare-concern breed; no veterinary advice against showing the breed in advertising)",
+        "unit": "—",
+        "source_id": "S164",
+        "quote": "Too fat",
+        "confidence": "high",
+        "notes": "RKC Breed Watch 'Category 2' (S164) lists only 'Too fat' and 'Too thin' — show body condition, not a conformation exaggeration; moderate standard (FCI S158: 'Any appearance of excessive bone or weight should be penalized.'). The only veterinary advice against advertising a breed type is for flat-faced breeds (S92). Marketing never promises health and never shows a Husky as an easy dog for small children (PDSA S162).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed)"
+      },
+      "ai_appearance": {
+        "value": "adult Siberian Husky, grey and white with a face mask (default), black and white, red and white, agouti, sable or pure white; double medium-length well-furred coat, triangular erect ears, almond eyes (blue or brown), fox-brush tail; moderate, never heavy; standard colours only — never merle or brindle",
+        "unit": "—",
+        "source_id": "S158",
+        "quote": "All ranges of the allowable colours which are black, grey, agouti, sable, red and white.",
+        "confidence": "high",
+        "notes": "Colours from the FCI standard (S158) with no order of preference; merle / brindle disqualifying (S158, S161). Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey and white portrait default, black and white / red and white / agouti / sable / white options, standard colours only, never merle or brindle"
       }
     }
   }

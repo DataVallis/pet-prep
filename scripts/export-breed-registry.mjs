@@ -381,6 +381,7 @@ const SPECIES = [
       { id: 'havanese', availability: 'coming_soon', synonyms: { en: ['Bichon Havanais'], sl: ['havanski bišon', 'havanski bison', 'havanez', 'bichon havanais'] } },
       { id: 'west_highland_white_terrier', availability: 'coming_soon', synonyms: { en: ['Westie', 'West Highland Terrier'], sl: ['zahodnoškotski beli terier', 'zahodnoskotski beli terier', 'westie', 'west highland terier'] } },
       { id: 'bernese_mountain_dog', availability: 'coming_soon', synonyms: { en: ['Berner', 'Berner Sennenhund', 'Bernese'], sl: ['bernski planšarski pes', 'bernski plansarski pes', 'bernski planšar', 'bernski plansar', 'berner'] } },
+      { id: 'siberian_husky', availability: 'coming_soon', synonyms: { en: ['Husky', 'Huskie'], sl: ['haski', 'sibirski husky', 'husky', 'sibirec'] } },
     ],
   },
   {
@@ -624,6 +625,26 @@ const DOG_FACTS = {
       ['bloat_gdv', 'health.gdv'],
     ],
   },
+  // M5-R10-13. Not exported: lifespan.mcmillan_2024 (no value reachable), lifespan.finland_average
+  // (a Finnish average next to UK values would mislead — alternative only), lifespan.senior_from
+  // (derived), height.rkc / akc / pdsa_average and adult_weight.rkc / akc / pdsa (FCI is the
+  // register's standard), health.breed_watch (show condition), health.heat (care advice),
+  // health.other_conditions (no verbatim line), every IPFD screening percentage (S165 — research only).
+  siberian_husky: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['inherited_eye_disease', 'health.eyes'],
+      ['epilepsy', 'health.epilepsy'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -730,6 +751,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.bernese_mountain_dog.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.bernese_mountain_dog.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.bernese_mountain_dog.exercise_minutes_senior',
+  },
+  siberian_husky: {
+    adult_minutes: ['proposed_game_parameters.siberian_husky.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.siberian_husky.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.siberian_husky.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.siberian_husky.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.siberian_husky.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.siberian_husky.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],

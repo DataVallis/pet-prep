@@ -332,7 +332,7 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog'])
+        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky'])
             ->and($breeds[3])->toBe([
                 'breed' => 'golden_retriever', 'slug' => 'golden-retriever', 'species' => 'dog', 'premium' => true,
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.golden_retriever',

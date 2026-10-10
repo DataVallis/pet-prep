@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Sibirski haski: trinajsta nova pasma in oznaka za pse, ki radi pobegnejo (M5-R10-13)
+
+**Kaj se je zgodilo:** PetPrep ima štirinajsto plačljivo pasmo psa — **sibirskega haskija**. Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **8 novih virov (S158–S165)** — standard in nomenklatura FCI, stran pasme, standard in Breed Watch The Royal Kennel Club, PDSA, standard AKC in IPFD DogWellNet. Pravila igre: odrasel **120 minut = 12.000 korakov** na dan (RKC »več kot 2 uri«, PDSA »najmanj dve uri«), starejši 90 minut = 9.000, mladiček od 2.000 korakov do 12.000 pri 12 mesecih; uči se enako hitro kot mešanček (Coren: rang 45); starejši je od **90 mesecev** (7,5 leta; iz spodnje meje RKC »več kot 10 let« — začasno, dokler ne preverimo McMillan 2024). Nova oznaka v izbirniku: **»rad pobegne — potrebuje varno, visoko ograjo«**.
+
+**Zakaj je pomembno:** Haski je ena tistih pasem, ki jih družine izberejo zaradi videza, potem pa jih presenetita količina gibanja in to, kako rad pobegne. Izbirnik zdaj mirno in z viri pove oboje — in haskija ne označi kot psa za družine z majhnimi otroki, ker ga PDSA zanje ne priporoča.
+
+**Številke:** 8 novih virov (S158–S165), 7 oznak (2 + 5), 1 nova oznaka (`secure_fencing`), 1 nova migracija; Pest **2195** testov, Jest **2014**, izvoz registra **28** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Haski je lep in prijazen, a potrebuje več kot dve uri gibanja na dan, zelo varno ograjen vrt in veliko česanja — in najbolje se znajde pri odraslih ali najstnikih.« (*ko bo nova različica v trgovini*)
+- 💼 Investitorji: »Štirinajsta plačljiva pasma, deseta dodana samodejno — vsaka nova pasma prinese le toliko novih pravil, kolikor jih zahtevajo viri.«
+- 🤝 Partnerji (vzreditelji, zavetišča, veterinarji): »PetPrep staršem pred izbiro pokaže, da haski potrebuje veliko gibanja in varno, visoko ograjo — preden pride domov.«
+- 📣 Omrežja: »Veliko energije, gost kožuh in talent za pobeg. Ste pripravljeni na haskija?« (*ko bo haski v trgovini*)
+- 🛠 Tehnično: »Življenjska doba po vrstnem redu runbooka: McMillan 2024 in VetCompass nista dala vrednosti, zato spodnja meja RKC (10 let → 90 mesecev), začasno; register dobi novo skupino FCI 5 in novo velikost `medium_large`.«
+
+---
+
 ## 2026-10-10 — Bernski planšarski pes: dvanajsta nova pasma in prva oznaka za krajše življenje (M5-R10-12)
 
 **Kaj se je zgodilo:** PetPrep ima trinajsto plačljivo pasmo psa — **bernskega planšarskega psa** (berner). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **8 novih virov (S150–S157)** — standard in nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA, Woodgreen, švicarska raziskava življenjske dobe (Klopfenstein idr. 2016) in Wikipedija (le kot alternativa). Pravila igre: odrasel **60 minut = 6.000 korakov**, starejši 45 minut = 4.500, mladiček doseže 6.000 pri 6 mesecih; uči se **1,5-krat** hitreje kot mešanček (Coren: rang 22); meja starejšega psa **76 mesecev** je le Claudov predlog (vrednosti McMillan 2024 in VetCompass nista bili dosegljivi) in čaka Davidovo potrditev.

@@ -13,7 +13,7 @@ import {
 
 describe('readBreed / readSpecies', () => {
   it('keeps every known breed, dogs and cats', () => {
-    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'domestic_cat', 'maine_coon'] as const) {
+    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'domestic_cat', 'maine_coon'] as const) {
       expect(readBreed(breed)).toBe(breed);
     }
   });
@@ -61,6 +61,18 @@ describe('readBreed / readSpecies', () => {
     await i18n.changeLanguage('en');
     try {
       expect(breedName('australian_shepherd')).toBe('Australian Shepherd');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-13: the Siberian Husky is a paid dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('siberian_husky'))).toBe('dog');
+    expect(isDefaultFreeBreed('siberian_husky')).toBe(false);
+    expect(breedName('siberian_husky')).toBe('Sibirski haski');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('siberian_husky')).toBe('Siberian Husky');
     } finally {
       await i18n.changeLanguage('sl');
     }

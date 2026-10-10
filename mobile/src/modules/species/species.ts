@@ -34,6 +34,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   havanese: 'dog',
   west_highland_white_terrier: 'dog',
   bernese_mountain_dog: 'dog',
+  siberian_husky: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
 } satisfies Record<components['schemas']['BreedType'], Species>;

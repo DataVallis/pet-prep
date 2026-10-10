@@ -90,6 +90,12 @@ return [
         // breeds: the RKC breed page says "Lifespan: Under 10 years" (or an A/B source gives an
         // upper bound of 10 years or less).
         'shorter_lifespan' => 'consider',
+        // M5-R10-13 (runbook "new tag" rule, 2026-10-10): known to escape — digs under and
+        // gets over fences, needs a very secure garden with high fences (Siberian Husky: PDSA
+        // S162 "Owners need a very secure garden with high fences as Huskies are known for
+        // getting up to mischief", "they'll often dig holes to try and tunnel under fences.").
+        // A sourced, important trait no other key covers; a calm chip, never a number.
+        'secure_fencing' => 'consider',
     ],
 
     'breeds' => [
@@ -409,6 +415,31 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S152', 'S154'], 'refs' => ['bernese_mountain_dog.suitability.rkc_shedding', 'bernese_mountain_dog.suitability.pdsa_shedding']],
                 // S152 "Grooming: More than once a week"; S154 "Their coats are fairly high maintenance.".
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S152', 'S154'], 'refs' => ['bernese_mountain_dog.suitability.rkc_grooming', 'bernese_mountain_dog.suitability.pdsa_grooming']],
+            ],
+        ],
+
+        // M5-R10-13: siberian_husky.* (S158–S165), runbook rules (data.json
+        // proposed_game_parameters.siberian_husky.suitability_tags). Not `family_pet` /
+        // `children` / `small_children`: PDSA S162 recommends adult-only or teenage households
+        // and advises against smaller children. Not `other_pets` (high prey drive, S162).
+        'siberian_husky' => [
+            'suits' => [
+                // S160 "Exercise: More than 2 hours per day"; S162 "the perfect pet for active, adventure-loving owners".
+                ['tag' => 'active_family', 'source_ids' => ['S160', 'S162'], 'refs' => ['siberian_husky.exercise.adult', 'siberian_husky.exercise.energy']],
+                // S160 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S160'], 'refs' => ['siberian_husky.suitability.rkc_size_of_home', 'siberian_husky.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S160 "More than 2 hours per day"; S162 "a minimum of two hours of exercise every day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S160', 'S162'], 'refs' => ['siberian_husky.exercise.adult', 'siberian_husky.suitability.pdsa_exercise']],
+                // S162 "Owners need a very secure garden with high fences as Huskies are known for getting up to mischief".
+                ['tag' => 'secure_fencing', 'source_ids' => ['S162'], 'refs' => ['siberian_husky.behaviour.escaping']],
+                // S162 "so you may find they chew furniture to let you know.".
+                ['tag' => 'chews_when_bored', 'source_ids' => ['S162'], 'refs' => ['siberian_husky.behaviour.chewing']],
+                // S160 "Sheds: Yes"; S162 "Be prepared – Huskies shed a lot!".
+                ['tag' => 'sheds', 'source_ids' => ['S160', 'S162'], 'refs' => ['siberian_husky.suitability.rkc_shedding', 'siberian_husky.suitability.pdsa_shedding']],
+                // S160 "Grooming: More than once a week"; S162 "brush your Husky a few times a week".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S160', 'S162'], 'refs' => ['siberian_husky.suitability.rkc_grooming', 'siberian_husky.suitability.pdsa_grooming']],
             ],
         ],
     ],
