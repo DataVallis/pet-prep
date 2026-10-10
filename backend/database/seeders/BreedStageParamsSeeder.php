@@ -48,8 +48,9 @@ use InvalidArgumentException;
  * dogProfile(). A new dog breed = an enum case in DOG_BREEDS + a profile;
  * the mutt / Border Collie rows stay byte-identical (LabradorBreedTest /
  * GoldenRetrieverBreedTest / FrenchBulldogBreedTest / GermanShepherdBreedTest /
- * CavalierKingCharlesSpanielBreedTest cross-check the Labrador / Golden /
- * French Bulldog / German Shepherd / Cavalier rows against data.json).
+ * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest cross-check the
+ * Labrador / Golden / French Bulldog / German Shepherd / Cavalier / Beagle rows
+ * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
  * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
@@ -147,8 +148,18 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10_CAVALIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-05)';
 
+    /**
+     * M5-R10-06 Beagle (unattended run 2026-10-10, data.json
+     * proposed_game_parameters.beagle.*.decision): every value follows a standing rule
+     * of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min, senior 45 min, puppy 10 min × age capped at 60, stages
+     * 9 / 36 / 102, arrival 2 / 9 / 36 / 102, learning multiplier 0.5; care rates the
+     * Border Collie's. The suffix keeps each breed's decision rows identifiable.
+     */
+    public const CONFIRMED_R10_BEAGLE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-06)';
+
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -536,6 +547,10 @@ class BreedStageParamsSeeder extends Seeder
             // S103–S110; runbook rules in proposed_game_parameters.cavalier_king_charles_spaniel).
             BreedType::CavalierKingCharlesSpaniel => self::cavalierProfile(),
 
+            // M5-R10-06 (docs/research/dog-data/data.json beagle, S111–S117; runbook
+            // rules in proposed_game_parameters.beagle).
+            BreedType::Beagle => self::beagleProfile(),
+
             BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
     }
@@ -911,6 +926,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'cavalier_king_charles_spaniel.lifespan.median_uk',
                 'quote' => 'Cavalier King Charles Spaniel 121 9.99 8.14-12.39',
                 'notes' => 'O\'Neill et al. VetCompass poster (SVEPM 2012, S71): median longevity of 121 deaths. McMillan 2024 (S54) gives no reachable Cavalier value. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Beagle (M5-R10-06). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_BEAGLE);
+     * weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function beagleProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BEAGLE;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S116', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.beagle.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [102, $boundary('Derived game boundary: last 25 % of lifespan (S11) × VetCompass median age at death 11.28 y (O\'Neill et al. 2025, S116) = 8.46 y = 101.5 → 102 months. Not chosen: 105 (0.75 × 11.70 y, the paper\'s Conclusions), 108 (0.75 × RKC "over 12 years", S113) and 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 102],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.beagle.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age already reaches at 6 months, so the whole young stage walks the adult minutes.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S113', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.beagle.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S113) → 60 min = 6,000 steps (runbook rule: "up to N" → N; sources conflict → RKC). PDSA says "at least an hour and a half" in its text but "1 hour" in its key facts (S115) — recorded as the alternative.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.beagle.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[9.0, 11.0], [
+                'unit' => 'kg', 'source_id' => 'S115', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'beagle.adult_weight.pdsa',
+                'quote' => 'Average weight: 9-11 kg',
+                'notes' => 'PDSA key facts, one range for both sexes. The FCI (S111) and RKC (S114) standards give a height only (33–40 cm). Measured UK pet Beagles are heavier (median 18.19 kg, S116 — research only; obesity is common).',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'beagle.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (9–11 kg = 20–24 lb, the Small class of S10).',
+            ]],
+            'coren_rank' => [72, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'beagle.trainability.coren_rank',
+                'quote' => '72 | Mastiff / Beagle',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 72 tied with the Mastiff, tier "Lowest" (ranks 70–79). Coren\'s own article (S34) was not reachable in this run.',
+            ]],
+            'learning_multiplier' => [0.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.beagle.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 72 (S35) is in the "Lowest" tier → 0.5, half the mixed breed\'s speed (PDSA S115: "mischievous characters", start reward-based training early). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [11.28, [
+                'unit' => 'years', 'source_id' => 'S116', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'beagle.lifespan.median_uk',
+                'quote' => 'The median age at death was 11.28 years (IQR 9.32–13.08) for 322 deaths recorded during the study period.',
+                'notes' => 'O\'Neill et al. 2025 (S116), VetCompass UK 2019 (the Conclusions say 11.70 y). McMillan 2024 (S54) gives no reachable Beagle value. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

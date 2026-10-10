@@ -66,8 +66,8 @@ describe('BreedConfigsSeeder', function () {
         Carbon::setTestNow('2026-10-06 07:00:00');
         (new BreedConfigsSeeder)->run();
 
-        // 7 dogs (M5-R10 Labrador, M5-R10-02 Golden, M5-R10-03 French Bulldog, M5-R10-04 German Shepherd, M5-R10-05 Cavalier) + 2 cats (M5-R06-01).
-        expect(BreedConfig::count())->toBe(9);
+        // 8 dogs (M5-R10 Labrador, M5-R10-02 Golden, M5-R10-03 French Bulldog, M5-R10-04 German Shepherd, M5-R10-05 Cavalier, M5-R10-06 Beagle) + 2 cats (M5-R06-01).
+        expect(BreedConfig::count())->toBe(10);
         $mutt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail();
         expect($mutt->thirst_decay_rate)->toBe(99.0);
         expect(BreedConfig::where('breed_slug', 'border-collie')->firstOrFail()->thirst_decay_rate)->toBe(15.0);
@@ -251,7 +251,8 @@ describe('Filament BreedConfigResource', function () {
     it('creates a breed with all tunables', function () {
         Livewire::test(CreateBreedConfig::class)
             ->fillForm([
-                'breed_slug' => 'beagle',
+                // Not an enum breed (the Beagle became one in M5-R10-06).
+                'breed_slug' => 'test-hound',
                 'daily_steps_required' => 7000,
                 'hunger_decay_rate' => 9,
                 'thirst_decay_rate' => 11,
@@ -263,8 +264,8 @@ describe('Filament BreedConfigResource', function () {
             ->call('create')
             ->assertHasNoFormErrors();
 
-        $beagle = BreedConfig::where('breed_slug', 'beagle')->firstOrFail();
-        expect($beagle->thirst_decay_rate)->toBe(11.0);
-        expect($beagle->feed_windows)->toBe([['06:30', '09:00']]);
+        $created = BreedConfig::where('breed_slug', 'test-hound')->firstOrFail();
+        expect($created->thirst_decay_rate)->toBe(11.0);
+        expect($created->feed_windows)->toBe([['06:30', '09:00']]);
     });
 });

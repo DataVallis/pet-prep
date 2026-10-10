@@ -77,6 +77,14 @@
 | trait `muzzle`; Blenheim weighted highest (portrait default). Colour weights
 | are unsourced → `verified => false`.
 |
+| Beagle (M5-R10-06, docs/research/dog-data beagle.appearance): size, sturdy
+| compact build, short dense coat, long low-set ears, dark brown or hazel eyes,
+| broad nose with wide nostrils, the white tail tip and the standard colours
+| follow FCI 161 (S111) / RKC standard (S114) / RKC breed page (S113). Not a
+| welfare-concern breed (Breed Watch Category 1). Tricolour weighted highest
+| (portrait default); only a subset of the ten standard colours is drawn.
+| Colour weights are unsourced → `verified => false`.
+|
 */
 
 return [
@@ -396,6 +404,48 @@ return [
             'tail' => ['feathered, carried happily, never much above the back'],
             // Welfare rule (S107 / S110): a visible, tapered muzzle — never a flat face.
             'muzzle' => ['visible, well-tapered muzzle with a black nose and open nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-06 (docs/research/dog-data/data.json beagle.appearance; runbook rules
+    // 2026-10-10: standard colours only, tricolour portrait).
+    'beagle' => [
+        'display_name' => 'Beagle',
+        // Colour frequencies are in no source (beagle.appearance.colour_weights UNSOURCED) → all weights are a draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 161 (S111, https://www.fci.be/Nomenclature/Standards/161g06-en.pdf), Royal Kennel Club standard (S114), RKC breed page (S113) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S113 "Size: Small"; S114 height 33–40 cm (PDSA S115 says "Medium")',
+            'build' => 'S114 "A sturdy, compactly built hound, conveying the impression of quality without coarseness."',
+            'coat_length' => 'S114 "Short, dense and weatherproof."',
+            'coat_color' => 'S114 "Tricolour (black, tan and white); blue, white and tan; badger pied; hare pied; lemon pied; lemon and white; red and white; tan and white; black and white; all white." "No other colours are permissible." (weights unsourced; a subset is drawn)',
+            'coat_pattern' => 'S114 "Tip of stern white."; "With the exception of all white, all the above mentioned colours can be found as mottle."',
+            'ear_carriage' => 'S114 "Long, with rounded tip, reaching nearly to end of nose when drawn out." "Set on low, fine in texture and hanging gracefully close to cheeks."',
+            'eye_color' => 'S114 "Dark brown or hazel, fairly large, not deep set or prominent, set well apart with mild, appealing expression."',
+            'tail' => 'S114 "Sturdy, moderately long. Set on high, carried gaily but not curled over back or inclined forward from root."',
+            'muzzle' => 'S114 "Muzzle not snipy, lips reasonably well flewed." "Nose broad, preferably black" "Nostrils wide."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'sturdy, compactly built', 'weight' => 3], 'sturdy, athletic'],
+            'coat_length' => ['short, dense'],
+            // Standard colours only (S114); tricolour highest → the register portrait is tricolour.
+            'coat_color' => [
+                ['value' => 'tricolour (black, tan and white)', 'weight' => 4],
+                ['value' => 'tan and white', 'weight' => 2],
+                'lemon and white',
+                'red and white',
+            ],
+            'coat_pattern' => [
+                ['value' => 'black saddle, tan head and ears, white legs, chest and tail tip', 'weight' => 4, 'only_with' => ['coat_color' => ['tricolour (black, tan and white)']]],
+                ['value' => 'tan patches on white, white tail tip', 'only_with' => ['coat_color' => ['tan and white']]],
+                ['value' => 'pale lemon patches on white, white tail tip', 'only_with' => ['coat_color' => ['lemon and white']]],
+                ['value' => 'red patches on white, white tail tip', 'only_with' => ['coat_color' => ['red and white']]],
+            ],
+            'ear_carriage' => ['long, low-set, rounded tips, hanging close to the cheeks'],
+            'eye_color' => [['value' => 'dark brown', 'weight' => 3], 'hazel'],
+            'tail' => ['sturdy, moderately long, carried gaily, white tip'],
+            'muzzle' => ['moderate muzzle, broad black nose with wide nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],

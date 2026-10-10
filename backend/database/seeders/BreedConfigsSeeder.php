@@ -181,6 +181,27 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.cavalier_king_charles_spaniel',
                 'search_keywords' => ['cavalier king charles spaniel', 'cavalier', 'king charles', 'ckcs', 'spaniel', 'kavalir king charles španjel', 'kavalir king charles spanjel', 'kavalir', 'španjel', 'spanjel'],
             ],
+            // M5-R10-06 Beagle (docs/research/dog-data/data.json beagle, sources S111–S117;
+            // runbook rules confirmed by David 2026-10-10: paid). daily_steps_required = the
+            // adult step goal (proposed_game_parameters.beagle.step_goal_adult: 60 min ×
+            // 100 steps/min — RKC S113 "Up to 1 hour per day"; PDSA S115 "at least an hour
+            // and a half" is the recorded alternative) — only the legacy-profile fallback.
+            // Hunger / thirst decay, poops and water are the Border Collie's (no per-breed number).
+            [
+                'breed_slug' => BreedType::Beagle->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 70,
+                'label_key' => 'breeds.beagle',
+                'search_keywords' => ['beagle', 'bigl'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and
