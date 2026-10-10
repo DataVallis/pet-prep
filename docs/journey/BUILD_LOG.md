@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Bernski planšarski pes: dvanajsta nova pasma in prva oznaka za krajše življenje (M5-R10-12)
+
+**Kaj se je zgodilo:** PetPrep ima trinajsto plačljivo pasmo psa — **bernskega planšarskega psa** (berner). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **8 novih virov (S150–S157)** — standard in nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA, Woodgreen, švicarska raziskava življenjske dobe (Klopfenstein idr. 2016) in Wikipedija (le kot alternativa). Pravila igre: odrasel **60 minut = 6.000 korakov**, starejši 45 minut = 4.500, mladiček doseže 6.000 pri 6 mesecih; uči se **1,5-krat** hitreje kot mešanček (Coren: rang 22); starejši je od **76 mesecev** — začasno, ker vrednosti McMillan 2024 in VetCompass nista bili dosegljivi.
+
+**Zakaj je pomembno:** Prvič starš v izbirniku vidi, da pasma običajno živi manj kot deset let — mirno, brez številk, z oznako »krajša življenjska doba«. Za družino, ki psa izbira z otrokom, je to eno najpomembnejših dejstev, ki ga mnogi izvedo prepozno.
+
+**Številke:** 8 novih virov (S150–S157), 5 oznak (2 + 3), 1 nova oznaka (`shorter_lifespan`), 1 nova migracija; Pest **2168** testov, Jest **2006**, izvoz registra **27** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Berner je velik, prijazen družinski pes, ki potrebuje okoli uro gibanja na dan, veliko prostora in veliko česanja — in običajno živi manj kot deset let.« (*ko bo nova različica v trgovini*)
+- 💼 Investitorji: »Trinajsta plačljiva pasma, deveta dodana samodejno — katalog zdaj pošteno pove tudi, kako dolgo pes živi.«
+- 🤝 Partnerji (vzreditelji, veterinarji): »PetPrep staršem pred izbiro pokaže oznako »krajša življenjska doba« in jih napoti k pregledu kolkov in komolcev pri starših.«
+- 📣 Omrežja: »Velik, mehak in vdan družini. Je berner pravi za vas?« (*ko bo berner v trgovini*)
+- 🛠 Tehnično: »Pravilo runbooka ni imelo vrstice za pasmo brez McMillan / VetCompass / spodnje meje RKC — uporabili smo najbližjo (recenzirana mediana pasme) in mejo označili za začasno.«
+
+---
+
 ## 2026-10-10 — Zahodnoškotski beli terier: enajsta nova pasma in prva oznaka za kožo (M5-R10-11)
 
 **Kaj se je zgodilo:** PetPrep ima dvanajsto plačljivo pasmo psa — **zahodnoškotskega belega terierja** (westie). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **8 novih virov (S142–S149)** — standard in nomenklatura FCI, stran pasme, standard in Breed Watch The Royal Kennel Club, PDSA ter raziskava VetCompass (Royal Veterinary College). Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«, PDSA »ura na dan«), starejši 45 minut = 4.500, mladiček od 2.000 korakov do 6.000 pri 6 mesecih; starejši od **121 mesecev** (približno 10 let; iz mediane VetCompass 13,4 leta — začasno); uči se enako hitro kot mešanček (Coren: rang 47). Nova oznaka v izbirniku: **»občutljiva koža — nagnjenost k srbenju in vnetjem«**.
