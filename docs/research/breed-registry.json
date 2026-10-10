@@ -45,7 +45,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "df0ba61c3428c404527857bec9f2dd03dc09a3c7ab29ca230fc4fe26e241fc3b"
+      "sha256": "dd446756b869a0431d6bc7539a15c17be31d3f325eebed72d6f98b29037a8153"
     }
   },
   "suitability_vocabulary": {
@@ -6496,7 +6496,12 @@
           "S138"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "havanese.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "source_ids": [
         "S10",
         "S11",

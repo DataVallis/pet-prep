@@ -125,6 +125,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "havanese",
+            "species": "dog",
+            "file": "dog/havanese.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:eaba910b2c94c354a284f7b1a51c4d5cdd32b9fa97d37be40109c1c6de241cae",
+            "generated_at": "2026-10-10T15:37:37+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
