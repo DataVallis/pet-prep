@@ -85,7 +85,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.cavalier_king_charles_spaniel.availability, 'coming_soon');
   assert.deepEqual(byId.beagle.slug, { en: 'beagle', sl: 'bigl' });
   assert.equal(byId.beagle.availability, 'coming_soon');
-  assert.deepEqual(byId.standard_poodle.slug, { en: 'poodle-standard', sl: 'veliki-pudelj' });
+  assert.deepEqual(byId.standard_poodle.slug, { en: 'poodle-standard', sl: 'veliki-koder' });
   assert.equal(byId.standard_poodle.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');

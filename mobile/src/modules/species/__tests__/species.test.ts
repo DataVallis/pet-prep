@@ -45,7 +45,7 @@ describe('readBreed / readSpecies', () => {
   it('M5-R10-07: the Standard Poodle is a paid dog with its own name', async () => {
     expect(readSpecies(undefined, readBreed('standard_poodle'))).toBe('dog');
     expect(isDefaultFreeBreed('standard_poodle')).toBe(false);
-    expect(breedName('standard_poodle')).toBe('Veliki pudelj');
+    expect(breedName('standard_poodle')).toBe('Veliki koder');
     await i18n.changeLanguage('en');
     try {
       expect(breedName('standard_poodle')).toBe('Poodle (Standard)');
