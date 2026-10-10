@@ -296,5 +296,35 @@ return [
                 ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S127'], 'refs' => ['dachshund.behaviour.mental_stimulation']],
             ],
         ],
+        // M5-R10-09: australian_shepherd.* (S131–S135), runbook rules 2026-10-10
+        // (data.json proposed_game_parameters.australian_shepherd.suitability_tags). Woodgreen not
+        // looked up → RKC (S133), PDSA (S134). Not `children` / `small_children` (PDSA advises
+        // against it with smaller children — herding), not `other_pets` (conditional, may herd
+        // them), not `first_time_owner` (easy to train for experienced owners), never `often_alone`.
+        // Not a welfare-concern breed (RKC Breed Watch Category 1) → no welfare chip.
+        'australian_shepherd' => [
+            'suits' => [
+                // S133 "Exercise: More than 2 hours per day"; S134 "only recommend having one if you’re on the go just as much as they are".
+                ['tag' => 'active_family', 'source_ids' => ['S133', 'S134'], 'refs' => ['australian_shepherd.exercise.adult', 'australian_shepherd.exercise.energy']],
+                // S134 "Aussies can make really good family pets in the right household."
+                ['tag' => 'family_pet', 'source_ids' => ['S134'], 'refs' => ['australian_shepherd.suitability.pdsa_family', 'australian_shepherd.behaviour.family']],
+                // S133 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S133'], 'refs' => ['australian_shepherd.suitability.rkc_size_of_home', 'australian_shepherd.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S133 "More than 2 hours per day"; S134 "a minimum of two hours exercise every day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S133', 'S134'], 'refs' => ['australian_shepherd.exercise.adult', 'australian_shepherd.suitability.pdsa_exercise']],
+                // S134 "plenty of exercise and mental stimulation throughout the day".
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S134'], 'refs' => ['australian_shepherd.behaviour.mental_stimulation']],
+                // S134 "they can get the urge to herd children in the home"; not recommended with smaller children.
+                ['tag' => 'may_herd_children', 'source_ids' => ['S134'], 'refs' => ['australian_shepherd.behaviour.herding_children', 'australian_shepherd.suitability.pdsa_children']],
+                // S134 "If they get bored, they can get into all kinds of mischief around the home (which usually involves a lot of chewing!)."
+                ['tag' => 'chews_when_bored', 'source_ids' => ['S134'], 'refs' => ['australian_shepherd.behaviour.boredom_chewing']],
+                // S133 "Sheds: Yes"; S134 "Your Aussie will shed throughout the year".
+                ['tag' => 'sheds', 'source_ids' => ['S133', 'S134'], 'refs' => ['australian_shepherd.suitability.rkc_shedding', 'australian_shepherd.suitability.pdsa_shedding']],
+                // S133 "Grooming: More than once a week"; S134 "a brush a few times a week".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S133', 'S134'], 'refs' => ['australian_shepherd.suitability.rkc_grooming', 'australian_shepherd.suitability.pdsa_grooming']],
+            ],
+        ],
     ],
 ];

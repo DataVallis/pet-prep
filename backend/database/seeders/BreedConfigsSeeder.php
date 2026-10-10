@@ -244,6 +244,28 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.dachshund',
                 'search_keywords' => ['dachshund', 'sausage dog', 'teckel', 'jazbečar', 'jazbecar'],
             ],
+            // M5-R10-09 Australian Shepherd (docs/research/dog-data/data.json australian_shepherd,
+            // sources S131–S135; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal
+            // (proposed_game_parameters.australian_shepherd.step_goal_adult: 120 min × 100 steps/min —
+            // RKC S133 "More than 2 hours per day", PDSA S134 "a minimum of two hours") — only the
+            // legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's
+            // (no per-breed number).
+            [
+                'breed_slug' => BreedType::AustralianShepherd->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 100,
+                'label_key' => 'breeds.australian_shepherd',
+                'search_keywords' => ['australian shepherd', 'aussie', 'avstralski ovčar', 'avstralski ovcar'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

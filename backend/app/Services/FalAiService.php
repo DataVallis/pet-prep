@@ -145,6 +145,14 @@ class FalAiService
                 .'moderately long muscular body with a level back and enough ground clearance, '
                 .'tail continuing the line of the back, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-09: FCI 342 (S131) — standard colours only (merle is standard here),
+            // blue merle first; medium-length coat with a moderate mane, triangular high-set
+            // ears breaking forward, almond eyes, natural long tail (no docking).
+            BreedType::AustralianShepherd => 'An alert Australian Shepherd dog with a blue merle coat with white and copper markings, '
+                .'medium-length straight to wavy coat with a moderate mane, triangular high-set ears breaking forward, '
+                .'almond-shaped eyes fully surrounded by colour, moderate muzzle, natural long tail, '
+                .'well-balanced athletic build, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -308,6 +316,21 @@ class FalAiService
                     0 => 'no white markings',
                     1, 2 => 'tan points, no white',
                 },
+            ],
+            // M5-R10-09: FCI (S131) colours blue merle, black, red merle, red — with or without
+            // white and/or tan markings; white within the standard's limits (no body splashes).
+            BreedType::AustralianShepherd => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'blue merle',
+                    1 => 'black',
+                    2 => 'red merle',
+                },
+                'eye_color' => match ($variantIndex) {
+                    0 => 'blue',
+                    1, 2 => 'brown',
+                },
+                'fur_texture' => 'medium-length, straight to wavy, moderate mane',
+                'markings' => 'white collar, chest and legs with copper points',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

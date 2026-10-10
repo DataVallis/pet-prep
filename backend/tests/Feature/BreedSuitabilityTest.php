@@ -257,6 +257,19 @@ it('gives the Dachshund the new back_spine tag (welfare rule), children, sheds a
         ->and(bsEntry('dachshund.suitability.pdsa_children')['notes'])->toContain('supervise');
 });
 
+it('gives the Australian Shepherd active_family / family_pet / large_home, the herding and exercise chips and no welfare tag (runbook 2026-10-10)', function () {
+    $aussie = app(BreedSuitability::class)->for(BreedType::AustralianShepherd);
+    expect($aussie['suits'])->toBe(['active_family', 'family_pet', 'large_home'])
+        // PDSA advises against smaller children (herding, S134); pets only if grown up with them; not for long hours alone.
+        ->and($aussie['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('other_pets')->not->toContain('often_alone')->not->toContain('first_time_owner')
+        ->and($aussie['consider'])->toBe(['long_daily_exercise', 'needs_mental_stimulation', 'may_herd_children', 'chews_when_bored', 'sheds', 'frequent_grooming'])
+        // RKC Breed Watch Category 1 (S133): no welfare chip.
+        ->and($aussie['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('hips_hind_legs')->not->toContain('heart_and_spine')->not->toContain('back_spine');
+
+    expect(bsEntry('australian_shepherd.behaviour.herding_children')['quote'])->toBe('because of their strong herding instinct, they can get the urge to herd children in the home')
+        ->and(bsEntry('australian_shepherd.suitability.pdsa_children')['notes'])->toContain('no children / small_children tag');
+});
+
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {
     $source = (string) file_get_contents(app_path('Http/Resources/BreedCatalogResource.php'));
     preg_match('/@var array\{suits: list<([^>]+)>, consider: list<([^>]+)>\}/', $source, $m);

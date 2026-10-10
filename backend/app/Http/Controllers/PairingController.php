@@ -95,7 +95,7 @@ class PairingController extends Controller
                      * `features` (M5-R02 / M5-R03): the app features stored for the new pet (behaviour_events, training, species_cat).
                      * `species` (M5-R06-01): dog | cat.
                      *
-                     * @var array{breed: 'mutt'|'border_collie'|'labrador_retriever'|'golden_retriever'|'french_bulldog'|'german_shepherd'|'cavalier_king_charles_spaniel'|'beagle'|'standard_poodle'|'dachshund'|'domestic_cat'|'maine_coon', origin: 'bought'|'adopted', age_stage: 'puppy'|'young'|'adult'|'senior', features: list<'behaviour_events'|'training'|'species_cat'>, species: 'dog'|'cat'}|null
+                     * @var array{breed: 'mutt'|'border_collie'|'labrador_retriever'|'golden_retriever'|'french_bulldog'|'german_shepherd'|'cavalier_king_charles_spaniel'|'beagle'|'standard_poodle'|'dachshund'|'australian_shepherd'|'domestic_cat'|'maine_coon', origin: 'bought'|'adopted', age_stage: 'puppy'|'young'|'adult'|'senior', features: list<'behaviour_events'|'training'|'species_cat'>, species: 'dog'|'cat'}|null
                      */
                     'pet_profile' => $result['pet_profile'],
                     /**
