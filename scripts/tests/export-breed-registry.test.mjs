@@ -91,6 +91,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.dachshund.availability, 'coming_soon');
   assert.deepEqual(byId.australian_shepherd.slug, { en: 'australian-shepherd', sl: 'avstralski-ovcar' });
   assert.equal(byId.australian_shepherd.availability, 'coming_soon');
+  assert.deepEqual(byId.havanese.slug, { en: 'havanese', sl: 'havanski-bison' });
+  assert.equal(byId.havanese.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
@@ -146,6 +148,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     standard_poodle: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 2 },
     dachshund: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1 },
     australian_shepherd: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1 },
+    havanese: { adult: 3000, senior: 2300, seniorFrom: 108, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -466,4 +469,28 @@ test('Australian Shepherd (M5-R10-09): more than 2 hours, PDSA weight, FCI group
   const json = JSON.stringify(d);
   // Merle is standard here: never the "not a standard colour" line; no McMillan placeholder, no statistics.
   assert.doesNotMatch(json, /merle_colour_risk|mcmillan_2024|hypoallergenic|odds ratio/i);
+});
+
+test('Havanese (M5-R10-10): up to 30 minutes, PDSA weight, FCI group 9 Cuba, low shedding (never hypoallergenic), no Coren rank, no welfare chip', () => {
+  const d = registry.breeds.find((b) => b.id === 'havanese');
+  const ex = d.facts.filter((f) => f.field === 'exercise');
+  assert.deepEqual(ex.map((f) => [f.value, f.qualifier, f.source_ids]), [[30, 'up_to', ['S138']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 250, group: 9, section: 1, origin: 'CU' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[[3, 6], ['S140']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['more_than', 12]]);
+  // 10 min × age reaches the 30-minute cap at 3 months; senior 23 min (22.5 half up).
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 3000, cap_month: 3 });
+  assert.deepEqual(d.game.stages[3].activity, { kind: 'steps', value: 2300 });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'family_pet', 'children', 'low_shedding']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['frequent_grooming']);
+  assert.deepEqual(d.health.map((h) => h.key), ['kneecap_luxation', 'pra_and_eyelashes', 'liver_shunt']);
+  const json = JSON.stringify(d);
+  assert.doesNotMatch(json, /merle|mcmillan_2024|hypoallergenic|odds ratio|23-28 kg/i);
+});
+
+test('every dog breed has a Coren rank fact except the explicitly unranked Havanese', () => {
+  for (const b of registry.breeds.filter((x) => x.species === 'dog')) {
+    const has = b.facts.some((f) => f.field === 'coren_rank');
+    assert.equal(has, b.id !== 'havanese', `${b.id} coren_rank fact`);
+  }
 });

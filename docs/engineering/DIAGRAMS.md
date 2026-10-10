@@ -858,7 +858,7 @@ erDiagram
     bigint id
     bigint family_id
     bigint user_id "deprecated"
-    string breed_type "mutt border_collie labrador_retriever golden_retriever french_bulldog german_shepherd cavalier_king_charles_spaniel beagle standard_poodle dachshund australian_shepherd domestic_cat maine_coon"
+    string breed_type "mutt border_collie labrador_retriever golden_retriever french_bulldog german_shepherd cavalier_king_charles_spaniel beagle standard_poodle dachshund australian_shepherd havanese domestic_cat maine_coon"
     string species "dog or cat, follows breed (M5-R06-01)"
     string name "optional label set by a parent, null = none (M5-R08)"
     double hunger_level

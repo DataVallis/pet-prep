@@ -153,6 +153,14 @@ class FalAiService
                 .'almond-shaped eyes fully surrounded by colour, moderate muzzle, natural long tail, '
                 .'well-balanced athletic build, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-10: FCI 250 (S136) — FCI colours only (never merle, RKC S139), fawn first;
+            // very long soft wavy natural coat, drop ears along the cheeks, large dark almond
+            // eyes, tail rolled over the back.
+            BreedType::Havanese => 'A cheerful Havanese dog with a fawn coat, '
+                .'very long, soft, wavy natural coat, drop ears falling along the cheeks, '
+                .'large dark brown almond-shaped eyes, muzzle as long as the skull, tail carried high and curled over the back, '
+                .'sturdy little body low on the legs, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -331,6 +339,21 @@ class FalAiService
                 },
                 'fur_texture' => 'medium-length, straight to wavy, moderate mane',
                 'markings' => 'white collar, chest and legs with copper points',
+            ],
+            // M5-R10-10: FCI (S136) colours fawn, black, havana brown (tobacco, reddish brown,
+            // white also standard) — patches in these colours or tan markings allowed; never merle.
+            BreedType::Havanese => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn',
+                    1 => 'black',
+                    2 => 'havana brown',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'very long, soft, wavy',
+                'markings' => match ($variantIndex) {
+                    0, 2 => 'solid colour',
+                    1 => 'small white patches on chest and paws',
+                },
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

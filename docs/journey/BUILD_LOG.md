@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Havanski bišon: deseta nova pasma in najkrajši sprehodi v katalogu (M5-R10-10)
+
+**Kaj se je zgodilo:** PetPrep ima enajsto plačljivo pasmo psa — **havanskega bišona**. Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **6 novih virov (S136–S141)** — standard in nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA in standard AKC. Pravila igre: odrasel **30 minut gibanja = 3.000 korakov** na dan (RKC »do 30 minut«, PDSA »okoli 30 minut«), starejši 23 minut = 2.300, mladiček od 2.000 korakov do 3.000 pri 3 mesecih; starejši od **108 mesecev** (9 let; spodnja meja RKC »več kot 12 let« — začasno); uči se enako hitro kot mešanček (v Corenovi lestvici ga ni).
+
+**Zakaj je pomembno:** Najmanjši pes v katalogu (3–6 kg), ki mu zadošča pol ure gibanja na dan — družine, ki ne morejo vsak dan na dolg sprehod, zdaj lahko preizkusijo psa, ki jim ustreza. Aplikacija pošteno pove ceno: dolga dlaka potrebuje česanje vsak dan. Dlaka mu skoraj ne izpada, a aplikacija ga nikoli ne imenuje »hipoalergen« (takega psa ni). Ni pasma s skrbjo za dobrobit, zato sme v marketing.
+
+**Številke:** 6 novih virov (S136–S141), 5 oznak (4 + 1), brez nove oznake, 1 nova migracija, 46 vrstic pravil po starosti; Pest **2116** testov, Jest **1990**, izvoz registra **25** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Havanski bišon je majhen, vesel pes — po standardu FCI ima rad otroke — in mu zadošča pol ure sprehoda — a dolgo dlako je treba česati vsak dan.« (*ko bo nova različica v trgovini*)
+- 💼 Investitorji: »Enajsta plačljiva pasma, sedma dodana samodejno po vnaprej potrjenih pravilih — prvič tudi pasma, ki je Coren ni rangiral; pravila to pokrijejo brez človeka.«
+- 🤝 Partnerji (vzreditelji, veterinarji): »PetPrep staršem pove, naj pri vzreditelju vprašajo za pregled oči.«
+- 📣 Omrežja: »Pol ure sprehoda, a česanje vsak dan. Je havanski bišon pravi za vašo družino?« (*ko bo havanski bišon v trgovini*)
+- 🛠 Tehnično: »Prva pasma brez Corenovega ranga — izvoz registra zdaj prazen rang preskoči, namesto da bi si izmislil številko.«
+
+---
+
 ## 2026-10-10 — Avstralski ovčar: deveta nova pasma in prvi pastir, ki »pase« otroke (M5-R10-09)
 
 **Kaj se je zgodilo:** PetPrep ima deseto plačljivo pasmo psa — **avstralskega ovčarja**. Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **5 novih virov (S131–S135)** — standard in nomenklatura FCI, stran pasme The Royal Kennel Club, PDSA in objavljeni članek McMillan 2024. Pravila igre: odrasel **120 minut gibanja = 12.000 korakov** na dan (RKC »več kot 2 uri«, PDSA »vsaj dve uri«), starejši 90 minut = 9.000, mladiček od 2.000 korakov do 12.000 pri 12 mesecih; starejši od **90 mesecev** (0,75 × spodnja meja RKC »več kot 10 let« — v besedilu članka McMillan 2024 vrednosti za to pasmo ni, dodatna tabela in tabela Dogs Trust v tem zagonu nista bili dosegljivi; začasno); uči se **enako hitro** kot mešanček (Coren: 42. mesto).

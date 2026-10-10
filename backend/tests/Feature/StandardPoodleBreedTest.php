@@ -184,7 +184,7 @@ describe('breed, config and database', function () {
     it('leaves every other breed\'s seeded rows untouched', function () {
         $others = collect(BreedStageParamsSeeder::rows())->where('breed_slug', '!=', 'poodle-standard');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'dachshund', 'australian-shepherd'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'dachshund', 'australian-shepherd', 'havanese'])
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_STANDARD_POODLE)->all())->toBe([])
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'poodle-standard')->where('decision', BreedStageParamsSeeder::CONFIRMED_R10)->all())->toBe([])
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'poodle-standard')->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_CAVALIER)->all())->toBe([])
@@ -383,7 +383,7 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd'])
+        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese'])
             ->and($breeds[8])->toBe([
                 'breed' => 'standard_poodle', 'slug' => 'poodle-standard', 'species' => 'dog', 'premium' => true,
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.standard_poodle',

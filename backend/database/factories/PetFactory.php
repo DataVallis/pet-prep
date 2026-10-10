@@ -249,6 +249,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Havanese (paid breed, M5-R10-10).
+     */
+    public function havanese(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::Havanese->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static

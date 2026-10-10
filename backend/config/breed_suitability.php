@@ -326,5 +326,29 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S133', 'S134'], 'refs' => ['australian_shepherd.suitability.rkc_grooming', 'australian_shepherd.suitability.pdsa_grooming']],
             ],
         ],
+        // M5-R10-10: havanese.* (S136–S141), runbook rules 2026-10-10
+        // (data.json proposed_game_parameters.havanese.suitability_tags). Woodgreen not
+        // looked up → FCI (S136), RKC (S138), PDSA (S140). Not `small_children` (no explicit
+        // rating), not `first_time_owner` ("easy to train" is not such a statement), not
+        // `active_family` / `long_daily_exercise` (30 min). Never "hypoallergenic" —
+        // `low_shedding` is the sourced wording (RKC "Sheds: No"). Not a welfare-concern breed
+        // (RKC Breed Watch Category 1) → no welfare chip.
+        'havanese' => [
+            'suits' => [
+                // S138 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S138'], 'refs' => ['havanese.suitability.rkc_size_of_home', 'havanese.suitability.rkc_size_of_garden']],
+                // S140 "They enjoy being in the centre of the family circle and make excellent family pets".
+                ['tag' => 'family_pet', 'source_ids' => ['S140'], 'refs' => ['havanese.suitability.pdsa_family', 'havanese.behaviour.family']],
+                // S136 "He loves children and plays endlessly with them." A breed-standard
+                // statement, not a rating (PDSA: given the right socialisation — kept in data.json).
+                ['tag' => 'children', 'source_ids' => ['S136'], 'refs' => ['havanese.suitability.fci_children', 'havanese.behaviour.family']],
+                // S138 "Sheds: No".
+                ['tag' => 'low_shedding', 'source_ids' => ['S138'], 'refs' => ['havanese.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S138 "Grooming: Every day"; S140 "requires daily grooming to prevent knots and tangles".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S138', 'S140'], 'refs' => ['havanese.suitability.rkc_grooming', 'havanese.suitability.pdsa_grooming']],
+            ],
+        ],
     ],
 ];
