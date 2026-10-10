@@ -329,6 +329,29 @@ it('gives the Bernese Mountain Dog the new shorter_lifespan tag, family_pet, lar
         ->and(bsEntry('bernese_mountain_dog.suitability.woodgreen_children')['notes'])->toContain('no children tag');
 });
 
+it('gives the Siberian Husky the new secure_fencing tag, active_family, large_home, exercise, chewing, shedding and grooming (runbook 2026-10-10)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray(['secure_fencing' => BreedSuitability::CONSIDER]);
+
+    $husky = app(BreedSuitability::class)->for(BreedType::SiberianHusky);
+    expect($husky['suits'])->toBe(['active_family', 'large_home'])
+        // PDSA: adult-only or teenage households, not with smaller children; not with smaller pets.
+        ->and($husky['suits'])->not->toContain('family_pet')->not->toContain('children')->not->toContain('small_children')->not->toContain('other_pets')->not->toContain('often_alone')->not->toContain('first_time_owner')
+        ->and($husky['consider'])->toBe(['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming'])
+        // Breed Watch Category 2 is body condition only ("Too fat" / "Too thin"): no conformation chip.
+        ->and($husky['consider'])->not->toContain('hips_hind_legs')->not->toContain('shorter_lifespan')->not->toContain('food_motivated_weight');
+
+    // Only the Siberian Husky carries the new chip so far.
+    foreach (BreedType::cases() as $breed) {
+        if ($breed !== BreedType::SiberianHusky) {
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('secure_fencing');
+        }
+    }
+
+    expect(bsEntry('siberian_husky.behaviour.escaping')['quote'])->toBe('Owners need a very secure garden with high fences as Huskies are known for getting up to mischief')
+        ->and(bsEntry('siberian_husky.suitability.pdsa_children')['quote'])->toBe('we wouldn’t recommend getting a Husky if you have smaller children as they could knock them over accidentally.')
+        ->and(bsEntry('siberian_husky.health.breed_watch')['notes'])->toContain('Too thin');
+});
+
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {
     $source = (string) file_get_contents(app_path('Http/Resources/BreedCatalogResource.php'));
     preg_match('/@var array\{suits: list<([^>]+)>, consider: list<([^>]+)>\}/', $source, $m);

@@ -144,6 +144,18 @@
 | breed (RKC Breed Watch Category 1, S152): a natural, moderate build. `verified =>
 | false` (single colour, but the traits are an unchecked draft like the other breeds).
 |
+| Siberian Husky (M5-R10-13, docs/research/dog-data siberian_husky.appearance): a
+| medium-sized working sled dog, quick and light on his feet, moderately compact and
+| well furred; double, medium-length coat never so long as to obscure the outline;
+| thick, well-furred, triangular, strongly erect ears; almond eyes, brown or blue (one
+| of each or particoloured acceptable); a well-furred fox-brush tail carried over the
+| back in a sickle curve at attention (FCI S158, RKC standard S161, AKC S163). Colours:
+| "All ranges of the allowable colours which are black, grey, agouti, sable, red and
+| white" — merle and brindle are disqualifying (S158, S161). Colour weights are
+| unsourced (grey and white first → the register portrait) → `verified => false`. Not a
+| conformation welfare breed (Breed Watch S164 lists only "Too fat" / "Too thin"): a
+| moderate, athletic build, never heavy.
+|
 */
 
 return [
@@ -727,6 +739,41 @@ return [
             'ear_carriage' => ['medium-sized triangular ears hanging flat'],
             'eye_color' => ['dark brown, almond-shaped'],
             'tail' => ['bushy tail hanging down, reaching the hocks'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-13 (docs/research/dog-data/data.json siberian_husky.appearance; runbook rules
+    // 2026-10-10: standard colours only — never merle or brindle; grey and white portrait).
+    'siberian_husky' => [
+        'display_name' => 'Siberian Husky',
+        // Colour frequencies are in no source (siberian_husky.appearance.colour_weights UNSOURCED) → all weights are a draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 270 (S158, https://www.fci.be/Nomenclature/Standards/270g05-en.pdf), RKC breed standard (S161), RKC breed page (S160) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S160 "Size: Medium-Large"; S158 "Dogs: 53,5 - 60 cm." "Females: 50,5 - 56 cm."',
+            'build' => 'S158 "The Siberian Husky is a medium-sized working dog, quick and light on his feet and free and graceful in action."; "Any appearance of excessive bone or weight should be penalized."',
+            'coat_length' => 'S158 "The coat of the Siberian Husky is double and medium in length," "never so long as to obscure the cleancut outline of the dog."',
+            'coat_color' => 'S158 "All ranges of the allowable colours which are black, grey, agouti, sable, red and white." "Merle or Brindle patterns are not allowable and are to be disqualified." (weights unsourced)',
+            'ear_carriage' => 'S158 "They are thick, well furred, slightly arched at the back," "and strongly erect, with slightly rounded tips pointing straight up."; S161 "triangular in shape"',
+            'eye_color' => 'S158 "Eyes may be brown or blue in colour; one of each or particoloured are acceptable."; S161 "Almond-shaped, moderately spaced and set obliquely."',
+            'tail' => 'S158 "The well furred tail of fox-brush shape is set on just below the level of the topline," "usually carried over the back in a graceful sickle curve when the dog is at attention."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'moderately compact, athletic, light on its feet, never heavy', 'weight' => 3], 'lean, graceful working build'],
+            'coat_length' => ['double, medium-length, well-furred coat'],
+            // Standard colours only (S158, S161); grey and white highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'grey and white with a white face mask', 'weight' => 4],
+                ['value' => 'black and white with a white face mask', 'weight' => 3],
+                ['value' => 'red and white with a white face mask', 'weight' => 2],
+                'agouti',
+                'sable and white',
+                'pure white',
+            ],
+            'ear_carriage' => ['triangular, thick, well-furred, strongly erect'],
+            'eye_color' => [['value' => 'blue, almond-shaped', 'weight' => 3], ['value' => 'brown, almond-shaped', 'weight' => 2], 'one blue and one brown, almond-shaped'],
+            'tail' => ['well-furred fox-brush tail'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],

@@ -177,6 +177,14 @@ class FalAiService
                 .'long shining straight coat, medium triangular ears hanging flat, dark brown almond-shaped eyes, '
                 .'bushy tail hanging down, strong sturdy balanced body, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-13: FCI 270 (S158) — black, grey, agouti, sable, red and white (never merle
+            // or brindle), grey and white first; double medium-length coat, thick erect
+            // triangular ears, blue or brown almond eyes, fox-brush tail; moderate, never heavy.
+            BreedType::SiberianHusky => 'A friendly Siberian Husky dog with a grey and white coat and a white face mask, '
+                .'double medium-length well-furred coat, thick triangular strongly erect ears, '
+                .'blue almond-shaped eyes set obliquely, well-furred fox-brush tail, '
+                .'moderately compact athletic build, light on its feet, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -394,6 +402,21 @@ class FalAiService
                     2 => 'long and silky with a bright natural sheen',
                 },
                 'markings' => 'symmetrical white blaze, white muzzle band and white chest; tan on cheeks, above the eyes and on the legs',
+            ],
+            // M5-R10-13: FCI / RKC (S158, S161) — black, grey, agouti, sable, red and white;
+            // never merle or brindle; eyes brown or blue (one of each acceptable).
+            BreedType::SiberianHusky => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'grey and white',
+                    1 => 'black and white',
+                    2 => 'red and white',
+                },
+                'eye_color' => match ($variantIndex) {
+                    0, 1 => 'blue',
+                    2 => 'brown',
+                },
+                'fur_texture' => 'double, medium-length, well furred',
+                'markings' => 'white face mask, white chest, legs and underside',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

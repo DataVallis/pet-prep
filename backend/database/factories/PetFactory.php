@@ -279,6 +279,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Siberian Husky (paid breed, M5-R10-13).
+     */
+    public function siberianHusky(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::SiberianHusky->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static
