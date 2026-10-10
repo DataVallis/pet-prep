@@ -21,7 +21,7 @@ Status: `done` · `in-progress` · `blocked` (research could not source a requir
 | 07 | Poodle (Standard) / Koder (veliki) | `standard_poodle` | dog | done | M5-R10-07, PR #147 + portrait PR (this) + website PR #20 (unattended run 2026-10-10); not a welfare breed → may be used in marketing (never as hypoallergenic); never "hypoallergenic"; senior 108 provisional (RKC lower bound — McMillan 2024 only pools all Poodle sizes) |
 | 08 | Dachshund / Jazbečar | `dachshund` | dog | done | M5-R10-08, PR #150 + portrait PR (this) + website PR #22 (unattended run 2026-10-10); standard size, smooth coat; welfare breed (long back) → new tag `back_spine`, still in marketing (no veterinary advice against advertising found — spot-check BVA S128 before a campaign); senior 108 provisional (RKC lower bound — McMillan 2024 only names the Miniature Dachshund) |
 | 09 | Australian Shepherd / Avstralski ovčar | `australian_shepherd` | dog | done | M5-R10-09, PR #153 + portrait PR #154 + website PR #23 (unattended run 2026-10-10); merle is a standard colour here (blue merle portrait); not a welfare breed → may be used in marketing; senior 90 provisional (RKC lower bound — McMillan 2024 value not in the article text) |
-| 10 | Havanese / Havanski bišon | `havanese` | dog | in-progress | M5-R10-10, unattended run 2026-10-10 |
+| 10 | Havanese / Havanski bišon | `havanese` | dog | in-progress | M5-R10-10, PR #155 merged (unattended run 2026-10-10); portrait + website in progress |
 | 11 | West Highland White Terrier / Zahodnoškotski beli terier | `west_highland_white_terrier` | dog | todo | |
 | 12 | Bernese Mountain Dog / Bernski planšarski pes | `bernese_mountain_dog` | dog | todo | |
 | 13 | Siberian Husky / Sibirski haski | `siberian_husky` | dog | todo | |
