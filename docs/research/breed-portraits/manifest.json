@@ -25,7 +25,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b775a1b48d7073964cd089ace027151fbcf996769dba5b2294ffea224e9f9329",
-            "generated_at": "2026-10-10T05:47:20+00:00",
+            "generated_at": "2026-10-10T05:49:32+00:00",
             "cost_usd": 0.15
         },
         {
@@ -122,6 +122,18 @@
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:6cdeff2e665c354e4aad7645d65f8a97724d6cca2daa3d5fcf5d1324623a4e7e",
             "generated_at": "2026-10-10T14:23:09+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "havanese",
+            "species": "dog",
+            "file": "dog/havanese.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:eaba910b2c94c354a284f7b1a51c4d5cdd32b9fa97d37be40109c1c6de241cae",
+            "generated_at": "2026-10-10T15:37:37+00:00",
             "cost_usd": 0.15
         },
         {
