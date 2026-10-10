@@ -51,12 +51,23 @@
  *                                   full_change
  *        grooming (Maine Coon) .... cat maine_coon.grooming.game_sessions_per_week
  *
- * Usage: node scripts/export-breed-registry.mjs [--out F | --check | --stdout]
+ * Breed portraits (M5-R11, David 2026-10-10 — optional input):
+ *   docs/research/breed-portraits/manifest.json      written by `php artisan breeds:portraits`
+ *   docs/research/breed-portraits/<species>/<slug>.webp   AI-generated illustrations
+ * Each breed gets `portrait: { file, width, height, kind }` (null when the manifest has none).
+ * `kind` is "ai_illustration": the website MUST label it "AI-generated illustration".
+ * `file` is the basename; the website serves it from public/animals/<species.slug.en>/<file>
+ * (e.g. public/animals/dogs/border-collie.webp). Copy the files there with
+ *   node scripts/export-breed-registry.mjs --copy-portraits ../pet-prep-website/public
+ * (writes the registry as usual, then copies every portrait of the export into
+ * <dir>/animals/<species slug>/). The registry JSON goes to src/content/registry/registry.json.
+ *
+ * Usage: node scripts/export-breed-registry.mjs [--out F | --check | --stdout] [--copy-portraits DIR]
  * No dependencies (Node ≥ 20).
  */
 import { createHash } from 'node:crypto';
-import { readFileSync, writeFileSync } from 'node:fs';
-import { dirname, isAbsolute, resolve } from 'node:path';
+import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { basename, dirname, isAbsolute, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -73,6 +84,11 @@ export const INPUTS = {
   family_en: 'mobile/src/i18n/locales/en/family.json',
   family_sl: 'mobile/src/i18n/locales/sl/family.json',
 };
+
+/** Optional input: AI breed portraits (`php artisan breeds:portraits`); missing → every portrait null. */
+export const PORTRAITS_DIR = 'docs/research/breed-portraits';
+export const PORTRAIT_MANIFEST = `${PORTRAITS_DIR}/manifest.json`;
+export const PORTRAIT_KINDS = ['ai_illustration'];
 
 /** URL words that a breed slug may never take (the comparison page lives next to the breeds). */
 export const RESERVED_SLUGS = ['compare', 'primerjava'];
@@ -790,6 +806,8 @@ export function buildRegistry(texts) {
     return n;
   };
 
+  const portraits = readPortraitManifest(texts.portraits ?? null);
+
   const breeds = [];
   const species = SPECIES.map((sp) => {
     const seen = { en: new Set(), sl: new Set() };
@@ -824,6 +842,7 @@ export function buildRegistry(texts) {
         health,
         suitability: suitability.breeds[spec.id],
         game: g,
+        portrait: portraitFor(portraits, sp.id, spec.id, slug.en),
       };
       entry.source_ids = [...collectSourceIds([entry, general[sp.id]])].sort(bySourceId);
       breeds.push(entry);
@@ -845,6 +864,10 @@ export function buildRegistry(texts) {
     };
   });
 
+  for (const id of portraits.keys()) {
+    if (!breeds.some((b) => b.id === id)) throw new Error(`${PORTRAIT_MANIFEST}: ${id} is not a breed of the register`);
+  }
+
   const used = [...collectSourceIds([breeds, species])].sort(bySourceId);
   const sourceList = used.map((id) => {
     if (!sources[id]) throw new Error(`unknown source ${id}`);
@@ -853,6 +876,7 @@ export function buildRegistry(texts) {
 
   const inputs = {};
   for (const [k, rel] of Object.entries(INPUTS)) inputs[k] = { path: rel, sha256: sha256(texts[k]) };
+  inputs.portraits = { path: PORTRAIT_MANIFEST, sha256: texts.portraits == null ? null : sha256(texts.portraits) };
 
   return {
     schema_version: SCHEMA_VERSION,
@@ -874,7 +898,53 @@ export function buildRegistry(texts) {
 export function readInputs(root = ROOT) {
   const texts = {};
   for (const [k, rel] of Object.entries(INPUTS)) texts[k] = readInput(root, rel);
+  texts.portraits = existsSync(resolve(root, PORTRAIT_MANIFEST)) ? readInput(root, PORTRAIT_MANIFEST) : null;
   return texts;
+}
+
+// ─── breed portraits ─────────────────────────────────────────────────────────
+
+/** manifest.json (backend BreedPortraitService) → Map(breed id → entry); null text → empty. */
+export function readPortraitManifest(text) {
+  const out = new Map();
+  if (text == null) return out;
+  const m = JSON.parse(text);
+  if (m?.schema_version !== 1 || !Array.isArray(m.portraits)) throw new Error(`${PORTRAIT_MANIFEST}: expected schema_version 1 with portraits[]`);
+  for (const p of m.portraits) {
+    if (typeof p?.breed !== 'string' || out.has(p.breed)) throw new Error(`${PORTRAIT_MANIFEST}: bad or duplicate breed ${p?.breed}`);
+    out.set(p.breed, p);
+  }
+  return out;
+}
+
+/** The export's `portrait` for one breed: { file (basename), width, height, kind } or null. */
+function portraitFor(portraits, speciesId, breedId, slugEn) {
+  const p = portraits.get(breedId);
+  if (!p) return null;
+  const where = `${PORTRAIT_MANIFEST} ${breedId}`;
+  if (p.species !== speciesId) throw new Error(`${where}: species ${p.species}, expected ${speciesId}`);
+  if (!PORTRAIT_KINDS.includes(p.kind)) throw new Error(`${where}: unknown kind ${p.kind}`);
+  const m = /^([a-z]+)\/([a-z0-9-]+)\.(webp|png|jpg)$/.exec(String(p.file));
+  if (!m || m[1] !== speciesId || m[2] !== slugEn) throw new Error(`${where}: file must be ${speciesId}/${slugEn}.<webp|png|jpg>, got ${p.file}`);
+  for (const k of ['width', 'height']) {
+    if (!Number.isInteger(p[k]) || p[k] <= 0) throw new Error(`${where}: ${k} must be a positive integer`);
+  }
+  return { file: basename(p.file), width: p.width, height: p.height, kind: p.kind };
+}
+
+/**
+ * Copies for `--copy-portraits DIR`: every breed with a portrait →
+ * from docs/research/breed-portraits/<species>/<file> to DIR/animals/<species slug en>/<file>.
+ */
+export function portraitCopies(registry, publicDir, root = ROOT) {
+  const slugOf = Object.fromEntries(registry.species.map((s) => [s.id, s.slug.en]));
+  return registry.breeds
+    .filter((b) => b.portrait)
+    .map((b) => ({
+      breed: b.id,
+      from: resolve(root, PORTRAITS_DIR, b.species, b.portrait.file),
+      to: resolve(publicDir, 'animals', slugOf[b.species], b.portrait.file),
+    }));
 }
 
 /** Serialised registry: 2-space JSON + trailing newline (stable diffs). */
@@ -909,7 +979,23 @@ function main(argv) {
   }
   writeFileSync(out, json);
   const reg = JSON.parse(json);
-  console.log(`export-breed-registry: wrote ${outRel} (${reg.species.length} species, ${reg.breeds.length} breeds, ${reg.sources.length} sources)`);
+  const withPortrait = reg.breeds.filter((b) => b.portrait).length;
+  console.log(`export-breed-registry: wrote ${outRel} (${reg.species.length} species, ${reg.breeds.length} breeds, ${reg.sources.length} sources, ${withPortrait} portraits)`);
+  const copyIdx = args.indexOf('--copy-portraits');
+  if (copyIdx >= 0) {
+    const dir = args[copyIdx + 1];
+    if (!dir || dir.startsWith('--')) throw new Error('--copy-portraits needs the website public/ directory');
+    const publicDir = isAbsolute(dir) ? dir : resolve(process.cwd(), dir);
+    if (!existsSync(publicDir)) throw new Error(`--copy-portraits: ${publicDir} does not exist`);
+    const copies = portraitCopies(reg, publicDir);
+    for (const c of copies) {
+      if (!existsSync(c.from)) throw new Error(`portrait file missing: ${c.from}`);
+      mkdirSync(dirname(c.to), { recursive: true });
+      copyFileSync(c.from, c.to);
+      console.log(`export-breed-registry: copied ${c.breed} → ${c.to}`);
+    }
+    console.log(`export-breed-registry: ${copies.length} portrait(s) copied (label them "AI-generated illustration" on the site)`);
+  }
   return 0;
 }
 

@@ -8,6 +8,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Ilustracije pasem z UI za register živali (M5-R11-04)
+
+**Kaj se je zgodilo:** Za register živali na petprep.si je narejeno orodje, ki za vsako pasmo ustvari **eno ilustracijo v enotnem slogu PetPrep** (svetlo studijsko ozadje v barvah znamke, cela odrasla žival v tipični barvi standarda — npr. rumen labradorec). Slike so na spletu vedno označene **»Ilustracija, ustvarjena z UI«**. Opis videza pride samo iz podatkov o pasmi (standardi FCI / RKC / AKC / FIFe, kjer obstajajo) — nikoli iz podatkov otroka ali ljubljenčka. *Slike še niso ustvarjene* (David požene orodje).
+
+**Zakaj je pomembno:** ~300 pasem potrebuje sliko, licenciranje fotografij bi bilo drago in neenotno. Iskrena oznaka »ustvarjeno z UI« ohrani zaupanje staršev.
+
+**Številke:** 4 pasme v registru danes, ocena **0,60 $** (0,15 $ na sliko, Nano Banana Pro) iz ločenega proračuna AI Lab (produkcijski proračun za slike ljubljenčkov ostane nedotaknjen); 18 novih testov v zaledju, 4 v izvozu.
+
+**Kako povedati:**
+- 👩 Starši: »Vsaka pasma ima ilustracijo — jasno označeno, da jo je ustvarila UI, ne fotografijo določenega psa.« (*ko bodo slike objavljene*)
+- 💼 Investitorji: »Vizualni katalog za 300 pasem za nekaj deset dolarjev, z enakim proračunskim nadzorom kot slike v aplikaciji.«
+- 🛠 Tehnično: »Pozivi so deterministični (največja utež lastnosti iz konfiguracije), vsak klic gre skozi isti prehod s proračunsko zaporo, rezultat je kvadratni WebP + manifest, ki ga izvoz registra prebere.«
+
+---
+
 ## 2026-10-09 — Register pasem na spletni strani (M5-R11)
 
 **Kaj se je zgodilo:** Na petprep.si nastaja **register pasem**: pregledna stran (`/sl/pasme`, `/breeds`) s filtrom po oznakah »Primerno za« in primerjavo pasem ter stran za border collieja, labradorca in zlatega prinašalca — potrebe (gibanje, nega, obroki, življenjska doba, obdobja, velikost in teža), oznake z enakim besedilom kot v aplikaciji, razdelek »Kako to simulira PetPrep« (pravila igre, jasno označena), zdravje z opombo »Informativno, ni veterinarsko preverjeno« in vsi viri s povezavami. Podatki niso prepisani ročno: nova skripta `scripts/export-breed-registry.mjs` ob gradnji izvozi isti `data.json`, oznake iz strežnika in številke igre, ki jih uporablja aplikacija.

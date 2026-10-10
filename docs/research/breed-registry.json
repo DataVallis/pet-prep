@@ -42,6 +42,10 @@
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "sha256": "d88f4882705943ea96323bf110eeb45207c847ad16b1a9af2fc0f0910b608d11"
+    },
+    "portraits": {
+      "path": "docs/research/breed-portraits/manifest.json",
+      "sha256": null
     }
   },
   "suitability_vocabulary": {
@@ -1084,6 +1088,7 @@
           "S45"
         ]
       },
+      "portrait": null,
       "source_ids": [
         "S1",
         "S2",
@@ -1711,6 +1716,7 @@
           "S59"
         ]
       },
+      "portrait": null,
       "source_ids": [
         "S8",
         "S10",
@@ -2381,6 +2387,7 @@
           "S68"
         ]
       },
+      "portrait": null,
       "source_ids": [
         "S8",
         "S10",
@@ -2722,6 +2729,7 @@
           "C17"
         ]
       },
+      "portrait": null,
       "source_ids": [
         "C1",
         "C2",

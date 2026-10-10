@@ -246,3 +246,38 @@ function sendFalWebhook(array $body, array $headerOverrides = [], ?string $keyPa
 
     return Pest\Laravel\call('POST', '/api/webhooks/fal-ai', [], [], [], $server, $raw);
 }
+
+/**
+ * A real PNG (GD) of $width × $height — fal image answers must decode (M5-R11 breed portraits).
+ */
+function fakePngBytes(int $width = 1024, int $height = 1024): string
+{
+    $image = imagecreatetruecolor($width, $height);
+    imagefill($image, 0, 0, imagecolorallocate($image, 243, 245, 242));
+    ob_start();
+    imagepng($image);
+
+    return (string) ob_get_clean();
+}
+
+/**
+ * Fake a synchronous fal image call (FalGateway::run → https://fal.run/{endpoint})
+ * answering one image on the fal media host, and that file's download. Combine
+ * with Http::preventStrayRequests(); pass $status ≠ 200 for a fal error answer.
+ */
+function fakeFalImageRun(string $endpoint = 'fal-ai/nano-banana-pro', ?string $bytes = null, int $status = 200, string $file = 'portrait.png'): string
+{
+    $url = "https://v3.fal.media/files/test/{$file}";
+
+    $bytes ??= fakePngBytes();
+
+    // Closures: a fresh response per request (a shared one has its body stream read once).
+    Http::fake([
+        "fal.run/{$endpoint}" => fn () => $status === 200
+            ? Http::response(['images' => [['url' => $url]]], 200, ['x-fal-request-id' => 'req-'.$file])
+            : Http::response(['detail' => 'error'], $status),
+        "v3.fal.media/files/test/{$file}" => fn () => Http::response($bytes, 200, ['Content-Type' => 'image/png']),
+    ]);
+
+    return $url;
+}

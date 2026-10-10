@@ -133,6 +133,26 @@ return [
         'monthly_usd' => (float) env('AI_LAB_MONTHLY_USD', 30),
     ],
 
+    /*
+    | Breed portraits for the website animal register (M5-R11, David 2026-10-10):
+    | `artisan breeds:portraits` — one AI-generated illustration per register breed,
+    | labelled "AI-generated illustration" on the website. Charged to the AI Lab budget
+    | (purpose = lab), never the production budget. No child or pet data in any prompt.
+    |
+    | `traits`: per breed, trait values that replace the automatic pick (the option with
+    | the highest weight in config/breed_appearance.php, the first one on a tie). Each
+    | value must be one of the breed's options. Labrador: yellow — David 2026-10-10
+    | ("Labrador: yellow"); the weights tie black and yellow, black is listed first.
+    */
+    'breed_portraits' => [
+        // Longest side of the stored WebP (never upscaled; the model's square size if smaller).
+        'max_size' => 1200,
+        'webp_quality' => 88,
+        'traits' => [
+            'labrador_retriever' => ['coat_color' => 'yellow'],
+        ],
+    ],
+
     'profiles' => [
 
         'image' => [
