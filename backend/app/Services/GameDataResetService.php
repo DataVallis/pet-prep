@@ -35,7 +35,8 @@ use Throwable;
  * deletes nothing.
  *
  * Kept tables reference users only with ON DELETE SET NULL
- * (`breed_stage_param_changes.user_id`, `breed_stage_params.updated_by`):
+ * (`breed_stage_param_changes.user_id`, `breed_stage_params.updated_by`,
+ * `app_settings.updated_by`, `app_setting_changes.user_id`):
  * edits by a non-admin user stay, only the author is nulled (reported in the plan).
  */
 class GameDataResetService
@@ -46,6 +47,10 @@ class GameDataResetService
         'breed_configs',
         'breed_stage_params',
         'breed_stage_param_changes',
+        // M5-R06-09 product switches + their audit (FKs to users are SET NULL;
+        // test parent ids of deleted users simply match nobody any more).
+        'app_settings',
+        'app_setting_changes',
     ];
 
     /** Tables where only some rows go (see keptQuery()). */

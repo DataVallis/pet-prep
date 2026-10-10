@@ -8,6 +8,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Stikalo za mačke v administraciji: najprej ena družina, potem vsi (M5-R06-09b)
+
+**Kaj se je zgodilo:** Vklop mačk ni več vrstica v nastavitvah strežnika, ampak stran »Funkcije« v administraciji (samo superadmin). Trije načini: *Izklopljeno* (privzeto), *Samo testne družine* (izbereš starševske račune po e-pošti — vsa njihova družina dobi mačke) in *Vsi*. Sprememba velja v največ 1 minuti, brez SSH in ponovnega zagona; vsaka se zapiše (kdo, kdaj, prej → potem). Obstoječe muce delujejo v vsakem načinu — izklop ustavi samo nove. 16 novih avtomatskih testov (vsi trije načini × katalog, koda in prijava otroka, obstoječa muca po izklopu, predpomnilnik, dostop samo za superadmina, stari preglasitveni vklop).
+
+**Zakaj je pomembno:** Novo žival lahko zdaj preizkusimo na pravi produkciji samo v svoji družini, preden jo vidijo testerji — in jo z enim klikom spet skrijemo, ne da bi kateremu otroku vzeli že posvojeno muco. Isti vzorec bo služil za vsako naslednjo funkcijo, ki jo uvajamo postopoma.
+
+**Kako povedati:** 💼 »Funkcije uvajamo postopoma: najprej testna družina na produkciji, nato vsi — z revizijsko sledjo vsakega vklopa.« · 🛠 »Feature flag v bazi (JSON, predpomnjen 60 s, izbris ob shranjevanju), odločitev po družini zahtevka; obstoječe entitete niso nikoli zaklenjene; env ostane kot preglasitev za združljivost.« · 👩 *načrt:* ko bo preizkus končan, bodo mačke na voljo vsem družinam.
+---
+
 ## 2026-10-10 — Nemški ovčar: četrta nova pasma, prvič po stalnih pravilih (M5-R10-04)
 
 **Kaj se je zgodilo:** PetPrep ima peto plačljivo pasmo psa — **nemškega ovčarja** (German Shepherd Dog). Je prva pasma, dodana v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026: vsaka številka sledi vnaprej dogovorjenemu pravilu in je zapisana z virom. Raziskava: **8 novih virov (S95–S102)** — standard FCI 166 in nomenklatura FCI, The Royal Kennel Club (stran pasme, standard in Breed Watch), PDSA, raziskava VetCompass (O'Neill 2017) in novica RVC. Številke igre: odrasel nemški ovčar potrebuje **120 minut gibanja = 12.000 korakov** na dan (RKC »več kot 2 uri«, PDSA »vsaj dve uri«), mladiček doseže ta cilj pri **12 mesecih**, starejši **9.000**; starejši postane pri **93 mesecih** (0,75 × 10,3 leta, mediana VetCompass); uči se **1,9× hitreje** od mešančka (Coren: 3. mesto). Izbirnik pokaže »Primerno za: aktivno družino, družinsko življenje, veliko hišo z vrtom« in »Upoštevajte: vsak dan potrebuje veliko gibanja, izpada mu dlaka, potrebuje česanje večkrat na teden, ko se dolgočasi, grize stvari, **kolki in zadnje noge — preverite zdravje sklepov**« (nova oznaka, brez odstotkov). AI videz: samo standardne barve (privzeto črno-rjav), raven hrbet in naravne zadnje noge — nikoli nagnjena razstavna drža.
