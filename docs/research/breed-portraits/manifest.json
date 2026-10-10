@@ -25,7 +25,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b775a1b48d7073964cd089ace027151fbcf996769dba5b2294ffea224e9f9329",
-            "generated_at": "2026-10-10T05:47:20+00:00",
+            "generated_at": "2026-10-10T05:49:32+00:00",
             "cost_usd": 0.15
         },
         {
@@ -50,6 +50,18 @@
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:12fd27ca19ea68a64f8a29f5e8093594fddb50d305656a29571deee85cdaeb46",
             "generated_at": "2026-10-10T05:47:54+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "german_shepherd",
+            "species": "dog",
+            "file": "dog/german-shepherd-dog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c5be04d2b8699a7b24f1f8225ee98e3744d668d60661d5e6198110d88de5088b",
+            "generated_at": "2026-10-10T07:23:59+00:00",
             "cost_usd": 0.15
         },
         {
