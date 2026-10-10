@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Veliki pudelj: sedma nova pasma, četrtič po stalnih pravilih (M5-R10-07)
+
+**Kaj se je zgodilo:** PetPrep ima osmo plačljivo pasmo psa — **velikega pudlja** (Poodle (Standard)). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **6 novih virov (S118–S123)** — standard FCI 172 in nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA in tabela pričakovane življenjske dobe Dogs Trust (podatki McMillan 2024). Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«, PDSA »okoli 1 ure«), starejši 45 minut = 4.500, mladiček od 2.000 korakov do 6.000 pri 6 mesecih; starejši od **108 mesecev** (0,75 × spodnja meja RKC »več kot 12 let« — tabela Dogs Trust ima le skupno vrednost za vse pudlje, zato je nismo uporabili); uči se **2× hitreje** kot mešanček (Coren: 2. mesto).
+
+**Zakaj je pomembno:** Pudlju dlaka ne izpada (RKC »Sheds: No«) — a to ni isto kot »hipoalergen«, in tega izraza PetPrep nikjer ne uporablja (noben pes ni). Aplikacija pošteno pove obe plati: »dom, kjer želite manj dlak« in hkrati »potrebuje česanje« — po virih vsak dan, z rednim striženjem pri pasjem frizerju. Ker ni pasma s skrbjo za dobrobit zaradi zgradbe (RKC Breed Watch kategorija 1), ga lahko uporabimo v marketingu — vedno brez obljube »hipoalergen«.
+
+**Številke:** 6 novih virov (S118–S123), 5 oznak (4 + 1), 0 novih oznak, 1 nova migracija; Pest **2035** testov, Jest **1966**, izvoz registra **21** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Veliki pudelj je pameten, ubogljiv pes, ki se z otroki praviloma dobro razume, če je lepo socializiran. Dlaka mu ne izpada, zato pa potrebuje vsakodnevno česanje in redno striženje. V PetPrep se uči hitro — a skrb za dlako ostane.« (*ko bo nova različica v trgovini*)
+- 💼 Investitorji: »Osma plačljiva pasma, četrta dodana samodejno po vnaprej potrjenih pravilih; prvič z izrecnim varovalom proti zavajajočemu marketinškemu izrazu (»hipoalergen«).«
+- 🤝 Partnerji (veterinarji, zavetišča): »PetPrep pri pudlju ne obljublja psa brez alergij — pove le, da mu dlaka ne izpada, in da potrebuje veliko nege.«
+- 📣 Omrežja: »Pudelj ne pušča dlak po kavču. Zato pa vsak dan čaka na krtačo.« (*ko bo pudelj v trgovini*)
+- 🛠 Tehnično: »Prvi primer, ko McMillan 2024 pasmo združuje čez velikosti (»Poodle«) — runbook takrat pade na spodnjo mejo RKC; skupna vrednost ostane v raziskavi kot alternativa.«
+
+---
+
 ## 2026-10-10 — Bigl: šesta nova pasma, tretjič po stalnih pravilih (M5-R10-06)
 
 **Kaj se je zgodilo:** PetPrep ima sedmo plačljivo pasmo psa — **bigla** (Beagle). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **7 novih virov (S111–S117)** — standard FCI 161 in nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA, raziskava VetCompass o biglih (O'Neill in sod. 2025, skoraj 20.000 biglov) in povzetek RVC. Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«; PDSA na isti strani navaja 1 uro in uro in pol, zato velja RKC), starejši 4.500 korakov od 102. meseca (0,75 × mediana 11,28 leta), uči se **pol hitreje** kot mešanček (0,5× — Coren ga uvršča med pasme, ki ukaze najtežje ubogajo).
