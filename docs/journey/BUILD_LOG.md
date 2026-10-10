@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Nemški ovčar: četrta nova pasma, prvič po stalnih pravilih (M5-R10-04)
+
+**Kaj se je zgodilo:** PetPrep ima peto plačljivo pasmo psa — **nemškega ovčarja** (German Shepherd Dog). Je prva pasma, dodana v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026: vsaka številka sledi vnaprej dogovorjenemu pravilu in je zapisana z virom. Raziskava: **8 novih virov (S95–S102)** — standard FCI 166 in nomenklatura FCI, The Royal Kennel Club (stran pasme, standard in Breed Watch), PDSA, raziskava VetCompass (O'Neill 2017) in novica RVC. Številke igre: odrasel nemški ovčar potrebuje **120 minut gibanja = 12.000 korakov** na dan (RKC »več kot 2 uri«, PDSA »vsaj dve uri«), mladiček doseže ta cilj pri **12 mesecih**, starejši **9.000**; starejši postane pri **93 mesecih** (0,75 × 10,3 leta, mediana VetCompass); uči se **1,9× hitreje** od mešančka (Coren: 3. mesto). Izbirnik pokaže »Primerno za: aktivno družino, družinsko življenje, veliko hišo z vrtom« in »Upoštevajte: vsak dan potrebuje veliko gibanja, izpada mu dlaka, potrebuje česanje večkrat na teden, ko se dolgočasi, grize stvari, **kolki in zadnje noge — izberite preverjene starše**« (nova oznaka, brez odstotkov). AI videz: samo standardne barve (privzeto črno-rjav), raven hrbet in naravne zadnje noge — nikoli nagnjena razstavna drža.
+
+**Zakaj je pomembno:** Nemški ovčar je ena najbolj znanih pasem, a The Royal Kennel Club pri njej opozarja na zgradbo zadnjih nog. PetPrep staršem mirno svetuje, naj izberejo vzreditelja z zdravstveno preverjenimi starši, in pasme po pravilu za dobrobit **ne uporablja v marketingu** (David lahko to odločitev spremeni). Hkrati to pokaže, da se nova pasma doda brez ročnega odločanja — z istimi pravili, viri in testi kot prej.
+
+**Številke:** 8 novih virov (S95–S102), 46 vrstic `breed_stage_params`, 8 oznak (3 + 5), 1 nova oznaka v besednjaku (`hips_hind_legs`), 1 nova migracija, 26 novih testov za pasmo; Pest **1941** testov, Jest **1921** testov, izvoz registra 18 testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje; fotografija in stran v registru živali sta naslednji korak (*načrt*).
+
+**Kako povedati:**
+- 👩 Starši: »Nemški ovčar je pameten delovni pes za aktivno družino z veliko prostora — potrebuje vsaj dve uri gibanja na dan. Pri nakupu vprašajte za zdravstveno preverjene starše (kolki in zadnje noge). V PetPrep to vidite, preden se odločite.« (*ko bo nova različica v trgovini; brez slik pasme — glej smernice za marketing*)
+- 💼 Investitorji: »Peta plačljiva pasma — prva, dodana samodejno po vnaprej potrjenih pravilih: raziskava z viri, številke igre, testi in dokumentacija brez ročnega odločanja.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri nemškem ovčarju sledi opozorilom The Royal Kennel Club — družine napoti k vzrediteljem s preverjenimi starši, brez strašenja.«
+- 📣 Omrežja: *ne* — nemški ovčar se v objavah ne pojavlja (pravilo za dobrobit, 10. 10. 2026; David lahko spremeni).
+- 🛠 Tehnično: »Nova lastnost `topline` v pozivu za AI (raven hrbet), nova država izvora v izvozu registra (Nemčija), migracija samo razširi CHECK in je povratna.«
+
+---
+
 ## 2026-10-10 — Register živali: realistične fotografije namesto ilustracij (M5-R11-05)
 
 **Kaj se je zgodilo:** David je odločil, da so slike pasem na spletni strani realistične fotografije — enake vrste kot ljubljenčki v aplikaciji — in ne ilustracije. Isti model (`nano_banana_pro`), nov fotografski slog: cela postava, svetlo sivo studijsko ozadje, naravna senca, brez ljudi, napisov in ovratnice. Vseh 5 slik (border collie, labradorec, zlati prinašalec, francoski buldog, Maine Coon) je nastalo v enem zagonu na strežniku za **0,75 $** (5 × 0,15 $), vsako smo pregledali. Na spletu so označene »Fotografija, ustvarjena z AI«.
