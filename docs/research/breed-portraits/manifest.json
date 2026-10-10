@@ -53,6 +53,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "german_shepherd",
+            "species": "dog",
+            "file": "dog/german-shepherd-dog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c5be04d2b8699a7b24f1f8225ee98e3744d668d60661d5e6198110d88de5088b",
+            "generated_at": "2026-10-10T07:23:59+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
