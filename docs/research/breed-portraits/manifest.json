@@ -137,6 +137,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "west_highland_white_terrier",
+            "species": "dog",
+            "file": "dog/west-highland-white-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:71c3fdcde7e7f20231de3a2e0ebe7d877960f91a8ffc800c39d4116210dd4a34",
+            "generated_at": "2026-10-10T17:01:16+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
