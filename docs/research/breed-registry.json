@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "e82102d5a01758d2eaea74d2b9dd1d4bbc7a71b54c4047c9493e2195fcd2d1f7"
+      "sha256": "3fa31a074bdf04795b62b2462a33ba681fb2e15493504cdc846162e7a34b0a5d"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "aaf22180c9e45f3f41dafca4fb1be510950a155f23be1209317cca2daff0f364"
+      "sha256": "79f252047acdbfbd5fd443cb1f76f253c784ae7e44f20beb27a9d4435d0ad910"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,23 +25,23 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "7670e3af28cd6aa5b84156dbfc36e284dc5d6371840d3fe695e143306457c5bd"
+      "sha256": "a39644c76277f543afcc235808489d73950cd1fdf53baddc2e6ef40c2b35f6fe"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "f986a178fe35b42962c9dbcdf7b0debba7e464526779be420d468aee7e1d6539"
+      "sha256": "1a82c8a6e253d1e9114fb9930b7c45fc601cefd7594227e8ca57c8ebea67d162"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "0c8392cb4ffc74935ef263925e1955810ef4ee1efd79ea0abf6dd851df978d04"
+      "sha256": "7424ae3a00416976b7a26081b0d997ed0c4aa51168f68bbfa43977ce495dce8a"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "66cc07949d607b277e49abfeb9a2d83a581d49aea04b217088ce3b27010b924f"
+      "sha256": "1f5cfa24a3059da90335b19cb5fbb6560d0559b84d7df95cb12b43eee4ccf6c5"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "759865e375fc4ce467e3321c64ea8d95479d84e6463327417901801098b27e3d"
+      "sha256": "e27bacc77435406657258ec7121f06af2847e5319dcccfcd16702987c56ef1a6"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -145,7 +145,7 @@
         }
       },
       "status": "available",
-      "breed_count": 6,
+      "breed_count": 7,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -4135,6 +4135,462 @@
       ]
     },
     {
+      "id": "beagle",
+      "species": "dog",
+      "order": 6,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Beagle",
+        "sl": "Bigl"
+      },
+      "slug": {
+        "en": "beagle",
+        "sl": "bigl"
+      },
+      "synonyms": {
+        "en": [],
+        "sl": [
+          "bigl",
+          "beagle"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S113"
+          ],
+          "ref": "beagle.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": [
+            33,
+            40
+          ],
+          "source_ids": [
+            "S111"
+          ],
+          "ref": "beagle.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            9,
+            11
+          ],
+          "source_ids": [
+            "S115"
+          ],
+          "ref": "beagle.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "beagle.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 11.28,
+          "source_ids": [
+            "S116"
+          ],
+          "ref": "beagle.lifespan.median_uk",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S113"
+          ],
+          "ref": "beagle.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S113"
+          ],
+          "ref": "beagle.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S113"
+          ],
+          "ref": "beagle.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S113"
+          ],
+          "ref": "beagle.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S113"
+          ],
+          "ref": "beagle.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 72,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "beagle.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 161,
+            "group": 6,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S112"
+          ],
+          "ref": "beagle.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "weight_gain",
+          "source_ids": [
+            "S116"
+          ],
+          "ref": "beagle.health.obesity",
+          "confidence": "high"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S115"
+          ],
+          "ref": "beagle.health.epilepsy",
+          "confidence": "medium"
+        },
+        {
+          "key": "back_disc_disease",
+          "source_ids": [
+            "S115"
+          ],
+          "ref": "beagle.health.back_ivdd",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S113",
+              "S115"
+            ],
+            "refs": [
+              "beagle.suitability.pdsa_family",
+              "beagle.behaviour.family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S113",
+              "S115"
+            ],
+            "refs": [
+              "beagle.suitability.rkc_shedding",
+              "beagle.suitability.pdsa_shedding"
+            ]
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S115"
+            ],
+            "refs": [
+              "beagle.behaviour.chewing"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 102
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 102
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.beagle.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S113"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S113 'Up to 1 hour per day'; PDSA S115 90 min recorded as alternative)"
+          },
+          {
+            "ref": "proposed_game_parameters.beagle.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.beagle.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S116"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 102 (0.75 × 11.28 y, VetCompass S116)"
+          },
+          {
+            "ref": "proposed_game_parameters.beagle.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 72, S35 — Lowest tier)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S113",
+          "S116"
+        ]
+      },
+      "portrait": null,
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S111",
+        "S112",
+        "S113",
+        "S115",
+        "S116"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -4901,6 +5357,41 @@
       "publisher": "University of Bristol — news (6 August 2014)",
       "title": "Skull shape risk factors could help in the welfare of toy dog breeds (on Mitchell T. J., Knowler S. P., van den Berg H., Sykes J., Rusbridge C. 2014, Canine Genetics and Epidemiology)",
       "url": "https://www.bristol.ac.uk/news/2014/august/toy-dog-breeds-neurological-diseases.html"
+    },
+    {
+      "id": "S111",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 161 — Beagle, EN (PDF)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/161g06-en.pdf"
+    },
+    {
+      "id": "S112",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — Beagle (161)",
+      "url": "https://www.fci.be/EN/nomenclature/BEAGLE-161.html"
+    },
+    {
+      "id": "S113",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: Beagle",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/hound/beagle/"
+    },
+    {
+      "id": "S115",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Beagle breed information",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/beagle"
+    },
+    {
+      "id": "S116",
+      "tier": "A",
+      "publisher": "Companion Animal Health and Genetics 12 (2025)",
+      "title": "O'Neill D. G., Schiksnis M. R., Brodbelt D. C., Church D. B., Goldberg S., Engdahl K. S. Beagles kept as companion animals in the UK – demography, disorders and mortality. doi:10.1186/s40575-024-00140-9",
+      "url": "https://link.springer.com/article/10.1186/s40575-024-00140-9"
     },
     {
       "id": "C1",
