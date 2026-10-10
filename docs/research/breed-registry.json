@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "3569156b2f22c91dc25ca099b94b14c2856950ffbed34a79817dd0432ea7e3f2"
+      "sha256": "1e76b717e3f8c4b8d0cffcec378242c2f21edbebcdb09e1a07e9ca19da45bb4d"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",

@@ -435,6 +435,6 @@ describe('no health statistics in the app (runbook §3)', function () {
             expect((string) $app)->not->toContain($statistic);
         }
         expect(gsData('german_shepherd.health._note'))->toContain('never shown in the app')
-            ->and(gsData('proposed_game_parameters.german_shepherd.marketing.decision'))->toContain('NOT in marketing');
+            ->and(gsData('proposed_game_parameters.german_shepherd.marketing.decision'))->toContain('in marketing YES');
     });
 });
