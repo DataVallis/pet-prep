@@ -45,7 +45,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "1e3df22017d5829cb1fd22c5b8085893d26e4c48fcb18963482e5dac8074cf5c"
+      "sha256": "66a9e32025ad6ec0bc342cfa296fdf889a7e2ed3287a45bbee2bda5721d36146"
     }
   },
   "suitability_vocabulary": {
@@ -4572,7 +4572,12 @@
           "S116"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "beagle.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "source_ids": [
         "S10",
         "S11",

@@ -77,6 +77,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "beagle",
+            "species": "dog",
+            "file": "dog/beagle.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:148ecd12abaaf5b3c6b14f1f860737a8bfbef88789ebf54c8764127830854300",
+            "generated_at": "2026-10-10T10:16:36+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
