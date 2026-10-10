@@ -41,6 +41,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "french_bulldog",
+            "species": "dog",
+            "file": "dog/french-bulldog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_illustration",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:10a180f5810ccbfc92ff461343b197713654d33a43533f5a085cbe07068c0759",
+            "generated_at": "2026-10-10T05:06:21+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
