@@ -188,6 +188,25 @@ it('gives the German Shepherd the new hips_hind_legs tag (welfare rule), never `
         ->and(bsEntry('german_shepherd.behaviour.family')['notes'])->toContain('supervised');
 });
 
+it('gives the Cavalier the new heart_and_spine tag (welfare rule) and the apartment / children tags (runbook 2026-10-10)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray(['heart_and_spine' => BreedSuitability::CONSIDER]);
+
+    $cavalier = app(BreedSuitability::class)->for(BreedType::CavalierKingCharlesSpaniel);
+    expect($cavalier['suits'])->toBe(['apartment', 'family_pet', 'children'])
+        ->and($cavalier['suits'])->not->toContain('small_children')->not->toContain('other_pets')->not->toContain('often_alone')
+        ->and($cavalier['consider'])->toBe(['sheds', 'frequent_grooming', 'heart_and_spine'])
+        ->and($cavalier['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('hips_hind_legs');
+
+    // Only the Cavalier carries the heart / spine tag so far.
+    foreach ([BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd] as $breed) {
+        expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('heart_and_spine');
+    }
+
+    // PDSA is the quoted source for the heart; the supervision caveat stays with the children entry.
+    expect(bsEntry('cavalier_king_charles_spaniel.health.heart_mvd')['quote'])->toBe('Heart conditions (most often caused by mitral valve disease) – this is a big problem for this breed.')
+        ->and(bsEntry('cavalier_king_charles_spaniel.suitability.pdsa_children')['notes'])->toContain('supervising');
+});
+
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {
     $source = (string) file_get_contents(app_path('Http/Resources/BreedCatalogResource.php'));
     preg_match('/@var array\{suits: list<([^>]+)>, consider: list<([^>]+)>\}/', $source, $m);

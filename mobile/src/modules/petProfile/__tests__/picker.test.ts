@@ -10,11 +10,12 @@ import { i18n } from '@/i18n';
  * 120 min (M5-R10-02, S65 / S68); senior 75 % of adult in whole minutes (Labrador 67.5 → 68,
  * BreedStageParamsSeeder::labradorProfile; Golden 90, goldenProfile); French Bulldog 60 min
  * (M5-R10-03, S78 / S81), senior 45 (frenchBulldogProfile); German Shepherd 120 min (M5-R10-04,
- * S97 / S100), senior 90 (germanShepherdProfile);
+ * S97 / S100), senior 90 (germanShepherdProfile); Cavalier King Charles Spaniel 60 min
+ * (M5-R10-05, S105 / S108), senior 45 (cavalierProfile);
  * arrival puppy 2, young 9 months.
  */
-type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd'>;
-const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd'];
+type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel'>;
+const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel'];
 const ADULT_MINUTES: Record<DogBreed, number> = {
   mutt: 60,
   border_collie: 120,
@@ -22,6 +23,7 @@ const ADULT_MINUTES: Record<DogBreed, number> = {
   golden_retriever: 120,
   french_bulldog: 60,
   german_shepherd: 120,
+  cavalier_king_charles_spaniel: 60,
 };
 const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 };
 
@@ -128,6 +130,24 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(F.adult).toContain('6,000 steps');
       expect(F.senior).toContain('4,500 steps');
       expect(PICKER_STRINGS.breedHints.french_bulldog).toBe('Part of the 12-week challenge.');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-05 Cavalier: 2.000 → 6.000 (reached at 6 months), adult 6.000, senior 4.500 — SL and EN', async () => {
+    const C = PICKER_STRINGS.ageHints.cavalier_king_charles_spaniel;
+    expect(C.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 6\.000 pri 6 mesecih/);
+    expect(C.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
+    expect(C.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.cavalier_king_charles_spaniel).toBe('Del 12-tedenskega izziva.');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.cavalier_king_charles_spaniel;
+      expect(E.puppy).toContain('2,000 steps a day, more each week up to 6,000 at 6 months');
+      expect(E.adult).toContain('6,000 steps');
+      expect(E.senior).toContain('4,500 steps');
+      expect(PICKER_STRINGS.breedHints.cavalier_king_charles_spaniel).toBe('Part of the 12-week challenge.');
     } finally {
       await i18n.changeLanguage('sl');
     }

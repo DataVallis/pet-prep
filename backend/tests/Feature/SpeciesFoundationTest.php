@@ -473,10 +473,12 @@ describe('GET /api/breeds', function () {
             ->assertJsonPath('breeds.4.breed', 'french_bulldog')
             // M5-R10-04: the German Shepherd Dog (paid, sort_order 50).
             ->assertJsonPath('breeds.5.breed', 'german_shepherd')
-            ->assertJsonCount(6, 'breeds');
+            // M5-R10-05: the Cavalier King Charles Spaniel (paid, sort_order 60).
+            ->assertJsonPath('breeds.6.breed', 'cavalier_king_charles_spaniel')
+            ->assertJsonCount(7, 'breeds');
 
         // Flag off: the cat feature alone changes nothing.
-        spCatalogue($parent, ['features' => ['species_cat']])->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(6, 'breeds');
+        spCatalogue($parent, ['features' => ['species_cat']])->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(7, 'breeds');
         spCatalogue($parent, ['species' => 'cat', 'features' => ['species_cat']])->assertOk()->assertJsonCount(0, 'breeds');
     });
 
@@ -484,11 +486,11 @@ describe('GET /api/breeds', function () {
         spCatsOn();
         $parent = User::factory()->parent()->create();
 
-        spCatalogue($parent)->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(6, 'breeds');
+        spCatalogue($parent)->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(7, 'breeds');
 
         $all = spCatalogue($parent, ['features' => ['species_cat', 'unknown_future']])->assertOk()
             ->assertJsonPath('species', ['dog', 'cat']);
-        expect(array_column($all->json('breeds'), 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'domestic_cat', 'maine_coon']);
+        expect(array_column($all->json('breeds'), 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'domestic_cat', 'maine_coon']);
 
         $cats = spCatalogue($parent, ['species' => 'cat', 'features' => ['species_cat']])->assertOk();
         expect(array_column($cats->json('breeds'), 'breed'))->toBe(['domestic_cat', 'maine_coon'])
@@ -504,7 +506,7 @@ describe('GET /api/breeds', function () {
 
         $breeds = spCatalogue($parent, ['species' => 'dog'])->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd'])
+        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel'])
             ->and($breeds[0]['sort_order'])->toBe(50)
             ->and($breeds[1]['label_key'])->toBe('breeds.collie')
             ->and($breeds[1]['search_keywords'])->toBe(['bc']);

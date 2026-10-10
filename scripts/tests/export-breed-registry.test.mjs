@@ -81,6 +81,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.french_bulldog.availability, 'coming_soon');
   assert.deepEqual(byId.german_shepherd.slug, { en: 'german-shepherd-dog', sl: 'nemski-ovcar' }); // EN = RKC name
   assert.equal(byId.german_shepherd.availability, 'coming_soon');
+  assert.deepEqual(byId.cavalier_king_charles_spaniel.slug, { en: 'cavalier-king-charles-spaniel', sl: 'kavalir-king-charles-spanjel' });
+  assert.equal(byId.cavalier_king_charles_spaniel.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
@@ -131,6 +133,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     golden_retriever: { adult: 12000, senior: 9000, seniorFrom: 119, learning: 1.9 },
     french_bulldog: { adult: 6000, senior: 4500, seniorFrom: 88, learning: 0.7 },
     german_shepherd: { adult: 12000, senior: 9000, seniorFrom: 93, learning: 1.9 },
+    cavalier_king_charles_spaniel: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -183,6 +186,23 @@ test('German Shepherd (M5-R10-04): more than 2 hours, origin Germany, puppy cap 
   const json = JSON.stringify(gs);
   assert.doesNotMatch(json, /causes_of_death|common_disorders|16\.3|14\.9|5\.18|4\.76/);
   assert.deepEqual(gs.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['median', 10.3], ['more_than', 10]]);
+});
+
+test('Cavalier King Charles Spaniel (M5-R10-05): up to 1 hour, origin Great Britain, heart / spine chip, no statistics', () => {
+  const ck = registry.breeds.find((b) => b.id === 'cavalier_king_charles_spaniel');
+  const ex = ck.facts.find((f) => f.field === 'exercise');
+  assert.deepEqual([ex.value, ex.qualifier, ex.source_ids], [60, 'up_to', ['S105']]);
+  assert.equal(ck.facets.exercise, 'under_1h'); // "up to 1 hour" — same facet as the French Bulldog
+  assert.equal(ck.facets.size, 'small');
+  assert.deepEqual(ck.facts.find((f) => f.field === 'fci_standard').value, { number: 136, group: 9, section: 7, origin: 'GB' });
+  assert.deepEqual(ck.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(ck.game.stages[2].activity, { kind: 'steps', value: 6000 });
+  assert.ok(ck.suitability.consider.map((t) => t.tag).includes('heart_and_spine'));
+  assert.deepEqual(ck.suitability.suits.map((t) => t.tag), ['apartment', 'family_pet', 'children']);
+  assert.deepEqual(ck.health.map((h) => h.key), ['heart_valve_disease', 'chiari_syringomyelia', 'eye_conditions']);
+  const json = JSON.stringify(ck);
+  assert.doesNotMatch(json, /common_disorders|uk_measured_median|30\.9|10\.5/);
+  assert.deepEqual(ck.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['median', 9.99], ['more_than', 12]]);
 });
 
 test('every suitability tag has the app wording in EN and SL', () => {

@@ -67,6 +67,16 @@
 | `topline`; black-and-tan weighted highest (portrait default). Colour weights
 | are unsourced → `verified => false`.
 |
+| Cavalier King Charles Spaniel (M5-R10-05, docs/research/dog-data
+| cavalier_king_charles_spaniel.appearance): size, build, long silky feathered
+| coat, long feathered ears, large dark eyes "not prominent" and the four
+| standard colours (Blenheim, tricolour, ruby, black and tan — never chocolate,
+| S105) follow FCI 136 (S103) / RKC standard (S106) / RKC breed page (S105).
+| Welfare rule (RKC Breed Watch S107 "Protruding eyes"; skull shape and CM/SM,
+| S110): a visible, well-tapered muzzle and eyes that do not protrude — the dog
+| trait `muzzle`; Blenheim weighted highest (portrait default). Colour weights
+| are unsourced → `verified => false`.
+|
 */
 
 return [
@@ -345,6 +355,49 @@ return [
             'topline' => ['level back with moderate, natural hind legs, standing square'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'topline'],
+    ],
+    // M5-R10-05 (docs/research/dog-data/data.json cavalier_king_charles_spaniel.appearance;
+    // runbook rules 2026-10-10: standard colours, visible muzzle, Blenheim portrait).
+    'cavalier_king_charles_spaniel' => [
+        'display_name' => 'Cavalier King Charles Spaniel',
+        // Colour frequencies are in no source (cavalier_king_charles_spaniel.appearance.colour_weights UNSOURCED) → all weights are a draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 136 (S103, https://www.fci.be/Nomenclature/Standards/136g09-en.pdf), Royal Kennel Club standard (S106), RKC breed page (S105), RKC Breed Watch (S107) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S105 "Size: Small"; PDSA S108 the same',
+            'build' => 'S106 "Active, graceful and well balanced, with gentle expression."',
+            'coat_length' => 'S106 "Long, silky, free from curl. Slight wave permissible."; S103 "Plenty of feathering. Totally free from trimming."',
+            'coat_color' => 'S106 Black and Tan, Ruby, Blenheim, Tricolour; "Any other colour or combination of colours unacceptable." (weights unsourced; chocolate never, S105 NBS)',
+            'coat_pattern' => 'S106 Blenheim "rich chestnut markings well broken up, on pearly white ground."; Ruby "whole coloured rich red."; Black and Tan "raven black with tan markings above the eyes, on cheeks, inside ears, on chest and legs and underside of tail."',
+            'ear_carriage' => 'S106 "Long, set high, with plenty of feather."',
+            'eye_color' => 'S106 "Large, dark, round but not prominent; spaced well apart."',
+            'tail' => 'S106 "Length of tail in balance with body, well set on, carried happily but never much above the level of the back."',
+            'muzzle' => 'S103 "Nostrils black and well developed without flesh marks." muzzle "about 1 1/2 ins. (3,8 cm). Well tapered."; S107 "Protruding eyes" (welfare rule: never a flat face or bulging eyes)',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'graceful, well balanced', 'weight' => 3], 'small, active'],
+            'coat_length' => ['long, silky, with plenty of feathering'],
+            // Standard colours only (S106); Blenheim highest → the register portrait is Blenheim.
+            'coat_color' => [
+                ['value' => 'Blenheim (rich chestnut and pearly white)', 'weight' => 4],
+                ['value' => 'tricolour (black, white and tan)', 'weight' => 2],
+                'ruby (whole rich red)',
+                'black and tan',
+            ],
+            'coat_pattern' => [
+                ['value' => 'chestnut patches well broken up on a white ground', 'weight' => 4, 'only_with' => ['coat_color' => ['Blenheim (rich chestnut and pearly white)']]],
+                ['value' => 'black and white well broken up, tan over the eyes and on the cheeks', 'only_with' => ['coat_color' => ['tricolour (black, white and tan)']]],
+                ['value' => 'solid, without white', 'only_with' => ['coat_color' => ['ruby (whole rich red)']]],
+                ['value' => 'raven black with tan markings above the eyes, on the cheeks, chest and legs', 'only_with' => ['coat_color' => ['black and tan']]],
+            ],
+            'ear_carriage' => ['long, set high, with plenty of feather'],
+            'eye_color' => ['dark brown, large and round but not protruding'],
+            'tail' => ['feathered, carried happily, never much above the back'],
+            // Welfare rule (S107 / S110): a visible, tapered muzzle — never a flat face.
+            'muzzle' => ['visible, well-tapered muzzle with a black nose and open nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',
