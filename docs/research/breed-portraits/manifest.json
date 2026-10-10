@@ -149,6 +149,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "bernese_mountain_dog",
+            "species": "dog",
+            "file": "dog/bernese-mountain-dog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:f7d849f76aba132a0967be8d5e41794ffa1e2f8bef0629d5aa69fd50842ba3dc",
+            "generated_at": "2026-10-10T19:17:45+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",

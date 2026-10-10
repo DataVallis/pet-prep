@@ -45,7 +45,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "67e03b638238275e94f1eced145ebdd5f51a5f349269432a503cb0a5b2e9f14c"
+      "sha256": "f2c626973e5d2d885c26cf77fd3815d6d28f8d66e25b9311c9ccd95b53cba09b"
     }
   },
   "suitability_vocabulary": {
@@ -7515,7 +7515,12 @@
           "S156"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "bernese-mountain-dog.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "source_ids": [
         "S10",
         "S11",
