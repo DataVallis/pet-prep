@@ -304,7 +304,10 @@ class FalAiService
                 },
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'dense, short, smooth',
-                'markings' => 'tan points on black or chocolate, no white',
+                'markings' => match ($variantIndex) {
+                    0 => 'no white markings',
+                    1, 2 => 'tan points, no white',
+                },
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

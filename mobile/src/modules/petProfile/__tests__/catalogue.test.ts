@@ -112,7 +112,7 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-08: + Dachshund, sort 90; M5-R10-07: + Standard Poodle, sort 80), never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
     expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
       'mutt',

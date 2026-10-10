@@ -455,6 +455,8 @@ describe('PetPickerStep', () => {
       /dolg hrbet — težave s hrbtenico, brez skakanjaizpada mu dlakapotrebuje miselne izzive/,
     );
 
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'teckel');
+    expect(screen.getByTestId('breed-option-dachshund')).toBeTruthy();
     fireEvent.changeText(screen.getByTestId('breed-search'), 'jazbecar');
     expect(screen.queryByTestId('breed-option-beagle')).toBeNull();
     fireEvent.press(screen.getByTestId('plan-option-challenge'));
