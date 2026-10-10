@@ -123,6 +123,16 @@
 | tan markings (S136). Never merle (RKC S139 "except merle which is unacceptable").
 | Fawn weighted highest (portrait default). Colour weights are unsourced → `verified => false`.
 |
+| West Highland White Terrier (M5-R10-11, docs/research/dog-data
+| west_highland_white_terrier.appearance): a small, strongly built terrier with a deep
+| chest and level back, a harsh white double coat about 5 cm long without curl, small
+| erect pointed ears, dark eyes set wide apart under heavy eyebrows, a black nose and a
+| straight tail carried jauntily, never docked (FCI S142, RKC standard S145). Colour:
+| white only — "Any other colour or combination of colours unacceptable." Welfare rule
+| (RKC Breed Watch S146, dermatitis): the dog trait `coat_condition` draws healthy skin
+| and a full coat, never red or bald patches. `verified => false` (single colour, but
+| the traits are an unchecked draft like the other breeds).
+|
 */
 
 return [
@@ -643,6 +653,40 @@ return [
             'tail' => ['tail carried high and curled over the back, richly feathered'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-11 (docs/research/dog-data/data.json west_highland_white_terrier.appearance;
+    // runbook rules 2026-10-10: standard colour only — white; healthy skin and coat).
+    'west_highland_white_terrier' => [
+        'display_name' => 'West Highland White Terrier',
+        // One standard colour; the trait list itself is an unchecked draft → false.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 85 (S142, https://www.fci.be/Nomenclature/Standards/085g03-en.pdf), RKC breed standard (S145), RKC Breed Watch (S146), RKC breed page (S144) — for the traits listed in `sources`.',
+        'sources' => [
+            'size' => 'S144 "Size: Small"; S142 "Height at the withers: Approximately 28 cm."',
+            'build' => 'S142 "Strongly built; deep in chest and back ribs; level back and powerful quarters on muscular legs"',
+            'coat_length' => 'S142 "Double coated. Outer coat consists of harsh hair, about 5 cm long, free from any curl."',
+            'coat_color' => 'S145 "White." "Any other colour or combination of colours unacceptable."',
+            'coat_condition' => 'S146 "Signs of dermatitis irritation and/or hair loss or scarring from previous dermatitis" (point of concern); S145 "Free from obvious skin problems."',
+            'ear_carriage' => 'S142 "Small, erect and carried firmly, terminating in sharp point, set neither too wide nor too close."',
+            'eye_color' => 'S142 "Set wide apart, medium in size, not full, as dark as possible"; "set well under heavy eyebrows"',
+            'tail' => 'S142 "13 -15 cm long, covered with harsh hair, no feathering, as straight as possible,"; "carried jauntily, not gay or carried over back."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'strongly built, deep chest, level back, muscular legs', 'weight' => 3], 'compact and sturdy'],
+            'coat_length' => [
+                ['value' => 'harsh, straight double coat about 5 cm long, no curl', 'weight' => 3],
+                'harsh, straight double coat, slightly fuller around the head',
+            ],
+            // White is the only standard colour (S142, S145).
+            'coat_color' => ['pure white'],
+            // Welfare rule (S146): healthy skin, never red, irritated or bald patches.
+            'coat_condition' => ['healthy skin and a full, clean coat'],
+            'ear_carriage' => ['small, erect, pointed ears'],
+            'eye_color' => ['dark, set wide apart under heavy eyebrows'],
+            'tail' => ['straight tail of medium length carried jauntily, not over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_condition', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

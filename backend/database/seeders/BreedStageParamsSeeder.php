@@ -49,9 +49,10 @@ use InvalidArgumentException;
  * the mutt / Border Collie rows stay byte-identical (LabradorBreedTest /
  * GoldenRetrieverBreedTest / FrenchBulldogBreedTest / GermanShepherdBreedTest /
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
- * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest cross-check the
- * Labrador / Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle /
- * Dachshund / Australian Shepherd / Havanese rows against data.json).
+ * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
+ * WestHighlandWhiteTerrierBreedTest cross-check the Labrador / Golden / French Bulldog /
+ * German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund / Australian Shepherd /
+ * Havanese / West Highland White Terrier rows against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
  * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
@@ -195,8 +196,18 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10_HAVANESE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-10)';
 
+    /**
+     * M5-R10-11 West Highland White Terrier (unattended run 2026-10-10, data.json
+     * proposed_game_parameters.west_highland_white_terrier.*.decision): every value follows a
+     * standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on
+     * 2026-10-10 — exercise 60 min, senior 45 min, puppy 10 min × age capped at 60, stages
+     * 9 / 36 / 121, arrival 2 / 9 / 36 / 121, learning multiplier 1.0 (Coren 47, Average);
+     * care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_WEST_HIGHLAND_WHITE_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-11)';
+
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -603,6 +614,10 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-10 (docs/research/dog-data/data.json havanese, S136–S141; runbook
             // rules in proposed_game_parameters.havanese).
             BreedType::Havanese => self::havaneseProfile(),
+
+            // M5-R10-11 (docs/research/dog-data/data.json west_highland_white_terrier,
+            // S142–S149; runbook rules in proposed_game_parameters.west_highland_white_terrier).
+            BreedType::WestHighlandWhiteTerrier => self::westHighlandWhiteTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -1348,6 +1363,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'havanese.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC breed page lower bound (S138; PDSA "Over 12 years", S140). No McMillan 2024 or VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * West Highland White Terrier (M5-R10-11). Stage boundaries, arrival ages, exercise
+     * minutes and the learning multiplier follow the runbook's standing rules
+     * (CONFIRMED_R10_WEST_HIGHLAND_WHITE_TERRIER); weight, growth, Coren rank and lifespan
+     * are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function westHighlandWhiteTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_WEST_HIGHLAND_WHITE_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S148', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.west_highland_white_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [121, $boundary('Derived game boundary: last 25 % of lifespan (S11) × VetCompass median longevity 13.4 y (O\'Neill et al. 2019, S148) = 10.05 y = 120.6 → 121 months. No McMillan 2024 value was reachable. Not chosen: 108 (0.75 × RKC "Over 12 years", S144) and 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 121],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.west_highland_white_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S144', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.west_highland_white_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S144) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "Your Westie will need an hour exercise every day." (S147) agrees.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.west_highland_white_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[6.0, 9.0], [
+                'unit' => 'kg', 'source_id' => 'S147', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'west_highland_white_terrier.adult_weight.pdsa',
+                'quote' => '6-9 kg',
+                'notes' => 'PDSA key facts (S147), one range for both sexes. The FCI (S142) and RKC (S145) standards give height only (approximately 28 cm).',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'west_highland_white_terrier.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (6–9 kg = 13.2–19.8 lb, the Small class of S10; RKC / PDSA size "Small").',
+            ]],
+            'coren_rank' => [47, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'west_highland_white_terrier.trainability.coren_rank',
+                'quote' => '| 47 | West Highland White Terrier |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 47, tier "Average" (ranks 40–54). Coren\'s own article (S34) lists only the top / bottom 10.',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.west_highland_white_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 47, "Average" tier (S35) → 1.0, the mixed breed\'s speed (PDSA S147: "super eager to please"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [13.4, [
+                'unit' => 'years', 'source_id' => 'S148', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'west_highland_white_terrier.lifespan.median_uk',
+                'quote' => 'The median longevity overall was 13.4 years (IQR 11.0–15.0, range 3.2–19.6).',
+                'notes' => 'O\'Neill et al. 2019 (S148), VetCompass UK 2016, 164 deaths; RVC summary S149. McMillan 2024 (S54) gives no reachable value. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

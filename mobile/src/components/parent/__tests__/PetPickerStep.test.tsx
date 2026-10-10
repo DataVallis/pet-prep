@@ -232,7 +232,7 @@ describe('PetPickerStep', () => {
     expect(screen.getByTestId('breed-suitability-golden_retriever-consider')).toHaveTextContent(
       'Upoštevajte:vsak dan potrebuje veliko gibanjaizpada mu dlakarad je — pazite na težopotrebuje česanje večkrat na teden',
     );
-    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50, Cavalier 60, Beagle 70, Standard Poodle 80, Dachshund 90, Australian Shepherd 100, Havanese 110).
+    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50, Cavalier 60, Beagle 70, Standard Poodle 80, Dachshund 90, Australian Shepherd 100, Havanese 110, West Highland White Terrier 120).
     expect(screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID)).toEqual([
       'breed-option-mutt',
       'breed-option-border_collie',
@@ -246,6 +246,7 @@ describe('PetPickerStep', () => {
       'breed-option-dachshund',
       'breed-option-australian_shepherd',
       'breed-option-havanese',
+      'breed-option-west_highland_white_terrier',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -442,6 +443,50 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/hypoallergenic|\d|%/i);
       expect(screen.getByTestId('breed-suitability-standard_poodle-consider')).toHaveTextContent(/needs brushing several times a week/);
       expect(screen.getByTestId('breed-option-standard_poodle')).toHaveTextContent(/Poodle \(Standard\)/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-11: the West Highland White Terrier (fallback) shows its chips, is found as "westie" and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const westie = screen.getByTestId('breed-option-west_highland_white_terrier');
+    expect(westie).toHaveTextContent(/Zahodnoškotski beli terier/);
+    expect(westie).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-west_highland_white_terrier-suits')).toHaveTextContent(
+      /življenje v stanovanjudružinsko življenjedružino z otroki/,
+    );
+    expect(screen.getByTestId('breed-suitability-west_highland_white_terrier-consider')).toHaveTextContent(
+      /občutljiva koža — nagnjenost k srbenju in vnetjemizpada mu dlakapotrebuje česanje večkrat na tedenko se dolgočasi, grize stvari/,
+    );
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'westie');
+    expect(screen.getByTestId('breed-option-west_highland_white_terrier')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-havanese')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'zahodnoskotski');
+    expect(screen.getByTestId('breed-option-west_highland_white_terrier')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-west_highland_white_terrier'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'west_highland_white_terrier', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'west_highland_white_terrier' }),
+    );
+  });
+
+  it('M5-R10-11: the West Highland White Terrier chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-west_highland_white_terrier-consider');
+      expect(consider).toHaveTextContent(/sensitive skin — prone to itching and inflammation/);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-west_highland_white_terrier')).toHaveTextContent(/West Highland White Terrier/);
     } finally {
       await i18n.changeLanguage('sl');
     }

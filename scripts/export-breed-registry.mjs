@@ -373,6 +373,7 @@ const SPECIES = [
       { id: 'dachshund', availability: 'coming_soon', synonyms: { en: ['Sausage dog', 'Teckel', 'Standard Dachshund'], sl: ['jazbečar', 'jazbecar', 'dachshund', 'teckel'] } },
       { id: 'australian_shepherd', availability: 'coming_soon', synonyms: { en: ['Aussie'], sl: ['avstralski ovčar', 'avstralski ovcar', 'aussie'] } },
       { id: 'havanese', availability: 'coming_soon', synonyms: { en: ['Bichon Havanais'], sl: ['havanski bišon', 'havanski bison', 'havanez', 'bichon havanais'] } },
+      { id: 'west_highland_white_terrier', availability: 'coming_soon', synonyms: { en: ['Westie', 'West Highland Terrier'], sl: ['zahodnoškotski beli terier', 'zahodnoskotski beli terier', 'westie', 'west highland terier'] } },
     ],
   },
   {
@@ -575,6 +576,26 @@ const DOG_FACTS = {
       ['liver_shunt', 'health.portosystemic_shunt'],
     ],
   },
+  // M5-R10-11. Not exported: lifespan.mcmillan_2024 (no value), adult_weight.salt_category (our
+  // assignment), health.legg_perthes / ears_and_teeth (research only), every VetCompass percentage
+  // (S148 — research only). Height = the FCI "approximately 28 cm" (one value, both sexes).
+  west_highland_white_terrier: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['skin_allergies', 'health.sensitive_skin'],
+      ['westie_lung', 'health.westie_lung'],
+      ['jaw_bone_disorder', 'health.jaw_bone'],
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['dry_eye', 'health.eyes'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -665,6 +686,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.havanese.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.havanese.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.havanese.exercise_minutes_senior',
+  },
+  west_highland_white_terrier: {
+    adult_minutes: ['proposed_game_parameters.west_highland_white_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.west_highland_white_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.west_highland_white_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.west_highland_white_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.west_highland_white_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.west_highland_white_terrier.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],

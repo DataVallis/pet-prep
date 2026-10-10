@@ -6059,6 +6059,495 @@
       }
     }
   },
+  "west_highland_white_terrier": {
+    "_note": "Added 2026-10-10 (M5-R10-11, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S142–S149, reused S8, S10, S11, S14, S24, S35, S45). Appearance from the FCI standard (S142, valid standard 08.09.2026) and the RKC breed standard (S145); suitability from the RKC breed page (S144) and PDSA (S147). Neither the FCI nor the RKC standard gives a weight → adult weight from PDSA (S147, tier B) only. Lifespan: McMillan 2024 / the Dogs Trust breed table (S123) were not reachable this run → runbook rule: VetCompass median 13.4 y (O'Neill et al. 2019, S148; RVC summary S149). Welfare-concern breed under the runbook rule: RKC Breed Watch 'Category 2' with 'Signs of dermatitis irritation and/or hair loss or scarring from previous dermatitis' (S146) → new consider tag sensitive_skin (PDSA S147 'Westies are known to suffer from skin allergies'). Coren rank 47 (S35, 'Average') → learning 1.0. Only colour: white (FCI / RKC: 'Any other colour or combination of colours unacceptable').",
+    "identity": {
+      "value": "FCI No. 85, Group 3 Section 2 (Small-sized Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S143",
+      "quote": "Group: n°3 - Terriers; Section: Small sized Terriers; Country of origin: GREAT BRITAIN",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S143, fields as returned): 'WEST HIGHLAND WHITE TERRIER' (85); 'Not subject to a working trial according to the FCI breeds nomenclature'; definitive acceptance 10/29/1954; valid standard 9/8/2026. FCI standard PDF (S142): 'ORIGIN: Great Britain.' 'Group 3 Terriers.' 'Section 2 Small-sized Terriers.' 'Without working trial.' Quote assembled from the nomenclature fields."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S144",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "PDSA (S147) key facts: size 'Small' — sources agree. FCI height approximately 28 cm (S142); PDSA weight 6–9 kg (S147) = PetMD 'Small (12–24 pounds)' class (S10)."
+    },
+    "height": {
+      "fci": {
+        "value": [
+          28,
+          28
+        ],
+        "unit": "cm",
+        "source_id": "S142",
+        "quote": "Height at the withers: Approximately 28 cm.",
+        "confidence": "high",
+        "notes": "FCI (S142): one approximate value for both sexes, no range. RKC breed standard (S145): 'Height at withers approximately 28 cms (11 ins).' — the same. PDSA (S147) average height '28 cm'."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": [
+          6,
+          9
+        ],
+        "unit": "kg",
+        "source_id": "S147",
+        "quote": "6-9 kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box ('Average weight: 6-9 kg' as returned), one range for both sexes. The FCI standard (S142) and the RKC breed standard (S145) give no weight; the RKC breed page (S144) gives none. Tier B — the only weight range found."
+      },
+      "salt_category": {
+        "value": "I",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 6–9 kg = the smallest band (< 10 kg). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 6–9 kg (S147) = 13.2–19.8 lb → the 'Small (12–24 pounds)' class."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no West Highland White Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.4,
+        "unit": "years",
+        "source_id": "S148",
+        "quote": "The median longevity overall was 13.4 years (IQR 11.0–15.0, range 3.2–19.6).",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2019 (S148), VetCompass UK 2016, 164 deaths ('There were 164 deaths recorded during the study.' as returned). RVC summary (S149): 'Westies live for 13.4 years with males (13.8 years) outliving females (12.9 years).' McMillan 2024 (S54) and the Dogs Trust breed table (S123) not reachable this run — runbook rule: else a VetCompass median. A correction to the paper exists (PMC6816200) and could not be read this run — check it before relying on the value. Consistent with the breed-page band 'Over 12 years' (S144, S147)."
+      },
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S144",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "medium",
+        "notes": "RKC breed page (S144). PDSA key facts (S147): 'Over 12 years' — same."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: the Dogs Trust breed table (S123) was not fetchable this run. UNSOURCED value — verify in McMillan 2024 Supplementary Table before replacing the VetCompass median."
+      },
+      "senior_from": {
+        "value": 10.05,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 13.4 y (S148) → 0.75 × 13.4 = 10.05 y = 120.6 → 121 months. With the breed-page 'over 12 years' (S144): 0.75 × 12 = 9 y = 108 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S148"
+        ],
+        "months": 121,
+        "alternative": {
+          "value_years": 9,
+          "months": 108,
+          "derived_from": [
+            "S11",
+            "S144"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S144",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "PDSA (S147): 'Your Westie will need an hour exercise every day.' (key facts: minimum exercise per day '1 hour') — sources agree on 60."
+      },
+      "energy": {
+        "value": "surprisingly energetic",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Westies are surprisingly energetic and really enjoy lots of playtime with their owners.",
+        "confidence": "medium",
+        "notes": "FCI (S142): 'Small, active, game, hardly, possessed of no small amount of self-esteem with a varminty appearance.' ('hardly' as returned; RKC S145: 'hardy')."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "alert, gay, courageous, self-reliant but friendly; active, game, full of self-esteem",
+        "unit": "—",
+        "source_id": "S142",
+        "quote": "Alert, gay, courageous, self-reliant but friendly.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S145): temperament 'Alert, gay, courageous, self reliant but friendly.'; characteristics 'Small, active, game, hardy, possessed of no small amount of self-esteem with a varminty appearance.' Disqualifying (FCI): 'Aggressive or overly shy dogs.' PDSA (S147): 'Even with training, your Westie is likely to bark and how much they do will depend on the individual dog.'"
+      },
+      "family": {
+        "value": "affectionate, playful family pets; ideal for families with children of any age (always supervise)",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Westies are affectionate and playful pets which makes them ideal for families with children of any age.",
+        "confidence": "high",
+        "notes": "PDSA (S147) adds 'you should always supervise your dog with children and vulnerable adults' and to stop play that becomes too boisterous (paraphrase) → children + family_pet, never small_children (supervision caveat)."
+      },
+      "time_alone": {
+        "value": "strong bonds; separation anxiety if left alone",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "As they form such strong bonds with their owners, Westies often suffer with separation anxiety if left alone.",
+        "confidence": "medium",
+        "notes": "→ no often_alone tag."
+      },
+      "other_pets": {
+        "value": "high prey drive — not with smaller pets; fine with a cat they grew up with",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Westies have quite a high prey drive, so we wouldn't recommend keeping them with smaller pets.",
+        "confidence": "medium",
+        "notes": "PDSA (S147): 'If they have grown up with a cat in the home, they'll be fine with that cat' → no other_pets tag."
+      },
+      "chewing": {
+        "value": "noise and chewing when alone too long",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "If they are alone for too long, they are likely to make a lot of noise and could start chewing things around the home.",
+        "confidence": "medium",
+        "notes": "Basis of chews_when_bored."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (PDSA S147 gives only general feeding advice). VetCompass (S148) lists obesity among the common disorders (statistic stays in research) → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; percentages from O'Neill et al. 2019 (S148) stay here only and are never shown in the app, the export or audience docs. Welfare-concern breed (runbook §3): RKC Breed Watch 'Category 2' (S144) with the points 'Misplaced canine teeth' and 'Signs of dermatitis irritation and/or hair loss or scarring from previous dermatitis' (S146); the RKC breed page notes 'This breed can be affected by conformational concerns' (S144, as returned). The RKC page lists no breed-specific pre-breeding screening and no DNA package (S144, paraphrase). Main topics: skin allergies (PDSA S147, RKC S146, VetCompass S148), Westie lung (PDSA S147; lower respiratory tract disease as a common cause of death, S148 / S149), jaw bone disorder, kneecaps, dry eye, Legg-Perthes (PDSA S147).",
+      "sensitive_skin": {
+        "value": "skin allergies / dermatitis — a recognised point of concern in the breed",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Westies are known to suffer from skin allergies, so speak to your vet before buying a shampoo.",
+        "confidence": "high",
+        "notes": "PDSA health list (S147): 'Skin allergies'. RKC Breed Watch (S146): 'Signs of dermatitis irritation and/or hair loss or scarring from previous dermatitis'. RKC breed standard (S145) coat: 'Free from obvious skin problems.' VetCompass (S148): allergic skin disorder among the most prevalent specific disorders (percentage research only); RVC summary (S149): 'Skin problems are often considered common in Westies. However the prevalence in this study was lower than might be expected.'"
+      },
+      "westie_lung": {
+        "value": "Westie lung (idiopathic pulmonary fibrosis); lower respiratory tract disease in older dogs",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Breathing problems known as Westie Lung (Idiopathic pulmonary fibrosis)",
+        "confidence": "medium",
+        "notes": "RVC summary (S149): 'Westies appear predisposed to lower respiratory tract disease, which owners should be aware of as their Westie ages.' O'Neill 2019 (S148): lower respiratory tract among the most common grouped causes of death (statistic research only)."
+      },
+      "jaw_bone": {
+        "value": "inherited bone disorder of the jaw",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Inherited bone disorder of the jaw.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S147). (Known in the literature as craniomandibular osteopathy — our note, not from the source.)"
+      },
+      "luxating_patella": {
+        "value": "luxating patellas — kneecaps slipping out of place",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Luxating patellas – where the kneecaps slip temporarily out of place.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S147)."
+      },
+      "eyes": {
+        "value": "dry eye",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Eye problems, including dry eye – a condition that stops them producing tears which causes dry, painful eyes.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S147)."
+      },
+      "legg_perthes": {
+        "value": "Legg-Perthes disease (hip joint)",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Legg-Perthes disease (Legg-Calvé-Perthes) – a painful condition which causes the hip joint to die and crumble.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S147). Research only (not exported)."
+      },
+      "ears_and_teeth": {
+        "value": "ear conditions; periodontal disease and otitis externa common in VetCompass",
+        "unit": "—",
+        "source_id": "S148",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA list (S147): ear conditions (paraphrase). O'Neill 2019 (S148): periodontal disease, otitis externa, overgrown nails, allergic skin disorder and obesity were the most prevalent specific disorders (percentages research only). RKC Breed Watch (S146): 'Misplaced canine teeth'. Research only (not exported)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 47,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 47 | West Highland White Terrier |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35), tier 'Average Working/Obedience Intelligence' (ranks 40–54, inferred from the table layout as returned). Coren's own top / bottom-10 article (S34) does not list the breed."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Ranks 40–54 (S35)."
+      },
+      "training_notes": {
+        "value": "eager to please; reward-based training; classes for first-time owners",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Westies are super eager to please and respond really well to positive, reward-based training",
+        "confidence": "medium",
+        "notes": "PDSA (S147): 'We'd recommend taking your dog to accredited training classes if you're a first time owner' — not a first-time-owner suitability statement → no first_time_owner tag."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.west_highland_white_terrier.learning_multiplier (1.0, runbook rule: Average tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small, strongly built terrier; deep chest, level back, powerful quarters; harsh white double coat",
+        "unit": "—",
+        "source_id": "S142",
+        "quote": "Strongly built; deep in chest and back ribs; level back and powerful quarters on muscular legs",
+        "confidence": "high",
+        "notes": "FCI (S142) continues: 'exhibiting in a marked degree a great combination of strength and activity.' RKC breed standard (S145): the same wording."
+      },
+      "colours": {
+        "value": [
+          "white"
+        ],
+        "unit": "list",
+        "source_id": "S145",
+        "quote": "Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S145): 'White.' FCI (S142): 'White.' 'Any other colour or combination of colours unacceptable.' The game draws white only."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). One standard colour: white = weight 1 (portrait default)."
+      },
+      "coat": {
+        "value": "double coat: harsh outer coat about 5 cm, free from curl; short soft close undercoat",
+        "unit": "—",
+        "source_id": "S142",
+        "quote": "Double coated. Outer coat consists of harsh hair, about 5 cm long, free from any curl.",
+        "confidence": "high",
+        "notes": "FCI (S142): 'Undercoat, which resembles fur, short, soft and close.' 'Open coats most highly undesirable.' RKC (S145): 'Free from obvious skin problems.'"
+      },
+      "ears": {
+        "value": "small, erect, carried firmly, sharp point",
+        "unit": "—",
+        "source_id": "S142",
+        "quote": "Small, erect and carried firmly, terminating in sharp point, set neither too wide nor too close.",
+        "confidence": "high",
+        "notes": "FCI (S142): 'Hair short and smooth (velvety), should not be cut.'"
+      },
+      "eyes": {
+        "value": "set wide apart, medium size, as dark as possible, under heavy eyebrows; sharp, intelligent expression",
+        "unit": "—",
+        "source_id": "S142",
+        "quote": "Set wide apart, medium in size, not full, as dark as possible",
+        "confidence": "high",
+        "notes": "FCI (S142) continues: 'and set well under heavy eyebrows which gives the dog a sharp and intelligent piercing expression.' 'Light coloured eyes highly undesirable.'"
+      },
+      "nose": {
+        "value": "black and fairly large; not projecting forward; not flat-faced",
+        "unit": "—",
+        "source_id": "S142",
+        "quote": "Black and fairly large, forming smooth contour with rest of muzzle.",
+        "confidence": "high",
+        "notes": "FCI (S142): 'Nose not projecting forward.' RKC breed standard (S145): 'Nose black and fairly large, forming smooth contour with rest of muzzle. Nose not projecting forward.' Not flat-faced."
+      },
+      "tail": {
+        "value": "13–15 cm, harsh hair, no feathering, as straight as possible, carried jauntily (not over the back); never docked",
+        "unit": "—",
+        "source_id": "S142",
+        "quote": "13 -15 cm long, covered with harsh hair, no feathering, as straight as possible,",
+        "confidence": "high",
+        "notes": "FCI (S142) continues: 'carried jauntily, not gay or carried over back.' 'A long tail undesirable, and on no account should tails be docked.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S144) and PDSA (S147). The RKC page shows no 'Good with children' field (as returned 2026-10-10). Woodgreen and AKC trait ratings not attempted (same as the earlier breeds).",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S144",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "PDSA (S147): size 'Small'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S144",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S144",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "Basis of the apartment tag (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S144",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S144",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "PDSA (S147): 'They'll need brushing a few times a week to keep the coat in good condition.' + a professional trim 'as often as every six weeks' → frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S144",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "PDSA (S147): coat length 'Medium'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S144",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S147): 'they shed throughout the year' — sources agree → sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S144",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S144",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S144",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-10)."
+      },
+      "pdsa_children": {
+        "value": "ideal for families with children of any age (always supervise)",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Westies are affectionate and playful pets which makes them ideal for families with children of any age.",
+        "confidence": "high",
+        "notes": "A statement, not a rating, with a supervision caveat ('you should always supervise your dog with children and vulnerable adults') → children, not small_children."
+      },
+      "pdsa_family": {
+        "value": "good-natured, loving family pets",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Westies are good-natured and loving family pets who adapt well to both countryside and city living",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_exercise": {
+        "value": "an hour a day",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "Your Westie will need an hour exercise every day.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "brushing a few times a week; professional trim about every six weeks",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "They'll need brushing a few times a week to keep the coat in good condition.",
+        "confidence": "medium",
+        "notes": "PDSA (S147): 'Your Westie will likely need to see a professional groomer as often as every six weeks for a trim.'"
+      },
+      "pdsa_shedding": {
+        "value": "sheds throughout the year",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "While they shed throughout the year, what makes them really high maintenance is definitely the grooming!",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_first_time_owner": {
+        "value": "training classes recommended for first-time owners",
+        "unit": "—",
+        "source_id": "S147",
+        "quote": "We'd recommend taking your dog to accredited training classes if you're a first time owner",
+        "confidence": "medium",
+        "notes": "Not a first-time-owner suitability statement → no tag."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -8798,6 +9287,240 @@
         "confidence": "high",
         "notes": "Colours from the FCI standard (S136); RKC: 'except merle which is unacceptable' (S139). Colour weights are ours (unsourced). Natural untrimmed coat (FCI forbids trimming).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn portrait default; black / havana brown / tobacco / reddish brown / white options; FCI colours only, never merle; natural long coat"
+      }
+    },
+    "west_highland_white_terrier": {
+      "_note": "Unattended run M5-R10-11 (2026-10-10): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S144",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'Up to 1 hour per day' (S144); PDSA 'an hour exercise every day' (S147) agrees. Rule: one number N ('up to N') → N = 60.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S144 'Up to 1 hour per day'; PDSA S147 'an hour exercise every day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S144",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 121
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 121 = round(0.75 × 13.4 y × 12) = round(120.6) (S11 + VetCompass median 13.4 y, S148). No McMillan 2024 value reachable. Alternatives: 108 (RKC 'Over 12 years', S144), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S148"
+        ],
+        "alternatives": {
+          "senior_rkc_lower_bound": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 121 (0.75 × 13.4 y, VetCompass median S148)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 121
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 121)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 47 (S35), tier 'Average' (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 47, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-11); refs = JSON paths in this file. New vocabulary key sensitive_skin (consider). No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S144"
+            ],
+            "refs": [
+              "west_highland_white_terrier.suitability.rkc_size_of_home",
+              "west_highland_white_terrier.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S144 'Size of home: Flat/ Apartment' / 'Size of garden: Small/ medium garden'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.suitability.pdsa_family",
+              "west_highland_white_terrier.behaviour.family"
+            ],
+            "quote": "S147 'Westies are good-natured and loving family pets who adapt well to both countryside and city living'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.suitability.pdsa_children",
+              "west_highland_white_terrier.behaviour.family"
+            ],
+            "quote": "S147 'Westies are affectionate and playful pets which makes them ideal for families with children of any age.' (always supervise)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S147",
+              "S146"
+            ],
+            "refs": [
+              "west_highland_white_terrier.health.sensitive_skin"
+            ],
+            "quote": "S147 'Westies are known to suffer from skin allergies, so speak to your vet before buying a shampoo.'; S146 'Signs of dermatitis irritation and/or hair loss or scarring from previous dermatitis'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S144",
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.suitability.rkc_shedding",
+              "west_highland_white_terrier.suitability.pdsa_shedding"
+            ],
+            "quote": "S144 'Sheds: Yes'; S147 'they shed throughout the year'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S144",
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.suitability.rkc_grooming",
+              "west_highland_white_terrier.suitability.pdsa_grooming"
+            ],
+            "quote": "S144 'Grooming: More than once a week'; S147 'brushing a few times a week' + a trim about every six weeks"
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.behaviour.chewing"
+            ],
+            "quote": "S147 'If they are alone for too long, they are likely to make a lot of noise and could start chewing things around the home.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "PDSA 'children of any age' (S147) comes with 'always supervise' — a statement, not a rating.",
+          "first_time_owner": "PDSA recommends training classes for first-time owners (S147) — not a suitability statement.",
+          "large_home": "RKC 'Flat/ Apartment' (S144).",
+          "active_family": "RKC 'Up to 1 hour per day' (S144).",
+          "long_daily_exercise": "60 min (S144, S147).",
+          "other_pets": "High prey drive — not with smaller pets (S147).",
+          "often_alone": "Separation anxiety if left alone (S147).",
+          "older_owners": "No source.",
+          "low_shedding": "RKC 'Sheds: Yes' (S144).",
+          "needs_mental_stimulation": "No verbatim quote captured (PDSA paraphrase only).",
+          "food_motivated_weight": "No breed-specific statement.",
+          "brachycephalic_breathing": "Not flat-faced: 'Nose not projecting forward' (S142, S145).",
+          "hips_hind_legs": "Legg-Perthes is on the PDSA list (S147) but no RKC / vet association names the hind legs as a breed concern; not a chip.",
+          "heart_and_spine": "No source.",
+          "back_spine": "No source."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, children; consider sensitive_skin (new key, welfare rule: RKC Breed Watch Category 2 dermatitis S146 + PDSA S147), sheds, frequent_grooming, chews_when_bored"
+      },
+      "marketing": {
+        "value": "in the app: yes (with the sensitive_skin chip); in marketing: yes (no veterinary advice against showing the breed in advertising found)",
+        "unit": "—",
+        "source_id": "S146",
+        "quote": "Signs of dermatitis irritation and/or hair loss or scarring from previous dermatitis",
+        "confidence": "high",
+        "notes": "Welfare-concern breed under the runbook rule (RKC Breed Watch Category 2, S146 / S144) → consider tag sensitive_skin in the app. The concern is skin, not an exaggerated body shape; no veterinary association advice against showing Westies in advertising was found (the only such advice is for flat-faced breeds, S92) → stays in marketing; marketing never promises the breed's health or skin.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): welfare breed (skin) — in the app with the sensitive_skin chip; may appear in marketing (no veterinary advice against advertising the breed found)"
+      },
+      "ai_appearance": {
+        "value": "adult West Highland White Terrier, pure white harsh double coat (about 5 cm, no curl), small erect pointed ears, dark eyes under heavy eyebrows, black nose, straight tail of medium length carried jauntily, sturdy small body; white only",
+        "unit": "—",
+        "source_id": "S142",
+        "quote": "Double coated. Outer coat consists of harsh hair, about 5 cm long, free from any curl.",
+        "confidence": "high",
+        "notes": "Colour from the FCI / RKC standards (S142, S145: white only). Weight unsourced. Natural coat, healthy skin (no redness or bald patches — S146).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): white (the only standard colour) is the portrait default; natural harsh coat, healthy skin"
       }
     }
   }

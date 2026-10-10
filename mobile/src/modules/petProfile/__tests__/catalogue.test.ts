@@ -112,7 +112,7 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100; M5-R10-10: + Havanese, sort 110), never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100; M5-R10-10: + Havanese, sort 110; M5-R10-11: + West Highland White Terrier, sort 120), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
     expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
       'mutt',
@@ -127,6 +127,7 @@ describe('readBreedCatalogue', () => {
       'dachshund',
       'australian_shepherd',
       'havanese',
+      'west_highland_white_terrier',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -211,6 +212,16 @@ describe('readBreedCatalogue', () => {
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-10, runbook rules; no welfare chip, never "hypoallergenic").
     expect(havanese?.search_keywords).toEqual(['havanese', 'havanski bišon', 'havanski bison', 'bichon havanais', 'havanez']);
     expect(havanese?.suitability).toEqual({ suits: ['apartment', 'family_pet', 'children', 'low_shedding'], consider: ['frequent_grooming'] });
+    const westie = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'west_highland_white_terrier');
+    expect(westie).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 120 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-11, runbook rules; welfare chip sensitive_skin).
+    expect(westie?.search_keywords).toEqual(['west highland white terrier', 'westie', 'westy', 'zahodnoškotski beli terier', 'zahodnoskotski beli terier', 'west highland terier', 'vestie']);
+    expect(westie?.suitability).toEqual({
+      suits: ['apartment', 'family_pet', 'children'],
+      consider: ['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored'],
+    });
     expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
     // The fallback is already in picker order.
     expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual([
@@ -226,6 +237,7 @@ describe('readBreedCatalogue', () => {
       'dachshund',
       'australian_shepherd',
       'havanese',
+      'west_highland_white_terrier',
     ]);
   });
 });
@@ -274,7 +286,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(11);
+    expect(CONSIDER_TAGS).toHaveLength(12);
+    // M5-R10-11 (runbook welfare rule): sensitive skin — itching and inflammation; no numbers, no allergy claim.
+    expect(CONSIDER_TAGS).toContain('sensitive_skin');
     // M5-R10-08 (runbook welfare rule): long back — spine problems, avoid jumping; no numbers.
     expect(CONSIDER_TAGS).toContain('back_spine');
     // M5-R10-05 (runbook welfare rule): heart and spine — health tests; no numbers.

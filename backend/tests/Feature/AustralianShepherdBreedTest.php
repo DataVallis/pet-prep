@@ -166,7 +166,7 @@ describe('breed, config and database', function () {
     it('leaves every other breed\'s seeded rows untouched', function () {
         $others = collect(BreedStageParamsSeeder::rows())->where('breed_slug', '!=', 'australian-shepherd');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'havanese'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'havanese', 'west-highland-white-terrier'])
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_AUSTRALIAN_SHEPHERD)->all())->toBe([])
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'australian-shepherd')->where('decision', BreedStageParamsSeeder::CONFIRMED_R10)->all())->toBe([])
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'australian-shepherd')->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_CAVALIER)->all())->toBe([])
@@ -368,7 +368,7 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese'])
+        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier'])
             ->and($breeds[10])->toBe([
                 'breed' => 'australian_shepherd', 'slug' => 'australian-shepherd', 'species' => 'dog', 'premium' => true,
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.australian_shepherd',

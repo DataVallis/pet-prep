@@ -163,7 +163,7 @@ describe('breed, config and database', function () {
     it('leaves every other breed\'s seeded rows untouched', function () {
         $others = collect(BreedStageParamsSeeder::rows())->where('breed_slug', '!=', 'beagle');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'west-highland-white-terrier'])
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_BEAGLE)->all())->toBe([])
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'beagle')->where('decision', BreedStageParamsSeeder::CONFIRMED_R10)->all())->toBe([])
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'beagle')->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_CAVALIER)->all())->toBe([]);
@@ -356,7 +356,7 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese'])
+        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier'])
             ->and($breeds[7])->toBe([
                 'breed' => 'beagle', 'slug' => 'beagle', 'species' => 'dog', 'premium' => true,
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.beagle',

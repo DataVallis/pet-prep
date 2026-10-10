@@ -32,6 +32,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   dachshund: 'dog',
   australian_shepherd: 'dog',
   havanese: 'dog',
+  west_highland_white_terrier: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
 } satisfies Record<components['schemas']['BreedType'], Species>;
