@@ -15,11 +15,12 @@ import { i18n } from '@/i18n';
  * senior 45 (beagleProfile); Standard Poodle 60 min (M5-R10-07, S120), senior 45 (standardPoodleProfile);
  * Dachshund 60 min (M5-R10-08, S125), senior 45 (dachshundProfile); Australian Shepherd 120 min
  * (M5-R10-09, S133 / S134), senior 90 (australianShepherdProfile); Havanese 30 min (M5-R10-10,
- * S138 / S140), senior 23 (havaneseProfile);
+ * S138 / S140), senior 23 (havaneseProfile); West Highland White Terrier
+ * 60 min (M5-R10-11, S144 / S147), senior 45 (westHighlandWhiteTerrierProfile);
  * arrival puppy 2, young 9 months.
  */
-type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese'>;
-const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese'];
+type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese' | 'west_highland_white_terrier'>;
+const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier'];
 const ADULT_MINUTES: Record<DogBreed, number> = {
   mutt: 60,
   border_collie: 120,
@@ -33,6 +34,7 @@ const ADULT_MINUTES: Record<DogBreed, number> = {
   dachshund: 60,
   australian_shepherd: 120,
   havanese: 30,
+  west_highland_white_terrier: 60,
 };
 const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 };
 
@@ -175,6 +177,25 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(E.adult).toContain('6,000 steps');
       expect(E.senior).toContain('4,500 steps');
       expect(PICKER_STRINGS.breedHints.standard_poodle).toBe('Part of the 12-week challenge.');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-11 West Highland White Terrier: 2.000 → 6.000 (reached at 6 months), young 6.000, adult 6.000, senior 4.500 — SL and EN', async () => {
+    const P = PICKER_STRINGS.ageHints.west_highland_white_terrier;
+    expect(P.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 6\.000 pri 6 mesecih/);
+    expect(P.young).toBe('2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).');
+    expect(P.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
+    expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.west_highland_white_terrier).toBe('Del 12-tedenskega izziva.');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.west_highland_white_terrier;
+      expect(E.puppy).toContain('2,000 steps a day, more each week up to 6,000 at 6 months');
+      expect(E.adult).toContain('6,000 steps');
+      expect(E.senior).toContain('4,500 steps');
+      expect(PICKER_STRINGS.breedHints.west_highland_white_terrier).toBe('Part of the 12-week challenge.');
     } finally {
       await i18n.changeLanguage('sl');
     }
