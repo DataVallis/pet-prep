@@ -5587,7 +5587,7 @@
       "notes": "FCI nomenclature (S137, fields as returned): 'BICHON HAVANAIS (English: HAVANESE)'; standard number 250; country of patronage FCI; country of development 'WESTERN MEDITERRANEAN BASIN'; not subject to a working trial; definitive acceptance 24/09/1963; valid standard 31/10/2016. FCI standard PDF (S136): 'ORIGIN: Cuba.' 'PATRONAGE: FCI.' 'FCI-CLASSIFICATION: Group 9 Companion and Toy Dogs.' 'Section 1 Bichons and related breeds.' 'Without working trial.' Quote assembled from the nomenclature fields."
     },
     "size_class": {
-      "value": "toy / small",
+      "value": "small",
       "unit": "—",
       "source_id": "S138",
       "quote": "Size: Small",
@@ -5596,16 +5596,10 @@
     },
     "height": {
       "fci": {
-        "value": {
-          "male": [
-            23,
-            27
-          ],
-          "female": [
-            23,
-            27
-          ]
-        },
+        "value": [
+          23,
+          27
+        ],
         "unit": "cm",
         "source_id": "S136",
         "quote": "Height at the withers: From 23 to 27 cm.",
