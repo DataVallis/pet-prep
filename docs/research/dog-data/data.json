@@ -5136,7 +5136,7 @@
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
       },
       "suitability_tags": {
-        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-05); refs = JSON paths in this file. `heart_and_spine` is a new consider key (welfare rule: RKC 'can be affected by conformational concerns' S105, heart scheme and MRI; PDSA heart / CM-SM S108; Bristol skull shape S110). SL 'srce in hrbtenjača — preverite zdravje staršev', EN 'heart and spine — check the parents' health'. No percentages in the app.",
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-05); refs = JSON paths in this file. `heart_and_spine` is a new consider key (welfare rule: RKC 'can be affected by conformational concerns' S105, heart scheme and MRI; PDSA heart / CM-SM S108; Bristol skull shape S110). SL 'srce in hrbtenjača — preverite zdravstvene teste', EN 'heart and spine — check health tests'. No percentages in the app.",
         "suits": [
           {
             "tag": "apartment",

@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Kavalir King Charles španjel: peta nova pasma, drugič po stalnih pravilih (M5-R10-05)
+
+**Kaj se je zgodilo:** PetPrep ima šesto plačljivo pasmo psa — **kavalirja King Charles španjela** (Cavalier King Charles Spaniel). Dodana je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **8 novih virov (S103–S110)** — standard FCI 136 in nomenklatura FCI, stran pasme, standard in Breed Watch The Royal Kennel Club, PDSA, raziskava VetCompass (Summers 2015) in Univerza v Bristolu. Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«, PDSA »vsaj 1 uro«), starejši 4.500, mladiček od 2.000 do 6.000 (pri 6 mesecih); starejši je od 90. meseca (mediana VetCompass 9,99 leta); uči se enako hitro kot mešanček.
+
+**Zakaj je pomembno:** Kavalir je nežen, družinski pes, primeren tudi za stanovanje — a britanski veterinarski viri opozarjajo na bolezen srčne zaklopke in bolečo bolezen hrbtenjače, povezano z obliko lobanje. PetPrep staršem mirno svetuje, naj vprašajo za zdravstvene teste staršev mladička (srce, MRI), in pasme po pravilu za dobrobit **ne uporablja v marketingu** (David lahko to spremeni). Nova oznaka »srce in hrbtenjača — preverite zdravstvene teste« je brez odstotkov.
+
+**Številke:** 8 novih virov (S103–S110), 46 vrstic `breed_stage_params`, 6 oznak (3 + 3), 1 nova oznaka v besednjaku (`heart_and_spine`), 1 nova migracija; Pest **1967** testov, Jest **1950**, izvoz registra **19** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Kavalir je ljubeč družinski pes, ki zadostuje z okoli eno uro gibanja na dan in se dobro znajde v stanovanju — a ne mara biti sam. Pri nakupu vprašajte za srčne preglede in MRI staršev mladička. V PetPrep to vidite, preden se odločite.« (*ko bo nova različica v trgovini; brez slik pasme — glej smernice za marketing*)
+- 💼 Investitorji: »Šesta plačljiva pasma, druga dodana samodejno po vnaprej potrjenih pravilih — raziskava z viri, številke igre, testi in dokumentacija v enem zagonu.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri kavalirju sledi The Royal Kennel Club in PDSA — družine napoti k zdravstveno testiranim staršem (srčna shema, MRI), brez strašenja.«
+- 📣 Omrežja: *ne* — kavalir se v objavah ne pojavlja (pravilo za dobrobit, 10. 10. 2026; David lahko spremeni).
+- 🛠 Tehnično: »Odločitvena konstanta seederja ima pripono pasme (`… (pravilo runbooka, M5-R10-05)`), da se odločitve dveh samodejnih zagonov ne pomešajo; migracija samo razširi CHECK in je povratna.«
+
+---
+
 ## 2026-10-10 — Nemški ovčar: četrta nova pasma, prvič po stalnih pravilih (M5-R10-04)
 
 **Kaj se je zgodilo:** PetPrep ima peto plačljivo pasmo psa — **nemškega ovčarja** (German Shepherd Dog). Je prva pasma, dodana v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026: vsaka številka sledi vnaprej dogovorjenemu pravilu in je zapisana z virom. Raziskava: **8 novih virov (S95–S102)** — standard FCI 166 in nomenklatura FCI, The Royal Kennel Club (stran pasme, standard in Breed Watch), PDSA, raziskava VetCompass (O'Neill 2017) in novica RVC. Številke igre: odrasel nemški ovčar potrebuje **120 minut gibanja = 12.000 korakov** na dan (RKC »več kot 2 uri«, PDSA »vsaj dve uri«), mladiček doseže ta cilj pri **12 mesecih**, starejši **9.000**; starejši postane pri **93 mesecih** (0,75 × 10,3 leta, mediana VetCompass); uči se **1,9× hitreje** od mešančka (Coren: 3. mesto). Izbirnik pokaže »Primerno za: aktivno družino, družinsko življenje, veliko hišo z vrtom« in »Upoštevajte: vsak dan potrebuje veliko gibanja, izpada mu dlaka, potrebuje česanje večkrat na teden, ko se dolgočasi, grize stvari, **kolki in zadnje noge — preverite zdravje sklepov**« (nova oznaka, brez odstotkov). AI videz: samo standardne barve (privzeto črno-rjav), raven hrbet in naravne zadnje noge — nikoli nagnjena razstavna drža.
