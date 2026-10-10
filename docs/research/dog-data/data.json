@@ -5516,13 +5516,13 @@
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, sheds, frequent_grooming, chews_when_bored, hips_hind_legs (new key, welfare rule)"
       },
       "marketing": {
-        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "value": "in the app: yes; in marketing / store screenshots / social: yes",
         "unit": "—",
         "source_id": "S99",
         "quote": "Incorrect hind conformation and/or poor rear movement",
         "confidence": "high",
-        "notes": "Welfare-concern rule (runbook §3): the RKC names the breed for a conformation-related concern (Breed Watch S99, breed page S97 'can be affected by conformational concerns'; PDSA S100 'Category Three'). The German Shepherd is a normal breed in the app and the register, but is not used in PetPrep advertising, store screenshots, social posts or decks until David decides otherwise.",
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, NOT in marketing / store screenshots (RKC Breed Watch S99 — conformation concern)"
+        "notes": "David 2026-10-10: the German Shepherd is used in marketing like any other breed (the runbook welfare rule had excluded it mechanically; refined the same day — exclusion only where a veterinary association advises against advertising the breed type, e.g. BVA for flat faces). The sources stay recorded: RKC Breed Watch S99, RKC breed page S97 ('can be affected by conformational concerns'). Marketing never promises the breed's health; the hips_hind_legs chip stays.",
+        "decision": "potrdil David 2026-10-10: in the app yes, in marketing YES (not excluded — no veterinary advice against advertising the breed)"
       },
       "ai_appearance": {
         "value": "adult German Shepherd, black-and-tan saddle (default), sable or solid black; erect ears; level back and moderate, natural hind legs (never the sloping show stance); standard colours only; never white / blue / liver",
