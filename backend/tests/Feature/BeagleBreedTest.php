@@ -433,7 +433,7 @@ describe('no health statistics in the app (runbook §3)', function () {
             collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'beagle')->values()->all(),
         ], JSON_UNESCAPED_UNICODE);
 
-        foreach (['24.27', '17.78', 'odds ratio', '19.70'] as $statistic) {
+        foreach (['24.27', '17.78', 'odds ratio', '18.19', '19.70'] as $statistic) {
             expect((string) $app)->not->toContain($statistic);
         }
         expect(bgData('beagle.health._note'))->toContain('never shown in the app')

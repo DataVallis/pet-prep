@@ -20,7 +20,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 👩 Starši: »Bigl je vesel družinski pes, ki potrebuje okoli eno uro gibanja na dan — in družbo. Sam se dolgočasi, laja in lahko grize stvari, pri hrani pa ga je treba paziti, ker se rad zredi. V PetPrep otrok občuti, da se bigl uči počasneje kot drugi psi.« (*ko bo nova različica v trgovini*)
 - 💼 Investitorji: »Sedma plačljiva pasma, tretja dodana samodejno po vnaprej potrjenih pravilih — raziskava z viri, številke igre, testi in dokumentacija v enem zagonu.«
 - 🤝 Partnerji (veterinarji, zavetišča): »PetPrep pri biglu sledi The Royal Kennel Club, PDSA in VetCompass — družine pripravi na družbo, šolanje z nagradami in skrb za težo.«
-- 📣 Omrežja: »Misliš, da je bigl lahek pes? Vpraša te za družbo, za sprehod in pazi na tvoje copate.« (*ko bo bigl v trgovini*)
+- 📣 Omrežja: »Misliš, da je bigl lahek pes? Vpraša te za družbo, za sprehod — in za tvoje copate.« (*ko bo bigl v trgovini*)
 - 🛠 Tehnično: »Prvi pes brez teže v standardu FCI / RKC — teža iz PDSA; ko si vira nasprotujeta, runbook izbere RKC in drugo vrednost zapiše kot alternativo.«
 
 ---

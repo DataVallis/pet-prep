@@ -974,7 +974,7 @@ class BreedStageParamsSeeder extends Seeder
                 'unit' => 'kg', 'source_id' => 'S115', 'confidence' => 'medium', 'verified' => true,
                 'ref' => 'beagle.adult_weight.pdsa',
                 'quote' => 'Average weight: 9-11 kg',
-                'notes' => 'PDSA key facts, one range for both sexes. The FCI (S111) and RKC (S114) standards give a height only (33–40 cm). Measured UK pet Beagles are heavier (median 18.19 kg, S116 — research only; obesity is common).',
+                'notes' => 'PDSA key facts, one range for both sexes. The FCI (S111) and RKC (S114) standards give a height only (33–40 cm). Measured UK pet Beagles are heavier (S116 — research only; obesity is common).',
             ]],
             'growth_end' => [[9, 12], [
                 'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
