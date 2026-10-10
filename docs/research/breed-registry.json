@@ -45,7 +45,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "6f1478224c3556610788fe017beee4575209c4cdfa1a764fa09d8798488cb1dd"
+      "sha256": "048594b91817f7b0fa6fb163d7abc164b7cb3e031f71a5692b8a5d89bee4a8de"
     }
   },
   "suitability_vocabulary": {
@@ -1095,7 +1095,7 @@
         "file": "border-collie.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_illustration"
+        "kind": "ai_photo"
       },
       "source_ids": [
         "S1",
@@ -1728,7 +1728,7 @@
         "file": "labrador-retriever.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_illustration"
+        "kind": "ai_photo"
       },
       "source_ids": [
         "S8",
@@ -2404,7 +2404,7 @@
         "file": "golden-retriever.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_illustration"
+        "kind": "ai_photo"
       },
       "source_ids": [
         "S8",
@@ -2999,7 +2999,7 @@
         "file": "french-bulldog.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_illustration"
+        "kind": "ai_photo"
       },
       "source_ids": [
         "S10",
@@ -3344,7 +3344,7 @@
         "file": "maine-coon.webp",
         "width": 1024,
         "height": 1024,
-        "kind": "ai_illustration"
+        "kind": "ai_photo"
       },
       "source_ids": [
         "C1",
