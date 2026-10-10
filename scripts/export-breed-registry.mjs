@@ -372,6 +372,7 @@ const SPECIES = [
       { id: 'standard_poodle', availability: 'coming_soon', synonyms: { en: ['Standard Poodle', 'Poodle'], sl: ['koder', 'veliki pudelj', 'pudelj', 'standardni pudelj', 'poodle'] } },
       { id: 'dachshund', availability: 'coming_soon', synonyms: { en: ['Sausage dog', 'Teckel', 'Standard Dachshund'], sl: ['jazbečar', 'jazbecar', 'dachshund', 'teckel'] } },
       { id: 'australian_shepherd', availability: 'coming_soon', synonyms: { en: ['Aussie'], sl: ['avstralski ovčar', 'avstralski ovcar', 'aussie'] } },
+      { id: 'havanese', availability: 'coming_soon', synonyms: { en: ['Bichon Havanais'], sl: ['havanski bišon', 'havanski bison', 'havanez', 'bichon havanais'] } },
     ],
   },
   {
@@ -390,7 +391,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -554,6 +555,24 @@ const DOG_FACTS = {
       ['merle_to_merle_breeding', 'health.merle_to_merle'],
     ],
   },
+  // M5-R10-10. Not exported: lifespan.mcmillan_2024 (no value), height.pdsa_average (page error),
+  // height.rkc_standard / akc_standard (FCI is the register's standard), adult_weight.salt_category
+  // (our assignment), health.elbow (screening only, research).
+  havanese: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['pra_and_eyelashes', 'health.eyes'],
+      ['liver_shunt', 'health.portosystemic_shunt'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -637,6 +656,14 @@ const DOG_GAME = {
     step_goal_check: 'proposed_game_parameters.australian_shepherd.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.australian_shepherd.exercise_minutes_senior',
   },
+  havanese: {
+    adult_minutes: ['proposed_game_parameters.havanese.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.havanese.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.havanese.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.havanese.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.havanese.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.havanese.exercise_minutes_senior',
+  },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],
     senior_minutes: ['proposed_game_parameters.senior_exercise_minutes', (e) => e.value.medium_mixed_breed],
@@ -670,7 +697,10 @@ function dogBreedFacts(R, id) {
   for (const [rel, field] of spec.grooming) facts.push(R.fact(p(rel), { group: 'grooming', field, kind: 'category' }, code));
   for (const rel of spec.shedding) facts.push(R.fact(p(rel), { group: 'grooming', field: 'shedding', kind: 'category' }, code));
   if (spec.food_motivation) facts.push(R.fact(p(spec.food_motivation), { group: 'feeding', field: 'food_motivated', kind: 'statement' }, () => true));
-  facts.push(R.fact(p('trainability.coren_rank'), { group: 'training', field: 'coren_rank', kind: 'statement' }, Number));
+  // A breed Coren did not rank (Havanese, M5-R10-10: value null, S35) has no rank fact — never a 0 or a guess.
+  if (R.entry(p('trainability.coren_rank'))?.value != null) {
+    facts.push(R.fact(p('trainability.coren_rank'), { group: 'training', field: 'coren_rank', kind: 'statement' }, Number));
+  }
   facts.push(
     R.fact(p('identity'), { group: 'training', field: 'fci_standard', kind: 'statement' }, (v, ref) => {
       const s = String(v);

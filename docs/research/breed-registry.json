@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "c5a3f58bcbf0b7ed7fd4ce7f8e01db6a00b4422f6a92abf0edaaf673a8188e3f"
+      "sha256": "cce46f654fa8fe76464647f529eb282b8f536a7dfd8137459188196880f6db73"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "601156c112b844b7994e776355a728b6fb2527140a0b06a7e054908d882c0872"
+      "sha256": "2163028dcc374f1a480296e05709c4286f06f1dad38c97b381711ed33e777c8a"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,23 +25,23 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "1345e15a5dd4670577545d6c7d6350a030e09f64c20ac9d2a05efe4451092297"
+      "sha256": "f0025be0a0b3ae1481b7b6af28b660347d8a9c75ed9bdca890a264462fb5036d"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "d84f12c8ed6c66bcd6ff3f0a7d20a067d0538e5f34f32f01c79cae81d48c61c8"
+      "sha256": "ddaa8f6c03c72d867224cc5582d89e83b84e0feca8dc0c05197e8b68a3cfb34d"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "69697c41ce8936ce2607cfad8edc9cd61bbd03b345b760a08037755b7d28cc74"
+      "sha256": "6448eb9d262706779c0bd7efaca75b95466aab355ef23bc1703e3a8378cc81bf"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "1de13262156770841dd3eea8aed9122c1364fa78c83ff7bafb67e884a4fc2bdd"
+      "sha256": "75baac052818ab48976fcb774299746d27584d03fd8cf70b170c6dcfc2841df2"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "c2be509d2b411e69752129b8cd495b7b68d8762f0738999320fd0b57ef87c1c2"
+      "sha256": "0a1b097dc91ee0d4bab1289fa63373cba192ae7ef35efe5294a99041341fcc71"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -148,7 +148,7 @@
         }
       },
       "status": "available",
-      "breed_count": 10,
+      "breed_count": 11,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -6061,6 +6061,459 @@
       ]
     },
     {
+      "id": "havanese",
+      "species": "dog",
+      "order": 10,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Havanese",
+        "sl": "Havanski bišon"
+      },
+      "slug": {
+        "en": "havanese",
+        "sl": "havanski-bison"
+      },
+      "synonyms": {
+        "en": [
+          "Bichon Havanais"
+        ],
+        "sl": [
+          "havanski bišon",
+          "havanski bison",
+          "havanez",
+          "bichon havanais"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S138"
+          ],
+          "ref": "havanese.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": [
+            23,
+            27
+          ],
+          "source_ids": [
+            "S136"
+          ],
+          "ref": "havanese.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            3,
+            6
+          ],
+          "source_ids": [
+            "S140"
+          ],
+          "ref": "havanese.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "havanese.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S138"
+          ],
+          "ref": "havanese.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 30,
+          "source_ids": [
+            "S138"
+          ],
+          "ref": "havanese.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "long"
+          ],
+          "source_ids": [
+            "S138"
+          ],
+          "ref": "havanese.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S138"
+          ],
+          "ref": "havanese.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S138"
+          ],
+          "ref": "havanese.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 250,
+            "group": 9,
+            "section": 1,
+            "origin": "CU"
+          },
+          "source_ids": [
+            "S137"
+          ],
+          "ref": "havanese.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S140"
+          ],
+          "ref": "havanese.health.luxating_patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_and_eyelashes",
+          "source_ids": [
+            "S140"
+          ],
+          "ref": "havanese.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "liver_shunt",
+          "source_ids": [
+            "S140"
+          ],
+          "ref": "havanese.health.portosystemic_shunt",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S138"
+            ],
+            "refs": [
+              "havanese.suitability.rkc_size_of_home",
+              "havanese.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S140"
+            ],
+            "refs": [
+              "havanese.suitability.pdsa_family",
+              "havanese.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S136"
+            ],
+            "refs": [
+              "havanese.suitability.fci_children",
+              "havanese.behaviour.family"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S138"
+            ],
+            "refs": [
+              "havanese.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S138",
+              "S140"
+            ],
+            "refs": [
+              "havanese.suitability.rkc_grooming",
+              "havanese.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 3000,
+              "cap_month": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2300
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 3000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 30,
+              "steps": 3000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.havanese.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S138"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S138 'Up to 30 minutes per day'; PDSA S140 'around 30 minutes')"
+          },
+          {
+            "ref": "proposed_game_parameters.havanese.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30 = 22.5, half up)"
+          },
+          {
+            "ref": "proposed_game_parameters.havanese.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S138"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S138)"
+          },
+          {
+            "ref": "proposed_game_parameters.havanese.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S138"
+        ]
+      },
+      "portrait": null,
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S136",
+        "S137",
+        "S138",
+        "S140"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -6960,6 +7413,34 @@
       "publisher": "PDSA (UK veterinary charity)",
       "title": "Australian Shepherd breed information",
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/australian-shepherd"
+    },
+    {
+      "id": "S136",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 250 — Havanese, EN (PDF)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/250g09-en.pdf"
+    },
+    {
+      "id": "S137",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — Havanese (250)",
+      "url": "https://www.fci.be/en/nomenclature/HAVANESE-250.html"
+    },
+    {
+      "id": "S138",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: Havanese",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/havanese/"
+    },
+    {
+      "id": "S140",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Havanese breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/havanese"
     },
     {
       "id": "C1",
