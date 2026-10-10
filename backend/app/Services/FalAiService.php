@@ -130,6 +130,14 @@ class FalAiService
                 .'dark brown eyes with a mild appealing expression, broad nose with wide nostrils, moderate muzzle, '
                 .'tail carried gaily with a white tip, sturdy, compact build, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-07: FCI 172 (S118) / RKC standard (S121) — solid standard colours only,
+            // black first; dense curly coat in a short even trim (no show clip), long wide
+            // low-set ears, long fine head with straight muzzle, natural undocked tail.
+            BreedType::StandardPoodle => 'An elegant Standard Poodle dog with a solid black coat, '
+                .'dense curly coat in a short, even all-over trim, long wide ears set low and hanging close to the face, '
+                .'dark almond-shaped eyes, long fine head with a straight muzzle and black nose, '
+                .'natural tail set rather high, well-balanced build with proud carriage, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -266,6 +274,18 @@ class FalAiService
                     1 => 'tan patches on white, white tail tip',
                     2 => 'pale lemon patches on white, white tail tip',
                 },
+            ],
+            // M5-R10-07: FCI (S118) colours — "Solid colour: black, white, brown, grey,
+            // fawn."; not of solid colour / white marks = disqualification.
+            BreedType::StandardPoodle => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'solid black',
+                    1 => 'solid white',
+                    2 => 'solid brown',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'dense, curly, short even trim',
+                'markings' => 'no markings',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

@@ -251,5 +251,26 @@ return [
                 ['tag' => 'chews_when_bored', 'source_ids' => ['S115'], 'refs' => ['beagle.behaviour.chewing']],
             ],
         ],
+        // M5-R10-07: standard_poodle.* (S118–S123), runbook rules 2026-10-10
+        // (data.json proposed_game_parameters.standard_poodle.suitability_tags). Woodgreen not
+        // found → RKC (S120, S121), PDSA (S122). Not `family_pet` (no family statement), not
+        // `small_children` (no explicit rating), not `apartment` (RKC "Large house"). Never
+        // "hypoallergenic" — `low_shedding` is the sourced wording ("Sheds: No", "does not moult").
+        'standard_poodle' => [
+            'suits' => [
+                // S122 "They generally get on well with other pets and children, given the right socialisation as puppies, as with all breeds."
+                ['tag' => 'children', 'source_ids' => ['S122'], 'refs' => ['standard_poodle.suitability.pdsa_children', 'standard_poodle.behaviour.family']],
+                // S120 "Size of home: Large house"; "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S120'], 'refs' => ['standard_poodle.suitability.rkc_size_of_home', 'standard_poodle.suitability.rkc_size_of_garden']],
+                // S122 (same sentence) — other pets, with the general socialisation caveat.
+                ['tag' => 'other_pets', 'source_ids' => ['S122'], 'refs' => ['standard_poodle.suitability.pdsa_other_pets', 'standard_poodle.behaviour.other_pets']],
+                // S120 "Sheds: No"; S121 "a type of coat which does not moult".
+                ['tag' => 'low_shedding', 'source_ids' => ['S120', 'S121'], 'refs' => ['standard_poodle.suitability.rkc_shedding', 'standard_poodle.suitability.rkc_non_moulting_coat']],
+            ],
+            'consider' => [
+                // S120 "Grooming: Every day"; S122 "They need daily grooming" + professional clipping.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S120', 'S122'], 'refs' => ['standard_poodle.suitability.rkc_grooming', 'standard_poodle.suitability.pdsa_grooming']],
+            ],
+        ],
     ],
 ];

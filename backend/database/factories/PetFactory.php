@@ -219,6 +219,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Standard Poodle (paid breed, M5-R10-07).
+     */
+    public function standardPoodle(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::StandardPoodle->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static
