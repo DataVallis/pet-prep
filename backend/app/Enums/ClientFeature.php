@@ -30,8 +30,8 @@ enum ClientFeature: string
      * cat HUD). Unlike the features above it does not switch a game rule on
      * for a pet — it GATES cats: the parent needs it to see / choose a cat
      * (`GET /api/breeds`, `generate-pin`), the child to sign in to a cat
-     * (`pin-login` → 422 `app_update_required`). Also needs the server flag
-     * `petprep.cats_enabled` (SpeciesAvailability).
+     * (`pin-login` → 422 `app_update_required`). A NEW cat also needs the
+     * cats switch (/admin → Funkcije, M5-R06-09; SpeciesAvailability).
      */
     case SpeciesCat = 'species_cat';
 

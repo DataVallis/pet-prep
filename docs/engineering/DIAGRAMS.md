@@ -175,7 +175,7 @@ sequenceDiagram
   Parent->>API: POST /api/parent/children {display_name, birth_year?}<br/>(token ability parent)
   API->>DB: users row: role child, nickname, birth_year,<br/>email NULL, password NULL; family_user (child)
   API-->>Parent: 201 {child {id, …}}
-  Parent->>API: GET /api/breeds?features[]=… (M5-R06-01 catalogue:<br/>cats only with PETPREP_CATS_ENABLED + species_cat)
+  Parent->>API: GET /api/breeds?features[]=… (M5-R06-01 catalogue:<br/>cats only when the admin switch allows this family<br/>(M5-R06-09) + species_cat)
   Parent->>API: POST /api/parent/generate-pin {child_id, pet_id?,<br/>species?, breed?, origin?, age_stage?, plan?, features?}
   API->>DB: lock parent → child → family; mode = new_pet | join_pet | relogin;<br/>new pet: breed ∈ species (422 breed_species_mismatch), cat available<br/>(422 species_unavailable), free / paid from breed_configs.premium_unlock;<br/>revoke the child's open PIN; insert child_login_pins<br/>(HMAC-SHA256 of the PIN, 15 min)
   API-->>Parent: {pin "734 912", expires_at, mode}

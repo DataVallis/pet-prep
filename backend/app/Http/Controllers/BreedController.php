@@ -24,8 +24,9 @@ class BreedController extends Controller
      * The species and breeds this app build may choose for a new pet.
      *
      * `species` lists the available species (`dog` always; `cat` only while
-     * the server flag `PETPREP_CATS_ENABLED` is on AND the query carries
-     * `features[]=species_cat` — cats are hidden until M5-R06-09).
+     * the cats switch (/admin → Funkcije: everyone, or test families incl.
+     * the requesting parent's family; env PETPREP_CATS_ENABLED=true =
+     * everyone) allows it AND the query carries `features[]=species_cat`).
      * `breeds`: per species (dog first) the free breed first (mutt / domestic
      * cat), then the paid breeds by `sort_order`. Optional `species` filters
      * one species; an unavailable species returns an empty `breeds` list
@@ -40,7 +41,8 @@ class BreedController extends Controller
      */
     public function index(BreedCatalogRequest $request): JsonResponse
     {
-        $available = $this->availability->available($request->features());
+        // M5-R06-09: cats per the admin switch for the requesting user's family.
+        $available = $this->availability->available($request->features(), SpeciesAvailability::familyOfUser($request->user()));
 
         return response()->json([
             /** @var list<'dog'|'cat'> */

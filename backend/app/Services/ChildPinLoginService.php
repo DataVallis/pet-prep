@@ -99,6 +99,9 @@ class ChildPinLoginService
             throw new FamilyException('not_a_parent', 'Only a parent can generate a PIN.', 403);
         }
 
+        // Warm the cats-switch cache outside the row locks (see login()).
+        app(AppSettingsService::class)->storedCats();
+
         return DB::transaction(function () use ($parent, $childId, $joinPetId, $profile, $plan, $planChosen): array {
             // Lock order: parent user row → child user row → family row.
             User::whereKey($parent->id)->lockForUpdate()->first();
@@ -114,8 +117,8 @@ class ChildPinLoginService
 
             $mode = $this->resolveMode($family, $child, $joinPetId, forGeneration: true);
             if ($mode === self::MODE_NEW_PET && $profile !== null) {
-                // M5-R06-01: breed ↔ species, cats only when available (flag + `species_cat`).
-                $this->pairing->assertSpeciesAllowed($profile);
+                // M5-R06-01: breed ↔ species, cats only when available (switch for this family + `species_cat`).
+                $this->pairing->assertSpeciesAllowed($profile, $family);
                 $this->pairing->assertProfileAllowed($profile, $plan);
             }
             // M5-F03: an explicitly chosen challenge needs a paid breed (no profile → mutt).
@@ -180,6 +183,10 @@ class ChildPinLoginService
             throw ChildLoginException::invalidPin();
         }
 
+        // Warm the cats-switch cache outside the row locks (a cache miss inside
+        // the transaction would upsert the shared cache row while holding them).
+        app(AppSettingsService::class)->storedCats();
+
         try {
             return DB::transaction(function () use ($candidate, $deviceName, $clientFeatures): array {
                 // Lock order (backend/CLAUDE.md): parent → child → family, then
@@ -203,7 +210,7 @@ class ChildPinLoginService
                 }
 
                 $mode = $this->resolveMode($family, $child, $locked->pet_id, forGeneration: false);
-                $this->assertDeviceCanShowPet($mode, $child, $locked, $clientFeatures);
+                $this->assertDeviceCanShowPet($mode, $child, $family, $locked, $clientFeatures);
 
                 $joined = false;
                 if ($mode === self::MODE_RELOGIN) {
@@ -257,14 +264,16 @@ class ChildPinLoginService
      * M5-R06-01 (plan T4): a child app build without `species_cat` can't show a
      * cat — signing in to a cat (new, shared or re-login) → 422
      * `app_update_required`; the PIN stays usable (update the app, try again).
-     * A NEW cat additionally needs the server flag at login time: switched off
-     * since the PIN was issued → the PIN is revoked (`pin_not_usable`).
+     * A NEW cat additionally needs the cats switch for the PIN's family at
+     * login time (M5-R06-09: /admin → Funkcije): switched off since the PIN
+     * was issued → the PIN is revoked (`pin_not_usable`). Join / re-login to
+     * an existing cat never depends on the switch.
      *
      * @param  list<string>  $clientFeatures
      *
      * @throws ChildLoginException|PairingException
      */
-    private function assertDeviceCanShowPet(string $mode, User $child, ChildLoginPin $pin, array $clientFeatures): void
+    private function assertDeviceCanShowPet(string $mode, User $child, Family $family, ChildLoginPin $pin, array $clientFeatures): void
     {
         $species = match ($mode) {
             self::MODE_NEW_PET => $pin->pet_options !== null ? PetProfileChoice::fromArray($pin->pet_options)->species : Species::Dog,
@@ -278,7 +287,7 @@ class ChildPinLoginService
             throw new ChildLoginException('app_update_required', 'Update the app to look after this pet.');
         }
 
-        if ($mode === self::MODE_NEW_PET && $species === Species::Cat && ! SpeciesAvailability::catsEnabled()) {
+        if ($mode === self::MODE_NEW_PET && $species === Species::Cat && ! app(SpeciesAvailability::class)->catsEnabledFor($family)) {
             throw new PairingException('Cats are not available any more.');
         }
     }

@@ -41,9 +41,11 @@ class PairingController extends Controller
      * Optional `species` (M5-R06-01): `dog` (default — old app builds) | `cat`.
      * The breed must belong to it; without `breed` the species' free breed
      * (mutt / domestic cat). Free / paid comes from `breed_configs.premium_unlock`
-     * (GET /api/breeds lists it). Cats are hidden: available only while the
-     * server flag `PETPREP_CATS_ENABLED` is on AND `features` contains
-     * `species_cat`; a cat always needs `origin` + `age_stage`.
+     * (GET /api/breeds lists it). Cats: available only while the cats switch
+     * (/admin → Funkcije, M5-R06-09: everyone, or test families incl. this
+     * parent's family; env PETPREP_CATS_ENABLED=true = everyone) allows it
+     * AND `features` contains `species_cat`; a cat always needs `origin` +
+     * `age_stage`.
      *
      * New pet profile (M5-R01, only without `pet_id`), all or nothing:
      * `origin` bought | adopted and `age_stage` puppy | young | adult |
