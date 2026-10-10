@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Francoski buldog: tretja nova pasma, s skrbjo za dobrobit (M5-R10-03)
+
+**Kaj se je zgodilo:** PetPrep ima četrto plačljivo pasmo psa — **francoskega buldoga** (French Bulldog). Raziskava: **19 novih virov (S76–S94)** — standard FCI 101, The Royal Kennel Club (stran pasme in standard), AKC standard, PDSA, Woodgreen, tri raziskave VetCompass (O'Neill 2018 in 2021, Hall 2020 o toplotnem udaru), poročilo RKC o ocenjevanju dihanja, stališče British Veterinary Association, UK Brachycephalic Working Group in UFAW. David je zjutraj (10. 10. ~06:20) potrdil številke igre: odrasel francoski buldog potrebuje **60 minut gibanja = 6.000 korakov** na dan (RKC in PDSA »do 1 ure«), mladiček doseže ta cilj pri **6 mesecih**, starejši **4.500**; starejši postane pri **88 mesecih** (0,75 × 9,8 leta, McMillan 2024 — prej kot drugi psi); uči se **0,7× hitrosti** mešančka (Coren: 58. mesto). Izbirnik pokaže »Primerno za: življenje v stanovanju, družinsko življenje, družino z otroki« in »Upoštevajte: **kratek gobček — težave z dihanjem in vročino**« (nova oznaka, brez odstotkov). AI videz: zmeren obraz z odprtimi nosnicami, samo standardne barve, nikoli merle.
+
+**Zakaj je pomembno:** Francoski buldog je ena najbolj priljubljenih pasem, a vsi viri opozarjajo na dihanje in vročino. PetPrep ga ne skrije in ga ne prodaja: v aplikaciji in registru je z mirnim, podprtim opozorilom, **v marketingu pa ga ne uporabljamo** (priporočilo BVA). To je prva pasma, kjer odločitev o dobrobiti vpliva na to, kako jo predstavimo — in prva z oznako »življenje v stanovanju«.
+
+**Številke:** 19 novih virov (S76–S94), 46 vrstic `breed_stage_params`, 4 oznake (3 + 1), 1 nova oznaka v besednjaku (`brachycephalic_breathing`), 1 nova migracija; Pest **1914** testov, Jest **1913** testov, izvoz registra 16 testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Francoski buldog je prijazen družinski pes za stanovanje — a zaradi kratkega gobčka težje diha in ne prenaša vročine. V PetPrep to vidite, preden se odločite.« (*ko bo nova različica v trgovini; brez slik pasme — glej smernice za marketing*)
+- 💼 Investitorji: »Četrta plačljiva pasma v dveh dneh, s pravilom za dobrobit: pasme s ploščatim obrazom so v aplikaciji, ne v oglasih.«
+- 🤝 Partnerji (veterinarji, zavetišča): »PetPrep pri francoskem buldogu sledi priporočilom BVA in UK Brachycephalic Working Group — družine opozori na dihanje in vročino, brez strašenja.«
+- 📣 Omrežja: *ne* — francoski buldog se v objavah ne pojavlja (David 10. 10. 2026).
+- 🛠 Tehnično: »Nov kvalifikator `up_to` v izvozu registra (do 1 ure ni ›1–2 uri‹), država izvora iz standarda FCI (Francija), lastnost `muzzle` v pozivu za zmeren obraz.«
+
+---
+
 ## 2026-10-10 — Ilustracije pasem z UI za register živali (M5-R11-04)
 
 **Kaj se je zgodilo:** Za register živali na petprep.si je narejeno orodje, ki za vsako pasmo ustvari **eno ilustracijo v enotnem slogu PetPrep** (svetlo studijsko ozadje v barvah znamke, cela odrasla žival v tipični barvi standarda — npr. rumen labradorec). Slike so na spletu vedno označene **»Ilustracija, ustvarjena z UI«**. Opis videza pride samo iz podatkov o pasmi (standardi FCI / RKC / AKC / FIFe, kjer obstajajo) — nikoli iz podatkov otroka ali ljubljenčka. *Slike še niso ustvarjene* (David požene orodje).
