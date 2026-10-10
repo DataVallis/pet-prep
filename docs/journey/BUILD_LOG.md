@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Bigl: šesta nova pasma, tretjič po stalnih pravilih (M5-R10-06)
+
+**Kaj se je zgodilo:** PetPrep ima sedmo plačljivo pasmo psa — **bigla** (Beagle). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **7 novih virov (S111–S117)** — standard FCI 161 in nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA, raziskava VetCompass o biglih (O'Neill in sod. 2025, skoraj 20.000 biglov) in povzetek RVC. Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«; PDSA na isti strani navaja 1 uro in uro in pol, zato velja RKC), starejši 4.500 korakov od 102. meseca (0,75 × mediana 11,28 leta), uči se **pol hitreje** kot mešanček (0,5× — Coren ga uvršča med pasme, ki ukaze najtežje ubogajo).
+
+**Zakaj je pomembno:** Bigl je ena najbolj priljubljenih družinskih pasem, a viri so jasni: potrebuje družbo (sam laja in grize stvari), je nagajiv pri učenju in se hitro zredi — v britanski veterinarski praksi je prekomerna teža najpogostejša diagnoza. PetPrep to pokaže z mirnimi oznakami »družinsko življenje« / »izpada mu dlaka«, »ko se dolgočasi, grize stvari« in s počasnejšim učenjem v igri. Ker bigl ni pasma s skrbjo za dobrobit zaradi zgradbe (RKC Breed Watch kategorija 1), ga lahko uporabimo tudi v marketingu.
+
+**Številke:** 7 novih virov (S111–S117), 46 vrstic `breed_stage_params`, 3 oznake (1 + 2), 0 novih oznak, 1 nova migracija; Pest **2009** testov, Jest **1958**, izvoz registra **20** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Bigl je vesel družinski pes, ki potrebuje okoli eno uro gibanja na dan — in družbo. Sam se dolgočasi, laja in lahko grize stvari, pri hrani pa ga je treba paziti, ker se rad zredi. V PetPrep otrok občuti, da se bigl uči počasneje kot drugi psi.« (*ko bo nova različica v trgovini*)
+- 💼 Investitorji: »Sedma plačljiva pasma, tretja dodana samodejno po vnaprej potrjenih pravilih — raziskava z viri, številke igre, testi in dokumentacija v enem zagonu.«
+- 🤝 Partnerji (veterinarji, zavetišča): »PetPrep pri biglu sledi The Royal Kennel Club, PDSA in VetCompass — družine pripravi na družbo, šolanje z nagradami in skrb za težo.«
+- 📣 Omrežja: »Misliš, da je bigl lahek pes? Vpraša te za družbo, za sprehod in pazi na tvoje copate.« (*ko bo bigl v trgovini*)
+- 🛠 Tehnično: »Prvi pes brez teže v standardu FCI / RKC — teža iz PDSA; ko si vira nasprotujeta, runbook izbere RKC in drugo vrednost zapiše kot alternativo.«
+
+---
+
 ## 2026-10-10 — Kavalir King Charles španjel: peta nova pasma, drugič po stalnih pravilih (M5-R10-05)
 
 **Kaj se je zgodilo:** PetPrep ima šesto plačljivo pasmo psa — **kavalirja King Charles španjela** (Cavalier King Charles Spaniel). Dodana je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **8 novih virov (S103–S110)** — standard FCI 136 in nomenklatura FCI, stran pasme, standard in Breed Watch The Royal Kennel Club, PDSA, raziskava VetCompass (Summers 2015) in Univerza v Bristolu. Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«, PDSA »vsaj 1 uro«), starejši 4.500, mladiček od 2.000 do 6.000 (pri 6 mesecih); starejši je od 90. meseca (mediana VetCompass 9,99 leta); uči se enako hitro kot mešanček.
