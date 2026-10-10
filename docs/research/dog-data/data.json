@@ -4106,6 +4106,500 @@
       }
     }
   },
+  "standard_poodle": {
+    "_note": "Added 2026-10-10 (M5-R10-07, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S118–S123, reused S10, S11, S14, S24, S35, S45). Pages were partly returned as paraphrase — only passages the tool returned in quotation marks are used as quotes. The FCI standard covers four Poodle varieties; this entry is the Standard (large) variety only, which the RKC lists as its own breed 'Poodle (Standard)'. Lifespan: McMillan 2024 (S54) does not name any Poodle in its text / corrected Fig. 3 legend; the Dogs Trust life-expectancy table of the same study (S123) has a single 'Poodle' row (14.0 y) that pools all varieties — not variety-specific, so not used for the Standard (size drives longevity); no VetCompass Standard Poodle median found → runbook rule: RKC lower bound 'Over 12 years' (S120). Weight: neither the FCI (S118) nor the RKC (S121) standard gives a weight; PDSA (S122, tier B, 'Poodle' page, size Large) is the only weight range. Woodgreen and AKC pages not found / not attempted.",
+    "identity": {
+      "value": "FCI No. 172, Group 9 Section 2 (Poodle), France",
+      "unit": "—",
+      "source_id": "S118",
+      "quote": "FCI-CLASSIFICATION: Group 9 Companion and Toy dogs.",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S119, fields as returned): 'Standard number: 172', 'Group: n°9 - Companion and Toy Dogs', 'Section: Poodle', 'Country of origin: FRANCE', not subject to a working trial, definitive acceptance 1/1/1955, valid standard returned as 3/20/2024 (the PDF S118 says 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 03.11.2014.' — verify). Varieties: Standard, Medium size, Miniature, Toy. FCI PDF (S118): 'FCI-CLASSIFICATION: Group 9 Companion and Toy dogs.' 'Section 2 Poodle.' 'Without working trial.' 'ORIGIN: France'. The RKC breed page says the Poodle 'originates in Germany, where it was bred as a water retriever' (S120, paraphrase) — FCI country of origin used."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S120",
+      "quote": "Size: Medium",
+      "confidence": "medium",
+      "notes": "RKC breed page (S120). PDSA (S122) says 'Size: Large' (key-facts box as returned) — conflict; RKC breed page preferred (runbook §2.2). Height FCI 45–60 cm (S118); PDSA weight 21–35 kg (S122) = PetMD Medium / Large class boundary (S10)."
+    },
+    "height": {
+      "fci": {
+        "value": [
+          45,
+          60
+        ],
+        "unit": "cm",
+        "source_id": "S118",
+        "quote": "Standard Poodles: Over 45 cm up to 60 cm with a tolerance of +2 cm.",
+        "confidence": "high",
+        "notes": "FCI (S118). One range for both sexes; 'The sexual dimorphism must be clearly visible in all varieties.' Other varieties: Medium 35–45 cm, Miniature 28–35 cm, Toy 24–28 cm (S118)."
+      },
+      "rkc": {
+        "value": "> 38",
+        "unit": "cm",
+        "source_id": "S121",
+        "quote": "Poodles (Standard): over 38 cms (15 ins).",
+        "confidence": "high",
+        "notes": "RKC standard (S121, last updated April 2025): minimum only, no maximum, no weight."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            30,
+            35
+          ],
+          "female": [
+            21,
+            32
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S122",
+        "quote": "Male: 30kg-35kg. Female: 21kg-32kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box, label 'Average weight' (S122). The page is titled 'Poodle' and does not name the variety; its 'Size: Large' places it at the Standard. The FCI (S118) and RKC (S121) standards give no weight. Tier B — the only weight range found."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 21–35 kg (S122) = 46–77 lb: males 66–77 lb (Large class), females 46–70 lb (straddles 'Medium (24–59 pounds): 12–15 months'); the midpoint 28 kg ≈ 62 lb → Large. Alternative: Medium 12–15 months."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Standard Poodle growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S120",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "medium",
+        "notes": "RKC breed page (S120). PDSA (S122): 'Average lifespan: 12-14 years' (key facts as returned) — same lower bound."
+      },
+      "pdsa": {
+        "value": [
+          12,
+          14
+        ],
+        "unit": "years",
+        "source_id": "S122",
+        "quote": "12-14 years",
+        "confidence": "medium",
+        "notes": "PDSA key-facts 'Average lifespan' (S122)."
+      },
+      "mcmillan_poodle_pooled": {
+        "value": 14.0,
+        "unit": "years (median life expectancy, all Poodle varieties pooled)",
+        "source_id": "S123",
+        "quote": "Poodle 14.0 13.8 - 14.1 6427 2399",
+        "confidence": "medium",
+        "notes": "Dogs Trust table 'LIFE EXPECTANCY FOR 155 BREEDS AND CROSSBRED GROUP' (S123, the McMillan et al. 2024 data — S15 / S54): one 'Poodle' row, no Standard / Miniature / Toy rows. Pools the varieties, so it is not a Standard Poodle value (smaller dogs live longer, S54) — recorded as an alternative only; not exported (would read as the Standard's median)."
+      },
+      "senior_from": {
+        "value": 9.0,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 12 y (S120; PDSA 12–14 y lower bound agrees, S122) → 0.75 × 12 = 9 y = 108 months. Runbook order: McMillan 2024 (no Standard Poodle value — only the pooled 'Poodle' row, S123) → VetCompass median (none found for the Standard) → RKC lower bound. With the pooled 14.0 y: 0.75 × 14 × 12 = 126 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until a variety-specific McMillan / VetCompass value is checked.",
+        "derived_from": [
+          "S11",
+          "S120"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 10.5,
+          "months": 126,
+          "derived_from": [
+            "S11",
+            "S123"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S120",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "PDSA (S122): 'Poodles need around an hour of exercise daily and love to run, swim and retrieve.' — sources agree on 60 (runbook rule: 'up to N' → N)."
+      },
+      "energy": {
+        "value": "intelligent, constantly alert and active; loves to run, swim and retrieve",
+        "unit": "—",
+        "source_id": "S118",
+        "quote": "The appearance is that of an intelligent dog, constantly alert and active, harmoniously built",
+        "confidence": "medium",
+        "notes": "PDSA (S122): 'love to run, swim and retrieve'."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "loyal, gay-spirited and good-tempered; capable of learning and being trained",
+        "unit": "—",
+        "source_id": "S121",
+        "quote": "Gay-spirited and good-tempered.",
+        "confidence": "high",
+        "notes": "FCI (S118): 'A dog renowned for its loyalty, capable of learning and being trained'. RKC breed page (S120): 'Glamorous, intelligent breed descended from European duck hunters.'"
+      },
+      "family": {
+        "value": "generally gets on well with children, given the right socialisation as a puppy",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "They generally get on well with other pets and children, given the right socialisation as puppies, as with all breeds.",
+        "confidence": "medium",
+        "notes": "PDSA (S122). Explicit 'get on well with … children' statement with a socialisation caveat (kept here) → children tag; no 'family pet' statement found → no family_pet tag; no explicit small-children rating → no small_children tag. The RKC page shows no 'Good with children' field (as returned)."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No statement found (PDSA S122 does not cover it) → no often_alone tag."
+      },
+      "other_pets": {
+        "value": "generally gets on well with other pets, given the right socialisation as a puppy",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "They generally get on well with other pets and children, given the right socialisation as puppies, as with all breeds.",
+        "confidence": "medium",
+        "notes": "PDSA (S122). The caveat is the general one ('as with all breeds'), not a breed-specific restriction → other_pets tag."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No Standard Poodle chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No Standard Poodle food-motivation statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages found or stored. Not a welfare-concern breed: RKC Breed Watch Category 1, 'Currently no points of concern specific to this breed have been identified for special attention by judges' (S120). Colour Watch 'Category 3: Breeds with >10% to 30% registered NBS colours or between 500 and 1000 NBS registrations per annum' (S120) — non-breed-standard colours are registered; the app and portraits use standard solid colours only.",
+      "eyes_pra": {
+        "value": "progressive retinal atrophy (inherited, can lead to blindness); DNA tests and eye scheme",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "gradual deterioration of the retina of the eye. Symptoms can start with night blindness and progress to total blindness.",
+        "confidence": "medium",
+        "notes": "PDSA health list 'Progressive retinal atrophy' (S122). RKC breed page (S120): DNA tests PRA rcd4 and prcd-PRA, BVA/KC/ISDS Eye Scheme (as returned). Other eye conditions on the PDSA list: cataracts, dry eye, distichiasis, entropion."
+      },
+      "hips": {
+        "value": "hip dysplasia; hip scoring before breeding",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA health list 'Hip dysplasia' (S122). RKC breed page (S120): BVA/KC Hip Dysplasia Scheme (as returned)."
+      },
+      "bloat_gdv": {
+        "value": "gastric dilatation-volvulus (bloat) — an emergency",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "This is an emergency and requires urgent veterinary attention.",
+        "confidence": "medium",
+        "notes": "PDSA (S122): 'often known as 'bloat', this is a condition where the stomach twists, trapping the contents and gases.'"
+      },
+      "epilepsy": {
+        "value": "epilepsy (seizures)",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "a brain disorder which can lead to seizures.",
+        "confidence": "medium",
+        "notes": "PDSA health list 'Epilepsy' (S122)."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand's disease (bleeding disorder); DNA test vWD1",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "deficiency in blood platelet function resulting in excessive bleeding.",
+        "confidence": "medium",
+        "notes": "PDSA (S122); RKC breed page (S120) DNA test vWD1 (as returned)."
+      },
+      "other_conditions": {
+        "value": "luxating patellas, Legg-Perthes disease, cardiomyopathy, Cushing's and Addison's disease, hypothyroidism, intervertebral disc disease",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "enlarged heart due to degeneration of the heart muscle.",
+        "confidence": "medium",
+        "notes": "PDSA health list headings (S122) (quote = the cardiomyopathy line)."
+      },
+      "dna_tests": {
+        "value": "DNA tests PRA rcd4, prcd-PRA, vWD1; BVA/KC/ISDS eye scheme; BVA/KC hip scheme",
+        "unit": "—",
+        "source_id": "S120",
+        "quote": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories.",
+        "confidence": "high",
+        "notes": "RKC breed page (S120) health section (test names as returned)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 2,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 2 | Poodle |",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C): rank 2 under 'Brightest Dogs'. Coren's own article (S34) not reachable through the fetch tool in this run — runbook: rank from S35. Coren ranks the breed 'Poodle' without separating the varieties. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "brightest: fewer than 5 repetitions, obeys first command ≥95%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: fewer than 5 repetitions.; Obey first command: 95% of the time or better.",
+        "confidence": "low",
+        "notes": "Tier 'Brightest Dogs' = ranks 1–10. Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "very obedient, responds well to training",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "They are very obedient and respond well to training.",
+        "confidence": "medium",
+        "notes": "PDSA (S122). FCI (S118): 'capable of learning and being trained'."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.standard_poodle.learning_multiplier (2.0, runbook rule).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "well balanced, elegant, proud carriage; medium proportions, frizzy coat",
+        "unit": "—",
+        "source_id": "S121",
+        "quote": "Well balanced, elegant looking with very proud carriage.",
+        "confidence": "high",
+        "notes": "FCI (S118): 'Dog of medium proportions, with a characteristic frizzy coat which is either curly or corded.'"
+      },
+      "colours": {
+        "value": [
+          "black",
+          "white",
+          "brown",
+          "grey",
+          "fawn"
+        ],
+        "unit": "list",
+        "source_id": "S118",
+        "quote": "Solid colour: black, white, brown, grey, fawn.",
+        "confidence": "high",
+        "notes": "RKC standard (S121): 'All solid colours.' 'Any other colour or combination of colours unacceptable.' FCI disqualifying faults (S118): 'Subjects whose coat is not of solid colour.' 'All white marks on the body and/or feet for all subjects other than white.' → never parti-colour, phantom or merle. Frequencies: not sourced."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). No colour frequencies. Draw over the five FCI solid colours with black highest (portrait default, first in the FCI list), then white, brown, grey, fawn; always solid, no white marks."
+      },
+      "coat": {
+        "value": "profuse, fine woolly, very frizzy curly coat (corded variety exists); does not moult; traditional trims",
+        "unit": "—",
+        "source_id": "S118",
+        "quote": "Profuse of fine, woolly texture, very frizzy, elastic and resistant to pressure of the hand.",
+        "confidence": "high",
+        "notes": "Curly coat (S118). Corded: 'forming characteristic cords which should measure at least 20 cm' (S118) — not used in the game. RKC (S121): 'Very profuse and dense of good harsh texture.' 'All short hair close, thick and curly.' 'All traditional trims permissible in the show ring'. RKC breed page (S120): 'Coat length: Medium'. Game portrait: curly coat in a short, even all-over trim (no show clip)."
+      },
+      "ears": {
+        "value": "long and wide, set low, hanging close to the face",
+        "unit": "—",
+        "source_id": "S121",
+        "quote": "Leathers long and wide, set low, hanging close to face.",
+        "confidence": "high",
+        "notes": "FCI (S118): 'Rather long, falling along the cheeks'."
+      },
+      "eyes": {
+        "value": "almond-shaped, dark (black or dark brown), keen expression",
+        "unit": "—",
+        "source_id": "S121",
+        "quote": "Almond-shaped, dark, not set too close together, full of fire and intelligence.",
+        "confidence": "high",
+        "notes": "FCI (S118): 'Black or dark brown colour.'"
+      },
+      "nose": {
+        "value": "long fine head, straight muzzle, moderate stop, open nostrils; black nose in black, white and grey dogs",
+        "unit": "—",
+        "source_id": "S118",
+        "quote": "Developed, vertical profile; open nostrils. Black nose in black, white and grey subjects",
+        "confidence": "high",
+        "notes": "FCI (S118) muzzle: 'Upper profile is perfectly straight; its length is approximately 9/10 of that of the skull.'; stop 'Only slightly pronounced, but can never be absent.' RKC (S121): 'Long and fine with slight peak. Skull not broad, moderate stop.'"
+      },
+      "tail": {
+        "value": "set on rather high, carried away from the body, never curled over the back (natural, undocked)",
+        "unit": "—",
+        "source_id": "S121",
+        "quote": "Thick at root, set on rather high, carried away from the body and as straight as possible.",
+        "confidence": "high",
+        "notes": "RKC undocked wording (S121); docked variant 'never curled or carried over back'. FCI (S118): 'Set on quite high at the level of the loin'. Game portrait: natural undocked tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S120), RKC standard (S121) and PDSA (S122). Woodgreen page not found; AKC trait ratings not attempted (same as the earlier breeds).",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S120",
+        "quote": "Size: Medium",
+        "confidence": "high",
+        "notes": "PDSA (S122): 'Size: Large' — conflict."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S120",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S120",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of the large_home tag; not 'Flat/ Apartment' → no apartment tag."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S120",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S120",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "PDSA (S122): daily grooming and professional clipping → frequent_grooming tag."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S120",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S120",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "RKC standard (S121): 'a type of coat which does not moult'. Basis of the low_shedding tag — never 'hypoallergenic' (no source says so and no dog is, ROADMAP M5-R10)."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S120",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S120",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S120",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-10)."
+      },
+      "rkc_non_moulting_coat": {
+        "value": "coat does not moult",
+        "unit": "—",
+        "source_id": "S121",
+        "quote": "Distinguished by a special type of clip for show activity and by a type of coat which does not moult.",
+        "confidence": "high",
+        "notes": "RKC standard 'Characteristics' (S121)."
+      },
+      "pdsa_children": {
+        "value": "generally gets on well with children, given the right socialisation",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "They generally get on well with other pets and children, given the right socialisation as puppies, as with all breeds.",
+        "confidence": "medium",
+        "notes": "Explicit statement with a socialisation caveat → children tag (caveat kept); no explicit rating for small children → no small_children tag."
+      },
+      "pdsa_other_pets": {
+        "value": "generally gets on well with other pets, given the right socialisation",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "They generally get on well with other pets and children, given the right socialisation as puppies, as with all breeds.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "daily grooming; professional clipping several times a year",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "They need daily grooming to keep their coat in tip-top condition",
+        "confidence": "medium",
+        "notes": "PDSA (S122): 'will often also require clipping and shaping by a professional groomer periodically throughout the year.'"
+      },
+      "pdsa_exercise": {
+        "value": "around an hour a day",
+        "unit": "—",
+        "source_id": "S122",
+        "quote": "Poodles need around an hour of exercise daily and love to run, swim and retrieve.",
+        "confidence": "medium",
+        "notes": "Key-facts 'Minimum exercise (per day)' left blank on the page (as returned)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -5959,6 +6453,221 @@
         "confidence": "high",
         "notes": "Colours from the RKC / FCI standard (S114, S111); 'Tip of stern white.' Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): tricolour portrait default, tan-and-white / lemon-and-white / red-and-white options, white tail tip, standard colours only"
+      }
+    },
+    "standard_poodle": {
+      "_note": "Unattended run M5-R10-07 (2026-10-10): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S120",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'Up to 1 hour per day' (S120); PDSA 'around an hour of exercise daily' (S122) agrees. Rule: one number N ('up to N') → N = 60.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S120 'Up to 1 hour per day'; PDSA S122 'around an hour' agrees)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000 (= French Bulldog, Cavalier, Beagle).",
+        "derived_from": [
+          "S120",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + RKC lower bound 'Over 12 years', S120; PDSA 12–14 y agrees, S122). McMillan 2024 has no Standard Poodle value (the Dogs Trust table row 'Poodle' 14.0 y pools all varieties, S123) and no VetCompass Standard Poodle median was found. Alternatives: 126 (0.75 × 14.0 y pooled, S123); 84 (Dogs Trust > 7 y, S14). Provisional until a variety-specific McMillan / VetCompass value is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S120"
+        ],
+        "alternatives": {
+          "senior_pooled_poodle_14_0_y": 126,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S120)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 2.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 2 (S35), tier Brightest → max(1.8, round(2.0 − (2 − 1) / 30, 1)) = 2.0 (= Border Collie). PDSA 'very obedient and respond well to training' (S122) agrees. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 2.0 (Coren rank 2, S35 — Brightest tier)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-07); refs = JSON paths in this file. No new vocabulary key. Never 'hypoallergenic'.",
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S122"
+            ],
+            "refs": [
+              "standard_poodle.suitability.pdsa_children",
+              "standard_poodle.behaviour.family"
+            ],
+            "quote": "S122 'They generally get on well with other pets and children, given the right socialisation as puppies, as with all breeds.'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S120"
+            ],
+            "refs": [
+              "standard_poodle.suitability.rkc_size_of_home",
+              "standard_poodle.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S120 'Size of home: Large house'; 'Size of garden: Large garden'"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S122"
+            ],
+            "refs": [
+              "standard_poodle.suitability.pdsa_other_pets",
+              "standard_poodle.behaviour.other_pets"
+            ],
+            "quote": "S122 'They generally get on well with other pets and children, given the right socialisation as puppies, as with all breeds.'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S120",
+              "S121"
+            ],
+            "refs": [
+              "standard_poodle.suitability.rkc_shedding",
+              "standard_poodle.suitability.rkc_non_moulting_coat"
+            ],
+            "quote": "S120 'Sheds: No'; S121 'a type of coat which does not moult'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S120",
+              "S122"
+            ],
+            "refs": [
+              "standard_poodle.suitability.rkc_grooming",
+              "standard_poodle.suitability.pdsa_grooming"
+            ],
+            "quote": "S120 'Grooming: Every day'; S122 'They need daily grooming to keep their coat in tip-top condition'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No 'family pet' statement found (PDSA S122 speaks of children and other pets only).",
+          "small_children": "No explicit rating; socialisation caveat (S122).",
+          "apartment": "RKC 'Large house' (S120), not 'Flat/ Apartment'.",
+          "active_family": "RKC 'Up to 1 hour per day' (S120) — moderate.",
+          "long_daily_exercise": "≈ 1 h/day (S120, S122).",
+          "first_time_owner": "No source statement ('very obedient', S122, is not a first-time-owner statement).",
+          "often_alone": "No source statement.",
+          "sheds": "RKC 'Sheds: No' (S120).",
+          "chews_when_bored": "No source.",
+          "food_motivated_weight": "No source.",
+          "needs_mental_stimulation": "No 'needs' statement found.",
+          "brachycephalic_breathing": "Not flat-faced (long fine head, S121); RKC Breed Watch Category 1, no points of concern (S120).",
+          "hips_hind_legs": "Hip dysplasia is on the PDSA list (S122) and the RKC names the hip scheme (S120), but no source names it as a breed-level warning → health entry only.",
+          "heart_and_spine": "Cardiomyopathy and IVDD are on the PDSA list without a breed-level warning (S122).",
+          "may_herd_children": "Not a herding breed; no source.",
+          "older_owners": "No source.",
+          "hypoallergenic": "Never (ROADMAP M5-R10); low_shedding is the honest wording."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits children, large_home, other_pets, low_shedding; consider frequent_grooming (no new key; never hypoallergenic)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare-concern breed)",
+        "unit": "—",
+        "source_id": "S120",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "Welfare-concern rule (runbook §3) does not apply: RKC Breed Watch Category 1 (S120), long fine head with straight muzzle and open nostrils (S121, S118). No BVA / Brachycephalic Working Group / UFAW / RVC source naming the Standard Poodle for conformation-related welfare problems was found. Marketing must never call the breed 'hypoallergenic'.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): not a welfare-concern breed — may appear in marketing (never as 'hypoallergenic')"
+      },
+      "ai_appearance": {
+        "value": "adult Standard Poodle, solid black (default), white, brown, grey or fawn; dense curly coat in a short, even all-over trim (no show clip); long wide low-set ears; dark almond-shaped eyes; long fine head with straight muzzle; natural undocked tail; elegant, well-balanced, proud carriage; standard solid colours only",
+        "unit": "—",
+        "source_id": "S118",
+        "quote": "Solid colour: black, white, brown, grey, fawn.",
+        "confidence": "high",
+        "notes": "Colours from FCI (S118) / RKC 'All solid colours' (S121); never parti-colour, white marks or merle (FCI disqualification). Colour weights are ours (unsourced). The short all-over trim keeps the portrait natural (RKC: 'All traditional trims permissible', S121).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): solid black portrait default, white / brown / grey / fawn options, short natural trim, undocked tail, standard solid colours only"
       }
     }
   }
