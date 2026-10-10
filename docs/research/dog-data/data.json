@@ -7085,7 +7085,7 @@
     }
   },
   "siberian_husky": {
-    "_note": "Added 2026-10-10 (M5-R10-13, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S158–S165, reused S10, S11, S14, S24, S35, S45). The PDSA page (S162) was returned partly as paraphrase with quotes capped at ~120 characters — only passages the tool returned in quotation marks are used as quotes; longer sentences are cut where the tool cut them. McMillan et al. 2024 (S54 / S135) names no Siberian Husky in its text or legends; its Supplementary Table 3, the Dogs Trust breed table (S123) and the 'shortest and longest' PDF were not reachable (fetch error 2026-10-10); Teng et al. 2022 (UK life tables) mentions the 'Husky' only in its sample list and probability-of-death sentences, the Husky life table itself (Table 3) was not reachable; no VetCompass Siberian Husky median found — so the lifespan is the RKC lower bound 'Over 10 years' (S160) per the runbook rule. Woodgreen and the AKC breed page were not found / not attempted.",
+    "_note": "Added 2026-10-10 (M5-R10-13, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S158–S165, reused S10, S11, S14, S24, S35, S45). The PDSA page (S162) was returned partly as paraphrase with quotes capped at ~120 characters — only passages the tool returned in quotation marks are used as quotes; longer sentences are cut where the tool cut them. Every S162 quote used (energy, children, exercise, escaping, chewing, shedding, grooming, hip dysplasia) was re-checked character for character on a second fetch (2026-10-10, review of PR #161) — all present verbatim, including the page's own typo 'The have heaps of energy'. McMillan et al. 2024 (S54 / S135) names no Siberian Husky in its text or legends; its Supplementary Table 3, the Dogs Trust breed table (S123) and the 'shortest and longest' PDF were not reachable (fetch error 2026-10-10); Teng et al. 2022 (UK life tables) mentions the 'Husky' only in its sample list and probability-of-death sentences, the Husky life table itself (Table 3) was not reachable; no VetCompass Siberian Husky median found — so the lifespan is the RKC lower bound 'Over 10 years' (S160) per the runbook rule. Woodgreen and the AKC breed page were not found / not attempted.",
     "identity": {
       "value": "FCI No. 270, Group 5 Section 1 (Nordic Sledge Dogs), USA",
       "unit": "—",
@@ -7237,7 +7237,7 @@
         "source_id": "S10",
         "quote": "Medium (24–59 pounds): 12–15 months",
         "confidence": "medium",
-        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 15.5–28 kg (S158) = 34–62 lb → mostly the 'Medium' class (the top of the male range touches 'Large (59–99 pounds): 15–18 months'); FCI 'a medium-sized working dog' (S158) → 12–15 months, as for the Border Collie and the Australian Shepherd."
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 15.5–28 kg (S158) = 34–62 lb → mostly the 'Medium' class (the top of the male range touches 'Large (59–99 pounds): 15–18 months'); FCI 'a medium-sized working dog' (S158) → 12–15 months, as for the Border Collie and the Australian Shepherd. Edge: the FCI male maximum 28 kg ≈ 62 lb sits in the 'Large (59–99 pounds): 15–18 months' class; the game is unaffected (the puppy cap of 120 min is reached at 12 months either way)."
       },
       "weight_by_month_kg": {
         "value": null,
@@ -7359,7 +7359,7 @@
         "source_id": "S162",
         "quote": "so you may find they chew furniture to let you know.",
         "confidence": "medium",
-        "notes": "PDSA (S162): 'They are known for being destructive, especially when they get stressed from being alone,' (sentence as returned, cut by the tool). Basis of the chews_when_bored tag."
+        "notes": "PDSA (S162): 'They are known for being destructive, especially when they get stressed from being alone,' — the chewing sentence ('so you may find they chew furniture to let you know.') follows it on the page. Like the West Highland White Terrier, the trigger is stress / boredom when left alone. Basis of the chews_when_bored tag."
       },
       "escaping": {
         "value": "escape artists — dig under and get over fences; need a very secure garden with high fences",
@@ -7367,7 +7367,7 @@
         "source_id": "S162",
         "quote": "Owners need a very secure garden with high fences as Huskies are known for getting up to mischief",
         "confidence": "medium",
-        "notes": "PDSA (S162), sentence cut by the tool; continues (as returned separately) 'they’ll often dig holes to try and tunnel under fences.' Basis of the new consider tag secure_fencing."
+        "notes": "PDSA (S162), sentence cut by the tool; it continues '– including escape attempts!' (re-fetch 2026-10-10), and separately 'they’ll often dig holes to try and tunnel under fences.' Basis of the new consider tag secure_fencing."
       },
       "food_motivation": {
         "value": null,

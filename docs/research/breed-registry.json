@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "2c7589b1efa6f9b943873b1b608f5d9ccdc1d7f5ee367a7b959908bb1c4fdfd1"
+      "sha256": "f135b9d36af554112f57350c72de593faf7624230de2a287c35687a7b1b74a9a"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "d452c96a5bb3ee4b114f6d0e1b1a56be72398865817027465ead7e8211312172"
+      "sha256": "2e8abb2204e98949d07780ed1bb0325f9a1b3d7e387dd4fb0d2c1d5f9f155b44"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
