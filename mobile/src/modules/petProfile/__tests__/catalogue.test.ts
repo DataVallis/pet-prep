@@ -112,7 +112,7 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70), never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
     expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
       'mutt',
@@ -123,6 +123,7 @@ describe('readBreedCatalogue', () => {
       'german_shepherd',
       'cavalier_king_charles_spaniel',
       'beagle',
+      'standard_poodle',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -176,6 +177,13 @@ describe('readBreedCatalogue', () => {
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-06, runbook rules).
     expect(beagle?.search_keywords).toEqual(['beagle', 'bigl']);
     expect(beagle?.suitability).toEqual({ suits: ['family_pet'], consider: ['sheds', 'chews_when_bored'] });
+    const poodle = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'standard_poodle');
+    expect(poodle).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 80 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-07, runbook rules).
+    expect(poodle?.search_keywords).toEqual(['poodle (standard)', 'standard poodle', 'poodle', 'veliki pudelj', 'pudelj', 'standardni pudelj']);
+    expect(poodle?.suitability).toEqual({ suits: ['children', 'large_home', 'other_pets', 'low_shedding'], consider: ['frequent_grooming'] });
     expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
     // The fallback is already in picker order.
     expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual([
@@ -187,6 +195,7 @@ describe('readBreedCatalogue', () => {
       'german_shepherd',
       'cavalier_king_charles_spaniel',
       'beagle',
+      'standard_poodle',
     ]);
   });
 });
