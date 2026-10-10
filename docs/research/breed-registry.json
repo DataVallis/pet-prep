@@ -45,7 +45,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "2a50b654465c71ff307bfd4a217ce3cadcdc56b0ceeb0c7523c92989d0ca5aad"
+      "sha256": "1e3df22017d5829cb1fd22c5b8085893d26e4c48fcb18963482e5dac8074cf5c"
     }
   },
   "suitability_vocabulary": {
@@ -4108,7 +4108,12 @@
           "S105"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "cavalier-king-charles-spaniel.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "source_ids": [
         "S10",
         "S11",
