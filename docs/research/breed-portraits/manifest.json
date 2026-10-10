@@ -113,6 +113,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "australian_shepherd",
+            "species": "dog",
+            "file": "dog/australian-shepherd.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:6cdeff2e665c354e4aad7645d65f8a97724d6cca2daa3d5fcf5d1324623a4e7e",
+            "generated_at": "2026-10-10T14:23:09+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
