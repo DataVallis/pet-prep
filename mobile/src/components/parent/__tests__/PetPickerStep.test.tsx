@@ -403,10 +403,10 @@ describe('PetPickerStep', () => {
     }
   });
 
-  it('M5-R10-07: the Standard Poodle (fallback) shows its chips, is found as "pudelj" and quotes 6.000 / 4.500 steps', () => {
+  it('M5-R10-07: the Standard Poodle (fallback) shows its chips, is found as "koder" and "pudelj" and quotes 6.000 / 4.500 steps', () => {
     const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
     const poodle = screen.getByTestId('breed-option-standard_poodle');
-    expect(poodle).toHaveTextContent(/Veliki pudelj/);
+    expect(poodle).toHaveTextContent(/Veliki koder/);
     expect(poodle).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
     expect(screen.getByTestId('breed-suitability-standard_poodle-suits')).toHaveTextContent(
       /družino z otrokiveliko hišo z vrtomdom z drugimi ljubljenčkidom, kjer želite manj dlak/,
@@ -414,6 +414,8 @@ describe('PetPickerStep', () => {
     expect(screen.getByTestId('breed-suitability-standard_poodle-consider')).toHaveTextContent(/potrebuje česanje večkrat na teden/);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'pudelj');
+    expect(screen.getByTestId('breed-option-standard_poodle')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'koder');
     expect(screen.queryByTestId('breed-option-beagle')).toBeNull();
     fireEvent.press(screen.getByTestId('plan-option-challenge'));
     fireEvent.press(screen.getByTestId('breed-option-standard_poodle'));

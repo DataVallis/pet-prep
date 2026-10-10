@@ -183,7 +183,7 @@ describe('readBreedCatalogue', () => {
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 80 }),
     );
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-07, runbook rules).
-    expect(poodle?.search_keywords).toEqual(['poodle (standard)', 'standard poodle', 'poodle', 'veliki pudelj', 'pudelj', 'standardni pudelj']);
+    expect(poodle?.search_keywords).toEqual(['poodle (standard)', 'standard poodle', 'poodle', 'veliki koder', 'koder', 'veliki pudelj', 'pudelj', 'standardni pudelj']);
     expect(poodle?.suitability).toEqual({ suits: ['children', 'large_home', 'other_pets', 'low_shedding'], consider: ['frequent_grooming'] });
     const dachshund = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'dachshund');
     expect(dachshund).toEqual(

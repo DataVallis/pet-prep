@@ -41,7 +41,7 @@
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "18f094b44e40a53d5ffef893930a565a4dc4eb851c2c7da5d15afdbb4e279ab9"
+      "sha256": "5e63c81712ea079bc903ea41421fed5e67b379119edac30498f34ffbdc4825e9"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -4605,11 +4605,11 @@
       "availability": "coming_soon",
       "name": {
         "en": "Poodle (Standard)",
-        "sl": "Veliki pudelj"
+        "sl": "Veliki koder"
       },
       "slug": {
         "en": "poodle-standard",
-        "sl": "veliki-pudelj"
+        "sl": "veliki-koder"
       },
       "synonyms": {
         "en": [
@@ -4617,6 +4617,7 @@
           "Poodle"
         ],
         "sl": [
+          "koder",
           "veliki pudelj",
           "pudelj",
           "standardni pudelj",

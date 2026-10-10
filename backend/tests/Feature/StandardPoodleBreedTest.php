@@ -113,7 +113,7 @@ describe('breed, config and database', function () {
             ->and(Species::Dog->freeBreed())->toBe(BreedType::Mutt)
             ->and([$config->species, $config->premium_unlock, $config->sort_order, $config->label_key])
             ->toBe([Species::Dog, true, 80, 'breeds.standard_poodle'])
-            ->and($config->search_keywords)->toBe(['poodle (standard)', 'standard poodle', 'poodle', 'veliki pudelj', 'pudelj', 'standardni pudelj'])
+            ->and($config->search_keywords)->toBe(['poodle (standard)', 'standard poodle', 'poodle', 'veliki koder', 'koder', 'veliki pudelj', 'pudelj', 'standardni pudelj'])
             // Legacy fallback = the adult step goal David chose (60 min × 100 steps).
             ->and($config->daily_steps_required)->toBe((int) stpData('proposed_game_parameters.standard_poodle.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(6000);
@@ -148,6 +148,26 @@ describe('breed, config and database', function () {
         $migration->up();
         DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'standard_poodle']);
         expect(Pet::findOrFail($pet->id)->breed_type)->toBe(BreedType::StandardPoodle);
+    });
+
+    it('moves the deployed keyword list to the Slovenian name "veliki koder" unless an admin edited it (David 2026-10-10)', function () {
+        $migration = require database_path('migrations/2026_11_08_120000_standard_poodle_koder_keywords.php');
+        $old = ['poodle (standard)', 'standard poodle', 'poodle', 'veliki pudelj', 'pudelj', 'standardni pudelj'];
+        $keywords = fn () => BreedConfig::where('breed_slug', 'poodle-standard')->sole()->fresh()->search_keywords;
+        $new = BreedConfigsSeeder::configs()[8]['search_keywords'];
+
+        // The row as the first deploy (insert-only seeder) left it.
+        BreedConfig::where('breed_slug', 'poodle-standard')->update(['search_keywords' => json_encode($old)]);
+        $migration->up();
+        expect($keywords())->toBe($new)->toContain('koder')->toContain('veliki koder')->toContain('pudelj');
+
+        $migration->down();
+        expect($keywords())->toBe($old);
+
+        // An admin edit is never overwritten.
+        BreedConfig::where('breed_slug', 'poodle-standard')->update(['search_keywords' => json_encode(['moj pudelj'])]);
+        $migration->up();
+        expect($keywords())->toBe(['moj pudelj']);
     });
 
     it('seeds insert-only: a second deploy run adds nothing and keeps admin edits', function () {

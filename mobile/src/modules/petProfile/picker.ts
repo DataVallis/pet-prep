@@ -289,7 +289,7 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       premium: true,
       free_plan_allowed: false,
       challenge_allowed: true,
-      search_keywords: ['poodle (standard)', 'standard poodle', 'poodle', 'veliki pudelj', 'pudelj', 'standardni pudelj'],
+      search_keywords: ['poodle (standard)', 'standard poodle', 'poodle', 'veliki koder', 'koder', 'veliki pudelj', 'pudelj', 'standardni pudelj'],
       sort_order: 80,
       suitability: {
         suits: ['children', 'large_home', 'other_pets', 'low_shedding'],

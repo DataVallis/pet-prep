@@ -221,7 +221,7 @@ class BreedConfigsSeeder extends Seeder
                 'species' => 'dog',
                 'sort_order' => 80,
                 'label_key' => 'breeds.standard_poodle',
-                'search_keywords' => ['poodle (standard)', 'standard poodle', 'poodle', 'veliki pudelj', 'pudelj', 'standardni pudelj'],
+                'search_keywords' => ['poodle (standard)', 'standard poodle', 'poodle', 'veliki koder', 'koder', 'veliki pudelj', 'pudelj', 'standardni pudelj'],
             ],
             // M5-R10-08 Dachshund, standard size (docs/research/dog-data/data.json dachshund, sources
             // S124–S130; runbook rules confirmed by David 2026-10-10: paid). daily_steps_required =

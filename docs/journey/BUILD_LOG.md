@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Jazbečar je pasma, pri kateri veterinarji opozarjajo na telesno zgradbo: dolg hrbet in kratke noge ga delajo nagnjenega k zdrsu diska. Aplikacija to pove mirno, brez številk — nova oznaka **»dolg hrbet — težave s hrbtenico, brez skakanja«** — in AI jazbečar je zmerne postave, ne pretirano dolg. Ker nobeno veterinarsko združenje ne odsvetuje oglaševanja z jazbečarji, ostane v marketingu, a brez obljub o zdravju in brez prizorov skakanja.
 
-**Številke:** 7 novih virov (S124–S130), 4 oznake (1 + 3), 1 nova oznaka (`back_spine`), 1 nova migracija; Pest **2061** testov, Jest **1974**, izvoz registra **22** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+**Številke:** 7 novih virov (S124–S130), 4 oznake (1 + 3), 1 nova oznaka (`back_spine`), 1 nova migracija; Pest **2062** testov, Jest **1974**, izvoz registra **22** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
 
 **Kako povedati:**
 - 👩 Starši: »Jazbečar ima rad ljudi in se z otroki praviloma dobro razume — a zaradi dolgega hrbta ne sme skakati, naj ostane vitek, in sam doma ne zdrži dobro. Pri vzreditelju vprašajte za pregled hrbtenice staršev.« (*ko bo nova različica v trgovini*)
@@ -25,19 +25,19 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
-## 2026-10-10 — Veliki pudelj: sedma nova pasma, četrtič po stalnih pravilih (M5-R10-07)
+## 2026-10-10 — Veliki koder: sedma nova pasma, četrtič po stalnih pravilih (M5-R10-07)
 
-**Kaj se je zgodilo:** PetPrep ima osmo plačljivo pasmo psa — **velikega pudlja** (Poodle (Standard)). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **6 novih virov (S118–S123)** — standard FCI 172 in nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA in tabela pričakovane življenjske dobe Dogs Trust (podatki McMillan 2024). Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«, PDSA »okoli 1 ure«), starejši 45 minut = 4.500, mladiček od 2.000 korakov do 6.000 pri 6 mesecih; starejši od **108 mesecev** (0,75 × spodnja meja RKC »več kot 12 let« — tabela Dogs Trust ima le skupno vrednost za vse pudlje, zato je nismo uporabili); uči se **2× hitreje** kot mešanček (Coren: 2. mesto).
+**Kaj se je zgodilo:** PetPrep ima osmo plačljivo pasmo psa — **velikega kodra** (Poodle (Standard)). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **6 novih virov (S118–S123)** — standard FCI 172 in nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA in tabela pričakovane življenjske dobe Dogs Trust (podatki McMillan 2024). Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«, PDSA »okoli 1 ure«), starejši 45 minut = 4.500, mladiček od 2.000 korakov do 6.000 pri 6 mesecih; starejši od **108 mesecev** (0,75 × spodnja meja RKC »več kot 12 let« — tabela Dogs Trust ima le skupno vrednost za vse kodre, zato je nismo uporabili); uči se **2× hitreje** kot mešanček (Coren: 2. mesto).
 
-**Zakaj je pomembno:** Pudlju dlaka ne izpada (RKC »Sheds: No«) — a to ni isto kot »hipoalergen«, in tega izraza PetPrep nikjer ne uporablja (noben pes ni). Aplikacija pošteno pove obe plati: »dom, kjer želite manj dlak« in hkrati »potrebuje česanje« — po virih vsak dan, z rednim striženjem pri pasjem frizerju. Ker ni pasma s skrbjo za dobrobit zaradi zgradbe (RKC Breed Watch kategorija 1), ga lahko uporabimo v marketingu — vedno brez obljube »hipoalergen«.
+**Zakaj je pomembno:** Kodru dlaka ne izpada (RKC »Sheds: No«) — a to ni isto kot »hipoalergen«, in tega izraza PetPrep nikjer ne uporablja (noben pes ni). Aplikacija pošteno pove obe plati: »dom, kjer želite manj dlak« in hkrati »potrebuje česanje« — po virih vsak dan, z rednim striženjem pri pasjem frizerju. Ker ni pasma s skrbjo za dobrobit zaradi zgradbe (RKC Breed Watch kategorija 1), ga lahko uporabimo v marketingu — vedno brez obljube »hipoalergen«.
 
 **Številke:** 6 novih virov (S118–S123), 5 oznak (4 + 1), 0 novih oznak, 1 nova migracija; Pest **2035** testov, Jest **1966**, izvoz registra **21** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
 
 **Kako povedati:**
-- 👩 Starši: »Veliki pudelj je pameten, ubogljiv pes, ki se z otroki praviloma dobro razume, če je lepo socializiran. Dlaka mu ne izpada, zato pa potrebuje vsakodnevno česanje in redno striženje. V PetPrep se uči hitro — a skrb za dlako ostane.« (*ko bo nova različica v trgovini*)
+- 👩 Starši: »Veliki koder je pameten, ubogljiv pes, ki se z otroki praviloma dobro razume, če je lepo socializiran. Dlaka mu ne izpada, zato pa potrebuje vsakodnevno česanje in redno striženje. V PetPrep se uči hitro — a skrb za dlako ostane.« (*ko bo nova različica v trgovini*)
 - 💼 Investitorji: »Osma plačljiva pasma, četrta dodana samodejno po vnaprej potrjenih pravilih; prvič z izrecnim varovalom proti zavajajočemu marketinškemu izrazu (»hipoalergen«).«
-- 🤝 Partnerji (veterinarji, zavetišča): »PetPrep pri pudlju ne obljublja psa brez alergij — pove le, da mu dlaka ne izpada, in da potrebuje veliko nege.«
-- 📣 Omrežja: »Pudelj ne pušča dlak po kavču. Zato pa vsak dan čaka na krtačo.« (*ko bo pudelj v trgovini*)
+- 🤝 Partnerji (veterinarji, zavetišča): »PetPrep pri kodru ne obljublja psa brez alergij — pove le, da mu dlaka ne izpada, in da potrebuje veliko nege.«
+- 📣 Omrežja: »Koder ne pušča dlak po kavču. Zato pa vsak dan čaka na krtačo.« (*ko bo koder v trgovini*)
 - 🛠 Tehnično: »Prvi primer, ko McMillan 2024 pasmo združuje čez velikosti (»Poodle«) — runbook takrat pade na spodnjo mejo RKC; skupna vrednost ostane v raziskavi kot alternativa.«
 
 ---

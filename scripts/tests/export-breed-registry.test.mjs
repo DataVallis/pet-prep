@@ -85,7 +85,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.cavalier_king_charles_spaniel.availability, 'coming_soon');
   assert.deepEqual(byId.beagle.slug, { en: 'beagle', sl: 'bigl' });
   assert.equal(byId.beagle.availability, 'coming_soon');
-  assert.deepEqual(byId.standard_poodle.slug, { en: 'poodle-standard', sl: 'veliki-pudelj' });
+  assert.deepEqual(byId.standard_poodle.slug, { en: 'poodle-standard', sl: 'veliki-koder' });
   assert.equal(byId.standard_poodle.availability, 'coming_soon');
   assert.deepEqual(byId.dachshund.slug, { en: 'dachshund', sl: 'jazbecar' });
   assert.equal(byId.dachshund.availability, 'coming_soon');
