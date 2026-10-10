@@ -169,6 +169,14 @@ class FalAiService
                 .'dark eyes set wide apart under heavy eyebrows, black nose, straight tail carried jauntily, '
                 .'small strongly built body with a deep chest, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-12: FCI 45 (S150) — tricolour is the only standard colour (jet black, rich
+            // tan, symmetrical white blaze / chest); long shining straight or slightly wavy coat,
+            // medium triangular hanging ears, dark brown almond eyes, bushy tail hanging down.
+            BreedType::BerneseMountainDog => 'A calm Bernese Mountain Dog with a tricolour coat: jet black with rich tan '
+                .'on the cheeks, above the eyes and on the legs, a symmetrical white blaze and white chest, '
+                .'long shining straight coat, medium triangular ears hanging flat, dark brown almond-shaped eyes, '
+                .'bushy tail hanging down, strong sturdy balanced body, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -374,6 +382,18 @@ class FalAiService
                     2 => 'harsh, straight, neatly tidied',
                 },
                 'markings' => 'none',
+            ],
+            // M5-R10-12: FCI / RKC (S150, S153) — tricolour only ("Any other colour or
+            // combination of colours unacceptable"); the variants differ in coat texture only.
+            BreedType::BerneseMountainDog => [
+                'color_scheme' => 'tricolour: jet black, rich tan and white',
+                'eye_color' => 'dark brown',
+                'fur_texture' => match ($variantIndex) {
+                    0 => 'long, shining and straight',
+                    1 => 'long, shining and slightly wavy',
+                    2 => 'long and silky with a bright natural sheen',
+                },
+                'markings' => 'symmetrical white blaze, white muzzle band and white chest; tan on cheeks, above the eyes and on the legs',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

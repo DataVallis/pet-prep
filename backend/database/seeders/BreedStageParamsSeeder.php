@@ -50,9 +50,10 @@ use InvalidArgumentException;
  * GoldenRetrieverBreedTest / FrenchBulldogBreedTest / GermanShepherdBreedTest /
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
- * WestHighlandWhiteTerrierBreedTest cross-check the Labrador / Golden / French Bulldog /
- * German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund / Australian Shepherd /
- * Havanese / West Highland White Terrier rows against data.json).
+ * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest cross-check the Labrador /
+ * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog rows
+ * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
  * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
@@ -206,8 +207,19 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10_WEST_HIGHLAND_WHITE_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-11)';
 
+    /**
+     * M5-R10-12 Bernese Mountain Dog (unattended run 2026-10-10, data.json
+     * proposed_game_parameters.bernese_mountain_dog.*.decision): every value follows a
+     * standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on
+     * 2026-10-10 — exercise 60 min, senior 45 min, puppy 10 min × age capped at 60, stages
+     * 9 / 36 / 76, arrival 2 / 9 / 36 / 76, learning multiplier 1.5 (Coren 22, Excellent);
+     * care rates the Border Collie's. The senior boundary uses the closest rule row (a
+     * peer-reviewed breed median, S156, in place of a VetCompass median) — provisional.
+     */
+    public const CONFIRMED_R10_BERNESE_MOUNTAIN_DOG = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-12)';
+
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -618,6 +630,10 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-11 (docs/research/dog-data/data.json west_highland_white_terrier,
             // S142–S149; runbook rules in proposed_game_parameters.west_highland_white_terrier).
             BreedType::WestHighlandWhiteTerrier => self::westHighlandWhiteTerrierProfile(),
+
+            // M5-R10-12 (docs/research/dog-data/data.json bernese_mountain_dog,
+            // S150–S157; runbook rules in proposed_game_parameters.bernese_mountain_dog).
+            BreedType::BerneseMountainDog => self::berneseMountainDogProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -1438,6 +1454,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'west_highland_white_terrier.lifespan.median_uk',
                 'quote' => 'The median longevity overall was 13.4 years (IQR 11.0–15.0, range 3.2–19.6).',
                 'notes' => 'O\'Neill et al. 2019 (S148), VetCompass UK 2016, 164 deaths; RVC summary S149. McMillan 2024 (S54) gives no reachable value. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Bernese Mountain Dog (M5-R10-12). Stage boundaries, arrival ages, exercise minutes
+     * and the learning multiplier follow the runbook's standing rules
+     * (CONFIRMED_R10_BERNESE_MOUNTAIN_DOG); weight, growth, Coren rank and lifespan are
+     * sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function berneseMountainDogProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BERNESE_MOUNTAIN_DOG;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S156', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.bernese_mountain_dog.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog finishes growing at 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [76, $boundary('Derived game boundary: last 25 % of lifespan (S11) × breed median life expectancy 8.4 y (Klopfenstein et al. 2016, Switzerland, S156) = 6.3 y = 75.6 → 76 months. No McMillan 2024 value and no VetCompass median were reachable; the RKC band "Under 10 years" (S152) has no lower bound. Not chosen: 91 (0.75 × 10.1 y, McMillan 2024 via Wikipedia S157, tier C), 84 (Dogs Trust > 7 y, S14), 63 (Woodgreen lower bound 7 y, S155). Provisional until David checks it.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 76],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bernese_mountain_dog.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S152', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bernese_mountain_dog.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S152) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "Bernese Mountain Dogs need at least an hour of exercise every day." (S154) agrees; Woodgreen "40-60 mins" (S155) recorded as an alternative.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bernese_mountain_dog.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[42.0, 63.0], [
+                'unit' => 'kg', 'source_id' => 'S154', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bernese_mountain_dog.adult_weight.pdsa',
+                'quote' => '42-53kg in females and 48-63kg in males',
+                'notes' => 'PDSA key facts (S154), females 42–53 kg and males 48–63 kg → overall range. The FCI (S150) and RKC (S153) standards give height only (dogs 64–70 cm, bitches 58–66 cm).',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bernese_mountain_dog.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA males 48–63 kg = 106–139 lb, the Giant class of S10; RKC standard "Slow to mature.", S153).',
+            ]],
+            'coren_rank' => [22, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bernese_mountain_dog.trainability.coren_rank',
+                'quote' => '| 22 | Belgian Malinois | … Bernese Mountain Dog',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 22 (shared), tier "Excellent" (ranks 11–26). Coren\'s own article (S34) lists only the top / bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bernese_mountain_dog.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 22, "Excellent" tier (S35) → 1.5 (PDSA S154: "very intelligent and eager to please"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [8.4, [
+                'unit' => 'years', 'source_id' => 'S156', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bernese_mountain_dog.lifespan.median_ch',
+                'quote' => 'The median life expectancy of all dogs was 8.4 years (IQR, 6.9–9.7).',
+                'notes' => 'Klopfenstein et al. 2016 (S156), Swiss population, 389 dogs. McMillan 2024 (S54 / S135) gives no reachable value. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

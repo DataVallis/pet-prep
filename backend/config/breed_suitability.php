@@ -83,6 +83,11 @@ return [
         // allergies", VetCompass S148). A calm chip asking for a vet's advice on skin care,
         // never a percentage.
         'sensitive_skin' => 'consider',
+        // M5-R10-12 (runbook "new tag" rule, 2026-10-10): a clearly shorter life than most
+        // breeds (Bernese Mountain Dog: RKC breed page S152 "Lifespan: Under 10 years", PDSA
+        // S154 "Up to 10 years", Woodgreen S155 "7-10 years"). A sourced, important trait no
+        // other key covers; a calm chip, never a number or a percentage.
+        'shorter_lifespan' => 'consider',
     ],
 
     'breeds' => [
@@ -381,6 +386,27 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S144', 'S147'], 'refs' => ['west_highland_white_terrier.suitability.rkc_grooming', 'west_highland_white_terrier.suitability.pdsa_grooming']],
                 // S147 "If they are alone for too long, … could start chewing things around the home."
                 ['tag' => 'chews_when_bored', 'source_ids' => ['S147'], 'refs' => ['west_highland_white_terrier.behaviour.chewing']],
+            ],
+        ],
+
+        // M5-R10-12: bernese_mountain_dog.* (S150–S157), runbook rules (data.json
+        // proposed_game_parameters.bernese_mountain_dog.suitability_tags). Not `children` /
+        // `small_children`: PDSA S154 advises against families with smaller children while
+        // Woodgreen S155 says children of all ages — conflicting sources, neither tag.
+        'bernese_mountain_dog' => [
+            'suits' => [
+                // S153 "A kind and devoted family dog."; S150 "good-natured and devoted to his own people".
+                ['tag' => 'family_pet', 'source_ids' => ['S153', 'S150'], 'refs' => ['bernese_mountain_dog.suitability.rkc_family_dog', 'bernese_mountain_dog.behaviour.family']],
+                // S152 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S152'], 'refs' => ['bernese_mountain_dog.suitability.rkc_size_of_home', 'bernese_mountain_dog.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S152 "Lifespan: Under 10 years"; S154 "Up to 10 years"; S155 "7-10 years".
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S152', 'S154', 'S155'], 'refs' => ['bernese_mountain_dog.health.shorter_lifespan', 'bernese_mountain_dog.suitability.rkc_lifespan']],
+                // S152 "Sheds: Yes"; S154 "be prepared for a lot of shedding!".
+                ['tag' => 'sheds', 'source_ids' => ['S152', 'S154'], 'refs' => ['bernese_mountain_dog.suitability.rkc_shedding', 'bernese_mountain_dog.suitability.pdsa_shedding']],
+                // S152 "Grooming: More than once a week"; S154 "Their coats are fairly high maintenance.".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S152', 'S154'], 'refs' => ['bernese_mountain_dog.suitability.rkc_grooming', 'bernese_mountain_dog.suitability.pdsa_grooming']],
             ],
         ],
     ],
