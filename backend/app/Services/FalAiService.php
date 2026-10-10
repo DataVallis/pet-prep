@@ -122,6 +122,14 @@ class FalAiService
                 .'large dark round eyes that are not protruding, visible well-tapered muzzle with open nostrils, '
                 .'small, graceful, well-balanced build, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-06: FCI 161 (S111) / RKC standard (S114) — standard colours only,
+            // tricolour first; short dense coat, long low-set ears with rounded tips,
+            // broad nose with wide nostrils, muzzle not snipy, white tail tip.
+            BreedType::Beagle => 'A friendly Beagle dog with a tricolour coat, '
+                .'short dense weatherproof coat, long low-set ears with rounded tips hanging close to the cheeks, '
+                .'dark brown eyes with a mild appealing expression, broad nose with wide nostrils, moderate muzzle, '
+                .'tail carried gaily with a white tip, sturdy, compact build, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -241,6 +249,22 @@ class FalAiService
                     0 => 'chestnut patches well broken up on white',
                     1 => 'tan markings over the eyes and on the cheeks',
                     2 => 'no markings',
+                },
+            ],
+            // M5-R10-06: FCI (S111) / RKC (S114) colours — "No other colours are
+            // permissible. Tip of stern white."
+            BreedType::Beagle => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'tricolour (black, tan and white)',
+                    1 => 'tan and white',
+                    2 => 'lemon and white',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, dense, weatherproof',
+                'markings' => match ($variantIndex) {
+                    0 => 'black saddle, tan head, white legs, chest and tail tip',
+                    1 => 'tan patches on white, white tail tip',
+                    2 => 'pale lemon patches on white, white tail tip',
                 },
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.

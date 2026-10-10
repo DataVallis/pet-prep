@@ -232,5 +232,24 @@ return [
                 ['tag' => 'heart_and_spine', 'source_ids' => ['S108', 'S105', 'S110'], 'refs' => ['cavalier_king_charles_spaniel.health.heart_mvd', 'cavalier_king_charles_spaniel.health.syringomyelia']],
             ],
         ],
+        // M5-R10-06: beagle.* (S111–S117), runbook rules 2026-10-10
+        // (data.json proposed_game_parameters.beagle.suitability_tags). Woodgreen not
+        // found → RKC (S113), PDSA (S115). Not `children` (only "supervise", no explicit
+        // statement), not `apartment` (RKC "Small house"), not `other_pets` (not alone
+        // with smaller pets), not `food_motivated_weight` (obesity is common, S116, but no
+        // source says the Beagle "loves food").
+        'beagle' => [
+            'suits' => [
+                // S115 "if socialised correctly from a young age Beagles suit family life really well";
+                // S113 "popular family companion in modern times".
+                ['tag' => 'family_pet', 'source_ids' => ['S115', 'S113'], 'refs' => ['beagle.suitability.pdsa_family', 'beagle.behaviour.family']],
+            ],
+            'consider' => [
+                // S113 "Sheds: Yes"; S115 "a reasonable amount of shedding".
+                ['tag' => 'sheds', 'source_ids' => ['S113', 'S115'], 'refs' => ['beagle.suitability.rkc_shedding', 'beagle.suitability.pdsa_shedding']],
+                // S115 "When left alone, Beagles can become distressed and bored … may even chew things they shouldn't."
+                ['tag' => 'chews_when_bored', 'source_ids' => ['S115'], 'refs' => ['beagle.behaviour.chewing']],
+            ],
+        ],
     ],
 ];

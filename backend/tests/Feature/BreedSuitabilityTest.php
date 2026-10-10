@@ -207,6 +207,19 @@ it('gives the Cavalier the new heart_and_spine tag (welfare rule) and the apartm
         ->and(bsEntry('cavalier_king_charles_spaniel.suitability.pdsa_children')['notes'])->toContain('supervising');
 });
 
+it('gives the Beagle family_pet / sheds, chews_when_bored and no new tag (runbook 2026-10-10)', function () {
+    $beagle = app(BreedSuitability::class)->for(BreedType::Beagle);
+    expect($beagle['suits'])->toBe(['family_pet'])
+        // Only "supervise" (S115), RKC "Small house" (S113), not alone with smaller pets.
+        ->and($beagle['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('apartment')->not->toContain('other_pets')
+        ->and($beagle['consider'])->toBe(['sheds', 'chews_when_bored'])
+        // Obesity is common (S116) but no source says it "loves food"; not a welfare breed.
+        ->and($beagle['consider'])->not->toContain('food_motivated_weight')->not->toContain('brachycephalic_breathing')->not->toContain('heart_and_spine');
+
+    expect(bsEntry('beagle.behaviour.chewing')['source_id'])->toBe('S115')
+        ->and(bsEntry('beagle.suitability.pdsa_children')['notes'])->toContain('no children');
+});
+
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {
     $source = (string) file_get_contents(app_path('Http/Resources/BreedCatalogResource.php'));
     preg_match('/@var array\{suits: list<([^>]+)>, consider: list<([^>]+)>\}/', $source, $m);

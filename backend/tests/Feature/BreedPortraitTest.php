@@ -60,7 +60,7 @@ describe('breeds and prompts', function () {
     it('leaves out the free breeds (no single breed look) and filters by breed / slug / species', function () {
         $all = array_map(fn (BreedType $b) => $b->value, bpService()->breeds());
 
-        expect($all)->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'maine_coon'])
+        expect($all)->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'maine_coon'])
             ->and($all)->not->toContain('mutt')->not->toContain('domestic_cat')
             ->and(bpService()->breeds(['golden-retriever', 'maine_coon']))->toBe([BreedType::GoldenRetriever, BreedType::MaineCoon])
             ->and(bpService()->breeds([], Species::Cat))->toBe([BreedType::MaineCoon]);
@@ -168,7 +168,7 @@ describe('breeds:portraits command', function () {
             ->expectsOutputToContain('[generate] border_collie → dog/border-collie.webp')
             ->expectsOutputToContain('[generate] maine_coon → cat/maine-coon.webp')
             ->expectsOutputToContain(bpService()->prompt(BreedType::LabradorRetriever))
-            ->expectsOutputToContain('To generate: 7 image(s), estimated $1.0500')
+            ->expectsOutputToContain('To generate: 8 image(s), estimated $1.2000')
             ->expectsOutputToContain('Dry run — no fal.ai call, nothing written.')
             ->assertSuccessful();
 
@@ -198,10 +198,10 @@ describe('breeds:portraits command', function () {
 
         $this->artisan('breeds:portraits', ['--out' => $this->out])
             ->expectsOutputToContain('border_collie: wrote dog/border-collie.webp (1024×1024)')
-            ->expectsOutputToContain('Generated 7, failed 0, estimated spend $1.0500 (AI Lab).')
+            ->expectsOutputToContain('Generated 8, failed 0, estimated spend $1.2000 (AI Lab).')
             ->assertSuccessful();
 
-        foreach (['dog/border-collie.webp', 'dog/labrador-retriever.webp', 'dog/golden-retriever.webp', 'dog/french-bulldog.webp', 'dog/german-shepherd-dog.webp', 'dog/cavalier-king-charles-spaniel.webp', 'cat/maine-coon.webp'] as $file) {
+        foreach (['dog/border-collie.webp', 'dog/labrador-retriever.webp', 'dog/golden-retriever.webp', 'dog/french-bulldog.webp', 'dog/german-shepherd-dog.webp', 'dog/cavalier-king-charles-spaniel.webp', 'dog/beagle.webp', 'cat/maine-coon.webp'] as $file) {
             $path = "{$this->out}/{$file}";
             expect(is_file($path))->toBeTrue()
                 ->and((new finfo(FILEINFO_MIME_TYPE))->file($path))->toBe('image/webp')
@@ -212,7 +212,7 @@ describe('breeds:portraits command', function () {
         $manifest = bpManifest($this->out);
         expect($manifest['schema_version'])->toBe(1)
             ->and($manifest['label'])->toBe('AI-generated photo')
-            ->and(array_column($manifest['portraits'], 'breed'))->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'maine_coon']);
+            ->and(array_column($manifest['portraits'], 'breed'))->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'maine_coon']);
 
         $lab = $manifest['portraits'][1];
         expect(array_keys($lab))->toBe(['breed', 'species', 'file', 'width', 'height', 'kind', 'profile', 'prompt_hash', 'generated_at', 'cost_usd'])
@@ -222,18 +222,18 @@ describe('breeds:portraits command', function () {
                 'prompt_hash' => BreedPortraitService::promptHash(bpService()->prompt(BreedType::LabradorRetriever)),
                 'cost_usd' => 0.15,
             ])
-            ->and($manifest['portraits'][5]['species'])->toBe('dog')
-            ->and($manifest['portraits'][6]['species'])->toBe('cat');
+            ->and($manifest['portraits'][6]['species'])->toBe('dog')
+            ->and($manifest['portraits'][7]['species'])->toBe('cat');
 
         $rows = AiSpendLedger::all();
-        expect($rows)->toHaveCount(7)
+        expect($rows)->toHaveCount(8)
             ->and($rows->pluck('purpose')->unique()->all())->toBe([AiSpendPurpose::Lab->value])
             ->and($rows->pluck('status')->unique()->all())->toBe([AiSpendLedger::STATUS_COMMITTED])
             ->and($rows->pluck('pet_id')->filter()->all())->toBe([])
-            ->and((float) $rows->sum('cost_usd'))->toBe(1.05);
+            ->and((float) $rows->sum('cost_usd'))->toBe(1.2);
 
         $calls = Http::recorded(fn (Request $r) => str_starts_with($r->url(), 'https://fal.run/'));
-        expect($calls)->toHaveCount(7);
+        expect($calls)->toHaveCount(8);
         $body = $calls[0][0]->data();
         expect($body['aspect_ratio'])->toBe('1:1')
             ->and($body['prompt'])->toBe(bpService()->prompt(BreedType::BorderCollie))
@@ -285,7 +285,7 @@ describe('breeds:portraits command', function () {
         $this->artisan('breeds:portraits', ['--out' => $this->out])
             ->expectsOutputToContain('border_collie: wrote dog/border-collie.webp')
             ->expectsOutputToContain('labrador_retriever: budget_lab')
-            ->expectsOutputToContain('Stopped: 5 more breed(s) not tried.')
+            ->expectsOutputToContain('Stopped: 6 more breed(s) not tried.')
             ->assertFailed();
 
         expect(array_column(bpManifest($this->out)['portraits'], 'breed'))->toBe(['border_collie'])
@@ -297,9 +297,9 @@ describe('breeds:portraits command', function () {
         $this->travel(1)->days();
         config(['media.lab.daily_usd' => 3]);
         $this->artisan('breeds:portraits', ['--out' => $this->out])
-            ->expectsOutputToContain('Generated 6, failed 0')
+            ->expectsOutputToContain('Generated 7, failed 0')
             ->assertSuccessful();
-        expect(array_column(bpManifest($this->out)['portraits'], 'breed'))->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'maine_coon']);
+        expect(array_column(bpManifest($this->out)['portraits'], 'breed'))->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'maine_coon']);
     });
 
     it('writes nothing when fal answers an error (ledger void) and fails the run', function () {

@@ -83,6 +83,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.german_shepherd.availability, 'coming_soon');
   assert.deepEqual(byId.cavalier_king_charles_spaniel.slug, { en: 'cavalier-king-charles-spaniel', sl: 'kavalir-king-charles-spanjel' });
   assert.equal(byId.cavalier_king_charles_spaniel.availability, 'coming_soon');
+  assert.deepEqual(byId.beagle.slug, { en: 'beagle', sl: 'bigl' });
+  assert.equal(byId.beagle.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
@@ -134,6 +136,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     french_bulldog: { adult: 6000, senior: 4500, seniorFrom: 88, learning: 0.7 },
     german_shepherd: { adult: 12000, senior: 9000, seniorFrom: 93, learning: 1.9 },
     cavalier_king_charles_spaniel: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1 },
+    beagle: { adult: 6000, senior: 4500, seniorFrom: 102, learning: 0.5 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -203,6 +206,24 @@ test('Cavalier King Charles Spaniel (M5-R10-05): up to 1 hour, origin Great Brit
   const json = JSON.stringify(ck);
   assert.doesNotMatch(json, /common_disorders|uk_measured_median|30\.9|10\.5/);
   assert.deepEqual(ck.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['median', 9.99], ['more_than', 12]]);
+});
+
+test('Beagle (M5-R10-06): up to 1 hour (RKC), PDSA weight, FCI group 6, no statistics or measured weight', () => {
+  const bg = registry.breeds.find((b) => b.id === 'beagle');
+  const ex = bg.facts.filter((f) => f.field === 'exercise');
+  assert.deepEqual(ex.map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S113']]]); // the PDSA 90 min stays research only
+  assert.equal(bg.facets.exercise, 'under_1h');
+  assert.equal(bg.facets.size, 'small');
+  assert.deepEqual(bg.facts.find((f) => f.field === 'fci_standard').value, { number: 161, group: 6, section: 1, origin: 'GB' });
+  assert.deepEqual(bg.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[[9, 11], ['S115']]]);
+  assert.deepEqual(bg.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(bg.game.stages[3].activity, { kind: 'steps', value: 4500 });
+  assert.deepEqual(bg.suitability.suits.map((t) => t.tag), ['family_pet']);
+  assert.deepEqual(bg.suitability.consider.map((t) => t.tag), ['sheds', 'chews_when_bored']);
+  assert.deepEqual(bg.health.map((h) => h.key), ['weight_gain', 'epilepsy', 'back_disc_disease']);
+  const json = JSON.stringify(bg);
+  assert.doesNotMatch(json, /common_disorders|uk_measured_median|24\.27|17\.78|18\.19|19\.70/);
+  assert.deepEqual(bg.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['median', 11.28], ['more_than', 12]]);
 });
 
 test('every suitability tag has the app wording in EN and SL', () => {

@@ -255,9 +255,11 @@ describe('edits', function () {
 
         Livewire::test(ListBreedStageParams::class)
             ->assertOk()
-            // 12 sleep_hours rows (2 breeds × 6) — all on one page, so the
-            // planted mutt senior row is visible whatever the page size.
+            // One sleep_hours row per breed × stage (54 since M5-R10-06, more than a
+            // page): slugs Z–A, so the mutt rows come first and the planted mutt
+            // senior row stays on the first page.
             ->set('tableRecordsPerPage', 50)
+            ->sortTable('breed_slug', 'desc')
             ->searchTable('sleep_hours')
             ->assertSee('UNSOURCED — proposal')
             ->searchTable('feed_windows')

@@ -368,6 +368,7 @@ const SPECIES = [
       { id: 'french_bulldog', availability: 'coming_soon', synonyms: { en: ['Frenchie'], sl: ['frenchie', 'francoski buldog', 'french bulldog'] } },
       { id: 'german_shepherd', availability: 'coming_soon', synonyms: { en: ['Alsatian', 'GSD'], sl: ['nemški ovčar', 'nemski ovcar', 'german shepherd'] } },
       { id: 'cavalier_king_charles_spaniel', availability: 'coming_soon', synonyms: { en: ['Cavalier', 'CKCS', 'Cavalier King Charles'], sl: ['kavalir king charles španjel', 'kavalir king charles spanjel', 'kavalir', 'cavalier'] } },
+      { id: 'beagle', availability: 'coming_soon', synonyms: { en: [], sl: ['bigl', 'beagle'] } },
     ],
   },
   {
@@ -478,6 +479,24 @@ const DOG_FACTS = {
       ['eye_conditions', 'health.eyes'],
     ],
   },
+  // M5-R10-06. Not exported: adult_weight.uk_measured_median (18.19 kg, measured pet dogs with
+  // much obesity — would read as a target weight), disorder percentages (O'Neill 2025, S116 —
+  // research only), the PDSA 90-minute exercise alternative (S115, the RKC value is used).
+  beagle: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['weight_gain', 'health.obesity'],
+      ['epilepsy', 'health.epilepsy'],
+      ['back_disc_disease', 'health.back_ivdd'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -528,6 +547,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.cavalier_king_charles_spaniel.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.cavalier_king_charles_spaniel.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.cavalier_king_charles_spaniel.exercise_minutes_senior',
+  },
+  beagle: {
+    adult_minutes: ['proposed_game_parameters.beagle.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.beagle.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.beagle.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.beagle.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.beagle.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.beagle.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],
