@@ -114,6 +114,14 @@ class FalAiService
                 .'bushy tail hanging in a gentle curve, level back with moderate natural hind legs, '
                 .'powerful, well-muscled, balanced build, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-05: FCI 136 (S103) / RKC standard (S106) — Blenheim, tricolour, ruby
+            // or black and tan only (never chocolate, S105); long feathered ears, silky
+            // coat; visible tapered muzzle, eyes "not prominent" (welfare rule, Breed Watch S107).
+            BreedType::CavalierKingCharlesSpaniel => 'A friendly Cavalier King Charles Spaniel dog with a Blenheim coat, '
+                .'long silky coat with plenty of feathering, long high-set feathered ears, '
+                .'large dark round eyes that are not protruding, visible well-tapered muzzle with open nostrils, '
+                .'small, graceful, well-balanced build, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -216,6 +224,22 @@ class FalAiService
                 'markings' => match ($variantIndex) {
                     0 => 'black saddle with tan legs and face',
                     1 => 'darker tips and mask',
+                    2 => 'no markings',
+                },
+            ],
+            // M5-R10-05: FCI (S103) / RKC (S106) colours Blenheim, Tricolour, Ruby,
+            // Black and Tan — "Any other colour or combination of colours unacceptable."
+            BreedType::CavalierKingCharlesSpaniel => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'Blenheim (rich chestnut on pearly white)',
+                    1 => 'tricolour (black and white with tan)',
+                    2 => 'ruby (whole rich red)',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'long silky coat with feathering',
+                'markings' => match ($variantIndex) {
+                    0 => 'chestnut patches well broken up on white',
+                    1 => 'tan markings over the eyes and on the cheeks',
                     2 => 'no markings',
                 },
             ],

@@ -66,6 +66,12 @@ return [
         // breed page S97 hip / elbow tests, PDSA S100, VetCompass S101). A calm chip
         // asking for health-tested parents, never a percentage.
         'hips_hind_legs' => 'consider',
+        // M5-R10-05 (runbook welfare rule, 2026-10-10): heart disease (mitral valve) and
+        // the painful, skull-shape-related Chiari-like malformation / syringomyelia
+        // (Cavalier King Charles Spaniel: PDSA S108, RKC breed page S105 heart scheme /
+        // MRI, University of Bristol S110). A calm chip asking for health-tested
+        // parents, never a percentage.
+        'heart_and_spine' => 'consider',
     ],
 
     'breeds' => [
@@ -200,6 +206,30 @@ return [
                 // S99 "Incorrect hind conformation and/or poor rear movement"; S97 hip / elbow tests;
                 // PDSA S100 hips and back legs; VetCompass S101 lower hindquarters.
                 ['tag' => 'hips_hind_legs', 'source_ids' => ['S99', 'S97', 'S100', 'S101'], 'refs' => ['german_shepherd.health.hind_conformation', 'german_shepherd.health.hip_elbow_dysplasia']],
+            ],
+        ],
+        // M5-R10-05: cavalier_king_charles_spaniel.* (S103–S110), runbook rules 2026-10-10
+        // (data.json proposed_game_parameters.cavalier_king_charles_spaniel.suitability_tags).
+        // Woodgreen not found → RKC (S105), PDSA (S108). Not `small_children` (PDSA:
+        // supervise play), not `other_pets` (prey drive with small pets), not
+        // `often_alone` (separation anxiety).
+        'cavalier_king_charles_spaniel' => [
+            'suits' => [
+                // S105 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S105'], 'refs' => ['cavalier_king_charles_spaniel.suitability.rkc_size_of_home', 'cavalier_king_charles_spaniel.suitability.rkc_size_of_garden']],
+                // S108 "Cavaliers are known for making really great family pets".
+                ['tag' => 'family_pet', 'source_ids' => ['S108'], 'refs' => ['cavalier_king_charles_spaniel.suitability.pdsa_family', 'cavalier_king_charles_spaniel.behaviour.family']],
+                // S108 "They're known to be good around children …" (supervise play).
+                ['tag' => 'children', 'source_ids' => ['S108'], 'refs' => ['cavalier_king_charles_spaniel.suitability.pdsa_children']],
+            ],
+            'consider' => [
+                // S105 "Sheds: Yes"; S108 "they shed … when they shed even more".
+                ['tag' => 'sheds', 'source_ids' => ['S105', 'S108'], 'refs' => ['cavalier_king_charles_spaniel.suitability.rkc_shedding', 'cavalier_king_charles_spaniel.suitability.pdsa_shedding']],
+                // S105 "Grooming: More than once a week"; S108 "you may find they need to be brushed daily".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S105', 'S108'], 'refs' => ['cavalier_king_charles_spaniel.suitability.rkc_grooming', 'cavalier_king_charles_spaniel.suitability.pdsa_grooming']],
+                // S108 mitral valve disease "a big problem for this breed" and CM/SM; S105 heart
+                // scheme / MRI; S110 skull shape.
+                ['tag' => 'heart_and_spine', 'source_ids' => ['S108', 'S105', 'S110'], 'refs' => ['cavalier_king_charles_spaniel.health.heart_mvd', 'cavalier_king_charles_spaniel.health.syringomyelia']],
             ],
         ],
     ],

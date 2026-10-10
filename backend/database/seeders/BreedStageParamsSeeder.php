@@ -47,9 +47,9 @@ use InvalidArgumentException;
  * learning multiplier, individual variation, lifespan) come from
  * dogProfile(). A new dog breed = an enum case in DOG_BREEDS + a profile;
  * the mutt / Border Collie rows stay byte-identical (LabradorBreedTest /
- * GoldenRetrieverBreedTest / FrenchBulldogBreedTest / GermanShepherdBreedTest
- * cross-check the Labrador / Golden / French Bulldog / German Shepherd rows
- * against data.json).
+ * GoldenRetrieverBreedTest / FrenchBulldogBreedTest / GermanShepherdBreedTest /
+ * CavalierKingCharlesSpanielBreedTest cross-check the Labrador / Golden /
+ * French Bulldog / German Shepherd / Cavalier rows against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
  * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
@@ -136,8 +136,19 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10_GERMAN_SHEPHERD = 'potrdil David 2026-10-10 (pravilo runbooka)';
 
+    /**
+     * M5-R10-05 Cavalier King Charles Spaniel (unattended run 2026-10-10, data.json
+     * proposed_game_parameters.cavalier_king_charles_spaniel.*.decision): every value
+     * follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David
+     * confirmed on 2026-10-10 — exercise 60 min, senior 45 min, puppy 10 min × age
+     * capped at 60, stages 9 / 36 / 90, arrival 2 / 9 / 36 / 90, learning multiplier
+     * 1.0; care rates the Border Collie's. The suffix keeps the value distinct from
+     * CONFIRMED_R10_GERMAN_SHEPHERD, so each breed's decision rows stay identifiable.
+     */
+    public const CONFIRMED_R10_CAVALIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-05)';
+
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -521,6 +532,10 @@ class BreedStageParamsSeeder extends Seeder
             // runbook rules in proposed_game_parameters.german_shepherd).
             BreedType::GermanShepherd => self::germanShepherdProfile(),
 
+            // M5-R10-05 (docs/research/dog-data/data.json cavalier_king_charles_spaniel,
+            // S103–S110; runbook rules in proposed_game_parameters.cavalier_king_charles_spaniel).
+            BreedType::CavalierKingCharlesSpaniel => self::cavalierProfile(),
+
             BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
     }
@@ -821,6 +836,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'german_shepherd.lifespan.median_uk',
                 'quote' => 'The median longevity of GSDs overall was 10.3 years',
                 'notes' => 'O\'Neill et al. 2017, VetCompass (S101); RVC news S102. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Cavalier King Charles Spaniel (M5-R10-05). Stage boundaries, arrival ages,
+     * exercise minutes and the learning multiplier follow the runbook's standing
+     * rules (CONFIRMED_R10_CAVALIER); weight, growth, Coren rank and lifespan are
+     * sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function cavalierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_CAVALIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S71', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.cavalier_king_charles_spaniel.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × VetCompass median 9.99 y (O\'Neill et al. SVEPM 2012 poster, S71) = 7.49 y = 89.9 → 90 months. Not chosen: 108 (0.75 × RKC "over 12 years", S105) and 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.cavalier_king_charles_spaniel.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age already reaches at 6 months, so the whole young stage walks the adult minutes.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S105,S108', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.cavalier_king_charles_spaniel.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S105) = PDSA "at least one hour" (S108) → 60 min = 6,000 steps (runbook rule: "up to N" / "at least N" → N).',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.cavalier_king_charles_spaniel.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[5.4, 8.0], [
+                'unit' => 'kg', 'source_id' => 'S103', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'cavalier_king_charles_spaniel.adult_weight.fci',
+                'quote' => 'WEIGHT: 5,4 - 8 kg.',
+                'notes' => 'FCI standard, one range for both sexes (RKC standard 5.4–8.2 kg, S106; PDSA average 5.4–8.2 kg, S108).',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'cavalier_king_charles_spaniel.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (5.4–8.2 kg = 12–18 lb, the Small class of S10).',
+            ]],
+            'coren_rank' => [44, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'cavalier_king_charles_spaniel.trainability.coren_rank',
+                'quote' => '44 | Cavalier King Charles Spaniel',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), tier "Average" (ranks 40–54). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.cavalier_king_charles_spaniel.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 44 (S35) is in the "Average" tier → 1.0, the same speed as the mixed breed (PDSA S108: "fairly easy to train"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [9.99, [
+                'unit' => 'years', 'source_id' => 'S71', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'cavalier_king_charles_spaniel.lifespan.median_uk',
+                'quote' => 'Cavalier King Charles Spaniel 121 9.99 8.14-12.39',
+                'notes' => 'O\'Neill et al. VetCompass poster (SVEPM 2012, S71): median longevity of 121 deaths. McMillan 2024 (S54) gives no reachable Cavalier value. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

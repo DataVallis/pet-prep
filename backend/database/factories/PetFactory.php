@@ -199,6 +199,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Cavalier King Charles Spaniel (paid breed, M5-R10-05).
+     */
+    public function cavalierKingCharlesSpaniel(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::CavalierKingCharlesSpaniel->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static
