@@ -1979,6 +1979,611 @@
       }
     }
   },
+  "french_bulldog": {
+    "_note": "Added 2026-10-10 (M5-R10-03). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S76–S94, reused S8, S9, S10, S11, S14, S15, S22, S24, S34, S35, S45, S54). Several pages were returned partly as paraphrase — only the passages the tool marked as verbatim are used as quotes.",
+    "identity": {
+      "value": "FCI No. 101, Group 9 Section 11 (Small Molossian type), France",
+      "unit": "—",
+      "source_id": "S77",
+      "quote": "Standard number: 101; Group: n°9 - Chiens d'agrément et de compagnie; Section: Molossoïdes de petit format; Country of origin: FRANCE",
+      "confidence": "high",
+      "notes": "FCI standard (S76): 'Group 9 Companion and Toy Dogs.' / 'Section 11 Small Molossian Dogs.'; 'UTILIZATION: Companion and Toy dog.' Definitive FCI acceptance 30/11/1954; valid standard published 10/08/2023 (FR), EN version 18/09/2023 (S77). Quote assembled from the nomenclature fields."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S78",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "PDSA (S81): 'Size: Small'. Woodgreen (S82) says 'Size: Medium' (outlier; its weight 8–14 kg = FCI range). PetMD weight classes (S10): FCI 8–14 kg ≈ 17.6–30.9 lb straddles Small (12–24 lb) and Medium (24–59 lb)."
+    },
+    "height": {
+      "fci_range": {
+        "value": {
+          "male": [
+            27,
+            35
+          ],
+          "female": [
+            24,
+            32
+          ]
+        },
+        "unit": "cm at withers",
+        "source_id": "S76",
+        "quote": "Males: 27–35 cm. Females: 24–32 cm.",
+        "confidence": "high",
+        "notes": "Returned as two fragments ('27–35 cm.', '24–32 cm.') under 'Height at withers'. RKC (S79) and AKC (S80) standards give no height."
+      },
+      "pdsa_average": {
+        "value": 30,
+        "unit": "cm",
+        "source_id": "S81",
+        "quote": "Average height: 30 cm",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (label wording as returned by the tool)."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            9,
+            14
+          ],
+          "female": [
+            8,
+            13
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S76",
+        "quote": "Males: 9–14 kg. Females: 8–13 kg.",
+        "confidence": "high",
+        "notes": "Returned as two fragments under 'Weight'. Woodgreen (S82): 'Weight: 8-14 kg'."
+      },
+      "rkc_ideal": {
+        "value": {
+          "male": 12.5,
+          "female": 11.0
+        },
+        "unit": "kg",
+        "source_id": "S79",
+        "quote": "Ideal weight: dogs: 12.5 kgs (28 lbs); bitches: 11 kgs (24 lbs). Soundness not to be sacrificed to smallness.",
+        "confidence": "high",
+        "notes": "RKC breed standard (last updated 1 August 2025)."
+      },
+      "akc_max": {
+        "value": 12.7,
+        "unit": "kg (converted from 28 lb)",
+        "source_id": "S80",
+        "quote": "Weight not to exceed 28 pounds; over 28 pounds is a disqualification.",
+        "confidence": "high",
+        "notes": "AKC standard (approved April 10, 2018, effective June 5, 2018). Maximum only, no range."
+      },
+      "pdsa": {
+        "value": [
+          11,
+          12.5
+        ],
+        "unit": "kg",
+        "source_id": "S81",
+        "quote": "Average weight: 11-12.5 kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (label wording as returned by the tool)."
+      },
+      "uk_measured_mean": {
+        "value": {
+          "male": 13.7,
+          "female": 11.5
+        },
+        "unit": "kg (mean adult bodyweight, SD 2.4 / 2.1)",
+        "source_id": "S83",
+        "quote": "The mean adult bodyweight of males (13.7 kg, SD 2.4 kg) was heavier than for females (11.5 kg, SD 2.1 kg) (P < 0.001).",
+        "confidence": "high",
+        "notes": "VetCompass 2013 (O'Neill et al. 2018, S83), UK primary-care records. Male mean is above the RKC ideal (12.5) and the AKC maximum (12.7)."
+      },
+      "salt_category": {
+        "value": "III (9–<15 kg); FCI lower bound 8 kg touches II (6.5–<9)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (same method as the Labrador/Golden); band limits from general_by_size.size_classes.salt_2017_bands_kg (S8: III = 9–<15 kg, II = 6.5–<9 kg) — no verbatim Category III quote captured. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–15 months (small 9–12 / medium 12–15)",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "low",
+        "notes": "Size-class values (PetMD S10: small 12–24 lb → 9–12 months; medium 24–59 lb → 12–15 months), not breed-specific. FCI weights 8–14 kg (17.6–30.9 lb) straddle both classes; RKC ideal ♂ 28 lb / ♀ 24 lb sits on the boundary → the range spans both (9–15 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — proposal. No French Bulldog growth curve found. The existing logistic curve (general_by_size.growth.logistic_model, medium breeds of S9) could be applied with a = 11–14 kg, but S9 contains no brachycephalic breed — open question shared with the Labrador/Golden."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 9.8,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": "French Bulldog (red, x̃= 9.8)",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 corrected Fig. 3 legend (S54; the correction changed only the Miniature Dachshund — French Bulldog unchanged). Dogs Trust summary (S15): 'French Bulldog (9.8 years) were found to have the shortest life expectancy.' and 'Brachycephalic dogs, those with flat-faces, like popular French Bulldogs (9.8 years)' … 'were found to have a 40% increased risk of living shorter lives than dogs with typical shaped faces'. All purebreds: 12.7 y (S15). Lowest of all breeds in PetPrep's data (Border Collie 13.1, Labrador 13.1, Golden 13.2)."
+      },
+      "vetcompass_2013_deaths": {
+        "value": 3.6,
+        "unit": "years (median age at death of the 98 recorded deaths)",
+        "source_id": "S83",
+        "quote": "The median longevity of French Bulldogs overall was 3.6 years (IQR 1.8–6.1, range 0.0–12.2).",
+        "confidence": "low",
+        "notes": "NOT a life expectancy: the 2013 UK population was very young (median age 1.3 y) after a rapid rise in popularity, so deaths were mostly young dogs. Recorded for completeness only; do not show to parents and do not use for game stages."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S78",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA (S81): 'Average lifespan: over 10 years' (as returned). Woodgreen (S82): 'Life expectancy: 10-12 years'. Conflicts with the peer-reviewed 9.8 y median (S54) — the breed pages are generic bands."
+      },
+      "senior_from": {
+        "value": 7.35,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25% of lifespan (S11) × 9.8 y (S54/S15) → 0.75 × 9.8 = 7.35 y = 88.2 → 88 months. With the breed-page 'over 10 years' (S78): 0.75 × 10 = 7.5 y = 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S54",
+          "S15"
+        ],
+        "months": 88,
+        "alternative": {
+          "value_years": 7.5,
+          "months": 90,
+          "derived_from": [
+            "S11",
+            "S78"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S78",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "PDSA (S81): 'Your French Bulldog will need up to an hour of exercise every day.' (its key-facts label was returned as 'Minimum exercise: 1 hour per day' — verify the wording on the page); PDSA suggests splitting it into several shorter walks plus play and mental stimulation (paraphrase). Woodgreen (S82): 'Exercise needs: 60-90 mins'; 'A fit Frenchie from a responsibly bred litter only needs a good hour of exercise a day.'; 'French Bulldogs need two good walks a day where they can run around and enjoy themselves.' Sources agree on ~1 h."
+      },
+      "heat_and_walk_timing": {
+        "value": "avoid exercise in hot weather; walk in the cooler morning/evening in summer",
+        "unit": "—",
+        "source_id": "S81",
+        "quote": "As a flat-faced breed, French Bulldogs can overheat and struggle to breathe really quickly, especially in warmer weather.",
+        "confidence": "high",
+        "notes": "PDSA also: 'Make sure you can recognise the signs of heatstroke in your dog.' and advises early-morning/evening walks in summer (paraphrase). Woodgreen (S82): 'Care must be taken during warm weather as Frenchies are vulnerable to heat exhaustion which can be dangerous.' Hall et al. 2020 (S86) / NTU press (S88): owners should avoid 'exercising their dogs during hot weather.'"
+      },
+      "energy": {
+        "value": "lively, playful",
+        "unit": "—",
+        "source_id": "S76",
+        "quote": "Sociable, lively, playful, possessive, and keen companion dog.",
+        "confidence": "medium",
+        "notes": "FCI behaviour/temperament. AKC (S80) describes an 'active, intelligent, muscular dog'. No energy rating value was returned for PDSA/Woodgreen (graphical)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "sociable, lively, playful, possessive companion; vivacious, deeply affectionate",
+        "unit": "—",
+        "source_id": "S76",
+        "quote": "Sociable, lively, playful, possessive, and keen companion dog.",
+        "confidence": "high",
+        "notes": "RKC standard (S79): 'Vivacious, deeply affectionate, intelligent.' and 'Full of courage, yet with clown-like qualities.' AKC (S80): 'Well behaved, adaptable, and comfortable companions with an affectionate nature and even disposition'."
+      },
+      "family": {
+        "value": "laid back and adaptable; get along well with children of all ages (supervise play)",
+        "unit": "—",
+        "source_id": "S81",
+        "quote": "Frenchies are known for being pretty laid back and adaptable, so they tend to get along well with children of all ages",
+        "confidence": "medium",
+        "notes": "Sentence continues 'which makes them popular family pets.' (S81). PDSA advises supervising play so it doesn't become too boisterous (paraphrase). Woodgreen (S82): 'are even tolerant of children, providing free entertainment!'"
+      },
+      "time_alone": {
+        "value": "people-oriented; may develop separation anxiety if left alone",
+        "unit": "—",
+        "source_id": "S81",
+        "quote": "They thrive off company and so could develop separation anxiety if left alone.",
+        "confidence": "medium",
+        "notes": "PDSA generic rule: 'Ideally, you should never leave your dog for more than four hours.' Woodgreen lists 'Ability to stay home alone' without a value → no often_alone tag."
+      },
+      "other_pets": {
+        "value": "high prey drive; may chase unfamiliar cats and small pets",
+        "unit": "—",
+        "source_id": "S81",
+        "quote": "French Bulldogs do have a high prey drive.",
+        "confidence": "medium",
+        "notes": "PDSA: 'they will be fine with that cat but are likely to chase unfamiliar cats and smaller pets' (context: a cat they grew up with — paraphrase of the lead-in). Woodgreen (S82): 'Sociable with pets: Low'. → no other_pets tag."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No French Bulldog-specific chewing/boredom source found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No French Bulldog-specific food-motivation or obesity statement found in the fetched pages → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only. Brachycephaly is the breed's defining welfare issue and every source on the breed raises it; recorded factually with sources, no invented percentages. Percentages below come from clinic records or a self-selected testing scheme — each carries its context; do not show any of them to children. Breathing/heat are proposed as a gentle game mechanic (proposed_game_parameters.french_bulldog.heat_breathing_mechanic), not as statistics.",
+      "brachycephaly_boas": {
+        "value": "flat-faced (brachycephalic) breed; at risk of brachycephalic obstructive airway syndrome (BOAS) — narrow nostrils, excess soft tissue, noisy/laboured breathing",
+        "unit": "—",
+        "source_id": "S78",
+        "quote": "The soft tissue in the nose and throat of some brachycephalic dogs may be excessive for the airways",
+        "confidence": "high",
+        "notes": "RKC breed page (S78) also: 'Some dogs may also have narrow nostrils making it even more difficult to breathe.'; 'dogs with a very flat face and short muzzle have a higher risk of developing certain health issues'; 'Not all flat-faced dogs will have the health issues described'. PDSA (S81): 'Frenchies are a flat-faced breed, which can often cause breathing problems.'; BOAS 'can cause severe breathing problems and is caused by their shorter faces.' Woodgreen (S82): 'Unfortunately, Frenchies are prone to several health conditions including breathing problems'. Cambridge (S90): BOAS is 'a progressive disorder that can impair a dog's ability to exercise, play, eat and sleep'. Standards: FCI (S76) 'The slope of the nostrils as well as the upturned nose must, however, allow normal nasal breathing.' — disqualifying faults 'Respiratory distress.' and 'Completely closed nostrils.'; RKC (S79) 'Dogs showing respiratory distress or making excessive respiratory noise unacceptable.'"
+      },
+      "boas_odds_vs_other_dogs": {
+        "value": {
+          "boas_odds_ratio": 30.89,
+          "stenotic_nares_odds_ratio": 42.14
+        },
+        "unit": "odds ratio vs non-French Bulldogs (UK primary care, 2016)",
+        "source_id": "S84",
+        "quote": "(OR 30.89; 95 % CI 20.91 to 45.64; p < 0.001)",
+        "confidence": "high",
+        "notes": "O'Neill et al. 2021 (S84), 2,781 French Bulldogs vs 21,850 other dogs: BOAS OR 30.89; stenotic nares '(OR 42.14; 95 % CI 18.50 to 95.99; p < 0.001)'; also aural discharge OR 14.40, skin fold dermatitis OR 11.18, dystocia OR 9.13. Increased odds for '20/43 (46.5 %) disorders', reduced for '11/43 (25.6 %)'. Conclusion: 'the health of French Bulldogs has diverged substantially from, and may be lower than,' [the rest of the dog population — completion paraphrased]; 'Many of these predispositions are closely associated with the conformational extremes that define the French Bulldog breed.' Odds ratios = relative risk of a vet recording the diagnosis, NOT the share of Frenchies affected."
+      },
+      "boas_diagnosed_prevalence_2013": {
+        "value": 2.4,
+        "unit": "% of French Bulldogs with a recorded BOAS diagnosis in one year (2013)",
+        "source_id": "S83",
+        "quote": "included brachycephalic obstructive airway syndrome (BOAS) (2.4%).",
+        "confidence": "low",
+        "notes": "O'Neill et al. 2018 (S83), 2,228 French Bulldogs, median age 1.3 y. A one-year recorded-diagnosis rate in a very young population — the paper notes older dogs were significantly more likely to have a BOAS diagnosis (paraphrase), so it understates lifetime risk. Do NOT present as 'only 2.4 % are affected'."
+      },
+      "rfg_grades_2024": {
+        "value": {
+          "graded_total": 1831,
+          "grade_0_pct": 46,
+          "grade_1_pct": 38,
+          "grade_2_pct": 14,
+          "grade_3_pct": 2
+        },
+        "unit": "% of French Bulldogs graded in the RKC/Cambridge Respiratory Function Grading scheme (cumulative to 31/12/2024)",
+        "source_id": "S89",
+        "quote": "French Bulldog 1831 301 846 46% 701 38% 253 14% 31 2%",
+        "confidence": "low",
+        "notes": "Row of the RKC annual RFG report 2024 (S89); column headers were garbled and matched to Grade 0–3 by position by the tool (counts sum to 1,831; 301 tested in 2024). Self-selected population (mostly dogs of health-testing breeders) — NOT representative of pet Frenchies. Scheme (S90): grade 0–3 after an exercise tolerance test; 'dogs graded as three will show severe respiratory signs of BOAS'; 'The scheme issues guidance that dogs graded three should not be bred from.' Grade definitions 0–2 not returned."
+      },
+      "heat_stroke": {
+        "value": "higher risk of heat-related illness; brachycephalic dogs OR 2.10 vs mesocephalic; French Bulldog about 6× (odds vs Labrador, press summary)",
+        "unit": "—",
+        "source_id": "S86",
+        "quote": "Brachycephalic dogs had higher odds of HRI (OR 2.10, 95% CI 1.68-2.64) compared to mesocephalic dogs.",
+        "confidence": "high",
+        "notes": "Hall, Carter & O'Neill 2020 (S86), 905,543 UK dogs (2016), 395 confirmed events, incidence '0.04% (95% CI 0.04-0.05%)', event fatality '14.18% (95% CI 11.08 – 17.96%)'. French Bulldog vs Labrador: the fetched text says significantly higher odds but did not return the OR; RVC VetCompass news (S87): 'French Bulldog (x6)' compared with Labradors; NTU press release (S88): 'flat-faced dogs in general were twice as likely'. Verify the exact French Bulldog OR in the paper's table. PDSA (S81) and Woodgreen (S82): 'Frenchies are also more vulnerable to heat stroke than other breeds'. BVA (S91): breathing difficulties are 'often associated with overheating'."
+      },
+      "other_conditions": {
+        "value": "skin-fold dermatitis, ear disease (otitis), eye problems, spinal/intervertebral disc disease, luxating patellas, dental problems, dystocia",
+        "unit": "—",
+        "source_id": "S83",
+        "quote": "Otitis externa: 14.0% … Skin fold dermatitis: 3.0%",
+        "confidence": "medium",
+        "notes": "O'Neill 2018 (S83) most common recorded disorders 2013 (tool listed: otitis externa 14.0 %, diarrhoea 7.5 %, conjunctivitis 3.2 %, overlong nails 3.1 %, skin fold dermatitis 3.0 % — quote assembled from that list). PDSA (S81) lists luxating patellas, dental problems, eye problems incl. cataracts, intervertebral disc disease, skin fold dermatitis, hyperuricosuria (list summarised by the tool) and: 'it's important to make sure their skin folds are kept clean and dry.' RKC (S78): skin folds 'can make a warm, moist environment which is perfect for bacteria and yeast to grow'; 'Some brachycephalic dogs may have shallow eye sockets, causing their eyes to become more prominent'. Woodgreen (S82): 'All this can be very expensive to treat.'"
+      },
+      "merle_colour": {
+        "value": "merle is not a breed-standard colour and carries a hearing/sight risk",
+        "unit": "—",
+        "source_id": "S78",
+        "quote": "the merle gene in this breed carries an increased risk of impaired hearing and sight problems",
+        "confidence": "high",
+        "notes": "RKC lists merle-type/blue/black-and-tan etc. as non-breed-standard (NBS) colours (S78); FCI (S76) and AKC (S80) also exclude them. Game should not offer merle/blue Frenchies (see appearance.colours)."
+      },
+      "welfare_advice_to_buyers": {
+        "value": "UK vets/welfare groups urge people to stop and think before buying a flat-faced dog; PDSA recommends considering a different breed, a cross-breed, or adopting an adult",
+        "unit": "—",
+        "source_id": "S81",
+        "quote": "We'd recommend considering a different breed or a cross-breed to try and reduce some of the problems Frenchies have.",
+        "confidence": "high",
+        "notes": "PDSA (S81) also: 'Adopting an adult French Bulldog from a rescue centre may be a more cost-effective option.'; if buying, an Assured Breeder with health-screened parents (paraphrase). UK Brachycephalic Working Group (S93): 'Stop and think before buying a flat-faced dog.' (also Science for Animal Welfare / UFAW S94, which names French Bulldogs, Pugs and Bulldogs, and O'Neill in S87). Woodgreen (S82): 'Due to their poor hereditary health, it's essential to buy a French Bulldog from a respectable breeder'. RVC (S85, O'Neill): the research 'may also assist potential new owners to decide whether a French Bulldog is even the right breed for them.' BVA (S91, policy position January 2018): a '3104% increase in French Bulldog registrations'; BVA exec summary (S92): 'increasing awareness of the health and welfare issues associated with brachycephaly amongst current and prospective owners' and 'avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns' — David 2026-10-10: no French Bulldog imagery in PetPrep marketing / store screenshots (proposed_game_parameters.french_bulldog.marketing). No source found that says vets advise against owning a Frenchie outright; the wording is 'stop and think' / 'consider a different breed'."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 58,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 58 | French Bulldog |",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C), between Pug (57) and Griffon Bruxellois/Maltese (59). Coren's own article (S34) lists only the top and bottom 10 — the French Bulldog is in neither (the 'Bulldog' in its bottom 10 is the English Bulldog). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "fair: 40–80 repetitions, obeys first command ≥30%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 40 to 80 repetitions.; Obey first command: 30% of the time or better.",
+        "confidence": "low",
+        "notes": "Tier 'Fair Working/Obedience Intelligence' = ranks 55–69 — one tier below 'Average' (ranks 40–54: 25–40 repetitions, ≥50 %). Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "eager to please but can be strong-willed; sensitive — reward-based training",
+        "unit": "—",
+        "source_id": "S81",
+        "quote": "French Bulldogs are eager to please their owners which can make them easy to train",
+        "confidence": "medium",
+        "notes": "Sentence continues 'but are also known to be strong-willed at times.' PDSA: 'They are a sensitive breed, so respond best to positive, reward-based training.'; for first-time owners: 'we'd recommend taking them to accredited training classes.' Woodgreen (S82): 'Training: Moderately easy' (same as Labrador/Golden). Sources are milder than Coren's rank."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.french_bulldog.learning_multiplier (0.7, potrdil David 2026-10-10).",
+        "derived_from": [
+          "S35",
+          "S81",
+          "S82"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small molossian; powerful for its size, short, stocky, compact, smooth-coated",
+        "unit": "—",
+        "source_id": "S76",
+        "quote": "A powerful dog for its small size, short, stocky, compact in all its proportions, smooth-coated,",
+        "confidence": "high",
+        "notes": "RKC (S79): 'Sturdy, compact , solid, small dog with good bone, short, smooth coat. No point exaggerated, balance essential.'"
+      },
+      "colours": {
+        "value": [
+          "fawn",
+          "brindle",
+          "pied (white with brindle/fawn patches)",
+          "fawn/brindle with white"
+        ],
+        "unit": "list",
+        "source_id": "S79",
+        "quote": "The only correct colours are: Brindle; Fawn; Pied;",
+        "confidence": "high",
+        "notes": "RKC standard (S79) also: 'Any other colour or combination of colours unacceptable.' FCI (S76): 'fawn, brindled or not, with or without white spotting.' RKC breed page (S78) standard colours: Brindle, Light Brindle, Dark Brindle, Brindle & White, Fawn, Fawn & White, Fawn Pied, Fawn With Black Mask, Pied; non-breed-standard: blue, black & tan, brown, sable, red, cream variants (merle health risk — health.merle_colour). AKC (S80): 'Acceptable colors: white, cream, fawn (ranging from light fawn to a red fawn), or any combinations of the foregoing.' (AKC markings list not returned). Frequencies: not sourced."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). No colour frequencies. Draw over the standard colours fawn / brindle / pied (RKC S79, FCI S76); fawn weighted highest so the register portrait is fawn (David 2026-10-10); never blue / merle / black-and-tan (S78)."
+      },
+      "coat": {
+        "value": "smooth, close, glossy, soft, no undercoat",
+        "unit": "—",
+        "source_id": "S76",
+        "quote": "Smooth coat, close, glossy and soft, without undercoat.",
+        "confidence": "high",
+        "notes": "RKC (S79): 'Texture fine, smooth, lustrous, short and close.' AKC (S80): 'Coat is brilliant, short and smooth.' RKC breed page (S78): 'Coat length: Short'."
+      },
+      "ears": {
+        "value": "bat ears — erect, wide at base, rounded top",
+        "unit": "—",
+        "source_id": "S79",
+        "quote": "’Bat ears‘, of medium size, wide at base, rounded at top; set high, carried upright and parallel",
+        "confidence": "high",
+        "notes": "FCI (S76): 'Set high on the head, but not too close together, carried erect.' AKC (S80): 'Known as the bat ear, broad at the base, elongated, with round top, set high on the head but not too close together'. One ear type → no variation."
+      },
+      "eyes": {
+        "value": "dark, round, moderate size",
+        "unit": "—",
+        "source_id": "S79",
+        "quote": "Preferably dark and matching. Moderate size, round, neither sunken nor prominent",
+        "confidence": "high",
+        "notes": "AKC (S80): 'Eyes dark, brown or approaching black in color, wide apart, set low down in the skull' (blue/green disqualified — paraphrase)."
+      },
+      "tail": {
+        "value": "naturally short, low-set, straight or screwed",
+        "unit": "—",
+        "source_id": "S79",
+        "quote": "Undocked, set low, thick at root, tapering quickly towards tip, preferably straight, and long enough to cover anus.",
+        "confidence": "high",
+        "notes": "FCI (S76): 'Naturally short, ideally long enough to cover the anus, set low,'. AKC (S80): 'The tail is either straight or screwed (but not curly), short, hung low, thick root and fine tip;'."
+      },
+      "nose": {
+        "value": "black, broad, short with open nostrils",
+        "unit": "—",
+        "source_id": "S79",
+        "quote": "Nose black and wide, relatively short, with visibly open nostrils and line between well defined.",
+        "confidence": "high",
+        "notes": "FCI (S76): 'Black, broad, snubbed, with symmetrical and well opened nostrils, slanting towards the rear.' For PetPrep art: draw visibly open nostrils and a moderate (not extreme) face — RKC 'No point exaggerated' (S79); David 2026-10-10: moderate face with open nostrils in the app art; no Frenchie imagery in marketing (BVA S92, proposed_game_parameters.french_bulldog.marketing)."
+      }
+    },
+    "suitability": {
+      "_note": "AKC breed-trait ratings not attempted (the AKC breed pages returned no trait data for the Labrador/Golden). Source = RKC breed-page fields (S78), PDSA (S81), Woodgreen (S82) — same approach as the Labrador/Golden.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S78",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S78",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S78",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "Only breed so far with 'Flat/ Apartment' (Labrador/Golden: 'Large house')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S78",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S78",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "PDSA (S81): weekly brush; skin folds must be kept clean and dry."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S78",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S78",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "Conflict: PDSA (S81) 'French Bulldogs aren't known for shedding lots'; Woodgreen (S82) 'Shedding: Minimal'. → neither `sheds` nor `low_shedding` proposed."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S78",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "Peer-reviewed median 9.8 y (S54)."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S78",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-10)."
+      },
+      "pdsa_family": {
+        "value": "popular family pet",
+        "unit": "—",
+        "source_id": "S81",
+        "quote": "Frenchies are known for being pretty laid back and adaptable, so they tend to get along well with children of all ages",
+        "confidence": "medium",
+        "notes": "Continues 'which makes them popular family pets.' (returned as a continuation, over the tool's quote length)."
+      },
+      "pdsa_children": {
+        "value": "get along well with children of all ages (supervise play)",
+        "unit": "—",
+        "source_id": "S81",
+        "quote": "Frenchies are known for being pretty laid back and adaptable, so they tend to get along well with children of all ages",
+        "confidence": "medium",
+        "notes": "A statement, not a rating; PDSA advises supervising play (paraphrase). Woodgreen (S82): 'tolerant of children'."
+      },
+      "pdsa_first_time_owner": {
+        "value": "training classes recommended for first-time owners",
+        "unit": "—",
+        "source_id": "S81",
+        "quote": "If you're a first time owner, we'd recommend taking them to accredited training classes.",
+        "confidence": "medium",
+        "notes": "Not a 'good first dog' statement (contrast Golden S68) → no first_time_owner tag."
+      },
+      "pdsa_time_alone": {
+        "value": "could develop separation anxiety if left alone; never more than 4 h (generic)",
+        "unit": "—",
+        "source_id": "S81",
+        "quote": "They thrive off company and so could develop separation anxiety if left alone.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "woodgreen_sociable_with_pets": {
+        "value": "Low",
+        "unit": "—",
+        "source_id": "S82",
+        "quote": "Sociable with pets: Low",
+        "confidence": "medium",
+        "notes": "PDSA (S81): 'French Bulldogs do have a high prey drive.'"
+      },
+      "woodgreen_training": {
+        "value": "Moderately easy",
+        "unit": "—",
+        "source_id": "S82",
+        "quote": "Training: Moderately easy",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "woodgreen_grooming": {
+        "value": "Low",
+        "unit": "—",
+        "source_id": "S82",
+        "quote": "Grooming needs: Low",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "woodgreen_shedding": {
+        "value": "Minimal",
+        "unit": "—",
+        "source_id": "S82",
+        "quote": "Shedding: Minimal",
+        "confidence": "medium",
+        "notes": "Conflicts with RKC 'Sheds: Yes' (S78)."
+      },
+      "woodgreen_exercise": {
+        "value": "60-90 mins",
+        "unit": "—",
+        "source_id": "S82",
+        "quote": "Exercise needs: 60-90 mins",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_monthly_cost": {
+        "value": 70,
+        "unit": "GBP/month (minimum)",
+        "source_id": "S81",
+        "quote": "Minimum cost (per month): £70",
+        "confidence": "medium",
+        "notes": "Label and value returned separately by the tool and assembled here. UK prices. Woodgreen (S82): health problems 'can be very expensive to treat.'"
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -2921,6 +3526,243 @@
           "mouthy": "Not used (David 2026-10-09): PDSA frames puppy mouthiness as normal for Retrievers (S68, S69 'like to have things in their mouth'); as a chip it could read as alarming to parents."
         },
         "decision": "potrdil David 2026-10-09: suits active_family, family_pet, children, first_time_owner, large_home, other_pets; consider long_daily_exercise, sheds, food_motivated_weight, frequent_grooming (new tag). Not mouthy. No cancer statistics anywhere in the app."
+      }
+    },
+    "french_bulldog": {
+      "_note": "David's decisions of 2026-10-10 (~06:20) recorded as `decision` per entry. Same derivations as the Golden Retriever (exercise min × 100 steps/min (S45), senior = 75 %, stages young 9 / adult 36 / senior 0.75 × median lifespan, arrival = first month of stage).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S78",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'Up to 1 hour per day' (S78) = PDSA 'up to an hour' (S81) = Woodgreen 'a good hour' / 60–90 min lower bound (S82). Game value = the sourced 'up to 1 hour' (S78, S81) used as the daily target (also the lower bound of Woodgreen 60–90 min, S82). Alternative recorded: 90 (Woodgreen upper bound) — not chosen given the breathing/heat advice.",
+        "alternatives": [
+          90
+        ],
+        "decision": "potrdil David 2026-10-10: 60 min/day (RKC S78 'Up to 1 hour per day' = PDSA S81; Woodgreen upper bound 90 min recorded as alternative)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45, adult heuristic) = 6,000 (= mixed-breed adult). Proposed as ≥ 2 walks (Woodgreen 'two good walks a day', S82; PDSA several shorter walks, S81).",
+        "derived_from": [
+          "S78",
+          "S81",
+          "S82",
+          "S45"
+        ],
+        "alternatives": {
+          "woodgreen_90_min": 9000
+        },
+        "decision": "potrdil David 2026-10-10: 60 min × 100 steps/min → 6,000 steps (= mixed-breed adult)"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 75 % of 60 min (senior rule David confirmed 2026-10-05) = 45 min exactly → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10: 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule. Existing puppy rule (10 min × age in months, capped at the adult minutes — David 2026-10-05) → the Frenchie reaches its 60-min cap at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10: puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 88
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game boundaries (no exact month in the literature). young 9 / adult 36: AAHA (S11), same as the other breeds (small breeds finish growing 9–12 months, S10, so 9 fits well). senior 88 = 0.75 × 9.8 y × 12 = 88.2 → 88 (S11 + S54/S15, McMillan 2024). Alternatives not proposed: 90 (0.75 × 'over 10 years', S78); 84 (Dogs Trust > 7 y, S14). 88 is 30 months earlier than the Border Collie / Labrador (118) and the Golden (119) — the shorter life is real (S54) and shown only as a stage age, never as a statistic.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S54",
+          "S15"
+        ],
+        "alternatives": {
+          "senior_rkc_over_10_y": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10: young 9, adult 36, senior 88 (0.75 × 9.8 y, McMillan 2024 S54 / Dogs Trust summary S15)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 88
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). First month of each stage (rule David confirmed 2026-10-05), so the dog stays in its stage for the 12-week challenge. Adult/senior arrival also matches PDSA's suggestion to consider adopting an adult Frenchie (S81).",
+        "decision": "potrdil David 2026-10-10: first month of each stage (2 / 9 / 36 / 88)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature factor). Coren rank 58 (S35, tier C), tier 'Fair' (ranks 55–69: 40–80 repetitions, obeys first command ≥ 30 %) — one tier BELOW 'Average' (40–54). The mixed-breed baseline (1.0) is unranked and treated as 'Average'. The existing scale spends ~0.3 per Coren tier step (Average 1.0 → Above average → Excellent → Brightest ≈ 1.8–2.0, i.e. 3 steps for +0.8–1.0), so one step down = 0.7. Linear-by-rank extrapolation from BC (1 → 2.0) and Labrador (7 → 1.8) would give ≈ 0.1 at rank 58 — rejected, the scale is per tier, not per rank. Counterweight: PDSA 'eager to please … easy to train … strong-willed at times' (S81) and Woodgreen 'Moderately easy' (S82, same as Labrador/Golden) → alternative 0.8. No individual variation (like the other pedigree breeds). Mixed breed with ±20 % can be as slow as 0.8 — overlaps with the alternative.",
+        "derived_from": [
+          "S35",
+          "S81",
+          "S82"
+        ],
+        "alternatives": [
+          0.8,
+          1.0
+        ],
+        "decision": "potrdil David 2026-10-10: 0.7 (Coren rank 58, S35 — 'Fair' tier, one tier below Average)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game values (no breed-specific number in the sources) — Same as the Border Collie / Labrador / Golden (BreedConfigsSeeder). Small dogs drink and eat less in absolute terms (water is per kg: 60–80 ml/kg/day, S22), but the game bars are % of the dog's own need, and no source gives a breed- or size-specific hunger/thirst rate or meal count for small adults → no change proposed. Heat makes water more important (S81/S82), but that is handled by the heat idea below, not by the base rate.",
+        "decision": "potrdil David 2026-10-10: same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "heat_breathing_mechanic": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED idea, not built (post-MVP backlog). Must NOT use a weather API (CLAUDE.md scope guard). Sourced facts it rests on: overheat and struggle to breathe quickly in warm weather, walk in cooler morning/evening, know the heatstroke signs (PDSA S81); 'two good walks a day' (Woodgreen S82); OR 2.10 for heat illness in flat-faced dogs (S86); noisy breathing at rest is not normal (RKC standard S79 'excessive respiratory noise unacceptable'). Idea: (1) the daily step goal counts only in ≥ 2 walks — one walk above ~30 min (half the goal; our number) makes the dog 'pant' and pause (child learns: short walks, rests); (2) in the game's summer months (calendar, family timezone — no weather data) midday walks (e.g. 11–16 h, our number) trigger a 'too hot — walk in the morning or evening' hint and a water reminder; (3) a calm 'Did you know?' card: flat faces can make breathing harder, so Frenchies need cool shade, water and gentle walks. No illness, collapse or death shown to the child; no percentages."
+      },
+      "skin_fold_care_idea": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED idea, not built (post-MVP backlog; no decision asked). PDSA: 'it's important to make sure their skin folds are kept clean and dry.' (S81); RKC on folds (S78); O'Neill 2021 skin fold dermatitis OR 11.18 (S84). Idea: a weekly 'wipe face folds' care action next to brushing; frequency not sourced."
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-03); refs = JSON paths in this file. `brachycephalic_breathing` is a new consider key (vocabulary + BreedCatalogResource union + mobile i18n; SL 'kratek gobček — težave z dihanjem in vročino', EN 'flat face — breathing and heat problems' — David 2026-10-10; no percentages in the app).",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S78"
+            ],
+            "refs": [
+              "french_bulldog.suitability.rkc_size_of_home",
+              "french_bulldog.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S78 'Size of home: Flat/ Apartment' / 'Size of garden: Small/ medium garden'",
+            "note": "First breed with a sourced `apartment` tag."
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S81"
+            ],
+            "refs": [
+              "french_bulldog.suitability.pdsa_family",
+              "french_bulldog.behaviour.family"
+            ],
+            "quote": "S81 '…they tend to get along well with children of all ages which makes them popular family pets.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S81",
+              "S82"
+            ],
+            "refs": [
+              "french_bulldog.suitability.pdsa_children"
+            ],
+            "quote": "S81 'they tend to get along well with children of all ages'; S82 'are even tolerant of children'",
+            "note": "Same basis as the Golden (explicit PDSA statement, supervise play). `small_children` not used despite 'all ages' — PDSA supervision caveat, consistent with the Golden (David 2026-10-10: tags apartment, family_pet, children)."
+          }
+        ],
+        "consider": [
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S78",
+              "S81",
+              "S82",
+              "S84",
+              "S86",
+              "S93"
+            ],
+            "refs": [
+              "french_bulldog.health.brachycephaly_boas",
+              "french_bulldog.health.heat_stroke",
+              "french_bulldog.exercise.heat_and_walk_timing"
+            ],
+            "quote": "S81 'As a flat-faced breed, French Bulldogs can overheat and struggle to breathe really quickly, especially in warmer weather.'; S78 'Some dogs may also have narrow nostrils making it even more difficult to breathe.'; S82 'Frenchies are also more vulnerable to heat stroke than other breeds'; S84 BOAS OR 30.89; S86 brachycephalic heat illness OR 2.10; S93 'Stop and think before buying a flat-faced dog.'",
+            "note": "NEW consider key. App chip (David 2026-10-10): SL 'kratek gobček — težave z dihanjem in vročino', EN 'flat face — breathing and heat problems'. The odds ratios (S84, S86) stay in the research — no percentages or statistics in the app."
+          }
+        ],
+        "not_proposed": {
+          "small_children": "PDSA 'children of all ages' (S81) but advises supervising play; not used, consistent with the Golden (David 2026-10-10).",
+          "first_time_owner": "PDSA only recommends training classes for first-time owners (S81) — no 'good first dog' statement.",
+          "other_pets": "Woodgreen 'Sociable with pets: Low' (S82); PDSA 'high prey drive' (S81).",
+          "often_alone": "PDSA: could develop separation anxiety if left alone (S81).",
+          "low_shedding": "RKC 'Sheds: Yes' (S78) contradicts PDSA/Woodgreen 'minimal' (S81, S82).",
+          "sheds": "PDSA 'aren't known for shedding lots' (S81), Woodgreen 'Minimal' (S82) — not a thing to warn about.",
+          "active_family": "'Up to 1 hour per day' (S78) — moderate, not an active-family breed.",
+          "long_daily_exercise": "≤ 1 h/day (S78, S81).",
+          "large_home": "RKC 'Flat/ Apartment' (S78).",
+          "older_owners": "No source statement found.",
+          "needs_mental_stimulation": "PDSA mentions training/puzzles only as general advice (paraphrase) — not breed-specific.",
+          "chews_when_bored": "No source.",
+          "food_motivated_weight": "No French Bulldog-specific source found.",
+          "frequent_grooming": "RKC 'Once a week' (S78), Woodgreen grooming 'Low' (S82); skin-fold cleaning is a separate idea (skin_fold_care_idea)."
+        },
+        "decision": "potrdil David 2026-10-10: suits apartment, family_pet, children; consider brachycephalic_breathing (new key; no alarmism, no percentages in the app)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S92",
+        "quote": "avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns",
+        "confidence": "high",
+        "notes": "BVA position, executive summary (S92). The French Bulldog is a normal breed in the app (picker, register on the website with sourced health facts), but it is never used in PetPrep advertising, store screenshots, social posts or decks.",
+        "decision": "potrdil David 2026-10-10: in the app yes, NOT in marketing / store screenshots (BVA advice, S92)"
+      },
+      "ai_appearance": {
+        "value": "moderate (not extreme) flat face with visibly open nostrils, bat ears, short smooth coat; standard colours only (fawn, brindle, pied); portrait default fawn; never merle / blue / black-and-tan",
+        "unit": "—",
+        "source_id": "S79",
+        "quote": "Nose black and wide, relatively short, with visibly open nostrils and line between well defined.",
+        "confidence": "high",
+        "notes": "RKC standard (S79) 'No point exaggerated, balance essential.' and 'The only correct colours are: Brindle; Fawn; Pied;'; merle carries a hearing / sight risk (S78). Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10: moderate face with open nostrils, bat ears, short smooth coat, fawn / brindle / pied only (portrait fawn), never merle"
       }
     }
   }
