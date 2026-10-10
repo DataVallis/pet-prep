@@ -25,6 +25,7 @@ enum BreedType: string
     case StandardPoodle = 'standard_poodle';
     case Dachshund = 'dachshund';
     case AustralianShepherd = 'australian_shepherd';
+    case Havanese = 'havanese';
     case DomesticCat = 'domestic_cat';
     case MaineCoon = 'maine_coon';
 
@@ -45,6 +46,7 @@ enum BreedType: string
             self::StandardPoodle => 'poodle-standard',
             self::Dachshund => 'dachshund',
             self::AustralianShepherd => 'australian-shepherd',
+            self::Havanese => 'havanese',
             self::DomesticCat => 'domestic-cat',
             self::MaineCoon => 'maine-coon',
         };
@@ -64,7 +66,7 @@ enum BreedType: string
     public function species(): Species
     {
         return match ($this) {
-            self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd => Species::Dog,
+            self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese => Species::Dog,
             self::DomesticCat, self::MaineCoon => Species::Cat,
         };
     }
@@ -90,7 +92,7 @@ enum BreedType: string
     {
         return match ($this) {
             self::Mutt, self::DomesticCat => false,
-            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::MaineCoon => true,
+            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::MaineCoon => true,
         };
     }
 

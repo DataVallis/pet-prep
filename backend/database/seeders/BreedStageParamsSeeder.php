@@ -49,9 +49,9 @@ use InvalidArgumentException;
  * the mutt / Border Collie rows stay byte-identical (LabradorBreedTest /
  * GoldenRetrieverBreedTest / FrenchBulldogBreedTest / GermanShepherdBreedTest /
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
- * DachshundBreedTest / AustralianShepherdBreedTest cross-check the Labrador / Golden /
- * French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd rows against data.json).
+ * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest cross-check the
+ * Labrador / Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle /
+ * Dachshund / Australian Shepherd / Havanese rows against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
  * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
@@ -186,8 +186,17 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10_AUSTRALIAN_SHEPHERD = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-09)';
 
+    /**
+     * M5-R10-10 Havanese (unattended run 2026-10-10, data.json
+     * proposed_game_parameters.havanese.*.decision): every value follows a standing rule
+     * of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 30 min, senior 23 min, puppy 10 min × age capped at 30, stages 9 / 36 / 108,
+     * arrival 2 / 9 / 36 / 108, learning multiplier 1.0 (unranked); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_HAVANESE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-10)';
+
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -590,6 +599,10 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-09 (docs/research/dog-data/data.json australian_shepherd, S131–S135; runbook
             // rules in proposed_game_parameters.australian_shepherd).
             BreedType::AustralianShepherd => self::australianShepherdProfile(),
+
+            // M5-R10-10 (docs/research/dog-data/data.json havanese, S136–S141; runbook
+            // rules in proposed_game_parameters.havanese).
+            BreedType::Havanese => self::havaneseProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -1262,6 +1275,79 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'australian_shepherd.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC breed page lower bound (S133; PDSA "Over 10 years", S134). No McMillan 2024 (S135) or VetCompass median found. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Havanese (M5-R10-10). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_HAVANESE);
+     * weight, growth and lifespan are sourced; the breed has no Coren rank.
+     *
+     * @return array<string, mixed>
+     */
+    private static function havaneseProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_HAVANESE;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S138', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.havanese.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog finishes growing at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lifespan lower bound "Over 12 years" (S138; PDSA "Over 12 years", S140) = 9 y = 108 months. No McMillan 2024 or VetCompass Havanese median was reachable. Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.havanese.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 30 minutes, which 10 × age reaches at 3 months.',
+            'adult_minutes' => [30, [
+                'unit' => 'minutes/day', 'source_id' => 'S138', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.havanese.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 30 minutes per day',
+                'notes' => 'RKC "Up to 30 minutes per day" (S138) → 30 min = 3,000 steps (runbook rule: "up to N" → N). PDSA "around 30 minutes of exercise per day" (S140) agrees.',
+            ]],
+            'senior_minutes' => [23, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.havanese.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 30 minutes = 22.5, rounded half up = 23 min = 2,300 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[3.0, 6.0], [
+                'unit' => 'kg', 'source_id' => 'S140', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'havanese.adult_weight.pdsa',
+                'quote' => '3-6 kg',
+                'notes' => 'PDSA key facts (S140), one range for both sexes. The FCI (S136), RKC (S139) and AKC (S141) standards give height only (FCI 23–27 cm).',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'havanese.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (3–6 kg = 6.6–13.2 lb, the Toy class of S10; RKC / PDSA size "Small").',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'havanese.trainability.coren_rank',
+                'notes' => 'Not ranked: the Havanese is not in the Wikipedia table of Coren\'s ranking (S35, 79 ranks, checked 2026-10-10).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.havanese.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not ranked by Coren (S35) → 1.0, the mixed breed\'s speed (PDSA S140: "They are easy to train"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S138', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'havanese.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC breed page lower bound (S138; PDSA "Over 12 years", S140). No McMillan 2024 or VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

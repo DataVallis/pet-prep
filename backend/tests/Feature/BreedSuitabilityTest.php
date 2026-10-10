@@ -270,6 +270,20 @@ it('gives the Australian Shepherd active_family / family_pet / large_home, the h
         ->and(bsEntry('australian_shepherd.suitability.pdsa_children')['notes'])->toContain('no children / small_children tag');
 });
 
+it('gives the Havanese apartment / family_pet / children / low_shedding, the grooming chip and no welfare tag (runbook 2026-10-10)', function () {
+    $havanese = app(BreedSuitability::class)->for(BreedType::Havanese);
+    expect($havanese['suits'])->toBe(['apartment', 'family_pet', 'children', 'low_shedding'])
+        // No explicit small-children rating; "easy to train" is not a first-time-owner statement; 30 min only.
+        ->and($havanese['suits'])->not->toContain('small_children')->not->toContain('first_time_owner')->not->toContain('active_family')->not->toContain('often_alone')
+        ->and($havanese['consider'])->toBe(['frequent_grooming'])
+        // RKC Breed Watch Category 1 (S138): no welfare chip.
+        ->and($havanese['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('hips_hind_legs')->not->toContain('heart_and_spine')->not->toContain('back_spine')->not->toContain('long_daily_exercise');
+
+    expect(bsEntry('havanese.suitability.fci_children')['quote'])->toBe('He loves children and plays endlessly with them.')
+        ->and(bsEntry('havanese.suitability.rkc_shedding')['quote'])->toBe('Sheds: No')
+        ->and(bsEntry('havanese.suitability.rkc_shedding')['notes'])->toContain('never \'hypoallergenic\'');
+});
+
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {
     $source = (string) file_get_contents(app_path('Http/Resources/BreedCatalogResource.php'));
     preg_match('/@var array\{suits: list<([^>]+)>, consider: list<([^>]+)>\}/', $source, $m);

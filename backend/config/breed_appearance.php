@@ -114,6 +114,15 @@
 | blaze; eyes fully surrounded by colour, never white body splashes). Blue merle
 | weighted highest (portrait default). Colour weights are unsourced → `verified => false`.
 |
+| Havanese (M5-R10-10, docs/research/dog-data havanese.appearance): a sturdy little
+| dog, low on the legs, body slightly longer than tall, with a very long, soft, flat
+| or wavy coat that is never trimmed (FCI S136), drop ears falling along the cheeks,
+| large dark almond eyes and a tail carried high and rolled over the back (FCI S136,
+| RKC standard S139). Colours: the FCI list — fawn in its shades, black, havana
+| brown, tobacco, reddish brown and (rarely) white, with patches in these colours or
+| tan markings (S136). Never merle (RKC S139 "except merle which is unacceptable").
+| Fawn weighted highest (portrait default). Colour weights are unsourced → `verified => false`.
+|
 */
 
 return [
@@ -587,6 +596,50 @@ return [
             'ear_carriage' => ['triangular, set high, breaking forward'],
             'eye_color' => [['value' => 'brown', 'weight' => 3], 'blue', 'amber'],
             'tail' => ['natural long tail'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-10 (docs/research/dog-data/data.json havanese.appearance; runbook rules
+    // 2026-10-10: FCI colours only, never merle — fawn portrait, natural long coat).
+    'havanese' => [
+        'display_name' => 'Havanese',
+        // Colour frequencies are in no source (havanese.appearance.colour_weights UNSOURCED) → all weights are a draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 250 (S136, https://www.fci.be/Nomenclature/Standards/250g09-en.pdf), RKC breed standard (S139), RKC breed page (S138) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S138 "Size: Small"; S136 "Height at the withers: From 23 to 27 cm."',
+            'build' => 'S136 "The Havanese is a sturdy little dog, low on his legs, with long abundant hair, soft and preferably wavy."; S139 "Small, sturdy, slightly longer in body than height at withers."',
+            'coat_length' => 'S136 "The topcoat is very long (12-18 cm in an adult dog), soft, flat or wavy and may form curly strands."; all trimming forbidden',
+            'coat_color' => 'S136 "Rarely completely pure white, fawn in its different shades (slight blackened overlay admitted), black, havana-brown, tobacco colour, reddish-brown." S139 "except merle which is unacceptable" (weights unsourced)',
+            'coat_pattern' => 'S136 "Patches in mentioned colours allowed." "Tan markings in all nuances permitted."',
+            'ear_carriage' => 'S136 "Set relatively high; they fall along the cheeks forming a discreet fold which raises them slightly."',
+            'eye_color' => 'S136 "Quite big, almond shape, of brown colour as dark as possible."; S139 "Dark, large, almond shaped, gentle expression"',
+            'tail' => 'S136 "Carried high, either in shape of a crozier or preferably rolled over the back;"; S139 "profusely feathered with long silky hair."',
+        ],
+        'traits' => [
+            'size' => ['small, toy-sized'],
+            'build' => [['value' => 'sturdy, low on the legs, body slightly longer than tall', 'weight' => 3], 'sturdy, compact'],
+            'coat_length' => [
+                ['value' => 'very long, soft, wavy natural coat', 'weight' => 3],
+                'very long, soft, flat natural coat with a few curly strands',
+            ],
+            // FCI colours only (S136); fawn highest → the register portrait is fawn. Never merle (S139).
+            'coat_color' => [
+                ['value' => 'fawn', 'weight' => 4],
+                ['value' => 'black', 'weight' => 2],
+                ['value' => 'havana brown', 'weight' => 2],
+                'tobacco',
+                'reddish brown',
+                'white',
+            ],
+            'coat_pattern' => [
+                ['value' => 'solid colour', 'weight' => 3],
+                'with white patches',
+                'with tan markings',
+            ],
+            'ear_carriage' => ['drop ears falling along the cheeks with a slight fold'],
+            'eye_color' => ['large, dark brown, almond-shaped'],
+            'tail' => ['tail carried high and curled over the back, richly feathered'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
     ],
