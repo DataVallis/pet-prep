@@ -232,7 +232,7 @@ describe('PetPickerStep', () => {
     expect(screen.getByTestId('breed-suitability-golden_retriever-consider')).toHaveTextContent(
       'Upoštevajte:vsak dan potrebuje veliko gibanjaizpada mu dlakarad je — pazite na težopotrebuje česanje večkrat na teden',
     );
-    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50, Cavalier 60).
+    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50, Cavalier 60, Beagle 70).
     expect(screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID)).toEqual([
       'breed-option-mutt',
       'breed-option-border_collie',
@@ -241,6 +241,7 @@ describe('PetPickerStep', () => {
       'breed-option-french_bulldog',
       'breed-option-german_shepherd',
       'breed-option-cavalier_king_charles_spaniel',
+      'breed-option-beagle',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -360,6 +361,44 @@ describe('PetPickerStep', () => {
       { species: 'dog', breed: 'cavalier_king_charles_spaniel', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
       expect.objectContaining({ breed: 'cavalier_king_charles_spaniel' }),
     );
+  });
+
+  it('M5-R10-06: the Beagle (fallback) shows its chips, is found as "bigl" and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const beagle = screen.getByTestId('breed-option-beagle');
+    expect(beagle).toHaveTextContent(/Bigl/);
+    expect(beagle).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-beagle-suits')).toHaveTextContent(/družinsko življenje/);
+    expect(screen.getByTestId('breed-suitability-beagle-consider')).toHaveTextContent(/izpada mu dlakako se dolgočasi, grize stvari/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'bigl');
+    expect(screen.queryByTestId('breed-option-cavalier_king_charles_spaniel')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-beagle'));
+    fireEvent.press(screen.getByTestId('origin-option-adopted'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-senior'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'beagle', origin: 'adopted', age_stage: 'senior', plan: 'challenge' },
+      expect.objectContaining({ breed: 'beagle' }),
+    );
+  });
+
+  it('M5-R10-06: the Beagle chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-beagle-consider');
+      expect(consider).toHaveTextContent(/sheds/);
+      expect(consider).toHaveTextContent(/chews things when bored/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-beagle')).toHaveTextContent(/Beagle/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
   });
 
   it('M5-R10-05: the heart / spine chip in English, without numbers', async () => {

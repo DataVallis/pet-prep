@@ -13,7 +13,7 @@ import {
 
 describe('readBreed / readSpecies', () => {
   it('keeps every known breed, dogs and cats', () => {
-    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'domestic_cat', 'maine_coon'] as const) {
+    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'domestic_cat', 'maine_coon'] as const) {
       expect(readBreed(breed)).toBe(breed);
     }
   });
@@ -37,6 +37,18 @@ describe('readBreed / readSpecies', () => {
     await i18n.changeLanguage('en');
     try {
       expect(breedName('cavalier_king_charles_spaniel')).toBe('Cavalier King Charles Spaniel');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-06: the Beagle is a paid dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('beagle'))).toBe('dog');
+    expect(isDefaultFreeBreed('beagle')).toBe(false);
+    expect(breedName('beagle')).toBe('Bigl');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('beagle')).toBe('Beagle');
     } finally {
       await i18n.changeLanguage('sl');
     }
