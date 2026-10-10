@@ -112,7 +112,7 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90), never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
     expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
       'mutt',
@@ -125,6 +125,7 @@ describe('readBreedCatalogue', () => {
       'beagle',
       'standard_poodle',
       'dachshund',
+      'australian_shepherd',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -192,6 +193,16 @@ describe('readBreedCatalogue', () => {
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-08, runbook rules; back_spine = welfare rule).
     expect(dachshund?.search_keywords).toEqual(['dachshund', 'sausage dog', 'teckel', 'jazbečar', 'jazbecar']);
     expect(dachshund?.suitability).toEqual({ suits: ['children'], consider: ['back_spine', 'sheds', 'needs_mental_stimulation'] });
+    const aussie = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'australian_shepherd');
+    expect(aussie).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 100 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-09, runbook rules; no welfare chip).
+    expect(aussie?.search_keywords).toEqual(['australian shepherd', 'aussie', 'avstralski ovčar', 'avstralski ovcar']);
+    expect(aussie?.suitability).toEqual({
+      suits: ['active_family', 'family_pet', 'large_home'],
+      consider: ['long_daily_exercise', 'needs_mental_stimulation', 'may_herd_children', 'chews_when_bored', 'sheds', 'frequent_grooming'],
+    });
     expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
     // The fallback is already in picker order.
     expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual([
@@ -205,6 +216,7 @@ describe('readBreedCatalogue', () => {
       'beagle',
       'standard_poodle',
       'dachshund',
+      'australian_shepherd',
     ]);
   });
 });
