@@ -49,8 +49,9 @@ use InvalidArgumentException;
  * the mutt / Border Collie rows stay byte-identical (LabradorBreedTest /
  * GoldenRetrieverBreedTest / FrenchBulldogBreedTest / GermanShepherdBreedTest /
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
- * DachshundBreedTest cross-check the Labrador / Golden / French Bulldog / German
- * Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund rows against data.json).
+ * DachshundBreedTest / AustralianShepherdBreedTest cross-check the Labrador / Golden /
+ * French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
+ * Australian Shepherd rows against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
  * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
@@ -176,8 +177,17 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10_DACHSHUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-08)';
 
+    /**
+     * M5-R10-09 Australian Shepherd (unattended run 2026-10-10, data.json
+     * proposed_game_parameters.australian_shepherd.*.decision): every value follows a standing rule
+     * of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min, senior 90 min, puppy 10 min × age capped at 120, stages 9 / 36 / 90,
+     * arrival 2 / 9 / 36 / 90, learning multiplier 1.0; care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_AUSTRALIAN_SHEPHERD = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-09)';
+
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -576,6 +586,10 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-08 (docs/research/dog-data/data.json dachshund, S124–S130; runbook
             // rules in proposed_game_parameters.dachshund).
             BreedType::Dachshund => self::dachshundProfile(),
+
+            // M5-R10-09 (docs/research/dog-data/data.json australian_shepherd, S131–S135; runbook
+            // rules in proposed_game_parameters.australian_shepherd).
+            BreedType::AustralianShepherd => self::australianShepherdProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -1174,6 +1188,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'dachshund.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC breed page lower bound (S125; PDSA "Over 12 years", S127). No standard-size McMillan 2024 or VetCompass median (the Miniature Dachshund 14.0 y, S130, is not used). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Australian Shepherd (M5-R10-09). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_AUSTRALIAN_SHEPHERD);
+     * weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function australianShepherdProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_AUSTRALIAN_SHEPHERD;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S133', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.australian_shepherd.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lifespan lower bound "Over 10 years" (S133; PDSA "Over 10 years", S134) = 7.5 y = 90 months. McMillan 2024 has no Australian Shepherd value in its text (S135) and no VetCompass median was found. Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_shepherd.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S133', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_shepherd.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S133) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA "a minimum of two hours exercise every day" (S134) agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_shepherd.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[18.0, 29.0], [
+                'unit' => 'kg', 'source_id' => 'S134', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_shepherd.adult_weight.pdsa',
+                'quote' => '18-29 kg',
+                'notes' => 'PDSA key facts (S134), one range for both sexes. The FCI standard (S131) gives height only (males 51–58 cm, females 46–53 cm).',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_shepherd.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (18–29 kg = 39.7–63.9 lb, mostly the Medium class of S10; RKC / PDSA size "Medium").',
+            ]],
+            'coren_rank' => [42, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'australian_shepherd.trainability.coren_rank',
+                'quote' => '| 42 | Kuvasz / Australian Shepherd |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 42 (tied with the Kuvasz), tier "Average" (ranks 40–54). Coren\'s own article (S34) lists only the top / bottom 10.',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_shepherd.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 42 (S35) in the "Average" tier → 1.0, the mixed breed\'s speed (PDSA S134: "clever dogs who need positive, reward-based training from a young age"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S133', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_shepherd.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S133; PDSA "Over 10 years", S134). No McMillan 2024 (S135) or VetCompass median found. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

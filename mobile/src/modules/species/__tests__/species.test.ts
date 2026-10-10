@@ -13,7 +13,7 @@ import {
 
 describe('readBreed / readSpecies', () => {
   it('keeps every known breed, dogs and cats', () => {
-    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'domestic_cat', 'maine_coon'] as const) {
+    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'domestic_cat', 'maine_coon'] as const) {
       expect(readBreed(breed)).toBe(breed);
     }
   });
@@ -49,6 +49,18 @@ describe('readBreed / readSpecies', () => {
     await i18n.changeLanguage('en');
     try {
       expect(breedName('standard_poodle')).toBe('Poodle (Standard)');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-09: the Australian Shepherd is a paid dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('australian_shepherd'))).toBe('dog');
+    expect(isDefaultFreeBreed('australian_shepherd')).toBe(false);
+    expect(breedName('australian_shepherd')).toBe('Avstralski ovčar');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('australian_shepherd')).toBe('Australian Shepherd');
     } finally {
       await i18n.changeLanguage('sl');
     }

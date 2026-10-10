@@ -5068,6 +5068,514 @@
       }
     }
   },
+  "australian_shepherd": {
+    "_note": "Added 2026-10-10 (M5-R10-09, unattended run). Quotes as returned by the web-fetch tool on 2026-10-10; spot-check before import (sources.md S131–S135, reused S10, S11, S14, S24, S35, S45). The RKC breed standard page (royalkennelclub.com/breed-standards/pastoral/australian-shepherd/) could not be fetched in this run (fetch-tool provenance refusal) → appearance from the FCI standard (S131), suitability from the RKC breed page (S133) and PDSA (S134). Neither the FCI standard nor the RKC breed page gives a weight → adult weight from PDSA (S134, tier B) only. Lifespan: McMillan 2024 (S135) names the Australian Shepherd only as a tip label in the Fig. 5 phylogeny, with no value; the Dogs Trust breed table (S123) was not reachable this run; no VetCompass Australian Shepherd median found (Teng et al. 2022 life tables cover 18 other breeds) → runbook rule: RKC lower bound 'Over 10 years' (S133; PDSA S134 the same). Not a welfare-concern breed: RKC Breed Watch Category 1 (S133). Merle is a standard colour (FCI S131); the RKC does not register puppies from a merle-to-merle mating because of 'impaired vision and hearing' (S133) — recorded under health, no tag.",
+    "identity": {
+      "value": "FCI No. 342, Group 1 Section 1 (Sheepdogs), USA",
+      "unit": "—",
+      "source_id": "S132",
+      "quote": "Group: n°1 - Chiens de berger et de bouvier (sauf chiens de bouvier suisses); Section: Chiens de berger; Country of origin: ETATS-UNIS",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S132, French-language fields as returned): standard number 342; 'Non soumise à épreuve de travail' (no working trial); definitive acceptance '21/05/2007'; valid standard '26/03/2009'. FCI standard PDF (S131): 'CLASSIFICATION F.C.I.: Group 1 Sheepdogs and Cattle dogs (except Swiss Cattle dogs)', 'Section 1 Sheepdogs', 'Without working trial.', 'ORIGIN: U.S.A.' Quote assembled from the nomenclature fields."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S133",
+      "quote": "Size: Medium",
+      "confidence": "high",
+      "notes": "PDSA (S134) key facts: body size 'Medium' — sources agree. FCI height 46–58 cm (S131); PDSA weight 18–29 kg (S134)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            51,
+            58
+          ],
+          "female": [
+            46,
+            53
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S131",
+        "quote": "The preferred height for males is 20-23 inches (51-58 cm), females 18-21 inches (46-53 cm).",
+        "confidence": "high",
+        "notes": "FCI (S131): 'Quality is not to be sacrificed in favour of size.'"
+      },
+      "pdsa_average": {
+        "value": [
+          48,
+          58
+        ],
+        "unit": "cm",
+        "source_id": "S134",
+        "quote": "48-58 cm",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (value as returned; label wording not returned verbatim). One range for both sexes."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": [
+          18,
+          29
+        ],
+        "unit": "kg",
+        "source_id": "S134",
+        "quote": "18-29 kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (value as returned; label wording not returned verbatim), one range for both sexes. The FCI standard (S131) gives no weight ('The standard gives no weight figures for either sex', tool summary); the RKC breed page (S133) gives none; RKC and AKC standards not read. Tier B — the only weight range found."
+      },
+      "salt_category": {
+        "value": "IV / V",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 18–29 kg spans the medium-large bands. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 18–29 kg (S134) = 39.7–63.9 lb → mostly the 'Medium' class (the top of the range touches 'Large (59–99 pounds): 15–18 months'); RKC / PDSA size 'Medium' (S133, S134) → 12–15 months, as for the Border Collie."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Australian Shepherd growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S133",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page (S133). PDSA key facts (S134): 'Over 10 years' — same."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S135",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 (S135, published version) names the 'Australian Shepherd' only as a tip label of the Fig. 5 phylogeny; no median in the text or legends (checked 2026-10-10). Supplementary Table / Dogs Trust breed table (S123) not reachable this run. UNSOURCED value — verify before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S133; PDSA 'Over 10 years' agrees, S134) → 0.75 × 10 = 7.5 y = 90 months. Runbook order: McMillan 2024 (no value, S135) → VetCompass median (none found) → RKC lower bound. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until a McMillan / VetCompass median is checked.",
+        "derived_from": [
+          "S11",
+          "S133"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S133",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "PDSA (S134): 'Your Australian Shepherd will need a minimum of two hours exercise every day' (key facts: minimum daily exercise '2 hours') — sources agree on 120."
+      },
+      "energy": {
+        "value": "energy to spare; for owners who are on the go",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "Aussies have energy to spare which is why we’d only recommend having one if you’re on the go just as much as they are.",
+        "confidence": "medium",
+        "notes": "FCI (S131): 'He is attentive and animated, lithe and agile, solid and muscular without cloddiness.'"
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "intelligent working dog with strong herding and guarding instincts; even disposition, good natured; may be reserved at first",
+        "unit": "—",
+        "source_id": "S131",
+        "quote": "The Australian Shepherd is an intelligent working dog of strong herding and guarding instincts.",
+        "confidence": "high",
+        "notes": "FCI (S131): 'With an even disposition, he is good natured, seldom quarrelsome.' 'He may be somewhat reserved in initial meetings.' Disqualifying: 'Aggressive or overly shy'."
+      },
+      "family": {
+        "value": "can be a really good family pet in the right household; not recommended with smaller children (herding — may knock them over)",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "Aussies can make really good family pets in the right household.",
+        "confidence": "medium",
+        "notes": "PDSA (S134): 'we wouldn't recommend an Australian Shepherd if you have smaller children' because 'they may accidentally knock them over.'; 'Always supervise your dog with children and vulnerable adults.' → family_pet + may_herd_children; never children / small_children."
+      },
+      "herding_children": {
+        "value": "may try to herd children",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "because of their strong herding instinct, they can get the urge to herd children in the home",
+        "confidence": "medium",
+        "notes": "PDSA (S134); the page adds that this may involve gently bumping into them (paraphrase). 'The herding instinct is strong with Aussies, so you'll need to keep them on the lead when walking out in the countryside.'"
+      },
+      "mental_stimulation": {
+        "value": "needs plenty of exercise and mental stimulation; puzzle games and training sessions",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "The best way to prevent your dog from barking for no reason is to make sure they're getting plenty of exercise and mental stimulation throughout the day.",
+        "confidence": "medium",
+        "notes": "PDSA (S134): 'Puzzle games and interesting training sessions are a great way to keep them occupied!'"
+      },
+      "time_alone": {
+        "value": "should not be left alone; ideally someone at home all day; may suffer separation anxiety",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "Ideally, Aussies need someone at home with them all day because they need to be kept active.",
+        "confidence": "medium",
+        "notes": "PDSA (S134): 'Because Australian Shepherds form close ties with their owners, they can suffer with separation anxiety if left alone.' → no often_alone tag."
+      },
+      "other_pets": {
+        "value": "fine with dogs, cats and other pets they grew up with; may try to herd them",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "Aussies are known to get on well with any cats or other pets they have grown up with, however they may be tempted to herd them at times.",
+        "confidence": "medium",
+        "notes": "PDSA (S134): 'As long as your Australian Shepherd has been socialised with other dogs from a young age they should be fine with other dogs.' Conditional → no other_pets tag."
+      },
+      "boredom_chewing": {
+        "value": "chews when bored or left alone",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "An Aussie left to their own devices could develop bad habits like barking or chewing things around the home.",
+        "confidence": "medium",
+        "notes": "PDSA (S134): 'If they get bored, they can get into all kinds of mischief around the home (which usually involves a lot of chewing!).' Basis of the chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found. PDSA (S134): 'Treats shouldn’t make up more than 10% of their daily calorie intake as this can unbalance their diet.' → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages for this breed were collected. Not a welfare-concern breed: RKC Breed Watch Category 1, 'Currently no points of concern specific to this breed have been identified for special attention by judges' (S133); Colour Watch Category 0. Main topics: hips and elbows, inherited eye disease, MDR1 drug sensitivity, merle-to-merle breeding (S133, S134).",
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia — choose puppies from hip- and elbow-scored parents",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+        "confidence": "high",
+        "notes": "RKC best practice (S133): 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme', 'Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme'. PDSA health list (S134) 'Hip dysplasia': 'where the hip joint doesn’t fit together perfectly, which will eventually lead to arthritis.' and 'Elbow dysplasia' ('where the elbow joint doesn’t fit together perfectly, which will eventually lead to arthritis.'). Not a Breed Watch point → no hips_hind_legs tag (that chip is for a recognised conformation concern)."
+      },
+      "eyes": {
+        "value": "inherited eye disease: collie eye anomaly, hereditary cataracts, progressive retinal atrophy",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "an abnormality in the back of the eye.",
+        "confidence": "medium",
+        "notes": "PDSA (S134) 'Collie eye anomaly' (quote) and 'Certain eye conditions': 'such as inherited eye conditions (including cataracts and progressive retinal atrophy) which can lead to blindness.' RKC (S133): 'DNA test for Collie eye anomaly/ choroidal hypoplasia (CEA/CH)', 'DNA test for Hereditary cataracts (HC-HSF4)', 'DNA test for Progressive retinal atrophy (prcd-PRA)', 'Eye testing using the BVA/KC/ISDS Eye Scheme'."
+      },
+      "mdr1": {
+        "value": "multi-drug sensitivity (MDR1) — some medicines need care; tell the vet",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "an inherited condition that makes affected dogs particularly sensitive to certain drugs.",
+        "confidence": "medium",
+        "notes": "PDSA (S134) 'Multi drug sensitivity'. RKC best practice (S133): 'DNA test for Multi-drug resistance (MDR1)'."
+      },
+      "cobalamin_malabsorption": {
+        "value": "cobalamin (vitamin B12) malabsorption",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "a genetic condition where vitamin B12 cannot be absorbed in the gut, leading to poor growth, weakness and blood problems.",
+        "confidence": "medium",
+        "notes": "PDSA (S134) 'Cobalamin malabsorption (Vitamin B12 malabsorption)'."
+      },
+      "merle_to_merle": {
+        "value": "no merle-to-merle breeding — impaired vision and hearing",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "This is due to associated health risks of impaired vision and hearing associated with the merle gene in this breed.",
+        "confidence": "high",
+        "notes": "RKC breed page (S133): 'With effect from 1st January 2013, The Kennel Club will not register puppies whelped from a merle to merle mating'. Merle itself is a standard colour (FCI S131). The game draws one merle or solid adult; nothing about breeding is simulated."
+      },
+      "dna_tests": {
+        "value": "DNA tests before breeding: CEA/CH (good practice); HC-HSF4, MDR1, prcd-PRA + hip, elbow and eye schemes (best practice)",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+        "confidence": "high",
+        "notes": "RKC breed page (S133) health section (test names as returned)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 42,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 42 | Kuvasz / Australian Shepherd |",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C): rank 42, tied with the Kuvasz, under 'Average Working/Obedience Intelligence' (quote reassembled from the row as returned). Coren's own article (S34) lists only the top / bottom 10 — runbook: rank from S35. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "average: 25–40 repetitions, obeys first command ≥50%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 25 to 40 repetitions.; Obey first command: 50% of the time or better.",
+        "confidence": "low",
+        "notes": "Tier 'Average' = ranks 40–54. Tier definitions from Wikipedia; verify in book. Coren ranks obedience to commands, not 'cleverness'."
+      },
+      "training_notes": {
+        "value": "clever; needs positive, reward-based training from a young age; easy to train for experienced owners",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "Australian Shepherds are clever dogs who need positive, reward-based training from a young age.",
+        "confidence": "medium",
+        "notes": "PDSA (S134): 'Aussies are really clever dogs and so can be easy to train for owners with a lot of experience.'; 'If you are a first-time owner or need some extra help with training, we'd recommend taking them to accredited training classes.' FCI (S131): 'an intelligent working dog'."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.australian_shepherd.learning_multiplier (1.0, runbook rule).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "well balanced, slightly longer than tall, medium size and bone; attentive, lithe and agile",
+        "unit": "—",
+        "source_id": "S131",
+        "quote": "The Australian Shepherd is well balanced, slightly longer than tall, of medium size and bone,",
+        "confidence": "high",
+        "notes": "FCI (S131): 'with colouring that offers variety and individuality.' 'He is attentive and animated, lithe and agile, solid and muscular without cloddiness.'"
+      },
+      "colours": {
+        "value": [
+          "blue merle",
+          "black",
+          "red merle",
+          "red"
+        ],
+        "unit": "list (each with or without white and/or tan markings)",
+        "source_id": "S131",
+        "quote": "Blue merle, black, red merle, red – all with or without white markings and/or tan markings,",
+        "confidence": "high",
+        "notes": "FCI (S131): 'with no order of preference.' White limits: 'The hairline of a white collar does not exceed the point of the withers at the skin.' 'White on the head should not predominate, and the eyes must be fully surrounded by colour and pigment.' Disqualifying: 'White body splashes in all colours'. Merle is standard here (runbook §3 colour rule)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). The FCI standard ranks no colour ('no order of preference', S131); blue merle with white and tan markings is drawn highest (portrait default), then black, red merle and red, each with white and tan markings; never white body splashes, white around the eyes or a predominantly white head."
+      },
+      "coat": {
+        "value": "medium length, straight to wavy, weather resistant; moderate mane and frill",
+        "unit": "—",
+        "source_id": "S131",
+        "quote": "Of medium texture, straight to wavy, weather resistant and of medium length.",
+        "confidence": "high",
+        "notes": "FCI (S131): 'Hair is short and smooth on the head, ears, front of forelegs and below the hocks.' 'There is a moderate mane and frill, more pronounced in dogs than in bitches.' RKC breed page (S133): 'Coat length: Medium'."
+      },
+      "ears": {
+        "value": "triangular, moderate size, set high, breaking forward and over (or to the side as a rose ear)",
+        "unit": "—",
+        "source_id": "S131",
+        "quote": "Triangular, of moderate size and leather, set high on the head.",
+        "confidence": "high",
+        "notes": "FCI (S131): 'At full attention they break forward and over, or to the side as a rose ear.'"
+      },
+      "eyes": {
+        "value": "brown, blue, amber or any combination incl. flecks and marbling; almond shaped",
+        "unit": "—",
+        "source_id": "S131",
+        "quote": "Brown, blue, amber or any variation or combination thereof, including flecks and marbling.",
+        "confidence": "high",
+        "notes": "FCI (S131): 'Almond shaped, not protruding nor sunken.' Black eye rims in blue merles / blacks, liver in red merles / reds."
+      },
+      "nose": {
+        "value": "black nose in blue merles and blacks, liver in red merles and reds; moderate, well-defined stop; muzzle equal to or slightly shorter than the back skull",
+        "unit": "—",
+        "source_id": "S131",
+        "quote": "Blue merles and blacks have black pigmentation on the nose (and lips).",
+        "confidence": "high",
+        "notes": "FCI (S131): 'Red merles and reds have liver (brown) pigmentation on the nose (and lips).'; stop 'Moderate, well-defined.'; muzzle 'Equal in length or slightly shorter than the back skull.'"
+      },
+      "tail": {
+        "value": "straight, naturally long or naturally short",
+        "unit": "—",
+        "source_id": "S131",
+        "quote": "Straight, naturally long or naturally short.",
+        "confidence": "high",
+        "notes": "FCI (S131): 'When docked (in countries where this practice is not forbidden), or naturally short, not to exceed 10 cm.' The game draws a natural long tail (no docking)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S133) and PDSA (S134). The RKC page shows no 'Good with children' field and no temperament text (as returned 2026-10-10). Woodgreen and AKC trait ratings not attempted (same as the earlier breeds).",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "Size: Medium",
+        "confidence": "high",
+        "notes": "PDSA (S134): body size 'Medium'."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of the large_home tag (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "PDSA (S134): 'a brush a few times a week' → frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S134): 'Your Aussie will shed throughout the year' — sources agree."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "Town or country: Country",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-10)."
+      },
+      "pdsa_family": {
+        "value": "can make really good family pets in the right household",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "Aussies can make really good family pets in the right household.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_children": {
+        "value": "not recommended with smaller children (herding, may knock them over); supervise",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "For this reason, we wouldn’t recommend an Australian Shepherd if you have smaller children",
+        "confidence": "medium",
+        "notes": "Reason: herding instinct (behaviour.herding_children). → may_herd_children; no children / small_children tag."
+      },
+      "pdsa_exercise": {
+        "value": "minimum two hours every day",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "Your Australian Shepherd will need a minimum of two hours exercise every day",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "brush a few times a week",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "Australian Shepherds have medium length fur, so you’ll need to give them a brush a few times a week",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_shedding": {
+        "value": "sheds throughout the year",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "Your Aussie will shed throughout the year, but regular brushing and hoovering should help with this.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_first_time_owner": {
+        "value": "easier for experienced owners; first-time owners → accredited training classes",
+        "unit": "—",
+        "source_id": "S134",
+        "quote": "Aussies are really clever dogs and so can be easy to train for owners with a lot of experience.",
+        "confidence": "medium",
+        "notes": "Not a first_time_owner statement → no tag."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -7342,6 +7850,260 @@
         "confidence": "high",
         "notes": "Colours from the RKC standard (S126); dapple excluded (RKC dapple-gene registration restriction, S125). Colour weights are ours (unsourced). Moderate body length and ground clearance per the welfare rule (S126 'no exaggeration').",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red portrait default, black-and-tan / chocolate-and-tan options, smooth coat, moderate non-exaggerated length with ground clearance (dog trait `body`), never dapple"
+      }
+    },
+    "australian_shepherd": {
+      "_note": "Unattended run M5-R10-09 (2026-10-10): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S133",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'More than 2 hours per day' (S133); PDSA 'a minimum of two hours exercise every day' (S134) agrees. Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S133 'More than 2 hours per day'; PDSA S134 the same)"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000 (= Border Collie, Labrador, Golden, German Shepherd).",
+        "derived_from": [
+          "S133",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S133; PDSA S134 the same). McMillan 2024 (S135) has no Australian Shepherd value in its text; no VetCompass median found. Alternative: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 Supplementary Table / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S133"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S133)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 42 (S35), tier Average (ranks 40–54) → 1.0. PDSA 'clever dogs' who 'can be easy to train for owners with a lot of experience' (S134) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 42, S35 — Average tier)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-09); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S133",
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.exercise.adult",
+              "australian_shepherd.exercise.energy"
+            ],
+            "quote": "S133 'Exercise: More than 2 hours per day'; S134 'we’d only recommend having one if you’re on the go just as much as they are'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.suitability.pdsa_family",
+              "australian_shepherd.behaviour.family"
+            ],
+            "quote": "S134 'Aussies can make really good family pets in the right household.'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S133"
+            ],
+            "refs": [
+              "australian_shepherd.suitability.rkc_size_of_home",
+              "australian_shepherd.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S133 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S133",
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.exercise.adult",
+              "australian_shepherd.suitability.pdsa_exercise"
+            ],
+            "quote": "S133 'More than 2 hours per day'; S134 'a minimum of two hours exercise every day'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.behaviour.mental_stimulation"
+            ],
+            "quote": "S134 'make sure they're getting plenty of exercise and mental stimulation throughout the day'"
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.behaviour.herding_children",
+              "australian_shepherd.suitability.pdsa_children"
+            ],
+            "quote": "S134 'they can get the urge to herd children in the home'; 'we wouldn’t recommend an Australian Shepherd if you have smaller children'"
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.behaviour.boredom_chewing"
+            ],
+            "quote": "S134 'If they get bored, they can get into all kinds of mischief around the home (which usually involves a lot of chewing!).'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S133",
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.suitability.rkc_shedding",
+              "australian_shepherd.suitability.pdsa_shedding"
+            ],
+            "quote": "S133 'Sheds: Yes'; S134 'Your Aussie will shed throughout the year'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S133",
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.suitability.rkc_grooming",
+              "australian_shepherd.suitability.pdsa_grooming"
+            ],
+            "quote": "S133 'Grooming: More than once a week'; S134 'a brush a few times a week'"
+          }
+        ],
+        "not_proposed": {
+          "children": "PDSA does not recommend the breed with smaller children and asks for supervision (S134) — no explicit 'good with children' statement.",
+          "small_children": "PDSA advises against it with smaller children (S134).",
+          "first_time_owner": "PDSA: easy to train 'for owners with a lot of experience'; first-time owners → training classes (S134).",
+          "apartment": "RKC 'Large house' (S133).",
+          "other_pets": "Conditional — grown up with them, may herd them (S134).",
+          "often_alone": "PDSA: ideally someone at home all day; separation anxiety (S134).",
+          "older_owners": "No source.",
+          "low_shedding": "Sheds (S133, S134).",
+          "food_motivated_weight": "No breed-specific statement.",
+          "brachycephalic_breathing": "Not flat-faced; RKC Breed Watch Category 1 (S133).",
+          "hips_hind_legs": "Hip / elbow dysplasia listed (S134) and scored (S133) as for many breeds, but no Breed Watch point of concern (Category 1) → no welfare chip; recorded under health.",
+          "heart_and_spine": "No source.",
+          "back_spine": "No source."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, needs_mental_stimulation, may_herd_children, chews_when_bored, sheds, frequent_grooming (no new key)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare-concern breed)",
+        "unit": "—",
+        "source_id": "S133",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "Welfare-concern rule (runbook §3) does not apply: RKC Breed Watch Category 1 (S133); moderate standard (FCI S131: 'solid and muscular without cloddiness', eyes 'not protruding nor sunken'). The RKC merle-to-merle registration rule (S133) concerns breeding, not the dog's conformation; no veterinary advice against showing the breed in advertising found. Marketing never shows two merles as a breeding pair and never promises health.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): not a welfare-concern breed — may appear in marketing"
+      },
+      "ai_appearance": {
+        "value": "adult Australian Shepherd, blue merle with white and tan markings (default), black, red merle or red with white and tan markings; medium-length straight-to-wavy coat with a moderate mane, triangular high-set ears breaking forward, almond eyes (brown, blue or amber), natural long tail; eyes fully surrounded by colour, no white body splashes; standard colours only",
+        "unit": "—",
+        "source_id": "S131",
+        "quote": "Blue merle, black, red merle, red – all with or without white markings and/or tan markings,",
+        "confidence": "high",
+        "notes": "Colours from the FCI standard (S131) 'with no order of preference'; merle is standard for this breed (runbook §3). Colour weights are ours (unsourced). Natural long tail chosen (no docking).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue merle (white and tan markings) portrait default, black / red merle / red options, standard colours and white limits only, natural long tail"
       }
     }
   }

@@ -104,6 +104,16 @@
 | piebald or tricolour. Red weighted highest (portrait default). Colour weights
 | are unsourced → `verified => false`.
 |
+| Australian Shepherd (M5-R10-09, docs/research/dog-data australian_shepherd.appearance):
+| medium size, slightly longer than tall, medium-length straight-to-wavy coat with a
+| moderate mane, triangular high-set ears breaking forward, almond eyes (brown, blue
+| or amber) and a natural long tail follow the FCI standard (S131). Colours: the four
+| standard colours blue merle, black, red merle, red ("all with or without white
+| markings and/or tan markings", S131) — merle IS a standard colour for this breed
+| (runbook §3). White only within the standard's limits (collar, chest, legs, muzzle,
+| blaze; eyes fully surrounded by colour, never white body splashes). Blue merle
+| weighted highest (portrait default). Colour weights are unsourced → `verified => false`.
+|
 */
 
 return [
@@ -541,6 +551,44 @@ return [
             'body' => ['moderately long body with a level back and enough ground clearance, sturdy legs'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'body'],
+    ],
+    // M5-R10-09 (docs/research/dog-data/data.json australian_shepherd.appearance; runbook rules
+    // 2026-10-10: standard colours only — merle is standard here — blue merle portrait, natural long tail).
+    'australian_shepherd' => [
+        'display_name' => 'Australian Shepherd',
+        // Colour frequencies are in no source (australian_shepherd.appearance.colour_weights UNSOURCED) → all weights are a draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 342 (S131, https://www.fci.be/Nomenclature/Standards/342g01-en.pdf), RKC breed page (S133) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S133 "Size: Medium"; S131 "The preferred height for males is 20-23 inches (51-58 cm), females 18-21 inches (46-53 cm)."',
+            'build' => 'S131 "well balanced, slightly longer than tall, of medium size and bone"; "lithe and agile, solid and muscular without cloddiness."',
+            'coat_length' => 'S131 "Of medium texture, straight to wavy, weather resistant and of medium length." "There is a moderate mane and frill"',
+            'coat_color' => 'S131 "Blue merle, black, red merle, red – all with or without white markings and/or tan markings, with no order of preference." (weights unsourced)',
+            'coat_pattern' => 'S131 white "on the neck (either in part or as a full collar), chest, legs, muzzle underparts, blaze on head"; "the eyes must be fully surrounded by colour and pigment"; disqualifying "White body splashes"',
+            'ear_carriage' => 'S131 "Triangular, of moderate size and leather, set high on the head. At full attention they break forward and over, or to the side as a rose ear."',
+            'eye_color' => 'S131 "Brown, blue, amber or any variation or combination thereof, including flecks and marbling." "Almond shaped, not protruding nor sunken."',
+            'tail' => 'S131 "Straight, naturally long or naturally short." (the game draws a natural long tail — no docking)',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'well balanced, athletic, slightly longer than tall', 'weight' => 3], 'lithe, muscular'],
+            'coat_length' => ['medium-length, straight to wavy coat with a moderate mane'],
+            // Standard colours only (S131); blue merle highest → the register portrait is blue merle.
+            'coat_color' => [
+                ['value' => 'blue merle', 'weight' => 4],
+                ['value' => 'black', 'weight' => 2],
+                ['value' => 'red merle', 'weight' => 2],
+                'red',
+            ],
+            'coat_pattern' => [
+                ['value' => 'white collar, chest and legs with copper points, eyes fully surrounded by colour', 'weight' => 3],
+                'small white blaze, white chest and feet with copper points, eyes fully surrounded by colour',
+            ],
+            'ear_carriage' => ['triangular, set high, breaking forward'],
+            'eye_color' => [['value' => 'brown', 'weight' => 3], 'blue', 'amber'],
+            'tail' => ['natural long tail'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

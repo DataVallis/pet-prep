@@ -371,6 +371,7 @@ const SPECIES = [
       { id: 'beagle', availability: 'coming_soon', synonyms: { en: [], sl: ['bigl', 'beagle'] } },
       { id: 'standard_poodle', availability: 'coming_soon', synonyms: { en: ['Standard Poodle', 'Poodle'], sl: ['koder', 'veliki pudelj', 'pudelj', 'standardni pudelj', 'poodle'] } },
       { id: 'dachshund', availability: 'coming_soon', synonyms: { en: ['Sausage dog', 'Teckel', 'Standard Dachshund'], sl: ['jazbečar', 'jazbecar', 'dachshund', 'teckel'] } },
+      { id: 'australian_shepherd', availability: 'coming_soon', synonyms: { en: ['Aussie'], sl: ['avstralski ovčar', 'avstralski ovcar', 'aussie'] } },
     ],
   },
   {
@@ -389,7 +390,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -534,6 +535,25 @@ const DOG_FACTS = {
       ['back_disc_disease', 'health.back_ivdd'],
     ],
   },
+  // M5-R10-09. Not exported: lifespan.mcmillan_2024 (no value), adult_weight.salt_category (our
+  // assignment), health.cobalamin_malabsorption / dna_tests (research only). Merle is a STANDARD
+  // colour here — the health line is about merle-to-merle breeding, not the colour.
+  australian_shepherd: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['inherited_eye_disease', 'health.eyes'],
+      ['drug_sensitivity_mdr1', 'health.mdr1'],
+      ['merle_to_merle_breeding', 'health.merle_to_merle'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -608,6 +628,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.dachshund.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.dachshund.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.dachshund.exercise_minutes_senior',
+  },
+  australian_shepherd: {
+    adult_minutes: ['proposed_game_parameters.australian_shepherd.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.australian_shepherd.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.australian_shepherd.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.australian_shepherd.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.australian_shepherd.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.australian_shepherd.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],

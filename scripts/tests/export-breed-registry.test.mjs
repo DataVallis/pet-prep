@@ -89,6 +89,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.standard_poodle.availability, 'coming_soon');
   assert.deepEqual(byId.dachshund.slug, { en: 'dachshund', sl: 'jazbecar' });
   assert.equal(byId.dachshund.availability, 'coming_soon');
+  assert.deepEqual(byId.australian_shepherd.slug, { en: 'australian-shepherd', sl: 'avstralski-ovcar' });
+  assert.equal(byId.australian_shepherd.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
@@ -143,6 +145,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     beagle: { adult: 6000, senior: 4500, seniorFrom: 102, learning: 0.5 },
     standard_poodle: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 2 },
     dachshund: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1 },
+    australian_shepherd: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -446,4 +449,21 @@ test('Dachshund (M5-R10-08): up to 1 hour, RKC weight, FCI group 4 Germany witho
   assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['more_than', 12]]);
   const json = JSON.stringify(d);
   assert.doesNotMatch(json, /mcmillan_miniature|10-12 times|hypoallergenic/i);
+});
+
+test('Australian Shepherd (M5-R10-09): more than 2 hours, PDSA weight, FCI group 1 USA, herding chips, merle-breeding line, no welfare chip', () => {
+  const d = registry.breeds.find((b) => b.id === 'australian_shepherd');
+  const ex = d.facts.filter((f) => f.field === 'exercise');
+  assert.deepEqual(ex.map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S133']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 342, group: 1, section: 1, origin: 'US' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[[18, 29], ['S134']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['more_than', 10]]);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 12000, cap_month: 12 });
+  assert.deepEqual(d.game.stages[3].activity, { kind: 'steps', value: 9000 });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'large_home']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'needs_mental_stimulation', 'may_herd_children', 'chews_when_bored', 'sheds', 'frequent_grooming']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_elbow_dysplasia', 'inherited_eye_disease', 'drug_sensitivity_mdr1', 'merle_to_merle_breeding']);
+  const json = JSON.stringify(d);
+  // Merle is standard here: never the "not a standard colour" line; no McMillan placeholder, no statistics.
+  assert.doesNotMatch(json, /merle_colour_risk|mcmillan_2024|hypoallergenic|odds ratio/i);
 });

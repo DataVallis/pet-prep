@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-10 — Avstralski ovčar: deveta nova pasma in prvi pastir, ki »pase« otroke (M5-R10-09)
+
+**Kaj se je zgodilo:** PetPrep ima deseto plačljivo pasmo psa — **avstralskega ovčarja**. Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **5 novih virov (S131–S135)** — standard in nomenklatura FCI, stran pasme The Royal Kennel Club, PDSA in objavljeni članek McMillan 2024. Pravila igre: odrasel **120 minut gibanja = 12.000 korakov** na dan (RKC »več kot 2 uri«, PDSA »vsaj dve uri«), starejši 90 minut = 9.000, mladiček od 2.000 korakov do 12.000 pri 12 mesecih; starejši od **90 mesecev** (0,75 × spodnja meja RKC »več kot 10 let« — v besedilu članka McMillan 2024 vrednosti za to pasmo ni, dodatna tabela in tabela Dogs Trust v tem zagonu nista bili dosegljivi; začasno); uči se **enako hitro** kot mešanček (Coren: 42. mesto).
+
+**Zakaj je pomembno:** Avstralski ovčar je eden najbolj priljubljenih psov, a ni za vsako družino. Aplikacija to pove z viri: veliko gibanja, miselni izzivi, pri igri lahko »pase« otroke (PDSA ga zato ne priporoča družinam z manjšimi otroki). Barva merle je pri njem v standardu — AI ga privzeto nariše modrega merla —, parjenja dveh merlov pa ne prikazujemo nikjer (tveganje za vid in sluh). Ni pasma s skrbjo za dobrobit zaradi zgradbe, zato sme v marketing.
+
+**Številke:** 5 novih virov (S131–S135), 9 oznak (3 + 6), brez nove oznake, 1 nova migracija, 46 vrstic pravil po starosti; Pest **2089** testov, Jest **1982**, izvoz registra **23** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Avstralski ovčar je pameten in zvest, a potrebuje več kot dve uri gibanja na dan in veliko miselnih izzivov. Z manjšimi otroki previdno — rad jih ›pase‹.« (*ko bo nova različica v trgovini*)
+- 💼 Investitorji: »Deseta plačljiva pasma, šesta dodana samodejno po vnaprej potrjenih pravilih — od raziskave do objave brez človeka v zanki, z neodvisnim pregledom pred združitvijo.«
+- 🤝 Partnerji (vzreditelji, veterinarji): »Register živali na petprep.si bo staršem svetoval, naj pri vzreditelju vprašajo za preglede kolkov, komolcev, oči in test MDR1.« (*ko bo stran objavljena*)
+- 📣 Omrežja: »Merle kožuh in energije za dva. Ste pripravljeni na dve uri sprehoda na dan?« (*ko bo avstralski ovčar v trgovini*)
+- 🛠 Tehnično: »Prva pasma, pri kateri je merle standardna barva — prompt za AI jo dovoli, izvoz registra pa ima nov ključ o vzreji (stavek pride na spletno stran) namesto opozorila o barvi.«
+
+---
+
 ## 2026-10-10 — Jazbečar: osma nova pasma, prva z oznako za dolg hrbet (M5-R10-08)
 
 **Kaj se je zgodilo:** PetPrep ima deveto plačljivo pasmo psa — **jazbečarja** (standardna velikost, kratkodlaki). Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **7 novih virov (S124–S130)** — nomenklatura FCI, stran pasme in standard The Royal Kennel Club, PDSA (pasma in stran o zdrsu diska), British Veterinary Association in poročilo o McMillan 2024. Pravila igre: odrasel **60 minut gibanja = 6.000 korakov** na dan (RKC »do 1 ure«, PDSA »vsaj 1 ura«), starejši 45 minut = 4.500, mladiček od 2.000 korakov do 6.000 pri 6 mesecih; starejši od **108 mesecev** (0,75 × spodnja meja RKC »več kot 12 let« — McMillan 2024 navaja le pritlikavega jazbečarja); uči se **enako hitro** kot mešanček (Coren: 49. mesto).

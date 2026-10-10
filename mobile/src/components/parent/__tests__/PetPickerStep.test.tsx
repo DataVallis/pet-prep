@@ -232,7 +232,7 @@ describe('PetPickerStep', () => {
     expect(screen.getByTestId('breed-suitability-golden_retriever-consider')).toHaveTextContent(
       'Upoštevajte:vsak dan potrebuje veliko gibanjaizpada mu dlakarad je — pazite na težopotrebuje česanje večkrat na teden',
     );
-    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50, Cavalier 60, Beagle 70, Standard Poodle 80, Dachshund 90).
+    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50, Cavalier 60, Beagle 70, Standard Poodle 80, Dachshund 90, Australian Shepherd 100).
     expect(screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID)).toEqual([
       'breed-option-mutt',
       'breed-option-border_collie',
@@ -244,6 +244,7 @@ describe('PetPickerStep', () => {
       'breed-option-beagle',
       'breed-option-standard_poodle',
       'breed-option-dachshund',
+      'breed-option-australian_shepherd',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -440,6 +441,49 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/hypoallergenic|\d|%/i);
       expect(screen.getByTestId('breed-suitability-standard_poodle-consider')).toHaveTextContent(/needs brushing several times a week/);
       expect(screen.getByTestId('breed-option-standard_poodle')).toHaveTextContent(/Poodle \(Standard\)/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-09: the Australian Shepherd (fallback) shows its chips, is found as "aussie" and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const aussie = screen.getByTestId('breed-option-australian_shepherd');
+    expect(aussie).toHaveTextContent(/Avstralski ovčar/);
+    expect(aussie).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-australian_shepherd-suits')).toHaveTextContent(
+      /aktivno družinodružinsko življenjeveliko hišo z vrtom/,
+    );
+    expect(screen.getByTestId('breed-suitability-australian_shepherd-consider')).toHaveTextContent(
+      /vsak dan potrebuje veliko gibanjapotrebuje miselne izzivepri igri lahko »pase« otrokeko se dolgočasi, grize stvariizpada mu dlakapotrebuje česanje večkrat na teden/,
+    );
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'aussie');
+    expect(screen.getByTestId('breed-option-australian_shepherd')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'avstralski ovcar');
+    expect(screen.queryByTestId('breed-option-german_shepherd')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-australian_shepherd'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'australian_shepherd', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'australian_shepherd' }),
+    );
+  });
+
+  it('M5-R10-09: the Australian Shepherd chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-australian_shepherd-consider');
+      expect(consider).toHaveTextContent(/may “herd” children at play/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-australian_shepherd')).toHaveTextContent(/Australian Shepherd/);
     } finally {
       await i18n.changeLanguage('sl');
     }

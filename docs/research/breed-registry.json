@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "f410657ffb180d209e43ee03a602094c50f0db328d5ec2b6ea29aaa033d181d5"
+      "sha256": "c5a3f58bcbf0b7ed7fd4ce7f8e01db6a00b4422f6a92abf0edaaf673a8188e3f"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "0d7994a59bae232e1db5a3f4802e304d3f18bf896faf63c3252a91ce6058d3f5"
+      "sha256": "601156c112b844b7994e776355a728b6fb2527140a0b06a7e054908d882c0872"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,23 +25,23 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "1a413781a5042904f535d650792dca585475981139ad1e9ae111ea60cca674d1"
+      "sha256": "1345e15a5dd4670577545d6c7d6350a030e09f64c20ac9d2a05efe4451092297"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "66f9db3e77a980ae59770bab4e5b57704c31b3e8a2f410e1937b5668304a430e"
+      "sha256": "d84f12c8ed6c66bcd6ff3f0a7d20a067d0538e5f34f32f01c79cae81d48c61c8"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "19bbbdc8d024e706f79b6f6115e8f2d3ae21779e9274c4e7d20c3573b8886715"
+      "sha256": "69697c41ce8936ce2607cfad8edc9cd61bbd03b345b760a08037755b7d28cc74"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "c2e73de599fcca840c7c4974f66ecb81f1c17adc340af6cb44b953c2e854d37f"
+      "sha256": "1de13262156770841dd3eea8aed9122c1364fa78c83ff7bafb67e884a4fc2bdd"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "5e63c81712ea079bc903ea41421fed5e67b379119edac30498f34ffbdc4825e9"
+      "sha256": "c2be509d2b411e69752129b8cd495b7b68d8762f0738999320fd0b57ef87c1c2"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -148,7 +148,7 @@
         }
       },
       "status": "available",
-      "breed_count": 9,
+      "breed_count": 10,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -5536,6 +5536,526 @@
       ]
     },
     {
+      "id": "australian_shepherd",
+      "species": "dog",
+      "order": 9,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Australian Shepherd",
+        "sl": "Avstralski ovčar"
+      },
+      "slug": {
+        "en": "australian-shepherd",
+        "sl": "avstralski-ovcar"
+      },
+      "synonyms": {
+        "en": [
+          "Aussie"
+        ],
+        "sl": [
+          "avstralski ovčar",
+          "avstralski ovcar",
+          "aussie"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S133"
+          ],
+          "ref": "australian_shepherd.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              51,
+              58
+            ],
+            "female": [
+              46,
+              53
+            ]
+          },
+          "source_ids": [
+            "S131"
+          ],
+          "ref": "australian_shepherd.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": [
+            18,
+            29
+          ],
+          "source_ids": [
+            "S134"
+          ],
+          "ref": "australian_shepherd.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "australian_shepherd.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S133"
+          ],
+          "ref": "australian_shepherd.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S133"
+          ],
+          "ref": "australian_shepherd.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S133"
+          ],
+          "ref": "australian_shepherd.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S133"
+          ],
+          "ref": "australian_shepherd.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S133"
+          ],
+          "ref": "australian_shepherd.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 42,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "australian_shepherd.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 342,
+            "group": 1,
+            "section": 1,
+            "origin": "US"
+          },
+          "source_ids": [
+            "S132"
+          ],
+          "ref": "australian_shepherd.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S133"
+          ],
+          "ref": "australian_shepherd.health.hip_elbow_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "inherited_eye_disease",
+          "source_ids": [
+            "S134"
+          ],
+          "ref": "australian_shepherd.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "drug_sensitivity_mdr1",
+          "source_ids": [
+            "S134"
+          ],
+          "ref": "australian_shepherd.health.mdr1",
+          "confidence": "medium"
+        },
+        {
+          "key": "merle_to_merle_breeding",
+          "source_ids": [
+            "S133"
+          ],
+          "ref": "australian_shepherd.health.merle_to_merle",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S133",
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.exercise.adult",
+              "australian_shepherd.exercise.energy"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.suitability.pdsa_family",
+              "australian_shepherd.behaviour.family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S133"
+            ],
+            "refs": [
+              "australian_shepherd.suitability.rkc_size_of_home",
+              "australian_shepherd.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S133",
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.exercise.adult",
+              "australian_shepherd.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.behaviour.mental_stimulation"
+            ]
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.behaviour.herding_children",
+              "australian_shepherd.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.behaviour.boredom_chewing"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S133",
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.suitability.rkc_shedding",
+              "australian_shepherd.suitability.pdsa_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S133",
+              "S134"
+            ],
+            "refs": [
+              "australian_shepherd.suitability.rkc_grooming",
+              "australian_shepherd.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_shepherd.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S133"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S133 'More than 2 hours per day'; PDSA S134 the same)"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_shepherd.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_shepherd.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S133"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S133)"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_shepherd.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 42, S35 — Average tier)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S133"
+        ]
+      },
+      "portrait": null,
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S131",
+        "S132",
+        "S133",
+        "S134"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -6407,6 +6927,34 @@
       "publisher": "PDSA (UK veterinary charity)",
       "title": "IVDD / slipped disc in dogs",
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/pet-health-hub/conditions/ivddslipped-disc-in-dogs"
+    },
+    {
+      "id": "S131",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 342 — Australian Shepherd, EN (PDF)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/342g01-en.pdf"
+    },
+    {
+      "id": "S132",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — Australian Shepherd (342)",
+      "url": "https://www.fci.be/EN/nomenclature/BERGER-AUSTRALIEN-342.html"
+    },
+    {
+      "id": "S133",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: Australian Shepherd",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/australian-shepherd/"
+    },
+    {
+      "id": "S134",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Australian Shepherd breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/australian-shepherd"
     },
     {
       "id": "C1",
