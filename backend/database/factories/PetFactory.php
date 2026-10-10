@@ -189,6 +189,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a German Shepherd Dog (paid breed, M5-R10-04).
+     */
+    public function germanShepherd(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::GermanShepherd->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static

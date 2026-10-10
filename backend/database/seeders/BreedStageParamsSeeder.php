@@ -47,8 +47,9 @@ use InvalidArgumentException;
  * learning multiplier, individual variation, lifespan) come from
  * dogProfile(). A new dog breed = an enum case in DOG_BREEDS + a profile;
  * the mutt / Border Collie rows stay byte-identical (LabradorBreedTest /
- * GoldenRetrieverBreedTest / FrenchBulldogBreedTest cross-check the Labrador /
- * Golden / French Bulldog rows against data.json).
+ * GoldenRetrieverBreedTest / FrenchBulldogBreedTest / GermanShepherdBreedTest
+ * cross-check the Labrador / Golden / French Bulldog / German Shepherd rows
+ * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
  * docs/research/cat-data/data.json (`ref` = "cat-data:" + JSON path, source
@@ -125,8 +126,18 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10_FRENCH_BULLDOG = 'potrdil David 2026-10-10';
 
+    /**
+     * M5-R10-04 German Shepherd Dog (unattended run 2026-10-10, data.json
+     * proposed_game_parameters.german_shepherd.*.decision): every value follows
+     * a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David
+     * confirmed on 2026-10-10 — exercise 120 min, senior 90 min, puppy 10 min ×
+     * age capped at 120, stages 9 / 36 / 93, arrival 2 / 9 / 36 / 93, learning
+     * multiplier 1.9; care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_GERMAN_SHEPHERD = 'potrdil David 2026-10-10 (pravilo runbooka)';
+
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -506,6 +517,10 @@ class BreedStageParamsSeeder extends Seeder
             // David's decisions 2026-10-10 in proposed_game_parameters.french_bulldog).
             BreedType::FrenchBulldog => self::frenchBulldogProfile(),
 
+            // M5-R10-04 (docs/research/dog-data/data.json german_shepherd, S95–S102;
+            // runbook rules in proposed_game_parameters.german_shepherd).
+            BreedType::GermanShepherd => self::germanShepherdProfile(),
+
             BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
     }
@@ -731,6 +746,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'french_bulldog.lifespan.median_uk',
                 'quote' => 'French Bulldog (red, x̃= 9.8)',
                 'notes' => 'McMillan et al. 2024 (S54); Dogs Trust summary (S15). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * German Shepherd Dog (M5-R10-04). Stage boundaries, arrival ages, exercise
+     * minutes and the learning multiplier follow the runbook's standing rules
+     * (CONFIRMED_R10_GERMAN_SHEPHERD); weight, growth, Coren rank and lifespan
+     * are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function germanShepherdProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_GERMAN_SHEPHERD;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S101', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.german_shepherd.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog finishes growing at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [93, $boundary('Derived game boundary: last 25 % of lifespan (S11) × VetCompass median 10.3 y (O\'Neill 2017, S101) = 7.725 y = 92.7 → 93 months. Not chosen: 90 (0.75 × RKC "over 10 years", S97) and 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 93],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.german_shepherd.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S97,S100', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.german_shepherd.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S97) = PDSA "a minimum of two hours" (S100) → 120 min = 12,000 steps (runbook rule: "more than N" → N).',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.german_shepherd.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[22.0, 40.0], [
+                'unit' => 'kg', 'source_id' => 'S95', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'german_shepherd.adult_weight.fci',
+                'quote' => 'Males: Weight: 30 kg to 40 kg; Females: Weight: 22 kg to 32 kg',
+                'notes' => 'FCI standard, females 22–32 kg and males 30–40 kg → overall range (PDSA average 35–43 kg, S100; VetCompass medians ♂ 40.1 / ♀ 34.8 kg, S101).',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'german_shepherd.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (males are Large; females straddle Medium / Large — same as the Labrador).',
+            ]],
+            'coren_rank' => [3, [
+                'unit' => 'rank', 'source_id' => 'S34', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'german_shepherd.trainability.coren_rank',
+                'quote' => 'German Shepherd Dog',
+                'notes' => 'Coren\'s own top-10 list (S34): 3rd, tier "Brightest" (ranks 1–10, S35).',
+            ]],
+            'learning_multiplier' => [1.9, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S34,S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.german_shepherd.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Brightest tier rule max(1.8, round(2.0 − (rank − 1) / 30, 1)) with rank 3 → 1.9 (= Golden Retriever, rank 4). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.3, [
+                'unit' => 'years', 'source_id' => 'S101', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'german_shepherd.lifespan.median_uk',
+                'quote' => 'The median longevity of GSDs overall was 10.3 years',
+                'notes' => 'O\'Neill et al. 2017, VetCompass (S101); RVC news S102. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

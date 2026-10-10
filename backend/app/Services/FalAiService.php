@@ -106,6 +106,14 @@ class FalAiService
                 .'moderate muzzle with visibly open nostrils, short low-set tail, '
                 .'small, sturdy and compact build, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-04: FCI 166 (S95) / RKC standard (S98) — black with tan / gold
+            // markings (never white, S95), erect ears, double coat; level back and
+            // moderate hind legs, "free from exaggeration" (welfare rule, RKC Breed Watch S99).
+            BreedType::GermanShepherd => 'A friendly German Shepherd dog with a black and tan coat, '
+                .'dense double coat, erect pointed ears, dark almond-shaped eyes, '
+                .'bushy tail hanging in a gentle curve, level back with moderate natural hind legs, '
+                .'powerful, well-muscled, balanced build, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -193,6 +201,22 @@ class FalAiService
                     0 => 'no markings',
                     1 => 'no markings',
                     2 => 'white body with fawn patches',
+                },
+            ],
+            // M5-R10-04: FCI (S95) "black with reddish-brown, brown and yellow to light
+            // grey markings"; RKC (S97) standard colours incl. sable and black — never white.
+            BreedType::GermanShepherd => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'black and tan',
+                    1 => 'sable',
+                    2 => 'solid black',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'dense double coat',
+                'markings' => match ($variantIndex) {
+                    0 => 'black saddle with tan legs and face',
+                    1 => 'darker tips and mask',
+                    2 => 'no markings',
                 },
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.

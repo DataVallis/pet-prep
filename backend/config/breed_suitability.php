@@ -61,6 +61,11 @@ return [
         // and heat problems (French Bulldog: RKC S78, PDSA S81, Woodgreen S82,
         // VetCompass S84, heat illness S86). A calm chip, never a percentage.
         'brachycephalic_breathing' => 'consider',
+        // M5-R10-04 (runbook welfare rule, 2026-10-10): hind-leg / hip conformation is a
+        // recognised welfare concern (German Shepherd Dog: RKC Breed Watch S99, RKC
+        // breed page S97 hip / elbow tests, PDSA S100, VetCompass S101). A calm chip
+        // asking for health-tested parents, never a percentage.
+        'hips_hind_legs' => 'consider',
     ],
 
     'breeds' => [
@@ -167,6 +172,34 @@ return [
                     'french_bulldog.health.heat_stroke',
                     'french_bulldog.exercise.heat_and_walk_timing',
                 ]],
+            ],
+        ],
+        // M5-R10-04: german_shepherd.* (S95–S102), runbook rules 2026-10-10
+        // (data.json proposed_game_parameters.german_shepherd.suitability_tags).
+        // Woodgreen not reachable → RKC (S97), PDSA (S100). Not `children` /
+        // `small_children` (PDSA "Some can …" + always supervise around young
+        // children), not `other_pets` (only pets they grew up with).
+        'german_shepherd' => [
+            'suits' => [
+                // S97 "Exercise: More than 2 hours per day"; S100 "a minimum of two hours of exercise every day".
+                ['tag' => 'active_family', 'source_ids' => ['S97', 'S100'], 'refs' => ['german_shepherd.exercise.adult', 'german_shepherd.suitability.pdsa_exercise']],
+                // S100 "Some can make great family pets in homes with children of all ages".
+                ['tag' => 'family_pet', 'source_ids' => ['S100'], 'refs' => ['german_shepherd.suitability.pdsa_family', 'german_shepherd.behaviour.family']],
+                // S97 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S97'], 'refs' => ['german_shepherd.suitability.rkc_size_of_home', 'german_shepherd.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S97 "More than 2 hours per day"; S100 "a minimum of two hours".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S97', 'S100'], 'refs' => ['german_shepherd.exercise.adult']],
+                // S97 "Sheds: Yes"; S100 "Be prepared for a lot of shedding".
+                ['tag' => 'sheds', 'source_ids' => ['S97', 'S100'], 'refs' => ['german_shepherd.suitability.rkc_shedding', 'german_shepherd.suitability.pdsa_shedding']],
+                // S97 "Grooming: More than once a week" (PDSA S100: a few times a week).
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S97', 'S100'], 'refs' => ['german_shepherd.suitability.rkc_grooming']],
+                // S100 exercise stops barking "out of boredom or having a nibble on the furniture".
+                ['tag' => 'chews_when_bored', 'source_ids' => ['S100'], 'refs' => ['german_shepherd.behaviour.boredom_chewing']],
+                // S99 "Incorrect hind conformation and/or poor rear movement"; S97 hip / elbow tests;
+                // PDSA S100 hips and back legs; VetCompass S101 lower hindquarters.
+                ['tag' => 'hips_hind_legs', 'source_ids' => ['S99', 'S97', 'S100', 'S101'], 'refs' => ['german_shepherd.health.hind_conformation', 'german_shepherd.health.hip_elbow_dysplasia']],
             ],
         ],
     ],

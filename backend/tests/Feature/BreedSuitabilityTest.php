@@ -170,6 +170,24 @@ it('gives the French Bulldog the first sourced `apartment` tag and the new brach
     expect(bsEntry('french_bulldog.behaviour.family')['notes'])->toContain('supervising');
 });
 
+it('gives the German Shepherd the new hips_hind_legs tag (welfare rule), never `children` (runbook 2026-10-10)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray(['hips_hind_legs' => BreedSuitability::CONSIDER]);
+
+    $shepherd = app(BreedSuitability::class)->for(BreedType::GermanShepherd);
+    expect($shepherd['suits'])->toBe(['active_family', 'family_pet', 'large_home'])
+        ->and($shepherd['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('other_pets')
+        ->and($shepherd['consider'])->toContain('hips_hind_legs', 'long_daily_exercise', 'sheds')->not->toContain('brachycephalic_breathing');
+
+    // Only the German Shepherd carries the hind-leg tag so far.
+    foreach ([BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog] as $breed) {
+        expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('hips_hind_legs');
+    }
+
+    // The RKC Breed Watch concern is the quoted source; the PDSA caveat is kept with the family entry.
+    expect(bsEntry('german_shepherd.health.hind_conformation')['quote'])->toBe('Incorrect hind conformation and/or poor rear movement')
+        ->and(bsEntry('german_shepherd.behaviour.family')['notes'])->toContain('supervised');
+});
+
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {
     $source = (string) file_get_contents(app_path('Http/Resources/BreedCatalogResource.php'));
     preg_match('/@var array\{suits: list<([^>]+)>, consider: list<([^>]+)>\}/', $source, $m);
