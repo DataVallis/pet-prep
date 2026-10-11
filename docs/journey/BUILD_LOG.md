@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-11 — Bengalska mačka: šesta plačljiva mačka (M5-R10-18)
+
+**Kaj se je zgodilo:** PetPrep ima šesto plačljivo pasmo mačke — **bengalsko mačko**. Dodana je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`) in je skrita skupaj z vsemi mačkami, dokler jih David ne vklopi. Raziskava: **9 novih virov (C42–C50)** — standarda WCF in FIFe, PDSA, PetMD (pregledal veterinar), VCA, primerjava registrov World Cat Congress ter izjave FelineVMA, britanskega Animal Welfare Committee in The Cat Group o divjih križancih. Pravila igre so splošna mačja pravila (igra s palico 2× na dan, pesek, voda 2× na dan); mucek pride pri **3 mesecih** (rodovniški mucki, PDSA); kratko pegasto dlako otrok **počeše 1× na teden** (PDSA in PetMD se ujemata).
+
+**Zakaj je pomembno:** Bengalka je v FIFe šesta najbolj registrirana pasma (3.559 v letu 2024) in zelo priljubljena zaradi pegaste dlake. PetPrep pošteno pove tudi manj prijetno: je zelo aktivna, potrebuje veliko igre in morda ni najboljša izbira za družine z majhnimi otroki (PetMD). Igra predstavlja samo registrirano domačo bengalko — nikoli divje mačke ali zgodnjega križanca. Register navaja teste staršev, ki jih zahteva britanski register GCCF (DNK-testa za dedno očesno bolezen PRA in pomanjkanje piruvat-kinaze).
+
+**Številke:** 9 novih virov (C42–C50) in 1 vir za seznam testov staršev (K22), 1 nova migracija (dve omejitvi pasme), 0 novih mehanik (česanje že obstaja, nova je samo vrednost 1× na teden); Pest **PEST_N** testov, Jest **JEST_N**, izvoz registra **EXPORT_N** testov (vsi zeleni). V aplikaciji skrito; na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Bengalska mačka je pametna in zelo živahna — potrebuje veliko igre in prostor za plezanje, dlako pa je dovolj počesati enkrat na teden. Pri vzreditelju vprašajte za DNK-testa PRA in PK def pri starših.« (*ko bodo mačke v aplikaciji*)
+- 💼 Investitorji: »Šesta plačljiva mačka po istem samodejnem postopku — nova pasma ne potrebuje nove kode za pravila igre.«
+- 🤝 Partnerji (vzreditelji, zavetišča, veterinarji): »Register PetPrep za bengalko navaja teste staršev po pravilu GCCF in jasno pove, da govorimo o registrirani domači pasmi.« (*ko bo stran registra objavljena; mačke v aplikaciji še niso vklopljene*)
+- 📣 Omrežja: še ne — mačke niso vklopljene; o bengalki v marketingu odloči David.
+- 🛠 Tehnično: »Četrta mačka z vrstico česanja 1× na teden; prva mačka, ki ima v registru težo kot eno povprečje (»okoli 5,5 kg«) namesto razpona po spolu.«
+
+---
+
 ## 2026-10-11 — Norveška gozdna mačka: peta plačljiva mačka (M5-R10-17)
 
 **Kaj se je zgodilo:** PetPrep ima peto plačljivo pasmo mačke — **norveško gozdno mačko**. Dodana je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`) in je skrita skupaj z vsemi mačkami, dokler jih David ne vklopi. Raziskava: **6 novih virov (C36–C41)** — standard WCF, stran pasme GCCF, PetMD (pregledal veterinar), CFA, primerjava registrov World Cat Congress in genetski laboratorij UC Davis. Pravila igre so splošna mačja pravila (igra s palico 2× na dan, pesek, voda 2× na dan); mucek pride pri **3 mesecih** (rodovniški mucki, PDSA); poldolgo vodoodbojno dlako otrok **počeše 1× na teden** (PetMD in GCCF: enkrat na teden), sicer se dlaka zavozla. Videz za AI: trikotna glava z dolgim ravnim profilom, zelo dolg košat rep, nikoli točkasti vzorec ali čokoladna barva.
