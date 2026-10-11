@@ -186,7 +186,7 @@
 | S184, AKC via GSPCA S186). Colours: solid liver, liver and white (ticked / roan / patched),
 | solid black, black and white — "Any other color or color combination is a disqualification."
 | and red / orange / lemon / tan or solid white disqualify (S186). Both standards describe a
-| docked tail; the game shows the natural tail (welfare reading, as the Rottweiler). Weights
+| docked tail; the game shows the natural tail (Claude's proposal 2026-10-11, open for David). Weights
 | unsourced → `verified => false`; liver roan with a solid liver head weighted highest (the
 | register portrait).
 |
@@ -949,7 +949,7 @@ return [
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     // M5-R10-21 (docs/research/dog-data/data.json german_shorthaired_pointer.appearance; runbook
-    // rules 2026-10-11: standard colours only, natural tail).
+    // rule: standard colours only; natural tail = Claude's proposal, open for David).
     'german_shorthaired_pointer' => [
         'display_name' => 'German Shorthaired Pointer',
         // Colour frequencies are in no source (german_shorthaired_pointer.appearance.colour_weights UNSOURCED) → draft.
@@ -962,7 +962,7 @@ return [
             'coat_color' => 'S186 "The coat may be of solid liver or a combination of liver and white such as liver and white ticked" / "Or the coat may be of solid black or any combination of black and white such as black and white ticked"; "Any other color or color combination is a disqualification." (weights unsourced; never tan / red / lemon / solid white, S186)',
             'ear_carriage' => 'S184 "Moderately long, set on high and broad, flat and without twisting hanging down close to the head."',
             'eye_color' => 'S186 "The eye is almond shaped, not circular." "The preferred color is dark brown."',
-            'tail' => 'S184 "About halfway docked for hunting purposes." — the game shows the natural, undocked tail (welfare reading, appearance.tail notes)',
+            'tail' => 'S184 "About halfway docked for hunting purposes." — the game shows the natural, undocked tail (Claude\'s proposal 2026-10-11, open for David; appearance.tail notes)',
         ],
         'traits' => [
             'size' => ['large'],

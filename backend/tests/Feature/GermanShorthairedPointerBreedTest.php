@@ -387,7 +387,7 @@ describe('GET /api/breeds', function () {
     });
 });
 
-describe('AI appearance (runbook rules: standard colours only, natural tail)', function () {
+describe('AI appearance (runbook rule: standard colours only; natural tail = Claude\'s proposal)', function () {
     it('samples German Shorthaired Pointer DNA inside the standard (liver / black, roan or solid, dark brown eyes)', function () {
         $dna = app(PetDnaService::class);
         $prompts = app(PetAppearancePrompt::class);

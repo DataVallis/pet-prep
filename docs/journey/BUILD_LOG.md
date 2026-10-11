@@ -21,7 +21,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 👩 Starši: »Nemški kratkodlaki ptičar je prijazen in se razmeroma lahko uči, a potrebuje več kot dve uri gibanja na dan in dober odpoklic — ko zavoha divjad, ga lovski nagon rad odnese.«
 - 💼 Investitorji: »Tretja pasma, ki jo je sistem sam izbral po javni lestvici AKC in jo zgradil po istem postopku — z viri, testi in neodvisnim pregledom.«
 - 🤝 Partnerji (veterinarji, zavetišča): »PetPrep pri ptičarju pove, koliko gibanja res potrebuje, in pokaže psa z naravnim repom.«
-- 📣 Omrežja: »Ali vaša družina zmore dve uri gibanja na dan? Preizkusite nemškega kratkodlakega ptičarja v PetPrepu, preden ga pripeljete domov.«
+- 📣 Omrežja: »Ali vaša družina zmore dve uri gibanja na dan? Kmalu boste lahko nemškega kratkodlakega ptičarja preizkusili v PetPrepu, preden ga pripeljete domov.« *(ko bo nakup v trgovini deloval)*
 - 🛠 Tehnično: »Prva pasma z mediano iz tabele Dogs Trust (McMillan 2024) in prva, katere potreba z virom (odpoklic) se je preslikala na že obstoječo mehaniko.«
 ---
 

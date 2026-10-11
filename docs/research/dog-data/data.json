@@ -9254,7 +9254,7 @@
         "source_id": "S184",
         "quote": "About halfway docked for hunting purposes.",
         "confidence": "medium",
-        "notes": "FCI (S184) and AKC (S186, 'must be docked, leaving approximately 40 percent of its length') describe a docked tail. The game shows the natural, undocked tail (as the Rottweiler, M5-R10-19): docking is a welfare topic and the app never shows a docked dog to children — Claude's reading of the runbook's welfare rule, not a standard statement."
+        "notes": "FCI (S184) and AKC (S186, 'must be docked, leaving approximately 40 percent of its length') describe a docked tail. The game shows the natural, undocked tail: docking is a welfare topic and the app never shows a docked dog to children — Claude's proposal (predlog Claude 2026-10-11), not a standard statement and not a runbook rule; open for David. (The Rottweiler's natural tail is different: its own FCI standard describes it, S166.)"
       }
     },
     "suitability": {
@@ -9311,9 +9311,9 @@
         "value": "Yes",
         "unit": "—",
         "source_id": "S189",
-        "quote": "German Shorthaired Pointers shed moderately.",
+        "quote": "Short length with moderate shedding",
         "confidence": "medium",
-        "notes": "Dogs Trust fact field: 'Short length with moderate shedding' → recorded as 'Yes' (sheds; the register's shedding category). RKC 'Sheds' label returned without a value. Basis of the sheds tag."
+        "notes": "Dogs Trust fact field (S189) as returned: 'Short length with moderate shedding' → recorded as 'Yes' (sheds; the register's shedding category). The page also returned 'German Shorthaired Pointers shed moderately.' in the grooming text (not used as the quote — review 2026-10-11). RKC 'Sheds' label returned without a value. Basis of the sheds tag."
       },
       "rkc_good_with_children": {
         "value": null,
@@ -13443,7 +13443,7 @@
         "source_id": "S188",
         "quote": "if they smell a rabbit when you are taking them out for a walk; for this reason they need to be trained well for recall.",
         "confidence": "medium",
-        "notes": "Built already: the game's training commands include recall ('Pridi', TrainingCommand::Recall, M4) for every dog — nothing new to build.",
+        "notes": "Built already: the game's training commands include recall ('Pridi', TrainingCommand::Come = 'come', M5-R03) for every dog — nothing new to build.",
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): odpoklic že obstaja kot ukaz 'Pridi' — brez nove mehanike"
       },
       "suitability_tags": {
@@ -13494,7 +13494,7 @@
             "refs": [
               "german_shorthaired_pointer.suitability.dogs_trust_shedding"
             ],
-            "quote": "S189 'German Shorthaired Pointers shed moderately.'"
+            "quote": "S189 'Short length with moderate shedding'"
           }
         ],
         "not_proposed": {
@@ -13525,7 +13525,7 @@
         "source_id": "S184",
         "quote": "Firm, balanced, reliable, restrained temperament, neither nervous nor shy or aggressive.",
         "confidence": "high",
-        "notes": "No conformation welfare concern and no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health and never shows a docked tail.",
+        "notes": "No conformation welfare concern and no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a welfare breed)"
       },
       "ai_appearance": {
@@ -13534,8 +13534,9 @@
         "source_id": "S186",
         "quote": "The coat may be of solid liver or a combination of liver and white such as liver and white ticked",
         "confidence": "high",
-        "notes": "Standard colours only (S186, S184); tan, red, orange, lemon and solid white are disqualifications in the AKC standard (S186). Natural tail in the portrait (welfare reading, appearance.tail).",
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): liver roan (default), solid liver, liver and white ticked, black roan, solid black; natural tail; no tan / red / lemon / solid white"
+        "notes": "Standard colours only (S186, S184); tan, red, orange, lemon and solid white are disqualifications in the AKC standard (S186). Natural tail in the portrait = Claude's proposal (tail_decision, appearance.tail).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — liver roan (default), solid liver, liver and white ticked, black roan, solid black; no tan / red / lemon / solid white",
+        "tail_decision": "predlog Claude 2026-10-11: naraven (nekupiran) rep, čeprav standarda FCI in AKC opisujeta kupiranje — otrokom ne kažemo kupiranega psa; čaka Davida"
       }
     }
   }

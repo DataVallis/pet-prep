@@ -419,5 +419,5 @@ it('gives the German Shorthaired Pointer active_family, large_home, long_daily_e
         ->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')->not->toContain('sensitive_skin');
     expect(bsEntry('german_shorthaired_pointer.exercise.adult')['quote'])->toBe('More than 2 hours per day')
         ->and(bsEntry('german_shorthaired_pointer.suitability.rkc_size_of_home')['quote'])->toBe('Large House')
-        ->and(bsEntry('german_shorthaired_pointer.suitability.dogs_trust_shedding')['quote'])->toBe('German Shorthaired Pointers shed moderately.');
+        ->and(bsEntry('german_shorthaired_pointer.suitability.dogs_trust_shedding')['quote'])->toBe('Short length with moderate shedding');
 });

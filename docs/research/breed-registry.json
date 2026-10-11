@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "21fedad3c8ba3369f2b1f30082e8daf3407c66324f7e9305780dec22b76417df"
+      "sha256": "48835a2137326c5003e3351fc348757e660715c6001c8e74f4e63aa106bbebd9"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "552603b11d3e1838cf177b0380935811ea837015eddf63b50a5f8b908feb41f8"
+      "sha256": "ce4537f22bf898dd930182bf61b0b4a80dc290f94bf9ba0d5783a7b253cbc6a3"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "6cf41fbd21e706a12875e9052051f4f9c18e4aea2beeab14660df4a5098988fa"
+      "sha256": "a8b99dfbfc9c95ec67272bd3a74967492278331a9a9754b1b94a8672ab521b70"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",

@@ -516,7 +516,7 @@ return [
             'consider' => [
                 // S187 "More than 2 hours per day"; S188 "over 2 hours ideally per day".
                 ['tag' => 'long_daily_exercise', 'source_ids' => ['S187', 'S188'], 'refs' => ['german_shorthaired_pointer.exercise.adult', 'german_shorthaired_pointer.suitability.pdsa_exercise']],
-                // S189 "German Shorthaired Pointers shed moderately."
+                // S189 "Short length with moderate shedding".
                 ['tag' => 'sheds', 'source_ids' => ['S189'], 'refs' => ['german_shorthaired_pointer.suitability.dogs_trust_shedding']],
             ],
         ],

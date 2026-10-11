@@ -203,10 +203,10 @@ class FalAiService
 
             // M5-R10-21: AKC standard via GSPCA (S186) / FCI 119 (S184) — liver, liver and white,
             // black, black and white (never tan / red / lemon / solid white — S186); short hard
-            // coat, broad flat ears, dark almond eyes; natural undocked tail (welfare reading).
+            // coat, broad flat ears, dark almond eyes; natural undocked tail (Claude's proposal, open for David).
             BreedType::GermanShorthairedPointer => 'An alert German Shorthaired Pointer dog with a liver roan coat and a solid liver head, '
                 .'short dense hard coat, broad flat ears set high and hanging close to the head, dark brown almond-shaped eyes, '
-                .'brown nose, natural undocked tail, noble athletic balanced build, photorealistic, studio quality, natural lighting',
+                .'natural undocked tail, noble athletic balanced build, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -481,7 +481,7 @@ class FalAiService
                 'fur_texture' => 'short, dense, rough and hard',
                 'markings' => match ($variantIndex) {
                     0 => 'solid liver head with liver patches on a ticked body',
-                    1 => 'small white flecks on the chest',
+                    1 => 'no markings',
                     2 => 'solid black head with black patches on a ticked body',
                 },
             ],
