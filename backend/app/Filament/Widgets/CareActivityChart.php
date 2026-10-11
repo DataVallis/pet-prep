@@ -35,6 +35,19 @@ class CareActivityChart extends ChartWidget
         'incidents' => ['color' => '#ef4444', 'types' => [ActivityType::PetAccident, ActivityType::PetChewed, ActivityType::PetScratched, ActivityType::PetLitterAccident, ActivityType::PetCoatMatted, ActivityType::IgnoredWarning]],
     ];
 
+    /**
+     * Activity types the dashboard counts as care (also the "Care actions" stat).
+     *
+     * @return list<string>
+     */
+    public static function chartedTypes(): array
+    {
+        return array_merge(...array_map(
+            fn (array $group): array => array_map(fn (ActivityType $t): string => $t->value, $group['types']),
+            array_values(self::GROUPS),
+        ));
+    }
+
     public function getHeading(): string
     {
         return __('admin.dashboard.care_chart.heading');
@@ -67,11 +80,23 @@ class CareActivityChart extends ChartWidget
      */
     protected function getData(): array
     {
+        $byType = $this->dailyCountsBy(
+            $this->baseQuery()->whereIn('activities_log.activity_type', self::chartedTypes()),
+            'activities_log.activity_type',
+        );
+        $zero = array_fill(0, $this->periodDays(), 0);
+
         $datasets = [];
         foreach (self::GROUPS as $key => $group) {
+            $data = $zero;
+            foreach ($group['types'] as $type) {
+                foreach ($byType[$type->value] ?? [] as $i => $n) {
+                    $data[$i] += $n;
+                }
+            }
             $datasets[] = [
                 'label' => __("admin.dashboard.care_chart.{$key}"),
-                'data' => $this->dailyCounts($this->baseQuery()->whereIn('activities_log.activity_type', array_map(fn (ActivityType $t): string => $t->value, $group['types']))),
+                'data' => $data,
                 'backgroundColor' => $group['color'],
                 'borderRadius' => 3,
             ];

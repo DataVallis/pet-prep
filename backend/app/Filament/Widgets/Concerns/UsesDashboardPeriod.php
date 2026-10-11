@@ -54,23 +54,45 @@ trait UsesDashboardPeriod
      */
     protected function dailyCounts(Builder $query, string $column = 'created_at'): array
     {
+        return $this->dailyCountsBy($query, null, $column)[''] ?? array_fill(0, $this->periodDays(), 0);
+    }
+
+    /**
+     * Rows per local day in the period split by a column (one query), each
+     * series zero-filled, oldest first. With `$groupColumn` null the only key is ''.
+     *
+     * @param  Builder<Model>  $query
+     * @return array<string, list<int>>
+     */
+    protected function dailyCountsBy(Builder $query, ?string $groupColumn, string $column = 'created_at'): array
+    {
         $table = $query->getModel()->getTable();
         $qualified = str_contains($column, '.') ? $column : "{$table}.{$column}";
+        // Production and CI are PostgreSQL (UTC storage → Ljubljana days); the
+        // fallback only keeps other drivers working (UTC days).
         $day = DB::connection()->getDriverName() === 'pgsql'
             ? "to_char(({$qualified} AT TIME ZONE 'UTC') AT TIME ZONE '".DashboardPeriod::TIMEZONE."', 'YYYY-MM-DD')"
             : "strftime('%Y-%m-%d', {$qualified})";
+        $group = $groupColumn !== null ? $query->getGrammar()->wrap($groupColumn) : "''";
 
-        /** @var array<string, int> $counts */
-        $counts = $query->clone()
+        $rows = $query->clone()
             ->where($qualified, '>=', $this->periodStart())
             ->toBase()
-            ->selectRaw("{$day} as day, count(*) as aggregate")
-            ->groupByRaw($day)
-            ->pluck('aggregate', 'day')
-            ->map(fn ($n): int => (int) $n)
-            ->all();
+            ->selectRaw("{$day} as day, {$group} as grp, count(*) as aggregate")
+            ->groupByRaw($groupColumn !== null ? "{$day}, {$group}" : $day)
+            ->get();
 
-        return array_map(fn (string $date): int => $counts[$date] ?? 0, $this->periodDates());
+        $dates = $this->periodDates();
+        $series = [];
+        foreach ($rows as $row) {
+            $key = (string) $row->grp;
+            $series[$key] ??= array_fill_keys($dates, 0);
+            if (array_key_exists((string) $row->day, $series[$key])) {
+                $series[$key][(string) $row->day] = (int) $row->aggregate;
+            }
+        }
+
+        return array_map(fn (array $byDate): array => array_values($byDate), $series);
     }
 
     /** Short x-axis label for a `Y-m-d` date. */

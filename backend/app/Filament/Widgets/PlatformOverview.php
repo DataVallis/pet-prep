@@ -48,7 +48,7 @@ class PlatformOverview extends StatsOverviewWidget
         $parentsDaily = $this->dailyCounts($parents->clone());
         $petsDaily = $this->dailyCounts(Pet::query());
         $creditsDaily = $this->dailyCounts(ChallengeCredit::query(), 'purchased_at');
-        $careDaily = $this->dailyCounts(ActivityLog::query());
+        $careDaily = $this->dailyCounts(ActivityLog::whereIn('activity_type', CareActivityChart::chartedTypes()));
 
         return [
             Stat::make(__('admin.dashboard.stats.families'), Family::count())
