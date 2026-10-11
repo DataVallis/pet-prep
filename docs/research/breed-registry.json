@@ -53,7 +53,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "ee360a281f6733f2fd97a1afbad9e44d160d1588288b0c35100f9efd4bdfda6d"
+      "sha256": "9d1f02c8c4a6243f9c617adf67cd98b70e07893e7f2c0f1a2381344ba3236e87"
     }
   },
   "suitability_vocabulary": {
@@ -10755,7 +10755,12 @@
           "C38"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "norwegian-forest-cat.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
