@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-11 — Sibirska mačka: četrta plačljiva mačka (M5-R10-16)
+
+**Kaj se je zgodilo:** PetPrep ima četrto plačljivo pasmo mačke — **sibirsko mačko**. Dodana je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`) in je skrita skupaj z vsemi mačkami, dokler jih David ne vklopi. Raziskava: **3 novi viri (C33–C35)** — standard FIFe, stran pasme GCCF in PetMD (pregledal veterinar). Pravila igre so splošna mačja pravila (igra s palico 2× na dan, pesek, voda 2× na dan); mucek pride pri **3 mesecih** (rodovniški mucki, PDSA); gosto poldolgo dlako otrok **počeše 1× na teden** (PetMD: vsaj enkrat na teden), sicer se dlaka zavozla. Videz za AI: gosta dlaka z ovratnikom, nikoli točkasti vzorec (to je druga pasma, Neva Masquerade), modre oči samo pri beli mački.
+
+**Zakaj je pomembno:** Sibirska mačka je v FIFe četrta najbolj registrirana pasma (4.420 v letu 2024). Pogosto jo oglašujejo kot »hipoalergeno« — PetPrep tega nikoli ne trdi (PetMD: »Siberians are not considered to be hypoallergenic cats.«), kar je pomembno za starše otrok z alergijo.
+
+**Številke:** 3 novi viri (C33–C35), 1 nova migracija (dve omejitvi pasme), 0 novih mehanik (česanje že obstaja, nova je samo vrednost 1× na teden); Pest **2265** testov, Jest **2022**, izvoz registra **36** testov (vsi zeleni). V aplikaciji skrito; na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Sibirska mačka je igriva in potrpežljiva, a njeno gosto dlako je treba vsaj enkrat na teden počesati — in ni ›hipoalergena‹.« (*ko bodo mačke v aplikaciji*)
+- 💼 Investitorji: »Četrta plačljiva mačka po istem samodejnem postopku — nova pasma ne potrebuje nove kode za pravila igre.«
+- 🤝 Partnerji (vzreditelji, zavetišča, veterinarji): »V registru živali PetPrep sibirska mačka nikoli ni predstavljena kot primerna za alergike.« (*ko bo stran registra objavljena; mačke v aplikaciji še niso vklopljene*)
+- 📣 Omrežja: še ne — mačke niso vklopljene.
+- 🛠 Tehnično: »Slug `siberian-cat`, da se register in portret nikoli ne zamenjata s sibirskim haskijem.«
+
+---
+
 ## 2026-10-11 — Vsaka potreba pasme je v igri: česanje britanske kratkodlake in ragdolla
 
 **Kaj se je zgodilo:** David je postavil stalno pravilo: **če katerakoli pasma karkoli potrebuje, tudi minimalno, mora to aplikacija omogočati** — nič več »predlog, ni zgrajeno«. Takoj sta dobili rutino »Počeši muco« še dve mački: **britanska kratkodlaka 1× na teden** (VCA: »vsaj enkrat na teden«) in **ragdoll 2× na teden** (PetMD: »enkrat do dvakrat na teden«; CFA in VetCompass pravita, da poldolga dlaka potrebuje redno nego). Če otrok v tednu zamudi vsaj polovico česanj, nastane vozel v dlaki — brez kazni, naslednje daljše česanje ga razreši. Pravilo je zdaj zapisano v runbook, zato ga vsak samodejni zagon za novo pasmo upošteva.
