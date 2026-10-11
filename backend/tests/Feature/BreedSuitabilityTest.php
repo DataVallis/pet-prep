@@ -407,3 +407,17 @@ it('gives the Bulldog the flat-face and skin welfare chips, shorter_lifespan, sh
         ->and(bsEntry('bulldog.behaviour.other_pets')['quote'])->toContain('if given the right socialisation when young')
         ->and(bsEntry('bulldog.lifespan.rkc')['quote'])->toBe('Lifespan: Under 10 years');
 });
+
+it('gives the German Shorthaired Pointer active_family, large_home, long_daily_exercise and sheds — no welfare chip (runbook 2026-10-11)', function () {
+    $pointer = app(BreedSuitability::class)->for(BreedType::GermanShorthairedPointer);
+    expect($pointer['suits'])->toBe(['active_family', 'large_home'])
+        // Only a gundog-group sentence on the RKC page → no family_pet / children; RKC "Large House".
+        ->and($pointer['suits'])->not->toContain('family_pet')->not->toContain('children')->not->toContain('small_children')->not->toContain('apartment')
+        ->and($pointer['consider'])->toBe(['long_daily_exercise', 'sheds'])
+        // RKC once a week (PDSA once or twice) → not frequent_grooming; McMillan median 13.4 y → not shorter_lifespan.
+        ->and($pointer['consider'])->not->toContain('frequent_grooming')->not->toContain('shorter_lifespan')
+        ->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')->not->toContain('sensitive_skin');
+    expect(bsEntry('german_shorthaired_pointer.exercise.adult')['quote'])->toBe('More than 2 hours per day')
+        ->and(bsEntry('german_shorthaired_pointer.suitability.rkc_size_of_home')['quote'])->toBe('Large House')
+        ->and(bsEntry('german_shorthaired_pointer.suitability.dogs_trust_shedding')['quote'])->toBe('German Shorthaired Pointers shed moderately.');
+});
