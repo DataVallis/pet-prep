@@ -388,8 +388,8 @@ class PetDecayService
         // costs every command some progress (once per day, pointer on the pet).
         $this->training->applyDecay($pet, $now);
 
-        // M5-R06-05 (Maine Coon): the end of a program week with ≥ 2 of its 3
-        // groomings missed → matted coat (state only, no metric effect).
+        // M5-R06-05 (brushed cats): the end of a program week with ≥ ceil(goal / 2)
+        // of its groomings missed → matted coat (state only, no metric effect).
         $matted = $pet->isCat() && $this->chores->closeGroomingWeek($pet, $now);
 
         // Hygiene (M1-05): no gradual decay; scheduled random events that

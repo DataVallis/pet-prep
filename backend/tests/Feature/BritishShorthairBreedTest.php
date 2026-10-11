@@ -34,8 +34,8 @@ use function Pest\Laravel\postJson;
 | C19, C26–C28) and the runbook's standing rules (confirmed by David
 | 2026-10-10): paid breed after the Maine Coon (sort_order 20), the pedigree
 | kitten arrives at 3 months (CAT_SPEC Q4 rule, C13), every other stage / meal /
-| play / litter value is the general cat rule, no grooming routine (CAT_SPEC
-| Q8: Maine Coon only), lifespan = the C14 "British" group (background only),
+| play / litter value is the general cat rule, grooming 1× per week (VCA C28,
+| David 2026-10-11), lifespan = the C14 "British" group (background only),
 | FIFe colours only with a blue-grey portrait and a moderate (not flat) face.
 */
 
@@ -219,14 +219,20 @@ describe('life-stage data against data.json', function () {
             ->and(bshRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(120);
     });
 
-    it('has no grooming routine and no unverified row (CAT_SPEC Q8: brushing is the Maine Coon\'s)', function () {
-        expect(collect(bshRows())->where('key', StageParamKey::GroomingSessionsPerWeek->value)->all())->toBe([])
+    it('combs 1× per program week from the sourced need (David 2026-10-11) and has no unverified row', function () {
+        $row = bshRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
+        expect($row['value'])->toBe(1)
+            ->and($row['value'])->toBe(bshData('british_shorthair.grooming.game_sessions_per_week.value'))
+            ->and($row['source_id'])->toBe('C28')
+            ->and($row['quote'])->toBe('Run a comb through its coat at least weekly to keep it mat-free and looking healthy.')
+            ->and($row['ref'])->toBe(BreedStageParamsSeeder::CAT_REF.'british_shorthair.grooming.game_sessions_per_week')
+            ->and($row['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_CAT_GROOMING_2026_10_11)
             ->and(collect(bshRows())->where('verified', false)->all())->toBe([])
-            ->and(bshData('british_shorthair.grooming.range.source_id'))->toBe('C28');
+            ->and(CatChoreService::mattedAfterMissed(1))->toBe(bshData('british_shorthair.grooming.game_matted_after_missed.value'));
 
         $cat = bshPet(12);
-        expect(app(CatChoreService::class)->groomingGoalOn($cat, $cat->localDate(now())))->toBe(0)
-            ->and(app(CatChoreService::class)->groomingAppliesTo($cat))->toBeFalse();
+        expect(app(CatChoreService::class)->groomingGoalOn($cat, $cat->localDate(now())))->toBe(1)
+            ->and(app(CatChoreService::class)->groomingAppliesTo($cat))->toBeTrue();
     });
 
     it('cites a data.json entry for every row', function () {

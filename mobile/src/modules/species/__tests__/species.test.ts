@@ -3,6 +3,7 @@
  */
 import { i18n } from '@/i18n';
 import {
+  hasGroomingRoutine,
   breedName,
   foldForSearch,
   isDefaultFreeBreed,
@@ -191,6 +192,11 @@ describe('readBreed / readSpecies', () => {
     } finally {
       await i18n.changeLanguage('sl');
     }
+  });
+
+  it('brushing routine for the Maine Coon, Ragdoll and British Shorthair only (David 2026-10-11)', () => {
+    for (const breed of ['maine_coon', 'ragdoll', 'british_shorthair']) expect(hasGroomingRoutine(breed)).toBe(true);
+    for (const breed of ['domestic_cat', 'mutt', 'border_collie', 'unknown', null]) expect(hasGroomingRoutine(breed)).toBe(false);
   });
 
   it('M5-R10-15: the Ragdoll is a paid cat with its own name', async () => {

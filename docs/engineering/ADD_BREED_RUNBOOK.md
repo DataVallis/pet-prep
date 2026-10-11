@@ -70,6 +70,8 @@ website URLs, time per phase.
 
 ## 3. Standing decision rules (no questions to David)
 
+**Every sourced need is built (David 2026-10-11).** If an A/B source says this breed needs something — even a small thing (brushing once a week, a secure fence, nail clipping) — the run builds it into the game in the same PR, as a routine / rule / tag with the source and a `decision` line. Never leave a sourced breed need as "proposal, not built": "otherwise we forget and the app won't have the feature". When the game has the mechanic already (grooming, exercise, tags), only the value is new — build it. When the mechanic does not exist yet and is too large for the run, still finish the breed (merge on green CI as usual), set the queue row to `done` with the note `needs-david: <mechanic> not built — ROADMAP <ID>`, and add that ROADMAP task and a 🗓 FEATURES row, so it cannot be forgotten. (Status `needs-david` alone still means the code stop of §1: PR left open.)
+
 Record each as `"decision": "potrdil David 2026-10-10 (pravilo runbooka): …"` in `proposed_game_parameters.<breed_key>.*` (the rules were confirmed on 2026-10-10; the date stays), and as one DECISIONS row "Claude (izvedba po pravilih runbooka)".
 
 | Value | Rule | Example |
@@ -89,7 +91,7 @@ Record each as `"decision": "potrdil David 2026-10-10 (pravilo runbooka): …"` 
 | Health statistics | Never in the app, the register export or audience docs (no %, no odds ratios, no "x times"). Register health = key + source only, with an EN + SL sentence on the website. | — |
 | AI appearance | Colours listed by the breed standard only — never a non-standard or disqualifying colour (merle only where the standard lists it, e.g. Australian Shepherd; never for the French Bulldog), weights unsourced → `verified: false`; the portrait default = the highest-weighted colour (put the most typical standard colour first with the highest weight; `media.breed_portraits.traits.<key>` only if a lower-weight option must be the portrait). Welfare breeds: moderate, non-exaggerated features — dog breeds have no `features` key, so add a dog trait (e.g. `muzzle`) to `traits` + `prompt_order` + `sources`. | French Bulldog fawn, `muzzle` |
 | Names | EN = RKC / AKC name; SL = the Slovenian common name used by KZS / Slovenian breeders (lower case inside a sentence; slug from `slugify`, e.g. `francoski-buldog`). Search keywords: EN + SL names, ASCII variant of SL, common nickname. | — |
-| Cats | Follow `docs/product/CAT_SPEC.md` and `docs/research/cat-data/` (C-ids); stages / meals / play / litter are the general cat rules; breed-specific: arrival (kitten), grooming sessions per week if sourced, lifespan, weight, appearance. Cat breeds are built behind the same hidden switch as the Maine Coon (`PETPREP_CATS_ENABLED=false`, availability `coming_soon` in the export). | Maine Coon |
+| Cats | Follow `docs/product/CAT_SPEC.md` and `docs/research/cat-data/` (C-ids); stages / meals / play / litter are the general cat rules; breed-specific: arrival (kitten), lifespan, weight, appearance and **grooming whenever a source gives a frequency** (David 2026-10-11): `<key>.grooming.game_sessions_per_week` = the source's number; a range "A–B per week" → **B** (the upper bound — Claude's reading of David's Ragdoll decision 2026-10-11 "as realistic as possible"; David may change it); "at least weekly" → 1; **no number** ("regularly", "often") → 1× per week seeded with `verified => false` and decision `predlog Claude 2026-…: … čaka Davida`, listed under "Open for David" in HANDOFF (built, not forgotten); a seasonal number ("daily while moulting") → the out-of-season number, the season in `notes` (moult is not modelled); a seeder row `grooming_sessions_per_week` (decision `potrdil David 2026-10-11 (pravilo runbooka, M5-R10-NN)`), `game_matted_after_missed` = ceil(goal / 2) (`CatChoreService::mattedAfterMissed`), the breed in `GROOMING_CATS` (export) and `GROOMING_CAT_BREEDS` (mobile `species.ts`), the picker hint "… · brushing N× a week" / "… · česanje N× na teden". Cat breeds are built behind the same hidden switch as the Maine Coon (`PETPREP_CATS_ENABLED=false`, availability `coming_soon` in the export). | Maine Coon |
 
 ## 4. Touch points (dog; French Bulldog = example)
 
@@ -167,6 +169,7 @@ Spawn the `qa-reviewer` agent when the session can; otherwise a written self-rev
 7. No health statistic in app config, seeder rows, export or audience docs.
 8. Docs: nothing unbuilt reads as available; "na telefonu še ni preverjeno"; marketing decision recorded (exclusion only with explicit veterinary advice against advertising the breed type, §3).
 9. Queue row and ROADMAP updated.
+10. Every sourced breed need is built (David 2026-10-11) — no "proposal, not built" left in data.json, DECISIONS, FEATURES or the queue row.
 Fix every finding in a `fix:` commit before merging.
 
 ## 7. PR, CI, merge, deploy (pet-prep)

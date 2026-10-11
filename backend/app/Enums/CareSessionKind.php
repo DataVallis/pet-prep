@@ -15,7 +15,7 @@ enum CareSessionKind: string
     /** "Palica s peresom": the ~60 s wand mini-game, the cat's daily play (CAT_SPEC Q1, §5.2). */
     case WandPlay = 'wand_play';
 
-    /** Combing a Maine Coon (CAT_SPEC Q8) — M5-R06-05, CatChoreService. */
+    /** Combing a brushed cat (CAT_SPEC Q8: Maine Coon, Ragdoll, British Shorthair) — M5-R06-05, CatChoreService. */
     case Grooming = 'grooming';
 
     /** Weekly full litter change (CAT_SPEC Q3) — M5-R06-05, CatChoreService. */

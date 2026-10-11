@@ -87,12 +87,12 @@ final class GroomingPayload
     public function toArray(): array
     {
         return [
-            // Groomings per program week (Maine Coon 3, ≥ 1 day apart).
+            // Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart).
             'goal_per_week' => $this->goalPerWeek,
             'done_this_week' => $this->doneThisWeek,
             'week_started_at' => $this->weekStartedAt,
             'week_ends_at' => $this->weekEndsAt,
-            // Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty.
+            // Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty.
             'matted' => $this->matted,
             'matted_since' => $this->mattedSince,
             // Length of the next grooming (~2× while matted).

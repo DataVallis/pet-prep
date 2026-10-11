@@ -671,7 +671,7 @@ flowchart TD
 
 ### 5h. Cat litter, scratching and grooming (M5-R06-05, David 2026-10-08)
 
-Cats only (hidden behind `PETPREP_CATS_ENABLED`). A litter use is **not** a mess; only an unscooped tray becomes one. Numbers: `litter_uses_per_day` 3 / 2, `litter_scoop_deadline_hours` 4, `litter_full_change_days` 7, `grooming_sessions_per_week` 3 (Maine Coon) from `breed_stage_params`; overdue 2 h, scratching 2 h and "matted after ≥ 2 missed" are game constants traced to `cat-data/data.json`; mini-game mechanics in `config/cat_care.php`.
+Cats only (hidden behind `PETPREP_CATS_ENABLED`). A litter use is **not** a mess; only an unscooped tray becomes one. Numbers: `litter_uses_per_day` 3 / 2, `litter_scoop_deadline_hours` 4, `litter_full_change_days` 7, `grooming_sessions_per_week` 3 (Maine Coon) / 2 (Ragdoll) / 1 (British Shorthair) from `breed_stage_params`; overdue 2 h, scratching 2 h and "matted after ≥ ceil(goal / 2) missed" are game rules traced to `cat-data/data.json`; mini-game mechanics in `config/cat_care.php`.
 
 ```mermaid
 flowchart TD
@@ -735,7 +735,7 @@ flowchart TD
   K -->|cat| CD["Hrani · Voda · Pesek · Igra · Očisti<br/>no walk / steps / Šola"]
   CD -->|Pesek| O1["openCatGame('scoop')"]
   CD -->|Igra| O2["openCatGame('wand')"]
-  CH["Chips: Počeši (Maine Coon) · Menjava peska · Crkljanje"] -->|tap| O3["openCatGame('grooming' / 'litter_change')<br/>or PlayOverlay 'cuddle'"]
+  CH["Chips: Počeši (brushed cats) · Menjava peska · Crkljanje"] -->|tap| O3["openCatGame('grooming' / 'litter_change')<br/>or PlayOverlay 'cuddle'"]
   SC["Scratched-sofa card: Na praskalnik"] --> O4["openCatGame('scratching')"]
   O1 & O2 & O3 & O4 --> OV["CatCareOverlay → start / finish (server judges)"]
   OV --> ST["state from the 200 / 422 → cache"]

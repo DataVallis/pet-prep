@@ -186,7 +186,7 @@ export interface ChildLitter {
   change: LitterChange | null;
 }
 
-/** Child state `grooming` (Maine Coon only). */
+/** Child state `grooming` (brushed cats: Maine Coon, Ragdoll, British Shorthair). */
 export interface ChildGrooming {
   goal_per_week: number;
   done_this_week: number;

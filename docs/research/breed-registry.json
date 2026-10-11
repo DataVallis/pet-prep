@@ -17,7 +17,7 @@
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
-      "sha256": "b67ae4141f73eee335aa29ec436e109d49f83bb838b08c764f2d682bc44566f3"
+      "sha256": "09dada9b70cdad753130b93e181c9a0d070364ba96c7d5690a331bde082ff5cf"
     },
     "cat_sources": {
       "path": "docs/research/cat-data/sources.md",
@@ -29,11 +29,11 @@
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "22d93a99451a5eb260bc08a17d2abe6f179d522fe70daadbd2ae4aaa9e3e8c69"
+      "sha256": "b9424e35bbc54d33910caa88394f95ffd682ac9f240bd796fd0cef9c6a696c09"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "194e958869ad99768157f983bf4bc07b64ba8b450f456b911c2167c578f37246"
+      "sha256": "21129a217c7d8997405f5e9f1846152c50fac9922f0a5c3c79a835fb7e256e34"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
@@ -9500,6 +9500,12 @@
           {
             "key": "scratching_after_missed_play",
             "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
           }
         ],
         "values": [
@@ -9601,6 +9607,13 @@
               "C13"
             ],
             "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-14): pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule for pedigree kittens)"
+          },
+          {
+            "ref": "cat-data:british_shorthair.grooming.game_sessions_per_week",
+            "basis_source_ids": [
+              "C28"
+            ],
+            "decision": "potrdil David 2026-10-11: every sourced breed-specific need is built as a game rule (no 'proposal, not built'); British Shorthair 1× per week"
           }
         ],
         "basis_source_ids": [
@@ -9610,7 +9623,8 @@
           "C6",
           "C7",
           "C10",
-          "C13"
+          "C13",
+          "C28"
         ]
       },
       "portrait": {
@@ -9851,6 +9865,12 @@
           {
             "key": "scratching_after_missed_play",
             "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
           }
         ],
         "values": [
@@ -9952,6 +9972,13 @@
               "C13"
             ],
             "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-15): pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule for pedigree kittens)"
+          },
+          {
+            "ref": "cat-data:ragdoll.grooming.game_sessions_per_week",
+            "basis_source_ids": [
+              "C32"
+            ],
+            "decision": "potrdil David 2026-10-11: Ragdoll 2× per week (upper bound of the PetMD range — more realistic for the semi-long coat)"
           }
         ],
         "basis_source_ids": [
@@ -9961,7 +9988,8 @@
           "C6",
           "C7",
           "C10",
-          "C13"
+          "C13",
+          "C32"
         ]
       },
       "portrait": {

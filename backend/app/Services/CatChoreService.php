@@ -22,7 +22,7 @@ use Illuminate\Support\Str;
 
 /**
  * The cat's server-led chores (M5-R06-05, M5-R06_PLAN T6): the weekly full
- * litter change (CAT_SPEC Q3) and the Maine Coon's grooming (Q8), both
+ * litter change (CAT_SPEC Q3) and a brushed cat's grooming (Q8), both
  * `pet_care_sessions` like the wand game (M5-R06-04): start → the server's
  * schedule (length, what is checked); finish → the app reports the strokes
  * it saw ({t: ms since start}) and score() judges participation
@@ -36,13 +36,14 @@ use Illuminate\Support\Str;
  * open litter use ("dump everything"). Allowed in quiet hours (a chore, like
  * cleaning); refused while a mess is open (PRODUCT_SPEC §8).
  *
- * Grooming (Maine Coon — `grooming_sessions_per_week` 3, other cats have no
+ * Grooming (pedigree cats — `grooming_sessions_per_week`: Maine Coon 3,
+ * Ragdoll 2, British Shorthair 1 (David 2026-10-11); the domestic cat has no
  * row): at most one per family-local day (CAT_SPEC Q8 "≥ 1 day between
  * sessions" — Claude's reading, DECISIONS), at most the goal per program
  * week, not in quiet hours (the cat sleeps, like the wand game). Success
  * writes `groomed_pet` (value = its number in the week; the week's
  * `grooming` routine slots). Matted coat (David 2026-10-08 ~22:20): at the
- * end of each program week (closeGroomingWeek, tick) ≥ MATTED_AFTER_MISSED
+ * end of each program week (closeGroomingWeek, tick) ≥ mattedAfterMissed(goal)
  * of the week's slots MISSED (ledger) → `pets.coat_matted_at` + a
  * `pet_coat_matted` timeline row. No illness, no mood / metric effect — only
  * the missed routines count. The next grooming lasts ~2×
@@ -53,12 +54,15 @@ use Illuminate\Support\Str;
 class CatChoreService
 {
     /**
-     * Matted coat when at least this many of a program week's groomings were
-     * missed (data.json maine_coon.grooming.game_matted_after_missed, David
-     * 2026-10-08 13:47 + ~22:20 "≥ 2 of the 3"). A game rule, not a breed
-     * value → a constant like the 2 h cleaning deadline.
+     * Matted coat when at least half of a program week's groomings were missed:
+     * ceil(goal / 2) — Maine Coon 2 of 3 (David 2026-10-08 13:47 + ~22:20),
+     * Ragdoll 1 of 2, British Shorthair 1 of 1 (David 2026-10-11; data.json
+     * <breed>.grooming.game_matted_after_missed). A game rule, not a breed value.
      */
-    public const MATTED_AFTER_MISSED = 2;
+    public static function mattedAfterMissed(int $goal): int
+    {
+        return max(1, intdiv($goal + 1, 2));
+    }
 
     /** Grooming is evaluated per program week. */
     public const GROOMING_PERIOD_DAYS = 7;
@@ -73,7 +77,7 @@ class CatChoreService
     //  Numbers
     // ──────────────────────────────────────────────────────────────
 
-    /** Groomings per program week on a family-local date (Maine Coon 3; 0 = no grooming routine). */
+    /** Groomings per program week on a family-local date (Maine Coon 3, Ragdoll 2, British Shorthair 1; 0 = no grooming routine). */
     public function groomingGoalOn(Pet $pet, string $localDate): int
     {
         if (! $pet->isCat() || $pet->isLegacyProfile()) {
@@ -213,7 +217,7 @@ class CatChoreService
             return null;
         }
 
-        // Grooming (Maine Coon).
+        // Grooming (brushed cats: Maine Coon, Ragdoll, British Shorthair).
         $period = $this->groomingPeriodAt($pet, $now);
         if ($period === null) {
             return $refuse(CareRefusal::GroomingNotAvailable);
@@ -517,7 +521,7 @@ class CatChoreService
 
     /**
      * The end of a program week (the weekly birthday): when ≥
-     * MATTED_AFTER_MISSED of the finished week's grooming slots were MISSED
+     * mattedAfterMissed(goal) of the finished week's grooming slots were MISSED
      * (ledger; excused / not expected slots do not count) the coat is
      * matted from the week's end. Each week is evaluated once
      * (`pets.grooming_weeks_checked`); after an outage only the last
@@ -546,8 +550,9 @@ class CatChoreService
 
         $weekEnd = $period['start'];
         $date = $pet->localDate($weekEnd);
-        if ($this->groomingGoalOn($pet, $date) <= 0) {
-            return false; // not a Maine Coon (no grooming routine)
+        $goal = $this->groomingGoalOn($pet, $date);
+        if ($goal <= 0) {
+            return false; // no grooming routine (domestic cat)
         }
         $missed = 0;
         foreach ($this->ledger->routinesFor(collect([$pet]), $date, $date, $now)[$pet->id] ?? [] as $routine) {
@@ -556,7 +561,7 @@ class CatChoreService
                 $missed++;
             }
         }
-        if ($missed < self::MATTED_AFTER_MISSED || $this->isMatted($pet)) {
+        if ($missed < self::mattedAfterMissed($goal) || $this->isMatted($pet)) {
             return false;
         }
 

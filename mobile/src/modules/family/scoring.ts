@@ -11,6 +11,7 @@
 import { familyClock, localParts } from '@/modules/childPet/familyTime';
 import { BEHAVIOUR_KINDS, PARENT_BEHAVIOUR_STRINGS, type BehaviourKind } from '@/modules/behaviour/behaviour';
 import { playTimelineText } from '@/modules/play/play';
+import { hasGroomingRoutine } from '@/modules/species/species';
 import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -21,7 +22,7 @@ export type LightReason = 'game_over' | 'phase3_alarm' | 'fell_ill_today' | 'mis
 /**
  * `training` (M5-R03): one completed training session per day, only for a pet with training.
  * M5-R06-04 / 05 (cats): `play` (the day's wand games), `litter_scoop` (one per litter use),
- * `litter_change` (weekly), `grooming` (Maine Coon, weekly slots).
+ * `litter_change` (weekly), `grooming` (Maine Coon / Ragdoll / British Shorthair, weekly slots).
  */
 export type RoutineType = 'feed' | 'water' | 'clean' | 'walk' | 'training' | 'play' | 'litter_scoop' | 'litter_change' | 'grooming';
 
@@ -360,7 +361,7 @@ function hasTotals(t: TypeTotals): boolean {
 /**
  * The routine rows of the report, per species (M5-R06-08b): a dog keeps food, water,
  * cleaning, walk and — with training — "Šola"; a cat shows food, water, cleaning, litter,
- * play, the weekly litter change and — Maine Coon — brushing (walk / training only if the
+ * play, the weekly litter change and — brushed cats — brushing (walk / training only if the
  * server counted one). Any type the server counted in the period is always shown.
  */
 export function reportRoutineTypes(
@@ -374,7 +375,7 @@ export function reportRoutineTypes(
     if (hasTotals(byType[type])) return true;
     if (type === 'training') return !cat && trainingEnabled;
     if (type === 'walk') return !cat;
-    if (type === 'grooming') return cat && breed === 'maine_coon';
+    if (type === 'grooming') return cat && hasGroomingRoutine(breed);
     if (CAT_ROUTINE_TYPES.includes(type)) return cat;
     return true;
   });

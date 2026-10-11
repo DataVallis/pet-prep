@@ -212,7 +212,7 @@ export function makeChildState(
     play: null,
     // M5-R06-04 cat wand play: null for a dog.
     wand: null,
-    // M5-R06-05 cat litter / Maine Coon grooming / scratching: null for a dog.
+    // M5-R06-05 cat litter / brushed-cat grooming / scratching: null for a dog.
     litter: null,
     grooming: null,
     scratching: null,

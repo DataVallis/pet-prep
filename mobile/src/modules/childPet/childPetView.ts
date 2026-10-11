@@ -147,7 +147,7 @@ export interface ChildPetView {
    */
   play: ChildPlay | null;
   /**
-   * M5-R06-08a cat care: wand play, litter tray (scoop + weekly change), Maine Coon
+   * M5-R06-08a cat care: wand play, litter tray (scoop + weekly change), brushed-cat
    * grooming, scratching — each block null for a dog; `EMPTY_CAT_CARE` for a dog / an
    * older server. Read with `readChildCatCare` (`modules/catCare/catCare.ts`).
    */

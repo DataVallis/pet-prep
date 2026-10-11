@@ -1,5 +1,5 @@
 /**
- * Cat chips above the HUD dock (M5-R06-08b): "Počeši" (Maine Coon, while this week's brushing
+ * Cat chips above the HUD dock (M5-R06-08b): "Počeši" (brushed cats, while this week's brushing
  * is open) and "Menjava peska" (the weekly full litter change, until it is done). Glass chips
  * like "Šola" — the dock already holds five buttons. A small amber dot = it can be done now;
  * a matted coat / smelly tray adds one calm line under the chips (never red, never shaming).

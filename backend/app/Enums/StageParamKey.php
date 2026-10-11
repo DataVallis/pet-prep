@@ -24,8 +24,8 @@ namespace App\Enums;
  *    M5-R06-04 / 05): stage keys PLAY_SESSIONS_PER_DAY and
  *    LITTER_USES_PER_DAY (kitten vs. grown cat), breed keys
  *    PLAY_MIN_GAP_MINUTES, LITTER_SCOOP_DEADLINE_HOURS,
- *    LITTER_FULL_CHANGE_DAYS, GROOMING_SESSIONS_PER_WEEK (Maine Coon only;
- *    no row = no grooming routine) and SCRATCHING_AFTER_MISSED_PLAY (bool).
+ *    LITTER_FULL_CHANGE_DAYS, GROOMING_SESSIONS_PER_WEEK (Maine Coon 3, Ragdoll 2,
+ *    British Shorthair 1; no row = no grooming routine) and SCRATCHING_AFTER_MISSED_PLAY (bool).
  */
 enum StageParamKey: string
 {

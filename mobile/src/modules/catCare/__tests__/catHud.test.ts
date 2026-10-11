@@ -319,11 +319,13 @@ describe('species texts (T8) and the contract', () => {
     }
   });
 
-  it('contract per species: dog, domestic cat (CAT_SPEC §9), Maine Coon with brushing', () => {
+  it('contract per species: dog, domestic cat (CAT_SPEC §9), brushed cats (Maine Coon, Ragdoll, British Shorthair) with brushing', () => {
     expect(contractBody('dog', 'mutt')).toBe(t('contract:screen.body'));
     expect(contractBody('cat', 'domestic_cat')).toMatch(/^Zavezujem se, da bom vsak dan odgovorno skrbel za svojo virtualno muco/);
     expect(contractBody('cat', 'domestic_cat')).not.toMatch(/česal/);
     expect(contractBody('cat', 'maine_coon')).toMatch(/Redno jo bom česal, da se ji dlaka ne bo zavozlala\./);
+    // David 2026-10-11: the Ragdoll and the British Shorthair are brushed too.
+    for (const breed of ['ragdoll', 'british_shorthair']) expect(contractBody('cat', breed)).toMatch(/Redno jo bom česal/);
     expect(contractBody(null, null)).toBe(t('contract:screen.body'));
   });
 });

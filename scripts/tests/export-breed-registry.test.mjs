@@ -352,7 +352,12 @@ test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp &
       assert.equal(row(b.id, 'all', 'litter_full_change_days'), litter.change_days);
       assert.equal(row(b.id, 'all', 'play_min_gap_minutes'), g.rules.find((r) => r.key === 'play_instead_of_steps').params.gap_minutes);
       const groom = g.rules.find((r) => r.key === 'grooming_rule');
+      // Both ways: a seeded grooming row always has a register rule (David 2026-10-11).
       if (groom) assert.equal(row(b.id, 'all', 'grooming_sessions_per_week'), groom.params.per_week);
+      else {
+        const slug = b.slug.en;
+        assert.ok(!rows.some((x) => x.breed_slug === slug && x.key === 'grooming_sessions_per_week'), `${slug}: grooming row without a register rule`);
+      }
     }
   }
   // Free plans (no page, but their numbers are shown).
@@ -360,6 +365,18 @@ test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp &
   assert.equal(mutt.value * 100, registry.species[0].free_plan.adult_activity.value);
   const cat = rows.find((x) => x.breed_slug === 'domestic-cat' && x.stage === 'adult' && x.key === 'play_sessions_per_day');
   assert.equal(cat.value, registry.species[1].free_plan.adult_activity.value);
+});
+
+test('the app\'s brushed-cat list equals the seeded grooming rows (David 2026-10-11: nothing forgotten)', { skip: !(hasPhp && hasVendor) && 'php or backend/vendor missing' }, () => {
+  const code = `require $argv[1]; echo json_encode(Database\\Seeders\\BreedStageParamsSeeder::allRows());`;
+  const rows = JSON.parse(execFileSync('php', ['-r', code, resolve(ROOT, 'backend/vendor/autoload.php')], { encoding: 'utf8', cwd: resolve(ROOT, 'backend') }));
+  const seeded = [...new Set(rows.filter((x) => x.key === 'grooming_sessions_per_week').map((x) => x.breed_slug.replaceAll('-', '_')))].sort();
+  const species = readFileSync(resolve(ROOT, 'mobile/src/modules/species/species.ts'), 'utf8');
+  const m = /GROOMING_CAT_BREEDS: readonly BreedType\[\] = \[([^\]]*)\]/.exec(species);
+  assert.ok(m, 'GROOMING_CAT_BREEDS not found in mobile species.ts');
+  const app = [...m[1].matchAll(/'([a-z_]+)'/g)].map((x) => x[1]).sort();
+  assert.deepEqual(app, seeded);
+  assert.deepEqual(seeded, ['british_shorthair', 'maine_coon', 'ragdoll']);
 });
 
 // ─── breed portraits (M5-R11, David 2026-10-10: AI photos, labelled) ───
@@ -571,7 +588,7 @@ test('Siberian Husky (M5-R10-13): more than 2 hours, FCI weight by sex, FCI grou
   assert.doesNotMatch(json, /finland|9\.75|mcmillan_2024|hypoallergenic|odds ratio|merle|brindle|85-95/i);
 });
 
-test('British Shorthair (M5-R10-14): paid cat, kitten at 3 months, CFA weight by sex, growth 3–5 years, C14 "British" life expectancy, weekly comb, no grooming rule', () => {
+test('British Shorthair (M5-R10-14): paid cat, kitten at 3 months, CFA weight by sex, growth 3–5 years, C14 "British" life expectancy, weekly comb, grooming 1× per week (David 2026-10-11)', () => {
   const bsh = registry.breeds.find((b) => b.id === 'british_shorthair');
   assert.equal(bsh.species, 'cat');
   assert.equal(bsh.availability, 'coming_soon');
@@ -586,7 +603,7 @@ test('British Shorthair (M5-R10-14): paid cat, kitten at 3 months, CFA weight by
   assert.equal(bsh.game.stages[0].starts.arrival_months, 3);
   assert.deepEqual(bsh.game.stages.map((s) => s.starts.month ?? null), [null, 12, 84, 120]);
   assert.deepEqual(bsh.game.adult_activity, { kind: 'play_sessions', value: 2 });
-  assert.equal(bsh.game.rules.find((r) => r.key === 'grooming_rule'), undefined);
+  assert.equal(bsh.game.rules.find((r) => r.key === 'grooming_rule').params.per_week, 1); // David 2026-10-11
   assert.ok(bsh.game.values.some((v) => v.ref === 'cat-data:british_shorthair.arrival_age_kitten' && /pravilo runbooka, M5-R10-14/.test(v.decision)));
   // The cited sources are in the register (C26, the standard, feeds only the AI appearance).
   for (const id of ['C14', 'C27', 'C28']) assert.ok(registry.sources.some((s) => s.id === id), id);
@@ -685,7 +702,7 @@ test('Ragdoll (M5-R10-15): paid cat, kitten at 3 months, CFA weight by sex, full
   assert.equal(rag.game.stages[0].starts.arrival_months, 3);
   assert.deepEqual(rag.game.stages.map((s) => s.starts.month ?? null), [null, 12, 84, 120]);
   assert.deepEqual(rag.game.adult_activity, { kind: 'play_sessions', value: 2 });
-  assert.equal(rag.game.rules.find((r) => r.key === 'grooming_rule'), undefined);
+  assert.equal(rag.game.rules.find((r) => r.key === 'grooming_rule').params.per_week, 2); // David 2026-10-11
   assert.ok(rag.game.values.some((v) => v.ref === 'cat-data:ragdoll.arrival_age_kitten' && /pravilo runbooka, M5-R10-15/.test(v.decision)));
   // No health statistics and no median age at death of the C31 study in the register.
   const json = JSON.stringify(rag);

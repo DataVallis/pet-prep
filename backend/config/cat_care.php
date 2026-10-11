@@ -9,11 +9,12 @@
 | child did and the server judges it. A failed / aborted / expired /
 | interrupted session has no consequence: no penalty, start again at once.
 |
-| - `grooming` ("Počeši muco", Maine Coon only, 3× per program week, ≥ 1
-|   day apart): a short rubbing game — the app reports the comb strokes
+| - `grooming` ("Počeši muco", brushed cats: Maine Coon 3×, Ragdoll 2×,
+|   British Shorthair 1× per program week — David 2026-10-11; ≥ 1 day apart): a short rubbing game — the app reports the comb strokes
 |   ({t: ms since start}); it counts with ≥ `min_strokes` strokes spread
 |   over all `segments` and not machine-regular. While the coat is matted
-|   (≥ 2 of the previous week's 3 groomings missed, David 2026-10-08 ~22:20)
+|   (≥ half of the previous week's groomings missed — ceil(goal / 2); David
+|   2026-10-08 ~22:20, 2026-10-11)
 |   the next grooming lasts `matted_session_seconds` (~2×) and needs
 |   `matted_min_strokes`; it resolves the matted coat.
 | - `litter_change` (the weekly full change, CAT_SPEC Q3): dump, wash and

@@ -67,7 +67,7 @@ function ccFamily(string $bornLocal = '2026-10-20 08:00', BreedType $breed = Bre
     $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
     $child = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Mia']);
     setQuietHours(['parent_id' => $parent->id, 'bedtime_start' => '21:00', 'bedtime_end' => '07:00']);
-    if ($breed === BreedType::MaineCoon) {
+    if ($breed !== BreedType::DomesticCat) {
         $attributes += ['plan' => 'challenge', 'challenge_paid_at' => now(), 'challenge_paid_source' => 'purchase'];
     }
     $cat = disableHygieneEvents(Pet::factory()->create(array_merge([
@@ -650,6 +650,50 @@ describe('Maine Coon grooming (CAT_SPEC Q8) and the matted coat (David 2026-10-0
     });
 });
 
+describe('British Shorthair 1× and Ragdoll 2× per week grooming (David 2026-10-11)', function () {
+    it('gives the British Shorthair one grooming per program week and mats the coat when it is missed', function () {
+        [, $child, $cat] = ccFamily('2026-10-20 08:00', BreedType::BritishShorthair);
+        ccTick('2026-10-20 09:00');
+        ccAt('2026-10-21 10:00');
+        expect(ccState($child)['grooming'])->toMatchArray(['goal_per_week' => 1, 'done_this_week' => 0, 'matted' => false, 'can_start' => true]);
+        ccChore($child, 'grooming')->assertOk()->assertJsonPath('status', 'accepted')->assertJsonPath('state.grooming.done_this_week', 1);
+        ccAt('2026-10-22 10:00');
+        ccPost($child, '/api/child/pet/grooming/start')->assertStatus(422)->assertJsonPath('reason', 'grooming_week_done');
+
+        // Week 1 done → not matted; week 2 missed → matted at the weekly birthday.
+        ccTickHourly('2026-10-26 22:00', '2026-10-27 09:00');
+        expect($cat->fresh()->coat_matted_at)->toBeNull();
+        ccTickHourly('2026-11-02 22:00', '2026-11-03 09:00');
+        expect($cat->fresh()->coat_matted_at?->copy()->setTimezone('Europe/Ljubljana')->format('Y-m-d H:i'))->toBe('2026-11-03 08:00')
+            ->and(ccRoutines($cat, '2026-11-03', '2026-11-03', [RoutineType::Grooming]))->toBe([['2026-11-03', 'grooming', 0, 'missed', null]])
+            ->and($cat->fresh()->isIll())->toBeFalse();
+    });
+
+    it('gives the Ragdoll two groomings per program week and mats the coat when one of them is missed', function () {
+        [, $child, $cat] = ccFamily('2026-10-20 08:00', BreedType::Ragdoll);
+        ccTick('2026-10-20 09:00');
+        ccAt('2026-10-21 10:00');
+        expect(ccState($child)['grooming'])->toMatchArray(['goal_per_week' => 2, 'done_this_week' => 0, 'can_start' => true]);
+        ccChore($child, 'grooming')->assertOk()->assertJsonPath('status', 'accepted');
+        ccAt('2026-10-22 10:00');
+        ccChore($child, 'grooming')->assertOk()->assertJsonPath('state.grooming.done_this_week', 2);
+        ccAt('2026-10-23 10:00');
+        ccPost($child, '/api/child/pet/grooming/start')->assertStatus(422)->assertJsonPath('reason', 'grooming_week_done');
+
+        // 2 of 2 → not matted; next week 1 of 2 → matted (ceil(2 / 2) = 1).
+        ccTickHourly('2026-10-26 22:00', '2026-10-27 09:00');
+        expect($cat->fresh()->coat_matted_at)->toBeNull();
+        ccAt('2026-10-28 10:00');
+        ccChore($child, 'grooming')->assertOk();
+        ccTickHourly('2026-11-02 22:00', '2026-11-03 09:00');
+        expect($cat->fresh()->coat_matted_at)->not->toBeNull()
+            ->and(ccRoutines($cat, '2026-11-03', '2026-11-03', [RoutineType::Grooming]))->toBe([
+                ['2026-11-03', 'grooming', 0, 'done', $child->id],
+                ['2026-11-03', 'grooming', 1, 'missed', null],
+            ]);
+    });
+});
+
 describe('push: the litter reminder (M3-12 — only what the app allows)', function () {
     beforeEach(function () {
         config(['push.enabled' => true]);
@@ -713,9 +757,14 @@ describe('export, data provenance and payload contract', function () {
         $overdue = $data['general']['litter']['game_overdue_change_deadline'];
         $resolve = $data['general']['scratching']['game_resolve_deadline'];
         $matted = $data['maine_coon']['grooming']['game_matted_after_missed'];
+        // Matted = ceil(goal / 2) of the week's groomings missed, per breed (David 2026-10-11).
+        foreach (['maine_coon' => [3, 2], 'ragdoll' => [2, 1], 'british_shorthair' => [1, 1]] as $key => [$goal, $missed]) {
+            expect($data[$key]['grooming']['game_sessions_per_week']['value'])->toBe($goal)
+                ->and($data[$key]['grooming']['game_matted_after_missed']['value'])->toBe($missed)
+                ->and(CatChoreService::mattedAfterMissed($goal))->toBe($missed);
+        }
         expect($overdue['value'])->toBe(LitterService::OVERDUE_SCOOP_DEADLINE_HOURS)
             ->and($resolve['value'] * 3600)->toBe(RoutineLedgerService::CLEAN_WITHIN_SECONDS)
-            ->and($matted['value'])->toBe(CatChoreService::MATTED_AFTER_MISSED)
             ->and($resolve['decision'] ?? '')->toContain('potrdil David 2026-10-08')
             ->and($matted['decision'] ?? '')->toContain('22:20')
             ->and(ScratchingService::praiseWindowMs())->toBe(3000);

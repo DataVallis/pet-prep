@@ -49,7 +49,7 @@
  *        play sessions ............ cat general.play.game_sessions_{kitten,adult}, game_min_gap
  *        litter ................... cat general.litter.game_uses_per_day_*, game_scoop_deadline,
  *                                   full_change
- *        grooming (Maine Coon) .... cat maine_coon.grooming.game_sessions_per_week
+ *        grooming (pedigree cats) . cat <breed>.grooming.game_sessions_per_week (Maine Coon, British Shorthair, Ragdoll)
  *
  * Breed portraits (M5-R11, David 2026-10-10 — optional input):
  *   docs/research/breed-portraits/manifest.json      written by `php artisan breeds:portraits`
@@ -1080,8 +1080,10 @@ function catGame(R) {
       { key: 'litter_rule', params: { uses: usesA.value, scoop_hours: scoop.value, change_days: change.value } },
       { key: 'scratching_after_missed_play', params: {} },
     ];
-    if (id === 'maine_coon') {
-      const groom = n('maine_coon.grooming.game_sessions_per_week');
+    // Every cat whose data.json entry has a grooming game value (David 2026-10-11: every sourced
+    // need is built in the app); the export test checks it against the seeder and the app list.
+    if (R.entry(id)?.grooming?.game_sessions_per_week !== undefined) {
+      const groom = n(`${id}.grooming.game_sessions_per_week`);
       extra.push(groom);
       rules.push({ key: 'grooming_rule', params: { per_week: groom.value } });
     }

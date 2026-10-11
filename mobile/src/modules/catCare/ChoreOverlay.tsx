@@ -1,5 +1,5 @@
 /**
- * The stroke mini-games (M5-R06-08a): "Počeši muco" (Maine Coon grooming, CAT_SPEC Q8) and
+ * The stroke mini-games (M5-R06-08a): "Počeši muco" (brushed-cat grooming, CAT_SPEC Q8) and
  * the weekly full litter change (CAT_SPEC Q3) — one component, `kind` picks texts and art.
  * Server M5-R06-05 (`CatChoreService`): 30 s, ≥ `min_strokes` strokes spread over all
  * three thirds, not machine-regular; while the coat is matted the grooming lasts 60 s and

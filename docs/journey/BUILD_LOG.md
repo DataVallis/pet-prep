@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-11 — Vsaka potreba pasme je v igri: česanje britanske kratkodlake in ragdolla
+
+**Kaj se je zgodilo:** David je postavil stalno pravilo: **če katerakoli pasma karkoli potrebuje, tudi minimalno, mora to aplikacija omogočati** — nič več »predlog, ni zgrajeno«. Takoj sta dobili rutino »Počeši muco« še dve mački: **britanska kratkodlaka 1× na teden** (VCA: »vsaj enkrat na teden«) in **ragdoll 2× na teden** (PetMD: »enkrat do dvakrat na teden«; CFA in VetCompass pravita, da poldolga dlaka potrebuje redno nego). Če otrok v tednu zamudi vsaj polovico česanj, nastane vozel v dlaki — brez kazni, naslednje daljše česanje ga razreši. Pravilo je zdaj zapisano v runbook, zato ga vsak samodejni zagon za novo pasmo upošteva.
+
+**Zakaj je pomembno:** Simulacija mora pokazati vso skrb, ki jo prava žival zahteva — tudi tisto, ki se zdi majhna. Starš tako pred nakupom vidi, da tudi kratkodlaka mačka potrebuje česanje.
+
+**Številke:** 2 novi rutini (1× in 2× na teden), 1 splošno pravilo za vozel (polovica česanj tedna), 0 novih virov (C28, C30–C32 že zbrani); vse pasme mačk z virom za nego dlake imajo zdaj rutino (3 od 3 rodovniških mačk).
+
+**Kako povedati:**
+- 👩 Starši: »V PetPrep bo vsaka mačka zahtevala to, kar zahteva prava — tudi britanska kratkodlaka enkrat na teden potrebuje česanje.« (*ko bodo mačke v aplikaciji*)
+- 💼 Investitorji: »Pravila igre izhajajo iz virov za vsako pasmo posebej; nobena potreba ne ostane neupoštevana.«
+- 🤝 Partnerji (vzreditelji): »Otrok v simulaciji vadi tudi nego dlake, ki jo vaša pasma potrebuje.« (*načrt — ko bodo mačke vklopljene*)
+- 📣 Omrežja: še ne — mačke niso vklopljene.
+- 🛠 Tehnično: »`CatChoreService::mattedAfterMissed()` = ceil(cilj / 2); runbook §3 zahteva gradnjo vsake potrebe z virom v istem zagonu.«
+
+---
+
 ## 2026-10-11 — »Pred nakupom« za ves svet, genetika na spletu kot »v razvoju« (M5-R11-06b)
 
 **Kaj se je zgodilo:** Seznam »Pred nakupom« je zdaj mednaroden. Vsi obiskovalci vidijo splošne točke (pes 6, mačka 5), slovenski predpisi pa so v okvirju »V Sloveniji velja« samo na slovenski strani. Angleška stran ima eno vrstico, da se zakoni o starosti, čipiranju in cepljenju razlikujejo po državah, in ne navaja slovenskih virov. Na spletni strani sta genski test in kartica za veterinarja označena kot *v razvoju* (domača stran, stran AI asistenta, investitorji).

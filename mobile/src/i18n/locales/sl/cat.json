@@ -86,7 +86,7 @@
   "chore": {
     "grooming": {
       "title": "Počeši muco",
-      "intro": "S prstom nežno češi njeno dolgo dlako, potezo za potezo, od glave do repa.",
+      "intro": "S prstom nežno češi njeno dlako, potezo za potezo, od glave do repa.",
       "matted": "V dlaki ima vozel. To česanje traja malo dlje ({{seconds}} s) in vozel razreši.",
       "week": "Česanje ta teden: {{done}} od {{goal}}",
       "weekDone": "Vsa česanja ta teden so opravljena ✓",
@@ -247,7 +247,7 @@
     }
   },
   "contract": {
-    "bodyMaineCoon": "Zavezujem se, da bom vsak dan odgovorno skrbel za svojo virtualno muco:\n\n• Hranil jo bom ob pravem času.\n• Vsak dan ji bom dal svežo vodo.\n• Vsak dan bom počistil njen pesek in ga enkrat na teden zamenjal.\n• Vsak dan se bom igral z njo, da bo zdrava in vesela.\n• Redno jo bom česal, da se ji dlaka ne bo zavozlala.\n• Odzval se bom na opozorila, preden pride do bolezni ali virtualnega zavetišča.\n\nAli sprejemaš to odgovornost?"
+    "bodyWithBrushing": "Zavezujem se, da bom vsak dan odgovorno skrbel za svojo virtualno muco:\n\n• Hranil jo bom ob pravem času.\n• Vsak dan ji bom dal svežo vodo.\n• Vsak dan bom počistil njen pesek in ga enkrat na teden zamenjal.\n• Vsak dan se bom igral z njo, da bo zdrava in vesela.\n• Redno jo bom česal, da se ji dlaka ne bo zavozlala.\n• Odzval se bom na opozorila, preden pride do bolezni ali virtualnega zavetišča.\n\nAli sprejemaš to odgovornost?"
   },
   "parent": {
     "playDay": "Igra {{done}}/{{goal}}",
