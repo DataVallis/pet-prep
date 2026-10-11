@@ -185,6 +185,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "bulldog",
+            "species": "dog",
+            "file": "dog/bulldog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c0d0bc71c5555bae1c1fbabe9c2896b65af06750250dbba877b5eca14c641899",
+            "generated_at": "2026-10-11T19:44:01+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",

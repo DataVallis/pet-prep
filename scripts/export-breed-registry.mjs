@@ -701,7 +701,8 @@ const DOG_FACTS = {
       ['heat_stroke_risk', 'health.heat_stroke'],
       ['skin_fold_infections', 'health.skin_folds'],
       ['eyelid_eye_problems', 'health.eyes'],
-      ['hip_elbow_dysplasia', 'health.joints'],
+      // Own key: the shared hip_elbow_dysplasia sentence says breeders test hips / elbows — the Bulldog's RKC page lists no such test.
+      ['hip_elbow_joint_disease', 'health.joints'],
     ],
   },
 };
