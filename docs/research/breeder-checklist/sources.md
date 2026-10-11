@@ -32,6 +32,7 @@ that are new for this checklist get a K-id. Quotes in `data.json` are what the f
 ## Looked for but not found (2026-10-11)
 - **KZS / Slovenian breed-club breeding rules page** — kinoloska-zveza.si blocks crawlers; the "ask the breed club" item rests on FCI Art. 19 (K7).
 - **British Shorthair parents' tests** — no A/B source naming tests for breeding British Shorthairs (only commercial-lab pages, tier C) → no breed-specific list.
+- **Siberian parents' tests** — World Cat Congress SIB comparison lists only GCCF deafness testing of white cats; NZCF's Siberian policy screens for HCM / PKD / PK deficiency only on suspicion → no routine breed-specific list (`not_found`).
 - **Cats, general parents' tests** — iCatCare and GCCF pages do not mention testing the parents; only PDSA (K13).
 - **German Shepherd, Havanese** — the first fetches were blocked; retried once successfully (S97, S138).
 - **Labrador, current RKC format** — royalkennelclub.com returned a server error; K16 (older page) used.
