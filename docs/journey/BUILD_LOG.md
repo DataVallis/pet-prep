@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-11 — Veterinar predlaga genetiko; register dobi »Pred nakupom: kaj preveriti pri vzreditelju« (M5-R11-06)
+
+**Kaj se je zgodilo:** Veterinar je Davidu predlagal tri stvari: genski test v aplikaciji, izpis pasem za mešančka iz rezultata testa in vzrejne pogoje po pasmi. David je v vprašalniku odločil: genski del (nakup testa, AI izpis z viri, kartica za veterinarja) gre v **fazo 2** za pse in mačke, lasten PetPrep test je dolgoročni cilj, **seznam »Pred nakupom« pa takoj**. Zdaj ima vsaka stran pasme na petprep.si sekcijo s splošnimi točkami (slovenski predpisi: 8 tednov za mladička psa, 12 za mačjega, mikročip do 8. tedna, prijava v 7 dneh, cepljenje proti steklini, obvezni profil DNK vzrejnih psov) in z zdravstvenimi testi staršev za to pasmo.
+
+**Zakaj je pomembno:** Družina pred nakupom pogosto ne ve, kaj vprašati. Kavalir potrebuje pregled srca, nemški ovčar slikanje kolkov in komolcev, maine coon gensko testiranje na HCM — PetPrep to zdaj pove za vsako pasmo, z viri in brez obljub. Je prvi korak od simulacije k pomoči pri resnični odločitvi (faza 2).
+
+**Številke:** 16 pasem (14 psov, 2 mačk), 14 splošnih točk, 18 novih virov (K1–K18), 38 različnih testov; 15 pasem s seznamom ali izrecnim »testov ni«, 1 (britanska kratkodlaka) brez vira A/B — pošteno zapisano. Izvoz registra 33 testov (32 zelenih, 1 preskočen brez PHP).
+
+**Kako povedati:**
+- 👩 Starši: »Preden kupite mladička: preverite, da je star vsaj 8 tednov, da ima čip in cepljenja — in prosite za izvide testov obeh staršev. Na petprep.si piše, katere teste potrebuje vaša pasma.«
+- 🤝 Partnerji (veterinarji, pasemski klubi): »PetPrep kupce pošlje k odgovornim vzrediteljem — tistim, ki testirajo starše.«
+- 💼 Investitorji: »Prvi korak v fazo 2: od simulacije do pomoči pri nakupu resnične živali; genetika (testi, izpis, kartica za veterinarja) je naslednji prihodkovni del.«
+- 📣 Omrežja: kratka objava »5 stvari, ki jih preverite pri vzreditelju« s povezavo na register.
+- 🛠 Tehnično: »Seznam je ločena datoteka z viri (`breeder-checklist/data.json`); izvoz preveri vsak citat, pasma brez vnosa je `not_checked`, nova pasma ga doda po runbooku.«
+
+---
+
 ## 2026-10-11 — Britanska kratkodlaka mačka: druga plačljiva mačka, prvič po runbooku (M5-R10-14)
 
 **Kaj se je zgodilo:** PetPrep ima drugo plačljivo pasmo mačke — **britansko kratkodlako mačko** (British Shorthair). Je prva mačka, dodana v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), in je skrita skupaj z vsemi mačkami, dokler jih David ne vklopi. Raziskava: **3 novi viri (C26–C28)** — standard FIFe, stran pasme CFA in VCA. Pravila igre so splošna mačja pravila (igra s palico 2× na dan, pesek, voda 2× na dan); mucek pride pri **3 mesecih**, ker rodovniški mucki gredo od doma pri 12–13 tednih (PDSA). Rutine česanja nima — to je po potrjenem specu samo pri Maine Coonu; tedensko česanje kratke dlake (VCA) čaka Davida.
