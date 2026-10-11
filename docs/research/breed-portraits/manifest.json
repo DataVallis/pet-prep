@@ -197,6 +197,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "german_shorthaired_pointer",
+            "species": "dog",
+            "file": "dog/german-shorthaired-pointer.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:1d88dd0a418efe1fd464aa5d94bde77e263ab658f9c91bcdac3acf8a9f2d6a3c",
+            "generated_at": "2026-10-11T22:15:31+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",

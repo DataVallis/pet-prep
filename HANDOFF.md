@@ -192,6 +192,9 @@ Older queue (still valid where not done):
 ### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-21 German Shorthaired Pointer (branch `feat/M5-R10-21-german-shorthaired-pointer`, PR #182)
 - No `todo` row in `BREED_QUEUE.md` → appended row 21 German Shorthaired Pointer (AKC 2024 No. 10, S174) and took the lock with draft PR #182 before research.
 - Research S184–S189 (FCI standard + nomenclature, GSPCA / AKC standard, RKC breed page (older address, several key-fact values not returned), PDSA 'German Pointer', Dogs Trust breed page) + McMillan 2024 median 13.4 y from the Dogs Trust table (S123) → backend → mobile (schema.ts additive) → register export → docs. Tests: Pest **2,407**, Jest **2,052**, export **41** — all green locally; pint clean, tsc clean.
+- **Review:** `qa-reviewer` CHANGES REQUESTED (no blockers) → sheds quote = Dogs Trust fact field, natural tail recorded as Claude's proposal (not a runbook rule), S123 credits the GSP row, `TrainingCommand::Come`, v1 prompt nose, social copy — fixed in `6cc817b`.
+- **Merge / deploy:** PR #182 merged as `19c2c41` on green `CI OK`; main run 38179248367 "Deploy to Hetzner Production" success. Draft portrait PR #183 opened right after the merge (lock).
+- **Portrait:** run 38179654246 ($0.15, AI Lab) — liver roan with a solid liver head, natural tail, one adult dog, plain backdrop, realistic photo → accepted first try; only the GSP webp + manifest entry taken (main's Labrador kept). Website PR #38 (`/animals/dogs/german-shorthaired-pointer`, `/sl/zivali/psi/nemski-kratkodlaki-pticar`; FCI group 7 words + five health sentences).
 - Cloud notes: `gh` CLI token invalid in this run → GitHub MCP tools for PRs / CI; composer installs from source (slow, ~20 min).
 
 ### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-20 Bulldog (branch `feat/M5-R10-20-bulldog`, PR #180)
