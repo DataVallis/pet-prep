@@ -53,7 +53,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "9d1f02c8c4a6243f9c617adf67cd98b70e07893e7f2c0f1a2381344ba3236e87"
+      "sha256": "00b97c172d7fb76b18e0e5800169ff78110b34d0caa8edcc151246196e3e9b0d"
     }
   },
   "suitability_vocabulary": {
@@ -11138,7 +11138,12 @@
           "C44"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "bengal.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
