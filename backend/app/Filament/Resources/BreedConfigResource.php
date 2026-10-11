@@ -195,7 +195,7 @@ class BreedConfigResource extends Resource
                     ->options(collect(Species::cases())->mapWithKeys(fn (Species $s): array => [$s->value => ucfirst($s->value)])->all())
                     ->default(Species::Dog->value)
                     ->required()
-                    ->helperText('Dog / cat. For a breed the app knows (mutt, border-collie, labrador-retriever, golden-retriever, french-bulldog, german-shepherd-dog, cavalier-king-charles-spaniel, beagle, poodle-standard, dachshund, australian-shepherd, havanese, west-highland-white-terrier, bernese-mountain-dog, siberian-husky, domestic-cat, maine-coon, british-shorthair, ragdoll) the species is fixed by the code and this value is ignored.'),
+                    ->helperText('Dog / cat. For a breed the app knows (mutt, border-collie, labrador-retriever, golden-retriever, french-bulldog, german-shepherd-dog, cavalier-king-charles-spaniel, beagle, poodle-standard, dachshund, australian-shepherd, havanese, west-highland-white-terrier, bernese-mountain-dog, siberian-husky, domestic-cat, maine-coon, british-shorthair, ragdoll, siberian-cat) the species is fixed by the code and this value is ignored.'),
 
                 Forms\Components\TextInput::make('sort_order')
                     ->integer()

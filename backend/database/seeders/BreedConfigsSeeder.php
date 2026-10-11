@@ -427,6 +427,22 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.ragdoll',
                 'search_keywords' => ['ragdoll', 'ragdoll mačka', 'ragdoll macka', 'ragdol', 'rag doll'],
             ],
+            [
+                // M5-R10-16 (cat-data siberian_cat.identity.decision, runbook rule): paid, after the Ragdoll.
+                'breed_slug' => BreedType::SiberianCat->slug(),
+                'daily_steps_required' => 0,
+                'hunger_decay_rate' => 8.0,
+                'thirst_decay_rate' => 8.0,
+                'poops_per_day' => 0,
+                'feed_windows' => self::CAT_FEED_WINDOWS,
+                'water_times_per_day' => 2,
+                'water_min_gap_minutes' => 240,
+                'premium_unlock' => true,
+                'species' => 'cat',
+                'sort_order' => 40,
+                'label_key' => 'breeds.siberian_cat',
+                'search_keywords' => ['siberian', 'siberian cat', 'sibirska mačka', 'sibirska macka', 'sibirka'],
+            ],
         ];
     }
 

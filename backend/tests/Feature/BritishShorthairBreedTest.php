@@ -166,7 +166,7 @@ describe('breed, config and database', function () {
 
     it('leaves the dog rows and the other cats\' rows untouched', function () {
         expect(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'british-shorthair')->all())->toBe([])
-            ->and(collect(BreedStageParamsSeeder::catRows())->pluck('breed_slug')->unique()->values()->all())->toBe(['domestic-cat', 'maine-coon', 'british-shorthair', 'ragdoll'])
+            ->and(collect(BreedStageParamsSeeder::catRows())->pluck('breed_slug')->unique()->values()->all())->toBe(['domestic-cat', 'maine-coon', 'british-shorthair', 'ragdoll', 'siberian-cat'])
             ->and(collect(BreedStageParamsSeeder::catRows())->where('breed_slug', '!=', 'british-shorthair')
                 ->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_BRITISH_SHORTHAIR)->all())->toBe([])
             // The Maine Coon still has its grooming row and its own lifespan / arrival.
@@ -335,7 +335,7 @@ describe('GET /api/breeds', function () {
         config(['petprep.cats_enabled' => true]);
         $cats = getJson('/api/breeds?'.http_build_query(['species' => 'cat', 'features' => ['species_cat']]))->assertOk()->json('breeds');
 
-        expect(array_column($cats, 'breed'))->toBe(['domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll'])
+        expect(array_column($cats, 'breed'))->toBe(['domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat'])
             ->and($cats[2])->toMatchArray([
                 'breed' => 'british_shorthair', 'slug' => 'british-shorthair', 'species' => 'cat', 'premium' => true,
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.british_shorthair',

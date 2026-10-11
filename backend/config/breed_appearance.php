@@ -177,6 +177,18 @@
 | bicolour in seal, blue, chocolate, lilac, red, cream (C29). Slow to mature: full coat
 | colour at two years, full size at four (CFA C30). Seal colourpoint is weighted
 | highest (portrait default); colour / pattern weights are unsourced → `verified => false`.
+|
+| Siberian (M5-R10-16, docs/research/cat-data siberian_cat.appearance): medium to large,
+| rectangular, well boned and muscled body, powerful neck, broad chest; head a little
+| longer than broad, softly rounded, massive; medium-length broad nose with a slight
+| indentation, no stop; medium ears, well open at the base, rounded tips with tufts;
+| large, slightly oval eyes set wide apart — any colour except blue (blue only with
+| white); large round paws tufted between the toes; thick, medium-length tail with a
+| rounded tip; semi-long, very dense, water-repellent coat, frill and knickerbockers in
+| winter (FIFe SIB / NEM 01.07.2026, C33). All colours with or without white EXCEPT
+| pointed (= the Neva Masquerade), chocolate, lilac, cinnamon and fawn (C33). Slow to
+| mature: full development at four to five years (GCCF C34). Brown (black) tabby is
+| weighted highest (portrait default); colour weights are unsourced → `verified => false`.
 */
 
 return [
@@ -1059,6 +1071,82 @@ return [
                 'build' => 'long-bodied, still slender',
                 'tail' => 'long, bushy',
                 'features' => ['a broad, modified-wedge head with a rounded muzzle', 'large, oval eyes', 'a bib of longer fur that is still filling out'],
+            ],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    'siberian_cat' => [
+        'display_name' => 'Siberian cat',
+        // Colour / pattern weights are not in the standard (unsourced) — same rule as the Maine Coon.
+        'verified' => false,
+        'source' => 'FIFe breed standard Siberian / Neva Masquerade (SIB / NEM), 01.07.2026 (C33, https://www.fifeweb.org/wp-content/uploads/2023/10/SIB-NEM.pdf) — for the traits listed in `sources`; weight / maturity C34 (GCCF). Colour and pattern weights are unsourced.',
+        'sources' => [
+            'size' => 'C33 "Medium to large, females mostly smaller than males"; C34 GCCF males 7.7–11.8 kg, females 5.9–7.7 kg',
+            'build' => 'C33 "Well boned and muscled, powerful neck, broad chest, body in proportion to create a rectangular appearance."',
+            'coat_length' => 'C33 "Semi-long, well developed, very dense, undercoat not lying flat, overcoat water repellent, slightly hard to touch."; frill and knickerbockers in the winter coat',
+            'coat_color' => 'C33 "All colour varieties are permitted, including all colour varieties with white;" — not pointed, chocolate, lilac, cinnamon or fawn; weights unsourced',
+            'coat_pattern' => 'C33 tabby, solid, tortie, silver and with-white varieties — weights unsourced',
+            'ear_carriage' => 'C33 ears "Medium size, well open at the base, tips are rounded with well-developed hairs inside and tufts."; slight forward tilt',
+            'eye_color' => 'C33 eyes "Large, slightly oval shaped"; all eye colours except blue (blue only with white)',
+            'tail' => 'C33 tail "Of medium length, thick, rounded tip."; densely covered',
+            'features' => 'C33 head "A little bit longer than broad, softly rounded, massive."; nose "Medium length, broad, in profile shows a slight indentation, but without stop."; paws "Large, round, well tufted between toes."',
+            'stage_notes' => 'C34 "full development can take four to five years"; kitten look (D) — CAT_SPEC §8',
+        ],
+        'traits' => [
+            'size' => ['medium-large'],
+            'build' => [['value' => 'powerful, well-muscled, broad-chested, rectangular', 'weight' => 2], 'sturdy, solid-boned, rectangular'],
+            'coat_length' => ['semi-long, very dense, with a full neck ruff'],
+            // FIFe colours only (C33): never pointed, chocolate, lilac, cinnamon or fawn. Brown tabby first and highest (portrait default).
+            'coat_color' => [
+                ['value' => 'brown', 'weight' => 4],
+                ['value' => 'silver', 'weight' => 2],
+                'red',
+                'black',
+                'blue-grey',
+                'cream',
+                'white',
+                'tortoiseshell black and red',
+            ],
+            'coat_pattern' => [
+                ['value' => 'with mackerel tabby stripes', 'weight' => 3, 'only_with' => ['coat_color' => ['brown', 'silver', 'red', 'blue-grey', 'cream']]],
+                ['value' => 'with classic tabby markings', 'weight' => 2, 'only_with' => ['coat_color' => ['brown', 'silver', 'red', 'blue-grey', 'cream']]],
+                ['value' => 'solid', 'only_with' => ['coat_color' => ['black', 'blue-grey', 'white']]],
+                ['value' => 'with a white chest, belly and paws', 'only_with' => ['coat_color' => ['brown', 'black', 'red', 'blue-grey']]],
+                ['value' => 'with mottled patches', 'only_with' => ['coat_color' => ['tortoiseshell black and red']]],
+            ],
+            'ear_carriage' => ['medium, round-tipped, tufted, slightly forward-tilted'],
+            // Any eye colour except blue; blue only on a white cat (C33).
+            'eye_color' => [
+                ['value' => 'green-gold', 'weight' => 3, 'only_with' => ['coat_color' => ['brown', 'silver', 'red', 'black', 'blue-grey', 'cream', 'tortoiseshell black and red']]],
+                ['value' => 'green', 'only_with' => ['coat_color' => ['brown', 'silver', 'black', 'blue-grey']]],
+                ['value' => 'amber', 'only_with' => ['coat_color' => ['brown', 'red', 'black', 'blue-grey', 'cream', 'white', 'tortoiseshell black and red']]],
+                ['value' => 'deep blue', 'only_with' => ['coat_color' => ['white']]],
+            ],
+            'tail' => ['thick, medium-length, densely furred, rounded at the tip'],
+        ],
+        'features' => [
+            'a softly rounded, massive head a little longer than broad',
+            'a medium-length, broad nose with a gentle dip and no stop',
+            'large, slightly oval eyes set wide apart',
+            'large, round paws with tufts of fur between the toes',
+        ],
+        // CAT_SPEC §8 (D): the Siberian is slow to mature — full development at four to five years (C34).
+        'stage_notes' => [
+            'puppy' => 'As a Siberian kitten it is a fluffy, sturdy ball of fur with a softer coat than an adult',
+            'young' => 'As a young Siberian it is not fully grown yet: lighter and less massive than an adult, its ruff still filling out (the breed reaches full development at four to five years)',
+        ],
+        // A growing Siberian: no adult "massive head" / "full neck ruff" wording next to the stage note.
+        'stage_overrides' => [
+            'puppy' => [
+                'build' => 'small, sturdy, fluffy',
+                'coat_length' => 'soft, fluffy, medium-long',
+                'tail' => 'fluffy',
+                'features' => ['a rounded head with a short, broad nose', 'large, slightly oval eyes'],
+            ],
+            'young' => [
+                'build' => 'sturdy, rectangular, not yet heavy',
+                'coat_length' => 'semi-long, dense, the ruff still filling out',
+                'features' => ['a softly rounded head a little longer than broad', 'a medium-length, broad nose with a gentle dip and no stop', 'large, slightly oval eyes set wide apart'],
             ],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],

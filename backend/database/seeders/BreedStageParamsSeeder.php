@@ -254,6 +254,19 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_RAGDOLL = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-15)';
 
     /**
+     * M5-R10-16 Siberian (unattended run 2026-10-11, runbook §3 standing rules confirmed by
+     * David 2026-10-10; cat-data siberian_cat.*.decision): the pedigree kitten arrives at
+     * 3 months (CAT_SPEC Q4 rule, C13). Everything else is the general cat rule.
+     */
+    public const CONFIRMED_R10_SIBERIAN_CAT = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-16)';
+
+    /**
+     * M5-R10-16 Siberian grooming (runbook §3 Cats, David's grooming rule of 2026-10-11):
+     * 1× per week (PetMD C35 "at least once a week"); matted coat at ceil(1 / 2) = 1.
+     */
+    public const CONFIRMED_R10_SIBERIAN_CAT_GROOMING = 'potrdil David 2026-10-11 (pravilo runbooka, M5-R10-16)';
+
+    /**
      * David 2026-10-11: every sourced breed-specific need is built in the app (no
      * "proposal, not built"). Grooming: British Shorthair 1× per week (VCA C28 "at
      * least weekly"), Ragdoll 2× per week (upper bound of PetMD C32 "once or twice
@@ -262,7 +275,7 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_CAT_GROOMING_2026_10_11 = 'potrdil David 2026-10-11';
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
-    public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll];
+    public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
     public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky];
@@ -687,7 +700,7 @@ class BreedStageParamsSeeder extends Seeder
             // S158–S165; runbook rules in proposed_game_parameters.siberian_husky).
             BreedType::SiberianHusky => self::siberianHuskyProfile(),
 
-            BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
+            BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
     }
 
@@ -1691,7 +1704,8 @@ class BreedStageParamsSeeder extends Seeder
      * have no steps), no senior sleep hours (no entry), no grooming row for
      * the domestic cat (no grooming routine, CAT_SPEC Q8). Pedigree cats have
      * their own kitten arrival 3, lifespan and grooming rows (Maine Coon 3×,
-     * British Shorthair 1×, Ragdoll 2× per week — David 2026-10-11).
+     * British Shorthair 1×, Ragdoll 2× per week — David 2026-10-11; Siberian 1× —
+     * runbook rule, M5-R10-16).
      *
      * @return list<array<string, mixed>>
      */
@@ -1703,6 +1717,7 @@ class BreedStageParamsSeeder extends Seeder
             $mc = $breed === BreedType::MaineCoon;
             $bsh = $breed === BreedType::BritishShorthair;
             $rag = $breed === BreedType::Ragdoll;
+            $sib = $breed === BreedType::SiberianCat;
             $slug = $breed->slug();
             $add = function (string $stage, int $from, StageParamKey $key, mixed $value, array $meta) use (&$rows, $slug): void {
                 $rows[] = array_merge([
@@ -1742,7 +1757,7 @@ class BreedStageParamsSeeder extends Seeder
             }
 
             // ── Age at arrival (CAT_SPEC Q4) ─────────────────────────────────
-            $add('puppy', 0, StageParamKey::ArrivalAgeMonths, $mc || $bsh || $rag ? 3 : 2, $mc ? [
+            $add('puppy', 0, StageParamKey::ArrivalAgeMonths, $mc || $bsh || $rag || $sib ? 3 : 2, $mc ? [
                 'unit' => 'months', 'source_id' => 'C13', 'confidence' => 'high', 'verified' => true,
                 'ref' => 'maine_coon.arrival_age_kitten', 'decision' => self::CONFIRMED_CAT,
                 'quote' => 'Pedigree kittens are usually rehomed over 12-13 weeks old',
@@ -1756,11 +1771,16 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'ragdoll.arrival_age_kitten', 'decision' => self::CONFIRMED_R10_RAGDOLL,
                 'quote' => 'Pedigree kittens are usually rehomed over 12-13 weeks old',
                 'notes' => 'Same rule as the Maine Coon and the British Shorthair (CAT_SPEC Q4: pedigree kittens).',
+            ] : ($sib ? [
+                'unit' => 'months', 'source_id' => 'C13', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'siberian_cat.arrival_age_kitten', 'decision' => self::CONFIRMED_R10_SIBERIAN_CAT,
+                'quote' => 'Pedigree kittens are usually rehomed over 12-13 weeks old',
+                'notes' => 'Same rule as the Maine Coon, British Shorthair and Ragdoll (CAT_SPEC Q4: pedigree kittens).',
             ] : [
                 'unit' => 'months', 'source_id' => 'C13', 'confidence' => 'high', 'verified' => true,
                 'ref' => 'general.arrival_age.kitten_min', 'decision' => self::CONFIRMED_CAT,
                 'quote' => 'Kittens shouldn\'t be rehomed until they\'re at least 8 weeks old',
-            ])));
+            ]))));
             foreach (['young' => 12, 'adult' => 84, 'senior' => 120] as $stage => $age) {
                 $add($stage, 0, StageParamKey::ArrivalAgeMonths, $age, [
                     'unit' => 'months', 'verified' => true,
@@ -1895,6 +1915,14 @@ class BreedStageParamsSeeder extends Seeder
                     'notes' => 'Upper bound of the PetMD range (CFA C30 "on a regular basis", VetCompass C31 "need more grooming care"). Matted coat when ≥ 1 of 2 is missed (ceil(2 / 2)).',
                 ]);
             }
+            if ($sib) {
+                $add('all', 0, StageParamKey::GroomingSessionsPerWeek, 1, [
+                    'unit' => 'combing sessions/week', 'source_id' => 'C35', 'confidence' => 'medium', 'verified' => true,
+                    'ref' => 'siberian_cat.grooming.game_sessions_per_week', 'decision' => self::CONFIRMED_R10_SIBERIAN_CAT_GROOMING,
+                    'quote' => 'The Siberian’s water-resistant triple coat is not maintenance-free, requiring grooming sessions at least once a week.',
+                    'notes' => '"At least once a week" → 1 slot per program week (runbook §3 Cats). Extra combing in the spring / autumn moult is not modelled; GCCF C34 "a few times a week" kept as an alternative for David. Matted coat when the week\'s grooming is missed (ceil(1 / 2) = 1).',
+                ]);
+            }
             if ($bsh) {
                 $add('all', 0, StageParamKey::LifespanYears, 9.58, [
                     'unit' => 'years (life expectancy at birth, UK)', 'source_id' => 'C14', 'confidence' => 'medium', 'verified' => true,
@@ -1908,6 +1936,13 @@ class BreedStageParamsSeeder extends Seeder
                     'ref' => 'ragdoll.lifespan.expectancy_at_birth',
                     'quote' => 'Ragdoll 10.31 y',
                     'notes' => 'Background for parents and appearance only; the senior boundary comes from C1, not from the lifespan.',
+                ]);
+            } elseif ($sib) {
+                $add('all', 0, StageParamKey::LifespanYears, 12.0, [
+                    'unit' => 'years (lower bound of the GCCF range 12–15)', 'source_id' => 'C34', 'confidence' => 'medium', 'verified' => true,
+                    'ref' => 'siberian_cat.lifespan.gccf_lower_bound',
+                    'quote' => 'The Siberian cat breed is very healthy and can live 12 to 15 years or more.',
+                    'notes' => 'No Siberian row in the VetCompass life tables (C14) → the GCCF lower bound (the dog rule for a range). Background for parents and appearance only; the senior boundary comes from C1, not from the lifespan.',
                 ]);
             } else {
                 $add('all', 0, StageParamKey::LifespanYears, $mc ? 9.71 : 11.89, [
