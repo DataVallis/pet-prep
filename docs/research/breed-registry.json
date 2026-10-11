@@ -45,7 +45,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "dbf4bc713a3e17ec0425152b45c114178acb98411dd9f850015912621104c88e"
+      "sha256": "f7c611044f1d7a97890c0d5ec3e6610cfe0dac32b58f80003dae63d3cf65cd76"
     }
   },
   "suitability_vocabulary": {
@@ -8693,7 +8693,12 @@
           "C13"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "british-shorthair.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "source_ids": [
         "C1",
         "C2",

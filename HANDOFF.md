@@ -169,8 +169,11 @@ Older queue (still valid where not done):
 
 ## 6. Session log
 
-### 2026-10-11 (cloud, unattended) — M5-R10-14 British Shorthair (branch `feat/M5-R10-14-british-shorthair`, PR #163)
-- **Lock:** draft PR #163 opened before research (queue row → in-progress).
+### 2026-10-11 (cloud, unattended) — M5-R10-14 British Shorthair (branch `feat/M5-R10-14-british-shorthair`, PR #163; portrait PR #164, website PR #28)
+- **Lock:** draft PR #163 opened before research (queue row → in-progress); draft portrait PR #164 opened right after the #163 merge to keep it.
+- **Merge / deploy:** PR #163 merged as `5fad310` on green `CI OK`; main run 38109850593 "Deploy to Hetzner Production" success.
+- **Portrait:** run 38110016035 ($0.15, AI Lab), accepted first try — realistic photo, one adult blue-grey cat, copper eyes, fog-grey backdrop, moderate face; main's Labrador portrait kept.
+- **Website:** PR #28 — new grooming value word, EN / SL intro, `views.ts` glance rows skip a comparison field the breed has no fact for before the label lookup (the build failed on "no words for group grooming_sources_differ").
 - **Research:** C26–C28 in `cat-data/sources.md`, `cat-data/data.json british_shorthair.*`; FIFe BLH/BSH standard (01.07.2026, no weight), CFA breed page (weight by sex, full size at 3 years, behaviour), VCA (weekly comb, maturity up to 5 years); C13 / C14 / C19 reused. Not found: a breed-only lifespan, GCCF / TICA weight, any advice against advertising the breed.
 - **Backend:** `BreedType::BritishShorthair` (slug `british-shorthair`, species cat, paid), migration `2026_11_15_120000` (breed + species CHECKs), `BreedConfigsSeeder` row (sort 20, Maine Coon cat values), `catRows()` via `CAT_BREEDS`, `breed_appearance.php` (FIFe colours, blue-grey highest, stage notes + overrides, moderate nose), `FalAiService` v1 refusals, unions, `PetFactory::britishShorthair()`, `BritishShorthairBreedTest` (helpers `bsh*`) + shared counts / lists.
 - **App:** `schema.ts` regenerated (additive: `british_shorthair`), `BREED_SPECIES`, names (EN British Shorthair, SL Britanska kratkodlaka mačka), hints, cat plan notes without breed names, tests.

@@ -183,6 +183,18 @@
             "prompt_hash": "sha256:11b566c9c80a122528b3af3603ee640679290feac95382d783abae9b976436f2",
             "generated_at": "2026-10-10T05:48:13+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "british_shorthair",
+            "species": "cat",
+            "file": "cat/british-shorthair.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:8bdfc773797c813dfa20bf87e07bb0769d13580812b99c1e726a5ba000fe7160",
+            "generated_at": "2026-10-11T03:57:35+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
