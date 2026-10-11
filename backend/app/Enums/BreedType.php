@@ -31,6 +31,7 @@ enum BreedType: string
     case SiberianHusky = 'siberian_husky';
     case DomesticCat = 'domestic_cat';
     case MaineCoon = 'maine_coon';
+    case BritishShorthair = 'british_shorthair';
 
     /**
      * Get the breed slug as used in the breed_configs table.
@@ -55,6 +56,7 @@ enum BreedType: string
             self::SiberianHusky => 'siberian-husky',
             self::DomesticCat => 'domestic-cat',
             self::MaineCoon => 'maine-coon',
+            self::BritishShorthair => 'british-shorthair',
         };
     }
 
@@ -73,7 +75,7 @@ enum BreedType: string
     {
         return match ($this) {
             self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky => Species::Dog,
-            self::DomesticCat, self::MaineCoon => Species::Cat,
+            self::DomesticCat, self::MaineCoon, self::BritishShorthair => Species::Cat,
         };
     }
 
@@ -98,7 +100,7 @@ enum BreedType: string
     {
         return match ($this) {
             self::Mutt, self::DomesticCat => false,
-            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::MaineCoon => true,
+            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::MaineCoon, self::BritishShorthair => true,
         };
     }
 

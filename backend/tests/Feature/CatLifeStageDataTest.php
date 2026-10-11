@@ -103,7 +103,7 @@ function clPairedPet(array $profile): Pet
 describe('cat import provenance (cat-data/data.json)', function () {
     it('takes every cat value from cat-data/data.json with a listed C source or a David decision; UNSOURCED (D) would stay unverified', function () {
         $known = clSourceIds();
-        expect($known)->toHaveCount(25)->toContain('C1', 'C13', 'C25');
+        expect($known)->toHaveCount(28)->toContain('C1', 'C13', 'C25', 'C28');
 
         $rows = BreedStageParamsSeeder::catRows();
         expect($rows)->not->toBeEmpty();
@@ -156,7 +156,7 @@ describe('cat import provenance (cat-data/data.json)', function () {
     });
 
     it('matches the numbers of cat-data/data.json (stages 12 / 84 / 120, arrival 2 / 3 / 12 / 84 / 120, meals, windows, sleep)', function () {
-        foreach ([BreedType::DomesticCat, BreedType::MaineCoon] as $breed) {
+        foreach (BreedStageParamsSeeder::CAT_BREEDS as $breed) {
             $s = $breed->slug();
             $v = fn (string $stage, int $from, StageParamKey $key) => ($r = clRow($s, $stage, $from, $key)) !== null ? $r['value'] : 'MISSING';
 
@@ -170,8 +170,8 @@ describe('cat import provenance (cat-data/data.json)', function () {
                 ->and(clData('general.life_stages.senior')['decision'])->toContain('senior stage starts at 120 months');
 
             // Arrival ages (C13 + decisions).
-            expect($v('puppy', 0, StageParamKey::ArrivalAgeMonths))->toBe($breed === BreedType::MaineCoon
-                ? clData('maine_coon.arrival_age_kitten')['value'] : clData('general.arrival_age.kitten_min')['value'])
+            expect($v('puppy', 0, StageParamKey::ArrivalAgeMonths))->toBe($breed === BreedType::DomesticCat
+                ? clData('general.arrival_age.kitten_min')['value'] : clData($breed->value.'.arrival_age_kitten')['value'])
                 ->and($v('young', 0, StageParamKey::ArrivalAgeMonths))->toBe(clData('general.arrival_age.young')['value'])
                 ->and($v('adult', 0, StageParamKey::ArrivalAgeMonths))->toBe(clData('general.arrival_age.adult')['value'])
                 ->and($v('senior', 0, StageParamKey::ArrivalAgeMonths))->toBe(clData('general.arrival_age.senior')['value']);
@@ -209,7 +209,7 @@ describe('cat import provenance (cat-data/data.json)', function () {
     });
 
     it('stores the seven new cat keys with the data.json values (values only, no rules yet)', function () {
-        foreach ([BreedType::DomesticCat, BreedType::MaineCoon] as $breed) {
+        foreach (BreedStageParamsSeeder::CAT_BREEDS as $breed) {
             $s = $breed->slug();
             $v = fn (string $stage, StageParamKey $key) => ($r = clRow($s, $stage, 0, $key)) !== null ? $r['value'] : 'MISSING';
 
@@ -226,9 +226,10 @@ describe('cat import provenance (cat-data/data.json)', function () {
                 ->and(clData('general.play.missed_play_illness')['value'])->toBeFalse();
         }
 
-        // Grooming: Maine Coon only (CAT_SPEC Q8); the domestic cat has no row = no routine.
+        // Grooming: Maine Coon only (CAT_SPEC Q8); the domestic cat and the British Shorthair have no row = no routine.
         expect(clRow('maine-coon', 'all', 0, StageParamKey::GroomingSessionsPerWeek)['value'])->toBe(clData('maine_coon.grooming.game_sessions_per_week')['value'])
-            ->and(clRow('domestic-cat', 'all', 0, StageParamKey::GroomingSessionsPerWeek))->toBeNull();
+            ->and(clRow('domestic-cat', 'all', 0, StageParamKey::GroomingSessionsPerWeek))->toBeNull()
+            ->and(clRow('british-shorthair', 'all', 0, StageParamKey::GroomingSessionsPerWeek))->toBeNull();
 
         // Stage vs breed level.
         expect(StageParamKey::PlaySessionsPerDay->isBreedLevel())->toBeFalse()
@@ -249,7 +250,7 @@ describe('cat import provenance (cat-data/data.json)', function () {
     it('seeds the cat rows into the database with provenance; every cat row is verified since David confirmed the play gap (M5-R06-04)', function () {
         seedLifeStageData();
 
-        $cats = BreedStageParam::whereIn('breed_slug', ['domestic-cat', 'maine-coon']);
+        $cats = BreedStageParam::whereIn('breed_slug', ['domestic-cat', 'maine-coon', 'british-shorthair']);
         expect((clone $cats)->count())->toBe(count(BreedStageParamsSeeder::catRows()))
             ->and((clone $cats)->where('verified', false)->pluck('key')->unique()->values()->all())->toBe([]);
         $gap = BreedStageParam::where(['breed_slug' => 'maine-coon', 'key' => StageParamKey::PlayMinGapMinutes->value])->sole();
@@ -462,8 +463,9 @@ describe('regression: dogs unchanged by M5-R06-03', function () {
         $oldDogs = ['mutt', 'border-collie'];
         expect($hash(array_values(array_filter(BreedStageParamsSeeder::rows(), fn (array $r) => in_array($r['breed_slug'], $oldDogs, true)))))->toBe('28d500305a87d3ce98d4c3de9dc470d49ef60c7773a1c934daf081d2143ef199')
             ->and($hash($configs->where('species', 'dog')->whereIn('breed_slug', $oldDogs)->values()->all()))->toBe('e159cb38c1e2127ea7b4b2f35ce3ba9f93601b190d20af8a0266ea2180b66450')
-            ->and($hash($configs->where('species', 'cat')->values()->all()))->toBe('4470d9b9e1f44d9ce4db857683834f71b2a100d37df70bac30039e3a19f48d72')
-            ->and(collect(BreedStageParamsSeeder::catRows())->pluck('breed_slug')->unique()->values()->all())->toBe(['domestic-cat', 'maine-coon']);
+            // M5-R10-14 added the British Shorthair: the fingerprint covers the two cats of that time.
+            ->and($hash($configs->where('species', 'cat')->whereIn('breed_slug', ['domestic-cat', 'maine-coon'])->values()->all()))->toBe('4470d9b9e1f44d9ce4db857683834f71b2a100d37df70bac30039e3a19f48d72')
+            ->and(collect(BreedStageParamsSeeder::catRows())->pluck('breed_slug')->unique()->values()->all())->toBe(['domestic-cat', 'maine-coon', 'british-shorthair']);
     });
 
     it('seeds exactly the dog rows main seeded and gives dogs the same stage rules', function () {

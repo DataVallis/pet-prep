@@ -186,7 +186,7 @@ class FalAiService
                 .'moderately compact athletic build, light on its feet, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
-            BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
+            BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
     }
 
@@ -419,7 +419,7 @@ class FalAiService
                 'markings' => 'white face mask, white chest, legs and underside',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
-            BreedType::DomesticCat, BreedType::MaineCoon => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
+            BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
         };
     }
 
