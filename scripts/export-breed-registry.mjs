@@ -676,7 +676,7 @@ const DOG_FACTS = {
       ['laryngeal_paralysis_polyneuropathy', 'health.jlpp'],
       ['heart_sas', 'health.heart'],
       ['cancer_risk', 'health.cancer'],
-      ['inherited_eye_disease', 'health.eyes'],
+      ['inherited_eye_defects', 'health.eyes'],
     ],
   },
 };

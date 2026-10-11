@@ -821,7 +821,7 @@ test('Rottweiler (M5-R10-19): more than 2 hours, FCI weight by sex, FCI group 2 
   assert.deepEqual(d.game.stages[3].activity, { kind: 'steps', value: 9000 });
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'large_home']);
   assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'experienced_owner', 'hips_hind_legs', 'shorter_lifespan', 'sheds']);
-  assert.deepEqual(d.health.map((h) => h.key), ['hip_elbow_dysplasia', 'laryngeal_paralysis_polyneuropathy', 'heart_sas', 'cancer_risk', 'inherited_eye_disease']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_elbow_dysplasia', 'laryngeal_paralysis_polyneuropathy', 'heart_sas', 'cancer_risk', 'inherited_eye_defects']);
   const json = JSON.stringify(d);
   // No VetCompass percentages, no conflicting PDSA band, never "hypoallergenic", never white markings.
   assert.doesNotMatch(json, /mcmillan_2024|lifespan\.pdsa|common_disorders|hypoallergenic|odds ratio|33\.0|7\.46|7\.06|white markings/i);
