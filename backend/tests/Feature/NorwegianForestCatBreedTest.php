@@ -401,7 +401,7 @@ describe('AI appearance (FIFe colours only, a long straight profile, brown tabby
         expect($prompts->describe('norwegian_forest_cat', $traits))->toContain('long, straight profile')
             ->and($prompts->describe('norwegian_forest_cat', $traits))->toContain('at least as long as the body')
             ->and($prompts->describe('norwegian_forest_cat', $traits, LifeStage::Puppy))->not->toContain('strong-boned')
-            ->and($prompts->describe('norwegian_forest_cat', $traits, LifeStage::Puppy))->not->toContain('full neck ruff');
+            ->and($prompts->describe('norwegian_forest_cat', $traits, LifeStage::Puppy))->not->toContain('water-repellent');
         expect(array_keys((array) config('breed_appearance.norwegian_forest_cat.stage_overrides')))
             ->toBe(array_keys((array) config('breed_appearance.norwegian_forest_cat.stage_notes')));
     });

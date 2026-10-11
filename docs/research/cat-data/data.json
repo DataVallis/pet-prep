@@ -1216,7 +1216,7 @@
         "source_id": "C37",
         "quote": "they are tolerant of respectful children, other cats and cat-friendly dogs.",
         "confidence": "medium",
-        "notes": "GCCF also says to protect an aquarium or fish pond (\"They have a penchant for fishing\") — register text only."
+        "notes": "GCCF also says to protect an aquarium or fish pond (\"They have a penchant for fishing, so make sure the aquarium or fish pond is protected!\") — household advice in the register text only, not a care task for the child."
       },
       "activity": {
         "value": "lots of energy, enjoys interactive games and climbing",
@@ -1257,9 +1257,9 @@
         "value": "hip dysplasia can occur; keeping a healthy weight protects the joints",
         "unit": "text",
         "source_id": "C38",
-        "quote": "Hip dysplasia is a condition where the hip joint doesn't develop properly, leading to a loose joint",
+        "quote": "especially problematic given the breed's propensity toward hip dysplasia.",
         "confidence": "medium",
-        "notes": "PetMD (C38): obesity is \"especially problematic given the breed's propensity toward hip dysplasia.\" Weight control is already a general cat rule (meals / treats) — no new mechanic."
+        "notes": "PetMD (C38) describes hip dysplasia (\"Hip dysplasia is a condition where the hip joint doesn't develop properly, leading to a loose joint\") and ties obesity to the breed's propensity. Register text only (one calm sentence on the website). Weight is not modelled in the game for any cat (fixed meal windows, no free feeding, daily play) — like the dogs' weight advice, it stays information for parents."
       }
     },
     "appearance": {

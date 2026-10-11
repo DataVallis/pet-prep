@@ -767,5 +767,5 @@ test('Norwegian Forest Cat (M5-R10-17): paid cat, kitten at 3 months, GCCF weigh
   const json = JSON.stringify(nfo);
   assert.doesNotMatch(json, /odds ratio|allerg|colourpoint/i);
   assert.doesNotMatch(json, /\d+(\.\d+)?\s?%/);
-  for (const id of ['C37', 'C38']) assert.ok(registry.sources.some((s) => s.id === id), id);
+  for (const id of nfo.source_ids) assert.ok(registry.sources.some((s) => s.id === id), id);
 });

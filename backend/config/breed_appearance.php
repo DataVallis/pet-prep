@@ -1186,7 +1186,7 @@ return [
         'traits' => [
             'size' => ['medium-large'],
             'build' => [['value' => 'solid, long-bodied, strong-boned, with long muscular legs', 'weight' => 2], 'sturdy, elongated, well-muscled'],
-            'coat_length' => ['long, glossy, water-repellent top coat over a woolly undercoat, with a full neck ruff'],
+            'coat_length' => ['long, glossy, water-repellent top coat over a woolly undercoat'],
             // FIFe colours only (C40): never pointed, chocolate, lilac, cinnamon or fawn. Brown tabby first and highest (portrait default).
             'coat_color' => [
                 ['value' => 'brown', 'weight' => 4],
@@ -1207,7 +1207,7 @@ return [
                 ['value' => 'with a white chest, belly and paws', 'only_with' => ['coat_color' => ['black', 'red', 'blue-grey']]],
                 ['value' => 'with mottled patches', 'only_with' => ['coat_color' => ['tortoiseshell black and red']]],
             ],
-            'ear_carriage' => ['very large, broad-based, set high, with tufts'],
+            'ear_carriage' => ['very large, broad-based, set high'],
             // Even eye colour that goes with the coat (C36); no blue (not needed for a typical look).
             'eye_color' => [
                 ['value' => 'green-gold', 'weight' => 3],
@@ -1224,9 +1224,9 @@ return [
         // CAT_SPEC §8 (D): the Norwegian Forest Cat is slow to mature — fully grown at four to five years (C37).
         'stage_notes' => [
             'puppy' => 'As a Norwegian Forest Cat kitten it is a fluffy, leggy ball of fur with a softer coat than an adult',
-            'young' => 'As a young Norwegian Forest Cat it is not fully grown yet: lighter and less massive than an adult, its ruff still filling out (the breed is fully grown at four to five years)',
+            'young' => 'As a young Norwegian Forest Cat it is not fully grown yet: lighter and less massive than an adult, its coat still filling out (the breed is fully grown at four to five years)',
         ],
-        // A growing Norwegian Forest Cat: no adult "strong-boned" / "full neck ruff" wording next to the stage note.
+        // A growing Norwegian Forest Cat: no adult "strong-boned" / "massive" wording next to the stage note.
         'stage_overrides' => [
             'puppy' => [
                 'build' => 'small, leggy, fluffy',
@@ -1236,7 +1236,7 @@ return [
             ],
             'young' => [
                 'build' => 'long-bodied and leggy, not yet heavy',
-                'coat_length' => 'long, glossy, the ruff still filling out',
+                'coat_length' => 'long, glossy, still filling out',
                 'features' => ['a triangular head with a long, straight profile', 'large, open, slightly oval eyes', 'broad, round paws with tufts of fur between the toes'],
             ],
         ],

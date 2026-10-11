@@ -414,7 +414,7 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(S.young).toBe('Pride kot mlada mačka, stara 1 leto — norveška gozdna mačka raste do 4.–5. leta.');
     expect(S.adult).toBe('Pride kot zrela mačka, stara 7 let.');
     expect(S.senior).toBe('Pride kot starejša mačka, stara 10 let.');
-    expect(PICKER_STRINGS.breedHints.norwegian_forest_cat).toBe('Dolga, vodoodbojna dlaka · česanje 1× na teden');
+    expect(PICKER_STRINGS.breedHints.norwegian_forest_cat).toBe('Poldolga, vodoodbojna dlaka · česanje 1× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.norwegian_forest_cat;
@@ -422,7 +422,7 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(E.young).toBe('Arrives as a young cat, 1 year old — a Norwegian Forest Cat keeps growing until 4–5 years.');
       expect(E.adult).toBe('Arrives as a mature cat, 7 years old.');
       expect(E.senior).toBe('Arrives as a senior cat, 10 years old.');
-      expect(PICKER_STRINGS.breedHints.norwegian_forest_cat).toBe('Long, water-repellent coat · brushing 1× a week');
+      expect(PICKER_STRINGS.breedHints.norwegian_forest_cat).toBe('Semi-long, water-repellent coat · brushing 1× a week');
       expect(JSON.stringify(E) + PICKER_STRINGS.breedHints.norwegian_forest_cat).not.toMatch(/allerg/i);
     } finally {
       await i18n.changeLanguage('sl');
