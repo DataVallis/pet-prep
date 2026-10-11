@@ -17,11 +17,11 @@
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
-      "sha256": "3a7fd36a271c84fc4ae47cb00fa0aabcf3eb50c5a3d11d77f18d6d4e88d20fcd"
+      "sha256": "8e9ed1cd6c23f97d7130f1005a163dcbca08ac52b813cefd0014384bf25ab806"
     },
     "cat_sources": {
       "path": "docs/research/cat-data/sources.md",
-      "sha256": "becb5c1185e9ae8cf5877fa83969b98eb02cfe3de33e551047fd3be3388a4b29"
+      "sha256": "4867a1cab0d1b5b12f19585879481da0686ab30af291d115b405386f31c22eff"
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
@@ -29,19 +29,19 @@
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "a42624593f002e0c86f8fab738be368ebde7a7d60adec835e09d2732c7cd2863"
+      "sha256": "22d93a99451a5eb260bc08a17d2abe6f179d522fe70daadbd2ae4aaa9e3e8c69"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "ee345f716390ecbebe5a4d6d9c5379495534dee9b0047354bbe27addd8e5c38a"
+      "sha256": "194e958869ad99768157f983bf4bc07b64ba8b450f456b911c2167c578f37246"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "016e1a1ac4c2419ebcac272b764e30cf3f63cef56be3a50f4acbd2521fa470a9"
+      "sha256": "f036ee3a9c89cc836b25535490bbc3768a33b376a70cd8852649fabab1d4be1d"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "743d31f6fdd610d64082237719ecb22198c8f3a33790f30a3a60c699c647171a"
+      "sha256": "bc597a254b86268e78a70fc371a79524daf9ab1e6fddc87267a5289a78bac217"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -343,7 +343,7 @@
         }
       },
       "status": "coming_soon",
-      "breed_count": 2,
+      "breed_count": 3,
       "fact_groups": [
         "play",
         "litter",
@@ -8715,6 +8715,342 @@
         "C27",
         "C28"
       ]
+    },
+    {
+      "id": "ragdoll",
+      "species": "cat",
+      "order": 2,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Ragdoll",
+        "sl": "Ragdoll"
+      },
+      "slug": {
+        "en": "ragdoll",
+        "sl": "ragdoll"
+      },
+      "synonyms": {
+        "en": [
+          "Rag doll"
+        ],
+        "sl": [
+          "ragdoll mačka",
+          "ragdoll macka",
+          "ragdol"
+        ]
+      },
+      "facets": {},
+      "facts": [
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              6.8,
+              9.1
+            ],
+            "female": [
+              4.5,
+              6.8
+            ]
+          },
+          "source_ids": [
+            "C30"
+          ],
+          "ref": "cat-data:ragdoll.adult_weight.cfa_male + cat-data:ragdoll.adult_weight.cfa_female",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "value": 48,
+          "source_ids": [
+            "C30"
+          ],
+          "ref": "cat-data:ragdoll.growth_end",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "expectancy",
+          "value": 10.31,
+          "source_ids": [
+            "C14"
+          ],
+          "ref": "cat-data:ragdoll.lifespan.expectancy_at_birth",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_or_twice_a_week",
+          "source_ids": [
+            "C32"
+          ],
+          "ref": "cat-data:ragdoll.grooming.range",
+          "confidence": "medium"
+        }
+      ],
+      "compare": {
+        "weight": 0,
+        "lifespan": 2
+      },
+      "health": [
+        {
+          "key": "heart_hcm",
+          "source_ids": [
+            "C32"
+          ],
+          "ref": "cat-data:ragdoll.health.hcm",
+          "confidence": "medium"
+        },
+        {
+          "key": "dental_weight_nail_care",
+          "source_ids": [
+            "C31"
+          ],
+          "ref": "cat-data:ragdoll.health.common_care",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [],
+        "consider": []
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 3
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 12
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 84
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 120
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "play_sessions",
+          "value": 2
+        },
+        "rules": [
+          {
+            "key": "play_instead_of_steps",
+            "params": {
+              "sessions": 2,
+              "gap_minutes": 120
+            }
+          },
+          {
+            "key": "litter_rule",
+            "params": {
+              "uses": 2,
+              "scoop_hours": 4,
+              "change_days": 7
+            }
+          },
+          {
+            "key": "scratching_after_missed_play",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_6_12_weeks",
+            "basis_source_ids": [
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_3_6_months",
+            "basis_source_ids": [
+              "C2",
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_6_12_months",
+            "basis_source_ids": [
+              "C2",
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.adult",
+            "basis_source_ids": [
+              "C2"
+            ],
+            "decision": "potrdil David 2026-10-08 (načrt M5-R06): adult cat 2 meals per day (game simplification)"
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.senior",
+            "basis_source_ids": [
+              "C2"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.arrival_age.young",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: young cat arrives at 12 months"
+          },
+          {
+            "ref": "cat-data:general.arrival_age.adult",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: mature cat arrives at 84 months"
+          },
+          {
+            "ref": "cat-data:general.arrival_age.senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: senior cat arrives at 120 months"
+          },
+          {
+            "ref": "cat-data:general.play.game_sessions_kitten",
+            "basis_source_ids": [
+              "C10"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: kitten 3 per day"
+          },
+          {
+            "ref": "cat-data:general.play.game_sessions_adult",
+            "basis_source_ids": [
+              "C10"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: adult 2 per day"
+          },
+          {
+            "ref": "cat-data:general.play.game_min_gap",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 20:40: 2 h between two successful sessions, measured from the last successful one"
+          },
+          {
+            "ref": "cat-data:general.litter.game_uses_per_day_adult",
+            "basis_source_ids": [
+              "C6"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: adult 2 uses per day"
+          },
+          {
+            "ref": "cat-data:general.litter.game_scoop_deadline",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: 4 h deadline"
+          },
+          {
+            "ref": "cat-data:general.litter.full_change",
+            "basis_source_ids": [
+              "C5",
+              "C6",
+              "C7"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: one full litter change per program week"
+          },
+          {
+            "ref": "cat-data:ragdoll.arrival_age_kitten",
+            "basis_source_ids": [
+              "C13"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-15): pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule for pedigree kittens)"
+          }
+        ],
+        "basis_source_ids": [
+          "C2",
+          "C3",
+          "C5",
+          "C6",
+          "C7",
+          "C10",
+          "C13"
+        ]
+      },
+      "portrait": null,
+      "source_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C10",
+        "C12",
+        "C13",
+        "C14",
+        "C23",
+        "C30",
+        "C31",
+        "C32"
+      ]
     }
   ],
   "sources": [
@@ -9536,6 +9872,27 @@
       "publisher": "VCA Animal Hospitals (\"the Veterinarians of VCA Animal Hospitals\"), undated",
       "title": "British Shorthair (cat breeds)",
       "url": "https://vcahospitals.com/know-your-pet/cat-breeds/british-shorthair"
+    },
+    {
+      "id": "C30",
+      "tier": "B",
+      "publisher": "CFA (The Cat Fanciers' Association) — breed page",
+      "title": "About the Ragdoll",
+      "url": "https://cfa.org/?p=9933"
+    },
+    {
+      "id": "C31",
+      "tier": "B",
+      "publisher": "RVC VetCompass news (2025) on O'Neill D. G., Bass O., Brodbelt D. C., Church D. B., Engdahl K. S., *Companion Animal Health and Genetics* (2025), doi:10.1186/s40575-025-00148-9",
+      "title": "The cat's out of the bag: New RVC research reveals most common health disorders in popular Ragdoll cats",
+      "url": "https://www.rvc.ac.uk/vetcompass/news/the-cat-s-out-of-the-bag-new-rvc-research-reveals-most-common-health-disorders-in-popular-ragdoll-cats"
+    },
+    {
+      "id": "C32",
+      "tier": "B",
+      "publisher": "PetMD — Kristen Seymour; reviewed by Veronica Higgs, DVM; updated 2023-04-10",
+      "title": "Ragdoll (cat breeds)",
+      "url": "https://www.petmd.com/cat/breeds/c_ct_ragdoll"
     }
   ]
 }
