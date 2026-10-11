@@ -66,8 +66,8 @@ describe('BreedConfigsSeeder', function () {
         Carbon::setTestNow('2026-10-06 07:00:00');
         (new BreedConfigsSeeder)->run();
 
-        // 14 paid dogs + the mutt (M5-R10 Labrador, M5-R10-02 Golden, M5-R10-03 French Bulldog, M5-R10-04 German Shepherd, M5-R10-05 Cavalier, M5-R10-06 Beagle, M5-R10-07 Standard Poodle, M5-R10-08 Dachshund, M5-R10-09 Australian Shepherd, M5-R10-10 Havanese, M5-R10-11 West Highland White Terrier, M5-R10-12 Bernese Mountain Dog, M5-R10-13 Siberian Husky) + 7 cats (M5-R06-01; M5-R10-14 British Shorthair, M5-R10-15 Ragdoll, M5-R10-16 Siberian, M5-R10-17 Norwegian Forest Cat, M5-R10-18 Bengal).
-        expect(BreedConfig::count())->toBe(22);
+        // 15 paid dogs + the mutt (M5-R10 Labrador, M5-R10-02 Golden, M5-R10-03 French Bulldog, M5-R10-04 German Shepherd, M5-R10-05 Cavalier, M5-R10-06 Beagle, M5-R10-07 Standard Poodle, M5-R10-08 Dachshund, M5-R10-09 Australian Shepherd, M5-R10-10 Havanese, M5-R10-11 West Highland White Terrier, M5-R10-12 Bernese Mountain Dog, M5-R10-13 Siberian Husky, M5-R10-19 Rottweiler) + 7 cats (M5-R06-01; M5-R10-14 British Shorthair, M5-R10-15 Ragdoll, M5-R10-16 Siberian, M5-R10-17 Norwegian Forest Cat, M5-R10-18 Bengal).
+        expect(BreedConfig::count())->toBe(23);
         $mutt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail();
         expect($mutt->thirst_decay_rate)->toBe(99.0);
         expect(BreedConfig::where('breed_slug', 'border-collie')->firstOrFail()->thirst_decay_rate)->toBe(15.0);

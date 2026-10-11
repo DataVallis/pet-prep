@@ -317,9 +317,9 @@ it('gives the Bernese Mountain Dog the new shorter_lifespan tag, family_pet, lar
         // RKC Breed Watch Category 1: no conformation welfare chip.
         ->and($berner['consider'])->not->toContain('hips_hind_legs')->not->toContain('long_daily_exercise')->not->toContain('chews_when_bored');
 
-    // Only the Bernese carries the new chip so far.
+    // Only the Bernese and the Rottweiler (RKC "Under 10 years", M5-R10-19) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if ($breed !== BreedType::BerneseMountainDog) {
+        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('shorter_lifespan');
         }
     }
@@ -350,6 +350,30 @@ it('gives the Siberian Husky the new secure_fencing tag, active_family, large_ho
     expect(bsEntry('siberian_husky.behaviour.escaping')['quote'])->toBe('Owners need a very secure garden with high fences as Huskies are known for getting up to mischief')
         ->and(bsEntry('siberian_husky.suitability.pdsa_children')['quote'])->toBe('we wouldn’t recommend getting a Husky if you have smaller children as they could knock them over accidentally.')
         ->and(bsEntry('siberian_husky.health.breed_watch')['notes'])->toContain('Too thin');
+});
+
+it('gives the Rottweiler the new experienced_owner tag, hips_hind_legs, shorter_lifespan, family_pet, large_home, exercise and shedding (runbook 2026-10-11)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray(['experienced_owner' => BreedSuitability::CONSIDER]);
+
+    $rottweiler = app(BreedSuitability::class)->for(BreedType::Rottweiler);
+    expect($rottweiler['suits'])->toBe(['active_family', 'family_pet', 'large_home'])
+        // PDSA: not for families with younger children and babies, never unattended with other pets, experienced owner.
+        ->and($rottweiler['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('other_pets')->not->toContain('first_time_owner')->not->toContain('apartment')
+        ->and($rottweiler['consider'])->toBe(['long_daily_exercise', 'experienced_owner', 'hips_hind_legs', 'shorter_lifespan', 'sheds'])
+        // Weekly brushing only (RKC "Once a week"); not flat-faced; no breed-specific chewing.
+        ->and($rottweiler['consider'])->not->toContain('frequent_grooming')->not->toContain('brachycephalic_breathing')->not->toContain('chews_when_bored');
+
+    // Only the Rottweiler carries the new chip so far.
+    foreach (BreedType::cases() as $breed) {
+        if ($breed !== BreedType::Rottweiler) {
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('experienced_owner');
+        }
+    }
+
+    expect(bsEntry('rottweiler.behaviour.experienced_owner')['quote'])->toBe('Because they\'re so powerful, Rottweilers need an experienced owner who understands them.')
+        ->and(bsEntry('rottweiler.health.breed_watch')['quote'])->toBe('Incorrect hind conformation and/or poor rear movement')
+        ->and(bsEntry('rottweiler.suitability.pdsa_children')['quote'])->toBe('We wouldn\'t recommend Rottweilers for families with younger children and babies')
+        ->and(bsEntry('rottweiler.lifespan.pdsa')['notes'])->toContain('conflicts');
 });
 
 it('types the API field with exactly the vocabulary (Scramble → mobile schema.ts)', function () {

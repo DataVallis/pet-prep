@@ -185,6 +185,14 @@ class FalAiService
                 .'blue almond-shaped eyes set obliquely, well-furred fox-brush tail, '
                 .'moderately compact athletic build, light on its feet, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-19: FCI 147 (S166) — black with clearly defined rich tan markings only (white
+            // markings a fault); coarse dense flat coat, pendant triangular ears, dark brown almond
+            // eyes, natural tail; Breed Watch S173 → moderate muzzle, level back, sound hind legs.
+            BreedType::Rottweiler => 'A calm Rottweiler dog, black with clearly defined rich tan markings on the cheeks, '
+                .'muzzle, chest and legs and above the eyes, short coarse dense flat coat, medium triangular pendant ears, '
+                .'dark brown almond-shaped eyes, natural undocked tail, moderate muzzle, powerful compact build with a level back '
+                .'and sound hind legs, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -417,6 +425,18 @@ class FalAiService
                 },
                 'fur_texture' => 'double, medium-length, well furred',
                 'markings' => 'white face mask, white chest, legs and underside',
+            ],
+            // M5-R10-19: FCI 147 (S166) — one standard colour, black and tan; never white markings.
+            // The variants differ in the shade of tan only (rich tan / rust / mahogany, S166 / S170).
+            BreedType::Rottweiler => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'black with rich tan markings',
+                    1 => 'black with rust markings',
+                    2 => 'black with mahogany markings',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, coarse, dense and flat',
+                'markings' => 'clearly defined tan on the cheeks, muzzle, throat, chest and legs and above each eye',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

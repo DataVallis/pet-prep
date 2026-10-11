@@ -354,6 +354,28 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.siberian_husky',
                 'search_keywords' => ['siberian husky', 'husky', 'huskie', 'sibirski haski', 'haski', 'sibirski husky', 'sibirec'],
             ],
+            // M5-R10-19 Rottweiler (docs/research/dog-data/data.json rottweiler,
+            // sources S166–S174; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal
+            // (proposed_game_parameters.rottweiler.step_goal_adult: 120 min × 100
+            // steps/min — RKC S168 "More than 2 hours per day", PDSA S169 "at least two
+            // hours") — only the legacy-profile fallback. Hunger / thirst decay, poops and
+            // water are the Border Collie's (no per-breed number).
+            [
+                'breed_slug' => BreedType::Rottweiler->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 150,
+                'label_key' => 'breeds.rottweiler',
+                'search_keywords' => ['rottweiler', 'rottie', 'rotty', 'rott', 'rotvajler', 'rotvajlerka', 'rotweiler', 'rotvailer'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and
