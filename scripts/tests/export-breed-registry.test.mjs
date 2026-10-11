@@ -592,6 +592,75 @@ test('British Shorthair (M5-R10-14): paid cat, kitten at 3 months, CFA weight by
   for (const id of ['C14', 'C27', 'C28']) assert.ok(registry.sources.some((s) => s.id === id), id);
 });
 
+// ─── breeder checklist (M5-R11-06) ───────────────────────────────────────────
+
+const checklistData = () => JSON.parse(readFileSync(resolve(ROOT, INPUTS.checklist_data), 'utf8'));
+
+test('checklist: every breed has a status, every species a general list, every K source is a K-id', () => {
+  for (const b of registry.breeds) {
+    assert.ok(['listed', 'none_recommended', 'not_found', 'not_checked'].includes(b.breeder_checklist.status), b.id);
+    for (const t of b.breeder_checklist.tests) {
+      assert.ok(['minimum', 'best_practice', 'other_scheme'].includes(t.level), `${b.id}.${t.key}`);
+      for (const s of t.source_ids) assert.ok(b.source_ids.includes(s), `${b.id} lists ${s}`);
+    }
+  }
+  for (const sp of registry.species) {
+    assert.ok(sp.buyer_checklist.length > 0, sp.id);
+    for (const it of sp.buyer_checklist) for (const s of it.source_ids) assert.ok(registry.sources.some((x) => x.id === s), s);
+  }
+  for (const id of Object.keys(parseSourcesTable(readFileSync(resolve(ROOT, INPUTS.checklist_sources), 'utf8')))) assert.match(id, /^K\d+$/);
+});
+
+test('checklist: known answers (vet feedback examples, Westie, British Shorthair)', () => {
+  const byId = Object.fromEntries(registry.breeds.map((b) => [b.id, b.breeder_checklist]));
+  const keys = (id, level) => byId[id].tests.filter((t) => t.level === level).map((t) => t.key);
+  assert.deepEqual(keys('cavalier_king_charles_spaniel', 'minimum'), ['dna_cc_de', 'dna_ef', 'heart_scheme']);
+  assert.deepEqual(keys('cavalier_king_charles_spaniel', 'other_scheme'), ['cm_sm_mri']);
+  assert.deepEqual(keys('german_shepherd', 'minimum'), ['elbow_scheme', 'hip_scheme']);
+  assert.equal(byId.west_highland_white_terrier.status, 'none_recommended');
+  assert.deepEqual(byId.west_highland_white_terrier.basis_source_ids, ['S144']);
+  assert.equal(byId.british_shorthair.status, 'not_found');
+  // two quotes of one source = one source id (microchip by 8 weeks + report within 7 days, both K4)
+  const dogGeneral = Object.fromEntries(registry.species.find((s) => s.id === 'dog').buyer_checklist.map((i) => [i.key, i.source_ids]));
+  assert.deepEqual(dogGeneral.microchip_registration, ['K4']);
+  assert.deepEqual(dogGeneral.rabies_vaccination, ['K5', 'K19']);
+  // minimum first, then best practice, then other schemes
+  for (const [id, c] of Object.entries(byId)) {
+    const order = c.tests.map((t) => ['minimum', 'best_practice', 'other_scheme'].indexOf(t.level));
+    assert.deepEqual(order, [...order].sort((a, b) => a - b), id);
+  }
+});
+
+test('checklist: a breed without an entry exports as not_checked (a breed run adds it)', () => {
+  const texts = readInputs();
+  const d = checklistData();
+  delete d.breeds.beagle;
+  const reg = buildRegistry({ ...texts, checklist_data: JSON.stringify(d) });
+  assert.deepEqual(reg.breeds.find((b) => b.id === 'beagle').breeder_checklist, { status: 'not_checked', tests: [], basis_source_ids: [] });
+});
+
+test('checklist: wrong data fails loudly', () => {
+  const texts = readInputs();
+  const build = (mutate) => () => {
+    const d = checklistData();
+    mutate(d);
+    return buildRegistry({ ...texts, checklist_data: JSON.stringify(d) });
+  };
+  assert.throws(build((d) => { d.breeds.poodle = d.breeds.beagle; }), /poodle is not a breed of the register/);
+  assert.throws(build((d) => { d.breeds.beagle.tests[0].source_id = 'K999'; }), /unknown source K999/);
+  assert.throws(build((d) => { d.breeds.beagle.tests[0].quote = ''; }), /no quote/);
+  assert.throws(build((d) => { d.breeds.beagle.tests[0].level = 'required'; }), /bad level required/);
+  assert.throws(build((d) => { d.breeds.beagle.tests.push({ ...d.breeds.beagle.tests[0] }); }), /twice/);
+  assert.throws(build((d) => { d.breeds.beagle.tests = []; }), /listed but has no tests/);
+  assert.throws(build((d) => { d.breeds.british_shorthair.notes = ''; }), /needs notes/);
+  assert.throws(build((d) => { d.general.dog[0].quotes = []; }), /has no source/);
+  assert.throws(build((d) => { d.general.dog[0].quotes[0].quote = ' '; }), /no quote/);
+  assert.throws(build((d) => { d.general.dog[0].quotes.push({ ...d.general.dog[0].quotes[0] }); }), /repeats a quote/);
+  assert.throws(build((d) => { d.general.cat[0].key = d.general.dog[0].key; }), /duplicate key/);
+  assert.throws(build((d) => { d.meta.levels = ['minimum']; }), /meta.levels/);
+  assert.throws(() => buildRegistry({ ...texts, checklist_sources: '| S1 | A | X | Y | https://x.y | z |' }), /in two tables/);
+});
+
 test('Ragdoll (M5-R10-15): paid cat, kitten at 3 months, CFA weight by sex, full size at about 4 years, C14 life expectancy, combing once or twice a week, health keys only', () => {
   const rag = registry.breeds.find((b) => b.id === 'ragdoll');
   assert.equal(rag.species, 'cat');

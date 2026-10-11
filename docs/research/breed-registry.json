@@ -43,6 +43,14 @@
       "path": "mobile/src/i18n/locales/sl/family.json",
       "sha256": "bc597a254b86268e78a70fc371a79524daf9ab1e6fddc87267a5289a78bac217"
     },
+    "checklist_data": {
+      "path": "docs/research/breeder-checklist/data.json",
+      "sha256": "6b591ddc4a9f2dc480443627c0aee2484828f474bedc0afced63cca83bbcc390"
+    },
+    "checklist_sources": {
+      "path": "docs/research/breeder-checklist/sources.md",
+      "sha256": "3ac817efd9dbd4c922dc5a6e225bc47fc8d0d040b714d84ebf64bd1d79889a05"
+    },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
       "sha256": "d65a700b2bd160fda2412d782c1e800c1d02dd68b3cfcbf62e44f25fe017fdf0"
@@ -302,6 +310,75 @@
           ],
           "ref": "general_by_size.life_stages.senior",
           "confidence": "high"
+        }
+      ],
+      "buyer_checklist": [
+        {
+          "key": "see_mother",
+          "source_ids": [
+            "K1",
+            "K2"
+          ]
+        },
+        {
+          "key": "min_age_puppy",
+          "source_ids": [
+            "K1",
+            "K3"
+          ]
+        },
+        {
+          "key": "microchip_registration",
+          "source_ids": [
+            "K4"
+          ]
+        },
+        {
+          "key": "vaccination_records",
+          "source_ids": [
+            "K3"
+          ]
+        },
+        {
+          "key": "rabies_vaccination",
+          "source_ids": [
+            "K5",
+            "K19"
+          ]
+        },
+        {
+          "key": "pedigree_fci",
+          "source_ids": [
+            "K6",
+            "K7"
+          ]
+        },
+        {
+          "key": "parents_dna_profile",
+          "source_ids": [
+            "K8"
+          ]
+        },
+        {
+          "key": "parents_health_tests",
+          "source_ids": [
+            "K1",
+            "K9",
+            "K10"
+          ]
+        },
+        {
+          "key": "breed_club_rules",
+          "source_ids": [
+            "K7"
+          ]
+        },
+        {
+          "key": "written_contract",
+          "source_ids": [
+            "K9",
+            "K10"
+          ]
         }
       ],
       "free_plan": {
@@ -645,6 +722,42 @@
           ],
           "ref": "cat-data:general.sleep.adult",
           "confidence": "medium"
+        }
+      ],
+      "buyer_checklist": [
+        {
+          "key": "kitten_see_mother",
+          "source_ids": [
+            "K12",
+            "K14"
+          ]
+        },
+        {
+          "key": "kitten_min_age",
+          "source_ids": [
+            "K3",
+            "K11"
+          ]
+        },
+        {
+          "key": "kitten_vaccination",
+          "source_ids": [
+            "K11",
+            "K12"
+          ]
+        },
+        {
+          "key": "kitten_pedigree",
+          "source_ids": [
+            "K12",
+            "K15"
+          ]
+        },
+        {
+          "key": "kitten_parents_tests",
+          "source_ids": [
+            "K13"
+          ]
         }
       ],
       "free_plan": {
@@ -1115,6 +1228,98 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S5"
+            ]
+          },
+          {
+            "key": "dna_cea",
+            "level": "best_practice",
+            "source_ids": [
+              "S5"
+            ]
+          },
+          {
+            "key": "dna_cl",
+            "level": "best_practice",
+            "source_ids": [
+              "S5"
+            ]
+          },
+          {
+            "key": "dna_igs",
+            "level": "best_practice",
+            "source_ids": [
+              "S5"
+            ]
+          },
+          {
+            "key": "dna_mdr1",
+            "level": "best_practice",
+            "source_ids": [
+              "S5"
+            ]
+          },
+          {
+            "key": "dna_tns",
+            "level": "best_practice",
+            "source_ids": [
+              "S5"
+            ]
+          },
+          {
+            "key": "dna_sn",
+            "level": "best_practice",
+            "source_ids": [
+              "S5"
+            ]
+          },
+          {
+            "key": "dna_ggd",
+            "level": "best_practice",
+            "source_ids": [
+              "S5"
+            ]
+          },
+          {
+            "key": "dna_raines",
+            "level": "best_practice",
+            "source_ids": [
+              "S5"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S5"
+            ]
+          },
+          {
+            "key": "hearing_baer",
+            "level": "best_practice",
+            "source_ids": [
+              "S5"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S5"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S5"
+        ]
+      },
       "source_ids": [
         "S1",
         "S2",
@@ -1132,7 +1337,18 @@
         "S24",
         "S34",
         "S35",
-        "S45"
+        "S45",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
       ]
     },
     {
@@ -1748,6 +1964,91 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "K16"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "K16"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "K16"
+            ]
+          },
+          {
+            "key": "dna_prcd_pra",
+            "level": "minimum",
+            "source_ids": [
+              "K16"
+            ]
+          },
+          {
+            "key": "dna_cnm",
+            "level": "minimum",
+            "source_ids": [
+              "K16"
+            ]
+          },
+          {
+            "key": "dna_eic",
+            "level": "minimum",
+            "source_ids": [
+              "K16"
+            ]
+          },
+          {
+            "key": "dna_hnpk",
+            "level": "minimum",
+            "source_ids": [
+              "K16"
+            ]
+          },
+          {
+            "key": "dna_sd2",
+            "level": "minimum",
+            "source_ids": [
+              "K16"
+            ]
+          },
+          {
+            "key": "dna_mcd",
+            "level": "minimum",
+            "source_ids": [
+              "K16"
+            ]
+          },
+          {
+            "key": "dna_stgd",
+            "level": "minimum",
+            "source_ids": [
+              "K16"
+            ]
+          },
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "K16"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K16"
+        ]
+      },
       "source_ids": [
         "S8",
         "S10",
@@ -1769,7 +2070,19 @@
         "S54",
         "S55",
         "S59",
-        "S60"
+        "S60",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K16",
+        "K19"
       ]
     },
     {
@@ -2424,6 +2737,42 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_gr_pra2",
+            "level": "minimum",
+            "source_ids": [
+              "S65"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S65"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S65"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S65"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S65"
+        ]
+      },
       "source_ids": [
         "S8",
         "S10",
@@ -2446,7 +2795,18 @@
         "S69",
         "S70",
         "S71",
-        "S73"
+        "S73",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
       ]
     },
     {
@@ -3019,6 +3379,49 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "boas_grading",
+            "level": "minimum",
+            "source_ids": [
+              "S78"
+            ]
+          },
+          {
+            "key": "dna_hsf4",
+            "level": "best_practice",
+            "source_ids": [
+              "S78"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S78"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S78"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S78"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S78"
+        ]
+      },
       "source_ids": [
         "S10",
         "S11",
@@ -3039,7 +3442,18 @@
         "S82",
         "S83",
         "S84",
-        "S86"
+        "S86",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
       ]
     },
     {
@@ -3595,6 +4009,42 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S97"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S97"
+            ]
+          },
+          {
+            "key": "dna_dm",
+            "level": "best_practice",
+            "source_ids": [
+              "S97"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S97"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S97"
+        ]
+      },
       "source_ids": [
         "S10",
         "S11",
@@ -3611,7 +4061,18 @@
         "S97",
         "S99",
         "S100",
-        "S101"
+        "S101",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
       ]
     },
     {
@@ -4126,6 +4587,49 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_cc_de",
+            "level": "minimum",
+            "source_ids": [
+              "S105"
+            ]
+          },
+          {
+            "key": "dna_ef",
+            "level": "minimum",
+            "source_ids": [
+              "S105"
+            ]
+          },
+          {
+            "key": "heart_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S105"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S105"
+            ]
+          },
+          {
+            "key": "cm_sm_mri",
+            "level": "other_scheme",
+            "source_ids": [
+              "K17"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S105"
+        ]
+      },
       "source_ids": [
         "S10",
         "S11",
@@ -4143,7 +4647,19 @@
         "S106",
         "S107",
         "S108",
-        "S110"
+        "S110",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K17",
+        "K19"
       ]
     },
     {
@@ -4590,6 +5106,49 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_lafora",
+            "level": "minimum",
+            "source_ids": [
+              "S113"
+            ]
+          },
+          {
+            "key": "dna_nccd",
+            "level": "minimum",
+            "source_ids": [
+              "S113"
+            ]
+          },
+          {
+            "key": "dna_fviid",
+            "level": "best_practice",
+            "source_ids": [
+              "S113"
+            ]
+          },
+          {
+            "key": "dna_igs",
+            "level": "best_practice",
+            "source_ids": [
+              "S113"
+            ]
+          },
+          {
+            "key": "dna_mls",
+            "level": "best_practice",
+            "source_ids": [
+              "S113"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S113"
+        ]
+      },
       "source_ids": [
         "S10",
         "S11",
@@ -4604,7 +5163,18 @@
         "S112",
         "S113",
         "S115",
-        "S116"
+        "S116",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
       ]
     },
     {
@@ -5078,6 +5648,49 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_rcd4_pra",
+            "level": "best_practice",
+            "source_ids": [
+              "S120"
+            ]
+          },
+          {
+            "key": "dna_prcd_pra",
+            "level": "best_practice",
+            "source_ids": [
+              "S120"
+            ]
+          },
+          {
+            "key": "dna_vwd1",
+            "level": "best_practice",
+            "source_ids": [
+              "S120"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S120"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S120"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S120"
+        ]
+      },
       "source_ids": [
         "S10",
         "S11",
@@ -5091,7 +5704,18 @@
         "S118",
         "S120",
         "S121",
-        "S122"
+        "S122",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
       ]
     },
     {
@@ -5526,6 +6150,35 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S125"
+            ]
+          },
+          {
+            "key": "ivdd_screening",
+            "level": "minimum",
+            "source_ids": [
+              "S125"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S125"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S125"
+        ]
+      },
       "source_ids": [
         "S10",
         "S11",
@@ -5541,7 +6194,18 @@
         "S126",
         "S127",
         "S128",
-        "S129"
+        "S129",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
       ]
     },
     {
@@ -6053,6 +6717,63 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_cea",
+            "level": "minimum",
+            "source_ids": [
+              "S133"
+            ]
+          },
+          {
+            "key": "dna_hsf4",
+            "level": "best_practice",
+            "source_ids": [
+              "S133"
+            ]
+          },
+          {
+            "key": "dna_mdr1",
+            "level": "best_practice",
+            "source_ids": [
+              "S133"
+            ]
+          },
+          {
+            "key": "dna_prcd_pra",
+            "level": "best_practice",
+            "source_ids": [
+              "S133"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S133"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S133"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S133"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S133"
+        ]
+      },
       "source_ids": [
         "S10",
         "S11",
@@ -6066,7 +6787,18 @@
         "S131",
         "S132",
         "S133",
-        "S134"
+        "S134",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
       ]
     },
     {
@@ -6511,6 +7243,28 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S138"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S138"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S138"
+        ]
+      },
       "source_ids": [
         "S10",
         "S11",
@@ -6524,7 +7278,18 @@
         "S136",
         "S137",
         "S138",
-        "S140"
+        "S140",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
       ]
     },
     {
@@ -7032,6 +7797,13 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "none_recommended",
+        "tests": [],
+        "basis_source_ids": [
+          "S144"
+        ]
+      },
       "source_ids": [
         "S10",
         "S11",
@@ -7047,7 +7819,18 @@
         "S144",
         "S146",
         "S147",
-        "S148"
+        "S148",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
       ]
     },
     {
@@ -7524,6 +8307,28 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S152"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S152"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S152"
+        ]
+      },
       "source_ids": [
         "S10",
         "S11",
@@ -7540,7 +8345,18 @@
         "S153",
         "S154",
         "S155",
-        "S156"
+        "S156",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
       ]
     },
     {
@@ -8032,6 +8848,35 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S160"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S160"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S160"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S160"
+        ]
+      },
       "source_ids": [
         "S10",
         "S11",
@@ -8045,7 +8890,18 @@
         "S158",
         "S159",
         "S160",
-        "S162"
+        "S162",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
       ]
     },
     {
@@ -8370,6 +9226,35 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_hcm_mc",
+            "level": "minimum",
+            "source_ids": [
+              "K18"
+            ]
+          },
+          {
+            "key": "dna_sma",
+            "level": "minimum",
+            "source_ids": [
+              "K18"
+            ]
+          },
+          {
+            "key": "dna_pk_def",
+            "level": "minimum",
+            "source_ids": [
+              "K18"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K18"
+        ]
+      },
       "source_ids": [
         "C1",
         "C2",
@@ -8384,7 +9269,14 @@
         "C14",
         "C17",
         "C18",
-        "C23"
+        "C23",
+        "K3",
+        "K11",
+        "K12",
+        "K13",
+        "K14",
+        "K15",
+        "K18"
       ]
     },
     {
@@ -8699,6 +9591,11 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
       "source_ids": [
         "C1",
         "C2",
@@ -8713,7 +9610,13 @@
         "C14",
         "C23",
         "C27",
-        "C28"
+        "C28",
+        "K3",
+        "K11",
+        "K12",
+        "K13",
+        "K14",
+        "K15"
       ]
     },
     {
@@ -9039,6 +9942,21 @@
         "height": 1024,
         "kind": "ai_photo"
       },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "hcm_negative",
+            "level": "minimum",
+            "source_ids": [
+              "K20"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K20"
+        ]
+      },
       "source_ids": [
         "C1",
         "C2",
@@ -9054,7 +9972,14 @@
         "C23",
         "C30",
         "C31",
-        "C32"
+        "C32",
+        "K3",
+        "K11",
+        "K12",
+        "K13",
+        "K14",
+        "K15",
+        "K20"
       ]
     }
   ],
@@ -9898,6 +10823,146 @@
       "publisher": "PetMD — Kristen Seymour; reviewed by Veronica Higgs, DVM; updated 2023-04-10",
       "title": "Ragdoll (cat breeds)",
       "url": "https://www.petmd.com/cat/breeds/c_ct_ragdoll"
+    },
+    {
+      "id": "K1",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Getting a puppy",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/getting-a-puppy"
+    },
+    {
+      "id": "K2",
+      "tier": "B",
+      "publisher": "RSPCA",
+      "title": "Buying a puppy",
+      "url": "https://www.rspca.org.uk/adviceandwelfare/pets/dogs/puppy"
+    },
+    {
+      "id": "K3",
+      "tier": "A",
+      "publisher": "Uradni list RS",
+      "title": "Pravilnik o zaščiti hišnih živali (Uradni list RS, št. 51/2009)",
+      "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2009-01-2571"
+    },
+    {
+      "id": "K4",
+      "tier": "A",
+      "publisher": "GOV.SI",
+      "title": "Označitev in prijava hišnih živali",
+      "url": "https://www.gov.si/teme/oznacitev-in-prijava-hisnih-zivali/"
+    },
+    {
+      "id": "K5",
+      "tier": "A",
+      "publisher": "GOV.SI (UVHVVR)",
+      "title": "Steklina",
+      "url": "https://www.gov.si/teme/steklina/"
+    },
+    {
+      "id": "K6",
+      "tier": "A",
+      "publisher": "FCI (Fédération Cynologique Internationale)",
+      "title": "Statistics: Kinološka zveza Slovenije - Cynological Association of Slovenia",
+      "url": "https://dev.fci.be/statistics/ByNCO.aspx?iso=SI"
+    },
+    {
+      "id": "K7",
+      "tier": "A",
+      "publisher": "FCI (copy hosted by Norsk Kennel Klub)",
+      "title": "International Breeding Rules of the FCI",
+      "url": "https://nkk2023.stage22.coretrek.no/getfile.php/131987377-1520848467/Dokumenter/Registrering/FCIs%20avlsregler%202013.pdf"
+    },
+    {
+      "id": "K8",
+      "tier": "B",
+      "publisher": "Veterinarska fakulteta Univerze v Ljubljani",
+      "title": "Gensko preverjanje rodovnikov psov",
+      "url": "https://www.vf.uni-lj.si/novice/gensko-preverjanje-rodovnikov-psov"
+    },
+    {
+      "id": "K9",
+      "tier": "A",
+      "publisher": "British Veterinary Association",
+      "title": "What should you consider when buying a puppy?",
+      "url": "https://www.bva.co.uk/news-and-blog/blog-article/what-should-you-consider-when-buying-a-puppy/"
+    },
+    {
+      "id": "K10",
+      "tier": "B",
+      "publisher": "FOUR PAWS UK",
+      "title": "Questions to ask when buying a puppy",
+      "url": "https://www.four-paws.org.uk/our-stories/publications-guides/questions-to-ask-when-buying-a-puppy"
+    },
+    {
+      "id": "K11",
+      "tier": "A",
+      "publisher": "FIFe (Fédération Internationale Féline)",
+      "title": "Breeding and Registration Rules",
+      "url": "https://fifeweb.org/app/uploads/2023/11/br_reg_en.pdf"
+    },
+    {
+      "id": "K12",
+      "tier": "B",
+      "publisher": "GCCF (Governing Council of the Cat Fancy)",
+      "title": "Choosing a Kitten",
+      "url": "https://www.gccfcats.org/getting-a-cat/choosing/choosing-a-kitten/"
+    },
+    {
+      "id": "K13",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Things to think about before getting a kitten",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/kittens-cats/things-to-think-about-before-getting-a-kitten"
+    },
+    {
+      "id": "K14",
+      "tier": "B",
+      "publisher": "International Cat Care",
+      "title": "Where to get a cat or kitten",
+      "url": "https://icatcare.org/articles/where-to-get-a-cat-or-kitten"
+    },
+    {
+      "id": "K15",
+      "tier": "A",
+      "publisher": "Zveza felinoloških društev Slovenije (ZFDS)",
+      "title": "ZFDS — home page",
+      "url": "https://www.zfds.si/"
+    },
+    {
+      "id": "K16",
+      "tier": "B",
+      "publisher": "The Kennel Club (UK)",
+      "title": "Breeds A–Z: Retriever (Labrador) — health (thekennelclub.org.uk)",
+      "url": "https://www.thekennelclub.org.uk/search/breeds-a-to-z/breeds/gundog/retriever-labrador/"
+    },
+    {
+      "id": "K17",
+      "tier": "A",
+      "publisher": "British Veterinary Association",
+      "title": "BVA/KC Chiari Malformation / Syringomyelia (CM/SM) Scheme",
+      "url": "https://www.bva.co.uk/canine-health-schemes/cm-sm-scheme/"
+    },
+    {
+      "id": "K18",
+      "tier": "B",
+      "publisher": "World Cat Congress",
+      "title": "Maine Coon — a comparison among the member organisations",
+      "url": "https://worldcatcongress.org/wp/cat_breed_comp_mco.php"
+    },
+    {
+      "id": "K19",
+      "tier": "A",
+      "publisher": "Uradni list RS",
+      "title": "Pravilnik o ukrepih za ugotavljanje, preprečevanje širjenja in zatiranje stekline (Uradni list RS, št. 139/2006)",
+      "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2006-01-6103/pravilnik-o-ukrepih-za-ugotavljanje-preprecevanje-sirjenja-in-zatiranje-stekline---rabies-lyssa"
+    },
+    {
+      "id": "K20",
+      "tier": "B",
+      "publisher": "World Cat Congress",
+      "title": "Ragdoll — a comparison among the member organisations",
+      "url": "https://worldcatcongress.org/wp/cat_breed_comp_rag.php"
     }
   ]
 }

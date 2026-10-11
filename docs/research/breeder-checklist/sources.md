@@ -1,0 +1,38 @@
+# Breeder checklist — sources (K-ids)
+
+Sources for `docs/research/breeder-checklist/data.json` (ROADMAP M5-R11-06). Accessed 2026-10-11 unless noted.
+Tiers as in `docs/research/dog-data/sources.md`: **A** law / regulation / breed standard / federation rules / peer-reviewed /
+vet association; **B** kennel-club or cat-federation guidance page, vet charity, university, veterinary laboratory; **C** secondary.
+Breed health-test lists mostly cite the existing Royal Kennel Club breed pages (S-ids in `dog-data/sources.md`); only sources
+that are new for this checklist get a K-id. Quotes in `data.json` are what the fetch tool returned verbatim.
+
+| ID | Tier | Publisher | Title | URL | Notes |
+|---|---|---|---|---|---|
+| K1 | B | PDSA | Getting a puppy | https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/getting-a-puppy | Accessed 2026-10-11. See the litter with the mother; not before 8 weeks; ask for the parents' health-test paperwork; Puppy Contract. |
+| K2 | B | RSPCA | Buying a puppy | https://www.rspca.org.uk/adviceandwelfare/pets/dogs/puppy | Accessed 2026-10-11. "Always make sure you see mum and her pups together". |
+| K3 | A | Uradni list RS | Pravilnik o zaščiti hišnih živali (Uradni list RS, št. 51/2009) | https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2009-01-2571 | Accessed 2026-10-11. Art. 27 puppies not before 8 full weeks, Art. 36 kittens not before 12 full weeks, Art. 20 vet documents at sale. Original 2009 text — the consolidated text (PISRS) was not reachable; re-check before quoting as current law. |
+| K4 | A | GOV.SI | Označitev in prijava hišnih živali | https://www.gov.si/teme/oznacitev-in-prijava-hisnih-zivali/ | Accessed 2026-10-11. Dogs marked (microchip) by 8 weeks; breeders report puppies by 8 weeks; new owner reports within 7 days. |
+| K5 | A | GOV.SI (UVHVVR) | Steklina | https://www.gov.si/teme/steklina/ | Accessed 2026-10-11. Rabies vaccination of dogs is mandatory in Slovenia. |
+| K6 | A | FCI (Fédération Cynologique Internationale) | Statistics: Kinološka zveza Slovenije - Cynological Association of Slovenia | https://dev.fci.be/statistics/ByNCO.aspx?iso=SI | Accessed 2026-10-11. KZS = Slovenia's FCI member organisation. |
+| K7 | A | FCI (copy hosted by Norsk Kennel Klub) | International Breeding Rules of the FCI | https://nkk2023.stage22.coretrek.no/getfile.php/131987377-1520848467/Dokumenter/Registrering/FCIs%20avlsregler%202013.pdf | Accessed 2026-10-11. Art. 18 pedigrees for correct parentage only; Art. 19 national rules may go beyond the FCI's. fci.be member list returned a server error. |
+| K8 | B | Veterinarska fakulteta Univerze v Ljubljani | Gensko preverjanje rodovnikov psov | https://www.vf.uni-lj.si/novice/gensko-preverjanje-rodovnikov-psov | Accessed 2026-10-11. DNA profile mandatory for owners of breeding dogs; official KZS provider since 2018. |
+| K9 | A | British Veterinary Association | What should you consider when buying a puppy? | https://www.bva.co.uk/news-and-blog/blog-article/what-should-you-consider-when-buying-a-puppy/ | Accessed 2026-10-11. Ask to see the health-test results of both parents; the Puppy Contract. |
+| K10 | B | FOUR PAWS UK | Questions to ask when buying a puppy | https://www.four-paws.org.uk/our-stories/publications-guides/questions-to-ask-when-buying-a-puppy | Accessed 2026-10-11. No blanket health tests — they depend on the breed; a written contract. |
+| K11 | A | FIFe (Fédération Internationale Féline) | Breeding and Registration Rules | https://fifeweb.org/app/uploads/2023/11/br_reg_en.pdf | Accessed 2026-10-11. § 2.3.3 kittens not to a new home before 14 weeks, fully vaccinated (panleucopenia, calicivirus, herpesvirus). |
+| K12 | B | GCCF (Governing Council of the Cat Fancy) | Choosing a Kitten | https://www.gccfcats.org/getting-a-cat/choosing/choosing-a-kitten/ | Accessed 2026-10-11. At least 13 weeks; see the mother; vaccination card; pedigree certificate of at least 3 generations. |
+| K13 | B | PDSA | Things to think about before getting a kitten | https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/kittens-cats/things-to-think-about-before-getting-a-kitten | Accessed 2026-10-11. Check both parents for problems the kitten could inherit; fully vaccinated. |
+| K14 | B | International Cat Care | Where to get a cat or kitten | https://icatcare.org/articles/where-to-get-a-cat-or-kitten | Accessed 2026-10-11. A healthy, people-confident mother and healthy, interactive kittens. |
+| K15 | A | Zveza felinoloških društev Slovenije (ZFDS) | ZFDS — home page | https://www.zfds.si/ | Accessed 2026-10-11. "Članica FIFe že od 1988." No sentence about issuing pedigrees found. |
+| K16 | B | The Kennel Club (UK) | Breeds A–Z: Retriever (Labrador) — health (thekennelclub.org.uk) | https://www.thekennelclub.org.uk/search/breeds-a-to-z/breeds/gundog/retriever-labrador/ | Accessed 2026-10-11. Older page format ("Assured Breeders must use" + "strongly recommend"); the royalkennelclub.com page (S50) could not be fetched for its health section. |
+| K17 | A | British Veterinary Association | BVA/KC Chiari Malformation / Syringomyelia (CM/SM) Scheme | https://www.bva.co.uk/canine-health-schemes/cm-sm-scheme/ | Accessed 2026-10-11. Purpose: reduce inherited CM and SM; SM "most often seen in the Cavalier King Charles spaniel". |
+| K18 | B | World Cat Congress | Maine Coon — a comparison among the member organisations | https://worldcatcongress.org/wp/cat_breed_comp_mco.php | Accessed 2026-10-11. GCCF: DNA tests MC HCM, SMA, PKdef required for the Active (breeding) Register from 1.1.24; no testing rule listed for FIFe. |
+| K19 | A | Uradni list RS | Pravilnik o ukrepih za ugotavljanje, preprečevanje širjenja in zatiranje stekline (Uradni list RS, št. 139/2006) | https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2006-01-6103/pravilnik-o-ukrepih-za-ugotavljanje-preprecevanje-sirjenja-in-zatiranje-stekline---rabies-lyssa | Accessed 2026-10-11. Art. 10: keepers must have dogs vaccinated against rabies once they are three months old. Original 2006 text — later amendments not checked. |
+| K20 | B | World Cat Congress | Ragdoll — a comparison among the member organisations | https://worldcatcongress.org/wp/cat_breed_comp_rag.php | Accessed 2026-10-11. NZCF: "All Breeding stock must be HCM negative"; no health-testing rule listed for GCCF or FIFe. |
+
+## Looked for but not found (2026-10-11)
+- **KZS / Slovenian breed-club breeding rules page** — kinoloska-zveza.si blocks crawlers; the "ask the breed club" item rests on FCI Art. 19 (K7).
+- **British Shorthair parents' tests** — no A/B source naming tests for breeding British Shorthairs (only commercial-lab pages, tier C) → no breed-specific list.
+- **Cats, general parents' tests** — iCatCare and GCCF pages do not mention testing the parents; only PDSA (K13).
+- **German Shepherd, Havanese** — the first fetches were blocked; retried once successfully (S97, S138).
+- **Labrador, current RKC format** — royalkennelclub.com returned a server error; K16 (older page) used.
+- **Puppy Contract site** (puppycontract.org.uk) — blocked; cited through BVA (K9) and PDSA (K1).
