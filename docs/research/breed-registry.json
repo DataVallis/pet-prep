@@ -45,7 +45,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "f2c626973e5d2d885c26cf77fd3815d6d28f8d66e25b9311c9ccd95b53cba09b"
+      "sha256": "dbf4bc713a3e17ec0425152b45c114178acb98411dd9f850015912621104c88e"
     }
   },
   "suitability_vocabulary": {
@@ -8026,7 +8026,12 @@
           "S160"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "siberian-husky.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "source_ids": [
         "S10",
         "S11",
