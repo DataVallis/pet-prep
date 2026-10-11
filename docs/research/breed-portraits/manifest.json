@@ -25,7 +25,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b775a1b48d7073964cd089ace027151fbcf996769dba5b2294ffea224e9f9329",
-            "generated_at": "2026-10-10T05:47:20+00:00",
+            "generated_at": "2026-10-10T05:49:32+00:00",
             "cost_usd": 0.15
         },
         {
@@ -206,6 +206,18 @@
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b1fd6435bb9b987064f80354be0e60ca76eac812424ff1864c8fc396e9325fd5",
             "generated_at": "2026-10-11T07:07:20+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "siberian_cat",
+            "species": "cat",
+            "file": "cat/siberian-cat.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:aea1d8808a012aaa8174dc48b78c5ebfbf93473324d479e67e02a2a9be7a973c",
+            "generated_at": "2026-10-11T09:48:10+00:00",
             "cost_usd": 0.15
         }
     ]
