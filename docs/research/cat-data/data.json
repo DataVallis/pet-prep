@@ -14,7 +14,7 @@
       "quotes": "As returned by the web-fetch tool on 2026-10-08 (see sources.md). Spot-check C1, C14, C16, C17 against the URL before import.",
       "game_time": "1 real week = 1 month of cat age (CAT_SPEC §2, same as dogs).",
       "stage_mapping": "Existing LifeStage values are reused: puppy = kitten, young = young adult, adult = mature adult, senior = senior (CAT_SPEC §2).",
-      "breed_keys": "BreedType value (domestic_cat, maine_coon, british_shorthair) vs breed_configs slug (domestic-cat, maine-coon, british-shorthair), same split as border_collie / border-collie."
+      "breed_keys": "BreedType value (domestic_cat, maine_coon, british_shorthair, ragdoll, siberian_cat) vs breed_configs slug (domestic-cat, maine-coon, british-shorthair, ragdoll, siberian-cat), same split as border_collie / border-collie."
     }
   },
   "general": {
@@ -885,6 +885,199 @@
       "confidence": "medium",
       "notes": "Not a flat-faced breed (FIFe C29: broad, rounded muzzle of medium length, straight nose); no veterinary advice against showing the breed in advertising was found (runbook §3). Cats are hidden in the app — no cat marketing before the switch-on (M5-R06-09).",
       "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-15): may be used in marketing once cats are switched on"
+    }
+  },
+  "siberian_cat": {
+    "_note": "M5-R10-16 (unattended run 2026-10-11). Fourth paid cat breed, built behind PETPREP_CATS_ENABLED=false like the Maine Coon, British Shorthair and Ragdoll. Breed-specific values only (runbook §3 Cats): identity, arrival age of the kitten, lifespan, weight, growth, grooming (game rule, David 2026-10-11), behaviour, health (register text only), appearance; everything else is the general cat rule. Never \"hypoallergenic\" (PetMD C35: \"Siberians are not considered to be hypoallergenic cats.\").",
+    "identity": {
+      "value": {
+        "slug": "siberian-cat",
+        "enum": "siberian_cat",
+        "premium": true
+      },
+      "unit": "",
+      "source_id": "C19",
+      "quote": "Siberian 4,420",
+      "confidence": "high",
+      "notes": "Fourth most registered FIFe breed in 2024 after Maine Coon, British Shorthair and Ragdoll (C19). FIFe Category 2 (C33). Slug siberian-cat (not \"siberian\") so it never reads as the Siberian Husky.",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-16): paid breed (premium_unlock, the same 12-week challenge as the Maine Coon), sort_order 40 (Ragdoll 30 + 10)"
+    },
+    "lifespan": {
+      "gccf_range": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "C34",
+        "quote": "The Siberian cat breed is very healthy and can live 12 to 15 years or more.",
+        "confidence": "medium",
+        "notes": "GCCF range, shown in the register (\"or more\" kept in the quote). The game row uses the lower bound (gccf_lower_bound)."
+      },
+      "gccf_lower_bound": {
+        "value": 12.0,
+        "unit": "years",
+        "source_id": "C34",
+        "quote": "The Siberian cat breed is very healthy and can live 12 to 15 years or more.",
+        "confidence": "medium",
+        "notes": "Lower bound of the GCCF range (the dog rule for a range: RKC lower bound). The VetCompass life tables (C14) have no Siberian row. Background for parents and appearance only; the senior boundary comes from C1, not from the lifespan.",
+        "alternatives": [
+          {
+            "value": "10–18",
+            "unit": "years",
+            "source_id": "C35",
+            "quote": "Siberians are generally very healthy cats with a long lifespan of 10–18 years.",
+            "notes": "PetMD (C35), wider range; not chosen (the registry GCCF page is preferred)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-16): lifespan background value = lower bound of the registry range (as the dog rule for an RKC range); C14 has no Siberian row"
+      }
+    },
+    "adult_weight": {
+      "gccf_male": {
+        "value": "7.7–11.8",
+        "unit": "kg",
+        "source_id": "C34",
+        "quote": "Males weigh between 17 and 26 lbs and females range in weight from 13 to 17 lbs.",
+        "confidence": "medium",
+        "notes": "17–26 lb converted (1 lb = 0.4536 kg, one decimal). GCCF breed page; FIFe gives no weight (C33). PetMD (C35) \"12–15 pounds (or more!)\" without a sex split — lower."
+      },
+      "gccf_female": {
+        "value": "5.9–7.7",
+        "unit": "kg",
+        "source_id": "C34",
+        "quote": "Males weigh between 17 and 26 lbs and females range in weight from 13 to 17 lbs.",
+        "confidence": "medium",
+        "notes": "13–17 lb converted."
+      }
+    },
+    "growth_end": {
+      "value": "48–60",
+      "unit": "months",
+      "source_id": "C34",
+      "quote": "It is a slow developing breed; full development can take four to five years.",
+      "confidence": "medium",
+      "notes": "GCCF (C34): four to five years; PetMD (C35): full-grown size \"until around his fifth birthday\". Prompt cue: the young Siberian is not fully grown yet."
+    },
+    "grooming": {
+      "range": {
+        "value": "At least once a week",
+        "unit": "rule",
+        "source_id": "C35",
+        "quote": "The Siberian’s water-resistant triple coat is not maintenance-free, requiring grooming sessions at least once a week.",
+        "confidence": "medium",
+        "notes": "PetMD (C35, reviewed by a DVM): \"a weekly combing will do the trick, with a little extra effort during their spring and fall shedding\" — more while moulting in spring and autumn (not modelled). GCCF (C34): \"combing their fur with a steel comb a few times a week\" (no number) and daily during heavy shedding. Basis of the game rule game_sessions_per_week.",
+        "alternatives": [
+          {
+            "value": "a few times a week",
+            "unit": "rule",
+            "source_id": "C34",
+            "quote": "combing their fur with a steel comb a few times a week",
+            "notes": "GCCF breed page; no number, so the runbook takes the numeric source (C35). Open for David: raise to 2–3 per week (like the Ragdoll / Maine Coon) if he prefers the registry wording."
+          },
+          {
+            "value": "daily",
+            "unit": "rule",
+            "source_id": "C34",
+            "quote": "High maintenance, daily grooming",
+            "notes": "GCCF summary box; the same page's body text says \"a few times a week\" and daily only \"during this period of heavy shedding\" — not used."
+          }
+        ]
+      },
+      "game_sessions_per_week": {
+        "value": 1,
+        "unit": "sessions/week",
+        "source_id": "C35",
+        "quote": "The Siberian’s water-resistant triple coat is not maintenance-free, requiring grooming sessions at least once a week.",
+        "confidence": "medium",
+        "notes": "\"At least once a week\" → 1 slot per program week (runbook §3 Cats). The seasonal extra (spring and autumn moult; GCCF daily during heavy shedding) is not modelled — moult is not in the game.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, M5-R10-16): Siberian 1× per week (\"at least once a week\", PetMD C35 — the only source with a number); choosing it over the GCCF wording \"a few times a week\" (C34, no number) is Claude's reading — David may raise it to 2–3"
+      },
+      "game_matted_after_missed": {
+        "value": 1,
+        "unit": "missed groomings of a program week (of 1)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Rule ceil(goal / 2) = 1 of 1. No penalty: visible, the next (~2× longer) grooming resolves it. GCCF (C34): \"need to be groomed on a regular basis or their thick fur will become matted\". Runtime: CatChoreService::mattedAfterMissed().",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, M5-R10-16): matted coat when at least half of the week's groomings are missed (ceil(goal / 2))"
+      }
+    },
+    "behaviour": {
+      "family": {
+        "value": "gets on with the whole family, people and other pets",
+        "unit": "text",
+        "source_id": "C35",
+        "quote": "Generally speaking, Siberian cats are bright, athletic, and get along well with two- and four-legged family members alike.",
+        "confidence": "medium",
+        "notes": "Register text only; no suitability tags for cats yet."
+      },
+      "children": {
+        "value": "playful and patient; suits families with young children",
+        "unit": "text",
+        "source_id": "C34",
+        "quote": "This combination of playfulness and patience makes them the ideal choice for families with young children.",
+        "confidence": "medium",
+        "notes": "GCCF breed page. Register text only (the app keeps its general supervision advice)."
+      },
+      "other_pets": {
+        "value": "mixes well with other animals, including dogs",
+        "unit": "text",
+        "source_id": "C34",
+        "quote": "It has also been found that they mix well with other animals, including dogs.",
+        "confidence": "medium",
+        "notes": "Register text only."
+      },
+      "activity": {
+        "value": "energetic, always ready to play",
+        "unit": "text",
+        "source_id": "C34",
+        "quote": "They are energetic and always ready to play a game with you.",
+        "confidence": "medium",
+        "notes": "No effect on the game (play sessions are the general cat rule)."
+      }
+    },
+    "health": {
+      "_note": "Register text only (key + source, one calm EN + SL sentence on the website). No percentages anywhere (runbook §3).",
+      "hcm": {
+        "value": "hypertrophic cardiomyopathy (inherited heart disease) has been recorded in the breed",
+        "unit": "text",
+        "source_id": "C34",
+        "quote": "cases of Hypertrophic Cardiomyopathy (HCM)",
+        "confidence": "medium",
+        "notes": "GCCF (C34) says HCM has been recorded in the breed and that the breed is generally healthy; PetMD (C35) names HCM as a condition to watch."
+      },
+      "common_care": {
+        "value": "dental care and weight control",
+        "unit": "text",
+        "source_id": "C35",
+        "quote": "Overall, Kornreich recommends pet parents brush their cat’s teeth regularly using a toothpaste specifically approved",
+        "confidence": "medium",
+        "notes": "PetMD (C35) also names obesity and dental disease. Not a hypoallergenic breed (C35)."
+      }
+    },
+    "appearance": {
+      "value": "medium to large, rectangular body, well boned and muscled, powerful neck, broad chest; head a little longer than broad, softly rounded, massive; broad, slightly rounded forehead; medium-length broad nose with a slight indentation, no stop; chin slanting back; medium ears, well open at the base, rounded tips with tufts, slight forward tilt; large, slightly oval eyes set wide apart, any eye colour except blue (blue only with white); medium-high strong legs; large round paws tufted between the toes; thick medium-length tail with a rounded tip; semi-long, very dense, water-repellent coat with a frill and knickerbockers in winter; all colours with or without white except pointed, chocolate, lilac, cinnamon and fawn",
+      "unit": "traits",
+      "source_id": "C33",
+      "quote": "Medium to large, females mostly smaller than males … A little bit longer than broad, softly rounded, massive. … Medium length, broad, in profile shows a slight indentation, but without stop. … Semi-long, well developed, very dense, undercoat not lying flat, overcoat water repellent, slightly hard to touch.",
+      "confidence": "high",
+      "notes": "FIFe SIB / NEM standard dated 01.07.2026 (C33; the fetch tool returned short excerpts). Pointed Siberians are the separate breed Neva Masquerade (NEM) → never pointed and never blue eyes on a coloured coat in the AI prompt. GCCF (C34) also allows the zolotoy (golden) colour — not used. Colour weights are unsourced (verified false); brown (black) tabby is weighted highest (portrait default) as the classic coat — UNSOURCED weight."
+    },
+    "arrival_age_kitten": {
+      "value": 3,
+      "unit": "months",
+      "source_id": "C13",
+      "quote": "Pedigree kittens are usually rehomed over 12-13 weeks old",
+      "confidence": "high",
+      "notes": "Same rule as the Maine Coon, British Shorthair and Ragdoll (CAT_SPEC Q4: pedigree kittens leave at 12–13 weeks).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-16): pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule for pedigree kittens)"
+    },
+    "marketing": {
+      "value": "in marketing",
+      "unit": "decision",
+      "source_id": null,
+      "quote": null,
+      "confidence": "medium",
+      "notes": "Not a flat-faced breed (FIFe C33: medium-length broad nose, no stop); no veterinary advice against showing the breed in advertising was found (runbook §3). Never advertised as hypoallergenic (C35). Cats are hidden in the app — no cat marketing before the switch-on (M5-R06-09).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-16): may be used in marketing once cats are switched on, never as hypoallergenic"
     }
   }
 }

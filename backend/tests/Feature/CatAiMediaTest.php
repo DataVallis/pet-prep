@@ -135,7 +135,7 @@ describe('cat prompts (species templates)', function () {
         $prompts = app(PetAppearancePrompt::class);
         $dna = app(PetDnaService::class);
 
-        foreach ([BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll] as $breed) {
+        foreach ([BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat] as $breed) {
             foreach (range(1, 40) as $seed) {
                 $traits = $dna->sample($breed->value, $seed)['traits'];
                 $v2 = $dna->dnaFrom($breed->value, $seed, $dna->sample($breed->value, $seed));

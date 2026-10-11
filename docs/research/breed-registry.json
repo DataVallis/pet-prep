@@ -17,11 +17,11 @@
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
-      "sha256": "09dada9b70cdad753130b93e181c9a0d070364ba96c7d5690a331bde082ff5cf"
+      "sha256": "d5890494cf25bd2433dd86b0bb800a04998fe1f7739aa1f403cd890faab06a77"
     },
     "cat_sources": {
       "path": "docs/research/cat-data/sources.md",
-      "sha256": "e2b125e4c097955f41b29fe7ec0ce2d12d1ffb7c862efe7a2f4a5ef9af7cefda"
+      "sha256": "997ad5da3b8b1d252cd942ee8afb731ee0c646fa06e93692bebb0a08a73d9997"
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
@@ -29,27 +29,27 @@
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "b9424e35bbc54d33910caa88394f95ffd682ac9f240bd796fd0cef9c6a696c09"
+      "sha256": "772d7f627d5b531d85d0874fae68d02ede5d23148295ea3f8727a3dba30a28a4"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "21129a217c7d8997405f5e9f1846152c50fac9922f0a5c3c79a835fb7e256e34"
+      "sha256": "ec988c2c93115d00c64aec3fe56cd0aca82c2f5efd86b60820855c0cc18abbde"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "f036ee3a9c89cc836b25535490bbc3768a33b376a70cd8852649fabab1d4be1d"
+      "sha256": "98580e3eecb294834bc699c326541fef09cbe45ab55d6a0cf8ee0edd915ca026"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "bc597a254b86268e78a70fc371a79524daf9ab1e6fddc87267a5289a78bac217"
+      "sha256": "81d987719055d3ef741f98e0211cdab412bc0d69422cd6d5c4c8e8b3451d242f"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "2e3813cb31a410d5d5af42510fa19013816826f1c82598084bf7d713b102989d"
+      "sha256": "33fa973c2666645a29dfcbaa0bd6d069a53b6110eeaff11d8b86d0689648448d"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "3ac817efd9dbd4c922dc5a6e225bc47fc8d0d040b714d84ebf64bd1d79889a05"
+      "sha256": "e99c2e8b248f97ab142a8e707555cf557f3b2dd401e598d96c90f2783a88bce9"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -436,7 +436,7 @@
         }
       },
       "status": "coming_soon",
-      "breed_count": 3,
+      "breed_count": 4,
       "fact_groups": [
         "play",
         "litter",
@@ -10037,6 +10037,371 @@
         "K15",
         "K20"
       ]
+    },
+    {
+      "id": "siberian_cat",
+      "species": "cat",
+      "order": 3,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Siberian cat",
+        "sl": "Sibirska mačka"
+      },
+      "slug": {
+        "en": "siberian-cat",
+        "sl": "sibirska-macka"
+      },
+      "synonyms": {
+        "en": [
+          "Siberian Forest Cat"
+        ],
+        "sl": [
+          "sibirska macka",
+          "sibirka",
+          "sibirska gozdna mačka"
+        ]
+      },
+      "facets": {},
+      "facts": [
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              7.7,
+              11.8
+            ],
+            "female": [
+              5.9,
+              7.7
+            ]
+          },
+          "source_ids": [
+            "C34"
+          ],
+          "ref": "cat-data:siberian_cat.adult_weight.gccf_male + cat-data:siberian_cat.adult_weight.gccf_female",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "value": [
+            48,
+            60
+          ],
+          "source_ids": [
+            "C34"
+          ],
+          "ref": "cat-data:siberian_cat.growth_end",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "C34"
+          ],
+          "ref": "cat-data:siberian_cat.lifespan.gccf_range",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "at_least_once_a_week",
+          "source_ids": [
+            "C35"
+          ],
+          "ref": "cat-data:siberian_cat.grooming.range",
+          "confidence": "medium"
+        }
+      ],
+      "compare": {
+        "weight": 0,
+        "lifespan": 2
+      },
+      "health": [
+        {
+          "key": "heart_hcm",
+          "source_ids": [
+            "C34"
+          ],
+          "ref": "cat-data:siberian_cat.health.hcm",
+          "confidence": "medium"
+        },
+        {
+          "key": "dental_weight_care",
+          "source_ids": [
+            "C35"
+          ],
+          "ref": "cat-data:siberian_cat.health.common_care",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [],
+        "consider": []
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 3
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 12
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 84
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 120
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "play_sessions",
+          "value": 2
+        },
+        "rules": [
+          {
+            "key": "play_instead_of_steps",
+            "params": {
+              "sessions": 2,
+              "gap_minutes": 120
+            }
+          },
+          {
+            "key": "litter_rule",
+            "params": {
+              "uses": 2,
+              "scoop_hours": 4,
+              "change_days": 7
+            }
+          },
+          {
+            "key": "scratching_after_missed_play",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_6_12_weeks",
+            "basis_source_ids": [
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_3_6_months",
+            "basis_source_ids": [
+              "C2",
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_6_12_months",
+            "basis_source_ids": [
+              "C2",
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.adult",
+            "basis_source_ids": [
+              "C2"
+            ],
+            "decision": "potrdil David 2026-10-08 (načrt M5-R06): adult cat 2 meals per day (game simplification)"
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.senior",
+            "basis_source_ids": [
+              "C2"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.arrival_age.young",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: young cat arrives at 12 months"
+          },
+          {
+            "ref": "cat-data:general.arrival_age.adult",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: mature cat arrives at 84 months"
+          },
+          {
+            "ref": "cat-data:general.arrival_age.senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: senior cat arrives at 120 months"
+          },
+          {
+            "ref": "cat-data:general.play.game_sessions_kitten",
+            "basis_source_ids": [
+              "C10"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: kitten 3 per day"
+          },
+          {
+            "ref": "cat-data:general.play.game_sessions_adult",
+            "basis_source_ids": [
+              "C10"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: adult 2 per day"
+          },
+          {
+            "ref": "cat-data:general.play.game_min_gap",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 20:40: 2 h between two successful sessions, measured from the last successful one"
+          },
+          {
+            "ref": "cat-data:general.litter.game_uses_per_day_adult",
+            "basis_source_ids": [
+              "C6"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: adult 2 uses per day"
+          },
+          {
+            "ref": "cat-data:general.litter.game_scoop_deadline",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: 4 h deadline"
+          },
+          {
+            "ref": "cat-data:general.litter.full_change",
+            "basis_source_ids": [
+              "C5",
+              "C6",
+              "C7"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: one full litter change per program week"
+          },
+          {
+            "ref": "cat-data:siberian_cat.arrival_age_kitten",
+            "basis_source_ids": [
+              "C13"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-16): pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule for pedigree kittens)"
+          },
+          {
+            "ref": "cat-data:siberian_cat.grooming.game_sessions_per_week",
+            "basis_source_ids": [
+              "C35"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, M5-R10-16): Siberian 1× per week (\"at least once a week\", PetMD C35 — the only source with a number); choosing it over the GCCF wording \"a few times a week\" (C34, no number) is Claude's reading — David may raise it to 2–3"
+          }
+        ],
+        "basis_source_ids": [
+          "C2",
+          "C3",
+          "C5",
+          "C6",
+          "C7",
+          "C10",
+          "C13",
+          "C35"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C10",
+        "C12",
+        "C13",
+        "C23",
+        "C34",
+        "C35",
+        "K3",
+        "K11",
+        "K12",
+        "K13",
+        "K14",
+        "K15"
+      ]
     }
   ],
   "sources": [
@@ -10879,6 +11244,20 @@
       "publisher": "PetMD — Kristen Seymour; reviewed by Veronica Higgs, DVM; updated 2023-04-10",
       "title": "Ragdoll (cat breeds)",
       "url": "https://www.petmd.com/cat/breeds/c_ct_ragdoll"
+    },
+    {
+      "id": "C34",
+      "tier": "B",
+      "publisher": "GCCF (Governing Council of the Cat Fancy, UK registry) — breed page",
+      "title": "Siberian",
+      "url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/siberian/"
+    },
+    {
+      "id": "C35",
+      "tier": "B",
+      "publisher": "PetMD — Kristen Seymour; reviewed by Barri J. Morrison, DVM; updated 2023-05-01",
+      "title": "Siberian (cat breeds)",
+      "url": "https://www.petmd.com/cat/breeds/c_ct_siberian"
     },
     {
       "id": "K1",

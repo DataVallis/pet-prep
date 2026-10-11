@@ -937,6 +937,11 @@
         }
       ],
       "notes": "NZCF (New Zealand) breeding rule via World Cat Congress; the same page lists no health-testing rule for GCCF or FIFe (only registration / colour restrictions). The page does not say how HCM status is shown (gene test or ultrasound), so the key stays neutral."
+    },
+    "siberian_cat": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "No A/B source names a routine test for breeding Siberians. World Cat Congress comparison (https://worldcatcongress.org/wp/cat_breed_comp_sib.php, accessed 2026-10-11): only GCCF's deafness certificate for white cats; the NZCF Siberian Health & Care Policy (2022) recommends HCM, PKD and PK-deficiency screening only \"where there is reason to suspect the disease is present\" — not a routine test of the parents. Show the general cat checklist only."
     }
   }
 }

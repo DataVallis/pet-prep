@@ -325,7 +325,7 @@ describe('species texts (T8) and the contract', () => {
     expect(contractBody('cat', 'domestic_cat')).not.toMatch(/česal/);
     expect(contractBody('cat', 'maine_coon')).toMatch(/Redno jo bom česal, da se ji dlaka ne bo zavozlala\./);
     // David 2026-10-11: the Ragdoll and the British Shorthair are brushed too.
-    for (const breed of ['ragdoll', 'british_shorthair']) expect(contractBody('cat', breed)).toMatch(/Redno jo bom česal/);
+    for (const breed of ['ragdoll', 'british_shorthair', 'siberian_cat']) expect(contractBody('cat', breed)).toMatch(/Redno jo bom česal/);
     expect(contractBody(null, null)).toBe(t('contract:screen.body'));
   });
 });

@@ -33,6 +33,7 @@ enum BreedType: string
     case MaineCoon = 'maine_coon';
     case BritishShorthair = 'british_shorthair';
     case Ragdoll = 'ragdoll';
+    case SiberianCat = 'siberian_cat';
 
     /**
      * Get the breed slug as used in the breed_configs table.
@@ -59,6 +60,7 @@ enum BreedType: string
             self::MaineCoon => 'maine-coon',
             self::BritishShorthair => 'british-shorthair',
             self::Ragdoll => 'ragdoll',
+            self::SiberianCat => 'siberian-cat',
         };
     }
 
@@ -77,7 +79,7 @@ enum BreedType: string
     {
         return match ($this) {
             self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky => Species::Dog,
-            self::DomesticCat, self::MaineCoon, self::BritishShorthair, self::Ragdoll => Species::Cat,
+            self::DomesticCat, self::MaineCoon, self::BritishShorthair, self::Ragdoll, self::SiberianCat => Species::Cat,
         };
     }
 
@@ -102,7 +104,7 @@ enum BreedType: string
     {
         return match ($this) {
             self::Mutt, self::DomesticCat => false,
-            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::MaineCoon, self::BritishShorthair, self::Ragdoll => true,
+            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::MaineCoon, self::BritishShorthair, self::Ragdoll, self::SiberianCat => true,
         };
     }
 

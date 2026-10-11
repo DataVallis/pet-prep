@@ -309,6 +309,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Siberian cat (paid cat breed, M5-R10-16; species follows the breed).
+     */
+    public function siberianCat(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::SiberianCat->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static
