@@ -1409,7 +1409,8 @@
         "source_id": "C44",
         "quote": "Bengals are highly intelligent, energetic and require plenty of mental stimulation and opportunities to exercise.",
         "confidence": "medium",
-        "notes": "No new rule: the general cat rules already give daily play sessions (wand mini-game) and the scratching / climbing need (CAT_SPEC); no A/B source gives a Bengal-specific number of play sessions or minutes. PetMD (C45): \"They require a lot of stimulation and enrichment\"; VCA (C46): \"Highly active and full of energy.\""
+        "notes": "No new rule: the general cat rules already give daily play sessions (wand mini-game) and the scratching / climbing need (CAT_SPEC); no A/B source gives a Bengal-specific number of play sessions or minutes. PetMD (C45): \"They require a lot of stimulation and enrichment\"; VCA (C46): \"Highly active and full of energy.\"",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-18): no new rule — the sourced need (lots of stimulation, play, exercise, a high vantage point) is covered by the general cat rules already in the game (daily wand play sessions, scratching / climbing, AAFP C22 vertical space); no A/B source gives a Bengal-specific number of play sessions or minutes. More play for a very active breed is open for David (HANDOFF)."
       },
       "vertical_space": {
         "value": "likes a high vantage point; a cat tree is ideal",
@@ -1417,7 +1418,8 @@
         "source_id": "C44",
         "quote": "They like to have a high up vantage point; a cat tree is ideal for providing this.",
         "confidence": "medium",
-        "notes": "Register text only — household equipment, not a care task the child does; climbing / vertical space is already part of the general cat environment advice (AAFP C22)."
+        "notes": "Register text only — household equipment, not a care task the child does; climbing / vertical space is already part of the general cat environment advice (AAFP C22).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-18): no new rule — the sourced need (lots of stimulation, play, exercise, a high vantage point) is covered by the general cat rules already in the game (daily wand play sessions, scratching / climbing, AAFP C22 vertical space); no A/B source gives a Bengal-specific number of play sessions or minutes. More play for a very active breed is open for David (HANDOFF)."
       },
       "affection": {
         "value": "affectionate, but more likely to curl up next to you than on your lap; vocal",

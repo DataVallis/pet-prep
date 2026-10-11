@@ -120,7 +120,7 @@ describe('breed, config and database', function () {
             ->and(Species::Cat->freeBreed())->toBe(BreedType::DomesticCat)
             ->and([$config->species, $config->premium_unlock, $config->sort_order, $config->label_key])
             ->toBe([Species::Cat, true, 60, 'breeds.bengal'])
-            ->and($config->search_keywords)->toBe(['bengal', 'bengal cat', 'bengalska mačka', 'bengalska macka', 'bengalka', 'bengalec'])
+            ->and($config->search_keywords)->toBe(['bengal', 'bengal cat', 'bengalska mačka', 'bengalska macka', 'bengalka'])
             ->and($config->daily_steps_required)->toBe(0)
             ->and(benData('bengal.identity.value'))->toBe(['slug' => 'bengal', 'enum' => 'bengal', 'premium' => true])
             ->and((string) benData('bengal.identity.decision'))->toContain('sort_order 60');

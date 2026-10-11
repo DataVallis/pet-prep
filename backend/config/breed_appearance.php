@@ -1268,7 +1268,7 @@ return [
             'coat_length' => 'C42 / C43 short, dense, close-lying, unusually soft, preferably glittering (paraphrase)',
             'coat_color' => 'C47 FIFe "spotted and marbled pattern in brown (black), seal sepia, seal mink point and snow" (+ silver) — weights unsourced',
             'coat_pattern' => 'C42 / C43 spotted (rosettes preferred) or marbled, belly spotted; faults: mackerel-like elongated spots, white patches (paraphrase) — weights unsourced',
-            'ear_carriage' => 'C43 medium to small, wide at the base, rounded tips, furnishings acceptable but no tufts (paraphrase)',
+            'ear_carriage' => 'C42 / C43 medium to small, wide at the base, rounded tips; C43 furnishings acceptable but no tufts (paraphrase)',
             'eye_color' => 'C43 green, gold, brown, blue-green or blue by variety; C42 "For Snow Bengals, the eye colour is an intense, pure blue."',
             'tail' => 'C43 thick, tapering to a rounded tip, medium length (paraphrase)',
             'features' => 'C42 / C43 broad modified wedge head with rounded contours, high cheekbones, full broad muzzle with large whisker pads, large wide nose leather; C42 "The nose line ranges from slightly concave to nearly straight."',
@@ -1277,7 +1277,7 @@ return [
         'traits' => [
             'size' => ['medium-large'],
             'build' => [['value' => 'sleek, long-bodied and very muscular, with robust bone', 'weight' => 2], 'athletic, muscular, hindquarters slightly higher than the shoulders'],
-            'coat_length' => ['short, dense, close-lying, soft, pelt-like coat with a slight glitter'],
+            'coat_length' => ['short, dense, close-lying, soft, pelt-like, slightly glittering'],
             // FIFe colours only (C47): brown (black), seal sepia / seal mink, snow, and silver. Brown first and highest (portrait default).
             'coat_color' => [
                 ['value' => 'golden-brown with black markings', 'weight' => 4],
@@ -1312,9 +1312,9 @@ return [
         'stage_overrides' => [
             'puppy' => [
                 'build' => 'small, lithe, playful',
-                'coat_length' => 'short, slightly fuzzy kitten coat',
-                'tail' => 'short, thick, rounded tip',
-                'features' => ['a small rounded wedge-shaped head', 'large oval eyes'],
+                'coat_length' => 'short, slightly fuzzy kitten',
+                'tail' => 'short and thick, with a rounded tip',
+                'features' => ['a small rounded wedge-shaped head', 'large oval eyes', 'a domestic cat, not a wild cat'],
             ],
             'young' => [
                 'build' => 'long-bodied and lithe, not yet fully muscled',

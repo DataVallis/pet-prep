@@ -205,7 +205,7 @@ describe('cat import provenance (cat-data/data.json)', function () {
             }
 
             // The Siberian and the Norwegian Forest Cat have no C14 life-table row → the GCCF lower bound (M5-R10-16, M5-R10-17).
-            $lifespanRef = in_array($breed, [BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal], true) ? str_replace('-', '_', $s).'.lifespan.gccf_lower_bound' : str_replace('-', '_', $s).'.lifespan.expectancy_at_birth';
+            $lifespanRef = in_array($breed, [BreedType::SiberianCat, BreedType::NorwegianForestCat], true) ? str_replace('-', '_', $s).'.lifespan.gccf_lower_bound' : str_replace('-', '_', $s).'.lifespan.expectancy_at_birth';
             expect($v('all', 0, StageParamKey::LifespanYears))->toBe(clData($lifespanRef)['value']);
         }
     });

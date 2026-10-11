@@ -435,7 +435,7 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(S.young).toBe('Pride kot mlada mačka, stara 1 leto — bengalska mačka lahko raste do 2. leta.');
     expect(S.adult).toBe('Pride kot zrela mačka, stara 7 let.');
     expect(S.senior).toBe('Pride kot starejša mačka, stara 10 let.');
-    expect(PICKER_STRINGS.breedHints.bengal).toBe('Kratka, mehka, pegasta dlaka · česanje 1× na teden');
+    expect(PICKER_STRINGS.breedHints.bengal).toBe('Kratka, mehka, pegasta ali marmorirana dlaka · česanje 1× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.bengal;
@@ -443,7 +443,7 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(E.young).toBe('Arrives as a young cat, 1 year old — a Bengal can keep growing until 2 years.');
       expect(E.adult).toBe('Arrives as a mature cat, 7 years old.');
       expect(E.senior).toBe('Arrives as a senior cat, 10 years old.');
-      expect(PICKER_STRINGS.breedHints.bengal).toBe('Short, soft, spotted coat · brushing 1× a week');
+      expect(PICKER_STRINGS.breedHints.bengal).toBe('Short, soft, spotted or marbled coat · brushing 1× a week');
       // Never an allergy promise, never a wild cat.
       expect(JSON.stringify(E) + PICKER_STRINGS.breedHints.bengal).not.toMatch(/allerg|wild|leopard/i);
     } finally {

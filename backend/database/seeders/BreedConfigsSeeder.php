@@ -473,7 +473,7 @@ class BreedConfigsSeeder extends Seeder
                 'species' => 'cat',
                 'sort_order' => 60,
                 'label_key' => 'breeds.bengal',
-                'search_keywords' => ['bengal', 'bengal cat', 'bengalska mačka', 'bengalska macka', 'bengalka', 'bengalec'],
+                'search_keywords' => ['bengal', 'bengal cat', 'bengalska mačka', 'bengalska macka', 'bengalka'],
             ],
         ];
     }

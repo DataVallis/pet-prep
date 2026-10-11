@@ -17,11 +17,11 @@
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
-      "sha256": "91a6a842f938402d506db9a95b7f07d6e8e6e159b9d1bc43b355cada9f88ab1b"
+      "sha256": "ccbc92ea958e09e23161df1445bb2446316ea92a31eac1a91461d31c1d230e1f"
     },
     "cat_sources": {
       "path": "docs/research/cat-data/sources.md",
-      "sha256": "b226865e888366de4a39a733846c2c0a2f46a5d374fdfbb4fc3dd7c240683152"
+      "sha256": "c23c7d63478cda279daeb74bafcd5c24a053b2a0039f92fe271a24a54f557295"
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
@@ -29,11 +29,11 @@
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "ef1904cb9fd92a354f40615fe92ea556dfc2e29ff3c6fbd63d9c6b30abcf39e3"
+      "sha256": "47190e931f97cff19e7f292ebdfe768e6b699348a788226422f322d890fe9fdf"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "6a29317c93aa3bff7882f785c43691fe1523c90a605a566ab994065785d57619"
+      "sha256": "658b8edd61b5f8c00aeeff751f8528ad9e274a223212a010a6b5c5ad2d5bff9b"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
