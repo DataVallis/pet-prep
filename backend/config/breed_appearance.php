@@ -166,6 +166,17 @@
 | size at three to five years (CFA C27, VCA C28). Colours from the FIFe varieties only; blue is the
 | best-known colour (C27, C28) and weighted highest (portrait default). Colour weights
 | are unsourced → `verified => false`.
+|
+| Ragdoll (M5-R10-15, docs/research/cat-data ragdoll.appearance): a firm, large cat with
+| a long, muscular body of medium to strong bone, broad chest; medium, broad modified
+| wedge head, straight nose with a slight curve, broad rounded muzzle, well-developed
+| chin; medium ears broad at the base with rounded tips, slight forward tilt; large
+| oval eyes, BLUE ONLY (any other eye colour disqualifies); large round paws tufted
+| between the toes; long bushy tail; medium-long, soft, silky coat lying with the body,
+| longest at the neck (bib) (FIFe RAG 01.01.2026, C29). Patterns colourpoint, mitted,
+| bicolour in seal, blue, chocolate, lilac, red, cream (C29). Slow to mature: full coat
+| colour at two years, full size at four (CFA C30). Seal colourpoint is weighted
+| highest (portrait default); colour / pattern weights are unsourced → `verified => false`.
 */
 
 return [
@@ -980,6 +991,74 @@ return [
             'young' => [
                 'build' => 'compact, solid, broad-chested',
                 'features' => ['a round head with a broad skull', 'a short, broad, straight nose with only a slight dip — not a flat face', 'large, round, wide-open eyes'],
+            ],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    'ragdoll' => [
+        'display_name' => 'Ragdoll cat',
+        // Colour / pattern weights are not in the standard (unsourced) — same rule as the Maine Coon.
+        'verified' => false,
+        'source' => 'FIFe breed standard Ragdoll (RAG), 01.01.2026 (C29, https://www.fifeweb.org/wp-content/uploads/2023/10/RAG.pdf) — for the traits listed in `sources`; weight / maturity C30 (CFA). Colour and pattern weights are unsourced.',
+        'sources' => [
+            'size' => 'C29 "a firm, large cat"; C30 CFA males 6.8–9.1 kg, females 4.5–6.8 kg',
+            'build' => 'C29 "medium to strongly boned muscular body"; "Long body, medium to strong bone structure, muscular."',
+            'coat_length' => 'C29 "Medium long, dense, soft and silky texture, lying with the body."; longest at the neck (bib)',
+            'coat_color' => 'C29 colours seal, blue, chocolate, lilac, red, cream (points) — weights unsourced',
+            'coat_pattern' => 'C29 patterns colourpoint, mitted, bicolour (bicolour: inverted white V on the mask, white chest / belly / legs; mitted: white chin, belly stripe, front mittens) — weights unsourced',
+            'ear_carriage' => 'C29 ears "Medium size, broad at the base, with rounded tips.", "Set wide on the skull with a slight tilt forward."',
+            'eye_color' => 'C29 eyes "Blue, the more intensive the better."; any other eye colour is a disqualification',
+            'tail' => 'C29 tail long, well furnished and bushy',
+            'features' => 'C29 head "Medium size, broad modified wedge."; broad rounded muzzle; eyes "Large and oval."; paws "Large, round and compact, tufted between the toes."',
+            'stage_notes' => 'C30 "reaching full coat color at two years, and full size and weight at four"; kitten look (D) — CAT_SPEC §8',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'long-bodied, muscular, broad-chested', 'weight' => 2], 'long-bodied, sturdy, solid-boned'],
+            'coat_length' => ['semi-long, soft, silky'],
+            // FIFe colours only (C29); seal first and highest (portrait default).
+            'coat_color' => [
+                ['value' => 'seal point (a pale cream body with dark seal-brown face mask, ears, legs and tail)', 'weight' => 4],
+                ['value' => 'blue point (a pale bluish-white body with grey-blue face mask, ears, legs and tail)', 'weight' => 2],
+                'chocolate point (an ivory body with milk-chocolate face mask, ears, legs and tail)',
+                'lilac point (a white body with pinkish-grey face mask, ears, legs and tail)',
+                'red point (a creamy white body with reddish-orange face mask, ears, legs and tail)',
+                'cream point (a white body with soft cream face mask, ears, legs and tail)',
+            ],
+            // FIFe patterns only (C29); no van (CFA C30 only).
+            'coat_pattern' => [
+                ['value' => 'in the colourpoint pattern, with no white anywhere', 'weight' => 3],
+                ['value' => 'in the mitted pattern: white front paws, a white chin and a white stripe along the belly', 'weight' => 2],
+                ['value' => 'in the bicolour pattern: an inverted white V on the face, a white chest, belly and legs', 'weight' => 2],
+            ],
+            'ear_carriage' => ['medium, broad-based, round-tipped, slightly forward-tilted'],
+            // Blue only — any other eye colour disqualifies (C29).
+            'eye_color' => ['deep blue'],
+            'tail' => ['long, bushy, plume-like'],
+        ],
+        'features' => [
+            'a broad, modified-wedge head with full cheeks and a broad, rounded muzzle',
+            'large, oval eyes',
+            'a full bib of longer fur around the neck',
+            'large, round paws with tufts of fur between the toes',
+        ],
+        // CAT_SPEC §8 (D): the Ragdoll is slow to mature — full coat colour at two years,
+        // full size at four (C30).
+        'stage_notes' => [
+            'puppy' => 'As a Ragdoll kitten it is fluffy and pale, with soft blue eyes and its darker points only faintly showing yet',
+            'young' => 'As a young Ragdoll it is not fully grown yet: longer-legged and less heavy than an adult, its points still darkening (the breed reaches full coat colour at about two years and full size at about four)',
+        ],
+        // A growing Ragdoll: no adult "full bib" / "plume" wording next to the stage note.
+        'stage_overrides' => [
+            'puppy' => [
+                'build' => 'small, soft, sturdy',
+                'tail' => 'fluffy',
+                'features' => ['a broad, rounded head with a short muzzle', 'large, oval eyes'],
+            ],
+            'young' => [
+                'build' => 'long-bodied, still slender',
+                'tail' => 'long, bushy',
+                'features' => ['a broad, modified-wedge head with a rounded muzzle', 'large, oval eyes', 'a bib of longer fur that is still filling out'],
             ],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],

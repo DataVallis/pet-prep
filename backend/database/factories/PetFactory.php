@@ -299,6 +299,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Ragdoll (paid cat breed, M5-R10-15; species follows the breed).
+     */
+    public function ragdoll(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::Ragdoll->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static
