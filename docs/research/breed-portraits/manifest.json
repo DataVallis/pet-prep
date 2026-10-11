@@ -161,6 +161,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "siberian_husky",
+            "species": "dog",
+            "file": "dog/siberian-husky.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:9969e6d5ae5c3fa6dbefaa51db80c50a53135f27fd436ab8bb31dffd0bdf3260",
+            "generated_at": "2026-10-11T00:08:34+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
