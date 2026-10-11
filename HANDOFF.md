@@ -179,9 +179,13 @@ Older queue (still valid where not done):
 
 ## 6. Session log
 
-### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-16 Siberian cat (branch `feat/M5-R10-16-siberian`, PR #171)
+### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-16 Siberian cat (branch `feat/M5-R10-16-siberian`, PR #171; portrait PR #173, website PR #33)
 - Research C33–C35 → backend (enum, migration, configs, cat rows incl. grooming 1×/week, appearance, `SiberianCatBreedTest`) → mobile (names, hints, grooming list, schema.ts additive) → register export (`siberianCatFacts`, health keys HCM + dental/weight) → docs. Tests: Pest 2265, Jest 2022, export 36 — all green locally.
-- Next: merge on green `CI OK`, deploy, portrait run, website page (`feat/register-siberian-cat`).
+- **Lock:** draft PR #171 before research; draft portrait PR #173 right after the #171 merge.
+- **Merge / deploy:** PR #171 merged as `c110486` on green `CI OK`; main run 38129431118 "Deploy to Hetzner Production" success.
+- **Review:** `qa-reviewer` APPROVE, no blockers; should-fix (brown + white without tabby could read as chocolate) and nits (decision lines, GCCF "daily" alternative, bare "Siberian" synonym, BUILD_LOG wording) fixed before merge. Follow-up for later: the Maine Coon appearance has the same brown + white combination.
+- **Portrait:** run 38129633976 ($0.15, AI Lab), accepted first try — realistic photo, one adult brown mackerel tabby, green-gold eyes, dense semi-long coat with ruff, plain light backdrop; main's Labrador portrait kept.
+- **Website:** PR #33 merged (`40bb5b4`), main run success — new health word `dental_weight_care`, EN / SL intro (C13 / C34 / C35, says it is not hypoallergenic), AI photo. Live check from the cloud was blocked by the egress proxy.
 
 ### 2026-10-11 (cloud) — Breed drives idea recorded (docs only, branch `docs/breed-drives-idea`)
 - **David's idea:** every breed has a drive (Jack Russell digging, Border Collie herding) satisfied by a breed-specific play activity; **unsatisfied drive → breed-specific misbehaviour with a 2 h deadline, then the normal mess ladder** (same as chewing after a missed walk). **Build after the beta.** Spec with proposals + open questions: `docs/product/BREED_DRIVES_SPEC.md`; DECISIONS, ROADMAP backlog, FEATURES §4 (🗓), PLAY_CUDDLE_SPEC cross-reference. No code.
