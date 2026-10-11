@@ -183,6 +183,11 @@ Older queue (still valid where not done):
 
 ## 6. Session log
 
+### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-18 Bengal (branch `feat/M5-R10-18-bengal`, PR #176)
+- Research C42–C50 + K22 → backend (enum, migration, configs, cat rows incl. grooming 1×/week, appearance, `BengalBreedTest`) → mobile (names, hints, grooming list, schema.ts additive — regenerated from a local server, identical) → register export (`bengalFacts`, weight as one PDSA average, health keys PRA/PK def + HCM + kneecap + cancer) → docs. Tests: Pest 2327, Jest 2026, export 38 — all green locally; pint clean, tsc clean.
+- **Lock:** draft PR #176 before research.
+- **Review:** `qa-reviewer` CHANGES REQUESTED → 1 blocker (CatLifeStageDataTest added the Bengal to the GCCF-range lifespan list) + should-fix (doubled "coat" in prompts, kitten tail wording, hybrid statements under-stated, unrecorded quotes, activity-need decision line, BUILD_LOG placeholders) + nits — all fixed in `f557199` before merge; website words for `pra_pk_def` / `dna_pra_b` come with the website PR.
+
 ### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-17 Norwegian Forest Cat (branch `feat/M5-R10-17-norwegian-forest-cat`, PR #174; portrait PR #175, website PR #34)
 - Research C36–C41 + K21 → backend (enum, migration, configs, cat rows incl. grooming 1×/week, appearance, `NorwegianForestCatBreedTest`) → mobile (names, hints, grooming list, schema.ts additive) → register export (`norwegianForestCatFacts`, health keys GSD IV + HCM + hips/weight) → docs. Tests: Pest 2304, Jest 2024, export 37 — all green locally.
 - **Lock:** draft PR #174 before research; draft portrait PR #175 right after the #174 merge.

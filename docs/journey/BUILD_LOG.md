@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Bengalka je v FIFe šesta najbolj registrirana pasma (3.559 v letu 2024) in zelo priljubljena zaradi pegaste dlake. PetPrep pošteno pove tudi manj prijetno: je zelo aktivna, potrebuje veliko igre in morda ni najboljša izbira za družine z majhnimi otroki (PetMD). Igra predstavlja samo registrirano domačo bengalko — nikoli divje mačke ali zgodnjega križanca. Register navaja teste staršev, ki jih zahteva britanski register GCCF (DNK-testa za dedno očesno bolezen PRA in pomanjkanje piruvat-kinaze).
 
-**Številke:** 9 novih virov (C42–C50) in 1 vir za seznam testov staršev (K22), 1 nova migracija (dve omejitvi pasme), 0 novih mehanik (česanje že obstaja, nova je samo vrednost 1× na teden); Pest **PEST_N** testov, Jest **JEST_N**, izvoz registra **EXPORT_N** testov (vsi zeleni). V aplikaciji skrito; na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+**Številke:** 9 novih virov (C42–C50) in 1 vir za seznam testov staršev (K22), 1 nova migracija (dve omejitvi pasme), 0 novih mehanik (česanje že obstaja, nova je samo vrednost 1× na teden); Pest **2327** testov, Jest **2026**, izvoz registra **38** testov (vsi zeleni). V aplikaciji skrito; na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
 
 **Kako povedati:**
 - 👩 Starši: »Bengalska mačka je pametna in zelo živahna — potrebuje veliko igre in prostor za plezanje, dlako pa je dovolj počesati enkrat na teden. Pri vzreditelju vprašajte za DNK-testa PRA in PK def pri starših.« (*ko bodo mačke v aplikaciji*)
