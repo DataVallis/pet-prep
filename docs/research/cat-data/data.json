@@ -639,24 +639,16 @@
       }
     },
     "growth_end": {
-      "value": "36",
+      "value": "36–60",
       "unit": "months",
-      "source_id": "C27",
-      "quote": "They are a slow maturing breed and do not reach their full size until three years of age.",
+      "source_id": "C27,C28",
+      "quote": "do not reach their full size until three years of age / Takes up to five years to reach physical maturity.",
       "confidence": "medium",
-      "notes": "VCA (C28) says \"Takes up to five years to reach physical maturity\" — sources differ; the CFA value (lower) is the one used for the appearance note. Prompt cue: the young British Shorthair is not fully grown yet.",
-      "alternatives": [
-        {
-          "value": "up to 60",
-          "unit": "months",
-          "source_id": "C28",
-          "quote": "Takes up to five years to reach physical maturity."
-        }
-      ]
+      "notes": "CFA (C27): full size at three years; VCA (C28): physical maturity up to five years → range 3–5 years, like the Maine Coon entry. Prompt cue: the young British Shorthair is not fully grown yet."
     },
     "grooming": {
       "range": {
-        "value": "at least weekly",
+        "value": "At least once a week",
         "unit": "rule",
         "source_id": "C28",
         "quote": "Run a comb through its coat at least weekly to keep it mat-free and looking healthy.",
