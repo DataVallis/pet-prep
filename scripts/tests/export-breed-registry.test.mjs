@@ -108,6 +108,9 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.siberian_cat.slug, { en: 'siberian-cat', sl: 'sibirska-macka' });
   assert.equal(byId.siberian_cat.availability, 'coming_soon');
   assert.notEqual(byId.siberian_cat.slug.en, byId.siberian_husky.slug.en);
+  // M5-R10-17
+  assert.deepEqual(byId.norwegian_forest_cat.slug, { en: 'norwegian-forest-cat', sl: 'norveska-gozdna-macka' });
+  assert.equal(byId.norwegian_forest_cat.availability, 'coming_soon');
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
 
@@ -380,7 +383,7 @@ test('the app\'s brushed-cat list equals the seeded grooming rows (David 2026-10
   assert.ok(m, 'GROOMING_CAT_BREEDS not found in mobile species.ts');
   const app = [...m[1].matchAll(/'([a-z_]+)'/g)].map((x) => x[1]).sort();
   assert.deepEqual(app, seeded);
-  assert.deepEqual(seeded, ['british_shorthair', 'maine_coon', 'ragdoll', 'siberian_cat']);
+  assert.deepEqual(seeded, ['british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
 });
 
 // ─── breed portraits (M5-R11, David 2026-10-10: AI photos, labelled) ───
@@ -739,4 +742,30 @@ test('Siberian (M5-R10-16): paid cat, kitten at 3 months, GCCF weight by sex, gr
   assert.doesNotMatch(json, /odds ratio|allerg|neva masquerade|colourpoint/i);
   assert.doesNotMatch(json, /\d+(\.\d+)?\s?%/);
   for (const id of ['C34', 'C35']) assert.ok(registry.sources.some((s) => s.id === id), id);
+});
+
+test('Norwegian Forest Cat (M5-R10-17): paid cat, kitten at 3 months, GCCF weight by sex, growth 4–5 years, lifespan 14–16 years, combing at least once a week, health keys only', () => {
+  const nfo = registry.breeds.find((b) => b.id === 'norwegian_forest_cat');
+  assert.equal(nfo.species, 'cat');
+  assert.equal(nfo.availability, 'coming_soon');
+  const fact = (field) => nfo.facts.find((f) => f.field === field);
+  assert.deepEqual([fact('weight').value, fact('weight').source_ids], [{ male: [5.4, 7.3], female: [4.1, 5.4] }, ['C37']]);
+  assert.deepEqual([fact('growth_end').value, fact('growth_end').qualifier, fact('growth_end').source_ids], [[48, 60], 'about', ['C37']]);
+  assert.deepEqual([fact('lifespan').value, fact('lifespan').qualifier, fact('lifespan').source_ids], [[14, 16], 'span', ['C37']]);
+  assert.deepEqual([fact('grooming_frequency').value, fact('grooming_frequency').source_ids], ['at_least_once_a_week', ['C38']]);
+  assert.deepEqual(nfo.health.map((h) => [h.key, h.source_ids]), [['gsd_iv', ['C37']], ['heart_hcm', ['C38']], ['hip_dysplasia_weight', ['C38']]]);
+  assert.ok(nfo.health.every((h) => !('value' in h)));
+  assert.deepEqual(nfo.suitability, { suits: [], consider: [] });
+  // Game: the general cat rules, a pedigree kitten at 3 months, brushing 1× a week (PetMD C38 / GCCF C37, runbook rule).
+  assert.equal(nfo.game.stages[0].starts.arrival_months, 3);
+  assert.deepEqual(nfo.game.stages.map((s) => s.starts.month ?? null), [null, 12, 84, 120]);
+  assert.deepEqual(nfo.game.adult_activity, { kind: 'play_sessions', value: 2 });
+  assert.equal(nfo.game.rules.find((r) => r.key === 'grooming_rule').params.per_week, 1);
+  assert.ok(nfo.game.values.some((v) => v.ref === 'cat-data:norwegian_forest_cat.arrival_age_kitten' && /pravilo runbooka, M5-R10-17/.test(v.decision)));
+  assert.ok(nfo.game.values.some((v) => v.ref === 'cat-data:norwegian_forest_cat.grooming.game_sessions_per_week' && /pravilo runbooka, M5-R10-17/.test(v.decision)));
+  // No health statistics, no allergy promise.
+  const json = JSON.stringify(nfo);
+  assert.doesNotMatch(json, /odds ratio|allerg|colourpoint/i);
+  assert.doesNotMatch(json, /\d+(\.\d+)?\s?%/);
+  for (const id of ['C37', 'C38']) assert.ok(registry.sources.some((s) => s.id === id), id);
 });

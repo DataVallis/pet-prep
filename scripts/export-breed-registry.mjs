@@ -49,7 +49,7 @@
  *        play sessions ............ cat general.play.game_sessions_{kitten,adult}, game_min_gap
  *        litter ................... cat general.litter.game_uses_per_day_*, game_scoop_deadline,
  *                                   full_change
- *        grooming (pedigree cats) . cat <breed>.grooming.game_sessions_per_week (Maine Coon, British Shorthair, Ragdoll, Siberian)
+ *        grooming (pedigree cats) . cat <breed>.grooming.game_sessions_per_week (Maine Coon, British Shorthair, Ragdoll, Siberian, Norwegian Forest Cat)
  *
  * Breed portraits (M5-R11, David 2026-10-10 — optional input):
  *   docs/research/breed-portraits/manifest.json      written by `php artisan breeds:portraits`
@@ -401,6 +401,7 @@ const SPECIES = [
       { id: 'british_shorthair', availability: 'coming_soon', synonyms: { en: ['British Blue', 'BSH'], sl: ['britanska kratkodlaka', 'britanska kratkodlaka macka', 'britanka', 'british shorthair'] } },
       { id: 'ragdoll', availability: 'coming_soon', synonyms: { en: ['Rag doll'], sl: ['ragdoll mačka', 'ragdoll macka', 'ragdol'] } },
       { id: 'siberian_cat', availability: 'coming_soon', synonyms: { en: ['Siberian Forest Cat'], sl: ['sibirska macka', 'sibirka', 'sibirska gozdna mačka'] } },
+      { id: 'norwegian_forest_cat', availability: 'coming_soon', synonyms: { en: ['Wegie', 'Skogkatt', 'Norwegian Forest'], sl: ['norveska gozdna macka', 'norveška mačka', 'skogkatt'] } },
     ],
   },
 ];
@@ -992,6 +993,7 @@ function catBreedFacts(R, id) {
   if (id === 'british_shorthair') return britishShorthairFacts(R);
   if (id === 'ragdoll') return ragdollFacts(R);
   if (id === 'siberian_cat') return siberianCatFacts(R);
+  if (id === 'norwegian_forest_cat') return norwegianForestCatFacts(R);
   if (id !== 'maine_coon') throw new Error(`no cat fact spec for ${id}`);
   const male = R.fact('maine_coon.adult_weight.tica_male', {}, parseRange);
   const female = R.fact('maine_coon.adult_weight.tica_female', {}, parseRange);
@@ -1071,6 +1073,31 @@ function siberianCatFacts(R) {
   };
 }
 
+/** M5-R10-17: GCCF weight, growth 4–5 years and lifespan range (C37), PetMD combing (C38), health keys only (C37 / C38 — no percentages). */
+function norwegianForestCatFacts(R) {
+  const male = R.fact('norwegian_forest_cat.adult_weight.gccf_male', {}, parseRange);
+  const female = R.fact('norwegian_forest_cat.adult_weight.gccf_female', {}, parseRange);
+  if (male.source_ids.join() !== female.source_ids.join()) throw new Error('Norwegian Forest Cat weights cite different sources');
+  const health = [
+    ['gsd_iv', 'norwegian_forest_cat.health.gsd_iv'],
+    ['heart_hcm', 'norwegian_forest_cat.health.hcm'],
+    ['hip_dysplasia_weight', 'norwegian_forest_cat.health.hip_dysplasia'],
+  ].map(([key, ref]) => {
+    const f = R.fact(ref, { key }, () => null);
+    delete f.value;
+    return f;
+  });
+  return {
+    facts: [
+      { group: 'size', field: 'weight', kind: 'quantity', unit: 'kg', value: { male: male.value, female: female.value }, source_ids: male.source_ids, ref: `${male.ref} + ${female.ref}`, confidence: male.confidence },
+      R.fact('norwegian_forest_cat.growth_end', { group: 'stages', field: 'growth_end', kind: 'quantity', unit: 'months', qualifier: 'about' }, parseRange),
+      R.fact('norwegian_forest_cat.lifespan.gccf_range', { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: 'span' }, parseRange),
+      R.fact('norwegian_forest_cat.grooming.range', { group: 'grooming', field: 'grooming_frequency', kind: 'category' }, code),
+    ],
+    health,
+  };
+}
+
 function catGame(R) {
   const conv = String(R.entry('meta.conventions.game_time'));
   if (!/^1 real week = 1 month of cat age/.test(conv)) throw new Error('cat data.json: game_time convention changed');
@@ -1098,7 +1125,7 @@ function catGame(R) {
   const shared = [m4, m3, m2, mA, mS, young, adult, senior, playK, playA, gap, usesA, scoop, change];
 
   const forBreed = (id) => {
-    // Pedigree kittens arrive at 3 months (CAT_SPEC Q4; British Shorthair M5-R10-14, Ragdoll M5-R10-15, Siberian M5-R10-16), the domestic cat at 2.
+    // Pedigree kittens arrive at 3 months (CAT_SPEC Q4; British Shorthair M5-R10-14, Ragdoll M5-R10-15, Siberian M5-R10-16, Norwegian Forest Cat M5-R10-17), the domestic cat at 2.
     const arrival = id === 'domestic_cat' ? n('general.arrival_age.kitten_min') : n(`${id}.arrival_age_kitten`);
     const extra = [];
     const rules = [
