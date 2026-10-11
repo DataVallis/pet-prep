@@ -17,13 +17,29 @@ use Illuminate\Database\Eloquent\Model;
  */
 class ChallengeCreditResource extends Resource
 {
+    public static function getNavigationGroup(): ?string
+    {
+        return __('admin.navigation.payments');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('admin.navigation.credits');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('admin.navigation.credit_model');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('admin.navigation.credits');
+    }
+
     protected static ?string $model = ChallengeCredit::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-ticket';
-
-    protected static ?string $navigationLabel = 'Challenge credits';
-
-    protected static ?string $navigationGroup = 'Payments';
 
     public static function canCreate(): bool
     {

@@ -179,6 +179,12 @@ Older queue (still valid where not done):
 
 ## 6. Session log
 
+### 2026-10-11 (cloud, David present) — Admin dashboard + EN/SL admin (branch `feat/admin-dashboard-i18n`)
+- Removed Filament's Account / FilamentInfo widgets; custom `App\Filament\Pages\Dashboard` with a period filter (7/30/90/365 days) + widgets `PlatformOverview`, `AttentionOverview`, `GrowthChart`, `CareActivityChart` (species filter), `PetsByBreedChart` (species filter), `PetPlansChart`, `LatestPets`, `LatestPurchases`, `AiSpendOverview` (translated). Per-day buckets in Europe/Ljubljana (`Widgets/Concerns/UsesDashboardPeriod`).
+- Admin i18n: `lang/{en,sl}/admin.php` (parity checked in `I18nTest`), `SetAdminLocale` middleware (cookie `petprep_admin_locale`, normal + persistent for Livewire), switcher `GET /admin/locale/{locale}` (`filament.admin.locale`) in the top bar + user menu; Feature switches page now English by default; resources' navigation/model labels translated; `lang/vendor/filament-forms/sl/components.php` fills select strings (Filament forms has no SL).
+- Answered David: cats → choose "Everyone" + Save is all; phones need app v3.1.0+ (CAT_UI_READY shipped in v3.1.0), restart the app.
+- Debt / next: resource form/table field labels are still English-only (translate per resource when touched).
+
 ### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-16 Siberian cat (branch `feat/M5-R10-16-siberian`, PR #171; portrait PR #173, website PR #33)
 - Research C33–C35 → backend (enum, migration, configs, cat rows incl. grooming 1×/week, appearance, `SiberianCatBreedTest`) → mobile (names, hints, grooming list, schema.ts additive) → register export (`siberianCatFacts`, health keys HCM + dental/weight) → docs. Tests: Pest 2265, Jest 2022, export 36 — all green locally.
 - **Lock:** draft PR #171 before research; draft portrait PR #173 right after the #171 merge.

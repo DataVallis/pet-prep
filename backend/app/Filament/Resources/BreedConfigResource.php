@@ -21,13 +21,29 @@ use Illuminate\Database\Eloquent\Collection;
 
 class BreedConfigResource extends Resource
 {
+    public static function getNavigationGroup(): ?string
+    {
+        return __('admin.navigation.configuration');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('admin.navigation.breed_configs');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('admin.navigation.breed_config_model');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('admin.navigation.breed_configs');
+    }
+
     protected static ?string $model = BreedConfig::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
-
-    protected static ?string $navigationLabel = 'Breed Configs';
-
-    protected static ?string $navigationGroup = 'Configuration';
 
     /**
      * 24-hour HH:MM.

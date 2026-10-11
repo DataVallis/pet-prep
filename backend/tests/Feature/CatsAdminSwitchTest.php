@@ -3,6 +3,7 @@
 use App\Enums\CatsAvailability;
 use App\Enums\Species;
 use App\Filament\Pages\FeatureSwitches;
+use App\Http\Middleware\SetAdminLocale;
 use App\Models\AppSetting;
 use App\Models\AppSettingChange;
 use App\Models\Pet;
@@ -267,9 +268,10 @@ describe('setting storage, cache and env override', function () {
 });
 
 // ─────────────────────────────────────────────────────────────────────────
-describe('Filament page "Funkcije"', function () {
-    it('is superadmin only', function () {
-        $this->actingAs(cswAdmin())->get('/admin/feature-switches')->assertOk()->assertSee('Mačke')->assertSee('Samo testne družine');
+describe('Filament page "Feature switches"', function () {
+    it('is superadmin only, English by default and Slovenian on request', function () {
+        $this->actingAs(cswAdmin())->get('/admin/feature-switches')->assertOk()->assertSee('Cats')->assertSee('Test families only')->assertDontSee('Samo testne družine');
+        $this->withCookie(SetAdminLocale::COOKIE, 'sl')->get('/admin/feature-switches')->assertOk()->assertSee('Mačke')->assertSee('Samo testne družine');
         app('auth')->forgetGuards();
         $this->actingAs(User::factory()->parent()->create())->get('/admin/feature-switches')->assertForbidden();
     });

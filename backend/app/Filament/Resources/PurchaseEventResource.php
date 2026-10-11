@@ -16,13 +16,29 @@ use Illuminate\Database\Eloquent\Model;
  */
 class PurchaseEventResource extends Resource
 {
+    public static function getNavigationGroup(): ?string
+    {
+        return __('admin.navigation.payments');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('admin.navigation.purchase_events');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('admin.navigation.purchase_event_model');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('admin.navigation.purchase_events');
+    }
+
     protected static ?string $model = PurchaseEvent::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-receipt-percent';
-
-    protected static ?string $navigationLabel = 'Purchase events';
-
-    protected static ?string $navigationGroup = 'Payments';
 
     public static function canCreate(): bool
     {

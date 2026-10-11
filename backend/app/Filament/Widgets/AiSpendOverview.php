@@ -15,7 +15,9 @@ use Filament\Widgets\StatsOverviewWidget\Stat;
  */
 class AiSpendOverview extends StatsOverviewWidget
 {
-    protected static ?int $sort = 1;
+    protected static ?int $sort = 8;
+
+    protected int|string|array $columnSpan = 'full';
 
     protected static ?string $pollingInterval = '30s';
 
@@ -43,22 +45,22 @@ class AiSpendOverview extends StatsOverviewWidget
         $labMonth = $guard->spentThisMonthUsd(true);
 
         return [
-            Stat::make('Pets AI spend today (est.)', sprintf('$%.2f / $%.2f', $today, $daily))
-                ->description(sprintf('This month $%.2f / $%.2f · images $%.2f · videos $%.2f (%s)',
-                    $month,
-                    $monthly,
-                    $guard->spentThisMonthUsdFor(AiSpendPurpose::ReferenceImage),
-                    $guard->spentThisMonthUsdFor(AiSpendPurpose::StateVideo),
-                    $guard->timezone(),
-                ))
+            Stat::make(__('admin.dashboard.ai.pets_today'), sprintf('$%.2f / $%.2f', $today, $daily))
+                ->description(__('admin.dashboard.ai.pets_month', [
+                    'month' => sprintf('%.2f', $month),
+                    'cap' => sprintf('%.2f', $monthly),
+                    'images' => sprintf('%.2f', $guard->spentThisMonthUsdFor(AiSpendPurpose::ReferenceImage)),
+                    'videos' => sprintf('%.2f', $guard->spentThisMonthUsdFor(AiSpendPurpose::StateVideo)),
+                    'tz' => $guard->timezone(),
+                ]))
                 ->color(($today >= $daily || $month >= $monthly) ? 'danger' : (($today >= 0.8 * $daily || $month >= 0.8 * $monthly) ? 'warning' : 'success')),
-            Stat::make('AI Lab spend today (est.)', sprintf('$%.2f / $%.2f', $labToday, $guard->labDailyCapUsd()))
-                ->description(sprintf('This month $%.2f / $%.2f — separate from the pets budget', $labMonth, $guard->labMonthlyCapUsd()))
+            Stat::make(__('admin.dashboard.ai.lab_today'), sprintf('$%.2f / $%.2f', $labToday, $guard->labDailyCapUsd()))
+                ->description(__('admin.dashboard.ai.lab_month', ['month' => sprintf('%.2f', $labMonth), 'cap' => sprintf('%.2f', $guard->labMonthlyCapUsd())]))
                 ->color(($labToday >= $guard->labDailyCapUsd() || $labMonth >= $guard->labMonthlyCapUsd()) ? 'danger' : 'success'),
-            Stat::make('fal.ai balance', $balanceAt ? 'EXHAUSTED' : 'OK')
+            Stat::make(__('admin.dashboard.ai.balance'), $balanceAt ? __('admin.dashboard.ai.exhausted') : __('admin.dashboard.ai.ok'))
                 ->description($balanceAt
-                    ? 'Since '.$balanceAt.' — top up at fal.ai/dashboard/billing'
-                    : $mediaErrors.' pet(s) without media (budget / balance / errors)')
+                    ? __('admin.dashboard.ai.exhausted_desc', ['at' => $balanceAt])
+                    : __('admin.dashboard.ai.errors_desc', ['count' => $mediaErrors]))
                 ->color($balanceAt ? 'danger' : ($mediaErrors > 0 ? 'warning' : 'success')),
         ];
     }

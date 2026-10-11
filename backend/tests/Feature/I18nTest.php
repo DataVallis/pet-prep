@@ -92,7 +92,7 @@ describe('SetRequestLocale middleware (API group)', function () {
     });
 
     it('has every lang key in every supported language', function () {
-        foreach (['push', 'account'] as $file) {
+        foreach (['push', 'account', 'admin'] as $file) {
             $keys = fn (string $locale): array => array_keys(Arr::dot(require lang_path("{$locale}/{$file}.php")));
             foreach (RequestLocale::supported() as $locale) {
                 expect($keys($locale))->toBe($keys('en'), "lang/{$locale}/{$file}.php");

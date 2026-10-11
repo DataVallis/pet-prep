@@ -14,7 +14,7 @@ PetPrep/                         git: DataVallis/pet-prep
 │   ├── app/Enums/               UserRole, BreedType, ActivityType, PetStateEnum, HygieneEventStatus,
 │   │                            PetLockReason, CareRefusal (child API reason codes)
 │   ├── app/Events/PetUpdated    the only broadcast event (private `pet.{id}`, queued on `broadcasts`; emit via PetUpdated::afterCommit)
-│   ├── app/Filament/Resources/  User, Pet, BreedConfig, ActivityLog
+│   ├── app/Filament/            Resources (User, Pet, BreedConfig, …), Pages (Dashboard, FeatureSwitches, AiLab), Widgets (dashboard); lang/{en,sl}/admin.php
 │   ├── app/Http/Controllers/    Auth, Pairing, ParentDashboard, ChildReport, ParentSettings, QuietHours, ChildPet, ChildContract,
 │   │                            FalAiWebhook, RevenueCatWebhook; Concerns/HandlesChildPet (ActionResult → HTTP)
 │   ├── app/Http/Requests/       one FormRequest per endpoint with input (+ ChildPetRequest for body-less child calls)

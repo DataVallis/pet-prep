@@ -20,17 +20,29 @@ use Filament\Tables\Table;
 
 class UserResource extends Resource
 {
+    public static function getNavigationGroup(): ?string
+    {
+        return __('admin.navigation.management');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('admin.navigation.users_label');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('admin.navigation.user_model');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('admin.navigation.users_label');
+    }
+
     protected static ?string $model = User::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
-
-    protected static ?string $navigationLabel = 'Users';
-
-    protected static ?string $navigationGroup = 'Management';
-
-    protected static ?string $modelLabel = 'User';
-
-    protected static ?string $pluralModelLabel = 'Users';
 
     public static function form(Form $form): Form
     {

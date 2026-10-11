@@ -50,9 +50,15 @@ class AiLab extends Page implements HasForms
 
     protected static ?string $navigationIcon = 'heroicon-o-beaker';
 
-    protected static ?string $navigationGroup = 'AI media';
+    public static function getNavigationGroup(): ?string
+    {
+        return __('admin.navigation.ai_media');
+    }
 
-    protected static ?string $navigationLabel = 'AI Lab';
+    public static function getNavigationLabel(): string
+    {
+        return __('admin.navigation.ai_lab');
+    }
 
     protected static ?string $title = 'AI Lab';
 
