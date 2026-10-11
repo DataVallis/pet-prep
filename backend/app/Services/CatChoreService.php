@@ -22,7 +22,7 @@ use Illuminate\Support\Str;
 
 /**
  * The cat's server-led chores (M5-R06-05, M5-R06_PLAN T6): the weekly full
- * litter change (CAT_SPEC Q3) and the Maine Coon's grooming (Q8), both
+ * litter change (CAT_SPEC Q3) and a brushed cat's grooming (Q8), both
  * `pet_care_sessions` like the wand game (M5-R06-04): start → the server's
  * schedule (length, what is checked); finish → the app reports the strokes
  * it saw ({t: ms since start}) and score() judges participation
@@ -217,7 +217,7 @@ class CatChoreService
             return null;
         }
 
-        // Grooming (Maine Coon).
+        // Grooming (brushed cats: Maine Coon, Ragdoll, British Shorthair).
         $period = $this->groomingPeriodAt($pet, $now);
         if ($period === null) {
             return $refuse(CareRefusal::GroomingNotAvailable);

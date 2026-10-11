@@ -181,7 +181,7 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'play' => PlayPayload::for($pet)?->toArray(),
             // M5-R06-04: the cat's wand play (goal, sessions today, gap, running game); null for a dog.
             'wand' => WandPayload::for($pet)?->toArray(),
-            // M5-R06-05: the cat's litter tray, the Maine Coon's grooming, the scratching resolve; null for a dog.
+            // M5-R06-05: the cat's litter tray, a brushed cat's grooming (Maine Coon, Ragdoll, British Shorthair), the scratching resolve; null for a dog.
             'litter' => LitterPayload::for($pet)?->toArray(),
             'grooming' => GroomingPayload::for($pet)?->toArray(),
             'scratching' => ScratchingPayload::for($pet)?->toArray(),

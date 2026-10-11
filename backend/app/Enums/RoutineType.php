@@ -50,7 +50,7 @@ enum RoutineType: string
     case LitterChange = 'litter_change';
 
     /**
-     * M5-R06-05 (Maine Coon, CAT_SPEC Q8): `grooming_sessions_per_week`
+     * M5-R06-05 (brushed cats, CAT_SPEC Q8): `grooming_sessions_per_week`
      * slots per program week, on the day the week ends; slot i is done by
      * the week's i-th completed grooming. Counted at the end of the week.
      */

@@ -1042,9 +1042,6 @@ function ragdollFacts(R) {
   };
 }
 
-/** Cats with a grooming routine (data.json <breed>.grooming.game_sessions_per_week; the export test checks it matches the seeder). */
-const GROOMING_CATS = ['maine_coon', 'british_shorthair', 'ragdoll'];
-
 function catGame(R) {
   const conv = String(R.entry('meta.conventions.game_time'));
   if (!/^1 real week = 1 month of cat age/.test(conv)) throw new Error('cat data.json: game_time convention changed');
@@ -1080,8 +1077,9 @@ function catGame(R) {
       { key: 'litter_rule', params: { uses: usesA.value, scoop_hours: scoop.value, change_days: change.value } },
       { key: 'scratching_after_missed_play', params: {} },
     ];
-    // Every pedigree cat whose sourced need has a game value (David 2026-10-11: built in the app).
-    if (id !== 'domestic_cat' && GROOMING_CATS.includes(id)) {
+    // Every cat whose data.json entry has a grooming game value (David 2026-10-11: every sourced
+    // need is built in the app); the export test checks it against the seeder and the app list.
+    if (R.entry(id)?.grooming?.game_sessions_per_week !== undefined) {
       const groom = n(`${id}.grooming.game_sessions_per_week`);
       extra.push(groom);
       rules.push({ key: 'grooming_rule', params: { per_week: groom.value } });

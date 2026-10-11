@@ -4,7 +4,7 @@
  * What differs from the dog, as pure functions the HUD renders:
  * - the dock: food, water, "Pesek" (scoop), "Igra" (feather wand), clean — no walk (no steps,
  *   no Health card, no step permission), no "Pelji ven", no "Šola";
- * - chips above the dock: "Počeši" (Maine Coon), the weekly litter change, and "Crkljanje"
+ * - chips above the dock: "Počeši" (brushed cats), the weekly litter change, and "Crkljanje"
  *   (M5-R05 play & cuddle — a cat only cuddles, PLAY_CUDDLE_SPEC / CAT_SPEC §5.5);
  * - "Na praskalnik" on the scratched-sofa card (`BehaviourPanel`);
  * - the "first aid" note while the cat is hungry (C24, educational only, no number of days).
@@ -153,7 +153,7 @@ function litterChangeChip(change: LitterChange): CatChip | null {
   };
 }
 
-/** "Počeši" (Maine Coon, while this week's brushing is open) and the weekly litter change (until done). */
+/** "Počeši" (brushed cats, while this week's brushing is open) and the weekly litter change (until done). */
 export function catChips(view: ChildPetView): CatChip[] {
   if (!isCatView(view) || view.lock.is_locked) return [];
   const chips: CatChip[] = [];

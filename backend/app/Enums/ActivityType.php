@@ -39,7 +39,7 @@ enum ActivityType: string
     case PlayedWand = 'played_wand';
     // M5-R06-05 (CAT_SPEC Q3 / Q8 / Q10) child actions: scooped the litter
     // (every open use; the `litter_scoop` routines), completed the weekly full
-    // litter change, completed a grooming session (Maine Coon; value = the
+    // litter change, completed a grooming session (brushed cats; value = the
     // session's number of the program week), carried the cat to the scratcher
     // and praised it in time (resolves the scratching mess).
     case ScoopedLitter = 'scooped_litter';

@@ -690,7 +690,7 @@ export interface paths {
         get?: never;
         put?: never;
         /**
-         * Maine Coon grooming (M5-R06-05, CAT_SPEC Q8): start a combing session
+         * Grooming of a brushed cat — Maine Coon, Ragdoll, British Shorthair (M5-R06-05, CAT_SPEC Q8): start a combing session
          *     (~30 s; ~60 s while the coat is matted — `session.matted`). 422
          *     grooming_not_available | needs_cleaning | grooming_week_done |
          *     grooming_done_today | grooming_session_active | grooming_quiet_hours
@@ -714,7 +714,7 @@ export interface paths {
         get?: never;
         put?: never;
         /**
-         * Maine Coon grooming (M5-R06-05): finish with the comb strokes.
+         * Grooming of a brushed cat — Maine Coon, Ragdoll, British Shorthair (M5-R06-05): finish with the comb strokes.
          *     `accepted` = one of the week's groomings (and a matted coat resolved);
          *     `rejected` = not enough (no penalty). 422 grooming_not_available |
          *     care_session_*; 423 while locked
@@ -2914,14 +2914,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -3398,14 +3398,14 @@ export interface operations {
                                 session_running: boolean;
                             } | null;
                         } | null;
-                        /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                        /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                         grooming: {
-                            /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                            /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                             goal_per_week: number;
                             done_this_week: number;
                             week_started_at: string;
                             week_ends_at: string;
-                            /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                            /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                             matted: boolean;
                             matted_since: string | null;
                             /** @description Length of the next grooming (~2× while matted). */
@@ -3902,14 +3902,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -4404,14 +4404,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -4906,14 +4906,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -5408,14 +5408,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -5910,14 +5910,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -6416,14 +6416,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -6922,14 +6922,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -7428,14 +7428,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -7930,14 +7930,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -8436,14 +8436,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -8938,14 +8938,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -9440,14 +9440,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -9946,14 +9946,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -10448,14 +10448,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -10954,14 +10954,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -11456,14 +11456,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -11962,14 +11962,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */
@@ -12468,14 +12468,14 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 Maine Coon grooming (week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week (Maine Coon 3, ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
                                 week_ends_at: string;
-                                /** @description Matted coat (≥ 2 of last week's groomings missed): visible only, no penalty. */
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
                                 matted: boolean;
                                 matted_since: string | null;
                                 /** @description Length of the next grooming (~2× while matted). */

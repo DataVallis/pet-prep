@@ -367,6 +367,18 @@ test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp &
   assert.equal(cat.value, registry.species[1].free_plan.adult_activity.value);
 });
 
+test('the app\'s brushed-cat list equals the seeded grooming rows (David 2026-10-11: nothing forgotten)', { skip: !(hasPhp && hasVendor) && 'php or backend/vendor missing' }, () => {
+  const code = `require $argv[1]; echo json_encode(Database\\Seeders\\BreedStageParamsSeeder::allRows());`;
+  const rows = JSON.parse(execFileSync('php', ['-r', code, resolve(ROOT, 'backend/vendor/autoload.php')], { encoding: 'utf8', cwd: resolve(ROOT, 'backend') }));
+  const seeded = [...new Set(rows.filter((x) => x.key === 'grooming_sessions_per_week').map((x) => x.breed_slug.replaceAll('-', '_')))].sort();
+  const species = readFileSync(resolve(ROOT, 'mobile/src/modules/species/species.ts'), 'utf8');
+  const m = /GROOMING_CAT_BREEDS: readonly BreedType\[\] = \[([^\]]*)\]/.exec(species);
+  assert.ok(m, 'GROOMING_CAT_BREEDS not found in mobile species.ts');
+  const app = [...m[1].matchAll(/'([a-z_]+)'/g)].map((x) => x[1]).sort();
+  assert.deepEqual(app, seeded);
+  assert.deepEqual(seeded, ['british_shorthair', 'maine_coon', 'ragdoll']);
+});
+
 // ─── breed portraits (M5-R11, David 2026-10-10: AI photos, labelled) ───
 
 const manifestOf = (portraits) => JSON.stringify({ schema_version: 1, label: 'AI-generated photo', portraits });
@@ -576,7 +588,7 @@ test('Siberian Husky (M5-R10-13): more than 2 hours, FCI weight by sex, FCI grou
   assert.doesNotMatch(json, /finland|9\.75|mcmillan_2024|hypoallergenic|odds ratio|merle|brindle|85-95/i);
 });
 
-test('British Shorthair (M5-R10-14): paid cat, kitten at 3 months, CFA weight by sex, growth 3–5 years, C14 "British" life expectancy, weekly comb, no grooming rule', () => {
+test('British Shorthair (M5-R10-14): paid cat, kitten at 3 months, CFA weight by sex, growth 3–5 years, C14 "British" life expectancy, weekly comb, grooming 1× per week (David 2026-10-11)', () => {
   const bsh = registry.breeds.find((b) => b.id === 'british_shorthair');
   assert.equal(bsh.species, 'cat');
   assert.equal(bsh.availability, 'coming_soon');

@@ -121,11 +121,11 @@ Pri psu sprehod otroka spravi ven. Igra z muco pa je v aplikaciji in zahteva zas
 | Voda | Žeja | ✅ kot pes | ne neposredno | ✅ |
 | Pesek | Čistoča (pade na 0 % šele ob **neredu zraven peska**, §4) | ✅ kot pes | ✅ po 6 h izven tihih ur (kot pes) | ✅ |
 | Igra | Igra (namesto gibanja) | ❌ (kot sprehod) — en dnevni opomnik | ❌ (Q2) → naslednji dan »opraskan kavč« | ❌ |
-| Česanje (Maine Coon) | — (samo rutina) | ❌ | ❌ → »vozel v dlaki«, ko ob koncu tedna manjkata ≥ 2 od 3 česanj (Q8, David 8. 10. ~22:20) | ❌ |
+| Česanje (Maine Coon, ragdoll, britanska kratkodlaka) | — (samo rutina) | ❌ | ❌ → »vozel v dlaki«, ko ob koncu tedna manjka vsaj polovica česanj (Maine Coon ≥ 2 od 3, ragdoll ≥ 1 od 2, britanska 1 od 1; Q8, David 8. 10. ~22:20 in 11. 10.) | ❌ |
 
 - **Obvestila (D):** besedila se pišejo posebej za mačko (»Tvoja muca je lačna«, »Pesek je treba počistiti«). Nikoli ne vsebujejo imen. Pravila pošiljanja so ista (PRODUCT_SPEC §6, M3-12). Obvestilo nikoli ne zahteva dejanja, ki ga aplikacija zavrne. *Zgrajeno na strežniku (M5-R06-06, osnutek Claude, čaka Davida):* vsa obvestila za muco imajo svoje besedilo EN + SL (`push.cat.*`, ženski spol: »muca je lačna«, »bo zbolela«); ko je odprto samo praskanje, obvestilo o hrani / vodi reče »najprej jo odnesi na praskalnik in jo pohvali« (čiščenje praskanja ne razreši), s praskanjem in neredom »najprej počisti nered in jo odnesi na praskalnik«.
 - **Opraskan kavč (Q10):** največ en dogodek na dan, ob naključni minuti izven tihih ur, samo dan po zamujeni rutini »Igra«. Čistoča pade na 0 % kot pri psovem grizenju in velja rok **2 h izven tihih ur** (rutina čiščenja; ✅ David 8. 10. 2026 ~22:20 — natanko kot grizenje, nato obstoječa lestvica: alarm, bolezen po 6 h, game over po 24 h). Razreši ga »Odnesi na praskalnik in pohvali« [C23]: otrok odnese muco na praskalnik, ko pristane, ima 3 s za pohvalo (oceni strežnik); prepozna ali prezgodnja pohvala nima kazni, otrok poskusi znova. *Zgrajeno na strežniku (M5-R06-05).*
-- **Vozel v dlaki (Maine Coon, Q8):** ✅ David 8. 10. 2026 ~22:20 — tedenski števec (≥ 2 od 3 česanj tedna zamujeni → vozel ob tedenskem rojstnem dnevu); brez kazni: viden, naslednje česanje ~2× daljše ga razreši, šteje le zamujena rutina. *Zgrajeno na strežniku (M5-R06-05).*
+- **Vozel v dlaki (rodovniške mačke s česanjem, Q8):** ✅ David 8. 10. 2026 ~22:20 in 11. 10. 2026 — tedenski števec (zamujena vsaj polovica česanj tedna: Maine Coon ≥ 2 od 3, ragdoll ≥ 1 od 2, britanska 1 od 1 → vozel ob tedenskem rojstnem dnevu); brez kazni: viden, naslednje česanje ~2× daljše ga razreši, šteje le zamujena rutina. *Zgrajeno na strežniku (M5-R06-05).*
 - **Bolezen, hard stop, zaklep do plačila, game over in Breed Downgrade** (Maine Coon → domača mačka) delujejo kot pri psu.
 
 ## 7. Rutine in Care Score (pregled za mačko)
@@ -158,7 +158,7 @@ Formula Care Score, pošten delež, semafor in pravila »rutina se ne pričakuje
 > • Vsak dan ji bom dal svežo vodo.
 > • Vsak dan bom počistil njen pesek in ga enkrat na teden zamenjal.
 > • Vsak dan se bom igral z njo, da bo zdrava in vesela.
-> • *(samo Maine Coon)* Redno jo bom česal, da se ji dlaka ne bo zavozlala.
+> • *(Maine Coon, ragdoll, britanska kratkodlaka — mačke s česanjem)* Redno jo bom česal, da se ji dlaka ne bo zavozlala.
 > • Odzval se bom na opozorila, preden pride do bolezni ali virtualnega zavetišča.
 >
 > Ali sprejemaš to odgovornost?
@@ -205,7 +205,7 @@ Impact list only. David approved Q1–Q10 on 2026-10-08 13:47. Built so far (hid
 - `CareScheduleService`: feed windows are reused. Water count and gap come from the breed config (2 / 240 min).
 - `EscalationService` / `NotificationService`: species-aware texts. The ladder is unchanged. Energy-like handling applies to the play metric.
 - `RoutineType` gains `play`, `litter_scoop`, `litter_change` and `grooming`. `RoutineLedgerService` and `CareScoreService` count them, including fair share for shared cats.
-- Grooming (Maine Coon): a weekly counter and a "matted coat" event after 2 missed sessions.
+- Grooming (Maine Coon 3×, Ragdoll 2×, British Shorthair 1× per week — David 2026-10-11): a weekly counter and a "matted coat" event after ceil(goal / 2) missed sessions.
 
 **API and contract**
 - `POST /api/parent/generate-pin` takes `{species, breed, origin, age_stage, plan}`. A breed that does not match the species → 422.

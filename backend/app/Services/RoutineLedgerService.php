@@ -71,7 +71,7 @@ use Throwable;
  *    program period (LifeStageService::programPeriodAt — 7 days from the
  *    birth's wall-clock time; `litter_full_change_days`) that ENDS on the
  *    family-local date: one litter change (`changed_litter` inside the
- *    period) and, for a Maine Coon, `grooming_sessions_per_week` grooming
+ *    period) and, for a brushed cat, `grooming_sessions_per_week` grooming
  *    slots (slot i = the period's i-th `groomed_pet`). Not expected when
  *    hard stop / vet / game over cover ≥ 50 % of the period's non-quiet
  *    time (like the walk). A weekly routine is never pending past its day.
@@ -632,7 +632,7 @@ class RoutineLedgerService
 
     /**
      * M5-R06-05: the cat's weekly routines whose program period ends on
-     * $date — the full litter change (1 slot) and the Maine Coon's grooming
+     * $date — the full litter change (1 slot) and a brushed cat's grooming
      * (`grooming_sessions_per_week` slots). Opens at the period start, due
      * at its end (the next weekly birthday); excused when freezes cover ≥
      * 50 % of the period's non-quiet time.

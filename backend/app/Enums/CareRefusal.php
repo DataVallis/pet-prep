@@ -139,7 +139,7 @@ enum CareRefusal: string
     /** Another child's litter change is running (next_allowed_at = its expiry). */
     case LitterChangeSessionActive = 'litter_change_session_active';
 
-    /** Grooming is the Maine Coon's routine (CAT_SPEC Q8) — not for other breeds / species / legacy pets. */
+    /** Grooming is a brushed cat's routine (CAT_SPEC Q8: Maine Coon, Ragdoll, British Shorthair) — not for other breeds / species / legacy pets. */
     case GroomingNotAvailable = 'grooming_not_available';
 
     /**

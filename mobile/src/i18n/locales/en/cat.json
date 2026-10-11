@@ -84,7 +84,7 @@
   "chore": {
     "grooming": {
       "title": "Brush your kitty",
-      "intro": "Brush its long fur gently with your finger, stroke after stroke, from head to tail.",
+      "intro": "Brush its fur gently with your finger, stroke after stroke, from head to tail.",
       "matted": "Its fur has a knot. This brushing takes a bit longer ({{seconds}} s) and gets the knot out.",
       "week": "Brushing this week: {{done}} of {{goal}}",
       "weekDone": "All of this week's brushing is done ✓",
@@ -245,7 +245,7 @@
     }
   },
   "contract": {
-    "bodyMaineCoon": "I promise to take good care of my virtual kitty, every single day:\n\n• I will feed it at the right time.\n• I will give it fresh water every day.\n• I will clean its litter box every day and change all the litter once a week.\n• I will play with it every day so it stays healthy and happy.\n• I will brush it regularly so its fur doesn't get knotted.\n• I will act on warnings before it gets sick or has to go to the virtual shelter.\n\nDo you accept this responsibility?"
+    "bodyWithBrushing": "I promise to take good care of my virtual kitty, every single day:\n\n• I will feed it at the right time.\n• I will give it fresh water every day.\n• I will clean its litter box every day and change all the litter once a week.\n• I will play with it every day so it stays healthy and happy.\n• I will brush it regularly so its fur doesn't get knotted.\n• I will act on warnings before it gets sick or has to go to the virtual shelter.\n\nDo you accept this responsibility?"
   },
   "parent": {
     "playDay": "Play {{done}}/{{goal}}",

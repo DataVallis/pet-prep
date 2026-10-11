@@ -255,7 +255,7 @@ class ChildPetController extends Controller
     }
 
     /**
-     * Maine Coon grooming (M5-R06-05, CAT_SPEC Q8): start a combing session
+     * Grooming of a brushed cat — Maine Coon, Ragdoll, British Shorthair (M5-R06-05, CAT_SPEC Q8): start a combing session
      * (~30 s; ~60 s while the coat is matted — `session.matted`). 422
      * grooming_not_available | needs_cleaning | grooming_week_done |
      * grooming_done_today | grooming_session_active | grooming_quiet_hours
@@ -271,7 +271,7 @@ class ChildPetController extends Controller
     }
 
     /**
-     * Maine Coon grooming (M5-R06-05): finish with the comb strokes.
+     * Grooming of a brushed cat — Maine Coon, Ragdoll, British Shorthair (M5-R06-05): finish with the comb strokes.
      * `accepted` = one of the week's groomings (and a matted coat resolved);
      * `rejected` = not enough (no penalty). 422 grooming_not_available |
      * care_session_*; 423 while locked.

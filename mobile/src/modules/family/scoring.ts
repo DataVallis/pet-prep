@@ -361,7 +361,7 @@ function hasTotals(t: TypeTotals): boolean {
 /**
  * The routine rows of the report, per species (M5-R06-08b): a dog keeps food, water,
  * cleaning, walk and — with training — "Šola"; a cat shows food, water, cleaning, litter,
- * play, the weekly litter change and — Maine Coon — brushing (walk / training only if the
+ * play, the weekly litter change and — brushed cats — brushing (walk / training only if the
  * server counted one). Any type the server counted in the period is always shown.
  */
 export function reportRoutineTypes(
