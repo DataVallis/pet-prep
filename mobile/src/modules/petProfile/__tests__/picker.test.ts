@@ -357,10 +357,30 @@ describe('PICKER_STRINGS.ageHints', () => {
 
   it('no cat picker note names one paid cat as the only one (two paid cats since M5-R10-14) — SL and EN', async () => {
     const notes = () => [i18n.t('pet:picker.cat.breedFreeNote'), i18n.t('pet:picker.cat.breedChallengeNote'), i18n.t('pet:picker.cat.plans.challenge.hint')];
-    for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk/i);
+    for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk|ragdoll/i);
     await i18n.changeLanguage('en');
     try {
-      for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk/i);
+      for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk|ragdoll/i);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-15 Ragdoll (cat): kitten at 3 months, young cat still growing until about 4 years — SL and EN', async () => {
+    const R = PICKER_STRINGS.ageHints.ragdoll;
+    expect(R.puppy).toBe('Pride kot mucek, star 3 mesece (rodovniški mucki gredo od doma pozneje).');
+    expect(R.young).toBe('Pride kot mlada mačka, stara 1 leto — ragdoll raste do približno 4. leta.');
+    expect(R.adult).toBe('Pride kot zrela mačka, stara 7 let.');
+    expect(R.senior).toBe('Pride kot starejša mačka, stara 10 let.');
+    expect(PICKER_STRINGS.breedHints.ragdoll).toBe('Poldolga, svilnata dlaka · 12-tedenski izziv');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.ragdoll;
+      expect(E.puppy).toBe('Arrives as a 3-month-old kitten (pedigree kittens leave home later).');
+      expect(E.young).toBe('Arrives as a young cat, 1 year old — a Ragdoll keeps growing until about 4 years.');
+      expect(E.adult).toBe('Arrives as a mature cat, 7 years old.');
+      expect(E.senior).toBe('Arrives as a senior cat, 10 years old.');
+      expect(PICKER_STRINGS.breedHints.ragdoll).toBe('Semi-long, silky coat · 12-week challenge');
     } finally {
       await i18n.changeLanguage('sl');
     }

@@ -399,6 +399,7 @@ const SPECIES = [
     breeds: [
       { id: 'maine_coon', availability: 'coming_soon', synonyms: { en: [], sl: [] } },
       { id: 'british_shorthair', availability: 'coming_soon', synonyms: { en: ['British Blue', 'BSH'], sl: ['britanska kratkodlaka', 'britanska kratkodlaka macka', 'britanka', 'british shorthair'] } },
+      { id: 'ragdoll', availability: 'coming_soon', synonyms: { en: ['Rag doll'], sl: ['ragdoll mačka', 'ragdoll macka', 'ragdol'] } },
     ],
   },
 ];
@@ -988,6 +989,7 @@ function catGeneralFacts(R) {
 
 function catBreedFacts(R, id) {
   if (id === 'british_shorthair') return britishShorthairFacts(R);
+  if (id === 'ragdoll') return ragdollFacts(R);
   if (id !== 'maine_coon') throw new Error(`no cat fact spec for ${id}`);
   const male = R.fact('maine_coon.adult_weight.tica_male', {}, parseRange);
   const female = R.fact('maine_coon.adult_weight.tica_female', {}, parseRange);
@@ -1019,6 +1021,30 @@ function britishShorthairFacts(R) {
   };
 }
 
+/** M5-R10-15: CFA weight (C30), full size at about 4 years (C30), C14 Ragdoll life expectancy, PetMD combing (C32), health keys only (C31 / C32 — no percentages). */
+function ragdollFacts(R) {
+  const male = R.fact('ragdoll.adult_weight.cfa_male', {}, parseRange);
+  const female = R.fact('ragdoll.adult_weight.cfa_female', {}, parseRange);
+  if (male.source_ids.join() !== female.source_ids.join()) throw new Error('Ragdoll weights cite different sources');
+  const health = [
+    ['heart_hcm', 'ragdoll.health.hcm'],
+    ['dental_weight_nail_care', 'ragdoll.health.common_care'],
+  ].map(([key, ref]) => {
+    const f = R.fact(ref, { key }, () => null);
+    delete f.value;
+    return f;
+  });
+  return {
+    facts: [
+      { group: 'size', field: 'weight', kind: 'quantity', unit: 'kg', value: { male: male.value, female: female.value }, source_ids: male.source_ids, ref: `${male.ref} + ${female.ref}`, confidence: male.confidence },
+      R.fact('ragdoll.growth_end', { group: 'stages', field: 'growth_end', kind: 'quantity', unit: 'months', qualifier: 'about' }, Number),
+      R.fact('ragdoll.lifespan.expectancy_at_birth', { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: 'expectancy' }, Number),
+      R.fact('ragdoll.grooming.range', { group: 'grooming', field: 'grooming_frequency', kind: 'category' }, code),
+    ],
+    health,
+  };
+}
+
 function catGame(R) {
   const conv = String(R.entry('meta.conventions.game_time'));
   if (!/^1 real week = 1 month of cat age/.test(conv)) throw new Error('cat data.json: game_time convention changed');
@@ -1046,7 +1072,7 @@ function catGame(R) {
   const shared = [m4, m3, m2, mA, mS, young, adult, senior, playK, playA, gap, usesA, scoop, change];
 
   const forBreed = (id) => {
-    // Pedigree kittens arrive at 3 months (CAT_SPEC Q4; British Shorthair M5-R10-14), the domestic cat at 2.
+    // Pedigree kittens arrive at 3 months (CAT_SPEC Q4; British Shorthair M5-R10-14, Ragdoll M5-R10-15), the domestic cat at 2.
     const arrival = id === 'domestic_cat' ? n('general.arrival_age.kitten_min') : n(`${id}.arrival_age_kitten`);
     const extra = [];
     const rules = [

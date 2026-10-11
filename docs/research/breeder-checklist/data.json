@@ -890,6 +890,25 @@
       "status": "not_found",
       "tests": [],
       "notes": "No A/B source naming tests for breeding British Shorthairs (PKD is named only by commercial labs, tier C). Show the general cat checklist only."
+    },
+    "ragdoll": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K20",
+        "level_quotes": {
+          "minimum": "All Breeding stock must be HCM negative"
+        }
+      },
+      "tests": [
+        {
+          "key": "hcm_negative",
+          "level": "minimum",
+          "name": "All Breeding stock must be HCM negative",
+          "source_id": "K20",
+          "quote": "All Breeding stock must be HCM negative"
+        }
+      ],
+      "notes": "NZCF (New Zealand) breeding rule via World Cat Congress; the same page lists no health-testing rule for GCCF or FIFe (only registration / colour restrictions). The page does not say how HCM status is shown (gene test or ultrasound), so the key stays neutral."
     }
   }
 }

@@ -13,7 +13,7 @@ import {
 
 describe('readBreed / readSpecies', () => {
   it('keeps every known breed, dogs and cats', () => {
-    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'domestic_cat', 'maine_coon', 'british_shorthair'] as const) {
+    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll'] as const) {
       expect(readBreed(breed)).toBe(breed);
     }
   });
@@ -188,6 +188,18 @@ describe('readBreed / readSpecies', () => {
     await i18n.changeLanguage('en');
     try {
       expect(breedName('british_shorthair')).toBe('British Shorthair');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-15: the Ragdoll is a paid cat with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('ragdoll'))).toBe('cat');
+    expect(isDefaultFreeBreed('ragdoll')).toBe(false);
+    expect(breedName('ragdoll')).toBe('Ragdoll');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('ragdoll')).toBe('Ragdoll');
     } finally {
       await i18n.changeLanguage('sl');
     }

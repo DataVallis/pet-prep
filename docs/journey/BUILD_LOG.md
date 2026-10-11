@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Družina pred nakupom pogosto ne ve, kaj vprašati. Kavalir potrebuje pregled srca, nemški ovčar slikanje kolkov in komolcev, maine coon gensko testiranje na HCM — PetPrep to zdaj pove za vsako pasmo, z viri in brez obljub. Je prvi korak od simulacije k pomoči pri resnični odločitvi (faza 2).
 
-**Številke:** 16 pasem (14 psov, 2 mački), 15 splošnih točk (pes 10, mačka 5), 19 novih virov (K1–K19), 38 različnih testov; 15 pasem s seznamom ali izrecnim »testov ni«, 1 (britanska kratkodlaka) brez vira A/B — pošteno zapisano. Izvoz registra 33 testov (32 zelenih, 1 preskočen brez PHP). Neodvisni pregled je ostril besedila: slovenski predpisi so navedeni z letnico, tuja priporočila kot nasveti.
+**Številke:** 17 pasem (14 psov, 3 mačke), 15 splošnih točk (pes 10, mačka 5), 20 novih virov (K1–K20), 39 različnih testov; 16 pasem s seznamom ali izrecnim »testov ni«, 1 (britanska kratkodlaka) brez vira A/B — pošteno zapisano. Izvoz registra 33 testov (32 zelenih, 1 preskočen brez PHP). Neodvisni pregled je ostril besedila: slovenski predpisi so navedeni z letnico, tuja priporočila kot nasveti.
 
 **Kako povedati:**
 - 👩 Starši: »Preden kupite mladička: preverite, da je star vsaj 8 tednov, da ima čip in cepljenja — in prosite za izvide testov obeh staršev. Na petprep.si piše, katere teste potrebuje vaša pasma.«
@@ -22,6 +22,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 💼 Investitorji: »Prvi korak v fazo 2: od simulacije do pomoči pri nakupu resnične živali; genetika (testi, izpis, kartica za veterinarja) je naslednji prihodkovni del.«
 - 📣 Omrežja: kratka objava »5 stvari, ki jih preverite pri vzreditelju« s povezavo na register.
 - 🛠 Tehnično: »Seznam je ločena datoteka z viri (`breeder-checklist/data.json`); izvoz preveri vsak citat, pasma brez vnosa je `not_checked`, nova pasma ga doda po runbooku.«
+
+---
+
+## 2026-10-11 — Ragdoll: tretja plačljiva mačka (M5-R10-15)
+
+**Kaj se je zgodilo:** PetPrep ima tretjo plačljivo pasmo mačke — **ragdolla**. Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`) in je skrit skupaj z vsemi mačkami, dokler jih David ne vklopi. Raziskava: **4 novi viri (C29–C32)** — standard FIFe, stran pasme CFA, študija VetCompass (RVC) o več kot 21.000 ragdollih in PetMD (pregledal veterinar). Pravila igre so splošna mačja pravila (igra s palico 2× na dan, pesek, voda 2× na dan); mucek pride pri **3 mesecih** (rodovniški mucki, PDSA). Rutine česanja nima — to je po potrjenem specu samo pri Maine Coonu; rutina česanja poldolge dlake (PetMD: nekaterim zadošča 1–2× na teden, CFA: redno) čaka Davida. Videz za AI: vedno modre oči in svetlo telo s temnejšimi točkami, kot zahteva standard.
+
+**Zakaj je pomembno:** Ragdoll je v FIFe tretja najbolj registrirana pasma (15.052 v letu 2024). Je prva mačka, ki ima v registru tudi zdravstvene teme (dedna srčna bolezen HCM; nega zob, teže in krempljev) — kot pri psih samo z virom in brez odstotkov.
+
+**Številke:** 4 novi viri (C29–C32), 1 nova migracija (dve omejitvi pasme), 0 novih pravil igre; Pest **2240** testov, Jest **2019**, izvoz registra **30** testov (vsi zeleni). V aplikaciji skrito; na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Ragdoll je velika, nežna mačka, ki vam sledi iz sobe v sobo — a njeno poldolgo dlako je treba redno počesati.« (*ko bodo mačke v aplikaciji*)
+- 💼 Investitorji: »Tretja plačljiva mačka po istem samodejnem postopku — nova pasma ne potrebuje nove kode za pravila igre.«
+- 🤝 Partnerji (vzreditelji, zavetišča, veterinarji): »V registru živali PetPrep je pri ragdollu tudi zdravje z viri — HCM ter nega zob, teže in krempljev.« (*register: stran »kmalu«, mačke v aplikaciji še niso vklopljene*)
+- 📣 Omrežja: še ne — mačke niso vklopljene.
+- 🛠 Tehnično: »Druga mačka po runbooku: `CAT_BREEDS` + ena migracija; izvoz registra ima prvič mačje zdravstvene ključe.«
 
 ---
 

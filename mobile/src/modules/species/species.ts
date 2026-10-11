@@ -38,6 +38,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
+  ragdoll: 'cat',
 } satisfies Record<components['schemas']['BreedType'], Species>;
 
 export const KNOWN_BREEDS = Object.keys(BREED_SPECIES) as BreedType[];

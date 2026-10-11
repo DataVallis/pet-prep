@@ -708,5 +708,147 @@
       "notes": "Not a flat-faced breed (FIFe C26: \"not a stop as in the Exotic\"); no veterinary advice against showing the breed in advertising was found (runbook §3). Cats are hidden in the app — no cat marketing before the switch-on (M5-R06-09).",
       "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-14): may be used in marketing once cats are switched on"
     }
+  },
+  "ragdoll": {
+    "_note": "M5-R10-15 (unattended run 2026-10-11). Third paid cat breed, built behind PETPREP_CATS_ENABLED=false like the Maine Coon and the British Shorthair. Breed-specific values only (runbook §3 Cats): identity, arrival age of the kitten, lifespan, weight, growth, grooming (information only — no grooming routine, CAT_SPEC Q8), behaviour, health (register text only), appearance; everything else is the general cat rule.",
+    "identity": {
+      "value": {
+        "slug": "ragdoll",
+        "enum": "ragdoll",
+        "premium": true
+      },
+      "unit": "",
+      "source_id": "C19",
+      "quote": "Ragdoll 15,052 (3rd)",
+      "confidence": "high",
+      "notes": "Third most registered FIFe breed in 2024 (C19). FIFe Category 1 (C29).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-15): paid breed (premium_unlock, the same 12-week challenge as the Maine Coon), sort_order 30 (British Shorthair 20 + 10)"
+    },
+    "lifespan": {
+      "expectancy_at_birth": {
+        "value": 10.31,
+        "unit": "years",
+        "source_id": "C14",
+        "quote": "Ragdoll 10.31 y",
+        "confidence": "high",
+        "notes": "Life expectancy at age 0 from the VetCompass life tables (C14 row, captured 2026-10-08 from the full text; not re-read in this run). Same measure as the Maine Coon (9.71 y) and the domestic cat (11.89 y) rows. Background for parents and appearance only; the senior boundary comes from C1.",
+        "alternatives": [
+          {
+            "value": 12.85,
+            "unit": "years (median age at death of cats that died, UK 2019)",
+            "source_id": "C31",
+            "quote": "The median age at death overall was 12.85 years, with life expectancy not differing statistically between females and males.",
+            "notes": "A different measure (median age at death in a VetCompass breed study, C31); not mixed with the C14 life expectancy, not shown in the app."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "cfa_male": {
+        "value": "6.8–9.1",
+        "unit": "kg",
+        "source_id": "C30",
+        "quote": "Altered males will usually top the scale at 15-20 pounds;",
+        "confidence": "medium",
+        "notes": "15–20 lb converted (1 lb = 0.4536 kg, one decimal). CFA gives the range for altered (neutered) males; the register shows it as the male range. CFA breed page; FIFe gives no weight (C29). PetMD (C32) \"can grow to be 20 pounds\" agrees with the upper bound."
+      },
+      "cfa_female": {
+        "value": "4.5–6.8",
+        "unit": "kg",
+        "source_id": "C30",
+        "quote": "females are proportionately smaller and usually weigh between 10-15 pounds at maturity.",
+        "confidence": "medium",
+        "notes": "10–15 lb converted."
+      }
+    },
+    "growth_end": {
+      "value": "48",
+      "unit": "months",
+      "source_id": "C30",
+      "quote": "Ragdolls are slow-maturing, reaching full coat color at two years, and full size and weight at four.",
+      "confidence": "medium",
+      "notes": "CFA (C30): full size and weight at four years; full coat colour at two years. Prompt cue: the young Ragdoll is not fully grown yet and its points are still darkening."
+    },
+    "grooming": {
+      "range": {
+        "value": "At least once or twice a week",
+        "unit": "rule",
+        "source_id": "C32",
+        "quote": "Some Ragdolls only need to be combed (more effective than brushing) once or twice a week",
+        "confidence": "medium",
+        "notes": "Information only. The source says \"Some Ragdolls only need\" combing once or twice a week — a minimum for some cats, not a breed rule (hence \"at least\"). CFA (C30): \"requires minimal grooming\" but \"should be combed with a steel comb on a regular basis\"; VetCompass (C31) says Ragdolls \"need more grooming care\". CAT_SPEC Q8 (David 2026-10-08) gives the grooming routine to the Maine Coon only, so the Ragdoll has NO grooming_sessions_per_week row and no matted coat. A combing routine for the semi-long coat would be a new rule → open for David (proposal Claude, not built)."
+      }
+    },
+    "behaviour": {
+      "family": {
+        "value": "people-oriented, follows its people from room to room",
+        "unit": "text",
+        "source_id": "C30",
+        "quote": "They are known to run to greet you at the door, follow you from room to room,",
+        "confidence": "medium",
+        "notes": "Register text only; no suitability tags for cats yet."
+      },
+      "children": {
+        "value": "suits families with children; introductions slow and supervised",
+        "unit": "text",
+        "source_id": "C32",
+        "quote": "Ragdolls are a great choice for all kinds of families, including those with children",
+        "confidence": "medium",
+        "notes": "Same article: \"introductions between cats and children, or other pets, be made slowly and under supervision\" — the supervision caveat is kept. Register text only."
+      },
+      "activity": {
+        "value": "gentle, plays without claws, a floor cat rather than a jumper",
+        "unit": "text",
+        "source_id": "C30",
+        "quote": "They are gentle cats, and usually play without extending their claws.",
+        "confidence": "medium",
+        "notes": "CFA also: \"Ragdolls tend to be floor cats, not jumpers.\" No effect on the game (play sessions are the general cat rule)."
+      }
+    },
+    "health": {
+      "_note": "Register text only (key + source, one calm EN + SL sentence on the website). No percentages in the app, the register export or audience docs (runbook §3). C31 lists the most common disorders with percentages — kept out of the export.",
+      "hcm": {
+        "value": "hypertrophic cardiomyopathy (inherited heart disease) occurs in the breed",
+        "unit": "text",
+        "source_id": "C32",
+        "quote": "the hereditary condition hypertrophic cardiomyopathy (HCM) lurks within the Ragdoll breed",
+        "confidence": "medium",
+        "notes": "PetMD article reviewed by a DVM (C32)."
+      },
+      "common_care": {
+        "value": "dental care, weight control and nail care",
+        "unit": "text",
+        "source_id": "C31",
+        "quote": "owners similarly need to ensure good dental care, flea treatment, nail care and weight control",
+        "confidence": "high",
+        "notes": "VetCompass study of more than 21,000 Ragdolls (C31): periodontal disease, obesity and overgrown nails are among the most common disorders (percentages stay here only)."
+      }
+    },
+    "appearance": {
+      "value": "large, firm, long muscular body with medium to strong bone, broad chest, heavier hindquarters; medium-size broad modified wedge head, slightly rounded forehead; straight nose with a slight curve in the upper third; well-developed cheeks, broad rounded muzzle, well-developed chin; medium ears broad at the base with rounded tips, set wide with a slight forward tilt; large oval eyes, blue only; large round tufted paws; long bushy tail; medium-long, soft, silky coat lying with the body, bib around the face; patterns colourpoint, mitted, bicolour in seal, blue, chocolate, lilac, red, cream (also tortie / tabby)",
+      "unit": "traits",
+      "source_id": "C29",
+      "quote": "The Ragdoll is a firm, large cat with a medium to strongly boned muscular body. … Medium size, broad modified wedge. … Large and oval. … Blue, the more intensive the better. … Medium long, dense, soft and silky texture, lying with the body.",
+      "confidence": "high",
+      "notes": "FIFe RAG standard dated 01.01.2026 (C29; the fetch tool returned short excerpts). Any eye colour other than blue is a disqualification (C29) → the AI prompt uses blue eyes only. CFA (C30) also lists a van pattern, which FIFe does not — not used. Colour weights are unsourced (verified false); seal is weighted highest (portrait default) as the classic colour — UNSOURCED weight."
+    },
+    "arrival_age_kitten": {
+      "value": 3,
+      "unit": "months",
+      "source_id": "C13",
+      "quote": "Pedigree kittens are usually rehomed over 12-13 weeks old",
+      "confidence": "high",
+      "notes": "Same rule as the Maine Coon and the British Shorthair (CAT_SPEC Q4: pedigree kittens leave at 12–13 weeks).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-15): pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule for pedigree kittens)"
+    },
+    "marketing": {
+      "value": "in marketing",
+      "unit": "decision",
+      "source_id": null,
+      "quote": null,
+      "confidence": "medium",
+      "notes": "Not a flat-faced breed (FIFe C29: broad, rounded muzzle of medium length, straight nose); no veterinary advice against showing the breed in advertising was found (runbook §3). Cats are hidden in the app — no cat marketing before the switch-on (M5-R06-09).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-15): may be used in marketing once cats are switched on"
+    }
   }
 }

@@ -102,7 +102,8 @@
       "siberian_husky": "Del 12-tedenskega izziva.",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden",
-      "british_shorthair": "Kratka, gosta dlaka · 12-tedenski izziv"
+      "british_shorthair": "Kratka, gosta dlaka · 12-tedenski izziv",
+      "ragdoll": "Poldolga, svilnata dlaka · 12-tedenski izziv"
     },
     "breedLockedNote": "Te pasme zdaj ni mogoče izbrati. Izberite mešančka ali poskusite pozneje.",
     "lockedA11y": "{{breed}}, zaklenjeno — del plačljivega izziva",
@@ -229,6 +230,12 @@
       "british_shorthair": {
         "puppy": "Pride kot mucek, star 3 mesece (rodovniški mucki gredo od doma pozneje).",
         "young": "Pride kot mlada mačka, stara 1 leto — britanska kratkodlaka mačka raste do 3.–5. leta.",
+        "adult": "Pride kot zrela mačka, stara 7 let.",
+        "senior": "Pride kot starejša mačka, stara 10 let."
+      },
+      "ragdoll": {
+        "puppy": "Pride kot mucek, star 3 mesece (rodovniški mucki gredo od doma pozneje).",
+        "young": "Pride kot mlada mačka, stara 1 leto — ragdoll raste do približno 4. leta.",
         "adult": "Pride kot zrela mačka, stara 7 let.",
         "senior": "Pride kot starejša mačka, stara 10 let."
       }
