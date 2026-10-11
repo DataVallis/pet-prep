@@ -177,6 +177,8 @@ Older queue (still valid where not done):
 
 ## 6. Session log
 
+### 2026-10-11 (cloud) — Breed drives idea recorded (docs only, branch `docs/breed-drives-idea`)
+- **David's idea:** every breed has a drive (Jack Russell digging, Border Collie herding) satisfied by a breed-specific play activity; **unsatisfied drive → breed-specific misbehaviour with a 2 h deadline, then the normal mess ladder** (same as chewing after a missed walk). **Build after the beta.** Spec with proposals + open questions: `docs/product/BREED_DRIVES_SPEC.md`; DECISIONS, ROADMAP backlog, FEATURES §4 (🗓), PLAY_CUDDLE_SPEC cross-reference. No code.
 ### 2026-10-11 (cloud, David present) — Cat grooming for the British Shorthair and the Ragdoll (branch `feat/M5-R10-cat-grooming`, PR #169)
 - **Why:** David: "if any breed needs anything, even minimal, the app must support it — as realistic a simulation as possible". Answers: Ragdoll 2× per week; matted coat when at least half are missed.
 - **Backend:** seeder rows (`CONFIRMED_CAT_GROOMING_2026_10_11`), `CatChoreService::mattedAfterMissed()`, tests (BSH 1× / Ragdoll 2× flows incl. matted coat, data-vs-code check for all three brushed cats).

@@ -1,6 +1,8 @@
 # PetPrep — Igra in crkljanje (M5-R05)
 
 > **Status:** spec, 8. 10. 2026. **Odločil David 7. 10. 2026:** igra in crkljanje vplivata **samo na razpoloženje in video** (nikoli na točke, Care Score, rutine, bolezen ali game over); **samo v plačanem izzivu**; **igra = kratka mini-igra metanja žoge**, **crkljanje = božanje kužka s prstom**. **David 8. 10. 2026 09:19 (odgovori na vprašanja Q1–Q8):** tudi v preizkusu izziva (Q1; od M3-13, 10:28, preizkusa ni več — velja: plačan izziv ali tekoči stari preizkus / ko je stikalo plačil izklopljeno); **otrok se lahko igra in crklja kadarkoli sam** — vabila so le spodbuda (Q3); vabilo samo, ko je opravljen današnji sprehod (Q4); razpoloženje = 30 min »vesel« (Q5); starš vidi časovnico in dnevno število, brez pusha in brez točk (Q7); pri skupnem psu se vsak otrok igra prosto, vabilo opravi prvi (Q8).
+
+> **Povezano (11. 10. 2026, načrt po beti):** pasemski nagoni (`BREED_DRIVES_SPEC.md`) — pasemska igra prav tako ne daje točk, nezadovoljen nagon pa sproži pregreho (nered z rokom 2 h), enako kot zamujen sprehod → copat. Pravila te specifikacije (žoga, crkljanje) se ne spremenijo.
 > Kar ni Davidova odločitev, je **Claudov predlog**, označen z **(D)** = čaka Davidovo potrditev. Odločena pravila so tudi v `PRODUCT_SPEC.md` §5 in §8.
 > **Temeljno pravilo:** igra je **nagrada brez kazni**. Če otrok vabilo prezre ali se ne igra, se ne zgodi nič slabega — nobenega opomnika, nobene krivde, nobene številke, ki pade.
 
