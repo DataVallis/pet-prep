@@ -25,6 +25,39 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-11 — »Pred nakupom« za ves svet, genetika na spletu kot »v razvoju« (M5-R11-06b)
+
+**Kaj se je zgodilo:** Seznam »Pred nakupom« je zdaj mednaroden. Vsi obiskovalci vidijo splošne točke (pes 6, mačka 5), slovenski predpisi pa so v okvirju »V Sloveniji velja« samo na slovenski strani. Angleška stran ima eno vrstico, da se zakoni o starosti, čipiranju in cepljenju razlikujejo po državah, in ne navaja slovenskih virov. Na spletni strani sta genski test in kartica za veterinarja označena kot *v razvoju* (domača stran, stran AI asistenta, investitorji).
+
+**Zakaj je pomembno:** PetPrep je narejen za ves svet — Američana slovenski pravilnik ne zanima. Nova država = nove vrstice z oznako države, brez nove kode. Genetika »v razvoju« pokaže smer brez obljube datuma.
+
+**Številke:** 11 splošnih točk za vse (pes 6, mačka 5), 8 slovenskih; angleške strani: 0 slovenskih virov (preverjeno v HTML, JSON-LD in `llms`); izvoz registra 33 testov zelenih.
+
+**Kako povedati:**
+- 👩 Starši: »Na strani vsake pasme: kaj vprašati vzreditelja — in kaj pri tem velja v vaši državi.«
+- 💼 Investitorji: »Genetika je naslednji prihodkovni del faze 2; na spletu jo že predstavljamo kot ›v razvoju‹.«
+- 📣 Omrežja: »Kupujete mladička? 6 vprašanj za vzreditelja« (povezava na register).
+- 🛠 Tehnično: »Predpis države je ena vrstica s `country: \"SI\"`; spletna stran ga pokaže le na straneh tega jezika in skrije vire, ki jih navaja samo on.«
+
+---
+
+## 2026-10-11 — Veterinar predlaga genetiko; register dobi »Pred nakupom: kaj preveriti pri vzreditelju« (M5-R11-06)
+
+**Kaj se je zgodilo:** Veterinar je Davidu predlagal tri stvari: genski test v aplikaciji, izpis pasem za mešančka iz rezultata testa in vzrejne pogoje po pasmi. David je v vprašalniku odločil: genski del (nakup testa, AI izpis z viri, kartica za veterinarja) gre v **fazo 2** za pse in mačke, lasten PetPrep test je dolgoročni cilj, **seznam »Pred nakupom« pa takoj**. Zdaj ima vsaka stran pasme na petprep.si sekcijo s splošnimi točkami (slovenski predpisi: po pravilniku iz 2009 vsaj 8 tednov za mladička psa in 12 za mačjega, mikročip do 8. tedna, prijava v 7 dneh, obvezno cepljenje proti steklini; profil DNK vzrejnih psov, ki je po navedbi Veterinarske fakultete pri KZS obvezen) in z zdravstvenimi testi staršev za to pasmo.
+
+**Zakaj je pomembno:** Družina pred nakupom pogosto ne ve, kaj vprašati. Kavalir potrebuje pregled srca, nemški ovčar slikanje kolkov in komolcev, maine coon gensko testiranje na HCM — PetPrep to zdaj pove za vsako pasmo, z viri in brez obljub. Je prvi korak od simulacije k pomoči pri resnični odločitvi (faza 2).
+
+**Številke:** 17 pasem (14 psov, 3 mačke), 15 splošnih točk (pes 10, mačka 5), 20 novih virov (K1–K20), 39 različnih testov; 16 pasem s seznamom ali izrecnim »testov ni«, 1 (britanska kratkodlaka) brez vira A/B — pošteno zapisano. Izvoz registra 33 testov (32 zelenih, 1 preskočen brez PHP). Neodvisni pregled je ostril besedila: slovenski predpisi so navedeni z letnico, tuja priporočila kot nasveti.
+
+**Kako povedati:**
+- 👩 Starši: »Preden kupite mladička: preverite, da je star vsaj 8 tednov, da ima čip in cepljenja — in prosite za izvide testov obeh staršev. Na petprep.si piše, katere teste potrebuje vaša pasma.«
+- 🤝 Partnerji (veterinarji, pasemski klubi): »PetPrep kupce pošlje k odgovornim vzrediteljem — tistim, ki testirajo starše.«
+- 💼 Investitorji: »Prvi korak v fazo 2: od simulacije do pomoči pri nakupu resnične živali; genetika (testi, izpis, kartica za veterinarja) je naslednji prihodkovni del.«
+- 📣 Omrežja: kratka objava »5 stvari, ki jih preverite pri vzreditelju« s povezavo na register.
+- 🛠 Tehnično: »Seznam je ločena datoteka z viri (`breeder-checklist/data.json`); izvoz preveri vsak citat, pasma brez vnosa je `not_checked`, nova pasma ga doda po runbooku.«
+
+---
+
 ## 2026-10-11 — Ragdoll: tretja plačljiva mačka (M5-R10-15)
 
 **Kaj se je zgodilo:** PetPrep ima tretjo plačljivo pasmo mačke — **ragdolla**. Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`) in je skrit skupaj z vsemi mačkami, dokler jih David ne vklopi. Raziskava: **4 novi viri (C29–C32)** — standard FIFe, stran pasme CFA, študija VetCompass (RVC) o več kot 21.000 ragdollih in PetMD (pregledal veterinar). Pravila igre so splošna mačja pravila (igra s palico 2× na dan, pesek, voda 2× na dan); mucek pride pri **3 mesecih** (rodovniški mucki, PDSA). Rutine česanja nima — to je po potrjenem specu samo pri Maine Coonu; rutina česanja poldolge dlake (PetMD: nekaterim zadošča 1–2× na teden, CFA: redno) čaka Davida. Videz za AI: vedno modre oči in svetlo telo s temnejšimi točkami, kot zahteva standard.

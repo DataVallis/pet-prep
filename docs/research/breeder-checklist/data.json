@@ -1,0 +1,942 @@
+{
+  "meta": {
+    "compiled": "2026-10-11",
+    "roadmap": "M5-R11-06",
+    "_note": "What a family should check with the breeder before buying a puppy or kitten (vet feedback, David 2026-10-11). general.<species> = items for every breed; breeds.<id> = health tests of the parents. Levels: minimum = the Royal Kennel Club's 'strongly recommend that breeders, at a minimum, conduct these tests' (Good Practice) or a breeding-register requirement; best_practice = RKC Best Practice; other_scheme = an existing scheme from another A/B source that the basis page does not list. UK lists are an orientation — breeding rules in Slovenia are set per breed by the breed club under KZS (FCI Art. 19, K7). Quotes = what the fetch tool returned verbatim. Not vet-reviewed. Statuses: listed | none_recommended | not_found. general.<species>[].country (ISO 3166-1 alpha-2, e.g. SI) marks a national rule shown only to that country's readers; items without it apply everywhere.",
+    "levels": [
+      "minimum",
+      "best_practice",
+      "other_scheme"
+    ]
+  },
+  "general": {
+    "dog": [
+      {
+        "key": "see_mother",
+        "quotes": [
+          {
+            "source_id": "K1",
+            "quote": "Make sure you see the full litter of puppies with their mother"
+          },
+          {
+            "source_id": "K2",
+            "quote": "Always make sure you see mum and her pups together"
+          }
+        ]
+      },
+      {
+        "key": "min_age_puppy",
+        "quotes": [
+          {
+            "source_id": "K1",
+            "quote": "The breeder should not be willing to allow the puppies to leave their mum before 8 weeks of age."
+          }
+        ]
+      },
+      {
+        "key": "pedigree_fci",
+        "quotes": [
+          {
+            "source_id": "K7",
+            "quote": "Pedigrees, which are in fact birth certificates, must be issued for correct parentage only."
+          }
+        ]
+      },
+      {
+        "key": "parents_health_tests",
+        "quotes": [
+          {
+            "source_id": "K9",
+            "quote": "To ensure you are buying a happy and healthy puppy always ask to see the relevant health test results for both parents."
+          },
+          {
+            "source_id": "K1",
+            "quote": "Ask to see the paperwork and check the test results and scores."
+          },
+          {
+            "source_id": "K10",
+            "quote": "Different breeds are predisposed to different conditions so there are no blanket health test requirements."
+          }
+        ]
+      },
+      {
+        "key": "breed_club_rules",
+        "quotes": [
+          {
+            "source_id": "K7",
+            "quote": "The breeding regulations of the member countries and contract partners can go beyond those of the FCI in their requirements"
+          }
+        ]
+      },
+      {
+        "key": "written_contract",
+        "quotes": [
+          {
+            "source_id": "K9",
+            "quote": "The Puppy Contract, developed by the Animal Welfare Foundation and the RSPCA, will document all this information for you."
+          },
+          {
+            "source_id": "K10",
+            "quote": "A responsible breeder should be more than happy to issue you with a contract pending the sale of one of their puppies."
+          }
+        ]
+      },
+      {
+        "key": "min_age_puppy_si",
+        "country": "SI",
+        "quotes": [
+          {
+            "source_id": "K3",
+            "quote": "Mladičev ni dovoljeno odvzeti od psice pred dopolnjenim osmim tednom starosti."
+          }
+        ],
+        "notes": "Art. 27, 2009 text — consolidated text not verified."
+      },
+      {
+        "key": "microchip_registration",
+        "quotes": [
+          {
+            "source_id": "K4",
+            "quote": "Lastnik psa zagotovi, da je pes do dopolnjenega osmega tedna starosti označen na predpisan način."
+          },
+          {
+            "source_id": "K4",
+            "quote": "Lastnik psa prijavi lastništvo psa v sedmih dneh od njegove pridobitve."
+          }
+        ],
+        "country": "SI"
+      },
+      {
+        "key": "vaccination_records",
+        "quotes": [
+          {
+            "source_id": "K3",
+            "quote": "Prodajalec mora kupcu ob prodaji živali izročiti predpisane veterinarske dokumente"
+          }
+        ],
+        "notes": "2009 text (Art. 20).",
+        "country": "SI"
+      },
+      {
+        "key": "rabies_vaccination",
+        "quotes": [
+          {
+            "source_id": "K5",
+            "quote": "obvezno cepljenje psov proti steklini, velikega pomena v boju zoper steklino."
+          },
+          {
+            "source_id": "K19",
+            "quote": "Imetniki psov morajo zagotoviti cepljenje psov proti bolezni, ko ti dopolnijo tri mesece starosti."
+          }
+        ],
+        "notes": "Duty of the dog's keeper (the new owner), not of the seller; 2006 text — later amendments to intervals not checked.",
+        "country": "SI"
+      },
+      {
+        "key": "kzs_member_si",
+        "country": "SI",
+        "quotes": [
+          {
+            "source_id": "K6",
+            "quote": "The data have been collected from the national canine organisations member of the FCI."
+          }
+        ]
+      },
+      {
+        "key": "parents_dna_profile",
+        "quotes": [
+          {
+            "source_id": "K8",
+            "quote": "storitev, ki je za lastnike vzrejnih psov obvezna."
+          },
+          {
+            "source_id": "K8",
+            "quote": "S strani Kinološke zveze smo potrjeni kot uradni izvajalec preverjanja rodovnikov."
+          }
+        ],
+        "notes": "Slovenia-specific (KZS).",
+        "country": "SI"
+      }
+    ],
+    "cat": [
+      {
+        "key": "kitten_see_mother",
+        "quotes": [
+          {
+            "source_id": "K12",
+            "quote": "Ask to see where the kittens are usually kept and to see the 'Mum'."
+          },
+          {
+            "source_id": "K14",
+            "quote": "a healthy-looking mother cat that’s confident with people and healthy interactive kittens."
+          }
+        ]
+      },
+      {
+        "key": "kitten_min_age",
+        "quotes": [
+          {
+            "source_id": "K11",
+            "quote": "Kittens must not go to a new owner (home) before they are 14 weeks old"
+          }
+        ],
+        "notes": "FIFe 14 weeks; GCCF (K12) 13 weeks."
+      },
+      {
+        "key": "kitten_vaccination",
+        "quotes": [
+          {
+            "source_id": "K11",
+            "quote": "and have been fully vaccinated against feline panleucopenia, feline calici virus and feline herpes virus,"
+          },
+          {
+            "source_id": "K12",
+            "quote": "A vaccination card for the kitten showing the record for the full course of vaccinations"
+          }
+        ]
+      },
+      {
+        "key": "kitten_pedigree",
+        "quotes": [
+          {
+            "source_id": "K12",
+            "quote": "A pedigree certificate signed by the breeder showing at least 3 generations."
+          }
+        ]
+      },
+      {
+        "key": "kitten_parents_tests",
+        "quotes": [
+          {
+            "source_id": "K13",
+            "quote": "check out both parents of the kitten to see if they’ve had any problems your kitten could inherit."
+          }
+        ]
+      },
+      {
+        "key": "kitten_min_age_si",
+        "country": "SI",
+        "quotes": [
+          {
+            "source_id": "K3",
+            "quote": "Mladičev ni dovoljeno odvzeti od samice pred dopolnjenim dvanajstim tednom starosti."
+          }
+        ],
+        "notes": "Art. 36, 2009 text — consolidated text not verified."
+      },
+      {
+        "key": "zfds_member_si",
+        "country": "SI",
+        "quotes": [
+          {
+            "source_id": "K15",
+            "quote": "Članica FIFe že od 1988."
+          }
+        ]
+      }
+    ]
+  },
+  "breeds": {
+    "border_collie": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S5",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S5",
+          "quote": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "dna_cea",
+          "level": "best_practice",
+          "name": "DNA test for Collie eye anomaly/ choroidal hypoplasia (CEA/CH)",
+          "source_id": "S5",
+          "quote": "DNA test for Collie eye anomaly/ choroidal hypoplasia (CEA/CH)"
+        },
+        {
+          "key": "dna_cl",
+          "level": "best_practice",
+          "name": "DNA test for Ceroid lipofuscinosis (CL)",
+          "source_id": "S5",
+          "quote": "DNA test for Ceroid lipofuscinosis (CL)"
+        },
+        {
+          "key": "dna_igs",
+          "level": "best_practice",
+          "name": "DNA test for Imerslund-Gräsbeck syndrome (IGS)",
+          "source_id": "S5",
+          "quote": "DNA test for Imerslund-Gräsbeck syndrome (IGS)"
+        },
+        {
+          "key": "dna_mdr1",
+          "level": "best_practice",
+          "name": "DNA test for Multi-drug resistance (MDR1)",
+          "source_id": "S5",
+          "quote": "DNA test for Multi-drug resistance (MDR1)"
+        },
+        {
+          "key": "dna_tns",
+          "level": "best_practice",
+          "name": "DNA test for Trapped neutrophil syndrome (TNS)",
+          "source_id": "S5",
+          "quote": "DNA test for Trapped neutrophil syndrome (TNS)"
+        },
+        {
+          "key": "dna_sn",
+          "level": "best_practice",
+          "name": "DNA test for Sensory neuropathy (SN)",
+          "source_id": "S5",
+          "quote": "DNA test for Sensory neuropathy (SN)"
+        },
+        {
+          "key": "dna_ggd",
+          "level": "best_practice",
+          "name": "DNA test for Severe goniodysgenesis & glaucoma risk (gonio) (GGD)",
+          "source_id": "S5",
+          "quote": "DNA test for Severe goniodysgenesis & glaucoma risk (gonio) (GGD)"
+        },
+        {
+          "key": "dna_raines",
+          "level": "best_practice",
+          "name": "DNA test for Raine's syndrome",
+          "source_id": "S5",
+          "quote": "DNA test for Raine's syndrome"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S5",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hearing_baer",
+          "level": "best_practice",
+          "name": "Hearing testing (for deafness) using the KC BAER Scheme (including litter screening).",
+          "source_id": "S5",
+          "quote": "Hearing testing (for deafness) using the KC BAER Scheme (including litter screening)."
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S5",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ]
+    },
+    "labrador_retriever": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K16",
+        "level_quotes": {
+          "minimum": "The Kennel Club's Assured Breeders must use the following (or equivalent) schemes, tests and advice.",
+          "minimum_all_breeders": "We strongly recommend that all breeders, both assured breeders (ABs) and non ABs, use the following (or equivalent) schemes, tests and advice."
+        }
+      },
+      "tests": [
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip dysplasia screening scheme (BVA/KC)",
+          "source_id": "K16",
+          "quote": "Hip dysplasia screening scheme (BVA/KC)"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow dysplasia screening scheme (BVA/KC)",
+          "source_id": "K16",
+          "quote": "Elbow dysplasia screening scheme (BVA/KC)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye screening scheme (BVA/KC/ISDS)",
+          "source_id": "K16",
+          "quote": "Eye screening scheme (BVA/KC/ISDS)"
+        },
+        {
+          "key": "dna_prcd_pra",
+          "level": "minimum",
+          "name": "DNA test - prcd-PRA",
+          "source_id": "K16",
+          "quote": "DNA test - prcd-PRA"
+        },
+        {
+          "key": "dna_cnm",
+          "level": "minimum",
+          "name": "DNA test - CNM",
+          "source_id": "K16",
+          "quote": "DNA test - CNM"
+        },
+        {
+          "key": "dna_eic",
+          "level": "minimum",
+          "name": "DNA test - EIC",
+          "source_id": "K16",
+          "quote": "DNA test - EIC"
+        },
+        {
+          "key": "dna_hnpk",
+          "level": "minimum",
+          "name": "DNA test - HNPK",
+          "source_id": "K16",
+          "quote": "DNA test - HNPK"
+        },
+        {
+          "key": "dna_sd2",
+          "level": "minimum",
+          "name": "DNA test - SD2",
+          "source_id": "K16",
+          "quote": "DNA test - SD2"
+        },
+        {
+          "key": "dna_mcd",
+          "level": "minimum",
+          "name": "DNA test - MCD",
+          "source_id": "K16",
+          "quote": "DNA test - MCD"
+        },
+        {
+          "key": "dna_stgd",
+          "level": "minimum",
+          "name": "DNA test - STGD",
+          "source_id": "K16",
+          "quote": "DNA test - STGD"
+        },
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Check inbreeding calculators",
+          "source_id": "K16",
+          "quote": "Check inbreeding calculators"
+        }
+      ],
+      "notes": "Older Kennel Club page format: Assured Breeder requirements (hip, elbow, eye) and tests strongly recommended for all breeders are both shown as 'minimum'. Re-check against the current royalkennelclub.com page (S50) when it can be fetched."
+    },
+    "golden_retriever": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S65",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_gr_pra2",
+          "level": "minimum",
+          "name": "DNA test for progressive retinal atrophy (GR_PRA2)",
+          "source_id": "S65",
+          "quote": "DNA test for progressive retinal atrophy (GR_PRA2)"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S65",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S65",
+          "quote": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S65",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "ICT-A and GR_PRA1 DNA tests are on the page but not in the 'at a minimum' list; not included."
+    },
+    "french_bulldog": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S78",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "boas_grading",
+          "level": "minimum",
+          "name": "Breathing testing (for brachycephalic obstructive airway syndrome (BOAS)) using the KC Respiratory Function Grading scheme",
+          "source_id": "S78",
+          "quote": "Breathing testing (for brachycephalic obstructive airway syndrome (BOAS)) using the KC Respiratory Function Grading scheme"
+        },
+        {
+          "key": "dna_hsf4",
+          "level": "best_practice",
+          "name": "DNA test for hereditary cataracts (HC-HSF4-2)",
+          "source_id": "S78",
+          "quote": "DNA test for hereditary cataracts (HC-HSF4-2)"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S78",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S78",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S78",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ]
+    },
+    "german_shepherd": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S97",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S97",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S97",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "dna_dm",
+          "level": "best_practice",
+          "name": "DNA test for degenerative myelopathy (DM)",
+          "source_id": "S97",
+          "quote": "DNA test for degenerative myelopathy (DM)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S97",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ]
+    },
+    "cavalier_king_charles_spaniel": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S105",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_cc_de",
+          "level": "minimum",
+          "name": "DNA test for Curly coat/ dry eye (CC/DE)",
+          "source_id": "S105",
+          "quote": "DNA test for Curly coat/ dry eye (CC/DE)"
+        },
+        {
+          "key": "dna_ef",
+          "level": "minimum",
+          "name": "DNA test for Episodic falling (EF)",
+          "source_id": "S105",
+          "quote": "DNA test for Episodic falling (EF)"
+        },
+        {
+          "key": "heart_scheme",
+          "level": "minimum",
+          "name": "Heart screening (for mitral valve disease (MVD)) using the KC heart scheme for Cavalier King Charles Spaniels (supported by the VCS",
+          "source_id": "S105",
+          "quote": "Heart screening (for mitral valve disease (MVD)) using the KC heart scheme for Cavalier King Charles Spaniels (supported by the VCS"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S105",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "cm_sm_mri",
+          "level": "other_scheme",
+          "name": "BVA/KC Chiari Malformation / Syringomyelia (CM/SM) Scheme",
+          "source_id": "K17",
+          "quote": "Syringomyelia (SM) is a neurological condition most often seen in the Cavalier King Charles spaniel."
+        }
+      ],
+      "notes": "The RKC page does not list an MRI scheme ('Diagnosis for syringomyelia is by MRI scan.'); the BVA/KC CM/SM scheme (K17) is added as an existing scheme, not as an RKC recommendation."
+    },
+    "beagle": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S113",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_lafora",
+          "level": "minimum",
+          "name": "DNA test for Lafora’s",
+          "source_id": "S113",
+          "quote": "DNA test for Lafora’s"
+        },
+        {
+          "key": "dna_nccd",
+          "level": "minimum",
+          "name": "DNA test for Neonatal cerebellar cortical degeneration (NCCD)",
+          "source_id": "S113",
+          "quote": "DNA test for Neonatal cerebellar cortical degeneration (NCCD)"
+        },
+        {
+          "key": "dna_fviid",
+          "level": "best_practice",
+          "name": "DNA test for Factor 7 deficiency (FVIID)",
+          "source_id": "S113",
+          "quote": "DNA test for Factor 7 deficiency (FVIID)"
+        },
+        {
+          "key": "dna_igs",
+          "level": "best_practice",
+          "name": "DNA test for Imerslund-Gräsbeck syndrome (IGS-2)",
+          "source_id": "S113",
+          "quote": "DNA test for Imerslund-Gräsbeck syndrome (IGS-2)"
+        },
+        {
+          "key": "dna_mls",
+          "level": "best_practice",
+          "name": "DNA test for Musladin-Lueke syndrome (MLS)",
+          "source_id": "S113",
+          "quote": "DNA test for Musladin-Lueke syndrome (MLS)"
+        }
+      ]
+    },
+    "standard_poodle": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S120",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_rcd4_pra",
+          "level": "best_practice",
+          "name": "Progressive retinal atrophy PRA (rcd4)",
+          "source_id": "S120",
+          "quote": "Progressive retinal atrophy PRA (rcd4)"
+        },
+        {
+          "key": "dna_prcd_pra",
+          "level": "best_practice",
+          "name": "Progressive retinal atrophy (prcd-PRA)",
+          "source_id": "S120",
+          "quote": "Progressive retinal atrophy (prcd-PRA)"
+        },
+        {
+          "key": "dna_vwd1",
+          "level": "best_practice",
+          "name": "DNA test for von Willebrand disease (vWD1)",
+          "source_id": "S120",
+          "quote": "DNA test for von Willebrand disease (vWD1)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S120",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S120",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "The page names no Good Practice tests (checked on three fetches); only Best Practice."
+    },
+    "dachshund": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S125",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S125",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "ivdd_screening",
+          "level": "minimum",
+          "name": "Spine screening using the KC intervertebral disc disease (IVDD) screening scheme (supported by Dachshund Health UK)",
+          "source_id": "S125",
+          "quote": "Spine screening using the KC intervertebral disc disease (IVDD) screening scheme (supported by Dachshund Health UK)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S125",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "Smooth-haired variety page (PetPrep's dachshund)."
+    },
+    "australian_shepherd": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S133",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_cea",
+          "level": "minimum",
+          "name": "DNA test for Collie eye anomaly/ choroidal hypoplasia (CEA/CH)",
+          "source_id": "S133",
+          "quote": "DNA test for Collie eye anomaly/ choroidal hypoplasia (CEA/CH)"
+        },
+        {
+          "key": "dna_hsf4",
+          "level": "best_practice",
+          "name": "DNA test for Hereditary cataracts (HC-HSF4)",
+          "source_id": "S133",
+          "quote": "DNA test for Hereditary cataracts (HC-HSF4)"
+        },
+        {
+          "key": "dna_mdr1",
+          "level": "best_practice",
+          "name": "DNA test for Multi-drug resistance (MDR1)",
+          "source_id": "S133",
+          "quote": "DNA test for Multi-drug resistance (MDR1)"
+        },
+        {
+          "key": "dna_prcd_pra",
+          "level": "best_practice",
+          "name": "DNA test for Progressive retinal atrophy (prcd-PRA)",
+          "source_id": "S133",
+          "quote": "DNA test for Progressive retinal atrophy (prcd-PRA)"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S133",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S133",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S133",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ]
+    },
+    "havanese": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S138",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S138",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S138",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        }
+      ]
+    },
+    "west_highland_white_terrier": {
+      "status": "none_recommended",
+      "basis": {
+        "source_id": "S144",
+        "quote": "At this time this breed does not have any recommended pre-breeding health screening in place"
+      },
+      "tests": []
+    },
+    "bernese_mountain_dog": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S152",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+        }
+      },
+      "tests": [
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S152",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S152",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "The page has no Best Practice section."
+    },
+    "siberian_husky": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S160",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S160",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing (and gonioscopy for PLA) using the BVA/RKC/ISDS Eye Scheme",
+          "source_id": "S160",
+          "quote": "Eye testing (and gonioscopy for PLA) using the BVA/RKC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/RKC Hip Dysplasia Scheme",
+          "source_id": "S160",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/RKC Hip Dysplasia Scheme"
+        }
+      ]
+    },
+    "maine_coon": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K18",
+        "level_quotes": {
+          "minimum": "DNA testing for MC HCM, SMA, PKdef will be require for registration on the Active Register from 1.1.24."
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_hcm_mc",
+          "level": "minimum",
+          "name": "MC HCM",
+          "source_id": "K18",
+          "quote": "DNA testing for MC HCM, SMA, PKdef will be require for registration on the Active Register from 1.1.24."
+        },
+        {
+          "key": "dna_sma",
+          "level": "minimum",
+          "name": "SMA",
+          "source_id": "K18",
+          "quote": "DNA testing for MC HCM, SMA, PKdef will be require for registration on the Active Register from 1.1.24."
+        },
+        {
+          "key": "dna_pk_def",
+          "level": "minimum",
+          "name": "PKdef",
+          "source_id": "K18",
+          "quote": "DNA testing for MC HCM, SMA, PKdef will be require for registration on the Active Register from 1.1.24."
+        }
+      ],
+      "notes": "GCCF (UK) breeding-register rule via World Cat Congress; the same page lists no testing rule for FIFe."
+    },
+    "british_shorthair": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "No A/B source naming tests for breeding British Shorthairs (PKD is named only by commercial labs, tier C). Show the general cat checklist only."
+    },
+    "ragdoll": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K20",
+        "level_quotes": {
+          "minimum": "All Breeding stock must be HCM negative"
+        }
+      },
+      "tests": [
+        {
+          "key": "hcm_negative",
+          "level": "minimum",
+          "name": "All Breeding stock must be HCM negative",
+          "source_id": "K20",
+          "quote": "All Breeding stock must be HCM negative"
+        }
+      ],
+      "notes": "NZCF (New Zealand) breeding rule via World Cat Congress; the same page lists no health-testing rule for GCCF or FIFe (only registration / colour restrictions). The page does not say how HCM status is shown (gene test or ultrasound), so the key stays neutral."
+    }
+  }
+}

@@ -85,6 +85,8 @@ export const INPUTS = {
   labels_sl: 'mobile/src/i18n/locales/sl/pet.json',
   family_en: 'mobile/src/i18n/locales/en/family.json',
   family_sl: 'mobile/src/i18n/locales/sl/family.json',
+  checklist_data: 'docs/research/breeder-checklist/data.json',
+  checklist_sources: 'docs/research/breeder-checklist/sources.md',
 };
 
 /** Optional input: AI breed portraits (`php artisan breeds:portraits`); missing → every portrait null. */
@@ -261,10 +263,11 @@ function at(data, path, file) {
 
 const splitIds = (s) => s.split(',').map((x) => x.trim()).filter(Boolean);
 
-/** S2 < S10 < C1: dogs (S) first, then cats (C), numeric inside a prefix. */
+/** S2 < S10 < C1 < K1: dogs (S), cats (C), breeder checklist (K); numeric inside a prefix. */
+const SOURCE_PREFIX_ORDER = { S: 0, C: 1, K: 2 };
 export const bySourceId = (a, b) => {
-  const pa = a[0] === 'S' ? 0 : 1;
-  const pb = b[0] === 'S' ? 0 : 1;
+  const pa = SOURCE_PREFIX_ORDER[a[0]] ?? 3;
+  const pb = SOURCE_PREFIX_ORDER[b[0]] ?? 3;
   return pa - pb || Number(a.slice(1)) - Number(b.slice(1));
 };
 
@@ -1141,6 +1144,83 @@ function exportSuitability(php, readers, sources, breedIds) {
   return { vocabulary, breeds: perBreed };
 }
 
+// ─── breeder checklist (M5-R11-06) ──────────────────────────────────────────
+
+export const CHECKLIST_LEVELS = ['minimum', 'best_practice', 'other_scheme'];
+export const CHECKLIST_STATUSES = ['listed', 'none_recommended', 'not_found', 'not_checked'];
+const KEY_RE = /^[a-z][a-z0-9_]*$/;
+
+/**
+ * breeder-checklist/data.json → { species: { dog: [{key, source_ids, country?}], cat: [...] }, breeds: { id: {status, tests, basis_source_ids} } }.
+ * Every quote must be present; a register breed without an entry exports as `not_checked` (a breed run adds it later).
+ */
+export function exportChecklist(data, sources, breedsBySpecies) {
+  const where = 'breeder-checklist/data.json';
+  if (JSON.stringify(data?.meta?.levels) !== JSON.stringify(CHECKLIST_LEVELS)) throw new Error(`${where}: meta.levels must be ${CHECKLIST_LEVELS.join(', ')}`);
+  const cite = (ctx, id, quote) => {
+    if (!sources[id]) throw new Error(`${where}: ${ctx} cites unknown source ${id}`);
+    if (typeof quote !== 'string' || quote.trim() === '') throw new Error(`${where}: ${ctx} has no quote for ${id}`);
+  };
+  const species = {};
+  // One key space for all species: the website has one word map for the general items.
+  const seen = new Set();
+  for (const sp of Object.keys(breedsBySpecies)) {
+    const items = data.general?.[sp];
+    if (!Array.isArray(items) || items.length === 0) throw new Error(`${where}: general.${sp} is missing`);
+    species[sp] = items.map((it) => {
+      if (!KEY_RE.test(it.key ?? '') || seen.has(it.key)) throw new Error(`${where}: general.${sp} bad or duplicate key ${it.key}`);
+      seen.add(it.key);
+      if (!Array.isArray(it.quotes) || it.quotes.length === 0) throw new Error(`${where}: general.${sp}.${it.key} has no source`);
+      const pairs = new Set();
+      for (const q of it.quotes) {
+        cite(`general.${sp}.${it.key}`, q.source_id, q.quote);
+        const pair = `${q.source_id}\u0000${q.quote}`;
+        if (pairs.has(pair)) throw new Error(`${where}: general.${sp}.${it.key} repeats a quote of ${q.source_id}`);
+        pairs.add(pair);
+      }
+      if (it.country !== undefined && !/^[A-Z]{2}$/.test(it.country)) throw new Error(`${where}: general.${sp}.${it.key} country must be ISO 3166-1 alpha-2, got ${it.country}`);
+      const out = { key: it.key, source_ids: [...new Set(it.quotes.map((q) => q.source_id))].sort(bySourceId) };
+      // national rule (e.g. Slovenian law): the website shows it only to that country's readers
+      if (it.country) out.country = it.country;
+      return out;
+    });
+  }
+  const all = Object.values(breedsBySpecies).flat();
+  for (const id of Object.keys(data.breeds ?? {})) if (!all.includes(id)) throw new Error(`${where}: ${id} is not a breed of the register`);
+  const breeds = {};
+  for (const id of all) {
+    const b = data.breeds?.[id];
+    if (!b) {
+      breeds[id] = { status: 'not_checked', tests: [], basis_source_ids: [] };
+      continue;
+    }
+    if (!CHECKLIST_STATUSES.includes(b.status) || b.status === 'not_checked') throw new Error(`${where}: ${id} has bad status ${b.status}`);
+    const tests = b.tests ?? [];
+    if (b.status === 'listed' && tests.length === 0) throw new Error(`${where}: ${id} is listed but has no tests`);
+    if (b.status !== 'listed' && tests.length > 0) throw new Error(`${where}: ${id} is ${b.status} but has tests`);
+    if (b.status === 'not_found' && !b.notes) throw new Error(`${where}: ${id} not_found needs notes (what was tried)`);
+    const basis = [];
+    if (b.basis) {
+      cite(`${id}.basis`, b.basis.source_id, b.basis.quote ?? Object.values(b.basis.level_quotes ?? {})[0]);
+      basis.push(b.basis.source_id);
+    } else if (b.status !== 'not_found') {
+      throw new Error(`${where}: ${id} needs a basis source`);
+    }
+    const seen = new Set();
+    const out = tests.map((t) => {
+      if (!KEY_RE.test(t.key ?? '')) throw new Error(`${where}: ${id} bad test key ${t.key}`);
+      if (!CHECKLIST_LEVELS.includes(t.level)) throw new Error(`${where}: ${id}.${t.key} bad level ${t.level}`);
+      if (seen.has(t.key)) throw new Error(`${where}: ${id} lists ${t.key} twice`);
+      seen.add(t.key);
+      cite(`${id}.${t.key}`, t.source_id, t.quote);
+      return { key: t.key, level: t.level, source_ids: [t.source_id] };
+    });
+    out.sort((a, c) => CHECKLIST_LEVELS.indexOf(a.level) - CHECKLIST_LEVELS.indexOf(c.level));
+    breeds[id] = { status: b.status, tests: out, basis_source_ids: basis };
+  }
+  return { species, breeds };
+}
+
 function exportLabels(json, locale, vocabulary) {
   const s = json.breedSuitability;
   if (!s) throw new Error(`pet.json (${locale}): no breedSuitability`);
@@ -1173,13 +1253,23 @@ export function buildRegistry(texts) {
   const readers = { dog: reader(dogData, 'dog-data/data.json', ''), cat: reader(catData, 'cat-data/data.json', 'cat-data:') };
   const dogSources = parseSourcesTable(texts.dog_sources);
   const catSources = parseSourcesTable(texts.cat_sources);
+  const checklistSources = parseSourcesTable(texts.checklist_sources);
   for (const id of Object.keys(catSources)) if (dogSources[id]) throw new Error(`source id ${id} in both tables`);
-  const sources = { ...dogSources, ...catSources };
+  for (const id of Object.keys(checklistSources)) {
+    if (dogSources[id] || catSources[id]) throw new Error(`source id ${id} in two tables`);
+    if (id[0] !== 'K') throw new Error(`breeder-checklist/sources.md: ${id} must be a K-id`);
+  }
+  const sources = { ...dogSources, ...catSources, ...checklistSources };
   const names = { en: JSON.parse(texts.family_en).breeds, sl: JSON.parse(texts.family_sl).breeds };
   const allBreedIds = SPECIES.flatMap((s) => s.breeds.map((b) => b.id));
   const suitability = exportSuitability(parsePhpReturn(texts.suitability), readers, sources, allBreedIds);
   const game = { dog: dogGame(readers.dog), cat: catGame(readers.cat) };
   const general = { dog: dogGeneralFacts(readers.dog), cat: catGeneralFacts(readers.cat) };
+  const checklist = exportChecklist(
+    JSON.parse(texts.checklist_data),
+    sources,
+    Object.fromEntries(SPECIES.map((s) => [s.id, s.breeds.map((b) => b.id)])),
+  );
 
   const nameOf = (id) => {
     const n = { en: names.en?.[id], sl: names.sl?.[id] };
@@ -1224,8 +1314,9 @@ export function buildRegistry(texts) {
         suitability: suitability.breeds[spec.id],
         game: g,
         portrait: portraitFor(portraits, sp.id, spec.id, slug.en),
+        breeder_checklist: checklist.breeds[spec.id],
       };
-      entry.source_ids = [...collectSourceIds([entry, general[sp.id]])].sort(bySourceId);
+      entry.source_ids = [...collectSourceIds([entry, general[sp.id], checklist.species[sp.id]])].sort(bySourceId);
       breeds.push(entry);
     });
     const ours = breeds.filter((b) => b.species === sp.id);
@@ -1241,6 +1332,7 @@ export function buildRegistry(texts) {
       facets: sp.facets,
       compare_fields: sp.compare_fields,
       general_facts: general[sp.id],
+      buyer_checklist: checklist.species[sp.id],
       free_plan: { id: sp.free_plan, name: nameOf(sp.free_plan), adult_activity: free.adult_activity, basis_source_ids: free.basis_source_ids },
     };
   });

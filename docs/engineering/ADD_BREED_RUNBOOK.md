@@ -58,6 +58,16 @@ website URLs, time per phase.
 | Behaviour | `behaviour.temperament, family, time_alone, other_pets, chewing, food_motivation` (null + note when nothing found) | standard, PDSA |
 | Health | `health._note` + one entry per sourced condition; percentages / odds ratios stay here only | VetCompass papers, PDSA, RKC |
 
+### 2.3 Breeder checklist (M5-R11-06, not a stop condition)
+`docs/research/breeder-checklist/data.json` → `breeds.<breed_key>` — the parents' health tests a buyer should ask about. Copy an existing entry.
+- **Dogs:** fetch the breed's RKC Breeds A–Z page (already in `dog-data/sources.md`) and ask for the health-testing section verbatim. Tests under "We strongly recommend that breeders, at a minimum, conduct these tests before breeding" → `level: "minimum"`; under "Best Practice" → `"best_practice"`. A well-known scheme the page does not list but an A/B source describes for the breed (e.g. BVA/KC CM/SM for the Cavalier) → `"other_scheme"` with its own K-source. Each test: `key` (reuse a key from the file; new key = `dna_<acronym>` or `<thing>_scheme`), `name` (page wording), `source_id`, `quote`.
+- **Cats:** a federation breeding-register rule (GCCF via World Cat Congress, FIFe, a breed club) → `"minimum"`; nothing A/B → `status: "not_found"` with `notes` (commercial lab pages are tier C — never alone).
+- Page says there are no recommended tests (Westie) → `status: "none_recommended"` + `basis.quote`. Fetch failed → `status: "not_found"` + what was tried. Never guess a test.
+- `general.<species>` items are per species and may carry `country` (ISO alpha-2) for a national rule shown only on that country's language pages — never put a national rule in an item without `country`.
+- New source → next free **K-id** in `docs/research/breeder-checklist/sources.md` (6-column row, as in dog sources). The general items (`general.dog` / `general.cat`) are per species — do not touch them in a breed run.
+- No entry at all → the export shows the breed as `not_checked` (no failure), so a run that cannot do this step still finishes; note it in the queue row.
+- Website: every new test key needs words in `src/content/registry/{en,sl}.ts` → `checklist.tests` (the build fails otherwise) — short, plain name of the test and the condition, no numbers or odds.
+
 ## 3. Standing decision rules (no questions to David)
 
 **Every sourced need is built (David 2026-10-11).** If an A/B source says this breed needs something — even a small thing (brushing once a week, a secure fence, nail clipping) — the run builds it into the game in the same PR, as a routine / rule / tag with the source and a `decision` line. Never leave a sourced breed need as "proposal, not built": "otherwise we forget and the app won't have the feature". When the game has the mechanic already (grooming, exercise, tags), only the value is new — build it. When the mechanic does not exist yet and is too large for the run, still finish the breed (merge on green CI as usual), set the queue row to `done` with the note `needs-david: <mechanic> not built — ROADMAP <ID>`, and add that ROADMAP task and a 🗓 FEATURES row, so it cannot be forgotten. (Status `needs-david` alone still means the code stop of §1: PR left open.)
@@ -88,7 +98,7 @@ Record each as `"decision": "potrdil David 2026-10-10 (pravilo runbooka): …"` 
 **Branch:** `git checkout -b feat/M5-R10-NN-<slug> origin/main` (NN = the `#` column of `docs/research/BREED_QUEUE.md`, slug = EN slug).
 
 ### Research commit — `docs(research): <Breed> sourced data + game decisions [M5-R10]`
-`docs/research/dog-data/data.json`, `docs/research/dog-data/sources.md`, `docs/research/BREED_QUEUE.md` (row → `in-progress`).
+`docs/research/dog-data/data.json`, `docs/research/dog-data/sources.md`, `docs/research/breeder-checklist/data.json` (+ `sources.md` for a new K-id, §2.3), `docs/research/BREED_QUEUE.md` (row → `in-progress`).
 
 ### Backend commit — `feat(backend): add <Breed> breed [M5-R10]`
 | File | Change |
@@ -206,7 +216,7 @@ Same commit: FEATURES register + portrait rows, HANDOFF, queue row → `done` (w
 cd ../pet-prep-website && git checkout -b feat/register-<slug> origin/main
 node ../pet-prep/scripts/export-breed-registry.mjs --out "$PWD/src/content/registry/registry.json" --copy-portraits public
 ```
-- `src/content/registry/en.ts` + `sl.ts`: words the build asks for (new FCI group in `fciGroups`, country in `origins`, category values, qualifiers, health keys — one calm sentence each, no numbers), and `intros.<key>` = 2 short paragraphs EN + SL from sourced statements only, `sources` ⊂ the breed's `source_ids`, `aka` (other names).
+- `src/content/registry/en.ts` + `sl.ts`: words the build asks for (new FCI group in `fciGroups`, country in `origins`, category values, qualifiers, health keys — one calm sentence each, no numbers; new breeder-checklist test keys in `checklist.tests`, §2.3), and `intros.<key>` = 2 short paragraphs EN + SL from sourced statements only, `sources` ⊂ the breed's `source_ids`, `aka` (other names).
 - `npm run lint && npx tsc --noEmit && npm run build` — the build fails on missing words; check the generated page text (`.next/server/app/en/animals/<species>/<slug>.html`, `.next/server/app/sl/zivali/<psi|macke>/<sl-slug>.html`) for grammar (singular / plural, "slower" multipliers).
 - Commit `feat(register): <Breed> page …` (+ trailers), push, PR via `gh api repos/DataVallis/pet-prep-website/pulls`, wait for check runs **"Lint, types, build"** and **"Docker image (build + smoke test, no push)"** = success on the head SHA, merge with `merge_method=merge`, then wait for the website `main` run(s) of the merge SHA to succeed.
 - Live: `https://petprep.si/animals/dogs/<slug>` and `https://petprep.si/sl/zivali/psi/<sl-slug>`.

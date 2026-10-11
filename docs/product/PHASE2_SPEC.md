@@ -22,6 +22,15 @@
 - **Za veterinarje:** kanal kvalificiranih potencialnih strank (lead-i) iz njihove okolice; plačan posvet na daljavo.
 - **Model** (kot pri zavarovanjih): provizija na posredovan lead / opravljen posvet ali mesečna članarina partnerske ambulante; možnost "priporočena ambulanta" na območju.
 
+### 2b. Genetika (David, 11. 10. 2026 — po povratni informaciji veterinarja; *načrt*)
+
+- **Nakup genskega testa** v starševskem delu, za pse in mačke. Najprej **affiliate** (mednarodni test, npr. Embark ali Wisdom Panel — preveriti dostavo v Slovenijo) in **prek veterinarjev**; dolgoročno **lasten PetPrep test** po vzoru GenePlanet: naročilo v aplikaciji → komplet po pošti → bris ustne sluznice doma → PetPrep vzorec preda partnerskemu laboratoriju → izid v aplikacijo in po e-pošti. Zaenkrat samo načrt, brez stikov z laboratoriji. Pred stiki preveriti: veleprodajna cena, znamka PetPrep na kompletu in poročilu, API za izide, velikost baze pasem, podpora za mačke, potrditev vzorca pri veterinarju za uradne izide.
+- **Nalaganje izida (PDF / fotografija) in AI izpis:** pasme v %, kaj je za te pasme značilno, katere bolezni so pri njih pogostejše — vse z viri; **neposredne genske najdbe** (npr. MDR1) ločeno od **pasemskih nagnjenosti**; vedno opomba »ni diagnoza«. Genski test **ne pokaže alergij** — tega ne obljubljamo.
+- **Kartica za veterinarja** (PDF / QR) s sestavo pasem in genskimi najdbami.
+- **Pilot z veterinarjem**, ki je dal povratno informacijo: priporočilna koda, dostop do kartice, pregled vsebin.
+- Že zgrajeno (11. 10. 2026, M5-R11-06): seznam »Pred nakupom: kaj preveriti pri vzreditelju« na strani vsake pasme v registru.
+- Ne zdaj: vzrejni modul za vzreditelje (pravila, pregledi, roki po pasmi).
+
 ## 3. Monetizacija
 - **AI naročnina (SaaS):** osnovni tracker podatki brezplačni; "Osebni AI pasji inštruktor" (neomejen chat, analitika obnašanja) npr. **3,99 €/mes**.
 - **In-app affiliate trgovina:** priporočila ob prehodu faz (npr. večja ovratnica) s povezavami do partnerjev (npr. Mr. Pet, 10 % popust, provizija).

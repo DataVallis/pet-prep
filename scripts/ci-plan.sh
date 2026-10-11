@@ -30,7 +30,7 @@
 #        scripts            scripts/**, deployment/**, the workflow,
 #                           backend/config/breed_suitability.php, mobile/src/i18n/locales/*/{pet,family}.json,
 #                           docs/research/cat-data/** (also backend tests)
-#                           docs/research/breed-portraits/** and docs/research/breed-registry.json
+#                           docs/research/breed-portraits/**, docs/research/breeder-checklist/** and docs/research/breed-registry.json
 #                           (inputs / output of scripts/export-breed-registry.mjs, M5-R11;
 #                           breed-registry.json also runs the backend tests — BreedPortraitTest)
 #        scripts only       scripts/export-breed-registry.mjs + its test (build-time export
@@ -138,6 +138,7 @@ classify() {
       docs/research/dog-data/*) need_backend=true need_scripts=true ;; # test fixtures + export input, nothing ships
       docs/research/cat-data/*) need_backend=true need_scripts=true ;; # cat test fixtures + export input, nothing ships
       docs/research/breed-registry.json) need_backend=true need_scripts=true ;; # export output: its test + BreedPortraitTest (register breeds), nothing ships
+      docs/research/breeder-checklist/*) need_scripts=true ;; # breeder checklist (export input, M5-R11-06), nothing ships
       docs/research/breed-portraits/*) need_scripts=true ;; # AI breed portraits + manifest (export input, M5-R11-04), nothing ships
       deployment/*) need_backend=true need_deploy=true need_scripts=true ;;
       scripts/generate-api-types.mjs) need_mobile=true ;;
