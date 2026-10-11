@@ -459,6 +459,22 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.norwegian_forest_cat',
                 'search_keywords' => ['norwegian forest cat', 'norwegian forest', 'wegie', 'skogkatt', 'norveška gozdna mačka', 'norveska gozdna macka', 'norveška mačka', 'gozdna mačka'],
             ],
+            [
+                // M5-R10-18 (cat-data bengal.identity.decision, runbook rule): paid, after the Norwegian Forest Cat.
+                'breed_slug' => BreedType::Bengal->slug(),
+                'daily_steps_required' => 0,
+                'hunger_decay_rate' => 8.0,
+                'thirst_decay_rate' => 8.0,
+                'poops_per_day' => 0,
+                'feed_windows' => self::CAT_FEED_WINDOWS,
+                'water_times_per_day' => 2,
+                'water_min_gap_minutes' => 240,
+                'premium_unlock' => true,
+                'species' => 'cat',
+                'sort_order' => 60,
+                'label_key' => 'breeds.bengal',
+                'search_keywords' => ['bengal', 'bengal cat', 'bengalska mačka', 'bengalska macka', 'bengalka'],
+            ],
         ];
     }
 

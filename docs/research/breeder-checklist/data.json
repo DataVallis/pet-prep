@@ -961,6 +961,32 @@
         }
       ],
       "notes": "FIFe breeding rule via World Cat Congress (the rest of the cell, paraphrase: unless both parents are proven non-carriers; carriers may not be mated with carriers; the certificate goes with the pedigree). GCCF lists only a BAER hearing certificate for white cats (not a routine test of every parent — not listed). GSD IV: GCCF C37 / UC Davis VGL C41 in cat-data."
+    },
+    "bengal": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K22",
+        "level_quotes": {
+          "minimum": "They themselves have been genetically tested as normal (N/N*) for both PRA Band PK def."
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_pra_b",
+          "level": "minimum",
+          "name": "PRA-b (DNA test for Bengal progressive retinal atrophy)",
+          "source_id": "K22",
+          "quote": "They themselves have been genetically tested as normal (N/N*) for both PRA Band PK def."
+        },
+        {
+          "key": "dna_pk_def",
+          "level": "minimum",
+          "name": "PK def",
+          "source_id": "K22",
+          "quote": "They themselves have been genetically tested as normal (N/N*) for both PRA Band PK def."
+        }
+      ],
+      "notes": "GCCF (UK) Active Register rule via World Cat Congress: a Bengal goes on the breeding (Active) Register when it, or both parents, or every pedigree line, tested normal for PRA-b and PK def (paraphrase of the rest of the cell; \"PRA Band\" = \"PRA-b and\" as returned by the fetch tool). FIFe on the same page: \"Bengals of generations F1–F4 are not allowed for breeding*.\" (a generation rule, not a health test — not listed). PRA / PK deficiency: PetMD C45 in cat-data."
     }
   }
 }

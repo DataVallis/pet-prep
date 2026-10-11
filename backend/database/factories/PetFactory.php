@@ -329,6 +329,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Bengal (paid cat breed, M5-R10-18; species follows the breed).
+     */
+    public function bengal(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::Bengal->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static

@@ -111,6 +111,9 @@ test('species → breeds model: slugs, availability, groups', () => {
   // M5-R10-17
   assert.deepEqual(byId.norwegian_forest_cat.slug, { en: 'norwegian-forest-cat', sl: 'norveska-gozdna-macka' });
   assert.equal(byId.norwegian_forest_cat.availability, 'coming_soon');
+  // M5-R10-18
+  assert.deepEqual(byId.bengal.slug, { en: 'bengal', sl: 'bengalska-macka' });
+  assert.equal(byId.bengal.availability, 'coming_soon');
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
 
@@ -383,7 +386,7 @@ test('the app\'s brushed-cat list equals the seeded grooming rows (David 2026-10
   assert.ok(m, 'GROOMING_CAT_BREEDS not found in mobile species.ts');
   const app = [...m[1].matchAll(/'([a-z_]+)'/g)].map((x) => x[1]).sort();
   assert.deepEqual(app, seeded);
-  assert.deepEqual(seeded, ['british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
+  assert.deepEqual(seeded, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
 });
 
 // ─── breed portraits (M5-R11, David 2026-10-10: AI photos, labelled) ───
@@ -768,4 +771,33 @@ test('Norwegian Forest Cat (M5-R10-17): paid cat, kitten at 3 months, GCCF weigh
   assert.doesNotMatch(json, /odds ratio|allerg|colourpoint/i);
   assert.doesNotMatch(json, /\d+(\.\d+)?\s?%/);
   for (const id of nfo.source_ids) assert.ok(registry.sources.some((s) => s.id === id), id);
+});
+
+test('Bengal (M5-R10-18): paid cat, kitten at 3 months, PDSA average weight, growth up to 2 years, C14 life expectancy, brushing once a week, health keys only', () => {
+  const ben = registry.breeds.find((b) => b.id === 'bengal');
+  assert.equal(ben.species, 'cat');
+  assert.equal(ben.availability, 'coming_soon');
+  const fact = (field) => ben.facts.find((f) => f.field === field);
+  assert.deepEqual([fact('weight').value, fact('weight').qualifier, fact('weight').source_ids], [5.5, 'about', ['C44']]);
+  assert.deepEqual([fact('growth_end').value, fact('growth_end').qualifier, fact('growth_end').source_ids], [24, 'up_to', ['C46']]);
+  assert.deepEqual([fact('lifespan').value, fact('lifespan').qualifier, fact('lifespan').source_ids], [8.51, 'expectancy', ['C14']]);
+  assert.deepEqual([fact('grooming_frequency').value, fact('grooming_frequency').source_ids], ['once_a_week', ['C44']]);
+  assert.deepEqual(ben.health.map((h) => [h.key, h.source_ids]), [['pra_pk_def', ['C45']], ['heart_hcm', ['C45']], ['kneecap_luxation', ['C44']], ['cancer_risk', ['C45']]]);
+  assert.ok(ben.health.every((h) => !('value' in h)));
+  assert.deepEqual(ben.suitability, { suits: [], consider: [] });
+  // Game: the general cat rules, a pedigree kitten at 3 months, brushing 1× a week (PDSA C44 / PetMD C45, runbook rule).
+  assert.equal(ben.game.stages[0].starts.arrival_months, 3);
+  assert.deepEqual(ben.game.stages.map((s) => s.starts.month ?? null), [null, 12, 84, 120]);
+  assert.deepEqual(ben.game.adult_activity, { kind: 'play_sessions', value: 2 });
+  assert.equal(ben.game.rules.find((r) => r.key === 'grooming_rule').params.per_week, 1);
+  assert.ok(ben.game.values.some((v) => v.ref === 'cat-data:bengal.arrival_age_kitten' && /pravilo runbooka, M5-R10-18/.test(v.decision)));
+  assert.ok(ben.game.values.some((v) => v.ref === 'cat-data:bengal.grooming.game_sessions_per_week' && /pravilo runbooka, M5-R10-18/.test(v.decision)));
+  // No health statistics, no allergy promise, never a wild cat.
+  const json = JSON.stringify(ben);
+  assert.doesNotMatch(json, /odds ratio|allerg|leopard|hybrid/i);
+  assert.doesNotMatch(json, /\d+(\.\d+)?\s?%/);
+  for (const id of ['C44', 'C45', 'C46']) assert.ok(registry.sources.some((s) => s.id === id), id);
+  // Breeder checklist: GCCF Active Register DNA tests (K22).
+  assert.equal(ben.breeder_checklist.status, 'listed');
+  assert.deepEqual(ben.breeder_checklist.tests.map((t) => [t.key, t.level, t.source_ids]), [['dna_pra_b', 'minimum', ['K22']], ['dna_pk_def', 'minimum', ['K22']]]);
 });

@@ -170,7 +170,7 @@ describe('breed, config and database', function () {
 
     it('leaves the dog rows and the other cats\' rows untouched', function () {
         expect(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'siberian-cat')->all())->toBe([])
-            ->and(collect(BreedStageParamsSeeder::catRows())->pluck('breed_slug')->unique()->values()->all())->toBe(['domestic-cat', 'maine-coon', 'british-shorthair', 'ragdoll', 'siberian-cat', 'norwegian-forest-cat'])
+            ->and(collect(BreedStageParamsSeeder::catRows())->pluck('breed_slug')->unique()->values()->all())->toBe(['domestic-cat', 'maine-coon', 'british-shorthair', 'ragdoll', 'siberian-cat', 'norwegian-forest-cat', 'bengal'])
             ->and(collect(BreedStageParamsSeeder::catRows())->where('breed_slug', '!=', 'siberian-cat')
                 ->whereIn('decision', [BreedStageParamsSeeder::CONFIRMED_R10_SIBERIAN_CAT, BreedStageParamsSeeder::CONFIRMED_R10_SIBERIAN_CAT_GROOMING])->all())->toBe([])
             // The other cats keep their own grooming, lifespan and arrival rows.
@@ -348,7 +348,7 @@ describe('GET /api/breeds', function () {
         config(['petprep.cats_enabled' => true]);
         $cats = getJson('/api/breeds?'.http_build_query(['species' => 'cat', 'features' => ['species_cat']]))->assertOk()->json('breeds');
 
-        expect(array_column($cats, 'breed'))->toBe(['domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat'])
+        expect(array_column($cats, 'breed'))->toBe(['domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal'])
             ->and($cats[4])->toMatchArray([
                 'breed' => 'siberian_cat', 'slug' => 'siberian-cat', 'species' => 'cat', 'premium' => true,
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.siberian_cat',

@@ -17,11 +17,11 @@
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
-      "sha256": "f0eeb240305a35c6468cfe840a8f27b0333b4eaf15eb01dc9e7415e667e0a54e"
+      "sha256": "ccbc92ea958e09e23161df1445bb2446316ea92a31eac1a91461d31c1d230e1f"
     },
     "cat_sources": {
       "path": "docs/research/cat-data/sources.md",
-      "sha256": "d9ad76975e7f7a6b9551f2caadf2aeac70ab87875f69dbb001bd218def9525d0"
+      "sha256": "c23c7d63478cda279daeb74bafcd5c24a053b2a0039f92fe271a24a54f557295"
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
@@ -29,27 +29,27 @@
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "c1386fb6046b1cf236c2087afef7cc99706c066ea130f2b2f30013cec77c860f"
+      "sha256": "47190e931f97cff19e7f292ebdfe768e6b699348a788226422f322d890fe9fdf"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "9bebd35db5497366aa2d8d34f92d21faf3e5057e6af7e3e7611ea93eea628833"
+      "sha256": "658b8edd61b5f8c00aeeff751f8528ad9e274a223212a010a6b5c5ad2d5bff9b"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "c8bf4239717d69c7aaa62ee27a749da16527684633047f44c4b862cb97dc7774"
+      "sha256": "eb014702296e0f27fb78e423e2a4deec061d37bfe54cadd88533008cf824e704"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "3f07f821aeaa279de72f6e6246cc48ace434e13516e13cb22cf88e9f6db7bfff"
+      "sha256": "eac9d74b5497f530b5535fafd4f43883c1dcd201cfb1e92315ec42f887e97ff4"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "52c171ed2c131b732cb5bd626c09c17ff392947dc2406f7e2c28eff21e20a162"
+      "sha256": "e8a8dbf914e8bc2cdd83475e0240af5e43463cca70c1e6e1e3717fce498f619b"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "95604be7d3f0b0b0259a7513d618d0b2c4090087994aa1012aa78eaa4f79c581"
+      "sha256": "01bba887e160d211cec6ac0e85c307ac3f9a7968b861257e8edea523882a6244"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -436,7 +436,7 @@
         }
       },
       "status": "coming_soon",
-      "breed_count": 5,
+      "breed_count": 6,
       "fact_groups": [
         "play",
         "litter",
@@ -10798,6 +10798,393 @@
         "K15",
         "K21"
       ]
+    },
+    {
+      "id": "bengal",
+      "species": "cat",
+      "order": 5,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Bengal",
+        "sl": "Bengalska mačka"
+      },
+      "slug": {
+        "en": "bengal",
+        "sl": "bengalska-macka"
+      },
+      "synonyms": {
+        "en": [
+          "Bengal cat"
+        ],
+        "sl": [
+          "bengalska macka",
+          "bengalka",
+          "bengal"
+        ]
+      },
+      "facets": {},
+      "facts": [
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "qualifier": "about",
+          "value": 5.5,
+          "source_ids": [
+            "C44"
+          ],
+          "ref": "cat-data:bengal.adult_weight.pdsa_average",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "up_to",
+          "value": 24,
+          "source_ids": [
+            "C46"
+          ],
+          "ref": "cat-data:bengal.growth_end",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "expectancy",
+          "value": 8.51,
+          "source_ids": [
+            "C14"
+          ],
+          "ref": "cat-data:bengal.lifespan.expectancy_at_birth",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "C44"
+          ],
+          "ref": "cat-data:bengal.grooming.range",
+          "confidence": "medium"
+        }
+      ],
+      "compare": {
+        "weight": 0,
+        "lifespan": 2
+      },
+      "health": [
+        {
+          "key": "pra_pk_def",
+          "source_ids": [
+            "C45"
+          ],
+          "ref": "cat-data:bengal.health.pra_pk_def",
+          "confidence": "medium"
+        },
+        {
+          "key": "heart_hcm",
+          "source_ids": [
+            "C45"
+          ],
+          "ref": "cat-data:bengal.health.hcm",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "C44"
+          ],
+          "ref": "cat-data:bengal.health.patellar_luxation",
+          "confidence": "medium"
+        },
+        {
+          "key": "cancer_risk",
+          "source_ids": [
+            "C45"
+          ],
+          "ref": "cat-data:bengal.health.lymphoma",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [],
+        "consider": []
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 3
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 12
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 84
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 120
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "play_sessions",
+          "value": 2
+        },
+        "rules": [
+          {
+            "key": "play_instead_of_steps",
+            "params": {
+              "sessions": 2,
+              "gap_minutes": 120
+            }
+          },
+          {
+            "key": "litter_rule",
+            "params": {
+              "uses": 2,
+              "scoop_hours": 4,
+              "change_days": 7
+            }
+          },
+          {
+            "key": "scratching_after_missed_play",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_6_12_weeks",
+            "basis_source_ids": [
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_3_6_months",
+            "basis_source_ids": [
+              "C2",
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_6_12_months",
+            "basis_source_ids": [
+              "C2",
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.adult",
+            "basis_source_ids": [
+              "C2"
+            ],
+            "decision": "potrdil David 2026-10-08 (načrt M5-R06): adult cat 2 meals per day (game simplification)"
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.senior",
+            "basis_source_ids": [
+              "C2"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.arrival_age.young",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: young cat arrives at 12 months"
+          },
+          {
+            "ref": "cat-data:general.arrival_age.adult",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: mature cat arrives at 84 months"
+          },
+          {
+            "ref": "cat-data:general.arrival_age.senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: senior cat arrives at 120 months"
+          },
+          {
+            "ref": "cat-data:general.play.game_sessions_kitten",
+            "basis_source_ids": [
+              "C10"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: kitten 3 per day"
+          },
+          {
+            "ref": "cat-data:general.play.game_sessions_adult",
+            "basis_source_ids": [
+              "C10"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: adult 2 per day"
+          },
+          {
+            "ref": "cat-data:general.play.game_min_gap",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 20:40: 2 h between two successful sessions, measured from the last successful one"
+          },
+          {
+            "ref": "cat-data:general.litter.game_uses_per_day_adult",
+            "basis_source_ids": [
+              "C6"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: adult 2 uses per day"
+          },
+          {
+            "ref": "cat-data:general.litter.game_scoop_deadline",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: 4 h deadline"
+          },
+          {
+            "ref": "cat-data:general.litter.full_change",
+            "basis_source_ids": [
+              "C5",
+              "C6",
+              "C7"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: one full litter change per program week"
+          },
+          {
+            "ref": "cat-data:bengal.arrival_age_kitten",
+            "basis_source_ids": [
+              "C13"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-18): pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule for pedigree kittens)"
+          },
+          {
+            "ref": "cat-data:bengal.grooming.game_sessions_per_week",
+            "basis_source_ids": [
+              "C44"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, M5-R10-18): Bengal 1× per week (PDSA C44 \"a light brushing/combing once a week\", PetMD C45 \"should be brushed weekly\" — both sources agree)"
+          }
+        ],
+        "basis_source_ids": [
+          "C2",
+          "C3",
+          "C5",
+          "C6",
+          "C7",
+          "C10",
+          "C13",
+          "C44"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_pra_b",
+            "level": "minimum",
+            "source_ids": [
+              "K22"
+            ]
+          },
+          {
+            "key": "dna_pk_def",
+            "level": "minimum",
+            "source_ids": [
+              "K22"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K22"
+        ]
+      },
+      "source_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C10",
+        "C12",
+        "C13",
+        "C14",
+        "C23",
+        "C44",
+        "C45",
+        "C46",
+        "K3",
+        "K11",
+        "K12",
+        "K13",
+        "K14",
+        "K15",
+        "K22"
+      ]
     }
   ],
   "sources": [
@@ -11670,6 +12057,27 @@
       "url": "https://www.petmd.com/cat/breeds/c_ct_norwegian_forest"
     },
     {
+      "id": "C44",
+      "tier": "B",
+      "publisher": "PDSA (UK veterinary charity)",
+      "title": "Bengal breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/kittens-cats/bengal"
+    },
+    {
+      "id": "C45",
+      "tier": "B",
+      "publisher": "PetMD — Janelle Leeson; reviewed by Hannah Hart, DVM; updated 2025-05-29",
+      "title": "Bengal (cat breeds)",
+      "url": "https://www.petmd.com/cat/breeds/c_ct_bengal"
+    },
+    {
+      "id": "C46",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (\"the Veterinarians of VCA Animal Hospitals\"), undated",
+      "title": "Bengal (cat breeds)",
+      "url": "https://vcahospitals.com/avh/know-your-pet/cat-breeds/bengal"
+    },
+    {
       "id": "K1",
       "tier": "B",
       "publisher": "PDSA",
@@ -11815,6 +12223,13 @@
       "publisher": "World Cat Congress",
       "title": "Norwegian Forest Cat — a comparison among the member organisations",
       "url": "https://worldcatcongress.org/wp/cat_breed_comp_nfo.php"
+    },
+    {
+      "id": "K22",
+      "tier": "B",
+      "publisher": "World Cat Congress",
+      "title": "Bengal — a comparison among the member organisations",
+      "url": "https://worldcatcongress.org/wp/cat_breed_comp_ben.php"
     }
   ]
 }

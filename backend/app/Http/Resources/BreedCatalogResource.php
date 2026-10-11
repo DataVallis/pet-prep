@@ -24,7 +24,7 @@ class BreedCatalogResource extends JsonResource
             /**
              * Enum value sent as `breed` to POST /api/parent/generate-pin.
              *
-             * @var 'mutt'|'border_collie'|'labrador_retriever'|'golden_retriever'|'french_bulldog'|'german_shepherd'|'cavalier_king_charles_spaniel'|'beagle'|'standard_poodle'|'dachshund'|'australian_shepherd'|'havanese'|'west_highland_white_terrier'|'bernese_mountain_dog'|'siberian_husky'|'domestic_cat'|'maine_coon'|'british_shorthair'|'ragdoll'|'siberian_cat'|'norwegian_forest_cat'
+             * @var 'mutt'|'border_collie'|'labrador_retriever'|'golden_retriever'|'french_bulldog'|'german_shepherd'|'cavalier_king_charles_spaniel'|'beagle'|'standard_poodle'|'dachshund'|'australian_shepherd'|'havanese'|'west_highland_white_terrier'|'bernese_mountain_dog'|'siberian_husky'|'domestic_cat'|'maine_coon'|'british_shorthair'|'ragdoll'|'siberian_cat'|'norwegian_forest_cat'|'bengal'
              */
             'breed' => $entry['breed'],
             /**

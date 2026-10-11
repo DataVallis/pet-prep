@@ -357,10 +357,10 @@ describe('PICKER_STRINGS.ageHints', () => {
 
   it('no cat picker note names one paid cat as the only one (two paid cats since M5-R10-14) — SL and EN', async () => {
     const notes = () => [i18n.t('pet:picker.cat.breedFreeNote'), i18n.t('pet:picker.cat.breedChallengeNote'), i18n.t('pet:picker.cat.plans.challenge.hint')];
-    for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk|ragdoll|siberian|sibirsk|norwegian|norvešk/i);
+    for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk|ragdoll|siberian|sibirsk|norwegian|norvešk|bengal/i);
     await i18n.changeLanguage('en');
     try {
-      for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk|ragdoll|siberian|sibirsk|norwegian|norvešk/i);
+      for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk|ragdoll|siberian|sibirsk|norwegian|norvešk|bengal/i);
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -424,6 +424,28 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(E.senior).toBe('Arrives as a senior cat, 10 years old.');
       expect(PICKER_STRINGS.breedHints.norwegian_forest_cat).toBe('Semi-long, water-repellent coat · brushing 1× a week');
       expect(JSON.stringify(E) + PICKER_STRINGS.breedHints.norwegian_forest_cat).not.toMatch(/allerg/i);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-18 Bengal (cat): kitten at 3 months, young cat can grow until 2 years, brushing 1× a week — SL and EN', async () => {
+    const S = PICKER_STRINGS.ageHints.bengal;
+    expect(S.puppy).toBe('Pride kot mucek, star 3 mesece (rodovniški mucki gredo od doma pozneje).');
+    expect(S.young).toBe('Pride kot mlada mačka, stara 1 leto — bengalska mačka lahko raste do 2. leta.');
+    expect(S.adult).toBe('Pride kot zrela mačka, stara 7 let.');
+    expect(S.senior).toBe('Pride kot starejša mačka, stara 10 let.');
+    expect(PICKER_STRINGS.breedHints.bengal).toBe('Kratka, mehka, pegasta ali marmorirana dlaka · česanje 1× na teden');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.bengal;
+      expect(E.puppy).toBe('Arrives as a 3-month-old kitten (pedigree kittens leave home later).');
+      expect(E.young).toBe('Arrives as a young cat, 1 year old — a Bengal can keep growing until 2 years.');
+      expect(E.adult).toBe('Arrives as a mature cat, 7 years old.');
+      expect(E.senior).toBe('Arrives as a senior cat, 10 years old.');
+      expect(PICKER_STRINGS.breedHints.bengal).toBe('Short, soft, spotted or marbled coat · brushing 1× a week');
+      // Never an allergy promise, never a wild cat.
+      expect(JSON.stringify(E) + PICKER_STRINGS.breedHints.bengal).not.toMatch(/allerg|wild|leopard/i);
     } finally {
       await i18n.changeLanguage('sl');
     }

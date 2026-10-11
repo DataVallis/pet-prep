@@ -203,6 +203,21 @@
 | Brown (black) mackerel tabby with white is weighted highest (portrait default); a
 | brown cat is always tabby (never plain brown — would read as chocolate); colour
 | weights are unsourced → `verified => false`.
+|
+| Bengal (M5-R10-18, docs/research/cat-data bengal.appearance): medium to large, sleek
+| and very muscular, with a wild look; long, substantial body with robust bone,
+| hindquarters slightly higher than the shoulders; broad modified wedge head with
+| rounded contours, slightly small for the body, high cheekbones, full broad muzzle with
+| large whisker pads; medium to small ears, wide at the base, rounded tips, set wide
+| apart and tilted forward (never tufted); large oval eyes, not bulging; thick tail
+| tapering to a rounded tip, medium length; short, dense, unusually soft, close-lying
+| coat (WCF BEN 2024-08-01, C42; FIFe BEN 01.01.2026, C43). Spotted (rosettes preferred)
+| or marbled, belly spotted, in brown (black), seal sepia / seal mink, snow and their
+| silver forms (FIFe via World Cat Congress, C47); never white patches or medallions,
+| never vertical tabby stripes (C42). Snow (seal lynx point) has blue eyes (C42). Fully
+| grown at up to two years (VCA C46). Brown spotted with rosettes is weighted highest
+| (portrait default); colour weights are unsourced → `verified => false`. A registered,
+| domestic Bengal — never drawn as a wild cat (no leopard cat proportions).
 */
 
 return [
@@ -1238,6 +1253,72 @@ return [
                 'build' => 'long-bodied and leggy, not yet heavy',
                 'coat_length' => 'long, glossy, still filling out',
                 'features' => ['a triangular head with a long, straight profile', 'large, open, slightly oval eyes', 'broad, round paws with tufts of fur between the toes'],
+            ],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    'bengal' => [
+        'display_name' => 'Bengal',
+        // Colour / pattern weights are not in the standard (unsourced) — same rule as the Maine Coon.
+        'verified' => false,
+        'source' => 'WCF breed standard Bengal (BEN), actualized 2024-08-01 (C42, https://wcf.de/pdf-en/breed/BEN_en_2024-08-01.pdf) and FIFe BEN 01.01.2026 (C43) — for the traits listed in `sources`; FIFe colour list via World Cat Congress (C47); weight C44 (PDSA), maturity C46 (VCA). Colour and pattern weights are unsourced.',
+        'sources' => [
+            'size' => 'C42 "The Bengal is a medium to large-sized cat, characterized by a muscular, elongated, and robust body."; C44 PDSA average weight 5.5 kg',
+            'build' => 'C42 / C43 long, substantial body, robust bone, very muscular; hindquarters slightly higher than the shoulders (paraphrase)',
+            'coat_length' => 'C42 / C43 short, dense, close-lying, unusually soft, preferably glittering (paraphrase)',
+            'coat_color' => 'C47 FIFe "spotted and marbled pattern in brown (black), seal sepia, seal mink point and snow" (+ silver) — weights unsourced',
+            'coat_pattern' => 'C42 / C43 spotted (rosettes preferred) or marbled, belly spotted; faults: mackerel-like elongated spots, white patches (paraphrase) — weights unsourced',
+            'ear_carriage' => 'C42 / C43 medium to small, wide at the base, rounded tips; C43 furnishings acceptable but no tufts (paraphrase)',
+            'eye_color' => 'C43 green, gold, brown, blue-green or blue by variety; C42 "For Snow Bengals, the eye colour is an intense, pure blue."',
+            'tail' => 'C43 thick, tapering to a rounded tip, medium length (paraphrase)',
+            'features' => 'C42 / C43 broad modified wedge head with rounded contours, high cheekbones, full broad muzzle with large whisker pads, large wide nose leather; C42 "The nose line ranges from slightly concave to nearly straight."',
+            'stage_notes' => 'C46 "Bengals grow slow, taking up to two years before reaching physical maturity."; kitten look (D) — CAT_SPEC §8',
+        ],
+        'traits' => [
+            'size' => ['medium-large'],
+            'build' => [['value' => 'sleek, long-bodied and very muscular, with robust bone', 'weight' => 2], 'athletic, muscular, hindquarters slightly higher than the shoulders'],
+            'coat_length' => ['short, dense, close-lying, soft, pelt-like, slightly glittering'],
+            // FIFe colours only (C47): brown (black), seal sepia / seal mink, snow, and silver. Brown first and highest (portrait default).
+            'coat_color' => [
+                ['value' => 'golden-brown with black markings', 'weight' => 4],
+                ['value' => 'silver with black markings', 'weight' => 2],
+                'pale ivory snow with seal-brown markings',
+            ],
+            // Always patterned (C42 / C43): spotted with rosettes or marbled, belly spotted; never white patches or vertical stripes.
+            'coat_pattern' => [
+                ['value' => 'with random rosettes and spots and a spotted belly', 'weight' => 3],
+                ['value' => 'with horizontal flowing marbled markings and a spotted belly', 'weight' => 1],
+            ],
+            'ear_carriage' => ['medium to small, wide-based, with rounded tips, tilted slightly forward'],
+            // Variety-dependent eye colour (C42 / C43); blue only with snow.
+            'eye_color' => [
+                ['value' => 'green-gold', 'weight' => 3, 'only_with' => ['coat_color' => ['golden-brown with black markings', 'silver with black markings']]],
+                ['value' => 'green', 'only_with' => ['coat_color' => ['golden-brown with black markings', 'silver with black markings']]],
+                ['value' => 'intense blue', 'only_with' => ['coat_color' => ['pale ivory snow with seal-brown markings']]],
+            ],
+            'tail' => ['thick, medium length, tapering to a rounded tip'],
+        ],
+        'features' => [
+            'a broad, rounded wedge-shaped head, slightly small for the body, with high cheekbones and a full, broad muzzle',
+            'large oval eyes, not bulging',
+            'a domestic cat, not a wild cat',
+        ],
+        // CAT_SPEC §8 (D): the Bengal is fully grown at up to two years (C46).
+        'stage_notes' => [
+            'puppy' => 'As a Bengal kitten it is small and playful, its spots or marbling already visible on a slightly fuzzier coat',
+            'young' => 'As a young Bengal it is not fully grown yet: lighter and less muscular than an adult (the breed is fully grown at up to two years)',
+        ],
+        // A growing Bengal: no adult "very muscular, robust bone" wording next to the stage note.
+        'stage_overrides' => [
+            'puppy' => [
+                'build' => 'small, lithe, playful',
+                'coat_length' => 'short, slightly fuzzy kitten',
+                'tail' => 'short and thick, with a rounded tip',
+                'features' => ['a small rounded wedge-shaped head', 'large oval eyes', 'a domestic cat, not a wild cat'],
+            ],
+            'young' => [
+                'build' => 'long-bodied and lithe, not yet fully muscled',
+                'features' => ['a broad, rounded wedge-shaped head with high cheekbones', 'large oval eyes, not bulging', 'a domestic cat, not a wild cat'],
             ],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],

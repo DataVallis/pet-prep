@@ -49,7 +49,7 @@
  *        play sessions ............ cat general.play.game_sessions_{kitten,adult}, game_min_gap
  *        litter ................... cat general.litter.game_uses_per_day_*, game_scoop_deadline,
  *                                   full_change
- *        grooming (pedigree cats) . cat <breed>.grooming.game_sessions_per_week (Maine Coon, British Shorthair, Ragdoll, Siberian, Norwegian Forest Cat)
+ *        grooming (pedigree cats) . cat <breed>.grooming.game_sessions_per_week (Maine Coon, British Shorthair, Ragdoll, Siberian, Norwegian Forest Cat, Bengal)
  *
  * Breed portraits (M5-R11, David 2026-10-10 — optional input):
  *   docs/research/breed-portraits/manifest.json      written by `php artisan breeds:portraits`
@@ -402,6 +402,7 @@ const SPECIES = [
       { id: 'ragdoll', availability: 'coming_soon', synonyms: { en: ['Rag doll'], sl: ['ragdoll mačka', 'ragdoll macka', 'ragdol'] } },
       { id: 'siberian_cat', availability: 'coming_soon', synonyms: { en: ['Siberian Forest Cat'], sl: ['sibirska macka', 'sibirka', 'sibirska gozdna mačka'] } },
       { id: 'norwegian_forest_cat', availability: 'coming_soon', synonyms: { en: ['Wegie', 'Skogkatt', 'Norwegian Forest'], sl: ['norveska gozdna macka', 'norveška mačka', 'skogkatt'] } },
+      { id: 'bengal', availability: 'coming_soon', synonyms: { en: ['Bengal cat'], sl: ['bengalska macka', 'bengalka', 'bengal'] } },
     ],
   },
 ];
@@ -994,6 +995,7 @@ function catBreedFacts(R, id) {
   if (id === 'ragdoll') return ragdollFacts(R);
   if (id === 'siberian_cat') return siberianCatFacts(R);
   if (id === 'norwegian_forest_cat') return norwegianForestCatFacts(R);
+  if (id === 'bengal') return bengalFacts(R);
   if (id !== 'maine_coon') throw new Error(`no cat fact spec for ${id}`);
   const male = R.fact('maine_coon.adult_weight.tica_male', {}, parseRange);
   const female = R.fact('maine_coon.adult_weight.tica_female', {}, parseRange);
@@ -1098,6 +1100,32 @@ function norwegianForestCatFacts(R) {
   };
 }
 
+/**
+ * M5-R10-18: PDSA average weight (C44, one number — no source split by sex), VCA growth "up to two
+ * years" (C46), C14 life expectancy, PDSA brushing (C44), health keys only (C44 / C45 — no numbers).
+ */
+function bengalFacts(R) {
+  const health = [
+    ['pra_pk_def', 'bengal.health.pra_pk_def'],
+    ['heart_hcm', 'bengal.health.hcm'],
+    ['kneecap_luxation', 'bengal.health.patellar_luxation'],
+    ['cancer_risk', 'bengal.health.lymphoma'],
+  ].map(([key, ref]) => {
+    const f = R.fact(ref, { key }, () => null);
+    delete f.value;
+    return f;
+  });
+  return {
+    facts: [
+      R.fact('bengal.adult_weight.pdsa_average', { group: 'size', field: 'weight', kind: 'quantity', unit: 'kg', qualifier: 'about' }, Number),
+      R.fact('bengal.growth_end', { group: 'stages', field: 'growth_end', kind: 'quantity', unit: 'months', qualifier: 'up_to' }, Number),
+      R.fact('bengal.lifespan.expectancy_at_birth', { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: 'expectancy' }, Number),
+      R.fact('bengal.grooming.range', { group: 'grooming', field: 'grooming_frequency', kind: 'category' }, code),
+    ],
+    health,
+  };
+}
+
 function catGame(R) {
   const conv = String(R.entry('meta.conventions.game_time'));
   if (!/^1 real week = 1 month of cat age/.test(conv)) throw new Error('cat data.json: game_time convention changed');
@@ -1125,7 +1153,7 @@ function catGame(R) {
   const shared = [m4, m3, m2, mA, mS, young, adult, senior, playK, playA, gap, usesA, scoop, change];
 
   const forBreed = (id) => {
-    // Pedigree kittens arrive at 3 months (CAT_SPEC Q4; British Shorthair M5-R10-14, Ragdoll M5-R10-15, Siberian M5-R10-16, Norwegian Forest Cat M5-R10-17), the domestic cat at 2.
+    // Pedigree kittens arrive at 3 months (CAT_SPEC Q4; British Shorthair M5-R10-14, Ragdoll M5-R10-15, Siberian M5-R10-16, Norwegian Forest Cat M5-R10-17, Bengal M5-R10-18), the domestic cat at 2.
     const arrival = id === 'domestic_cat' ? n('general.arrival_age.kitten_min') : n(`${id}.arrival_age_kitten`);
     const extra = [];
     const rules = [

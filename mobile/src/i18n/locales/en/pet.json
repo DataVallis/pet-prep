@@ -97,7 +97,8 @@
       "british_shorthair": "Short, dense coat · brushing 1× a week",
       "ragdoll": "Semi-long, silky coat · brushing 2× a week",
       "siberian_cat": "Semi-long, dense coat · brushing 1× a week",
-      "norwegian_forest_cat": "Semi-long, water-repellent coat · brushing 1× a week"
+      "norwegian_forest_cat": "Semi-long, water-repellent coat · brushing 1× a week",
+      "bengal": "Short, soft, spotted or marbled coat · brushing 1× a week"
     },
     "breedLockedNote": "This breed can't be chosen right now. Choose a mixed breed or try again later.",
     "lockedA11y": "{{breed}}, locked — part of the paid challenge",
@@ -242,6 +243,12 @@
       "norwegian_forest_cat": {
         "puppy": "Arrives as a 3-month-old kitten (pedigree kittens leave home later).",
         "young": "Arrives as a young cat, 1 year old — a Norwegian Forest Cat keeps growing until 4–5 years.",
+        "adult": "Arrives as a mature cat, 7 years old.",
+        "senior": "Arrives as a senior cat, 10 years old."
+      },
+      "bengal": {
+        "puppy": "Arrives as a 3-month-old kitten (pedigree kittens leave home later).",
+        "young": "Arrives as a young cat, 1 year old — a Bengal can keep growing until 2 years.",
         "adult": "Arrives as a mature cat, 7 years old.",
         "senior": "Arrives as a senior cat, 10 years old."
       }
