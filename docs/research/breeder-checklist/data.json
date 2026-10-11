@@ -2,7 +2,7 @@
   "meta": {
     "compiled": "2026-10-11",
     "roadmap": "M5-R11-06",
-    "_note": "What a family should check with the breeder before buying a puppy or kitten (vet feedback, David 2026-10-11). general.<species> = items for every breed; breeds.<id> = health tests of the parents. Levels: minimum = the Royal Kennel Club's 'strongly recommend that breeders, at a minimum, conduct these tests' (Good Practice) or a breeding-register requirement; best_practice = RKC Best Practice; other_scheme = an existing scheme from another A/B source that the basis page does not list. UK lists are an orientation — breeding rules in Slovenia are set per breed by the breed club under KZS (FCI Art. 19, K7). Quotes = what the fetch tool returned verbatim. Not vet-reviewed. Statuses: listed | none_recommended | not_found.",
+    "_note": "What a family should check with the breeder before buying a puppy or kitten (vet feedback, David 2026-10-11). general.<species> = items for every breed; breeds.<id> = health tests of the parents. Levels: minimum = the Royal Kennel Club's 'strongly recommend that breeders, at a minimum, conduct these tests' (Good Practice) or a breeding-register requirement; best_practice = RKC Best Practice; other_scheme = an existing scheme from another A/B source that the basis page does not list. UK lists are an orientation — breeding rules in Slovenia are set per breed by the breed club under KZS (FCI Art. 19, K7). Quotes = what the fetch tool returned verbatim. Not vet-reviewed. Statuses: listed | none_recommended | not_found. general.<species>[].country (ISO 3166-1 alpha-2, e.g. SI) marks a national rule shown only to that country's readers; items without it apply everywhere.",
     "levels": [
       "minimum",
       "best_practice",
@@ -28,80 +28,19 @@
         "key": "min_age_puppy",
         "quotes": [
           {
-            "source_id": "K3",
-            "quote": "Mladičev ni dovoljeno odvzeti od psice pred dopolnjenim osmim tednom starosti."
-          },
-          {
             "source_id": "K1",
             "quote": "The breeder should not be willing to allow the puppies to leave their mum before 8 weeks of age."
           }
-        ],
-        "notes": "Slovenian rule (Art. 27, 2009 text — consolidated text not verified) + PDSA."
-      },
-      {
-        "key": "microchip_registration",
-        "quotes": [
-          {
-            "source_id": "K4",
-            "quote": "Lastnik psa zagotovi, da je pes do dopolnjenega osmega tedna starosti označen na predpisan način."
-          },
-          {
-            "source_id": "K4",
-            "quote": "Lastnik psa prijavi lastništvo psa v sedmih dneh od njegove pridobitve."
-          }
         ]
-      },
-      {
-        "key": "vaccination_records",
-        "quotes": [
-          {
-            "source_id": "K3",
-            "quote": "Prodajalec mora kupcu ob prodaji živali izročiti predpisane veterinarske dokumente"
-          }
-        ],
-        "notes": "2009 text (Art. 20)."
-      },
-      {
-        "key": "rabies_vaccination",
-        "quotes": [
-          {
-            "source_id": "K5",
-            "quote": "obvezno cepljenje psov proti steklini, velikega pomena v boju zoper steklino."
-          },
-          {
-            "source_id": "K19",
-            "quote": "Imetniki psov morajo zagotoviti cepljenje psov proti bolezni, ko ti dopolnijo tri mesece starosti."
-          }
-        ],
-        "notes": "Duty of the dog's keeper (the new owner), not of the seller; 2006 text — later amendments to intervals not checked."
       },
       {
         "key": "pedigree_fci",
         "quotes": [
           {
-            "source_id": "K6",
-            "quote": "The data have been collected from the national canine organisations member of the FCI."
-          },
-          {
             "source_id": "K7",
             "quote": "Pedigrees, which are in fact birth certificates, must be issued for correct parentage only."
           }
-        ],
-        "notes": "KZS issuing pedigrees: only a tier-C source (BIC Ljubljana textbook 2011) — the website sentence says 'national kennel club in the FCI (in Slovenia: KZS)'."
-      },
-      {
-        "key": "parents_dna_profile",
-        "quotes": [
-          {
-            "source_id": "K8",
-            "quote": "storitev, ki je za lastnike vzrejnih psov obvezna."
-          },
-          {
-            "source_id": "K8",
-            "quote": "S strani Kinološke zveze smo potrjeni kot uradni izvajalec preverjanja rodovnikov."
-          }
-        ],
-        "notes": "Slovenia-specific (KZS)."
+        ]
       },
       {
         "key": "parents_health_tests",
@@ -141,6 +80,82 @@
             "quote": "A responsible breeder should be more than happy to issue you with a contract pending the sale of one of their puppies."
           }
         ]
+      },
+      {
+        "key": "min_age_puppy_si",
+        "country": "SI",
+        "quotes": [
+          {
+            "source_id": "K3",
+            "quote": "Mladičev ni dovoljeno odvzeti od psice pred dopolnjenim osmim tednom starosti."
+          }
+        ],
+        "notes": "Art. 27, 2009 text — consolidated text not verified."
+      },
+      {
+        "key": "microchip_registration",
+        "quotes": [
+          {
+            "source_id": "K4",
+            "quote": "Lastnik psa zagotovi, da je pes do dopolnjenega osmega tedna starosti označen na predpisan način."
+          },
+          {
+            "source_id": "K4",
+            "quote": "Lastnik psa prijavi lastništvo psa v sedmih dneh od njegove pridobitve."
+          }
+        ],
+        "country": "SI"
+      },
+      {
+        "key": "vaccination_records",
+        "quotes": [
+          {
+            "source_id": "K3",
+            "quote": "Prodajalec mora kupcu ob prodaji živali izročiti predpisane veterinarske dokumente"
+          }
+        ],
+        "notes": "2009 text (Art. 20).",
+        "country": "SI"
+      },
+      {
+        "key": "rabies_vaccination",
+        "quotes": [
+          {
+            "source_id": "K5",
+            "quote": "obvezno cepljenje psov proti steklini, velikega pomena v boju zoper steklino."
+          },
+          {
+            "source_id": "K19",
+            "quote": "Imetniki psov morajo zagotoviti cepljenje psov proti bolezni, ko ti dopolnijo tri mesece starosti."
+          }
+        ],
+        "notes": "Duty of the dog's keeper (the new owner), not of the seller; 2006 text — later amendments to intervals not checked.",
+        "country": "SI"
+      },
+      {
+        "key": "kzs_member_si",
+        "country": "SI",
+        "quotes": [
+          {
+            "source_id": "K6",
+            "quote": "The data have been collected from the national canine organisations member of the FCI."
+          }
+        ]
+      },
+      {
+        "key": "parents_dna_profile",
+        "quotes": [
+          {
+            "source_id": "K8",
+            "quote": "storitev, ki je za lastnike vzrejnih psov obvezna."
+          },
+          {
+            "source_id": "K8",
+            "quote": "S strani Kinološke zveze smo potrjeni kot uradni izvajalec preverjanja rodovnikov."
+          }
+        ],
+        "notes": "Slovenia-specific (KZS).",
+        "country": "SI"
       }
     ],
     "cat": [
@@ -161,15 +176,11 @@
         "key": "kitten_min_age",
         "quotes": [
           {
-            "source_id": "K3",
-            "quote": "Mladičev ni dovoljeno odvzeti od samice pred dopolnjenim dvanajstim tednom starosti."
-          },
-          {
             "source_id": "K11",
             "quote": "Kittens must not go to a new owner (home) before they are 14 weeks old"
           }
         ],
-        "notes": "Slovenian rule (Art. 36, 2009 text — consolidated text not verified) = 12 weeks; FIFe pedigree rule = 14 weeks; GCCF (K12) = 13 weeks."
+        "notes": "FIFe 14 weeks; GCCF (K12) 13 weeks."
       },
       {
         "key": "kitten_vaccination",
@@ -188,10 +199,6 @@
         "key": "kitten_pedigree",
         "quotes": [
           {
-            "source_id": "K15",
-            "quote": "Članica FIFe že od 1988."
-          },
-          {
             "source_id": "K12",
             "quote": "A pedigree certificate signed by the breeder showing at least 3 generations."
           }
@@ -203,6 +210,27 @@
           {
             "source_id": "K13",
             "quote": "check out both parents of the kitten to see if they’ve had any problems your kitten could inherit."
+          }
+        ]
+      },
+      {
+        "key": "kitten_min_age_si",
+        "country": "SI",
+        "quotes": [
+          {
+            "source_id": "K3",
+            "quote": "Mladičev ni dovoljeno odvzeti od samice pred dopolnjenim dvanajstim tednom starosti."
+          }
+        ],
+        "notes": "Art. 36, 2009 text — consolidated text not verified."
+      },
+      {
+        "key": "zfds_member_si",
+        "country": "SI",
+        "quotes": [
+          {
+            "source_id": "K15",
+            "quote": "Članica FIFe že od 1988."
           }
         ]
       }

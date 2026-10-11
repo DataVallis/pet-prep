@@ -1149,7 +1149,7 @@ export const CHECKLIST_STATUSES = ['listed', 'none_recommended', 'not_found', 'n
 const KEY_RE = /^[a-z][a-z0-9_]*$/;
 
 /**
- * breeder-checklist/data.json → { species: { dog: [{key, source_ids}], cat: [...] }, breeds: { id: {status, tests, basis_source_ids} } }.
+ * breeder-checklist/data.json → { species: { dog: [{key, source_ids, country?}], cat: [...] }, breeds: { id: {status, tests, basis_source_ids} } }.
  * Every quote must be present; a register breed without an entry exports as `not_checked` (a breed run adds it later).
  */
 export function exportChecklist(data, sources, breedsBySpecies) {
@@ -1176,7 +1176,11 @@ export function exportChecklist(data, sources, breedsBySpecies) {
         if (pairs.has(pair)) throw new Error(`${where}: general.${sp}.${it.key} repeats a quote of ${q.source_id}`);
         pairs.add(pair);
       }
-      return { key: it.key, source_ids: [...new Set(it.quotes.map((q) => q.source_id))].sort(bySourceId) };
+      if (it.country !== undefined && !/^[A-Z]{2}$/.test(it.country)) throw new Error(`${where}: general.${sp}.${it.key} country must be ISO 3166-1 alpha-2, got ${it.country}`);
+      const out = { key: it.key, source_ids: [...new Set(it.quotes.map((q) => q.source_id))].sort(bySourceId) };
+      // national rule (e.g. Slovenian law): the website shows it only to that country's readers
+      if (it.country) out.country = it.country;
+      return out;
     });
   }
   const all = Object.values(breedsBySpecies).flat();

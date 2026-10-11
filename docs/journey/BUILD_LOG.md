@@ -8,6 +8,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-11 — »Pred nakupom« za ves svet, genetika na spletu kot »v razvoju« (M5-R11-06b)
+
+**Kaj se je zgodilo:** Seznam »Pred nakupom« je zdaj mednaroden. Vsi obiskovalci vidijo splošne točke (pes 6, mačka 5), slovenski predpisi pa so v okvirju »V Sloveniji velja« samo na slovenski strani. Angleška stran ima eno vrstico, da se zakoni o starosti, čipiranju in cepljenju razlikujejo po državah, in ne navaja slovenskih virov. Na spletni strani sta genski test in kartica za veterinarja označena kot *v razvoju* (domača stran, stran AI asistenta, investitorji).
+
+**Zakaj je pomembno:** PetPrep je narejen za ves svet — Američana slovenski pravilnik ne zanima. Nova država = nove vrstice z oznako države, brez nove kode. Genetika »v razvoju« pokaže smer brez obljube datuma.
+
+**Številke:** 11 splošnih točk za vse (pes 6, mačka 5), 8 slovenskih; angleške strani: 0 slovenskih virov (preverjeno v HTML, JSON-LD in `llms`); izvoz registra 33 testov zelenih.
+
+**Kako povedati:**
+- 👩 Starši: »Na strani vsake pasme: kaj vprašati vzreditelja — in kaj pri tem velja v vaši državi.«
+- 💼 Investitorji: »Genetika je naslednji prihodkovni del faze 2; na spletu jo že predstavljamo kot ›v razvoju‹.«
+- 📣 Omrežja: »Kupujete mladička? 6 vprašanj za vzreditelja« (povezava na register).
+- 🛠 Tehnično: »Predpis države je ena vrstica s `country: \"SI\"`; spletna stran ga pokaže le na straneh tega jezika in skrije vire, ki jih navaja samo on.«
+
+---
+
 ## 2026-10-11 — Veterinar predlaga genetiko; register dobi »Pred nakupom: kaj preveriti pri vzreditelju« (M5-R11-06)
 
 **Kaj se je zgodilo:** Veterinar je Davidu predlagal tri stvari: genski test v aplikaciji, izpis pasem za mešančka iz rezultata testa in vzrejne pogoje po pasmi. David je v vprašalniku odločil: genski del (nakup testa, AI izpis z viri, kartica za veterinarja) gre v **fazo 2** za pse in mačke, lasten PetPrep test je dolgoročni cilj, **seznam »Pred nakupom« pa takoj**. Zdaj ima vsaka stran pasme na petprep.si sekcijo s splošnimi točkami (slovenski predpisi: po pravilniku iz 2009 vsaj 8 tednov za mladička psa in 12 za mačjega, mikročip do 8. tedna, prijava v 7 dneh, obvezno cepljenje proti steklini; profil DNK vzrejnih psov, ki je po navedbi Veterinarske fakultete pri KZS obvezen) in z zdravstvenimi testi staršev za to pasmo.
