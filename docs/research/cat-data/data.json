@@ -14,7 +14,7 @@
       "quotes": "As returned by the web-fetch tool on 2026-10-08 (see sources.md). Spot-check C1, C14, C16, C17 against the URL before import.",
       "game_time": "1 real week = 1 month of cat age (CAT_SPEC §2, same as dogs).",
       "stage_mapping": "Existing LifeStage values are reused: puppy = kitten, young = young adult, adult = mature adult, senior = senior (CAT_SPEC §2).",
-      "breed_keys": "BreedType value (domestic_cat, maine_coon) vs breed_configs slug (domestic-cat, maine-coon), same split as border_collie / border-collie."
+      "breed_keys": "BreedType value (domestic_cat, maine_coon, british_shorthair) vs breed_configs slug (domestic-cat, maine-coon, british-shorthair), same split as border_collie / border-collie."
     }
   },
   "general": {
@@ -593,6 +593,128 @@
       "confidence": "high",
       "notes": "",
       "decision": "potrdil David 2026-10-08 13:47: Maine Coon kitten arrives at 3 months"
+    }
+  },
+  "british_shorthair": {
+    "_note": "M5-R10-14 (unattended run 2026-10-11). Second paid cat breed, built behind PETPREP_CATS_ENABLED=false like the Maine Coon. Breed-specific values only (runbook §3 Cats): identity, arrival age of the kitten, lifespan, weight, growth, grooming (information only — no grooming routine, CAT_SPEC Q8), appearance; everything else is the general cat rule.",
+    "identity": {
+      "value": {
+        "slug": "british-shorthair",
+        "enum": "british_shorthair",
+        "premium": true
+      },
+      "unit": "",
+      "source_id": "C19",
+      "quote": "British Shorthair 16,278 (2nd)",
+      "confidence": "high",
+      "notes": "Second most registered FIFe breed in 2024 (C19); CAT_SPEC Q5 named it the candidate for a second paid breed. FIFe Category 3 (C26).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-14): paid breed (premium_unlock, the same 12-week challenge as the Maine Coon), sort_order 20 (Maine Coon 10 + 10)"
+    },
+    "lifespan": {
+      "expectancy_at_birth": {
+        "value": 9.58,
+        "unit": "years",
+        "source_id": "C14",
+        "quote": "\"British\" (British Blue + Longhair) 9.58 y",
+        "confidence": "medium",
+        "notes": "Life table value of the paper's \"British\" group (C14 row, captured 2026-10-08 from the full text; not re-read in this run — the full text was not reachable). The group is wider than the British Shorthair alone (it includes British Blue / British Longhair), hence medium. Background for parents and appearance only; the senior boundary comes from C1."
+      }
+    },
+    "adult_weight": {
+      "cfa_male": {
+        "value": "4.1–7.7",
+        "unit": "kg",
+        "source_id": "C27",
+        "quote": "Mature males average nine to seventeen pounds",
+        "confidence": "medium",
+        "notes": "9–17 lb converted (1 lb = 0.4536 kg, one decimal). CFA breed page; FIFe gives no weight (C26)."
+      },
+      "cfa_female": {
+        "value": "3.2–5.4",
+        "unit": "kg",
+        "source_id": "C27",
+        "quote": "mature females average seven to twelve pounds",
+        "confidence": "medium",
+        "notes": "7–12 lb converted."
+      }
+    },
+    "growth_end": {
+      "value": "36",
+      "unit": "months",
+      "source_id": "C27",
+      "quote": "They are a slow maturing breed and do not reach their full size until three years of age.",
+      "confidence": "medium",
+      "notes": "VCA (C28) says \"Takes up to five years to reach physical maturity\" — sources differ; the CFA value (lower) is the one used for the appearance note. Prompt cue: the young British Shorthair is not fully grown yet.",
+      "alternatives": [
+        {
+          "value": "up to 60",
+          "unit": "months",
+          "source_id": "C28",
+          "quote": "Takes up to five years to reach physical maturity."
+        }
+      ]
+    },
+    "grooming": {
+      "range": {
+        "value": "at least weekly",
+        "unit": "rule",
+        "source_id": "C28",
+        "quote": "Run a comb through its coat at least weekly to keep it mat-free and looking healthy.",
+        "confidence": "medium",
+        "notes": "Information only. CAT_SPEC Q8 (David 2026-10-08) gives the grooming routine to the Maine Coon only, so the British Shorthair has NO grooming_sessions_per_week row and no matted coat. A weekly brushing routine for the short coat would be a new rule → open for David (proposal Claude, not built)."
+      }
+    },
+    "behaviour": {
+      "family": {
+        "value": "gets along with all household members, usually not fond of being carried",
+        "unit": "text",
+        "source_id": "C27",
+        "quote": "They seem to get along well with all human members of the household, regardless of age, but are usually not fond of being carried.",
+        "confidence": "medium",
+        "notes": "Register text only; no suitability tags for cats yet."
+      },
+      "other_pets": {
+        "value": "kept with dogs, rabbits and birds",
+        "unit": "text",
+        "source_id": "C27",
+        "quote": "Pets of all kinds have been kept with British Shorthairs, including dogs of all sizes, rabbits, and birds.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "activity": {
+        "value": "moderate",
+        "unit": "text",
+        "source_id": "C28",
+        "quote": "Due to its size and relative moderate activity level",
+        "confidence": "medium",
+        "notes": "No effect on the game (play sessions are the general cat rule)."
+      }
+    },
+    "appearance": {
+      "value": "large to medium, muscular, cobby; broad chest; round massive head with broad skull; short broad straight nose with slight indentation, no stop; strong chin; small ears slightly rounded, set wide apart; large round wide-open eyes; short, dense, crisp coat with good undercoat, not lying flat; short thick tail rounded at the tip; many recognised colours (solid incl. blue, tortie, smoke, shaded, tabby, bicolour, pointed); eye colour by variety (copper / deep orange typical for solids)",
+      "unit": "traits",
+      "source_id": "C26",
+      "quote": "Round and massive with a broad skull … Short, broad and straight with a slight indentation, but not a stop as in the \"Exotic\" … Short, dense, not lying flat and with a good undercoat. Texture should be crisp to touch … Short and thick, slightly rounded at the tip",
+      "confidence": "high",
+      "notes": "FIFe BLH/BSH standard dated 01.07.2026. Blue is the best-known colour (C27 \"most people think of them as being blue cats\", C28 \"Trademark color is blue with a tinge of gray\"). Colour weights are unsourced (verified false). Moderate face: the standard itself says no stop as in the Exotic — the AI prompt keeps a short but not flat nose."
+    },
+    "arrival_age_kitten": {
+      "value": 3,
+      "unit": "months",
+      "source_id": "C13",
+      "quote": "Pedigree kittens are usually rehomed over 12-13 weeks old",
+      "confidence": "high",
+      "notes": "Same rule as the Maine Coon (CAT_SPEC Q4: pedigree kittens leave at 12–13 weeks).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-14): pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule for pedigree kittens)"
+    },
+    "marketing": {
+      "value": "in marketing",
+      "unit": "decision",
+      "source_id": null,
+      "quote": null,
+      "confidence": "medium",
+      "notes": "Not a flat-faced breed (FIFe C26: \"not a stop as in the Exotic\"); no veterinary advice against showing the breed in advertising was found (runbook §3). Cats are hidden in the app — no cat marketing before the switch-on (M5-R06-09).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-14): may be used in marketing once cats are switched on"
     }
   }
 }
