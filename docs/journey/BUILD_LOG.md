@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-11 — Britanska kratkodlaka mačka: druga plačljiva mačka, prvič po runbooku (M5-R10-14)
+
+**Kaj se je zgodilo:** PetPrep ima drugo plačljivo pasmo mačke — **britansko kratkodlako mačko** (British Shorthair). Je prva mačka, dodana v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), in je skrita skupaj z vsemi mačkami, dokler jih David ne vklopi. Raziskava: **3 novi viri (C26–C28)** — standard FIFe, stran pasme CFA in VCA. Pravila igre so splošna mačja pravila (igra s palico 2× na dan, pesek, voda 2× na dan); mucek pride pri **3 mesecih**, ker rodovniški mucki gredo od doma pri 12–13 tednih (PDSA). Rutine česanja nima — to je po potrjenem specu samo pri Maine Coonu; tedensko česanje kratke dlake (VCA) čaka Davida.
+
+**Zakaj je pomembno:** Britanska kratkodlaka je v FIFe druga najbolj registrirana pasma (16.278 v letu 2024). Pokaže, da isti postopek, ki je dodal 13 pasem psov, deluje tudi za mačke: nova pasma prinese le toliko novih pravil, kolikor jih zahtevajo viri.
+
+**Številke:** 3 novi viri (C26–C28), 1 nova migracija (dve omejitvi pasme), 0 novih pravil igre; Pest **2217** testov, Jest **2016**, izvoz registra **29** testov (vsi zeleni). V aplikaciji skrito; na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Britanska kratkodlaka mačka je mirna in rada ima vse v družini, a ne mara, da jo nosite naokrog.« (*ko bodo mačke v aplikaciji*)
+- 💼 Investitorji: »Druga plačljiva mačka po istem samodejnem postopku kot psi — razširitev na mačke ne zahteva nove kode za vsako pasmo.«
+- 🤝 Partnerji (vzreditelji, zavetišča, veterinarji): »PetPrep bo pred izbiro mačke pokazal dnevno skrb — igro, pesek, vodo — z viri.« (*načrt — ko bodo mačke vklopljene*)
+- 📣 Omrežja: še ne — mačke niso vklopljene.
+- 🛠 Tehnično: »Prva mačka po runbooku: migracija razširi tudi mačji seznam v `pets_species_breed_check`; `catRows()` zdaj teče po `CAT_BREEDS`.«
+
+---
+
 ## 2026-10-10 — Sibirski haski: trinajsta nova pasma in oznaka za pse, ki radi pobegnejo (M5-R10-13)
 
 **Kaj se je zgodilo:** PetPrep ima štirinajsto plačljivo pasmo psa — **sibirskega haskija**. Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`), ki jih je David potrdil 10. 10. 2026. Raziskava: **8 novih virov (S158–S165)** — standard in nomenklatura FCI, stran pasme, standard in Breed Watch The Royal Kennel Club, PDSA, standard AKC in IPFD DogWellNet. Pravila igre: odrasel **120 minut = 12.000 korakov** na dan (RKC »več kot 2 uri«, PDSA »najmanj dve uri«), starejši 90 minut = 9.000, mladiček od 2.000 korakov do 12.000 pri 12 mesecih; uči se enako hitro kot mešanček (Coren: rang 45); starejši je od **90 mesecev** (7,5 leta; iz spodnje meje RKC »več kot 10 let« — začasno, dokler ne preverimo McMillan 2024). Nova oznaka v izbirniku: **»rad pobegne — potrebuje varno, visoko ograjo«**.
