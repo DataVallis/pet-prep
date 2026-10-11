@@ -25,7 +25,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b775a1b48d7073964cd089ace027151fbcf996769dba5b2294ffea224e9f9329",
-            "generated_at": "2026-10-10T05:47:20+00:00",
+            "generated_at": "2026-10-10T05:49:32+00:00",
             "cost_usd": 0.15
         },
         {
@@ -182,6 +182,18 @@
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:eacc7a4aae17b4af5bc0cc221c1312c3f215b88cd0d0597d79d77e2a88ddf161",
             "generated_at": "2026-10-11T17:49:19+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "bulldog",
+            "species": "dog",
+            "file": "dog/bulldog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c0d0bc71c5555bae1c1fbabe9c2896b65af06750250dbba877b5eca14c641899",
+            "generated_at": "2026-10-11T19:44:01+00:00",
             "cost_usd": 0.15
         },
         {
