@@ -49,7 +49,7 @@
  *        play sessions ............ cat general.play.game_sessions_{kitten,adult}, game_min_gap
  *        litter ................... cat general.litter.game_uses_per_day_*, game_scoop_deadline,
  *                                   full_change
- *        grooming (Maine Coon) .... cat maine_coon.grooming.game_sessions_per_week
+ *        grooming (pedigree cats) . cat <breed>.grooming.game_sessions_per_week (Maine Coon, British Shorthair, Ragdoll)
  *
  * Breed portraits (M5-R11, David 2026-10-10 — optional input):
  *   docs/research/breed-portraits/manifest.json      written by `php artisan breeds:portraits`
@@ -1042,6 +1042,9 @@ function ragdollFacts(R) {
   };
 }
 
+/** Cats with a grooming routine (data.json <breed>.grooming.game_sessions_per_week; the export test checks it matches the seeder). */
+const GROOMING_CATS = ['maine_coon', 'british_shorthair', 'ragdoll'];
+
 function catGame(R) {
   const conv = String(R.entry('meta.conventions.game_time'));
   if (!/^1 real week = 1 month of cat age/.test(conv)) throw new Error('cat data.json: game_time convention changed');
@@ -1077,8 +1080,9 @@ function catGame(R) {
       { key: 'litter_rule', params: { uses: usesA.value, scoop_hours: scoop.value, change_days: change.value } },
       { key: 'scratching_after_missed_play', params: {} },
     ];
-    if (id === 'maine_coon') {
-      const groom = n('maine_coon.grooming.game_sessions_per_week');
+    // Every pedigree cat whose sourced need has a game value (David 2026-10-11: built in the app).
+    if (id !== 'domestic_cat' && GROOMING_CATS.includes(id)) {
+      const groom = n(`${id}.grooming.game_sessions_per_week`);
       extra.push(groom);
       rules.push({ key: 'grooming_rule', params: { per_week: groom.value } });
     }

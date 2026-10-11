@@ -226,11 +226,11 @@ describe('cat import provenance (cat-data/data.json)', function () {
                 ->and(clData('general.play.missed_play_illness')['value'])->toBeFalse();
         }
 
-        // Grooming: Maine Coon only (CAT_SPEC Q8); the domestic cat, the British Shorthair and the Ragdoll have no row = no routine.
-        expect(clRow('maine-coon', 'all', 0, StageParamKey::GroomingSessionsPerWeek)['value'])->toBe(clData('maine_coon.grooming.game_sessions_per_week')['value'])
-            ->and(clRow('domestic-cat', 'all', 0, StageParamKey::GroomingSessionsPerWeek))->toBeNull()
-            ->and(clRow('british-shorthair', 'all', 0, StageParamKey::GroomingSessionsPerWeek))->toBeNull()
-            ->and(clRow('ragdoll', 'all', 0, StageParamKey::GroomingSessionsPerWeek))->toBeNull();
+        // Grooming: every pedigree cat with a sourced need (CAT_SPEC Q8; David 2026-10-11); the domestic cat has no row = no routine.
+        foreach (['maine-coon' => 'maine_coon', 'british-shorthair' => 'british_shorthair', 'ragdoll' => 'ragdoll'] as $slug => $key) {
+            expect(clRow($slug, 'all', 0, StageParamKey::GroomingSessionsPerWeek)['value'])->toBe(clData($key.'.grooming.game_sessions_per_week')['value']);
+        }
+        expect(clRow('domestic-cat', 'all', 0, StageParamKey::GroomingSessionsPerWeek))->toBeNull();
 
         // Stage vs breed level.
         expect(StageParamKey::PlaySessionsPerDay->isBreedLevel())->toBeFalse()

@@ -352,7 +352,12 @@ test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp &
       assert.equal(row(b.id, 'all', 'litter_full_change_days'), litter.change_days);
       assert.equal(row(b.id, 'all', 'play_min_gap_minutes'), g.rules.find((r) => r.key === 'play_instead_of_steps').params.gap_minutes);
       const groom = g.rules.find((r) => r.key === 'grooming_rule');
+      // Both ways: a seeded grooming row always has a register rule (David 2026-10-11).
       if (groom) assert.equal(row(b.id, 'all', 'grooming_sessions_per_week'), groom.params.per_week);
+      else {
+        const slug = b.slug.en;
+        assert.ok(!rows.some((x) => x.breed_slug === slug && x.key === 'grooming_sessions_per_week'), `${slug}: grooming row without a register rule`);
+      }
     }
   }
   // Free plans (no page, but their numbers are shown).
@@ -586,7 +591,7 @@ test('British Shorthair (M5-R10-14): paid cat, kitten at 3 months, CFA weight by
   assert.equal(bsh.game.stages[0].starts.arrival_months, 3);
   assert.deepEqual(bsh.game.stages.map((s) => s.starts.month ?? null), [null, 12, 84, 120]);
   assert.deepEqual(bsh.game.adult_activity, { kind: 'play_sessions', value: 2 });
-  assert.equal(bsh.game.rules.find((r) => r.key === 'grooming_rule'), undefined);
+  assert.equal(bsh.game.rules.find((r) => r.key === 'grooming_rule').params.per_week, 1); // David 2026-10-11
   assert.ok(bsh.game.values.some((v) => v.ref === 'cat-data:british_shorthair.arrival_age_kitten' && /pravilo runbooka, M5-R10-14/.test(v.decision)));
   // The cited sources are in the register (C26, the standard, feeds only the AI appearance).
   for (const id of ['C14', 'C27', 'C28']) assert.ok(registry.sources.some((s) => s.id === id), id);
@@ -608,7 +613,7 @@ test('Ragdoll (M5-R10-15): paid cat, kitten at 3 months, CFA weight by sex, full
   assert.equal(rag.game.stages[0].starts.arrival_months, 3);
   assert.deepEqual(rag.game.stages.map((s) => s.starts.month ?? null), [null, 12, 84, 120]);
   assert.deepEqual(rag.game.adult_activity, { kind: 'play_sessions', value: 2 });
-  assert.equal(rag.game.rules.find((r) => r.key === 'grooming_rule'), undefined);
+  assert.equal(rag.game.rules.find((r) => r.key === 'grooming_rule').params.per_week, 2); // David 2026-10-11
   assert.ok(rag.game.values.some((v) => v.ref === 'cat-data:ragdoll.arrival_age_kitten' && /pravilo runbooka, M5-R10-15/.test(v.decision)));
   // No health statistics and no median age at death of the C31 study in the register.
   const json = JSON.stringify(rag);

@@ -253,6 +253,14 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10_RAGDOLL = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-15)';
 
+    /**
+     * David 2026-10-11: every sourced breed-specific need is built in the app (no
+     * "proposal, not built"). Grooming: British Shorthair 1× per week (VCA C28 "at
+     * least weekly"), Ragdoll 2× per week (upper bound of PetMD C32 "once or twice
+     * a week"); matted coat when ≥ ceil(goal / 2) of the week's slots are missed.
+     */
+    public const CONFIRMED_CAT_GROOMING_2026_10_11 = 'potrdil David 2026-10-11';
+
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll];
 
@@ -1681,9 +1689,9 @@ class BreedStageParamsSeeder extends Seeder
      * unverified proposal; 2026_10_26_130000 flips the existing rows).
      * Only values data.json gives are seeded: no exercise / step keys (cats
      * have no steps), no senior sleep hours (no entry), no grooming row for
-     * the domestic cat, the British Shorthair or the Ragdoll (no grooming routine,
-     * CAT_SPEC Q8; M5-R10-14 British Shorthair / M5-R10-15 Ragdoll: kitten arrival 3 +
-     * lifespan are their own rows).
+     * the domestic cat (no grooming routine, CAT_SPEC Q8). Pedigree cats have
+     * their own kitten arrival 3, lifespan and grooming rows (Maine Coon 3×,
+     * British Shorthair 1×, Ragdoll 2× per week — David 2026-10-11).
      *
      * @return list<array<string, mixed>>
      */
@@ -1869,6 +1877,22 @@ class BreedStageParamsSeeder extends Seeder
                     'unit' => 'combing sessions/week (≥ 1 day apart)', 'source_id' => 'C17', 'confidence' => 'low', 'verified' => true,
                     'ref' => 'maine_coon.grooming.game_sessions_per_week', 'decision' => self::CONFIRMED_CAT,
                     'notes' => 'Sources disagree: TICA daily for thick coats, CFA a couple of times a week (C17), Vetstreet weekly (C18). Matted coat after 2 missed sessions (maine_coon.grooming.game_matted_after_missed, rule in M5-R06-05).',
+                ]);
+            }
+            if ($bsh) {
+                $add('all', 0, StageParamKey::GroomingSessionsPerWeek, 1, [
+                    'unit' => 'combing sessions/week', 'source_id' => 'C28', 'confidence' => 'medium', 'verified' => true,
+                    'ref' => 'british_shorthair.grooming.game_sessions_per_week', 'decision' => self::CONFIRMED_CAT_GROOMING_2026_10_11,
+                    'quote' => 'Run a comb through its coat at least weekly to keep it mat-free and looking healthy.',
+                    'notes' => '"At least weekly" → 1 slot per program week. Matted coat when the week\'s grooming is missed (ceil(1 / 2) = 1).',
+                ]);
+            }
+            if ($rag) {
+                $add('all', 0, StageParamKey::GroomingSessionsPerWeek, 2, [
+                    'unit' => 'combing sessions/week (≥ 1 day apart)', 'source_id' => 'C32', 'confidence' => 'medium', 'verified' => true,
+                    'ref' => 'ragdoll.grooming.game_sessions_per_week', 'decision' => self::CONFIRMED_CAT_GROOMING_2026_10_11,
+                    'quote' => 'Some Ragdolls only need to be combed (more effective than brushing) once or twice a week',
+                    'notes' => 'Upper bound of the PetMD range (CFA C30 "on a regular basis", VetCompass C31 "need more grooming care"). Matted coat when ≥ 1 of 2 is missed (ceil(2 / 2)).',
                 ]);
             }
             if ($bsh) {

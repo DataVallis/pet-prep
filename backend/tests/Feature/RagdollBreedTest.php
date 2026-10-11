@@ -34,8 +34,8 @@ use function Pest\Laravel\postJson;
 | C29–C32) and the runbook's standing rules (confirmed by David 2026-10-10):
 | paid breed after the British Shorthair (sort_order 30), the pedigree kitten
 | arrives at 3 months (CAT_SPEC Q4 rule, C13), every other stage / meal / play /
-| litter value is the general cat rule, no grooming routine (CAT_SPEC Q8: Maine
-| Coon only), lifespan = C14 Ragdoll life expectancy (background only), FIFe
+| litter value is the general cat rule, grooming 2× per week (PetMD C32, David
+| 2026-10-11), lifespan = C14 Ragdoll life expectancy (background only), FIFe
 | colours and patterns only, blue eyes only, a seal colourpoint portrait.
 */
 
@@ -225,14 +225,20 @@ describe('life-stage data against data.json', function () {
             ->and(ragRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(120);
     });
 
-    it('has no grooming routine and no unverified row (CAT_SPEC Q8: brushing is the Maine Coon\'s)', function () {
-        expect(collect(ragRows())->where('key', StageParamKey::GroomingSessionsPerWeek->value)->all())->toBe([])
+    it('combs 2× per program week from the sourced need (David 2026-10-11) and has no unverified row', function () {
+        $row = ragRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
+        expect($row['value'])->toBe(2)
+            ->and($row['value'])->toBe(ragData('ragdoll.grooming.game_sessions_per_week.value'))
+            ->and($row['source_id'])->toBe('C32')
+            ->and($row['quote'])->toBe('Some Ragdolls only need to be combed (more effective than brushing) once or twice a week')
+            ->and($row['ref'])->toBe(BreedStageParamsSeeder::CAT_REF.'ragdoll.grooming.game_sessions_per_week')
+            ->and($row['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_CAT_GROOMING_2026_10_11)
             ->and(collect(ragRows())->where('verified', false)->all())->toBe([])
-            ->and(ragData('ragdoll.grooming.range.source_id'))->toBe('C32');
+            ->and(CatChoreService::mattedAfterMissed(2))->toBe(ragData('ragdoll.grooming.game_matted_after_missed.value'));
 
         $cat = ragPet(12);
-        expect(app(CatChoreService::class)->groomingGoalOn($cat, $cat->localDate(now())))->toBe(0)
-            ->and(app(CatChoreService::class)->groomingAppliesTo($cat))->toBeFalse();
+        expect(app(CatChoreService::class)->groomingGoalOn($cat, $cat->localDate(now())))->toBe(2)
+            ->and(app(CatChoreService::class)->groomingAppliesTo($cat))->toBeTrue();
     });
 
     it('cites a data.json entry for every row', function () {

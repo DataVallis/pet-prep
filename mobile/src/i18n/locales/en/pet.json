@@ -94,8 +94,8 @@
       "siberian_husky": "Part of the 12-week challenge.",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week",
-      "british_shorthair": "Short, dense coat · 12-week challenge",
-      "ragdoll": "Semi-long, silky coat · 12-week challenge"
+      "british_shorthair": "Short, dense coat · brushing 1× a week",
+      "ragdoll": "Semi-long, silky coat · brushing 2× a week"
     },
     "breedLockedNote": "This breed can't be chosen right now. Choose a mixed breed or try again later.",
     "lockedA11y": "{{breed}}, locked — part of the paid challenge",
