@@ -14,7 +14,7 @@ import {
 
 describe('readBreed / readSpecies', () => {
   it('keeps every known breed, dogs and cats', () => {
-    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat'] as const) {
+    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat'] as const) {
       expect(readBreed(breed)).toBe(breed);
     }
   });
@@ -194,8 +194,8 @@ describe('readBreed / readSpecies', () => {
     }
   });
 
-  it('brushing routine for the Maine Coon, Ragdoll, British Shorthair (David 2026-10-11) and Siberian (M5-R10-16) only', () => {
-    for (const breed of ['maine_coon', 'ragdoll', 'british_shorthair', 'siberian_cat']) expect(hasGroomingRoutine(breed)).toBe(true);
+  it('brushing routine for the Maine Coon, Ragdoll, British Shorthair (David 2026-10-11), Siberian (M5-R10-16) and Norwegian Forest Cat (M5-R10-17) only', () => {
+    for (const breed of ['maine_coon', 'ragdoll', 'british_shorthair', 'siberian_cat', 'norwegian_forest_cat']) expect(hasGroomingRoutine(breed)).toBe(true);
     for (const breed of ['domestic_cat', 'mutt', 'border_collie', 'unknown', null]) expect(hasGroomingRoutine(breed)).toBe(false);
   });
 
@@ -219,6 +219,18 @@ describe('readBreed / readSpecies', () => {
     await i18n.changeLanguage('en');
     try {
       expect(breedName('siberian_cat')).toBe('Siberian cat');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-17: the Norwegian Forest Cat is a paid cat with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('norwegian_forest_cat'))).toBe('cat');
+    expect(isDefaultFreeBreed('norwegian_forest_cat')).toBe(false);
+    expect(breedName('norwegian_forest_cat')).toBe('Norveška gozdna mačka');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('norwegian_forest_cat')).toBe('Norwegian Forest Cat');
     } finally {
       await i18n.changeLanguage('sl');
     }

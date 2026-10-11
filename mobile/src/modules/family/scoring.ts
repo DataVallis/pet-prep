@@ -22,7 +22,7 @@ export type LightReason = 'game_over' | 'phase3_alarm' | 'fell_ill_today' | 'mis
 /**
  * `training` (M5-R03): one completed training session per day, only for a pet with training.
  * M5-R06-04 / 05 (cats): `play` (the day's wand games), `litter_scoop` (one per litter use),
- * `litter_change` (weekly), `grooming` (Maine Coon / Ragdoll / British Shorthair / Siberian, weekly slots).
+ * `litter_change` (weekly), `grooming` (Maine Coon / Ragdoll / British Shorthair / Siberian / Norwegian Forest Cat, weekly slots).
  */
 export type RoutineType = 'feed' | 'water' | 'clean' | 'walk' | 'training' | 'play' | 'litter_scoop' | 'litter_change' | 'grooming';
 

@@ -14,7 +14,7 @@
       "quotes": "As returned by the web-fetch tool on 2026-10-08 (see sources.md). Spot-check C1, C14, C16, C17 against the URL before import.",
       "game_time": "1 real week = 1 month of cat age (CAT_SPEC §2, same as dogs).",
       "stage_mapping": "Existing LifeStage values are reused: puppy = kitten, young = young adult, adult = mature adult, senior = senior (CAT_SPEC §2).",
-      "breed_keys": "BreedType value (domestic_cat, maine_coon, british_shorthair, ragdoll, siberian_cat) vs breed_configs slug (domestic-cat, maine-coon, british-shorthair, ragdoll, siberian-cat), same split as border_collie / border-collie."
+      "breed_keys": "BreedType value (domestic_cat, maine_coon, british_shorthair, ragdoll, siberian_cat, norwegian_forest_cat) vs breed_configs slug (domestic-cat, maine-coon, british-shorthair, ragdoll, siberian-cat, norwegian-forest-cat), same split as border_collie / border-collie."
     }
   },
   "general": {
@@ -1078,6 +1078,215 @@
       "confidence": "medium",
       "notes": "Not a flat-faced breed (FIFe C33: medium-length broad nose, no stop); no veterinary advice against showing the breed in advertising was found (runbook §3). Never advertised as hypoallergenic (C35). Cats are hidden in the app — no cat marketing before the switch-on (M5-R06-09).",
       "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-16): may be used in marketing once cats are switched on, never as hypoallergenic"
+    }
+  },
+  "norwegian_forest_cat": {
+    "_note": "M5-R10-17 (unattended run 2026-10-11). Fifth paid cat breed, built behind PETPREP_CATS_ENABLED=false like the Maine Coon, British Shorthair, Ragdoll and Siberian. Breed-specific values only (runbook §3 Cats): identity, arrival age of the kitten, lifespan, weight, growth, grooming (game rule, David 2026-10-11), behaviour, health (register text only), appearance; everything else is the general cat rule. No source calls the breed hypoallergenic — never claimed.",
+    "identity": {
+      "value": {
+        "slug": "norwegian-forest-cat",
+        "enum": "norwegian_forest_cat",
+        "premium": true
+      },
+      "unit": "",
+      "source_id": "C19",
+      "quote": "Norwegian Forest 4,105",
+      "confidence": "high",
+      "notes": "Fifth most registered FIFe breed in 2024 after Maine Coon, British Shorthair, Ragdoll and Siberian (C19). Native to Norway. Slug norwegian-forest-cat (GCCF / CFA name).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-17): paid breed (premium_unlock, the same 12-week challenge as the Maine Coon), sort_order 50 (Siberian 40 + 10)"
+    },
+    "lifespan": {
+      "gccf_range": {
+        "value": "14–16",
+        "unit": "years",
+        "source_id": "C37",
+        "quote": "Lifespan is usually 14 to 16 years of age.",
+        "confidence": "medium",
+        "notes": "GCCF range, shown in the register. The game row uses the lower bound (gccf_lower_bound)."
+      },
+      "gccf_lower_bound": {
+        "value": 14.0,
+        "unit": "years",
+        "source_id": "C37",
+        "quote": "Lifespan is usually 14 to 16 years of age.",
+        "confidence": "medium",
+        "notes": "Lower bound of the GCCF range (the dog rule for a range: RKC lower bound). The VetCompass life tables (C14) have no Norwegian Forest Cat row. Background for parents and appearance only; the senior boundary comes from C1, not from the lifespan.",
+        "alternatives": [
+          {
+            "value": "up to 20",
+            "unit": "years",
+            "source_id": "C38",
+            "quote": "tends to be healthy, with an impressive lifespan up to 20 years.",
+            "notes": "PetMD (C38), upper value only; not chosen (the registry GCCF page is preferred)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-17): lifespan background value = lower bound of the registry range (as the dog rule for an RKC range and the Siberian); C14 has no Norwegian Forest Cat row"
+      }
+    },
+    "adult_weight": {
+      "gccf_male": {
+        "value": "5.4–7.3",
+        "unit": "kg",
+        "source_id": "C37",
+        "quote": "Males can weigh from 12 to 16 pounds or more, and females 9 to 12 pounds.",
+        "confidence": "medium",
+        "notes": "12–16 lb converted (1 lb = 0.4536 kg, one decimal); \"or more\" kept in the quote. FIFe / WCF standards give no weight. PetMD (C38): males \"15–19 pounds or more\" (higher)."
+      },
+      "gccf_female": {
+        "value": "4.1–5.4",
+        "unit": "kg",
+        "source_id": "C37",
+        "quote": "Males can weigh from 12 to 16 pounds or more, and females 9 to 12 pounds.",
+        "confidence": "medium",
+        "notes": "9–12 lb converted. PetMD (C38): females \"8–10 pounds\"."
+      }
+    },
+    "growth_end": {
+      "value": "48–60",
+      "unit": "months",
+      "source_id": "C37",
+      "quote": "They are slow to mature and are not considered fully grown until they are around 4-5 years of age.",
+      "confidence": "medium",
+      "notes": "GCCF (C37) four to five years; CFA (C39) \"attaining full growth at approximately five years of age\"; PetMD (C38) \"reaching full-grown status around their fifth birthday\". Prompt cue: the young Norwegian Forest Cat is not fully grown yet."
+    },
+    "grooming": {
+      "range": {
+        "value": "At least once a week",
+        "unit": "rule",
+        "source_id": "C38",
+        "quote": "it requires regular combing and brushing—at least once a week",
+        "confidence": "medium",
+        "notes": "PetMD (C38, reviewed by a DVM): \"the breed's semi-long coat requires weekly combing\"; during the heavy spring / autumn shed \"several times a week\" (not modelled — moult is not in the game). GCCF (C37) summary box \"Maintenance: Weekly grooming\" agrees; extra attention in the spring moult \"to avoid knotting\". Basis of the game rule game_sessions_per_week.",
+        "alternatives": [
+          {
+            "value": "weekly",
+            "unit": "rule",
+            "source_id": "C37",
+            "quote": "Maintenance: Weekly grooming",
+            "notes": "GCCF summary box — the same number (1× per week)."
+          },
+          {
+            "value": "several times a week while shedding",
+            "unit": "rule",
+            "source_id": "C38",
+            "quote": "you'll likely need to increase your grooming efforts to several times a week to keep up.",
+            "notes": "Seasonal (spring and autumn shed); moult is not modelled — out-of-season number used (runbook §3 Cats)."
+          }
+        ]
+      },
+      "game_sessions_per_week": {
+        "value": 1,
+        "unit": "sessions/week",
+        "source_id": "C38",
+        "quote": "it requires regular combing and brushing—at least once a week",
+        "confidence": "medium",
+        "notes": "\"At least once a week\" → 1 slot per program week (runbook §3 Cats); GCCF (C37) \"Weekly grooming\" gives the same number. The seasonal extra (spring / autumn shed) is not modelled.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, M5-R10-17): Norwegian Forest Cat 1× per week (PetMD C38 \"at least once a week\", GCCF C37 \"Weekly grooming\" — both sources agree)"
+      },
+      "game_matted_after_missed": {
+        "value": 1,
+        "unit": "missed groomings of a program week (of 1)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Rule ceil(goal / 2) = 1 of 1. No penalty: visible, the next (~2× longer) grooming resolves it. GCCF (C37): dead coat removed in the spring moult \"to avoid knotting\". Runtime: CatChoreService::mattedAfterMissed().",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, M5-R10-17): matted coat when at least half of the week's groomings are missed (ceil(goal / 2))"
+      }
+    },
+    "behaviour": {
+      "family": {
+        "value": "gentle and friendly; enjoys being part of a family",
+        "unit": "text",
+        "source_id": "C37",
+        "quote": "the Norwegian Forest Cat is gentle and friendly, and enjoys being part of a family environment",
+        "confidence": "medium",
+        "notes": "Register text only; no suitability tags for cats yet."
+      },
+      "children": {
+        "value": "tolerant of respectful children",
+        "unit": "text",
+        "source_id": "C37",
+        "quote": "they are tolerant of respectful children, other cats and cat-friendly dogs.",
+        "confidence": "medium",
+        "notes": "GCCF breed page (\"respectful\" kept — the app keeps its general supervision advice). PetMD (C38): \"wonderful choices for families with children or other pets\". Register text only."
+      },
+      "other_pets": {
+        "value": "tolerant of other cats and cat-friendly dogs",
+        "unit": "text",
+        "source_id": "C37",
+        "quote": "they are tolerant of respectful children, other cats and cat-friendly dogs.",
+        "confidence": "medium",
+        "notes": "GCCF also says to protect an aquarium or fish pond (\"They have a penchant for fishing, so make sure the aquarium or fish pond is protected!\") — household advice in the register text only, not a care task for the child."
+      },
+      "activity": {
+        "value": "lots of energy, enjoys interactive games and climbing",
+        "unit": "text",
+        "source_id": "C37",
+        "quote": "They have a lot of energy and enjoy interactive games, and think nothing of climbing trees and descending head first.",
+        "confidence": "medium",
+        "notes": "No new rule: daily play sessions and the scratching / climbing need are already general cat rules of the game (CAT_SPEC)."
+      },
+      "time_alone": {
+        "value": "independent, but long, frequent time alone can cause separation anxiety",
+        "unit": "text",
+        "source_id": "C38",
+        "quote": "Separation anxiety can be an issue if they're left alone frequently for long periods",
+        "confidence": "medium",
+        "notes": "PetMD (C38) also: \"they're also known to be independent\". Register text only — a caution about the household, not a care task the child can do in the game (the game has no time-alone mechanic for any species; dogs show it only as text too)."
+      }
+    },
+    "health": {
+      "_note": "Register text only (key + source, one calm EN + SL sentence on the website). No percentages anywhere (runbook §3).",
+      "gsd_iv": {
+        "value": "glycogen storage disease type IV is an inherited disorder of the breed; breeders DNA-test the parents",
+        "unit": "text",
+        "source_id": "C37",
+        "quote": "Glycogen storage disease type IV is an inherited disorder of the breed",
+        "confidence": "high",
+        "notes": "GCCF (C37); UC Davis VGL (C41): \"Breeds appropriate for testing: Norwegian Forest Cat\"; FIFe breeding rule via World Cat Congress (C40, breeder checklist K21). Affects kittens; the parents' DNA test avoids it."
+      },
+      "hcm": {
+        "value": "hypertrophic cardiomyopathy (heart disease) can occur, as in most breeds",
+        "unit": "text",
+        "source_id": "C38",
+        "quote": "This is a common heart disease within most feline breeds, so Norwegian Forest Cats are no exception,",
+        "confidence": "medium",
+        "notes": "PetMD (C38)."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia can occur; keeping a healthy weight protects the joints",
+        "unit": "text",
+        "source_id": "C38",
+        "quote": "especially problematic given the breed's propensity toward hip dysplasia.",
+        "confidence": "medium",
+        "notes": "PetMD (C38) describes hip dysplasia (\"Hip dysplasia is a condition where the hip joint doesn't develop properly, leading to a loose joint\") and ties obesity to the breed's propensity. Register text only (one calm sentence on the website). Weight is not modelled in the game for any cat (fixed meal windows, no free feeding, daily play) — like the dogs' weight advice, it stays information for parents."
+      }
+    },
+    "appearance": {
+      "value": "medium to large, solid elongated body with massive bone structure; head an equilateral triangle with a long, straight profile and slightly rounded forehead, firm chin; very large ears with a broad base, set high; large, open, slightly oval eyes, colour matching the coat; long muscular legs, hind legs higher than front; broad round paws tufted between the toes; very long bushy tail (at least as long as the body); woolly undercoat under a long, glossy, firm, water-repellent top coat, fuller in winter; all colours with any amount of white except pointed, chocolate, lilac, cinnamon and fawn",
+      "unit": "traits",
+      "source_id": "C36",
+      "quote": "The head has the shape of an equilateral triangle with a long, straight profile. … The tail is very long (at least as long as the body) and bushy. … The woolly undercoat is covered by long, glossy, firm and water repellent hair.",
+      "confidence": "high",
+      "notes": "WCF breed standard NFO (actualized 2021-12-08, C36); the FIFe colour list via World Cat Congress (C40): \"All colours, including amber and light amber, except pointed varieties, chocolate, lilac, cinnamon, and fawn\" (paraphrase of the comparison table). The FIFe standard PDF could not be fetched in this run (the fetch tool refused the URL). Faults avoided in the prompt: curved profile / Roman nose, round eyes, short tail, cobby body (C36). Colour weights are unsourced (verified false); brown (black) tabby with white is weighted highest (portrait default) as the classic coat — UNSOURCED weight."
+    },
+    "arrival_age_kitten": {
+      "value": 3,
+      "unit": "months",
+      "source_id": "C13",
+      "quote": "Pedigree kittens are usually rehomed over 12-13 weeks old",
+      "confidence": "high",
+      "notes": "Same rule as the Maine Coon, British Shorthair, Ragdoll and Siberian (CAT_SPEC Q4: pedigree kittens leave at 12–13 weeks).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-17): pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule for pedigree kittens)"
+    },
+    "marketing": {
+      "value": "in marketing",
+      "unit": "decision",
+      "source_id": null,
+      "quote": null,
+      "confidence": "medium",
+      "notes": "Not a flat-faced breed (WCF C36: long, straight profile); no veterinary advice against showing the breed in advertising was found (runbook §3). Cats are hidden in the app — no cat marketing before the switch-on (M5-R06-09).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-17): may be used in marketing once cats are switched on"
     }
   }
 }

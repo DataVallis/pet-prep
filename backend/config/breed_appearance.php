@@ -189,6 +189,20 @@
 | pointed (= the Neva Masquerade), chocolate, lilac, cinnamon and fawn (C33). Slow to
 | mature: full development at four to five years (GCCF C34). Brown (black) tabby is
 | weighted highest (portrait default); colour weights are unsourced → `verified => false`.
+|
+| Norwegian Forest Cat (M5-R10-17, docs/research/cat-data norwegian_forest_cat.appearance):
+| medium to large, solid, elongated body with massive bone; head an equilateral
+| triangle with a long, straight profile (never a curved profile or Roman nose),
+| slightly rounded forehead, firm chin; very large ears, broad at the base, set high;
+| large, open, slightly oval eyes (never round), colour matching the coat; long
+| muscular legs, hind legs higher than the front; broad round paws tufted between the
+| toes; very long bushy tail, at least as long as the body; woolly undercoat under a
+| long, glossy, firm, water-repellent top coat (WCF NFO 2021-12-08, C36). All colours
+| with any amount of white EXCEPT pointed, chocolate, lilac, cinnamon and fawn (FIFe via
+| World Cat Congress, C40). Slow to mature: fully grown at four to five years (GCCF C37).
+| Brown (black) mackerel tabby with white is weighted highest (portrait default); a
+| brown cat is always tabby (never plain brown — would read as chocolate); colour
+| weights are unsourced → `verified => false`.
 */
 
 return [
@@ -1148,6 +1162,82 @@ return [
                 'build' => 'sturdy, rectangular, not yet heavy',
                 'coat_length' => 'semi-long, dense, the ruff still filling out',
                 'features' => ['a softly rounded head a little longer than broad', 'a medium-length, broad nose with a gentle dip and no stop', 'large, slightly oval eyes set wide apart'],
+            ],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    'norwegian_forest_cat' => [
+        'display_name' => 'Norwegian Forest Cat',
+        // Colour / pattern weights are not in the standard (unsourced) — same rule as the Maine Coon.
+        'verified' => false,
+        'source' => 'WCF breed standard Norwegian Forest Cat (NFO), actualized 2021-12-08 (C36, https://wcf.de/pdf-fr/breed/NFO_en_2021-12-08.pdf) — for the traits listed in `sources`; FIFe colour list via World Cat Congress (C40); weight / maturity C37 (GCCF). Colour and pattern weights are unsourced.',
+        'sources' => [
+            'size' => 'C36 "The medium to large sized cat has a solid, elongated body with a massive bone structure."; C37 GCCF males 5.4–7.3 kg, females 4.1–5.4 kg',
+            'build' => 'C36 "solid, elongated body with a massive bone structure"; "The legs are long and muscular, the hind legs are higher than the front legs"',
+            'coat_length' => 'C36 "The woolly undercoat is covered by long, glossy, firm and water repellent hair."; fuller in winter (CFA C39)',
+            'coat_color' => 'C40 FIFe: all colours incl. with white, except pointed, chocolate, lilac, cinnamon and fawn; C36 "Any amount of white is permitted." — weights unsourced',
+            'coat_pattern' => 'C36 / C40 tabby, solid, tortie, silver and with-white varieties — weights unsourced; a brown cat is always tabby',
+            'ear_carriage' => 'C36 "The ears are very large with a broad base and high on the head"',
+            'eye_color' => 'C36 "The eyes are large, open and slightly oval."; "Eye colour shall be even and corresponds to the coat colour."',
+            'tail' => 'C36 "The tail is very long (at least as long as the body) and bushy."',
+            'features' => 'C36 "The head has the shape of an equilateral triangle with a long, straight profile."; "Slightly rounded forehead."; "The chin is firm."; paws "broad and round, with tufts between the toes"; faults "Curved profile", "Roman nose", "Round eyes"',
+            'stage_notes' => 'C37 "not considered fully grown until they are around 4-5 years of age"; kitten look (D) — CAT_SPEC §8',
+        ],
+        'traits' => [
+            'size' => ['medium-large'],
+            'build' => [['value' => 'solid, long-bodied, strong-boned, with long muscular legs', 'weight' => 2], 'sturdy, elongated, well-muscled'],
+            'coat_length' => ['long, glossy, water-repellent top coat over a woolly undercoat'],
+            // FIFe colours only (C40): never pointed, chocolate, lilac, cinnamon or fawn. Brown tabby first and highest (portrait default).
+            'coat_color' => [
+                ['value' => 'brown', 'weight' => 4],
+                ['value' => 'silver', 'weight' => 2],
+                'red',
+                'black',
+                'blue-grey',
+                'cream',
+                'white',
+                'tortoiseshell black and red',
+            ],
+            // Brown only with a tabby pattern (a plain brown cat would read as chocolate, which the standard excludes).
+            'coat_pattern' => [
+                ['value' => 'with mackerel tabby stripes and a white chest, belly and paws', 'weight' => 3, 'only_with' => ['coat_color' => ['brown', 'silver', 'red', 'blue-grey', 'cream']]],
+                ['value' => 'with mackerel tabby stripes', 'weight' => 2, 'only_with' => ['coat_color' => ['brown', 'silver', 'red', 'blue-grey', 'cream']]],
+                ['value' => 'with classic tabby markings', 'only_with' => ['coat_color' => ['brown', 'silver', 'red', 'blue-grey', 'cream']]],
+                ['value' => 'solid', 'only_with' => ['coat_color' => ['black', 'blue-grey', 'white']]],
+                ['value' => 'with a white chest, belly and paws', 'only_with' => ['coat_color' => ['black', 'red', 'blue-grey']]],
+                ['value' => 'with mottled patches', 'only_with' => ['coat_color' => ['tortoiseshell black and red']]],
+            ],
+            'ear_carriage' => ['very large, broad-based, set high'],
+            // Even eye colour that goes with the coat (C36); no blue (not needed for a typical look).
+            'eye_color' => [
+                ['value' => 'green-gold', 'weight' => 3],
+                ['value' => 'green', 'only_with' => ['coat_color' => ['brown', 'silver', 'black', 'blue-grey', 'white']]],
+                ['value' => 'gold', 'only_with' => ['coat_color' => ['brown', 'red', 'black', 'blue-grey', 'cream', 'white', 'tortoiseshell black and red']]],
+            ],
+            'tail' => ['very long and bushy, at least as long as the body'],
+        ],
+        'features' => [
+            'a triangular head with a long, straight profile and a firm chin',
+            'large, open, slightly oval eyes',
+            'broad, round paws with tufts of fur between the toes',
+        ],
+        // CAT_SPEC §8 (D): the Norwegian Forest Cat is slow to mature — fully grown at four to five years (C37).
+        'stage_notes' => [
+            'puppy' => 'As a Norwegian Forest Cat kitten it is a fluffy, leggy ball of fur with a softer coat than an adult',
+            'young' => 'As a young Norwegian Forest Cat it is not fully grown yet: lighter and less massive than an adult, its coat still filling out (the breed is fully grown at four to five years)',
+        ],
+        // A growing Norwegian Forest Cat: no adult "strong-boned" / "massive" wording next to the stage note.
+        'stage_overrides' => [
+            'puppy' => [
+                'build' => 'small, leggy, fluffy',
+                'coat_length' => 'soft, fluffy, medium-long',
+                'tail' => 'fluffy, fairly long',
+                'features' => ['a triangular head with a straight profile', 'large, slightly oval eyes'],
+            ],
+            'young' => [
+                'build' => 'long-bodied and leggy, not yet heavy',
+                'coat_length' => 'long, glossy, still filling out',
+                'features' => ['a triangular head with a long, straight profile', 'large, open, slightly oval eyes', 'broad, round paws with tufts of fur between the toes'],
             ],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],

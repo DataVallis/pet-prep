@@ -52,7 +52,7 @@ describe('routine labels and report rows per species', () => {
   it('a cat: litter, play, weekly change; brushing for Maine Coon / Ragdoll / British Shorthair (David 2026-10-11); no walk / training', () => {
     expect(reportRoutineTypes('cat', 'domestic_cat', byType(), false)).toEqual(['feed', 'water', 'clean', 'play', 'litter_scoop', 'litter_change']);
     expect(reportRoutineTypes('cat', 'maine_coon', byType(), true)).toEqual(['feed', 'water', 'clean', 'play', 'litter_scoop', 'litter_change', 'grooming']);
-    for (const breed of ['ragdoll', 'british_shorthair', 'siberian_cat']) {
+    for (const breed of ['ragdoll', 'british_shorthair', 'siberian_cat', 'norwegian_forest_cat']) {
       expect(reportRoutineTypes('cat', breed, byType(), false)).toContain('grooming');
     }
   });

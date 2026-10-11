@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-11 — Norveška gozdna mačka: peta plačljiva mačka (M5-R10-17)
+
+**Kaj se je zgodilo:** PetPrep ima peto plačljivo pasmo mačke — **norveško gozdno mačko**. Dodana je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`) in je skrita skupaj z vsemi mačkami, dokler jih David ne vklopi. Raziskava: **6 novih virov (C36–C41)** — standard WCF, stran pasme GCCF, PetMD (pregledal veterinar), CFA, primerjava registrov World Cat Congress in genetski laboratorij UC Davis. Pravila igre so splošna mačja pravila (igra s palico 2× na dan, pesek, voda 2× na dan); mucek pride pri **3 mesecih** (rodovniški mucki, PDSA); poldolgo vodoodbojno dlako otrok **počeše 1× na teden** (PetMD in GCCF: enkrat na teden), sicer se dlaka zavozla. Videz za AI: trikotna glava z dolgim ravnim profilom, zelo dolg košat rep, nikoli točkasti vzorec ali čokoladna barva.
+
+**Zakaj je pomembno:** Norveška gozdna mačka je v FIFe peta najbolj registrirana pasma (4.105 v letu 2024). Za starše, ki iščejo mladička, register zdaj pokaže tudi konkreten test: FIFe za vzrejo zahteva DNK-test za dedno bolezen GSD IV pri starših — o tem lahko vprašate vzreditelja.
+
+**Številke:** 6 novih virov (C36–C41) in 1 vir za seznam testov staršev (K21), 1 nova migracija (dve omejitvi pasme), 0 novih mehanik (česanje že obstaja, nova je samo vrednost 1× na teden); Pest **2304** testov, Jest **2024**, izvoz registra **37** testov (vsi zeleni). V aplikaciji skrito; na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Norveška gozdna mačka je nežna in prijazna, a njeno poldolgo dlako je treba vsaj enkrat na teden počesati; pri vzreditelju vprašajte za DNK-test GSD IV pri starših.« (*ko bodo mačke v aplikaciji*)
+- 💼 Investitorji: »Peta plačljiva mačka po istem samodejnem postopku — nova pasma ne potrebuje nove kode za pravila igre.«
+- 🤝 Partnerji (vzreditelji, zavetišča, veterinarji): »Register PetPrep za norveško gozdno mačko navaja test staršev, ki ga zahteva FIFe.« (*ko bo stran registra objavljena; mačke v aplikaciji še niso vklopljene*)
+- 📣 Omrežja: še ne — mačke niso vklopljene.
+- 🛠 Tehnično: »Tretja mačka z isto vrstico česanja 1× na teden — vrednost iz vira, mehanika že obstaja.«
+
+---
+
 ## 2026-10-11 — Administracija dobi pravo nadzorno ploščo in dva jezika
 
 **Kaj:** odstranjeni Filamentovi kartici »Welcome« in »Filament v3«; namesto njiju 9 gradnikov: 6 glavnih številk z mini grafi, vrstica »Potrebuje pozornost« (bolni ljubljenčki, čakajo na plačilo, konec igre, stanje stikala za mačke), 4 grafi (rast, aktivnost skrbi po skupinah s filtrom psi/mačke, pasme, brezplačni/plačani), tabeli zadnjih ljubljenčkov in nakupov ter poraba AI. Eno stikalo obdobja (7 / 30 / 90 dni, 12 mesecev). Celotna administracija je zdaj v angleščini s preklopom EN / SL (prej je bila ena stran slovenska).
