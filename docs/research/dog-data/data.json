@@ -9308,12 +9308,12 @@
         "notes": "Alternative to RKC 'Once a week' (S187)."
       },
       "dogs_trust_shedding": {
-        "value": "moderate shedding",
+        "value": "Yes",
         "unit": "—",
         "source_id": "S189",
         "quote": "German Shorthaired Pointers shed moderately.",
         "confidence": "medium",
-        "notes": "Dogs Trust fact field: 'Short length with moderate shedding'. RKC 'Sheds' label returned without a value. Basis of the sheds tag."
+        "notes": "Dogs Trust fact field: 'Short length with moderate shedding' → recorded as 'Yes' (sheds; the register's shedding category). RKC 'Sheds' label returned without a value. Basis of the sheds tag."
       },
       "rkc_good_with_children": {
         "value": null,

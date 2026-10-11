@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "cdd58c0cba11b186de9ee128503dcf50598af279338e52122017314655f7dd12"
+      "sha256": "21fedad3c8ba3369f2b1f30082e8daf3407c66324f7e9305780dec22b76417df"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "09b102fa565c56789ee0dd571dec1a827bf04c3a56147cf34aec340b3447c05f"
+      "sha256": "552603b11d3e1838cf177b0380935811ea837015eddf63b50a5f8b908feb41f8"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,31 +25,31 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "eaa0b8198066fa089ea0b81a100e746e77e050d5723304cf99a3d3cd5c4a7e2a"
+      "sha256": "6cf41fbd21e706a12875e9052051f4f9c18e4aea2beeab14660df4a5098988fa"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "583b70f0ebc010c65ba4962cfee0e99647ca58c4c2eb171ffe2ea7684346c835"
+      "sha256": "1178fd2d35821f25e830ab698eff87cc0fcd94ff2931fe7c5a0df38bb90d7f06"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "636a77779abd212e6e863e5552fd25d27593c7e661b27e88febac427b3f14861"
+      "sha256": "9e4374167ebf80831f839fd1b2c8877189fe70e493132e04101061b03ed0ef1b"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "7dccc72a43f82979b623609664ef397e623e4eef6d2e539ef7d0cd14f3cab261"
+      "sha256": "d4fa178109e10e178af288fe94bdc66a1e1472e07adadb3958a8035e3e4895e2"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "cb6aee56e83339baf592651c969ee0dcf15c6fb3e90e3cb9fc7da7992ac0bddb"
+      "sha256": "99470830997e3b3ecc58b34bddbac931b225d82baf43cffa8b07b9c12deef043"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "e9845f0053f94fdfcbe168ae8b10250d70480e89d2fcc0e301c12fdebfda8a9b"
+      "sha256": "59fb1e844ea88b0bed33caf4c672603407fffc9fed8d1331330bcc8d026684d0"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "01bba887e160d211cec6ac0e85c307ac3f9a7968b861257e8edea523882a6244"
+      "sha256": "f838ea0ca211061767ec29c2a40a2eafec812a8cc6ae9450cc99d12121f32e5e"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -168,7 +168,7 @@
         }
       },
       "status": "available",
-      "breed_count": 16,
+      "breed_count": 17,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -10107,6 +10107,534 @@
       ]
     },
     {
+      "id": "german_shorthaired_pointer",
+      "species": "dog",
+      "order": 16,
+      "availability": "coming_soon",
+      "name": {
+        "en": "German Shorthaired Pointer",
+        "sl": "Nemški kratkodlaki ptičar"
+      },
+      "slug": {
+        "en": "german-shorthaired-pointer",
+        "sl": "nemski-kratkodlaki-pticar"
+      },
+      "synonyms": {
+        "en": [
+          "GSP",
+          "German Pointer",
+          "Shorthair",
+          "Deutsch Kurzhaar",
+          "Kurzhaar"
+        ],
+        "sl": [
+          "kratkodlaki ptičar",
+          "kratkodlaki pticar",
+          "nemski kratkodlaki pticar",
+          "kurzhaar",
+          "gsp"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_shorthaired_pointer.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              58.4,
+              63.5
+            ],
+            "female": [
+              53.3,
+              58.4
+            ]
+          },
+          "source_ids": [
+            "S186"
+          ],
+          "ref": "german_shorthaired_pointer.height.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              24.9,
+              31.8
+            ],
+            "female": [
+              20.4,
+              27.2
+            ]
+          },
+          "source_ids": [
+            "S186"
+          ],
+          "ref": "german_shorthaired_pointer.adult_weight.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "german_shorthaired_pointer.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.4,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "german_shorthaired_pointer.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_shorthaired_pointer.lifespan.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S187"
+          ],
+          "ref": "german_shorthaired_pointer.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S187"
+          ],
+          "ref": "german_shorthaired_pointer.suitability.rkc_coat",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S187"
+          ],
+          "ref": "german_shorthaired_pointer.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S189"
+          ],
+          "ref": "german_shorthaired_pointer.suitability.dogs_trust_shedding",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 17,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "german_shorthaired_pointer.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 119,
+            "group": 7,
+            "section": 1,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S185"
+          ],
+          "ref": "german_shorthaired_pointer.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_shorthaired_pointer.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_shorthaired_pointer.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_shorthaired_pointer.health.von_willebrand",
+          "confidence": "medium"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_shorthaired_pointer.health.heart",
+          "confidence": "medium"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_shorthaired_pointer.health.atopy",
+          "confidence": "low"
+        },
+        {
+          "key": "entropion_cherry_eye",
+          "source_ids": [
+            "S188"
+          ],
+          "ref": "german_shorthaired_pointer.health.eyes",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S187",
+              "S188"
+            ],
+            "refs": [
+              "german_shorthaired_pointer.exercise.adult",
+              "german_shorthaired_pointer.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S187"
+            ],
+            "refs": [
+              "german_shorthaired_pointer.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S187",
+              "S188"
+            ],
+            "refs": [
+              "german_shorthaired_pointer.exercise.adult",
+              "german_shorthaired_pointer.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S189"
+            ],
+            "refs": [
+              "german_shorthaired_pointer.suitability.dogs_trust_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 121
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 121
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.german_shorthaired_pointer.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S187"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S187 'More than 2 hours per day'; PDSA S188 the same)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_shorthaired_pointer.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_shorthaired_pointer.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 121 (0.75 × 13.4 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.german_shorthaired_pointer.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 17, S35 — Excellent tier)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S187"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S185",
+        "S186",
+        "S187",
+        "S188",
+        "S189",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -12872,6 +13400,13 @@
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/poodle"
     },
     {
+      "id": "S123",
+      "tier": "B (summary of A)",
+      "publisher": "Dogs Trust (UK)",
+      "title": "Life expectancy for 155 breeds and crossbred group (table of McMillan et al. 2024 data) (PDF)",
+      "url": "https://www.dogstrust.org.uk/downloads/life-expectancy-breeds-table-2024.pdf"
+    },
+    {
       "id": "S124",
       "tier": "A",
       "publisher": "FCI",
@@ -13164,6 +13699,41 @@
       "publisher": "The Royal Kennel Club",
       "title": "Breed Watch tally sheet — Bulldog (PDF)",
       "url": "https://www.thekennelclub.org.uk/media/ydajrjfi/breed-watch-tally-sheet-bulldog.pdf"
+    },
+    {
+      "id": "S185",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Deutsch Kurzhaar (119)",
+      "url": "https://www.fci.be/en/nomenclature/DEUTSCH-KURZHAAR-119.html"
+    },
+    {
+      "id": "S186",
+      "tier": "A",
+      "publisher": "German Shorthaired Pointer Club of America (AKC parent club)",
+      "title": "Breed Standard — German Shorthaired Pointer (approved October 11, 2022, effective January 1, 2023)",
+      "url": "https://www.gspca.org/?p=240302"
+    },
+    {
+      "id": "S187",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "German Shorthaired Pointer — breed information page (Breeds A to Z, older address)",
+      "url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=2035"
+    },
+    {
+      "id": "S188",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "German Pointer (shorthaired and wirehaired)",
+      "url": "https://www.pdsa.org.uk/taking-care-of-your-pet/looking-after-your-pet/puppies-dogs/large-dogs/german-pointer"
+    },
+    {
+      "id": "S189",
+      "tier": "B",
+      "publisher": "Dogs Trust (UK)",
+      "title": "German Shorthaired Pointer — breed page",
+      "url": "https://www.dogstrust.org.uk/dog-advice/getting-dog/breeds/german-shorthaired-pointer"
     },
     {
       "id": "C1",
