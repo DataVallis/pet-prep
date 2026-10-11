@@ -183,10 +183,13 @@ Older queue (still valid where not done):
 
 ## 6. Session log
 
-### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-18 Bengal (branch `feat/M5-R10-18-bengal`, PR #176)
+### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-18 Bengal (branch `feat/M5-R10-18-bengal`, PR #176; portrait PR #177, website PR #35)
 - Research C42–C50 + K22 → backend (enum, migration, configs, cat rows incl. grooming 1×/week, appearance, `BengalBreedTest`) → mobile (names, hints, grooming list, schema.ts additive — regenerated from a local server, identical) → register export (`bengalFacts`, weight as one PDSA average, health keys PRA/PK def + HCM + kneecap + cancer) → docs. Tests: Pest 2327, Jest 2026, export 38 — all green locally; pint clean, tsc clean.
 - **Lock:** draft PR #176 before research.
 - **Review:** `qa-reviewer` CHANGES REQUESTED → 1 blocker (CatLifeStageDataTest added the Bengal to the GCCF-range lifespan list) + should-fix (doubled "coat" in prompts, kitten tail wording, hybrid statements under-stated, unrecorded quotes, activity-need decision line, BUILD_LOG placeholders) + nits — all fixed in `f557199` before merge; website words for `pra_pk_def` / `dna_pra_b` come with the website PR.
+- **Merge / deploy:** PR #176 merged as `092e7cd` on green `CI OK`; main run 38149607649 "Deploy to Hetzner Production" success. Draft portrait PR #177 opened right after the merge (lock).
+- **Portrait:** run 38149803194 ($0.15, AI Lab), accepted first try — realistic photo, one adult golden-brown Bengal with rosettes and spotted belly, green-gold eyes, plain fog-grey backdrop, no text / props (the body reads slightly heavy); main's Labrador portrait kept.
+- **Website:** PR #35 — new words `pra_pk_def`, checklist `dna_pra_b`, EN / SL intro (C13 / C44 / C45 / C46), AI photo; local lint + build green, page text checked EN / SL.
 
 ### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-17 Norwegian Forest Cat (branch `feat/M5-R10-17-norwegian-forest-cat`, PR #174; portrait PR #175, website PR #34)
 - Research C36–C41 + K21 → backend (enum, migration, configs, cat rows incl. grooming 1×/week, appearance, `NorwegianForestCatBreedTest`) → mobile (names, hints, grooming list, schema.ts additive) → register export (`norwegianForestCatFacts`, health keys GSD IV + HCM + hips/weight) → docs. Tests: Pest 2304, Jest 2024, export 37 — all green locally.
