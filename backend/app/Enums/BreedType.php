@@ -30,6 +30,7 @@ enum BreedType: string
     case BerneseMountainDog = 'bernese_mountain_dog';
     case SiberianHusky = 'siberian_husky';
     case Rottweiler = 'rottweiler';
+    case Bulldog = 'bulldog';
     case DomesticCat = 'domestic_cat';
     case MaineCoon = 'maine_coon';
     case BritishShorthair = 'british_shorthair';
@@ -60,6 +61,7 @@ enum BreedType: string
             self::BerneseMountainDog => 'bernese-mountain-dog',
             self::SiberianHusky => 'siberian-husky',
             self::Rottweiler => 'rottweiler',
+            self::Bulldog => 'bulldog',
             self::DomesticCat => 'domestic-cat',
             self::MaineCoon => 'maine-coon',
             self::BritishShorthair => 'british-shorthair',
@@ -84,7 +86,7 @@ enum BreedType: string
     public function species(): Species
     {
         return match ($this) {
-            self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::Rottweiler => Species::Dog,
+            self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::Rottweiler, self::Bulldog => Species::Dog,
             self::DomesticCat, self::MaineCoon, self::BritishShorthair, self::Ragdoll, self::SiberianCat, self::NorwegianForestCat, self::Bengal => Species::Cat,
         };
     }
@@ -110,7 +112,7 @@ enum BreedType: string
     {
         return match ($this) {
             self::Mutt, self::DomesticCat => false,
-            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::Rottweiler, self::MaineCoon, self::BritishShorthair, self::Ragdoll, self::SiberianCat, self::NorwegianForestCat, self::Bengal => true,
+            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::Rottweiler, self::Bulldog, self::MaineCoon, self::BritishShorthair, self::Ragdoll, self::SiberianCat, self::NorwegianForestCat, self::Bengal => true,
         };
     }
 

@@ -476,5 +476,30 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S168'], 'refs' => ['rottweiler.suitability.rkc_shedding']],
             ],
         ],
+
+        // M5-R10-20: bulldog.* (S175–S183), runbook rules (data.json
+        // proposed_game_parameters.bulldog.suitability_tags). Flat-faced welfare breed →
+        // `brachycephalic_breathing` (as the French Bulldog); Breed Watch skin-fold
+        // dermatitis → `sensitive_skin` (as the Westie). Not `children` / `small_children`
+        // (no child rating or statement), not `apartment` (RKC "Small house", S177).
+        'bulldog' => [
+            'suits' => [
+                // S177 "The Bulldog remains hugely popular as a family companion for his great character and loyalty."
+                ['tag' => 'family_pet', 'source_ids' => ['S177'], 'refs' => ['bulldog.suitability.rkc_family', 'bulldog.behaviour.family']],
+                // S180 "… will get on well with other household pets if given the right socialisation when young."
+                ['tag' => 'other_pets', 'source_ids' => ['S180'], 'refs' => ['bulldog.behaviour.other_pets', 'bulldog.suitability.pdsa_other_pets']],
+            ],
+            'consider' => [
+                // Welfare rule: S180 "Bulldogs are a severely brachycephalic (flat-faced) breed."; S177 airway soft tissue;
+                // S182 "Signs of respiratory difficulty or distress …"; S93 "Stop and think before buying a flat-faced dog."
+                ['tag' => 'brachycephalic_breathing', 'source_ids' => ['S180', 'S177', 'S182', 'S93'], 'refs' => ['bulldog.health.brachycephaly_boas', 'bulldog.health.breed_watch', 'bulldog.exercise.heat_and_walk_timing']],
+                // Welfare rule: S182 "Signs of dermatitis irritation in skin folds …"; S180 "their facial wrinkles will need daily cleaning."
+                ['tag' => 'sensitive_skin', 'source_ids' => ['S182', 'S180'], 'refs' => ['bulldog.health.breed_watch', 'bulldog.health.skin_folds']],
+                // S177 "Lifespan: Under 10 years"; S180 the same; S54 McMillan median 9.8 y.
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S177', 'S180', 'S54'], 'refs' => ['bulldog.lifespan.rkc', 'bulldog.lifespan.pdsa', 'bulldog.lifespan.median_uk']],
+                // S177 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S177'], 'refs' => ['bulldog.suitability.rkc_shedding']],
+            ],
+        ],
     ],
 ];

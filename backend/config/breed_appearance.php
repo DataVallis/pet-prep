@@ -167,6 +167,19 @@
 | legs, and the `muzzle` trait for a moderate muzzle (FCI muzzle : skull ≈ 1 : 1.5).
 | Weights unsourced (one colour) → `verified => false`.
 |
+| Bulldog (M5-R10-20, docs/research/dog-data bulldog.appearance): smooth-coated, fairly
+| thick set, low, broad, powerful and compact; fine, short, close, smooth coat; small, thin
+| rose ears; round, very dark eyes of moderate size, no white showing; low-set tail
+| carried downward (RKC standard S178, FCI 149 S175, AKC via the Bulldog Club of America
+| S179). Colours: red, fawn, white, red / fawn brindle, pied, red or fawn with white —
+| "Any other colour or pattern highly undesirable" (S178); never black, black and tan
+| (S175), merle (S179). Welfare rule (flat-faced breed, as the French Bulldog): RKC
+| Breed Watch Category 3 (S182) names respiratory distress, heavy overnose wrinkle,
+| pinched nostrils, screw tails and skin-fold dermatitis → the dog trait `muzzle` asks
+| for a moderate face with wide-open nostrils and a light wrinkle, `build` for a sound,
+| not exaggerated body, `tail` for a natural straight tail. Weights unsourced →
+| `verified => false`; red and white weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -883,6 +896,47 @@ return [
             'muzzle' => ['moderate muzzle, clearly shorter than the skull but never short, with a broad black nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-20 (docs/research/dog-data/data.json bulldog.appearance; runbook rules
+    // 2026-10-11: standard colours only, moderate face with open nostrils, straight tail).
+    'bulldog' => [
+        'display_name' => 'Bulldog',
+        // Colour frequencies are in no source (bulldog.appearance.colour_weights UNSOURCED) → all weights are a draft.
+        'verified' => false,
+        'source' => 'RKC breed standard (S178, https://thekennelclub.org.uk/breed-standards/utility/bulldog), FCI-Standard N° 149 (S175), AKC standard via the Bulldog Club of America (S179), RKC breed page (S177), RKC Breed Watch (S182) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S177 "Size: Medium"; PDSA S180 the same',
+            'build' => 'S178 "Smooth-coated. Fairly thick set, rather low in stature, broad, powerful and compact."; S182 "Unsound movement" (welfare rule: sound, not exaggerated)',
+            'coat_length' => 'S175 "Fine texture, short, close and smooth (hard only from shortness and closeness, not wiry)."',
+            'coat_color' => 'S178 "Whole colours are red, fawn, white." "Red or fawn may have white markings i.e. red and white, fawn and white." "Any other colour or pattern highly undesirable" (weights unsourced; never black / black and tan S175, merle S179)',
+            'coat_pattern' => 'S178 "Brindle – solid background colour marked with darker stripes: red brindle, fawn brindle." "Pied – white background with markings of any of the above listed colours."',
+            'ear_carriage' => 'S178 "Small and thin." / "\'Rose ear\' correct, i.e. folding inwards back, upper or front inner edge curving outwards and backwards,"',
+            'eye_color' => 'S178 "Round, of moderate size, neither sunken nor prominent, in colour very dark – almost black –"',
+            'tail' => 'S175 "Moderate in length - rather short than long - thick at root, tapering quickly to a fine point."; S182 "Lack of tail, screw tail, inverted tail or a tight tail" (welfare rule: natural straight tail)',
+            'muzzle' => 'S178 "Nostrils large wide and open, with well-defined vertical straight line between." "Pinched nostrils and heavy over nose roll are unacceptable"; S182 "Heavy overnose wrinkle (roll)" (welfare rule: moderate face, light wrinkle)',
+        ],
+        'traits' => [
+            'size' => ['medium'],
+            'build' => [['value' => 'thick-set, broad and compact but sound and not exaggerated, standing square', 'weight' => 3], 'low, powerful and muscular, moving freely'],
+            'coat_length' => ['fine, short, close and smooth'],
+            // Standard colours only (S178); red highest → the register portrait is red and white.
+            'coat_color' => [
+                ['value' => 'red', 'weight' => 4],
+                ['value' => 'fawn', 'weight' => 3],
+                'fawn brindle',
+            ],
+            'coat_pattern' => [
+                ['value' => 'with white markings on the face, chest and legs', 'weight' => 4],
+                'solid with a black mask',
+                'pied — mostly white with large patches of that colour',
+            ],
+            'ear_carriage' => ['small, thin "rose" ears folded back, set high'],
+            'eye_color' => ['very dark, round, moderate size, no white showing'],
+            'tail' => ['natural, straight, low-set tail carried downward'],
+            // Welfare rule (S182): never pinched nostrils or a heavy overnose roll.
+            'muzzle' => ['short broad muzzle that is not exaggerated, with a black nose, large wide-open nostrils and only a light wrinkle that never covers the eyes or nose'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

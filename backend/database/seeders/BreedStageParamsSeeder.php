@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -249,6 +249,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_ROTTWEILER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-19)';
 
     /**
+     * M5-R10-20 Bulldog (unattended run 2026-10-11, data.json
+     * proposed_game_parameters.bulldog.*.decision): every value follows a standing rule
+     * of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min, senior 45 min, puppy 10 min × age capped at 60, stages 9 / 36 / 88
+     * (senior from the McMillan 2024 median 9.8 y, S54), arrival 2 / 9 / 36 / 88, learning
+     * multiplier 0.5 (Coren 77, Lowest); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_BULLDOG = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-20)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -318,7 +328,7 @@ class BreedStageParamsSeeder extends Seeder
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -743,6 +753,10 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-19 (docs/research/dog-data/data.json rottweiler,
             // S166–S174; runbook rules in proposed_game_parameters.rottweiler).
             BreedType::Rottweiler => self::rottweilerProfile(),
+
+            // M5-R10-20 (docs/research/dog-data/data.json bulldog,
+            // S175–S183; runbook rules in proposed_game_parameters.bulldog).
+            BreedType::Bulldog => self::bulldogProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -1797,6 +1811,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'rottweiler.lifespan.median_uk',
                 'quote' => 'Median longevity overall was 9.0 years (IQR 7.2–10.5, range 0.0–17.0).',
                 'notes' => 'O\'Neill et al. 2017 (S171), VetCompass UK primary care. McMillan 2024 (S54 / S123) not reachable this run. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Bulldog (M5-R10-20). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_BULLDOG);
+     * weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function bulldogProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BULLDOG;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S54', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.bulldog.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [88, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 9.8 y (corrected Fig. 3 legend, S54) = 7.35 y = 88.2 → 88 months (= French Bulldog). Not chosen: 65 (VetCompass 2013 median 7.2 y, S181), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 88],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bulldog.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S177', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bulldog.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S177) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "Bulldogs need up to an hour\'s exercise daily" (S180) agrees; never in the heat of the day (S180 — a walk-time rule is not built yet, ROADMAP M5-R14).',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bulldog.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[23.0, 25.0], [
+                'unit' => 'kg', 'source_id' => 'S175', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'bulldog.adult_weight.fci',
+                'quote' => 'Males: 25 kgs.',
+                'notes' => 'FCI standard (S175): "Males: 25 kgs.", "Females: 23 kgs." (one figure per sex) → 23–25 kg; RKC standard (S178) the same. PDSA (S180) 23–25 kg; AKC (S179) about 50 lb / 40 lb.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bulldog.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (FCI / RKC 25 kg ≈ 55 lb and 23 kg ≈ 51 lb = the Medium class of S10).',
+            ]],
+            'coren_rank' => [77, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'bulldog.trainability.coren_rank',
+                'quote' => '| 77 | Bulldog |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 77, tier "Lowest" (ranks 70–79). Coren\'s own article (S34) was not fetched this run.',
+            ]],
+            'learning_multiplier' => [0.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bulldog.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 77 (S35) in the "Lowest" tier (ranks 70–79) → 0.5 (= Beagle). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [9.8, [
+                'unit' => 'years', 'source_id' => 'S54', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'bulldog.lifespan.median_uk',
+                'quote' => 'Bulldog (green, x̃= 9.8)',
+                'notes' => 'McMillan et al. 2024, corrected Fig. 3 legend (S54); published text (S135) the same. VetCompass 2013 median 7.2 y (S181) recorded as an alternative. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

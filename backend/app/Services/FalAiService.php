@@ -193,6 +193,14 @@ class FalAiService
                 .'dark brown almond-shaped eyes, natural undocked tail, moderate muzzle, powerful compact build with a level back '
                 .'and sound hind legs, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-20: RKC standard (S178) / FCI 149 (S175) — red, fawn, white, brindle, pied
+            // (never black, black and tan, merle — S175, S179); rose ears, smooth coat; welfare
+            // rule (Breed Watch S182): moderate face with wide-open nostrils, light wrinkle, straight tail.
+            BreedType::Bulldog => 'A calm Bulldog dog with a red and white coat, '
+                .'fine short smooth coat, small rose ears, very dark round eyes, '
+                .'moderate short broad muzzle with large wide-open nostrils and only a light wrinkle, '
+                .'natural straight low-set tail, thick-set but sound and compact build, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -437,6 +445,22 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'short, coarse, dense and flat',
                 'markings' => 'clearly defined tan on the cheeks, muzzle, throat, chest and legs and above each eye',
+            ],
+            // M5-R10-20: RKC standard (S178) "Whole colours are red, fawn, white." + brindle / pied;
+            // never black, black and tan (S175) or merle (S179).
+            BreedType::Bulldog => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'red and white',
+                    1 => 'fawn brindle',
+                    2 => 'pied (white with red patches)',
+                },
+                'eye_color' => 'very dark brown',
+                'fur_texture' => 'fine, short, close and smooth',
+                'markings' => match ($variantIndex) {
+                    0 => 'white blaze, chest and feet',
+                    1 => 'no markings',
+                    2 => 'white body with red patches',
+                },
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
