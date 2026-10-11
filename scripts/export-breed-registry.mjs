@@ -386,7 +386,7 @@ const SPECIES = [
       { id: 'bernese_mountain_dog', availability: 'coming_soon', synonyms: { en: ['Berner', 'Berner Sennenhund', 'Bernese'], sl: ['bernski planšarski pes', 'bernski plansarski pes', 'bernski planšar', 'bernski plansar', 'berner'] } },
       { id: 'siberian_husky', availability: 'coming_soon', synonyms: { en: ['Husky', 'Huskie'], sl: ['haski', 'sibirski husky', 'husky', 'sibirec'] } },
       { id: 'rottweiler', availability: 'coming_soon', synonyms: { en: ['Rottie', 'Rotty', 'Rott'], sl: ['rottweiler', 'rotvajlerka', 'rottie'] } },
-      { id: 'bulldog', availability: 'coming_soon', synonyms: { en: ['English Bulldog', 'British Bulldog'], sl: ['buldog', 'bulldog', 'english bulldog'] } },
+      { id: 'bulldog', availability: 'coming_soon', synonyms: { en: ['English Bulldog', 'British Bulldog'], sl: ['buldog', 'angleski buldog', 'bulldog', 'english bulldog', 'british bulldog'] } },
     ],
   },
   {

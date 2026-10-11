@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Buldog je ljubek in zelo priljubljen, a je pes z zelo sploščenim obrazom. PetPrep to pove mirno in z viri: oznaki »kratek gobček — težave z dihanjem in vročino« in »občutljiva koža« (The Royal Kennel Club pri pasmi spremlja dihanje in vnetja kože v gubah), »krajša življenjska doba«; PDSA staršem svetuje, naj razmislijo tudi o bolj zdravi pasmi ali mešančku. Kot francoski buldog je v aplikaciji in v registru, v marketingu pa ne (priporočilo britanskih veterinarjev). Dve novi potrebi z virom — gube na obrazu čistiti vsak dan in nikoli sprehoda v vročini dneva — igra še ne vodi, zato sta zapisani kot naloga M5-R14 za Davida.
 
-**Številke:** 9 novih virov (S175–S183), 1 migracija, 0 novih oznak, 1 nova naloga (nega psa s sploščenim obrazom, M5-R14); Pest **PEST_COUNT** testov, Jest **2043**, izvoz registra **40** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+**Številke:** 9 novih virov (S175–S183), 1 migracija, 0 novih oznak, 1 nova naloga (nega psa s sploščenim obrazom, M5-R14); Pest **2380** testov, Jest **2043**, izvoz registra **40** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
 
 **Kako povedati:**
 - 👩 Starši: »Angleški buldog je miren družinski pes, ki potrebuje do ene ure gibanja na dan — a ima zelo kratek gobček: hitro se pregreje, gube na obrazu je treba čistiti vsak dan. Pred nakupom vprašajte za test dihanja staršev in razmislite tudi o bolj zdravi pasmi ali mešančku.«

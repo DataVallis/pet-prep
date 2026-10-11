@@ -171,8 +171,15 @@ describe('breed, config and database', function () {
 
         expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'west-highland-white-terrier', 'bernese-mountain-dog', 'siberian-husky', 'rottweiler'])
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_BULLDOG)->all())->toBe([]);
-        foreach (['CONFIRMED_R10', 'CONFIRMED_R10_CAVALIER', 'CONFIRMED_R10_BEAGLE', 'CONFIRMED_R10_STANDARD_POODLE', 'CONFIRMED_R10_DACHSHUND', 'CONFIRMED_R10_AUSTRALIAN_SHEPHERD', 'CONFIRMED_R10_BERNESE_MOUNTAIN_DOG', 'PROPOSED_R10_BERNESE_SENIOR', 'CONFIRMED_R10_SIBERIAN_HUSKY', 'CONFIRMED_R10_ROTTWEILER'] as $constant) {
-            expect($mine->where('decision', constant(BreedStageParamsSeeder::class.'::'.$constant))->all())->toBe([], $constant);
+        // No other breed's decision text (every CONFIRMED_R10* / PROPOSED_R10* constant except the Bulldog's).
+        $constants = array_filter(
+            (new ReflectionClass(BreedStageParamsSeeder::class))->getConstants(),
+            fn (mixed $value, string $name) => preg_match('/^(CONFIRMED|PROPOSED)_R10/', $name) === 1 && $name !== 'CONFIRMED_R10_BULLDOG',
+            ARRAY_FILTER_USE_BOTH,
+        );
+        expect($constants)->toHaveKeys(['CONFIRMED_R10', 'CONFIRMED_R10_FRENCH_BULLDOG', 'CONFIRMED_R10_ROTTWEILER']);
+        foreach ($constants as $constant => $decision) {
+            expect($mine->where('decision', $decision)->all())->toBe([], $constant);
         }
     });
 });
