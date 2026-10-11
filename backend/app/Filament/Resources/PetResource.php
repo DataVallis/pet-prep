@@ -25,6 +25,26 @@ use Illuminate\Support\HtmlString;
 
 class PetResource extends Resource
 {
+    public static function getNavigationGroup(): ?string
+    {
+        return __('admin.navigation.management');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('admin.navigation.pets_label');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('admin.navigation.pet_model');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('admin.navigation.pets_label');
+    }
+
     protected static ?string $model = Pet::class;
 
     /**
@@ -102,10 +122,6 @@ class PetResource extends Resource
     }
 
     protected static ?string $navigationIcon = 'heroicon-o-heart';
-
-    protected static ?string $navigationLabel = 'Pets';
-
-    protected static ?string $navigationGroup = 'Management';
 
     public static function form(Form $form): Form
     {

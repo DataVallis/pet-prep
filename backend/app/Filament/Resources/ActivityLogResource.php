@@ -13,13 +13,29 @@ use Filament\Tables\Table;
 
 class ActivityLogResource extends Resource
 {
+    public static function getNavigationGroup(): ?string
+    {
+        return __('admin.navigation.audit');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('admin.navigation.activity_log');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('admin.navigation.activity_model');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('admin.navigation.activity_log');
+    }
+
     protected static ?string $model = ActivityLog::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-list';
-
-    protected static ?string $navigationLabel = 'Activity Log';
-
-    protected static ?string $navigationGroup = 'Audit';
 
     public static function form(Form $form): Form
     {

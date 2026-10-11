@@ -23,7 +23,7 @@ use Illuminate\Support\HtmlString;
 use InvalidArgumentException;
 
 /**
- * "Funkcije" / feature switches (M5-R06-09, David 2026-10-10, superadmin
+ * Feature switches (M5-R06-09, David 2026-10-10, superadmin
  * only): who may create a NEW cat — off / test families (parents picked by
  * e-mail) / everyone. Stored in app_settings via AppSettingsService
  * (cached ≤ 60 s, busted on save, every change audited in
@@ -37,18 +37,27 @@ class FeatureSwitches extends Page implements HasForms
 
     protected static ?string $navigationIcon = 'heroicon-o-adjustments-horizontal';
 
-    protected static ?string $navigationGroup = 'Configuration';
-
-    protected static ?string $navigationLabel = 'Funkcije';
-
-    protected static ?string $title = 'Funkcije (feature switches)';
-
     protected static ?string $slug = 'feature-switches';
 
     protected static string $view = 'filament.pages.feature-switches';
 
     /** @var array<string, mixed>|null */
     public ?array $data = [];
+
+    public static function getNavigationGroup(): ?string
+    {
+        return __('admin.navigation.configuration');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('admin.features.navigation');
+    }
+
+    public function getTitle(): string
+    {
+        return __('admin.features.title');
+    }
 
     public static function canAccess(): bool
     {
@@ -74,33 +83,30 @@ class FeatureSwitches extends Page implements HasForms
         return $form
             ->statePath('data')
             ->schema([
-                Section::make('Mačke')
-                    ->description('Kdo lahko ustvari NOVO mačko. Obstoječe mačke delujejo v vsakem načinu (izklop ustavi samo nove mačke).')
+                Section::make(__('admin.features.cats_section'))
+                    ->description(__('admin.features.cats_description'))
                     ->schema([
                         Placeholder::make('cats_env_override')
                             ->hiddenLabel()
                             ->visible(fn (): bool => $settings->catsForcedByEnv())
-                            ->content(new HtmlString('<strong>Strežnik ima PETPREP_CATS_ENABLED=true</strong> — mačke so vklopljene za vse ne glede na to izbiro. Za testne družine odstrani vrstico iz /opt/petprep/.env in ponovno zaženi PHP vsebnike.')),
+                            ->content(new HtmlString(__('admin.features.env_override'))),
                         Radio::make('cats_mode')
-                            ->label('Mačke')
+                            ->label(__('admin.features.cats_mode'))
                             ->options(collect(CatsAvailability::cases())->mapWithKeys(fn (CatsAvailability $m): array => [$m->value => $m->label()])->all())
                             ->in(array_map(fn (CatsAvailability $m): string => $m->value, CatsAvailability::cases()))
                             ->required()
                             ->live(),
                         Select::make('cats_test_parent_ids')
-                            ->label('Testni starši (družina je testna, če je v njej kateri od teh staršev)')
+                            ->label(__('admin.features.test_parents'))
                             ->multiple()
                             ->searchable()
                             ->getSearchResultsUsing(fn (string $search): array => self::parentsMatching($search))
                             ->getOptionLabelsUsing(fn (array $values): array => self::parentLabels($values))
                             ->required(fn (Get $get): bool => $get('cats_mode') === CatsAvailability::TestFamilies->value)
-                            ->helperText('Poišči starševski račun po e-pošti ali imenu.'),
+                            ->helperText(__('admin.features.test_parents_help')),
                         Placeholder::make('cats_help')
                             ->hiddenLabel()
-                            ->content(new HtmlString(
-                                'Mačke vidi samo nova različica aplikacije (CAT_UI_READY, pošlje <code>species_cat</code>) — tudi otrokov telefon mora imeti novo različico. '
-                                .'Po spremembi naj uporabnik aplikacijo popolnoma zapre in znova odpre (katalog pasem je v aplikaciji shranjen 1 uro); strežnik novo nastavitev upošteva najkasneje v 1 minuti.'
-                            )),
+                            ->content(new HtmlString(__('admin.features.help'))),
                     ]),
             ]);
     }
@@ -116,12 +122,12 @@ class FeatureSwitches extends Page implements HasForms
         try {
             $settings->updateCats($this->admin(), $mode, $ids);
         } catch (InvalidArgumentException $e) {
-            Notification::make()->title('Ni shranjeno')->body($e->getMessage())->danger()->send();
+            Notification::make()->title(__('admin.features.not_saved'))->body($e->getMessage())->danger()->send();
 
             return;
         }
 
-        Notification::make()->title('Shranjeno')->body("Mačke: {$mode->label()}")->success()->send();
+        Notification::make()->title(__('admin.features.saved'))->body(__('admin.features.saved_body', ['mode' => $mode->label()]))->success()->send();
     }
 
     /**

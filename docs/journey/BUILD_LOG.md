@@ -8,6 +8,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-11 — Administracija dobi pravo nadzorno ploščo in dva jezika
+
+**Kaj:** odstranjeni Filamentovi kartici »Welcome« in »Filament v3«; namesto njiju 9 gradnikov: 6 glavnih številk z mini grafi, vrstica »Potrebuje pozornost« (bolni ljubljenčki, čakajo na plačilo, konec igre, stanje stikala za mačke), 4 grafi (rast, aktivnost skrbi po skupinah s filtrom psi/mačke, pasme, brezplačni/plačani), tabeli zadnjih ljubljenčkov in nakupov ter poraba AI. Eno stikalo obdobja (7 / 30 / 90 dni, 12 mesecev). Celotna administracija je zdaj v angleščini s preklopom EN / SL (prej je bila ena stran slovenska).
+**Zakaj je pomembno:** pred beto (~20 testnih družin) David na en pogled vidi rast, plačila in težave, brez SQL-a.
+**Kako povedati:** 💼 »Interni nadzor rasti in plačil od prvega dne« · 🛠 Filament 3 widgeti + page filters, dnevna razdelitev po ljubljanskem času, i18n s piškotkom.
+
+---
+
 ## 2026-10-11 — Sibirska mačka: četrta plačljiva mačka (M5-R10-16)
 
 **Kaj se je zgodilo:** PetPrep ima četrto plačljivo pasmo mačke — **sibirsko mačko**. Dodana je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`) in je skrita skupaj z vsemi mačkami, dokler jih David ne vklopi. Raziskava: **3 novi viri (C33–C35)** — standard FIFe, stran pasme GCCF in PetMD (pregledal veterinar). Pravila igre so splošna mačja pravila (igra s palico 2× na dan, pesek, voda 2× na dan); mucek pride pri **3 mesecih** (rodovniški mucki, PDSA); gosto poldolgo dlako otrok **počeše 1× na teden** (PetMD: vsaj enkrat na teden), sicer se dlaka zavozla. Videz za AI: gosta dlaka z ovratnikom, nikoli točkasti vzorec (to je druga pasma, Neva Masquerade), modre oči samo pri beli mački.

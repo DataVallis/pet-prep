@@ -29,15 +29,29 @@ use Illuminate\Database\Eloquent\Builder;
  */
 class BreedStageParamResource extends Resource
 {
+    public static function getNavigationGroup(): ?string
+    {
+        return __('admin.navigation.configuration');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('admin.navigation.stage_data');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('admin.navigation.stage_value_model');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('admin.navigation.stage_data');
+    }
+
     protected static ?string $model = BreedStageParam::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-beaker';
-
-    protected static ?string $navigationLabel = 'Life-stage data';
-
-    protected static ?string $navigationGroup = 'Configuration';
-
-    protected static ?string $modelLabel = 'life-stage value';
 
     /** Source ids: S1… (dog-data) or C1… (cat-data, M5-R06-03). */
     public const SOURCE_ID_PATTERN = '/^[SC]\d+(,[SC]\d+)*$/';
