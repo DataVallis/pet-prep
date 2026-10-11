@@ -623,6 +623,10 @@ test('checklist: known answers (vet feedback examples, Westie, British Shorthair
   // two quotes of one source = one source id (microchip by 8 weeks + report within 7 days, both K4)
   const dogGeneral = Object.fromEntries(registry.species.find((s) => s.id === 'dog').buyer_checklist.map((i) => [i.key, i.source_ids]));
   assert.deepEqual(dogGeneral.microchip_registration, ['K4']);
+  // national rules carry their country; universal items carry none (M5-R11-06b, international site)
+  const dogItems = registry.species.find((s) => s.id === 'dog').buyer_checklist;
+  assert.deepEqual(dogItems.filter((i) => i.country === 'SI').map((i) => i.key), ['min_age_puppy_si', 'microchip_registration', 'vaccination_records', 'rabies_vaccination', 'kzs_member_si', 'parents_dna_profile']);
+  assert.ok(dogItems.filter((i) => !i.country).every((i) => !i.source_ids.some((s) => ['K3', 'K4', 'K5', 'K6', 'K8', 'K19'].includes(s))), 'universal items cite no Slovenian source');
   assert.deepEqual(dogGeneral.rabies_vaccination, ['K5', 'K19']);
   // minimum first, then best practice, then other schemes
   for (const [id, c] of Object.entries(byId)) {
@@ -658,6 +662,7 @@ test('checklist: wrong data fails loudly', () => {
   assert.throws(build((d) => { d.general.dog[0].quotes.push({ ...d.general.dog[0].quotes[0] }); }), /repeats a quote/);
   assert.throws(build((d) => { d.general.cat[0].key = d.general.dog[0].key; }), /duplicate key/);
   assert.throws(build((d) => { d.meta.levels = ['minimum']; }), /meta.levels/);
+  assert.throws(build((d) => { d.general.dog[0].country = 'Slovenia'; }), /ISO 3166-1/);
   assert.throws(() => buildRegistry({ ...texts, checklist_sources: '| S1 | A | X | Y | https://x.y | z |' }), /in two tables/);
 });
 

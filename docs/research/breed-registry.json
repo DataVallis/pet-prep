@@ -45,7 +45,7 @@
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "6b591ddc4a9f2dc480443627c0aee2484828f474bedc0afced63cca83bbcc390"
+      "sha256": "2e3813cb31a410d5d5af42510fa19013816826f1c82598084bf7d713b102989d"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -323,40 +323,13 @@
         {
           "key": "min_age_puppy",
           "source_ids": [
-            "K1",
-            "K3"
-          ]
-        },
-        {
-          "key": "microchip_registration",
-          "source_ids": [
-            "K4"
-          ]
-        },
-        {
-          "key": "vaccination_records",
-          "source_ids": [
-            "K3"
-          ]
-        },
-        {
-          "key": "rabies_vaccination",
-          "source_ids": [
-            "K5",
-            "K19"
+            "K1"
           ]
         },
         {
           "key": "pedigree_fci",
           "source_ids": [
-            "K6",
             "K7"
-          ]
-        },
-        {
-          "key": "parents_dna_profile",
-          "source_ids": [
-            "K8"
           ]
         },
         {
@@ -379,6 +352,49 @@
             "K9",
             "K10"
           ]
+        },
+        {
+          "key": "min_age_puppy_si",
+          "source_ids": [
+            "K3"
+          ],
+          "country": "SI"
+        },
+        {
+          "key": "microchip_registration",
+          "source_ids": [
+            "K4"
+          ],
+          "country": "SI"
+        },
+        {
+          "key": "vaccination_records",
+          "source_ids": [
+            "K3"
+          ],
+          "country": "SI"
+        },
+        {
+          "key": "rabies_vaccination",
+          "source_ids": [
+            "K5",
+            "K19"
+          ],
+          "country": "SI"
+        },
+        {
+          "key": "kzs_member_si",
+          "source_ids": [
+            "K6"
+          ],
+          "country": "SI"
+        },
+        {
+          "key": "parents_dna_profile",
+          "source_ids": [
+            "K8"
+          ],
+          "country": "SI"
         }
       ],
       "free_plan": {
@@ -735,7 +751,6 @@
         {
           "key": "kitten_min_age",
           "source_ids": [
-            "K3",
             "K11"
           ]
         },
@@ -749,8 +764,7 @@
         {
           "key": "kitten_pedigree",
           "source_ids": [
-            "K12",
-            "K15"
+            "K12"
           ]
         },
         {
@@ -758,6 +772,20 @@
           "source_ids": [
             "K13"
           ]
+        },
+        {
+          "key": "kitten_min_age_si",
+          "source_ids": [
+            "K3"
+          ],
+          "country": "SI"
+        },
+        {
+          "key": "zfds_member_si",
+          "source_ids": [
+            "K15"
+          ],
+          "country": "SI"
         }
       ],
       "free_plan": {
