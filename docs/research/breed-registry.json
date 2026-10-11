@@ -17,11 +17,11 @@
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
-      "sha256": "8e9ed1cd6c23f97d7130f1005a163dcbca08ac52b813cefd0014384bf25ab806"
+      "sha256": "b67ae4141f73eee335aa29ec436e109d49f83bb838b08c764f2d682bc44566f3"
     },
     "cat_sources": {
       "path": "docs/research/cat-data/sources.md",
-      "sha256": "4867a1cab0d1b5b12f19585879481da0686ab30af291d115b405386f31c22eff"
+      "sha256": "e2b125e4c097955f41b29fe7ec0ce2d12d1ffb7c862efe7a2f4a5ef9af7cefda"
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
@@ -8792,7 +8792,7 @@
           "group": "grooming",
           "field": "grooming_frequency",
           "kind": "category",
-          "value": "once_or_twice_a_week",
+          "value": "at_least_once_or_twice_a_week",
           "source_ids": [
             "C32"
           ],

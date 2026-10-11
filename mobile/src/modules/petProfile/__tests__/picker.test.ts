@@ -357,10 +357,10 @@ describe('PICKER_STRINGS.ageHints', () => {
 
   it('no cat picker note names one paid cat as the only one (two paid cats since M5-R10-14) — SL and EN', async () => {
     const notes = () => [i18n.t('pet:picker.cat.breedFreeNote'), i18n.t('pet:picker.cat.breedChallengeNote'), i18n.t('pet:picker.cat.plans.challenge.hint')];
-    for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk/i);
+    for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk|ragdoll/i);
     await i18n.changeLanguage('en');
     try {
-      for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk/i);
+      for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk|ragdoll/i);
     } finally {
       await i18n.changeLanguage('sl');
     }

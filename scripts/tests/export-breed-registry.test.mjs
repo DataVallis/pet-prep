@@ -600,7 +600,7 @@ test('Ragdoll (M5-R10-15): paid cat, kitten at 3 months, CFA weight by sex, full
   assert.deepEqual([fact('weight').value, fact('weight').source_ids], [{ male: [6.8, 9.1], female: [4.5, 6.8] }, ['C30']]);
   assert.deepEqual([fact('growth_end').value, fact('growth_end').qualifier, fact('growth_end').source_ids], [48, 'about', ['C30']]);
   assert.deepEqual([fact('lifespan').value, fact('lifespan').qualifier, fact('lifespan').source_ids], [10.31, 'expectancy', ['C14']]);
-  assert.deepEqual([fact('grooming_frequency').value, fact('grooming_frequency').source_ids], ['once_or_twice_a_week', ['C32']]);
+  assert.deepEqual([fact('grooming_frequency').value, fact('grooming_frequency').source_ids], ['at_least_once_or_twice_a_week', ['C32']]);
   assert.deepEqual(rag.health.map((h) => [h.key, h.source_ids]), [['heart_hcm', ['C32']], ['dental_weight_nail_care', ['C31']]]);
   assert.ok(rag.health.every((h) => !('value' in h)));
   assert.deepEqual(rag.suitability, { suits: [], consider: [] });
@@ -612,6 +612,7 @@ test('Ragdoll (M5-R10-15): paid cat, kitten at 3 months, CFA weight by sex, full
   assert.ok(rag.game.values.some((v) => v.ref === 'cat-data:ragdoll.arrival_age_kitten' && /pravilo runbooka, M5-R10-15/.test(v.decision)));
   // No health statistics and no median age at death of the C31 study in the register.
   const json = JSON.stringify(rag);
-  assert.doesNotMatch(json, /12\.85|8\.84|7\.11|6\.91|5\.68|periodontal|odds ratio|hypoallergenic|van pattern/i);
+  assert.doesNotMatch(json, /12\.85|periodontal|odds ratio|hypoallergenic|van pattern/i);
+  assert.doesNotMatch(json, /\d+(\.\d+)?\s?%/);
   for (const id of ['C14', 'C30', 'C31', 'C32']) assert.ok(registry.sources.some((s) => s.id === id), id);
 });

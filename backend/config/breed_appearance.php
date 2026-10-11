@@ -1028,7 +1028,7 @@ return [
             // FIFe patterns only (C29); no van (CFA C30 only).
             'coat_pattern' => [
                 ['value' => 'in the colourpoint pattern, with no white anywhere', 'weight' => 3],
-                ['value' => 'in the mitted pattern: white front paws, a white chin and a white stripe along the belly', 'weight' => 2],
+                ['value' => 'in the mitted pattern: white front paws, white hind feet, a white chin and a white stripe along the belly', 'weight' => 2],
                 ['value' => 'in the bicolour pattern: an inverted white V on the face, a white chest, belly and legs', 'weight' => 2],
             ],
             'ear_carriage' => ['medium, broad-based, round-tipped, slightly forward-tilted'],

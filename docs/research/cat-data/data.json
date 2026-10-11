@@ -750,7 +750,7 @@
         "source_id": "C30",
         "quote": "Altered males will usually top the scale at 15-20 pounds;",
         "confidence": "medium",
-        "notes": "15–20 lb converted (1 lb = 0.4536 kg, one decimal). CFA breed page; FIFe gives no weight (C29). PetMD (C32) \"can grow to be 20 pounds\" agrees with the upper bound."
+        "notes": "15–20 lb converted (1 lb = 0.4536 kg, one decimal). CFA gives the range for altered (neutered) males; the register shows it as the male range. CFA breed page; FIFe gives no weight (C29). PetMD (C32) \"can grow to be 20 pounds\" agrees with the upper bound."
       },
       "cfa_female": {
         "value": "4.5–6.8",
@@ -771,12 +771,12 @@
     },
     "grooming": {
       "range": {
-        "value": "Once or twice a week",
+        "value": "At least once or twice a week",
         "unit": "rule",
         "source_id": "C32",
         "quote": "Some Ragdolls only need to be combed (more effective than brushing) once or twice a week",
         "confidence": "medium",
-        "notes": "Information only. CFA (C30): \"requires minimal grooming\" but \"should be combed with a steel comb on a regular basis\"; VetCompass (C31) says Ragdolls \"need more grooming care\". CAT_SPEC Q8 (David 2026-10-08) gives the grooming routine to the Maine Coon only, so the Ragdoll has NO grooming_sessions_per_week row and no matted coat. A weekly combing routine for the semi-long coat would be a new rule → open for David (proposal Claude, not built)."
+        "notes": "Information only. The source says \"Some Ragdolls only need\" combing once or twice a week — a minimum for some cats, not a breed rule (hence \"at least\"). CFA (C30): \"requires minimal grooming\" but \"should be combed with a steel comb on a regular basis\"; VetCompass (C31) says Ragdolls \"need more grooming care\". CAT_SPEC Q8 (David 2026-10-08) gives the grooming routine to the Maine Coon only, so the Ragdoll has NO grooming_sessions_per_week row and no matted coat. A combing routine for the semi-long coat would be a new rule → open for David (proposal Claude, not built)."
       }
     },
     "behaviour": {
