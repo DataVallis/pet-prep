@@ -618,6 +618,10 @@ test('checklist: known answers (vet feedback examples, Westie, British Shorthair
   assert.equal(byId.west_highland_white_terrier.status, 'none_recommended');
   assert.deepEqual(byId.west_highland_white_terrier.basis_source_ids, ['S144']);
   assert.equal(byId.british_shorthair.status, 'not_found');
+  // two quotes of one source = one source id (microchip by 8 weeks + report within 7 days, both K4)
+  const dogGeneral = Object.fromEntries(registry.species.find((s) => s.id === 'dog').buyer_checklist.map((i) => [i.key, i.source_ids]));
+  assert.deepEqual(dogGeneral.microchip_registration, ['K4']);
+  assert.deepEqual(dogGeneral.rabies_vaccination, ['K5', 'K19']);
   // minimum first, then best practice, then other schemes
   for (const [id, c] of Object.entries(byId)) {
     const order = c.tests.map((t) => ['minimum', 'best_practice', 'other_scheme'].indexOf(t.level));
@@ -647,7 +651,10 @@ test('checklist: wrong data fails loudly', () => {
   assert.throws(build((d) => { d.breeds.beagle.tests.push({ ...d.breeds.beagle.tests[0] }); }), /twice/);
   assert.throws(build((d) => { d.breeds.beagle.tests = []; }), /listed but has no tests/);
   assert.throws(build((d) => { d.breeds.british_shorthair.notes = ''; }), /needs notes/);
-  assert.throws(build((d) => { d.general.dog[0].quotes = {}; }), /no quote/);
+  assert.throws(build((d) => { d.general.dog[0].quotes = []; }), /has no source/);
+  assert.throws(build((d) => { d.general.dog[0].quotes[0].quote = ' '; }), /no quote/);
+  assert.throws(build((d) => { d.general.dog[0].quotes.push({ ...d.general.dog[0].quotes[0] }); }), /repeats a quote/);
+  assert.throws(build((d) => { d.general.cat[0].key = d.general.dog[0].key; }), /duplicate key/);
   assert.throws(build((d) => { d.meta.levels = ['minimum']; }), /meta.levels/);
   assert.throws(() => buildRegistry({ ...texts, checklist_sources: '| S1 | A | X | Y | https://x.y | z |' }), /in two tables/);
 });

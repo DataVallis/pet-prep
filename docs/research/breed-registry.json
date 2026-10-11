@@ -45,11 +45,11 @@
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "a5c0c3cd685f7d0202553c9bcc74aca6d218c9ce245565aba2eaa2a0dfcfb189"
+      "sha256": "bd6f3d33da744c6003b90c4c4b889a4d504eb77c3d4979410a805deb4bc5f0c4"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "d02a27fd2a019104b9a298fd175803bc1d43c4303e9067ea680c2f3ce883e3e4"
+      "sha256": "9309c470adaa657268901bf4d8ffa5b10fef068f4661c0ed8fbedff4963b8f28"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -336,8 +336,14 @@
         {
           "key": "vaccination_records",
           "source_ids": [
-            "K3",
-            "K5"
+            "K3"
+          ]
+        },
+        {
+          "key": "rabies_vaccination",
+          "source_ids": [
+            "K5",
+            "K19"
           ]
         },
         {
@@ -1341,7 +1347,8 @@
         "K7",
         "K8",
         "K9",
-        "K10"
+        "K10",
+        "K19"
       ]
     },
     {
@@ -2074,7 +2081,8 @@
         "K8",
         "K9",
         "K10",
-        "K16"
+        "K16",
+        "K19"
       ]
     },
     {
@@ -2797,7 +2805,8 @@
         "K7",
         "K8",
         "K9",
-        "K10"
+        "K10",
+        "K19"
       ]
     },
     {
@@ -3443,7 +3452,8 @@
         "K7",
         "K8",
         "K9",
-        "K10"
+        "K10",
+        "K19"
       ]
     },
     {
@@ -4061,7 +4071,8 @@
         "K7",
         "K8",
         "K9",
-        "K10"
+        "K10",
+        "K19"
       ]
     },
     {
@@ -4647,7 +4658,8 @@
         "K8",
         "K9",
         "K10",
-        "K17"
+        "K17",
+        "K19"
       ]
     },
     {
@@ -5161,7 +5173,8 @@
         "K7",
         "K8",
         "K9",
-        "K10"
+        "K10",
+        "K19"
       ]
     },
     {
@@ -5701,7 +5714,8 @@
         "K7",
         "K8",
         "K9",
-        "K10"
+        "K10",
+        "K19"
       ]
     },
     {
@@ -6190,7 +6204,8 @@
         "K7",
         "K8",
         "K9",
-        "K10"
+        "K10",
+        "K19"
       ]
     },
     {
@@ -6782,7 +6797,8 @@
         "K7",
         "K8",
         "K9",
-        "K10"
+        "K10",
+        "K19"
       ]
     },
     {
@@ -7272,7 +7288,8 @@
         "K7",
         "K8",
         "K9",
-        "K10"
+        "K10",
+        "K19"
       ]
     },
     {
@@ -7812,7 +7829,8 @@
         "K7",
         "K8",
         "K9",
-        "K10"
+        "K10",
+        "K19"
       ]
     },
     {
@@ -8337,7 +8355,8 @@
         "K7",
         "K8",
         "K9",
-        "K10"
+        "K10",
+        "K19"
       ]
     },
     {
@@ -8881,7 +8900,8 @@
         "K7",
         "K8",
         "K9",
-        "K10"
+        "K10",
+        "K19"
       ]
     },
     {
@@ -10545,6 +10565,13 @@
       "publisher": "World Cat Congress",
       "title": "Maine Coon — a comparison among the member organisations",
       "url": "https://worldcatcongress.org/wp/cat_breed_comp_mco.php"
+    },
+    {
+      "id": "K19",
+      "tier": "A",
+      "publisher": "Uradni list RS",
+      "title": "Pravilnik o ukrepih za ugotavljanje, preprečevanje širjenja in zatiranje stekline (Uradni list RS, št. 139/2006)",
+      "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2006-01-6103/pravilnik-o-ukrepih-za-ugotavljanje-preprecevanje-sirjenja-in-zatiranje-stekline---rabies-lyssa"
     }
   ]
 }

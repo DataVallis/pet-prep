@@ -1134,16 +1134,23 @@ export function exportChecklist(data, sources, breedsBySpecies) {
     if (typeof quote !== 'string' || quote.trim() === '') throw new Error(`${where}: ${ctx} has no quote for ${id}`);
   };
   const species = {};
+  // One key space for all species: the website has one word map for the general items.
+  const seen = new Set();
   for (const sp of Object.keys(breedsBySpecies)) {
     const items = data.general?.[sp];
     if (!Array.isArray(items) || items.length === 0) throw new Error(`${where}: general.${sp} is missing`);
-    const seen = new Set();
     species[sp] = items.map((it) => {
       if (!KEY_RE.test(it.key ?? '') || seen.has(it.key)) throw new Error(`${where}: general.${sp} bad or duplicate key ${it.key}`);
       seen.add(it.key);
-      if (!Array.isArray(it.source_ids) || it.source_ids.length === 0) throw new Error(`${where}: general.${sp}.${it.key} has no source`);
-      for (const id of it.source_ids) cite(`general.${sp}.${it.key}`, id, it.quotes?.[id]);
-      return { key: it.key, source_ids: [...new Set(it.source_ids)].sort(bySourceId) };
+      if (!Array.isArray(it.quotes) || it.quotes.length === 0) throw new Error(`${where}: general.${sp}.${it.key} has no source`);
+      const pairs = new Set();
+      for (const q of it.quotes) {
+        cite(`general.${sp}.${it.key}`, q.source_id, q.quote);
+        const pair = `${q.source_id}\u0000${q.quote}`;
+        if (pairs.has(pair)) throw new Error(`${where}: general.${sp}.${it.key} repeats a quote of ${q.source_id}`);
+        pairs.add(pair);
+      }
+      return { key: it.key, source_ids: [...new Set(it.quotes.map((q) => q.source_id))].sort(bySourceId) };
     });
   }
   const all = Object.values(breedsBySpecies).flat();

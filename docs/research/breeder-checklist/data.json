@@ -13,159 +13,198 @@
     "dog": [
       {
         "key": "see_mother",
-        "source_ids": [
-          "K1",
-          "K2"
-        ],
-        "quotes": {
-          "K1": "Make sure you see the full litter of puppies with their mother",
-          "K2": "Always make sure you see mum and her pups together"
-        }
+        "quotes": [
+          {
+            "source_id": "K1",
+            "quote": "Make sure you see the full litter of puppies with their mother"
+          },
+          {
+            "source_id": "K2",
+            "quote": "Always make sure you see mum and her pups together"
+          }
+        ]
       },
       {
         "key": "min_age_puppy",
-        "source_ids": [
-          "K3",
-          "K1"
+        "quotes": [
+          {
+            "source_id": "K3",
+            "quote": "Mladičev ni dovoljeno odvzeti od psice pred dopolnjenim osmim tednom starosti."
+          },
+          {
+            "source_id": "K1",
+            "quote": "The breeder should not be willing to allow the puppies to leave their mum before 8 weeks of age."
+          }
         ],
-        "quotes": {
-          "K3": "Mladičev ni dovoljeno odvzeti od psice pred dopolnjenim osmim tednom starosti.",
-          "K1": "The breeder should not be willing to allow the puppies to leave their mum before 8 weeks of age."
-        },
         "notes": "Slovenian rule (Art. 27, 2009 text — consolidated text not verified) + PDSA."
       },
       {
         "key": "microchip_registration",
-        "source_ids": [
-          "K4",
-          "K4"
-        ],
-        "quotes": {
-          "K4": "Lastnik psa prijavi lastništvo psa v sedmih dneh od njegove pridobitve."
-        }
+        "quotes": [
+          {
+            "source_id": "K4",
+            "quote": "Lastnik psa zagotovi, da je pes do dopolnjenega osmega tedna starosti označen na predpisan način."
+          },
+          {
+            "source_id": "K4",
+            "quote": "Lastnik psa prijavi lastništvo psa v sedmih dneh od njegove pridobitve."
+          }
+        ]
       },
       {
         "key": "vaccination_records",
-        "source_ids": [
-          "K5",
-          "K3"
+        "quotes": [
+          {
+            "source_id": "K3",
+            "quote": "Prodajalec mora kupcu ob prodaji živali izročiti predpisane veterinarske dokumente"
+          }
         ],
-        "quotes": {
-          "K5": "obvezno cepljenje psov proti steklini, velikega pomena v boju zoper steklino.",
-          "K3": "Prodajalec mora kupcu ob prodaji živali izročiti predpisane veterinarske dokumente"
-        }
+        "notes": "2009 text (Art. 20)."
+      },
+      {
+        "key": "rabies_vaccination",
+        "quotes": [
+          {
+            "source_id": "K5",
+            "quote": "obvezno cepljenje psov proti steklini, velikega pomena v boju zoper steklino."
+          },
+          {
+            "source_id": "K19",
+            "quote": "Imetniki psov morajo zagotoviti cepljenje psov proti bolezni, ko ti dopolnijo tri mesece starosti."
+          }
+        ],
+        "notes": "Duty of the dog's keeper (the new owner), not of the seller; 2006 text — later amendments to intervals not checked."
       },
       {
         "key": "pedigree_fci",
-        "source_ids": [
-          "K6",
-          "K7"
+        "quotes": [
+          {
+            "source_id": "K6",
+            "quote": "The data have been collected from the national canine organisations member of the FCI."
+          },
+          {
+            "source_id": "K7",
+            "quote": "Pedigrees, which are in fact birth certificates, must be issued for correct parentage only."
+          }
         ],
-        "quotes": {
-          "K6": "The data have been collected from the national canine organisations member of the FCI.",
-          "K7": "Pedigrees, which are in fact birth certificates, must be issued for correct parentage only."
-        },
         "notes": "KZS issuing pedigrees: only a tier-C source (BIC Ljubljana textbook 2011) — the website sentence says 'national kennel club in the FCI (in Slovenia: KZS)'."
       },
       {
         "key": "parents_dna_profile",
-        "source_ids": [
-          "K8",
-          "K8"
+        "quotes": [
+          {
+            "source_id": "K8",
+            "quote": "storitev, ki je za lastnike vzrejnih psov obvezna."
+          },
+          {
+            "source_id": "K8",
+            "quote": "S strani Kinološke zveze smo potrjeni kot uradni izvajalec preverjanja rodovnikov."
+          }
         ],
-        "quotes": {
-          "K8": "S strani Kinološke zveze smo potrjeni kot uradni izvajalec preverjanja rodovnikov."
-        },
         "notes": "Slovenia-specific (KZS)."
       },
       {
         "key": "parents_health_tests",
-        "source_ids": [
-          "K9",
-          "K1",
-          "K10"
-        ],
-        "quotes": {
-          "K9": "To ensure you are buying a happy and healthy puppy always ask to see the relevant health test results for both parents.",
-          "K1": "Ask to see the paperwork and check the test results and scores.",
-          "K10": "Different breeds are predisposed to different conditions so there are no blanket health test requirements."
-        }
+        "quotes": [
+          {
+            "source_id": "K9",
+            "quote": "To ensure you are buying a happy and healthy puppy always ask to see the relevant health test results for both parents."
+          },
+          {
+            "source_id": "K1",
+            "quote": "Ask to see the paperwork and check the test results and scores."
+          },
+          {
+            "source_id": "K10",
+            "quote": "Different breeds are predisposed to different conditions so there are no blanket health test requirements."
+          }
+        ]
       },
       {
         "key": "breed_club_rules",
-        "source_ids": [
-          "K7"
-        ],
-        "quotes": {
-          "K7": "The breeding regulations of the member countries and contract partners can go beyond those of the FCI in their requirements"
-        }
+        "quotes": [
+          {
+            "source_id": "K7",
+            "quote": "The breeding regulations of the member countries and contract partners can go beyond those of the FCI in their requirements"
+          }
+        ]
       },
       {
         "key": "written_contract",
-        "source_ids": [
-          "K9",
-          "K10"
-        ],
-        "quotes": {
-          "K9": "The Puppy Contract, developed by the Animal Welfare Foundation and the RSPCA, will document all this information for you.",
-          "K10": "A responsible breeder should be more than happy to issue you with a contract pending the sale of one of their puppies."
-        }
+        "quotes": [
+          {
+            "source_id": "K9",
+            "quote": "The Puppy Contract, developed by the Animal Welfare Foundation and the RSPCA, will document all this information for you."
+          },
+          {
+            "source_id": "K10",
+            "quote": "A responsible breeder should be more than happy to issue you with a contract pending the sale of one of their puppies."
+          }
+        ]
       }
     ],
     "cat": [
       {
         "key": "kitten_see_mother",
-        "source_ids": [
-          "K12",
-          "K14"
-        ],
-        "quotes": {
-          "K12": "Ask to see where the kittens are usually kept and to see the 'Mum'.",
-          "K14": "a healthy-looking mother cat that’s confident with people and healthy interactive kittens."
-        }
+        "quotes": [
+          {
+            "source_id": "K12",
+            "quote": "Ask to see where the kittens are usually kept and to see the 'Mum'."
+          },
+          {
+            "source_id": "K14",
+            "quote": "a healthy-looking mother cat that’s confident with people and healthy interactive kittens."
+          }
+        ]
       },
       {
         "key": "kitten_min_age",
-        "source_ids": [
-          "K3",
-          "K11"
+        "quotes": [
+          {
+            "source_id": "K3",
+            "quote": "Mladičev ni dovoljeno odvzeti od samice pred dopolnjenim dvanajstim tednom starosti."
+          },
+          {
+            "source_id": "K11",
+            "quote": "Kittens must not go to a new owner (home) before they are 14 weeks old"
+          }
         ],
-        "quotes": {
-          "K3": "Mladičev ni dovoljeno odvzeti od samice pred dopolnjenim dvanajstim tednom starosti.",
-          "K11": "Kittens must not go to a new owner (home) before they are 14 weeks old"
-        },
         "notes": "Slovenian rule (Art. 36, 2009 text — consolidated text not verified) = 12 weeks; FIFe pedigree rule = 14 weeks; GCCF (K12) = 13 weeks."
       },
       {
         "key": "kitten_vaccination",
-        "source_ids": [
-          "K11",
-          "K12"
-        ],
-        "quotes": {
-          "K11": "and have been fully vaccinated against feline panleucopenia, feline calici virus and feline herpes virus,",
-          "K12": "A vaccination card for the kitten showing the record for the full course of vaccinations"
-        }
+        "quotes": [
+          {
+            "source_id": "K11",
+            "quote": "and have been fully vaccinated against feline panleucopenia, feline calici virus and feline herpes virus,"
+          },
+          {
+            "source_id": "K12",
+            "quote": "A vaccination card for the kitten showing the record for the full course of vaccinations"
+          }
+        ]
       },
       {
         "key": "kitten_pedigree",
-        "source_ids": [
-          "K15",
-          "K12"
-        ],
-        "quotes": {
-          "K15": "Članica FIFe že od 1988.",
-          "K12": "A pedigree certificate signed by the breeder showing at least 3 generations."
-        }
+        "quotes": [
+          {
+            "source_id": "K15",
+            "quote": "Članica FIFe že od 1988."
+          },
+          {
+            "source_id": "K12",
+            "quote": "A pedigree certificate signed by the breeder showing at least 3 generations."
+          }
+        ]
       },
       {
         "key": "kitten_parents_tests",
-        "source_ids": [
-          "K13"
-        ],
-        "quotes": {
-          "K13": "check out both parents of the kitten to see if they’ve had any problems your kitten could inherit."
-        }
+        "quotes": [
+          {
+            "source_id": "K13",
+            "quote": "check out both parents of the kitten to see if they’ve had any problems your kitten could inherit."
+          }
+        ]
       }
     ]
   },
