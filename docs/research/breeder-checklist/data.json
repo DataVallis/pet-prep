@@ -942,6 +942,25 @@
       "status": "not_found",
       "tests": [],
       "notes": "No A/B source names a routine test for breeding Siberians. World Cat Congress comparison (https://worldcatcongress.org/wp/cat_breed_comp_sib.php, accessed 2026-10-11): only GCCF's deafness certificate for white cats; the NZCF Siberian Health & Care Policy (2022) recommends HCM, PKD and PK-deficiency screening only \"where there is reason to suspect the disease is present\" — not a routine test of the parents. Show the general cat checklist only."
+    },
+    "norwegian_forest_cat": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K21",
+        "level_quotes": {
+          "minimum": "Cats shall be DNA tested for the GBE-a gene (GSD IV – glycogen storage disease) unless both parents of the breeding cat are"
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_gsd4",
+          "level": "minimum",
+          "name": "DNA test for the GBE-a gene (GSD IV – glycogen storage disease)",
+          "source_id": "K21",
+          "quote": "Cats shall be DNA tested for the GBE-a gene (GSD IV – glycogen storage disease) unless both parents of the breeding cat are"
+        }
+      ],
+      "notes": "FIFe breeding rule via World Cat Congress (the rest of the cell, paraphrase: unless both parents are proven non-carriers; carriers may not be mated with carriers; the certificate goes with the pedigree). GCCF lists only a BAER hearing certificate for white cats (not a routine test of every parent — not listed). GSD IV: GCCF C37 / UC Davis VGL C41 in cat-data."
     }
   }
 }
