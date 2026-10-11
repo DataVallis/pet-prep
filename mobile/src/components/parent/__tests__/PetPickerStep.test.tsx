@@ -251,6 +251,7 @@ describe('PetPickerStep', () => {
       'breed-option-siberian_husky',
       'breed-option-rottweiler',
       'breed-option-bulldog',
+      'breed-option-german_shorthaired_pointer',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -489,6 +490,45 @@ describe('PetPickerStep', () => {
       expect(consider).toHaveTextContent(/escapes easily — needs a secure, high fence/);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-siberian_husky')).toHaveTextContent(/Siberian Husky/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-21: the German Shorthaired Pointer (fallback) shows its chips, is found as "ptičar" and "gsp", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const pointer = screen.getByTestId('breed-option-german_shorthaired_pointer');
+    expect(pointer).toHaveTextContent(/Nemški kratkodlaki ptičar/);
+    expect(pointer).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-german_shorthaired_pointer-suits')).toHaveTextContent(/aktivno družinoveliko hišo z vrtom/);
+    expect(screen.getByTestId('breed-suitability-german_shorthaired_pointer-consider')).toHaveTextContent(/vsak dan potrebuje veliko gibanjaizpada mu dlaka/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'ptičar');
+    expect(screen.getByTestId('breed-option-german_shorthaired_pointer')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-german_shepherd')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'gsp');
+    expect(screen.getByTestId('breed-option-german_shorthaired_pointer')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-german_shorthaired_pointer'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'german_shorthaired_pointer', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'german_shorthaired_pointer' }),
+    );
+  });
+
+  it('M5-R10-21: the German Shorthaired Pointer chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-german_shorthaired_pointer-consider');
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-german_shorthaired_pointer')).toHaveTextContent(/German Shorthaired Pointer/);
     } finally {
       await i18n.changeLanguage('sl');
     }

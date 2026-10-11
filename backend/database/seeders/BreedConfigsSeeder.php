@@ -398,6 +398,28 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.bulldog',
                 'search_keywords' => ['bulldog', 'english bulldog', 'british bulldog', 'angleški buldog', 'angleski buldog', 'buldog'],
             ],
+            // M5-R10-21 German Shorthaired Pointer (docs/research/dog-data/data.json
+            // german_shorthaired_pointer, sources S184–S189; runbook rules confirmed by David
+            // 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.german_shorthaired_pointer.step_goal_adult: 120 min ×
+            // 100 steps/min — RKC S187 "More than 2 hours per day", PDSA S188 "over 2 hours
+            // ideally per day") — only the legacy-profile fallback. Hunger / thirst decay, poops
+            // and water are the Border Collie's (no per-breed number).
+            [
+                'breed_slug' => BreedType::GermanShorthairedPointer->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 170,
+                'label_key' => 'breeds.german_shorthaired_pointer',
+                'search_keywords' => ['german shorthaired pointer', 'german short-haired pointer', 'german pointer', 'gsp', 'shorthair', 'deutsch kurzhaar', 'kurzhaar', 'nemški kratkodlaki ptičar', 'nemski kratkodlaki pticar', 'kratkodlaki ptičar', 'kratkodlaki pticar', 'ptičar', 'pticar'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

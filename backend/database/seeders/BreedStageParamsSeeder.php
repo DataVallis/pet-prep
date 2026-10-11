@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -259,6 +259,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_BULLDOG = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-20)';
 
     /**
+     * M5-R10-21 German Shorthaired Pointer (unattended run 2026-10-11, data.json
+     * proposed_game_parameters.german_shorthaired_pointer.*.decision): every value follows a
+     * standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on
+     * 2026-10-10 — exercise 120 min, senior 90 min, puppy 10 min × age capped at 120, stages
+     * 9 / 36 / 121 (senior from the McMillan 2024 median 13.4 y via the Dogs Trust table, S123),
+     * arrival 2 / 9 / 36 / 121, learning multiplier 1.5 (Coren 17, Excellent); care rates the
+     * Border Collie's.
+     */
+    public const CONFIRMED_R10_GERMAN_SHORTHAIRED_POINTER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-21)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -328,7 +339,7 @@ class BreedStageParamsSeeder extends Seeder
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -757,6 +768,10 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-20 (docs/research/dog-data/data.json bulldog,
             // S175–S183; runbook rules in proposed_game_parameters.bulldog).
             BreedType::Bulldog => self::bulldogProfile(),
+
+            // M5-R10-21 (docs/research/dog-data/data.json german_shorthaired_pointer,
+            // S184–S189; runbook rules in proposed_game_parameters.german_shorthaired_pointer).
+            BreedType::GermanShorthairedPointer => self::germanShorthairedPointerProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -1885,6 +1900,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'bulldog.lifespan.median_uk',
                 'quote' => 'Bulldog (green, x̃= 9.8)',
                 'notes' => 'McMillan et al. 2024, corrected Fig. 3 legend (S54); published text (S135) the same. VetCompass 2013 median 7.2 y (S181) recorded as an alternative. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * German Shorthaired Pointer (M5-R10-21). Stage boundaries, arrival ages, exercise minutes
+     * and the learning multiplier follow the runbook's standing rules
+     * (CONFIRMED_R10_GERMAN_SHORTHAIRED_POINTER); weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function germanShorthairedPointerProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_GERMAN_SHORTHAIRED_POINTER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S123', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.german_shorthaired_pointer.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [121, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 13.4 y (Dogs Trust breed table, S123) = 10.05 y = 120.6 → 121 months. Not chosen: 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 121],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.german_shorthaired_pointer.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S187', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.german_shorthaired_pointer.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S187) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA "over 2 hours ideally per day" (S188) agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.german_shorthaired_pointer.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[20.4, 31.8], [
+                'unit' => 'kg', 'source_id' => 'S186', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'german_shorthaired_pointer.adult_weight.akc',
+                'quote' => 'Weight of dogs 55 to 70 pounds.',
+                'notes' => 'AKC standard via GSPCA (S186): dogs 55–70 lb, "Weight of bitches 45 to 60 pounds." → 20.4–31.8 kg (× 0.4536). The FCI standard (S184) gives no weight; PDSA (S188) 20–34 kg.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'german_shorthaired_pointer.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (AKC 45–70 lb straddles Medium and Large; the midpoint 57.5 lb is the Medium class of S10).',
+            ]],
+            'coren_rank' => [17, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'german_shorthaired_pointer.trainability.coren_rank',
+                'quote' => '| 17 | German Shorthaired Pointer |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 17, tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.german_shorthaired_pointer.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 17 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [13.4, [
+                'unit' => 'years', 'source_id' => 'S123', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'german_shorthaired_pointer.lifespan.median_uk',
+                'quote' => 'German Shorthaired Pointer | 13.4 | 13.3 - 13.6 | 3313 | 947',
+                'notes' => 'McMillan et al. 2024 data as tabled by Dogs Trust (S123). PDSA "Over 10 years" (S188) and Dogs Trust "typically 11+ years" (S189) agree. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

@@ -6,6 +6,23 @@
 
 Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, zavetišča, veterinarji, šole) · 👩 starši / mame · 🧒 otroci · 🛠 tehnična publika (dev skupnost, LinkedIn)
 
+
+---
+
+## 2026-10-11 — Nemški kratkodlaki ptičar: tretja pasma po dvajsetih (M5-R10-21)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **nemškega kratkodlakega ptičarja** (10. mesto). Raziskava: **6 novih virov (S184–S189)** — standard FCI in nomenklatura, uradni standard AKC (German Shorthaired Pointer Club of America), The Royal Kennel Club, PDSA in Dogs Trust; mediana življenjske dobe iz velike britanske raziskave McMillan 2024 (**13,4 leta**, tabela Dogs Trust). Pravila igre: odrasel **120 minut = 12.000 korakov** na dan, starejši 90 minut = 9.000, mladiček od 2.000 navzgor; starejši je od **121. meseca**; uči se **1,5-krat hitreje** kot mešanček (Coren: 17. mesto).
+
+**Zakaj je pomembno:** Ptičar je lovski pes z veliko energije — PetPrep to pove z viri: oznaki »aktivno družino« in »vsak dan potrebuje veliko gibanja«. PDSA opozarja na lovski nagon in dober odpoklic — to igra že vadi z ukazom »Pridi«. Oba standarda opisujeta kupiran rep; PetPrep pokaže psa z naravnim repom. Ker ni pasma s skrbjo za dobrobit, je lahko tudi v marketingu.
+
+**Številke:** 6 novih virov (S184–S189), 1 migracija, 0 novih oznak, 0 novih nalog (krtačenje čaka na obstoječo M5-R13); Pest **2.407** testov, Jest **2.052**, izvoz registra **41** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Nemški kratkodlaki ptičar je prijazen in se razmeroma lahko uči, a potrebuje več kot dve uri gibanja na dan in dober odpoklic — ko zavoha divjad, ga lovski nagon rad odnese.«
+- 💼 Investitorji: »Tretja pasma, ki jo je sistem sam izbral po javni lestvici AKC in jo zgradil po istem postopku — z viri, testi in neodvisnim pregledom.«
+- 🤝 Partnerji (veterinarji, zavetišča): »PetPrep pri ptičarju pove, koliko gibanja res potrebuje, in pokaže psa z naravnim repom.«
+- 📣 Omrežja: »Ali vaša družina zmore dve uri gibanja na dan? Kmalu boste lahko nemškega kratkodlakega ptičarja preizkusili v PetPrepu, preden ga pripeljete domov.« *(ko bo nakup v trgovini deloval)*
+- 🛠 Tehnično: »Prva pasma z mediano iz tabele Dogs Trust (McMillan 2024) in prva, katere potreba z virom (odpoklic) se je preslikala na že obstoječo mehaniko.«
 ---
 
 ## 2026-10-11 — Angleški buldog: druga pasma po dvajsetih (M5-R10-20)

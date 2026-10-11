@@ -180,6 +180,16 @@
 | not exaggerated body, `tail` for a natural straight tail. Weights unsourced →
 | `verified => false`; red and white weighted highest (the register portrait).
 |
+| German Shorthaired Pointer (M5-R10-21, docs/research/dog-data german_shorthaired_pointer.appearance):
+| noble and balanced, built for strength, endurance and speed; short, dense, rough and hard
+| coat; broad, flat ears set high; almond, dark-brown eyes; brown nose on a liver dog (FCI 119
+| S184, AKC via GSPCA S186). Colours: solid liver, liver and white (ticked / roan / patched),
+| solid black, black and white — "Any other color or color combination is a disqualification."
+| and red / orange / lemon / tan or solid white disqualify (S186). Both standards describe a
+| docked tail; the game shows the natural tail (Claude's proposal 2026-10-11, open for David). Weights
+| unsourced → `verified => false`; liver roan with a solid liver head weighted highest (the
+| register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -937,6 +947,40 @@ return [
             'muzzle' => ['short broad muzzle that is not exaggerated, with a black nose, large wide-open nostrils and only a light wrinkle that never covers the eyes or nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-21 (docs/research/dog-data/data.json german_shorthaired_pointer.appearance; runbook
+    // rule: standard colours only; natural tail = Claude's proposal, open for David).
+    'german_shorthaired_pointer' => [
+        'display_name' => 'German Shorthaired Pointer',
+        // Colour frequencies are in no source (german_shorthaired_pointer.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'AKC standard via the German Shorthaired Pointer Club of America (S186, https://www.gspca.org/?p=240302), FCI-Standard N° 119 (S184), RKC breed page (S187), PDSA (S188) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S188 "Size: Large" (PDSA key facts); S186 "Size – height of dogs, measured at the withers, 23 to 25 inches."',
+            'build' => 'S184 "A dog of noble and balanced appearance, the conformation of which ensures strength, endurance and speed."',
+            'coat_length' => 'S184 "Short and dense, rough and hard to the touch."',
+            'coat_color' => 'S186 "The coat may be of solid liver or a combination of liver and white such as liver and white ticked" / "Or the coat may be of solid black or any combination of black and white such as black and white ticked"; "Any other color or color combination is a disqualification." (weights unsourced; never tan / red / lemon / solid white, S186)',
+            'ear_carriage' => 'S184 "Moderately long, set on high and broad, flat and without twisting hanging down close to the head."',
+            'eye_color' => 'S186 "The eye is almond shaped, not circular." "The preferred color is dark brown."',
+            'tail' => 'S184 "About halfway docked for hunting purposes." — the game shows the natural, undocked tail (Claude\'s proposal 2026-10-11, open for David; appearance.tail notes)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'noble, athletic and balanced, lean and muscular, built for endurance and speed', 'weight' => 3], 'lean, deep-chested, standing alert'],
+            'coat_length' => ['short, dense, flat-lying, rough and hard coat'],
+            // Standard colours only (S186); liver roan with a solid liver head highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'liver roan (liver and white ticked) with a solid liver head and liver patches', 'weight' => 4],
+                ['value' => 'solid liver', 'weight' => 2],
+                ['value' => 'liver and white ticked', 'weight' => 2],
+                'black roan with a solid black head',
+                'solid black',
+            ],
+            'ear_carriage' => ['broad, flat ears set high, hanging close to the head'],
+            'eye_color' => ['dark brown, almond-shaped'],
+            'tail' => ['natural, undocked tail carried level with the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

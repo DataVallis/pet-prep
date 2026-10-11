@@ -501,5 +501,24 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S177'], 'refs' => ['bulldog.suitability.rkc_shedding']],
             ],
         ],
+
+        // M5-R10-21: german_shorthaired_pointer.* (S184–S189), runbook rules (data.json
+        // proposed_game_parameters.german_shorthaired_pointer.suitability_tags). No welfare chip
+        // (no conformation concern found). Not `family_pet` / `children` (only a gundog-group
+        // sentence on the RKC page, S187), not `apartment` (RKC "Large House").
+        'german_shorthaired_pointer' => [
+            'suits' => [
+                // S187 "More than 2 hours per day"; S188 "over 2 hours ideally per day".
+                ['tag' => 'active_family', 'source_ids' => ['S187', 'S188'], 'refs' => ['german_shorthaired_pointer.exercise.adult', 'german_shorthaired_pointer.suitability.pdsa_exercise']],
+                // S187 Size of home "Large House".
+                ['tag' => 'large_home', 'source_ids' => ['S187'], 'refs' => ['german_shorthaired_pointer.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S187 "More than 2 hours per day"; S188 "over 2 hours ideally per day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S187', 'S188'], 'refs' => ['german_shorthaired_pointer.exercise.adult', 'german_shorthaired_pointer.suitability.pdsa_exercise']],
+                // S189 "Short length with moderate shedding".
+                ['tag' => 'sheds', 'source_ids' => ['S189'], 'refs' => ['german_shorthaired_pointer.suitability.dogs_trust_shedding']],
+            ],
+        ],
     ],
 ];

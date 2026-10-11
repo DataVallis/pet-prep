@@ -103,6 +103,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.rottweiler.availability, 'coming_soon');
   assert.deepEqual(byId.bulldog.slug, { en: 'bulldog', sl: 'angleski-buldog' });
   assert.equal(byId.bulldog.availability, 'coming_soon');
+  assert.deepEqual(byId.german_shorthaired_pointer.slug, { en: 'german-shorthaired-pointer', sl: 'nemski-kratkodlaki-pticar' });
+  assert.equal(byId.german_shorthaired_pointer.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.equal(byId.british_shorthair.availability, 'coming_soon');
@@ -178,6 +180,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     siberian_husky: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1 },
     rottweiler: { adult: 12000, senior: 9000, seniorFrom: 81, learning: 1.8 },
     bulldog: { adult: 6000, senior: 4500, seniorFrom: 88, learning: 0.5 },
+    german_shorthaired_pointer: { adult: 12000, senior: 9000, seniorFrom: 121, learning: 1.5 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -854,3 +857,27 @@ test('Bulldog (M5-R10-20): up to 1 hour, FCI weight by sex, FCI group 2 GB, McMi
   assert.doesNotMatch(json, /vetcompass_2013|common_disorders|hypoallergenic|odds ratio|x14|HR 1\.8|7\.2|merle/i);
 });
 
+test('German Shorthaired Pointer (M5-R10-21): more than 2 hours, AKC weight by sex, FCI group 7 DE, McMillan median + PDSA "over 10 years", Coren 17, no welfare chip', () => {
+  const d = registry.breeds.find((b) => b.id === 'german_shorthaired_pointer');
+  assert.deepEqual(d.name, { en: 'German Shorthaired Pointer', sl: 'Nemški kratkodlaki ptičar' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S187']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 119, group: 7, section: 1, origin: 'DE' });
+  // FCI gives no weight → the AKC standard (lb → kg); height from the AKC standard (in → cm).
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [24.9, 31.8], female: [20.4, 27.2] }, ['S186']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [58.4, 63.5], female: [53.3, 58.4] }, ['S186']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['median', 13.4, ['S123']], ['more_than', 10, ['S188']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'growth_end').value, [12, 15]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 17);
+  assert.deepEqual(d.facets, { size: 'large', exercise: 'over_2h', grooming: 'weekly' });
+  // 10 min × age reaches the 120-minute cap at 12 months; senior 90 min from 121 months.
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 12000, cap_month: 12 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 121 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 9000 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'large_home']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'sheds']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia_arthritis', 'bloat_gdv', 'bleeding_disorder_vwd', 'heart_muscle_disease', 'itchy_skin_allergy', 'entropion_cherry_eye']);
+  // No A/B source names tests for the parents → the general dog checklist only.
+  assert.equal(d.breeder_checklist.status, 'not_found');
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a docked tail or a disqualifying colour, no CI / counts from the McMillan table.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|lemon|3313|947|13\.3 - 13\.6/i);
+});

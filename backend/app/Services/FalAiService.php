@@ -201,6 +201,13 @@ class FalAiService
                 .'moderate short broad muzzle with large wide-open nostrils and only a light wrinkle, '
                 .'natural straight low-set tail, thick-set but sound and compact build, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-21: AKC standard via GSPCA (S186) / FCI 119 (S184) — liver, liver and white,
+            // black, black and white (never tan / red / lemon / solid white — S186); short hard
+            // coat, broad flat ears, dark almond eyes; natural undocked tail (Claude's proposal, open for David).
+            BreedType::GermanShorthairedPointer => 'An alert German Shorthaired Pointer dog with a liver roan coat and a solid liver head, '
+                .'short dense hard coat, broad flat ears set high and hanging close to the head, dark brown almond-shaped eyes, '
+                .'natural undocked tail, noble athletic balanced build, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -460,6 +467,22 @@ class FalAiService
                     0 => 'white blaze, chest and feet',
                     1 => 'no markings',
                     2 => 'white body with red patches',
+                },
+            ],
+            // M5-R10-21: AKC standard (S186) solid liver / liver and white / solid black / black and
+            // white; never tan, red, orange, lemon or solid white (S186).
+            BreedType::GermanShorthairedPointer => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'liver roan',
+                    1 => 'solid liver',
+                    2 => 'black roan',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, dense, rough and hard',
+                'markings' => match ($variantIndex) {
+                    0 => 'solid liver head with liver patches on a ticked body',
+                    1 => 'no markings',
+                    2 => 'solid black head with black patches on a ticked body',
                 },
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.

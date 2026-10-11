@@ -387,6 +387,7 @@ const SPECIES = [
       { id: 'siberian_husky', availability: 'coming_soon', synonyms: { en: ['Husky', 'Huskie'], sl: ['haski', 'sibirski husky', 'husky', 'sibirec'] } },
       { id: 'rottweiler', availability: 'coming_soon', synonyms: { en: ['Rottie', 'Rotty', 'Rott'], sl: ['rottweiler', 'rotvajlerka', 'rottie'] } },
       { id: 'bulldog', availability: 'coming_soon', synonyms: { en: ['English Bulldog', 'British Bulldog'], sl: ['buldog', 'angleski buldog', 'bulldog', 'english bulldog', 'british bulldog'] } },
+      { id: 'german_shorthaired_pointer', availability: 'coming_soon', synonyms: { en: ['GSP', 'German Pointer', 'Shorthair', 'Deutsch Kurzhaar', 'Kurzhaar'], sl: ['kratkodlaki ptičar', 'kratkodlaki pticar', 'nemski kratkodlaki pticar', 'kurzhaar', 'gsp'] } },
     ],
   },
   {
@@ -705,6 +706,30 @@ const DOG_FACTS = {
       ['hip_elbow_joint_disease', 'health.joints'],
     ],
   },
+  // M5-R10-21. Not exported: lifespan.dogs_trust (11+, same message as PDSA), lifespan.rkc (ambiguous
+  // placement, null), lifespan.senior_from (derived), adult_weight.pdsa (AKC is the register's standard; FCI
+  // gives no weight), height.fci (condensed by the fetch tool — paraphrase) and height.pdsa_average,
+  // health.lymphoedema / hypothyroidism (no website sentence needed). Lifespan = McMillan 2024 via the Dogs
+  // Trust table (S123) and the PDSA band "Over 10 years". Own health keys where the shared sentence names a
+  // test or a judge the pointer's sources do not (hip_dysplasia, skin_allergies, eyelid_eye_problems).
+  german_shorthaired_pointer: {
+    height: ['height.akc'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.pdsa', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.dogs_trust_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['bloat_gdv', 'health.gdv'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['heart_muscle_disease', 'health.heart'],
+      ['itchy_skin_allergy', 'health.atopy'],
+      ['entropion_cherry_eye', 'health.eyes'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -835,6 +860,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.bulldog.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.bulldog.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.bulldog.exercise_minutes_senior',
+  },
+  german_shorthaired_pointer: {
+    adult_minutes: ['proposed_game_parameters.german_shorthaired_pointer.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.german_shorthaired_pointer.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.german_shorthaired_pointer.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.german_shorthaired_pointer.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.german_shorthaired_pointer.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.german_shorthaired_pointer.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],
