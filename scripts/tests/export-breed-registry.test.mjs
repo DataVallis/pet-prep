@@ -847,7 +847,7 @@ test('Bulldog (M5-R10-20): up to 1 hour, FCI weight by sex, FCI group 2 GB, McMi
   assert.deepEqual(d.game.stages[3].activity, { kind: 'steps', value: 4500 });
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'other_pets']);
   assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['brachycephalic_breathing', 'sensitive_skin', 'shorter_lifespan', 'sheds']);
-  assert.deepEqual(d.health.map((h) => h.key), ['flat_face_breathing', 'heat_stroke_risk', 'skin_fold_infections', 'eyelid_eye_problems', 'hip_elbow_dysplasia']);
+  assert.deepEqual(d.health.map((h) => h.key), ['flat_face_breathing', 'heat_stroke_risk', 'skin_fold_infections', 'eyelid_eye_problems', 'hip_elbow_joint_disease']);
   assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['dna_huu', 'minimum'], ['inbreeding_coi', 'minimum'], ['boas_grading', 'other_scheme']]);
   const json = JSON.stringify(d);
   // No VetCompass percentages, no hazard ratio, no "x14", no 7.2-year death median, never "hypoallergenic", never merle.
