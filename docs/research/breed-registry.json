@@ -45,7 +45,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "f7c611044f1d7a97890c0d5ec3e6610cfe0dac32b58f80003dae63d3cf65cd76"
+      "sha256": "d65a700b2bd160fda2412d782c1e800c1d02dd68b3cfcbf62e44f25fe017fdf0"
     }
   },
   "suitability_vocabulary": {
@@ -9033,7 +9033,12 @@
           "C13"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "ragdoll.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "source_ids": [
         "C1",
         "C2",
