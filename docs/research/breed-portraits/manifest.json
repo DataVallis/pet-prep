@@ -173,6 +173,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "rottweiler",
+            "species": "dog",
+            "file": "dog/rottweiler.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:eacc7a4aae17b4af5bc0cc221c1312c3f215b88cd0d0597d79d77e2a88ddf161",
+            "generated_at": "2026-10-11T17:49:19+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
