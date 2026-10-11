@@ -39,3 +39,4 @@ that are new for this checklist get a K-id. Quotes in `data.json` are what the f
 - **German Shepherd, Havanese** — the first fetches were blocked; retried once successfully (S97, S138).
 - **Labrador, current RKC format** — royalkennelclub.com returned a server error; K16 (older page) used.
 - **Puppy Contract site** (puppycontract.org.uk) — blocked; cited through BVA (K9) and PDSA (K1).
+- **German Shorthaired Pointer parents' tests** — RKC breed page (older address) returned no health section; RKC Health Standard (thekennelclub.org.uk/BreedSpecificRequirements) lists the breed with no tests in either column, without a sentence to quote → `not_found`.

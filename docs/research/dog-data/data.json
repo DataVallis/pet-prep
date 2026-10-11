@@ -8824,6 +8824,507 @@
       }
     }
   },
+  "german_shorthaired_pointer": {
+    "_note": "Added 2026-10-11 (M5-R10-21, unattended run — appended after the Bulldog: AKC 2024 No. 10, S174 'German Shorthaired Pointers remain at No. 10 from 2023 to 2024.'). Quotes as returned by the web-fetch tool on 2026-10-11; spot-check before import (sources.md S184–S189, reused S10, S11, S14, S24, S35, S45, S123). The fetch tool capped quotes at ~125 characters on the AKC standard (GSPCA, S186); only passages it returned in quotation marks are used as quotes, condensed passages are marked '(paraphrase)'. The RKC breed page (older address, S187) was returned with several key-fact labels without values (minimum garden size, length of coat, sheds, town or country) and a lifespan value 'Over 10 Years' whose placement was ambiguous — only the fields returned with a clear value are used (Exercise, Size of home, Grooming). The RKC page returned no health-testing section. The PDSA page (S188) is titled 'German Pointer' and covers the shorthaired and wirehaired varieties together; its key facts are used for the breed as a whole. FCI (S184) gives no weight → weight from the AKC standard (S186). Lifespan: McMillan et al. 2024 via the Dogs Trust breed table (S123) — 13.4 years. Woodgreen and AKC trait ratings not attempted.",
+    "identity": {
+      "value": "FCI No. 119, Group 7 Section 1.1 (Continental Pointing Dogs, Braque type), Germany",
+      "unit": "—",
+      "source_id": "S185",
+      "quote": "Group: n°7 - Pointing Dogs; Section: Continental Pointing Dogs; Country of origin: GERMANY",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S185): 'DEUTSCH KURZHAAR (119)'; subsection '«Braque»Type'; definitive acceptance '1/1/1954'; valid standard '10/25/2000'; 'Subject to a working trial according to the FCI Breeds Nomenclature'; English name 'GERMAN SHORT- HAIRED POINTING DOG'. FCI standard PDF (S184): 'Section 1.1 Continental Pointing Dogs « Braque » Type.' Quote assembled from the nomenclature fields as returned."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S188",
+      "quote": "Size: Large",
+      "confidence": "medium",
+      "notes": "PDSA key facts (S188) and Dogs Trust (S189) 'Large'. The RKC breed page (S187) calls the breed 'Medium-sized, trainable and friendly, he combines grace, energy and stamina in a neat frame.' AKC weights 20–32 kg (S186) sit between the game's medium and large dogs; the growth class follows the weight (S10, below)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            62,
+            66
+          ],
+          "female": [
+            58,
+            63
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S184",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI standard (S184) height at withers: dogs 62 to 66 cm, bitches 58 to 63 cm (figures as returned; the sentence was condensed by the tool — paraphrase)."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            58.4,
+            63.5
+          ],
+          "female": [
+            53.3,
+            58.4
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S186",
+        "quote": "Size – height of dogs, measured at the withers, 23 to 25 inches.",
+        "confidence": "high",
+        "notes": "AKC standard via GSPCA (S186, approved October 11, 2022, effective January 1, 2023): 'Height of bitches, measured at the withers, 21 to 23 inches.' Inches converted to cm (× 2.54) by us."
+      },
+      "pdsa_average": {
+        "value": [
+          56,
+          67
+        ],
+        "unit": "cm",
+        "source_id": "S188",
+        "quote": "Average height: 56-67 cm",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (German Pointer, label wording as returned)."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            24.9,
+            31.8
+          ],
+          "female": [
+            20.4,
+            27.2
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S186",
+        "quote": "Weight of dogs 55 to 70 pounds.",
+        "confidence": "high",
+        "notes": "AKC standard via GSPCA (S186): 'Weight of bitches 45 to 60 pounds.' Pounds converted to kg (× 0.4536) by us. The FCI standard (S184) gives no weight. Game range 20–32 kg (both sexes)."
+      },
+      "pdsa": {
+        "value": [
+          20,
+          34
+        ],
+        "unit": "kg",
+        "source_id": "S188",
+        "quote": "Average weight: 20-34 kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (German Pointer), one range for both sexes; recorded as an alternative."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. AKC 45–70 lb (S186): dogs 55–70 lb straddle Medium and 'Large (59–99 pounds): 15–18 months', bitches 45–60 lb are Medium; the midpoint (57.5 lb ≈ 26 kg) is Medium → 12–15 months (as the Siberian Husky). The game is unaffected (the puppy cap of 120 min is reached at 12 months either way)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no German Shorthaired Pointer growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.4,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "German Shorthaired Pointer | 13.4 | 13.3 - 13.6 | 3313 | 947",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, 'LIFE EXPECTANCY FOR 155 BREEDS AND CROSSBRED GROUP'; columns Breed | Median Life Expectancy (Years) | Lower and Upper 95% CI | Total Number Individuals | Number Deceased). Runbook first choice (McMillan 2024). PDSA (S188) 'Average lifespan: Over 10 years'; Dogs Trust breed page (S189) 'typically 11+ years' — consistent."
+      },
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S188",
+        "quote": "Average lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (German Pointer); consistent with the McMillan median."
+      },
+      "dogs_trust": {
+        "value": "11+",
+        "unit": "years",
+        "source_id": "S189",
+        "quote": "typically 11+ years",
+        "confidence": "medium",
+        "notes": "Dogs Trust breed page (S189)."
+      },
+      "rkc": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page (S187) returned 'Over 10 Years' next to the 'Minimum Garden Size' label — placement ambiguous, not used."
+      },
+      "senior_from": {
+        "value": 10.05,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 13.4 y (McMillan 2024 via S123) → 0.75 × 13.4 = 10.05 y = 120.6 → 121 months. Not chosen: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 121,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S187",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "PDSA (S188): 'German Pointers have high energy levels and will need plenty of exercise – over 2 hours ideally per day.' (key facts: minimum exercise '2 hours') — sources agree on 120."
+      },
+      "energy": {
+        "value": "high-energy versatile hunting dog — needs daily walks plus time to explore, burn energy and play",
+        "unit": "—",
+        "source_id": "S189",
+        "quote": "typically high-energy dogs who need lots of exercise",
+        "confidence": "medium",
+        "notes": "Dogs Trust (S189): 'They need daily walks, plus plenty of time and opportunity to explore, burn energy, and play.' RKC (S187): '…he combines grace, energy and stamina in a neat frame.' FCI (S184): 'Versatile hunting dog.'"
+      },
+      "recall": {
+        "value": "strong instinct to hunt, point and retrieve — needs good recall training",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "if they smell a rabbit when you are taking them out for a walk; for this reason they need to be trained well for recall.",
+        "confidence": "medium",
+        "notes": "PDSA (S188): 'They have an outstanding ability to scent game so be aware that their instinct to hunt, point and retrieve may kick in'. A sourced need → the game already trains recall (TrainingCommand 'Pridi', M4); no new mechanic."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "firm, balanced, reliable, restrained; friendly, intelligent, willing to please; neither nervous, shy nor aggressive",
+        "unit": "—",
+        "source_id": "S184",
+        "quote": "Firm, balanced, reliable, restrained temperament, neither nervous nor shy or aggressive.",
+        "confidence": "high",
+        "notes": "AKC (S186): 'The Shorthair is friendly, intelligent, and willing to please.' PDSA (S188): 'German Pointers are highly energetic, good-natured dogs.' FCI disqualifying: 'Aggressive or overly shy dogs.'"
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific family / children statement found. The RKC gundog group text (S187) 'They make good companions, their temperament making them ideal all-round family dogs.' is about the whole group, not this breed → no family_pet / children tag. Dogs Trust (S189) gives general advice only (temperament varies; everyone in the household should know how to behave safely around dogs — paraphrase)."
+      },
+      "owner_time": {
+        "value": "needs an owner who can invest plenty of time and explore the outdoors together",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "They need an owner who can invest plenty of time in them, and explore the great outdoors together.",
+        "confidence": "medium",
+        "notes": "PDSA (S188). Covered by the exercise tags (active_family, long_daily_exercise)."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (PDSA S188, Dogs Trust S189 checked)."
+      },
+      "other_pets": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found; PDSA (S188) only warns about the hunting instinct on walks → no other_pets tag."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages exist here and none are shown in the app, the register export or audience docs. No conformation welfare concern found for the breed (no Breed Watch point returned, not flat-faced, no veterinary advice against advertising) → no welfare chip. The RKC Health Standard (breeder-checklist K-search 2026-10-11) lists the German Shorthaired Pointer with no tests in either column.",
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA (S188) health list."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (bloat)",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "often known as 'bloat', this is a condition where the stomach twists, trapping the contents and gases.",
+        "confidence": "medium",
+        "notes": "PDSA (S188) health list."
+      },
+      "lymphoedema": {
+        "value": "lymphoedema",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "swelling caused by improper drainage of the lymphatic system",
+        "confidence": "medium",
+        "notes": "PDSA (S188) health list."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand's disease (bleeding disorder)",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "deficiency in blood platelet function resulting in excessive bleeding.",
+        "confidence": "medium",
+        "notes": "PDSA (S188) health list."
+      },
+      "atopy": {
+        "value": "atopy (skin allergy)",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "hypersensitivity to certain allergens, causing itching and skin trauma.",
+        "confidence": "low",
+        "notes": "PDSA (S188) health list. Not a Breed Watch point → no sensitive_skin chip."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "a condition in which there's a decrease in thyroid hormone production.",
+        "confidence": "medium",
+        "notes": "PDSA (S188) health list."
+      },
+      "eyes": {
+        "value": "entropion; cherry eye",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "inward turning eyelids.",
+        "confidence": "medium",
+        "notes": "PDSA (S188): cherry eye 'eversion of the nictitating membrane or 'third eyelid'' — 'generally occurs in younger dogs and can be surgically corrected.'"
+      },
+      "heart": {
+        "value": "cardiomyopathy",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "enlarged heart due to degeneration of the heart muscle.",
+        "confidence": "medium",
+        "notes": "PDSA (S188) health list."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 17,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 17 | German Shorthaired Pointer |",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C): rank 17 under 'Excellent Working Dogs' (ranks 11–26). Coren's own article (S34) lists only the top and bottom 10 — runbook: rank from S35. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "excellent: 5 to 15 repetitions, obeys first command ≥85%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 5 to 15 repetitions.; Obey first command: 85% of the time or better.;",
+        "confidence": "low",
+        "notes": "Tier 'Excellent Working Dogs' = ranks 11–26. Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "friendly and fairly easy to train; good recall training needed (hunting instinct)",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "German Pointers in general are friendly and fairly easy to train.",
+        "confidence": "medium",
+        "notes": "AKC (S186): 'The Shorthair is friendly, intelligent, and willing to please.' PDSA (S188) recall — see exercise.recall."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.german_shorthaired_pointer.learning_multiplier (1.5, runbook rule).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "noble, balanced; built for strength, endurance and speed; versatile all-purpose gun dog",
+        "unit": "—",
+        "source_id": "S184",
+        "quote": "A dog of noble and balanced appearance, the conformation of which ensures strength, endurance and speed.",
+        "confidence": "high",
+        "notes": "AKC (S186): 'The German Shorthaired Pointer is a versatile hunter, an all-purpose gun dog' 'capable of high performance in field and water.'"
+      },
+      "colours": {
+        "value": [
+          "liver roan with solid liver head and liver patches",
+          "solid liver",
+          "liver and white ticked",
+          "black roan with black head",
+          "solid black"
+        ],
+        "unit": "list (standard colours)",
+        "source_id": "S186",
+        "quote": "The coat may be of solid liver or a combination of liver and white such as liver and white ticked",
+        "confidence": "high",
+        "notes": "AKC (S186): 'Or the coat may be of solid black or any combination of black and white such as black and white ticked'; 'Any other color or color combination is a disqualification.'; 'A dog with any area of red, orange, lemon or tan, or a dog solid white will be disqualified.' FCI (S184): 'Solid brown, without markings.', 'Dark brown roan, with brown head, brown patches or specks.', 'Black colour in the same nuances as the brown, respectively the brown roan colours.' (FCI also permits yellow tan markings — the AKC disqualifies tan, so the game never shows tan; runbook §3 colour rule)."
+      },
+      "colour_weights": {
+        "value": {
+          "liver roan with solid liver head and liver patches": 0.45,
+          "solid liver": 0.2,
+          "liver and white ticked": 0.2,
+          "black roan with black head": 0.1,
+          "solid black": 0.05
+        },
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). The most typical standard colour first with the highest weight (portrait default)."
+      },
+      "coat": {
+        "value": "short and dense, rough and hard to the touch",
+        "unit": "—",
+        "source_id": "S184",
+        "quote": "Short and dense, rough and hard to the touch.",
+        "confidence": "high",
+        "notes": "AKC (S186): 'The hair is short and thick and feels tough to the hand;' 'it is somewhat longer on the underside of the tail and the back edges of the haunches.' RKC (S187): 'The coat is short, flat and coarse to the feel.'"
+      },
+      "ears": {
+        "value": "moderately long, set high and broad, flat, hanging close to the head",
+        "unit": "—",
+        "source_id": "S184",
+        "quote": "Moderately long, set on high and broad, flat and without twisting hanging down close to the head.",
+        "confidence": "high",
+        "notes": "AKC (S186): 'The ears are broad and set fairly high, lie flat and never hang away from the head.'"
+      },
+      "eyes": {
+        "value": "medium size, almond-shaped, dark brown",
+        "unit": "—",
+        "source_id": "S184",
+        "quote": "OF medium size, neither protruding nor deep set. The ideal colour is dark brown.",
+        "confidence": "high",
+        "notes": "AKC (S186): 'The eye is almond shaped, not circular.' 'The preferred color is dark brown.' FCI fault: 'Eyes too light. Yellowish « bird of prey » eyes.'"
+      },
+      "nose": {
+        "value": "brown on a liver dog, black on a black dog",
+        "unit": "—",
+        "source_id": "S186",
+        "quote": "The nose is brown on a liver dog and black on a black dog.",
+        "confidence": "high",
+        "notes": "FCI (S184): 'Basically brown, however black in black or black roan dogs.'"
+      },
+      "tail": {
+        "value": "natural (undocked) tail in the game",
+        "unit": "—",
+        "source_id": "S184",
+        "quote": "About halfway docked for hunting purposes.",
+        "confidence": "medium",
+        "notes": "FCI (S184) and AKC (S186, 'must be docked, leaving approximately 40 percent of its length') describe a docked tail. The game shows the natural, undocked tail (as the Rottweiler, M5-R10-19): docking is a welfare topic and the app never shows a docked dog to children — Claude's reading of the runbook's welfare rule, not a standard statement."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page fields returned with a value (S187), PDSA (S188), Dogs Trust (S189). No 'Good with children' field and no breed-specific child / family statement found. Woodgreen and AKC trait ratings not attempted.",
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S187",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S187",
+        "quote": "Large House",
+        "confidence": "medium",
+        "notes": "Returned as the value of 'Size of home'. Basis of the large_home tag. The 'Minimum Garden Size' value was not returned clearly."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S187",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "PDSA (S188): 'Shorthaired pointers will need grooming once or twice a week' — RKC preferred (runbook) → 1× per week; not frequent_grooming (criterion: clearly more than once a week). A sourced need: dog grooming has no game mechanic yet → ROADMAP M5-R13 (runbook §3, David 2026-10-11)."
+      },
+      "rkc_coat": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S187",
+        "quote": "The coat is short, flat and coarse to the feel.",
+        "confidence": "high",
+        "notes": "The 'Length of coat' label was returned without a value; the description sentence is used."
+      },
+      "pdsa_exercise": {
+        "value": "over 2 hours ideally per day",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "German Pointers have high energy levels and will need plenty of exercise – over 2 hours ideally per day.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "once or twice a week",
+        "unit": "—",
+        "source_id": "S188",
+        "quote": "Shorthaired pointers will need grooming once or twice a week, with Wirehaired also needing 'stripping' occasionally.",
+        "confidence": "medium",
+        "notes": "Alternative to RKC 'Once a week' (S187)."
+      },
+      "dogs_trust_shedding": {
+        "value": "moderate shedding",
+        "unit": "—",
+        "source_id": "S189",
+        "quote": "German Shorthaired Pointers shed moderately.",
+        "confidence": "medium",
+        "notes": "Dogs Trust fact field: 'Short length with moderate shedding'. RKC 'Sheds' label returned without a value. Basis of the sheds tag."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-11)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -12811,6 +13312,230 @@
         "confidence": "high",
         "notes": "RKC standard (S178): 'Pinched nostrils and heavy over nose roll are unacceptable'; Breed Watch (S182): heavy overnose wrinkle, pinched nostrils, screw tail. Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): moderate face with open nostrils and a light wrinkle, standard colours only (portrait red and white), straight tail, never merle / black / blue"
+      }
+    },
+    "german_shorthaired_pointer": {
+      "_note": "Unattended run M5-R10-21 (2026-10-11): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry. No new tag. Weekly brushing (RKC S187, PDSA S188) is a sourced need without a dog mechanic → ROADMAP M5-R13 (runbook §3, David 2026-10-11). Recall training (PDSA S188) is a sourced need the game already has (training command 'Pridi').",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S187",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'More than 2 hours per day' (S187); PDSA 'over 2 hours ideally per day' (S188) agrees. Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S187 'More than 2 hours per day'; PDSA S188 the same)"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000 (= Border Collie, Labrador, Golden, German Shepherd, Australian Shepherd, Siberian Husky, Rottweiler).",
+        "derived_from": [
+          "S187",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 121
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 121 = round(0.75 × 13.4 y × 12) = round(120.6) (S11 + McMillan 2024 median 13.4 y via the Dogs Trust table S123). Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 121 (0.75 × 13.4 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 121
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 121)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 17 (S35), tier Excellent (ranks 11–26) → 1.5. PDSA 'friendly and fairly easy to train' (S188). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 17, S35 — Excellent tier)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S187",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "RKC (S187) 'Once a week'; PDSA (S188) 'once or twice a week' (alternative 2, RKC preferred as for exercise). The game has no dog grooming mechanic yet (cats only) → built later as ROADMAP M5-R13; this value is its input.",
+        "alternatives": {
+          "pdsa_upper_bound": 2
+        },
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+      },
+      "recall_training": {
+        "value": "recall",
+        "unit": "training command (sourced need)",
+        "source_id": "S188",
+        "quote": "if they smell a rabbit when you are taking them out for a walk; for this reason they need to be trained well for recall.",
+        "confidence": "medium",
+        "notes": "Built already: the game's training commands include recall ('Pridi', TrainingCommand::Recall, M4) for every dog — nothing new to build.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): odpoklic že obstaja kot ukaz 'Pridi' — brez nove mehanike"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-21); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S187",
+              "S188"
+            ],
+            "refs": [
+              "german_shorthaired_pointer.exercise.adult",
+              "german_shorthaired_pointer.suitability.pdsa_exercise"
+            ],
+            "quote": "S187 'More than 2 hours per day'; S188 'over 2 hours ideally per day'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S187"
+            ],
+            "refs": [
+              "german_shorthaired_pointer.suitability.rkc_size_of_home"
+            ],
+            "quote": "S187 'Large House'",
+            "note": "Garden size not returned clearly; the house size alone carries the tag (runbook: large_home from RKC 'Large house')."
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S187",
+              "S188"
+            ],
+            "refs": [
+              "german_shorthaired_pointer.exercise.adult",
+              "german_shorthaired_pointer.suitability.pdsa_exercise"
+            ],
+            "quote": "S187 'More than 2 hours per day'; S188 'over 2 hours ideally per day'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S189"
+            ],
+            "refs": [
+              "german_shorthaired_pointer.suitability.dogs_trust_shedding"
+            ],
+            "quote": "S189 'German Shorthaired Pointers shed moderately.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "Only a gundog-group statement on the RKC page (S187), no breed statement.",
+          "children": "No child rating or statement.",
+          "small_children": "No child rating or statement.",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source (PDSA asks for an owner with plenty of time — covered by the exercise tags).",
+          "apartment": "RKC 'Large House' (S187).",
+          "other_pets": "No statement (PDSA S188 only warns about the hunting instinct on walks).",
+          "often_alone": "No source.",
+          "older_owners": "No source.",
+          "low_shedding": "Sheds moderately (S189).",
+          "food_motivated_weight": "No source.",
+          "needs_mental_stimulation": "Dogs Trust 'Like all dogs, they need training and benefit from daily enrichment.' (S189) is general, not breed-specific.",
+          "chews_when_bored": "No source.",
+          "frequent_grooming": "RKC once a week (S187); PDSA once or twice (S188) — not clearly more than once a week.",
+          "may_herd_children": "No source.",
+          "secure_fencing": "No fence advice (PDSA S188 asks for good recall on walks — the game trains recall).",
+          "shorter_lifespan": "McMillan 2024 median 13.4 y (S123).",
+          "welfare": "No conformation welfare concern found → no brachycephalic_breathing / hips_hind_legs / heart_and_spine / back_spine / sensitive_skin."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S184",
+        "quote": "Firm, balanced, reliable, restrained temperament, neither nervous nor shy or aggressive.",
+        "confidence": "high",
+        "notes": "No conformation welfare concern and no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health and never shows a docked tail.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a welfare breed)"
+      },
+      "ai_appearance": {
+        "value": "adult German Shorthaired Pointer, liver roan with a solid liver head and liver patches; short dense hard coat; broad flat ears set high; almond dark-brown eyes; brown nose; natural undocked tail; athletic, noble and balanced; never tan / red / lemon markings, never solid white",
+        "unit": "—",
+        "source_id": "S186",
+        "quote": "The coat may be of solid liver or a combination of liver and white such as liver and white ticked",
+        "confidence": "high",
+        "notes": "Standard colours only (S186, S184); tan, red, orange, lemon and solid white are disqualifications in the AKC standard (S186). Natural tail in the portrait (welfare reading, appearance.tail).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): liver roan (default), solid liver, liver and white ticked, black roan, solid black; natural tail; no tan / red / lemon / solid white"
       }
     }
   }
