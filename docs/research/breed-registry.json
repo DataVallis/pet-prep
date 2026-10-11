@@ -17,7 +17,7 @@
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
-      "sha256": "164ff161654dd2de6a36a8b00a86d94cb4d4f42d83ab9c268faa0e2a05122795"
+      "sha256": "d5890494cf25bd2433dd86b0bb800a04998fe1f7739aa1f403cd890faab06a77"
     },
     "cat_sources": {
       "path": "docs/research/cat-data/sources.md",
@@ -10053,7 +10053,6 @@
       },
       "synonyms": {
         "en": [
-          "Siberian",
           "Siberian Forest Cat"
         ],
         "sl": [
@@ -10362,7 +10361,7 @@
             "basis_source_ids": [
               "C35"
             ],
-            "decision": "potrdil David 2026-10-11 (pravilo runbooka, M5-R10-16): Siberian 1× per week (\"at least once a week\", PetMD C35); GCCF \"a few times a week\" kept as an alternative for David"
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, M5-R10-16): Siberian 1× per week (\"at least once a week\", PetMD C35 — the only source with a number); choosing it over the GCCF wording \"a few times a week\" (C34, no number) is Claude's reading — David may raise it to 2–3"
           }
         ],
         "basis_source_ids": [

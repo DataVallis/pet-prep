@@ -926,7 +926,8 @@
             "quote": "Siberians are generally very healthy cats with a long lifespan of 10–18 years.",
             "notes": "PetMD (C35), wider range; not chosen (the registry GCCF page is preferred)."
           }
-        ]
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-16): lifespan background value = lower bound of the registry range (as the dog rule for an RKC range); C14 has no Siberian row"
       }
     },
     "adult_weight": {
@@ -970,6 +971,13 @@
             "source_id": "C34",
             "quote": "combing their fur with a steel comb a few times a week",
             "notes": "GCCF breed page; no number, so the runbook takes the numeric source (C35). Open for David: raise to 2–3 per week (like the Ragdoll / Maine Coon) if he prefers the registry wording."
+          },
+          {
+            "value": "daily",
+            "unit": "rule",
+            "source_id": "C34",
+            "quote": "High maintenance, daily grooming",
+            "notes": "GCCF summary box; the same page's body text says \"a few times a week\" and daily only \"during this period of heavy shedding\" — not used."
           }
         ]
       },
@@ -980,7 +988,7 @@
         "quote": "The Siberian’s water-resistant triple coat is not maintenance-free, requiring grooming sessions at least once a week.",
         "confidence": "medium",
         "notes": "\"At least once a week\" → 1 slot per program week (runbook §3 Cats). The seasonal extra (spring and autumn moult; GCCF daily during heavy shedding) is not modelled — moult is not in the game.",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, M5-R10-16): Siberian 1× per week (\"at least once a week\", PetMD C35); GCCF \"a few times a week\" kept as an alternative for David"
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, M5-R10-16): Siberian 1× per week (\"at least once a week\", PetMD C35 — the only source with a number); choosing it over the GCCF wording \"a few times a week\" (C34, no number) is Claude's reading — David may raise it to 2–3"
       },
       "game_matted_after_missed": {
         "value": 1,

@@ -1111,7 +1111,8 @@ return [
                 ['value' => 'with mackerel tabby stripes', 'weight' => 3, 'only_with' => ['coat_color' => ['brown', 'silver', 'red', 'blue-grey', 'cream']]],
                 ['value' => 'with classic tabby markings', 'weight' => 2, 'only_with' => ['coat_color' => ['brown', 'silver', 'red', 'blue-grey', 'cream']]],
                 ['value' => 'solid', 'only_with' => ['coat_color' => ['black', 'blue-grey', 'white']]],
-                ['value' => 'with a white chest, belly and paws', 'only_with' => ['coat_color' => ['brown', 'black', 'red', 'blue-grey']]],
+                // Never plain brown with white: an unstriped brown coat would read as chocolate (not a FIFe colour, C33).
+                ['value' => 'with a white chest, belly and paws', 'only_with' => ['coat_color' => ['black', 'red', 'blue-grey']]],
                 ['value' => 'with mottled patches', 'only_with' => ['coat_color' => ['tortoiseshell black and red']]],
             ],
             'ear_carriage' => ['medium, round-tipped, tufted, slightly forward-tilted'],

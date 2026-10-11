@@ -1940,7 +1940,7 @@ class BreedStageParamsSeeder extends Seeder
             } elseif ($sib) {
                 $add('all', 0, StageParamKey::LifespanYears, 12.0, [
                     'unit' => 'years (lower bound of the GCCF range 12–15)', 'source_id' => 'C34', 'confidence' => 'medium', 'verified' => true,
-                    'ref' => 'siberian_cat.lifespan.gccf_lower_bound',
+                    'ref' => 'siberian_cat.lifespan.gccf_lower_bound', 'decision' => self::CONFIRMED_R10_SIBERIAN_CAT,
                     'quote' => 'The Siberian cat breed is very healthy and can live 12 to 15 years or more.',
                     'notes' => 'No Siberian row in the VetCompass life tables (C14) → the GCCF lower bound (the dog rule for a range). Background for parents and appearance only; the senior boundary comes from C1, not from the lifespan.',
                 ]);

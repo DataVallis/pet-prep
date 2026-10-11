@@ -400,7 +400,7 @@ const SPECIES = [
       { id: 'maine_coon', availability: 'coming_soon', synonyms: { en: [], sl: [] } },
       { id: 'british_shorthair', availability: 'coming_soon', synonyms: { en: ['British Blue', 'BSH'], sl: ['britanska kratkodlaka', 'britanska kratkodlaka macka', 'britanka', 'british shorthair'] } },
       { id: 'ragdoll', availability: 'coming_soon', synonyms: { en: ['Rag doll'], sl: ['ragdoll mačka', 'ragdoll macka', 'ragdol'] } },
-      { id: 'siberian_cat', availability: 'coming_soon', synonyms: { en: ['Siberian', 'Siberian Forest Cat'], sl: ['sibirska macka', 'sibirka', 'sibirska gozdna mačka'] } },
+      { id: 'siberian_cat', availability: 'coming_soon', synonyms: { en: ['Siberian Forest Cat'], sl: ['sibirska macka', 'sibirka', 'sibirska gozdna mačka'] } },
     ],
   },
 ];

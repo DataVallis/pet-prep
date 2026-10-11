@@ -370,6 +370,10 @@ describe('AI appearance (FIFe colours only, no blue eyes on a coloured coat, bro
             $t = $dna->sample('siberian_cat', $seed)['traits'];
             $colours[$t['coat_color']] = true;
             expect($t['coat_color'])->toBeIn(['brown', 'silver', 'red', 'black', 'blue-grey', 'cream', 'white', 'tortoiseshell black and red']);
+            // A brown coat is always tabby — plain brown would read as chocolate (not a FIFe colour, C33).
+            if ($t['coat_color'] === 'brown') {
+                expect($t['coat_pattern'])->toContain('tabby');
+            }
             // Blue eyes only with white (FIFe C33: blue is not a Siberian eye colour otherwise).
             if ($t['eye_color'] === 'deep blue') {
                 expect($t['coat_color'])->toBe('white');
