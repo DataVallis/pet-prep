@@ -903,6 +903,14 @@
       "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-16): paid breed (premium_unlock, the same 12-week challenge as the Maine Coon), sort_order 40 (Ragdoll 30 + 10)"
     },
     "lifespan": {
+      "gccf_range": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "C34",
+        "quote": "The Siberian cat breed is very healthy and can live 12 to 15 years or more.",
+        "confidence": "medium",
+        "notes": "GCCF range, shown in the register (\"or more\" kept in the quote). The game row uses the lower bound (gccf_lower_bound)."
+      },
       "gccf_lower_bound": {
         "value": 12.0,
         "unit": "years",
@@ -949,12 +957,12 @@
     },
     "grooming": {
       "range": {
-        "value": "At least once a week (more while moulting in spring and autumn)",
+        "value": "At least once a week",
         "unit": "rule",
         "source_id": "C35",
         "quote": "The Siberian’s water-resistant triple coat is not maintenance-free, requiring grooming sessions at least once a week.",
         "confidence": "medium",
-        "notes": "PetMD (C35, reviewed by a DVM): \"a weekly combing will do the trick, with a little extra effort during their spring and fall shedding\". GCCF (C34): \"combing their fur with a steel comb a few times a week\" (no number) and daily during heavy shedding. Basis of the game rule game_sessions_per_week.",
+        "notes": "PetMD (C35, reviewed by a DVM): \"a weekly combing will do the trick, with a little extra effort during their spring and fall shedding\" — more while moulting in spring and autumn (not modelled). GCCF (C34): \"combing their fur with a steel comb a few times a week\" (no number) and daily during heavy shedding. Basis of the game rule game_sessions_per_week.",
         "alternatives": [
           {
             "value": "a few times a week",
