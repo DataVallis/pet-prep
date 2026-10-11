@@ -14,7 +14,7 @@
       "quotes": "As returned by the web-fetch tool on 2026-10-08 (see sources.md). Spot-check C1, C14, C16, C17 against the URL before import.",
       "game_time": "1 real week = 1 month of cat age (CAT_SPEC §2, same as dogs).",
       "stage_mapping": "Existing LifeStage values are reused: puppy = kitten, young = young adult, adult = mature adult, senior = senior (CAT_SPEC §2).",
-      "breed_keys": "BreedType value (domestic_cat, maine_coon, british_shorthair, ragdoll, siberian_cat, norwegian_forest_cat) vs breed_configs slug (domestic-cat, maine-coon, british-shorthair, ragdoll, siberian-cat, norwegian-forest-cat), same split as border_collie / border-collie."
+      "breed_keys": "BreedType value (domestic_cat, maine_coon, british_shorthair, ragdoll, siberian_cat, norwegian_forest_cat, bengal) vs breed_configs slug (domestic-cat, maine-coon, british-shorthair, ragdoll, siberian-cat, norwegian-forest-cat, bengal), same split as border_collie / border-collie."
     }
   },
   "general": {
@@ -1287,6 +1287,223 @@
       "confidence": "medium",
       "notes": "Not a flat-faced breed (WCF C36: long, straight profile); no veterinary advice against showing the breed in advertising was found (runbook §3). Cats are hidden in the app — no cat marketing before the switch-on (M5-R06-09).",
       "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-17): may be used in marketing once cats are switched on"
+    }
+  },
+  "bengal": {
+    "_note": "M5-R10-18 (unattended run 2026-10-11). Sixth paid cat breed, built behind PETPREP_CATS_ENABLED=false like the Maine Coon, British Shorthair, Ragdoll, Siberian and Norwegian Forest Cat. Breed-specific values only (runbook §3 Cats): identity, arrival age of the kitten, lifespan, weight, growth, grooming (game rule, David 2026-10-11), behaviour, health (register text only), appearance; everything else is the general cat rule. The game models a registered, domestic later-generation Bengal (FIFe C47: generations F1–F4 are not allowed for breeding) — never an early-generation wild hybrid. No source calls the breed hypoallergenic (PetMD C45: \"no cat breed can be considered entirely hypoallergenic\") — never claimed.",
+    "identity": {
+      "value": {
+        "slug": "bengal",
+        "enum": "bengal",
+        "premium": true
+      },
+      "unit": "",
+      "source_id": "C19",
+      "quote": "Bengal 3,559",
+      "confidence": "high",
+      "notes": "Sixth most registered FIFe breed in 2024 after Maine Coon, British Shorthair, Ragdoll, Siberian and Norwegian Forest (C19 row, 2026-10-08 capture). FIFe standard BEN, Category 3, recognised 1999 (C43). Developed in the USA from crosses of the Asian leopard cat with domestic cats (VCA C46, PetMD C45). Slug bengal (GCCF / FIFe / TICA name).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-18): paid breed (premium_unlock, the same 12-week challenge as the Maine Coon), sort_order 60 (Norwegian Forest Cat 50 + 10)"
+    },
+    "lifespan": {
+      "expectancy_at_birth": {
+        "value": 8.51,
+        "unit": "years",
+        "source_id": "C14",
+        "quote": "Bengal 8.51 y",
+        "confidence": "medium",
+        "notes": "Life expectancy at age 0 from the VetCompass life tables (C14 row, captured 2026-10-08 from the full text; this run confirmed the rounded value through BBC Science Focus, \"Bengal: 8.5 years\" — tier C, not cited). Same measure as the Maine Coon, British Shorthair and Ragdoll rows. Background for parents and appearance only; the senior boundary comes from C1, not from the lifespan.",
+        "alternatives": [
+          {
+            "value": "12–16",
+            "unit": "years",
+            "source_id": "C44",
+            "quote": "Average lifespan | 12-16 years",
+            "notes": "PDSA summary box — a different, rounded measure; not mixed with the C14 life expectancy."
+          },
+          {
+            "value": "12–15",
+            "unit": "years",
+            "source_id": "C46",
+            "quote": "Lifespan: \"12 - 15 years\"",
+            "notes": "VCA summary box (as returned by the fetch tool)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-18): lifespan background value = the C14 VetCompass life expectancy (same measure as the Maine Coon, British Shorthair and Ragdoll; C14 has a Bengal row)"
+      }
+    },
+    "adult_weight": {
+      "pdsa_average": {
+        "value": 5.5,
+        "unit": "kg",
+        "source_id": "C44",
+        "quote": "Average weight | 5.5kg",
+        "confidence": "medium",
+        "notes": "PDSA summary box — one average, not split by sex (no A/B source in this run gave male / female ranges; FIFe C43 and WCF give no weight). Register: \"about 5.5 kg\".",
+        "alternatives": [
+          {
+            "value": "2.7–5.4",
+            "unit": "kg",
+            "source_id": "C46",
+            "quote": "Weight: \"6 - 12 pounds\"",
+            "notes": "VCA summary box, 6–12 lb converted (1 lb = 0.4536 kg, one decimal); not split by sex."
+          },
+          {
+            "value": "up to 6.8",
+            "unit": "kg",
+            "source_id": "C45",
+            "quote": "Full-grown Bengal cats of lower generations can be as heavy as 15 pounds and stand as tall as 10 inches.",
+            "notes": "PetMD: lower (earlier) generations; later generations about 8–12 lb (paraphrase) — not used."
+          }
+        ]
+      }
+    },
+    "growth_end": {
+      "value": "24",
+      "unit": "months",
+      "source_id": "C46",
+      "quote": "Bengals grow slow, taking up to two years before reaching physical maturity.",
+      "confidence": "medium",
+      "notes": "VCA (C46): up to two years. Register qualifier \"up to\". Prompt cue: the young Bengal is not fully grown and muscled yet."
+    },
+    "grooming": {
+      "range": {
+        "value": "Once a week",
+        "unit": "rule",
+        "source_id": "C44",
+        "quote": "Bengals have striking markings on their coat, which requires a light brushing/combing once a week.",
+        "confidence": "medium",
+        "notes": "PDSA (C44, UK veterinary charity). PetMD (C45, reviewed by a DVM) agrees: Bengals \"should be brushed weekly\" (as returned by the fetch tool) and \"need minimal grooming besides normal cat care\". Basis of the game rule game_sessions_per_week.",
+        "alternatives": [
+          {
+            "value": "weekly",
+            "unit": "rule",
+            "source_id": "C45",
+            "quote": "should be brushed weekly",
+            "notes": "PetMD — the same number (1× per week)."
+          }
+        ]
+      },
+      "game_sessions_per_week": {
+        "value": 1,
+        "unit": "sessions/week",
+        "source_id": "C44",
+        "quote": "Bengals have striking markings on their coat, which requires a light brushing/combing once a week.",
+        "confidence": "medium",
+        "notes": "\"Once a week\" → 1 slot per program week (runbook §3 Cats); PetMD (C45) \"should be brushed weekly\" gives the same number.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, M5-R10-18): Bengal 1× per week (PDSA C44 \"a light brushing/combing once a week\", PetMD C45 \"should be brushed weekly\" — both sources agree)"
+      },
+      "game_matted_after_missed": {
+        "value": 1,
+        "unit": "missed groomings of a program week (of 1)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Rule ceil(goal / 2) = 1 of 1. No penalty: visible, the next (~2× longer) grooming resolves it. PetMD (C45): brushing helps \"prevent matting\" (paraphrase). Runtime: CatChoreService::mattedAfterMissed().",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, M5-R10-18): matted coat when at least half of the week's groomings are missed (ceil(goal / 2))"
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "highly intelligent and energetic; needs plenty of mental stimulation and chances to exercise",
+        "unit": "text",
+        "source_id": "C44",
+        "quote": "Bengals are highly intelligent, energetic and require plenty of mental stimulation and opportunities to exercise.",
+        "confidence": "medium",
+        "notes": "No new rule: the general cat rules already give daily play sessions (wand mini-game) and the scratching / climbing need (CAT_SPEC); no A/B source gives a Bengal-specific number of play sessions or minutes. PetMD (C45): \"They require a lot of stimulation and enrichment\"; VCA (C46): \"Highly active and full of energy.\""
+      },
+      "vertical_space": {
+        "value": "likes a high vantage point; a cat tree is ideal",
+        "unit": "text",
+        "source_id": "C44",
+        "quote": "They like to have a high up vantage point; a cat tree is ideal for providing this.",
+        "confidence": "medium",
+        "notes": "Register text only — household equipment, not a care task the child does; climbing / vertical space is already part of the general cat environment advice (AAFP C22)."
+      },
+      "affection": {
+        "value": "affectionate, but more likely to curl up next to you than on your lap; vocal",
+        "unit": "text",
+        "source_id": "C44",
+        "quote": "They're affectionate, but you are more likely to find them curled up next to you rather than on your lap.",
+        "confidence": "medium",
+        "notes": "PDSA also: \"They are known to be quite vocal, and will make sure you know if they want something!\""
+      },
+      "children": {
+        "value": "may not be the best fit for families with small children",
+        "unit": "text",
+        "source_id": "C45",
+        "quote": "Bengal cats may not be the best fit for families with small children.",
+        "confidence": "medium",
+        "notes": "PetMD: they often dislike being held and have a strong hunting instinct (paraphrase). VCA (C46) rates \"Good With Children\" 3 of 5. Register text only (no suitability tags for cats yet); the app keeps its general supervision advice. Never market the Bengal as an easy cat for small children."
+      },
+      "other_pets": {
+        "value": "dogs and other cats may be OK with proper introductions; not with small or timid pets",
+        "unit": "text",
+        "source_id": "C45",
+        "quote": "Sharing a household with dogs and other cats may be OK with proper introductions.",
+        "confidence": "medium",
+        "notes": "PetMD: high prey drive — smaller or timid pets may not be good companions (paraphrase). Register text only."
+      }
+    },
+    "health": {
+      "_note": "Register text only (key + source, one calm EN + SL sentence on the website). No percentages anywhere (runbook §3). The Animal Welfare Committee opinion (C49) is background only.",
+      "pra_pk_def": {
+        "value": "an inherited eye disease (PRA) and an inherited blood disorder (PK deficiency) occur in the breed; breeders DNA-test the parents",
+        "unit": "text",
+        "source_id": "C45",
+        "quote": "Bengal cats can develop a genetic condition that causes retinal deterioration.",
+        "confidence": "medium",
+        "notes": "PetMD (C45) names progressive retinal atrophy and pyruvate kinase deficiency (\"Pyruvate kinase deficiency (PKD) is a genetic disorder in cats that causes a shortage of the enzyme pyruvate kinase (PK).\"); GCCF Active Register rule via World Cat Congress (C47): \"They themselves have been genetically tested as normal (N/N*) for both PRA Band PK def.\" (breeder checklist K22)."
+      },
+      "hcm": {
+        "value": "hypertrophic cardiomyopathy (heart disease) can occur",
+        "unit": "text",
+        "source_id": "C45",
+        "quote": "This is the most common heart disease in cats and is characterized by thickening heart muscle.",
+        "confidence": "medium",
+        "notes": "PetMD (C45) lists HCM among Bengal health problems."
+      },
+      "patellar_luxation": {
+        "value": "the kneecap can slip out of place",
+        "unit": "text",
+        "source_id": "C44",
+        "quote": "Patellar Luxation – a condition in which the patella (knee cap) moves out of its normal location",
+        "confidence": "medium",
+        "notes": "PDSA (C44) and PetMD (C45) both name it. PDSA also names hip dysplasia and FIP (not in the register — FIP is an infection, not a breed trait)."
+      },
+      "lymphoma": {
+        "value": "more likely to develop lymphoma than other breeds",
+        "unit": "text",
+        "source_id": "C45",
+        "quote": "Bengal cats are more likely to develop lymphoma than other breeds.",
+        "confidence": "medium",
+        "notes": "PetMD (C45). No numbers in the register (runbook §3)."
+      }
+    },
+    "appearance": {
+      "value": "medium to large, sleek and very muscular with a wild look; long, substantial body with robust bone, hindquarters slightly higher than the shoulders; broad modified wedge head with rounded contours, slightly small for the body, high prominent cheekbones, full broad muzzle with large whisker pads, large wide nose leather; medium to small ears, wide at the base with rounded tips, set wide apart and tilted forward, no tufts; oval, slightly almond-shaped eyes, large but not bulging (green, gold, brown, blue-green, or blue in the snow varieties); thick tail tapering to a rounded tip, medium length; short, thick, unusually soft coat, preferably glittering; spotted (rosettes preferred) or marbled pattern with a spotted belly, in brown (black), seal sepia, seal mink, snow and their silver forms",
+      "unit": "traits",
+      "source_id": "C42",
+      "quote": "The Bengal is a medium to large-sized cat, characterized by a muscular, elongated, and robust body. … The nose line ranges from slightly concave to nearly straight. … For Snow Bengals, the eye colour is an intense, pure blue.",
+      "confidence": "high",
+      "notes": "WCF breed standard BEN (actualized 2024-08-01, C42; quotes as returned by the fetch tool, the rest of the trait list is the tool's summary — paraphrase). FIFe standard BEN 01.01.2026 (C43, summary only) agrees: medium to large, sleek, very muscular; broad modified wedge head; ear furnishings acceptable but no tufts; spotted (rosettes preferred) or marbled, belly spotted; brown (black), seal sepia / seal mink, snow, with silver forms. WCF faults: elongated spots in a mackerel pattern, too heavy a body; disqualification: white patches or medallions. FIFe colours via World Cat Congress (C47): \"spotted and marbled pattern in brown (black), seal sepia, seal mink point and snow\" (+ silver). Colour weights are unsourced (verified false); brown spotted with rosettes is weighted highest (portrait default) as the classic coat — UNSOURCED weight. Never white patches, never vertical tabby stripes, never ear tufts."
+    },
+    "arrival_age_kitten": {
+      "value": 3,
+      "unit": "months",
+      "source_id": "C13",
+      "quote": "Pedigree kittens are usually rehomed over 12-13 weeks old",
+      "confidence": "high",
+      "notes": "Same rule as the Maine Coon, British Shorthair, Ragdoll, Siberian and Norwegian Forest Cat (CAT_SPEC Q4: pedigree kittens leave at 12–13 weeks).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-18): pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule for pedigree kittens)"
+    },
+    "marketing": {
+      "value": "in marketing",
+      "unit": "decision",
+      "source_id": null,
+      "quote": null,
+      "confidence": "medium",
+      "notes": "Not a flat-faced breed (FIFe C43: full, broad muzzle; nose line slightly concave to nearly straight). The Bengal descends from a wild-cat hybrid: the FelineVMA (C48) opposes breeding wild cats to domestic cats and discourages owning early-generation (F1–F3) hybrids, and The Cat Group (incl. BSAVA, C50) does not support breeding or keeping wild cat hybrids — but no veterinary association advises against showing registered domestic Bengals in advertising (runbook §3), so the breed stays in marketing. Marketing shows only the registered domestic Bengal (never a wild cat or an early-generation hybrid), never promises an easy cat for small children (C45), never \"hypoallergenic\". Open for David (HANDOFF). Cats are hidden in the app — no cat marketing before the switch-on (M5-R06-09).",
+      "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-18): may be used in marketing once cats are switched on (no veterinary advice against advertising the breed; hybrid position statements C48 / C50 open for David)"
     }
   }
 }
