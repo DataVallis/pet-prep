@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "aaf4645ed7af951dc6d9e8ff365a5fc8fec017d4929dc57c79531eb1756edfd6"
+      "sha256": "8cf1f4a87e5f42588bd1e131693b652deed2d1d3e47250fc11bd43a4eed213f7"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "ffd4dea6164790e09d310b51a88c50cbbf9eb54c4ba842749ae632f24bc50b43"
+      "sha256": "8fa6e351508db214376648fe58b3a5aa1c24d9a703b449ce88def5f60d34585d"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -12505,7 +12505,7 @@
       "id": "S166",
       "tier": "A",
       "publisher": "FCI",
-      "title": "FCI-Standard N° 147 — Rottweiler (24.07.2018) (PDF)",
+      "title": "FCI-Standard N° 147 — Rottweiler (PDF dated 24.07.2018; original valid standard published 15.06.2018)",
       "url": "https://fci.be/Nomenclature/Standards/147g02-en.pdf"
     },
     {

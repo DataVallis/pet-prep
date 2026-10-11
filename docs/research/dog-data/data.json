@@ -7672,7 +7672,7 @@
     }
   },
   "rottweiler": {
-    "_note": "Added 2026-10-11 (M5-R10-19, unattended run — first breed appended after the 20: AKC 2024 No. 8, S174). Quotes as returned by the web-fetch tool on 2026-10-11; spot-check before import (sources.md S166–S174, reused S10, S11, S14, S24, S35, S45). The fetch tool capped quotes at ~125 characters on the PDSA page (S169), the FCI standard (S166) and the American Rottweiler Club standard (S170): only passages it returned in quotation marks are used as quotes; condensed passages are marked '(paraphrase)'. Lifespan: McMillan et al. 2024 (S54 / S135) — the Dogs Trust breed table (S123) and 'shortest and longest' PDF were not reachable (provenance / fetch error 2026-10-11); the VetCompass breed paper (O'Neill et al. 2017, S171) gives a UK primary-care median of 9.0 years → runbook rule 'else a VetCompass median'. The RKC breed-standard page (thekennelclub.org.uk/breed-standards/working/rottweiler/) returned a fetch error; weight / height / appearance come from the FCI standard (S166) and the AKC standard via the American Rottweiler Club (S170). Woodgreen and AKC trait ratings not attempted.",
+    "_note": "Added 2026-10-11 (M5-R10-19, unattended run — first breed appended after the 20: AKC 2024 No. 8, S174). Quotes as returned by the web-fetch tool on 2026-10-11; spot-check before import (sources.md S166–S174, reused S10, S11, S14, S24, S35, S45). The fetch tool capped quotes at ~125 characters on the PDSA page (S169), the FCI standard (S166) and the American Rottweiler Club standard (S170): only passages it returned in quotation marks are used as quotes; condensed passages are marked '(paraphrase)'. Lifespan: McMillan et al. 2024 — the Author Correction (S54) names no Rottweiler; the published text (S135, re-read in the review 2026-10-11) names it only in the introduction (earlier estimates 8.0 and 8.4 years, refs 3 and 4 of that paper) and as a Fig. 5 tip label, its Supplementary Table 3 is not in the PDF; the Dogs Trust breed table (S123) and 'shortest and longest' PDF were not reachable (provenance / fetch error 2026-10-11); the VetCompass breed paper (O'Neill et al. 2017, S171) gives a UK primary-care median of 9.0 years → runbook rule 'else a VetCompass median'. The RKC breed-standard page (thekennelclub.org.uk/breed-standards/working/rottweiler/) returned a fetch error; weight / height / appearance come from the FCI standard (S166) and the AKC standard via the American Rottweiler Club (S170). Woodgreen and AKC trait ratings not attempted.",
     "identity": {
       "value": "FCI No. 147, Group 2 Section 2.1 (Molossian type, Mastiff type), Germany",
       "unit": "—",
@@ -7791,7 +7791,7 @@
         "source_id": "S171",
         "quote": "Median longevity overall was 9.0 years (IQR 7.2–10.5, range 0.0–17.0).",
         "confidence": "medium",
-        "notes": "O'Neill et al. 2017 (S171), VetCompass UK primary care. Same abstract: 'Median female longevity (9.5 years, IQR 7.8–11.0) was greater than male (8.7 years, IQR 6.8–10.1) (P = 0.002).' RVC summary (S172) calls it 'The average lifespan of Rottweilers overall was 9.0 years which is shorter than some other breeds of similar bodysize.' McMillan 2024 (S54 / S123) not reachable this run — runbook rule: else a VetCompass median. Consistent with the RKC band 'Under 10 years' (S168)."
+        "notes": "O'Neill et al. 2017 (S171), VetCompass UK primary care. Same abstract: 'Median female longevity (9.5 years, IQR 7.8–11.0) was greater than male (8.7 years, IQR 6.8–10.1) (P = 0.002).' RVC summary (S172) calls it 'The average lifespan of Rottweilers overall was 9.0 years which is shorter than some other breeds of similar bodysize.' McMillan 2024 (S54 / S135 / S123) gives no reachable Rottweiler value this run — runbook rule: else a VetCompass median. Consistent with the RKC band 'Under 10 years' (S168)."
       },
       "rkc": {
         "value": "< 10",
@@ -7812,10 +7812,10 @@
       "mcmillan_2024": {
         "value": null,
         "unit": "years",
-        "source_id": "S54",
+        "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "McMillan et al. 2024: the Dogs Trust breed table (S123) returned a provenance refusal and the 'shortest and longest' PDF a fetch error (2026-10-11). UNSOURCED value — verify in McMillan 2024 Supplementary Table before replacing the VetCompass median."
+        "notes": "UNSOURCED — McMillan et al. 2024 Rottweiler median not reachable: the Author Correction (S54) names no Rottweiler; the published text (S135) quotes only earlier estimates in its introduction ('while estimates for Rottweilers have been substantially lower at 8.0 and 8.4 years of age.' — refs 3 and 4 of that paper, not McMillan's own value) and has no per-breed table (Supplementary Table 3 online only); the Dogs Trust breed table (S123) returned a provenance refusal and the 'shortest and longest' PDF a fetch error (2026-10-11). Verify in McMillan 2024 Supplementary Table 3 before replacing the VetCompass median."
       },
       "senior_from": {
         "value": 6.75,
