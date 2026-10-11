@@ -104,8 +104,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.british_shorthair.availability, 'coming_soon');
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   assert.equal(byId.ragdoll.availability, 'coming_soon');
-  // M5-R10-16: the cat is "Siberian" in EN (never the husky's slug).
-  assert.deepEqual(byId.siberian_cat.slug, { en: 'siberian', sl: 'sibirska-macka' });
+  // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
+  assert.deepEqual(byId.siberian_cat.slug, { en: 'siberian-cat', sl: 'sibirska-macka' });
   assert.equal(byId.siberian_cat.availability, 'coming_soon');
   assert.notEqual(byId.siberian_cat.slug.en, byId.siberian_husky.slug.en);
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');

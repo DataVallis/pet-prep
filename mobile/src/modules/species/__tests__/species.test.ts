@@ -218,7 +218,7 @@ describe('readBreed / readSpecies', () => {
     expect(breedName('siberian_cat')).toBe('Sibirska mačka');
     await i18n.changeLanguage('en');
     try {
-      expect(breedName('siberian_cat')).toBe('Siberian');
+      expect(breedName('siberian_cat')).toBe('Siberian cat');
     } finally {
       await i18n.changeLanguage('sl');
     }

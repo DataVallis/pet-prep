@@ -37,7 +37,7 @@
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "d327fd7cbf9102ac38c20569aa4d86501353e1092e031d35cee7a40c3d683a2f"
+      "sha256": "98580e3eecb294834bc699c326541fef09cbe45ab55d6a0cf8ee0edd915ca026"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
@@ -10044,16 +10044,16 @@
       "order": 3,
       "availability": "coming_soon",
       "name": {
-        "en": "Siberian",
+        "en": "Siberian cat",
         "sl": "Sibirska mačka"
       },
       "slug": {
-        "en": "siberian",
+        "en": "siberian-cat",
         "sl": "sibirska-macka"
       },
       "synonyms": {
         "en": [
-          "Siberian cat",
+          "Siberian",
           "Siberian Forest Cat"
         ],
         "sl": [

@@ -168,7 +168,7 @@ describe('breeds:portraits command', function () {
             ->expectsOutputToContain('[generate] border_collie → dog/border-collie.webp')
             ->expectsOutputToContain('[generate] maine_coon → cat/maine-coon.webp')
             ->expectsOutputToContain(bpService()->prompt(BreedType::LabradorRetriever))
-            ->expectsOutputToContain('To generate: 17 image(s), estimated $2.5500')
+            ->expectsOutputToContain('To generate: 18 image(s), estimated $2.7000')
             ->expectsOutputToContain('Dry run — no fal.ai call, nothing written.')
             ->assertSuccessful();
 
