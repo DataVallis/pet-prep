@@ -671,7 +671,7 @@ flowchart TD
 
 ### 5h. Cat litter, scratching and grooming (M5-R06-05, David 2026-10-08)
 
-Cats only (hidden behind `PETPREP_CATS_ENABLED`). A litter use is **not** a mess; only an unscooped tray becomes one. Numbers: `litter_uses_per_day` 3 / 2, `litter_scoop_deadline_hours` 4, `litter_full_change_days` 7, `grooming_sessions_per_week` 3 (Maine Coon) / 2 (Ragdoll) / 1 (British Shorthair, Siberian) from `breed_stage_params`; overdue 2 h, scratching 2 h and "matted after ≥ ceil(goal / 2) missed" are game rules traced to `cat-data/data.json`; mini-game mechanics in `config/cat_care.php`.
+Cats only (hidden behind `PETPREP_CATS_ENABLED`). A litter use is **not** a mess; only an unscooped tray becomes one. Numbers: `litter_uses_per_day` 3 / 2, `litter_scoop_deadline_hours` 4, `litter_full_change_days` 7, `grooming_sessions_per_week` 3 (Maine Coon) / 2 (Ragdoll) / 1 (British Shorthair, Siberian, Norwegian Forest Cat) from `breed_stage_params`; overdue 2 h, scratching 2 h and "matted after ≥ ceil(goal / 2) missed" are game rules traced to `cat-data/data.json`; mini-game mechanics in `config/cat_care.php`.
 
 ```mermaid
 flowchart TD
@@ -858,7 +858,7 @@ erDiagram
     bigint id
     bigint family_id
     bigint user_id "deprecated"
-    string breed_type "mutt border_collie labrador_retriever golden_retriever french_bulldog german_shepherd cavalier_king_charles_spaniel beagle standard_poodle dachshund australian_shepherd havanese west_highland_white_terrier bernese_mountain_dog siberian_husky domestic_cat maine_coon british_shorthair ragdoll siberian_cat"
+    string breed_type "mutt border_collie labrador_retriever golden_retriever french_bulldog german_shepherd cavalier_king_charles_spaniel beagle standard_poodle dachshund australian_shepherd havanese west_highland_white_terrier bernese_mountain_dog siberian_husky domestic_cat maine_coon british_shorthair ragdoll siberian_cat norwegian_forest_cat"
     string species "dog or cat, follows breed (M5-R06-01)"
     string name "optional label set by a parent, null = none (M5-R08)"
     double hunger_level

@@ -43,7 +43,7 @@ Vsa vprašanja Q1–Q10: ✅ **David 8. 10. 2026 13:47** — potrdil priporočen
 |---|---|---|
 | **Vrsta** (nov 1. korak) | **pes** · **mačka** (kasneje več) | pravila skrbi, gumbi, videi, besedila, pogodba |
 | Načrt | brezplačno · 12-tedenski izziv (kot danes, PAYMENTS_SPEC) | — |
-| Pasma | mačka: **domača mačka (mešanka)** 🆓 · **Maine Coon** 💶 (Q5) · **britanska kratkodlaka mačka** 💶 (M5-R10-14, 11. 10. 2026) · **ragdoll** 💶 (M5-R10-15, 11. 10. 2026) · **sibirska mačka** 💶 (M5-R10-16, 11. 10. 2026) | videz, česanje, življenjska doba, starost mucka ob prihodu |
+| Pasma | mačka: **domača mačka (mešanka)** 🆓 · **Maine Coon** 💶 (Q5) · **britanska kratkodlaka mačka** 💶 (M5-R10-14, 11. 10. 2026) · **ragdoll** 💶 (M5-R10-15, 11. 10. 2026) · **sibirska mačka** 💶 (M5-R10-16, 11. 10. 2026) · **norveška gozdna mačka** 💶 (M5-R10-17, 11. 10. 2026) | videz, česanje, življenjska doba, starost mucka ob prihodu |
 | Izvor | **kupljena** (vzreditelj) · **posvojena** (zavetišče) (D: »podarjena od znancev« šteje kot posvojena) | kot pri psu: kupljena praviloma mucek |
 | Starost ob prihodu | mucek · mlada · zrela · starejša (Q4) | potrebe, videz, faza |
 
@@ -121,11 +121,11 @@ Pri psu sprehod otroka spravi ven. Igra z muco pa je v aplikaciji in zahteva zas
 | Voda | Žeja | ✅ kot pes | ne neposredno | ✅ |
 | Pesek | Čistoča (pade na 0 % šele ob **neredu zraven peska**, §4) | ✅ kot pes | ✅ po 6 h izven tihih ur (kot pes) | ✅ |
 | Igra | Igra (namesto gibanja) | ❌ (kot sprehod) — en dnevni opomnik | ❌ (Q2) → naslednji dan »opraskan kavč« | ❌ |
-| Česanje (Maine Coon, ragdoll, britanska kratkodlaka, sibirska) | — (samo rutina) | ❌ | ❌ → »vozel v dlaki«, ko ob koncu tedna manjka vsaj polovica česanj (Maine Coon ≥ 2 od 3, ragdoll ≥ 1 od 2, britanska in sibirska 1 od 1; Q8, David 8. 10. ~22:20 in 11. 10.) | ❌ |
+| Česanje (Maine Coon, ragdoll, britanska kratkodlaka, sibirska, norveška gozdna) | — (samo rutina) | ❌ | ❌ → »vozel v dlaki«, ko ob koncu tedna manjka vsaj polovica česanj (Maine Coon ≥ 2 od 3, ragdoll ≥ 1 od 2, britanska, sibirska in norveška gozdna 1 od 1; Q8, David 8. 10. ~22:20 in 11. 10.) | ❌ |
 
 - **Obvestila (D):** besedila se pišejo posebej za mačko (»Tvoja muca je lačna«, »Pesek je treba počistiti«). Nikoli ne vsebujejo imen. Pravila pošiljanja so ista (PRODUCT_SPEC §6, M3-12). Obvestilo nikoli ne zahteva dejanja, ki ga aplikacija zavrne. *Zgrajeno na strežniku (M5-R06-06, osnutek Claude, čaka Davida):* vsa obvestila za muco imajo svoje besedilo EN + SL (`push.cat.*`, ženski spol: »muca je lačna«, »bo zbolela«); ko je odprto samo praskanje, obvestilo o hrani / vodi reče »najprej jo odnesi na praskalnik in jo pohvali« (čiščenje praskanja ne razreši), s praskanjem in neredom »najprej počisti nered in jo odnesi na praskalnik«.
 - **Opraskan kavč (Q10):** največ en dogodek na dan, ob naključni minuti izven tihih ur, samo dan po zamujeni rutini »Igra«. Čistoča pade na 0 % kot pri psovem grizenju in velja rok **2 h izven tihih ur** (rutina čiščenja; ✅ David 8. 10. 2026 ~22:20 — natanko kot grizenje, nato obstoječa lestvica: alarm, bolezen po 6 h, game over po 24 h). Razreši ga »Odnesi na praskalnik in pohvali« [C23]: otrok odnese muco na praskalnik, ko pristane, ima 3 s za pohvalo (oceni strežnik); prepozna ali prezgodnja pohvala nima kazni, otrok poskusi znova. *Zgrajeno na strežniku (M5-R06-05).*
-- **Vozel v dlaki (rodovniške mačke s česanjem, Q8):** ✅ David 8. 10. 2026 ~22:20 in 11. 10. 2026 — tedenski števec (zamujena vsaj polovica česanj tedna: Maine Coon ≥ 2 od 3, ragdoll ≥ 1 od 2, britanska in sibirska 1 od 1 → vozel ob tedenskem rojstnem dnevu); brez kazni: viden, naslednje česanje ~2× daljše ga razreši, šteje le zamujena rutina. *Zgrajeno na strežniku (M5-R06-05).*
+- **Vozel v dlaki (rodovniške mačke s česanjem, Q8):** ✅ David 8. 10. 2026 ~22:20 in 11. 10. 2026 — tedenski števec (zamujena vsaj polovica česanj tedna: Maine Coon ≥ 2 od 3, ragdoll ≥ 1 od 2, britanska, sibirska in norveška gozdna 1 od 1 → vozel ob tedenskem rojstnem dnevu); brez kazni: viden, naslednje česanje ~2× daljše ga razreši, šteje le zamujena rutina. *Zgrajeno na strežniku (M5-R06-05).*
 - **Bolezen, hard stop, zaklep do plačila, game over in Breed Downgrade** (Maine Coon → domača mačka) delujejo kot pri psu.
 
 ## 7. Rutine in Care Score (pregled za mačko)
@@ -138,7 +138,7 @@ Pri psu sprehod otroka spravi ven. Igra z muco pa je v aplikaciji in zahteva zas
 | Čiščenje | vsak nered (zraven peska, opraskan kavč) | v 2 h izven tihih ur (kot pes) | ni rešeno |
 | Menjava peska | 1 na teden programa | kadarkoli v tednu | teden mine brez menjave |
 | Igra | 3 (mucek) / 2 na dan | cilj iger dosežen | dan se konča pod ciljem |
-| Česanje (rodovniške mačke) | Maine Coon 3, ragdoll 2, britanska kratkodlaka 1, sibirska 1 na teden (Q8, David 11. 10.; sibirska po pravilu runbooka M5-R10-16), največ 1 na dan | opravljena mini-igra | ob koncu tedna programa manjkajoča česanja (≥ polovica → vozel v dlaki) |
+| Česanje (rodovniške mačke) | Maine Coon 3, ragdoll 2, britanska kratkodlaka 1, sibirska 1, norveška gozdna 1 na teden (Q8, David 11. 10.; sibirska in norveška gozdna po pravilu runbooka M5-R10-16 / M5-R10-17), največ 1 na dan | opravljena mini-igra | ob koncu tedna programa manjkajoča česanja (≥ polovica → vozel v dlaki) |
 
 Formula Care Score, pošten delež, semafor in pravila »rutina se ne pričakuje« ostanejo nespremenjeni (PRODUCT_SPEC §9, §11).
 
@@ -158,7 +158,7 @@ Formula Care Score, pošten delež, semafor in pravila »rutina se ne pričakuje
 > • Vsak dan ji bom dal svežo vodo.
 > • Vsak dan bom počistil njen pesek in ga enkrat na teden zamenjal.
 > • Vsak dan se bom igral z njo, da bo zdrava in vesela.
-> • *(Maine Coon, ragdoll, britanska kratkodlaka, sibirska — mačke s česanjem)* Redno jo bom česal, da se ji dlaka ne bo zavozlala.
+> • *(Maine Coon, ragdoll, britanska kratkodlaka, sibirska, norveška gozdna — mačke s česanjem)* Redno jo bom česal, da se ji dlaka ne bo zavozlala.
 > • Odzval se bom na opozorila, preden pride do bolezni ali virtualnega zavetišča.
 >
 > Ali sprejemaš to odgovornost?
@@ -205,7 +205,7 @@ Impact list only. David approved Q1–Q10 on 2026-10-08 13:47. Built so far (hid
 - `CareScheduleService`: feed windows are reused. Water count and gap come from the breed config (2 / 240 min).
 - `EscalationService` / `NotificationService`: species-aware texts. The ladder is unchanged. Energy-like handling applies to the play metric.
 - `RoutineType` gains `play`, `litter_scoop`, `litter_change` and `grooming`. `RoutineLedgerService` and `CareScoreService` count them, including fair share for shared cats.
-- Grooming (Maine Coon 3×, Ragdoll 2×, British Shorthair 1×, Siberian 1× per week — David 2026-10-11; Siberian by the runbook rule, M5-R10-16): a weekly counter and a "matted coat" event after ceil(goal / 2) missed sessions.
+- Grooming (Maine Coon 3×, Ragdoll 2×, British Shorthair 1×, Siberian 1×, Norwegian Forest Cat 1× per week — David 2026-10-11; Siberian and Norwegian Forest Cat by the runbook rule, M5-R10-16 / M5-R10-17): a weekly counter and a "matted coat" event after ceil(goal / 2) missed sessions.
 
 **API and contract**
 - `POST /api/parent/generate-pin` takes `{species, breed, origin, age_stage, plan}`. A breed that does not match the species → 422.
