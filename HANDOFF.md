@@ -181,9 +181,14 @@ Older queue (still valid where not done):
 
 ## 6. Session log
 
-### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-17 Norwegian Forest Cat (branch `feat/M5-R10-17-norwegian-forest-cat`, PR #174)
+### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-17 Norwegian Forest Cat (branch `feat/M5-R10-17-norwegian-forest-cat`, PR #174; portrait PR #175, website PR #34)
 - Research C36–C41 + K21 → backend (enum, migration, configs, cat rows incl. grooming 1×/week, appearance, `NorwegianForestCatBreedTest`) → mobile (names, hints, grooming list, schema.ts additive) → register export (`norwegianForestCatFacts`, health keys GSD IV + HCM + hips/weight) → docs. Tests: Pest 2304, Jest 2024, export 37 — all green locally.
-- Next: merge on green `CI OK`, deploy, portrait run, website page (`feat/register-norwegian-forest-cat`).
+- **Lock:** draft PR #174 before research; draft portrait PR #175 right after the #174 merge.
+- **Merge / deploy:** PR #174 merged as `73c6c66` on green `CI OK`; main run 38141142165 "Deploy to Hetzner Production" success.
+- **Review:** `qa-reviewer` APPROVE, no blockers; should-fix (hip dysplasia quote, weight claimed as a game rule, unsourced ruff / ear-tuft wording) and nits fixed before merge (`2b2e3d6`).
+- **Portrait:** run 38141312517 ($0.15, AI Lab), accepted first try — realistic photo, one adult brown mackerel tabby with white chest and paws, green-gold eyes, long bushy tail, plain light backdrop (coat reads moderately long rather than full winter coat); main's Labrador portrait kept.
+- **Website:** PR #34 merged (`c403202`), main run success — new words `gsd_iv`, `hip_dysplasia_weight`, checklist `dna_gsd4`, EN / SL intro (C13 / C37 / C38), AI photo. Live check from the cloud not done (egress proxy).
+- **Env trap (cloud sessions):** an interrupted background `composer install` left `vendor/sebastian/diff` without its `.git`; the retry ran git in the parent repo and rewrote `pet-prep/.git/config` (origin → sebastianbergmann/diff, extra remote `composer`). Repaired before any push to main (nothing was pushed elsewhere — GitHub refused). Run composer in the foreground, or check `git remote -v` after it.
 
 ### 2026-10-11 (cloud, David present) — Admin dashboard + EN/SL admin (branch `feat/admin-dashboard-i18n`)
 - Removed Filament's Account / FilamentInfo widgets; custom `App\Filament\Pages\Dashboard` with a period filter (7/30/90/365 days) + widgets `PlatformOverview`, `AttentionOverview`, `GrowthChart`, `CareActivityChart` (species filter), `PetsByBreedChart` (species filter), `PetPlansChart`, `LatestPets`, `LatestPurchases`, `AiSpendOverview` (translated). Per-day buckets in Europe/Ljubljana (`Widgets/Concerns/UsesDashboardPeriod`).
