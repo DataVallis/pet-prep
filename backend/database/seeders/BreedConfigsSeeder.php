@@ -395,6 +395,22 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.maine_coon',
                 'search_keywords' => ['maine coon', 'mejnkun', 'mainska'],
             ],
+            [
+                // M5-R10-14 (cat-data british_shorthair.identity.decision, runbook rule): paid, after the Maine Coon.
+                'breed_slug' => BreedType::BritishShorthair->slug(),
+                'daily_steps_required' => 0,
+                'hunger_decay_rate' => 8.0,
+                'thirst_decay_rate' => 8.0,
+                'poops_per_day' => 0,
+                'feed_windows' => self::CAT_FEED_WINDOWS,
+                'water_times_per_day' => 2,
+                'water_min_gap_minutes' => 240,
+                'premium_unlock' => true,
+                'species' => 'cat',
+                'sort_order' => 20,
+                'label_key' => 'breeds.british_shorthair',
+                'search_keywords' => ['british shorthair', 'britanska kratkodlaka mačka', 'britanska kratkodlaka macka', 'britanska kratkodlaka', 'britanka', 'british blue', 'bsh'],
+            ],
         ];
     }
 

@@ -237,6 +237,17 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10_SIBERIAN_HUSKY = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-13)';
 
+    /**
+     * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
+     * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
+     * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
+     * the general cat rule; no grooming row (CAT_SPEC Q8: Maine Coon only).
+     */
+    public const CONFIRMED_R10_BRITISH_SHORTHAIR = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-14)';
+
+    /** Cat breeds of catRows() (domestic cat = the free cat). */
+    public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair];
+
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
     public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky];
 
@@ -660,7 +671,7 @@ class BreedStageParamsSeeder extends Seeder
             // S158–S165; runbook rules in proposed_game_parameters.siberian_husky).
             BreedType::SiberianHusky => self::siberianHuskyProfile(),
 
-            BreedType::DomesticCat, BreedType::MaineCoon => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
+            BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
     }
 
@@ -1662,7 +1673,8 @@ class BreedStageParamsSeeder extends Seeder
      * unverified proposal; 2026_10_26_130000 flips the existing rows).
      * Only values data.json gives are seeded: no exercise / step keys (cats
      * have no steps), no senior sleep hours (no entry), no grooming row for
-     * the domestic cat (no grooming routine, CAT_SPEC Q8).
+     * the domestic cat or the British Shorthair (no grooming routine, CAT_SPEC Q8;
+     * M5-R10-14 British Shorthair: kitten arrival 3 + lifespan are its own rows).
      *
      * @return list<array<string, mixed>>
      */
@@ -1670,8 +1682,9 @@ class BreedStageParamsSeeder extends Seeder
     {
         $rows = [];
 
-        foreach ([BreedType::DomesticCat, BreedType::MaineCoon] as $breed) {
+        foreach (self::CAT_BREEDS as $breed) {
             $mc = $breed === BreedType::MaineCoon;
+            $bsh = $breed === BreedType::BritishShorthair;
             $slug = $breed->slug();
             $add = function (string $stage, int $from, StageParamKey $key, mixed $value, array $meta) use (&$rows, $slug): void {
                 $rows[] = array_merge([
@@ -1711,15 +1724,20 @@ class BreedStageParamsSeeder extends Seeder
             }
 
             // ── Age at arrival (CAT_SPEC Q4) ─────────────────────────────────
-            $add('puppy', 0, StageParamKey::ArrivalAgeMonths, $mc ? 3 : 2, $mc ? [
+            $add('puppy', 0, StageParamKey::ArrivalAgeMonths, $mc || $bsh ? 3 : 2, $mc ? [
                 'unit' => 'months', 'source_id' => 'C13', 'confidence' => 'high', 'verified' => true,
                 'ref' => 'maine_coon.arrival_age_kitten', 'decision' => self::CONFIRMED_CAT,
                 'quote' => 'Pedigree kittens are usually rehomed over 12-13 weeks old',
+            ] : ($bsh ? [
+                'unit' => 'months', 'source_id' => 'C13', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'british_shorthair.arrival_age_kitten', 'decision' => self::CONFIRMED_R10_BRITISH_SHORTHAIR,
+                'quote' => 'Pedigree kittens are usually rehomed over 12-13 weeks old',
+                'notes' => 'Same rule as the Maine Coon (CAT_SPEC Q4: pedigree kittens).',
             ] : [
                 'unit' => 'months', 'source_id' => 'C13', 'confidence' => 'high', 'verified' => true,
                 'ref' => 'general.arrival_age.kitten_min', 'decision' => self::CONFIRMED_CAT,
                 'quote' => 'Kittens shouldn\'t be rehomed until they\'re at least 8 weeks old',
-            ]);
+            ]));
             foreach (['young' => 12, 'adult' => 84, 'senior' => 120] as $stage => $age) {
                 $add($stage, 0, StageParamKey::ArrivalAgeMonths, $age, [
                     'unit' => 'months', 'verified' => true,
@@ -1838,12 +1856,21 @@ class BreedStageParamsSeeder extends Seeder
                     'notes' => 'Sources disagree: TICA daily for thick coats, CFA a couple of times a week (C17), Vetstreet weekly (C18). Matted coat after 2 missed sessions (maine_coon.grooming.game_matted_after_missed, rule in M5-R06-05).',
                 ]);
             }
-            $add('all', 0, StageParamKey::LifespanYears, $mc ? 9.71 : 11.89, [
-                'unit' => 'years (life expectancy at birth, UK)', 'source_id' => 'C14', 'confidence' => 'high', 'verified' => true,
-                'ref' => ($mc ? 'maine_coon' : 'domestic_cat').'.lifespan.expectancy_at_birth',
-                'quote' => $mc ? 'Maine Coon 9.71 y (8.42–11.00)' : 'crossbred 11.89 y (11.76–12.03)',
-                'notes' => 'Background for parents and appearance only; the senior boundary comes from C1, not from the lifespan.',
-            ]);
+            if ($bsh) {
+                $add('all', 0, StageParamKey::LifespanYears, 9.58, [
+                    'unit' => 'years (life expectancy at birth, UK)', 'source_id' => 'C14', 'confidence' => 'medium', 'verified' => true,
+                    'ref' => 'british_shorthair.lifespan.expectancy_at_birth',
+                    'quote' => '"British" (British Blue + Longhair) 9.58 y',
+                    'notes' => 'The paper\'s "British" group (wider than the British Shorthair alone). Background for parents and appearance only; the senior boundary comes from C1, not from the lifespan.',
+                ]);
+            } else {
+                $add('all', 0, StageParamKey::LifespanYears, $mc ? 9.71 : 11.89, [
+                    'unit' => 'years (life expectancy at birth, UK)', 'source_id' => 'C14', 'confidence' => 'high', 'verified' => true,
+                    'ref' => ($mc ? 'maine_coon' : 'domestic_cat').'.lifespan.expectancy_at_birth',
+                    'quote' => $mc ? 'Maine Coon 9.71 y (8.42–11.00)' : 'crossbred 11.89 y (11.76–12.03)',
+                    'notes' => 'Background for parents and appearance only; the senior boundary comes from C1, not from the lifespan.',
+                ]);
+            }
         }
 
         return $rows;

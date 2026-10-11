@@ -289,6 +289,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a British Shorthair (paid cat breed, M5-R10-14; species follows the breed).
+     */
+    public function britishShorthair(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::BritishShorthair->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static

@@ -836,9 +836,11 @@ describe('state, export, data', function () {
                 ->and(json_encode($target['value']))->toBe($columns['value']);
         }
 
-        // An R06-03 production row (proposal, verified = false) → flipped once.
+        // An R06-03 production row (proposal, verified = false) → flipped once. Only the two cats
+        // of that time (TARGETS); later cat breeds (British Shorthair, M5-R10-14) are seeded verified.
         seedLifeStageData();
-        BreedStageParam::where('key', 'play_min_gap_minutes')->toBase()->update([
+        $r0603 = fn () => BreedStageParam::where('key', 'play_min_gap_minutes')->whereIn('breed_slug', ['domestic-cat', 'maine-coon']);
+        $r0603()->toBase()->update([
             'verified' => false, 'notes' => 'UNSOURCED — proposal (D), CAT_SPEC §5.2, waiting for David: spread the sessions over the day.',
         ]);
         DB::table('breed_stage_param_changes')->delete();
@@ -846,12 +848,13 @@ describe('state, export, data', function () {
         $migration->up();
         $migration->up(); // idempotent
         expect(BreedStageParam::where('key', 'play_min_gap_minutes')->pluck('verified')->unique()->values()->all())->toBe([true])
+            ->and(BreedStageParam::where(['key' => 'play_min_gap_minutes', 'breed_slug' => 'british-shorthair'])->sole()->verified)->toBeTrue()
             ->and(DB::table('breed_stage_param_changes')->where('key', 'play_min_gap_minutes')->count())->toBe(2)
             ->and(DB::table('breed_stage_param_changes')->where('key', 'play_min_gap_minutes')->value('actor'))->toBe('system: David decision 2026-10-08');
 
         // An admin-touched tuple is never overwritten.
-        BreedStageParam::where('key', 'play_min_gap_minutes')->toBase()->update(['verified' => false]);
+        $r0603()->toBase()->update(['verified' => false]);
         $migration->up();
-        expect(BreedStageParam::where('key', 'play_min_gap_minutes')->pluck('verified')->unique()->values()->all())->toBe([false]);
+        expect($r0603()->pluck('verified')->unique()->values()->all())->toBe([false]);
     });
 });

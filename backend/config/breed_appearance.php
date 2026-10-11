@@ -156,6 +156,16 @@
 | conformation welfare breed (Breed Watch S164 lists only "Too fat" / "Too thin"): a
 | moderate, athletic build, never heavy.
 |
+|
+| British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
+| large to medium, muscular, cobby, broad chest; round, massive head with a broad
+| skull; short, broad, straight nose with a slight indentation — "not a stop as in the
+| Exotic" (no flat face); strong chin; small, slightly rounded ears set wide apart;
+| large, round, wide-open eyes; short, dense, crisp coat with a good undercoat; short,
+| thick tail rounded at the tip (FIFe BLH/BSH 01.07.2026, C26). Slow to mature, full
+| size at three to five years (CFA C27, VCA C28). Colours from the FIFe varieties only; blue is the
+| best-known colour (C27, C28) and weighted highest (portrait default). Colour weights
+| are unsourced → `verified => false`.
 */
 
 return [
@@ -900,6 +910,76 @@ return [
             'young' => [
                 'tail' => 'long, bushy',
                 'features' => ['a square outline of the head', 'a frill that is still filling out', 'fur that is short on the head and shoulders and longer down the back and sides'],
+            ],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    'british_shorthair' => [
+        'display_name' => 'British Shorthair cat',
+        // Colour weights are not in the standard (unsourced) — same rule as the Maine Coon.
+        'verified' => false,
+        'source' => 'FIFe breed standard British Longhair / British Shorthair (BLH / BSH), 01.07.2026 (C26, https://fifeweb.org/dnld/std/BLH-BSH.pdf) — for the traits listed in `sources`; weight / maturity C27 (CFA). Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'C26 "Large to medium"; C27 CFA males 4.1–7.7 kg, females 3.2–5.4 kg',
+            'build' => 'C26 "Muscular, cobby. Broad chest, shoulders and back strong and solid."',
+            'coat_length' => 'C26 BSH "Short, dense, not lying flat and with a good undercoat. Texture should be crisp to touch."',
+            'coat_color' => 'C26 recognised varieties (solid incl. blue, black, cream, red, lilac, white; tortie; tabby; bicolour); blue best known (C27, C28) — weights unsourced',
+            'ear_carriage' => 'C26 ears "Small and slightly rounded at the tips", "Set wide apart"',
+            'eye_color' => 'C26 eye colour by variety (copper / deep orange; green with silver; deep blue / odd eyes with white)',
+            'tail' => 'C26 tail "Short and thick, slightly rounded at the tip"',
+            'features' => 'C26 head "Round and massive with a broad skull"; nose "Short, broad and straight with a slight indentation, but not a stop as in the \"Exotic\""; chin "Strong"; eyes "Large, round, wide opened"',
+            'stage_notes' => 'C27 "do not reach their full size until three years of age"; C28 "up to five years to reach physical maturity"; kitten look (D) — CAT_SPEC §8',
+        ],
+        'traits' => [
+            'size' => ['medium-large'],
+            'build' => [['value' => 'muscular, cobby, broad-chested', 'weight' => 2], 'compact, solid, broad-chested'],
+            'coat_length' => ['short, dense, plush'],
+            // FIFe varieties only (C26); blue first and highest (portrait default).
+            'coat_color' => [
+                ['value' => 'blue-grey', 'weight' => 4],
+                'black',
+                'cream',
+                'lilac',
+                'white',
+                'red',
+                ['value' => 'silver', 'weight' => 2],
+                'tortoiseshell black and red',
+            ],
+            'coat_pattern' => [
+                ['value' => 'solid', 'weight' => 3, 'only_with' => ['coat_color' => ['blue-grey', 'black', 'cream', 'lilac', 'white']]],
+                ['value' => 'with a white chest, belly and paws', 'only_with' => ['coat_color' => ['blue-grey', 'black', 'cream', 'red']]],
+                ['value' => 'with classic tabby markings', 'weight' => 2, 'only_with' => ['coat_color' => ['silver', 'red', 'cream']]],
+                ['value' => 'with mottled patches', 'only_with' => ['coat_color' => ['tortoiseshell black and red']]],
+            ],
+            'ear_carriage' => ['small, slightly rounded, set wide apart'],
+            'eye_color' => [
+                ['value' => 'deep copper', 'weight' => 3, 'only_with' => ['coat_color' => ['blue-grey', 'black', 'cream', 'lilac', 'white', 'red', 'tortoiseshell black and red']]],
+                ['value' => 'deep orange', 'only_with' => ['coat_color' => ['blue-grey', 'black', 'cream', 'lilac', 'white', 'red', 'tortoiseshell black and red']]],
+                ['value' => 'green', 'only_with' => ['coat_color' => ['silver']]],
+                ['value' => 'deep blue', 'only_with' => ['coat_color' => ['white']]],
+            ],
+            'tail' => ['short, thick, rounded at the tip'],
+        ],
+        'features' => [
+            'a round, massive head with a broad skull and full cheeks',
+            'a short, broad, straight nose with only a slight dip — not a flat face',
+            'large, round, wide-open eyes',
+            'a strong chin',
+        ],
+        // CAT_SPEC §8 (D): the young British Shorthair is not fully grown yet (full size at three to five years, C27 / C28).
+        'stage_notes' => [
+            'puppy' => 'As a British Shorthair kitten it is round and plush, with a short, thick coat and a short tail',
+            'young' => 'As a young British Shorthair it is not fully grown yet: a little less broad and heavy than an adult (the breed reaches full size at three to five years)',
+        ],
+        // A growing British Shorthair: no adult "massive head" / "cobby" wording next to the stage note.
+        'stage_overrides' => [
+            'puppy' => [
+                'build' => 'compact, solid, broad-chested',
+                'features' => ['a round head with a short, broad nose', 'large, round, wide-open eyes'],
+            ],
+            'young' => [
+                'build' => 'compact, solid, broad-chested',
+                'features' => ['a round head with a broad skull', 'a short, broad, straight nose with only a slight dip — not a flat face', 'large, round, wide-open eyes'],
             ],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
