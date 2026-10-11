@@ -94,7 +94,8 @@
       "siberian_husky": "Part of the 12-week challenge.",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week",
-      "british_shorthair": "Short, dense coat · 12-week challenge"
+      "british_shorthair": "Short, dense coat · 12-week challenge",
+      "ragdoll": "Semi-long, silky coat · 12-week challenge"
     },
     "breedLockedNote": "This breed can't be chosen right now. Choose a mixed breed or try again later.",
     "lockedA11y": "{{breed}}, locked — part of the paid challenge",
@@ -221,6 +222,12 @@
       "british_shorthair": {
         "puppy": "Arrives as a 3-month-old kitten (pedigree kittens leave home later).",
         "young": "Arrives as a young cat, 1 year old — a British Shorthair keeps growing until 3–5 years.",
+        "adult": "Arrives as a mature cat, 7 years old.",
+        "senior": "Arrives as a senior cat, 10 years old."
+      },
+      "ragdoll": {
+        "puppy": "Arrives as a 3-month-old kitten (pedigree kittens leave home later).",
+        "young": "Arrives as a young cat, 1 year old — a Ragdoll keeps growing until about 4 years.",
         "adult": "Arrives as a mature cat, 7 years old.",
         "senior": "Arrives as a senior cat, 10 years old."
       }

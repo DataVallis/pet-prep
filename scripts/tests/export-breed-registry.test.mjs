@@ -102,6 +102,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.equal(byId.british_shorthair.availability, 'coming_soon');
+  assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
+  assert.equal(byId.ragdoll.availability, 'coming_soon');
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
 });
 
@@ -588,4 +590,29 @@ test('British Shorthair (M5-R10-14): paid cat, kitten at 3 months, CFA weight by
   assert.ok(bsh.game.values.some((v) => v.ref === 'cat-data:british_shorthair.arrival_age_kitten' && /pravilo runbooka, M5-R10-14/.test(v.decision)));
   // The cited sources are in the register (C26, the standard, feeds only the AI appearance).
   for (const id of ['C14', 'C27', 'C28']) assert.ok(registry.sources.some((s) => s.id === id), id);
+});
+
+test('Ragdoll (M5-R10-15): paid cat, kitten at 3 months, CFA weight by sex, full size at about 4 years, C14 life expectancy, combing once or twice a week, health keys only', () => {
+  const rag = registry.breeds.find((b) => b.id === 'ragdoll');
+  assert.equal(rag.species, 'cat');
+  assert.equal(rag.availability, 'coming_soon');
+  const fact = (field) => rag.facts.find((f) => f.field === field);
+  assert.deepEqual([fact('weight').value, fact('weight').source_ids], [{ male: [6.8, 9.1], female: [4.5, 6.8] }, ['C30']]);
+  assert.deepEqual([fact('growth_end').value, fact('growth_end').qualifier, fact('growth_end').source_ids], [48, 'about', ['C30']]);
+  assert.deepEqual([fact('lifespan').value, fact('lifespan').qualifier, fact('lifespan').source_ids], [10.31, 'expectancy', ['C14']]);
+  assert.deepEqual([fact('grooming_frequency').value, fact('grooming_frequency').source_ids], ['at_least_once_or_twice_a_week', ['C32']]);
+  assert.deepEqual(rag.health.map((h) => [h.key, h.source_ids]), [['heart_hcm', ['C32']], ['dental_weight_nail_care', ['C31']]]);
+  assert.ok(rag.health.every((h) => !('value' in h)));
+  assert.deepEqual(rag.suitability, { suits: [], consider: [] });
+  // Game: the general cat rules, a pedigree kitten at 3 months, no grooming routine (CAT_SPEC Q8).
+  assert.equal(rag.game.stages[0].starts.arrival_months, 3);
+  assert.deepEqual(rag.game.stages.map((s) => s.starts.month ?? null), [null, 12, 84, 120]);
+  assert.deepEqual(rag.game.adult_activity, { kind: 'play_sessions', value: 2 });
+  assert.equal(rag.game.rules.find((r) => r.key === 'grooming_rule'), undefined);
+  assert.ok(rag.game.values.some((v) => v.ref === 'cat-data:ragdoll.arrival_age_kitten' && /pravilo runbooka, M5-R10-15/.test(v.decision)));
+  // No health statistics and no median age at death of the C31 study in the register.
+  const json = JSON.stringify(rag);
+  assert.doesNotMatch(json, /12\.85|periodontal|odds ratio|hypoallergenic|van pattern/i);
+  assert.doesNotMatch(json, /\d+(\.\d+)?\s?%/);
+  for (const id of ['C14', 'C30', 'C31', 'C32']) assert.ok(registry.sources.some((s) => s.id === id), id);
 });

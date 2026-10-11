@@ -32,6 +32,7 @@ enum BreedType: string
     case DomesticCat = 'domestic_cat';
     case MaineCoon = 'maine_coon';
     case BritishShorthair = 'british_shorthair';
+    case Ragdoll = 'ragdoll';
 
     /**
      * Get the breed slug as used in the breed_configs table.
@@ -57,6 +58,7 @@ enum BreedType: string
             self::DomesticCat => 'domestic-cat',
             self::MaineCoon => 'maine-coon',
             self::BritishShorthair => 'british-shorthair',
+            self::Ragdoll => 'ragdoll',
         };
     }
 
@@ -75,7 +77,7 @@ enum BreedType: string
     {
         return match ($this) {
             self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky => Species::Dog,
-            self::DomesticCat, self::MaineCoon, self::BritishShorthair => Species::Cat,
+            self::DomesticCat, self::MaineCoon, self::BritishShorthair, self::Ragdoll => Species::Cat,
         };
     }
 
@@ -100,7 +102,7 @@ enum BreedType: string
     {
         return match ($this) {
             self::Mutt, self::DomesticCat => false,
-            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::MaineCoon, self::BritishShorthair => true,
+            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::MaineCoon, self::BritishShorthair, self::Ragdoll => true,
         };
     }
 

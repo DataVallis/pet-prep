@@ -837,7 +837,7 @@ describe('state, export, data', function () {
         }
 
         // An R06-03 production row (proposal, verified = false) → flipped once. Only the two cats
-        // of that time (TARGETS); later cat breeds (British Shorthair, M5-R10-14) are seeded verified.
+        // of that time (TARGETS); later cat breeds (British Shorthair M5-R10-14, Ragdoll M5-R10-15) are seeded verified.
         seedLifeStageData();
         $r0603 = fn () => BreedStageParam::where('key', 'play_min_gap_minutes')->whereIn('breed_slug', ['domestic-cat', 'maine-coon']);
         $r0603()->toBase()->update([
@@ -849,6 +849,7 @@ describe('state, export, data', function () {
         $migration->up(); // idempotent
         expect(BreedStageParam::where('key', 'play_min_gap_minutes')->pluck('verified')->unique()->values()->all())->toBe([true])
             ->and(BreedStageParam::where(['key' => 'play_min_gap_minutes', 'breed_slug' => 'british-shorthair'])->sole()->verified)->toBeTrue()
+            ->and(BreedStageParam::where(['key' => 'play_min_gap_minutes', 'breed_slug' => 'ragdoll'])->sole()->verified)->toBeTrue()
             ->and(DB::table('breed_stage_param_changes')->where('key', 'play_min_gap_minutes')->count())->toBe(2)
             ->and(DB::table('breed_stage_param_changes')->where('key', 'play_min_gap_minutes')->value('actor'))->toBe('system: David decision 2026-10-08');
 
