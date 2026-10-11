@@ -145,8 +145,9 @@ describe('breed, config and database', function () {
         expect($refused(['breed_type' => 'british_shorthair']))->toThrow(QueryException::class)
             // The old species rule is back: a British Shorthair would have had to be a dog.
             ->and(DB::selectOne("SELECT pg_get_constraintdef(oid) AS def FROM pg_constraint WHERE conname = 'pets_species_breed_check'")->def)->not->toContain('british_shorthair');
-        // The Siberian Husky (previous migration) and the Maine Coon stay allowed after the rollback.
-        DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'domestic_cat']);
+        // The Siberian Husky (previous migration) and the other cats stay allowed after the rollback.
+        DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'siberian_husky', 'species' => 'dog']);
+        DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'domestic_cat', 'species' => 'cat']);
         $migration->up();
         DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'british_shorthair']);
         expect(Pet::findOrFail($pet->id)->breed_type)->toBe(BreedType::BritishShorthair);

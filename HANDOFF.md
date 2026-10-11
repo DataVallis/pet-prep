@@ -175,7 +175,7 @@ Older queue (still valid where not done):
 - **Backend:** `BreedType::BritishShorthair` (slug `british-shorthair`, species cat, paid), migration `2026_11_15_120000` (breed + species CHECKs), `BreedConfigsSeeder` row (sort 20, Maine Coon cat values), `catRows()` via `CAT_BREEDS`, `breed_appearance.php` (FIFe colours, blue-grey highest, stage notes + overrides, moderate nose), `FalAiService` v1 refusals, unions, `PetFactory::britishShorthair()`, `BritishShorthairBreedTest` (helpers `bsh*`) + shared counts / lists.
 - **App:** `schema.ts` regenerated (additive: `british_shorthair`), `BREED_SPECIES`, names (EN British Shorthair, SL Britanska kratkodlaka mačka), hints, cat plan notes without breed names, tests.
 - **Register export:** `british_shorthair` `coming_soon` (cats hidden); weight CFA, growth 36–60 months, life expectancy 9.58 (C14), grooming `at_least_once_a_week` (new category value on the website); no health items.
-- **Tests:** Pest **2217** (full run 2216 + 1 fixed and re-run green), Jest **2016**, export test 29, ci-plan 220.
+- **Tests:** Pest **2217** (full run 2216 + 1 fixed and re-run green), Jest **2017**, export test 29, ci-plan 220.
 - **Not changed:** `app.json`, CLAUDE.md, production data.
 
 ### 2026-10-10 (cloud, unattended) — M5-R10-13 Siberian Husky (branch `feat/M5-R10-13-siberian-husky`, PR #161)

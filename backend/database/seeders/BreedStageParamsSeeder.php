@@ -237,7 +237,6 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_R10_SIBERIAN_HUSKY = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-13)';
 
-    /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
     /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
@@ -249,6 +248,7 @@ class BreedStageParamsSeeder extends Seeder
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair];
 
+    /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
     public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */

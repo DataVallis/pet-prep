@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Britanska kratkodlaka je v FIFe druga najbolj registrirana pasma (16.278 v letu 2024). Pokaže, da isti postopek, ki je dodal 13 pasem psov, deluje tudi za mačke: nova pasma prinese le toliko novih pravil, kolikor jih zahtevajo viri.
 
-**Številke:** 3 novi viri (C26–C28), 1 nova migracija (dve omejitvi pasme), 0 novih pravil igre; Pest **2217** testov, Jest **2016**, izvoz registra **29** testov (vsi zeleni). V aplikaciji skrito; na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+**Številke:** 3 novi viri (C26–C28), 1 nova migracija (dve omejitvi pasme), 0 novih pravil igre; Pest **2217** testov, Jest **2017**, izvoz registra **29** testov (vsi zeleni). V aplikaciji skrito; na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
 
 **Kako povedati:**
 - 👩 Starši: »Britanska kratkodlaka mačka je mirna in rada ima vse v družini, a ne mara, da jo nosite naokrog.« (*ko bodo mačke v aplikaciji*)

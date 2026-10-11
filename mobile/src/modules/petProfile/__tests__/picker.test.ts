@@ -355,6 +355,17 @@ describe('PICKER_STRINGS.ageHints', () => {
     }
   });
 
+  it('no cat picker note names one paid cat as the only one (two paid cats since M5-R10-14) — SL and EN', async () => {
+    const notes = () => [i18n.t('pet:picker.cat.breedFreeNote'), i18n.t('pet:picker.cat.breedChallengeNote'), i18n.t('pet:picker.cat.plans.challenge.hint')];
+    for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk/i);
+    await i18n.changeLanguage('en');
+    try {
+      for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk/i);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
   it('no picker note names one paid breed as the only one (two paid dogs since M5-R10)', () => {
     for (const text of [PICKER_STRINGS.breedFreeNote, PICKER_STRINGS.breedChallengeNote, PICKER_STRINGS.searchPlaceholder, PICKER_STRINGS.plans.challenge.hint]) {
       expect(text).not.toMatch(/collie|koli|labrador|golden|zlati|bulldog|buldog/i);
