@@ -357,10 +357,10 @@ describe('PICKER_STRINGS.ageHints', () => {
 
   it('no cat picker note names one paid cat as the only one (two paid cats since M5-R10-14) — SL and EN', async () => {
     const notes = () => [i18n.t('pet:picker.cat.breedFreeNote'), i18n.t('pet:picker.cat.breedChallengeNote'), i18n.t('pet:picker.cat.plans.challenge.hint')];
-    for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk|ragdoll|siberian|sibirsk/i);
+    for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk|ragdoll|siberian|sibirsk|norwegian|norvešk/i);
     await i18n.changeLanguage('en');
     try {
-      for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk|ragdoll|siberian|sibirsk/i);
+      for (const text of notes()) expect(text).not.toMatch(/maine|coon|british|britansk|ragdoll|siberian|sibirsk|norwegian|norvešk/i);
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -403,6 +403,27 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(PICKER_STRINGS.breedHints.siberian_cat).toBe('Semi-long, dense coat · brushing 1× a week');
       // Never sold as an allergy-friendly cat (PetMD C35).
       expect(JSON.stringify(E) + PICKER_STRINGS.breedHints.siberian_cat).not.toMatch(/allerg/i);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-17 Norwegian Forest Cat (cat): kitten at 3 months, young cat still growing until 4–5 years, brushing 1× a week — SL and EN', async () => {
+    const S = PICKER_STRINGS.ageHints.norwegian_forest_cat;
+    expect(S.puppy).toBe('Pride kot mucek, star 3 mesece (rodovniški mucki gredo od doma pozneje).');
+    expect(S.young).toBe('Pride kot mlada mačka, stara 1 leto — norveška gozdna mačka raste do 4.–5. leta.');
+    expect(S.adult).toBe('Pride kot zrela mačka, stara 7 let.');
+    expect(S.senior).toBe('Pride kot starejša mačka, stara 10 let.');
+    expect(PICKER_STRINGS.breedHints.norwegian_forest_cat).toBe('Dolga, vodoodbojna dlaka · česanje 1× na teden');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.norwegian_forest_cat;
+      expect(E.puppy).toBe('Arrives as a 3-month-old kitten (pedigree kittens leave home later).');
+      expect(E.young).toBe('Arrives as a young cat, 1 year old — a Norwegian Forest Cat keeps growing until 4–5 years.');
+      expect(E.adult).toBe('Arrives as a mature cat, 7 years old.');
+      expect(E.senior).toBe('Arrives as a senior cat, 10 years old.');
+      expect(PICKER_STRINGS.breedHints.norwegian_forest_cat).toBe('Long, water-repellent coat · brushing 1× a week');
+      expect(JSON.stringify(E) + PICKER_STRINGS.breedHints.norwegian_forest_cat).not.toMatch(/allerg/i);
     } finally {
       await i18n.changeLanguage('sl');
     }

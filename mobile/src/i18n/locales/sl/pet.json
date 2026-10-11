@@ -104,7 +104,8 @@
       "maine_coon": "Dolga dlaka · česanje 3× na teden",
       "british_shorthair": "Kratka, gosta dlaka · česanje 1× na teden",
       "ragdoll": "Poldolga, svilnata dlaka · česanje 2× na teden",
-      "siberian_cat": "Poldolga, gosta dlaka · česanje 1× na teden"
+      "siberian_cat": "Poldolga, gosta dlaka · česanje 1× na teden",
+      "norwegian_forest_cat": "Dolga, vodoodbojna dlaka · česanje 1× na teden"
     },
     "breedLockedNote": "Te pasme zdaj ni mogoče izbrati. Izberite mešančka ali poskusite pozneje.",
     "lockedA11y": "{{breed}}, zaklenjeno — del plačljivega izziva",
@@ -243,6 +244,12 @@
       "siberian_cat": {
         "puppy": "Pride kot mucek, star 3 mesece (rodovniški mucki gredo od doma pozneje).",
         "young": "Pride kot mlada mačka, stara 1 leto — sibirska mačka raste do 4.–5. leta.",
+        "adult": "Pride kot zrela mačka, stara 7 let.",
+        "senior": "Pride kot starejša mačka, stara 10 let."
+      },
+      "norwegian_forest_cat": {
+        "puppy": "Pride kot mucek, star 3 mesece (rodovniški mucki gredo od doma pozneje).",
+        "young": "Pride kot mlada mačka, stara 1 leto — norveška gozdna mačka raste do 4.–5. leta.",
         "adult": "Pride kot zrela mačka, stara 7 let.",
         "senior": "Pride kot starejša mačka, stara 10 let."
       }

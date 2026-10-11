@@ -3,7 +3,7 @@
  *
  * The dog's text is `contract:screen.body`; a cat's is `cat:override.contract.screen.body`
  * ("muca", feminine, litter + play instead of walks — chosen explicitly here, so it never
- * depends on the text species being set); a cat with a brushing routine (Maine Coon, Ragdoll, Siberian,
+ * depends on the text species being set); a cat with a brushing routine (Maine Coon, Ragdoll, Siberian, Norwegian Forest Cat,
  * British Shorthair — `hasGroomingRoutine`) adds the brushing line (`cat:contract.bodyWithBrushing`). The wording is Claude's draft of CAT_SPEC §9 (D).
  */
 
