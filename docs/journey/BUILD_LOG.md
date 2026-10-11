@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-11 — Vsaka potreba pasme je v igri: česanje britanske kratkodlake in ragdolla
+
+**Kaj se je zgodilo:** David je postavil stalno pravilo: **če katerakoli pasma karkoli potrebuje, tudi minimalno, mora to aplikacija omogočati** — nič več »predlog, ni zgrajeno«. Takoj sta dobili rutino »Počeši muco« še dve mački: **britanska kratkodlaka 1× na teden** (VCA: »vsaj enkrat na teden«) in **ragdoll 2× na teden** (PetMD: »enkrat do dvakrat na teden«; CFA in VetCompass pravita, da poldolga dlaka potrebuje redno nego). Če otrok v tednu zamudi vsaj polovico česanj, nastane vozel v dlaki — brez kazni, naslednje daljše česanje ga razreši. Pravilo je zdaj zapisano v runbook, zato ga vsak samodejni zagon za novo pasmo upošteva.
+
+**Zakaj je pomembno:** Simulacija mora pokazati vso skrb, ki jo prava žival zahteva — tudi tisto, ki se zdi majhna. Starš tako pred nakupom vidi, da tudi kratkodlaka mačka potrebuje česanje.
+
+**Številke:** 2 novi rutini (1× in 2× na teden), 1 splošno pravilo za vozel (polovica česanj tedna), 0 novih virov (C28, C30–C32 že zbrani); vse pasme mačk z virom za nego dlake imajo zdaj rutino (3 od 3 rodovniških mačk).
+
+**Kako povedati:**
+- 👩 Starši: »V PetPrep bo vsaka mačka zahtevala to, kar zahteva prava — tudi britanska kratkodlaka enkrat na teden potrebuje česanje.« (*ko bodo mačke v aplikaciji*)
+- 💼 Investitorji: »Pravila igre izhajajo iz virov za vsako pasmo posebej; nobena potreba ne ostane neupoštevana.«
+- 🤝 Partnerji (vzreditelji): »Otrok v simulaciji vadi tudi nego dlake, ki jo vaša pasma potrebuje.« (*načrt — ko bodo mačke vklopljene*)
+- 📣 Omrežja: še ne — mačke niso vklopljene.
+- 🛠 Tehnično: »`CatChoreService::mattedAfterMissed()` = ceil(cilj / 2); runbook §3 zahteva gradnjo vsake potrebe z virom v istem zagonu.«
+
+---
+
 ## 2026-10-11 — Ragdoll: tretja plačljiva mačka (M5-R10-15)
 
 **Kaj se je zgodilo:** PetPrep ima tretjo plačljivo pasmo mačke — **ragdolla**. Dodan je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`) in je skrit skupaj z vsemi mačkami, dokler jih David ne vklopi. Raziskava: **4 novi viri (C29–C32)** — standard FIFe, stran pasme CFA, študija VetCompass (RVC) o več kot 21.000 ragdollih in PetMD (pregledal veterinar). Pravila igre so splošna mačja pravila (igra s palico 2× na dan, pesek, voda 2× na dan); mucek pride pri **3 mesecih** (rodovniški mucki, PDSA). Rutine česanja nima — to je po potrjenem specu samo pri Maine Coonu; rutina česanja poldolge dlake (PetMD: nekaterim zadošča 1–2× na teden, CFA: redno) čaka Davida. Videz za AI: vedno modre oči in svetlo telo s temnejšimi točkami, kot zahteva standard.
