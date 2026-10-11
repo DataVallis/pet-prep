@@ -54,6 +54,7 @@ M1 core game end-to-end → M2 parent onboarding & real dashboard → M3 notific
 Goal: extend LTV from the 3-month challenge to the dog's 10–15-year life. One tap "We got a real dog" turns the simulator into a real-time AI assistant that already knows the family's routine.
 - Features: smart-collar integration (e.g. Tractive) or white-label PetPrep collar; activity anomaly alerts; AI vet triage from photos (guidance only, always routes to a real vet); growth & nutrition tracking.
 - Revenue: AI coach subscription (~€3.99/month), affiliate shop (pet stores), pet-insurance lead generation by breed risk, vet partner network (AI first contact → hand-off to a partner vet by call/chat: qualified leads, tele-consult fees or clinic membership), dog-school booking fees.
+- **Genetics (decided 2026-10-11, after a vet's feedback):** DNA test purchase in the app (affiliate and via vets first; own PetPrep test kit with a partner lab as a long-term option), breed-mix report with sources ("not a diagnosis"), card for the vet; shown on the website as *in development*. Already live today: a sourced "Before you buy: what to check with the breeder" checklist on every breed page of the register.
 - Tech: LLM + retrieval over verified veterinary sources (pgvector in our existing PostgreSQL).
 - Gate: measure how many challenge families actually adopt a dog before building.
 

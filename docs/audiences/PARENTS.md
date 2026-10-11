@@ -151,6 +151,11 @@ Neuspeh v aplikaciji je **uspeh za vas**: izvedeli ste, preden je trpela prava �
   - Izbris je **takojšen in ga ni mogoče razveljaviti** — zato pred tem raje izvozite podatke. Potrditvenega e-sporočila zaenkrat ne pošljemo *(načrt)*.
 - Strežniki v EU (Hetzner). *(načrt: politika zasebnosti, privolitev staršev)*
 
+## Pred nakupom: kaj preveriti pri vzreditelju *(na spletni strani od 11. 10. 2026, register pasem)*
+- Na strani vsake pasme na petprep.si: splošne točke (mladička si oglejte z mamo, starost ob odhodu, rodovnik, izvidi zdravstvenih testov obeh staršev, pravila pasemskega kluba, pisna pogodba) in zdravstveni testi staršev za to pasmo — vse z viri.
+- Na slovenski strani še okvir **»V Sloveniji velja«** (pravilnik o zaščiti hišnih živali iz leta 2009, mikročip do 8. tedna, prijava v 7 dneh, cepljenje proti steklini, profil DNK vzrejnih psov, KZS / ZFDS).
+- V aplikaciji še ni *(načrt — z bazo znanja o pasmah)*. Genski test za mešančka in kartica za veterinarja sta *v razvoju* (faza 2).
+
 ## Cena
 - **Mešanček: brezplačen za vedno.**
 - **12-tedenski PetPrep izziv: 49,99 € na psa** — **začne se z nakupom** (od 8. 10. 2026 brez 7-dnevnega brezplačnega preizkusa; brezplačno lahko PetPrep preizkusite z mešančkom). Skupni pes več otrok = **ena cena**; drugi pes v družini = nov izziv. Dostop imata oba starša. Vključuje zahtevno pasmo, personaliziranega AI psa, certifikat in bonuse. Dokler izziva ne kupite, kuža na izzivu po podpisu pogodbe **varno čaka** (nič ne propade, 12 tednov še ne teče). Kupite lahko že pred podpisom pogodbe. Če izbrišete psa s kupljenim izzivom, je nakup porabljen (aplikacija vas na to posebej opozori). Nakup je samo v starševskem delu aplikacije: dokler izziv psa ni plačan (tudi če kuža še ni rojen), ima kartica otroka v pregledu (in podrobnosti otroka) gumb **»12-tedenski izziv — kupi«**, v zavihku »Nadzor« pa je vrstica **»Nakupi / izziv«** (tudi za obnovo nakupov na novem telefonu). Za brezplačnega mešančka gumba ni. *(Zgrajeno 7. 10. 2026; nakup bo mogoč, ko bo izdelek objavljen v App Store in Google Play.)*

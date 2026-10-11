@@ -627,6 +627,9 @@ test('checklist: known answers (vet feedback examples, Westie, British Shorthair
   const dogItems = registry.species.find((s) => s.id === 'dog').buyer_checklist;
   assert.deepEqual(dogItems.filter((i) => i.country === 'SI').map((i) => i.key), ['min_age_puppy_si', 'microchip_registration', 'vaccination_records', 'rabies_vaccination', 'kzs_member_si', 'parents_dna_profile']);
   assert.ok(dogItems.filter((i) => !i.country).every((i) => !i.source_ids.some((s) => ['K3', 'K4', 'K5', 'K6', 'K8', 'K19'].includes(s))), 'universal items cite no Slovenian source');
+  const catItems = registry.species.find((s) => s.id === 'cat').buyer_checklist;
+  assert.deepEqual(catItems.filter((i) => i.country === 'SI').map((i) => i.key), ['kitten_min_age_si', 'zfds_member_si']);
+  assert.ok(catItems.filter((i) => !i.country).every((i) => !i.source_ids.some((s) => ['K3', 'K15'].includes(s))), 'universal cat items cite no Slovenian source');
   assert.deepEqual(dogGeneral.rabies_vaccination, ['K5', 'K19']);
   // minimum first, then best practice, then other schemes
   for (const [id, c] of Object.entries(byId)) {
