@@ -44,7 +44,7 @@
  *        meals by stage ........... dog proposed_game_parameters.feed_windows (decision)
  *        stage starts / arrival ... dog proposed_game_parameters.arrival_age_months (+ per breed)
  *        per breed ................ see DOG_GAME below
- *  cats  stage starts / arrival ... cat general.arrival_age.* (+ maine_coon.arrival_age_kitten)
+ *  cats  stage starts / arrival ... cat general.arrival_age.* (+ <breed>.arrival_age_kitten for pedigree cats)
  *        meals by stage ........... cat general.meals_per_day.*
  *        play sessions ............ cat general.play.game_sessions_{kitten,adult}, game_min_gap
  *        litter ................... cat general.litter.game_uses_per_day_*, game_scoop_deadline,
@@ -393,7 +393,10 @@ const SPECIES = [
     facets: [],
     compare_fields: ['weight', 'grooming_sources_differ', 'lifespan', 'game_activity'],
     // Cats are hidden in the app (PETPREP_CATS_ENABLED=false) → coming soon.
-    breeds: [{ id: 'maine_coon', availability: 'coming_soon', synonyms: { en: [], sl: [] } }],
+    breeds: [
+      { id: 'maine_coon', availability: 'coming_soon', synonyms: { en: [], sl: [] } },
+      { id: 'british_shorthair', availability: 'coming_soon', synonyms: { en: ['British Blue', 'BSH'], sl: ['britanska kratkodlaka', 'britanska kratkodlaka macka', 'britanka', 'british shorthair'] } },
+    ],
   },
 ];
 
@@ -981,6 +984,7 @@ function catGeneralFacts(R) {
 }
 
 function catBreedFacts(R, id) {
+  if (id === 'british_shorthair') return britishShorthairFacts(R);
   if (id !== 'maine_coon') throw new Error(`no cat fact spec for ${id}`);
   const male = R.fact('maine_coon.adult_weight.tica_male', {}, parseRange);
   const female = R.fact('maine_coon.adult_weight.tica_female', {}, parseRange);
@@ -991,6 +995,22 @@ function catBreedFacts(R, id) {
       R.fact('maine_coon.growth_end', { group: 'stages', field: 'growth_end', kind: 'quantity', unit: 'months', qualifier: 'about' }, parseRange),
       R.fact('maine_coon.lifespan.expectancy_at_birth', { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: 'expectancy' }, Number),
       R.fact('maine_coon.grooming.range', { group: 'grooming', field: 'grooming_sources_differ', kind: 'statement' }, () => ({ from: 'daily', to: 'weekly' })),
+    ],
+    health: [],
+  };
+}
+
+/** M5-R10-14: CFA weight (C27), growth 3–5 years (C27 / C28), C14 "British" life expectancy, VCA grooming (C28). */
+function britishShorthairFacts(R) {
+  const male = R.fact('british_shorthair.adult_weight.cfa_male', {}, parseRange);
+  const female = R.fact('british_shorthair.adult_weight.cfa_female', {}, parseRange);
+  if (male.source_ids.join() !== female.source_ids.join()) throw new Error('British Shorthair weights cite different sources');
+  return {
+    facts: [
+      { group: 'size', field: 'weight', kind: 'quantity', unit: 'kg', value: { male: male.value, female: female.value }, source_ids: male.source_ids, ref: `${male.ref} + ${female.ref}`, confidence: male.confidence },
+      R.fact('british_shorthair.growth_end', { group: 'stages', field: 'growth_end', kind: 'quantity', unit: 'months', qualifier: 'about' }, parseRange),
+      R.fact('british_shorthair.lifespan.expectancy_at_birth', { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: 'expectancy' }, Number),
+      R.fact('british_shorthair.grooming.range', { group: 'grooming', field: 'grooming_frequency', kind: 'category' }, code),
     ],
     health: [],
   };
@@ -1023,7 +1043,8 @@ function catGame(R) {
   const shared = [m4, m3, m2, mA, mS, young, adult, senior, playK, playA, gap, usesA, scoop, change];
 
   const forBreed = (id) => {
-    const arrival = id === 'maine_coon' ? n('maine_coon.arrival_age_kitten') : n('general.arrival_age.kitten_min');
+    // Pedigree kittens arrive at 3 months (CAT_SPEC Q4; British Shorthair M5-R10-14), the domestic cat at 2.
+    const arrival = id === 'domestic_cat' ? n('general.arrival_age.kitten_min') : n(`${id}.arrival_age_kitten`);
     const extra = [];
     const rules = [
       { key: 'play_instead_of_steps', params: { sessions: playA.value, gap_minutes: gap.value } },

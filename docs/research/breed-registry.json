@@ -17,11 +17,11 @@
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
-      "sha256": "6655cdaad99021db71e6c724f4cf6bac4e4dd9139a96c5cdbf6583b0713dcdd7"
+      "sha256": "3a7fd36a271c84fc4ae47cb00fa0aabcf3eb50c5a3d11d77f18d6d4e88d20fcd"
     },
     "cat_sources": {
       "path": "docs/research/cat-data/sources.md",
-      "sha256": "14f18b36ea5aca1b3a299510756ff91a036239a94fa041551b5594709307fc0f"
+      "sha256": "becb5c1185e9ae8cf5877fa83969b98eb02cfe3de33e551047fd3be3388a4b29"
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
@@ -29,19 +29,19 @@
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "31881d86dfc742e51fa2c3200509f290cfc0068be673025ca2994c05e9bac62c"
+      "sha256": "a42624593f002e0c86f8fab738be368ebde7a7d60adec835e09d2732c7cd2863"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "3dc25e56014c6c20a642446b40308fb6c2d1cce69d0b94377e523e43f8022119"
+      "sha256": "ee345f716390ecbebe5a4d6d9c5379495534dee9b0047354bbe27addd8e5c38a"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "1a450483b389fdfbed32b64ad14f3b724fd56d5d05e199b267058bbc50e50d1f"
+      "sha256": "016e1a1ac4c2419ebcac272b764e30cf3f63cef56be3a50f4acbd2521fa470a9"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "efae954092b1ebf774bc0fc65102f0f21dd3bb5490986cdd5396f1986f97065a"
+      "sha256": "743d31f6fdd610d64082237719ecb22198c8f3a33790f30a3a60c699c647171a"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -343,7 +343,7 @@
         }
       },
       "status": "coming_soon",
-      "breed_count": 1,
+      "breed_count": 2,
       "fact_groups": [
         "play",
         "litter",
@@ -8386,6 +8386,330 @@
         "C18",
         "C23"
       ]
+    },
+    {
+      "id": "british_shorthair",
+      "species": "cat",
+      "order": 1,
+      "availability": "coming_soon",
+      "name": {
+        "en": "British Shorthair",
+        "sl": "Britanska kratkodlaka mačka"
+      },
+      "slug": {
+        "en": "british-shorthair",
+        "sl": "britanska-kratkodlaka-macka"
+      },
+      "synonyms": {
+        "en": [
+          "British Blue",
+          "BSH"
+        ],
+        "sl": [
+          "britanska kratkodlaka",
+          "britanska kratkodlaka macka",
+          "britanka",
+          "british shorthair"
+        ]
+      },
+      "facets": {},
+      "facts": [
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              4.1,
+              7.7
+            ],
+            "female": [
+              3.2,
+              5.4
+            ]
+          },
+          "source_ids": [
+            "C27"
+          ],
+          "ref": "cat-data:british_shorthair.adult_weight.cfa_male + cat-data:british_shorthair.adult_weight.cfa_female",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "value": [
+            36,
+            60
+          ],
+          "source_ids": [
+            "C27",
+            "C28"
+          ],
+          "ref": "cat-data:british_shorthair.growth_end",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "expectancy",
+          "value": 9.58,
+          "source_ids": [
+            "C14"
+          ],
+          "ref": "cat-data:british_shorthair.lifespan.expectancy_at_birth",
+          "confidence": "medium"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "at_least_once_a_week",
+          "source_ids": [
+            "C28"
+          ],
+          "ref": "cat-data:british_shorthair.grooming.range",
+          "confidence": "medium"
+        }
+      ],
+      "compare": {
+        "weight": 0,
+        "lifespan": 2
+      },
+      "health": [],
+      "suitability": {
+        "suits": [],
+        "consider": []
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 3
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 12
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 84
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 120
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "play_sessions",
+              "value": 2
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "play_sessions",
+          "value": 2
+        },
+        "rules": [
+          {
+            "key": "play_instead_of_steps",
+            "params": {
+              "sessions": 2,
+              "gap_minutes": 120
+            }
+          },
+          {
+            "key": "litter_rule",
+            "params": {
+              "uses": 2,
+              "scoop_hours": 4,
+              "change_days": 7
+            }
+          },
+          {
+            "key": "scratching_after_missed_play",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_6_12_weeks",
+            "basis_source_ids": [
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_3_6_months",
+            "basis_source_ids": [
+              "C2",
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.kitten_6_12_months",
+            "basis_source_ids": [
+              "C2",
+              "C3"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.adult",
+            "basis_source_ids": [
+              "C2"
+            ],
+            "decision": "potrdil David 2026-10-08 (načrt M5-R06): adult cat 2 meals per day (game simplification)"
+          },
+          {
+            "ref": "cat-data:general.meals_per_day.senior",
+            "basis_source_ids": [
+              "C2"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "cat-data:general.arrival_age.young",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: young cat arrives at 12 months"
+          },
+          {
+            "ref": "cat-data:general.arrival_age.adult",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: mature cat arrives at 84 months"
+          },
+          {
+            "ref": "cat-data:general.arrival_age.senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: senior cat arrives at 120 months"
+          },
+          {
+            "ref": "cat-data:general.play.game_sessions_kitten",
+            "basis_source_ids": [
+              "C10"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: kitten 3 per day"
+          },
+          {
+            "ref": "cat-data:general.play.game_sessions_adult",
+            "basis_source_ids": [
+              "C10"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: adult 2 per day"
+          },
+          {
+            "ref": "cat-data:general.play.game_min_gap",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 20:40: 2 h between two successful sessions, measured from the last successful one"
+          },
+          {
+            "ref": "cat-data:general.litter.game_uses_per_day_adult",
+            "basis_source_ids": [
+              "C6"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: adult 2 uses per day"
+          },
+          {
+            "ref": "cat-data:general.litter.game_scoop_deadline",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-08 13:47: 4 h deadline"
+          },
+          {
+            "ref": "cat-data:general.litter.full_change",
+            "basis_source_ids": [
+              "C5",
+              "C6",
+              "C7"
+            ],
+            "decision": "potrdil David 2026-10-08 13:47: one full litter change per program week"
+          },
+          {
+            "ref": "cat-data:british_shorthair.arrival_age_kitten",
+            "basis_source_ids": [
+              "C13"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka, M5-R10-14): pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule for pedigree kittens)"
+          }
+        ],
+        "basis_source_ids": [
+          "C2",
+          "C3",
+          "C5",
+          "C6",
+          "C7",
+          "C10",
+          "C13"
+        ]
+      },
+      "portrait": null,
+      "source_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C10",
+        "C12",
+        "C13",
+        "C14",
+        "C23",
+        "C27",
+        "C28"
+      ]
     }
   ],
   "sources": [
@@ -9193,6 +9517,20 @@
       "publisher": "AAFP — Claw Friendly educational toolkit, client resources (2024)",
       "title": "Claw Friendly client resources",
       "url": "https://catvets.com/wp-content/uploads/2024/01/ClawFriendlyEducationalToolkit_ClientResources-upd.pdf"
+    },
+    {
+      "id": "C27",
+      "tier": "B",
+      "publisher": "CFA (The Cat Fanciers' Association) — breed page",
+      "title": "Learn more about the British Shorthair",
+      "url": "https://cfa.org/?p=5551"
+    },
+    {
+      "id": "C28",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (\"the Veterinarians of VCA Animal Hospitals\"), undated",
+      "title": "British Shorthair (cat breeds)",
+      "url": "https://vcahospitals.com/know-your-pet/cat-breeds/british-shorthair"
     }
   ]
 }
