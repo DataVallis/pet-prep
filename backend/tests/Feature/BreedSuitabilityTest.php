@@ -107,7 +107,7 @@ it('returns tag keys per kind; breeds without sourced tags get empty lists', fun
             'suits' => ['active_family'],
             'consider' => ['long_daily_exercise', 'needs_mental_stimulation', 'may_herd_children', 'chews_when_bored'],
         ]);
-    foreach ([BreedType::Mutt, BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat] as $breed) {
+    foreach ([BreedType::Mutt, BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal] as $breed) {
         expect($suitability->for($breed))->toBe(['suits' => [], 'consider' => []]);
     }
 
