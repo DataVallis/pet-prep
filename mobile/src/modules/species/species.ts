@@ -39,17 +39,18 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   maine_coon: 'cat',
   british_shorthair: 'cat',
   ragdoll: 'cat',
+  siberian_cat: 'cat',
 } satisfies Record<components['schemas']['BreedType'], Species>;
 
 export const KNOWN_BREEDS = Object.keys(BREED_SPECIES) as BreedType[];
 
 /**
  * Cat breeds with a weekly brushing routine (server `grooming_sessions_per_week`): Maine Coon
- * 3×, Ragdoll 2×, British Shorthair 1× (CAT_SPEC Q8; David 2026-10-11 — every sourced breed
+ * 3×, Ragdoll 2×, British Shorthair 1×, Siberian 1× (CAT_SPEC Q8; David 2026-10-11 — every sourced breed
  * need is in the app). Used where the app has no pet state yet (contract text, report rows);
  * the live HUD follows the server's `grooming` block.
  */
-export const GROOMING_CAT_BREEDS: readonly BreedType[] = ['maine_coon', 'british_shorthair', 'ragdoll'];
+export const GROOMING_CAT_BREEDS: readonly BreedType[] = ['maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat'];
 
 export function hasGroomingRoutine(breed: unknown): boolean {
   return isKnownBreed(breed) && GROOMING_CAT_BREEDS.includes(breed);

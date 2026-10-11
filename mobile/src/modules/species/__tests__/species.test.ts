@@ -14,7 +14,7 @@ import {
 
 describe('readBreed / readSpecies', () => {
   it('keeps every known breed, dogs and cats', () => {
-    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll'] as const) {
+    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat'] as const) {
       expect(readBreed(breed)).toBe(breed);
     }
   });
@@ -194,8 +194,8 @@ describe('readBreed / readSpecies', () => {
     }
   });
 
-  it('brushing routine for the Maine Coon, Ragdoll and British Shorthair only (David 2026-10-11)', () => {
-    for (const breed of ['maine_coon', 'ragdoll', 'british_shorthair']) expect(hasGroomingRoutine(breed)).toBe(true);
+  it('brushing routine for the Maine Coon, Ragdoll, British Shorthair (David 2026-10-11) and Siberian (M5-R10-16) only', () => {
+    for (const breed of ['maine_coon', 'ragdoll', 'british_shorthair', 'siberian_cat']) expect(hasGroomingRoutine(breed)).toBe(true);
     for (const breed of ['domestic_cat', 'mutt', 'border_collie', 'unknown', null]) expect(hasGroomingRoutine(breed)).toBe(false);
   });
 
@@ -206,6 +206,19 @@ describe('readBreed / readSpecies', () => {
     await i18n.changeLanguage('en');
     try {
       expect(breedName('ragdoll')).toBe('Ragdoll');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-16: the Siberian is a paid cat with its own name (never confused with the Siberian Husky)', async () => {
+    expect(readSpecies(undefined, readBreed('siberian_cat'))).toBe('cat');
+    expect(readSpecies(undefined, readBreed('siberian_husky'))).toBe('dog');
+    expect(isDefaultFreeBreed('siberian_cat')).toBe(false);
+    expect(breedName('siberian_cat')).toBe('Sibirska mačka');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('siberian_cat')).toBe('Siberian');
     } finally {
       await i18n.changeLanguage('sl');
     }
