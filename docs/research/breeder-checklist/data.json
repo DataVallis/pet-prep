@@ -881,6 +881,53 @@
         }
       ]
     },
+    "rottweiler": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S168",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "These tests address conditions that are still significant for the breed"
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_jlpp",
+          "level": "minimum",
+          "name": "DNA test for juvenile laryngeal paralysis and polyneuropathy (JLPP)",
+          "source_id": "S168",
+          "quote": "DNA test for juvenile laryngeal paralysis and polyneuropathy (JLPP)"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S168",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S168",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "dna_lemp2",
+          "level": "best_practice",
+          "name": "DNA test for leukoencephalomyelopathy (LEMP-2)",
+          "source_id": "S168",
+          "quote": "DNA test for leukoencephalomyelopathy (LEMP-2)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S168",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ]
+    },
     "maine_coon": {
       "status": "listed",
       "basis": {

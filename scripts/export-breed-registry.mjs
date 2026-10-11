@@ -385,6 +385,7 @@ const SPECIES = [
       { id: 'west_highland_white_terrier', availability: 'coming_soon', synonyms: { en: ['Westie', 'West Highland Terrier'], sl: ['zahodnoškotski beli terier', 'zahodnoskotski beli terier', 'westie', 'west highland terier'] } },
       { id: 'bernese_mountain_dog', availability: 'coming_soon', synonyms: { en: ['Berner', 'Berner Sennenhund', 'Bernese'], sl: ['bernski planšarski pes', 'bernski plansarski pes', 'bernski planšar', 'bernski plansar', 'berner'] } },
       { id: 'siberian_husky', availability: 'coming_soon', synonyms: { en: ['Husky', 'Huskie'], sl: ['haski', 'sibirski husky', 'husky', 'sibirec'] } },
+      { id: 'rottweiler', availability: 'coming_soon', synonyms: { en: ['Rottie', 'Rotty', 'Rott'], sl: ['rottweiler', 'rotvajlerka', 'rottie'] } },
     ],
   },
   {
@@ -655,6 +656,29 @@ const DOG_FACTS = {
       ['epilepsy', 'health.epilepsy'],
     ],
   },
+  // M5-R10-19. Not exported: lifespan.pdsa ("More than 10 years" conflicts with RKC and VetCompass —
+  // alternative only), lifespan.mcmillan_2024 (no value reachable), lifespan.senior_from (derived),
+  // height.akc / pdsa_average and adult_weight.pdsa (FCI is the register's standard; FCI gives one
+  // weight per sex), health.breed_watch (show points), health.common_disorders_2017 and every
+  // percentage of S171 / S172 (research only), health.joints_other / lemp / skin (no chip, no website
+  // sentence needed). Lifespan = the VetCompass median (S171) and the RKC band "Under 10 years".
+  rottweiler: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'less_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['laryngeal_paralysis_polyneuropathy', 'health.jlpp'],
+      ['heart_sas', 'health.heart'],
+      ['cancer_risk', 'health.cancer'],
+      ['inherited_eye_disease', 'health.eyes'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -769,6 +793,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.siberian_husky.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.siberian_husky.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.siberian_husky.exercise_minutes_senior',
+  },
+  rottweiler: {
+    adult_minutes: ['proposed_game_parameters.rottweiler.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.rottweiler.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.rottweiler.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.rottweiler.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.rottweiler.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.rottweiler.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],

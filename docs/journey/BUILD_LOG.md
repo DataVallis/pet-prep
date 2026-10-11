@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-11 — Rotvajler: prva pasma po dvajsetih (M5-R10-19)
+
+**Kaj se je zgodilo:** Vseh 20 pasem razširitve je bilo končanih, zato je samodejni zagon po pravilu runbooka v čakalno vrsto dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **rotvajlerja** (8. mesto). Raziskava: **9 novih virov (S166–S174)** — standard FCI in nomenklatura, The Royal Kennel Club (stran pasme in Breed Watch), PDSA, uradni standard AKC (American Rottweiler Club), raziskava VetCompass in AKC lestvica priljubljenosti. Pravila igre: odrasel **120 minut = 12.000 korakov** na dan, starejši 90 minut = 9.000, mladiček od 2.000 navzgor; starejši je od **81. meseca** (mediana VetCompass 9,0 leta — začasno, do preverbe McMillan 2024); uči se **1,8-krat** hitreje kot mešanček (Coren: 9. mesto).
+
+**Zakaj je pomembno:** Rotvajler je med najbolj priljubljenimi psi, a ni za vsako družino. PetPrep to pove z viri: nova oznaka »**močan pes — potrebuje izkušenega lastnika**« (PDSA), mirna oznaka »kolki in zadnje noge« (The Royal Kennel Club pri pasmi spremlja obliko zadnjih nog) in »krajša življenjska doba«; PDSA ga družinam z mlajšimi otroki in dojenčki ne priporoča, zato nima oznake »z otroki«. Krtačenje enkrat na teden je potreba z virom, ki je igra pri psih še ne vodi — zapisano je kot naloga M5-R13 za Davida, da se ne pozabi.
+
+**Številke:** 9 novih virov (S166–S174), 1 migracija, 1 nova oznaka, 1 nova naloga (česanje psa, M5-R13); Pest **2354** testov, Jest **2034**, izvoz registra **39** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Rotvajler je zvest in pameten, a močan pes za izkušene lastnike — potrebuje več kot dve uri gibanja na dan in zgodnjo socializacijo. Pri vzreditelju vprašajte za teste staršev (kolki, komolci, DNA test za JLPP).«
+- 💼 Investitorji: »Ko je bil seznam 20 pasem izpolnjen, je sistem sam izbral naslednjo po javni lestvici AKC in jo zgradil po istem postopku — z viri, testi in pregledom.«
+- 🤝 Partnerji (vzreditelji, veterinarji, šole za pse): »PetPrep pred nakupom jasno pove, da je rotvajler pes za izkušene lastnike, in našteje teste staršev po The Royal Kennel Club.«
+- 📣 Omrežja: »Si želite rotvajlerja? Najprej preverite, ali zmorete dve uri gibanja na dan — 12 tednov, vsak dan.« (brez obljub o zdravju, nikoli z majhnimi otroki)
+- 🛠 Tehnično: »Prva pasma, ki jo je samodejni zagon dodal sam po pravilu za čakalno vrsto; prva nova potreba z virom (krtačenje psa), ki je postala naloga, ker mehanika za pse še ne obstaja.«
+
+---
+
 ## 2026-10-11 — Bengalska mačka: šesta plačljiva mačka (M5-R10-18)
 
 **Kaj se je zgodilo:** PetPrep ima šesto plačljivo pasmo mačke — **bengalsko mačko**. Dodana je v samodejnem zagonu po pravilih runbooka (`docs/engineering/ADD_BREED_RUNBOOK.md`) in je skrita skupaj z vsemi mačkami, dokler jih David ne vklopi. Raziskava: **9 novih virov (C42–C50)** — standarda WCF in FIFe, PDSA, PetMD (pregledal veterinar), VCA, primerjava registrov World Cat Congress ter izjave FelineVMA, britanskega Animal Welfare Committee in The Cat Group o divjih križancih. Pravila igre so splošna mačja pravila (igra s palico 2× na dan, pesek, voda 2× na dan); mucek pride pri **3 mesecih** (rodovniški mucki, PDSA); kratko pegasto dlako otrok **počeše 1× na teden** (PDSA in PetMD se ujemata).

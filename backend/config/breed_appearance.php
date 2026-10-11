@@ -156,6 +156,17 @@
 | conformation welfare breed (Breed Watch S164 lists only "Too fat" / "Too thin"): a
 | moderate, athletic build, never heavy.
 |
+| Rottweiler (M5-R10-19, docs/research/dog-data rottweiler.appearance): a medium to
+| large, stalwart dog, neither heavy nor light; top coat of medium length, coarse, dense
+| and flat; medium-sized, pendant, triangular ears; medium, almond-shaped, dark brown
+| eyes; natural (undocked) tail (FCI 147 S166, AKC via the American Rottweiler Club S170).
+| One standard colour: "Black with clearly defined markings of a rich tan on the cheeks,
+| muzzle, throat, chest and legs" — white markings are a fault (S166). Welfare rule: RKC
+| Breed Watch (S173) names "Excessively short muzzle" and "Incorrect hind conformation
+| and/or poor rear movement" → the dog trait `build` asks for a level back and sound hind
+| legs, and the `muzzle` trait for a moderate muzzle (FCI muzzle : skull ≈ 1 : 1.5).
+| Weights unsourced (one colour) → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -838,6 +849,40 @@ return [
             'tail' => ['well-furred fox-brush tail'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-19 (docs/research/dog-data/data.json rottweiler.appearance; runbook rules
+    // 2026-10-11: black and tan only, natural tail, moderate muzzle, sound hind legs).
+    'rottweiler' => [
+        'display_name' => 'Rottweiler',
+        // One standard colour; shade wording and weights are unsourced (rottweiler.appearance.colour_weights) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 147 (S166, https://fci.be/Nomenclature/Standards/147g02-en.pdf), AKC standard via the American Rottweiler Club (S170), RKC breed page (S168), RKC Breed Watch (S173) — for the traits listed in `sources`. Weights are unsourced.',
+        'sources' => [
+            'size' => 'S168 "Size: Large"; S166 "Height at withers: For males is 61 - 68 cm." / "For bitches is 56 - 63 cm."',
+            'build' => 'S166 "The Rottweiler is a medium to large size, stalwart dog, neither heavy nor light and neither leggy nor weedy."; S173 "Incorrect hind conformation and/or poor rear movement" (welfare rule: level back, sound hind legs)',
+            'coat_length' => 'S166 "The top coat is of medium length, coarse, dense and flat." "The undercoat must not show through the top coat."',
+            'coat_color' => 'S166 "Black with clearly defined markings of a rich tan on the cheeks, muzzle, throat, chest and legs," (also over both eyes and under the tail); fault "White markings."; S170 rust to mahogany markings (paraphrase)',
+            'ear_carriage' => 'S166 "Medium-sized, pendant, triangular, wide apart, set on high."',
+            'eye_color' => 'S166 "Of medium size, almond-shaped, dark brown in colour."',
+            'tail' => 'S166 natural tail: strong, level with the topline, carried in a light curve when alert, hanging at ease (paraphrase)',
+            'muzzle' => 'S166 "The ratio between the length of the muzzle and the length of the skull is about 1 to 1,5."; S173 "Excessively short muzzle" (welfare rule: moderate, never short)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'powerful and compact but not heavy, level back, sound well-angled hind legs', 'weight' => 3], 'athletic, muscular, standing square'],
+            'coat_length' => ['short-to-medium, coarse, dense, flat-lying coat'],
+            // One standard colour (S166, S170); the shade of tan varies within the standard wording.
+            'coat_color' => [
+                ['value' => 'black with clearly defined rich tan markings on the cheeks, muzzle, throat, chest, legs and above the eyes', 'weight' => 4],
+                'black with clearly defined mahogany markings on the cheeks, muzzle, throat, chest, legs and above the eyes',
+            ],
+            'ear_carriage' => ['medium-sized, triangular, pendant, set high'],
+            'eye_color' => ['dark brown, almond-shaped'],
+            'tail' => ['natural, undocked tail, level with the back, hanging at rest'],
+            // Welfare rule (S173): never an excessively short muzzle.
+            'muzzle' => ['moderate muzzle, clearly shorter than the skull but never short, with a broad black nose'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

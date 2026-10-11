@@ -96,6 +96,12 @@ return [
         // getting up to mischief", "they'll often dig holes to try and tunnel under fences.").
         // A sourced, important trait no other key covers; a calm chip, never a number.
         'secure_fencing' => 'consider',
+        // M5-R10-19 (runbook "new tag" rule, 2026-10-11): a powerful dog that needs an
+        // experienced owner (Rottweiler: PDSA S169 "Because they're so powerful, Rottweilers
+        // need an experienced owner who understands them."). A sourced, important trait no
+        // other key covers (first_time_owner is only ever a `suits` tag); a calm chip, never
+        // a number.
+        'experienced_owner' => 'consider',
     ],
 
     'breeds' => [
@@ -440,6 +446,34 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S160', 'S162'], 'refs' => ['siberian_husky.suitability.rkc_shedding', 'siberian_husky.suitability.pdsa_shedding']],
                 // S160 "Grooming: More than once a week"; S162 "brush your Husky a few times a week".
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S160', 'S162'], 'refs' => ['siberian_husky.suitability.rkc_grooming', 'siberian_husky.suitability.pdsa_grooming']],
+            ],
+        ],
+
+        // M5-R10-19: rottweiler.* (S166–S174), runbook rules (data.json
+        // proposed_game_parameters.rottweiler.suitability_tags). `family_pet` keeps its
+        // condition in the sources ("A well-trained Rottweiler …", S168); not `children` /
+        // `small_children` (PDSA S169 does not recommend the breed for families with younger
+        // children and babies), not `other_pets` (S169), not `first_time_owner` (S169).
+        'rottweiler' => [
+            'suits' => [
+                // S168 "Exercise: More than 2 hours per day"; S169 "at least two hours of exercise every day".
+                ['tag' => 'active_family', 'source_ids' => ['S168', 'S169'], 'refs' => ['rottweiler.exercise.adult', 'rottweiler.suitability.pdsa_exercise']],
+                // S168 "A well-trained Rottweiler makes a wonderful family companion."; S169 "can fit in well with family life if well trained".
+                ['tag' => 'family_pet', 'source_ids' => ['S168', 'S169'], 'refs' => ['rottweiler.suitability.rkc_family', 'rottweiler.behaviour.family']],
+                // S168 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S168'], 'refs' => ['rottweiler.suitability.rkc_size_of_home', 'rottweiler.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S168 "More than 2 hours per day"; S169 "at least two hours of exercise every day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S168', 'S169'], 'refs' => ['rottweiler.exercise.adult', 'rottweiler.suitability.pdsa_exercise']],
+                // S169 "Because they're so powerful, Rottweilers need an experienced owner who understands them."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S169'], 'refs' => ['rottweiler.behaviour.experienced_owner', 'rottweiler.suitability.pdsa_experienced_owner']],
+                // Welfare rule: S173 "Incorrect hind conformation and/or poor rear movement"; S168 hip / elbow tests.
+                ['tag' => 'hips_hind_legs', 'source_ids' => ['S173', 'S168'], 'refs' => ['rottweiler.health.breed_watch', 'rottweiler.health.hip_elbow_dysplasia']],
+                // S168 "Lifespan: Under 10 years"; S171 "Median longevity overall was 9.0 years".
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S168', 'S171'], 'refs' => ['rottweiler.lifespan.rkc', 'rottweiler.lifespan.median_uk']],
+                // S168 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S168'], 'refs' => ['rottweiler.suitability.rkc_shedding']],
             ],
         ],
     ],

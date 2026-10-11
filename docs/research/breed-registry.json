@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "f135b9d36af554112f57350c72de593faf7624230de2a287c35687a7b1b74a9a"
+      "sha256": "8cf1f4a87e5f42588bd1e131693b652deed2d1d3e47250fc11bd43a4eed213f7"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "2e8abb2204e98949d07780ed1bb0325f9a1b3d7e387dd4fb0d2c1d5f9f155b44"
+      "sha256": "8fa6e351508db214376648fe58b3a5aa1c24d9a703b449ce88def5f60d34585d"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "751d41ae650bfe62c601815ee95a5041a97854755c658eaa9fd8fcdb37098741"
+      "sha256": "8d283430f2e44a75af8b828b2e03d299b208c824b54be497fbb03f4722e862de"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "47190e931f97cff19e7f292ebdfe768e6b699348a788226422f322d890fe9fdf"
+      "sha256": "47bdae6f732b150096cf8e2efb9c47b62015d21eff00b7e4a5742941a22058c1"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "658b8edd61b5f8c00aeeff751f8528ad9e274a223212a010a6b5c5ad2d5bff9b"
+      "sha256": "860483566ae40e7a8a58cafcf97c2c6ad0b100079ad9f081b2d8c2a1e96aacad"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "eb014702296e0f27fb78e423e2a4deec061d37bfe54cadd88533008cf824e704"
+      "sha256": "7e48b935d3ac9aef5594471ffc4a01d24bf564ba87587c7f85616d10d552acb5"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "eac9d74b5497f530b5535fafd4f43883c1dcd201cfb1e92315ec42f887e97ff4"
+      "sha256": "7ef3a6a29206c7b1a7857d49957e850f06ec2eb2a883bbf25ace5f55fa9f2abd"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "e8a8dbf914e8bc2cdd83475e0240af5e43463cca70c1e6e1e3717fce498f619b"
+      "sha256": "4adf16f83ef2be7d8ed0ce9c1f4516a06e9bbe53a2b99fcf227147376679c839"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -63,6 +63,7 @@
     "brachycephalic_breathing": "consider",
     "chews_when_bored": "consider",
     "children": "suits",
+    "experienced_owner": "consider",
     "family_pet": "suits",
     "first_time_owner": "suits",
     "food_motivated_weight": "consider",
@@ -94,6 +95,7 @@
         "brachycephalic_breathing": "flat face — breathing and heat problems",
         "chews_when_bored": "chews things when bored",
         "children": "families with children",
+        "experienced_owner": "powerful dog — needs an experienced owner",
         "family_pet": "family life",
         "first_time_owner": "first-time owners",
         "food_motivated_weight": "loves food — watch the weight",
@@ -125,6 +127,7 @@
         "brachycephalic_breathing": "kratek gobček — težave z dihanjem in vročino",
         "chews_when_bored": "ko se dolgočasi, grize stvari",
         "children": "družino z otroki",
+        "experienced_owner": "močan pes — potrebuje izkušenega lastnika",
         "family_pet": "družinsko življenje",
         "first_time_owner": "začetnike",
         "food_motivated_weight": "rad je — pazite na težo",
@@ -165,7 +168,7 @@
         }
       },
       "status": "available",
-      "breed_count": 14,
+      "breed_count": 15,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -8933,6 +8936,604 @@
       ]
     },
     {
+      "id": "rottweiler",
+      "species": "dog",
+      "order": 14,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Rottweiler",
+        "sl": "Rotvajler"
+      },
+      "slug": {
+        "en": "rottweiler",
+        "sl": "rotvajler"
+      },
+      "synonyms": {
+        "en": [
+          "Rottie",
+          "Rotty",
+          "Rott"
+        ],
+        "sl": [
+          "rottweiler",
+          "rotvajlerka",
+          "rottie"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S168"
+          ],
+          "ref": "rottweiler.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              61,
+              68
+            ],
+            "female": [
+              56,
+              63
+            ]
+          },
+          "source_ids": [
+            "S166"
+          ],
+          "ref": "rottweiler.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              50,
+              50
+            ],
+            "female": [
+              42,
+              42
+            ]
+          },
+          "source_ids": [
+            "S166"
+          ],
+          "ref": "rottweiler.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "rottweiler.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 9,
+          "source_ids": [
+            "S171"
+          ],
+          "ref": "rottweiler.lifespan.median_uk",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S168"
+          ],
+          "ref": "rottweiler.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S168"
+          ],
+          "ref": "rottweiler.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S168"
+          ],
+          "ref": "rottweiler.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S168"
+          ],
+          "ref": "rottweiler.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S168"
+          ],
+          "ref": "rottweiler.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 9,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "rottweiler.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 147,
+            "group": 2,
+            "section": 2,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S167"
+          ],
+          "ref": "rottweiler.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S168"
+          ],
+          "ref": "rottweiler.health.hip_elbow_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "laryngeal_paralysis_polyneuropathy",
+          "source_ids": [
+            "S168"
+          ],
+          "ref": "rottweiler.health.jlpp",
+          "confidence": "high"
+        },
+        {
+          "key": "heart_sas",
+          "source_ids": [
+            "S169"
+          ],
+          "ref": "rottweiler.health.heart",
+          "confidence": "medium"
+        },
+        {
+          "key": "cancer_risk",
+          "source_ids": [
+            "S169"
+          ],
+          "ref": "rottweiler.health.cancer",
+          "confidence": "medium"
+        },
+        {
+          "key": "inherited_eye_disease",
+          "source_ids": [
+            "S169"
+          ],
+          "ref": "rottweiler.health.eyes",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S168",
+              "S169"
+            ],
+            "refs": [
+              "rottweiler.exercise.adult",
+              "rottweiler.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S168",
+              "S169"
+            ],
+            "refs": [
+              "rottweiler.suitability.rkc_family",
+              "rottweiler.behaviour.family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S168"
+            ],
+            "refs": [
+              "rottweiler.suitability.rkc_size_of_home",
+              "rottweiler.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S168",
+              "S169"
+            ],
+            "refs": [
+              "rottweiler.exercise.adult",
+              "rottweiler.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S169"
+            ],
+            "refs": [
+              "rottweiler.behaviour.experienced_owner",
+              "rottweiler.suitability.pdsa_experienced_owner"
+            ]
+          },
+          {
+            "tag": "hips_hind_legs",
+            "source_ids": [
+              "S168",
+              "S173"
+            ],
+            "refs": [
+              "rottweiler.health.breed_watch",
+              "rottweiler.health.hip_elbow_dysplasia"
+            ]
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S168",
+              "S171"
+            ],
+            "refs": [
+              "rottweiler.lifespan.rkc",
+              "rottweiler.lifespan.median_uk"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S168"
+            ],
+            "refs": [
+              "rottweiler.suitability.rkc_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 81
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.8
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 81
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.rottweiler.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S168"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S168 'More than 2 hours per day'; PDSA S169 the same)"
+          },
+          {
+            "ref": "proposed_game_parameters.rottweiler.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.rottweiler.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S171"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 81 (0.75 × 9.0 y, VetCompass median S171)"
+          },
+          {
+            "ref": "proposed_game_parameters.rottweiler.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.8 (Coren rank 9, S35 — Brightest tier)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S168",
+          "S171"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_jlpp",
+            "level": "minimum",
+            "source_ids": [
+              "S168"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S168"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S168"
+            ]
+          },
+          {
+            "key": "dna_lemp2",
+            "level": "best_practice",
+            "source_ids": [
+              "S168"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S168"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S168"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S166",
+        "S167",
+        "S168",
+        "S169",
+        "S171",
+        "S173",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -11899,6 +12500,48 @@
       "publisher": "PDSA (UK veterinary charity)",
       "title": "Siberian Husky breed information",
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/siberian-husky"
+    },
+    {
+      "id": "S166",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 147 — Rottweiler (PDF dated 24.07.2018; original valid standard published 15.06.2018)",
+      "url": "https://fci.be/Nomenclature/Standards/147g02-en.pdf"
+    },
+    {
+      "id": "S167",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Rottweiler (147)",
+      "url": "https://fci.be/en/nomenclature/ROTTWEILER-147.html"
+    },
+    {
+      "id": "S168",
+      "tier": "B",
+      "publisher": "Royal Kennel Club",
+      "title": "Rottweiler — Breeds A to Z",
+      "url": "https://www.thekennelclub.org.uk/rottweiler"
+    },
+    {
+      "id": "S169",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Rottweiler breed information",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/rottweiler"
+    },
+    {
+      "id": "S171",
+      "tier": "A",
+      "publisher": "Canine Genetics and Epidemiology 4:13 (2017)",
+      "title": "O'Neill D. G., Seah W. Y., Church D. B., … Brodbelt D. C. Rottweilers under primary veterinary care in the UK: demography, mortality and disorders. doi:10.1186/s40575-017-0051-7",
+      "url": "https://link.springer.com/10.1186/s40575-017-0051-7"
+    },
+    {
+      "id": "S173",
+      "tier": "B",
+      "publisher": "Royal Kennel Club",
+      "title": "Breed Watch tally sheet — Rottweiler (PDF)",
+      "url": "https://thekennelclub.org.uk/media/t1anulxn/breed-watch-tally-sheet-rottweiler.pdf"
     },
     {
       "id": "C1",

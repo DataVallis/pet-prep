@@ -99,6 +99,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.bernese_mountain_dog.availability, 'coming_soon');
   assert.deepEqual(byId.siberian_husky.slug, { en: 'siberian-husky', sl: 'sibirski-haski' });
   assert.equal(byId.siberian_husky.availability, 'coming_soon');
+  assert.deepEqual(byId.rottweiler.slug, { en: 'rottweiler', sl: 'rotvajler' });
+  assert.equal(byId.rottweiler.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.equal(byId.british_shorthair.availability, 'coming_soon');
@@ -172,6 +174,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     west_highland_white_terrier: { adult: 6000, senior: 4500, seniorFrom: 121, learning: 1 },
     bernese_mountain_dog: { adult: 6000, senior: 4500, seniorFrom: 76, learning: 1.5 },
     siberian_husky: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1 },
+    rottweiler: { adult: 12000, senior: 9000, seniorFrom: 81, learning: 1.8 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -800,4 +803,26 @@ test('Bengal (M5-R10-18): paid cat, kitten at 3 months, PDSA average weight, gro
   // Breeder checklist: GCCF Active Register DNA tests (K22).
   assert.equal(ben.breeder_checklist.status, 'listed');
   assert.deepEqual(ben.breeder_checklist.tests.map((t) => [t.key, t.level, t.source_ids]), [['dna_pra_b', 'minimum', ['K22']], ['dna_pk_def', 'minimum', ['K22']]]);
+});
+
+test('Rottweiler (M5-R10-19): more than 2 hours, FCI weight by sex, FCI group 2 DE, VetCompass median + RKC "under 10 years", Coren 9, experienced_owner chip', () => {
+  const d = registry.breeds.find((b) => b.id === 'rottweiler');
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S168']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 147, group: 2, section: 2, origin: 'DE' });
+  // FCI gives one weight per sex (dogs 50 kg, bitches about 42 kg).
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [50, 50], female: [42, 42] }, ['S166']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [61, 68], female: [56, 63] }, ['S166']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['median', 9, ['S171']], ['less_than', 10, ['S168']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'growth_end').value, [18, 24]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 9);
+  assert.deepEqual(d.facets, { size: 'large', exercise: 'over_2h', grooming: 'weekly' });
+  // 10 min × age reaches the 120-minute cap at 12 months; senior 90 min from 81 months.
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 12000, cap_month: 12 });
+  assert.deepEqual(d.game.stages[3].activity, { kind: 'steps', value: 9000 });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'large_home']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'experienced_owner', 'hips_hind_legs', 'shorter_lifespan', 'sheds']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_elbow_dysplasia', 'laryngeal_paralysis_polyneuropathy', 'heart_sas', 'cancer_risk', 'inherited_eye_disease']);
+  const json = JSON.stringify(d);
+  // No VetCompass percentages, no conflicting PDSA band, never "hypoallergenic", never white markings.
+  assert.doesNotMatch(json, /mcmillan_2024|lifespan\.pdsa|common_disorders|hypoallergenic|odds ratio|33\.0|7\.46|7\.06|white markings/i);
 });

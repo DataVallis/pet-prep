@@ -7671,6 +7671,580 @@
       }
     }
   },
+  "rottweiler": {
+    "_note": "Added 2026-10-11 (M5-R10-19, unattended run — first breed appended after the 20: AKC 2024 No. 8, S174). Quotes as returned by the web-fetch tool on 2026-10-11; spot-check before import (sources.md S166–S174, reused S10, S11, S14, S24, S35, S45). The fetch tool capped quotes at ~125 characters on the PDSA page (S169), the FCI standard (S166) and the American Rottweiler Club standard (S170): only passages it returned in quotation marks are used as quotes; condensed passages are marked '(paraphrase)'. Lifespan: McMillan et al. 2024 — the Author Correction (S54) names no Rottweiler; the published text (S135, re-read in the review 2026-10-11) names it only in the introduction (earlier estimates 8.0 and 8.4 years, refs 3 and 4 of that paper) and as a Fig. 5 tip label, its Supplementary Table 3 is not in the PDF; the Dogs Trust breed table (S123) and 'shortest and longest' PDF were not reachable (provenance / fetch error 2026-10-11); the VetCompass breed paper (O'Neill et al. 2017, S171) gives a UK primary-care median of 9.0 years → runbook rule 'else a VetCompass median'. The RKC breed-standard page (thekennelclub.org.uk/breed-standards/working/rottweiler/) returned a fetch error; weight / height / appearance come from the FCI standard (S166) and the AKC standard via the American Rottweiler Club (S170). Woodgreen and AKC trait ratings not attempted.",
+    "identity": {
+      "value": "FCI No. 147, Group 2 Section 2.1 (Molossian type, Mastiff type), Germany",
+      "unit": "—",
+      "source_id": "S167",
+      "quote": "Group: n°2 - Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs; Section: Molossian type; Country of origin: GERMANY",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S167): standard number '147'; subsection 'Mastiff type'; definitive acceptance '1/1/1955'; valid standard '6/15/2018'; 'Subject to a working trial according to the FCI Breeds Nomenclature'. FCI standard PDF (S166): 'Section 2.1 Molossian type, Mastiff type.' Quote assembled from the nomenclature fields as returned."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S168",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "PDSA (S169): 'Size: Large' — sources agree. FCI (S166): 'a medium to large size, stalwart dog'. FCI weights dogs 50 kg / bitches ~42 kg (S166) → the game treats it as a large dog; the growth class follows the weight (S10, below)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            61,
+            68
+          ],
+          "female": [
+            56,
+            63
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S166",
+        "quote": "Height at withers: For males is 61 - 68 cm.",
+        "confidence": "high",
+        "notes": "FCI (S166): 'Height at withers: For bitches is 56 - 63 cm.'"
+      },
+      "akc": {
+        "value": {
+          "male": [
+            61,
+            68.6
+          ],
+          "female": [
+            55.9,
+            63.5
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S170",
+        "quote": "Dogs – 24 inches to 27 inches.",
+        "confidence": "high",
+        "notes": "AKC standard as published by the American Rottweiler Club (S170, last revised 2022): 'Bitches – 22 inches to 25 inches, with preferred size being mid-range of each sex.' Inches converted to cm (× 2.54) by us."
+      },
+      "pdsa_average": {
+        "value": [
+          54,
+          69
+        ],
+        "unit": "cm",
+        "source_id": "S169",
+        "quote": "Average height: 54-69 cm",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (label wording as returned)."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            50,
+            50
+          ],
+          "female": [
+            42,
+            42
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S166",
+        "quote": "Weight: 50 kg.",
+        "confidence": "high",
+        "notes": "FCI (S166) gives one figure per sex: dogs 'Weight: 50 kg.', bitches 'Weight: Approximately 42 kg.' (no range). Game range 42–50 kg (both sexes). The AKC standard (S170) gives no weight."
+      },
+      "pdsa": {
+        "value": [
+          35,
+          60
+        ],
+        "unit": "kg",
+        "source_id": "S169",
+        "quote": "Average weight: 35-60 kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box, one range for both sexes; recorded as an alternative."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI dogs 50 kg (≈ 110 lb) are 'Giant (over 100 pounds)'; bitches ~42 kg (≈ 93 lb) are 'Large (59–99 pounds): 15–18 months' — the same split as the Bernese Mountain Dog, so the same 18–24 months. The game is unaffected (the puppy cap of 120 min is reached at 12 months either way)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Rottweiler growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 9.0,
+        "unit": "years",
+        "source_id": "S171",
+        "quote": "Median longevity overall was 9.0 years (IQR 7.2–10.5, range 0.0–17.0).",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2017 (S171), VetCompass UK primary care. Same abstract: 'Median female longevity (9.5 years, IQR 7.8–11.0) was greater than male (8.7 years, IQR 6.8–10.1) (P = 0.002).' RVC summary (S172) calls it 'The average lifespan of Rottweilers overall was 9.0 years which is shorter than some other breeds of similar bodysize.' McMillan 2024 (S54 / S135 / S123) gives no reachable Rottweiler value this run — runbook rule: else a VetCompass median. Consistent with the RKC band 'Under 10 years' (S168)."
+      },
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S168",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page (S168). Conflict: PDSA key facts (S169) 'Average lifespan: More than 10 years'. The peer-reviewed UK median 9.0 y (S171, tier A) agrees with the RKC band, so the RKC band is kept (basis of the shorter_lifespan chip)."
+      },
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S169",
+        "quote": "Average lifespan: More than 10 years",
+        "confidence": "low",
+        "notes": "PDSA key-facts box as returned; conflicts with the RKC band (S168) and the VetCompass median (S171) — recorded as an alternative only."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024 Rottweiler median not reachable: the Author Correction (S54) names no Rottweiler; the published text (S135) quotes only earlier estimates in its introduction ('while estimates for Rottweilers have been substantially lower at 8.0 and 8.4 years of age.' — refs 3 and 4 of that paper, not McMillan's own value) and has no per-breed table (Supplementary Table 3 online only); the Dogs Trust breed table (S123) returned a provenance refusal and the 'shortest and longest' PDF a fetch error (2026-10-11). Verify in McMillan 2024 Supplementary Table 3 before replacing the VetCompass median."
+      },
+      "senior_from": {
+        "value": 6.75,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 9.0 y (S171) → 0.75 × 9.0 = 6.75 y = 81 months. Not chosen: 84 (Dogs Trust > 7 y, S14), 90 (0.75 × 10 y, PDSA 'More than 10 years', S169 — conflicts with RKC and VetCompass). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S171"
+        ],
+        "months": 81,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S168",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "PDSA (S169): 'You should give your Rottweiler at least two hours of exercise every day.' (key facts: minimum exercise '2 hours') — sources agree on 120."
+      },
+      "energy": {
+        "value": "intelligent, active working dog — needs owners who can use its intelligence and activity",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "The breed needs responsible and intelligent owners who can harness the Rottweiler's intelligence and activity.",
+        "confidence": "medium",
+        "notes": "RKC breed page (S168): '…combining the athletic movement and stamina of a drovers' dog with a courageous temperament.' FCI (S166): 'eager to work'."
+      },
+      "garden_time": {
+        "value": "part of the exercise can be time in a secure garden",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "having time in a secure garden",
+        "confidence": "low",
+        "notes": "PDSA (S169) mentions time in a secure garden as part of the daily exercise (fragment as returned); no fence advice → no secure_fencing tag."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "good-natured, placid, very devoted, obedient, biddable and eager to work; alert, even-tempered; protective of owner and property",
+        "unit": "—",
+        "source_id": "S166",
+        "quote": "The Rottweiler is goodnatured, placid in basic disposition, very devoted, obedient, biddable and eager to work.",
+        "confidence": "high",
+        "notes": "FCI (S166): 'He reacts to his surroundings with great alertness and at the same time even-tempered.' RKC breed page (S168): '…the Rottweiler is territorial and protective of his owner and his property.' AKC (S170): 'basically a calm, confident and courageous dog' (aloof, protective of home and family — paraphrase). PDSA (S169): 'Rottweilers are loyal dogs, naturally protective and can fit in well with family life if well trained and kept occupied.'"
+      },
+      "family": {
+        "value": "a well-trained Rottweiler is a family companion; not recommended for families with younger children and babies",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "A well-trained Rottweiler makes a wonderful family companion.",
+        "confidence": "medium",
+        "notes": "PDSA (S169): 'Rottweilers are loyal dogs, naturally protective and can fit in well with family life if well trained and kept occupied.' and 'We wouldn't recommend Rottweilers for families with younger children and babies' (older children can suit the breed with enough daily exercise and training — paraphrase). Basis of family_pet (condition kept: well trained); never children / small_children."
+      },
+      "experienced_owner": {
+        "value": "needs an experienced owner — powerful dog; socialise from a young age, consistent reward-based training",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "Because they're so powerful, Rottweilers need an experienced owner who understands them.",
+        "confidence": "medium",
+        "notes": "PDSA (S169): 'Rottweilers will need socialising from a young age so they grow up to be confident and calm.'; training consistent and reward-based (paraphrase). RKC breed page (S168): 'The breed needs responsible and intelligent owners…'. Basis of the new consider tag experienced_owner."
+      },
+      "time_alone": {
+        "value": "general PDSA advice only — never alone for more than four hours; not more prone to barking or destruction than other dogs",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "We recommend you never leave any dog alone for more than four hours",
+        "confidence": "low",
+        "notes": "PDSA (S169) general advice for every dog; the page says Rottweilers are not more prone to barking or being destructive than other dogs when left alone (paraphrase) → no often_alone tag and no chews_when_bored tag."
+      },
+      "other_pets": {
+        "value": "never unattended with another pet, especially small pets",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "you shouldn't leave a Rottweiler unattended with another pet, especially small pets.",
+        "confidence": "medium",
+        "notes": "PDSA (S169) → no other_pets tag."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found; PDSA (S169) says Rottweilers are not more destructive than other dogs when left alone (paraphrase)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific appetite statement found. PDSA (S169): 'You'll need to feed them a complete, commercial dog food to keep them slim and healthy.' VetCompass (S172) lists overweight / obesity among the common disorders (statistic stays in health) — not an appetite statement → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; percentages stay here and are never shown in the app, the register export or audience docs. Conformation welfare topic: RKC Breed Watch Category 2 (S173) names 'Incorrect hind conformation and/or poor rear movement' and 'Excessively short muzzle' → hips_hind_legs chip (welfare rule, as for the German Shepherd Dog); a moderate muzzle in the AI appearance. Not flat-faced (FCI muzzle : skull ≈ 1 : 1.5, S166) → no brachycephalic chip, and no veterinary advice against advertising the breed type.",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2 — points of concern: incorrect hind conformation and/or poor rear movement; excessively short muzzle",
+        "unit": "—",
+        "source_id": "S173",
+        "quote": "Incorrect hind conformation and/or poor rear movement",
+        "confidence": "high",
+        "notes": "RKC Breed Watch tally sheet (S173): 'Breed Watch Category 2'; second point 'Excessively short muzzle'. RKC breed page (S168): 'Breed Watch: Category 2' and 'This breed can be affected by conformational concerns, more information can be found here'."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia — RKC minimum tests before breeding",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+        "confidence": "high",
+        "notes": "RKC breed page (S168) minimum tests: 'Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme' and the hip test. PDSA (S169): elbow dysplasia 'where the elbow joint doesn't fit together perfectly.'; hip dysplasia 'where the hip joint doesn't fit together perfectly.' — both lead to arthritis; X-ray screening before breeding (paraphrase)."
+      },
+      "jlpp": {
+        "value": "juvenile laryngeal paralysis and polyneuropathy (JLPP) — DNA test",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "DNA test for juvenile laryngeal paralysis and polyneuropathy (JLPP)",
+        "confidence": "high",
+        "notes": "RKC minimum test (S168). PDSA (S169): 'progressive failure of the nerves controlling the voice box and the back legs.'"
+      },
+      "lemp": {
+        "value": "leukoencephalomyelopathy (LEMP) — DNA test (best practice)",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "DNA test for leukoencephalomyelopathy (LEMP-2)",
+        "confidence": "high",
+        "notes": "RKC best-practice test (S168)."
+      },
+      "heart": {
+        "value": "subaortic stenosis (SAS) — heart screening of breeding dogs",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "subaortic stenosis (SAS), a narrowing of the passage leading out of the heart.",
+        "confidence": "medium",
+        "notes": "PDSA (S169): may cause a murmur, fainting and sudden death; screen before breeding (paraphrase)."
+      },
+      "joints_other": {
+        "value": "cruciate ligament damage; osteochondrosis dissecans (OCD)",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "a torn ligament in the knee.",
+        "confidence": "medium",
+        "notes": "PDSA (S169) health list: cruciate ligament damage; OCD 'a problem with the cartilage causing joint pain and limping' in the hock, shoulder or stifle."
+      },
+      "eyes": {
+        "value": "inherited eye diseases — eye screening",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "multi ocular defect, multifocal retinal dysplasia, and persistent pupillary membrane.",
+        "confidence": "medium",
+        "notes": "PDSA (S169); RKC best practice (S168): 'Eye testing using the BVA/KC/ISDS Eye Scheme'."
+      },
+      "cancer": {
+        "value": "certain cancers, especially bone cancer (osteosarcoma) and lymphoma",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "especially aggressive bone cancer (osteosarcoma) and lymphoma.",
+        "confidence": "medium",
+        "notes": "PDSA (S169). VetCompass (S171): 'The most common causes of death were neoplasia (33.0%), inability to stand (16.0%) and mass-associated disorder (7.1%).' — statistics stay here only."
+      },
+      "skin": {
+        "value": "hot spots (acute moist dermatitis)",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "patches of itchy, sore, infected skin.",
+        "confidence": "low",
+        "notes": "PDSA (S169) health list. Not a Breed Watch point → no sensitive_skin chip."
+      },
+      "common_disorders_2017": {
+        "value": {
+          "aggression_pct": 7.46,
+          "overweight_obesity_pct": 7.06
+        },
+        "unit": "% of dogs with the disorder recorded (UK primary care)",
+        "source_id": "S172",
+        "quote": "The most common disorders recorded in Rottweilers were aggression (7.46%), overweight/obesity (7.06%),",
+        "confidence": "medium",
+        "notes": "RVC VetCompass summary (S172) of O'Neill et al. 2017 (S171); then ear infections, osteoarthritis and diarrhoea (paraphrase). Background only — never in the app, the export or audience docs."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 9,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 9 | Rottweiler |",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C): rank 9 under 'Brightest Dogs' (ranks 1–10). Coren's own article (S34) lists the top 10 but was not reachable through the fetch tool this run (provenance refusal) — runbook: rank from S35. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "brightest: fewer than 5 repetitions, obeys first command ≥95%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: fewer than 5 repetitions.; Obey first command: 95% of the time or better.",
+        "confidence": "low",
+        "notes": "Tier 'Brightest' = ranks 1–10. Tier definitions from Wikipedia; verify in book. Coren ranks obedience to commands, not 'cleverness'."
+      },
+      "training_notes": {
+        "value": "obedient, biddable, eager to work; socialise early; consistent reward-based training; experienced owner",
+        "unit": "—",
+        "source_id": "S166",
+        "quote": "The Rottweiler is goodnatured, placid in basic disposition, very devoted, obedient, biddable and eager to work.",
+        "confidence": "medium",
+        "notes": "PDSA (S169): 'Rottweilers will need socialising from a young age so they grow up to be confident and calm.'"
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.rottweiler.learning_multiplier (1.8, runbook rule).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium to large, stalwart, powerful; neither heavy nor light, neither leggy nor weedy; compact, strong build",
+        "unit": "—",
+        "source_id": "S166",
+        "quote": "The Rottweiler is a medium to large size, stalwart dog, neither heavy nor light and neither leggy nor weedy.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "colours": {
+        "value": [
+          "black with rich tan markings"
+        ],
+        "unit": "list (one colour)",
+        "source_id": "S166",
+        "quote": "Black with clearly defined markings of a rich tan on the cheeks, muzzle, throat, chest and legs,",
+        "confidence": "high",
+        "notes": "FCI (S166): tan also over both eyes and under the base of the tail (paraphrase); faults: dogs without the typical black with tan markings and 'White markings.' AKC (S170): always black with rust to mahogany markings, clearly defined (paraphrase). Never another colour, never white markings (runbook §3 colour rule)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Only one standard colour, so there is nothing to weight; the shade of tan (rich tan / rust / mahogany) is drawn from the standard wording."
+      },
+      "coat": {
+        "value": "top coat medium length, coarse, dense and flat; undercoat never showing through",
+        "unit": "—",
+        "source_id": "S166",
+        "quote": "The top coat is of medium length, coarse, dense and flat.",
+        "confidence": "high",
+        "notes": "FCI (S166): 'The undercoat must not show through the top coat.' 'The hair is a little longer on the hindlegs.' AKC (S170): 'Outer coat is straight, coarse, dense, of medium length and lying flat.' FCI fault: 'Hair: Definitely long or wavy coat.'"
+      },
+      "ears": {
+        "value": "medium-sized, pendant, triangular, wide apart, set on high",
+        "unit": "—",
+        "source_id": "S166",
+        "quote": "Medium-sized, pendant, triangular, wide apart, set on high.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "eyes": {
+        "value": "medium size, almond-shaped, dark brown",
+        "unit": "—",
+        "source_id": "S166",
+        "quote": "Of medium size, almond-shaped, dark brown in colour.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "nose": {
+        "value": "well developed, broader than round, relatively large nostrils, always black; muzzle : skull about 1 : 1.5",
+        "unit": "—",
+        "source_id": "S166",
+        "quote": "Well developed, broader than round with relatively large nostrils, always black.",
+        "confidence": "high",
+        "notes": "FCI (S166): 'The ratio between the length of the muzzle and the length of the skull is about 1 to 1,5.'; a muzzle shorter than 40 % of the head is a fault (paraphrase). RKC Breed Watch (S173): 'Excessively short muzzle' → the AI appearance keeps a moderate muzzle (welfare rule)."
+      },
+      "tail": {
+        "value": "natural tail, strong, level with the topline; carried up in a light curve when alert, hanging at ease",
+        "unit": "—",
+        "source_id": "S166",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI (S166) natural tail described (paraphrase): strong, level with the topline; carried upward in a light curve when alert or moving, may hang at ease; reaches about the hocks. The portrait shows the natural (undocked) tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S168) and PDSA (S169). The RKC page shows no 'Good with children' field (as returned 2026-10-11). Woodgreen and AKC trait ratings not attempted.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "PDSA (S169): 'Large'."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of the large_home tag (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "PDSA (S169): 'A weekly brush should be enough' — sources agree on 1× per week. Not frequent_grooming (criterion: more than once a week). A sourced need: dog grooming has no game mechanic yet → ROADMAP M5-R13 (runbook §3, David 2026-10-11)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "PDSA (S169): 'Short'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S169): sheds more in spring and autumn (paraphrase) — sources agree."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "shorter_lifespan criterion ('Under 10 years') met; PDSA 'More than 10 years' (S169) conflicts, VetCompass median 9.0 y (S171) agrees with RKC."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-11)."
+      },
+      "rkc_family": {
+        "value": "a well-trained Rottweiler is a wonderful family companion",
+        "unit": "—",
+        "source_id": "S168",
+        "quote": "A well-trained Rottweiler makes a wonderful family companion.",
+        "confidence": "medium",
+        "notes": "Condition: well trained."
+      },
+      "pdsa_children": {
+        "value": "not recommended for families with younger children and babies",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "We wouldn't recommend Rottweilers for families with younger children and babies",
+        "confidence": "medium",
+        "notes": "→ no children / small_children tag."
+      },
+      "pdsa_exercise": {
+        "value": "at least two hours every day",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "You should give your Rottweiler at least two hours of exercise every day.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "A weekly brush should be enough to stay on top of any dead hairs and keep their coat looking shiny.",
+        "confidence": "medium",
+        "notes": "Extra brushing in spring and autumn while they shed more (paraphrase)."
+      },
+      "pdsa_experienced_owner": {
+        "value": "needs an experienced owner",
+        "unit": "—",
+        "source_id": "S169",
+        "quote": "Because they're so powerful, Rottweilers need an experienced owner who understands them.",
+        "confidence": "medium",
+        "notes": "Basis of experienced_owner; never first_time_owner."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -11128,6 +11702,270 @@
         "confidence": "high",
         "notes": "Colours from the FCI standard (S158) with no order of preference; merle / brindle disqualifying (S158, S161). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey and white portrait default, black and white / red and white / agouti / sable / white options, standard colours only, never merle or brindle"
+      }
+    },
+    "rottweiler": {
+      "_note": "Unattended run M5-R10-19 (2026-10-11): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry. One new consider key (experienced_owner) by the runbook's 'new tag' rule. Weekly brushing (RKC S168, PDSA S169) is a sourced need without a dog mechanic → ROADMAP M5-R13 (runbook §3, David 2026-10-11).",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S168",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'More than 2 hours per day' (S168); PDSA 'at least two hours of exercise every day' (S169) agrees. Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S168 'More than 2 hours per day'; PDSA S169 the same)"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000 (= Border Collie, Labrador, Golden, German Shepherd, Australian Shepherd, Siberian Husky).",
+        "derived_from": [
+          "S168",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 81
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 81 = round(0.75 × 9.0 y × 12) (S11 + VetCompass median 9.0 y, S171). McMillan 2024 has no reachable Rottweiler value this run. Alternatives: 84 (Dogs Trust > 7 y, S14), 90 (PDSA 'More than 10 years', S169). Provisional until McMillan 2024 Supplementary Table / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S171"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_pdsa_10_y": 90
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 81 (0.75 × 9.0 y, VetCompass median S171)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 81
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 81)"
+      },
+      "learning_multiplier": {
+        "value": 1.8,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 9 (S35), tier Brightest (ranks 1–10): max(1.8, round(2.0 − (9 − 1) / 30, 1)) = max(1.8, 1.7) = 1.8. FCI 'obedient, biddable and eager to work' (S166). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.8 (Coren rank 9, S35 — Brightest tier)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S168",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC (S168) 'Once a week'; PDSA (S169) 'A weekly brush should be enough'. The game has no dog grooming mechanic yet (cats only, M5-R06-05) — too large for a breed run (routine, ledger, child UI and report for every dog) → built later as ROADMAP M5-R13 with a FEATURES 🗓 row; this value is its input.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-19); refs = JSON paths in this file. New vocabulary key experienced_owner (consider). No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S168",
+              "S169"
+            ],
+            "refs": [
+              "rottweiler.exercise.adult",
+              "rottweiler.suitability.pdsa_exercise"
+            ],
+            "quote": "S168 'Exercise: More than 2 hours per day'; S169 'at least two hours of exercise every day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S168",
+              "S169"
+            ],
+            "refs": [
+              "rottweiler.suitability.rkc_family",
+              "rottweiler.behaviour.family"
+            ],
+            "quote": "S168 'A well-trained Rottweiler makes a wonderful family companion.'; S169 'can fit in well with family life if well trained'",
+            "note": "Condition kept: well trained; PDSA does not recommend the breed for families with younger children and babies → no children / small_children."
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S168"
+            ],
+            "refs": [
+              "rottweiler.suitability.rkc_size_of_home",
+              "rottweiler.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S168 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S168",
+              "S169"
+            ],
+            "refs": [
+              "rottweiler.exercise.adult",
+              "rottweiler.suitability.pdsa_exercise"
+            ],
+            "quote": "S168 'More than 2 hours per day'; S169 'at least two hours of exercise every day'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S169"
+            ],
+            "refs": [
+              "rottweiler.behaviour.experienced_owner",
+              "rottweiler.suitability.pdsa_experienced_owner"
+            ],
+            "quote": "S169 'Because they're so powerful, Rottweilers need an experienced owner who understands them.'",
+            "note": "NEW consider key (runbook 'new tag' rule): no vocabulary key covers it. Calm chip, no number."
+          },
+          {
+            "tag": "hips_hind_legs",
+            "source_ids": [
+              "S173",
+              "S168"
+            ],
+            "refs": [
+              "rottweiler.health.breed_watch",
+              "rottweiler.health.hip_elbow_dysplasia"
+            ],
+            "quote": "S173 'Incorrect hind conformation and/or poor rear movement'; S168 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme'",
+            "note": "Welfare rule §3: RKC Breed Watch names hind conformation (as for the German Shepherd Dog)."
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S168",
+              "S171"
+            ],
+            "refs": [
+              "rottweiler.lifespan.rkc",
+              "rottweiler.lifespan.median_uk"
+            ],
+            "quote": "S168 'Lifespan: Under 10 years'; S171 'Median longevity overall was 9.0 years'",
+            "note": "Runbook criterion: RKC 'Under 10 years'. PDSA 'More than 10 years' (S169) conflicts; the peer-reviewed UK median (S171, tier A) agrees with RKC → tag kept. No number in the chip."
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S168"
+            ],
+            "refs": [
+              "rottweiler.suitability.rkc_shedding"
+            ],
+            "quote": "S168 'Sheds: Yes'; PDSA sheds more in spring and autumn (paraphrase)"
+          }
+        ],
+        "not_proposed": {
+          "children": "PDSA does not recommend the breed for families with younger children and babies (S169).",
+          "small_children": "PDSA advises against it with younger children and babies (S169).",
+          "first_time_owner": "PDSA: needs an experienced owner (S169) → experienced_owner instead.",
+          "apartment": "RKC 'Large house' (S168).",
+          "other_pets": "PDSA: never unattended with another pet, especially small pets (S169).",
+          "often_alone": "Only the general PDSA four-hour advice (S169).",
+          "older_owners": "No source.",
+          "low_shedding": "Sheds (S168, S169).",
+          "food_motivated_weight": "No breed-specific appetite statement (S169, S172).",
+          "needs_mental_stimulation": "RKC asks owners to harness the breed's intelligence and activity (S168) — no explicit mental-stimulation statement; PDSA 'kept occupied' (S169) is a condition of family life → not tagged.",
+          "chews_when_bored": "PDSA: not more destructive than other dogs when left alone (S169).",
+          "frequent_grooming": "Once a week (S168, S169) — criterion is more than once a week.",
+          "may_herd_children": "No source.",
+          "brachycephalic_breathing": "Not flat-faced (FCI muzzle : skull ≈ 1 : 1.5, S166); Breed Watch 'Excessively short muzzle' (S173) is handled as a moderate muzzle in the AI appearance.",
+          "heart_and_spine": "SAS listed by PDSA (S169) but no Breed Watch / vet-association point → recorded under health.",
+          "back_spine": "No source.",
+          "sensitive_skin": "Hot spots listed by PDSA (S169), no Breed Watch point → recorded under health.",
+          "secure_fencing": "No fence advice in the sources (S169 mentions a secure garden only as exercise space)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, experienced_owner (new key), hips_hind_legs, shorter_lifespan, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (welfare chip in the app; no veterinary advice against showing the breed in advertising)",
+        "unit": "—",
+        "source_id": "S173",
+        "quote": "Incorrect hind conformation and/or poor rear movement",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 2 (S173) names hind conformation and an excessively short muzzle — the breed gets the hips_hind_legs chip (welfare rule, as the German Shepherd Dog, which stays in marketing, David 2026-10-10). The only veterinary advice against advertising a breed type is for flat-faced breeds (S92); the Rottweiler is not flat-faced. Marketing never promises health and never shows a Rottweiler as a dog for families with young children or first-time owners (PDSA S169).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed)"
+      },
+      "ai_appearance": {
+        "value": "adult Rottweiler, black with clearly defined rich tan markings (cheeks, muzzle, throat, chest, legs, over the eyes); short coarse flat coat; medium pendant triangular ears; almond dark-brown eyes; natural (undocked) tail; powerful but not heavy; moderate muzzle, never short; level back and sound hind legs; no white markings",
+        "unit": "—",
+        "source_id": "S166",
+        "quote": "Black with clearly defined markings of a rich tan on the cheeks, muzzle, throat, chest and legs,",
+        "confidence": "high",
+        "notes": "One standard colour (S166, S170); white markings are a fault (S166). Breed Watch (S173): moderate muzzle and correct hind conformation in the portrait (welfare rule).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan only, natural tail, moderate muzzle, sound hind legs; no white markings"
       }
     }
   }

@@ -249,6 +249,7 @@ describe('PetPickerStep', () => {
       'breed-option-west_highland_white_terrier',
       'breed-option-bernese_mountain_dog',
       'breed-option-siberian_husky',
+      'breed-option-rottweiler',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -487,6 +488,48 @@ describe('PetPickerStep', () => {
       expect(consider).toHaveTextContent(/escapes easily — needs a secure, high fence/);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-siberian_husky')).toHaveTextContent(/Siberian Husky/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-19: the Rottweiler (fallback) shows its chips, is found as "rotvajler" and "rottie", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const rottweiler = screen.getByTestId('breed-option-rottweiler');
+    expect(rottweiler).toHaveTextContent(/Rotvajler/);
+    expect(rottweiler).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-rottweiler-suits')).toHaveTextContent(/aktivno družinodružinsko življenjeveliko hišo z vrtom/);
+    expect(screen.getByTestId('breed-suitability-rottweiler-consider')).toHaveTextContent(
+      /vsak dan potrebuje veliko gibanjamočan pes — potrebuje izkušenega lastnikakolki in zadnje noge — preverite zdravje sklepovkrajša življenjska dobaizpada mu dlaka/,
+    );
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'rotvajler');
+    expect(screen.getByTestId('breed-option-rottweiler')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-siberian_husky')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'rottie');
+    expect(screen.getByTestId('breed-option-rottweiler')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-rottweiler'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'rottweiler', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'rottweiler' }),
+    );
+  });
+
+  it('M5-R10-19: the Rottweiler chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-rottweiler-consider');
+      expect(consider).toHaveTextContent(/powerful dog — needs an experienced owner/);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-rottweiler')).toHaveTextContent(/Rottweiler/);
     } finally {
       await i18n.changeLanguage('sl');
     }

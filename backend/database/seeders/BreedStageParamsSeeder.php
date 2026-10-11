@@ -50,9 +50,10 @@ use InvalidArgumentException;
  * GoldenRetrieverBreedTest / FrenchBulldogBreedTest / GermanShepherdBreedTest /
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
- * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest cross-check the Labrador /
+ * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
+ * RottweilerBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -238,6 +239,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_SIBERIAN_HUSKY = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-13)';
 
     /**
+     * M5-R10-19 Rottweiler (unattended run 2026-10-11, data.json
+     * proposed_game_parameters.rottweiler.*.decision): every value follows a standing rule
+     * of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min, senior 90 min, puppy 10 min × age capped at 120, stages 9 / 36 / 81
+     * (senior from the VetCompass median 9.0 y, S171), arrival 2 / 9 / 36 / 81, learning
+     * multiplier 1.8 (Coren 9, Brightest); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_ROTTWEILER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-19)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -307,7 +318,7 @@ class BreedStageParamsSeeder extends Seeder
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -728,6 +739,10 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-13 (docs/research/dog-data/data.json siberian_husky,
             // S158–S165; runbook rules in proposed_game_parameters.siberian_husky).
             BreedType::SiberianHusky => self::siberianHuskyProfile(),
+
+            // M5-R10-19 (docs/research/dog-data/data.json rottweiler,
+            // S166–S174; runbook rules in proposed_game_parameters.rottweiler).
+            BreedType::Rottweiler => self::rottweilerProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -1708,6 +1723,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'siberian_husky.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC breed page lower bound (S160; PDSA "Over 10 years", S162). No reachable McMillan 2024 or VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Rottweiler (M5-R10-19). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_ROTTWEILER);
+     * weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function rottweilerProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_ROTTWEILER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S171', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.rottweiler.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant / large dog finishes growing at 15–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [81, $boundary('Derived game boundary: last 25 % of lifespan (S11) × UK primary-care median longevity 9.0 y (O\'Neill et al. 2017, VetCompass, S171) = 6.75 y = 81 months. McMillan 2024 has no reachable Rottweiler value this run. Not chosen: 84 (Dogs Trust > 7 y, S14), 90 (PDSA "More than 10 years", S169 — conflicts with RKC "Under 10 years", S168, and S171). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 81],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rottweiler.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S168', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rottweiler.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S168) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA "You should give your Rottweiler at least two hours of exercise every day." (S169) agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rottweiler.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[42.0, 50.0], [
+                'unit' => 'kg', 'source_id' => 'S166', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'rottweiler.adult_weight.fci',
+                'quote' => 'Weight: 50 kg.',
+                'notes' => 'FCI standard (S166): dogs "Weight: 50 kg.", bitches "Weight: Approximately 42 kg." (one figure per sex) → 42–50 kg. PDSA (S169) 35–60 kg; the AKC standard (S170) gives no weight.',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'rottweiler.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (FCI dogs 50 kg ≈ 110 lb, the Giant class of S10; bitches ~42 kg ≈ 93 lb are Large, 15–18 months — same split as the Bernese Mountain Dog).',
+            ]],
+            'coren_rank' => [9, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'rottweiler.trainability.coren_rank',
+                'quote' => '| 9 | Rottweiler |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 9, tier "Brightest" (ranks 1–10). Coren\'s own article (S34) was not reachable this run.',
+            ]],
+            'learning_multiplier' => [1.8, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rottweiler.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 9 (S35) in the "Brightest" tier → max(1.8, round(2.0 − 8 / 30, 1)) = 1.8 (FCI S166: "obedient, biddable and eager to work"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [9.0, [
+                'unit' => 'years', 'source_id' => 'S171', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'rottweiler.lifespan.median_uk',
+                'quote' => 'Median longevity overall was 9.0 years (IQR 7.2–10.5, range 0.0–17.0).',
+                'notes' => 'O\'Neill et al. 2017 (S171), VetCompass UK primary care. McMillan 2024 (S54 / S123) not reachable this run. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
