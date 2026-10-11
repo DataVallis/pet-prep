@@ -386,6 +386,7 @@ const SPECIES = [
       { id: 'bernese_mountain_dog', availability: 'coming_soon', synonyms: { en: ['Berner', 'Berner Sennenhund', 'Bernese'], sl: ['bernski planšarski pes', 'bernski plansarski pes', 'bernski planšar', 'bernski plansar', 'berner'] } },
       { id: 'siberian_husky', availability: 'coming_soon', synonyms: { en: ['Husky', 'Huskie'], sl: ['haski', 'sibirski husky', 'husky', 'sibirec'] } },
       { id: 'rottweiler', availability: 'coming_soon', synonyms: { en: ['Rottie', 'Rotty', 'Rott'], sl: ['rottweiler', 'rotvajlerka', 'rottie'] } },
+      { id: 'bulldog', availability: 'coming_soon', synonyms: { en: ['English Bulldog', 'British Bulldog'], sl: ['buldog', 'bulldog', 'english bulldog'] } },
     ],
   },
   {
@@ -679,6 +680,30 @@ const DOG_FACTS = {
       ['inherited_eye_defects', 'health.eyes'],
     ],
   },
+  // M5-R10-20. Not exported: lifespan.vetcompass_2013 (7.2 y, median age at death of a 2013 primary-care
+  // population — alternative only), lifespan.pdsa (same band as RKC), lifespan.senior_from (derived),
+  // adult_weight.rkc / akc / pdsa (FCI is the register's standard; RKC is identical), health.breed_watch
+  // (show points), health.common_disorders_2013 and every percentage / hazard ratio / "x14" (research
+  // only), health.tail / birth / huu (no website sentence needed; HUU is in the breeder checklist).
+  // Height: no breed standard gives one → the PDSA average range. Lifespan = McMillan 2024 (S54) and the
+  // RKC band "Under 10 years".
+  bulldog: {
+    height: ['height.pdsa_average'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'less_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['flat_face_breathing', 'health.brachycephaly_boas'],
+      ['heat_stroke_risk', 'health.heat_stroke'],
+      ['skin_fold_infections', 'health.skin_folds'],
+      ['eyelid_eye_problems', 'health.eyes'],
+      ['hip_elbow_dysplasia', 'health.joints'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -801,6 +826,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.rottweiler.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.rottweiler.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.rottweiler.exercise_minutes_senior',
+  },
+  bulldog: {
+    adult_minutes: ['proposed_game_parameters.bulldog.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.bulldog.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.bulldog.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.bulldog.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.bulldog.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.bulldog.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],
