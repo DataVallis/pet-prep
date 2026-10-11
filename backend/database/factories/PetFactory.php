@@ -319,6 +319,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Norwegian Forest Cat (paid cat breed, M5-R10-17; species follows the breed).
+     */
+    public function norwegianForestCat(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::NorwegianForestCat->value,
+        ]);
+    }
+
+    /**
      * Provide a complete pet_dna payload (for testing).
      */
     public function withPetDna(array $dna = []): static
