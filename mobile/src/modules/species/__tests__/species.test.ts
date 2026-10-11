@@ -13,7 +13,7 @@ import {
 
 describe('readBreed / readSpecies', () => {
   it('keeps every known breed, dogs and cats', () => {
-    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'domestic_cat', 'maine_coon'] as const) {
+    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'domestic_cat', 'maine_coon', 'british_shorthair'] as const) {
       expect(readBreed(breed)).toBe(breed);
     }
   });
@@ -179,6 +179,18 @@ describe('readBreed / readSpecies', () => {
     expect(readBreed('')).toBe('unknown');
     expect(readBreed(null)).toBe('unknown');
     expect(readBreed(42)).toBe('unknown');
+  });
+
+  it('M5-R10-14: the British Shorthair is a paid cat with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('british_shorthair'))).toBe('cat');
+    expect(isDefaultFreeBreed('british_shorthair')).toBe(false);
+    expect(breedName('british_shorthair')).toBe('Britanska kratkodlaka mačka');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('british_shorthair')).toBe('British Shorthair');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
   });
 
   it('species: the payload wins, else derived from a known breed, else null', () => {

@@ -335,6 +335,26 @@ describe('PICKER_STRINGS.ageHints', () => {
     }
   });
 
+  it('M5-R10-14 British Shorthair (cat): kitten at 3 months, young cat still growing until 3–5 years — SL and EN', async () => {
+    const B = PICKER_STRINGS.ageHints.british_shorthair;
+    expect(B.puppy).toBe('Pride kot mucek, star 3 mesece (rodovniški mucki gredo od doma pozneje).');
+    expect(B.young).toBe('Pride kot mlada mačka, stara 1 leto — britanska kratkodlaka mačka raste do 3.–5. leta.');
+    expect(B.adult).toBe('Pride kot zrela mačka, stara 7 let.');
+    expect(B.senior).toBe('Pride kot starejša mačka, stara 10 let.');
+    expect(PICKER_STRINGS.breedHints.british_shorthair).toBe('Kratka, gosta dlaka · 12-tedenski izziv');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.british_shorthair;
+      expect(E.puppy).toBe('Arrives as a 3-month-old kitten (pedigree kittens leave home later).');
+      expect(E.young).toBe('Arrives as a young cat, 1 year old — a British Shorthair keeps growing until 3–5 years.');
+      expect(E.adult).toBe('Arrives as a mature cat, 7 years old.');
+      expect(E.senior).toBe('Arrives as a senior cat, 10 years old.');
+      expect(PICKER_STRINGS.breedHints.british_shorthair).toBe('Short, dense coat · 12-week challenge');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
   it('no picker note names one paid breed as the only one (two paid dogs since M5-R10)', () => {
     for (const text of [PICKER_STRINGS.breedFreeNote, PICKER_STRINGS.breedChallengeNote, PICKER_STRINGS.searchPlaceholder, PICKER_STRINGS.plans.challenge.hint]) {
       expect(text).not.toMatch(/collie|koli|labrador|golden|zlati|bulldog|buldog/i);

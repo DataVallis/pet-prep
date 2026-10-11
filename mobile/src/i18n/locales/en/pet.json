@@ -93,7 +93,8 @@
       "bernese_mountain_dog": "Part of the 12-week challenge.",
       "siberian_husky": "Part of the 12-week challenge.",
       "domestic_cat": "Short coat · free",
-      "maine_coon": "Long coat · brushing 3× a week"
+      "maine_coon": "Long coat · brushing 3× a week",
+      "british_shorthair": "Short, dense coat · 12-week challenge"
     },
     "breedLockedNote": "This breed can't be chosen right now. Choose a mixed breed or try again later.",
     "lockedA11y": "{{breed}}, locked — part of the paid challenge",
@@ -216,6 +217,12 @@
         "young": "Arrives as a young cat, 1 year old — a Maine Coon keeps growing until 3–5 years.",
         "adult": "Arrives as a mature cat, 7 years old.",
         "senior": "Arrives as a senior cat, 10 years old."
+      },
+      "british_shorthair": {
+        "puppy": "Arrives as a 3-month-old kitten (pedigree kittens leave home later).",
+        "young": "Arrives as a young cat, 1 year old — a British Shorthair keeps growing until 3–5 years.",
+        "adult": "Arrives as a mature cat, 7 years old.",
+        "senior": "Arrives as a senior cat, 10 years old."
       }
     },
     "quietHoursNote": "A meal that falls entirely within quiet hours (school, sleep) is given by a parent.",
@@ -246,11 +253,11 @@
           "hint": "Free forever. All care and game rules, without the 12-week programme and certificate; last 7 days of history. The cat is always a domestic cat."
         },
         "challenge": {
-          "hint": "The programme that shows whether your child is ready for a cat, with a Maine Coon, a certificate and the full history. The challenge starts with a purchase: the cat waits until you buy the challenge for it. One-time payment, no subscription. Want to try first? Choose the free domestic cat."
+          "hint": "The programme that shows whether your child is ready for a cat, with a paid breed of your choice, a certificate and the full history. The challenge starts with a purchase: the cat waits until you buy the challenge for it. One-time payment, no subscription. Want to try first? Choose the free domestic cat."
         }
       },
-      "breedFreeNote": "On the free plan the cat is always a domestic cat. The Maine Coon is part of the 12-week challenge.",
-      "breedChallengeNote": "The 12-week challenge comes with a paid breed (Maine Coon). The domestic cat is the free plan’s cat — choose “Free domestic cat” for it.",
+      "breedFreeNote": "On the free plan the cat is always a domestic cat. Paid breeds are part of the 12-week challenge.",
+      "breedChallengeNote": "The 12-week challenge comes with a paid breed. The domestic cat is the free plan’s cat — choose “Free domestic cat” for it.",
       "breedLockedNote": "This breed can’t be chosen right now. Choose the domestic cat or try again later.",
       "noPaidBreed": "No paid breed can be chosen right now. Choose “Free domestic cat” or try again later.",
       "origins": {
