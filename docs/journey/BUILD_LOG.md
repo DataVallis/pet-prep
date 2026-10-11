@@ -14,7 +14,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Norveška gozdna mačka je v FIFe peta najbolj registrirana pasma (4.105 v letu 2024). Za starše, ki iščejo mladička, register zdaj pokaže tudi konkreten test: FIFe za vzrejo zahteva DNK-test za dedno bolezen GSD IV pri starših — o tem lahko vprašate vzreditelja.
 
-**Številke:** 6 novih virov (C36–C41) in 1 vir za seznam testov staršev (K21), 1 nova migracija (dve omejitvi pasme), 0 novih mehanik (česanje že obstaja, nova je samo vrednost 1× na teden); Pest **PEST_N** testov, Jest **2024**, izvoz registra **37** testov (vsi zeleni). V aplikaciji skrito; na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+**Številke:** 6 novih virov (C36–C41) in 1 vir za seznam testov staršev (K21), 1 nova migracija (dve omejitvi pasme), 0 novih mehanik (česanje že obstaja, nova je samo vrednost 1× na teden); Pest **2304** testov, Jest **2024**, izvoz registra **37** testov (vsi zeleni). V aplikaciji skrito; na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
 
 **Kako povedati:**
 - 👩 Starši: »Norveška gozdna mačka je nežna in prijazna, a njeno poldolgo dlako je treba vsaj enkrat na teden počesati; pri vzreditelju vprašajte za DNK-test GSD IV pri starših.« (*ko bodo mačke v aplikaciji*)

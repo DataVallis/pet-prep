@@ -182,7 +182,7 @@ Older queue (still valid where not done):
 ## 6. Session log
 
 ### 2026-10-11 (cloud, unattended scheduled run) — M5-R10-17 Norwegian Forest Cat (branch `feat/M5-R10-17-norwegian-forest-cat`, PR #174)
-- Research C36–C41 + K21 → backend (enum, migration, configs, cat rows incl. grooming 1×/week, appearance, `NorwegianForestCatBreedTest`) → mobile (names, hints, grooming list, schema.ts additive) → register export (`norwegianForestCatFacts`, health keys GSD IV + HCM + hips/weight) → docs. Tests: Pest PEST_N, Jest 2024, export 37 — all green locally.
+- Research C36–C41 + K21 → backend (enum, migration, configs, cat rows incl. grooming 1×/week, appearance, `NorwegianForestCatBreedTest`) → mobile (names, hints, grooming list, schema.ts additive) → register export (`norwegianForestCatFacts`, health keys GSD IV + HCM + hips/weight) → docs. Tests: Pest 2304, Jest 2024, export 37 — all green locally.
 - Next: merge on green `CI OK`, deploy, portrait run, website page (`feat/register-norwegian-forest-cat`).
 
 ### 2026-10-11 (cloud, David present) — Admin dashboard + EN/SL admin (branch `feat/admin-dashboard-i18n`)
