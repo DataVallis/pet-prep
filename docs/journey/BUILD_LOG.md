@@ -8,6 +8,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-11 — Angleški buldog: druga pasma po dvajsetih (M5-R10-20)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **angleškega buldoga** (9. mesto). Raziskava: **9 novih virov (S175–S183)** — standard FCI in nomenklatura, The Royal Kennel Club (stran pasme, standard in Breed Watch), uradni standard AKC (Bulldog Club of America), PDSA, raziskava VetCompass in UFAW; mediana življenjske dobe iz velike britanske raziskave McMillan 2024 (**9,8 leta**). Pravila igre: odrasel **60 minut = 6.000 korakov** na dan, starejši 45 minut = 4.500, mladiček od 2.000 navzgor; starejši je od **88. meseca**; uči se **dvakrat počasneje** kot mešanček (Coren: 77. mesto).
+
+**Zakaj je pomembno:** Buldog je ljubek in zelo priljubljen, a je pes z zelo sploščenim obrazom. PetPrep to pove mirno in z viri: oznaki »kratek gobček — težave z dihanjem in vročino« in »občutljiva koža« (The Royal Kennel Club pri pasmi spremlja dihanje in vnetja kože v gubah), »krajša življenjska doba«; PDSA staršem svetuje, naj razmislijo tudi o bolj zdravi pasmi ali mešančku. Kot francoski buldog je v aplikaciji in v registru, v marketingu pa ne (priporočilo britanskih veterinarjev). Dve novi potrebi z virom — gube na obrazu čistiti vsak dan in nikoli sprehoda v vročini dneva — igra še ne vodi, zato sta zapisani kot naloga M5-R14 za Davida.
+
+**Številke:** 9 novih virov (S175–S183), 1 migracija, 0 novih oznak, 1 nova naloga (nega psa s sploščenim obrazom, M5-R14); Pest **PEST_COUNT** testov, Jest **2043**, izvoz registra **40** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Angleški buldog je miren družinski pes, ki potrebuje do ene ure gibanja na dan — a ima zelo kratek gobček: hitro se pregreje, gube na obrazu je treba čistiti vsak dan. Pred nakupom vprašajte za test dihanja staršev in razmislite tudi o bolj zdravi pasmi ali mešančku.«
+- 💼 Investitorji: »Sistem je sam izbral naslednjo pasmo po javni lestvici AKC in jo zgradil po istem postopku — z viri, testi, pregledom in pravilom, da psov s sploščenim obrazom ne uporabljamo v oglasih.«
+- 🤝 Partnerji (veterinarji, zavetišča): »PetPrep pri buldogu jasno pove, kaj pomeni sploščen obraz, in navede priporočila PDSA in britanskih veterinarjev — brez strašenja in brez statistik za otroke.«
+- 📣 Omrežja: *ni v marketingu* (pes s sploščenim obrazom — priporočilo BVA).
+- 🛠 Tehnično: »Druga pasma, ki jo je samodejni zagon dodal sam; prva, ki je odprla nalogo za nego psov s sploščenim obrazom (gube in vročina brez vremenskega API-ja).«
+
+---
+
 ## 2026-10-11 — Rotvajler: prva pasma po dvajsetih (M5-R10-19)
 
 **Kaj se je zgodilo:** Vseh 20 pasem razširitve je bilo končanih, zato je samodejni zagon po pravilu runbooka v čakalno vrsto dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **rotvajlerja** (8. mesto). Raziskava: **9 novih virov (S166–S174)** — standard FCI in nomenklatura, The Royal Kennel Club (stran pasme in Breed Watch), PDSA, uradni standard AKC (American Rottweiler Club), raziskava VetCompass in AKC lestvica priljubljenosti. Pravila igre: odrasel **120 minut = 12.000 korakov** na dan, starejši 90 minut = 9.000, mladiček od 2.000 navzgor; starejši je od **81. meseca** (mediana VetCompass 9,0 leta — začasno, do preverbe McMillan 2024); uči se **1,8-krat** hitreje kot mešanček (Coren: 9. mesto).
