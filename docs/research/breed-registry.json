@@ -53,7 +53,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "fad7ec3ca80328e60c546cbb75c9f6ce5fb80797cb22c991064164a7cfe042b5"
+      "sha256": "c7cc64d8fcf119279d08ac44328067be05f61255ee319f86e5bd3768e86bf041"
     }
   },
   "suitability_vocabulary": {
@@ -10040,7 +10040,12 @@
           "S177"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "bulldog.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
