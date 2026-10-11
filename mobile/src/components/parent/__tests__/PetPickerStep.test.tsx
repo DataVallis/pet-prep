@@ -250,6 +250,7 @@ describe('PetPickerStep', () => {
       'breed-option-bernese_mountain_dog',
       'breed-option-siberian_husky',
       'breed-option-rottweiler',
+      'breed-option-bulldog',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -488,6 +489,47 @@ describe('PetPickerStep', () => {
       expect(consider).toHaveTextContent(/escapes easily — needs a secure, high fence/);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-siberian_husky')).toHaveTextContent(/Siberian Husky/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-20: the Bulldog (fallback) shows the flat-face and skin chips, is found as "angleški buldog" and "english bulldog", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const bulldog = screen.getByTestId('breed-option-bulldog');
+    expect(bulldog).toHaveTextContent(/Angleški buldog/);
+    expect(bulldog).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-bulldog-suits')).toHaveTextContent(/družinsko življenjedom z drugimi ljubljenčki/);
+    expect(screen.getByTestId('breed-suitability-bulldog-consider')).toHaveTextContent(
+      /kratek gobček — težave z dihanjem in vročinoobčutljiva koža — nagnjenost k srbenju in vnetjemkrajša življenjska dobaizpada mu dlaka/,
+    );
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'angleški buldog');
+    expect(screen.getByTestId('breed-option-bulldog')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-french_bulldog')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'english bulldog');
+    expect(screen.getByTestId('breed-option-bulldog')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-bulldog'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'bulldog', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'bulldog' }),
+    );
+  });
+
+  it('M5-R10-20: the Bulldog chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-bulldog-consider');
+      expect(consider).toHaveTextContent(/flat face — breathing and heat problems/);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-bulldog')).toHaveTextContent(/Bulldog/);
     } finally {
       await i18n.changeLanguage('sl');
     }

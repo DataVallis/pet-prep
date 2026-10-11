@@ -8245,6 +8245,585 @@
       }
     }
   },
+  "bulldog": {
+    "_note": "Added 2026-10-11 (M5-R10-20, unattended run — appended after the Rottweiler: AKC 2024 No. 9, S174). Quotes as returned by the web-fetch tool on 2026-10-11; spot-check before import (sources.md S175–S183, reused S10, S11, S14, S24, S35, S45, S54, S87, S92, S93, S135, S174). The tool capped quotes at ~125 characters; only passages it returned in quotation marks are used as quotes, condensed passages are marked '(paraphrase)'. Lifespan: McMillan et al. 2024 gives the Bulldog a median of 9.8 years (published text S135 and the corrected Fig. 3 legend S54 — the correction changed only the Miniature Dachshund). The RKC breed page was read at its older address (thekennelclub.org.uk/services/public/breed/display.aspx?id=4084, S177); the royalkennelclub.com address was not reachable through the fetch tool (provenance). The FCI nomenclature page (S176) names a valid standard published 9/8/2026, but the English standard PDF the tool could reach (S175, dev.fci.be) is dated 13.10.2010 — weights and colours agree with the RKC standard (S178), which the FCI standard follows for this British breed; verify against the 2026 FCI text before import. Woodgreen and AKC trait ratings not attempted. This is a flat-faced (brachycephalic) welfare breed: the French Bulldog rules apply (welfare chip, no marketing — BVA S92).",
+    "identity": {
+      "value": "FCI No. 149, Group 2 Section 2.1 (Molossian type, Mastiff type), Great Britain",
+      "unit": "—",
+      "source_id": "S176",
+      "quote": "Group: n°2 - Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs; Section: Molossian type; Country of origin: GREAT BRITAIN",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S176): standard number '149'; subsection 'Mastiff type'; definitive acceptance '3/14/1955'; valid standard '9/8/2026'; 'Not subject to a working trial according to the FCI breeds nomenclature'. FCI standard PDF (S175): 'Section 2.1 Molossoid breeds, Mastiff Type.' Quote assembled from the nomenclature fields as returned. English name: Bulldog (RKC, AKC); also called English or British Bulldog."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S177",
+      "quote": "Size: Medium",
+      "confidence": "high",
+      "notes": "PDSA (S180): 'Size: Medium' — sources agree. FCI / RKC weights dogs 25 kg / bitches 23 kg (S175, S178); the growth class follows the weight (S10, below)."
+    },
+    "height": {
+      "pdsa_average": {
+        "value": [
+          31,
+          40
+        ],
+        "unit": "cm",
+        "source_id": "S180",
+        "quote": "Average height: 31-40 cm",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (label wording as returned). The FCI (S175), RKC (S178) and AKC (S179) standards give no height."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            25,
+            25
+          ],
+          "female": [
+            23,
+            23
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S175",
+        "quote": "Males: 25 kgs.",
+        "confidence": "high",
+        "notes": "FCI (S175) gives one figure per sex: 'Males: 25 kgs.', 'Females: 23 kgs.' (no range). RKC standard (S178) the same: 'Dogs: 25 kgs (55 lbs); bitches: 23 kgs (50 lbs).' Game range 23–25 kg (both sexes)."
+      },
+      "rkc": {
+        "value": {
+          "male": [
+            25,
+            25
+          ],
+          "female": [
+            23,
+            23
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S178",
+        "quote": "Dogs: 25 kgs (55 lbs); bitches: 23 kgs (50 lbs).",
+        "confidence": "high",
+        "notes": "RKC breed standard (S178) — agrees with FCI."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            22.7,
+            22.7
+          ],
+          "female": [
+            18.1,
+            18.1
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S179",
+        "quote": "The size for mature dogs is about 50 pounds; for mature bitches about 40 pounds.",
+        "confidence": "high",
+        "notes": "AKC standard as published by the Bulldog Club of America (S179, approved July 12, 2016). Pounds converted to kg (× 0.4536) by us. Recorded as an alternative."
+      },
+      "pdsa": {
+        "value": [
+          23,
+          25
+        ],
+        "unit": "kg",
+        "source_id": "S180",
+        "quote": "Average weight: 23-25 kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box, one range for both sexes; agrees with FCI / RKC."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI / RKC dogs 25 kg (≈ 55 lb), bitches 23 kg (≈ 51 lb) → the 'Medium (24–59 pounds)' class; RKC / PDSA 'Size: Medium' (S177, S180). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Bulldog growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 9.8,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": "Bulldog (green, x̃= 9.8)",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 corrected Fig. 3 legend (S54; the correction changed only the Miniature Dachshund). Published text (S135), survival analysis: 'Bulldog (x̃=9.8, HR 1.8, 1.7–1.8)' among the breeds most at risk of early death (hazard ratio research only). Same median as the French Bulldog (9.8 y). Consistent with the RKC / PDSA band 'Under 10 years' (S177, S180)."
+      },
+      "vetcompass_2013": {
+        "value": 7.2,
+        "unit": "years",
+        "source_id": "S181",
+        "quote": "Median longevity was 7.2 years, which was lower in males (6.7 years) than females (7.9 years) (P = 0.021).",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2019 (S181), VetCompass UK primary care 2013; IQR 4.9–9.3 in the Results (paraphrase of the tool's note). A median age at death of the dogs that died in the study, not a life-table expectancy; the runbook prefers McMillan 2024 → recorded as an alternative only (senior 65 months)."
+      },
+      "rkc": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S177",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page (S177). PDSA key facts (S180): 'Average lifespan: Under 10 years' — sources agree. Basis of the shorter_lifespan chip."
+      },
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S180",
+        "quote": "Average lifespan: Under 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box as returned."
+      },
+      "senior_from": {
+        "value": 7.35,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 9.8 y (McMillan 2024, S54) → 0.75 × 9.8 = 7.35 y = 88.2 → 88 months (= French Bulldog). Not chosen: 65 (0.75 × 7.2 y, VetCompass 2013 median, S181), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S54"
+        ],
+        "months": 88,
+        "alternative": {
+          "value_years": 5.4,
+          "months": 65,
+          "derived_from": [
+            "S11",
+            "S181"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S177",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "PDSA (S180): 'Bulldogs need up to an hour's exercise daily' (key facts: minimum exercise '1 hour') — sources agree on 60."
+      },
+      "heat_and_walk_timing": {
+        "value": "never exercise in the heat of the day — prone to overheating",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "they should never be exercised in the heat of the day as they are prone to overheating",
+        "confidence": "high",
+        "notes": "PDSA (S180). RVC VetCompass news (S87): 'the following breeds were at most risk (compared to Labrador retrievers): Chow Chow (x17); Bulldog (x14)' — statistic research only; owners can protect at-risk dogs 'by, for example, altering times and levels of outdoor activity.' A sourced need: the game has no heat / walk-time mechanic and no weather data (CLAUDE.md scope guard: no weather API) → ROADMAP M5-R14 (runbook §3, David 2026-10-11)."
+      },
+      "energy": {
+        "value": "conveys determination, strength and activity",
+        "unit": "—",
+        "source_id": "S175",
+        "quote": "Conveys impression of determination, strength and activity.",
+        "confidence": "medium",
+        "notes": "FCI (S175); RKC standard (S178) the same sentence. No energy rating returned for PDSA (label only)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "alert, bold, loyal, dependable, courageous; fierce in appearance but affectionate",
+        "unit": "—",
+        "source_id": "S175",
+        "quote": "Alert, bold, loyal, dependable, courageous, fierce in appearance, but possessed of affectionate nature.",
+        "confidence": "high",
+        "notes": "RKC standard (S178): the same sentence. AKC (S179): 'The disposition should be equable and kind, resolute and courageous' (not vicious or aggressive, calm and dignified — paraphrase). FCI disqualifying fault: 'Aggressive or overly shy.'"
+      },
+      "family": {
+        "value": "hugely popular as a family companion",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "The Bulldog remains hugely popular as a family companion for his great character and loyalty.",
+        "confidence": "medium",
+        "notes": "RKC breed page (S177). No source found that rates the Bulldog with children (RKC page has no 'Good with children' field; PDSA page no statement) → family_pet only, never children / small_children."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (PDSA S180 has none in the returned text) → no often_alone tag."
+      },
+      "other_pets": {
+        "value": "calm; gets on well with other household pets if socialised young",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "They are very calm dogs and will get on well with other household pets if given the right socialisation when young.",
+        "confidence": "medium",
+        "notes": "PDSA (S180). Basis of other_pets (condition kept: socialisation when young)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific appetite statement found. RKC Breed Watch (S182) names 'Body Condition - Too Fat' as a point of concern for judges — body condition, not an appetite statement → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; percentages, hazard ratios and 'x times' figures stay here and are never shown in the app, the register export or audience docs. Flat-faced (brachycephalic) welfare breed: PDSA (S180) 'Bulldogs are a severely brachycephalic (flat-faced) breed.'; RKC Breed Watch Category 3 (S182) → brachycephalic_breathing chip (as the French Bulldog) and sensitive_skin chip (Breed Watch skin-fold dermatitis, as the West Highland White Terrier); BVA advises against brachycephalic imagery in advertising (S92) → in the app yes, in marketing no.",
+      "brachycephaly_boas": {
+        "value": "severely flat-faced (brachycephalic) breed; brachycephalic obstructive airway syndrome (BOAS) — exercise intolerance, noisy or difficult breathing",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "Bulldogs are a severely brachycephalic (flat-faced) breed.",
+        "confidence": "high",
+        "notes": "PDSA (S180): 'This causes breathing problems and symptoms such as exercise intolerance, increased noise when breathing' / 'Bulldogs are prone to this and it is often the cause of their snoring or wheezing.' / 'you should speak to your vet if you think your Bulldog is showing any symptoms of BOAS'. RKC breed page (S177): 'The soft tissue in the nose and throat of some brachycephalic dogs may be excessive for the airways'. Standards: RKC (S178) 'Dogs showing respiratory distress or making excessive respiratory noise highly undesirable.'; FCI (S175) 'Dogs showing respiratory distress highly undesirable.' UFAW (S183): flat-faced dogs have a strong chance of 'breathing difficulties, skin fold infections, eye disease, difficulty giving birth and spinal disease.' UK Brachycephalic Working Group (S93) and UFAW (S183): 'Stop and think before buying a flat-faced dog.'"
+      },
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 3 — points of concern include respiratory difficulty, tail problems, heavy overnose wrinkle, pinched nostrils, too fat, unsound movement, skin-fold dermatitis, eyelid and eye problems",
+        "unit": "—",
+        "source_id": "S182",
+        "quote": "Signs of respiratory difficulty or distress (laboured or rapid breathing, excessive respiratory effort, respiratory noise)",
+        "confidence": "high",
+        "notes": "RKC Breed Watch tally sheet (S182): 'Breed Watch Category 3'; further points 'Lack of tail, screw tail, inverted tail or a tight tail', 'Heavy overnose wrinkle (roll)', 'Pinched nostrils', 'Body Condition - Too Fat', 'Unsound movement', 'Signs of dermatitis irritation in skin folds, and/or hair loss or scarring from previous dermatitis', 'Eyelids not in normal contact with the eyeball, they are turned inwards or outwards', 'Signs of visible eye irritation or discomfort (including redness, discharge and tear staining)'. RKC breed page (S177): 'Breed Watch: Category 3'."
+      },
+      "skin_folds": {
+        "value": "skin-fold infections (skin fold pyoderma) — facial wrinkles need daily cleaning",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "They need grooming just once a week, but their facial wrinkles will need daily cleaning.",
+        "confidence": "high",
+        "notes": "PDSA (S180): 'Bulldogs have lots of extra skin, especially over their faces, which folds over' / 'and when bacteria builds up in the folds it causes skin fold pyoderma.' RKC breed page (S177): folds 'can make a warm, moist environment which is perfect for bacteria and yeast to grow.' Breed Watch (S182) skin-fold dermatitis. A sourced daily need: the game has no face-fold cleaning mechanic → ROADMAP M5-R14 (runbook §3, David 2026-10-11)."
+      },
+      "eyes": {
+        "value": "eyelid problems (entropion, ectropion), dry eye (KCS), cherry eye",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "eversion of the nictitating membrane or 'third eyelid'",
+        "confidence": "medium",
+        "notes": "PDSA (S180) health list: entropion and ectropion, keratoconjunctivitis sicca (dry eye), cherry eye (the quote is the cherry-eye description). Breed Watch (S182): eyelids turned inwards or outwards. RKC (S177) Breed Health and Conservation Plan names the BVA/KC/ISDS Eye Scheme (paraphrase)."
+      },
+      "joints": {
+        "value": "elbow and hip dysplasia",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "occur when joints don't develop correctly and cause degenerative joint disease",
+        "confidence": "medium",
+        "notes": "PDSA (S180) health list."
+      },
+      "tail": {
+        "value": "inverted or corkscrew tail",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "the tail can become inverted or 'corkscrew.'",
+        "confidence": "medium",
+        "notes": "PDSA (S180); Breed Watch (S182) 'Lack of tail, screw tail, inverted tail or a tight tail'; FCI / RKC (S175, S178) 'Lack of tail, inverted or extremely tight tails are undesirable.'"
+      },
+      "birth": {
+        "value": "problems giving birth naturally; often a caesarean section",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "Bulldogs often need to have a caesarean section to be able to give birth.",
+        "confidence": "medium",
+        "notes": "PDSA (S180): large shoulders relative to the hind quarters and pelvis (paraphrase). UFAW (S183): 'Dystocia due to Foetal-Pelvic Disproportion'. Background for parents only — the game has no breeding."
+      },
+      "huu": {
+        "value": "hyperuricosuria (HUU) — DNA test",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "DNA test - HUU - part of The Kennel Club's DNA Testing Services",
+        "confidence": "medium",
+        "notes": "RKC breed page (S177), 'Important health schemes and tests' (breeder checklist)."
+      },
+      "heat_stroke": {
+        "value": "higher risk of heat-related illness than Labradors (flat-faced breed)",
+        "unit": "—",
+        "source_id": "S87",
+        "quote": "the following breeds were at most risk (compared to Labrador retrievers): Chow Chow (x17); Bulldog (x14)",
+        "confidence": "high",
+        "notes": "RVC VetCompass news (S87) on Hall, Carter & O'Neill 2020 (S86). The 'x14' figure is research only — never in the app, the export or audience docs. PDSA (S180): 'they should never be exercised in the heat of the day as they are prone to overheating'."
+      },
+      "common_disorders_2013": {
+        "value": {
+          "median_longevity_y": 7.2
+        },
+        "unit": "UK primary care 2013",
+        "source_id": "S181",
+        "quote": "The most prevalent fine-level precision disorders recorded were otitis externa",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2019 (S181): then pyoderma and overweight / obesity; most prevalent disorder groups cutaneous, ophthalmological, aural, enteropathy and upper respiratory tract (paraphrase). Prevalences research only — never in the app, the export or audience docs."
+      },
+      "welfare_advice_to_buyers": {
+        "value": "PDSA strongly recommends considering a healthier breed, crossbreed or mongrel; UK vets: stop and think before buying a flat-faced dog",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "we strongly recommend owners consider a healthier breed, crossbreed or mongrel.",
+        "confidence": "high",
+        "notes": "PDSA (S180): 'Bulldogs are very likely to suffer from serious health and welfare issues due to their physical conformation'. UFAW (S183) and the UK Brachycephalic Working Group (S93): 'Stop and think before buying a flat-faced dog.' BVA (S92): 'avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns' → the Bulldog is not used in PetPrep marketing (proposed_game_parameters.bulldog.marketing). RKC (S177): 'Since the start of the 21st Century dedicated breeders have worked hard to improve the health of the breed by reducing exaggeration in the physical features.'"
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 77,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 77 | Bulldog |",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C): rank 77 under 'Lowest Degree of Working/Obedience Intelligence' (ranks 70–79). Coren's own article (S34) not fetched this run — runbook: rank from S35. Verify in The Intelligence of Dogs. Coren ranks obedience to commands, not 'cleverness'."
+      },
+      "coren_tier": {
+        "value": "lowest: 80–100 repetitions or more, obeys first command ≤25%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 80 to 100 repetitions or more.; Obey first command: 25% of the time or worse.",
+        "confidence": "low",
+        "notes": "Tier 'Lowest Degree of Working/Obedience Intelligence' = ranks 70–79 (tier wording as recorded for the Beagle, S35). Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific training statement returned (the PDSA 'Easy to train' label had no value in the text)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.bulldog.learning_multiplier (0.5, runbook rule).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "smooth-coated, fairly thick set, low in stature, broad, powerful and compact; face relatively short, muzzle broad and blunt",
+        "unit": "—",
+        "source_id": "S178",
+        "quote": "Smooth-coated. Fairly thick set, rather low in stature, broad, powerful and compact.",
+        "confidence": "high",
+        "notes": "FCI (S175): 'Face relatively short, muzzle broad, blunt and inclined slightly upwards, although not excessively so.'"
+      },
+      "colours": {
+        "value": [
+          "red",
+          "fawn",
+          "white",
+          "brindle (red / fawn brindle)",
+          "pied",
+          "red or fawn with white"
+        ],
+        "unit": "list",
+        "source_id": "S178",
+        "quote": "Whole colours are red, fawn, white.",
+        "confidence": "high",
+        "notes": "RKC standard (S178): 'Red or fawn may have white markings i.e. red and white, fawn and white.'; 'Brindle – solid background colour marked with darker stripes: red brindle, fawn brindle.'; 'Pied – white background with markings of any of the above listed colours.'; 'Any other colour or pattern highly undesirable'. FCI (S175): 'Dudley, black and black with tan highly undesirable.' AKC (S179): 'The merle pattern is a disqualification.' Never black, black and tan, blue, liver or merle."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). No colour frequencies. Draw over the standard colours; red and white weighted highest so the register portrait is a red-and-white Bulldog (one of the RKC colours, S178)."
+      },
+      "coat": {
+        "value": "fine, short, close and smooth",
+        "unit": "—",
+        "source_id": "S175",
+        "quote": "Fine texture, short, close and smooth (hard only from shortness and closeness, not wiry).",
+        "confidence": "high",
+        "notes": "RKC standard (S178): the same sentence. RKC breed page (S177): 'Coat length: Short'."
+      },
+      "ears": {
+        "value": "small, thin rose ears, set high",
+        "unit": "—",
+        "source_id": "S178",
+        "quote": "Small and thin.",
+        "confidence": "high",
+        "notes": "RKC (S178) / FCI (S175): \"'Rose ear' correct, i.e. folding inwards back, upper or front inner edge curving outwards and backwards,\"."
+      },
+      "eyes": {
+        "value": "round, moderate size, very dark, neither sunken nor prominent, no white showing",
+        "unit": "—",
+        "source_id": "S178",
+        "quote": "Round, of moderate size, neither sunken nor prominent, in colour very dark – almost black –",
+        "confidence": "high",
+        "notes": "RKC (S178): 'showing no white when looking directly forward.' / 'Free from obvious eye problems.'"
+      },
+      "nose": {
+        "value": "large, broad, black nose with large, wide, open nostrils; overnose wrinkle must never obscure eyes or nose",
+        "unit": "—",
+        "source_id": "S178",
+        "quote": "Nostrils large wide and open, with well-defined vertical straight line between.",
+        "confidence": "high",
+        "notes": "RKC (S178): 'Pinched nostrils and heavy over nose roll are unacceptable and must be heavily penalised.'; 'Over nose wrinkle, if present, whole or broken, must never adversely affect or obscure eyes or nose.'; muzzle length rule: 'should not be less than distance from tip of the nose to edge of the underlip.' Breed Watch (S182): heavy overnose wrinkle, pinched nostrils → the AI appearance keeps a moderate face with open nostrils and a light wrinkle (welfare rule, as for the French Bulldog)."
+      },
+      "tail": {
+        "value": "low-set, moderate length, thick at root tapering to a point, carried downward",
+        "unit": "—",
+        "source_id": "S175",
+        "quote": "Moderate in length - rather short than long - thick at root, tapering quickly to a fine point.",
+        "confidence": "high",
+        "notes": "FCI (S175): 'Downward carriage (not having a decided upward curve at end) and never carried above back.' Breed Watch (S182): screw / inverted / tight tail is a concern → the portrait shows a natural straight downward tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S177) and PDSA (S180). The RKC page shows no 'Good with children' field (as returned 2026-10-11). Woodgreen and AKC trait ratings not attempted.",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "Size: Medium",
+        "confidence": "high",
+        "notes": "PDSA (S180): 'Medium'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "Not 'Flat/ Apartment' → no apartment tag; not 'Large house' → no large_home tag."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "PDSA (S180): 'They need grooming just once a week' — sources agree on 1× per week (plus daily face-fold cleaning, health.skin_folds). Not frequent_grooming (criterion: more than once a week). A sourced need: dog grooming has no game mechanic yet → ROADMAP M5-R13 (runbook §3, David 2026-10-11)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "PDSA (S180): 'Short'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "No conflicting source (PDSA S180 has no shedding statement in the returned text) → sheds tag."
+      },
+      "rkc_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "Lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "shorter_lifespan criterion met; PDSA (S180) the same band; McMillan median 9.8 y (S54) agrees."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-11)."
+      },
+      "rkc_family": {
+        "value": "hugely popular as a family companion",
+        "unit": "—",
+        "source_id": "S177",
+        "quote": "The Bulldog remains hugely popular as a family companion for his great character and loyalty.",
+        "confidence": "medium",
+        "notes": "Basis of family_pet."
+      },
+      "pdsa_exercise": {
+        "value": "up to an hour daily; never in the heat of the day",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "Bulldogs need up to an hour's exercise daily",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "grooming once a week; facial wrinkles cleaned daily",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "They need grooming just once a week, but their facial wrinkles will need daily cleaning.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "pdsa_other_pets": {
+        "value": "gets on well with other household pets if socialised young",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "They are very calm dogs and will get on well with other household pets if given the right socialisation when young.",
+        "confidence": "medium",
+        "notes": "Basis of other_pets (condition kept)."
+      },
+      "pdsa_breed_advice": {
+        "value": "consider a healthier breed, crossbreed or mongrel",
+        "unit": "—",
+        "source_id": "S180",
+        "quote": "we strongly recommend owners consider a healthier breed, crossbreed or mongrel.",
+        "confidence": "high",
+        "notes": "Shown to parents through the brachycephalic_breathing chip and the register's health text — calmly, no statistics."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -11966,6 +12545,272 @@
         "confidence": "high",
         "notes": "One standard colour (S166, S170); white markings are a fault (S166). Breed Watch (S173): moderate muzzle and correct hind conformation in the portrait (welfare rule).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan only, natural tail, moderate muzzle, sound hind legs; no white markings"
+      }
+    },
+    "bulldog": {
+      "_note": "Unattended run M5-R10-20 (2026-10-11): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11); recorded as `decision` per entry. No new vocabulary key. Sourced needs without a game mechanic: weekly brushing (RKC S177, PDSA S180) → ROADMAP M5-R13; daily face-fold cleaning and no exercise in the heat of the day (PDSA S180) → ROADMAP M5-R14 (runbook §3, David 2026-10-11).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S177",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'Up to 1 hour per day' (S177); PDSA 'up to an hour's exercise daily' (S180) agrees. Rule: one number N ('up to N') → N = 60.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S177 'Up to 1 hour per day'; PDSA S180 the same)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000 (= French Bulldog, Cavalier).",
+        "derived_from": [
+          "S177",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 88
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 88 = round(0.75 × 9.8 y × 12) = round(88.2) (S11 + McMillan 2024 median 9.8 y, S54) — same as the French Bulldog. Alternatives: 65 (VetCompass 2013 median 7.2 y, S181), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S54"
+        ],
+        "alternatives": {
+          "senior_vetcompass_7_2_y": 65,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 88 (0.75 × 9.8 y, McMillan 2024 S54)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 88
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 88)"
+      },
+      "learning_multiplier": {
+        "value": 0.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 77 (S35), tier Lowest (ranks 70–79) → 0.5 (= Beagle). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 77, S35 — Lowest tier)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S177",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC (S177) 'Once a week'; PDSA (S180) 'They need grooming just once a week'. The game has no dog grooming mechanic yet (cats only) → built later as ROADMAP M5-R13; this value is its input.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+      },
+      "face_fold_cleaning": {
+        "value": "daily",
+        "unit": "face-fold cleaning (sourced need)",
+        "source_id": "S180",
+        "quote": "their facial wrinkles will need daily cleaning.",
+        "confidence": "high",
+        "notes": "PDSA (S180). The game has no face-fold cleaning mechanic (routine, button, report) — too large for a breed run → ROADMAP M5-R14 with a FEATURES 🗓 row; this value is its input. Also applies to other flat-faced breeds with a sourced frequency (the French Bulldog's PDSA page says folds must be kept clean and dry, no frequency).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan; mehanika čiščenja gub še ni zgrajena → ROADMAP M5-R14 (needs-david)"
+      },
+      "no_exercise_in_heat": {
+        "value": "never in the heat of the day",
+        "unit": "walk timing (sourced need)",
+        "source_id": "S180",
+        "quote": "they should never be exercised in the heat of the day as they are prone to overheating",
+        "confidence": "high",
+        "notes": "PDSA (S180). The game has no walk-time / heat rule and may not use weather data (CLAUDE.md scope guard) — a calendar / clock-based rule in the family's timezone is a mechanic decision for David → ROADMAP M5-R14 with a FEATURES 🗓 row.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ne v vročini dneva; mehanika še ni zgrajena → ROADMAP M5-R14 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-20); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S177"
+            ],
+            "refs": [
+              "bulldog.suitability.rkc_family",
+              "bulldog.behaviour.family"
+            ],
+            "quote": "S177 'The Bulldog remains hugely popular as a family companion for his great character and loyalty.'",
+            "note": "No child rating or statement → never children / small_children."
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S180"
+            ],
+            "refs": [
+              "bulldog.behaviour.other_pets",
+              "bulldog.suitability.pdsa_other_pets"
+            ],
+            "quote": "S180 'They are very calm dogs and will get on well with other household pets if given the right socialisation when young.'",
+            "note": "Condition kept: socialisation when young (as the Labrador's family_pet 'given the right socialisation')."
+          }
+        ],
+        "consider": [
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S180",
+              "S177",
+              "S182",
+              "S93"
+            ],
+            "refs": [
+              "bulldog.health.brachycephaly_boas",
+              "bulldog.health.breed_watch",
+              "bulldog.exercise.heat_and_walk_timing"
+            ],
+            "quote": "S180 'Bulldogs are a severely brachycephalic (flat-faced) breed.'; S177 'The soft tissue in the nose and throat of some brachycephalic dogs may be excessive for the airways'; S182 'Signs of respiratory difficulty or distress…'; S93 'Stop and think before buying a flat-faced dog.'",
+            "note": "Welfare rule §3: flat-faced breed (as the French Bulldog). No statistics in the app."
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S182",
+              "S180"
+            ],
+            "refs": [
+              "bulldog.health.breed_watch",
+              "bulldog.health.skin_folds"
+            ],
+            "quote": "S182 'Signs of dermatitis irritation in skin folds, and/or hair loss or scarring from previous dermatitis'; S180 'their facial wrinkles will need daily cleaning.'",
+            "note": "Welfare rule §3: RKC Breed Watch skin-fold dermatitis (as the West Highland White Terrier)."
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S177",
+              "S180",
+              "S54"
+            ],
+            "refs": [
+              "bulldog.lifespan.rkc",
+              "bulldog.lifespan.pdsa",
+              "bulldog.lifespan.median_uk"
+            ],
+            "quote": "S177 'Lifespan: Under 10 years'; S180 'Average lifespan: Under 10 years'; S54 'Bulldog (green, x̃= 9.8)'",
+            "note": "Runbook criterion: RKC 'Under 10 years'. No number in the chip."
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S177"
+            ],
+            "refs": [
+              "bulldog.suitability.rkc_shedding"
+            ],
+            "quote": "S177 'Sheds: Yes'"
+          }
+        ],
+        "not_proposed": {
+          "children": "No child rating or statement (RKC has no field; PDSA none in the returned text).",
+          "small_children": "No source.",
+          "first_time_owner": "No source.",
+          "apartment": "RKC 'Small house' (S177), not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S177).",
+          "active_family": "'Up to 1 hour per day' (S177) — moderate.",
+          "long_daily_exercise": "≤ 1 h/day (S177, S180).",
+          "often_alone": "No source.",
+          "older_owners": "No source.",
+          "low_shedding": "RKC 'Sheds: Yes' (S177).",
+          "food_motivated_weight": "Breed Watch 'Body Condition - Too Fat' (S182) is body condition for judges, not an appetite statement.",
+          "needs_mental_stimulation": "No source.",
+          "chews_when_bored": "No source.",
+          "frequent_grooming": "Once a week (S177, S180) — criterion is more than once a week; daily face-fold cleaning is a separate need (face_fold_cleaning, M5-R14).",
+          "may_herd_children": "No source.",
+          "hips_hind_legs": "Hip / elbow dysplasia only in the PDSA list (S180); Breed Watch names 'Unsound movement' (S182), not hind conformation → recorded under health.",
+          "heart_and_spine": "No Breed Watch / vet-association point; UFAW lists pulmonic stenosis and spinal disease for flat-faced dogs generally (S183) → recorded under health.",
+          "back_spine": "No breed-specific source.",
+          "secure_fencing": "No source.",
+          "experienced_owner": "No source."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, other_pets; consider brachycephalic_breathing, sensitive_skin, shorter_lifespan, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S92",
+        "quote": "avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns",
+        "confidence": "high",
+        "notes": "BVA position, executive summary (S92). The Bulldog is a severely flat-faced breed (PDSA S180) — the same exclusion as the French Bulldog (David 2026-10-10). A normal breed in the app (picker, register on the website with sourced health facts), never in PetPrep advertising, store screenshots, social posts or decks.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, NOT in marketing / store screenshots (BVA advice, S92)"
+      },
+      "ai_appearance": {
+        "value": "adult Bulldog, red and white; moderate (not extreme) short face with large, wide, open nostrils and only a light overnose wrinkle that never covers eyes or nose; round dark eyes, no white showing; small rose ears; fine short smooth coat; thick-set, low, broad but not exaggerated; natural straight tail carried downward; standard colours only (red, fawn, white, brindle, pied, red / fawn with white); never black, black and tan, blue, liver or merle",
+        "unit": "—",
+        "source_id": "S178",
+        "quote": "Nostrils large wide and open, with well-defined vertical straight line between.",
+        "confidence": "high",
+        "notes": "RKC standard (S178): 'Pinched nostrils and heavy over nose roll are unacceptable'; Breed Watch (S182): heavy overnose wrinkle, pinched nostrils, screw tail. Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): moderate face with open nostrils and a light wrinkle, standard colours only (portrait red and white), straight tail, never merle / black / blue"
       }
     }
   }

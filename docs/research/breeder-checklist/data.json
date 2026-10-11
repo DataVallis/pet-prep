@@ -928,6 +928,40 @@
         }
       ]
     },
+    "bulldog": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S177",
+        "level_quotes": {
+          "minimum": "The Kennel Club Assured Breeders must use the following (or equivalent) schemes, tests and advice.",
+          "minimum_all_breeders": "We strongly recommend that all breeders, both assured breeders (ABs) and non ABs, use the following"
+        }
+      },
+      "notes": "Older RKC page format (S177, as the Labrador's K16): the 'Priority' list (Assured Breeders) is empty for the Bulldog; the 'Important' list is recommended to all breeders → level minimum. The breed health plan on the same page asks to encourage the Respiratory Function Grading scheme → other_scheme (BOAS, as the French Bulldog's minimum test).",
+      "tests": [
+        {
+          "key": "dna_huu",
+          "level": "minimum",
+          "name": "DNA test - HUU",
+          "source_id": "S177",
+          "quote": "DNA test - HUU - part of The Kennel Club’s DNA Testing Services* (see below). Find lists of tested dogs"
+        },
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Check inbreeding calculators",
+          "source_id": "S177",
+          "quote": "Check inbreeding calculators"
+        },
+        {
+          "key": "boas_grading",
+          "level": "other_scheme",
+          "name": "Respiratory Function Grading Scheme (breathing test for BOAS)",
+          "source_id": "S177",
+          "quote": "continue to encourage uptake of the Respiratory Function Grading Scheme"
+        }
+      ]
+    },
     "maine_coon": {
       "status": "listed",
       "basis": {

@@ -294,9 +294,9 @@ it('gives the West Highland White Terrier the new sensitive_skin tag (welfare ru
         ->and($westie['consider'])->toBe(['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored'])
         ->and($westie['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('long_daily_exercise');
 
-    // Only the Westie carries the new chip so far.
+    // Only the Westie and the Bulldog (Breed Watch skin-fold dermatitis, M5-R10-20) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if ($breed !== BreedType::WestHighlandWhiteTerrier) {
+        if (! in_array($breed, [BreedType::WestHighlandWhiteTerrier, BreedType::Bulldog], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('sensitive_skin');
         }
     }
@@ -317,9 +317,9 @@ it('gives the Bernese Mountain Dog the new shorter_lifespan tag, family_pet, lar
         // RKC Breed Watch Category 1: no conformation welfare chip.
         ->and($berner['consider'])->not->toContain('hips_hind_legs')->not->toContain('long_daily_exercise')->not->toContain('chews_when_bored');
 
-    // Only the Bernese and the Rottweiler (RKC "Under 10 years", M5-R10-19) carry the chip so far.
+    // Only the Bernese, the Rottweiler (RKC "Under 10 years", M5-R10-19) and the Bulldog (M5-R10-20) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler], true)) {
+        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('shorter_lifespan');
         }
     }
@@ -386,4 +386,24 @@ it('types the API field with exactly the vocabulary (Scramble → mobile schema.
 
     expect($union($m[1]))->toEqualCanonicalizing(array_keys(array_filter($vocabulary, fn ($k) => $k === BreedSuitability::SUITS)))
         ->and($union($m[2]))->toEqualCanonicalizing(array_keys(array_filter($vocabulary, fn ($k) => $k === BreedSuitability::CONSIDER)));
+});
+
+it('gives the Bulldog the flat-face and skin welfare chips, shorter_lifespan, sheds, family_pet and other_pets (runbook 2026-10-11)', function () {
+    $bulldog = app(BreedSuitability::class)->for(BreedType::Bulldog);
+    expect($bulldog['suits'])->toBe(['family_pet', 'other_pets'])
+        // No child rating or statement; RKC "Small house", not "Flat/ Apartment".
+        ->and($bulldog['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')
+        ->and($bulldog['consider'])->toBe(['brachycephalic_breathing', 'sensitive_skin', 'shorter_lifespan', 'sheds'])
+        // Weekly brushing only (RKC "Once a week"); up to 1 hour of exercise.
+        ->and($bulldog['consider'])->not->toContain('frequent_grooming')->not->toContain('long_daily_exercise');
+    // The flat-faced breeds are the only ones with the breathing chip.
+    foreach (BreedType::cases() as $breed) {
+        if (! in_array($breed, [BreedType::FrenchBulldog, BreedType::Bulldog], true)) {
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('brachycephalic_breathing');
+        }
+    }
+    expect(bsEntry('bulldog.health.brachycephaly_boas')['quote'])->toBe('Bulldogs are a severely brachycephalic (flat-faced) breed.')
+        ->and(bsEntry('bulldog.health.breed_watch')['notes'])->toContain('Signs of dermatitis irritation in skin folds')
+        ->and(bsEntry('bulldog.behaviour.other_pets')['quote'])->toContain('if given the right socialisation when young')
+        ->and(bsEntry('bulldog.lifespan.rkc')['quote'])->toBe('Lifespan: Under 10 years');
 });

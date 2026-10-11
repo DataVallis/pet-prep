@@ -101,6 +101,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.siberian_husky.availability, 'coming_soon');
   assert.deepEqual(byId.rottweiler.slug, { en: 'rottweiler', sl: 'rotvajler' });
   assert.equal(byId.rottweiler.availability, 'coming_soon');
+  assert.deepEqual(byId.bulldog.slug, { en: 'bulldog', sl: 'angleski-buldog' });
+  assert.equal(byId.bulldog.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.equal(byId.british_shorthair.availability, 'coming_soon');
@@ -175,6 +177,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     bernese_mountain_dog: { adult: 6000, senior: 4500, seniorFrom: 76, learning: 1.5 },
     siberian_husky: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1 },
     rottweiler: { adult: 12000, senior: 9000, seniorFrom: 81, learning: 1.8 },
+    bulldog: { adult: 6000, senior: 4500, seniorFrom: 88, learning: 0.5 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -826,3 +829,28 @@ test('Rottweiler (M5-R10-19): more than 2 hours, FCI weight by sex, FCI group 2 
   // No VetCompass percentages, no conflicting PDSA band, never "hypoallergenic", never white markings.
   assert.doesNotMatch(json, /mcmillan_2024|lifespan\.pdsa|common_disorders|hypoallergenic|odds ratio|33\.0|7\.46|7\.06|white markings/i);
 });
+
+test('Bulldog (M5-R10-20): up to 1 hour, FCI weight by sex, FCI group 2 GB, McMillan median + RKC "under 10 years", Coren 77, flat-face and skin chips', () => {
+  const d = registry.breeds.find((b) => b.id === 'bulldog');
+  assert.deepEqual(d.name, { en: 'Bulldog', sl: 'Angleški buldog' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S177']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 149, group: 2, section: 2, origin: 'GB' });
+  // FCI gives one weight per sex (males 25 kg, females 23 kg); no standard gives a height → PDSA average.
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [25, 25], female: [23, 23] }, ['S175']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[[31, 40], ['S180']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['median', 9.8, ['S54']], ['less_than', 10, ['S177']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'growth_end').value, [12, 15]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 77);
+  assert.deepEqual(d.facets, { size: 'medium', exercise: 'under_1h', grooming: 'weekly' });
+  // 10 min × age reaches the 60-minute cap at 6 months; senior 45 min from 88 months.
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(d.game.stages[3].activity, { kind: 'steps', value: 4500 });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'other_pets']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['brachycephalic_breathing', 'sensitive_skin', 'shorter_lifespan', 'sheds']);
+  assert.deepEqual(d.health.map((h) => h.key), ['flat_face_breathing', 'heat_stroke_risk', 'skin_fold_infections', 'eyelid_eye_problems', 'hip_elbow_dysplasia']);
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['dna_huu', 'minimum'], ['inbreeding_coi', 'minimum'], ['boas_grading', 'other_scheme']]);
+  const json = JSON.stringify(d);
+  // No VetCompass percentages, no hazard ratio, no "x14", no 7.2-year death median, never "hypoallergenic", never merle.
+  assert.doesNotMatch(json, /vetcompass_2013|common_disorders|hypoallergenic|odds ratio|x14|HR 1\.8|7\.2|merle/i);
+});
+

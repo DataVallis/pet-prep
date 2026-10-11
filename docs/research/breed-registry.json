@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "8cf1f4a87e5f42588bd1e131693b652deed2d1d3e47250fc11bd43a4eed213f7"
+      "sha256": "cdd58c0cba11b186de9ee128503dcf50598af279338e52122017314655f7dd12"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "8fa6e351508db214376648fe58b3a5aa1c24d9a703b449ce88def5f60d34585d"
+      "sha256": "09b102fa565c56789ee0dd571dec1a827bf04c3a56147cf34aec340b3447c05f"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "8d283430f2e44a75af8b828b2e03d299b208c824b54be497fbb03f4722e862de"
+      "sha256": "eaa0b8198066fa089ea0b81a100e746e77e050d5723304cf99a3d3cd5c4a7e2a"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "47bdae6f732b150096cf8e2efb9c47b62015d21eff00b7e4a5742941a22058c1"
+      "sha256": "583b70f0ebc010c65ba4962cfee0e99647ca58c4c2eb171ffe2ea7684346c835"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "860483566ae40e7a8a58cafcf97c2c6ad0b100079ad9f081b2d8c2a1e96aacad"
+      "sha256": "636a77779abd212e6e863e5552fd25d27593c7e661b27e88febac427b3f14861"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "7e48b935d3ac9aef5594471ffc4a01d24bf564ba87587c7f85616d10d552acb5"
+      "sha256": "7dccc72a43f82979b623609664ef397e623e4eef6d2e539ef7d0cd14f3cab261"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "7ef3a6a29206c7b1a7857d49957e850f06ec2eb2a883bbf25ace5f55fa9f2abd"
+      "sha256": "cb6aee56e83339baf592651c969ee0dcf15c6fb3e90e3cb9fc7da7992ac0bddb"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "4adf16f83ef2be7d8ed0ce9c1f4516a06e9bbe53a2b99fcf227147376679c839"
+      "sha256": "e9845f0053f94fdfcbe168ae8b10250d70480e89d2fcc0e301c12fdebfda8a9b"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -168,7 +168,7 @@
         }
       },
       "status": "available",
-      "breed_count": 15,
+      "breed_count": 16,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -9539,6 +9539,569 @@
       ]
     },
     {
+      "id": "bulldog",
+      "species": "dog",
+      "order": 15,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Bulldog",
+        "sl": "Angleški buldog"
+      },
+      "slug": {
+        "en": "bulldog",
+        "sl": "angleski-buldog"
+      },
+      "synonyms": {
+        "en": [
+          "English Bulldog",
+          "British Bulldog"
+        ],
+        "sl": [
+          "buldog",
+          "angleski buldog",
+          "bulldog",
+          "english bulldog",
+          "british bulldog"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S177"
+          ],
+          "ref": "bulldog.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": [
+            31,
+            40
+          ],
+          "source_ids": [
+            "S180"
+          ],
+          "ref": "bulldog.height.pdsa_average",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              25,
+              25
+            ],
+            "female": [
+              23,
+              23
+            ]
+          },
+          "source_ids": [
+            "S175"
+          ],
+          "ref": "bulldog.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "bulldog.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 9.8,
+          "source_ids": [
+            "S54"
+          ],
+          "ref": "bulldog.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S177"
+          ],
+          "ref": "bulldog.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S177"
+          ],
+          "ref": "bulldog.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S177"
+          ],
+          "ref": "bulldog.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S177"
+          ],
+          "ref": "bulldog.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S177"
+          ],
+          "ref": "bulldog.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 77,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "bulldog.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 149,
+            "group": 2,
+            "section": 2,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S176"
+          ],
+          "ref": "bulldog.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "flat_face_breathing",
+          "source_ids": [
+            "S180"
+          ],
+          "ref": "bulldog.health.brachycephaly_boas",
+          "confidence": "high"
+        },
+        {
+          "key": "heat_stroke_risk",
+          "source_ids": [
+            "S87"
+          ],
+          "ref": "bulldog.health.heat_stroke",
+          "confidence": "high"
+        },
+        {
+          "key": "skin_fold_infections",
+          "source_ids": [
+            "S180"
+          ],
+          "ref": "bulldog.health.skin_folds",
+          "confidence": "high"
+        },
+        {
+          "key": "eyelid_eye_problems",
+          "source_ids": [
+            "S180"
+          ],
+          "ref": "bulldog.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S180"
+          ],
+          "ref": "bulldog.health.joints",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S177"
+            ],
+            "refs": [
+              "bulldog.suitability.rkc_family",
+              "bulldog.behaviour.family"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S180"
+            ],
+            "refs": [
+              "bulldog.behaviour.other_pets",
+              "bulldog.suitability.pdsa_other_pets"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S93",
+              "S177",
+              "S180",
+              "S182"
+            ],
+            "refs": [
+              "bulldog.health.brachycephaly_boas",
+              "bulldog.health.breed_watch",
+              "bulldog.exercise.heat_and_walk_timing"
+            ]
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S180",
+              "S182"
+            ],
+            "refs": [
+              "bulldog.health.breed_watch",
+              "bulldog.health.skin_folds"
+            ]
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S54",
+              "S177",
+              "S180"
+            ],
+            "refs": [
+              "bulldog.lifespan.rkc",
+              "bulldog.lifespan.pdsa",
+              "bulldog.lifespan.median_uk"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S177"
+            ],
+            "refs": [
+              "bulldog.suitability.rkc_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 88
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 88
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.bulldog.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S177"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S177 'Up to 1 hour per day'; PDSA S180 the same)"
+          },
+          {
+            "ref": "proposed_game_parameters.bulldog.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.bulldog.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S54"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 88 (0.75 × 9.8 y, McMillan 2024 S54)"
+          },
+          {
+            "ref": "proposed_game_parameters.bulldog.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 77, S35 — Lowest tier)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S54",
+          "S177"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_huu",
+            "level": "minimum",
+            "source_ids": [
+              "S177"
+            ]
+          },
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S177"
+            ]
+          },
+          {
+            "key": "boas_grading",
+            "level": "other_scheme",
+            "source_ids": [
+              "S177"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S177"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S54",
+        "S87",
+        "S93",
+        "S175",
+        "S176",
+        "S177",
+        "S180",
+        "S182",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -12136,6 +12699,20 @@
       "url": "https://www.nature.com/articles/s41598-020-66015-8"
     },
     {
+      "id": "S87",
+      "tier": "B",
+      "publisher": "Royal Veterinary College — VetCompass news",
+      "title": "Flat-faced dogs such as bulldogs, French bulldogs and pugs at increased risk of heat stroke",
+      "url": "https://rvc.ac.uk/vetcompass/news/flat-faced-dogs-such-as-bulldogs-french-bulldogs-and-pugs-at-increased-risk-of-heat-stroke"
+    },
+    {
+      "id": "S93",
+      "tier": "B",
+      "publisher": "UK Brachycephalic Working Group",
+      "title": "UK BWG home page",
+      "url": "https://www.ukbwg.org.uk/"
+    },
+    {
       "id": "S95",
       "tier": "A",
       "publisher": "FCI",
@@ -12547,6 +13124,41 @@
       "publisher": "Royal Kennel Club",
       "title": "Breed Watch tally sheet — Rottweiler (PDF)",
       "url": "https://thekennelclub.org.uk/media/t1anulxn/breed-watch-tally-sheet-rottweiler.pdf"
+    },
+    {
+      "id": "S175",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 149 — Bulldog (EN PDF reachable at dev.fci.be; date of publication of the valid standard in the PDF: 13.10.2010)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/149g02-en.pdf"
+    },
+    {
+      "id": "S176",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Bulldog (149)",
+      "url": "https://fci.be/en/nomenclature/BULLDOG-149.html"
+    },
+    {
+      "id": "S177",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Bulldog — breed information page (Breeds A to Z, older address)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4084"
+    },
+    {
+      "id": "S180",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Bulldog breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/bulldog"
+    },
+    {
+      "id": "S182",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breed Watch tally sheet — Bulldog (PDF)",
+      "url": "https://www.thekennelclub.org.uk/media/ydajrjfi/breed-watch-tally-sheet-bulldog.pdf"
     },
     {
       "id": "C1",

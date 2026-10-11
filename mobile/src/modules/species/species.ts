@@ -36,6 +36,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   bernese_mountain_dog: 'dog',
   siberian_husky: 'dog',
   rottweiler: 'dog',
+  bulldog: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
