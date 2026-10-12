@@ -44,6 +44,8 @@ export const PICKER_STRINGS = strings('pet', 'picker', {
   lockedA11y: (breed: string) => t('pet:picker.lockedA11y', { breed }),
   lockedFreeOnlyA11y: (breed: string) => t('pet:picker.lockedFreeOnlyA11y', { breed }),
   searchEmpty: (query: string) => t('pet:picker.searchEmpty', { query }),
+  showAllBreeds: (count: number) => t('pet:picker.showAllBreeds', { count }),
+  originAdoptionOnly: (breed: string) => t('pet:picker.originAdoptionOnly', { breed }),
   cat: {
     title: (name: string) => t('pet:picker.cat.title', { name }),
   },
@@ -550,6 +552,65 @@ export function searchBreeds(breeds: readonly CatalogueBreed[], query: string): 
   return breeds.filter((b) => matchesBreedSearch(b, query));
 }
 
+/**
+ * How many breeds the list shows before "Pokaži vse pasme" (David 2026-10-12): the catalogue
+ * grows to hundreds of breeds, so the phone shows the first few (server order = free breed,
+ * then the most popular) and search always covers the whole catalogue.
+ */
+export const BREED_PREVIEW_COUNT = 4;
+
+/**
+ * The rows the breed list shows. A search (or "Pokaži vse") shows every match; otherwise
+ * the first {@link BREED_PREVIEW_COUNT}, plus the selected breed when it sits further down
+ * (so a choice made through search never disappears from the list).
+ */
+export function visibleBreeds(
+  shown: readonly CatalogueBreed[],
+  query: string,
+  expanded: boolean,
+  selected: PetBreed | null,
+  limit: number = BREED_PREVIEW_COUNT,
+): CatalogueBreed[] {
+  if (expanded || foldForSearch(query) !== '' || shown.length <= limit) return [...shown];
+  const head = shown.slice(0, limit);
+  const picked = selected === null ? undefined : shown.slice(limit).find((b) => b.breed === selected);
+  return picked ? [...head, picked] : head;
+}
+
+/** Is `breed` a non-pedigree free breed (mutt / domestic cat)? Unknown breeds → false. */
+export function isNonPedigreeBreed(breed: PetBreed | null, breeds: readonly CatalogueBreed[]): boolean {
+  const entry = breed === null ? undefined : breeds.find((b) => b.breed === breed);
+  return entry !== undefined && entry.free_plan_allowed && !entry.premium;
+}
+
+/**
+ * The breed the origin applies to: the free plan always takes the species' free breed, the
+ * challenge the chosen breed; before a plan nothing is decided yet (null).
+ */
+export function originBreed(choice: PickerChoice, breeds: readonly CatalogueBreed[]): PetBreed | null {
+  if (choice.plan === null || choice.species === null) return null;
+  const ofSpecies = breeds.filter((b) => b.species === choice.species);
+  return choice.plan === 'free' ? freeBreedOf(ofSpecies) : choice.breed;
+}
+
+/**
+ * Origins the parent can pick (David 2026-10-12): a mutt or a domestic cat is never bought
+ * from a breeder — breeders only raise pedigree animals — so a non-pedigree breed is adoption
+ * only. Before a plan / breed is decided, both origins.
+ */
+export function originsFor(choice: PickerChoice, breeds: readonly CatalogueBreed[]): readonly PetOrigin[] {
+  return isNonPedigreeBreed(originBreed(choice, breeds), breeds) ? ['adopted'] : PICKER_ORIGINS;
+}
+
+/**
+ * The choice with an origin the breed allows: an origin that no longer fits (e.g. "bought"
+ * after switching to the free mutt) is cleared, never swapped silently — the parent picks again.
+ */
+export function withValidOrigin(choice: PickerChoice, breeds: readonly CatalogueBreed[]): PickerChoice {
+  if (choice.origin === null || originsFor(choice, breeds).includes(choice.origin)) return choice;
+  return { ...choice, origin: null };
+}
+
 /** What the parent has picked so far (species, plan, origin and age have no default — a deliberate choice). */
 export interface PickerChoice {
   species: PetSpecies | null;
@@ -648,6 +709,7 @@ export function completeChoice(
   const breed = choice.plan === 'free' ? freeBreedOf(ofSpecies) : choice.breed;
   if (breed === null || !ofSpecies.some((b) => b.breed === breed)) return null;
   if (isBreedLocked(breed, lockedBreedsFor(choice.plan, serverLocked, ofSpecies))) return null;
+  if (!originsFor(choice, ofSpecies).includes(choice.origin)) return null;
   return { species: choice.species, breed, origin: choice.origin, age_stage: choice.age_stage, plan: choice.plan };
 }
 

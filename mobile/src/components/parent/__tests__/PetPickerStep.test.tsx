@@ -7,6 +7,7 @@ import { fireEvent, render, screen } from '@testing-library/react-native';
 import PetPickerStep from '@/components/parent/PetPickerStep';
 import { i18n } from '@/i18n';
 import {
+  BREED_PREVIEW_COUNT,
   FALLBACK_CATALOGUE,
   INITIAL_PICKER_CHOICE,
   PICKER_STRINGS as PICKER,
@@ -58,10 +59,16 @@ const DOGS_R10 = readBreedCatalogue({
   ],
 }) as BreedCatalogue;
 
-function renderPicker(catalogue: BreedCatalogue | null, onConfirm = jest.fn(), onBack = jest.fn()) {
+/**
+ * Renders the picker. `showAll` (default) opens "Pokaži vse pasme" when the list is
+ * collapsed, so the per-breed tests see every breed; the preview itself has its own tests.
+ */
+function renderPicker(catalogue: BreedCatalogue | null, onConfirm = jest.fn(), onBack = jest.fn(), showAll = true) {
   render(
     <PetPickerStep childName="Maja" catalogue={catalogue} initial={INITIAL_PICKER_CHOICE} onConfirm={onConfirm} onBack={onBack} />,
   );
+  const toggle = screen.queryByTestId('breed-show-all');
+  if (showAll && toggle) fireEvent.press(toggle);
   return { onConfirm, onBack };
 }
 
@@ -1050,5 +1057,87 @@ describe('PetPickerStep', () => {
     expect(screen.queryByTestId('dog-picker-confirm')).toBeNull();
     fireEvent.press(screen.getByTestId('dog-picker-back'));
     expect(onBack).toHaveBeenCalledWith(INITIAL_PICKER_CHOICE);
+  });
+
+  describe('David 2026-10-12: a short breed list, "Pokaži vse pasme", search over everything', () => {
+    const ids = () => screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID);
+
+    it('shows only the first breeds and a "show all" button with the total', () => {
+      renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
+      expect(ids()).toEqual([
+        'breed-option-mutt',
+        'breed-option-border_collie',
+        'breed-option-labrador_retriever',
+        'breed-option-golden_retriever',
+      ]);
+      expect(ids()).toHaveLength(BREED_PREVIEW_COUNT);
+      expect(screen.getByTestId('breed-show-all')).toHaveTextContent(`Pokaži vse pasme (${FALLBACK_CATALOGUE.breeds.length})`);
+    });
+
+    it('"show all" lists every breed and "show fewer" folds it back', () => {
+      renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
+      fireEvent.press(screen.getByTestId('breed-show-all'));
+      expect(ids()).toHaveLength(FALLBACK_CATALOGUE.breeds.length);
+      expect(screen.getByTestId('breed-show-all')).toHaveTextContent('Pokaži manj pasem');
+      fireEvent.press(screen.getByTestId('breed-show-all'));
+      expect(ids()).toHaveLength(BREED_PREVIEW_COUNT);
+    });
+
+    it('search always covers the whole catalogue (no toggle while searching); the picked breed stays listed after the search', () => {
+      renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
+      fireEvent.press(screen.getByTestId('plan-option-challenge'));
+      fireEvent.changeText(screen.getByTestId('breed-search'), 'korgi');
+      expect(ids()).toEqual(['breed-option-pembroke_welsh_corgi']);
+      expect(screen.queryByTestId('breed-show-all')).toBeNull();
+      fireEvent.press(screen.getByTestId('breed-option-pembroke_welsh_corgi'));
+      fireEvent.changeText(screen.getByTestId('breed-search'), '');
+      expect(ids()).toEqual([
+        'breed-option-mutt',
+        'breed-option-border_collie',
+        'breed-option-labrador_retriever',
+        'breed-option-golden_retriever',
+        'breed-option-pembroke_welsh_corgi',
+      ]);
+    });
+
+    it('a short catalogue has no toggle', () => {
+      renderPicker(readBreedCatalogue({ species: ['dog'], breeds: FALLBACK_CATALOGUE.breeds.slice(0, 3) }), jest.fn(), jest.fn(), false);
+      expect(screen.queryByTestId('breed-show-all')).toBeNull();
+    });
+  });
+
+  describe('David 2026-10-12: a mutt is never "bought from a breeder"', () => {
+    it('free plan (mutt): only adoption, with the reason; the confirm sends adopted', () => {
+      const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+      fireEvent.press(screen.getByTestId('plan-option-free'));
+      expect(screen.queryByTestId('origin-option-bought')).toBeNull();
+      expect(screen.getByTestId('origin-adoption-only')).toHaveTextContent(PICKER.originAdoptionOnly('Mešanček'));
+      fireEvent.press(screen.getByTestId('origin-option-adopted'));
+      fireEvent.press(screen.getByTestId('age-option-puppy'));
+      fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+      expect(onConfirm).toHaveBeenCalledWith(
+        { species: 'dog', breed: 'mutt', origin: 'adopted', age_stage: 'puppy', plan: 'free' },
+        expect.objectContaining({ breed: 'mutt' }),
+      );
+    });
+
+    it('"bought" chosen for a paid breed is cleared (not swapped) when switching to the free mutt', () => {
+      renderPicker(FALLBACK_CATALOGUE);
+      fireEvent.press(screen.getByTestId('plan-option-challenge'));
+      fireEvent.press(screen.getByTestId('origin-option-bought'));
+      fireEvent.press(screen.getByTestId('age-option-puppy'));
+      expect(screen.getByTestId('dog-picker-confirm')).not.toBeDisabled();
+      fireEvent.press(screen.getByTestId('plan-option-free'));
+      expect(screen.getByTestId('dog-picker-confirm')).toBeDisabled();
+      expect(screen.getByTestId('origin-option-adopted')).not.toBeChecked();
+    });
+
+    it('a paid breed keeps both origins and no note', () => {
+      renderPicker(FALLBACK_CATALOGUE);
+      fireEvent.press(screen.getByTestId('plan-option-challenge'));
+      expect(screen.getByTestId('origin-option-bought')).toBeTruthy();
+      expect(screen.getByTestId('origin-option-adopted')).toBeTruthy();
+      expect(screen.queryByTestId('origin-adoption-only')).toBeNull();
+    });
   });
 });

@@ -251,10 +251,11 @@ describe('picker choice', () => {
       plan: 'challenge',
     });
     // A stale breed from a previous challenge choice is never sent with the free plan.
-    expect(completeChoice({ ...dog, plan: 'free', breed: 'border_collie', origin: 'bought', age_stage: 'young' }, [], D)).toEqual({
+    // (The mutt is adoption only — David 2026-10-12.)
+    expect(completeChoice({ ...dog, plan: 'free', breed: 'border_collie', origin: 'adopted', age_stage: 'young' }, [], D)).toEqual({
       species: 'dog',
       breed: 'mutt',
-      origin: 'bought',
+      origin: 'adopted',
       age_stage: 'young',
       plan: 'free',
     });

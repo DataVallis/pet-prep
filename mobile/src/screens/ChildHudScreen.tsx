@@ -50,6 +50,7 @@ import {
   RefreshCw,
   Sparkles,
   WifiOff,
+  Globe,
 } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
@@ -112,6 +113,7 @@ import { usePushPromptOnFirstView } from '@/modules/push/usePushPromptOnFirstVie
 import { nextStageLine, originLine, stageLine } from '@/modules/petProfile/petProfile';
 import { profileHeaderA11y, profileSheetRows } from '@/modules/petProfile/profileSheet';
 import PetProfileSheet from '@/components/PetProfileSheet';
+import ChildLanguageSheet from '@/components/ChildLanguageSheet';
 import TrainingChip from '@/modules/training/TrainingChip';
 import TrainingOverlay from '@/modules/training/TrainingOverlay';
 import { showTrainingDot, showTrainingEntry } from '@/modules/training/training';
@@ -388,6 +390,8 @@ export default function ChildHudScreen() {
   const [toast, setToast] = useState<Toast | null>(null);
   // M5-F05: the header shows one short line; a tap opens the full profile.
   const [isProfileVisible, setProfileVisible] = useState(false);
+  /** David 2026-10-12: the child can change the app language from the HUD, not only before sign-in. */
+  const [isLanguageVisible, setLanguageVisible] = useState(false);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const showToast = useCallback((next: Toast) => {
     if (toastTimer.current) clearTimeout(toastTimer.current);
@@ -686,6 +690,16 @@ export default function ChildHudScreen() {
 
           <View style={styles.topBarRight}>
             <WsStatusDot status={wsStatus} />
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={t('child:hud.languageSheet.open')}
+              testID="hud-language-open"
+              hitSlop={5}
+              style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
+              onPress={() => setLanguageVisible(true)}
+            >
+              <Globe color={palette.n400} size={16} />
+            </Pressable>
             {albumAvailable && (
               <Pressable
                 accessibilityRole="button"
@@ -989,6 +1003,7 @@ export default function ChildHudScreen() {
           reduceMotion={reduceMotion}
         />
       )}
+      <ChildLanguageSheet visible={isLanguageVisible} onClose={() => setLanguageVisible(false)} />
       <PetProfileSheet visible={isProfileVisible && profileRows.length > 0} rows={profileRows} onClose={() => setProfileVisible(false)} />
       {showAlbum && (
         <PetAlbum

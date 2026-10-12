@@ -6,10 +6,13 @@
  *    step is skipped and that species is used (DECISIONS 2026-10-08).
  * 2. **Plan** — free / 12-week challenge (M3-09 / M3-13: the challenge starts with a purchase).
  * 3. **Breed** — the server's list (`GET /api/breeds`) with search (case- and
- *    diacritic-insensitive, synonyms), free breed first with a "Brezplačno" badge, paid
+ *    diacritic-insensitive, synonyms) over the whole catalogue; without a search only the
+ *    first few breeds show, the rest behind "Pokaži vse pasme" (David 2026-10-12, hundreds
+ *    of breeds are coming). Free breed first with a "Brezplačno" badge, paid
  *    breeds with "Izziv"; a breed the plan doesn't take is greyed and explained on tap (M5-F03).
  *    Each breed with sourced tags shows "Primerno za:" / "Upoštevajte:" chips (M5-R10).
- * 4. **Origin** and **age at arrival**, as before (texts per species, T8).
+ * 4. **Origin** and **age at arrival**, as before (texts per species, T8). A non-pedigree
+ *    breed (mutt, domestic cat) is adoption only — never "from a breeder" (David 2026-10-12).
  * 5. **Summary** (species, breed, origin, age, plan) above "Ustvari kodo".
  *
  * Premium breeds need the challenge (server 422 `breed_locked` otherwise); the challenge
@@ -28,6 +31,7 @@ import type { NewPetProfile, PetBreed, PetSpecies } from '@/api/client';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import {
   ageHint,
+  BREED_PREVIEW_COUNT,
   breedHint,
   breedLockReason,
   breedsOf,
@@ -40,8 +44,9 @@ import {
   hasSuitability,
   isBreedLocked,
   lockedBreedsFor,
+  originBreed,
+  originsFor,
   PICKER_AGES,
-  PICKER_ORIGINS,
   PICKER_PLANS,
   PICKER_STRINGS as S,
   pickerText,
@@ -55,8 +60,10 @@ import {
   type CatalogueBreed,
   type PickerChoice,
   type PickerText,
+  visibleBreeds,
+  withValidOrigin,
 } from '@/modules/petProfile/picker';
-import { breedName, speciesName } from '@/modules/species/species';
+import { breedName, foldForSearch, speciesName } from '@/modules/species/species';
 import { fonts, palette, tightTracking } from '@/theme';
 
 interface PetPickerStepProps {
@@ -122,11 +129,17 @@ function PickerBody({
   onConfirm,
   onBack,
 }: PetPickerStepProps & { catalogue: BreedCatalogue }) {
-  const [choice, setChoice] = useState<PickerChoice>(() => startChoice(initial, catalogue, serverLockedBreeds));
+  const [choice, setChoice] = useState<PickerChoice>(() =>
+    withValidOrigin(startChoice(initial, catalogue, serverLockedBreeds), catalogue.breeds),
+  );
+  /** Every change goes through the origin rule (a mutt can't stay "bought from a breeder"). */
+  const update = (change: (c: PickerChoice) => PickerChoice) => setChoice((c) => withValidOrigin(change(c), catalogue.breeds));
   const [stage, setStage] = useState<'species' | 'details'>(() => (choice.species === null ? 'species' : 'details'));
   /** The locked breed the parent tapped last (explains why), null when none. */
   const [lockedTapped, setLockedTapped] = useState<PetBreed | null>(null);
   const [query, setQuery] = useState('');
+  /** "Pokaži vse pasme" opened (closes again on a species change). */
+  const [allBreeds, setAllBreeds] = useState(false);
   const severalSpecies = catalogue.species.length > 1;
 
   if (stage === 'species' || choice.species === null) {
@@ -139,7 +152,8 @@ function PickerBody({
         onPick={(species) => {
           setLockedTapped(null);
           setQuery('');
-          setChoice((c) => choiceWithSpecies(c, species, serverLockedBreeds, breedsOf(catalogue, species)));
+          setAllBreeds(false);
+          update((c) => choiceWithSpecies(c, species, serverLockedBreeds, breedsOf(catalogue, species)));
           setStage('details');
         }}
         onBack={onBack ? () => onBack(choice) : undefined}
@@ -157,6 +171,11 @@ function PickerBody({
   const profile = completeChoice(choice, serverLockedBreeds, breeds);
   const price = challengePrice ?? CHALLENGE_LIST_PRICE;
   const shown = searchBreeds(breeds, query);
+  const listed = visibleBreeds(shown, query, allBreeds, choice.breed);
+  // The toggle only without a search (a search always lists every match).
+  const canToggleAll = foldForSearch(query) === '' && shown.length > BREED_PREVIEW_COUNT;
+  const origins = originsFor(choice, breeds);
+  const adoptionOnlyBreed = origins.length === 1 ? originBreed(choice, breeds) : null;
   const ageBreed = choice.breed ?? freeBreedOf(breeds);
 
   return (
@@ -197,7 +216,7 @@ function PickerBody({
           onPress={() => {
             setLockedTapped(null);
             // Free plan = always the species' free breed; the challenge never keeps it (M5-F03).
-            setChoice((c) => choiceWithPlan(c, plan, serverLockedBreeds, breeds));
+            update((c) => choiceWithPlan(c, plan, serverLockedBreeds, breeds));
           }}
           testID={`plan-option-${plan}`}
         />
@@ -221,7 +240,7 @@ function PickerBody({
           testID="breed-search"
         />
       </View>
-      {shown.map((entry) => (
+      {listed.map((entry) => (
         <BreedRow
           key={entry.breed}
           entry={entry}
@@ -234,10 +253,22 @@ function PickerBody({
               return;
             }
             setLockedTapped(null);
-            setChoice((c) => ({ ...c, breed: entry.breed }));
+            update((c) => ({ ...c, breed: entry.breed }));
           }}
         />
       ))}
+      {canToggleAll && (
+        <Pressable
+          onPress={() => setAllBreeds((open) => !open)}
+          hitSlop={8}
+          accessibilityRole="button"
+          accessibilityState={{ expanded: allBreeds }}
+          style={({ pressed }) => [styles.showAllButton, pressed && styles.pressed]}
+          testID="breed-show-all"
+        >
+          <Text style={styles.linkText}>{allBreeds ? S.showFewerBreeds : S.showAllBreeds(shown.length)}</Text>
+        </Pressable>
+      )}
       {shown.length === 0 && (
         <Text style={styles.note} testID="breed-search-empty">
           {S.searchEmpty(query.trim())}
@@ -252,16 +283,21 @@ function PickerBody({
       <Text style={styles.sectionTitle} accessibilityRole="header">
         {S.originTitle}
       </Text>
-      {PICKER_ORIGINS.map((origin) => (
+      {origins.map((origin) => (
         <Option
           key={origin}
           title={T.origins[origin]}
           hint={T.originHints[origin]}
           selected={choice.origin === origin}
-          onPress={() => setChoice((c) => ({ ...c, origin }))}
+          onPress={() => update((c) => ({ ...c, origin }))}
           testID={`origin-option-${origin}`}
         />
       ))}
+      {adoptionOnlyBreed !== null && (
+        <Text style={styles.note} testID="origin-adoption-only">
+          {S.originAdoptionOnly(breedName(adoptionOnlyBreed, species))}
+        </Text>
+      )}
 
       <Text style={styles.sectionTitle} accessibilityRole="header">
         {S.ageTitle}
@@ -272,7 +308,7 @@ function PickerBody({
           title={T.ages[age]}
           hint={ageBreed ? ageHint(ageBreed, age) : ''}
           selected={choice.age_stage === age}
-          onPress={() => setChoice((c) => ({ ...c, age_stage: age }))}
+          onPress={() => update((c) => ({ ...c, age_stage: age }))}
           testID={`age-option-${age}`}
         />
       ))}
@@ -625,6 +661,7 @@ const styles = StyleSheet.create({
   summaryLabel: { fontSize: 14, color: C.muted },
   summaryValue: { flexShrink: 1, fontSize: 14, fontWeight: '700', color: C.text, textAlign: 'right' },
   linkButton: { alignSelf: 'flex-start', paddingVertical: 2 },
+  showAllButton: { alignSelf: 'center', minHeight: 44, justifyContent: 'center', paddingHorizontal: 12 },
   linkText: { fontSize: 14, fontWeight: '700', color: C.link, textDecorationLine: 'underline' },
   primaryButton: {
     height: 50,
