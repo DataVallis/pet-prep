@@ -450,7 +450,7 @@
           "many": "Mačke"
         }
       },
-      "status": "coming_soon",
+      "status": "available",
       "breed_count": 6,
       "fact_groups": [
         "play",
@@ -1398,7 +1398,7 @@
       "id": "labrador_retriever",
       "species": "dog",
       "order": 1,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Labrador Retriever",
         "sl": "Labradorec"
@@ -2146,7 +2146,7 @@
       "id": "golden_retriever",
       "species": "dog",
       "order": 2,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Golden Retriever",
         "sl": "Zlati prinašalec"
@@ -2883,7 +2883,7 @@
       "id": "french_bulldog",
       "species": "dog",
       "order": 3,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "French Bulldog",
         "sl": "Francoski buldog"
@@ -3552,7 +3552,7 @@
       "id": "german_shepherd",
       "species": "dog",
       "order": 4,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "German Shepherd Dog",
         "sl": "Nemški ovčar"
@@ -4184,7 +4184,7 @@
       "id": "cavalier_king_charles_spaniel",
       "species": "dog",
       "order": 5,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Cavalier King Charles Spaniel",
         "sl": "Kavalir King Charles španjel"
@@ -4785,7 +4785,7 @@
       "id": "beagle",
       "species": "dog",
       "order": 6,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Beagle",
         "sl": "Bigl"
@@ -5313,7 +5313,7 @@
       "id": "standard_poodle",
       "species": "dog",
       "order": 7,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Poodle (Standard)",
         "sl": "Veliki koder"
@@ -5867,7 +5867,7 @@
       "id": "dachshund",
       "species": "dog",
       "order": 8,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Dachshund",
         "sl": "Jazbečar"
@@ -6379,7 +6379,7 @@
       "id": "australian_shepherd",
       "species": "dog",
       "order": 9,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Australian Shepherd",
         "sl": "Avstralski ovčar"
@@ -6985,7 +6985,7 @@
       "id": "havanese",
       "species": "dog",
       "order": 10,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Havanese",
         "sl": "Havanski bišon"
@@ -7489,7 +7489,7 @@
       "id": "west_highland_white_terrier",
       "species": "dog",
       "order": 11,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "West Highland White Terrier",
         "sl": "Zahodnoškotski beli terier"
@@ -8052,7 +8052,7 @@
       "id": "bernese_mountain_dog",
       "species": "dog",
       "order": 12,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Bernese Mountain Dog",
         "sl": "Bernski planšarski pes"
@@ -8591,7 +8591,7 @@
       "id": "siberian_husky",
       "species": "dog",
       "order": 13,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Siberian Husky",
         "sl": "Sibirski haski"
@@ -9158,7 +9158,7 @@
       "id": "rottweiler",
       "species": "dog",
       "order": 14,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Rottweiler",
         "sl": "Rotvajler"
@@ -9774,7 +9774,7 @@
       "id": "bulldog",
       "species": "dog",
       "order": 15,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Bulldog",
         "sl": "Angleški buldog"
@@ -10355,7 +10355,7 @@
       "id": "german_shorthaired_pointer",
       "species": "dog",
       "order": 16,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "German Shorthaired Pointer",
         "sl": "Nemški kratkodlaki ptičar"
@@ -10902,7 +10902,7 @@
       "id": "yorkshire_terrier",
       "species": "dog",
       "order": 17,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Yorkshire Terrier",
         "sl": "Yorkshirski terier"
@@ -11426,7 +11426,7 @@
       "id": "cane_corso",
       "species": "dog",
       "order": 18,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Cane Corso",
         "sl": "Cane corso"
@@ -11977,7 +11977,7 @@
       "id": "pembroke_welsh_corgi",
       "species": "dog",
       "order": 19,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Pembroke Welsh Corgi",
         "sl": "Welsh corgi pembroke"
@@ -12496,7 +12496,7 @@
       "id": "dobermann",
       "species": "dog",
       "order": 20,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Dobermann",
         "sl": "Doberman"
@@ -13120,7 +13120,7 @@
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Maine Coon",
         "sl": "Maine Coon"
@@ -13495,7 +13495,7 @@
       "id": "british_shorthair",
       "species": "cat",
       "order": 1,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "British Shorthair",
         "sl": "Britanska kratkodlaka mačka"
@@ -13849,7 +13849,7 @@
       "id": "ragdoll",
       "species": "cat",
       "order": 2,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Ragdoll",
         "sl": "Ragdoll"
@@ -14226,7 +14226,7 @@
       "id": "siberian_cat",
       "species": "cat",
       "order": 3,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Siberian cat",
         "sl": "Sibirska mačka"
@@ -14596,7 +14596,7 @@
       "id": "norwegian_forest_cat",
       "species": "cat",
       "order": 4,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Norwegian Forest Cat",
         "sl": "Norveška gozdna mačka"
@@ -14987,7 +14987,7 @@
       "id": "bengal",
       "species": "cat",
       "order": 5,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Bengal",
         "sl": "Bengalska mačka"
