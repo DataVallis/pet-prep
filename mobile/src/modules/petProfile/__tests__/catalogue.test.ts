@@ -294,7 +294,7 @@ describe('readBreedCatalogue', () => {
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 190 }),
     );
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-23, runbook rules; new chips not_for_small_children, drools).
-    expect(corso?.search_keywords).toEqual(['cane corso', 'cane corso italiano', 'italian cane corso', 'italian corso dog', 'corso', 'italian mastiff', 'italijanski cane corso', 'korzo', 'kane korso']);
+    expect(corso?.search_keywords).toEqual(['cane corso', 'cane corso italiano', 'italian cane corso', 'italian corso dog', 'corso', 'italijanski cane corso', 'korzo', 'kane korso']);
     expect(corso?.suitability).toEqual({
       suits: ['active_family'],
       consider: ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'shorter_lifespan', 'sheds', 'drools'],
@@ -453,7 +453,8 @@ describe('breed search', () => {
     expect(find('cane corso')).toEqual(['cane_corso']);
     expect(find('korzo')).toEqual(['cane_corso']);
     expect(find('italijanski')).toEqual(['cane_corso']);
-    expect(find('italian mastiff')).toEqual(['cane_corso']);
+    // "Italian mastiff" is left out on purpose — it usually means the Neapolitan Mastiff.
+    expect(find('italian mastiff')).toEqual([]);
   });
 
   it('M5-R10-22: finds the Yorkshire Terrier by its SL / EN names and nicknames', () => {

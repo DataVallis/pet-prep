@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "232daa29341384822ff15ef95958bc1d3491a446133b7c22e923930d2a2704cb"
+      "sha256": "1a3f4413da86ba9ee0eb294f99952e86c301c8bb485360c96fe3e895e8a02dba"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -11177,7 +11177,6 @@
           "Cane Corso Italiano",
           "Italian Cane Corso",
           "Italian Corso Dog",
-          "Italian Mastiff",
           "Corso"
         ],
         "sl": [

@@ -117,7 +117,7 @@ describe('breed, config and database', function () {
             ->and(Species::Dog->freeBreed())->toBe(BreedType::Mutt)
             ->and([$config->species, $config->premium_unlock, $config->sort_order, $config->label_key])
             ->toBe([Species::Dog, true, 190, 'breeds.cane_corso'])
-            ->and($config->search_keywords)->toBe(['cane corso', 'cane corso italiano', 'italian cane corso', 'italian corso dog', 'corso', 'italian mastiff', 'italijanski cane corso', 'korzo', 'kane korso'])
+            ->and($config->search_keywords)->toBe(['cane corso', 'cane corso italiano', 'italian cane corso', 'italian corso dog', 'corso', 'italijanski cane corso', 'korzo', 'kane korso'])
             // Legacy fallback = the adult step goal (120 min × 100 steps).
             ->and($config->daily_steps_required)->toBe((int) ccData('proposed_game_parameters.cane_corso.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(12000);
@@ -227,12 +227,14 @@ describe('life-stage data against data.json', function () {
         expect($decided)->toBeGreaterThan(0);
 
         // No "proposal, not built" left in the research; the sourced needs without a mechanic
-        // (weekly brushing, a gap between a meal and exercise) point at their ROADMAP tasks.
+        // (weekly brushing, a gap between a meal and exercise, socialisation) point at their ROADMAP tasks.
         expect(json_encode([ccData('cane_corso'), ccData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('awaiting David')->not->toContain('PROPOSAL')->not->toContain('not built"')
             ->and(ccData("{$pgp}.grooming.value"))->toBe(1)
             ->and(ccData("{$pgp}.grooming.decision"))->toContain('ROADMAP M5-R13')
             ->and(ccData("{$pgp}.meal_exercise_gap.source_id"))->toBe('S199')
-            ->and(ccData("{$pgp}.meal_exercise_gap.decision"))->toContain('ROADMAP M5-R16');
+            ->and(ccData("{$pgp}.meal_exercise_gap.decision"))->toContain('ROADMAP M5-R16')
+            ->and(ccData("{$pgp}.socialisation.source_id"))->toBe('S199')
+            ->and(ccData("{$pgp}.socialisation.decision"))->toContain('ROADMAP M5-R17');
     });
 
     it('takes the breed-level numbers from the sourced cane_corso entries', function () {

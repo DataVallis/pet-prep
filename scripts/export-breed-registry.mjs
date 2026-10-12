@@ -389,7 +389,7 @@ const SPECIES = [
       { id: 'bulldog', availability: 'coming_soon', synonyms: { en: ['English Bulldog', 'British Bulldog'], sl: ['buldog', 'angleski buldog', 'bulldog', 'english bulldog', 'british bulldog'] } },
       { id: 'german_shorthaired_pointer', availability: 'coming_soon', synonyms: { en: ['GSP', 'German Pointer', 'Shorthair', 'Deutsch Kurzhaar', 'Kurzhaar'], sl: ['kratkodlaki ptičar', 'kratkodlaki pticar', 'nemski kratkodlaki pticar', 'kurzhaar', 'gsp'] } },
       { id: 'yorkshire_terrier', availability: 'coming_soon', synonyms: { en: ['Yorkie', 'Yorkshire'], sl: ['jorkširski terier', 'jorksirski terier', 'yorkie', 'jorki'] } },
-      { id: 'cane_corso', availability: 'coming_soon', synonyms: { en: ['Cane Corso Italiano', 'Italian Cane Corso', 'Italian Corso Dog', 'Italian Mastiff', 'Corso'], sl: ['italijanski cane corso', 'cane corso italiano', 'korzo', 'corso'] } },
+      { id: 'cane_corso', availability: 'coming_soon', synonyms: { en: ['Cane Corso Italiano', 'Italian Cane Corso', 'Italian Corso Dog', 'Corso'], sl: ['italijanski cane corso', 'cane corso italiano', 'korzo', 'corso'] } },
     ],
   },
   {

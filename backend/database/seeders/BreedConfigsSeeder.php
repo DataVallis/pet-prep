@@ -462,7 +462,7 @@ class BreedConfigsSeeder extends Seeder
                 'species' => 'dog',
                 'sort_order' => 190,
                 'label_key' => 'breeds.cane_corso',
-                'search_keywords' => ['cane corso', 'cane corso italiano', 'italian cane corso', 'italian corso dog', 'corso', 'italian mastiff', 'italijanski cane corso', 'korzo', 'kane korso'],
+                'search_keywords' => ['cane corso', 'cane corso italiano', 'italian cane corso', 'italian corso dog', 'corso', 'italijanski cane corso', 'korzo', 'kane korso'],
             ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.

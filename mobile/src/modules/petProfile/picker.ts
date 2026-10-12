@@ -439,7 +439,7 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       premium: true,
       free_plan_allowed: false,
       challenge_allowed: true,
-      search_keywords: ['cane corso', 'cane corso italiano', 'italian cane corso', 'italian corso dog', 'corso', 'italian mastiff', 'italijanski cane corso', 'korzo', 'kane korso'],
+      search_keywords: ['cane corso', 'cane corso italiano', 'italian cane corso', 'italian corso dog', 'corso', 'italijanski cane corso', 'korzo', 'kane korso'],
       sort_order: 190,
       suitability: {
         suits: ['active_family'],

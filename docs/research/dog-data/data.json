@@ -10033,7 +10033,7 @@
         "source_id": "S199",
         "quote": "You’ll need to socialise your Cane Corso with lots of different people and experiences from a young age.",
         "confidence": "medium",
-        "notes": "PDSA (S199). The game's training already covers reward-based training; socialisation has no separate mechanic — general advice for every puppy (no breed-specific frequency or amount)."
+        "notes": "PDSA (S199). A sourced need (runbook §3, David 2026-10-11): the game's school (M5-R03) trains commands, not socialisation with people and new experiences → new ROADMAP M5-R17 (needs-david); see proposed_game_parameters.cane_corso.socialisation."
       },
       "time_alone": {
         "value": "general PDSA advice — never alone for longer than four hours",
@@ -10084,7 +10084,7 @@
         "source_id": "S199",
         "quote": "Hip dysplasia – where the hip joint doesn’t fit together perfectly, which will eventually lead to arthritis.",
         "confidence": "medium",
-        "notes": "PDSA (S199): 'Before breeding, dogs should be screened by x-rays through the BVA/Kennel Club Hip Dysplasia Scheme.'; 'Elbow dysplasia – where the elbow joint doesn’t fit together perfectly, which will eventually lead to arthritis.'; 'Before breeding, dogs should be screened by x-rays through the BVA/KC Elbow Dysplasia Scheme.' Basis of the breeder checklist (K23). No Breed Watch point → no hips_hind_legs chip."
+        "notes": "PDSA (S199): 'Before breeding, dogs should be screened by x-rays through the BVA/Kennel Club Hip Dysplasia Scheme.'; 'Elbow dysplasia – where the elbow joint doesn’t fit together perfectly, which will eventually lead to arthritis.'; 'Before breeding, dogs should be screened by x-rays through the BVA/KC Elbow Dysplasia Scheme.' Basis of the breeder checklist (S199). No Breed Watch point → no hips_hind_legs chip."
       },
       "gdv": {
         "value": "gastric dilatation volvulus (bloat) — an emergency",
@@ -14746,7 +14746,7 @@
       }
     },
     "cane_corso": {
-      "_note": "Unattended run M5-R10-23 (2026-10-12): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry. The senior boundary uses the closest rule row (a peer-reviewed breed median, S201, as the Bernese Mountain Dog) and is Claude's suggestion (verified=false, waiting for David). Two new consider keys by the runbook's 'new tag' rule: not_for_small_children and drools (PDSA S199). Sourced needs without a game mechanic: weekly brushing (S199) → ROADMAP M5-R13; a gap between a meal and exercise (GDV, S199) → new ROADMAP M5-R16 (runbook §3, David 2026-10-11).",
+      "_note": "Unattended run M5-R10-23 (2026-10-12): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry. The senior boundary uses the closest rule row (a peer-reviewed breed median, S201, as the Bernese Mountain Dog) and is Claude's suggestion (verified=false, waiting for David). Two new consider keys by the runbook's 'new tag' rule: not_for_small_children and drools (PDSA S199). Sourced needs without a game mechanic: weekly brushing (S199) → ROADMAP M5-R13; a gap between a meal and exercise (GDV, S199) → new ROADMAP M5-R16; socialisation from a young age (S199) → new ROADMAP M5-R17 (runbook §3, David 2026-10-11).",
       "exercise_minutes_adult": {
         "value": 120,
         "unit": "minutes/day",
@@ -14890,6 +14890,15 @@
         "notes": "PDSA (S199), feeding section; the same page lists GDV ('bloat') as 'an emergency' (health.gdv). The source gives no length of the gap → the mechanic and its number are for David. The game has no rule linking meals and walks (steps count whenever the child walks) — too large for a breed run (rule, child UI, report) → new ROADMAP M5-R16 with a FEATURES 🗓 row. The same PDSA advice appears for other large breeds already in the app (e.g. Bernese Mountain Dog S154) — M5-R16 can cover them too.",
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem; vir ne navaja dolžine, mehanike ni → ROADMAP M5-R16 (needs-david)"
       },
+      "socialisation": {
+        "value": null,
+        "unit": "socialisation with people and new experiences from a young age (sourced need, no number)",
+        "source_id": "S199",
+        "quote": "You’ll need to socialise your Cane Corso with lots of different people and experiences from a young age.",
+        "confidence": "medium",
+        "notes": "PDSA (S199); the same page: 'Lots of positive socialisation from a young age' helps with new dogs (paraphrase). The game's school (M5-R03) trains commands (sit, place, come, potty), not socialisation; no frequency or amount in the source → new ROADMAP M5-R17 with a FEATURES 🗓 row. PDSA gives the same advice for other breeds in the app (e.g. Rottweiler S169) — M5-R17 can cover them too.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): socializacija od mladosti; vir ne navaja količine, mehanike ni → ROADMAP M5-R17 (needs-david)"
+      },
       "suitability_tags": {
         "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-23); refs = JSON paths in this file. New vocabulary keys not_for_small_children and drools (consider). No percentages in the app.",
         "suits": [
@@ -15019,7 +15028,7 @@
         "quote": "We really wouldn’t recommend having a Cane Corso if you have small children",
         "confidence": "high",
         "notes": "Not a welfare-concern breed in the sources (no BVA / UK Brachycephalic Working Group / UFAW / RVC / RKC statement; not flat-faced, S197). The only veterinary advice against advertising a breed type is for flat-faced breeds (S92). Marketing never promises health; per PDSA (S199) the breed is never shown as a dog for families with small children or first-time owners, and never with cropped ears or a docked tail (illegal in the UK, S199; the FCI 2023 standard has natural ears and tail, S197). The 'never with small children / cropped ears' limits are Claude's reading of the sources, open for David.",
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed)"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed); omejitve (nikoli z majhnimi otroki, nikoli s kupiranimi ušesi / repom) — predlog Claude 2026-10-12, čaka Davida"
       },
       "ai_appearance": {
         "value": "adult Cane Corso, solid black (default); short shiny dense coat; natural uncropped medium triangular ears held close to the cheeks; natural undocked tail; dark eyes; strong square muzzle about half the skull length, moderate — no exaggerated loose skin or droopy eyelids; robust, athletic, slightly longer than tall; no large white patches, never black-and-tan or merle",

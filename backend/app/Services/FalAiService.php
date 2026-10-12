@@ -214,7 +214,7 @@ class FalAiService
             BreedType::YorkshireTerrier => 'An alert Yorkshire Terrier dog with a dark steel blue and rich tan coat, '
                 .'long straight glossy silky coat of natural pet length, small erect V-shaped tan ears, '
                 .'dark sparkling eyes, black nose, natural undocked tail, tiny compact toy body, '
-.'photorealistic, studio quality, natural lighting',
+                .'photorealistic, studio quality, natural lighting',
 
             // M5-R10-23: FCI 343 (S197) — natural uncropped ears and natural tail (FCI 2023;
             // cropping / docking illegal in the UK, PDSA S199); short shiny dense coat; strong
