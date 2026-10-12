@@ -53,7 +53,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "2cf99306cb6e78ea4670f87b10ae4c38fbede670206b91d1ec82cdd162676c3a"
+      "sha256": "04bdda06a5d29e64930297ff1f65e3d96d8cbe1ead0f16c9190bf4945dceb1f1"
     }
   },
   "suitability_vocabulary": {
@@ -11642,7 +11642,12 @@
           "S201"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "cane-corso.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
