@@ -12,7 +12,9 @@
 # Usage: scripts/mobile-ota.sh <message> [--dry-run]
 # Needs: EXPO_TOKEN (EAS robot token), `eas` on PATH, run from the repo root, mobile deps installed.
 # The EXPO_PUBLIC_* values of the production build profile (eas.json) are exported so the
-# OTA bundle talks to the same API / Reverb / RevenueCat as the store build.
+# OTA bundle talks to the same API / Reverb / RevenueCat as the store build. `eas update
+# --environment production` adds the EAS server variables of that environment on top
+# (they win for keys they define) — keep EXPO_PUBLIC_* there unset or identical.
 set -euo pipefail
 
 MESSAGE="${1:?usage: mobile-ota.sh <message> [--dry-run]}"
@@ -21,6 +23,10 @@ SUMMARY="${GITHUB_STEP_SUMMARY:-/dev/null}"
 EAS=(eas)
 
 cd mobile
+
+# The production store build resolves its config with EAS_BUILD_PROFILE=production
+# (app.config.ts: APNs mode) — resolve the same config here, or the runtimes never match.
+export EAS_BUILD_PROFILE=production
 
 # Same public env as the production store build.
 while IFS='=' read -r key value; do

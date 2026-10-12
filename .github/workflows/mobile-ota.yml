@@ -39,10 +39,20 @@ jobs:
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
           fetch-depth: 2
 
-      - name: Did mobile/ change?
+      # Publishes only the current head of main: a re-run of an old CI run or a dispatch
+      # from another branch never overwrites a newer production update (dry runs excepted).
+      # Change detection diffs against the first parent — main moves by PR merges; a direct
+      # push of several commits is covered only for its last commit (use Run workflow).
+      - name: Did mobile/ change on the head of main?
         id: changed
+        env:
+          DRY_RUN: ${{ inputs.dry_run }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || ! git diff --quiet HEAD^1 HEAD -- mobile/; then
+          git fetch -q --depth=1 origin main
+          if [ "$DRY_RUN" != "true" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+            echo "::notice title=Mobile OTA skipped::$(git rev-parse --short HEAD) is not the head of main."
+            echo "mobile=false" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] || ! git diff --quiet HEAD^1 HEAD -- mobile/; then
             echo "mobile=true" >> "$GITHUB_OUTPUT"
           else
             echo "mobile=false" >> "$GITHUB_OUTPUT"
@@ -67,7 +77,7 @@ jobs:
       - uses: expo/expo-github-action@v8
         if: steps.changed.outputs.mobile == 'true' && env.EXPO_TOKEN != ''
         with:
-          eas-version: latest
+          eas-version: 24.12.1
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: OTA update or store build

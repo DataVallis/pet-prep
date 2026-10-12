@@ -11,14 +11,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ## 2026-10-12 — Popravki na telefone v minutah: OTA posodobitve (M5-F10)
 
-**Kaj se je zgodilo:** PetPrep dobi posodobitve »po zraku« (Expo EAS Update). Ob vsakem zelenem prenosu mobilne kode na `main` GitHub Actions izračuna prstni odtis nativnega dela aplikacije. Če je enak kot pri gradnji v trgovini, gre posodobitev takoj na telefone. Če ni, CI jasno javi, da je potrebna nova gradnja v trgovini.
+**Kaj se je zgodilo:** PetPrep dobi posodobitve »po zraku« (Expo EAS Update) — *zgrajeno, še ni preverjeno na telefonu; deluje po prvi novi gradnji v trgovini in z žetonom `EXPO_TOKEN`*. Ob vsakem zelenem prenosu mobilne kode na `main` GitHub Actions izračuna prstni odtis nativnega dela aplikacije. Če je enak kot pri gradnji v trgovini, gre posodobitev takoj na telefone. Če ni, CI jasno javi, da je potrebna nova gradnja v trgovini.
 
 **Zakaj je pomembno:** Popravek besedila ali napake ne čaka več dni na pregled v App Store / Google Play. Prstni odtis poskrbi, da stara gradnja nikoli ne dobi kode, ki je ne zna izvesti.
 
 **Številke:** brezplačni načrt EAS Update — 1.000 aktivnih uporabnikov na mesec (dovolj za beta z ~20 testerji); 0 € dodatnih stroškov do tja.
 
 **Kako povedati:**
-- 👩 Starši: »Popravki pridejo sami, ob naslednjem odprtju aplikacije.«
+- 👩 Starši (*ko bo preverjeno*): »Popravki pridejo sami, ob naslednjem odprtju aplikacije.«
 - 💼 Investitorji: »Release cikel za popravke iz dni v minute, brez tveganja za nativno kodo.«
 - 🛠 Tehnično: »`expo-updates` s politiko `fingerprint`, `eas build:list --runtime-version` odloči med `eas update` in »potrebna gradnja«.«
 
