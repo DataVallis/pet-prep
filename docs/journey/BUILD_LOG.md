@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Welsh corgi pembroke: šesta pasma po dvajsetih (M5-R10-24)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **welsh corgija pembroke** (15. mesto). Dvajseta plačljiva pasma psa: okoli ena ura gibanja na dan (6.000 korakov za odraslega, 4.500 za starejšega), starejši od 9 let, uči se 1,5-krat hitreje kot mešanček (Coren: 11. mesto).
+
+**Zakaj je pomembno:** Corgi je majhen, a delaven pastirski pes. PDSA opozarja, da lahko grize za pete otrok, ki tečejo — zato v izbirniku stoji »pri igri lahko »pase« otroke« — in da potrebuje socializacijo z otroki od malega. Česanje 2–3× na teden in socializacijo je postopek zapisal kot potrebi z virom (naloga M5-R13 in M5-R17), čeprav ju igra še ne vodi. Pasma prvič nima nobene oznake »Primerno za«, ker je noben vir ne podpre — raje nič kot izmišljeno.
+
+**Številke:** 5 novih virov (S202–S206), 1 migracija, 0 novih oznak, 1 nov ključ zdravja v registru; Pest **2.488** testov, Jest **2.079**, izvoz registra **44** testov (vsi zeleni). Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Corgi je prijazen in se rad uči, a zna pasti otroke in jih grizljati za pete. V PetPrepu boste videli, ali vaš otrok zmore uro sprehoda na dan.« *(česanja psov aplikacija še ne vodi — načrt, M5-R13)*
+- 🧒 Otroci: »Corgi je majhen pastirski pes z velikim srcem. Rad teče in se igra — ampak ko tečeš, te lahko poskusi »pasti«!«
+- 💼 Investitorji: »Šesta pasma, ki jo je sistem sam izbral po javni lestvici AKC — od raziskave do odprtih vprašanj za ustanovitelja v enem samodejnem zagonu.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri corgiju pove, naj vzreditelj pokaže rentgen kolkov staršev (RKC) — in nikoli ne obljublja zdravja.«
+- 📣 Omrežja: »Kratke noge, veliko energije: ura gibanja na dan. Kmalu boste lahko corgija preizkusili v PetPrepu.« *(ko bo nakup v trgovini deloval)*
+- 🛠 Tehnično: »Prva pasma s prazno skupino »Primerno za« — izbirnik jo preprosto skrije; vse številke igre so iz stalnih pravil runbooka.«
+
+---
+
 ## 2026-10-12 — Cane corso: peta pasma po dvajsetih (M5-R10-23)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **cane corsa** (14. mesto; 12. avstralski ovčar in 13. kavalir sta že v aplikaciji). Raziskava: **5 novih virov (S197–S201)** — standard FCI (2023) in nomenklatura, standard AKC, PDSA in raziskava o življenjski dobi pasme (Korec idr. 2017, mediana **9,29 leta**). Pasme The Royal Kennel Club ne priznava, zato so gibanje, nega in oznake iz PDSA. Pravila igre: odrasel **120 minut = 12.000 korakov** na dan, starejši 90 minut = 9.000, mladiček od 2.000 navzgor (12.000 doseže pri 12 mesecih); uči se enako hitro kot mešanček (ni v Corenovi lestvici). Meja starejšega psa (**84 mesecev = 7 let**) je **predlog Claude, čaka Davida** — nobeno potrjeno pravilo ni dalo vrednosti.

@@ -390,6 +390,7 @@ const SPECIES = [
       { id: 'german_shorthaired_pointer', availability: 'coming_soon', synonyms: { en: ['GSP', 'German Pointer', 'Shorthair', 'Deutsch Kurzhaar', 'Kurzhaar'], sl: ['kratkodlaki ptičar', 'kratkodlaki pticar', 'nemski kratkodlaki pticar', 'kurzhaar', 'gsp'] } },
       { id: 'yorkshire_terrier', availability: 'coming_soon', synonyms: { en: ['Yorkie', 'Yorkshire'], sl: ['jorkširski terier', 'jorksirski terier', 'yorkie', 'jorki'] } },
       { id: 'cane_corso', availability: 'coming_soon', synonyms: { en: ['Cane Corso Italiano', 'Italian Cane Corso', 'Italian Corso Dog', 'Corso'], sl: ['italijanski cane corso', 'cane corso italiano', 'korzo', 'corso'] } },
+      { id: 'pembroke_welsh_corgi', availability: 'coming_soon', synonyms: { en: ['Welsh Corgi (Pembroke)', 'Welsh Corgi Pembroke', 'Pembroke', 'Corgi'], sl: ['welsh corgi', 'pembroke', 'korgi', 'valižanski korgi'] } },
     ],
   },
   {
@@ -778,6 +779,26 @@ const DOG_FACTS = {
       ['eyelid_problems', 'health.eyes'],
     ],
   },
+  // M5-R10-24. Not exported: lifespan.mcmillan_2024 (no value), lifespan.senior_from (derived),
+  // adult_weight.pdsa / salt_category (FCI is the register's standard; our assignment),
+  // health.bladder_stones (research only). Lifespan = the RKC band 'Over 12 years' (S204).
+  pembroke_welsh_corgi: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['back_disc_disease', 'health.back_ivdd'],
+      ['epilepsy', 'health.epilepsy'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['cataracts_lens_luxation', 'health.eyes'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -932,6 +953,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.cane_corso.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.cane_corso.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.cane_corso.exercise_minutes_senior',
+  },
+  pembroke_welsh_corgi: {
+    adult_minutes: ['proposed_game_parameters.pembroke_welsh_corgi.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.pembroke_welsh_corgi.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.pembroke_welsh_corgi.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.pembroke_welsh_corgi.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.pembroke_welsh_corgi.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.pembroke_welsh_corgi.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],

@@ -585,5 +585,23 @@ return [
                 ['tag' => 'drools', 'source_ids' => ['S199'], 'refs' => ['cane_corso.behaviour.drooling', 'cane_corso.suitability.pdsa_drooling']],
             ],
         ],
+
+        // M5-R10-24: pembroke_welsh_corgi.* (S202–S206), runbook rules (data.json
+        // proposed_game_parameters.pembroke_welsh_corgi.suitability_tags). RKC (S204) + PDSA (S206).
+        // No `suits` tag has a source: RKC "Small house" (not "Flat/ Apartment" or "Large house"),
+        // 60 min (no active_family, as the Dachshund), no family / children rating. Not a
+        // welfare-concern breed (RKC Breed Watch Category 1) → no welfare chip; PDSA's list of
+        // potential problems (IVDD, hip dysplasia) stays in research (open for David).
+        'pembroke_welsh_corgi' => [
+            'suits' => [],
+            'consider' => [
+                // S206 "They may nip at the heels of running children" (herding).
+                ['tag' => 'may_herd_children', 'source_ids' => ['S206'], 'refs' => ['pembroke_welsh_corgi.behaviour.herding_children', 'pembroke_welsh_corgi.suitability.pdsa_children']],
+                // S204 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S204'], 'refs' => ['pembroke_welsh_corgi.suitability.rkc_shedding']],
+                // S204 "Grooming: More than once a week"; S206 "grooming two-three times per week".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S204', 'S206'], 'refs' => ['pembroke_welsh_corgi.suitability.rkc_grooming', 'pembroke_welsh_corgi.suitability.pdsa_grooming']],
+            ],
+        ],
     ],
 ];

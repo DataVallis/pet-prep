@@ -109,6 +109,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.yorkshire_terrier.availability, 'coming_soon');
   assert.deepEqual(byId.cane_corso.slug, { en: 'cane-corso', sl: 'cane-corso' });
   assert.equal(byId.cane_corso.availability, 'coming_soon');
+  assert.deepEqual(byId.pembroke_welsh_corgi.slug, { en: 'pembroke-welsh-corgi', sl: 'welsh-corgi-pembroke' });
+  assert.equal(byId.pembroke_welsh_corgi.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.equal(byId.british_shorthair.availability, 'coming_soon');
@@ -187,6 +189,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     german_shorthaired_pointer: { adult: 12000, senior: 9000, seniorFrom: 121, learning: 1.5 },
     yorkshire_terrier: { adult: 3000, senior: 2300, seniorFrom: 122, learning: 1.2 },
     cane_corso: { adult: 12000, senior: 9000, seniorFrom: 84, learning: 1.0 },
+    pembroke_welsh_corgi: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1.5 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -945,4 +948,28 @@ test('Cane Corso (M5-R10-23): about 2 hours (PDSA, no RKC page), FCI weight by s
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never cropped ears / a docked tail, never the kennel-data median or a percentage.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|cropped|9\.29|6\.98|merle/i);
+});
+
+test('Pembroke Welsh Corgi (M5-R10-24): up to 1 hour (RKC), FCI weight by sex, FCI group 1 Great Britain, RKC "over 12 years", Coren 11, herding / shedding / brushing chips', () => {
+  const d = registry.breeds.find((b) => b.id === 'pembroke_welsh_corgi');
+  assert.deepEqual(d.name, { en: 'Pembroke Welsh Corgi', sl: 'Welsh corgi pembroke' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S204']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 39, group: 1, section: 2, origin: 'GB' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [10, 12], female: [9, 11] }, ['S202']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [25, 30], female: [25, 30] }, ['S202']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['more_than', 12, ['S204']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 11);
+  assert.deepEqual(d.facts.find((f) => f.field === 'growth_end').value, [9, 12]);
+  assert.deepEqual(d.facets, { size: 'small', exercise: 'under_1h', grooming: 'several_weekly' });
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 108 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.suitability.suits, []);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['may_herd_children', 'sheds', 'frequent_grooming']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia_arthritis', 'back_disc_disease', 'epilepsy', 'bleeding_disorder_vwd', 'cataracts_lens_luxation']);
+  // RKC Best Practice: the BVA/KC hip scheme.
+  assert.equal(d.breeder_checklist.status, 'listed');
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['hip_scheme', 'best_practice']]);
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a docked tail or a non-standard colour, never a percentage.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|merle|\d %\)/i);
 });

@@ -210,6 +210,17 @@
 | `muzzle` trait asks for a moderate face without exaggerated loose skin. Colour weights are
 | unsourced → `verified => false`; solid black weighted highest (the register portrait).
 |
+| Pembroke Welsh Corgi (M5-R10-24, docs/research/dog-data pembroke_welsh_corgi.appearance):
+| low set, strong, sturdily built, alert and active; body of medium length with a level
+| topline; medium-length straight coat with a dense undercoat; pricked, medium, slightly
+| rounded ears; foxy head, slightly tapering muzzle; round brown eyes; black nose (FCI 39,
+| 2026, S202; RKC S205). Colours: self red, sable, fawn, black and tan, with or without
+| white markings on legs, brisket and neck. "Previously customarily docked short" → the game
+| shows the natural tail set in line with the topline (a standard option). Moderate body
+| length and enough ground clearance (PDSA S206 lists intervertebral disc disease) — the
+| `body` trait (as the Dachshund). Colour weights are unsourced → `verified => false`;
+| red with white markings weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1070,6 +1081,41 @@ return [
             'muzzle' => ['strong square moderate muzzle with a black nose, tight lips and eyelids, no exaggerated loose skin'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-24 (docs/research/dog-data/data.json pembroke_welsh_corgi.appearance; runbook rules
+    // 2026-10-10: standard colours only; natural undocked tail; moderate body length).
+    'pembroke_welsh_corgi' => [
+        'display_name' => 'Pembroke Welsh Corgi',
+        // Colour frequencies are in no source (pembroke_welsh_corgi.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 39 (S202, https://fci.be/Nomenclature/Standards/039g01-en.pdf), RKC breed standard (S205), RKC breed page (S204), PDSA (S206) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S204 "Size: Small"; S202 "Approximately 25 – 30 cm."',
+            'build' => 'S202 "Low set, strong, sturdily built, alert and active, giving impression of substance and stamina in small space."',
+            'coat_length' => 'S202 "Medium length, straight with dense undercoat, never soft, wavy or wiry."',
+            'coat_color' => 'S202 "Self colours in Red, Sable, Fawn, Black and Tan, with or without white markings on legs, brisket and neck." (weights unsourced)',
+            'ear_carriage' => 'S202 "Pricked, medium sized, slightly rounded."',
+            'eye_color' => 'S202 "Well set, round, medium size, brown, blending with colour of coat."',
+            'tail' => 'S205 "Previously customarily docked short." undocked: "set in line with the topline."',
+            'body' => 'S205 "Medium length, well-sprung ribs, not short coupled, slightly tapering, when viewed from above. Level topline."; precaution (not a welfare breed): PDSA S206 lists intervertebral disc disease → moderate length, enough ground clearance',
+        ],
+        'traits' => [
+            'size' => ['small, low-set'],
+            'build' => [['value' => 'strong, sturdily built, alert and active', 'weight' => 3], 'compact and sturdy'],
+            'coat_length' => ['medium-length straight coat with a dense undercoat'],
+            // Standard colours only (S202); red highest → the register portrait. Never merle or blue.
+            'coat_color' => [
+                ['value' => 'red with white markings on legs, chest and neck', 'weight' => 4],
+                ['value' => 'sable with white markings', 'weight' => 3],
+                ['value' => 'fawn with white markings', 'weight' => 2],
+                'black and tan with white markings',
+            ],
+            'ear_carriage' => ['pricked, medium-sized, slightly rounded ears'],
+            'eye_color' => ['round, brown'],
+            'tail' => ['natural undocked tail set in line with the back'],
+            'body' => ['body of moderate length with a level back and enough ground clearance, sturdy short legs'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'body'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

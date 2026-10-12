@@ -224,6 +224,13 @@ class FalAiService
                 .'tight lips and eyelids, natural undocked tail, robust athletic build slightly longer than tall, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-24: FCI 39 (S202) — red with white markings as the anchor (first standard
+            // colour); natural undocked tail (standard option, S205); moderate body length.
+            BreedType::PembrokeWelshCorgi => 'An alert, friendly Pembroke Welsh Corgi dog with a red coat and white markings on the legs, chest and neck, '
+                .'medium-length straight coat with a dense undercoat, pricked medium rounded ears, foxy head, round brown eyes, black nose, '
+                .'low-set sturdy body of moderate length with a level back, natural undocked tail, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -524,6 +531,18 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'short, shiny and very dense',
                 'markings' => 'none, or a small white patch on the chest',
+            ],
+            // M5-R10-24: FCI 39 (S202) self colours only, with or without white markings on legs,
+            // brisket and neck — never merle, blue or mostly white.
+            BreedType::PembrokeWelshCorgi => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'red',
+                    1 => 'sable',
+                    2 => 'fawn',
+                },
+                'eye_color' => 'brown',
+                'fur_texture' => 'medium-length, straight, with a dense undercoat',
+                'markings' => 'white markings on the legs, chest and neck',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
