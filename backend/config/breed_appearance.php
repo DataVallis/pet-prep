@@ -190,6 +190,15 @@
 | unsourced → `verified => false`; liver roan with a solid liver head weighted highest (the
 | register portrait).
 |
+| Yorkshire Terrier (M5-R10-22, docs/research/dog-data yorkshire_terrier.appearance):
+| long-coated toy terrier, coat hanging straight and evenly with a parting from nose to tail;
+| moderately long, perfectly straight, glossy, fine silky coat that must never impede
+| movement; small V-shaped erect ears of rich tan; medium dark eyes; black nose (FCI 86 S190,
+| RKC S193). Dark steel blue and tan is the only standard colour (never fawn, bronze or dark
+| hairs in the blue). FCI describes both a docked and an undocked tail ("Previously
+| customarily docked") → the game shows the natural tail. One colour; the trait list is an
+| unchecked draft → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -979,6 +988,37 @@ return [
             'ear_carriage' => ['broad, flat ears set high, hanging close to the head'],
             'eye_color' => ['dark brown, almond-shaped'],
             'tail' => ['natural, undocked tail carried level with the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-22 (docs/research/dog-data/data.json yorkshire_terrier.appearance; runbook
+    // rules 2026-10-10: standard colour only).
+    'yorkshire_terrier' => [
+        'display_name' => 'Yorkshire Terrier',
+        // One standard colour; the trait list itself is an unchecked draft → false.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 86 (S190, https://dev.fci.be/Nomenclature/Standards/086g03-en.pdf), RKC breed standard (S193), RKC breed page (S192), PDSA (S194) — for the traits listed in `sources`.',
+        'sources' => [
+            'size' => 'S192 "Size: Small"; S190 "Weight: Up to 3,2 kgs."',
+            'build' => 'S190 "Long-coated, coat hanging quite straight and evenly down each side, a parting extending from nose to end of tail."',
+            'coat_length' => 'S190 "On body moderately long, perfectly straight (not wavy), glossy;" "fine silky texture, not woolly, must never impede movement."',
+            'coat_color' => 'S190 "Dark steel blue (not silver blue), extending from occiput to root of tail, never mingled with fawn, bronze or dark hairs." "Hair on chest rich, bright tan."',
+            'ear_carriage' => 'S190 "Small, V-shaped, carried erect, not too far apart, covered with short hair, colour very deep, rich tan."',
+            'eye_color' => 'S190 "Medium, dark, sparkling, with sharp intelligent expression and placed to look directly forward."',
+            'tail' => 'S190 "Previously customarily docked." — undocked: "Plenty of hair, darker blue in colour than rest of body, especially at end of tail." "As straight as possible."',
+        ],
+        'traits' => [
+            'size' => ['tiny toy-sized'],
+            'build' => [['value' => 'compact and upright, coat parted from nose to tail', 'weight' => 3], 'small, neat and alert'],
+            'coat_length' => [
+                ['value' => 'long, perfectly straight, glossy silky coat of natural pet length, not touching the floor', 'weight' => 3],
+                'medium-long, straight, silky coat',
+            ],
+            // Dark steel blue and tan is the only standard colour (S190, S193).
+            'coat_color' => ['dark steel blue body with rich bright tan head, chest and legs'],
+            'ear_carriage' => ['small, erect, V-shaped tan ears'],
+            'eye_color' => ['dark, sparkling, looking straight ahead'],
+            'tail' => ['natural undocked tail with plenty of darker blue hair'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],

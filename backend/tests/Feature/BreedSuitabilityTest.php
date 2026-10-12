@@ -421,3 +421,27 @@ it('gives the German Shorthaired Pointer active_family, large_home, long_daily_e
         ->and(bsEntry('german_shorthaired_pointer.suitability.rkc_size_of_home')['quote'])->toBe('Large House')
         ->and(bsEntry('german_shorthaired_pointer.suitability.dogs_trust_shedding')['quote'])->toBe('Short length with moderate shedding');
 });
+
+it('gives the Yorkshire Terrier the new fragile_older_children tag, apartment, low_shedding and frequent_grooming — no welfare chip (runbook 2026-10-12)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray(['fragile_older_children' => BreedSuitability::CONSIDER]);
+
+    $yorkie = app(BreedSuitability::class)->for(BreedType::YorkshireTerrier);
+    expect($yorkie['suits'])->toBe(['apartment', 'low_shedding'])
+        // PDSA: better suited to families with older children (fragile bones) → no children / small_children; no family statement.
+        ->and($yorkie['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('family_pet')->not->toContain('large_home')
+        ->and($yorkie['consider'])->toBe(['fragile_older_children', 'frequent_grooming'])
+        // RKC Breed Watch Category 1; RKC "Sheds: No"; VetCompass median 13.56 y.
+        ->and($yorkie['consider'])->not->toContain('sheds')->not->toContain('shorter_lifespan')
+        ->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')->not->toContain('sensitive_skin');
+
+    // Only the Yorkshire Terrier carries the new chip so far.
+    foreach (BreedType::cases() as $breed) {
+        if ($breed !== BreedType::YorkshireTerrier) {
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('fragile_older_children');
+        }
+    }
+
+    expect(bsEntry('yorkshire_terrier.suitability.pdsa_children')['quote'])->toBe('They are better suited to families with older children as they have very fragile bones')
+        ->and(bsEntry('yorkshire_terrier.suitability.rkc_shedding')['quote'])->toBe('Sheds: No')
+        ->and(bsEntry('yorkshire_terrier.suitability.rkc_grooming')['quote'])->toBe('Grooming: Every day');
+});
