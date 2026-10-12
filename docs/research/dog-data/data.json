@@ -12009,6 +12009,15 @@
         "confidence": "low",
         "notes": "Game values (no breed-specific number in the sources) — identical to the Border Collie breed_configs row (BreedConfigsSeeder).",
         "decision": "potrdil David 2026-10-09: same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S50",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC (S50) 'Once a week'; PDSA (S53) 'a weekly brush usually enough' (labrador_retriever.suitability.rkc_grooming.notes). Matted coat when the week's brushing is missed (ceil(1 / 2) = 1).",
+        "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       }
     },
     "golden_retriever": {
@@ -12283,6 +12292,15 @@
           "mouthy": "Not used (David 2026-10-09): PDSA frames puppy mouthiness as normal for Retrievers (S68, S69 'like to have things in their mouth'); as a chip it could read as alarming to parents."
         },
         "decision": "potrdil David 2026-10-09: suits active_family, family_pet, children, first_time_owner, large_home, other_pets; consider long_daily_exercise, sheds, food_motivated_weight, frequent_grooming (new tag). Not mouthy. No cancer statistics anywhere in the app."
+      },
+      "grooming": {
+        "value": 3,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S68",
+        "quote": "Ideally, they should be brushed or combed three times a week at a minimum.",
+        "confidence": "medium",
+        "notes": "PDSA (S68) 'three times a week at a minimum' (quoted in golden_retriever.suitability.rkc_grooming.notes) — the most specific number; RKC (S65) 'More than once a week', Woodgreen (S69) 'High'. Daily during coat changes is not modelled. Replaces the unsourced idea grooming_mechanic. Matted coat at ceil(3 / 2) = 2 missed.",
+        "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): 3× na teden (PDSA »najmanj trikrat na teden«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       }
     },
     "french_bulldog": {
@@ -12520,6 +12538,15 @@
         "confidence": "high",
         "notes": "RKC standard (S79) 'No point exaggerated, balance essential.' and 'The only correct colours are: Brindle; Fawn; Pied;'; merle carries a hearing / sight risk (S78). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10: moderate face with open nostrils, bat ears, short smooth coat, fawn / brindle / pied only (portrait fawn), never merle"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S78",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC (S78) 'Once a week'; PDSA (S81) weekly brush; Woodgreen (S82) 'Low'. Skin-fold cleaning is a separate need (ROADMAP M5-R14). Matted coat when the week's brushing is missed (ceil(1 / 2) = 1).",
+        "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       }
     },
     "german_shepherd": {
@@ -12767,6 +12794,15 @@
         "confidence": "high",
         "notes": "FCI colours (S95), RKC colours (S97); RKC 'balanced and free from exaggeration' (S98). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black-and-tan portrait default, sable / black options, level back and moderate hind legs, never white"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S97",
+        "quote": "Grooming: More than once a week",
+        "confidence": "low",
+        "notes": "RKC (S97) 'More than once a week' without a number; PDSA (S100) 'a few times a week' is a paraphrase without a number (german_shepherd.suitability.rkc_grooming.notes). No source gives a number → Claude's proposal 2 (verified=false). Matted coat at ceil(2 / 2) = 1 missed.",
+        "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
       }
     },
     "cavalier_king_charles_spaniel": {
@@ -12994,6 +13030,15 @@
         "confidence": "high",
         "notes": "FCI muzzle 'about 1 1/2 ins. (3,8 cm). Well tapered.' (S103); RKC eyes 'round but not prominent' (S106) and 'avoid obvious conditions or exaggerations'; Breed Watch 'Protruding eyes' (S107). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): Blenheim portrait default, tricolour / ruby / black-and-tan options, visible muzzle and non-protruding eyes, never chocolate"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S108",
+        "quote": "Cavalier King Charles Spaniels have fairly high maintenance coats and you may find they need to be brushed daily",
+        "confidence": "medium",
+        "notes": "PDSA (S108) 'may find they need to be brushed daily' — the most specific number (RKC S105 'More than once a week' has none) → every day = 7. The PDSA wording is hedged ('may find'); alternative for David: 2 (RKC without a number). Matted coat at ceil(7 / 2) = 4 missed.",
+        "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): vsak dan (7× na teden, PDSA »morda vsak dan«; alternativa 2 za Davida); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       }
     },
     "beagle": {
@@ -13194,6 +13239,15 @@
         "confidence": "high",
         "notes": "Colours from the RKC / FCI standard (S114, S111); 'Tip of stern white.' Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): tricolour portrait default, tan-and-white / lemon-and-white / red-and-white options, white tail tip, standard colours only"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S113",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC (S113) 'Once a week'; PDSA (S115) 'A weekly brush should be plenty'. Matted coat when the week's brushing is missed (ceil(1 / 2) = 1).",
+        "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       }
     },
     "standard_poodle": {
@@ -13409,6 +13463,15 @@
         "confidence": "high",
         "notes": "Colours from FCI (S118) / RKC 'All solid colours' (S121); never parti-colour, white marks or merle (FCI disqualification). Colour weights are ours (unsourced). The short all-over trim keeps the portrait natural (RKC: 'All traditional trims permissible', S121).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): solid black portrait default, white / brown / grey / fawn options, short natural trim, undocked tail, standard solid colours only"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S120",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC (S120) 'Every day'; PDSA (S122) 'They need daily grooming'. Professional clipping is not modelled. Matted coat at ceil(7 / 2) = 4 missed.",
+        "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): vsak dan (7× na teden); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       }
     },
     "dachshund": {
@@ -13615,6 +13678,15 @@
         "confidence": "high",
         "notes": "Colours from the RKC standard (S126); dapple excluded (RKC dapple-gene registration restriction, S125). Colour weights are ours (unsourced). Moderate body length and ground clearance per the welfare rule (S126 'no exaggeration').",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red portrait default, black-and-tan / chocolate-and-tan options, smooth coat, moderate non-exaggerated length with ground clearance (dog trait `body`), never dapple"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S125",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC (S125, smooth-haired) 'Once a week'; PDSA (S127) 'a weekly brush should be more than enough' for short fur. Matted coat when the week's brushing is missed (ceil(1 / 2) = 1).",
+        "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       }
     },
     "australian_shepherd": {
@@ -13869,6 +13941,15 @@
         "confidence": "high",
         "notes": "Colours from the FCI standard (S131) 'with no order of preference'; merle is standard for this breed (runbook §3). Colour weights are ours (unsourced). Natural long tail chosen (no docking).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue merle (white and tan markings) portrait default, black / red merle / red options, standard colours and white limits only, natural long tail"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S133",
+        "quote": "Grooming: More than once a week",
+        "confidence": "low",
+        "notes": "RKC (S133) 'More than once a week'; PDSA (S134) 'give them a brush a few times a week' — neither gives a number → Claude's proposal 2 (verified=false). Matted coat at ceil(2 / 2) = 1 missed.",
+        "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
       }
     },
     "havanese": {
@@ -14080,6 +14161,15 @@
         "confidence": "high",
         "notes": "Colours from the FCI standard (S136); RKC: 'except merle which is unacceptable' (S139). Colour weights are ours (unsourced). Natural untrimmed coat (FCI forbids trimming).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn portrait default; black / havana brown / tobacco / reddish brown / white options; FCI colours only, never merle; natural long coat"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S138",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC (S138) 'Every day'; PDSA (S140) 'requires daily grooming to prevent knots and tangles'. Matted coat at ceil(7 / 2) = 4 missed.",
+        "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): vsak dan (7× na teden); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       }
     },
     "west_highland_white_terrier": {
@@ -14314,6 +14404,15 @@
         "confidence": "high",
         "notes": "Colour from the FCI / RKC standards (S142, S145: white only). Weight unsourced. Natural coat, healthy skin (no redness or bald patches — S146).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): white (the only standard colour) is the portrait default; natural harsh coat, healthy skin"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S144",
+        "quote": "Grooming: More than once a week",
+        "confidence": "low",
+        "notes": "RKC (S144) 'More than once a week'; PDSA (S147) 'brushing a few times a week' — neither gives a number → Claude's proposal 2 (verified=false). The professional trim is not modelled. Matted coat at ceil(2 / 2) = 1 missed.",
+        "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
       }
     },
     "bernese_mountain_dog": {
@@ -14560,6 +14659,15 @@
         "confidence": "high",
         "notes": "Colour from the FCI / RKC standards (S150, S153: tricolour only). Weight unsourced. Natural, moderate build (not exaggerated).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): tricolour (the only standard colour) is the portrait default; long natural coat, moderate build"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S152",
+        "quote": "Grooming: More than once a week",
+        "confidence": "low",
+        "notes": "RKC (S152) 'More than once a week'; PDSA (S154) 'Their coats are fairly high maintenance.' (brushing 'several times a week' in the notes, no number); Woodgreen (S155) 'High' → Claude's proposal 2 (verified=false). Matted coat at ceil(2 / 2) = 1 missed.",
+        "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
       }
     },
     "siberian_husky": {
@@ -14798,6 +14906,15 @@
         "confidence": "high",
         "notes": "Colours from the FCI standard (S158) with no order of preference; merle / brindle disqualifying (S158, S161). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey and white portrait default, black and white / red and white / agouti / sable / white options, standard colours only, never merle or brindle"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S160",
+        "quote": "Grooming: More than once a week",
+        "confidence": "low",
+        "notes": "RKC (S160) 'More than once a week'; PDSA (S162) 'brush your Husky a few times a week' — neither gives a number → Claude's proposal 2 (verified=false). Matted coat at ceil(2 / 2) = 1 missed.",
+        "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
       }
     },
     "rottweiler": {
@@ -14918,8 +15035,8 @@
         "source_id": "S168",
         "quote": "Grooming: Once a week",
         "confidence": "high",
-        "notes": "RKC (S168) 'Once a week'; PDSA (S169) 'A weekly brush should be enough'. The game has no dog grooming mechanic yet (cats only, M5-R06-05) — too large for a breed run (routine, ledger, child UI and report for every dog) → built later as ROADMAP M5-R13 with a FEATURES 🗓 row; this value is its input.",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+        "notes": "RKC (S168) 'Once a week'; PDSA (S169) 'A weekly brush should be enough'. Built in M5-R13 (dog grooming, David 2026-10-12); matted coat at ceil(1 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       },
       "suitability_tags": {
         "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-19); refs = JSON paths in this file. New vocabulary key experienced_owner (consider). No percentages in the app.",
@@ -15182,8 +15299,8 @@
         "source_id": "S177",
         "quote": "Grooming: Once a week",
         "confidence": "high",
-        "notes": "RKC (S177) 'Once a week'; PDSA (S180) 'They need grooming just once a week'. The game has no dog grooming mechanic yet (cats only) → built later as ROADMAP M5-R13; this value is its input.",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+        "notes": "RKC (S177) 'Once a week'; PDSA (S180) 'They need grooming just once a week'. Built in M5-R13 (dog grooming, David 2026-10-12); matted coat at ceil(1 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       },
       "face_fold_cleaning": {
         "value": "daily",
@@ -15442,16 +15559,16 @@
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
       },
       "grooming": {
-        "value": 1,
+        "value": 2,
         "unit": "brushing sessions per week (sourced need)",
-        "source_id": "S187",
-        "quote": "Once a week",
-        "confidence": "high",
-        "notes": "RKC (S187) 'Once a week'; PDSA (S188) 'once or twice a week' (alternative 2, RKC preferred as for exercise). The game has no dog grooming mechanic yet (cats only) → built later as ROADMAP M5-R13; this value is its input.",
+        "source_id": "S188",
+        "quote": "Shorthaired pointers will need grooming once or twice a week, with Wirehaired also needing 'stripping' occasionally.",
+        "confidence": "medium",
+        "notes": "PDSA (S188) 'once or twice a week' → upper bound 2 (range rule A–B → B, applied consistently as for the Pembroke Welsh Corgi and the Ragdoll, David 2026-10-11/12); RKC (S187) 'Once a week' is the alternative 1 (was the value until M5-R13 — RKC preferred as for exercise). Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
         "alternatives": {
-          "pdsa_upper_bound": 2
+          "rkc_once_a_week": 1
         },
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+        "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): razpon PDSA 1–2 → 2 (prej 1 po RKC); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       },
       "recall_training": {
         "value": "recall",
@@ -15684,8 +15801,8 @@
         "source_id": "S192",
         "quote": "Grooming: Every day",
         "confidence": "high",
-        "notes": "RKC (S192) 'Every day'; PDSA (S194) 'daily grooming'. The game has no dog grooming mechanic yet (cats only) → built later as ROADMAP M5-R13; this value is its input.",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden); mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+        "notes": "RKC (S192) 'Every day'; PDSA (S194) 'daily grooming'. Built in M5-R13 (dog grooming, David 2026-10-12); matted coat at ceil(7 / 2) = 4 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       },
       "tooth_brushing": {
         "value": 7,
@@ -15921,8 +16038,8 @@
         "source_id": "S199",
         "quote": "A weekly brush should be enough to keep on top of dead hairs.",
         "confidence": "high",
-        "notes": "PDSA (S199). The game has no dog grooming mechanic yet (cats only, M5-R06-05) — too large for a breed run → ROADMAP M5-R13 with a FEATURES 🗓 row; this value is its input.",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+        "notes": "PDSA (S199). Built in M5-R13 (dog grooming, David 2026-10-12); matted coat at ceil(1 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       },
       "meal_exercise_gap": {
         "value": null,
@@ -16206,8 +16323,8 @@
         "source_id": "S206",
         "quote": "Coat care is fairly minimal, with grooming two-three times per week usually enough to remove any dead hair.",
         "confidence": "high",
-        "notes": "PDSA (S206) 'two-three times per week'; RKC (S204) 'Grooming: More than once a week'. Upper bound 3 (as the cat rule 'A–B per week' → B). The game has no dog grooming mechanic yet (cats only) → built later as ROADMAP M5-R13; this value is its input.",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2–3× na teden → 3; mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+        "notes": "PDSA (S206) 'two-three times per week'; RKC (S204) 'Grooming: More than once a week'. Upper bound 3 (as the cat rule 'A–B per week' → B). Built in M5-R13 (dog grooming, David 2026-10-12); matted coat at ceil(3 / 2) = 2 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2–3× na teden → 3; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       },
       "socialisation": {
         "value": "socialisation with children and training from a young age",
@@ -16416,8 +16533,8 @@
         "source_id": "S209",
         "quote": "Grooming: Once a week",
         "confidence": "high",
-        "notes": "RKC (S209); PDSA (S211): 'their very short fur only needs brushing around once a week to keep in good condition.' The game has no dog grooming mechanic yet (cats only, M5-R06-05) — too large for a breed run → ROADMAP M5-R13 (already lists other dogs); this value is its input. PDSA: more brushing while moulting in spring and autumn (paraphrase; moult not modelled).",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+        "notes": "RKC (S209); PDSA (S211): 'their very short fur only needs brushing around once a week to keep in good condition.' Built in M5-R13 (dog grooming, David 2026-10-12); matted coat at ceil(1 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       },
       "meal_exercise_gap": {
         "value": null,
