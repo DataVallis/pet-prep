@@ -26,6 +26,8 @@
 #        backend + scripts  docs/research/dog-data/** (LifeStageDataTest reads data.json /
 #                           sources.md; the seeder embeds the values, nothing ships → no
 #                           image, no deploy; the breed registry export test reads them too)
+#        backend only       docs/research/breed-facts/** (BreedFactImportTest: the shipped copy
+#                           backend/database/data/breed-facts must match; no image, no deploy — M5-R09b)
 #        mobile             mobile/**, scripts/generate-api-types.mjs, the workflow
 #        scripts            scripts/**, deployment/**, the workflow,
 #                           backend/config/breed_suitability.php, mobile/src/i18n/locales/*/{pet,family}.json,
@@ -137,6 +139,7 @@ classify() {
       backend/*) need_backend=true need_deploy=true ;;
       docs/research/dog-data/*) need_backend=true need_scripts=true ;; # test fixtures + export input, nothing ships
       docs/research/cat-data/*) need_backend=true need_scripts=true ;; # cat test fixtures + export input, nothing ships
+      docs/research/breed-facts/*) need_backend=true ;; # canonical breed facts: BreedFactImportTest checks the shipped copy backend/database/data/breed-facts (M5-R09b)
       docs/research/breed-registry.json) need_backend=true need_scripts=true ;; # export output: its test + BreedPortraitTest (register breeds), nothing ships
       docs/research/breeder-checklist/*) need_scripts=true ;; # breeder checklist (export input, M5-R11-06), nothing ships
       docs/research/breed-portraits/*) need_scripts=true ;; # AI breed portraits + manifest (export input, M5-R11-04), nothing ships

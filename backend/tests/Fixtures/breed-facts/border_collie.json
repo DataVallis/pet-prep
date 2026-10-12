@@ -1,0 +1,50 @@
+{
+  "breed": "border_collie",
+  "facts": [
+    {
+      "key": "border_collie-001",
+      "category": "exercise",
+      "audience": "child",
+      "title": {"en": "Border Collies need more than two hours of exercise a day.", "sl": "Border collie potrebuje več kot dve uri gibanja na dan."},
+      "why": {"en": "That is why your daily step goal is high.", "sl": "Zato je tvoj dnevni cilj korakov visok."},
+      "source_id": "S5",
+      "source_name": "The Royal Kennel Club",
+      "source_url": "https://www.thekennelclub.org.uk/search/breeds-a-to-z/breeds/pastoral/border-collie/",
+      "quote": "Exercise: More than 2 hours per day",
+      "game_rule_key": "daily_steps",
+      "sort": 1,
+      "status": "verified",
+      "verified_by": "claude-verifier"
+    },
+    {
+      "key": "border_collie-002",
+      "category": "origin",
+      "audience": "child",
+      "title": {"en": "Test fact: the breed comes from the border country.", "sl": "Testna zanimivost: pasma izvira iz obmejnih krajev."},
+      "why": null,
+      "source_id": "S1",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/",
+      "quote": "Test fixture quote.",
+      "game_rule_key": null,
+      "sort": 2,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-003",
+      "category": "health",
+      "audience": "parent",
+      "title": {"en": "Test fact: a health topic for parents.", "sl": "Testna zanimivost: zdravstvena tema za starše."},
+      "why": null,
+      "source_id": "S7",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/",
+      "quote": "Test fixture quote (health).",
+      "game_rule_key": null,
+      "sort": 3,
+      "status": "verified",
+      "verified_by": "claude-verifier"
+    }
+  ]
+}
