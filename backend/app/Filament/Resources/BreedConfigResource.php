@@ -184,13 +184,24 @@ class BreedConfigResource extends Resource
                     ->required()
                     ->integer()
                     ->minValue(0)
-                    ->helperText('Maximum water refills per family-local day (M1-07).'),
+                    ->helperText('Expected water refills per family-local day for the Care Score — a minimum, not a cap (M1-07, M5-F11).'),
 
                 Forms\Components\TextInput::make('water_min_gap_minutes')
                     ->required()
                     ->integer()
                     ->minValue(0)
                     ->helperText('Minimum minutes between two water refills (M1-07).'),
+
+                // M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap.
+                Forms\Components\TextInput::make('water_refill_below')
+                    ->label(fn (): string => __('admin.breed_configs.water_refill_below'))
+                    ->required()
+                    ->integer()
+                    ->minValue(1)
+                    ->maxValue(100)
+                    ->default(60)
+                    ->suffix('%')
+                    ->helperText(fn (): string => __('admin.breed_configs.water_refill_below_help')),
 
                 Forms\Components\Toggle::make('premium_unlock')
                     // QA PR #91 M1: same rule as BreedConfig::saving (exactly one free breed per species).
@@ -289,11 +300,16 @@ class BreedConfigResource extends Resource
                         ->join(', ')),
 
                 Tables\Columns\TextColumn::make('water_times_per_day')
-                    ->label('Water / day')
+                    ->label('Water / day (score)')
                     ->numeric(),
 
                 Tables\Columns\TextColumn::make('water_min_gap_minutes')
                     ->label('Water gap (min)')
+                    ->numeric(),
+
+                Tables\Columns\TextColumn::make('water_refill_below')
+                    ->label(fn (): string => __('admin.breed_configs.water_refill_below_column'))
+                    ->suffix(' %')
                     ->numeric(),
 
                 Tables\Columns\IconColumn::make('premium_unlock')

@@ -55,7 +55,8 @@ class ChildPetController extends Controller
     }
 
     /**
-     * Fresh water (limit per family-local day, minimum gap) → thirst 100 %.
+     * Fresh water (thirst at or below the breed's refill threshold, minimum gap; no
+     * daily cap — M5-F11) → thirst 100 %. 422 `water_too_soon` + `next_allowed_at`.
      *
      * POST /api/child/pet/water
      */

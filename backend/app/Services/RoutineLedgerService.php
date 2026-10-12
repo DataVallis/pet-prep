@@ -37,10 +37,16 @@ use Throwable;
  *    pet's life stage that day, M5-R01); done = a `fed_pet` row inside
  *    [start, end); missed when the window ended unfed. A window that lies
  *    entirely in quiet hours is done by the parent: not expected.
- *  - water: `water_times_per_day` refills per day, pro rata to the part of
+ *  - water: `water_times_per_day` refills per day — the EXPECTED MINIMUM, not a
+ *    cap (M5-F11, David 2026-10-12: the child may water whenever thirst shows
+ *    ≤ water_refill_below and the gap passed) — pro rata to the part of
  *    the day's non-quiet time the pet was in play (birth day, hard stop,
  *    vet, game over), rounded half up; done = `watered_pet` rows that day
  *    (in order, up to the expected number); the rest is missed at day end.
+ *    Extra refills beyond the expected number are ignored, never a penalty.
+ *    Capped at what the day allows (`achievableRefills`: thirst lost over the
+ *    day ÷ drop from full to the threshold) — a slow breed with long quiet
+ *    hours (school) is never expected to water more often than it can.
  *  - clean: one routine per hygiene event that happened (`applied`) — a
  *    poop, a puppy accident or a chewing event (M5-R02, `eventKind`); done =
  *    resolved within 2 hours counted outside quiet hours (cleaned, or for
@@ -438,6 +444,10 @@ class RoutineLedgerService
         $expectedWater = $denominator > 0
             ? (int) min($timesPerDay, max(0, round($timesPerDay * $playable / $denominator, 0, PHP_ROUND_HALF_UP)))
             : 0;
+        // M5-F11: never expect more refills than the day allows — water is possible
+        // only once the bowl emptied to the threshold, so a slow breed in a family
+        // with long quiet hours (e.g. school) may not reach `water_times_per_day`.
+        $expectedWater = min($expectedWater, $this->achievableRefills($config, $quiet, $dayStartUtc, $dayEndUtc));
         $waterRows = array_values(array_filter(
             $in['activities'],
             fn ($r) => $r['type'] === ActivityType::WateredPet->value && $r['at']->greaterThanOrEqualTo($dayStartUtc) && $r['at']->lessThan($dayEndUtc),
@@ -1180,5 +1190,23 @@ class RoutineLedgerService
             'created_at' => $now->format('Y-m-d H:i:s'),
             'updated_at' => $now->format('Y-m-d H:i:s'),
         ];
+    }
+
+    /**
+     * How many refills a whole day can need (M5-F11, "Dolij, ko se prazni"):
+     * thirst lost over the day (breed rate, quiet hours at ×0.1) divided by the
+     * drop from a full bowl to the refill threshold (shown ≤ threshold = below
+     * threshold + 0.5). A child who waters every time the app allows is never
+     * marked as missing water.
+     */
+    private function achievableRefills(BreedConfig $config, ?QuietHours $quiet, CarbonInterface $dayStart, CarbonInterface $dayEnd): int
+    {
+        $rate = max(0.0, (float) $config->thirst_decay_rate);
+        $perRefill = 100.0 - (CareScheduleService::refillBelow($config) + 0.5);
+        if ($rate <= 0.0 || $perRefill <= 0.0) {
+            return $rate <= 0.0 ? 0 : PHP_INT_MAX;
+        }
+
+        return (int) floor($rate * DecayMath::weightedHours($quiet, $dayStart, $dayEnd) / $perRefill);
     }
 }

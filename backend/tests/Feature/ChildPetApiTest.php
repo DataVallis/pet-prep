@@ -60,6 +60,12 @@ function cpAt(string $utc): void
     Carbon::setTestNow(Carbon::parse($utc, 'UTC'));
 }
 
+/** M5-F11: make the dog thirsty enough for water (40 %, no decay owed). */
+function cpThirsty(Pet $pet): void
+{
+    Pet::whereKey($pet->id)->update(['thirst_level' => 40, 'last_decay_at' => now()]);
+}
+
 function cpRows(Pet $pet, ActivityType $type)
 {
     return ActivityLog::where('pet_id', $pet->id)->where('activity_type', $type->value)->orderBy('id')->get();
@@ -420,6 +426,10 @@ describe('POST /api/child/pet/feed', function () {
 // ──────────────────────────────────────────────────────────────
 
 describe('POST /api/child/pet/water', function () {
+    // M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap; water when the
+    // live thirst shows ≤ water_refill_below (60) and the gap passed. Tests that
+    // water repeatedly first make the dog thirsty (cpThirsty). The threshold and
+    // forecast rules are in WaterRefillTest.
     it('refills: thirst 100, one activity row, one broadcast', function () {
         Event::fake([PetUpdated::class]);
         [, $pet] = cpChild(pet: ['thirst_level' => 30]);
@@ -429,8 +439,10 @@ describe('POST /api/child/pet/water', function () {
             ->assertJsonPath('state.pet.thirst_level', 100)
             ->assertJsonPath('state.water.used_today', 1)
             ->assertJsonPath('state.water.remaining_today', 2)
+            ->assertJsonPath('state.water.refill_below', 60)
             ->assertJsonPath('state.water.can_water', false)
-            ->assertJsonPath('state.water.next_allowed_at', '2026-10-04T11:00:00+02:00');
+            // 08:00 local: gap until 11:00, but 100 % only shows ≤ 60 (< 60.5) after 237 min (−10 %/h) → 11:58.
+            ->assertJsonPath('state.water.next_allowed_at', '2026-10-04T11:58:00+02:00');
 
         $rows = cpRows($pet, ActivityType::WateredPet);
         expect(Pet::findOrFail($pet->id)->thirst_level)->toBe(100.0)
@@ -441,58 +453,73 @@ describe('POST /api/child/pet/water', function () {
     });
 
     it('enforces the minimum gap with the next allowed time', function () {
-        [, $pet] = cpChild('2026-10-04 05:00:00'); // 07:00 local
+        [, $pet] = cpChild('2026-10-04 05:00:00', ['thirst_level' => 50]); // 07:00 local
         $this->postJson('/api/child/pet/water')->assertOk();
 
         cpAt('2026-10-04 07:59:00'); // 09:59 local
+        cpThirsty($pet);
         $this->postJson('/api/child/pet/water')->assertStatus(422)
             ->assertJsonPath('reason', 'water_too_soon')
             ->assertJsonPath('next_allowed_at', '2026-10-04T10:00:00+02:00');
 
         cpAt('2026-10-04 08:00:00'); // exactly 180 min later
+        cpThirsty($pet);
         $this->postJson('/api/child/pet/water')->assertOk();
 
         expect(cpRows($pet, ActivityType::WateredPet))->toHaveCount(2);
     });
 
-    it('allows water_times_per_day refills per local day, then points to local midnight', function () {
-        [, $pet] = cpChild('2026-10-04 05:00:00'); // 07:00
+    it('has no daily cap: a fourth refill on the same local day is accepted (M5-F11)', function () {
+        [, $pet] = cpChild('2026-10-04 05:00:00', ['thirst_level' => 50]); // 07:00
         $this->postJson('/api/child/pet/water')->assertOk();
         cpAt('2026-10-04 08:00:00'); // 10:00
+        cpThirsty($pet);
         $this->postJson('/api/child/pet/water')->assertOk();
         cpAt('2026-10-04 11:00:00'); // 13:00
+        cpThirsty($pet);
         $this->postJson('/api/child/pet/water')->assertOk()
             ->assertJsonPath('state.water.remaining_today', 0)
-            ->assertJsonPath('state.water.next_allowed_at', '2026-10-05T00:00:00+02:00');
+            // Not "tomorrow" any more: the later of the gap end (16:00) and the threshold minute (100 % → 16:58).
+            ->assertJsonPath('state.water.next_allowed_at', '2026-10-04T16:58:00+02:00');
 
-        cpAt('2026-10-04 19:00:00'); // 21:00
-        $this->postJson('/api/child/pet/water')->assertStatus(422)
-            ->assertJsonPath('reason', 'water_daily_limit')
-            ->assertJsonPath('next_allowed_at', '2026-10-05T00:00:00+02:00');
+        cpAt('2026-10-04 15:00:00'); // 17:00
+        cpThirsty($pet);
+        $this->postJson('/api/child/pet/water')->assertOk()
+            ->assertJsonPath('state.water.used_today', 4)
+            ->assertJsonPath('state.water.remaining_today', 0);
 
         cpAt('2026-10-04 22:00:00'); // 00:00 local, new day
+        cpThirsty($pet);
         $this->postJson('/api/child/pet/water')->assertOk()
             ->assertJsonPath('state.water.used_today', 1);
 
-        expect(cpRows($pet, ActivityType::WateredPet))->toHaveCount(4);
+        expect(cpRows($pet, ActivityType::WateredPet))->toHaveCount(5);
     });
 
-    it('reads the limits from breed_configs', function () {
+    it('reads the gap and the expected count from breed_configs', function () {
         BreedConfig::where('breed_slug', 'mutt')->update(['water_times_per_day' => 1, 'water_min_gap_minutes' => 30]);
-        cpChild('2026-10-04 05:00:00');
+        [, $pet] = cpChild('2026-10-04 05:00:00', ['thirst_level' => 50]);
 
         $this->postJson('/api/child/pet/water')->assertOk()
-            ->assertJsonPath('state.water.times_per_day', 1);
+            ->assertJsonPath('state.water.times_per_day', 1)
+            ->assertJsonPath('state.water.min_gap_minutes', 30);
+
+        cpAt('2026-10-04 05:29:00');
+        cpThirsty($pet);
+        $this->postJson('/api/child/pet/water')->assertStatus(422)->assertJsonPath('reason', 'water_too_soon')
+            ->assertJsonPath('next_allowed_at', '2026-10-04T07:30:00+02:00');
 
         cpAt('2026-10-04 06:00:00');
-        $this->postJson('/api/child/pet/water')->assertStatus(422)->assertJsonPath('reason', 'water_daily_limit');
+        cpThirsty($pet);
+        $this->postJson('/api/child/pet/water')->assertOk(); // the second refill of a "1× / day" breed
     });
 
     it('keeps the gap across midnight', function () {
-        cpChild('2026-10-04 21:30:00'); // 23:30 local
+        [, $pet] = cpChild('2026-10-04 21:30:00', ['thirst_level' => 50]); // 23:30 local
         $this->postJson('/api/child/pet/water')->assertOk();
 
         cpAt('2026-10-04 22:30:00'); // 00:30 local, new day
+        cpThirsty($pet);
         $this->postJson('/api/child/pet/water')->assertStatus(422)
             ->assertJsonPath('reason', 'water_too_soon')
             ->assertJsonPath('next_allowed_at', '2026-10-05T02:30:00+02:00')
@@ -501,47 +528,52 @@ describe('POST /api/child/pet/water', function () {
 
     it('counts real minutes and a 25-hour local day on the fall-back day (2026-10-25)', function () {
         // Local day 2026-10-25 = 2026-10-24 22:00 UTC … 2026-10-25 23:00 UTC.
-        [, $pet] = cpChild('2026-10-24 22:30:00'); // 00:30 CEST
+        [, $pet] = cpChild('2026-10-24 22:30:00', ['thirst_level' => 50]); // 00:30 CEST
         $this->postJson('/api/child/pet/water')->assertOk();
 
         // 01:29 UTC = 02:29 CET: wall clock +2 h, but only 179 real minutes.
         cpAt('2026-10-25 01:29:00');
+        cpThirsty($pet);
         $this->postJson('/api/child/pet/water')->assertStatus(422)
             ->assertJsonPath('reason', 'water_too_soon')
             ->assertJsonPath('next_allowed_at', '2026-10-25T02:30:00+01:00');
 
         cpAt('2026-10-25 01:30:00'); // 180 real minutes
+        cpThirsty($pet);
         $this->postJson('/api/child/pet/water')->assertOk();
 
         cpAt('2026-10-25 04:30:00'); // 05:30 CET
+        cpThirsty($pet);
         $this->postJson('/api/child/pet/water')->assertOk();
 
-        cpAt('2026-10-25 22:30:00'); // 23:30 CET, still the 25th
+        cpAt('2026-10-25 22:30:00'); // 23:30 CET, still the 25th: no daily cap any more
+        cpThirsty($pet);
+        $this->postJson('/api/child/pet/water')->assertOk()
+            ->assertJsonPath('state.water.used_today', 4);
+
+        cpAt('2026-10-25 23:00:00'); // 00:00 CET on the 26th — 30 min after the last refill
+        cpThirsty($pet);
         $this->postJson('/api/child/pet/water')->assertStatus(422)
-            ->assertJsonPath('reason', 'water_daily_limit')
-            ->assertJsonPath('next_allowed_at', '2026-10-26T00:00:00+01:00');
-
-        cpAt('2026-10-25 23:00:00'); // 00:00 CET on the 26th
-        $this->postJson('/api/child/pet/water')->assertOk();
+            ->assertJsonPath('reason', 'water_too_soon')
+            ->assertJsonPath('state.water.used_today', 0);
 
         expect(cpRows($pet, ActivityType::WateredPet))->toHaveCount(4);
     });
 
     it('uses a 23-hour local day on the spring-forward day (2027-03-28)', function () {
         // Local day 2027-03-28 = 2027-03-27 23:00 UTC … 2027-03-28 22:00 UTC.
-        cpChild('2027-03-28 05:00:00'); // 07:00 CEST
+        [, $pet] = cpChild('2027-03-28 05:00:00', ['thirst_level' => 50]); // 07:00 CEST
         $this->postJson('/api/child/pet/water')->assertOk();
         cpAt('2027-03-28 08:00:00');
+        cpThirsty($pet);
         $this->postJson('/api/child/pet/water')->assertOk();
-        cpAt('2027-03-28 11:00:00');
-        $this->postJson('/api/child/pet/water')->assertOk()
-            ->assertJsonPath('state.water.next_allowed_at', '2027-03-29T00:00:00+02:00');
 
         cpAt('2027-03-28 21:59:00'); // 23:59 CEST
-        $this->postJson('/api/child/pet/water')->assertStatus(422)->assertJsonPath('reason', 'water_daily_limit');
+        cpThirsty($pet);
+        $this->postJson('/api/child/pet/water')->assertOk()->assertJsonPath('state.water.used_today', 3);
 
         cpAt('2027-03-28 22:00:00'); // 00:00 CEST on the 29th
-        $this->postJson('/api/child/pet/water')->assertOk();
+        $this->getJson('/api/child/pet')->assertOk()->assertJsonPath('water.used_today', 0);
     });
 
     it('refuses while the mess is not cleaned', function () {
@@ -817,7 +849,7 @@ describe('423 Locked', function () {
 describe('broadcast after commit', function () {
     it('broadcasts only once the surrounding transaction commits', function () {
         Event::fake([PetUpdated::class]);
-        [, $pet] = cpChild(pet: ['hunger_level' => 40]);
+        [, $pet] = cpChild(pet: ['hunger_level' => 40, 'thirst_level' => 40]);
 
         DB::transaction(function () use ($pet) {
             app(PetActivityService::class)->feed(Pet::findOrFail($pet->id));

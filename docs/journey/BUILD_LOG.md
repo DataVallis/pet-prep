@@ -9,6 +9,19 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — »Dolij, ko se prazni«: voda brez dnevne omejitve (M5-F11)
+
+**Kaj se je zgodilo:** David je na telefonu opazil, da otrok, ki je dal vodo ob 8., 11. in 14. uri, ob 17:00 pri 72 % žeje ni mogel več — aplikacija je rekla »jutri«. Odločil je »Dolij, ko se prazni«: **dnevne omejitve vode ni več.** Vodo lahko daš, ko žeja pade na **60 % ali manj** (prag je nastavljiv po pasmi) in je od zadnjega dolivanja minilo vsaj 3 ure (muca 4 ure). Če še ni čas, aplikacija pove točno uro (»Vodo mu lahko daš ob 18:10«) — izračunano po enakem upadanju kot v igri, tudi čez tihe ure. *Zgrajeno na strežniku; na telefonu še ni preverjeno — tudi obstoječe aplikacije pokažejo uro brez posodobitve.*
+
+**Zakaj je pomembno:** pravi pes pije, ko je žejen, ne po urniku. Igra otroka ne sme kaznovati, ker je bil priden in je dal vodo zgodaj. Prag 60 % prepreči »klikanje« vode pri polni posodi, ocena skrbi pa še vedno pričakuje vsaj 3 dolivanja na dan (dodatna nikoli ne škodijo).
+
+**Številke:** prag 60 % za vseh 29 vrstic nastavitev pasem (22 pasjih, 7 mačjih); razmik 180 min (psi) / 240 min (mačke); mešanček pri −10 %/h pride s 100 % na 60 % v slabih 4 urah, v tihih urah 10× počasneje.
+
+**Kako povedati:**
+- 👩 Starši: »Otrok lahko psu da vodo vedno, ko se posoda prazni — ne le trikrat na dan. Aplikacija mu pove, kdaj je spet čas.«
+- 🧒 Otroci: »Ko je posoda napol prazna, kužku dolij vode! Če je še polna, ti aplikacija pove, ob kateri uri lahko spet.«
+- 💼 Investitorji: »Pravila sledijo resničnim potrebam živali, ne umetnim omejitvam — in popravek je prišel do vseh uporabnikov brez posodobitve aplikacije.«
+- 🛠 Tehnično: »`breed_configs.water_refill_below` (60), `DecayMath` (ena formula za tick in napoved, binarno iskanje do minute v 48 h), obstoječi razlog `water_too_soon` + `next_allowed_at`, zato stare gradnje delujejo; `water_times_per_day` ostane samo za oceno.«
 ## 2026-10-12 — Davidove odločitve: vsi mladički, opravičeni tedni, česanje kavalirja 4× na teden
 
 **Kaj se je zgodilo:** David je zaprl odprta vprašanja treh novih funkcij. »Nova izkušnja« (socializacija) velja zdaj za **vse mladičke** — za vseh 22 pasem psov, tudi za brezplačnega mešančka. Teden, ko je bil kuža večinoma bolan ali je bila igra ustavljena, v poročilu ni več »zamujen«, ampak **»opravičen«**; poročilo otroka šteje tedne šele od dneva, ko je začel skrbeti za psa. Pri česanju je kavalir zdaj **4× na teden** (prej 7), pet pasem »večkrat na teden« ostane pri 2× (zdaj potrjeno), nemški kratkodlaki ptičar pri 2×. Obe funkciji ostaneta samo za nove pse. Opozorilo »Počakaj s sprehodom« se pokaže tudi po obroku, ki ga ponoči da starš.

@@ -294,7 +294,7 @@
         "refused": {
           "alreadyFed": "Muca je že jedla. Spet jo nahraniš {{when}}.",
           "alreadyFedNoTime": "Muca je že jedla.",
-          "waterDailyLimit": "Danes je muca dobila dovolj sveže vode. Nova voda jutri.",
+          "waterDailyLimit": "Muca ima dovolj sveže vode do jutri. Novo vodo lahko daš jutri.",
           "needsCleaning": "Najprej počisti za muco!"
         },
         "locked": {

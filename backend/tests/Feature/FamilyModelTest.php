@@ -64,6 +64,12 @@ function fmFamily(string $nowUtc = '2026-10-04 06:00:00'): array
     return [$parent, $child, $pet];
 }
 
+/** M5-F11: thirst 40 % (no decay owed) so a water refill is allowed (threshold 60). */
+function fmThirsty(Pet $pet): void
+{
+    Pet::whereKey($pet->id)->update(['thirst_level' => 40, 'last_decay_at' => now()]);
+}
+
 /**
  * A second parent account that joins $parent's family via an invite code.
  */
@@ -498,6 +504,7 @@ describe('shared pet', function () {
         actingAsRole($child1);
         postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('status', 'accepted');
         actingAsRole($child2);
+        fmThirsty($pet); // M5-F11: water only at ≤ 60 % thirst
         postJson('/api/child/pet/water')->assertOk()->assertJsonPath('status', 'accepted');
         // One feed per window for the dog, whoever does it.
         postJson('/api/child/pet/feed')->assertStatus(422)->assertJsonPath('reason', 'already_fed_this_window');
@@ -523,6 +530,7 @@ describe('shared pet', function () {
         // The other child keeps playing.
         actingAsRole($child1);
         getJson('/api/child/pet')->assertJsonPath('lock.reason', null)->assertJsonPath('pet.awaiting_contract', false);
+        fmThirsty($pet); // M5-F11: water only at ≤ 60 % thirst
         postJson('/api/child/pet/water')->assertOk();
 
         $this->travel(5)->minutes();
@@ -643,6 +651,7 @@ describe('shared pet', function () {
         postJson('/api/child/pet/feed')->assertOk();
         postJson('/api/child/pet/steps', ['steps_today' => 800, 'source' => 'healthkit', 'recorded_at' => $at])->assertOk();
         actingAsRole($child2);
+        fmThirsty($pet); // M5-F11: water only at ≤ 60 % thirst
         postJson('/api/child/pet/water')->assertOk();
         postJson('/api/child/pet/clean')->assertOk(); // unchanged (already clean) → no row
         postJson('/api/child/pet/steps', ['steps_today' => 3300, 'source' => 'healthkit', 'recorded_at' => $at])->assertOk(); // 800 + 3300 ≥ 4000

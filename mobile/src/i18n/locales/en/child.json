@@ -73,7 +73,7 @@
       "outsideFeedWindowNoTime": "It's not mealtime right now.",
       "alreadyFed": "Your pup has already eaten. You can feed it again {{when}}.",
       "alreadyFedNoTime": "Your pup has already eaten.",
-      "waterDailyLimit": "Your pup has had enough water today. More water tomorrow!",
+      "waterDailyLimit": "The bowl has enough water until tomorrow. You can refill it tomorrow!",
       "waterTooSoon": "The bowl is still full. You can give fresh water {{when}}.",
       "waterTooSoonNoTime": "The bowl is still full.",
       "needsCleaning": "Clean up after your pup first!",

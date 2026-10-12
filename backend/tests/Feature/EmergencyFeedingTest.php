@@ -613,7 +613,9 @@ describe('pushes never ask for a refused action', function () {
         $this->postJson('/api/child/pet/water')->assertStatus(422)->assertJsonPath('reason', 'water_too_soon');
     });
 
-    it('drops a thirst reminder once the daily water limit is reached (nothing possible until tomorrow)', function () {
+    // M5-F11 (David 2026-10-12): there is no daily water cap any more — this used to
+    // be "drops a thirst reminder once the daily water limit is reached".
+    it('after three refills today a thirst reminder at 25 % asks for water — no daily cap (M5-F11)', function () {
         [$child, $pet] = efChild('2026-10-07 18:00:00', ['thirst_level' => 25]); // 20:00
         foreach (['2026-10-07 05:00:00', '2026-10-07 09:00:00', '2026-10-07 13:00:00'] as $at) {
             efWatered($pet, $child, Carbon::parse($at, 'UTC'));
@@ -623,7 +625,9 @@ describe('pushes never ask for a refused action', function () {
 
         $row = efPush($pet, PushType::SoftWarning, 'thirst');
 
-        expect($row->suppressed_reason)->toBe('not_actionable')->and($sent)->toHaveCount(0);
+        expect($row->status)->toBe(PushNotification::STATUS_SENT)
+            ->and($sent[0]['body'])->toBe('Tvoj kuža te milo gleda in kaže na prazno posodo za vodo.');
+        $this->postJson('/api/child/pet/water')->assertOk();
     });
 
     it('does not send care reminders to a caretaker who still has to sign the contract', function () {

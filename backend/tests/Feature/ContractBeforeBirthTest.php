@@ -357,6 +357,8 @@ describe('birth', function () {
 
         cbAt('2026-10-04 07:00:00'); // 09:00 local, morning window
         $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('status', 'accepted');
+        // M5-F11: water only at ≤ 60 % thirst (a newborn is at 100 %).
+        Pet::whereKey($pet->id)->update(['thirst_level' => 40, 'last_decay_at' => now()]);
         $this->postJson('/api/child/pet/water')->assertOk()->assertJsonPath('status', 'accepted');
         $this->postJson('/api/child/pet/clean')->assertOk();
         $this->postJson('/api/child/pet/steps', ['steps_today' => 500, 'source' => 'healthkit', 'recorded_at' => '2026-10-04T09:00:00+02:00'])

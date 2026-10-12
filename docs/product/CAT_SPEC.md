@@ -70,7 +70,7 @@ Vsa vprašanja Q1–Q10: ✅ **David 8. 10. 2026 13:47** — potrdil priporočen
 
 - **Zakaj ne več majhnih obrokov:** mačke v naravi jedo veliko majhnih obrokov in polovico dneva namenijo iskanju hrane. Smernice svetujejo razdelitev na več majhnih obrokov in igrače z ugankami za hrano [C8, C9]. Za otroka bi bilo to preveč oken, zato je 2× na dan **poenostavitev igre** (D). To staršu povemo v razlagi. Igrača s hrano (»uganka za hrano«) je kandidat za kasnejšo nadgradnjo, ne za prvo različico.
 - **Vsa ostala pravila hranjenja ostanejo kot pri psu:** okno, nujni obrok pri ≤ 20 % (M3-12), obrok v tihih urah opravi starš, »najprej počisti« (samo pri neredu zraven peska, §4).
-- **Voda:** potreba 55–70 ml/kg na dan [C4]. Sveža voda mora biti na voljo ves čas, posodo vsak dan pomijemo in napolnimo [C2, C5]. Voda naj bo vsaj 50 cm od hrane in peska [C4], stranišče pa daleč od hrane in vode [C3, C7, C8] (besedilo za otroka). **V igri: »Sveža voda« 2× na dan, razmik ≥ 4 h** (Q9).
+- **Voda:** potreba 55–70 ml/kg na dan [C4]. Sveža voda mora biti na voljo ves čas, posodo vsak dan pomijemo in napolnimo [C2, C5]. Voda naj bo vsaj 50 cm od hrane in peska [C4], stranišče pa daleč od hrane in vode [C3, C7, C8] (besedilo za otroka). **V igri: »Sveža voda«, ko žeja pade na ≤ 60 % in je minil razmik ≥ 4 h — brez dnevne omejitve** (M5-F11, David 12. 10. 2026 »Dolij, ko se prazni«; prej 2× na dan, Q9). 2× na dan ostane pričakovani minimum za oceno.
 - **Lakota je pri mački resna:** mačka, ki nekaj dni ne je, je v nevarnosti zamaščenih jeter (hepatična lipidoza), ki so lahko smrtna [C24, C25]. To je razlog, da lestvica za lakoto ostane enako stroga kot pri psu. Za otroka in starša je to **samo izobraževalno besedilo**, brez števila dni.
 
 ## 4. Mačje stranišče (pesek) — nadomesti »kakca«
@@ -133,7 +133,7 @@ Pri psu sprehod otroka spravi ven. Igra z muco pa je v aplikaciji in zahteva zas
 | Rutina | Koliko | Opravljena | Zamujena |
 |---|---|---|---|
 | Hrana | okna po fazi (§3) | hranjenje v oknu | okno brez hranjenja |
-| Voda | 2 na dan (Q9) | vsako dolivanje | manjkajoče ob koncu dneva |
+| Voda | 2 na dan (Q9) — pričakovani minimum, ne omejitev (M5-F11) | vsako dolivanje (dodatna ne škodijo) | manjkajoče ob koncu dneva |
 | Počisti pesek | vsaka uporaba (2 ali 3 na dan) | v 4 h izven tihih ur (Q3) | rok potekel → nered zraven peska |
 | Čiščenje | vsak nered (zraven peska, opraskan kavč) | v 2 h izven tihih ur (kot pes) | ni rešeno |
 | Menjava peska | 1 na teden programa | kadarkoli v tednu | teden mine brez menjave |
@@ -202,7 +202,7 @@ Impact list only. David approved Q1–Q10 on 2026-10-08 13:47. Built so far (hid
 - `BehaviourEventService`: no puppy accident for cats. `scratching` replaces chewing (same mess semantics). The resolve action is "redirect + praise within 3 s", scored on the server.
 - `TrainingService`: answers `training_not_available` for cats in v1.
 - `PlayService` (M5-R05): ball is dog only; cuddle works for both.
-- `CareScheduleService`: feed windows are reused. Water count and gap come from the breed config (2 / 240 min).
+- `CareScheduleService`: feed windows are reused. Water gap and refill threshold come from the breed config (240 min, ≤ 60 %; M5-F11 — no daily cap, 2 / day is only the score's expected minimum).
 - `EscalationService` / `NotificationService`: species-aware texts. The ladder is unchanged. Energy-like handling applies to the play metric.
 - `RoutineType` gains `play`, `litter_scoop`, `litter_change` and `grooming`. `RoutineLedgerService` and `CareScoreService` count them, including fair share for shared cats.
 - Grooming (Maine Coon 3×, Ragdoll 2×, British Shorthair 1×, Siberian 1×, Norwegian Forest Cat 1×, Bengal 1× per week — David 2026-10-11; Siberian, Norwegian Forest Cat and Bengal by the runbook rule, M5-R10-16 / M5-R10-17 / M5-R10-18): a weekly counter and a "matted coat" event after ceil(goal / 2) missed sessions.

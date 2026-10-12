@@ -66,13 +66,6 @@ class PetDecayService
      */
     public const QUIET_HOURS_DECAY_MULTIPLIER = 0.10;
 
-    /**
-     * Values within this distance of an integer are snapped to it, so float
-     * accumulation (e.g. 2.27e-10 left after 750 mutt-hunger minutes) doesn't
-     * delay reaching exactly 0 by a tick.
-     */
-    private const SNAP_EPSILON = 1e-6;
-
     public function __construct(
         private HygieneEventService $hygieneEvents,
         private DailyWalkService $dailyWalks,
@@ -348,11 +341,9 @@ class PetDecayService
         // What the child saw before this tick (the steps below modify $pet).
         $shownBefore = $pet->displayMetrics();
 
-        // Split the elapsed interval into normal and quiet time.
-        ['normal' => $normalSeconds, 'quiet' => $quietSeconds] = QuietHours::splitSecondsBetween($quietHours, $from, $now);
-
-        // Hunger / thirst: full rate outside quiet hours, 10 % inside.
-        $weightedHours = ($normalSeconds + $quietSeconds * self::QUIET_HOURS_DECAY_MULTIPLIER) / 3600;
+        // Hunger / thirst: full rate outside quiet hours, 10 % inside (DecayMath —
+        // the same formula the water forecast uses, M5-F11).
+        $weightedHours = DecayMath::weightedHours($quietHours, $from, $now);
 
         $newThirst = $this->decayMetric((float) $pet->thirst_level, $breedConfig->thirst_decay_rate * $weightedHours);
 
@@ -515,9 +506,7 @@ class PetDecayService
      */
     private function weightedHours(?QuietHours $quietHours, CarbonInterface $from, CarbonInterface $to): float
     {
-        ['normal' => $normal, 'quiet' => $quiet] = QuietHours::splitSecondsBetween($quietHours, $from, $to);
-
-        return ($normal + $quiet * self::QUIET_HOURS_DECAY_MULTIPLIER) / 3600;
+        return DecayMath::weightedHours($quietHours, $from, $to);
     }
 
     /**
@@ -526,10 +515,7 @@ class PetDecayService
      */
     private function decayMetric(float $current, float $decay): float
     {
-        $value = max(0.0, min(100.0, $current - $decay));
-        $nearest = round($value);
-
-        return abs($value - $nearest) < self::SNAP_EPSILON ? $nearest : $value;
+        return DecayMath::decay($current, $decay);
     }
 
     /**

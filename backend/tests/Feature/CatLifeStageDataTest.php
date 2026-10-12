@@ -466,7 +466,11 @@ describe('migration 2026_10_25_120000_add_cat_stage_param_keys', function () {
 describe('regression: dogs unchanged by M5-R06-03', function () {
     it('keeps the dog rowset, the dog breed configs and the cat breed configs identical to main (9a81fc1)', function () {
         $hash = fn (mixed $v): string => hash('sha256', json_encode($v, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
-        $configs = collect(BreedConfigsSeeder::configs());
+        // M5-F11 added `water_refill_below` (60 for every breed, asserted below) to every row;
+        // the fingerprints cover the columns of that time, so the new key is left out.
+        $all = collect(BreedConfigsSeeder::configs());
+        expect($all->pluck('water_refill_below')->unique()->values()->all())->toBe([60]);
+        $configs = $all->map(fn (array $c): array => array_diff_key($c, ['water_refill_below' => true]));
 
         // Fingerprints computed from main's seeders before this change. M5-R10 added
         // the Labrador: the fingerprint covers the two dog breeds of that time
