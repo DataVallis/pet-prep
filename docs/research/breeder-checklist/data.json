@@ -967,6 +967,14 @@
       "tests": [],
       "notes": "RKC breed page (older address, dog-data S187) returned no health-testing section; the RKC Health Standard (thekennelclub.org.uk/BreedSpecificRequirements, 2026-10-11) lists the German Shorthaired Pointer with no test in either the Good Practice or the Best Practice column (no verbatim sentence returned, so not recorded as none_recommended). PDSA (dog-data S188) names conditions but no tests. Show the general dog checklist only."
     },
+    "yorkshire_terrier": {
+      "status": "none_recommended",
+      "basis": {
+        "source_id": "S192",
+        "quote": "At this time this breed does not have any recommended pre-breeding health screening in place"
+      },
+      "tests": []
+    },
     "maine_coon": {
       "status": "listed",
       "basis": {

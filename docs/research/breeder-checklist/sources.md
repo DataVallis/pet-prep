@@ -40,3 +40,4 @@ that are new for this checklist get a K-id. Quotes in `data.json` are what the f
 - **Labrador, current RKC format** — royalkennelclub.com returned a server error; K16 (older page) used.
 - **Puppy Contract site** (puppycontract.org.uk) — blocked; cited through BVA (K9) and PDSA (K1).
 - **German Shorthaired Pointer parents' tests** — RKC breed page (older address) returned no health section; RKC Health Standard (thekennelclub.org.uk/BreedSpecificRequirements) lists the breed with no tests in either column, without a sentence to quote → `not_found`.
+- **Yorkshire Terrier parents' tests** — RKC breed page (older address, dog-data S192): "At this time this breed does not have any recommended pre-breeding health screening in place" → `none_recommended` (like the Westie). PDSA (S194) names CM/SM with a BVA/KC scheme but no verbatim sentence about screening this breed was returned → not added as `other_scheme`.

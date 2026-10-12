@@ -102,6 +102,12 @@ return [
         // other key covers (first_time_owner is only ever a `suits` tag); a calm chip, never
         // a number.
         'experienced_owner' => 'consider',
+        // M5-R10-22 (runbook "new tag" rule, 2026-10-12): a tiny dog with fragile bones that
+        // suits families with older children (Yorkshire Terrier: PDSA S194 "They are better
+        // suited to families with older children as they have very fragile bones"). A sourced,
+        // important trait no other key covers (`small_children` is only ever a `suits` tag);
+        // a calm chip, never a number.
+        'fragile_older_children' => 'consider',
     ],
 
     'breeds' => [
@@ -518,6 +524,26 @@ return [
                 ['tag' => 'long_daily_exercise', 'source_ids' => ['S187', 'S188'], 'refs' => ['german_shorthaired_pointer.exercise.adult', 'german_shorthaired_pointer.suitability.pdsa_exercise']],
                 // S189 "Short length with moderate shedding".
                 ['tag' => 'sheds', 'source_ids' => ['S189'], 'refs' => ['german_shorthaired_pointer.suitability.dogs_trust_shedding']],
+            ],
+        ],
+
+        // M5-R10-22: yorkshire_terrier.* (S190–S196), runbook rules (data.json
+        // proposed_game_parameters.yorkshire_terrier.suitability_tags). No welfare chip (RKC
+        // Breed Watch Category 1, S192). Not `children` / `small_children` (PDSA S194: better
+        // suited to families with older children — fragile bones → new `fragile_older_children`),
+        // not `family_pet` (no breed statement).
+        'yorkshire_terrier' => [
+            'suits' => [
+                // S192 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S192'], 'refs' => ['yorkshire_terrier.suitability.rkc_size_of_home', 'yorkshire_terrier.suitability.rkc_size_of_garden']],
+                // S192 "Sheds: No".
+                ['tag' => 'low_shedding', 'source_ids' => ['S192'], 'refs' => ['yorkshire_terrier.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S194 "They are better suited to families with older children as they have very fragile bones".
+                ['tag' => 'fragile_older_children', 'source_ids' => ['S194'], 'refs' => ['yorkshire_terrier.suitability.pdsa_children', 'yorkshire_terrier.behaviour.family']],
+                // S192 "Grooming: Every day"; S194 daily grooming.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S192', 'S194'], 'refs' => ['yorkshire_terrier.suitability.rkc_grooming', 'yorkshire_terrier.suitability.pdsa_grooming']],
             ],
         ],
     ],

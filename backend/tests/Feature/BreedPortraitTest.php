@@ -20,7 +20,7 @@ beforeEach(function () {
     config([
         'services.fal_ai.key' => 'test-key',
         'media.reference_image_profile' => 'nano_banana_pro',
-        // 23 portraits × $0.15 = $3.45 fit one day (M5-R10-21 German Shorthaired Pointer).
+        // 24 portraits × $0.15 = $3.60 fit one day (M5-R10-22 Yorkshire Terrier).
         'media.lab.daily_usd' => 4,
         'media.lab.monthly_usd' => 30,
     ]);
@@ -61,7 +61,7 @@ describe('breeds and prompts', function () {
     it('leaves out the free breeds (no single breed look) and filters by breed / slug / species', function () {
         $all = array_map(fn (BreedType $b) => $b->value, bpService()->breeds());
 
-        expect($all)->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal'])
+        expect($all)->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal'])
             ->and($all)->not->toContain('mutt')->not->toContain('domestic_cat')
             ->and(bpService()->breeds(['golden-retriever', 'maine_coon']))->toBe([BreedType::GoldenRetriever, BreedType::MaineCoon])
             ->and(bpService()->breeds([], Species::Cat))->toBe([BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal]);
@@ -169,7 +169,7 @@ describe('breeds:portraits command', function () {
             ->expectsOutputToContain('[generate] border_collie → dog/border-collie.webp')
             ->expectsOutputToContain('[generate] maine_coon → cat/maine-coon.webp')
             ->expectsOutputToContain(bpService()->prompt(BreedType::LabradorRetriever))
-            ->expectsOutputToContain('To generate: 23 image(s), estimated $3.4500')
+            ->expectsOutputToContain('To generate: 24 image(s), estimated $3.6000')
             ->expectsOutputToContain('Dry run — no fal.ai call, nothing written.')
             ->assertSuccessful();
 
@@ -199,7 +199,7 @@ describe('breeds:portraits command', function () {
 
         $this->artisan('breeds:portraits', ['--out' => $this->out])
             ->expectsOutputToContain('border_collie: wrote dog/border-collie.webp (1024×1024)')
-            ->expectsOutputToContain('Generated 23, failed 0, estimated spend $3.4500 (AI Lab).')
+            ->expectsOutputToContain('Generated 24, failed 0, estimated spend $3.6000 (AI Lab).')
             ->assertSuccessful();
 
         foreach (['dog/border-collie.webp', 'dog/labrador-retriever.webp', 'dog/golden-retriever.webp', 'dog/french-bulldog.webp', 'dog/german-shepherd-dog.webp', 'dog/cavalier-king-charles-spaniel.webp', 'dog/beagle.webp', 'dog/poodle-standard.webp', 'dog/dachshund.webp', 'dog/australian-shepherd.webp', 'dog/havanese.webp', 'dog/west-highland-white-terrier.webp', 'dog/bernese-mountain-dog.webp', 'cat/maine-coon.webp', 'cat/british-shorthair.webp', 'cat/ragdoll.webp', 'cat/siberian-cat.webp', 'cat/norwegian-forest-cat.webp', 'cat/bengal.webp'] as $file) {
@@ -213,7 +213,7 @@ describe('breeds:portraits command', function () {
         $manifest = bpManifest($this->out);
         expect($manifest['schema_version'])->toBe(1)
             ->and($manifest['label'])->toBe('AI-generated photo')
-            ->and(array_column($manifest['portraits'], 'breed'))->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal']);
+            ->and(array_column($manifest['portraits'], 'breed'))->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal']);
 
         $lab = $manifest['portraits'][1];
         expect(array_keys($lab))->toBe(['breed', 'species', 'file', 'width', 'height', 'kind', 'profile', 'prompt_hash', 'generated_at', 'cost_usd'])
@@ -227,22 +227,23 @@ describe('breeds:portraits command', function () {
             ->and($manifest['portraits'][14])->toMatchArray(['breed' => 'rottweiler', 'species' => 'dog', 'file' => 'dog/rottweiler.webp'])
             ->and($manifest['portraits'][15])->toMatchArray(['breed' => 'bulldog', 'species' => 'dog', 'file' => 'dog/bulldog.webp'])
             ->and($manifest['portraits'][16])->toMatchArray(['breed' => 'german_shorthaired_pointer', 'species' => 'dog', 'file' => 'dog/german-shorthaired-pointer.webp'])
-            ->and($manifest['portraits'][17]['species'])->toBe('cat')
-            ->and($manifest['portraits'][18])->toMatchArray(['breed' => 'british_shorthair', 'species' => 'cat', 'file' => 'cat/british-shorthair.webp'])
-            ->and($manifest['portraits'][19])->toMatchArray(['breed' => 'ragdoll', 'species' => 'cat', 'file' => 'cat/ragdoll.webp'])
-            ->and($manifest['portraits'][20])->toMatchArray(['breed' => 'siberian_cat', 'species' => 'cat', 'file' => 'cat/siberian-cat.webp'])
-            ->and($manifest['portraits'][21])->toMatchArray(['breed' => 'norwegian_forest_cat', 'species' => 'cat', 'file' => 'cat/norwegian-forest-cat.webp'])
-            ->and($manifest['portraits'][22])->toMatchArray(['breed' => 'bengal', 'species' => 'cat', 'file' => 'cat/bengal.webp']);
+            ->and($manifest['portraits'][17])->toMatchArray(['breed' => 'yorkshire_terrier', 'species' => 'dog', 'file' => 'dog/yorkshire-terrier.webp'])
+            ->and($manifest['portraits'][18]['species'])->toBe('cat')
+            ->and($manifest['portraits'][19])->toMatchArray(['breed' => 'british_shorthair', 'species' => 'cat', 'file' => 'cat/british-shorthair.webp'])
+            ->and($manifest['portraits'][20])->toMatchArray(['breed' => 'ragdoll', 'species' => 'cat', 'file' => 'cat/ragdoll.webp'])
+            ->and($manifest['portraits'][21])->toMatchArray(['breed' => 'siberian_cat', 'species' => 'cat', 'file' => 'cat/siberian-cat.webp'])
+            ->and($manifest['portraits'][22])->toMatchArray(['breed' => 'norwegian_forest_cat', 'species' => 'cat', 'file' => 'cat/norwegian-forest-cat.webp'])
+            ->and($manifest['portraits'][23])->toMatchArray(['breed' => 'bengal', 'species' => 'cat', 'file' => 'cat/bengal.webp']);
 
         $rows = AiSpendLedger::all();
-        expect($rows)->toHaveCount(23)
+        expect($rows)->toHaveCount(24)
             ->and($rows->pluck('purpose')->unique()->all())->toBe([AiSpendPurpose::Lab->value])
             ->and($rows->pluck('status')->unique()->all())->toBe([AiSpendLedger::STATUS_COMMITTED])
             ->and($rows->pluck('pet_id')->filter()->all())->toBe([])
-            ->and(round((float) $rows->sum('cost_usd'), 2))->toBe(3.45);
+            ->and(round((float) $rows->sum('cost_usd'), 2))->toBe(3.6);
 
         $calls = Http::recorded(fn (Request $r) => str_starts_with($r->url(), 'https://fal.run/'));
-        expect($calls)->toHaveCount(23);
+        expect($calls)->toHaveCount(24);
         $body = $calls[0][0]->data();
         expect($body['aspect_ratio'])->toBe('1:1')
             ->and($body['prompt'])->toBe(bpService()->prompt(BreedType::BorderCollie))
@@ -294,7 +295,7 @@ describe('breeds:portraits command', function () {
         $this->artisan('breeds:portraits', ['--out' => $this->out])
             ->expectsOutputToContain('border_collie: wrote dog/border-collie.webp')
             ->expectsOutputToContain('labrador_retriever: budget_lab')
-            ->expectsOutputToContain('Stopped: 21 more breed(s) not tried.')
+            ->expectsOutputToContain('Stopped: 22 more breed(s) not tried.')
             ->assertFailed();
 
         expect(array_column(bpManifest($this->out)['portraits'], 'breed'))->toBe(['border_collie'])
@@ -306,9 +307,9 @@ describe('breeds:portraits command', function () {
         $this->travel(1)->days();
         config(['media.lab.daily_usd' => 4]);
         $this->artisan('breeds:portraits', ['--out' => $this->out])
-            ->expectsOutputToContain('Generated 22, failed 0')
+            ->expectsOutputToContain('Generated 23, failed 0')
             ->assertSuccessful();
-        expect(array_column(bpManifest($this->out)['portraits'], 'breed'))->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal']);
+        expect(array_column(bpManifest($this->out)['portraits'], 'breed'))->toBe(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal']);
     });
 
     it('writes nothing when fal answers an error (ledger void) and fails the run', function () {

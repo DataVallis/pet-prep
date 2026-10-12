@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "48835a2137326c5003e3351fc348757e660715c6001c8e74f4e63aa106bbebd9"
+      "sha256": "614f179c3bb10932cbf7305d1b5031f32034f36d497b5125ceba7c89bc2d3bb6"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "ce4537f22bf898dd930182bf61b0b4a80dc290f94bf9ba0d5783a7b253cbc6a3"
+      "sha256": "cebcd9b0992f02fbe8573eb254cce680ece37a6ecc1147f057d6dbd5e6a8926a"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,31 +25,31 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "a8b99dfbfc9c95ec67272bd3a74967492278331a9a9754b1b94a8672ab521b70"
+      "sha256": "e5db6252f4ac554395beeb83ff084b9fd80a41d066de3387890c0a90c2d56385"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "1178fd2d35821f25e830ab698eff87cc0fcd94ff2931fe7c5a0df38bb90d7f06"
+      "sha256": "84c1a9314833d64b74eaa589349b84bd163359eb45d043856004cd8a75cd735b"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "9e4374167ebf80831f839fd1b2c8877189fe70e493132e04101061b03ed0ef1b"
+      "sha256": "7f8260e3778a94e05871aeea97743c920e5c0b66920b6fa3dd56eb867d41302b"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "d4fa178109e10e178af288fe94bdc66a1e1472e07adadb3958a8035e3e4895e2"
+      "sha256": "2a008caf86bf325ef182112f4f789140e867af8ebf976e0db894ad48bbb78848"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "99470830997e3b3ecc58b34bddbac931b225d82baf43cffa8b07b9c12deef043"
+      "sha256": "6959e1695b31aa89dd4a1edcc32ed19608bc5c1334030533faff85cc86f0c39e"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "59fb1e844ea88b0bed33caf4c672603407fffc9fed8d1331330bcc8d026684d0"
+      "sha256": "3f17c42f766c2d624270813adf10f2a3172ba9723dc521082382b7174b48e68b"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "f838ea0ca211061767ec29c2a40a2eafec812a8cc6ae9450cc99d12121f32e5e"
+      "sha256": "491b02b806cc0d572c19911123dffbb762dddf9f3fc3f39f45c8f2c58ce5c5dc"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -67,6 +67,7 @@
     "family_pet": "suits",
     "first_time_owner": "suits",
     "food_motivated_weight": "consider",
+    "fragile_older_children": "consider",
     "frequent_grooming": "consider",
     "heart_and_spine": "consider",
     "hips_hind_legs": "consider",
@@ -99,6 +100,7 @@
         "family_pet": "family life",
         "first_time_owner": "first-time owners",
         "food_motivated_weight": "loves food — watch the weight",
+        "fragile_older_children": "fragile bones — better with older children",
         "frequent_grooming": "needs brushing several times a week",
         "heart_and_spine": "heart and spine — check health tests",
         "hips_hind_legs": "hips and hind legs — check joint health",
@@ -131,6 +133,7 @@
         "family_pet": "družinsko življenje",
         "first_time_owner": "začetnike",
         "food_motivated_weight": "rad je — pazite na težo",
+        "fragile_older_children": "krhke kosti — bolje za starejše otroke",
         "frequent_grooming": "potrebuje česanje večkrat na teden",
         "heart_and_spine": "srce in hrbtenjača — preverite zdravstvene teste",
         "hips_hind_legs": "kolki in zadnje noge — preverite zdravje sklepov",
@@ -168,7 +171,7 @@
         }
       },
       "status": "available",
-      "breed_count": 17,
+      "breed_count": 18,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -10640,6 +10643,512 @@
       ]
     },
     {
+      "id": "yorkshire_terrier",
+      "species": "dog",
+      "order": 17,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Yorkshire Terrier",
+        "sl": "Yorkshirski terier"
+      },
+      "slug": {
+        "en": "yorkshire-terrier",
+        "sl": "yorkshirski-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Yorkie",
+          "Yorkshire"
+        ],
+        "sl": [
+          "jorkširski terier",
+          "jorksirski terier",
+          "yorkie",
+          "jorki"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S192"
+          ],
+          "ref": "yorkshire_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": [
+            20,
+            20
+          ],
+          "source_ids": [
+            "S194"
+          ],
+          "ref": "yorkshire_terrier.height.pdsa_average",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "qualifier": "up_to",
+          "value": [
+            3.2,
+            3.2
+          ],
+          "source_ids": [
+            "S190"
+          ],
+          "ref": "yorkshire_terrier.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "yorkshire_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.56,
+          "source_ids": [
+            "S195"
+          ],
+          "ref": "yorkshire_terrier.lifespan.median_uk",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S192"
+          ],
+          "ref": "yorkshire_terrier.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 30,
+          "source_ids": [
+            "S192"
+          ],
+          "ref": "yorkshire_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "long"
+          ],
+          "source_ids": [
+            "S192"
+          ],
+          "ref": "yorkshire_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S192"
+          ],
+          "ref": "yorkshire_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S192"
+          ],
+          "ref": "yorkshire_terrier.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 27,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "yorkshire_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 86,
+            "group": 3,
+            "section": 4,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S191"
+          ],
+          "ref": "yorkshire_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "dental_disease_tooth_brushing",
+          "source_ids": [
+            "S196"
+          ],
+          "ref": "yorkshire_terrier.health.dental",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S194"
+          ],
+          "ref": "yorkshire_terrier.health.luxating_patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "windpipe_collapse",
+          "source_ids": [
+            "S194"
+          ],
+          "ref": "yorkshire_terrier.health.tracheal_collapse",
+          "confidence": "medium"
+        },
+        {
+          "key": "eye_problems_pra_lens_dry_eye",
+          "source_ids": [
+            "S194"
+          ],
+          "ref": "yorkshire_terrier.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "liver_shunt",
+          "source_ids": [
+            "S194"
+          ],
+          "ref": "yorkshire_terrier.health.portosystemic_shunt",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S192"
+            ],
+            "refs": [
+              "yorkshire_terrier.suitability.rkc_size_of_home",
+              "yorkshire_terrier.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S192"
+            ],
+            "refs": [
+              "yorkshire_terrier.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "fragile_older_children",
+            "source_ids": [
+              "S194"
+            ],
+            "refs": [
+              "yorkshire_terrier.suitability.pdsa_children",
+              "yorkshire_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S192",
+              "S194"
+            ],
+            "refs": [
+              "yorkshire_terrier.suitability.rkc_grooming",
+              "yorkshire_terrier.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 3000,
+              "cap_month": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 122
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2300
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 3000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 30,
+              "steps": 3000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 122
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.yorkshire_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S192"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S192 'Up to 30 minutes per day'; PDSA S194 '30 or 40 minutes')"
+          },
+          {
+            "ref": "proposed_game_parameters.yorkshire_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+          },
+          {
+            "ref": "proposed_game_parameters.yorkshire_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S195"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 122 (0.75 × 13.56 y, VetCompass median S195)"
+          },
+          {
+            "ref": "proposed_game_parameters.yorkshire_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 27, Above average tier, S35)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S192",
+          "S195"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "none_recommended",
+        "tests": [],
+        "basis_source_ids": [
+          "S192"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S190",
+        "S191",
+        "S192",
+        "S194",
+        "S195",
+        "S196",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -13739,6 +14248,48 @@
       "publisher": "Dogs Trust (UK)",
       "title": "German Shorthaired Pointer — breed page",
       "url": "https://www.dogstrust.org.uk/dog-advice/getting-dog/breeds/german-shorthaired-pointer"
+    },
+    {
+      "id": "S190",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 86 — Yorkshire Terrier (EN PDF; date of publication of the valid standard 10.11.2011)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/086g03-en.pdf"
+    },
+    {
+      "id": "S191",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Yorkshire Terrier (86)",
+      "url": "https://fci.be/en/nomenclature/YORKSHIRE-TERRIER-86.html"
+    },
+    {
+      "id": "S192",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Yorkshire Terrier — breed information page (Breeds A to Z, older address)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=6165"
+    },
+    {
+      "id": "S194",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Yorkshire Terrier breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/yorkshire-terrier"
+    },
+    {
+      "id": "S195",
+      "tier": "A",
+      "publisher": "Companion Animal Health and Genetics 12:6 (2025) (SLU research portal record)",
+      "title": "O'Neill D. G., Witkowska S. D., Brodbelt D. C., Church D. B., Engdahl K. S. Yorkshire Terriers under primary veterinary care in the UK – demography and disorders. doi:10.1186/s40575-025-00145-y",
+      "url": "https://research.slu.se/en/publications/yorkshire-terriers-under-primary-veterinary-care-in-the-uk-demogr/"
+    },
+    {
+      "id": "S196",
+      "tier": "B",
+      "publisher": "Royal Veterinary College — VetCompass",
+      "title": "Yorkshire Terrier infographic (summary of S195, 15.08.2025) (PDF)",
+      "url": "https://www.rvc.ac.uk/Media/Default/VetCompass/250815%20Yorkshire%20Terrier%20infographic%20%284%29.pdf"
     },
     {
       "id": "C1",

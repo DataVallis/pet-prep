@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Yorkshirski terier: četrta pasma po dvajsetih (M5-R10-22)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **yorkshirskega terierja** (11. mesto). Raziskava: **7 novih virov (S190–S196)** — standard FCI in nomenklatura, standard in stran The Royal Kennel Club, PDSA ter velika britanska raziskava VetCompass (O'Neill idr. 2025) z mediano življenjske dobe **13,56 leta**. Pravila igre: odrasel **30 minut = 3.000 korakov** na dan, starejši 23 minut = 2.300, mladiček od 2.000 navzgor (3.000 doseže pri 3 mesecih); starejši je od **122. meseca** (začasno, dokler ne preverimo McMillan 2024); uči se **1,2-krat hitreje** kot mešanček (Coren: 27. mesto).
+
+**Zakaj je pomembno:** Yorkie je majhen in primeren za stanovanje, a PDSA opozarja, da ima zelo krhke kosti in je bolje za družine s starejšimi otroki — zato je nastala **nova oznaka »krhke kosti — bolje za starejše otroke«**. Dlake mu skoraj ne izpada, a PetPrep ga nikoli ne imenuje »hipoalergen«. Dve potrebi z virom igra še ne vodi in sta zapisani kot naloga: česanje vsak dan (M5-R13) in **ščetkanje zob vsak dan** (VetCompass: bolezen zob je najpogostejša težava pasme — nova naloga M5-R15). Ni pasma s skrbjo za dobrobit (RKC Breed Watch kategorija 1), zato je lahko v marketingu (predlog, ki čaka Davida: ne z majhnimi otroki).
+
+**Številke:** 7 novih virov (S190–S196), 1 migracija, 1 nova oznaka, 1 nova naloga (M5-R15); Pest **2.434** testov, Jest **2.061**, izvoz registra **42** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Yorkshirski terier je majhen, živahen in potrebuje le pol ure gibanja na dan — a ima krhke kosti, zato je bolje za družine s starejšimi otroki. Česanje in nega zob sta vsak dan.«
+- 🧒 Otroci: »Yorkie je majhen, a rad teka in se igra. Paziti moraš nanj, ker so njegove kosti zelo krhke.«
+- 💼 Investitorji: »Četrta pasma, ki jo je sistem sam izbral po javni lestvici AKC in jo zgradil po istem postopku — z viri, testi in neodvisnim pregledom; vsaka potreba z virom, ki je igra še ne zna, postane naloga.«
+- 🤝 Partnerji (veterinarji, zavetišča): »PetPrep pri yorkiju pove, da je bolezen zob najpogostejša težava pasme, in to bo postala vsakodnevna naloga v igri.«
+- 📣 Omrežja: »Majhen pes, velike obveznosti: česanje in zobje vsak dan. Kmalu boste lahko yorkshirskega terierja preizkusili v PetPrepu, preden ga pripeljete domov.« *(ko bo nakup v trgovini deloval)*
+- 🛠 Tehnično: »Prva pasma, ki ima v registru težo z oznako »do« (standard FCI navaja le zgornjo mejo), in prva nova naloga za nego zob (M5-R15).«
+
+---
+
 ## 2026-10-11 — Nemški kratkodlaki ptičar: tretja pasma po dvajsetih (M5-R10-21)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **nemškega kratkodlakega ptičarja** (10. mesto). Raziskava: **6 novih virov (S184–S189)** — standard FCI in nomenklatura, uradni standard AKC (German Shorthaired Pointer Club of America), The Royal Kennel Club, PDSA in Dogs Trust; mediana življenjske dobe iz velike britanske raziskave McMillan 2024 (**13,4 leta**, tabela Dogs Trust). Pravila igre: odrasel **120 minut = 12.000 korakov** na dan, starejši 90 minut = 9.000, mladiček od 2.000 navzgor; starejši je od **121. meseca**; uči se **1,5-krat hitreje** kot mešanček (Coren: 17. mesto).

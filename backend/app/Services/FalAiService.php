@@ -208,6 +208,14 @@ class FalAiService
                 .'short dense hard coat, broad flat ears set high and hanging close to the head, dark brown almond-shaped eyes, '
                 .'natural undocked tail, noble athletic balanced build, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-22: FCI 86 (S190) / RKC (S193) — dark steel blue and tan is the only standard
+            // colour; long straight glossy silky coat that never impedes movement, small erect
+            // V-shaped tan ears, dark eyes, black nose; natural undocked tail (an FCI option).
+            BreedType::YorkshireTerrier => 'An alert Yorkshire Terrier dog with a dark steel blue and rich tan coat, '
+                .'long straight glossy silky coat of natural pet length, small erect V-shaped tan ears, '
+                .'dark sparkling eyes, black nose, natural undocked tail, tiny compact toy body, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -484,6 +492,18 @@ class FalAiService
                     1 => 'no markings',
                     2 => 'solid black head with black patches on a ticked body',
                 },
+            ],
+            // M5-R10-22: FCI / RKC (S190, S193) — dark steel blue and tan only (never fawn,
+            // bronze, parti-colour or merle); the variants differ in coat length only.
+            BreedType::YorkshireTerrier => [
+                'color_scheme' => 'dark steel blue and rich tan',
+                'eye_color' => 'dark',
+                'fur_texture' => match ($variantIndex) {
+                    0 => 'long, perfectly straight, glossy and silky',
+                    1 => 'medium-long, straight and silky',
+                    2 => 'long, straight and silky with a parting down the back',
+                },
+                'markings' => 'tan head, chest and legs; darker blue tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

@@ -9325,6 +9325,490 @@
       }
     }
   },
+  "yorkshire_terrier": {
+    "_note": "Added 2026-10-12 (M5-R10-22, unattended run — appended after the German Shorthaired Pointer: AKC 2024 No. 11, S174 table row '11 | Yorkshire Terrier'). Quotes as returned by the web-fetch tool on 2026-10-12; spot-check before import (sources.md S190–S196, reused S10, S11, S14, S24, S35, S45, S174). The RKC breed page (older address, S192) returned the key-fact labels and values on separate lines; they are quoted as 'Label: value' like the earlier breeds. FCI (S190) and the RKC breed standard (S193) give only an upper weight ('Up to 3,2 kgs') and no height → height from PDSA (S194, average 20 cm). The VetCompass study (S195) describes the UK pet population, which is heavier than the pedigree standard (median 5.06 kg, S196) — background only, never the game weight. Lifespan: McMillan 2024 / the Dogs Trust breed table (S123) not reachable this run → runbook rule: VetCompass median 13.56 y (O'Neill et al. 2025, S195). Not a welfare-concern breed: RKC Breed Watch Category 1 (S192). Woodgreen and AKC trait ratings not attempted.",
+    "identity": {
+      "value": "FCI No. 86, Group 3 Section 4 (Toy Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S191",
+      "quote": "Group: n°3 - Terriers; Section: Toy Terriers; Country of origin: GREAT BRITAIN",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S191, fields as returned): 'YORKSHIRE TERRIER (86)'; 'Not subject to a working trial according to the FCI breeds nomenclature'; definitive acceptance '10/30/1954'; valid standard '9/8/2026'. FCI standard PDF (S190, EN, date of publication of the valid standard '10.11.2011'): 'ORIGIN: Great Britain.' 'Group 3 Terriers.' 'Section 4 Toy Terriers.' 'Without working trial.' The nomenclature lists a newer valid standard (9/8/2026) than the reachable PDF — re-check. Quote assembled from the nomenclature fields."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S192",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "PDSA (S194) key facts: 'Size | Small' — sources agree. RKC group: Toy (S193). FCI / RKC weight up to 3.2 kg (S190, S193) = PetMD 'Toy' weight class (S10)."
+    },
+    "height": {
+      "pdsa_average": {
+        "value": [
+          20,
+          20
+        ],
+        "unit": "cm",
+        "source_id": "S194",
+        "quote": "Average height | 20 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S194), one average for both sexes. Neither the FCI standard (S190) nor the RKC breed standard (S193) gives a height."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": [
+          3.2,
+          3.2
+        ],
+        "unit": "kg",
+        "source_id": "S190",
+        "quote": "Weight: Up to 3,2 kgs.",
+        "confidence": "high",
+        "notes": "FCI standard (S190): an upper limit only, no lower bound, both sexes ('up to 3.2 kg' — the register shows it with the 'up_to' qualifier; the stored range [3.2, 3.2] is that limit, not a measured weight). RKC breed standard (S193): 'Weight up to 3.2 kgs (7 lbs).' — the same."
+      },
+      "pdsa": {
+        "value": [
+          3.2,
+          3.2
+        ],
+        "unit": "kg",
+        "source_id": "S194",
+        "quote": "Average weight | 3.2 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S194): one average for both sexes — the value the game stores (adult_weight_kg [3.2, 3.2]); equal to the FCI / RKC upper limit (S190, S193)."
+      },
+      "uk_pet_population_median": {
+        "value": 5.06,
+        "unit": "kg",
+        "source_id": "S195",
+        "quote": "The median adult bodyweight was 5.06 kg (IQR 3.81–6.49, range 1.01-15.00).",
+        "confidence": "medium",
+        "notes": "VetCompass UK 2016 (S195): the general pet population, larger than the pedigree breed (RVC summary S196: 'This may be related to the larger body size of the pet version compared to the miniature pedigree Yorkshire Terrier.'; males 5.50 kg, females 4.67 kg). Background only — never a target weight, not exported."
+      },
+      "salt_category": {
+        "value": "I",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): ≤ 3.2 kg = the smallest band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. Up to 3.2 kg (S190) ≈ 7 lb → the 'Toy (5–12 pounds)' class."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Yorkshire Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.56,
+        "unit": "years",
+        "source_id": "S195",
+        "quote": "the median age at death was 13.56 years (IQR 11.30–15.15, range 0.06–19.08)",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2025 (S195), VetCompass UK 2016 — the general pet population (not only Kennel Club-registered dogs). RVC summary (S196): 'The average lifespan of Yorkshire Terriers was an amazing 13.56 years.' 'Average lifespan did not differ significantly between females and males'. McMillan 2024 (S54) and the Dogs Trust breed table (S123) not reachable this run — runbook rule: else a VetCompass median. Consistent with the breed-page band 'Over 12 years' (S192, S194)."
+      },
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S192",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "medium",
+        "notes": "RKC breed page (S192). PDSA key facts (S194): 'Average lifespan | Over 12 years' — same."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: the Dogs Trust breed table (S123) is not in this run's reachable set (fetch refused) and the 'shortest and longest' PDF returned a fetch error; the LJMU news page names no Yorkshire Terrier value. UNSOURCED value — verify in McMillan 2024 Supplementary Table before replacing the VetCompass median."
+      },
+      "senior_from": {
+        "value": 10.17,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 13.56 y (S195) → 0.75 × 13.56 = 10.17 y = 122.04 → 122 months. With the breed-page 'over 12 years' (S192): 0.75 × 12 = 9 y = 108 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S195"
+        ],
+        "months": 122,
+        "alternative": {
+          "value_years": 9,
+          "months": 108,
+          "derived_from": [
+            "S11",
+            "S192"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 30",
+        "unit": "minutes/day",
+        "source_id": "S192",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "PDSA (S194): 'Yorkies need around 30 or 40 minutes exercise per day.' (key facts: 'Minimum exercise (per day) | 30 minutes') — RKC preferred (runbook rule), PDSA's lower number agrees; 40 recorded as an alternative in proposed_game_parameters."
+      },
+      "energy": {
+        "value": "small but likes to run, fetch and play",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "Don’t be fooled by their small size – they enjoy running, fetching and playing games just as much as the next dog!",
+        "confidence": "medium",
+        "notes": "PDSA (S194). Covered by the game's walk and play (M5-R05) — nothing new to build."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "alert, intelligent toy terrier; spirited with even disposition",
+        "unit": "—",
+        "source_id": "S190",
+        "quote": "Alert, intelligent toy terrier. Spirited with even disposition.",
+        "confidence": "high",
+        "notes": "FCI (S190) 'BEHAVIOUR/TEMPERAMENT'; RKC breed standard (S193) the same wording. RKC breed page (S192): 'he still retains some of the features of his terrier background and can account for any domestic rodent'. Disqualifying (FCI): 'Aggressive or overly shy dogs'."
+      },
+      "family": {
+        "value": "fine if brought up with children from a young age; better suited to families with older children (fragile bones)",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "They are better suited to families with older children as they have very fragile bones",
+        "confidence": "medium",
+        "notes": "PDSA (S194): 'Yorkshire Terriers should be fine if brought up with children from a young age.' The same paragraph limits it to older children → no `children` / `small_children` tag; new consider tag `fragile_older_children` (runbook new-tag rule). No PDSA 'family pet' sentence → no `family_pet` tag."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (RKC S192 and PDSA S194 checked) → no often_alone tag."
+      },
+      "other_pets": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No statement about other pets (PDSA S194 checked). RKC (S192): can catch 'any domestic rodent' (terrier background) — not a suitability statement → no other_pets tag."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (PDSA S194 checked) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere (the VetCompass percentages of S195 / S196 stay in the paper). Not a welfare-concern breed: RKC Breed Watch Category 1, 'Currently no points of concern specific to this breed have been identified for special attention by judges' (S192). Main topics: teeth (S194, S195, S196), kneecaps (S194, S196), windpipe (S194), eyes (S194), liver shunt (S194).",
+      "dental": {
+        "value": "dental (periodontal) disease and retained puppy teeth; daily tooth brushing advised",
+        "unit": "—",
+        "source_id": "S196",
+        "quote": "Yorkshire Terriers appear predisposed to dental (periodontal) disease and persistent deciduous teeth.",
+        "confidence": "high",
+        "notes": "RVC VetCompass summary (S196) of O'Neill et al. 2025 (S195): 'Dental disease was by far the most common disorder diagnosed in Yorkshire Terriers'; advice: 'Owners are encouraged to undertake daily preventative home care to improve dental health e.g tooth brushing' (as returned, split by the fetch tool). PDSA (S194) health list: 'Dental problems'. Sourced need (daily tooth brushing) → proposed_game_parameters.yorkshire_terrier.tooth_brushing (no tooth-brushing mechanic yet → ROADMAP M5-R15)."
+      },
+      "luxating_patella": {
+        "value": "luxating patellas — kneecaps slipping out of place",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "Luxating patellas - the kneecaps slipping temporarily out of place.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S194). RVC summary (S196) lists 'Slipping kneecap' among the most common disorders (chart label, no number used)."
+      },
+      "tracheal_collapse": {
+        "value": "tracheal collapse — the windpipe loses rigidity",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "Tracheal collapse – loss of rigidity of the windpipe, causing weakness and collapse.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S194)."
+      },
+      "eyes": {
+        "value": "progressive retinal atrophy, lens luxation, dry eye, distichiasis",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "Progressive retinal atrophy – gradual deterioration of the retina of the eye.",
+        "confidence": "medium",
+        "notes": "PDSA (S194): 'Lens luxation – dislocation of the lens of the eye.'; dry eye: 'decreased tear production, leading to dry eye and damage to the cornea (surface of the eye).'; distichiasis (paraphrase: extra eyelashes on the eyelid edge irritate the eye)."
+      },
+      "portosystemic_shunt": {
+        "value": "portosystemic (liver) shunt",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "abnormal blood circulation, with the blood effectively bypassing the liver and entering general circulation.",
+        "confidence": "medium",
+        "notes": "PDSA (S194) health list, 'Portosystemic shunt' (partial line as returned)."
+      },
+      "legg_perthes": {
+        "value": "Legg-Perthes disease (hip)",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "blood supply to the femoral head is depleted, causing destruction of the femoral head.",
+        "confidence": "medium",
+        "notes": "PDSA (S194), partial line as returned. Not a Breed Watch point → no hips_hind_legs chip (research only)."
+      },
+      "other_pdsa": {
+        "value": "bladder stones, atopy, diabetes mellitus, hydrocephalus, Chiari malformation / syringomyelia",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "Bladder stones – a collection of minerals that form in the bladder.",
+        "confidence": "medium",
+        "notes": "PDSA (S194): 'Atopy – hypersensitivity to certain allergens, causing itching and skin trauma.'; CM/SM 'a painful neurological condition in which fluid-filled cavities develop within the spinal cord near the brain.' (partial line); diabetes mellitus, hydrocephalus (paraphrase). Research only — not exported."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 27,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35): rank 27 shared with the Chesapeake Bay Retriever and the Puli (breed names as returned — the fetch tool did not return the table row verbatim, so no quote is stored), tier 'Above Average Working Dogs' (ranks 27–39). Coren's own top / bottom-10 article (S34) does not list the breed."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Ranks 27–39 (S35): learn new commands in about 15–25 repetitions, obey the first command at least 70 % of the time (paraphrase)."
+      },
+      "training_notes": {
+        "value": "can be stubborn; patient, reward-based training",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "They can be quite stubborn, making training more of a challenge.",
+        "confidence": "medium",
+        "notes": "PDSA (S194): 'For this reason, training will require patience, but can be achieved using reward-based techniques.' Not a first-time-owner statement → no first_time_owner / experienced_owner tag."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.yorkshire_terrier.learning_multiplier (1.2, runbook rule: Above average tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small toy terrier, long coat hanging straight and evenly down each side, a parting from nose to end of tail; compact, upright carriage",
+        "unit": "—",
+        "source_id": "S190",
+        "quote": "Long-coated, coat hanging quite straight and evenly down each side, a parting extending from nose to end of tail.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S193): the same sentence; compact, neat, upright (paraphrase)."
+      },
+      "colours": {
+        "value": [
+          "dark steel blue and tan"
+        ],
+        "unit": "list (one colour pattern)",
+        "source_id": "S190",
+        "quote": "Dark steel blue (not silver blue), extending from occiput to root of tail, never mingled with fawn, bronze or dark hairs.",
+        "confidence": "high",
+        "notes": "FCI (S190): 'Hair on chest rich, bright tan.' 'All tan hair darker at the roots than in middle, shading to still lighter at tips.' Ears 'colour very deep, rich tan'; tail 'darker blue in colour than rest of body'. RKC breed standard (S193) the same. RKC breed page (S192): puppies are born black and tan and become steel blue and tan (paraphrase) — adult portrait only. No other colour (never parti-colour, chocolate, gold or merle)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). One standard colour → dark steel blue and tan, weight 100 (portrait default)."
+      },
+      "coat": {
+        "value": "moderately long, perfectly straight (not wavy), glossy, fine silky texture; must never impede movement",
+        "unit": "—",
+        "source_id": "S190",
+        "quote": "On body moderately long, perfectly straight (not wavy), glossy;",
+        "confidence": "high",
+        "notes": "FCI (S190): 'fine silky texture, not woolly, must never impede movement.' RKC (S193): 'Hair on body moderately long, perfectly straight (not wavy), glossy; fine silky texture, not woolly.' The game draws a natural pet-length coat (not a floor-length show coat)."
+      },
+      "ears": {
+        "value": "small, V-shaped, carried erect, rich tan",
+        "unit": "—",
+        "source_id": "S190",
+        "quote": "Small, V-shaped, carried erect, not too far apart, covered with short hair, colour very deep, rich tan.",
+        "confidence": "high",
+        "notes": "RKC (S193) the same."
+      },
+      "eyes": {
+        "value": "medium, dark, sparkling, looking directly forward; dark eyelid rims",
+        "unit": "—",
+        "source_id": "S190",
+        "quote": "Medium, dark, sparkling, with sharp intelligent expression and placed to look directly forward.",
+        "confidence": "high",
+        "notes": "FCI (S190): 'Not prominent. Edge of eyelids dark.'"
+      },
+      "nose": {
+        "value": "black; small flat skull, muzzle not too long",
+        "unit": "—",
+        "source_id": "S190",
+        "quote": "Black.",
+        "confidence": "high",
+        "notes": "FCI (S190): skull 'Rather small and flat, not too prominent or round.'; muzzle 'Not too long.' RKC (S193): 'Rather small and flat, not too prominent or round in skull, nor too long in muzzle; black nose.' Not flat-faced."
+      },
+      "tail": {
+        "value": "natural (undocked): plenty of hair, darker blue, as straight as possible, length giving a balanced look",
+        "unit": "—",
+        "source_id": "S190",
+        "quote": "Plenty of hair, darker blue in colour than rest of body, especially at end of tail.",
+        "confidence": "high",
+        "notes": "FCI (S190): 'Previously customarily docked.' Undocked: 'As straight as possible. Length to give a well balanced appearance.' The standard describes the undocked tail → the portrait draws a natural tail (a standard option, not a welfare proposal)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S192, older address) and PDSA (S194). The RKC page shows no 'Good with children' field (as returned 2026-10-12). Woodgreen and AKC trait ratings not attempted.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S192",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "PDSA (S194): 'Size | Small'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 30 minutes per day",
+        "unit": "—",
+        "source_id": "S192",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S192",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "Basis of the apartment tag (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S192",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S192",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "PDSA (S194): 'They’ll need daily grooming to keep their coats in tip-top condition.' → frequent_grooming; sourced need daily brushing → ROADMAP M5-R13."
+      },
+      "rkc_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S192",
+        "quote": "Coat length: Long",
+        "confidence": "high",
+        "notes": "PDSA (S194): 'Coat length | Long'."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S192",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "PDSA (S194) says nothing about shedding (no conflict). Basis of low_shedding — never 'hypoallergenic'."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S192",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S192",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-12)."
+      },
+      "pdsa_children": {
+        "value": "better suited to families with older children (very fragile bones)",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "They are better suited to families with older children as they have very fragile bones",
+        "confidence": "medium",
+        "notes": "Basis of the new consider tag fragile_older_children. PDSA also: 'Yorkshire Terriers should be fine if brought up with children from a young age.' — not a rating, and limited by the older-children sentence → no children / small_children tag."
+      },
+      "pdsa_exercise": {
+        "value": "around 30 or 40 minutes per day",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "Yorkies need around 30 or 40 minutes exercise per day.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "daily grooming",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "They’ll need daily grooming to keep their coats in tip-top condition.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_first_time_owner": {
+        "value": "can be stubborn; patient, reward-based training",
+        "unit": "—",
+        "source_id": "S194",
+        "quote": "They can be quite stubborn, making training more of a challenge.",
+        "confidence": "medium",
+        "notes": "Not a first-time-owner statement → no tag."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -13537,6 +14021,239 @@
         "notes": "Standard colours only (S186, S184); tan, red, orange, lemon and solid white are disqualifications in the AKC standard (S186). Natural tail in the portrait = Claude's proposal (tail_decision, appearance.tail).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — liver roan (default), solid liver, liver and white ticked, black roan, solid black; no tan / red / lemon / solid white",
         "tail_decision": "predlog Claude 2026-10-11: naraven (nekupiran) rep, čeprav standarda FCI in AKC opisujeta kupiranje — otrokom ne kažemo kupiranega psa; čaka Davida"
+      }
+    },
+    "yorkshire_terrier": {
+      "_note": "Unattended run M5-R10-22 (2026-10-12): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11); recorded as `decision` per entry. New consider tag fragile_older_children (PDSA S194). Two sourced needs without a dog mechanic (runbook §3, David 2026-10-11): daily brushing (RKC S192, PDSA S194) → ROADMAP M5-R13; daily tooth brushing (RVC VetCompass S196) → new ROADMAP M5-R15. Running, fetching and playing (PDSA S194) is covered by the walk and play (M5-R05).",
+      "exercise_minutes_adult": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": "S192",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'Up to 30 minutes per day' (S192); PDSA 'around 30 or 40 minutes exercise per day' (S194) — RKC preferred. Rule: one number N ('up to N') → N = 30.",
+        "alternatives": [
+          {
+            "value": 30,
+            "source_id": "S194",
+            "notes": "PDSA lower number (key facts minimum 30)"
+          },
+          {
+            "value": 40,
+            "source_id": "S194",
+            "notes": "PDSA upper number (not chosen — RKC preferred)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S192 'Up to 30 minutes per day'; PDSA S194 '30 or 40 minutes')"
+      },
+      "step_goal_adult": {
+        "value": 3000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 30 min × 100 steps/min (S45) = 3,000.",
+        "derived_from": [
+          "S192",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min × 100 steps/min → 3,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 23,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 30) = 22.5 → 23 min (half up) → 2,300 steps.",
+        "steps": 2300,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 30 reached at 3 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 30 min (reached at 3 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 122
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 122 = round(0.75 × 13.56 y × 12) = round(122.04) (S11 + VetCompass median 13.56 y, S195). No McMillan 2024 value reachable. Alternatives: 108 (RKC 'Over 12 years', S192), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S195"
+        ],
+        "alternatives": {
+          "senior_rkc_lower_bound": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 122 (0.75 × 13.56 y, VetCompass median S195)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 122
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 122)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 27 (S35), tier 'Above average' (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 27, Above average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S192",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC (S192) 'Every day'; PDSA (S194) 'daily grooming'. The game has no dog grooming mechanic yet (cats only) → built later as ROADMAP M5-R13; this value is its input.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden); mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S196",
+        "quote": "Owners are encouraged to undertake daily preventative home care to improve dental health e.g tooth brushing and to consider feeding specific dental diets to maintain oral hygiene.",
+        "confidence": "medium",
+        "notes": "RVC VetCompass summary (S196) of O'Neill et al. 2025 (S195); the fetch tool returned the sentence split in two parts (joined here). Same summary: 'Yorkshire Terriers appear predisposed to dental (periodontal) disease and persistent deciduous teeth.' The game has no tooth-brushing mechanic → new ROADMAP M5-R15; this value is its input.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ščetkanje zob vsak dan (7× na teden); mehanike ni → ROADMAP M5-R15 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-22); refs = JSON paths in this file. New vocabulary key fragile_older_children (consider). No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S192"
+            ],
+            "refs": [
+              "yorkshire_terrier.suitability.rkc_size_of_home",
+              "yorkshire_terrier.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S192 'Size of home: Flat/ Apartment' / 'Size of garden: Small/ medium garden'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S192"
+            ],
+            "refs": [
+              "yorkshire_terrier.suitability.rkc_shedding"
+            ],
+            "quote": "S192 'Sheds: No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "fragile_older_children",
+            "source_ids": [
+              "S194"
+            ],
+            "refs": [
+              "yorkshire_terrier.suitability.pdsa_children",
+              "yorkshire_terrier.behaviour.family"
+            ],
+            "quote": "S194 'They are better suited to families with older children as they have very fragile bones'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S192",
+              "S194"
+            ],
+            "refs": [
+              "yorkshire_terrier.suitability.rkc_grooming",
+              "yorkshire_terrier.suitability.pdsa_grooming"
+            ],
+            "quote": "S192 'Grooming: Every day'; S194 'They’ll need daily grooming to keep their coats in tip-top condition.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No breed statement (PDSA S194 only on children).",
+          "children": "PDSA 'should be fine if brought up with children from a young age' is limited by 'better suited to families with older children' (S194) → the consider tag fragile_older_children instead.",
+          "small_children": "PDSA: better suited to older children (S194).",
+          "first_time_owner": "No source (PDSA: stubborn, patient training).",
+          "experienced_owner": "No source.",
+          "large_home": "RKC 'Flat/ Apartment' (S192).",
+          "active_family": "RKC 'Up to 30 minutes per day' (S192).",
+          "long_daily_exercise": "30 min (S192).",
+          "other_pets": "No statement (RKC: catches domestic rodents — not a rating).",
+          "often_alone": "No source.",
+          "older_owners": "No source.",
+          "sheds": "RKC 'Sheds: No' (S192).",
+          "needs_mental_stimulation": "No breed-specific statement.",
+          "food_motivated_weight": "No breed-specific statement.",
+          "chews_when_bored": "No source.",
+          "may_herd_children": "No source.",
+          "secure_fencing": "No source.",
+          "shorter_lifespan": "VetCompass median 13.56 y (S195); RKC 'Over 12 years' (S192).",
+          "welfare": "RKC Breed Watch Category 1 (S192) → no brachycephalic_breathing / hips_hind_legs / heart_and_spine / back_spine / sensitive_skin."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, low_shedding; consider fragile_older_children (new key, PDSA S194), frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S192",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S192); no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health. Predlog Claude 2026-10-12 (not a runbook rule, čaka Davida): marketing does not show the Yorkshire Terrier with small children (PDSA S194: better suited to families with older children — fragile bones).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a welfare breed)"
+      },
+      "ai_appearance": {
+        "value": "adult Yorkshire Terrier, dark steel blue body coat and rich bright tan head, chest and legs, long straight glossy silky coat (natural pet length, not floor-length), small erect V-shaped tan ears, dark sparkling eyes, black nose, small flat skull, natural undocked tail with plenty of darker blue hair; tiny compact toy dog",
+        "unit": "—",
+        "source_id": "S190",
+        "quote": "Dark steel blue (not silver blue), extending from occiput to root of tail, never mingled with fawn, bronze or dark hairs.",
+        "confidence": "high",
+        "notes": "Colours from the FCI / RKC standards (S190, S193: steel blue and tan only). Weight unsourced in prompts. Natural undocked tail (standard option, S190).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): dark steel blue and tan (the only standard colour) is the portrait default; natural coat length, undocked tail"
       }
     }
   }

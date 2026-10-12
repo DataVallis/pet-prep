@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -270,6 +270,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_GERMAN_SHORTHAIRED_POINTER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-21)';
 
     /**
+     * M5-R10-22 Yorkshire Terrier (unattended run 2026-10-12, data.json
+     * proposed_game_parameters.yorkshire_terrier.*.decision): every value follows a standing
+     * rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 30 min, senior 23 min, puppy 10 min × age capped at 30, stages 9 / 36 / 122
+     * (senior from the VetCompass median 13.56 y, S195 — provisional until McMillan 2024 is
+     * checked), arrival 2 / 9 / 36 / 122, learning multiplier 1.2 (Coren 27, Above average);
+     * care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_YORKSHIRE_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-22)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -339,7 +350,7 @@ class BreedStageParamsSeeder extends Seeder
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -772,6 +783,10 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-21 (docs/research/dog-data/data.json german_shorthaired_pointer,
             // S184–S189; runbook rules in proposed_game_parameters.german_shorthaired_pointer).
             BreedType::GermanShorthairedPointer => self::germanShorthairedPointerProfile(),
+
+            // M5-R10-22 (docs/research/dog-data/data.json yorkshire_terrier,
+            // S190–S196; runbook rules in proposed_game_parameters.yorkshire_terrier).
+            BreedType::YorkshireTerrier => self::yorkshireTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -1974,6 +1989,79 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'german_shorthaired_pointer.lifespan.median_uk',
                 'quote' => 'German Shorthaired Pointer | 13.4 | 13.3 - 13.6 | 3313 | 947',
                 'notes' => 'McMillan et al. 2024 data as tabled by Dogs Trust (S123). PDSA "Over 10 years" (S188) and Dogs Trust "typically 11+ years" (S189) agree. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Yorkshire Terrier (M5-R10-22). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_YORKSHIRE_TERRIER);
+     * weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function yorkshireTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_YORKSHIRE_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S195', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.yorkshire_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog finishes growing at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [122, $boundary('Derived game boundary: last 25 % of lifespan (S11) × VetCompass median 13.56 y (O\'Neill et al. 2025, S195) = 10.17 y = 122.04 → 122 months. No McMillan 2024 value was reachable. Not chosen: 108 (RKC "Over 12 years", S192), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 122],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.yorkshire_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 30 minutes, which 10 × age reaches at 3 months.',
+            'adult_minutes' => [30, [
+                'unit' => 'minutes/day', 'source_id' => 'S192', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.yorkshire_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 30 minutes per day',
+                'notes' => 'RKC "Up to 30 minutes per day" (S192) → 30 min = 3,000 steps (runbook rule: "up to N" → N). PDSA "around 30 or 40 minutes exercise per day" (S194) — RKC preferred.',
+            ]],
+            'senior_minutes' => [23, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.yorkshire_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 30 minutes = 22.5, rounded half up = 23 min = 2,300 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[3.2, 3.2], [
+                'unit' => 'kg', 'source_id' => 'S194', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'yorkshire_terrier.adult_weight.pdsa',
+                'quote' => 'Average weight | 3.2 kg',
+                'notes' => 'PDSA key facts (S194), one average for both sexes; equal to the FCI / RKC upper limit "Up to 3,2 kgs" (S190, S193), which gives no lower bound. The UK pet population is heavier (S195) — background only.',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'yorkshire_terrier.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (up to 3.2 kg ≈ 7 lb = the Toy class of S10; RKC / PDSA size "Small").',
+            ]],
+            'coren_rank' => [27, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'yorkshire_terrier.trainability.coren_rank',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 27 (shared), tier "Above Average Working Dogs" (ranks 27–39). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.yorkshire_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 27 (S35) in the "Above average" tier (ranks 27–39) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [13.56, [
+                'unit' => 'years', 'source_id' => 'S195', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'yorkshire_terrier.lifespan.median_uk',
+                'quote' => 'the median age at death was 13.56 years (IQR 11.30–15.15, range 0.06–19.08)',
+                'notes' => 'O\'Neill et al. 2025 (S195), VetCompass UK 2016. RKC / PDSA "Over 12 years" (S192, S194) agree. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

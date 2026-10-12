@@ -21,11 +21,12 @@ import { i18n } from '@/i18n';
  * (M5-R10-13, S160 / S162), senior 90 (siberianHuskyProfile); Rottweiler 120 min
  * (M5-R10-19, S168 / S169), senior 90 (rottweilerProfile); Bulldog 60 min
  * (M5-R10-20, S177 / S180), senior 45 (bulldogProfile); German Shorthaired Pointer 120 min
- * (M5-R10-21, S187 / S188), senior 90 (germanShorthairedPointerProfile);
+ * (M5-R10-21, S187 / S188), senior 90 (germanShorthairedPointerProfile); Yorkshire Terrier 30 min
+ * (M5-R10-22, S192 / S194), senior 23 (yorkshireTerrierProfile);
  * arrival puppy 2, young 9 months.
  */
-type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese' | 'west_highland_white_terrier' | 'bernese_mountain_dog' | 'siberian_husky' | 'rottweiler' | 'bulldog' | 'german_shorthaired_pointer'>;
-const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer'];
+type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese' | 'west_highland_white_terrier' | 'bernese_mountain_dog' | 'siberian_husky' | 'rottweiler' | 'bulldog' | 'german_shorthaired_pointer' | 'yorkshire_terrier'>;
+const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier'];
 const ADULT_MINUTES: Record<DogBreed, number> = {
   mutt: 60,
   border_collie: 120,
@@ -45,6 +46,7 @@ const ADULT_MINUTES: Record<DogBreed, number> = {
   rottweiler: 120,
   bulldog: 60,
   german_shorthaired_pointer: 120,
+  yorkshire_terrier: 30,
 };
 const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 };
 
@@ -301,6 +303,25 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(E.adult).toContain('6,000 steps');
       expect(E.senior).toContain('4,500 steps');
       expect(PICKER_STRINGS.breedHints.west_highland_white_terrier).toBe('Part of the 12-week challenge.');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-22 Yorkshire Terrier: 2.000 → 3.000 (reached at 3 months), young 3.000, adult 3.000, senior 2.300 — SL and EN', async () => {
+    const P = PICKER_STRINGS.ageHints.yorkshire_terrier;
+    expect(P.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 3\.000 pri 3 mesecih/);
+    expect(P.young).toBe('2 obroka na dan; sprehod 3.000 korakov na dan (kot odrasel pes).');
+    expect(P.adult).toBe('2 obroka na dan; sprehod 3.000 korakov na dan.');
+    expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 2.300 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.yorkshire_terrier).toBe('Del 12-tedenskega izziva.');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.yorkshire_terrier;
+      expect(E.puppy).toContain('2,000 steps a day, more each week up to 3,000 at 3 months');
+      expect(E.young).toBe('2 meals a day; walks of 3,000 steps a day (like an adult dog).');
+      expect(E.senior).toContain('2,300 steps');
+      expect(PICKER_STRINGS.breedHints.yorkshire_terrier).toBe('Part of the 12-week challenge.');
     } finally {
       await i18n.changeLanguage('sl');
     }
