@@ -436,6 +436,9 @@ describe('pairing a cat with a profile (QA M1)', function () {
 describe('migration 2026_10_25_120000_add_cat_stage_param_keys', function () {
     it('down() removes only the rows of the new keys and restores the old check; up() again lets the seeder re-add them', function () {
         seedLifeStageData();
+        // A real rollback runs the later migrations that add keys first (M5-R17 socialisation).
+        $later = require database_path('migrations/2026_11_30_120000_add_puppy_socialisation.php');
+        $later->down();
         $migration = require database_path('migrations/2026_10_25_120000_add_cat_stage_param_keys.php');
         $newKeys = ['play_sessions_per_day', 'play_min_gap_minutes', 'litter_uses_per_day', 'litter_scoop_deadline_hours',
             'litter_full_change_days', 'grooming_sessions_per_week', 'scratching_after_missed_play'];
@@ -450,6 +453,7 @@ describe('migration 2026_10_25_120000_add_cat_stage_param_keys', function () {
                 'key' => 'litter_full_change_days', 'value' => '7', 'confidence' => 'low', 'verified' => false])))->toThrow(QueryException::class);
 
         $migration->up();
+        $later->up();
         (new BreedStageParamsSeeder)->run();
         expect(BreedStageParam::count())->toBe(count(BreedStageParamsSeeder::allRows()));
     });
