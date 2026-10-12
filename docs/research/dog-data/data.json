@@ -9978,12 +9978,12 @@
     },
     "exercise": {
       "adult": {
-        "value": "around 120",
+        "value": 120,
         "unit": "minutes/day",
         "source_id": "S199",
         "quote": "Your Cane Corso will need around two hours’ exercise every day.",
         "confidence": "high",
-        "notes": "PDSA (S199); key facts 'Minimum exercise (per day): 2 hours'. No RKC breed page exists (breed not RKC-recognised) → runbook: else PDSA. 'This should include a couple of longer, brisk walks (or even a jog) with time to play off-lead somewhere secure.' (S199)."
+        "notes": "PDSA (S199) 'around two hours’' → 120 (register qualifier 'about'); key facts 'Minimum exercise (per day): 2 hours'. No RKC breed page exists (breed not RKC-recognised) → runbook: else PDSA. 'This should include a couple of longer, brisk walks (or even a jog) with time to play off-lead somewhere secure.' (S199)."
       },
       "energy": {
         "value": "active, likes tasks and being kept occupied; hates being bored",
@@ -10233,20 +10233,20 @@
         "notes": "Key facts 'Minimum exercise (per day): 2 hours'."
       },
       "pdsa_grooming": {
-        "value": "a weekly brush",
+        "value": "Once a week",
         "unit": "—",
         "source_id": "S199",
         "quote": "A weekly brush should be enough to keep on top of dead hairs.",
         "confidence": "high",
-        "notes": "Not frequent_grooming (criterion: more than once a week). A sourced need: dog grooming has no game mechanic yet → ROADMAP M5-R13 (runbook §3, David 2026-10-11)."
+        "notes": "'a weekly brush' read as the category 'Once a week' (our wording; quote verbatim). Not frequent_grooming (criterion: more than once a week). A sourced need: dog grooming has no game mechanic yet → ROADMAP M5-R13 (runbook §3, David 2026-10-11)."
       },
       "pdsa_shedding": {
-        "value": "sheds, more in spring and autumn",
+        "value": "Yes",
         "unit": "—",
         "source_id": "S199",
         "quote": "Like any dog, they do shed and will do so more in spring and autumn so remember you may need to vacuum a little more then.",
         "confidence": "medium",
-        "notes": "Basis of the sheds tag."
+        "notes": "Read as 'sheds: yes' (our wording; quote verbatim); more in spring and autumn. Basis of the sheds tag."
       },
       "pdsa_coat_length": {
         "value": "Short",

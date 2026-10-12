@@ -389,6 +389,7 @@ const SPECIES = [
       { id: 'bulldog', availability: 'coming_soon', synonyms: { en: ['English Bulldog', 'British Bulldog'], sl: ['buldog', 'angleski buldog', 'bulldog', 'english bulldog', 'british bulldog'] } },
       { id: 'german_shorthaired_pointer', availability: 'coming_soon', synonyms: { en: ['GSP', 'German Pointer', 'Shorthair', 'Deutsch Kurzhaar', 'Kurzhaar'], sl: ['kratkodlaki ptičar', 'kratkodlaki pticar', 'nemski kratkodlaki pticar', 'kurzhaar', 'gsp'] } },
       { id: 'yorkshire_terrier', availability: 'coming_soon', synonyms: { en: ['Yorkie', 'Yorkshire'], sl: ['jorkširski terier', 'jorksirski terier', 'yorkie', 'jorki'] } },
+      { id: 'cane_corso', availability: 'coming_soon', synonyms: { en: ['Cane Corso Italiano', 'Italian Cane Corso', 'Italian Corso Dog', 'Italian Mastiff', 'Corso'], sl: ['italijanski cane corso', 'cane corso italiano', 'korzo', 'corso'] } },
     ],
   },
   {
@@ -414,7 +415,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -590,7 +591,7 @@ const DOG_FACTS = {
     grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
     shedding: ['suitability.rkc_shedding'],
     food_motivation: null,
-    // Not ranked by Coren (S35): the only breed allowed to have no coren_rank fact.
+    // Not ranked by Coren (S35): no coren_rank fact (also the Cane Corso, M5-R10-23).
     coren_rank: false,
     health: [
       ['kneecap_luxation', 'health.luxating_patella'],
@@ -754,6 +755,29 @@ const DOG_FACTS = {
       ['liver_shunt', 'health.portosystemic_shunt'],
     ],
   },
+  // M5-R10-23. Not exported: lifespan.median_international (Korec et al. 2017, S201 — kennel and owner
+  // data from 25 countries collected by a breeder; next to the PDSA band it would read as a precise UK
+  // figure, so it stays background for the senior boundary, like the Bernese Swiss median),
+  // lifespan.mcmillan_2024 / rkc (no value), lifespan.senior_from (derived), height.akc / pdsa_average and
+  // adult_weight.pdsa (FCI is the register's standard). No RKC page → coat / grooming / shedding from PDSA;
+  // weekly brush read as 'once a week'. Exercise "around two hours" → about 120 min.
+  cane_corso: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.pdsa', 'less_than']],
+    exercise: [['exercise.adult', 'about']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [['suitability.pdsa_grooming', 'grooming_frequency']],
+    shedding: ['suitability.pdsa_shedding'],
+    food_motivation: null,
+    // Not ranked by Coren (S35, checked 2026-10-12).
+    coren_rank: false,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['bloat_gdv', 'health.gdv'],
+      ['eyelid_problems', 'health.eyes'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -900,6 +924,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.yorkshire_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.yorkshire_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.yorkshire_terrier.exercise_minutes_senior',
+  },
+  cane_corso: {
+    adult_minutes: ['proposed_game_parameters.cane_corso.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.cane_corso.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.cane_corso.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.cane_corso.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.cane_corso.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.cane_corso.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],

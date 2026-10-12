@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "614f179c3bb10932cbf7305d1b5031f32034f36d497b5125ceba7c89bc2d3bb6"
+      "sha256": "232daa29341384822ff15ef95958bc1d3491a446133b7c22e923930d2a2704cb"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "cebcd9b0992f02fbe8573eb254cce680ece37a6ecc1147f057d6dbd5e6a8926a"
+      "sha256": "a53fc107276f2bfd411d397dcd38d6e8d51a7f6332f5443275725f823daddebc"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "e5db6252f4ac554395beeb83ff084b9fd80a41d066de3387890c0a90c2d56385"
+      "sha256": "516324fdbbdf1ab1db2d0d85d6f954c7c8c504435a4f632eb914687ad6e63ff8"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "84c1a9314833d64b74eaa589349b84bd163359eb45d043856004cd8a75cd735b"
+      "sha256": "2128cc5265a884e80275d8f09ef8ae32a996e3051abf8a3940f5d8497b52a617"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "7f8260e3778a94e05871aeea97743c920e5c0b66920b6fa3dd56eb867d41302b"
+      "sha256": "b579190ce5de65b0be03c33b49c12585049367d6f9ffa07d4581e69788cdbc30"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "2a008caf86bf325ef182112f4f789140e867af8ebf976e0db894ad48bbb78848"
+      "sha256": "684cdc364ac3885d94bfca71eef8395696e83d5e8bbd8e851288313da38f066a"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "6959e1695b31aa89dd4a1edcc32ed19608bc5c1334030533faff85cc86f0c39e"
+      "sha256": "d79506a0f04e5184e88f8c45064506cbc23e7bb500a3b8469efdf808a9624f53"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "3f17c42f766c2d624270813adf10f2a3172ba9723dc521082382b7174b48e68b"
+      "sha256": "62ff603e85402a9c7e9e11820794e3dc09bf2abf84d42b597d3dca2edc0bad4a"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -63,6 +63,7 @@
     "brachycephalic_breathing": "consider",
     "chews_when_bored": "consider",
     "children": "suits",
+    "drools": "consider",
     "experienced_owner": "consider",
     "family_pet": "suits",
     "first_time_owner": "suits",
@@ -76,6 +77,7 @@
     "low_shedding": "suits",
     "may_herd_children": "consider",
     "needs_mental_stimulation": "consider",
+    "not_for_small_children": "consider",
     "often_alone": "suits",
     "older_owners": "suits",
     "other_pets": "suits",
@@ -96,6 +98,7 @@
         "brachycephalic_breathing": "flat face — breathing and heat problems",
         "chews_when_bored": "chews things when bored",
         "children": "families with children",
+        "drools": "drools — keep a cloth at hand",
         "experienced_owner": "powerful dog — needs an experienced owner",
         "family_pet": "family life",
         "first_time_owner": "first-time owners",
@@ -109,6 +112,7 @@
         "low_shedding": "homes that prefer less shedding",
         "may_herd_children": "may “herd” children at play",
         "needs_mental_stimulation": "needs mental challenges",
+        "not_for_small_children": "large dog — not for homes with small children",
         "often_alone": "families who are out for a few hours",
         "older_owners": "older owners",
         "other_pets": "homes with other pets",
@@ -129,6 +133,7 @@
         "brachycephalic_breathing": "kratek gobček — težave z dihanjem in vročino",
         "chews_when_bored": "ko se dolgočasi, grize stvari",
         "children": "družino z otroki",
+        "drools": "se slini — imejte pri roki krpo",
         "experienced_owner": "močan pes — potrebuje izkušenega lastnika",
         "family_pet": "družinsko življenje",
         "first_time_owner": "začetnike",
@@ -142,6 +147,7 @@
         "low_shedding": "dom, kjer želite manj dlak",
         "may_herd_children": "pri igri lahko »pase« otroke",
         "needs_mental_stimulation": "potrebuje miselne izzive",
+        "not_for_small_children": "velik pes — ni za dom z majhnimi otroki",
         "often_alone": "družino, ki je nekaj ur zdoma",
         "older_owners": "starejše lastnike",
         "other_pets": "dom z drugimi ljubljenčki",
@@ -171,7 +177,7 @@
         }
       },
       "status": "available",
-      "breed_count": 18,
+      "breed_count": 19,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -11154,6 +11160,540 @@
       ]
     },
     {
+      "id": "cane_corso",
+      "species": "dog",
+      "order": 18,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Cane Corso",
+        "sl": "Cane corso"
+      },
+      "slug": {
+        "en": "cane-corso",
+        "sl": "cane-corso"
+      },
+      "synonyms": {
+        "en": [
+          "Cane Corso Italiano",
+          "Italian Cane Corso",
+          "Italian Corso Dog",
+          "Italian Mastiff",
+          "Corso"
+        ],
+        "sl": [
+          "italijanski cane corso",
+          "cane corso italiano",
+          "korzo",
+          "corso"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S199"
+          ],
+          "ref": "cane_corso.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              64,
+              68
+            ],
+            "female": [
+              60,
+              64
+            ]
+          },
+          "source_ids": [
+            "S197"
+          ],
+          "ref": "cane_corso.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              45,
+              50
+            ],
+            "female": [
+              40,
+              45
+            ]
+          },
+          "source_ids": [
+            "S197"
+          ],
+          "ref": "cane_corso.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "cane_corso.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S199"
+          ],
+          "ref": "cane_corso.lifespan.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "about",
+          "value": 120,
+          "source_ids": [
+            "S199"
+          ],
+          "ref": "cane_corso.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S199"
+          ],
+          "ref": "cane_corso.suitability.pdsa_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S199"
+          ],
+          "ref": "cane_corso.suitability.pdsa_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S199"
+          ],
+          "ref": "cane_corso.suitability.pdsa_shedding",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 343,
+            "group": 2,
+            "section": 2,
+            "origin": "IT"
+          },
+          "source_ids": [
+            "S198"
+          ],
+          "ref": "cane_corso.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S199"
+          ],
+          "ref": "cane_corso.health.hip_elbow_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S199"
+          ],
+          "ref": "cane_corso.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "eyelid_problems",
+          "source_ids": [
+            "S199"
+          ],
+          "ref": "cane_corso.health.eyes",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.exercise.adult",
+              "cane_corso.suitability.pdsa_exercise"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.exercise.adult",
+              "cane_corso.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.behaviour.family",
+              "cane_corso.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.behaviour.experienced_owner",
+              "cane_corso.suitability.pdsa_experienced_owner"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.exercise.energy",
+              "cane_corso.suitability.pdsa_mental_stimulation"
+            ]
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S199",
+              "S201"
+            ],
+            "refs": [
+              "cane_corso.lifespan.pdsa",
+              "cane_corso.lifespan.median_international"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.suitability.pdsa_shedding"
+            ]
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.behaviour.drooling",
+              "cane_corso.suitability.pdsa_drooling"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 84
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 84
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.cane_corso.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S199"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S199 'around two hours’ exercise every day'; no RKC page)"
+          },
+          {
+            "ref": "proposed_game_parameters.cane_corso.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.cane_corso.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S201"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 84 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.cane_corso.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S199",
+          "S201"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "S199"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "S199"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S199"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S197",
+        "S198",
+        "S199",
+        "S201",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -14295,6 +14835,34 @@
       "publisher": "Royal Veterinary College — VetCompass",
       "title": "Yorkshire Terrier infographic (summary of S195, 15.08.2025) (PDF)",
       "url": "https://www.rvc.ac.uk/Media/Default/VetCompass/250815%20Yorkshire%20Terrier%20infographic%20%284%29.pdf"
+    },
+    {
+      "id": "S197",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 343 — Cane Corso Italiano (EN PDF; date of publication of the official valid standard 25.09.2023)",
+      "url": "https://www.fci.be/Nomenclature/Standards/343g02-en.pdf"
+    },
+    {
+      "id": "S198",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Cane Corso Italiano (343)",
+      "url": "https://www.fci.be/en/nomenclature/CANE-CORSO-343.html"
+    },
+    {
+      "id": "S199",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Cane Corso breed information",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/cane-corso"
+    },
+    {
+      "id": "S201",
+      "tier": "A",
+      "publisher": "Open Veterinary Journal 7(2):170–173 (2017)",
+      "title": "Korec E., Chalupa O., Hančl M., Korcová J., Bydžovská M. Longevity of Cane Corso Italiano dog breed and its relationship with hair colour. doi:10.4314/ovj.v7i2.15",
+      "url": "https://www.openveterinaryjournal.com/?mno=259381"
     },
     {
       "id": "C1",
