@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Boksar: osma pasma po dvajsetih (M5-R10-26)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **boksarja** (17. mesto). Dvaindvajseta plačljiva pasma psa: vsaj dve uri gibanja na dan (12.000 korakov za odraslega, 9.000 za starejšega), starejši od 8,5 leta (0,75 × mediana 11,3 leta iz raziskave McMillan 2024 — ni začasno), uči se enako hitro kot mešanček (Coren: 48. mesto).
+
+**Zakaj je pomembno:** Boksar je prva pasma, ki je od prvega dne dobila vse tri nove mehanike skrbi: česanje 1× na teden (»Počeši«), opozorilo »Počakaj s sprehodom« 60 minut po obroku in tedensko »Novo izkušnjo« za mladička — vse iz citatov PDSA in The Royal Kennel Club. Ker PDSA piše, da boksar rad ima družbo ljudi in sam doma lahko postane tesnoben, je dobil novo mirno oznako »rad ima družbo — naj bo nekdo večino dneva doma«. Boksar ima zmerno kratek gobček (VetCompass; The Royal Kennel Club Breed Watch kategorija 2), zato ima v izbirniku oznako »kratek gobček — težave z dihanjem in vročino« in po pravilu dobrobiti (BVA) ni v marketingu — odločitev je odprta za Davida, ker je obraz le zmerno kratek. Čiščenje gub na obrazu (PDSA: »čiste in suhe«) igra še ne vodi — *načrt* (M5-R14).
+
+**Številke:** 8 novih virov (S213–S220), 1 migracija, 1 nova oznaka (`needs_company`), 4 novi ključi zdravja v registru, 3 + 8 oznak v izbirniku; izvoz registra **46** testov (zeleni). Portret in stran v registru sledita v ločenih PR. Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Boksar je vesel, igriv družinski pes, a potrebuje vsaj dve uri gibanja na dan, nekoga, ki je večino dneva doma, in ni za dom z majhnimi otroki. V PetPrepu boste videli, ali vaš otrok zmore tak tempo — preden pripeljete domov velikega psa.«
+- 🧒 Otroci: »Boksar je pravi klovn — rad se igra in rad je s tabo. Po obroku pa mora malo počivati, preden gresta ven!«
+- 💼 Investitorji: »Osma pasma, ki jo je sistem sam izbral po javni lestvici AKC — prva, ki je ob dodajanju takoj dobila vse nove mehanike skrbi, z novo oznako iz vira in odprtim vprašanjem o marketingu za ustanovitelja.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri boksarju svetuje, naj vzreditelj pokaže preglede komolcev, oči in kolkov staršev (RKC) — in pove, da je obraz zmerno kratek, brez obljub o zdravju.«
+- 📣 Omrežja: *(boksarja v marketingu za zdaj ne prikazujemo — priporočilo BVA za pse s kratkim gobčkom; odloči David)*
+- 🛠 Tehnično: »En nov ključ oznak (`needs_company`, dodatno v API-ju in `schema.ts`); vse številke igre so iz stalnih pravil runbooka, mehanike česanja, premora po obroku in socializacije pa so samo nove vrstice v `breed_stage_params`.«
+
+---
+
 ## 2026-10-12 — Certifikat odgovornosti (M2-01d)
 
 **Kaj se je zgodilo:** Ko otrok konča 12-tedenski izziv (84 dni programa od podpisa pogodbe, čas čakanja na plačilo se ne šteje), strežnik izračuna končni Care Score iz vseh zaključenih dni. **70 ali več → Certifikat odgovornosti**, manj → **Poročilo o izzivu** z oceno. Starš dobi obvestilo, v aplikaciji tapne »Ustvari certifikat«, izbere jezik (angleščina ali slovenščina), po želji popravi ime otroka in ime ljubljenčka in dobi PDF (A4, v slogu PetPrep: metin rob, Radovednež, pečat, številka PP-2026-…). Ponovno ga lahko ustvari s popravki; številka in ocena ostaneta. Otrok certifikat vidi na svojem zaslonu. Pri skupnem psu ima vsak otrok svoj certifikat in svojo oceno.
