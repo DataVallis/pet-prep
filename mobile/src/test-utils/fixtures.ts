@@ -216,6 +216,8 @@ export function makeChildState(
     litter: null,
     grooming: null,
     scratching: null,
+    // M5-R17 the puppy's weekly "new experience": null = no task this week.
+    socialisation: null,
   };
 }
 
@@ -256,8 +258,28 @@ export interface LiveStateOverrides {
   litter?: unknown;
   grooming?: unknown;
   scratching?: unknown;
+  /** M5-R17 the puppy's weekly "new experience" (raw); omitted = absent (no task / older server). */
+  socialisation?: unknown;
   timezone?: string;
   server_time?: string;
+}
+
+/** M5-R17: the server's `socialisation` block of an open puppy week (raw, as the backend sends it). */
+export function makeSocialisation(overrides: Record<string, unknown> = {}): Record<string, unknown> {
+  return {
+    goal_per_week: 1,
+    done_this_week: 0,
+    done: false,
+    week: 2,
+    week_started_at: '2026-09-29T08:00:00+02:00',
+    week_ends_at: '2026-10-06T08:00:00+02:00',
+    experience: null,
+    experiences: ['person', 'dog', 'sound', 'place'],
+    next_allowed_at: null,
+    blocked_reason: null,
+    can_record: true,
+    ...overrides,
+  };
 }
 
 /**
@@ -304,6 +326,7 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
     ...(o.litter !== undefined ? { litter: o.litter } : {}),
     ...(o.grooming !== undefined ? { grooming: o.grooming } : {}),
     ...(o.scratching !== undefined ? { scratching: o.scratching } : {}),
+    ...(o.socialisation !== undefined ? { socialisation: o.socialisation } : {}),
   };
   return raw as unknown as ChildPetState;
 }
